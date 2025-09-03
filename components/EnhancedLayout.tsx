@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React { ReactNode } from 'react';
 import Head from 'next/head';
 
 interface EnhancedLayoutProps {
@@ -10,8 +10,7 @@ interface EnhancedLayoutProps {
   canonical?: string;
   noindex?: boolean;
   showPerformanceMetrics?: boolean;
-  showSEOAnalysis?: boolean;
-}
+  showSEOAnalysis?: boolean}
 
 export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({
   children,
@@ -37,10 +36,7 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content={noindex ? 'noindex,nofollow' : 'index,follow'} />
         
-        {/* Canonical URL */}
-        {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-        
-        {/* Open Graph Meta Tags */}
+        {/* Canonical URL */}, {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}, {/* Open Graph Meta Tags */}
         <meta property="og:title" content={fullTitle} />
         <meta property="og:description" content={description} />
         <meta property="og:image" content={ogImage} />
@@ -145,13 +141,11 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({
                   "@type": "Service",
                   "name": "AI Development",
                   "description": "Custom AI solutions and machine learning models"
-                },
-                {
+                }, {
                   "@type": "Service",
                   "name": "Cloud Architecture",
                   "description": "Scalable cloud solutions and infrastructure design"
-                },
-                {
+                }, {
                   "@type": "Service",
                   "name": "Digital Transformation",
                   "description": "End-to-end digital transformation services"
@@ -167,7 +161,6 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({
         {children}
       </div>
     </>
-  );
-};
+  )};
 
 export default EnhancedLayout;

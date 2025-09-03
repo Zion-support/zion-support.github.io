@@ -24,8 +24,7 @@ const AISeoOptimizer: React.FC = () => {
         <a href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide" target="_blank" rel="noopener noreferrer">Google SEO guide</a>
       </div>
     </div>
-  );
-};
+  )};
 
 export default AISeoOptimizer;
 

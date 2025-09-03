@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React { useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
@@ -36,8 +36,7 @@ export default function RequestQuote() {
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
-  };
+    }))};
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -47,8 +46,7 @@ export default function RequestQuote() {
     await new Promise(resolve => setTimeout(resolve, 2000));
     
     setIsSubmitting(false);
-    setIsSubmitted(true);
-  };
+    setIsSubmitted(true)};
 
   const serviceTypes = [
     'AI & Machine Learning',
@@ -85,18 +83,15 @@ export default function RequestQuote() {
       icon: Clock,
       title: 'Fast Response',
       description: 'Get your quote within 24 hours'
-    },
-    {
+    }, {
       icon: DollarSign,
       title: 'Competitive Pricing',
       description: 'Best value for your investment'
-    },
-    {
+    }, {
       icon: Users,
       title: 'Expert Team',
       description: 'Certified professionals'
-    },
-    {
+    }, {
       icon: Zap,
       title: 'Quick Start',
       description: 'Begin your project immediately'
@@ -162,8 +157,7 @@ export default function RequestQuote() {
           </motion.div>
         </div>
       </>
-    );
-  }
+    )}
 
   return (
     <>
@@ -476,5 +470,4 @@ export default function RequestQuote() {
         </div>
       </div>
     </>
-  );
-}
+  )}

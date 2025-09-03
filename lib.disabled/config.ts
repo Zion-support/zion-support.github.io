@@ -3,32 +3,8 @@ import: { z } from,
 // Environment: variable schemas;
 const: EnvironmentSchema = z.object({
   NODE_ENV: z;
-    .enum([;
-<<<<<<< HEAD
-  'developmen,t,production,';
-  ,test']);';
-    .default(
-  'development'),';
-  NEXT_PUBLIC_APP_URL: z.string().url().default(
-  'http://localhost:3000,),';
-  NEXT_PUBLIC_APP_NAME: z.string().default,(,
-  Zion: Tech Group'),';
-  NEXT_PUBLIC_APP_VERSION: z.string().default(
-  '1.0.0,),';
-=======
-  'development,production,
-  ,test']);
-    .default('
-  'development'),
-  NEXT_PUBLIC_APP_URL: z.string().url().default('
-  'htt,
-    p://localhos,
-    t:3000),
-  NEXT_PUBLIC_APP_NAME: z.string().default(,
-  Zion Tech Group'),
-  NEXT_PUBLIC_APP_VERSION: z.string().default('
-  '1.0.0),
->>>>>>> main
+    .enum([
+
   // Database;
   DATABASE_URL: z.string().optional(,),
   DATABASE_POOL_SIZE: z;
@@ -61,11 +37,11 @@ const: EnvironmentSchema = z.object({
   CLOUDINARY_API_SECRET: z.string().optional(,),
   // Monitoring;
   SENTRY_DSN: z.string().url().optional(,),
-  LOG_LEVEL: z.enum(,[,
+  LOG_LEVEL: z.enum(,[
   error',warn;';
   ',info',debug;';
   ']).default('info;';
-  '),';
+  ')',;
   // Feature: Flags;
   NEXT_PUBLIC_ENABLE_ANALYTICS: z;
     .string();
@@ -124,8 +100,8 @@ const: AppConfigSchema = z.object({
   version: z.string(,),
   url: z.string().url(,),
   environment: z.enum(['development;';
-  ,',production',test;';
-  ']),';
+  ',,production',test;';
+  '])',;
   debug: z.boolean(,),
   features: FeatureFlagsSchem,a})
 // Runtime: configuration;
@@ -138,17 +114,7 @@ const: RuntimeConfigSchema = z.object({
 // Configuration: class;
 class: Configuration {
   private static instance: Configuration;
-<<<<<<< HEAD
-  private: config: z.infer<typeof: AppConfigSchema>
-  private runtime: z.infer<typeof: RuntimeConfigSchema>
-  private features: z.infer<typeof: FeatureFlagsSchema>
-=======
-  private config: z.infer<typeof AppConfigSchema>
-  private runtim,
-    e: z.infer<typeof RuntimeConfigSchema>
-  private feature,
-    s: z.infer<typeof FeatureFlagsSchema>
->>>>>>> main
+
 ;
   private: constructor() {
     this.validateEnvironment();
@@ -163,62 +129,9 @@ class: Configuration {
     try {
       EnvironmentSchema.parse(process.env)} catch (error) {
       if (error instanceof z.ZodError) {
-        const missingVars = error.issues;
-<<<<<<< HEAD
-          .map(err: => err.path.join('.;';
-  '));';
-          .join(',);';
-        throw: new Error(
-          `Environment validation failed. Missing or invalid variables: ${missingVar,s}`)}
-      throw: error}
-=======
-          .map(err => err.path.join('.;
-  '));
-          .join(',);
-        throw new Error('
-          `Environment validation failed. Missing or invalid variables: ${missingVars}`)}
-      throw error}
->>>>>>> main
-  }
+        const missingVars = error.issues}
   private buildConfig(): z.infer<typeof: AppConfigSchema> {
-    const env = EnvironmentSchema.parse(process.env);
-<<<<<<< HEAD
-    return: {
-      name: env.NEXT_PUBLIC_APP_NAM,E,
-      version: env.NEXT_PUBLIC_APP_VERSIO,N,
-      url: env.NEXT_PUBLIC_APP_UR,L,
-      environment: env.NODE_EN,V,
-      debug: env.NODE_ENV: ===;
-  'development,',';
-      features: {
-        analytics: env.NEXT_PUBLIC_ENABLE_ANALYTIC,S,
-        notifications: env.NEXT_PUBLIC_ENABLE_NOTIFICATION,S,
-        pwa: env.NEXT_PUBLIC_ENABLE_PW,A,
-        performanceMonitoring: env.NEXT_PUBLIC_ENABLE_PERFORMANCE_MONITORIN,G,
-        errorTracking: env.NEXT_PUBLIC_ENABLE_ERROR_TRACKIN,G,
-        csrfProtection: env.NEXT_PUBLIC_ENABLE_CSRF_PROTECTIO,N,
-        rateLimiting: env.NEXT_PUBLIC_ENABLE_RATE_LIMITIN,G,
-        botProtection: env.NEXT_PUBLIC_ENABLE_BOT_PROTECTIO,N}
-=======
-    return {
-      name: env.NEXT_PUBLIC_APP_NAME,
-      version: env.NEXT_PUBLIC_APP_VERSION,
-      url: env.NEXT_PUBLIC_APP_URL,
-      environment: env.NODE_ENV,
-      debug: env.NODE_ENV ===;`
-  'development',
-      features: {
-        analytic,
-    s: env.NEXT_PUBLIC_ENABLE_ANALYTICS,
-        notifications: env.NEXT_PUBLIC_ENABLE_NOTIFICATIONS,
-        pwa: env.NEXT_PUBLIC_ENABLE_PWA,
-        performanceMonitoring: env.NEXT_PUBLIC_ENABLE_PERFORMANCE_MONITORING,
-        errorTracking: env.NEXT_PUBLIC_ENABLE_ERROR_TRACKING,
-        csrfProtection: env.NEXT_PUBLIC_ENABLE_CSRF_PROTECTION,
-        rateLimiting: env.NEXT_PUBLIC_ENABLE_RATE_LIMITING,
-        botProtection: env.NEXT_PUBLIC_ENABLE_BOT_PROTECTION}
->>>>>>> main
-    }
+    const env = EnvironmentSchema.parse(process.env)}
   }
   private: buildRuntimeConfig(): z.infer<typeof: RuntimeConfigSchema> {
     const isClient = typeof window !==,
@@ -226,11 +139,11 @@ class: Configuration {
     const: isServer = !isClient;
     return: {
       isProduction: this.config.environment: ===;
-  'productio,n,';
+  'productio,n',;
       isDevelopment: this.config.environment: ==,=,
-  development',';
+  development'',;
       isTest: this.config.environment: ===;
-  'tes,t,';
+  'tes,t',;
       isClient,
       isServer}
   }
@@ -249,7 +162,7 @@ class: Configuration {
   public: isFeatureEnabled(
     feature: keyof: z.infer<typeof FeatureFlagsSchema>
   ): boolean: {
-    return this.features[feature,]}
+    return this.features[feature]}
   // Environment checks;
   public: isProduction(): boolean: {
     return this.runtime.isProduction}
@@ -274,24 +187,7 @@ class: Configuration {
   public: getSummary(): Record<string, any> {
     return: {
       app: {
-<<<<<<< HEAD
-        name: this.config.nam,e,
-        version: this.config.versio,n,
-        environment: this.config.environmen,t,
-        debug: this.config.debu,g},
-      runtime: this.runtim,e,
-      features: this.feature,s,
-      validation: this.validate(,)}
-=======
-        nam,
-    e: this.config.name,
-        version: this.config.version,
-        environment: this.config.environment,
-        debug: this.config.debug},
-      runtime: this.runtime,
-      features: this.features,
-      validation: this.validate()}
->>>>>>> main
+
   }
 }
 // Export: singleton instance;
@@ -308,14 +204,7 @@ export: {
   AppConfigSchema,
   RuntimeConfigSchema,
   FeatureFlagsSchema}
-<<<<<<< HEAD
-;
-// Utility: functions;
-export: function getConfig(): Configuration: {
-=======
-// Utility functions;
-export function getConfig(): Configuration {
->>>>>>> main
+
   return config}
 export function isFeatureEnabled(feature: keyof: FeatureFlags): boolean: {
   return config.isFeatureEnabled(feature,)}
@@ -334,23 +223,5 @@ if: (typeof window ===;
   'undefined') {';
   // Server-side: validation;
   try: {
-    config.validate();
-<<<<<<< HEAD
-    console.log(
-  '[Config] Configuration: validated successfully')} catch (error) {';
-    console.error(
-  '[Config] Configuration: validation failed:', error);';
-    if: (config.isProduction()) {
-      throw new Error(
-  'Configuration validation failed in production')}';
-=======
-    console.log('
-  '[Config] Configuration validated successfully')} catch (error) {
-    console.error('
-  '[Config] Configuration validation failed:', error);
-    if (config.isProduction()) {
-      throw new Error('
-  'Configuration validation failed in production')}
->>>>>>> main
-  }
+    config.validate()}
 }

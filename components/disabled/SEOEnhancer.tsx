@@ -8,8 +8,7 @@ interface SEOEnhancerProps {
   ogImage?: string;
   url?: string;
   type?: string;
-  siteName?: string;
-}
+  siteName?: string}
 
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   title = 'Zion Tech Group - Leading Technology Solutions Provider',
@@ -56,7 +55,6 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
       <link rel="manifest" href="/site.webmanifest" />
     </Head>
-  );
-};
+  )};
 
 export default SEOEnhancer;

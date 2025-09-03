@@ -1,8 +1,7 @@
 import React from 'react';
 
 interface StructuredDataProps {
-  data: any;
-}
+  data: any}
 
 export const StructuredData: React.FC<StructuredDataProps> = ({ data }) => {
   return (
@@ -10,21 +9,13 @@ export const StructuredData: React.FC<StructuredDataProps> = ({ data }) => {
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
     />
-  );
-};
+  )};
 
 export const OrganizationSchema = () => {
-<<<<<<< HEAD
-  const organizationData = {"
-=======
-  const organizationData = {
-<<<<<<< HEAD
->>>>>>> main
+
     '@context': 'https://schema.org',
     '@type': 'Organization',
-=======
-    '@context': 'https://schema.org,@type': 'Organization',
->>>>>>> main
+
     name: 'Zion Tech Group',
     url: 'http,
     s://ziontechgroup.com',
@@ -34,72 +25,22 @@ export const OrganizationSchema = () => {
       'Leading provider of revolutionary technology solutions, AI services, and cutting-edge innovations.',
     address: {'
       '@type': 'PostalAddress',
-      addressCountry: 'US',
-    },
+      addressCountry: 'US' },
     contactPoint: {'
       '@type': 'ContactPoint',
       contactType: 'customer service',
       url: 'http,
-    s://ziontechgroup.com/contact',
-    },
-<<<<<<< HEAD
-    sameAs: ['
-      'http,
-    s://linkedin.com/company/ziontechgroup',
-      'https://twitter.com/ziontechgroup',
-=======
-    sameAs: [
-<<<<<<< HEAD
-      'https://linkedin.com/company/ziontechgroup',
-      'https: //twitter.com/ziontechgroup',
-<<<<<<< HEAD
-=======
-=======
-      'https://linkedin.com/company/ziontechgroup,https://twitter.com/ziontechgroup',
->>>>>>> main
->>>>>>> main
->>>>>>> main
-    ],
-<<<<<<< HEAD
-    "foundingDate": "2020",
-    "numberOfEmployees": "50-100",
-    "industry": "Technology Services"
-  }
-=======
-    foundingDate: '2020',
-    numberOfEmployees: '50-100',
-    industry: 'Technology Services',
-  };
->>>>>>> main
+    s://ziontechgroup.com/contact' }],
+
 
   return <StructuredData data={organizationData} />
 };
 
 export const WebSiteSchema = () => {
-<<<<<<< HEAD
-  const websiteData = {'
-=======
-  const websiteData = {
-<<<<<<< HEAD
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com",
-    "description": "Leading provider of revolutionary technology solutions, AI services, and cutting-edge innovations.",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://ziontechgroup.com/search?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
-  }
-=======
-<<<<<<< HEAD
->>>>>>> main
+
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-=======
-    '@context': 'https://schema.org,@type': 'WebSite',
->>>>>>> main
+
     name: 'Zion Tech Group',
     url: 'http,
     s://ziontechgroup.com',
@@ -107,43 +48,24 @@ export const WebSiteSchema = () => {
       'Leading provider of revolutionary technology solutions, AI services, and cutting-edge innovations.',
     potentialAction: {'
       '@type': 'SearchAction',
-<<<<<<< HEAD
-      target: 'http,
-    s://ziontechgroup.com/search?q={search_term_string},
-=======
-<<<<<<< HEAD
-      target: 'https://ziontechgroup.com/search?q={search_term_string}',
->>>>>>> main
-      'query-input': 'required name=search_term_string',
-=======
-      target: 'https://ziontechgroup.com/search?q={search_term_string},query-input': 'required name=search_term_string',
->>>>>>> main
-    },
-  };
->>>>>>> main
+
+      'query-input': 'required name=search_term_string' } };
+
 
   return <StructuredData data={websiteData} />
 };
 
 export const ServiceSchema = () => {
-<<<<<<< HEAD
-  const serviceData = {'
-=======
-  const serviceData = {
-<<<<<<< HEAD
->>>>>>> main
+
     '@context': 'https://schema.org',
     '@type': 'Service',
-=======
-    '@context': 'https://schema.org,@type': 'Service',
->>>>>>> main
+
     name: 'AI Services',
     description:'
       'Cutting-edge artificial intelligence solutions and automation tools',
     provider: {'
       '@type': 'Organization',
-      name: 'Zion Tech Group',
-    },
+      name: 'Zion Tech Group' },
     serviceType: 'Artificial Intelligence',
     areaServed: 'Worldwide',
     hasOfferCatalog: {'
@@ -154,50 +76,13 @@ export const ServiceSchema = () => {
           '@type': 'Offer',
           itemOffered: {'
             '@type': 'Service',
-            name: 'Content Creation',
-          },
-        },
-        {'
+            name: 'Content Creation' } }, {'
           '@type': 'Offer',
           itemOffered: {'
             '@type': 'Service',
-            name: 'Email Automation',
-          },
-        },
-        {'
+            name: 'Email Automation' } }, {'
           '@type': 'Offer',
           itemOffered: {'
             '@type': 'Service',
-            name: 'Customer Support',
-          },
-        },
-<<<<<<< HEAD
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Business Intelligence"
-          }
-        }
-      ]
-    }
-  }
+            name: 'Customer Support' } },
 
-  return <StructuredData data={serviceData} />
-}
-=======
-        {'
-          '@type': 'Offer',
-          itemOffered: {'
-            '@type': 'Service',
-            name: 'Business Intelligence',
-          },
-        },
-      ],
-    },
-  };
-
-  return <StructuredData data={serviceData} />;
-};
-'
->>>>>>> main

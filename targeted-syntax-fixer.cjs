@@ -7,13 +7,11 @@ class TargetedSyntaxFixer {
   constructor() {
     this.projectRoot = process.cwd();
     this.fixedFiles = [];
-    this.errors = [];
-  }
+    this.errors = []}
 
   log(message) {
     const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] ${message}`);
-  }
+    console.log(`[${timestamp}] ${message}`)}
 
   fixFile(filePath) {
     try {
@@ -38,24 +36,21 @@ class TargetedSyntaxFixer {
           pattern: /(['"])([^'"]*?)(\n|$)/g,
           replacement: (match, quote, content, newline) => {
             if (content.includes('\\' + quote) || content.includes('`')) return match;
-            return quote + content + quote + ';' + newline;
-          }
+            return quote + content + quote + ';' + newline}
         },
         // Fix missing commas in object literals
         {
-          pattern: /(\w+)\s*:\s*([^,}]+)(\s*[^,}])/g,
+          pattern: /(\w+)\s*:\s*([^}]+)(\s*[^}])/g,
           replacement: (match, key, value, next) => {
             if (next.includes('}')) return match;
-            return key + ': ' + value + ',' + next;
-          }
+            return key + ': ' + value + '', + next}
         },
         // Fix missing colons in object properties
         {
-          pattern: /(\w+)\s+([^:;]+)(\s*[^:;])/g,
+          pattern: /(\w+)\s+([^:]+)(\s*[^:])/g,
           replacement: (match, key, value, next) => {
             if (next.includes(':')) return match;
-            return key + ': ' + value + next;
-          }
+            return key + ': ' + value + next}
         }
       ];
 
@@ -63,20 +58,17 @@ class TargetedSyntaxFixer {
         const newContent = fixedContent.replace(fix.pattern, fix.replacement);
         if (newContent !== fixedContent) {
           fixedContent = newContent;
-          hasChanges = true;
-        }
+          hasChanges = true}
       });
 
       if (hasChanges) {
         fs.writeFileSync(filePath, fixedContent, 'utf8');
         this.fixedFiles.push(filePath);
-        this.log(`Fixed: ${filePath}`);
-      }
+        this.log(`Fixed: ${filePath}`)}
 
     } catch (error) {
       this.errors.push({ file: filePath, error: error.message });
-      this.log(`Error fixing ${filePath}: ${error.message}`);
-    }
+      this.log(`Error fixing ${filePath}: ${error.message}`)}
   }
 
   async processDirectory(dirPath) {
@@ -87,10 +79,8 @@ class TargetedSyntaxFixer {
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        await this.processDirectory(fullPath);
-      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js'))) {
-        this.fixFile(fullPath);
-      }
+        await this.processDirectory(fullPath)} else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js'))) {
+        this.fixFile(fullPath)}
     }
   }
 
@@ -105,9 +95,7 @@ class TargetedSyntaxFixer {
     if (this.errors.length > 0) {
       this.log('\nErrors encountered:');
       this.errors.forEach(error => {
-        this.log(`  ${error.file}: ${error.error}`);
-      });
-    }
+        this.log(`  ${error.file}: ${error.error}`)})}
   }
 }
 

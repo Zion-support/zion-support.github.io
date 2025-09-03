@@ -4,8 +4,7 @@ const path = require('path');
 
 class SEOOptimizer {
   constructor() {
-    this.seoData = new Map();
-  }
+    this.seoData = new Map()}
 
   async analyzeSEO() {
     const pagesDir = path.join(__dirname, '..', '..', 'pages');
@@ -15,8 +14,7 @@ class SEOOptimizer {
     const suggestions = this.generateSuggestions(issues);
 
     console.log('SEO analysis completed');
-    return { issues, suggestions };
-  }
+    return { issues, suggestions }}
 
   scanPages(dir) {
     if (!fs.existsSync(dir)) return;
@@ -27,10 +25,8 @@ class SEOOptimizer {
       const stat = fs.statSync(filePath);
 
       if (stat.isDirectory()) {
-        this.scanPages(filePath);
-      } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
-        this.analyzePage(filePath);
-      }
+        this.scanPages(filePath)} else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
+        this.analyzePage(filePath)}
     }
   }
 
@@ -46,11 +42,9 @@ class SEOOptimizer {
       hasKeywords: /meta.*keywords/.test(content),
       hasOpenGraph: /og:/i.test(content),
       hasTwitterCard: /twitter:/i.test(content),
-      hasStructuredData: /application\/ld\+json/.test(content),
-    };
+      hasStructuredData: /application\/ld\+json/.test(content) };
 
-    this.seoData.set(route, seoData);
-  }
+    this.seoData.set(route, seoData)}
 
   findSEOIssues() {
     const issues = [];
@@ -66,12 +60,9 @@ class SEOOptimizer {
         issues.push({
           route,
           type: 'missing-structured-data',
-          severity: 'low',
-        });
-    }
+          severity: 'low' })}
 
-    return issues;
-  }
+    return issues}
 
   generateSuggestions(issues) {
     const suggestions = [];
@@ -89,12 +80,10 @@ class SEOOptimizer {
           break;
         case `missing-structured-data`:
           suggestions.push(`Add structured data to ${issue.route}`);
-          break;
-      }
+          break}
     }
 
-    return suggestions;
-  }
+    return suggestions}
 }
 
 const optimizer = new SEOOptimizer();

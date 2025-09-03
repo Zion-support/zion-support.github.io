@@ -11,8 +11,7 @@ const path = require('path');
 class AutomationEnhancer {
   constructor() {
     this.projectRoot = path.resolve(__dirname, '..');
-    this.enhancements = [];
-  }
+    this.enhancements = []}
 
   async enhanceAutomation() {
     console.log('🚀 Starting Automation Enhancement...');
@@ -24,11 +23,8 @@ class AutomationEnhancer {
       await this.optimizePerformance();
       
       console.log('✅ Automation enhancement completed successfully!');
-      this.saveReport();
-      
-    } catch (error) {
-      console.error('❌ Error enhancing automation:', error);
-    }
+      this.saveReport()} catch (error) {
+      console.error('❌ Error enhancing automation:', error)}
   }
 
   async enhancePM2Scripts() {
@@ -51,8 +47,7 @@ class AutomationEnhancer {
       );
       
       fs.writeFileSync(ecosystemPath, enhancedEcosystem);
-      this.enhancements.push('Enhanced PM2 ecosystem configuration');
-    }
+      this.enhancements.push('Enhanced PM2 ecosystem configuration')}
   }
 
   async enhanceBuildScripts() {
@@ -101,8 +96,7 @@ echo "✅ Enhanced build completed successfully!"
     fs.writeFileSync(buildScriptPath, buildScript);
     fs.chmodSync(buildScriptPath, '755');
     
-    this.enhancements.push('Created enhanced build script');
-  }
+    this.enhancements.push('Created enhanced build script')}
 
   async createNewAutomations() {
     console.log('🆕 Creating new automation scripts...');
@@ -157,8 +151,7 @@ const path = require('path');
 
 class AdvancedMonitor {
   constructor() {
-    this.logPath = path.join(__dirname, '..', 'logs', 'monitoring.log');
-  }
+    this.logPath = path.join(__dirname, '..', 'logs', 'monitoring.log')}
 
   async startMonitoring() {
     console.log('🔍 Starting advanced monitoring...');
@@ -167,51 +160,42 @@ class AdvancedMonitor {
       this.checkSystemHealth();
       this.checkPM2Processes();
       this.checkDiskSpace();
-      this.checkMemoryUsage();
-    }, 30000); // Check every 30 seconds
+      this.checkMemoryUsage()}, 30000); // Check every 30 seconds
   }
 
   checkSystemHealth() {
     const timestamp = new Date().toISOString();
     const logEntry = \`[\${timestamp}] System health check completed\\n\`;
-    fs.appendFileSync(this.logPath, logEntry);
-  }
+    fs.appendFileSync(this.logPath, logEntry)}
 
   checkPM2Processes() {
     pm2.list((err, list) => {
       if (err) {
         console.error('PM2 monitoring error:', err);
-        return;
-      }
+        return}
       
       const timestamp = new Date().toISOString();
       const logEntry = \`[\${timestamp}] PM2 processes: \${list.length} running\\n\`;
-      fs.appendFileSync(this.logPath, logEntry);
-    });
-  }
+      fs.appendFileSync(this.logPath, logEntry)})}
 
   checkDiskSpace() {
     const { execSync } = require('child_process');
     try {
-      const diskUsage = execSync('df -h /', { encoding: 'utf8' });
+      const diskUsage = execSync('df -h /' { encoding: 'utf8' });
       const timestamp = new Date().toISOString();
       const logEntry = \`[\${timestamp}] Disk usage: \${diskUsage}\\n\`;
-      fs.appendFileSync(this.logPath, logEntry);
-    } catch (error) {
-      console.error('Disk space check error:', error);
-    }
+      fs.appendFileSync(this.logPath, logEntry)} catch (error) {
+      console.error('Disk space check error:', error)}
   }
 
   checkMemoryUsage() {
     const { execSync } = require('child_process');
     try {
-      const memoryUsage = execSync('free -h', { encoding: 'utf8' });
+      const memoryUsage = execSync('free -h' { encoding: 'utf8' });
       const timestamp = new Date().toISOString();
       const logEntry = \`[\${timestamp}] Memory usage: \${memoryUsage}\\n\`;
-      fs.appendFileSync(this.logPath, logEntry);
-    } catch (error) {
-      console.error('Memory check error:', error);
-    }
+      fs.appendFileSync(this.logPath, logEntry)} catch (error) {
+      console.error('Memory check error:', error)}
   }
 }
 
@@ -224,8 +208,7 @@ monitor.startMonitoring();
     fs.writeFileSync(monitorScriptPath, monitorScript);
     
     this.enhancements.push('Created deployment automation');
-    this.enhancements.push('Created advanced monitoring script');
-  }
+    this.enhancements.push('Created advanced monitoring script')}
 
   async optimizePerformance() {
     console.log('⚡ Optimizing automation performance...');
@@ -242,8 +225,7 @@ const path = require('path');
 
 class PerformanceOptimizer {
   constructor() {
-    this.projectRoot = path.resolve(__dirname, '..');
-  }
+    this.projectRoot = path.resolve(__dirname, '..')}
 
   async optimize() {
     console.log('⚡ Starting performance optimization...');
@@ -252,8 +234,7 @@ class PerformanceOptimizer {
     await this.optimizeCode();
     await this.optimizeDependencies();
     
-    console.log('✅ Performance optimization completed!');
-  }
+    console.log('✅ Performance optimization completed!')}
 
   async optimizeImages() {
     console.log('🖼️ Optimizing images...');
@@ -279,8 +260,7 @@ optimizer.optimize().catch(console.error);
     const perfScriptPath = path.join(this.projectRoot, 'scripts', 'performance-optimizer-enhanced.js');
     fs.writeFileSync(perfScriptPath, perfScript);
     
-    this.enhancements.push('Created enhanced performance optimizer');
-  }
+    this.enhancements.push('Created enhanced performance optimizer')}
 
   saveReport() {
     const report = {
@@ -291,14 +271,12 @@ optimizer.optimize().catch(console.error);
 
     const reportPath = path.join(this.projectRoot, 'automation-enhancement-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    console.log(`📄 Enhancement report saved to: ${reportPath}`);
-  }
+    console.log(`📄 Enhancement report saved to: ${reportPath}`)}
 }
 
 // Run the automation enhancer
 if (require.main === module) {
   const enhancer = new AutomationEnhancer();
-  enhancer.enhanceAutomation().catch(console.error);
-}
+  enhancer.enhanceAutomation().catch(console.error)}
 
 module.exports = AutomationEnhancer;

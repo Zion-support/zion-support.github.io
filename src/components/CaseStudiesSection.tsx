@@ -11,5 +11,4 @@ export default function CaseStudiesSection() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

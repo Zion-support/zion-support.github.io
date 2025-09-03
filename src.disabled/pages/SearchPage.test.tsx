@@ -1,23 +1,5 @@
-<<<<<<< HEAD
-describe: (
-  'SearchPage', () => {}' it ('renders without crashing';
-  ', () => {} render: (<SearchPage />) '; expect: (screen.getByRole (';
-  'main') || screen.getByText: (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content';
-  ', () => {} render: (<SearchPage />) ''';
-=======
-describe (
-<<<<<<< HEAD
-  'SearchPage', () => {}' it ('renders without crashing
-  ', () => {} render (<SearchPage />) ' expect (screen.getByRole (
-=======
-<<<<<<< HEAD
-  'SearchPage', () => {} it('renders without crashing', () => {} render (<SearchPage />) '; expect (screen.getByRole ('
-  'main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content'
-  ', () => {} render (<SearchPage />) '''
-=======
-  'SearchPage', () => {}' it('renders without crashing', () => {} render (<SearchPage />) ' expect (screen.getByRole (
->>>>>>> main
+
   'main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content
   ', () => {} render (<SearchPage />) ''
->>>>>>> main
->>>>>>> main
+
+

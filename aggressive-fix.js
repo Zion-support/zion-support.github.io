@@ -36,10 +36,8 @@ export default function ${componentName}() {
         </div>
       </div>
     </div>
-  );
-}
-`;
-}
+  )}
+`}
 
 function fixFile(filePath) {
   try {
@@ -67,14 +65,11 @@ function fixFile(filePath) {
       
       const newContent = createValidReactComponent(filePath);
       fs.writeFileSync(filePath, newContent);
-      return true;
-    }
+      return true}
     
-    return false;
-  } catch (error) {
+    return false} catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
+    return false}
 }
 
 function processDirectory(dirPath) {
@@ -88,19 +83,15 @@ function processDirectory(dirPath) {
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory()) {
-        fixedCount += processDirectory(fullPath);
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx')) {
+        fixedCount += processDirectory(fullPath)} else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx')) {
         if (fixFile(fullPath)) {
-          fixedCount++;
-        }
+          fixedCount++}
       }
     }
   } catch (error) {
-    console.error(`Error processing directory ${dirPath}:`, error.message);
-  }
+    console.error(`Error processing directory ${dirPath}:`, error.message)}
   
-  return fixedCount;
-}
+  return fixedCount}
 
 console.log('Starting aggressive fix...');
 const fixedCount = processDirectory(path.join(__dirname, 'src'));

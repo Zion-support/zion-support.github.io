@@ -11,5 +11,4 @@ export default function SearchAndFilterSystem.test() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

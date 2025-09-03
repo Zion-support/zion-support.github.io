@@ -24,28 +24,23 @@ const AIEmailResponder: React.FC = () => {
       icon: Brain,
       title: "Intelligent Response Generation",
       description: "AI-powered email responses that understand context and tone, providing personalized and professional replies automatically."
-    },
-    {
+    }, {
       icon: Filter,
       title: "Smart Email Prioritization",
       description: "Automatically categorize and prioritize emails based on importance, sender, and content analysis."
-    },
-    {
+    }, {
       icon: MessageSquare,
       title: "Multi-Language Support",
       description: "Respond in multiple languages with perfect grammar and cultural context awareness."
-    },
-    {
+    }, {
       icon: Shield,
       title: "Security & Privacy",
       description: "Enterprise-grade security with end-to-end encryption and GDPR compliance."
-    },
-    {
+    }, {
       icon: BarChart3,
       title: "Analytics & Insights",
       description: "Detailed analytics on email patterns, response times, and communication effectiveness."
-    },
-    {
+    }, {
       icon: Target,
       title: "Custom Templates",
       description: "Create and manage custom response templates for different scenarios and industries."
@@ -74,8 +69,7 @@ const AIEmailResponder: React.FC = () => {
         "Standard templates",
         "Email support"
       ]
-    },
-    {
+    }, {
       name: "Professional",
       price: "$35",
       period: "/month",
@@ -89,8 +83,7 @@ const AIEmailResponder: React.FC = () => {
         "Multi-language support"
       ],
       popular: true
-    },
-    {
+    }, {
       name: "Enterprise",
       price: "$75",
       period: "/month",
@@ -329,19 +322,7 @@ const AIEmailResponder: React.FC = () => {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-      <div className="mt-6 text-blue-400">
-        <a href="https: //www.zendesk.com" target="_blank" rel="noopener noreferrer">Zendesk</a>
-        {" • "}
-        <a href="https://workspace.google.com/products/gmail/" target="_blank" rel="noopener noreferrer">Gmail</a>
-        {" • "}
-        <a href="https://www.microsoft.com/microsoft-365/outlook/email-and-calendar-software-microsoft-outlook" target="_blank" rel="noopener noreferrer">Outlook</a>
-      </div>
-    </div>
-=======
-    </>
->>>>>>> main
-  );
-};
+
+  )};
 
 export default AIEmailResponder;

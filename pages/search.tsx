@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
@@ -13,8 +13,7 @@ export default function SearchPage() {
   useEffect(() => {
     if (router.query.q) {
       setSearchQuery(router.query.q as string);
-      performSearch(router.query.q as string);
-    }
+      performSearch(router.query.q as string)}
   }, [router.query.q]);
 
   const performSearch = async (query: string) => {
@@ -30,54 +29,40 @@ export default function SearchPage() {
           description:
             'Cutting-edge artificial intelligence solutions for your business',
           url: '/services/ai-services',
-          type: 'service',
-        },
-        {
+          type: 'service' }, {
           title: 'IT Services',
           description:
             'Comprehensive information technology services and support',
           url: '/services/it-services',
-          type: 'service',
-        },
-        {
+          type: 'service' }, {
           title: 'Micro SaaS Solutions',
           description:
             'Scalable software as a service solutions for modern businesses',
           url: '/services/micro-saas',
-          type: 'service',
-        },
-        {
+          type: 'service' }, {
           title: 'About Zion Tech Group',
           description: 'Learn more about our company, mission, and team',
           url: '/about',
-          type: 'page',
-        },
-        {
+          type: 'page' }, {
           title: 'Contact Us',
           description:
             'Get in touch with our team for consultation and support',
           url: '/contact',
-          type: 'page',
-        },
-      ].filter(
+          type: 'page' } ].filter(
         result =>
           result.title.toLowerCase().includes(query.toLowerCase()) ||
           result.description.toLowerCase().includes(query.toLowerCase())
       );
 
-      setSearchResults(mockResults);
-    } catch (error) {
-      console.error('Search error: ', error);
-    } finally {
-      setIsLoading(false);
-    }
+      setSearchResults(mockResults)} catch (error) {
+      console.error('Search error: ', error)} finally {
+      setIsLoading(false)}
   };
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
-      router.push(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
-    }
+      router.push(`/search?q=${encodeURIComponent(searchQuery.trim())}`)}
   };
 
   const getIconForType = (type: string) => {
@@ -87,8 +72,7 @@ export default function SearchPage() {
       case 'page':
         return <FileText className="w-5 h-5 text-green-600" />;
       default:
-        return <Globe className="w-5 h-5 text-gray-600" />;
-    }
+        return <Globe className="w-5 h-5 text-gray-600" />}
   };
 
   return (
@@ -128,8 +112,7 @@ export default function SearchPage() {
             </form>
           </div>
 
-          {/* Search Results */}
-          {router.query.q && (
+          {/* Search Results */}, {router.query.q && (
             <div className="mb-6">
               <p className="text-gray-600">
                 {isLoading
@@ -137,9 +120,7 @@ export default function SearchPage() {
                   : `Found ${searchResults.length} results for "${router.query.q}"`}
               </p>
             </div>
-          )}
-
-          {isLoading ? (
+          )}, {isLoading ? (
             <div className="text-center py-12">
               <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>
               <p className="mt-4 text-gray-600">Searching...</p>
@@ -241,5 +222,4 @@ export default function SearchPage() {
         </div>
       </div>
     </>
-  );
-}
+  )}

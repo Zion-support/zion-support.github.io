@@ -5,11 +5,10 @@ class AutomationSyntaxFixer {;
   constructor() {;
     this.projectRoot = process.cwd();
     this.fixedFiles = [];
-    this.errors = [];,
-}
+    this.errors = []}
 ;
   log(message) {;
-    console.log(`[${new Date().toISOString()}] ${message}`);`;  }
+    console.log(`[${new Date().toISOString()}] ${message}`);`}
 ;
   getAllFiles(dir, extensions = ['.js', '.cjs', '.mjs']) {';    let files = [];
     const items = fs.readdirSync(dir);
@@ -19,119 +18,10 @@ class AutomationSyntaxFixer {;
       const stat = fs.statSync(fullPath);
 ;
       if (stat.isDirectory()) {;
-        files = files.concat(this.getAllFiles(fullPath, extensions));,
-} else if (extensions.some(ext => item.endsWith(ext))) {;
-        files.push(fullPath);,
-}
+        files = files.concat(this.getAllFiles(fullPath, extensions))} else if (extensions.some(ext => item.endsWith(ext))) {;
+        files.push(fullPath)}
     }
-<<<<<<< HEAD
-;
-    return files;,
-}
-;
-  fixImportStatements(content) {;
-    // Fix incomplete import statements;
-    content = content.replace(/import fs from;/g, 'import fs from "fs";');';    content = content.replace(/import path from;/g, 'import path from "path";');';    content = content.replace(;);      /import { execSync } from;/g,;
-      'import { execSync } from "child_process";'';    );
-    content = content.replace(;);      /import axios from;/g,;
-      'import axios from "axios";'';    );
-;
-    return content;,
-}
-;
-  fixStringLiterals(content) {;
-    // Fix malformed string literals;
-    content = content.replace(;);      /this\.projectRoot,logs'/g,';      "this.projectRoot, 'logs'"";    );
-    content = content.replace(;);      /this\.projectRoot,reports'/g,';      "this.projectRoot, 'reports'"";    );
-    content = content.replace(;);      /this\.projectRoot,automation'/g,';      "this.projectRoot, 'automation'"";    );
-    content = content.replace(;);      /this\.projectRoot,dir\)/g,;
-      'this.projectRoot, dir)'';    );
-;
-    return content;,
-}
-;
-  fixRegexPatterns(content) {;
-    // Fix malformed regex patterns;
-    content = content.replace(;);      /const mergeConflictPattern = \/      changes\+\+;/g,;
-      'const mergeConflictPattern = /<<<<<<< HEAD\\n([\\s\\S]*?)\\n=======\\n([\\s\\S]*?)\\n>>>>>>> [^\\n]+/g;'';    );
-;
-    return content;,
-}
-;
-  fixOptionalChaining(content) {;
-    // Fix optional chaining syntax issues;
-    content = content.replace(/\?\?/g, '?.');';    content = content.replace(/\.\?\?/g, '?.');';
-    return content;,
-}
-;
-  fixBracketIssues(content) {;
-    // Fix missing brackets and parentheses;
-    content = content.replace(;);      /fs\.mkdirSync\(dirPath', \{ "recursive": true \}\);/g,';      'fs.mkdirSync(dirPath, { "recursive": true });'';    );
-;
-    return content;,
-}
-;
-  fixFile(filePath) {;
-    try {;
-      let content = fs.readFileSync(filePath, 'utf8');';      const originalContent = content;
-;
-      // Apply all fixes;
-=======
-    
-    return files;
-  }
 
-  fixImportStatements(content) {
-    // Fix incomplete import statements
-    content = content.replace(/import fs from;/g, 'import fs from "fs";');
-    content = content.replace(/import path from;/g, 'import path from "path";');
-    content = content.replace(/import { execSync } from;/g, 'import { execSync } from "child_process";');
-    content = content.replace(/import axios from;/g, 'import axios from "axios";');
-    
-    return content;
-  }
-
-  fixStringLiterals(content) {
-    // Fix malformed string literals
-    content = content.replace(/this\.projectRoot,logs'/g, "this.projectRoot, 'logs'");
-    content = content.replace(/this\.projectRoot,reports'/g, "this.projectRoot, 'reports'");
-    content = content.replace(/this\.projectRoot,automation'/g, "this.projectRoot, 'automation'");
-    content = content.replace(/this\.projectRoot,dir\)/g, "this.projectRoot, dir)");
-    
-    return content;
-  }
-
-  fixRegexPatterns(content) {
-    // Fix malformed regex patterns
-    content = content.replace(/const mergeConflictPattern = \/ {6}changes\+\+;/g, 
-      'const mergeConflictPattern = /<<<<<<< HEAD\\n([\\s\\S]*?)\\n=======\\n([\\s\\S]*?)\\n>>>>>>> [^\\n]+/g;');
-    
-    return content;
-  }
-
-  fixOptionalChaining(content) {
-    // Fix optional chaining syntax issues
-    content = content.replace(/\?\?/g, '?.');
-    content = content.replace(/\.\?\?/g, '?.');
-    
-    return content;
-  }
-
-  fixBracketIssues(content) {
-    // Fix missing brackets and parentheses
-    content = content.replace(/fs\.mkdirSync\(dirPath', \{ recursive: true \}\);/g, 
-      'fs.mkdirSync(dirPath, { recursive: true });');
-    
-    return content;
-  }
-
-  fixFile(filePath) {
-    try {
-      let content = fs.readFileSync(filePath, 'utf8');
-      const originalContent = content;
-      
-      // Apply all fixes
->>>>>>> main
       content = this.fixImportStatements(content);
       content = this.fixStringLiterals(content);
       content = this.fixRegexPatterns(content);
@@ -140,14 +30,11 @@ class AutomationSyntaxFixer {;
 ;
       if (content !== originalContent) {;
         fs.writeFileSync(filePath, content, 'utf8');';        this.fixedFiles.push(filePath);
-        this.log(`✅ "Fixed": ${filePath}`);`;        return true;,
-}
+        this.log(`✅ "Fixed": ${filePath}`);`;        return true}
 ;
-      return false;,
-} catch (error) {;
+      return false} catch (error) {;
       this.errors.push({ "file": filePath, "error": error.message });
-      this.log(`❌ Error fixing ${filePath}: ${error.message}`);`;      return false;,
-}
+      this.log(`❌ Error fixing ${filePath}: ${error.message}`);`;      return false}
   }
 ;
   async run() {;
@@ -156,25 +43,21 @@ class AutomationSyntaxFixer {;
     const allFiles = [];
 ;
     if (fs.existsSync(scriptsDir)) {;
-      allFiles.push(...this.getAllFiles(scriptsDir));,
-}
+      allFiles.push(...this.getAllFiles(scriptsDir))}
 ;
     if (fs.existsSync(automationDir)) {;
-      allFiles.push(...this.getAllFiles(automationDir));,
-}
+      allFiles.push(...this.getAllFiles(automationDir))}
 ;
     this.log(`📁 Found ${allFiles.length} files to check`);`;
     let fixedCount = 0;
     for (const file of allFiles) {;
       if (this.fixFile(file)) {;
-        fixedCount++;,
-}
+        fixedCount++}
     }
 ;
     this.log(`🎉 Fixed ${fixedCount} files`);`;    this.log(`❌ ${this.errors.length} errors encountered`);`;
     if (this.errors.length > 0) {;
-      this.log('"Errors":');';      this.errors.forEach(err => {;);        this.log(`  - ${err.file}: ${err.error}`);`;      });,
-}
+      this.log('"Errors":');';      this.errors.forEach(err => {;);        this.log(`  - ${err.file}: ${err.error}`);`})}
 ;
     // Generate report;
     const report = {;
@@ -182,13 +65,12 @@ class AutomationSyntaxFixer {;
       "totalFiles": allFiles.length,;
       "fixedFiles": fixedCount,;
       "errors": this.errors,;
-      "fixedFileList": this.fixedFiles,;,
-};
+      "fixedFileList": this.fixedFiles,};
 ;
-    fs.writeFileSync(;);      path.join(this.projectRoot, 'syntax-fix-report.json'),';      JSON.stringify(report, null, 2);
+    fs.writeFileSync(;);      path.join(this.projectRoot, 'syntax-fix-report.json')',;      JSON.stringify(report, null, 2);
     );
 ;
-    this.log('📊 Report saved to syntax-fix-report.json');';  }
+    this.log('📊 Report saved to syntax-fix-report.json');'}
 }
 ;
 // Run the fixer;

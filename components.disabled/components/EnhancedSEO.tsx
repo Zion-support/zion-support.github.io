@@ -8,8 +8,7 @@ interface SEOProps {
   url?: string;
   type?: string;
   keywords?: string[];
-  author?: string;
-}
+  author?: string}
 
 const defaultSEO = {
   title: 'Zion Tech Group - Leading Technology Solutions Provider',
@@ -18,19 +17,9 @@ const defaultSEO = {
   image: '/images/og-image.jpg',
   type: 'website',
   keywords: [
-<<<<<<< HEAD
-    'AI solutions',
-    'quantum computing',
-    'blockchain',
-    'cloud infrastructure',
-    'software development',
-    'technology consulting',
-=======
-    'AI solutions,quantum computing,blockchain,cloud infrastructure,software development,technology consulting'
->>>>>>> main
+
   ],
-  author: 'Zion Tech Group',
-};
+  author: 'Zion Tech Group' };
 
 const EnhancedSEO: React.FC<SEOProps> = ({
   title = defaultSEO.title,
@@ -39,8 +28,7 @@ const EnhancedSEO: React.FC<SEOProps> = ({
   url,
   type = defaultSEO.type,
   keywords = defaultSEO.keywords,
-  author = defaultSEO.author,
-}) => {
+  author = defaultSEO.author }) => {
   const router = useRouter();
   const currentUrl = url || `https://ziontechgroup.com${router.asPath}`;
   const fullImageUrl = image.startsWith('http')
@@ -88,21 +76,16 @@ const EnhancedSEO: React.FC<SEOProps> = ({
               telephone: '+1-302-464-0950',
               contactType: 'customer service',
               areaServed: 'US',
-              availableLanguage: 'English',
-            },
+              availableLanguage: 'English' },
             address: {
               '@type': 'PostalAddress',
               streetAddress: '364 E Main St STE 1008',
               addressLocality: 'Middletown',
               addressRegion: 'DE',
               postalCode: '19709',
-              addressCountry: 'US',
-            },
-          }),
-        }}
+              addressCountry: 'US' } }) }}
       />
     </Head>
-  );
-};
+  )};
 
 export default EnhancedSEO;

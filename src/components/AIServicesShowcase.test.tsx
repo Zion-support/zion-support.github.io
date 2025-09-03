@@ -11,5 +11,4 @@ export default function AIServicesShowcase.test() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

@@ -11,5 +11,4 @@ export default function TrustScoreBadge.test() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

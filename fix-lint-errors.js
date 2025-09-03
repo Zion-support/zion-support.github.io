@@ -9,57 +9,19 @@ function fixLintErrors(content) {
   let fixed = content;
 
   // Fix missing semicolons after imports
-<<<<<<< HEAD
-  fixed = fixed.replace(/import\s+[^;]+$/gm, match => {
-    if (!match.endsWith(';')) {
-      return match + ';';
-=======
-  fixed = fixed.replace(/import\s+[^;]+$/gm, (match) => {
-    if (!match.endsWith()) {
-      return match + ;
->>>>>>> main
+
     }
-    return match;
-  });
+    return match});
 
   // Fix malformed imports with missing commas
-<<<<<<< HEAD
-  fixed = fixed.replace(
-    /import\s*{\s*([^}]+)\s*}\s*from\s*['"][^'"]+['"]\s*$/gm,
-    (match, imports) => {
-      // Check if imports have proper commas
-      if (
-        imports &&
-        !imports.includes(',') &&
-        imports.trim().split(/\s+/).length > 1
-      ) {
-        const cleanImports = imports.trim().split(/\s+/).join(', ');
-        return match.replace(imports, cleanImports);
-      }
-      return match;
-=======
-  fixed = fixed.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*['"][^'"]+['"]\s*$/gm, (match, imports) => {
-    // Check if imports have proper commas
-    if (imports && !imports.includes(,) && imports.trim().split(/\s+/).length > 1) {
-      const cleanImports = imports.trim().split(/\s+/).join(,);
-      return match.replace(imports, cleanImports);
->>>>>>> main
+
     }
   );
 
   // Fix missing semicolons after variable declarations
-<<<<<<< HEAD
-  fixed = fixed.replace(/(const|let|var)\s+\w+\s*=\s*[^;]+$/gm, match => {
-    if (!match.endsWith(';')) {
-      return match + ';';
-=======
-  fixed = fixed.replace(/(const|let|var)\s+\w+\s*=\s*[^;]+$/gm, (match) => {
-    if (!match.endsWith()) {
-      return match + ;
->>>>>>> main
+
     }
-    return match;
-  });
+    return match});
 
   // Fix malformed JSX/TSX syntax
   fixed = fixed.replace(
@@ -71,18 +33,15 @@ function fixLintErrors(content) {
   const openBraces = (fixed.match(/\{/g) || []).length;
   const closeBraces = (fixed.match(/\}/g) || []).length;
   if (openBraces > closeBraces) {
-    fixed += '\n}'.repeat(openBraces - closeBraces);
-  }
+    fixed += '\n}'.repeat(openBraces - closeBraces)}
 
-  return fixed;
-}
+  return fixed}
 
 // Main function
 async function main() {
   // Get all TypeScript/JavaScript files
-  const files = await glob('src/**/*.{ts,tsx,js,jsx}', {
-    ignore: ['node_modules/**'],
-  });
+  const files = await glob('src/**/*.{ts,tsx,js,jsx}' {
+    ignore: ['node_modules/**'] });
 
   console.log(`Found ${files.length} files to process...`);
 
@@ -97,15 +56,12 @@ async function main() {
       if (content !== fixed) {
         fs.writeFileSync(file, fixed, 'utf8');
         console.log(`Fixed: ${file}`);
-        fixedCount++;
-      }
+        fixedCount++}
     } catch (error) {
       console.error(`Error processing ${file}:`, error.message);
-      errorCount++;
-    }
+      errorCount++}
   }
 
-  console.log(`\nCompleted: ${fixedCount} files fixed, ${errorCount} errors`);
-}
+  console.log(`\nCompleted: ${fixedCount} files fixed, ${errorCount} errors`)}
 
 main().catch(console.error);

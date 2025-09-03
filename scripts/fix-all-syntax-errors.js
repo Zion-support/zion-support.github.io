@@ -15,8 +15,7 @@ class SyntaxErrorFixer {
     this.projectRoot = process.cwd()
     this.scriptsDir = path.join(this.projectRoot, 'scripts')
     this.fixedCount = 0
-    this.errorCount = 0;
-}
+    this.errorCount = 0}
   async fixAllScripts() {
 
     console.log('🔧 Starting comprehensive syntax error fixing...')
@@ -86,8 +85,7 @@ class SyntaxErrorFixer {
     content = content.replace(/import\s+(\w+)\s+from\s*,\s*\n\s*['"`]([^'"`]+)['"`]/g, "import $1 from '$2'")
     // Fix incomplete import statements
     content = content.replace(/import\s+(\w+)\s+from\s*$/gm, "import $1 from '$1'")
-    return content;
-}
+    return content}
   fixSemicolonIssues(content) {
     // Fix misplaced semicolons
     content = content.replace(/;\s*$/gm, '')
@@ -97,35 +95,30 @@ class SyntaxErrorFixer {
     // Fix missing semicolons where needed
     content = content.replace(/(\w+)\s*}\s*$/gm, '$1;\n}')
     content = content.replace(/(\w+)\s*\)\s*$/gm, '$1;\n)')
-    return content;
-}
+    return content}
   fixStringConcatenation(content) {
     // Fix broken string concatenation
     content = content.replace(/['"`]\s*;\s*\n\s*['"`]/g, "'")
     content = content.replace(/['"`]\s*,\s*\n\s*['"`]/g, "'")
     content = content.replace(/['"`]\s*;\s*['"`]/g, "'")
     content = content.replace(/['"`]\s*,\s*['"`]/g, "'")
-    return content;
-}
+    return content}
   fixObjectSyntax(content) {
     // Fix object syntax issues
-    content = content.replace(/(\w+):\s*([^,}]+)\s*;\s*}/g, '$1: $2\n}')
-    content = content.replace(/(\w+):\s*([^,}]+)\s*;\s*\)/g, '$1: $2\n)')
-    content = content.replace(/(\w+):\s*([^,}]+)\s*;\s*]/g, '$1: $2\n]')
-    return content;
-}
+    content = content.replace(/(\w+):\s*([^}]+)\s*;\s*}/g, '$1: $2\n}')
+    content = content.replace(/(\w+):\s*([^}]+)\s*;\s*\)/g, '$1: $2\n)')
+    content = content.replace(/(\w+):\s*([^}]+)\s*;\s*]/g, '$1: $2\n]')
+    return content}
   fixFunctionSyntax(content) {
     // Fix function syntax issues
     content = content.replace(/function\s+(\w+)\s*\(\s*\)\s*{\s*$/gm, 'function $1() {\n')
     content = content.replace(/(\w+)\s*\(\s*\)\s*{\s*$/gm, '$1() {\n')
-    return content;
-}
+    return content}
   fixConditionalSyntax(content) {
     // Fix conditional syntax issues
     content = content.replace(/\?\s*([^:]+)\s*;\s*$/gm, '? $1 :')
     content = content.replace(/\?\s*([^:]+)\s*;\s*\n/gm, '? $1 :\n')
-    return content;
-}
+    return content}
 }
 
 // Run the syntax fixer

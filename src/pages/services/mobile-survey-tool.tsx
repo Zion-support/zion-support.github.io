@@ -26,28 +26,23 @@ const MobileSurveyTool: React.FC = () => {
       icon: Smartphone,
       title: "Mobile-First Design",
       description: "Optimized for mobile devices with responsive design that adapts to any screen size for maximum engagement."
-    },
-    {
+    }, {
       icon: Zap,
       title: "Adaptive Question Flow",
       description: "Dynamic surveys that change based on user responses, providing personalized experiences and richer data."
-    },
-    {
+    }, {
       icon: Download,
       title: "Offline Data Collection",
       description: "Collect responses even without internet connection, syncing automatically when connectivity is restored."
-    },
-    {
+    }, {
       icon: BarChart3,
       title: "Real-Time Analytics",
       description: "Instant insights with live dashboards, charts, and reports to track survey performance and responses."
-    },
-    {
+    }, {
       icon: Share2,
       title: "Multi-Channel Distribution",
       description: "Share surveys via SMS, email, social media, QR codes, and embeddable widgets for maximum reach."
-    },
-    {
+    }, {
       icon: Shield,
       title: "Enterprise Security",
       description: "Bank-level security with data encryption, GDPR compliance, and secure data storage."
@@ -68,18 +63,15 @@ const MobileSurveyTool: React.FC = () => {
       title: "Customer Feedback",
       description: "Gather real-time customer satisfaction and feedback across all touchpoints.",
       icon: MessageSquare
-    },
-    {
+    }, {
       title: "Market Research",
       description: "Conduct comprehensive market research with adaptive questioning techniques.",
       icon: Target
-    },
-    {
+    }, {
       title: "Employee Surveys",
       description: "Measure employee engagement and satisfaction with confidential, mobile-friendly surveys.",
       icon: Users
-    },
-    {
+    }, {
       title: "Event Feedback",
       description: "Collect instant feedback at events, conferences, and workshops using QR codes.",
       icon: Star
@@ -99,8 +91,7 @@ const MobileSurveyTool: React.FC = () => {
         "Basic analytics",
         "Email support"
       ]
-    },
-    {
+    }, {
       name: "Professional",
       price: "$45",
       period: "/month",
@@ -114,8 +105,7 @@ const MobileSurveyTool: React.FC = () => {
         "API access"
       ],
       popular: true
-    },
-    {
+    }, {
       name: "Enterprise",
       price: "$95",
       period: "/month",
@@ -383,7 +373,6 @@ const MobileSurveyTool: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
+  )};
 
 export default MobileSurveyTool;

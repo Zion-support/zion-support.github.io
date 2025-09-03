@@ -1,26 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
-import Navigation from '../components/layout/EnhancedNavigation';
-import Footer from '../components/layout/Footer';
-import { ArrowRight, Book, Code, FileText, HelpCircle, Search, Settings, Users } from 'lucide-react';
-=======
-import {
-  BookOpen,
-  Search,
-  FileText,
-  Code,
-  Database,
-  Cloud,
-  Shield,
-  Users,
-  ArrowRight,
-  Download,
-  ExternalLink,
-  Clock,
-} from 'lucide-react';
->>>>>>> main
+
 
 export default function Documentation() {
   const docCategories = [
@@ -32,26 +13,16 @@ export default function Documentation() {
         {
           title: 'Quick Start Guide',
           description: 'Get up and running in minutes',
-          time: '5 min read',
-        },
-        {
+          time: '5 min read' }, {
           title: 'Installation Guide',
           description: 'Step-by-step installation instructions',
-          time: '10 min read',
-        },
-        {
+          time: '10 min read' }, {
           title: 'Configuration',
           description: 'Configure your environment',
-          time: '15 min read',
-        },
-        {
+          time: '15 min read' }, {
           title: 'First Project',
           description: 'Create your first project',
-          time: '20 min read',
-        },
-      ],
-    },
-    {
+          time: '20 min read' } ] }, {
       title: 'API Reference',
       description: 'Complete API documentation and endpoints',
       icon: Code,
@@ -59,26 +30,16 @@ export default function Documentation() {
         {
           title: 'Authentication',
           description: 'API authentication and security',
-          time: '8 min read',
-        },
-        {
+          time: '8 min read' }, {
           title: 'Endpoints',
           description: 'All available API endpoints',
-          time: '25 min read',
-        },
-        {
+          time: '25 min read' }, {
           title: 'Rate Limits',
           description: 'API rate limiting and quotas',
-          time: '5 min read',
-        },
-        {
+          time: '5 min read' }, {
           title: 'Error Codes',
           description: 'Common error codes and solutions',
-          time: '10 min read',
-        },
-      ],
-    },
-    {
+          time: '10 min read' } ] }, {
       title: 'AI Services',
       description: 'AI and machine learning service documentation',
       icon: Database,
@@ -86,26 +47,16 @@ export default function Documentation() {
         {
           title: 'AI Models',
           description: 'Available AI models and capabilities',
-          time: '15 min read',
-        },
-        {
+          time: '15 min read' }, {
           title: 'Training Data',
           description: 'Data preparation and training',
-          time: '20 min read',
-        },
-        {
+          time: '20 min read' }, {
           title: 'Model Deployment',
           description: 'Deploy and manage AI models',
-          time: '12 min read',
-        },
-        {
+          time: '12 min read' }, {
           title: 'Performance Tuning',
           description: 'Optimize model performance',
-          time: '18 min read',
-        },
-      ],
-    },
-    {
+          time: '18 min read' } ] }, {
       title: 'Cloud Services',
       description: 'Cloud infrastructure and deployment guides',
       icon: Cloud,
@@ -113,26 +64,16 @@ export default function Documentation() {
         {
           title: 'Cloud Setup',
           description: 'Configure cloud environments',
-          time: '15 min read',
-        },
-        {
+          time: '15 min read' }, {
           title: 'Deployment',
           description: 'Deploy applications to cloud',
-          time: '20 min read',
-        },
-        {
+          time: '20 min read' }, {
           title: 'Scaling',
           description: 'Scale your applications',
-          time: '12 min read',
-        },
-        {
+          time: '12 min read' }, {
           title: 'Monitoring',
           description: 'Monitor cloud resources',
-          time: '10 min read',
-        },
-      ],
-    },
-    {
+          time: '10 min read' } ] }, {
       title: 'Security',
       description: 'Security best practices and guidelines',
       icon: Shield,
@@ -140,26 +81,16 @@ export default function Documentation() {
         {
           title: 'Security Overview',
           description: 'Security architecture and principles',
-          time: '12 min read',
-        },
-        {
+          time: '12 min read' }, {
           title: 'Authentication',
           description: 'User authentication and authorization',
-          time: '15 min read',
-        },
-        {
+          time: '15 min read' }, {
           title: 'Data Protection',
           description: 'Protect sensitive data',
-          time: '18 min read',
-        },
-        {
+          time: '18 min read' }, {
           title: 'Compliance',
           description: 'Meet compliance requirements',
-          time: '20 min read',
-        },
-      ],
-    },
-    {
+          time: '20 min read' } ] }, {
       title: 'Support',
       description: 'Help and support resources',
       icon: Users,
@@ -167,26 +98,16 @@ export default function Documentation() {
         {
           title: 'FAQ',
           description: 'Frequently asked questions',
-          time: '10 min read',
-        },
-        {
+          time: '10 min read' }, {
           title: 'Troubleshooting',
           description: 'Common issues and solutions',
-          time: '15 min read',
-        },
-        {
+          time: '15 min read' }, {
           title: 'Contact Support',
           description: 'Get help from our team',
-          time: '5 min read',
-        },
-        {
+          time: '5 min read' }, {
           title: 'Community',
           description: 'Join our developer community',
-          time: '8 min read',
-        },
-      ],
-    },
-  ];
+          time: '8 min read' } ] } ];
 
   const popularDocs = [
   {
@@ -194,74 +115,34 @@ export default function Documentation() {
       description: 'Get started with Zion Tech Group services in minutes',
       category: 'Getting Started',
       views: '12.5k',
-      rating: 4.9,
-    },
-    {
+      rating: 4.9 }, {
       title: 'API Authentication',
       description: 'Learn how to authenticate with our APIs',
       category: 'API Reference',
       views: '8.2k',
-      rating: 4.8,
-    },
-    {
+      rating: 4.8 }, {
       title: 'AI Model Training',
       description: 'Train custom AI models for your use case',
       category: 'AI Services',
       views: '6.7k',
-      rating: 4.9,
-    },
-    {
+      rating: 4.9 }, {
       title: 'Cloud Deployment',
       description: 'Deploy your applications to the cloud',
       category: 'Cloud Services',
       views: '5.9k',
-      rating: 4.7,
-    },
-  ];
+      rating: 4.7 } ];
 
   const resources = [
   {
       title: 'SDK Downloads',
       description: 'Download our SDKs for popular programming languages',
-      icon: Download,
-<<<<<<< HEAD
-      items: ['Python SDK', 'JavaScript SDK', 'Java SDK', 'C# SDK'],
-=======
-      items: ['Python SDK,JavaScript SDK,Java SDK,C# SDK']
->>>>>>> main
-    },
-    {
+      icon: Download }, {
       title: 'Code Examples',
       description: 'Ready-to-use code examples and snippets',
-      icon: Code,
-<<<<<<< HEAD
-      items: [
-        'REST API Examples',
-        'Webhook Examples',
-        'Integration Examples',
-        'Best Practices',
-      ],
-=======
-      items: ['REST API Examples,Webhook Examples,Integration Examples,Best Practices']
->>>>>>> main
-    },
-    {
+      icon: Code }, {
       title: 'Video Tutorials',
       description: 'Step-by-step video tutorials',
-      icon: ExternalLink,
-<<<<<<< HEAD
-      items: [
-        'Getting Started',
-        'Advanced Features',
-        'Troubleshooting',
-        'Case Studies',
-      ],
-    },
-=======
-      items: ['Getting Started,Advanced Features,Troubleshooting,Case Studies']
-    }
->>>>>>> main
-  ];
+      icon: ExternalLink ];
 
   return (
     <>
@@ -482,5 +363,4 @@ export default function Documentation() {
         </section>
       </main>
     </>
-  );
-}
+  )}

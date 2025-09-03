@@ -9,31 +9,27 @@ class AdvancedSecurityAudit {
     this.projectRoot = process.cwd();
     this.reportsDir = path.join(this.projectRoot, 'automation-reports');
     this.logFile = path.join(this.reportsDir, 'advanced-security.log');
-    this.ensureDirectories();
-  }
+    this.ensureDirectories()}
 
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true });
-    }
+      fs.mkdirSync(this.reportsDir { recursive: true })}
   }
 
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}`;
     console.log(logMessage);
-    fs.appendFileSync(this.logFile, logMessage + '\n');
-  }
+    fs.appendFileSync(this.logFile, logMessage + '\n')}
 
   async checkDependencies() {
     this.log('🔍 Checking dependencies for vulnerabilities...');
 
     try {
-      const result = execSync('npm audit --json', {
+      const result = execSync('npm audit --json' {
         cwd: this.projectRoot,
         encoding: 'utf8',
-        timeout: 60000,
-      });
+        timeout: 60000 });
 
       const auditData = JSON.parse(result);
 
@@ -44,15 +40,11 @@ class AdvancedSecurityAudit {
       return {
         success: true,
         vulnerabilities: auditData.vulnerabilities?.total || 0,
-        data: auditData,
-      };
-    } catch (error) {
+        data: auditData }} catch (error) {
       this.log(`❌ Dependencies audit failed: ${error.message}`);
       return {
         success: false,
-        error: error.message,
-      };
-    }
+        error: error.message }}
   }
 
   async checkCodeSecurity() {
@@ -62,47 +54,32 @@ class AdvancedSecurityAudit {
       {
         pattern: /eval\s*\(/g,
         severity: 'high',
-        message: 'Use of eval() detected',
-      },
-      {
+        message: 'Use of eval() detected' }, {
         pattern: /innerHTML\s*=/g,
         severity: 'medium',
-        message: 'Direct innerHTML assignment detected',
-      },
-      {
+        message: 'Direct innerHTML assignment detected' }, {
         pattern: /document\.write/g,
         severity: 'medium',
-        message: 'Use of document.write detected',
-      },
-      {
+        message: 'Use of document.write detected' }, {
         pattern: /localStorage\.setItem/g,
         severity: 'low',
-        message: 'localStorage usage detected',
-      },
-      {
+        message: 'localStorage usage detected' }, {
         pattern: /sessionStorage\.setItem/g,
         severity: 'low',
-        message: 'sessionStorage usage detected',
-      },
-      {
+        message: 'sessionStorage usage detected' }, {
         pattern: /password.*=.*['"]/g,
         severity: 'high',
-        message: 'Potential hardcoded password',
-      },
-      {
+        message: 'Potential hardcoded password' }, {
         pattern: /api[_-]?key.*=.*['"]/g,
         severity: 'high',
-        message: 'Potential hardcoded API key',
-      },
-    ];
+        message: 'Potential hardcoded API key' } ];
 
     const issues = [];
     const files = this.getAllFiles(this.projectRoot, [
       '.js',
       '.jsx',
       '.ts',
-      '.tsx',
-    ]);
+      '.tsx' ]);
 
     for (const file of files) {
       try {
@@ -115,9 +92,7 @@ class AdvancedSecurityAudit {
               file: path.relative(this.projectRoot, file),
               severity: check.severity,
               message: check.message,
-              matches: matches.length,
-            });
-          }
+              matches: matches.length })}
         }
       } catch (error) {
         // Skip files that can't be read
@@ -129,9 +104,7 @@ class AdvancedSecurityAudit {
     return {
       success: true,
       issues: issues,
-      totalIssues: issues.length,
-    };
-  }
+      totalIssues: issues.length }}
 
   async checkEnvironmentVariables() {
     this.log('🔍 Checking environment variables...');
@@ -140,8 +113,7 @@ class AdvancedSecurityAudit {
       '.env',
       '.env.local',
       '.env.production',
-      '.env.development',
-    ];
+      '.env.development' ];
     const issues = [];
 
     for (const envFile of envFiles) {
@@ -165,9 +137,7 @@ class AdvancedSecurityAudit {
                   issues.push({
                     file: envFile,
                     key: key.trim(),
-                    message: 'Potential sensitive environment variable',
-                  });
-                }
+                    message: 'Potential sensitive environment variable' })}
               }
             }
           }
@@ -184,9 +154,7 @@ class AdvancedSecurityAudit {
     return {
       success: true,
       issues: issues,
-      totalIssues: issues.length,
-    };
-  }
+      totalIssues: issues.length }}
 
   async checkFilePermissions() {
     this.log('🔍 Checking file permissions...');
@@ -196,8 +164,7 @@ class AdvancedSecurityAudit {
       'package-lock.json',
       '.env',
       '.env.local',
-      '.env.production',
-    ];
+      '.env.production' ];
 
     const issues = [];
 
@@ -214,9 +181,7 @@ class AdvancedSecurityAudit {
             issues.push({
               file: file,
               permissions: permissions,
-              message: 'File is world-readable',
-            });
-          }
+              message: 'File is world-readable' })}
         } catch (error) {
           // Skip files that can't be accessed
         }
@@ -228,9 +193,7 @@ class AdvancedSecurityAudit {
     return {
       success: true,
       issues: issues,
-      totalIssues: issues.length,
-    };
-  }
+      totalIssues: issues.length }}
 
   getAllFiles(dir, extensions = []) {
     let files = [];
@@ -247,22 +210,19 @@ class AdvancedSecurityAudit {
           !item.startsWith('.') &&
           item !== 'node_modules'
         ) {
-          files = files.concat(this.getAllFiles(fullPath, extensions));
-        } else if (stat.isFile()) {
+          files = files.concat(this.getAllFiles(fullPath, extensions))} else if (stat.isFile()) {
           if (
             extensions.length === 0 ||
             extensions.includes(path.extname(item))
           ) {
-            files.push(fullPath);
-          }
+            files.push(fullPath)}
         }
       }
     } catch (error) {
       // Skip directories that can't be read
     }
 
-    return files;
-  }
+    return files}
 
   async generateSecurityReport() {
     this.log('📊 Generating security report...');
@@ -273,8 +233,7 @@ class AdvancedSecurityAudit {
       codeSecurity: await this.checkCodeSecurity(),
       environmentVariables: await this.checkEnvironmentVariables(),
       filePermissions: await this.checkFilePermissions(),
-      recommendations: [],
-    };
+      recommendations: [] };
 
     // Generate recommendations
     if (
@@ -284,9 +243,7 @@ class AdvancedSecurityAudit {
       report.recommendations.push({
         type: 'dependencies',
         message: `${report.dependencies.vulnerabilities} vulnerabilities found in dependencies`,
-        action: 'Run npm audit fix to resolve vulnerabilities',
-      });
-    }
+        action: 'Run npm audit fix to resolve vulnerabilities' })}
 
     const highSeverityIssues = report.codeSecurity.issues.filter(
       issue => issue.severity === 'high'
@@ -295,18 +252,14 @@ class AdvancedSecurityAudit {
       report.recommendations.push({
         type: 'code',
         message: `${highSeverityIssues.length} high severity security issues found`,
-        action: 'Review and fix high severity security issues in code',
-      });
-    }
+        action: 'Review and fix high severity security issues in code' })}
 
     if (report.environmentVariables.totalIssues > 0) {
       report.recommendations.push({
         type: 'environment',
         message: `${report.environmentVariables.totalIssues} potential sensitive environment variables found`,
         action:
-          'Review environment variables and ensure sensitive data is properly secured',
-      });
-    }
+          'Review environment variables and ensure sensitive data is properly secured' })}
 
     const reportPath = path.join(
       this.reportsDir,
@@ -315,8 +268,7 @@ class AdvancedSecurityAudit {
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2), 'utf8');
 
     this.log(`📊 Security report generated: ${reportPath}`);
-    return report;
-  }
+    return report}
 
   async run() {
     this.log('🎯 Starting Advanced Security Audit');
@@ -327,11 +279,9 @@ class AdvancedSecurityAudit {
       this.log('🎉 Advanced Security Audit Completed');
       this.log(`📊 Recommendations: ${report.recommendations.length}`);
 
-      return report;
-    } catch (error) {
+      return report} catch (error) {
       this.log(`❌ Fatal error in security audit: ${error.message}`);
-      throw error;
-    }
+      throw error}
   }
 }
 
@@ -342,9 +292,7 @@ audit
   .then(report => {
     console.log('✅ Advanced Security Audit completed successfully!');
     console.log(`📊 Recommendations: ${report.recommendations.length}`);
-    process.exit(0);
-  })
+    process.exit(0)})
   .catch(error => {
     console.error('❌ Security audit failed:', error);
-    process.exit(1);
-  });
+    process.exit(1)});

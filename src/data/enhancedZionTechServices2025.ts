@@ -11,5 +11,4 @@ export default function enhancedZionTechServices2025() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

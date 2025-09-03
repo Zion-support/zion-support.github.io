@@ -11,5 +11,4 @@ export default function emergingTechnologyServices2030() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

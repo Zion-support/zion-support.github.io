@@ -16,8 +16,7 @@ const filesToRewrite = [
   'src/pages/Sitemap.jsx',
   'src/pages/HomePage.tsx',
   'src/pages/ServicesPage.tsx',
-  'src/pages/ComprehensiveSitemap.tsx',
-];
+  'src/pages/ComprehensiveSitemap.tsx' ];
 
 function createBasicPage(filePath) {
   const fileName = path.basename(filePath, path.extname(filePath));
@@ -52,9 +51,7 @@ export default function ${componentName}() {
         </div>
       </div>
     </div>
-  );
-}`;
-  } else {
+  )}`} else {
     content = `import React from `react`;
 import { Link } from `react-router-dom`;
 
@@ -81,12 +78,9 @@ export default function ${componentName}() {
         </div>
       </div>
     </div>
-  );
-}`;
-  }
+  )}`}
 
-  return content;
-}
+  return content}
 
 console.log(`Starting aggressive syntax fixes...`);
 let fixedCount = 0;
@@ -97,10 +91,8 @@ filesToRewrite.forEach(filePath => {
       const content = createBasicPage(filePath);
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Rewrote: ${filePath}`);
-      fixedCount++;
-    } catch (error) { 
-      console.error(`Error rewriting ${filePath }:`, error.message);
-    }
+      fixedCount++} catch (error) { 
+      console.error(`Error rewriting ${filePath }:`, error.message)}
   }
 });
 

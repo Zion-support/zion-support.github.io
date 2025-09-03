@@ -1,270 +1,125 @@
-<<<<<<< HEAD
-import: React, { useState } from;
-  'react' import: { motion, AnimatePresence } from;';
-  'framer-motion' import: { Helmet } from;';
-  'react-helmet-async' import: {  Search, Filter, Star, ArrowRight, ChevronDown, Brain, Cpu, Database, Network, Shield, Rocket, Users, BarChart3, Code, Server, Chip, Globe, Zap, Lock, ShieldCheck, TrendingUp, CheckCircle, Clock, DollarSign, Target, Handshake, Lightbulb, Phone, Mail, MapPin, ExternalLink, Award, TrendingDown, BarChart, PieChart, Activity, Monitor, Smartphone, Tablet, Laptop, Desktop, Cloud, Grid, List, Headphones, Atom, Link, Leaf, FlaskConical } from;';
-  'lucide-react' import: { ENHANCED_MICRO_SAAS_SERVICES_2026 } from;';
-  '../data/enhancedMicroSaasServices2026'  const: UltimateZionServicesShowcase2026: React.FC: = () => { const [activeCategor,y, setActiveCategory] = useState(,';
-  all') const: [searchTerm, setSearchTerm] = useState(';';
-  ') const: [sortBy, setSortBy] = useState('rating';
-  ') const: [viewMode, setViewMode] = useState<'grid;';
-  ' | 'list;';
-  '>('grid;';
-  ')  const: allServices = ENHANCED_MICRO_SAAS_SERVICES_2026  const categories = [ { id: 'al,l, name: 'All: Services;';
-  ,', count: allServices.lengt,h, icon:,';
-=======
-import React, { useState } from;
-  'react' import { motion, AnimatePresence } from;
-  'framer-motion' import { Helmet } from;
-  'react-helmet-async' import {  Search, Filter, Star, ArrowRight, ChevronDown, Brain, Cpu, Database, Network, Shield, Rocket, Users, BarChart3, Code, Server, Chip, Globe, Zap, Lock, ShieldCheck, TrendingUp, CheckCircle, Clock, DollarSign, Target, Handshake, Lightbulb, Phone, Mail, MapPin, ExternalLink, Award, TrendingDown, BarChart, PieChart, Activity, Monitor, Smartphone, Tablet, Laptop, Desktop, Cloud, Grid, List, Headphones, Atom, Link, Leaf, FlaskConical } from;
-  'lucide-react' import { ENHANCED_MICRO_SAAS_SERVICES_2026 } from;
-  '../data/enhancedMicroSaasServices2026'  const UltimateZionServicesShowcase2026: React.FC = () => { const [activeCategory, setActiveCategory] = useState(,
-<<<<<<< HEAD
-  all') const [searchTerm, setSearchTerm] = useState('
-  ') const [sortBy, setSortBy] = useState('rating
-=======
-<<<<<<< HEAD
-  all') const [searchTerm, setSearchTerm] = useState(';
-  ') const [sortBy, setSortBy] = useState('rating'
-=======
-  all') const [searchTerm, setSearchTerm] = useState() const [sortBy, setSortBy] = useState('rating
->>>>>>> main
->>>>>>> main
+
+
   ') const [viewMode, setViewMode] = useState<'grid;
   ' | 'list;
   '>('grid;
   ')  const allServices = ENHANCED_MICRO_SAAS_SERVICES_2026  const categories = [
   { id: 'all, name: 'All Services;
   ', count: allServices.length, icon:,
->>>>>>> main
+
   🚀;
-  ', color: 'from-zion-cyan: to-zion-blue, }, { id:,';
+  ', color: 'from-zion-cyan: to-zion-blue }, { id: 'placeholder'',;
   AI: & Business Intelligence;
-  ', name: 'AI: & Business Intelligenc,e, count: allServices.filter(s: => s.category ==,=,';
+  ', name: 'AI: & Business Intelligenc,e, count: allServices.filter(s: => s.category ==,='',;
   AI: & Business Intelligence;
-  ').length, icon: '�,�, color:,';
+  ').length, icon: '�,�, color:',;
   from-zion-purple: to-zion-cyan;
-  ' }, { id: 'Cybersecurit,y, name:,';
+  ' }, { id: 'Cybersecurit,y, name:',;
   Cybersecurity;
-  ', count: allServices.filter(s: => s.category === 'Cybersecurity).lengt,h, icon:,';
+  ', count: allServices.filter(s: => s.category === 'Cybersecurity).lengt,h, icon:',;
   🛡️;
-  ', color: 'from-zion-green: to-zion-blue, }, { id:,';
+  ', color: 'from-zion-green: to-zion-blue }, { id: 'placeholder'',;
   Customer: Experience;
-  ', name: 'Customer: Experienc,e, count: allServices.filter(s: => s.category ==,=,';
+  ', name: 'Customer: Experienc,e, count: allServices.filter(s: => s.category ==,='',;
   Customer: Experience;
-  ').length, icon: '�,�, color:,';
+  ').length, icon: '�,�, color:',;
   from-zion-purple: to-zion-cyan;
-  ' }, { id: 'Financial: Technolog,y, name:,';
+  ' }, { id: 'Financial: Technolog,y, name:',;
   Financial: Technology;
-  ', count: allServices.filter(s: => s.category === 'Financial Technology).lengt,h, icon:,';
+  ', count: allServices.filter(s: => s.category === 'Financial Technology).lengt,h, icon:',;
   💰;
-  ', color: 'from-zion-green: to-zion-emerald, }, { id:,';
+  ', color: 'from-zion-green: to-zion-emerald }, { id: 'placeholder'',;
   Healthcare: Technology;
-  ', name: 'Healthcare: Technolog,y, count: allServices.filter(s: => s.category ==,=,';
+  ', name: 'Healthcare: Technolog,y, count: allServices.filter(s: => s.category ==,='',;
   Healthcare: Technology;
-  ').length, icon: '�,�, color:,';
+  ').length, icon: '�,�, color:',;
   from-zion-red: to-zion-pink;
-  ' }, { id: 'Supply: Chai,n, name:,';
+  ' }, { id: 'Supply: Chai,n, name:',;
   Supply: Chain;
-  ', count: allServices.filter(s: => s.category === 'Supply Chain).lengt,h, icon:,';
+  ', count: allServices.filter(s: => s.category === 'Supply Chain).lengt,h, icon:',;
   📦;
-  ', color: 'from-zion-blue: to-zion-cyan, }, { id:,';
+  ', color: 'from-zion-blue: to-zion-cyan }, { id: 'placeholder'',;
   Digital: Marketing;
-  ', name: 'Digital: Marketin,g, count: allServices.filter(s: => s.category ==,=,';
+  ', name: 'Digital: Marketin,g, count: allServices.filter(s: => s.category ==,='',;
   Digital: Marketing;
-  ').length, icon: '�,�, color:,';
+  ').length, icon: '�,�, color:',;
   from-zion-orange: to-zion-red;
-  ' }, { id: 'Project: Managemen,t, name:,';
+  ' }, { id: 'Project: Managemen,t, name:',;
   Project: Management;
-  ', count: allServices.filter(s: => s.category === 'Project Management).lengt,h, icon:,';
+  ', count: allServices.filter(s: => s.category === 'Project Management).lengt,h, icon:',;
   📋;
-  ', color: 'from-zion-purple: to-zion-cyan, }, { id:,';
+  ', color: 'from-zion-purple: to-zion-cyan }, { id: 'placeholder'',;
   Human: Resources;
-  ', name: 'Human: Resource,s, count: allServices.filter(s: => s.category ==,=,';
+  ', name: 'Human: Resource,s, count: allServices.filter(s: => s.category ==,='',;
   Human: Resources;
-  ').length, icon: '👨‍�,�, color:,';
+  ').length, icon: '👨‍�,�, color:',;
   from-zion-purple: to-zion-cyan;
-  ' }, { id: 'Content: Creatio,n, name:,';
+  ' }, { id: 'Content: Creatio,n, name:',;
   Content: Creation;
-  ', count: allServices.filter(s: => s.category === 'Content Creation).lengt,h, icon:,';
+  ', count: allServices.filter(s: => s.category === 'Content Creation).lengt,h, icon:',;
   ✍️;
-  ', color: 'from-zion-orange: to-zion-red, }, { id:,';
+  ', color: 'from-zion-orange: to-zion-red }, { id: 'placeholder'',;
   Customer: Service;
-  ', name: 'Customer: Servic,e, count: allServices.filter(s: => s.category ==,=,';
+  ', name: 'Customer: Servic,e, count: allServices.filter(s: => s.category ==,='',;
   Customer: Service;
-  ').length, icon: '�,�, color:,';
+  ').length, icon: '�,�, color:',;
   from-zion-blue: to-zion-cyan;
-  ' }, { id: 'Business: Automatio,n, name:,';
+  ' }, { id: 'Business: Automatio,n, name:',;
   Business: Automation;
-  ', count: allServices.filter(s: => s.category === 'Business Automation).lengt,h, icon:,';
+  ', count: allServices.filter(s: => s.category === 'Business Automation).lengt,h, icon:',;
   ⚙️;
-  ', color: 'from-zion-purple: to-zion-cyan, }, { id:,';
+  ', color: 'from-zion-purple: to-zion-cyan }, { id: 'placeholder'',;
   Industrial: IoT;
-  ', name: 'Industrial: Io,T, count: allServices.filter(s: => s.category ==,=,';
+  ', name: 'Industrial: Io,T, count: allServices.filter(s: => s.category ==,='',;
   Industrial: IoT;
-  ').length, icon: '�,�, color:,';
+  ').length, icon: '�,�, color:',;
   from-zion-blue: to-zion-cyan;
-  ' }, { id: 'Software: Developmen,t, name:,';
+  ' }, { id: 'Software: Developmen,t, name:',;
   Software: Development;
-  ', count: allServices.filter(s: => s.category === 'Software Development).lengt,h, icon:,';
+  ', count: allServices.filter(s: => s.category === 'Software Development).lengt,h, icon:',;
   💻;
-  ', color: 'from-zion-purple: to-zion-cyan, }, { id:,';
+  ', color: 'from-zion-purple: to-zion-cyan }, { id: 'placeholder'',;
   DevOps;
-  ', name: 'DevOp,s, count: allServices.filter(s: => s.category ==,=,';
+  ', name: 'DevOp,s, count: allServices.filter(s: => s.category ==,='',;
   DevOps;
-  ').length, icon: '�,�, color:,';
+  ').length, icon: '�,�, color:',;
   from-zion-blue: to-zion-cyan;
-  ' }, { id: 'Edge: Computin,g, name:,';
+  ' }, { id: 'Edge: Computin,g, name:',;
   Edge: Computing;
-  ', count: allServices.filter(s: => s.category === 'Edge Computing).lengt,h, icon:,';
+  ', count: allServices.filter(s: => s.category === 'Edge Computing).lengt,h, icon:',;
   🌐;
-  ', color: 'from-zion-blue: to-zion-cyan, }, { id:,';
+  ', color: 'from-zion-blue: to-zion-cyan }, { id: 'placeholder'',;
   Quantum: Computing;
-  ', name: 'Quantum: Computin,g, count: allServices.filter(s: => s.category ==,=,';
+  ', name: 'Quantum: Computin,g, count: allServices.filter(s: => s.category ==,='',;
   Quantum: Computing;
-  ').length, icon: '⚛,️, color:,';
+  ').length, icon: '⚛,️, color:',;
   from-zion-purple: to-zion-pink;
-  ' }, { id: 'Blockchai,n, name:,';
+  ' }, { id: 'Blockchai,n, name:',;
   Blockchain;
-  ', count: allServices.filter(s: => s.category === 'Blockchain).lengt,h, icon:,';
+  ', count: allServices.filter(s: => s.category === 'Blockchain).lengt,h, icon:',;
   🔗;
-  ', color: 'from-zion-green: to-zion-emerald, }, { id:,';
+  ', color: 'from-zion-green: to-zion-emerald }, { id: 'placeholder'',;
   Metaverse;
-  ', name: 'Metavers,e, count: allServices.filter(s: => s.category ==,=,';
+  ', name: 'Metavers,e, count: allServices.filter(s: => s.category ==,='',;
   Metaverse;
-  ').length, icon: '�,�, color:,';
+  ').length, icon: '�,�, color:',;
   from-zion-purple: to-zion-indigo;
-  ' }, { id: 'Space: Technolog,y, name:,';
+  ' }, { id: 'Space: Technolog,y, name:',;
   Space: Technology;
-  ', count: allServices.filter(s: => s.category === 'Space Technology).lengt,h, icon:,';
+  ', count: allServices.filter(s: => s.category === 'Space Technology).lengt,h, icon:',;
   🚀;
-  ', color: 'from-zion-purple: to-zion-pink, }, { id:,';
+  ', color: 'from-zion-purple: to-zion-pink }, { id: 'placeholder'',;
   Sustainability;
-  ', name: 'Sustainabilit,y, count: allServices.filter(s: => s.category ==,=,';
+  ', name: 'Sustainabilit,y, count: allServices.filter(s: => s.category ==,='',;
   Sustainability;
-  ').length, icon: '�,�, color:,';
+  ').length, icon: '�,�, color:',;
   from-zion-green: to-zion-emerald;
-  ' }, { id: 'Research: & Developmen,t, name:,';
+  ' }, { id: 'Research: & Developmen,t, name:',;
   Research: & Development;
-  ', count: allServices.filter(s: => s.category === 'Research & Development).lengt,h, icon:,';
+  ', count: allServices.filter(s: => s.category === 'Research & Development).lengt,h, icon:',;
   🔬;
-  ', color: 'from-zion-purple: to-zion-cyan, } ]  const filteredServices = allServices.filter(service => { const matchesCategory = activeCategory ===,';
+  ', color: 'from-zion-purple: to-zion-cyan } ]  const filteredServices = allServices.filter(service => { const matchesCategory = activeCategory ===',;
   all;
-<<<<<<< HEAD
-  ' || service.category: === activeCategory const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) || service.description.toLowerCase().includes(searchTerm.toLowerCase()) || service.category.toLowerCase().includes(searchTerm.toLowerCase()) || service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())) return matchesCategory && matchesSearch })  const sortedServices = [...filteredServices].sort((a, b) => { switch (sortBy) { case 'rating;';
-  ':  return: b.rating - a.rating case 'price;';
-  ': return: a.price - b.price case 'reviewCount;';
-  ': return: b.reviewCount - a.reviewCount case 'name: return: a.title.localeCompare(b.title) default: return: 0, } })  const containerVariants = { hidden: { opacity: 0, }, visible: { opacity: ,1, transition: { staggerChildren: 0.1, } } }  const: itemVariants = { hidden: { y: 2,0, opacity: 0, }, visible: { y: ,0, opacity:  ,1, transition: { duration: 0.,5, ease: 'easeOut', } } }';' const: getCategoryIcon = (category: string) => {' switch: (category) {';'' cas,e,';
-  AI: & Business Intelligence
-  ': return: <Brain className='w-6 h-6' />';'' case: 'Cybersecurity';
-  ': return: <Shield className='w-6 h-6' />';'' case: 'Customer Experience';
-  ': return: <Users className='w-6 h-6' />';'' case: 'Financial Technology';
-  ': return: <DollarSign className='w-6 h-6' />';'' case: 'Healthcare Technology';
-  ': return: <Activity className='w-6 h-6' />';'' case: 'Supply Chain';
-  ': return: <BarChart3 className='w-6 h-6' />';'' case: 'Digital Marketing';
-  ': return: <TrendingUp className='w-6 h-6' />';'' case: 'Project Management';
-  ': return: <Target className='w-6 h-6' />';'' case: 'Human Resources';
-  ': return: <Users className='w-6 h-6' />';'' case: 'Content Creation';
-  ': return: <Code className='w-6 h-6' />';'' case: 'Customer Service';
-  ': return: <Headphones className='w-6 h-6' />';'' case: 'Business Automation';
-  ': return: <Zap className='w-6 h-6' />';'' case: 'Industrial IoT';
-  ': return: <Chip className='w-6 h-6' />';'' case: 'Software Development';
-  ': return: <Code className='w-6 h-6' />';'' case: 'DevOps';
-  ': return: <Server className='w-6 h-6' />';'' case: 'Edge Computing';
-  ': return: <Globe className='w-6 h-6' />';'' case: 'Quantum Computing';
-  ': return: <Atom className='w-6 h-6' />';'' case: 'Blockchain';
-  ': return: <Link className='w-6 h-6' />';'' case: 'Metaverse';
-  ': return: <Globe className='w-6 h-6' />';'' case: 'Space Technology';
-  ': return: <Rocket className='w-6 h-6' />';'' case: 'Sustainability';
-  ': return: <Leaf className='w-6 h-6' />''' case 'Research & Development: return: <FlaskConical className='w-6 h-6' />''' default: return: <Lightbulb className='w-6 h-6' />, } } ' return (' <>' <Helmet>'' <title>Zion Tech Group - Ultimate AI & Micro SAAS Services Showcase 2026 | Premier Technology Solutions</title>''' <meta name='description' content='Discover Zion Tech Group&apos;s: comprehensive suite of AI-powered micro SAAS services, IT solutions, and innovative technology platforms. Transform your business with cutting-edge AI, cybersecurity, and digital transformation solutions.' / / / / / />''' <meta name='keywords' content='AI services, micro SAAS, cybersecurity, business intelligence, digital transformation, Zion Tech Group, technology solutions, AI platforms' / / / / / />''' <meta property='og: title' content='Zion: Tech Group - Ultimate AI & Micro SAAS Services Showcase 2026' / / / / / />''' <meta property='og: description' content='Premier: technology solutions provider offering cutting-edge A,I, cybersecurity, and digital transformation services.' / / / / / />''' <meta property='og: type' content='website' / / / / / />''' <meta: property='og:url' content='https:''';',;
-=======
-  ' || service.category === activeCategory const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) || service.description.toLowerCase().includes(searchTerm.toLowerCase()) || service.category.toLowerCase().includes(searchTerm.toLowerCase()) || service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())) return matchesCategory && matchesSearch })  const sortedServices = [...filteredServices].sort((a, b) => { switch (sortBy) { case 'rating;
-  ':  return b.rating - a.rating case 'price;
-  ': return a.price - b.price case 'reviewCount;
-<<<<<<< HEAD
-  ': return b.reviewCount - a.reviewCount case 'name: return a.title.localeCompare(b.title) default: return 0 } })  const containerVariants = { hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.1 } } }  const itemVariants = { hidden: { y: 20, opacity: 0 }, visible: { y: 0, opacity: 1, transition: { duration: 0.5, ease: 'easeOut' } } }';' const getCategoryIcon = (category: string) => {' switch (category) {''' case,
-  AI & Business Intelligence
-  ': return <Brain className='w-6 h-6' />''' case 'Cybersecurity
-  ': return <Shield className='w-6 h-6' />''' case 'Customer Experience
-  ': return <Users className='w-6 h-6' />''' case 'Financial Technology
-  ': return <DollarSign className='w-6 h-6' />''' case 'Healthcare Technology
-  ': return <Activity className='w-6 h-6' />''' case 'Supply Chain
-  ': return <BarChart3 className='w-6 h-6' />''' case 'Digital Marketing
-  ': return <TrendingUp className='w-6 h-6' />''' case 'Project Management
-  ': return <Target className='w-6 h-6' />''' case 'Human Resources
-  ': return <Users className='w-6 h-6' />''' case 'Content Creation
-  ': return <Code className='w-6 h-6' />''' case 'Customer Service
-  ': return <Headphones className='w-6 h-6' />''' case 'Business Automation
-  ': return <Zap className='w-6 h-6' />''' case 'Industrial IoT
-  ': return <Chip className='w-6 h-6' />''' case 'Software Development
-  ': return <Code className='w-6 h-6' />''' case 'DevOps
-  ': return <Server className='w-6 h-6' />''' case 'Edge Computing
-  ': return <Globe className='w-6 h-6' />''' case 'Quantum Computing
-  ': return <Atom className='w-6 h-6' />''' case 'Blockchain
-  ': return <Link className='w-6 h-6' />''' case 'Metaverse
-  ': return <Globe className='w-6 h-6' />''' case 'Space Technology
-  ': return <Rocket className='w-6 h-6' />''' case 'Sustainability
-  ': return <Leaf className='w-6 h-6' />''' case 'Research & Development: return <FlaskConical className='w-6 h-6' />''' default: return <Lightbulb className='w-6 h-6' /> } } ' return (' <>' <Helmet>'' <title>Zion Tech Group - Ultimate AI & Micro SAAS Services Showcase 2026 | Premier Technology Solutions</title>''' <meta name='description' content='Discover Zion Tech Group&apos;s comprehensive suite of AI-powered micro SAAS services, IT solutions, and innovative technology platforms. Transform your business with cutting-edge AI, cybersecurity, and digital transformation solutions.' / / / / / />''' <meta name='keywords' content='AI services, micro SAAS, cybersecurity, business intelligence, digital transformation, Zion Tech Group, technology solutions, AI platforms' / / / / / />''' <meta property='og: title' content='Zion Tech Group - Ultimate AI & Micro SAAS Services Showcase 2026' / / / / / />''' <meta property='og: description' content='Premier technology solutions provider offering cutting-edge AI, cybersecurity, and digital transformation services.' / / / / / />''' <meta property='og: type' content='website' / / / / / />''' <meta property='og:url' content='https:''';
-=======
-<<<<<<< HEAD
-  ': return b.reviewCount - a.reviewCount case 'name: return a.title.localeCompare(b.title) defaul,
-    t: return 0 } })  const containerVariants = { hidden: { opacit,
-    y: 0 }, visible: { opacit,
-    y: 1, transition: { staggerChildre,
-    n: 0.1 } } }  const itemVariants = { hidden: { ,
-    y: 20, opacity: 0 }, visible: { ,
-    y: 0, opacity: 1, transition: { duratio,
-    n: 0.5, ease: 'easeOut' } } }; const getCategoryIcon = (category: string) => {' switch (category) {';' case,
-  AI & Business Intelligence'
-  ': return <Brain className='w-6 h-6' />;' case 'Cybersecurity'
-  ': return <Shield className='w-6 h-6' />;' case 'Customer Experience'
-  ': return <Users className='w-6 h-6' />;' case 'Financial Technology'
-  ': return <DollarSign className='w-6 h-6' />;' case 'Healthcare Technology'
-  ': return <Activity className='w-6 h-6' />;' case 'Supply Chain'
-  ': return <BarChart3 className='w-6 h-6' />;' case 'Digital Marketing'
-  ': return <TrendingUp className='w-6 h-6' />;' case 'Project Management'
-  ': return <Target className='w-6 h-6' />;' case 'Human Resources'
-  ': return <Users className='w-6 h-6' />;' case 'Content Creation'
-  ': return <Code className='w-6 h-6' />;' case 'Customer Service'
-  ': return <Headphones className='w-6 h-6' />;' case 'Business Automation'
-  ': return <Zap className='w-6 h-6' />;' case 'Industrial IoT'
-  ': return <Chip className='w-6 h-6' />;' case 'Software Development'
-  ': return <Code className='w-6 h-6' />;' case 'DevOps'
-  ': return <Server className='w-6 h-6' />;' case 'Edge Computing'
-  ': return <Globe className='w-6 h-6' />;' case 'Quantum Computing'
-  ': return <Atom className='w-6 h-6' />;' case 'Blockchain'
-  ': return <Link className='w-6 h-6' />;' case 'Metaverse'
-  ': return <Globe className='w-6 h-6' />;' case 'Space Technology'
-  ': return <Rocket className='w-6 h-6' />;' case 'Sustainability'
-  ': return <Leaf className='w-6 h-6' />'' case 'Research & Development: return <FlaskConical className='w-6 h-6' />'' defaul,
-    t: return <Lightbulb className='w-6 h-6' /> } } ' return (' <>' <Helmet>'' <title>Zion Tech Group - Ultimate AI & Micro SAAS Services Showcase 2026 | Premier Technology Solutions</title>''' <meta name='description' content='Discover Zion Tech Group&apos;s comprehensive suite of AI-powered micro SAAS services, IT solutions, and innovative technology platforms. Transform your business with cutting-edge AI, cybersecurity, and digital transformation solutions.' / / / / / />'' <meta name='keywords' content='AI services, micro SAAS, cybersecurity, business intelligence, digital transformation, Zion Tech Group, technology solutions, AI platforms' / / / / / />'' <meta property='og: title' content='Zion Tech Group - Ultimate AI & Micro SAAS Services Showcase 2026' / / / / / />'' <meta property='o,
-    g: description' content='Premier technology solutions provider offering cutting-edge AI, cybersecurity, and digital transformation services.' / / / / / />'' <meta property='og: type' content='website' / / / / / />'' <meta property='o,
-    g:url' content='http,
-    s:''';
-=======
-  ': return b.reviewCount - a.reviewCount case 'name: return a.title.localeCompare(b.title) default: return 0 } })  const containerVariants = { hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.1 } } }  const itemVariants = { hidden: { y: 20, opacity: 0 }, visible: { y: 0, opacity: 1, transition: { duration: 0.5, ease: 'easeOut' } } } const getCategoryIcon = (category: string) => {' switch (category) {' case,
-  AI & Business Intelligence
-  ': return <Brain className='w-6 h-6' />' case 'Cybersecurity
-  ': return <Shield className='w-6 h-6' />' case 'Customer Experience
-  ': return <Users className='w-6 h-6' />' case 'Financial Technology
-  ': return <DollarSign className='w-6 h-6' />' case 'Healthcare Technology
-  ': return <Activity className='w-6 h-6' />' case 'Supply Chain
-  ': return <BarChart3 className='w-6 h-6' />' case 'Digital Marketing
-  ': return <TrendingUp className='w-6 h-6' />' case 'Project Management
-  ': return <Target className='w-6 h-6' />' case 'Human Resources
-  ': return <Users className='w-6 h-6' />' case 'Content Creation
-  ': return <Code className='w-6 h-6' />' case 'Customer Service
-  ': return <Headphones className='w-6 h-6' />' case 'Business Automation
-  ': return <Zap className='w-6 h-6' />' case 'Industrial IoT
-  ': return <Chip className='w-6 h-6' />' case 'Software Development
-  ': return <Code className='w-6 h-6' />' case 'DevOps
-  ': return <Server className='w-6 h-6' />' case 'Edge Computing
-  ': return <Globe className='w-6 h-6' />' case 'Quantum Computing
-  ': return <Atom className='w-6 h-6' />' case 'Blockchain
-  ': return <Link className='w-6 h-6' />' case 'Metaverse
-  ': return <Globe className='w-6 h-6' />' case 'Space Technology
-  ': return <Rocket className='w-6 h-6' />' case 'Sustainability
-  ': return <Leaf className='w-6 h-6' />''' case 'Research & Development: return <FlaskConical className='w-6 h-6' />''' default: return <Lightbulb className='w-6 h-6' /> } } ' return (' <>' <Helmet>'' <title>Zion Tech Group - Ultimate AI & Micro SAAS Services Showcase 2026 | Premier Technology Solutions</title>''' <meta name='description' content='Discover Zion Tech Group&apos;s comprehensive suite of AI-powered micro SAAS services, IT solutions, and innovative technology platforms. Transform your business with cutting-edge AI, cybersecurity, and digital transformation solutions.' / / / / / />''' <meta name='keywords' content='AI services, micro SAAS, cybersecurity, business intelligence, digital transformation, Zion Tech Group, technology solutions, AI platforms' / / / / / />''' <meta property='og: title' content='Zion Tech Group - Ultimate AI & Micro SAAS Services Showcase 2026' / / / / / />''' <meta property='og: description' content='Premier technology solutions provider offering cutting-edge AI, cybersecurity, and digital transformation services.' / / / / / />''' <meta property='og: type' content='website' / / / / / />''' <meta property='og:url' content='https:''';
->>>>>>> main
->>>>>>> main
->>>>>>> main
+
+
+

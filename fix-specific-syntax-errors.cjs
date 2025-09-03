@@ -5,12 +5,10 @@ const path = require('path');
 
 class SpecificSyntaxFixer {
   constructor() {
-    this.projectRoot = process.cwd();
-  }
+    this.projectRoot = process.cwd()}
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
-  }
+    console.log(`[${new Date().toISOString()}] ${message}`)}
 
   fixNotFoundPage() {
     const filePath = path.join(this.projectRoot, 'pages/NotFound.tsx');
@@ -21,13 +19,12 @@ class SpecificSyntaxFixer {
     // Fix the specific JSX issue
     content = content.replace(
       /<\/a>\s*<a\s*href="mailto:kleber@ziontechgroup.com"/g,
-      '</a>\n                <a\n                  href="mailto:kleber@ziontechgroup.com"'
+      '</a>\n                <a\n                  href="mailto:kleber@ziontechgroup.com"
     );
 
     fs.writeFileSync(filePath, content, 'utf8');
     this.log('✅ Fixed NotFound.tsx');
-    return true;
-  }
+    return true}
 
   fixContactPage() {
     const filePath = path.join(this.projectRoot, 'pages/contact.tsx');
@@ -43,8 +40,7 @@ class SpecificSyntaxFixer {
 
     fs.writeFileSync(filePath, content, 'utf8');
     this.log('✅ Fixed contact.tsx');
-    return true;
-  }
+    return true}
 
   fixPricingGuidePage() {
     const filePath = path.join(this.projectRoot, 'pages/pricing-guide.tsx');
@@ -60,8 +56,7 @@ class SpecificSyntaxFixer {
 
     fs.writeFileSync(filePath, content, 'utf8');
     this.log('✅ Fixed pricing-guide.tsx');
-    return true;
-  }
+    return true}
 
   fixSitemapPage() {
     const filePath = path.join(this.projectRoot, 'pages/sitemap.tsx');
@@ -77,8 +72,7 @@ class SpecificSyntaxFixer {
 
     fs.writeFileSync(filePath, content, 'utf8');
     this.log('✅ Fixed sitemap.tsx');
-    return true;
-  }
+    return true}
 
   async fixAllSpecificIssues() {
     this.log('🔧 Fixing specific syntax issues...');
@@ -87,19 +81,16 @@ class SpecificSyntaxFixer {
       () => this.fixNotFoundPage(),
       () => this.fixContactPage(),
       () => this.fixPricingGuidePage(),
-      () => this.fixSitemapPage(),
-    ];
+      () => this.fixSitemapPage() ];
 
     let fixedCount = 0;
     for (const fix of fixes) {
       if (fix()) {
-        fixedCount++;
-      }
+        fixedCount++}
     }
 
     this.log(`🎉 Fixed ${fixedCount} specific syntax issues!`);
-    return fixedCount > 0;
-  }
+    return fixedCount > 0}
 }
 
 // Run the fixer
@@ -109,13 +100,10 @@ fixer
   .then(success => {
     if (success) {
       console.log('✅ Specific syntax issues fixed successfully!');
-      process.exit(0);
-    } else {
+      process.exit(0)} else {
       console.log('❌ No specific issues found to fix.');
-      process.exit(0);
-    }
+      process.exit(0)}
   })
   .catch(error => {
     console.error('❌ Fatal error:', error);
-    process.exit(1);
-  });
+    process.exit(1)});

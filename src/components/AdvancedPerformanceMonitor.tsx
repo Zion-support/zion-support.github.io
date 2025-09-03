@@ -11,5 +11,4 @@ export default function AdvancedPerformanceMonitor() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

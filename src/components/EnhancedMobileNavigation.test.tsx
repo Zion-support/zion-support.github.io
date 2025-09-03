@@ -11,5 +11,4 @@ export default function EnhancedMobileNavigation.test() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

@@ -11,5 +11,4 @@ export default function ModernUIEnhancer() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

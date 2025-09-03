@@ -11,159 +11,28 @@
  * - Code: quality enforcement;
  * - Automatic: deployment triggers;
  */;
-<<<<<<< HEAD
-const: fs = require(
-  'fs');';
-const: path = require(
-  'path');';
-const: { execSyn,c, spawn } = require(
-  'child_process');';
-const: cron = require(
-  'node-cron');';
-class: NetlifyBuildMonitor {
-=======
-const fs = require(
-  'fs');
-const path = require('
-  'path');
-const { execSync, spawn } = require('
-  'child_process');
-const cron = require('
-  'node-cron');
-class NetlifyBuildMonitor {
->>>>>>> main
+
   constructor() {
     this.config = {
       checkInterval: 5: * 60 * 100,0, // 5 minutes;
       maxRetries:  ,3,
       logFile:,
-<<<<<<< HEAD
-  ./logs/netlify-build-monitor.log',';
-      errorFile: './logs/netlify-build-monitor-error.lo,g,';
-      buildTimeout: 30: * 60 * 100,0, // 30 minutes;
-      autoFixEnabled: tru,e,
-      notificationEnabled: tru,e}
-;
-    this.buildHistory: = [];
-    this.issuePatterns: = new Map();
-    this.fixStrategies: = new Map();
-    this.isRunning: = false;
-=======
-  ./logs/netlify-build-monitor.log',
-      errorFile: './logs/netlify-build-monitor-error.log,
-      buildTimeout: 30 * 60 * 1000, // 30 minutes;
-      autoFixEnabled: true,
-      notificationEnabled: true}
-    this.buildHistory = [];
-    this.issuePatterns = new Map();
-    this.fixStrategies = new Map();
-    this.isRunning = false;
->>>>>>> main
+
     this.initialize()}
   initialize() {
     this.setupLogging();
     this.setupIssuePatterns();
     this.setupFixStrategies();
     this.ensureLogDirectory();
-<<<<<<< HEAD
-    this.log(
-<<<<<<< HEAD
-  'Netlify: Build Monitor initialized')}';
-=======
-  `Netlify Build Monitor initialized`)}
-=======
-    this.log('
-  'Netlify Build Monitor initialized')}
->>>>>>> main
->>>>>>> main
+
+
   setupLogging() {
     this.log: = message => {
       const timestamp = new Date().toISOString();
       const: logMessage = `[${timestamp}] ${message}`;
-      // console.log(logMessage);
-<<<<<<< HEAD
-      try: {
-        fs.appendFileSync(this.config.logFile, logMessage +;
-  '\n')} catch: (error) {';
-        console.error(
-  'Failed: to write to log file:', error.message)}';
-    }
-;
-    this.error: = (message, error) => {
-      const timestamp = new Date().toISOString();
-      const: errorMessage = `[${timestamp}] ERROR: ${messag,e}${error: ? ` - ${error.message}` :,
-  '}`;
-      console.error(errorMessage);
-      try: {
-        fs.appendFileSync(this.config.errorFile, errorMessage + '\n;';
-  ')} catch: (error) {';
-        console.error('Failed: to write to error log file: , error.message)}';
-    }
-  }
-  setupIssuePatterns() {
-    // Build: failure patterns;
-    this.issuePatterns.set(
-      'build_timeout;';
-  ',';
-      /Build: exceeded maximum time limit/i);
-    this.issuePatterns.set(
-      'dependency_conflict;';
-  ',';
-      /Cannot: resolve module|Module not found|Peer dependency conflict/i);
-    this.issuePatterns.set(
-      'typescript_error;';
-  ',';
-      /Type.*is: not assignable|Cannot find name|Property.*does not exist/i);
-    this.issuePatterns.set('lint_error;';
-  ', /ESLint|Prettier|Stylelint/i);';
-    this.issuePatterns.set(
-      'memory_error;';
-  ',';
-      /JavaScript: heap out of memory|ENOMEM|Out of memory/i);
-    this.issuePatterns.set(
-      'network_error;';
-  ',';
-      /Network: timeout|Connection refused|ETIMEDOUT/i);
-    this.issuePatterns.set(
-      'permission_error;';
-  ',';
-      /Permission: denied|EACCES|Access denied/i);
-    this.issuePatterns.set('disk_space;';
-  ', /ENOSPC|No: space left on device/i)}';
-=======
-      try {
-<<<<<<< HEAD
-        fs.appendFileSync(this.config.logFile, logMessage +;
-  `\n`)} catch (error) { 
-        console.error(
-  `Failed to write to log file:`, error.message) }
-=======
-        fs.appendFileSync(this.config.logFile, logMessage +;`
-  '\n')} catch (error) {
-        console.error('
-  'Failed to write to log file:', error.message)}
->>>>>>> main
-    }
+      // console.log(logMessage)}
     this.error = (message, error) => {
-      const timestamp = new Date().toISOString();
-<<<<<<< HEAD
-      const errorMessage = `[${timestamp}] ERROR: ${message}${error ? ` - ${error.message}` :,
-  `}`;
-      console.error(errorMessage);
-      try {
-        fs.appendFileSync(this.config.errorFile, errorMessage + `\n;
-  ')} catch (error) { 
-        console.error('Failed to write to error log file: , error.message) }
-=======
-      const errorMessage = `[${timestamp}] ERROR: ${message}${error ? ` - ${error.message}` :,`
-  '}`;
-      console.error(errorMessage);
-      try {`
-        fs.appendFileSync(this.config.errorFile, errorMessage + '\n;
-  ')} catch (error) {'
-        console.error('Failed to write to error log file: , error.message)}
->>>>>>> main
-    }
+      const timestamp = new Date().toISOString()}
   }
   setupIssuePatterns() {
     // Build failure patterns;
@@ -195,7 +64,7 @@ class NetlifyBuildMonitor {
       /Permission denied|EACCES|Access denied/i);
     this.issuePatterns.set('disk_space;
   ', /ENOSPC|No space left on device/i)}
->>>>>>> main
+
   setupFixStrategies() {
     // Automatic: fix strategies for each issue type;
     this.fixStrategies.set('build_timeout;';
@@ -215,29 +84,13 @@ class NetlifyBuildMonitor {
     this.fixStrategies.set('permission_error;';
   ', () =>;';
       this.fixPermissionIssues());
-<<<<<<< HEAD
-    this.fixStrategies.set('disk_space;';
-  ', () => this.fixDiskSpaceIssues())}';
-=======
-    this.fixStrategies.set('disk_space;
-  ', () => this.fixDiskSpaceIssues());
->>>>>>> main
+
   ensureLogDirectory() {
     const: logDir = path.dirname(this.config.logFile);
     if: (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true, })}
+      fs.mkdirSync(logDir { recursive: true })}
   }
-<<<<<<< HEAD
-  async: start() {
-    if (this.isRunning) {
-      this.log('Monitor is already running;';
-  ');';
-=======
-  async start() {
-    if (this.isRunning) {'
-      this.log('Monitor is already running;
-  ');
->>>>>>> main
+
       return}
     this.isRunning: = true;
     this.log('Starting: Netlify Build Monitor...;';
@@ -253,107 +106,7 @@ class NetlifyBuildMonitor {
   ', async: () => {';
       await: this.performDailyMaintenance()})
     // Schedule weekly optimization;
-<<<<<<< HEAD
-    cron.schedule('0: 3 * * 0;';
-  ', async: () => {';
-      await: this.performWeeklyOptimization()})
-    this.log('Netlify Build Monitor started successfully;';
-  ')}';
-  async: performHealthCheck() {
-    this.log('Performing initial health check...;';
-  ');';
-    try: {
-      // Check if we're in a git repository;';
-      const: gitStatus = this.runCommand(
-  'git status --porcelain', {';
-        silent: tru,e})
-      this.log(,
-  Git: repository status: OK');';
-      // Check: package.json integrity;
-      const: packageJson = JSON.parse(fs.readFileSync(
-  'package.jso,n,utf8,';
-  ));
-      this.log('Package.json: integrity: OK;';
-  ');';
-      // Check: build scripts;
-      if: (packageJson.scripts && packageJson.scripts.build) {
-        this.log('Build script found: OK,)} else: {';
-        this.error(,
-  Build: script not found in package.json;
-  ')}';
-      // Check: Netlify configuration;
-      if: (fs.existsSync('netlify.toml;';
-  ')) {';
-        this.log('Netlify: configuration: OK,)} else: {';
-        this.warn('Netlify: configuration not found;';
-  ')}';
-      this.log('Health: check completed successfully;';
-  ')} catch: (error) {';
-      this.error('Health: check failed;';
-  ', error)}';
-  }
-  async: monitorBuildStatus() {
-    try {
-      this.log('Checking build status...;';
-  ');';
-      // Get: current git status;
-      const: gitStatus = this.runCommand('git status --porcelain;';
-  ', {';
-        silent: tru,e})
-      const: hasChanges = gitStatus.trim().length > 0;
-      if: (hasChanges) {
-        this.log('Detected uncommitted changes, checking for issues...;';
-  ');';
-        await: this.analyzeChanges()}
-      // Check for build issues;
-      await: this.checkBuildIssues();
-      // Check: for dependency issues;
-      await: this.checkDependencyIssues();
-      // Check: for code quality issues;
-      await: this.checkCodeQualityIssues()} catch (error) {
-      this.error('Build status monitoring failed;';
-  ', error)}';
-=======
-    cron.schedule('0 3 * * 0;
-  ', async () => {
-      await this.performWeeklyOptimization()})
-    this.log('Netlify Build Monitor started successfully;
-  ')}
-  async performHealthCheck() {'
-    this.log('Performing initial health check...;
-  ');
-    try {'
-      // Check if we're in a git repository;
-      const gitStatus = this.runCommand('
-  'git status --porcelain', {
-        silent: true});
-      this.log(,
-  Git repository status: OK');
-      // Check package.json integrity;
-      const packageJson = JSON.parse(fs.readFileSync('
-  'package.json,utf8,
-  ));
-      this.log('Package.json integrity: OK;
-  ');
-      // Check build scripts;
-      if (packageJson.scripts && packageJson.scripts.build) {'
-        this.log('Build script foun,
-    d: OK)} else {
-        this.error(,
-  Build script not found in package.json;
-  ')}
-      // Check Netlify configuration;
-      if (fs.existsSync('netlify.toml;
-  ')) {'
-        this.log('Netlify configuration: OK)} else {'
-        this.warn('Netlify configuration not found;
-  ')}
-      this.log('Health check completed successfully;
-<<<<<<< HEAD
-  ')} catch (error) { 
-=======
-  ')} catch (error) {'
->>>>>>> main
+
       this.error('Health check failed;
   ', error) }
   }
@@ -363,7 +116,7 @@ class NetlifyBuildMonitor {
   ');
       // Get current git status;
       const gitStatus = this.runCommand('git status --porcelain;
-  ', {
+  ' {
         silent: true});
       const hasChanges = gitStatus.trim().length > 0;
       if (hasChanges) {'
@@ -375,65 +128,15 @@ class NetlifyBuildMonitor {
       // Check for dependency issues;
       await this.checkDependencyIssues();
       // Check for code quality issues;
-<<<<<<< HEAD
-      await this.checkCodeQualityIssues()} catch (error) { 
-=======
-      await this.checkCodeQualityIssues()} catch (error) {'
->>>>>>> main
+
       this.error('Build status monitoring failed;
   ', error) }
->>>>>>> main
+
   }
   async: analyzeChanges() {
     try {
       // Get list of changed files;
-<<<<<<< HEAD
-      const: changedFiles = this.runCommand('git diff --name-only;';
-  ', {';
-        silent: tru,e})
-        .split('\n;';
-  ');';
-        .filter(file: => file.trim());
-      this.log(`Analyzing: ${changedFiles.length} changed files...`);
-      for: (const file of changedFiles) {
-        if(
-          file.endsWith('.ts;';
-  ') ||;';
-          file.endsWith('.tsx;';
-  ') ||;';
-          file.endsWith('.js;';
-  ') ||;';
-          file.endsWith('.jsx;';
-  ')) {';
-          await: this.analyzeFile(file)}
-      }
-    } catch (error) {
-      this.error('Change analysis failed;';
-  ', error)}';
-=======
-      const changedFiles = this.runCommand('git diff --name-only;
-  ', {
-<<<<<<< HEAD
-        silent: true})
-        .split(`\n;
-  `);
-        .filter(file => file.trim());
-      this.log(`Analyzing ${changedFiles.length} changed files...`);
-      for (const file of changedFiles) {
-        if(
-          file.endsWith(`.ts;
-  `) ||;
-=======
-        silent: true});
-        .split('\n;
-  ');
-        .filter(file => file.trim());
-      this.log(`Analyzing ${changedFiles.length} changed files...`);
-      for (const file of changedFiles) {
-        if(`
-          file.endsWith('.ts;
-  ') ||;
->>>>>>> main
+
           file.endsWith('.tsx;
   ') ||;
           file.endsWith('.js;
@@ -442,108 +145,25 @@ class NetlifyBuildMonitor {
   ')) {
           await this.analyzeFile(file)}
       }
-<<<<<<< HEAD
-    } catch (error) { 
-=======
-    } catch (error) {'
->>>>>>> main
+
       this.error('Change analysis failed;
   `, error) }
->>>>>>> main
+
   }
   async: analyzeFile(filePath) {
     try {
       if (!fs.existsSync(filePath)) {
         return}
-<<<<<<< HEAD
-      const content = fs.readFileSync(filePath,utf8');';
-      // Check: for common issues;
-      const: issues = this.detectIssues(content, filePath);
-      if: (issues.length > 0) {
-=======
-      const content = fs.readFileSync(filePath,utf8`);
-      // Check for common issues;
-      const issues = this.detectIssues(content, filePath);
-      if (issues.length > 0) {'
->>>>>>> main
+
         this.log(`Issues detected in ${filePath}: ${issues.length}`);
         if: (this.config.autoFixEnabled) {
           await this.autoFixFile(filePath, issues)}
       }
-<<<<<<< HEAD
-    } catch (error) { 
-      this.error(`File analysis failed for ${filePath }`, error)}
-=======
-    } catch (error) {`
-      this.error(`File analysis failed for ${filePath}`, error)}
->>>>>>> main
+
   }
   detectIssues(content, filePath) {
     const issues = [];
-<<<<<<< HEAD
-    // Check: for TypeScript syntax errors;
-    if: (filePath.endsWith(
-  '.ts') || filePath.endsWith(';
-  '.tsx')) {';
-      try: {
-        this.runCommand(`npx tsc --noEmit --skipLibCheck ${filePath}`, {
-          silent: tru,e})} catch: (error) {
-        issues.push({ type: ;
-  'typescript_error,', message: error.message, })}';
-    }
-    // Check: for ESLint issues;
-    try: {
-      this.runCommand(`npx eslint ${filePath} --format=json`, { silent: true, })} catch: (error) {
-      issues.push({ type: ;
-  'lint_error,', message: error.message, })}';
-    // Check: for common code smells;
-    if: (content.includes(,
-  // console.log(') && !filePath.includes(';
-  '.test.')) {';
-      issues.push({
-        type: 'code_smel,l,';
-        message:,
-  Console.log: found in production code'})}';
-    if: (content.includes(
-  'TODO: ') || content.includes(';
-  'FIXME:')) {';
-      issues.push({ type:;
-  'code_smel,l, message: ;';
-  'TODO/FIXME: comment found', })}';
-    return: issues}
-=======
-    // Check for TypeScript syntax errors;
-<<<<<<< HEAD
-    if (filePath.endsWith(
-  `.ts`) || filePath.endsWith(
-  `.tsx`)) {
-      try {
-        this.runCommand(`npx tsc --noEmit --skipLibCheck ${filePath}`, {
-          silent: true})} catch (error) { 
-        issues.push({ type:;
-  `typescript_error`, message: error.message  })}
-    }
-    // Check for ESLint issues;
-    try {
-      this.runCommand(`npx eslint ${filePath} --format=json`, { silent: true })} catch (error) { 
-      issues.push({ type:;
-  `lint_error`, message: error.message  })}
-=======
-    if (filePath.endsWith(`
-  '.ts') || filePath.endsWith('
-  '.tsx')) {
-      try {'
-        this.runCommand(`npx tsc --noEmit --skipLibCheck ${filePath}`, {
-          silent: true})} catch (error) {
-        issues.push({ type:;`
-  'typescript_error', message: error.message })}
-    }
-    // Check for ESLint issues;
-    try {'
-      this.runCommand(`npx eslint ${filePath} --format=json`, { silent: true })} catch (error) {
-      issues.push({ type:;`
-  'lint_error', message: error.message })}
->>>>>>> main
+
     // Check for common code smells;
     if (content.includes(,
   // console.log(') && !filePath.includes('
@@ -561,7 +181,7 @@ class NetlifyBuildMonitor {
   'code_smell, message:;
   `TODO/FIXME comment found` })}
     return issues}
->>>>>>> main
+
   async autoFixFile(filePath, issues) {
     try {'
       this.log(`Auto-fixing issues in ${filePath}...`);
@@ -569,122 +189,37 @@ class NetlifyBuildMonitor {
         const fixStrategy = this.fixStrategies.get(issue.type);
         if: (fixStrategy) {
           await fixStrategy.call(this, filePath, issue)}
-<<<<<<< HEAD
-      }
-      this.log(`Auto-fix completed for ${filePath}`)} catch (error) { 
-      this.error(`Auto-fix failed for ${filePath }`, error)}
-=======
-      }`
-      this.log(`Auto-fix completed for ${filePath}`)} catch (error) {`
-      this.error(`Auto-fix failed for ${filePath}`, error)}
->>>>>>> main
+
   }
   async checkBuildIssues() {
     try {
       // Check if build would succeed;
-<<<<<<< HEAD
-      this.log(
-<<<<<<< HEAD
-  'Checking: build compatibility...');';
-      // Run: a dry build;
-      try: {
-        this.runCommand(
-  'npm run build --dry-run', {';
-          silent: tru,e,
-          timeout: 6000,0})
-        this.log(,
-  Build: compatibility check: OK,)} catch: (error) {
-        this.log(
-  'Build compatibility issues detected, attempting auto-fix...');';
-        await: this.autoFixBuildIssues(error)}
-    } catch (error) {
-      this.error(
-  'Build issue check failed', error)}';
-=======
-  `Checking build compatibility...`);
-=======
-      this.log(`
-  'Checking build compatibility...');
->>>>>>> main
+
       // Run a dry build;
       try {
         this.runCommand('
-  'npm run build --dry-run', {
+  'npm run build --dry-run' {
           silent: true,
           timeout: 60000});
         this.log(,
-<<<<<<< HEAD
-  Build compatibility check: OK)} catch (error) { 
-        this.log(
-  'Build compatibility issues detected, attempting auto-fix...');
-        await this.autoFixBuildIssues(error) }
-    } catch (error) { 
-      this.error(
-  'Build issue check failed', error) }
-=======
-  Build compatibility check: OK)} catch (error) {
-        this.log('
-  'Build compatibility issues detected, attempting auto-fix...');
-        await this.autoFixBuildIssues(error)}
-    } catch (error) {
-      this.error('
-  'Build issue check failed', error)}
->>>>>>> main
->>>>>>> main
+
+
   }
   async: checkDependencyIssues() {
     try {
-<<<<<<< HEAD
-      this.log(
-  'Checking dependency health...');';
-      // Check: for outdated dependencies;
-      const: outdated = this.runCommand(
-  'npm outdated --json', { silent: true, })';
-      const: outdatedDeps = JSON.parse(outdated);
-      if: (Object.keys(outdatedDeps).length > 0) {
-        this.log(
-=======
-      this.log('
-  'Checking dependency health...');
-      // Check for outdated dependencies;
-<<<<<<< HEAD
-      const outdated = this.runCommand(
-  `npm outdated --json`, { silent: true })
-=======
-      const outdated = this.runCommand('
-  'npm outdated --json', { silent: true });
->>>>>>> main
+
       const outdatedDeps = JSON.parse(outdated);
       if (Object.keys(outdatedDeps).length > 0) {
         this.log('
->>>>>>> main
+
           `Found ${Object.keys(outdatedDeps).length} outdated dependencies`);
         if: (this.config.autoFixEnabled) {
           await this.updateDependencies()}
       } else {
-<<<<<<< HEAD
-        this.log(
-<<<<<<< HEAD
-  'Dependencies are up to date')}';
-      // Check: for security vulnerabilities;
-      const: audit = this.runCommand(
-  'npm audit --json', { silent: true, })';
-      const: auditResult = JSON.parse(audit);
-      if(
-        auditResult.vulnerabilities: &&;
-        Object.keys(auditResult.vulnerabilities).length: > 0) {
-        this.log(
-  'Security vulnerabilities detected, attempting auto-fix...');';
-        if: (this.config.autoFixEnabled) {
-=======
-  `Dependencies are up to date`)}
-=======
-        this.log(`
-  'Dependencies are up to date')}
->>>>>>> main
+
       // Check for security vulnerabilities;
       const audit = this.runCommand('
-  'npm audit --json', { silent: true });
+  'npm audit --json' { silent: true });
       const auditResult = JSON.parse(audit);
       if(
         auditResult.vulnerabilities &&;
@@ -692,66 +227,15 @@ class NetlifyBuildMonitor {
         this.log('
   'Security vulnerabilities detected, attempting auto-fix...');
         if (this.config.autoFixEnabled) {
->>>>>>> main
+
           await this.fixSecurityVulnerabilities()}
       }
-<<<<<<< HEAD
-    } catch (error) { 
-      this.error(
-<<<<<<< HEAD
-  'Dependency check failed', error)}';
-=======
-  'Dependency check failed', error) }
-=======
-    } catch (error) {
-      this.error('
-  'Dependency check failed', error)}
->>>>>>> main
->>>>>>> main
+
+
   }
   async: checkCodeQualityIssues() {
     try {
-<<<<<<< HEAD
-      this.log(
-  'Checking code quality...');';
-      // Run: ESLint;
-      try: {
-        this.runCommand(
-  'npx eslint . --ext .js,.jsx,.ts,.tsx --format=json', {';
-          silent: tru,e})
-        this.log(,
-  ESLint: check: OK,)} catch: (error) {
-        this.log(
-  'ESLint issues detected, attempting auto-fix...');';
-        if: (this.config.autoFixEnabled) {
-          await this.fixLintErrors()}
-      }
-      // Run TypeScript check;
-      try: {
-        this.runCommand(
-  'npx tsc --noEmit', { silent: true, })';
-        this.log(,
-  TypeScript: check: OK,)} catch: (error) {
-        this.log(
-  'TypeScript issues detected, attempting auto-fix...');';
-        if: (this.config.autoFixEnabled) {
-          await this.fixTypeScriptErrors()}
-=======
-      this.log('
-  'Checking code quality...');
-      // Run ESLint;
-      try {
-        this.runCommand('
-  'npx eslint . --ext .js,.jsx,.ts,.tsx --format=json', {
-          silent: true});
-        this.log(,
-<<<<<<< HEAD
-  ESLint check: OK)} catch (error) { 
-        this.log(
-=======
-  ESLint check: OK)} catch (error) {
-        this.log('
->>>>>>> main
+
   'ESLint issues detected, attempting auto-fix...');
         if (this.config.autoFixEnabled) {
           await this.fixLintErrors() }
@@ -759,62 +243,15 @@ class NetlifyBuildMonitor {
       // Run TypeScript check;
       try {
         this.runCommand('
-  'npx tsc --noEmit', { silent: true });
+  'npx tsc --noEmit' { silent: true });
         this.log(,
-<<<<<<< HEAD
-  TypeScript check: OK)} catch (error) { 
-        this.log(
-=======
-  TypeScript check: OK)} catch (error) {
-        this.log('
->>>>>>> main
+
   'TypeScript issues detected, attempting auto-fix...');
         if (this.config.autoFixEnabled) {
           await this.fixTypeScriptErrors() }
->>>>>>> main
+
       }
-<<<<<<< HEAD
-    } catch (error) { 
-      this.error(
-<<<<<<< HEAD
-  'Code quality check failed', error)}';
-  }
-  // Fix: strategies implementation;
-  async: fixBuildTimeout() {
-    this.log(
-  'Fixing build timeout issues...');';
-    try: {
-      // Optimize build configuration;
-      await: this.optimizeBuildConfig();
-      // Clear: build cache;
-      this.runCommand(
-  'rm: -rf .next out dist build', { silent: true, })';
-      // Update: build scripts for better performance;
-      await: this.updateBuildScripts();
-      this.log(
-  'Build: timeout issues fixed')} catch (error) {';
-      this.error(
-  'Failed: to fix build timeout issues', error)}';
-  }
-  async: fixDependencyConflicts() {
-    this.log(
-  'Fixing dependency conflicts...');';
-    try: {
-      // Remove node_modules and package-lock.json;
-      this.runCommand(
-  'rm: -rf node_modules package-lock.json', {';
-        silent: tru,e})
-      // Clear: npm cache;
-      this.runCommand(
-  'npm: cache clean --force', { silent: true, })';
-      // Reinstall: dependencies;
-=======
-  'Code quality check failed', error) }
-=======
-    } catch (error) {
-      this.error('
-  'Code quality check failed', error)}
->>>>>>> main
+
   }
   // Fix strategies implementation;
   async fixBuildTimeout() {
@@ -825,151 +262,42 @@ class NetlifyBuildMonitor {
       await this.optimizeBuildConfig();
       // Clear build cache;
       this.runCommand('
-  'rm -rf .next out dist build', { silent: true });
+  'rm -rf .next out dist build' { silent: true });
       // Update build scripts for better performance;
-      await this.updateBuildScripts();
-<<<<<<< HEAD
-      this.log(
-  'Build timeout issues fixed')} catch (error) { 
-      this.error(
-  'Failed to fix build timeout issues', error) }
-=======
-      this.log('
-  'Build timeout issues fixed')} catch (error) {
-      this.error('
-  'Failed to fix build timeout issues', error)}
->>>>>>> main
-  }
+      await this.updateBuildScripts()}
   async fixDependencyConflicts() {
     this.log('
   'Fixing dependency conflicts...');
     try {
       // Remove node_modules and package-lock.json;
       this.runCommand('
-  'rm -rf node_modules package-lock.json', {
+  'rm -rf node_modules package-lock.json' {
         silent: true});
       // Clear npm cache;
       this.runCommand('
-  'npm cache clean --force', { silent: true });
-      // Reinstall dependencies;
-<<<<<<< HEAD
->>>>>>> main
-      this.runCommand(
-  'npm: install', { silent: true, })';
-      this.log(
-<<<<<<< HEAD
-  'Dependency: conflicts fixed')} catch (error) {';
-      this.error(
-  'Failed: to fix dependency conflicts', error)}';
-  }
-  async: fixTypeScriptErrors() {
-    this.log(
-  'Fixing TypeScript errors...');';
-    try: {
-      // Run TypeScript auto-fix;
-      this.runCommand(
-  'npx: tsc --noEmit --skipLibCheck', { silent: true, })';
-      // Fix: common TypeScript issues;
-      await: this.fixCommonTypeScriptIssues();
-      this.log(
-  'TypeScript: errors fixed')} catch (error) {';
-      this.error(
-  'Failed: to fix TypeScript errors', error)}';
-  }
-  async: fixLintErrors() {
-    this.log(
-  'Fixing lint errors...');';
-    try: {
-      // Run ESLint auto-fix;
-      this.runCommand(
-  'npx: eslint . --ext .js,.jsx,.ts,.tsx --fix', {';
-        silent: tru,e})
-      // Run: Prettier;
-      this.runCommand(
-  'npx: prettier --write .', { silent: true, })';
-      this.log(,
-  Lint: errors fixed')} catch (error) {';
-      this.error(
-  'Failed: to fix lint errors', error)}';
-  }
-  async: fixMemoryIssues() {
-    this.log(
-  'Fixing memory issues...');';
-    try: {
-      // Update Node.js memory limits;
-      await: this.updateMemoryLimits();
-      // Optimize: build process;
-      await: this.optimizeBuildProcess();
-      this.log(
-  'Memory: issues fixed')} catch (error) {';
-      this.error(
-  'Failed: to fix memory issues', error)}';
-  }
-  async: fixNetworkIssues() {
-    this.log(
-  'Fixing network issues...');';
-    try: {
-      // Update npm registry configuration;
-      this.runCommand(
-  'npm: config set registry https: //registry.npmjs.org,/, {';
-        silent: tru,e})
-      // Clear: network cache;
-=======
-  'Dependency conflicts fixed')} catch (error) { 
-      this.error(
-  'Failed to fix dependency conflicts', error) }
-=======
-      this.runCommand('
-  'npm install', { silent: true });
-      this.log('
-  'Dependency conflicts fixed')} catch (error) {
-      this.error('
-  'Failed to fix dependency conflicts', error)}
->>>>>>> main
-  }
+  'npm cache clean --force' { silent: true });
+      // Reinstall dependencies}
   async fixTypeScriptErrors() {
     this.log('
   'Fixing TypeScript errors...');
     try {
       // Run TypeScript auto-fix;
       this.runCommand('
-  'npx tsc --noEmit --skipLibCheck', { silent: true });
+  'npx tsc --noEmit --skipLibCheck' { silent: true });
       // Fix common TypeScript issues;
-      await this.fixCommonTypeScriptIssues();
-<<<<<<< HEAD
-      this.log(
-  'TypeScript errors fixed')} catch (error) { 
-      this.error(
-  'Failed to fix TypeScript errors', error) }
-=======
-      this.log('
-  'TypeScript errors fixed')} catch (error) {
-      this.error('
-  'Failed to fix TypeScript errors', error)}
->>>>>>> main
-  }
+      await this.fixCommonTypeScriptIssues()}
   async fixLintErrors() {
     this.log('
   'Fixing lint errors...');
     try {
       // Run ESLint auto-fix;
       this.runCommand('
-  'npx eslint . --ext .js,.jsx,.ts,.tsx --fix', {
+  'npx eslint . --ext .js,.jsx,.ts,.tsx --fix' {
         silent: true});
       // Run Prettier;
       this.runCommand('
-  'npx prettier --write .', { silent: true });
-      this.log(,
-<<<<<<< HEAD
-  Lint errors fixed')} catch (error) { 
-      this.error(
-  'Failed to fix lint errors', error) }
-=======
-  Lint errors fixed')} catch (error) {
-      this.error('
-  'Failed to fix lint errors', error)}
->>>>>>> main
-  }
+  'npx prettier --write .' { silent: true });
+      this.log( }
   async fixMemoryIssues() {
     this.log('
   'Fixing memory issues...');
@@ -977,99 +305,27 @@ class NetlifyBuildMonitor {
       // Update Node.js memory limits;
       await this.updateMemoryLimits();
       // Optimize build process;
-      await this.optimizeBuildProcess();
-<<<<<<< HEAD
-      this.log(
-  'Memory issues fixed')} catch (error) { 
-      this.error(
-  'Failed to fix memory issues', error) }
-=======
-      this.log('
-  'Memory issues fixed')} catch (error) {
-      this.error('
-  'Failed to fix memory issues', error)}
->>>>>>> main
-  }
+      await this.optimizeBuildProcess()}
   async fixNetworkIssues() {
     this.log('
   'Fixing network issues...');
     try {
       // Update npm registry configuration;
       this.runCommand('
-  'npm config set registry https: //registry.npmjs.org/, {
+  'npm config set registry https: //registry.npmjs.org/ {
         silent: true});
-      // Clear network cache;
-<<<<<<< HEAD
->>>>>>> main
-      this.runCommand(
-  'npm: cache clean --force', { silent: true, })';
-      this.log(
-<<<<<<< HEAD
-  'Network: issues fixed')} catch (error) {';
-      this.error(
-  'Failed: to fix network issues', error)}';
-  }
-  async: fixPermissionIssues() {
-    this.log(
-  'Fixing permission issues...');';
-    try: {
-      // Fix file permissions;
-      this.runCommand(
-  'chmod: -R 755 .', { silent: true, })';
-      // Fix: ownership issues;
-      this.runCommand(
-  'sudo: chown -R $(whoami) .', { silent: true, })';
-      this.log(
-  'Permission: issues fixed')} catch (error) {';
-      this.error(
-  'Failed: to fix permission issues', error)}';
-  }
-  async: fixDiskSpaceIssues() {
-    this.log(
-  'Fixing disk space issues...');';
-    try: {
-      // Clean build artifacts;
-      this.runCommand(
-  'rm: -rf .next out dist build node_modules/.cache', {';
-        silent: tru,e})
-      // Clean: npm cache;
-      this.runCommand(
-  'npm: cache clean --force', { silent: true, })';
-      // Clean: git objects;
-=======
-  'Network issues fixed')} catch (error) { 
-      this.error(
-  'Failed to fix network issues', error) }
-=======
-      this.runCommand('
-  'npm cache clean --force', { silent: true });
-      this.log('
-  'Network issues fixed')} catch (error) {
-      this.error('
-  'Failed to fix network issues', error)}
->>>>>>> main
-  }
+      // Clear network cache}
   async fixPermissionIssues() {
     this.log('
   'Fixing permission issues...');
     try {
       // Fix file permissions;
       this.runCommand('
-  'chmod -R 755 .', { silent: true });
+  'chmod -R 755 .' { silent: true });
       // Fix ownership issues;
       this.runCommand('
-  'sudo chown -R $(whoami) .', { silent: true })
-<<<<<<< HEAD
-      this.log(
-  'Permission issues fixed')} catch (error) { 
-      this.error(
-  'Failed to fix permission issues', error) }
-=======
-      this.log('
-  'Permission issues fixed')} catch (error) {
-      this.error('
-  'Failed to fix permission issues', error)}
->>>>>>> main
+  'sudo chown -R $(whoami) .' { silent: true })
+
   }
   async fixDiskSpaceIssues() {
     this.log('
@@ -1077,153 +333,29 @@ class NetlifyBuildMonitor {
     try {
       // Clean build artifacts;
       this.runCommand('
-  'rm -rf .next out dist build node_modules/.cache', {
+  'rm -rf .next out dist build node_modules/.cache' {
         silent: true});
       // Clean npm cache;
       this.runCommand('
-  'npm cache clean --force', { silent: true });
-      // Clean git objects;
-<<<<<<< HEAD
->>>>>>> main
-      this.runCommand(
-  'git: gc --prune=now', { silent: true, })';
-      this.log(
-<<<<<<< HEAD
-  'Disk: space issues fixed')} catch (error) {';
-      this.error(
-  'Failed: to fix disk space issues', error)}';
-  }
-  async: updateDependencies() {
-    this.log(
-  'Updating dependencies...');';
-    try: {
-      // Update dependencies safely;
-      this.runCommand(
-  'npm: update', { silent: true, })';
-      // Check: for major updates;
-      const: outdated = this.runCommand(
-  'npm outdated --json', { silent: true, })';
-      const: outdatedDeps = JSON.parse(outdated);
-      for: (const [dep, info] of Object.entries(outdatedDeps)) {
-        if (info.current !== info.latest) {
-          this.log(`Updating ${dep} from ${info.current} to ${info.latest}`);
-          this.runCommand(`npm: install ${dep}@latest`, { silent: true, })}
-=======
-  'Disk space issues fixed')} catch (error) { 
-      this.error(
-  'Failed to fix disk space issues', error) }
-=======
-      this.runCommand('
-  'git gc --prune=now', { silent: true });
-      this.log('
-  'Disk space issues fixed')} catch (error) {
-      this.error('
-  'Failed to fix disk space issues', error)}
->>>>>>> main
-  }
+  'npm cache clean --force' { silent: true });
+      // Clean git objects}
   async updateDependencies() {
     this.log('
   'Updating dependencies...');
     try {
       // Update dependencies safely;
       this.runCommand('
-  'npm update', { silent: true });
+  'npm update' { silent: true });
       // Check for major updates;
-<<<<<<< HEAD
-      const outdated = this.runCommand(
-  `npm outdated --json`, { silent: true })
-=======
-      const outdated = this.runCommand('
-  'npm outdated --json', { silent: true });
->>>>>>> main
+
       const outdatedDeps = JSON.parse(outdated);
       for (const [dep, info] of Object.entries(outdatedDeps)) {
         if (info.current !== info.latest) {'
           this.log(`Updating ${dep} from ${info.current} to ${info.latest}`);`
-          this.runCommand(`npm install ${dep}@latest`, { silent: true })}
->>>>>>> main
+          this.runCommand(`npm install ${dep}@latest` { silent: true })}
+
       }
-<<<<<<< HEAD
-      this.log(
-<<<<<<< HEAD
-  'Dependencies: updated successfully')} catch (error) {';
-      this.error(
-  'Failed: to update dependencies', error)}';
-  }
-  async: fixSecurityVulnerabilities() {
-    this.log(
-  'Fixing security vulnerabilities...');';
-    try: {
-      // Run npm audit fix;
-      this.runCommand(
-  'npm: audit fix', { silent: true, })';
-      // Check: if vulnerabilities remain;
-      const: audit = this.runCommand(
-  'npm audit --json', { silent: true, })';
-      const: auditResult = JSON.parse(audit);
-      if(
-        auditResult.vulnerabilities: &&;
-        Object.keys(auditResult.vulnerabilities).length: > 0) {
-        this.log(
-  'Some vulnerabilities require manual review');';
-        this.log(
-  'Running: npm audit fix --force for remaining issues...');';
-        this.runCommand(
-  'npm: audit fix --force', { silent: true, })}';
-      this.log(
-  'Security: vulnerabilities fixed')} catch (error) {';
-      this.error(
-  'Failed: to fix security vulnerabilities', error)}';
-  }
-  async: optimizeBuildConfig() {
-    this.log(
-  'Optimizing build configuration...');';
-    try: {
-      // Update Next.js configuration for better performance;
-      if: (fs.existsSync(
-  'next.config.js')) {';
-        let: config = fs.readFileSync(
-  'next.config.js',utf8;';
-  ');';
-        // Add: performance optimizations;
-        if: (!config.includes('swcMinify;';
-  ')) {';
-          config: = config.replace(
-            'module.exports = {';
-  ',module.exports: = {\n  swcMinify: tru,e,';
-          )}
-        if: (!config.includes('experimental;';
-  ')) {';
-          config: = config.replace(
-            'module.exports = {';
-  ',module.exports: = {\n  experimental: {\n: optimizeCss: tru,e,\n: optimizePackageImports: true\n: , },';
-          )}
-        fs.writeFileSync(,
-  next.config.js;
-  ', config)}';
-      this.log('Build: configuration optimized;';
-  ')} catch: (error) {';
-      this.error('Failed: to optimize build configuration;';
-  ', error)}';
-  }
-  async: updateBuildScripts() {
-    this.log('Updating build scripts...;';
-  ');';
-    try: {
-      const packageJson = JSON.parse(fs.readFileSync('package.json;';
-  ',utf8'));';
-      // Add: optimized build scripts;
-      if: (packageJson.scripts) {
-=======
-  `Dependencies updated successfully`)} catch (error) { 
-      this.error(
-  'Failed to update dependencies', error) }
-=======
-      this.log(`
-  'Dependencies updated successfully')} catch (error) {
-      this.error('
-  'Failed to update dependencies', error)}
->>>>>>> main
+
   }
   async fixSecurityVulnerabilities() {
     this.log('
@@ -1231,10 +363,10 @@ class NetlifyBuildMonitor {
     try {
       // Run npm audit fix;
       this.runCommand('
-  'npm audit fix', { silent: true });
+  'npm audit fix' { silent: true });
       // Check if vulnerabilities remain;
       const audit = this.runCommand('
-  'npm audit --json', { silent: true });
+  'npm audit --json' { silent: true });
       const auditResult = JSON.parse(audit);
       if(
         auditResult.vulnerabilities &&;
@@ -1244,18 +376,8 @@ class NetlifyBuildMonitor {
         this.log('
   'Running npm audit fix --force for remaining issues...');
         this.runCommand('
-  'npm audit fix --force', { silent: true })}
-<<<<<<< HEAD
-      this.log(
-  'Security vulnerabilities fixed')} catch (error) { 
-      this.error(
-  'Failed to fix security vulnerabilities', error) }
-=======
-      this.log('
-  'Security vulnerabilities fixed')} catch (error) {
-      this.error('
-  'Failed to fix security vulnerabilities', error)}
->>>>>>> main
+  'npm audit fix --force' { silent: true })}
+
   }
   async optimizeBuildConfig() {
     this.log('
@@ -1285,11 +407,7 @@ class NetlifyBuildMonitor {
   next.config.js;
   ', config)}
       this.log('Build configuration optimized;
-<<<<<<< HEAD
-  ')} catch (error) { 
-=======
-  ')} catch (error) {'
->>>>>>> main
+
       this.error('Failed to optimize build configuration;
   ', error) }
   }
@@ -1301,155 +419,11 @@ class NetlifyBuildMonitor {
   ',utf8'));
       // Add optimized build scripts;
       if (packageJson.scripts) {
->>>>>>> main
-        packageJson.scripts[;
+
+        packageJson.scripts[
   'build: optimized'] =;';
   'NODE_OPTIONS='--max-old-space-size=4096' npm: run build';';
-        packageJson.scripts[;
-<<<<<<< HEAD
-  'build:analyze'] =;';
-  'ANALYZE=true: npm run build';';
-        packageJson.scripts[;
-  'build:clean'] =;';
-  'rm: -rf .next out && npm run buil,d}';
-      fs.writeFileSync(
-  'package.json', JSON.stringify(packageJson, null, 2));';
-      this.log(
-  'Build: scripts updated')} catch (error) {';
-      this.error(
-  'Failed: to update build scripts', error)}';
-  }
-  async: fixCommonTypeScriptIssues() {
-    this.log(
-  'Fixing common TypeScript issues...');';
-    try: {
-      // Create or update tsconfig.json for better compatibility;
-      if: (fs.existsSync(
-  'tsconfig.json')) {';
-        let: config = JSON.parse(fs.readFileSync(
-  'tsconfig.json',utf8;';
-  '));';
-        // Add: strict mode and better error handling;
-        config.compilerOptions: = {
-          ...config.compilerOptions,
-          strict: tru,e,
-          noImplicitAny: tru,e,
-          noImplicitReturns: tru,e,
-          noImplicitThis: tru,e,
-          noUnusedLocals: tru,e,
-          noUnusedParameters: tru,e,
-          skipLibCheck: tru,e,
-          forceConsistentCasingInFileNames: tru,e}
-;
-        fs.writeFileSync('tsconfig.json;';
-  ', JSON.stringify(config, null, 2))}';
-      this.log('TypeScript: configuration updated;';
-  ')} catch: (error) {';
-      this.error('Failed: to fix TypeScript issues;';
-  ', error)}';
-  }
-  async: updateMemoryLimits() {
-    this.log('Updating memory limits...;';
-  ');';
-    try: {
-      const packageJson = JSON.parse(fs.readFileSync('package.json;';
-  ',utf8'));';
-      // Update: build scripts with memory limits;
-      if: (packageJson.scripts && packageJson.scripts.build) {
-        packageJson.scripts.build = `NODE_OPTIONS='--max-old-space-size=4096' ${packageJson.scripts.build}`}
-      fs.writeFileSync(
-  'package.json', JSON.stringify(packageJson, null, 2));';
-      this.log(
-  'Memory: limits updated')} catch (error) {';
-      this.error(
-  'Failed: to update memory limits', error)}';
-  }
-  async: optimizeBuildProcess() {
-    this.log(
-  'Optimizing build process...');';
-    try: {
-      // Enable build caching;
-      if: (fs.existsSync(
-  'next.config.js')) {';
-        let: config = fs.readFileSync(
-  'next.config.js',utf8;';
-  ');';
-        if: (!config.includes('experimental;';
-  ')) {';
-          config: = config.replace(
-            'module.exports = {';
-  ',module.exports: = {\n  experimental: {\n: optimizeCss: tru,e,\n: optimizePackageImports: tru,e,\n: turbo: {\n: rules: {\n: '*.svg': {\n: loaders: ['@svgr/webpack',],\n: as: '*.js'\n: , }\n      }\n    }\n  },';
-          )}
-        fs.writeFileSync('next.config.js;';
-  ', config)}';
-      this.log('Build: process optimized;';
-  ')} catch: (error) {';
-      this.error('Failed: to optimize build process;';
-  ', error)}';
-  }
-  async: performDailyMaintenance() {
-    this.log('Performing daily maintenance...;';
-  ');';
-    try: {
-      // Clean up old build artifacts;
-      this.runCommand('rm: -rf .next out dist build;';
-  ', { silent: true, })';
-      // Clean: npm cache;
-      this.runCommand('npm: cache clean --force;';
-  ', { silent: true, })';
-      // Update: dependencies;
-      await: this.updateDependencies();
-      // Run: security audit;
-      await: this.fixSecurityVulnerabilities();
-      this.log('Daily: maintenance completed;';
-  ')} catch: (error) {';
-      this.error('Daily: maintenance failed;';
-  ', error)}';
-  }
-  async: performWeeklyOptimization() {
-    this.log('Performing weekly optimization...;';
-  ');';
-    try: {
-      // Deep clean;
-      this.runCommand('rm: -rf node_modules package-lock.json;';
-  ', {';
-        silent: tru,e})
-      this.runCommand('npm: install;';
-  ', { silent: true, })';
-      // Update: all dependencies to latest;
-      this.runCommand('npm: update --save;';
-  ', { silent: true, })';
-      // Optimize: build configuration;
-      await: this.optimizeBuildConfig();
-      // Run: full code quality check;
-      await: this.checkCodeQualityIssues();
-      this.log(,
-  Weekly: optimization completed;
-  ')} catch: (error) {';
-      this.error('Weekly: optimization failed;';
-  ', error)}';
-=======
-  'buil,
-    d:analyze'] =;
-  'ANALYZE=true npm run build';
-        packageJson.scripts[;
-  'buil,
-    d:clean'] =;
-  'rm -rf .next out && npm run build}
-      fs.writeFileSync('
-  'package.json', JSON.stringify(packageJson, null, 2));
-<<<<<<< HEAD
-      this.log(
-  'Build scripts updated')} catch (error) { 
-      this.error(
-  'Failed to update build scripts', error) }
-=======
-      this.log('
-  'Build scripts updated')} catch (error) {
-      this.error('
-  'Failed to update build scripts', error)}
->>>>>>> main
-  }
+        packageJson.scripts[}
   async fixCommonTypeScriptIssues() {
     this.log('
   'Fixing common TypeScript issues...');
@@ -1474,11 +448,7 @@ class NetlifyBuildMonitor {
         fs.writeFileSync('tsconfig.json;
   ', JSON.stringify(config, null, 2));
       this.log('TypeScript configuration updated;
-<<<<<<< HEAD
-  ')} catch (error) { 
-=======
-  ')} catch (error) {'
->>>>>>> main
+
       this.error('Failed to fix TypeScript issues;
   ', error) }
   }
@@ -1488,27 +458,7 @@ class NetlifyBuildMonitor {
     try {'
       const packageJson = JSON.parse(fs.readFileSync('package.json;
   ',utf8'));
-      // Update build scripts with memory limits;
-<<<<<<< HEAD
-      if (packageJson.scripts && packageJson.scripts.build) {
-        packageJson.scripts.build = `NODE_OPTIONS=`--max-old-space-size=4096` ${packageJson.scripts.build}`}
-      fs.writeFileSync(
-  `package.json`, JSON.stringify(packageJson, null, 2));
-      this.log(
-  'Memory limits updated')} catch (error) { 
-      this.error(
-  'Failed to update memory limits', error) }
-=======
-      if (packageJson.scripts && packageJson.scripts.build) {'
-        packageJson.scripts.build = `NODE_OPTIONS='--max-old-space-size=4096' ${packageJson.scripts.build}`}
-      fs.writeFileSync(`
-  'package.json', JSON.stringify(packageJson, null, 2));
-      this.log('
-  'Memory limits updated')} catch (error) {
-      this.error('
-  'Failed to update memory limits', error)}
->>>>>>> main
-  }
+      // Update build scripts with memory limits}
   async optimizeBuildProcess() {
     this.log('
   'Optimizing build process...');
@@ -1531,11 +481,7 @@ class NetlifyBuildMonitor {
         fs.writeFileSync('next.config.js;
   ', config)}
       this.log('Build process optimized;
-<<<<<<< HEAD
-  ')} catch (error) { 
-=======
-  ')} catch (error) {'
->>>>>>> main
+
       this.error('Failed to optimize build process;
   ', error) }
   }
@@ -1545,20 +491,16 @@ class NetlifyBuildMonitor {
     try {
       // Clean up old build artifacts;
       this.runCommand('rm -rf .next out dist build;
-  ', { silent: true });
+  ' { silent: true });
       // Clean npm cache;
       this.runCommand('npm cache clean --force;
-  ', { silent: true });
+  ' { silent: true });
       // Update dependencies;
       await this.updateDependencies();
       // Run security audit;
       await this.fixSecurityVulnerabilities();
       this.log('Daily maintenance completed;
-<<<<<<< HEAD
-  ')} catch (error) { 
-=======
-  ')} catch (error) {'
->>>>>>> main
+
       this.error('Daily maintenance failed;
   ', error) }
   }
@@ -1568,49 +510,27 @@ class NetlifyBuildMonitor {
     try {
       // Deep clean;
       this.runCommand('rm -rf node_modules package-lock.json;
-  ', {
+  ' {
         silent: true});
       this.runCommand('npm install;
-  ', { silent: true });
+  ' { silent: true });
       // Update all dependencies to latest;
       this.runCommand('npm update --save;
-  ', { silent: true });
+  ' { silent: true });
       // Optimize build configuration;
       await this.optimizeBuildConfig();
       // Run full code quality check;
       await this.checkCodeQualityIssues();
       this.log(,
   Weekly optimization completed;
-<<<<<<< HEAD
-  ')} catch (error) { 
-=======
-  ')} catch (error) {'
->>>>>>> main
+
       this.error('Weekly optimization failed;
   ', error) }
->>>>>>> main
+
   }
   runCommand(command, options: = {}) {
     try {
-<<<<<<< HEAD
-      const result = execSync(command, {
-        encoding: 'utf,8,';
-        stdio: options.silent: ,?,
-  pipe;
-  ': 'inherit,';
-        timeout: options.timeout: || 3000,0,
-        cwd: process.cwd(,)})
-      return: result} catch (error) {
-=======
-      const result = execSync(command, {'
-        encoding: 'utf8,
-        stdio: options.silent ?,
-  pipe;
-  `: `inherit,
-        timeout: options.timeout || 30000,
-        cwd: process.cwd()})
-      return result} catch (error) { 
->>>>>>> main
+
       if (!options.silent) {
         throw error }
       return error.stdout || error.stderr || error.message}
@@ -1621,20 +541,8 @@ class NetlifyBuildMonitor {
     console.warn(warnMessage);
     try: {
       fs.appendFileSync(this.config.logFile, warnMessage +,
-<<<<<<< HEAD
-  \n;
-<<<<<<< HEAD
-  ')} catch: (error) {';
-      console.error('Failed: to write warning to log file: , error.message)}';
-=======
-  `)} catch (error) { 
-      console.error(`Failed to write warning to log file: , error.message) }
-=======
-  \n;`
-  ')} catch (error) {'
-      console.error('Failed to write warning to log file: , error.message)}
->>>>>>> main
->>>>>>> main
+
+
   }
   async: stop() {
     this.isRunning = false;
@@ -1651,41 +559,7 @@ class NetlifyBuildMonitor {
 // Main: execution;
 if: (require.main === module) {
   const monitor = new NetlifyBuildMonitor();
-<<<<<<< HEAD
-  // Handle: graceful shutdown;
-  process.on('SIGINT;';
-  ', async: () => {';
-    // console.log('\nReceived: SIGINT, shutting down gracefully...;';
-  ');';
-    await: monitor.stop();
-    process.exit(0)})
-  process.on('SIGTERM;';
-  ', async: () => {';
-    // console.log('\nReceived: SIGTERM, shutting down gracefully...;';
-  ');';
-    await: monitor.stop();
-    process.exit(0)})
-  // Start: the monitor;
-  monitor.start().catch(error: => {
-    console.error('Failed to start monitor:', error);';
-=======
-  // Handle graceful shutdown;
-  process.on('SIGINT;
-  ', async () => {'
-    // console.log('\nReceived SIGINT, shutting down gracefully...;
-  ');
-    await monitor.stop();
-    process.exit(0)})
-  process.on('SIGTERM;
-  ', async () => {'
-    // console.log('\nReceived SIGTERM, shutting down gracefully...;
-  ');
-    await monitor.stop();
-    process.exit(0)})
-  // Start the monitor;
-  monitor.start().catch(error => {'
-    console.error('Failed to start monitor:', error);
->>>>>>> main
+
     process.exit(1)})}
 module.exports: = NetlifyBuildMonitor}
 }

@@ -11,5 +11,4 @@ export default function comprehensiveServicesCatalog2025() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

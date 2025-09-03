@@ -18,51 +18,24 @@ const ImprovedFooter: React.FC = () => {
 
   const footerLinks = {
     services: [
-      { name: 'AI Services', href: '/ai-services' },
-      { name: 'IT Services', href: '/it-services' },
-      { name: 'Micro SaaS', href: '/micro-saas' },
-      { name: 'Cloud Solutions', href: '/cloud-solutions' },
-      { name: 'Web Development', href: '/web-development' },
-      { name: 'Mobile Development', href: '/mobile-development' }
+      { name: 'AI Services', href: '/ai-services' }, { name: 'IT Services', href: '/it-services' }, { name: 'Micro SaaS', href: '/micro-saas' }, { name: 'Cloud Solutions', href: '/cloud-solutions' }, { name: 'Web Development', href: '/web-development' }, { name: 'Mobile Development', href: '/mobile-development' }
     ],
     solutions: [
-      { name: 'Enterprise', href: '/solutions/enterprise' },
-      { name: 'Small Business', href: '/solutions/small-business' },
-      { name: 'Startups', href: '/solutions/startups' },
-      { name: 'Healthcare', href: '/solutions/healthcare' },
-      { name: 'Finance', href: '/solutions/finance' },
-      { name: 'E-commerce', href: '/solutions/ecommerce' }
+      { name: 'Enterprise', href: '/solutions/enterprise' }, { name: 'Small Business', href: '/solutions/small-business' }, { name: 'Startups', href: '/solutions/startups' }, { name: 'Healthcare', href: '/solutions/healthcare' }, { name: 'Finance', href: '/solutions/finance' }, { name: 'E-commerce', href: '/solutions/ecommerce' }
     ],
     company: [
-      { name: 'About Us', href: '/about' },
-      { name: 'Our Team', href: '/team' },
-      { name: 'Careers', href: '/careers' },
-      { name: 'Contact', href: '/contact' },
-      { name: 'Blog', href: '/blog' },
-      { name: 'Case Studies', href: '/case-studies' }
+      { name: 'About Us', href: '/about' }, { name: 'Our Team', href: '/team' }, { name: 'Careers', href: '/careers' }, { name: 'Contact', href: '/contact' }, { name: 'Blog', href: '/blog' }, { name: 'Case Studies', href: '/case-studies' }
     ],
     resources: [
-      { name: 'Documentation', href: '/docs' },
-      { name: 'White Papers', href: '/white-papers' },
-      { name: 'Webinars', href: '/webinars' },
-      { name: 'Support', href: '/support' },
-      { name: 'API Reference', href: '/api' },
-      { name: 'Sitemap', href: '/sitemap' }
+      { name: 'Documentation', href: '/docs' }, { name: 'White Papers', href: '/white-papers' }, { name: 'Webinars', href: '/webinars' }, { name: 'Support', href: '/support' }, { name: 'API Reference', href: '/api' }, { name: 'Sitemap', href: '/sitemap' }
     ],
     legal: [
-      { name: 'Privacy Policy', href: '/privacy' },
-      { name: 'Terms of Service', href: '/terms' },
-      { name: 'Cookie Policy', href: '/cookies' },
-      { name: 'GDPR Compliance', href: '/gdpr' }
+      { name: 'Privacy Policy', href: '/privacy' }, { name: 'Terms of Service', href: '/terms' }, { name: 'Cookie Policy', href: '/cookies' }, { name: 'GDPR Compliance', href: '/gdpr' }
     ]
   };
 
   const socialLinks = [
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
-    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github },
-    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook },
-    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram }
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin }, { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter }, { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github }, { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook }, { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram }
   ];
 
   return (
@@ -241,7 +214,6 @@ const ImprovedFooter: React.FC = () => {
         </div>
       </div>
     </footer>
-  );
-};
+  )};
 
 export default ImprovedFooter;

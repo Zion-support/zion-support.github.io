@@ -39,15 +39,13 @@ const CustomDevelopment: NextPage = () => {
     }, {
       step: '02',
       title: 'Design & Architecture', description: 'Our team designs the system architecture and user interface.'
-    },
-    {
+    }, {
       step: '03', title: 'Development',
       description: 'We build your solution using agile methodologies and best practices.'
     }, {
       step: '04',
       title: 'Testing & Quality Assurance', description: 'Comprehensive testing ensures your solution works flawlessly.'
-    },
-    {
+    }, {
       step: '05', title: 'Deployment & Launch',
       description: 'We deploy your solution and provide launch support.'
     }, {
@@ -57,18 +55,7 @@ const CustomDevelopment: NextPage = () => {
   ];
 
   const technologies = [
-    { name: 'React', category: 'Frontend' },
-    { name: 'Vue.js', category: 'Frontend' },
-    { name: 'Angular', category: 'Frontend' },
-    { name: 'Node.js', category: 'Backend' },
-    { name: 'Python', category: 'Backend' },
-    { name: 'PHP', category: 'Backend' },
-    { name: 'MySQL', category: 'Database' },
-    { name: 'PostgreSQL', category: 'Database' },
-    { name: 'MongoDB', category: 'Database' },
-    { name: 'AWS', category: 'Cloud' },
-    { name: 'Azure', category: 'Cloud' },
-    { name: 'Docker', category: 'DevOps' }
+    { name: 'React', category: 'Frontend' }, { name: 'Vue.js', category: 'Frontend' }, { name: 'Angular', category: 'Frontend' }, { name: 'Node.js', category: 'Backend' }, { name: 'Python', category: 'Backend' }, { name: 'PHP', category: 'Backend' }, { name: 'MySQL', category: 'Database' }, { name: 'PostgreSQL', category: 'Database' }, { name: 'MongoDB', category: 'Database' }, { name: 'AWS', category: 'Cloud' }, { name: 'Azure', category: 'Cloud' }, { name: 'Docker', category: 'DevOps' }
   ];
 
   return (
@@ -221,7 +208,6 @@ const CustomDevelopment: NextPage = () => {
         </section>
       </div>
     </MainLayout>
-  );
-};
+  )};
 
 export default CustomDevelopment;

@@ -49,8 +49,7 @@ export default function WebsiteAnalytics() {
         'Customizable widgets',
         'Drag-and-drop interface'
       ]
-    },
-    {
+    }, {
       title: 'Traffic Analysis',
       description: 'Comprehensive visitor behavior and traffic source insights',
       icon: Users,
@@ -62,8 +61,7 @@ export default function WebsiteAnalytics() {
         'Referral source tracking',
         'Search engine performance'
       ]
-    },
-    {
+    }, {
       title: 'Conversion Tracking',
       description: 'Track and optimize your business goals and conversions',
       icon: Target,
@@ -75,8 +73,7 @@ export default function WebsiteAnalytics() {
         'Phone call tracking',
         'ROI measurement tools'
       ]
-    },
-    {
+    }, {
       title: 'Marketing Performance',
       description: 'Measure the effectiveness of your marketing campaigns',
       icon: TrendingUp,
@@ -106,8 +103,7 @@ export default function WebsiteAnalytics() {
         'Mobile app access'
       ],
       popular: false
-    },
-    {
+    }, {
       name: 'Professional',
       price: '$79',
       period: '/month',
@@ -122,8 +118,7 @@ export default function WebsiteAnalytics() {
         'API access'
       ],
       popular: true
-    },
-    {
+    }, {
       name: 'Business',
       price: '$199',
       period: '/month',
@@ -146,18 +141,15 @@ export default function WebsiteAnalytics() {
       icon: Eye,
       title: 'Easy to Understand',
       description: 'No technical jargon - just clear, actionable insights in plain English'
-    },
-    {
+    }, {
       icon: Zap,
       title: 'Real-time Data',
       description: 'Get instant updates on your website performance and visitor behavior'
-    },
-    {
+    }, {
       icon: Target,
       title: 'Goal-Focused',
       description: 'Track what matters most to your business with custom goal setting'
-    },
-    {
+    }, {
       icon: Smartphone,
       title: 'Mobile Access',
       description: 'Monitor your analytics on-the-go with our mobile-optimized interface'
@@ -393,5 +385,4 @@ export default function WebsiteAnalytics() {
         </div>
       </section>
     </PageTransition>
-  );
-}
+  )}

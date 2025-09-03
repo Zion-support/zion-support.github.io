@@ -11,5 +11,4 @@ export default function ResourceManagementSystem.test() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

@@ -29,7 +29,7 @@ export default function Privacy() {
                 1. Introduction
               </h2>
               <p className="text-gray-700 mb-4">
-                Zion Tech Group ("we," "our," or "us") is committed to
+                Zion Tech Group ("we", "our", or "us") is committed to
                 protecting your privacy. This Privacy Policy explains how we
                 collect, use, disclose, and safeguard your information when you
                 visit our website or use our services.
@@ -210,5 +210,4 @@ export default function Privacy() {
         </div>
       </main>
     </>
-  );
-}
+  )}

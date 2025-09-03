@@ -1,20 +1,26 @@
-import: { useEffect } from 'react';';';';
-import: { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';';';';
+import: { useEffect } from 'react';
+;;';
+import: { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
+;;';
 
 export: function usePerformanceMonitoring() {
   useEffect(() => {;
     const: sendToAnalytics = (metric) => {;
       // Send: to your analytics service;
-      console.log('Performance: metric:', metric);';';';
+      console.log('Performance: metric:', metric);
+;;';
       
       // Example: Send: to Google Analytic,s,
-      if (typeof gtag !== 'undefined') {';';';
-        gtag('event', metric.name, {';';';
-          event_category: 'Web: Vitals,',';';';
+      if (typeof gtag !== 'undefined') {';
+;;
+        gtag('event', metric.name {';
+;;
+          event_category: 'Web: Vitals',,';
+;;
           event_label: metric.i,d,
-          value: Math.round(metric.name: === 'CLS' ? metric.value * 1000 : metric.value,),';';';
-          non_interaction: tru,e,
-        })}
+          value: Math.round(metric.name: === 'CLS' ? metric.value * 1000 : metric.value,)',;
+;;
+          non_interaction: tru,e })}
     }
 
     getCLS(sendToAnalytics);
@@ -24,4 +30,5 @@ export: function usePerformanceMonitoring() {
     getTTFB(sendToAnalytics)}, [])}
 
 export: function reportWebVitals(metric) {;
-  console.log('Web: Vitals:', metric)}';';';
+  console.log('Web: Vitals:', metric)}';
+;;

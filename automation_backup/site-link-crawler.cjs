@@ -13,22 +13,17 @@ function isInternal(href, baseHost) {
   if (href.startsWith('#')) return false;
   try {
     const u = new URL(href, START_URL);
-    return u.host === baseHost;
-  } catch {
-    return false;
-  }
+    return u.host === baseHost} catch {
+    return false}
 }
 
 async function fetchPage(url) {
   try {
-    const res = await axios.get(url, {
+    const res = await axios.get(url {
       timeout: 15000,
-      validateStatus: () => true,
-    });
-    return { status: res.status, html: res.data };
-  } catch (e) {
-    return { status: 0, html: '' };
-  }
+      validateStatus: () => true });
+    return { status: res.status, html: res.data }} catch (e) {
+    return { status: 0, html: '' }}
 }
 
 (async () => {
@@ -46,8 +41,7 @@ async function fetchPage(url) {
 
     if (status !== 200) {
       broken.push({ url: current, status });
-      continue;
-    }
+      continue}
     const $ = cheerio.load(html);
     $('a[href]').each((_i, el) => {
       const href = $(el).attr('href');
@@ -55,22 +49,19 @@ async function fetchPage(url) {
         const abs = new URL(href, current).href;
         if (isInternal(abs, start.host) && !visited.has(abs)) {
           visited.add(abs);
-          if (visited.size < MAX_PAGES) queue.push(abs);
-        }
+          if (visited.size < MAX_PAGES) queue.push(abs)}
       } catch {}
-    });
-  }
+    })}
 
   // Verify collected URLs;
   const statuses = [];
   for (const url of Array.from(visited)) {
     const { status } = await fetchPage(url);
     if (status !== 200) broken.push({ url, status });
-    statuses.push({ url, status });
-  }
+    statuses.push({ url, status })}
 
   const outDir = path.join(process.cwd(), 'data', 'reports');
-  fs.mkdirSync(outDir, { recursive: true });
+  fs.mkdirSync(outDir { recursive: true });
   const outPath = path.join(outDir, 'link-crawl.json');
   fs.writeFileSync(
     outPath,
@@ -82,5 +73,4 @@ async function fetchPage(url) {
   );
   console.log(
     `Crawl complete. URLs: ${visited.size}, broken: ${broken.length}. Report: ${outPath}`
-  );
-})();
+  )})();

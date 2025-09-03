@@ -93,8 +93,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     ...blogPages,
     ...servicePages,
     ...categoryPages,
-    ...chatContentPages,
-  ];
+    ...chatContentPages ];
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">
@@ -113,8 +112,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       <lastmod>${new Date().toISOString()}</lastmod>
       <changefreq>${changefreq}</changefreq>
       <priority>${priority}</priority>
-    </url>`;
-    })
+    </url>`})
     .join('')}
 </urlset>`;
 
@@ -124,5 +122,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader(
   'Cache-Control',
   'public, max-age=86400, s-maxage=86400');
-  res.status(200).send(sitemap);
-}
+  res.status(200).send(sitemap)}

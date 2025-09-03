@@ -8,8 +8,7 @@ interface ButtonProps {
   className?: string;
   onClick?: () => void;
   type?: 'button' | 'submit' | 'reset';
-  disabled?: boolean;
-}
+  disabled?: boolean}
 
 export const Button: React.FC<ButtonProps> = ({
   children,
@@ -40,8 +39,7 @@ export const Button: React.FC<ButtonProps> = ({
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
 
   if (asChild) {
-    return <span className={classes}>{children}</span>;
-  }
+    return <span className={classes}>{children}</span>}
 
   return (
     <button
@@ -52,7 +50,6 @@ export const Button: React.FC<ButtonProps> = ({
     >
       {children}
     </button>
-  );
-};
+  )};
 
 export default Button;

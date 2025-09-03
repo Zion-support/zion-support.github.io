@@ -11,5 +11,4 @@ export default function SEO.test() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

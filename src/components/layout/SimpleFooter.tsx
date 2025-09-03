@@ -95,5 +95,4 @@ export function SimpleFooter() {
         </div>
       </div>
     </footer>
-  );
-}
+  )}

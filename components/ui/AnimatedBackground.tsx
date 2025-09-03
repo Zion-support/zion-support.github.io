@@ -3,8 +3,7 @@ import { ReactNode } from "react";
 
 interface AnimatedBackgroundProps {
   children?: ReactNode;
-  className?: string;
-}
+  className?: string}
 
 export default function AnimatedBackground({ children, className = '' }: AnimatedBackgroundProps) {
   return (
@@ -13,5 +12,4 @@ export default function AnimatedBackground({ children, className = '' }: Animate
       <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white to-transparent opacity-20"></div>
       {children}
     </div>
-  );
-}
+  )}

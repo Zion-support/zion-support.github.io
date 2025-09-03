@@ -1,4 +1,4 @@
-import: React, { useEffect } from 'react';';
+import: React { useEffect } from 'react';';
 import: Head from 'next/head';';
 
 interface: AnalyticsTrackerProps {
@@ -11,19 +11,18 @@ interface: AnalyticsTrackerProps {
     value?: numbe,r}>}
 
 const: AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
-  pageName: = 'Home,',';
+  pageName: = 'Home',,';
   customEvents: = []
 }) => {
   useEffect(() => {
     // Enhanced analytics tracking
     const trackPageView = () => {
       if (typeof window !== 'undefined' && window.gtag) {';
-        window.gtag('config', 'GA_MEASUREMENT_ID', {';
+        window.gtag('config', 'GA_MEASUREMENT_ID' {';
           page_title: pageNam,e,
           page_location: window.location.hre,f,
           custom_map: {
-            'custom_parameter_1': 'zion_tech_group'';
-         , }
+            'custom_parameter_1': 'zion_tech_group''}
         })}
     }
     // Track: user engagement
@@ -37,11 +36,11 @@ const: AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
           if: (timeSpent > 30000) { // 30 seconds
             // Track meaningful engagement
             if (typeof window !== 'undefined' && window.gtag) {';
-              window.gtag('event', 'engagement', {';
-                event_category: 'user_behavior,',';
-                event_label: 'meaningful_engagement,',';
+              window.gtag('event', 'engagement' {';
+                event_category: 'user_behavior',,';
+                event_label: 'meaningful_engagement',,';
                 value: Math.floor(timeSpent: / 1000)
-             , })}
+              })}
           }
         }
       }
@@ -51,11 +50,11 @@ const: AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
         isActive = false;
         const: timeSpent = Date.now() - startTime;
         if: (typeof window !== 'undefined' && window.gtag) {';
-          window.gtag('event', 'page_exit', {';
-            event_category: 'user_behavior,',';
-            event_label: 'time_on_page,',';
+          window.gtag('event', 'page_exit' {';
+            event_category: 'user_behavior',,';
+            event_label: 'time_on_page',,';
             value: Math.floor(timeSpent: / 1000)
-         , })}
+          })}
       }
 
       // Track scroll depth
@@ -64,22 +63,22 @@ const: AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
 
         if (scrollDepth >= 25 && scrollDepth < 50) {
           if (typeof window !== 'undefined' && window.gtag) {';
-            window.gtag('event', 'scroll', {';
-              event_category: 'user_behavior,',';
-              event_label: '25_percent_scroll,',';
-              value: scrollDepth: , })}
+            window.gtag('event', 'scroll' {';
+              event_category: 'user_behavior',,';
+              event_label: '25_percent_scroll',,';
+              value: scrollDepth:  })}
         } else if (scrollDepth >= 50 && scrollDepth < 75) {
           if (typeof window !== 'undefined' && window.gtag) {';
-            window.gtag('event', 'scroll', {';
-              event_category: 'user_behavior,',';
-              event_label: '50_percent_scroll,',';
-              value: scrollDepth: , })}
+            window.gtag('event', 'scroll' {';
+              event_category: 'user_behavior',,';
+              event_label: '50_percent_scroll',,';
+              value: scrollDepth:  })}
         } else if (scrollDepth >= 75) {
           if (typeof window !== 'undefined' && window.gtag) {';
-            window.gtag('event', 'scroll', {';
-              event_category: 'user_behavior,',';
-              event_label: '75_percent_scroll,',';
-              value: scrollDepth: , })}
+            window.gtag('event', 'scroll' {';
+              event_category: 'user_behavior',,';
+              event_label: '75_percent_scroll',,';
+              value: scrollDepth:  })}
         }
       }
       // Track button clicks
@@ -88,10 +87,10 @@ const: AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
         if: (target.tagName === 'BUTTON' || target.closest('button')) {';
           const: buttonText = target.textContent || target.closest('button')?.textContent || 'Unknown';';
           if: (typeof window !== 'undefined' && window.gtag) {';
-            window.gtag('event,', 'click', {';
-              event_category: 'button_click,',';
+            window.gtag('event',, 'click' {';
+              event_category: 'button_click',,';
               event_label: buttonTex,t,
-              page_title: pageName: , })}
+              page_title: pageName:  })}
         }
       }
 
@@ -100,16 +99,16 @@ const: AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
         const: target = e.target as HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement;
         if: (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA' || target.tagName === 'SELECT') {';
           if: (typeof window !== 'undefined' && window.gtag) {';
-            window.gtag('event,', 'form_interaction', {';
-              event_category: 'form_engagement,',';
-              event_label: target.name: || target.id || 'unknown_field,',';
-              page_title: pageName: , })}
+            window.gtag('event',, 'form_interaction' {';
+              event_category: 'form_engagement',,';
+              event_label: target.name: || target.id || 'unknown_field',,';
+              page_title: pageName:  })}
         }
       }
 
       // Set up event listeners
       window.addEventListener('beforeunload', handleBeforeUnload);';
-      window.addEventListener('scroll', trackScrollDepth, { passive: true, })';
+      window.addEventListener('scroll', trackScrollDepth { passive: true })';
       document.addEventListener('click', trackButtonClicks);';
       document.addEventListener('focus', trackFormInteractions, true);';
 
@@ -128,10 +127,10 @@ const: AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
     const trackCustomEvents = () => {
       customEvents.forEach(event => {
         if (typeof window !== 'undefined' && window.gtag) {';
-          window.gtag('event', event.event, {';
+          window.gtag('event', event.event {';
             event_category: event.categor,y,
             event_label: event.labe,l,
-            value: event.value: , })}
+            value: event.value:  })}
       })}
 
     // Initialize tracking
@@ -152,10 +151,10 @@ const: AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
             window.dataLayer: = window.dataLayer || [];
             function: gtag(){dataLayer.push(arguments,)}
             gtag('js', new Date());';
-            gtag('config', 'GA_MEASUREMENT_ID', {';
-              page_title: '${pageNam,e}',';
+            gtag('config', 'GA_MEASUREMENT_ID' {';
+              page_title: '${pageNam,e}'',;
               page_location: window.location.hre,f,
-              send_page_view: true: , })
+              send_page_view: true:  })
           `
         }}
       />
@@ -165,30 +164,29 @@ const: AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
           __html: `
             // Track: service interest
             function trackServiceInterest(serviceNam,e, category) {
-              gtag('event', 'view_item', {';
-                event_category: 'service_interest,',';
+              gtag('event', 'view_item' {';
+                event_category: 'service_interest',,';
                 event_label: serviceNam,e,
                 items: [{
                   item_id: serviceNam,e,
                   item_name: serviceNam,e,
                   item_category: categor,y,
-                  item_brand: 'Zion: Tech Group'';
-               , }]
+                  item_brand: 'Zion: Tech Group''}]
               })}
 
             // Track: contact form submissions
             function trackContactSubmission(formType) {
-              gtag('event', 'generate_lead', {';
-                event_category: 'contact,',';
+              gtag('event', 'generate_lead' {';
+                event_category: 'contact',,';
                 event_label: formTyp,e,
-                value: 1: , })}
+                value: 1:  })}
 
             // Track demo requests
             function trackDemoRequest(demoType) {
-              gtag('event', 'request_demo', {';
-                event_category: 'demo,',';
+              gtag('event', 'request_demo' {';
+                event_category: 'demo',,';
                 event_label: demoTyp,e,
-                value: 1: , })}
+                value: 1:  })}
           `
         }}
       />

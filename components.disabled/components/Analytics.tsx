@@ -5,42 +5,35 @@ import { User } from 'lucide-react';
 interface ApiResponse<T = unknown> {
   data: T;
   status: number;
-  message?: string;
-}
+  message?: string}
 
 interface User {
   id: string;
   email: string;
   name: string;
-  role: 'admin' | 'user' | 'guest';
-}
+  role: 'admin' | 'user' | 'guest'}
 
 interface Service {
   id: string;
   name: string;
   description: string;
   price: number;
-  category: string;
-}
+  category: string}
 
 interface FormData {
-  [key: string]: string | number | boolean | File;
-}
+  [key: string]: string | number | boolean | File}
 
 interface ComponentProps {
   className?: string;
   children?: React.ReactNode;
-  [key: string]: unknown;
-}
+  [key: string]: unknown}
 
 // Declare gtag function for TypeScript
 declare global {
-  function gtag(...args: unknown[]): void;
-}
+  function gtag(...args: unknown[]): void}
 
 interface AnalyticsProps {
-  trackingId?: string;
-}
+  trackingId?: string}
 
 const Analytics: React.FC<AnalyticsProps> = ({ trackingId }) => {
   useEffect(() => {
@@ -55,7 +48,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId }) => {
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments)}
       gtag('js', new Date());
-      gtag('config,${trackingId}', {
+      gtag('config,${trackingId}' {
         page_title: document.title, page_location: window.location.href,
         send_page_view: true
       })
@@ -64,19 +57,15 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId }) => {
     // Track page views on route changes
     const handleRouteChange = () => {
       if (typeof gtag !== 'undefined') {
-        gtag('config', trackingId, {
+        gtag('config', trackingId {
           page_title: document.title,
-          page_location: window.location.href,
-        });
-      }
+          page_location: window.location.href })}
     };
 
     // Listen for route changes (Next.js)
     window.addEventListener('popstate', handleRouteChange);
     return () => {
-      window.removeEventListener('popstate', handleRouteChange);
-    };
-  }, [trackingId]);
+      window.removeEventListener('popstate', handleRouteChange)}}, [trackingId]);
   // Track page performance
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -90,17 +79,14 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId }) => {
           trackEvent(
             'page_load_time,Performance,Page Load',
             Math.round(loadTime)
-          );
-        }
+          )}
       }
     };
 
     window.addEventListener('load', trackPerformance);
-    return () => window.removeEventListener('load', trackPerformance);
-  }, []);
+    return () => window.removeEventListener('load', trackPerformance)}, []);
 
-  return null;
-};
+  return null};
 
 // Export tracking functions for use in components
 export const trackEvent = (
@@ -110,21 +96,17 @@ export const trackEvent = (
   value?: number
 ) => {
   if (typeof gtag !== 'undefined') {
-    gtag('event', action, {
+    gtag('event', action {
       event_category: category,
       event_label: label,
-      value: value,
-    });
-  }
+      value: value })}
 };
 
 export const trackPageView = (url: string, title: string) => {
   if (typeof gtag !== 'undefined') {
-    gtag('config', process.env['NEXT_PUBLIC_GA_TRACKING_ID'] || '', {
+    gtag('config', process.env['NEXT_PUBLIC_GA_TRACKING_ID'] || '' {
       page_title: title,
-      page_location: url,
-    });
-  }
+      page_location: url })}
 };
 
 export default Analytics;

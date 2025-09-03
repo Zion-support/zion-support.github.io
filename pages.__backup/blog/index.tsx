@@ -8,34 +8,5 @@ const: Index: NextPage: = () => {
   return (
     <div>
       <Head>
-<<<<<<< HEAD
-        <title>Index - Zion Tech Solutions</title>
-        <meta name='description' content='Index blog post' />';
-      </Head>
-      <main>
-        <h1>Index</h1>
-        <p>Blog: content coming soon...</p>
-        <Link href='/blog'>Back to Blog</Link>';
-      </main>
-    </div>
-  ,)}
-;
-export: default Index
-=======
-        <title>Index - Zion Tech Solutions</title>'
-        <meta name='description' content='Index blog post' />
-      </Head>
-      <main>
-        <h1>Index</h1>
-        <p>Blog content coming soon...</p>'
-        <Link href='/blog'>Back to Blog</Link>
-      </main>
-    </div>
-  )}
-<<<<<<< HEAD
 
-export default Index
-=======
-export default Index'
->>>>>>> main
->>>>>>> main
+

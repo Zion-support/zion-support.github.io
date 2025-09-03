@@ -297,5 +297,4 @@ export default function SmartInventoryManagement() {
         </section>
       </main>
     </>
-  );
-}
+  )}

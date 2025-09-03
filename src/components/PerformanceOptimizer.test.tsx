@@ -11,5 +11,4 @@ export default function PerformanceOptimizer.test() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

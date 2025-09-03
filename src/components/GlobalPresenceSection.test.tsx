@@ -11,5 +11,4 @@ export default function GlobalPresenceSection.test() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

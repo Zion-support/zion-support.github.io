@@ -27,28 +27,23 @@ const AICustomerSupportPlatform: React.FC = () => {
       icon: Bot,
       title: "AI-Powered Chatbots",
       description: "Intelligent chatbots that understand context, provide instant responses, and escalate complex issues to human agents seamlessly."
-    },
-    {
+    }, {
       icon: MessageSquare,
       title: "Multi-Channel Support",
       description: "Unified support across live chat, email, phone, social media, and messaging apps with consistent experience."
-    },
-    {
+    }, {
       icon: Brain,
       title: "Smart Ticket Routing",
       description: "AI automatically categorizes and routes tickets to the right agents based on expertise and workload."
-    },
-    {
+    }, {
       icon: BarChart3,
       title: "Real-Time Analytics",
       description: "Comprehensive dashboards with customer satisfaction scores, response times, and agent performance metrics."
-    },
-    {
+    }, {
       icon: Shield,
       title: "Knowledge Base AI",
       description: "Automatically updated knowledge base with AI-powered search and intelligent article suggestions."
-    },
-    {
+    }, {
       icon: Globe,
       title: "24/7 Availability",
       description: "Round-the-clock customer support with AI handling common queries and human agents for complex issues."
@@ -69,18 +64,15 @@ const AICustomerSupportPlatform: React.FC = () => {
       title: "CRM Integration",
       description: "Seamlessly integrate with Salesforce, HubSpot, and other CRM platforms for complete customer context.",
       icon: Users
-    },
-    {
+    }, {
       title: "E-commerce Platforms",
       description: "Connect with Shopify, WooCommerce, and Magento for order tracking and product support.",
       icon: Target
-    },
-    {
+    }, {
       title: "Communication Tools",
       description: "Integrate with Slack, Microsoft Teams, and other collaboration tools for internal coordination.",
       icon: MessageSquare
-    },
-    {
+    }, {
       title: "Analytics Platforms",
       description: "Connect with Google Analytics, Mixpanel, and other tools for comprehensive customer insights.",
       icon: BarChart3
@@ -100,8 +92,7 @@ const AICustomerSupportPlatform: React.FC = () => {
         "Standard templates",
         "Email support"
       ]
-    },
-    {
+    }, {
       name: "Professional",
       price: "$80",
       period: "/month",
@@ -115,8 +106,7 @@ const AICustomerSupportPlatform: React.FC = () => {
         "Analytics dashboard"
       ],
       popular: true
-    },
-    {
+    }, {
       name: "Enterprise",
       price: "$150",
       period: "/month",
@@ -384,7 +374,6 @@ const AICustomerSupportPlatform: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
+  )};
 
 export default AICustomerSupportPlatform;

@@ -3,14 +3,12 @@ const path = require('path');
 
 function walk(dir, exts = new Set(['.tsx', '.ts', '.jsx', '.js'])) {
   const files = [];
-  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+  for (const entry of fs.readdirSync(dir { withFileTypes: true })) {
     if (entry.name.startsWith('.')) continue;
     const full = path.join(dir, entry.name);
     if (entry.isDirectory()) files.push(...walk(full, exts));
-    else if (exts.has(path.extname(entry.name))) files.push(full);
-  }
-  return files;
-}
+    else if (exts.has(path.extname(entry.name))) files.push(full)}
+  return files}
 
 function analyzeFile(filePath) {
   const src = fs.readFileSync(filePath, 'utf8');
@@ -33,9 +31,7 @@ function analyzeFile(filePath) {
     hasOgTitle,
     hasOgDescription: hasOgDesc,
     hasOgImage,
-    missing,
-  };
-}
+    missing }}
 
 function runAudit() {
   const pagesDir = path.join(__dirname, '..', 'pages');
@@ -51,21 +47,18 @@ function runAudit() {
     missingAny: report.filter(r => r.missing.length > 0).length,
     report,
     recommendation:
-      'Add missing OG tags in pages lacking them to improve social sharing and SEO.',
-  };
+      'Add missing OG tags in pages lacking them to improve social sharing and SEO.' };
 
   const reportsDir = path.join(__dirname, '..', 'public', 'reports');
-  if (!fs.existsSync(reportsDir)) fs.mkdirSync(reportsDir, { recursive: true });
+  if (!fs.existsSync(reportsDir)) fs.mkdirSync(reportsDir { recursive: true });
   fs.writeFileSync(
     path.join(reportsDir, 'og-meta-report.json'),
     JSON.stringify(summary, null, 2)
   );
 
-  return summary;
-}
+  return summary}
 
 if (require.main === module) {
-  console.log(JSON.stringify(runAudit(), null, 2));
-}
+  console.log(JSON.stringify(runAudit(), null, 2))}
 
 module.exports = { runAudit };

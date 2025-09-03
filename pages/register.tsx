@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React { useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
@@ -38,8 +38,7 @@ export default function Register() {
     setFormData(prev => ({
       ...prev,
       [name]: type === 'checkbox' ? checked : value
-    }));
-  };
+    }))};
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -49,26 +48,22 @@ export default function Register() {
     await new Promise(resolve => setTimeout(resolve, 2000));
     
     setIsSubmitting(false);
-    setIsRegistered(true);
-  };
+    setIsRegistered(true)};
 
   const benefits = [
     {
       icon: Users,
       title: 'Access to Expert Network',
       description: 'Connect with our certified professionals and industry experts'
-    },
-    {
+    }, {
       icon: Zap,
       title: 'Priority Support',
       description: 'Get priority access to our support team and faster response times'
-    },
-    {
+    }, {
       icon: Star,
       title: 'Exclusive Content',
       description: 'Access to exclusive resources, whitepapers, and case studies'
-    },
-    {
+    }, {
       icon: Shield,
       title: 'Secure Platform',
       description: 'Your data is protected with enterprise-grade security'
@@ -134,8 +129,7 @@ export default function Register() {
           </motion.div>
         </div>
       </>
-    );
-  }
+    )}
 
   return (
     <>
@@ -430,5 +424,4 @@ export default function Register() {
         </div>
       </div>
     </>
-  );
-}
+  )}

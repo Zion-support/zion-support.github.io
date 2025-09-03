@@ -11,5 +11,4 @@ export default function EnhancedHeroSection.test() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

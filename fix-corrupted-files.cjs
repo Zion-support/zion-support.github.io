@@ -19,8 +19,7 @@ function isCorrupted(content) {
     /Declaration or statement expected/,  // Declaration errors
   ];
   
-  return corruptionPatterns.some(pattern => pattern.test(content));
-}
+  return corruptionPatterns.some(pattern => pattern.test(content))}
 
 // Function to create a basic service template
 function createServiceTemplate(filename) {
@@ -102,10 +101,8 @@ export default function ${serviceName.replace(/\s+/g, '')}() {
         </div>
       </section>
     </div>
-  );
-}
-`;
-}
+  )}
+`}
 
 // Function to fix a single file
 function fixFile(filePath) {
@@ -116,14 +113,11 @@ function fixFile(filePath) {
       console.log(`Fixing corrupted file: ${filePath}`);
       const newContent = createServiceTemplate(filePath);
       fs.writeFileSync(filePath, newContent, 'utf8');
-      return true;
-    }
+      return true}
     
-    return false;
-  } catch (error) {
+    return false} catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
+    return false}
 }
 
 // Main function
@@ -132,8 +126,7 @@ function main() {
   
   if (!fs.existsSync(servicesDir)) {
     console.error('Services directory not found');
-    return;
-  }
+    return}
   
   const files = fs.readdirSync(servicesDir)
     .filter(file => file.endsWith('.tsx') || file.endsWith('.jsx'))
@@ -145,15 +138,12 @@ function main() {
   
   files.forEach(file => {
     if (fixFile(file)) {
-      fixedCount++;
-    }
+      fixedCount++}
   });
   
-  console.log(`Fixed ${fixedCount} corrupted files`);
-}
+  console.log(`Fixed ${fixedCount} corrupted files`)}
 
 if (require.main === module) {
-  main();
-}
+  main()}
 
 module.exports = { fixFile, isCorrupted, createServiceTemplate };

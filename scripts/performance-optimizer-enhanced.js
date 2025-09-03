@@ -9,8 +9,7 @@ const path = require('path');
 
 class PerformanceOptimizer {
   constructor() {
-    this.projectRoot = path.resolve(__dirname, '..');
-  }
+    this.projectRoot = path.resolve(__dirname, '..')}
 
   async optimize() {
     console.log('⚡ Starting performance optimization...');
@@ -19,8 +18,7 @@ class PerformanceOptimizer {
     await this.optimizeCode();
     await this.optimizeDependencies();
     
-    console.log('✅ Performance optimization completed!');
-  }
+    console.log('✅ Performance optimization completed!')}
 
   async optimizeImages() {
     console.log('🖼️ Optimizing images...');

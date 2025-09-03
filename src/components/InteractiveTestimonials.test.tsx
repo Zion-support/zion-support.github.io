@@ -11,5 +11,4 @@ export default function InteractiveTestimonials.test() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

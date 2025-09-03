@@ -32,11 +32,9 @@ files.forEach(file => {
       if (content !== fixed) {
         fs.writeFileSync(filePath, fixed);
         console.log(`✅ Fixed ${file}`);
-        fixedCount++;
-      }
+        fixedCount++}
     } catch (error) {
-      console.log(`❌ Error fixing ${file}: ${error.message}`);
-    }
+      console.log(`❌ Error fixing ${file}: ${error.message}`)}
   }
 });
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import {
   Shield,
@@ -6,8 +6,7 @@ import {
   CheckCircle,
   Lock,
   Database,
-  Activity,
-} from 'lucide-react';
+  Activity } from 'lucide-react';
 
 interface SecurityMetrics {
   overallScore: number;
@@ -15,10 +14,8 @@ interface SecurityMetrics {
     critical: number;
     high: number;
     medium: number;
-    low: number;
-  };
-  lastScan: Date;
-}
+    low: number};
+  lastScan: Date}
 
 const SecurityDashboard: React.FC = () => {
   const [security, setSecurity] = useState<SecurityMetrics | null>(null);
@@ -32,36 +29,29 @@ const SecurityDashboard: React.FC = () => {
         critical: Math.floor(Math.random() * 2),
         high: Math.floor(Math.random() * 5),
         medium: Math.floor(Math.random() * 8),
-        low: Math.floor(Math.random() * 15),
-      },
-      lastScan: new Date(),
-    };
+        low: Math.floor(Math.random() * 15) },
+      lastScan: new Date() };
 
     setTimeout(() => {
       setSecurity(mockData);
-      setIsLoading(false);
-    }, 1000);
-  }, []);
+      setIsLoading(false)}, 1000)}, []);
 
   if (isLoading || !security) {
     return (
       <div className="flex items-center justify-center p-8">
         <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>
       </div>
-    );
-  }
+    )}
 
   const getScoreColor = (score: number) => {
     if (score >= 90) return 'text-green-600';
     if (score >= 70) return 'text-yellow-600';
-    return 'text-red-600';
-  };
+    return 'text-red-600'};
 
   const getScoreBgColor = (score: number) => {
     if (score >= 90) return 'bg-green-100';
     if (score >= 70) return 'bg-yellow-100';
-    return 'bg-red-100';
-  };
+    return 'bg-red-100'};
 
   return (
     <div className="bg-white rounded-lg shadow-lg p-6">
@@ -164,7 +154,6 @@ const SecurityDashboard: React.FC = () => {
         </div>
       </motion.div>
     </div>
-  );
-};
+  )};
 
 export default SecurityDashboard;

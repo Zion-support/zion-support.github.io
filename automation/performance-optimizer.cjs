@@ -6,8 +6,7 @@ const { execSync } = require('child_process');
 class PerformanceOptimizer {
   constructor() {
     this.projectRoot = process.cwd();
-    this.optimizations = [];
-  }
+    this.optimizations = []}
 
   async optimizeImages() {
     console.log('🖼️  Optimizing images...');
@@ -15,8 +14,7 @@ class PerformanceOptimizer {
     const publicDir = path.join(this.projectRoot, 'public');
     if (fs.existsSync(publicDir)) {
       // This would integrate with image optimization tools
-      this.optimizations.push('Image optimization completed');
-    }
+      this.optimizations.push('Image optimization completed')}
   }
 
   async optimizeBundle() {
@@ -24,11 +22,9 @@ class PerformanceOptimizer {
     
     try {
       // Run bundle analyzer if available
-      execSync('npm run build', { stdio: 'pipe' });
-      this.optimizations.push('Bundle analysis completed');
-    } catch (error) {
-      console.log('Bundle analysis failed, but continuing...');
-    }
+      execSync('npm run build' { stdio: 'pipe' });
+      this.optimizations.push('Bundle analysis completed')} catch (error) {
+      console.log('Bundle analysis failed, but continuing...')}
   }
 
   async optimizeCode() {
@@ -46,19 +42,16 @@ class PerformanceOptimizer {
         const trimmed = content.trimEnd();
         if (trimmed !== content) {
           content = trimmed + '\n';
-          modified = true;
-        }
+          modified = true}
         
         if (modified) {
-          fs.writeFileSync(file, content);
-        }
+          fs.writeFileSync(file, content)}
       } catch (error) {
         // Skip files that can't be processed
       }
     }
     
-    this.optimizations.push('Code optimization completed');
-  }
+    this.optimizations.push('Code optimization completed')}
 
   findSourceFiles() {
     const files = [];
@@ -68,8 +61,7 @@ class PerformanceOptimizer {
     
     [srcDir, componentsDir, pagesDir].forEach(dir => {
       if (fs.existsSync(dir)) {
-        this.findFilesRecursively(dir, files);
-      }
+        this.findFilesRecursively(dir, files)}
     });
     
     return files.filter(file => 
@@ -77,8 +69,7 @@ class PerformanceOptimizer {
       file.endsWith('.jsx') || 
       file.endsWith('.ts') || 
       file.endsWith('.tsx')
-    );
-  }
+    )}
 
   findFilesRecursively(dir, files) {
     const items = fs.readdirSync(dir);
@@ -88,10 +79,8 @@ class PerformanceOptimizer {
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory()) {
-        this.findFilesRecursively(fullPath, files);
-      } else {
-        files.push(fullPath);
-      }
+        this.findFilesRecursively(fullPath, files)} else {
+        files.push(fullPath)}
     }
   }
 
@@ -104,9 +93,7 @@ class PerformanceOptimizer {
     
     console.log('\n✅ Performance optimizations completed:');
     this.optimizations.forEach((opt, index) => {
-      console.log(`${index + 1}. ${opt}`);
-    });
-  }
+      console.log(`${index + 1}. ${opt}`)})}
 }
 
 const optimizer = new PerformanceOptimizer();

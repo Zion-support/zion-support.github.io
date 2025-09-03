@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:src.pages.disabled/AIAutonomousDevelopment.jsx
-import React from 'react'; export default AIAutonomousDevelopment; const AIAutonomousDevelopment = () => { return (<> <Helmet> <title > AI Autonomous Development Platform | Zion Tech Group</title> <meta name="description" content="Revolutionary AI autonomous development platform that continuously writes code, builds applications, and creates software solutions with advanced AI capabilities and autonomous operation." / / /> <meta name="keywords" content="AI development, autonomous development, code generation, application building, autonomous operations, AI development platform" / / /> <link rel="canonical" href="https:
-import React from 'react'; export default AIAutonomousDevelopment; const AIAutonomousDevelopment = () => { return (<> <Helmet> <title > AI Autonomous Development Platform | Zion Tech Group</title> <meta name="description" content="Revolutionary AI autonomous development platform that continuously writes code, builds applications, and creates software solutions with advanced AI capabilities and autonomous operation." / / / /> <meta name="keywords" content="AI development, autonomous development, code generation, application building, autonomous operations, AI development platform" / / / /> <link rel="canonical" href="https:"""";
-=======
-<<<<<<< HEAD
-ursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/AIAutonomousDevelopment.jsx
-=======
-:src.pages.disabled/AIAutonomousDevelopment.jsx;
-<<<<<<< HEAD
-import: React from 'react' export default AIAutonomousDevelopment const AIAutonomousDevelopment = () => { return (<> <Helmet> <title > AI Autonomous Development Platform | Zion Tech Group</title> <meta name='description' content='Revolutionary AI autonomous development platform that continuously writes code, builds applications, and creates software solutions with advanced AI capabilities and autonomous operation.' / / /> <meta name='keywords' content='AI development, autonomous development, code generation, application building, autonomous operations, AI development platform' / / /> <link rel='canonical' href='https: ;';
-import: React from 'react' export default AIAutonomousDevelopment const AIAutonomousDevelopment = () => { return (<> <Helmet> <title > AI Autonomous Development Platform | Zion Tech Group</title> <meta name='description' content='Revolutionary AI autonomous development platform that continuously writes cod,e, builds applications, and creates software solutions with advanced AI capabilities and autonomous operation.' / / / /> <meta name='keywords' content='AI development, autonomous development, code generation, application building, autonomous operations, AI development platform' / / / /> <link rel='canonical' href='https: '''';',;
-=======
-import React  from 'react';export default AIAutonomousDevelopment const AIAutonomousDevelopment = () => { return (<> <Helmet> <title > AI Autonomous Development Platform | Zion Tech Group</title> <meta name='description' content='Revolutionary AI autonomous development platform that continuously writes code, builds applications, and creates software solutions with advanced AI capabilities and autonomous operation.' / / /> <meta name='keywords' content='AI development, autonomous development, code generation, application building, autonomous operations, AI development platform' / / /> <link rel='canonical' href='https:;
-import React  from 'react';export default AIAutonomousDevelopment const AIAutonomousDevelopment = () => { return (<> <Helmet> <title > AI Autonomous Development Platform | Zion Tech Group</title> <meta name='description' content='Revolutionary AI autonomous development platform that continuously writes code, builds applications, and creates software solutions with advanced AI capabilities and autonomous operation.' / / / /> <meta name='keywords' content='AI development, autonomous development, code generation, application building, autonomous operations, AI development platform' / / / /> <link rel='canonical' href='https:'''';
->>>>>>> main
->>>>>>> main
->>>>>>> main
+
+
+

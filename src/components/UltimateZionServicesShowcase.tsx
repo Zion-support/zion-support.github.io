@@ -11,5 +11,4 @@ export default function UltimateZionServicesShowcase() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

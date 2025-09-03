@@ -36,10 +36,8 @@ export default function ${componentName}() {
         </div>
       </div>
     </div>
-  );
-}
-`;
-}
+  )}
+`}
 
 // List of most critical files to fix
 const criticalFiles = [
@@ -166,10 +164,8 @@ for (const filePath of criticalFiles) {
       const newContent = createValidComponent(fullPath);
       fs.writeFileSync(fullPath, newContent);
       fixedCount++;
-      console.log(`Fixed: ${filePath}`);
-    } catch (error) {
-      console.error(`Error fixing ${filePath}:`, error.message);
-    }
+      console.log(`Fixed: ${filePath}`)} catch (error) {
+      console.error(`Error fixing ${filePath}:`, error.message)}
   }
 }
 

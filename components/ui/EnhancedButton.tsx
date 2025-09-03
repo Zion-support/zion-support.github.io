@@ -6,8 +6,7 @@ interface EnhancedButtonProps {
   onClick?: () => void;
   className?: string;
   disabled?: boolean;
-  type?: 'button' | 'submit' | 'reset';
-}
+  type?: 'button' | 'submit' | 'reset'}
 
 export default function EnhancedButton({ 
   children, 
@@ -25,5 +24,4 @@ export default function EnhancedButton({
     >
       {children}
     </button>
-  );
-}
+  )}

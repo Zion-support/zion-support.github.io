@@ -11,5 +11,4 @@ export default function VirtualScroll.test() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

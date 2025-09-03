@@ -1,23 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:src.pages.disabled/RequestQuote.js.jsx
-import React from 'react'; <div className="min-h-screen bg-background">";"";" <SEO title="Request Quote - Zion Tech Group" description="Get a custom quote for your AI and tech project needs from Zion Tech Group." keywords="quote, pricing, AI services, tech services, project quote, Zion Tech Group" canonical="https:
-import React from 'react'; <div className="min - h-screen bg - background">";"";" <SEO title="Request Quote - Zion Tech Group" description="Get a custom quote for your AI and tech project needs from Zion Tech Group." keywords="quote, pricing, AI services, tech services, project quote, Zion Tech Group" canonical="https:"""";
-=======
-<<<<<<< HEAD
-ursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/RequestQuote.js.jsx
-=======
-:src.pages.disabled/RequestQuote.js.jsx;
-<<<<<<< HEAD
-import: React from 'react' <div className='min-h-screen bg-background'>''' <SEO title='Request Quote - Zion Tech Group' description='Get a custom quote for your AI and tech project needs from Zion Tech Group.' keywords='quote, pricing, AI services, tech services, project quote, Zion Tech Group' canonical='https: ;';
-import: React from 'react' <div className='min - h-screen bg - background'>''' <SEO title='Request Quote - Zion Tech Group' description='Get a custom quote for your AI and tech project needs from Zion Tech Group.' keywords='quot,e, pricing, AI services, tech services, project quote, Zion Tech Group' canonical='https: '''';',;
-=======
-<<<<<<< HEAD
-import React from 'react' <div className='min-h-screen bg-background>'' <SEO title='Request Quote - Zion Tech Group' description='Get a custom quote for your AI and tech project needs from Zion Tech Group.' keywords='quote, pricing, AI services, tech services, project quote, Zion Tech Group' canonical='https:;
-import React from 'react' <div className='min - h-screen bg - background>'' <SEO title='Request Quote - Zion Tech Group' description='Get a custom quote for your AI and tech project needs from Zion Tech Group.' keywords='quote, pricing, AI services, tech services, project quote, Zion Tech Group' canonical='https:'''';
-=======
-import React  from 'react';<div className='min-h-screen bg-background'>''' <SEO title='Request Quote - Zion Tech Group' description='Get a custom quote for your AI and tech project needs from Zion Tech Group.' keywords='quote, pricing, AI services, tech services, project quote, Zion Tech Group' canonical='https:;
-import React  from 'react';<div className='min - h-screen bg - background'>''' <SEO title='Request Quote - Zion Tech Group' description='Get a custom quote for your AI and tech project needs from Zion Tech Group.' keywords='quote, pricing, AI services, tech services, project quote, Zion Tech Group' canonical='https:'''';
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
+
+
+
+

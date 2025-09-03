@@ -11,5 +11,4 @@ export default function EnhancedServicesNavigation.test() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

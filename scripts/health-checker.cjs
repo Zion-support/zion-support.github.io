@@ -12,8 +12,7 @@ class HealthChecker {
     
     // Ensure logs directory exists
     if (!fs.existsSync(this.logDir)) {
-      fs.mkdirSync(this.logDir, { recursive: true });
-    }
+      fs.mkdirSync(this.logDir { recursive: true })}
   }
 
   log(level, message) {
@@ -23,8 +22,7 @@ class HealthChecker {
     
     // Write to log file
     const logFile = path.join(this.logDir, 'health-checker.log');
-    fs.appendFileSync(logFile, logMessage + '\n');
-  }
+    fs.appendFileSync(logFile, logMessage + '\n')}
 
   async checkApplicationHealth() {
     return new Promise((resolve) => {
@@ -38,17 +36,13 @@ class HealthChecker {
           resolve({
             status: 'healthy',
             responseTime,
-            statusCode: res.statusCode,
-          });
-        } else {
+            statusCode: res.statusCode })} else {
           this.log('warn', `Application health check failed with status ${res.statusCode}`);
           resolve({
             status: 'unhealthy',
             responseTime,
             statusCode: res.statusCode,
-            reason: `HTTP ${res.statusCode}`,
-          });
-        }
+            reason: `HTTP ${res.statusCode}` })}
       });
 
       req.on('error', error => {
@@ -56,9 +50,7 @@ class HealthChecker {
         resolve({
           status: 'unhealthy',
           responseTime: Date.now() - startTime,
-          reason: error.message,
-        });
-      });
+          reason: error.message })});
 
       req.setTimeout(this.maxResponseTime, () => {
         req.destroy();
@@ -67,11 +59,7 @@ class HealthChecker {
         resolve({
           status: 'unhealthy',
           responseTime,
-          reason: 'timeout',
-        });
-      });
-    });
-  }
+          reason: 'timeout' })})})}
 
   async checkDiskSpace() {
     try {
@@ -85,13 +73,10 @@ class HealthChecker {
         diskUsage: Math.round(diskUsage),
         freeSpace: Math.round(freeSpace / 1024 / 1024 / 1024), // GB
         totalSpace: Math.round(totalSpace / 1024 / 1024 / 1024), // GB
-      };
-    } catch (error) {
+      }} catch (error) {
       return {
         status: 'error',
-        error: error.message,
-      };
-    }
+        error: error.message }}
   }
 
   async checkMemoryUsage() {
@@ -105,14 +90,10 @@ class HealthChecker {
         heapUsed: Math.round(memUsage.heapUsed / 1024 / 1024), // MB
         heapTotal: Math.round(memUsage.heapTotal / 1024 / 1024), // MB
         external: Math.round(memUsage.external / 1024 / 1024), // MB
-        usagePercent: Math.round(memUsagePercent),
-      };
-    } catch (error) {
+        usagePercent: Math.round(memUsagePercent) }} catch (error) {
       return {
         status: 'error',
-        error: error.message,
-      };
-    }
+        error: error.message }}
   }
 
   async checkFileSystem() {
@@ -120,8 +101,7 @@ class HealthChecker {
       const criticalFiles = [
         'package.json',
         'next.config.cjs',
-        'ecosystem.config.cjs',
-      ];
+        'ecosystem.config.cjs' ];
       
       const missingFiles = [];
       const fileStats = {};
@@ -133,25 +113,18 @@ class HealthChecker {
           fileStats[file] = {
             exists: true,
             size: stats.size,
-            modified: stats.mtime,
-          };
-        } else {
+            modified: stats.mtime }} else {
           missingFiles.push(file);
-          fileStats[file] = { exists: false };
-        }
+          fileStats[file] = { exists: false }}
       }
       
       return {
         status: missingFiles.length === 0 ? 'healthy' : 'warning',
         missingFiles,
-        fileStats,
-      };
-    } catch (error) {
+        fileStats }} catch (error) {
       return {
         status: 'error',
-        error: error.message,
-      };
-    }
+        error: error.message }}
   }
 
   async runHealthCheck() {
@@ -162,24 +135,19 @@ class HealthChecker {
       application: await this.checkApplicationHealth(),
       diskSpace: await this.checkDiskSpace(),
       memoryUsage: await this.checkMemoryUsage(),
-      fileSystem: await this.checkFileSystem(),
-    };
+      fileSystem: await this.checkFileSystem() };
     
     // Determine overall health status
     const statuses = [
       results.application.status,
       results.diskSpace.status,
       results.memoryUsage.status,
-      results.fileSystem.status,
-    ];
+      results.fileSystem.status ];
     
     if (statuses.includes('unhealthy') || statuses.includes('error')) {
-      results.overallStatus = 'unhealthy';
-    } else if (statuses.includes('warning')) {
-      results.overallStatus = 'warning';
-    } else {
-      results.overallStatus = 'healthy';
-    }
+      results.overallStatus = 'unhealthy'} else if (statuses.includes('warning')) {
+      results.overallStatus = 'warning'} else {
+      results.overallStatus = 'healthy'}
     
     this.log('info', `Health check completed. Overall status: ${results.overallStatus}`);
     
@@ -187,8 +155,7 @@ class HealthChecker {
     const resultsFile = path.join(this.logDir, 'health-check-results.json');
     fs.writeFileSync(resultsFile, JSON.stringify(results, null, 2));
     
-    return results;
-  }
+    return results}
 }
 
 // Run health check if this script is executed directly
@@ -198,12 +165,9 @@ if (require.main === module) {
     .then(results => {
       console.log('\n=== Health Check Results ===');
       console.log(JSON.stringify(results, null, 2));
-      process.exit(results.overallStatus === 'healthy' ? 0 : 1);
-    })
+      process.exit(results.overallStatus === 'healthy' ? 0 : 1)})
     .catch(error => {
       console.error('Health check failed:', error);
-      process.exit(1);
-    });
-}
+      process.exit(1)})}
 
 module.exports = HealthChecker;

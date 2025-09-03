@@ -7,43 +7,34 @@ async function readSitemapUrls() {
   const sitemapPath = path.join(__dirname, '..', 'public', 'sitemap.xml');
   let xml = '';
   try {
-    xml = fs.readFileSync(sitemapPath, 'utf8');
-  } catch (e) {
-    return [];
-  }
+    xml = fs.readFileSync(sitemapPath, 'utf8')} catch (e) {
+    return []}
   const urlRegex = /<loc>(.*?)<\/loc>/g;
   const urls = [];
   let match;
   while ((match = urlRegex.exec(xml)) !== null) {
-    urls.push(match[1]);
-  }
-  return urls;
-}
+    urls.push(match[1])}
+  return urls}
 
 async function fetchUrl(url) {
   const start = Date.now();
   try {
-    const res = await axios.get(url, {
+    const res = await axios.get(url {
       timeout: 15000,
       httpsAgent: new https.Agent({ rejectUnauthorized: false }),
       headers: { 'User-Agent': 'ZionCacheWarmer/1.0 (+https://zion.app)' },
-      validateStatus: () => true,
-    });
+      validateStatus: () => true });
     return {
       url,
       status: res.status,
       durationMs: Date.now() - start,
-      ok: res.status >= 200 && res.status < 400,
-    };
-  } catch (e) {
+      ok: res.status >= 200 && res.status < 400 }} catch (e) {
     return {
       url,
       status: 0,
       durationMs: Date.now() - start,
       ok: false,
-      error: String(e.message || e),
-    };
-  }
+      error: String(e.message || e) }}
 }
 
 async function warmCache() {
@@ -54,8 +45,7 @@ async function warmCache() {
     'https://zion.app/',
     'https://zion.app/automation',
     'https://zion.app/main/front',
-    'https://zion.app/newsroom',
-  ];
+    'https://zion.app/newsroom' ];
 
   const unique = Array.from(new Set([...preferred, ...urls])).slice(0, 40);
   const results = [];
@@ -66,20 +56,11 @@ async function warmCache() {
     const batch = unique.slice(index, index + concurrency);
     index += concurrency;
     const out = await Promise.all(batch.map(fetchUrl));
-    results.push(...out);
-  }
+    results.push(...out)}
   while (index < unique.length) {
-<<<<<<< HEAD
-     
-=======
-<<<<<<< HEAD
-    // eslint-disable-next-line no-await-in-loop;
-=======
-     
->>>>>>> main
->>>>>>> main
-    await runBatch();
-  }
+
+
+    await runBatch()}
 
   const summary = {
     generatedAt: new Date().toISOString(),
@@ -94,30 +75,25 @@ async function warmCache() {
       results.map(r => r.durationMs),
       95;
     ),
-    results,
-  };
+    results };
 
   const reportsDir = path.join(__dirname, '..', 'public', 'reports');
-  if (!fs.existsSync(reportsDir)) fs.mkdirSync(reportsDir, { recursive: true });
+  if (!fs.existsSync(reportsDir)) fs.mkdirSync(reportsDir { recursive: true });
   fs.writeFileSync(
     path.join(reportsDir, 'cache-warm-log.json'),
     JSON.stringify(summary, null, 2)
   );
 
-  return { ok: true, summary };
-}
+  return { ok: true, summary }}
 
 function percentile(values, p) {
   if (!values.length) return 0;
   const sorted = [...values].sort((a, b) => a - b);
   const idx = Math.floor((p / 100) * (sorted.length - 1));
-  return sorted[idx];
-}
+  return sorted[idx]}
 
 if (require.main === module) {
   warmCache().then(res => {
-    console.log(JSON.stringify(res, null, 2));
-  });
-}
+    console.log(JSON.stringify(res, null, 2))})}
 
 module.exports = { warmCache };

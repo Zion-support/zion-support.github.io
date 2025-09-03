@@ -73,8 +73,7 @@ const PricingGuide: React.FC = () => {
         "Integration with existing CRM", "Monthly maintenance included"
       ], price: "$3,500 - $5, 500",
       timeline: "4-6 weeks", roi: "300% ROI within 6 months"
-    },
-    {
+    }, {
       scenario: "Enterprise AI Platform", description: "Comprehensive AI platform for large manufacturing company",
       features: [
         "Custom machine learning models", "Predictive maintenance system",
@@ -82,8 +81,7 @@ const PricingGuide: React.FC = () => {
         "24/7 support and monitoring"
       ], price: "$25,000 - $75, 000",
       timeline: "12-16 weeks", roi: "500% ROI within 12 months"
-    },
-    {
+    }, {
       scenario: "Healthcare AI Solution", description: "AI-powered diagnostic tool for medical practice",
       features: [
         "Medical image analysis", "Patient data integration",
@@ -101,8 +99,7 @@ const PricingGuide: React.FC = () => {
     }, {
       tip: "Use Existing Frameworks",
       description: "Leverage our pre-built AI frameworks and templates", savings: "Reduce development time by 50%"
-    },
-    {
+    }, {
       tip: "Phased Implementation", description: "Implement solution in phases to spread costs over time",
       savings: "Improve cash flow and reduce risk"
     }, {
@@ -321,7 +318,6 @@ const PricingGuide: React.FC = () => {
       </section>
       </div>
     </>
-  );
-};
+  )};
 
 export default PricingGuide;

@@ -11,5 +11,4 @@ export default function LanguageDetectionPopup() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

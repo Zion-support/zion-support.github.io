@@ -14,14 +14,12 @@ class SmartPerformanceOptimizer {
     this.logFile = path.join(this.projectRoot, 'logs/smart-performance-optimizer.log');
     this.reportFile = path.join(this.projectRoot, 'logs/smart-performance-optimizer-report.json');
     this.optimizationHistory = this.loadOptimizationHistory();
-    this.ensureDirectories();
-  }
+    this.ensureDirectories()}
 
   ensureDirectories() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true });
-    }
+      fs.mkdirSync(logDir { recursive: true })}
   }
 
   log(message, level = 'info') {
@@ -30,23 +28,18 @@ class SmartPerformanceOptimizer {
     console.log(logMessage);
     
     try {
-      fs.appendFileSync(this.logFile, logMessage + '\n');
-    } catch (error) {
-      console.error('Failed to write to log file:', error.message);
-    }
+      fs.appendFileSync(this.logFile, logMessage + '\n')} catch (error) {
+      console.error('Failed to write to log file:', error.message)}
   }
 
   loadOptimizationHistory() {
     try {
       if (fs.existsSync(this.reportFile)) {
         const data = fs.readFileSync(this.reportFile, 'utf8');
-        return JSON.parse(data).optimizationHistory || [];
-      }
+        return JSON.parse(data).optimizationHistory || []}
     } catch (error) {
-      this.log(`Failed to load optimization history: ${error.message}`, 'warn');
-    }
-    return [];
-  }
+      this.log(`Failed to load optimization history: ${error.message}`, 'warn')}
+    return []}
 
   saveOptimizationHistory() {
     try {
@@ -56,10 +49,8 @@ class SmartPerformanceOptimizer {
         totalOptimizations: this.optimizationHistory.length,
         lastRun: Date.now()
       };
-      fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-    } catch (error) {
-      this.log(`Failed to save optimization history: ${error.message}`, 'error');
-    }
+      fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2))} catch (error) {
+      this.log(`Failed to save optimization history: ${error.message}`, 'error')}
   }
 
   async analyzePerformance() {
@@ -80,8 +71,7 @@ class SmartPerformanceOptimizer {
     this.log(`  - File Count: ${metrics.fileCount}`);
     this.log(`  - Dependencies: ${metrics.dependencies.count}`);
 
-    return metrics;
-  }
+    return metrics}
 
   async measureBuildTime() {
     try {
@@ -89,28 +79,24 @@ class SmartPerformanceOptimizer {
       
       // Clean build directory first
       if (fs.existsSync('.next')) {
-        execSync('rm -rf .next', { cwd: this.projectRoot, stdio: 'pipe' });
-      }
+        execSync('rm -rf .next' { cwd: this.projectRoot, stdio: 'pipe' })}
       
       // Run build
-      execSync('npm run build', { 
+      execSync('npm run build' { 
         cwd: this.projectRoot, 
         stdio: 'pipe',
         timeout: 300000 
       });
       
-      return Date.now() - startTime;
-    } catch (error) {
+      return Date.now() - startTime} catch (error) {
       this.log(`Build time measurement failed: ${error.message}`, 'error');
-      return -1;
-    }
+      return -1}
   }
 
   async analyzeBundleSize() {
     try {
       if (!fs.existsSync('.next')) {
-        return 0;
-      }
+        return 0}
 
       const calculateSize = (dir) => {
         let totalSize = 0;
@@ -121,21 +107,17 @@ class SmartPerformanceOptimizer {
           const stat = fs.statSync(fullPath);
           
           if (stat.isDirectory()) {
-            totalSize += calculateSize(fullPath);
-          } else {
-            totalSize += stat.size;
-          }
+            totalSize += calculateSize(fullPath)} else {
+            totalSize += stat.size}
         }
         
-        return totalSize;
-      };
+        return totalSize};
 
       const sizeInBytes = calculateSize('.next');
       return (sizeInBytes / (1024 * 1024)).toFixed(2); // Convert to MB
     } catch (error) {
       this.log(`Bundle size analysis failed: ${error.message}`, 'error');
-      return 0;
-    }
+      return 0}
   }
 
   async analyzeMemoryUsage() {
@@ -144,8 +126,7 @@ class SmartPerformanceOptimizer {
       return (usage.heapUsed / (1024 * 1024)).toFixed(2); // Convert to MB
     } catch (error) {
       this.log(`Memory usage analysis failed: ${error.message}`, 'error');
-      return 0;
-    }
+      return 0}
   }
 
   async countFiles() {
@@ -159,20 +140,15 @@ class SmartPerformanceOptimizer {
           const stat = fs.statSync(fullPath);
           
           if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-            count += countFiles(fullPath);
-          } else if (stat.isFile()) {
-            count++;
-          }
+            count += countFiles(fullPath)} else if (stat.isFile()) {
+            count++}
         }
         
-        return count;
-      };
+        return count};
 
-      return countFiles(this.projectRoot);
-    } catch (error) {
+      return countFiles(this.projectRoot)} catch (error) {
       this.log(`File count analysis failed: ${error.message}`, 'error');
-      return 0;
-    }
+      return 0}
   }
 
   async analyzeDependencies() {
@@ -183,11 +159,9 @@ class SmartPerformanceOptimizer {
                Object.keys(packageJson.devDependencies || {}).length,
         dependencies: packageJson.dependencies || {},
         devDependencies: packageJson.devDependencies || {}
-      };
-    } catch (error) {
+      }} catch (error) {
       this.log(`Dependency analysis failed: ${error.message}`, 'error');
-      return { count: 0, dependencies: {}, devDependencies: {} };
-    }
+      return { count: 0, dependencies: {}, devDependencies: {} }}
   }
 
   async optimizeBundle() {
@@ -199,8 +173,7 @@ class SmartPerformanceOptimizer {
       let nextConfig = '';
       
       if (fs.existsSync(nextConfigPath)) {
-        nextConfig = fs.readFileSync(nextConfigPath, 'utf8');
-      }
+        nextConfig = fs.readFileSync(nextConfigPath, 'utf8')}
 
       // Add bundle analyzer if not present
       if (!nextConfig.includes('@next/bundle-analyzer')) {
@@ -208,40 +181,32 @@ class SmartPerformanceOptimizer {
         
         const bundleAnalyzerConfig = `
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true',
-});
+  enabled: process.env.ANALYZE === 'true' });
 
 module.exports = withBundleAnalyzer({
   // Your existing config here
   experimental: {
     optimizeCss: true,
-    optimizePackageImports: ['lucide-react', 'framer-motion'],
-  },
+    optimizePackageImports: ['lucide-react', 'framer-motion'] },
   compiler: {
-    removeConsole: process.env.NODE_ENV === 'production',
-  },
+    removeConsole: process.env.NODE_ENV === 'production' },
   images: {
-    formats: ['image/webp', 'image/avif'],
-  },
-});
+    formats: ['image/webp', 'image/avif'] } });
 `;
 
-        fs.writeFileSync(nextConfigPath, bundleAnalyzerConfig);
-      }
+        fs.writeFileSync(nextConfigPath, bundleAnalyzerConfig)}
 
       // Run build with analysis
-      execSync('ANALYZE=true npm run build', { 
+      execSync('ANALYZE=true npm run build' { 
         cwd: this.projectRoot, 
         stdio: 'pipe',
         timeout: 300000 
       });
 
       this.log('✅ Bundle optimization completed');
-      return true;
-    } catch (error) {
+      return true} catch (error) {
       this.log(`❌ Bundle optimization failed: ${error.message}`, 'error');
-      return false;
-    }
+      return false}
   }
 
   async optimizeDependencies() {
@@ -249,31 +214,29 @@ module.exports = withBundleAnalyzer({
     
     try {
       // Check for unused dependencies
-      execSync('npx depcheck', { 
+      execSync('npx depcheck' { 
         cwd: this.projectRoot, 
         stdio: 'pipe',
         timeout: 60000 
       });
 
       // Update dependencies to latest compatible versions
-      execSync('npm update', { 
+      execSync('npm update' { 
         cwd: this.projectRoot, 
         stdio: 'pipe',
         timeout: 120000 
       });
 
       // Clean npm cache
-      execSync('npm cache clean --force', { 
+      execSync('npm cache clean --force' { 
         cwd: this.projectRoot, 
         stdio: 'pipe' 
       });
 
       this.log('✅ Dependency optimization completed');
-      return true;
-    } catch (error) {
+      return true} catch (error) {
       this.log(`❌ Dependency optimization failed: ${error.message}`, 'error');
-      return false;
-    }
+      return false}
   }
 
   async optimizeImages() {
@@ -288,10 +251,8 @@ module.exports = withBundleAnalyzer({
           try {
             // Use imagemin or similar tool for optimization
             // For now, just log the file
-            this.log(`Optimizing image: ${filePath}`);
-          } catch (error) {
-            this.log(`Failed to optimize ${filePath}: ${error.message}`, 'warn');
-          }
+            this.log(`Optimizing image: ${filePath}`)} catch (error) {
+            this.log(`Failed to optimize ${filePath}: ${error.message}`, 'warn')}
         };
 
         const processDirectory = (dir) => {
@@ -302,22 +263,17 @@ module.exports = withBundleAnalyzer({
             const stat = fs.statSync(fullPath);
             
             if (stat.isDirectory()) {
-              processDirectory(fullPath);
-            } else if (stat.isFile() && /\.(jpg|jpeg|png|gif|webp)$/i.test(item)) {
-              optimizeImage(fullPath);
-            }
+              processDirectory(fullPath)} else if (stat.isFile() && /\.(jpg|jpeg|png|gif|webp)$/i.test(item)) {
+              optimizeImage(fullPath)}
           }
         };
 
-        processDirectory(publicDir);
-      }
+        processDirectory(publicDir)}
 
       this.log('✅ Image optimization completed');
-      return true;
-    } catch (error) {
+      return true} catch (error) {
       this.log(`❌ Image optimization failed: ${error.message}`, 'error');
-      return false;
-    }
+      return false}
   }
 
   async optimizeCode() {
@@ -325,14 +281,14 @@ module.exports = withBundleAnalyzer({
     
     try {
       // Run linting and auto-fix
-      execSync('npm run lint:fix', { 
+      execSync('npm run lint:fix' { 
         cwd: this.projectRoot, 
         stdio: 'pipe',
         timeout: 60000 
       });
 
       // Format code
-      execSync('npm run format', { 
+      execSync('npm run format' { 
         cwd: this.projectRoot, 
         stdio: 'pipe',
         timeout: 60000 
@@ -340,19 +296,16 @@ module.exports = withBundleAnalyzer({
 
       // Remove console.logs in production
       if (process.env.NODE_ENV === 'production') {
-        execSync('npx babel src --out-dir src-optimized --plugins=babel-plugin-transform-remove-console', { 
+        execSync('npx babel src --out-dir src-optimized --plugins=babel-plugin-transform-remove-console' { 
           cwd: this.projectRoot, 
           stdio: 'pipe',
           timeout: 60000 
-        });
-      }
+        })}
 
       this.log('✅ Code optimization completed');
-      return true;
-    } catch (error) {
+      return true} catch (error) {
       this.log(`❌ Code optimization failed: ${error.message}`, 'error');
-      return false;
-    }
+      return false}
   }
 
   async optimizeBuild() {
@@ -360,41 +313,35 @@ module.exports = withBundleAnalyzer({
     
     try {
       // Clean build directories
-      execSync('rm -rf .next dist', { 
+      execSync('rm -rf .next dist' { 
         cwd: this.projectRoot, 
         stdio: 'pipe' 
       });
 
       // Clear caches
-      execSync('npm cache clean --force', { 
+      execSync('npm cache clean --force' { 
         cwd: this.projectRoot, 
         stdio: 'pipe' 
       });
 
       // Run optimized build
-      execSync('npm run build', { 
+      execSync('npm run build' { 
         cwd: this.projectRoot, 
         stdio: 'pipe',
         timeout: 300000 
       });
 
       this.log('✅ Build optimization completed');
-      return true;
-    } catch (error) {
+      return true} catch (error) {
       this.log(`❌ Build optimization failed: ${error.message}`, 'error');
-      return false;
-    }
+      return false}
   }
 
   async runOptimizations() {
     this.log('🚀 Running intelligent performance optimizations...');
     
     const optimizations = [
-      { name: 'Bundle Optimization', fn: () => this.optimizeBundle() },
-      { name: 'Dependency Optimization', fn: () => this.optimizeDependencies() },
-      { name: 'Image Optimization', fn: () => this.optimizeImages() },
-      { name: 'Code Optimization', fn: () => this.optimizeCode() },
-      { name: 'Build Optimization', fn: () => this.optimizeBuild() }
+      { name: 'Bundle Optimization', fn: () => this.optimizeBundle() }, { name: 'Dependency Optimization', fn: () => this.optimizeDependencies() }, { name: 'Image Optimization', fn: () => this.optimizeImages() }, { name: 'Code Optimization', fn: () => this.optimizeCode() }, { name: 'Build Optimization', fn: () => this.optimizeBuild() }
     ];
 
     const results = [];
@@ -406,18 +353,14 @@ module.exports = withBundleAnalyzer({
         results.push({ name: optimization.name, success });
         
         if (success) {
-          this.log(`✅ ${optimization.name} completed successfully`);
-        } else {
-          this.log(`❌ ${optimization.name} failed`);
-        }
+          this.log(`✅ ${optimization.name} completed successfully`)} else {
+          this.log(`❌ ${optimization.name} failed`)}
       } catch (error) {
         this.log(`❌ ${optimization.name} failed: ${error.message}`, 'error');
-        results.push({ name: optimization.name, success: false, error: error.message });
-      }
+        results.push({ name: optimization.name, success: false, error: error.message })}
     }
 
-    return results;
-  }
+    return results}
 
   async generatePerformanceReport() {
     this.log('📊 Generating performance report...');
@@ -446,30 +389,24 @@ module.exports = withBundleAnalyzer({
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     
     this.log(`📊 Performance report saved to ${reportFile}`);
-    return report;
-  }
+    return report}
 
   generatePerformanceRecommendations(before, after) {
     const recommendations = [];
     
     if (before.buildTime > 30000) { // More than 30 seconds
-      recommendations.push('Consider implementing incremental builds');
-    }
+      recommendations.push('Consider implementing incremental builds')}
     
     if (before.bundleSize > 5) { // More than 5MB
-      recommendations.push('Implement code splitting and lazy loading');
-    }
+      recommendations.push('Implement code splitting and lazy loading')}
     
     if (before.memoryUsage > 500) { // More than 500MB
-      recommendations.push('Optimize memory usage and implement garbage collection');
-    }
+      recommendations.push('Optimize memory usage and implement garbage collection')}
     
     if (before.fileCount > 1000) {
-      recommendations.push('Consider reducing file count through better organization');
-    }
+      recommendations.push('Consider reducing file count through better organization')}
 
-    return recommendations;
-  }
+    return recommendations}
 
   async run() {
     this.log('🚀 Starting Smart Performance Optimizer...');
@@ -491,12 +428,9 @@ module.exports = withBundleAnalyzer({
       this.log(`   - Build Time Improvement: ${report.improvements.buildTimeImprovement}%`);
       this.log(`   - Bundle Size Improvement: ${report.improvements.bundleSizeImprovement}%`);
       this.log(`   - Memory Improvement: ${report.improvements.memoryImprovement}%`);
-      this.log(`   - Optimizations Applied: ${report.optimizationResults.filter(r => r.success).length}/${report.optimizationResults.length}`);
-
-    } catch (error) {
+      this.log(`   - Optimizations Applied: ${report.optimizationResults.filter(r => r.success).length}/${report.optimizationResults.length}`)} catch (error) {
       this.log(`❌ Performance Optimizer failed: ${error.message}`, 'error');
-      throw error;
-    }
+      throw error}
   }
 }
 
@@ -505,8 +439,6 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   const optimizer = new SmartPerformanceOptimizer();
   optimizer.run().catch(error => {
     console.error('Fatal error:', error);
-    process.exit(1);
-  });
-}
+    process.exit(1)})}
 
 export default $1;

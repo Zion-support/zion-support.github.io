@@ -11,5 +11,4 @@ export default function EnhancedFuturisticFooter.test() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

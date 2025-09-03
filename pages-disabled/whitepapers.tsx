@@ -22,13 +22,12 @@ const Whitepapers: NextPage = () => {
   '12.5k',
       rating: 4.8,
       featured: true,
-      topics: [,
+      topics: [
   Machine Learning',
   'Business Strategy',
   'Digital Transformation',
   'ROI Analysis']
-    },
-    {
+    }, {
       id: 'cloud-migration-strategies,
       title:,
   Cloud Migration Strategies for Enterprise Success',
@@ -43,13 +42,12 @@ const Whitepapers: NextPage = () => {
   '8.2k',
       rating: 4.7,
       featured: true,
-      topics: [,
+      topics: [
   Cloud Architecture',
   'Migration Planning',
   'Cost Optimization',
   'Security']
-    },
-    {
+    }, {
       id: 'cybersecurity-framework,
       title:,
   Modern Cybersecurity Framework for Digital Businesses',
@@ -64,13 +62,12 @@ const Whitepapers: NextPage = () => {
   '6.8k',
       rating: 4.9,
       featured: false,
-      topics: [,
+      topics: [
   Threat Detection',
   'Risk Management',
   'Compliance',
   'Incident Response']
-    },
-    {
+    }, {
       id: 'microservices-architecture,
       title:,
   Microservices Architecture: Design Patterns and Best Practices,
@@ -85,13 +82,12 @@ const Whitepapers: NextPage = () => {
   '5.4k',
       rating: 4.6,
       featured: false,
-      topics: [,
+      topics: [
   Service Design',
   'API Management',
   'Scalability',
   'DevOps']
-    },
-    {
+    }, {
       id: 'data-analytics-insights,
       title:,
   Data Analytics for Business Intelligence: From Insights to Action,
@@ -106,13 +102,12 @@ const Whitepapers: NextPage = () => {
   '4.9k',
       rating: 4.7,
       featured: false,
-      topics: [,
+      topics: [
   Business Intelligence',
   'Data Visualization',
   'Predictive Analytics',
   'KPIs']
-    },
-    {
+    }, {
       id: 'mobile-app-development,
       title:,
   Mobile App Development: Native vs Cross-Platform Strategies,
@@ -280,8 +275,7 @@ const Whitepapers: NextPage = () => {
                         <span key={index} className="bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs">
                           {topic}
                         </span>
-                      ))}
-                      {paper.topics.length > 3 && (
+                      ))}, {paper.topics.length > 3 && (
                         <span className="text-gray-500 text-xs">+{paper.topics.length - 3} more</span>
                       )}
                     </div>
@@ -345,7 +339,6 @@ const Whitepapers: NextPage = () => {
         </div>
       </section>
     </MainLayout>
-  );
-};
+  )};
 
 export default Whitepapers;

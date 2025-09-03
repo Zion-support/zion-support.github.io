@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import {
@@ -9,8 +9,7 @@ import {
   Mail,
   ChevronDown,
   User,
-  ShoppingCart,
-} from 'lucide-react';
+  ShoppingCart } from 'lucide-react';
 
 export default function EnhancedHeader() {
   const router = useRouter();
@@ -21,54 +20,29 @@ export default function EnhancedHeader() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
+      setScrolled(window.scrollY > 50)};
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    return () => window.removeEventListener('scroll', handleScroll)}, []);
 
   const handleSearch = async (e: React.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
-      router.push(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
-    }
+      router.push(`/search?q=${encodeURIComponent(searchQuery.trim())}`)}
   };
 
   const toggleDropdown = (itemName: string) => {
-    setActiveDropdown(activeDropdown === itemName ? null : itemName);
-  };
+    setActiveDropdown(activeDropdown === itemName ? null : itemName)};
 
   const navigation = [
-  { name: 'Home', href: '/' },
-    {
+  { name: 'Home', href: '/' }, {
       name: 'Services',
       href: '/services',
       dropdown: [
-        { name: 'AI Services', href: '/services/ai-services' },
-        { name: 'IT Services', href: '/services/it-services' },
-        { name: 'Micro SaaS', href: '/services/micro-saas' },
-        { name: 'Web Development', href: '/services/web-development' },
-        { name: 'Cloud Services', href: '/services/cloud-services' },
-        { name: 'AI Development', href: '/services/ai-development' },
-      ],
-    },
-    {
+        { name: 'AI Services', href: '/services/ai-services' }, { name: 'IT Services', href: '/services/it-services' }, { name: 'Micro SaaS', href: '/services/micro-saas' }, { name: 'Web Development', href: '/services/web-development' }, { name: 'Cloud Services', href: '/services/cloud-services' }, { name: 'AI Development', href: '/services/ai-development' } ] }, {
       name: 'Solutions',
       href: '/solutions',
       dropdown: [
-        { name: 'AI Content Creation', href: '/solutions/ai-content-creation' },
-        { name: 'Customer Support', href: '/solutions/customer-support' },
-        { name: 'Email Automation', href: '/solutions/email-automation' },
-        { name: 'Event Management', href: '/solutions/event-management' },
-        { name: 'Project Management', href: '/solutions/project-management' },
-        { name: 'Workflow Automation', href: '/solutions/workflow-automation' },
-      ],
-    },
-    { name: 'About', href: '/about' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Contact', href: '/contact' },
-  ];
+        { name: 'AI Content Creation', href: '/solutions/ai-content-creation' }, { name: 'Customer Support', href: '/solutions/customer-support' }, { name: 'Email Automation', href: '/solutions/email-automation' }, { name: 'Event Management', href: '/solutions/event-management' }, { name: 'Project Management', href: '/solutions/project-management' }, { name: 'Workflow Automation', href: '/solutions/workflow-automation' } ] }, { name: 'About', href: '/about' }, { name: 'Blog', href: '/blog' }, { name: 'Careers', href: '/careers' }, { name: 'Contact', href: '/contact' } ];
 
   return (
     <header
@@ -187,8 +161,7 @@ export default function EnhancedHeader() {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
-        {mobileMenuOpen && (
+        {/* Mobile Navigation */}, {mobileMenuOpen && (
           <div className="lg:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t">
               {navigation.map(item => (
@@ -216,8 +189,7 @@ export default function EnhancedHeader() {
                               className="block px-3 py-2 text-sm text-gray-600 hover: text-blue-600 hover:bg-gray-50 rounded-md"
                               onClick={() => {
                                 setMobileMenuOpen(false);
-                                setActiveDropdown(null);
-                              }}
+                                setActiveDropdown(null)}}
                             >
                               {dropdownItem.name}
                             </Link>
@@ -239,9 +211,7 @@ export default function EnhancedHeader() {
                     </Link>
                   )}
                 </div>
-              ))}
-
-              {/* Mobile Search */}
+              ))}, {/* Mobile Search */}
               <div className="px-3 py-2">
                 <form onSubmit={handleSearch} className="relative">
                   <input
@@ -277,5 +247,4 @@ export default function EnhancedHeader() {
         )}
       </div>
     </header>
-  );
-}
+  )}

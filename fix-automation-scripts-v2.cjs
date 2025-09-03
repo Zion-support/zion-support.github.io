@@ -8,35 +8,33 @@ class AutomationScriptFixerV2 {
     this.projectRoot = process.cwd();
     this.scriptsDir = path.join(this.projectRoot, 'scripts');
     this.fixedCount = 0;
-    this.errorCount = 0;
-  }
+    this.errorCount = 0}
 
   log(message) {
     const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] ${message}`);
-  }
+    console.log(`[${timestamp}] ${message}`)}
 
   fixImportStatements(content) {
     // Fix malformed import statements
     let fixed = content;
 
     // Fix double semicolons in imports
-    fixed = fixed.replace(/import\s+([^;]+);;+/g, 'import $1;');
+    fixed = fixed.replace(/import\s+([^]+);;+/g, 'import $1;
+);
 
     // Fix malformed import statements with extra quotes and semicolons
-    fixed = fixed.replace(/import\s+([^;]+);';import\s+/g, 'import $1;\nimport ');
+    fixed = fixed.replace(/import\s+([^]+);;import\s+/g, 'import $1;\nimport ');
 
     // Fix import statements with extra quotes
-    fixed = fixed.replace(/import\s+([^;]+);";\s*'([^']+)';';import\s+/g, 'import $1;\nimport ');
+    fixed = fixed.replace(/import\s+([^]+);";\s*'([^']+)';';import\s+/g, 'import $1;\nimport ');
 
     // Fix import statements with extra text
-    fixed = fixed.replace(/import\s+([^;]+);";\s*'([^']+)';';import\s+([^;]+);";\s*'([^']+)';';import\s+/g, 'import $1;\nimport $3;\nimport ');
+    fixed = fixed.replace(/import\s+([^]+);";\s*'([^']+)';';import\s+([^]+);";\s*'([^']+)';';import\s+/g, 'import $1;\nimport $3;\nimport ');
 
     // Clean up any remaining malformed imports
-    fixed = fixed.replace(/import\s+([^;]+);";\s*'([^']+)';';/g, 'import $1;');
+    fixed = fixed.replace(/import\s+([^]+);";\s*'([^']+)';';/g, 'import $1;');
 
-    return fixed;
-  }
+    return fixed}
 
   fixObjectLiterals(content) {
     let fixed = content;
@@ -48,10 +46,9 @@ class AutomationScriptFixerV2 {
     fixed = fixed.replace(/,(\s*[}\]])/g, '$1');
 
     // Fix missing commas in arrays and objects
-    fixed = fixed.replace(/([^,}\]])\s*\n\s*([}\]])/g, '$1,\n$2');
+    fixed = fixed.replace(/([^}\]])\s*\n\s*([}\]])/g, '$1,\n$2');
 
-    return fixed;
-  }
+    return fixed}
 
   fixStringLiterals(content) {
     let fixed = content;
@@ -60,33 +57,26 @@ class AutomationScriptFixerV2 {
     fixed = fixed.replace(/(['"])([^'"]*?)(\n|$)/g, (match, quote, text, newline) => {
       // Only fix if it's a short string and doesn't contain special characters
       if (text.length < 50 && !text.includes('${') && !text.includes('\\')) {
-        return quote + text + quote + (newline === '\n' ? ';' : '');
-      }
-      return match;
-    });
+        return quote + text + quote + (newline === '\n' ? ';' : '')}
+      return match});
 
-    return fixed;
-  }
+    return fixed}
 
   fixSpecificIssues(filePath, content) {
     let fixed = content;
 
     // Fix specific known issues
     if (filePath.includes('comprehensive-website-analyzer.cjs')) {
-      fixed = fixed.replace(/User-Agent':/g, '"User-Agent":');
-    }
+      fixed = fixed.replace(/User-Agent':/g, '"User-Agent":')}
 
     if (filePath.includes('link-checker.js')) {
-      fixed = fixed.replace(/__dirname,\.\./g, '__dirname, ".."');
-    }
+      fixed = fixed.replace(/__dirname,\.\./g, '__dirname, "..")}
 
     if (filePath.includes('comprehensive-test-automation.js')) {
       fixed = fixed.replace(/;\s*\]\}/g, ']');
-      fixed = fixed.replace(/\]\}\s*fs\.writeFileSync/g, '];\n    fs.writeFileSync');
-    }
+      fixed = fixed.replace(/\]\}\s*fs\.writeFileSync/g, '];\n    fs.writeFileSync')}
 
-    return fixed;
-  }
+    return fixed}
 
   async fixFile(filePath) {
     try {
@@ -103,14 +93,11 @@ class AutomationScriptFixerV2 {
         fs.writeFileSync(filePath, fixed);
         this.log(`✅ Fixed syntax errors in ${path.basename(filePath)}`);
         this.fixedCount++;
-        return true;
-      }
-      return false;
-    } catch (error) {
+        return true}
+      return false} catch (error) {
       this.log(`❌ Error fixing ${path.basename(filePath)}: ${error.message}`);
       this.errorCount++;
-      return false;
-    }
+      return false}
   }
 
   async fixAllScripts() {
@@ -125,14 +112,12 @@ class AutomationScriptFixerV2 {
 
     for (const file of scriptFiles) {
       const filePath = path.join(this.scriptsDir, file);
-      await this.fixFile(filePath);
-    }
+      await this.fixFile(filePath)}
 
     this.log(`\n📊 Fixing Summary:`);
     this.log(`✅ Fixed: ${this.fixedCount} files`);
     this.log(`❌ Errors: ${this.errorCount} files`);
-    this.log(`🎉 V2 automation script fixing completed!`);
-  }
+    this.log(`🎉 V2 automation script fixing completed!`)}
 }
 
 // Run the fixer

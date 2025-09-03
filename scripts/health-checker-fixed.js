@@ -17,13 +17,11 @@ class HealthChecker {
     this.maxResponseTime = 5000; // 5 seconds
     this.checks = [];
     
-    this.ensureDirectories();
-  }
+    this.ensureDirectories()}
   
   ensureDirectories() {
     if (!fs.existsSync(this.logDir)) {
-      fs.mkdirSync(this.logDir, { recursive: true });
-    }
+      fs.mkdirSync(this.logDir { recursive: true })}
   }
   
   log(level, message, data = null) {
@@ -37,13 +35,11 @@ class HealthChecker {
     
     console.log(`[${timestamp}] ${level.toUpperCase()}: ${message}`);
     if (data) {
-      console.log(JSON.stringify(data, null, 2));
-    }
+      console.log(JSON.stringify(data, null, 2))}
     
     // Write to log file
     const logFile = path.join(this.logDir, 'health-checker.log');
-    fs.appendFileSync(logFile, JSON.stringify(logEntry) + '\n');
-  }
+    fs.appendFileSync(logFile, JSON.stringify(logEntry) + '\n')}
   
   async checkApplicationHealth() {
     return new Promise(resolve => {
@@ -53,40 +49,34 @@ class HealthChecker {
         const responseTime = Date.now() - startTime;
         
         if (res.statusCode === 200) {
-          this.log('info', 'Application health check passed', {
+          this.log('info', 'Application health check passed' {
             statusCode: res.statusCode,
             responseTime: `${responseTime}ms`
           });
-          resolve({ healthy: true, responseTime, statusCode: res.statusCode });
-        } else {
-          this.log('warn', 'Application health check failed', {
+          resolve({ healthy: true, responseTime, statusCode: res.statusCode })} else {
+          this.log('warn', 'Application health check failed' {
             statusCode: res.statusCode,
             responseTime: `${responseTime}ms`
           });
-          resolve({ healthy: false, responseTime, statusCode: res.statusCode });
-        }
+          resolve({ healthy: false, responseTime, statusCode: res.statusCode })}
       });
       
       req.on('error', err => {
         const responseTime = Date.now() - startTime;
-        this.log('error', 'Application health check error', {
+        this.log('error', 'Application health check error' {
           error: err.message,
           responseTime: `${responseTime}ms`
         });
-        resolve({ healthy: false, responseTime, error: err.message });
-      });
+        resolve({ healthy: false, responseTime, error: err.message })});
       
       req.setTimeout(this.maxResponseTime, () => {
         req.destroy();
         const responseTime = Date.now() - startTime;
-        this.log('error', 'Application health check timeout', {
+        this.log('error', 'Application health check timeout' {
           responseTime: `${responseTime}ms`,
           timeout: this.maxResponseTime
         });
-        resolve({ healthy: false, responseTime, error: 'timeout' });
-      });
-    });
-  }
+        resolve({ healthy: false, responseTime, error: 'timeout' })})})}
   
   async checkBuildHealth() {
     try {
@@ -98,17 +88,14 @@ class HealthChecker {
       
       if (!buildExists) {
         this.log('warn', 'Build directory not found, attempting to build...');
-        execSync('npm run build', { cwd: this.projectRoot, stdio: 'pipe' });
+        execSync('npm run build' { cwd: this.projectRoot, stdio: 'pipe' });
         this.log('info', 'Build completed successfully');
-        return { healthy: true, message: 'Build completed' };
-      }
+        return { healthy: true, message: 'Build completed' }}
       
       this.log('info', 'Build directory exists');
-      return { healthy: true, message: 'Build exists' };
-    } catch (error) {
-      this.log('error', 'Build health check failed', { error: error.message });
-      return { healthy: false, error: error.message };
-    }
+      return { healthy: true, message: 'Build exists' }} catch (error) {
+      this.log('error', 'Build health check failed' { error: error.message });
+      return { healthy: false, error: error.message }}
   }
   
   async checkDependencies() {
@@ -121,17 +108,14 @@ class HealthChecker {
       
       if (!depsExist) {
         this.log('warn', 'Dependencies not found, attempting to install...');
-        execSync('npm install', { cwd: this.projectRoot, stdio: 'pipe' });
+        execSync('npm install' { cwd: this.projectRoot, stdio: 'pipe' });
         this.log('info', 'Dependencies installed successfully');
-        return { healthy: true, message: 'Dependencies installed' };
-      }
+        return { healthy: true, message: 'Dependencies installed' }}
       
       this.log('info', 'Dependencies exist');
-      return { healthy: true, message: 'Dependencies exist' };
-    } catch (error) {
-      this.log('error', 'Dependency check failed', { error: error.message });
-      return { healthy: false, error: error.message };
-    }
+      return { healthy: true, message: 'Dependencies exist' }} catch (error) {
+      this.log('error', 'Dependency check failed' { error: error.message });
+      return { healthy: false, error: error.message }}
   }
   
   async runAllChecks() {
@@ -157,19 +141,15 @@ class HealthChecker {
     
     this.log('info', 'Health checks completed', results);
     
-    return results;
-  }
+    return results}
 }
 
 // Run health checks if this script is executed directly
 if (import.meta.url === `file://${process.argv[1]}`) {
   const checker = new HealthChecker();
   checker.runAllChecks().then(results => {
-    process.exit(results.overall.healthy ? 0 : 1);
-  }).catch(error => {
+    process.exit(results.overall.healthy ? 0 : 1)}).catch(error => {
     console.error('Health check failed:', error);
-    process.exit(1);
-  });
-}
+    process.exit(1)})}
 
 export default HealthChecker;

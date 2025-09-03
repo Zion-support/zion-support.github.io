@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React { useState } from 'react';
 import Link from 'next/link';
 import { Menu, X, ChevronDown } from 'lucide-react';
 
@@ -7,75 +7,25 @@ const Navigation: React.FC = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   const navigationItems = [
-  { name: 'Home', href: '/' },
-    {
+  { name: 'Home', href: '/' }, {
       name: 'Services',
       href: '/services',
       dropdown: [
-        { name: 'AI Services', href: '/services/ai-services' },
-        { name: 'IT Services', href: '/services/it-services' },
-<<<<<<< HEAD
-        { name: 'Micro SaaS', href: '/services/micro-saas' }
-=======
-        { name: 'Micro SaaS', href: '/services/micro-saas' },
-        { name: 'Web Development', href: '/services/web-development' },
-        { name: 'Cloud Services', href: '/services/cloud-services' },
-<<<<<<< HEAD
-        { name: 'AI Development', href: '/services/ai-development' },
-      ],
-    },
-=======
-        { name: 'AI Development', href: '/services/ai-development' }
->>>>>>> main
-      ]
+        { name: 'AI Services', href: '/services/ai-services' }, { name: 'IT Services', href: '/services/it-services' } ]
     }, 
->>>>>>> main
+
     {
       name: 'Solutions',
       href: '/solutions',
       dropdown: [
-<<<<<<< HEAD
-        { name: 'Custom Development', href: '/solutions/custom-development' },
-        { name: 'Digital Transformation', href: '/solutions/digital-transformation' },
-        { name: 'Enterprise Solutions', href: '/solutions/enterprise' }
-=======
-        { name: 'AI Content Creation', href: '/solutions/ai-content-creation' },
-        { name: 'Customer Support', href: '/solutions/customer-support' },
-        { name: 'Email Automation', href: '/solutions/email-automation' },
-        { name: 'Event Management', href: '/solutions/event-management' },
-        { name: 'Project Management', href: '/solutions/project-management' },
-<<<<<<< HEAD
-        { name: 'Workflow Automation', href: '/solutions/workflow-automation' },
-      ],
-    },
-    {
-      name: 'Company',
-      href: '/about',
-      dropdown: [
-        { name: 'About Us', href: '/about' },
-        { name: 'Our Team', href: '/team' },
-        { name: 'Careers', href: '/careers' },
-        { name: 'Partners', href: '/partners' },
-      ],
-    },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Pricing', href: '/pricing' },
-    { name: 'Contact', href: '/contact' },
-=======
-        { name: 'Workflow Automation', href: '/solutions/workflow-automation' }
->>>>>>> main
+
       ]
-    }, 
-    { name: 'About', href: '/about' }, 
-    { name: 'Blog', href: '/blog' }, 
-    { name: 'Careers', href: '/careers' }, 
-    { name: 'Contact', href: '/contact' }
->>>>>>> main
+    }, { name: 'About', href: '/about' }, { name: 'Blog', href: '/blog' }, { name: 'Careers', href: '/careers' }, { name: 'Contact', href: '/contact' }
+
   ];
 
   const toggleDropdown = (itemName: string) => {
-    setActiveDropdown(activeDropdown === itemName ? null : itemName);
-  };
+    setActiveDropdown(activeDropdown === itemName ? null : itemName)};
 
   return (
     <nav className="bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 shadow-lg sticky top-0 z-50">
@@ -146,8 +96,7 @@ const Navigation: React.FC = () => {
           </div>
         </div>
       </div>
-      {/* Mobile Navigation */}
-      {isOpen && (
+      {/* Mobile Navigation */}, {isOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-blue-800 bg-opacity-95">
             {navigationItems.map(item => (
@@ -170,8 +119,7 @@ const Navigation: React.FC = () => {
                             className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-sm"
                             onClick={() => {
                               setIsOpen(false);
-                              setActiveDropdown(null);
-                            }}
+                              setActiveDropdown(null)}}
                           >
                             {dropdownItem.name}
                           </Link>
@@ -194,7 +142,6 @@ const Navigation: React.FC = () => {
         </div>
       )}
     </nav>
-  );
-};
+  )};
 
 export default Navigation;

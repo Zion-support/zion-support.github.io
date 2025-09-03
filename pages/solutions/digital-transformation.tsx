@@ -36,33 +36,24 @@ const DigitalTransformation: NextPage = () => {
     {
       stage: 'Assessment', title: 'Current State Analysis',
       description: 'We analyze your current systems, processes, and technology stack to identify opportunities for improvement.', duration: '2-4 weeks'
-    },
-    {
+    }, {
       stage: 'Strategy', title: 'Digital Strategy Development',
       description: 'We create a comprehensive digital transformation roadmap aligned with your business objectives.', duration: '3-6 weeks'
-    },
-    {
+    }, {
       stage: 'Implementation', title: 'Solution Implementation',
       description: 'We implement the digital solutions using agile methodologies and best practices.', duration: '8-24 weeks'
-    },
-    {
+    }, {
       stage: 'Optimization', title: 'Continuous Improvement',
       description: 'We monitor performance and continuously optimize your digital solutions for maximum impact.', duration: 'Ongoing'
     }
   ];
 
   const industries = [
-    { name: 'Healthcare', description: 'Digital health records, telemedicine, and patient management systems' },
-    { name: 'Finance', description: 'Digital banking, fraud detection, and automated trading systems' },
-    { name: 'Manufacturing', description: 'IoT integration, predictive maintenance, and supply chain optimization' },
-    { name: 'Retail', description: 'E-commerce platforms, inventory management, and customer analytics' },
-    { name: 'Education', description: 'Learning management systems, virtual classrooms, and student analytics' },
-    { name: 'Government', description: 'Citizen services, digital governance, and public safety systems' }
+    { name: 'Healthcare', description: 'Digital health records, telemedicine, and patient management systems' }, { name: 'Finance', description: 'Digital banking, fraud detection, and automated trading systems' }, { name: 'Manufacturing', description: 'IoT integration, predictive maintenance, and supply chain optimization' }, { name: 'Retail', description: 'E-commerce platforms, inventory management, and customer analytics' }, { name: 'Education', description: 'Learning management systems, virtual classrooms, and student analytics' }, { name: 'Government', description: 'Citizen services, digital governance, and public safety systems' }
   ];
 
   const successMetrics = [
-    { metric: '85%', label: 'Cost Reduction', description: 'Average cost savings achieved through digital transformation' }, { metric: '60%', label: 'Efficiency Gain', description: 'Improvement in operational efficiency' },
-    { metric: '90%', label: 'Customer Satisfaction', description: 'Increase in customer satisfaction scores' }, { metric: '75%', label: 'Time Savings', description: 'Reduction in time-to-market for new products' }
+    { metric: '85%', label: 'Cost Reduction', description: 'Average cost savings achieved through digital transformation' }, { metric: '60%', label: 'Efficiency Gain', description: 'Improvement in operational efficiency' }, { metric: '90%', label: 'Customer Satisfaction', description: 'Increase in customer satisfaction scores' }, { metric: '75%', label: 'Time Savings', description: 'Reduction in time-to-market for new products' }
   ];
 
   return (
@@ -238,7 +229,6 @@ const DigitalTransformation: NextPage = () => {
         </section>
       </div>
     </MainLayout>
-  );
-};
+  )};
 
 export default DigitalTransformation;

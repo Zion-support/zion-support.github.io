@@ -8,30 +8,25 @@ class AdvancedAppOptimizer {
   constructor() {
     this.projectRoot = process.cwd();
     this.reportsDir = path.join(this.projectRoot, 'optimization-reports');
-    this.ensureDirectories();
-  }
+    this.ensureDirectories()}
 
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true });
-    }
+      fs.mkdirSync(this.reportsDir { recursive: true })}
   }
 
   log(message) {
     const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] ${message}`);
-  }
+    console.log(`[${timestamp}] ${message}`)}
 
   async optimizeBundleSize() {
     this.log('🔍 Analyzing bundle size...');
     
     try {
       // Run bundle analyzer
-      execSync('npm run build:analyze', { cwd: this.projectRoot, stdio: 'inherit' });
-      this.log('✅ Bundle analysis completed');
-    } catch (error) {
-      this.log(`❌ Bundle analysis failed: ${error.message}`);
-    }
+      execSync('npm run build:analyze' { cwd: this.projectRoot, stdio: 'inherit' });
+      this.log('✅ Bundle analysis completed')} catch (error) {
+      this.log(`❌ Bundle analysis failed: ${error.message}`)}
   }
 
   async optimizeImages() {
@@ -46,12 +41,10 @@ class AdvancedAppOptimizer {
           // Convert to WebP if not already
           if (!imageFile.endsWith('.webp')) {
             const webpFile = imageFile.replace(/\.[^.]+$/, '.webp');
-            execSync(`cwebp -q 80 "${imageFile}" -o "${webpFile}"`, { stdio: 'pipe' });
-            this.log(`✅ Converted ${path.basename(imageFile)} to WebP`);
-          }
+            execSync(`cwebp -q 80 "${imageFile}" -o "${webpFile}"` { stdio: 'pipe' });
+            this.log(`✅ Converted ${path.basename(imageFile)} to WebP`)}
         } catch (error) {
-          this.log(`⚠️ Could not optimize ${path.basename(imageFile)}: ${error.message}`);
-        }
+          this.log(`⚠️ Could not optimize ${path.basename(imageFile)}: ${error.message}`)}
       }
     }
   }
@@ -68,19 +61,16 @@ class AdvancedAppOptimizer {
         const stat = fs.statSync(fullPath);
         
         if (stat.isDirectory()) {
-          scanDir(fullPath);
-        } else if (stat.isFile()) {
+          scanDir(fullPath)} else if (stat.isFile()) {
           const ext = path.extname(item).toLowerCase();
           if (imageExtensions.includes(ext)) {
-            files.push(fullPath);
-          }
+            files.push(fullPath)}
         }
       }
     };
     
     scanDir(dir);
-    return files;
-  }
+    return files}
 
   async optimizeCodeSplitting() {
     this.log('📦 Optimizing code splitting...');
@@ -98,8 +88,7 @@ class AdvancedAppOptimizer {
           if (content.includes('import') && !content.includes('dynamic')) {
             const optimizedContent = this.addDynamicImports(content);
             fs.writeFileSync(pagePath, optimizedContent);
-            this.log(`✅ Optimized code splitting for ${page}`);
-          }
+            this.log(`✅ Optimized code splitting for ${page}`)}
         }
       }
     }
@@ -112,12 +101,9 @@ class AdvancedAppOptimizer {
     return content.replace(dynamicImportPattern, (match, componentName, importPath) => {
       // Skip if it's already a dynamic import or a small component
       if (importPath.includes('lucide-react') || importPath.includes('@radix-ui')) {
-        return match;
-      }
+        return match}
       
-      return `const ${componentName} = dynamic(() => import('${importPath}'), { ssr: false });`;
-    });
-  }
+      return `const ${componentName} = dynamic(() => import('${importPath}') { ssr: false });`})}
 
   async optimizePerformance() {
     this.log('⚡ Optimizing performance...');
@@ -126,33 +112,27 @@ class AdvancedAppOptimizer {
     const nextConfigPath = path.join(this.projectRoot, 'next.config.optimized.js');
     const optimizedConfig = `
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true',
-});
+  enabled: process.env.ANALYZE === 'true' });
 
 module.exports = withBundleAnalyzer({
   compress: true,
   poweredByHeader: false,
   generateEtags: false,
   httpAgentOptions: {
-    keepAlive: true,
-  },
+    keepAlive: true },
   images: {
     formats: ['image/webp', 'image/avif'],
-    minimumCacheTTL: 60,
-  },
+    minimumCacheTTL: 60 },
   experimental: {
     optimizeCss: true,
-    optimizePackageImports: ['@radix-ui/react-icons', 'lucide-react'],
-  },
-  webpack: (config, { isServer }) => {
+    optimizePackageImports: ['@radix-ui/react-icons', 'lucide-react'] },
+  webpack: (config { isServer }) => {
     if (!isServer) {
       config.resolve.fallback = {
         ...config.resolve.fallback,
         fs: false,
         net: false,
-        tls: false,
-      };
-    }
+        tls: false }}
     
     // Optimize bundle splitting
     config.optimization.splitChunks = {
@@ -161,25 +141,18 @@ module.exports = withBundleAnalyzer({
         vendor: {
           test: /[\\\\/]node_modules[\\\\/]/,
           name: 'vendors',
-          chunks: 'all',
-        },
+          chunks: 'all' },
         common: {
           name: 'common',
           minChunks: 2,
           chunks: 'all',
-          enforce: true,
-        },
-      },
-    };
+          enforce: true } } };
     
-    return config;
-  },
-});
+    return config} });
 `;
 
     fs.writeFileSync(nextConfigPath, optimizedConfig);
-    this.log('✅ Created optimized Next.js configuration');
-  }
+    this.log('✅ Created optimized Next.js configuration')}
 
   async generateReport() {
     this.log('📊 Generating optimization report...');
@@ -203,8 +176,7 @@ module.exports = withBundleAnalyzer({
     
     const reportPath = path.join(this.reportsDir, 'optimization-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    this.log(`✅ Report saved to ${reportPath}`);
-  }
+    this.log(`✅ Report saved to ${reportPath}`)}
 
   async run() {
     this.log('🚀 Starting Advanced App Optimization');
@@ -216,11 +188,9 @@ module.exports = withBundleAnalyzer({
       await this.optimizePerformance();
       await this.generateReport();
       
-      this.log('🎉 Advanced App Optimization completed successfully');
-    } catch (error) {
+      this.log('🎉 Advanced App Optimization completed successfully')} catch (error) {
       this.log(`❌ Optimization failed: ${error.message}`);
-      process.exit(1);
-    }
+      process.exit(1)}
   }
 }
 

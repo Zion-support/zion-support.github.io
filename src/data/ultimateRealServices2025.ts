@@ -11,5 +11,4 @@ export default function ultimateRealServices2025() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

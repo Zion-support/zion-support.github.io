@@ -11,5 +11,4 @@ export default function ProductActions() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

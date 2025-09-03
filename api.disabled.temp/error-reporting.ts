@@ -4,17 +4,14 @@ interface ErrorReport {
   error: {
     message: string;
     stack?: string;
-    name: string;
-  };
+    name: string};
   errorInfo: {
-    componentStack?: string;
-  };
+    componentStack?: string};
   timestamp: string;
   userAgent: string;
   url: string;
   userId?: string;
-  sessionId?: string;
-}
+  sessionId?: string}
 
 // In-memory storage for demo purposes
 // In production, you would use a proper database
@@ -25,110 +22,87 @@ export default async function handler(
   res: NextApiResponse
 ) {
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
-  }
+    return res.status(405).json({ error: 'Method not allowed' })}
 
   try {
     const errorReport: ErrorReport = req.body;
 
     // Validate required fields
     if (!errorReport.error || !errorReport.error.message) {
-      return res.status(400).json({ error: 'Missing required fields' });
-    }
+      return res.status(400).json({ error: 'Missing required fields' })}
 
     // Add timestamp if not provided
     if (!errorReport.timestamp) {
-      errorReport.timestamp = new Date().toISOString();
-    }
+      errorReport.timestamp = new Date().toISOString()}
 
     // Add to error reports
     errorReports.push(errorReport);
 
     // Log for debugging
-    console.error('Error Report:', {
+    console.error('Error Report:' {
       message: errorReport.error.message,
       stack: errorReport.error.stack,
       url: errorReport.url,
-      timestamp: errorReport.timestamp,
-    });
+      timestamp: errorReport.timestamp });
 
     // Send to external error monitoring services
     await sendToErrorMonitoringServices(errorReport);
 
     // Send alerts for critical errors
     if (isCriticalError(errorReport)) {
-      await sendCriticalErrorAlert(errorReport);
-    }
+      await sendCriticalErrorAlert(errorReport)}
 
-    res.status(200).json({ success: true });
-  } catch (error) {
+    res.status(200).json({ success: true })} catch (error) {
     console.error('Error Reporting API Error:', error);
-    res.status(500).json({ error: 'Internal server error' });
-  }
+    res.status(500).json({ error: 'Internal server error' })}
 }
 
 async function sendToErrorMonitoringServices(errorReport: ErrorReport) {
   try {
     // Sentry
     if (process.env.SENTRY_DSN) {
-      await fetch('https://sentry.io/api/0/projects/', {
+      await fetch('https://sentry.io/api/0/projects/' {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'X-Sentry-Auth': `Sentry sentry_version=7, sentry_key=${process.env.SENTRY_KEY}`,
-        },
+          'X-Sentry-Auth': `Sentry sentry_version=7, sentry_key=${process.env.SENTRY_KEY}` },
         body: JSON.stringify({
           message: errorReport.error.message,
           stacktrace: {
-            frames: parseStackTrace(errorReport.error.stack),
-          },
+            frames: parseStackTrace(errorReport.error.stack) },
           tags: {
             component: 'frontend',
-            url: errorReport.url,
-          },
+            url: errorReport.url },
           user: {
-            id: errorReport.userId,
-          },
+            id: errorReport.userId },
           extra: {
             userAgent: errorReport.userAgent,
             sessionId: errorReport.sessionId,
-            componentStack: errorReport.errorInfo.componentStack,
-          },
-        }),
-      });
-    }
+            componentStack: errorReport.errorInfo.componentStack } }) })}
 
     // LogRocket
     if (process.env.LOGROCKET_APP_ID) {
-      await fetch(`https://api.logrocket.com/v1/projects/${process.env.LOGROCKET_APP_ID}/errors`, {
+      await fetch(`https://api.logrocket.com/v1/projects/${process.env.LOGROCKET_APP_ID}/errors` {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${process.env.LOGROCKET_API_KEY}`,
-        },
+          'Authorization': `Bearer ${process.env.LOGROCKET_API_KEY}` },
         body: JSON.stringify({
           message: errorReport.error.message,
           stack: errorReport.error.stack,
           url: errorReport.url,
           userAgent: errorReport.userAgent,
-          timestamp: errorReport.timestamp,
-        }),
-      });
-    }
+          timestamp: errorReport.timestamp }) })}
 
     // Custom webhook
     if (process.env.ERROR_WEBHOOK_URL) {
-      await fetch(process.env.ERROR_WEBHOOK_URL, {
+      await fetch(process.env.ERROR_WEBHOOK_URL {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(errorReport),
-      });
-    }
+          'Content-Type': 'application/json' },
+        body: JSON.stringify(errorReport) })}
   } catch (error) {
-    console.error('Failed to send to error monitoring services:', error);
-  }
+    console.error('Failed to send to error monitoring services:', error)}
 }
 
 function parseStackTrace(stack?: string) {
@@ -141,17 +115,12 @@ function parseStackTrace(stack?: string) {
         function: match[1],
         filename: match[2],
         lineno: parseInt(match[3]),
-        colno: parseInt(match[4]),
-      };
-    }
+        colno: parseInt(match[4]) }}
     return {
       function: line.trim(),
       filename: 'unknown',
       lineno: 0,
-      colno: 0,
-    };
-  });
-}
+      colno: 0 }})}
 
 function isCriticalError(errorReport: ErrorReport): boolean {
   const criticalPatterns = [
@@ -159,23 +128,20 @@ function isCriticalError(errorReport: ErrorReport): boolean {
     /loading chunk/i,
     /network error/i,
     /failed to fetch/i,
-    /script error/i,
-  ];
+    /script error/i ];
 
   return criticalPatterns.some(pattern => 
     pattern.test(errorReport.error.message)
-  );
-}
+  )}
 
 async function sendCriticalErrorAlert(errorReport: ErrorReport) {
   try {
     // Send email alert
     if (process.env.ALERT_EMAIL) {
-      await fetch('/api/send-alert-email', {
+      await fetch('/api/send-alert-email' {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
-        },
+          'Content-Type': 'application/json' },
         body: JSON.stringify({
           to: process.env.ALERT_EMAIL,
           subject: 'Critical Error Alert - Zion Tech Group',
@@ -189,18 +155,14 @@ async function sendCriticalErrorAlert(errorReport: ErrorReport) {
             
             Stack Trace:
             ${errorReport.error.stack}
-          `,
-        }),
-      });
-    }
+          ` }) })}
 
     // Send Slack notification
     if (process.env.SLACK_WEBHOOK_URL) {
-      await fetch(process.env.SLACK_WEBHOOK_URL, {
+      await fetch(process.env.SLACK_WEBHOOK_URL {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
-        },
+          'Content-Type': 'application/json' },
         body: JSON.stringify({
           text: `🚨 Critical Error Alert`,
           attachments: [{
@@ -209,29 +171,17 @@ async function sendCriticalErrorAlert(errorReport: ErrorReport) {
               {
                 title: 'Error Message',
                 value: errorReport.error.message,
-                short: false,
-              },
-              {
+                short: false }, {
                 title: 'URL',
                 value: errorReport.url,
-                short: true,
-              },
-              {
+                short: true }, {
                 title: 'Timestamp',
                 value: errorReport.timestamp,
-                short: true,
-              },
-            ],
-          }],
-        }),
-      });
-    }
+                short: true } ] }] }) })}
   } catch (error) {
-    console.error('Failed to send critical error alert:', error);
-  }
+    console.error('Failed to send critical error alert:', error)}
 }
 
 // Get error reports (for admin dashboard)
 export async function getErrorReports() {
-  return errorReports;
-}
+  return errorReports}

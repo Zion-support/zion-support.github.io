@@ -13,40 +13,35 @@ const SystemStatus: NextPage = () => {
       responseTime: '120ms',
       lastIncident: 'No incidents in the past 30 days',
       icon: Globe
-    },
-    {
+    }, {
       name: 'API Services',
       status: 'operational',
       uptime: '99.8%',
       responseTime: '85ms',
       lastIncident: 'No incidents in the past 30 days',
       icon: Server
-    },
-    {
+    }, {
       name: 'Database',
       status: 'operational',
       uptime: '99.9%',
       responseTime: '45ms',
       lastIncident: 'No incidents in the past 30 days',
       icon: Database
-    },
-    {
+    }, {
       name: 'Cloud Infrastructure',
       status: 'operational',
       uptime: '99.9%',
       responseTime: '200ms',
       lastIncident: 'No incidents in the past 30 days',
       icon: Cloud
-    },
-    {
+    }, {
       name: 'CDN',
       status: 'operational',
       uptime: '99.9%',
       responseTime: '50ms',
       lastIncident: 'No incidents in the past 30 days',
       icon: Activity
-    },
-    {
+    }, {
       name: 'Email Services',
       status: 'operational',
       uptime: '99.7%',
@@ -64,16 +59,14 @@ const SystemStatus: NextPage = () => {
       date: '2024-11-15',
       duration: '2 hours',
       description: 'Scheduled maintenance window for API infrastructure updates. All services were restored successfully.'
-    },
-    {
+    }, {
       id: 2,
       title: 'Database Performance Issue',
       status: 'resolved',
       date: '2024-10-28',
       duration: '45 minutes',
       description: 'Temporary performance degradation in database queries. Issue was resolved by optimizing query performance.'
-    },
-    {
+    }, {
       id: 3,
       title: 'CDN Outage',
       status: 'resolved',
@@ -94,8 +87,7 @@ const SystemStatus: NextPage = () => {
       case 'maintenance':
         return <Clock className="w-5 h-5 text-blue-500" />;
       default:
-        return <AlertCircle className="w-5 h-5 text-gray-500" />;
-    }
+        return <AlertCircle className="w-5 h-5 text-gray-500" />}
   };
 
   const getStatusColor = (status: string) => {
@@ -109,8 +101,7 @@ const SystemStatus: NextPage = () => {
       case 'maintenance':
         return 'bg-blue-100 text-blue-800';
       default:
-        return 'bg-gray-100 text-gray-800';
-    }
+        return 'bg-gray-100 text-gray-800'}
   };
 
   const overallStatus = 'operational';
@@ -337,7 +328,6 @@ const SystemStatus: NextPage = () => {
         </section>
       </div>
     </MainLayout>
-  );
-};
+  )};
 
 export default SystemStatus;

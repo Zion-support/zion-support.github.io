@@ -11,5 +11,4 @@ export default function FuturisticAnimatedBackground.test() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

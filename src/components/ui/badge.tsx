@@ -3,8 +3,7 @@ import React from 'react';
 interface BadgeProps {
   children: React.ReactNode;
   variant?: 'default' | 'secondary' | 'destructive' | 'outline';
-  className?: string;
-}
+  className?: string}
 
 export function Badge({ 
   children, 
@@ -26,5 +25,4 @@ export function Badge({
     <span className={classes}>
       {children}
     </span>
-  );
-}
+  )}

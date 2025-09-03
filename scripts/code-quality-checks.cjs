@@ -10,8 +10,7 @@ class CodeQualityChecks {
       checks: [],
       score: 100,
       summary: { passed: 0, failed: 0, warnings: 0 }
-    };
-  }
+    }}
 
   async runChecks() {
     console.log('🔍 Running Code Quality Checks...');
@@ -24,71 +23,58 @@ class CodeQualityChecks {
       await this.checkPerformance();
       this.generateReport();
       
-      console.log('✅ Code quality checks completed');
-    } catch (error) {
-      console.error('❌ Code quality checks failed:', error.message);
-    }
+      console.log('✅ Code quality checks completed')} catch (error) {
+      console.error('❌ Code quality checks failed:', error.message)}
   }
 
   async checkCodeStyle() {
     console.log('🎨 Checking code style...');
     try {
-      const result = execSync('npm run lint', { encoding: 'utf8' });
-      this.addCheck('Code Style', 'passed', 'No style issues found');
-    } catch (error) {
+      const result = execSync('npm run lint' { encoding: 'utf8' });
+      this.addCheck('Code Style', 'passed', 'No style issues found')} catch (error) {
       this.addCheck('Code Style', 'failed', error.message);
-      this.results.score -= 10;
-    }
+      this.results.score -= 10}
   }
 
   async checkComplexity() {
     console.log('🧮 Checking code complexity...');
     try {
-      const result = execSync('npx complexity-report src/', { encoding: 'utf8' });
-      this.addCheck('Complexity', 'passed', 'Code complexity is acceptable');
-    } catch (error) {
+      const result = execSync('npx complexity-report src/' { encoding: 'utf8' });
+      this.addCheck('Complexity', 'passed', 'Code complexity is acceptable')} catch (error) {
       this.addCheck('Complexity', 'warning', 'High complexity detected');
-      this.results.score -= 5;
-    }
+      this.results.score -= 5}
   }
 
   async checkDuplication() {
     console.log('🔄 Checking code duplication...');
     try {
-      const result = execSync('npx jscpd src/', { encoding: 'utf8' });
-      this.addCheck('Duplication', 'passed', 'No significant duplication found');
-    } catch (error) {
+      const result = execSync('npx jscpd src/' { encoding: 'utf8' });
+      this.addCheck('Duplication', 'passed', 'No significant duplication found')} catch (error) {
       this.addCheck('Duplication', 'warning', 'Code duplication detected');
-      this.results.score -= 5;
-    }
+      this.results.score -= 5}
   }
 
   async checkSecurity() {
     console.log('🔒 Checking security...');
     try {
-      const result = execSync('npm audit', { encoding: 'utf8' });
-      this.addCheck('Security', 'passed', 'No security vulnerabilities found');
-    } catch (error) {
+      const result = execSync('npm audit' { encoding: 'utf8' });
+      this.addCheck('Security', 'passed', 'No security vulnerabilities found')} catch (error) {
       this.addCheck('Security', 'failed', 'Security vulnerabilities detected');
-      this.results.score -= 20;
-    }
+      this.results.score -= 20}
   }
 
   async checkPerformance() {
     console.log('⚡ Checking performance...');
     try {
-      const result = execSync('npm run build', { encoding: 'utf8' });
-      this.addCheck('Performance', 'passed', 'Build completed successfully');
-    } catch (error) {
+      const result = execSync('npm run build' { encoding: 'utf8' });
+      this.addCheck('Performance', 'passed', 'Build completed successfully')} catch (error) {
       this.addCheck('Performance', 'failed', 'Build failed');
-      this.results.score -= 15;
-    }
+      this.results.score -= 15}
   }
 
   addCheck(name, status, message) {
     this.results.checks.push({ name, status, message, timestamp: new Date().toISOString() });
-    this.results.summary[status]++;
-  }
+    this.results.summary[status]++}
 
   generateReport() {
     const reportPath = 'code-quality-report.json';
@@ -101,8 +87,7 @@ class CodeQualityChecks {
     console.log(`Failed: ${this.results.summary.failed}`);
     console.log(`Warnings: ${this.results.summary.warnings}`);
     console.log('='.repeat(50));
-    console.log(`📄 Report saved to: ${reportPath}`);
-  }
+    console.log(`📄 Report saved to: ${reportPath}`)}
 }
 
 // Run the checks

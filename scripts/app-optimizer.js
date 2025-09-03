@@ -12,8 +12,7 @@ class AppOptimizer {
   constructor() {
     this.projectRoot = process.cwd();
     this.optimizations = [];
-    this.improvements = [];
-  }
+    this.improvements = []}
 
   async optimizeApp() {
     console.log('🚀 Starting App Optimization...');
@@ -28,11 +27,8 @@ class AppOptimizer {
       await this.optimizeSecurity();
       
       this.generateReport();
-      console.log('✅ App optimization completed!');
-      
-    } catch (error) {
-      console.error('❌ App optimization failed:', error.message);
-    }
+      console.log('✅ App optimization completed!')} catch (error) {
+      console.error('❌ App optimization failed:', error.message)}
   }
 
   async optimizeBuild() {
@@ -48,20 +44,17 @@ class AppOptimizer {
         if (!config.includes('swcMinify')) {
           config = config.replace(
             'module.exports = {',
-            'module.exports = {\n  swcMinify: true,'
-          );
-        }
+            'module.exports = {\n  swcMinify: true',
+          )}
         
         if (!config.includes('compress')) {
           config = config.replace(
             'module.exports = {',
-            'module.exports = {\n  compress: true,'
-          );
-        }
+            'module.exports = {\n  compress: true',
+          )}
         
         fs.writeFileSync(nextConfigPath, config);
-        this.optimizations.push('Build optimizations added to Next.js config');
-      }
+        this.optimizations.push('Build optimizations added to Next.js config')}
       
       // Optimize package.json scripts
       const packageJsonPath = path.join(this.projectRoot, 'package.json');
@@ -69,20 +62,16 @@ class AppOptimizer {
         const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
         
         if (!packageJson.scripts['build:optimized']) {
-          packageJson.scripts['build:optimized'] = 'next build && next export';
-        }
+          packageJson.scripts['build:optimized'] = 'next build && next export'}
         
         if (!packageJson.scripts['analyze']) {
-          packageJson.scripts['analyze'] = 'ANALYZE=true npm run build';
-        }
+          packageJson.scripts['analyze'] = 'ANALYZE=true npm run build'}
         
         fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
-        this.optimizations.push('Optimized build scripts added to package.json');
-      }
+        this.optimizations.push('Optimized build scripts added to package.json')}
       
     } catch (error) {
-      console.warn('⚠️  Build optimization failed:', error.message);
-    }
+      console.warn('⚠️  Build optimization failed:', error.message)}
   }
 
   async optimizeDependencies() {
@@ -90,7 +79,7 @@ class AppOptimizer {
     
     try {
       // Check for outdated dependencies
-      const result = execSync('npm outdated --json', { 
+      const result = execSync('npm outdated --json' { 
         cwd: this.projectRoot,
         encoding: 'utf8',
         timeout: 30000
@@ -101,29 +90,26 @@ class AppOptimizer {
         this.improvements.push(`Found ${Object.keys(outdated).length} outdated dependencies`);
         
         // Update dependencies
-        execSync('npm update', { 
+        execSync('npm update' { 
           cwd: this.projectRoot,
           encoding: 'utf8',
           timeout: 60000
         });
         
-        this.optimizations.push('Dependencies updated to latest versions');
-      }
+        this.optimizations.push('Dependencies updated to latest versions')}
       
       // Check for unused dependencies
       try {
-        execSync('npx depcheck', { 
+        execSync('npx depcheck' { 
           cwd: this.projectRoot,
           encoding: 'utf8',
           timeout: 30000
-        });
-      } catch (error) {
+        })} catch (error) {
         // depcheck might not be installed, that's okay
       }
       
     } catch (error) {
-      console.warn('⚠️  Dependency optimization failed:', error.message);
-    }
+      console.warn('⚠️  Dependency optimization failed:', error.message)}
   }
 
   async optimizeCode() {
@@ -132,43 +118,39 @@ class AppOptimizer {
     try {
       // Run ESLint with auto-fix
       try {
-        execSync('npx eslint . --fix', { 
+        execSync('npx eslint . --fix' { 
           cwd: this.projectRoot,
           encoding: 'utf8',
           timeout: 60000
         });
-        this.optimizations.push('Code linting and auto-fixing completed');
-      } catch (error) {
+        this.optimizations.push('Code linting and auto-fixing completed')} catch (error) {
         // ESLint might have issues, that's okay
       }
       
       // Run Prettier
       try {
-        execSync('npx prettier --write .', { 
+        execSync('npx prettier --write .' { 
           cwd: this.projectRoot,
           encoding: 'utf8',
           timeout: 60000
         });
-        this.optimizations.push('Code formatting with Prettier completed');
-      } catch (error) {
+        this.optimizations.push('Code formatting with Prettier completed')} catch (error) {
         // Prettier might have issues, that's okay
       }
       
       // Remove console.log statements from production code
       try {
-        execSync('node scripts/remove-console-logs.js', { 
+        execSync('node scripts/remove-console-logs.js' { 
           cwd: this.projectRoot,
           encoding: 'utf8',
           timeout: 30000
         });
-        this.optimizations.push('Console.log statements removed from production code');
-      } catch (error) {
+        this.optimizations.push('Console.log statements removed from production code')} catch (error) {
         // Script might not exist, that's okay
       }
       
     } catch (error) {
-      console.warn('⚠️  Code optimization failed:', error.message);
-    }
+      console.warn('⚠️  Code optimization failed:', error.message)}
   }
 
   async optimizeAssets() {
@@ -185,8 +167,7 @@ class AppOptimizer {
         });
         
         if (largeFiles.length > 0) {
-          this.improvements.push(`Found ${largeFiles.length} large files (>1MB) that could be optimized`);
-        }
+          this.improvements.push(`Found ${largeFiles.length} large files (>1MB) that could be optimized`)}
       }
       
       // Create optimized image component
@@ -206,16 +187,13 @@ export default function OptimizedImage({ src, alt, width, height, ...props }) {
       blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
       {...props}
     />
-  );
-}`;
+  )}`;
         
         fs.writeFileSync(optimizedImagePath, optimizedImageContent);
-        this.optimizations.push('OptimizedImage component created for better performance');
-      }
+        this.optimizations.push('OptimizedImage component created for better performance')}
       
     } catch (error) {
-      console.warn('⚠️  Asset optimization failed:', error.message);
-    }
+      console.warn('⚠️  Asset optimization failed:', error.message)}
   }
 
   async optimizePerformance() {
@@ -243,23 +221,18 @@ export function usePerformanceMonitor() {
                 domContentLoaded: entry.domContentLoadedEventEnd - entry.domContentLoadedEventStart,
                 firstPaint: entry.responseEnd - entry.requestStart
               }
-            }));
-          }
-        });
-      });
+            }))}
+        })});
 
       observer.observe({ entryTypes: ['navigation'] });
 
-      return () => observer.disconnect();
-    }
+      return () => observer.disconnect()}
   }, []);
 
-  return metrics;
-}`;
+  return metrics}`;
         
         fs.writeFileSync(performanceHookPath, performanceHookContent);
-        this.optimizations.push('Performance monitoring hook created');
-      }
+        this.optimizations.push('Performance monitoring hook created')}
       
       // Create loading component
       const loadingPath = path.join(this.projectRoot, 'src', 'components', 'LoadingSpinner.jsx');
@@ -277,16 +250,13 @@ export default function LoadingSpinner({ size = 'medium' }) {
     <div className="flex justify-center items-center">
       <div className={\`animate-spin rounded-full border-2 border-gray-300 border-t-blue-600 \${sizeClasses[size]}\`}></div>
     </div>
-  );
-}`;
+  )}`;
         
         fs.writeFileSync(loadingPath, loadingContent);
-        this.optimizations.push('Loading spinner component created');
-      }
+        this.optimizations.push('Loading spinner component created')}
       
     } catch (error) {
-      console.warn('⚠️  Performance optimization failed:', error.message);
-    }
+      console.warn('⚠️  Performance optimization failed:', error.message)}
   }
 
   async optimizeSEO() {
@@ -335,12 +305,10 @@ export default function SEO({ title, description, keywords, image, url }) {
       {/* Canonical URL */}
       <link rel="canonical" href={seoUrl} />
     </Head>
-  );
-}`;
+  )}`;
         
         fs.writeFileSync(seoPath, seoContent);
-        this.optimizations.push('SEO component created for better search engine optimization');
-      }
+        this.optimizations.push('SEO component created for better search engine optimization')}
       
       // Create sitemap
       const sitemapPath = path.join(this.projectRoot, 'public', 'sitemap.xml');
@@ -368,12 +336,10 @@ export default function SEO({ title, description, keywords, image, url }) {
 </urlset>`;
         
         fs.writeFileSync(sitemapPath, sitemapContent);
-        this.optimizations.push('Sitemap created for better SEO');
-      }
+        this.optimizations.push('Sitemap created for better SEO')}
       
     } catch (error) {
-      console.warn('⚠️  SEO optimization failed:', error.message);
-    }
+      console.warn('⚠️  SEO optimization failed:', error.message)}
   }
 
   async optimizeSecurity() {
@@ -402,12 +368,10 @@ export default function SEO({ title, description, keywords, image, url }) {
     "frame-ancestors 'none';"
   );
   
-  next();
-}`;
+  next()}`;
         
         fs.writeFileSync(securityPath, securityContent);
-        this.optimizations.push('Security middleware created with comprehensive headers');
-      }
+        this.optimizations.push('Security middleware created with comprehensive headers')}
       
       // Create environment validation
       const envValidationPath = path.join(this.projectRoot, 'src', 'utils', 'envValidation.js');
@@ -421,19 +385,15 @@ export default function SEO({ title, description, keywords, image, url }) {
   const missingVars = requiredEnvVars.filter(varName => !process.env[varName]);
   
   if (missingVars.length > 0) {
-    throw new Error(\`Missing required environment variables: \${missingVars.join(', ')}\`);
-  }
+    throw new Error(\`Missing required environment variables: \${missingVars.join(', ')}\`)}
   
-  return true;
-}`;
+  return true}`;
         
         fs.writeFileSync(envValidationPath, envValidationContent);
-        this.optimizations.push('Environment validation utility created');
-      }
+        this.optimizations.push('Environment validation utility created')}
       
     } catch (error) {
-      console.warn('⚠️  Security optimization failed:', error.message);
-    }
+      console.warn('⚠️  Security optimization failed:', error.message)}
   }
 
   getAllFiles(dirPath) {
@@ -444,16 +404,13 @@ export default function SEO({ title, description, keywords, image, url }) {
         const fullPath = path.join(dirPath, item);
         const stat = fs.statSync(fullPath);
         if (stat.isDirectory()) {
-          files = files.concat(this.getAllFiles(fullPath));
-        } else {
-          files.push(fullPath);
-        }
+          files = files.concat(this.getAllFiles(fullPath))} else {
+          files.push(fullPath)}
       }
     } catch (error) {
       // Skip directories we can't read
     }
-    return files;
-  }
+    return files}
 
   generateReport() {
     const report = {
@@ -473,8 +430,7 @@ export default function SEO({ title, description, keywords, image, url }) {
     console.log('─'.repeat(50));
     console.log(`✅ Optimizations applied: ${this.optimizations.length}`);
     console.log(`📈 Improvements identified: ${this.improvements.length}`);
-    console.log(`📄 Report saved to: ${reportPath}`);
-  }
+    console.log(`📄 Report saved to: ${reportPath}`)}
 }
 
 // Run the app optimizer

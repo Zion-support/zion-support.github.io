@@ -4,8 +4,7 @@ const path = require('path');
 
 class MonitoringSetup {
   constructor() {
-    this.projectRoot = process.cwd();
-  }
+    this.projectRoot = process.cwd()}
 
   async setupErrorTracking() {
     console.log('🚨 Setting up error tracking...');
@@ -30,8 +29,7 @@ export default errorTracking;
 `;
 
     fs.writeFileSync(path.join(this.projectRoot, 'config/error-tracking.js'), errorTrackingConfig);
-    console.log('✅ Error tracking configuration created');
-  }
+    console.log('✅ Error tracking configuration created')}
 
   async setupAnalytics() {
     console.log('📈 Setting up analytics...');
@@ -54,8 +52,7 @@ export default analytics;
 `;
 
     fs.writeFileSync(path.join(this.projectRoot, 'config/analytics.js'), analyticsConfig);
-    console.log('✅ Analytics configuration created');
-  }
+    console.log('✅ Analytics configuration created')}
 
   async setupHealthChecks() {
     console.log('🏥 Setting up health checks...');
@@ -71,30 +68,26 @@ app.get('/health', (req, res) => {
     uptime: process.uptime(),
     memory: process.memoryUsage(),
     version: process.env.npm_package_version || '1.0.0'
-  });
-});
+  })});
 
 app.get('/ready', (req, res) => {
   // Add readiness checks here
   res.status(200).json({
     status: 'ready',
     timestamp: new Date().toISOString()
-  });
-});
+  })});
 
 module.exports = app;
 `;
 
     fs.writeFileSync(path.join(this.projectRoot, 'scripts/health-check.js'), healthCheckScript);
-    console.log('✅ Health check script created');
-  }
+    console.log('✅ Health check script created')}
 
   async run() {
     await this.setupErrorTracking();
     await this.setupAnalytics();
     await this.setupHealthChecks();
-    console.log('✅ Monitoring setup completed!');
-  }
+    console.log('✅ Monitoring setup completed!')}
 }
 
 const setup = new MonitoringSetup();

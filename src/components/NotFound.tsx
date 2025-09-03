@@ -11,5 +11,4 @@ export default function NotFound() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

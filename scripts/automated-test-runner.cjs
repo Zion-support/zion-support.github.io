@@ -16,8 +16,7 @@ class AutomatedTestRunner {
         failed: 0,
         skipped: 0
       }
-    };
-  }
+    }}
 
   async runTests() {
     console.log('🧪 Starting Automated Test Suite...');
@@ -38,84 +37,74 @@ class AutomatedTestRunner {
       // Generate report
       this.generateReport();
       
-      console.log('✅ Test suite completed successfully');
-    } catch (error) {
+      console.log('✅ Test suite completed successfully')} catch (error) {
       console.error('❌ Test suite failed:', error.message);
       this.generateReport();
-      process.exit(1);
-    }
+      process.exit(1)}
   }
 
   async runLintingTests() {
     console.log('🔍 Running linting tests...');
     
     try {
-      const result = execSync('npm run lint', { 
+      const result = execSync('npm run lint' { 
         cwd: this.projectRoot, 
         encoding: 'utf8',
         timeout: 60000
       });
       
       this.addTestResult('Linting', 'passed', 'No linting errors found');
-      console.log('✅ Linting tests passed');
-    } catch (error) {
+      console.log('✅ Linting tests passed')} catch (error) {
       this.addTestResult('Linting', 'failed', error.message);
-      console.log('❌ Linting tests failed');
-    }
+      console.log('❌ Linting tests failed')}
   }
 
   async runTypeChecking() {
     console.log('🔍 Running type checking...');
     
     try {
-      const result = execSync('npm run type-check', { 
+      const result = execSync('npm run type-check' { 
         cwd: this.projectRoot, 
         encoding: 'utf8',
         timeout: 60000
       });
       
       this.addTestResult('Type Checking', 'passed', 'No type errors found');
-      console.log('✅ Type checking passed');
-    } catch (error) {
+      console.log('✅ Type checking passed')} catch (error) {
       this.addTestResult('Type Checking', 'failed', error.message);
-      console.log('❌ Type checking failed');
-    }
+      console.log('❌ Type checking failed')}
   }
 
   async runBuildTests() {
     console.log('🔨 Running build tests...');
     
     try {
-      const result = execSync('npm run build', { 
+      const result = execSync('npm run build' { 
         cwd: this.projectRoot, 
         encoding: 'utf8',
         timeout: 300000 // 5 minutes
       });
       
       this.addTestResult('Build', 'passed', 'Build completed successfully');
-      console.log('✅ Build tests passed');
-    } catch (error) {
+      console.log('✅ Build tests passed')} catch (error) {
       this.addTestResult('Build', 'failed', error.message);
-      console.log('❌ Build tests failed');
-    }
+      console.log('❌ Build tests failed')}
   }
 
   async runUnitTests() {
     console.log('🧪 Running unit tests...');
     
     try {
-      const result = execSync('npm run test', { 
+      const result = execSync('npm run test' { 
         cwd: this.projectRoot, 
         encoding: 'utf8',
         timeout: 120000 // 2 minutes
       });
       
       this.addTestResult('Unit Tests', 'passed', 'All unit tests passed');
-      console.log('✅ Unit tests passed');
-    } catch (error) {
+      console.log('✅ Unit tests passed')} catch (error) {
       this.addTestResult('Unit Tests', 'failed', error.message);
-      console.log('❌ Unit tests failed');
-    }
+      console.log('❌ Unit tests failed')}
   }
 
   addTestResult(name, status, message) {
@@ -127,8 +116,7 @@ class AutomatedTestRunner {
     });
     
     this.results.summary.total++;
-    this.results.summary[status]++;
-  }
+    this.results.summary[status]++}
 
   generateReport() {
     const reportPath = path.join(this.projectRoot, 'test-results.json');
@@ -142,13 +130,11 @@ class AutomatedTestRunner {
     console.log(`Skipped: ${this.results.summary.skipped}`);
     console.log('='.repeat(50));
     
-    console.log(`\n📄 Detailed report saved to: ${reportPath}`);
-  }
+    console.log(`\n📄 Detailed report saved to: ${reportPath}`)}
 }
 
 // Run the test suite
 const testRunner = new AutomatedTestRunner();
 testRunner.runTests().catch(error => {
   console.error('Fatal error:', error.message);
-  process.exit(1);
-});
+  process.exit(1)});

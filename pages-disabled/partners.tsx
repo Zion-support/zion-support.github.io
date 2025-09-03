@@ -11,20 +11,17 @@ const Partners: NextPage = () => {
       title: 'Strategic Partners',
       description: 'Long-term partnerships that drive mutual growth and innovation.',
       benefits: ['Joint product development', 'Shared resources', 'Market expansion']
-    },
-    {
+    }, {
       icon: Award,
       title: 'Technology Partners',
       description: 'Integration partnerships with leading technology providers.',
       benefits: ['API integrations', 'Technical support', 'Co-marketing opportunities']
-    },
-    {
+    }, {
       icon: Users,
       title: 'Channel Partners',
       description: 'Reseller and distribution partnerships for market reach.',
       benefits: ['Revenue sharing', 'Training programs', 'Marketing support']
-    },
-    {
+    }, {
       icon: Globe,
       title: 'Global Partners',
       description: 'International partnerships for worldwide market presence.',
@@ -38,32 +35,27 @@ const Partners: NextPage = () => {
       logo: '/api/placeholder/200/100',
       description: 'Cloud infrastructure and AI services partnership',
       category: 'Technology Partner'
-    },
-    {
+    }, {
       name: 'Amazon Web Services',
       logo: '/api/placeholder/200/100',
       description: 'Cloud computing and machine learning solutions',
       category: 'Technology Partner'
-    },
-    {
+    }, {
       name: 'Google Cloud',
       logo: '/api/placeholder/200/100',
       description: 'AI and analytics platform integration',
       category: 'Technology Partner'
-    },
-    {
+    }, {
       name: 'IBM',
       logo: '/api/placeholder/200/100',
       description: 'Quantum computing and enterprise solutions',
       category: 'Strategic Partner'
-    },
-    {
+    }, {
       name: 'Oracle',
       logo: '/api/placeholder/200/100',
       description: 'Database and enterprise application integration',
       category: 'Technology Partner'
-    },
-    {
+    }, {
       name: 'Salesforce',
       logo: '/api/placeholder/200/100',
       description: 'CRM and customer experience solutions',
@@ -76,18 +68,15 @@ const Partners: NextPage = () => {
       icon: Star,
       title: 'Access to Cutting-Edge Technology',
       description: 'Leverage the latest innovations and technologies from our partners.'
-    },
-    {
+    }, {
       icon: Users,
       title: 'Expanded Market Reach',
       description: 'Tap into new markets and customer segments through our partner network.'
-    },
-    {
+    }, {
       icon: Award,
       title: 'Enhanced Credibility',
       description: 'Build trust with customers through our established partner relationships.'
-    },
-    {
+    }, {
       icon: CheckCircle,
       title: 'Comprehensive Support',
       description: 'Access to expert support and resources from our partner ecosystem.'
@@ -254,7 +243,6 @@ const Partners: NextPage = () => {
         </section>
       </div>
     </MainLayout>
-  );
-};
+  )};
 
 export default Partners;

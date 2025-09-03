@@ -11,5 +11,4 @@ export default function enhancedServices() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

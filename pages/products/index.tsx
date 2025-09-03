@@ -27,8 +27,7 @@ const ProductsIndex: NextPage = () => {
         'API integration'
       ],
       color: 'blue'
-    },
-    {
+    }, {
       icon: LinkIcon,
       title: 'Blockchain Solutions',
       description: 'Secure, scalable blockchain solutions for enterprise applications.',
@@ -40,8 +39,7 @@ const ProductsIndex: NextPage = () => {
         'Digital identity management'
       ],
       color: 'green'
-    },
-    {
+    }, {
       icon: Smartphone,
       title: 'IoT Management Platform',
       description: 'Comprehensive IoT platform for managing connected devices and data.',
@@ -53,8 +51,7 @@ const ProductsIndex: NextPage = () => {
         'Scalable architecture'
       ],
       color: 'purple'
-    },
-    {
+    }, {
       icon: Shield,
       title: 'Cybersecurity Suite',
       description: 'Advanced security solutions to protect your digital assets.',
@@ -76,8 +73,7 @@ const ProductsIndex: NextPage = () => {
       purple: 'bg-purple-100 text-purple-600',
       red: 'bg-red-100 text-red-600'
     };
-    return colorMap[color] || 'bg-gray-100 text-gray-600';
-  };
+    return colorMap[color] || 'bg-gray-100 text-gray-600'};
 
   return (
     <MainLayout 
@@ -136,8 +132,7 @@ const ProductsIndex: NextPage = () => {
                     </button>
                   </div>
                 </div>
-              );
-            })}
+              )})}
           </div>
         </div>
       </section>
@@ -207,7 +202,6 @@ const ProductsIndex: NextPage = () => {
         </div>
       </section>
     </MainLayout>
-  );
-};
+  )};
 
 export default ProductsIndex;

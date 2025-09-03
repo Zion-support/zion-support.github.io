@@ -11,5 +11,4 @@ export default function FloatingCTA.test() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

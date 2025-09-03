@@ -1,23 +1,5 @@
-<<<<<<< HEAD
-describe: (
-  'Careers', () => {}' it ('renders without crashing';
-  ', () => {} render: (<Careers />) '; expect: (screen.getByRole (';
-  'main') || screen.getByText: (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content';
-  ', () => {} render: (<Careers />) ''';
-=======
-describe (
-<<<<<<< HEAD
-  'Careers', () => {}' it ('renders without crashing
-  ', () => {} render (<Careers />) ' expect (screen.getByRole (
-=======
-<<<<<<< HEAD
-  'Careers', () => {} it('renders without crashing', () => {} render (<Careers />) '; expect (screen.getByRole ('
-  'main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content'
-  ', () => {} render (<Careers />) '''
-=======
-  'Careers', () => {}' it('renders without crashing', () => {} render (<Careers />) ' expect (screen.getByRole (
->>>>>>> main
+
   'main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content
   ', () => {} render (<Careers />) ''
->>>>>>> main
->>>>>>> main
+
+

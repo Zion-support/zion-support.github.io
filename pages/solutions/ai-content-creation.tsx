@@ -29,28 +29,23 @@ export default function AIContentCreation() {
       icon: FileText,
       title: 'Blog Post Generation',
       description: 'Create engaging, SEO-optimized blog posts automatically with AI-powered content generation.'
-    },
-    {
+    }, {
       icon: PenTool,
       title: 'Social Media Content',
       description: 'Generate compelling social media posts, captions, and hashtags for all platforms.'
-    },
-    {
+    }, {
       icon: Search,
       title: 'SEO Optimization',
       description: 'Automatically optimize content for search engines with keyword research and optimization.'
-    },
-    {
+    }, {
       icon: Globe,
       title: 'Multi-language Support',
       description: 'Create content in multiple languages with accurate translation and localization.'
-    },
-    {
+    }, {
       icon: BarChart3,
       title: 'Content Analytics',
       description: 'Track performance metrics and optimize content strategy with detailed analytics.'
-    },
-    {
+    }, {
       icon: Zap,
       title: 'Real-time Generation',
       description: 'Generate content instantly with our advanced AI models and processing capabilities.'
@@ -71,8 +66,7 @@ export default function AIContentCreation() {
         'Email support'
       ],
       popular: false
-    },
-    {
+    }, {
       name: 'Professional',
       price: '$599',
       period: '/month',
@@ -86,8 +80,7 @@ export default function AIContentCreation() {
         'Priority support'
       ],
       popular: true
-    },
-    {
+    }, {
       name: 'Enterprise',
       price: '$1,299',
       period: '/month',

@@ -7,21 +7,18 @@ const glob = require('glob');
 class TestSyntaxFixer {
   constructor() {
     this.projectRoot = process.cwd();
-    this.testDir = path.join(this.projectRoot, '__tests__');
-  }
+    this.testDir = path.join(this.projectRoot, '__tests__')}
 
   async fixAllTestFiles() {
     console.log('🔧 Starting test syntax fixes...');
     
-    const testFiles = glob.sync('**/*.test.js', { cwd: this.testDir });
+    const testFiles = glob.sync('**/*.test.js' { cwd: this.testDir });
     
     for (const testFile of testFiles) {
       const filePath = path.join(this.testDir, testFile);
-      await this.fixTestFile(filePath);
-    }
+      await this.fixTestFile(filePath)}
     
-    console.log('✅ Test syntax fixes completed');
-  }
+    console.log('✅ Test syntax fixes completed')}
 
   async fixTestFile(filePath) {
     try {
@@ -31,10 +28,8 @@ class TestSyntaxFixer {
       content = this.fixSyntaxIssues(content);
       
       fs.writeFileSync(filePath, content);
-      console.log(`✅ Fixed: ${path.relative(this.projectRoot, filePath)}`);
-    } catch (error) {
-      console.error(`❌ Failed to fix ${filePath}:`, error.message);
-    }
+      console.log(`✅ Fixed: ${path.relative(this.projectRoot, filePath)}`)} catch (error) {
+      console.error(`❌ Failed to fix ${filePath}:`, error.message)}
   }
 
   fixSyntaxIssues(content) {
@@ -57,13 +52,10 @@ class TestSyntaxFixer {
     // Fix missing semicolons after comments
     content = content.replace(/\/\/ [^}]+}\s*$/gm, (match) => {
       if (!match.endsWith(';')) {
-        return match.replace(/}\s*$/, ';\n  }');
-      }
-      return match;
-    });
+        return match.replace(/}\s*$/, ';\n  }')}
+      return match});
     
-    return content;
-  }
+    return content}
 }
 
 // Run the fixer

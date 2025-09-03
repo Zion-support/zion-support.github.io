@@ -1,13 +1,7 @@
-<<<<<<< HEAD
-import React from 'react';
-import { ReactNode } from "react";
-=======
-import React, { ReactNode } from "react";
->>>>>>> main
+
 
 interface EnhancedLayoutProps {
-  children: ReactNode;
-}
+  children: ReactNode}
 
 export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
   return (
@@ -16,5 +10,4 @@ export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
         {children}
       </main>
     </div>
-  );
-}
+  )}

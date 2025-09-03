@@ -11,5 +11,4 @@ export default function UserExperienceOptimizer.test() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

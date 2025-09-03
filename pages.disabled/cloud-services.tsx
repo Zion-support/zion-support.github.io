@@ -9,8 +9,7 @@ import {
   Shield,
   Today,
   Users,
-  Zap,
-} from 'lucide-react';
+  Zap } from 'lucide-react';
 
 export default function CloudServices() {
   return (
@@ -270,5 +269,4 @@ export default function CloudServices() {
         </section>
       </main>
     </>
-  );
-}
+  )}

@@ -32,8 +32,7 @@ const SecurityEnhancer: React.FC = () => {
       const meta = document.createElement('meta');
       meta.httpEquiv = name;
       meta.content = value;
-      document.head.appendChild(meta);
-    });
+      document.head.appendChild(meta)});
 ;
     // Detect and prevent XSS attempts;
     const detectXSS = () => {;
@@ -43,10 +42,8 @@ const SecurityEnhancer: React.FC = () => {
              !script.src.includes('googletagmanager.com') &&
              !script.src.includes('google-analytics.com')) {
           console.warn('Potentially malicious script detected: ', script.src);
-          script.remove();
-        }
-      });
-    };
+          script.remove()}
+      })};
 ;
     // Monitor for suspicious activity;
     const monitorSuspiciousActivity = () => {;
@@ -57,8 +54,7 @@ const SecurityEnhancer: React.FC = () => {
              !iframe.src.includes('youtube.com') &&
              !iframe.src.includes('vimeo.com')) {
           console.warn('Potentially malicious iframe detected: ', iframe.src);
-          iframe.remove();
-        }
+          iframe.remove()}
       });
 ;
       // Detect suspicious form submissions;
@@ -69,24 +65,19 @@ const SecurityEnhancer: React.FC = () => {
           const suspiciousPatterns = [
             /<script/i, /javascript: /i,;
             /on\w+\s*=/i, /eval\(/i,;
-            /expression\(/i;
-          ];
+            /expression\(/i];
 ;
           for (const [key, value] of formData.entries()) {;
             if (typeof value === 'string') {;
               suspiciousPatterns.forEach(pattern => {;
                 if (pattern.test(value)) {;
-                  console.warn('Suspicious form data detected: ', { key, value });
+                  console.warn('Suspicious form data detected: ' { key, value });
                   e.preventDefault();
                   alert('Suspicious content detected. Please check your input.');
-                  return;
-                }
-              });
-            }
+                  return}
+              })}
           }
-        });
-      });
-    };
+        })})};
 ;
     // Initialize security monitoring;
     detectXSS();
@@ -95,12 +86,9 @@ const SecurityEnhancer: React.FC = () => {
     // Set up periodic security checks;
     const securityInterval = setInterval(() => {;
       detectXSS();
-      monitorSuspiciousActivity();
-    }, 30000) // Check every 30 seconds;
+      monitorSuspiciousActivity()}, 30000) // Check every 30 seconds;
     return () => {;
-      clearInterval(securityInterval);
-    };
-  }, []);
+      clearInterval(securityInterval)}}, []);
 ;
   return (;
     <Head>
@@ -121,7 +109,6 @@ const SecurityEnhancer: React.FC = () => {
       {/* HSTS (HTTP Strict Transport Security) - This should be set at server level */}
       <meta httpEquiv='Strict-Transport-Security' content='max-age=31536000 includeSubDomains preload' />;
     </Head>
-  );
-};
+  )};
 ;
 export default SecurityEnhancer;

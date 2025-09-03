@@ -24,28 +24,23 @@ export default function CustomerSupport() {
       icon: Bot,
       title: 'AI Chatbots',
       description: 'Intelligent chatbots that provide instant responses and escalate complex issues to human agents.'
-    },
-    {
+    }, {
       icon: MessageSquare,
       title: 'Ticket Management',
       description: 'Comprehensive ticket system with priority levels, categorization, and automated routing.'
-    },
-    {
+    }, {
       icon: FileText,
       title: 'Knowledge Base',
       description: 'Self-service knowledge base with searchable articles, FAQs, and video tutorials.'
-    },
-    {
+    }, {
       icon: Globe,
       title: 'Multi-channel Support',
       description: 'Support customers across email, chat, phone, social media, and other channels.'
-    },
-    {
+    }, {
       icon: BarChart3,
       title: 'Analytics & Reporting',
       description: 'Track performance metrics, customer satisfaction, and team productivity.'
-    },
-    {
+    }, {
       icon: Clock,
       title: '24/7 Availability',
       description: 'Round-the-clock customer support with automated responses and escalation.'

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react.ts';
+import React { useEffect, useRef } from 'react.ts';
 interface FuturisticAnimatedBackground2029Props extends React.PropsWithChildren<{
 
 }> {

@@ -203,7 +203,6 @@ const TermsOfService: NextPage = () => {
         </section>
       </div>
     </MainLayout>
-  );
-};
+  )};
 
 export default TermsOfService;

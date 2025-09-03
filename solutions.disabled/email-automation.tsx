@@ -1,35 +1,13 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD:pages/solutions/email-automation.tsx
-import SEO from '../../src/components/SEO';
-import { Card } from '../../src/components/ui/Card';
-import { Button } from '../../src/components/ui/Button';
-import { Badge } from '../../src/components/ui/Badge';
-=======
-<<<<<<< HEAD:solutions.disabled/email-automation.tsx
-// import SEO from '../../components/SEO';
-// import { Card } from '../../components/ui/Card';
-// import { Button } from '../../components/ui/Button';
-// import { Badge } from '../../components/ui/Badge';
-=======
-<<<<<<< HEAD
-import SEOHead from '../../components/SEOHead';
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> main
 import { Card } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
->>>>>>> main
+
 import { Badge } from '../../components/ui/Badge';
-<<<<<<< HEAD
-=======
-import { Button } from '../../components/ui/Button';
-import { Card } from '../../components/ui/Card';
->>>>>>> main:pages/solutions/email-automation.tsx
->>>>>>> main:solutions.disabled/email-automation.tsx
+:pages/solutions/email-automation.tsx
+:solutions.disabled/email-automation.tsx
 import {
   Mail,
   ArrowRight,
@@ -45,190 +23,95 @@ import {
   Send,
   UserCheck,
   Aperture,
-  Clock,
-} from 'lucide-react';
+  Clock } from 'lucide-react';
 
->>>>>>> main
+
 export default function EmailAutomation() {
   const features = [
   {
       icon: Send,
       title: 'Drip Campaigns',
       description:'
-        'Create sophisticated email sequences that nurture leads and convert prospects into customers.',
-    },
-    {
+        'Create sophisticated email sequences that nurture leads and convert prospects into customers.' }, {
       icon: UserCheck,
       title: 'Personalization',
       description:'
-        'Deliver highly personalized emails using dynamic content and behavioral triggers.',
-    },
-    {
+        'Deliver highly personalized emails using dynamic content and behavioral triggers.' }, {
       icon: Aperture,
       title: 'A/B Testing',
       description:'
-        'Optimize your email campaigns with built-in A/B testing and performance analytics.',
-    },
-    {
+        'Optimize your email campaigns with built-in A/B testing and performance analytics.' }, {
       icon: BarChart3,
       title: 'Analytics Dashboard',
       description:'
-        'Track open rates, click-through rates, and conversions with detailed reporting.',
-    },
-    {
+        'Track open rates, click-through rates, and conversions with detailed reporting.' }, {
       icon: Clock,
       title: 'Automated Triggers',
       description:'
-        'Set up automated emails based on user behavior, time delays, and custom conditions.',
-    },
-    {
+        'Set up automated emails based on user behavior, time delays, and custom conditions.' }, {
       icon: Zap,
       title: 'Real-time Processing',
       description:'
-        'Process and send emails in real-time with our high-performance infrastructure.',
-    },
-  ];
+        'Process and send emails in real-time with our high-performance infrastructure.' } ];
 
   const pricingPlans = [
-<<<<<<< HEAD:pages/solutions/email-automation.tsx
-    {'
-=======
-  {
->>>>>>> main:solutions.disabled/email-automation.tsx
+:solutions.disabled/email-automation.tsx
       name: 'Starter',
       price: '$199',
       period: '/month',
       description: 'Perfect for small businesses starting with email marketing',
-<<<<<<< HEAD:pages/solutions/email-automation.tsx
-      features: ['
-=======
-      features: [
-<<<<<<< HEAD
->>>>>>> main:solutions.disabled/email-automation.tsx
+:solutions.disabled/email-automation.tsx
         'Up to 10, 000 emails/month',
         'Basic drip campaigns',
         'Email templates',
         'Basic analytics',
-        'Email support',
-=======
-        'Up to 10, 000 emails/month,Basic drip campaigns,Email templates,Basic analytics,Email support',
->>>>>>> main
-      ],
-      popular: false,
-    },
-    {'
+        'Email support' ],
+      popular: false }, {'
       name: 'Professional',
       price: '$399',
       period: '/month',
       description: 'Ideal for growing businesses with advanced needs',
-<<<<<<< HEAD:pages/solutions/email-automation.tsx
-      features: ['
-=======
-      features: [
-<<<<<<< HEAD
->>>>>>> main:solutions.disabled/email-automation.tsx
+:solutions.disabled/email-automation.tsx
         'Up to 50, 000 emails/month',
         'Advanced automation',
         'A/B testing',
         'Advanced analytics',
         'Custom templates',
-        'Priority support',
-=======
-        'Up to 50, 000 emails/month,Advanced automation,A/B testing,Advanced analytics,Custom templates,Priority support',
->>>>>>> main
-      ],
-      popular: true,
-    },
-    {'
+        'Priority support' ],
+      popular: true }, {'
       name: 'Enterprise',
       price: '$799',
       period: '/month',
       description: 'For large organizations with high-volume needs',
-<<<<<<< HEAD:pages/solutions/email-automation.tsx
-      features: ['
-=======
-      features: [
-<<<<<<< HEAD
->>>>>>> main:solutions.disabled/email-automation.tsx
+:solutions.disabled/email-automation.tsx
         'Unlimited emails',
         'Custom integrations',
         'Advanced segmentation',
         'Dedicated IP',
         'Custom reporting',
         'Dedicated account manager',
-        '24/7 phone support',
-=======
-        'Unlimited emails,Custom integrations,Advanced segmentation,Dedicated IP,Custom reporting,Dedicated account manager,24/7 phone support',
->>>>>>> main
-      ],
-      popular: false,
-    },
-  ];
+        '24/7 phone support' ],
+      popular: false } ];
 
   return (
     <>
-<<<<<<< HEAD:pages/solutions/email-automation.tsx
-      <SEO'
-        title="Email Automation - Zion Tech Group""
-        description="Intelligent email marketing automation with personalized campaigns and advanced analytics. Boost your email marketing ROI.""
-=======
-<<<<<<< HEAD:solutions.disabled/email-automation.tsx
-      <Head>
-        <title>Email Automation - Zion Tech Group</title>
-        <meta name="description" content="Intelligent email marketing automation with personalized campaigns and advanced analytics. Boost your email marketing ROI." />
-        <meta name="keywords" content="email automation, email marketing, drip campaigns, personalization, A/B testing" />
-=======
-<<<<<<< HEAD
-      <SEOHead
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      <SEO
->>>>>>> main
+
         title="Email Automation - Zion Tech Group"
         description="Intelligent email marketing automation with personalized campaigns and advanced analytics. Boost your email marketing ROI."
->>>>>>> main:solutions.disabled/email-automation.tsx
+:solutions.disabled/email-automation.tsx
         keywords="email automation, email marketing, drip campaigns, personalization, A/B testing"
       />
-=======
->>>>>>> main
->>>>>>> main
+
+
       <Head>
         <title>Email Automation - Zion Tech Group</title>
         <meta name="description" content="Intelligent email marketing automation with personalized campaigns and advanced analytics. Boost your email marketing ROI." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href="https://ziontechgroup.com/solutions/email-automation" />
->>>>>>> main:pages/solutions/email-automation.tsx
+:pages/solutions/email-automation.tsx
       </Head>
 
-<<<<<<< HEAD:pages/solutions/email-automation.tsx
-      {/* Hero Section */}"
-      <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">"
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 l,
-    g:px-8">"
-          <div className="text-center">"
-            <Badge className="mb-4 bg-blue-500 text-white">"
-              <Mail className="w-4 h-4 mr-2" />
-              Marketing Automation
-            </Badge>"
-            <h1 className="text-4xl m,
-    d:text-6xl font-bold mb-6">
-              Email Automation"
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">"
-=======
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
-          <div className="text-center">
-            <div className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium"
-              <Mail className="w-4 h-4 mr-2" />
-              Marketing Automation
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Email Automation
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
->>>>>>> main:solutions.disabled/email-automation.tsx
+:solutions.disabled/email-automation.tsx
                 {' '}
                 Platform
               </span>
@@ -315,15 +198,7 @@ export default function EmailAutomation() {
                 key={index}"
                 className={`p-8 relative ${plan.popular ? 'ring-2 ring-blue-500 shadow-xl' : ''}`}
               >
-<<<<<<< HEAD:pages/solutions/email-automation.tsx
-                {plan.popular && (`
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
-                    <Badge className="bg-blue-500 text-white px-4 py-1">
-=======
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <div className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium"
->>>>>>> main:solutions.disabled/email-automation.tsx
+:solutions.disabled/email-automation.tsx
                       Most Popular
                     </div>
                   </div>
@@ -396,6 +271,5 @@ export default function EmailAutomation() {
         </div>
       </section>
     </>
-  );
-}
+  )}
 "

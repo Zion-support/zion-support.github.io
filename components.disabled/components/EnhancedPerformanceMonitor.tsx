@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React { useEffect, useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Activity, AlertTriangle, CheckCircle } from 'lucide-react';
 
@@ -8,14 +8,12 @@ interface PerformanceMetrics {
   fid: number;
   cls: number;
   ttfb: number;
-  score: number;
-}
+  score: number}
 
 interface PerformanceAlert {
   type: 'warning' | 'error';
   message: string;
-  metric: string;
-}
+  metric: string}
 
 const EnhancedPerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
@@ -26,8 +24,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
   const getScoreColor = (score: number): string => {
     if (score >= 90) return 'text-green-600';
     if (score >= 50) return 'text-yellow-600';
-    return 'text-red-600';
-  };
+    return 'text-red-600'};
 
   const updateMetrics = useCallback(async () => {
     setIsLoading(true);
@@ -41,8 +38,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
         fid: Math.random() * 100 + 10,
         cls: Math.random() * 0.3,
         ttfb: Math.random() * 500 + 100,
-        score: Math.random() * 100,
-      };
+        score: Math.random() * 100 };
 
       setMetrics(newMetrics);
       setLastUpdated(new Date());
@@ -53,44 +49,32 @@ const EnhancedPerformanceMonitor: React.FC = () => {
         newAlerts.push({
           type: 'warning',
           message: 'First Contentful Paint is slow',
-          metric: 'FCP',
-        });
-      }
+          metric: 'FCP' })}
       if (newMetrics.lcp > 2500) {
         newAlerts.push({
           type: 'error',
           message: 'Largest Contentful Paint is too slow',
-          metric: 'LCP',
-        });
-      }
+          metric: 'LCP' })}
       if (newMetrics.fid > 100) {
         newAlerts.push({
           type: 'warning',
           message: 'First Input Delay is high',
-          metric: 'FID',
-        });
-      }
+          metric: 'FID' })}
       if (newMetrics.cls > 0.1) {
         newAlerts.push({
           type: 'error',
           message: 'Cumulative Layout Shift is significant',
-          metric: 'CLS',
-        });
-      }
+          metric: 'CLS' })}
 
-      setAlerts(newAlerts);
-    } catch (error) {
-      console.error('Failed to update metrics:', error);
-    } finally {
-      setIsLoading(false);
-    }
+      setAlerts(newAlerts)} catch (error) {
+      console.error('Failed to update metrics:', error)} finally {
+      setIsLoading(false)}
   }, []);
 
   useEffect(() => {
     updateMetrics();
     const interval = setInterval(updateMetrics, 30000); // Update every 30 seconds
-    return () => clearInterval(interval);
-  }, [updateMetrics]);
+    return () => clearInterval(interval)}, [updateMetrics]);
 
   if (!metrics) {
     return (
@@ -100,8 +84,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
           <p className="text-gray-300">Loading performance metrics...</p>
         </div>
       </div>
-    );
-  }
+    )}
 
   return (
     <div className="min-h-screen bg-gray-900 text-white p-6">
@@ -291,7 +274,6 @@ const EnhancedPerformanceMonitor: React.FC = () => {
         </motion.div>
       </div>
     </div>
-  );
-};
+  )};
 
 export default EnhancedPerformanceMonitor;

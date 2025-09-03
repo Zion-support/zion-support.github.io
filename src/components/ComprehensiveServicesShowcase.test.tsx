@@ -11,5 +11,4 @@ export default function ComprehensiveServicesShowcase.test() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

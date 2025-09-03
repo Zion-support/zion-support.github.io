@@ -10,18 +10,15 @@ class IntelligentErrorDetector {
     this.reportsDir = path.join(this.projectRoot, 'automation-reports');
     this.errors = [];
     this.warnings = [];
-    this.suggestions = [];
-  }
+    this.suggestions = []}
 
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] [${level}] ${message}`);
-  }
+    console.log(`[${timestamp}] [${level}] ${message}`)}
 
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true });
-    }
+      fs.mkdirSync(this.reportsDir { recursive: true })}
   }
 
   scanFile(filePath) {
@@ -36,16 +33,14 @@ class IntelligentErrorDetector {
           type: 'error',
           message: 'Double semicolon detected',
           line: this.findLineNumber(content, ';;')
-        });
-      }
+        })}
 
       if (content.includes('import') && content.includes(';;')) {
         issues.push({
           type: 'error',
           message: 'Malformed import statement',
           line: this.findLineNumber(content, 'import')
-        });
-      }
+        })}
 
       // Check for unterminated strings
       const stringRegex = /(['"])([^'"]*?)(\n|$)/g;
@@ -56,8 +51,7 @@ class IntelligentErrorDetector {
             type: 'warning',
             message: 'Possible unterminated string',
             line: this.findLineNumber(content, match[0])
-          });
-        }
+          })}
       }
 
       // Check for missing semicolons
@@ -74,8 +68,7 @@ class IntelligentErrorDetector {
               type: 'suggestion',
               message: 'Consider adding semicolon',
               line: index + 1
-            });
-          }
+            })}
         }
       });
 
@@ -83,23 +76,19 @@ class IntelligentErrorDetector {
         this.errors.push({
           file: relativePath,
           issues: issues
-        });
-      }
+        })}
 
     } catch (error) {
-      this.log(`Error scanning ${filePath}: ${error.message}`, 'ERROR');
-    }
+      this.log(`Error scanning ${filePath}: ${error.message}`, 'ERROR')}
   }
 
   findLineNumber(content, searchString) {
     const lines = content.split('\n');
     for (let i = 0; i < lines.length; i++) {
       if (lines[i].includes(searchString)) {
-        return i + 1;
-      }
+        return i + 1}
     }
-    return 1;
-  }
+    return 1}
 
   scanDirectory(dirPath) {
     try {
@@ -110,31 +99,26 @@ class IntelligentErrorDetector {
         const stat = fs.statSync(fullPath);
         
         if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-          this.scanDirectory(fullPath);
-        } else if (stat.isFile() && this.isCodeFile(item)) {
-          this.scanFile(fullPath);
-        }
+          this.scanDirectory(fullPath)} else if (stat.isFile() && this.isCodeFile(item)) {
+          this.scanFile(fullPath)}
       }
     } catch (error) {
-      this.log(`Error scanning directory ${dirPath}: ${error.message}`, 'ERROR');
-    }
+      this.log(`Error scanning directory ${dirPath}: ${error.message}`, 'ERROR')}
   }
 
   isCodeFile(filename) {
     const extensions = ['.js', '.jsx', '.ts', '.tsx', '.cjs', '.mjs'];
-    return extensions.some(ext => filename.endsWith(ext));
-  }
+    return extensions.some(ext => filename.endsWith(ext))}
 
   async runLinting() {
     this.log('🔍 Running ESLint...', 'INFO');
     try {
-      const result = execSync('npm run lint', { 
+      const result = execSync('npm run lint' { 
         cwd: this.projectRoot, 
         encoding: 'utf8',
         stdio: 'pipe'
       });
-      this.log('✅ ESLint passed', 'SUCCESS');
-    } catch (error) {
+      this.log('✅ ESLint passed', 'SUCCESS')} catch (error) {
       this.log('❌ ESLint found issues', 'ERROR');
       this.errors.push({
         file: 'ESLint',
@@ -143,20 +127,18 @@ class IntelligentErrorDetector {
           message: 'ESLint validation failed',
           output: error.stdout || error.message
         }]
-      });
-    }
+      })}
   }
 
   async runTypeCheck() {
     this.log('🔍 Running TypeScript type check...', 'INFO');
     try {
-      const result = execSync('npm run type-check', { 
+      const result = execSync('npm run type-check' { 
         cwd: this.projectRoot, 
         encoding: 'utf8',
         stdio: 'pipe'
       });
-      this.log('✅ TypeScript type check passed', 'SUCCESS');
-    } catch (error) {
+      this.log('✅ TypeScript type check passed', 'SUCCESS')} catch (error) {
       this.log('❌ TypeScript type check found issues', 'ERROR');
       this.errors.push({
         file: 'TypeScript',
@@ -165,8 +147,7 @@ class IntelligentErrorDetector {
           message: 'TypeScript type check failed',
           output: error.stdout || error.message
         }]
-      });
-    }
+      })}
   }
 
   generateReport() {
@@ -189,30 +170,24 @@ class IntelligentErrorDetector {
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     
     this.log(`📄 Report saved to: ${reportPath}`, 'SUCCESS');
-    return report;
-  }
+    return report}
 
   generateRecommendations() {
     const recommendations = [];
     
     if (this.errors.length > 0) {
-      recommendations.push('Fix all syntax errors before proceeding');
-    }
+      recommendations.push('Fix all syntax errors before proceeding')}
     
     if (this.warnings.length > 0) {
-      recommendations.push('Review and address warnings');
-    }
+      recommendations.push('Review and address warnings')}
     
     if (this.suggestions.length > 0) {
-      recommendations.push('Consider implementing suggested improvements');
-    }
+      recommendations.push('Consider implementing suggested improvements')}
 
     if (this.errors.length === 0 && this.warnings.length === 0) {
-      recommendations.push('Code quality looks good!');
-    }
+      recommendations.push('Code quality looks good!')}
 
-    return recommendations;
-  }
+    return recommendations}
 
   printSummary() {
     this.log('\n📊 Error Detection Summary:', 'INFO');
@@ -226,10 +201,7 @@ class IntelligentErrorDetector {
       this.errors.forEach(error => {
         this.log(`  📁 ${error.file}:`, 'INFO');
         error.issues.forEach(issue => {
-          this.log(`    Line ${issue.line}: ${issue.message}`, 'ERROR');
-        });
-      });
-    }
+          this.log(`    Line ${issue.line}: ${issue.message}`, 'ERROR')})})}
   }
 
   async run() {
@@ -251,14 +223,12 @@ class IntelligentErrorDetector {
     this.printSummary();
 
     this.log('🎉 Error detection completed!', 'SUCCESS');
-    return report;
-  }
+    return report}
 }
 
 // Run the detector
 if (require.main === module) {
   const detector = new IntelligentErrorDetector();
-  detector.run().catch(console.error);
-}
+  detector.run().catch(console.error)}
 
 module.exports = IntelligentErrorDetector;

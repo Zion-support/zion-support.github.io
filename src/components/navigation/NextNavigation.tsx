@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -29,16 +29,13 @@ const NextNavigation = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
+      setIsScrolled(window.scrollY > 20)};
 
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    return () => window.removeEventListener('scroll', handleScroll)}, []);
 
   const navigationItems = [
-    { name: 'Home', href: '/' },
-    { 
+    { name: 'Home', href: '/' }, { 
       name: 'Services', 
       href: '/services', 
       dropdown: [
@@ -47,41 +44,34 @@ const NextNavigation = () => {
           href: '/ai-services', 
           icon: Brain, 
           description: 'Cutting-edge AI solutions' 
-        },
-        { 
+        }, { 
           name: 'IT Services', 
           href: '/it-services', 
           icon: Cloud, 
           description: 'Enterprise IT infrastructure' 
-        },
-        { 
+        }, { 
           name: 'Micro SaaS', 
           href: '/micro-saas', 
           icon: Code, 
           description: 'Custom software solutions' 
-        },
-        { 
+        }, { 
           name: 'Cybersecurity', 
           href: '/services#cybersecurity', 
           icon: Shield, 
           description: 'Advanced security solutions' 
-        },
-        { 
+        }, { 
           name: 'Cloud & DevOps', 
           href: '/services#cloud', 
           icon: Database, 
           description: 'Scalable cloud infrastructure' 
-        },
-        { 
+        }, { 
           name: 'Digital Transformation', 
           href: '/services#ai', 
           icon: Zap, 
           description: 'Business transformation' 
         }
       ] 
-    },
-    { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' }
+    }, { name: 'About', href: '/about' }, { name: 'Contact', href: '/contact' }
   ];
 
   const contactInfo = [
@@ -89,13 +79,11 @@ const NextNavigation = () => {
       icon: Phone, 
       text: '+1 302 464 0950', 
       href: 'tel:+13024640950' 
-    },
-    { 
+    }, { 
       icon: Mail, 
       text: 'kleber@ziontechgroup.com', 
       href: 'mailto:kleber@ziontechgroup.com' 
-    },
-    { 
+    }, { 
       icon: MapPin, 
       text: '364 E Main St STE 1008, Middletown DE 19709', 
       href: '#' 
@@ -103,13 +91,11 @@ const NextNavigation = () => {
   ];
 
   const toggleDropdown = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name);
-  };
+    setActiveDropdown(activeDropdown === name ? null : name)};
 
   const closeMobileMenu = () => {
     setIsOpen(false);
-    setActiveDropdown(null);
-  };
+    setActiveDropdown(null)};
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -313,7 +299,6 @@ const NextNavigation = () => {
         )}
       </AnimatePresence>
     </nav>
-  );
-};
+  )};
 
 export default NextNavigation;

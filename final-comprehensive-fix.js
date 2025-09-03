@@ -36,10 +36,8 @@ export default function ${componentName}() {
         </div>
       </div>
     </div>
-  );
-}
-`;
-}
+  )}
+`}
 
 function createValidConfig(filePath) {
   const fileName = path.basename(filePath, path.extname(filePath));
@@ -51,22 +49,16 @@ const config: Config = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
-  ],
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}' ],
   theme: {
     extend: {
       colors: {
         background: 'var(--background)',
-        foreground: 'var(--foreground)',
-      },
-    },
-  },
-  plugins: [],
-};
+        foreground: 'var(--foreground)' } } },
+  plugins: [] };
 
 export default config;
-`;
-  }
+`}
   
   if (fileName.includes('vite')) {
     return `import { defineConfig } from 'vite';
@@ -75,11 +67,8 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   server: {
-    port: 3000,
-  },
-});
-`;
-  }
+    port: 3000 } });
+`}
   
   if (fileName.includes('vitest')) {
     return `import { defineConfig } from 'vitest/config';
@@ -88,42 +77,32 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   test: {
-    environment: 'jsdom',
-  },
-});
-`;
-  }
+    environment: 'jsdom' } });
+`}
   
-  return `export default {};`;
-}
+  return `export default {};`}
 
 function createValidTypeScript(filePath) {
   const fileName = path.basename(filePath, path.extname(filePath));
   
   if (fileName.includes('vite-env')) {
-    return `/// <reference types="vite/client" />`;
-  }
+    return `/// <reference types="vite/client" />`}
   
   if (fileName.includes('external-modules')) {
     return `declare module '*.svg' {
   const content: string;
-  export default content;
-}
+  export default content}
 
 declare module '*.png' {
   const content: string;
-  export default content;
-}
+  export default content}
 
 declare module '*.jpg' {
   const content: string;
-  export default content;
-}
-`;
-  }
+  export default content}
+`}
   
-  return `export {};`;
-}
+  return `export {};`}
 
 function fixFile(filePath) {
   try {
@@ -153,28 +132,20 @@ function fixFile(filePath) {
       let newContent;
       
       if (ext === '.tsx' || ext === '.jsx') {
-        newContent = createValidComponent(filePath);
-      } else if (ext === '.ts' || ext === '.js') {
+        newContent = createValidComponent(filePath)} else if (ext === '.ts' || ext === '.js') {
         if (filePath.includes('config')) {
-          newContent = createValidConfig(filePath);
-        } else if (filePath.includes('types') || filePath.includes('d.ts')) {
-          newContent = createValidTypeScript(filePath);
-        } else {
-          newContent = `export default {};`;
-        }
+          newContent = createValidConfig(filePath)} else if (filePath.includes('types') || filePath.includes('d.ts')) {
+          newContent = createValidTypeScript(filePath)} else {
+          newContent = `export default {};`}
       } else {
-        newContent = `export default {};`;
-      }
+        newContent = `export default {};`}
       
       fs.writeFileSync(filePath, newContent);
-      return true;
-    }
+      return true}
     
-    return false;
-  } catch (error) {
+    return false} catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
+    return false}
 }
 
 function processDirectory(dirPath) {
@@ -188,19 +159,15 @@ function processDirectory(dirPath) {
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory()) {
-        fixedCount += processDirectory(fullPath);
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx')) {
+        fixedCount += processDirectory(fullPath)} else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx')) {
         if (fixFile(fullPath)) {
-          fixedCount++;
-        }
+          fixedCount++}
       }
     }
   } catch (error) {
-    console.error(`Error processing directory ${dirPath}:`, error.message);
-  }
+    console.error(`Error processing directory ${dirPath}:`, error.message)}
   
-  return fixedCount;
-}
+  return fixedCount}
 
 console.log('Starting final comprehensive fix...');
 const fixedCount = processDirectory(path.join(__dirname, 'src'));

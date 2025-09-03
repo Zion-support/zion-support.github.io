@@ -17,8 +17,7 @@ const Enterprise: React.FC = () => {
         Talk to an expert
       </a>
     </div>
-  );
-};
+  )};
 
 export default Enterprise;
 

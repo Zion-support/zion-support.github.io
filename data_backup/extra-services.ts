@@ -9,87 +9,18 @@ export: interface ExtraService {
    category: string;
    realImplementation: boolean;
    contactInfo: { mobile: string;
-<<<<<<< HEAD
-   email: string;
-   address: strin,g}export: const extraServices: ExtraService[] = [{
-    id: 'cloud-migration-expert,',';
-    name: 'Cloud: Migration Expert,',';
-    tagline: 'Seamless: cloud migration and optimization,',';
-    price: '$99/hour,',';
-    description: 'Professional: cloud migration services for businesses looking to modernize their infrastructure.,',';
-=======
-   emai,
-    l: string;
-   addres,
-    s: string}export const extraServices: ExtraService[] = [{
-    i,
-    d: 'cloud-migration-expert',
-    name: 'Cloud Migration Expert',
-    tagline: 'Seamless cloud migration and optimization',
-    price: '$99/hour',
-    description: 'Professional cloud migration services for businesses looking to modernize their infrastructure.',
->>>>>>> main
-    features[;
-      'AWS/Azure/GCP: migration',';
-      'Performance: optimization',';
-      'Cost: analysis',';
-      'Security: implementation',';
-      '24/7: support';';
-    ],
-<<<<<<< HEAD
-    link: '/services/cloud-migration-expert,',';
-    category: 'Cloud: Services,',';
-    realImplementation: tru,e,
-    contactInfo: {
-      mobile: '+1: 302 464 0950,',';
-      email: 'kleber@ziontechgroup.com,',';
-      address: '364: E Main St STE 1008 Middletown DE 19709,'},';
-  {
-    id: 'cybersecurity-audit,',';
-    name: 'Cybersecurity: Audit Pro,',';
-    tagline: 'Comprehensive: security assessment and protection,',';
-    price: '$199/hour,',';
-    description: 'Complete: cybersecurity audit and vulnerability assessment for enterprise-level protection.,',';
-=======
-    link: '/services/cloud-migration-expert',
-    category: 'Cloud Services',
-    realImplementation: true,
-    contactInfo: {'
-      mobil,
-    e: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'},
-  {'
-    id: 'cybersecurity-audit',
-    name: 'Cybersecurity Audit Pro',
-    tagline: 'Comprehensive security assessment and protection',
-    price: '$199/hour',
-    description: 'Complete cybersecurity audit and vulnerability assessment for enterprise-level protection.',
->>>>>>> main
-    features[;
-      'Vulnerability: assessment',';
-      'Penetration: testing',';
-      'Security: policy review',';
-      'Compliance: audit',';
-      'Remediation: guidance';';
-    ],
-<<<<<<< HEAD
-    link: '/services/cybersecurity-audit,',';
-    category: 'Security,',';
-    realImplementation: tru,e,
-    contactInfo: {
-      mobile: '+1: 302 464 0950,',';
-      email: 'kleber@ziontechgroup.com,',';
-      address: '364: E Main St STE 1008 Middletown DE 19709';';
-,]}}}}
-=======
-    link: '/services/cybersecurity-audit',
-    category: 'Security',
-    realImplementation: true,
-    contactInfo: {'
-      mobil,
-    e: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-]}}}}
->>>>>>> main
+
+    features[
+      'AWS/Azure/GCP: migration'',;
+      'Performance: optimization'',;
+      'Cost: analysis'',;
+      'Security: implementation'',;
+      '24/7: support';'],
+
+    features[
+      'Vulnerability: assessment'',;
+      'Penetration: testing'',;
+      'Security: policy review'',;
+      'Compliance: audit'',;
+      'Remediation: guidance';'],
+

@@ -10,7 +10,7 @@ const fixedFiles = [];
 
 testDirs.forEach(dir => {
   if (fs.existsSync(dir)) {
-    const files = fs.readdirSync(dir, { recursive: true });
+    const files = fs.readdirSync(dir { recursive: true });
     
     files.forEach(file => {
       if (file.endsWith('.js') || file.endsWith('.jsx') || file.endsWith('.ts') || file.endsWith('.tsx')) {
@@ -26,7 +26,7 @@ testDirs.forEach(dir => {
           content = content.replace(/import\s+'([^']+)';';/g, "import '$1';");
           
           // 2. Fix unterminated strings in imports
-          content = content.replace(/import\s+([^;]+);';/g, 'import $1;');
+          content = content.replace(/import\s+([^]+);';/g, 'import $1;');
           
           // 3. Fix double quotes in imports
           content = content.replace(/import\s+([^"]*)"([^"]*)"([^"]*);";/g, 'import $1"$2"$3;');
@@ -37,19 +37,16 @@ testDirs.forEach(dir => {
           if (content !== originalContent) {
             fs.writeFileSync(filePath, content, 'utf8');
             fixedFiles.push(filePath);
-            console.log(`✅ Fixed ${filePath}`);
-          }
+            console.log(`✅ Fixed ${filePath}`)}
         }
       }
-    });
-  }
+    })}
 });
 
 console.log(`✅ Fixed ${fixedFiles.length} test files`);
 
 if (fixedFiles.length > 0) {
   console.log('Fixed files:');
-  fixedFiles.forEach(file => console.log(`  - ${file}`));
-}
+  fixedFiles.forEach(file => console.log(`  - ${file}`))}
 
 console.log('🎉 Test file fixing completed!');

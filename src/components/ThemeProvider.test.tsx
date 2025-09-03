@@ -11,5 +11,4 @@ export default function ThemeProvider.test() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

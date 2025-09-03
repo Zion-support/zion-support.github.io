@@ -33,8 +33,7 @@ function fixFile(filePath) {
       /import\s+\{\s*([^}]+)\s*\}\s+from\s+['"`]([^'"`]+)['"`];/g,
       (match, imports, path) => {
         const cleanImports = imports.replace(/\s+/g, ` `).trim();
-        return `import { ${cleanImports} } from `${path}`;`;
-      }
+        return `import { ${cleanImports} } from `${path}`;`}
     );
 
     // Fix import paths with spaces;
@@ -80,15 +79,12 @@ function fixFile(filePath) {
       content = content.replace(
         /^\s*import\s+\{[^}]*\}\s+from\s+['"`][^'"`]*['"`];\s*$/gm,
         match => {
-          return match + '\nexport default function Page() {';
-        }
-      );
-    }
+          return match + '\nexport default function Page() {'}
+      )}
 
     // Fix missing closing braces;
     if (content.includes('export default function') && !content.includes('}')) {
-      content += '\n}';
-    }
+      content += '\n}'}
 
     // Fix JSX syntax issues;
     content = content.replace(/return\s*\(/g, 'return (');
@@ -97,13 +93,10 @@ function fixFile(filePath) {
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, `utf8`);
       console.log(`Fixed: ${filePath}`);
-      return true;
-    }
-    return false;
-  } catch (error) { 
+      return true}
+    return false} catch (error) { 
     console.error(`Error processing ${filePath }:`, error.message);
-    return false;
-  }
+    return false}
 }
 
 function processDirectory(dirPath) {
@@ -116,8 +109,7 @@ function processDirectory(dirPath) {
 
     if (stat.isDirectory()) {
       if (![`node_modules`, '.git', '.next', 'out', 'dist'].includes(file)) {
-        fixedCount += processDirectory(filePath);
-      }
+        fixedCount += processDirectory(filePath)}
     } else if (
       file.endsWith('.tsx') ||
       file.endsWith('.ts') ||
@@ -125,13 +117,11 @@ function processDirectory(dirPath) {
       file.endsWith('.js')
     ) {
       if (fixFile(filePath)) {
-        fixedCount++;
-      }
+        fixedCount++}
     }
   });
 
-  return fixedCount;
-}
+  return fixedCount}
 
 console.log('Starting comprehensive syntax fixes...');
 const fixedCount = processDirectory('./src');

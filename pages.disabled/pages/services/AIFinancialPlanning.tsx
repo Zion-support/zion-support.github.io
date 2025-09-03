@@ -56,325 +56,9 @@ import: { DollarSign,
   Wallet,
   Receipt,
   Banknote'} from 'lucide-react.ts';';
-export: default function AIFinancialPlanning(...args: any[]): any: ,{}
+export: default function AIFinancialPlanning(...args: any[]): any:  {}
     },
-<<<<<<< HEAD
-    {
-      icon: Activit,y,';';
-      title: 'Tax: Optimization,',';';
-      description: 'Intelligent: tax planning and optimization to maximize savings and minimize liabilities.,'}';
-  ]},
-    {
-      icon: Cloc,k,';';
-      title: 'Time: Savings,',';';
-      description: 'Automate: financial tasks and focus on what matters most with intelligent automation.,'}';
-  ];
-  const: pricingPlans: any: = [],{}
-'';';
-      name: 'Basic,','';';
-      price: '$9.99,','';';
-      period: '/month,','';';
-      description: 'Perfect: for individuals starting their financial planning journey,',';
-      features: ['';';
-        'Basic: budget tracking,','';';
-        'Expense: categorization','';';
-        'Email: support','';';
-        'Mobile: app access','';';
-        'Basic: reporting','';';
-        'Goal: setting','';';
-        'Bill: reminders'';';
-      ],'';';
-      cta: 'Start: Free Trial,',';
-      popular: fals,e},
-    {}
-'';';
-      name: 'Premium,','';';
-      price: '$24.99,','';';
-      period: '/month,','';';
-      description: 'Ideal: for individuals and families with advanced financial planning needs,',';
-      features: ['';';
-        'Advanced: AI budgeting,','';';
-        'Investment: recommendations','';';
-        'Priority: support','';';
-        'Tax: optimization','';';
-        'Advanced: analytics','';';
-        'Portfolio: tracking','';';
-        'Financial: health score','';';
-        'Custom: alerts'';';
-      ],'';';
-      cta: 'Start: Free Trial,',';
-      popular: tru,e},
-    {}
-'';';
-      name: 'Professional,','';';
-      price: '$49.99,','';';
-      period: '/month,','';';
-      description: 'For: financial advisors and professionals requiring advanced tools,',';
-      features: ['';';
-        'Client: management,','';';
-        'White-label: solutions','';';
-        'Dedicated: support','';';
-        'Advanced: reporting','';';
-        'API: access','';';
-        'Custom: integrations',';';
-        'Multi-account: support',';';
-        'Tax: filing assistance';';
-:pages.disabled/pages/services/AIFinancialPlanning.tsx: cta: 'Contact: Sales,',';
-      popular: fals,e}
-  ]},';';
-      ],';';
-      cta: 'Contact: Sales,',';
-      popular: fals,e}
-  ]},
-    {'';
-      industry: 'Investment: Management,','      description: 'Build: and manage investment portfolios with AI-driven insights,',';
-      icon: TrendingU,p}
-  ];
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-  const: integrations = [{
-';';
-  const: integrations: any: = [],{}
-'';';
-      name: 'Banking: & Credit Cards,','';';
-      platforms: ['Chase,', 'Bank: of America', 'Wells Fargo', 'American Express']';
-    },
-:pages.disabled/pages/services/AIFinancialPlanning.tsx{
-'{}';
-'';';
-      name: 'Investment: Platforms,','';';
-      platforms: ['Robinhood,', 'Fidelity', 'Vanguard', 'Charles: Schwab']';
-    },
-:pages.disabled/pages/services/AIFinancialPlanning.tsx{
-'{}';
-'';';
-      name: 'Accounting: Software,','';';
-      platforms: ['QuickBooks,', 'Xero', 'FreshBooks', 'Wave']';
-    },
-:pages.disabled/pages/services/AIFinancialPlanning.tsx{
-'{}';
-'';';
-      name: 'Tax: Software,','';';
-      platforms: ['TurboTax,', 'H&R: Block', 'TaxAct', 'Credit Karma Tax']';
-    },
-:pages.disabled/pages/services/AIFinancialPlanning.tsx{
-';';
-'';';
-      name: 'Payment: Platforms,',';';
-      platforms: ['PayPal,', 'Venmo', 'Square', 'Stripe']},'{'';
-      name: 'Cryptocurrency,',';';
-      platforms: ['Coinbase,', 'Binance', 'Kraken', 'Gemini']}';
-  ]},'{}';
-'';';
-      name: 'Payment: Platforms,',';';
-      platforms: ['PayPal,', 'Venmo', 'Square', 'Stripe']},';
-    {'';
-      name: 'Cryptocurrency,',';';
-      platforms: ['Coinbase,', 'Binance', 'Kraken', 'Gemini']}';
-  ]},
-    {'';
-      metric: '3x,',';';
-      label: 'Faster: Planning,',';';
-      description: 'Faster: financial planning process,'}';
-  ];
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-  const: planningAreas = [{
-';';
-  const: planningAreas: any: = [],{}
-'';';
-      category: 'Budgeting,','';';
-      areas: ['Expense: Tracking,', 'Income Management', 'Spending Analysis', 'Budget Optimization']';
-    },
-:pages.disabled/pages/services/AIFinancialPlanning.tsx{
-'{}';
-'';';
-      category: 'Investing,','';';
-      areas: ['Portfolio: Analysis,', 'Risk Assessment', 'Asset Allocation', 'Market Insights']';
-    },
-:pages.disabled/pages/services/AIFinancialPlanning.tsx{
-';';
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-      category: 'Tax: Planning,','{}';
-'';';
-      category: 'Tax: Planning,',';';
-      areas: ['Deduction: Optimization,', 'Tax Strategy', 'Filing Assistance', 'Year-round Planning']},';
-    {'';
-      category: 'Goal: Planning,',';';
-      areas: ['Retirement: Planning,', 'Debt Management', 'Emergency Fund', 'Major Purchases']}  ]';
-  return: (''';
-    <div: className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';
-      <SEO''';
-        title='AI: Financial Planning & Budgeting - Zion Tech Group'';';
-        description='Transform: your financial future with AI-powered planning and budgeting. Optimize spending, achieve goals, and build wealth with intelligent financial management.''/>';
-:pages.disabled/pages/services/AIFinancialPlanning.tsx
-<:pages.disabled/pages/services/AIFinancialPlanning.tsx: {/* Hero Section */}
-      <section className='relative overflow-hidden py-20 lg: py-32'>';
-        <div: className='absolute inset-0 bg-gradient-to-br from-emerald-900/20 via-transparent to-teal-900/20'></div>';
-=;
-        title='AI: Financial Planning & Budgeting - Zion Tech Group''        description='Transform your financial future with AI-powered planning and budgeting. Optimize spendin,g, achieve goals, and build wealth with intelligent financial management.'/>{/* Hero Section */}'';
-      <section: className='relative overflow-hidden py-20 lg: py-32'>'';
-        <div: className='absolute inset-0 bg-gradient-to-br from-emerald-900/20 via-transparent to-teal-900/20'></div>';
-        '>'';';
-      category: 'Tax: Planning,',';';
-      areas: ['Deduction: Optimization,', 'Tax Strategy', 'Filing Assistance', 'Year-round Planning']},'{'';
-      category: 'Goal: Planning,',';';
-      areas: ['Retirement: Planning,', 'Debt Management', 'Emergency Fund', 'Major Purchases']}  ]';';
-  return: (''';
-    <div: className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>'';
-      <SEO'';';
-        title='AI: Financial Planning & Budgeting - Zion Tech Group''        description='Transform your financial future with AI-powered planning and budgeting. Optimize spending, achieve goals, and build wealth with intelligent financial management.'/>'{/* Hero Section */}''';
-      <section: className='relative overflow-hidden py-20 lg: py-32'>''';
-        <div: className='absolute inset-0 bg-gradient-to-br from-emerald-900/20 via-transparent to-teal-900/20'></div>';';
-        ''{/* Hero: Section *,/}''';
-      <section: className='relative overflow-hidden py-20 lg: py-32'>''';
-        <div: className='absolute inset-0 bg-gradient-to-br from-emerald-900/20 via-transparent to-teal-900/20'></div>';
-        ''';
-        <div: className='relative max-w-7xl mx-auto text-center px-4 sm:px-6: lg:px-8'>';
-=======
-    {'
-      icon: Activity,;
-      title: 'Tax Optimization',;
-      description: 'Intelligent tax planning and optimization to maximize savings and minimize liabilities.'}
-  ]},
-    {'
-      icon: Clock,;
-      title: 'Time Savings',;
-      description: 'Automate financial tasks and focus on what matters most with intelligent automation.'}
-  ];
-  const pricingPlans: any = []{}
-'';
-      name: 'Basic',';
-      price: '$9.99',';
-      period: '/month',';
-      description: 'Perfect for individuals starting their financial planning journey',
-      features: ['';
-        'Basic budget tracking',';
-        'Expense categorization',';
-        'Email support',';
-        'Mobile app access',';
-        'Basic reporting',';
-        'Goal setting',';
-        'Bill reminders'';
-      ],';
-      cta: 'Start Free Trial',
-      popular: false},
-    {}
-'';
-      name: 'Premium',';
-      price: '$24.99',';
-      period: '/month',';
-      description: 'Ideal for individuals and families with advanced financial planning needs',
-      features: ['';
-        'Advanced AI budgeting',';
-        'Investment recommendations',';
-        'Priority support',';
-        'Tax optimization',';
-        'Advanced analytics',';
-        'Portfolio tracking',';
-        'Financial health score',';
-        'Custom alerts'';
-      ],';
-      cta: 'Start Free Trial',
-      popular: true},
-    {}
-'';
-      name: 'Professional',';
-      price: '$49.99',';
-      period: '/month',';
-      description: 'For financial advisors and professionals requiring advanced tools',
-      features: ['';
-        'Client management',';
-        'White-label solutions',';
-        'Dedicated support',';
-        'Advanced reporting',';
-        'API access',';
-        'Custom integrations',;
-        'Multi-account support',;
-        'Tax filing assistance';
-:pages.disabled/pages/services/AIFinancialPlanning.tsx      cta: 'Contact Sales',
-      popular: false}
-  ]},;
-      ],;
-      cta: 'Contact Sales',
-      popular: false}
-  ]},
-    {''
-      industry: 'Investment Management',      description: 'Build and manage investment portfolios with AI-driven insights',
-      icon: TrendingUp}
-  ];
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-  const integrations = [{'
-';
-  const integrations: any = []{}
-'';
-      name: 'Banking & Credit Cards',';
-      platforms: ['Chase', 'Bank of America', 'Wells Fargo', 'American Express']
-    },
-:pages.disabled/pages/services/AIFinancialPlanning.tsx{'
-'{}
-'';
-      name: 'Investment Platforms',';
-      platforms: ['Robinhood', 'Fidelity', 'Vanguard', 'Charles Schwab']
-    },
-:pages.disabled/pages/services/AIFinancialPlanning.tsx{'
-'{}
-'';
-      name: 'Accounting Software',';
-      platforms: ['QuickBooks', 'Xero', 'FreshBooks', 'Wave']
-    },
-:pages.disabled/pages/services/AIFinancialPlanning.tsx{'
-'{}
-'';
-      name: 'Tax Software',';
-      platforms: ['TurboTax', 'H&R Block', 'TaxAct', 'Credit Karma Tax']
-    },
-:pages.disabled/pages/services/AIFinancialPlanning.tsx{'
-';
-'';
-      name: 'Payment Platforms',;
-      platforms: ['PayPal', 'Venmo', 'Square', 'Stripe']},{''
-      name: 'Cryptocurrency',;
-      platforms: ['Coinbase', 'Binance', 'Kraken', 'Gemini']}
-  ]},{}
-'';
-      name: 'Payment Platforms',;
-      platforms: ['PayPal', 'Venmo', 'Square', 'Stripe']},
-    {''
-      name: 'Cryptocurrency',;
-      platforms: ['Coinbase', 'Binance', 'Kraken', 'Gemini']}
-  ]},
-    {''
-      metric: '3x',;
-      label: 'Faster Planning',;
-      description: 'Faster financial planning process'}
-  ];
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-  const planningAreas = [{'
-';
-  const planningAreas: any = []{}
-'';
-      category: 'Budgeting',';
-      areas: ['Expense Tracking', 'Income Management', 'Spending Analysis', 'Budget Optimization']
-    },
-:pages.disabled/pages/services/AIFinancialPlanning.tsx{'
-'{}
-'';
-      category: 'Investing',';
-      areas: ['Portfolio Analysis', 'Risk Assessment', 'Asset Allocation', 'Market Insights']
-    },
-:pages.disabled/pages/services/AIFinancialPlanning.tsx{'
-';
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-      category: 'Tax Planning',{}
-'';
-      category: 'Tax Planning',;
-      areas: ['Deduction Optimization', 'Tax Strategy', 'Filing Assistance', 'Year-round Planning']},
-<<<<<<< HEAD
-    {'
-      category: 'Goal Planning','
-=======
-    {''
-      category: 'Goal Planning',;
->>>>>>> main
+
       areas: ['Retirement Planning', 'Debt Management', 'Emergency Fund', 'Major Purchases']}  ]
   return ('''
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900>
@@ -386,148 +70,14 @@ export: default function AIFinancialPlanning(...args: any[]): any: ,{}
       {/* Hero Section */}
       <section className='relative overflow-hidden py-20 lg:py-32>
         <div className='absolute inset-0 bg-gradient-to-br from-emerald-900/20 via-transparent to-teal-900/20'></div>
-<<<<<<< HEAD
-=
-        title='AI Financial Planning & Budgeting - Zion Tech Group''        description='Transform your financial future with AI-powered planning and budgeting. Optimize spending, achieve goals, and build wealth with intelligent financial management.'/>{/* Hero Section */}'
-      <section className='relative overflow-hidden py-20 lg:py-32'>'
-        <div className='absolute inset-0 bg-gradient-to-br from-emerald-900/20 via-transparent to-teal-900/20'></div>
-        '>'';
-      category: 'Tax Planning',';
-      areas: ['Deduction Optimization', 'Tax Strategy', 'Filing Assistance', 'Year-round Planning']},'{'
-      category: 'Goal Planning',';
-      areas: ['Retirement Planning', 'Debt Management', 'Emergency Fund', 'Major Purchases']}  ]'
-  return (''
-    <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>'
-      <SEO'';
-        title='AI Financial Planning & Budgeting - Zion Tech Group''        description='Transform your financial future with AI-powered planning and budgeting. Optimize spending, achieve goals, and build wealth with intelligent financial management.'/>'{/* Hero Section */}''
-      <section className='relative overflow-hidden py-20 lg:py-32'>''
-        <div className='absolute inset-0 bg-gradient-to-br from-emerald-900/20 via-transparent to-teal-900/20'></div>'
-        ''{/* Hero Section */}''
-      <section className='relative overflow-hidden py-20 lg:py-32'>''
-        <div className='absolute inset-0 bg-gradient-to-br from-emerald-900/20 via-transparent to-teal-900/20'></div>
-        ''
-        <div className='relative max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8'>
-=======
-=;
-        title='AI Financial Planning & Budgeting - Zion Tech Group''        description='Transform your financial future with AI-powered planning and budgeting. Optimize spending, achieve goals, and build wealth with intelligent financial management.'/>{/* Hero Section */}
-      <section className='relative overflow-hidden py-20 lg:py-32>'
-        <div className='absolute inset-0 bg-gradient-to-br from-emerald-900/20 via-transparent to-teal-900/20'></div>'
-        >';
-      categor,
-    y: 'Tax Planning',;
-      areas: ['Deduction Optimization', 'Tax Strategy', 'Filing Assistance', 'Year-round Planning']},{''
-      category: 'Goal Planning',;
-      areas: ['Retirement Planning', 'Debt Management', 'Emergency Fund', 'Major Purchases']}  ];
-  return ('''
-    <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900>'
-      <SEO'';
-        title='AI Financial Planning & Budgeting - Zion Tech Group''        description='Transform your financial future with AI-powered planning and budgeting. Optimize spending, achieve goals, and build wealth with intelligent financial management.'/>{/* Hero Section */}'
-      <section className='relative overflow-hidden py-20 lg:py-32>''
-        <div className='absolute inset-0 bg-gradient-to-br from-emerald-900/20 via-transparent to-teal-900/20'></div>';
-        ''{/* Hero Section */}'
-      <section className='relative overflow-hidden py-20 lg: py-32>''
-        <div className='absolute inset-0 bg-gradient-to-br from-emerald-900/20 via-transparent to-teal-900/20'></div>'
-        '''
-        <div className='relative max-w-7xl mx-auto text-center px-4 s,
-    m:px-6 l,
-    g:px-8'>
->>>>>>> main
->>>>>>> main
+
+
           <motion.div;
-            initial: = ,{}
-  { opacity:  ,0,
+            initial: =  {}, { opacity:  ,0,
 :pages.disabled/pages/services/AIFinancialPlanning.tsx;
 :pages.disabled/pages/services/AIFinancialPlanning.tsx;
   y: 20;
-<<<<<<< HEAD
-  y: 20;
-  y: 2,0}}
-            animate: = {}
-  { opacity:  ,1,
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-  y: 0;
-  y: ,0}}
-            transition={{ duration: 0.8, }}'>''';
-            <div: className='inline-flex items-center px-4 py-2 bg-emerald-600/20 text-emerald-400 rounded-full text-sm font-medium mb-6'>''';
-              <DollarSign: className='w-4 h-4 mr-2'  />              AI-Powered Financial Planning'';
-            </div>''';
-            <h1: className='text-4xl md: text-7xl: font-bold text-white mb-6'>';';
-              AI: Financial Planning''';
-              <span: className='bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent'>';
-                {' ,'}& Budgeting';
-              </span>';';
-  y:  ,0}}
-            transition={{ duration: 0.8, }}
-          >''';
-            <div: className='inline-flex items-center px-4 py-2 bg-emerald-600/20 text-emerald-400 rounded-full text-sm font-medium mb-6'>''';
-              <DollarSign: className='w-4 h-4 mr-2'  />              AI-Powered Financial Planning';
-            </div>''';
-            <h1: className='text-4xl md: text-7xl: font-bold text-white mb-6'>';
-              AI: Financial Planning''';
-              <span: className='bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent'>';
-                {' ,'}& Budgeting';
-              </span>
-            </h1>''';
-            <p: className='text-xl text-gray-300 max-w-4xl mx-auto mb-8'>';
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-              Transform: your financial future with AI-powered planning and budgeting.;
-              Optimize: spending, achieve goals, and build wealth with intelligent financial management.;
-:pages.disabled/pages/services/AIFinancialPlanning.tsx: </p>'';
-            <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>'';
-              <button: className='bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-700: hover:to-teal-700: transition-all duration-300 text-lg flex items-center justify-center'>';';
-              Transform: your financial future with AI-powered planning and budgeting.;
-              Optimize: spendin,g, achieve goals, and build wealth with intelligent financial management.'';
-            </p>''';
-            <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>''';
-              <button: className='bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-700: hover:to-teal-700: transition-all duration-300 text-lg flex items-center justify-center'>''';
-                <Play: className='w-5 h-5 mr-2'  />';
-                Start: Free Trial'';
-              </button>''';
-              <button: className='border border-emerald-500 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-500: hover:text-white: transition-all duration-300 text-lg'>''';
-                <Download: className='w-5 h-5 mr-2 inline'  />                Download Brochure';
-            </p>''';
-            <div: className='flex flex-col sm:flex-row: gap-4 justify-center'>''';
-              <button: className='bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-700: hover:to-teal-700: transition-all duration-300 text-lg flex items-center justify-center'>''';
-                <Play: className='w-5 h-5 mr-2'  />';
-                Start: Free Trial
-              </button>''';
-              <button: className='border border-emerald-500 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-500: hover:text-white: transition-all duration-300 text-lg'>''';
-                <Download: className='w-5 h-5 mr-2 inline'  />                Download Brochure';
-=======
-  ,
-    y: 20;
-  ,
-    y: 20}}
-            animate = {}
-  { opacity: 1,
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-  y: 0;
-<<<<<<< HEAD
-  y: 0}}
-            transition={{ duration: 0.8 }}'>''
-            <div className='inline-flex items-center px-4 py-2 bg-emerald-600/20 text-emerald-400 rounded-full text-sm font-medium mb-6'>''
-              <DollarSign className='w-4 h-4 mr-2'  />              AI-Powered Financial Planning'
-            </div>''
-            <h1 className='text-4xl md:text-7xl font-bold text-white mb-6'>'
-              AI Financial Planning''
-              <span className='bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent'>
-                {' '}& Budgeting
-              </span>'
-=======
-  ,
-    y: 0}}
-            transition={{ duration: 0.8 }}>'''
-            <div className='inline-flex items-center px-4 py-2 bg-emerald-600/20 text-emerald-400 rounded-full text-sm font-medium mb-6>''
-              <DollarSign className='w-4 h-4 mr-2'  />              AI-Powered Financial Planning''
-            </div>'''
-            <h1 className='text-4xl md:text-7xl font-bold text-white mb-6>;
-              AI Financial Planning'''
-              <span className='bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent>
-                {' '}& Budgeting'
-              </span>';
->>>>>>> main
+
   y: 0}}
             transition={{ duration: 0.8 }}
           >'''
@@ -543,18 +93,7 @@ export: default function AIFinancialPlanning(...args: any[]): any: ,{}
             <p className='text-xl text-gray-300 max-w-4xl mx-auto mb-8'>
 :pages.disabled/pages/services/AIFinancialPlanning.tsx;
               Transform your financial future with AI-powered planning and budgeting.;
-<<<<<<< HEAD
-              Optimize spending, achieve goals, and build wealth with intelligent financial management.
-:pages.disabled/pages/services/AIFinancialPlanning.tsx
-            </p>'
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
-              <button className='bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 text-lg flex items-center justify-center'>';
-              Transform your financial future with AI-powered planning and budgeting.
-              Optimize spending, achieve goals, and build wealth with intelligent financial management.'
-=======
-              Optimize spending, achieve goals, and build wealth with intelligent financial management.;
-:pages.disabled/pages/services/AIFinancialPlanning.tsx'
->>>>>>> main
+
             </p>''
             <div className='flex flex-col sm: flex-row gap-4 justify-center>'
               <button className='bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold hove,
@@ -580,122 +119,20 @@ export: default function AIFinancialPlanning(...args: any[]): any: ,{}
     r:bg-emerald-500 hove,
     r:text-white transition-all duration-300 text-lg>''
                 <Download className='w-5 h-5 mr-2 inline'  />                Download Brochure
->>>>>>> main
+
               </button>
             </div>
           </motion.div>
         </div>
-<<<<<<< HEAD
-:pages.disabled/pages/services/AIFinancialPlanning.tsx: </section>'';
-      </section>
-      {/* Key: Metrics Section *,/}''';
-      <section: className='py-20'>''';
-        <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>''';
-          <div: className='grid grid-cols-2 md: anygrid-cols-4: gap-8'>';
-:pages.disabled/pages/services/AIFinancialPlanning.tsx{keyMetrics.map((metri,c, index()
-=======
-:pages.disabled/pages/services/AIFinancialPlanning.tsx'
-      </section>'
-      </section>'
-      {/* Key Metrics Section */}'
-      <section className='py-20>''
-        <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
-    g:px-8>''
-          <div className='grid grid-cols-2 m,
-    d: anygrid-cols-4 gap-8'>
-:pages.disabled/pages/services/AIFinancialPlanning.tsx{keyMetrics.map((metric, index();
->>>>>>> main
+
               <motion.div{keyMetrics.map((metric, index(
               <motion.div;
                 key={metric.metric}
-                initial: = {}
-  { opacity:  ,0,
+                initial: = {}, { opacity:  ,0,
 :pages.disabled/pages/services/AIFinancialPlanning.tsx;
 :pages.disabled/pages/services/AIFinancialPlanning.tsx;
   y: 20;
-<<<<<<< HEAD
-  y: 20;
-  y: 2,0}}
-                whileInView: = {}
-  { opacity:  ,1,
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-  y: 0;
-  y: 0;
-  y: ,0}}
-                transition: = {}
-  { duration: 0.,5,
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-  delay: index: * 0.,1}}
-                viewport={{ once: true, }}';';
-                className='text-center'>';';
-  delay: index: * 0.,1}}';';
-                viewport={{ once: true, }}'';';
-                className='text-center''>''';
-                <div: className='text-4xl md: text-5xl: font-bold text-emerald-400 mb-2'>';
-                  {metric.metri,c}'';
-                </div>''';
-                <div: className='text-lg font-semibold text-white mb-2'>';
-                  {metric.label}';';
-  delay: index: * 0.,1}}
-                viewport={{ once: true, }}'';';
-                className='text-center''>''';
-                <div: className='text-4xl md: text-5xl: font-bold text-emerald-400 mb-2'>';
-                  {metric.metri,c}
-                </div>''';
-                <div: className='text-lg font-semibold text-white mb-2'>';
-                  {metric.label}
-                </div>''';
-                <div: className='text-sm text-gray-400'>';
-=======
-  ,
-    y: 20;
-  ,
-    y: 20}}
-                whileInView = {}
-  { opacity: 1,
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-  y: 0;
-  ,
-    y: 0;
-  ,
-    y: 0}}
-                transition = {}
-  { duration: 0.5,
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-  delay: index * 0.1}}
-<<<<<<< HEAD
-                viewport={{ once: true }}';
-                className='text-center'>';
-  delay: index * 0.1}}';
-                viewport={{ once: true }}''
-                className='text-center''>''
-                <div className='text-4xl md:text-5xl font-bold text-emerald-400 mb-2'>
-                  {metric.metric}'
-                </div>''
-                <div className='text-lg font-semibold text-white mb-2'>
-                  {metric.label}';
-  delay: index * 0.1}}
-                viewport={{ once: true }}''
-                className='text-center''>''
-=======
-                viewport={{ once: true }};
-                className='text-center>;
-  delay: index * 0.1}};
-                viewport={{ once: true }};
-                className='text-center>'
-                <div className='text-4xl md:text-5xl font-bold text-emerald-400 mb-2>
-                  {metric.metric}
-                </div>'''
-                <div className='text-lg font-semibold text-white mb-2>
-                  {metric.label};
-  delay: index * 0.1}}
-                viewport={{ once: true }};
-                className='text-center>'
->>>>>>> main
+
                 <div className='text-4xl md:text-5xl font-bold text-emerald-400 mb-2'>
                   {metric.metric}
                 </div>'''
@@ -703,110 +140,20 @@ export: default function AIFinancialPlanning(...args: any[]): any: ,{}
                   {metric.label}
                 </div>'''
                 <div className='text-sm text-gray-400'>
->>>>>>> main
+
                   {metric.description}
                 </div>
               </motion.div>
             ));
           </div>
         </div>
-<<<<<<< HEAD
-:pages.disabled/pages/services/AIFinancialPlanning.tsx: </section>'';
-      </section>
-      {/* Features: Section */}''';
-      <section: className='py-20 bg-slate-800/50'>''';
-        <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
-=======
-:pages.disabled/pages/services/AIFinancialPlanning.tsx'
-      </section>'
-      </section>'
-      {/* Features Section */}'
-      <section className='py-20 bg-slate-800/50>''
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 l,
-    g:px-8'>
->>>>>>> main
+
           <motion.div;
-            initial: = ,{}
-  { opacity:  ,0,
+            initial: =  {}, { opacity:  ,0,
 :pages.disabled/pages/services/AIFinancialPlanning.tsx;
 :pages.disabled/pages/services/AIFinancialPlanning.tsx;
   y: 20;
-<<<<<<< HEAD
-  y: 20;
-  y: 2,0}}
-            whileInView: = {}
-  { opacity:  ,1,
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-  y: 0;
-  y: ,0}}
-            transition={{ duration: 0.8, }}';';
-  y:  ,0}}
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}'';';
-            className='text-center: mb-16''>''';
-            <h2: className='text-3xl md: text-5xl: font-bold text-white mb-6'>';
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-              Powerful: Features';';
-              Powerful: Features
-            </h2>''';
-            <p: className='text-xl text-gray-300 max-w-3xl mx-auto'>';
-              Advanced: AI capabilities designed to revolutionize your financial planning and money management.
-            </p>
-:pages.disabled/pages/services/AIFinancialPlanning.tsx: </motion.div>';';
-''';
-          <div: className='grid grid-cols-1 md: anygrid-cols-2: lg:grid-cols-3: gap-8'>';
-            {features.map(feature: unknow,n, index: unknown()
-              <motion.div: </motion.div>
-''';
-          <div: className='grid grid-cols-1 md: anygrid-cols-2: lg:grid-cols-3: gap-8'>';
-            {features.map(feature: unknow,n, index: unknown(
-=======
-  ,
-    y: 20;
-  ,
-    y: 20}}
-            whileInView = {}
-  { opacity: 1,
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-  y: 0;
-  ,
-    y: 0}}
-            transition={{ duration: 0.8 }};
-  y: 0}}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }};
-            className='text-center mb-16>'
-            <h2 className='text-3xl md: text-5xl font-bold text-white mb-6'>
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-<<<<<<< HEAD
-              Powerful Features'
-              Powerful Features
-            </h2>''
-            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Advanced AI capabilities designed to revolutionize your financial planning and money management.
-            </p>
-:pages.disabled/pages/services/AIFinancialPlanning.tsx
-          </motion.div>'
-''
-          <div className='grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8'>
-            {features.map(feature: unknown, index: unknown()
-=======
-              Powerful Features';
-              Powerful Features'
-            </h2>'''
-            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Advanced AI capabilities designed to revolutionize your financial planning and money management.
-            </p>
-:pages.disabled/pages/services/AIFinancialPlanning.tsx'
-          </motion.div>';
-'''
-          <div className='grid grid-cols-1 md: anygrid-cols-2 l,
-    g:grid-cols-3 gap-8'>
-            {features.map(featur,
-    e: unknown, index: unknown();
->>>>>>> main
+
               <motion.div
           </motion.div>'
 '''
@@ -814,115 +161,21 @@ export: default function AIFinancialPlanning(...args: any[]): any: ,{}
     g:grid-cols-3 gap-8'>
             {features.map(featur,
     e: unknown, index: unknown(
->>>>>>> main
+
               <motion.div;
                 key={feature.titl,e}
-                initial: = {}
-  { opacity:  ,0,
+                initial: = {}, { opacity:  ,0,
 :pages.disabled/pages/services/AIFinancialPlanning.tsx;
 :pages.disabled/pages/services/AIFinancialPlanning.tsx;
   y: 20;
-<<<<<<< HEAD
-  y: 20;
-  y: 2,0}}
-                whileInView: = {}
-  { opacity:  ,1,
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-  y: 0;
-  y: 0;
-  y: ,0}}
-                transition: = {}
-  { duration: 0.,5,
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-  delay: index: * 0.,1}}
-                viewport={{ once: true, }}';';
-  delay: index: * 0.,1}}';';
-                viewport={{ once: true, }}'';';
-                className='group: relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10: transition-all duration-300 hover:border-emerald-500/50'>';';
-  delay: index: * 0.,1}}
-                viewport={{ once: true, }}'';';
-                className='group: relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10: transition-all duration-300 hover:border-emerald-500/50''>{/* Icon: *,/}''';
-                <div: className='mb-6'>''';
-                  <div: className='w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center group-hover: scale-110: transition-transform duration-300'>''';
-                    <feature.icon: className='w-8 h-8 text-white' />';
-                  </div>
-                </div>
-:pages.disabled/pages/services/AIFinancialPlanning.tsx{/* Content: *,/}'';
-                <div>''';
-                  <h3: className='text-xl font-bold text-white mb-3 group-hover: text-emerald-400: transition-colors duration-300'>';
-                    {feature.titl,e}'{/* Content: */}';
-                <div>''';
-                  <h3: className='text-xl font-bold text-white mb-3 group-hover: text-emerald-400: transition-colors duration-300'>';
-                    {feature.titl,e}
-                  </h3>''';
-                  <p: className='text-gray-300 text-sm leading-relaxed'>';
-                    {feature.description}
-                  </p>
-:pages.disabled/pages/services/AIFinancialPlanning.tsx: </div>'';
-                </div>
-                {/* Hover: Effect */}''';
-                <div: className='absolute inset-0 bg-gradient-to-r from-emerald-500/5 to-teal-500/5 rounded-2xl opacity-0 group-hover: opacity-100: transition-opacity duration-300'></div>';
-              </motion.div>
-            ),)}
-          </div>
-        </div>
-:pages.disabled/pages/services/AIFinancialPlanning.tsx: </section>'';
-      </section>
-      {/* Planning: Areas Section */}''';
-      <section: className='py-20'>''';
-        <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
-=======
-  ,
-    y: 20;
-  ,
-    y: 20}}
-                whileInView = {}
-  { opacity: 1,
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-  y: 0;
-  ,
-    y: 0;
-  ,
-    y: 0}}
-                transition = {}
-  { duration: 0.5,
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-  delay: index * 0.1}}
-<<<<<<< HEAD
-                viewport={{ once: true }}';
-  delay: index * 0.1}}';
-                viewport={{ once: true }}'';
-                className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-emerald-500/50'>';
-  delay: index * 0.1}}
-                viewport={{ once: true }}''
-                className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-emerald-500/50''>{/* Icon */}''
-                <div className='mb-6'>''
-                  <div className='w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>''
-=======
-                viewport={{ once: true }};
-  delay: index * 0.1}};
-                viewport={{ once: true }};
-                className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10 transition-all duration-300 hove,
-    r:border-emerald-500/50>;
-  dela,
-    y: index * 0.1}}
-                viewport={{ once: true }};
-                className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hove,
-    r:border-emerald-500/50''>{/* Icon */}'
-                <div className='mb-6>''
-                  <div className='w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300>''
->>>>>>> main
+
                     <feature.icon className='w-8 h-8 text-white' />
                   </div>
                 </div>'
 :pages.disabled/pages/services/AIFinancialPlanning.tsx{/* Content */}
                 <div>'''
                   <h3 className='text-xl font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors duration-300>
-                    {feature.title}{/* Content */}
+                    {feature.title}, {/* Content */}
                 <div>'''
                   <h3 className='text-xl font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors duration-300'>
                     {feature.title}
@@ -946,107 +199,13 @@ export: default function AIFinancialPlanning(...args: any[]): any: ,{}
       <section className='py-20>''
         <div className='max-w-7xl mx-auto px-4 sm:px-6 l,
     g:px-8'>
->>>>>>> main
+
           <motion.div;
-            initial: = ,{}
-  { opacity:  ,0,
+            initial: =  {}, { opacity:  ,0,
 :pages.disabled/pages/services/AIFinancialPlanning.tsx;
 :pages.disabled/pages/services/AIFinancialPlanning.tsx;
   y: 20;
-<<<<<<< HEAD
-  y: 20;
-  y: 2,0}}
-            whileInView: = {}
-  { opacity:  ,1,
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-  y: 0;
-  y: ,0}}
-            transition={{ duration: 0.8, }}';';
-  y:  ,0}}
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}'';';
-            className='text-center: mb-16''>''';
-            <h2: className='text-3xl md: text-5xl: font-bold text-white mb-6'>';
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-              Planning: Areas';';
-              Planning: Areas
-            </h2>''';
-            <p: className='text-xl text-gray-300 max-w-3xl mx-auto'>';
-              Comprehensive: financial planning across all aspects of your financial life for maximum success.
-            </p>
-:pages.disabled/pages/services/AIFinancialPlanning.tsx: </motion.div>'';
-          </motion.div>
-''';
-          <div: className='grid grid-cols-1 md: anygrid-cols-2: lg:grid-cols-4: gap-8'>';
-            {planningAreas.map(category: unknow,n, index: unknown: <motion.div;
-                key={category.categor,y}
-                initial: = {}
-  { opacity:  ,0,
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-  y: 20;
-  y: 20;
-  y: 2,0}}
-                whileInView: = {}
-  { opacity:  ,1,
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-  y: 0;
-  y: 0;
-  y: ,0}}
-                transition: = {}
-  { duration: 0.,5,
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-  delay: index: * 0.,1}}
-                viewport={{ once: true, }}';';
-                className='group: relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10: transition-all duration-300 hover:border-emerald-500/50'>';';
-  delay: index: * 0.,1}}';';
-                viewport={{ once: true, }}'';';
-                className='group: relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10: transition-all duration-300 hover:border-emerald-500/50''>''';
-                <h3: className='text-xl font-bold text-white mb-4 group-hover:text-emerald-400: transition-colors duration-300'>';
-                  {category.categor,y}'';
-                </h3>''';
-                <ul: className='space-y-2'>';';
-  delay: index: * 0.,1}}
-                viewport={{ once: true, }}'';';
-                className='group: relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10: transition-all duration-300 hover:border-emerald-500/50''>''';
-                <h3: className='text-xl font-bold text-white mb-4 group-hover:text-emerald-400: transition-colors duration-300'>';
-                  {category.categor,y}
-                </h3>''';
-                <ul: className='space-y-2'>';
-                  {category.areas.map((area, areaIndex) => (''';
-                    <li: key={areaIndex} className='flex items-center text-gray-300 text-sm'>''';
-                      <CheckCircle: className='w-4 h-4 text-emerald-400 mr-2 flex-shrink-0'  />                      {area}';
-=======
-  ,
-    y: 20;
-  ,
-    y: 20}}
-            whileInView = {}
-  { opacity: 1,
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-  y: 0;
-  ,
-    y: 0}}
-            transition={{ duration: 0.8 }};
-  y: 0}}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }};
-            className='text-center mb-16>'
-            <h2 className='text-3xl md: text-5xl font-bold text-white mb-6'>
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-<<<<<<< HEAD
-              Planning Areas'
-              Planning Areas
-            </h2>''
-=======
-              Planning Areas';
-              Planning Areas'
-            </h2>'''
->>>>>>> main
+
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Comprehensive financial planning across all aspects of your financial life for maximum success.
             </p>
@@ -1060,8 +219,7 @@ export: default function AIFinancialPlanning(...args: any[]): any: ,{}
     y: unknown, index: unknown
               <motion.div;
                 key={category.category}
-                initial = {}
-  { opacity: 0,
+                initial = {}, { opacity: 0,
 :pages.disabled/pages/services/AIFinancialPlanning.tsx;
 :pages.disabled/pages/services/AIFinancialPlanning.tsx;
   y: 20;
@@ -1069,8 +227,7 @@ export: default function AIFinancialPlanning(...args: any[]): any: ,{}
     y: 20;
   ,
     y: 20}}
-                whileInView = {}
-  { opacity: 1,
+                whileInView = {}, { opacity: 1,
 :pages.disabled/pages/services/AIFinancialPlanning.tsx;
 :pages.disabled/pages/services/AIFinancialPlanning.tsx;
   y: 0;
@@ -1078,38 +235,10 @@ export: default function AIFinancialPlanning(...args: any[]): any: ,{}
     y: 0;
   ,
     y: 0}}
-                transition = {}
-  { duration: 0.5,
+                transition = {}, { duration: 0.5,
 :pages.disabled/pages/services/AIFinancialPlanning.tsx;
 :pages.disabled/pages/services/AIFinancialPlanning.tsx;
-  delay: index * 0.1}}
-<<<<<<< HEAD
-                viewport={{ once: true }}';
-                className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-emerald-500/50'>';
-  delay: index * 0.1}}';
-                viewport={{ once: true }}''
-                className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-emerald-500/50''>''
-                <h3 className='text-xl font-bold text-white mb-4 group-hover:text-emerald-400 transition-colors duration-300'>
-                  {category.category}'
-                </h3>''
-                <ul className='space-y-2'>';
-  delay: index * 0.1}}
-                viewport={{ once: true }}''
-                className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-emerald-500/50''>''
-                <h3 className='text-xl font-bold text-white mb-4 group-hover:text-emerald-400 transition-colors duration-300'>
-=======
-                viewport={{ once: true }};
-                className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10 transition-all duration-300 hove,
-    r:border-emerald-500/50>;
-  dela,
-    y: index * 0.1}};
-                viewport={{ once: true }};
-                className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10 transition-all duration-300 hove,
-    r:border-emerald-500/50>'
-                <h3 className='text-xl font-bold text-white mb-4 group-hove,
-    r:text-emerald-400 transition-colors duration-300>
->>>>>>> main
-                  {category.category}
+  delay: index * 0.1}}, {category.category}
                 </h3>'''
                 <ul className='space-y-2>;
   delay: index * 0.1}}
@@ -1124,7 +253,7 @@ export: default function AIFinancialPlanning(...args: any[]): any: ,{}
                   {category.areas.map((area, areaIndex) => ('''
                     <li key={areaIndex} className='flex items-center text-gray-300 text-sm>''
                       <CheckCircle className='w-4 h-4 text-emerald-400 mr-2 flex-shrink-0'  />                      {area}
->>>>>>> main
+
                     </li>
                   ))}
                 </ul>
@@ -1132,103 +261,13 @@ export: default function AIFinancialPlanning(...args: any[]): any: ,{}
             ))}
           </div>
         </div>
-<<<<<<< HEAD
-:pages.disabled/pages/services/AIFinancialPlanning.tsx: </section>'';
-      </section>
-      {/* Benefits: Section */}''';
-      <section: className='py-20 bg-slate-800/50'>''';
-        <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
-=======
-:pages.disabled/pages/services/AIFinancialPlanning.tsx'
-      </section>'
-      </section>'
-      {/* Benefits Section */}'
-      <section className='py-20 bg-slate-800/50>''
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 l,
-    g:px-8'>
->>>>>>> main
+
           <motion.div;
-            initial: = ,{}
-  { opacity:  ,0,
+            initial: =  {}, { opacity:  ,0,
 :pages.disabled/pages/services/AIFinancialPlanning.tsx;
 :pages.disabled/pages/services/AIFinancialPlanning.tsx;
   y: 20;
-<<<<<<< HEAD
-  y: 20;
-  y: 2,0}}
-            whileInView: = {}
-  { opacity:  ,1,
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-  y: 0;
-  y: ,0}}
-            transition={{ duration: 0.8, }}';';
-  y:  ,0}}
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}'';';
-            className='text-center: mb-16''>''';
-            <h2: className='text-3xl md: text-5xl: font-bold text-white mb-6'>';
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-              Financial: Benefits';';
-              Financial: Benefits
-            </h2>''';
-            <p: className='text-xl text-gray-300 max-w-3xl mx-auto'>';
-              Discover: how AI-powered financial planning can transform your financial future and achieve your goals.
-            </p>
-:pages.disabled/pages/services/AIFinancialPlanning.tsx: </motion.div>';';
-''';
-          <div: className='grid grid-cols-1 md: anygrid-cols-2: lg:grid-cols-3: gap-8'>';
-            {benefits.map(benefit: unknow,n, index: unknown()
-              <motion.div: </motion.div>
-''';
-          <div: className='grid grid-cols-1 md: anygrid-cols-2: lg:grid-cols-3: gap-8'>';
-            {benefits.map(benefit: unknow,n, index: unknown(
-=======
-  ,
-    y: 20;
-  ,
-    y: 20}}
-            whileInView = {}
-  { opacity: 1,
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-  y: 0;
-  ,
-    y: 0}}
-            transition={{ duration: 0.8 }};
-  y: 0}}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }};
-            className='text-center mb-16>'
-            <h2 className='text-3xl md: text-5xl font-bold text-white mb-6'>
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-<<<<<<< HEAD
-              Financial Benefits'
-              Financial Benefits
-            </h2>''
-            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Discover how AI-powered financial planning can transform your financial future and achieve your goals.
-            </p>
-:pages.disabled/pages/services/AIFinancialPlanning.tsx
-          </motion.div>'
-''
-          <div className='grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8'>
-            {benefits.map(benefit: unknown, index: unknown()
-=======
-              Financial Benefits';
-              Financial Benefits'
-            </h2>'''
-            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Discover how AI-powered financial planning can transform your financial future and achieve your goals.
-            </p>
-:pages.disabled/pages/services/AIFinancialPlanning.tsx'
-          </motion.div>';
-'''
-          <div className='grid grid-cols-1 md: anygrid-cols-2 l,
-    g:grid-cols-3 gap-8'>
-            {benefits.map(benefi,
-    t: unknown, index: unknown();
->>>>>>> main
+
               <motion.div
           </motion.div>'
 '''
@@ -1236,115 +275,21 @@ export: default function AIFinancialPlanning(...args: any[]): any: ,{}
     g:grid-cols-3 gap-8'>
             {benefits.map(benefi,
     t: unknown, index: unknown(
->>>>>>> main
+
               <motion.div;
                 key={benefit.titl,e}
-                initial: = {}
-  { opacity:  ,0,
+                initial: = {}, { opacity:  ,0,
 :pages.disabled/pages/services/AIFinancialPlanning.tsx;
 :pages.disabled/pages/services/AIFinancialPlanning.tsx;
   y: 20;
-<<<<<<< HEAD
-  y: 20;
-  y: 2,0}}
-                whileInView: = {}
-  { opacity:  ,1,
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-  y: 0;
-  y: 0;
-  y: ,0}}
-                transition: = {}
-  { duration: 0.,5,
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-  delay: index: * 0.,1}}
-                viewport={{ once: true, }}';';
-  delay: index: * 0.,1}}';';
-                viewport={{ once: true, }}'';';
-                className='group: relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10: transition-all duration-300 hover:border-emerald-500/50'>';';
-  delay: index: * 0.,1}}
-                viewport={{ once: true, }}'';';
-                className='group: relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10: transition-all duration-300 hover:border-emerald-500/50''>{/* Icon: *,/}''';
-                <div: className='mb-6'>''';
-                  <div: className='w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center group-hover: scale-110: transition-transform duration-300'>''';
-                    <benefit.icon: className='w-8 h-8 text-white' />';
-                  </div>
-                </div>
-:pages.disabled/pages/services/AIFinancialPlanning.tsx{/* Content: *,/}'';
-                <div>''';
-                  <h3: className='text-xl font-bold text-white mb-3 group-hover: text-emerald-400: transition-colors duration-300'>';
-                    {benefit.titl,e}'{/* Content: */}';
-                <div>''';
-                  <h3: className='text-xl font-bold text-white mb-3 group-hover: text-emerald-400: transition-colors duration-300'>';
-                    {benefit.titl,e}
-                  </h3>''';
-                  <p: className='text-gray-300 text-sm leading-relaxed'>';
-                    {benefit.description}
-                  </p>
-:pages.disabled/pages/services/AIFinancialPlanning.tsx: </div>'';
-                </div>
-                {/* Hover: Effect */}''';
-                <div: className='absolute inset-0 bg-gradient-to-r from-emerald-500/5 to-teal-500/5 rounded-2xl opacity-0 group-hover: opacity-100: transition-opacity duration-300'></div>';
-              </motion.div>
-            ),)}
-          </div>
-        </div>
-:pages.disabled/pages/services/AIFinancialPlanning.tsx: </section>'';
-      </section>
-      {/* Pricing: Section */}''';
-      <section: className='py-20'>''';
-        <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
-=======
-  ,
-    y: 20;
-  ,
-    y: 20}}
-                whileInView = {}
-  { opacity: 1,
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-  y: 0;
-  ,
-    y: 0;
-  ,
-    y: 0}}
-                transition = {}
-  { duration: 0.5,
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-  delay: index * 0.1}}
-<<<<<<< HEAD
-                viewport={{ once: true }}';
-  delay: index * 0.1}}';
-                viewport={{ once: true }}'';
-                className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-emerald-500/50'>';
-  delay: index * 0.1}}
-                viewport={{ once: true }}''
-                className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-emerald-500/50''>{/* Icon */}''
-                <div className='mb-6'>''
-                  <div className='w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>''
-=======
-                viewport={{ once: true }};
-  delay: index * 0.1}};
-                viewport={{ once: true }};
-                className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10 transition-all duration-300 hove,
-    r:border-emerald-500/50>;
-  dela,
-    y: index * 0.1}}
-                viewport={{ once: true }};
-                className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hove,
-    r:border-emerald-500/50''>{/* Icon */}'
-                <div className='mb-6>''
-                  <div className='w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300>''
->>>>>>> main
+
                     <benefit.icon className='w-8 h-8 text-white' />
                   </div>
                 </div>'
 :pages.disabled/pages/services/AIFinancialPlanning.tsx{/* Content */}
                 <div>'''
                   <h3 className='text-xl font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors duration-300>
-                    {benefit.title}{/* Content */}
+                    {benefit.title}, {/* Content */}
                 <div>'''
                   <h3 className='text-xl font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors duration-300'>
                     {benefit.title}
@@ -1368,89 +313,13 @@ export: default function AIFinancialPlanning(...args: any[]): any: ,{}
       <section className='py-20>''
         <div className='max-w-7xl mx-auto px-4 sm:px-6 l,
     g:px-8'>
->>>>>>> main
+
           <motion.div;
-            initial: = ,{}
-  { opacity:  ,0,
+            initial: =  {}, { opacity:  ,0,
 :pages.disabled/pages/services/AIFinancialPlanning.tsx;
 :pages.disabled/pages/services/AIFinancialPlanning.tsx;
   y: 20;
-<<<<<<< HEAD
-  y: 20;
-  y: 2,0}}
-            whileInView: = {}
-  { opacity:  ,1,
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-  y: 0;
-  y: ,0}}
-            transition={{ duration: 0.8, }}';';
-  y:  ,0}}
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}'';';
-            className='text-center: mb-16''>''';
-            <h2: className='text-3xl md: text-5xl: font-bold text-white mb-6'>';
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-              Transparent: Pricing';';
-              Transparent: Pricing
-            </h2>''';
-            <p: className='text-xl text-gray-300 max-w-3xl mx-auto'>';
-              Choose: the plan that fits your financial planning needs. All plans include a 14-day free trial.
-            </p>
-:pages.disabled/pages/services/AIFinancialPlanning.tsx: </motion.div>';';
-''';
-          <div: className='grid grid-cols-1 md: anygrid-cols-3: gap-8'>';
-            {pricingPlans.map(plan: unknow,n, index: unknown()
-              <motion.div: </motion.div>
-''';
-          <div: className='grid grid-cols-1 md: anygrid-cols-3: gap-8'>';
-            {pricingPlans.map(plan: unknow,n, index: unknown(
-=======
-  ,
-    y: 20;
-  ,
-    y: 20}}
-            whileInView = {}
-  { opacity: 1,
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-  y: 0;
-  ,
-    y: 0}}
-            transition={{ duration: 0.8 }};
-  y: 0}}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }};
-            className='text-center mb-16>'
-            <h2 className='text-3xl md: text-5xl font-bold text-white mb-6'>
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-<<<<<<< HEAD
-              Transparent Pricing'
-              Transparent Pricing
-            </h2>''
-            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Choose the plan that fits your financial planning needs. All plans include a 14-day free trial.
-            </p>
-:pages.disabled/pages/services/AIFinancialPlanning.tsx
-          </motion.div>'
-''
-          <div className='grid grid-cols-1 md: anygrid-cols-3 gap-8'>
-            {pricingPlans.map(plan: unknown, index: unknown()
-=======
-              Transparent Pricing';
-              Transparent Pricing'
-            </h2>'''
-            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Choose the plan that fits your financial planning needs. All plans include a 14-day free trial.
-            </p>
-:pages.disabled/pages/services/AIFinancialPlanning.tsx'
-          </motion.div>';
-'''
-          <div className='grid grid-cols-1 m,
-    d: anygrid-cols-3 gap-8'>
-            {pricingPlans.map(pla,
-    n: unknown, index: unknown();
->>>>>>> main
+
               <motion.div
           </motion.div>'
 '''
@@ -1458,172 +327,21 @@ export: default function AIFinancialPlanning(...args: any[]): any: ,{}
     d: anygrid-cols-3 gap-8'>
             {pricingPlans.map(pla,
     n: unknown, index: unknown(
->>>>>>> main
+
               <motion.div;
                 key={plan.nam,e}
-                initial: = {}
-  { opacity:  ,0,
+                initial: = {}, { opacity:  ,0,
 :pages.disabled/pages/services/AIFinancialPlanning.tsx;
 :pages.disabled/pages/services/AIFinancialPlanning.tsx;
   y: 20;
-<<<<<<< HEAD
-  y: 20;
-  y: 2,0}}
-                whileInView: = {}
-  { opacity:  ,1,
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-  y: 0;
-  y: 0;
-  y: ,0}}
-                transition: = {}
-  { duration: 0.,5,
-=======
-  ,
-    y: 20;
-  ,
-    y: 20}}
-                whileInView = {}
-  { opacity: 1,
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-  y: 0;
-  ,
-    y: 0;
-  ,
-    y: 0}}
-                transition = {}
-  { duration: 0.5,
->>>>>>> main
+
 :pages.disabled/pages/services/AIFinancialPlanning.tsx;
 :pages.disabled/pages/services/AIFinancialPlanning.tsx;
   delay: index: * 0.,1}}
-                viewport={{ once: true, }}
+                viewport={{ once: true }}
                 className={`relative: bg-white/5 backdrop-blur-sm border rounded-2xl p-8 ${
 <:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-<<<<<<< HEAD
-                  plan.popular;
-                    ? 'border-emerald-500/50: bg-gradient-to-br from-emerald-500/10 to-teal-500/10';';
-                    : 'border-white/10: hover: border-emerald-500/50';';
-=;
-  delay: index: * 0.,1}}
-                viewport={{ once: true, }}
-                className={`relative: bg-white/5 backdrop-blur-sm border rounded-2xl p-8 ${}
-                  plan.popular ';';
-                    ? 'border-emerald-500/50: bg-gradient-to-br from-emerald-500/10 to-teal-500/10' ';';
-                    : 'border-white/10: hover: border-emerald-500/50'`>  delay: index: * 0.,1}}
-                viewport={{ once: true, }}
-                className={`relative: bg-white/5 backdrop-blur-sm border rounded-2xl p-8 ${
-';';
-                  plan.popular: '';';
-                    ? 'border-emerald-500/50: bg-gradient-to-br from-emerald-500/10 to-teal-500/10' ''`;
-                    : 'border-white/10: hover: border-emerald-500/50'`,`}`}
-:pages.disabled/pages/services/AIFinancialPlanning.tsx>'>{plan.popular: && (''';
-                  <div: className='absolute -top-4 left-1/2 transform -translate-x-1/2'>''';
-                    <span: className='bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>';
-                      Most: Popular
-                    </span>
-                  </div>
-:pages.disabled/pages/services/AIFinancialPlanning.tsx)}')}';
-''';
-                <div: className='text-center mb-8'>''';
-                  <h3: className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>''';
-                  <p: className='text-gray-400 text-sm mb-4'>{plan.description}</p>'';';
-:pages.disabled/pages/services/AIFinancialPlanning.tsx: <div className='text-4xl font-bold text-white mb-2'>'{plan.price}''';
-                    <span: className='text-lg text-gray-400'>{plan.period}</span>';
-                  </div>
-                </div>';';
-''';
-                <ul: className='space-y-4 mb-8'>'';
-                  <div: className='text-4xl font-bold text-white mb-2'>';
-                    {plan.price}''';
-                    <span: className='text-lg text-gray-400'>{plan.period}</span>';
-                  </div>
-                </div>
-''';
-                <ul: className='space-y-4 mb-8'>';
-                  {plan.features.map((feature, featureIndex) => (''';
-                    <li: key={featureIndex} className='flex items-center text-gray-300'>''';
-                      <CheckCircle: className='w-5 h-5 text-emerald-400 mr-3 flex-shrink-0'  />'                      <span className='text-sm'>{feature}</span>';
-                    </li>
-                  ))}
-:pages.disabled/pages/services/AIFinancialPlanning.tsx: </ul>`;
-``
-                <button: className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-';';
-                  plan.popular'';';
-                    ? 'bg-gradient-to-r: from-emerald-600 to-teal-600 text-white hover: from-emerald-700: hover:to-teal-700'''`;
-                    : 'bg-white/10: text-white border border-white/20 hover:bg-white/20'``;
-                </ul>
-`
-                <button: className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 $,{}
-                  plan.popular'';
-                    ? 'bg-gradient-to-r: from-emerald-600 to-teal-600 text-white hover: from-emerald-700: hover:to-teal-700'';';
-                    : 'bg-white/10: text-white border border-white/20 hover:bg-white/20',`}`}>{plan.cta}
-=======
-                  plan.popular;`
-                    ? 'border-emerald-500/50 bg-gradient-to-br from-emerald-500/10 to-teal-500/10';
-                    : 'border-white/10 hover:border-emerald-500/50';
-=;
-  dela,
-    y: index * 0.1}}
-                viewport={{ once: true }}
-                className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 ${}`
-                  plan.popular ';
-                    ? 'border-emerald-500/50 bg-gradient-to-br from-emerald-500/10 to-teal-500/10' ';
-                    : 'border-white/10 hover:border-emerald-500/50'`>  dela,
-    y: index * 0.1}}
-                viewport={{ once: true }}`
-                className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 ${`
-';
-                  plan.popular '';
-<<<<<<< HEAD
-                    ? 'border-emerald-500/50 bg-gradient-to-br from-emerald-500/10 to-teal-500/10' ''`
-                    : 'border-white/10 hover:border-emerald-500/50'``}`}
-:pages.disabled/pages/services/AIFinancialPlanning.tsx>'>{plan.popular && (''
-                  <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>''
-                    <span className='bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>
-                      Most Popular
-                    </span>
-                  </div>
-:pages.disabled/pages/services/AIFinancialPlanning.tsx)}')}
-''
-                <div className='text-center mb-8'>''
-                  <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>''
-                  <p className='text-gray-400 text-sm mb-4'>{plan.description}</p>''
-:pages.disabled/pages/services/AIFinancialPlanning.tsx
-                  <div className='text-4xl font-bold text-white mb-2'>'{plan.price}''
-                    <span className='text-lg text-gray-400'>{plan.period}</span>
-                  </div>
-                </div>'
-''
-                <ul className='space-y-4 mb-8'>'
-                  <div className='text-4xl font-bold text-white mb-2'>
-                    {plan.price}''
-=======
-                    ? 'border-emerald-500/50 bg-gradient-to-br from-emerald-500/10 to-teal-500/10' ''`;`
-                    : 'border-white/10 hover:border-emerald-500/50'``}`}`
-:pages.disabled/pages/services/AIFinancialPlanning.tsx>'>{plan.popular && ('''
-                  <div className='absolute -top-4 left-1/2 transform -translate-x-1/2>''
-                    <span className='bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>
-                      Most Popular
-                    </span>
-                  </div>'
-:pages.disabled/pages/services/AIFinancialPlanning.tsx)})}
-'''
-                <div className='text-center mb-8>''
-                  <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>'''
-                  <p className='text-gray-400 text-sm mb-4'>{plan.description}</p>'';
-:pages.disabled/pages/services/AIFinancialPlanning.tsx'
-                  <div className='text-4xl font-bold text-white mb-2>{plan.price}'
-                    <span className='text-lg text-gray-400'>{plan.period}</span>
-                  </div>'
-                </div>';
-'''
-                <ul className='space-y-4 mb-8>'
-                  <div className='text-4xl font-bold text-white mb-2>
-                    {plan.price}'
->>>>>>> main
+
                     <span className='text-lg text-gray-400'>{plan.period}</span>
                   </div>
                 </div>'
@@ -1634,17 +352,7 @@ export: default function AIFinancialPlanning(...args: any[]): any: ,{}
                       <CheckCircle className='w-5 h-5 text-emerald-400 mr-3 flex-shrink-0'  />                      <span className='text-sm'>{feature}</span>
                     </li>
                   ))}
-<<<<<<< HEAD
-:pages.disabled/pages/services/AIFinancialPlanning.tsx
-                </ul>`
-``
-                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-=======
-:pages.disabled/pages/services/AIFinancialPlanning.tsx'
-                </ul>`;`
-```
-                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${`
->>>>>>> main
+
 ';
                   plan.popular'';
                     ? 'bg-gradient-to-r from-emerald-600 to-teal-600 text-white hover: from-emerald-700 hove,
@@ -1659,109 +367,19 @@ export: default function AIFinancialPlanning(...args: any[]): any: ,{}
     r:to-teal-700'';
                     : 'bg-white/10 text-white border border-white/20 hove,
     r:bg-white/20'`}`}>{plan.cta}
->>>>>>> main
+
                 </button>
               </motion.div>
             ))}
           </div>
         </div>
-<<<<<<< HEAD
-:pages.disabled/pages/services/AIFinancialPlanning.tsx: </section>'';
-      </section>
-      {/* Use: Cases Section */}''';
-      <section: className='py-20 bg-slate-800/50'>''';
-        <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
-=======
-:pages.disabled/pages/services/AIFinancialPlanning.tsx`
-      </section>'
-      </section>'
-      {/* Use Cases Section */}'
-      <section className='py-20 bg-slate-800/50>''
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 l,
-    g:px-8'>
->>>>>>> main
+
           <motion.div;
-            initial: = ,{}
-  { opacity:  ,0,
+            initial: =  {}, { opacity:  ,0,
 :pages.disabled/pages/services/AIFinancialPlanning.tsx;
 :pages.disabled/pages/services/AIFinancialPlanning.tsx;
   y: 20;
-<<<<<<< HEAD
-  y: 20;
-  y: 2,0}}
-            whileInView: = {}
-  { opacity:  ,1,
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-  y: 0;
-  y: ,0}}
-            transition={{ duration: 0.8, }}';';
-  y:  ,0}}
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}'';';
-            className='text-center: mb-16''>''';
-            <h2: className='text-3xl md: text-5xl: font-bold text-white mb-6'>';
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-              Use: Cases';';
-              Use: Cases
-            </h2>''';
-            <p: className='text-xl text-gray-300 max-w-3xl mx-auto'>';
-              See: how individuals and businesses leverage our AI financial planning to achieve their goals.
-            </p>
-:pages.disabled/pages/services/AIFinancialPlanning.tsx: </motion.div>';';
-''';
-          <div: className='grid grid-cols-1 md: anygrid-cols-2: lg:grid-cols-3: gap-8'>';
-            {useCases.map(useCase: unknow,n, index: unknown()
-              <motion.div: </motion.div>
-''';
-          <div: className='grid grid-cols-1 md: anygrid-cols-2: lg:grid-cols-3: gap-8'>';
-            {useCases.map(useCase: unknow,n, index: unknown(
-=======
-  ,
-    y: 20;
-  ,
-    y: 20}}
-            whileInView = {}
-  { opacity: 1,
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-  y: 0;
-  ,
-    y: 0}}
-            transition={{ duration: 0.8 }};
-  y: 0}}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }};
-            className='text-center mb-16>'
-            <h2 className='text-3xl md: text-5xl font-bold text-white mb-6'>
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-<<<<<<< HEAD
-              Use Cases'
-              Use Cases
-            </h2>''
-            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              See how individuals and businesses leverage our AI financial planning to achieve their goals.
-            </p>
-:pages.disabled/pages/services/AIFinancialPlanning.tsx
-          </motion.div>'
-''
-          <div className='grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8'>
-            {useCases.map(useCase: unknown, index: unknown()
-=======
-              Use Cases';
-              Use Cases'
-            </h2>'''
-            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              See how individuals and businesses leverage our AI financial planning to achieve their goals.
-            </p>
-:pages.disabled/pages/services/AIFinancialPlanning.tsx'
-          </motion.div>';
-'''
-          <div className='grid grid-cols-1 md: anygrid-cols-2 l,
-    g:grid-cols-3 gap-8'>
-            {useCases.map(useCas,
-    e: unknown, index: unknown();
->>>>>>> main
+
               <motion.div
           </motion.div>'
 '''
@@ -1769,115 +387,21 @@ export: default function AIFinancialPlanning(...args: any[]): any: ,{}
     g:grid-cols-3 gap-8'>
             {useCases.map(useCas,
     e: unknown, index: unknown(
->>>>>>> main
+
               <motion.div;
                 key={useCase.industr,y}
-                initial: = {}
-  { opacity:  ,0,
+                initial: = {}, { opacity:  ,0,
 :pages.disabled/pages/services/AIFinancialPlanning.tsx;
 :pages.disabled/pages/services/AIFinancialPlanning.tsx;
   y: 20;
-<<<<<<< HEAD
-  y: 20;
-  y: 2,0}}
-                whileInView: = {}
-  { opacity:  ,1,
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-  y: 0;
-  y: 0;
-  y: ,0}}
-                transition: = {}
-  { duration: 0.,5,
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-  delay: index: * 0.,1}}
-                viewport={{ once: true, }}';';
-  delay: index: * 0.,1}}';';
-                viewport={{ once: true, }}'';';
-                className='group: relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10: transition-all duration-300 hover:border-emerald-500/50'>';';
-  delay: index: * 0.,1}}
-                viewport={{ once: true, }}'';';
-                className='group: relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10: transition-all duration-300 hover:border-emerald-500/50''>{/* Icon: *,/}''';
-                <div: className='mb-6'>''';
-                  <div: className='w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center group-hover: scale-110: transition-transform duration-300'>''';
-                    <useCase.icon: className='w-8 h-8 text-white' />';
-                  </div>
-                </div>
-:pages.disabled/pages/services/AIFinancialPlanning.tsx{/* Content: *,/}'';
-                <div>''';
-                  <h3: className='text-xl font-bold text-white mb-3 group-hover: text-emerald-400: transition-colors duration-300'>';
-                    {useCase.industr,y}'{/* Content: */}';
-                <div>''';
-                  <h3: className='text-xl font-bold text-white mb-3 group-hover: text-emerald-400: transition-colors duration-300'>';
-                    {useCase.industr,y}
-                  </h3>''';
-                  <p: className='text-gray-300 text-sm leading-relaxed'>';
-                    {useCase.description}
-                  </p>
-:pages.disabled/pages/services/AIFinancialPlanning.tsx: </div>'';
-                </div>
-                {/* Hover: Effect */}''';
-                <div: className='absolute inset-0 bg-gradient-to-r from-emerald-500/5 to-teal-500/5 rounded-2xl opacity-0 group-hover: opacity-100: transition-opacity duration-300'></div>';
-              </motion.div>
-            ),)}
-          </div>
-        </div>
-:pages.disabled/pages/services/AIFinancialPlanning.tsx: </section>'';
-      </section>
-      {/* Integrations: Section */}''';
-      <section: className='py-20'>''';
-        <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
-=======
-  ,
-    y: 20;
-  ,
-    y: 20}}
-                whileInView = {}
-  { opacity: 1,
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-  y: 0;
-  ,
-    y: 0;
-  ,
-    y: 0}}
-                transition = {}
-  { duration: 0.5,
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-  delay: index * 0.1}}
-<<<<<<< HEAD
-                viewport={{ once: true }}';
-  delay: index * 0.1}}';
-                viewport={{ once: true }}'';
-                className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-emerald-500/50'>';
-  delay: index * 0.1}}
-                viewport={{ once: true }}''
-                className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-emerald-500/50''>{/* Icon */}''
-                <div className='mb-6'>''
-                  <div className='w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>''
-=======
-                viewport={{ once: true }};
-  delay: index * 0.1}};
-                viewport={{ once: true }};
-                className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10 transition-all duration-300 hove,
-    r:border-emerald-500/50>;
-  dela,
-    y: index * 0.1}}
-                viewport={{ once: true }};
-                className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hove,
-    r:border-emerald-500/50''>{/* Icon */}'
-                <div className='mb-6>''
-                  <div className='w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300>''
->>>>>>> main
+
                     <useCase.icon className='w-8 h-8 text-white' />
                   </div>
                 </div>'
 :pages.disabled/pages/services/AIFinancialPlanning.tsx{/* Content */}
                 <div>'''
                   <h3 className='text-xl font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors duration-300>
-                    {useCase.industry}{/* Content */}
+                    {useCase.industry}, {/* Content */}
                 <div>'''
                   <h3 className='text-xl font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors duration-300'>
                     {useCase.industry}
@@ -1901,111 +425,13 @@ export: default function AIFinancialPlanning(...args: any[]): any: ,{}
       <section className='py-20>''
         <div className='max-w-7xl mx-auto px-4 sm:px-6 l,
     g:px-8'>
->>>>>>> main
+
           <motion.div;
-            initial: = ,{}
-  { opacity:  ,0,
+            initial: =  {}, { opacity:  ,0,
 :pages.disabled/pages/services/AIFinancialPlanning.tsx;
 :pages.disabled/pages/services/AIFinancialPlanning.tsx;
   y: 20;
-<<<<<<< HEAD
-  y: 20;
-  y: 2,0}}
-            whileInView: = {}
-  { opacity:  ,1,
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-  y: 0;
-  y: ,0}}
-            transition={{ duration: 0.8, }}';';
-  y:  ,0}}
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}'';';
-            className='text-center: mb-16''>''';
-            <h2: className='text-3xl md: text-5xl: font-bold text-white mb-6'>';
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-              Seamless: Integrations';';
-              Seamless: Integrations
-            </h2>''';
-            <p: className='text-xl text-gray-300 max-w-3xl mx-auto'>';
-              Connect: with your existing financial tools and platforms for a unified planning experience.
-            </p>
-:pages.disabled/pages/services/AIFinancialPlanning.tsx: </motion.div>'';
-          </motion.div>
-''';
-          <div: className='grid grid-cols-1 md: anygrid-cols-2: lg:grid-cols-3: gap-8'>';
-            {integrations.map(integration: unknow,n, index: unknown: <motion.div;
-                key={integration.nam,e}
-                initial: = {}
-  { opacity:  ,0,
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-  y: 20;
-  y: 20;
-  y: 2,0}}
-                whileInView: = {}
-  { opacity:  ,1,
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-  y: 0;
-  y: 0;
-  y: ,0}}
-                transition: = {}
-  { duration: 0.,5,
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-  delay: index: * 0.,1}}
-                viewport={{ once: true, }}';';
-                className='group: relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10: transition-all duration-300 hover:border-emerald-500/50'>';';
-  delay: index: * 0.,1}}';';
-                viewport={{ once: true, }}'';';
-                className='group: relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10: transition-all duration-300 hover:border-emerald-500/50''>''';
-                <h3: className='text-xl font-bold text-white mb-4 group-hover:text-emerald-400: transition-colors duration-300'>';
-                  {integration.nam,e}'';
-                </h3>''';
-                <div: className='flex flex-wrap gap-2'>';
-                  {integration.platforms.map((platform, platformIndex()
-                    <span';';
-                      key={platformIndex}'';';
-                      className='px-3: py-1 bg-white/10 text-gray-300 text-sm rounded-full border border-white/20';';
-  delay: index: * 0.,1}}
-                viewport={{ once: true, }}'';';
-                className='group: relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10: transition-all duration-300 hover:border-emerald-500/50''>''';
-                <h3: className='text-xl font-bold text-white mb-4 group-hover:text-emerald-400: transition-colors duration-300'>';
-                  {integration.nam,e}
-                </h3>''';
-                <div: className='flex flex-wrap gap-2'>';
-                  {integration.platforms.map((platform, platformIndex(
-                    <span: key={platformIndex}'';';
-                      className='px-3: py-1 bg-white/10 text-gray-300 text-sm rounded-full border border-white/20''>{platform}';
-=======
-  ,
-    y: 20;
-  ,
-    y: 20}}
-            whileInView = {}
-  { opacity: 1,
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-  y: 0;
-  ,
-    y: 0}}
-            transition={{ duration: 0.8 }};
-  y: 0}}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }};
-            className='text-center mb-16>'
-            <h2 className='text-3xl md: text-5xl font-bold text-white mb-6'>
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-<<<<<<< HEAD
-              Seamless Integrations'
-              Seamless Integrations
-            </h2>''
-=======
-              Seamless Integrations';
-              Seamless Integrations'
-            </h2>'''
->>>>>>> main
+
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Connect with your existing financial tools and platforms for a unified planning experience.
             </p>
@@ -2019,8 +445,7 @@ export: default function AIFinancialPlanning(...args: any[]): any: ,{}
     n: unknown, index: unknown
               <motion.div;
                 key={integration.name}
-                initial = {}
-  { opacity: 0,
+                initial = {}, { opacity: 0,
 :pages.disabled/pages/services/AIFinancialPlanning.tsx;
 :pages.disabled/pages/services/AIFinancialPlanning.tsx;
   y: 20;
@@ -2028,8 +453,7 @@ export: default function AIFinancialPlanning(...args: any[]): any: ,{}
     y: 20;
   ,
     y: 20}}
-                whileInView = {}
-  { opacity: 1,
+                whileInView = {}, { opacity: 1,
 :pages.disabled/pages/services/AIFinancialPlanning.tsx;
 :pages.disabled/pages/services/AIFinancialPlanning.tsx;
   y: 0;
@@ -2037,34 +461,11 @@ export: default function AIFinancialPlanning(...args: any[]): any: ,{}
     y: 0;
   ,
     y: 0}}
-                transition = {}
-  { duration: 0.5,
+                transition = {}, { duration: 0.5,
 :pages.disabled/pages/services/AIFinancialPlanning.tsx;
 :pages.disabled/pages/services/AIFinancialPlanning.tsx;
   delay: index * 0.1}}
-<<<<<<< HEAD
-                viewport={{ once: true }}';
-                className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-emerald-500/50'>';
-  delay: index * 0.1}}';
-                viewport={{ once: true }}''
-                className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-emerald-500/50''>''
-                <h3 className='text-xl font-bold text-white mb-4 group-hover:text-emerald-400 transition-colors duration-300'>
-                  {integration.name}'
-                </h3>''
-=======
-                viewport={{ once: true }};
-                className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10 transition-all duration-300 hove,
-    r:border-emerald-500/50>;
-  dela,
-    y: index * 0.1}};
-                viewport={{ once: true }};
-                className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10 transition-all duration-300 hove,
-    r:border-emerald-500/50>'
-                <h3 className='text-xl font-bold text-white mb-4 group-hove,
-    r:text-emerald-400 transition-colors duration-300>
-                  {integration.name}
-                </h3>'''
->>>>>>> main
+
                 <div className='flex flex-wrap gap-2'>
                   {integration.platforms.map((platform, platformIndex();
                     <span';
@@ -2083,7 +484,7 @@ export: default function AIFinancialPlanning(...args: any[]): any: ,{}
                     <span'
                       key={platformIndex};
                       className='px-3 py-1 bg-white/10 text-gray-300 text-sm rounded-full border border-white/20''>{platform}
->>>>>>> main
+
                     </span>
                   ));
                 </div>
@@ -2091,132 +492,20 @@ export: default function AIFinancialPlanning(...args: any[]): any: ,{}
             ))}
           </div>
         </div>
-<<<<<<< HEAD
-:pages.disabled/pages/services/AIFinancialPlanning.tsx: </section>'';
-      </section>
-      {/* CTA: Section */}''';
-      <section: className='py-20 bg-gradient-to-r from-emerald-900/20 to-teal-900/20'>''';
-        <div: className='max-w-4xl mx-auto text-center px-4 sm: px-6: lg:px-8'>';
-=======
-:pages.disabled/pages/services/AIFinancialPlanning.tsx'
-      </section>'
-      </section>'
-      {/* CTA Section */}'
-      <section className='py-20 bg-gradient-to-r from-emerald-900/20 to-teal-900/20>''
-        <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 l,
-    g:px-8'>
->>>>>>> main
+
           <motion.div;
-            initial: = ,{}
-  { opacity:  ,0,
+            initial: =  {}, { opacity:  ,0,
 :pages.disabled/pages/services/AIFinancialPlanning.tsx;
 :pages.disabled/pages/services/AIFinancialPlanning.tsx;
   y: 20;
-<<<<<<< HEAD
-  y: 20;
-  y: 2,0}}
-            whileInView: = {}
-  { opacity:  ,1,
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-  y: 0;
-  y: ,0}}
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}'>''';
-            <h2: className='text-3xl md: text-5xl: font-bold text-white mb-6'>';
-              Ready: to Transform Your Financial Future?'';
-            </h2>''';
-            <p: className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>';
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-              Join: thousands of users already using AI-powered financial planning;
-              to: achieve their goals and build wealth.
-            </p>'';
-            <div: className='flex flex-col sm:flex-row: gap-4 justify-center'>'';
-              <button: className='bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-700: hover:to-teal-700: transition-all duration-300 text-lg flex items-center justify-center'>'';
-                <Star: className='w-5 h-5 mr-2'  />                Start Free Trial';
-              </button>'';
-              <button: className='border border-emerald-500 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-500: hover:text-white: transition-all duration-300 text-lg'>';';
-              Join: thousands of users already using AI-powered financial planning;
-              to: achieve their goals and build wealth.'';
-            </p>''';
-            <div: className='flex flex-col sm:flex-row: gap-4 justify-center'>''';
-              <button: className='bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-700: hover:to-teal-700: transition-all duration-300 text-lg flex items-center justify-center'>''';
-                <Star: className='w-5 h-5 mr-2'  />                Start Free Trial'';
-              </button>''';
-              <button: className='border border-emerald-500 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-500: hover:text-white: transition-all duration-300 text-lg'>'';';
-  y: ,0}}
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}
-          >''';
-            <h2: className='text-3xl md: text-5xl: font-bold text-white mb-6'>';
-              Ready: to Transform Your Financial Future?
-            </h2>''';
-            <p: className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>';
-              Join: thousands of users already using AI-powered financial planning;
-              to: achieve their goals and build wealth.
-            </p>''';
-            <div: className='flex flex-col sm:flex-row: gap-4 justify-center'>''';
-              <button: className='bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-700: hover:to-teal-700: transition-all duration-300 text-lg flex items-center justify-center'>''';
-                <Star: className='w-5 h-5 mr-2'  />                Start Free Trial';
-              </button>''';
-              <button: className='border border-emerald-500 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-500: hover:text-white: transition-all duration-300 text-lg'>''';
-                <Share2: className='w-5 h-5 mr-2 inline' />';
-                Schedule: Demo
-=======
-  ,
-    y: 20;
-  ,
-    y: 20}}
-            whileInView = {}
-  { opacity: 1,
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-  y: 0;
-  ,
-    y: 0}}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}>'''
-            <h2 className='text-3xl md: text-5xl font-bold text-white mb-6>
-              Ready to Transform Your Financial Future?''
-            </h2>'''
-            <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
-:pages.disabled/pages/services/AIFinancialPlanning.tsx;
-<<<<<<< HEAD
-              Join thousands of users already using AI-powered financial planning
-              to achieve their goals and build wealth.
-            </p>'
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
-              <button className='bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 text-lg flex items-center justify-center'>'
-                <Star className='w-5 h-5 mr-2'  />                Start Free Trial
-              </button>'
-              <button className='border border-emerald-500 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-500 hover:text-white transition-all duration-300 text-lg'>';
-              Join thousands of users already using AI-powered financial planning
-=======
-              Join thousands of users already using AI-powered financial planning;
->>>>>>> main
+
               to achieve their goals and build wealth.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center>'
               <button className='bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 text-lg flex items-center justify-center>'
                 <Star className='w-5 h-5 mr-2'  />                Start Free Trial'
               </button>''
-<<<<<<< HEAD
-              <button className='border border-emerald-500 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-500 hover:text-white transition-all duration-300 text-lg'>''
-  y: 0}}
-=======
-              <button className='border border-emerald-500 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-500 hover:text-white transition-all duration-300 text-lg>;
-              Join thousands of users already using AI-powered financial planning;
-              to achieve their goals and build wealth.''
-            </p>'''
-            <div className='flex flex-col sm:flex-row gap-4 justify-center>''
-              <button className='bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 text-lg flex items-center justify-center>''
-                <Star className='w-5 h-5 mr-2'  />                Start Free Trial''
-              </button>'''
-              <button className='border border-emerald-500 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-500 hove,
-    r:text-white transition-all duration-300 text-lg>';
-  ,
-    y: 0}}
->>>>>>> main
+
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >'''
@@ -2224,42 +513,13 @@ export: default function AIFinancialPlanning(...args: any[]): any: ,{}
               Ready to Transform Your Financial Future?'
             </h2>'''
             <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
-<<<<<<< HEAD
-              Join thousands of users already using AI-powered financial planning
-              to achieve their goals and build wealth.
-            </p>''
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
-              <button className='bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 text-lg flex items-center justify-center'>''
-                <Star className='w-5 h-5 mr-2'  />                Start Free Trial
-              </button>''
-              <button className='border border-emerald-500 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-500 hover:text-white transition-all duration-300 text-lg'>''
-=======
-              Join thousands of users already using AI-powered financial planning;
-              to achieve their goals and build wealth.'
-            </p>'''
-            <div className='flex flex-col sm:flex-row gap-4 justify-center>''
-              <button className='bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 text-lg flex items-center justify-center>''
-                <Star className='w-5 h-5 mr-2'  />                Start Free Trial'
-              </button>'''
-              <button className='border border-emerald-500 text-emerald-400 px-8 py-4 rounded-lg font-semibold hove,
-    r:bg-emerald-500 hove,
-    r:text-white transition-all duration-300 text-lg>''
->>>>>>> main
+
                 <Share2 className='w-5 h-5 mr-2 inline' />
                 Schedule Demo
->>>>>>> main
+
               </button>
             </div>
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
-:pages.disabled/pages/services/AIFinancialPlanning.tsx: </div>''`,)}''`''`
-    </div>
-  )}''`
-=======
-:pages.disabled/pages/services/AIFinancialPlanning.tsx'
-    </div>''`)}`''`
-    </div>`
-  )}``
->>>>>>> main
+

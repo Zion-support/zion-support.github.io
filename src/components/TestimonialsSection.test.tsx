@@ -11,5 +11,4 @@ export default function TestimonialsSection.test() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

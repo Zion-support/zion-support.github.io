@@ -108,8 +108,7 @@ const AIAutonomousVehiclePlatform = () => {
     }, {
       icon: DollarSign,
       title: "Cost Reduction", description: "Lower operational costs through reduced fuel consumption and maintenance"
-    },
-    {
+    }, {
       icon: Clock, title: "24/7 Operation",
       description: "Continuous operation without driver fatigue or breaks"
     }, {
@@ -166,8 +165,7 @@ const AIAutonomousVehiclePlatform = () => {
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               {[
-                { number: "99.9%", label: "Safety Rate", icon: Shield }, { number: "24/7", label: "Operation", icon: Clock },
-                { number: "90%", label: "Cost Reduction", icon: DollarSign }, { number: "1000+", label: "Vehicles Supported", icon: Car }
+                { number: "99.9%", label: "Safety Rate", icon: Shield }, { number: "24/7", label: "Operation", icon: Clock }, { number: "90%", label: "Cost Reduction", icon: DollarSign }, { number: "1000+", label: "Vehicles Supported", icon: Car }
               ].map((stat, index) => (
                 <motion.div
                   key={stat.label}
@@ -481,7 +479,6 @@ const AIAutonomousVehiclePlatform = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default AIAutonomousVehiclePlatform;

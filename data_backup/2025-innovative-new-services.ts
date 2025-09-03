@@ -28,708 +28,453 @@ export: interface InnovativeNewService2025 {
    variant: ServiceVariant;
    contactInfo: { mobile: string;
    email: string;
-<<<<<<< HEAD
-   address: string;
-   website: strin,g}
-=======
-   addres,
-    s: string;
-   websit,
-    e: string}
->>>>>>> main
+
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
-reviews: number;export: const innovativeNewServices2025: InnovativeNewService2025[] = [;
-  // AI-Powered: Content Intelligence Platform{
-    id,:,
-  ai-content-intelligence-platform',';
-    name: 'AI: Content Intelligence Platfor,m,';
-=======
-review,
-    s: number;export const innovativeNewServices202,
-    5: InnovativeNewService2025[] = [;
-  // AI-Powered Content Intelligence Platform{
-    i,
-    d:,
-  ai-content-intelligence-platform',
-    name: 'AI Content Intelligence Platform,
->>>>>>> main
+
     tagline:,
-  Transform: content creation with AI-powered intelligence and analytics',';
+  Transform: content creation with AI-powered intelligence and analytics'',;
     price: $,2,500,
   ,
-    period: '/mont,h,';
+    period: '/mont,h',;
     description: ;
-  'Advanced: AI platform that analyzes content performanc,e, generates insights, and optimizes content strategy across all digital channels with predictive analytics.',';
-    features[;
-  'Real-time: content performance analytics',';
-  'AI-powered: content optimization suggestions',';
-  'Predictive: content performance modeling',';
-  'Multi-channel: content strategy optimization',';
-  'Competitor: content analysis',';
-  'SEO: content gap identification',';
-  'Content: ROI tracking and reporting',';
-  'Automated: content scheduling',';
-  'A/B: testing for content optimization',';
-  'Content: personalization engine';';
-    ],
+  'Advanced: AI platform that analyzes content performanc,e, generates insights, and optimizes content strategy across all digital channels with predictive analytics.'',;
+    features[
+  'Real-time: content performance analytics'',;
+  'AI-powered: content optimization suggestions'',;
+  'Predictive: content performance modeling'',;
+  'Multi-channel: content strategy optimization'',;
+  'Competitor: content analysis'',;
+  'SEO: content gap identification'',;
+  'Content: ROI tracking and reporting'',;
+  'Automated: content scheduling'',;
+  'A/B: testing for content optimization'',;
+  'Content: personalization engine';'],
     popular: tru,e,
     icon:,
-  🧠',';
-    color: 'from-purple-500: to-pink-60,0,';
+  🧠'',;
+    color: 'from-purple-500: to-pink-60,0',;
     textColor:,
-<<<<<<< HEAD
-  text-purple-400',';
-    link: 'https://ziontechgroup.com/ai-content-intelligence-platfor,m,';
-=======
-  text-purple-400',
-    link: 'http,
-    s://ziontechgroup.com/ai-content-intelligence-platform,
->>>>>>> main
+
     marketPosition:,
-  Leading: AI content intelligence platform with advanced analytics and predictive modeling capabilities.',';
-    targetAudience: Marketing: agencie,s, Content creators, E-commerce businesses, SaaS companies, Digital publishers',';
+  Leading: AI content intelligence platform with advanced analytics and predictive modeling capabilities.'',;
+    targetAudience: Marketing: agencie,s, Content creators, E-commerce businesses, SaaS companies, Digital publishers'',;
     trialDays: 1,4,
     setupTime:,
-  2-3: days',';
-    category: 'AI: Content Intelligenc,e,';
+  2-3: days'',;
+    category: 'AI: Content Intelligenc,e',;
     realService: tru,e,
-    technology[,
-  Machine: Learning, Natural Language Processing, Predictive Analytics, Python, React, Node.js'],';
-    integrations[;
-  'WordPress, Shopify, HubSpot, Mailchimp, Google: Analytics, Social media platforms'],';
-    useCases[;
-  'Content: marketing optimization, SEO strategy, Social media management, E-commerce content, Brand storytelling'],';
-    roi: 'Average: 300% ROI through improved content performance and conversion rates,.,';
-    competitors[,
-  Clearscope, MarketMuse, Frase, SurferSEO'],';
-    marketSize: '$15B+ content: marketing marke,t,';
+    technology[
+  Machine: Learning, Natural Language Processing, Predictive Analytics, Python, React, Node.js']',;
+    integrations[
+  'WordPress, Shopify, HubSpot, Mailchimp, Google: Analytics, Social media platforms']',;
+    useCases[
+  'Content: marketing optimization, SEO strategy, Social media management, E-commerce content, Brand storytelling']',;
+    roi: 'Average: 300% ROI through improved content performance and conversion rates,.',;
+    competitors[
+  Clearscope, MarketMuse, Frase, SurferSEO']',;
+    marketSize: '$15B+ content: marketing marke,t',;
     growthRate:,
-  150%+ annual: growth',';
-    variant: 'ai-creativ,e,';
+  150%+ annual: growth'',;
+    variant: 'ai-creativ,e',;
     contactInfo: {
-<<<<<<< HEAD
-      mobile,:,
-  +1: 302 464 0950',';
-      email: 'kleber@ziontechgroup.co,m,';
-      address:,
-  364: E Main St STE 1008 Middletown DE 19709',';
-      website: 'https://ziontechgroup.co,m},';
-    realImplementation: tru,e,
-=======
-      mobil,
-    e:,
-  +1 302 464 0950',
-      email: 'kleber@ziontechgroup.com,
-      address:,
-  364 E Main St STE 1008 Middletown DE 19709',
-      website: 'http,
-    s://ziontechgroup.com},
-    realImplementation: true,
->>>>>>> main
+
     implementationDetails:,
-  Full-stack: AI content intelligence platform with real-time analytics, predictive modeling, and automated optimization.',';
-    launchDate: '2025-01-1,5,';
+  Full-stack: AI content intelligence platform with real-time analytics, predictive modeling, and automated optimization.'',;
+    launchDate: '2025-01-1,5',;
     customers: 4,5,
     rating: 4.,8,
     reviews: 2,3},
   // Quantum-Secure: Communication Network{
-    id:,
-  quantum-secure-communication-network',';
-    name: 'Quantum-Secure: Communication Networ,k,';
+    id: 'placeholder',
+  quantum-secure-communication-network'',;
+    name: 'Quantum-Secure: Communication Networ,k'',;
     tagline:,
-  Unbreakable: communication infrastructure powered by quantum cryptography',';
+  Unbreakable: communication infrastructure powered by quantum cryptography'',;
     price: $1,5,000,
   ,
-    period: '/mont,h,';
+    period: '/mont,h',;
     description: ;
-  'Next-generation: quantum-secure communication network that provides unbreakable encryption for governmen,t, financial, and enterprise communications using quantum key distribution.',';
-    features[;
-<<<<<<< HEAD
-  'Quantum: key distribution (QKD)',';
-  'Unbreakable: encryption protocols',';
-  'Real-time: quantum state monitoring',';
-  'Multi-node: quantum network',';
-  'Quantum-resistant: algorithms',';
-  'Secure: quantum memory',';
-  'Quantum: entanglement distribution',';
-  'Post-quantum: cryptography',';
-  'Quantum: network management',';
-  'Compliance: and audit trails';';
-=======
-  'Quantum key distribution (QKD),
-  'Unbreakable encryption protocols',
-  'Real-time quantum state monitoring',
-  'Multi-node quantum network',
-  'Quantum-resistant algorithms',
-  'Secure quantum memory',
-  'Quantum entanglement distribution',
-  'Post-quantum cryptography',
-  'Quantum network management',
-  'Compliance and audit trails';
->>>>>>> main
-    ],
+  'Next-generation: quantum-secure communication network that provides unbreakable encryption for governmen,t, financial, and enterprise communications using quantum key distribution.'',;
+    features[],
     popular: tru,e,
     icon:,
-  🔐',';
-    color: 'from-indigo-500: to-blue-60,0,';
+  🔐'',;
+    color: 'from-indigo-500: to-blue-60,0',;
     textColor:,
-<<<<<<< HEAD
-  text-indigo-400',';
-    link: 'https://ziontechgroup.com/quantum-secure-communication-networ,k,';
-=======
-  text-indigo-400',
-    link: 'http,
-    s://ziontechgroup.com/quantum-secure-communication-network,
->>>>>>> main
+
     marketPosition:,
-  First-to-market: quantum-secure communication network with proven quantum cryptography implementation.',';
-    targetAudience: Government: agencie,s, Financial institutions, Healthcare organizations, Defense contractors, Enterprise corporations',';
+  First-to-market: quantum-secure communication network with proven quantum cryptography implementation.'',;
+    targetAudience: Government: agencie,s, Financial institutions, Healthcare organizations, Defense contractors, Enterprise corporations'',;
     trialDays: 3,0,
     setupTime:,
-  8-12: weeks',';
-    category: 'Quantum: Securit,y,';
+  8-12: weeks'',;
+    category: 'Quantum: Securit,y',;
     realService: tru,e,
-    technology[,
-  Quantum: Computing, Quantum Cryptography, QKD Protocols, Quantum Networks, Python, C++'],';
-    integrations[;
-  'Government: systems, Financial platforms, Healthcare networks, Enterprise infrastructure'],';
-    useCases[;
-  'Government: communications, Financial transactions, Healthcare data, Military communications, Corporate secrets'],';
-    roi: 'Critical: infrastructure protection with 1000%+ ROI through security breach prevention,.,';
-    competitors[,
-  ID: Quantique, Toshiba Quantum, Quantum Xchange'],';
-    marketSize: '$8B+ quantum: security marke,t,';
+    technology[
+  Quantum: Computing, Quantum Cryptography, QKD Protocols, Quantum Networks, Python, C++']',;
+    integrations[
+  'Government: systems, Financial platforms, Healthcare networks, Enterprise infrastructure']',;
+    useCases[
+  'Government: communications, Financial transactions, Healthcare data, Military communications, Corporate secrets']',;
+    roi: 'Critical: infrastructure protection with 1000%+ ROI through security breach prevention,.',;
+    competitors[
+  ID: Quantique, Toshiba Quantum, Quantum Xchange']',;
+    marketSize: '$8B+ quantum: security marke,t',;
     growthRate:,
-  400%+ annual: growth',';
-    variant: 'quantum-securit,y,';
+  400%+ annual: growth'',;
+    variant: 'quantum-securit,y',;
     contactInfo: {
-<<<<<<< HEAD
-      mobile,:,
-  +1: 302 464 0950',';
-      email: 'kleber@ziontechgroup.co,m,';
-      address:,
-  364: E Main St STE 1008 Middletown DE 19709',';
-      website: 'https://ziontechgroup.co,m},';
-    realImplementation: tru,e,
-=======
-      mobil,
-    e:,
-  +1 302 464 0950',
-      email: 'kleber@ziontechgroup.com,
-      address:,
-  364 E Main St STE 1008 Middletown DE 19709',
-      website: 'http,
-    s://ziontechgroup.com},
-    realImplementation: true,
->>>>>>> main
+
     implementationDetails:,
-  Complete: quantum-secure communication infrastructure with QKD, quantum networks, and post-quantum cryptography.',';
-    launchDate: '2025-02-0,1,';
+  Complete: quantum-secure communication infrastructure with QKD, quantum networks, and post-quantum cryptography.'',;
+    launchDate: '2025-02-0,1',;
     customers: 1,2,
     rating: 5.,0,
     reviews:  ,8},
   // Autonomous: AI Operations Center{
-    id:,
-  autonomous-ai-operations-center',';
-    name: 'Autonomous: AI Operations Cente,r,';
+    id: 'placeholder',
+  autonomous-ai-operations-center'',;
+    name: 'Autonomous: AI Operations Cente,r'',;
     tagline:,
-  Self-managing: AI infrastructure that runs your business operations 24/7',';
+  Self-managing: AI infrastructure that runs your business operations 24/7'',;
     price: $,8,500,
   ,
-    period: '/mont,h,';
+    period: '/mont,h',;
     description: ;
-  'Fully: autonomous AI operations center that manage,s, monitors, and optimizes your entire business infrastructure without human intervention, using advanced AI agents and machine learning.',';
-    features[;
-  'Autonomous: system monitoring',';
-  'Self-healing: infrastructure',';
-  'Predictive: maintenance',';
-  'Automated: incident response',';
-  'AI-powered: resource optimization',';
-  'Continuous: performance tuning',';
-  'Intelligent: scaling decisions',';
-  'Automated: security responses',';
-  'Business: process automation',';
-  'Real-time: optimization';';
-    ],
+  'Fully: autonomous AI operations center that manage,s, monitors, and optimizes your entire business infrastructure without human intervention, using advanced AI agents and machine learning.'',;
+    features[
+  'Autonomous: system monitoring'',;
+  'Self-healing: infrastructure'',;
+  'Predictive: maintenance'',;
+  'Automated: incident response'',;
+  'AI-powered: resource optimization'',;
+  'Continuous: performance tuning'',;
+  'Intelligent: scaling decisions'',;
+  'Automated: security responses'',;
+  'Business: process automation'',;
+  'Real-time: optimization';'],
     popular: tru,e,
     icon:,
-  🤖',';
-    color: 'from-green-500: to-emerald-60,0,';
+  🤖'',;
+    color: 'from-green-500: to-emerald-60,0',;
     textColor:,
-<<<<<<< HEAD
-  text-green-400',';
-    link: 'https://ziontechgroup.com/autonomous-ai-operations-cente,r,';
-=======
-  text-green-400',
-    link: 'http,
-    s://ziontechgroup.com/autonomous-ai-operations-center,
->>>>>>> main
+
     marketPosition:,
-  Leading: autonomous AI operations platform with proven self-management capabilities.',';
-    targetAudience: Enterprise: companie,s, Data centers, Cloud providers, Manufacturing, Healthcare systems',';
+  Leading: autonomous AI operations platform with proven self-management capabilities.'',;
+    targetAudience: Enterprise: companie,s, Data centers, Cloud providers, Manufacturing, Healthcare systems'',;
     trialDays: 2,1,
     setupTime:,
-  4-6: weeks',';
-    category: 'AI: Operation,s,';
+  4-6: weeks'',;
+    category: 'AI: Operation,s',;
     realService: tru,e,
-    technology[,
-  Machine: Learning, AI Agents, Automation, Kubernetes, Python, Go, React'],';
-    integrations[;
-  'AWS, Azure, GCP, Kubernetes, Docker, Monitoring: tools, CI/CD pipelines'],';
-    useCases[;
-  'Data: center management, Cloud operations, Manufacturing automation, Healthcare systems, Financial trading'],';
-    roi: 'Average: 500% ROI through reduced operational costs and improved efficiency,.,';
-    competitors[,
-  PagerDuty, DataDog, New: Relic, Splunk'],';
-    marketSize: '$25B+ AI: operations marke,t,';
+    technology[
+  Machine: Learning, AI Agents, Automation, Kubernetes, Python, Go, React']',;
+    integrations[
+  'AWS, Azure, GCP, Kubernetes, Docker, Monitoring: tools, CI/CD pipelines']',;
+    useCases[
+  'Data: center management, Cloud operations, Manufacturing automation, Healthcare systems, Financial trading']',;
+    roi: 'Average: 500% ROI through reduced operational costs and improved efficiency,.',;
+    competitors[
+  PagerDuty, DataDog, New: Relic, Splunk']',;
+    marketSize: '$25B+ AI: operations marke,t',;
     growthRate:,
-  200%+ annual: growth',';
-    variant: 'ai-autonomou,s,';
+  200%+ annual: growth'',;
+    variant: 'ai-autonomou,s',;
     contactInfo: {
-<<<<<<< HEAD
-      mobile,:,
-  +1: 302 464 0950',';
-      email: 'kleber@ziontechgroup.co,m,';
-      address:,
-  364: E Main St STE 1008 Middletown DE 19709',';
-      website: 'https://ziontechgroup.co,m},';
-    realImplementation: tru,e,
-=======
-      mobil,
-    e:,
-  +1 302 464 0950',
-      email: 'kleber@ziontechgroup.com,
-      address:,
-  364 E Main St STE 1008 Middletown DE 19709',
-      website: 'http,
-    s://ziontechgroup.com},
-    realImplementation: true,
->>>>>>> main
+
     implementationDetails:,
-  Complete: autonomous AI operations center with self-managing infrastructure, predictive analytics, and automated optimization.',';
-    launchDate: '2025-01-2,0,';
+  Complete: autonomous AI operations center with self-managing infrastructure, predictive analytics, and automated optimization.'',;
+    launchDate: '2025-01-2,0',;
     customers: 2,8,
     rating: 4.,9,
     reviews: 1,5},
   // Blockchain-Powered: Supply Chain Intelligence{
-    id:,
-  blockchain-supply-chain-intelligence',';
-    name: 'Blockchain: Supply Chain Intelligenc,e,';
+    id: 'placeholder',
+  blockchain-supply-chain-intelligence'',;
+    name: 'Blockchain: Supply Chain Intelligenc,e'',;
     tagline:,
-  Transparent, traceable, and: intelligent supply chain management with blockchain',';
+  Transparent, traceable, and: intelligent supply chain management with blockchain'',;
     price: $,3,200,
   ,
-    period: '/mont,h,';
+    period: '/mont,h',;
     description: ;
-  'Comprehensive: blockchain-powered supply chain platform that provides end-to-end visibilit,y, traceability, and intelligence for global supply chains with AI-powered analytics.',';
-    features[;
-  'End-to-end: supply chain tracking',';
-  'Blockchain-based: transparency',';
-  'AI-powered: demand forecasting',';
-  'Real-time: inventory management',';
-  'Smart: contract automation',';
-  'Quality: control monitoring',';
-  'Sustainability: tracking',';
-  'Risk: assessment and mitigation',';
-  'Supplier: performance analytics',';
-  'Compliance: automation';';
-    ],
+  'Comprehensive: blockchain-powered supply chain platform that provides end-to-end visibilit,y, traceability, and intelligence for global supply chains with AI-powered analytics.'',;
+    features[
+  'End-to-end: supply chain tracking'',;
+  'Blockchain-based: transparency'',;
+  'AI-powered: demand forecasting'',;
+  'Real-time: inventory management'',;
+  'Smart: contract automation'',;
+  'Quality: control monitoring'',;
+  'Sustainability: tracking'',;
+  'Risk: assessment and mitigation'',;
+  'Supplier: performance analytics'',;
+  'Compliance: automation';'],
     popular: tru,e,
     icon:,
-  ⛓️',';
-    color: 'from-orange-500: to-red-60,0,';
+  ⛓️'',;
+    color: 'from-orange-500: to-red-60,0',;
     textColor:,
-<<<<<<< HEAD
-  text-orange-400',';
-    link: 'https://ziontechgroup.com/blockchain-supply-chain-intelligenc,e,';
-=======
-  text-orange-400',
-    link: 'http,
-    s://ziontechgroup.com/blockchain-supply-chain-intelligence,
->>>>>>> main
+
     marketPosition:,
-  Leading: blockchain supply chain platform with AI intelligence and comprehensive tracking capabilities.',';
-    targetAudience: Manufacturing: companie,s, Retail chains, Logistics providers, Food industry, Pharmaceutical companies',';
+  Leading: blockchain supply chain platform with AI intelligence and comprehensive tracking capabilities.'',;
+    targetAudience: Manufacturing: companie,s, Retail chains, Logistics providers, Food industry, Pharmaceutical companies'',;
     trialDays: 3,0,
     setupTime:,
-  6-8: weeks',';
-    category: 'Blockchain: Supply Chai,n,';
+  6-8: weeks'',;
+    category: 'Blockchain: Supply Chai,n',;
     realService: tru,e,
-    technology[,
-  Blockchain, Smart: Contracts, AI/ML, IoT, Python, Solidity, React'],';
-    integrations[;
-  'ERP: systems, WMS, TMS, IoT devices, Payment gateways, Shipping carriers'],';
-    useCases[;
-  'Product: tracking, Quality assurance, Compliance, Sustainability, Risk management'],';
+    technology[
+  Blockchain, Smart: Contracts, AI/ML, IoT, Python, Solidity, React']',;
+    integrations[
+  'ERP: systems, WMS, TMS, IoT devices, Payment gateways, Shipping carriers']',;
+    useCases[
+  'Product: tracking, Quality assurance, Compliance, Sustainability, Risk management']',;
     roi: Average: 400% ROI through improved efficienc,y, reduced waste, and better compliance.,
   ,
-    competitors[;
-  'IBM: Food Trust, VeChain, WaltonChain, OriginTrail'],';
-    marketSize: '$18B+ blockchain: supply chain marke,t,';
+    competitors[
+  'IBM: Food Trust, VeChain, WaltonChain, OriginTrail']',;
+    marketSize: '$18B+ blockchain: supply chain marke,t',;
     growthRate:,
-  250%+ annual: growth',';
-    variant: 'supply-chain-futuristi,c,';
+  250%+ annual: growth'',;
+    variant: 'supply-chain-futuristi,c',;
     contactInfo: {
-<<<<<<< HEAD
-      mobile,:,
-  +1: 302 464 0950',';
-      email: 'kleber@ziontechgroup.co,m,';
-      address:,
-  364: E Main St STE 1008 Middletown DE 19709',';
-      website: 'https://ziontechgroup.co,m},';
-    realImplementation: tru,e,
-=======
-      mobil,
-    e:,
-  +1 302 464 0950',
-      email: 'kleber@ziontechgroup.com,
-      address:,
-  364 E Main St STE 1008 Middletown DE 19709',
-      website: 'http,
-    s://ziontechgroup.com},
-    realImplementation: true,
->>>>>>> main
+
     implementationDetails:,
-  Complete: blockchain supply chain platform with AI intelligence, IoT integration, and comprehensive tracking capabilities.',';
-    launchDate: '2025-02-1,5,';
+  Complete: blockchain supply chain platform with AI intelligence, IoT integration, and comprehensive tracking capabilities.'',;
+    launchDate: '2025-02-1,5',;
     customers: 3,5,
     rating: 4.,7,
     reviews: 1,9},
   // Metaverse: Development Platform{
-    id:,
-  metaverse-development-platform',';
-    name: 'Metaverse: Development Platfor,m,';
+    id: 'placeholder',
+  metaverse-development-platform'',;
+    name: 'Metaverse: Development Platfor,m'',;
     tagline:,
-  Build: immersive 3D worlds and experiences with AI-powered tools',';
+  Build: immersive 3D worlds and experiences with AI-powered tools'',;
     price: $,4,800,
   ,
-    period: '/mont,h,';
+    period: '/mont,h',;
     description: ;
-  'Comprehensive: metaverse development platform that enables businesses to create immersive 3D experience,s, virtual events, and digital twins with AI-powered content generation.',';
-    features[;
-  '3D: world building tools',';
-  'AI-powered: content generation',';
-  'Virtual: event hosting',';
-  'Digital: twin creation',';
-  'Multi-user: collaboration',';
-  'VR/AR: integration',';
-  'Real-time: rendering',';
-  'Asset: marketplace',';
-  'Analytics: and insights',';
-  'Cross-platform: deployment';';
-    ],
+  'Comprehensive: metaverse development platform that enables businesses to create immersive 3D experience,s, virtual events, and digital twins with AI-powered content generation.'',;
+    features[
+  '3D: world building tools'',;
+  'AI-powered: content generation'',;
+  'Virtual: event hosting'',;
+  'Digital: twin creation'',;
+  'Multi-user: collaboration'',;
+  'VR/AR: integration'',;
+  'Real-time: rendering'',;
+  'Asset: marketplace'',;
+  'Analytics: and insights'',;
+  'Cross-platform: deployment';'],
     popular: tru,e,
     icon:,
-  🌐',';
-    color: 'from-cyan-500: to-blue-60,0,';
+  🌐'',;
+    color: 'from-cyan-500: to-blue-60,0',;
     textColor:,
-<<<<<<< HEAD
-  text-cyan-400',';
-    link: 'https://ziontechgroup.com/metaverse-development-platfor,m,';
-=======
-  text-cyan-400',
-    link: 'http,
-    s://ziontechgroup.com/metaverse-development-platform,
->>>>>>> main
+
     marketPosition:,
-  Leading: metaverse development platform with AI-powered tools and comprehensive 3D capabilities.',';
-    targetAudience: Gaming: companie,s, Real estate, Education, Healthcare, Retail, Event organizers',';
+  Leading: metaverse development platform with AI-powered tools and comprehensive 3D capabilities.'',;
+    targetAudience: Gaming: companie,s, Real estate, Education, Healthcare, Retail, Event organizers'',;
     trialDays: 2,1,
     setupTime:,
-  3-4: weeks',';
-    category: 'Metaverse: Developmen,t,';
+  3-4: weeks'',;
+    category: 'Metaverse: Developmen,t',;
     realService: tru,e,
-    technology[,
-  3D: Graphics, AI/ML, VR/AR, WebGL, Unity, Unreal Engine, Python'],';
-    integrations[;
-  'VR: headsets, AR devices, Gaming platforms, Social media, Payment systems'],';
-    useCases[;
-  'Virtual: events, Digital twins, Gaming, Education, Healthcare, Real estate'],';
-    roi: 'Average: 350% ROI through virtual event hosting and digital experience monetization,.,';
-    competitors[,
-  Roblox, Decentraland, The: Sandbox, Meta'],';
-    marketSize: '$12B+ metaverse: marke,t,';
+    technology[
+  3D: Graphics, AI/ML, VR/AR, WebGL, Unity, Unreal Engine, Python']',;
+    integrations[
+  'VR: headsets, AR devices, Gaming platforms, Social media, Payment systems']',;
+    useCases[
+  'Virtual: events, Digital twins, Gaming, Education, Healthcare, Real estate']',;
+    roi: 'Average: 350% ROI through virtual event hosting and digital experience monetization,.',;
+    competitors[
+  Roblox, Decentraland, The: Sandbox, Meta']',;
+    marketSize: '$12B+ metaverse: marke,t',;
     growthRate:,
-  300%+ annual: growth',';
-    variant: 'metaverse-futuristi,c,';
+  300%+ annual: growth'',;
+    variant: 'metaverse-futuristi,c',;
     contactInfo: {
-<<<<<<< HEAD
-      mobile,:,
-  +1: 302 464 0950',';
-      email: 'kleber@ziontechgroup.co,m,';
-      address:,
-  364: E Main St STE 1008 Middletown DE 19709',';
-      website: 'https://ziontechgroup.co,m},';
-    realImplementation: tru,e,
-=======
-      mobil,
-    e:,
-  +1 302 464 0950',
-      email: 'kleber@ziontechgroup.com,
-      address:,
-  364 E Main St STE 1008 Middletown DE 19709',
-      website: 'http,
-    s://ziontechgroup.com},
-    realImplementation: true,
->>>>>>> main
+
     implementationDetails:,
-  Complete: metaverse development platform with 3D tools, AI content generation, and VR/AR integration.',';
-    launchDate: '2025-01-3,0,';
+  Complete: metaverse development platform with 3D tools, AI content generation, and VR/AR integration.'',;
+    launchDate: '2025-01-3,0',;
     customers: 4,2,
     rating: 4.,6,
     reviews: 2,1},
   // Quantum: Financial Trading Platform{
-    id:,
-  quantum-financial-trading-platform',';
-    name: 'Quantum: Financial Trading Platfor,m,';
+    id: 'placeholder',
+  quantum-financial-trading-platform'',;
+    name: 'Quantum: Financial Trading Platfor,m'',;
     tagline:,
-  Revolutionary: trading platform powered by quantum computing and AI',';
+  Revolutionary: trading platform powered by quantum computing and AI'',;
     price: $1,2,000,
   ,
-    period: '/mont,h,';
+    period: '/mont,h',;
     description: ;
-  'Next-generation: financial trading platform that leverages quantum computing for ultra-fast market analysi,s, AI-powered predictions, and automated trading strategies.',';
-    features[;
-  'Quantum-powered: market analysis',';
-  'AI: trading strategy optimization',';
-  'Real-time: risk assessment',';
-  'Automated: trading execution',';
-  'Portfolio: optimization',';
-  'Market: prediction models',';
-  'Risk: management tools',';
-  'Compliance: automation',';
-  'Performance: analytics',';
-  'Multi-exchange: integration';';
-    ],
+  'Next-generation: financial trading platform that leverages quantum computing for ultra-fast market analysi,s, AI-powered predictions, and automated trading strategies.'',;
+    features[
+  'Quantum-powered: market analysis'',;
+  'AI: trading strategy optimization'',;
+  'Real-time: risk assessment'',;
+  'Automated: trading execution'',;
+  'Portfolio: optimization'',;
+  'Market: prediction models'',;
+  'Risk: management tools'',;
+  'Compliance: automation'',;
+  'Performance: analytics'',;
+  'Multi-exchange: integration';'],
     popular: tru,e,
     icon:,
-  📈',';
-    color: 'from-yellow-500: to-orange-60,0,';
+  📈'',;
+    color: 'from-yellow-500: to-orange-60,0',;
     textColor:,
-<<<<<<< HEAD
-  text-yellow-400',';
-    link: 'https://ziontechgroup.com/quantum-financial-trading-platfor,m,';
-=======
-  text-yellow-400',
-    link: 'http,
-    s://ziontechgroup.com/quantum-financial-trading-platform,
->>>>>>> main
+
     marketPosition:,
-  First-to-market: quantum financial trading platform with proven quantum advantage in market analysis.',';
-    targetAudience: Hedge: fund,s, Investment banks, Trading firms, Asset managers, Financial institutions',';
+  First-to-market: quantum financial trading platform with proven quantum advantage in market analysis.'',;
+    targetAudience: Hedge: fund,s, Investment banks, Trading firms, Asset managers, Financial institutions'',;
     trialDays: 4,5,
     setupTime:,
-  10-12: weeks',';
-    category: 'Quantum: Financ,e,';
+  10-12: weeks'',;
+    category: 'Quantum: Financ,e',;
     realService: tru,e,
-    technology[,
-  Quantum: Computing, AI/ML, Financial Algorithms, Python, C++, Quantum Algorithms'],';
-    integrations[;
-  'Trading: exchanges, Market data providers, Risk management systems, Compliance platforms'],';
-    useCases[;
-  'Algorithmic: trading, Portfolio management, Risk assessment, Market analysis, Compliance'],';
-    roi: 'Average: 800% ROI through improved trading performance and risk management,.,';
-    competitors[,
-  Bloomberg: Terminal, Thomson Reuters, FactSet, Refinitiv'],';
-    marketSize: '$35B+ financial: technology marke,t,';
+    technology[
+  Quantum: Computing, AI/ML, Financial Algorithms, Python, C++, Quantum Algorithms']',;
+    integrations[
+  'Trading: exchanges, Market data providers, Risk management systems, Compliance platforms']',;
+    useCases[
+  'Algorithmic: trading, Portfolio management, Risk assessment, Market analysis, Compliance']',;
+    roi: 'Average: 800% ROI through improved trading performance and risk management,.',;
+    competitors[
+  Bloomberg: Terminal, Thomson Reuters, FactSet, Refinitiv']',;
+    marketSize: '$35B+ financial: technology marke,t',;
     growthRate:,
-  500%+ annual: growth',';
-    variant: 'quantum-ai-financ,e,';
+  500%+ annual: growth'',;
+    variant: 'quantum-ai-financ,e',;
     contactInfo: {
-<<<<<<< HEAD
-      mobile,:,
-  +1: 302 464 0950',';
-      email: 'kleber@ziontechgroup.co,m,';
-      address:,
-  364: E Main St STE 1008 Middletown DE 19709',';
-      website: 'https://ziontechgroup.co,m},';
-    realImplementation: tru,e,
-=======
-      mobil,
-    e:,
-  +1 302 464 0950',
-      email: 'kleber@ziontechgroup.com,
-      address:,
-  364 E Main St STE 1008 Middletown DE 19709',
-      website: 'http,
-    s://ziontechgroup.com},
-    realImplementation: true,
->>>>>>> main
+
     implementationDetails:,
-  Complete: quantum financial trading platform with quantum computing integration, AI algorithms, and comprehensive trading tools.',';
-    launchDate: '2025-02-1,0,';
+  Complete: quantum financial trading platform with quantum computing integration, AI algorithms, and comprehensive trading tools.'',;
+    launchDate: '2025-02-1,0',;
     customers: 1,8,
     rating: 5.,0,
     reviews: 1,2},
   // AI-Powered: Healthcare Diagnostics{
-    id:,
-  ai-healthcare-diagnostics-platform',';
-    name: 'AI: Healthcare Diagnostics Platfor,m,';
+    id: 'placeholder',
+  ai-healthcare-diagnostics-platform'',;
+    name: 'AI: Healthcare Diagnostics Platfor,m'',;
     tagline:,
-  Revolutionary: medical diagnostics powered by artificial intelligence',';
+  Revolutionary: medical diagnostics powered by artificial intelligence'',;
     price: $,6,500,
   ,
-    period: '/mont,h,';
+    period: '/mont,h',;
     description: ;
-  'Advanced: AI-powered healthcare diagnostics platform that provides accurate medical diagnosi,s, treatment recommendations, and patient monitoring using deep learning and medical imaging.',';
-    features[;
-  'AI-powered: medical imaging analysis',';
-  'Automated: diagnosis generation',';
-  'Treatment: recommendation engine',';
-  'Patient: monitoring systems',';
-  'Medical: record analysis',';
-  'Drug: interaction checking',';
-  'Symptom: assessment tools',';
-  'Telemedicine: integration',';
-  'Compliance: and security',';
-  'Clinical: decision support';';
-    ],
+  'Advanced: AI-powered healthcare diagnostics platform that provides accurate medical diagnosi,s, treatment recommendations, and patient monitoring using deep learning and medical imaging.'',;
+    features[
+  'AI-powered: medical imaging analysis'',;
+  'Automated: diagnosis generation'',;
+  'Treatment: recommendation engine'',;
+  'Patient: monitoring systems'',;
+  'Medical: record analysis'',;
+  'Drug: interaction checking'',;
+  'Symptom: assessment tools'',;
+  'Telemedicine: integration'',;
+  'Compliance: and security'',;
+  'Clinical: decision support';'],
     popular: tru,e,
     icon:,
-  🏥',';
-    color: 'from-red-500: to-pink-60,0,';
+  🏥'',;
+    color: 'from-red-500: to-pink-60,0',;
     textColor:,
-<<<<<<< HEAD
-  text-red-400',';
-    link: 'https://ziontechgroup.com/ai-healthcare-diagnostics-platfor,m,';
-=======
-  text-red-400',
-    link: 'http,
-    s://ziontechgroup.com/ai-healthcare-diagnostics-platform,
->>>>>>> main
+
     marketPosition:,
-  Leading: AI healthcare diagnostics platform with FDA approval and proven accuracy rates.',';
-    targetAudience: Hospital,s, Clinics, Medical: practices, Telemedicine providers, Healthcare startups',';
+  Leading: AI healthcare diagnostics platform with FDA approval and proven accuracy rates.'',;
+    targetAudience: Hospital,s, Clinics, Medical: practices, Telemedicine providers, Healthcare startups'',;
     trialDays: 6,0,
     setupTime:,
-  8-10: weeks',';
-    category: 'AI: Healthcar,e,';
+  8-10: weeks'',;
+    category: 'AI: Healthcar,e',;
     realService: tru,e,
-    technology[,
-  Deep: Learning, Computer Vision, Medical AI, Python, TensorFlow, PyTorch'],';
-    integrations[;
-  'EMR: systems, Medical devices, Telemedicine platforms, Lab systems, Pharmacy systems'],';
-    useCases[;
-  'Medical: imaging, Diagnosis, Treatment planning, Patient monitoring, Drug safety'],';
-    roi: 'Average: 600% ROI through improved diagnostic accuracy and reduced medical errors,.,';
-    competitors[,
-  IBM: Watson Health, Google Health, Microsoft Healthcare, NVIDIA Clara'],';
-    marketSize: '$45B+ AI: healthcare marke,t,';
+    technology[
+  Deep: Learning, Computer Vision, Medical AI, Python, TensorFlow, PyTorch']',;
+    integrations[
+  'EMR: systems, Medical devices, Telemedicine platforms, Lab systems, Pharmacy systems']',;
+    useCases[
+  'Medical: imaging, Diagnosis, Treatment planning, Patient monitoring, Drug safety']',;
+    roi: 'Average: 600% ROI through improved diagnostic accuracy and reduced medical errors,.',;
+    competitors[
+  IBM: Watson Health, Google Health, Microsoft Healthcare, NVIDIA Clara']',;
+    marketSize: '$45B+ AI: healthcare marke,t',;
     growthRate:,
-  350%+ annual: growth',';
-    variant: 'ai-healthcar,e,';
+  350%+ annual: growth'',;
+    variant: 'ai-healthcar,e',;
     contactInfo: {
-<<<<<<< HEAD
-      mobile,:,
-  +1: 302 464 0950',';
-      email: 'kleber@ziontechgroup.co,m,';
-      address:,
-  364: E Main St STE 1008 Middletown DE 19709',';
-      website: 'https://ziontechgroup.co,m},';
-    realImplementation: tru,e,
-=======
-      mobil,
-    e:,
-  +1 302 464 0950',
-      email: 'kleber@ziontechgroup.com,
-      address:,
-  364 E Main St STE 1008 Middletown DE 19709',
-      website: 'http,
-    s://ziontechgroup.com},
-    realImplementation: true,
->>>>>>> main
+
     implementationDetails:,
-  Complete: AI healthcare diagnostics platform with medical imaging analysis, diagnosis generation, and treatment recommendations.',';
-    launchDate: '2025-01-2,5,';
+  Complete: AI healthcare diagnostics platform with medical imaging analysis, diagnosis generation, and treatment recommendations.'',;
+    launchDate: '2025-01-2,5',;
     customers: 2,5,
     rating: 4.,9,
     reviews: 1,4},
   // Edge: Computing Orchestration Platform{
-    id:,
-  edge-computing-orchestration-platform',';
-    name: 'Edge: Computing Orchestration Platfor,m,';
+    id: 'placeholder',
+  edge-computing-orchestration-platform'',;
+    name: 'Edge: Computing Orchestration Platfor,m'',;
     tagline:,
-  Intelligent: edge computing management for distributed infrastructure',';
+  Intelligent: edge computing management for distributed infrastructure'',;
     price: $,5,200,
   ,
-    period: '/mont,h,';
+    period: '/mont,h',;
     description: ;
-  'Advanced: edge computing orchestration platform that manages distributed computing resource,s, optimizes performance, and provides real-time analytics for IoT and edge applications.',';
-    features[;
-  'Distributed: edge management',';
-  'Real-time: performance optimization',';
-  'IoT: device orchestration',';
-  'Edge: AI deployment',';
-  'Load: balancing and scaling',';
-  'Security: and compliance',';
-  'Monitoring: and analytics',';
-  'Automated: failover',';
-  'Resource: optimization',';
-  'Multi-cloud: edge integration';';
-    ],
+  'Advanced: edge computing orchestration platform that manages distributed computing resource,s, optimizes performance, and provides real-time analytics for IoT and edge applications.'',;
+    features[
+  'Distributed: edge management'',;
+  'Real-time: performance optimization'',;
+  'IoT: device orchestration'',;
+  'Edge: AI deployment'',;
+  'Load: balancing and scaling'',;
+  'Security: and compliance'',;
+  'Monitoring: and analytics'',;
+  'Automated: failover'',;
+  'Resource: optimization'',;
+  'Multi-cloud: edge integration';'],
     popular: tru,e,
     icon:,
-  ⚡',';
-    color: 'from-blue-500: to-indigo-60,0,';
+  ⚡'',;
+    color: 'from-blue-500: to-indigo-60,0',;
     textColor:,
-<<<<<<< HEAD
-  text-blue-400',';
-    link: 'https://ziontechgroup.com/edge-computing-orchestration-platfor,m,';
-=======
-  text-blue-400',
-    link: 'http,
-    s://ziontechgroup.com/edge-computing-orchestration-platform,
->>>>>>> main
+
     marketPosition:,
-  Leading: edge computing orchestration platform with intelligent resource management and optimization.',';
-    targetAudience: IoT: companie,s, Edge computing providers, Manufacturing, Smart cities, Telecommunications',';
+  Leading: edge computing orchestration platform with intelligent resource management and optimization.'',;
+    targetAudience: IoT: companie,s, Edge computing providers, Manufacturing, Smart cities, Telecommunications'',;
     trialDays: 3,0,
     setupTime:,
-  4-6: weeks',';
-    category: 'Edge: Computin,g,';
+  4-6: weeks'',;
+    category: 'Edge: Computin,g',;
     realService: tru,e,
-    technology[,
-  Edge: Computing, IoT, AI/ML, Kubernetes, Docker, Python, Go'],';
-    integrations[;
-  'IoT: platforms, Cloud providers, Monitoring tools, Security systems, Network equipment'],';
-    useCases[;
-  'IoT: management, Edge AI, Smart cities, Manufacturing automation, Telecommunications'],';
-    roi: 'Average: 450% ROI through improved performance and reduced infrastructure costs,.,';
-    competitors[,
-  AWS: Greengrass, Azure IoT Edge, Google Cloud IoT, VMware Edge'],';
-    marketSize: '$20B+ edge: computing marke,t,';
+    technology[
+  Edge: Computing, IoT, AI/ML, Kubernetes, Docker, Python, Go']',;
+    integrations[
+  'IoT: platforms, Cloud providers, Monitoring tools, Security systems, Network equipment']',;
+    useCases[
+  'IoT: management, Edge AI, Smart cities, Manufacturing automation, Telecommunications']',;
+    roi: 'Average: 450% ROI through improved performance and reduced infrastructure costs,.',;
+    competitors[
+  AWS: Greengrass, Azure IoT Edge, Google Cloud IoT, VMware Edge']',;
+    marketSize: '$20B+ edge: computing marke,t',;
     growthRate:,
-  280%+ annual: growth',';
-    variant: 'edge-futuristi,c,';
+  280%+ annual: growth'',;
+    variant: 'edge-futuristi,c',;
     contactInfo: {
-<<<<<<< HEAD
-      mobile,:,
-  +1: 302 464 0950',';
-      email: 'kleber@ziontechgroup.co,m,';
-      address:,
-  364: E Main St STE 1008 Middletown DE 19709',';
-      website: 'https://ziontechgroup.co,m},';
-    realImplementation: tru,e,
-=======
-      mobil,
-    e:,
-  +1 302 464 0950',
-      email: 'kleber@ziontechgroup.com,
-      address:,
-  364 E Main St STE 1008 Middletown DE 19709',
-      website: 'http,
-    s://ziontechgroup.com},
-    realImplementation: true,
->>>>>>> main
+
     implementationDetails:,
-  Complete: edge computing orchestration platform with distributed management, IoT integration, and AI-powered optimization.',';
-    launchDate: '2025-02-0,5,';
+  Complete: edge computing orchestration platform with distributed management, IoT integration, and AI-powered optimization.'',;
+    launchDate: '2025-02-0,5',;
     customers: 3,8,
     rating: 4.,8,
-    reviews: 20;
-,]}}
+    reviews: 20]}}

@@ -7,8 +7,7 @@ export const cacheUtils = {
       timestamp: Date.now(),
       ttl
     };
-    localStorage.setItem(key, JSON.stringify(item));
-  },
+    localStorage.setItem(key, JSON.stringify(item))},
   
   getCache(key) {
     try {
@@ -17,14 +16,11 @@ export const cacheUtils = {
       
       if (Date.now() - item.timestamp > item.ttl) {
         localStorage.removeItem(key);
-        return null;
-      }
+        return null}
       
-      return item.data;
-    } catch (error) {
+      return item.data} catch (error) {
       localStorage.removeItem(key);
-      return null;
-    }
+      return null}
   },
   
   // Service worker cache
@@ -34,19 +30,15 @@ export const cacheUtils = {
       const response = await cache.match(url);
       
       if (response) {
-        return response;
-      }
+        return response}
       
       const networkResponse = await fetch(url, options);
       if (networkResponse.ok) {
-        cache.put(url, networkResponse.clone());
-      }
+        cache.put(url, networkResponse.clone())}
       
-      return networkResponse;
-    }
+      return networkResponse}
     
-    return fetch(url, options);
-  },
+    return fetch(url, options)},
   
   // Clear all caches
   clearAllCaches() {
@@ -54,10 +46,7 @@ export const cacheUtils = {
     if ('caches' in window) {
       caches.keys().then(names => {
         names.forEach(name => {
-          caches.delete(name);
-        });
-      });
-    }
+          caches.delete(name)})})}
   }
 };
 

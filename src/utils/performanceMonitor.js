@@ -11,13 +11,11 @@ export const performanceMonitor = {
         
         // Send to analytics
         if (typeof gtag !== 'undefined') {
-          gtag('event', 'page_load_time', {
+          gtag('event', 'page_load_time' {
             value: Math.round(loadTime),
             event_category: 'Performance'
-          });
-        }
-      });
-    }
+          })}
+      })}
   },
   
   // Measure Core Web Vitals
@@ -28,9 +26,7 @@ export const performanceMonitor = {
         getFID(console.log);
         getFCP(console.log);
         getLCP(console.log);
-        getTTFB(console.log);
-      });
-    }
+        getTTFB(console.log)})}
   },
   
   // Monitor memory usage
@@ -38,8 +34,7 @@ export const performanceMonitor = {
     if (typeof window !== 'undefined' && 'memory' in performance) {
       setInterval(() => {
         const memory = performance.memory;
-        console.log(`Memory usage: ${Math.round(memory.usedJSHeapSize / 1024 / 1024)}MB`);
-      }, 30000); // Every 30 seconds
+        console.log(`Memory usage: ${Math.round(memory.usedJSHeapSize / 1024 / 1024)}MB`)}, 30000); // Every 30 seconds
     }
   }
 };

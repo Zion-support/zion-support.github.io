@@ -18,11 +18,8 @@ export function middleware(request) {
     "connect-src 'self' https://api.vercel.com;"
   );
   
-  return response;
-}
+  return response}
 
 export const config = {
   matcher: [
-    '/((?!api|_next/static|_next/image|favicon.ico).*)',
-  ],
-};
+    '/((?!api|_next/static|_next/image|favicon.ico).*)' ] };

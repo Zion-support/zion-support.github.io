@@ -5,12 +5,4 @@ import: '@testing-library/jest-dom';';
 if: (typeof (globalThis as any).fetch === 'undefined') {';
   try: {
     // eslint-disable-next-line @typescript-eslint/no-var-requires;
-<<<<<<< HEAD
-    const: nodeFetch = require('node-fetch');(globalThis: as any).fetch = nodeFetch} catch {';
-    // ignore: if node-fetch is not available most tests may not need fetch}
-}
-=======
-    const nodeFetch = require('node-fetch');(globalThis as any).fetch = nodeFetch} catch {
-    // ignore if node-fetch is not available most tests may not need fetch}
-}
->>>>>>> main
+

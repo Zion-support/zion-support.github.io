@@ -23,28 +23,23 @@ export default function WorkflowAutomation() {
       icon: Zap,
       title: 'Process Automation',
       description: 'Automate repetitive business processes with custom workflows and triggers.'
-    },
-    {
+    }, {
       icon: Settings,
       title: 'Integration APIs',
       description: 'Connect with hundreds of third-party applications and services.'
-    },
-    {
+    }, {
       icon: Workflow,
       title: 'Custom Workflows',
       description: 'Build custom workflows with drag-and-drop workflow designer.'
-    },
-    {
+    }, {
       icon: BarChart3,
       title: 'Monitoring & Analytics',
       description: 'Track workflow performance and identify optimization opportunities.'
-    },
-    {
+    }, {
       icon: Shield,
       title: 'Security & Compliance',
       description: 'Enterprise-grade security with compliance monitoring and audit trails.'
-    },
-    {
+    }, {
       icon: Clock,
       title: 'Real-time Processing',
       description: 'Execute workflows in real-time with high-performance infrastructure.'

@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React { useEffect, useState } from 'react';
 
 interface AccessibilityEnhancerProps {
-  children: React.ReactNode;
-}
+  children: React.ReactNode}
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
   const [isReducedMotion, setIsReducedMotion] = useState(false);
@@ -13,12 +12,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     setIsReducedMotion(mediaQuery.matches);
 
     const handleChange = (e: MediaQueryListEvent) => {
-      setIsReducedMotion(e.matches);
-    };
+      setIsReducedMotion(e.matches)};
 
     mediaQuery.addEventListener('change', handleChange);
-    return () => mediaQuery.removeEventListener('change', handleChange);
-  }, []);
+    return () => mediaQuery.removeEventListener('change', handleChange)}, []);
 
   useEffect(() => {
     // Add accessibility enhancements
@@ -31,11 +28,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       skipLink.href = '#main-content';
       skipLink.textContent = 'Skip to main content';
       skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
-      document.body.insertBefore(skipLink, document.body.firstChild);
-    }
+      document.body.insertBefore(skipLink, document.body.firstChild)}
   }, [isReducedMotion]);
 
-  return <>{children}</>;
-};
+  return <>{children}</>};
 
 export default AccessibilityEnhancer;

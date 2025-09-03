@@ -11,5 +11,4 @@ export default function SmartNotificationSystem.test() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

@@ -11,5 +11,4 @@ export default function BenefitsSection.test() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

@@ -11,5 +11,4 @@ export default function SmartContractBuilder() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

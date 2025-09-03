@@ -21,10 +21,8 @@ class ComprehensiveBuildAutomation {
     // Ensure directories exist
     [this.logDir, this.reportsDir].forEach(dir => {
       if (!fs.existsSync(dir)) {
-        fs.mkdirSync(dir, { recursive: true });
-      }
-    });
-  }
+        fs.mkdirSync(dir { recursive: true })}
+    })}
 
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
@@ -33,15 +31,14 @@ class ComprehensiveBuildAutomation {
     
     // Write to log file
     const logFile = path.join(this.logDir, 'build-automation.log');
-    fs.appendFileSync(logFile, logMessage + '\n');
-  }
+    fs.appendFileSync(logFile, logMessage + '\n')}
 
   async runStep(name, command, options = {}) {
     this.log(`Starting step: ${name}`);
     const startTime = Date.now();
     
     try {
-      const result = execSync(command, {
+      const result = execSync(command {
         cwd: this.projectRoot,
         encoding: 'utf8',
         stdio: options.silent ? 'pipe' : 'inherit',
@@ -58,8 +55,7 @@ class ComprehensiveBuildAutomation {
       });
       
       this.log(`Completed step: ${name} (${duration}ms)`);
-      return result;
-    } catch (error) {
+      return result} catch (error) {
       const duration = Date.now() - startTime;
       const errorMessage = error.message || error.toString();
       
@@ -80,11 +76,9 @@ class ComprehensiveBuildAutomation {
       this.log(`Failed step: ${name} - ${errorMessage}`, 'ERROR');
       
       if (!options.continueOnError) {
-        throw error;
-      }
+        throw error}
       
-      return null;
-    }
+      return null}
   }
 
   async checkDependencies() {
@@ -94,16 +88,14 @@ class ComprehensiveBuildAutomation {
       // Check Node.js version
       const nodeVersion = await this.runStep(
         'Check Node.js version',
-        'node --version',
-        { silent: true }
+        'node --version' { silent: true }
       );
       this.buildResults.metrics.nodeVersion = nodeVersion.trim();
       
       // Check npm version
       const npmVersion = await this.runStep(
         'Check npm version',
-        'npm --version',
-        { silent: true }
+        'npm --version' { silent: true }
       );
       this.buildResults.metrics.npmVersion = npmVersion.trim();
       
@@ -111,19 +103,14 @@ class ComprehensiveBuildAutomation {
       try {
         const yarnVersion = await this.runStep(
           'Check yarn version',
-          'yarn --version',
-          { silent: true, continueOnError: true }
+          'yarn --version' { silent: true, continueOnError: true }
         );
-        this.buildResults.metrics.yarnVersion = yarnVersion ? yarnVersion.trim() : 'Not installed';
-      } catch (error) {
-        this.buildResults.metrics.yarnVersion = 'Not installed';
-      }
+        this.buildResults.metrics.yarnVersion = yarnVersion ? yarnVersion.trim() : 'Not installed'} catch (error) {
+        this.buildResults.metrics.yarnVersion = 'Not installed'}
       
-      return true;
-    } catch (error) {
+      return true} catch (error) {
       this.log(`Dependency check failed: ${error.message}`, 'ERROR');
-      return false;
-    }
+      return false}
   }
 
   async installDependencies() {
@@ -132,16 +119,12 @@ class ComprehensiveBuildAutomation {
     try {
       // First try yarn if available
       if (fs.existsSync(path.join(this.projectRoot, 'yarn.lock'))) {
-        await this.runStep('Install dependencies with yarn', 'yarn install --frozen-lockfile');
-      } else {
-        await this.runStep('Install dependencies with npm', 'npm ci');
-      }
+        await this.runStep('Install dependencies with yarn', 'yarn install --frozen-lockfile')} else {
+        await this.runStep('Install dependencies with npm', 'npm ci')}
       
-      return true;
-    } catch (error) {
+      return true} catch (error) {
       this.log(`Dependency installation failed: ${error.message}`, 'ERROR');
-      return false;
-    }
+      return false}
   }
 
   async runLinting() {
@@ -150,19 +133,16 @@ class ComprehensiveBuildAutomation {
     try {
       await this.runStep(
         'ESLint check',
-        'npm run lint',
-        { continueOnError: true }
+        'npm run lint' { continueOnError: true }
       );
       
-      return true;
-    } catch (error) {
+      return true} catch (error) {
       this.buildResults.warnings.push({
         type: 'linting',
         message: 'Linting issues found',
         details: error.message
       });
-      return false;
-    }
+      return false}
   }
 
   async runTypeChecking() {
@@ -171,19 +151,16 @@ class ComprehensiveBuildAutomation {
     try {
       await this.runStep(
         'TypeScript type check',
-        'npx tsc --noEmit',
-        { continueOnError: true }
+        'npx tsc --noEmit' { continueOnError: true }
       );
       
-      return true;
-    } catch (error) {
+      return true} catch (error) {
       this.buildResults.warnings.push({
         type: 'typescript',
         message: 'Type checking issues found',
         details: error.message
       });
-      return false;
-    }
+      return false}
   }
 
   async runTests() {
@@ -192,26 +169,22 @@ class ComprehensiveBuildAutomation {
     try {
       const testResult = await this.runStep(
         'Run tests',
-        'npm test -- --watchAll=false --coverage',
-        { continueOnError: true }
+        'npm test -- --watchAll=false --coverage' { continueOnError: true }
       );
       
       // Try to parse test results if available
       const coverageFile = path.join(this.projectRoot, 'coverage', 'coverage-summary.json');
       if (fs.existsSync(coverageFile)) {
         const coverage = JSON.parse(fs.readFileSync(coverageFile, 'utf8'));
-        this.buildResults.metrics.testCoverage = coverage.total;
-      }
+        this.buildResults.metrics.testCoverage = coverage.total}
       
-      return true;
-    } catch (error) {
+      return true} catch (error) {
       this.buildResults.warnings.push({
         type: 'testing',
         message: 'Test failures or issues found',
         details: error.message
       });
-      return false;
-    }
+      return false}
   }
 
   async runBuild() {
@@ -228,14 +201,11 @@ class ComprehensiveBuildAutomation {
       const buildDir = path.join(this.projectRoot, '.next');
       if (fs.existsSync(buildDir)) {
         const buildSize = this.calculateDirectorySize(buildDir);
-        this.buildResults.metrics.buildSize = buildSize;
-      }
+        this.buildResults.metrics.buildSize = buildSize}
       
-      return true;
-    } catch (error) {
+      return true} catch (error) {
       this.log(`Build failed: ${error.message}`, 'ERROR');
-      return false;
-    }
+      return false}
   }
 
   calculateDirectorySize(dirPath) {
@@ -245,21 +215,17 @@ class ComprehensiveBuildAutomation {
       const stats = fs.statSync(currentPath);
       
       if (stats.isFile()) {
-        totalSize += stats.size;
-      } else if (stats.isDirectory()) {
+        totalSize += stats.size} else if (stats.isDirectory()) {
         const files = fs.readdirSync(currentPath);
         files.forEach(file => {
-          calculateSize(path.join(currentPath, file));
-        });
-      }
+          calculateSize(path.join(currentPath, file))})}
     };
     
     try {
       calculateSize(dirPath);
       return Math.round(totalSize / 1024 / 1024 * 100) / 100; // MB
     } catch (error) {
-      return 0;
-    }
+      return 0}
   }
 
   async runSecurityAudit() {
@@ -268,19 +234,16 @@ class ComprehensiveBuildAutomation {
     try {
       await this.runStep(
         'Security audit',
-        'npm audit --audit-level=moderate',
-        { continueOnError: true }
+        'npm audit --audit-level=moderate' { continueOnError: true }
       );
       
-      return true;
-    } catch (error) {
+      return true} catch (error) {
       this.buildResults.warnings.push({
         type: 'security',
         message: 'Security vulnerabilities found',
         details: error.message
       });
-      return false;
-    }
+      return false}
   }
 
   async generateReport() {
@@ -291,12 +254,9 @@ class ComprehensiveBuildAutomation {
     const hasWarnings = this.buildResults.warnings.length > 0;
     
     if (hasErrors) {
-      this.buildResults.overallStatus = 'failed';
-    } else if (hasWarnings) {
-      this.buildResults.overallStatus = 'warning';
-    } else {
-      this.buildResults.overallStatus = 'success';
-    }
+      this.buildResults.overallStatus = 'failed'} else if (hasWarnings) {
+      this.buildResults.overallStatus = 'warning'} else {
+      this.buildResults.overallStatus = 'success'}
     
     // Add summary metrics
     this.buildResults.summary = {
@@ -317,8 +277,7 @@ class ComprehensiveBuildAutomation {
     fs.writeFileSync(latestReportFile, JSON.stringify(this.buildResults, null, 2));
     
     this.log(`Build report saved to: ${reportFile}`);
-    return reportFile;
-  }
+    return reportFile}
 
   async run() {
     this.log('🚀 Starting Comprehensive Build Automation...');
@@ -327,26 +286,21 @@ class ComprehensiveBuildAutomation {
       // Step 1: Check dependencies
       const depsOk = await this.checkDependencies();
       if (!depsOk) {
-        throw new Error('Dependency check failed');
-      }
+        throw new Error('Dependency check failed')}
       
       // Step 2: Install dependencies
       const installOk = await this.installDependencies();
       if (!installOk) {
-        throw new Error('Dependency installation failed');
-      }
+        throw new Error('Dependency installation failed')}
       
       // Step 3: Run automated fixes
       this.log('Running automated fixes...');
       try {
         await this.runStep(
           'Auto-fix issues',
-          'node scripts/auto-fixer.cjs',
-          { continueOnError: true }
-        );
-      } catch (error) {
-        this.log('Auto-fix had issues, continuing...', 'WARN');
-      }
+          'node scripts/auto-fixer.cjs' { continueOnError: true }
+        )} catch (error) {
+        this.log('Auto-fix had issues, continuing...', 'WARN')}
       
       // Step 4: Run linting
       await this.runLinting();
@@ -377,14 +331,11 @@ class ComprehensiveBuildAutomation {
       this.log(`Total Duration: ${Math.round(this.buildResults.summary.totalDuration / 1000)}s`);
       this.log(`Report: ${reportFile}`);
       
-      return this.buildResults;
-      
-    } catch (error) {
+      return this.buildResults} catch (error) {
       this.log(`Build automation failed: ${error.message}`, 'ERROR');
       this.buildResults.overallStatus = 'failed';
       await this.generateReport();
-      throw error;
-    }
+      throw error}
   }
 }
 
@@ -394,12 +345,9 @@ if (require.main === module) {
   automation.run()
     .then(results => {
       console.log('\n✅ Build automation completed');
-      process.exit(results.overallStatus === 'success' ? 0 : 1);
-    })
+      process.exit(results.overallStatus === 'success' ? 0 : 1)})
     .catch(error => {
       console.error('\n❌ Build automation failed:', error.message);
-      process.exit(1);
-    });
-}
+      process.exit(1)})}
 
 module.exports = ComprehensiveBuildAutomation;

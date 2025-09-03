@@ -25,8 +25,7 @@ const AutomatedFollowUps: React.FC = () => {
         <a href="https://www.pipedrive.com/" target="_blank" rel="noopener noreferrer">Pipedrive</a>
       </div>
     </div>
-  );
-};
+  )};
 
 export default AutomatedFollowUps;
 

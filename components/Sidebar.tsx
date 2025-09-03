@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import {
@@ -34,13 +34,11 @@ import {
   ArrowRight,
   Calendar,
   DollarSign,
-  X,
-} from 'lucide-react';
+  X } from 'lucide-react';
 
 interface SidebarProps {
   isOpen: boolean;
-  onClose: () => void;
-}
+  onClose: () => void}
 
 export default function Sidebar({ isOpen, onClose }: SidebarProps) {
   const router = useRouter();
@@ -51,111 +49,30 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
       prev.includes(section)
         ? prev.filter(s => s !== section)
         : [...prev, section]
-    );
-  };
+    )};
 
   const mainNavigation = [
-  { name: 'Home', href: '/', icon: Home },
-    { name: 'About', href: '/about', icon: Users },
-    { name: 'Contact', href: '/contact', icon: Phone },
-    { name: 'Blog', href: '/blog', icon: FileText },
-    { name: 'Careers', href: '/careers', icon: Briefcase },
-  ];
+  { name: 'Home', href: '/', icon: Home }, { name: 'About', href: '/about', icon: Users }, { name: 'Contact', href: '/contact', icon: Phone }, { name: 'Blog', href: '/blog', icon: FileText }, { name: 'Careers', href: '/careers', icon: Briefcase } ];
 
   const services = [
-  { name: 'AI Services', href: '/ai-services', icon: Brain },
-    { name: 'IT Services', href: '/it-services', icon: Network },
-    { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud },
-    { name: 'Web Development', href: '/services/web-development', icon: Code },
-    { name: 'Cloud Services', href: '/services/cloud-services', icon: Server },
-    { name: 'AI Development', href: '/services/ai-development', icon: Cpu },
-  ];
+  { name: 'AI Services', href: '/ai-services', icon: Brain }, { name: 'IT Services', href: '/it-services', icon: Network }, { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud }, { name: 'Web Development', href: '/services/web-development', icon: Code }, { name: 'Cloud Services', href: '/services/cloud-services', icon: Server }, { name: 'AI Development', href: '/services/ai-development', icon: Cpu } ];
 
   const solutions = [
-<<<<<<< HEAD
-    {
-      name: 'AI Content Creation',
-      href: '/solutions/ai-content-creation',
-      icon: Brain,
-    },
-    {
-      name: 'Customer Support',
-      href: '/solutions/customer-support',
-      icon: Users,
-    },
-    {
-      name: 'Email Automation',
-      href: '/solutions/email-automation',
-      icon: Mail,
-    },
-    {
-      name: 'Event Management',
-      href: '/solutions/event-management',
-      icon: Calendar,
-    },
-    {
-      name: 'Project Management',
-      href: '/solutions/project-management',
-      icon: BarChart3,
-    },
-    {
-      name: 'Workflow Automation',
-      href: '/solutions/workflow-automation',
-      icon: Zap,
-    },
-=======
-  { name: 'AI Content Creation', href: '/solutions/ai-content-creation', icon: Brain },
-    { name: 'Customer Support', href: '/solutions/customer-support', icon: Users },
-    { name: 'Email Automation', href: '/solutions/email-automation', icon: Mail },
-    { name: 'Event Management', href: '/solutions/event-management', icon: Calendar },
-    { name: 'Project Management', href: '/solutions/project-management', icon: BarChart3 },
-    { name: 'Workflow Automation', href: '/solutions/workflow-automation', icon: Zap }
->>>>>>> main
+
   ];
 
   const resources = [
-  { name: 'Documentation', href: '/docs', icon: FileText },
-    { name: 'API Reference', href: '/api', icon: Code },
-    { name: 'Help & Support', href: '/help', icon: HelpCircle },
-    { name: 'Training', href: '/training', icon: Users },
-    { name: 'Case Studies', href: '/case-studies', icon: BarChart3 },
-    { name: 'Pricing Guide', href: '/pricing-guide', icon: DollarSign },
-    { name: 'Search', href: '/search', icon: Search },
-    { name: 'Sitemap', href: '/sitemap', icon: Globe },
-  ];
+  { name: 'Documentation', href: '/docs', icon: FileText }, { name: 'API Reference', href: '/api', icon: Code }, { name: 'Help & Support', href: '/help', icon: HelpCircle }, { name: 'Training', href: '/training', icon: Users }, { name: 'Case Studies', href: '/case-studies', icon: BarChart3 }, { name: 'Pricing Guide', href: '/pricing-guide', icon: DollarSign }, { name: 'Search', href: '/search', icon: Search }, { name: 'Sitemap', href: '/sitemap', icon: Globe } ];
 
   const legal = [
-  { name: 'Privacy Policy', href: '/privacy', icon: Lock },
-    { name: 'Terms of Service', href: '/terms', icon: FileText },
-    { name: 'Cookie Policy', href: '/cookies', icon: Settings },
-  ];
+  { name: 'Privacy Policy', href: '/privacy', icon: Lock }, { name: 'Terms of Service', href: '/terms', icon: FileText }, { name: 'Cookie Policy', href: '/cookies', icon: Settings } ];
 
   const contactInfo = [
-<<<<<<< HEAD
-    { icon: Phone, text: '+1 302 464 0950', href: 'tel:+13024640950' },
-    {
-      icon: Mail,
-      text: 'kleber@ziontechgroup.com',
-      href: 'mailto:kleber@ziontechgroup.com',
-    },
-    {
-      icon: MapPin,
-      text: '364 E Main St STE 1008, Middletown DE 19709',
-      href: '#',
-    },
-=======
-  { icon: Phone, text: '+1 302 464 0950', href: 'tel:+13024640950' },
-    { icon: Mail, text: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },
-    { icon: MapPin, text: '364 E Main St STE 1008, Middletown DE 19709', href: '#' }
->>>>>>> main
+
   ];
 
   const socialLinks = [
-  { icon: Linkedin, href: '#', label: 'LinkedIn' },
-    { icon: Twitter, href: '#', label: 'Twitter' },
-    { icon: Facebook, href: '#', label: 'Facebook' },
-    { icon: Instagram, href: '#', label: 'Instagram' },
-  ];
+  { icon: Linkedin, href: '#', label: 'LinkedIn' }, { icon: Twitter, href: '#', label: 'Twitter' }, { icon: Facebook, href: '#', label: 'Facebook' }, { icon: Instagram, href: '#', label: 'Instagram' } ];
 
   const renderNavSection = (
     title: string,
@@ -200,8 +117,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
           </div>
         )}
       </div>
-    );
-  };
+    )};
 
   if (!isOpen) return null;
 
@@ -270,19 +186,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
             </div>
           </div>
 
-          {/* Services */}
-          {renderNavSection('Services', services, 'services')}
-
-          {/* Solutions */}
-          {renderNavSection('Solutions', solutions, 'solutions')}
-
-          {/* Resources */}
-          {renderNavSection('Resources', resources, 'resources')}
-
-          {/* Legal */}
-          {renderNavSection('Legal', legal, 'legal')}
-
-          {/* Contact Information */}
+          {/* Services */}, {renderNavSection('Services', services, 'services')}, {/* Solutions */}, {renderNavSection('Solutions', solutions, 'solutions')}, {/* Resources */}, {renderNavSection('Resources', resources, 'resources')}, {/* Legal */}, {renderNavSection('Legal', legal, 'legal')}, {/* Contact Information */}
           <div className="mb-6">
             <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">
               Contact
@@ -334,5 +238,4 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
         </div>
       </div>
     </>
-  );
-}
+  )}

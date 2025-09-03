@@ -1,10 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-<<<<<<< HEAD
-=======
-import { cn } from '../../lib/utils';
-interface OptimizedImageProps {
->>>>>>> main
+
 import { cn } from '../../src/lib/utils';
 interface OptimizedImageProps {
   src: string;
@@ -16,34 +12,17 @@ interface OptimizedImageProps {
   quality?: number;
   placeholder?: 'blur' | 'empty';
   blurDataURL?: string;
-  sizes?: string;
-}
+  sizes?: string}
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
-<<<<<<< HEAD:components/ui/OptimizedImage.tsx
-=======
-<<<<<<< HEAD
-  src,
-  alt,
-  width = 800,
-  height = 600,
-  className,
-  priority = false,
-  quality = 85,
-  placeholder = 'empty',
-  blurDataURL,
-  sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
-}) => {
-  return (
-=======
->>>>>>> main:components/disabled/ui/OptimizedImage.tsx
+:components/disabled/ui/OptimizedImage.tsx
   src, alt,
   width = 800, height = 600,
   className, priority = false,
   quality = 85, placeholder = 'empty',
   blurDataURL, sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'}) => {
   return(
->>>>>>> main
+
     <div className={cn('relative overflow-hidden', className)}>
       <Image
         src={src}
@@ -55,20 +34,9 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         placeholder={placeholder}
         blurDataURL={blurDataURL}
         sizes={sizes}
-<<<<<<< HEAD:components/ui/OptimizedImage.tsx
-=======
-<<<<<<< HEAD
-        className="object-cover transition-transform duration-300 hover:scale-105"
-      />
-    </div>
-  );
-};
-
-export default OptimizedImage;
-=======
->>>>>>> main:components/disabled/ui/OptimizedImage.tsx
+:components/disabled/ui/OptimizedImage.tsx
         className='object-cover transition-transform duration-300 hover: scale-105'/>
     </div>
   )}
 export default OptimizedImage
->>>>>>> main
+

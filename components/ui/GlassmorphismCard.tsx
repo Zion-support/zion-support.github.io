@@ -3,8 +3,7 @@ import { ReactNode } from "react";
 
 interface GlassmorphismCardProps {
   children: ReactNode;
-  className?: string;
-}
+  className?: string}
 
 export default function GlassmorphismCard({ 
   children, 
@@ -14,5 +13,4 @@ export default function GlassmorphismCard({
     <div className={className}>
       {children}
     </div>
-  );
-}
+  )}

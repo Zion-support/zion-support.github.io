@@ -13,8 +13,7 @@ import {
   CheckCircle,
   Globe,
   Target,
-  Lightbulb,
-} from 'lucide-react';
+  Lightbulb } from 'lucide-react';
 
 export default function Training() {
   const trainingPrograms = [
@@ -29,21 +28,10 @@ export default function Training() {
       rating: 4.9,
       students: 1250,
       features: [
-<<<<<<< HEAD
-        'Introduction to AI concepts',
-        'Machine learning algorithms',
-        'Data preprocessing',
-        'Model training and evaluation',
-        'Real-world projects',
-        'Certificate of completion',
-=======
-        'Introduction to AI concepts,Machine learning algorithms,Data preprocessing,Model training and evaluation,Real-world projects,Certificate of completion'
->>>>>>> main
+
       ],
       instructor: 'Dr. Sarah Johnson',
-      category: 'AI & ML',
-    },
-    {
+      category: 'AI & ML' }, {
       title: 'Cloud Architecture & DevOps',
       description:
         'Master cloud computing and DevOps practices for scalable applications',
@@ -54,21 +42,10 @@ export default function Training() {
       rating: 4.8,
       students: 890,
       features: [
-<<<<<<< HEAD
-        'Cloud platform fundamentals',
-        'Containerization with Docker',
-        'Kubernetes orchestration',
-        'CI/CD pipelines',
-        'Infrastructure as Code',
-        'Monitoring and logging',
-=======
-        'Cloud platform fundamentals,Containerization with Docker,Kubernetes orchestration,CI/CD pipelines,Infrastructure as Code,Monitoring and logging'
->>>>>>> main
+
       ],
       instructor: 'Michael Chen',
-      category: 'Cloud & DevOps',
-    },
-    {
+      category: 'Cloud & DevOps' }, {
       title: 'Cybersecurity Essentials',
       description:
         'Comprehensive cybersecurity training for modern threats and defenses',
@@ -79,21 +56,10 @@ export default function Training() {
       rating: 4.9,
       students: 1100,
       features: [
-<<<<<<< HEAD
-        'Threat landscape analysis',
-        'Security frameworks',
-        'Penetration testing',
-        'Incident response',
-        'Compliance and governance',
-        'Security tools and techniques',
-=======
-        'Threat landscape analysis,Security frameworks,Penetration testing,Incident response,Compliance and governance,Security tools and techniques'
->>>>>>> main
+
       ],
       instructor: 'Alex Rodriguez',
-      category: 'Security',
-    },
-    {
+      category: 'Security' }, {
       title: 'Full-Stack Development',
       description: 'Build complete web applications with modern technologies',
       duration: '80 hours',
@@ -103,182 +69,50 @@ export default function Training() {
       rating: 4.7,
       students: 2100,
       features: [
-<<<<<<< HEAD
-        'Frontend development (React)',
-        'Backend development (Node.js)',
-        'Database design',
-        'API development',
-        'Deployment strategies',
-        'Project portfolio',
-=======
-        'Frontend development (React),Backend development (Node.js),Database design,API development,Deployment strategies,Project portfolio'
->>>>>>> main
+
       ],
       instructor: 'Emily Davis',
-      category: 'Development',
-    },
-  ];
+      category: 'Development' } ];
 
   const certificationPaths = [
   {
       title: 'Zion Tech AI Specialist',
       description: 'Certify your expertise in AI and machine learning',
-      duration: '3 months',
-<<<<<<< HEAD
-      requirements: ['AI Fundamentals', 'ML Advanced', 'Project Portfolio'],
-      benefits: [
-        'Industry recognition',
-        'Career advancement',
-        'Exclusive resources',
-      ],
-=======
-      requirements: ['AI Fundamentals,ML Advanced,Project Portfolio'],
-      benefits: ['Industry recognition,Career advancement,Exclusive resources']
->>>>>>> main
-    },
-    {
+      duration: '3 months' }, {
       title: 'Zion Tech Cloud Architect',
       description: 'Become a certified cloud architecture expert',
-      duration: '4 months',
-<<<<<<< HEAD
-      requirements: [
-        'Cloud Fundamentals',
-        'DevOps Practices',
-        'Architecture Design',
-      ],
-      benefits: [
-        'High-demand skills',
-        'Salary increase',
-        'Consulting opportunities',
-      ],
-=======
-      requirements: ['Cloud Fundamentals,DevOps Practices,Architecture Design'],
-      benefits: ['High-demand skills,Salary increase,Consulting opportunities']
->>>>>>> main
-    },
-    {
+      duration: '4 months' }, {
       title: 'Zion Tech Security Professional',
       description: 'Master cybersecurity and become a security expert',
-      duration: '3 months',
-<<<<<<< HEAD
-      requirements: [
-        'Security Fundamentals',
-        'Penetration Testing',
-        'Incident Response',
-      ],
-      benefits: [
-        'Security clearance',
-        'Government contracts',
-        'Leadership roles',
-      ],
-    },
-=======
-      requirements: ['Security Fundamentals,Penetration Testing,Incident Response'],
-      benefits: ['Security clearance,Government contracts,Leadership roles']
-    }
->>>>>>> main
-  ];
+      duration: '3 months' ];
 
   const learningFormats = [
   {
       title: 'Self-Paced Online',
       description:
         'Learn at your own pace with pre-recorded videos and materials',
-      icon: Play,
-<<<<<<< HEAD
-      features: [
-        '24/7 access',
-        'Lifetime access',
-        'Mobile friendly',
-        'Progress tracking',
-      ],
-=======
-      features: ['24/7 access,Lifetime access,Mobile friendly,Progress tracking']
->>>>>>> main
-    },
-    {
+      icon: Play }, {
       title: 'Live Online Classes',
       description: 'Interactive live sessions with expert instructors',
-      icon: Users,
-<<<<<<< HEAD
-      features: [
-        'Real-time Q&A',
-        'Group projects',
-        'Peer networking',
-        'Instructor feedback',
-      ],
-=======
-      features: ['Real-time Q&A,Group projects,Peer networking,Instructor feedback']
->>>>>>> main
-    },
-    {
+      icon: Users }, {
       title: 'In-Person Workshops',
       description: 'Hands-on training in our state-of-the-art facilities',
-      icon: Globe,
-<<<<<<< HEAD
-      features: [
-        'Lab access',
-        'Equipment training',
-        'Networking events',
-        'Certification exams',
-      ],
-=======
-      features: ['Lab access,Equipment training,Networking events,Certification exams']
->>>>>>> main
-    },
-    {
+      icon: Globe }, {
       title: 'Corporate Training',
       description: 'Customized training programs for your organization',
-      icon: Target,
-<<<<<<< HEAD
-      features: [
-        'Custom curriculum',
-        'Team training',
-        'On-site delivery',
-        'ROI tracking',
-      ],
-    },
-  ];
-
-  const testimonials = [
-    {
-      quote:
-        'The AI training program completely transformed my career. I went from a traditional developer to an AI specialist in just 3 months.',
-      author: 'Jennifer Liu',
-      title: 'AI Engineer',
-      company: 'Tech Corp',
-      rating: 5,
-=======
-      features: ['Custom curriculum,Team training,On-site delivery,ROI tracking']
-    }
-  ];
-
-  const testimonials = [
-  {
-      quote: "The AI training program completely transformed my career. I went from a traditional developer to an AI specialist in just 3 months.",
-      author: "Jennifer Liu",
-      title: "AI Engineer",
-      company: "Tech Corp",
-      rating: 5
->>>>>>> main
-    },
-    {
+      icon: Target }, {
       quote:
         'The cloud architecture course gave me the skills I needed to lead our digital transformation initiative. Highly recommended!',
       author: 'David Park',
       title: 'Cloud Architect',
       company: 'Enterprise Solutions',
-      rating: 5,
-    },
-    {
+      rating: 5 }, {
       quote:
         'The cybersecurity training was comprehensive and practical. I now feel confident handling security challenges in my role.',
       author: 'Maria Garcia',
       title: 'Security Analyst',
       company: 'Financial Services',
-      rating: 5,
-    },
-  ];
+      rating: 5 } ];
 
   return (
     <>
@@ -617,5 +451,4 @@ export default function Training() {
         </section>
       </main>
     </>
-  );
-}
+  )}

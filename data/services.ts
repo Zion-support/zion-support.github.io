@@ -11,22 +11,20 @@ export interface Service {
     starter: number;
     professional: number;
     enterprise: number;
-    currency: string;
-  };
+    currency: string};
   benefits: string[];
   useCases: string[];
   technologies: string[];
   link: string;
-  icon: string;
-}
+  icon: string}
 
 export const services: Service[] = [
   // Micro SaaS Services
   {
-    id:,
+    id: 'placeholder',
   ai-content-generator',
     name: 'AI Content Generator Pro,
-    category:,
+    category:',
   micro-saas',
     description: Advanced AI-powered content generation platform for blogs, social media, and marketing materials with GPT-4 integration.,
   ,
@@ -58,8 +56,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/ai-content-generator,
     icon:,
   📝'
-  },
-  {
+  }, {
     id: 'ai-meeting-notes-assistant,
     name:,
   AI Meeting Notes Assistant',
@@ -89,8 +86,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/ai-meeting-notes-assistant,
     icon:,
   📝'
-  },
-  {
+  }, {
     id: 'whatsapp-crm-inbox,
     name:,
   WhatsApp CRM Inbox',
@@ -119,8 +115,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/whatsapp-crm-inbox,
     icon:,
   💬'
-  },
-  {
+  }, {
     id: 'local-seo-audit-suite,
     name:,
   Local SEO Audit Suite',
@@ -148,8 +143,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/local-seo-audit-suite,
     icon:,
   📍'
-  },
-  {
+  }, {
     id: 'ai-rfp-proposal-writer,
     name:,
   AI RFP & Proposal Writer',
@@ -177,8 +171,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/ai-rfp-proposal-writer,
     icon:,
   📄'
-  },
-  {
+  }, {
     id: 'ecommerce-image-optimizer,
     name:,
   E‑commerce Image Optimizer',
@@ -206,8 +199,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/ecommerce-image-optimizer,
     icon:,
   🛍️'
-  },
-  {
+  }, {
     id: 'soc2-readiness-and-automation,
     name:,
   SOC 2 Readiness & Automation',
@@ -235,8 +227,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/soc2-readiness-and-automation,
     icon:,
   ✅'
-  },
-  {
+  }, {
     id: 'lakehouse-architecture-deployment,
     name:,
   Data Lakehouse Architecture & Deployment',
@@ -264,8 +255,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/lakehouse-architecture-deployment,
     icon:,
   🏗️'
-  },
-  {
+  }, {
     id: 'finops-cloud-cost-optimization,
     name:,
   FinOps Cloud Cost Optimization',
@@ -293,8 +283,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/finops-cloud-cost-optimization,
     icon:,
   💸'
-  },
-  {
+  }, {
     id: 'sre-reliability-retainer,
     name:,
   SRE Reliability Retainer',
@@ -322,8 +311,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/sre-reliability-retainer,
     icon:,
   🛠️'
-  },
-  {
+  }, {
     id: 'rag-enterprise-search,
     name:,
   RAG Enterprise Search',
@@ -352,8 +340,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/rag-enterprise-search,
     icon:,
   🔎'
-  },
-  {
+  }, {
     id: 'mlops-platform-and-ops,
     name:,
   MLOps Platform & Operations',
@@ -381,8 +368,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/mlops-platform-and-ops,
     icon:,
   🧪'
-  },
-  {
+  }, {
     id: 'synthetic-data-generation,
     name:,
   Synthetic Data Generation',
@@ -408,8 +394,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/synthetic-data-generation,
     icon:,
   🧬'
-  },
-  {
+  }, {
     id: 'llm-evaluation-red-teaming,
     name:,
   LLM Evaluation & Red-Teaming',
@@ -437,8 +422,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/llm-evaluation-red-teaming,
     icon:,
   🛡️'
-  },
-  {
+  }, {
     id: 'social-media-scheduler,
     name:,
   Social Media Scheduler Pro',
@@ -473,8 +457,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/social-media-scheduler,
     icon:,
   📱'
-  },
-  {
+  }, {
     id: 'email-marketing-automation,
     name:,
   Email Marketing Automation Suite',
@@ -509,8 +492,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/email-marketing-automation,
     icon:,
   📧'
-  },
-  {
+  }, {
     id: 'invoice-management-system,
     name:,
   Smart Invoice Management',
@@ -545,8 +527,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/invoice-management,
     icon:,
   🧾'
-  },
-  {
+  }, {
     id: 'time-tracking-productivity,
     name:,
   Time Tracking & Productivity Suite',
@@ -581,8 +562,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/time-tracking,
     icon:,
   ⏱️'
-  },
-  {
+  }, {
     id: 'crm-sales-pipeline,
     name:,
   CRM & Sales Pipeline Manager',
@@ -617,8 +597,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/crm-sales-pipeline,
     icon:,
   📊'
-  },
-  {
+  }, {
     id: 'appointment-booking-system,
     name:,
   Smart Appointment Booking',
@@ -653,8 +632,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/appointment-booking,
     icon:,
   📅'
-  },
-  {
+  }, {
     id: 'inventory-pos-system,
     name:,
   Inventory & POS System',
@@ -689,8 +667,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/inventory-pos,
     icon:,
   🛒'
-  },
-  {
+  }, {
     id: 'document-management-system,
     name:,
   Document Management & Collaboration',
@@ -725,8 +702,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/document-management,
     icon:,
   📄'
-  },
-  {
+  }, {
     id: 'survey-feedback-platform,
     name:,
   Survey & Feedback Platform',
@@ -761,8 +737,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/survey-feedback,
     icon:,
   📋'
-  },
-  {
+  }, {
     id: 'expense-management-system,
     name:,
   Expense Management & Reimbursement',
@@ -797,8 +772,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/expense-management,
     icon:,
   💰'
-  },
-  {
+  }, {
     id: 'project-management-suite,
     name:,
   Smart Project Manager',
@@ -833,8 +807,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/project-management,
     icon:,
   📊'
-  },
-  {
+  }, {
     id: 'inventory-management,
     name:,
   Inventory Tracker Pro',
@@ -869,8 +842,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/inventory-management,
     icon:,
   📦'
-  },
-  {
+  }, {
     id: 'customer-support-platform,
     name:,
   AI Support Assistant',
@@ -943,8 +915,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/cloud-migration,
     icon:,
   ☁️'
-  },
-  {
+  }, {
     id: 'multi-cloud-strategy,
     name:,
   Multi-Cloud Strategy & Management',
@@ -979,8 +950,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/multi-cloud-strategy,
     icon:,
   🌐'
-  },
-  {
+  }, {
     id: 'container-orchestration,
     name:,
   Container Orchestration & Kubernetes',
@@ -1015,8 +985,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/container-orchestration,
     icon:,
   📦'
-  },
-  {
+  }, {
     id: 'serverless-architecture,
     name:,
   Serverless Architecture Implementation',
@@ -1051,8 +1020,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/serverless-architecture,
     icon:,
   ⚡'
-  },
-  {
+  }, {
     id: 'network-security-audit,
     name:,
   Network Security & Infrastructure Audit',
@@ -1087,8 +1055,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/network-security-audit,
     icon:,
   🛡️'
-  },
-  {
+  }, {
     id: 'database-optimization,
     name:,
   Database Optimization & Migration',
@@ -1123,8 +1090,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/database-optimization,
     icon:,
   🗄️'
-  },
-  {
+  }, {
     id: 'api-gateway-management,
     name:,
   API Gateway & Microservices Management',
@@ -1159,8 +1125,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/api-gateway-management,
     icon:,
   🔗'
-  },
-  {
+  }, {
     id: 'disaster-recovery-planning,
     name:,
   Disaster Recovery & Business Continuity',
@@ -1195,8 +1160,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/disaster-recovery-planning,
     icon:,
   🔄'
-  },
-  {
+  }, {
     id: 'it-infrastructure-monitoring,
     name:,
   IT Infrastructure Monitoring & Management',
@@ -1231,8 +1195,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/it-infrastructure-monitoring,
     icon:,
   📊'
-  },
-  {
+  }, {
     id: 'identity-access-management,
     name:,
   Identity & Access Management (IAM)',
@@ -1267,8 +1230,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/identity-access-management,
     icon:,
   🔐'
-  },
-  {
+  }, {
     id: 'cybersecurity-audit,
     name:,
   Cybersecurity Assessment',
@@ -1303,8 +1265,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/cybersecurity,
     icon:,
   🔒'
-  },
-  {
+  }, {
     id: 'devops-automation,
     name:,
   DevOps Automation Suite',
@@ -1339,8 +1300,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/devops,
     icon:,
   ⚙️'
-  },
-  {
+  }, {
     id: 'data-backup-recovery,
     name:,
   Data Backup & Recovery',
@@ -1413,8 +1373,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/custom-ai-models,
     icon:,
   🧠'
-  },
-  {
+  }, {
     id: 'computer-vision-solutions,
     name:,
   Computer Vision & Image Recognition',
@@ -1449,8 +1408,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/computer-vision-solutions,
     icon:,
   👁️'
-  },
-  {
+  }, {
     id: 'natural-language-processing,
     name:,
   Natural Language Processing (NLP)',
@@ -1485,8 +1443,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/natural-language-processing,
     icon:,
   💬'
-  },
-  {
+  }, {
     id: 'predictive-analytics-platform,
     name:,
   Predictive Analytics & Forecasting',
@@ -1521,8 +1478,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/predictive-analytics-platform,
     icon:,
   📈'
-  },
-  {
+  }, {
     id: 'ai-powered-recommendation-engine,
     name:,
   AI Recommendation Engine',
@@ -1557,8 +1513,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/ai-powered-recommendation-engine,
     icon:,
   🎯'
-  },
-  {
+  }, {
     id: 'ai-automation-workflows,
     name:,
   AI-Powered Workflow Automation',
@@ -1593,8 +1548,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/ai-automation-workflows,
     icon:,
   ⚙️'
-  },
-  {
+  }, {
     id: 'ai-data-analytics-platform,
     name:,
   AI Data Analytics & Business Intelligence',
@@ -1629,8 +1583,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/ai-data-analytics-platform,
     icon:,
   📊'
-  },
-  {
+  }, {
     id: 'ai-chatbot-voice-assistant,
     name:,
   AI Chatbot & Voice Assistant Development',
@@ -1665,8 +1618,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/ai-chatbot-voice-assistant,
     icon:,
   🤖'
-  },
-  {
+  }, {
     id: 'ai-fraud-detection,
     name:,
   AI Fraud Detection & Security',
@@ -1701,8 +1653,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/ai-fraud-detection,
     icon:,
   🛡️'
-  },
-  {
+  }, {
     id: 'ai-content-moderation,
     name:,
   AI Content Moderation & Safety',
@@ -1737,8 +1688,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/ai-content-moderation,
     icon:,
   🔍'
-  },
-  {
+  }, {
     id: 'ai-supply-chain-optimization,
     name:,
   AI Supply Chain Optimization',
@@ -1773,8 +1723,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/ai-supply-chain-optimization,
     icon:,
   🚚'
-  },
-  {
+  }, {
     id: 'ai-process-automation,
     name:,
   AI Process Automation',
@@ -1809,8 +1758,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/ai-automation,
     icon:,
   🤖'
-  },
-  {
+  }, {
     id: 'ai-analytics-platform,
     name:,
   AI Analytics Platform',
@@ -1845,8 +1793,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/ai-analytics,
     icon:,
   📈'
-  },
-  {
+  }, {
     id: 'ai-chatbot-development,
     name:,
   AI Chatbot Development',
@@ -1919,8 +1866,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/social-media-scheduler,
     icon:,
   📱'
-  },
-  {
+  }, {
     id: 'expense-tracker,
     name:,
   Smart Expense Tracker',
@@ -1955,8 +1901,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/expense-tracker,
     icon:,
   💰'
-  },
-  {
+  }, {
     id: 'lead-scoring-platform,
     name:,
   AI Lead Scoring Platform',
@@ -1991,8 +1936,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/lead-scoring,
     icon:,
   🎯'
-  },
-  {
+  }, {
     id: 'time-tracking-analytics,
     name:,
   Time Tracking Analytics Pro',
@@ -2027,8 +1971,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/time-tracking,
     icon:,
   ⏱️'
-  },
-  {
+  }, {
     id: 'email-marketing-automation,
     name:,
   Email Marketing Automation Suite',
@@ -2063,8 +2006,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/email-marketing,
     icon:,
   📧'
-  },
-  {
+  }, {
     id: 'website-speed-optimizer,
     name:,
   Website Speed Optimizer',
@@ -2099,8 +2041,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/speed-optimizer,
     icon:,
   ⚡'
-  },
-  {
+  }, {
     id: 'api-monitoring-platform,
     name:,
   API Monitoring Platform',
@@ -2135,8 +2076,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/api-monitoring,
     icon:,
   🔍'
-  },
-  {
+  }, {
     id: 'password-manager-business,
     name:,
   Business Password Manager',
@@ -2171,8 +2111,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/password-manager,
     icon:,
   🔐'
-  },
-  {
+  }, {
     id: 'form-builder-platform,
     name:,
   Advanced Form Builder',
@@ -2207,8 +2146,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/form-builder,
     icon:,
   📋'
-  },
-  {
+  }, {
     id: 'screenshot-api-service,
     name:,
   Screenshot API Service',
@@ -2281,8 +2219,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/kubernetes,
     icon:,
   ☸️'
-  },
-  {
+  }, {
     id: 'api-gateway-setup,
     name:,
   API Gateway & Management',
@@ -2317,8 +2254,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/api-gateway,
     icon:,
   🚪'
-  },
-  {
+  }, {
     id: 'database-optimization,
     name:,
   Database Performance Optimization',
@@ -2353,8 +2289,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/database-optimization,
     icon:,
   🗄️'
-  },
-  {
+  }, {
     id: 'network-security-audit,
     name:,
   Network Security Audit',
@@ -2389,8 +2324,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/network-security,
     icon:,
   🛡️'
-  },
-  {
+  }, {
     id: 'disaster-recovery-planning,
     name:,
   Disaster Recovery Planning',
@@ -2425,8 +2359,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/disaster-recovery,
     icon:,
   🔄'
-  },
-  {
+  }, {
     id: 'microservices-architecture,
     name:,
   Microservices Architecture Design',
@@ -2461,8 +2394,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/microservices,
     icon:,
   🏗️'
-  },
-  {
+  }, {
     id: 'performance-monitoring,
     name:,
   Application Performance Monitoring',
@@ -2497,8 +2429,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/apm,
     icon:,
   📊'
-  },
-  {
+  }, {
     id: 'identity-access-management,
     name:,
   Identity & Access Management',
@@ -2571,8 +2502,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/computer-vision,
     icon:,
   👁️'
-  },
-  {
+  }, {
     id: 'natural-language-processing,
     name:,
   Natural Language Processing',
@@ -2607,8 +2537,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/nlp,
     icon:,
   📝'
-  },
-  {
+  }, {
     id: 'predictive-analytics,
     name:,
   Predictive Analytics Platform',
@@ -2643,8 +2572,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/predictive-analytics,
     icon:,
   🔮'
-  },
-  {
+  }, {
     id: 'recommendation-engine,
     name:,
   AI Recommendation Engine',
@@ -2679,8 +2607,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/recommendation-engine,
     icon:,
   🎯'
-  },
-  {
+  }, {
     id: 'ai-powered-search,
     name:,
   AI-Powered Search Engine',
@@ -2715,8 +2642,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/ai-search,
     icon:,
   🔍'
-  },
-  {
+  }, {
     id: 'ai-content-moderation,
     name:,
   AI Content Moderation',
@@ -2751,8 +2677,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/content-moderation,
     icon:,
   🛡️'
-  },
-  {
+  }, {
     id: 'ai-fraud-detection,
     name:,
   AI Fraud Detection System',
@@ -2787,8 +2712,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/fraud-detection,
     icon:,
   🚨'
-  },
-  {
+  }, {
     id: 'ai-voice-assistant,
     name:,
   AI Voice Assistant Development',
@@ -2861,8 +2785,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/ai-email-responder,
     icon:,
   📧'
-  },
-  {
+  }, {
     id: 'mobile-survey-platform,
     name:,
   Mobile-First Survey Platform',
@@ -2897,8 +2820,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/mobile-survey-platform,
     icon:,
   📱'
-  },
-  {
+  }, {
     id: 'niche-productivity-planner,
     name:,
   Industry-Specific Productivity Planner',
@@ -2933,8 +2855,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/niche-productivity-planner,
     icon:,
   📋'
-  },
-  {
+  }, {
     id: 'event-management-dashboard,
     name:,
   Smart Event Management Dashboard',
@@ -2969,8 +2890,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/event-management-dashboard,
     icon:,
   🎪'
-  },
-  {
+  }, {
     id: 'ai-seo-optimizer,
     name:,
   AI SEO Content Optimizer',
@@ -3005,8 +2925,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/ai-seo-optimizer,
     icon:,
   🔍'
-  },
-  {
+  }, {
     id: 'ai-talent-matching,
     name:,
   AI Talent Matching Platform',
@@ -3041,8 +2960,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/ai-talent-matching,
     icon:,
   👥'
-  },
-  {
+  }, {
     id: 'ai-recruiting-platform,
     name:,
   AI Recruiting Platform',
@@ -3077,8 +2995,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/ai-recruiting-platform,
     icon:,
   🎯'
-  },
-  {
+  }, {
     id: 'quantum-computing-solutions,
     name:,
   Quantum Computing Solutions',
@@ -3151,8 +3068,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/edge-computing-solutions,
     icon:,
   🌐'
-  },
-  {
+  }, {
     id: 'blockchain-infrastructure,
     name:,
   Blockchain Infrastructure & Development',
@@ -3187,8 +3103,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/blockchain-infrastructure,
     icon:,
   ⛓️'
-  },
-  {
+  }, {
     id: 'zero-trust-security,
     name:,
   Zero Trust Security Architecture',
@@ -3223,8 +3138,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/zero-trust-security,
     icon:,
   🔒'
-  },
-  {
+  }, {
     id: '5g-network-implementation,
     name:,
   5G Network Implementation & Optimization',
@@ -3259,8 +3173,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/5g-network-implementation,
     icon:,
   📡'
-  },
-  {
+  }, {
     id: 'hyperautomation-platform,
     name:,
   Hyperautomation Platform',
@@ -3333,8 +3246,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/ai-drug-discovery,
     icon:,
   💊'
-  },
-  {
+  }, {
     id: 'ai-climate-modeling,
     name:,
   AI Climate Modeling & Prediction',
@@ -3369,8 +3281,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/ai-climate-modeling,
     icon:,
   🌍'
-  },
-  {
+  }, {
     id: 'ai-space-exploration,
     name:,
   AI Space Exploration Solutions',
@@ -3405,8 +3316,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/ai-space-exploration,
     icon:,
   🚀'
-  },
-  {
+  }, {
     id: 'ai-neuroscience-research,
     name:,
   AI Neuroscience Research Platform',
@@ -3441,8 +3351,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/ai-neuroscience-research,
     icon:,
   🧠'
-  },
-  {
+  }, {
     id: 'ai-robotics-automation,
     name:,
   AI Robotics & Automation',
@@ -3477,8 +3386,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/ai-robotics-automation,
     icon:,
   🤖'
-  },
-  {
+  }, {
     id: 'ai-financial-trading,
     name:,
   AI Financial Trading Platform',
@@ -3551,8 +3459,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/ai-video-editor,
     icon:,
   🎬'
-  },
-  {
+  }, {
     id: 'smart-contract-auditor,
     name:,
   Smart Contract Security Auditor',
@@ -3587,8 +3494,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/smart-contract-auditor,
     icon:,
   🔍'
-  },
-  {
+  }, {
     id: 'ai-code-reviewer,
     name:,
   AI Code Review Assistant',
@@ -3623,8 +3529,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/ai-code-reviewer,
     icon:,
   👨‍💻'
-  },
-  {
+  }, {
     id: 'ai-translation-platform,
     name:,
   AI Translation Platform',
@@ -3659,8 +3564,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/ai-translation-platform,
     icon:,
   🌐'
-  },
-  {
+  }, {
     id: 'ai-customer-insights,
     name:,
   AI Customer Insights Platform',
@@ -3695,8 +3599,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/ai-customer-insights,
     icon:,
   👥'
-  },
-  {
+  }, {
     id: 'ai-workflow-automation,
     name:,
   AI Workflow Automation Suite',
@@ -3731,8 +3634,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/ai-workflow-automation,
     icon:,
   ⚙️'
-  },
-  {
+  }, {
     id: 'ai-data-privacy,
     name:,
   AI Data Privacy Compliance',
@@ -3767,8 +3669,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/ai-data-privacy,
     icon:,
   🔒'
-  },
-  {
+  }, {
     id: 'ai-performance-monitoring,
     name:,
   AI Performance Monitoring',
@@ -3803,8 +3704,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/ai-performance-monitoring,
     icon:,
   📊'
-  },
-  {
+  }, {
     id: 'ai-content-moderation-advanced,
     name:,
   AI Content Moderation Pro',
@@ -3839,8 +3739,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/ai-content-moderation-pro,
     icon:,
   🛡️'
-  },
-  {
+  }, {
     id: 'ai-financial-forecasting,
     name:,
   AI Financial Forecasting',
@@ -3913,8 +3812,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/cloud-native-architecture,
     icon:,
   ☁️'
-  },
-  {
+  }, {
     id: 'cybersecurity-operations-center,
     name:,
   Cybersecurity Operations Center (SOC)',
@@ -3949,8 +3847,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/cybersecurity-operations-center,
     icon:,
   🛡️'
-  },
-  {
+  }, {
     id: 'data-lake-architecture,
     name:,
   Data Lake & Analytics Architecture',
@@ -3985,8 +3882,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/data-lake-architecture,
     icon:,
   🏞️'
-  },
-  {
+  }, {
     id: 'iot-platform-development,
     name:,
   IoT Platform Development',
@@ -4021,8 +3917,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/iot-platform-development,
     icon:,
   🌐'
-  },
-  {
+  }, {
     id: 'api-first-architecture,
     name:,
   API-First Architecture Design',
@@ -4057,8 +3952,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/api-first-architecture,
     icon:,
   🔗'
-  },
-  {
+  }, {
     id: 'hybrid-cloud-strategy,
     name:,
   Hybrid Cloud Strategy & Implementation',
@@ -4093,8 +3987,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/hybrid-cloud-strategy,
     icon:,
   🌩️'
-  },
-  {
+  }, {
     id: 'devsecops-implementation,
     name:,
   DevSecOps Implementation',
@@ -4129,8 +4022,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/devsecops-implementation,
     icon:,
   🔐'
-  },
-  {
+  }, {
     id: 'observability-platform,
     name:,
   Observability Platform Implementation',
@@ -4203,8 +4095,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/ai-generative-design,
     icon:,
   🎨'
-  },
-  {
+  }, {
     id: 'ai-autonomous-systems,
     name:,
   AI Autonomous Systems Development',
@@ -4239,8 +4130,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/ai-autonomous-systems,
     icon:,
   🚗'
-  },
-  {
+  }, {
     id: 'ai-digital-twin,
     name:,
   AI Digital Twin Platform',
@@ -4275,8 +4165,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/ai-digital-twin,
     icon:,
   🔄'
-  },
-  {
+  }, {
     id: 'ai-meta-learning,
     name:,
   AI Meta-Learning Systems',
@@ -4311,8 +4200,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/ai-meta-learning,
     icon:,
   🧠'
-  },
-  {
+  }, {
     id: 'ai-federated-learning,
     name:,
   AI Federated Learning Platform',
@@ -4347,8 +4235,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/ai-federated-learning,
     icon:,
   🔐'
-  },
-  {
+  }, {
     id: 'ai-explainable-ai,
     name:,
   Explainable AI (XAI) Platform',
@@ -4383,8 +4270,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/ai-explainable-ai,
     icon:,
   🔍'
-  },
-  {
+  }, {
     id: 'ai-edge-intelligence,
     name:,
   AI Edge Intelligence Platform',
@@ -4419,8 +4305,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/ai-edge-intelligence,
     icon:,
   ⚡'
-  },
-  {
+  }, {
     id: 'ai-multimodal-learning,
     name:,
   AI Multimodal Learning Systems',
@@ -4455,8 +4340,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/ai-multimodal-learning,
     icon:,
   🎭'
-  },
-  {
+  }, {
     id: 'ai-neuromorphic-computing,
     name:,
   AI Neuromorphic Computing Solutions',
@@ -4491,8 +4375,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/ai-neuromorphic-computing,
     icon:,
   🧬'
-  },
-  {
+  }, {
     id: 'ai-legal-contract-review-pro,
     name:,
   AI Legal Contract Review Pro',
@@ -4527,8 +4410,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/ai-legal-contract-review-pro,
     icon:,
   ⚖️'
-  },
-  {
+  }, {
     id: 'ecommerce-repricing-optimizer,
     name:,
   eCommerce Repricing Optimizer',
@@ -4563,8 +4445,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/ecommerce-repricing-optimizer,
     icon:,
   💹'
-  },
-  {
+  }, {
     id: 'customer-feedback-mining,
     name:,
   Customer Feedback Mining',
@@ -4599,8 +4480,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/customer-feedback-mining,
     icon:,
   🗣️'
-  },
-  {
+  }, {
     id: 'cloud-migration-accelerator,
     name:,
   Cloud Migration Accelerator',
@@ -4635,8 +4515,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/cloud-migration-accelerator,
     icon:,
   ☁️'
-  },
-  {
+  }, {
     id: 'kubernetes-platform-engineering,
     name:,
   Kubernetes Platform Engineering',
@@ -4671,8 +4550,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/kubernetes-platform-engineering,
     icon:,
   🐳'
-  },
-  {
+  }, {
     id: 'soc2-compliance-implementation,
     name:,
   SOC 2 Compliance Implementation',
@@ -4707,8 +4585,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/soc2-compliance-implementation,
     icon:,
   🔒'
-  },
-  {
+  }, {
     id: 'ragt-knowledge-bot,
     name:,
   RAG Knowledge Bot',
@@ -4743,8 +4620,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/rag-knowledge-bot,
     icon:,
   🤖'
-  },
-  {
+  }, {
     id: 'computer-vision-inspection,
     name:,
   Computer Vision Quality Inspection',
@@ -4779,8 +4655,7 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/computer-vision-inspection,
     icon:,
   📷'
-  },
-  {
+  }, {
     id: 'ai-sales-forecasting-suite,
     name:,
   AI Sales Forecasting Suite',
@@ -4808,12 +4683,7 @@ export const services: Service[] = [
 ,
   SaaS ARR forecasting,Retail allocation,Manufacturing S&OP'
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-    technologies: ['Python', 'Prophet', 'NeuralForecast', 'dbt', 'Snowflake/BigQuery'],
-=======
-    technologies: ['Python,Prophet,NeuralForecast,dbt,Snowflake/BigQuery'],
->>>>>>> main
+
     link: 'https://ziontechgroup.com/services/ai-sales-forecasting-suite',
     icon: '📈'
   },
@@ -4841,8 +4711,7 @@ export const services: Service[] = [
     technologies: ['OpenAI GPT-4,LangChain,React,Node.js,PostgreSQL,Redis'],
     link: 'https://ziontechgroup.com/services/ai-customer-support-automation',
     icon: '🤖'
-  },
-  {
+  }, {
     id: 'smart-inventory-management',
     name: 'Smart Inventory Management System',
     category: 'micro-saas',
@@ -4865,8 +4734,7 @@ export const services: Service[] = [
     technologies: ['Machine Learning,React,Node.js,PostgreSQL,Redis,AWS IoT'],
     link: 'https://ziontechgroup.com/services/smart-inventory-management',
     icon: '📦'
-  },
-  {
+  }, {
     id: 'ai-social-media-scheduler',
     name: 'AI Social Media Scheduler Pro',
     category: 'micro-saas',
@@ -4889,8 +4757,7 @@ export const services: Service[] = [
     technologies: ['OpenAI GPT-4,DALL-E,React,Node.js,PostgreSQL,Social APIs'],
     link: 'https://ziontechgroup.com/services/ai-social-media-scheduler',
     icon: '📱'
-  },
-  {
+  }, {
     id: 'smart-expense-tracker',
     name: 'Smart Expense Tracker & Analytics',
     category: 'micro-saas',
@@ -4913,8 +4780,7 @@ export const services: Service[] = [
     technologies: ['OCR/Computer Vision,Machine Learning,React,Node.js,PostgreSQL'],
     link: 'https://ziontechgroup.com/services/smart-expense-tracker',
     icon: '💰'
-  },
-  {
+  }, {
     id: 'ai-lead-scoring-platform',
     name: 'AI Lead Scoring & Qualification Platform',
     category: 'micro-saas',
@@ -4937,8 +4803,7 @@ export const services: Service[] = [
     technologies: ['Machine Learning,Python,React,Node.js,PostgreSQL,Redis'],
     link: 'https://ziontechgroup.com/services/ai-lead-scoring-platform',
     icon: '🎯'
-  },
-  {
+  }, {
     id: 'smart-email-marketing-automation',
     name: 'Smart Email Marketing Automation',
     category: 'micro-saas',
@@ -4961,8 +4826,7 @@ export const services: Service[] = [
     technologies: ['Machine Learning,React,Node.js,PostgreSQL,Redis,Email APIs'],
     link: 'https://ziontechgroup.com/services/smart-email-marketing-automation',
     icon: '📧'
-  },
-  {
+  }, {
     id: 'ai-project-management-assistant',
     name: 'AI Project Management Assistant',
     category: 'micro-saas',
@@ -4985,8 +4849,7 @@ export const services: Service[] = [
     technologies: ['Machine Learning,React,Node.js,PostgreSQL,WebSocket'],
     link: 'https://ziontechgroup.com/services/ai-project-management-assistant',
     icon: '📋'
-  },
-  {
+  }, {
     id: 'smart-crm-with-ai-insights',
     name: 'Smart CRM with AI Insights',
     category: 'micro-saas',
@@ -5034,8 +4897,7 @@ export const services: Service[] = [
     technologies: ['TensorFlow,PyTorch,OpenCV,YOLO,Python,CUDA,Docker'],
     link: 'https://ziontechgroup.com/services/ai-computer-vision-platform',
     icon: '👁️'
-  },
-  {
+  }, {
     id: 'ai-natural-language-processing',
     name: 'AI Natural Language Processing Suite',
     category: 'ai-services',
@@ -5058,8 +4920,7 @@ export const services: Service[] = [
     technologies: ['Transformers,BERT,GPT,spaCy,NLTK,Python,FastAPI'],
     link: 'https://ziontechgroup.com/services/ai-natural-language-processing',
     icon: '💬'
-  },
-  {
+  }, {
     id: 'ai-predictive-analytics-engine',
     name: 'AI Predictive Analytics Engine',
     category: 'ai-services',
@@ -5082,8 +4943,7 @@ export const services: Service[] = [
     technologies: ['Scikit-learn,XGBoost,Prophet,Python,Apache Spark,MLflow'],
     link: 'https://ziontechgroup.com/services/ai-predictive-analytics-engine',
     icon: '📊'
-  },
-  {
+  }, {
     id: 'ai-automated-machine-learning',
     name: 'AI Automated Machine Learning (AutoML)',
     category: 'ai-services',
@@ -5106,8 +4966,7 @@ export const services: Service[] = [
     technologies: ['AutoML,H2O.ai,DataRobot,Python,Kubernetes,Docker'],
     link: 'https://ziontechgroup.com/services/ai-automated-machine-learning',
     icon: '🤖'
-  },
-  {
+  }, {
     id: 'ai-recommendation-engine',
     name: 'AI Recommendation Engine',
     category: 'ai-services',
@@ -5130,8 +4989,7 @@ export const services: Service[] = [
     technologies: ['TensorFlow,PyTorch,Apache Spark,Redis,Python,Kafka'],
     link: 'https://ziontechgroup.com/services/ai-recommendation-engine',
     icon: '🎯'
-  },
-  {
+  }, {
     id: 'ai-speech-recognition-processing',
     name: 'AI Speech Recognition & Processing',
     category: 'ai-services',
@@ -5179,8 +5037,7 @@ export const services: Service[] = [
     technologies: ['AWS,Azure,Google Cloud,Terraform,Kubernetes,Docker'],
     link: 'https://ziontechgroup.com/services/cloud-migration-consulting',
     icon: '☁️'
-  },
-  {
+  }, {
     id: 'cybersecurity-audit-compliance',
     name: 'Cybersecurity Audit & Compliance',
     category: 'it-services',
@@ -5203,8 +5060,7 @@ export const services: Service[] = [
     technologies: ['Nessus,Metasploit,Splunk,CrowdStrike,Okta,AWS Security'],
     link: 'https://ziontechgroup.com/services/cybersecurity-audit-compliance',
     icon: '🔒'
-  },
-  {
+  }, {
     id: 'devops-automation-pipeline',
     name: 'DevOps Automation & CI/CD Pipeline',
     category: 'it-services',
@@ -5227,8 +5083,7 @@ export const services: Service[] = [
     technologies: ['Jenkins,GitLab CI,Docker,Kubernetes,Terraform,Prometheus'],
     link: 'https://ziontechgroup.com/services/devops-automation-pipeline',
     icon: '⚙️'
-  },
-  {
+  }, {
     id: 'data-analytics-business-intelligence',
     name: 'Data Analytics & Business Intelligence',
     category: 'it-services',
@@ -5251,8 +5106,7 @@ export const services: Service[] = [
     technologies: ['Snowflake,Tableau,Power BI,Apache Spark,Python,SQL Server'],
     link: 'https://ziontechgroup.com/services/data-analytics-business-intelligence',
     icon: '📈'
-  },
-  {
+  }, {
     id: 'network-infrastructure-optimization',
     name: 'Network Infrastructure Optimization',
     category: 'it-services',
@@ -5275,8 +5129,7 @@ export const services: Service[] = [
     technologies: ['Cisco,Juniper,Fortinet,Palo Alto,SD-WAN,MPLS'],
     link: 'https://ziontechgroup.com/services/network-infrastructure-optimization',
     icon: '🌐'
-  },
-  {
+  }, {
     id: 'managed-it-services-support',
     name: 'Managed IT Services & Support',
     category: 'it-services',
@@ -5299,7 +5152,7 @@ export const services: Service[] = [
     technologies: ['Microsoft 365,Active Directory,VMware,Backup Solutions,Monitoring Tools'],
     link: 'https://ziontechgroup.com/services/managed-it-services-support',
     icon: '🛠️'
-=======
+
     technologies: [
   'Python,
 ,
@@ -5316,9 +5169,7 @@ export const services: Service[] = [
 
 export const getServicesByCategory = (category: Service[
   'category]) => {
-  return services.filter(service => service.category === category);
-};
+  return services.filter(service => service.category === category)};
 
 export const getServiceById = (id: string) => {
-  return services.find(service => service.id === id);
-};
+  return services.find(service => service.id === id)};

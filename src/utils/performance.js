@@ -6,12 +6,9 @@ export const performanceUtils = {
     return function executedFunction(...args) {
       const later = () => {
         clearTimeout(timeout);
-        func(...args);
-      };
+        func(...args)};
       clearTimeout(timeout);
-      timeout = setTimeout(later, wait);
-    };
-  },
+      timeout = setTimeout(later, wait)}},
   
   // Throttle function
   throttle(func, limit) {
@@ -22,10 +19,8 @@ export const performanceUtils = {
       if (!inThrottle) {
         func.apply(context, args);
         inThrottle = true;
-        setTimeout(() => inThrottle = false, limit);
-      }
-    };
-  },
+        setTimeout(() => inThrottle = false, limit)}
+    }},
   
   // Lazy load images
   lazyLoadImages() {
@@ -36,15 +31,11 @@ export const performanceUtils = {
             const img = entry.target;
             img.src = img.dataset.src;
             img.classList.remove('lazy');
-            imageObserver.unobserve(img);
-          }
-        });
-      });
+            imageObserver.unobserve(img)}
+        })});
       
       document.querySelectorAll('img[data-src]').forEach(img => {
-        imageObserver.observe(img);
-      });
-    }
+        imageObserver.observe(img)})}
   },
   
   // Preload critical resources
@@ -60,11 +51,8 @@ export const performanceUtils = {
       link.href = resource;
       link.as = resource.endsWith('.css') ? 'style' : 'font';
       if (resource.endsWith('.woff2')) {
-        link.crossOrigin = 'anonymous';
-      }
-      document.head.appendChild(link);
-    });
-  }
+        link.crossOrigin = 'anonymous'}
+      document.head.appendChild(link)})}
 };
 
 export default performanceUtils;

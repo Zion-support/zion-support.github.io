@@ -12,20 +12,17 @@ export default function CloudDevOps() {
       title: 'Cloud Migration',
       description: 'Seamless migration to cloud platforms with zero downtime and optimized performance.',
       features: ['AWS Migration', 'Azure Migration', 'GCP Migration', 'Hybrid Cloud Solutions']
-    },
-    {
+    }, {
       icon: Server,
       title: 'Infrastructure as Code',
       description: 'Automated infrastructure provisioning and management using modern IaC tools.',
       features: ['Terraform', 'CloudFormation', 'Ansible', 'Kubernetes']
-    },
-    {
+    }, {
       icon: GitBranch,
       title: 'CI/CD Pipelines',
       description: 'Automated build, test, and deployment pipelines for faster and reliable releases.',
       features: ['Jenkins', 'GitLab CI', 'GitHub Actions', 'Azure DevOps']
-    },
-    {
+    }, {
       icon: Zap,
       title: 'Performance Optimization',
       description: 'Optimize your applications and infrastructure for maximum performance and cost efficiency.',
@@ -34,19 +31,11 @@ export default function CloudDevOps() {
   ];
 
   const technologies = [
-    { name: 'AWS', description: 'Amazon Web Services' },
-    { name: 'Azure', description: 'Microsoft Azure' },
-    { name: 'GCP', description: 'Google Cloud Platform' },
-    { name: 'Docker', description: 'Containerization' },
-    { name: 'Kubernetes', description: 'Container Orchestration' },
-    { name: 'Terraform', description: 'Infrastructure as Code' }
+    { name: 'AWS', description: 'Amazon Web Services' }, { name: 'Azure', description: 'Microsoft Azure' }, { name: 'GCP', description: 'Google Cloud Platform' }, { name: 'Docker', description: 'Containerization' }, { name: 'Kubernetes', description: 'Container Orchestration' }, { name: 'Terraform', description: 'Infrastructure as Code' }
   ];
 
   const stats = [
-    { number: '99.9%', label: 'Uptime', icon: Clock },
-    { number: '50%', label: 'Cost Reduction', icon: Zap },
-    { number: '10x', label: 'Faster Deployments', icon: GitBranch },
-    { number: '24/7', label: 'Monitoring', icon: Server }
+    { number: '99.9%', label: 'Uptime', icon: Clock }, { number: '50%', label: 'Cost Reduction', icon: Zap }, { number: '10x', label: 'Faster Deployments', icon: GitBranch }, { number: '24/7', label: 'Monitoring', icon: Server }
   ];
 
   return (
@@ -203,5 +192,4 @@ export default function CloudDevOps() {
 
       <Footer />
     </div>
-  );
-}
+  )}

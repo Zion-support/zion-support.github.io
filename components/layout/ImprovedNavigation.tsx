@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React { useState } from 'react';
 import Link from 'next/link';
 import { Menu, X, ChevronDown, Phone, Mail } from 'lucide-react';
 
@@ -10,67 +10,42 @@ const ImprovedNavigation: React.FC = () => {
     { 
       name: 'Home', 
       href: '/' 
-    },
-    { 
+    }, { 
       name: 'About', 
       href: '/about' 
-    },
-    { 
+    }, { 
       name: 'Services', 
       href: '/services',
       dropdown: [
-        { name: 'AI Services', href: '/ai-services' },
-        { name: 'IT Services', href: '/it-services' },
-        { name: 'Micro SaaS', href: '/micro-saas' },
-        { name: 'Cloud Solutions', href: '/cloud-solutions' },
-        { name: 'Web Development', href: '/web-development' },
-        { name: 'Mobile Development', href: '/mobile-development' },
-        { name: 'Data Analytics', href: '/data-analytics' },
-        { name: 'Cybersecurity', href: '/cybersecurity' }
+        { name: 'AI Services', href: '/ai-services' }, { name: 'IT Services', href: '/it-services' }, { name: 'Micro SaaS', href: '/micro-saas' }, { name: 'Cloud Solutions', href: '/cloud-solutions' }, { name: 'Web Development', href: '/web-development' }, { name: 'Mobile Development', href: '/mobile-development' }, { name: 'Data Analytics', href: '/data-analytics' }, { name: 'Cybersecurity', href: '/cybersecurity' }
       ]
-    },
-    { 
+    }, { 
       name: 'Solutions', 
       href: '/solutions',
       dropdown: [
-        { name: 'Enterprise', href: '/solutions/enterprise' },
-        { name: 'Small Business', href: '/solutions/small-business' },
-        { name: 'Startups', href: '/solutions/startups' },
-        { name: 'Healthcare', href: '/solutions/healthcare' },
-        { name: 'Finance', href: '/solutions/finance' },
-        { name: 'E-commerce', href: '/solutions/ecommerce' }
+        { name: 'Enterprise', href: '/solutions/enterprise' }, { name: 'Small Business', href: '/solutions/small-business' }, { name: 'Startups', href: '/solutions/startups' }, { name: 'Healthcare', href: '/solutions/healthcare' }, { name: 'Finance', href: '/solutions/finance' }, { name: 'E-commerce', href: '/solutions/ecommerce' }
       ]
-    },
-    { 
+    }, { 
       name: 'Resources', 
       href: '/resources',
       dropdown: [
-        { name: 'Blog', href: '/blog' },
-        { name: 'Case Studies', href: '/case-studies' },
-        { name: 'White Papers', href: '/white-papers' },
-        { name: 'Webinars', href: '/webinars' },
-        { name: 'Documentation', href: '/docs' }
+        { name: 'Blog', href: '/blog' }, { name: 'Case Studies', href: '/case-studies' }, { name: 'White Papers', href: '/white-papers' }, { name: 'Webinars', href: '/webinars' }, { name: 'Documentation', href: '/docs' }
       ]
-    },
-    { 
+    }, { 
       name: 'Company', 
       href: '/company',
       dropdown: [
-        { name: 'Our Team', href: '/team' },
-        { name: 'Careers', href: '/careers' },
-        { name: 'Contact', href: '/contact' }
+        { name: 'Our Team', href: '/team' }, { name: 'Careers', href: '/careers' }, { name: 'Contact', href: '/contact' }
       ]
     }
   ];
 
   const toggleDropdown = (itemName: string) => {
-    setActiveDropdown(activeDropdown === itemName ? null : itemName);
-  };
+    setActiveDropdown(activeDropdown === itemName ? null : itemName)};
 
   const closeMobileMenu = () => {
     setIsOpen(false);
-    setActiveDropdown(null);
-  };
+    setActiveDropdown(null)};
 
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
@@ -149,8 +124,7 @@ const ImprovedNavigation: React.FC = () => {
         </div>
       </div>
 
-      {/* Mobile Navigation */}
-      {isOpen && (
+      {/* Mobile Navigation */}, {isOpen && (
         <div className="lg:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
             {navigationItems.map((item) => (
@@ -189,9 +163,7 @@ const ImprovedNavigation: React.FC = () => {
                   </Link>
                 )}
               </div>
-            ))}
-            
-            {/* Mobile CTA */}
+            ))}, {/* Mobile CTA */}
             <div className="pt-4 border-t">
               <Link href="/contact" onClick={closeMobileMenu}>
                 <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold">
@@ -215,7 +187,6 @@ const ImprovedNavigation: React.FC = () => {
         </div>
       )}
     </nav>
-  );
-};
+  )};
 
 export default ImprovedNavigation;

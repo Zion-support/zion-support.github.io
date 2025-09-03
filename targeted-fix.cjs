@@ -21,25 +21,19 @@ function fixFile(filePath) {
     // Fix missing function declarations;
     if (content.includes('import {') && !content.includes('export default function') && !content.includes('export function')) {
       content = content.replace(/^\s*import\s+\{[^}]*\}\s+from\s+['"`][^'"`]*['"`];\s*$/gm, (match) => {
-        return match + "\nexport default function Page() {";
-      });
-    }
+        return match + "\nexport default function Page() {"})}
     
     // Fix missing closing braces;
     if (content.includes('export default function') && !content.includes('}')) {
-      content += '\n}';
-    }
+      content += '\n}'}
     
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, `utf8`);
       console.log(`Fixed: ${filePath}`);
-      return true;
-    }
-    return false;
-  } catch (error) { 
+      return true}
+    return false} catch (error) { 
     console.error(`Error processing ${filePath }:`, error.message);
-    return false;
-  }
+    return false}
 }
 
 // Fix specific problematic files;
@@ -65,8 +59,7 @@ let fixedCount = 0;
 problematicFiles.forEach(filePath => {
   if (fs.existsSync(filePath)) {
     if (fixFile(filePath)) {
-      fixedCount++;
-    }
+      fixedCount++}
   }
 });
 

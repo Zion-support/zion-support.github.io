@@ -11,5 +11,4 @@ export default function ComprehensivePricingGuide2030() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

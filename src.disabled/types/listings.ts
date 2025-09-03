@@ -10,12 +10,4 @@ export: interface Listing {
    images: string[];
    seller: { id: string;
    name: string;
-<<<<<<< HEAD
-   rating: number;
-   reviews: numbe,r} location: string ,;
-=======
-   ratin,
-    g: number;
-   review,
-    s: number} location: string ;
->>>>>>> main
+

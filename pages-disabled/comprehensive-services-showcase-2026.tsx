@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React { useState } from 'react'
 import Link from 'next/link'
 import { ArrowRight, Star, Users, TrendingUp, Clock, Shield, Zap, Brain, Cloud, Database, Code, Building, Rocket } from 'lucide-react'
 import PageTransition from '../src/components/PageTransition'
@@ -38,13 +38,7 @@ export default function ComprehensiveServicesShowcase2026() {
 						</p>
 						<div className="mt-10 flex items-center justify-center gap-x-6">
 							<Link
-<<<<<<< HEAD:pages/comprehensive-services-showcase-2026.tsx
-								to="/contact"
-								className="rounded-md bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-3 text-sm font-semibold text-white shadow-lg hover: from-blue-700 hover:to-purple-700 transition-all duration-200 hover:shadow-xl"
-=======
-								href="/contact"
-								className="rounded-md bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-3 text-sm font-semibold text-white shadow-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 hover:shadow-xl"
->>>>>>> main:pages-disabled/comprehensive-services-showcase-2026.tsx
+:pages-disabled/comprehensive-services-showcase-2026.tsx
 							>
 								Get Started
 								<ArrowRight className="ml-2 h-4 w-4 inline" />
@@ -104,7 +98,7 @@ export default function ComprehensiveServicesShowcase2026() {
 											: 'bg-gray-100 text-gray-700 hover:bg-gray-200'
 									}`}
 								>
-									{category.icon} {category.name}
+									{category.icon}, {category.name}
 								</button>
 							))}
 						</div>
@@ -112,8 +106,7 @@ export default function ComprehensiveServicesShowcase2026() {
 				</div>
 			</section>
 
-			{/* Popular Services Section */}
-			{popularServices.length > 0 && (
+			{/* Popular Services Section */}, {popularServices.length > 0 && (
 				<section className="bg-gradient-to-r from-blue-50 to-indigo-50 py-16">
 					<div className="mx-auto max-w-7xl px-6 lg: px-8">
 						<div className="mx-auto max-w-2xl text-center mb-12">
@@ -143,8 +136,7 @@ export default function ComprehensiveServicesShowcase2026() {
 									<p className="text-gray-600 mb-4">{service.description}</p>
 									<div className="flex items-center justify-between mb-4">
 										<div className="text-2xl font-bold text-blue-600">
-											{service.price}
-											{service.period && <span className="text-sm font-normal text-gray-500">{service.period}</span>}
+											{service.price}, {service.period && <span className="text-sm font-normal text-gray-500">{service.period}</span>}
 										</div>
 										<div className="text-sm text-gray-500">
 											{service.customers} customers
@@ -172,9 +164,7 @@ export default function ComprehensiveServicesShowcase2026() {
 						</div>
 					</div>
 				</section>
-			)}
-
-			{/* All Services Grid */}
+			)}, {/* All Services Grid */}
 			<section className="py-24 sm: py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
 					<div className="mx-auto max-w-2xl text-center mb-16">
@@ -186,8 +176,7 @@ export default function ComprehensiveServicesShowcase2026() {
 						</p>
 					</div>
 
-					{/* Services by Category */}
-					{serviceCategories.map((category) => {
+					{/* Services by Category */}, {serviceCategories.map((category) => {
 						const categoryServices = filteredServices.filter(service => service.category === category.name)
 						if (categoryServices.length === 0) return null
 
@@ -195,7 +184,7 @@ export default function ComprehensiveServicesShowcase2026() {
 							<div key={category.name} className="mb-16">
 								<div className="mb-8">
 									<h3 className="text-2xl font-bold text-gray-900 mb-2">
-										{category.icon} {category.name}
+										{category.icon}, {category.name}
 									</h3>
 									<p className="text-gray-600">{category.description}</p>
 								</div>
@@ -230,8 +219,7 @@ export default function ComprehensiveServicesShowcase2026() {
 											{/* Pricing and Stats */}
 											<div className="flex items-center justify-between mb-4">
 												<div className="text-xl font-bold text-blue-600">
-													{service.price}
-													{service.period && <span className="text-sm font-normal text-gray-500">{service.period}</span>}
+													{service.price}, {service.period && <span className="text-sm font-normal text-gray-500">{service.period}</span>}
 												</div>
 												<div className="flex items-center gap-1 text-yellow-400">
 													<Star className="h-3 w-3 fill-current" />
@@ -284,10 +272,7 @@ export default function ComprehensiveServicesShowcase2026() {
 								</div>
 							</div>
 						)
-					})}
-
-					{/* No Results */}
-					{filteredServices.length === 0 && (
+					})}, {/* No Results */}, {filteredServices.length === 0 && (
 						<div className="text-center py-12">
 							<div className="text-6xl mb-4">🔍</div>
 							<h3 className="text-xl font-semibold text-gray-900 mb-2">No services found</h3>

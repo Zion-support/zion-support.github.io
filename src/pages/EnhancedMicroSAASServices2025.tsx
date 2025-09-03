@@ -1,32 +1,7 @@
-<<<<<<< HEAD
-import React from 'react'; import { motion  } from 'framer-motion'; import { Link  } from 'react-router-dom'; import { ; Brain,; Shield,; Cloud,; Cpu,; Rocket,; Lock,; Globe,; Heart,; Code,; Users,; BarChart3,; MessageCircle,; Zap,; CheckCircle,; ArrowRight,; Database,; Network,; Smartphone,; Target,; TrendingUp,; FileText,; Video,; Camera,; Palette,; Search,; ShoppingCart,; CreditCard,; Building,; Factory,; Car,; Plane,; Ship,; Leaf,; Sun,; Wind,; Atom,; Dna,; Microscope,; Flask,; Calculator,; ChartBar,; PieChart,; LineChart,; Activity,; Eye,; Fingerprint,; Key,; Server,; HardDrive,; Wifi,; Bluetooth,; Satellite,; Telescope,; Robot,; Sparkles,; Star,; Award,; Clock,; Calendar,; Mail,; Phone,; MapPin,; ExternalLink;  } from 'lucide-react'; ;
-=======
-<<<<<<< HEAD
- import { motion    } from 'framer-motion'; import { Link    } from 'react-router-dom'; import { ; Brain,; Shield,; Cloud,; Cpu,; Rocket,; Lock,; Globe,; Heart,; Code,; Users,; BarChart3,; MessageCircle,; Zap,; CheckCircle,; ArrowRight,; Database,; Network,; Smartphone,; Target,; TrendingUp,; FileText,; Video,; Camera,; Palette,; Search,; ShoppingCart,; CreditCard,; Building,; Factory,; Car,; Plane,; Ship,; Leaf,; Sun,; Wind,; Atom,; Dna,; Microscope,; Flask,; Calculator,; ChartBar,; PieChart,; LineChart,; Activity,; Eye,; Fingerprint,; Key,; Server,; HardDrive,; Wifi,; Bluetooth,; Satellite,; Telescope,; Robot,; Sparkles,; Star,; Award,; Clock,; Calendar,; Mail,; Phone,; MapPin,; ExternalLink;    } from 'lucide-react'; ;,"});,"})
-=======
-<<<<<<< HEAD
- import: { motion    } from 'framer-motion' import { Link    } from 'react-router-dom' import {  Brain, Shield, Cloud, Cpu, Rocket, Lock, Globe, Heart, Code, Users, BarChart3, MessageCircle, Zap, CheckCircle, ArrowRight, Database, Network, Smartphone, Target, TrendingUp, FileText, Video, Camera, Palette, Search, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Leaf, Sun, Wind, Atom, Dna, Microscope, Flask, Calculator, ChartBar, PieChart, LineChart, Activity, Eye, Fingerprint, Key, Server, HardDrive, Wifi, Bluetooth, Satellite, Telescope, Robot, Sparkles, Star, Award, Clock, Calendar, Mail, Phone, MapPin, ExternalLink    } from 'lucide-react' ;';';';
-=======
-<<<<<<< HEAD
- import { motion    } from 'framer-motion' import { Link    } from 'react-router-dom' import {  Brain, Shield, Cloud, Cpu, Rocket, Lock, Globe, Heart, Code, Users, BarChart3, MessageCircle, Zap, CheckCircle, ArrowRight, Database, Network, Smartphone, Target, TrendingUp, FileText, Video, Camera, Palette, Search, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Leaf, Sun, Wind, Atom, Dna, Microscope, Flask, Calculator, ChartBar, PieChart, LineChart, Activity, Eye, Fingerprint, Key, Server, HardDrive, Wifi, Bluetooth, Satellite, Telescope, Robot, Sparkles, Star, Award, Clock, Calendar, Mail, Phone, MapPin, ExternalLink    } from 'lucide-react' ;""
-=======
-<<<<<<< HEAD
- ;
-import {motion    } from 'framer-motion' import {Link    } from 'react-router-dom' import {Brain, Shield, Cloud, Cpu, Rocket, Lock, Globe, Heart, Code, Users, BarChart3, MessageCircle, Zap, CheckCircle, ArrowRight, Database, Network, Smartphone, Target, TrendingUp, FileText, Video, Camera, Palette, Search, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Leaf, Sun, Wind, Atom, Dna, Microscope, Flask, Calculator, ChartBar, PieChart, LineChart, Activity, Eye, Fingerprint, Key, Server, HardDrive, Wifi, Bluetooth, Satellite, Telescope, Robot, Sparkles, Star, Award, Clock, Calendar, Mail, Phone, MapPin, ExternalLink    } from 'lucide-react' ;"
-=======
-<<<<<<< HEAD
- import { motion    } from &apos;framer-motion&apos; import { Link    } from &apos;react-router-dom&apos; import {  Brain, Shield, Cloud, Cpu, Rocket, Lock, Globe, Heart, Code, Users, BarChart3, MessageCircle, Zap, CheckCircle, ArrowRight, Database, Network, Smartphone, Target, TrendingUp, FileText, Video, Camera, Palette, Search, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Leaf, Sun, Wind, Atom, Dna, Microscope, Flask, Calculator, ChartBar, PieChart, LineChart, Activity, Eye, Fingerprint, Key, Server, HardDrive, Wifi, Bluetooth, Satellite, Telescope, Robot, Sparkles, Star, Award, Clock, Calendar, Mail, Phone, MapPin, ExternalLink    } from &apos;lucide-react&apos; ;&apos;'
-=======
-<<<<<<< HEAD
- import { motion    } from 'framer-motion' import { Link    } from 'react-router-dom' import {  Brain, Shield, Cloud, Cpu, Rocket, Lock, Globe, Heart, Code, Users, BarChart3, MessageCircle, Zap, CheckCircle, ArrowRight, Database, Network, Smartphone, Target, TrendingUp, FileText, Video, Camera, Palette, Search, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Leaf, Sun, Wind, Atom, Dna, Microscope, Flask, Calculator, ChartBar, PieChart, LineChart, Activity, Eye, Fingerprint, Key, Server, HardDrive, Wifi, Bluetooth, Satellite, Telescope, Robot, Sparkles, Star, Award, Clock, Calendar, Mail, Phone, MapPin, ExternalLink    } from 'lucide-react' ;""
-""
-=======
- import { motion    } from 'framer-motion' import { Link    } from 'react-router-dom' import {  Brain, Shield, Cloud, Cpu, Rocket, Lock, Globe, Heart, Code, Users, BarChart3, MessageCircle, Zap, CheckCircle, ArrowRight, Database, Network, Smartphone, Target, TrendingUp, FileText, Video, Camera, Palette, Search, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Leaf, Sun, Wind, Atom, Dna, Microscope, Flask, Calculator, ChartBar, PieChart, LineChart, Activity, Eye, Fingerprint, Key, Server, HardDrive, Wifi, Bluetooth, Satellite, Telescope, Robot, Sparkles, Star, Award, Clock, Calendar, Mail, Phone, MapPin, ExternalLink    }  from 'lucide-react'; ;"
-"
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
+
+
+
+
+
+
+

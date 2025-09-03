@@ -6,12 +6,10 @@ const path = require('path');
 class SimpleSyntaxFixer {
   constructor() {
     this.projectRoot = process.cwd();
-    this.fixedCount = 0;
-  }
+    this.fixedCount = 0}
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
-  }
+    console.log(`[${new Date().toISOString()}] ${message}`)}
 
   async fixFile(filePath) {
     try {
@@ -38,13 +36,10 @@ class SimpleSyntaxFixer {
         fs.writeFileSync(filePath, fixed);
         this.log(`✅ Fixed ${path.basename(filePath)}`);
         this.fixedCount++;
-        return true;
-      }
-      return false;
-    } catch (error) {
+        return true}
+      return false} catch (error) {
       this.log(`❌ Error fixing ${path.basename(filePath)}: ${error.message}`);
-      return false;
-    }
+      return false}
   }
 
   async run() {
@@ -61,12 +56,10 @@ class SimpleSyntaxFixer {
     for (const file of files) {
       const filePath = path.join(this.projectRoot, file);
       if (fs.existsSync(filePath)) {
-        await this.fixFile(filePath);
-      }
+        await this.fixFile(filePath)}
     }
 
-    this.log(`✅ Fixed ${this.fixedCount} files`);
-  }
+    this.log(`✅ Fixed ${this.fixedCount} files`)}
 }
 
 new SimpleSyntaxFixer().run().catch(console.error);

@@ -31,12 +31,9 @@ export default function ${componentName}() {
         </p>
       </div>
     </div>
-  );
-}`;
-  }
+  )}`}
   
-  return content;
-}
+  return content}
 
 // Function to fix specific syntax patterns
 function fixSyntaxPatterns(content) {
@@ -45,28 +42,24 @@ function fixSyntaxPatterns(content) {
   // Fix malformed imports
   fixed = fixed.replace(/import\s+\{[^}]+\}\s+from\s+['"][^'"]+['"]\s*import/g, (match) => {
     const parts = match.split('import');
-    return parts[0] + ';\nimport' + parts.slice(1).join('import');
-  });
+    return parts[0] + ';\nimport' + parts.slice(1).join('import')});
   
   // Fix missing semicolons after imports
-  fixed = fixed.replace(/import\s+[^;]+$/gm, (match) => {
+  fixed = fixed.replace(/import\s+[^]+$/gm, (match) => {
     if (!match.endsWith(';')) {
-      return match + ';';
-    }
-    return match;
-  });
+      return match + ';'}
+    return match});
   
   // Fix broken export statements
   fixed = fixed.replace(/export\s+default\s+function\s+([^{]+)\s*{/g, 'export default function $1 {');
   
   // Fix malformed JSX
   fixed = fixed.replace(/<([^>]+)\s*>/g, (match) => {
-    return match.replace(/\s+/g, ' ').trim();
-  });
+    return match.replace(/\s+/g, ' ').trim()});
   
   // Fix broken string literals
   fixed = fixed.replace(/'([^']*)\s*'/g, "'$1'");
-  fixed = fixed.replace(/"([^"]*)\s*"/g, '"$1"');
+  fixed = fixed.replace(/"([^"]*)\s*"/g, '"$1");
   
   // Fix malformed arrays
   fixed = fixed.replace(/\[\s*([^\]]+)\s*\]/g, '[$1]');
@@ -76,10 +69,9 @@ function fixSyntaxPatterns(content) {
   fixed = fixed.replace(/\}\s*\{/g, '}, {');
   
   // Fix broken object properties
-  fixed = fixed.replace(/(\w+):\s*([^,}]+)(?=[,}])/g, '$1: $2');
+  fixed = fixed.replace(/(\w+):\s*([^}]+)(?=[}])/g, '$1: $2');
   
-  return fixed;
-}
+  return fixed}
 
 // Function to process a single file
 function processFile(filePath) {
@@ -96,21 +88,17 @@ function processFile(filePath) {
       const fixed = fixCorruptedFile(content, filePath);
       fs.writeFileSync(filePath, fixed, 'utf8');
       console.log(`Rewrote corrupted file: ${filePath}`);
-      return true;
-    }
+      return true}
     
     const fixed = fixSyntaxPatterns(content);
     
     if (content !== fixed) {
       fs.writeFileSync(filePath, fixed, 'utf8');
       console.log(`Fixed: ${filePath}`);
-      return true;
-    }
-    return false;
-  } catch (error) {
+      return true}
+    return false} catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
+    return false}
 }
 
 // Function to recursively find and process files
@@ -123,16 +111,13 @@ function processDirectory(dirPath) {
     const stat = fs.statSync(fullPath);
     
     if (stat.isDirectory()) {
-      fixedCount += processDirectory(fullPath);
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
+      fixedCount += processDirectory(fullPath)} else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
       if (processFile(fullPath)) {
-        fixedCount++;
-      }
+        fixedCount++}
     }
   }
   
-  return fixedCount;
-}
+  return fixedCount}
 
 // Main execution
 const srcDir = path.join(__dirname, 'src');

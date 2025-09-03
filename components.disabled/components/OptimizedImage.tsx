@@ -18,8 +18,7 @@ interface OptimizedImageProps {
   style?: React.CSSProperties;
   onClick?: () => void;
   onLoad?: () => void;
-  onError?: () => void;
-}
+  onError?: () => void}
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
@@ -36,8 +35,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   style,
   onClick,
   onLoad,
-  onError,
-}) => {
+  onError }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
   const [isInView, setIsInView] = useState(priority);
@@ -51,33 +49,26 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsInView(true);
-          observer.disconnect();
-        }
-      },
-      {
+          observer.disconnect()}
+      }, {
         threshold: 0.1,
-        rootMargin: '50px',
-      }
+        rootMargin: '50px' }
     );
 
     if (imageRef.current) {
-      observer.observe(imageRef.current);
-    }
+      observer.observe(imageRef.current)}
 
-    return () => observer.disconnect();
-  }, [priority]);
+    return () => observer.disconnect()}, [priority]);
 
   const handleLoad = () => {
     setIsLoading(false);
     setHasError(false);
-    onLoad?.();
-  };
+    onLoad?.()};
 
   const handleError = () => {
     setIsLoading(false);
     setHasError(true);
-    onError?.();
-  };
+    onError?.()};
 
   // Generate a simple blur placeholder if none provided
   const defaultBlurDataURL =
@@ -106,8 +97,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
           <p className="text-sm">Failed to load image</p>
         </div>
       </div>
-    );
-  }
+    )}
 
   if (!isInView) {
     return (
@@ -116,8 +106,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         className={`bg-gray-200 animate-pulse ${className}`}
         style={style}
       />
-    );
-  }
+    )}
 
   return (
     <div
@@ -152,7 +141,6 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         onError={handleError}
       />
     </div>
-  );
-};
+  )};
 
 export default OptimizedImage;

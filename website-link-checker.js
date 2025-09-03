@@ -60,8 +60,7 @@ function checkUrl(url) {
         working: res.statusCode >= 200 && res.statusCode < 400,
         redirect: res.statusCode >= 300 && res.statusCode < 400,
         location: res.headers.location
-      });
-    });
+      })});
 
     req.on('error', (err) => {
       resolve({
@@ -69,8 +68,7 @@ function checkUrl(url) {
         status: 'ERROR',
         working: false,
         error: err.message
-      });
-    });
+      })});
 
     req.on('timeout', () => {
       req.destroy();
@@ -79,12 +77,9 @@ function checkUrl(url) {
         status: 'TIMEOUT',
         working: false,
         error: 'Request timeout'
-      });
-    });
+      })});
 
-    req.end();
-  });
-}
+    req.end()})}
 
 async function checkAllUrls() {
   // eslint-disable-next-line no-console
@@ -104,20 +99,16 @@ async function checkAllUrls() {
     if (result.working && !result.redirect) {
       // eslint-disable-next-line no-console
       console.log(`✅ ${result.status}`);
-      results.working.push(result);
-    } else if (result.redirect) {
+      results.working.push(result)} else if (result.redirect) {
       // eslint-disable-next-line no-console
       console.log(`🔄 ${result.status} -> ${result.location}`);
-      results.redirects.push(result);
-    } else if (result.error) {
+      results.redirects.push(result)} else if (result.error) {
       // eslint-disable-next-line no-console
       console.log(`❌ ${result.error}`);
-      results.errors.push(result);
-    } else {
+      results.errors.push(result)} else {
       // eslint-disable-next-line no-console
       console.log(`❌ ${result.status}`);
-      results.broken.push(result);
-    }
+      results.broken.push(result)}
   }
 
   // eslint-disable-next-line no-console
@@ -138,29 +129,22 @@ async function checkAllUrls() {
     console.log('\n❌ BROKEN LINKS:');
     results.broken.forEach(link => {
       // eslint-disable-next-line no-console
-      console.log(`  - ${link.url} (${link.status})`);
-    });
-  }
+      console.log(`  - ${link.url} (${link.status})`)})}
 
   if (results.redirects.length > 0) {
     // eslint-disable-next-line no-console
     console.log('\n🔄 REDIRECTS:');
     results.redirects.forEach(link => {
       // eslint-disable-next-line no-console
-      console.log(`  - ${link.url} -> ${link.location}`);
-    });
-  }
+      console.log(`  - ${link.url} -> ${link.location}`)})}
 
   if (results.errors.length > 0) {
     // eslint-disable-next-line no-console
     console.log('\n⚠️  ERRORS:');
     results.errors.forEach(link => {
       // eslint-disable-next-line no-console
-      console.log(`  - ${link.url}: ${link.error}`);
-    });
-  }
+      console.log(`  - ${link.url}: ${link.error}`)})}
 
-  return results;
-}
+  return results}
 
 checkAllUrls().catch(console.error); // eslint-disable-line no-console

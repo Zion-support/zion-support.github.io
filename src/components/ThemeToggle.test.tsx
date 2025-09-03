@@ -11,5 +11,4 @@ export default function ThemeToggle.test() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

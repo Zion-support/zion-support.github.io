@@ -11,5 +11,4 @@ export default function ChatAssistant() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

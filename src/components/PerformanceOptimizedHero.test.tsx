@@ -11,5 +11,4 @@ export default function PerformanceOptimizedHero.test() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

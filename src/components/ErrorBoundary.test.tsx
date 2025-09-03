@@ -11,5 +11,4 @@ export default function ErrorBoundary.test() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

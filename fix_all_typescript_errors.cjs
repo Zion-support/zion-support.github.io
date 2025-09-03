@@ -20,28 +20,24 @@ async function fixAllTypeScriptErrors() {
         // Fix malformed exports;
         {
           from: /export,\s*interface,\s*(\w+)\s*{;/,
-          to: 'export interface $1 {',
-        },
-        { from: /export,\s*const\s+(\w+)\s*=/, to: 'export const $1 =' },
+          to: 'export interface $1 {' }, { from: /export,\s*const\s+(\w+)\s*=/, to: 'export const $1 =' },
 
         // Fix malformed imports;
         {
           from: /import\s+(\w+)\s+from\s+'([^']+)';;/,
-          to: "import $1 from '$2';",
-        },
+          to: "import $1 from '$2';" },
 
         // Fix malformed variable declarations;
-        { from: /const\s+(\w+)\s*=\s*([^;]+);;/, to: 'const $1 = $2;' },
+        { from: /const\s+(\w+)\s*=\s*([^]+);;/, to: 'const $1 = $2;' },
 
         // Fix malformed function declarations;
         { from: /function\s+(\w+)\s*\(([^)]*)\)\s*{/, to: 'function $1($2) {' },
 
         // Fix malformed object properties;
-        { from: /(\w+),\s*(\w+):\s*([^;]+);/, to: '$1$2: $3;' },
+        { from: /(\w+),\s*(\w+):\s*([^]+);/, to: '$1$2: $3;' },
 
         // Fix malformed string literals;
-        { from: /'([^']*)';;/, to: "'$1';" },
-        { from: /"([^"]*)"';;/, to: '"$1";' },
+        { from: /'([^']*)';;/, to: "'$1';" }, { from: /"([^"]*)"';;/, to: '"$1";' },
 
         // Fix malformed type annotations;
         { from: /:\s*(\w+),\s*(\w+)/, to: ': $1$2' },
@@ -71,19 +67,16 @@ async function fixAllTypeScriptErrors() {
         { from: /\/([^\/]*)\/;;/, to: '/$1/;' },
 
         // Fix malformed comments;
-        { from: /\/\/\s*([^;]*);;/, to: '// $1' },
+        { from: /\/\/\s*([^]*);;/, to: '// $1' },
 
         // Fix malformed JSX;
-        { from: /<(\w+)\s+([^>]*)>/, to: '<$1 $2>' },
-        { from: /<\/(\w+)>/, to: '</$1>' },
-      ];
+        { from: /<(\w+)\s+([^>]*)>/, to: '<$1 $2>' }, { from: /<\/(\w+)>/, to: '</$1>' } ];
 
       for (const pattern of patterns) {
         const newContent = content.replace(pattern.from, pattern.to);
         if (newContent !== content) {
           content = newContent;
-          modified = true;
-        }
+          modified = true}
       }
 
       // Fix specific patterns for different file types;
@@ -100,8 +93,7 @@ async function fixAllTypeScriptErrors() {
           .replace(
             /const supabaseAnonKe y = proce s s\.e n v\.NEXT_PUBLIC_SUPABASE_ANON_K E Y \|\| 'placehold e r-k e y''/,
             "const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key';"
-          );
-      }
+          )}
 
       if (file.includes('testing-system.ts')) {
         content = content;
@@ -122,17 +114,16 @@ async function fixAllTypeScriptErrors() {
           )
           .replace(
             /Obje c t\.defineProper t y\(wind o w 'innerWid t h''\)/,
-            "Object.defineProperty(window, 'innerWidth',"
+            "Object.defineProperty(window, 'innerWidth'",
           )
           .replace(
             /Obje c t\.defineProper t y\(wind o w 'innerHeig h t''\)/,
-            "Object.defineProperty(window, 'innerHeight',"
+            "Object.defineProperty(window, 'innerHeight'",
           )
           .replace(
             /wind o w\.dispatchEve n t\(new Even t\('resi z e''\)/,
             "window.dispatchEvent(new Event('resize'))"
-          );
-      }
+          )}
 
       if (file.includes('service.ts')) {
         content = content;
@@ -152,8 +143,7 @@ async function fixAllTypeScriptErrors() {
           .replace(
             /ty, p, e: 'hour, l, y' \| 'fix, e, d' \| 'month, l, y''/,
             "type: 'hourly' | 'fixed' | 'monthly';"
-          );
-      }
+          )}
 
       if (file.includes('quoteRequests.ts')) {
         content = content;
@@ -169,15 +159,13 @@ async function fixAllTypeScriptErrors() {
           .replace(
             /stat, u, s: 'pendi, n, g' \| 'approv, e, d' \| 'reject, e, d' \| 'complet, e, d''/,
             "status: 'pending' | 'approved' | 'rejected' | 'completed';"
-          );
-      }
+          )}
 
       if (file.includes('services.ts')) {
         content = content.replace(
-          /export, const serviceCategories\s*=\s*\[{ id: "clo, u d-servic e s", na, m, e: "Cloud Service s" } { id: "ai-servic e s", na, m e: "AI Service s";/,
+          /export, const serviceCategories\s*=\s*\[{ id: "clo, u d-servic e s", na, m, e: "Cloud Service s" }, { id: "ai-servic e s", na, m e: "AI Service s";/,
           "export const serviceCategories = [{ id: 'cloud-services', name: 'Cloud Services' }, { id: 'ai-services', name: 'AI Services' };"
-        );
-      }
+        )}
 
       if (file.includes('sanitizeHtml.ts')) {
         content = content;
@@ -185,19 +173,15 @@ async function fixAllTypeScriptErrors() {
           .replace(
             /sanitiz, e, d = sanitiz, e, d\.repla, c, e\(\/\\s\*on\\w\+\\s\*=\\s\*\["'"\]\[^"'"\]\*\["'"\]\/\)/,
             "sanitized = sanitized.replace(/\\s*on\\w+\\s*=\\s*[\"'][^\"']*[\"']/g, ``)"
-          );
-      }
+          )}
 
       if (modified) {
         await fs.writeFile(file, content);
-        console.log(`✅ Fixed syntax errors in: ${file}`);
-      }
+        console.log(`✅ Fixed syntax errors in: ${file}`)}
     } catch (error) { 
-      console.error(`❌ Error processing ${file }:`, error.message);
-    }
+      console.error(`❌ Error processing ${file }:`, error.message)}
   }
 
-  console.log(`✅ All TypeScript syntax error fixing completed`);
-}
+  console.log(`✅ All TypeScript syntax error fixing completed`)}
 
 fixAllTypeScriptErrors().catch(console.error);

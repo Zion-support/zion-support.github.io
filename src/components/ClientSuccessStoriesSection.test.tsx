@@ -11,5 +11,4 @@ export default function ClientSuccessStoriesSection.test() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

@@ -13,25 +13,25 @@ function fixFile(filePath) {
     fixedContent = fixedContent.replace(/export:\s*/g, 'export ');
     
     // Fix multiple semicolons and quotes
-    fixedContent = fixedContent.replace(/';';';/g, ';');
-    fixedContent = fixedContent.replace(/;';';/g, ';');
+    fixedContent = fixedContent.replace(/';
+;;/g, ';
+);
+    fixedContent = fixedContent.replace(/;;';/g, ';');
     fixedContent = fixedContent.replace(/';';/g, ';');
     
     // Fix semicolons in the middle of statements
     fixedContent = fixedContent.replace(/\) \{;/g, ') {');
     fixedContent = fixedContent.replace(/\(;/g, '(');
-    fixedContent = fixedContent.replace(/>;';';'/g, '>');
+    fixedContent = fixedContent.replace(/>;
+;;'/g, '>');
     
     if (fixedContent !== content) {
       fs.writeFileSync(filePath, fixedContent, 'utf8');
       console.log(`Fixed: ${filePath}`);
-      return true;
-    }
+      return true}
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-  }
-  return false;
-}
+    console.error(`Error fixing ${filePath}:`, error.message)}
+  return false}
 
 function processDirectory(dirPath) {
   const items = fs.readdirSync(dirPath);
@@ -43,13 +43,11 @@ function processDirectory(dirPath) {
     
     if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js'))) {
       if (fixFile(fullPath)) {
-        fixedCount++;
-      }
+        fixedCount++}
     }
   }
   
-  return fixedCount;
-}
+  return fixedCount}
 
 const pagesDir = path.join(process.cwd(), 'pages');
 const fixedCount = processDirectory(pagesDir);

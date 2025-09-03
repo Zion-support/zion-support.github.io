@@ -13,27 +13,23 @@ interface CSPReport {
     'column-number'?: number;
     'source-file'?: string;
     'status-code': number;
-    'script-sample'?: string;
-  };
-}
+    'script-sample'?: string}}
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
-  }
+    return res.status(405).json({ error: 'Method not allowed' })}
 
   try {
     const report: CSPReport = req.body;
 
     // Validate the CSP report
     if (!report['csp-report']) {
-      return res.status(400).json({ error: 'Invalid CSP report format' });
-    }
+      return res.status(400).json({ error: 'Invalid CSP report format' })}
 
     const cspData = report['csp-report'];
 
     // Log the CSP violation (in production, you might want to send to a monitoring service)
-    console.warn('CSP Violation:', {
+    console.warn('CSP Violation:' {
       documentUri: cspData['document-uri'],
       violatedDirective: cspData['violated-directive'],
       blockedUri: cspData['blocked-uri'],
@@ -49,10 +45,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     // - A database for analysis
 
     // Return a 204 No Content response as per CSP reporting spec
-    res.status(204).end();
-
-  } catch (error) {
+    res.status(204).end()} catch (error) {
     console.error('Error processing CSP report:', error);
-    res.status(500).json({ error: 'Internal server error' });
-  }
+    res.status(500).json({ error: 'Internal server error' })}
 }

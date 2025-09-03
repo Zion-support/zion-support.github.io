@@ -13,8 +13,7 @@ import {
   Today,
   User,
   Users,
-  Zap,
-} from 'lucide-react';
+  Zap } from 'lucide-react';
 
 export default function WebDevelopment() {
   return (
@@ -289,5 +288,4 @@ export default function WebDevelopment() {
         </section>
       </main>
     </>
-  );
-}
+  )}

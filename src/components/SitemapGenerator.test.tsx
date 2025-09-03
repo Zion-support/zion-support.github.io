@@ -11,5 +11,4 @@ export default function SitemapGenerator.test() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

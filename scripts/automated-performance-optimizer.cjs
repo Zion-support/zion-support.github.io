@@ -8,19 +8,16 @@ class PerformanceOptimizer {
   constructor() {
     this.projectRoot = process.cwd();
     this.reportsDir = path.join(this.projectRoot, 'automation-reports');
-    this.ensureDirectories();
-  }
+    this.ensureDirectories()}
 
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true });
-    }
+      fs.mkdirSync(this.reportsDir { recursive: true })}
   }
 
   log(message) {
     const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] ${message}`);
-  }
+    console.log(`[${timestamp}] ${message}`)}
 
   analyzeBundleSize() {
     this.log('🔍 Analyzing bundle size...');
@@ -37,32 +34,27 @@ class PerformanceOptimizer {
     if (analysis.buildExists) {
       try {
         // Get total build size
-        const totalSizeOutput = execSync(`du -sh ${buildDir}`, { encoding: 'utf8' });
+        const totalSizeOutput = execSync(`du -sh ${buildDir}` { encoding: 'utf8' });
         analysis.totalSize = totalSizeOutput.split('\t')[0];
 
         // Get static assets size
         const staticDir = path.join(buildDir, 'static');
         if (fs.existsSync(staticDir)) {
-          const staticSizeOutput = execSync(`du -sh ${staticDir}`, { encoding: 'utf8' });
-          analysis.staticSize = staticSizeOutput.split('\t')[0];
-        }
+          const staticSizeOutput = execSync(`du -sh ${staticDir}` { encoding: 'utf8' });
+          analysis.staticSize = staticSizeOutput.split('\t')[0]}
 
         // Get server files size
         const serverDir = path.join(buildDir, 'server');
         if (fs.existsSync(serverDir)) {
-          const serverSizeOutput = execSync(`du -sh ${serverDir}`, { encoding: 'utf8' });
-          analysis.serverSize = serverSizeOutput.split('\t')[0];
-        }
+          const serverSizeOutput = execSync(`du -sh ${serverDir}` { encoding: 'utf8' });
+          analysis.serverSize = serverSizeOutput.split('\t')[0]}
 
         // Analyze chunks
-        analysis.chunks = this.analyzeChunks(buildDir);
-      } catch (error) {
-        analysis.error = error.message;
-      }
+        analysis.chunks = this.analyzeChunks(buildDir)} catch (error) {
+        analysis.error = error.message}
     }
 
-    return analysis;
-  }
+    return analysis}
 
   analyzeChunks(buildDir) {
     const chunks = [];
@@ -79,24 +71,20 @@ class PerformanceOptimizer {
             name: file,
             size: this.formatBytes(stats.size),
             sizeBytes: stats.size
-          });
-        }
+          })}
       });
       
       // Sort by size
-      chunks.sort((a, b) => b.sizeBytes - a.sizeBytes);
-    }
+      chunks.sort((a, b) => b.sizeBytes - a.sizeBytes)}
     
-    return chunks;
-  }
+    return chunks}
 
   formatBytes(bytes) {
     if (bytes === 0) return '0 Bytes';
     const k = 1024;
     const sizes = ['Bytes', 'KB', 'MB', 'GB'];
     const i = Math.floor(Math.log(bytes) / Math.log(k));
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
-  }
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]}
 
   analyzeImageOptimization() {
     this.log('🔍 Analyzing image optimization...');
@@ -110,30 +98,24 @@ class PerformanceOptimizer {
     };
 
     if (fs.existsSync(publicDir)) {
-      this.analyzeDirectoryForImages(publicDir, analysis);
-    }
+      this.analyzeDirectoryForImages(publicDir, analysis)}
 
-    return analysis;
-  }
+    return analysis}
 
   analyzeDirectoryForImages(dir, analysis) {
-    const files = fs.readdirSync(dir, { withFileTypes: true });
+    const files = fs.readdirSync(dir { withFileTypes: true });
     
     files.forEach(file => {
       const filePath = path.join(dir, file.name);
       
       if (file.isDirectory()) {
-        this.analyzeDirectoryForImages(filePath, analysis);
-      } else if (this.isImageFile(file.name)) {
-        this.analyzeImageFile(filePath, analysis);
-      }
-    });
-  }
+        this.analyzeDirectoryForImages(filePath, analysis)} else if (this.isImageFile(file.name)) {
+        this.analyzeImageFile(filePath, analysis)}
+    })}
 
   isImageFile(filename) {
     const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg', '.bmp', '.ico'];
-    return imageExtensions.some(ext => filename.toLowerCase().endsWith(ext));
-  }
+    return imageExtensions.some(ext => filename.toLowerCase().endsWith(ext))}
 
   analyzeImageFile(filePath, analysis) {
     try {
@@ -151,8 +133,7 @@ class PerformanceOptimizer {
         analysis.largeImages.push({
           file: path.relative(this.projectRoot, filePath),
           size: this.formatBytes(size)
-        });
-      }
+        })}
       
       // Check for unoptimized formats
       if (['.jpg', '.jpeg', '.png'].includes(ext)) {
@@ -160,11 +141,9 @@ class PerformanceOptimizer {
           file: path.relative(this.projectRoot, filePath),
           format: ext,
           size: this.formatBytes(size)
-        });
-      }
+        })}
     } catch (error) {
-      this.log(`❌ Error analyzing image ${filePath}: ${error.message}`);
-    }
+      this.log(`❌ Error analyzing image ${filePath}: ${error.message}`)}
   }
 
   analyzeCodeSplitting() {
@@ -183,30 +162,24 @@ class PerformanceOptimizer {
     const directories = [srcDir, pagesDir].filter(dir => fs.existsSync(dir));
     
     directories.forEach(dir => {
-      this.analyzeDirectoryForSplitting(dir, analysis);
-    });
+      this.analyzeDirectoryForSplitting(dir, analysis)});
 
-    return analysis;
-  }
+    return analysis}
 
   analyzeDirectoryForSplitting(dir, analysis) {
-    const files = fs.readdirSync(dir, { withFileTypes: true });
+    const files = fs.readdirSync(dir { withFileTypes: true });
     
     files.forEach(file => {
       const filePath = path.join(dir, file.name);
       
       if (file.isDirectory()) {
-        this.analyzeDirectoryForSplitting(filePath, analysis);
-      } else if (this.isCodeFile(file.name)) {
-        this.analyzeFileForSplitting(filePath, analysis);
-      }
-    });
-  }
+        this.analyzeDirectoryForSplitting(filePath, analysis)} else if (this.isCodeFile(file.name)) {
+        this.analyzeFileForSplitting(filePath, analysis)}
+    })}
 
   isCodeFile(filename) {
     const codeExtensions = ['.js', '.jsx', '.ts', '.tsx'];
-    return codeExtensions.some(ext => filename.endsWith(ext));
-  }
+    return codeExtensions.some(ext => filename.endsWith(ext))}
 
   analyzeFileForSplitting(filePath, analysis) {
     try {
@@ -216,22 +189,19 @@ class PerformanceOptimizer {
       // Count dynamic imports
       const dynamicImportMatches = content.match(/import\s*\(/g);
       if (dynamicImportMatches) {
-        analysis.dynamicImports += dynamicImportMatches.length;
-      }
+        analysis.dynamicImports += dynamicImportMatches.length}
       
       // Count lazy components
       const lazyMatches = content.match(/React\.lazy|dynamic\(/g);
       if (lazyMatches) {
-        analysis.lazyComponents += lazyMatches.length;
-      }
+        analysis.lazyComponents += lazyMatches.length}
       
       // Identify large components that could be split
       if (lines > 150 && content.includes('export default') && content.includes('function') || content.includes('const') && content.includes('=')) {
         analysis.largeComponents.push({
           file: path.relative(this.projectRoot, filePath),
           lines: lines
-        });
-      }
+        })}
       
       // Identify potential split opportunities
       if (content.includes('import') && content.includes('from') && !content.includes('import(')) {
@@ -240,12 +210,10 @@ class PerformanceOptimizer {
           analysis.potentialSplits.push({
             file: path.relative(this.projectRoot, filePath),
             imports: importMatches.length
-          });
-        }
+          })}
       }
     } catch (error) {
-      this.log(`❌ Error analyzing file ${filePath}: ${error.message}`);
-    }
+      this.log(`❌ Error analyzing file ${filePath}: ${error.message}`)}
   }
 
   generateOptimizationRecommendations(bundleAnalysis, imageAnalysis, splittingAnalysis) {
@@ -262,8 +230,7 @@ class PerformanceOptimizer {
           priority: 'high',
           message: 'Large JavaScript chunks detected. Consider code splitting and lazy loading.',
           details: largestChunks
-        });
-      }
+        })}
     }
 
     // Image optimization recommendations
@@ -273,8 +240,7 @@ class PerformanceOptimizer {
         priority: 'high',
         message: `Found ${imageAnalysis.largeImages.length} large images. Consider compressing or converting to WebP format.`,
         details: imageAnalysis.largeImages.slice(0, 5)
-      });
-    }
+      })}
 
     if (imageAnalysis.unoptimizedImages.length > 0) {
       recommendations.push({
@@ -282,8 +248,7 @@ class PerformanceOptimizer {
         priority: 'medium',
         message: `Found ${imageAnalysis.unoptimizedImages.length} images in unoptimized formats. Consider using WebP or AVIF.`,
         details: imageAnalysis.unoptimizedImages.slice(0, 5)
-      });
-    }
+      })}
 
     // Code splitting recommendations
     if (splittingAnalysis.largeComponents.length > 0) {
@@ -292,8 +257,7 @@ class PerformanceOptimizer {
         priority: 'medium',
         message: `Found ${splittingAnalysis.largeComponents.length} large components. Consider splitting them into smaller components.`,
         details: splittingAnalysis.largeComponents.slice(0, 5)
-      });
-    }
+      })}
 
     if (splittingAnalysis.potentialSplits.length > 0) {
       recommendations.push({
@@ -301,11 +265,9 @@ class PerformanceOptimizer {
         priority: 'low',
         message: `Found ${splittingAnalysis.potentialSplits.length} files with many imports. Consider dynamic imports for better code splitting.`,
         details: splittingAnalysis.potentialSplits.slice(0, 5)
-      });
-    }
+      })}
 
-    return recommendations;
-  }
+    return recommendations}
 
   async run() {
     this.log('🚀 Starting Performance Optimizer');
@@ -342,12 +304,9 @@ class PerformanceOptimizer {
     if (highPriority.length > 0) {
       console.log('\n🚨 High Priority Optimizations:');
       highPriority.forEach(rec => {
-        console.log(`  • ${rec.message}`);
-      });
-    }
+        console.log(`  • ${rec.message}`)})}
     
-    return results;
-  }
+    return results}
 }
 
 // Run the performance optimizer

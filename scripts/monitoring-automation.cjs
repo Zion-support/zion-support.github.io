@@ -25,10 +25,8 @@ class MonitoringAutomation {
     // Ensure directories exist
     [this.logDir, this.alertsDir].forEach(dir => {
       if (!fs.existsSync(dir)) {
-        fs.mkdirSync(dir, { recursive: true });
-      }
-    });
-  }
+        fs.mkdirSync(dir { recursive: true })}
+    })}
 
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
@@ -37,8 +35,7 @@ class MonitoringAutomation {
     
     // Write to log file
     const logFile = path.join(this.logDir, 'monitoring.log');
-    fs.appendFileSync(logFile, logMessage + '\n');
-  }
+    fs.appendFileSync(logFile, logMessage + '\n')}
 
   async collectSystemMetrics() {
     this.log('Collecting system metrics...');
@@ -78,17 +75,15 @@ class MonitoringAutomation {
       
       // Disk Usage
       try {
-        const diskUsage = execSync('df -h /', { encoding: 'utf8' });
+        const diskUsage = execSync('df -h /' { encoding: 'utf8' });
         const diskLines = diskUsage.split('\n')[1].split(/\s+/);
         metrics.system.disk = {
           total: diskLines[1],
           used: diskLines[2],
           available: diskLines[3],
           usage: parseInt(diskLines[4].replace('%', ''))
-        };
-      } catch (error) {
-        this.log('Could not collect disk metrics', 'WARN');
-      }
+        }} catch (error) {
+        this.log('Could not collect disk metrics', 'WARN')}
       
       // Load Average
       const loadAvg = require('os').loadavg();
@@ -100,17 +95,13 @@ class MonitoringAutomation {
       
       // Network connections (if possible)
       try {
-        const netstat = execSync('netstat -an | grep :3000 | wc -l', { encoding: 'utf8' });
-        metrics.system.connections = parseInt(netstat.trim());
-      } catch (error) {
-        metrics.system.connections = 0;
-      }
+        const netstat = execSync('netstat -an | grep :3000 | wc -l' { encoding: 'utf8' });
+        metrics.system.connections = parseInt(netstat.trim())} catch (error) {
+        metrics.system.connections = 0}
       
-      return metrics;
-    } catch (error) {
+      return metrics} catch (error) {
       this.log(`Error collecting system metrics: ${error.message}`, 'ERROR');
-      return metrics;
-    }
+      return metrics}
   }
 
   async collectApplicationMetrics() {
@@ -130,7 +121,7 @@ class MonitoringAutomation {
       
       // PM2 process metrics
       try {
-        const pm2List = execSync('pm2 jlist', { encoding: 'utf8' });
+        const pm2List = execSync('pm2 jlist' { encoding: 'utf8' });
         const processes = JSON.parse(pm2List);
         
         metrics.pm2 = processes.map(proc => ({
@@ -140,20 +131,16 @@ class MonitoringAutomation {
           memory: Math.round(proc.monit.memory / 1024 / 1024), // MB
           uptime: proc.pm2_env.pm_uptime,
           restarts: proc.pm2_env.restart_time
-        }));
-      } catch (error) {
-        this.log('PM2 metrics not available', 'WARN');
-      }
+        }))} catch (error) {
+        this.log('PM2 metrics not available', 'WARN')}
       
       // Error log analysis
       const errorMetrics = await this.analyzeErrorLogs();
       metrics.errors = errorMetrics;
       
-      return metrics;
-    } catch (error) {
+      return metrics} catch (error) {
       this.log(`Error collecting application metrics: ${error.message}`, 'ERROR');
-      return metrics;
-    }
+      return metrics}
   }
 
   async checkApplicationHealth() {
@@ -166,16 +153,14 @@ class MonitoringAutomation {
           status: res.statusCode === 200 ? 'healthy' : 'unhealthy',
           responseTime,
           statusCode: res.statusCode
-        });
-      });
+        })});
       
       req.on('error', (error) => {
         resolve({
           status: 'unhealthy',
           responseTime: Date.now() - startTime,
           error: error.message
-        });
-      });
+        })});
       
       req.setTimeout(5000, () => {
         req.destroy();
@@ -183,10 +168,7 @@ class MonitoringAutomation {
           status: 'unhealthy',
           responseTime: Date.now() - startTime,
           error: 'timeout'
-        });
-      });
-    });
-  }
+        })})})}
 
   async analyzeErrorLogs() {
     const errorAnalysis = {
@@ -217,40 +199,30 @@ class MonitoringAutomation {
               if (timestamp && timestamp > oneHourAgo) {
                 errorAnalysis.recentErrors++;
                 if (line.includes('CRITICAL') || line.includes('FATAL')) {
-                  errorAnalysis.criticalErrors++;
-                }
+                  errorAnalysis.criticalErrors++}
               }
             } else if (line.includes('[WARN]')) {
               const timestamp = this.extractTimestamp(line);
               if (timestamp && timestamp > oneHourAgo) {
-                errorAnalysis.warnings++;
-              }
+                errorAnalysis.warnings++}
             }
-          });
-        }
+          })}
       }
       
       // Calculate error rate (errors per minute)
-      errorAnalysis.errorRate = Math.round((errorAnalysis.recentErrors / 60) * 100) / 100;
-      
-    } catch (error) {
-      this.log(`Error analyzing logs: ${error.message}`, 'ERROR');
-    }
+      errorAnalysis.errorRate = Math.round((errorAnalysis.recentErrors / 60) * 100) / 100} catch (error) {
+      this.log(`Error analyzing logs: ${error.message}`, 'ERROR')}
     
-    return errorAnalysis;
-  }
+    return errorAnalysis}
 
   extractTimestamp(logLine) {
     const timestampMatch = logLine.match(/\[([\d-T:.Z]+)\]/);
     if (timestampMatch) {
       try {
-        return new Date(timestampMatch[1]);
-      } catch (error) {
-        return null;
-      }
+        return new Date(timestampMatch[1])} catch (error) {
+        return null}
     }
-    return null;
-  }
+    return null}
 
   async checkThresholds(metrics) {
     this.log('Checking thresholds...');
@@ -265,8 +237,7 @@ class MonitoringAutomation {
         message: `CPU usage is ${metrics.system.cpu.usage}% (threshold: ${this.thresholds.cpu}%)`,
         value: metrics.system.cpu.usage,
         threshold: this.thresholds.cpu
-      });
-    }
+      })}
     
     // Memory threshold
     if (metrics.system && metrics.system.memory && metrics.system.memory.usage > this.thresholds.memory) {
@@ -276,8 +247,7 @@ class MonitoringAutomation {
         message: `Memory usage is ${metrics.system.memory.usage}% (threshold: ${this.thresholds.memory}%)`,
         value: metrics.system.memory.usage,
         threshold: this.thresholds.memory
-      });
-    }
+      })}
     
     // Disk threshold
     if (metrics.system && metrics.system.disk && metrics.system.disk.usage > this.thresholds.disk) {
@@ -287,8 +257,7 @@ class MonitoringAutomation {
         message: `Disk usage is ${metrics.system.disk.usage}% (threshold: ${this.thresholds.disk}%)`,
         value: metrics.system.disk.usage,
         threshold: this.thresholds.disk
-      });
-    }
+      })}
     
     // Response time threshold
     if (metrics.application && metrics.application.health && 
@@ -299,8 +268,7 @@ class MonitoringAutomation {
         message: `Response time is ${metrics.application.health.responseTime}ms (threshold: ${this.thresholds.responseTime}ms)`,
         value: metrics.application.health.responseTime,
         threshold: this.thresholds.responseTime
-      });
-    }
+      })}
     
     // Application health
     if (metrics.application && metrics.application.health && 
@@ -311,8 +279,7 @@ class MonitoringAutomation {
         message: `Application is ${metrics.application.health.status}`,
         value: metrics.application.health.status,
         threshold: 'healthy'
-      });
-    }
+      })}
     
     // Error rate threshold
     if (metrics.application && metrics.application.errors && 
@@ -323,17 +290,14 @@ class MonitoringAutomation {
         message: `Error rate is ${metrics.application.errors.errorRate} errors/min (threshold: ${this.thresholds.errorRate})`,
         value: metrics.application.errors.errorRate,
         threshold: this.thresholds.errorRate
-      });
-    }
+      })}
     
-    return alerts;
-  }
+    return alerts}
 
   async sendAlerts(alerts) {
     if (alerts.length === 0) {
       this.log('No alerts to send');
-      return;
-    }
+      return}
     
     this.log(`Sending ${alerts.length} alerts...`);
     
@@ -341,10 +305,8 @@ class MonitoringAutomation {
     let existingAlerts = [];
     if (fs.existsSync(this.alertsFile)) {
       try {
-        existingAlerts = JSON.parse(fs.readFileSync(this.alertsFile, 'utf8'));
-      } catch (error) {
-        existingAlerts = [];
-      }
+        existingAlerts = JSON.parse(fs.readFileSync(this.alertsFile, 'utf8'))} catch (error) {
+        existingAlerts = []}
     }
     
     const newAlerts = alerts.map(alert => ({
@@ -357,15 +319,13 @@ class MonitoringAutomation {
     
     // Keep only last 100 alerts
     if (existingAlerts.length > 100) {
-      existingAlerts = existingAlerts.slice(-100);
-    }
+      existingAlerts = existingAlerts.slice(-100)}
     
     fs.writeFileSync(this.alertsFile, JSON.stringify(existingAlerts, null, 2));
     
     // Log alerts
     alerts.forEach(alert => {
-      this.log(`ALERT [${alert.level.toUpperCase()}]: ${alert.message}`, 'ALERT');
-    });
+      this.log(`ALERT [${alert.level.toUpperCase()}]: ${alert.message}`, 'ALERT')});
     
     // In a real system, you would send these to:
     // - Slack/Discord webhooks
@@ -373,8 +333,7 @@ class MonitoringAutomation {
     // - PagerDuty/OpsGenie
     // - SMS alerts
     
-    this.log(`${alerts.length} alerts processed`);
-  }
+    this.log(`${alerts.length} alerts processed`)}
 
   async saveMetrics(systemMetrics, applicationMetrics) {
     const combinedMetrics = {
@@ -387,23 +346,19 @@ class MonitoringAutomation {
     let existingMetrics = [];
     if (fs.existsSync(this.metricsFile)) {
       try {
-        existingMetrics = JSON.parse(fs.readFileSync(this.metricsFile, 'utf8'));
-      } catch (error) {
-        existingMetrics = [];
-      }
+        existingMetrics = JSON.parse(fs.readFileSync(this.metricsFile, 'utf8'))} catch (error) {
+        existingMetrics = []}
     }
     
     existingMetrics.push(combinedMetrics);
     
     // Keep only last 1000 metrics (roughly 16 hours at 1-minute intervals)
     if (existingMetrics.length > 1000) {
-      existingMetrics = existingMetrics.slice(-1000);
-    }
+      existingMetrics = existingMetrics.slice(-1000)}
     
     fs.writeFileSync(this.metricsFile, JSON.stringify(existingMetrics, null, 2));
     
-    this.log('Metrics saved');
-  }
+    this.log('Metrics saved')}
 
   async generateReport() {
     this.log('Generating monitoring report...');
@@ -429,12 +384,9 @@ class MonitoringAutomation {
       fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
       
       this.log(`Monitoring report saved to: ${reportFile}`);
-      return report;
-      
-    } catch (error) {
+      return report} catch (error) {
       this.log(`Error generating report: ${error.message}`, 'ERROR');
-      return null;
-    }
+      return null}
   }
 
   async run() {
@@ -464,12 +416,9 @@ class MonitoringAutomation {
         metrics: combinedMetrics,
         alerts,
         report
-      };
-      
-    } catch (error) {
+      }} catch (error) {
       this.log(`❌ Monitoring automation failed: ${error.message}`, 'ERROR');
-      throw error;
-    }
+      throw error}
   }
 }
 
@@ -483,12 +432,9 @@ if (require.main === module) {
         console.log(`⚠️ ${results.alerts.length} alerts generated`);
         process.exit(1); // Exit with error code if there are alerts
       }
-      process.exit(0);
-    })
+      process.exit(0)})
     .catch(error => {
       console.error('\n❌ Monitoring automation failed:', error.message);
-      process.exit(1);
-    });
-}
+      process.exit(1)})}
 
 module.exports = MonitoringAutomation;

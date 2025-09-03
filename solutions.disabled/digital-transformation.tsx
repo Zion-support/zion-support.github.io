@@ -11,28 +11,23 @@ export default function DigitalTransformation() {
       icon: Zap,
       title: 'Increased Efficiency',
       description: 'Streamline operations and reduce manual processes by up to 70%'
-    },
-    {
+    }, {
       icon: BarChart,
       title: 'Data-Driven Decisions',
       description: 'Leverage analytics and insights to make informed business decisions'
-    },
-    {
+    }, {
       icon: Users,
       title: 'Enhanced Customer Experience',
       description: 'Deliver personalized experiences that drive customer satisfaction'
-    },
-    {
+    }, {
       icon: Cloud,
       title: 'Scalable Infrastructure',
       description: 'Build systems that grow with your business needs'
-    },
-    {
+    }, {
       icon: Shield,
       title: 'Improved Security',
       description: 'Implement enterprise-grade security measures and compliance'
-    },
-    {
+    }, {
       icon: Globe,
       title: 'Global Reach',
       description: 'Expand your market presence with digital-first strategies'
@@ -44,18 +39,15 @@ export default function DigitalTransformation() {
       title: 'Process Automation',
       description: 'Automate repetitive tasks and workflows to increase productivity',
       features: ['Workflow Design', 'API Integration', 'Data Migration', 'System Integration']
-    },
-    {
+    }, {
       title: 'Cloud Migration',
       description: 'Move your infrastructure to the cloud for better scalability and cost efficiency',
       features: ['AWS Migration', 'Azure Setup', 'Google Cloud', 'Hybrid Solutions']
-    },
-    {
+    }, {
       title: 'Data Analytics',
       description: 'Transform raw data into actionable insights for better decision making',
       features: ['Business Intelligence', 'Predictive Analytics', 'Real-time Dashboards', 'Data Visualization']
-    },
-    {
+    }, {
       title: 'Customer Experience',
       description: 'Enhance customer interactions with digital touchpoints and personalization',
       features: ['CRM Integration', 'Omnichannel Support', 'Personalization', 'Customer Journey Mapping']
@@ -63,12 +55,7 @@ export default function DigitalTransformation() {
   ];
 
   const industries = [
-    { name: 'Healthcare', description: 'Digital health records, telemedicine, and patient management systems' },
-    { name: 'Finance', description: 'Digital banking, payment processing, and financial analytics' },
-    { name: 'Manufacturing', description: 'IoT integration, supply chain optimization, and predictive maintenance' },
-    { name: 'Retail', description: 'E-commerce platforms, inventory management, and customer analytics' },
-    { name: 'Education', description: 'Learning management systems, virtual classrooms, and student analytics' },
-    { name: 'Real Estate', description: 'Property management, virtual tours, and market analysis tools' }
+    { name: 'Healthcare', description: 'Digital health records, telemedicine, and patient management systems' }, { name: 'Finance', description: 'Digital banking, payment processing, and financial analytics' }, { name: 'Manufacturing', description: 'IoT integration, supply chain optimization, and predictive maintenance' }, { name: 'Retail', description: 'E-commerce platforms, inventory management, and customer analytics' }, { name: 'Education', description: 'Learning management systems, virtual classrooms, and student analytics' }, { name: 'Real Estate', description: 'Property management, virtual tours, and market analysis tools' }
   ];
 
   return (
@@ -202,10 +189,7 @@ export default function DigitalTransformation() {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
-                { step: '01', title: 'Assessment', description: 'Analyze current state and identify opportunities' },
-                { step: '02', title: 'Strategy', description: 'Develop comprehensive transformation roadmap' },
-                { step: '03', title: 'Implementation', description: 'Execute transformation with agile methodology' },
-                { step: '04', title: 'Optimization', description: 'Monitor, measure, and continuously improve' }
+                { step: '01', title: 'Assessment', description: 'Analyze current state and identify opportunities' }, { step: '02', title: 'Strategy', description: 'Develop comprehensive transformation roadmap' }, { step: '03', title: 'Implementation', description: 'Execute transformation with agile methodology' }, { step: '04', title: 'Optimization', description: 'Monitor, measure, and continuously improve' }
               ].map((step, index) => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-6">
@@ -242,5 +226,4 @@ export default function DigitalTransformation() {
       
       <Footer />
     </>
-  );
-}
+  )}

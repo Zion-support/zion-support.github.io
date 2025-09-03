@@ -12,8 +12,7 @@ const MicroSaasPage: NextPage = () => {
     {
       icon: <Zap className="w-8 h-8" />, title: 'Lightning Fast Setup',
       description: 'Get up and running in minutes, not months. Our micro SaaS solutions are designed for quick deployment.'
-    },
-    {
+    }, {
       icon: <Users className="w-8 h-8" />, title: 'Scalable Solutions',
       description: 'Start small and grow as your business expands. Our solutions scale with your needs.'
     }, {
@@ -362,7 +361,6 @@ const MicroSaasPage: NextPage = () => {
         </div>
       </section>
     </MainLayout>
-  );
-};
+  )};
 
 export default MicroSaasPage;

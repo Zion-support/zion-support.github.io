@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React { useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
@@ -27,8 +27,7 @@ export default function Login() {
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
-  };
+    }))};
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -39,26 +38,22 @@ export default function Login() {
     await new Promise(resolve => setTimeout(resolve, 2000));
     
     // Simulate successful login
-    window.location.href = '/dashboard';
-  };
+    window.location.href = '/dashboard'};
 
   const benefits = [
     {
       icon: User,
       title: 'Personal Dashboard',
       description: 'Access your personalized workspace'
-    },
-    {
+    }, {
       icon: Shield,
       title: 'Secure Access',
       description: 'Enterprise-grade security'
-    },
-    {
+    }, {
       icon: Zap,
       title: 'Fast Performance',
       description: 'Lightning-fast platform'
-    },
-    {
+    }, {
       icon: Star,
       title: 'Premium Features',
       description: 'Access to exclusive tools'
@@ -246,5 +241,4 @@ export default function Login() {
         </div>
       </div>
     </>
-  );
-}
+  )}

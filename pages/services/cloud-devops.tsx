@@ -18,8 +18,7 @@ const CloudDevOps = () => {
         'Cost optimization',
         'Performance tuning'
       ]
-    },
-    {
+    }, {
       title: 'DevOps Implementation',
       description: 'Implement modern DevOps practices and tools',
       icon: GitBranch,
@@ -30,8 +29,7 @@ const CloudDevOps = () => {
         'Monitoring & logging',
         'Automated testing'
       ]
-    },
-    {
+    }, {
       title: 'Infrastructure Management',
       description: 'Manage and optimize your cloud infrastructure',
       icon: Server,
@@ -42,8 +40,7 @@ const CloudDevOps = () => {
         'Backup & disaster recovery',
         'Security hardening'
       ]
-    },
-    {
+    }, {
       title: 'Monitoring & Analytics',
       description: 'Comprehensive monitoring and performance analytics',
       icon: Monitor,
@@ -62,28 +59,23 @@ const CloudDevOps = () => {
       name: 'AWS',
       description: 'Amazon Web Services cloud platform',
       icon: Cloud
-    },
-    {
+    }, {
       name: 'Azure',
       description: 'Microsoft Azure cloud services',
       icon: Cloud
-    },
-    {
+    }, {
       name: 'Docker',
       description: 'Containerization platform',
       icon: Server
-    },
-    {
+    }, {
       name: 'Kubernetes',
       description: 'Container orchestration',
       icon: Settings
-    },
-    {
+    }, {
       name: 'Terraform',
       description: 'Infrastructure as Code',
       icon: GitBranch
-    },
-    {
+    }, {
       name: 'Jenkins',
       description: 'CI/CD automation',
       icon: Zap
@@ -91,10 +83,7 @@ const CloudDevOps = () => {
   ];
 
   const stats = [
-    { number: '99.9%', label: 'Uptime', description: 'Reliable infrastructure' },
-    { number: '50%', label: 'Cost Reduction', description: 'Average savings' },
-    { number: '10x', label: 'Faster Deployment', description: 'Improved efficiency' },
-    { number: '24/7', label: 'Support', description: 'Round-the-clock monitoring' }
+    { number: '99.9%', label: 'Uptime', description: 'Reliable infrastructure' }, { number: '50%', label: 'Cost Reduction', description: 'Average savings' }, { number: '10x', label: 'Faster Deployment', description: 'Improved efficiency' }, { number: '24/7', label: 'Support', description: 'Round-the-clock monitoring' }
   ];
 
   return (
@@ -306,7 +295,6 @@ const CloudDevOps = () => {
       
       <Footer />
     </>
-  );
-};
+  )};
 
 export default CloudDevOps;

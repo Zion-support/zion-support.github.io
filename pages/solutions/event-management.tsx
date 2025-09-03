@@ -24,28 +24,23 @@ export default function EventManagement() {
       icon: Users,
       title: 'Event Registration',
       description: 'Streamlined registration process with custom forms and automated confirmations.'
-    },
-    {
+    }, {
       icon: Ticket,
       title: 'Ticketing System',
       description: 'Sell tickets online with secure payment processing and digital ticket delivery.'
-    },
-    {
+    }, {
       icon: Users,
       title: 'Attendee Management',
       description: 'Track attendees, manage check-ins, and handle special requirements.'
-    },
-    {
+    }, {
       icon: BarChart3,
       title: 'Analytics & Reporting',
       description: 'Comprehensive analytics on attendance, engagement, and event performance.'
-    },
-    {
+    }, {
       icon: Globe,
       title: 'Multi-platform Support',
       description: 'Manage events across web, mobile, and social media platforms.'
-    },
-    {
+    }, {
       icon: Mail,
       title: 'Communication Tools',
       description: 'Send updates, reminders, and follow-ups to attendees automatically.'

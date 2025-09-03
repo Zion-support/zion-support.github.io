@@ -8,28 +8,23 @@ const AISEOOptimization: NextPage = () => {
       title: 'Content Analysis',
       description: 'AI-powered analysis of your content for SEO optimization opportunities.',
       icon: '🔍'
-    },
-    {
+    }, {
       title: 'Keyword Research',
       description: 'Advanced keyword research and competitor analysis using AI algorithms.',
       icon: '🎯'
-    },
-    {
+    }, {
       title: 'On-Page Optimization',
       description: 'Automated suggestions for title tags, meta descriptions, and content structure.',
       icon: '📝'
-    },
-    {
+    }, {
       title: 'Technical SEO',
       description: 'Comprehensive technical SEO audits and optimization recommendations.',
       icon: '⚙️'
-    },
-    {
+    }, {
       title: 'Content Generation',
       description: 'AI-generated SEO-optimized content that ranks well in search engines.',
       icon: '✍️'
-    },
-    {
+    }, {
       title: 'Performance Tracking',
       description: 'Real-time tracking of SEO performance with actionable insights.',
       icon: '📊'
@@ -60,8 +55,7 @@ const AISEOOptimization: NextPage = () => {
         'Basic content suggestions'
       ],
       popular: false
-    },
-    {
+    }, {
       name: 'Professional',
       price: '$499',
       period: '/month',
@@ -76,8 +70,7 @@ const AISEOOptimization: NextPage = () => {
         'Competitor analysis'
       ],
       popular: true
-    },
-    {
+    }, {
       name: 'Enterprise',
       price: '$1,299',
       period: '/month',
@@ -258,7 +251,6 @@ const AISEOOptimization: NextPage = () => {
         </div>
       </section>
     </Layout>
-  );
-};
+  )};
 
 export default AISEOOptimization;

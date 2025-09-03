@@ -11,5 +11,4 @@ export default function EnhancedLayout.test() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

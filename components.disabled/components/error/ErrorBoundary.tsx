@@ -1,80 +1,65 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+import React { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
-}
+  onError?: (error: Error, errorInfo: ErrorInfo) => void}
 
 interface State {
   hasError: boolean;
   error?: Error;
-  errorInfo?: ErrorInfo;
-}
+  errorInfo?: ErrorInfo}
 
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.state = { hasError: false };
-  }
+    this.state = { hasError: false }}
 
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
-  }
+    return { hasError: true, error }}
 
   override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
-      errorInfo,
-    });
+      errorInfo });
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('ErrorBoundary caught an error: ', error, errorInfo);
-    }
+      console.error('ErrorBoundary caught an error: ', error, errorInfo)}
 
     // Call custom error handler if provided
     this.props.onError?.(error, errorInfo);
 
     // Send error to monitoring service in production
     if (process.env.NODE_ENV === 'production') {
-      this.logErrorToService(error, errorInfo);
-    }
+      this.logErrorToService(error, errorInfo)}
   }
 
   private logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
     // Send to error monitoring service (Sentry, LogRocket, etc.)
-    fetch('/api/analytics/error', {
+    fetch('/api/analytics/error' {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json',
-      },
+        'Content-Type': 'application/json' },
       body: JSON.stringify({
         error: {
           message: error.message,
           stack: error.stack,
-          name: error.name,
-        },
+          name: error.name },
         errorInfo: {
-          componentStack: errorInfo.componentStack,
-        },
+          componentStack: errorInfo.componentStack },
         url: window.location.href,
         timestamp: Date.now(),
-        userAgent: navigator.userAgent,
-      }),
-    }).catch(console.error);
-  };
+        userAgent: navigator.userAgent }) }).catch(console.error)};
 
   private handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
-  };
+    this.setState({ hasError: false, error: undefined, errorInfo: undefined })};
 
   override render() {
     if (this.state.hasError) {
       // Custom fallback UI
       if (this.props.fallback) {
-        return this.props.fallback;
-      }
+        return this.props.fallback}
 
       // Default error UI
       return (
@@ -134,11 +119,9 @@ class ErrorBoundary extends Component<Props, State> {
             )}
           </div>
         </div>
-      );
-    }
+      )}
 
-    return this.props.children;
-  }
+    return this.props.children}
 }
 
 export default ErrorBoundary;

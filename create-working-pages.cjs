@@ -5,12 +5,10 @@ const path = require('path');
 
 class WorkingPagesCreator {
   constructor() {
-    this.projectRoot = process.cwd();
-  }
+    this.projectRoot = process.cwd()}
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
-  }
+    console.log(`[${new Date().toISOString()}] ${message}`)}
 
   createWorkingPricingGuide() {
     const filePath = path.join(this.projectRoot, 'pages/pricing-guide.tsx');
@@ -26,16 +24,13 @@ export default function PricingGuide() {
     {
       question: 'Can I change my plan at any time?', 
       answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we\'ll prorate any billing differences.'
-    },
-    {
+    }, {
       question: 'Is there a free trial available?', 
       answer: 'Yes, we offer a 14-day free trial for all plans. No credit card required to start your trial.'
-    },
-    {
+    }, {
       question: 'What payment methods do you accept?',
       answer: 'We accept all major credit cards, PayPal, and bank transfers for annual subscriptions.'
-    },
-    {
+    }, {
       question: 'Do you offer discounts for annual subscriptions?',
       answer: 'Yes, we offer up to 20% discount for annual subscriptions compared to monthly billing.'
     }
@@ -51,8 +46,7 @@ export default function PricingGuide() {
         'Custom applications: 8-16 weeks',
         'Enterprise solutions: 16+ weeks'
       ]
-    },
-    {
+    }, {
       factor: 'Team Size',
       description: 'The number of developers and specialists needed for your project.',
       details: [
@@ -61,8 +55,7 @@ export default function PricingGuide() {
         'Medium team (4-6): $125-175/hour',
         'Large team (7+): $150-200/hour'
       ]
-    },
-    {
+    }, {
       factor: 'Technology Stack',
       description: 'The technologies and frameworks used in your project.',
       details: [
@@ -235,13 +228,11 @@ export default function PricingGuide() {
         </div>
       </section>
     </Layout>
-  );
-}`;
+  )}`;
 
     fs.writeFileSync(filePath, content, 'utf8');
     this.log('✅ Created working pricing-guide.tsx');
-    return true;
-  }
+    return true}
 
   createWorkingSitemap() {
     const filePath = path.join(this.projectRoot, 'pages/sitemap.tsx');
@@ -258,37 +249,22 @@ export default function SitemapPage() {
     {
       title: 'Main Pages',
       links: [
-        { name: 'Home', url: '/', description: 'Main landing page' },
-        { name: 'About', url: '/about', description: 'Learn about our company' },
-        { name: 'Services', url: '/services', description: 'Our technology services' },
-        { name: 'Contact', url: '/contact', description: 'Get in touch with us' }
+        { name: 'Home', url: '/', description: 'Main landing page' }, { name: 'About', url: '/about', description: 'Learn about our company' }, { name: 'Services', url: '/services', description: 'Our technology services' }, { name: 'Contact', url: '/contact', description: 'Get in touch with us' }
       ]
-    },
-    {
+    }, {
       title: 'Services',
       links: [
-        { name: 'AI Development', url: '/ai-services', description: 'Artificial Intelligence solutions' },
-        { name: 'Web Development', url: '/web-development', description: 'Custom web applications' },
-        { name: 'Cloud Services', url: '/cloud-services', description: 'Cloud infrastructure and migration' },
-        { name: 'Mobile Development', url: '/mobile-development', description: 'iOS and Android apps' }
+        { name: 'AI Development', url: '/ai-services', description: 'Artificial Intelligence solutions' }, { name: 'Web Development', url: '/web-development', description: 'Custom web applications' }, { name: 'Cloud Services', url: '/cloud-services', description: 'Cloud infrastructure and migration' }, { name: 'Mobile Development', url: '/mobile-development', description: 'iOS and Android apps' }
       ]
-    },
-    {
+    }, {
       title: 'Resources',
       links: [
-        { name: 'Blog', url: '/blog', description: 'Technology insights and updates' },
-        { name: 'Case Studies', url: '/case-studies', description: 'Success stories and examples' },
-        { name: 'Documentation', url: '/docs', description: 'Technical documentation' },
-        { name: 'Support', url: '/support', description: 'Help and support center' }
+        { name: 'Blog', url: '/blog', description: 'Technology insights and updates' }, { name: 'Case Studies', url: '/case-studies', description: 'Success stories and examples' }, { name: 'Documentation', url: '/docs', description: 'Technical documentation' }, { name: 'Support', url: '/support', description: 'Help and support center' }
       ]
-    },
-    {
+    }, {
       title: 'Company',
       links: [
-        { name: 'Careers', url: '/careers', description: 'Join our team' },
-        { name: 'Privacy Policy', url: '/privacy', description: 'Privacy and data protection' },
-        { name: 'Terms of Service', url: '/terms', description: 'Terms and conditions' },
-        { name: 'Sitemap', url: '/sitemap', description: 'Complete site navigation' }
+        { name: 'Careers', url: '/careers', description: 'Join our team' }, { name: 'Privacy Policy', url: '/privacy', description: 'Privacy and data protection' }, { name: 'Terms of Service', url: '/terms', description: 'Terms and conditions' }, { name: 'Sitemap', url: '/sitemap', description: 'Complete site navigation' }
       ]
     }
   ];
@@ -364,13 +340,11 @@ export default function SitemapPage() {
         </div>
       </section>
     </Layout>
-  );
-}`;
+  )}`;
 
     fs.writeFileSync(filePath, content, 'utf8');
     this.log('✅ Created working sitemap.tsx');
-    return true;
-  }
+    return true}
 
   async createWorkingPages() {
     this.log('🔧 Creating working pages...');
@@ -381,8 +355,7 @@ export default function SitemapPage() {
     if (this.createWorkingSitemap()) createdCount++;
 
     this.log(`🎉 Created ${createdCount} working pages!`);
-    return createdCount > 0;
-  }
+    return createdCount > 0}
 }
 
 // Run the creator
@@ -392,13 +365,10 @@ creator
   .then(success => {
     if (success) {
       console.log('✅ Working pages created successfully!');
-      process.exit(0);
-    } else {
+      process.exit(0)} else {
       console.log('❌ No pages were created.');
-      process.exit(0);
-    }
+      process.exit(0)}
   })
   .catch(error => {
     console.error('❌ Fatal error:', error);
-    process.exit(1);
-  });
+    process.exit(1)});

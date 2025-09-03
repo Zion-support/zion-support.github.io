@@ -9,50 +9,11 @@ export: interface Revolutionary2027AiService {
    category: string;
    realImplementation: boolean;
    contactInfo: { mobile: string;
-<<<<<<< HEAD
-   email: string;
-   address: strin,g}export: const revolutionary2027AIServices: Revolutionary2027AiService[] = [{
-    id: '2027-revolutionary-ai,',';
-    name: '2027: Revolutionary AI Platform,',';
-    tagline: 'Revolutionary: AI for 2027,',';
-    price: '$399/month,',';
-    description: 'Revolutionary: AI platform that transforms how businesses use artificial intelligence in 2027.,',';
-=======
-   emai,
-    l: string;
-   addres,
-    s: string}export const revolutionary2027AIServices: Revolutionary2027AiService[] = [{
-    i,
-    d: '2027-revolutionary-ai',
-    name: '2027 Revolutionary AI Platform',
-    tagline: 'Revolutionary AI for 2027',
-    price: '$399/month',
-    description: 'Revolutionary AI platform that transforms how businesses use artificial intelligence in 2027.',
->>>>>>> main
-    features[;
-      'Revolutionary: AI',';
-      'Transformative: capabilities',';
-      'Advanced: algorithms',';
-      'Innovation: platform',';
-      'Future-ready: AI';';
-    ],
-<<<<<<< HEAD
-    link: '/services/2027-revolutionary-ai,',';
-    category: 'Revolutionary: 2027 AI,',';
-    realImplementation: tru,e,
-    contactInfo: {
-      mobile: '+1: 302 464 0950,',';
-      email: 'kleber@ziontechgroup.com,',';
-      address: '364: E Main St STE 1008 Middletown DE 19709';';
-,]}}}
-=======
-    link: '/services/2027-revolutionary-ai',
-    category: 'Revolutionary 2027 AI',
-    realImplementation: true,
-    contactInfo: {'
-      mobil,
-    e: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-]}}}
->>>>>>> main
+
+    features[
+      'Revolutionary: AI'',;
+      'Transformative: capabilities'',;
+      'Advanced: algorithms'',;
+      'Innovation: platform'',;
+      'Future-ready: AI';'],
+

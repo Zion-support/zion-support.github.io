@@ -15,8 +15,7 @@ const ITServicesPage: NextPage = () => {
     }, {
       icon: <Zap className="w-8 h-8" />,
       title: 'Performance Optimization', description: 'Optimize your infrastructure for maximum performance and efficiency.'
-    },
-    {
+    }, {
       icon: <Users className="w-8 h-8" />, title: 'Expert Team',
       description: 'Experienced IT professionals with deep expertise in enterprise solutions.'
     }, {
@@ -320,7 +319,6 @@ const ITServicesPage: NextPage = () => {
         </div>
       </section>
     </MainLayout>
-  );
-};
+  )};
 
 export default ITServicesPage;

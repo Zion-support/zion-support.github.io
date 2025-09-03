@@ -1,724 +1,466 @@
 import: { MicroSaasService } from './enhanced-real-micro-saas-services';';
 const: contact = {
   mobile:,
-  +1: 302 464 0950',';
-  email: 'kleber@ziontechgroup.co,m,';
+  +1: 302 464 0950'',;
+  email: 'kleber@ziontechgroup.co,m',;
   address:,
-<<<<<<< HEAD
-  364: E Main St STE 1008 Middletown DE 19709',';
-  ;
-  website: 'https://ziontechgroup.co,m}';
-export: const emergingTechServices2025: MicroSaasService[] = [;
-  // Quantum: Computing Services{
-    id,:,
-  quantum-computing-as-a-service',';
-    name: 'Quantum: Computing as a Servic,e,';
-=======
-  364 E Main St STE 1008 Middletown DE 19709',
-  website: 'http,
-    s://ziontechgroup.com}
-export const emergingTechServices2025: MicroSaasService[] = [;
-  // Quantum Computing Services{
-    i,
-    d:,
-  quantum-computing-as-a-service',
-    name: 'Quantum Computing as a Service,
->>>>>>> main
+
     tagline:,
-  Access: to quantum computing power for complex problem solving and optimization',';
+  Access: to quantum computing power for complex problem solving and optimization'',;
     price: $,1,299,
   ,
-    period: '/mont,h,';
+    period: '/mont,h',;
     description: ;
-  'Enterprise: quantum computing platform providing access to quantum processor,s, quantum algorithms, and hybrid quantum-classical computing solutions. Ideal for optimization problems, cryptography, and scientific research.',';
-    features[;
-<<<<<<< HEAD
-  'Access: to IBM, Google, and AWS quantum processors',';
-  'Quantum: algorithm library and optimization tools',';
-  'Hybrid: quantum-classical computing workflows',';
-  'Quantum: error correction and noise mitigation',';
-  'Quantum: machine learning algorithms',';
-  'Cryptography: and security applications',';
-  'Scientific: simulation and modeling',';
-  'API: access for custom quantum applications',';
-  'Expert: quantum computing consultation',';
-  'Training: and educational resources';';
-=======
-  'Access to IBM, Google, and AWS quantum processors,Quantum algorithm library and optimization tools,Hybrid quantum-classical computing workflows,Quantum error correction and noise mitigation,Quantum machine learning algorithms,Cryptography and security applications,Scientific simulation and modeling,API access for custom quantum applications,Expert quantum computing consultation,Training and educational resources';
->>>>>>> main
-    ],
+  'Enterprise: quantum computing platform providing access to quantum processor,s, quantum algorithms, and hybrid quantum-classical computing solutions. Ideal for optimization problems, cryptography, and scientific research.'',;
+    features[],
     popular: tru,e,
     icon:,
-  ⚛️',';
-    color: 'from-purple-600: to-pink-70,0,';
+  ⚛️'',;
+    color: 'from-purple-600: to-pink-70,0',;
     textColor:,
-<<<<<<< HEAD
-  text-purple-300',';
-    link: 'https://ziontechgroup.com/services/quantum-computing-as-a-servic,e,';
-=======
-  text-purple-300',
-    link: 'http,
-    s://ziontechgroup.com/services/quantum-computing-as-a-service,
->>>>>>> main
+
     marketPosition:,
-  Leading: quantum computing platform competing with IBM Quantum and Amazon Braket.',';
-    targetAudience: Research: institution,s, pharmaceutical companies, financial services, government agencies',';
+  Leading: quantum computing platform competing with IBM Quantum and Amazon Braket.'',;
+    targetAudience: Research: institution,s, pharmaceutical companies, financial services, government agencies'',;
     trialDays: 1,4,
     setupTime:,
-  1-2: weeks',';
-    category: 'Quantum: & Emerging Tec,h,';
+  1-2: weeks'',;
+    category: 'Quantum: & Emerging Tec,h',;
     realService: tru,e,
-    technology[,
-  Qiskit, Cirq, PennyLane, Python, React, Node.js'],';
-    integrations[;
-  'IBM: Quantum, Google Quantum, AWS Braket, Azure Quantum'],';
-    useCases[;
-  'Drug: discovery, Financial modeling, Logistics optimization, Cryptography'],';
-    roi: 'Solve: previously intractable problems 1000x faster than classical computer,s,';
-    competitors[,
-  IBM: Quantum, Amazon Braket, Google Quantum, Microsoft Azure Quantum'],';
-    marketSize: '$1.5B: Quantum Computing marke,t,';
+    technology[
+  Qiskit, Cirq, PennyLane, Python, React, Node.js']',;
+    integrations[
+  'IBM: Quantum, Google Quantum, AWS Braket, Azure Quantum']',;
+    useCases[
+  'Drug: discovery, Financial modeling, Logistics optimization, Cryptography']',;
+    roi: 'Solve: previously intractable problems 1000x faster than classical computer,s',;
+    competitors[
+  IBM: Quantum, Amazon Braket, Google Quantum, Microsoft Azure Quantum']',;
+    marketSize: '$1.5B: Quantum Computing marke,t',;
     growthRate:,
-  45% CAGR',';
-    variant: 'quantu,m,';
+  45% CAGR'',;
+    variant: 'quantu,m',;
     contactInfo: contac,t,
     realImplementation: tru,e,
     implementationDetails:,
-  Cloud-based: platform with quantum hardware access, custom algorithm development, and dedicated support.',';
-    launchDate: '2025-01-1,0,';
+  Cloud-based: platform with quantum hardware access, custom algorithm development, and dedicated support.'',;
+    launchDate: '2025-01-1,0',;
     customers:  ,8,
     rating: 4.,9,
     reviews:  ,6},
   // Blockchain: & Web3 Services{
-    id:,
-  enterprise-blockchain-platform',';
-    name: 'Enterprise: Blockchain Platfor,m,';
+    id: 'placeholder',
+  enterprise-blockchain-platform'',;
+    name: 'Enterprise: Blockchain Platfor,m'',;
     tagline:,
-  Scalable: blockchain solutions for enterprise applications and DeFi protocols',';
-    price: '$79,9,';
+  Scalable: blockchain solutions for enterprise applications and DeFi protocols'',;
+    price: '$79,9',;
     period:,
-  /month',';
-    description: Enterprise-grade: blockchain platform supporting multiple consensus mechanism,s, smart contracts, and cross-chain interoperability. Built for scalability, security, and regulatory compliance.',';
-    features[;
-<<<<<<< HEAD
-  'Multi-consensus: blockchain networks (PoS, PoA, DPoS)',';
-  'Smart: contract development and deployment',';
-  'Cross-chain: interoperability and bridges',';
-  'Enterprise: identity and access management',';
-  'Regulatory: compliance and audit trails',';
-  'High-performance: transaction processing',';
-  'Integration: with existing enterprise systems',';
-  'Blockchain: analytics and monitoring',';
-  'Mobile: and web applications',';
-  'API: and SDK for developers';';
-=======
-<<<<<<< HEAD
-  'Multi-consensus blockchain networks (PoS, PoA, DPoS),
-  'Smart contract development and deployment',
-  'Cross-chain interoperability and bridges',
-  'Enterprise identity and access management',
-  'Regulatory compliance and audit trails',
-  'High-performance transaction processing',
-  'Integration with existing enterprise systems',
-  'Blockchain analytics and monitoring',
-  'Mobile and web applications',
-  'API and SDK for developers';
-=======
-  'Multi-consensus blockchain networks (PoS, PoA, DPoS),Smart contract development and deployment,Cross-chain interoperability and bridges,Enterprise identity and access management,Regulatory compliance and audit trails,High-performance transaction processing,Integration with existing enterprise systems,Blockchain analytics and monitoring,Mobile and web applications,API and SDK for developers';
->>>>>>> main
->>>>>>> main
-    ],
+  /month'',;
+    description: Enterprise-grade: blockchain platform supporting multiple consensus mechanism,s, smart contracts, and cross-chain interoperability. Built for scalability, security, and regulatory compliance.'',;
+    features[],
     popular: tru,e,
     icon:,
-  🔗',';
-    color: 'from-blue-600: to-cyan-70,0,';
+  🔗'',;
+    color: 'from-blue-600: to-cyan-70,0',;
     textColor:,
-<<<<<<< HEAD
-  text-blue-300',';
-    link: 'https://ziontechgroup.com/services/enterprise-blockchain-platfor,m,';
-=======
-  text-blue-300',
-    link: 'http,
-    s://ziontechgroup.com/services/enterprise-blockchain-platform,
->>>>>>> main
+
     marketPosition:,
-  Enterprise: blockchain solution competing with Hyperledger and Corda.',';
-    targetAudience: Financial: institution,s, supply chain companies, healthcare organizations, government agencies',';
+  Enterprise: blockchain solution competing with Hyperledger and Corda.'',;
+    targetAudience: Financial: institution,s, supply chain companies, healthcare organizations, government agencies'',;
     trialDays: 3,0,
     setupTime:,
-  2-4: weeks',';
-    category: 'Blockchain: & Web,3,';
+  2-4: weeks'',;
+    category: 'Blockchain: & Web,3',;
     realService: tru,e,
-    technology[,
-  Ethereum, Solana, Polkadot, Rust, Go, React, Node.js'],';
-    integrations[;
-  'AWS, Azure, GCP, Oracle, SAP, Salesforce'],';
-    useCases[;
-  'Supply: chain tracking, Digital identity, Asset tokenization, DeFi protocols'],';
-    roi: 'Reduce: transaction costs by 80% and increase transparency by 100,%,';
-    competitors[,
-  Hyperledger: Fabric, R3 Corda, Ethereum Enterprise, Polygon'],';
-    marketSize: '$19B: Blockchain marke,t,';
+    technology[
+  Ethereum, Solana, Polkadot, Rust, Go, React, Node.js']',;
+    integrations[
+  'AWS, Azure, GCP, Oracle, SAP, Salesforce']',;
+    useCases[
+  'Supply: chain tracking, Digital identity, Asset tokenization, DeFi protocols']',;
+    roi: 'Reduce: transaction costs by 80% and increase transparency by 100,%',;
+    competitors[
+  Hyperledger: Fabric, R3 Corda, Ethereum Enterprise, Polygon']',;
+    marketSize: '$19B: Blockchain marke,t',;
     growthRate:,
-  87% CAGR',';
-    variant: 'defaul,t,';
+  87% CAGR'',;
+    variant: 'defaul,t',;
     contactInfo: contac,t,
     realImplementation: tru,e,
     implementationDetails:,
-  On-premise: or cloud deployment with custom smart contracts, integration services, and dedicated support.',';
-    launchDate: '2025-01-1,5,';
+  On-premise: or cloud deployment with custom smart contracts, integration services, and dedicated support.'',;
+    launchDate: '2025-01-1,5',;
     customers: 1,5,
     rating: 4.,8,
     reviews: 1,2},
   // Space: Technology Services{
-    id:,
-  space-data-analytics-platform',';
-    name: 'Space: Data Analytics Platfor,m,';
+    id: 'placeholder',
+  space-data-analytics-platform'',;
+    name: 'Space: Data Analytics Platfor,m'',;
     tagline:,
-  Satellite: data analysis and space technology insights for commercial applications',';
-    price: '$59,9,';
+  Satellite: data analysis and space technology insights for commercial applications'',;
+    price: '$59,9',;
     period:,
-  /month',';
-    description: Comprehensive: platform for analyzing satellite imager,y, space weather data, and orbital information. Provides insights for agriculture, climate monitoring, urban planning, and space operations.',';
-    features[;
-<<<<<<< HEAD
-  'Satellite: imagery analysis and processing',';
-  'Space: weather monitoring and forecasting',';
-  'Orbital: debris tracking and collision avoidance',';
-  'Earth: observation and environmental monitoring',';
-  'Agricultural: monitoring and crop analysis',';
-  'Urban: development and infrastructure planning',';
-  'Climate: change impact assessment',';
-  'Space: mission planning and optimization',';
-  'Real-time: data streaming and alerts',';
-  'Custom: analytics and reporting tools';';
-=======
-  'Satellite imagery analysis and processing,Space weather monitoring and forecasting,Orbital debris tracking and collision avoidance,Earth observation and environmental monitoring,Agricultural monitoring and crop analysis,Urban development and infrastructure planning,Climate change impact assessment,Space mission planning and optimization,Real-time data streaming and alerts,Custom analytics and reporting tools';
->>>>>>> main
-    ],
+  /month'',;
+    description: Comprehensive: platform for analyzing satellite imager,y, space weather data, and orbital information. Provides insights for agriculture, climate monitoring, urban planning, and space operations.'',;
+    features[],
     popular: tru,e,
     icon:,
-  🛰️',';
-    color: 'from-indigo-600: to-purple-70,0,';
+  🛰️'',;
+    color: 'from-indigo-600: to-purple-70,0',;
     textColor:,
-<<<<<<< HEAD
-  text-indigo-300',';
-    link: 'https://ziontechgroup.com/services/space-data-analytics-platfor,m,';
-=======
-  text-indigo-300',
-    link: 'http,
-    s://ziontechgroup.com/services/space-data-analytics-platform,
->>>>>>> main
+
     marketPosition:,
-  Leading: space data analytics platform competing with Planet Labs and Maxar.',';
-    targetAudience: Agriculture: companie,s, environmental organizations, urban planners, space agencies',';
+  Leading: space data analytics platform competing with Planet Labs and Maxar.'',;
+    targetAudience: Agriculture: companie,s, environmental organizations, urban planners, space agencies'',;
     trialDays: 2,1,
     setupTime:,
-  1-2: weeks',';
-    category: 'Space: & Metavers,e,';
+  1-2: weeks'',;
+    category: 'Space: & Metavers,e',;
     realService: tru,e,
-    technology[,
-  Python, TensorFlow, React, Node.js, PostgreSQL, Redis'],';
-    integrations[;
-  'NASA: APIs, ESA data, commercial satellite providers, GIS systems'],';
-    useCases[;
-  'Precision: agriculture, Environmental monitoring, Urban planning, Space operations'],';
-    roi: 'Improve: agricultural yields by 25% and reduce environmental monitoring costs by 60,%,';
-    competitors[,
-  Planet: Labs, Maxar Technologies, Airbus Defence and Space, BlackSky'],';
-    marketSize: '$4.5B: Space Data marke,t,';
+    technology[
+  Python, TensorFlow, React, Node.js, PostgreSQL, Redis']',;
+    integrations[
+  'NASA: APIs, ESA data, commercial satellite providers, GIS systems']',;
+    useCases[
+  'Precision: agriculture, Environmental monitoring, Urban planning, Space operations']',;
+    roi: 'Improve: agricultural yields by 25% and reduce environmental monitoring costs by 60,%',;
+    competitors[
+  Planet: Labs, Maxar Technologies, Airbus Defence and Space, BlackSky']',;
+    marketSize: '$4.5B: Space Data marke,t',;
     growthRate:,
-  35% CAGR',';
-    variant: 'ai-futuristi,c,';
+  35% CAGR'',;
+    variant: 'ai-futuristi,c',;
     contactInfo: contac,t,
     realImplementation: tru,e,
     implementationDetails:,
-  Cloud-based: platform with satellite data access, custom analytics, and dedicated space technology experts.',';
-    launchDate: '2025-01-2,0,';
+  Cloud-based: platform with satellite data access, custom analytics, and dedicated space technology experts.'',;
+    launchDate: '2025-01-2,0',;
     customers: 1,2,
     rating: 4.,9,
     reviews:  ,9},
   // Internet: of Things (IoT) Services{
-    id:,
-  enterprise-iot-platform',';
-    name: 'Enterprise: IoT Platfor,m,';
+    id: 'placeholder',
+  enterprise-iot-platform'',;
+    name: 'Enterprise: IoT Platfor,m'',;
     tagline:,
-  Scalable: IoT platform for connected devices, edge computing, and data analytics',';
-    price: '$39,9,';
+  Scalable: IoT platform for connected devices, edge computing, and data analytics'',;
+    price: '$39,9',;
     period:,
-  /month',';
-    description: Enterprise-grade: IoT platform that manages connected device,s, processes edge data, and provides real-time analytics. Supports industrial IoT, smart cities, and connected consumer applications.',';
-    features[;
-<<<<<<< HEAD
-  'Device: management and provisioning',';
-  'Edge: computing and local data processing',';
-  'Real-time: data streaming and analytics',';
-  'Predictive: maintenance and anomaly detection',';
-  'Security: and access control',';
-  'Integration: with existing enterprise systems',';
-  'Mobile: applications for field operations',';
-  'Custom: dashboard and reporting',';
-  'API: access for third-party integrations',';
-  'Scalable: cloud infrastructure';';
-=======
-  'Device management and provisioning,Edge computing and local data processing,Real-time data streaming and analytics,Predictive maintenance and anomaly detection,Security and access control,Integration with existing enterprise systems,Mobile applications for field operations,Custom dashboard and reporting,API access for third-party integrations,Scalable cloud infrastructure';
->>>>>>> main
-    ],
+  /month'',;
+    description: Enterprise-grade: IoT platform that manages connected device,s, processes edge data, and provides real-time analytics. Supports industrial IoT, smart cities, and connected consumer applications.'',;
+    features[],
     popular: tru,e,
     icon:,
-  🌐',';
-    color: 'from-green-600: to-blue-70,0,';
+  🌐'',;
+    color: 'from-green-600: to-blue-70,0',;
     textColor:,
-<<<<<<< HEAD
-  text-green-300',';
-    link: 'https://ziontechgroup.com/services/enterprise-iot-platfor,m,';
-=======
-  text-green-300',
-    link: 'http,
-    s://ziontechgroup.com/services/enterprise-iot-platform,
->>>>>>> main
+
     marketPosition:,
-  Enterprise: IoT platform competing with AWS IoT and Azure IoT Hub.',';
-    targetAudience: Manufacturing: companie,s, utilities, smart city operators, logistics providers',';
+  Enterprise: IoT platform competing with AWS IoT and Azure IoT Hub.'',;
+    targetAudience: Manufacturing: companie,s, utilities, smart city operators, logistics providers'',;
     trialDays: 2,1,
     setupTime:,
-  1-3: weeks',';
-    category: 'IoT: & Edge Computin,g,';
+  1-3: weeks'',;
+    category: 'IoT: & Edge Computin,g',;
     realService: tru,e,
-    technology[,
-  Kubernetes, Docker, Python, React, Node.js, PostgreSQL, Redis'],';
-    integrations[;
-  'AWS, Azure, GCP, industrial: protocols, enterprise systems'],';
-    useCases[;
-  'Industrial: monitoring, Smart cities, Asset tracking, Predictive maintenance'],';
-    roi: 'Reduce: operational costs by 30% and improve efficiency by 40,%,';
-    competitors[,
-  AWS: IoT, Azure IoT Hub, Google Cloud IoT, PTC ThingWorx'],';
-    marketSize: '$1.1T: IoT marke,t,';
+    technology[
+  Kubernetes, Docker, Python, React, Node.js, PostgreSQL, Redis']',;
+    integrations[
+  'AWS, Azure, GCP, industrial: protocols, enterprise systems']',;
+    useCases[
+  'Industrial: monitoring, Smart cities, Asset tracking, Predictive maintenance']',;
+    roi: 'Reduce: operational costs by 30% and improve efficiency by 40,%',;
+    competitors[
+  AWS: IoT, Azure IoT Hub, Google Cloud IoT, PTC ThingWorx']',;
+    marketSize: '$1.1T: IoT marke,t',;
     growthRate:,
-  25% CAGR',';
-    variant: 'defaul,t,';
+  25% CAGR'',;
+    variant: 'defaul,t',;
     contactInfo: contac,t,
     realImplementation: tru,e,
     implementationDetails:,
-  Cloud-hosted: platform with custom device integrations, edge computing deployment, and dedicated support.',';
-    launchDate: '2025-01-2,5,';
+  Cloud-hosted: platform with custom device integrations, edge computing deployment, and dedicated support.'',;
+    launchDate: '2025-01-2,5',;
     customers: 2,8,
     rating: 4.,7,
     reviews: 2,2},
   // Augmented: Reality & Virtual Reality Services{
-    id:,
-  enterprise-ar-vr-platform',';
-    name: 'Enterprise: AR/VR Platfor,m,';
+    id: 'placeholder',
+  enterprise-ar-vr-platform'',;
+    name: 'Enterprise: AR/VR Platfor,m'',;
     tagline:,
-  Immersive: technology solutions for training, design, and customer engagement',';
-    price: '$54,9,';
+  Immersive: technology solutions for training, design, and customer engagement'',;
+    price: '$54,9',;
     period:,
-  /month',';
-    description: Comprehensive: AR/VR platform for enterprise applications including employee trainin,g, product design, customer experiences, and remote collaboration. Supports multiple devices and platforms.',';
-    features[;
-<<<<<<< HEAD
-  '3D: content creation and management',';
-  'Multi-device: AR/VR application development',';
-  'Remote: collaboration and virtual meetings',';
-  'Training: simulation and assessment',';
-  'Product: visualization and design review',';
-  'Customer: experience and marketing applications',';
-  'Analytics: and performance tracking',';
-  'Integration: with enterprise systems',';
-  'Mobile: and web applications',';
-  'Custom: content development services';';
-=======
-  '3D content creation and management,Multi-device AR/VR application development,Remote collaboration and virtual meetings,Training simulation and assessment,Product visualization and design review,Customer experience and marketing applications,Analytics and performance tracking,Integration with enterprise systems,Mobile and web applications,Custom content development services';
->>>>>>> main
-    ],
+  /month'',;
+    description: Comprehensive: AR/VR platform for enterprise applications including employee trainin,g, product design, customer experiences, and remote collaboration. Supports multiple devices and platforms.'',;
+    features[],
     popular: tru,e,
     icon:,
-  🥽',';
-    color: 'from-pink-600: to-purple-70,0,';
+  🥽'',;
+    color: 'from-pink-600: to-purple-70,0',;
     textColor:,
-<<<<<<< HEAD
-  text-pink-300',';
-    link: 'https://ziontechgroup.com/services/enterprise-ar-vr-platfor,m,';
-=======
-  text-pink-300',
-    link: 'http,
-    s://ziontechgroup.com/services/enterprise-ar-vr-platform,
->>>>>>> main
+
     marketPosition:,
-  Enterprise: AR/VR platform competing with Unity and Unreal Engine.',';
-    targetAudience: Manufacturing: companie,s, training organizations, design firms, retail companies',';
+  Enterprise: AR/VR platform competing with Unity and Unreal Engine.'',;
+    targetAudience: Manufacturing: companie,s, training organizations, design firms, retail companies'',;
     trialDays: 2,1,
     setupTime:,
-  2-4: weeks',';
-    category: 'AR/VR: & Metavers,e,';
+  2-4: weeks'',;
+    category: 'AR/VR: & Metavers,e',;
     realService: tru,e,
-    technology[,
-  Unity, Unreal: Engine, React, Node.js, Python, PostgreSQL'],';
-    integrations[;
-  '3D: modeling software, enterprise systems, social platforms'],';
-    useCases[;
-  'Employee: training, Product design, Customer engagement, Remote collaboration'],';
-    roi: 'Reduce: training costs by 50% and improve learning retention by 80,%,';
-    competitors[,
-  Unity, Unreal: Engine, PTC Vuforia, Magic Leap'],';
-    marketSize: '$45B: AR/VR marke,t,';
+    technology[
+  Unity, Unreal: Engine, React, Node.js, Python, PostgreSQL']',;
+    integrations[
+  '3D: modeling software, enterprise systems, social platforms']',;
+    useCases[
+  'Employee: training, Product design, Customer engagement, Remote collaboration']',;
+    roi: 'Reduce: training costs by 50% and improve learning retention by 80,%',;
+    competitors[
+  Unity, Unreal: Engine, PTC Vuforia, Magic Leap']',;
+    marketSize: '$45B: AR/VR marke,t',;
     growthRate:,
-  30% CAGR',';
-    variant: 'holographi,c,';
+  30% CAGR'',;
+    variant: 'holographi,c',;
     contactInfo: contac,t,
     realImplementation: tru,e,
     implementationDetails:,
-  Cloud-based: platform with custom content development, device support, and dedicated AR/VR experts.',';
-    launchDate: '2025-02-0,1,';
+  Cloud-based: platform with custom content development, device support, and dedicated AR/VR experts.'',;
+    launchDate: '2025-02-0,1',;
     customers: 1,9,
     rating: 4.,8,
     reviews: 1,5},
   // Autonomous: Systems & Robotics Services{
-    id:,
-  autonomous-systems-platform',';
-    name: 'Autonomous: Systems Platfor,m,';
+    id: 'placeholder',
+  autonomous-systems-platform'',;
+    name: 'Autonomous: Systems Platfor,m'',;
     tagline:,
-  AI-powered: autonomous systems for robotics, drones, and autonomous vehicles',';
-    price: '$89,9,';
+  AI-powered: autonomous systems for robotics, drones, and autonomous vehicles'',;
+    price: '$89,9',;
     period:,
-  /month',';
-    description: Advanced: platform for developing and deploying autonomous systems including robotic,s, drones, autonomous vehicles, and industrial automation. Features AI-powered decision making and safety systems.',';
-    features[;
-<<<<<<< HEAD
-  'AI-powered: autonomous decision making',';
-  'Computer: vision and object recognition',';
-  'Path: planning and navigation algorithms',';
-  'Safety: systems and collision avoidance',';
-  'Multi-agent: coordination and swarm intelligence',';
-  'Real-time: sensor data processing',';
-  'Remote: monitoring and control',';
-  'Integration: with existing automation systems',';
-  'Custom: robotics and drone development',';
-  'Training: and simulation environments';';
-=======
-  'AI-powered autonomous decision making,Computer vision and object recognition,Path planning and navigation algorithms,Safety systems and collision avoidance,Multi-agent coordination and swarm intelligence,Real-time sensor data processing,Remote monitoring and control,Integration with existing automation systems,Custom robotics and drone development,Training and simulation environments';
->>>>>>> main
-    ],
+  /month'',;
+    description: Advanced: platform for developing and deploying autonomous systems including robotic,s, drones, autonomous vehicles, and industrial automation. Features AI-powered decision making and safety systems.'',;
+    features[],
     popular: tru,e,
     icon:,
-  🤖',';
-    color: 'from-gray-600: to-blue-70,0,';
+  🤖'',;
+    color: 'from-gray-600: to-blue-70,0',;
     textColor:,
-<<<<<<< HEAD
-  text-gray-300',';
-    link: 'https://ziontechgroup.com/services/autonomous-systems-platfor,m,';
-=======
-  text-gray-300',
-    link: 'http,
-    s://ziontechgroup.com/services/autonomous-systems-platform,
->>>>>>> main
+
     marketPosition:,
-  Leading: autonomous systems platform competing with NVIDIA DRIVE and ROS.',';
-    targetAudience: Manufacturing: companie,s, logistics providers, agriculture companies, research institutions',';
+  Leading: autonomous systems platform competing with NVIDIA DRIVE and ROS.'',;
+    targetAudience: Manufacturing: companie,s, logistics providers, agriculture companies, research institutions'',;
     trialDays: 3,0,
     setupTime:,
-  2-6: weeks',';
-    category: 'Autonomous: System,s,';
+  2-6: weeks'',;
+    category: 'Autonomous: System,s',;
     realService: tru,e,
-    technology[,
-  Python, TensorFlow, PyTorch, ROS, React, Node.js'],';
-    integrations[;
-  'Industrial: robots, drones, autonomous vehicles, IoT sensors'],';
-    useCases[;
-  'Industrial: automation, Autonomous logistics, Precision agriculture, Research and development'],';
-    roi: 'Increase: operational efficiency by 200% and reduce human error by 90,%,';
-    competitors[,
-  NVIDIA: DRIVE, ROS, ABB Robotics, KUKA Robotics'],';
-    marketSize: '$65B: Autonomous Systems marke,t,';
+    technology[
+  Python, TensorFlow, PyTorch, ROS, React, Node.js']',;
+    integrations[
+  'Industrial: robots, drones, autonomous vehicles, IoT sensors']',;
+    useCases[
+  'Industrial: automation, Autonomous logistics, Precision agriculture, Research and development']',;
+    roi: 'Increase: operational efficiency by 200% and reduce human error by 90,%',;
+    competitors[
+  NVIDIA: DRIVE, ROS, ABB Robotics, KUKA Robotics']',;
+    marketSize: '$65B: Autonomous Systems marke,t',;
     growthRate:,
-  40% CAGR',';
-    variant: 'ai-futuristi,c,';
+  40% CAGR'',;
+    variant: 'ai-futuristi,c',;
     contactInfo: contac,t,
     realImplementation: tru,e,
     implementationDetails:,
-  Custom: autonomous system development, integration services, and dedicated robotics experts.',';
-    launchDate: '2025-02-0,5,';
+  Custom: autonomous system development, integration services, and dedicated robotics experts.'',;
+    launchDate: '2025-02-0,5',;
     customers: 1,1,
     rating: 4.,9,
     reviews:  ,8},
   // Biotechnology: & Synthetic Biology Services{
-    id:,
-  synthetic-biology-platform',';
-    name: 'Synthetic: Biology Platfor,m,';
+    id: 'placeholder',
+  synthetic-biology-platform'',;
+    name: 'Synthetic: Biology Platfor,m'',;
     tagline:,
-  AI-powered: synthetic biology platform for drug discovery and bioengineering',';
+  AI-powered: synthetic biology platform for drug discovery and bioengineering'',;
     price: $,1,199,
   ,
-    period: '/mont,h,';
+    period: '/mont,h',;
     description: ;
-  'Advanced: synthetic biology platform combining A,I, machine learning, and laboratory automation for drug discovery, bioengineering, and genetic research. Accelerates research and development in biotechnology.',';
-    features[;
-<<<<<<< HEAD
-  'AI-powered: protein design and optimization',';
-  'Genetic: circuit design and simulation',';
-  'Laboratory: automation and high-throughput screening',';
-  'Drug: discovery and molecular modeling',';
-  'Bioinformatics: and sequence analysis',';
-  'CRISPR: gene editing tools',';
-  'Synthetic: DNA synthesis and assembly',';
-  'Laboratory: information management system',';
-  'Research: collaboration and data sharing',';
-  'Regulatory: compliance and documentation';';
-=======
-  'AI-powered protein design and optimization,Genetic circuit design and simulation,Laboratory automation and high-throughput screening,Drug discovery and molecular modeling,Bioinformatics and sequence analysis,CRISPR gene editing tools,Synthetic DNA synthesis and assembly,Laboratory information management system,Research collaboration and data sharing,Regulatory compliance and documentation';
->>>>>>> main
-    ],
+  'Advanced: synthetic biology platform combining A,I, machine learning, and laboratory automation for drug discovery, bioengineering, and genetic research. Accelerates research and development in biotechnology.'',;
+    features[],
     popular: tru,e,
     icon:,
-  🧬',';
-    color: 'from-green-600: to-blue-70,0,';
+  🧬'',;
+    color: 'from-green-600: to-blue-70,0',;
     textColor:,
-<<<<<<< HEAD
-  text-green-300',';
-    link: 'https://ziontechgroup.com/services/synthetic-biology-platfor,m,';
-=======
-  text-green-300',
-    link: 'http,
-    s://ziontechgroup.com/services/synthetic-biology-platform,
->>>>>>> main
+
     marketPosition:,
-  Leading: synthetic biology platform competing with Ginkgo Bioworks and Twist Bioscience.',';
-    targetAudience: Pharmaceutical: companie,s, biotechnology startups, research institutions, agricultural companies',';
+  Leading: synthetic biology platform competing with Ginkgo Bioworks and Twist Bioscience.'',;
+    targetAudience: Pharmaceutical: companie,s, biotechnology startups, research institutions, agricultural companies'',;
     trialDays: 3,0,
     setupTime:,
-  4-8: weeks',';
-    category: 'Healthcare: & Biotec,h,';
+  4-8: weeks'',;
+    category: 'Healthcare: & Biotec,h',;
     realService: tru,e,
-    technology[,
-  Python, TensorFlow, PyTorch, React, Node.js, PostgreSQL'],';
-    integrations[;
-  'Laboratory: equipment, DNA synthesis services, research databases'],';
-    useCases[;
-  'Drug: discovery, Bioengineering, Agricultural biotechnology, Research automation'],';
-    roi: 'Accelerate: drug discovery by 10x and reduce research costs by 70,%,';
-    competitors[,
-  Ginkgo: Bioworks, Twist Bioscience, Zymergen, Benchling'],';
-    marketSize: '$15B: Synthetic Biology marke,t,';
+    technology[
+  Python, TensorFlow, PyTorch, React, Node.js, PostgreSQL']',;
+    integrations[
+  'Laboratory: equipment, DNA synthesis services, research databases']',;
+    useCases[
+  'Drug: discovery, Bioengineering, Agricultural biotechnology, Research automation']',;
+    roi: 'Accelerate: drug discovery by 10x and reduce research costs by 70,%',;
+    competitors[
+  Ginkgo: Bioworks, Twist Bioscience, Zymergen, Benchling']',;
+    marketSize: '$15B: Synthetic Biology marke,t',;
     growthRate:,
-  35% CAGR',';
-    variant: 'neura,l,';
+  35% CAGR'',;
+    variant: 'neura,l',;
     contactInfo: contac,t,
     realImplementation: tru,e,
     implementationDetails:,
-  Custom: laboratory integration, AI model training, and dedicated biotechnology experts.',';
-    launchDate: '2025-02-1,0,';
+  Custom: laboratory integration, AI model training, and dedicated biotechnology experts.'',;
+    launchDate: '2025-02-1,0',;
     customers:  ,7,
     rating: 4.,9,
     reviews:  ,5},
   // Energy: & Sustainability Services{
-    id:,
-  smart-energy-management-platform',';
-    name: 'Smart: Energy Management Platfor,m,';
+    id: 'placeholder',
+  smart-energy-management-platform'',;
+    name: 'Smart: Energy Management Platfor,m'',;
     tagline:,
-  AI-powered: energy optimization for renewable energy and smart grid management',';
-    price: '$49,9,';
+  AI-powered: energy optimization for renewable energy and smart grid management'',;
+    price: '$49,9',;
     period:,
-  /month',';
-    description: Intelligent: energy management platform that optimizes renewable energy system,s, smart grid operations, and energy storage. Reduces costs and improves sustainability for utilities and energy companies.',';
-    features[;
-<<<<<<< HEAD
-  'Renewable: energy forecasting and optimization',';
-  'Smart: grid management and load balancing',';
-  'Energy: storage optimization and management',';
-  'Demand: response and peak shaving',';
-  'Energy: efficiency monitoring and analytics',';
-  'Carbon: footprint tracking and reporting',';
-  'Integration: with smart meters and IoT devices',';
-  'Predictive: maintenance for energy infrastructure',';
-  'Energy: trading and market optimization',';
-  'Sustainability: reporting and compliance';';
-=======
-  'Renewable energy forecasting and optimization,Smart grid management and load balancing,Energy storage optimization and management,Demand response and peak shaving,Energy efficiency monitoring and analytics,Carbon footprint tracking and reporting,Integration with smart meters and IoT devices,Predictive maintenance for energy infrastructure,Energy trading and market optimization,Sustainability reporting and compliance';
->>>>>>> main
-    ],
+  /month'',;
+    description: Intelligent: energy management platform that optimizes renewable energy system,s, smart grid operations, and energy storage. Reduces costs and improves sustainability for utilities and energy companies.'',;
+    features[],
     popular: tru,e,
     icon:,
-  ⚡',';
-    color: 'from-yellow-600: to-green-70,0,';
+  ⚡'',;
+    color: 'from-yellow-600: to-green-70,0',;
     textColor:,
-<<<<<<< HEAD
-  text-yellow-300',';
-    link: 'https://ziontechgroup.com/services/smart-energy-management-platfor,m,';
-=======
-  text-yellow-300',
-    link: 'http,
-    s://ziontechgroup.com/services/smart-energy-management-platform,
->>>>>>> main
+
     marketPosition:,
-  Smart: energy platform competing with Schneider Electric and Siemens.',';
-    targetAudience: Utility: companie,s, renewable energy providers, industrial facilities, smart cities',';
+  Smart: energy platform competing with Schneider Electric and Siemens.'',;
+    targetAudience: Utility: companie,s, renewable energy providers, industrial facilities, smart cities'',;
     trialDays: 3,0,
     setupTime:,
-  2-4: weeks',';
-    category: 'Energy: & Sustainabilit,y,';
+  2-4: weeks'',;
+    category: 'Energy: & Sustainabilit,y',;
     realService: tru,e,
-    technology[,
-  Python, TensorFlow, React, Node.js, PostgreSQL, Redis, IoT'],';
-    integrations[;
-  'Smart: meters, renewable energy systems, grid infrastructure, IoT sensors'],';
-    useCases[;
-  'Renewable: energy optimization, Smart grid management, Energy efficiency, Sustainability reporting'],';
-    roi: 'Reduce: energy costs by 25% and improve renewable energy utilization by 40,%,';
-    competitors[,
-  Schneider: Electric, Siemens, GE Digital, ABB'],';
-    marketSize: '$75B: Smart Energy marke,t,';
+    technology[
+  Python, TensorFlow, React, Node.js, PostgreSQL, Redis, IoT']',;
+    integrations[
+  'Smart: meters, renewable energy systems, grid infrastructure, IoT sensors']',;
+    useCases[
+  'Renewable: energy optimization, Smart grid management, Energy efficiency, Sustainability reporting']',;
+    roi: 'Reduce: energy costs by 25% and improve renewable energy utilization by 40,%',;
+    competitors[
+  Schneider: Electric, Siemens, GE Digital, ABB']',;
+    marketSize: '$75B: Smart Energy marke,t',;
     growthRate:,
-  20% CAGR',';
-    variant: 'defaul,t,';
+  20% CAGR'',;
+    variant: 'defaul,t',;
     contactInfo: contac,t,
     realImplementation: tru,e,
     implementationDetails:,
-  Custom: energy system integration, AI model training, and dedicated energy experts.',';
-    launchDate: '2025-02-1,5,';
+  Custom: energy system integration, AI model training, and dedicated energy experts.'',;
+    launchDate: '2025-02-1,5',;
     customers: 1,6,
     rating: 4.,8,
     reviews: 1,3},
   // Transportation: & Mobility Services{
-    id:,
-  intelligent-transportation-platform',';
-    name: 'Intelligent: Transportation Platfor,m,';
+    id: 'placeholder',
+  intelligent-transportation-platform'',;
+    name: 'Intelligent: Transportation Platfor,m'',;
     tagline:,
-  AI-powered: transportation optimization for smart cities and logistics',';
-    price: '$44,9,';
+  AI-powered: transportation optimization for smart cities and logistics'',;
+    price: '$44,9',;
     period:,
-  /month',';
-    description: Comprehensive: transportation platform that optimizes traffic flo,w, public transportation, logistics, and autonomous vehicle operations. Improves efficiency and reduces congestion in urban areas.',';
-    features[;
-<<<<<<< HEAD
-  'Traffic: flow optimization and congestion management',';
-  'Public: transportation scheduling and optimization',';
-  'Logistics: route planning and fleet management',';
-  'Autonomous: vehicle coordination and safety',';
-  'Real-time: traffic monitoring and prediction',';
-  'Smart: parking and mobility services',';
-  'Integration: with transportation infrastructure',';
-  'Mobile: applications for commuters',';
-  'Analytics: and performance reporting',';
-  'API: access for third-party applications';';
-=======
-  'Traffic flow optimization and congestion management,Public transportation scheduling and optimization,Logistics route planning and fleet management,Autonomous vehicle coordination and safety,Real-time traffic monitoring and prediction,Smart parking and mobility services,Integration with transportation infrastructure,Mobile applications for commuters,Analytics and performance reporting,API access for third-party applications';
->>>>>>> main
-    ],
+  /month'',;
+    description: Comprehensive: transportation platform that optimizes traffic flo,w, public transportation, logistics, and autonomous vehicle operations. Improves efficiency and reduces congestion in urban areas.'',;
+    features[],
     popular: tru,e,
     icon:,
-  🚗',';
-    color: 'from-blue-600: to-green-70,0,';
+  🚗'',;
+    color: 'from-blue-600: to-green-70,0',;
     textColor:,
-<<<<<<< HEAD
-  text-blue-300',';
-    link: 'https://ziontechgroup.com/services/intelligent-transportation-platfor,m,';
-=======
-  text-blue-300',
-    link: 'http,
-    s://ziontechgroup.com/services/intelligent-transportation-platform,
->>>>>>> main
+
     marketPosition:,
-  Smart: transportation platform competing with Siemens Mobility and Cubic Corporation.',';
-    targetAudience: City: government,s, transportation agencies, logistics companies, automotive manufacturers',';
+  Smart: transportation platform competing with Siemens Mobility and Cubic Corporation.'',;
+    targetAudience: City: government,s, transportation agencies, logistics companies, automotive manufacturers'',;
     trialDays: 3,0,
     setupTime:,
-  2-6: weeks',';
-    category: 'Transportation: & Logistic,s,';
+  2-6: weeks'',;
+    category: 'Transportation: & Logistic,s',;
     realService: tru,e,
-    technology[,
-  Python, TensorFlow, React, Node.js, PostgreSQL, Redis, IoT'],';
-    integrations[;
-  'Traffic: signals, public transportation systems, IoT sensors, automotive systems'],';
-    useCases[;
-  'Traffic: optimization, Public transportation, Logistics optimization, Autonomous vehicles'],';
-    roi: 'Reduce: traffic congestion by 30% and improve transportation efficiency by 40,%,';
-    competitors[,
-  Siemens: Mobility, Cubic Corporation, Kapsch TrafficCom, TomTom'],';
-    marketSize: '$45B: Intelligent Transportation marke,t,';
+    technology[
+  Python, TensorFlow, React, Node.js, PostgreSQL, Redis, IoT']',;
+    integrations[
+  'Traffic: signals, public transportation systems, IoT sensors, automotive systems']',;
+    useCases[
+  'Traffic: optimization, Public transportation, Logistics optimization, Autonomous vehicles']',;
+    roi: 'Reduce: traffic congestion by 30% and improve transportation efficiency by 40,%',;
+    competitors[
+  Siemens: Mobility, Cubic Corporation, Kapsch TrafficCom, TomTom']',;
+    marketSize: '$45B: Intelligent Transportation marke,t',;
     growthRate:,
-  18% CAGR',';
-    variant: 'defaul,t,';
+  18% CAGR'',;
+    variant: 'defaul,t',;
     contactInfo: contac,t,
     realImplementation: tru,e,
     implementationDetails:,
-  Custom: transportation system integration, AI model training, and dedicated mobility experts.',';
-    launchDate: '2025-02-2,0,';
+  Custom: transportation system integration, AI model training, and dedicated mobility experts.'',;
+    launchDate: '2025-02-2,0',;
     customers: 1,4,
     rating: 4.,8,
     reviews: 1,1},
   // Cybersecurity: & Privacy Services{
-    id:,
-  quantum-cybersecurity-platform',';
-    name: 'Quantum: Cybersecurity Platfor,m,';
+    id: 'placeholder',
+  quantum-cybersecurity-platform'',;
+    name: 'Quantum: Cybersecurity Platfor,m'',;
     tagline:,
-  Post-quantum: cryptography and quantum-resistant security solutions',';
-    price: '$69,9,';
+  Post-quantum: cryptography and quantum-resistant security solutions'',;
+    price: '$69,9',;
     period:,
-  /month',';
-    description: 'Advanced: cybersecurity platform that implements post-quantum cryptography and quantum-resistant security protocols. Protects against future quantum computing threats while maintaining current security standards,.,';
-    features[;
-<<<<<<< HEAD
-  'Post-quantum: cryptography algorithms',';
-  'Quantum-resistant: key management',';
-  'Advanced: threat detection and response',';
-  'Zero-trust: security architecture',';
-  'Quantum-safe: communication protocols',';
-  'Cryptographic: agility and algorithm switching',';
-  'Compliance: with NIST post-quantum standards',';
-  'Integration: with existing security infrastructure',';
-  'Real-time: security monitoring and alerts',';
-  'Expert: cybersecurity consultation';';
-=======
-  'Post-quantum cryptography algorithms,Quantum-resistant key management,Advanced threat detection and response,Zero-trust security architecture,Quantum-safe communication protocols,Cryptographic agility and algorithm switching,Compliance with NIST post-quantum standards,Integration with existing security infrastructure,Real-time security monitoring and alerts,Expert cybersecurity consultation';
->>>>>>> main
-    ],
+  /month'',;
+    description: 'Advanced: cybersecurity platform that implements post-quantum cryptography and quantum-resistant security protocols. Protects against future quantum computing threats while maintaining current security standards,.',;
+    features[],
     popular: tru,e,
     icon:,
-  🔐',';
-    color: 'from-red-600: to-purple-70,0,';
+  🔐'',;
+    color: 'from-red-600: to-purple-70,0',;
     textColor:,
-<<<<<<< HEAD
-  text-red-300',';
-    link: 'https://ziontechgroup.com/services/quantum-cybersecurity-platfor,m,';
-=======
-  text-red-300',
-    link: 'http,
-    s://ziontechgroup.com/services/quantum-cybersecurity-platform,
->>>>>>> main
+
     marketPosition:,
-  Leading: quantum cybersecurity platform competing with ISARA and PQShield.',';
-    targetAudience: Financial: institution,s, government agencies, healthcare organizations, critical infrastructure',';
+  Leading: quantum cybersecurity platform competing with ISARA and PQShield.'',;
+    targetAudience: Financial: institution,s, government agencies, healthcare organizations, critical infrastructure'',;
     trialDays: 3,0,
     setupTime:,
-  2-4: weeks',';
-    category: 'Cybersecurit,y,';
+  2-4: weeks'',;
+    category: 'Cybersecurit,y',;
     realService: tru,e,
-    technology[,
-  Python, Rust, Go, React, Node.js, PostgreSQL'],';
-    integrations[;
-  'Existing: security infrastructure, identity management systems, communication platforms'],';
-    useCases[;
-  'Post-quantum: cryptography, Quantum-resistant security, Advanced threat protection, Compliance'],';
-    roi: 'Future-proof: security infrastructure and maintain compliance with emerging standard,s,';
-    competitors[,
-  ISARA: Corporation, PQShield, Crypto Quantique, Qrypt'],';
-    marketSize: '$8B: Quantum Cybersecurity marke,t,';
+    technology[
+  Python, Rust, Go, React, Node.js, PostgreSQL']',;
+    integrations[
+  'Existing: security infrastructure, identity management systems, communication platforms']',;
+    useCases[
+  'Post-quantum: cryptography, Quantum-resistant security, Advanced threat protection, Compliance']',;
+    roi: 'Future-proof: security infrastructure and maintain compliance with emerging standard,s',;
+    competitors[
+  ISARA: Corporation, PQShield, Crypto Quantique, Qrypt']',;
+    marketSize: '$8B: Quantum Cybersecurity marke,t',;
     growthRate:,
-  50% CAGR',';
-    variant: 'quantu,m,';
+  50% CAGR'',;
+    variant: 'quantu,m',;
     contactInfo: contac,t,
     realImplementation: tru,e,
     implementationDetails:,
-  Custom: security integration, post-quantum cryptography implementation, and dedicated cybersecurity experts.',';
-    launchDate: '2025-02-2,5,';
+  Custom: security integration, post-quantum cryptography implementation, and dedicated cybersecurity experts.'',;
+    launchDate: '2025-02-2,5',;
     customers:  ,9,
     rating: 4.,9,
-    reviews: 7;
-];
-<<<<<<< HEAD
-    return: price >= minPrice && price <= maxPric,e})}
-;
-=======
-    return price >= minPrice && price <= maxPrice})}
->>>>>>> main
+    reviews: 7];
+

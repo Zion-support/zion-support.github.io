@@ -11,5 +11,4 @@ export default function services() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

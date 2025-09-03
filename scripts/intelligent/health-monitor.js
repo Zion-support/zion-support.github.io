@@ -14,14 +14,12 @@ class SmartHealthMonitor {
     this.logFile = path.join(this.projectRoot, 'logs/smart-health-monitor.log');
     this.reportFile = path.join(this.projectRoot, 'logs/smart-health-monitor-report.json');
     this.healthHistory = this.loadHealthHistory();
-    this.ensureDirectories();
-  }
+    this.ensureDirectories()}
 
   ensureDirectories() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true });
-    }
+      fs.mkdirSync(logDir { recursive: true })}
   }
 
   log(message, level = 'info') {
@@ -30,23 +28,18 @@ class SmartHealthMonitor {
     console.log(logMessage);
     
     try {
-      fs.appendFileSync(this.logFile, logMessage + '\n');
-    } catch (error) {
-      console.error('Failed to write to log file:', error.message);
-    }
+      fs.appendFileSync(this.logFile, logMessage + '\n')} catch (error) {
+      console.error('Failed to write to log file:', error.message)}
   }
 
   loadHealthHistory() {
     try {
       if (fs.existsSync(this.reportFile)) {
         const data = fs.readFileSync(this.reportFile, 'utf8');
-        return JSON.parse(data).healthHistory || [];
-      }
+        return JSON.parse(data).healthHistory || []}
     } catch (error) {
-      this.log(`Failed to load health history: ${error.message}`, 'warn');
-    }
-    return [];
-  }
+      this.log(`Failed to load health history: ${error.message}`, 'warn')}
+    return []}
 
   saveHealthHistory() {
     try {
@@ -56,10 +49,8 @@ class SmartHealthMonitor {
         totalChecks: this.healthHistory.length,
         lastRun: Date.now()
       };
-      fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-    } catch (error) {
-      this.log(`Failed to save health history: ${error.message}`, 'error');
-    }
+      fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2))} catch (error) {
+      this.log(`Failed to save health history: ${error.message}`, 'error')}
   }
 
   async performHealthCheck() {
@@ -84,8 +75,7 @@ class SmartHealthMonitor {
     this.log(`  - Security Health: ${healthCheck.security.score}/100`);
     this.log(`  - Log Health: ${healthCheck.logs.score}/100`);
 
-    return healthCheck;
-  }
+    return healthCheck}
 
   async checkSystemHealth() {
     try {
@@ -110,11 +100,9 @@ class SmartHealthMonitor {
         ...systemHealth,
         score: overallScore.toFixed(2),
         issues: this.identifySystemIssues(systemHealth)
-      };
-    } catch (error) {
+      }} catch (error) {
       this.log(`System health check failed: ${error.message}`, 'error');
-      return { score: 0, issues: ['System health check failed'], error: error.message };
-    }
+      return { score: 0, issues: ['System health check failed'], error: error.message }}
   }
 
   async checkMemoryUsage() {
@@ -129,10 +117,8 @@ class SmartHealthMonitor {
         heapTotal: (usage.heapTotal / (1024 * 1024)).toFixed(2),
         external: (usage.external / (1024 * 1024)).toFixed(2),
         usage: usagePercentage.toFixed(2)
-      };
-    } catch (error) {
-      return { heapUsed: 0, heapTotal: 0, external: 0, usage: 0 };
-    }
+      }} catch (error) {
+      return { heapUsed: 0, heapTotal: 0, external: 0, usage: 0 }}
   }
 
   async checkDiskUsage() {
@@ -143,10 +129,8 @@ class SmartHealthMonitor {
         usage: 50, // Placeholder - would need proper disk usage calculation
         free: 'Unknown',
         total: 'Unknown'
-      };
-    } catch (error) {
-      return { usage: 0, free: 'Unknown', total: 'Unknown' };
-    }
+      }} catch (error) {
+      return { usage: 0, free: 'Unknown', total: 'Unknown' }}
   }
 
   async checkCpuUsage() {
@@ -157,16 +141,14 @@ class SmartHealthMonitor {
         usage: 25, // Placeholder - would need proper CPU usage calculation
         user: usage.user,
         system: usage.system
-      };
-    } catch (error) {
-      return { usage: 0, user: 0, system: 0 };
-    }
+      }} catch (error) {
+      return { usage: 0, user: 0, system: 0 }}
   }
 
   async checkProcessHealth() {
     try {
       // Check if PM2 processes are running
-      const pm2Status = execSync('pm2 jlist', { 
+      const pm2Status = execSync('pm2 jlist' { 
         cwd: this.projectRoot, 
         encoding: 'utf8',
         stdio: 'pipe' 
@@ -187,33 +169,26 @@ class SmartHealthMonitor {
           memory: proc.monit.memory,
           cpu: proc.monit.cpu
         }))
-      };
-    } catch (error) {
-      return { total: 0, running: 0, healthy: false, processes: [] };
-    }
+      }} catch (error) {
+      return { total: 0, running: 0, healthy: false, processes: [] }}
   }
 
   identifySystemIssues(systemHealth) {
     const issues = [];
     
     if (systemHealth.memory.usage > 80) {
-      issues.push('High memory usage detected');
-    }
+      issues.push('High memory usage detected')}
     
     if (systemHealth.disk.usage > 90) {
-      issues.push('Low disk space');
-    }
+      issues.push('Low disk space')}
     
     if (systemHealth.cpu.usage > 80) {
-      issues.push('High CPU usage detected');
-    }
+      issues.push('High CPU usage detected')}
     
     if (!systemHealth.processes.healthy) {
-      issues.push('Some processes are not running properly');
-    }
+      issues.push('Some processes are not running properly')}
     
-    return issues;
-  }
+    return issues}
 
   async checkApplicationHealth() {
     try {
@@ -238,86 +213,71 @@ class SmartHealthMonitor {
         ...appHealth,
         score: overallScore.toFixed(2),
         issues: this.identifyApplicationIssues(appHealth)
-      };
-    } catch (error) {
+      }} catch (error) {
       this.log(`Application health check failed: ${error.message}`, 'error');
-      return { score: 0, issues: ['Application health check failed'], error: error.message };
-    }
+      return { score: 0, issues: ['Application health check failed'], error: error.message }}
   }
 
   async checkBuildStatus() {
     try {
-      execSync('npm run build', { 
+      execSync('npm run build' { 
         cwd: this.projectRoot, 
         stdio: 'pipe',
         timeout: 300000 
       });
-      return { success: true, message: 'Build successful' };
-    } catch (error) {
-      return { success: false, message: error.message };
-    }
+      return { success: true, message: 'Build successful' }} catch (error) {
+      return { success: false, message: error.message }}
   }
 
   async checkTestStatus() {
     try {
-      execSync('npm run test:ci', { 
+      execSync('npm run test:ci' { 
         cwd: this.projectRoot, 
         stdio: 'pipe',
         timeout: 120000 
       });
-      return { success: true, message: 'Tests passed' };
-    } catch (error) {
-      return { success: false, message: error.message };
-    }
+      return { success: true, message: 'Tests passed' }} catch (error) {
+      return { success: false, message: error.message }}
   }
 
   async checkLintingStatus() {
     try {
-      execSync('npm run lint', { 
+      execSync('npm run lint' { 
         cwd: this.projectRoot, 
         stdio: 'pipe',
         timeout: 60000 
       });
-      return { success: true, message: 'Linting passed' };
-    } catch (error) {
-      return { success: false, message: error.message };
-    }
+      return { success: true, message: 'Linting passed' }} catch (error) {
+      return { success: false, message: error.message }}
   }
 
   async checkTypeStatus() {
     try {
-      execSync('npm run type-check', { 
+      execSync('npm run type-check' { 
         cwd: this.projectRoot, 
         stdio: 'pipe',
         timeout: 60000 
       });
-      return { success: true, message: 'Type checking passed' };
-    } catch (error) {
-      return { success: false, message: error.message };
-    }
+      return { success: true, message: 'Type checking passed' }} catch (error) {
+      return { success: false, message: error.message }}
   }
 
   identifyApplicationIssues(appHealth) {
     const issues = [];
     
     if (!appHealth.build.success) {
-      issues.push('Build is failing');
-    }
+      issues.push('Build is failing')}
     
     if (!appHealth.tests.success) {
-      issues.push('Tests are failing');
-    }
+      issues.push('Tests are failing')}
     
     if (!appHealth.linting.success) {
-      issues.push('Linting issues detected');
-    }
+      issues.push('Linting issues detected')}
     
     if (!appHealth.types.success) {
-      issues.push('Type checking issues detected');
-    }
+      issues.push('Type checking issues detected')}
     
-    return issues;
-  }
+    return issues}
 
   async checkDependencyHealth() {
     try {
@@ -341,39 +301,33 @@ class SmartHealthMonitor {
         ...depHealth,
         score: Math.max(0, score).toFixed(2),
         issues: this.identifyDependencyIssues(depHealth)
-      };
-    } catch (error) {
+      }} catch (error) {
       this.log(`Dependency health check failed: ${error.message}`, 'error');
-      return { score: 0, issues: ['Dependency health check failed'], error: error.message };
-    }
+      return { score: 0, issues: ['Dependency health check failed'], error: error.message }}
   }
 
   async checkOutdatedDependencies() {
     try {
-      const output = execSync('npm outdated --json', { 
+      const output = execSync('npm outdated --json' { 
         cwd: this.projectRoot, 
         encoding: 'utf8',
         stdio: 'pipe' 
       });
       
       const outdated = JSON.parse(output);
-      return { count: Object.keys(outdated).length, packages: Object.keys(outdated) };
-    } catch (error) {
+      return { count: Object.keys(outdated).length, packages: Object.keys(outdated) }} catch (error) {
       if (error.stdout) {
         try {
           const outdated = JSON.parse(error.stdout);
-          return { count: Object.keys(outdated).length, packages: Object.keys(outdated) };
-        } catch (parseError) {
-          return { count: 0, packages: [] };
-        }
+          return { count: Object.keys(outdated).length, packages: Object.keys(outdated) }} catch (parseError) {
+          return { count: 0, packages: [] }}
       }
-      return { count: 0, packages: [] };
-    }
+      return { count: 0, packages: [] }}
   }
 
   async checkVulnerabilities() {
     try {
-      const output = execSync('npm audit --json', { 
+      const output = execSync('npm audit --json' { 
         cwd: this.projectRoot, 
         encoding: 'utf8',
         stdio: 'pipe' 
@@ -388,8 +342,7 @@ class SmartHealthMonitor {
         medium: Object.values(vulnerabilities).filter(v => v.severity === 'medium').length,
         low: Object.values(vulnerabilities).filter(v => v.severity === 'low').length,
         total: Object.keys(vulnerabilities).length
-      };
-    } catch (error) {
+      }} catch (error) {
       if (error.stdout) {
         try {
           const audit = JSON.parse(error.stdout);
@@ -401,18 +354,15 @@ class SmartHealthMonitor {
             medium: Object.values(vulnerabilities).filter(v => v.severity === 'medium').length,
             low: Object.values(vulnerabilities).filter(v => v.severity === 'low').length,
             total: Object.keys(vulnerabilities).length
-          };
-        } catch (parseError) {
-          return { critical: 0, high: 0, medium: 0, low: 0, total: 0 };
-        }
+          }} catch (parseError) {
+          return { critical: 0, high: 0, medium: 0, low: 0, total: 0 }}
       }
-      return { critical: 0, high: 0, medium: 0, low: 0, total: 0 };
-    }
+      return { critical: 0, high: 0, medium: 0, low: 0, total: 0 }}
   }
 
   async checkDuplicateDependencies() {
     try {
-      const output = execSync('npm ls --json', { 
+      const output = execSync('npm ls --json' { 
         cwd: this.projectRoot, 
         encoding: 'utf8',
         stdio: 'pipe' 
@@ -425,43 +375,33 @@ class SmartHealthMonitor {
         if (node.dependencies) {
           Object.keys(node.dependencies).forEach(dep => {
             if (seen.has(dep)) {
-              duplicates.push(dep);
-            } else {
+              duplicates.push(dep)} else {
               seen.add(dep);
-              findDuplicates(node.dependencies[dep], seen);
-            }
-          });
-        }
+              findDuplicates(node.dependencies[dep], seen)}
+          })}
       };
       
       findDuplicates(tree);
-      return { count: duplicates.length, packages: duplicates };
-    } catch (error) {
-      return { count: 0, packages: [] };
-    }
+      return { count: duplicates.length, packages: duplicates }} catch (error) {
+      return { count: 0, packages: [] }}
   }
 
   identifyDependencyIssues(depHealth) {
     const issues = [];
     
     if (depHealth.outdated.count > 10) {
-      issues.push('Many outdated dependencies');
-    }
+      issues.push('Many outdated dependencies')}
     
     if (depHealth.vulnerabilities.critical > 0) {
-      issues.push('Critical security vulnerabilities found');
-    }
+      issues.push('Critical security vulnerabilities found')}
     
     if (depHealth.vulnerabilities.high > 5) {
-      issues.push('Multiple high-severity vulnerabilities');
-    }
+      issues.push('Multiple high-severity vulnerabilities')}
     
     if (depHealth.duplicates.count > 0) {
-      issues.push('Duplicate dependencies detected');
-    }
+      issues.push('Duplicate dependencies detected')}
     
-    return issues;
-  }
+    return issues}
 
   async checkBuildHealth() {
     try {
@@ -477,26 +417,21 @@ class SmartHealthMonitor {
       let score = 100;
       
       if (buildHealth.time > 120000) { // More than 2 minutes
-        score -= 20;
-      }
+        score -= 20}
       
       if (buildHealth.size > 10) { // More than 10MB
-        score -= 15;
-      }
+        score -= 15}
       
       if (buildHealth.errors.count > 0) {
-        score -= buildHealth.errors.count * 10;
-      }
+        score -= buildHealth.errors.count * 10}
 
       return {
         ...buildHealth,
         score: Math.max(0, score).toFixed(2),
         issues: this.identifyBuildIssues(buildHealth)
-      };
-    } catch (error) {
+      }} catch (error) {
       this.log(`Build health check failed: ${error.message}`, 'error');
-      return { score: 0, issues: ['Build health check failed'], error: error.message };
-    }
+      return { score: 0, issues: ['Build health check failed'], error: error.message }}
   }
 
   async measureBuildTime() {
@@ -504,26 +439,22 @@ class SmartHealthMonitor {
       const startTime = Date.now();
       
       if (fs.existsSync('.next')) {
-        execSync('rm -rf .next', { cwd: this.projectRoot, stdio: 'pipe' });
-      }
+        execSync('rm -rf .next' { cwd: this.projectRoot, stdio: 'pipe' })}
       
-      execSync('npm run build', { 
+      execSync('npm run build' { 
         cwd: this.projectRoot, 
         stdio: 'pipe',
         timeout: 300000 
       });
       
-      return Date.now() - startTime;
-    } catch (error) {
-      return -1;
-    }
+      return Date.now() - startTime} catch (error) {
+      return -1}
   }
 
   async measureBuildSize() {
     try {
       if (!fs.existsSync('.next')) {
-        return 0;
-      }
+        return 0}
 
       const calculateSize = (dir) => {
         let totalSize = 0;
@@ -534,20 +465,16 @@ class SmartHealthMonitor {
           const stat = fs.statSync(fullPath);
           
           if (stat.isDirectory()) {
-            totalSize += calculateSize(fullPath);
-          } else {
-            totalSize += stat.size;
-          }
+            totalSize += calculateSize(fullPath)} else {
+            totalSize += stat.size}
         }
         
-        return totalSize;
-      };
+        return totalSize};
 
       const sizeInBytes = calculateSize('.next');
       return (sizeInBytes / (1024 * 1024)).toFixed(2); // Convert to MB
     } catch (error) {
-      return 0;
-    }
+      return 0}
   }
 
   async checkBuildErrors() {
@@ -562,35 +489,27 @@ class SmartHealthMonitor {
           
           lines.forEach(line => {
             if (line.includes('error') || line.includes('Error') || line.includes('ERROR')) {
-              errors.push(line.trim());
-            }
-          });
-        }
+              errors.push(line.trim())}
+          })}
       }
       
-      return { count: errors.length, errors };
-    } catch (error) {
-      return { count: 0, errors: [] };
-    }
+      return { count: errors.length, errors }} catch (error) {
+      return { count: 0, errors: [] }}
   }
 
   identifyBuildIssues(buildHealth) {
     const issues = [];
     
     if (buildHealth.time > 120000) {
-      issues.push('Build time is too long');
-    }
+      issues.push('Build time is too long')}
     
     if (buildHealth.size > 10) {
-      issues.push('Build size is too large');
-    }
+      issues.push('Build size is too large')}
     
     if (buildHealth.errors.count > 0) {
-      issues.push('Build errors detected');
-    }
+      issues.push('Build errors detected')}
     
-    return issues;
-  }
+    return issues}
 
   async checkPerformanceHealth() {
     try {
@@ -606,26 +525,21 @@ class SmartHealthMonitor {
       let score = 100;
       
       if (perfHealth.memory.usage > 80) {
-        score -= 20;
-      }
+        score -= 20}
       
       if (perfHealth.responseTime > 1000) {
-        score -= 15;
-      }
+        score -= 15}
       
       if (perfHealth.bundleSize > 5) {
-        score -= 10;
-      }
+        score -= 10}
 
       return {
         ...perfHealth,
         score: Math.max(0, score).toFixed(2),
         issues: this.identifyPerformanceIssues(perfHealth)
-      };
-    } catch (error) {
+      }} catch (error) {
       this.log(`Performance health check failed: ${error.message}`, 'error');
-      return { score: 0, issues: ['Performance health check failed'], error: error.message };
-    }
+      return { score: 0, issues: ['Performance health check failed'], error: error.message }}
   }
 
   async checkResponseTime() {
@@ -637,19 +551,15 @@ class SmartHealthMonitor {
     const issues = [];
     
     if (perfHealth.memory.usage > 80) {
-      issues.push('High memory usage');
-    }
+      issues.push('High memory usage')}
     
     if (perfHealth.responseTime > 1000) {
-      issues.push('Slow response time');
-    }
+      issues.push('Slow response time')}
     
     if (perfHealth.bundleSize > 5) {
-      issues.push('Large bundle size');
-    }
+      issues.push('Large bundle size')}
     
-    return issues;
-  }
+    return issues}
 
   async checkSecurityHealth() {
     try {
@@ -673,11 +583,9 @@ class SmartHealthMonitor {
         ...securityHealth,
         score: Math.max(0, score).toFixed(2),
         issues: this.identifySecurityIssues(securityHealth)
-      };
-    } catch (error) {
+      }} catch (error) {
       this.log(`Security health check failed: ${error.message}`, 'error');
-      return { score: 0, issues: ['Security health check failed'], error: error.message };
-    }
+      return { score: 0, issues: ['Security health check failed'], error: error.message }}
   }
 
   async checkForSecrets() {
@@ -695,15 +603,11 @@ class SmartHealthMonitor {
               file,
               line: index + 1,
               content: line.trim()
-            });
-          }
-        });
-      }
+            })}
+        })}
       
-      return { count: secrets.length, secrets };
-    } catch (error) {
-      return { count: 0, secrets: [] };
-    }
+      return { count: secrets.length, secrets }} catch (error) {
+      return { count: 0, secrets: [] }}
   }
 
   getSourceFiles() {
@@ -719,10 +623,8 @@ class SmartHealthMonitor {
           const stat = fs.statSync(fullPath);
           
           if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-            scanDirectory(fullPath);
-          } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
-            files.push(fullPath);
-          }
+            scanDirectory(fullPath)} else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
+            files.push(fullPath)}
         }
       } catch (error) {
         // Skip directories we can't read
@@ -730,8 +632,7 @@ class SmartHealthMonitor {
     };
     
     scanDirectory(this.projectRoot);
-    return files;
-  }
+    return files}
 
   async checkFilePermissions() {
     try {
@@ -745,38 +646,30 @@ class SmartHealthMonitor {
           const permissions = (mode & parseInt('777', 8)).toString(8);
           
           if (permissions.includes('7')) {
-            issues++;
-          }
+            issues++}
         }
       }
       
-      return { issues };
-    } catch (error) {
-      return { issues: 0 };
-    }
+      return { issues }} catch (error) {
+      return { issues: 0 }}
   }
 
   identifySecurityIssues(securityHealth) {
     const issues = [];
     
     if (securityHealth.vulnerabilities.critical > 0) {
-      issues.push('Critical security vulnerabilities');
-    }
+      issues.push('Critical security vulnerabilities')}
     
     if (securityHealth.vulnerabilities.high > 5) {
-      issues.push('Multiple high-severity vulnerabilities');
-    }
+      issues.push('Multiple high-severity vulnerabilities')}
     
     if (securityHealth.secrets.count > 0) {
-      issues.push('Potential secrets in code');
-    }
+      issues.push('Potential secrets in code')}
     
     if (securityHealth.permissions.issues > 0) {
-      issues.push('File permission issues');
-    }
+      issues.push('File permission issues')}
     
-    return issues;
-  }
+    return issues}
 
   async checkLogHealth() {
     try {
@@ -792,26 +685,21 @@ class SmartHealthMonitor {
       let score = 100;
       
       if (logHealth.size.total > 100) { // More than 100MB
-        score -= 20;
-      }
+        score -= 20}
       
       if (logHealth.errors.count > 100) {
-        score -= 15;
-      }
+        score -= 15}
       
       if (!logHealth.rotation.enabled) {
-        score -= 10;
-      }
+        score -= 10}
 
       return {
         ...logHealth,
         score: Math.max(0, score).toFixed(2),
         issues: this.identifyLogIssues(logHealth)
-      };
-    } catch (error) {
+      }} catch (error) {
       this.log(`Log health check failed: ${error.message}`, 'error');
-      return { score: 0, issues: ['Log health check failed'], error: error.message };
-    }
+      return { score: 0, issues: ['Log health check failed'], error: error.message }}
   }
 
   async checkLogSize() {
@@ -829,18 +717,15 @@ class SmartHealthMonitor {
           
           if (stat.isFile()) {
             totalSize += stat.size;
-            fileCount++;
-          }
+            fileCount++}
         }
       }
       
       return {
         total: (totalSize / (1024 * 1024)).toFixed(2), // Convert to MB
         fileCount
-      };
-    } catch (error) {
-      return { total: 0, fileCount: 0 };
-    }
+      }} catch (error) {
+      return { total: 0, fileCount: 0 }}
   }
 
   async checkLogErrors() {
@@ -858,49 +743,40 @@ class SmartHealthMonitor {
           if (stat.isFile() && item.includes('error')) {
             const content = fs.readFileSync(fullPath, 'utf8');
             const lines = content.split('\n');
-            errorCount += lines.filter(line => line.includes('ERROR') || line.includes('error')).length;
-          }
+            errorCount += lines.filter(line => line.includes('ERROR') || line.includes('error')).length}
         }
       }
       
-      return { count: errorCount };
-    } catch (error) {
-      return { count: 0 };
-    }
+      return { count: errorCount }} catch (error) {
+      return { count: 0 }}
   }
 
   async checkLogRotation() {
     try {
       // Check if PM2 log rotation is enabled
-      const pm2Config = execSync('pm2 show pm2-logrotate', { 
+      const pm2Config = execSync('pm2 show pm2-logrotate' { 
         cwd: this.projectRoot, 
         encoding: 'utf8',
         stdio: 'pipe' 
       });
       
-      return { enabled: true };
-    } catch (error) {
-      return { enabled: false };
-    }
+      return { enabled: true }} catch (error) {
+      return { enabled: false }}
   }
 
   identifyLogIssues(logHealth) {
     const issues = [];
     
     if (logHealth.size.total > 100) {
-      issues.push('Log files are too large');
-    }
+      issues.push('Log files are too large')}
     
     if (logHealth.errors.count > 100) {
-      issues.push('Too many errors in logs');
-    }
+      issues.push('Too many errors in logs')}
     
     if (!logHealth.rotation.enabled) {
-      issues.push('Log rotation not enabled');
-    }
+      issues.push('Log rotation not enabled')}
     
-    return issues;
-  }
+    return issues}
 
   async autoRecover(healthCheck) {
     this.log('🔧 Attempting auto-recovery...');
@@ -912,7 +788,7 @@ class SmartHealthMonitor {
       try {
         this.log('Attempting system recovery...');
         // Restart PM2 processes
-        execSync('pm2 restart all', { 
+        execSync('pm2 restart all' { 
           cwd: this.projectRoot, 
           stdio: 'pipe' 
         });
@@ -923,16 +799,14 @@ class SmartHealthMonitor {
           action: 'restarted PM2 processes'
         });
         
-        this.log('✅ System recovery completed');
-      } catch (error) {
+        this.log('✅ System recovery completed')} catch (error) {
         recoveries.push({
           type: 'system',
           success: false,
           error: error.message
         });
         
-        this.log(`❌ System recovery failed: ${error.message}`, 'error');
-      }
+        this.log(`❌ System recovery failed: ${error.message}`, 'error')}
     }
     
     // Recover from application issues
@@ -941,12 +815,12 @@ class SmartHealthMonitor {
         this.log('Attempting application recovery...');
         
         // Clean and rebuild
-        execSync('rm -rf .next node_modules/.cache', { 
+        execSync('rm -rf .next node_modules/.cache' { 
           cwd: this.projectRoot, 
           stdio: 'pipe' 
         });
         
-        execSync('npm install', { 
+        execSync('npm install' { 
           cwd: this.projectRoot, 
           stdio: 'pipe',
           timeout: 180000 
@@ -958,16 +832,14 @@ class SmartHealthMonitor {
           action: 'cleaned and reinstalled dependencies'
         });
         
-        this.log('✅ Application recovery completed');
-      } catch (error) {
+        this.log('✅ Application recovery completed')} catch (error) {
         recoveries.push({
           type: 'application',
           success: false,
           error: error.message
         });
         
-        this.log(`❌ Application recovery failed: ${error.message}`, 'error');
-      }
+        this.log(`❌ Application recovery failed: ${error.message}`, 'error')}
     }
     
     // Recover from dependency issues
@@ -975,7 +847,7 @@ class SmartHealthMonitor {
       try {
         this.log('Attempting dependency recovery...');
         
-        execSync('npm audit fix', { 
+        execSync('npm audit fix' { 
           cwd: this.projectRoot, 
           stdio: 'pipe',
           timeout: 120000 
@@ -987,20 +859,17 @@ class SmartHealthMonitor {
           action: 'fixed dependency vulnerabilities'
         });
         
-        this.log('✅ Dependency recovery completed');
-      } catch (error) {
+        this.log('✅ Dependency recovery completed')} catch (error) {
         recoveries.push({
           type: 'dependencies',
           success: false,
           error: error.message
         });
         
-        this.log(`❌ Dependency recovery failed: ${error.message}`, 'error');
-      }
+        this.log(`❌ Dependency recovery failed: ${error.message}`, 'error')}
     }
     
-    return recoveries;
-  }
+    return recoveries}
 
   async generateHealthReport() {
     this.log('📊 Generating health monitoring report...');
@@ -1050,42 +919,33 @@ class SmartHealthMonitor {
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     
     this.log(`📊 Health report saved to ${reportFile}`);
-    return report;
-  }
+    return report}
 
   generateHealthRecommendations(healthCheck) {
     const recommendations = [];
     
     if (parseFloat(healthCheck.system.score) < 70) {
-      recommendations.push('Address system health issues - check memory, disk, and CPU usage');
-    }
+      recommendations.push('Address system health issues - check memory, disk, and CPU usage')}
     
     if (parseFloat(healthCheck.application.score) < 70) {
-      recommendations.push('Fix application issues - ensure build, tests, and linting pass');
-    }
+      recommendations.push('Fix application issues - ensure build, tests, and linting pass')}
     
     if (parseFloat(healthCheck.dependencies.score) < 70) {
-      recommendations.push('Update dependencies and fix security vulnerabilities');
-    }
+      recommendations.push('Update dependencies and fix security vulnerabilities')}
     
     if (parseFloat(healthCheck.build.score) < 70) {
-      recommendations.push('Optimize build process and reduce build time/size');
-    }
+      recommendations.push('Optimize build process and reduce build time/size')}
     
     if (parseFloat(healthCheck.performance.score) < 70) {
-      recommendations.push('Improve performance - optimize memory usage and response times');
-    }
+      recommendations.push('Improve performance - optimize memory usage and response times')}
     
     if (parseFloat(healthCheck.security.score) < 70) {
-      recommendations.push('Address security issues immediately');
-    }
+      recommendations.push('Address security issues immediately')}
     
     if (parseFloat(healthCheck.logs.score) < 70) {
-      recommendations.push('Implement log rotation and clean up log files');
-    }
+      recommendations.push('Implement log rotation and clean up log files')}
 
-    return recommendations;
-  }
+    return recommendations}
 
   async run() {
     this.log('🚀 Starting Smart Health Monitor...');
@@ -1114,12 +974,9 @@ class SmartHealthMonitor {
       this.log(`   - Log Health: ${report.summary.logHealth}/100`);
       this.log(`   - Total Issues: ${report.summary.totalIssues}`);
       this.log(`   - Recoveries Attempted: ${report.summary.recoveriesAttempted}`);
-      this.log(`   - Recoveries Successful: ${report.summary.recoveriesSuccessful}`);
-
-    } catch (error) {
+      this.log(`   - Recoveries Successful: ${report.summary.recoveriesSuccessful}`)} catch (error) {
       this.log(`❌ Health Monitor failed: ${error.message}`, 'error');
-      throw error;
-    }
+      throw error}
   }
 }
 
@@ -1128,8 +985,6 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   const monitor = new SmartHealthMonitor();
   monitor.run().catch(error => {
     console.error('Fatal error:', error);
-    process.exit(1);
-  });
-}
+    process.exit(1)})}
 
 export default SmartHealthMonitor;

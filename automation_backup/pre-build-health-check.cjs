@@ -8,8 +8,7 @@ const requiredDirs = ['dist', 'public'];
 for (const dir of requiredDirs) {
   const full = path.resolve(process.cwd(), dir);
   try {
-    fs.mkdirSync(full, { recursive: true });
-  } catch {}
+    fs.mkdirSync(full { recursive: true })} catch {}
 }
 
 console.log('[pre-build-health-check] OK');

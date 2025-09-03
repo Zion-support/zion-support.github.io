@@ -14,36 +14,31 @@ class FinalAutomationSuite {
       testsPassed: false,
       securityIssues: 0,
       performanceScore: 0
-    };
-  }
+    }}
 
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true });
-    }
+      fs.mkdirSync(this.reportsDir { recursive: true })}
   }
 
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
     const emoji = level === 'SUCCESS' ? '✅' : level === 'ERROR' ? '❌' : level === 'WARN' ? '⚠️' : 'ℹ️';
-    console.log(`[${timestamp}] ${emoji} ${message}`);
-  }
+    console.log(`[${timestamp}] ${emoji} ${message}`)}
 
   async runCommand(command, description) {
     this.log(`🚀 ${description}`, 'INFO');
     try {
-      const result = execSync(command, {
+      const result = execSync(command {
         cwd: this.projectRoot,
         encoding: 'utf8',
         timeout: 300000,
         stdio: 'pipe'
       });
       this.log(`✅ ${description} completed`, 'SUCCESS');
-      return { success: true, output: result };
-    } catch (error) {
+      return { success: true, output: result }} catch (error) {
       this.log(`❌ ${description} failed: ${error.message}`, 'ERROR');
-      return { success: false, error: error.message };
-    }
+      return { success: false, error: error.message }}
   }
 
   async runBuild() {
@@ -52,8 +47,7 @@ class FinalAutomationSuite {
     const buildResult = await this.runCommand('npm run build', 'Production Build');
     this.results.buildSuccess = buildResult.success;
     
-    return buildResult;
-  }
+    return buildResult}
 
   async runTests() {
     this.log('🧪 Running test suite...', 'INFO');
@@ -61,8 +55,7 @@ class FinalAutomationSuite {
     const testResult = await this.runCommand('npm run test', 'Test Suite');
     this.results.testsPassed = testResult.success;
     
-    return testResult;
-  }
+    return testResult}
 
   async runSecurityCheck() {
     this.log('🔒 Running security audit...', 'INFO');
@@ -72,8 +65,7 @@ class FinalAutomationSuite {
       this.results.securityIssues = 1; // Simplified for now
     }
     
-    return securityResult;
-  }
+    return securityResult}
 
   async checkPerformance() {
     this.log('⚡ Checking performance...', 'INFO');
@@ -84,11 +76,9 @@ class FinalAutomationSuite {
         const stats = this.getDirectorySize(buildDir);
         const sizeMB = (stats.size / 1024 / 1024).toFixed(2);
         this.log(`Bundle size: ${sizeMB}MB`, 'INFO');
-        this.results.performanceScore = Math.max(0, 100 - (stats.size / 1024 / 1024) * 10);
-      }
+        this.results.performanceScore = Math.max(0, 100 - (stats.size / 1024 / 1024) * 10)}
     } catch (error) {
-      this.log(`Performance check failed: ${error.message}`, 'WARN');
-    }
+      this.log(`Performance check failed: ${error.message}`, 'WARN')}
   }
 
   getDirectorySize(dirPath) {
@@ -102,11 +92,9 @@ class FinalAutomationSuite {
           const fullPath = path.join(dir, item);
           const stat = fs.statSync(fullPath);
           if (stat.isDirectory()) {
-            scanDirectory(fullPath);
-          } else {
+            scanDirectory(fullPath)} else {
             totalSize += stat.size;
-            fileCount++;
-          }
+            fileCount++}
         }
       } catch (error) {
         // Skip directories we can't read
@@ -114,8 +102,7 @@ class FinalAutomationSuite {
     };
 
     scanDirectory(dirPath);
-    return { size: totalSize, count: fileCount };
-  }
+    return { size: totalSize, count: fileCount }}
 
   async generateReport() {
     this.log('📊 Generating final report...', 'INFO');
@@ -136,43 +123,33 @@ class FinalAutomationSuite {
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     
     this.log(`📄 Report saved to: ${reportPath}`, 'SUCCESS');
-    return report;
-  }
+    return report}
 
   generateRecommendations() {
     const recommendations = [];
     
     if (!this.results.buildSuccess) {
-      recommendations.push('Fix build errors before deployment');
-    }
+      recommendations.push('Fix build errors before deployment')}
     
     if (!this.results.testsPassed) {
-      recommendations.push('Ensure all tests pass before merging');
-    }
+      recommendations.push('Ensure all tests pass before merging')}
     
     if (this.results.securityIssues > 0) {
-      recommendations.push('Address security vulnerabilities');
-    }
+      recommendations.push('Address security vulnerabilities')}
     
     if (this.results.performanceScore < 70) {
-      recommendations.push('Consider performance optimizations');
-    }
+      recommendations.push('Consider performance optimizations')}
 
     if (recommendations.length === 0) {
-      recommendations.push('All checks passed! Ready for deployment.');
-    }
+      recommendations.push('All checks passed! Ready for deployment.')}
 
-    return recommendations;
-  }
+    return recommendations}
 
   getOverallStatus() {
     if (this.results.buildSuccess && this.results.testsPassed && this.results.securityIssues === 0) {
-      return 'READY_FOR_DEPLOYMENT';
-    } else if (this.results.buildSuccess) {
-      return 'NEEDS_ATTENTION';
-    } else {
-      return 'CRITICAL_ISSUES';
-    }
+      return 'READY_FOR_DEPLOYMENT'} else if (this.results.buildSuccess) {
+      return 'NEEDS_ATTENTION'} else {
+      return 'CRITICAL_ISSUES'}
   }
 
   printSummary() {
@@ -182,8 +159,7 @@ class FinalAutomationSuite {
     this.log(`🧪 Tests: ${this.results.testsPassed ? 'PASSED' : 'FAILED'}`, this.results.testsPassed ? 'SUCCESS' : 'ERROR');
     this.log(`🔒 Security: ${this.results.securityIssues === 0 ? 'CLEAN' : 'ISSUES FOUND'}`, this.results.securityIssues === 0 ? 'SUCCESS' : 'WARN');
     this.log(`⚡ Performance: ${this.results.performanceScore.toFixed(1)}/100`, 'INFO');
-    this.log(`📋 Status: ${this.getOverallStatus()}`, 'INFO');
-  }
+    this.log(`📋 Status: ${this.getOverallStatus()}`, 'INFO')}
 
   async run() {
     this.log('🎯 Starting Final Automation Suite', 'INFO');
@@ -199,18 +175,15 @@ class FinalAutomationSuite {
       this.printSummary();
       
       this.log('🎉 Final Automation Suite completed!', 'SUCCESS');
-      return report;
-    } catch (error) {
+      return report} catch (error) {
       this.log(`💥 Automation failed: ${error.message}`, 'ERROR');
-      throw error;
-    }
+      throw error}
   }
 }
 
 // Run the final automation suite
 if (require.main === module) {
   const suite = new FinalAutomationSuite();
-  suite.run().catch(console.error);
-}
+  suite.run().catch(console.error)}
 
 module.exports = FinalAutomationSuite;

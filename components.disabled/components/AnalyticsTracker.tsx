@@ -11,33 +11,20 @@ interface AnalyticsTrackerProps {
     actio,
     n: string;
     label?: string;
-    value?: number;
-  }>
+    value?: number}>
 }
 
 const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({'
   pageName = 'Home',
-  customEvents = [],
-}) => {
+  customEvents = [] }) => {
   useEffect(() => {
     // Enhanced analytics tracking
-<<<<<<< HEAD:components/AnalyticsTracker.tsx
-    const trackPageView = () => {'
-      if (typeof window !== 'undefined' && window.gtag) {'
-        window.gtag('config', 'GA_MEASUREMENT_ID', {
-=======
-    const trackPageView = () => {
-      if (typeof window !== 'undefined' && window.gtag) {
-        window.gtag('config,GA_MEASUREMENT_ID', {
->>>>>>> main:components.disabled/components/AnalyticsTracker.tsx
+:components.disabled/components/AnalyticsTracker.tsx
           page_title: pageName,
           page_location: window.location.href,
           custom_map: {'
             custom_parameter_,
-    1: 'zion_tech_group',
-          },
-        });
-      }
+    1: 'zion_tech_group' } })}
     };
     // Track user engagement
     const trackEngagement = () => {
@@ -48,20 +35,10 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({'
           const timeSpent = Date.now() - startTime;
           if (timeSpent > 30000) {
             // 30 seconds
-<<<<<<< HEAD:components/AnalyticsTracker.tsx
-            // Track meaningful engagement'
-            if (typeof window !== 'undefined' && window.gtag) {'
-              window.gtag('event', 'engagement', {'
-=======
-            // Track meaningful engagement
-            if (typeof window !== 'undefined' && window.gtag) {
-              window.gtag('event,engagement', {
->>>>>>> main:components.disabled/components/AnalyticsTracker.tsx
+:components.disabled/components/AnalyticsTracker.tsx
                 event_category: 'user_behavior',
                 event_label: 'meaningful_engagement',
-                value: Math.floor(timeSpent / 1000),
-              });
-            }
+                value: Math.floor(timeSpent / 1000) })}
           }
         }
       };
@@ -70,18 +47,10 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({'
       const handleBeforeUnload = () => {
         isActive = false;
         const timeSpent = Date.now() - startTime;
-<<<<<<< HEAD:components/AnalyticsTracker.tsx
-        if (typeof window !== 'undefined' && window.gtag) {'
-          window.gtag('event', 'page_exit', {'
-=======
-        if (typeof window !== 'undefined' && window.gtag) {
-          window.gtag('event,page_exit', {
->>>>>>> main:components.disabled/components/AnalyticsTracker.tsx
+:components.disabled/components/AnalyticsTracker.tsx
             event_category: 'user_behavior',
             event_label: 'time_on_page',
-            value: Math.floor(timeSpent / 1000),
-          });
-        }
+            value: Math.floor(timeSpent / 1000) })}
       };
 
       // Track scroll depth
@@ -89,54 +58,22 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({'
         const scrollDepth = Math.round(
           (window.scrollY / (document.body.scrollHeight - window.innerHeight)) *
             100
-<<<<<<< HEAD:components/AnalyticsTracker.tsx
-        )
-=======
-        );
-
-<<<<<<< HEAD:components/AnalyticsTracker.tsx
-        if (scrollDepth >= 25 && scrollDepth < 50) {'
-          if (typeof window !== 'undefined' && window.gtag) {'
-            window.gtag('event', 'scroll', {'
-=======
->>>>>>> main:components.disabled/components/AnalyticsTracker.tsx
+:components.disabled/components/AnalyticsTracker.tsx
         if (scrollDepth >= 25 && scrollDepth < 50) {
           if (typeof window !== 'undefined' && window.gtag) {
-            window.gtag('event,scroll', {
->>>>>>> main:components.disabled/components/AnalyticsTracker.tsx
+            window.gtag('event,scroll' {
+:components.disabled/components/AnalyticsTracker.tsx
               event_category: 'user_behavior',
               event_label: '25_percent_scroll',
-              value: scrollDepth,
-            });
-          }
-<<<<<<< HEAD:components/AnalyticsTracker.tsx
-        } else if (scrollDepth >= 50 && scrollDepth < 75) {'
-          if (typeof window !== 'undefined' && window.gtag) {'
-            window.gtag('event', 'scroll', {'
-=======
-        } else if (scrollDepth >= 50 && scrollDepth < 75) {
-          if (typeof window !== 'undefined' && window.gtag) {
-            window.gtag('event,scroll', {
->>>>>>> main:components.disabled/components/AnalyticsTracker.tsx
+              value: scrollDepth })}
+:components.disabled/components/AnalyticsTracker.tsx
               event_category: 'user_behavior',
               event_label: '50_percent_scroll',
-              value: scrollDepth,
-            });
-          }
-<<<<<<< HEAD:components/AnalyticsTracker.tsx
-        } else if (scrollDepth >= 75) {'
-          if (typeof window !== 'undefined' && window.gtag) {'
-            window.gtag('event', 'scroll', {'
-=======
-        } else if (scrollDepth >= 75) {
-          if (typeof window !== 'undefined' && window.gtag) {
-            window.gtag('event,scroll', {
->>>>>>> main:components.disabled/components/AnalyticsTracker.tsx
+              value: scrollDepth })}
+:components.disabled/components/AnalyticsTracker.tsx
               event_category: 'user_behavior',
               event_label: '75_percent_scroll',
-              value: scrollDepth,
-            });
-          }
+              value: scrollDepth })}
         }
       };
       // Track button clicks
@@ -147,18 +84,10 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({'
             target.textContent ||'
             target.closest('button')?.textContent ||'
             'Unknown';
-<<<<<<< HEAD:components/AnalyticsTracker.tsx
-          if (typeof window !== 'undefined' && window.gtag) {'
-            window.gtag('event', 'click', {'
-=======
-          if (typeof window !== 'undefined' && window.gtag) {
-            window.gtag('event,click', {
->>>>>>> main:components.disabled/components/AnalyticsTracker.tsx
+:components.disabled/components/AnalyticsTracker.tsx
               event_category: 'button_click',
               event_label: buttonText,
-              page_title: pageName,
-            });
-          }
+              page_title: pageName })}
         }
       };
 
@@ -172,26 +101,16 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({'
           target.tagName === 'INPUT' ||'
           target.tagName === 'TEXTAREA' ||'
           target.tagName === 'SELECT'
-<<<<<<< HEAD:components/AnalyticsTracker.tsx
-        ) {'
-          if (typeof window !== 'undefined' && window.gtag) {'
-            window.gtag('event', 'form_interaction', {'
-=======
-        ) {
-          if (typeof window !== 'undefined' && window.gtag) {
-            window.gtag('event,form_interaction', {
->>>>>>> main:components.disabled/components/AnalyticsTracker.tsx
+:components.disabled/components/AnalyticsTracker.tsx
               event_category: 'form_engagement',
               event_label: target.name || target.id || 'unknown_field',
-              page_title: pageName,
-            });
-          }
+              page_title: pageName })}
         }
       };
 
       // Set up event listeners'
       window.addEventListener('beforeunload', handleBeforeUnload);
-      window.addEventListener('scroll', trackScrollDepth, { passive: true });
+      window.addEventListener('scroll', trackScrollDepth { passive: true });
       document.addEventListener('click', trackButtonClicks);
       document.addEventListener('focus', trackFormInteractions, true);
       // Track time on page every 30 seconds
@@ -201,44 +120,31 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({'
         window.removeEventListener('scroll', trackScrollDepth);
         document.removeEventListener('click', trackButtonClicks);
         document.removeEventListener('focus', trackFormInteractions, true);
-        clearInterval(interval);
-      };
-    };
+        clearInterval(interval)}};
 
     // Track custom events
     const trackCustomEvents = () => {
       customEvents.forEach(event => {'
         if (typeof window !== 'undefined' && window.gtag) {'
-          window.gtag('event', event.event, {
+          window.gtag('event', event.event {
             event_category: event.category,
             event_label: event.label,
-            value: event.value,
-          });
-        }
-      });
-    };
+            value: event.value })}
+      })};
 
     // Initialize tracking
     trackPageView();
     const cleanup = trackEngagement();
     trackCustomEvents();
 
-    return cleanup;
-  }, [pageName, customEvents])
+    return cleanup}, [pageName, customEvents])
   return (
     <Head>
       {/* Google Analytics 4 */}
       <script
-<<<<<<< HEAD:components/AnalyticsTracker.tsx
-        async'
-=======
-        async
-<<<<<<< HEAD:components/AnalyticsTracker.tsx
-        src="https: //www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
-=======
->>>>>>> main:components.disabled/components/AnalyticsTracker.tsx
+:components.disabled/components/AnalyticsTracker.tsx
         src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
->>>>>>> main:components.disabled/components/AnalyticsTracker.tsx
+:components.disabled/components/AnalyticsTracker.tsx
       />
       <script
         dangerouslySetInnerHTML={{"
@@ -247,38 +153,20 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({'
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments)}`
             gtag('js', new Date());
-<<<<<<< HEAD:components/AnalyticsTracker.tsx
-            gtag('config', 'GA_MEASUREMENT_ID', {'
-              page_title: '${pageName}, page_location: window.location.href,
-=======
-<<<<<<< HEAD:components/AnalyticsTracker.tsx
-            gtag('config', 'GA_MEASUREMENT_ID', {
-=======
-            gtag('config,GA_MEASUREMENT_ID', {
->>>>>>> main:components.disabled/components/AnalyticsTracker.tsx
+:components.disabled/components/AnalyticsTracker.tsx
               page_title: '${pageName}', page_location: window.location.href,
->>>>>>> main:components.disabled/components/AnalyticsTracker.tsx
+:components.disabled/components/AnalyticsTracker.tsx
               send_page_view: true
             });
-          `,
-        }}
+          ` }}
       />
       {/* Enhanced E-commerce Tracking */}
       <script
         dangerouslySetInnerHTML={{`
           __html: `
             // Track service interest
-<<<<<<< HEAD:components/AnalyticsTracker.tsx
-            function trackServiceInterest(serviceName, category) {`
-              gtag('event', 'view_item', {'
-=======
-            function trackServiceInterest(serviceName, category) {
-<<<<<<< HEAD:components/AnalyticsTracker.tsx
-              gtag('event', 'view_item', {
-=======
-              gtag('event,view_item', {
->>>>>>> main:components.disabled/components/AnalyticsTracker.tsx
->>>>>>> main:components.disabled/components/AnalyticsTracker.tsx
+:components.disabled/components/AnalyticsTracker.tsx
+:components.disabled/components/AnalyticsTracker.tsx
                 event_category: 'service_interest', event_label: serviceName,
                 items: [{
                   item_i,
@@ -288,46 +176,20 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({'
               })}
 
             // Track contact form submissions
-<<<<<<< HEAD:components/AnalyticsTracker.tsx
-            function trackContactSubmission(formType) {'
-              gtag('event', 'generate_lead', {'
-=======
-            function trackContactSubmission(formType) {
-<<<<<<< HEAD:components/AnalyticsTracker.tsx
-              gtag('event', 'generate_lead', {
-=======
-              gtag('event,generate_lead', {
->>>>>>> main:components.disabled/components/AnalyticsTracker.tsx
->>>>>>> main:components.disabled/components/AnalyticsTracker.tsx
+:components.disabled/components/AnalyticsTracker.tsx
+:components.disabled/components/AnalyticsTracker.tsx
                 event_category: 'contact', event_label: formType,
                 value: 1
               })}
 
             // Track demo requests
-<<<<<<< HEAD:components/AnalyticsTracker.tsx
-            function trackDemoRequest(demoType) {'
-              gtag('event', 'request_demo', {'
-=======
-            function trackDemoRequest(demoType) {
-<<<<<<< HEAD:components/AnalyticsTracker.tsx
-              gtag('event', 'request_demo', {
-=======
-              gtag('event,request_demo', {
->>>>>>> main:components.disabled/components/AnalyticsTracker.tsx
->>>>>>> main:components.disabled/components/AnalyticsTracker.tsx
+:components.disabled/components/AnalyticsTracker.tsx
+:components.disabled/components/AnalyticsTracker.tsx
                 event_category: 'demo', event_label: demoType,
                 value: 1
               })}
-          `,
-        }}
+          ` }}
       />
     </Head>
-  );
-};
-<<<<<<< HEAD:components/AnalyticsTracker.tsx
-export default AnalyticsTracker
-=======
-
-export default AnalyticsTracker;
-`
->>>>>>> main:components.disabled/components/AnalyticsTracker.tsx
+  )};
+:components.disabled/components/AnalyticsTracker.tsx

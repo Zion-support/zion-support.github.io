@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-import SEO from '../components/SEO';
-import { Button } from '../components/ui/Button';
-import { Card } from '../components/ui/Card';
-import { Badge } from '../components/ui/Badge';
-=======
+
 import React from
   'react';
 import { motion } from
@@ -94,10 +87,7 @@ const WhitePapers: React.FC = () => {
   ];
 
   const categories = [
-    { name: "All Categories", count: 24, active: true }, { name: "AI Strategy", count: 6, active: false },
-    { name: "Security", count: 4, active: false }, { name: "Cloud Computing", count: 5, active: false },
-    { name: "Analytics", count: 3, active: false }, { name: "Customer Experience", count: 3, active: false },
-    { name: "Digital Transformation", count: 2, active: false }, { name: "Other", count: 1, active: false }
+    { name: "All Categories", count: 24, active: true }, { name: "AI Strategy", count: 6, active: false }, { name: "Security", count: 4, active: false }, { name: "Cloud Computing", count: 5, active: false }, { name: "Analytics", count: 3, active: false }, { name: "Customer Experience", count: 3, active: false }, { name: "Digital Transformation", count: 2, active: false }, { name: "Other", count: 1, active: false }
   ];
 
   const featuredPaper = whitePapers.find(paper => paper.featured);
@@ -131,8 +121,7 @@ const WhitePapers: React.FC = () => {
         </div>
       </section>
 
-      {/* Featured White Paper */}
-      {featuredPaper && (
+      {/* Featured White Paper */}, {featuredPaper && (
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
@@ -193,9 +182,7 @@ const WhitePapers: React.FC = () => {
             </motion.div>
           </div>
         </section>
-      )}
-
-      {/* White Papers Grid */}
+      )}, {/* White Papers Grid */}
       <section className="py-20 px-4 sm: px-6 lg:px-8 bg-slate-800/50">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col lg:flex-row gap-8">
@@ -417,7 +404,6 @@ const WhitePapers: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default WhitePapers;

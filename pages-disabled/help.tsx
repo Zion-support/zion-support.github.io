@@ -14,48 +14,40 @@ const HelpCenter: NextPage = () => {
         {
           question: 'How do I get started with Zion Tech Group services?',
           answer: 'Getting started is easy! Simply contact us through our contact form or call us directly. We\'ll schedule a free consultation to understand your needs and provide a customized solution.'
-        },
-        {
+        }, {
           question: 'What services do you offer?',
           answer: 'We offer comprehensive technology solutions including AI development, cloud migration, custom software development, digital transformation, and IT consulting services.'
-        },
-        {
+        }, {
           question: 'How long does a typical project take?',
           answer: 'Project timelines vary based on complexity and scope. Simple projects may take 2-4 weeks, while complex enterprise solutions can take 6-12 months. We provide detailed timelines during the consultation phase.'
         }
       ]
-    },
-    {
+    }, {
       title: 'Technical Support',
       icon: HelpCircle,
       questions: [
         {
           question: 'Do you provide ongoing technical support?',
           answer: 'Yes! We offer 24/7 technical support for all our clients. Our support team is available via phone, email, and live chat to assist with any technical issues.'
-        },
-        {
+        }, {
           question: 'What is your response time for support requests?',
           answer: 'We guarantee response times of 2 hours for critical issues, 4 hours for high priority issues, and 24 hours for standard support requests.'
-        },
-        {
+        }, {
           question: 'Do you offer training for new systems?',
           answer: 'Absolutely! We provide comprehensive training sessions for all new systems and technologies we implement. This includes user training, administrator training, and documentation.'
         }
       ]
-    },
-    {
+    }, {
       title: 'Billing & Pricing',
       icon: FileText,
       questions: [
         {
           question: 'How do you structure your pricing?',
           answer: 'Our pricing is flexible and depends on project scope, complexity, and timeline. We offer fixed-price projects, hourly rates, and retainer agreements. Contact us for a customized quote.'
-        },
-        {
+        }, {
           question: 'Do you offer payment plans?',
           answer: 'Yes, we offer flexible payment plans for larger projects. We typically require a deposit upfront and then milestone-based payments throughout the project.'
-        },
-        {
+        }, {
           question: 'What payment methods do you accept?',
           answer: 'We accept all major credit cards, bank transfers, and corporate purchase orders. We also accept cryptocurrency payments for certain projects.'
         }
@@ -70,15 +62,13 @@ const HelpCenter: NextPage = () => {
       description: 'Call us directly for immediate assistance',
       contact: '+1 302 464 0950',
       availability: '24/7 Available'
-    },
-    {
+    }, {
       icon: Mail,
       title: 'Email Support',
       description: 'Send us an email and we\'ll respond quickly',
       contact: 'kleber@ziontechgroup.com',
       availability: 'Response within 2-4 hours'
-    },
-    {
+    }, {
       icon: MessageCircle,
       title: 'Live Chat',
       description: 'Chat with our support team in real-time',
@@ -93,20 +83,17 @@ const HelpCenter: NextPage = () => {
       title: 'Documentation',
       description: 'Comprehensive guides and technical documentation',
       link: '/documentation'
-    },
-    {
+    }, {
       icon: Video,
       title: 'Video Tutorials',
       description: 'Step-by-step video guides for common tasks',
       link: '/tutorials'
-    },
-    {
+    }, {
       icon: FileText,
       title: 'Knowledge Base',
       description: 'Searchable database of articles and solutions',
       link: '/knowledge-base'
-    },
-    {
+    }, {
       icon: Users,
       title: 'Community Forum',
       description: 'Connect with other users and get peer support',
@@ -279,7 +266,6 @@ const HelpCenter: NextPage = () => {
         </section>
       </div>
     </MainLayout>
-  );
-};
+  )};
 
 export default HelpCenter;

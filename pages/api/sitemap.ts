@@ -62,12 +62,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       <lastmod>${new Date().toISOString()}</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
-    </url>`;
-    })
+    </url>`})
     .join('')}
 </urlset>`;
 
   res.setHeader('Content-Type', 'text/xml');
   res.write(sitemap);
-  res.end();
-}
+  res.end()}

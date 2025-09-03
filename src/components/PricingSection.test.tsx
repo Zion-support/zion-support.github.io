@@ -11,5 +11,4 @@ export default function PricingSection.test() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

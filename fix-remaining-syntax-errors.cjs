@@ -6,18 +6,15 @@ const path = require('path');
 class TargetedSyntaxFixer {
   constructor() {
     this.projectRoot = process.cwd();
-    this.fixedFiles = [];
-  }
+    this.fixedFiles = []}
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
-  }
+    console.log(`[${new Date().toISOString()}] ${message}`)}
 
   fixSpecificErrors(filePath) {
     try {
       if (!fs.existsSync(filePath)) {
-        return false;
-      }
+        return false}
 
       let content = fs.readFileSync(filePath, 'utf8');
       let originalContent = content;
@@ -66,22 +63,18 @@ class TargetedSyntaxFixer {
         const newContent = content.replace(fix.pattern, fix.replacement);
         if (newContent !== content) {
           content = newContent;
-          changes++;
-        }
+          changes++}
       });
 
       if (changes > 0) {
         fs.writeFileSync(filePath, content, 'utf8');
         this.fixedFiles.push({ file: filePath, changes });
         this.log(`✅ Fixed ${changes} issues in ${filePath}`);
-        return true;
-      }
+        return true}
 
-      return false;
-    } catch (error) {
+      return false} catch (error) {
       this.log(`❌ Error fixing ${filePath}: ${error.message}`);
-      return false;
-    }
+      return false}
   }
 
   async fixAllFiles() {
@@ -98,13 +91,11 @@ class TargetedSyntaxFixer {
     for (const file of filesToFix) {
       const fullPath = path.join(this.projectRoot, file);
       if (this.fixSpecificErrors(fullPath)) {
-        fixedCount++;
-      }
+        fixedCount++}
     }
 
     this.log(`🎉 Fixed ${fixedCount} files with targeted syntax errors`);
-    return { fixed: this.fixedFiles };
-  }
+    return { fixed: this.fixedFiles }}
 }
 
 // Run the fixer
@@ -112,9 +103,7 @@ const fixer = new TargetedSyntaxFixer();
 fixer.fixAllFiles()
   .then(result => {
     console.log('\n🎯 Targeted syntax fixing completed!');
-    process.exit(0);
-  })
+    process.exit(0)})
   .catch(error => {
     console.error('❌ Fatal error:', error);
-    process.exit(1);
-  });
+    process.exit(1)});

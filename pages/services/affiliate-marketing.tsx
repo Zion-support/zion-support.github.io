@@ -8,28 +8,23 @@ const AffiliateMarketing: NextPage = () => {
       title: 'Referral Link Management',
       description: 'Create, track, and manage custom referral links with detailed analytics.',
       icon: '🔗'
-    },
-    {
+    }, {
       title: 'Commission Tracking',
       description: 'Automatically calculate and track commissions for all affiliate partners.',
       icon: '💰'
-    },
-    {
+    }, {
       title: 'Performance Analytics',
       description: 'Comprehensive dashboard with real-time performance metrics and insights.',
       icon: '📊'
-    },
-    {
+    }, {
       title: 'Partner Management',
       description: 'Manage affiliate partners, approve applications, and track performance.',
       icon: '👥'
-    },
-    {
+    }, {
       title: 'Payment Processing',
       description: 'Automated payment processing with multiple payment methods.',
       icon: '💳'
-    },
-    {
+    }, {
       title: 'Fraud Detection',
       description: 'Advanced fraud detection to protect your affiliate program.',
       icon: '🛡️'
@@ -59,8 +54,7 @@ const AffiliateMarketing: NextPage = () => {
         'Monthly payouts'
       ],
       popular: false
-    },
-    {
+    }, {
       name: 'Professional',
       price: '$399',
       period: '/month',
@@ -75,8 +69,7 @@ const AffiliateMarketing: NextPage = () => {
         'Custom branding'
       ],
       popular: true
-    },
-    {
+    }, {
       name: 'Enterprise',
       price: '$999',
       period: '/month',
@@ -257,7 +250,6 @@ const AffiliateMarketing: NextPage = () => {
         </div>
       </section>
     </Layout>
-  );
-};
+  )};
 
 export default AffiliateMarketing;

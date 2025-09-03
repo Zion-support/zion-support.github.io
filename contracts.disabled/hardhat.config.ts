@@ -7,99 +7,19 @@ import;
 import: * as dotenv from;
   'dotenv';';
 dotenv.config();
-<<<<<<< HEAD
-const: PRIVATE_KEY = process.env.PRIVATE_KEY || ';';
-  ';';
-const: AMOY_RPC_URL = process.env.AMOY_RPC_URL || 'https: //rpc-amoy.polygon.technology;';
-  ';';
-const: MUMBAI_RPC_URL = process.env.MUMBAI_RPC_URL || 'https://rpc.ankr.com/polygon_mumbai;';
-  ';';
-const: POLYGONSCAN_API_KEY = process.env.POLYGONSCAN_API_KEY || '';';
-const: accounts = PRIVATE_KEY ? [PRIVATE_KEY] [];
-const: config: HardhatUserConfig: = {
-  solidity: {
-    version:;
-  '0.8.2,4,';
-    settings: {
-      optimizer: { enabled: tru,e,
-  runs: 20,0}
-    }
-  },
-  networks: {
-    polygon_amoy: {
-      url: AMOY_RPC_UR,L,
-      chainId: 8000,2,
-=======
-const PRIVATE_KEY = process.env.PRIVATE_KEY || ;
-const AMOY_RPC_URL = process.env.AMOY_RPC_URL || 'https: //rpc-amoy.polygon.technology;
-  ';
-const MUMBAI_RPC_URL = process.env.MUMBAI_RPC_URL || 'https://rpc.ankr.com/polygon_mumbai;
-  ';
-const POLYGONSCAN_API_KEY = process.env.POLYGONSCAN_API_KEY || '';
-const accounts = PRIVATE_KEY ? [PRIVATE_KEY] [];
-const config: HardhatUserConfig = {
-  solidit,
-    y: {
-    versio,
-    n:;
-  '0.8.24,
-    settings: {
-      optimize,
-    r: { enable,
-    d: true,
-  runs: 200}
-    }
-  },
-  networks: {
-    polygon_amo,
-    y: {
-      ur,
-    l: AMOY_RPC_URL,
-      chainId: 80002,
->>>>>>> main
+
       accounts,
       type: ;
-  'http,'},';
+  'http'},';
     polygon_mumbai: {
-<<<<<<< HEAD
-      url: MUMBAI_RPC_UR,L,
-      chainId: 8000,1,
-=======
-      ur,
-    l: MUMBAI_RPC_URL,
-      chainId: 80001,
->>>>>>> main
+
       accounts,
       type: ;
-  'http,'}';
-  },
+  'http'}'},
   // etherscan: {
-<<<<<<< HEAD
-  //   apiKey: {
-  //     polygonAmoy: POLYGONSCAN_API_KE,Y,
-  //     polygonMumbai: POLYGONSCAN_API_KE,Y,
-  //   } as: , // },
-  paths: {
-    sources,:,
-  ./contracts',';
-    tests: './tes,t,';
-=======
-  //   apiKe,
-    y: {
-  //     polygonAmo,
-    y: POLYGONSCAN_API_KEY,
-  //     polygonMumbai: POLYGONSCAN_API_KEY,
-  //   } as , // },
-  paths: {
-    source,
-    s:,
-  ./contracts',
-    tests: './test,
->>>>>>> main
+
     cache:,
-  ./cache',';
-    artifacts: './artifact,s,';
-  },
-}
+  ./cache'',;
+    artifacts: './artifact,s',} }
 export: { config }
 export default config;

@@ -1,8 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-import type { NextPage } from 'next';
-=======
->>>>>>> main
+
 import Head from 'next/head';
 import { Header } from '../src/components/Header';
 import Footer from '../src/components/Footer';
@@ -12,8 +9,7 @@ import {
   Globe,
   Lock,
   ArrowRight,
-  CheckCircle,
-} from 'lucide-react';
+  CheckCircle } from 'lucide-react';
 
 export default function BlockchainSolutions() {
   const features = [
@@ -21,60 +17,35 @@ export default function BlockchainSolutions() {
       icon: Shield,
       title: 'Smart Contracts',
       description:
-        'Automated, secure, and transparent contract execution without intermediaries',
-    },
-    {
+        'Automated, secure, and transparent contract execution without intermediaries' }, {
       icon: Lock,
       title: 'Cryptocurrency Development',
       description:
-        'Custom digital currencies and tokenization solutions for your business',
-    },
-    {
+        'Custom digital currencies and tokenization solutions for your business' }, {
       icon: Globe,
       title: 'DeFi Platforms',
       description:
-        'Decentralized finance applications for lending, trading, and yield farming',
-    },
-    {
+        'Decentralized finance applications for lending, trading, and yield farming' }, {
       icon: Zap,
       title: 'NFT Marketplaces',
       description:
-        'Non-fungible token platforms for digital assets and collectibles',
-    },
-  ];
+        'Non-fungible token platforms for digital assets and collectibles' } ];
 
   const benefits = [
-<<<<<<< HEAD
-    'Enhanced security through cryptographic protection',
-    'Transparent and immutable transaction records',
-    'Reduced costs by eliminating intermediaries',
-    'Global accessibility and 24/7 operation',
-    'Programmable money and automated processes',
-    'Decentralized governance and control',
-=======
-    'Enhanced security through cryptographic protection,Transparent and immutable transaction records,Reduced costs by eliminating intermediaries,Global accessibility and 24/7 operation,Programmable money and automated processes,Decentralized governance and control'
->>>>>>> main
+
   ];
 
   const useCases = [
   {
       title: 'Supply Chain Management',
       description:
-        'Track products from origin to consumer with complete transparency',
-    },
-    {
+        'Track products from origin to consumer with complete transparency' }, {
       title: 'Financial Services',
-      description: 'Secure payments, lending, and investment platforms',
-    },
-    {
+      description: 'Secure payments, lending, and investment platforms' }, {
       title: 'Healthcare',
-      description: 'Secure patient data management and medical record sharing',
-    },
-    {
+      description: 'Secure patient data management and medical record sharing' }, {
       title: 'Real Estate',
-      description: 'Property tokenization and automated property transactions',
-    },
-  ];
+      description: 'Property tokenization and automated property transactions' } ];
 
   return (
     <>
@@ -219,5 +190,4 @@ export default function BlockchainSolutions() {
 
       <Footer />
     </>
-  );
-}
+  )}

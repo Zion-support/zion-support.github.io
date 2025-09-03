@@ -11,5 +11,4 @@ export default function ErrorFallback() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

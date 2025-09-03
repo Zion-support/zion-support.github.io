@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-#!/''usr/bin/env'' node;
-=======
-#!/'usr/bin/env' node;
 
->>>>>>> main
 const fs = require('fs');
 const path = require('path');
 const { execSync, spawn } = require('child_process');
@@ -13,150 +8,45 @@ class IntelligentConflictResolver {;
     this.projectRoot = process.cwd();
     this.logsDir = path.join(this.projectRoot, 'logs');
     this.ensureLogsDirectory();
-    this.setupLogging();
-  }
+    this.setupLogging()}
 ;
   ensureLogsDirectory() {;
     if (!fs.existsSync(this.logsDir)) {;
-      fs.mkdirSync(this.logsDir, { recursive: true });
-    }
-  }
-<<<<<<< HEAD
-
-  setupLogging() {
-    this.logFile = path.join(this.logsDir, 'intelligent-conflict-resolver.log`);
-    this.errorFile = path.join(
-      this.logsDir,intelligent-conflict-resolver-error.log`
-    );
+      fs.mkdirSync(this.logsDir { recursive: true })}
   }
 
-  log(message, level = `INFO`) {
-=======
-;
-  setupLogging() {;
-    this.logFile = path.join(this.logsDir, 'intelligent-conflict-resolver.log');
-    this.errorFile = path.join(;
-      this.logsDir,intelligent-conflict-resolver-error.log';
-    );
-  }
-;
-  log(message, level = 'INFO') {;
->>>>>>> main
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}`;
 ;
     console.log(`logMessage);
-<<<<<<< HEAD
 
-    // Write to log file;
-    fs.appendFileSync(this.logFile, logMessage + `\n`);
-
-    // Write errors to error file;
-    if (level === `ERROR`) {
-=======
-;
-    // Write to log file;
-    fs.appendFileSync(this.logFile, logMessage + '\n');
-;
-    // Write errors to error file;
-    if (level === 'ERROR') {;
->>>>>>> main
-      fs.appendFileSync(this.errorFile, logMessage + '\n');
-    }
+      fs.appendFileSync(this.errorFile, logMessage + '\n')}
   }
 ;
   async checkForConflicts() {;
     this.log('Checking for merge conflicts...');
-<<<<<<< HEAD
 
-    try {
-      // Check git status for conflicts;
-      const status = execSync('git status --porcelain', { encoding: 'utf8' });
-      const conflictFiles = status;
-        .split('\n')
-        .filter(line => line.startsWith(`UU `))
-        .map(line => line.substring(3));
+        return []}
 
-      if (conflictFiles.length === 0) {
-        this.log(`No merge conflicts detected`);
-=======
-;
-    try {;
-      // Check git status for conflicts;
-      const status = execSync('git status --porcelain', { encoding: 'utf8' });
-      const conflictFiles = status;
-        .split('\n');
-        .filter(line => line.startsWith('UU '));
-        .map(line => line.substring(3));
-<<<<<<< HEAD
-;
-      if (conflictFiles.length === 0) {;
-        this.log('No merge conflicts detected');
->>>>>>> main
-        return [];
-      }
-=======
-
-      if (conflictFiles.length === 0) {`);
-        this.log('No merge conflicts detected');`);
-        return [];`);
-      }`);
->>>>>>> main
 this.log(Found ${conflictFiles.length} files with merge conflicts`);
-      return conflictFiles;
-    } catch (error) {  this.log(`Failed to check for conflicts: ${error.message  }`, `ERROR`);
-      return [];
-    }
+      return conflictFiles} catch (error) {  this.log(`Failed to check for conflicts: ${error.message  }`, `ERROR`);
+      return []}
   }
 ;
-  async analyzeConflictFile(filePath) {this.log(`Analyzing conflict in ${filePath}`);
-<<<<<<< HEAD
-
-    try {
-      const content = fs.readFileSync(filePath, `utf8`);
-      const conflictMarkers = this.extractConflictMarkers(content);
-
-      if (conflictMarkers.length === 0) {
-        return { type: `no-conflict`, resolvable: false };
-=======
-;
-    try {;
-      const content = fs.readFileSync(filePath, 'utf8');
-      const conflictMarkers = this.extractConflictMarkers(content);
-;
-      if (conflictMarkers.length === 0) {;
-        return { type: 'no-conflict', resolvable: false };
->>>>>>> main
-      }
+  async analyzeConflictFile(filePath) {this.log(`Analyzing conflict in ${filePath}`)}
 ;
       const analysis = {;
         filePath,;
         type: this.determineConflictType(conflictMarkers),;
         markers: conflictMarkers,;
         resolvable: this.canAutoResolve(conflictMarkers),;
-        recommendations: [],;
-      };
-<<<<<<< HEAD
+        recommendations: [],};
 
-      // Generate resolution recommendations;
-      if (analysis.resolvable) {
-        analysis.recommendations = this.generateResolutionStrategy(
-          conflictMarkers,
-=======
-;
-      // Generate resolution recommendations;
-      if (analysis.resolvable) {;
-        analysis.recommendations = this.generateResolutionStrategy(;
-          conflictMarkers,;
->>>>>>> main
           filePath;
-        );
-      }
+        )}
 ;
-      return analysis;
-    } catch (error) {  this.log(`Failed to analyze ${filePath  }: ${error.message}`, `ERROR`);
-      return { type: `error`, resolvable: false, error: error.message };
-    }
+      return analysis} catch (error) {  this.log(`Failed to analyze ${filePath  }: ${error.message}`, `ERROR`);
+      return { type: `error`, resolvable: false, error: error.message }}
   }
 ;
   extractConflictMarkers(content) {;
@@ -170,49 +60,24 @@ this.log(Found ${conflictFiles.length} files with merge conflicts`);
         const marker = {;
           start: i,;
           startMarker: line,;
-          branch: line.substring(7).trim(),;
-        };
-<<<<<<< HEAD
+          branch: line.substring(7).trim(),};
 
-        // Find the separator;
-        for (let j = i + 1; j < lines.length; j++) {
-          if (lines[j].startsWith('=======')) {
-=======
-;
-        // Find the separator;
-        for (let j = i + 1; j < lines.length; j++) {;
-          if (lines[j].startsWith('=======')) {;
->>>>>>> main
             marker.separator = j;
-            break;
-          }
+            break}
         }
-<<<<<<< HEAD
 
-        // Find the end marker;
-        for (let j = marker.separator + 1; j < lines.length; j++) {
-          if (lines[j].startsWith('>>>>>>>')) {
-=======
-;
-        // Find the end marker;
-        for (let j = marker.separator + 1; j < lines.length; j++) {;
-          if (lines[j].startsWith('>>>>>>>')) {;
->>>>>>> main
             marker.end = j;
             marker.endMarker = lines[j];
             marker.otherBranch = lines[j].substring(8).trim();
-            break;
-          }
+            break}
         }
 ;
         if (marker.end) {;
-          markers.push(marker);
-        }
+          markers.push(marker)}
       }
     }
 ;
-    return markers;
-  }
+    return markers}
 ;
   determineConflictType(markers) {;
     const types = markers.map(marker => {;
@@ -229,34 +94,27 @@ this.log(Found ${conflictFiles.length} files with merge conflicts`);
       if (this.isImportConflict(startContent, endContent)) return 'import';
       if (this.isStyleConflict(startContent, endContent)) return 'style';
 ;
-      return 'unknown';
-    });
+      return 'unknown'});
 ;
-    return types[0] || 'unknown';
-  }
+    return types[0] || 'unknown'}
 ;
   getConflictContent(marker, side) {;
     if (side === 'start') {;
-      return marker.startMarker;
-    } else if (side === 'end') {;
-      return marker.endMarker;
-    }
-    return ';
-  }
+      return marker.startMarker} else if (side === 'end') {;
+      return marker.endMarker}
+    return '}
 ;
   isPackageJsonConflict(startContent, endContent) {;
     return (;
       startContent.includes('package.json') ||;
       endContent.includes('package.json');
-    );
-  }
+    )}
 ;
   isLockFileConflict(startContent, endContent) {;
     return (;
       startContent.includes('package-lock.json') ||;
       endContent.includes('yarn.lock');
-    );
-  }
+    )}
 ;
   isConfigFileConflict(startContent, endContent) {;
     return (;
@@ -264,8 +122,7 @@ this.log(Found ${conflictFiles.length} files with merge conflicts`);
       startContent.includes('vite.config') ||;
       startContent.includes('webpack.config') ||;
       startContent.includes('eslint');
-    );
-  }
+    )}
 ;
   isComponentConflict(startContent, endContent) {;
     return (;
@@ -273,12 +130,10 @@ this.log(Found ${conflictFiles.length} files with merge conflicts`);
       startContent.includes('useState') ||;
       startContent.includes('useEffect') ||;
       startContent.includes('className');
-    );
-  }
+    )}
 ;
   isImportConflict(startContent, endContent) {;
-    return startContent.includes('import ') || startContent.includes('export ');
-  }
+    return startContent.includes('import ') || startContent.includes('export ')}
 ;
   isStyleConflict(startContent, endContent) {;
     return (;
@@ -286,22 +141,13 @@ this.log(Found ${conflictFiles.length} files with merge conflicts`);
       startContent.includes('style=') ||;
       startContent.includes('css') ||;
       startContent.includes('tailwind');
-    );
-  }
-<<<<<<< HEAD
+    )}
 
-  canAutoResolve(markers) {
-=======
-;
-  canAutoResolve(markers) {;
->>>>>>> main
     // Can auto-resolve package.json, lock files, and some config conflicts;
     const autoResolvableTypes = ['package-json', 'lock-file', 'config-file'];
     return markers.some(marker => {;
       const type = this.determineConflictType([marker]);
-      return autoResolvableTypes.includes(type);
-    });
-  }
+      return autoResolvableTypes.includes(type)})}
 ;
   generateResolutionStrategy(markers, filePath) {;
     const strategies = [];
@@ -327,334 +173,97 @@ this.log(Found ${conflictFiles.length} files with merge conflicts`);
           break;
         case 'import':;
           strategies.push('Consolidate imports, removing duplicates');
-          break;
-<<<<<<< HEAD
-        case 'style':
-          strategies.push(`Merge style classes, avoiding conflicts`);
-          break;
-        default:
-          strategies.push(`Manual review required`);
-=======
-        case 'style':;
-          strategies.push('Merge style classes, avoiding conflicts');
-          break;
-        default:;
-          strategies.push('Manual review required');
->>>>>>> main
-      }
+          break}
     });
 ;
-    return strategies;
-  }
+    return strategies}
 ;
   async autoResolveConflict(filePath, analysis) {this.log(`Attempting to auto-resolve conflict in ${filePath}`);
-<<<<<<< HEAD
 
-    try {
-      const content = fs.readFileSync(filePath, `utf8`);
-=======
-;
-    try {;
-      const content = fs.readFileSync(filePath, 'utf8');
->>>>>>> main
       let resolvedContent = content;
 ;
       analysis.markers.forEach(marker => {;
         const type = this.determineConflictType([marker]);
-<<<<<<< HEAD
 
-        switch (type) {
-          case `package-json`:
-            resolvedContent = this.resolvePackageJsonConflict(
-              resolvedContent,
               marker;
             );
             break;
-          case `lock-file`:
-            resolvedContent = this.resolveLockFileConflict(
-              resolvedContent,
-              marker;
-            );
-            break;
-          case `config-file`:
-            resolvedContent = this.resolveConfigFileConflict(
-              resolvedContent,
-=======
-;
-        switch (type) {;
-          case 'package-json':;
-            resolvedContent = this.resolvePackageJsonConflict(;
-              resolvedContent,;
-              marker;
-            );
-            break;
-          case 'lock-file':;
-            resolvedContent = this.resolveLockFileConflict(;
-              resolvedContent,;
-              marker;
-            );
-            break;
-          case 'config-file':;
-            resolvedContent = this.resolveConfigFileConflict(;
-              resolvedContent,;
->>>>>>> main
-              marker;
-            );
-            break;
-          default:this.log(`Cannot auto-resolve ${type} conflict in ${filePath}`);
-        }
+          default:this.log(`Cannot auto-resolve ${type} conflict in ${filePath}`)}
       });
 ;
       if (resolvedContent !== content) {;
         fs.writeFileSync(filePath, resolvedContent);this.log(`Auto-resolved conflict in ${filePath}`);
-        return true;
-      }
+        return true}
 ;
-      return false;
-    } catch (error) {  this.log(`Failed to auto-resolve ${filePath  }: ${error.message}`, `ERROR`);
-      return false;
-    }
+      return false} catch (error) {  this.log(`Failed to auto-resolve ${filePath  }: ${error.message}`, `ERROR`);
+      return false}
   }
-<<<<<<< HEAD
 
-  resolvePackageJsonConflict(content, marker) {
-    // Simple strategy: take the version with more dependencies;
-    const startSection = this.getConflictSection(content, marker, `start`);
-    const endSection = this.getConflictSection(content, marker, `end`);
-
-    try {
-      const startJson = JSON.parse(startSection);
-      const endJson = JSON.parse(endSection);
-
-=======
-;
-  resolvePackageJsonConflict(content, marker) {;
-    // Simple strategy: take the version with more dependencies;
-    const startSection = this.getConflictSection(content, marker, 'start');
-    const endSection = this.getConflictSection(content, marker, 'end');
-;
-    try {;
-      const startJson = JSON.parse(startSection);
-      const endJson = JSON.parse(endSection);
-;
->>>>>>> main
       // Merge dependencies, preferring higher versions;
       const merged = { ...startJson };
 ;
       if (endJson.dependencies) {;
         merged.dependencies = {;
           ...merged.dependencies,;
-          ...endJson.dependencies,;
-        };
-      }
+          ...endJson.dependencies,}}
 ;
       if (endJson.devDependencies) {;
         merged.devDependencies = {;
           ...merged.devDependencies,;
-          ...endJson.devDependencies,;
-        };
-      }
+          ...endJson.devDependencies,}}
 ;
       return content.replace(;
         this.getConflictRange(content, marker),;
         JSON.stringify(merged, null, 2);
-      );
-    } catch (error) {  this.log(`Failed to parse package.json: ${error.message  }`, `WARN`);
-      return content;
-    }
-  }
-<<<<<<< HEAD
-
-  resolveLockFileConflict(content, marker) {
-    // For lock files, suggest regeneration;
-    this.log(`Lock file conflict detected - recommend running npm install`);
-    return content;
+      )} catch (error) {  this.log(`Failed to parse package.json: ${error.message  }`, `WARN`);
+      return content}
   }
 
-  resolveConfigFileConflict(content, marker) {
-    // For config files, prefer development settings;
-    const startSection = this.getConflictSection(content, marker, 'start');
-    const endSection = this.getConflictSection(content, marker, 'end');
-
-    // Simple strategy: take the section with more configuration options;
-    if (startSection.length > endSection.length) {
-      return content.replace(
-        this.getConflictRange(content, marker),
-        startSection;
-      );
-    } else {
-      return content.replace(
-        this.getConflictRange(content, marker),
-=======
-;
-  resolveLockFileConflict(content, marker) {;
-    // For lock files, suggest regeneration;
-    this.log('Lock file conflict detected - recommend running npm install');
-    return content;
-  }
-;
-  resolveConfigFileConflict(content, marker) {;
-    // For config files, prefer development settings;
-    const startSection = this.getConflictSection(content, marker, 'start');
-    const endSection = this.getConflictSection(content, marker, 'end');
-;
-    // Simple strategy: take the section with more configuration options;
-    if (startSection.length > endSection.length) {;
-      return content.replace(;
-        this.getConflictRange(content, marker),;
-        startSection;
-      );
-    } else {;
-      return content.replace(;
-        this.getConflictRange(content, marker),;
->>>>>>> main
         endSection;
-      );
-    }
+      )}
   }
 ;
   getConflictSection(content, marker, side) {;
     const lines = content.split('\n');
 ;
     if (side === 'start') {;
-      return lines.slice(marker.start + 1, marker.separator).join('\n');
-    } else {;
-      return lines.slice(marker.separator + 1, marker.end).join('\n');
-    }
+      return lines.slice(marker.start + 1, marker.separator).join('\n')} else {;
+      return lines.slice(marker.separator + 1, marker.end).join('\n')}
   }
 ;
   getConflictRange(content, marker) {;
     const lines = content.split('\n');
-    return lines.slice(marker.start, marker.end + 1).join('\n`);
-  }
-<<<<<<< HEAD
+    return lines.slice(marker.start, marker.end + 1).join('\n`)}
 
-  async generateConflictReport(conflicts) {
-    this.log(`Generating conflict resolution report...`);
-
-    try {
-      const report = {
-        timestamp: new Date().toISOString(),
-        summary: {
-          totalConflicts: conflicts.length,
-          autoResolvable: conflicts.filter(c => c.resolvable).length,
-          manualReview: conflicts.filter(c => !c.resolvable).length,
-        },
-        conflicts: conflicts,
-        recommendations: this.generateOverallRecommendations(conflicts),
-      };
-
-      const reportPath = path.join(
-        this.projectRoot,conflict-resolution-report.json`
-=======
-;
-  async generateConflictReport(conflicts) {;
-    this.log('Generating conflict resolution report...');
-;
-    try {;
-      const report = {;
-        timestamp: new Date().toISOString(),;
-        summary: {;
-          totalConflicts: conflicts.length,;
-          autoResolvable: conflicts.filter(c => c.resolvable).length,;
-          manualReview: conflicts.filter(c => !c.resolvable).length,;
-        },;
-        conflicts: conflicts,;
-        recommendations: this.generateOverallRecommendations(conflicts),;
-      };
-;
-      const reportPath = path.join(;
-        this.projectRoot,conflict-resolution-report.json';
->>>>>>> main
       );
       fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 this.log(`Conflict resolution report saved to ${reportPath}`);
-      return report;
-    } catch (error) {  this.log(`Failed to generate report: ${error.message  }`, `ERROR`);
-      throw error;
-    }
+      return report} catch (error) {  this.log(`Failed to generate report: ${error.message  }`, `ERROR`);
+      throw error}
   }
 ;
   generateOverallRecommendations(conflicts) {;
     const recommendations = [];
-<<<<<<< HEAD
 
-    if (conflicts.length === 0) {
-      recommendations.push(`No conflicts detected - repository is clean`);
-=======
-;
-    if (conflicts.length === 0) {;
-      recommendations.push('No conflicts detected - repository is clean');
->>>>>>> main
-      return recommendations;
-    }
+      return recommendations}
 ;
     const autoResolvable = conflicts.filter(c => c.resolvable);
     const manualReview = conflicts.filter(c => !c.resolvable);
-<<<<<<< HEAD
 
-    if (autoResolvable.length > 0) {
-      recommendations.push(Auto-resolve ${autoResolvable.length} conflicts using intelligent resolution`
-=======
-;
-    if (autoResolvable.length > 0) {;
-      recommendations.push(Auto-resolve ${autoResolvable.length} conflicts using intelligent resolution';
->>>>>>> main
-      );
-    }
+      )}
 ;
     if (manualReview.length > 0) {;
       recommendations.push( `Manually review ${manualReview.length} conflicts that require human intervention`;
-      );
-    }
-<<<<<<< HEAD
+      )}
 
-    if (conflicts.some(c => c.type === `lock-file`)) {
-      recommendations.push(Regenerate lock files after resolving package.json conflicts`
-=======
-;
-    if (conflicts.some(c => c.type === 'lock-file')) {;
-      recommendations.push(Regenerate lock files after resolving package.json conflicts';
->>>>>>> main
-      );
-    }
+      )}
 ;
     if (conflicts.some(c => c.type === 'package-json')) {;
       recommendations.push(Run npm install after resolving package.json conflicts';
-      );
-    }
+      )}
 ;
-    return recommendations;
-  }
-<<<<<<< HEAD
+    return recommendations}
 
-  async runConflictResolution() {
-    this.log(`Starting intelligent conflict resolution...`);
-
-    try {
-      // Check for conflicts;
-      const conflictFiles = await this.checkForConflicts();
-
-      if (conflictFiles.length === 0) {
-        this.log(`No conflicts to resolve`);
-        return { resolved: 0, total: 0 };
-      }
-
-=======
-;
-  async runConflictResolution() {;
-    this.log('Starting intelligent conflict resolution...');
-;
-    try {;
-      // Check for conflicts;
-      const conflictFiles = await this.checkForConflicts();
-;
-      if (conflictFiles.length === 0) {;
-        this.log('No conflicts to resolve');
-        return { resolved: 0, total: 0 };
-      }
-;
->>>>>>> main
       // Analyze each conflict;
       const conflicts = [];
       let resolvedCount = 0;
@@ -662,141 +271,20 @@ this.log(`Conflict resolution report saved to ${reportPath}`);
       for (const filePath of conflictFiles) {;
         const analysis = await this.analyzeConflictFile(filePath);
         conflicts.push(analysis);
-<<<<<<< HEAD
 
-        // Attempt auto-resolution;
-        if (analysis.resolvable) {
-=======
-;
-        // Attempt auto-resolution;
-        if (analysis.resolvable) {;
->>>>>>> main
           const resolved = await this.autoResolveConflict(filePath, analysis);
-          if (resolved) resolvedCount++;
-        }
+          if (resolved) resolvedCount++}
       }
-<<<<<<< HEAD
 
-      // Generate report;
-      await this.generateConflictReport(conflicts);
-
-      this.log(Conflict resolution completed: ${resolvedCount}/${conflicts.length} conflicts resolved`
-=======
-;
-      // Generate report;
-      await this.generateConflictReport(conflicts);
-;
-      this.log(Conflict resolution completed: ${resolvedCount}/${conflicts.length} conflicts resolved';
->>>>>>> main
       );
-      return { resolved: resolvedCount, total: conflicts.length };
-    } catch (error) {  this.log(`Conflict resolution failed: ${error.message  }`, `ERROR`);
-      throw error;
-    }
+      return { resolved: resolvedCount, total: conflicts.length }} catch (error) {  this.log(`Conflict resolution failed: ${error.message  }`, `ERROR`);
+      throw error}
   }
-<<<<<<< HEAD
 
-  async start() {
-    this.log(`Starting intelligent conflict resolver...`);
-
-    try {
-      // Run initial conflict resolution;
-      await this.runConflictResolution();
-
-      // Set up periodic conflict checking;
-      setInterval(
-        async () => {
-          try {
-            await this.runConflictResolution();
-          } catch (error) {  
-            this.log(Periodic conflict resolution failed: ${error.message  }`,
-              `ERROR`
-            );
-          }
-        },
-        30 * 60 * 1000;
-      ); // Every 30 minutes;
-      this.log(`Intelligent conflict resolver started successfully`);
-
-      // Keep the process running;
-      setInterval(() => {
-        this.log(`Conflict resolver heartbeat...`);
-      }, 60000); // Every minute;
-    } catch (error) {  this.log(`Failed to start conflict resolver: ${error.message  }`, `ERROR`);
-=======
-;
-  async start() {;
-    this.log('Starting intelligent conflict resolver...');
-;
-    try {;
-      // Run initial conflict resolution;
-      await this.runConflictResolution();
-;
-      // Set up periodic conflict checking;
-      setInterval(;
-        async () => {;
-          try {;
-            await this.runConflictResolution();
-          } catch (error) {;
-            this.log(Periodic conflict resolution failed: ${error.message}',;
-              'ERROR';
-            );
-          }
-        },;
-        30 * 60 * 1000;
-      ); // Every 30 minutes;
-
-      this.log('Intelligent conflict resolver started successfully');
-;
-      // Keep the process running;
-      setInterval(() => {;
-        this.log('Conflict resolver heartbeat...');
-      }, 60000); // Every minute;
-    } catch (error) {this.log(`Failed to start conflict resolver: ${error.message}`, 'ERROR');
->>>>>>> main
-      throw error;
-    }
+      throw error}
   }
 }
-<<<<<<< HEAD
 
-// Main execution;
-if (require.main === module) {
-  const resolver = new IntelligentConflictResolver();
-
-  // Handle graceful shutdown;
-  process.on(`SIGINT`, () => {
-    resolver.log('Shutting down gracefully...');
-    process.exit(0);
-  });
-
-  process.on('SIGTERM', () => {
-    resolver.log(`Shutting down gracefully...`);
-    process.exit(0);
-  });
-
-  resolver.start().catch(error => {resolver.log(`Fatal error: ${error.message}`, `ERROR`);
-=======
-;
-// Main execution;
-if (require.main === module) {;
-  const resolver = new IntelligentConflictResolver();
-;
-  // Handle graceful shutdown;
-  process.on('SIGINT', () => {;
-    resolver.log('Shutting down gracefully...');
-    process.exit(0);
-  });
-;
-  process.on('SIGTERM', () => {;
-    resolver.log('Shutting down gracefully...');
-    process.exit(0);
-  });
-;
-  resolver.start().catch(error => {resolver.log(`Fatal error: ${error.message}`, 'ERROR');
->>>>>>> main
-    process.exit(1);
-  });
-}
+    process.exit(1)})}
 ;
 module.exports = IntelligentConflictResolver;

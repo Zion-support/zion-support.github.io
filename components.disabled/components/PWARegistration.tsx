@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Download, X, Smartphone, Monitor } from 'lucide-react';
 
@@ -6,10 +6,8 @@ interface BeforeInstallPromptEvent extends Event {
   readonly platforms: string[];
   readonly userChoice: Promise<{
     outcome: 'accepted' | 'dismissed';
-    platform: string;
-  }>;
-  prompt(): Promise<void>;
-}
+    platform: string}>;
+  prompt(): Promise<void>}
 
 const PWARegistration: React.FC = () => {
   const [deferredPrompt, setDeferredPrompt] =
@@ -20,22 +18,19 @@ const PWARegistration: React.FC = () => {
   useEffect(() => {
     // Check if app is already installed
     if (window.matchMedia('(display-mode: standalone)').matches) {
-      setIsInstalled(true);
-    }
+      setIsInstalled(true)}
 
     // Listen for the beforeinstallprompt event
     const handleBeforeInstallPrompt = (e: Event) => {
       e.preventDefault();
       setDeferredPrompt(e as BeforeInstallPromptEvent);
-      setShowInstallPrompt(true);
-    };
+      setShowInstallPrompt(true)};
 
     // Listen for the appinstalled event
     const handleAppInstalled = () => {
       setIsInstalled(true);
       setShowInstallPrompt(false);
-      setDeferredPrompt(null);
-    };
+      setDeferredPrompt(null)};
 
     window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
     window.addEventListener('appinstalled', handleAppInstalled);
@@ -45,21 +40,16 @@ const PWARegistration: React.FC = () => {
       navigator.serviceWorker
         .register('/sw.js')
         .then(registration => {
-          console.log('Service Worker registered successfully:', registration);
-        })
+          console.log('Service Worker registered successfully:', registration)})
         .catch(error => {
-          console.log('Service Worker registration failed:', error);
-        });
-    }
+          console.log('Service Worker registration failed:', error)})}
 
     return () => {
       window.removeEventListener(
         'beforeinstallprompt',
         handleBeforeInstallPrompt
       );
-      window.removeEventListener('appinstalled', handleAppInstalled);
-    };
-  }, []);
+      window.removeEventListener('appinstalled', handleAppInstalled)}}, []);
 
   const handleInstallClick = async () => {
     if (!deferredPrompt) return;
@@ -68,22 +58,17 @@ const PWARegistration: React.FC = () => {
     const { outcome } = await deferredPrompt.userChoice;
 
     if (outcome === 'accepted') {
-      console.log('User accepted the install prompt');
-    } else {
-      console.log('User dismissed the install prompt');
-    }
+      console.log('User accepted the install prompt')} else {
+      console.log('User dismissed the install prompt')}
 
     setDeferredPrompt(null);
-    setShowInstallPrompt(false);
-  };
+    setShowInstallPrompt(false)};
 
   const handleDismiss = () => {
-    setShowInstallPrompt(false);
-  };
+    setShowInstallPrompt(false)};
 
   if (isInstalled) {
-    return null;
-  }
+    return null}
 
   return (
     <AnimatePresence>
@@ -144,7 +129,6 @@ const PWARegistration: React.FC = () => {
         </motion.div>
       )}
     </AnimatePresence>
-  );
-};
+  )};
 
 export default PWARegistration;

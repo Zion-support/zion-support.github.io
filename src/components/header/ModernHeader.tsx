@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React { useState } from 'react';
 import Link from 'next/link';
 import { Menu, X, Phone, Mail, MapPin, ChevronDown } from 'lucide-react';
 
@@ -7,21 +7,14 @@ export function ModernHeader() {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
 
   const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
+    setIsMobileMenuOpen(!isMobileMenuOpen)};
 
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
-    setIsServicesOpen(false);
-  };
+    setIsServicesOpen(false)};
 
   const services = [
-    { name: 'AI Services', href: '/ai-services', description: 'AI-powered solutions and automation' },
-    { name: 'IT Services', href: '/it-services', description: 'Infrastructure and cloud solutions' },
-    { name: 'Micro SaaS', href: '/micro-saas', description: 'Custom software solutions' },
-    { name: 'Cybersecurity', href: '/cybersecurity', description: 'Security and compliance' },
-    { name: 'Cloud Platforms', href: '/cloud-platforms', description: 'Scalable cloud infrastructure' },
-    { name: 'Data Analytics', href: '/data-analytics', description: 'Business intelligence and insights' }
+    { name: 'AI Services', href: '/ai-services', description: 'AI-powered solutions and automation' }, { name: 'IT Services', href: '/it-services', description: 'Infrastructure and cloud solutions' }, { name: 'Micro SaaS', href: '/micro-saas', description: 'Custom software solutions' }, { name: 'Cybersecurity', href: '/cybersecurity', description: 'Security and compliance' }, { name: 'Cloud Platforms', href: '/cloud-platforms', description: 'Scalable cloud infrastructure' }, { name: 'Data Analytics', href: '/data-analytics', description: 'Business intelligence and insights' }
   ];
 
   return (
@@ -154,8 +147,7 @@ export function ModernHeader() {
           </div>
         </div>
 
-        {/* Mobile Navigation */}
-        {isMobileMenuOpen && (
+        {/* Mobile Navigation */}, {isMobileMenuOpen && (
           <div className="lg:hidden bg-white border-t border-gray-200">
             <div className="px-4 py-6 space-y-4">
               <Link
@@ -230,5 +222,4 @@ export function ModernHeader() {
         )}
       </header>
     </>
-  );
-}
+  )}

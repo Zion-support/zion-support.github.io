@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
-import type { NextPage } from 'next';
-import MainLayout from '../../components/layout/MainLayout';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, DollarSign, Target, Rocket } from 'lucide-react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-=======
+
 import React from,
   react';
 import type { NextPage } from
@@ -33,14 +26,10 @@ const ServicesPage: NextPage = () => {
   const stats = [
     { number:
   '80+, label:
-  'Micro SaaS Solutions', icon: Zap },
-    { number:,
-  35+', label: 'IT Services, icon: Shield },
-    { number:,
-  30+', label: 'AI Services, icon: Globe },
-    { number:,
-  500+', label: 'Projects Completed, icon: TrendingUp },
-  ];
+  'Micro SaaS Solutions', icon: Zap }, { number:,
+  35+', label: 'IT Services, icon: Shield }, { number:,
+  30+', label: 'AI Services, icon: Globe }, { number:,
+  500+', label: 'Projects Completed, icon: TrendingUp } ];
 
   const benefits = [
     {
@@ -48,20 +37,17 @@ const ServicesPage: NextPage = () => {
       title:,
   Competitive Pricing',
       description: Transparent, market-competitive pricing with flexible plans to fit your budget and scale with your business.'
-    },
-    {
+    }, {
       icon: <Target className="w-8 h-8" />,
       title:,
   Proven Results',
       description: 'Track record of successful implementations with measurable ROI and client satisfaction across all industries.
-    },
-    {
+    }, {
       icon: <Rocket className="w-8 h-8" />,
       title:,
   Fast Implementation',
       description: Rapid deployment and implementation with minimal downtime, getting you up and running quickly.'
-    },
-    {
+    }, {
       icon: <Award className="w-8 h-8" />,
       title:,
   Expert Support',
@@ -132,8 +118,7 @@ const ServicesPage: NextPage = () => {
                     <div className="text-3xl font-bold text-blue-400 group-hover:text-purple-400 transition-colors">{stat.number}</div>
                     <div className="text-gray-300">{stat.label}</div>
                   </motion.div>
-                );
-              })}
+                )})}
             </motion.div>
           </div>
         </div>
@@ -343,8 +328,7 @@ const ServicesPage: NextPage = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
-=======
+
       {/* Featured Services */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -445,7 +429,6 @@ const ServicesPage: NextPage = () => {
         </div>
       </section>
     </MainLayout>
-  );
-};
+  )};
 
 export default ServicesPage;

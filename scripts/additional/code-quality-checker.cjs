@@ -4,8 +4,7 @@ const path = require('path');
 
 class CodeQualityChecker {
   constructor() {
-    this.projectRoot = process.cwd();
-  }
+    this.projectRoot = process.cwd()}
 
   async checkCodeQuality() {
     console.log('🔍 Checking code quality...');
@@ -27,8 +26,7 @@ class CodeQualityChecker {
             file,
             type: 'console.log',
             message: 'Console.log statement found in production code'
-          });
-        }
+          })}
         
         // Check for TODO comments
         if (content.includes('TODO') || content.includes('FIXME')) {
@@ -36,8 +34,7 @@ class CodeQualityChecker {
             file,
             type: 'todo',
             message: 'TODO or FIXME comment found'
-          });
-        }
+          })}
         
         // Check for large files
         if (content.length > 10000) {
@@ -45,8 +42,7 @@ class CodeQualityChecker {
             file,
             type: 'large-file',
             message: 'File is larger than 10KB'
-          });
-        }
+          })}
       } catch (error) {
         // Skip files that can't be read
       }
@@ -57,19 +53,15 @@ class CodeQualityChecker {
     if (issues.length > 0) {
       console.log('Issues found:');
       issues.forEach(issue => {
-        console.log(`  - ${issue.file}: ${issue.message}`);
-      });
-    }
+        console.log(`  - ${issue.file}: ${issue.message}`)})}
     
-    return issues;
-  }
+    return issues}
 
   getAllFiles(dir, extensions) {
     const files = [];
     
     if (!fs.existsSync(dir)) {
-      return files;
-    }
+      return files}
 
     const items = fs.readdirSync(dir);
     
@@ -78,17 +70,14 @@ class CodeQualityChecker {
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory()) {
-        files.push(...this.getAllFiles(fullPath, extensions));
-      } else if (stat.isFile()) {
+        files.push(...this.getAllFiles(fullPath, extensions))} else if (stat.isFile()) {
         const ext = path.extname(item);
         if (extensions.includes(ext)) {
-          files.push(fullPath);
-        }
+          files.push(fullPath)}
       }
     }
     
-    return files;
-  }
+    return files}
 }
 
 const checker = new CodeQualityChecker();

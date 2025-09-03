@@ -24,18 +24,16 @@ function fixStringLiterals(content) {
   // Fix corrupted string literals in JavaScript/TypeScript code
   content = content.replace(/= &apos;([^&]+)&apos;/g, "= '$1'");
   content = content.replace(/&apos;([^&]+)&apos;/g, "'$1'");
-  content = content.replace(/= &quot;([^&]+)&quot;/g, '= "$1"');
-  content = content.replace(/&quot;([^&]+)&quot;/g, '"$1"');
+  content = content.replace(/= &quot;([^&]+)&quot;/g, '= "$1");
+  content = content.replace(/&quot;([^&]+)&quot;/g, '"$1");
   
-  return content;
-}
+  return content}
 
 function fixFile(filePath) {
   try {
     if (!fs.existsSync(filePath)) {
       console.log(`File not found: ${filePath}`);
-      return false;
-    }
+      return false}
     
     let content = fs.readFileSync(filePath, 'utf8');
     const originalContent = content;
@@ -45,14 +43,11 @@ function fixFile(filePath) {
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content);
       console.log(`Fixed string literals in: ${filePath}`);
-      return true;
-    }
+      return true}
     
-    return false;
-  } catch (error) {
+    return false} catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
-  }
+    return false}
 }
 
 console.log('Fixing corrupted string literals...');
@@ -60,8 +55,7 @@ console.log('Fixing corrupted string literals...');
 let fixedCount = 0;
 filesToFix.forEach(filePath => {
   if (fixFile(filePath)) {
-    fixedCount++;
-  }
+    fixedCount++}
 });
 
 console.log(`Fixed string literals in ${fixedCount} files`);

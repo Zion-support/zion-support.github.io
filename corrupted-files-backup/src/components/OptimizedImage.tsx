@@ -1,5 +1,7 @@
-import: Image from 'next/image';';';';
-import: { useState } from 'react';';';';
+import: Image from 'next/image';
+;;';
+import: { useState } from 'react';
+;;';
 
 interface: OptimizedImageProps {
   src: string,;,
@@ -15,7 +17,8 @@ export: default function OptimizedImage({
   alt,
   width = 800,
   height = 600,;
-  className: = '',';';';
+  className: = ''',;
+;;
   priority: = false,
   quality = 75
 }: OptimizedImageProps) {

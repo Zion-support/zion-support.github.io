@@ -5,24 +5,13 @@ import { Calendar, ExternalLink, FileText, Award, Users, TrendingUp, ArrowRight,
 
 export default function Press() {
   const pressReleases = [
-<<<<<<< HEAD
-    {
-      title: 'Zion Tech Group Launches Revolutionary AI-Powered Business Automation Platform', date: '2024-01-15',
-      summary: 'New platform combines machine learning with business process automation to help enterprises achieve unprecedented efficiency gains.', category: 'Product Launch',
-=======
-  {
-      title: 'Zion Tech Group Launches Revolutionary AI-Powered Business Automation Platform',
-      date: '2024-01-15',
-      summary: 'New platform combines machine learning with business process automation to help enterprises achieve unprecedented efficiency gains.',
-      category: 'Product Launch',
->>>>>>> main
+
       readTime: '3 min read'
     }, {
       title: 'Zion Tech Group Secures $10M Series A Funding for Global Expansion',
       date: '2023-11-20', summary: 'Funding round led by leading venture capital firms to accelerate product development and international market expansion.',
       category: 'Funding', readTime: '4 min read'
-    },
-    {
+    }, {
       title: 'Zion Tech Group Partners with Microsoft to Deliver Advanced Cloud Solutions', date: '2023-09-10',
       summary: 'Strategic partnership enables customers to leverage Microsoft Azure with Zion\'s AI and automation capabilities.',
       category: 'Partnership',
@@ -35,24 +24,13 @@ export default function Press() {
   ];
 
   const mediaCoverage = [
-<<<<<<< HEAD
-    {
-      outlet: 'TechCrunch', title: 'How Zion Tech Group is Revolutionizing Business Automation',
-      date: '2024-01-10', type: 'Feature Article',
-=======
-  {
-      outlet: 'TechCrunch',
-      title: 'How Zion Tech Group is Revolutionizing Business Automation',
-      date: '2024-01-10',
-      type: 'Feature Article',
->>>>>>> main
+
       url: '#'
     }, {
       outlet: 'Forbes',
       title: 'The Future of AI in Enterprise: Insights from Zion Tech Group', date: '2023-12-15',
       type: 'Interview', url: '#'
-    },
-    {
+    }, {
       outlet: 'VentureBeat', title: 'Zion Tech Group Raises $10M to Scale AI Automation Platform',
       date: '2023-11-20', type: 'News',
       url: '#'
@@ -64,42 +42,19 @@ export default function Press() {
   ];
 
   const awards = [
-<<<<<<< HEAD
-    {
-      title: 'Top AI Company 2024', organization: 'TechCrunch',
-      date: '2024-01-15', description: 'Recognized for innovative AI solutions and business impact'
-=======
-  {
-      title: 'Top AI Company 2024',
-      organization: 'TechCrunch',
-      date: '2024-01-15',
-      description: 'Recognized for innovative AI solutions and business impact'
->>>>>>> main
-    },
-    {
+
+    }, {
       title: 'Best Cloud Innovation', organization: 'Cloud Computing Awards',
       date: '2023-12-01', description: 'Awarded for breakthrough cloud automation platform'
-    },
-    {
+    }, {
       title: 'Startup of the Year', organization: 'Delaware Business Times',
       date: '2023-10-15', description: 'Honored for rapid growth and market disruption'
     }
   ];
 
   const teamQuotes = [
-<<<<<<< HEAD
-    {
-      name: 'Kleber Santos', title: 'CEO & Founder',
-      quote: 'We\'re not just building technology; we\'re building the future of how businesses operate. Our AI solutions are designed to empower organizations to achieve unprecedented levels of efficiency and innovation.', image: '/api/placeholder/100/100'
-=======
-  {
-      name: 'Kleber Santos',
-      title: 'CEO & Founder',
-      quote: 'We\'re not just building technology; we\'re building the future of how businesses operate. Our AI solutions are designed to empower organizations to achieve unprecedented levels of efficiency and innovation.',
-      image: '/api/placeholder/100/100'
->>>>>>> main
-    },
-    {
+
+    }, {
       name: 'Sarah Johnson', title: 'CTO',
       quote: 'The intersection of AI and business automation represents the next frontier in enterprise technology. We\'re proud to be at the forefront of this transformation.',
       image: '/api/placeholder/100/100'
@@ -317,5 +272,4 @@ export default function Press() {
         </section>
       </main>
 </>
-  );
-}
+  )}

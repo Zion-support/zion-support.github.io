@@ -8,33 +8,27 @@ class SecurityAuditor {
   constructor() {
     this.projectRoot = process.cwd();
     this.reportsDir = path.join(this.projectRoot, 'automation-reports');
-    this.ensureDirectories();
-  }
+    this.ensureDirectories()}
 
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true });
-    }
+      fs.mkdirSync(this.reportsDir { recursive: true })}
   }
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
-  }
+    console.log(`[${new Date().toISOString()}] ${message}`)}
 
   async runCommand(command, description) {
     this.log(`🚀 Starting: ${description}`);
     try {
-      const result = execSync(command, {
+      const result = execSync(command {
         cwd: this.projectRoot,
         encoding: 'utf8',
-        timeout: 300000,
-      });
+        timeout: 300000 });
       this.log(`✅ Completed: ${description}`);
-      return { success: true, output: result };
-    } catch (error) {
+      return { success: true, output: result }} catch (error) {
       this.log(`❌ Failed: ${description} - ${error.message}`);
-      return { success: false, error: error.message };
-    }
+      return { success: false, error: error.message }}
   }
 
   async auditDependencies() {
@@ -42,16 +36,14 @@ class SecurityAuditor {
     
     try {
       const result = await this.runCommand('npm audit --audit-level=moderate', 'Dependency Security Audit');
-      return result;
-    } catch (error) {
+      return result} catch (error) {
       // npm audit returns non-zero exit code when vulnerabilities are found
       // This is expected behavior, so we'll treat it as a successful audit with findings
       return { 
         success: true, 
         output: error.stdout || error.message,
         vulnerabilitiesFound: true 
-      };
-    }
+      }}
   }
 
   async checkEnvironmentVariables() {
@@ -71,24 +63,21 @@ class SecurityAuditor {
             file: envFile,
             issue: 'Plain text password detected',
             severity: 'high'
-          });
-        }
+          })}
         
         if (content.includes('SECRET=') && !content.includes('SECRET=***')) {
           findings.push({
             file: envFile,
             issue: 'Plain text secret detected',
             severity: 'high'
-          });
-        }
+          })}
         
         if (content.includes('API_KEY=') && !content.includes('API_KEY=***')) {
           findings.push({
             file: envFile,
             issue: 'Plain text API key detected',
             severity: 'medium'
-          });
-        }
+          })}
       }
     }
 
@@ -96,8 +85,7 @@ class SecurityAuditor {
       success: true,
       findings: findings,
       filesChecked: envFiles.length
-    };
-  }
+    }}
 
   async checkCodeSecurity() {
     this.log('🔍 Checking code for security issues...');
@@ -112,11 +100,7 @@ class SecurityAuditor {
         
         // Check for dangerous patterns
         const dangerousPatterns = [
-          { pattern: /eval\s*\(/, message: 'eval() usage detected', severity: 'high' },
-          { pattern: /innerHTML\s*=/, message: 'innerHTML assignment detected', severity: 'medium' },
-          { pattern: /document\.write/, message: 'document.write() usage detected', severity: 'medium' },
-          { pattern: /localStorage\.setItem.*password/i, message: 'Password in localStorage detected', severity: 'high' },
-          { pattern: /console\.log.*password/i, message: 'Password in console.log detected', severity: 'medium' }
+          { pattern: /eval\s*\(/, message: 'eval() usage detected', severity: 'high' }, { pattern: /innerHTML\s*=/, message: 'innerHTML assignment detected', severity: 'medium' }, { pattern: /document\.write/, message: 'document.write() usage detected', severity: 'medium' }, { pattern: /localStorage\.setItem.*password/i, message: 'Password in localStorage detected', severity: 'high' }, { pattern: /console\.log.*password/i, message: 'Password in console.log detected', severity: 'medium' }
         ];
 
         dangerousPatterns.forEach(({ pattern, message, severity }) => {
@@ -125,30 +109,25 @@ class SecurityAuditor {
               file: filePath,
               issue: message,
               severity: severity
-            });
-          }
-        });
-      } catch (error) {
+            })}
+        })} catch (error) {
         // Skip files that can't be read
       }
     };
 
     // Check source files
     if (fs.existsSync(srcDir)) {
-      this.scanDirectory(srcDir, ['.js', '.jsx', '.ts', '.tsx'], checkFile);
-    }
+      this.scanDirectory(srcDir, ['.js', '.jsx', '.ts', '.tsx'], checkFile)}
 
     // Check pages
     if (fs.existsSync(pagesDir)) {
-      this.scanDirectory(pagesDir, ['.js', '.jsx', '.ts', '.tsx'], checkFile);
-    }
+      this.scanDirectory(pagesDir, ['.js', '.jsx', '.ts', '.tsx'], checkFile)}
 
     return {
       success: true,
       issues: securityIssues,
       filesScanned: securityIssues.length
-    };
-  }
+    }}
 
   scanDirectory(dir, extensions, callback) {
     const items = fs.readdirSync(dir);
@@ -158,10 +137,8 @@ class SecurityAuditor {
       const stat = fs.statSync(fullPath);
 
       if (stat.isDirectory()) {
-        this.scanDirectory(fullPath, extensions, callback);
-      } else if (extensions.includes(path.extname(item))) {
-        callback(fullPath);
-      }
+        this.scanDirectory(fullPath, extensions, callback)} else if (extensions.includes(path.extname(item))) {
+        callback(fullPath)}
     }
   }
 
@@ -178,15 +155,13 @@ class SecurityAuditor {
         findings.push({
           issue: 'No HTTPS configuration found in next.config.js',
           severity: 'medium'
-        });
-      }
+        })}
     }
 
     return {
       success: true,
       findings: findings
-    };
-  }
+    }}
 
   async generateReport(results) {
     const report = {
@@ -196,8 +171,7 @@ class SecurityAuditor {
         successful: Object.values(results).filter(r => r.success).length,
         failed: Object.values(results).filter(r => !r.success).length,
         totalIssues: Object.values(results).reduce((sum, r) => {
-          return sum + (r.findings ? r.findings.length : 0) + (r.issues ? r.issues.length : 0);
-        }, 0)
+          return sum + (r.findings ? r.findings.length : 0) + (r.issues ? r.issues.length : 0)}, 0)
       },
       results: results,
       recommendations: this.generateRecommendations(results)
@@ -207,8 +181,7 @@ class SecurityAuditor {
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     
     this.log(`📊 Security audit report generated: ${reportFile}`);
-    return report;
-  }
+    return report}
 
   generateRecommendations(results) {
     const recommendations = [];
@@ -218,27 +191,23 @@ class SecurityAuditor {
         type: 'dependencies',
         message: 'Vulnerabilities found in dependencies. Run npm audit fix to resolve.',
         action: 'npm audit fix'
-      });
-    }
+      })}
 
     if (results.environment && results.environment.findings.length > 0) {
       recommendations.push({
         type: 'environment',
         message: 'Security issues found in environment files. Review and secure sensitive data.',
         issues: results.environment.findings.length
-      });
-    }
+      })}
 
     if (results.codeSecurity && results.codeSecurity.issues.length > 0) {
       recommendations.push({
         type: 'code',
         message: 'Security issues found in code. Review and fix dangerous patterns.',
         issues: results.codeSecurity.issues.length
-      });
-    }
+      })}
 
-    return recommendations;
-  }
+    return recommendations}
 
   async run() {
     this.log('🎯 Starting Security Audit');
@@ -259,18 +228,14 @@ class SecurityAuditor {
     if (report.recommendations.length > 0) {
       this.log('💡 Security Recommendations:');
       report.recommendations.forEach(rec => {
-        this.log(`   - ${rec.message}`);
-      });
-    }
+        this.log(`   - ${rec.message}`)})}
 
-    return report;
-  }
+    return report}
 }
 
 // Run the security auditor
 if (require.main === module) {
   const auditor = new SecurityAuditor();
-  auditor.run().catch(console.error);
-}
+  auditor.run().catch(console.error)}
 
 module.exports = SecurityAuditor;

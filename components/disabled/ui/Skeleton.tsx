@@ -4,15 +4,13 @@ interface SkeletonProps {
   className?: string;
   width?: string | number;
   height?: string | number;
-  rounded?: boolean;
-}
+  rounded?: boolean}
 
 export const Skeleton: React.FC<SkeletonProps> = ({'
   className = '',
   width,
   height,
-  rounded = false,
-}) => {
+  rounded = false }) => {
   const style: React.CSSProperties = {};
 '
   if (width) style.width = typeof width === 'number' ? `${width}px` : width;
@@ -24,8 +22,7 @@ export const Skeleton: React.FC<SkeletonProps> = ({'
       className={`animate-pulse bg-gray-200 ${rounded ? 'rounded-full' : 'rounded'} ${className}`}
       style={style}
     />
-  );
-};
+  )};
 
 export const CardSkeleton: React.FC = () => (`
   <div className="bg-white rounded-lg shadow-md p-6">"

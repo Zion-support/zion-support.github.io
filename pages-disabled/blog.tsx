@@ -17,8 +17,7 @@ const Blog: NextPage = () => {
       category: 'AI & Technology',
       image: '/blog/ai-future.jpg',
       featured: true
-    },
-    {
+    }, {
       id: 2,
       title: 'Digital Transformation: A Complete Guide for Modern Businesses',
       excerpt: 'Learn how to successfully navigate digital transformation and modernize your business operations for the digital age.',
@@ -28,8 +27,7 @@ const Blog: NextPage = () => {
       category: 'Digital Transformation',
       image: '/blog/digital-transformation.jpg',
       featured: false
-    },
-    {
+    }, {
       id: 3,
       title: 'Micro SaaS Development: Building Scalable Solutions',
       excerpt: 'Discover the key principles and best practices for developing successful micro SaaS applications that scale.',
@@ -39,8 +37,7 @@ const Blog: NextPage = () => {
       category: 'Development',
       image: '/blog/micro-saas.jpg',
       featured: false
-    },
-    {
+    }, {
       id: 4,
       title: 'Cloud Migration Strategies: Best Practices and Common Pitfalls',
       excerpt: 'Navigate the complexities of cloud migration with proven strategies and avoid common mistakes that can derail your project.',
@@ -50,8 +47,7 @@ const Blog: NextPage = () => {
       category: 'Cloud Computing',
       image: '/blog/cloud-migration.jpg',
       featured: false
-    },
-    {
+    }, {
       id: 5,
       title: 'Cybersecurity in 2024: Protecting Your Digital Assets',
       excerpt: 'Stay ahead of evolving cyber threats with the latest security strategies and technologies for modern businesses.',
@@ -61,8 +57,7 @@ const Blog: NextPage = () => {
       category: 'Security',
       image: '/blog/cybersecurity.jpg',
       featured: false
-    },
-    {
+    }, {
       id: 6,
       title: 'The Rise of Quantum Computing: Implications for Business',
       excerpt: 'Understand how quantum computing is revolutionizing industries and what it means for your business strategy.',
@@ -139,8 +134,7 @@ const Blog: NextPage = () => {
           </div>
         </section>
 
-        {/* Featured Post */}
-        {featuredPost && (
+        {/* Featured Post */}, {featuredPost && (
           <section className="py-12 bg-white">
             <div className="container mx-auto px-4">
               <div className="mb-8">
@@ -207,9 +201,7 @@ const Blog: NextPage = () => {
               </motion.article>
             </div>
           </section>
-        )}
-
-        {/* Blog Posts Grid */}
+        )}, {/* Blog Posts Grid */}
         <section className="py-12">
           <div className="container mx-auto px-4">
             <div className="mb-8">
@@ -298,7 +290,6 @@ const Blog: NextPage = () => {
         </section>
       </div>
     </MainLayout>
-  );
-};
+  )};
 
 export default Blog;

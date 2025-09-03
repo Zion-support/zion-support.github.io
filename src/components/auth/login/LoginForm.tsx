@@ -11,5 +11,4 @@ export default function LoginForm() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

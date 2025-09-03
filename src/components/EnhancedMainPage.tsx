@@ -11,5 +11,4 @@ export default function EnhancedMainPage() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

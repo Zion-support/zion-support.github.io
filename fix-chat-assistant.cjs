@@ -27,7 +27,5 @@ try {
   );
 
   fs.writeFileSync(filePath, content);
-  console.log('Fixed ChatAssistant.tsx');
-} catch (error) { 
-  console.error('Error fixing ChatAssistant.tsx:', error.message);
- }
+  console.log('Fixed ChatAssistant.tsx')} catch (error) { 
+  console.error('Error fixing ChatAssistant.tsx:', error.message)}

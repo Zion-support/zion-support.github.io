@@ -11,5 +11,4 @@ export default function EnhancedTestimonialsSection.test() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

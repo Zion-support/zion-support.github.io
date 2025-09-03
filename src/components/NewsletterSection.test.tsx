@@ -11,5 +11,4 @@ export default function NewsletterSection.test() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

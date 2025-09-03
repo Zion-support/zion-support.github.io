@@ -12,20 +12,17 @@ export default function Cybersecurity() {
       title: 'Security Assessment',
       description: 'Comprehensive security audits and vulnerability assessments to identify and mitigate risks.',
       features: ['Penetration Testing', 'Vulnerability Scanning', 'Security Audits', 'Risk Assessment']
-    },
-    {
+    }, {
       icon: Lock,
       title: 'Data Protection',
       description: 'Advanced encryption and data protection solutions to safeguard your sensitive information.',
       features: ['Data Encryption', 'Backup Solutions', 'Access Controls', 'Data Loss Prevention']
-    },
-    {
+    }, {
       icon: Eye,
       title: 'Monitoring & Detection',
       description: '24/7 security monitoring and threat detection to protect against cyber attacks.',
       features: ['SIEM Solutions', 'Threat Detection', 'Incident Response', 'Security Analytics']
-    },
-    {
+    }, {
       icon: AlertTriangle,
       title: 'Incident Response',
       description: 'Rapid response and recovery services to minimize damage from security incidents.',
@@ -34,19 +31,11 @@ export default function Cybersecurity() {
   ];
 
   const complianceFrameworks = [
-    { name: 'SOC 2', description: 'Service Organization Control 2 compliance' },
-    { name: 'ISO 27001', description: 'Information security management systems' },
-    { name: 'GDPR', description: 'General Data Protection Regulation compliance' },
-    { name: 'HIPAA', description: 'Health Insurance Portability and Accountability Act' },
-    { name: 'PCI DSS', description: 'Payment Card Industry Data Security Standard' },
-    { name: 'NIST', description: 'National Institute of Standards and Technology framework' }
+    { name: 'SOC 2', description: 'Service Organization Control 2 compliance' }, { name: 'ISO 27001', description: 'Information security management systems' }, { name: 'GDPR', description: 'General Data Protection Regulation compliance' }, { name: 'HIPAA', description: 'Health Insurance Portability and Accountability Act' }, { name: 'PCI DSS', description: 'Payment Card Industry Data Security Standard' }, { name: 'NIST', description: 'National Institute of Standards and Technology framework' }
   ];
 
   const stats = [
-    { number: '99.9%', label: 'Security Uptime', icon: Shield },
-    { number: '24/7', label: 'Monitoring', icon: Clock },
-    { number: '50+', label: 'Security Experts', icon: Users },
-    { number: '15+', label: 'Years Experience', icon: Award }
+    { number: '99.9%', label: 'Security Uptime', icon: Shield }, { number: '24/7', label: 'Monitoring', icon: Clock }, { number: '50+', label: 'Security Experts', icon: Users }, { number: '15+', label: 'Years Experience', icon: Award }
   ];
 
   return (
@@ -203,5 +192,4 @@ export default function Cybersecurity() {
 
       <Footer />
     </div>
-  );
-}
+  )}

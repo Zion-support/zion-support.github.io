@@ -4,26 +4,22 @@ interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
   color?: 'primary' | 'secondary' | 'white';
   text?: string;
-  fullScreen?: boolean;
-}
+  fullScreen?: boolean}
 
 export default function LoadingSpinner({
   size = 'md',
   color = 'primary',
   text,
-  fullScreen = false,
-}: LoadingSpinnerProps) {
+  fullScreen = false }: LoadingSpinnerProps) {
   const sizeClasses = {
     sm: 'w-6 h-6',
     md: 'w-12 h-12',
-    lg: 'w-16 h-16',
-  };
+    lg: 'w-16 h-16' };
 
   const colorClasses = {
     primary: 'border-blue-600',
     secondary: 'border-purple-600',
-    white: 'border-white',
-  };
+    white: 'border-white' };
 
   const spinner = (
     <div className="flex flex-col items-center justify-center">
@@ -42,28 +38,23 @@ export default function LoadingSpinner({
       <div className="fixed inset-0 bg-white bg-opacity-90 flex items-center justify-center z-50">
         {spinner}
       </div>
-    );
-  }
+    )}
 
-  return spinner;
-}
+  return spinner}
 
 // Pulse loading variant
 export function LoadingPulse({
   size = 'md',
-  color = 'primary',
-}: Omit<LoadingSpinnerProps, 'text' | 'fullScreen'>) {
+  color = 'primary' }: Omit<LoadingSpinnerProps, 'text' | 'fullScreen'>) {
   const sizeClasses = {
     sm: 'w-6 h-6',
     md: 'w-12 h-12',
-    lg: 'w-16 h-16',
-  };
+    lg: 'w-16 h-16' };
 
   const colorClasses = {
     primary: 'bg-blue-600',
     secondary: 'bg-purple-600',
-    white: 'bg-white',
-  };
+    white: 'bg-white' };
 
   return (
     <div className="flex space-x-2">
@@ -72,22 +63,18 @@ export function LoadingPulse({
           key={i}
           className={`${sizeClasses[size]} ${colorClasses[color]} rounded-full animate-pulse`}
           style={{
-            animationDelay: `${i * 0.2}s`,
-          }}
+            animationDelay: `${i * 0.2}s` }}
         />
       ))}
     </div>
-  );
-}
+  )}
 
 // Skeleton loading variant
 export function LoadingSkeleton({
   lines = 3,
-  className = '',
-}: {
+  className = '' }: {
   lines?: number;
-  className?: string;
-}) {
+  className?: string}) {
   return (
     <div className={`animate-pulse ${className}`}>
       {Array.from({ length: lines }).map((_, i) => (
@@ -99,5 +86,4 @@ export function LoadingSkeleton({
         />
       ))}
     </div>
-  );
-}
+  )}

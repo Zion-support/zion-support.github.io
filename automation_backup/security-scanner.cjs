@@ -5,8 +5,7 @@ const path = require(`path`);
 class SecurityScanner {
   constructor() {
     this.vulnerabilities = [];
-    this.securityScore = 100;
-  }
+    this.securityScore = 100}
 
   async scanSecurity() {
     this.scanDependencies();
@@ -16,17 +15,14 @@ class SecurityScanner {
     console.log(`Security scan completed. Score: ${this.securityScore}/100`);
     return {
       score: this.securityScore,
-      vulnerabilities: this.vulnerabilities,
-    };
-  }
+      vulnerabilities: this.vulnerabilities }}
 
   scanDependencies() {
     try {
       const packageJson = JSON.parse(fs.readFileSync(`package.json`, 'utf8'));
       const dependencies = {
         ...packageJson.dependencies,
-        ...packageJson.devDependencies,
-      };
+        ...packageJson.devDependencies };
 
       // Check for known vulnerable packages;
       const vulnerablePackages = ['lodash', 'moment']; // Example;
@@ -36,14 +32,11 @@ class SecurityScanner {
             type: 'vulnerable-dependency',
             package: pkg,
             version: version,
-            severity: 'medium',
-          });
-          this.securityScore -= 10;
-        }
+            severity: 'medium' });
+          this.securityScore -= 10}
       }
     } catch (error) { 
-      console.error('Error scanning dependencies:', error.message);
-     }
+      console.error('Error scanning dependencies:', error.message)}
   }
 
   scanCode() {
@@ -51,22 +44,15 @@ class SecurityScanner {
       {
         pattern: /eval\(/,
         description: 'Use of eval() function',
-        severity: 'high',
-      },
-      {
+        severity: 'high' }, {
         pattern: /innerHTML/,
         description: 'Potential XSS vulnerability',
-        severity: 'medium',
-      },
-      {
+        severity: 'medium' }, {
         pattern: /localStorage/,
         description: 'Sensitive data in localStorage',
-        severity: 'low',
-      },
-    ];
+        severity: 'low' } ];
 
-    this.scanFiles(patterns);
-  }
+    this.scanFiles(patterns)}
 
   scanConfiguration() {
     // Check for security headers;
@@ -77,10 +63,8 @@ class SecurityScanner {
         this.vulnerabilities.push({
           type: 'missing-security-headers',
           description: 'No security headers configured',
-          severity: 'medium',
-        });
-        this.securityScore -= 15;
-      }
+          severity: 'medium' });
+        this.securityScore -= 15}
     }
   }
 
@@ -90,8 +74,7 @@ class SecurityScanner {
     for (const dir of directories) {
       const dirPath = path.join(__dirname, '..', '..', dir);
       if (fs.existsSync(dirPath)) {
-        this.scanDirectory(dirPath, patterns);
-      }
+        this.scanDirectory(dirPath, patterns)}
     }
   }
 
@@ -103,14 +86,12 @@ class SecurityScanner {
       const stat = fs.statSync(filePath);
 
       if (stat.isDirectory()) {
-        this.scanDirectory(filePath, patterns);
-      } else if (
+        this.scanDirectory(filePath, patterns)} else if (
         file.endsWith('.tsx') ||
         file.endsWith('.ts') ||
         file.endsWith('.js')
       ) {
-        this.scanFile(filePath, patterns);
-      }
+        this.scanFile(filePath, patterns)}
     }
   }
 
@@ -123,13 +104,11 @@ class SecurityScanner {
           type: 'code-vulnerability',
           file: filePath,
           description: pattern.description,
-          severity: pattern.severity,
-        });
+          severity: pattern.severity });
 
         if (pattern.severity === 'high') this.securityScore -= 20;
         else if (pattern.severity === 'medium') this.securityScore -= 10;
-        else this.securityScore -= 5;
-      }
+        else this.securityScore -= 5}
     }
   }
 }

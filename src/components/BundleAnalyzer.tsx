@@ -11,5 +11,4 @@ export default function BundleAnalyzer() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

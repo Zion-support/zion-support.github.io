@@ -9,24 +9,20 @@ const fixes = [
   {
     pattern: /import\s+(\w+)\s+from\s+'([^']*);';/g,
     replacement: "import $1 from '$2';"
-  },
-  {
+  }, {
     pattern: /describe\('([^']*);',\s*\(\)\s*=>\s*{';/g,
     replacement: "describe('$1', () => {"
-  },
-  {
+  }, {
     pattern: /test\('([^']*);',\s*\(\)\s*=>\s*{';/g,
     replacement: "test('$1', () => {"
-  },
-  {
-    pattern: /expect\(([^)]*)\)\.toBeInTheDocument\(\)\}\);'/g,
+  }, {
+    pattern: /expect\(([^)]*)\)\.toBeInTheDocument\(\)\}\);
+/g,
     replacement: "expect($1).toBeInTheDocument();"
-  },
-  {
-    pattern: /}\);'/g,
+  }, {
+    pattern: /}\);/g,
     replacement: "});"
-  },
-  {
+  }, {
     pattern: /}\);'/g,
     replacement: "});"
   },
@@ -39,8 +35,7 @@ const fixes = [
   {
     pattern: /;\s*$/gm,
     replacement: ""
-  },
-  {
+  }, {
     pattern: /,\s*$/gm,
     replacement: ""
   }
@@ -53,13 +48,12 @@ function fixFile(filePath) {
     
     // Apply all fixes
     fixes.forEach(fix => {
-      content = content.replace(fix.pattern, fix.replacement);
-    });
+      content = content.replace(fix.pattern, fix.replacement)});
     
     // Additional specific fixes
     content = content
       .replace(/';/g, "'")
-      .replace(/";/g, '"')
+      .replace(/";/g, '")
       .replace(/,\s*}/g, '}')
       .replace(/,\s*]/g, ']')
       .replace(/,\s*\)/g, ')')
@@ -69,13 +63,10 @@ function fixFile(filePath) {
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed: ${filePath}`);
-      return true;
-    }
-    return false;
-  } catch (error) {
+      return true}
+    return false} catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
-  }
+    return false}
 }
 
 function findTestFiles(dir) {
@@ -89,16 +80,13 @@ function findTestFiles(dir) {
       const stat = fs.statSync(filePath);
       
       if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
-        traverse(filePath);
-      } else if (file.endsWith('.test.js') || file.endsWith('.test.tsx') || file.endsWith('.test.ts')) {
-        testFiles.push(filePath);
-      }
+        traverse(filePath)} else if (file.endsWith('.test.js') || file.endsWith('.test.tsx') || file.endsWith('.test.ts')) {
+        testFiles.push(filePath)}
     }
   }
   
   traverse(dir);
-  return testFiles;
-}
+  return testFiles}
 
 // Main execution
 console.log('🔧 Fixing test file syntax errors...');
@@ -108,8 +96,7 @@ let fixedCount = 0;
 
 testFiles.forEach(file => {
   if (fixFile(file)) {
-    fixedCount++;
-  }
+    fixedCount++}
 });
 
 console.log(`✅ Fixed ${fixedCount} out of ${testFiles.length} test files`);

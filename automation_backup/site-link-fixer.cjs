@@ -5,23 +5,15 @@ const path = require('path');
 const projectRoot = process.cwd();
 
 const requiredPages = [
-  { file: 'pages/services/index.tsx', kind: 'file' },
-  { file: 'pages/products/index.tsx', kind: 'file' },
-  { file: 'pages/contact.tsx', kind: 'file' },
-  { file: 'pages/services/ai-seo-auditor.tsx', kind: 'file' },
-  { file: 'pages/services/customer-support-chatbot.tsx', kind: 'file' },
-  { file: 'pages/services/landing-page-generator.tsx', kind: 'file' },
-  { file: 'pages/services/price-intelligence-service.tsx', kind: 'file' },
-];
+  { file: 'pages/services/index.tsx', kind: 'file' }, { file: 'pages/products/index.tsx', kind: 'file' }, { file: 'pages/contact.tsx', kind: 'file' }, { file: 'pages/services/ai-seo-auditor.tsx', kind: 'file' }, { file: 'pages/services/customer-support-chatbot.tsx', kind: 'file' }, { file: 'pages/services/landing-page-generator.tsx', kind: 'file' }, { file: 'pages/services/price-intelligence-service.tsx', kind: 'file' } ];
 
 function ensureFile(relPath, contents) {
   const abs = path.join(projectRoot, relPath);
   const dir = path.dirname(abs);
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir { recursive: true });
   if (!fs.existsSync(abs)) {
     fs.writeFileSync(abs, contents, `utf8`);
-    console.log(`Created missing page: ${relPath}`);
-  }
+    console.log(`Created missing page: ${relPath}`)}
 }
 
 const placeholder = (title, body) =>
@@ -39,8 +31,6 @@ const placeholder = (title, body) =>
       ensureFile(
         p.file,
         placeholder(title, 'Auto-created to prevent broken internal links.')
-      );
-    }
+      )}
   }
-  console.log('Site link fixer completed.');
-})();
+  console.log('Site link fixer completed.')})();

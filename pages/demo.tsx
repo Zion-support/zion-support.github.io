@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import Navigation from '../src/components/Navigation';
@@ -22,8 +22,7 @@ const Demo = () => {
         'Chatbot Integration',
         'Document Processing'
       ]
-    },
-    {
+    }, {
       id: 'it-services',
       title: 'IT Services Demo',
       description: 'Explore our comprehensive IT infrastructure and support solutions',
@@ -36,8 +35,7 @@ const Demo = () => {
         'Backup Solutions',
         'Performance Optimization'
       ]
-    },
-    {
+    }, {
       id: 'micro-saas',
       title: 'Micro SaaS Demo',
       description: 'Discover our scalable software-as-a-service development capabilities',
@@ -60,15 +58,13 @@ const Demo = () => {
       role: 'CTO',
       content: 'The AI demo was incredible. We could see exactly how it would integrate with our existing systems.',
       rating: 5
-    },
-    {
+    }, {
       name: 'Michael Chen',
       company: 'StartupXYZ',
       role: 'Founder',
       content: 'The micro SaaS demo showed us the potential for our product. Highly recommended!',
       rating: 5
-    },
-    {
+    }, {
       name: 'Emily Rodriguez',
       company: 'Enterprise Solutions',
       role: 'IT Director',
@@ -260,7 +256,6 @@ const Demo = () => {
       
       <Footer />
     </>
-  );
-};
+  )};
 
 export default Demo;

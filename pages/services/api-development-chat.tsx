@@ -17,7 +17,6 @@ const ApiDevelopmentChat: NextPage = () => {
         <Link href="/services">Back to Services</Link>
       </main>
     </div>
-  );
-};
+  )};
 
 export default ApiDevelopmentChat;

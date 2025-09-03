@@ -2,34 +2,26 @@
 const nextConfig = {
   reactStrictMode: true,
   eslint: {
-    ignoreDuringBuilds: true,
-  },
+    ignoreDuringBuilds: true },
   typescript: {
-    ignoreBuildErrors: true,
-  },
+    ignoreBuildErrors: true },
   poweredByHeader: false,
   compress: true,
   images: {
     domains: ['ziontechgroup.com'],
-    formats: ['image/webp', 'image/avif'],
-  },
+    formats: ['image/webp', 'image/avif'] },
   experimental: {
     optimizeCss: true,
-    optimizePackageImports: ['lucide-react', 'framer-motion'],
-  },
-  webpack: (config, { dev, isServer }) => {
+    optimizePackageImports: ['lucide-react', 'framer-motion'] },
+  webpack: (config { dev, isServer }) => {
     if (!dev && !isServer) {
       config.optimization.splitChunks.cacheGroups = {
         ...config.optimization.splitChunks.cacheGroups,
         vendor: {
           test: /[\\/]node_modules[\\/]/,
           name: 'vendors',
-          chunks: 'all',
-        },
-      };
-    }
-    return config;
-  },
+          chunks: 'all' } }}
+    return config},
   async headers() {
     return [
       {
@@ -37,29 +29,16 @@ const nextConfig = {
         headers: [
           {
             key: 'X-Frame-Options',
-            value: 'DENY',
-          },
-          {
+            value: 'DENY' }, {
             key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-          {
+            value: 'nosniff' }, {
             key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin',
-          },
-        ],
-      },
-    ];
-  },
+            value: 'origin-when-cross-origin' } ] } ]},
   async redirects() {
     return [
       {
         source: '/home',
         destination: '/',
-        permanent: true,
-      },
-    ];
-  },
-};
+        permanent: true } ]} };
 
 module.exports = nextConfig;

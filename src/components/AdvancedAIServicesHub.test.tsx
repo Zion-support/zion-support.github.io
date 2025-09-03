@@ -11,5 +11,4 @@ export default function AdvancedAIServicesHub.test() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

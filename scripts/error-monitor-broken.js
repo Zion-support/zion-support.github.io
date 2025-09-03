@@ -14,15 +14,12 @@ class ErrorMonitor {
     this.maxLogSize = 10 * 1024 * 1024; // 10MB
     this.errorThreshold = 5; // Number of errors before triggering fixes
     this.errors = [];
-    this.ensureDirectories();
-  }
+    this.ensureDirectories()}
   ensureDirectories() {
     [this.logDir, this.errorReportDir].forEach(dir => {
       if (!fs.existsSync(dir)) {
-        fs.mkdirSync(dir, { recursive: true });
-      }
-    });
-  }
+        fs.mkdirSync(dir { recursive: true })}
+    })}
   
   log(level, message, error = null) {
     const timestamp = new Date().toISOString();
@@ -33,10 +30,8 @@ class ErrorMonitor {
       error: error
         ? {
             message: error.message,
-            stack: error.stack;
-}
-        : null;
-}
+            stack: error.stack}
+        : null}
     console.log(`[${timestamp}] ${level.toUpperCase()}: ${message}`)
     if (error) {
       console.error(error)}
@@ -51,7 +46,7 @@ class ErrorMonitor {
     try {
       this.log(
   'info'Checking TypeScript errors...')
-      const result = execSync('npm run type-check', {
+      const result = execSync('npm run type-check' {
         cwd: path.join(__dirname,
 )
   ..'),
@@ -65,8 +60,7 @@ class ErrorMonitor {
 )
 )
       this.log(
-  'error'TypeScript check failed with ${errors.length} errors`)      return { success: false, errors;
-}
+  'error'TypeScript check failed with ${errors.length} errors`)      return { success: false, errors}
     }
   }
   async checkESLintErrors() {
@@ -74,7 +68,7 @@ class ErrorMonitor {
     try {
       this.log(
   'info'Checking ESLint errors...')
-      const result = execSync('npm run lint', {
+      const result = execSync('npm run lint' {
         cwd: path.join(__dirname,
 )
   ..'),
@@ -88,8 +82,7 @@ class ErrorMonitor {
 )
 )
       this.log(
-  'error'ESLint check failed with ${errors.length} errors`)      return { success: false, errors;
-}
+  'error'ESLint check failed with ${errors.length} errors`)      return { success: false, errors}
     }
   }
   async checkBuildErrors() {
@@ -97,7 +90,7 @@ class ErrorMonitor {
     try {
       this.log(
   'info'Checking build errors...')
-      const result = execSync('npm run build', {
+      const result = execSync('npm run build' {
         cwd: path.join(__dirname,
 )
   ..'),
@@ -111,8 +104,7 @@ class ErrorMonitor {
 )
 )
       this.log(
-  'error'Build check failed with ${errors.length} errors`)      return { success: false, errors;
-}
+  'error'Build check failed with ${errors.length} errors`)      return { success: false, errors}
     }
   }
   parseTypeScriptErrors(output) {
@@ -134,8 +126,7 @@ class ErrorMonitor {
             raw: line})}
       }
     }
-    return errors;
-}
+    return errors}
   parseESLintErrors(output) {
     const errors = []
     const lines = output.split()
@@ -150,8 +141,7 @@ class ErrorMonitor {
           message: line.trim(),
           raw: line})}
     }
-    return errors;
-}
+    return errors}
   parseBuildErrors(output) {
     const errors = []
     const lines = output.split()
@@ -167,8 +157,7 @@ class ErrorMonitor {
           message: line.trim(),
           raw: line})}
     }
-    return errors;
-}
+    return errors}
   async triggerAutoFixer(errors) {
     try {
       this.log(
@@ -182,7 +171,7 @@ class ErrorMonitor {
       const autoFixerScript = path.join(__dirname;
 )
   'auto-fixer.js')
-      spawn('node', [autoFixerScript, errorFile], {
+      spawn('node', [autoFixerScript, errorFile] {
         detached: true;
 )
         stdio:
@@ -214,8 +203,7 @@ class ErrorMonitor {
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2))
     this.log(
   'info'Error report generated: ${reportFile}`)
-        return report;
-}
+        return report}
   generateRecommendations() {
 
     const recommendations = []
@@ -231,8 +219,7 @@ class ErrorMonitor {
   'build')) {
       recommendations.push(
   'Check dependencies and build configuration')    }
-    return recommendations;
-}
+    return recommendations}
   async run() {
 
     try {

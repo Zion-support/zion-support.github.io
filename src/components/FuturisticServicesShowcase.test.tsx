@@ -11,5 +11,4 @@ export default function FuturisticServicesShowcase.test() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

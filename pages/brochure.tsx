@@ -23,8 +23,7 @@ const Brochure = () => {
         'Predictive Analytics',
         'AI Integration Services'
       ]
-    },
-    {
+    }, {
       title: 'IT Services Portfolio',
       description: 'Complete overview of our information technology services and infrastructure solutions',
       pages: '32 pages',
@@ -40,8 +39,7 @@ const Brochure = () => {
         'Performance Optimization',
         '24/7 Technical Support'
       ]
-    },
-    {
+    }, {
       title: 'Micro SaaS Solutions',
       description: 'Detailed information about our software-as-a-service development and deployment services',
       pages: '28 pages',
@@ -57,8 +55,7 @@ const Brochure = () => {
         'Analytics & Reporting',
         'Scalability Solutions'
       ]
-    },
-    {
+    }, {
       title: 'Complete Solutions Guide',
       description: 'Comprehensive overview of all our services, case studies, and success stories',
       pages: '48 pages',
@@ -82,18 +79,15 @@ const Brochure = () => {
       title: 'Detailed Service Information',
       description: 'Comprehensive details about our offerings, capabilities, and methodologies',
       icon: FileText
-    },
-    {
+    }, {
       title: 'Case Studies & Success Stories',
       description: 'Real-world examples of how we\'ve helped businesses achieve their goals',
       icon: Star
-    },
-    {
+    }, {
       title: 'Technical Specifications',
       description: 'In-depth technical details about our solutions and implementation processes',
       icon: Shield
-    },
-    {
+    }, {
       title: 'Pricing & Package Information',
       description: 'Transparent pricing information and service packages to help you plan your budget',
       icon: Zap
@@ -107,15 +101,13 @@ const Brochure = () => {
       role: 'CEO',
       content: 'The brochures provided excellent detail about the services. It helped us make an informed decision about partnering with Zion Tech Group.',
       rating: 5
-    },
-    {
+    }, {
       name: 'David Thompson',
       company: 'Global Enterprises',
       role: 'CTO',
       content: 'Very comprehensive and well-organized. The case studies were particularly helpful in understanding the potential impact.',
       rating: 5
-    },
-    {
+    }, {
       name: 'Lisa Wang',
       company: 'StartupHub',
       role: 'Founder',
@@ -286,7 +278,6 @@ const Brochure = () => {
       
       <Footer />
     </>
-  );
-};
+  )};
 
 export default Brochure;

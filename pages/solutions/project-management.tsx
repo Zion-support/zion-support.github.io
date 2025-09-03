@@ -23,28 +23,23 @@ export default function ProjectManagement() {
       icon: Target,
       title: 'Task Management',
       description: 'Create, assign, and track tasks with priority levels and due dates.'
-    },
-    {
+    }, {
       icon: Users,
       title: 'Team Collaboration',
       description: 'Real-time collaboration tools for seamless team communication.'
-    },
-    {
+    }, {
       icon: Clock,
       title: 'Time Tracking',
       description: 'Track time spent on projects and tasks with detailed reporting.'
-    },
-    {
+    }, {
       icon: BarChart3,
       title: 'Reporting & Analytics',
       description: 'Comprehensive reports on project progress and team productivity.'
-    },
-    {
+    }, {
       icon: FileText,
       title: 'Document Management',
       description: 'Centralized document storage and version control for all project files.'
-    },
-    {
+    }, {
       icon: MessageSquare,
       title: 'Communication Hub',
       description: 'Integrated messaging and discussion threads for project communication.'

@@ -16,13 +16,10 @@ export default function Pricing() {
         'Monthly Support (8 hours)',
         'Basic Security Features',
         'Email Support',
-        'Standard SLA (99.5%)',
-      ],
+        'Standard SLA (99.5%)' ],
       popular: false,
       cta: 'Get Started',
-      href: '/contact',
-    },
-    {
+      href: '/contact' }, {
       name: 'Professional',
       price: '$7,999',
       period: 'per month',
@@ -35,13 +32,10 @@ export default function Pricing() {
         'Priority Support',
         'Premium SLA (99.9%)',
         'Dedicated Account Manager',
-        'Custom Integrations',
-      ],
+        'Custom Integrations' ],
       popular: true,
       cta: 'Most Popular',
-      href: '/contact',
-    },
-    {
+      href: '/contact' }, {
       name: 'Enterprise',
       price: 'Custom',
       period: 'pricing',
@@ -56,63 +50,44 @@ export default function Pricing() {
         'Dedicated Team',
         'Custom Training & Documentation',
         'Multi-region Deployment',
-        'Advanced Analytics & Reporting',
-      ],
+        'Advanced Analytics & Reporting' ],
       popular: false,
       cta: 'Contact Sales',
-      href: '/contact',
-    },
-  ];
+      href: '/contact' } ];
 
   const addOns = [
     {
       name: 'Additional Support Hours',
       price: '$150',
       period: 'per hour',
-      description: 'Extra support hours for your project needs',
-    },
-    {
+      description: 'Extra support hours for your project needs' }, {
       name: 'Priority Support',
       price: '$500',
       period: 'per month',
-      description: 'Faster response times and dedicated support',
-    },
-    {
+      description: 'Faster response times and dedicated support' }, {
       name: 'Custom Integrations',
       price: '$2,000',
       period: 'per integration',
-      description: 'Custom third-party integrations and APIs',
-    },
-    {
+      description: 'Custom third-party integrations and APIs' }, {
       name: 'Training & Documentation',
       price: '$1,000',
       period: 'per session',
-      description: 'Team training and comprehensive documentation',
-    },
-  ];
+      description: 'Team training and comprehensive documentation' } ];
 
   const faqs = [
     {
       question: 'Can I change my plan at any time?',
       answer:
-        'Yes, you can upgrade or downgrade your plan at any time. Changes will be prorated and take effect immediately.',
-    },
-    {
+        'Yes, you can upgrade or downgrade your plan at any time. Changes will be prorated and take effect immediately.' }, {
       question: 'What is included in the support hours?',
       answer:
-        'Support hours include bug fixes, minor updates, technical assistance, and general maintenance tasks.',
-    },
-    {
+        'Support hours include bug fixes, minor updates, technical assistance, and general maintenance tasks.' }, {
       question: 'Do you offer custom pricing for large projects?',
       answer:
-        'Yes, we offer custom pricing for enterprise clients and large-scale projects. Contact us for a personalized quote.',
-    },
-    {
+        'Yes, we offer custom pricing for enterprise clients and large-scale projects. Contact us for a personalized quote.' }, {
       question: 'What payment methods do you accept?',
       answer:
-        'We accept all major credit cards, bank transfers, and can accommodate enterprise billing arrangements.',
-    },
-  ];
+        'We accept all major credit cards, bank transfers, and can accommodate enterprise billing arrangements.' } ];
 
   return (
     <>
@@ -346,5 +321,4 @@ export default function Pricing() {
         </section>
       </main>
     </>
-  );
-}
+  )}

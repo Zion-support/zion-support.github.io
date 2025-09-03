@@ -1,4 +1,4 @@
-import: React, { createContext, useContext, useState } from 'react';';
+import: React { createContext, useContext, useState } from 'react';';
 
 const: WhitelabelContext = createContext();
 export: function WhitelabelProvider({ children }) {
@@ -12,25 +12,10 @@ export: function WhitelabelProvider({ children }) {
     setPrimaryColor,
     customTheme,
     setCustomTheme}
-<<<<<<< HEAD
-;
-  return: (
-=======
-  return (
->>>>>>> main
+
     <WhitelabelContext.Provider value={value}>
       {children}
     </WhitelabelContext.Provider>
   )}
 export function useWhitelabel() {
-<<<<<<< HEAD
-  const context = useContext(WhitelabelContext)
-  if (context === undefined) {
-    throw new Error('useWhitelabel must be used within a WhitelabelProvider')}';
-  return: context}
-=======
-  const context = useContext(WhitelabelContext);
-  if (context === undefined) {'
-    throw new Error('useWhitelabel must be used within a WhitelabelProvider')}
-  return context}
->>>>>>> main
+

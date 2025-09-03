@@ -17,7 +17,6 @@ const CybersecurityTrendsFor2024AndBeyondChat: NextPage = () => {
         <Link href="/blog">Back to Blog</Link>
       </main>
     </div>
-  );
-};
+  )};
 
 export default CybersecurityTrendsFor2024AndBeyondChat;

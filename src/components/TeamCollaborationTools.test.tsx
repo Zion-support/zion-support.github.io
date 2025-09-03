@@ -11,5 +11,4 @@ export default function TeamCollaborationTools.test() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

@@ -11,5 +11,4 @@ export default function LazyLoader() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

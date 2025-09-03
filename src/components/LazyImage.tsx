@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import LoadingSpinner from './LoadingSpinner';
 
@@ -10,8 +10,7 @@ interface LazyImageProps {
   className?: string;
   priority?: boolean;
   placeholder?: 'blur' | 'empty';
-  blurDataURL?: string;
-}
+  blurDataURL?: string}
 
 const LazyImage: React.FC<LazyImageProps> = ({
   src,
@@ -34,18 +33,14 @@ const LazyImage: React.FC<LazyImageProps> = ({
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsInView(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.1 }
+          observer.disconnect()}
+      }, { threshold: 0.1 }
     );
 
     if (imgRef.current) {
-      observer.observe(imgRef.current);
-    }
+      observer.observe(imgRef.current)}
 
-    return () => observer.disconnect();
-  }, [priority]);
+    return () => observer.disconnect()}, [priority]);
 
   return (
     <div ref={imgRef} className={`relative ${className}`}>
@@ -53,9 +48,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
         <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
           <LoadingSpinner size="sm" text="" />
         </div>
-      )}
-      
-      {isInView && (
+      )}, {isInView && (
         <Image
           src={src}
           alt={alt}
@@ -71,7 +64,6 @@ const LazyImage: React.FC<LazyImageProps> = ({
         />
       )}
     </div>
-  );
-};
+  )};
 
 export default LazyImage;

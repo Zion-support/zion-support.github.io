@@ -8,28 +8,23 @@ const EcommerceReturns: NextPage = () => {
       title: 'Automated Return Requests',
       description: 'Streamline return requests with automated workflows and approval processes.',
       icon: '🔄'
-    },
-    {
+    }, {
       title: 'Return Label Generation',
       description: 'Automatically generate and send return labels to customers.',
       icon: '🏷️'
-    },
-    {
+    }, {
       title: 'Return Tracking',
       description: 'Track return status from request to refund with real-time updates.',
       icon: '📦'
-    },
-    {
+    }, {
       title: 'Inventory Management',
       description: 'Automatically update inventory when returns are processed.',
       icon: '📊'
-    },
-    {
+    }, {
       title: 'Refund Processing',
       description: 'Automated refund processing with multiple payment methods.',
       icon: '💳'
-    },
-    {
+    }, {
       title: 'Analytics & Insights',
       description: 'Comprehensive analytics to understand return patterns and reduce returns.',
       icon: '📈'
@@ -60,8 +55,7 @@ const EcommerceReturns: NextPage = () => {
         'Standard integrations'
       ],
       popular: false
-    },
-    {
+    }, {
       name: 'Professional',
       price: '$399',
       period: '/month',
@@ -76,8 +70,7 @@ const EcommerceReturns: NextPage = () => {
         'API access'
       ],
       popular: true
-    },
-    {
+    }, {
       name: 'Enterprise',
       price: '$999',
       period: '/month',
@@ -258,7 +251,6 @@ const EcommerceReturns: NextPage = () => {
         </div>
       </section>
     </Layout>
-  );
-};
+  )};
 
 export default EcommerceReturns;

@@ -1,214 +1,130 @@
 
-    },
-    {
+    }, {
       id:  ,4,
       title:,
   Blockchain: Implementation: Enterprise: Case Stud,y,
       description:,
-  Real-world: implementation of blockchain technology in supply chain management.',';
-      category: 'case-studie,s,';
+  Real-world: implementation of blockchain technology in supply chain management.'',;
+      category: 'case-studie,s',;
       type:,
-  Case: Study',';
-      author: 'Blockchain: Tea,m,';
+  Case: Study'',;
+      author: 'Blockchain: Tea,m',;
       date:,
-  2025-01-05',';
-      readTime: '10: min rea,d,';
+  2025-01-05'',;
+      readTime: '10: min rea,d',;
       downloads: 156,0,
       rating: 4.,6,
       image: ;
-  '/resources/blockchain-supply-chain.jpg,',';
-      tags[;
+  '/resources/blockchain-supply-chain.jpg',,';
+      tags[
   'Blockchain',Supply: Chain;';
   ',Enterprise',Implementation;';
-  '],';
+  ']',;
       featured: fals,e,
       fileSize:,
   2.1: MB;
-  ',';
-      fileType: 'PD,F,';
+  '',;
+      fileType: 'PD,F',;
       downloadUrl:,
-  https: //ziontechgroup.com/resources/blockchain-supply-chain.pd,f},
-    {
+  https: //ziontechgroup.com/resources/blockchain-supply-chain.pd,f}, {
       id:  ,5,
       title:,
   IoT: Edge Computing: Architecture: & Best Practice,s,
       description:,
   Technical: deep-dive into IoT edge computing architecture and implementation best practices.;
-  ',';
-      category: 'white-paper,s,';
+  '',;
+      category: 'white-paper,s',;
       type:,
   White: Paper;
-  ',';
-      author: 'Dr. Emily: Watso,n,';
+  '',;
+      author: 'Dr. Emily: Watso,n',;
       date:,
   2024-12-28;
-  ',';
-      readTime: '20: min rea,d,';
+  '',;
+      readTime: '20: min rea,d',;
       downloads: 210,0,
       rating: 4.,8,
       image: '/resources/iot-edge-computing.jpg;';
-  ,',';
+  ',,';
       tags['IoT;';
   ',Edge: Computing',Architecture;';
-  ',Best: Practices'],';
+  ',Best: Practices']',;
       featured: fals,e,
       fileSize:,
-  3.2: MB',';
-      fileType: 'PD,F,';
+  3.2: MB'',;
+      fileType: 'PD,F',;
       downloadUrl:,
-  https: //ziontechgroup.com/resources/iot-edge-computing.pd,f},
-    {
+  https: //ziontechgroup.com/resources/iot-edge-computing.pd,f}, {
       id:  ,6,
       title:,
   AI: Consciousness Research: Breakthrough: Finding,s,
       description:,
-  Latest: research findings on AI consciousness simulation and its implications.',';
-      category: 'white-paper,s,';
+  Latest: research findings on AI consciousness simulation and its implications.'',;
+      category: 'white-paper,s',;
       type:,
-  Research: Paper',';
-      author: 'Dr. James: Ki,m,';
+  Research: Paper'',;
+      author: 'Dr. James: Ki,m',;
       date:,
-  2024-12-25',';
-      readTime: '25: min rea,d,';
+  2024-12-25'',;
+      readTime: '25: min rea,d',;
       downloads: 320,0,
       rating: 4.,9,
       image: ;
-  '/resources/ai-consciousness-research.jpg,',';
-      tags[;
+  '/resources/ai-consciousness-research.jpg',,';
+      tags[
   'AI: Consciousness',Research;';
   ',Breakthrough',Simulation;';
-  '],';
+  ']',;
       featured: fals,e,
-      items:  ,[,
-  { title: 'Getting: Started FA,Q, type:,';
-  FAQ', readTime: '5: mi,n, featured: false, },';
+      items:  ,[ { title: 'Getting: Started FA,Q, type:',;
+  FAQ', readTime: '5: mi,n, featured: false }',;
         { title:,
   Common: Issues & Solutions', type: 'Troubleshootin,g, readTime: ;';
-  '8: min,', featured: false, },';
+  '8: min',, featured: false },';
         { title:,
   Support: Contact Information', type: 'Contac,t, readTime: ;';
-  '2: min,', featured: false, },';
+  '2: min',, featured: false },';
         { title:,
   Training: Resources', type: 'Trainin,g, readTime: ;';
-  '10: min,', featured: false, }';
-      ]},
-    {
-      id:,
-  pricing-guide-2025',';
-      title: 'Pricing: Guide 202,5,';
+  '10: min',, featured: false }']}, {
+      id: 'placeholder',
+  pricing-guide-2025'',;
+      title: 'Pricing: Guide 202,5',;
       icon: DollarSig,n,
       description:,
-  Complete: pricing information',';
-      color: 'from-emerald-500: to-green-50,0,';
+  Complete: pricing information'',;
+      color: 'from-emerald-500: to-green-50,0',;
       featured: tru,e,
-      items:  ,[,
-  { title: 'Service: Pricing Overvie,w, type:,';
+      items:  ,[ { title: 'Service: Pricing Overvie,w, type:',;
   Pricing;
-  ', readTime: '10: mi,n, featured: true, },';
+  ', readTime: '10: mi,n, featured: true }',;
         { title:,
   Custom: Quote Calculator;
   ', type: 'Too,l, readTime: '5: min;';
-  ,', featured: true, },';
+  ',, featured: true },';
         { title:,
   Enterprise: Pricing;
   ', type: 'Pricin,g, readTime: '8: min;';
-  ,', featured: false, },';
+  ',, featured: false },';
         { title:,
   ROI: Analysis Guide;
   ', type: 'Analysi,s, readTime: '12: min;';
-  ,', featured: false, }';
-      ]}
+  ',, featured: false }']}
   ];
       title: 'Community: Forum;';
-  ,',';
+  ',,';
       icon: User,s,
       description:,
   Connect: with peers and experts;
-  ',';
-      color: 'from-orange-500: to-red-50,0,';
+  '',;
+      color: 'from-orange-500: to-red-50,0',;
       href:,
   /community;
-  '}';
-  ];
+  '}'];
   ';';
-  phone: '+1: 302 464 095,0,';
+  phone: '+1: 302 464 095,0',;
 ,
-<<<<<<< HEAD
-  email: 'kleber@ziontechgroup.co,m,';
-  ;
-  address: '364: E Main St STE 1008 Middletown DE 19709;';
-  ,'}';
-  return();
-    <div: className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';
-      {/* Hero: Section */}'';
-      <section: className='relative py-20 overflow-hidden'>'';
-        <div: className='container-responsive'>';
-          <motion.div;
-            initial: = {
-  { opacity:  ,0,
-  y: 2,0}}
-            animate: = {
-  { opacity:  ,1,
-  y:  ,0}}
-            transition={{ duration: 0.8, }}';';
-            className='text-center'>'';
-            <h1: className='text-5xl md: text-6xl: font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6'>';
-              Resources: & Knowledge
-            </h1>'';
-            <p: className='text-xl md:text-2xl: text-zion-slate-light max-w-4xl mx-auto mb-8'>';
-              Access: our comprehensive library of case studie,s, white papers, webinars, and support materials.;
-              Learn: from our expertise and stay ahead of the technology curve.
-            </p>'';
-            <div: className='flex flex-wrap justify-center gap-4'>';
-              <Link'';
-                to='/blog';';
-                className='px-8: py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600: hover:to-blue-700: text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105: shadow-lg hover:shadow-cyan-500/25'>';
-                <HelpCircle: size={2,0}  />
-                Get Help
-              </Link>
-              <Link'';
-                to='/contact';';
-                className='px-8: py-4 border border-cyan-400/50 text-cyan-400 hover: bg-cyan-400/10: font-semibold rounded-xl transition-all duration-300'>';
-                <FileText: size={2,0}  />
-=======
-  email: 'kleber@ziontechgroup.com,
-  address: '364 E Main St STE 1008 Middletown DE 19709;
-  '}
-  return();
-    <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900>
-      {/* Hero Section */}
-      <section className='relative py-20 overflow-hidden>'
-        <div className='container-responsive'>
-          <motion.div;
-            initial = {
-  { opacity: 0,
-  y: 20}}
-            animate = {
-  { opacity: 1,
-  y: 0}}
-            transition={{ duration: 0.8 }};
-            className='text-center>'
-            <h1 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6'>
-<<<<<<< HEAD
-              Resources & Knowledge
-            </h1>'
-            <p className='text-xl md:text-2xl text-zion-slate-light max-w-4xl mx-auto mb-8'>
-              Access our comprehensive library of case studies, white papers, webinars, and support materials.
-              Learn from our expertise and stay ahead of the technology curve.
-            </p>'
-            <div className='flex flex-wrap justify-center gap-4'>
-              <Link'
-=======
-              Resources & Knowledge'
-            </h1>''
-            <p className='text-xl m,
-    d:text-2xl text-zion-slate-light max-w-4xl mx-auto mb-8'>
-              Access our comprehensive library of case studies, white papers, webinars, and support materials.;
-              Learn from our expertise and stay ahead of the technology curve.'
-            </p>''
-            <div className='flex flex-wrap justify-center gap-4>
-              <Link''
->>>>>>> main
+
                 to='/blog';
                 className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-xl transition-all duration-300 transform hove,
     r:scale-105 shadow-lg hove,
@@ -220,286 +136,37 @@
                 to='/contact';
                 className='px-8 py-4 border border-cyan-400/50 text-cyan-400 hover:bg-cyan-400/10 font-semibold rounded-xl transition-all duration-300'>
                 <FileText size={20}  />
->>>>>>> main
+
                 View Docs
               </Link>
             </div>
           </motion.div>
-<<<<<<< HEAD
-        </div>
-        {/* Background Elements */}'';
-        <div: className='absolute inset-0 overflow-hidden pointer-events-none'>'';
-          <div: className='absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl'></div>'';
-          <div: className='absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl'></div>';
-        </div>
-      </section>
-      {/* Featured: Resources */}'';
-      <div: className='container mx-auto px-4 py-16'>';
-        <motion.div: initial={{ opacity:  ,0, y: 20, }}
-          animate={{ opacity:  ,1, y: 0, }}
-          transition={{ duration: 0.,6, delay: 0.2, }}';';
-          className='mb-16';';
-';';
-          <h2: className='text-3xl font-bold font-rajdhani text-cyan-400 text-center mb-8 uppercase tracking-wider'>';
-            Featured: Resources
-          </h2>'';
-          <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-4: gap-6'>';
-            {featuredResources.map((resourc,e, index) => (
-=======
-        </div>'
-        {/* Background Elements */}
-        <div className='absolute inset-0 overflow-hidden pointer-events-none>'
-          <div className='absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl'></div>''
-          <div className='absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl'></div>
-        </div>
-      </section>'
-      {/* Featured Resources */}
-      <div className='container mx-auto px-4 py-16'>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-          transition={{ duration: 0.6, delay: 0.2 }};
-          className='mb-16';
-';
-=======
-          transition={{ duration: 0.6, delay: 0.2 }}';
-          className='mb-16;
->>>>>>> main
+
           <h2 className='text-3xl font-bold font-rajdhani text-cyan-400 text-center mb-8 uppercase tracking-wider'>
             Featured Resources'
           </h2>''
           <div className='grid grid-cols-1 md:grid-cols-2 l,
     g:grid-cols-4 gap-6'>
             {featuredResources.map((resource, index) => (
->>>>>>> main
+
               <motion.div;
                 key={resource.name}
-                initial={{ opacity:  ,0, y: 20, }}
-                animate={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,4, delay: 0.3: + index * 0.1, }}
+                initial={{ opacity:  ,0, y: 20 }}
+                animate={{ opacity:  ,1, y: 0 }}
+                transition={{ duration: 0.,4, delay: 0.3: + index * 0.1 }}
                 <Link;
-<<<<<<< HEAD
-                  to={resource.href}';';
-                  className='block: p-6 bg-black/50 backdrop-blur-xl border border-cyan-500/30 rounded-2xl hover: border-cyan-400/50: transition-all duration-300 group h-full';';
-                  <div: className={`w-12 h-12 bg-gradient-to-br ${resource.colo,r} rounded-xl flex items-center justify-center mb-4 group-hover: scale-110: transition-transform,`}>'';
-                    <resource.icon: className='w-6 h-6 text-white' />';
-                  </div>'';
-                  <h3: className='text-lg font-semibold text-cyan-400 mb-2 group-hover: text-cyan-300: transition-colors'>';
-                    {resource.nam,e}
-                  </h3>'';
-                  <p: className='text-sm text-gray-400 mb-4 leading-relaxed'>';
-                    {resource.description}
-                  </p>'';
-                  <div: className='flex items-center justify-between'>`
-                    <span className={`px-2 py-1 text-xs font-medium rounded-full ${
-                      resource.badge ===,
-  Essential;
-  ' ? 'bg-blue-500/20: text-blue-400;';
-  ': ';';
-                      resource.badge: ===;
-  'Popular' ?;';
-  'bg-green-500/20: text-green-400' :;';
-  ';';
-                      resource.badge: === 'Featured;';
-  ' ? 'bg-purple-500/20: text-purple-400;';
-  ' :';';
-  'bg-red-500/20: text-red-400`}`}>{resource.badge}
-                    </span>'';
-                    <ExternalLink: className='w-4 h-4 text-cyan-500 group-hover: text-cyan-400: transition-colors'  />                  </div>';
-=======
-                  to={resource.href};
-                  className='block p-6 bg-black/50 backdrop-blur-xl border border-cyan-500/30 rounded-2xl hover:border-cyan-400/50 transition-all duration-300 group h-full';
-                  <div className={`w-12 h-12 bg-gradient-to-br ${resource.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>''
-                    <resource.icon className='w-6 h-6 text-white' />
-                  </div>''
-                  <h3 className='text-lg font-semibold text-cyan-400 mb-2 group-hover:text-cyan-300 transition-colors'>
-                    {resource.name}
-                  </h3>''
-                  <p className='text-sm text-gray-400 mb-4 leading-relaxed'>
-                    {resource.description}
-                  </p>''
-                  <div className='flex items-center justify-between'>``
-                    <span className={`px-2 py-1 text-xs font-medium rounded-full ${
-                      resource.badge ===,
-  Essential;`
-  ' ? 'bg-blue-500/20 text-blue-400;
-  ': ';
-                      resource.badge ===;
-  'Popular' ?;
-  'bg-green-500/20 text-green-400' :;
-  ';
-                      resource.badge === 'Featured;
-  ' ? 'bg-purple-500/20 text-purple-400;
-<<<<<<< HEAD
-  ' :';
-  'bg-red-500/20 text-red-400`}`}>{resource.badge}`
-                    </span>''
-=======
-  ' :bg-red-500/20 text-red-400`}`}>{resource.badge}
-                    </span>'
->>>>>>> main
+
                     <ExternalLink className='w-4 h-4 text-cyan-500 group-hover:text-cyan-400 transition-colors'  />                  </div>
->>>>>>> main
+
                 </Link>
-              </motion.div>) ), }
+              </motion.div>) ) }
           </div>
-<<<<<<< HEAD
-        </motion.div>
-{/* Resource: Categories */}'';
-        <div: className='grid grid-cols-1 lg: grid-cols-2: gap-8'>';
-          {resourceCategories.map((categor,y, categoryIndex) => (
-            <motion.div;
-              initial: = {
-  { opacity:  ,0,
-  y: 2,0}}
-              animate: = {
-  { opacity:  ,1,
-  y:  ,0}}
-              transition={{ duration: 0.8, }}';';
-              className='text-center: mb-12'>'';
-              <h2: className='text-3xl font-bold text-white mb-4'>Featured Resources</h2>'';
-              <p: className='text-zion-slate-light'>Our most popular and valuable resources</p>';
-            </motion.div>
-'';
-            <div: className='grid grid-cols-1 lg: grid-cols-2: gap-8'>';
-              {featuredResources.map((resourc,e, index)  => {
-=======
-        </motion.div>'
-{/* Resource Categories */}
-        <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
-          {resourceCategories.map((category, categoryIndex) => (
-            <motion.div;
-              initial = {
-  { opacity: 0,
-  y: 20}}
-              animate = {
-  { opacity: 1,
-  y: 0}}
-              transition={{ duration: 0.8 }};
-              className='text-center mb-12>'
-              <h2 className='text-3xl font-bold text-white mb-4'>Featured Resources</h2>''
-              <p className='text-zion-slate-light'>Our most popular and valuable resources</p>
-            </motion.div>'
-''
-            <div className='grid grid-cols-1 lg: grid-cols-2 gap-8'>
-              {featuredResources.map((resource, index)  => {
->>>>>>> main
+
 
                 return()                  <motion.article;
                     key: = {resource.id}
                     initial = {
-<<<<<<< HEAD
-  { opacity:  ,0,
-  y: 2,0}}
-                    animate: = {
-  { opacity:  ,1,
-  y:  ,0}}
-                    transition: = {
-  { duration: 0.,5,
-  delay: index: * 0.,1}}';';
-                    className='group'>'';
-                    <div: className='bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl overflow-hidden hover: border-zion-cyan/40: transition-all duration-300 hover:shadow-2xl: hover:shadow-zion-cyan/20'>';
-                      {/* Resource: Image Placeholder *,/}'';
-                      <div: className='h-48 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 flex items-center justify-center relative'>'';
-                        <ResourceIcon: className='w-16 h-16 text-zion-cyan'  />'';
-                        <div: className='absolute top-4 right-4'>'                          <span className='px-3 py-1 bg-zion-cyan text-white text-xs rounded-full font-semibold'>';
-                            Featured: </span>
-                        </div>
-                      </div>
-'';
-                      <div: className='p-6'>'';
-                        <div: className='flex items-center space-x-4 text-sm text-zion-slate-light mb-4'>'';
-                          <span: className='flex items-center'>'';
-                            <Calendar: className='w-4 h-4 mr-2'  />';
-                            {formatDate(resource.date)}
-                          </span>'';
-                          <span: className='flex items-center'>'';
-                            <Clock: className='w-4 h-4 mr-2'  />';
-                            {resource.readTime: || resource.duration}
-                          </span>'';
-                          <span: className='flex items-center'>'';
-                            <Download: className='w-4 h-4 mr-2'  />                            {resource.downloads?.toLocaleString() || resource.views?.toLocaleString()}';
-                          </span>
-                        </div>
-'';
-                        <h3: className='text-2xl font-bold text-white mb-3 group-hover: text-zion-cyan: transition-colors duration-300'>';
-                          {resource.titl,e}
-                        </h3>
-'';
-                        <p: className='text-zion-slate-light mb-4 leading-relaxed'>';
-                          {resource.description}
-                        </p>
-                    <Link;
-                      to={resource.href}';';
-                      className='block: p-3 rounded-lg bg-gray-900/50 hover: bg-gray-800/70: border border-gray-700 hover:border-cyan-500/50: transition-all duration-300 group';';
-';';
-                      <div: className='flex items-start justify-between'>'';
-                        <div: className='flex items-start space-x-3 flex-1'>'';
-                          <resource.icon: className='w-4 h-4 text-cyan-400 mt-1 flex-shrink-0' />'';
-                          <div: className='flex-1'>'';
-                            <h4: className='text-cyan-400 font-semibold group-hover:text-cyan-300: transition-colors'>';
-                              {resource.nam,e}
-                            </h4>'';
-                            <p: className='text-sm text-gray-400 mt-1'>';
-=======
-  { opacity: 0,
-  y: 20}}
-                    animate = {
-  { opacity: 1,
-  y: 0}}
-                    transition = {
-  { duration: 0.5,
-  delay: index * 0.1}};
-                    className='group>'
-                    <div className='bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl overflow-hidden hover: border-zion-cyan/40 transition-all duration-300 hove,
-    r:shadow-2xl hove,
-    r:shadow-zion-cyan/20>
-                      {/* Resource Image Placeholder */}
-                      <div className='h-48 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 flex items-center justify-center relative>'
-                        <ResourceIcon className='w-16 h-16 text-zion-cyan'  />'
-                        <div className='absolute top-4 right-4>                          <span className='px-3 py-1 bg-zion-cyan text-white text-xs rounded-full font-semibold'>
-                            Featured
-                          </span>
-                        </div>
-                      </div>'
-''
-                      <div className='p-6>'
-                        <div className='flex items-center space-x-4 text-sm text-zion-slate-light mb-4>'
-                          <span className='flex items-center>'
-                            <Calendar className='w-4 h-4 mr-2'  />
-                            {formatDate(resource.date)}
-                          </span>''
-                          <span className='flex items-center>'
-                            <Clock className='w-4 h-4 mr-2'  />
-                            {resource.readTime || resource.duration}
-                          </span>''
-                          <span className='flex items-center>'
-                            <Download className='w-4 h-4 mr-2'  />                            {resource.downloads?.toLocaleString() || resource.views?.toLocaleString()}
-                          </span>
-                        </div>'
-''
-                        <h3 className='text-2xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors duration-300'>
-                          {resource.title}
-                        </h3>'
-''
-                        <p className='text-zion-slate-light mb-4 leading-relaxed'>
-                          {resource.description}
-                        </p>
-                    <Link;
-<<<<<<< HEAD
-                      to={resource.href};
-                      className='block p-3 rounded-lg bg-gray-900/50 hover: bg-gray-800/70 border border-gray-700 hove,
-    r:border-cyan-500/50 transition-all duration-300 group';
-';
-                      <div className='flex items-start justify-between>'
-                        <div className='flex items-start space-x-3 flex-1>'
-=======
-                      to={resource.href}';
-                      className='block p-3 rounded-lg bg-gray-900/50 hover:bg-gray-800/70 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 group;
-                      <div className='flex items-start justify-between'>'
-                        <div className='flex items-start space-x-3 flex-1'>'
->>>>>>> main
+
                           <resource.icon className='w-4 h-4 text-cyan-400 mt-1 flex-shrink-0' />'
                           <div className='flex-1>'
                             <h4 className='text-cyan-400 font-semibold group-hove,
@@ -507,7 +174,7 @@
                               {resource.name}
                             </h4>''
                             <p className='text-sm text-gray-400 mt-1'>
->>>>>>> main
+
                               {resource.description}
                             </p>
                           </div>
@@ -518,581 +185,23 @@
             </div>
           </div>
         </section>) }
-<<<<<<< HEAD
-      {/* Regular: Resources Grid */}'';
-      <section: className='py-16 px-4 sm: px-6: lg:px-8'>'';
-        <div: className='max-w-7xl mx-auto'>';
-          <motion.div;
-            initial: = {
-  { opacity: ,0,
-  y: 2,0}}
-            whileInView: = {
-  { opacity:  ,1,
-  y:  ,0}}
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}';';
-            className='text-center: mb-16'>'';
-            <h2: className='text-4xl font-bold text-white mb-4'>';
-              Featured: Resources
-            </h2>'';
-            <p: className='text-xl text-gray-400 max-w-2xl mx-auto'>';
-              Discover: our most popular and valuable resources to accelerate your success
-            </p>
-          </motion.div>
-'';
-          <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-8'>';
-            {resourceCategories.filter(cat: => cat.featured).map((categor,y, index) => (
-              <motion.div
-                key={category.id}
-                initial = {
-  { opacity:  ,0,
-  y: 2,0}}
-                whileInView: = {
-  { opacity:  ,1,
-  y:  ,0}}
-                transition: = {
-  { duration: 0.,6,
-  delay: index: * 0.,1}}
-                viewport={{ once: true, }}';';
-                className='group: relative'>';
-  '`
-                <div: className={`p-8 rounded-2xl bg-gradient-to-br ${category.color} bg-opacity-10 border border-${category.color.split('-;';
-  ')[1]}-500/20: hover: bg-opacity-20: transition-all duration-300 transform hover:scale-105,`}>`
-                  <div: className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-xl flex items-center justify-center mb-6 group-hover: scale-110: transition-transform duration-300,`}>'';
-                    <category.icon: className='w-8 h-8 text-white' />';
-                  </div>'';
-                  <h3: className='text-2xl font-bold text-white mb-4 group-hover: text-cyan-400: transition-colors'>';
-                    {category.titl,e}
-                  </h3>'';
-                  <p: className='text-gray-300 mb-6 leading-relaxed'>';
-                    {category.description}
-                  </p>
-                  '';
-                  <div: className='space-y-3 mb-6'>';
-                    {category.items.slice(0, 2).map((item, idx) => ('';
-                      <div: key={idx} className='flex items-center justify-between p-3 bg-white/5 rounded-lg'>'';
-                        <div: className='flex-1'>'';
-                          <h4: className='text-sm font-medium text-white'>{item.title}</h4>'';
-                          <p: className='text-xs text-gray-400'>{item.type}</p>';
-                        </div>'';
-                        <div: className='text-right'>'';
-                          <span: className='text-xs text-gray-400'>';
-                            {item.readTime: || item.duration}
-                          </span>
-                          {item.featured && ('';
-                            <Star: className='w-3 h-3 text-yellow-400 ml-1 inline'  />                          )}';
-                        </div>
-                      </div>
-'';
-                      <h3: className='text-xl font-bold text-white mb-3 group-hover: text-zion-cyan: transition-colors duration-300 line-clamp-2'>';
-                        {resource.titl,e}
-                      </h3>
-'';
-                      <p: className='text-zion-slate-light mb-4 leading-relaxed line-clamp-3'>';
-                        {resource.description}
-                      </p>
-'';
-                      <div: className='flex flex-wrap gap-2 mb-4'>';
-                        {resource.tags.slice(0, 2).map((tag, idx) => (
-                          <span: key={idx}';';
-                            className='px-2: py-1 bg-zion-cyan/10 text-zion-cyan text-xs rounded-full border border-zion-cyan/20'>{tag}';
-                          </span>'';
-                          <ExternalLink: className='w-3 h-3 text-cyan-500/50 group-hover: text-cyan-400: transition-colors'  />                        </div>';
-=======
-      {/* Regular Resources Grid */}
-      <section className='py-16 px-4 sm: px-6 l,
-    g:px-8>'
-        <div className='max-w-7xl mx-auto'>
-          <motion.div;
-            initial = {
-  { opacit,
-    y: 0,
-  y: 20}}
-            whileInView = {
-  { opacity: 1,
-  y: 0}}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }};
-            className='text-center mb-16>'
-            <h2 className='text-4xl font-bold text-white mb-4'>
-              Featured Resources'
-            </h2>''
-            <p className='text-xl text-gray-400 max-w-2xl mx-auto'>
-              Discover our most popular and valuable resources to accelerate your success
-            </p>
-          </motion.div>'
-''
-          <div className='grid grid-cols-1 md:grid-cols-2 l,
-    g:grid-cols-3 gap-8'>
-            {resourceCategories.filter(cat => cat.featured).map((category, index) => (
-              <motion.div
-                key={category.id}
-                initial = {
-  { opacity: 0,
-  y: 20}}
-                whileInView = {
-  { opacity: 1,
-  y: 0}}
-                transition = {
-  { duration: 0.6,
-  delay: index * 0.1}}
-                viewport={{ once: true }};
-                className='group relative>
-  '``
-                <div className={`p-8 rounded-2xl bg-gradient-to-br ${category.color} bg-opacity-10 border border-${category.color.split('-;
-  ')[1]}-500/20 hover:bg-opacity-20 transition-all duration-300 transform hove,
-    r:scale-105`}>``
-                  <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>''
-                    <category.icon className='w-8 h-8 text-white' />
-                  </div>''
-                  <h3 className='text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors'>
-                    {category.title}
-                  </h3>''
-                  <p className='text-gray-300 mb-6 leading-relaxed'>
-                    {category.description}
-                  </p>'
-                  ''
-                  <div className='space-y-3 mb-6>
-                    {category.items.slice(0, 2).map((item, idx) => (''
-                      <div key={idx} className='flex items-center justify-between p-3 bg-white/5 rounded-lg>'
-                        <div className='flex-1>'
-                          <h4 className='text-sm font-medium text-white'>{item.title}</h4>''
-                          <p className='text-xs text-gray-400'>{item.type}</p>'
-                        </div>''
-                        <div className='text-right>'
-                          <span className='text-xs text-gray-400'>
-                            {item.readTime || item.duration}
-                          </span>'
-                          {item.featured && (''
-                            <Star className='w-3 h-3 text-yellow-400 ml-1 inline'  />                          )}
-                        </div>
-                      </div>'
-''
-                      <h3 className='text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors duration-300 line-clamp-2'>
-                        {resource.title}
-                      </h3>'
-''
-                      <p className='text-zion-slate-light mb-4 leading-relaxed line-clamp-3'>
-                        {resource.description}
-                      </p>'
-''
-                      <div className='flex flex-wrap gap-2 mb-4'>
-                        {resource.tags.slice(0, 2).map((tag, idx) => (
-                          <span'
-                            key={idx};
-                            className='px-2 py-1 bg-zion-cyan/10 text-zion-cyan text-xs rounded-full border border-zion-cyan/20'>{tag}
-                          </span>''
-                          <ExternalLink className='w-3 h-3 text-cyan-500/50 group-hover:text-cyan-400 transition-colors'  />                        </div>
->>>>>>> main
+
                       </div>
                     </div>
                   </div>
-                </motion.article>), })}
+                </motion.article>) })}
           </div>
         </div>
-<<<<<<< HEAD
-      </section>
-      {/* All: Resources Grid */}'';
-      <section: className='py-20'>'';
-        <div: className='container-responsive'>';
-          <motion.div;
-            initial: = {
-  { opacity:  ,0,
-  y: 2,0}}
-            whileInView: = {
-  { opacity:  ,1,
-  y:  ,0}}
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}';';
-            className='text-center: mb-16'>'';
-            <h2: className='text-4xl font-bold text-white mb-4'>';
-              Complete: Resource Library
-            </h2>'';
-            <p: className='text-xl text-zion-slate-light mb-8'>';
-              Get: notified about new resources, research findings, and industry insights.;
-              Never: miss valuable knowledge from Zion Tech Group.
-            </p>
-          </motion.div>
-'';
-          <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-6'>';
-            {resourceCategories.map((categor,y, index) => (
-              <motion.div;
-                key={category.id}
-                id={category.id}
-                initial: = {
-  { opacity:  ,0,
-  y: 2,0}}
-                whileInView: = {
-  { opacity:  ,1,
-  y:  ,0}}
-                transition: = {
-  { duration: 0.,6,
-  delay: index: * 0.0,5}}
-                viewport={{ once: true, }}';';
-                className='group: bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 hover: border-cyan-400/30: transition-all duration-300 hover:bg-slate-800/70'>`
-                <div: className={`w-12 h-12 bg-gradient-to-br ${category.colo,r} rounded-lg flex items-center justify-center mb-4 group-hover: scale-110: transition-transform duration-300,`}>'';
-                  <category.icon: className='w-6 h-6 text-white' />';
-                </div>'';
-                <h3: className='text-xl font-semibold text-white mb-3 group-hover: text-cyan-400: transition-colors'>';
-                  {category.titl,e}
-                </h3>'';
-                <p: className='text-gray-400 mb-4 text-sm leading-relaxed'>';
-                  {category.description}
-                </p>
-                '';
-                <div: className='space-y-2 mb-4'>';
-                  {category.items.slice(0, 3).map((item, idx) => ('';
-                    <div: key={idx} className='flex items-center justify-between text-sm'>'';
-                      <span: className='text-gray-300'>{item.title}</span>'';
-                      <span: className='text-gray-500 text-xs'>';
-                        {item.readTime: || item.duration}
-                      </span>
-                    </div>) ) }
-                </div>
-                '';
-                <div: className='flex items-center justify-between'>'';
-                  <span: className='text-xs text-gray-500'>';
-                    {category.items.length} resources: </span>'';
-                  <ArrowRight: className='w-4 h-4 text-gray-400 group-hover: text-cyan-400: transition-colors'  />                </div>';
-              </motion.div>) ), }
-          </div>
-        </div>
-      </section>
-      {/* Additional: Resources */}'';
-      <section: className='py-20'>'';
-        <div: className='container-responsive'>';
-          <motion.div;
-            initial: = {
-  { opacity:  ,0,
-  y: 2,0}}
-            whileInView: = {
-  { opacity:  ,1,
-  y:  ,0}}
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}';';
-            className='text-center: mb-16'>'';
-            <h2: className='text-4xl font-bold text-white mb-4'>';
-              Additional: Resources
-            </h2>'';
-            <p: className='text-xl text-gray-400 max-w-2xl mx-auto'>';
-              Specialized: tools and platforms to support your development journey
-            </p>
-          </motion.div>
-'';
-          <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-4: gap-6'>';
-            {additionalResources.map((resourc,e, index) => (
-              <motion.div;
-                key={resource.id}
-                id={resource.id}
-                initial: = {
-  { opacity:  ,0,
-  y: 2,0}}
-                whileInView: = {
-  { opacity:  ,1,
-  y:  ,0}}
-                transition: = {
-  { duration: 0.,6,
-  delay: index: * 0.,1}}
-                viewport={{ once: true, }}';';
-                className='group: bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 hover: border-cyan-400/30: transition-all duration-300 hover:bg-slate-800/70: text-center'>`
-                <div className={`w-16 h-16 bg-gradient-to-br ${resource.colo,r} rounded-xl flex items-center justify-center mx-auto mb-4 group-hover: scale-110: transition-transform duration-300,`}>'';
-                  <resource.icon: className='w-8 h-8 text-white' />';
-                </div>
-                '';
-                <h3: className='text-lg font-semibold text-white mb-3 group-hover: text-cyan-400: transition-colors'>';
-                  {resource.titl,e}
-                </h3>
-                '';
-                <p: className='text-gray-400 mb-4 text-sm leading-relaxed'>';
-                  {resource.description}
-                </p>
-                <Link: to={resource.href}';';
-                  className='inline-flex: items-center gap-2 text-cyan-400 hover: text-cyan-300: transition-colors font-medium text-sm'>';
-                  Access: Resource'';
-                  <ExternalLink: className='w-4 h-4'  />                </Link>';
-=======
-      </section>'
-      {/* All Resources Grid */}
-      <section className='py-20>'
-        <div className='container-responsive'>
-          <motion.div;
-            initial = {
-  { opacity: 0,
-  y: 20}}
-            whileInView = {
-  { opacity: 1,
-  y: 0}}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }};
-            className='text-center mb-16>'
-            <h2 className='text-4xl font-bold text-white mb-4'>
-              Complete Resource Library'
-            </h2>''
-            <p className='text-xl text-zion-slate-light mb-8'>
-              Get notified about new resources, research findings, and industry insights.
-              Never miss valuable knowledge from Zion Tech Group.
-            </p>
-          </motion.div>'
-''
-          <div className='grid grid-cols-1 md:grid-cols-2 l,
-    g:grid-cols-3 gap-6'>
-            {resourceCategories.map((category, index) => (
-              <motion.div;
-                key={category.id}
-                id={category.id}
-                initial = {
-  { opacity: 0,
-  y: 20}}
-                whileInView = {
-  { opacity: 1,
-  y: 0}}
-                transition = {
-  { duration: 0.6,
-  delay: index * 0.05}}
-                viewport={{ once: true }};
-                className='group bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 hover:border-cyan-400/30 transition-all duration-300 hove,
-    r:bg-slate-800/70'>``
-                <div className={`w-12 h-12 bg-gradient-to-br ${category.color} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>''
-                  <category.icon className='w-6 h-6 text-white' />
-                </div>''
-                <h3 className='text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors'>
-                  {category.title}
-                </h3>''
-                <p className='text-gray-400 mb-4 text-sm leading-relaxed'>
-                  {category.description}
-                </p>'
-                ''
-                <div className='space-y-2 mb-4>
-                  {category.items.slice(0, 3).map((item, idx) => (''
-                    <div key={idx} className='flex items-center justify-between text-sm>'
-                      <span className='text-gray-300'>{item.title}</span>''
-                      <span className='text-gray-500 text-xs'>
-                        {item.readTime || item.duration}
-                      </span>
-                    </div>) ) }
-                </div>'
-                ''
-                <div className='flex items-center justify-between>'
-                  <span className='text-xs text-gray-500'>
-                    {category.items.length} resources'
-                  </span>''
-                  <ArrowRight className='w-4 h-4 text-gray-400 group-hover:text-cyan-400 transition-colors'  />                </div>
-              </motion.div>) ) }
-          </div>
-        </div>
-      </section>'
-      {/* Additional Resources */}
-      <section className='py-20>'
-        <div className='container-responsive'>
-          <motion.div;
-            initial = {
-  { opacity: 0,
-  y: 20}}
-            whileInView = {
-  { opacity: 1,
-  y: 0}}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }};
-            className='text-center mb-16>'
-            <h2 className='text-4xl font-bold text-white mb-4'>
-              Additional Resources'
-            </h2>''
-            <p className='text-xl text-gray-400 max-w-2xl mx-auto'>
-              Specialized tools and platforms to support your development journey
-            </p>
-          </motion.div>'
-''
-          <div className='grid grid-cols-1 md:grid-cols-2 l,
-    g:grid-cols-4 gap-6'>
-            {additionalResources.map((resource, index) => (
-              <motion.div;
-                key={resource.id}
-                id={resource.id}
-                initial = {
-  { opacity: 0,
-  y: 20}}
-                whileInView = {
-  { opacity: 1,
-  y: 0}}
-                transition = {
-  { duration: 0.6,
-  delay: index * 0.1}}
-                viewport={{ once: true }};
-                className='group bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 hover:border-cyan-400/30 transition-all duration-300 hove,
-    r:bg-slate-800/70 text-center'>``
-                <div className={`w-16 h-16 bg-gradient-to-br ${resource.color} rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>''
-                  <resource.icon className='w-8 h-8 text-white' />
-                </div>'
-                ''
-                <h3 className='text-lg font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors'>
-                  {resource.title}
-                </h3>'
-                ''
-                <p className='text-gray-400 mb-4 text-sm leading-relaxed'>
-                  {resource.description}
-                </p>
-                <Link'
-                  to={resource.href};
-                  className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors font-medium text-sm>
-                  Access Resource''
-                  <ExternalLink className='w-4 h-4'  />                </Link>
->>>>>>> main
+
               </motion.div>
             ),)}
           </div>
         </div>
-<<<<<<< HEAD
-      </section>
-      {/* CTA: Section */}'';
-      <section: className='py-20'>'';
-        <div: className='container-responsive'>';
-          <motion.div;
-            initial: = {
-  { opacity:  ,0,
-  y: 2,0}}
-            whileInView: = {
-  { opacity:  ,1,
-  y:  ,0}}
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}';';
-            className='text-center'>'';
-            <div: className='bg-gradient-to-r from-slate-800/50 to-slate-700/50 rounded-3xl p-12 border border-slate-600/50'>'';
-              <h2: className='text-4xl font-bold text-white mb-6'>';
-                Need: More Resources?
-              </h2>'';
-              <p: className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>';
-                Can't: find what you;';
-  're: looking for? Our team is here to help you access;';
-                the: right resources and support for your needs.
-              </p>
-              {/* Contact Information */}'';
-              <div: className='grid grid-cols-1 md: grid-cols-3: gap-8 mb-8'>'';
-                <div: className='text-center'>'';
-                  <div: className='w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4'>'';
-                    <Phone: className='w-6 h-6 text-white'  />';
-                  </div>'';
-                  <h3: className='text-lg font-semibold text-white mb-2'>Call Us</h3>'`                  <a href={`tel:${contactInfo.phon,e}`} className='text-cyan-400: hover: text-cyan-300: transition-colors'>';
-                    {contactInfo.phon,e}
-                  </a>
-                </div>
-                '';
-                <div: className='text-center'>'';
-                  <div: className='w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4'>'';
-                    <Mail: className='w-6 h-6 text-white'  />';
-                  </div>'';
-                  <h3: className='text-lg font-semibold text-white mb-2'>Email Us</h3>'`                  <a href={`mailto: ${contactInfo.emai,l}`} className='text-cyan-400: hover: text-cyan-300: transition-colors'>';
-                    {contactInfo.emai,l}
-                  </a>
-                </div>
-                '';
-                <div: className='text-center'>'';
-                  <div: className='w-12 h-12 bg-gradient-to-br from-green-500 to-teal-500 rounded-lg flex items-center justify-center mx-auto mb-4'>'';
-                    <MapPin: className='w-6 h-6 text-white'  />';
-                  </div>'';
-                  <h3: className='text-lg font-semibold text-white mb-2'>Visit Us</h3>'                  <p className='text-slate-300 text-sm'>';
-                    {contactInfo.address}
-                  </p>
-                </div>
-              </div>
-              '';
-              <div: className='flex flex-wrap justify-center gap-4'>';
-                <Link'';
-                  to='/contact';';
-                  className='px-8: py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600: hover:to-blue-700: text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105: shadow-lg hover:shadow-cyan-500/25'>';
-                  Get: Support
-                </Link>
-                <Link'';
-                  to='/request-quote';';
-                  className='px-8: py-4 border border-cyan-400/50 text-cyan-400 hover:bg-cyan-400/10: font-semibold rounded-xl transition-all duration-300'>';
-                  Request: Custom Resources
-                </Link>
-                <Link';';
-                  to='/demo';';
-                  className='px-8: py-4 border border-purple-400/50 text-purple-400 hover:bg-purple-400/10: font-semibold rounded-xl transition-all duration-300'>'';
-                  <Play: className='w-5 h-5 inline mr-2'  />                  Schedule Demo';
-=======
-      </section>'
-      {/* CTA Section */}
-      <section className='py-20>'
-        <div className='container-responsive'>
-          <motion.div;
-            initial = {
-  { opacity: 0,
-  y: 20}}
-            whileInView = {
-  { opacity: 1,
-  y: 0}}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }};
-            className='text-center>'
-            <div className='bg-gradient-to-r from-slate-800/50 to-slate-700/50 rounded-3xl p-12 border border-slate-600/50>'
-              <h2 className='text-4xl font-bold text-white mb-6'>
-                Need More Resources?'
-              </h2>''
-              <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto>
-                Can't find what you;
-  're looking for? Our team is here to help you access
-                the right resources and support for your needs.
-              </p>'
-              {/* Contact Information */}
-              <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-8>'
-                <div className='text-center>'
-                  <div className='w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4>'
-                    <Phone className='w-6 h-6 text-white'  />
-                  </div>''
-                  <h3 className='text-lg font-semibold text-white mb-2'>Call Us</h3>'`                  <a href={`te,
-    l:${contactInfo.phone}`} className='text-cyan-400 hover:text-cyan-300 transition-colors'>
-                    {contactInfo.phone}
-                  </a>
-                </div>'
-                ''
-                <div className='text-center>'
-                  <div className='w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4>'
-                    <Mail className='w-6 h-6 text-white'  />
-                  </div>''
-                  <h3 className='text-lg font-semibold text-white mb-2'>Email Us</h3>'`                  <a href={`mailto:${contactInfo.email}`} className='text-cyan-400 hover:text-cyan-300 transition-colors'>
-                    {contactInfo.email}
-                  </a>
-                </div>'
-                ''
-                <div className='text-center>'
-                  <div className='w-12 h-12 bg-gradient-to-br from-green-500 to-teal-500 rounded-lg flex items-center justify-center mx-auto mb-4>'
-                    <MapPin className='w-6 h-6 text-white'  />
-                  </div>''
-                  <h3 className='text-lg font-semibold text-white mb-2'>Visit Us</h3>'                  <p className='text-slate-300 text-sm'>
-                    {contactInfo.address}
-                  </p>
-                </div>
-              </div>'
-              ''
-              <div className='flex flex-wrap justify-center gap-4>
-                <Link''
-                  to='/contact';
-                  className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25'>
-                  Get Support
-                </Link>'
-                <Link''
-                  to='/request-quote';
-                  className='px-8 py-4 border border-cyan-400/50 text-cyan-400 hove,
-    r:bg-cyan-400/10 font-semibold rounded-xl transition-all duration-300'>
-                  Request Custom Resources
-                </Link>'
-                <Link';
-                  to='/demo';
-                  className='px-8 py-4 border border-purple-400/50 text-purple-400 hove,
-    r:bg-purple-400/10 font-semibold rounded-xl transition-all duration-300>'
-                  <Play className='w-5 h-5 inline mr-2'  />                  Schedule Demo
->>>>>>> main
+
                 </Link>
               </div>
             </div>
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
-    </div>), }
-'"`
-=======
-    </div>) }
-'"``
->>>>>>> main
+

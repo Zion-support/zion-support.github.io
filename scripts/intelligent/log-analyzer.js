@@ -14,14 +14,12 @@ class IntelligentLogAnalyzer {
     this.logFile = path.join(this.projectRoot, 'logs/intelligent-log-analyzer.log');
     this.reportFile = path.join(this.projectRoot, 'logs/intelligent-log-analyzer-report.json');
     this.analysisHistory = this.loadAnalysisHistory();
-    this.ensureDirectories();
-  }
+    this.ensureDirectories()}
 
   ensureDirectories() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true });
-    }
+      fs.mkdirSync(logDir { recursive: true })}
   }
 
   log(message, level = 'info') {
@@ -30,23 +28,18 @@ class IntelligentLogAnalyzer {
     console.log(logMessage);
     
     try {
-      fs.appendFileSync(this.logFile, logMessage + '\n');
-    } catch (error) {
-      console.error('Failed to write to log file:', error.message);
-    }
+      fs.appendFileSync(this.logFile, logMessage + '\n')} catch (error) {
+      console.error('Failed to write to log file:', error.message)}
   }
 
   loadAnalysisHistory() {
     try {
       if (fs.existsSync(this.reportFile)) {
         const data = fs.readFileSync(this.reportFile, 'utf8');
-        return JSON.parse(data).analysisHistory || [];
-      }
+        return JSON.parse(data).analysisHistory || []}
     } catch (error) {
-      this.log(`Failed to load analysis history: ${error.message}`, 'warn');
-    }
-    return [];
-  }
+      this.log(`Failed to load analysis history: ${error.message}`, 'warn')}
+    return []}
 
   saveAnalysisHistory() {
     try {
@@ -56,10 +49,8 @@ class IntelligentLogAnalyzer {
         totalAnalyses: this.analysisHistory.length,
         lastRun: Date.now()
       };
-      fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-    } catch (error) {
-      this.log(`Failed to save analysis history: ${error.message}`, 'error');
-    }
+      fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2))} catch (error) {
+      this.log(`Failed to save analysis history: ${error.message}`, 'error')}
   }
 
   async analyzeLogs() {
@@ -82,8 +73,7 @@ class IntelligentLogAnalyzer {
     this.log(`  - Anomalies: ${analysis.anomalies.count}`);
     this.log(`  - Trends: ${analysis.trends.count}`);
 
-    return analysis;
-  }
+    return analysis}
 
   async analyzeErrorPatterns() {
     try {
@@ -110,15 +100,13 @@ class IntelligentLogAnalyzer {
                     firstOccurrence: null,
                     lastOccurrence: null,
                     examples: []
-                  };
-                }
+                  }}
                 
                 errorCounts[pattern].count++;
                 errorCounts[pattern].files.add(logFile);
                 
                 if (!errorCounts[pattern].firstOccurrence) {
-                  errorCounts[pattern].firstOccurrence = this.extractTimestamp(line);
-                }
+                  errorCounts[pattern].firstOccurrence = this.extractTimestamp(line)}
                 errorCounts[pattern].lastOccurrence = this.extractTimestamp(line);
                 
                 if (errorCounts[pattern].examples.length < 3) {
@@ -126,14 +114,11 @@ class IntelligentLogAnalyzer {
                     line: index + 1,
                     content: line.trim(),
                     file: logFile
-                  });
-                }
+                  })}
               }
             }
-          });
-        } catch (error) {
-          this.log(`Failed to analyze ${logFile}: ${error.message}`, 'warn');
-        }
+          })} catch (error) {
+          this.log(`Failed to analyze ${logFile}: ${error.message}`, 'warn')}
       }
       
       // Convert to array and sort by count
@@ -147,11 +132,9 @@ class IntelligentLogAnalyzer {
         totalErrors: patterns.reduce((sum, p) => sum + p.count, 0),
         uniquePatterns: patterns.length,
         topErrors: patterns.slice(0, 10)
-      };
-    } catch (error) {
+      }} catch (error) {
       this.log(`Error pattern analysis failed: ${error.message}`, 'error');
-      return { patterns: [], totalErrors: 0, uniquePatterns: 0, topErrors: [] };
-    }
+      return { patterns: [], totalErrors: 0, uniquePatterns: 0, topErrors: [] }}
   }
 
   getLogFiles() {
@@ -166,50 +149,35 @@ class IntelligentLogAnalyzer {
         const stat = fs.statSync(fullPath);
         
         if (stat.isFile() && (item.endsWith('.log') || item.includes('error') || item.includes('out'))) {
-          logFiles.push(fullPath);
-        }
+          logFiles.push(fullPath)}
       }
     }
     
-    return logFiles;
-  }
+    return logFiles}
 
   isErrorLine(line) {
     const errorKeywords = ['error', 'Error', 'ERROR', 'exception', 'Exception', 'EXCEPTION', 'fail', 'Fail', 'FAIL'];
-    return errorKeywords.some(keyword => line.includes(keyword));
-  }
+    return errorKeywords.some(keyword => line.includes(keyword))}
 
   extractErrorPattern(line) {
     // Extract common error patterns
     const patterns = [
-      { regex: /Module not found: (.+)/, pattern: 'Module not found' },
-      { regex: /Cannot resolve (.+)/, pattern: 'Cannot resolve module' },
-      { regex: /TypeError: (.+)/, pattern: 'TypeError' },
-      { regex: /ReferenceError: (.+)/, pattern: 'ReferenceError' },
-      { regex: /SyntaxError: (.+)/, pattern: 'SyntaxError' },
-      { regex: /Build failed/, pattern: 'Build failed' },
-      { regex: /Out of memory/, pattern: 'Out of memory' },
-      { regex: /Connection refused/, pattern: 'Connection refused' },
-      { regex: /Timeout/, pattern: 'Timeout' },
-      { regex: /Permission denied/, pattern: 'Permission denied' }
+      { regex: /Module not found: (.+)/, pattern: 'Module not found' }, { regex: /Cannot resolve (.+)/, pattern: 'Cannot resolve module' }, { regex: /TypeError: (.+)/, pattern: 'TypeError' }, { regex: /ReferenceError: (.+)/, pattern: 'ReferenceError' }, { regex: /SyntaxError: (.+)/, pattern: 'SyntaxError' }, { regex: /Build failed/, pattern: 'Build failed' }, { regex: /Out of memory/, pattern: 'Out of memory' }, { regex: /Connection refused/, pattern: 'Connection refused' }, { regex: /Timeout/, pattern: 'Timeout' }, { regex: /Permission denied/, pattern: 'Permission denied' }
     ];
     
     for (const { regex, pattern } of patterns) {
       if (regex.test(line)) {
-        return pattern;
-      }
+        return pattern}
     }
     
     // Generic error pattern
-    return 'Generic error';
-  }
+    return 'Generic error'}
 
   extractTimestamp(line) {
     // Try to extract timestamp from log line
     const timestampRegex = /(\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2})/;
     const match = line.match(timestampRegex);
-    return match ? match[1] : null;
-  }
+    return match ? match[1] : null}
 
   async analyzePerformanceIssues() {
     try {
@@ -234,13 +202,10 @@ class IntelligentLogAnalyzer {
                   type: issue.type,
                   severity: issue.severity,
                   timestamp: this.extractTimestamp(line)
-                });
-              }
+                })}
             }
-          });
-        } catch (error) {
-          this.log(`Failed to analyze performance in ${logFile}: ${error.message}`, 'warn');
-        }
+          })} catch (error) {
+          this.log(`Failed to analyze performance in ${logFile}: ${error.message}`, 'warn')}
       }
       
       return {
@@ -248,52 +213,38 @@ class IntelligentLogAnalyzer {
         count: performanceIssues.length,
         byType: this.groupByType(performanceIssues),
         bySeverity: this.groupBySeverity(performanceIssues)
-      };
-    } catch (error) {
+      }} catch (error) {
       this.log(`Performance analysis failed: ${error.message}`, 'error');
-      return { issues: [], count: 0, byType: {}, bySeverity: {} };
-    }
+      return { issues: [], count: 0, byType: {}, bySeverity: {} }}
   }
 
   isPerformanceIssue(line) {
     const performanceKeywords = ['slow', 'Slow', 'SLOW', 'timeout', 'Timeout', 'TIMEOUT', 'memory', 'Memory', 'MEMORY', 'cpu', 'CPU', 'performance', 'Performance'];
-    return performanceKeywords.some(keyword => line.includes(keyword));
-  }
+    return performanceKeywords.some(keyword => line.includes(keyword))}
 
   extractPerformanceIssue(line) {
     if (line.includes('timeout') || line.includes('Timeout')) {
-      return { type: 'timeout', severity: 'high' };
-    } else if (line.includes('memory') || line.includes('Memory')) {
-      return { type: 'memory', severity: 'medium' };
-    } else if (line.includes('cpu') || line.includes('CPU')) {
-      return { type: 'cpu', severity: 'medium' };
-    } else if (line.includes('slow') || line.includes('Slow')) {
-      return { type: 'slow', severity: 'low' };
-    }
-    return { type: 'performance', severity: 'low' };
-  }
+      return { type: 'timeout', severity: 'high' }} else if (line.includes('memory') || line.includes('Memory')) {
+      return { type: 'memory', severity: 'medium' }} else if (line.includes('cpu') || line.includes('CPU')) {
+      return { type: 'cpu', severity: 'medium' }} else if (line.includes('slow') || line.includes('Slow')) {
+      return { type: 'slow', severity: 'low' }}
+    return { type: 'performance', severity: 'low' }}
 
   groupByType(issues) {
     const groups = {};
     issues.forEach(issue => {
       if (!groups[issue.type]) {
-        groups[issue.type] = [];
-      }
-      groups[issue.type].push(issue);
-    });
-    return groups;
-  }
+        groups[issue.type] = []}
+      groups[issue.type].push(issue)});
+    return groups}
 
   groupBySeverity(issues) {
     const groups = {};
     issues.forEach(issue => {
       if (!groups[issue.severity]) {
-        groups[issue.severity] = [];
-      }
-      groups[issue.severity].push(issue);
-    });
-    return groups;
-  }
+        groups[issue.severity] = []}
+      groups[issue.severity].push(issue)});
+    return groups}
 
   async analyzeSecurityEvents() {
     try {
@@ -318,13 +269,10 @@ class IntelligentLogAnalyzer {
                   type: event.type,
                   severity: event.severity,
                   timestamp: this.extractTimestamp(line)
-                });
-              }
+                })}
             }
-          });
-        } catch (error) {
-          this.log(`Failed to analyze security in ${logFile}: ${error.message}`, 'warn');
-        }
+          })} catch (error) {
+          this.log(`Failed to analyze security in ${logFile}: ${error.message}`, 'warn')}
       }
       
       return {
@@ -332,32 +280,23 @@ class IntelligentLogAnalyzer {
         count: securityEvents.length,
         byType: this.groupByType(securityEvents),
         bySeverity: this.groupBySeverity(securityEvents)
-      };
-    } catch (error) {
+      }} catch (error) {
       this.log(`Security analysis failed: ${error.message}`, 'error');
-      return { events: [], count: 0, byType: {}, bySeverity: {} };
-    }
+      return { events: [], count: 0, byType: {}, bySeverity: {} }}
   }
 
   isSecurityEvent(line) {
     const securityKeywords = ['unauthorized', 'Unauthorized', 'UNAUTHORIZED', 'forbidden', 'Forbidden', 'FORBIDDEN', 'attack', 'Attack', 'ATTACK', 'injection', 'Injection', 'INJECTION', 'xss', 'XSS', 'csrf', 'CSRF'];
-    return securityKeywords.some(keyword => line.includes(keyword));
-  }
+    return securityKeywords.some(keyword => line.includes(keyword))}
 
   extractSecurityEvent(line) {
     if (line.includes('unauthorized') || line.includes('Unauthorized')) {
-      return { type: 'unauthorized_access', severity: 'high' };
-    } else if (line.includes('forbidden') || line.includes('Forbidden')) {
-      return { type: 'forbidden_access', severity: 'medium' };
-    } else if (line.includes('injection') || line.includes('Injection')) {
-      return { type: 'injection_attempt', severity: 'critical' };
-    } else if (line.includes('xss') || line.includes('XSS')) {
-      return { type: 'xss_attempt', severity: 'critical' };
-    } else if (line.includes('csrf') || line.includes('CSRF')) {
-      return { type: 'csrf_attempt', severity: 'high' };
-    }
-    return { type: 'security_event', severity: 'medium' };
-  }
+      return { type: 'unauthorized_access', severity: 'high' }} else if (line.includes('forbidden') || line.includes('Forbidden')) {
+      return { type: 'forbidden_access', severity: 'medium' }} else if (line.includes('injection') || line.includes('Injection')) {
+      return { type: 'injection_attempt', severity: 'critical' }} else if (line.includes('xss') || line.includes('XSS')) {
+      return { type: 'xss_attempt', severity: 'critical' }} else if (line.includes('csrf') || line.includes('CSRF')) {
+      return { type: 'csrf_attempt', severity: 'high' }}
+    return { type: 'security_event', severity: 'medium' }}
 
   async analyzeUsagePatterns() {
     try {
@@ -381,12 +320,9 @@ class IntelligentLogAnalyzer {
               const day = date.toDateString();
               
               hourlyUsage[hour] = (hourlyUsage[hour] || 0) + 1;
-              dailyUsage[day] = (dailyUsage[day] || 0) + 1;
-            }
-          });
-        } catch (error) {
-          this.log(`Failed to analyze usage in ${logFile}: ${error.message}`, 'warn');
-        }
+              dailyUsage[day] = (dailyUsage[day] || 0) + 1}
+          })} catch (error) {
+          this.log(`Failed to analyze usage in ${logFile}: ${error.message}`, 'warn')}
       }
       
       return {
@@ -395,11 +331,9 @@ class IntelligentLogAnalyzer {
         dailyUsage,
         peakHour: Object.keys(hourlyUsage).reduce((a, b) => hourlyUsage[a] > hourlyUsage[b] ? a : b, 0),
         peakDay: Object.keys(dailyUsage).reduce((a, b) => dailyUsage[a] > dailyUsage[b] ? a : b, '')
-      };
-    } catch (error) {
+      }} catch (error) {
       this.log(`Usage pattern analysis failed: ${error.message}`, 'error');
-      return { patterns: [], hourlyUsage: {}, dailyUsage: {}, peakHour: 0, peakDay: '' };
-    }
+      return { patterns: [], hourlyUsage: {}, dailyUsage: {}, peakHour: 0, peakDay: '' }}
   }
 
   async detectAnomalies() {
@@ -426,8 +360,7 @@ class IntelligentLogAnalyzer {
               severity: 'high',
               value: errorRate.toFixed(2),
               description: `High error rate: ${errorRate.toFixed(2)}%`
-            });
-          }
+            })}
           
           // Detect sudden spikes in activity
           const hourlyActivity = {};
@@ -435,8 +368,7 @@ class IntelligentLogAnalyzer {
             const timestamp = this.extractTimestamp(line);
             if (timestamp) {
               const hour = new Date(timestamp).getHours();
-              hourlyActivity[hour] = (hourlyActivity[hour] || 0) + 1;
-            }
+              hourlyActivity[hour] = (hourlyActivity[hour] || 0) + 1}
           });
           
           const avgActivity = Object.values(hourlyActivity).reduce((a, b) => a + b, 0) / Object.keys(hourlyActivity).length;
@@ -448,12 +380,9 @@ class IntelligentLogAnalyzer {
                 severity: 'medium',
                 value: count,
                 description: `Activity spike at hour ${hour}: ${count} events (avg: ${avgActivity.toFixed(2)})`
-              });
-            }
-          });
-        } catch (error) {
-          this.log(`Failed to detect anomalies in ${logFile}: ${error.message}`, 'warn');
-        }
+              })}
+          })} catch (error) {
+          this.log(`Failed to detect anomalies in ${logFile}: ${error.message}`, 'warn')}
       }
       
       return {
@@ -461,11 +390,9 @@ class IntelligentLogAnalyzer {
         count: anomalies.length,
         byType: this.groupByType(anomalies),
         bySeverity: this.groupBySeverity(anomalies)
-      };
-    } catch (error) {
+      }} catch (error) {
       this.log(`Anomaly detection failed: ${error.message}`, 'error');
-      return { anomalies: [], count: 0, byType: {}, bySeverity: {} };
-    }
+      return { anomalies: [], count: 0, byType: {}, bySeverity: {} }}
   }
 
   async analyzeTrends() {
@@ -489,8 +416,7 @@ class IntelligentLogAnalyzer {
               trend: errorTrend.trend,
               change: errorTrend.change,
               description: `Error trend: ${errorTrend.trend} (${errorTrend.change}% change)`
-            });
-          }
+            })}
           
           // Analyze performance trends
           const performanceTrend = this.analyzePerformanceTrend(lines);
@@ -501,11 +427,9 @@ class IntelligentLogAnalyzer {
               trend: performanceTrend.trend,
               change: performanceTrend.change,
               description: `Performance trend: ${performanceTrend.trend} (${performanceTrend.change}% change)`
-            });
-          }
+            })}
         } catch (error) {
-          this.log(`Failed to analyze trends in ${logFile}: ${error.message}`, 'warn');
-        }
+          this.log(`Failed to analyze trends in ${logFile}: ${error.message}`, 'warn')}
       }
       
       return {
@@ -513,11 +437,9 @@ class IntelligentLogAnalyzer {
         count: trends.length,
         byType: this.groupByType(trends),
         byTrend: this.groupByTrend(trends)
-      };
-    } catch (error) {
+      }} catch (error) {
       this.log(`Trend analysis failed: ${error.message}`, 'error');
-      return { trends: [], count: 0, byType: {}, byTrend: {} };
-    }
+      return { trends: [], count: 0, byType: {}, byTrend: {} }}
   }
 
   analyzeErrorTrend(lines) {
@@ -525,8 +447,7 @@ class IntelligentLogAnalyzer {
     const totalLines = lines.length;
     
     if (totalLines < 100) {
-      return { trend: 'stable', change: 0 };
-    }
+      return { trend: 'stable', change: 0 }}
     
     const firstHalf = errors.slice(0, Math.floor(errors.length / 2));
     const secondHalf = errors.slice(Math.floor(errors.length / 2));
@@ -537,12 +458,9 @@ class IntelligentLogAnalyzer {
     const change = ((secondHalfRate - firstHalfRate) / firstHalfRate) * 100;
     
     if (change > 20) {
-      return { trend: 'increasing', change: change.toFixed(2) };
-    } else if (change < -20) {
-      return { trend: 'decreasing', change: change.toFixed(2) };
-    } else {
-      return { trend: 'stable', change: change.toFixed(2) };
-    }
+      return { trend: 'increasing', change: change.toFixed(2) }} else if (change < -20) {
+      return { trend: 'decreasing', change: change.toFixed(2) }} else {
+      return { trend: 'stable', change: change.toFixed(2) }}
   }
 
   analyzePerformanceTrend(lines) {
@@ -550,8 +468,7 @@ class IntelligentLogAnalyzer {
     const totalLines = lines.length;
     
     if (totalLines < 100) {
-      return { trend: 'stable', change: 0 };
-    }
+      return { trend: 'stable', change: 0 }}
     
     const firstHalf = performanceIssues.slice(0, Math.floor(performanceIssues.length / 2));
     const secondHalf = performanceIssues.slice(Math.floor(performanceIssues.length / 2));
@@ -562,24 +479,18 @@ class IntelligentLogAnalyzer {
     const change = ((secondHalfRate - firstHalfRate) / firstHalfRate) * 100;
     
     if (change > 20) {
-      return { trend: 'increasing', change: change.toFixed(2) };
-    } else if (change < -20) {
-      return { trend: 'decreasing', change: change.toFixed(2) };
-    } else {
-      return { trend: 'stable', change: change.toFixed(2) };
-    }
+      return { trend: 'increasing', change: change.toFixed(2) }} else if (change < -20) {
+      return { trend: 'decreasing', change: change.toFixed(2) }} else {
+      return { trend: 'stable', change: change.toFixed(2) }}
   }
 
   groupByTrend(trends) {
     const groups = {};
     trends.forEach(trend => {
       if (!groups[trend.trend]) {
-        groups[trend.trend] = [];
-      }
-      groups[trend.trend].push(trend);
-    });
-    return groups;
-  }
+        groups[trend.trend] = []}
+      groups[trend.trend].push(trend)});
+    return groups}
 
   async autoCleanupLogs() {
     this.log('🧹 Auto-cleaning log files...');
@@ -609,8 +520,7 @@ class IntelligentLogAnalyzer {
             originalSize: sizeInMB.toFixed(2),
             newSize: (lastLines.length / (1024 * 1024)).toFixed(2),
             success: true
-          });
-        }
+          })}
         
         // Remove old log files (> 30 days)
         const fileAge = Date.now() - stats.mtime.getTime();
@@ -626,8 +536,7 @@ class IntelligentLogAnalyzer {
             action: 'deleted',
             age: ageInDays.toFixed(2),
             success: true
-          });
-        }
+          })}
       } catch (error) {
         cleanupActions.push({
           file: logFile,
@@ -636,12 +545,10 @@ class IntelligentLogAnalyzer {
           error: error.message
         });
         
-        this.log(`Failed to cleanup ${logFile}: ${error.message}`, 'error');
-      }
+        this.log(`Failed to cleanup ${logFile}: ${error.message}`, 'error')}
     }
     
-    return cleanupActions;
-  }
+    return cleanupActions}
 
   async generateLogReport() {
     this.log('📊 Generating log analysis report...');
@@ -670,41 +577,33 @@ class IntelligentLogAnalyzer {
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     
     this.log(`📊 Log analysis report saved to ${reportFile}`);
-    return report;
-  }
+    return report}
 
   generateLogRecommendations(analysis) {
     const recommendations = [];
     
     if (analysis.errorPatterns.totalErrors > 100) {
-      recommendations.push('High error count detected - investigate and fix common error patterns');
-    }
+      recommendations.push('High error count detected - investigate and fix common error patterns')}
     
     if (analysis.errorPatterns.uniquePatterns > 20) {
-      recommendations.push('Many unique error patterns - consider implementing better error handling');
-    }
+      recommendations.push('Many unique error patterns - consider implementing better error handling')}
     
     if (analysis.performanceIssues.count > 50) {
-      recommendations.push('Multiple performance issues detected - optimize application performance');
-    }
+      recommendations.push('Multiple performance issues detected - optimize application performance')}
     
     if (analysis.securityEvents.count > 0) {
-      recommendations.push('Security events detected - review and strengthen security measures');
-    }
+      recommendations.push('Security events detected - review and strengthen security measures')}
     
     if (analysis.anomalies.count > 10) {
-      recommendations.push('Anomalies detected - investigate unusual patterns in system behavior');
-    }
+      recommendations.push('Anomalies detected - investigate unusual patterns in system behavior')}
     
     if (analysis.trends.count > 0) {
-      recommendations.push('Trends detected - monitor and address changing patterns');
-    }
+      recommendations.push('Trends detected - monitor and address changing patterns')}
     
     recommendations.push('Implement log rotation to prevent log files from growing too large');
     recommendations.push('Set up automated log monitoring and alerting');
 
-    return recommendations;
-  }
+    return recommendations}
 
   async run() {
     this.log('🚀 Starting Intelligent Log Analyzer...');
@@ -730,12 +629,9 @@ class IntelligentLogAnalyzer {
       this.log(`   - Anomalies: ${report.summary.anomalies}`);
       this.log(`   - Trends: ${report.summary.trends}`);
       this.log(`   - Cleanup Actions: ${report.summary.cleanupActions}`);
-      this.log(`   - Successful Cleanups: ${report.summary.successfulCleanups}`);
-
-    } catch (error) {
+      this.log(`   - Successful Cleanups: ${report.summary.successfulCleanups}`)} catch (error) {
       this.log(`❌ Log Analyzer failed: ${error.message}`, 'error');
-      throw error;
-    }
+      throw error}
   }
 }
 
@@ -744,8 +640,6 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   const analyzer = new IntelligentLogAnalyzer();
   analyzer.run().catch(error => {
     console.error('Fatal error:', error);
-    process.exit(1);
-  });
-}
+    process.exit(1)})}
 
 export default $1;

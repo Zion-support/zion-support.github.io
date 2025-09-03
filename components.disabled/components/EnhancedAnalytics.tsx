@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React { useEffect, useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { Users, Eye, MousePointer, Clock } from 'lucide-react';
 
@@ -10,8 +10,7 @@ interface AnalyticsData {
   topPages: Array<{ page: string; views: number }>;
   trafficSources: Array<{ source: string; percentage: number }>;
   deviceTypes: Array<{ device: string; percentage: number }>;
-  realTimeUsers: number;
-}
+  realTimeUsers: number}
 
 const EnhancedAnalytics: React.FC = () => {
   const [analyticsData, setAnalyticsData] = useState<AnalyticsData>({
@@ -22,8 +21,7 @@ const EnhancedAnalytics: React.FC = () => {
     topPages: [],
     trafficSources: [],
     deviceTypes: [],
-    realTimeUsers: 0,
-  });
+    realTimeUsers: 0 });
   const [isLoading, setIsLoading] = useState(true);
   const [selectedTimeRange, setSelectedTimeRange] = useState('7d');
 
@@ -39,34 +37,18 @@ const EnhancedAnalytics: React.FC = () => {
         bounceRate: 42.5,
         avgSessionDuration: 3.2,
         topPages: [
-          { page: '/', views: 3421 },
-          { page: '/services', views: 2156 },
-          { page: '/about', views: 1892 },
-          { page: '/contact', views: 1234 },
-        ],
+          { page: '/', views: 3421 }, { page: '/services', views: 2156 }, { page: '/about', views: 1892 }, { page: '/contact', views: 1234 } ],
         trafficSources: [
-          { source: 'Organic Search', percentage: 45 },
-          { source: 'Direct', percentage: 30 },
-          { source: 'Social Media', percentage: 15 },
-          { source: 'Referral', percentage: 10 },
-        ],
+          { source: 'Organic Search', percentage: 45 }, { source: 'Direct', percentage: 30 }, { source: 'Social Media', percentage: 15 }, { source: 'Referral', percentage: 10 } ],
         deviceTypes: [
-          { device: 'Desktop', percentage: 55 },
-          { device: 'Mobile', percentage: 35 },
-          { device: 'Tablet', percentage: 10 },
-        ],
-        realTimeUsers: 23,
-      });
-    } catch (error) {
-      console.error('Failed to fetch analytics data:', error);
-    } finally {
-      setIsLoading(false);
-    }
+          { device: 'Desktop', percentage: 55 }, { device: 'Mobile', percentage: 35 }, { device: 'Tablet', percentage: 10 } ],
+        realTimeUsers: 23 })} catch (error) {
+      console.error('Failed to fetch analytics data:', error)} finally {
+      setIsLoading(false)}
   }, [selectedTimeRange]);
 
   useEffect(() => {
-    fetchAnalyticsData();
-  }, [fetchAnalyticsData]);
+    fetchAnalyticsData()}, [fetchAnalyticsData]);
 
   if (isLoading) {
     return (
@@ -76,8 +58,7 @@ const EnhancedAnalytics: React.FC = () => {
           <p className="text-gray-300">Loading analytics...</p>
         </div>
       </div>
-    );
-  }
+    )}
 
   return (
     <div className="min-h-screen bg-gray-900 text-white p-6">
@@ -260,7 +241,6 @@ const EnhancedAnalytics: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )};
 
 export default EnhancedAnalytics;

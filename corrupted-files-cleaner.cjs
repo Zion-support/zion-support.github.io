@@ -7,13 +7,11 @@ class CorruptedFilesCleaner {
   constructor() {
     this.projectRoot = process.cwd();
     this.corruptedFiles = [];
-    this.reportFile = path.join(this.projectRoot, 'corrupted-files-report.json');
-  }
+    this.reportFile = path.join(this.projectRoot, 'corrupted-files-report.json')}
 
   log(message) {
     const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] ${message}`);
-  }
+    console.log(`[${timestamp}] ${message}`)}
 
   isFileCorrupted(filePath) {
     try {
@@ -21,11 +19,11 @@ class CorruptedFilesCleaner {
       
       // Check for common corruption patterns
       const corruptionPatterns = [
-        /import.*\{[^}]*\}[^;]*$/m, // Missing semicolon after import
-        /export.*\{[^}]*\}[^;]*$/m, // Missing semicolon after export
+        /import.*\{[^}]*\}[^]*$/m, // Missing semicolon after import
+        /export.*\{[^}]*\}[^]*$/m, // Missing semicolon after export
         /['"]\s*;\s*['"]/, // Semicolons inside strings
-        /[^;]\s*;\s*['"]/, // Semicolons before strings
-        /import.*from.*['"][^'"]*['"]\s*[^;]/, // Import without semicolon
+        /[^]\s*;\s*['"]/, // Semicolons before strings
+        /import.*from.*['"][^'"]*['"]\s*[^]/, // Import without semicolon
         /export.*default.*function.*\{[^}]*$/, // Incomplete function
         /return\s*\(\s*$/, // Incomplete return statement
         /<[^>]*>\s*$/, // Incomplete JSX
@@ -37,13 +35,11 @@ class CorruptedFilesCleaner {
       let corruptionCount = 0;
       for (const pattern of corruptionPatterns) {
         if (pattern.test(content)) {
-          corruptionCount++;
-        }
+          corruptionCount++}
       }
 
       // If more than 3 corruption patterns, consider it corrupted
-      return corruptionCount > 3;
-    } catch (error) {
+      return corruptionCount > 3} catch (error) {
       return true; // If we can't read the file, it's corrupted
     }
   }
@@ -60,14 +56,11 @@ class CorruptedFilesCleaner {
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        files.push(...this.getAllFiles(fullPath, extensions));
-      } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
-        files.push(fullPath);
-      }
+        files.push(...this.getAllFiles(fullPath, extensions))} else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
+        files.push(fullPath)}
     }
     
-    return files;
-  }
+    return files}
 
   async cleanCorruptedFiles() {
     this.log('🔍 Scanning for corrupted files...');
@@ -85,8 +78,7 @@ class CorruptedFilesCleaner {
     for (const file of allFiles) {
       if (this.isFileCorrupted(file)) {
         this.corruptedFiles.push(file);
-        this.log(`❌ Corrupted: ${file}`);
-      }
+        this.log(`❌ Corrupted: ${file}`)}
     }
 
     this.log(`🔍 Found ${this.corruptedFiles.length} corrupted files`);
@@ -94,8 +86,7 @@ class CorruptedFilesCleaner {
     // Create backup directory
     const backupDir = path.join(this.projectRoot, 'corrupted-files-backup');
     if (!fs.existsSync(backupDir)) {
-      fs.mkdirSync(backupDir, { recursive: true });
-    }
+      fs.mkdirSync(backupDir { recursive: true })}
 
     // Move corrupted files to backup
     for (const file of this.corruptedFiles) {
@@ -104,24 +95,20 @@ class CorruptedFilesCleaner {
       const backupDirPath = path.dirname(backupPath);
       
       if (!fs.existsSync(backupDirPath)) {
-        fs.mkdirSync(backupDirPath, { recursive: true });
-      }
+        fs.mkdirSync(backupDirPath { recursive: true })}
       
       try {
         fs.copyFileSync(file, backupPath);
         fs.unlinkSync(file);
-        this.log(`📦 Moved to backup: ${file}`);
-      } catch (error) {
-        this.log(`❌ Error moving ${file}: ${error.message}`);
-      }
+        this.log(`📦 Moved to backup: ${file}`)} catch (error) {
+        this.log(`❌ Error moving ${file}: ${error.message}`)}
     }
 
     return {
       totalFiles: allFiles.length,
       corruptedFiles: this.corruptedFiles.length,
       corruptedFileList: this.corruptedFiles
-    };
-  }
+    }}
 
   generateReport(results) {
     const report = {
@@ -132,8 +119,7 @@ class CorruptedFilesCleaner {
 
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
     this.log(`📊 Report generated: ${this.reportFile}`);
-    return report;
-  }
+    return report}
 
   async run() {
     try {
@@ -141,11 +127,9 @@ class CorruptedFilesCleaner {
       const report = this.generateReport(results);
       
       this.log('🎉 Corrupted files cleanup completed');
-      return report;
-    } catch (error) {
+      return report} catch (error) {
       this.log(`💥 Corrupted files cleanup failed: ${error.message}`);
-      throw error;
-    }
+      throw error}
   }
 }
 
@@ -153,8 +137,6 @@ class CorruptedFilesCleaner {
 const cleaner = new CorruptedFilesCleaner();
 cleaner.run().then(report => {
   console.log('✅ Corrupted files cleanup completed successfully');
-  process.exit(0);
-}).catch(error => {
+  process.exit(0)}).catch(error => {
   console.error('❌ Corrupted files cleanup failed:', error.message);
-  process.exit(1);
-});
+  process.exit(1)});

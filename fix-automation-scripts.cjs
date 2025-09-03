@@ -7,19 +7,16 @@ class AutomationScriptFixer {
   constructor() {
     this.projectRoot = process.cwd();
     this.fixedFiles = [];
-    this.errors = [];
-  }
+    this.errors = []}
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
-  }
+    console.log(`[${new Date().toISOString()}] ${message}`)}
 
   fixFile(filePath) {
     try {
       if (!fs.existsSync(filePath)) {
         this.log(`⚠️  File not found: ${filePath}`);
-        return false;
-      }
+        return false}
 
       let content = fs.readFileSync(filePath, `utf8`);
       let originalContent = content;
@@ -40,7 +37,7 @@ class AutomationScriptFixer {
         { pattern: /'([^']*)\$\{([^}]*)\}([^']*)`/g, replacement: ``$1${$2}$3`` },
         
         // Fix broken regex patterns;
-        { pattern: /\/\s*changes\+\+;\s*$/gm, replacement: `/^\\s*<<<<<<<|^\\s*=======|^\\s*>>>>>>>/` },
+        { pattern: /\/\s*changes\+\+;\s*$/gm, replacement: `/^\\s*<<<<<<<|^\\s*|^\\s*>>>>>>>/` },
         
         // Fix missing closing parentheses;
         { pattern: /console\.log\(`([^`]*)\$\{([^}]*)\}([^`]*)`\)/g, replacement: `console.log(`$1${$2}$3`)` },
@@ -62,8 +59,7 @@ class AutomationScriptFixer {
         const newContent = content.replace(fix.pattern, fix.replacement);
         if (newContent !== content) {
           content = newContent;
-          changes++;
-        }
+          changes++}
       });
 
       // Additional specific fixes;
@@ -72,38 +68,32 @@ class AutomationScriptFixer {
           /this\.log\(❌ Fatal error in orchestrator: \$\{error\.message\}, 'ERROR``\);/g,
           `this.log(`❌ Fatal error in orchestrator: ${error.message}`, \`ERROR\`);'
         );
-        changes++;
-      }
+        changes++}
 
       if (content.includes('performance-monitor\'\'')) {
         content = content.replace(
           /'performance-monitor\'\',/g,
-          "'performance-monitor',"
+          "'performance-monitor'",
         );
-        changes++;
-      }
+        changes++}
 
       if (content.includes('quality-checks\'\'')) {
         content = content.replace(
           /'quality-checks\'\',/g,
-          "'quality-checks',"
+          "'quality-checks'",
         );
-        changes++;
-      }
+        changes++}
 
       if (changes > 0) {
         fs.writeFileSync(filePath, content, `utf8`);
         this.fixedFiles.push({ file: filePath, changes });
         this.log(`✅ Fixed ${changes} issues in ${filePath}`);
-        return true;
-      }
+        return true}
 
-      return false;
-    } catch (error) { 
+      return false} catch (error) { 
       this.errors.push({ file: filePath, error: error.message  });
       this.log(`❌ Error fixing ${filePath}: ${error.message}`);
-      return false;
-    }
+      return false}
   }
 
   async fixAllAutomationScripts() {
@@ -125,8 +115,7 @@ class AutomationScriptFixer {
     let fixedCount = 0;
     for (const file of filesToFix) {
       if (this.fixFile(file)) {
-        fixedCount++;
-      }
+        fixedCount++}
     }
 
     this.log(`🎉 Fixed ${fixedCount} files with syntax errors`);
@@ -135,19 +124,15 @@ class AutomationScriptFixer {
     if (this.errors.length > 0) {
       this.log(`❌ Errors encountered:`);
       this.errors.forEach(err => {
-        this.log(`  - ${err.file}: ${err.error}`);
-      });
-    }
+        this.log(`  - ${err.file}: ${err.error}`)})}
 
-    return { fixed: this.fixedFiles, errors: this.errors };
-  }
+    return { fixed: this.fixedFiles, errors: this.errors }}
 
   getAllFiles(dir, extensions) {
     const files = [];
     
     if (!fs.existsSync(dir)) {
-      return files;
-    }
+      return files}
 
     const items = fs.readdirSync(dir);
     
@@ -156,17 +141,14 @@ class AutomationScriptFixer {
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory()) {
-        files.push(...this.getAllFiles(fullPath, extensions));
-      } else if (stat.isFile()) {
+        files.push(...this.getAllFiles(fullPath, extensions))} else if (stat.isFile()) {
         const ext = path.extname(item);
         if (extensions.includes(ext)) {
-          files.push(fullPath);
-        }
+          files.push(fullPath)}
       }
     }
     
-    return files;
-  }
+    return files}
 }
 
 // Run the fixer;
@@ -174,9 +156,7 @@ const fixer = new AutomationScriptFixer();
 fixer.fixAllAutomationScripts()
   .then(result => {
     console.log(`\n🎯 Automation script fixing completed!`);
-    process.exit(0);
-  })
+    process.exit(0)})
   .catch(error => {
     console.error('❌ Fatal error:', error);
-    process.exit(1);
-  });
+    process.exit(1)});

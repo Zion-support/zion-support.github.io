@@ -1,4 +1,5 @@
-import: React, { useEffect, useState, useCallback } from 'react'  interface AnalyticsEvent {';';';
+import: React { useEffect, useState, useCallback } from 'react'  interface AnalyticsEvent {';
+;;
    id: string,;,
    type: string,;,
    category: string,;,
@@ -23,4 +24,5 @@ import: React, { useEffect, useState, useCallback } from 'react'  interface Anal
    bounceRate: number,;,
    conversionRate: number,;,
    topPages: string[],;,
-   userJourney: string[,]} export: const AnalyticsMonitor: React.FC: = () => { const [event,s, setEvents] = useState < AnalyticsEvent[]> ([])  const [performance, setPerformance] = useState < PerformanceMetrics | null> (null)  const [userBehavior, setUserBehavior] = useState < UserBehavior> ({ pageViews:  ,0, sessionDuration:  ,0, bounceRate:  ,0, conversionRate:  ,0, topPages: [,], userJourney: [], })  const: [isTracking, setIsTracking] = useState (false)  const [sessionId] = useState ( () => generateSessionId () )  ';';';';
+   userJourney: string[]} export: const AnalyticsMonitor: React.FC: = () => { const [event,s, setEvents] = useState < AnalyticsEvent[]> ([])  const [performance, setPerformance] = useState < PerformanceMetrics | null> (null)  const [userBehavior, setUserBehavior] = useState < UserBehavior> ({ pageViews:  ,0, sessionDuration:  ,0, bounceRate:  ,0, conversionRate:  ,0, topPages: [], userJourney: []})  const: [isTracking, setIsTracking] = useState (false)  const [sessionId] = useState ( () => generateSessionId () )  ';
+;;';

@@ -48,8 +48,7 @@ const Pricing: React.FC = () => {
       color: "from-blue-500 to-cyan-500",
       buttonText: "Get Started",
       buttonVariant: "outline" as const
-    },
-    {
+    }, {
       name: "Professional",
       price: "$799",
       period: "/month",
@@ -68,8 +67,7 @@ const Pricing: React.FC = () => {
       color: "from-purple-500 to-pink-500",
       buttonText: "Start Free Trial",
       buttonVariant: "default" as const
-    },
-    {
+    }, {
       name: "Enterprise",
       price: "Custom",
       period: "",
@@ -98,20 +96,17 @@ const Pricing: React.FC = () => {
       startingPrice: "$5,000",
       description: "Custom AI solutions and machine learning models",
       features: ["Custom AI models", "Data analysis", "Integration support", "Training & documentation"]
-    },
-    {
+    }, {
       service: "Cloud Migration",
       startingPrice: "$3,000",
       description: "Seamless migration to cloud infrastructure",
       features: ["Infrastructure assessment", "Migration planning", "Data transfer", "Performance optimization"]
-    },
-    {
+    }, {
       service: "Cybersecurity",
       startingPrice: "$2,500",
       description: "Comprehensive security solutions and monitoring",
       features: ["Security audit", "Threat monitoring", "Incident response", "Compliance support"]
-    },
-    {
+    }, {
       service: "Digital Transformation",
       startingPrice: "$10,000",
       description: "End-to-end digital transformation consulting",
@@ -284,7 +279,6 @@ const Pricing: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default Pricing;

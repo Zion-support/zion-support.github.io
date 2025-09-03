@@ -11,5 +11,4 @@ export default function EnhancedStatsSection.test() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

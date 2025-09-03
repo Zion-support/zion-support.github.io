@@ -8,28 +8,23 @@ const CustomerSupport: NextPage = () => {
       title: 'Multi-Channel Support',
       description: 'Handle tickets from email, chat, phone, and social media in one unified platform.',
       icon: '📞'
-    },
-    {
+    }, {
       title: 'AI-Powered Chatbots',
       description: 'Deploy intelligent chatbots for instant customer assistance and ticket routing.',
       icon: '🤖'
-    },
-    {
+    }, {
       title: 'Knowledge Base',
       description: 'Create and manage comprehensive knowledge bases for self-service support.',
       icon: '📚'
-    },
-    {
+    }, {
       title: 'Ticket Management',
       description: 'Organize, prioritize, and track support tickets with advanced workflow automation.',
       icon: '🎫'
-    },
-    {
+    }, {
       title: 'Live Chat',
       description: 'Real-time chat support with file sharing, screen sharing, and co-browsing.',
       icon: '💬'
-    },
-    {
+    }, {
       title: 'Analytics & Reporting',
       description: 'Comprehensive analytics to measure performance and improve customer satisfaction.',
       icon: '📊'
@@ -60,8 +55,7 @@ const CustomerSupport: NextPage = () => {
         'Mobile app access'
       ],
       popular: false
-    },
-    {
+    }, {
       name: 'Professional',
       price: '$499',
       period: '/month',
@@ -76,8 +70,7 @@ const CustomerSupport: NextPage = () => {
         'API access'
       ],
       popular: true
-    },
-    {
+    }, {
       name: 'Enterprise',
       price: '$1,299',
       period: '/month',
@@ -258,7 +251,6 @@ const CustomerSupport: NextPage = () => {
         </div>
       </section>
     </Layout>
-  );
-};
+  )};
 
 export default CustomerSupport;

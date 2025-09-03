@@ -4,8 +4,7 @@ import Head from 'next/head';
 interface PerformanceOptimizerProps {
   preloadImages?: string[];
   preloadFonts?: string[];
-  preloadScripts?: string[];
-}
+  preloadScripts?: string[]}
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   preloadImages = [],
@@ -19,8 +18,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       link.rel = 'preload';
       link.as = 'image';
       link.href = src;
-      document.head.appendChild(link);
-    });
+      document.head.appendChild(link)});
 
     // Preload critical fonts
     preloadFonts.forEach(href => {
@@ -28,8 +26,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       link.rel = 'preload';
       link.as = 'style';
       link.href = href;
-      document.head.appendChild(link);
-    });
+      document.head.appendChild(link)});
 
     // Preload critical scripts
     preloadScripts.forEach(src => {
@@ -37,9 +34,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       link.rel = 'preload';
       link.as = 'script';
       link.href = src;
-      document.head.appendChild(link);
-    });
-  }, [preloadImages, preloadFonts, preloadScripts]);
+      document.head.appendChild(link)})}, [preloadImages, preloadFonts, preloadScripts]);
 
   return (
     <Head>
@@ -50,7 +45,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
     </Head>
-  );
-};
+  )};
 
 export default PerformanceOptimizer;

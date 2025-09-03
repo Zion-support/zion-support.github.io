@@ -15,7 +15,6 @@ const CloudComputingStrategies: NextPage = () => {
         <p>This page is under construction.</p>
       </main>
     </div>
-  );
-};
+  )};
 
 export default CloudComputingStrategies;

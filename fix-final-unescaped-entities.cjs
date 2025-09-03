@@ -7,29 +7,24 @@ function fixUnescapedEntities(content, filePath) {
   let changes = 0;
 
   // Fix unescaped apostrophes in JSX text content
-  const unescapedApostropheRegex = /([^&])'([^;])/g;
+  const unescapedApostropheRegex = /([^&])'([^])/g;
   fixed = fixed.replace(unescapedApostropheRegex, (match, before, after) => {
     // Don't replace if it's already escaped or in a string literal
     if (!before.includes('&') && !after.includes('&')) {
       changes++;
-      return before + '&apos;' + after;
-    }
-    return match;
-  });
+      return before + '&apos;' + after}
+    return match});
 
   // Fix unescaped quotes in JSX text content
-  const unescapedQuoteRegex = /([^&])"([^;])/g;
+  const unescapedQuoteRegex = /([^&])"([^])/g;
   fixed = fixed.replace(unescapedQuoteRegex, (match, before, after) => {
     // Don't replace if it's already escaped or in a string literal
     if (!before.includes('&') && !after.includes('&')) {
       changes++;
-      return before + '&quot;' + after;
-    }
-    return match;
-  });
+      return before + '&quot;' + after}
+    return match});
 
-  return { fixed, changes };
-}
+  return { fixed, changes }}
 
 // Function to process a single file
 function processFile(filePath) {
@@ -40,13 +35,10 @@ function processFile(filePath) {
     if (changes > 0) {
       fs.writeFileSync(filePath, fixed, 'utf8');
       console.log(`Fixed ${changes} unescaped entities in ${filePath}`);
-      return changes;
-    }
-    return 0;
-  } catch (error) {
+      return changes}
+    return 0} catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
-    return 0;
-  }
+    return 0}
 }
 
 // Function to recursively find all TypeScript/JavaScript files
@@ -61,17 +53,13 @@ function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        files = files.concat(findFiles(fullPath, extensions));
-      } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
-        files.push(fullPath);
-      }
+        files = files.concat(findFiles(fullPath, extensions))} else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
+        files.push(fullPath)}
     }
   } catch (error) {
-    console.error(`Error reading directory ${dir}:`, error.message);
-  }
+    console.error(`Error reading directory ${dir}:`, error.message)}
   
-  return files;
-}
+  return files}
 
 // Main execution
 function main() {
@@ -87,17 +75,14 @@ function main() {
     const changes = processFile(file);
     totalChanges += changes;
     if (changes > 0) {
-      processedFiles++;
-    }
+      processedFiles++}
   }
   
   console.log(`\nProcessing complete!`);
   console.log(`Files processed: ${processedFiles}`);
-  console.log(`Total changes made: ${totalChanges}`);
-}
+  console.log(`Total changes made: ${totalChanges}`)}
 
 if (require.main === module) {
-  main();
-}
+  main()}
 
 module.exports = { fixUnescapedEntities, processFile, findFiles };

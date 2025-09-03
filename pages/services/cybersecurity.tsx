@@ -18,8 +18,7 @@ const Cybersecurity = () => {
         'Risk assessment',
         'Compliance review'
       ]
-    },
-    {
+    }, {
       title: 'Network Security',
       description: 'Protect your network infrastructure from threats',
       icon: Network,
@@ -30,8 +29,7 @@ const Cybersecurity = () => {
         'VPN setup',
         'Traffic analysis'
       ]
-    },
-    {
+    }, {
       title: 'Data Protection',
       description: 'Safeguard your sensitive data and information',
       icon: Database,
@@ -42,8 +40,7 @@ const Cybersecurity = () => {
         'Data loss prevention',
         'Privacy compliance'
       ]
-    },
-    {
+    }, {
       title: 'Incident Response',
       description: 'Rapid response to security incidents and breaches',
       icon: AlertTriangle,
@@ -62,18 +59,15 @@ const Cybersecurity = () => {
       name: 'SOC 2',
       description: 'Service Organization Control 2 compliance for service providers',
       icon: Shield
-    },
-    {
+    }, {
       name: 'ISO 27001',
       description: 'International standard for information security management',
       icon: Lock
-    },
-    {
+    }, {
       name: 'GDPR',
       description: 'General Data Protection Regulation compliance',
       icon: Globe
-    },
-    {
+    }, {
       name: 'HIPAA',
       description: 'Health Insurance Portability and Accountability Act',
       icon: Users
@@ -81,10 +75,7 @@ const Cybersecurity = () => {
   ];
 
   const stats = [
-    { number: '99.9%', label: 'Security Uptime', description: 'Continuous protection' },
-    { number: '24/7', label: 'Monitoring', description: 'Round-the-clock surveillance' },
-    { number: '< 5min', label: 'Response Time', description: 'Rapid incident response' },
-    { number: '100%', label: 'Compliance', description: 'Regulatory adherence' }
+    { number: '99.9%', label: 'Security Uptime', description: 'Continuous protection' }, { number: '24/7', label: 'Monitoring', description: 'Round-the-clock surveillance' }, { number: '< 5min', label: 'Response Time', description: 'Rapid incident response' }, { number: '100%', label: 'Compliance', description: 'Regulatory adherence' }
   ];
 
   return (
@@ -260,7 +251,6 @@ const Cybersecurity = () => {
       
       <Footer />
     </>
-  );
-};
+  )};
 
 export default Cybersecurity;

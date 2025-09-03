@@ -98,8 +98,8 @@ function fixFile(filePath) {
     );
 
     // Fix malformed object literals;
-    content = content.replace(/{\s*(\w+)\s*:\s*([^,}]+)\s*}/g, '{ $1: $2 }');
-    content = content.replace(/{\s*(\w+)\s*:\s*([^,}]+)\s*,/g, '{ $1: $2,');
+    content = content.replace(/{\s*(\w+)\s*:\s*([^}]+)\s*}/g, '{ $1: $2 }');
+    content = content.replace(/{\s*(\w+)\s*:\s*([^}]+)\s*,/g, '{ $1: $2',);
 
     // Fix specific missing types;
     content = content.replace(/forEach\(\(entry: \)/g, 'forEach((entry: any)');
@@ -134,14 +134,11 @@ function fixFile(filePath) {
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content);
       console.log(`Fixed: ${filePath}`);
-      return true;
-    }
+      return true}
 
-    return false;
-  } catch (error) { 
+    return false} catch (error) { 
     console.error(`Error fixing ${filePath }:`, error.message);
-    return false;
-  }
+    return false}
 }
 
 function getAllFiles(dir) {
@@ -153,14 +150,11 @@ function getAllFiles(dir) {
     const stat = fs.statSync(fullPath);
 
     if (stat.isDirectory()) {
-      files.push(...getAllFiles(fullPath));
-    } else if (item.endsWith(`.tsx`) || item.endsWith('.ts')) {
-      files.push(fullPath);
-    }
+      files.push(...getAllFiles(fullPath))} else if (item.endsWith(`.tsx`) || item.endsWith('.ts')) {
+      files.push(fullPath)}
   }
 
-  return files;
-}
+  return files}
 
 // Main execution;
 const srcDir = path.join(process.cwd(), `src`);
@@ -170,11 +164,8 @@ if (fs.existsSync(srcDir)) {
 
   for (const file of files) {
     if (fixFile(file)) {
-      fixedCount++;
-    }
+      fixedCount++}
   }
 
-  console.log(`\nFixed ${fixedCount} files.`);
-} else {
-  console.log(`src directory not found`);
-}
+  console.log(`\nFixed ${fixedCount} files.`)} else {
+  console.log(`src directory not found`)}

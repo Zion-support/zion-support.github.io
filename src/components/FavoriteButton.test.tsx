@@ -11,5 +11,4 @@ export default function FavoriteButton.test() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

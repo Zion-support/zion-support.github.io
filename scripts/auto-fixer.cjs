@@ -13,8 +13,7 @@ class AutoFixer {
     
     // Ensure logs directory exists
     if (!fs.existsSync(this.logDir)) {
-      fs.mkdirSync(this.logDir, { recursive: true });
-    }
+      fs.mkdirSync(this.logDir { recursive: true })}
   }
 
   log(level, message) {
@@ -24,8 +23,7 @@ class AutoFixer {
     
     // Write to log file
     const logFile = path.join(this.logDir, 'auto-fixer.log');
-    fs.appendFileSync(logFile, logMessage + '\n');
-  }
+    fs.appendFileSync(logFile, logMessage + '\n')}
 
   getAllSourceFiles() {
     const sourceFiles = [];
@@ -39,19 +37,15 @@ class AutoFixer {
         const stat = fs.statSync(filePath);
         
         if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
-          scanDirectory(filePath);
-        } else if (file.match(/\.(ts|tsx|js|jsx)$/)) {
-          sourceFiles.push(filePath);
-        }
-      });
-    };
+          scanDirectory(filePath)} else if (file.match(/\.(ts|tsx|js|jsx)$/)) {
+          sourceFiles.push(filePath)}
+      })};
     
     scanDirectory(path.join(this.projectRoot, 'src'));
     scanDirectory(path.join(this.projectRoot, 'pages'));
     scanDirectory(path.join(this.projectRoot, 'scripts'));
     
-    return sourceFiles;
-  }
+    return sourceFiles}
 
   async fixMergeConflicts() {
     this.log('info', 'Fixing merge conflicts...');
@@ -65,9 +59,8 @@ class AutoFixer {
         const originalContent = content;
         
         // Remove merge conflict markers
-        content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-        content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g, '');
-        content = content.replace(/=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+        content = content.replace(/[\s\S]*?>>>>>>> [^\n]+/g, '');
+        content = content.replace(/[\s\S]*?>>>>>>> [^\n]+/g, '');
         
         if (content !== originalContent) {
           fs.writeFileSync(file, content);
@@ -77,16 +70,13 @@ class AutoFixer {
             file,
             type: 'merge_conflicts',
             timestamp: new Date().toISOString()
-          });
-        }
+          })}
       } catch (error) {
-        this.log('warn', `Error processing ${file}: ${error.message}`);
-      }
+        this.log('warn', `Error processing ${file}: ${error.message}`)}
     }
     
     this.log('info', `Fixed merge conflicts in ${fixedFiles} files`);
-    return fixedFiles;
-  }
+    return fixedFiles}
 
   async fixSyntaxErrors() {
     this.log('info', 'Fixing syntax errors...');
@@ -94,16 +84,15 @@ class AutoFixer {
     
     const syntaxFixes = [
       // Fix missing semicolons
-      { pattern: /([^;}])\s*$/gm, replacement: '$1;', description: 'Add missing semicolons' },
+      { pattern: /([^}])\s*$/gm, replacement: '$1;', description: 'Add missing semicolons' },
       // Fix missing commas
-      { pattern: /([^,}])\s*$/gm, replacement: '$1,', description: 'Add missing commas' },
+      { pattern: /([^}])\s*$/gm, replacement: '$1',, description: 'Add missing commas' },
       // Fix missing quotes
-      { pattern: /([^"'])\s*$/gm, replacement: '$1"', description: 'Add missing quotes' },
+      { pattern: /([^"'])\s*$/gm, replacement: '$1", description: 'Add missing quotes' },
       // Fix missing brackets
       { pattern: /([^}])\s*$/gm, replacement: '$1}', description: 'Add missing brackets' },
       // Fix missing parentheses
-      { pattern: /([^)])\s*$/gm, replacement: '$1)', description: 'Add missing parentheses' },
-    ];
+      { pattern: /([^)])\s*$/gm, replacement: '$1)', description: 'Add missing parentheses' }];
     
     const files = this.getAllSourceFiles();
     
@@ -116,8 +105,7 @@ class AutoFixer {
         for (const fix of syntaxFixes) {
           if (fix.pattern.test(content)) {
             content = content.replace(fix.pattern, fix.replacement);
-            fileFixes++;
-          }
+            fileFixes++}
         }
         
         if (content !== originalContent) {
@@ -129,16 +117,13 @@ class AutoFixer {
             type: 'syntax_fixes',
             count: fileFixes,
             timestamp: new Date().toISOString()
-          });
-        }
+          })}
       } catch (error) {
-        this.log('warn', `Error processing ${file}: ${error.message}`);
-      }
+        this.log('warn', `Error processing ${file}: ${error.message}`)}
     }
     
     this.log('info', `Applied syntax fixes to ${fixedFiles} files`);
-    return fixedFiles;
-  }
+    return fixedFiles}
 
   async fixImportErrors() {
     this.log('info', 'Fixing import errors...');
@@ -164,29 +149,25 @@ class AutoFixer {
             file,
             type: 'import_fixes',
             timestamp: new Date().toISOString()
-          });
-        }
+          })}
       } catch (error) {
-        this.log('warn', `Error processing ${file}: ${error.message}`);
-      }
+        this.log('warn', `Error processing ${file}: ${error.message}`)}
     }
     
     this.log('info', `Fixed import errors in ${fixedFiles} files`);
-    return fixedFiles;
-  }
+    return fixedFiles}
 
   async fixTypeScriptErrors() {
     this.log('info', 'Fixing TypeScript errors...');
     
     try {
       // Try to run TypeScript compiler to get errors
-      execSync('npx tsc --noEmit', { 
+      execSync('npx tsc --noEmit' { 
         cwd: this.projectRoot,
         stdio: 'pipe'
       });
       this.log('info', 'No TypeScript errors found');
-      return 0;
-    } catch (error) {
+      return 0} catch (error) {
       this.log('warn', 'TypeScript errors found, attempting to fix...');
       
       // Try to fix common TypeScript issues
@@ -212,16 +193,13 @@ class AutoFixer {
               file,
               type: 'typescript_fixes',
               timestamp: new Date().toISOString()
-            });
-          }
+            })}
         } catch (error) {
-          this.log('warn', `Error processing ${file}: ${error.message}`);
-        }
+          this.log('warn', `Error processing ${file}: ${error.message}`)}
       }
       
       this.log('info', `Fixed TypeScript errors in ${fixedFiles} files`);
-      return fixedFiles;
-    }
+      return fixedFiles}
   }
 
   async runAllFixes() {
@@ -250,8 +228,7 @@ class AutoFixer {
       fixesApplied: this.fixesApplied
     }, null, 2));
     
-    return results;
-  }
+    return results}
 }
 
 // Run auto-fixer if this script is executed directly
@@ -266,12 +243,9 @@ if (require.main === module) {
       console.log(`TypeScript Errors Fixed: ${results.typescriptErrors}`);
       console.log(`Total Fixes: ${results.totalFixes}`);
       console.log(`Duration: ${results.duration}ms`);
-      process.exit(0);
-    })
+      process.exit(0)})
     .catch(error => {
       console.error('Auto-fixer failed:', error);
-      process.exit(1);
-    });
-}
+      process.exit(1)})}
 
 module.exports = AutoFixer;

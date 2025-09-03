@@ -1,50 +1,6 @@
-<<<<<<< HEAD
-import { useDispatch, useSelector  } from 'react-redux'; ; export const useAppDispatch = () => useDispatch(); export const useAppSelector = useSelector; ;
-=======
-<<<<<<< HEAD
-import { useDispatch, useSelector  } from 'react-redux'; ; export const useAppDispatch = () => useDispatch(); export const useAppSelector = useSelector; ;
-=======
-<<<<<<< HEAD
 
-import { useDispatch, useSelector } from 'react-redux'; ; export const useAppDispatch = () => useDispatch(); export const useAppSelector = useSelector; ;'';,"});,"})
-;,"});,"})
-import { useDispatch, useSelector  } from 'react-redux'; ; export const useAppDispatch = () => useDispatch(); export const useAppSelector = useSelector; ;,"});,"})
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-23ff;,"});,"})
-=======
-<<<<<<< HEAD
-import { useDispatch, useSelector } from 'react-redux'  export const useAppDispatch = () => useDispatch() export const useAppSelector = useSelector ';;
-=======
-<<<<<<< HEAD
-import: { useDispatch, useSelector } from 'react-redux';';';';
-
-export: const useAppDispatch = () => useDispatch();
-export: const useAppSelector = useSelector;
-=======
-<<<<<<< HEAD
-import { useDispatch, useSelector } from 'react-redux';
-;
-=======
-<<<<<<< HEAD
-import {useDispatch, useSelector } from 'react-redux';
->>>>>>> main
 export const useAppDispatch = () => useDispatch();
-<<<<<<< HEAD
-export const useAppSelector = useSelector;""
-=======
-export const useAppSelector = useSelector;"
-=======
-<<<<<<< HEAD
-import { useDispatch, useSelector } from &apos;react-redux';&apos;&apos;
-=======
-<<<<<<< HEAD
-import { useDispatch, useSelector } from 'react-redux';
-export const useAppDispatch = () => useDispatch();""
-export const useAppSelector = useSelector;""
-""
-=======
-import React from 'react';
-import { SEO } from '@/components/SEO';
->>>>>>> main
+
 
 const Hooks: React.FC = () => {
   return (
@@ -71,15 +27,14 @@ const Hooks: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )};
 
 export default Hooks;
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
+
+
+
+
+
+
+
+

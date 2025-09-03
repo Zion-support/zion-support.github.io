@@ -11,5 +11,4 @@ export default function EnhancedContact() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

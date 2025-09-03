@@ -1,23 +1,4 @@
-<<<<<<< HEAD
-describe("InteractiveUserExperience", () => { it("renders without crashing", () => { render(<InteractiveUserExperience />) ; expect(screen.getByRole ("main") || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; it("displays expected content", () => { render(<InteractiveUserExperience />) ;
-=======
-<<<<<<< HEAD
-describe("InteractiveUserExperience", () => { it("renders without crashing", () => { render(<InteractiveUserExperience />) ; expect(screen.getByRole ("main") || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; it("displays expected content", () => { render(<InteractiveUserExperience />) ;
-=======
-<<<<<<< HEAD
 
 
-describe ("InteractiveUserExperience", () => { it ("renders without crashing", () => { render (<InteractiveUserExperience />) ; expect (screen.getByRole ("main") || screen.getByText (/.*/) ) .toBeInTheDocument () }) ; it ("displays expected content", () => { render (<InteractiveUserExperience />) ;""";
 
-describe("InteractiveUserExperience", () => { it("renders without crashing", () => { render(<InteractiveUserExperience />) ; expect(screen.getByRole ("main") || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; it("displays expected content", () => { render(<InteractiveUserExperience />) ;
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-23ff
-=======
 
-<<<<<<< HEAD
-describe: ('InteractiveUserExperience', () => { it ('renders without crashing', () => { render (<InteractiveUserExperience />)  expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () })  it ('displays expected content', () => { render (<InteractiveUserExperience />) ''';
-=======
-describe ('InteractiveUserExperience', () => { it ('renders without crashing', () => { render (<InteractiveUserExperience />)  expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () })  it ('displays expected content', () => { render (<InteractiveUserExperience />) '''
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

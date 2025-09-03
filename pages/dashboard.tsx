@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React { useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
@@ -35,22 +35,19 @@ export default function Dashboard() {
       change: '+2 this month',
       icon: BarChart3,
       color: 'from-blue-500 to-cyan-500'
-    },
-    {
+    }, {
       title: 'Team Members',
       value: '8',
       change: '+1 this week',
       icon: Users,
       color: 'from-green-500 to-emerald-500'
-    },
-    {
+    }, {
       title: 'Completed Tasks',
       value: '47',
       change: '+12 this week',
       icon: CheckCircle,
       color: 'from-purple-500 to-pink-500'
-    },
-    {
+    }, {
       title: 'Revenue',
       value: '$125K',
       change: '+15% this month',
@@ -67,16 +64,14 @@ export default function Dashboard() {
       progress: 75,
       dueDate: '2024-02-15',
       team: ['John Doe', 'Jane Smith', 'Mike Johnson']
-    },
-    {
+    }, {
       id: 2,
       name: 'Cloud Migration',
       status: 'Planning',
       progress: 25,
       dueDate: '2024-03-01',
       team: ['Sarah Wilson', 'David Brown']
-    },
-    {
+    }, {
       id: 3,
       name: 'Mobile App Development',
       status: 'Completed',
@@ -93,15 +88,13 @@ export default function Dashboard() {
       message: 'You have been assigned to the AI Chatbot project',
       time: '2 hours ago',
       type: 'info'
-    },
-    {
+    }, {
       id: 2,
       title: 'Meeting reminder',
       message: 'Team standup meeting in 30 minutes',
       time: '30 minutes ago',
       type: 'warning'
-    },
-    {
+    }, {
       id: 3,
       title: 'Project completed',
       message: 'Mobile App Development project has been completed',
@@ -117,22 +110,19 @@ export default function Dashboard() {
       icon: Plus,
       color: 'from-blue-500 to-cyan-500',
       href: '/projects/new'
-    },
-    {
+    }, {
       title: 'View Reports',
       description: 'Check project analytics',
       icon: BarChart3,
       color: 'from-green-500 to-emerald-500',
       href: '/reports'
-    },
-    {
+    }, {
       title: 'Team Chat',
       description: 'Communicate with team',
       icon: MessageCircle,
       color: 'from-purple-500 to-pink-500',
       href: '/chat'
-    },
-    {
+    }, {
       title: 'Download Resources',
       description: 'Access project files',
       icon: Download,
@@ -148,15 +138,13 @@ export default function Dashboard() {
       icon: Brain,
       color: 'from-purple-500 to-pink-500',
       href: '/services/ai-services'
-    },
-    {
+    }, {
       title: 'Micro SAAS',
       description: 'Business automation tools',
       icon: Code,
       color: 'from-blue-500 to-cyan-500',
       href: '/services/micro-saas'
-    },
-    {
+    }, {
       title: 'IT Services',
       description: 'Infrastructure management',
       icon: Cloud,
@@ -411,5 +399,4 @@ export default function Dashboard() {
         </div>
       </div>
     </>
-  );
-}
+  )}

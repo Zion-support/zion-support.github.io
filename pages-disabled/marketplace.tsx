@@ -4,11 +4,7 @@ import Link from 'next/link';
 
 const MarketplacePage: React.FC = () => {
   const sections = [
-    { title: 'Products', href: '/marketplace/products', description: 'AI tools, software, and platforms.' },
-    { title: 'Talent', href: '/marketplace/talent', description: 'Expert contractors and fractional teams.' },
-    { title: 'Equipment', href: '/marketplace/equipment', description: 'Hardware and infrastructure.' },
-    { title: 'Services', href: '/marketplace/services', description: 'Professional and managed services.' },
-  ];
+    { title: 'Products', href: '/marketplace/products', description: 'AI tools, software, and platforms.' }, { title: 'Talent', href: '/marketplace/talent', description: 'Expert contractors and fractional teams.' }, { title: 'Equipment', href: '/marketplace/equipment', description: 'Hardware and infrastructure.' }, { title: 'Services', href: '/marketplace/services', description: 'Professional and managed services.' } ];
 
   return (
     <MainLayout title="Marketplace - Zion Tech Group" description="Discover products, talent, equipment, and services in our marketplace.">
@@ -24,8 +20,7 @@ const MarketplacePage: React.FC = () => {
         </div>
       </section>
     </MainLayout>
-  );
-};
+  )};
 
 export default MarketplacePage;
 

@@ -8,28 +8,23 @@ const AIContentCreation: NextPage = () => {
       title: 'Blog Post Generation',
       description: 'Create engaging, SEO-optimized blog posts tailored to your industry and audience.',
       icon: '📝'
-    },
-    {
+    }, {
       title: 'Social Media Content',
       description: 'Generate compelling social media posts for all platforms with consistent brand voice.',
       icon: '📱'
-    },
-    {
+    }, {
       title: 'Email Marketing',
       description: 'Craft personalized email campaigns that drive engagement and conversions.',
       icon: '📧'
-    },
-    {
+    }, {
       title: 'Product Descriptions',
       description: 'Write compelling product descriptions that highlight features and benefits.',
       icon: '🛍️'
-    },
-    {
+    }, {
       title: 'Technical Documentation',
       description: 'Generate clear, comprehensive technical documentation for your products.',
       icon: '📚'
-    },
-    {
+    }, {
       title: 'Marketing Copy',
       description: 'Create persuasive marketing copy for ads, landing pages, and campaigns.',
       icon: '🎯'
@@ -58,8 +53,7 @@ const AIContentCreation: NextPage = () => {
         'Standard quality content'
       ],
       popular: false
-    },
-    {
+    }, {
       name: 'Professional',
       price: '$299',
       period: '/month',
@@ -73,8 +67,7 @@ const AIContentCreation: NextPage = () => {
         'Brand voice training'
       ],
       popular: true
-    },
-    {
+    }, {
       name: 'Enterprise',
       price: '$799',
       period: '/month',
@@ -254,7 +247,6 @@ const AIContentCreation: NextPage = () => {
         </div>
       </section>
     </Layout>
-  );
-};
+  )};
 
 export default AIContentCreation;

@@ -22,8 +22,7 @@ const corruptedFiles = [
 const backupDir = path.join(process.cwd(), 'corrupted_files_backup_2');
 
 if (!fs.existsSync(backupDir)) {
-  fs.mkdirSync(backupDir, { recursive: true });
-}
+  fs.mkdirSync(backupDir { recursive: true })}
 
 let movedCount = 0;
 
@@ -34,10 +33,8 @@ corruptedFiles.forEach(filePath => {
     try {
       fs.renameSync(fullPath, backupPath);
       movedCount++;
-      console.log(`Moved: ${filePath}`);
-    } catch (error) {
-      console.error(`Error moving ${filePath}:`, error.message);
-    }
+      console.log(`Moved: ${filePath}`)} catch (error) {
+      console.error(`Error moving ${filePath}:`, error.message)}
   }
 });
 

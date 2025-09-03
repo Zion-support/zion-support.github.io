@@ -18,13 +18,12 @@ function fixLinkIssues(filePath) {
 
       // Add Link import if not present
       if (!hasLinkImport) {
-        const importMatch = content.match(/import\s+React[^;]*;/);
+        const importMatch = content.match(/import\s+React[^]*;/);
         if (importMatch) {
           content = content.replace(
             importMatch[0],
             importMatch[0] + "\nimport Link from 'next/link';"
-          );
-        }
+          )}
       }
     }
 
@@ -32,27 +31,22 @@ function fixLinkIssues(filePath) {
     const closingPattern = /<\/a>/g;
     if (closingPattern.test(content)) {
       content = content.replace(closingPattern, '</Link>');
-      modified = true;
-    }
+      modified = true}
 
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed Link issues in: ${filePath}`);
-      return true;
-    }
-    return false;
-  } catch (error) {
+      return true}
+    return false} catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
-  }
+    return false}
 }
 
 // Files to fix
 const filesToFix = [
   './pages/index.p.tsx',
   './pages/privacy.tsx',
-  './pages/terms.tsx',
-];
+  './pages/terms.tsx' ];
 
 console.log('Fixing Link issues...');
 let fixedCount = 0;
@@ -60,11 +54,9 @@ let fixedCount = 0;
 filesToFix.forEach(file => {
   if (fs.existsSync(file)) {
     if (fixLinkIssues(file)) {
-      fixedCount++;
-    }
+      fixedCount++}
   } else {
-    console.log(`File not found: ${file}`);
-  }
+    console.log(`File not found: ${file}`)}
 });
 
 console.log(`Fixed ${fixedCount} files`);

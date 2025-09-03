@@ -5,12 +5,10 @@ const path = require('path');
 
 class AllIssuesFixer {
   constructor() {
-    this.projectRoot = process.cwd();
-  }
+    this.projectRoot = process.cwd()}
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
-  }
+    console.log(`[${new Date().toISOString()}] ${message}`)}
 
   fixPricingGuidePage() {
     const filePath = path.join(this.projectRoot, 'pages/pricing-guide.tsx');
@@ -31,8 +29,7 @@ class AllIssuesFixer {
 
     fs.writeFileSync(filePath, content, 'utf8');
     this.log('✅ Fixed pricing-guide.tsx');
-    return true;
-  }
+    return true}
 
   fixSitemapPage() {
     const filePath = path.join(this.projectRoot, 'pages/sitemap.tsx');
@@ -50,16 +47,14 @@ class AllIssuesFixer {
 
     fs.writeFileSync(filePath, content, 'utf8');
     this.log('✅ Fixed sitemap.tsx');
-    return true;
-  }
+    return true}
 
   fixScriptSyntaxErrors() {
     const scripts = [
       'scripts/performance-monitor.js',
       'scripts/health-checker.js',
       'scripts/link-checker.js',
-      'scripts/seo-optimizer.js',
-    ];
+      'scripts/seo-optimizer.js' ];
 
     let fixedCount = 0;
     for (const script of scripts) {
@@ -78,16 +73,13 @@ class AllIssuesFixer {
           if (content !== originalContent) {
             fs.writeFileSync(scriptPath, content, 'utf8');
             this.log(`✅ Fixed syntax in: ${script}`);
-            fixedCount++;
-          }
+            fixedCount++}
         } catch (error) {
-          this.log(`❌ Error fixing ${script}: ${error.message}`);
-        }
+          this.log(`❌ Error fixing ${script}: ${error.message}`)}
       }
     }
 
-    return fixedCount;
-  }
+    return fixedCount}
 
   async fixAllIssues() {
     this.log('🔧 Fixing all remaining issues...');
@@ -103,8 +95,7 @@ class AllIssuesFixer {
     fixedCount += scriptFixes;
 
     this.log(`🎉 Fixed ${fixedCount} issues!`);
-    return fixedCount > 0;
-  }
+    return fixedCount > 0}
 }
 
 // Run the fixer
@@ -114,13 +105,10 @@ fixer
   .then(success => {
     if (success) {
       console.log('✅ All remaining issues fixed successfully!');
-      process.exit(0);
-    } else {
+      process.exit(0)} else {
       console.log('❌ No issues found to fix.');
-      process.exit(0);
-    }
+      process.exit(0)}
   })
   .catch(error => {
     console.error('❌ Fatal error:', error);
-    process.exit(1);
-  });
+    process.exit(1)});

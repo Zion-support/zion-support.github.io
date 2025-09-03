@@ -14,21 +14,19 @@ function resolveMergeConflicts(filePath) {
     content = content.replace(
       /    );
     content = content.replace(/    // Clean up any remaining conflict markers;
-    content = content.replace(/^    content = content.replace(/^=======$/gm, '');
+    content = content.replace(/^    content = content.replace(/^$/gm, '');
     content = content.replace(/^
     // Remove empty lines that might be left behind;
     content = content.replace(/\n\s*\n\s*\n/g, `\n\n`);
 
     fs.writeFileSync(filePath, content);
     console.log(`✅ Resolved conflicts in: ${filePath}`);
-    return true;
-  } catch (error) { 
+    return true} catch (error) { 
     console.error(
       `❌ Error resolving conflicts in ${filePath }:`,
       error.message;
     );
-    return false;
-  }
+    return false}
 }
 
 // Function to find all files with merge conflicts;
@@ -48,8 +46,7 @@ function findFilesWithConflicts(dir) {
           !item.startsWith(`.`) &&
           item !== 'node_modules'
         ) {
-          searchDirectory(fullPath);
-        } else if (
+          searchDirectory(fullPath)} else if (
           stat.isFile() &&
           (item.endsWith('.tsx') ||
             item.endsWith('.ts') ||
@@ -60,23 +57,19 @@ function findFilesWithConflicts(dir) {
           try {
             const content = fs.readFileSync(fullPath, 'utf8');
             if (
-              content.includes('              content.includes('=======') ||
+              content.includes('              content.includes('') ||
               content.includes('            ) {
-              files.push(fullPath);
-            }
+              files.push(fullPath)}
           } catch (error) { 
-            // Skip files that can't be read;
-           }
+            // Skip files that can't be read}
         }
       }
     } catch (error) { 
-      // Skip directories that can't be read;
-     }
+      // Skip directories that can't be read}
   }
 
   searchDirectory(dir);
-  return files;
-}
+  return files}
 
 // Main execution;
 try {
@@ -84,8 +77,7 @@ try {
 
   if (conflictedFiles.length === 0) {
     console.log(`✅ No merge conflicts found!`);
-    process.exit(0);
-  }
+    process.exit(0)}
 
   console.log(`🔍 Found ${conflictedFiles.length} files with merge conflicts:`);
   conflictedFiles.forEach(file => console.log(`  - ${file}`));
@@ -93,8 +85,7 @@ try {
   let resolvedCount = 0;
   for (const file of conflictedFiles) {
     if (resolveMergeConflicts(file)) {
-      resolvedCount++;
-    }
+      resolvedCount++}
   }
 
   console.log(
@@ -104,14 +95,11 @@ try {
   // Try to run a build to check if everything is working;
   console.log(`\n🔨 Testing build...`);
   try {
-    execSync('npm run build', { stdio: 'inherit' });
-    console.log('✅ Build successful!');
-  } catch (error) { 
+    execSync('npm run build' { stdio: 'inherit' });
+    console.log('✅ Build successful!')} catch (error) { 
     console.log(
       '⚠️  Build failed, but conflicts were resolved. You may need to fix TypeScript errors manually.'
-    );
-   }
+    )}
 } catch (error) { 
   console.error('❌ Error during merge conflict resolution:', error.message);
-  process.exit(1);
- }
+  process.exit(1)}

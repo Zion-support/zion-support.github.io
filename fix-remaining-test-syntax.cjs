@@ -6,25 +6,21 @@ const glob = require('glob');
 
 class TestSyntaxFixer {
   constructor() {
-    this.projectRoot = process.cwd();
-  }
+    this.projectRoot = process.cwd()}
 
   async fixRemainingSyntaxIssues() {
     console.log('🔧 Fixing remaining test syntax issues...');
     
     const testFiles = [
-      ...glob.sync('**/*.test.js', { cwd: this.projectRoot }),
-      ...glob.sync('**/*.test.tsx', { cwd: this.projectRoot }),
-      ...glob.sync('**/*.test.ts', { cwd: this.projectRoot }),
-    ];
+      ...glob.sync('**/*.test.js' { cwd: this.projectRoot }),
+      ...glob.sync('**/*.test.tsx' { cwd: this.projectRoot }),
+      ...glob.sync('**/*.test.ts' { cwd: this.projectRoot })];
     
     for (const testFile of testFiles) {
       const filePath = path.join(this.projectRoot, testFile);
-      await this.fixTestFile(filePath);
-    }
+      await this.fixTestFile(filePath)}
     
-    console.log('✅ Test syntax fixes completed');
-  }
+    console.log('✅ Test syntax fixes completed')}
 
   async fixTestFile(filePath) {
     try {
@@ -36,11 +32,9 @@ class TestSyntaxFixer {
       
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content);
-        console.log(`✅ Fixed: ${path.relative(this.projectRoot, filePath)}`);
-      }
+        console.log(`✅ Fixed: ${path.relative(this.projectRoot, filePath)}`)}
     } catch (error) {
-      console.error(`❌ Failed to fix ${filePath}:`, error.message);
-    }
+      console.error(`❌ Failed to fix ${filePath}:`, error.message)}
   }
 
   fixSyntaxIssues(content) {
@@ -62,7 +56,7 @@ class TestSyntaxFixer {
     content = content.replace(/'([^']*)'([^']*)'/g, "'$1$2'");
     
     // Fix missing quotes in object properties
-    content = content.replace(/(\w+):\s*([^,}\s]+)/g, '$1: $2');
+    content = content.replace(/(\w+):\s*([^}\s]+)/g, '$1: $2');
     
     // Fix broken JSX attributes
     content = content.replace(/role='([^']*)';\s*aria-label='([^']*)';\s*tabIndex=\{(\d+)\}/g, 
@@ -75,8 +69,7 @@ class TestSyntaxFixer {
     content = content.replace(/it\(\s*'([^']*)',\s*\(\)\s*=>\s*\{/g, 
       "it('$1', () => {");
     
-    return content;
-  }
+    return content}
 }
 
 // Run the fixer

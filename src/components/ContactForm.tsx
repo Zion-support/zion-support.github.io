@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
   Mail, Phone, 
@@ -24,8 +24,7 @@ export const ContactForm: React.FC = () => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev, [name]: value
-    }));
-  };
+    }))};
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -41,12 +40,9 @@ export const ContactForm: React.FC = () => {
         phone: '', service: '',
         message: '', budget: '',
         timeline: ''
-      });
-    } catch (error) {
-      setSubmitStatus('error');
-    } finally {
-      setIsSubmitting(false);
-    }
+      })} catch (error) {
+      setSubmitStatus('error')} finally {
+      setIsSubmitting(false)}
   };
 
   const services = [
@@ -87,8 +83,7 @@ export const ContactForm: React.FC = () => {
           Send Another Message
         </button>
       </motion.div>
-    );
-  }
+    )}
 
   return (
     <div className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8">
@@ -323,5 +318,4 @@ export const ContactForm: React.FC = () => {
         </form>
       </div>
     </div>
-  );
-};
+  )};

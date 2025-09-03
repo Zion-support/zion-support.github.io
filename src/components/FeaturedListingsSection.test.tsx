@@ -11,5 +11,4 @@ export default function FeaturedListingsSection.test() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

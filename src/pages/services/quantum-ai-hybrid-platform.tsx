@@ -1,42 +1,9 @@
-<<<<<<< HEAD
-import React, { useState } from 'react'; import { motion  } from 'framer-motion'; import { ; Atom, Brain, Cpu, Database, Lock, Shield, Zap, Clock,; TrendingUp, CheckCircle, Star, Target, ArrowRight,; Phone, Mail, MapPin, Globe, Network, Server, Code,; Bot, GitFork, Eye, Sparkles, Award, DollarSign,; BarChart3, Users, Rocket, ShieldCheck, Wifi, Chip;  } from 'lucide-react'; ; const QuantumAIHybridPlatform: React.FC = () => {; const [activeTab, setActiveTab] = useState('overview'); const [showPricingModal, setShowPricingModal] = useState(false); ; const contactInfo = {; phone: "+1 302 464 0950",";"";" email: "kleber@ziontechgroup.com",";"";" address: "364 E Main St STE 1008 Middletown DE 19709",";"";" website: "https:
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React, { useState } from 'react' import { motion    } from 'framer-motion' import {  Atom, Brain, Cpu, Database, Lock, Shield, Zap, Clock, TrendingUp, CheckCircle, Star, Target, ArrowRight, Phone, Mail, MapPin, Globe, Network, Server, Code, Bot, GitFork, Eye, Sparkles, Award, DollarSign, BarChart3, Users, Rocket, ShieldCheck, Wifi, Chip    } from 'lucide-react'  const QuantumAIHybridPlatform: React.FC = () => { const [activeTab, setActiveTab] = useState('overview') const [showPricingModal, setShowPricingModal] = useState(false)  const contactInfo = { phone: '+1 302 464 0950', '';' email: 'kleber@ziontechgroup.com', '';' address: '364 E Main St STE 1008 Middletown DE 19709', ''' website: "https:'"
-=======
-<<<<<<< HEAD
-import React, { useState } from 'react' import { motion    } from 'framer-motion' import {  Atom, Brain, Cpu, Database, Lock, Shield, Zap, Clock, TrendingUp, CheckCircle, Star, Target, ArrowRight, Phone, Mail, MapPin, Globe, Network, Server, Code, Bot, GitFork, Eye, Sparkles, Award, DollarSign, BarChart3, Users, Rocket, ShieldCheck, Wifi, Chip    } from 'lucide-react'  const QuantumAIHybridPlatform: React.FC = () => { const [activeTab, setActiveTab] = useState('overview') const [showPricingModal, setShowPricingModal] = useState(false)  const contactInfo = { phone: '+1 302 464 0950', ''; email: 'kleber@ziontechgroup.com', ''; address: '364 E Main St STE 1008 Middletown DE 19709', ''; website: "http,
-    s:'""
-=======
-<<<<<<< HEAD
-import React, { useState } from 'react' import { motion    } from 'framer-motion' import {  Atom, Brain, Cpu, Database, Lock, Shield, Zap, Clock, TrendingUp, CheckCircle, Star, Target, ArrowRight, Phone, Mail, MapPin, Globe, Network, Server, Code, Bot, GitFork, Eye, Sparkles, Award, DollarSign, BarChart3, Users, Rocket, ShieldCheck, Wifi, Chip    } from 'lucide-react'  const QuantumAIHybridPlatform: React.FC = () => { const [activeTab, setActiveTab] = useState('overview') const [showPricingModal, setShowPricingModal] = useState(false)  const contactInfo = { phone: '+1 302 464 0950',';' email: 'kleber@ziontechgroup.com',';' address: '364 E Main St STE 1008 Middletown DE 19709',';' website: "https:
-=======
-<<<<<<< HEAD
-import React, {useState } from 'react' ;
-import {motion    } from 'framer-motion' import {Atom, Brain, Cpu, Database, Lock, Shield, Zap, Clock, TrendingUp, CheckCircle, Star, Target, ArrowRight, Phone, Mail, MapPin, Globe, Network, Server, Code, Bot, GitFork, Eye, Sparkles, Award, DollarSign, BarChart3, Users, Rocket, ShieldCheck, Wifi, Chip    } from 'lucide-react'  const QuantumAIHybridPlatform: React.FC = () => { const [activeTab, setActiveTab] = useState('overview') const [showPricingModal, setShowPricingModal] = useState(false)  const contactInfo = { phone: '+1 302 464 0950', '';' email: 'kleber@ziontechgroup.com', '';' address: '364 E Main St STE 1008 Middletown DE 19709', '';' website: "https:'"
-=======
-<<<<<<< HEAD
-import React, { useState } from &apos;react&apos; import { motion    } from &apos;framer-motion&apos; import {  Atom, Brain, Cpu, Database, Lock, Shield, Zap, Clock, TrendingUp, CheckCircle, Star, Target, ArrowRight, Phone, Mail, MapPin, Globe, Network, Server, Code, Bot, GitFork, Eye, Sparkles, Award, DollarSign, BarChart3, Users, Rocket, ShieldCheck, Wifi, Chip    } from &apos;lucide-react&apos;&apos;'  const QuantumAIHybridPlatform: React.FC = () => {} const;const [activeTab, setActiveTab] = useState(&apos;overview&apos;)&apos;' const;const [showPricingModal, setShowPricingModal] = useState(false)  ;const contactInfo = { phone: &apos;+1 302 464 0950&apos;,&apos;';&apos; email: &apos;kleber@ziontechgroup.com&apos;,&apos;';&apos; address: &apos;364 E Main St STE 1008 Middletown DE 19709&apos;,&apos;';&apos; website: &quot;http,s:&quot;}'
-=======
-<<<<<<< HEAD
-import React, { useState } from 'react' import { motion    } from 'framer-motion' import {  Atom, Brain, Cpu, Database, Lock, Shield, Zap, Clock, TrendingUp, CheckCircle, Star, Target, ArrowRight, Phone, Mail, MapPin, Globe, Network, Server, Code, Bot, GitFork, Eye, Sparkles, Award, DollarSign, BarChart3, Users, Rocket, ShieldCheck, Wifi, Chip    } from 'lucide-react'  const QuantumAIHybridPlatform: React.FC = () => { const [activeTab, setActiveTab] = useState('overview') const [showPricingModal, setShowPricingModal] = useState(false)  const contactInfo = { phone: '+1 302 464 0950', '';' email: 'kleber@ziontechgroup.com', '';' address: '364 E Main St STE 1008 Middletown DE 19709', '';' website: "https:'"
-<<<<<<< HEAD
-""
-}}
-=======
-=======
-import React, { useState }  from 'react';import { motion     } from 'framer-motion';
-import { Atom, Brain, Cpu, Database, Lock, Shield, Zap, Clock, TrendingUp, CheckCircle, Star, Target, ArrowRight, Phone, Mail, MapPin, Globe, Network, Server, Code, Bot, GitFork, Eye, Sparkles, Award, DollarSign, BarChart3, Users, Rocket, ShieldCheck, Wifi, Chip     } from 'lucide-react';  const QuantumAIHybridPlatform: React.FC = () => { const [activeTab, setActiveTab] = useState('overview') const [showPricingModal, setShowPricingModal] = useState(false)  const contactInfo = { phone: '+1 302 464 0950, email: 'kleber@ziontechgroup.com, address: '364 E Main St STE 1008 Middletown DE 19709, website: "https:'"
-"
-}}
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
+
+
+
+
+
+
+
+
+

@@ -11,5 +11,4 @@ export default function UltimateServicesShowcase2027.test() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

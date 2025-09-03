@@ -48,8 +48,7 @@ export default function AffiliateMarketingTracking() {
         'Fraud detection and prevention',
         'Cookie-less tracking solutions'
       ]
-    },
-    {
+    }, {
       title: 'Commission Management',
       description: 'Automated commission calculation and payout processing',
       icon: DollarSign,
@@ -61,8 +60,7 @@ export default function AffiliateMarketingTracking() {
         'Performance-based bonuses',
         'Real-time earnings tracking'
       ]
-    },
-    {
+    }, {
       title: 'Fraud Detection & Prevention',
       description: 'AI-powered fraud detection with real-time monitoring',
       icon: Shield,
@@ -74,8 +72,7 @@ export default function AffiliateMarketingTracking() {
         'Bot traffic filtering',
         'Chargeback prevention'
       ]
-    },
-    {
+    }, {
       title: 'Analytics & Reporting',
       description: 'Comprehensive analytics dashboard with actionable insights',
       icon: BarChart3,
@@ -105,8 +102,7 @@ export default function AffiliateMarketingTracking() {
         'Basic integrations'
       ],
       popular: false
-    },
-    {
+    }, {
       name: 'Professional',
       price: '$799',
       period: '/month',
@@ -121,8 +117,7 @@ export default function AffiliateMarketingTracking() {
         'White-label options'
       ],
       popular: true
-    },
-    {
+    }, {
       name: 'Enterprise',
       price: 'Custom',
       period: '',
@@ -346,5 +341,4 @@ export default function AffiliateMarketingTracking() {
         </div>
       </section>
     </PageTransition>
-  );
-}
+  )}

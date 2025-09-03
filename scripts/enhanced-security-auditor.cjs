@@ -1,84 +1,89 @@
 #!/usr/bin/env node;
 
-const fs = require('fs');';const path = require('path');';';class SecurityAuditor {;
+const fs = require('fs');';const path = require('path');
+;;class SecurityAuditor {;
   constructor() {;
     this.projectRoot = process.cwd();
-    this.reportFile = path.join(this.projectRoot, 'security-audit-report.json');';  }';;
+    this.reportFile = path.join(this.projectRoot, 'security-audit-report.json');'}';;
   log(message) {;
-    console.log(`[${new Date().toISOString()}] ${message}`);`;  }
+    console.log(`[${new Date().toISOString()}] ${message}`);`}
 ;
   async checkEnvironmentVariables() {;
-    this.log('🔐 Checking environment variables');';';    const results = {;
-      "issues": [],;";      "recommendations": [],;,";};
+    this.log('🔐 Checking environment variables');
+;;    const results = {;
+      "issues": [],;";      "recommendations": [],;",};
 ;
-    const envFiles = [;
-      '.env',';      '.env.local',';      '.env.production',';      '.env.development',';    ];';;
+    const envFiles = [
+      '.env'',;      '.env.local'',;      '.env.production'',;      '.env.development''];';;
     for (const envFile of envFiles) {;
       const envPath = path.join(this.projectRoot, envFile);
       if (fs.existsSync(envPath)) {;
         try {;
-          const content = fs.readFileSync(envPath, 'utf8');';          const lines = content.split('\n');';';          for (const line of lines) {;
-            if (line.includes('=') && !line.startsWith('#')) {';              const [key, value] = line.split('=');';';              if(;);                key.toLowerCase().includes('secret') ||';                key.toLowerCase().includes('key')';              ) {;';                if (value.length < 10) {;
-                  results.issues.push(`Weak ${key} in ${envFile}`);`;                }
+          const content = fs.readFileSync(envPath, 'utf8');';          const lines = content.split('\n');
+;;          for (const line of lines) {;
+            if (line.includes('=') && !line.startsWith('#')) {';              const [key, value] = line.split('=');
+;;              if(;);                key.toLowerCase().includes('secret') ||';                key.toLowerCase().includes('key')';              ) {;';                if (value.length < 10) {;
+                  results.issues.push(`Weak ${key} in ${envFile}`);`}
               }
 ;
-              if (value === '' || value === 'undefined') {';                results.issues.push(`Empty ${key} in ${envFile}`);`;              }
+              if (value === '' || value === 'undefined') {';                results.issues.push(`Empty ${key} in ${envFile}`);`}
             }
           }
         } catch (error) {;
-          results.issues.push(`Error reading ${envFile}: ${error.message}`);`;        }
+          results.issues.push(`Error reading ${envFile}: ${error.message}`);`}
       }
     }
 ;
-    return results;,
-}
+    return results}
 ;
   async checkCodeSecurity() {;
-    this.log('🛡️ Checking code security');';';    const results = {;
-      "issues": [],;";      "recommendations": [],;,";};
+    this.log('🛡️ Checking code security');
+;;    const results = {;
+      "issues": [],;";      "recommendations": [],;",};
 ;
-    const srcDir = path.join(this.projectRoot, 'src');';    if (!fs.existsSync(srcDir)) {;';      results.issues.push('Source directory not found');';      return results;,';}
+    const srcDir = path.join(this.projectRoot, 'src');
+;    if (!fs.existsSync(srcDir)) {;;      results.issues.push('Source directory not found');
+;      return results;,}
 ;
-    const files = this.getAllFiles(srcDir, ['.ts', '.tsx', '.js', '.jsx']);';';    for (const file of files) {;
+    const files = this.getAllFiles(srcDir, ['.ts', '.tsx', '.js', '.jsx']);
+;;    for (const file of files) {;
       try {;
-        const content = fs.readFileSync(file, 'utf8');';';        // Check for dangerous patterns;
-        if (content.includes('eval(') || content.includes('Function(')) {';          results.issues.push(`Use of eval() in ${file}`);`;        }
+        const content = fs.readFileSync(file, 'utf8');
+;;        // Check for dangerous patterns;
+        if (content.includes('eval(') || content.includes('Function(')) {';          results.issues.push(`Use of eval() in ${file}`);`}
 ;
-        if(;);          content.includes('dangerouslySetInnerHTML') &&';          !content.includes('sanitize')';        ) {;';          results.issues.push(`Unsanitized dangerouslySetInnerHTML in ${file}`);`;        }
+        if(;);          content.includes('dangerouslySetInnerHTML') &&';          !content.includes('sanitize')';        ) {;';          results.issues.push(`Unsanitized dangerouslySetInnerHTML in ${file}`);`}
 ;
-        if(;);          content.includes('process.env') &&';          !content.includes('NEXT_PUBLIC_')';        ) {;';          results.issues.push(`Server-side env var in client "code": ${file}`);`;        }
+        if(;);          content.includes('process.env') &&';          !content.includes('NEXT_PUBLIC_')';        ) {;';          results.issues.push(`Server-side env var in client "code": ${file}`);`}
 ;
-        if (content.includes('innerHTML') && !content.includes('sanitize')) {';          results.issues.push(`Unsanitized innerHTML in ${file}`);`;        }
+        if (content.includes('innerHTML') && !content.includes('sanitize')) {';          results.issues.push(`Unsanitized innerHTML in ${file}`);`}
       } catch (error) {;
-        results.issues.push(`Error reading ${file}: ${error.message}`);`;      }
+        results.issues.push(`Error reading ${file}: ${error.message}`);`}
     }
 ;
-    return results;,
-}
+    return results}
 ;
   async checkDependencies() {;
-    this.log('📦 Checking dependency security');';';    const results = {;
-      "issues": [],;";      "recommendations": [],;,";};
+    this.log('📦 Checking dependency security');
+;;    const results = {;
+      "issues": [],;";      "recommendations": [],;",};
 ;
     try {;
       const packageJson = JSON.parse(;);        fs.readFileSync(path.join(this.projectRoot, 'package.json'), 'utf8')';      );';      const dependencies = {;
         ...packageJson.dependencies,;
-        ...packageJson.devDependencies,;,
-};
+        ...packageJson.devDependencies,};
 ;
       // Check for known vulnerable packages;
       const vulnerablePackages = {;
-        "lodash": '< 4.17.21',';        "axios": '< 0.21.1',';        "moment": '< 2.29.1',';      };';;
+        "lodash": '< 4.17.21'',;        "axios": '< 0.21.1'',;        "moment": '< 2.29.1'',};';;
       for (const [pkg, minVersion] of Object.entries(vulnerablePackages)) {;
         if (dependencies[pkg]) {;
-          results.issues.push(`Potentially vulnerable "package": ${pkg}`);`;          results.recommendations.push(;);            `Update ${pkg} to version ${minVersion} or higher``;          );,
-}
+          results.issues.push(`Potentially vulnerable "package": ${pkg}`);`;          results.recommendations.push(;);            `Update ${pkg} to version ${minVersion} or higher``;          )}
       }
     } catch (error) {;
-      results.issues.push(`Error reading package."json": ${error.message}`);`;    }
+      results.issues.push(`Error reading package."json": ${error.message}`);`}
 ;
-    return results;,
-}
+    return results}
 ;
   getAllFiles(dir, extensions) {;
     let files = [];
@@ -89,45 +94,41 @@ const fs = require('fs');';const path = require('path');';';class SecurityAudito
       const stat = fs.statSync(fullPath);
 ;
       if (stat.isDirectory()) {;
-        files = files.concat(this.getAllFiles(fullPath, extensions));,
-} else if (extensions.some(ext => item.endsWith(ext))) {;
-        files.push(fullPath);,
-}
+        files = files.concat(this.getAllFiles(fullPath, extensions))} else if (extensions.some(ext => item.endsWith(ext))) {;
+        files.push(fullPath)}
     }
 ;
-    return files;,
-}
+    return files}
 ;
   generateReport(results) {;
     const report = {;
-      "timestamp": new Date().toISOString(),;";      "environment": results.environment,;";      "code": results.code,;";      "dependencies": results.dependencies,;";      "summary": {;";        "overall": 'secure',';        "totalIssues":;";          results.environment.issues.length +;
+      "timestamp": new Date().toISOString(),;";      "environment": results.environment,;";      "code": results.code,;";      "dependencies": results.dependencies,;";      "summary": {;";        "overall": 'secure'',;        "totalIssues":;";          results.environment.issues.length +;
           results.code.issues.length +;
           results.dependencies.issues.length,;
-        "riskLevel": 'low',';      },;,';};
+        "riskLevel": 'low'',},;,'};
 ;
     if (report.summary.totalIssues > 0) {;
-      report.summary.overall = 'needs_attention';';      report.summary.riskLevel = 'medium';';    }';;
+      report.summary.overall = 'needs_attention';';      report.summary.riskLevel = 'medium';'}';;
     if (report.summary.totalIssues > 5) {;
-      report.summary.overall = 'vulnerable';';      report.summary.riskLevel = 'high';';    }';;
+      report.summary.overall = 'vulnerable';';      report.summary.riskLevel = 'high';'}';;
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
     this.log(`📊 Security audit report "generated": ${this.reportFile}`);`;
-    return report;,
-}
+    return report}
 ;
   async run() {;
-    this.log('🔒 Starting Security Audit');';';    try {;
+    this.log('🔒 Starting Security Audit');
+;;    try {;
       const environment = await this.checkEnvironmentVariables();
       const code = await this.checkCodeSecurity();
       const dependencies = await this.checkDependencies();
 ;
       const report = this.generateReport({;);        environment,;
         code,;
-        dependencies,;,
-});
+        dependencies,});
 ;
-      this.log('✅ Security audit completed');';      return report;,';} catch (error) {;
-      this.log(`❌ Security audit "failed": ${error.message}`);`;      throw error;,
-}
+      this.log('✅ Security audit completed');
+;      return report;,} catch (error) {;
+      this.log(`❌ Security audit "failed": ${error.message}`);`;      throw error}
   }
 }
 ;
@@ -135,5 +136,7 @@ const fs = require('fs');';const path = require('path');';';class SecurityAudito
 const auditor = new SecurityAuditor();
 auditor;
   .run();
-  .then(report => {;);    console.log('✅ Security audit completed successfully');';    process.exit(0);,';});
-  .catch(error => {;);    console.error('❌ Security audit "failed":', error.message);';    process.exit(1);,';});
+  .then(report => {;);    console.log('✅ Security audit completed successfully');
+;    process.exit(0);,});
+  .catch(error => {;);    console.error('❌ Security audit "failed":', error.message);
+;    process.exit(1);,});

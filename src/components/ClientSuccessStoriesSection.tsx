@@ -11,5 +11,4 @@ export default function ClientSuccessStoriesSection() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

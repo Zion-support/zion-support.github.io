@@ -11,5 +11,4 @@ export default function CustomerFeedbackSystem.test() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

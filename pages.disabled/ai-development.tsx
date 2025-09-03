@@ -10,8 +10,7 @@ import {
   Target,
   Today,
   Users,
-  Zap,
-} from 'lucide-react';
+  Zap } from 'lucide-react';
 
 export default function AIDevelopment() {
   return (
@@ -278,5 +277,4 @@ export default function AIDevelopment() {
         </section>
       </main>
     </>
-  );
-}
+  )}

@@ -52,8 +52,7 @@ class PerformanceMonitor {
         rss: Math.round(memoryInfo.rss / 1024 / 1024), // MB
         heapUsed: Math.round(memoryInfo.heapUsed / 1024 / 1024), // MB
         heapTotal: Math.round(memoryInfo.heapTotal / 1024 / 1024), // MB
-        external: Math.round(memoryInfo.external / 1024 / 1024) // MB;
-}
+        external: Math.round(memoryInfo.external / 1024 / 1024) // MB}
       // CPU usage
       const startUsage = process.cpuUsage()
       await this.sleep(100); // Wait 100ms
@@ -62,16 +61,14 @@ class PerformanceMonitor {
 )
       this.metrics.system.cpu = {
         user: Math.round(endUsage.user / 1000), // ms
-        system: Math.round(endUsage.system / 1000) // ms;
-}
+        system: Math.round(endUsage.system / 1000) // ms}
       // Process info
       this.metrics.system.process = {
         pid: process.pid,
         uptime: Math.round(process.uptime()),
         version: process.version,
         platform: process.platform,
-        arch: process.arch;
-}
+        arch: process.arch}
     } catch (error) {
       console.warn('⚠️  Could not collect system metrics:', error.message;
 )
@@ -88,24 +85,21 @@ class PerformanceMonitor {
         const distSize = this.getDirectorySize(distPath;
 )
 )
-        this.metrics.application.buildSize = Math.round(distSize / 1024 / 1024); // MB;
-}
+        this.metrics.application.buildSize = Math.round(distSize / 1024 / 1024); // MB}
       // Check node_modules size
       const nodeModulesPath = path.join(this.projectRoot, 'node_modules')
       if (fs.existsSync(nodeModulesPath)) {
         const nodeModulesSize = this.getDirectorySize(nodeModulesPath;
 )
 )
-        this.metrics.application.dependenciesSize = Math.round(nodeModulesSize / 1024 / 1024); // MB;
-}
+        this.metrics.application.dependenciesSize = Math.round(nodeModulesSize / 1024 / 1024); // MB}
       // Check source code size
       const srcPath = path.join(this.projectRoot, 'src')
       if (fs.existsSync(srcPath)) {
         const srcSize = this.getDirectorySize(srcPath;
 )
 )
-        this.metrics.application.sourceSize = Math.round(srcSize / 1024); // KB;
-}
+        this.metrics.application.sourceSize = Math.round(srcSize / 1024); // KB}
       // Count files
       this.metrics.application.fileCounts = {
         source: this.countFiles(srcPath, ['.ts'.tsx'.js'.jsx']),
@@ -169,14 +163,11 @@ class PerformanceMonitor {
 )
 )
         } else {
-          totalSize += stat.size;
-}
+          totalSize += stat.size}
       }
     } catch (error) {
-      // Skip directories we can't read;
-}
-    return totalSize;
-}
+      // Skip directories we can't read}
+    return totalSize}
   countFiles(dirPath, extensions) {
     let count = 0
     try {
@@ -199,10 +190,8 @@ class PerformanceMonitor {
         }
       }
     } catch (error) {
-      // Skip directories we can't read;
-}
-    return count;
-}
+      // Skip directories we can't read}
+    return count}
   async saveMetrics() {
 
     const metricsPath = path.join(this.projectRoot, 'logs'performance-metrics.json')

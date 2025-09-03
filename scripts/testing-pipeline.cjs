@@ -10,8 +10,7 @@ class TestingPipeline {
       tests: [],
       coverage: {},
       summary: { passed: 0, failed: 0, total: 0 }
-    };
-  }
+    }}
 
   async runPipeline() {
     console.log('🧪 Starting Testing Pipeline...');
@@ -23,60 +22,47 @@ class TestingPipeline {
       await this.generateCoverageReport();
       this.generateReport();
       
-      console.log('✅ Testing pipeline completed');
-    } catch (error) {
+      console.log('✅ Testing pipeline completed')} catch (error) {
       console.error('❌ Testing pipeline failed:', error.message);
-      process.exit(1);
-    }
+      process.exit(1)}
   }
 
   async runUnitTests() {
     console.log('🔬 Running unit tests...');
     try {
-      const result = execSync('npm run test:unit', { encoding: 'utf8' });
+      const result = execSync('npm run test:unit' { encoding: 'utf8' });
       this.results.tests.push({ type: 'unit', status: 'passed', output: result });
-      this.results.summary.passed++;
-    } catch (error) {
+      this.results.summary.passed++} catch (error) {
       this.results.tests.push({ type: 'unit', status: 'failed', error: error.message });
-      this.results.summary.failed++;
-    }
-    this.results.summary.total++;
-  }
+      this.results.summary.failed++}
+    this.results.summary.total++}
 
   async runIntegrationTests() {
     console.log('🔗 Running integration tests...');
     try {
-      const result = execSync('npm run test:integration', { encoding: 'utf8' });
+      const result = execSync('npm run test:integration' { encoding: 'utf8' });
       this.results.tests.push({ type: 'integration', status: 'passed', output: result });
-      this.results.summary.passed++;
-    } catch (error) {
+      this.results.summary.passed++} catch (error) {
       this.results.tests.push({ type: 'integration', status: 'failed', error: error.message });
-      this.results.summary.failed++;
-    }
-    this.results.summary.total++;
-  }
+      this.results.summary.failed++}
+    this.results.summary.total++}
 
   async runE2ETests() {
     console.log('🎭 Running E2E tests...');
     try {
-      const result = execSync('npm run test:e2e', { encoding: 'utf8' });
+      const result = execSync('npm run test:e2e' { encoding: 'utf8' });
       this.results.tests.push({ type: 'e2e', status: 'passed', output: result });
-      this.results.summary.passed++;
-    } catch (error) {
+      this.results.summary.passed++} catch (error) {
       this.results.tests.push({ type: 'e2e', status: 'failed', error: error.message });
-      this.results.summary.failed++;
-    }
-    this.results.summary.total++;
-  }
+      this.results.summary.failed++}
+    this.results.summary.total++}
 
   async generateCoverageReport() {
     console.log('📊 Generating coverage report...');
     try {
-      const result = execSync('npm run test:coverage', { encoding: 'utf8' });
-      this.results.coverage = { status: 'generated', output: result };
-    } catch (error) {
-      this.results.coverage = { status: 'failed', error: error.message };
-    }
+      const result = execSync('npm run test:coverage' { encoding: 'utf8' });
+      this.results.coverage = { status: 'generated', output: result }} catch (error) {
+      this.results.coverage = { status: 'failed', error: error.message }}
   }
 
   generateReport() {
@@ -89,8 +75,7 @@ class TestingPipeline {
     console.log(`Passed: ${this.results.summary.passed}`);
     console.log(`Failed: ${this.results.summary.failed}`);
     console.log('='.repeat(50));
-    console.log(`📄 Report saved to: ${reportPath}`);
-  }
+    console.log(`📄 Report saved to: ${reportPath}`)}
 }
 
 // Run the pipeline

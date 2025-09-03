@@ -11,5 +11,4 @@ export default function ErrorModal() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

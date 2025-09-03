@@ -1,18 +1,9 @@
 import React from 'react';
 
 type Props = {
-  children: React.ReactNode;
-};
+  children: React.ReactNode};
 
 export default function UltraFuturisticBackground({ children }: Props) {
-<<<<<<< HEAD:components/ui/UltraFuturisticBackground.tsx
-  return <>{children}</>;
-=======
-<<<<<<< HEAD:components/ui/UltraFuturisticBackground.tsx
-  return <>{children}</>;
-=======
-
-  return <>{children}</>
->>>>>>> main:components/disabled/ui/UltraFuturisticBackground.tsx
->>>>>>> main:components/disabled/ui/UltraFuturisticBackground.tsx
+:components/disabled/ui/UltraFuturisticBackground.tsx
+:components/disabled/ui/UltraFuturisticBackground.tsx
 }

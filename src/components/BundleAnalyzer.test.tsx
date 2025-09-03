@@ -11,5 +11,4 @@ export default function BundleAnalyzer.test() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

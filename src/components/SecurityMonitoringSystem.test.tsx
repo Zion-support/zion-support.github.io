@@ -11,5 +11,4 @@ export default function SecurityMonitoringSystem.test() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

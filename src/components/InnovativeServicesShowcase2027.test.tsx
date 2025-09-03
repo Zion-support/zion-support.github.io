@@ -11,5 +11,4 @@ export default function InnovativeServicesShowcase2027.test() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

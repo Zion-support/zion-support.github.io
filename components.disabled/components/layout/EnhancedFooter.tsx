@@ -3,33 +3,28 @@ import React from 'react';
 interface ApiResponse<T = unknown> {
   data: T;
   status: number;
-  message?: string;
-}
+  message?: string}
 
 interface User {
   id: string;
   email: string;
   name: string;
-  role: 'admin' | 'user' | 'guest';
-}
+  role: 'admin' | 'user' | 'guest'}
 
 interface Service {
   id: string;
   name: string;
   description: string;
   price: number;
-  category: string;
-}
+  category: string}
 
 interface FormData {
-  [key: string]: string | number | boolean | File;
-}
+  [key: string]: string | number | boolean | File}
 
 interface ComponentProps {
   className?: string;
   children?: React.ReactNode;
-  [key: string]: unknown;
-}
+  [key: string]: unknown}
 
 import Link from 'next/link';
 import {
@@ -42,8 +37,7 @@ import {
   MapPin,
   Phone,
   Twitter,
-  User,
-} from 'lucide-react';
+  User } from 'lucide-react';
 
 const EnhancedFooter: React.FC = () => {
   return (
@@ -173,7 +167,6 @@ const EnhancedFooter: React.FC = () => {
         </div>
       </div>
     </footer>
-  );
-};
+  )};
 
 export default EnhancedFooter;

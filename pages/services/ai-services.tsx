@@ -15,8 +15,7 @@ const AIServicesPage: NextPage = () => {
     }, {
       icon: <Zap className="w-8 h-8" />,
       title: 'Rapid Implementation', description: 'Quick deployment of AI solutions with proven methodologies and best practices.'
-    },
-    {
+    }, {
       icon: <Users className="w-8 h-8" />, title: 'Expert Team',
       description: 'AI specialists with deep expertise in machine learning and data science.'
     }, {
@@ -378,7 +377,6 @@ const AIServicesPage: NextPage = () => {
         </div>
       </section>
     </MainLayout>
-  );
-};
+  )};
 
 export default AIServicesPage;

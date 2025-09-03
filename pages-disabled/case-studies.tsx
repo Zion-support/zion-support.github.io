@@ -15,17 +15,14 @@ const CaseStudies: NextPage = () => {
       challenge: 'Manual patient data processing and delayed diagnosis workflows',
       solution: 'AI-powered diagnostic platform with automated data processing',
       results: [
-        { metric: '85%', description: 'Reduction in diagnosis time' },
-        { metric: '60%', description: 'Improvement in accuracy' },
-        { metric: '40%', description: 'Cost savings' }
+        { metric: '85%', description: 'Reduction in diagnosis time' }, { metric: '60%', description: 'Improvement in accuracy' }, { metric: '40%', description: 'Cost savings' }
       ],
       technologies: ['AI/ML', 'Cloud Computing', 'Data Analytics'],
       duration: '6 months',
       team: '12 specialists',
       image: '/case-studies/healthcare-ai.jpg',
       featured: true
-    },
-    {
+    }, {
       id: 2,
       title: 'E-commerce Platform Modernization',
       client: 'Retail Chain',
@@ -33,17 +30,14 @@ const CaseStudies: NextPage = () => {
       challenge: 'Legacy system limitations and poor customer experience',
       solution: 'Modern e-commerce platform with AI recommendations',
       results: [
-        { metric: '150%', description: 'Increase in online sales' },
-        { metric: '70%', description: 'Faster page load times' },
-        { metric: '90%', description: 'Customer satisfaction improvement' }
+        { metric: '150%', description: 'Increase in online sales' }, { metric: '70%', description: 'Faster page load times' }, { metric: '90%', description: 'Customer satisfaction improvement' }
       ],
       technologies: ['React', 'Node.js', 'AI/ML', 'Cloud'],
       duration: '8 months',
       team: '15 specialists',
       image: '/case-studies/ecommerce.jpg',
       featured: false
-    },
-    {
+    }, {
       id: 3,
       title: 'Financial Services Digital Transformation',
       client: 'Regional Bank',
@@ -51,17 +45,14 @@ const CaseStudies: NextPage = () => {
       challenge: 'Outdated banking systems and compliance requirements',
       solution: 'Digital banking platform with advanced security',
       results: [
-        { metric: '200%', description: 'Increase in digital transactions' },
-        { metric: '50%', description: 'Reduction in operational costs' },
-        { metric: '100%', description: 'Compliance achievement' }
+        { metric: '200%', description: 'Increase in digital transactions' }, { metric: '50%', description: 'Reduction in operational costs' }, { metric: '100%', description: 'Compliance achievement' }
       ],
       technologies: ['Blockchain', 'Security', 'Cloud', 'Mobile'],
       duration: '10 months',
       team: '20 specialists',
       image: '/case-studies/finance.jpg',
       featured: false
-    },
-    {
+    }, {
       id: 4,
       title: 'Manufacturing IoT Integration',
       client: 'Industrial Manufacturer',
@@ -69,17 +60,14 @@ const CaseStudies: NextPage = () => {
       challenge: 'Manual production monitoring and inefficiencies',
       solution: 'IoT-enabled smart manufacturing system',
       results: [
-        { metric: '75%', description: 'Improvement in production efficiency' },
-        { metric: '80%', description: 'Reduction in downtime' },
-        { metric: '30%', description: 'Energy savings' }
+        { metric: '75%', description: 'Improvement in production efficiency' }, { metric: '80%', description: 'Reduction in downtime' }, { metric: '30%', description: 'Energy savings' }
       ],
       technologies: ['IoT', 'AI/ML', 'Cloud', 'Analytics'],
       duration: '7 months',
       team: '18 specialists',
       image: '/case-studies/manufacturing.jpg',
       featured: false
-    },
-    {
+    }, {
       id: 5,
       title: 'Education Platform Development',
       client: 'University System',
@@ -87,17 +75,14 @@ const CaseStudies: NextPage = () => {
       challenge: 'Fragmented learning management systems',
       solution: 'Unified AI-powered learning platform',
       results: [
-        { metric: '120%', description: 'Increase in student engagement' },
-        { metric: '65%', description: 'Improvement in learning outcomes' },
-        { metric: '45%', description: 'Reduction in administrative workload' }
+        { metric: '120%', description: 'Increase in student engagement' }, { metric: '65%', description: 'Improvement in learning outcomes' }, { metric: '45%', description: 'Reduction in administrative workload' }
       ],
       technologies: ['AI/ML', 'Cloud', 'Mobile', 'Analytics'],
       duration: '9 months',
       team: '14 specialists',
       image: '/case-studies/education.jpg',
       featured: false
-    },
-    {
+    }, {
       id: 6,
       title: 'Government Services Digitalization',
       client: 'City Government',
@@ -105,9 +90,7 @@ const CaseStudies: NextPage = () => {
       challenge: 'Paper-based processes and citizen service delays',
       solution: 'Digital citizen services platform',
       results: [
-        { metric: '90%', description: 'Reduction in processing time' },
-        { metric: '85%', description: 'Citizen satisfaction improvement' },
-        { metric: '60%', description: 'Cost reduction' }
+        { metric: '90%', description: 'Reduction in processing time' }, { metric: '85%', description: 'Citizen satisfaction improvement' }, { metric: '60%', description: 'Cost reduction' }
       ],
       technologies: ['Cloud', 'Security', 'Mobile', 'Analytics'],
       duration: '12 months',
@@ -121,11 +104,7 @@ const CaseStudies: NextPage = () => {
   const regularCases = caseStudies.filter(study => !study.featured);
 
   const stats = [
-    { number: '200+', label: 'Projects Completed', icon: TrendingUp },
-    { number: '95%', label: 'Client Satisfaction', icon: Award },
-    { number: '50+', label: 'Industries Served', icon: Target },
-    { number: '24/7', label: 'Support Available', icon: Clock },
-  ];
+    { number: '200+', label: 'Projects Completed', icon: TrendingUp }, { number: '95%', label: 'Client Satisfaction', icon: Award }, { number: '50+', label: 'Industries Served', icon: Target }, { number: '24/7', label: 'Support Available', icon: Clock } ];
 
   return (
     <MainLayout
@@ -168,8 +147,7 @@ const CaseStudies: NextPage = () => {
           </div>
         </section>
 
-        {/* Featured Case Study */}
-        {featuredCase && (
+        {/* Featured Case Study */}, {featuredCase && (
           <section className="py-12 bg-white">
             <div className="container mx-auto px-4">
               <div className="mb-8">
@@ -236,9 +214,7 @@ const CaseStudies: NextPage = () => {
               </motion.div>
             </div>
           </section>
-        )}
-
-        {/* Case Studies Grid */}
+        )}, {/* Case Studies Grid */}
         <section className="py-12">
           <div className="container mx-auto px-4">
             <div className="mb-8">
@@ -338,7 +314,6 @@ const CaseStudies: NextPage = () => {
         </section>
       </div>
     </MainLayout>
-  );
-};
+  )};
 
 export default CaseStudies;

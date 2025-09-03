@@ -8,48 +8,23 @@ export function SiteFooter() {
     {
       title: 'Company',
       links: [
-        { label: 'Home', href: '/' },
-        { label: 'About', href: '/about' },
-        { label: 'Partners', href: '/partners' },
-        { label: 'Careers', href: '/careers' },
-        { label: 'Contact', href: '/contact' },
-      ]
-    },
-    {
+        { label: 'Home', href: '/' }, { label: 'About', href: '/about' }, { label: 'Partners', href: '/partners' }, { label: 'Careers', href: '/careers' }, { label: 'Contact', href: '/contact' } ]
+    }, {
       title: 'Services',
       links: [
-        { label: 'All Services', href: '/services' },
-        { label: 'AI Services', href: '/services/ai-services' },
-        { label: 'IT Services', href: '/services/it-services' },
-        { label: 'Micro SaaS', href: '/services/micro-saas' },
-        { label: 'Pricing', href: '/pricing' },
-      ]
-    },
-    {
+        { label: 'All Services', href: '/services' }, { label: 'AI Services', href: '/services/ai-services' }, { label: 'IT Services', href: '/services/it-services' }, { label: 'Micro SaaS', href: '/services/micro-saas' }, { label: 'Pricing', href: '/pricing' } ]
+    }, {
       title: 'Resources',
       links: [
-        { label: 'Blog', href: '/blog' },
-        { label: 'Case Studies', href: '/case-studies' },
-        { label: 'White Papers', href: '/white-papers' },
-        { label: 'Webinars', href: '/webinars' },
-        { label: 'Documentation', href: '/documentation' },
-      ]
-    },
-    {
+        { label: 'Blog', href: '/blog' }, { label: 'Case Studies', href: '/case-studies' }, { label: 'White Papers', href: '/white-papers' }, { label: 'Webinars', href: '/webinars' }, { label: 'Documentation', href: '/documentation' } ]
+    }, {
       title: 'Legal',
       links: [
-        { label: 'Privacy Policy', href: '/privacy' },
-        { label: 'Terms of Service', href: '/terms' },
-        { label: 'Sitemap', href: '/sitemap' },
-      ]
-    },
-  ];
+        { label: 'Privacy Policy', href: '/privacy' }, { label: 'Terms of Service', href: '/terms' }, { label: 'Sitemap', href: '/sitemap' } ]
+    } ];
 
   const social = [
-    { label: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group' },
-    { label: 'Twitter', href: 'https://twitter.com/ziontechgroup' },
-    { label: 'GitHub', href: 'https://github.com/ziontechgroup' },
-  ];
+    { label: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group' }, { label: 'Twitter', href: 'https://twitter.com/ziontechgroup' }, { label: 'GitHub', href: 'https://github.com/ziontechgroup' } ];
 
   return (
     <footer className="bg-slate-900 text-white">
@@ -80,8 +55,7 @@ export function SiteFooter() {
             </div>
           </div>
 
-          {/* Navigation Sections */}
-          {navSections.map((section) => (
+          {/* Navigation Sections */}, {navSections.map((section) => (
             <div key={section.title}>
               <h3 className="text-lg font-semibold mb-4">{section.title}</h3>
               <ul className="space-y-3">
@@ -123,7 +97,6 @@ export function SiteFooter() {
         </div>
       </div>
     </footer>
-  );
-}
+  )}
 
 export default SiteFooter;

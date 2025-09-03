@@ -11,5 +11,4 @@ export default function AccessibilityEnhancerBASE15796() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

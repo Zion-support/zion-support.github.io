@@ -11,5 +11,4 @@ export default function EnhancedInnovativeServicesShowcase.test() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

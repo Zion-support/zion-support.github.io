@@ -297,5 +297,4 @@ export default function AICybersecurity() {
         </section>
       </main>
     </>
-  );
-}
+  )}

@@ -11,5 +11,4 @@ export default function AdvancedReportingDashboard.test() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

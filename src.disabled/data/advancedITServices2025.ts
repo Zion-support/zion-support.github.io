@@ -20,16 +20,4 @@ import: React from;
    innovationLevel: string;
    contactInfo: { phone: string;
    email: string;
-<<<<<<< HEAD
-   website: string;
-   address: strin,g} technicalSpecs: { technology: string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[,]} competitors: string[] marketSize: string: growthRate: string: rating: number: reviews: number: customers: numbe,r}  export: const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = ['';',;
-=======
-   websit,
-    e: string;
-   addres,
-    s: string} technicalSpecs: { technology: string[] integrations: string[] apiEndpoints: number uptim,
-    e: string securit,
-    y: string[]} competitors: string[] marketSize: string growthRate: string rating: number review,
-    s: number customer,
-    s: number}  export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = ['';
->>>>>>> main
+

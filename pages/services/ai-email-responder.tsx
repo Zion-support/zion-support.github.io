@@ -8,28 +8,23 @@ const AIEmailResponder: NextPage = () => {
       title: 'Smart Email Classification',
       description: 'Automatically categorize emails by priority, type, and urgency using AI.',
       icon: '📧'
-    },
-    {
+    }, {
       title: 'Auto-Response Generation',
       description: 'Generate contextual, personalized responses for common inquiries.',
       icon: '🤖'
-    },
-    {
+    }, {
       title: 'Sentiment Analysis',
       description: 'Analyze email sentiment to prioritize urgent or negative messages.',
       icon: '😊'
-    },
-    {
+    }, {
       title: 'Multi-Language Support',
       description: 'Process and respond to emails in multiple languages automatically.',
       icon: '🌍'
-    },
-    {
+    }, {
       title: 'Integration Ready',
       description: 'Seamlessly integrate with Gmail, Outlook, and other email platforms.',
       icon: '🔗'
-    },
-    {
+    }, {
       title: 'Learning Capabilities',
       description: 'Continuously learns from your responses to improve accuracy over time.',
       icon: '🧠'
@@ -59,8 +54,7 @@ const AIEmailResponder: NextPage = () => {
         'Basic analytics'
       ],
       popular: false
-    },
-    {
+    }, {
       name: 'Professional',
       price: '$199',
       period: '/month',
@@ -75,8 +69,7 @@ const AIEmailResponder: NextPage = () => {
         'Custom templates'
       ],
       popular: true
-    },
-    {
+    }, {
       name: 'Enterprise',
       price: '$499',
       period: '/month',
@@ -257,7 +250,6 @@ const AIEmailResponder: NextPage = () => {
         </div>
       </section>
     </Layout>
-  );
-};
+  )};
 
 export default AIEmailResponder;

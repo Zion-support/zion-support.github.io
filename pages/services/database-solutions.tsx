@@ -28,28 +28,23 @@ export default function DatabaseSolutions() {
       icon: Database,
       title: 'Database Design & Architecture',
       description: 'Custom database solutions designed for optimal performance and scalability'
-    },
-    {
+    }, {
       icon: Server,
       title: 'Database Administration',
       description: '24/7 monitoring, maintenance, and optimization of your database systems'
-    },
-    {
+    }, {
       icon: Shield,
       title: 'Data Security & Backup',
       description: 'Enterprise-grade security with automated backup and disaster recovery'
-    },
-    {
+    }, {
       icon: Zap,
       title: 'Performance Optimization',
       description: 'Advanced tuning and optimization for maximum database performance'
-    },
-    {
+    }, {
       icon: Cloud,
       title: 'Cloud Database Migration',
       description: 'Seamless migration to cloud-based database solutions'
-    },
-    {
+    }, {
       icon: BarChart3,
       title: 'Data Analytics & Reporting',
       description: 'Transform your data into actionable insights with advanced analytics'
@@ -61,18 +56,15 @@ export default function DatabaseSolutions() {
       name: 'SQL Databases',
       description: 'MySQL, PostgreSQL, SQL Server, Oracle',
       icon: Database
-    },
-    {
+    }, {
       name: 'NoSQL Databases',
       description: 'MongoDB, Cassandra, Redis, DynamoDB',
       icon: HardDrive
-    },
-    {
+    }, {
       name: 'Cloud Databases',
       description: 'AWS RDS, Azure SQL, Google Cloud SQL',
       icon: Cloud
-    },
-    {
+    }, {
       name: 'In-Memory Databases',
       description: 'Redis, Memcached, Hazelcast',
       icon: Cpu
@@ -271,5 +263,4 @@ export default function DatabaseSolutions() {
 
       <Footer />
     </ErrorBoundary>
-  );
-}
+  )}

@@ -9,15 +9,13 @@ app.get('/health', (req, res) => {
     uptime: process.uptime(),
     memory: process.memoryUsage(),
     version: process.env.npm_package_version || '1.0.0'
-  });
-});
+  })});
 
 app.get('/ready', (req, res) => {
   // Add readiness checks here
   res.status(200).json({
     status: 'ready',
     timestamp: new Date().toISOString()
-  });
-});
+  })});
 
 module.exports = app;

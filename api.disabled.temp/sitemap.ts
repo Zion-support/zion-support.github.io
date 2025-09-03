@@ -35,8 +35,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     '/auth/reset-password
   ',
     '/auth/verify
-  ',
-  ];
+  ' ];
 
   const blogPages = [
     '/blog/5g-technology-and-its-impact-on-iot-chat
@@ -68,8 +67,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     '/blog/sustainable-technology-green-computing-solutions-chat
   ',
     '/blog/the-rise-of-edge-computing-in-iot-applications-chat
-  ',
-  ];
+  ' ];
 
   const servicePages = [
     '/services/ai-model-development-chat
@@ -101,8 +99,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     '/services/ui-ux-design-chat
   ',
     '/services/web-application-development-chat
-  ',
-  ];
+  ' ];
 
   const categoryPages = [
     '/category/ai-consulting-chat
@@ -134,8 +131,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     '/category/ui-ux-design-chat
   ',
     '/category/web-development-chat
-  ',
-  ];
+  ' ];
 
   const chatContentPages = [
     '/chat-content/ai-powered-business-solutions-discussion
@@ -157,16 +153,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     '/chat-content/sustainable-technology-practices
   ',
     '/chat-content/technology-implementation-strategies
-  ',
-  ];
+  ' ];
 
   const allPages = [
     ...staticPages,
     ...blogPages,
     ...servicePages,
     ...categoryPages,
-    ...chatContentPages,
-  ];
+    ...chatContentPages ];
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">
@@ -189,8 +183,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       <lastmod>${new Date().toISOString()}</lastmod>
       <changefreq>${changefreq}</changefreq>
       <priority>${priority}</priority>
-    </url>`;
-    })
+    </url>`})
     .join('')}
 </urlset>`;
 
@@ -200,5 +193,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader(
   'Cache-Control',
   'public, max-age=86400, s-maxage=86400');
-  res.status(200).send(sitemap);
-}
+  res.status(200).send(sitemap)}

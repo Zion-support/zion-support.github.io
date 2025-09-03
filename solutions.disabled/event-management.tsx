@@ -1,32 +1,13 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD:pages/solutions/event-management.tsx
-import SEO from '../../src/components/SEO';
-import { Card } from '../../src/components/ui/Card';
-import { Button } from '../../src/components/ui/Button';
-import { Badge } from '../../src/components/ui/Badge';
-=======
-<<<<<<< HEAD:solutions.disabled/event-management.tsx
-// import SEO from '../../components/SEO';
-=======
-<<<<<<< HEAD
-import SEOHead from '../../components/SEOHead';
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> main
->>>>>>> main:pages/solutions/event-management.tsx
+:pages/solutions/event-management.tsx
 import { Card } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
->>>>>>> main
+
 import { Badge } from '../../components/ui/Badge';
-<<<<<<< HEAD
-=======
-import { Button } from '../../components/ui/Button';
-import { Card } from '../../components/ui/Card';
->>>>>>> main:solutions.disabled/event-management.tsx
+:solutions.disabled/event-management.tsx
 import {
   Calendar,
   ArrowRight,
@@ -37,104 +18,52 @@ import {
   Clock,
   Globe,
   Mail,
-  Smartphone,
-} from 'lucide-react';
+  Smartphone } from 'lucide-react';
 
->>>>>>> main
+
 export default function EventManagement() {
   const features = [
   {
       icon: Users,
       title: 'Event Registration',
       description:'
-        'Streamlined registration process with custom forms and automated confirmations.',
-    },
-    {
+        'Streamlined registration process with custom forms and automated confirmations.' }, {
       icon: Ticket,
       title: 'Ticketing System',
       description:'
-        'Sell tickets online with secure payment processing and digital ticket delivery.',
-    },
-    {
+        'Sell tickets online with secure payment processing and digital ticket delivery.' }, {
       icon: Users,
       title: 'Attendee Management',
       description:'
-        'Track attendees, manage check-ins, and handle special requirements.',
-    },
-    {
+        'Track attendees, manage check-ins, and handle special requirements.' }, {
       icon: BarChart3,
       title: 'Analytics & Reporting',
       description:'
-        'Comprehensive analytics on attendance, engagement, and event performance.',
-    },
-    {
+        'Comprehensive analytics on attendance, engagement, and event performance.' }, {
       icon: Globe,
       title: 'Multi-platform Support',
       description:'
-        'Manage events across web, mobile, and social media platforms.',
-    },
-    {
+        'Manage events across web, mobile, and social media platforms.' }, {
       icon: Mail,
       title: 'Communication Tools',
       description:'
-        'Send updates, reminders, and follow-ups to attendees automatically.',
-    },
-  ];
+        'Send updates, reminders, and follow-ups to attendees automatically.' } ];
 
   return (
     <>
-<<<<<<< HEAD:pages/solutions/event-management.tsx
-      <SEO'
-        title="Event Management Platform - Zion Tech Group""
-        description="Comprehensive event management platform with registration, ticketing, and attendee management. Streamline your events.""
-=======
-<<<<<<< HEAD
-      <SEOHead
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      <SEO
->>>>>>> main
+
         title="Event Management Platform - Zion Tech Group"
         description="Comprehensive event management platform with registration, ticketing, and attendee management. Streamline your events."
->>>>>>> main:solutions.disabled/event-management.tsx
+:solutions.disabled/event-management.tsx
         keywords="event management, event registration, ticketing, attendee management, event planning"
       />
-=======
->>>>>>> main
->>>>>>> main
+
+
       <Head>
         <title>Event Management Platform - Zion Tech Group</title>
       </Head>
 
-<<<<<<< HEAD:pages/solutions/event-management.tsx
-      {/* Hero Section */}"
-      <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">"
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 l,
-    g:px-8">"
-          <div className="text-center">"
-            <Badge className="mb-4 bg-blue-500 text-white">"
-              <Calendar className="w-4 h-4 mr-2" />
-              Event Management
-            </Badge>"
-            <h1 className="text-4xl m,
-    d:text-6xl font-bold mb-6">
-              Event Management"
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">"
-=======
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
-          <div className="text-center">
-            <div className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium"
-              <Calendar className="w-4 h-4 mr-2" />
-              Event Management
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Event Management
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
->>>>>>> main:solutions.disabled/event-management.tsx
+:solutions.disabled/event-management.tsx
                 {' '}
                 Platform
               </span>
@@ -233,6 +162,5 @@ export default function EventManagement() {
         </div>
       </section>
     </>
-  );
-}
+  )}
 "

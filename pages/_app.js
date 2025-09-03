@@ -7,7 +7,6 @@ function MyApp({ Component, pageProps }) {
     <HelmetProvider>
       <Component {...pageProps} />
     </HelmetProvider>
-  );
-}
+  )}
 
 export default MyApp;

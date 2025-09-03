@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';""
-import { SEO } from '../../components/SEO';""
-=======
-import React  from 'react
-import { SEO }  from ';../../components/SEO';
->>>>>>> main
+
 import { motion } from 'framer-motion';
 import { 
   BarChart3, TrendingUp, 
@@ -25,193 +19,20 @@ import {
 
 const AIBusinessIntelligence: React.FC = () => {
   const features = [
-<<<<<<< HEAD
-    {
-      icon: BarChart3, ""
-      title: 'Real-Time Dashboards',""
-      description: 'Interactive dashboards with live data updates and customizable widgets', ""
-=======
-  {
-      icon: BarChart3,"
-      title: 'Real-Time Dashboards,
-      description: 'Interactive dashboards with live data updates and customizable widgets,
->>>>>>> main
-      color: 'from-blue-500 to-cyan-500',
-}, {
-      icon: Brain,""
+
+      color: 'from-blue-500 to-cyan-500' }, {
+      icon: Brain","
       title: 'AI-Powered Insights', ""
-      description: 'Machine learning algorithms that identify trends and predict future outcomes',""
-      color: 'from-green-500 to-emerald-500', },
-    {
-<<<<<<< HEAD
-      icon: Database, ""
-      title: 'Data Integration',""
-      description: 'Connect to 100+ data sources including CRM, ERP, and cloud platforms', ""
-=======
-      icon: Brain,"
-      title: 'AI-Powered Insights,
-      description: 'Machine learning algorithms that identify trends and predict future outcomes,
-      color: 'from-green-500 to-emerald-500',
-},
-    {
-      icon: Database,"
-      title: 'Data Integration,
-      description: 'Connect to 100+ data sources including CRM, ERP, and cloud platforms,
->>>>>>> main
-      color: 'from-purple-500 to-pink-500',
-}, {
-      icon: Zap,""
+      description: 'Machine learning algorithms that identify trends and predict future outcomes'","
+      color: 'from-green-500 to-emerald-500' }, {
+
+      color: 'from-purple-500 to-pink-500' }, {
+      icon: Zap","
       title: 'Automated Reporting', ""
-      description: 'Generate and distribute reports automatically with AI-driven insights',""
-      color: 'from-yellow-500 to-orange-500', },
-    {
-<<<<<<< HEAD
-      icon: Shield, ""
-      title: 'Enterprise Security',""
-      description: 'Bank-level security with role-based access and data encryption', ""
-      color: 'from-red-500 to-pink-500',
-}, {
-      icon: Globe,""
-      title: 'Multi-Platform Access', ""
-      description: 'Access your data from anywhere with web, mobile, and API access',""
-      color: 'from-indigo-500 to-blue-500', }
-  ];
+      description: 'Generate and distribute reports automatically with AI-driven insights'","
+      color: 'from-yellow-500 to-orange-500' }, {
 
-  const analyticsTypes = [
-    {""
-      title: 'Sales Analytics', ""
-      description: 'Track sales performance, pipeline health, and revenue forecasting',
-      icon: TrendingUp, ""
-      benefits: ['Revenue tracking', 'Pipeline analysis', 'Forecasting', 'Performance metrics'], ""
-      pricing: '$79/month',""
-      color: 'from-blue-500 to-cyan-500', },
-    {""
-      title: 'Marketing Analytics', ""
-      description: 'Measure campaign effectiveness and customer acquisition costs',
-      icon: Target, ""
-      benefits: ['Campaign ROI', 'Customer journey', 'Attribution modeling', 'A/B testing'], ""
-      pricing: '$69/month',""
-      color: 'from-green-500 to-emerald-500', },
-    {""
-      title: 'Financial Analytics', ""
-      description: 'Monitor cash flow, profitability, and financial health indicators',
-      icon: PieChart, ""
-      benefits: ['Cash flow analysis', 'Profit margins', 'Budget tracking', 'Financial forecasting'], ""
-      pricing: '$89/month',""
-      color: 'from-purple-500 to-pink-500', },
-    {""
-      title: 'Operational Analytics', ""
-      description: 'Optimize operations with efficiency metrics and process insights',
-      icon: Activity, ""
-      benefits: ['Process optimization', 'Resource utilization', 'Performance monitoring', 'Efficiency metrics'], ""
-      pricing: '$99/month',""
-      color: 'from-yellow-500 to-orange-500', }
-  ];
-
-  const benefits = [""
-    'Make data-driven decisions', ""
-    'Increase revenue by 25%',""
-    'Reduce reporting time by 80%', ""
-    'Identify growth opportunities',""
-    'Predict market trends', ""
-    'Optimize operations',""
-    'Improve customer insights', ""
-    'Real-time monitoring',;
-];
-
-  const dataSources = [""
-    'Salesforce', ""
-    'HubSpot',""
-    'Google Analytics', ""
-    'QuickBooks',""
-    'Shopify', ""
-    'Stripe',""
-    'Mailchimp', ""
-    'Slack',""
-    'Microsoft Dynamics', ""
-    'SAP',""
-    'Oracle', ""
-=======
-      icon: Zap,"
-      title: 'Automated Reporting,
-      description: 'Generate and distribute reports automatically with AI-driven insights,
-      color: 'from-yellow-500 to-orange-500',
-},
-    {
-      icon: Shield,"
-      title: 'Enterprise Security,
-      description: 'Bank-level security with role-based access and data encryption,
-      color: 'from-red-500 to-pink-500',
-},
-    {
-      icon: Globe,"
-      title: 'Multi-Platform Access,
-      description: 'Access your data from anywhere with web, mobile, and API access,
-      color: 'from-indigo-500 to-blue-500',
-}
-  ];
-
-  const analyticsTypes = [
-  {"
-      title: 'Sales Analytics,
-      description: 'Track sales performance, pipeline health, and revenue forecasting',
-      icon: TrendingUp,"
-      benefits: ['Revenue tracking,Pipeline analysis,Forecasting,Performance metrics'],"
-      pricing: '$79/month,
-      color: 'from-blue-500 to-cyan-500',
-},
-    {"
-      title: 'Marketing Analytics,
-      description: 'Measure campaign effectiveness and customer acquisition costs',
-      icon: Target,"
-      benefits: ['Campaign ROI,Customer journey,Attribution modeling,A/B testing'],"
-      pricing: '$69/month,
-      color: 'from-green-500 to-emerald-500',
-},
-    {"
-      title: 'Financial Analytics,
-      description: 'Monitor cash flow, profitability, and financial health indicators',
-      icon: PieChart,"
-      benefits: ['Cash flow analysis,Profit margins,Budget tracking,Financial forecasting'],"
-      pricing: '$89/month,
-      color: 'from-purple-500 to-pink-500',
-},
-    {"
-      title: 'Operational Analytics,
-      description: 'Optimize operations with efficiency metrics and process insights',
-      icon: Activity,"
-      benefits: ['Process optimization,Resource utilization,Performance monitoring,Efficiency metrics'],"
-      pricing: '$99/month,
-      color: 'from-yellow-500 to-orange-500',
-}
-  ];
-
-  const benefits = ["
-    'Make data-driven decisions,
-    'Increase revenue by 25%,
-    'Reduce reporting time by 80%,
-    'Identify growth opportunities,
-    'Predict market trends,
-    'Optimize operations,
-    'Improve customer insights,
-    'Real-time monitoring',;
-];
-
-  const dataSources = ["
-    'Salesforce,
-    'HubSpot,
-    'Google Analytics,
-    'QuickBooks,
-    'Shopify,
-    'Stripe,
-    'Mailchimp,
-    'Slack,
-    'Microsoft Dynamics,
-    'SAP,
-    'Oracle,
->>>>>>> main
-    'MySQL',;
-];
+    'MySQL'];
 
   return (""
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -555,6 +376,6 @@ const AIBusinessIntelligence: React.FC = () => {
         </div>
       </section>
     </div>
-  );, };
+  )};
 
 export default AIBusinessIntelligence;"`"

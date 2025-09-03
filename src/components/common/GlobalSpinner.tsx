@@ -11,5 +11,4 @@ export default function GlobalSpinner() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

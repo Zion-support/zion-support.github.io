@@ -11,5 +11,4 @@ export default function AppMinimal() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

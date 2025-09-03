@@ -11,5 +11,4 @@ export default function AdvancedAnalytics.test() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

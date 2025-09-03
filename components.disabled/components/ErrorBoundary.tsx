@@ -1,44 +1,31 @@
-<<<<<<< HEAD
-'use client';
-'';
-'';
-=======
-'use client'
-''
->>>>>>> main
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+
+import React { Component, ErrorInfo, ReactNode } from 'react';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
-}
+  onError?: (error: Error, errorInfo: ErrorInfo) => void}
 
 interface State {
   hasError: boolean;
   error: Error | null;
-  errorInfo: ErrorInfo | null;
-}
+  errorInfo: ErrorInfo | null}
 
 export class ErrorBoundary extends Component<Props, State> {
   public state: State = {
-    hasError: false,
-  };
+    hasError: false };
 
   constructor(props: Props) {
     super(props);
-    this.state = { hasError: false, error: null, errorInfo: null };
-  }
+    this.state = { hasError: false, error: null, errorInfo: null }}
 
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('ErrorBoundary caught an error:', error, errorInfo);
 
     // Log error to monitoring service
     if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event,exception', {
+      window.gtag('event,exception' {
         description: error.message,
-        fatal: false,
-      });
-    }
+        fatal: false })}
   }
 
   render() {
@@ -82,9 +69,7 @@ export class ErrorBoundary extends Component<Props, State> {
             </div>
           </div>
         )
-      );
-    }
+      )}
 
-    return this.props.children;
-  }
+    return this.props.children}
 }

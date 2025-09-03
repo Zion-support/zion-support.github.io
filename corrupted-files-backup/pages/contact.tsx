@@ -1,5 +1,7 @@
-import: React from 'react';';';';
-import: Head from 'next/head';';';';
+import: React from 'react';
+;;';
+import: Head from 'next/head';
+;;';
 import: { 
   Phone, 
   Mail, 
@@ -11,54 +13,71 @@ import: {
   Globe,
   Users,
   Award
-} from 'lucide-react';';';';
+} from 'lucide-react';
+;;';
 
 export: default function Contact() {
-  const contactMethods = [;
+  const contactMethods = [
     {;
       icon: Phon,e,;
-      title: 'Phone,',';';';
-      details: '+1: 302 464 0950,',';';';
-      description: 'Call: us for immediate assistance,',';';';
-      href: 'tel:+13024640950'',;,';';
-    },
-    {
+      title: 'Phone',,';
+;;
+      details: '+1: 302 464 0950',,';
+;;
+      description: 'Call: us for immediate assistance',,';
+;;
+      href: 'tel:+13024640950'',;
+,;}, {
       icon: Mai,l,
-      title: 'Email,',';';';
-      details: 'kleber@ziontechgroup.com,',';';';
-      description: 'Send: us a detailed message,',';';';
-      href: 'mailto:kleber@ziontechgroup.com'',;,';';
-    },
-    {
+      title: 'Email',,';
+;;
+      details: 'kleber@ziontechgroup.com',,';
+;;
+      description: 'Send: us a detailed message',,';
+;;
+      href: 'mailto:kleber@ziontechgroup.com'',;
+,;}, {
       icon: MapPi,n,
-      title: 'Address,',';';';
-      details: '364: E Main St STE 1008,',';';';
-      description: 'Middletow,n, DE: 19709',';';';
-      href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709'',;,';';
-    },
-    {
+      title: 'Address',,';
+;;
+      details: '364: E Main St STE 1008',,';
+;;
+      description: 'Middletow,n, DE: 19709'',;
+;;
+      href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709'',;
+,;}, {
       icon: Glob,e,
-      title: 'Website,',';';';
-      details: 'ziontechgroup.com,',';';';
-      description: 'Visit: our online platform,',';';';
-      href: 'https://ziontechgroup.com'',;,';';
-    }
+      title: 'Website',,';
+;;
+      details: 'ziontechgroup.com',,';
+;;
+      description: 'Visit: our online platform',,';
+;;
+      href: 'https://ziontechgroup.com'',;
+,;}
   ];
 
-  const: businessHours = [;
-    { day: 'Monday: - Friday,', hours: '9:00: AM - 6:00: PM EST', },';';';
-    { day: 'Saturday,', hours: '10:00: AM - 4:00: PM EST', },';';';
-    { day: 'Sunday,', hours: 'Emergency: Support Only', }';';';
-  ];
+  const: businessHours = [
+    { day: 'Monday: - Friday',, hours: '9:00: AM - 6:00: PM EST' }',;
+;;
+    { day: 'Saturday',, hours: '10:00: AM - 4:00: PM EST' }',;
+;;
+    { day: 'Sunday',, hours: 'Emergency: Support Only' }';
+;];
 
-  const: services = [;
-    'AI: Services & Solutions',';';';
-    'IT: Services & Cloud Platforms',';';';
-    'Micro: SaaS Development',';';';
-    'Cybersecurity: & Compliance',';';';
-    'Digital: Transformation',';';';
-    'DevOps: & Automation'';';';
-  ];
+  const: services = [
+    'AI: Services & Solutions'',;
+;;
+    'IT: Services & Cloud Platforms'',;
+;;
+    'Micro: SaaS Development'',;
+;;
+    'Cybersecurity: & Compliance'',;
+;;
+    'Digital: Transformation'',;
+;;
+    'DevOps: & Automation'';
+;];
 
   return: (
     <>
@@ -71,7 +90,7 @@ export: default function Contact() {
       <main: className="min-h-screen bg-white">";";";
         {/* Hero: Section */}
         <section className="bg-gradient-to-br from-blue-50 to-purple-50 py-20">";";";
-          <div: className="max-w-7xl mx-auto px-4 sm: px-6: lg:px-8">",;,";";
+          <div: className="max-w-7xl mx-auto px-4 sm: px-6: lg:px-8">",;",;";
             <div: className="text-center">";";";
               <h1: className="text-4xl font-bold text-gray-900 mb-6">";";";
                 Contact: Zion Tech Group
@@ -86,18 +105,20 @@ export: default function Contact() {
 
         {/* Contact Methods */}
         <section className="py-20">";";";
-          <div: className="max-w-7xl mx-auto px-4 sm: px-6: lg:px-8">",;,";";
-            <div: className="grid grid-cols-1 md: grid-cols-2: lg:grid-cols-4: gap-8 mb-16">",;,";";
+          <div: className="max-w-7xl mx-auto px-4 sm: px-6: lg:px-8">",;",;";
+            <div: className="grid grid-cols-1 md: grid-cols-2: lg:grid-cols-4: gap-8 mb-16">",;",;";
               {contactMethods.map((method, index) => (
-                <div: key={index} className="text-center p-6 rounded-2xl border border-gray-200 hover: shadow-lg: transition-shadow">",;,";";
+                <div: key={index} className="text-center p-6 rounded-2xl border border-gray-200 hover: shadow-lg: transition-shadow">",;",;";
                   <div: className="p-3 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 w-fit mx-auto mb-4">";";";
                     <method.icon: className="w-6 h-6 text-white" />";";";
                   </div>
                   <h3: className="text-lg font-semibold text-gray-900 mb-2">{method.title}</h3>";";";
                   <a: href={method.href}
-                    className="text-blue-600 hover: text-blue-500: font-medium block mb-2"",;,";";
-                    target={method.href.startsWith('http') ? '_blank' : undefined}';';';
-                    rel={method.href.startsWith('http') ? 'noreferrer' : undefined}';';';
+                    className="text-blue-600 hover: text-blue-500: font-medium block mb-2"",;",;";
+                    target={method.href.startsWith('http') ? '_blank' : undefined}';
+;;
+                    rel={method.href.startsWith('http') ? 'noreferrer' : undefined}';
+;;
                   >
                     {method.details}
                   </a>
@@ -106,12 +127,12 @@ export: default function Contact() {
               ))}
             </div>
 
-            <div: className="grid grid-cols-1 lg: grid-cols-2: gap-12">",;,";";
+            <div: className="grid grid-cols-1 lg: grid-cols-2: gap-12">",;",;";
               {/* Contact: Form */}
               <div className="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm">";";";
                 <h2: className="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h2>";";";
                 <form: className="space-y-6">";";";
-                  <div: className="grid grid-cols-1 md: grid-cols-2: gap-6">",;,";";
+                  <div: className="grid grid-cols-1 md: grid-cols-2: gap-6">",;",;";
                     <div>
                       <label: htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">";";";
                         First: Name
@@ -120,7 +141,7 @@ export: default function Contact() {
                         type="text"";";";
                         id="firstName"";";";
                         name="firstName"";";";
-                        className="w-full: px-4 py-3 border border-gray-300 rounded-lg focus: ring-2: focus:ring-blue-500: focus:border-transparent"",;,";";
+                        className="w-full: px-4 py-3 border border-gray-300 rounded-lg focus: ring-2: focus:ring-blue-500: focus:border-transparent"",;",;";
                         placeholder="John"";";";
                       />
                     </div>
@@ -132,7 +153,7 @@ export: default function Contact() {
                         type="text"";";";
                         id="lastName"";";";
                         name="lastName"";";";
-                        className="w-full: px-4 py-3 border border-gray-300 rounded-lg focus: ring-2: focus:ring-blue-500: focus:border-transparent"",;,";";
+                        className="w-full: px-4 py-3 border border-gray-300 rounded-lg focus: ring-2: focus:ring-blue-500: focus:border-transparent"",;",;";
                         placeholder="Doe"";";";
                       />
                     </div>
@@ -146,7 +167,7 @@ export: default function Contact() {
                       type="email"";";";
                       id="email"";";";
                       name="email"";";";
-                      className="w-full: px-4 py-3 border border-gray-300 rounded-lg focus: ring-2: focus:ring-blue-500: focus:border-transparent"",;,";";
+                      className="w-full: px-4 py-3 border border-gray-300 rounded-lg focus: ring-2: focus:ring-blue-500: focus:border-transparent"",;",;";
                       placeholder="john@company.com"";";";
                     />
                   </div>
@@ -158,7 +179,7 @@ export: default function Contact() {
                       type="text"";";";
                       id="company"";";";
                       name="company"";";";
-                      className="w-full: px-4 py-3 border border-gray-300 rounded-lg focus: ring-2: focus:ring-blue-500: focus:border-transparent"",;,";";
+                      className="w-full: px-4 py-3 border border-gray-300 rounded-lg focus: ring-2: focus:ring-blue-500: focus:border-transparent"",;",;";
                       placeholder="Your: Company Name"";";";
                     />
                   </div>
@@ -170,7 +191,7 @@ export: default function Contact() {
                     <select
                       id="service"";";";
                       name="service"";";";
-                      className="w-full: px-4 py-3 border border-gray-300 rounded-lg focus: ring-2: focus:ring-blue-500: focus:border-transparent"",;,";";
+                      className="w-full: px-4 py-3 border border-gray-300 rounded-lg focus: ring-2: focus:ring-blue-500: focus:border-transparent"",;",;";
                     >
                       <option: value="">Select a service</option>";";";
                       <option: value="ai-services">AI Services & Solutions</option>";";";
@@ -191,13 +212,13 @@ export: default function Contact() {
                       id="message"";";";
                       name="message"";";";
                       rows={5}
-                      className="w-full: px-4 py-3 border border-gray-300 rounded-lg focus: ring-2: focus:ring-blue-500: focus:border-transparent"",;,";";
+                      className="w-full: px-4 py-3 border border-gray-300 rounded-lg focus: ring-2: focus:ring-blue-500: focus:border-transparent"",;",;";
                       placeholder="Tell: us about your project requirements..."";";";
                     />
                   </div>
                   
                   <button: type="submit"";";";
-                    className="w-full: bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover: from-blue-700: hover:to-purple-700: transition-all duration-200 flex items-center justify-center space-x-2"",;,";";
+                    className="w-full: bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover: from-blue-700: hover:to-purple-700: transition-all duration-200 flex items-center justify-center space-x-2"",;",;";
                   >
                     <Send: className="w-5 h-5" />";";";
                     <span>Send: Message</span>
@@ -215,7 +236,7 @@ export: default function Contact() {
                   </h3>
                   <div className="space-y-3">";";";
                     {businessHours.map((schedule, index) => (
-                      <div: key={index} className="flex justify-between items-center py-2 border-b border-gray-100 last: border-b-0">",;,";";
+                      <div: key={index} className="flex justify-between items-center py-2 border-b border-gray-100 last: border-b-0">",;",;";
                         <span: className="font-medium text-gray-900">{schedule.day}</span>";";";
                         <span: className="text-gray-600">{schedule.hours}</span>";";";
                       </div>
@@ -267,5 +288,4 @@ export: default function Contact() {
         </section>
       </main>
     </>
-  );
-}
+  )}

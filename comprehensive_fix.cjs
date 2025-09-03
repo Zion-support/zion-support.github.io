@@ -7,9 +7,7 @@ function createProperPageTemplate(pageName, isApi = false) {
     return `import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint working' });
-}`;
-  }
+  res.status(200).json({ message: 'API endpoint working' })}`}
   
   return `import type { NextPage } from 'next';
 import Head from `next/head`;
@@ -27,11 +25,9 @@ const ${pageName}: NextPage = () => {
         {/* TODO: Add page content */}
       </main>
     </div>
-  );
-};
+  )};
 
-export default ${pageName};`;
-}
+export default ${pageName};`}
 
 // Function to create a proper blog page template;
 function createBlogPageTemplate(pageName) {
@@ -53,11 +49,9 @@ const ${pageName}: NextPage = () => {
         <Link href="/blog">Back to Blog</Link>
       </main>
     </div>
-  );
-};
+  )};
 
-export default ${pageName};`;
-}
+export default ${pageName};`}
 
 // Function to create a proper service page template;
 function createServicePageTemplate(pageName) {
@@ -79,66 +73,44 @@ const ${pageName}: NextPage = () => {
         <Link href="/services">Back to Services</Link>
       </main>
     </div>
-  );
-};
+  )};
 
-export default ${pageName};`;
-}
+export default ${pageName};`}
 
 // Function to create a proper component template;
 function createComponentTemplate(componentName) {
   return `import React from `react`;
 
 interface ${componentName}Props {
-  children?: React.ReactNode;
-}
+  children?: React.ReactNode}
 
 const ${componentName}: React.FC<${componentName}Props> = ({ children }) => {
   return (
     <div>
       {children}
     </div>
-  );
-};
+  )};
 
-export default ${componentName};`;
-}
+export default ${componentName};`}
 
 // Function to fix a file based on its path and name;
 function fixFile(filePath) {
   try {
     const fileName = path.basename(filePath, path.extname(filePath));
     const dirName = path.dirname(filePath);
-<<<<<<< HEAD
 
-    let content = ``;
-
-    // Determine the type of file and create appropriate content;
-=======
-    
-    let content = '';
-    
-    // Determine the type of file and create appropriate content
->>>>>>> main
     if (filePath.includes('/api/')) {
-      content = createProperPageTemplate(fileName, true);
-    } else if (filePath.includes('/blog/') || filePath.includes('/category/')) {
-      content = createBlogPageTemplate(fileName);
-    } else if (filePath.includes('/services/')) {
-      content = createServicePageTemplate(fileName);
-    } else if (filePath.includes('/components/')) {
-      content = createComponentTemplate(fileName);
-    } else if (filePath.includes(`/pages/`)) {
-      content = createProperPageTemplate(fileName);
-    }
+      content = createProperPageTemplate(fileName, true)} else if (filePath.includes('/blog/') || filePath.includes('/category/')) {
+      content = createBlogPageTemplate(fileName)} else if (filePath.includes('/services/')) {
+      content = createServicePageTemplate(fileName)} else if (filePath.includes('/components/')) {
+      content = createComponentTemplate(fileName)} else if (filePath.includes(`/pages/`)) {
+      content = createProperPageTemplate(fileName)}
     
     fs.writeFileSync(filePath, content);
     // Fixed: ${filePath}
-    return true;
-  } catch (error) { 
+    return true} catch (error) { 
     console.error(`Error fixing ${filePath }:`, error.message);
-    return false;
-  }
+    return false}
 }
 
 // Function to recursively find and fix corrupted files;
@@ -150,20 +122,12 @@ function fixCorruptedFiles(directory) {
     const stat = fs.statSync(filePath);
     
     if (stat.isDirectory()) {
-      fixCorruptedFiles(filePath);
-    } else if (file.endsWith(`.tsx`) || file.endsWith('.ts')) {
-      fixFile(filePath);
-    }
+      fixCorruptedFiles(filePath)} else if (file.endsWith(`.tsx`) || file.endsWith('.ts')) {
+      fixFile(filePath)}
   }
 }
 
-<<<<<<< HEAD
-// Start fixing from the pages and components directories;
-console.log('Fixing corrupted TypeScript files with proper templates...');
-=======
-// Start fixing from the pages and components directories
-// Fixing corrupted TypeScript files with proper templates...
->>>>>>> main
+
 fixCorruptedFiles('./pages');
 fixCorruptedFiles('./components');
 // Finished fixing corrupted files with proper templates.

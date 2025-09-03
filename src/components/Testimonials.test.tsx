@@ -11,5 +11,4 @@ export default function Testimonials.test() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

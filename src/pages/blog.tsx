@@ -14,8 +14,7 @@ export default function Blog() {
       readTime: '5 min read',
       image: '🤖',
       featured: true
-    },
-    {
+    }, {
       id: 2,
       title: 'Cloud FinOps: Optimizing Your Cloud Costs in 2025',
       excerpt: 'Learn the latest strategies for managing and optimizing cloud infrastructure costs in today\'s dynamic environment.',
@@ -25,8 +24,7 @@ export default function Blog() {
       readTime: '4 min read',
       image: '☁️',
       featured: false
-    },
-    {
+    }, {
       id: 3,
       title: 'Zero Trust Security: The New Standard for Enterprise Protection',
       excerpt: 'Explore how zero trust architecture is becoming the foundation for modern cybersecurity strategies.',
@@ -36,8 +34,7 @@ export default function Blog() {
       readTime: '6 min read',
       image: '🔒',
       featured: false
-    },
-    {
+    }, {
       id: 4,
       title: 'Building Scalable Micro SAAS Applications: Best Practices',
       excerpt: 'Essential guidelines for developing and scaling software-as-a-service applications for modern businesses.',
@@ -47,8 +44,7 @@ export default function Blog() {
       readTime: '7 min read',
       image: '💻',
       featured: false
-    },
-    {
+    }, {
       id: 5,
       title: 'Data Analytics in Healthcare: Improving Patient Outcomes',
       excerpt: 'How healthcare organizations are leveraging data analytics to enhance patient care and operational efficiency.',
@@ -58,8 +54,7 @@ export default function Blog() {
       readTime: '5 min read',
       image: '📊',
       featured: false
-    },
-    {
+    }, {
       id: 6,
       title: 'Quantum Computing: Breaking Down the Hype vs. Reality',
       excerpt: 'A practical look at quantum computing\'s current state and its real-world applications for businesses.',
@@ -133,8 +128,7 @@ export default function Blog() {
           </div>
         </section>
 
-        {/* Featured Post */}
-        {featuredPost && (
+        {/* Featured Post */}, {featuredPost && (
           <section id="featured" className="py-20 bg-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-12">
@@ -180,9 +174,7 @@ export default function Blog() {
               </div>
             </div>
           </section>
-        )}
-
-        {/* Category Filter */}
+        )}, {/* Category Filter */}
         <section className="py-12 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-wrap justify-center gap-3">
@@ -333,5 +325,4 @@ export default function Blog() {
         </footer>
       </div>
     </>
-  );
-}
+  )}

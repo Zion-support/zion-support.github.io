@@ -11,5 +11,4 @@ export default function comprehensiveServicesIndex2030() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

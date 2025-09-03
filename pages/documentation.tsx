@@ -15,53 +15,37 @@ const Documentation: NextPage = () => {
       icon: Code,
       title: 'API Reference', description: 'Complete API documentation and examples',
       articles: [
-        { title: 'Authentication', href: '/docs/api/auth' },
-        { title: 'Endpoints', href: '/docs/api/endpoints' },
-        { title: 'SDKs', href: '/docs/api/sdks' },
-        { title: 'Rate Limits', href: '/docs/api/rate-limits' }
+        { title: 'Authentication', href: '/docs/api/auth' }, { title: 'Endpoints', href: '/docs/api/endpoints' }, { title: 'SDKs', href: '/docs/api/sdks' }, { title: 'Rate Limits', href: '/docs/api/rate-limits' }
       ]
     }, {
       icon: Database,
       title: 'Data Management', description: 'Data handling, storage, and processing guides',
       articles: [
-        { title: 'Data Models', href: '/docs/data/models' },
-        { title: 'Data Import/Export', href: '/docs/data/import-export' },
-        { title: 'Data Security', href: '/docs/data/security' },
-        { title: 'Backup & Recovery', href: '/docs/data/backup' }
+        { title: 'Data Models', href: '/docs/data/models' }, { title: 'Data Import/Export', href: '/docs/data/import-export' }, { title: 'Data Security', href: '/docs/data/security' }, { title: 'Backup & Recovery', href: '/docs/data/backup' }
       ]
     }, {
       icon: Cloud,
       title: 'Cloud Services', description: 'Cloud infrastructure and deployment guides',
       articles: [
-        { title: 'Cloud Setup', href: '/docs/cloud/setup' },
-        { title: 'Deployment', href: '/docs/cloud/deployment' },
-        { title: 'Scaling', href: '/docs/cloud/scaling' },
-        { title: 'Monitoring', href: '/docs/cloud/monitoring' }
+        { title: 'Cloud Setup', href: '/docs/cloud/setup' }, { title: 'Deployment', href: '/docs/cloud/deployment' }, { title: 'Scaling', href: '/docs/cloud/scaling' }, { title: 'Monitoring', href: '/docs/cloud/monitoring' }
       ]
     }, {
       icon: Shield,
       title: 'Security', description: 'Security best practices and implementation',
       articles: [
-        { title: 'Security Overview', href: '/docs/security/overview' },
-        { title: 'Authentication', href: '/docs/security/auth' },
-        { title: 'Authorization', href: '/docs/security/authorization' },
-        { title: 'Compliance', href: '/docs/security/compliance' }
+        { title: 'Security Overview', href: '/docs/security/overview' }, { title: 'Authentication', href: '/docs/security/auth' }, { title: 'Authorization', href: '/docs/security/authorization' }, { title: 'Compliance', href: '/docs/security/compliance' }
       ]
     }, {
       icon: Zap,
       title: 'Advanced Features', description: 'Advanced functionality and customization',
       articles: [
-        { title: 'Custom Integrations', href: '/docs/advanced/integrations' },
-        { title: 'Workflow Automation', href: '/docs/advanced/automation' },
-        { title: 'Performance Optimization', href: '/docs/advanced/performance' },
-        { title: 'Troubleshooting', href: '/docs/advanced/troubleshooting' }
+        { title: 'Custom Integrations', href: '/docs/advanced/integrations' }, { title: 'Workflow Automation', href: '/docs/advanced/automation' }, { title: 'Performance Optimization', href: '/docs/advanced/performance' }, { title: 'Troubleshooting', href: '/docs/advanced/troubleshooting' }
       ]
     }
   ];
 
   const quickLinks = [
-    { title: 'API Playground', href: '/api-playground', icon: Code }, { title: 'Status Page', href: '/status', icon: Zap },
-    { title: 'Support', href: '/help', icon: Book }, { title: 'Community', href: '/community', icon: ExternalLink }
+    { title: 'API Playground', href: '/api-playground', icon: Code }, { title: 'Status Page', href: '/status', icon: Zap }, { title: 'Support', href: '/help', icon: Book }, { title: 'Community', href: '/community', icon: ExternalLink }
   ];
 
   return (
@@ -245,7 +229,6 @@ const Documentation: NextPage = () => {
         </section>
       </div>
     </MainLayout>
-  );
-};
+  )};
 
 export default Documentation;

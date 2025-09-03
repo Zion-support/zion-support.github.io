@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-#!/''usr/bin/env'' node;
-=======
-#!/'usr/bin/env' node;
 
->>>>>>> main
 const { execSync } = require('child_process');
 const fs = require('fs').promises;
 const path = require('path');
@@ -11,74 +6,22 @@ const path = require('path');
 class BuildErrorFixer {;
   constructor() {;
     this.projectRoot = process.cwd();
-<<<<<<< HEAD
-    this.logFile = path.join(this.projectRoot, ``automation/logs/build-error-fixer.log``);
-=======
-    this.logFile = path.join(this.projectRoot, 'automation/logs/build-error-fixer.log');
->>>>>>> main
+
     this.fixesApplied = [];
-    this.startTime = new Date();
-  }
+    this.startTime = new Date()}
 ;
   async log(message) {;
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}`;
     console.log(`logMessage);
-    await fs.appendFile(this.logFile, logMessage + `\n`);
-  }
-<<<<<<< HEAD
+    await fs.appendFile(this.logFile, logMessage + `\n`)}
 
-  async runCommand(command, options = {}) {
-    try {
-      const result = execSync(command, {
-        cwd: this.projectRoot,
-        encoding: `utf8`,
-        stdio: options.silent ? 'pipe' : 'inherit',
-        ...options;
-      });
-      return { success: true, output: result };
-    } catch (error) {  
-      return { success: false, output: error.stdout || error.stderr || error.message   };
-=======
-;
-  async runCommand(command, options = {}) {;
-    try {;
-      const result = execSync(command, {;
-        cwd: this.projectRoot,;
-        encoding: 'utf8',;
-        stdio: options.silent ? 'pipe' : 'inherit',;
-        ...options;
-      });
-      return { success: true, output: result };
-    } catch (error) {;
-      return { success: false, output: error.stdout || error.stderr || error.message };
->>>>>>> main
     }
   }
 ;
   async fixBuildErrors() {;
     await this.log('🔧 Fixing build errors...');
-<<<<<<< HEAD
-    
-    // Clean build artifacts;
-    await this.log('🧹 Cleaning build artifacts...');
-    await this.runCommand('rm -rf .next out dist build', { silent: true });
-    
-    // Clear npm cache if needed;
-    await this.log('🗑️  Clearing npm cache...');
-    await this.runCommand('npm cache clean --force', { silent: true });
-    
-=======
-    ;
-    // Clean build artifacts;
-    await this.log('🧹 Cleaning build artifacts...');
-    await this.runCommand('rm -rf .next out dist build', { silent: true });
-    ;
-    // Clear npm cache if needed;
-    await this.log('🗑️  Clearing npm cache...');
-    await this.runCommand('npm cache clean --force', { silent: true });
-    ;
->>>>>>> main
+
     // Reinstall dependencies;
     await this.log('📦 Reinstalling dependencies...');
     const installResult = await this.runCommand('npm install --legacy-peer-deps');
@@ -87,9 +30,7 @@ class BuildErrorFixer {;
       this.fixesApplied.push({;
         type: 'dependency-reinstall',;
         action: 'npm install --legacy-peer-deps',;
-        timestamp: new Date().toISOString();
-      });
-    }
+        timestamp: new Date().toISOString()})}
   }
 ;
   async fixNextConfig() {;
@@ -100,97 +41,16 @@ class BuildErrorFixer {;
       let nextConfig = ';
       ;
       if (await fs.access(nextConfigPath).then(() => true).catch(() => false)) {;
-        nextConfig = await fs.readFile(nextConfigPath, 'utf8');
-      }
-<<<<<<< HEAD
-      
-      // Create or update Next.js configconst fixedConfig = /** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
-  experimental: {
-    appDir: false;
-  },
-  typescript: {
-    ignoreBuildErrors: false;
-  },
-  eslint: {
-    ignoreDuringBuilds: false;
-  },
-  webpack: (config, { isServer }) => {
-=======
-      ;
-      // Create or update Next.js configconst fixedConfig = /** @type {import('next').NextConfig} */;
-const nextConfig = {;
-  reactStrictMode: true,;
-  swcMinify: true,;
-  experimental: {;
-    appDir: false;
-  },;
-  typescript: {;
-    ignoreBuildErrors: false;
-  },;
-  eslint: {;
-    ignoreDuringBuilds: false;
-  },;
-  webpack: (config, { isServer }) => {;
->>>>>>> main
-    // Add any webpack customizations here;
-    return config;
-  }
-<<<<<<< HEAD
-};
-;
-module.exports = nextConfig;;
-      ;
-=======
-};`);
-`);
-module.exports = nextConfig;;`);
-      `);
->>>>>>> main
-      await fs.writeFile(nextConfigPath, fixedConfig`);
-      await this.log('✅ Next.js configuration fixed');
-<<<<<<< HEAD
-      this.fixesApplied.push({
-        type: `next-config-fix`,
-        file: `next.config.js`,
-        timestamp: new Date().toISOString()
-=======
-      this.fixesApplied.push({;
-        type: 'next-config-fix',;
-        file: 'next.config.js',;
-        timestamp: new Date().toISOString();
->>>>>>> main
-      });
-    } catch (error) {  await this.log(`❌ Error fixing Next.js config: ${error.message  }`);
-    }
-  }
-<<<<<<< HEAD
+        nextConfig = await fs.readFile(nextConfigPath, 'utf8')}
 
-  async fixTypeScriptConfig() {
-    await this.log(`🔧 Fixing TypeScript configuration...`);
-    
-    try {
-      const tsConfigPath = path.join(this.projectRoot, `tsconfig.json`);
-      const tsConfig = JSON.parse(await fs.readFile(tsConfigPath, 'utf8'));
-      
-      // Update compiler options;
-      if (!tsConfig.compilerOptions) {
-=======
-;
-  async fixTypeScriptConfig() {;
-    await this.log('🔧 Fixing TypeScript configuration...');
-    ;
-    try {;
-      const tsConfigPath = path.join(this.projectRoot, 'tsconfig.json');
-      const tsConfig = JSON.parse(await fs.readFile(tsConfigPath, 'utf8'));
-      ;
-      // Update compiler options;
-      if (!tsConfig.compilerOptions) {;
->>>>>>> main
-        tsConfig.compilerOptions = {};
-      }
+    // Add any webpack customizations here;
+    return config}
+
+      await fs.writeFile(nextConfigPath, fixedConfig`);
+      await this.log('✅ Next.js configuration fixed')})} catch (error) {  await this.log(`❌ Error fixing Next.js config: ${error.message  }`)}
+  }
+
+        tsConfig.compilerOptions = {}}
       ;
       tsConfig.compilerOptions = {;
         ...tsConfig.compilerOptions,;
@@ -208,126 +68,28 @@ module.exports = nextConfig;;`);
         isolatedModules: true,;
         jsx: 'preserve',;
         incremental: true,;
-        plugins: [;
+        plugins: [
           {;
-            name: 'next';
-          }
-        ];
-      };
+            name: 'next'}
+        ]};
       ;
       await fs.writeFile(tsConfigPath, JSON.stringify(tsConfig, null, 2));
-      await this.log('✅ TypeScript configuration fixed');
-<<<<<<< HEAD
-      this.fixesApplied.push({
-        type: `tsconfig-fix`,
-        file: `tsconfig.json`,
-        timestamp: new Date().toISOString()
-=======
-      this.fixesApplied.push({;
-        type: 'tsconfig-fix',;
-        file: 'tsconfig.json',;
-        timestamp: new Date().toISOString();
->>>>>>> main
-      });
-    } catch (error) {  await this.log(`❌ Error fixing TypeScript config: ${error.message  }`);
-    }
+      await this.log('✅ TypeScript configuration fixed')})} catch (error) {  await this.log(`❌ Error fixing TypeScript config: ${error.message  }`)}
   }
-<<<<<<< HEAD
 
-  async fixPackageJson() {
-    await this.log(`🔧 Fixing package.json...`);
-    
-    try {
-      const packageJsonPath = path.join(this.projectRoot, `package.json`);
-      const packageJson = JSON.parse(await fs.readFile(packageJsonPath, 'utf8'));
-      
-      // Ensure required scripts exist;
-      if (!packageJson.scripts) {
-=======
-;
-  async fixPackageJson() {;
-    await this.log('🔧 Fixing package.json...');
-    ;
-    try {;
-      const packageJsonPath = path.join(this.projectRoot, 'package.json');
-      const packageJson = JSON.parse(await fs.readFile(packageJsonPath, 'utf8'));
-      ;
-      // Ensure required scripts exist;
-      if (!packageJson.scripts) {;
->>>>>>> main
-        packageJson.scripts = {};
-      }
+        packageJson.scripts = {}}
       ;
       packageJson.scripts = {;
         ...packageJson.scripts,;
         dev: 'next dev',;
         build: 'next build',;
         start: 'next start',;
-        lint: 'next lint',type-check': 'tsc --noEmit';
-      };
+        lint: 'next lint',type-check': 'tsc --noEmit'};
       ;
       await fs.writeFile(packageJsonPath, JSON.stringify(packageJson, null, 2));
-      await this.log('✅ package.json fixed');
-<<<<<<< HEAD
-      this.fixesApplied.push({
-        type: `package-json-fix`,
-        file: `package.json`,
-        timestamp: new Date().toISOString()
-=======
-      this.fixesApplied.push({;
-        type: 'package-json-fix',;
-        file: 'package.json',;
-        timestamp: new Date().toISOString();
->>>>>>> main
-      });
-    } catch (error) {  await this.log(`❌ Error fixing package.json: ${error.message  }`);
-    }
-  }
-<<<<<<< HEAD
-
-  async testBuild() {
-    await this.log(`🧪 Testing build...`);
-    
-    const buildResult = await this.runCommand(`npm run build`, { silent: true });
-    if (buildResult.success) {
-      await this.log('✅ Build test successful');
-      this.fixesApplied.push({
-        type: 'build-test',
-        result: `success`,
-        timestamp: new Date().toISOString()
-      });
-    } else {
-      await this.log(`❌ Build test failed`);await this.log(`Build error: ${buildResult.output}`);
-    }
+      await this.log('✅ package.json fixed')})} catch (error) {  await this.log(`❌ Error fixing package.json: ${error.message  }`)}
   }
 
-  async run() {
-    try {
-      await this.log(`🚀 Starting Build Error Fixer`);
-      
-=======
-;
-  async testBuild() {;
-    await this.log('🧪 Testing build...');
-    ;
-    const buildResult = await this.runCommand('npm run build', { silent: true });
-    if (buildResult.success) {;
-      await this.log('✅ Build test successful');
-      this.fixesApplied.push({;
-        type: 'build-test',;
-        result: 'success',;
-        timestamp: new Date().toISOString();
-      });
-    } else {;
-      await this.log('❌ Build test failed');await this.log(`Build error: ${buildResult.output}`);
-    }
-  }
-;
-  async run() {;
-    try {;
-      await this.log('🚀 Starting Build Error Fixer');
-      ;
->>>>>>> main
       await this.fixNextConfig();
       await this.fixTypeScriptConfig();
       await this.fixPackageJson();
@@ -341,46 +103,12 @@ module.exports = nextConfig;;`);
       return {;
         success: true,;
         fixesApplied: this.fixesApplied.length,;
-        duration: duration.getTime();
-      };
-<<<<<<< HEAD
-      
-    } catch (error) {  await this.log(`❌ Build Error Fixer failed: ${error.message  }`);
-=======
-      ;
-    } catch (error) {await this.log(`❌ Build Error Fixer failed: ${error.message}`);
->>>>>>> main
-      throw error;
-    }
+        duration: duration.getTime()};
+
+      throw error}
   }
 }
-<<<<<<< HEAD
 
-// Run the fixer if called directly;
-if (require.main === module) {
-  const fixer = new BuildErrorFixer();
-  fixer.run()
-    .then(result => {
-      console.log(`Build error fixer completed successfully`);
-      process.exit(0);
-    })
-    .catch(error => {
-      console.error(`Build error fixer failed:`, error);
-=======
-;
-// Run the fixer if called directly;
-if (require.main === module) {;
-  const fixer = new BuildErrorFixer();
-  fixer.run();
-    .then(result => {;
-      console.log('Build error fixer completed successfully');
-      process.exit(0);
-    });
-    .catch(error => {;
-      console.error('Build error fixer failed:', error);
->>>>>>> main
-      process.exit(1);
-    });
-}
+      process.exit(1)})}
 ;
 module.exports = BuildErrorFixer;

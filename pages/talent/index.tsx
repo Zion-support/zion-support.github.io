@@ -27,8 +27,7 @@ const TalentIndex: NextPage = () => {
         'Experience with cloud platforms (AWS/Azure)',
         'Strong problem-solving skills'
       ]
-    },
-    {
+    }, {
       title: 'AI/ML Engineer',
       location: 'Remote',
       type: 'Full-time',
@@ -40,8 +39,7 @@ const TalentIndex: NextPage = () => {
         'Strong background in machine learning algorithms',
         'Experience with data pipelines'
       ]
-    },
-    {
+    }, {
       title: 'DevOps Engineer',
       location: 'New York, NY',
       type: 'Full-time',
@@ -53,8 +51,7 @@ const TalentIndex: NextPage = () => {
         'Knowledge of AWS/Azure services',
         'Experience with monitoring tools'
       ]
-    },
-    {
+    }, {
       title: 'UI/UX Designer',
       location: 'Los Angeles, CA',
       type: 'Full-time',
@@ -74,18 +71,15 @@ const TalentIndex: NextPage = () => {
       icon: Heart,
       title: 'Health & Wellness',
       description: 'Comprehensive health insurance, dental, vision, and wellness programs.'
-    },
-    {
+    }, {
       icon: GraduationCap,
       title: 'Learning & Development',
       description: 'Annual learning budget, conference attendance, and skill development programs.'
-    },
-    {
+    }, {
       icon: Briefcase,
       title: 'Flexible Work',
       description: 'Remote work options, flexible hours, and work-life balance initiatives.'
-    },
-    {
+    }, {
       icon: Users,
       title: 'Team Culture',
       description: 'Collaborative environment, team events, and inclusive workplace culture.'
@@ -131,8 +125,7 @@ const TalentIndex: NextPage = () => {
                   <h3 className="text-lg font-semibold mb-2">{benefit.title}</h3>
                   <p className="text-gray-600">{benefit.description}</p>
                 </div>
-              );
-            })}
+              )})}
           </div>
         </div>
       </section>
@@ -248,7 +241,6 @@ const TalentIndex: NextPage = () => {
         </div>
       </section>
     </MainLayout>
-  );
-};
+  )};
 
 export default TalentIndex;

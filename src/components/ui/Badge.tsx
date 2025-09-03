@@ -3,8 +3,7 @@ import React from 'react';
 interface BadgeProps {
   children: React.ReactNode;
   variant?: 'default' | 'secondary' | 'destructive' | 'outline';
-  className?: string;
-}
+  className?: string}
 
 export const Badge: React.FC<BadgeProps> = ({ 
   children, 
@@ -24,7 +23,6 @@ export const Badge: React.FC<BadgeProps> = ({
     <span className={`${baseClasses} ${variantClasses[variant]} ${className}`}>
       {children}
     </span>
-  );
-};
+  )};
 
 export default Badge;

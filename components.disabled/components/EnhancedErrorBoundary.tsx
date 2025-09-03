@@ -1,19 +1,17 @@
 'use client';
 
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+import React { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
-  showDetails?: boolean;
-}
+  showDetails?: boolean}
 
 interface State {
   hasError: boolean;
   error: Error | null;
-  errorInfo: ErrorInfo | null;
-}
+  errorInfo: ErrorInfo | null}
 
 class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
@@ -21,35 +19,28 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     this.state = {
       hasError: false,
       error: null,
-      errorInfo: null,
-    };
-  }
+      errorInfo: null }}
 
   static getDerivedStateFromError(error: Error): State {
     return {
       hasError: true,
       error,
-      errorInfo: null,
-    };
-  }
+      errorInfo: null }}
 
   override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
-      errorInfo,
-    });
+      errorInfo });
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary: ', error, errorInfo);
-    }
+      console.error('Error caught by boundary: ', error, errorInfo)}
 
     // Send error to monitoring service
     this.logErrorToService(error, errorInfo);
 
     // Call custom error handler
-    this.props.onError?.(error, errorInfo);
-  }
+    this.props.onError?.(error, errorInfo)}
 
   private logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
     // In a real application, you would send this to your error monitoring service
@@ -57,40 +48,31 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     try {
       // Example: Send to analytics
       if (typeof gtag !== 'undefined') {
-        gtag('event,exception', {
+        gtag('event,exception' {
           description: error.message,
-          fatal: false,
-        });
-      }
+          fatal: false })}
 
       // Example: Send to custom endpoint
-      fetch('/api/error-reporting', {
+      fetch('/api/error-reporting' {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
-        },
+          'Content-Type': 'application/json' },
         body: JSON.stringify({
           error: {
             message: error.message,
             stack: error.stack,
-            componentStack: errorInfo.componentStack,
-          },
+            componentStack: errorInfo.componentStack },
           timestamp: new Date().toISOString(),
           userAgent: navigator.userAgent,
-          url: window.location.href,
-        }),
-      }).catch(console.error);
-    } catch (loggingError) {
-      console.error('Failed to log error to service:', loggingError);
-    }
+          url: window.location.href }) }).catch(console.error)} catch (loggingError) {
+      console.error('Failed to log error to service:', loggingError)}
   };
 
   render() {
     if (this.state.hasError) {
       // Custom fallback UI
       if (this.props.fallback) {
-        return this.props.fallback;
-      }
+        return this.props.fallback}
 
       // Default error UI
       return (
@@ -166,11 +148,9 @@ class EnhancedErrorBoundary extends Component<Props, State> {
             </div>
           </div>
         </div>
-      );
-    }
+      )}
 
-    return this.props.children;
-  }
+    return this.props.children}
 }
 
 export default EnhancedErrorBoundary;

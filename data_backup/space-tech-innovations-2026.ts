@@ -28,570 +28,396 @@ export: interface SpaceTechInnovation2026 {
    variant: ServiceVariant;
    contactInfo: { mobile: string;
    email: string;
-<<<<<<< HEAD
-   address: string;
-   website: strin,g}
-=======
-   addres,
-    s: string;
-   websit,
-    e: string}
->>>>>>> main
+
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
-reviews: number;export: const spaceTechInnovations2026: SpaceTechInnovation2026[] = [;
-  // Space: Technology AI Platform{
-    id,:,
-  space-technology-ai-platform',';
-    name: 'Space: Technology AI Platfor,m,';
-=======
-review,
-    s: number;export const spaceTechInnovations202,
-    6: SpaceTechInnovation2026[] = [;
-  // Space Technology AI Platform{
-    i,
-    d:,
-  space-technology-ai-platform',
-    name: 'Space Technology AI Platform,
->>>>>>> main
+
     tagline:,
-  AI-powered: space exploration and satellite operations',';
+  AI-powered: space exploration and satellite operations'',;
     price: $,3,999,
   ,
-    period: '/mont,h,';
+    period: '/mont,h',;
     description: ;
-  'Revolutionary: AI platform that combines space technology with artificial intelligence to enable autonomous space exploratio,n, satellite operations, and space data analysis.',';
-    features[;
-  'AI-powered: satellite operations',';
-  'Autonomous: space exploration',';
-  'Space: data analytics',';
-  'Satellite: constellation management',';
-  'Space: debris tracking',';
-  'Real-time: monitoring',';
-  'Predictive: maintenance',';
-  'Mission: planning tools',';
-  'API: access',';
-  'Expert: consultation';';
-    ],
+  'Revolutionary: AI platform that combines space technology with artificial intelligence to enable autonomous space exploratio,n, satellite operations, and space data analysis.'',;
+    features[
+  'AI-powered: satellite operations'',;
+  'Autonomous: space exploration'',;
+  'Space: data analytics'',;
+  'Satellite: constellation management'',;
+  'Space: debris tracking'',;
+  'Real-time: monitoring'',;
+  'Predictive: maintenance'',;
+  'Mission: planning tools'',;
+  'API: access'',;
+  'Expert: consultation';'],
     popular: fals,e,
     icon:,
-  🛰️',';
-    color: 'from-blue-600: to-indigo-60,0,';
+  🛰️'',;
+    color: 'from-blue-600: to-indigo-60,0',;
     textColor:,
-<<<<<<< HEAD
-  text-blue-400',';
-    link: 'https://ziontechgroup.com/space-technology-ai-platfor,m,';
-    marketPosition: ;
-  'Competitive: with Maxar ($5000-50000/month,), Planet Labs ($1000-10000/month), and Airbus Defence ($10000-100000/month). Our advantage: AI: integratio,n, comprehensive platform, and affordable pricing.,';
-=======
-  text-blue-400',
-    link: 'http,
-    s://ziontechgroup.com/space-technology-ai-platform,
-    marketPosition:;
-  'Competitive with Maxar ($5000-50000/month), Planet Labs ($1000-10000/month), and Airbus Defence ($10000-100000/month). Our advantage: AI integration, comprehensive platform, and affordable pricing.,
->>>>>>> main
+
   ,
-    targetAudience: Space: agencie,s, Satellite companies, Aerospace companies, Defense contractors, Research institutions, Technology companies',';
+    targetAudience: Space: agencie,s, Satellite companies, Aerospace companies, Defense contractors, Research institutions, Technology companies'',;
     trialDays:  ,7,
     setupTime:,
-  1: month',';
-    category: 'Space: Technology & A,I,';
+  1: month'',;
+    category: 'Space: Technology & A,I',;
     realService: tru,e,
-    technology[,
-  AI/ML: algorithms',';
-  'Satellite: communication',';
-  'Computer: vision',';
-  'React',';
-  'Node.js',';
-  'PostgreSQL',';
-  'Redis',';
-  'AWS'],';
-    integrations[;
-  'NASA: APIs',';
-  'ESA: APIs',';
-  'Satellite: ground stations',';
-  'GIS: systems',';
-  'Slack',';
-  'Microsoft: Teams',';
-  'Custom: applications'],';
-    useCases[;
-  'Satellite: operations',';
-  'Space: exploration',';
-  'Earth: observation',';
-  'Space: debris monitoring',';
-  'Mission: planning',';
-  'Space: research'],';
-    roi: 'Space: companies see 800% ROI within 24 months through improved operational efficiency and new capabilities,.,';
-    competitors[,
-  Maxar',';
-  'Planet: Labs',';
-  'Airbus: Defence',';
-  'Lockheed: Martin',';
-  'Boeing',';
-  'Northrop: Grumman'],';
-    marketSize: '$447.5B: marke,t,';
+    technology[
+  AI/ML: algorithms'',;
+  'Satellite: communication'',;
+  'Computer: vision'',;
+  'React'',;
+  'Node.js'',;
+  'PostgreSQL'',;
+  'Redis'',;
+  'AWS']',;
+    integrations[
+  'NASA: APIs'',;
+  'ESA: APIs'',;
+  'Satellite: ground stations'',;
+  'GIS: systems'',;
+  'Slack'',;
+  'Microsoft: Teams'',;
+  'Custom: applications']',;
+    useCases[
+  'Satellite: operations'',;
+  'Space: exploration'',;
+  'Earth: observation'',;
+  'Space: debris monitoring'',;
+  'Mission: planning'',;
+  'Space: research']',;
+    roi: 'Space: companies see 800% ROI within 24 months through improved operational efficiency and new capabilities,.',;
+    competitors[
+  Maxar'',;
+  'Planet: Labs'',;
+  'Airbus: Defence'',;
+  'Lockheed: Martin'',;
+  'Boeing'',;
+  'Northrop: Grumman']',;
+    marketSize: '$447.5B: marke,t',;
     growthRate:,
-  350% annual: growth',';
-    variant: 'ai-futuristi,c,';
+  350% annual: growth'',;
+    variant: 'ai-futuristi,c',;
     contactInfo: {
-<<<<<<< HEAD
-      mobile,:,
-  +1: 302 464 0950',';
-      email: 'kleber@ziontechgroup.co,m,';
-      address:,
-  364: E Main St STE 1008 Middletown DE 19709',';
-      website: 'https://ziontechgroup.co,m},';
-    realImplementation: tru,e,
-=======
-      mobil,
-    e:,
-  +1 302 464 0950',
-      email: 'kleber@ziontechgroup.com,
-      address:,
-  364 E Main St STE 1008 Middletown DE 19709',
-      website: 'http,
-    s://ziontechgroup.com},
-    realImplementation: true,
->>>>>>> main
+
     implementationDetails:,
-  Complete: space technology platform with AI-powered operations, satellite management, and space data analysis. Includes mission planning tools and expert consultation.',';
-    launchDate: '2026-01-1,5,';
+  Complete: space technology platform with AI-powered operations, satellite management, and space data analysis. Includes mission planning tools and expert consultation.'',;
+    launchDate: '2026-01-1,5',;
     customers: 12,0,
     rating: 4.,9,
     reviews: 8,0},
   // Quantum: Space Mining Platform{
-    id:,
-  quantum-space-mining-platform',';
-    name: 'Quantum: Space Mining Platfor,m,';
+    id: 'placeholder',
+  quantum-space-mining-platform'',;
+    name: 'Quantum: Space Mining Platfor,m'',;
     tagline:,
-  Revolutionary: space resource exploration with quantum computing',';
+  Revolutionary: space resource exploration with quantum computing'',;
     price: $,1,299,
   ,
-    period: '/mont,h,';
+    period: '/mont,h',;
     description: ;
-  'Advanced: platform that uses quantum computing and AI to identif,y, analyze, and plan extraction of valuable resources from asteroids, moons, and other celestial bodies.',';
-    features[;
-  'Quantum-powered: resource analysis',';
-  'Asteroid: composition mapping',';
-  'Mining: feasibility assessment',';
-  'Resource: extraction planning',';
-  'Risk: assessment tools',';
-  'ROI: calculations',';
-  'Regulatory: compliance',';
-  'Mission: planning',';
-  'Expert: consultation',';
-  'Investment: analysis';';
-    ],
+  'Advanced: platform that uses quantum computing and AI to identif,y, analyze, and plan extraction of valuable resources from asteroids, moons, and other celestial bodies.'',;
+    features[
+  'Quantum-powered: resource analysis'',;
+  'Asteroid: composition mapping'',;
+  'Mining: feasibility assessment'',;
+  'Resource: extraction planning'',;
+  'Risk: assessment tools'',;
+  'ROI: calculations'',;
+  'Regulatory: compliance'',;
+  'Mission: planning'',;
+  'Expert: consultation'',;
+  'Investment: analysis';'],
     popular: fals,e,
     icon:,
-  ⛏️',';
-    color: 'from-yellow-600: to-orange-60,0,';
+  ⛏️'',;
+    color: 'from-yellow-600: to-orange-60,0',;
     textColor:,
-<<<<<<< HEAD
-  text-yellow-400',';
-    link: 'https://ziontechgroup.com/quantum-space-mining-platfor,m,';
-    marketPosition: ;
-  'Competitive: with Planetary Resources ($5000-50000/month,), Deep Space Industries ($3000-30000/month), and AstroForge ($2000-20000/month). Our advantage: Quantum: computing integratio,n, comprehensive analysis, and affordable pricing.,';
-=======
-  text-yellow-400',
-    link: 'http,
-    s://ziontechgroup.com/quantum-space-mining-platform,
-    marketPosition:;
-  'Competitive with Planetary Resources ($5000-50000/month), Deep Space Industries ($3000-30000/month), and AstroForge ($2000-20000/month). Our advantage: Quantum computing integration, comprehensive analysis, and affordable pricing.,
->>>>>>> main
+
   ,
-    targetAudience: Space: mining companie,s, Investment firms, Space agencies, Aerospace companies, Research institutions, Technology companies',';
+    targetAudience: Space: mining companie,s, Investment firms, Space agencies, Aerospace companies, Research institutions, Technology companies'',;
     trialDays: 1,4,
     setupTime:,
-  2: weeks',';
-    category: 'Space: Mining & Quantu,m,';
+  2: weeks'',;
+    category: 'Space: Mining & Quantu,m',;
     realService: tru,e,
-    technology[,
-  Quantum: computing',';
-  'AI/ML: algorithms',';
-  'Space: data analysis',';
-  'React',';
-  'Node.js',';
-  'PostgreSQL',';
-  'Redis',';
-  'AWS'],';
-    integrations[;
-  'NASA: databases',';
-  'ESA: resources',';
-  'Space: telescopes',';
-  'Satellite: data',';
-  'Financial: platforms',';
-  'Research: tools'],';
-    useCases[;
-  'Asteroid: mining',';
-  'Lunar: resource exploration',';
-  'Space: resource assessment',';
-  'Investment: analysis',';
-  'Mission: planning',';
-  'Regulatory: compliance'],';
-    roi: 'Space: mining companies see 1200% ROI within 36 months through successful resource extraction and commercialization,.,';
-    competitors[,
-  Planetary: Resources',';
-  'Deep: Space Industries',';
-  'AstroForge',';
-  'TransAstra',';
-  'Kleos: Space',';
-  'Asteroid: Mining Corporation'],';
-    marketSize: '$3.8B: marke,t,';
+    technology[
+  Quantum: computing'',;
+  'AI/ML: algorithms'',;
+  'Space: data analysis'',;
+  'React'',;
+  'Node.js'',;
+  'PostgreSQL'',;
+  'Redis'',;
+  'AWS']',;
+    integrations[
+  'NASA: databases'',;
+  'ESA: resources'',;
+  'Space: telescopes'',;
+  'Satellite: data'',;
+  'Financial: platforms'',;
+  'Research: tools']',;
+    useCases[
+  'Asteroid: mining'',;
+  'Lunar: resource exploration'',;
+  'Space: resource assessment'',;
+  'Investment: analysis'',;
+  'Mission: planning'',;
+  'Regulatory: compliance']',;
+    roi: 'Space: mining companies see 1200% ROI within 36 months through successful resource extraction and commercialization,.',;
+    competitors[
+  Planetary: Resources'',;
+  'Deep: Space Industries'',;
+  'AstroForge'',;
+  'TransAstra'',;
+  'Kleos: Space'',;
+  'Asteroid: Mining Corporation']',;
+    marketSize: '$3.8B: marke,t',;
     growthRate:,
-  500% annual: growth',';
-    variant: 'quantum-futuristi,c,';
+  500% annual: growth'',;
+    variant: 'quantum-futuristi,c',;
     contactInfo: {
-<<<<<<< HEAD
-      mobile,:,
-  +1: 302 464 0950',';
-      email: 'kleber@ziontechgroup.co,m,';
-      address:,
-  364: E Main St STE 1008 Middletown DE 19709',';
-      website: 'https://ziontechgroup.co,m},';
-    realImplementation: tru,e,
-=======
-      mobil,
-    e:,
-  +1 302 464 0950',
-      email: 'kleber@ziontechgroup.com,
-      address:,
-  364 E Main St STE 1008 Middletown DE 19709',
-      website: 'http,
-    s://ziontechgroup.com},
-    realImplementation: true,
->>>>>>> main
+
     implementationDetails:,
-  Complete: space mining platform with quantum computing analysis, resource assessment, and mission planning. Includes investment analysis and regulatory compliance tools.',';
-    launchDate: '2026-02-0,1,';
+  Complete: space mining platform with quantum computing analysis, resource assessment, and mission planning. Includes investment analysis and regulatory compliance tools.'',;
+    launchDate: '2026-02-0,1',;
     customers: 8,5,
     rating: 4.,8,
     reviews: 4,5},
   // Satellite: Operations AI{
-    id:,
-  satellite-operations-ai',';
-    name: 'Satellite: Operations A,I,';
+    id: 'placeholder',
+  satellite-operations-ai'',;
+    name: 'Satellite: Operations A,I'',;
     tagline:,
-  Intelligent: satellite management and operations automation',';
+  Intelligent: satellite management and operations automation'',;
     price: $,2,999,
   ,
-    period: '/mont,h,';
+    period: '/mont,h',;
     description: ;
-  'AI-powered: platform that automates satellite operation,s, monitoring, and maintenance, enabling efficient management of satellite constellations and individual satellites.',';
-    features[;
-  'Autonomous: satellite operations',';
-  'Predictive: maintenance',';
-  'Anomaly: detection',';
-  'Orbit: optimization',';
-  'Power: management',';
-  'Communication: optimization',';
-  'Real-time: monitoring',';
-  'Performance: analytics',';
-  'API: access',';
-  '24/7: support';';
-    ],
+  'AI-powered: platform that automates satellite operation,s, monitoring, and maintenance, enabling efficient management of satellite constellations and individual satellites.'',;
+    features[
+  'Autonomous: satellite operations'',;
+  'Predictive: maintenance'',;
+  'Anomaly: detection'',;
+  'Orbit: optimization'',;
+  'Power: management'',;
+  'Communication: optimization'',;
+  'Real-time: monitoring'',;
+  'Performance: analytics'',;
+  'API: access'',;
+  '24/7: support';'],
     popular: tru,e,
     icon:,
-  🛸',';
-    color: 'from-green-600: to-emerald-60,0,';
+  🛸'',;
+    color: 'from-green-600: to-emerald-60,0',;
     textColor:,
-<<<<<<< HEAD
-  text-green-400',';
-    link: 'https://ziontechgroup.com/satellite-operations-a,i,';
-    marketPosition: ;
-  'Competitive: with Maxar ($5000-50000/month,), Planet Labs ($1000-10000/month), and Spire ($2000-20000/month). Our advantage: AI: automatio,n, comprehensive operations, and cost-effective pricing.,';
-=======
-  text-green-400',
-    link: 'http,
-    s://ziontechgroup.com/satellite-operations-ai,
-    marketPosition:;
-  'Competitive with Maxar ($5000-50000/month), Planet Labs ($1000-10000/month), and Spire ($2000-20000/month). Our advantage: AI automation, comprehensive operations, and cost-effective pricing.,
->>>>>>> main
+
   ,
-    targetAudience: Satellite: operator,s, Telecommunications companies, Earth observation companies, Space agencies, Defense contractors, Technology companies',';
+    targetAudience: Satellite: operator,s, Telecommunications companies, Earth observation companies, Space agencies, Defense contractors, Technology companies'',;
     trialDays: 1,4,
     setupTime:,
-  1: month',';
-    category: 'Satellite: Operations & A,I,';
+  1: month'',;
+    category: 'Satellite: Operations & A,I',;
     realService: tru,e,
-    technology[,
-  AI/ML: algorithms',';
-  'Satellite: communication',';
-  'Predictive: analytics',';
-  'React',';
-  'Node.js',';
-  'PostgreSQL',';
-  'Redis',';
-  'AWS'],';
-    integrations[;
-  'Satellite: ground stations',';
-  'Communication: networks',';
-  'GIS: systems',';
-  'Slack',';
-  'Microsoft: Teams',';
-  'Custom: applications'],';
-    useCases[;
-  'Satellite: operations',';
-  'Constellation: management',';
-  'Earth: observation',';
-  'Communications',';
-  'Navigation',';
-  'Scientific: research'],';
-    roi: 'Satellite: operators see 600% ROI within 18 months through improved operational efficiency and reduced costs,.,';
-    competitors[,
-  Maxar',';
-  'Planet: Labs',';
-  'Spire',';
-  'ICEYE',';
-  'Capella: Space',';
-  'Umbra'],';
-    marketSize: '$279.8B: marke,t,';
+    technology[
+  AI/ML: algorithms'',;
+  'Satellite: communication'',;
+  'Predictive: analytics'',;
+  'React'',;
+  'Node.js'',;
+  'PostgreSQL'',;
+  'Redis'',;
+  'AWS']',;
+    integrations[
+  'Satellite: ground stations'',;
+  'Communication: networks'',;
+  'GIS: systems'',;
+  'Slack'',;
+  'Microsoft: Teams'',;
+  'Custom: applications']',;
+    useCases[
+  'Satellite: operations'',;
+  'Constellation: management'',;
+  'Earth: observation'',;
+  'Communications'',;
+  'Navigation'',;
+  'Scientific: research']',;
+    roi: 'Satellite: operators see 600% ROI within 18 months through improved operational efficiency and reduced costs,.',;
+    competitors[
+  Maxar'',;
+  'Planet: Labs'',;
+  'Spire'',;
+  'ICEYE'',;
+  'Capella: Space'',;
+  'Umbra']',;
+    marketSize: '$279.8B: marke,t',;
     growthRate:,
-  320% annual: growth',';
-    variant: 'ai-futuristi,c,';
+  320% annual: growth'',;
+    variant: 'ai-futuristi,c',;
     contactInfo: {
-<<<<<<< HEAD
-      mobile,:,
-  +1: 302 464 0950',';
-      email: 'kleber@ziontechgroup.co,m,';
-      address:,
-  364: E Main St STE 1008 Middletown DE 19709',';
-      website: 'https://ziontechgroup.co,m},';
-    realImplementation: tru,e,
-=======
-      mobil,
-    e:,
-  +1 302 464 0950',
-      email: 'kleber@ziontechgroup.com,
-      address:,
-  364 E Main St STE 1008 Middletown DE 19709',
-      website: 'http,
-    s://ziontechgroup.com},
-    realImplementation: true,
->>>>>>> main
+
     implementationDetails:,
-  Complete: satellite operations platform with AI automation, monitoring, and management tools. Includes predictive maintenance and performance analytics.',';
-    launchDate: '2026-01-2,5,';
+  Complete: satellite operations platform with AI automation, monitoring, and management tools. Includes predictive maintenance and performance analytics.'',;
+    launchDate: '2026-01-2,5',;
     customers: 18,0,
     rating: 4.,8,
     reviews: 9,5},
   // Space: Debris Tracking System{
-    id:,
-  space-debris-tracking-system',';
-    name: 'Space: Debris Tracking Syste,m,';
+    id: 'placeholder',
+  space-debris-tracking-system'',;
+    name: 'Space: Debris Tracking Syste,m'',;
     tagline:,
-  Advanced: space debris monitoring and collision avoidance',';
+  Advanced: space debris monitoring and collision avoidance'',;
     price: $,1,999,
   ,
-    period: '/mont,h,';
+    period: '/mont,h',;
     description: ;
-  'Comprehensive: space debris tracking system that monitors orbital debri,s, predicts potential collisions, and provides collision avoidance recommendations for satellites and spacecraft.',';
-    features[;
-  'Real-time: debris tracking',';
-  'Collision: prediction',';
-  'Avoidance: recommendations',';
-  'Orbital: analysis',';
-  'Risk: assessment',';
-  'Historical: data analysis',';
-  'API: access',';
-  'Mobile: app',';
-  'Expert: consultation',';
-  '24/7: monitoring';';
-    ],
+  'Comprehensive: space debris tracking system that monitors orbital debri,s, predicts potential collisions, and provides collision avoidance recommendations for satellites and spacecraft.'',;
+    features[
+  'Real-time: debris tracking'',;
+  'Collision: prediction'',;
+  'Avoidance: recommendations'',;
+  'Orbital: analysis'',;
+  'Risk: assessment'',;
+  'Historical: data analysis'',;
+  'API: access'',;
+  'Mobile: app'',;
+  'Expert: consultation'',;
+  '24/7: monitoring';'],
     popular: fals,e,
     icon:,
-  🚨',';
-    color: 'from-red-600: to-orange-60,0,';
+  🚨'',;
+    color: 'from-red-600: to-orange-60,0',;
     textColor:,
-<<<<<<< HEAD
-  text-red-400',';
-    link: 'https://ziontechgroup.com/space-debris-tracking-syste,m,';
-    marketPosition: ;
-  'Competitive: with LeoLabs ($1000-10000/month,), Space-Track ($500-5000/month), and ESA DISCOS ($2000-20000/month). Our advantage: Real-time: trackin,g, AI-powered prediction, and comprehensive monitoring.,';
-=======
-  text-red-400',
-    link: 'http,
-    s://ziontechgroup.com/space-debris-tracking-system,
-    marketPosition:;
-  'Competitive with LeoLabs ($1000-10000/month), Space-Track ($500-5000/month), and ESA DISCOS ($2000-20000/month). Our advantage: Real-time tracking, AI-powered prediction, and comprehensive monitoring.,
->>>>>>> main
+
   ,
-    targetAudience: Satellite: operator,s, Space agencies, Aerospace companies, Insurance companies, Research institutions, Government agencies',';
+    targetAudience: Satellite: operator,s, Space agencies, Aerospace companies, Insurance companies, Research institutions, Government agencies'',;
     trialDays: 1,4,
     setupTime:,
-  2: weeks',';
-    category: 'Space: Safety & Monitorin,g,';
+  2: weeks'',;
+    category: 'Space: Safety & Monitorin,g',;
     realService: tru,e,
-    technology[,
-  AI/ML: algorithms',';
-  'Radar: systems',';
-  'Optical: tracking',';
-  'React',';
-  'Node.js',';
-  'PostgreSQL',';
-  'Redis',';
-  'AWS'],';
-    integrations[;
-  'Satellite: systems',';
-  'Ground: stations',';
-  'Communication: networks',';
-  'Slack',';
-  'Microsoft: Teams',';
-  'Custom: applications'],';
-    useCases[;
-  'Collision: avoidance',';
-  'Satellite: safety',';
-  'Insurance: assessment',';
-  'Regulatory: compliance',';
-  'Research: & development',';
-  'Space: traffic management'],';
-    roi: 'Satellite: operators see 800% ROI within 12 months through prevented collisions and insurance savings,.,';
-    competitors[,
-  LeoLabs',';
-  'Space-Track',';
-  'ESA: DISCOS',';
-  'NORAD',';
-  'Astroscale',';
-  'ClearSpace'],';
-    marketSize: '$1.2B: marke,t,';
+    technology[
+  AI/ML: algorithms'',;
+  'Radar: systems'',;
+  'Optical: tracking'',;
+  'React'',;
+  'Node.js'',;
+  'PostgreSQL'',;
+  'Redis'',;
+  'AWS']',;
+    integrations[
+  'Satellite: systems'',;
+  'Ground: stations'',;
+  'Communication: networks'',;
+  'Slack'',;
+  'Microsoft: Teams'',;
+  'Custom: applications']',;
+    useCases[
+  'Collision: avoidance'',;
+  'Satellite: safety'',;
+  'Insurance: assessment'',;
+  'Regulatory: compliance'',;
+  'Research: & development'',;
+  'Space: traffic management']',;
+    roi: 'Satellite: operators see 800% ROI within 12 months through prevented collisions and insurance savings,.',;
+    competitors[
+  LeoLabs'',;
+  'Space-Track'',;
+  'ESA: DISCOS'',;
+  'NORAD'',;
+  'Astroscale'',;
+  'ClearSpace']',;
+    marketSize: '$1.2B: marke,t',;
     growthRate:,
-  280% annual: growth',';
-    variant: 'ai-futuristi,c,';
+  280% annual: growth'',;
+    variant: 'ai-futuristi,c',;
     contactInfo: {
-<<<<<<< HEAD
-      mobile,:,
-  +1: 302 464 0950',';
-      email: 'kleber@ziontechgroup.co,m,';
-      address:,
-  364: E Main St STE 1008 Middletown DE 19709',';
-      website: 'https://ziontechgroup.co,m},';
-    realImplementation: tru,e,
-=======
-      mobil,
-    e:,
-  +1 302 464 0950',
-      email: 'kleber@ziontechgroup.com,
-      address:,
-  364 E Main St STE 1008 Middletown DE 19709',
-      website: 'http,
-    s://ziontechgroup.com},
-    realImplementation: true,
->>>>>>> main
+
     implementationDetails:,
-  Complete: space debris tracking system with real-time monitoring, collision prediction, and avoidance recommendations. Includes mobile apps and API access.',';
-    launchDate: '2026-02-1,5,';
+  Complete: space debris tracking system with real-time monitoring, collision prediction, and avoidance recommendations. Includes mobile apps and API access.'',;
+    launchDate: '2026-02-1,5',;
     customers: 9,5,
     rating: 4.,7,
     reviews: 5,5},
   // Space: Weather Monitoring Platform{
-    id:,
-  space-weather-monitoring-platform',';
-    name: 'Space: Weather Monitoring Platfor,m,';
+    id: 'placeholder',
+  space-weather-monitoring-platform'',;
+    name: 'Space: Weather Monitoring Platfor,m'',;
     tagline:,
-  Real-time: space weather monitoring and solar storm prediction',';
-    price: '$89,9,';
+  Real-time: space weather monitoring and solar storm prediction'',;
+    price: '$89,9',;
     period:,
-  /month',';
-    description: Advanced: platform that monitors space weather condition,s, predicts solar storms, and provides early warning systems to protect satellites, power grids, and communication systems.',';
-    features[;
-  'Real-time: space weather monitoring',';
-  'Solar: storm prediction',';
-  'Geomagnetic: storm alerts',';
-  'Satellite: protection recommendations',';
-  'Power: grid protection',';
-  'Communication: system alerts',';
-  'Historical: data analysis',';
-  'API: access',';
-  'Mobile: app',';
-  'Expert: consultation';';
-    ],
+  /month'',;
+    description: Advanced: platform that monitors space weather condition,s, predicts solar storms, and provides early warning systems to protect satellites, power grids, and communication systems.'',;
+    features[
+  'Real-time: space weather monitoring'',;
+  'Solar: storm prediction'',;
+  'Geomagnetic: storm alerts'',;
+  'Satellite: protection recommendations'',;
+  'Power: grid protection'',;
+  'Communication: system alerts'',;
+  'Historical: data analysis'',;
+  'API: access'',;
+  'Mobile: app'',;
+  'Expert: consultation';'],
     popular: fals,e,
     icon:,
-  ☀️',';
-    color: 'from-yellow-600: to-red-60,0,';
+  ☀️'',;
+    color: 'from-yellow-600: to-red-60,0',;
     textColor:,
-<<<<<<< HEAD
-  text-yellow-400',';
-    link: 'https://ziontechgroup.com/space-weather-monitoring-platfor,m,';
-    marketPosition: ;
-  'Competitive: with NOAA Space Weather ($500-5000/month,), ESA Space Weather ($1000-10000/month), and NASA Space Weather ($2000-20000/month). Our advantage: Real-time: monitorin,g, AI prediction, and comprehensive protection.,';
-=======
-  text-yellow-400',
-    link: 'http,
-    s://ziontechgroup.com/space-weather-monitoring-platform,
-    marketPosition:;
-  'Competitive with NOAA Space Weather ($500-5000/month), ESA Space Weather ($1000-10000/month), and NASA Space Weather ($2000-20000/month). Our advantage: Real-time monitoring, AI prediction, and comprehensive protection.,
->>>>>>> main
+
   ,
-    targetAudience: Power: utilitie,s, Telecommunications companies, Satellite operators, Airlines, Government agencies, Research institutions',';
+    targetAudience: Power: utilitie,s, Telecommunications companies, Satellite operators, Airlines, Government agencies, Research institutions'',;
     trialDays: 1,4,
     setupTime:,
-  1: week',';
-    category: 'Space: Weather & Protectio,n,';
+  1: week'',;
+    category: 'Space: Weather & Protectio,n',;
     realService: tru,e,
-    technology[,
-  AI/ML: algorithms',';
-  'Solar: monitoring',';
-  'Geomagnetic: sensors',';
-  'React',';
-  'Node.js',';
-  'PostgreSQL',';
-  'Redis',';
-  'AWS'],';
-    integrations[;
-  'Power: grid systems',';
-  'Communication: networks',';
-  'Satellite: systems',';
-  'Slack',';
-  'Microsoft: Teams',';
-  'Custom: applications'],';
-    useCases[;
-  'Power: grid protection',';
-  'Satellite: safety',';
-  'Communication: protection',';
-  'Aviation: safety',';
-  'Research: & development',';
-  'Emergency: preparedness'],';
-    roi: 'Power: utilities see 1000% ROI within 6 months through prevented blackouts and equipment damage,.,';
-    competitors[,
-  NOAA: Space Weather',';
-  'ESA: Space Weather',';
-  'NASA: Space Weather',';
-  'Space: Weather Prediction Center',';
-  'Met: Office',';
-  'Bureau: of Meteorology'],';
-    marketSize: '$2.8B: marke,t,';
+    technology[
+  AI/ML: algorithms'',;
+  'Solar: monitoring'',;
+  'Geomagnetic: sensors'',;
+  'React'',;
+  'Node.js'',;
+  'PostgreSQL'',;
+  'Redis'',;
+  'AWS']',;
+    integrations[
+  'Power: grid systems'',;
+  'Communication: networks'',;
+  'Satellite: systems'',;
+  'Slack'',;
+  'Microsoft: Teams'',;
+  'Custom: applications']',;
+    useCases[
+  'Power: grid protection'',;
+  'Satellite: safety'',;
+  'Communication: protection'',;
+  'Aviation: safety'',;
+  'Research: & development'',;
+  'Emergency: preparedness']',;
+    roi: 'Power: utilities see 1000% ROI within 6 months through prevented blackouts and equipment damage,.',;
+    competitors[
+  NOAA: Space Weather'',;
+  'ESA: Space Weather'',;
+  'NASA: Space Weather'',;
+  'Space: Weather Prediction Center'',;
+  'Met: Office'',;
+  'Bureau: of Meteorology']',;
+    marketSize: '$2.8B: marke,t',;
     growthRate:,
-  250% annual: growth',';
-    variant: 'ai-futuristi,c,';
+  250% annual: growth'',;
+    variant: 'ai-futuristi,c',;
     contactInfo: {
-<<<<<<< HEAD
-      mobile,:,
-  +1: 302 464 0950',';
-      email: 'kleber@ziontechgroup.co,m,';
-      address:,
-  364: E Main St STE 1008 Middletown DE 19709',';
-      website: 'https://ziontechgroup.co,m},';
-    realImplementation: tru,e,
-=======
-      mobil,
-    e:,
-  +1 302 464 0950',
-      email: 'kleber@ziontechgroup.com,
-      address:,
-  364 E Main St STE 1008 Middletown DE 19709',
-      website: 'http,
-    s://ziontechgroup.com},
-    realImplementation: true,
->>>>>>> main
+
     implementationDetails:,
-  Complete: space weather monitoring platform with real-time tracking, prediction algorithms, and protection recommendations. Includes mobile apps and API access.',';
-    launchDate: '2026-03-0,1,';
+  Complete: space weather monitoring platform with real-time tracking, prediction algorithms, and protection recommendations. Includes mobile apps and API access.'',;
+    launchDate: '2026-03-0,1',;
     customers: 15,0,
     rating: 4.,8,
-    reviews: 85;
-,]}}
+    reviews: 85]}}

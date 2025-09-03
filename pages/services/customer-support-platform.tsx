@@ -51,8 +51,7 @@ export default function CustomerSupportPlatform() {
         'Integration with CRM systems',
         'Custom bot personality training'
       ]
-    },
-    {
+    }, {
       title: 'Ticket Management System',
       description: 'Streamlined ticket creation, tracking, and resolution workflow',
       icon: MessageSquare,
@@ -64,8 +63,7 @@ export default function CustomerSupportPlatform() {
         'Custom ticket fields',
         'Bulk operations and automation'
       ]
-    },
-    {
+    }, {
       title: 'Live Chat Support',
       description: 'Real-time customer communication with advanced features',
       icon: Headphones,
@@ -77,8 +75,7 @@ export default function CustomerSupportPlatform() {
         'Mobile app for agents',
         'Chat analytics and reporting'
       ]
-    },
-    {
+    }, {
       title: 'Knowledge Base Builder',
       description: 'Create and manage comprehensive self-service documentation',
       icon: FileText,
@@ -108,8 +105,7 @@ export default function CustomerSupportPlatform() {
         'Basic reporting'
       ],
       popular: false
-    },
-    {
+    }, {
       name: 'Professional',
       price: '$149',
       period: '/month',
@@ -124,8 +120,7 @@ export default function CustomerSupportPlatform() {
         'Custom branding'
       ],
       popular: true
-    },
-    {
+    }, {
       name: 'Enterprise',
       price: '$399',
       period: '/month',
@@ -148,18 +143,15 @@ export default function CustomerSupportPlatform() {
       icon: Zap,
       title: 'Reduce Response Time by 80%',
       description: 'AI chatbots provide instant responses, reducing customer wait times significantly'
-    },
-    {
+    }, {
       icon: Users,
       title: 'Improve Customer Satisfaction',
       description: 'Comprehensive support tools help resolve issues faster and more effectively'
-    },
-    {
+    }, {
       icon: BarChart3,
       title: 'Gain Actionable Insights',
       description: 'Detailed analytics help you understand customer needs and optimize support processes'
-    },
-    {
+    }, {
       icon: Target,
       title: 'Scale Efficiently',
       description: 'Automation and AI help you handle more customers without proportionally increasing staff'
@@ -395,5 +387,4 @@ export default function CustomerSupportPlatform() {
         </div>
       </section>
     </PageTransition>
-  );
-}
+  )}

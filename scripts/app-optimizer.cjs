@@ -8,33 +8,27 @@ class AppOptimizer {
   constructor() {
     this.projectRoot = process.cwd();
     this.reportsDir = path.join(this.projectRoot, 'automation-reports');
-    this.ensureDirectories();
-  }
+    this.ensureDirectories()}
 
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true });
-    }
+      fs.mkdirSync(this.reportsDir { recursive: true })}
   }
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
-  }
+    console.log(`[${new Date().toISOString()}] ${message}`)}
 
   async runCommand(command, description) {
     this.log(`🚀 Starting: ${description}`);
     try {
-      const result = execSync(command, {
+      const result = execSync(command {
         cwd: this.projectRoot,
         encoding: 'utf8',
-        timeout: 300000,
-      });
+        timeout: 300000 });
       this.log(`✅ Completed: ${description}`);
-      return { success: true, output: result };
-    } catch (error) {
+      return { success: true, output: result }} catch (error) {
       this.log(`❌ Failed: ${description} - ${error.message}`);
-      return { success: false, error: error.message };
-    }
+      return { success: false, error: error.message }}
   }
 
   async optimizeImages() {
@@ -43,8 +37,7 @@ class AppOptimizer {
     const publicDir = path.join(this.projectRoot, 'public');
     if (!fs.existsSync(publicDir)) {
       this.log('⚠️ Public directory not found');
-      return { success: false, error: 'Public directory not found' };
-    }
+      return { success: false, error: 'Public directory not found' }}
 
     // Find image files
     const imageFiles = this.findImageFiles(publicDir);
@@ -56,8 +49,7 @@ class AppOptimizer {
       success: true,
       filesFound: imageFiles.length,
       files: imageFiles.slice(0, 10) // Show first 10 files
-    };
-  }
+    }}
 
   findImageFiles(dir) {
     const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg'];
@@ -71,27 +63,22 @@ class AppOptimizer {
         const stat = fs.statSync(fullPath);
 
         if (stat.isDirectory()) {
-          scanDir(fullPath);
-        } else if (imageExtensions.includes(path.extname(item).toLowerCase())) {
-          files.push(fullPath);
-        }
+          scanDir(fullPath)} else if (imageExtensions.includes(path.extname(item).toLowerCase())) {
+          files.push(fullPath)}
       }
     };
 
     scanDir(dir);
-    return files;
-  }
+    return files}
 
   async analyzeBundleSize() {
     this.log('📦 Analyzing bundle size...');
     
     try {
       const result = await this.runCommand('npm run analyze', 'Bundle Analysis');
-      return result;
-    } catch (error) {
+      return result} catch (error) {
       this.log('⚠️ Bundle analysis not available');
-      return { success: false, error: 'Bundle analysis not configured' };
-    }
+      return { success: false, error: 'Bundle analysis not configured' }}
   }
 
   async generateSitemap() {
@@ -99,11 +86,9 @@ class AppOptimizer {
     
     try {
       const result = await this.runCommand('npm run sitemap', 'Sitemap Generation');
-      return result;
-    } catch (error) {
+      return result} catch (error) {
       this.log('⚠️ Sitemap generation failed');
-      return { success: false, error: error.message };
-    }
+      return { success: false, error: error.message }}
   }
 
   async checkPerformance() {
@@ -115,8 +100,7 @@ class AppOptimizer {
       imageOptimization: await this.optimizeImages()
     };
 
-    return performanceChecks;
-  }
+    return performanceChecks}
 
   async measureBuildTime() {
     this.log('⏱️ Measuring build time...');
@@ -132,8 +116,7 @@ class AppOptimizer {
       success: result.success,
       buildTime: buildTime,
       buildTimeSeconds: Math.round(buildTime / 1000)
-    };
-  }
+    }}
 
   async generateReport(results) {
     const report = {
@@ -151,8 +134,7 @@ class AppOptimizer {
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     
     this.log(`📊 Optimization report generated: ${reportFile}`);
-    return report;
-  }
+    return report}
 
   generateRecommendations(results) {
     const recommendations = [];
@@ -162,19 +144,16 @@ class AppOptimizer {
         type: 'performance',
         message: 'Build time is slow. Consider optimizing dependencies and code splitting.',
         buildTime: results.buildTime.buildTimeSeconds
-      });
-    }
+      })}
 
     if (results.imageOptimization && results.imageOptimization.filesFound > 20) {
       recommendations.push({
         type: 'images',
         message: 'Many images found. Consider implementing image optimization.',
         imageCount: results.imageOptimization.filesFound
-      });
-    }
+      })}
 
-    return recommendations;
-  }
+    return recommendations}
 
   async run() {
     this.log('🎯 Starting App Optimization');
@@ -188,18 +167,14 @@ class AppOptimizer {
     if (report.recommendations.length > 0) {
       this.log('💡 Recommendations:');
       report.recommendations.forEach(rec => {
-        this.log(`   - ${rec.message}`);
-      });
-    }
+        this.log(`   - ${rec.message}`)})}
 
-    return report;
-  }
+    return report}
 }
 
 // Run the optimizer
 if (require.main === module) {
   const optimizer = new AppOptimizer();
-  optimizer.run().catch(console.error);
-}
+  optimizer.run().catch(console.error)}
 
 module.exports = AppOptimizer;

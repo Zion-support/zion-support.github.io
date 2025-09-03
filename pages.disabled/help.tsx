@@ -18,42 +18,29 @@ import {
   Users,
   Video,
   Within,
-  Yes,
-} from 'lucide-react';
+  Yes } from 'lucide-react';
 
 export default function Help() {
   const faqs = [
     {
       question: 'What services does Zion Tech Group offer?',
       answer:
-        'We offer comprehensive technology solutions including AI development, cloud services, web development, mobile development, blockchain solutions, IoT platforms, and cybersecurity services.',
-    },
-    {
+        'We offer comprehensive technology solutions including AI development, cloud services, web development, mobile development, blockchain solutions, IoT platforms, and cybersecurity services.' }, {
       question: 'How do I get started with a project?',
       answer:
-        "Contact us through our website, email, or phone to schedule a consultation. We'll discuss your requirements and provide a customized solution proposal.",
-    },
-    {
+        "Contact us through our website, email, or phone to schedule a consultation. We'll discuss your requirements and provide a customized solution proposal." }, {
       question: 'What is your typical project timeline?',
       answer:
-        'Project timelines vary based on complexity and scope. Simple websites may take 2-4 weeks, while complex enterprise solutions can take 3-6 months. We provide detailed timelines during consultation.',
-    },
-    {
+        'Project timelines vary based on complexity and scope. Simple websites may take 2-4 weeks, while complex enterprise solutions can take 3-6 months. We provide detailed timelines during consultation.' }, {
       question: 'Do you provide ongoing support and maintenance?',
       answer:
-        'Yes, we offer comprehensive support and maintenance packages to ensure your solutions continue to perform optimally after deployment.',
-    },
-    {
+        'Yes, we offer comprehensive support and maintenance packages to ensure your solutions continue to perform optimally after deployment.' }, {
       question: 'What technologies do you work with?',
       answer:
-        'We work with modern technologies including React, Node.js, Python, AWS, Azure, AI/ML frameworks, blockchain platforms, and mobile development frameworks.',
-    },
-    {
+        'We work with modern technologies including React, Node.js, Python, AWS, Azure, AI/ML frameworks, blockchain platforms, and mobile development frameworks.' }, {
       question: 'How do you ensure data security?',
       answer:
-        'We implement industry-standard security measures including SSL encryption, secure data storage, regular security audits, and compliance with data protection regulations.',
-    },
-  ];
+        'We implement industry-standard security measures including SSL encryption, secure data storage, regular security audits, and compliance with data protection regulations.' } ];
   const supportChannels = [
     {
       icon: Mail,
@@ -61,58 +48,42 @@ export default function Help() {
       description: 'Get help via email with detailed responses',
       contact: 'kleber@ziontechgroup.com',
       responseTime: 'Within 24 hours',
-      color: 'blue',
-    },
-    {
+      color: 'blue' }, {
       icon: Phone,
       title: 'Phone Support',
       description: 'Speak directly with our technical team',
       contact: '+1 (302) 464-0950',
       responseTime: 'Mon-Fri 9AM-6PM EST',
-      color: 'green',
-    },
-    {
+      color: 'green' }, {
       icon: MessageCircle,
       title: 'Live Chat',
       description: 'Get instant help through our live chat',
       contact: 'Available on website',
       responseTime: 'Real-time',
-      color: 'purple',
-    },
-  ];
+      color: 'purple' } ];
 
   const resources = [
     {
       icon: BookOpen,
       title: 'Documentation',
       description: 'Comprehensive guides and API documentation',
-      link: '/docs',
-    },
-    {
+      link: '/docs' }, {
       icon: Video,
       title: 'Video Tutorials',
       description: 'Step-by-step video guides and tutorials',
-      link: '/tutorials',
-    },
-    {
+      link: '/tutorials' }, {
       icon: FileText,
       title: 'Knowledge Base',
       description: 'Searchable articles and troubleshooting guides',
-      link: '/knowledge-base',
-    },
-    {
+      link: '/knowledge-base' }, {
       icon: FileText,
       title: 'Knowledge Base',
       description: 'Searchable articles and troubleshooting guides',
-      link: '/knowledge-base',
-    },
-    {
+      link: '/knowledge-base' }, {
       icon: Users,
       title: 'Community Forum',
       description: 'Connect with other users and get peer support',
-      link: '/community',
-    },
-  ];
+      link: '/community' } ];
   return (
     <>
       <Head>
@@ -333,5 +304,4 @@ export default function Help() {
         </section>
       </main>
     </>
-  );
-}
+  )}

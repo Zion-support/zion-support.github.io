@@ -8,19 +8,16 @@ class DeploymentChecker {
   constructor() {
     this.projectRoot = process.cwd();
     this.reportsDir = path.join(this.projectRoot, 'automation-reports');
-    this.ensureDirectories();
-  }
+    this.ensureDirectories()}
 
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true });
-    }
+      fs.mkdirSync(this.reportsDir { recursive: true })}
   }
 
   log(message) {
     const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] ${message}`);
-  }
+    console.log(`[${timestamp}] ${message}`)}
 
   checkBuildOutput() {
     this.log('🔍 Checking build output...');
@@ -33,8 +30,7 @@ class DeploymentChecker {
       buildManifest: fs.existsSync(path.join(buildDir, 'build-manifest.json'))
     };
 
-    return checks;
-  }
+    return checks}
 
   checkEnvironmentVariables() {
     this.log('🔍 Checking environment variables...');
@@ -55,11 +51,9 @@ class DeploymentChecker {
       checks.requiredVars = requiredVars.map(varName => ({
         name: varName,
         present: envContent.includes(varName)
-      }));
-    }
+      }))}
 
-    return checks;
-  }
+    return checks}
 
   checkPackageJson() {
     this.log('🔍 Checking package.json...');
@@ -77,8 +71,7 @@ class DeploymentChecker {
       devDependencies: Object.keys(packageJson.devDependencies || {})
     };
 
-    return checks;
-  }
+    return checks}
 
   checkNetlifyConfig() {
     this.log('🔍 Checking Netlify configuration...');
@@ -93,29 +86,25 @@ class DeploymentChecker {
     if (checks.configExists) {
       const configContent = fs.readFileSync(netlifyToml, 'utf8');
       checks.hasBuildCommand = configContent.includes('[build]') && configContent.includes('command');
-      checks.hasPublishDirectory = configContent.includes('publish');
-    }
+      checks.hasPublishDirectory = configContent.includes('publish')}
 
-    return checks;
-  }
+    return checks}
 
   checkGitStatus() {
     this.log('🔍 Checking Git status...');
     
     try {
-      const status = execSync('git status --porcelain', { encoding: 'utf8' });
-      const branch = execSync('git branch --show-current', { encoding: 'utf8' }).trim();
+      const status = execSync('git status --porcelain' { encoding: 'utf8' });
+      const branch = execSync('git branch --show-current' { encoding: 'utf8' }).trim();
       
       return {
         hasUncommittedChanges: status.length > 0,
         currentBranch: branch,
         uncommittedFiles: status.split('\n').filter(line => line.trim())
-      };
-    } catch (error) {
+      }} catch (error) {
       return {
         error: error.message
-      };
-    }
+      }}
   }
 
   checkPerformanceMetrics() {
@@ -130,23 +119,19 @@ class DeploymentChecker {
 
     if (fs.existsSync(buildDir)) {
       try {
-        const buildSize = execSync(`du -sh ${buildDir}`, { encoding: 'utf8' });
+        const buildSize = execSync(`du -sh ${buildDir}` { encoding: 'utf8' });
         checks.buildSize = buildSize.split('\t')[0];
         
         const staticDir = path.join(buildDir, 'static');
         if (fs.existsSync(staticDir)) {
-          const staticSize = execSync(`du -sh ${staticDir}`, { encoding: 'utf8' });
-          checks.staticAssets = staticSize.split('\t')[0];
-        }
+          const staticSize = execSync(`du -sh ${staticDir}` { encoding: 'utf8' });
+          checks.staticAssets = staticSize.split('\t')[0]}
         
-        checks.hasManifest = fs.existsSync(path.join(buildDir, 'build-manifest.json'));
-      } catch (error) {
-        checks.error = error.message;
-      }
+        checks.hasManifest = fs.existsSync(path.join(buildDir, 'build-manifest.json'))} catch (error) {
+        checks.error = error.message}
     }
 
-    return checks;
-  }
+    return checks}
 
   async run() {
     this.log('🚀 Starting Deployment Checker');
@@ -175,8 +160,7 @@ class DeploymentChecker {
     console.log(`✅ Netlify config: ${results.netlifyConfig.configExists}`);
     console.log(`✅ Git status clean: ${!results.gitStatus.hasUncommittedChanges}`);
     
-    return results;
-  }
+    return results}
 }
 
 // Run the deployment checker

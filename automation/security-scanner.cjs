@@ -7,19 +7,16 @@ class SecurityScanner {
   constructor() {
     this.projectRoot = process.cwd();
     this.vulnerabilities = [];
-    this.recommendations = [];
-  }
+    this.recommendations = []}
 
   async scanDependencies() {
     console.log('🔍 Scanning dependencies for vulnerabilities...');
     
     try {
-      execSync('npm audit', { stdio: 'pipe' });
-      console.log('✅ No critical vulnerabilities found');
-    } catch (error) {
+      execSync('npm audit' { stdio: 'pipe' });
+      console.log('✅ No critical vulnerabilities found')} catch (error) {
       this.vulnerabilities.push('Dependency vulnerabilities detected');
-      this.recommendations.push('Run npm audit fix');
-    }
+      this.recommendations.push('Run npm audit fix')}
   }
 
   async scanSecrets() {
@@ -41,16 +38,14 @@ class SecurityScanner {
         for (const pattern of sensitivePatterns) {
           if (pattern.test(content)) {
             this.vulnerabilities.push(`Potential secret in ${path.relative(this.projectRoot, file)}`);
-            this.recommendations.push(`Review ${path.relative(this.projectRoot, file)} for exposed secrets`);
-          }
+            this.recommendations.push(`Review ${path.relative(this.projectRoot, file)} for exposed secrets`)}
         }
       } catch (error) {
         // Skip files that can't be read
       }
     }
     
-    console.log('✅ Secret scanning completed');
-  }
+    console.log('✅ Secret scanning completed')}
 
   findSourceFiles() {
     const files = [];
@@ -59,8 +54,7 @@ class SecurityScanner {
     dirs.forEach(dir => {
       const fullPath = path.join(this.projectRoot, dir);
       if (fs.existsSync(fullPath)) {
-        this.findFilesRecursively(fullPath, files);
-      }
+        this.findFilesRecursively(fullPath, files)}
     });
     
     return files.filter(file => 
@@ -68,8 +62,7 @@ class SecurityScanner {
       file.endsWith('.jsx') || 
       file.endsWith('.ts') || 
       file.endsWith('.tsx')
-    );
-  }
+    )}
 
   findFilesRecursively(dir, files) {
     const items = fs.readdirSync(dir);
@@ -79,10 +72,8 @@ class SecurityScanner {
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory()) {
-        this.findFilesRecursively(fullPath, files);
-      } else {
-        files.push(fullPath);
-      }
+        this.findFilesRecursively(fullPath, files)} else {
+        files.push(fullPath)}
     }
   }
 
@@ -99,16 +90,14 @@ class SecurityScanner {
           
           // Check for insecure configurations
           if (content.includes('NODE_ENV=development') && file.includes('.env')) {
-            this.recommendations.push(`Review ${file} for production-ready configuration`);
-          }
+            this.recommendations.push(`Review ${file} for production-ready configuration`)}
         } catch (error) {
           // Skip files that can't be read
         }
       }
     }
     
-    console.log('✅ Configuration scanning completed');
-  }
+    console.log('✅ Configuration scanning completed')}
 
   async runSecurityScan() {
     console.log('🛡️  Starting security scan...\n');
@@ -123,17 +112,14 @@ class SecurityScanner {
     
     if (this.vulnerabilities.length > 0) {
       console.log('\n⚠️  Vulnerabilities:');
-      this.vulnerabilities.forEach((vuln, index) => console.log(`${index + 1}. ${vuln}`));
-    }
+      this.vulnerabilities.forEach((vuln, index) => console.log(`${index + 1}. ${vuln}`))}
     
     if (this.recommendations.length > 0) {
       console.log('\n💡 Recommendations:');
-      this.recommendations.forEach((rec, index) => console.log(`${index + 1}. ${rec}`));
-    }
+      this.recommendations.forEach((rec, index) => console.log(`${index + 1}. ${rec}`))}
     
     if (this.vulnerabilities.length === 0) {
-      console.log('\n🎉 No security issues found!');
-    }
+      console.log('\n🎉 No security issues found!')}
   }
 }
 

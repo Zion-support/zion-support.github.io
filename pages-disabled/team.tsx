@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-import SEO from '../components/SEO';
-import { Button } from '../components/ui/Button';
-import { Card } from '../components/ui/Card';
-import { Badge } from '../components/ui/Badge';
-=======
+
 import React from
   'react';
 import { motion } from
@@ -62,8 +55,7 @@ const Team: React.FC = () => {
       twitter: "https://twitter.com/sarahjohnson",
       email: "sarah@ziontechgroup.com",
       featured: true
-    },
-    {
+    }, {
       id: 2,
       name: "Michael Chen",
       title: "Chief Technology Officer",
@@ -76,8 +68,7 @@ const Team: React.FC = () => {
       twitter: "https://twitter.com/michaelchen",
       email: "michael@ziontechgroup.com",
       featured: true
-    },
-    {
+    }, {
       id: 3,
       name: "Emily Rodriguez",
       title: "Chief AI Officer",
@@ -90,8 +81,7 @@ const Team: React.FC = () => {
       twitter: "https://twitter.com/emilyrodriguez",
       email: "emily@ziontechgroup.com",
       featured: true
-    },
-    {
+    }, {
       id: 4,
       name: "David Kim",
       title: "Head of Data Science",
@@ -104,8 +94,7 @@ const Team: React.FC = () => {
       twitter: "https://twitter.com/davidkim",
       email: "david@ziontechgroup.com",
       featured: false
-    },
-    {
+    }, {
       id: 5,
       name: "Lisa Wang",
       title: "Head of Product",
@@ -118,8 +107,7 @@ const Team: React.FC = () => {
       twitter: "https://twitter.com/lisawang",
       email: "lisa@ziontechgroup.com",
       featured: false
-    },
-    {
+    }, {
       id: 6,
       name: "James Wilson",
       title: "Head of Engineering",
@@ -132,8 +120,7 @@ const Team: React.FC = () => {
       twitter: "https://twitter.com/jameswilson",
       email: "james@ziontechgroup.com",
       featured: false
-    },
-    {
+    }, {
       id: 7,
       name: "Maria Garcia",
       title: "Head of Cybersecurity",
@@ -146,8 +133,7 @@ const Team: React.FC = () => {
       twitter: "https://twitter.com/mariagarcia",
       email: "maria@ziontechgroup.com",
       featured: false
-    },
-    {
+    }, {
       id: 8,
       name: "Alex Thompson",
       title: "Head of Cloud Solutions",
@@ -167,10 +153,7 @@ const Team: React.FC = () => {
   const otherMembers = teamMembers.filter(member => !member.featured);
 
   const companyStats = [
-    { label: "Team Members", value: "50+", icon: Users },
-    { label: "Years Combined Experience", value: "500+", icon: Award },
-    { label: "PhD Holders", value: "15+", icon: GraduationCap },
-    { label: "Research Papers Published", value: "100+", icon: Star }
+    { label: "Team Members", value: "50+", icon: Users }, { label: "Years Combined Experience", value: "500+", icon: Award }, { label: "PhD Holders", value: "15+", icon: GraduationCap }, { label: "Research Papers Published", value: "100+", icon: Star }
   ];
 
   const values = [
@@ -179,18 +162,15 @@ const Team: React.FC = () => {
       description: "We push the boundaries of what
   's possible with AI and technology",
       icon: Brain
-    },
-    {
+    }, {
       title: "Client Success",
       description: "Our success is measured by the success of our clients",
       icon: Target
-    },
-    {
+    }, {
       title: "Ethical AI",
       description: "We develop AI solutions that are fair, transparent, and beneficial",
       icon: Shield
-    },
-    {
+    }, {
       title: "Continuous Learning",
       description: "We stay at the forefront of technology through constant learning",
       icon: TrendingUp
@@ -473,7 +453,6 @@ const Team: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default Team;

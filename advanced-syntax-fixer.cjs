@@ -8,13 +8,11 @@ class AdvancedSyntaxFixer {
     this.projectRoot = process.cwd();
     this.fixedFiles = [];
     this.errors = [];
-    this.reportFile = path.join(this.projectRoot, 'advanced-syntax-fix-report.json');
-  }
+    this.reportFile = path.join(this.projectRoot, 'advanced-syntax-fix-report.json')}
 
   log(message) {
     const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] ${message}`);
-  }
+    console.log(`[${timestamp}] ${message}`)}
 
   fixFile(filePath) {
     try {
@@ -30,10 +28,8 @@ class AdvancedSyntaxFixer {
           replacement: (match, quote, content, newline) => {
             if (content.includes('\\' + quote) || content.includes('`')) return match;
             if (content.trim().length > 0 && !content.endsWith(quote)) {
-              return quote + content + quote + ';' + newline;
-            }
-            return match;
-          }
+              return quote + content + quote + ';' + newline}
+            return match}
         },
         // Fix missing semicolons after import statements
         {
@@ -42,12 +38,12 @@ class AdvancedSyntaxFixer {
         },
         // Fix missing semicolons after variable declarations
         {
-          pattern: /(const|let|var)\s+\w+\s*=\s*[^;]+$/gm,
+          pattern: /(const|let|var)\s+\w+\s*=\s*[^]+$/gm,
           replacement: (match) => match.endsWith(';') ? match : match + ';'
         },
         // Fix missing commas in object literals
         {
-          pattern: /(\w+):\s*([^,}\n]+)(\n\s*[^,}])/g,
+          pattern: /(\w+):\s*([^}\n]+)(\n\s*[^}])/g,
           replacement: '$1: $2,$3'
         },
         // Fix missing semicolons after function declarations
@@ -57,17 +53,17 @@ class AdvancedSyntaxFixer {
         },
         // Fix missing semicolons after arrow functions
         {
-          pattern: /const\s+\w+\s*=\s*\([^)]*\)\s*=>\s*[^;]+$/gm,
+          pattern: /const\s+\w+\s*=\s*\([^)]*\)\s*=>\s*[^]+$/gm,
           replacement: (match) => match.endsWith(';') ? match : match + ';'
         },
         // Fix missing semicolons after return statements
         {
-          pattern: /return\s+[^;]+$/gm,
+          pattern: /return\s+[^]+$/gm,
           replacement: (match) => match.endsWith(';') ? match : match + ';'
         },
         // Fix missing semicolons after export statements
         {
-          pattern: /export\s+(const|let|var|function|class|default)\s+[^;]+$/gm,
+          pattern: /export\s+(const|let|var|function|class|default)\s+[^]+$/gm,
           replacement: (match) => match.endsWith(';') ? match : match + ';'
         },
         // Fix missing semicolons after React component declarations
@@ -86,8 +82,7 @@ class AdvancedSyntaxFixer {
         const newContent = fixedContent.replace(fix.pattern, fix.replacement);
         if (newContent !== fixedContent) {
           fixedContent = newContent;
-          hasChanges = true;
-        }
+          hasChanges = true}
       }
 
       // Additional specific fixes for common patterns
@@ -97,19 +92,17 @@ class AdvancedSyntaxFixer {
           pattern: /`([^`]*?)(\n|$)/g,
           replacement: (match, content, newline) => {
             if (!content.includes('`') && content.trim().length > 0) {
-              return '`' + content + '`;' + newline;
-            }
-            return match;
-          }
+              return '`' + content + '`;' + newline}
+            return match}
         },
         // Fix missing semicolons after object destructuring
         {
-          pattern: /(const|let|var)\s*\{[^}]+\}\s*=\s*[^;]+$/gm,
+          pattern: /(const|let|var)\s*\{[^}]+\}\s*=\s*[^]+$/gm,
           replacement: (match) => match.endsWith(';') ? match : match + ';'
         },
         // Fix missing semicolons after array destructuring
         {
-          pattern: /(const|let|var)\s*\[[^\]]+\]\s*=\s*[^;]+$/gm,
+          pattern: /(const|let|var)\s*\[[^\]]+\]\s*=\s*[^]+$/gm,
           replacement: (match) => match.endsWith(';') ? match : match + ';'
         }
       ];
@@ -118,23 +111,19 @@ class AdvancedSyntaxFixer {
         const newContent = fixedContent.replace(fix.pattern, fix.replacement);
         if (newContent !== fixedContent) {
           fixedContent = newContent;
-          hasChanges = true;
-        }
+          hasChanges = true}
       }
 
       if (hasChanges) {
         fs.writeFileSync(filePath, fixedContent);
         this.fixedFiles.push(filePath);
         this.log(`✅ Fixed: ${filePath}`);
-        return true;
-      }
+        return true}
 
-      return false;
-    } catch (error) {
+      return false} catch (error) {
       this.errors.push({ file: filePath, error: error.message });
       this.log(`❌ Error fixing ${filePath}: ${error.message}`);
-      return false;
-    }
+      return false}
   }
 
   getAllFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
@@ -149,14 +138,11 @@ class AdvancedSyntaxFixer {
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        files.push(...this.getAllFiles(fullPath, extensions));
-      } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
-        files.push(fullPath);
-      }
+        files.push(...this.getAllFiles(fullPath, extensions))} else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
+        files.push(fullPath)}
     }
     
-    return files;
-  }
+    return files}
 
   async fixAllFiles() {
     this.log('🔧 Starting advanced syntax fixing...');
@@ -172,8 +158,7 @@ class AdvancedSyntaxFixer {
     this.log(`📁 Found ${allFiles.length} files to check`);
 
     for (const file of allFiles) {
-      this.fixFile(file);
-    }
+      this.fixFile(file)}
 
     this.log(`✅ Fixed ${this.fixedFiles.length} files`);
     this.log(`❌ ${this.errors.length} files had errors`);
@@ -184,8 +169,7 @@ class AdvancedSyntaxFixer {
       errors: this.errors.length,
       fixedFileList: this.fixedFiles,
       errorList: this.errors
-    };
-  }
+    }}
 
   generateReport(results) {
     const report = {
@@ -197,8 +181,7 @@ class AdvancedSyntaxFixer {
 
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
     this.log(`📊 Report generated: ${this.reportFile}`);
-    return report;
-  }
+    return report}
 
   async run() {
     try {
@@ -206,11 +189,9 @@ class AdvancedSyntaxFixer {
       const report = this.generateReport(results);
       
       this.log('🎉 Advanced syntax fixing completed');
-      return report;
-    } catch (error) {
+      return report} catch (error) {
       this.log(`💥 Advanced syntax fixing failed: ${error.message}`);
-      throw error;
-    }
+      throw error}
   }
 }
 
@@ -218,8 +199,6 @@ class AdvancedSyntaxFixer {
 const fixer = new AdvancedSyntaxFixer();
 fixer.run().then(report => {
   console.log('✅ Advanced syntax fixing completed successfully');
-  process.exit(0);
-}).catch(error => {
+  process.exit(0)}).catch(error => {
   console.error('❌ Advanced syntax fixing failed:', error.message);
-  process.exit(1);
-});
+  process.exit(1)});

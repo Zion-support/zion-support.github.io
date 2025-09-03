@@ -11,7 +11,7 @@ module.exports = {
   },
   
   // Webpack optimizations
-  webpack: (config, { dev, isServer }) => {
+  webpack: (config { dev, isServer }) => {
     // Production optimizations
     if (!dev) {
       config.optimization = {
@@ -22,15 +22,9 @@ module.exports = {
             vendor: {
               test: /[\\/]node_modules[\\/]/,
               name: 'vendors',
-              chunks: 'all',
-            },
-          },
-        },
-      };
-    }
+              chunks: 'all' } } } }}
     
-    return config;
-  },
+    return config},
   
   // Enable compression
   compress: true,
@@ -41,6 +35,5 @@ module.exports = {
   // Enable image optimization
   images: {
     domains: ['ziontechgroup.com'],
-    formats: ['image/webp', 'image/avif'],
-  }
+    formats: ['image/webp', 'image/avif'] }
 };

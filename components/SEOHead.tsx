@@ -14,8 +14,7 @@ interface SEOHeadProps {
   section?: string;
   tags?: string[];
   noindex?: boolean;
-  nofollow?: boolean;
-}
+  nofollow?: boolean}
 
 const SEOHead: React.FC<SEOHeadProps> = ({
   title = 'Zion Tech Group - AI & Technology Solutions',
@@ -30,12 +29,10 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   section,
   tags = [],
   noindex = false,
-  nofollow = false,
-}) => {
+  nofollow = false }) => {
   const robots = [
     noindex ? 'noindex' : 'index',
-    nofollow ? 'nofollow' : 'follow',
-  ].join(', ');
+    nofollow ? 'nofollow' : 'follow' ].join(', ');
 
   const structuredData = {
     '@context': 'https://schema.org',
@@ -50,17 +47,13 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       name: 'Zion Tech Group',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://ziontechgroup.com/logo.png',
-      },
-    },
+        url: 'https://ziontechgroup.com/logo.png' } },
     datePublished: publishedTime,
     dateModified: modifiedTime,
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': url,
-    },
-    ...(tags.length > 0 && { keywords: tags.join(', ') }),
-  };
+      '@id': url },
+    ...(tags.length > 0 && { keywords: tags.join(', ') }) };
 
   return (
     <Head>
@@ -82,15 +75,9 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta property="og:image:height" content="630" />
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
-      {publishedTime && <meta property="article:published_time" content={publishedTime} />}
-      {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
-      {author && <meta property="article:author" content={author} />}
-      {section && <meta property="article:section" content={section} />}
-      {tags.map((tag, index) => (
+      {publishedTime && <meta property="article:published_time" content={publishedTime} />}, {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}, {author && <meta property="article:author" content={author} />}, {section && <meta property="article:section" content={section} />}, {tags.map((tag, index) => (
         <meta key={index} property="article:tag" content={tag} />
-      ))}
-
-      {/* Twitter */}
+      ))}, {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
@@ -102,8 +89,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredData),
-        }}
+          __html: JSON.stringify(structuredData) }}
       />
 
       {/* Additional Meta Tags */}
@@ -113,7 +99,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
     </Head>
-  );
-};
+  )};
 
 export default SEOHead;

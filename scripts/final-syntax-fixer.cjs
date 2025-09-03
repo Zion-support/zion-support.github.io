@@ -1,404 +1,135 @@
-#!/usr/bin/env node;
-<<<<<<< HEAD
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
 
-// ANSI color codes for better output;
-const colors = {
-  reset: '\x1b[0m',
-  red: '\x1b[31m',
-  green: '\x1b[32m',
-  yellow: '\x1b[33m',
-  blue: '\x1b[34m',
-  magenta: '\x1b[35m',
-  cyan: '\x1b[36m',
-};
+class FinalSyntaxFixer {
+  constructor() {
+    this.projectRoot = process.cwd();
+    this.fixedFiles = [];
+    this.errors = []}
 
-function log(message, color = `reset`) {
-=======
+  log(message) {
+    console.log(`[${new Date().toISOString()}] ${message}`)}
 
-<<<<<<< HEAD
-const fs = require('fs');
-const path = require('path');
-;
-// ANSI color codes for better output;
-const colors = {;
-  reset: '\x1b[0m',;
-  red: '\x1b[31m',;
-  green: '\x1b[32m',;
-  yellow: '\x1b[33m',;
-  blue: '\x1b[34m',;
-  magenta: '\x1b[35m',;
-  cyan: '\x1b[36m',;
-};
-;
-function log(message, color = 'reset') {;
->>>>>>> main
-  console.log(`${colors[color]}${message}${colors.reset}`);
-}
-;
-function fixFile(filePath) {;
-  try {;
-    if (!fs.existsSync(filePath)) {;
-      return false;
-    }
-<<<<<<< HEAD
+  fixFile(filePath) {
+    try {
+      let content = fs.readFileSync(filePath, 'utf8');
+      let originalContent = content;
+      let fixed = false;
 
-    let content = fs.readFileSync(filePath, `utf8`);
-    let originalContent = content;
-    let fixed = false;
+      // Fix specific syntax issues found in the error logs
+      const fixes = [
+        // Fix broken object syntax
+        { pattern: /}\s*{/g, replacement: '}, {' },
+        { pattern: /]\s*;/g, replacement: '];' },
+        { pattern: /const\s+([^:]+):\s*React\.FC:\s*=\s*\(\)\s*=>\s*,{/g, replacement: 'const $1: React.FC = () => {' },
+        
+        // Fix broken imports
+        { pattern: /import\s+React\s+{\s*useEffect\s*}\s+from\s+'react';/g, replacement: 'import React, { useEffect } from \'react\';' },
+        { pattern: /import\s+type\s+{\s*AppProps\s*}\s+from\s+'next\/app';/g, replacement: 'import type { AppProps } from \'next/app\';' },
+        { pattern: /import\s+'([^']+)';/g, replacement: 'import \'$1\';' },
+        { pattern: /;,"}\);"\}\)/g, replacement: ';' },
+        
+        // Fix merge conflict markers
+        { pattern: //g, replacement: '' },
+        { pattern: //g, replacement: '' },
+        { pattern: //g, replacement: '' },
+        
+        // Fix broken object properties
+        { pattern: /category:\s*'([^']*)\s*'\s*}\s*{/g, replacement: 'category: \'$1\' }, {' },
+        { pattern: /pricing:\s*'([^']*)\s*'\s*,\s*delivery:\s*'([^']*)\s*'\s*,\s*category:\s*'([^']*)\s*'\s*}\s*{/g, replacement: 'pricing: \'$1\', delivery: \'$2\', category: \'$3\' }, {' },
+        
+        // Fix broken semicolons in object literals
+        { pattern: /this\.metrics\s*=\s*{;/g, replacement: 'this.metrics = {' },
+        { pattern: /;\s*}/g, replacement: '}' },
+        { pattern: /;\s*]/g, replacement: ']' },
+        
+        // Fix broken function declarations
+        { pattern: /const\s+([^=]+)\s*=\s*\(\)\s*=>\s*,{/g, replacement: 'const $1 = () => {' },
+        
+        // Fix broken array syntax
+        { pattern: /\[\s*;/g, replacement: '[' },
+        { pattern: /,\s*\]/g, replacement: ']' },
+        
+        // Fix broken quotes
+        { pattern: /'([^']*)\s*'/g, replacement: '\'$1\'' },
+        { pattern: /"([^"]*)\s*"/g, replacement: '"$1"' }
+      ];
 
-    // Fix 1: Fix unterminated strings at the beginning of files;
-    // Look for files that start with unterminated strings;
-    const unterminatedStringStartRegex = /^(['"])([^'"]*?)(?:\n|$)/;
-    if (unterminatedStringStartRegex.test(content)) {
-      content = content.replace(unterminatedStringStartRegex, `$1$2$1`);
-      fixed = true;log(`Fixed unterminated string at start in ${filePath}`, `yellow`);
-    }
+      for (const fix of fixes) {
+        const newContent = content.replace(fix.pattern, fix.replacement);
+        if (newContent !== content) {
+          content = newContent;
+          fixed = true}
+      }
 
-    // Fix 2: Fix missing semicolons after import statements;
-    const missingSemicolonAfterImportRegex = /(import\s+[^;]+?)(\n)/g;
-    if (missingSemicolonAfterImportRegex.test(content)) {
-      content = content.replace(missingSemicolonAfterImportRegex, `$1;$2`);
-      fixed = true;log(`Fixed missing semicolons after imports in ${filePath}`, `yellow`);
-    }
+      if (content !== originalContent) {
+        fs.writeFileSync(filePath, content, 'utf8');
+        this.fixedFiles.push(filePath);
+        this.log(`✅ Fixed syntax errors in ${filePath}`)}
 
-    // Fix 3: Fix unterminated string literals in TypeScript files;
-    const unterminatedStringLiteralRegex = /(['"])([^'"]*?)(?:\n|$)/g;
-    if (unterminatedStringLiteralRegex.test(content)) {
-      content = content.replace(unterminatedStringLiteralRegex, `$1$2$1`);
-      fixed = true;log(`Fixed unterminated string literals in ${filePath}`, `yellow`);
-    }
-
-    // Fix 4: Fix missing semicolons in object properties;
-    const missingSemicolonInObjectRegex = /(\w+):\s*([^;]+?)(\n\s*\w+:)/g;
-    if (missingSemicolonInObjectRegex.test(content)) {
-      content = content.replace(missingSemicolonInObjectRegex, `$1: $2;$3`);
-      fixed = true;log(`Fixed missing semicolons in objects in ${filePath}`, `yellow`);
-    }
-
-    // Fix 5: Fix unterminated comments;
-    const unterminatedCommentRegex = /\/\*([^*]*?)(?:\n|$)/g;
-    if (unterminatedCommentRegex.test(content)) {
-      content = content.replace(unterminatedCommentRegex, `/*$1*/`);
-      fixed = true;log(`Fixed unterminated comments in ${filePath}`, `yellow`);
-    }
-
-    // Fix 6: Fix missing semicolons before export statements;
-    const missingSemicolonBeforeExportRegex = /(\w+)\s*\nexport\s+/g;
-    if (missingSemicolonBeforeExportRegex.test(content)) {
-      content = content.replace(
-        missingSemicolonBeforeExportRegex,$1;\nexport `
-=======
-;
-    let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
-    let fixed = false;
-;
-    // Fix 1: Fix unterminated strings at the beginning of files;
-    // Look for files that start with unterminated strings;
-    const unterminatedStringStartRegex = /^(['"])([^'"]*?)(?:\n|$)/;
-    if (unterminatedStringStartRegex.test(content)) {;
-      content = content.replace(unterminatedStringStartRegex, '$1$2$1');
-      fixed = true;log(`Fixed unterminated string at start in ${filePath}`, 'yellow');
-    }
-;
-    // Fix 2: Fix missing semicolons after import statements;
-    const missingSemicolonAfterImportRegex = /(import\s+[^;]+?)(\n)/g;
-    if (missingSemicolonAfterImportRegex.test(content)) {;
-      content = content.replace(missingSemicolonAfterImportRegex, '$1;$2');
-      fixed = true;log(`Fixed missing semicolons after imports in ${filePath}`, 'yellow');
-    }
-;
-    // Fix 3: Fix unterminated string literals in TypeScript files;
-    const unterminatedStringLiteralRegex = /(['"])([^'"]*?)(?:\n|$)/g;
-    if (unterminatedStringLiteralRegex.test(content)) {;
-      content = content.replace(unterminatedStringLiteralRegex, '$1$2$1');
-      fixed = true;log(`Fixed unterminated string literals in ${filePath}`, 'yellow');
-    }
-;
-    // Fix 4: Fix missing semicolons in object properties;
-    const missingSemicolonInObjectRegex = /(\w+):\s*([^;]+?)(\n\s*\w+:)/g;
-    if (missingSemicolonInObjectRegex.test(content)) {;
-      content = content.replace(missingSemicolonInObjectRegex, '$1: $2;$3');
-      fixed = true;log(`Fixed missing semicolons in objects in ${filePath}`, 'yellow');
-    }
-;
-    // Fix 5: Fix unterminated comments;
-    const unterminatedCommentRegex = /\/\*([^*]*?)(?:\n|$)/g;
-    if (unterminatedCommentRegex.test(content)) {;
-      content = content.replace(unterminatedCommentRegex, '/*$1*/');
-      fixed = true;log(`Fixed unterminated comments in ${filePath}`, 'yellow');
-    }
-;
-    // Fix 6: Fix missing semicolons before export statements;
-    const missingSemicolonBeforeExportRegex = /(\w+)\s*\nexport\s+/g;
-    if (missingSemicolonBeforeExportRegex.test(content)) {;
-      content = content.replace(;
-        missingSemicolonBeforeExportRegex,$1;\nexport ';
->>>>>>> main
-      );
-      fixed = true;log(`Fixed missing semicolon before export in ${filePath}`, `yellow');
-    }
-;
-    // Fix 7: Fix unterminated template literalsconst unterminatedTemplateLiteralRegex = /`([^`]*?)(?:\n|$)/g;
-    if (unterminatedTemplateLiteralRegex.test(content)) {content = content.replace(unterminatedTemplateLiteralRegex, ``$1``);
-      fixed = true;log(`Fixed unterminated template literals in ${filePath}`, `yellow`);
-    }
-<<<<<<< HEAD
-
-    // Fix 8: Fix missing semicolons in function calls;
-    const missingSemicolonInFunctionCallRegex = /(\w+\([^)]*\))\s*\n/g;
-    if (missingSemicolonInFunctionCallRegex.test(content)) {
-      content = content.replace(missingSemicolonInFunctionCallRegex, `$1;\n`);
-      fixed = true;
-      log(Fixed missing semicolons in function calls in ${filePath}`,
-        `yellow'
-      );
-    }
-
-    // Fix 9: Fix unterminated JSX attributes;
-    const unterminatedJSXAttributeRegex = /(\w+)=["']([^"']*?)(?:\n|$)/g;
-    if (unterminatedJSXAttributeRegex.test(content)) {
-      content = content.replace(unterminatedJSXAttributeRegex, `$1="$2"`);
-      fixed = true;log(`Fixed unterminated JSX attributes in ${filePath}`, `yellow`);
-    }
-
-    // Fix 10: Fix missing semicolons in variable declarations;
-    const missingSemicolonInVarDeclRegex =
-      /(const|let|var)\s+(\w+)\s*=\s*([^;]+?)(\n)/g;
-    if (missingSemicolonInVarDeclRegex.test(content)) {
-      content = content.replace(
-        missingSemicolonInVarDeclRegex,$1 $2 = $3;$4`
-      );
-      fixed = true;
-      log( `Fixed missing semicolons in variable declarations in ${filePath}`,yellow'
-      );
-    }
-
-    if (fixed && content !== originalContent) {
-      fs.writeFileSync(filePath, content, `utf8`);
-      log(`✅ Fixed syntax issues in ${filePath}`, `green`);
-=======
-;
-    // Fix 8: Fix missing semicolons in function calls;
-    const missingSemicolonInFunctionCallRegex = /(\w+\([^)]*\))\s*\n/g;
-    if (missingSemicolonInFunctionCallRegex.test(content)) {;
-      content = content.replace(missingSemicolonInFunctionCallRegex, '$1;\n');
-      fixed = true;
-      log(Fixed missing semicolons in function calls in ${filePath}',;
-        'yellow';
-      );
-    }
-;
-    // Fix 9: Fix unterminated JSX attributes;
-    const unterminatedJSXAttributeRegex = /(\w+)=["']([^"']*?)(?:\n|$)/g;
-    if (unterminatedJSXAttributeRegex.test(content)) {;
-      content = content.replace(unterminatedJSXAttributeRegex, '$1="$2"');
-      fixed = true;log(`Fixed unterminated JSX attributes in ${filePath}`, 'yellow');
-    }
-;
-    // Fix 10: Fix missing semicolons in variable declarations;
-    const missingSemicolonInVarDeclRegex =;
-      /(const|let|var)\s+(\w+)\s*=\s*([^;]+?)(\n)/g;
-    if (missingSemicolonInVarDeclRegex.test(content)) {;
-      content = content.replace(;
-        missingSemicolonInVarDeclRegex,$1 $2 = $3;$4';
-      );
-      fixed = true;
-      log( `Fixed missing semicolons in variable declarations in ${filePath}',yellow';
-      );
-    }
-;
-    if (fixed && content !== originalContent) {;
-      fs.writeFileSync(filePath, content, 'utf8');
-      log(`✅ Fixed syntax issues in ${filePath}`, 'green');
->>>>>>> main
-      return true;
-    }
-;
-    return false;
-  } catch (error) { log(`❌ Error fixing ${filePath }: ${error.message}`, `red`);
-    return false;
+      return fixed} catch (error) {
+      this.errors.push({ file: filePath, error: error.message });
+      this.log(`❌ Error fixing ${filePath}: ${error.message}`);
+      return false}
   }
-}
-;
-function scanAndFixDirectory(;
-  dirPath,;
-  extensions = ['.js', '.jsx', '.ts', '.tsx'];
-) {;
-  let totalFiles = 0;
-=======
-const fs = require('fs');';const path = require('path');';';// ANSI color codes for better output;
-const colors = {;
-  "reset": '\x1b[0m',';  "red": '\x1b[31m',';  "green": '\x1b[32m',';  "yellow": '\x1b[33m',';  "blue": '\x1b[34m',';  "magenta": '\x1b[35m',';  "cyan": '\x1b[36m',';};';;
-function log(message, color = 'reset') {';  console.log(`${colors[color]}${message}${colors.reset}`);`;}
-;
-function fixFile(filePath) {;
-  try {;
-    if (!fs.existsSync(filePath)) {;
-      return false;,
-}
-;
-    let content = fs.readFileSync(filePath, 'utf8');';    let originalContent = content;';    let fixed = false;
-;
-    // Fix "1": Fix unterminated strings at the beginning of files;
-    // Look for files that start with unterminated strings;
-    const unterminatedStringStartRegex = /^(['"])([^'"]*?)(?:\n|$)/;";    if (unterminatedStringStartRegex.test(content)) {;
-      content = content.replace(unterminatedStringStartRegex, '$1$2$1');';      fixed = true;log(`Fixed unterminated string at start in ${filePath}`, 'yellow');';    }`;';    // Fix "2": Fix missing semicolons after import statements;";    const missingSemicolonAfterImportRegex = /(import\s+[^;]+?)(\n)/g;
-    if (missingSemicolonAfterImportRegex.test(content)) {;
-      content = content.replace(missingSemicolonAfterImportRegex, '$1;$2');';      fixed = true;log(`Fixed missing semicolons after imports in ${filePath}`, 'yellow');';    }`;';    // Fix "3": Fix unterminated string literals in TypeScript files;
-    const unterminatedStringLiteralRegex = /(['"])([^'"]*?)(?:\n|$)/g;";    if (unterminatedStringLiteralRegex.test(content)) {;
-      content = content.replace(unterminatedStringLiteralRegex, '$1$2$1');';      fixed = true;log(`Fixed unterminated string literals in ${filePath}`, 'yellow');';    }`;';    // Fix "4": Fix missing semicolons in object properties;";    const missingSemicolonInObjectRegex = /(\w+):\s*([^;]+?)(\n\s*\w+:)/g;
-    if (missingSemicolonInObjectRegex.test(content)) {;
-      content = content.replace(missingSemicolonInObjectRegex, '$"1": $2;$3');';      fixed = true;log(`Fixed missing semicolons in objects in ${filePath}`, 'yellow');';    }`;';    // Fix "5": Fix unterminated comments;";    const unterminatedCommentRegex = /\/\*([^*]*?)(?:\n|$)/g;
-    if (unterminatedCommentRegex.test(content)) {;
-      content = content.replace(unterminatedCommentRegex, '/*$1*/');';      fixed = true;log(`Fixed unterminated comments in ${filePath}`, 'yellow');';    }`;';    // Fix "6": Fix missing semicolons before export statements;
-    const missingSemicolonBeforeExportRegex = /(\w+)\s*\nexport\s+/g;
-    if (missingSemicolonBeforeExportRegex.test(content)) {;
-      content = content.replace(;);        missingSemicolonBeforeExportRegex,$1;\nexport '';      );';      fixed = true;log(`Fixed missing semicolon before export in ${filePath}`, 'yellow');';    }`;';    // Fix "7": Fix unterminated template literalsconst unterminatedTemplateLiteralRegex = /`([^`]*?)(?:\n|$)/g;`;    if (unterminatedTemplateLiteralRegex.test(content)) {content = content.replace(unterminatedTemplateLiteralRegex, '`$1`');';      fixed = true;log(`Fixed unterminated template literals in ${filePath}`, 'yellow');';    }`;';    // Fix "8": Fix missing semicolons in function calls;";    const missingSemicolonInFunctionCallRegex = /(\w+\([^)]*\))\s*\n/g;
-    if (missingSemicolonInFunctionCallRegex.test(content)) {;
-      content = content.replace(missingSemicolonInFunctionCallRegex, '$1;\n');';      fixed = true;';      log(Fixed missing semicolons in function calls in ${filePath}',';        'yellow'';      );,';}
-;
-    // Fix "9": Fix unterminated JSX attributes;";    const unterminatedJSXAttributeRegex = /(\w+)=["']([^"']*?)(?:\n|$)/g;';    if (unterminatedJSXAttributeRegex.test(content)) {;
-      content = content.replace(unterminatedJSXAttributeRegex, '$1="$2"');';      fixed = true;log(`Fixed unterminated JSX attributes in ${filePath}`, 'yellow');';    }`;';    // Fix "10": Fix missing semicolons in variable declarations;
-    const missingSemicolonInVarDeclRegex =;
-      /(const|let|var)\s+(\w+)\s*=\s*([^;]+?)(\n)/g;
-    if (missingSemicolonInVarDeclRegex.test(content)) {;
-      content = content.replace(;);        missingSemicolonInVarDeclRegex,$1 $2 = $3;$4'';      );';      fixed = true;
-      log( `Fixed missing semicolons in variable declarations in ${filePath}',yellow'';      );`;    }';;
-    if (fixed && content !== originalContent) {;
-      fs.writeFileSync(filePath, content, 'utf8');';      log(`✅ Fixed syntax issues in ${filePath}`, 'green');';      return true;`;    }';;
-    return false;,
-} catch (error) {log(`❌ Error fixing ${filePath}: ${error.message}`, 'red');';    return false;`;  }';}
-;
-function scanAndFixDirectory(;);  dirPath,;
-  extensions = ['.js', '.jsx', '.ts', '.tsx']';) {;';  let totalFiles = 0;
->>>>>>> main
-  let fixedFiles = 0;
-;
-  function processDirectory(currentPath) {;
-    try {;
-      const items = fs.readdirSync(currentPath);
-;
-      for (const item of items) {;
-        const fullPath = path.join(currentPath, item);
-        const stat = fs.statSync(fullPath);
-<<<<<<< HEAD
 
-        if (stat.isDirectory()) {
-          // Skip node_modules and other common directories;
-          if (
-            !['node_modules', '.git', '.next', 'dist', `build`].includes(item)
-          ) {
-=======
-;
-        if (stat.isDirectory()) {;
-          // Skip node_modules and other common directories;
-<<<<<<< HEAD
-          if (;
-            !['node_modules', '.git', '.next', 'dist', 'build'].includes(item);
-          ) {;
->>>>>>> main
-            processDirectory(fullPath);
-          }
-=======
-          if(;);            !['node_modules', '.git', '.next', 'dist', 'build'].includes(item)';          ) {;';            processDirectory(fullPath);,
-}
->>>>>>> main
-        } else if (stat.isFile()) {;
-          const ext = path.extname(item);
-          if (extensions.includes(ext)) {;
-            totalFiles++;
-            if (fixFile(fullPath)) {;
-<<<<<<< HEAD
-              fixedFiles++;
-            }
-=======
-              fixedFiles++;,
-}
->>>>>>> main
+  getAllSourceFiles() {
+    const extensions = ['.js', '.jsx', '.ts', '.tsx', '.cjs', '.mjs'];
+    const files = [];
+    const excludeDirs = ['node_modules', '.git', '.next', 'dist', 'out'];
+
+    const scanDirectory = (dir) => {
+      try {
+        const items = fs.readdirSync(dir);
+        
+        for (const item of items) {
+          const fullPath = path.join(dir, item);
+          const stat = fs.statSync(fullPath);
+          
+          if (stat.isDirectory()) {
+            if (!excludeDirs.includes(item) && !item.startsWith('.')) {
+              scanDirectory(fullPath)}
+          } else if (stat.isFile()) {
+            const ext = path.extname(item);
+            if (extensions.includes(ext)) {
+              files.push(fullPath)}
           }
         }
-      }
-<<<<<<< HEAD
-    } catch (error) { 
-      log(❌ Error processing directory ${currentPath }: ${error.message}`,
-        `red'
-=======
-    } catch (error) {;
-<<<<<<< HEAD
-      log(❌ Error processing directory ${currentPath}: ${error.message}',;
-        'red';
->>>>>>> main
-      );
-    }
-=======
-      log(❌ Error processing directory ${currentPath}: ${error.message}',';        'red'';      );,';}
->>>>>>> main
-  }
-;
-  processDirectory(dirPath);
-  return { totalFiles, fixedFiles };,
-}
-;
-function main() {;
-  log('🔧 Final Syntax Fixer Starting...', 'cyan');';';  const sourceDirs = ['src', 'pages', 'components', 'utils', 'hooks', 'types'];';  let totalProcessed = 0;';  let totalFixed = 0;
-;
-  for (const dir of sourceDirs) {;
-    if (fs.existsSync(dir)) {log(`\n📁 Processing "directory": ${dir}`, 'blue');';      const { totalFiles, fixedFiles } = scanAndFixDirectory(dir);`;      totalProcessed += totalFiles;
-      totalFixed += fixedFiles;,
-}
-<<<<<<< HEAD
-;
-function main() {;
-  log('🔧 Final Syntax Fixer Starting...', 'cyan');
-<<<<<<< HEAD
+      } catch (error) {
+        this.log(`⚠️ Error scanning directory ${dir}: ${error.message}`)}
+    };
 
-  const sourceDirs = ['src', 'pages', 'components', 'utils', 'hooks', `types`];
-  let totalProcessed = 0;
-  let totalFixed = 0;
+    scanDirectory(this.projectRoot);
+    return files}
 
-  for (const dir of sourceDirs) {
-    if (fs.existsSync(dir)) {log(`\n📁 Processing directory: ${dir}`, `blue`);
-=======
-;
-  const sourceDirs = ['src', 'pages', 'components', 'utils', 'hooks', 'types'];
-  let totalProcessed = 0;
-  let totalFixed = 0;
-;
-  for (const dir of sourceDirs) {;
-    if (fs.existsSync(dir)) {log(`\n📁 Processing directory: ${dir}`, 'blue');
->>>>>>> main
-      const { totalFiles, fixedFiles } = scanAndFixDirectory(dir);
-      totalProcessed += totalFiles;
-      totalFixed += fixedFiles;
-    }
-  }
-<<<<<<< HEAD
-log(`\n🎯 Summary:`, `cyan`);log(`   Total files processed: ${totalProcessed}`, `white`);log(`   Files fixed: ${totalFixed}`, `green`);log(`   Files unchanged: ${totalProcessed - totalFixed}`, `white`);
+  fixAllFiles() {
+    this.log('🔧 Starting final syntax error fixing...');
+    
+    const files = this.getAllSourceFiles();
+    this.log(`📁 Found ${files.length} source files to check`);
 
-=======
-log(`\n🎯 Summary:`, 'cyan');log(`   Total files processed: ${totalProcessed}`, 'white');log(`   Files fixed: ${totalFixed}`, 'green');log(`   Files unchanged: ${totalProcessed - totalFixed}`, 'white');
-;
->>>>>>> main
-  if (totalFixed > 0) {log(`\n✅ Final syntax fixing completed!`, 'green');log(`   Run 'npm run lint' again to check for remaining issues.`, 'yellow');
-  } else {;
-    log(\nℹ️  No syntax issues found that could be automatically fixed.',;
-      'blue';
-    );
-=======
->>>>>>> main
-  }
-log(`\n🎯 "Summary":`, 'cyan');log(`   Total files "processed": ${totalProcessed}`, 'white');log(`   Files "fixed": ${totalFixed}`, 'green');log(`   Files "unchanged": ${totalProcessed - totalFixed}`, 'white');';`;  if (totalFixed > 0) {log(`\n✅ Final syntax fixing completed!`, 'green');log(`   Run 'npm run lint' again to check for remaining issues.`, 'yellow');';  } else {`;    log(\nℹ️  No syntax issues found that could be automatically fixed.',';      'blue'';    );,';}
+    for (const file of files) {
+      this.fixFile(file)}
+
+    this.log(`🎉 Final syntax fixing completed. Fixed ${this.fixedFiles.length} files.`);
+    
+    if (this.errors.length > 0) {
+      this.log(`❌ ${this.errors.length} errors encountered:`);
+      this.errors.forEach(err => {
+        this.log(`   - ${err.file}: ${err.error}`)})}
+
+    return {
+      fixedFiles: this.fixedFiles,
+      errors: this.errors,
+      totalFiles: files.length
+    }}
 }
-;
-if (require.main === module) {;
-<<<<<<< HEAD
-  main();
-=======
-  main();,
->>>>>>> main
-}
-;
-module.exports = { fixFile, scanAndFixDirectory };
+
+// Run the fixer
+if (require.main === module) {
+  const fixer = new FinalSyntaxFixer();
+  fixer.fixAllFiles()}
+
+module.exports = FinalSyntaxFixer;

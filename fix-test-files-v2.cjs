@@ -14,10 +14,11 @@ function fixTestFile(filePath) {
   // Fix unterminated strings in describe and test blocks
   content = content.replace(/describe\('([^']*)', \(\) => \{';/g, "describe('$1', () => {");
   content = content.replace(/test\('([^']*)', \(\) => \{';/g, "test('$1', () => {");
-  content = content.replace(/expect\(([^)]*)\)\.([^;]*);';/g, "expect($1).$2;");
+  content = content.replace(/expect\(([^)]*)\)\.([^]*);
+;/g, "expect($1).$2;");
   
   // Fix malformed JSX render statements
-  content = content.replace(/render\(<([^>]+) \/>\);';/g, "render(<$1 />);");
+  content = content.replace(/render\(<([^>]+) \/>\);;/g, "render(<$1 />);");
   
   // Fix malformed closing braces and parentheses
   content = content.replace(/\}\)\);';$/gm, "});");
@@ -26,12 +27,11 @@ function fixTestFile(filePath) {
   // Fix describe blocks with extra quotes
   content = content.replace(/describe\('([^']*)', \(\) => \{';/g, "describe('$1', () => {");
   
-  return { content, changed: content !== originalContent };
-}
+  return { content, changed: content !== originalContent }}
 
 testDirs.forEach(dir => {
   if (fs.existsSync(dir)) {
-    const files = fs.readdirSync(dir, { recursive: true });
+    const files = fs.readdirSync(dir { recursive: true });
     
     files.forEach(file => {
       if (file.endsWith('.js') || file.endsWith('.jsx') || file.endsWith('.ts') || file.endsWith('.tsx')) {
@@ -43,19 +43,16 @@ testDirs.forEach(dir => {
           if (changed) {
             fs.writeFileSync(filePath, content, 'utf8');
             fixedFiles.push(filePath);
-            console.log(`✅ Fixed ${filePath}`);
-          }
+            console.log(`✅ Fixed ${filePath}`)}
         }
       }
-    });
-  }
+    })}
 });
 
 console.log(`✅ Fixed ${fixedFiles.length} test files`);
 
 if (fixedFiles.length > 0) {
   console.log('Fixed files:');
-  fixedFiles.forEach(file => console.log(`  - ${file}`));
-}
+  fixedFiles.forEach(file => console.log(`  - ${file}`))}
 
 console.log('🎉 Test file fixing v2 completed!');

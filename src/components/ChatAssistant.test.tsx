@@ -11,5 +11,4 @@ export default function ChatAssistant.test() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

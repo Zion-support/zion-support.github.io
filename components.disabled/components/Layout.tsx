@@ -6,14 +6,12 @@ import EnhancedFooter from './layout/EnhancedFooter';
 interface LayoutProps {
   children: React.ReactNode;
   title?: string;
-  description?: string;
-}
+  description?: string}
 
 const Layout: React.FC<LayoutProps> = ({
   children,
   title = 'Zion Tech Group - Leading Technology Solutions Provider',
-  description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.',
-}) => {
+  description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.' }) => {
   return (
     <>
       <Head>
@@ -38,7 +36,6 @@ const Layout: React.FC<LayoutProps> = ({
         <EnhancedFooter />
       </div>
     </>
-  );
-};
+  )};
 
 export default Layout;

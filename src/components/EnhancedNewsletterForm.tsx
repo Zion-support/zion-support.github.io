@@ -11,5 +11,4 @@ export default function EnhancedNewsletterForm() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

@@ -54,8 +54,7 @@ export default function ServicesEnhanced() {
       ],
       deliveryTime: "2-4 weeks",
       href: "/ai-services"
-    },
-    {
+    }, {
       id: "cloud",
       title: "Cloud Platforms",
       subtitle: "Scalable Infrastructure",
@@ -70,8 +69,7 @@ export default function ServicesEnhanced() {
       ],
       deliveryTime: "4-8 weeks",
       href: "/cloud-services"
-    },
-    {
+    }, {
       id: "cybersecurity",
       title: "Cybersecurity",
       subtitle: "Zero-Trust Security",
@@ -86,8 +84,7 @@ export default function ServicesEnhanced() {
       ],
       deliveryTime: "3-6 weeks",
       href: "/cybersecurity"
-    },
-    {
+    }, {
       id: "saas",
       title: "Micro SaaS",
       subtitle: "Custom Solutions",
@@ -114,8 +111,7 @@ export default function ServicesEnhanced() {
       price: "From $15/month",
       features: ["Intelligent response generation", "Smart email prioritization", "Multi-language support", "Analytics & insights"],
       href: "/services/ai-email-responder"
-    },
-    {
+    }, {
       title: "Mobile Survey Tool",
       description: "Create engaging, mobile-optimized surveys that adapt based on user responses. Increase completion rates by 65%.",
       icon: Smartphone,
@@ -123,8 +119,7 @@ export default function ServicesEnhanced() {
       price: "From $20/month",
       features: ["Mobile-first design", "Adaptive question flow", "Offline data collection", "Real-time analytics"],
       href: "/services/mobile-survey-tool"
-    },
-    {
+    }, {
       title: "AI Content Creation Tools",
       description: "Accelerate content production with AI-powered writing, image generation, and video creation tools.",
       icon: PenTool,
@@ -132,8 +127,7 @@ export default function ServicesEnhanced() {
       price: "From $25/month",
       features: ["AI writing assistant", "Image generation", "Video creation", "Content optimization"],
       href: "/services/ai-content-creation-tools"
-    },
-    {
+    }, {
       title: "AI Customer Support Platform",
       description: "Transform customer support with AI-powered chatbots, multi-channel support, and intelligent ticket routing.",
       icon: Headphones,
@@ -141,8 +135,7 @@ export default function ServicesEnhanced() {
       price: "From $40/month",
       features: ["AI-powered chatbots", "Multi-channel support", "Smart ticket routing", "24/7 availability"],
       href: "/services/ai-customer-support-platform"
-    },
-    {
+    }, {
       title: "Website Analytics for Small Business",
       description: "Intuitive dashboard providing key website metrics without requiring technical expertise.",
       icon: BarChart3,
@@ -150,8 +143,7 @@ export default function ServicesEnhanced() {
       price: "From $10/month",
       features: ["Simple data analysis", "Actionable insights", "Business growth strategies", "No technical skills required"],
       href: "/services/website-analytics"
-    },
-    {
+    }, {
       title: "IT Helpdesk Software",
       description: "Custom ticketing system for managed IT service providers with client portals and knowledge bases.",
       icon: Server,
@@ -214,8 +206,7 @@ export default function ServicesEnhanced() {
         border: "hover:border-gray-300"
       }
     };
-    return colors[color as keyof typeof colors] || colors.blue;
-  };
+    return colors[color as keyof typeof colors] || colors.blue};
 
   return (
     <PageTransition>
@@ -296,8 +287,7 @@ export default function ServicesEnhanced() {
                     </Link>
                   </div>
                 </div>
-              );
-            })}
+              )})}
           </div>
         </div>
       </section>
@@ -352,8 +342,7 @@ export default function ServicesEnhanced() {
                     <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </div>
-              );
-            })}
+              )})}
           </div>
         </div>
       </section>
@@ -392,5 +381,4 @@ export default function ServicesEnhanced() {
         </div>
       </section>
     </PageTransition>
-  );
-}
+  )}

@@ -8,12 +8,11 @@ interface SEOProps {
   image?: string;
   url?: string;
   type?: string;
-  siteName?: string;
-}
+  siteName?: string}
 
 const SEO: React.FC<SEOProps> = ({
 title, description,
-  keywords = "AI, artificial intelligence, technology, automation, machine learning, cloud computing, cybersecurity, data analytics, business solutions", image = "https: //ziontechgroup.com/api/placeholder/1200/630","  url = "https: //ziontechgroup.com", type = "website","  siteName = "Zion Tech Group""}) => {"  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} - Zion Tech Group`;'  const fullUrl = url.startsWith('http') ? url : `https://ziontechgroup.com${url}`;''  return (`    <Helmet>
+  keywords = "AI, artificial intelligence, technology, automation, machine learning, cloud computing, cybersecurity, data analytics, business solutions", image = "https: //ziontechgroup.com/api/placeholder/1200/630"",  url = "https: //ziontechgroup.com", type = "website"",  siteName = "Zion Tech Group""}) => {"  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} - Zion Tech Group`;'  const fullUrl = url.startsWith('http') ? url : `https://ziontechgroup.com${url}`;''  return (`    <Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={description} />"      <meta name="keywords" content={keywords} />"      <meta name="author" content="Zion Tech Group" />"      <meta name="robots" content="index, follow" />"      <meta name="viewport" content="width=device-width, initial-scale=1.0" />"      "      {/* Open Graph Meta Tags */}
@@ -22,10 +21,9 @@ title, description,
       <meta name="theme-color" content="#1e293b" />"      <meta name="msapplication-TileColor" content="#1e293b" />"      <meta name="apple-mobile-web-app-capable" content="yes" />"      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />"      "      {/* Canonical URL */}
       <link rel="canonical" href={fullUrl} />"      "      {/* Favicon */}
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />"      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />"      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />"      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />"      <link rel="manifest" href="/site.webmanifest" />"      "      {/* Structured Data */}
-      <script type="application/ld+json">"        {JSON.stringify({"          "@context": "https://schema.org", "@type": "Organization","          "name": "Zion Tech Group", "url": "https://ziontechgroup.com","          "logo": "https://ziontechgroup.com/logo.png", "description": "Leading provider of AI-powered solutions and technology services","          "address": {"            "@type": "PostalAddress", "streetAddress": "123 Technology Drive","            "addressLocality": "San Francisco", "addressRegion": "CA","            "postalCode": "94105", "addressCountry": "US""          },"          "contactPoint": {"            "@type": "ContactPoint", "telephone": "+1-555-123-4567","            "contactType": "customer service", "email": "contact@ziontechgroup.com""          },"          "sameAs": ["            "https://linkedin.com/company/ziontechgroup", "https: //twitter.com/ziontechgroup","            "https: //github.com/ziontechgroup""          ]"        })}</script>
+      <script type="application/ld+json">"        {JSON.stringify({"          "@context": "https://schema.org", "@type": "Organization"",          "name": "Zion Tech Group", "url": "https://ziontechgroup.com"",          "logo": "https://ziontechgroup.com/logo.png", "description": "Leading provider of AI-powered solutions and technology services"",          "address": {"            "@type": "PostalAddress", "streetAddress": "123 Technology Drive"",            "addressLocality": "San Francisco", "addressRegion": "CA"",            "postalCode": "94105", "addressCountry": "US""          }",          "contactPoint": {"            "@type": "ContactPoint", "telephone": "+1-555-123-4567"",            "contactType": "customer service", "email": "contact@ziontechgroup.com""          }",          "sameAs": ["            "https://linkedin.com/company/ziontechgroup", "https: //twitter.com/ziontechgroup"",            "https: //github.com/ziontechgroup""          ]"        })}</script>
     </Helmet>
-  );
-};
+  )};
 
 export { SEO };
 export default SEO;

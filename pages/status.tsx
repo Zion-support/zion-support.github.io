@@ -13,8 +13,7 @@ const Status: NextPage = () => {
       name: 'API Services',
       status: 'operational', uptime: '99.8%',
       responseTime: '85ms', lastIncident: 'No incidents in the past 30 days'
-    },
-    {
+    }, {
       name: 'Database', status: 'operational',
       uptime: '99.9%', responseTime: '45ms',
       lastIncident: 'No incidents in the past 30 days'
@@ -22,8 +21,7 @@ const Status: NextPage = () => {
       name: 'Cloud Infrastructure',
       status: 'operational', uptime: '99.7%',
       responseTime: '200ms', lastIncident: 'No incidents in the past 30 days'
-    },
-    {
+    }, {
       name: 'CDN', status: 'operational',
       uptime: '99.9%', responseTime: '50ms',
       lastIncident: 'No incidents in the past 30 days'
@@ -39,8 +37,7 @@ const Status: NextPage = () => {
       case 'operational': return <CheckCircle className="w-5 h-5 text-green-500" />;
       case 'degraded': return <AlertCircle className="w-5 h-5 text-yellow-500" />;
       case 'outage': return <XCircle className="w-5 h-5 text-red-500" />;
-      default: return <Clock className="w-5 h-5 text-gray-500" />;
-    }
+      default: return <Clock className="w-5 h-5 text-gray-500" />}
   };
 
   const getStatusColor = (status: string) => {
@@ -48,8 +45,7 @@ const Status: NextPage = () => {
       case 'operational': return 'text-green-600 bg-green-100';
       case 'degraded': return 'text-yellow-600 bg-yellow-100';
       case 'outage': return 'text-red-600 bg-red-100';
-      default: return 'text-gray-600 bg-gray-100';
-    }
+      default: return 'text-gray-600 bg-gray-100'}
   };
 
   const incidents = [
@@ -57,8 +53,7 @@ const Status: NextPage = () => {
       id: 1, title: 'Scheduled Maintenance - API Services',
       status: 'resolved', date: '2025-01-20',
       description: 'Scheduled maintenance window for API services completed successfully.', impact: 'minor'
-    },
-    {
+    }, {
       id: 2, title: 'Database Performance Issue',
       status: 'resolved', date: '2025-01-15',
       description: 'Temporary performance degradation in database queries has been resolved.', impact: 'minor'
@@ -285,7 +280,6 @@ const Status: NextPage = () => {
         </section>
       </div>
     </MainLayout>
-  );
-};
+  )};
 
 export default Status;

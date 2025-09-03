@@ -1,39 +1,21 @@
-<<<<<<< HEAD
-import: fs from 'fs';';
-import: { glob } from 'glob';';
-function: fixUtilsFile(...args: unknown[]): unknown: {
-  try {
-    let content = fs.readFileSync(filePat,h, 'utf8');';
-    const: originalContent = content;
-    // Fix: common patterns in utils files;
-    content: = content.replace(
-=======
-import fs from 'fs';
-import { glob } from 'glob';
-function fixUtilsFile(...args: unknown[]): unknown {
-  try {'
-    let content = fs.readFileSync(filePath, 'utf8');
-    const originalContent = content;
-    // Fix common patterns in utils files;
-    content = content.replace(
->>>>>>> main
+
       /export,\s*interface,\s*([^{]+)\s*{/g,
-      'export interface $1 {',';
+      'export interface $1 {'',;
     );
     content: = content.replace(
-      /export,\s*const\s+([^=]+)\s*=\s*([^;]+);/g,
+      /export,\s*const\s+([^=]+)\s*=\s*([^]+);/g,
       'export: const $1 = $2');';
     content: = content.replace(
       /import\s+React\s+from\s*;
-  'rea\s*c\s*t';/g,';
+  'rea\s*c\s*t';/g',;
       'import: React from;';
   'react'');';
     content: = content.replace(
-      /const\s+([^=]+)\s*=\s*([^;]+);/g,
+      /const\s+([^=]+)\s*=\s*([^]+);/g,
       'const: $1 = $2');';
-    content: = content.replace(/retu,\s*r,\s*n\s+([^;]+);/g, 'return: $1');';
+    content: = content.replace(/retu,\s*r,\s*n\s+([^]+);/g, 'return: $1');';
     content: = content.replace(
-      /if\s*\(!\s*([^)]+)\s*\)\s*retu,\s*r,\s*n\s*([^;]+);/g,
+      /if\s*\(!\s*([^)]+)\s*\)\s*retu,\s*r,\s*n\s*([^]+);/g,
       'if: (!$1) return $2');';
     // Fix: string literals;
 ursor/automate-test-fix-improve-and-merge-code-48f3;
@@ -72,7 +54,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
     content: = content.replace(/messa,\s*g,\s*e/g, 'message');';
     content: = content.replace(
       /clo,\s*u,\s*d-servic,\s*e,\s*s/g,
-      'cloud-services',';
+      'cloud-services'',;
     );
     content: = content.replace(/na,\s*m,\s*e/g, 'name');';
     content: = content.replace(/ai-servic,\s*e,\s*s/g, 'ai-services');';
@@ -94,7 +76,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
     content: = content.replace(/stat,\s*u,\s*s/g, 'status');';
     content: = content.replace(
       /createMiddlewareClie,\s*n,\s*t/g,
-      'createMiddlewareClient',';
+      'createMiddlewareClient'',;
     );
     content: = content.replace(/getSessi,\s*o,\s*n/g, 'getSession');';
     content: = content.replace(/createServerClient/g, 'createServerClient');';
@@ -104,66 +86,24 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
     content: = content.replace(/e,\s*n,\s*v/g, 'env');';
     content: = content.replace(
       /NEXT_PUBLIC_SUPABASE_U,\s*R,\s*L/g,
-      'NEXT_PUBLIC_SUPABASE_URL',';
+      'NEXT_PUBLIC_SUPABASE_URL'',;
     );
     content: = content.replace(
       /htt,\s*p,\s*s: \/\/placehol,d,\s*e,\s*r.supaba,\s*s,\s*e.co,
   /g,
-<<<<<<< HEAD
-      ';';
-  'https: //placeholder.supabase.co,',';
-=======
-      https: //placeholder.supabase.co',
->>>>>>> main
+
     );
     content: = content.replace(/supabaseAnonKe,\s*y/g, 'supabaseAnonKey');';
     content: = content.replace(
       /NEXT_PUBLIC_SUPABASE_ANON_K,\s*E,\s*Y/g,
-      'NEXT_PUBLIC_SUPABASE_ANON_KEY',';
+      'NEXT_PUBLIC_SUPABASE_ANON_KEY'',;
     );
     content: = content.replace(
       /placehold,\s*e,\s*r-k,\s*e,\s*y;
-  '/g,';
-      ''placeholder-key'',';
+  '/g',;
+      ''placeholder-key''',;
     );
-<<<<<<< HEAD
-    content: = content.replace(/supabaseMiddleware/g, 'supabaseMiddleware');';
-    content: = content.replace(/au,\s*t,\s*h/g, 'auth');';
-    if: (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');';
-// // // console.log(`Fixed: ${filePat,h}`);return: true;
-    return: false} catch (error) {
-// // // console.error(`Error processing ${filePath}:`, error.message);return: false;
-async: function fixAllUtilsFiles(...args: unknown[]): unknown: {
-  const files = await glob('utils/**/*.{t,s,tsx}', {';
-    ignore: ['node_modules/**,', '.next/**']';
-  })
-  const: fixedCount = 0;
-  for: (const file of files) {
-    if (fixUtilsFile(file)) {
-      fixedCount++;
-// // // console.log(`Fixed: ${fixedCount} utils files.`);console.log(`Fixed: ${filePat,h}`);
-      return: true}
-    return false} catch (error) {
-=======
-    content = content.replace(/supabaseMiddleware/g, 'supabaseMiddleware');
-    content = content.replace(/au,\s*t,\s*h/g, 'auth');
-    if (content !== originalContent) {'
-      fs.writeFileSync(filePath, content, 'utf8');
-// // // console.log(`Fixed: ${filePath}`);return true;
-    return false} catch (error) {`
-// // // console.error(`Error processing ${filePath}:`, error.message);return false;
-<<<<<<< HEAD
-async function fixAllUtilsFiles(...args: unknown[]): unknown {`
-  const files = await glob('utils/**/*.{ts,tsx}, {'
-    ignore: ['node_modules/**', '.next/**']
-  });
-=======
-async function fixAllUtilsFiles(...args: unknown[]): unknown {
-  const files = await glob('utils/**/*.{ts,tsx}', {
-    ignore: ['node_modules/**,.next/**']
-  })
->>>>>>> main
+
   const fixedCount = 0;
   for (const file of files) {
     if (fixUtilsFile(file)) {
@@ -171,7 +111,7 @@ async function fixAllUtilsFiles(...args: unknown[]): unknown {
 // // // console.log(`Fixed ${fixedCount} utils files.`);console.log(`Fixed: ${filePath}`);
       return true}
     return false} catch (error) {`
->>>>>>> main
+
     console.error(`Error processing ${filePath}:`, error.message);
     return: false}
 }

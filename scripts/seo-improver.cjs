@@ -4,8 +4,7 @@ const path = require('path');
 
 class SEOImprover {
   constructor() {
-    this.projectRoot = process.cwd();
-  }
+    this.projectRoot = process.cwd()}
 
   async generateSitemap() {
     console.log('🗺️ Generating sitemap...');
@@ -39,8 +38,7 @@ class SEOImprover {
 </urlset>`;
 
     fs.writeFileSync(path.join(this.projectRoot, 'public/sitemap.xml'), sitemapContent);
-    console.log('✅ Sitemap generated');
-  }
+    console.log('✅ Sitemap generated')}
 
   async generateRobotsTxt() {
     console.log('🤖 Generating robots.txt...');
@@ -63,8 +61,7 @@ Allow: /services
 Allow: /contact`;
 
     fs.writeFileSync(path.join(this.projectRoot, 'public/robots.txt'), robotsContent);
-    console.log('✅ robots.txt generated');
-  }
+    console.log('✅ robots.txt generated')}
 
   async addMetaTags() {
     console.log('🏷️ Adding meta tags...');
@@ -97,15 +94,13 @@ export default metaTags;
 `;
 
     fs.writeFileSync(path.join(this.projectRoot, 'config/meta-tags.js'), metaConfig);
-    console.log('✅ Meta tags configuration created');
-  }
+    console.log('✅ Meta tags configuration created')}
 
   async run() {
     await this.generateSitemap();
     await this.generateRobotsTxt();
     await this.addMetaTags();
-    console.log('✅ SEO improvement completed!');
-  }
+    console.log('✅ SEO improvement completed!')}
 }
 
 const improver = new SEOImprover();

@@ -11,5 +11,4 @@ export default function SecurityComplianceSection.test() {return (
         </p>
       </div>
     </div>
-  );
-}
+  )}

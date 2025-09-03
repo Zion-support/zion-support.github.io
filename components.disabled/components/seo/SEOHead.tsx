@@ -6,8 +6,7 @@ interface ApiResponse<T = unknown> {
   data: T;
   statu,
     s: number;
-  message?: string;
-}
+  message?: string}
 
 interface User {
   id: string;
@@ -15,8 +14,7 @@ interface User {
   nam,
     e: string;
   rol,
-    e: 'admin' | 'user' | 'guest';
-}
+    e: 'admin' | 'user' | 'guest'}
 
 interface Service {
   id: string;
@@ -25,57 +23,25 @@ interface Service {
   pric,
     e: number;
   categor,
-    y: string;
-}
+    y: string}
 
 interface FormData {
-  [key: string]: string | number | boolean | File;
-}
+  [key: string]: string | number | boolean | File}
 
 interface ComponentProps {
   className?: string;
   children?: React.ReactNode;
-  [key: string]: unknown;
-}
+  [key: string]: unknown}
 
 '
 import Head from 'next/head';
 interface SEOHeadProps {
   title?: string;
-<<<<<<< HEAD:components/seo/SEOHead.tsx
-   description?: string;
-   keywords?: string;
-   canonical?: string;
-   ogImage?: string;
-   ogType?: string;
-   twitterCard?: string;
-   noindex?: boolean;
-   structuredData?: object}
-const SEOHead: React.FC<SEOHeadProps> = ({'
-=======
-  description?: string;
-  keywords?: string;
-  canonical?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  noindex?: boolean;
-  structuredData?: object;
-}
-const SEOHead: React.FC<SEOHeadProps> = ({
->>>>>>> main:components.disabled/components/seo/SEOHead.tsx
+:components.disabled/components/seo/SEOHead.tsx
   title = 'Zion Tech Group - Future Technology Solutions', description = 'Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, quantum computing, blockchain infrastructure, and innovative development services.', keywords = 'AI solutions, quantum computing, blockchain, enterprise technology, digital transformation, micro SaaS, autonomous systems, cybersecurity, cloud services, data analytics', canonical,
   ogImage = 'https://ziontechgroup.com/og-image.svg', ogType = 'website',
   twitterCard = 'summary_large_image', noindex = false,
-<<<<<<< HEAD:components/seo/SEOHead.tsx
-  structuredData}) => {'
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;`
-  const canonicalUrl = canonical || 'https: //ziontechgroup.com'
-=======
-  structuredData}) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  const canonicalUrl = canonical || 'https://ziontechgroup.com';
->>>>>>> main:components.disabled/components/seo/SEOHead.tsx
+:components.disabled/components/seo/SEOHead.tsx
   return (
     <Head>
       {/* Basic Meta Tags */}
@@ -130,74 +96,17 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <link rel='dns-prefetch' href='//fonts.googleapis.com' />
       <link rel='dns-prefetch' href='//fonts.gstatic.com' />
       <link rel='dns-prefetch' href='//www.google-analytics.com' />
-      {/* Structured Data */}
-      {structuredData && (
-<<<<<<< HEAD:components/seo/SEOHead.tsx
-        <script'
-          type='application/ld+json';
-=======
-        <script
-          type='application/ld+json'
->>>>>>> main:components.disabled/components/seo/SEOHead.tsx
+      {/* Structured Data */}, {structuredData && (
+:components.disabled/components/seo/SEOHead.tsx
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(structuredData)
           }}
         />
-      )}
-      {/* Default Structured Data for Organization */}
-      {!structuredData && (
-<<<<<<< HEAD:components/seo/SEOHead.tsx
-        <script'
-          type='application/ld+json';
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({'
-              '@context': 'http,
-    s://schema.org', '@type': 'Organization',
-              'name': 'Zion Tech Group', 'url': 'https://ziontechgroup.com',
-              'logo': 'https://ziontechgroup.com/logo.png', 'description': description,
-              'foundingDate': '2020', 'address': {'
-                '@type': 'PostalAddress',
-                'addressCountry': 'US'}, 'contactPoint': {'
-=======
-        <script
-          type='application/ld+json'
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-<<<<<<< HEAD:components/seo/SEOHead.tsx
-              '@context': 'https://schema.org',
-              '@type': 'Organization',
-              'name': 'Zion Tech Group',
-              'url': 'https://ziontechgroup.com',
-              'logo': 'https://ziontechgroup.com/logo.png',
-              'description': description,
-              'foundingDate': '2020',
-              'address': {
-                '@type': 'PostalAddress',
-                'addressCountry': 'US'
-              },
-              'contactPoint': {
->>>>>>> main:components.disabled/components/seo/SEOHead.tsx
+      )}, {/* Default Structured Data for Organization */}, {!structuredData && (
+:components.disabled/components/seo/SEOHead.tsx
                 '@type': 'ContactPoint',
-<<<<<<< HEAD:components/seo/SEOHead.tsx
-                'contactType': 'customer service', 'url': 'https://ziontechgroup.com/contact'},
-              'sameAs': [;
-<<<<<<< HEAD:components/seo/SEOHead.tsx
-                'https://linkedin.com/compunknown/zion-tech-group', 'https: //twitter.com/ZionTechGroup';
-              ], 'offers': {'
-=======
-                'https: //linkedin.com/company/zion-tech-group', 'https: //twitter.com/ZionTechGroup';
-              ], 'offers': {
-=======
-                'contactType': 'customer service',
-                'url': 'https://ziontechgroup.com/contact'
-              },
-              'sameAs': [
-                'https://linkedin.com/company/zion-tech-group',
-                'https://twitter.com/ZionTechGroup'
-              ],
-              'offers': {
->>>>>>> main:components.disabled/components/seo/SEOHead.tsx
->>>>>>> main:components.disabled/components/seo/SEOHead.tsx
+:components.disabled/components/seo/SEOHead.tsx
+:components.disabled/components/seo/SEOHead.tsx
                 '@type': 'AggregateOffer',
                 'offerCount': '500+',
                 'description': 'Technology solutions and services'
@@ -207,26 +116,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
         />
       )}
     </Head>
-  );
-};
+  )};
 
 export default SEOHead;
-=======
-              '@context': 'https://schema.org,@type': 'Organization,name': 'Zion Tech Group,url': 'https://ziontechgroup.com,logo': 'https://ziontechgroup.com/logo.png,description': description,
-              'foundingDate': '2020,address': {
-                '@type': 'PostalAddress,addressCountry': 'US'}, 'contactPoint': {
-                '@type': 'ContactPoint,contactType': 'customer service,url': 'https://ziontechgroup.com/contact'},
-              'sameAs': [;
-                'https://linkedin.com/compunknown/zion-tech-group,https: //twitter.com/ZionTechGroup';
-              ], 'offers': {
-                '@type': 'AggregateOffer,offerCount': '500+,description': 'Technology solutions and services'}
-            })}}
-        />)}
-    </Head>
-  )}
-<<<<<<< HEAD:components/seo/SEOHead.tsx
-export default SEOHead'
-=======
-export default SEOHead
->>>>>>> main:components.disabled/components/seo/SEOHead.tsx
->>>>>>> main:components.disabled/components/seo/SEOHead.tsx
+:components.disabled/components/seo/SEOHead.tsx

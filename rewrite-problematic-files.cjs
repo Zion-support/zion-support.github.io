@@ -5,12 +5,10 @@ const path = require('path');
 
 class FileRewriter {
   constructor() {
-    this.projectRoot = process.cwd();
-  }
+    this.projectRoot = process.cwd()}
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
-  }
+    console.log(`[${new Date().toISOString()}] ${message}`)}
 
   rewriteNotFoundPage() {
     const filePath = path.join(this.projectRoot, 'pages/NotFound.tsx');
@@ -94,18 +92,16 @@ export default function NotFound() {
         </motion.div>
       </div>
     </Layout>
-  );
-}`;
+  )}`;
 
     fs.writeFileSync(filePath, content, 'utf8');
     this.log('✅ Rewrote NotFound.tsx');
-    return true;
-  }
+    return true}
 
   rewriteContactPage() {
     const filePath = path.join(this.projectRoot, 'pages/contact.tsx');
 
-    const content = `import React, { useState } from 'react';
+    const content = `import React { useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
@@ -127,8 +123,7 @@ export default function Contact() {
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
-  };
+    }))};
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -138,8 +133,7 @@ export default function Contact() {
     await new Promise(resolve => setTimeout(resolve, 2000));
     
     setIsSubmitting(false);
-    setIsSubmitted(true);
-  };
+    setIsSubmitted(true)};
 
   const contactMethods = [
     {
@@ -147,20 +141,17 @@ export default function Contact() {
       title: 'Phone',
       details: '+1 (555) 123-4567',
       description: 'Call us for immediate assistance'
-    },
-    {
+    }, {
       icon: Mail,
       title: 'Email',
       details: 'info@ziontechgroup.com',
       description: 'Send us an email anytime'
-    },
-    {
+    }, {
       icon: MapPin,
       title: 'Office',
       details: '123 Tech Street, Innovation City',
       description: 'Visit our headquarters'
-    },
-    {
+    }, {
       icon: Clock,
       title: 'Hours',
       details: 'Mon-Fri 9AM-6PM EST',
@@ -433,32 +424,27 @@ export default function Contact() {
         </div>
       </section>
     </Layout>
-  );
-}`;
+  )}`;
 
     fs.writeFileSync(filePath, content, 'utf8');
     this.log('✅ Rewrote contact.tsx');
-    return true;
-  }
+    return true}
 
   async rewriteAllProblematicFiles() {
     this.log('🔧 Rewriting problematic files...');
 
     const rewrites = [
       () => this.rewriteNotFoundPage(),
-      () => this.rewriteContactPage(),
-    ];
+      () => this.rewriteContactPage() ];
 
     let rewrittenCount = 0;
     for (const rewrite of rewrites) {
       if (rewrite()) {
-        rewrittenCount++;
-      }
+        rewrittenCount++}
     }
 
     this.log(`🎉 Rewrote ${rewrittenCount} problematic files!`);
-    return rewrittenCount > 0;
-  }
+    return rewrittenCount > 0}
 }
 
 // Run the rewriter
@@ -468,13 +454,10 @@ rewriter
   .then(success => {
     if (success) {
       console.log('✅ Problematic files rewritten successfully!');
-      process.exit(0);
-    } else {
+      process.exit(0)} else {
       console.log('❌ No files were rewritten.');
-      process.exit(0);
-    }
+      process.exit(0)}
   })
   .catch(error => {
     console.error('❌ Fatal error:', error);
-    process.exit(1);
-  });
+    process.exit(1)});

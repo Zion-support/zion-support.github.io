@@ -10,8 +10,7 @@ class ComprehensiveAppImprover {
     this.logFile = path.join(this.projectRoot, 'automation-logs.txt');
     this.startTime = new Date();
     this.fixesApplied = [];
-    this.errorsFound = [];
-  }
+    this.errorsFound = []}
 
   log(message, type = 'INFO') {
     const timestamp = new Date().toISOString();
@@ -19,24 +18,21 @@ class ComprehensiveAppImprover {
     console.log(logMessage);
     
     // Append to log file
-    fs.appendFileSync(this.logFile, logMessage + '\n');
-  }
+    fs.appendFileSync(this.logFile, logMessage + '\n')}
 
   async runCommand(command, options = {}) {
     try {
       this.log(`Running command: ${command}`);
-      const result = execSync(command, { 
+      const result = execSync(command { 
         encoding: 'utf8', 
         cwd: this.projectRoot,
         stdio: options.silent ? 'pipe' : 'inherit',
         ...options 
       });
-      return result;
-    } catch (error) {
+      return result} catch (error) {
       this.log(`Command failed: ${command} - ${error.message}`, 'ERROR');
       this.errorsFound.push({ command, error: error.message });
-      return null;
-    }
+      return null}
   }
 
   async installDependencies() {
@@ -50,17 +46,15 @@ class ComprehensiveAppImprover {
     ];
 
     for (const method of methods) {
-      const result = await this.runCommand(method, { silent: true });
+      const result = await this.runCommand(method { silent: true });
       if (result !== null) {
         this.log(`Dependencies installed successfully using: ${method}`);
         this.fixesApplied.push('Dependencies installed');
-        return true;
-      }
+        return true}
     }
 
     this.log('Failed to install dependencies with all methods', 'ERROR');
-    return false;
-  }
+    return false}
 
   async fixPackageJson() {
     this.log('Fixing package.json...');
@@ -75,14 +69,12 @@ class ComprehensiveAppImprover {
       // Remove problematic dependencies
       if (packageJson.dependencies['@tailwindcss/postcss']) {
         delete packageJson.dependencies['@tailwindcss/postcss'];
-        fixes.push('Removed @tailwindcss/postcss');
-      }
+        fixes.push('Removed @tailwindcss/postcss')}
       
       // Ensure TypeScript is properly configured
       if (!packageJson.devDependencies.typescript) {
         packageJson.devDependencies.typescript = '^5.0.0';
-        fixes.push('Added TypeScript dependency');
-      }
+        fixes.push('Added TypeScript dependency')}
       
       // Fix engines
       if (!packageJson.engines) {
@@ -90,18 +82,14 @@ class ComprehensiveAppImprover {
           node: '>=18.0.0',
           npm: '>=8.0.0'
         };
-        fixes.push('Added engines configuration');
-      }
+        fixes.push('Added engines configuration')}
       
       // Write back the fixed package.json
       fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
       
       this.log(`Package.json fixed: ${fixes.join(', ')}`);
-      this.fixesApplied.push(...fixes);
-      
-    } catch (error) {
-      this.log(`Failed to fix package.json: ${error.message}`, 'ERROR');
-    }
+      this.fixesApplied.push(...fixes)} catch (error) {
+      this.log(`Failed to fix package.json: ${error.message}`, 'ERROR')}
   }
 
   async createMissingConfigFiles() {
@@ -117,8 +105,7 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 
 export default [
-  js.configs.recommended,
-  {
+  js.configs.recommended {
     files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       parser: typescriptParser,
@@ -126,45 +113,30 @@ export default [
         ecmaVersion: 'latest',
         sourceType: 'module',
         ecmaFeatures: {
-          jsx: true,
-        },
-      },
-    },
+          jsx: true } } },
     plugins: {
       '@typescript-eslint': typescript,
       'react-hooks': reactHooks,
-      'react-refresh': reactRefresh,
-    },
+      'react-refresh': reactRefresh },
     rules: {
       ...typescript.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
       'react-refresh/only-export-components': [
-        'warn',
-        { allowConstantExport: true },
-      ],
-      '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
-      '@typescript-eslint/no-explicit-any': 'warn',
-    },
-  },
-];`
-      },
-      {
+        'warn' { allowConstantExport: true } ],
+      '@typescript-eslint/no-unused-vars': ['error' { argsIgnorePattern: '^_' }],
+      '@typescript-eslint/no-explicit-any': 'warn' } } ];`
+      }, {
         file: 'next.config.js',
         content: `/** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
-    appDir: true,
-  },
+    appDir: true },
   typescript: {
-    ignoreBuildErrors: false,
-  },
+    ignoreBuildErrors: false },
   eslint: {
-    ignoreDuringBuilds: false,
-  },
+    ignoreDuringBuilds: false },
   images: {
-    domains: ['localhost'],
-  },
-};
+    domains: ['localhost'] } };
 
 module.exports = nextConfig;`
       }
@@ -175,8 +147,7 @@ module.exports = nextConfig;`
       if (!fs.existsSync(configPath)) {
         fs.writeFileSync(configPath, config.content);
         this.log(`Created ${config.file}`);
-        this.fixesApplied.push(`Created ${config.file}`);
-      }
+        this.fixesApplied.push(`Created ${config.file}`)}
     }
   }
 
@@ -184,12 +155,11 @@ module.exports = nextConfig;`
     this.log('Fixing TypeScript errors...');
     
     // Run TypeScript check
-    const tscResult = await this.runCommand('npx tsc --noEmit', { silent: true });
+    const tscResult = await this.runCommand('npx tsc --noEmit' { silent: true });
     
     if (tscResult) {
       this.log('TypeScript check passed');
-      return true;
-    }
+      return true}
     
     // Try to fix common TypeScript issues
     this.log('Attempting to fix TypeScript errors...');
@@ -197,75 +167,63 @@ module.exports = nextConfig;`
     // Add missing type declarations
     const typeDeclarations = `declare module '*.svg' {
   const content: string;
-  export default content;
-}
+  export default content}
 
 declare module '*.png' {
   const content: string;
-  export default content;
-}
+  export default content}
 
 declare module '*.jpg' {
   const content: string;
-  export default content;
-}
+  export default content}
 
 declare module '*.jpeg' {
   const content: string;
-  export default content;
-}
+  export default content}
 
 declare module '*.gif' {
   const content: string;
-  export default content;
-}
+  export default content}
 
 declare module '*.webp' {
   const content: string;
-  export default content;
-}`;
+  export default content}`;
 
     const typesPath = path.join(this.projectRoot, 'types', 'global.d.ts');
     if (!fs.existsSync(path.dirname(typesPath))) {
-      fs.mkdirSync(path.dirname(typesPath), { recursive: true });
-    }
+      fs.mkdirSync(path.dirname(typesPath) { recursive: true })}
     fs.writeFileSync(typesPath, typeDeclarations);
     this.log('Created global type declarations');
     this.fixesApplied.push('Created global type declarations');
     
-    return false;
-  }
+    return false}
 
   async runLinting() {
     this.log('Running linting...');
     
     // Try to run ESLint
-    const lintResult = await this.runCommand('npx eslint . --ext .js,.jsx,.ts,.tsx --fix', { silent: true });
+    const lintResult = await this.runCommand('npx eslint . --ext .js,.jsx,.ts,.tsx --fix' { silent: true });
     
     if (lintResult) {
       this.log('Linting completed successfully');
       this.fixesApplied.push('Linting fixes applied');
-      return true;
-    }
+      return true}
     
     this.log('Linting had issues, but continuing...', 'WARN');
-    return false;
-  }
+    return false}
 
   async buildApp() {
     this.log('Building the application...');
     
-    const buildResult = await this.runCommand('npm run build', { silent: true });
+    const buildResult = await this.runCommand('npm run build' { silent: true });
     
     if (buildResult) {
       this.log('Build completed successfully');
       this.fixesApplied.push('Build successful');
-      return true;
-    }
+      return true}
     
     this.log('Build failed, but continuing with other improvements...', 'WARN');
-    return false;
-  }
+    return false}
 
   async createEnhancedAutomationScripts() {
     this.log('Creating enhanced automation scripts...');
@@ -282,8 +240,7 @@ class HealthChecker {
   constructor() {
     this.projectRoot = process.cwd();
     this.issues = [];
-    this.fixes = [];
-  }
+    this.fixes = []}
 
   async checkDependencies() {
     try {
@@ -292,13 +249,10 @@ class HealthChecker {
       
       if (!nodeModulesExists) {
         this.issues.push('node_modules directory missing');
-        this.fixes.push('Run npm install');
-      }
+        this.fixes.push('Run npm install')}
       
-      console.log('✅ Dependencies check completed');
-    } catch (error) {
-      this.issues.push(\`Dependencies check failed: \${error.message}\`);
-    }
+      console.log('✅ Dependencies check completed')} catch (error) {
+      this.issues.push(\`Dependencies check failed: \${error.message}\`)}
   }
 
   async checkConfiguration() {
@@ -308,31 +262,25 @@ class HealthChecker {
       const filePath = path.join(this.projectRoot, file);
       if (!fs.existsSync(filePath)) {
         this.issues.push(\`Missing configuration file: \${file}\`);
-        this.fixes.push(\`Create \${file}\`);
-      }
+        this.fixes.push(\`Create \${file}\`)}
     }
     
-    console.log('✅ Configuration check completed');
-  }
+    console.log('✅ Configuration check completed')}
 
   async checkTypeScript() {
     try {
-      execSync('npx tsc --noEmit', { stdio: 'pipe' });
-      console.log('✅ TypeScript check passed');
-    } catch (error) {
+      execSync('npx tsc --noEmit' { stdio: 'pipe' });
+      console.log('✅ TypeScript check passed')} catch (error) {
       this.issues.push('TypeScript compilation errors found');
-      this.fixes.push('Fix TypeScript errors');
-    }
+      this.fixes.push('Fix TypeScript errors')}
   }
 
   async checkLinting() {
     try {
-      execSync('npx eslint . --ext .js,.jsx,.ts,.tsx', { stdio: 'pipe' });
-      console.log('✅ Linting check passed');
-    } catch (error) {
+      execSync('npx eslint . --ext .js,.jsx,.ts,.tsx' { stdio: 'pipe' });
+      console.log('✅ Linting check passed')} catch (error) {
       this.issues.push('ESLint errors found');
-      this.fixes.push('Run npx eslint . --ext .js,.jsx,.ts,.tsx --fix');
-    }
+      this.fixes.push('Run npx eslint . --ext .js,.jsx,.ts,.tsx --fix')}
   }
 
   async runAllChecks() {
@@ -349,24 +297,20 @@ class HealthChecker {
     
     if (this.issues.length > 0) {
       console.log('\\n❌ Issues:');
-      this.issues.forEach((issue, index) => console.log(\`\${index + 1}. \${issue}\`));
-    }
+      this.issues.forEach((issue, index) => console.log(\`\${index + 1}. \${issue}\`))}
     
     if (this.fixes.length > 0) {
       console.log('\\n🔧 Suggested fixes:');
-      this.fixes.forEach((fix, index) => console.log(\`\${index + 1}. \${fix}\`));
-    }
+      this.fixes.forEach((fix, index) => console.log(\`\${index + 1}. \${fix}\`))}
     
     if (this.issues.length === 0) {
-      console.log('\\n🎉 All checks passed! Your app is healthy.');
-    }
+      console.log('\\n🎉 All checks passed! Your app is healthy.')}
   }
 }
 
 const checker = new HealthChecker();
 checker.runAllChecks().catch(console.error);`
-      },
-      {
+      }, {
         name: 'automation/performance-optimizer.cjs',
         content: `#!/usr/bin/env node
 const fs = require('fs');
@@ -376,8 +320,7 @@ const { execSync } = require('child_process');
 class PerformanceOptimizer {
   constructor() {
     this.projectRoot = process.cwd();
-    this.optimizations = [];
-  }
+    this.optimizations = []}
 
   async optimizeImages() {
     console.log('🖼️  Optimizing images...');
@@ -385,8 +328,7 @@ class PerformanceOptimizer {
     const publicDir = path.join(this.projectRoot, 'public');
     if (fs.existsSync(publicDir)) {
       // This would integrate with image optimization tools
-      this.optimizations.push('Image optimization completed');
-    }
+      this.optimizations.push('Image optimization completed')}
   }
 
   async optimizeBundle() {
@@ -394,11 +336,9 @@ class PerformanceOptimizer {
     
     try {
       // Run bundle analyzer if available
-      execSync('npm run build', { stdio: 'pipe' });
-      this.optimizations.push('Bundle analysis completed');
-    } catch (error) {
-      console.log('Bundle analysis failed, but continuing...');
-    }
+      execSync('npm run build' { stdio: 'pipe' });
+      this.optimizations.push('Bundle analysis completed')} catch (error) {
+      console.log('Bundle analysis failed, but continuing...')}
   }
 
   async optimizeCode() {
@@ -416,19 +356,16 @@ class PerformanceOptimizer {
         const trimmed = content.trimEnd();
         if (trimmed !== content) {
           content = trimmed + '\\n';
-          modified = true;
-        }
+          modified = true}
         
         if (modified) {
-          fs.writeFileSync(file, content);
-        }
+          fs.writeFileSync(file, content)}
       } catch (error) {
         // Skip files that can't be processed
       }
     }
     
-    this.optimizations.push('Code optimization completed');
-  }
+    this.optimizations.push('Code optimization completed')}
 
   findSourceFiles() {
     const files = [];
@@ -438,8 +375,7 @@ class PerformanceOptimizer {
     
     [srcDir, componentsDir, pagesDir].forEach(dir => {
       if (fs.existsSync(dir)) {
-        this.findFilesRecursively(dir, files);
-      }
+        this.findFilesRecursively(dir, files)}
     });
     
     return files.filter(file => 
@@ -447,8 +383,7 @@ class PerformanceOptimizer {
       file.endsWith('.jsx') || 
       file.endsWith('.ts') || 
       file.endsWith('.tsx')
-    );
-  }
+    )}
 
   findFilesRecursively(dir, files) {
     const items = fs.readdirSync(dir);
@@ -458,10 +393,8 @@ class PerformanceOptimizer {
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory()) {
-        this.findFilesRecursively(fullPath, files);
-      } else {
-        files.push(fullPath);
-      }
+        this.findFilesRecursively(fullPath, files)} else {
+        files.push(fullPath)}
     }
   }
 
@@ -474,15 +407,12 @@ class PerformanceOptimizer {
     
     console.log('\\n✅ Performance optimizations completed:');
     this.optimizations.forEach((opt, index) => {
-      console.log(\`\${index + 1}. \${opt}\`);
-    });
-  }
+      console.log(\`\${index + 1}. \${opt}\`)})}
 }
 
 const optimizer = new PerformanceOptimizer();
 optimizer.runOptimizations().catch(console.error);`
-      },
-      {
+      }, {
         name: 'automation/security-scanner.cjs',
         content: `#!/usr/bin/env node
 const fs = require('fs');
@@ -493,19 +423,16 @@ class SecurityScanner {
   constructor() {
     this.projectRoot = process.cwd();
     this.vulnerabilities = [];
-    this.recommendations = [];
-  }
+    this.recommendations = []}
 
   async scanDependencies() {
     console.log('🔍 Scanning dependencies for vulnerabilities...');
     
     try {
-      execSync('npm audit', { stdio: 'pipe' });
-      console.log('✅ No critical vulnerabilities found');
-    } catch (error) {
+      execSync('npm audit' { stdio: 'pipe' });
+      console.log('✅ No critical vulnerabilities found')} catch (error) {
       this.vulnerabilities.push('Dependency vulnerabilities detected');
-      this.recommendations.push('Run npm audit fix');
-    }
+      this.recommendations.push('Run npm audit fix')}
   }
 
   async scanSecrets() {
@@ -527,16 +454,14 @@ class SecurityScanner {
         for (const pattern of sensitivePatterns) {
           if (pattern.test(content)) {
             this.vulnerabilities.push(\`Potential secret in \${path.relative(this.projectRoot, file)}\`);
-            this.recommendations.push(\`Review \${path.relative(this.projectRoot, file)} for exposed secrets\`);
-          }
+            this.recommendations.push(\`Review \${path.relative(this.projectRoot, file)} for exposed secrets\`)}
         }
       } catch (error) {
         // Skip files that can't be read
       }
     }
     
-    console.log('✅ Secret scanning completed');
-  }
+    console.log('✅ Secret scanning completed')}
 
   findSourceFiles() {
     const files = [];
@@ -545,8 +470,7 @@ class SecurityScanner {
     dirs.forEach(dir => {
       const fullPath = path.join(this.projectRoot, dir);
       if (fs.existsSync(fullPath)) {
-        this.findFilesRecursively(fullPath, files);
-      }
+        this.findFilesRecursively(fullPath, files)}
     });
     
     return files.filter(file => 
@@ -554,8 +478,7 @@ class SecurityScanner {
       file.endsWith('.jsx') || 
       file.endsWith('.ts') || 
       file.endsWith('.tsx')
-    );
-  }
+    )}
 
   findFilesRecursively(dir, files) {
     const items = fs.readdirSync(dir);
@@ -565,10 +488,8 @@ class SecurityScanner {
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory()) {
-        this.findFilesRecursively(fullPath, files);
-      } else {
-        files.push(fullPath);
-      }
+        this.findFilesRecursively(fullPath, files)} else {
+        files.push(fullPath)}
     }
   }
 
@@ -585,16 +506,14 @@ class SecurityScanner {
           
           // Check for insecure configurations
           if (content.includes('NODE_ENV=development') && file.includes('.env')) {
-            this.recommendations.push(\`Review \${file} for production-ready configuration\`);
-          }
+            this.recommendations.push(\`Review \${file} for production-ready configuration\`)}
         } catch (error) {
           // Skip files that can't be read
         }
       }
     }
     
-    console.log('✅ Configuration scanning completed');
-  }
+    console.log('✅ Configuration scanning completed')}
 
   async runSecurityScan() {
     console.log('🛡️  Starting security scan...\\n');
@@ -609,17 +528,14 @@ class SecurityScanner {
     
     if (this.vulnerabilities.length > 0) {
       console.log('\\n⚠️  Vulnerabilities:');
-      this.vulnerabilities.forEach((vuln, index) => console.log(\`\${index + 1}. \${vuln}\`));
-    }
+      this.vulnerabilities.forEach((vuln, index) => console.log(\`\${index + 1}. \${vuln}\`))}
     
     if (this.recommendations.length > 0) {
       console.log('\\n💡 Recommendations:');
-      this.recommendations.forEach((rec, index) => console.log(\`\${index + 1}. \${rec}\`));
-    }
+      this.recommendations.forEach((rec, index) => console.log(\`\${index + 1}. \${rec}\`))}
     
     if (this.vulnerabilities.length === 0) {
-      console.log('\\n🎉 No security issues found!');
-    }
+      console.log('\\n🎉 No security issues found!')}
   }
 }
 
@@ -633,14 +549,12 @@ scanner.runSecurityScan().catch(console.error);`
       const scriptDir = path.dirname(scriptPath);
       
       if (!fs.existsSync(scriptDir)) {
-        fs.mkdirSync(scriptDir, { recursive: true });
-      }
+        fs.mkdirSync(scriptDir { recursive: true })}
       
       fs.writeFileSync(scriptPath, script.content);
       fs.chmodSync(scriptPath, '755');
       this.log(`Created ${script.name}`);
-      this.fixesApplied.push(`Created ${script.name}`);
-    }
+      this.fixesApplied.push(`Created ${script.name}`)}
   }
 
   async updatePackageJsonScripts() {
@@ -662,11 +576,8 @@ scanner.runSecurityScan().catch(console.error);`
       
       fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
       this.log('Updated package.json scripts');
-      this.fixesApplied.push('Updated package.json scripts');
-      
-    } catch (error) {
-      this.log(`Failed to update package.json: ${error.message}`, 'ERROR');
-    }
+      this.fixesApplied.push('Updated package.json scripts')} catch (error) {
+      this.log(`Failed to update package.json: ${error.message}`, 'ERROR')}
   }
 
   async generateReport() {
@@ -689,7 +600,7 @@ scanner.runSecurityScan().catch(console.error);`
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     
     this.log('\\n📊 COMPREHENSIVE APP IMPROVEMENT REPORT');
-    this.log('=====================================');
+    this.log('==');
     this.log(`Duration: ${report.duration}`);
     this.log(`Fixes Applied: ${report.summary.totalFixes}`);
     this.log(`Errors Found: ${report.summary.totalErrors}`);
@@ -698,23 +609,18 @@ scanner.runSecurityScan().catch(console.error);`
     if (this.fixesApplied.length > 0) {
       this.log('\\n🔧 Fixes Applied:');
       this.fixesApplied.forEach((fix, index) => {
-        this.log(`  ${index + 1}. ${fix}`);
-      });
-    }
+        this.log(`  ${index + 1}. ${fix}`)})}
     
     if (this.errorsFound.length > 0) {
       this.log('\\n❌ Errors Found:');
       this.errorsFound.forEach((error, index) => {
-        this.log(`  ${index + 1}. ${error.command}: ${error.error}`);
-      });
-    }
+        this.log(`  ${index + 1}. ${error.command}: ${error.error}`)})}
     
-    this.log(`\\n📄 Full report saved to: ${reportPath}`);
-  }
+    this.log(`\\n📄 Full report saved to: ${reportPath}`)}
 
   async run() {
     this.log('🚀 Starting Comprehensive App Improvement Process...');
-    this.log('================================================');
+    this.log('======');
     
     try {
       // Step 1: Fix package.json
@@ -744,13 +650,10 @@ scanner.runSecurityScan().catch(console.error);`
       // Step 9: Generate report
       await this.generateReport();
       
-      this.log('\\n🎉 Comprehensive App Improvement completed!');
-      
-    } catch (error) {
+      this.log('\\n🎉 Comprehensive App Improvement completed!')} catch (error) {
       this.log(`Fatal error: ${error.message}`, 'ERROR');
       await this.generateReport();
-      process.exit(1);
-    }
+      process.exit(1)}
   }
 }
 

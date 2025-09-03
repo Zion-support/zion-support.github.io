@@ -4,31 +4,26 @@ interface ErrorData {
   error: {
     message: string;
     stack?: string;
-    name: string;
-  };
+    name: string};
   errorInfo: {
-    componentStack: string;
-  };
+    componentStack: string};
   url: string;
   timestamp: number;
-  userAgent: string;
-}
+  userAgent: string}
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
-  }
+    return res.status(405).json({ error: 'Method not allowed' })}
 
   try {
     const data: ErrorData = req.body;
 
     // Validate the error data
     if (!data.error || !data.error.message || !data.url) {
-      return res.status(400).json({ error: 'Invalid error data format' });
-    }
+      return res.status(400).json({ error: 'Invalid error data format' })}
 
     // Log the error (in production, you might want to send to a monitoring service)
-    console.error('Client Error:', {
+    console.error('Client Error:' {
       message: data.error.message,
       name: data.error.name,
       url: data.url,
@@ -49,10 +44,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       success: true, 
       message: 'Error logged successfully',
       timestamp: Date.now()
-    });
-
-  } catch (error) {
+    })} catch (error) {
     console.error('Error processing error data:', error);
-    res.status(500).json({ error: 'Internal server error' });
-  }
+    res.status(500).json({ error: 'Internal server error' })}
 }

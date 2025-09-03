@@ -12,74 +12,48 @@ const Documentation: NextPage = () => {
       icon: Book,
       description: 'Quick start guides and setup instructions',
       articles: [
-        { title: 'Installation Guide', description: 'Step-by-step installation instructions', link: '/docs/installation' },
-        { title: 'Quick Start Tutorial', description: 'Get up and running in 5 minutes', link: '/docs/quick-start' },
-        { title: 'Configuration', description: 'Basic configuration and setup', link: '/docs/configuration' },
-        { title: 'First Project', description: 'Create your first project', link: '/docs/first-project' }
+        { title: 'Installation Guide', description: 'Step-by-step installation instructions', link: '/docs/installation' }, { title: 'Quick Start Tutorial', description: 'Get up and running in 5 minutes', link: '/docs/quick-start' }, { title: 'Configuration', description: 'Basic configuration and setup', link: '/docs/configuration' }, { title: 'First Project', description: 'Create your first project', link: '/docs/first-project' }
       ]
-    },
-    {
+    }, {
       title: 'API Reference',
       icon: Code,
       description: 'Complete API documentation and examples',
       articles: [
-        { title: 'Authentication', description: 'API authentication and security', link: '/docs/api/auth' },
-        { title: 'Endpoints', description: 'Complete API endpoint reference', link: '/docs/api/endpoints' },
-        { title: 'SDKs', description: 'Software development kits', link: '/docs/api/sdks' },
-        { title: 'Rate Limits', description: 'API rate limiting and quotas', link: '/docs/api/rate-limits' }
+        { title: 'Authentication', description: 'API authentication and security', link: '/docs/api/auth' }, { title: 'Endpoints', description: 'Complete API endpoint reference', link: '/docs/api/endpoints' }, { title: 'SDKs', description: 'Software development kits', link: '/docs/api/sdks' }, { title: 'Rate Limits', description: 'API rate limiting and quotas', link: '/docs/api/rate-limits' }
       ]
-    },
-    {
+    }, {
       title: 'Database',
       icon: Database,
       description: 'Database setup and management guides',
       articles: [
-        { title: 'Database Setup', description: 'Configure your database', link: '/docs/database/setup' },
-        { title: 'Schema Design', description: 'Database schema best practices', link: '/docs/database/schema' },
-        { title: 'Migrations', description: 'Database migration guides', link: '/docs/database/migrations' },
-        { title: 'Backup & Recovery', description: 'Data backup and recovery', link: '/docs/database/backup' }
+        { title: 'Database Setup', description: 'Configure your database', link: '/docs/database/setup' }, { title: 'Schema Design', description: 'Database schema best practices', link: '/docs/database/schema' }, { title: 'Migrations', description: 'Database migration guides', link: '/docs/database/migrations' }, { title: 'Backup & Recovery', description: 'Data backup and recovery', link: '/docs/database/backup' }
       ]
-    },
-    {
+    }, {
       title: 'Cloud Services',
       icon: Cloud,
       description: 'Cloud deployment and management',
       articles: [
-        { title: 'AWS Deployment', description: 'Deploy to Amazon Web Services', link: '/docs/cloud/aws' },
-        { title: 'Azure Deployment', description: 'Deploy to Microsoft Azure', link: '/docs/cloud/azure' },
-        { title: 'Google Cloud', description: 'Deploy to Google Cloud Platform', link: '/docs/cloud/gcp' },
-        { title: 'Docker', description: 'Container deployment with Docker', link: '/docs/cloud/docker' }
+        { title: 'AWS Deployment', description: 'Deploy to Amazon Web Services', link: '/docs/cloud/aws' }, { title: 'Azure Deployment', description: 'Deploy to Microsoft Azure', link: '/docs/cloud/azure' }, { title: 'Google Cloud', description: 'Deploy to Google Cloud Platform', link: '/docs/cloud/gcp' }, { title: 'Docker', description: 'Container deployment with Docker', link: '/docs/cloud/docker' }
       ]
-    },
-    {
+    }, {
       title: 'Security',
       icon: Shield,
       description: 'Security best practices and guidelines',
       articles: [
-        { title: 'Security Overview', description: 'Security features and capabilities', link: '/docs/security/overview' },
-        { title: 'Authentication', description: 'User authentication and authorization', link: '/docs/security/auth' },
-        { title: 'Data Protection', description: 'Protecting sensitive data', link: '/docs/security/data-protection' },
-        { title: 'Compliance', description: 'Regulatory compliance guidelines', link: '/docs/security/compliance' }
+        { title: 'Security Overview', description: 'Security features and capabilities', link: '/docs/security/overview' }, { title: 'Authentication', description: 'User authentication and authorization', link: '/docs/security/auth' }, { title: 'Data Protection', description: 'Protecting sensitive data', link: '/docs/security/data-protection' }, { title: 'Compliance', description: 'Regulatory compliance guidelines', link: '/docs/security/compliance' }
       ]
-    },
-    {
+    }, {
       title: 'User Management',
       icon: Users,
       description: 'User roles, permissions, and management',
       articles: [
-        { title: 'User Roles', description: 'Understanding user roles and permissions', link: '/docs/users/roles' },
-        { title: 'Access Control', description: 'Managing access and permissions', link: '/docs/users/access-control' },
-        { title: 'Team Management', description: 'Managing teams and organizations', link: '/docs/users/teams' },
-        { title: 'Single Sign-On', description: 'SSO integration and setup', link: '/docs/users/sso' }
+        { title: 'User Roles', description: 'Understanding user roles and permissions', link: '/docs/users/roles' }, { title: 'Access Control', description: 'Managing access and permissions', link: '/docs/users/access-control' }, { title: 'Team Management', description: 'Managing teams and organizations', link: '/docs/users/teams' }, { title: 'Single Sign-On', description: 'SSO integration and setup', link: '/docs/users/sso' }
       ]
     }
   ];
 
   const quickLinks = [
-    { title: 'API Reference', description: 'Complete API documentation', link: '/docs/api', icon: Code },
-    { title: 'SDKs & Libraries', description: 'Download SDKs for your platform', link: '/docs/sdks', icon: Download },
-    { title: 'Code Examples', description: 'Sample code and tutorials', link: '/docs/examples', icon: Book },
-    { title: 'Status Page', description: 'Service status and uptime', link: '/status', icon: ExternalLink }
+    { title: 'API Reference', description: 'Complete API documentation', link: '/docs/api', icon: Code }, { title: 'SDKs & Libraries', description: 'Download SDKs for your platform', link: '/docs/sdks', icon: Download }, { title: 'Code Examples', description: 'Sample code and tutorials', link: '/docs/examples', icon: Book }, { title: 'Status Page', description: 'Service status and uptime', link: '/status', icon: ExternalLink }
   ];
 
   return (
@@ -248,7 +222,6 @@ const Documentation: NextPage = () => {
         </section>
       </div>
     </MainLayout>
-  );
-};
+  )};
 
 export default Documentation;
