@@ -26,7 +26,7 @@ const nextConfig = {
     if (!dev && !isServer) {
       config.resolve.alias = {
         ...config.resolve.alias,
-        "@": require("path").resolve(__dirname, "./src"),
+        "@": new URL("./src", import.meta.url).pathname,
       }
     }
     
@@ -98,12 +98,4 @@ const nextConfig = {
   },
 }
 
-<<<<<<< HEAD
-module.exports = nextConfig
-=======
-<<<<<<< HEAD
-export default nextConfig; 
-=======
 export default nextConfig
->>>>>>> main
->>>>>>> b391e90bda07aa170ffa9dbe6b590d05c5af574b

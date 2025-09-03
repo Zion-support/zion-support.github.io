@@ -1,195 +1,119 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React, { useEffect, useState, useCallback } from 'react';
-export const PerformanceMonitor: React.FC < PerformanceMonitorProps> = ({
-export default PerformanceMonitor;
-import { motion, AnimatePresence  } from 'framer-motion';
-=======
->>>>>>> main
+import React, { useEffect, useState } from 'react';
 
-import React, { useState, useEffect } from 'react'
+interface PerformanceMetrics {
+  fcp: number | null;
+  lcp: number | null;
+  fid: number | null;
+  cls: number | null;
+  ttfb: number | null;
+}
 
-<<<<<<< HEAD
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [isVisible, setIsVisible] = useState(false);
-  const [performanceScore, setPerformanceScore] = useState<number>(0);
+const PerformanceMonitor: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    fcp: null,
+    lcp: null,
+    fid: null,
+    cls: null,
+    ttfb: null,
+  });
 
-      // FCP scoring(0-25 points)
-      if(metrics.fcp <= threshold.fcp) score -= 0;
-      else if(metrics.fcp <= threshold.fcp * 1.5) score -= 10;
-      else score -= 25;
-
-      // LCP scoring(0-25 points)
-      if(metrics.lcp <= threshold.lcp) score -= 0;
-      else if(metrics.lcp <= threshold.lcp * 1.5) score -= 10;
-      else score -= 25;
-
-      // FID scoring(0-25 points)
-      if(metrics.fid <= threshold.fid) score -= 0;
-      else if(metrics.fid <= threshold.fid * 1.5) score -= 10;
-      else score -= 25;
-
-      // CLS scoring(0-25 points)
-      if(metrics.cls <= threshold.cls) score -= 0;
-      else if(metrics.cls <= threshold.cls * 1.5) score -= 10;
-      else score -= 25;
-
-      return Math.max(0, score)},
-    [threshold]
-  );
-
-      if(value <= thresholdValue) return 'good';
-      if(value <= thresholdValue * 1.5) return 'needs-improvement';
-      return 'poor'},
-    [threshold]
-  );
-
-        case 'needs-improvement':'
-          return 'text-yellow-400';
-        case 'poor':'
-          return 'text-red-400';
-        default:'
-          return 'text-gray-400'}
-    },
-    []
-  );
-
-        case 'needs-improvement':"
-          return <AlertTriangle className="w-4 h-4"  />;
-        case 'poor':"
-          return <AlertTriangle className="w-4 h-4"  />;
-        default:"
-          return <Activity className="w-4 h-4"  />}
-    },
-    []
-  );
   useEffect(() => {
-  // TODO: Add dependencies if needed
+    if (typeof window === 'undefined') return;
 
-  return () => {
-    // Cleanup function
-  };
-}, []);, []);
-
-    if('PerformanceObserver' in window) {
-
-      // Observe FCP
-
-        if(fcpEntry) {
-
-          setMetrics(prev =>
-            prev ? { ...prev, fcp: fcpEntry.startTime } : null
-          )}
-      });
-      fcpObserver.observe({ entryTypes: ['paint'] });
-        if(lcpEntry) {
-
-          setMetrics(prev =>
-            prev ? { ...prev, lcp: lcpEntry.startTime } : null
-          )}
-      });
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-      // Observe FID
-
-        if(fidEntry) {
-
-          setMetrics(prev =>
-            prev
-              ? { ...prev, fid: fidEntry.processingStart - fidEntry.startTime }
-              : null
-          )}
-      });
-      fidObserver.observe({ entryTypes: ['first-input'] });
-    if(tips.length === 0) {
-      tips.push('Great performance! Keep monitoring for any regressions')}
-
-      const clsObserver = new PerformanceObserver(list => {
-
-        let clsValue = 0;        for (const entry of list.getEntries()) {
-
-          if(!entry.hadRecentInput) {
-
-            clsValue += (entry as any).value}
+    // Measure First Contentful Paint (FCP)
+    const measureFCP = () => {
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.name === 'first-contentful-paint') {
+            setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
+          }
         }
       });
+      observer.observe({ entryTypes: ['paint'] });
+    };
 
-        setMetrics(prev => (prev ? { ...prev, cls: clsValue } : null))});
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
+    // Measure Largest Contentful Paint (LCP)
+    const measureLCP = () => {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const lastEntry = entries[entries.length - 1];
+        setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
+      });
+      observer.observe({ entryTypes: ['largest-contentful-paint'] });
+    };
 
-      // Get TTFB from navigation timing
-      
-      if(navigationEntry) {
+    // Measure First Input Delay (FID)
+    const measureFID = () => {
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
+        }
+      });
+      observer.observe({ entryTypes: ['first-input'] });
+    };
 
-        setMetrics(prev =>
-          prev ? { ...prev, ttfb } : { fcp: 0, lcp: 0, fid: 0, cls: 0, ttfb }
-        )}
+    // Measure Cumulative Layout Shift (CLS)
+    const measureCLS = () => {
+      let clsValue = 0;
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (!(entry as any).hadRecentInput) {
+            clsValue += (entry as any).value;
+          }
+        }
+        setMetrics(prev => ({ ...prev, cls: clsValue }));
+      });
+      observer.observe({ entryTypes: ['layout-shift'] });
+    };
 
-      return () => {
-        fcpObserver.disconnect () ;
-        lcpObserver.disconnect () ;
-        fidObserver.disconnect () ;
-        clsObserver.disconnect () }}  }, []);
-=======
-export default function PerformanceMonitor() {
-  const [metrics, setMetrics] = useState({
-    loadTime: 0,
-    memoryUsage: 0,
-    cpuUsage: 0
-  })
->>>>>>> main
+    // Measure Time to First Byte (TTFB)
+    const measureTTFB = () => {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (navigation) {
+        setMetrics(prev => ({ ...prev, ttfb: navigation.responseStart - navigation.requestStart }));
+      }
+    };
 
-  useEffect(() => {
-<<<<<<< HEAD
-  // TODO: Add dependencies if needed
+    // Initialize measurements
+    measureFCP();
+    measureLCP();
+    measureFID();
+    measureCLS();
+    measureTTFB();
 
-  return () => {
-    // Cleanup function
-  };
-}, []);, []);
-    if(metrics) {
+    // Log metrics to console in development
+    if (process.env.NODE_ENV === 'development') {
+      const logMetrics = () => {
+        console.group('🚀 Performance Metrics');
+        console.log('First Contentful Paint (FCP):', metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'Loading...');
+        console.log('Largest Contentful Paint (LCP):', metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'Loading...');
+        console.log('First Input Delay (FID):', metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'Loading...');
+        console.log('Cumulative Layout Shift (CLS):', metrics.cls ? metrics.cls.toFixed(4) : 'Loading...');
+        console.log('Time to First Byte (TTFB):', metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'Loading...');
+        console.groupEnd();
+      };
 
-      setPerformanceScore(score)}
-  }, [metrics, calculatePerformanceScore]) ;
-  useEffect(() => {
-  // TODO: Add dependencies if needed
+      // Log metrics after 3 seconds
+      setTimeout(logMetrics, 3000);
+    }
 
-  return () => {
-    // Cleanup function
-  };
-}, []);, []);
-    // Show monitor after 3 seconds
-    
-    return () => clearTimeout(timer) }, []) ;
-  if(!isVisible || !showDetails) return null;
-=======
-    const interval = setInterval(() => {
-      setMetrics({
-        loadTime: Math.random() * 1000,
-        memoryUsage: Math.random() * 100,
-        cpuUsage: Math.random() * 100
-      })
-    }, 1000)
+  }, [metrics]);
 
-    return () => clearInterval(interval)
-  }, [])
->>>>>>> main
+  // Don't render anything in production
+  if (process.env.NODE_ENV === 'production') {
+    return null;
+  }
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div className="bg-white p-4 rounded-lg shadow">
-        <h3 className="font-semibold">Load Time</h3>
-        <p className="text-2xl font-bold text-blue-600">{metrics.loadTime.toFixed(2)}ms</p>
-      </div>
-      <div className="bg-white p-4 rounded-lg shadow">
-        <h3 className="font-semibold">Memory Usage</h3>
-        <p className="text-2xl font-bold text-orange-600">{metrics.memoryUsage.toFixed(1)}%</p>
-      </div>
-      <div className="bg-white p-4 rounded-lg shadow">
-        <h3 className="font-semibold">CPU Usage</h3>
-        <p className="text-2xl font-bold text-purple-600">{metrics.cpuUsage.toFixed(1)}%</p>
-      </div>
+    <div className="fixed bottom-4 right-4 bg-black bg-opacity-80 text-white p-4 rounded-lg text-xs font-mono z-50">
+      <div className="font-bold mb-2">Performance Metrics</div>
+      <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : '...'}</div>
+      <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : '...'}</div>
+      <div>FID: {metrics.fid ? `${metrics.fid.toFixed(0)}ms` : '...'}</div>
+      <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : '...'}</div>
+      <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : '...'}</div>
     </div>
-  )
-}
->>>>>>> main
+  );
+};
+
+export default PerformanceMonitor;

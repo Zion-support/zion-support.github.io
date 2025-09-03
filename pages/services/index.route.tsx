@@ -1,6 +1,6 @@
 import React from 'react';
-import ModernLayout from '../../../components/layout/ModernLayout';
-import { servicesList } from './_servicesData.route.js';
+import ModernLayout from '../../components/layout/ModernLayout';
+// Services data will be defined inline
 import { Zap, Brain, Cloud, Shield, Database, Rocket, ArrowRight, CheckCircle, DollarSign, Clock } from 'lucide-react';
 
 export default function ServicesPage() {
@@ -25,6 +25,33 @@ export default function ServicesPage() {
       icon: Database,
       description: 'Infrastructure, security, and operational excellence',
       color: 'from-green-500 to-green-600'
+    }
+  ];
+
+  const servicesList = [
+    {
+      id: 'micro-saas',
+      title: 'Micro SaaS Solutions',
+      description: 'Ready-to-deploy SaaS applications for common business needs',
+      features: ['Quick deployment', 'Scalable architecture', 'Custom branding', 'API integration'],
+      pricing: 'Starting at $99/month',
+      icon: Rocket
+    },
+    {
+      id: 'ai-solutions',
+      title: 'AI & Machine Learning',
+      description: 'Intelligent automation and machine learning solutions',
+      features: ['Natural language processing', 'Computer vision', 'Predictive analytics', 'Automated workflows'],
+      pricing: 'Custom pricing',
+      icon: Brain
+    },
+    {
+      id: 'it-services',
+      title: 'IT Infrastructure',
+      description: 'Comprehensive IT services and infrastructure management',
+      features: ['Cloud migration', 'Security audits', '24/7 monitoring', 'Disaster recovery'],
+      pricing: 'Starting at $299/month',
+      icon: Database
     }
   ];
 

@@ -1,42 +1,49 @@
-import React from "react"
-import { useEffect } from "react"
-const SecurityHeaders = () => {
-  useEffect(() => {
-    // comment
-const meta = document.createElement("meta")
-}
-    meta.httpEquiv = "Content - Security-Policy",
-    meta.content = "default-src "self"; script-src "self" "unsafe-inline" "unsafe-eval" https: // comment
-    document.head.appendChild(meta),
-    // comment
-const securityHeaders = []
+import React from 'react';
+import Head from 'next/head';
 
-    securityHeaders.forEach(header => {
-      const metaTag = document.createElement("meta")
-}
-      metaTag.httpEquiv = header.httpEquiv
-      metaTag.content = header.content
-      document.head.appendChild(metaTag)
-}
-    })
-}
-    return () => {
-      // comment
-const securityMetaTags = document.querySelectorAll("meta[http-equiv]")
-}
-      securityMetaTags.forEach(tag = > {"
-        if (tag.getAttribute("http-equiv")?.startsWith("X-") || "
-            tag.getAttribute("http-equiv") === "Content-Security-Policy" ||"
-            tag.getAttribute("http-equiv") === "Referrer-Policy" ||"
-            tag.getAttribute("http-equiv") === "Permissions-Policy") {
-          tag.remove()
+interface SecurityHeadersProps {
+  cspNonce?: string;
 }
 
-      })
-}
-  }, [])
-}
-  return null}
+const SecurityHeaders: React.FC<SecurityHeadersProps> = ({ cspNonce }) => {
+  const generateCSP = () => {
+    const nonce = cspNonce || 'nonce-' + Math.random().toString(36).substr(2, 9);
+    
+    return [
+      "default-src 'self'",
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://cdn.jsdelivr.net",
+      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+      "font-src 'self' https://fonts.gstatic.com",
+      "img-src 'self' data: https: blob:",
+      "media-src 'self' https:",
+      "connect-src 'self' https://www.google-analytics.com https://api.ziontechgroup.com",
+      "frame-src 'self' https://www.youtube.com https://player.vimeo.com",
+      "object-src 'none'",
+      "base-uri 'self'",
+      "form-action 'self'",
+      "frame-ancestors 'none'",
+      `nonce-${nonce}`
+    ].join('; ');
+  };
 
-");
-export default SecurityHeaders;"
+  return (
+    <Head>
+      {/* Security Headers */}
+      <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
+      <meta httpEquiv="X-Frame-Options" content="DENY" />
+      <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
+      <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+      <meta httpEquiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), interest-cohort=()" />
+      <meta httpEquiv="Content-Security-Policy" content={generateCSP()} />
+      
+      {/* HSTS Header */}
+      <meta httpEquiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload" />
+      
+      {/* Additional Security Headers */}
+      <meta name="format-detection" content="telephone=no" />
+      <meta name="msapplication-config" content="/browserconfig.xml" />
+    </Head>
+  );
+};
+
+export default SecurityHeaders;

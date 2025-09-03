@@ -1,108 +1,143 @@
-<<<<<<< HEAD
-import React from 'react'; import { Helmet  } from 'react-helmet-async'; ; interface SEOHeadProps { title?: string; description?: string; keywords?: string; image?: string; url?: string; type?: 'website' | 'article' | 'service'; structuredData?: object; }; export function SEOHead({; title = 'Zion Tech Group - Leading AI, Quantum Computing & Advanced Technology Solutions',; description = 'Transform your business with cutting-edge AI, quantum computing, cybersecurity, and digital transformation solutions.Trusted by 1000+ companies worldwide.',; keywords = 'AI solutions, quantum computing, cybersecurity, digital transformation, cloud services, DevOps, machine learning, space technology',; image = '/images/zion-tech-group-og.jpg',; url = 'https:
-=======
-import Head from "next/head"
-import React from "react"; ; interface SEOHeadProps { title?: string; description?: string; keywords?: string; image?: string; url?: string; type?: "website" | "article" | "service"; structuredData?: object}; export function SEOHead({ title = "Zion Tech Group - Leading AI, Quantum Computing & Advanced Technology Solutions", description = "Transform your business with cutting-edge AI, quantum computing, cybersecurity, and digital transformation solutions.Trusted by 1000+ companies worldwide.", keywords = "AI solutions, quantum computing, cybersecurity, digital transformation, cloud services, DevOps, machine learning, space technology", image = "/images/zion-tech-group-og.jpg", url = "https: ",, interface SEOHeadProps { title?: string; description?: string; keywords?: string; image?: string; url?: string; type?: "website" | "article" | "service"; structuredData?: object}; export function SEOHead ({ title = "Zion Tech Group - Leading AI, Quantum Computing & Advanced Technology Solutions", description = "Transform your business with cutting - edge AI, quantum computing, cybersecurity, and digital transformation solutions. Trusted by 1000 + companies worldwide.", keywords = "AI solutions, quantum computing, cybersecurity, digital transformation, cloud services, DevOps, machine learning, space technology", image = "/images / zion - tech - group - og.jpg", url = "https: ""","});,"})"
-;,"});,"})" ; interface SEOHeadProps { title?: string; description?: string; keywords?: string; image?: string; url?: string; type?: "website" | "article" | "service"; structuredData?: object}; export function SEOHead({ title = "Zion Tech Group - Leading AI, Quantum Computing & Advanced Technology Solutions", description = "Transform your business with cutting-edge AI, quantum computing, cybersecurity, and digital transformation solutions.Trusted by 1000+ companies worldwide.", keywords = "AI solutions, quantum computing, cybersecurity, digital transformation, cloud services, DevOps, machine learning, space technology", image = "/images/zion-tech-group-og.jpg", url = "https:;,"});,"})"react - helmet - async&apos;  interface SEOHeadProps {
+import React from 'react';
+import Head from 'next/head';
 
-   title?: string
-   description?: string
-   keywords?: string
-   image?: string;"
-   url?: string;"""
-   type?: "website" | "article" | "service";""
-   structuredData?: object} export function SEOHead ({ title = "Zion Tech Group - Leading AI, Quantum Computing & Advanced Technology Solutions", description = "Transform your business with cutting - edge AI, quantum computing, cybersecurity, and digital transformation solutions. Trusted by 1000 + companies worldwide.", keywords = "AI solutions, quantum computing, cybersecurity, digital transformation, cloud services, DevOps, machine learning, space technology", image = "/images / zion - tech - group - og.jpg", url = "https: """}"
-   url?: string;""
-   type?: "website" | "article" | "service";""
-   structuredData?: object} export function SEOHead ({title = "Zion Tech Group - Leading AI, Quantum Computing & Advanced Technology Solutions", description = "Transform your business with cutting - edge AI, quantum computing, cybersecurity, and digital transformation solutions. Trusted by 1000 + companies worldwide.", keywords = "AI solutions, quantum computing, cybersecurity, digital transformation, cloud services, DevOps, machine learning, space technology", image = "/images / zion - tech - group - og.jpg", url = "https: "",
-   url?: string,",
-   type?: "website" | "article" | "service",","
-   structuredData?: object} export: function SEOHead ({ title = "Zion Tech Group - Leading AI, Quantum Computing & Advanced Technology Solutions", description = "Transform your business with cutting - edge AI, quantum computing, cybersecurity, and digital transformation solutions. Trusted by 1000 + companies worldwide.", keywords = "AI solutions, quantum computing, cybersecurity, digital transformation, cloud services, DevOps, machine learning, space technology", image = "/images / zion - tech - group - og.jpg", url = "https: """",""
-   type?: "website" | "article" | "service","
-   structuredData?: object} export function SEOHead ({ title = "Zion Tech Group - Leading AI, Quantum Computing & Advanced Technology Solutions", description = "Transform your business with cutting - edge AI, quantum computing, cybersecurity, and digital transformation solutions. Trusted by 1000 + companies worldwide.", keywords = "AI solutions, quantum computing, cybersecurity, digital transformation, cloud services, DevOps, machine learning, space technology", image = "/images / zion - tech - group - og.jpg", url = "https: ""","
-   structuredData?: object} export function SEOHead ({ title = "Zion Tech Group - Leading AI, Quantum Computing & Advanced Technology Solutions", description = "Transform your business with cutting - edge AI, quantum computing, cybersecurity, and digital transformation solutions. Trusted by 1000 + companies worldwide.", keywords = "AI solutions, quantum computing, cybersecurity, digital transformation, cloud services, DevOps, machine learning, space technology", image = "/images / zion - tech - group - og.jpg", url = "https: """,,
-   type?: &apos;website&apos; | &apos;article&apos; | &apos,service","
-   structuredData?: object}&apos;&apos; export function SEOHead ({ title = &apos;Zion Tech Group - Leading AI, Quantum Computing & Advanced Technology Solutions&apos, description = &apos;Transform your business with cutting - edge AI, quantum computing, cybersecurity, and digital transformation solutions. Trusted by 1000 + companies worldwide.&apos, keywords = &apos;AI solutions, quantum computing, cybersecurity, digital transformation, cloud services, DevOps, machine learning, space technology&apos, image = &apos;/images / zion - tech - group - og.jpg&apos, url = &apos;https: &apos,&apos,"&apos}"
-   image?: string;"""
-   structuredData?: object} export function SEOHead ({ title = "Zion Tech Group - Leading AI, Quantum Computing & Advanced Technology Solutions", description = "Transform your business with cutting - edge AI, quantum computing, cybersecurity, and digital transformation solutions. Trusted by 1000 + companies worldwide.", keywords = "AI solutions, quantum computing, cybersecurity, digital transformation, cloud services, DevOps, machine learning, space technology", image = "/images / zion - tech - group - og.jpg", url = "https: """}""
-   title?: string,
-description?: string,
-keywords?: string,
-image?: string,"
-url?: string""
-   type?: "website" | "article" | "service"
-   structuredData?: object", "
-} export function SEOHead ({ title = "Zion Tech Group - Leading AI, Quantum Computing & Advanced Technology Solutions", description = "Transform your business with cutting - edge AI, quantum computing, cybersecurity, and digital transformation solutions. Trusted by 1000 + companies worldwide.", keywords = "AI solutions, quantum computing, cybersecurity, digital transformation, cloud services, DevOps, machine learning, space technology", image = "/images / zion - tech - group - og.jpg", url = "https: """,
-,"""
 interface SEOHeadProps {
-  type?: string;
+  title?: string;
+  description?: string;
+  keywords?: string;
+  canonical?: string;
+  ogImage?: string;
+  ogType?: string;
+  twitterCard?: string;
+  structuredData?: any;
   noindex?: boolean;
-  structuredData?: object}
-
-const SEOHead: React.FC<SEOHeadProps> = ({",
-  title = "Zion Tech Group - AI Services, IT Solutions & Micro SaaS","
-  description = "Leading provider of revolutionary AI services, IT solutions, and micro SaaS development. We help businesses innovate, scale, and succeed in the digital age.","
-  keywords = "AI services, IT solutions, micro SaaS, web development, cloud services, DevOps, cybersecurity, artificial intelligence, software development","
-  image = "https:// comment
-  url,"
-  type = "website",
-  noindex = false,
-  structuredData}) => {
-  const router = useRouter()
+  nofollow?: boolean;
 }
-  const canonicalUrl = url || "https:// comment
-  const fullTitle = title.includes("Zion Tech Group') ? title : "${title} | Zion Tech Group"
+
+const SEOHead: React.FC<SEOHeadProps> = ({
+  title = 'Zion Tech Group - Revolutionary AI Services & IT Solutions',
+  description = 'Leading provider of AI services, IT solutions, and micro SaaS development. Transform your business with cutting-edge technology and innovative solutions.',
+  keywords = 'AI services, IT solutions, micro SaaS, digital transformation, cloud computing, cybersecurity, machine learning, artificial intelligence, business automation',
+  canonical,
+  ogImage = 'https://ziontechgroup.com/og-image.jpg',
+  ogType = 'website',
+  twitterCard = 'summary_large_image',
+  structuredData,
+  noindex = false,
+  nofollow = false
+}) => {
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
+  const fullCanonical = canonical || 'https://ziontechgroup.com';
+  const robotsContent = `${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`;
+
   return (
-<Head>
-      {/* comment */}
-
-      <title>{fullTitle}</title>"
-      <meta name="description" content="{description}"  />
-      <meta name="keywords" content="{keywords}"  />"
-      <link rel="canonical" href="{canonicalUrl}"  />
+    <Head>
+      {/* Basic Meta Tags */}
+      <title>{fullTitle}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
+      <meta name="robots" content={robotsContent} />
+      <meta name="author" content="Zion Tech Group" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="canonical" href={fullCanonical} />
       
-      {/* comment */}"
-      {noindex && <meta name="robots" content="noindex,nofollow"  />}
-
-      {/* comment */}"
-      <meta property="og:type" content="{type}"  />"
-      <meta property="og:title" content="{fullTitle}"  />"
-      <meta property="og:description" content="{description}"  />"
-      <meta property="og:url" content="{canonicalUrl}"  />"
-      <meta property="og:image" content="{image}"  />"
-      <meta property="og: site_name" content="Zion Tech Group"  />"
-      <meta property="og:locale" content="en_US"  />
-      ,
-      {/* comment */}"
-      <meta name="twitter: card" content="summary_large_image"  />",
-      <meta name="twitter:title" content="{fullTitle}"  />"
-      <meta name="twitter:description" content="{description}"  />"
-      <meta name="twitter:image" content="{image}"  />"
-      <meta name="twitter: site" content="@ziontechgroup"  />"
-      <meta name="twitter:creator" content="@ziontechgroup"  />
-      ,
-      {/* comment */}"
-      <meta name="viewport" content="width="device-width," initial-scale=1.0"  />"
-      <meta name="theme-color" content="#0a0a1a"  />"
-      <meta name="msapplication-TileColor" content="#0a0a1a"  />"
-      <meta name="apple-mobile-web-app-capable" content="yes"  />"
-      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"  />
+      {/* Open Graph Meta Tags */}
+      <meta property="og:type" content={ogType} />
+      <meta property="og:title" content={fullTitle} />
+      <meta property="og:description" content={description} />
+      <meta property="og:url" content={fullCanonical} />
+      <meta property="og:image" content={ogImage} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:site_name" content="Zion Tech Group" />
+      <meta property="og:locale" content="en_US" />
       
-      {/* comment */}
-
-      {structuredData && ("
-        <script type="application/ld+json""
-          dangerouslySetInnerHTML="{{"
-            __html: JSON.stringify(structuredData)}}
-
-              />
+      {/* Twitter Card Meta Tags */}
+      <meta name="twitter:card" content={twitterCard} />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={ogImage} />
+      <meta name="twitter:site" content="@ziontechgroup" />
+      <meta name="twitter:creator" content="@ziontechgroup" />
+      
+      {/* Additional Meta Tags */}
+      <meta name="theme-color" content="#1e3a8a" />
+      <meta name="msapplication-TileColor" content="#1e3a8a" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
+      
+      {/* Favicon and Icons */}
+      <link rel="icon" href="/favicon.ico" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      <link rel="manifest" href="/site.webmanifest" />
+      
+      {/* Structured Data */}
+      {structuredData && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData)
+          }}
+        />
       )}
+      
+      {/* Default Organization Structured Data */}
+      {!structuredData && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Zion Tech Group",
+              "url": "https://ziontechgroup.com",
+              "logo": "https://ziontechgroup.com/logo.png",
+              "description": "Leading provider of AI services, IT solutions, and micro SaaS development",
+              "foundingDate": "2020",
+              "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "US"
+              },
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+1-555-ZION-TECH",
+                "contactType": "customer service",
+                "email": "contact@ziontechgroup.com"
+              },
+              "sameAs": [
+                "https://linkedin.com/company/zion-tech-group",
+                "https://twitter.com/ziontechgroup"
+              ],
+              "offers": {
+                "@type": "AggregateOffer",
+                "offerCount": "10+",
+                "offers": [
+                  {
+                    "@type": "Offer",
+                    "name": "AI Services",
+                    "description": "Artificial intelligence and machine learning solutions"
+                  },
+                  {
+                    "@type": "Offer",
+                    "name": "IT Solutions",
+                    "description": "Comprehensive IT infrastructure and services"
+                  },
+                  {
+                    "@type": "Offer",
+                    "name": "Micro SaaS",
+                    "description": "Ready-to-deploy SaaS applications"
+                  }
+                ]
+              }
+            })
+          }}
+        />
+      )}
+    </Head>
+  );
+};
 
-      {/* comment */}
-
-          __html: JSON.stringify(),
-    </Head>,
-  )}
-
-export default SEOHead;""
->>>>>>> main
+export default SEOHead;
