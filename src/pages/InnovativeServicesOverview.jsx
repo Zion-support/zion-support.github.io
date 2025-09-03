@@ -1,19 +1,18 @@
-import React, { useState } from 'react';'
+import React, { useState } from 'react';'''
 import { motion } from 'framer-motion';
-import { comprehensiveMicroSaasServices2025 } from "../../data/2025-comprehensive-micro-saas-services";""
-import { innovativeITAIServices2025 } from "../../data/2025-innovative-it-ai-services";""
-import { expandedInnovativeServices2025 } from "../../data/2025-expanded-innovative-services";""
-import { emergingTechInnovationServices2025 } from "../../data/2025-emerging-tech-innovations";""
-import { enterpriseITInnovationServices2025 } from "../../data/2025-enterprise-it-innovations";
+;
+;
+;
+;
+;
 const InnovativeServicesOverview = () => {
-    const [selectedService, setSelectedService] = useState(null);'
-    const [selectedCategory, setSelectedCategory] = useState('all');
-    const allServices = [
+    const [selectedService, setSelectedService] = useState(null);    const [selectedCategory, setSelectedCategory] = useState('all');
+    const allServices = []
         ...comprehensiveMicroSaasServices2025,
         ...innovativeITAIServices2025,
         ...expandedInnovativeServices2025,
         ...emergingTechInnovationServices2025,
-        ...enterpriseITInnovationServices2025
+        ...enterpriseITInnovationServices2025;
     ];'
     const categories = [''
         { id: 'all', name: 'All Services', count: allServices.length },'
@@ -30,8 +29,18 @@ const InnovativeServicesOverview = () => {
     const filteredServices = selectedCategory === 'all'
         ? allServices
         : allServices.filter(service => {
-            const category = categories.find (c => c.id === selectedCategory) ;
-            if(!category) return true;
+            const category = categories.find(c => c.id === selectedCategory);
+            if (!category)
+                return true;
             const categoryMappings = {
-'"
-'"'"
+
+
+export { InnovativeServicesOverview };
+
+export { InnovativeServicesOverview };
+
+export { InnovativeServicesOverview };
+
+export { InnovativeServicesOverview };
+
+export { InnovativeServicesOverview };

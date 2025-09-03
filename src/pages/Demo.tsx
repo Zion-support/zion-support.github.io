@@ -1,1 +1,0 @@
-export default React.memo (function Demo (...args: any[]) : any {

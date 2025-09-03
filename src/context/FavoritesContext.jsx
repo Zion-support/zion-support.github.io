@@ -1,33 +1,37 @@
-import { createContext, useContext, useEffect, useState } from 'react';'
+import { createContext, useContext, useEffect, useState } from 'react';
 import { toggleFavorite as toggleFavoriteRequest } from '@/api/favorites';
 
-const FavoritesContext = createContext(null);
-
-export function FavoritesProvider({ children }) {
-
+) {
   const [favorites, setFavorites] = useState([]);
 
   useEffect(() => {
-'
-    const stored = localStorage.getItem('favorites');
-    if (stored) {
+  // TODO: Add dependencies if needed
 
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
+    const stored = localStorage.getItem('favorites');
+    if(stored) {
       try {
         setFavorites(JSON.parse(stored));
       } catch {
-
         // ignore invalid JSON
       }
     }
   }, []);
 
   useEffect(() => {
-'
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     localStorage.setItem('favorites', JSON.stringify(favorites));
   }, [favorites]);
 
   const toggleFavorite = async productId => {
-
     try {
       await toggleFavoriteRequest(productId);
       setFavorites(prev =>
@@ -35,16 +39,14 @@ export function FavoritesProvider({ children }) {
           ? prev.filter(id => id !== productId)
           : [...prev, productId]
       );
-    } catch (err) {
-'
+    } catch(err) {
       console.error('Toggle favorite failed', err);
     }
   };
 
   const isFavorite = id => favorites.includes(id);
 
-  return()
-    <FavoritesContext.Provider value={{ favorites, toggleFavorite, isFavorite }}>
+  return (<FavoritesContext.Provider value={{ favorites, toggleFavorite, isFavorite }}>
       {children}
     </FavoritesContext.Provider>
   );
@@ -53,4 +55,3 @@ export function FavoritesProvider({ children }) {
 export function useFavorites() {
   return useContext(FavoritesContext);
 }
-'

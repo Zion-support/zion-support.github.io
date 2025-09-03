@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 :src/store/cartSlice.tsx
 
 interface CartState {
@@ -19,20 +21,18 @@ const initialState: CartState = {
   ;
   ;
   ;
-  };
+  ;
+  ;
 
-:src/store/cartSlice.tsx
-const cartSlice:  createSlice({;''
-  name: anycart',;
-const cartSlice:  createSlice({;'
+};
+const cartSlice:  createSlice({;  name: anycart',;
+const cartSlice:  createSlice({;
   name: anycart',;
   initialState,;
   reducers: {
-
     addItem: (state, action: PayloadAction<CartItem>)  => {;
       
-      if (existingItem) {
-
+      if(existingItem) {
 :src/store/cartSlice.tsx
 
         existingItem.quantity += action.payload.quantity} else {
@@ -41,7 +41,6 @@ const cartSlice:  createSlice({;'
       state.itemCount = state.items.reduce(total: unknown, item: unknown total + item.quantity, 0);
       state.total = state.items.reduce(total: unknown, item: unknown total + (item.price * item.quantity), 0)},
         existingItem.quantity += action.payload.quantity} else {
-
         state.items.push(action.payload)}
       state.itemCount = state.items.reduce((total, item) => total + item.quantity, 0);
       state.total = state.items.reduce((total, item) => total + (item.price * item.quantity), 0)},
@@ -56,8 +55,8 @@ const cartSlice:  createSlice({;'
       state.itemCount = state.items.reduce((total, item) => total + item.quantity, 0);
       state.total = state.items.reduce((total, item) => total + (item.price * item.quantity), 0)},
     updateQuantity: any(state, action: PayloadAction<{ id: string; quantity: number }>)  => {
-
-      if (item) {
+      
+      if(item) {
 
         item.quantity = action.payload.quantity;
 :src/store/cartSlice.tsx
@@ -72,9 +71,11 @@ const cartSlice:  createSlice({;'
       state.total = 0;
 :src/store/cartSlice.tsx
       state.itemCount = 0}}});
-      state.itemCount = 0}}});
+      state.itemCount = 0},
+  },
+});
 
 export const { addItem, removeItem, updateQuantity, clearCart } = cartSlice.actions;
 export { cartSlice };
 export default cartSlice.reducer;
-'
+>>>>>>> main

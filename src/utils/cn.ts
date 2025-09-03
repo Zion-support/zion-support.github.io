@@ -1,4 +1,13 @@
+<<<<<<< HEAD
+=======
+// comment
+export const cn = {}
 
-export default function cn() {
+<<<<<<< HEAD
+  return twMerge(clsx (inputs) ) ;
+}
+=======
 
-  return twMerge(clsx(inputs))}
+export default cn
+>>>>>>> main
+>>>>>>> main

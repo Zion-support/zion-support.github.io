@@ -1,5 +1,6 @@
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
-<<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
+<<<<<<< HEAD
+:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
+<:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Heart,
@@ -8,16 +9,14 @@ import { Heart,
   Users,
   Database,
   BarChart3,
-========
-<<<<<<< HEAD
+=
 import { Heart, 
   Brain, 
   TrendingUp, 
   Users, 
   Database, 
   BarChart3, 
->>>>>>>> main:backup-pages/src-pages/services/AIHealthcarePredictiveAnalytics.tsx
-  Zap,
+>  Zap,
   CheckCircle,
   ArrowRight,
   Star,
@@ -56,15 +55,10 @@ import { Heart,
 ;
 export { function };
 export default function AIHealthcarePredictiveAnalytics(...args[]): {
-  ;
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIHealthcarePredictiveAnalytics.tsx
-  ;
+  ;  ;
   ;
   website: 'https://ziontechgroup.com';
-<<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
+<:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
   ;
 
 };
@@ -95,10 +89,9 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
       title: 'Real-time Patient Monitoring',
       description: 'Continuous monitoring and alerting for critical health indicators';
     },;
-========
+=
   }},;
->>>>>>>> main:backup-pages/src-pages/services/AIHealthcarePredictiveAnalytics.tsx
-    {;
+>    {;
       icon: BarChart3,;'
       title: 'Advanced Clinical Insights',;'
       description: 'Generate actionable insights from complex medical data and research'};
@@ -165,29 +158,18 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
     'GDPR Compliance',;''
     'FDA Guidelines Adherence',;'    'Clinical Trial Compliance';
   ];
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
+:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
-<<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
+<:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
       <SEO
-========
+=
       <SEO "
-<<<<<<< HEAD
->>>>>>>> main:backup-pages/src-pages/services/AIHealthcarePredictiveAnalytics.tsx
-        title="AI Healthcare Predictive Analytics Platform | Zion Tech Group"
+>        title="AI Healthcare Predictive Analytics Platform | Zion Tech Group"
         description="Revolutionize healthcare with AI-powered predictive analytics. Predict diseases, optimize treatments, and improve patient outcomes with 94% accuracy."
         keywords="AI healthcare analytics, predictive medicine, disease prediction, patient risk assessment, clinical analytics, healthcare AI"
-       />
-=======
-        title="AI Healthcare Predictive Analytics Platform | Zion Tech Group""
-=======
-  return (""
-    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">"
-      <SEO ""
-        title="AI Healthcare Predictive Analytics Platform | Zion Tech Group"""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIHealthcarePredictiveAnalytics.tsx
-        description="Revolutionize healthcare with AI-powered predictive analytics. Predict diseases, optimize treatments, and improve patient outcomes with 94% accuracy.""        keywords="AI healthcare analytics, predictive medicine, disease prediction, patient risk assessment, clinical analytics, healthcare AI"
+       />        description="Revolutionize healthcare with AI-powered predictive analytics. Predict diseases, optimize treatments, and improve patient outcomes with 94% accuracy.""        keywords="AI healthcare analytics, predictive medicine, disease prediction, patient risk assessment, clinical analytics, healthcare AI"
        />"
       {/* Hero Section */}""
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">""
@@ -196,22 +178,18 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
             initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
+:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIHealthcarePredictiveAnalytics.tsx
 }}
             animate = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
+:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIHealthcarePredictiveAnalytics.tsx
 }}
             transition={{ duration: 0.8 }}"
 ""
@@ -249,22 +227,18 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
             initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
+:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIHealthcarePredictiveAnalytics.tsx
 }}
             whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
+:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIHealthcarePredictiveAnalytics.tsx
 }}
             transition={{ duration: 0.8 }}"
             viewport={{ once: true }}""
@@ -276,17 +250,14 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
               Everything you need to predict, prevent, and optimize healthcare delivery
             </p>
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
+:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
           </motion.div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
+<:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
 
-========
+=
           "
->>>>>>>> main:backup-pages/src-pages/services/AIHealthcarePredictiveAnalytics.tsx
-=======
-          </motion.div>"
+>          </motion.div>"
           ""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIHealthcarePredictiveAnalytics.tsx
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index()
               <motion.div
@@ -294,27 +265,23 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
                 initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
+:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIHealthcarePredictiveAnalytics.tsx
 }}
                 whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
+:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIHealthcarePredictiveAnalytics.tsx
 }}
                 transition = {
 
   { duration: 0.8,
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
+:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
   delay: index * 0.1
 
 }}
@@ -325,7 +292,6 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>"
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>"
-=======
   delay: index * 0.1 
 }}"
                 viewport={{ once: true }}""
@@ -335,7 +301,6 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
                   <feature.icon className="w-6 h-6 text-white" />"
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIHealthcarePredictiveAnalytics.tsx
                 <p className="text-slate-300">{feature.description}</p>
               </motion.div>;
             ))}
@@ -349,22 +314,18 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
             initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
+:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIHealthcarePredictiveAnalytics.tsx
 }}
             whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
+:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIHealthcarePredictiveAnalytics.tsx
 }}
             transition={{ duration: 0.8 }}"
             viewport={{ once: true }}""
@@ -376,17 +337,14 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
               Specialized AI solutions for every medical specialty
             </p>
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
+:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
           </motion.div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
+<:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
 
-========
+=
           "
->>>>>>>> main:backup-pages/src-pages/services/AIHealthcarePredictiveAnalytics.tsx
-=======
-          </motion.div>"
+>          </motion.div>"
           ""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIHealthcarePredictiveAnalytics.tsx
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {clinicalApplications.map(application: unknown, index: unknown()
               <motion.div
@@ -394,27 +352,23 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
                 initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
+:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIHealthcarePredictiveAnalytics.tsx
 }}
                 whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
+:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIHealthcarePredictiveAnalytics.tsx
 }}
                 transition = {
 
   { duration: 0.8,
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
+:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
   delay: index * 0.1
 
 }}
@@ -425,7 +379,6 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
                   <application.icon className="w-6 h-6 text-white" />
                 </div>"
                 <h3 className="text-xl font-semibold text-white mb-2">{application.title}</h3>"
-=======
   delay: index * 0.1 
 }}"
                 viewport={{ once: true }}""
@@ -435,7 +388,6 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
                   <application.icon className="w-6 h-6 text-white" />"
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-2">{application.title}</h3>""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIHealthcarePredictiveAnalytics.tsx
                 <p className="text-slate-300">{application.description}</p>
               </motion.div>;
             ))}
@@ -449,22 +401,18 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
             initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
+:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIHealthcarePredictiveAnalytics.tsx
 }}
             whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
+:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIHealthcarePredictiveAnalytics.tsx
 }}
             transition={{ duration: 0.8 }}"
             viewport={{ once: true }}""
@@ -476,17 +424,14 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
               Transform your healthcare delivery and unlock new levels of patient care
             </p>
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
+:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
           </motion.div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
+<:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
 
-========
+=
           "
->>>>>>>> main:backup-pages/src-pages/services/AIHealthcarePredictiveAnalytics.tsx
-=======
-          </motion.div>"
+>          </motion.div>"
           ""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIHealthcarePredictiveAnalytics.tsx
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map(benefit: unknown, index: unknown()
               <motion.div
@@ -494,40 +439,34 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
                 initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
+:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
   x: -20
 
-=======
   x: -20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIHealthcarePredictiveAnalytics.tsx
 }}
                 whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
+:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
   x: 0
 
-=======
   x: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIHealthcarePredictiveAnalytics.tsx
 }}
                 transition = {
 
   { duration: 0.8,
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
+:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
   delay: index * 0.1
 
 }}
                 viewport={{ once: true }}"
                 className="flex items-start space-x-3"
 "
-=======
   delay: index * 0.1 
 }}"
                 viewport={{ once: true }}""
                 className="flex items-start space-x-3""
 ""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIHealthcarePredictiveAnalytics.tsx
                 <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0"  />"                <span className="text-slate-300 text-lg">{benefit}</span>
               </motion.div>;
             ))}
@@ -541,22 +480,18 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
             initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
+:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIHealthcarePredictiveAnalytics.tsx
 }}
             whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
+:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIHealthcarePredictiveAnalytics.tsx
 }}
             transition={{ duration: 0.8 }}"
             viewport={{ once: true }}""
@@ -568,17 +503,14 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
               Built with healthcare-grade security and compliance standards
             </p>
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
+:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
           </motion.div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
+<:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
 
-========
+=
           "
->>>>>>>> main:backup-pages/src-pages/services/AIHealthcarePredictiveAnalytics.tsx
-=======
-          </motion.div>"
+>          </motion.div>"
           ""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIHealthcarePredictiveAnalytics.tsx
           <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-6">
             {complianceFeatures.map(feature: unknown, index: unknown()
               <motion.div
@@ -586,40 +518,34 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
                 initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
+:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIHealthcarePredictiveAnalytics.tsx
 }}
                 whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
+:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIHealthcarePredictiveAnalytics.tsx
 }}
                 transition = {
 
   { duration: 0.8,
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
+:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
   delay: index * 0.1
 
 }}
                 viewport={{ once: true }}"
                 className="text-center p-4 bg-slate-800/30 rounded-lg border border-slate-700/50 hover:border-red-500/50 transition-all duration-300"
 "
-=======
   delay: index * 0.1 
 }}"
                 viewport={{ once: true }}""
                 className="text-center p-4 bg-slate-800/30 rounded-lg border border-slate-700/50 hover:border-red-500/50 transition-all duration-300""
 ""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIHealthcarePredictiveAnalytics.tsx
                 <Shield className="w-8 h-8 text-red-400 mx-auto mb-2"  />"                <span className="text-slate-300 font-medium text-sm">{feature}</span>
               </motion.div>;
             ))}
@@ -633,22 +559,18 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
             initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
+:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIHealthcarePredictiveAnalytics.tsx
 }}
             whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
+:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIHealthcarePredictiveAnalytics.tsx
 }}
             transition={{ duration: 0.8 }}"
             viewport={{ once: true }}""
@@ -660,17 +582,14 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
               From small clinics to large health systems, our platform scales with your needs
             </p>
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
+:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
           </motion.div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
+<:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
 
-========
+=
           "
->>>>>>>> main:backup-pages/src-pages/services/AIHealthcarePredictiveAnalytics.tsx
-=======
-          </motion.div>"
+>          </motion.div>"
           ""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIHealthcarePredictiveAnalytics.tsx
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map(useCase: unknown, index: unknown()
               <motion.div
@@ -678,27 +597,23 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
                 initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
+:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIHealthcarePredictiveAnalytics.tsx
 }}
                 whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
+:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIHealthcarePredictiveAnalytics.tsx
 }}
                 transition = {
 
   { duration: 0.8,
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
+:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
   delay: index * 0.1
 
 }}
@@ -709,7 +624,6 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
                   <useCase.icon className="w-8 h-8 text-white" />
                 </div>"
                 <h3 className="text-xl font-semibold text-white mb-2">{useCase.title}</h3>"
-=======
   delay: index * 0.1 
 }}"
                 viewport={{ once: true }}""
@@ -719,7 +633,6 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
                   <useCase.icon className="w-8 h-8 text-white" />"
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-2">{useCase.title}</h3>""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIHealthcarePredictiveAnalytics.tsx
                 <p className="text-slate-300">{useCase.description}</p>
               </motion.div>;
             ))}
@@ -733,22 +646,18 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
             initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
+:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIHealthcarePredictiveAnalytics.tsx
 }}
             whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
+:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIHealthcarePredictiveAnalytics.tsx
 }}
             transition={{ duration: 0.8 }}"
             viewport={{ once: true }}""
@@ -760,17 +669,14 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
               Choose the plan that fits your healthcare organization size and needs
             </p>
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
+:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
           </motion.div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
+<:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
 
-========
+=
           "
->>>>>>>> main:backup-pages/src-pages/services/AIHealthcarePredictiveAnalytics.tsx
-=======
-          </motion.div>"
+>          </motion.div>"
           ""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIHealthcarePredictiveAnalytics.tsx
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
             {pricingPlans.map(plan: unknown, index: unknown()
               <motion.div
@@ -778,32 +684,26 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
                 initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
+:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIHealthcarePredictiveAnalytics.tsx
 }}
                 whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
+:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIHealthcarePredictiveAnalytics.tsx
 }}
                 transition = {
 
   { duration: 0.8,
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
+:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
   delay: index * 0.1
 
-=======
   delay: index * 0.1 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIHealthcarePredictiveAnalytics.tsx
 }}
                 viewport={{ once: true }}
                 className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
@@ -857,22 +757,18 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
             initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
+:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIHealthcarePredictiveAnalytics.tsx
 }}
             whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
+:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIHealthcarePredictiveAnalytics.tsx
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}"
@@ -906,22 +802,18 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
             initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
+:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIHealthcarePredictiveAnalytics.tsx
 }}
             whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
+:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIHealthcarePredictiveAnalytics.tsx
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}"
@@ -960,3 +852,5 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
     </div>;
   )}'"`
 '"`'"`
+=======
+>>>>>>> main

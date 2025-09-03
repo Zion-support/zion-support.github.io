@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next';'
 import { Helmet } from 'react-helmet-async';'
 import { useState } from 'react';
@@ -8,9 +9,9 @@ const AdvancedCybersecurityServices: NextPage = () => {;'
   const [searchTerm, setSearchTerm] = useState('');'
   const [sortBy, setSortBy] = useState<any>('innovation');
 
-<<<<<<< HEAD:pages.disabled/root_pages/advanced-cybersecurity.tsx
-<<<<<<< HEAD:backup-pages/advanced-cybersecurity.tsx
-<<<<<<< HEAD:backup-pages/advanced-cybersecurity.tsx
+:pages.disabled/root_pages/advanced-cybersecurity.tsx
+:backup-pages/advanced-cybersecurity.tsx
+:backup-pages/advanced-cybersecurity.tsx
   const categories = [
     { id: 'all', name: 'All Security', color: 'from-blue-500 to-purple-600' },
     { id: 'AI Security', name: 'AI Security', color: 'from-purple-500 to-pink-600' },
@@ -18,28 +19,20 @@ const AdvancedCybersecurityServices: NextPage = () => {;'
     { id: 'Network Security', name: 'Network Security', color: 'from-green-500 to-teal-600' },
     { id: 'Endpoint Security', name: 'Endpoint Security', color: 'from-orange-500 to-red-600' },
     { id: 'Cloud Security', name: 'Cloud Security', color: 'from-yellow-500 to-orange-600' }
-=======
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:pages/advanced-cybersecurity.tsx
   const categories = [;'
     { id: 'all', name: 'All Security', color: 'from-blue-500 to-purple-600' },;'
     { id: 'AI Security', name: 'AI Security', color: 'from-purple-500 to-pink-600' },;'
     { id: 'Quantum Security', name: 'Quantum Security', color: 'from-indigo-500 to-blue-600' },;'
     { id: 'Network Security', name: 'Network Security', color: 'from-green-500 to-teal-600' },;'
     { id: 'Endpoint Security', name: 'Endpoint Security', color: 'from-orange-500 to-red-600' },;'
-<<<<<<< HEAD:pages.disabled/root_pages/advanced-cybersecurity.tsx
-=======
+:pages.disabled/root_pages/advanced-cybersecurity.tsx
   const categories = [;
     { id: 'all', name: 'All Security', color: 'from-blue-500 to-purple-600' },;
     { id: 'AI Security', name: 'AI Security', color: 'from-purple-500 to-pink-600' },;
     { id: 'Quantum Security', name: 'Quantum Security', color: 'from-indigo-500 to-blue-600' },;
     { id: 'Network Security', name: 'Network Security', color: 'from-green-500 to-teal-600' },;
     { id: 'Endpoint Security', name: 'Endpoint Security', color: 'from-orange-500 to-red-600' },;
->>>>>>> main:pages/advanced-cybersecurity.tsx
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:pages/advanced-cybersecurity.tsx
     { id: 'Cloud Security', name: 'Cloud Security', color: 'from-yellow-500 to-orange-600' };
->>>>>>> 910bea804001eb0b17e31c13b5a609089795a3c6:pages/advanced-cybersecurity.tsx
   ];
 
   const filteredServices = ADVANCED_CYBERSECURITY_SERVICES_2027.filter(service => {
@@ -48,7 +41,7 @@ const AdvancedCybersecurityServices: NextPage = () => {;'
     return matchesCategory && matchesSearch;
   });
 
-<<<<<<< HEAD:backup-pages/advanced-cybersecurity.tsx
+:backup-pages/advanced-cybersecurity.tsx
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'price':
@@ -56,30 +49,26 @@ const AdvancedCybersecurityServices: NextPage = () => {;'
       case 'innovation':
         return b.innovationLevel === 'Revolutionary' ? 1 : -1;
       case 'roi':
-=======
   const sortedServices = [...filteredServices].sort((a, b) => {;
     switch (sortBy) {;'
       case 'price':;
-<<<<<<< HEAD:pages.disabled/root_pages/advanced-cybersecurity.tsx
+:pages.disabled/root_pages/advanced-cybersecurity.tsx
         return a.pricing.monthly - b.pricing.monthly;
       case 'innovation':'
         return b.innovationLevel === 'Revolutionary' ? 1 : -1;
       case 'roi':'
->>>>>>> 910bea804001eb0b17e31c13b5a609089795a3c6:pages/advanced-cybersecurity.tsx
-=======
         return a.pricing.monthly - b.pricing.monthly;'
       case 'innovation':''
         return b.innovationLevel === 'Revolutionary' ? 1 : -1;'
       case 'roi':''
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:pages/advanced-cybersecurity.tsx
         return parseInt(b.roi.split('%')[0]) - parseInt(a.roi.split('%')[0]);
       default:
         return 0;
     }
   });
-<<<<<<< HEAD:pages.disabled/root_pages/advanced-cybersecurity.tsx
-<<<<<<< HEAD:backup-pages/advanced-cybersecurity.tsx
-<<<<<<< HEAD:backup-pages/advanced-cybersecurity.tsx
+:pages.disabled/root_pages/advanced-cybersecurity.tsx
+:backup-pages/advanced-cybersecurity.tsx
+:backup-pages/advanced-cybersecurity.tsx
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 relative overflow-hidden">
@@ -94,14 +83,9 @@ const AdvancedCybersecurityServices: NextPage = () => {;'
           <div className="absolute inset-0" style={{
             backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
           }}></div>
-=======
 '
-=======
 
->>>>>>> main:pages/advanced-cybersecurity.tsx
-=======
 '
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:pages/advanced-cybersecurity.tsx
       default: return 'from-gray-500 to-gray-600'}
   };
 '
@@ -136,7 +120,6 @@ const AdvancedCybersecurityServices: NextPage = () => {;'
 
 
 }}></div>
->>>>>>> 910bea804001eb0b17e31c13b5a609089795a3c6:pages/advanced-cybersecurity.tsx
         </div>
       </div>
 
@@ -184,9 +167,9 @@ const AdvancedCybersecurityServices: NextPage = () => {;'
             </div>
           </div>
         </div>
-<<<<<<< HEAD:pages.disabled/root_pages/advanced-cybersecurity.tsx
+:pages.disabled/root_pages/advanced-cybersecurity.tsx
 
-<<<<<<< HEAD:backup-pages/advanced-cybersecurity.tsx
+:backup-pages/advanced-cybersecurity.tsx
         {/* Security Stats */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
           {[
@@ -195,7 +178,6 @@ const AdvancedCybersecurityServices: NextPage = () => {;'
             { icon: '🔒', label: 'Encryption', value: 'AES-256', color: 'from-purple-500 to-indigo-600' },
             { icon: '🧠', label: 'AI Detection', value: '10x Faster', color: 'from-orange-500 to-red-600' }
           ].map((stat, index) => (
-=======
         {/* Security Stats */}"
         <div className="grid grid-cols-1 md: grid-cols-4 gap-6 mb-12">
           {['
@@ -204,7 +186,6 @@ const AdvancedCybersecurityServices: NextPage = () => {;'
             { icon: '🔒', label: 'Encryption', value: 'AES-256', color: 'from-purple-500 to-indigo-600' },
             { icon: '🧠', label: 'AI Detection', value: '10x Faster', color: 'from-orange-500 to-red-600' }
           ].map(stat: unknown, index: unknown (
->>>>>>> 910bea804001eb0b17e31c13b5a609089795a3c6:pages/advanced-cybersecurity.tsx
             <div
               key={index}"
               className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/20 text-center hover:border-blue-400/50 transition-all duration-300"
@@ -213,7 +194,6 @@ const AdvancedCybersecurityServices: NextPage = () => {;'
                 <span className="text-3xl">{stat.icon}</span>
               </div>"
               <div className="text-2xl font-bold text-blue-400 mb-2">{stat.value}</div>"
-=======
 "
         {/* Security Stats */}""
         <div className="grid grid-cols-1 md: grid-cols-4 gap-6 mb-12">'
@@ -231,7 +211,6 @@ const AdvancedCybersecurityServices: NextPage = () => {;'
                 <span className="text-3xl">{stat.icon}</span>"
               </div>""
               <div className="text-2xl font-bold text-blue-400 mb-2">{stat.value}</div>""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:pages/advanced-cybersecurity.tsx
               <div className="text-gray-400">{stat.label}</div>
             </div>
           ))}
@@ -435,3 +414,5 @@ const AdvancedCybersecurityServices: NextPage = () => {;'
 };
 '"`
 export default AdvancedCybersecurityServices;}}}}'"`'"`
+=======
+>>>>>>> main

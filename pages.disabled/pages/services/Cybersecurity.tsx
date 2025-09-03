@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+:src/pages/services/AISolutions.tsx
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -185,7 +187,6 @@ export function Cybersecurity() {
               </Link>
             </div>
           </motion.div>
->>>>>>> cursor/website-audit-content-update-and-deployment-6c29
         </div>
       </section>
 
@@ -409,3 +410,5 @@ export function Cybersecurity() {
 }
 
 export default Cybersecurity;
+=======
+>>>>>>> main

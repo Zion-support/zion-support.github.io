@@ -1,73 +1,59 @@
-import React, { useEffect, useState, useRef } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
-import { Sparkles, ArrowUp, Palette, Sun, Moon, Monitor, Smartphone, Tablet } from 'lucide-react';
-export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = true, enableScrollEffects = true, enableThemeToggle = true, enableResponsiveDesign = true}) => {
+<<<<<<< HEAD
+import React, { useEffect, useState, useRef } from 'react';
+import { motion, AnimatePresence  } from 'framer-motion';
 
-    const [isVisible, setIsVisible] = useState(false);'
-    const [currentTheme, setCurrentTheme] = useState('auto');
-    const [showScrollToTop, setShowScrollToTop] = useState(false);'
-    const [deviceType, setDeviceType] = useState('desktop');
-    const scrollToTopRef = useRef(null);
-    // Detect device type
-    useEffect ( () => {
-        const updateDeviceType = () => {
-            const width = window.innerWidth;
-            if (width < 768) {
-'
-                setDeviceType('mobile')}
-            else if (width < 1024) {
-'
-                setDeviceType('tablet')}
-            else {
-'
-                setDeviceType('desktop')}
+export default function Page() {
         };
-        updateDeviceType();'
-        window.addEventListener('resize', updateDeviceType);'
+        updateDeviceType();
+        window.addEventListener('resize', updateDeviceType);
         return () => window.removeEventListener('resize', updateDeviceType)}, []);
     // Scroll effects
     useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
         if(!enableScrollEffects) return;
         const handleScroll = () => {
             const scrollTop = window.pageYOffset;
             setShowScrollToTop(scrollTop > 300) ;
             // Parallax effect for background elements
-            const scrolled = window.pageYOffset;'
+            const scrolled = window.pageYOffset;
             const parallaxElements = document.querySelectorAll('[data-parallax]');
             parallaxElements.forEach((element) => {
-'
+
                 const speed = parseFloat(element.getAttribute('data-parallax') || '0.5');
                 const yPos = -(scrolled * speed);
-                element.style.transform = `translateY(${yPos}px)`});'
-            // Fade in elements on scroll''
+                element.style.transform = `translateY(${yPos}px)`});
+            // Fade in elements on scroll'
             const fadeElements = document.querySelectorAll('[data-fade-in]');
             fadeElements.forEach((element) => {
 
                 const rect = element.getBoundingClientRect();
                 const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
-                if (isVisible) {
-'
+                if(isVisible) {
+
                     element.classList.add('fade-in-visible')}
-            })};'
-        window.addEventListener('scroll', handleScroll);'
+            })};
+        window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll)}, [enableScrollEffects]);
     // Theme management
     useEffect(() => {
-'
+  // TODO: Add dependencies if needed
+}, []);
+
         const savedTheme = localStorage.getItem('theme') || 'auto';
         setCurrentTheme(savedTheme);
         applyTheme(savedTheme)}, []);
     const applyTheme = (theme) => {
 
-        const root = document.documentElement;'
-        if (theme === 'auto') {
-'
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)).matches;'
+        const root = document.documentElement;
+        if(theme === 'auto') {
+
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)).matches;
             root.classList.toggle('dark', prefersDark)}
         else {
-'
-            root.classList.toggle('dark', theme === 'dark')}'
-        localStorage.setItem('theme', theme)};'
+
+            root.classList.toggle('dark', theme === 'dark')}
+        localStorage.setItem('theme', theme)};
     const themes = ['light',dark',auto'];
         const currentIndex = themes.indexOf(currentTheme) ;
         const nextTheme = themes[(currentIndex + 1) % themes.length];
@@ -76,13 +62,15 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
     const scrollToTop = () => {
         window.scrollTo({
 
-            top: 0,'
+            top: 0,
             behavior: 'smooth'})};
     // Add CSS animations to the document
     useEffect(() => {
-        if (!enableAnimations)
-            return;'`
-        const style = document.createElement('style');``
+  // TODO: Add dependencies if needed
+}, []);
+        if(!enableAnimations)
+            return;
+        const style = document.createElement('style');`
         style.textContent = `
       .fade-in {
 
@@ -212,14 +200,16 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3)}
       
       .text-shadow-light {
-`
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1)}``
+
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1)}`
     `;
         document.head.appendChild(style) ;
         return () => {
             document.head.removeChild(style) }}, [enableAnimations]) ;
     // Add intersection observer for scroll animations
     useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
         if(!enableScrollEffects)
             return;
         const observer = new IntersectionObserver((entries) => {
@@ -228,14 +218,13 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
 
                 if(entry.isIntersecting) {
 
-                    const element = entry.target;'
+                    const element = entry.target;
                     const animationType = element.getAttribute('data-animation');
                     if(animationType) {
 `
-``
                         element.classList.add(`${animationType}-visible`)}
                 }
-            })}, observerOptions);'
+            })}, observerOptions);
         const animatedElements = document.querySelectorAll('[data-animation]');
         animatedElements.forEach((element) => {
 
@@ -254,10 +243,10 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
 }} animate = {
 
   { opacity: 1,
-  scale: 1 `
-``
-}} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={toggleTheme} className="fixed top-6 right-6 z-50 p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700" title={`Current theme: ${currentTheme}`}>"'"
-          <AnimatePresence mode="wait">'"'"
+  scale: 1 
+`
+}} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={toggleTheme} className="fixed top-6 right-6 z-50 p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700" title={`Current theme: ${currentTheme}`}>"
+          <AnimatePresence mode="wait">'"
             {currentTheme === 'light' && (<motion.div key="light" initial = {
 
   { opacity: 0,
@@ -272,10 +261,10 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
 
   { opacity: 0,
   rotate: 90 
-"
-}} transition={{ duration: 0.3 }}>""
-                <Sun className="w-5 h-5 text-yellow-500"/>'"
-              </motion.div>)}'"'"
+
+}} transition={{ duration: 0.3 }}>"
+                <Sun className="w-5 h-5 text-yellow-500"/>
+              </motion.div>)}'"
             {currentTheme === 'dark' && (<motion.div key="dark" initial = {
 
   { opacity: 0,
@@ -290,10 +279,10 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
 
   { opacity: 0,
   rotate: 90 
-"
-}} transition={{ duration: 0.3 }}>""
-                <Moon className="w-5 h-5 text-blue-400"/>'"
-              </motion.div>)}'"'"
+
+}} transition={{ duration: 0.3 }}>"
+                <Moon className="w-5 h-5 text-blue-400"/>
+              </motion.div>)}'"
             {currentTheme === 'auto' && (<motion.div key="auto" initial = {
 
   { opacity: 0,
@@ -308,8 +297,8 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
 
   { opacity: 0,
   rotate: 90 
-"
-}} transition={{ duration: 0.3 }}>""
+
+}} transition={{ duration: 0.3 }}>"
                 <Monitor className="w-5 h-5 text-gray-600 dark:text-gray-400"/>
               </motion.div>)}
           </AnimatePresence>
@@ -324,13 +313,13 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
 }} animate = {
 
   { opacity: 1,
-  x: 0 "
-""
-}} className="fixed top-6 left-6 z-50 p-2 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700">"'"
-          <div className="flex items-center space-x-2 text-sm">'"'"
-            {deviceType === 'desktop' && <Monitor className="w-4 h-4 text-blue-500"/>}'"'"
-            {deviceType === 'tablet' && <Tablet className="w-4 h-4 text-green-500"/>}'"'"
-            {deviceType === 'mobile' && <Smartphone className="w-4 h-4 text-purple-500"/>}""
+  x: 0 
+"
+}} className="fixed top-6 left-6 z-50 p-2 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700">"
+          <div className="flex items-center space-x-2 text-sm">'"
+            {deviceType === 'desktop' && <Monitor className="w-4 h-4 text-blue-500"/>}'"
+            {deviceType === 'tablet' && <Tablet className="w-4 h-4 text-green-500"/>}'"
+            {deviceType === 'mobile' && <Smartphone className="w-4 h-4 text-purple-500"/>}"
             <span className="text-gray-700 dark:text-gray-300 capitalize">{deviceType}</span>
           </div>
         </motion.div>) }
@@ -350,9 +339,9 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
 }} exit = {
 
   { opacity: 0,
-  scale: 0 "
-""
-}} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={scrollToTop} className="fixed bottom-6 left-6 z-50 p-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300" title="Scroll to top">""
+  scale: 0 
+"
+}} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={scrollToTop} className="fixed bottom-6 left-6 z-50 p-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300" title="Scroll to top">"
             <ArrowUp className="w-5 h-5"/>
           </motion.button>)}
       </AnimatePresence>
@@ -366,9 +355,9 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
 }} animate = {
 
   { opacity: 1,
-  scale: 1 "
-""
-}} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={() => setIsVisible(!isVisible)} className="fixed bottom-6 right-6 z-50 p-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300" title="UI Enhancements">""
+  scale: 1 
+"
+}} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={() => setIsVisible(!isVisible)} className="fixed bottom-6 right-6 z-50 p-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300" title="UI Enhancements">"
         <Palette className="w-5 h-5"/>
       </motion.button>
 
@@ -391,82 +380,81 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
 
 }} transition = {
 "
-""
   { type: "spring", damping: 25,
-  stiffness: 300 "
-""
-}} className="fixed bottom-24 right-6 z-50 w-80 bg-white dark:bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">"
-            {/* Header */}""
-            <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white p-4">""
-              <div className="flex items-center justify-between">""
-                <div className="flex items-center space-x-2">""
-                  <Sparkles className="w-5 h-5"/>""
-                  <h3 className="font-semibold">UI Enhancements</h3>"
-                </div>""
+  stiffness: 300 
+"
+}} className="fixed bottom-24 right-6 z-50 w-80 bg-white dark:bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">
+            {/* Header */}"
+            <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white p-4">"
+              <div className="flex items-center justify-between">"
+                <div className="flex items-center space-x-2">"
+                  <Sparkles className="w-5 h-5"/>"
+                  <h3 className="font-semibold">UI Enhancements</h3>
+                </div>"
                 <button onClick={() => setIsVisible(false)} className="text-white hover:text-gray-200 transition-colors">
                   ×
                 </button>
               </div>
             </div>
-"
-            {/* Content */}""
-            <div className="p-4 space-y-4">"
-              {/* Animation Controls */}""
-              <div className="space-y-3">""
-                <h4 className="font-semibold text-gray-900 dark:text-white">Animations</h4>""
-                <div className="grid grid-cols-2 gap-2">""
+
+            {/* Content */}"
+            <div className="p-4 space-y-4">
+              {/* Animation Controls */}"
+              <div className="space-y-3">"
+                <h4 className="font-semibold text-gray-900 dark:text-white">Animations</h4>"
+                <div className="grid grid-cols-2 gap-2">"
                   <button className="p-2 bg-blue-100 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 rounded text-sm hover:bg-blue-200 dark:hover:bg-blue-900/40 transition-colors">
-                    Fade In"
-                  </button>""
+                    Fade In
+                  </button>"
                   <button className="p-2 bg-green-100 dark:bg-green-900/20 text-green-700 dark:text-green-300 rounded text-sm hover:bg-green-200 dark:hover:bg-green-900/40 transition-colors">
-                    Slide In"
-                  </button>""
+                    Slide In
+                  </button>"
                   <button className="p-2 bg-purple-100 dark:bg-purple-900/20 text-purple-700 dark:text-purple-300 rounded text-sm hover:bg-purple-200 dark:hover:bg-purple-900/40 transition-colors">
-                    Scale In"
-                  </button>""
+                    Scale In
+                  </button>"
                   <button className="p-2 bg-orange-100 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 rounded text-sm hover:bg-orange-200 dark:hover:bg-orange-900/40 transition-colors">
                     Bounce In
                   </button>
                 </div>
               </div>
-"
-              {/* Visual Effects */}""
-              <div className="space-y-3">""
-                <h4 className="font-semibold text-gray-900 dark:text-white">Visual Effects</h4>""
-                <div className="grid grid-cols-2 gap-2">""
+
+              {/* Visual Effects */}"
+              <div className="space-y-3">"
+                <h4 className="font-semibold text-gray-900 dark:text-white">Visual Effects</h4>"
+                <div className="grid grid-cols-2 gap-2">"
                   <button className="p-2 bg-indigo-100 dark:bg-indigo-900/20 text-indigo-700 dark:text-indigo-300 rounded text-sm hover:bg-indigo-200 dark:hover:bg-indigo-900/40 transition-colors">
-                    Glass Effect"
-                  </button>""
+                    Glass Effect
+                  </button>"
                   <button className="p-2 bg-pink-100 dark:bg-pink-900/20 text-pink-700 dark:text-pink-300 rounded text-sm hover:bg-pink-200 dark:hover:bg-pink-900/40 transition-colors">
-                    Gradient Text"
-                  </button>""
+                    Gradient Text
+                  </button>"
                   <button className="p-2 bg-teal-100 dark:bg-teal-900/20 text-teal-700 dark:text-teal-300 rounded text-sm hover:bg-teal-200 dark:hover:bg-teal-900/40 transition-colors">
-                    Hover Lift"
-                  </button>""
+                    Hover Lift
+                  </button>"
                   <button className="p-2 bg-yellow-100 dark:bg-yellow-900/20 text-yellow-700 dark:text-yellow-300 rounded text-sm hover:bg-yellow-200 dark:hover:bg-yellow-900/40 transition-colors">
                     Glow Effect
                   </button>
                 </div>
               </div>
-"
-              {/* Performance Info */}""
-              <div className="space-y-3">""
-                <h4 className="font-semibold text-gray-900 dark:text-white">Performance</h4>""
-                <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">"'"
-                  <div className="text-sm text-gray-600 dark:text-gray-400">Animations Enabled</div>'"'"
-                  <div className="text-lg font-semibold text-green-600">{enableAnimations ? 'Yes' : 'No'}</div>"
-                </div>""
-                <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">"'"
-                  <div className="text-sm text-gray-600 dark:text-gray-400">Scroll Effects</div>'"'"
+
+              {/* Performance Info */}"
+              <div className="space-y-3">"
+                <h4 className="font-semibold text-gray-900 dark:text-white">Performance</h4>"
+                <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">"
+                  <div className="text-sm text-gray-600 dark:text-gray-400">Animations Enabled</div>'"
+                  <div className="text-lg font-semibold text-green-600">{enableAnimations ? 'Yes' : 'No'}</div>
+                </div>"
+                <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">"
+                  <div className="text-sm text-gray-600 dark:text-gray-400">Scroll Effects</div>'"
                   <div className="text-lg font-semibold text-blue-600">{enableScrollEffects ? 'Yes' : 'No'}</div>
                 </div>
               </div>
             </div>
           </motion.div>) }
       </AnimatePresence>
-"
-      {/* Background Particles */}""
-      {enableParticles && (<div className="fixed inset-0 pointer-events-none z-0">""
+
+      {/* Background Particles */}"
+      {enableParticles && (<div className="fixed inset-0 pointer-events-none z-0">"
           {[...Array(20)].map((_, i) => (<motion.div key={i} className="absolute w-2 h-2 bg-blue-400 rounded-full opacity-20" initial = {
 
   {
@@ -483,10 +471,13 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
 
   {
 
-                    duration: Math.random() * 10 + 10,"
-                    repeat: Infinity,""
+                    duration: Math.random() * 10 + 10,
+                    repeat: Infinity,"
                     ease: "linear"}}/>))}
         </div>)}
     </>)};
-export default ModernUIEnhancer;'"`
-'"`'"`
+export default ModernUIEnhancer;
+'"`
+=======
+}
+>>>>>>> main

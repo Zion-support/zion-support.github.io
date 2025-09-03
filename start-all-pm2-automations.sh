@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Comprehensive PM2 Automation Startup Script
-# This script starts all automation scripts individually since ecosystem files aren't working properly
+# This script starts all automation processes individually for reliability
 
 set -e
 
@@ -13,10 +13,6 @@ BLUE='\033[0;34m'
 PURPLE='\033[0;35m'
 CYAN='\033[0;36m'
 NC='\033[0m' # No Color
-
-# Project configuration
-PROJECT_ROOT="$(pwd)"
-LOG_DIR="$PROJECT_ROOT/logs"
 
 # Logging functions
 log() {
@@ -51,10 +47,10 @@ check_pm2() {
 }
 
 # Create logs directory
-create_logs_directory() {
-    log "Creating logs directory..."
-    mkdir -p "$LOG_DIR"
-    success "Logs directory created: $LOG_DIR"
+setup_logs() {
+    log "Setting up logs directory..."
+    mkdir -p logs
+    success "Logs directory ready"
 }
 
 # Stop existing PM2 processes
@@ -62,66 +58,71 @@ stop_existing_processes() {
     log "Stopping existing PM2 processes..."
     
     if pm2 list | grep -q "online\|stopped"; then
-        pm2 stop all
-        pm2 delete all
+        pm2 stop all || true
+        pm2 delete all || true
         success "Existing PM2 processes stopped and deleted"
     else
         info "No existing PM2 processes found"
     fi
+    
+    # Continue even if no processes were found
+    return 0
 }
 
-# Start automation scripts
-start_automation_scripts() {
-    log "Starting PM2 automation scripts..."
+# Start automation processes
+start_automation_processes() {
+    log "Starting PM2 automation processes..."
     
-    local scripts=(
-        "ai-code-analyzer:./scripts/automation/ai-code-analyzer.cjs:512M:AI_ANALYSIS_MODE=true"
-        "smart-performance-optimizer:./scripts/automation/smart-performance-optimizer.cjs:1G:PERFORMANCE_OPTIMIZATION_MODE=true"
-        "intelligent-dependency-manager:./scripts/automation/intelligent-dependency-manager.cjs:512M:DEPENDENCY_MANAGEMENT_MODE=true"
-        "smart-deployment-automation:./scripts/automation/smart-deployment-automation.cjs:1G:DEPLOYMENT_AUTOMATION_MODE=true"
-        "enhanced-ci-cd-automation:./scripts/automation/enhanced-ci-cd-automation.cjs:1G:CI_CD_MODE=true"
-        "enhanced-security-automation:./scripts/automation/enhanced-security-automation.cjs:512M:SECURITY_MODE=true"
-        "enhanced-testing-automation:./scripts/automation/enhanced-testing-automation.cjs:1G:TESTING_MODE=true"
-        "project-health-monitor:./scripts/automation/project-health-monitor.cjs:512M:HEALTH_MONITORING_MODE=true"
-        "pm2-sync-automation:./scripts/automation/pm2-sync-automation.cjs:1G:SYNC_MODE=true"
-        "pm2-sync-monitor:./scripts/automation/pm2-sync-monitor.cjs:512M:MONITORING_MODE=true"
-        "link-checker-automation:./scripts/automation/link-checker-automation.cjs:512M:LINK_CHECKING_MODE=true"
-        "typescript-syntax-fixer:./scripts/automation/typescript-syntax-fixer.cjs:256M:SYNTAX_FIXING_MODE=true"
-        "console-error-fixer:./scripts/automation/console-error-fixer.cjs:256M:ERROR_FIXING_MODE=true"
-        "dependency-manager:./scripts/automation/dependency-manager.cjs:512M:DEPENDENCY_MANAGEMENT_MODE=true"
-        "performance-monitor:./scripts/automation/performance-monitor.cjs:512M:PERFORMANCE_MONITORING_MODE=true"
-        "front-maximizer:./scripts/automation/front-maximizer.cjs:512M:FRONTEND_OPTIMIZATION_MODE=true"
-        "sitemap-runner:./scripts/automation/sitemap-runner.cjs:256M:SITEMAP_MODE=true"
-        "quality-checks:./scripts/automation/quality-checks.cjs:256M:QUALITY_CHECK_MODE=true"
-        "security-audit:./scripts/automation/security-audit.cjs:512M:SECURITY_AUDIT_MODE=true"
-        "continuous-improvement:./scripts/automation/continuous-improvement.cjs:256M:CONTINUOUS_IMPROVEMENT_MODE=true"
-        "daily-build-test:./scripts/automation/daily-build-test.cjs:512M:BUILD_TEST_MODE=true"
+    local processes=(
+        "ai-code-analyzer:./scripts/automation/ai-code-analyzer.cjs:512M"
+        "smart-performance-optimizer:./scripts/automation/smart-performance-optimizer.cjs:1G"
+        "intelligent-dependency-manager:./scripts/automation/intelligent-dependency-manager.cjs:512M"
+        "project-health-monitor:./scripts/automation/project-health-monitor.cjs:512M"
+        "enhanced-security-automation:./scripts/automation/enhanced-security-automation.cjs:512M"
+        "enhanced-testing-automation:./scripts/automation/enhanced-testing-automation.cjs:1G"
+        "pm2-sync-automation:./scripts/automation/pm2-sync-automation.cjs:1G"
+        "link-checker-automation:./scripts/automation/link-checker-automation.cjs:512M"
+        "typescript-syntax-fixer:./scripts/automation/typescript-syntax-fixer.cjs:256M"
+        "console-error-fixer:./scripts/automation/console-error-fixer.cjs:256M"
+        "smart-deployment-automation:./scripts/automation/smart-deployment-automation.cjs:1G"
+        "enhanced-ci-cd-automation:./scripts/automation/enhanced-ci-cd-automation.cjs:1G"
+        "quality-checks:./scripts/automation/quality-checks.cjs:256M"
+        "security-audit:./scripts/automation/security-audit.cjs:512M"
+        "continuous-improvement:./scripts/automation/continuous-improvement.cjs:256M"
+        "daily-build-test:./scripts/automation/daily-build-test.cjs:512M"
     )
     
     local started_count=0
     local failed_count=0
     
-    for script_info in "${scripts[@]}"; do
-        IFS=':' read -r name script_path memory_limit env_var <<< "$script_info"
+    for process in "${processes[@]}"; do
+        IFS=':' read -r name script_path memory_limit <<< "$process"
         
-        log "Starting $name..."
-        
-        if pm2 start "$script_path" --name "$name" --max-memory-restart "$memory_limit" --env production; then
-            success "$name started successfully"
-            ((started_count++))
+        if [ -f "$script_path" ]; then
+            log "Starting $name..."
+            
+            if pm2 start "$script_path" --name "$name" --max-memory-restart "$memory_limit" --env NODE_ENV=production > /dev/null 2>&1; then
+                success "Started $name"
+                ((started_count++))
+            else
+                warning "Failed to start $name"
+                ((failed_count++))
+            fi
         else
-            error "Failed to start $name"
+            warning "Script not found: $script_path"
             ((failed_count++))
         fi
         
         # Small delay between starts
-        sleep 1
+        sleep 0.5
     done
     
-    echo
-    success "Started $started_count automation scripts successfully"
+    # Wait for processes to stabilize
+    sleep 3
+    
+    success "Started $started_count processes successfully"
     if [ $failed_count -gt 0 ]; then
-        warning "$failed_count scripts failed to start"
+        warning "$failed_count processes failed to start"
     fi
     
     return $failed_count
@@ -169,8 +170,6 @@ display_system_status() {
     
     echo
     info "System Information:"
-    echo "  Project Root: $PROJECT_ROOT"
-    echo "  Logs Directory: $LOG_DIR"
     echo "  PM2 Version: $(pm2 --version)"
     echo "  Node Version: $(node --version)"
     echo "  NPM Version: $(npm --version)"
@@ -186,13 +185,11 @@ display_system_status() {
     echo "  Setup startup: pm2 startup"
     
     echo
-    info "Log Files Location: $LOG_DIR"
-    echo "  - All automation scripts will log to this directory"
-    echo "  - PM2 also maintains logs in ~/.pm2/logs/"
-    
-    echo
-    info "Automation Scripts Running:"
-    pm2 list --format table | grep -E "(ai-code-analyzer|performance|health|security|quality|dependency|deployment|testing|monitor)" || echo "  No automation scripts found"
+    info "Log Files Location: $PWD/logs/"
+    echo "  - AI Code Analyzer: logs/ai-code-analyzer.log"
+    echo "  - Performance Optimizer: logs/smart-performance-optimizer.log"
+    echo "  - Dependency Manager: logs/intelligent-dependency-manager.log"
+    echo "  - And many more..."
 }
 
 # Create management scripts
@@ -200,7 +197,7 @@ create_management_scripts() {
     log "Creating management scripts..."
     
     # Start script
-    cat > "$PROJECT_ROOT/scripts/pm2-start-all.sh" << 'EOF'
+    cat > "scripts/pm2-start-all.sh" << 'EOF'
 #!/bin/bash
 # Start all PM2 automations
 cd "$(dirname "$0")/.."
@@ -208,7 +205,7 @@ cd "$(dirname "$0")/.."
 EOF
     
     # Stop script
-    cat > "$PROJECT_ROOT/scripts/pm2-stop-all.sh" << 'EOF'
+    cat > "scripts/pm2-stop-all.sh" << 'EOF'
 #!/bin/bash
 # Stop all PM2 automations
 cd "$(dirname "$0")/.."
@@ -218,7 +215,7 @@ echo "All PM2 automations stopped"
 EOF
     
     # Restart script
-    cat > "$PROJECT_ROOT/scripts/pm2-restart-all.sh" << 'EOF'
+    cat > "scripts/pm2-restart-all.sh" << 'EOF'
 #!/bin/bash
 # Restart all PM2 automations
 cd "$(dirname "$0")/.."
@@ -226,24 +223,24 @@ pm2 restart all
 echo "All PM2 automations restarted"
 EOF
     
-    # Logs script
-    cat > "$PROJECT_ROOT/scripts/pm2-logs.sh" << 'EOF'
-#!/bin/bash
-# Show PM2 logs
-cd "$(dirname "$0")/.."
-pm2 logs
-EOF
-    
     # Monitor script
-    cat > "$PROJECT_ROOT/scripts/pm2-monitor.sh" << 'EOF'
+    cat > "scripts/pm2-monitor.sh" << 'EOF'
 #!/bin/bash
-# Monitor PM2 processes
+# Monitor PM2 automations
 cd "$(dirname "$0")/.."
 pm2 monit
 EOF
     
+    # Logs script
+    cat > "scripts/pm2-logs.sh" << 'EOF'
+#!/bin/bash
+# View PM2 logs
+cd "$(dirname "$0")/.."
+pm2 logs
+EOF
+    
     # Make scripts executable
-    chmod +x "$PROJECT_ROOT/scripts/pm2-"*.sh
+    chmod +x scripts/pm2-*.sh
     
     success "Management scripts created in scripts/ directory"
 }
@@ -258,14 +255,14 @@ main() {
     check_pm2
     
     # Setup system
-    create_logs_directory
+    setup_logs
     stop_existing_processes
     
-    # Start automation scripts
-    if start_automation_scripts; then
-        success "All automation scripts started successfully"
+    # Start automation processes
+    if start_automation_processes; then
+        success "PM2 automation system started successfully"
     else
-        warning "Some scripts failed to start. Check logs for details."
+        warning "Some processes failed to start. Check logs for details."
     fi
     
     # Setup additional features
@@ -284,8 +281,7 @@ main() {
     info "Next steps:"
     echo "  1. Monitor the system: pm2 monit"
     echo "  2. Check logs: pm2 logs"
-    echo "  3. View specific process: pm2 logs <process-name>"
-    echo "  4. Use management scripts in scripts/ directory"
+    echo "  3. Use management scripts in scripts/ directory"
     echo
     info "The system will automatically:"
     echo "  - Analyze and fix code issues"

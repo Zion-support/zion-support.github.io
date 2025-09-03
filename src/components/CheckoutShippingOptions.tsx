@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 interface Address {
   name: string;
@@ -19,24 +22,26 @@ interface Props {
   onSelect?: (rate: ShippingRate) => void}
 
 export function CheckoutShippingOptions({ toAddress, onSelect }: Props) {
-
   const [rates, setRates] = useState<ShippingRate[]>([]);
   const [loading, setLoading] = useState(false);
   const [selected, setSelected] = useState<string>('');
 
   useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
     if(!toAddress) return;
     
       try {
-        if (res.ok) {
 
+        if(res.ok) {
           setRates(data.rates || [])} else {
-'
           console.error('Rates error', data)}
-      } catch (err) {
-'
+      } catch(err) {
         console.error('Rates error', err)} finally {
-
         setLoading(false)}
     };
     fetchRates()}, [toAddress]);
@@ -45,16 +50,15 @@ export function CheckoutShippingOptions({ toAddress, onSelect }: Props) {
 
   if(!toAddress) return null;
 
-  return()
-    <div className="my-4">"
+  return (<div className="my-4">
       <h2 className="font-semibold mb-2">Shipping Options</h2>
       {loading && <p>Loading...</p>}
-      {!loading && ("
+      {!loading && (
         <RadioGroup value={selected} onValueChange={handleChange} className="space-y-2">
-          {rates.map(rate => ("
+          {rates.map(rate => (
             <label key={rate.id} className="flex items-center gap-2">
               <RadioGroupItem value={rate.id}  />
-              <span>{`${rate.carrier} ${rate.service} - ${rate.rate} ${rate.currency}`}</span>"
+              <span>{`${rate.carrier} ${rate.service} - ${rate.rate} ${rate.currency}`}</span>
               {rate.tax && <span className="ml-1 text-sm">(+{rate.tax} taxes)</span>}
             </label>
           ))}
@@ -64,4 +68,18 @@ export function CheckoutShippingOptions({ toAddress, onSelect }: Props) {
   )}
 
 export type { ShippingRate };
-'"`
+=======
+import React from "react"
+import { SEO } from "@/components/SEO"
+export default function CheckoutShippingOptions() {return (
+    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
+      <SEO title="CheckoutShippingOptions - Zion Tech Group" description="Professional CheckoutShippingOptions services by Zion Tech Group"  />"
+      <div className="container mx-auto px-4 py-20">"
+        <h1 className="text-4xl font-bold text-white mb-8">CheckoutShippingOptions</h1>"
+        <p className="text-gray-300 text-lg">
+          Professional CheckoutShippingOptions services to help your business grow.
+        </p>
+      </div>
+  );"}"
+>>>>>>> main
+>>>>>>> main

@@ -1,5 +1,6 @@
-<<<<<<< HEAD:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
-<<<<<<<< HEAD:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
+<<<<<<< HEAD
+:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
+<:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { SEO  } from '@/components/SEO';
@@ -10,8 +11,7 @@ import { Shield,
   Lock,
   Activity,
   CheckCircle,
-========
-<<<<<<< HEAD
+=
 import { Shield, 
   Eye, 
   AlertTriangle, 
@@ -19,8 +19,7 @@ import { Shield,
   Lock, 
   Activity, 
   CheckCircle, 
->>>>>>>> main:backup-pages/src-pages/services/ai-cybersecurity-threat-detection.tsx
-  ArrowRight,
+>  ArrowRight,
   Clock,
   Target,
   BarChart3,
@@ -60,36 +59,7 @@ export default function AICybersecurityThreatDetection(...args: []):  {
   ]},;
     {;
       title: 'Insider Threats',;
-      description: 'Behavioral analysis detects unusual user activities and data access patterns',;
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-cybersecurity-threat-detection.tsx
-      icon: Users};
-  ];
-  const complianceFrameworks = [;''
-    'SOC 2 Type II',;''
-    'ISO 27001',;''
-    'GDPR',;''
-    'HIPAA',;''
-    'PCI DSS',;'    'NIST Cybersecurity Framework';
-  ];
-  return()
-<<<<<<< HEAD:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
-    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-<<<<<<<< HEAD:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
-      <SEO
-========
-      <SEO "
-<<<<<<< HEAD
->>>>>>>> main:backup-pages/src-pages/services/ai-cybersecurity-threat-detection.tsx
-        title="AI Cybersecurity Threat Detection - Zion Tech Group"
-        description="Advanced AI-powered cybersecurity platform with 99.9% threat detection rate. Real-time monitoring, automated response, and zero-day attack prevention. Start from $499/month."
-       />
-=======
-=======
-    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
-      <SEO ""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-cybersecurity-threat-detection.tsx
-        title="AI Cybersecurity Threat Detection - Zion Tech Group""        description="Advanced AI-powered cybersecurity platform with 99.9% threat detection rate. Real-time monitoring, automated response, and zero-day attack prevention. Start from $499/month."
+      description: 'Behavioral analysis detects unusual user activities and data access patterns',;        title="AI Cybersecurity Threat Detection - Zion Tech Group""        description="Advanced AI-powered cybersecurity platform with 99.9% threat detection rate. Real-time monitoring, automated response, and zero-day attack prevention. Start from $499/month."
        />"
       {/* Hero Section */}""
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">""
@@ -98,22 +68,18 @@ export default function AICybersecurityThreatDetection(...args: []):  {
             initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
+:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-cybersecurity-threat-detection.tsx
 }}
             animate = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
+:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-cybersecurity-threat-detection.tsx
 }}
             transition={{ duration: 0.8 }}"
 ""
@@ -149,22 +115,18 @@ export default function AICybersecurityThreatDetection(...args: []):  {
             initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
+:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-cybersecurity-threat-detection.tsx
 }}
             whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
+:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-cybersecurity-threat-detection.tsx
 }}
             transition={{ duration: 0.8 }}"
             viewport={{ once: true }}""
@@ -185,27 +147,23 @@ export default function AICybersecurityThreatDetection(...args: []):  {
                 initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
+:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-cybersecurity-threat-detection.tsx
 }}
                 whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
+:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-cybersecurity-threat-detection.tsx
 }}
                 transition = {
 
   { duration: 0.8,
-<<<<<<< HEAD:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
+:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
   delay: index * 0.1
 
 }}
@@ -216,7 +174,6 @@ export default function AICybersecurityThreatDetection(...args: []):  {
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>"
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>"
-=======
   delay: index * 0.1 
 }}"
                 viewport={{ once: true }}""
@@ -226,7 +183,6 @@ export default function AICybersecurityThreatDetection(...args: []):  {
                   <feature.icon className="w-6 h-6 text-white" />"
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-cybersecurity-threat-detection.tsx
                 <p className="text-gray-300">{feature.description}</p>
               </motion.div>;
             ))}
@@ -240,22 +196,18 @@ export default function AICybersecurityThreatDetection(...args: []):  {
             initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
+:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-cybersecurity-threat-detection.tsx
 }}
             whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
+:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-cybersecurity-threat-detection.tsx
 }}
             transition={{ duration: 0.8 }}"
             viewport={{ once: true }}""
@@ -276,27 +228,23 @@ export default function AICybersecurityThreatDetection(...args: []):  {
                 initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
+:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-cybersecurity-threat-detection.tsx
 }}
                 whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
+:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-cybersecurity-threat-detection.tsx
 }}
                 transition = {
 
   { duration: 0.8,
-<<<<<<< HEAD:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
+:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
   delay: index * 0.1
 
 }}
@@ -307,7 +255,6 @@ export default function AICybersecurityThreatDetection(...args: []):  {
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>"
                 <h3 className="text-2xl font-bold text-white mb-2">{benefit.title}</h3>"
-=======
   delay: index * 0.1 
 }}"
                 viewport={{ once: true }}""
@@ -317,7 +264,6 @@ export default function AICybersecurityThreatDetection(...args: []):  {
                   <benefit.icon className="w-8 h-8 text-white" />"
                 </div>""
                 <h3 className="text-2xl font-bold text-white mb-2">{benefit.title}</h3>""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-cybersecurity-threat-detection.tsx
                 <p className="text-gray-300">{benefit.description}</p>
               </motion.div>;
             ))}
@@ -331,22 +277,18 @@ export default function AICybersecurityThreatDetection(...args: []):  {
             initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
+:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-cybersecurity-threat-detection.tsx
 }}
             whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
+:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-cybersecurity-threat-detection.tsx
 }}
             transition={{ duration: 0.8 }}"
             viewport={{ once: true }}""
@@ -367,27 +309,23 @@ export default function AICybersecurityThreatDetection(...args: []):  {
                 initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
+:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
   x: index % 2 === 0 ? -20 : 20
 
-=======
   x: index % 2 === 0 ? -20 : 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-cybersecurity-threat-detection.tsx
 }}
                 whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
+:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
   x: 0
 
-=======
   x: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-cybersecurity-threat-detection.tsx
 }}
                 transition = {
 
   { duration: 0.8,
-<<<<<<< HEAD:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
+:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
   delay: index * 0.1
 
 }}
@@ -398,7 +336,6 @@ export default function AICybersecurityThreatDetection(...args: []):  {
                   <threat.icon className="w-8 h-8 text-white" />
                 </div>"
                 <h3 className="text-2xl font-semibold text-white mb-4">{threat.title}</h3>"
-=======
   delay: index * 0.1 
 }}"
                 viewport={{ once: true }}""
@@ -408,7 +345,6 @@ export default function AICybersecurityThreatDetection(...args: []):  {
                   <threat.icon className="w-8 h-8 text-white" />"
                 </div>""
                 <h3 className="text-2xl font-semibold text-white mb-4">{threat.title}</h3>""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-cybersecurity-threat-detection.tsx
                 <p className="text-gray-300 text-lg">{threat.description}</p>
               </motion.div>;
             ))}
@@ -422,22 +358,18 @@ export default function AICybersecurityThreatDetection(...args: []):  {
             initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
+:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-cybersecurity-threat-detection.tsx
 }}
             whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
+:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-cybersecurity-threat-detection.tsx
 }}
             transition={{ duration: 0.8 }}"
             viewport={{ once: true }}""
@@ -458,40 +390,34 @@ export default function AICybersecurityThreatDetection(...args: []):  {
                 initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
+:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-cybersecurity-threat-detection.tsx
 }}
                 whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
+:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-cybersecurity-threat-detection.tsx
 }}
                 transition = {
 
   { duration: 0.8,
-<<<<<<< HEAD:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
+:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
   delay: index * 0.1
 
 }}
                 viewport={{ once: true }}"
                 className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 border border-gray-700 text-center hover:border-red-500 transition-all duration-300"
 "
-=======
   delay: index * 0.1 
 }}"
                 viewport={{ once: true }}""
                 className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 border border-gray-700 text-center hover:border-red-500 transition-all duration-300""
 ""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-cybersecurity-threat-detection.tsx
                 <CheckCircle className="w-8 h-8 text-green-400 mx-auto mb-3"  />"                <p className="text-white font-medium text-sm">{framework}</p>
               </motion.div>;
             ))}
@@ -505,22 +431,18 @@ export default function AICybersecurityThreatDetection(...args: []):  {
             initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
+:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-cybersecurity-threat-detection.tsx
 }}
             whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
+:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-cybersecurity-threat-detection.tsx
 }}
             transition={{ duration: 0.8 }}"
             viewport={{ once: true }}""
@@ -541,32 +463,26 @@ export default function AICybersecurityThreatDetection(...args: []):  {
                 initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
+:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-cybersecurity-threat-detection.tsx
 }}
                 whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
+:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-cybersecurity-threat-detection.tsx
 }}
                 transition = {
 
   { duration: 0.8,
-<<<<<<< HEAD:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
+:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
   delay: index * 0.1
 
-=======
   delay: index * 0.1 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-cybersecurity-threat-detection.tsx
 }}
                 viewport={{ once: true }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
@@ -620,22 +536,18 @@ export default function AICybersecurityThreatDetection(...args: []):  {
             initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
+:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-cybersecurity-threat-detection.tsx
 }}
             whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
+:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-cybersecurity-threat-detection.tsx
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}"
@@ -654,17 +566,14 @@ export default function AICybersecurityThreatDetection(...args: []):  {
               <button className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300">
                 Contact Security Team
               </button>
-<<<<<<< HEAD:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
+:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
             </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
+<:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx
 
-========
+=
             "
->>>>>>>> main:backup-pages/src-pages/services/ai-cybersecurity-threat-detection.tsx
-=======
-            </div>"
+>            </div>"
             ""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-cybersecurity-threat-detection.tsx
             <p className="text-gray-400 mt-6">;
               No credit card required • 30-day free trial • 24/7 security monitoring;
             </p>;
@@ -673,3 +582,5 @@ export default function AICybersecurityThreatDetection(...args: []):  {
       </section>;
     </div>;'"`
   )}}}}}}'"`'"`
+=======
+>>>>>>> main

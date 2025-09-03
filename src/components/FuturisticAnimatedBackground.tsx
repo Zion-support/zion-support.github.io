@@ -1,11 +1,13 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 export const FuturisticAnimatedBackground: React.FC = () => {;
 export default FuturisticAnimatedBackground;
 
-  
-  useEffect ( () => {
-    if (!canvas) return;
-
+  const canvasRef = useRef < HTMLCanvasElement> (null) ;
   useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
     
     if(!canvas) return;
 
@@ -17,32 +19,22 @@ export default FuturisticAnimatedBackground;
       canvas.height = window.innerHeight};
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
-    const gridCanvas = document.createElement('canvas');'
-    const gridCtx = gridCanvas.getContext('2d');    if(gridCtx) {
 
+    // Add enhanced grid background'
+
+    if(gridCtx) {
       gridCanvas.width = canvas.width;
       gridCanvas.height = canvas.height;
-      
-      // Draw enhanced grid'
-'
-    // Add enhanced grid background''
-    const gridCanvas = document.createElement('canvas');''
-    const gridCtx = gridCanvas.getContext('2d');    if (gridCtx) {
 
-      gridCanvas.width = canvas.width;
-      gridCanvas.height = canvas.height;
-      '
-      // Draw enhanced grid''
-      gridCtx.strokeStyle = 'rgba(6, 182, 212, 0.1);
-      gridCtx.lineWidth = 1;
+      // Draw enhanced grid
+      gridCtx.strokeStyle = 'rgba(6, 182, 212, 0.1) ';      gridCtx.lineWidth = 1;
 
       for(let x = 0; x < gridCanvas.width; x += 40) {
-
-        gridCtx.beginPath();
-        gridCtx.moveTo(x, 0);
-        gridCtx.lineTo(x, gridCanvas.height);
-        gridCtx.stroke()}
-      
+        gridCtx.beginPath () ;
+        gridCtx.moveTo(x, 0) ;
+        gridCtx.lineTo(x, gridCanvas.height) ;
+        gridCtx.stroke () ;
+      }
       for(let y = 0; y < gridCanvas.height; y += 40) {
 
         gridCtx.beginPath();
@@ -82,8 +74,8 @@ export default FuturisticAnimatedBackground;
 
     // Update and draw particles
     const animate = (...args: unknown[]): unknown => {;      time += 0.01;
-'
-      // Clear canvas with fade effect''
+
+      // Clear canvas with fade effect'
       ctx.fillStyle = 'rgba(2, 6, 23, 0.1);
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
@@ -123,8 +115,8 @@ export default FuturisticAnimatedBackground;
         ctx.beginPath () ;
         ctx.arc(particle.x, particle.y, size, 0, Math.PI * 2) ;
         ctx.fill () ;
-'
-      // Draw grid pattern''
+
+      // Draw grid pattern'
       ctx.strokeStyle = 'rgba(56, 189, 248, 0.1);
       ctx.lineWidth = 1;
       ctx.globalAlpha = 0.3;
@@ -146,7 +138,7 @@ export default FuturisticAnimatedBackground;
         ctx.stroke();
 
       // Draw floating geometric shapes
-      ctx.globalAlpha = 0.1;'
+      ctx.globalAlpha = 0.1;
       ctx.strokeStyle = 'rgba(168, 85, 247, 0.5);
       ctx.lineWidth = 2;
 
@@ -164,16 +156,16 @@ export default FuturisticAnimatedBackground;
       ctx.restore () ;
 
       // Floating circle
-      '
-'      ctx.strokeStyle = 'rgba(56, 189, 248, 0.5)';
-      ctx.beginPath();
+      
+
+      ctx.strokeStyle = 'rgba(56, 189, 248, 0.5);      ctx.beginPath();
       ctx.arc(circleX, circleY, circleSize, 0, Math.PI * 2);
       ctx.stroke();
 
       // Reset global alpha
       ctx.globalAlpha = 1;
-'
-      // Draw energy waves''
+
+      // Draw energy waves'
       ctx.strokeStyle = 'rgba(56, 189, 248, 0.2);
       ctx.lineWidth = 3;
 
@@ -189,7 +181,7 @@ export default FuturisticAnimatedBackground;
     animate () ;
 
     return () => {
-'
+
       window.removeEventListener('resize', resizeCanvas);
       cancelAnimationFrame(animationId)}}, []) ;
   return ()
@@ -197,12 +189,27 @@ export default FuturisticAnimatedBackground;
       ref = {canvasRef}
       className="fixed inset - 0 w-full h-full pointer - events - none z -0"
       style = {
-'
+
   { background: 'radial-gradient(1200px 600px at 10% -10%, rgba(56,189,248,0.05), transparent 60%), radial-gradient(900px 500px at 110% 10%, rgba(168,85,247,0.03),;
   ;
   transparent 60%);
 ;
 }};
     />;) };
-'"`
-export default FuturisticAnimatedBackground}}}}}}'"`'"`
+
+export default FuturisticAnimatedBackground}}}}}}'"`
+=======
+import React from "react"
+import { SEO } from "@/components/SEO"
+export default function FuturisticAnimatedBackground() {return (
+    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
+      <SEO title="FuturisticAnimatedBackground - Zion Tech Group" description="Professional FuturisticAnimatedBackground services by Zion Tech Group"  />"
+      <div className="container mx-auto px-4 py-20">"
+        <h1 className="text-4xl font-bold text-white mb-8">FuturisticAnimatedBackground</h1>"
+        <p className="text-gray-300 text-lg">
+          Professional FuturisticAnimatedBackground services to help your business grow.
+        </p>
+      </div>
+  );"}"
+>>>>>>> main
+>>>>>>> main

@@ -1,5 +1,11 @@
-''
-GradientHeading.displayName = 'GradientHeading';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from 'react';
+import { cn } from '@/lib / utils';
+=======
+>>>>>>> main
 
-export { GradientHeading };
-'
+;,"});,})";
+>>>>>>> pr-10728,});,"})"
+>>>>>>> main

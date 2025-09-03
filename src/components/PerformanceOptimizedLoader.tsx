@@ -1,10 +1,16 @@
-  ;
-  ;
-  ;
-  lg: 'w-16 h-16';
-  ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React, { memo } from 'react';
+export const PerformanceOptimizedLoader = memo < LoadingSpinnerProps> ( ({
+import { motion  } from 'framer-motion';
 
-};  const textSizes = {
+export default function Page() {
+;  const textSizes = {
 '
-'
-'
+=======
+
+;,"});,})";
+>>>>>>> pr-10728,});,"})"
+>>>>>>> main
+>>>>>>> main

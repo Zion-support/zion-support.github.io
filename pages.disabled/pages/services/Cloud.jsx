@@ -1,30 +1,41 @@
+<<<<<<< HEAD
 import React from 'react';'
 import { Link } from 'react-router-dom';
+:pages.disabled/pages/services/Cloud.jsx
 const CloudServices = () => {
     const cloudServices = [
         {
 
+const CloudServices = () => {}
+    const cloudServices = []
+        {}
             title: "Cloud Migration & Strategy",""
             description: "Comprehensive cloud migration services with multi-cloud strategy and cost optimization.",""
             price: "From $8,500/project",""
             features["Cloud readiness assessment", "Multi-cloud strategy planning", "Migration roadmap development", "Cost optimization analysis"]
         },
+:pages.disabled/pages/services/Cloud.jsx
         {
 "
+        {}
 ""
             title: "Cloud-Native Development",""
             description: "Build scalable applications using cloud-native technologies and microservices architecture.",""
             price: "From $12,000/project",""
             features["Microservices architecture", "Serverless development", "API-first design", "Cloud-native databases"]
         },
+:pages.disabled/pages/services/Cloud.jsx
         {
 "
+        {}
 ""
             title: "Cloud Security & Compliance",""
             description: "Enterprise-grade security solutions with compliance frameworks and threat protection.",""
             price: "From $6,500/month",""
             features["Identity and access management", "Data encryption", "Compliance monitoring", "Security auditing"]
+:pages.disabled/pages/services/Cloud.jsx
         }"
+        }
     ];""
     return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">""
       <section className="pt-24 pb-16 bg-gradient-to-r from-slate-900 to-slate-800 text-white">""
@@ -34,13 +45,17 @@ const CloudServices = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">Accelerate your digital transformation with modern cloud infrastructure.</p>
           </div>
         </div>
+:pages.disabled/pages/services/Cloud.jsx
       </section>"
+      </section>
 ""
       <section className="py-16 bg-white">""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
           <div className="text-center mb-12">""
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Cloud Services</h2>""
+:pages.disabled/pages/services/Cloud.jsx
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">End-to-end cloud solutions for modern businesses</p>"
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">End-to-end cloud solutions for modern businesses</p>
           </div>""
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">""
             {cloudServices.map((service, index) => (<div key={index} className="bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-2xl border border-gray-200">""
@@ -56,7 +71,9 @@ const CloudServices = () => {
               </div>))}
           </div>
         </div>
+:pages.disabled/pages/services/Cloud.jsx
       </section>"
+      </section>
 ""
       <section className="py-16 bg-gradient-to-r from-blue-600 to-cyan-600 text-white">""
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">""
@@ -70,5 +87,20 @@ const CloudServices = () => {
       </section>
     </div>)};
 export { CloudServices };
+:pages.disabled/pages/services/Cloud.jsx
 export default CloudServices;'"
 }'"'"
+export default CloudServices;
+:src/pages/services/Cloud.jsx
+}
+
+export { CloudServices };
+
+export { CloudServices };
+
+export { CloudServices };
+
+export { CloudServices };
+}'""
+=======
+>>>>>>> main

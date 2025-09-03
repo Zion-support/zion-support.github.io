@@ -1,29 +1,9 @@
-import React, { useState, useEffect } from 'react';'
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion  } from 'framer-motion';
 
-export const PerformanceMonitor = () => {
-  const [metrics, setMetrics] = useState({
-
-    fcp: null,
-    lcp: null,
-    fid: null,
-    cls: null,
-    ttfb: null
-  }) ;
-  const [score, setScore] = useState (0) ;
-  const [isVisible, setIsVisible] = useState (false) ;
-
-  useEffect(() => {
-'
-    // Only run in browser environment''
-    if (typeof window === 'null') return;
-
-    const calculateScore = () => {
-      let totalScore = 0;
-      let validMetrics = 0;
-
-      // FCP scoring (0-100)
-      if (metrics.fcp !== null) {
+export default function Page() {
+      // CLS scoring(0-100)
+      if(metrics.cls !== null) {
 
         validMetrics++;
         if(metrics.cls <= 0.1) totalScore += 100;
@@ -50,23 +30,24 @@ export const PerformanceMonitor = () => {
   }, [metrics]);
 
   useEffect(() => {
-'
-    // Only run in browser environment''
-    if (typeof window === 'null') return;
-'
-    // Performance Observer for Core Web Vitals''
-    if ('PerformanceObserver' in window) {
+  // TODO: Add dependencies if needed
+}, []);
+    // Only run in browser environment'
+    if(typeof window === 'null') return;
+
+    // Performance Observer for Core Web Vitals'
+    if('PerformanceObserver' in window) {
 
       // First Contentful Paint
       try {
-'
+
         const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
           if(fcpEntry) {
 
             setMetrics(prev => ({ ...prev, fcp: Math.round(fcpEntry.startTime) }))}
-        });'
-        fcpObserver.observe({ entryTypes['paint'] })} catch (e) {
-'
+        });
+        fcpObserver.observe({ entryTypes['paint'] })} catch(e) {
+
         // console.warn('FCP observer failed:', e)}
 
       // Largest Contentful Paint
@@ -75,9 +56,9 @@ export const PerformanceMonitor = () => {
           if(lastEntry) {
 
             setMetrics(prev => ({ ...prev, lcp: Math.round(lastEntry.startTime) }))}
-        });'
-        lcpObserver.observe({ entryTypes['largest-contentful-paint'] })} catch (e) {
-'
+        });
+        lcpObserver.observe({ entryTypes['largest-contentful-paint'] })} catch(e) {
+
         // console.warn('LCP observer failed:', e)}
 
       // First Input Delay
@@ -91,9 +72,9 @@ export const PerformanceMonitor = () => {
 
               const fid = entry.processingStart - entry.startTime;
               setMetrics(prev => ({ ...prev, fid: Math.round(fid) }))}
-          })});'
-        fidObserver.observe({ entryTypes['first-input'] })} catch (e) {
-'
+          })});
+        fidObserver.observe({ entryTypes['first-input'] })} catch(e) {
+
         // console.warn('FID observer failed:', e)}
 
       // Cumulative Layout Shift
@@ -105,13 +86,13 @@ export const PerformanceMonitor = () => {
 
               clsValue += entry.value}
           });
-          setMetrics(prev => ({ ...prev, cls: Math.round(clsValue * 1000) / 1000 }))});'
-        clsObserver.observe({ entryTypes['layout-shift'] })} catch (e) {
-'
+          setMetrics(prev => ({ ...prev, cls: Math.round(clsValue * 1000) / 1000 }))});
+        clsObserver.observe({ entryTypes['layout-shift'] })} catch(e) {
+
         // console.warn('CLS observer failed:', e)}
     }
 
-    // Time to First Byte (from navigation timing)'
+    // Time to First Byte(from navigation timing)
     const navigationEntry = performance.getEntriesByType('navigation')[0];
     if(navigationEntry) {
 
@@ -122,15 +103,15 @@ export const PerformanceMonitor = () => {
   if(!isVisible) return null;
 
   const getScoreColor = (score) => {
-'
-    if (score >= 90) return 'text-green-400';'
-    if (score >= 50) return 'text-yellow-400';'
+
+    if(score >= 90) return 'text-green-400';
+    if(score >= 50) return 'text-yellow-400';
     return 'text-red-400'};
 
   const getScoreLabel = (score) => {
-'
-    if (score >= 90) return 'Excellent';'
-    if (score >= 50) return 'Good';'
+
+    if(score >= 90) return 'Excellent';
+    if(score >= 50) return 'Good';
     return 'Poor'};
 
   return ()
@@ -147,60 +128,57 @@ export const PerformanceMonitor = () => {
   y: 0
 
 }}
-      className="fixed bottom-4 right-4 bg-black/80 backdrop-blur-sm border border-zinc-700 rounded-lg p-4 text-white text-sm max-w-xs z-50""
-    >""
-      <div className="flex items-center justify-between mb-3">""
+      className="fixed bottom-4 right-4 bg-black/80 backdrop-blur-sm border border-zinc-700 rounded-lg p-4 text-white text-sm max-w-xs z-50"
+    >"
+      <div className="flex items-center justify-between mb-3">"
         <h3 className="font-semibold text-zion-cyan">Performance</h3>
         <div className={`text-lg font-bold ${getScoreColor(score)}`}>
           {score}
         </div>
-      "
-      </div>"
-      ""
-      <div className="text-xs text-zinc-300 mb-2">
-        {getScoreLabel(score)} • Core Web Vitals
-      </div>"
-      ""
-      <div className="space-y-1 text-xs">"
-        {metrics.fcp && (""
-          <div className="flex justify-between">
-            <span>FCP:</span>'
-            <span className={metrics.fcp <= 1800 ? 'text-green-400' : 'text-yellow-400'}>
-              {metrics.fcp}ms
+      </div>
+
+      <div className="text-xs text-zinc - 300 mb-2">
+        {getScoreLabel(score) } • Core Web Vitals
+      </div>
+
+      <div className="space - y-1 text-xs">
+        {metrics.fcp && (<div className="flex justify -between">
+            <span > FCP:</span>
+            <span className={metrics.fcp <= 1800 ? 'text-green - 400' : 'text-yellow-400'}>              {metrics.fcp}ms
             </span>
           </div>
-        )}"
-        {metrics.lcp && (""
+        )}
+        {metrics.lcp && ("
           <div className="flex justify-between">
-            <span>LCP:</span>'
+            <span>LCP:</span>
             <span className={metrics.lcp <= 2500 ? 'text-green-400' : 'text-yellow-400'}>
               {metrics.lcp}ms
             </span>
           </div>
-        )}"
-        {metrics.fid && (""
+        )}
+        {metrics.fid && ("
           <div className="flex justify-between">
-            <span>FID:</span>'
+            <span>FID:</span>
             <span className={metrics.fid <= 100 ? 'text-green-400' : 'text-yellow-400'}>
               {metrics.fid}ms
             </span>
           </div>
-        )}"
-        {metrics.cls && (""
+        )}
+        {metrics.cls && ("
           <div className="flex justify-between">
-            <span>CLS:</span>'
+            <span>CLS:</span>
             <span className={metrics.cls <= 0.1 ? 'text-green-400' : 'text-yellow-400'}>
               {metrics.cls}
             </span>
           </div>
-        )}"
-        {metrics.ttfb && (""
+        )}
+        {metrics.ttfb && ("
           <div className="flex justify-between">
-            <span>TTFB:</span>'
+            <span>TTFB:</span>
             <span className={metrics.ttfb <= 800 ? 'text-green-400' : 'text-yellow-400'}>
               {metrics.ttfb}ms
             </span>
           </div>) }
       </div>
-    </motion.div>'"`
-  )};'"`'"`
+    </motion.div>
+  )};'"`

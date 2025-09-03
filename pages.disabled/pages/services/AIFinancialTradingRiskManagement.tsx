@@ -1,5 +1,6 @@
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
-<<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
+<<<<<<< HEAD
+:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
+<:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { SEO  } from '@/components/SEO';
@@ -8,15 +9,13 @@ import { TrendingUp,
   Clock,
   Zap,
   Search,
-========
-<<<<<<< HEAD
+=
 import { TrendingUp, 
   Shield, 
   Clock, 
   Zap, 
   Search, 
->>>>>>>> main:backup-pages/src-pages/services/AIFinancialTradingRiskManagement.tsx
-  Eye,
+>  Eye,
   CheckCircle,
   ArrowRight,
   Phone,
@@ -53,12 +52,7 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
         "Portfolio optimization","
         "Backtesting capabilities","
         "Multi-asset support","
-        "24/7 monitoring"
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialTradingRiskManagement.tsx
-      ]
+        "24/7 monitoring"      ]
     },;
     {
 
@@ -128,23 +122,20 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
     "Real-time Data Processing",;"    "Blockchain Integration";
   ];
   return()
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
+:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
     <>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
+<:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
       <SEO
-========
+=
       <SEO "
->>>>>>>> main:backup-pages/src-pages/services/AIFinancialTradingRiskManagement.tsx
-        title = "AI Financial Trading & Risk Management - Zion Tech Group"
+>        title = "AI Financial Trading & Risk Management - Zion Tech Group"
         description="Transform your trading operations with AI-powered algorithms, comprehensive risk management, and real-time market analysis. Maximize returns while minimizing risks."
         canonical="/services/ai-financial-trading-risk-management"
-=======
     <>"
       <SEO ""
         title = "AI Financial Trading & Risk Management - Zion Tech Group""
         description="Transform your trading operations with AI-powered algorithms, comprehensive risk management, and real-time market analysis. Maximize returns while minimizing risks.""
         canonical="/services/ai-financial-trading-risk-management""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialTradingRiskManagement.tsx
         url="https://ziontechgroup.com/services/ai-financial-trading-risk-management"
        />"
 "      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900">"
@@ -156,22 +147,18 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
               initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
+:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialTradingRiskManagement.tsx
 }}
               animate = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
+:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialTradingRiskManagement.tsx
 }}
               transition={{ duration: 0.6 }}"
 ""
@@ -206,30 +193,26 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
               initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
+:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialTradingRiskManagement.tsx
 }}
               whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
+:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
   y: 0
 
 }}
               transition={{ duration: 0.6 }}"
               className="text-center mb-16"
 "
-=======
   y: 0 
 }}"
               transition={{ duration: 0.6 }}""
               className="text-center mb-16""
 ""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialTradingRiskManagement.tsx
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 Advanced Trading & Risk Management Features"
               </h2>""
@@ -246,27 +229,23 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
                   initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
+:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialTradingRiskManagement.tsx
 }}
                   whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
+:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialTradingRiskManagement.tsx
 }}
                   transition = {
 
   { duration: 0.6,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
+:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
   delay: index * 0.1
 
 }}"
@@ -276,7 +255,6 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>"
                   <h3 className="text-xl font-semibold mb-3 text-white">{feature.title}</h3>"
-=======
   delay: index * 0.1 "
 }}""
                   className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-cyan-500/50 transition-all duration-300""
@@ -285,7 +263,6 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
                     <feature.icon className="w-6 h-6 text-white" />"
                   </div>""
                   <h3 className="text-xl font-semibold mb-3 text-white">{feature.title}</h3>""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialTradingRiskManagement.tsx
                   <p className="text-gray-300">{feature.description}</p>
                 </motion.div>;
               ))}
@@ -299,30 +276,26 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
               initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
+:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialTradingRiskManagement.tsx
 }}
               whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
+:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
   y: 0
 
 }}
               transition={{ duration: 0.6 }}"
               className="text-center mb-16"
 "
-=======
   y: 0 
 }}"
               transition={{ duration: 0.6 }}""
               className="text-center mb-16""
 ""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialTradingRiskManagement.tsx
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 Comprehensive Trading Solutions"
               </h2>""
@@ -339,27 +312,23 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
                   initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
+:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialTradingRiskManagement.tsx
 }}
                   whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
+:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialTradingRiskManagement.tsx
 }}
                   transition = {
 
   { duration: 0.6,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
+:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
   delay: index * 0.1
 
 }}"
@@ -370,7 +339,6 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
                   <ul className="space-y-3 mb-6">
                     {pkg.features.map((feature, featureIndex) => ("
                       <li key={featureIndex} className="flex items-center text-gray-300">"
-=======
   delay: index * 0.1 "
 }}""
                   className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-cyan-500/50 transition-all duration-300""
@@ -380,7 +348,6 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
                   <ul className="space-y-3 mb-6">"
                     {pkg.features.map((feature, featureIndex) => (""
                       <li key={featureIndex} className="flex items-center text-gray-300">""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialTradingRiskManagement.tsx
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />                        {feature}
                       </li>
                     ))}
@@ -403,30 +370,26 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
               initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
+:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialTradingRiskManagement.tsx
 }}
               whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
+:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
   y: 0
 
 }}
               transition={{ duration: 0.6 }}"
               className="text-center mb-16"
 "
-=======
   y: 0 
 }}"
               transition={{ duration: 0.6 }}""
               className="text-center mb-16""
 ""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialTradingRiskManagement.tsx
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 Multi-Asset Trading Support"
               </h2>""
@@ -443,38 +406,32 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
                   initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
+:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialTradingRiskManagement.tsx
 }}
                   whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
+:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialTradingRiskManagement.tsx
 }}
                   transition = {
 
   { duration: 0.6,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
+:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
   delay: index * 0.1
 
 }}"
                   className="bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 text-center"
 "
-=======
   delay: index * 0.1 "
 }}""
                   className="bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 text-center""
 ""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialTradingRiskManagement.tsx
                   <DollarSign className="w-8 h-8 text-cyan-400 mx-auto mb-3"  />"                  <p className="text-white font-medium">{asset}</p>
                 </motion.div>;
               ))}
@@ -488,30 +445,26 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
               initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
+:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialTradingRiskManagement.tsx
 }}
               whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
+:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
   y: 0
 
 }}
               transition={{ duration: 0.6 }}"
               className="text-center mb-16"
 "
-=======
   y: 0 
 }}"
               transition={{ duration: 0.6 }}""
               className="text-center mb-16""
 ""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialTradingRiskManagement.tsx
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 Transform Your Trading Operations"
               </h2>""
@@ -528,27 +481,23 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
                   initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
+:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialTradingRiskManagement.tsx
 }}
                   whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
+:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialTradingRiskManagement.tsx
 }}
                   transition = {
 
   { duration: 0.6,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
+:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
   delay: index * 0.1
 
 }}"
@@ -556,14 +505,12 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
 "
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-4">"
                     <CheckCircle className="w-6 h-6 text-white"  />
-=======
   delay: index * 0.1 "
 }}""
                   className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10""
 ""
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-4">""
                     <CheckCircle className="w-6 h-6 text-white"  />"
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialTradingRiskManagement.tsx
                   </div>"                  <p className="text-white text-lg font-medium">{benefit}</p>
                 </motion.div>;
               ))}
@@ -577,30 +524,26 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
               initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
+:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialTradingRiskManagement.tsx
 }}
               whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
+:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
   y: 0
 
 }}
               transition={{ duration: 0.6 }}"
               className="text-center mb-16"
 "
-=======
   y: 0 
 }}"
               transition={{ duration: 0.6 }}""
               className="text-center mb-16""
 ""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialTradingRiskManagement.tsx
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 Cutting-Edge Trading Technology"
               </h2>""
@@ -617,38 +560,32 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
                   initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
+:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialTradingRiskManagement.tsx
 }}
                   whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
+:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialTradingRiskManagement.tsx
 }}
                   transition = {
 
   { duration: 0.6,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
+:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
   delay: index * 0.1
 
 }}"
                   className="bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 text-center"
 "
-=======
   delay: index * 0.1 "
 }}""
                   className="bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 text-center""
 ""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialTradingRiskManagement.tsx
                   <Zap className="w-8 h-8 text-blue-400 mx-auto mb-3"  />"                  <p className="text-white font-medium">{tech}</p>
                 </motion.div>;
               ))}
@@ -662,26 +599,22 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
               initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
+:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialTradingRiskManagement.tsx
 }}
               whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
+:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
   y: 0
 
 }}
               transition={{ duration: 0.6 }}"
-=======
   y: 0 
 }}"
               transition={{ duration: 0.6 }}""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialTradingRiskManagement.tsx
               className="text-4xl md:text-5xl font-bold mb-6 text-white"
               Ready to Transform Your Trading?
             </motion.h2>
@@ -689,34 +622,28 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
               initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
+:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialTradingRiskManagement.tsx
 }}
               whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
+:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialTradingRiskManagement.tsx
 }}
               transition = {
 
   { duration: 0.6,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
+:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
   delay: 0.2
 
 }}"
-=======
   delay: 0.2 "
 }}""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialTradingRiskManagement.tsx
               className="text-xl text-cyan-100 mb-8"
               Join leading financial institutions that have already
               revolutionized trading with AI-powered algorithms
@@ -725,34 +652,28 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
               initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
+:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialTradingRiskManagement.tsx
 }}
               whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
+:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialTradingRiskManagement.tsx
 }}
               transition = {
 
   { duration: 0.6,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
+:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
   delay: 0.4
 
 }}"
-=======
   delay: 0.4 "
 }}""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialTradingRiskManagement.tsx
               className="flex flex-col sm:flex-row gap-4 justify-center"
               <motion.button
                 whileHover={{ scale: 1.05 }}"
@@ -776,30 +697,26 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
               initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
+:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialTradingRiskManagement.tsx
 }}
               whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
+:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
   y: 0
 
 }}
               transition={{ duration: 0.6 }}"
               className="text-center mb-16"
 "
-=======
   y: 0 
 }}"
               transition={{ duration: 0.6 }}""
               className="text-center mb-16""
 ""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialTradingRiskManagement.tsx
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 Get in Touch"
               </h2>""
@@ -814,17 +731,15 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
                 initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
+:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialTradingRiskManagement.tsx
 }}
                 whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
+:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
   y: 0
 
 }}
@@ -832,94 +747,80 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
                 className="text-center"
 "
                 <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4"  />"
-=======
   y: 0 
 }}"
                 transition={{ duration: 0.6 }}""
                 className="text-center""
 ""
                 <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4"  />""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialTradingRiskManagement.tsx
                 <h3 className="text-xl font-semibold mb-2 text-white">Phone</h3>"                <p className="text-gray-300">+1 302 464 0950</p>
               </motion.div>
               <motion.div
                 initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
+:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialTradingRiskManagement.tsx
 }}
                 whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
+:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialTradingRiskManagement.tsx
 }}
                 transition = {
 
   { duration: 0.6,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
+:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
   delay: 0.2
 
 }}"
                 className="text-center"
 "
                 <Mail className="w-12 h-12 text-cyan-400 mx-auto mb-4"  />"
-=======
   delay: 0.2 "
 }}""
                 className="text-center""
 ""
                 <Mail className="w-12 h-12 text-cyan-400 mx-auto mb-4"  />""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialTradingRiskManagement.tsx
                 <h3 className="text-xl font-semibold mb-2 text-white">Email</h3>"                <p className="text-gray-300">kleber@ziontechgroup.com</p>
               </motion.div>
               <motion.div
                 initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
+:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialTradingRiskManagement.tsx
 }}
                 whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
+:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialTradingRiskManagement.tsx
 }}
                 transition = {
 
   { duration: 0.6,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
+:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
   delay: 0.4
 
 }}"
                 className="text-center"
 "
                 <Globe className="w-12 h-12 text-cyan-400 mx-auto mb-4"  />"
-=======
   delay: 0.4 "
 }}""
                 className="text-center""
 ""
                 <Globe className="w-12 h-12 text-cyan-400 mx-auto mb-4"  />""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialTradingRiskManagement.tsx
                 <h3 className="text-xl font-semibold mb-2 text-white">Website</h3>"                <p className="text-gray-300">https://ziontechgroup.com</p>
               </motion.div>
             </div>
@@ -927,40 +828,34 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
               initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
+:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialTradingRiskManagement.tsx
 }}
               whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
+:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialTradingRiskManagement.tsx
 }}
               transition = {
 
   { duration: 0.6,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
+:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
   delay: 0.6
 
 }}"
               className="text-center mt-12"
 "
               <h3 className="text-2xl font-semibold mb-4 text-white">Address</h3>"
-=======
   delay: 0.6 "
 }}""
               className="text-center mt-12""
 ""
               <h3 className="text-2xl font-semibold mb-4 text-white">Address</h3>""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialTradingRiskManagement.tsx
               <p className="text-gray-300">
                 364 E Main St STE 1008<br />
                 Middletown DE 19709
@@ -972,3 +867,5 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
     </>
   )}'"
 '"'"
+=======
+>>>>>>> main

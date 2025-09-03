@@ -1,29 +1,15 @@
-import React from 'react';'
-import { useUIContext } from '@/context/UIContext';'
-import { Loader2 } from 'lucide-react';
-export const GlobalSpinner = () => {
-  const { state } = useUIContext();
-  if (!state.isLoading) {
-    return null;
-  }
-  return()
-    <div
-      style={{
-'
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,'
-        display: 'flex','
-        justifyContent: 'center','
-        alignItems: 'center','
-        backgroundColor: 'rgba(0, 0, 0, 0.5)','
-        zIndex: 9999, // Ensure it's on top
-      }}
-    >
-      <Loader2 className="h-12 w-12 animate-spin text-white" />
-    </div>
-  );
-};
-'"
+<<<<<<< HEAD
+=======
+import React from "react"
+import { SEO } from "@/components/SEO"
+export default function GlobalSpinner() {return (
+    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
+      <SEO title="GlobalSpinner - Zion Tech Group" description="Professional GlobalSpinner services by Zion Tech Group"  />"
+      <div className="container mx-auto px-4 py-20">"
+        <h1 className="text-4xl font-bold text-white mb-8">GlobalSpinner</h1>"
+        <p className="text-gray-300 text-lg">
+          Professional GlobalSpinner services to help your business grow.
+        </p>
+      </div>
+  );"}"
+>>>>>>> main

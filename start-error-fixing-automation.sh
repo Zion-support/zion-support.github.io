@@ -1,16 +1,11 @@
 #!/bin/bash
 
 # Enhanced Error Fixing Automation Startup Script
-<<<<<<< HEAD
-# This script starts all error fixing automations with PM2
-=======
 # This script starts the comprehensive error fixing automation system
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-1571
 
 set -e
 
 echo "🚀 Starting Enhanced Error Fixing Automation System..."
-<<<<<<< HEAD
 
 # Colors for output
 RED='\033[0;31m'
@@ -63,64 +58,6 @@ pm2 set pm2-logrotate:rotateInterval '0 0 * * *'
 # Start the enhanced ecosystem
 print_status "Starting enhanced error fixing automation ecosystem..."
 pm2 start ecosystem-enhanced.config.cjs --update-env
-=======
-
-# Colors for output
-RED='\033[0;31m'
-GREEN='\033[0;32m'
-YELLOW='\033[1;33m'
-BLUE='\033[0;34m'
-NC='\033[0m' # No Color
-
-# Function to print colored output
-print_status() {
-    echo -e "${BLUE}[INFO]${NC} $1"
-}
-
-print_success() {
-    echo -e "${GREEN}[SUCCESS]${NC} $1"
-}
-
-print_warning() {
-    echo -e "${YELLOW}[WARNING]${NC} $1"
-}
-
-print_error() {
-    echo -e "${RED}[ERROR]${NC} $1"
-}
-
-# Check if we're in the right directory
-if [ ! -f "package.json" ]; then
-    print_error "package.json not found. Please run this script from the project root."
-    exit 1
-fi
-
-# Check if PM2 is installed
-if ! command -v pm2 &> /dev/null; then
-    print_warning "PM2 not found. Installing PM2..."
-    npm install -g pm2
-fi
-
-# Create necessary directories
-print_status "Creating automation directories..."
-mkdir -p automation/logs
-mkdir -p automation/reports
-
-# Install dependencies if needed
-if [ ! -d "node_modules" ]; then
-    print_status "Installing dependencies..."
-    npm install
-fi
-
-# Stop any existing PM2 processes
-print_status "Stopping existing PM2 processes..."
-pm2 stop ecosystem-error-fixing.config.cjs 2>/dev/null || true
-pm2 delete ecosystem-error-fixing.config.cjs 2>/dev/null || true
-
-# Start the error fixing automation
-print_status "Starting error fixing automation with PM2..."
-pm2 start ecosystem-error-fixing.config.cjs --update-env
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-1571
 
 # Wait a moment for processes to start
 sleep 5

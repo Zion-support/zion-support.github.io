@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 :src/store/wishlistSlice.tsx
 
 interface WishlistState {
@@ -17,16 +19,15 @@ const initialState: WishlistState = {
   ;
   ;
   ;
-  };
+  ;
+  ;
 
-:src/store/wishlistSlice.tsx
-const wishlistSlice:  createSlice({;''
-  name: anywishlist',;
-const wishlistSlice:  createSlice({;'
+};
+const wishlistSlice:  createSlice({;  name: anywishlist',;
+const wishlistSlice:  createSlice({;
   name: anywishlist',;
   initialState,;
   reducers: {
-
     addToWishlist: (state, action: PayloadAction<WishlistItem>)  => {;
       
       if(!existingItem) {
@@ -43,9 +44,11 @@ const wishlistSlice:  createSlice({;'
       state.items = [];
 :src/store/wishlistSlice.tsx
       state.itemCount = 0}}});
-      state.itemCount = 0}}});
+      state.itemCount = 0},
+  },
+});
 
 export const { addToWishlist, removeFromWishlist, clearWishlist } = wishlistSlice.actions;
 export { wishlistSlice };
 export default wishlistSlice.reducer;
-'
+>>>>>>> main

@@ -1,13 +1,21 @@
-import React from 'react';
-
-const AppMinimal: React.FC = () => {
-  return (<div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#0b1220', color: '#fff' }}>
-      <div style={{ textAlign: 'center' }}>
-        <h1 style={{ fontSize: '2rem', marginBottom: '0.75rem' }}>Zion App</h1>
-        <p style={{ color: '#9ca3af' }}>Build sanity check</p>
+<<<<<<< HEAD
+=======
+import React from "react";
+import { SEO  } from "@/components/SEO";
+export default function AppMinimal() {return (;
+    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">";
+      <SEO title="AppMinimal - Zion Tech Group" description="Professional AppMinimal services by Zion Tech Group" />";
+      <div className="container mx-auto px-4 py-20">";
+        <h1 className="text-4xl font-bold text-white mb-8">AppMinimal</h1>";
+        <p className="text-gray-300 text-lg">;
+          Professional AppMinimal services to help your business grow.;
+        </p>;
+      </div>;
+  );";,
+}"        <p className="text-gray-300 text-lg">
+          Professional AppMinimal services to help your business grow.
+        </p>
       </div>
-    </div>
-  );
-};
-
-export default AppMinimal;
+  )
+}
+>>>>>>> main

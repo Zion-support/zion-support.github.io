@@ -1,13 +1,25 @@
-
-
-describe ('InnovativeServices2028', () => {
-'
-  it ('renders without crashing', () => {
-    render (<InnovativeServices2028 />) ;'
-    expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ;
-'
-  it ('displays expected content', () => {
-    render (<InnovativeServices2028 />) ;
-    // Add specific test assertions based on component content
-  }) }) ;
-'
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+describe('InnovativeServices2028', () => {}; '; it('renders without crashing', () => {}; render(<InnovativeServices2028 />) ;'; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; '; it('displays expected content', () => {}; render(<InnovativeServices2028 />) ;
+=======
+describe("InnovativeServices2028", () => {}; "; it("renders without crashing", () => {}; render(<InnovativeServices2028 / >) , expect(screen.getByRole ("main") || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; "; it("displays expected content", () => {}; render(<InnovativeServices2028  />)
+}
+    render()
+}
+    expect(screen.getByRole("main) || screen.getByText(/.*/)).toBeInTheDocument()
+}
+  })
+}
+""
+  it("displays expected content", () => {
+    render(<InnovativeServices2028 /" >)
+}
+    // comment
+  })
+}
+  });"
+"
+});""
+>>>>>>> main
+>>>>>>> main

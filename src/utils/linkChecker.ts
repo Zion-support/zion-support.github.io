@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 export interface LinkInfo {
   url: string;
   status: 'working' | 'broken' | 'missing' | 'external';
@@ -14,7 +16,7 @@ export class LinkChecker {
   private visitedUrls: Set<string> = new Set();
   private brokenLinks: LinkInfo[] = [];
   private missingPages: string[] = [];
-'
+
   constructor(baseUrl: string = 'https://ziontechgroup.com') {
 
     this.baseUrl = baseUrl}
@@ -22,6 +24,7 @@ export class LinkChecker {
   isInternalLink(url: string): boolean {
 
     try {
+      
       return urlObj.hostname === new URL(this.baseUrl).hostname} catch {
 
       return false}  }
@@ -30,17 +33,16 @@ export class LinkChecker {
   normalizeUrl(url: string, basePage: string): string {
 
     try {
-'
-      if (url.startsWith('http')) {
 
-        return url}'
-      if (url.startsWith('/')) {
+      if(url.startsWith('http')) {
 
-        return `${this.baseUrl}${url}`}'
-      if (url.startsWith('#')) {
+        return url}
+      if(url.startsWith('/')) {
+
+        return `${this.baseUrl}${url}`}
+      if(url.startsWith('#')) {
 `
-``
-        return `${this.baseUrl}${basePage}${url}`}``
+        return `${this.baseUrl}${basePage}${url}`}`
       return `${this.baseUrl}${basePage}/${url}`} catch {
 
       return url}  }
@@ -49,36 +51,36 @@ export class LinkChecker {
   extractLinks(pageContent: string, pagePath: string): LinkInfo[] {
 
     const links: LinkInfo[] = [];
-'
-    // Extract href attributes from anchor tags''
+
+    // Extract href attributes from anchor tags'
     const hrefRegex = /href=["']([^"']+)["']/g;    let match;
 
     while((match = hrefRegex.exec(pageContent)) !== null) {
 
-      if()'
-        url &&''
-        !url.startsWith('javascript:') &&''
-        !url.startsWith('mailto:') &&''
+      if()
+        url &&'
+        !url.startsWith('javascript:') &&'
+        !url.startsWith('mailto:') &&'
         !url.startsWith('tel:')
       ) {
 
         const normalizedUrl = this.normalizeUrl(url, pagePath);        links.push({
 
-          url: normalizedUrl,'
+          url: normalizedUrl,
           status: 'working',
-          page: pagePath,'
+          page: pagePath,
           anchor: url.startsWith('#') ? url : undefined})}
     }
-'"
+
     // Extract src attributes from img, script, and link tags'"
     
-    while ((match = srcRegex.exec(pageContent)) !== null) {
-'
-      if (url && !url.startsWith('data:') && !url.startsWith('blob:')) {
+    while((match = srcRegex.exec(pageContent)) !== null) {
+
+      if(url && !url.startsWith('data:') && !url.startsWith('blob:')) {
 
         const normalizedUrl = this.normalizeUrl(url, pagePath);        links.push({
 
-          url: normalizedUrl,'
+          url: normalizedUrl,
           status: 'working',
           page: pagePath})}    }
 
@@ -88,6 +90,7 @@ export class LinkChecker {
   async checkPageExists(url: string: any): Promise<any> {
 
     try {
+
       return response.ok} catch {
 
       return false}
@@ -107,14 +110,13 @@ export class LinkChecker {
 
       if(this.isInternalLink(link.url)) {
 
-        if (exists) {
-'
+        if(exists) {
+
           link.status = 'working'} else {
-'
-'          link.status = 'missing';
-          this.missingPages.push(link.url)}
-      } else {
-'
+
+          link.status = 'missing';
+          this.missingPages.push(link.url)}      } else {
+
         link.status = 'external'}
       checkedLinks.push(link)}
 
@@ -127,7 +129,7 @@ export class LinkChecker {
 
   // Extract page title
   private extractPageTitle(content: string): string {
-'
+
     return titleMatch ? titleMatch[1].trim() : 'Untitled'}
   // Get analysis summary
   getSummary() {
@@ -150,5 +152,6 @@ export class LinkChecker {
 
     return this.missingPages}}
 
-export default LinkChecker;'"`
-'"`'"`
+export default LinkChecker;
+'"`
+>>>>>>> main

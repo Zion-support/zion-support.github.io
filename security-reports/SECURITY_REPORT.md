@@ -8,12 +8,12 @@
 - **High Vulnerabilities**: 0 🟠
 - **Outdated Packages**: 0
 - **Security Issues**: 4
-- **Potential Secrets**: 6
+- **Potential Secrets**: 4
 
 ## Detailed Results
 
 ### 🔍 Security Audit
-- **Status**: ✅ Completed
+- **Status**: ❌ Failed
 - **Vulnerabilities**: 0
 - **Breakdown**: Low: 0, Moderate: 0, High: 0, Critical: 0
 
@@ -29,11 +29,11 @@
 
 ### 🔐 Secret Scan
 - **Status**: ✅ Completed
-- **Potential Secrets**: 6
+- **Potential Secrets**: 4
 
 ### 📋 Compliance
 - **Status**: ✅ Completed
-- **Checks Performed**: 1
+- **Checks Performed**: 4
 
 ## 🚨 Immediate Actions Required
 
@@ -41,8 +41,16 @@
 
 2. ✅ No high-risk vulnerabilities found
 
-5. **SECRETS**: Remove or secure 6 hardcoded secrets
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
+5. **SECRETS**: Remove or secure 4 hardcoded secrets
 6. **SECRETS**: Use environment variables for sensitive data
+=======
+3. **SECRETS**: Remove or secure 6 hardcoded secrets
+4. **SECRETS**: Use environment variables for sensitive data
+>>>>>>> main
 
 ## 📚 Recommendations
 

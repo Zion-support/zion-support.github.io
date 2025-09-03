@@ -1,5 +1,6 @@
-<<<<<<< HEAD:pages.disabled/pages/services/AIIncidentPostmortems.tsx
-<<<<<<<< HEAD:pages.disabled/pages/services/AIIncidentPostmortems.tsx
+<<<<<<< HEAD
+:pages.disabled/pages/services/AIIncidentPostmortems.tsx
+<:pages.disabled/pages/services/AIIncidentPostmortems.tsx
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { AlertTriangle,
@@ -9,8 +10,7 @@ import { AlertTriangle,
   Users,
   Database,
   BarChart3,
-========
-<<<<<<< HEAD
+=
 import { AlertTriangle, 
   Clock, 
   TrendingUp, 
@@ -18,8 +18,7 @@ import { AlertTriangle,
   Users, 
   Database, 
   BarChart3, 
->>>>>>>> main:backup-pages/src-pages/services/AIIncidentPostmortems.tsx
-  Zap,
+>  Zap,
   CheckCircle,
   ArrowRight,
   Star,
@@ -40,15 +39,10 @@ import { AlertTriangle,
 ;
 export { function };
 export default function AIIncidentPostmortems(...args[]): {
-  ;
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIIncidentPostmortems.tsx
-  ;
+  ;  ;
   ;
   website: 'https://ziontechgroup.com';
-<<<<<<<< HEAD:pages.disabled/pages/services/AIIncidentPostmortems.tsx
+<:pages.disabled/pages/services/AIIncidentPostmortems.tsx
   ;
 
 };
@@ -79,10 +73,9 @@ export default function AIIncidentPostmortems(...args[]): {
       title: 'Team Collaboration Tools',
       description: 'Built-in communication and collaboration features for incident response teams';
     },;
-========
+=
   }},;
->>>>>>>> main:backup-pages/src-pages/services/AIIncidentPostmortems.tsx
-    {;
+>    {;
       icon: Database,;'
       title: 'Centralized Knowledge Base',;'
       description: 'Maintain a searchable repository of all incidents and resolutions'};
@@ -136,29 +129,18 @@ export default function AIIncidentPostmortems(...args[]): {
       title: 'Customer Support',;'      description: 'Improve customer experience with faster incident resolution and communication',;
       icon: MessageSquare};
   ];
-<<<<<<< HEAD:pages.disabled/pages/services/AIIncidentPostmortems.tsx
+:pages.disabled/pages/services/AIIncidentPostmortems.tsx
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-<<<<<<<< HEAD:pages.disabled/pages/services/AIIncidentPostmortems.tsx
+<:pages.disabled/pages/services/AIIncidentPostmortems.tsx
       <SEO
-========
+=
       <SEO "
-<<<<<<< HEAD
->>>>>>>> main:backup-pages/src-pages/services/AIIncidentPostmortems.tsx
-        title="AI Incident Postmortems Platform | Zion Tech Group"
+>        title="AI Incident Postmortems Platform | Zion Tech Group"
         description="Revolutionize your incident management with AI-powered postmortems. Automate root cause analysis, prevent future incidents, and improve team productivity."
         keywords="AI incident management, incident postmortems, root cause analysis, DevOps, IT operations, incident response"
-       />
-=======
-        title="AI Incident Postmortems Platform | Zion Tech Group""
-=======
-  return (""
-    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
-      <SEO ""
-        title="AI Incident Postmortems Platform | Zion Tech Group"""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIIncidentPostmortems.tsx
-        description="Revolutionize your incident management with AI-powered postmortems. Automate root cause analysis, prevent future incidents, and improve team productivity.""        keywords="AI incident management, incident postmortems, root cause analysis, DevOps, IT operations, incident response"
+       />        description="Revolutionize your incident management with AI-powered postmortems. Automate root cause analysis, prevent future incidents, and improve team productivity.""        keywords="AI incident management, incident postmortems, root cause analysis, DevOps, IT operations, incident response"
        />"
       {/* Hero Section */}""
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">""
@@ -167,22 +149,18 @@ export default function AIIncidentPostmortems(...args[]): {
             initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIIncidentPostmortems.tsx
+:pages.disabled/pages/services/AIIncidentPostmortems.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIIncidentPostmortems.tsx
 }}
             animate = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIIncidentPostmortems.tsx
+:pages.disabled/pages/services/AIIncidentPostmortems.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIIncidentPostmortems.tsx
 }}
             transition={{ duration: 0.8 }}"
 ""
@@ -220,22 +198,18 @@ export default function AIIncidentPostmortems(...args[]): {
             initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIIncidentPostmortems.tsx
+:pages.disabled/pages/services/AIIncidentPostmortems.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIIncidentPostmortems.tsx
 }}
             whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIIncidentPostmortems.tsx
+:pages.disabled/pages/services/AIIncidentPostmortems.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIIncidentPostmortems.tsx
 }}
             transition={{ duration: 0.8 }}"
             viewport={{ once: true }}""
@@ -247,17 +221,14 @@ export default function AIIncidentPostmortems(...args[]): {
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
               Everything you need to manage incidents effectively and build a culture of continuous improvement
             </p>
-<<<<<<< HEAD:pages.disabled/pages/services/AIIncidentPostmortems.tsx
+:pages.disabled/pages/services/AIIncidentPostmortems.tsx
           </motion.div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIIncidentPostmortems.tsx
+<:pages.disabled/pages/services/AIIncidentPostmortems.tsx
 
-========
+=
           "
->>>>>>>> main:backup-pages/src-pages/services/AIIncidentPostmortems.tsx
-=======
-          </motion.div>"
+>          </motion.div>"
           ""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIIncidentPostmortems.tsx
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index()
               <motion.div
@@ -265,27 +236,23 @@ export default function AIIncidentPostmortems(...args[]): {
                 initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIIncidentPostmortems.tsx
+:pages.disabled/pages/services/AIIncidentPostmortems.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIIncidentPostmortems.tsx
 }}
                 whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIIncidentPostmortems.tsx
+:pages.disabled/pages/services/AIIncidentPostmortems.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIIncidentPostmortems.tsx
 }}
                 transition = {
 
   { duration: 0.8,
-<<<<<<< HEAD:pages.disabled/pages/services/AIIncidentPostmortems.tsx
+:pages.disabled/pages/services/AIIncidentPostmortems.tsx
   delay: index * 0.1
 
 }}
@@ -296,7 +263,6 @@ export default function AIIncidentPostmortems(...args[]): {
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>"
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>"
-=======
   delay: index * 0.1 
 }}"
                 viewport={{ once: true }}""
@@ -306,7 +272,6 @@ export default function AIIncidentPostmortems(...args[]): {
                   <feature.icon className="w-6 h-6 text-white" />"
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIIncidentPostmortems.tsx
                 <p className="text-slate-300">{feature.description}</p>
               </motion.div>;
             ))}
@@ -320,22 +285,18 @@ export default function AIIncidentPostmortems(...args[]): {
             initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIIncidentPostmortems.tsx
+:pages.disabled/pages/services/AIIncidentPostmortems.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIIncidentPostmortems.tsx
 }}
             whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIIncidentPostmortems.tsx
+:pages.disabled/pages/services/AIIncidentPostmortems.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIIncidentPostmortems.tsx
 }}
             transition={{ duration: 0.8 }}"
             viewport={{ once: true }}""
@@ -347,17 +308,14 @@ export default function AIIncidentPostmortems(...args[]): {
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
               Transform your incident management process and unlock new levels of efficiency
             </p>
-<<<<<<< HEAD:pages.disabled/pages/services/AIIncidentPostmortems.tsx
+:pages.disabled/pages/services/AIIncidentPostmortems.tsx
           </motion.div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIIncidentPostmortems.tsx
+<:pages.disabled/pages/services/AIIncidentPostmortems.tsx
 
-========
+=
           "
->>>>>>>> main:backup-pages/src-pages/services/AIIncidentPostmortems.tsx
-=======
-          </motion.div>"
+>          </motion.div>"
           ""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIIncidentPostmortems.tsx
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map(benefit: unknown, index: unknown()
               <motion.div
@@ -365,40 +323,34 @@ export default function AIIncidentPostmortems(...args[]): {
                 initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIIncidentPostmortems.tsx
+:pages.disabled/pages/services/AIIncidentPostmortems.tsx
   x: -20
 
-=======
   x: -20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIIncidentPostmortems.tsx
 }}
                 whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIIncidentPostmortems.tsx
+:pages.disabled/pages/services/AIIncidentPostmortems.tsx
   x: 0
 
-=======
   x: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIIncidentPostmortems.tsx
 }}
                 transition = {
 
   { duration: 0.8,
-<<<<<<< HEAD:pages.disabled/pages/services/AIIncidentPostmortems.tsx
+:pages.disabled/pages/services/AIIncidentPostmortems.tsx
   delay: index * 0.1
 
 }}
                 viewport={{ once: true }}"
                 className="flex items-start space-x-3"
 "
-=======
   delay: index * 0.1 
 }}"
                 viewport={{ once: true }}""
                 className="flex items-start space-x-3""
 ""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIIncidentPostmortems.tsx
                 <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0"  />"                <span className="text-slate-300 text-lg">{benefit}</span>
               </motion.div>;
             ))}
@@ -412,22 +364,18 @@ export default function AIIncidentPostmortems(...args[]): {
             initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIIncidentPostmortems.tsx
+:pages.disabled/pages/services/AIIncidentPostmortems.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIIncidentPostmortems.tsx
 }}
             whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIIncidentPostmortems.tsx
+:pages.disabled/pages/services/AIIncidentPostmortems.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIIncidentPostmortems.tsx
 }}
             transition={{ duration: 0.8 }}"
             viewport={{ once: true }}""
@@ -439,17 +387,14 @@ export default function AIIncidentPostmortems(...args[]): {
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
               Choose the plan that fits your team size and incident volume
             </p>
-<<<<<<< HEAD:pages.disabled/pages/services/AIIncidentPostmortems.tsx
+:pages.disabled/pages/services/AIIncidentPostmortems.tsx
           </motion.div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIIncidentPostmortems.tsx
+<:pages.disabled/pages/services/AIIncidentPostmortems.tsx
 
-========
+=
           "
->>>>>>>> main:backup-pages/src-pages/services/AIIncidentPostmortems.tsx
-=======
-          </motion.div>"
+>          </motion.div>"
           ""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIIncidentPostmortems.tsx
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
             {pricingPlans.map(plan: unknown, index: unknown()
               <motion.div
@@ -457,32 +402,26 @@ export default function AIIncidentPostmortems(...args[]): {
                 initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIIncidentPostmortems.tsx
+:pages.disabled/pages/services/AIIncidentPostmortems.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIIncidentPostmortems.tsx
 }}
                 whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIIncidentPostmortems.tsx
+:pages.disabled/pages/services/AIIncidentPostmortems.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIIncidentPostmortems.tsx
 }}
                 transition = {
 
   { duration: 0.8,
-<<<<<<< HEAD:pages.disabled/pages/services/AIIncidentPostmortems.tsx
+:pages.disabled/pages/services/AIIncidentPostmortems.tsx
   delay: index * 0.1
 
-=======
   delay: index * 0.1 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIIncidentPostmortems.tsx
 }}
                 viewport={{ once: true }}
                 className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
@@ -536,22 +475,18 @@ export default function AIIncidentPostmortems(...args[]): {
             initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIIncidentPostmortems.tsx
+:pages.disabled/pages/services/AIIncidentPostmortems.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIIncidentPostmortems.tsx
 }}
             whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIIncidentPostmortems.tsx
+:pages.disabled/pages/services/AIIncidentPostmortems.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIIncidentPostmortems.tsx
 }}
             transition={{ duration: 0.8 }}"
             viewport={{ once: true }}""
@@ -563,17 +498,14 @@ export default function AIIncidentPostmortems(...args[]): {
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">'
               Whether you're in IT, DevOps, Security, or Customer Support, our platform adapts to your needs
             </p>
-<<<<<<< HEAD:pages.disabled/pages/services/AIIncidentPostmortems.tsx
+:pages.disabled/pages/services/AIIncidentPostmortems.tsx
           </motion.div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIIncidentPostmortems.tsx
+<:pages.disabled/pages/services/AIIncidentPostmortems.tsx
 
-========
+=
           "
->>>>>>>> main:backup-pages/src-pages/services/AIIncidentPostmortems.tsx
-=======
-          </motion.div>"
+>          </motion.div>"
           ""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIIncidentPostmortems.tsx
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map(useCase: unknown, index: unknown()
               <motion.div
@@ -581,27 +513,23 @@ export default function AIIncidentPostmortems(...args[]): {
                 initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIIncidentPostmortems.tsx
+:pages.disabled/pages/services/AIIncidentPostmortems.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIIncidentPostmortems.tsx
 }}
                 whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIIncidentPostmortems.tsx
+:pages.disabled/pages/services/AIIncidentPostmortems.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIIncidentPostmortems.tsx
 }}
                 transition = {
 
   { duration: 0.8,
-<<<<<<< HEAD:pages.disabled/pages/services/AIIncidentPostmortems.tsx
+:pages.disabled/pages/services/AIIncidentPostmortems.tsx
   delay: index * 0.1
 
 }}
@@ -612,7 +540,6 @@ export default function AIIncidentPostmortems(...args[]): {
                   <useCase.icon className="w-8 h-8 text-white" />
                 </div>"
                 <h3 className="text-xl font-semibold text-white mb-2">{useCase.title}</h3>"
-=======
   delay: index * 0.1 
 }}"
                 viewport={{ once: true }}""
@@ -622,7 +549,6 @@ export default function AIIncidentPostmortems(...args[]): {
                   <useCase.icon className="w-8 h-8 text-white" />"
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-2">{useCase.title}</h3>""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIIncidentPostmortems.tsx
                 <p className="text-slate-300">{useCase.description}</p>
               </motion.div>;
             ))}
@@ -636,22 +562,18 @@ export default function AIIncidentPostmortems(...args[]): {
             initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIIncidentPostmortems.tsx
+:pages.disabled/pages/services/AIIncidentPostmortems.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIIncidentPostmortems.tsx
 }}
             whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIIncidentPostmortems.tsx
+:pages.disabled/pages/services/AIIncidentPostmortems.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIIncidentPostmortems.tsx
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}"
@@ -685,22 +607,18 @@ export default function AIIncidentPostmortems(...args[]): {
             initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIIncidentPostmortems.tsx
+:pages.disabled/pages/services/AIIncidentPostmortems.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIIncidentPostmortems.tsx
 }}
             whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIIncidentPostmortems.tsx
+:pages.disabled/pages/services/AIIncidentPostmortems.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIIncidentPostmortems.tsx
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}"
@@ -739,3 +657,5 @@ export default function AIIncidentPostmortems(...args[]): {
     </div>;
   )}'"`
 '"`'"`
+=======
+>>>>>>> main

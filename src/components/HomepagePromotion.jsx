@@ -1,59 +1,9 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
-import { Link } from 'react-router-dom';
-export function HomepagePromotion() {
-    const featuredServices = [
-        {
+<<<<<<< HEAD
+import React from 'react';
+import { motion  } from 'framer-motion';
 
-            id: "ai-content-generation",""
-            title: "AI Content Generation Suite",""
-            description: "Generate high-quality, SEO-optimized content in minutes, not hours",""
-            price: "$399/month",""
-            category: "AI & Content Marketing",""
-            features["Multi-format content", "SEO optimization", "Brand voice customization", "Plagiarism detection"],;""
-            benefits["80% faster content creation", "45% better SEO rankings", "60% higher engagement"],;""
-            link: "/comprehensive-services-showcase"
-        },
-        {
-"
-""
-            id: "edge-computing-iot",""
-            title: "Edge Computing & IoT Platform",""
-            description: "Process data closer to devices for ultra-low latency and real-time insights",""
-            price: "$799/month",""
-            category: "IT Infrastructure",""
-            features["Distributed edge nodes", "Real-time processing", "IoT device management", "Edge AI capabilities"],;""
-            benefits["80% lower latency", "60% bandwidth cost reduction", "Enhanced security"],;""
-            link: "/comprehensive-services-showcase"
-        },
-        {
-"
-""
-            id: "quantum-computing",""
-            title: "Quantum Computing Applications",""
-            description: "Solve previously intractable problems with quantum advantage",""
-            price: "$3,999/month",""
-            category: "Emerging Technology",""
-            features["Quantum algorithms", "Optimization solvers", "Cryptography tools", "Scientific simulation"],;""
-            benefits["Exponential speedup", "Future-proof technology", "Competitive advantage"],;""
-            link: "/comprehensive-services-showcase"
-        },
-        {
-"
-""
-            id: "zero-trust-security",""
-            title: "Zero-Trust Security Architecture",""
-            description: "Continuous verification and least-privilege access across all resources",""
-            price: "$1,499/month",""
-            category: "IT Infrastructure",""
-            features["Identity verification", "Device trust scoring", "Network segmentation", "Continuous monitoring"],;""
-            benefits["90% fewer security breaches", "Enhanced compliance", "Simplified security management"],;""
-            link: "/comprehensive-services-showcase"
-
-    ];
-    const containerVariants = {
-
-        hidden: { opacity: 0 },
+export default function Page() {
+,
         visible: {
 
             opacity: 1,
@@ -76,152 +26,32 @@ export function HomepagePromotion() {
 
                 duration: 0.6
 
-"
-    };""
-    return (<section className="py-20 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple relative overflow-hidden">;"
-      {/* Background Elements */}""
-      <div className="absolute inset-0 bg-quantum-gradient opacity-10"></div>;""
+    };"
+    return (<section className="py-20 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple relative overflow-hidden">;
+      {/* Background Elements */}"
+      <div className="absolute inset-0 bg-quantum-gradient opacity-10"></div>;"
       <div className="absolute inset-0 bg-quantum-mesh"></div>
+
+      {/* Floating Elements */}"
+      <div className="absolute top-20 left-10 w-32 h-32 bg-zion-cyan/20 rounded-full blur-xl animate-pulse"></div>'"
+      <div className="absolute bottom-20 right-10 w-40 h-40 bg-zion-purple/20 rounded-full blur-xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+=======
+import React from "react"
+export: function HomepagePromotion() { const featuredServices = []," benefits["80% faster content creation", "45% better SEO rankings", "60% higher engagement"]," link: "/comprehensive-services-showcase"} { " id: "edge-computing-iot,"," title: "Edge: Computing & IoT Platform,"," description: "Process: data closer to devices for ultra-low latency and real-time insights,"," price: "$799/month,"," category: "IT: Infrastructure,"," features["Distributed edge nodes", "Real-time processing", "IoT device management", "Edge AI capabilities"]," benefits["80% lower latency", "60% bandwidth cost reduction", "Enhanced security"]," link: "/comprehensive-services-showcase"} { " id: "quantum-computing,"," title: "Quantum: Computing Applications,"," description: "Solve: previously intractable problems with quantum advantage,"," price: "$,3,999/month"," category: "Emerging: Technology,"," features["Quantum algorithms", "Optimization solvers", "Cryptography tools", "Scientific simulation"]," benefits["Exponential speedup", "Future-proof technology", "Competitive advantage"]," link: "/comprehensive-services-showcase"} { " id: "zero-trust-security,"," title: "Zero-Trust: Security Architecture,"," description: "Continuous: verification and least-privilege access across all resources,"," price: "$,1,499/month"," category: "IT: Infrastructure,"," features["Identity verification", "Device trust scoring", "Network segmentation", "Continuous monitoring"]," benefits["90% fewer security breaches", "Enhanced compliance", "Simplified security management"]," link: "/comprehensive-services-showcase"} ] const containerVariants = {}, visible: { opacity: ,1, transition: { staggerChildren: 0.2} } } const itemVariants = {}, visible: { y: ,0, opacity:  ,1, transition: { duration: 0.6} } }" return: (<section className="py-20 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple relative overflow-hidden"> {}" <div className="absolute inset-0 bg-quantum-gradient opacity-10"></div>" <div className="absolute inset-0 bg-quantum-mesh"></div> {}" <div className="absolute top-20 left-10 w-32 h-32 bg-zion-cyan/20 rounded-full blur-xl animate-pulse"></div>" <div className="absolute bottom-20 right-10 w-40 h-40 bg-zion-purple/20 rounded-full blur-xl animate-pulse" style="{{" animationDelay: "1s"}}></div> " <div: className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6: lg:px-8">  {} <motion.div: initial = { { opacity:  ,0, y: 20}} animate: = { { opacity:  ,1, y: 0: "}} transition="{{" duration: 0.8}} className="text-center: mb-16">" <h2 className="text-4xl md: text-6xl: font-bold text-white mb-6"> Transform Your Business with" <span className="block bg-holographic-gradient bg-clip-text text-transparent"> Cutting-Edge Technology </span> </h2>" <p className="text-xl md:text-2xl: text-zion-slate-light mb-8 max-w-4xl mx-auto"> Discover our comprehensive portfolio of AI-powered solution,s, innovative IT infrastructure, and emerging technology services designed to give you a competitive advantage </p> {}" <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 mb-8 inline-block">" <div className="grid md: grid-cols-3: gap-6 text-center"> <div>" <p className="text-zion-slate-light text-sm mb-2">Ready to Get Started?</p>" <p className="text-white font-semibold">+1 302 464 0950</p> </div> <div>" <p className="text-zion-slate-light text-sm mb-2">Email Us</p>" <p className="text-white font-semibold">kleber@ziontechgroup.com</p> </div> <div>" <p className="text-zion-slate-light text-sm mb-2">Visit Our Website</p>" <a href="https:",",""
+export function HomepagePromotion() { const featuredServices = [], " benefits["80% faster content creation", "45% better SEO rankings", "60% higher engagement"], " link: "/comprehensive-services-showcase" } { " id: "edge-computing-iot", " title: "Edge Computing & IoT Platform"," description: "Process data closer to devices for ultra-low latency and real-time insights", " price: "$799/month"," category: "IT Infrastructure", " features["Distributed edge nodes", "Real-time processing", "IoT device management", "Edge AI capabilities"], " benefits["80% lower latency", "60% bandwidth cost reduction", "Enhanced security"], " link: "/comprehensive-services-showcase" } { " id: "quantum-computing", " title: "Quantum Computing Applications"," description: "Solve previously intractable problems with quantum advantage", " price: "$3,999/month", " category: "Emerging Technology"," features["Quantum algorithms", "Optimization solvers", "Cryptography tools", "Scientific simulation"], " benefits["Exponential speedup", "Future-proof technology", "Competitive advantage"], " link: "/comprehensive-services-showcase" } { " id: "zero-trust-security", " title: "Zero-Trust Security Architecture"," description: "Continuous verification and least-privilege access across all resources", " price: "$1,499/month", " category: "IT Infrastructure"," features["Identity verification", "Device trust scoring", "Network segmentation", "Continuous monitoring"], " benefits["90% fewer security breaches", "Enhanced compliance", "Simplified security management"], " link: "/comprehensive-services-showcase" } ] const containerVariants = {}, visible: { opacit,
+    y: 1, transition: { staggerChildre,
+    n: 0.2 } } } const itemVariants = {}, visible: { ,
+    y: 0, opacity: 1, transition: { duratio,"
+    n: 0.6 } } }" return (<section className="py-20 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple relative overflow-hidden"> {}" <div className="absolute inset-0 bg-quantum-gradient opacity-10"></div>" <div className="absolute inset-0 bg-quantum-mesh"></div> {}" <div className="absolute top-20 left-10 w-32 h-32 bg-zion-cyan/20 rounded-full blur-xl animate-pulse"></div>" <div className="absolute bottom-20 right-10 w-40 h-40 bg-zion-purple/20 rounded-full blur-xl animate-pulse" style="{{" animationDelay: "1s" }}></div> " <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 l,"
+    g:px-8"> {} <motion.div initial = { { opacity: 0, y: 20 }} animate = { { opacity: 1, y: 0 " }} transition="{{" duration: 0.8 }} className="text-center mb-16">" <h2 className="text-4xl md:text-6xl font-bold text-white mb-6"> Transform Your Business with" <span className="block bg-holographic-gradient bg-clip-text text-transparent"> Cutting-Edge Technology </span> </h2>" <p className="text-xl m,"
+    d:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto"> Discover our comprehensive portfolio of AI-powered solutions, innovative IT infrastructure, and emerging technology services designed to give you a competitive advantage </p> {}" <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 mb-8 inline-block">" <div className="grid md:grid-cols-3 gap-6 text-center"> <div>" <p className="text-zion-slate-light text-sm mb-2">Ready to Get Started?</p>" <p className="text-white font-semibold">+1 302 464 0950</p> </div> <div>" <p className="text-zion-slate-light text-sm mb-2">Email Us</p>" <p className="text-white font-semibold">kleber@ziontechgroup.com</p> </div> <div>" <p className="text-zion-slate-light text-sm mb-2">Visit Our Website</p>" <a href="http,"
+    s: "",,
+export function HomepagePromotion() {const featuredServices = [], " benefits["80% faster content creation", "45% better SEO rankings", "60% higher engagement"], " link: "/comprehensive-services-showcase" } {" id: "edge-computing-iot", " title: "Edge Computing & IoT Platform"," description: "Process data closer to devices for ultra-low latency and real-time insights", " price: "$799/month"," category: "IT Infrastructure", " features["Distributed edge nodes", "Real-time processing", "IoT device management", "Edge AI capabilities"], " benefits["80% lower latency", "60% bandwidth cost reduction", "Enhanced security"], " link: "/comprehensive-services-showcase" } {" id: "quantum-computing", " title: "Quantum Computing Applications"," description: "Solve previously intractable problems with quantum advantage", " price: "$3,999/month", " category: "Emerging Technology"," features["Quantum algorithms", "Optimization solvers", "Cryptography tools", "Scientific simulation"], " benefits["Exponential speedup", "Future-proof technology", "Competitive advantage"], " link: "/comprehensive-services-showcase" } {" id: "zero-trust-security", " title: "Zero-Trust Security Architecture"," description: "Continuous verification and least-privilege access across all resources", " price: "$1,499/month", " category: "IT Infrastructure"," features["Identity verification", "Device trust scoring", "Network segmentation", "Continuous monitoring"], " benefits["90% fewer security breaches", "Enhanced compliance", "Simplified security management"], " link: "/comprehensive-services-showcase" } ] const containerVariants = {}, visible: {opacity: 1, transition: { staggerChildren: 0.2 } } } const itemVariants = {}, visible: {y: 0, opacity: 1, transition: { duration: 0.6 } } }" return (<section className="py-20 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple relative overflow-hidden"> {}" <div className="absolute inset-0 bg-quantum-gradient opacity-10"></div>" <div className="absolute inset-0 bg-quantum-mesh"></div> {}" <div className="absolute top-20 left-10 w-32 h-32 bg-zion-cyan/20 rounded-full blur-xl animate-pulse"></div>" <div className="absolute bottom-20 right-10 w-40 h-40 bg-zion-purple/20 rounded-full blur-xl animate-pulse" style="{{" animationDelay: "1s" }}></div> " <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"> {} <motion.div initial = {{ opacity: 0, y: 20 }} animate = {{ opacity: 1, y: 0 " }} transition="{{" duration: 0.8 }} className="text-center mb-16">" <h2 className="text-4xl md: text-6xl font-bold text-white mb-6"> Transform Your Business with" <span className="block bg-holographic-gradient bg-clip-text text-transparent"> Cutting-Edge Technology </span> </h2>" <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto"> Discover our comprehensive portfolio of AI-powered solutions, innovative IT infrastructure, and emerging technology services designed to give you a competitive advantage </p> {}" <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 mb-8 inline-block">" <div className="grid md: grid-cols-3 gap-6 text-center"> <div>" <p className="text-zion-slate-light text-sm mb-2">Ready to Get Started?</p>" <p className="text-white font-semibold">+1 302 464 0950</p> </div> <div>" <p className="text-zion-slate-light text-sm mb-2">Email Us</p>" <p className="text-white font-semibold">kleber@ziontechgroup.com</p> </div> <div>" <p className="text-zion-slate-light text-sm mb-2">Visit Our Website</p>" <a href="https:",,
+export function HomepagePromotion() {} const featuredServices = [],&quot; benefits[&quot;80% faster content creation&quot, &quot;45% better SEO rankings&quot, &quot;60% higher engagement&quot],&quot; link: &quot,/comprehensive-services-showcase&quot} { &quot; id: &quot,edge-computing-iot&quot,&quot; title: &quot,Edge Computing & IoT Platform&quot,&quot; description: &quot,Process data closer to devices for ultra-low latency and real-time insights&quot,&quot; price: &quot,$799/month&quot,&quot; category: &quot,IT Infrastructure&quot,&quot; features[&quot;Distributed edge nodes&quot, &quot;Real-time processing&quot, &quot;IoT device management&quot, &quot;Edge AI capabilities&quot],&quot; benefits[&quot;80% lower latency&quot, &quot;60% bandwidth cost reduction&quot, &quot;Enhanced security&quot],&quot; link: &quot,/comprehensive-services-showcase&quot} { &quot; id: &quot,quantum-computing&quot,&quot; title: &quot,Quantum Computing Applications&quot,&quot; description: &quot,Solve previously intractable problems with quantum advantage&quot,&quot; price: &quot,$3,999/month&quot,&quot; category: &quot,Emerging Technology&quot,&quot; features[&quot;Quantum algorithms&quot, &quot;Optimization solvers&quot, &quot;Cryptography tools&quot, &quot;Scientific simulation&quot],&quot; benefits[&quot;Exponential speedup&quot, &quot;Future-proof technology&quot, &quot;Competitive advantage&quot],&quot; link: &quot,/comprehensive-services-showcase&quot} { &quot; id: &quot,zero-trust-security&quot,&quot; title: &quot,Zero-Trust Security Architecture&quot,&quot; description: &quot,Continuous verification and least-privilege access across all resources&quot,&quot; price: &quot,$1,499/month&quot,&quot; category: &quot,IT Infrastructure&quot,&quot; features[&quot;Identity verification&quot, &quot;Device trust scoring&quot, &quot;Network segmentation&quot, &quot;Continuous monitoring&quot],&quot; benefits[&quot;90% fewer security breaches&quot, &quot;Enhanced compliance&quot, &quot;Simplified security management&quot],&quot; link: &quot,/comprehensive-services-showcase&quot} ]&quot;&quot; const containerVariants = {}, visible: { opacit,y: 1, transition: { staggerChildre,n: 0.2 } } } const;const itemVariants = {}, visible: { ,y: 0, opacity: 1, transition: { duratio,n: 0.6 } } }&quot; return (&quot;<section className="&quot;py-20" bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple relative overflow-hidden&quot;> {}&quot;&quot;" <div className="&quot;absolute" inset-0 bg-quantum-gradient opacity-10&quot;>&quot;"</div>&quot;&quot;" <div className="&quot;absolute" inset-0 bg-quantum-mesh&quot;>&quot;"</div> {}&quot;&quot;" <div className="&quot;absolute" top-20 left-10 w-32 h-32 bg-zion-cyan/20 rounded-full blur-xl animate-pulse&quot;>&quot;"</div>&quot;&quot;" <div className="&quot;absolute" bottom-20 right-10 w-40 h-40 bg-zion-purple/20 rounded-full blur-xl animate-pulse&quot; style="{{" animationDelay: &quot,1s&quot}}>&quot;</div> &quot;&quot;" <div className="&quot;relative" z-10 max-w-7xl mx-auto px-4 sm:px-6 l,g: px-8&quot,> {}&quot; <motion.div initial = { { opacity: 0, y: 20 }} animate = { { opacity: 1, y: 0 &quot}} transition="{{" duration: 0.8 }} className="&quot;text-center" mb-16&quot;>"&quot;&quot; <h2 className="&quot;text-4xl" md: text-6xl font-bold text-white mb-6&quot;> Transform Your Business with&quot;&quot;" <span className="&quot;block" bg-holographic-gradient bg-clip-text text-transparent&quot,> Cutting-Edge Technology&quot, </span> </h2>&quot,&quot," <p className="&quot,text-xl" m,d: text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto&quot,> Discover our comprehensive portfolio of AI-powered solutions, innovative IT infrastructure, and emerging technology services designed to give you a competitive advantage&quot; </p> {}&quot;&quot;" <div className="&quot;bg-white/10" backdrop-blur-sm border border-white/20 rounded-2xl p-6 mb-8 inline-block&quot;>"&quot;&quot; <div className="&quot;grid" md: grid-cols-3 gap-6 text-center&quot;>&quot;" <div>&quot;&quot;" <p className="&quot;text-zion-slate-light" text-sm mb-2&quot;>Ready to Get Started?&quot;</p>&quot;&quot;" <p className="&quot;text-white" font-semibold&quot;>+1 302 464 0950&quot;</p> </div> <div>&quot;&quot;" <p className="&quot;text-zion-slate-light" text-sm mb-2&quot;>Email Us&quot;</p>&quot;&quot;" <p className="&quot;text-white" font-semibold&quot;>kleber@ziontechgroup.com&quot;</p> </div> <div>&quot;&quot;" <p className="&quot;text-zion-slate-light" text-sm mb-2&quot,>Visit Our Website&quot,</p>&quot,&quot," <a href = "&quot,http,s:" ",""
+export function HomepagePromotion() { const featuredServices = [], " benefits["80% faster content creation", "45% better SEO rankings", "60% higher engagement"], " link: "/comprehensive-services-showcase" } { " id: "edge-computing-iot", " title: "Edge Computing & IoT Platform"," description: "Process data closer to devices for ultra-low latency and real-time insights", " price: "$799/month"," category: "IT Infrastructure", " features["Distributed edge nodes", "Real-time processing", "IoT device management", "Edge AI capabilities"], " benefits["80% lower latency", "60% bandwidth cost reduction", "Enhanced security"], " link: "/comprehensive-services-showcase" } { " id: "quantum-computing", " title: "Quantum Computing Applications"," description: "Solve previously intractable problems with quantum advantage", " price: "$3,999/month", " category: "Emerging Technology"," features["Quantum algorithms", "Optimization solvers", "Cryptography tools", "Scientific simulation"], " benefits["Exponential speedup", "Future-proof technology", "Competitive advantage"], " link: "/comprehensive-services-showcase" } { " id: "zero-trust-security", " title: "Zero-Trust Security Architecture"," description: "Continuous verification and least-privilege access across all resources", " price: "$1,499/month", " category: "IT Infrastructure"," features["Identity verification", "Device trust scoring", "Network segmentation", "Continuous monitoring"], " benefits["90% fewer security breaches", "Enhanced compliance", "Simplified security management"], " link: "/comprehensive-services-showcase" } ] const containerVariants = {}, visible: { opacity: 1, transition: { staggerChildren: 0.2 } } } const itemVariants = {}, visible: { y: 0, opacity: 1, transition: { duration: 0.6 } } }" return (<section className="py-20 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple relative overflow-hidden"> {}" <div className="absolute inset-0 bg-quantum-gradient opacity-10"></div>" <div className="absolute inset-0 bg-quantum-mesh"></div> {}" <div className="absolute top-20 left-10 w-32 h-32 bg-zion-cyan/20 rounded-full blur-xl animate-pulse"></div>" <div className="absolute bottom-20 right-10 w-40 h-40 bg-zion-purple/20 rounded-full blur-xl animate-pulse" style="{{" animationDelay: "1s" }}></div> " <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> {} <motion.div initial = { { opacity: 0, y: 20 }} animate = { { opacity: 1, y: 0 " }} transition="{{" duration: 0.8 }} className="text-center mb-16">" <h2 className="text-4xl md:text-6xl font-bold text-white mb-6"> Transform Your Business with" <span className="block bg-holographic-gradient bg-clip-text text-transparent"> Cutting-Edge Technology </span> </h2>" <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto"> Discover our comprehensive portfolio of AI-powered solutions, innovative IT infrastructure, and emerging technology services designed to give you a competitive advantage </p> {}" <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 mb-8 inline-block">" <div className="grid md: grid-cols-3 gap-6 text-center"> <div>" <p className="text-zion-slate-light text-sm mb-2">Ready to Get Started?</p>" <p className="text-white font-semibold">+1 302 464 0950</p> </div> <div>" <p className="text-zion-slate-light text-sm mb-2">Email Us</p>" <p className="text-white font-semibold">kleber@ziontechgroup.com</p> </div> <div>" <p className="text-zion-slate-light text-sm mb-2">Visit Our Website</p>" <a href="https:,
+export function HomepagePromotion() { const featuredServices = [], " benefits["80% faster content creation,45% better SEO rankings,60% higher engagement"], " link: "/comprehensive-services-showcase" } { " id: "edge-computing-iot, title: "Edge Computing & IoT Platform, description: "Process data closer to devices for ultra-low latency and real-time insights, price: "$799/month, category: "IT Infrastructure, features["Distributed edge nodes,Real-time processing,IoT device management,Edge AI capabilities"], " benefits["80% lower latency,60% bandwidth cost reduction,Enhanced security"], " link: "/comprehensive-services-showcase" } { " id: "quantum-computing, title: "Quantum Computing Applications, description: "Solve previously intractable problems with quantum advantage, price: "$3,999/month, category: "Emerging Technology, features["Quantum algorithms,Optimization solvers,Cryptography tools,Scientific simulation"], " benefits["Exponential speedup,Future-proof technology,Competitive advantage"], " link: "/comprehensive-services-showcase" } { " id: "zero-trust-security, title: "Zero-Trust Security Architecture, description: "Continuous verification and least-privilege access across all resources, price: "$1,499/month, category: "IT Infrastructure, features["Identity verification,Device trust scoring,Network segmentation,Continuous monitoring"], " benefits["90% fewer security breaches,Enhanced compliance,Simplified security management"], " link: "/comprehensive-services-showcase" } ] const containerVariants = {}, visible: { opacity: 1, transition: { staggerChildren: 0.2 } } } const itemVariants = {}, visible: { y: 0, opacity: 1, transition: { duration: 0.6 } } }" return (<section className="py-20 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple relative overflow-hidden"> {}" <div className="absolute inset-0 bg-quantum-gradient opacity-10"></div>" <div className="absolute inset-0 bg-quantum-mesh"></div> {}" <div className="absolute top-20 left-10 w-32 h-32 bg-zion-cyan/20 rounded-full blur-xl animate-pulse"></div>" <div className="absolute bottom-20 right-10 w-40 h-40 bg-zion-purple/20 rounded-full blur-xl animate-pulse" style="{{" animationDelay: "1s" }}" ></div> " <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> {} <motion.div initial = { { opacity: 0, y: 20 }} animate = { { opacity: 1, y: 0 " }} transition="{{" duration: 0.8 }} className="text-center mb-16">" <h2 className="text-4xl md:text-6xl font-bold text-white mb-6"> Transform Your Business with" <span className="block bg-holographic-gradient bg-clip-text text-transparent"> Cutting-Edge Technology </span> </h2>" <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto"> Discover our comprehensive portfolio of AI-powered solutions, innovative IT infrastructure, and emerging technology services designed to give you a competitive advantage </p> {}" <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 mb-8 inline-block">" <div className="grid md: grid-cols-3 gap-6 text-center"> <div>" <p className="text-zion-slate-light text-sm mb-2">Ready to Get Started?</p>" <p className="text-white font-semibold">+1 302 464 0950</p> </div> <div>" <p className="text-zion-slate-light text-sm mb-2">Email Us</p>" <p className="text-white font-semibold">kleber@ziontechgroup.com</p> </div> <div>" <p className="text-zion-slate-light text-sm mb-2">Visit Our Website</p>" <a href="https:"}"
+>>>>>>> main
 "
-      {/* Floating Elements */}"'"
-      <div className="absolute top-20 left-10 w-32 h-32 bg-zion-cyan/20 rounded-full blur-xl animate-pulse"></div>'"'"
-      <div className="absolute bottom-20 right-10 w-40 h-40 bg-zion-purple/20 rounded-full blur-xl animate-pulse" style={{ animationDelay: '1s' }}></div>"
-""
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header Section */}
-        <motion.div initial = {
 
-  { opacity: 0,
-  y: 20
-
-}} animate = {
-
-  { opacity: 1,
-  y: 0 
-
-
-
-
-"
-""
-}} transition={{ duration: 0.8 }} className="text-center mb-16">""
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">"
-            Transform Your Business with""
-            <span className="block bg-holographic-gradient bg-clip-text text-transparent">
-              Cutting-Edge Technology
-            </span>"
-          </h2>""
-          <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
-            Discover our comprehensive portfolio of AI-powered solutions, innovative IT infrastructure,
-            and emerging technology services designed to give you a competitive advantage
-          </p>
-"
-          {/* Contact Information */}""
-          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 mb-8 inline-block">""
-            <div className="grid md:grid-cols-3 gap-6 text-center">"
-              <div>""
-                <p className="text-zion-slate-light text-sm mb-2">Ready to Get Started?</p>""
-                <p className="text-white font-semibold">+1 302 464 0950</p>
-              </div>"
-              <div>""
-                <p className="text-zion-slate-light text-sm mb-2">Email Us</p>""
-                <p className="text-white font-semibold">kleber@ziontechgroup.com</p>
-              </div>"
-              <div>""
-                <p className="text-zion-slate-light text-sm mb-2">Visit Our Website</p>""
-                <a href="https://ziontechgroup.com" className="text-zion-cyan hover:text-zion-cyan-light font-semibold">
-                  ziontechgroup.com
-                </a>
-              </div>
-            </div>
-          </div>
-        </motion.div>
-"
-        {/* Featured Services Grid */}""
-        <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">""
-          {featuredServices.map((service) => (<motion.div key={service.id} variants={itemVariants} className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:border-zion-cyan/40 hover:bg-white/20 transition-all duration-300 group">""
-              <div className="mb-4">""
-                <span className="text-zion-cyan text-sm font-medium">{service.category}</span>""
-                <h3 className="text-xl font-bold text-white mt-2 group-hover:text-zion-cyan transition-colors">
-                  {service.title}"
-                </h3>""
-                <p className="text-zion-slate-light text-sm mt-2">
-                  {service.description}"
-                </p>""
-                <div className="text-zion-cyan font-bold text-lg mt-3">
-                  {service.price}
-                </div>
-              </div>
-"
-              {/* Features */}""
-              <div className="mb-4">""
-                <h4 className="text-zion-cyan font-semibold text-sm mb-2">Key Features</h4>""
-                <ul className="space-y-1">""
-                  {service.features.map((feature, index) => (<li key={index} className="text-zion-slate-light text-xs flex items-start">""
-                      <span className="text-zion-cyan mr-2">•</span>
-                      {feature}
-                    </li>) ) }
-                </ul>
-              </div>
-"
-              {/* Benefits */}""
-              <div className="mb-4">""
-                <h4 className="text-zion-cyan font-semibold text-sm mb-2">Benefits</h4>""
-                <ul className="space-y-1">""
-                  {service.benefits.map((benefit, index) => (<li key={index} className="text-green-400 text-xs flex items-start">""
-                      <span className="text-green-400 mr-2">✓</span>
-                      {benefit}
-                    </li>) ) }
-                </ul>
-              </div>"
-""
-              <Link to={service.link} className="block w-full bg-zion-cyan hover:bg-zion-cyan-light text-zion-blue-dark font-semibold py-2 px-4 rounded-lg text-center transition-colors">
-                Learn More
-              </Link>
-            </motion.div>) ) }
-        </motion.div>
-
-        {/* Call to Action Section */}
-        <motion.div initial = {
-
-  { opacity: 0,
-  y: 20
-
-}} whileInView = {
-
-  { opacity: 1,
-  y: 0 
-
-
-
-
-"
-""
-}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center">""
-          <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-2xl p-8 backdrop-blur-sm">""
-            <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Accelerate Your Digital Transformation?"
-            </h3>""
-            <p className="text-zion-slate-light text-lg mb-6 max-w-2xl mx-auto">
-              Our team of technology experts is ready to help you implement the perfect solution.
-              Get a personalized consultation and quote today.
-            </p>"
-""
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">""
-              <a href="mailto:kleber@ziontechgroup.com?subject=Digital Transformation Consultation" className="bg-zion-cyan hover:bg-zion-cyan-light text-zion-blue-dark font-bold py-3 px-8 rounded-lg text-lg transition-colors">
-                Get Free Consultation"
-              </a>""
-              <a href="tel:+13024640950" className="bg-white/20 hover:bg-white/30 text-white font-bold py-3 px-8 rounded-lg text-lg transition-colors border border-white/30">
-                Call +1 302 464 0950
-              </a>
-            </div>"
-""
-            <div className="text-zion-slate-light text-sm">"
-              <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>""
-              <p>🌐 <a href="https://ziontechgroup.com" className="text-zion-cyan hover:text-zion-cyan-light">https://ziontechgroup.com</a></p>
-            </div>
-          </div>
-        </motion.div>
-      </div>
-    </section>)}'"
-'"'"
+  );
+export default Component

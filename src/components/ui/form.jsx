@@ -1,32 +1,11 @@
 import React from 'react';
-;
-export const Form = ({ children, ...props }) => {
+<<<<<<< HEADimport React from "react"
+export const Form = ({ children, ...props }) => {}
 
-  return <div {...props}>{children}</div>;
-};
-;
-export const FormField = ({ children, name }) => {
-
-  return <div data-field={name}>{children}</div>;
-};
-'
-export const FormItem = ({ children, className = '' }) => {
-
-  return <div className={className}>{children}</div>;
-};
-'
-export const FormLabel = ({ children, className = '' }) => {
-
-  return <label className={className}>{children}</label>;
-};
-'
-export const FormMessage = ({ children, className = '' }) => {
-
-  return <div className={className}>{children}</div>;
-};
-;
-export const FormControl = ({ children }) => {
-
-  return <div>{children}</div>;
-};
-'
+"
+export const FormControl = ({ children, className = "" }) => {};"
+"
+export const FormLabel = ({ children, className = "" }) => {};"
+"
+export const FormMessage = ({ className = "" }) => {"
+  return <div className="{className}" > <// comment};"""
