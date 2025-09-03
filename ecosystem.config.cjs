@@ -11,18 +11,18 @@ module.exports = {
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'development',
-        PORT: 3000
+        PORT: 3000,
       },
       env_production: {
         NODE_ENV: 'production',
-        PORT: 3000
+        PORT: 3000,
       },
       log_file: './logs/zion-website.log',
       out_file: './logs/zion-website-out.log',
       error_file: './logs/zion-website-error.log',
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
       merge_logs: false,
-      time: false
+      time: false,
     },
 
     // Error Monitor - runs every 10 minutes
@@ -34,7 +34,7 @@ module.exports = {
       watch: false,
       max_memory_restart: '500M',
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'production',
       },
       error_file: './logs/error-monitor-error.log',
       out_file: './logs/error-monitor-out.log',
@@ -46,7 +46,7 @@ module.exports = {
       min_uptime: '5s',
       restart_delay: 2000,
       cron_restart: '*/10 * * * *', // Run every 10 minutes
-      pmx: true
+      pmx: true,
     },
 
     // Health Checker - runs every 5 minutes
@@ -58,7 +58,7 @@ module.exports = {
       watch: false,
       max_memory_restart: '300M',
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'production',
       },
       error_file: './logs/health-checker-error.log',
       out_file: './logs/health-checker-out.log',
@@ -70,7 +70,7 @@ module.exports = {
       min_uptime: '5s',
       restart_delay: 2000,
       cron_restart: '*/5 * * * *', // Run every 5 minutes
-      pmx: true
+      pmx: true,
     },
 
     // Auto Fixer - runs every 2 hours
@@ -82,7 +82,7 @@ module.exports = {
       watch: false,
       max_memory_restart: '1G',
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'production',
       },
       error_file: './logs/auto-fixer-error.log',
       out_file: './logs/auto-fixer-out.log',
@@ -94,7 +94,7 @@ module.exports = {
       min_uptime: '10s',
       restart_delay: 5000,
       cron_restart: '0 */2 * * *', // Run every 2 hours
-      pmx: true
+      pmx: true,
     },
 
     // Syntax Fixer - runs every 30 minutes
@@ -106,7 +106,7 @@ module.exports = {
       watch: false,
       max_memory_restart: '800M',
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'production',
       },
       error_file: './logs/syntax-fixer-error.log',
       out_file: './logs/syntax-fixer-out.log',
@@ -118,7 +118,7 @@ module.exports = {
       min_uptime: '15s',
       restart_delay: 3000,
       cron_restart: '*/30 * * * *', // Run every 30 minutes
-      pmx: true
+      pmx: true,
     },
 
     // Dependency Manager - runs every hour
@@ -130,7 +130,7 @@ module.exports = {
       watch: false,
       max_memory_restart: '600M',
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'production',
       },
       error_file: './logs/dependency-manager-error.log',
       out_file: './logs/dependency-manager-out.log',
@@ -142,7 +142,7 @@ module.exports = {
       min_uptime: '20s',
       restart_delay: 5000,
       cron_restart: '0 * * * *', // Run every hour
-      pmx: true
+      pmx: true,
     },
 
     // Build Monitor - runs every 15 minutes
@@ -154,7 +154,7 @@ module.exports = {
       watch: false,
       max_memory_restart: '400M',
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'production',
       },
       error_file: './logs/build-monitor-error.log',
       out_file: './logs/build-monitor-out.log',
@@ -166,7 +166,7 @@ module.exports = {
       min_uptime: '10s',
       restart_delay: 2000,
       cron_restart: '*/15 * * * *', // Run every 15 minutes
-      pmx: true
+      pmx: true,
     },
 
     // Log Cleaner - runs daily at 2 AM
@@ -178,7 +178,7 @@ module.exports = {
       watch: false,
       max_memory_restart: '200M',
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'production',
       },
       error_file: './logs/log-cleaner-error.log',
       out_file: './logs/log-cleaner-out.log',
@@ -190,8 +190,114 @@ module.exports = {
       min_uptime: '5s',
       restart_delay: 2000,
       cron_restart: '0 2 * * *', // Run daily at 2 AM
-      pmx: true
-    }
+      pmx: true,
+    },
+
+    // PM2 Sync Automation - runs continuously with remote-first strategy
+    {
+      name: 'pm2-sync-automation',
+      script: './scripts/automation/pm2-sync-automation.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '30000', // 30 seconds
+        BUILD_INTERVAL: '300000', // 5 minutes
+        TEST_INTERVAL: '600000', // 10 minutes
+        SECURITY_INTERVAL: '1800000', // 30 minutes
+        REMOTE_FIRST_STRATEGY: 'true',
+      },
+      error_file: './logs/pm2-sync-automation-error.log',
+      out_file: './logs/pm2-sync-automation-out.log',
+      log_file: './logs/pm2-sync-automation-combined.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+      merge_logs: true,
+      max_restarts: 5,
+      min_uptime: '10s',
+      restart_delay: 3000,
+      pmx: true,
+    },
+
+    // PM2 Sync Monitor - runs continuously for health monitoring
+    {
+      name: 'pm2-sync-monitor',
+      script: './scripts/automation/pm2-sync-monitor.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '256M',
+      env: {
+        NODE_ENV: 'production',
+        MONITOR_INTERVAL: '60000', // 1 minute
+        REMOTE_FIRST_STRATEGY: 'true',
+      },
+      error_file: './logs/pm2-sync-monitor-error.log',
+      out_file: './logs/pm2-sync-monitor-out.log',
+      log_file: './logs/pm2-sync-monitor-combined.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+      merge_logs: true,
+      max_restarts: 3,
+      min_uptime: '15s',
+      restart_delay: 5000,
+      pmx: true,
+    },
+
+    // PM2 Sync Automation - runs continuously with remote-first strategy
+    {
+      name: 'pm2-sync-automation',
+      script: './scripts/automation/pm2-sync-automation.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '30000', // 30 seconds
+        BUILD_INTERVAL: '300000', // 5 minutes
+        TEST_INTERVAL: '600000', // 10 minutes
+        SECURITY_INTERVAL: '1800000', // 30 minutes
+        REMOTE_FIRST_STRATEGY: 'true',
+      },
+      error_file: './logs/pm2-sync-automation-error.log',
+      out_file: './logs/pm2-sync-automation-out.log',
+      log_file: './logs/pm2-sync-automation-combined.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+      merge_logs: true,
+      max_restarts: 5,
+      min_uptime: '10s',
+      restart_delay: 3000,
+      pmx: true,
+    },
+
+    // PM2 Sync Monitor - runs continuously for health monitoring
+    {
+      name: 'pm2-sync-monitor',
+      script: './scripts/automation/pm2-sync-monitor.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '256M',
+      env: {
+        NODE_ENV: 'production',
+        MONITOR_INTERVAL: '60000', // 1 minute
+        REMOTE_FIRST_STRATEGY: 'true',
+      },
+      error_file: './logs/pm2-sync-monitor-error.log',
+      out_file: './logs/pm2-sync-monitor-out.log',
+      log_file: './logs/pm2-sync-monitor-combined.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+      merge_logs: true,
+      max_restarts: 3,
+      min_uptime: '15s',
+      restart_delay: 5000,
+      pmx: true,
+    },
   ],
 
   deploy: {
@@ -201,7 +307,8 @@ module.exports = {
       ref: 'origin/main',
       repo: 'git@github.com:your-username/your-repo.git',
       path: '/var/www/production',
-      'post-deploy': 'npm install && pm2 reload ecosystem.config.cjs --env production'
-    }
-  }
+      'post-deploy':
+        'npm install && pm2 reload ecosystem.config.cjs --env production',
+    },
+  },
 };

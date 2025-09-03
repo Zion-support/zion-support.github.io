@@ -15,7 +15,7 @@ const MIN_QUANTITY = 1;
 export const validateCartItem = (item) => {
   if (!item || typeof item !== 'object') {
     return false}
-  const requiredFields = ['id', 'name', 'price', 'quantity']
+  const requiredFields = ['id,name,price,quantity']
   for (const field of requiredFields) {
     if (!(field in item)) {
       return false}
@@ -29,7 +29,6 @@ export const validateCartItem = (item) => {
   if (typeof item.quantity !== 'number' || item.quantity < MIN_QUANTITY || item.quantity > MAX_QUANTITY) {
     return false}
   return true}
-;
 /**;
  * Add item to cart;
  * @param {Array} cart - Current cart array;
@@ -61,7 +60,6 @@ export const addToCart = (cart, newItem) => {
     return [...cart, { ...newItem }]
 }
 }
-;
 /**;
  * Remove item from cart;
  * @param {Array} cart - Current cart array;
@@ -70,7 +68,6 @@ export const addToCart = (cart, newItem) => {
  */;
 export const removeFromCart = (cart, itemId) => {
   return cart.filter(item => item.id !== itemId)}
-;
 /**;
  * Update item quantity in cart;
  * @param {Array} cart - Current cart array;
@@ -87,7 +84,6 @@ export const updateCartItemQuantity = (cart, itemId, newQuantity) => {
     item.id === itemId;
       ? { ...item, quantity: newQuantity }
       : item)}
-;
 /**;
  * Clear all items from cart;
  * @param {Array} cart - Current cart array;
@@ -95,7 +91,6 @@ export const updateCartItemQuantity = (cart, itemId, newQuantity) => {
  */;
 export const clearCart = (cart) => {
   return []}
-;
 /**;
  * Check if cart is empty;
  * @param {Array} cart - Cart array to check;
@@ -103,7 +98,6 @@ export const clearCart = (cart) => {
  */;
 export const isCartEmpty = (cart) => {
   return !Array.isArray(cart) || cart.length === 0}
-;
 /**;
  * Get total number of items in cart;
  * @param {Array} cart - Cart array;
@@ -113,7 +107,6 @@ export const getCartItemCount = (cart) => {
   if (isCartEmpty(cart)) {
     return 0}
   return cart.reduce((total, item) => total + item.quantity, 0)}
-;
 /**;
  * Get unique item count in cart;
  * @param {Array} cart - Cart array;
@@ -123,7 +116,6 @@ export const getUniqueItemCount = (cart) => {
   if (isCartEmpty(cart)) {
     return 0}
   return cart.length}
-;
 /**;
  * Calculate cart subtotal;
  * @param {Array} cart - Cart array;
@@ -135,7 +127,6 @@ export const calculateCartSubtotal = (cart) => {
   return cart.reduce((subtotal, item) => {
     const itemTotal = item.price * item.quantity;
     return subtotal + itemTotal}, 0)}
-;
 /**;
  * Calculate tax amount;
  * @param {number} subtotal - Cart subtotal;
@@ -144,7 +135,6 @@ export const calculateCartSubtotal = (cart) => {
  */;
 export const calculateTax = (subtotal, taxRate = DEFAULT_TAX_RATE) => {
   return subtotal * taxRate}
-;
 /**;
  * Calculate cart total with tax;
  * @param {Array} cart - Cart array;
@@ -163,7 +153,6 @@ export const calculateCartTotal = (cart, taxRate = DEFAULT_TAX_RATE) => {
     itemCount,
     taxRate}
 }
-;
 /**;
  * Format price for display;
  * @param {number} price - Price to format;
@@ -176,7 +165,6 @@ export const formatPrice = (price, currency = 'USD') => {
   return new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: currency}).format(price)}
-;
 /**;
  * Get cart summary for display;
  * @param {Array} cart - Cart items array;
@@ -192,7 +180,6 @@ export const getCartSummary = (cart) => {
     total: formatPrice(total.total),
     isEmpty: isCartEmpty(cart)}
 }
-;
 /**;
  * Export cart data (useful for debugging or backup);
  * @param {Array} cart - Cart items array;
@@ -204,7 +191,6 @@ export const exportCartData = (cart) => {
     console.error('Error exporting cart data:', error);
     return '[]'}
 }
-;
 /**;
  * Import cart data (useful for restoring from backup);
  * @param {string} cartData - JSON string of cart data;
@@ -219,7 +205,6 @@ export const importCartData = (cartData) => {
     console.error('Error importing cart data:', error);
     return []}
 }
-;
 /**;
  * Get cart key for storage (useful for user-specific carts);
  * @param {string} userId - User ID (optional);
@@ -229,7 +214,6 @@ export const getCartKey = (userId = null) => {
   if (userId) {
     return `zion_cart_${userId}`}
   return CART_STORAGE_KEY}
-;
 /**;
  * Merge two carts (useful when user logs in);
  * @param {Array} cart1 - First cart;
@@ -256,7 +240,6 @@ export const mergeCarts = (cart1, cart2) => {
       mergedCart.push(item2)}
   })
   return mergedCart}
-;
 /**;
  * Merge cart items (alias for mergeCarts for backward compatibility);
  * @param {Array} cart1 - First cart;
@@ -265,7 +248,6 @@ export const mergeCarts = (cart1, cart2) => {
  */;
 export const mergeCartItems = (cart1, cart2) => {
   return mergeCarts(cart1, cart2)}
-;
 /**;
  * Get cart statistics;
  * @param {Array} cart - Cart array;
@@ -293,11 +275,10 @@ export const getCartStats = (cart) => {
     highestPrice,
     lowestPrice}
 }
-;
 /**;
  * Sort cart items by various criteria;
  * @param {Array} cart - Cart array;
- * @param {string} sortBy - Sort criteria ('name', 'price', 'quantity', 'date');
+ * @param {string} sortBy - Sort criteria ('name,price,quantity,date');
  * @param {string} sortOrder - Sort order ('asc' or 'desc');
  * @returns {Array} Sorted cart array;
  */;
@@ -332,7 +313,6 @@ export const sortCartItems = (cart, sortBy = 'name', sortOrder = 'asc') => {
       return aValue > bValue ? 1 : -1}
   })
   return sortedCart}
-;
 export default {
   validateCartItem,
   addToCart,

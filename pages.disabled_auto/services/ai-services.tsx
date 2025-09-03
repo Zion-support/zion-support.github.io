@@ -29,7 +29,7 @@ const AIServicesPage: NextPage = () => {
   const aiServices = getServicesByCategory(
   'ai-services)
   const benefits = [
-    {
+  {
       icon: <Brain className='w-8 h-8' />,
 :pages.disabled_auto/services/ai-services.tsx
       title:,
@@ -407,5 +407,4 @@ const AIServicesPage: NextPage = () => {
       </section>
     </MainLayout>
   )}
-;
 export default AIServicesPage

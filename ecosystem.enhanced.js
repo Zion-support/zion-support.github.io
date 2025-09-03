@@ -512,8 +512,7 @@ module.exports = {
   origin/main',
       repo: 'https://github.com/Zion-Holdings/zion.app.git,
       path:,
-  /Users/miami2/zion-app-clone',
-  'pre-deploy-local': ',
+  /Users/miami2/zion-app-clone,pre-deploy-local': ',
 ,
   post-deploy;
   ': 'npm install && npm run build && pm2 reload ecosystem.enhanced.js --env production,
@@ -528,8 +527,7 @@ module.exports = {
   origin/staging',
       repo: 'https://github.com/Zion-Holdings/zion.app.git,
       path:,
-  /Users/miami2/zion-app-staging',
-  'pre-deploy-local': ',
+  /Users/miami2/zion-app-staging,pre-deploy-local': ',
 ,
   post-deploy;
   ': 'npm install && npm run build && pm2 reload ecosystem.enhanced.js --env staging,
@@ -544,12 +542,10 @@ module.exports = {
   origin/develop',
       repo: 'https://github.com/Zion-Holdings/zion.app.git,
       path:,
-  /Users/miami2/zion-app-dev',
-  'pre-deploy-local': ',
+  /Users/miami2/zion-app-dev,pre-deploy-local': ',
 ,
   post-deploy;
   ': 'npm install && npm run build && pm2 reload ecosystem.enhanced.js --env development,
 ,
   pre-setup;
   ': '}}}
-;

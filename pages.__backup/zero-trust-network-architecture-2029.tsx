@@ -24,44 +24,23 @@ const contactInfo = {
   address: '364 E Main St STE 1008 Middletown DE 19709,
   website:,
   https: //ziontechgroup.com}
-;
 const features = [,
-  Identity verification',
-  'Device trust scoring',
-  'Continuous monitoring',
-  'Micro-segmentation',
-  'Least privilege access',
-  'Real-time threat detection',
-  'Automated response',
-  'Compliance automation';
+  Identity verification,Device trust scoring,Continuous monitoring,Micro-segmentation,Least privilege access,Real-time threat detection,Automated response,Compliance automation';
 ];
 const benefits = [
-  'Eliminate network perimeter',
-  'Reduce attack surface',
-  'Improve compliance',
-  'Enhanced visibility',
-  'Automated security',
-  'Cost-effective protection';
+  'Eliminate network perimeter,Reduce attack surface,Improve compliance,Enhanced visibility,Automated security,Cost-effective protection';
 ];
 const useCases = [
-  'Enterprise organizations',
-  'Government agencies',
-  'Healthcare institutions',
-  'Financial services',
-  'Educational institutions',
-  'Manufacturing companies';
+  'Enterprise organizations,Government agencies,Healthcare institutions,Financial services,Educational institutions,Manufacturing companies';
 ];
 const technology = [
 <: pages/zero-trust-network-architecture-2029.tsx;
   'Zero Trust Architecture,
 ,
-  Identity Management',
-  'Network Security',
-  'AI-Powered Analytics',
-  'Automation Systems',
-  'Compliance Tools';
+  Identity Management,Network Security,AI-Powered Analytics,Automation Systems,Compliance Tools';
 ];
-const pricingPlans = [{
+const pricingPlans = [
+  {
     name: 'Zero Trust Starter,
     price:,
   $29,999',
@@ -70,10 +49,7 @@ const pricingPlans = [{
   Perfect for small to medium enterprises',
     features: [;
   'Basic identity verification,
-  'Device trust scoring',
-  'Network monitoring',
-  'Basic support',
-  'Training modules';
+  'Device trust scoring,Network monitoring,Basic support,Training modules';
     ],
     popular: false},
   {
@@ -86,11 +62,7 @@ const pricingPlans = [{
   For large enterprises and organizations',
     features: [;
   'Advanced identity management,
-  'Full micro-segmentation',
-  'AI threat detection',
-  'Priority support',
-  'Custom training',
-  'Integration services';
+  'Full micro-segmentation,AI threat detection,Priority support,Custom training,Integration services';
     ],
     popular: true},
   {
@@ -103,11 +75,7 @@ const pricingPlans = [{
   For government and military organizations',
     features: [;
   'Military-grade security,
-  'Custom compliance',
-  'On-site deployment',
-  '24/7 dedicated support',
-  'Full compliance certification',
-  'Complete training program';
+  'Custom compliance,On-site deployment,24/7 dedicated support,Full compliance certification,Complete training program';
     ],
     popular: false}
 ];

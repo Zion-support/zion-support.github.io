@@ -30,7 +30,6 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
       let totalSize = 0;
       let chunkCount = 0;
       let largestChunk = { name: unknown'', size: 0 }
-;
       resourceEntries.forEach((entry: )  => {
         if (entry.name.includes('.js') || entry.name.includes('.css')) {
           const size = entry.transferSize || entry.encodedBodySize || 0;

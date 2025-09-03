@@ -25,7 +25,7 @@ class AutomationDashboard {
     fs.appendFileSync(this.logFile, logMessage)}
   loadAutomationSystems() {
     const systems = [
-      {
+  {
         name:,
   lint-monitor',
         path: 'lint-monitor.js,
@@ -190,7 +190,6 @@ class AutomationDashboard {
       systems: this.getAllSystems(),
       metrics: this.getAllMetrics(),
       alerts: this.getAlerts()}
-;
     return report}
 }
 // Export the class;

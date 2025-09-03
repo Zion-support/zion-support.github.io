@@ -1,6 +1,5 @@
 'use client,
-import { useState } from 'react;
-  ';
+import { useState }  from 'react;;
 export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: ',
@@ -10,8 +9,7 @@ export default function ContactForm() {
     phone:,
   ',
     service: ',
-    message: ';
-  '})
+    message: })
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -56,9 +54,9 @@ export default function ContactForm() {
               Full Name *
             </label>
             <input
-              type='text';
-              id='name';
-              name='name';
+              type='text'
+              id='name'
+              name='name'
               value={formData.name}
               onChange={handleChange}
               required;
@@ -70,9 +68,9 @@ export default function ContactForm() {
               Email Address *
             </label>
             <input
-              type='email';
-              id='email';
-              name='email';
+              type='email'
+              id='email'
+              name='email'
               value={formData.email}
               onChange={handleChange}
               required;
@@ -85,9 +83,9 @@ export default function ContactForm() {
             <label htmlFor='comp' className='block text-sm font-medium text-gray-700 mb-2'>
               Comp </label>
             <input
-              type='text';
-              id='comp';
-              name='comp';
+              type='text'
+              id='comp'
+              name='comp'
               value={formData.comp}
               onChange={handleChange}
               className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200';
@@ -98,9 +96,9 @@ export default function ContactForm() {
               Phone Number
             </label>
             <input
-              type='tel';
-              id='phone';
-              name='phone';
+              type='tel'
+              id='phone'
+              name='phone'
               value={formData.phone}
               onChange={handleChange}
               className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200';
@@ -111,12 +109,12 @@ export default function ContactForm() {
           <label htmlFor='service' className='block text-sm font-medium text-gray-700 mb-2'>
             Service of Interest
           </label>
-          <select;
-            id='service';
-            name='service';
+          <select
+            id='service'
+            name='service'
             value={formData.service}
             onChange={handleChange}
-            className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200';
+            className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200'
             <option value=''>Select a service</option>
             <option value='ai-solutions'>AI Solutions</option>
             <option value='autonomous-systems'>Autonomous Systems</option>
@@ -131,11 +129,11 @@ export default function ContactForm() {
             Message *
           </label>
           <textarea
-            id='message';
-            name='message';
+            id='message'
+            name='message'
             value={formData.message}
             onChange={handleChange}
-            required;
+            required
             rows={6}
             className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200';
             placeholder='Tell us about your project or inquiry...'/>

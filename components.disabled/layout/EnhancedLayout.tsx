@@ -25,40 +25,16 @@ const EnhancedLayout: React.FC<EnhancedLayoutProps> = {
   ogImage = 'https: //ziontechgroup.com/og-image.png,
   structuredData} {
   const defaultStructuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    'name': 'Zion Tech Group',
-    'description': 'Leading technology consulting firm specializing in AI development, cloud architecture, and digital transformation solutions.',
-    'url': 'https://ziontechgroup.com',
-    'logo': 'https://ziontechgroup.com/logo.png',
-    'contactPoint': {
-      '@type': 'ContactPoint',
-      'telephone': '+1-302-464-0950',
-      'contactType': 'customer service',
-      'email': 'kleber@ziontechgroup.com'},
+    '@context': 'https://schema.org,@type': 'Organization,name': 'Zion Tech Group,description': 'Leading technology consulting firm specializing in AI development, cloud architecture, and digital transformation solutions.,url': 'https://ziontechgroup.com,logo': 'https://ziontechgroup.com/logo.png,contactPoint': {
+      '@type': 'ContactPoint,telephone': '+1-302-464-0950,contactType': 'customer service,email': 'kleber@ziontechgroup.com'},
     'address': {
-      '@type': 'PostalAddress',
-      'streetAddress': '364 E Main St STE 1008',
-      'addressLocality': 'Middletown',
-      'addressRegion': 'DE',
-      'postalCode': '19709',
-      'addressCountry': 'US'},
+      '@type': 'PostalAddress,streetAddress': '364 E Main St STE 1008,addressLocality': 'Middletown,addressRegion': 'DE,postalCode': '19709,addressCountry': 'US'},
     'sameAs': [;
-      'https://twitter.com/ziontechgroup',
-      'https://linkedin.com/company/ziontechgroup',
-      'https://github.com/ziontechgroup';
+      'https://twitter.com/ziontechgroup,https://linkedin.com/company/ziontechgroup,https://github.com/ziontechgroup';
     ],
-    'foundingDate': '2010',
-    'numberOfEmployees': '50-100',
-    'serviceType': [
-      'AI Development',
-      'Cloud Architecture',
-      'Web Development',
-      'Cybersecurity',
-      'IoT Platforms',
-      'Digital Transformation';
+    'foundingDate': '2010,numberOfEmployees': '50-100,serviceType': [
+      'AI Development,Cloud Architecture,Web Development,Cybersecurity,IoT Platforms,Digital Transformation';
     ]}
-;
   const finalStructuredData = structuredData || defaultStructuredData
   return(
     <>
@@ -110,6 +86,5 @@ const EnhancedLayout: React.FC<EnhancedLayoutProps> = {
       </div>
     </>
   )}
-;
 export { EnhancedLayout }
 export default EnhancedLayout

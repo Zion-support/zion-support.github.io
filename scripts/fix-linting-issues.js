@@ -36,7 +36,7 @@ class LintingIssuesFixer {
       if (fs.existsSync(eslintConfigPath)) {
         let content = fs.readFileSync(eslintConfigPath, 'utf8');
         // Fix common ESLint config issues;
-        content = content.replace(/Unexpected token ','/g, '');
+        content = content.replace(/Unexpected token ,/g, '');
         content = content.replace(/,\s*}/g, '}');
         content = content.replace(/,\s*]/g, ']');
         fs.writeFileSync(eslintConfigPath, content);
@@ -70,7 +70,7 @@ class LintingIssuesFixer {
       // Find all TypeScript and JavaScript files;
       const sourceFiles = await glob('**/*.{ts,tsx,js,jsx}', {
         cwd: this.projectRoot,
-        ignore: ['node_modules/**', '.next/**', 'dist/**', 'build/**', 'coverage/**']
+        ignore: ['node_modules/**,.next/**,dist/**,build/**,coverage/**']
       })
       console.log(`📁 Found ${sourceFiles.length} source files`);
       // Process each source file;

@@ -1,0 +1,149 @@
+{
+  "timestamp": "2025-09-02T22:26:47.457Z",
+  "summary": {
+    "total": 8,
+    "successful": 4,
+    "failed": 4
+  },
+  "results": [
+    {
+      "success": false,
+      "error": "Command failed: npm run lint:fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\nOops! Something went wrong! :(\n\nESLint: 8.57.1\n\nSyntaxError: Unexpected token 'import'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
+    },
+    {
+      "success": false,
+      "error": "spawnSync /bin/sh ENOBUFS"
+    },
+    {
+      "success": false,
+      "error": "spawnSync /bin/sh ENOBUFS"
+    },
+    {
+      "success": false,
+      "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nFailed to compile.\n\n./pages/api.disabled/analytics/web-vitals.ts\nError:   \u001b[31mx\u001b[0m Expression expected\n    ,-[\u001b[36;1;4m/workspace/pages/api.disabled/analytics/web-vitals.ts\u001b[0m:18:1]\n \u001b[2m15\u001b[0m |   req: NextApiRequest,\n \u001b[2m16\u001b[0m |   res: NextApiResponse\n \u001b[2m17\u001b[0m | ) {\n \u001b[2m18\u001b[0m |   if (req.method !==,\n    : \u001b[35;1m  ^|\u001b[0m\u001b[33;1m                ^\u001b[0m\n    :    \u001b[35;1m`-- \u001b[35;1mTried to parse the condition for an if statement\u001b[0m\u001b[0m\n \u001b[2m19\u001b[0m |   POST') {\n \u001b[2m20\u001b[0m |     return res.status(405).json({ error: 'Method not allowed });\n \u001b[2m21\u001b[0m |   }\n    `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/api.disabled/analytics/web-vitals.ts\n\n./pages/api.disabled/sitemap.ts\nError:   \u001b[31mx\u001b[0m Expression expected\n   ,-[\u001b[36;1;4m/workspace/pages/api.disabled/sitemap.ts\u001b[0m:5:1]\n \u001b[2m2\u001b[0m |   'next';\n \u001b[2m3\u001b[0m | \n \u001b[2m4\u001b[0m | export default function handler(req: NextApiRequest, res: NextApiResponse) {\n \u001b[2m5\u001b[0m |   const baseUrl =,\n   : \u001b[35;1m                 ^\u001b[0m\n \u001b[2m6\u001b[0m |   https: //ziontechgroup.com';\n \u001b[2m7\u001b[0m |   \n \u001b[2m8\u001b[0m |   const staticPages = [\n   `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/api.disabled/sitemap.ts\n\n./pages/index.tsx\nModule not found: Can't resolve '../components/Navigation'\n\nhttps://nextjs.org/docs/messages/module-not-found\n\n./pages/index.tsx\nModule not found: Can't resolve '../components/Footer'\n\nhttps://nextjs.org/docs/messages/module-not-found\n\n./pages/solutions/ai-content-creation.tsx\nModule not found: Can't resolve '../../components/SEO'\n\nhttps://nextjs.org/docs/messages/module-not-found\n\n\n> Build failed because of webpack errors\n"
+    },
+    {
+      "name": "Performance Optimizer",
+      "success": true,
+      "result": {
+        "issues": [
+          {
+            "file": "/workspace/src/components/PerformanceOptimizer.tsx",
+            "issue": "Potential N+1 query problem - consider using useMemo"
+          },
+          {
+            "file": "/workspace/src/components/accessibility/AccessibilityEnhancer.tsx",
+            "issue": "Potential N+1 query problem - consider using useMemo"
+          },
+          {
+            "file": "/workspace/src/components/disabled/AdvancedAICodeGenerator.js.jsx",
+            "issue": "Potential infinite re-render - check dependencies"
+          },
+          {
+            "file": "/workspace/src/pages/Checkout.jsx",
+            "issue": "Potential infinite re-render - check dependencies"
+          },
+          {
+            "file": "/workspace/src/pages/SavedTalentsPage.jsx",
+            "issue": "Potential infinite re-render - check dependencies"
+          }
+        ],
+        "count": 5
+      }
+    },
+    {
+      "name": "Security Scanner",
+      "success": true,
+      "result": {
+        "issues": [
+          {
+            "file": "/workspace/src/components/ErrorBoundary.jsx",
+            "issue": "Server-side env var in client code"
+          },
+          {
+            "file": "/workspace/src/components/MobileExperienceEnhancer.tsx",
+            "issue": "Server-side env var in client code"
+          },
+          {
+            "file": "/workspace/src/components/error/ErrorBoundary.tsx",
+            "issue": "Server-side env var in client code"
+          },
+          {
+            "file": "/workspace/src/components/layout/MainLayout.tsx",
+            "issue": "Server-side env var in client code"
+          },
+          {
+            "file": "/workspace/src/components/seo/SEOEnhancer.tsx",
+            "issue": "Potential XSS vulnerability - sanitize HTML"
+          },
+          {
+            "file": "/workspace/src/store/wishlistSlice.jsx",
+            "issue": "Server-side env var in client code"
+          },
+          {
+            "file": "/workspace/src/utils/helpers.js",
+            "issue": "Use of eval() detected - security risk"
+          }
+        ],
+        "count": 7
+      }
+    },
+    {
+      "name": "Code Quality Analyzer",
+      "success": true,
+      "result": {
+        "issues": [
+          {
+            "file": "/workspace/src/components/AICodeGenerator.js.jsx",
+            "issue": "Console.log in production code - remove for production"
+          },
+          {
+            "file": "/workspace/src/components/EnterpriseDashboard.js.jsx",
+            "issue": "Console.log in production code - remove for production"
+          },
+          {
+            "file": "/workspace/src/components/ErrorBoundary.tsx",
+            "issue": "Console.log in production code - remove for production"
+          },
+          {
+            "file": "/workspace/src/components/MachineLearningDashboard.js.jsx",
+            "issue": "Console.log in production code - remove for production"
+          },
+          {
+            "file": "/workspace/src/components/header/LanguageSelector.jsx",
+            "issue": "Console.log in production code - remove for production"
+          },
+          {
+            "file": "/workspace/src/components/header/UserMenu.jsx",
+            "issue": "Console.log in production code - remove for production"
+          },
+          {
+            "file": "/workspace/src/hooks/use-toast.js",
+            "issue": "Console.log in production code - remove for production"
+          }
+        ],
+        "count": 7
+      }
+    },
+    {
+      "name": "Dependency Checker",
+      "success": true,
+      "result": {
+        "outdatedDeps": [
+          {
+            "dep": "react",
+            "current": "^18.2.0",
+            "recommended": "18.2.0"
+          },
+          {
+            "dep": "next",
+            "current": "^15.5.2",
+            "recommended": "15.5.2"
+          }
+        ],
+        "securityIssues": [],
+        "totalDeps": 47
+      }
+    }
+  ]
+}

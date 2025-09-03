@@ -67,8 +67,7 @@ class ComprehensiveWebsiteAnalyzer {
   }
   extractLinks(html, baseUrl) {
     const links = [];
-    const linkRegex = /href=[']([^';
-  ']+)["']/g;
+    const linkRegex = /href=[']([^]+)["']/g;
     let match;
     while ((match = linkRegex.exec(html)) !== null) {
       const link = match[1];
@@ -85,130 +84,28 @@ class ComprehensiveWebsiteAnalyzer {
     await this.checkUrl(this.baseUrl);
     // Check common routes;
     const commonRoutes = [
-  '/about',
-  '/services',
-  '/solutions',
-  '/contact',
-  '/pricing',
-  '/blog',
-  '/careers',
-  '/partners',
-  '/support',
-  '/help',
-  '/training',
-  '/sitemap',
-  '/privacy-policy',
-  '/terms-of-service',
-  '/cookie-policy',
-  '/api',
-  '/docs',
-  '/research-development',
-  '/case-studies',
-  '/white-papers',
-  '/events',
-  '/webinars',
-  '/news',
-  '/press',
-  '/community',
-  '/developer',
-  '/request-quote',
-  '/login',
-  '/signup',
-  '/dashboard',
-  '/admin',
-  '/talent',
-  '/marketplace',
-  '/micro-saas',
-  '/ai-services',
-  '/cybersecurity',
-  '/cloud-devops',
-  '/quantum-computing',
-  '/space-technology',
-  '/digital-transformation',
-  '/data-analytics',
-  '/iot-edge-computing',
-  '/manufacturing-solutions',
-  '/financial-solutions',
-  '/industry-solutions',
-  '/startup-solutions',
-  '/supply-chain',
-  '/sustainability',
-  '/system-status',
-  '/testimonials',
-  '/faq',
-  '/accessibility',
-  '/comprehensive-services',
-  '/revolutionary-services',
-  '/new-services-2025',
-  '/enhanced-new-services-2025',
-  '/comprehensive-sitemap',
-  '/comprehensive-pricing',
-  '/services-overview',
-  '/services-catalog',
-  '/services-comparison',
-  '/services-pricing',
-  '/ai-solutions',
-  '/quantum-ai-platform',
-  '/digital-twin',
-  '/zero-trust-security',
-  '/enterprise-solutions',
-  '/ai-business-intelligence'    ];
+  '/about,/services,/solutions,/contact,/pricing,/blog,/careers,/partners,/support,/help,/training,/sitemap,/privacy-policy,/terms-of-service,/cookie-policy,/api,/docs,/research-development,/case-studies,/white-papers,/events,/webinars,/news,/press,/community,/developer,/request-quote,/login,/signup,/dashboard,/admin,/talent,/marketplace,/micro-saas,/ai-services,/cybersecurity,/cloud-devops,/quantum-computing,/space-technology,/digital-transformation,/data-analytics,/iot-edge-computing,/manufacturing-solutions,/financial-solutions,/industry-solutions,/startup-solutions,/supply-chain,/sustainability,/system-status,/testimonials,/faq,/accessibility,/comprehensive-services,/revolutionary-services,/new-services-2025,/enhanced-new-services-2025,/comprehensive-sitemap,/comprehensive-pricing,/services-overview,/services-catalog,/services-comparison,/services-pricing,/ai-solutions,/quantum-ai-platform,/digital-twin,/zero-trust-security,/enterprise-solutions,/ai-business-intelligence'    ];
     for (const route of commonRoutes) {
       await this.checkUrl(`${this.baseUrl}${route}`)}
     // Check service sub-routes;
     const serviceRoutes = [
-  '/ai-solutions',
-  '/quantum-computing',
-  '/cybersecurity',
-  '/cloud-devops',
-  '/digital-transformation',
-  '/data-analytics',
-  '/iot-edge-computing',
-  '/space-technology',
-  '/ai-business-intelligence',
-  '/ai-content-creation',
-  '/ai-cybersecurity',
-  '/ai-financial-analytics',
-  '/ai-healthcare-analytics',
-  '/ai-hr-platform',
-  '/ai-marketing-automation',
-  '/ai-supply-chain-optimization',
-  '/ai-workflow-orchestrator',
-  '/ai-autonomous-research-assistant',
-  '/ai-content-marketing-suite',
-  '/ai-quantum-hybrid-platform',
-  '/it-infrastructure',
-  '/digital-twin',
-  '/ai-devops-automation-platform'    ];
+  '/ai-solutions,/quantum-computing,/cybersecurity,/cloud-devops,/digital-transformation,/data-analytics,/iot-edge-computing,/space-technology,/ai-business-intelligence,/ai-content-creation,/ai-cybersecurity,/ai-financial-analytics,/ai-healthcare-analytics,/ai-hr-platform,/ai-marketing-automation,/ai-supply-chain-optimization,/ai-workflow-orchestrator,/ai-autonomous-research-assistant,/ai-content-marketing-suite,/ai-quantum-hybrid-platform,/it-infrastructure,/digital-twin,/ai-devops-automation-platform'    ];
     for (const serviceRoute of serviceRoutes) {
       await this.checkUrl(`${this.baseUrl}/services${serviceRoute}`)}
     // Check solution sub-routes;
     const solutionRoutes = [
-  '/enterprise',
-  '/ai-business-intelligence',
-  '/quantum-ai-platform',
-  '/digital-twin',
-  '/zero-trust-security'    ];
+  '/enterprise,/ai-business-intelligence,/quantum-ai-platform,/digital-twin,/zero-trust-security'    ];
     for (const solutionRoute of solutionRoutes) {
       await this.checkUrl(`${this.baseUrl}/solutions${solutionRoute}`)}
     // Check about sub-routes;
     const aboutRoutes = [
-  '/story',
-  '/team';
+  '/story,/team';
     ];
     for (const aboutRoute of aboutRoutes) {
       await this.checkUrl(`${this.baseUrl}/about${aboutRoute}`)}
     // Check resources sub-routes;
     const resourceRoutes = [
-  '/blog',
-  '/case-studies',
-  '/research-development',
-  '/docs',
-  '/api',
-  '/sitemap',
-  '/support',
-  '/training',
-  '/help'    ];
+  '/blog,/case-studies,/research-development,/docs,/api,/sitemap,/support,/training,/help'    ];
     for (const resourceRoute of resourceRoutes) {
       await this.checkUrl(`${this.baseUrl}/resources${resourceRoute}`)}
     console.log(
@@ -233,7 +130,6 @@ class ComprehensiveWebsiteAnalyzer {
       errors: this.errors,
       warnings: this.warnings,
       recommendations: this.generateRecommendations()}
-;
     return report}
   generateRecommendations() {
     const recommendations = [];
@@ -265,12 +161,7 @@ class ComprehensiveWebsiteAnalyzer {
         ]      })}
     // Check for missing essential pages;
     const essentialPages = [
-  '/privacy-policy',
-  '/terms-of-service',
-  '/cookie-policy',
-  '/sitemap',
-  '/contact',
-  '/about'    ];
+  '/privacy-policy,/terms-of-service,/cookie-policy,/sitemap,/contact,/about'    ];
     const missingEssential = essentialPages.filter(
       page => !this.workingLinks.some(link => link.url.endsWith(page)));
     if (missingEssential.length > 0) {

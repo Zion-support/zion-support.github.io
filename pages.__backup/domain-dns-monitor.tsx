@@ -16,14 +16,8 @@ export default function DomainDNSMonitorPage() {
     address: '364 E Main St STE 1008 Middletown DE 19709,
     website:,
   https: //ziontechgroup.com}
-;
   const features = [
-  'Registrar expiry and auto-renew checks',
-  'NS/DS drift and delegation correctness',
-  'DNSSEC presence and validity',
-  'MX/SPF/DMARC health and alignment',
-  'Propagation tests across regions',
-  'Alerts, webhooks and change history';
+  'Registrar expiry and auto-renew checks,NS/DS drift and delegation correctness,DNSSEC presence and validity,MX/SPF/DMARC health and alignment,Propagation tests across regions,Alerts, webhooks and change history';
   ];
   return(
 <:pages/domain-dns-monitor.tsx;

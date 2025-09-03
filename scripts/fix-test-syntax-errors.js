@@ -22,7 +22,7 @@ class TestSyntaxErrorFixer {
       // Find all test files;
       const testFiles = await glob('**/*.test.{ts,tsx,js,jsx}', {
         cwd: this.projectRoot,
-        ignore: ['node_modules/**', '.next/**', 'dist/**', 'build/**']
+        ignore: ['node_modules/**,.next/**,dist/**,build/**']
       })
       console.log(`📁 Found ${testFiles.length} test files`);
       // Process each test file;
@@ -69,7 +69,7 @@ class TestSyntaxErrorFixer {
   fixImportStatements(content) {
     // Fix import statements with missing quotes;
     content = content.replace(/import\s+([^;]+)\s+from\s*;\s*['']([^'']+)['']/g, 'import $1 from \'$2\'');
-    content = content.replace(/import\s+([^;]+)\s+from\s*;\s*([^;]+);/g, 'import $1 from \'$2\';');
+    content = content.replace(/import\s+([^;]+)\s+from\s*;\s*([^;]+);/g, 'import $1 from \'$2\);
     // Fix import statements with semicolons in the middle;
     content = content.replace(/import\s+([^;]+)\s+from\s*;\s*['']([^'']+)['']/g, 'import $1 from \'$2\'');
 
