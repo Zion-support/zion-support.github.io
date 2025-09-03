@@ -4,14 +4,19 @@ import path from 'path';
 const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
+  compress: true,
   eslint: {
-    ignoreDuringBuilds: true,
+    ignoreDuringBuilds: false,
   },
   typescript: {
     ignoreBuildErrors: true,
   },
   experimental: {
     scrollRestoration: true,
+    optimizeCss: true,
+  },
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
   },
   webpack: (config, { dev, isServer }) => {
     if (!dev && !isServer) {
@@ -29,8 +34,23 @@ const nextConfig = {
           test: /[\\/]node_modules[\\/]/,
           name: 'vendors',
           chunks: 'all',
+          priority: 10,
+        },
+        common: {
+          name: 'common',
+          minChunks: 2,
+          chunks: 'all',
+          priority: 5,
+          reuseExistingChunk: true,
         },
       },
+    }
+    
+    // Performance optimizations
+    if (!dev) {
+      config.optimization.minimize = true;
+      config.optimization.usedExports = true;
+      config.optimization.sideEffects = false;
     }
     
     return config
@@ -69,6 +89,7 @@ const nextConfig = {
       },
     ]
   },
+
 }
 
 export default nextConfig

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -12,15 +12,44 @@ import {
   CheckCircle,
   Users,
   Globe,
-  Award
+  Award,
+  Star,
+  TrendingUp,
+  Clock
 } from 'lucide-react';
-import SEO from '../components/SEO';
+import SEO from '../src/components/SEO';
+import ErrorBoundary from '../src/components/ErrorBoundary';
+import LoadingSpinner from '../src/components/LoadingSpinner';
 
 const stats = [
-  { number: '99.9%', label: 'Uptime Guarantee' },
-  { number: '24/7', label: 'Support Available' },
-  { number: '500+', label: 'Projects Completed' },
-  { number: '50+', label: 'Expert Team Members' }
+  { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },
+  { number: '24/7', label: 'Support Available', icon: Clock },
+  { number: '500+', label: 'Projects Completed', icon: Award },
+  { number: '50+', label: 'Expert Team Members', icon: Users }
+];
+
+const testimonials = [
+  {
+    name: "Sarah Johnson",
+    role: "CTO, TechCorp",
+    content: "Zion Tech Group transformed our infrastructure with their AI solutions. The results exceeded our expectations.",
+    rating: 5,
+    avatar: "/avatars/sarah.jpg"
+  },
+  {
+    name: "Michael Chen",
+    role: "CEO, InnovateLabs",
+    content: "Their micro SaaS solutions helped us scale rapidly while maintaining quality. Highly recommended!",
+    rating: 5,
+    avatar: "/avatars/michael.jpg"
+  },
+  {
+    name: "Emily Rodriguez",
+    role: "VP Engineering, DataFlow",
+    content: "Professional, reliable, and innovative. Zion Tech Group delivered exactly what we needed.",
+    rating: 5,
+    avatar: "/avatars/emily.jpg"
+  }
 ];
 
 const services = [
@@ -46,7 +75,8 @@ const services = [
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <Suspense fallback={<LoadingSpinner size="lg" className="min-h-screen" />}>
+      <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Zion Tech Group - Leading AI & Technology Solutions" 
         description="Transform your business with cutting-edge AI solutions, cloud services, and technology consulting. Expert team delivering innovative results."
@@ -201,17 +231,76 @@ export default function HomePage() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
+            {stats.map((stat, index) => {
+              const IconComponent = stat.icon;
+              return (
+                <motion.div
+                  key={index}
+                  className="text-center group"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  whileHover={{ scale: 1.05 }}
+                >
+                  <div className="flex justify-center mb-4">
+                    <div className="p-3 bg-blue-100 rounded-full group-hover:bg-blue-200 transition-colors">
+                      <IconComponent className="w-6 h-6 text-blue-600" />
+                    </div>
+                  </div>
+                  <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">{stat.number}</div>
+                  <div className="text-gray-600 font-medium">{stat.label}</div>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              What Our Clients Say
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Don't just take our word for it. Here's what our satisfied clients have to say about our services.
+            </p>
+          </motion.div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
               <motion.div
                 key={index}
-                className="text-center"
+                className="bg-white p-6 rounded-lg shadow-lg"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
+                whileHover={{ y: -5 }}
               >
-                <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">{stat.number}</div>
-                <div className="text-gray-600 font-medium">{stat.label}</div>
+                <div className="flex items-center mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-gray-600 mb-4 italic">"{testimonial.content}"</p>
+                <div className="flex items-center">
+                  <div className="w-10 h-10 bg-gray-300 rounded-full mr-3 flex items-center justify-center">
+                    <Users className="w-5 h-5 text-gray-600" />
+                  </div>
+                  <div>
+                    <div className="font-semibold text-gray-900">{testimonial.name}</div>
+                    <div className="text-sm text-gray-600">{testimonial.role}</div>
+                  </div>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -248,6 +337,7 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
-    </div>
+      </div>
+    </Suspense>
   );
 }

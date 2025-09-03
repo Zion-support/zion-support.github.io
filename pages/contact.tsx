@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import Head from 'next/head';
-import { Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
+import ErrorBoundary from '../src/components/ErrorBoundary';
+import LoadingSpinner from '../src/components/LoadingSpinner';
 
 export default function ContactPage() {
   return (
-    <>
-      <Head>
+    <Suspense fallback={<LoadingSpinner size="lg" className="min-h-screen" />}>
+      <>
+        <Head>
         <title>Contact Us - Zion Tech Group</title>
         <meta name="description" content="Get in touch with Zion Tech Group for technology solutions, AI services, and IT consulting. Free consultation available." />
         <meta name="keywords" content="contact, technology consulting, AI services, IT solutions, free consultation" />
@@ -224,6 +227,7 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-    </>
+      </>
+    </Suspense>
   );
 }
