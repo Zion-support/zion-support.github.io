@@ -1,11 +1,10 @@
-import type { NextPage } from 'next';
-;
-const Test: NextPage = () => {;
-  return (;
-    <div className="min-h-screen bg-gray-900 flex items-center justify-center">;
-      <h1 className="text-white text-4xl">Test Page Working!</h1>;
-    </div>;
-  );,
-};
-;
-export default Test;
+import React from 'react';
+
+export default function Test() {
+  return (
+    <div>
+      <h1>Test Page</h1>
+      <p>This is a test page to check if Next.js is working.</p>
+    </div>
+  );
+}
