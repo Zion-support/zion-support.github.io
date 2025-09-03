@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { ArrowRight, Brain, Cloud, Shield, Zap, Database, Server, Lock, BarChart3, Users, Globe, Code, CheckCircle, Star, TrendingUp, Clock, Award, Phone, Mail, MapPin } from 'lucide-react';
 import { 
   ArrowRight, 
   CheckCircle, 
@@ -36,17 +35,19 @@ import {
   Bot,
   Cpu,
   Layers,
-  Activity
+  Activity,
+  Code,
+  Lock,
+  Rocket
 } from 'lucide-react';
 
 export default function Home() {
   const stats = [
-import { ModernHeader } from '../src/components/header/ModernHeader';
-import { SimpleFooter } from '../src/components/layout/SimpleFooter';
-  Code,
-  Lock,
-  Rocket,
-  MapPin
+    { label: 'Projects Completed', value: '500+' },
+    { label: 'Happy Clients', value: '200+' },
+    { label: 'Team Members', value: '50+' },
+    { label: 'Years Experience', value: '10+' }
+  ];
 
   const features = [
     {
@@ -54,11 +55,14 @@ import { SimpleFooter } from '../src/components/layout/SimpleFooter';
       title: 'AI-Powered Solutions',
       description: 'Cutting-edge artificial intelligence to transform your business operations and decision-making processes.',
       color: 'from-purple-500 to-pink-500'
-    } {
+    },
+    {
       icon: Cloud,
       title: 'Cloud Architecture',
       description: 'Scalable, secure, and efficient cloud solutions designed for modern enterprise needs.',
       color: 'from-blue-500 to-cyan-500'
+    },
+    {
       icon: Shield,
       title: 'Cybersecurity',
       description: 'Advanced security measures to protect your digital assets and ensure compliance.',
