@@ -1,106 +1,157 @@
-import Link from 'next/link'
-
-export default function Services() {
-  return (
-    <main style={{ fontFamily: 'system-ui, sans-serif', lineHeight: 1.5, padding: '32px', maxWidth: 1120, margin: '0 auto' }}>
-      <h1 style={{ marginTop: 0 }}>Services</h1>
-      <p>Productized services and platforms you can deploy now.</p>
-
-      <h2>Micro SaaS</h2>
-      <ul>
-        <li><Link href="/services/micro-saas/ai-seo-auditor">AI SEO Auditor</Link> — from $199/mo</li>
-        <li><Link href="/services/micro-saas/lead-enrichment">Lead Enrichment API</Link> — from $149/mo</li>
-        <li><Link href="/services/micro-saas/contract-ai">Contract AI Extractor</Link> — from $349/mo</li>
-        <li><Link href="/services/micro-saas/smart-churn">Smart Churn Predictor</Link> — from $299/mo</li>
-        <li><Link href="/services/micro-saas/ai-qa">AI QA Copilot</Link> — from $99/mo</li>
-      </ul>
-
-      <h2>AI Solutions</h2>
-      <ul>
-        <li><Link href="/services/ai/revenue-ops">Revenue Ops Intelligence</Link> — projects from $12k</li>
-        <li><Link href="/services/ai/customer-experience">Customer Experience Analytics</Link> — from $8k</li>
-        <li><Link href="/services/ai/devops-autopilot">DevOps Autopilot</Link> — from $15k</li>
-      </ul>
-
-      <h2>IT Services</h2>
-      <ul>
-        <li><Link href="/services/it/cloud-finops">Cloud FinOps</Link> — from $4k/mo</li>
-        <li><Link href="/services/it/cybersecurity">Managed Cybersecurity</Link> — from $6k/mo</li>
-        <li><Link href="/services/it/platform-engineering">Platform Engineering</Link> — from $18k/project</li>
-      </ul>
-
-      <h2 id="contact">Contact</h2>
-      <p>
-        Mobile: +1 302 464 0950 · Email: <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a><br/>
-        Address: 364 E Main St STE 1008 Middletown DE 19709
-      </p>
-      <p>
-        Visit our website: <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer">ziontechgroup.com</a>
-      </p>
-    </main>
-  )
-}
-
 import React from 'react';
-import type { NextPage } from 'next';
-import MainLayout from '../../components/layout/MainLayout';
-import PricingGuide from '../../components/PricingGuide';
-import { services, getServicesByCategory } from '../../data/services';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, DollarSign, Target, Rocket } from 'lucide-react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-const ServicesPage: NextPage = () => {
-  const microSaasServices = getServicesByCategory('micro-saas');
-  const itServices = getServicesByCategory('it-services');
-  const aiServices = getServicesByCategory('ai-services');
-  );
-}
-
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-import { services } from '../../utils/data/services';
-import EnhancedMarketplaceCard from '../../components/ui/EnhancedMarketplaceCard';
+import { motion } from 'framer-motion';
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, DollarSign, Target, Rocket } from 'lucide-react';
 
-const ServicesIndex: NextPage = () => {
+const ServicesPage: NextPage = () => {
+  const services = [
+    {
+      category: "Micro SaaS",
+      items: [
+        { name: "AI SEO Auditor", href: "/services/micro-saas/ai-seo-auditor", price: "from $199/mo" },
+        { name: "Lead Enrichment API", href: "/services/micro-saas/lead-enrichment", price: "from $149/mo" },
+        { name: "Contract AI Extractor", href: "/services/micro-saas/contract-ai", price: "from $349/mo" },
+        { name: "Smart Churn Predictor", href: "/services/micro-saas/smart-churn", price: "from $299/mo" },
+        { name: "AI QA Copilot", href: "/services/micro-saas/ai-qa", price: "from $99/mo" }
+      ]
+    },
+    {
+      category: "AI Solutions",
+      items: [
+        { name: "Revenue Ops Intelligence", href: "/services/ai/revenue-ops", price: "projects from $12k" },
+        { name: "AI-Powered Analytics", href: "/services/ai/analytics", price: "from $2k/mo" },
+        { name: "Natural Language Processing", href: "/services/ai/nlp", price: "from $1.5k/mo" }
+      ]
+    },
+    {
+      category: "IT Services",
+      items: [
+        { name: "Cloud Infrastructure", href: "/services/it/cloud", price: "from $5k/mo" },
+        { name: "DevOps Automation", href: "/services/it/devops", price: "from $3k/mo" },
+        { name: "Cybersecurity", href: "/services/it/security", price: "from $4k/mo" }
+      ]
+    }
+  ];
+
   return (
     <div>
       <Head>
         <title>Services - Zion Tech Group</title>
-        <meta name="description" content="Explore our Micro SaaS, IT, AI, and Cloud services." />
+        <meta name="description" content="Explore our comprehensive range of Micro SaaS, AI, and IT services designed to accelerate your business growth." />
       </Head>
       
-      <main className="container mx-auto px-4 py-12">
-        <h1 className="text-3xl font-bold mb-6">Services</h1>
-        <p className="text-gray-700 mb-10 max-w-3xl">
-          Discover battle-tested services and micro SaaS solutions. Transparent pricing and rapid delivery.
-          Visit our website at <a className="text-blue-600 underline" href="https://ziontechgroup.com" target="_blank" rel="noreferrer">ziontechgroup.com</a>.
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((s) => (
-            <div key={s.id} className="flex flex-col">
-              <EnhancedMarketplaceCard
-                title={s.title}
-                description={`${s.description} Provider: ${s.provider.name}. Rating: ${s.provider.rating}/5.`}
-                price={`${s.pricing.currency} ${s.pricing.from} / ${s.pricing.type}`}
-                image={s.provider.avatar}
-              />
-            </div>
-          ))}
-        </div>
+      <main style={{ fontFamily: 'system-ui, sans-serif', lineHeight: 1.5, padding: '32px', maxWidth: 1120, margin: '0 auto' }}>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <h1 style={{ marginTop: 0, fontSize: '2.5rem', fontWeight: 'bold', marginBottom: '1rem' }}>
+            Our Services
+          </h1>
+          <p style={{ fontSize: '1.2rem', color: '#666', marginBottom: '2rem' }}>
+            Productized services and platforms you can deploy now to accelerate your business growth.
+          </p>
 
-        <div className="mt-12 p-6 rounded-lg bg-gray-50 border">
-          <h2 className="text-2xl font-semibold mb-2">Contact Us</h2>
-          <p className="text-gray-700 mb-2">Mobile: +1 302 464 0950</p>
-          <p className="text-gray-700 mb-2">E-mail: <a className="text-blue-600 underline" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>
-          <p className="text-gray-700">Address: 364 E Main St STE 1008 Middletown DE 19709</p>
-          <div className="mt-4">
-            <Link href="/contact" className="text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded">Request a quote</Link>
-          </div>
-        </div>
+          {services.map((service, index) => (
+            <motion.div
+              key={service.category}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              style={{ marginBottom: '3rem' }}
+            >
+              <h2 style={{ fontSize: '2rem', fontWeight: '600', marginBottom: '1rem', color: '#333' }}>
+                {service.category}
+              </h2>
+              <ul style={{ listStyle: 'none', padding: 0 }}>
+                {service.items.map((item, itemIndex) => (
+                  <motion.li
+                    key={item.name}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.4, delay: itemIndex * 0.05 }}
+                    style={{
+                      padding: '1rem',
+                      marginBottom: '0.5rem',
+                      backgroundColor: '#f8f9fa',
+                      borderRadius: '8px',
+                      border: '1px solid #e9ecef',
+                      display: 'flex',
+                      justifyContent: 'space-between',
+                      alignItems: 'center',
+                      transition: 'all 0.3s ease'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.backgroundColor = '#e3f2fd';
+                      e.currentTarget.style.transform = 'translateX(5px)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.backgroundColor = '#f8f9fa';
+                      e.currentTarget.style.transform = 'translateX(0)';
+                    }}
+                  >
+                    <Link 
+                      href={item.href}
+                      style={{ 
+                        textDecoration: 'none', 
+                        color: '#1976d2',
+                        fontWeight: '500',
+                        fontSize: '1.1rem'
+                      }}
+                    >
+                      {item.name}
+                    </Link>
+                    <span style={{ color: '#666', fontWeight: '500' }}>
+                      {item.price}
+                    </span>
+                  </motion.li>
+                ))}
+              </ul>
+            </motion.div>
+          ))}
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            style={{
+              marginTop: '3rem',
+              padding: '2rem',
+              backgroundColor: '#f0f8ff',
+              borderRadius: '12px',
+              border: '1px solid #b3d9ff',
+              textAlign: 'center'
+            }}
+          >
+            <h3 style={{ fontSize: '1.5rem', fontWeight: '600', marginBottom: '1rem', color: '#1976d2' }}>
+              Ready to Get Started?
+            </h3>
+            <p style={{ marginBottom: '1.5rem', color: '#666' }}>
+              Contact us to discuss your specific needs and get a customized solution.
+            </p>
+            <Link 
+              href="/contact"
+              style={{
+                display: 'inline-block',
+                padding: '12px 24px',
+                backgroundColor: '#1976d2',
+                color: 'white',
+                textDecoration: 'none',
+                borderRadius: '6px',
+                fontWeight: '500',
+                transition: 'background-color 0.3s ease'
+              }}
+            >
+              Get Started Today
+            </Link>
+          </motion.div>
+        </motion.div>
       </main>
     </div>
   );
 };
 
-export default ServicesIndex;
+export default ServicesPage;

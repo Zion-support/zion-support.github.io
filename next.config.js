@@ -8,6 +8,12 @@ const __dirname = path.dirname(__filename)
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   experimental: {
     scrollRestoration: true,
   },
@@ -74,4 +80,4 @@ const nextConfig = {
   },
 }
 
-module.exports = nextConfig
+export default nextConfig

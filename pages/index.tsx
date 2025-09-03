@@ -138,7 +138,7 @@ export default function HomePage() {
                 <span className="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">Automation</span>
               </div>
               <Link href="/services/micro-saas" className="text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors inline-flex items-center">
-                Explore Solutions <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                <span>Explore Solutions <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" /></span>
               </Link>
             </motion.div>
 
@@ -164,7 +164,7 @@ export default function HomePage() {
                 <span className="bg-green-50 text-green-700 px-3 py-1 rounded-full text-xs font-medium">Infrastructure</span>
               </div>
               <Link href="/it-services" className="text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors inline-flex items-center">
-                Learn More <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                <span>Learn More <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" /></span>
               </Link>
             </motion.div>
 
@@ -190,7 +190,7 @@ export default function HomePage() {
                 <span className="bg-purple-50 text-purple-700 px-3 py-1 rounded-full text-xs font-medium">Automation</span>
               </div>
               <Link href="/ai-services" className="text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors inline-flex items-center">
-                Discover AI <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                <span>Discover AI <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" /></span>
               </Link>
             </motion.div>
           </div>
