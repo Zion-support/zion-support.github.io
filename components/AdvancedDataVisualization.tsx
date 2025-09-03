@@ -1,0 +1,1 @@
+import React from "react"; interface DataPoint { id: string label: string, value: number, category: string, timestamp: string, change?: number, changeType?: "increase" | "decrease"} interface ChartData { id: string, name: string, data: DataPoint[], type: "line" | "bar" | "pie" | "area", color: string, description: string} interface AdvancedDataVisualizationProps { // comment
