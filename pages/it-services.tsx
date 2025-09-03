@@ -1025,7 +1025,6 @@ export default function ITServices() {
     },
     {
       icon: Cpu,
-<<<<<<< HEAD
       name: 'Quantum Computing Infrastructure',
       description: 'Quantum computing infrastructure setup, algorithm development, and quantum-classical hybrid systems.',
       features: [
@@ -1048,28 +1047,7 @@ export default function ITServices() {
       category: 'Quantum Computing'
     },
     {
-      icon: Globe,
-      name: 'Edge Computing & IoT Infrastructure',
-      description: 'Distributed edge computing infrastructure with IoT device management and real-time data processing.',
-      features: [
-        'Edge computing infrastructure deployment',
-        'IoT device management and monitoring',
-        'Real-time data processing and analytics',
-        'Edge AI and machine learning deployment',
-        '5G network integration and optimization',
-        'Distributed system architecture design'
-      ],
-      pricing: '$50,000 – $500,000 project',
-      projectPricing: '$5,000 – $50,000/month managed',
-      timeline: '8–20 weeks',
-      benefits: [
-        'Reduced latency and improved performance',
-        'Enhanced data privacy and security',
-        'Scalable IoT device management',
-        'Real-time decision making capabilities'
-      ],
-      category: 'Edge Computing'
-=======
+      icon: Cpu,
       name: 'Quantum Computing Integration',
       description: 'Cutting-edge quantum computing solutions for complex optimization problems, cryptography, and scientific research applications.',
       features: [
@@ -1093,6 +1071,29 @@ export default function ITServices() {
     },
     {
       icon: Globe,
+      name: 'Edge Computing & IoT Infrastructure',
+      description: 'Distributed edge computing infrastructure with IoT device management and real-time data processing.',
+      features: [
+        'Edge computing infrastructure deployment',
+        'IoT device management and monitoring',
+        'Real-time data processing and analytics',
+        'Edge AI and machine learning deployment',
+        '5G network integration and optimization',
+        'Distributed system architecture design'
+      ],
+      pricing: '$50,000 – $500,000 project',
+      projectPricing: '$5,000 – $50,000/month managed',
+      timeline: '8–20 weeks',
+      benefits: [
+        'Reduced latency and improved performance',
+        'Enhanced data privacy and security',
+        'Scalable IoT device management',
+        'Real-time decision making capabilities'
+      ],
+      category: 'Edge Computing'
+    },
+    {
+      icon: Globe,
       name: 'Edge Computing Infrastructure',
       description: 'Distributed edge computing solutions that bring processing power closer to data sources for ultra-low latency applications.',
       features: [
@@ -1113,7 +1114,6 @@ export default function ITServices() {
         'Enhanced user experience and performance'
       ],
       category: 'Infrastructure'
->>>>>>> cursor/analyze-improve-and-deploy-application-d144
     },
     {
       icon: Shield,
