@@ -53,8 +53,9 @@
   },
   "include": [
     "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
+    "pages/**/*.ts",
+    "pages/**/*.tsx",
+    "middleware.ts",
     ".next/types/**/*.ts"
   ],
   "exclude": [
@@ -65,13 +66,35 @@
     "dist",
     "api-backup",
     "pages.disabled",
+    "pages.disabled_auto",
+    "pages.__backup",
     "backup-pages",
     ".backup",
     ".disabled",
+    "**/*.disabled",
+    "**/*.disabled/**",
+    "**/*disabled/**",
+    "types.disabled",
+    "src.disabled",
+    "src.broken",
+    "contracts.disabled",
+    "cypress.disabled",
+    "zion-os.disabled",
     "automation/backups",
     "automation_backup",
     "broken_files_backup",
     "contracts",
-    "hardhat"
+    "hardhat",
+    "vite.config.ts",
+    "vitest.config.ts",
+    "tailwind.config.ts",
+    "tests",
+    "__tests__",
+    "test_build",
+    "test-results",
+    "temp_working",
+    "src",
+    "components",
+    "lib"
   ]
 }
