@@ -167,7 +167,7 @@
     "@next/eslint-plugin-next": "^15.5.2",
     "@types/next": "^8.0.7",
     "@types/node": "^16.18.126",
-    "@types/react": "^17.0.87",
+    "@types/react": "^17.0.88",
     "@types/react-dom": "^17.0.26",
     "@typescript-eslint/eslint-plugin": "^8.42.0",
     "@typescript-eslint/parser": "^8.42.0",

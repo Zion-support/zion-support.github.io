@@ -18,10 +18,8 @@ const EnhancedNavigation: React.FC = () => {
   ];
 
   const products = [
-    { name: 'AI Solutions', href: '/products/ai-solutions' },
-    { name: 'Cloud Platforms', href: '/products/cloud-platforms' },
-    { name: 'Analytics Tools', href: '/products/analytics-tools' },
-    { name: 'Security Suite', href: '/products/security-suite' },
+    { name: 'All Products', href: '/products' },
+    { name: 'Pricing', href: '/pricing' },
   ];
 
   return (
