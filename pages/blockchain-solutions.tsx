@@ -1,8 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import type { NextPage } from 'next';
-=======
->>>>>>> main
 import Head from 'next/head';
 import { Header } from '../src/components/Header';
 import Footer from '../src/components/Footer';
@@ -44,16 +40,12 @@ export default function BlockchainSolutions() {
   ];
 
   const benefits = [
-<<<<<<< HEAD
     'Enhanced security through cryptographic protection',
     'Transparent and immutable transaction records',
     'Reduced costs by eliminating intermediaries',
     'Global accessibility and 24/7 operation',
     'Programmable money and automated processes',
-    'Decentralized governance and control',
-=======
-    'Enhanced security through cryptographic protection,Transparent and immutable transaction records,Reduced costs by eliminating intermediaries,Global accessibility and 24/7 operation,Programmable money and automated processes,Decentralized governance and control'
->>>>>>> main
+    'Decentralized governance and control'
   ];
 
   const useCases = [

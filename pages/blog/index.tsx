@@ -1,7 +1,7 @@
 import React from 'react';
 import type { NextPage } from 'next';
 import Link from 'next/link';
-import MainLayout from '../../components/layout/MainLayout';
+import Layout from '../../components/Layout';
 import { Calendar, User, ArrowRight } from 'lucide-react';
 
 const BlogIndex: NextPage = () => {
