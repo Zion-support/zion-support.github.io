@@ -1,16 +1,18 @@
-import React from 'react
-import { render, screen } from '@testing-library/react
-import '@testing-library/jest-dom
-import Pricing from './Pricing
-describe('Pricing', () => {"
-  it('renders without crashing', () => {
-    render(<Pricing /" >);"
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
-});
-"
+describe('Pricing', () => {}; '; it('renders without crashing', () => {}; render(<Pricing />) ;'; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; '; it('displays expected content', () => {}; render(<Pricing />) ;
+    render(<Pricing />);
+    expect(screen.getByRole('main) || screen.getByText(/.*/)).toBeInTheDocument();
+  });
+'
   it('displays expected content', () => {
     render(<Pricing /" >);
-    // Add more specific tests here,
-});,
-});
+    // Add more specific tests here, });, });
 "
+<<<<<<< HEAD
+    render(<Pricing /" >)
+    // Add more specific tests here;
+=======
+describe('Pricing', () => {}' it('renders without crashing', () => {} render(<Pricing />) '; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ' it('displays expected content', () => {} render(<Pricing />) '
+    // Add more specific tests here
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
+});
+'

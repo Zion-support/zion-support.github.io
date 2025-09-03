@@ -1,16 +1,18 @@
-import React from 'react
-import { render, screen } from '@testing-library/react
-import '@testing-library/jest-dom
-import DataAnalytics from './DataAnalytics
-describe('DataAnalytics', () => {"
-  it('renders without crashing', () => {
-    render(<DataAnalytics /" >);"
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
-});
-"
+describe('DataAnalytics', () => {}; '; it('renders without crashing', () => {}; render(<DataAnalytics />) ;'; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; '; it('displays expected content', () => {}; render(<DataAnalytics />) ;
+    render(<DataAnalytics />);
+    expect(screen.getByRole('main) || screen.getByText(/.*/)).toBeInTheDocument();
+  });
+'
   it('displays expected content', () => {
     render(<DataAnalytics /" >);
-    // Add more specific tests here,
-});,
-});
+    // Add more specific tests here, });, });
 "
+<<<<<<< HEAD
+    render(<DataAnalytics /" >)
+    // Add more specific tests here;
+=======
+describe('DataAnalytics', () => {}' it('renders without crashing', () => {} render(<DataAnalytics />) '; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ' it('displays expected content', () => {} render(<DataAnalytics />) '
+    // Add more specific tests here
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
+});
+'

@@ -9,18 +9,21 @@ function fixLinkIssues(filePath) {
 
     // Check if Link is already imported
     const hasLinkImport = content.includes("import Link from 'next/link'");
-    
+
     // Fix <a href="/..."> to <Link href="/...">
     const linkPattern = /<a\s+href=['"]([^'"]*\/[^'"]*)['"]([^>]*)>/g;
     if (linkPattern.test(content)) {
       content = content.replace(linkPattern, '<Link href="$1"$2>');
       modified = true;
-      
+
       // Add Link import if not present
       if (!hasLinkImport) {
         const importMatch = content.match(/import\s+React[^;]*;/);
         if (importMatch) {
-          content = content.replace(importMatch[0], importMatch[0] + "\nimport Link from 'next/link';");
+          content = content.replace(
+            importMatch[0],
+            importMatch[0] + "\nimport Link from 'next/link';"
+          );
         }
       }
     }
@@ -48,7 +51,7 @@ function fixLinkIssues(filePath) {
 const filesToFix = [
   './pages/index.p.tsx',
   './pages/privacy.tsx',
-  './pages/terms.tsx'
+  './pages/terms.tsx',
 ];
 
 console.log('Fixing Link issues...');

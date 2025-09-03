@@ -1,26 +1,96 @@
-import React   from 'react';';
-import { render, screen, fireEvent }   from '@testing-library/react';';
-import '@testing-library/jest-dom;
-import PerformanceEnhancer   from '../components/PerformanceEnhancer';';
-  describe('PerformanceEnhancer', () => {';
-  test('renders without crashing', () => {';
-    render(<PerformanceEnhancer  />);
-    expect(screen.getByTestId('performanceenhancer')).toBeInTheDocument();';
-  });
-;
-  test('displays correct content', () => {';
-    render(<PerformanceEnhancer  />);
-    // Add specific content tests based on component;
-  });
-;
+<<<<<<< HEAD
+import React from 'react;
+import { render, screen, fireEvent } from '@testing-library/react';
+import @testing-library/jest-dom';
+import PerformanceEnhancer from '../components/PerformanceEnhancer;
+
+import: React from 'react';
+import: { render, screen, fireEvent } from '@testing-library/react';
+import: '@testing-library/jest-dom';
+import: PerformanceEnhancer from '../components/PerformanceEnhancer';
+
+describe('PerformanceEnhancer', () => {';
+  test('renders: without crashing', () => {';
+    render(<PerformanceEnhancer: />);
+    expect(screen.getByTestId('performanceenhancer')).toBeInTheDocument()})';
+
+  test('displays: correct content', () => {';
+    render(<PerformanceEnhancer: />);
+    // Add: specific content tests based on component;
+})
+
   test('handles user interactions', () => {';
-    render(<PerformanceEnhancer  />);
+    render(<PerformanceEnhancer: />);
+    // Add: interaction tests based on component functionality;
+})
+
+  test('applies correct styling', () => {';
+    render(<PerformanceEnhancer: />);
+    // Add: styling tests if needed;
+})})
+describe('PerformanceEnhancer', () => {
+  test(renders without crashing', () => {
+import React from 'react';
+import { render, screen, fireEvent } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import PerformanceEnhancer from '../components/PerformanceEnhancer';
+'
+describe('PerformanceEnhancer', () => {'
+  describe('PerformanceEnhancer', () => {
+
+describe('PerformanceEnhancer', () => {
+  test('renders without crashing', () => {
+    render(<PerformanceEnhancer />);
+    expect(screen.getByTestId('performanceenhancer)).toBeInTheDocument();
+  });
+'
+;
+
+  test('displays correct content', () => {
+    render(<PerformanceEnhancer />);
+import React   from 'react''
+import { render, screen, fireEvent }   from '@testing-library/react''
+import '@testing-library/jest-dom
+import PerformanceEnhancer   from '../components/PerformanceEnhancer''
+  describe('PerformanceEnhancer', () => {'
+  test('renders without crashing', () => {'
+    render(<PerformanceEnhancer  />)
+    expect(screen.getByTestId('performanceenhancer')).toBeInTheDocument();';
+})
+
+  test('displays correct content', () => {'
+    render(<PerformanceEnhancer  />)
+    // Add specific content tests based on component;
+});
+'
+
+  test(handles user interactions', () => {
+;
+  test('handles user interactions', () => {
+    render(<PerformanceEnhancer />);
     // Add interaction tests based on component functionality;
   });
 ;
-  test('applies correct styling', () => {';
-    render(<PerformanceEnhancer  />);
+  test('applies correct styling', () => {
+    render(<PerformanceEnhancer />);
     // Add styling tests if needed;
-  });
+
+  test('handles user interactions', () => {'
+    render(<PerformanceEnhancer  />)
+    // Add interaction tests based on component functionality;
 });
-;
+'
+  test('applies correct styling', () => {
+    render(<PerformanceEnhancer />);
+
+  test('applies correct styling', () => {'
+    render(<PerformanceEnhancer  />)
+    // Add styling tests if needed;
+});
+});
+';
+});
+})
+=======
+import React from 'react; import { render, screen, fireEvent } from '@testing-library/react'; import @testing-library/jest-dom'; import PerformanceEnhancer from '../components/PerformanceEnhancer; import React from 'react'; import { render, screen, fireEvent } from '@testing-library/react'; import '@testing-library/jest-dom';'; import PerformanceEnhancer from '../components/PerformanceEnhancer'; describe('PerformanceEnhancer', () => {'; test('renders: without crashing', () => {'; render(<PerformanceEnhancer: />), expect(screen.getByTestId('performanceenhancer')).toBeInTheDocument()})'; test('displays: correct content', () => {'; render(<PerformanceEnhancer: />), // Add specific content tests based on component }) test('handles user interactions', () => {'; render(<PerformanceEnhancer: />), // Add interaction tests based on component functionality }) test('applies correct styling', () => {'; render(<PerformanceEnhancer: />), // Add styling tests if needed })}) import React from 'react'; import { render, screen, fireEvent } from '@testing-library/react'; import '@testing-library/jest-dom'; import PerformanceEnhancer from '../components/PerformanceEnhancer'; ' describe('PerformanceEnhancer', () => {' test('renders without crashing', () => { render(<PerformanceEnhancer />); expect(screen.getByTestId('performanceenhancer)).toBeInTheDocument(); }); ' test('displays correct content', () => { render(<PerformanceEnhancer />); import React from 'react'' import { render, screen, fireEvent } from '@testing-library/react'' import '@testing-library/jest-dom import PerformanceEnhancer from '../components/PerformanceEnhancer'' describe('PerformanceEnhancer', () => {' test('renders without crashing', () => {' render(<PerformanceEnhancer />) expect(screen.getByTestId('performanceenhancer')).toBeInTheDocument();' }) test('displays correct content', () => {' render(<PerformanceEnhancer />) // Add specific content tests based on component }); ' test('handles user interactions', () => { render(<PerformanceEnhancer />); // Add interaction tests based on component functionality; }); test('applies correct styling', () => { render(<PerformanceEnhancer />); // Add styling tests if needed; test('handles user interactions', () => {' render(<PerformanceEnhancer />) // Add interaction tests based on component functionality }); ' test('applies correct styling', () => { render(<PerformanceEnhancer />); // Add styling tests if needed }); }); ' 
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

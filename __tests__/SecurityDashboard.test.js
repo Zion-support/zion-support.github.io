@@ -1,26 +1,96 @@
-import React   from 'react';';
-import { render, screen, fireEvent }   from '@testing-library/react';';
-import '@testing-library/jest-dom;
-import SecurityDashboard   from '../components/SecurityDashboard';';
-  describe('SecurityDashboard', () => {';
-  test('renders without crashing', () => {';
-    render(<SecurityDashboard  />);
-    expect(screen.getByTestId('securitydashboard')).toBeInTheDocument();';
-  });
-;
-  test('displays correct content', () => {';
-    render(<SecurityDashboard  />);
-    // Add specific content tests based on component;
-  });
-;
+<<<<<<< HEAD
+import React from 'react;
+import { render, screen, fireEvent } from '@testing-library/react';
+import @testing-library/jest-dom';
+import SecurityDashboard from '../components/SecurityDashboard;
+
+import: React from 'react';
+import: { render, screen, fireEvent } from '@testing-library/react';
+import: '@testing-library/jest-dom';
+import: SecurityDashboard from '../components/SecurityDashboard';
+
+describe('SecurityDashboard', () => {';
+  test('renders: without crashing', () => {';
+    render(<SecurityDashboard: />);
+    expect(screen.getByTestId('securitydashboard')).toBeInTheDocument()})';
+
+  test('displays: correct content', () => {';
+    render(<SecurityDashboard: />);
+    // Add: specific content tests based on component;
+})
+
   test('handles user interactions', () => {';
-    render(<SecurityDashboard  />);
+    render(<SecurityDashboard: />);
+    // Add: interaction tests based on component functionality;
+})
+
+  test('applies correct styling', () => {';
+    render(<SecurityDashboard: />);
+    // Add: styling tests if needed;
+})})
+describe('SecurityDashboard', () => {
+  test(renders without crashing', () => {
+import React from 'react';
+import { render, screen, fireEvent } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import SecurityDashboard from '../components/SecurityDashboard';
+'
+describe('SecurityDashboard', () => {'
+  describe('SecurityDashboard', () => {
+
+describe('SecurityDashboard', () => {
+  test('renders without crashing', () => {
+    render(<SecurityDashboard />);
+    expect(screen.getByTestId('securitydashboard)).toBeInTheDocument();
+  });
+'
+;
+
+  test('displays correct content', () => {
+    render(<SecurityDashboard />);
+import React   from 'react''
+import { render, screen, fireEvent }   from '@testing-library/react''
+import '@testing-library/jest-dom
+import SecurityDashboard   from '../components/SecurityDashboard''
+  describe('SecurityDashboard', () => {'
+  test('renders without crashing', () => {'
+    render(<SecurityDashboard  />)
+    expect(screen.getByTestId('securitydashboard')).toBeInTheDocument();';
+})
+
+  test('displays correct content', () => {'
+    render(<SecurityDashboard  />)
+    // Add specific content tests based on component;
+});
+'
+
+  test(handles user interactions', () => {
+;
+  test('handles user interactions', () => {
+    render(<SecurityDashboard />);
     // Add interaction tests based on component functionality;
   });
 ;
-  test('applies correct styling', () => {';
-    render(<SecurityDashboard  />);
+  test('applies correct styling', () => {
+    render(<SecurityDashboard />);
     // Add styling tests if needed;
-  });
+
+  test('handles user interactions', () => {'
+    render(<SecurityDashboard  />)
+    // Add interaction tests based on component functionality;
 });
-;
+'
+  test('applies correct styling', () => {
+    render(<SecurityDashboard />);
+
+  test('applies correct styling', () => {'
+    render(<SecurityDashboard  />)
+    // Add styling tests if needed;
+});
+});
+';
+});
+})
+=======
+import React from 'react; import { render, screen, fireEvent } from '@testing-library/react'; import @testing-library/jest-dom'; import SecurityDashboard from '../components/SecurityDashboard; import React from 'react'; import { render, screen, fireEvent } from '@testing-library/react'; import '@testing-library/jest-dom';'; import SecurityDashboard from '../components/SecurityDashboard'; describe('SecurityDashboard', () => {'; test('renders: without crashing', () => {'; render(<SecurityDashboard: />), expect(screen.getByTestId('securitydashboard')).toBeInTheDocument()})'; test('displays: correct content', () => {'; render(<SecurityDashboard: />), // Add specific content tests based on component }) test('handles user interactions', () => {'; render(<SecurityDashboard: />), // Add interaction tests based on component functionality }) test('applies correct styling', () => {'; render(<SecurityDashboard: />), // Add styling tests if needed })}) import React from 'react'; import { render, screen, fireEvent } from '@testing-library/react'; import '@testing-library/jest-dom'; import SecurityDashboard from '../components/SecurityDashboard'; ' describe('SecurityDashboard', () => {' test('renders without crashing', () => { render(<SecurityDashboard />); expect(screen.getByTestId('securitydashboard)).toBeInTheDocument(); }); ' test('displays correct content', () => { render(<SecurityDashboard />); import React from 'react'' import { render, screen, fireEvent } from '@testing-library/react'' import '@testing-library/jest-dom import SecurityDashboard from '../components/SecurityDashboard'' describe('SecurityDashboard', () => {' test('renders without crashing', () => {' render(<SecurityDashboard />) expect(screen.getByTestId('securitydashboard')).toBeInTheDocument();' }) test('displays correct content', () => {' render(<SecurityDashboard />) // Add specific content tests based on component }); ' test('handles user interactions', () => { render(<SecurityDashboard />); // Add interaction tests based on component functionality; }); test('applies correct styling', () => { render(<SecurityDashboard />); // Add styling tests if needed; test('handles user interactions', () => {' render(<SecurityDashboard />) // Add interaction tests based on component functionality }); ' test('applies correct styling', () => { render(<SecurityDashboard />); // Add styling tests if needed }); }); ' 
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -18,22 +19,27 @@ const PerformanceMonitor: React.FC = () => {
     fid: null,
     cls: null,
     ttfb: null,
-    loadTime: null
-  });
+    loadTime: null,;
+});
 
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     // Only show in development or when explicitly enabled
-    if (process.env.NODE_ENV === 'development' || process.env.NEXT_PUBLIC_SHOW_PERFORMANCE === 'true') {
+    if (
+      process.env.NODE_ENV === 'development' ||
+      process.env.NEXT_PUBLIC_SHOW_PERFORMANCE === 'true'
+    ) {
       setIsVisible(true);
     }
 
     // Measure First Contentful Paint (FCP)
     if ('PerformanceObserver' in window) {
-      const fcpObserver = new PerformanceObserver((list) => {
+      const fcpObserver = new PerformanceObserver(list => {
         const entries = list.getEntries();
-        const fcpEntry = entries.find((entry) => entry.name === 'first-contentful-paint');
+        const fcpEntry = entries.find(
+          entry => entry.name === 'first-contentful-paint'
+        );
         if (fcpEntry) {
           setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
         }
@@ -41,7 +47,7 @@ const PerformanceMonitor: React.FC = () => {
       fcpObserver.observe({ entryTypes: ['paint'] });
 
       // Measure Largest Contentful Paint (LCP)
-      const lcpObserver = new PerformanceObserver((list) => {
+      const lcpObserver = new PerformanceObserver(list => {
         const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1];
         setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
@@ -49,20 +55,20 @@ const PerformanceMonitor: React.FC = () => {
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
       // Measure First Input Delay (FID)
-      const fidObserver = new PerformanceObserver((list) => {
+      const fidObserver = new PerformanceObserver(list => {
         const entries = list.getEntries();
         entries.forEach((entry: any) => {
           setMetrics(prev => ({
             ...prev,
-            fid: entry.processingStart - entry.startTime
-          }));
+            fid: entry.processingStart - entry.startTime,;
+}));
         });
       });
       fidObserver.observe({ entryTypes: ['first-input'] });
 
       // Measure Cumulative Layout Shift (CLS)
       let clsValue = 0;
-      const clsObserver = new PerformanceObserver((list) => {
+      const clsObserver = new PerformanceObserver(list => {
         const entries = list.getEntries();
         entries.forEach((entry: any) => {
           if (!entry.hadRecentInput) {
@@ -74,13 +80,13 @@ const PerformanceMonitor: React.FC = () => {
       clsObserver.observe({ entryTypes: ['layout-shift'] });
 
       // Measure Time to First Byte (TTFB)
-      const navigationObserver = new PerformanceObserver((list) => {
+      const navigationObserver = new PerformanceObserver(list => {
         const entries = list.getEntries();
         entries.forEach((entry: any) => {
           setMetrics(prev => ({
             ...prev,
-            ttfb: entry.responseStart - entry.requestStart
-          }));
+            ttfb: entry.responseStart - entry.requestStart,;
+}));
         });
       });
       navigationObserver.observe({ entryTypes: ['navigation'] });
@@ -109,21 +115,11 @@ const PerformanceMonitor: React.FC = () => {
     <div className="fixed bottom-4 left-4 bg-black bg-opacity-90 text-white p-4 rounded-lg text-xs font-mono z-50 max-w-xs">
       <div className="mb-2 font-bold">Performance Monitor</div>
       <div className="space-y-1">
-        {metrics.fcp !== null && (
-          <div>FCP: {metrics.fcp.toFixed(2)}ms</div>
-        )}
-        {metrics.lcp !== null && (
-          <div>LCP: {metrics.lcp.toFixed(2)}ms</div>
-        )}
-        {metrics.fid !== null && (
-          <div>FID: {metrics.fid.toFixed(2)}ms</div>
-        )}
-        {metrics.cls !== null && (
-          <div>CLS: {metrics.cls.toFixed(4)}</div>
-        )}
-        {metrics.ttfb !== null && (
-          <div>TTFB: {metrics.ttfb.toFixed(2)}ms</div>
-        )}
+        {metrics.fcp !== null && <div>FCP: {metrics.fcp.toFixed(2)}ms</div>}
+        {metrics.lcp !== null && <div>LCP: {metrics.lcp.toFixed(2)}ms</div>}
+        {metrics.fid !== null && <div>FID: {metrics.fid.toFixed(2)}ms</div>}
+        {metrics.cls !== null && <div>CLS: {metrics.cls.toFixed(4)}</div>}
+        {metrics.ttfb !== null && <div>TTFB: {metrics.ttfb.toFixed(2)}ms</div>}
         {metrics.loadTime !== null && (
           <div>Load: {metrics.loadTime.toFixed(2)}ms</div>
         )}
@@ -133,3 +129,6 @@ const PerformanceMonitor: React.FC = () => {
 };
 
 export default PerformanceMonitor;
+=======
+'use client'; import { useEffect, useState } from 'react'; interface PerformanceMetrics { fcp: number | null; lcp: number | null; fid: number | null; cls: number | null; ttfb: number | null; loadTime number | null, } const PerformanceMonitor: React.FC = () => { const [metrics, setMetrics] = useState<PerformanceMetrics>({ fcp: null, lcp: null, fid: null, cls: null, ttfb: null, loadTime: null, }); const [isVisible, setIsVisible] = useState(false); useEffect(() => { // Only show in development or when explicitly enabled if ( process.env.NODE_ENV === 'development' || process.env.NEXT_PUBLIC_SHOW_PERFORMANCE === 'true' ) { setIsVisible(true); } // Measure First Contentful Paint (FCP) if ('PerformanceObserver' in window) { const fcpObserver = new PerformanceObserver(list => { const entries = list.getEntries(); const fcpEntry = entries.find( entry => entry.name === 'first-contentful-paint' ); if (fcpEntry) { setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime })); } }); fcpObserver.observe({ entryTypes: ['paint'] }); // Measure Largest Contentful Paint (LCP) const lcpObserver = new PerformanceObserver(list => { const entries = list.getEntries(); const lastEntry = entries[entries.length - 1]; setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime })); }); lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] }); // Measure First Input Delay (FID) const fidObserver = new PerformanceObserver(list => { const entries = list.getEntries(); entries.forEach((entry: any) => { setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime, })); }); }); fidObserver.observe({ entryTypes: ['first-input'] }); // Measure Cumulative Layout Shift (CLS) let clsValue = 0; const clsObserver = new PerformanceObserver(list => { const entries = list.getEntries(); entries.forEach((entry: any) => { if (!entry.hadRecentInput) { clsValue += entry.value, setMetrics(prev => ({ ...prev, cls: clsValue })); } }); }); clsObserver.observe({ entryTypes: ['layout-shift'] }); // Measure Time to First Byte (TTFB) const navigationObserver = new PerformanceObserver(list => { const entries = list.getEntries(); entries.forEach((entry: any) => { setMetrics(prev => ({ ...prev, ttfb: entry.responseStart - entry.requestStart, })); }); }); navigationObserver.observe({ entryTypes: ['navigation'] }); // Measure page load time window.addEventListener('load', () => { const loadTime = performance.now(); setMetrics(prev => ({ ...prev, loadTime })); }); return () => { fcpObserver.disconnect(); lcpObserver.disconnect(); fidObserver.disconnect(); clsObserver.disconnect(); navigationObserver.disconnect(); }; } }, []); if (!isVisible) { return null; } return ( <div className="fixed bottom-4 left-4 bg-black bg-opacity-90 text-white p-4 rounded-lg text-xs font-mono z-50 max-w-xs> <div className="mb-2" font-bold">Performance Monitor</div> <div className="space-y-1"> {metrics.fcp !== null && <div>FCP: {metrics.fcp.toFixed(2)}ms</div>} {metrics.lcp !== null && <div>LCP: {metrics.lcp.toFixed(2)}ms</div>} {metrics.fid !== null && <div>FID: {metrics.fid.toFixed(2)}ms</div>} {metrics.cls !== null && <div>CLS: {metrics.cls.toFixed(4)}</div>} {metrics.ttfb !== null && <div>TTFB: {metrics.ttfb.toFixed(2)}ms</div>} {metrics.loadTime !== null && ( <div>Load: {metrics.loadTime.toFixed(2)}ms</div> )} </div> </div> ); }; export default PerformanceMonitor; 
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

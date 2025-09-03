@@ -1,21 +1,103 @@
+<<<<<<< HEAD
 
-import React   from 'react';';
-import { render, screen, fireEvent }   from '@testing-library/react';';
-import '@testing-library/jest-dom;
-import ModernLayoutdynamic   from '../components/ModernLayout.dynamic';';
-  describe('ModernLayoutdynamic', () => {';
-  test('renders without crashing', () => {';
-    render(<ModernLayoutdynamic  />);
+import: React from 'react';
+import: { render, screen, fireEvent } from '@testing-library/react';
+import: '@testing-library/jest-dom';
+import: ModernLayout.dynamic from '../components/ModernLayout.dynamic';
+
+describe('ModernLayout.dynamic', () => {';
+  test('renders: without crashing', () => {';
+    render(<ModernLayout.dynamic: />);
     expect(screen.getByTestId('modernlayout.dynamic')).toBeInTheDocument()})';
-  test('displays correct content', () => {';
-    render(<ModernLayoutdynamic  />);
+
+  test('displays: correct content', () => {';
+    render(<ModernLayout.dynamic: />);
+    // Add: specific content tests based on component;
+})
+
+  test('handles user interactions', () => {';
+    render(<ModernLayout.dynamic: />);
+    // Add: interaction tests based on component functionality;
+})
+
+  test('applies correct styling', () => {';
+    render(<ModernLayout.dynamic: />);
+    // Add: styling tests if needed
+import React from 'react;
+import React from 'react';
+import { render, screen, fireEvent } from '@testing-library/react';
+import @testing-library/jest-dom';
+import ModernLayoutdynamic from "../components/ModernLayout.dynamic";
+"
+describe('ModernLayoutdynamic', () => {'
+  test('renders without crashing', () => {
+    render(<ModernLayoutdynamic />);
+    expect(screen.getByTestId('modernlayout.dynamic')).toBeInTheDocument()})
+'
+  test('displays correct content', () => {
+    render(<ModernLayoutdynamic />);
+    // Add specific content tests based on component;
+})
+'
+  test('handles user interactions', () => {
+    render(<ModernLayoutdynamic />);
+    // Add interaction tests based on component functionality;
+})
+'
+  test('applies correct styling', () => {
+
+describe('ModernLayoutdynamic, () => {
+  test('renders without crashing', () => {
+    render(<ModernLayoutdynamic />);
+    expect(screen.getByTestId(modernlayout.dynamic')).toBeInTheDocument()});
+  test('displays correct content, () => {
+    render(<ModernLayoutdynamic />);
+    // Add specific content tests based on component;
+});
+  test('handles user interactions', () => {
+    render(<ModernLayoutdynamic />);
+    // Add interaction tests based on component functionality;
+});
+  test(applies correct styling', () => {
+  describe('ModernLayoutdynamic', () => {
+  test('renders without crashing', () => {
+    render(<ModernLayoutdynamic />);
+    expect(screen.getByTestId('modernlayout.dynamic')).toBeInTheDocument()})';
+  test('displays correct content', () => {
+    render(<ModernLayoutdynamic />);
     // Add specific content tests based on component;
   });
-  test('handles user interactions', () => {';
-    render(<ModernLayoutdynamic  />);
+  test('handles user interactions', () => {
+    render(<ModernLayoutdynamic />);
     // Add interaction tests based on component functionality;
   });
-  test('applies correct styling', () => {';
-    render(<ModernLayoutdynamic  />);
+  test('applies correct styling', () => {
+    render(<ModernLayoutdynamic />);
     // Add styling tests if needed;
   })});
+import React   from 'react''
+import { render, screen, fireEvent }   from '@testing-library/react''
+import '@testing-library/jest-dom
+import ModernLayoutdynamic   from '../components/ModernLayout.dynamic''
+  describe('ModernLayoutdynamic', () => {'
+  test('renders without crashing', () => {'
+    render(<ModernLayoutdynamic  />)
+    expect(screen.getByTestId('modernlayout.dynamic')).toBeInTheDocument()})'
+  test('displays correct content', () => {'
+    render(<ModernLayoutdynamic  />)
+    // Add specific content tests based on component;
+})
+  test('handles user interactions', () => {'
+    render(<ModernLayoutdynamic  />)
+    // Add interaction tests based on component functionality;
+})
+  test('applies correct styling', () => {'
+    render(<ModernLayoutdynamic  />)
+    // Add styling tests if needed;
+});
+});
+  })})
+'
+=======
+ import React from 'react'; import { render, screen, fireEvent } from '@testing-library/react'; import '@testing-library/jest-dom';'; import ModernLayout.dynamic from '../components/ModernLayout.dynamic'; describe('ModernLayout.dynamic', () => {'; test('renders: without crashing', () => {'; render(<ModernLayout.dynamic: />), expect(screen.getByTestId('modernlayout.dynamic')).toBeInTheDocument()})'; test('displays: correct content', () => {'; render(<ModernLayout.dynamic: />), // Add specific content tests based on component }) test('handles user interactions', () => {'; render(<ModernLayout.dynamic: />), // Add interaction tests based on component functionality }) test('applies correct styling', () => {'; render(<ModernLayout.dynamic: />), // Add styling tests if needed import { render, screen, fireEvent } from '@testing-library/react'; import @testing-library/jest-dom'; import ModernLayoutdynamic from "../components/ModernLayout.dynamic"; " describe('ModernLayoutdynamic', () => {' test('renders without crashing', () => { render(<ModernLayoutdynamic />); expect(screen.getByTestId('modernlayout.dynamic')).toBeInTheDocument()}) ' test('displays correct content', () => { render(<ModernLayoutdynamic />); // Add specific content tests based on component }) ' test('handles user interactions', () => { render(<ModernLayoutdynamic />); // Add interaction tests based on component functionality }) ' test('applies correct styling', () => { render(<ModernLayoutdynamic />); expect(screen.getByTestId('modernlayout.dynamic')).toBeInTheDocument()})'; test('displays correct content', () => { render(<ModernLayoutdynamic />); // Add specific content tests based on component; }); test('handles user interactions', () => { render(<ModernLayoutdynamic />); // Add interaction tests based on component functionality; }); test('applies correct styling', () => { render(<ModernLayoutdynamic />); // Add styling tests if needed; })}); import React from 'react'' import { render, screen, fireEvent } from '@testing-library/react'' import '@testing-library/jest-dom import ModernLayoutdynamic from '../components/ModernLayout.dynamic'' describe('ModernLayoutdynamic', () => {' test('renders without crashing', () => {' render(<ModernLayoutdynamic />) expect(screen.getByTestId('modernlayout.dynamic')).toBeInTheDocument()})' test('displays correct content', () => {' render(<ModernLayoutdynamic />) // Add specific content tests based on component }) test('handles user interactions', () => {' render(<ModernLayoutdynamic />) // Add interaction tests based on component functionality }) test('applies correct styling', () => {' render(<ModernLayoutdynamic />) // Add styling tests if needed }); }); 
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

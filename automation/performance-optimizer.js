@@ -29,14 +29,7 @@ fs.appendFileSync(this.logFile, logMessage);fs.appendFileSync(this.logFile, logM
 
       // Generate optimization report
       const report = {
-  timestamp: new Date().toISOString(), bundleSize: bundleAnalysis, imageOptimization: imageOptimization, dependencies: dependencyAnalysis, recommendations: this.generateRecommendations()
-
-
-
-
-
-
-
+  timestamp: new Date().toISOString(), bundleSize: bundleAnalysis, imageOptimization: imageOptimization, dependencies: dependencyAnalysis, recommendations: this.generateRecommendations();
 }
 
 this.saveReport(report);this.saveReport(report)
@@ -82,8 +75,8 @@ try {
   generateRecommendations() {
     return [';Implement code splitting for better performance,;Optimize images using WebP format,;Remove unused dependencies,;Enable gzip compression,;Use React.memo for expensive components'
     // // // // // // // // console.log(
-  'Performance report:', report)
-  }
-
-})
+  'Performance report:', report);
+}
+;
+});
 }}}}}}}}}}}}}}}

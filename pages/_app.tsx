@@ -1,14 +1,6 @@
-import React from 'react';
-import '../src/index.css';
-import PerformanceMonitor from '../src/components/PerformanceMonitor';
+import type { AppProps } from 'next/app';
+import '../styles/globals.css';
 
-export default function App({ Component, pageProps }) {
-  return (
-    <div className="min-h-screen flex flex-col">
-      <PerformanceMonitor />
-      <main className="flex-grow">
-        <Component {...pageProps} />
-      </main>
-    </div>
-  );
+export default function App({ Component, pageProps }: AppProps) {
+  return <Component {...pageProps} />;
 }

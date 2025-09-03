@@ -27,14 +27,18 @@ class MonitoringAutomation {
 
   async createPerformanceMonitor() {
     this.log('📊 Creating performance monitoring script...');
-    
-    const monitorPath = path.join(this.projectRoot, 'scripts', 'performance-monitor-enhanced.cjs');
+
+    const monitorPath = path.join(
+      this.projectRoot,
+      'scripts',
+      'performance-monitor-enhanced.cjs'
+    );
     const scriptsDir = path.dirname(monitorPath);
-    
+
     if (!fs.existsSync(scriptsDir)) {
       fs.mkdirSync(scriptsDir, { recursive: true });
     }
-    
+
     const monitorScript = `#!/usr/bin/env node
 
 const fs = require('fs');
@@ -67,8 +71,8 @@ class PerformanceMonitor {
       execSync('npm run build', { 
         cwd: this.projectRoot, 
         stdio: 'pipe',
-        timeout: 300000 
-      });
+        timeout: 300000 ;
+});
       const buildTime = Date.now() - startTime;
       
       this.log(\`✅ Build completed in \${buildTime}ms\`);
@@ -106,8 +110,8 @@ class PerformanceMonitor {
           totalSize: totalSize,
           totalSizeMB: (totalSize / 1024 / 1024).toFixed(2),
           fileCount: files.length,
-          fileSizes: fileSizes
-        };
+          fileSizes: fileSizes;
+};
 
         this.log(\`📊 Bundle size: \${result.totalSizeMB}MB (\${result.fileCount} files)\`);
         return result;
@@ -154,8 +158,8 @@ class PerformanceMonitor {
         const outdatedOutput = execSync('npm outdated --json', { 
           cwd: this.projectRoot, 
           encoding: 'utf8',
-          stdio: 'pipe'
-        });
+          stdio: 'pipe';
+});
         outdatedPackages = JSON.parse(outdatedOutput);
       } catch (error) {
         // npm outdated returns non-zero exit code when packages are outdated
@@ -168,8 +172,8 @@ class PerformanceMonitor {
         dependencies: dependencies,
         devDependencies: devDependencies,
         totalDeps: dependencies.length + devDependencies.length,
-        outdatedPackages: Object.keys(outdatedPackages)
-      };
+        outdatedPackages: Object.keys(outdatedPackages);
+};
 
       this.log(\`📊 Dependencies: \${result.totalDeps} total, \${result.outdatedPackages.length} outdated\`);
       return result;
@@ -186,8 +190,8 @@ class PerformanceMonitor {
       const auditOutput = execSync('npm audit --json', { 
         cwd: this.projectRoot, 
         encoding: 'utf8',
-        stdio: 'pipe'
-      });
+        stdio: 'pipe';
+});
       
       const audit = JSON.parse(auditOutput);
       const vulnerabilities = audit.vulnerabilities || {};
@@ -197,8 +201,8 @@ class PerformanceMonitor {
       return { 
         success: true, 
         vulnerabilityCount,
-        vulnerabilities: vulnerabilities
-      };
+        vulnerabilities: vulnerabilities;
+};
     } catch (error) {
       this.log(\`❌ Security audit failed: \${error.message}\`);
       return { success: false, error: error.message };
@@ -213,8 +217,8 @@ class PerformanceMonitor {
       buildPerformance: await this.checkBuildPerformance(),
       bundleSize: await this.checkBundleSize(),
       dependencies: await this.checkDependencies(),
-      security: await this.checkSecurity()
-    };
+      security: await this.checkSecurity();
+};
 
     const reportPath = path.join(this.reportsDir, \`performance-report-\${Date.now()}.json\`);
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
@@ -249,14 +253,18 @@ monitor.run().catch(console.error);
 
   async createMaintenanceScript() {
     this.log('🔧 Creating maintenance script...');
-    
-    const maintenancePath = path.join(this.projectRoot, 'scripts', 'maintenance.cjs');
+
+    const maintenancePath = path.join(
+      this.projectRoot,
+      'scripts',
+      'maintenance.cjs'
+    );
     const scriptsDir = path.dirname(maintenancePath);
-    
+
     if (!fs.existsSync(scriptsDir)) {
       fs.mkdirSync(scriptsDir, { recursive: true });
     }
-    
+
     const maintenanceScript = `#!/usr/bin/env node
 
 const fs = require('fs');
@@ -289,7 +297,7 @@ class MaintenanceScript {
       'node_modules/.cache',
       '.npm',
       '.yarn'
-    ];
+    ]
 
     let cleaned = 0;
     for (const dir of cacheDirs) {
@@ -315,14 +323,14 @@ class MaintenanceScript {
       // Check for updates
       execSync('npm outdated', { 
         cwd: this.projectRoot, 
-        stdio: 'pipe'
-      });
+        stdio: 'pipe';
+});
       
       // Update dependencies
       execSync('npm update', { 
         cwd: this.projectRoot, 
-        stdio: 'inherit'
-      });
+        stdio: 'inherit';
+});
       
       this.log('✅ Dependencies updated');
       return { success: true };
@@ -387,8 +395,8 @@ class MaintenanceScript {
       timestamp: new Date().toISOString(),
       cacheCleanup: await this.cleanCache(),
       dependencyUpdate: await this.updateDependencies(),
-      imageOptimization: await this.optimizeImages()
-    };
+      imageOptimization: await this.optimizeImages();
+};
 
     const reportPath = path.join(this.reportsDir, \`maintenance-report-\${Date.now()}.json\`);
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
@@ -423,14 +431,14 @@ maintenance.run().catch(console.error);
 
   async createCronJob() {
     this.log('⏰ Creating cron job configuration...');
-    
+
     const cronPath = path.join(this.projectRoot, 'scripts', 'setup-cron.sh');
     const scriptsDir = path.dirname(cronPath);
-    
+
     if (!fs.existsSync(scriptsDir)) {
       fs.mkdirSync(scriptsDir, { recursive: true });
     }
-    
+
     const cronScript = `#!/bin/bash
 
 # Setup cron jobs for automation
@@ -466,11 +474,11 @@ crontab -l
 
   async run() {
     this.log('🚀 Starting Monitoring Automation');
-    
+
     const results = {
       timestamp: new Date().toISOString(),
-      scripts: {}
-    };
+      scripts: {},;
+};
 
     // Create monitoring scripts
     results.scripts.performanceMonitor = await this.createPerformanceMonitor();
@@ -478,7 +486,10 @@ crontab -l
     results.scripts.cronJob = await this.createCronJob();
 
     // Generate report
-    const reportPath = path.join(this.reportsDir, 'monitoring-setup-report.json');
+    const reportPath = path.join(
+      this.reportsDir,
+      'monitoring-setup-report.json'
+    );
     fs.writeFileSync(reportPath, JSON.stringify(results, null, 2));
 
     this.log('📊 Report generated: ' + reportPath);

@@ -11,6 +11,6 @@
     "LOG_LEVEL": "info",
     "ENABLE_AUTO_FIX": true,
     "ENABLE_TYPE_CHECK": true,
-    "ENABLE_LINT_FIX": true
-  }
+    "ENABLE_LINT_FIX": true;
+}
 }

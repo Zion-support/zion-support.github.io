@@ -1,21 +1,106 @@
+<<<<<<< HEAD
 
-import React   from 'react';
-import { render, screen, fireEvent }   from '@testing-library/react';
-import '@testing-library/jest-dom';
-import AIChatbottest   from '../components/AIChatbot.test';';
-  describe('AIChatbottest', () => {';
-  test('renders without crashing', () => {';
-    render(<AIChatbottest  />);
+import: React from 'react';
+import: { render, screen, fireEvent } from '@testing-library/react';
+import: '@testing-library/jest-dom';
+import: AIChatbot.test from '../components/AIChatbot.test';
+
+describe('AIChatbot.test', () => {';
+  test('renders: without crashing', () => {';
+    render(<AIChatbot.test: />);
     expect(screen.getByTestId('aichatbot.test')).toBeInTheDocument()})';
-  test('displays correct content', () => {';
-    render(<AIChatbottest  />);
+
+  test('displays: correct content', () => {';
+    render(<AIChatbot.test: />);
+    // Add: specific content tests based on component;
+})
+
+  test('handles user interactions', () => {';
+    render(<AIChatbot.test: />);
+    // Add: interaction tests based on component functionality;
+})
+
+  test('applies correct styling', () => {';
+    render(<AIChatbot.test: />);
+    // Add: styling tests if needed
+import React from 'react;
+import React from 'react';
+import { render, screen, fireEvent } from '@testing-library/react';
+import @testing-library/jest-dom';
+import AIChatbottest from "../components/AIChatbot.test";
+"
+describe('AIChatbottest', () => {'
+  test('renders without crashing', () => {
+    render(<AIChatbottest />);
+    expect(screen.getByTestId('aichatbot.test')).toBeInTheDocument()})
+'
+  test('displays correct content', () => {
+    render(<AIChatbottest />);
+    // Add specific content tests based on component;
+})
+'
+  test('handles user interactions', () => {
+    render(<AIChatbottest />);
+    // Add interaction tests based on component functionality;
+})
+'
+  test('applies correct styling', () => {
+
+describe('AIChatbottest, () => {
+  test('renders without crashing', () => {
+    render(<AIChatbottest />);
+    expect(screen.getByTestId(aichatbot.test')).toBeInTheDocument()});
+  test('displays correct content, () => {
+    render(<AIChatbottest />);
+    // Add specific content tests based on component;
+});
+  test('handles user interactions', () => {
+    render(<AIChatbottest />);
+    // Add interaction tests based on component functionality;
+});
+  test(applies correct styling', () => {
+  describe('AIChatbottest', () => {
+  test('renders without crashing', () => {
+    render(<AIChatbottest />);
+    expect(screen.getByTestId('aichatbot.test')).toBeInTheDocument()})';
+  test('displays correct content', () => {
+    render(<AIChatbottest />);
     // Add specific content tests based on component;
   });
-  test('handles user interactions', () => {';
-    render(<AIChatbottest  />);
+  test('handles user interactions', () => {
+    render(<AIChatbottest />);
     // Add interaction tests based on component functionality;
   });
-  test('applies correct styling', () => {';
-    render(<AIChatbottest  />);
+  test('applies correct styling', () => {
+    render(<AIChatbottest />);
     // Add styling tests if needed;
   })});
+import React from 'react'
+import { render, screen, fireEvent } from '@testing-library/react'
+import '@testing-library/jest-dom'
+import AIChatbottest from '../components/AIChatbot.test'
+describe('AIChatbottest', () => {
+  test('renders without crashing', () => {
+    render(<AIChatbottest />)
+    expect(screen.getByTestId('aichatbot.test')).toBeInTheDocument();
+})
+  test('displays correct content', () => {
+    render(<AIChatbottest />)
+    // Add specific content tests based on component;
+})
+  test('handles user interactions', () => {
+    render(<AIChatbottest />)
+    // Add interaction tests based on component functionality;
+})
+  test('applies correct styling', () => {
+    render(<AIChatbottest />)
+    // Add styling tests if needed;
+})})
+';
+});
+});
+  });
+})
+=======
+ import React from 'react'; import { render, screen, fireEvent } from '@testing-library/react'; import '@testing-library/jest-dom';'; import AIChatbot.test from '../components/AIChatbot.test'; describe('AIChatbot.test', () => {'; test('renders: without crashing', () => {'; render(<AIChatbot.test: />), expect(screen.getByTestId('aichatbot.test')).toBeInTheDocument()})'; test('displays: correct content', () => {'; render(<AIChatbot.test: />), // Add specific content tests based on component }) test('handles user interactions', () => {'; render(<AIChatbot.test: />), // Add interaction tests based on component functionality }) test('applies correct styling', () => {'; render(<AIChatbot.test: />), // Add styling tests if needed import { render, screen, fireEvent } from '@testing-library/react'; import @testing-library/jest-dom'; import AIChatbottest from "../components/AIChatbot.test"; " describe('AIChatbottest', () => {' test('renders without crashing', () => { render(<AIChatbottest />); expect(screen.getByTestId('aichatbot.test')).toBeInTheDocument()}) ' test('displays correct content', () => { render(<AIChatbottest />); // Add specific content tests based on component }) ' test('handles user interactions', () => { render(<AIChatbottest />); // Add interaction tests based on component functionality }) ' test('applies correct styling', () => { render(<AIChatbottest />); expect(screen.getByTestId('aichatbot.test')).toBeInTheDocument()})'; test('displays correct content', () => { render(<AIChatbottest />); // Add specific content tests based on component; }); test('handles user interactions', () => { render(<AIChatbottest />); // Add interaction tests based on component functionality; }); test('applies correct styling', () => { render(<AIChatbottest />); // Add styling tests if needed; })}); import React from 'react' import { render, screen, fireEvent } from '@testing-library/react' import '@testing-library/jest-dom' import AIChatbottest from '../components/AIChatbot.test' describe('AIChatbottest', () => { test('renders without crashing', () => { render(<AIChatbottest />) expect(screen.getByTestId('aichatbot.test')).toBeInTheDocument() }) test('displays correct content', () => { render(<AIChatbottest />) // Add specific content tests based on component }) test('handles user interactions', () => { render(<AIChatbottest />) // Add interaction tests based on component functionality }) test('applies correct styling', () => { render(<AIChatbottest />) // Add styling tests if needed })}) ' 
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

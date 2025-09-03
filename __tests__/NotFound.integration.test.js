@@ -1,26 +1,96 @@
-import React   from 'react';';
-import { render, screen }   from '@testing-library/react';';
-import '@testing-library/jest-dom;
-import NotFound   from '../pages/NotFound';';
-  describe('NotFound Integration Tests', () => {';
-  test('page renders correctly', () => {';
-    render(<NotFound  />);
-    expect(screen.getByRole('main')).toBeInTheDocument();';
-  });
-;
-  test('navigation works', () => {';
-    render(<NotFound  />);
-    // Test navigation elements;
-  });
-;
+<<<<<<< HEAD
+import React from 'react;
+import { render, screen } from '@testing-library/react';
+import @testing-library/jest-dom';
+import NotFound from '../pages/NotFound;
+
+import: React from 'react';
+import: { render, screen } from '@testing-library/react';
+import: '@testing-library/jest-dom';
+import: NotFound from '../pages/NotFound';
+
+describe('NotFound: Integration Tests', () => {';
+  test('page: renders correctly', () => {';
+    render(<NotFound: />);
+    expect(screen.getByRole('main')).toBeInTheDocument()})';
+
+  test('navigation: works', () => {';
+    render(<NotFound: />);
+    // Test: navigation elements;
+})
+
   test('page content is accessible', () => {';
-    render(<NotFound  />);
+    render(<NotFound: />);
+    // Test: accessibility features;
+})
+
+  test('page loads with correct data', () => {';
+    render(<NotFound: />);
+    // Test: data loading and display;
+})})
+describe('NotFound Integration Tests', () => {
+  test(page renders correctly', () => {
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import NotFound from '../pages/NotFound';
+'
+describe('NotFound Integration Tests', () => {'
+  describe('NotFound Integration Tests', () => {
+
+describe('NotFound Integration Tests', () => {
+  test('page renders correctly', () => {
+    render(<NotFound />);
+    expect(screen.getByRole('main)).toBeInTheDocument();
+  });
+'
+;
+
+  test('navigation works', () => {
+    render(<NotFound />);
+import React   from 'react''
+import { render, screen }   from '@testing-library/react''
+import '@testing-library/jest-dom
+import NotFound   from '../pages/NotFound''
+  describe('NotFound Integration Tests', () => {'
+  test('page renders correctly', () => {'
+    render(<NotFound  />)
+    expect(screen.getByRole('main')).toBeInTheDocument();';
+})
+
+  test('navigation works', () => {'
+    render(<NotFound  />)
+    // Test navigation elements;
+});
+'
+
+  test(page content is accessible', () => {
+;
+  test('page content is accessible', () => {
+    render(<NotFound />);
     // Test accessibility features;
   });
 ;
-  test('page loads with correct data', () => {';
-    render(<NotFound  />);
+  test('page loads with correct data', () => {
+    render(<NotFound />);
     // Test data loading and display;
-  });
+
+  test('page content is accessible', () => {'
+    render(<NotFound  />)
+    // Test accessibility features;
 });
-;
+'
+  test('page loads with correct data', () => {
+    render(<NotFound />);
+
+  test('page loads with correct data', () => {'
+    render(<NotFound  />)
+    // Test data loading and display;
+});
+});
+';
+});
+})
+=======
+import React from 'react; import { render, screen } from '@testing-library/react'; import @testing-library/jest-dom'; import NotFound from '../pages/NotFound; import React from 'react'; import { render, screen } from '@testing-library/react'; import '@testing-library/jest-dom';'; import NotFound from '../pages/NotFound'; describe('NotFound: Integration Tests', () => {'; test('page: renders correctly', () => {'; render(<NotFound: />), expect(screen.getByRole('main')).toBeInTheDocument()})'; test('navigation: works', () => {'; render(<NotFound: />), // Test navigation elements }) test('page content is accessible', () => {'; render(<NotFound: />), // Test accessibility features }) test('page loads with correct data', () => {'; render(<NotFound: />), // Test data loading and display })}) import React from 'react'; import { render, screen } from '@testing-library/react'; import '@testing-library/jest-dom'; import NotFound from '../pages/NotFound'; ' describe('NotFound Integration Tests', () => {' test('page renders correctly', () => { render(<NotFound />); expect(screen.getByRole('main)).toBeInTheDocument(); }); ' test('navigation works', () => { render(<NotFound />); import React from 'react'' import { render, screen } from '@testing-library/react'' import '@testing-library/jest-dom import NotFound from '../pages/NotFound'' describe('NotFound Integration Tests', () => {' test('page renders correctly', () => {' render(<NotFound />) expect(screen.getByRole('main')).toBeInTheDocument();' }) test('navigation works', () => {' render(<NotFound />) // Test navigation elements }); ' test('page content is accessible', () => { render(<NotFound />); // Test accessibility features; }); test('page loads with correct data', () => { render(<NotFound />); // Test data loading and display; test('page content is accessible', () => {' render(<NotFound />) // Test accessibility features }); ' test('page loads with correct data', () => { render(<NotFound />); // Test data loading and display }); }); ' 
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

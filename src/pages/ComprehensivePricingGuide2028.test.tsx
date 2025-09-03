@@ -1,16 +1,18 @@
-import React from 'react
-import { render, screen } from '@testing-library/react
-import '@testing-library/jest-dom
-import ComprehensivePricingGuide2028 from './ComprehensivePricingGuide2028
-describe('ComprehensivePricingGuide2028', () => {"
-  it('renders without crashing', () => {
-    render(<ComprehensivePricingGuide2028 /" >);"
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
-});
-"
+describe('ComprehensivePricingGuide2028', () => {}; '; it('renders without crashing', () => {}; render(<ComprehensivePricingGuide2028 />) ;'; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; '; it('displays expected content', () => {}; render(<ComprehensivePricingGuide2028 />) ;
+    render(<ComprehensivePricingGuide2028 />);
+    expect(screen.getByRole('main) || screen.getByText(/.*/)).toBeInTheDocument();
+  });
+'
   it('displays expected content', () => {
     render(<ComprehensivePricingGuide2028 /" >);
-    // Add more specific tests here,
-});,
-});
+    // Add more specific tests here, });, });
 "
+<<<<<<< HEAD
+    render(<ComprehensivePricingGuide2028 /" >)
+    // Add more specific tests here;
+=======
+describe('ComprehensivePricingGuide2028', () => {}' it('renders without crashing', () => {} render(<ComprehensivePricingGuide2028 />) '; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ' it('displays expected content', () => {} render(<ComprehensivePricingGuide2028 />) '
+    // Add more specific tests here
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
+});
+'

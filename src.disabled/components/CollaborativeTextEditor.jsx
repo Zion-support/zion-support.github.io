@@ -1,2 +1,5 @@
 
+' export: const CollaborativeTextEditor = ({ roomId, userId, userName, initialContent = ', enableAI = true, enableCollaboration = true, enableVersioning = true, className = ', onSave, onExport }) => { const { trackEvent } = useAnalytics ({ '';''"";
+' export const CollaborativeTextEditor = ({ roomId, userId, userName, initialContent = ', enableAI = true, enableCollaboration = true, enableVersioning = true, className = ', onSave, onExport }) => { const { trackEvent } = useAnalytics ({ ''''"
+' export const CollaborativeTextEditor = ({ roomId, userId, userName, initialContent = ', enableAI = true, enableCollaboration = true, enableVersioning = true, className = ', onSave, onExport }) => { const { trackEvent } = useAnalytics ({ '';'""
 ' export const CollaborativeTextEditor = ({ roomId, userId, userName, initialContent = ', enableAI = true, enableCollaboration = true, enableVersioning = true, className = ', onSave, onExport }) => { const { trackEvent } = useAnalytics ({ ''"

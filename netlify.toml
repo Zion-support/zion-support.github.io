@@ -89,6 +89,16 @@
   [headers.values]
     Content-Type = "application/manifest+json"
 
+# Cloudinary plugin configuration (disabled - uncomment and configure if needed)
+# [[plugins]]
+#   package = "netlify-plugin-cloudinary"
+#   [plugins.inputs]
+#     cloudName = "your-cloud-name"  # Replace with your actual Cloudinary cloud name
+#     apiKey = "your-api-key"        # Replace with your actual API key
+#     apiSecret = "your-api-secret"  # Replace with your actual API secret
+#     imagesPath = "public/images"   # Specify the correct images path
+#     uploadPreset = "your-preset"   # Optional: specify upload preset
+
 # No Next.js plugin needed for static export
 
 # Redirects for SEO/legacy URLs

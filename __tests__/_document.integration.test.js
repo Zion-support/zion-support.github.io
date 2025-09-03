@@ -1,26 +1,96 @@
-import React   from 'react';';
-import { render, screen }   from '@testing-library/react';';
-import '@testing-library/jest-dom;
-import _document   from '../pages/_document';';
-  describe('_document Integration Tests', () => {';
-  test('page renders correctly', () => {';
-    render(<_document  />);
-    expect(screen.getByRole('main')).toBeInTheDocument();';
-  });
-;
-  test('navigation works', () => {';
-    render(<_document  />);
-    // Test navigation elements;
-  });
-;
+<<<<<<< HEAD
+import React from 'react;
+import { render, screen } from '@testing-library/react';
+import @testing-library/jest-dom';
+import _document from '../pages/_document;
+
+import: React from 'react';
+import: { render, screen } from '@testing-library/react';
+import: '@testing-library/jest-dom';
+import: _document from '../pages/_document';
+
+describe('_document: Integration Tests', () => {';
+  test('page: renders correctly', () => {';
+    render(<_document: />);
+    expect(screen.getByRole('main')).toBeInTheDocument()})';
+
+  test('navigation: works', () => {';
+    render(<_document: />);
+    // Test: navigation elements;
+})
+
   test('page content is accessible', () => {';
-    render(<_document  />);
+    render(<_document: />);
+    // Test: accessibility features;
+})
+
+  test('page loads with correct data', () => {';
+    render(<_document: />);
+    // Test: data loading and display;
+})})
+describe('_document Integration Tests', () => {
+  test(page renders correctly', () => {
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import _document from '../pages/_document';
+'
+describe('_document Integration Tests', () => {'
+  describe('_document Integration Tests', () => {
+
+describe('_document Integration Tests', () => {
+  test('page renders correctly', () => {
+    render(<_document />);
+    expect(screen.getByRole('main)).toBeInTheDocument();
+  });
+'
+;
+
+  test('navigation works', () => {
+    render(<_document />);
+import React   from 'react''
+import { render, screen }   from '@testing-library/react''
+import '@testing-library/jest-dom
+import _document   from '../pages/_document''
+  describe('_document Integration Tests', () => {'
+  test('page renders correctly', () => {'
+    render(<_document  />)
+    expect(screen.getByRole('main')).toBeInTheDocument();';
+})
+
+  test('navigation works', () => {'
+    render(<_document  />)
+    // Test navigation elements;
+});
+'
+
+  test(page content is accessible', () => {
+;
+  test('page content is accessible', () => {
+    render(<_document />);
     // Test accessibility features;
   });
 ;
-  test('page loads with correct data', () => {';
-    render(<_document  />);
+  test('page loads with correct data', () => {
+    render(<_document />);
     // Test data loading and display;
-  });
+
+  test('page content is accessible', () => {'
+    render(<_document  />)
+    // Test accessibility features;
 });
-;
+'
+  test('page loads with correct data', () => {
+    render(<_document />);
+
+  test('page loads with correct data', () => {'
+    render(<_document  />)
+    // Test data loading and display;
+});
+});
+';
+});
+})
+=======
+import React from 'react; import { render, screen } from '@testing-library/react'; import @testing-library/jest-dom'; import _document from '../pages/_document; import React from 'react'; import { render, screen } from '@testing-library/react'; import '@testing-library/jest-dom';'; import _document from '../pages/_document'; describe('_document: Integration Tests', () => {'; test('page: renders correctly', () => {'; render(<_document: />), expect(screen.getByRole('main')).toBeInTheDocument()})'; test('navigation: works', () => {'; render(<_document: />), // Test navigation elements }) test('page content is accessible', () => {'; render(<_document: />), // Test accessibility features }) test('page loads with correct data', () => {'; render(<_document: />), // Test data loading and display })}) import React from 'react'; import { render, screen } from '@testing-library/react'; import '@testing-library/jest-dom'; import _document from '../pages/_document'; ' describe('_document Integration Tests', () => {' test('page renders correctly', () => { render(<_document />); expect(screen.getByRole('main)).toBeInTheDocument(); }); ' test('navigation works', () => { render(<_document />); import React from 'react'' import { render, screen } from '@testing-library/react'' import '@testing-library/jest-dom import _document from '../pages/_document'' describe('_document Integration Tests', () => {' test('page renders correctly', () => {' render(<_document />) expect(screen.getByRole('main')).toBeInTheDocument();' }) test('navigation works', () => {' render(<_document />) // Test navigation elements }); ' test('page content is accessible', () => { render(<_document />); // Test accessibility features; }); test('page loads with correct data', () => { render(<_document />); // Test data loading and display; test('page content is accessible', () => {' render(<_document />) // Test accessibility features }); ' test('page loads with correct data', () => { render(<_document />); // Test data loading and display }); }); ' 
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
