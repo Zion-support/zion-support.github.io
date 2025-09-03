@@ -9,15 +9,15 @@ class SimpleAutomationOrchestrator {;
     this.projectRoot = process.cwd();
     this.logFile = path.join(this.projectRoot, "automation", "logs", "simple-automation.log");
     this.ensureDirectories();
-    this.results = {;
-      timestamp: new Date().toISOString(),;
-      status: "running",;
-      steps: [],;
-      errors: [],;
-      fixes: [],;
-      improvements: [],;
-      newScripts: [];,
-};,
+    this.results = {
+      timestamp: new Date().toISOString(),
+      status: "running",
+      steps: [],
+      errors: [],
+      fixes: [],
+      improvements: [],
+      newScripts: []
+    };
 }
 ;
   ensureDirectories() {;

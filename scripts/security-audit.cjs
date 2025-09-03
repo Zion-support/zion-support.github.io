@@ -2,209 +2,184 @@
 const { execSync } = require("$1");
 const fs = require("$1");
 const path = require("path");
-class SecurityAuditor {;
-  constructor() {;
+class SecurityAuditor {
+  constructor($2) {
     this.projectRoot = process.cwd();
     this.reportsDir = path.join(this.projectRoot, "security-reports");
-    this.ensureDirectories(),;,
-}
-;
-  ensureDirectories() {;
-    if (!fs.existsSync(this.reportsDir)) {;
-      fs.mkdirSync(this.reportsDir, { recursive: true }),;,
-}
+    this.ensureDirectories(),, }
+
+  ensureDirectories($2) {
+    if (!fs.existsSync(this.reportsDir)) {
+      fs.mkdirSync(this.reportsDir, { recursive: true }),, }
   }
-;
-  log(message, level = "info") {;
+
+  log($2) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`;
-    console.log(logMessage),;,
-}
-;
-  async runNpmAudit() {;
+    console.log(logMessage),, }
+
+  async runNpmAudit($2) {
     this.log("🔍 Running npm audit...");
-    try {;
+    try {
       const command = "npm audit --audit-level=moderate --json";
-      const result = execSync(command, {;
+      const result = execSync(command, {
         cwd: this.projectRoot,;
         encoding: "utf8",;
-        timeout: 300000,;,
-});
-      ;
+        timeout: 300000,, });
+
       const auditData = JSON.parse(result);
       const reportFile = path.join(this.reportsDir, "npm-audit.json");
       fs.writeFileSync(reportFile, JSON.stringify(auditData, null, 2));
-      ;
+
       this.log("✅ NPM audit completed");
       return { success: true, output: result, vulnerabilities: auditData.vulnerabilities }
-    } catch (error) {;
+    } catch($2) {
       // npm audit returns non-zero exit code when vulnerabilities are found;
       // This is expected behavior, so we"ll treat it as a successful audit with findings;
       this.log(`⚠️ NPM audit found vulnerabilities: ${error.message}`, "warning");
-      return {;
+      return {
         success: true, ;
         output: error.stdout || error.message,;
-        vulnerabilitiesFound: true ,;,
-}
+        vulnerabilitiesFound: true ,, }
     }
   }
-;
-  async runSnykAudit() {;
+
+  async runSnykAudit($2) {
     this.log("🔍 Running Snyk audit...");
-    try {;
+    try {
       const command = "npx snyk test --json";
-      const result = execSync(command, {;
+      const result = execSync(command, {
         cwd: this.projectRoot,;
         encoding: "utf8",;
-        timeout: 300000,;,
-});
-      ;
+        timeout: 300000,, });
+
       const snykData = JSON.parse(result);
       const reportFile = path.join(this.reportsDir, "snyk-audit.json");
       fs.writeFileSync(reportFile, JSON.stringify(snykData, null, 2));
-      ;
+
       this.log("✅ Snyk audit completed");
       return { success: true, output: result, vulnerabilities: snykData.vulnerabilities }
-    } catch (error) {;
+    } catch($2) {
       this.log(`⚠️ Snyk audit found vulnerabilities: ${error.message}`, "warning");
-      return {;
+      return {
         success: true, ;
         output: error.stdout || error.message,;
-        vulnerabilitiesFound: true ,;,
-}
+        vulnerabilitiesFound: true ,, }
     }
   }
-;
-  async checkDependencies() {;
+
+  async checkDependencies($2) {
     this.log("🔍 Checking for outdated dependencies...");
-    try {;
+    try {
       const command = "npm outdated --json";
-      const result = execSync(command, {;
+      const result = execSync(command, {
         cwd: this.projectRoot,;
         encoding: "utf8",;
-        timeout: 300000,;,
-});
-      ;
+        timeout: 300000,, });
+
       const outdatedData = JSON.parse(result);
       const reportFile = path.join(this.reportsDir, "outdated-dependencies.json");
       fs.writeFileSync(reportFile, JSON.stringify(outdatedData, null, 2));
-      ;
+
       this.log("✅ Dependency check completed");
       return { success: true, output: result, outdated: Object.keys(outdatedData).length }
-    } catch (error) {;
+    } catch($2) {
       this.log(`✅ No outdated dependencies found`, "success");
       return { success: true, output: "No outdated dependencies", outdated: 0 }
     }
   }
-;
-  async scanForSecrets() {;
+
+  async scanForSecrets($2) {
     this.log("🔍 Scanning for potential secrets...");
-    const secretPatterns = [;
+    const secretPatterns = [
       /password\s*=\s*[""][^""]+[""]/gi,;
       /api[_-]?key\s*=\s*[""][^""]+[""]/gi,;
       /secret\s*=\s*[""][^""]+[""]/gi,;
       /token\s*=\s*[""][^""]+[""]/gi];
-    ;
+
     const files = this.findSourceFiles();
     const findings = [];
-    ;
-    for (const file of files) {;
-      try {;
+
+    for($2) {
+      try {
         const content = fs.readFileSync(file, "utf8");
-        for (const pattern of secretPatterns) {;
+        for($2) {
           const matches = content.match(pattern);
-          if (matches) {;
-            findings.push({;
+          if($2) {
+            findings.push({
               file,;
               matches: matches.length,;
-              type: "potential_secret",;,
-}),;,
-}
+              type: "potential_secret",, }),, }
         }
-      } catch (error) {;
-        // Skip files we can"t read,;,
-}
+      } catch($2) {
+        // Skip files we can"t read,, }
     }
-    ;
-    if (findings.length > 0) {;
-      this.log(`⚠️ Found ${findings.length} potential secret exposures`, "warning"),;,
-} else {;
-      this.log("✅ No potential secrets found"),;,
-}
-    ;
+
+    if($2) {
+      this.log(`⚠️ Found ${findings.length} potential secret exposures`, "warning"),, } else {
+      this.log("✅ No potential secrets found"),, }
+
     return { success: true, findings }
   }
-;
-  findSourceFiles() {;
+
+  findSourceFiles($2) {
     const files = [];
     const extensions = [".js", ".jsx", ".ts", ".tsx", ".cjs", ".mjs", ".json"];
-    ;
-    const scanDir = (dir) => {;
-      try {;
+
+    const scanDir = (dir) => {
+      try {
         const items = fs.readdirSync(dir);
-        for (const item of items) {;
+        for($2) {
           const fullPath = path.join(dir, item);
           const stat = fs.statSync(fullPath);
-          ;
-          if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {;
-            scanDir(fullPath),;,
-} else if (stat.isFile()) {;
+
+          if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {
+            scanDir(fullPath),, } else if (stat.isFile()) {
             const ext = path.extname(item);
-            if (extensions.includes(ext)) {;
-              files.push(fullPath),;,
-}
+            if (extensions.includes(ext)) {
+              files.push(fullPath),, }
           }
         }
-      } catch (error) {;
-        // Skip directories we can"t read,;,
-}
+      } catch($2) {
+        // Skip directories we can"t read,, }
     }
-    ;
+
     scanDir(this.projectRoot);
-    return files,;,
-}
-;
-  async generateReport() {;
+    return files,, }
+
+  async generateReport($2) {
     this.log("📊 Generating security audit report...");
-    const report = {;
+    const report = {
       timestamp: new Date().toISOString(),;
-      summary: {;
+      summary: {
         npmAudit: "completed",;
         snykAudit: "completed",;
         dependencyCheck: "completed",;
-        secretScan: "completed",;,
-},;
-      recommendations: this.generateRecommendations(),;,
-}
-    ;
+        secretScan: "completed",, },;
+      recommendations: this.generateRecommendations(),, }
+
     const reportFile = path.join(this.reportsDir, `security-audit-report-${Date.now()}.json`);
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     this.log(`📄 Security report saved to: ${reportFile}`);
-    return reportFile,;,
-}
-;
-  generateRecommendations() {;
-    return [;
-      {;
+    return reportFile,, }
+
+  generateRecommendations($2) {
+    return [
+      {
         type: "security",;
-        message: "Review npm audit results and update vulnerable dependencies",;,
-},;
-      {;
+        message: "Review npm audit results and update vulnerable dependencies",, },;
+      {
         type: "security",;
-        message: "Consider using Snyk for additional security scanning",;,
-},;
-      {;
+        message: "Consider using Snyk for additional security scanning",, },;
+      {
         type: "maintenance",;
-        message: "Keep dependencies up to date",;,
-},;
-      {;
+        message: "Keep dependencies up to date",, },;
+      {
         type: "security",;
-        message: "Use environment variables for sensitive configuration",;,
-}
-    ],;,
-}
-;
-  displaySummary() {;
+        message: "Use environment variables for sensitive configuration",, }
+    ],, }
+
+  displaySummary($2) {
     console.log("\n" + "=".repeat(60));
     console.log("🔒 SECURITY AUDIT SUMMARY");
     console.log("=".repeat(60));
@@ -213,24 +188,23 @@ class SecurityAuditor {;
     console.log("✅ Dependency Check: Completed");
     console.log("✅ Secret Scan: Completed");
     console.log("=".repeat(60));
-    console.log("📄 Reports saved to security-reports/ directory"),;,
-}
-;
-  async run() {;
-    try {;
+    console.log("📄 Reports saved to security-reports/ directory"),, }
+
+  async run($2) {
+    try {
       this.log("🎯 Starting Security Audit");
-      ;
+
       await this.runNpmAudit();
       await this.runSnykAudit();
       await this.checkDependencies();
       await this.scanForSecrets();
-      ;
+
       await this.generateReport();
       this.displaySummary();
-      ;
+
       this.log("🎉 Security Audit completed successfully");
       return { success: true }
-    } catch (error) {;
+    } catch($2) {
       this.log(`💥 Security audit failed: ${error.message}`, "error');
       await this.generateReport();
       this.displaySummary();
@@ -238,13 +212,11 @@ class SecurityAuditor {;
     }
   }
 }
-;
+
 // Run the security auditor;
-if (require.main === module) {;
+if($2) {
   const auditor = new SecurityAuditor();
-  auditor.run().then(result => {;
-    process.exit(result.success ? 0 : 1),;,
-}),;,
-}
-;
+  auditor.run().then(result => {
+    process.exit(result.success ? 0 : 1),, }),, }
+
 module.exports = SecurityAuditor
