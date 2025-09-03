@@ -37,7 +37,7 @@ const Navigation = () => {
   }, []);
 
   const navigationItems = [
-  { name: 'Home', href: '/' },
+    { name: 'Home', href: '/' },
     { 
       name: 'Services', 
       href: '/services', 
@@ -47,14 +47,17 @@ const Navigation = () => {
         { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud, description: 'Scalable SaaS solutions' },
         { name: 'Web Development', href: '/services/web-development', icon: Code, description: 'Custom web applications' },
         { name: 'Cloud Services', href: '/services/cloud-services', icon: Cloud, description: 'Cloud infrastructure' },
-        { name: 'AI Development', href: '/services/ai-development', icon: Brain, description: 'AI development services' }
+        { name: 'AI Development', href: '/services/ai-development', icon: Brain, description: 'AI development services' },
+        { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, description: 'Security solutions' },
+        { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Infrastructure & automation' }
       ]
     },
     { name: 'Solutions', href: '/solutions' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
     { name: 'Blog', href: '/blog' },
-    { name: 'Careers', href: '/careers' }
+    { name: 'Careers', href: '/careers' },
+    { name: 'Pricing', href: '/pricing' }
   ];
 
   const contactInfo = [
