@@ -1,59 +1,41 @@
 import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
 
-const SolutionsPage = () => {
+const SolutionsPage: React.FC = () => {
   return (
-    <>
-      <Head>
-        <title>Solutions Page - Zion Tech Group</title>
-        <meta name="description" content="Professional Solutions Page services" />
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-gray-900 mb-8">
-              Solutions Page
-            </h1>
-            <p className="text-xl text-gray-600 mb-12">
-              Professional Solutions Page services and solutions
+    <div className="min-h-screen bg-gray-50 py-20">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">Our Solutions</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Comprehensive technology solutions designed to meet your business needs.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="bg-white p-8 rounded-lg shadow-lg">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Cloud Solutions</h3>
+            <p className="text-gray-600 mb-6">
+              Scalable cloud infrastructure and migration services to help your business 
+              leverage the power of cloud computing.
             </p>
-            
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h2 className="text-2xl font-semibold mb-4">Our Services</h2>
-                <ul className="text-gray-600 space-y-2">
-                  <li>• Professional Solutions</li>
-                  <li>• Expert Implementation</li>
-                  <li>• 24/7 Support</li>
-                  <li>• Custom Development</li>
-                </ul>
-              </div>
-              
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h2 className="text-2xl font-semibold mb-4">Why Choose Us</h2>
-                <ul className="text-gray-600 space-y-2">
-                  <li>• Industry Expertise</li>
-                  <li>• Proven Results</li>
-                  <li>• Scalable Solutions</li>
-                  <li>• Competitive Pricing</li>
-                </ul>
-              </div>
-            </div>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                View Pricing
-              </Link>
-              <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
-                Contact Us
-              </Link>
-            </div>
+            <a href="/cloud-solutions" className="text-blue-600 hover:text-blue-700 font-semibold">
+              Learn More →
+            </a>
+          </div>
+          
+          <div className="bg-white p-8 rounded-lg shadow-lg">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Cybersecurity</h3>
+            <p className="text-gray-600 mb-6">
+              Advanced security solutions to protect your business from cyber threats 
+              and ensure data integrity.
+            </p>
+            <a href="/cybersecurity" className="text-blue-600 hover:text-blue-700 font-semibold">
+              Learn More →
+            </a>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

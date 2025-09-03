@@ -1,50 +1,96 @@
-  const LazyComponent = lazy(importFn);
-  return (props: any) => (,
-    <Suspense fallback = "{fallback" || <div>Loading...</div>}>
-      <LazyComponent {...props} />;
-    </Suspense>;
-  );
-};
+import React, { Suspense, lazy, useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ErrorBoundary } from 'react-error-boundary';
+// import Header from './components/Header';
+// import Footer from './components/Footer';
+// import LoadingSpinner from './components/LoadingSpinner';
 
-// Lazy load pages for better performance,
-const HomePage = lazy(() => import('./pages/HomePage').then(module => ({ default: module.HomePage })));
-const ServicesPage = lazy(() => import('./pages/ServicesPage').then(module => ({ default: module.default })));
-const SolutionsPage = lazy(() => import('./pages/SolutionsPage').then(module => ({ default: module.SolutionsPage })));
-const AboutPage = lazy(() => import('./pages/AboutPage').then(module => ({ default: module.AboutPage })));
-const ContactPage = lazy(() => import('./pages/ContactPage').then(module => ({ default: module.ContactPage })));
-const BlogPage = lazy(() => import('./pages/BlogPage').then(module => ({ default: module.BlogPage })));
-const NotFoundPage = lazy(() => import('./pages/NotFoundPage').then(module => ({ default: module.NotFoundPage })));
-const ComprehensiveServicesPage = lazy(() => import('./pages/ComprehensiveServicesPage').then(module => ({ default: module.ComprehensiveServicesPage })));
-const ComprehensiveServicesShowcase2026 = lazy(() => import('./pages/ComprehensiveServicesShowcase2026').then(module => ({ default: module.default })));
-const ComprehensiveMarketingPage2026 = lazy(() => import('./pages/ComprehensiveMarketingPage2026').then(module => ({ default: module.default })));
-const Sitemap = lazy(() => import('./pages/Sitemap').then(module => ({ default: module.default })));
-const ComprehensiveSitemap = lazy(() => import('./pages/ComprehensiveSitemap').then(module => ({ default: module.ComprehensiveSitemap })));
-const Support = lazy(() => import('./pages/Support').then(module => ({ default: module.default })));
-const Training = lazy(() => import('./pages/Training').then(module => ({ default: module.default })));
-const Helpdesk = lazy(() => import('./pages/Helpdesk').then(module => ({ default: module.default })));
-const PricingPage = lazy(() => import('./pages/PricingPage').then(module => ({ default: module.PricingPage })));
+// Lazy load pages for better performance
+const HomePage = lazy(() => import('./pages/HomePage'));
+const ServicesPage = lazy(() => import('./pages/ServicesPage'));
+const SolutionsPage = lazy(() => import('./pages/SolutionsPage'));
+const AboutPage = lazy(() => import('./pages/AboutPage'));
+const ContactPage = lazy(() => import('./pages/ContactPage'));
+const BlogPage = lazy(() => import('./pages/BlogPage'));
+const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
 
-
-// New page imports,'
-const TeamPage = lazy(() => import('./pages/team').then(module => ({ default: module.default })));
-const ResourcesPage = lazy(() => import('./pages/resources').then(module => ({ default: module.default })));
-const NewsPage = lazy(() => import('./pages/news').then(module => ({ default: module.default })));
-const EventsPage = lazy(() => import('./pages/events').then(module => ({ default: module.default })));
-const PartnersPage = lazy(() => import('./pages/partners').then(module => ({ default: module.default })));
-const AISalesCopilotPage = lazy(() => import('./pages/services/ai-sales-copilot').then(module => ({ default: module.default })));
-const CloudFinOpsOptimizerPage = lazy(() => import('./pages/services/cloud-finops-optimizer').then(module => ({ default: module.default })));
-
+// Error Fallback Component
+const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
+  <div className="min-h-screen flex items-center justify-center bg-gray-50">
+    <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6 text-center">
+      <h2 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h2>
+      <p className="text-gray-600 mb-6">{error.message}</p>
+      <button
+        onClick={resetErrorBoundary}
+        className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+      >
+        Try again
+      </button>
     </div>
   </div>
 );
 
-function App() {
+// Loading Fallback Component
+const LoadingFallback = () => (
+  <div className="min-h-screen flex items-center justify-center">
+    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+  </div>
+);
 
+function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
+    <ErrorBoundary FallbackComponent={ErrorFallback}>
+      <Router>
+        <div className="min-h-screen bg-gray-50">
+          {/* Simple Header */}
+          <header className="bg-white shadow-lg sticky top-0 z-50">
+            <div className="max-w-7xl mx-auto px-4 py-4">
+              <div className="flex items-center">
+                <div className="h-8 w-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                  <span className="text-white font-bold text-lg">Z</span>
+                </div>
+                <span className="ml-2 text-xl font-bold text-gray-900">Zion Tech Group</span>
+              </div>
+            </div>
+          </header>
+          
+          <main className="flex-1">
+            <Suspense fallback={<LoadingFallback />}>
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/services" element={<ServicesPage />} />
+                <Route path="/solutions" element={<SolutionsPage />} />
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/contact" element={<ContactPage />} />
+                <Route path="/blog" element={<BlogPage />} />
+                <Route path="*" element={<NotFoundPage />} />
+              </Routes>
+            </Suspense>
+          </main>
+          
+          {/* Simple Footer */}
+          <footer className="bg-gray-900 text-white py-8">
+            <div className="max-w-7xl mx-auto px-4 text-center">
+              <div className="flex items-center justify-center mb-4">
+                <div className="h-8 w-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                  <span className="text-white font-bold text-lg">Z</span>
+                </div>
+                <span className="ml-2 text-xl font-bold">Zion Tech Group</span>
+              </div>
+              <p className="text-gray-300 mb-4">
+                Leading technology solutions provider specializing in AI, cybersecurity, and digital transformation.
+              </p>
+              <p className="text-gray-400 text-sm">
+                © {new Date().getFullYear()} Zion Tech Group. All rights reserved.
+              </p>
+            </div>
+          </footer>
         </div>
-        <Footer />
-      </div>
-    </ErrorBoundary>"
-";
+      </Router>
+    </ErrorBoundary>
+  );
+}
+
+export default App;

@@ -12,7 +12,6 @@ const nextConfig = {
   experimental: {
     optimizeCss: true,
     scrollRestoration: true,
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
   },
   images: {
     domains: ['images.unsplash.com', 'via.placeholder.com'],
@@ -21,16 +20,6 @@ const nextConfig = {
   compress: true,
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons']
-  },
-  webpack: (config, { dev, isServer }) => {
-    if (!dev && !isServer) {
-      config.resolve.alias = {
-        ...config.resolve.alias,
-        '@': new URL('./src', import.meta.url).pathname,
-      };
-    }
-    return config;
   },
   async headers() {
     return [
@@ -55,4 +44,4 @@ const nextConfig = {
   },
 };
 
-export default nextConfig;
+module.exports = nextConfig;

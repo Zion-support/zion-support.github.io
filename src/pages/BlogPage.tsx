@@ -1,16 +1,28 @@
-import React from "react";
-import { SEO } from "@/components/SEO";
-;,"});,"})
-export default function BlogPage() {return ("
-    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
-      <SEO title="BlogPage - Zion Tech Group" description="Professional BlogPage services by Zion Tech Group" />"
-      <div className="container mx-auto px-4 py-20">"
-        <h1 className="text-4xl font-bold text-white mb-8">BlogPage</h1>"
-        <p className="text-gray-300 text-lg">
-          Professional BlogPage services to help your business grow.
-        </p>
-      </div>;
-    </div>;
+import React from 'react';
+
+const BlogPage: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gray-50 py-20">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">Blog</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Stay updated with the latest technology insights and industry trends.
+          </p>
+        </div>
+        
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white p-8 rounded-lg shadow-lg">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Coming Soon</h2>
+            <p className="text-gray-600">
+              We're working on bringing you valuable content about technology trends, 
+              best practices, and industry insights. Check back soon!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   );
-}"
-"
+};
+
+export default BlogPage;
