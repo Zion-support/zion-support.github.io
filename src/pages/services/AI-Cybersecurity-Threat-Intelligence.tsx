@@ -45,4 +45,7 @@ const AICybersecurityThreatIntelligence = () => {
               </Link>
             </div>
     </>
-  ),export default AICybersecurityThreatIntelligence
+  );
+}
+
+export default AICybersecurityThreatIntelligence

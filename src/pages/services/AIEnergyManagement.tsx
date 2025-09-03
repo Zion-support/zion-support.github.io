@@ -45,4 +45,7 @@ const AIEnergyManagement = () => {
               </Link>
             </div>
     </>
-  ),export default AIEnergyManagement
+  );
+}
+
+export default AIEnergyManagement

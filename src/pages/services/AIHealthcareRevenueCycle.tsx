@@ -5,8 +5,7 @@ export default function Aihealthcarerevenuecycle() {
   const features = []
   const benefits = []
   const useCases = []
-  const pricing = []
-    },
+  const pricing = [
     {
       name: "Professional",
       price: "$799/mo",
@@ -16,7 +15,7 @@ export default function Aihealthcarerevenuecycle() {
       name: "Enterprise",
       price: "$1,999/mo",
       details: ["Unlimited users", "Custom AI models", "Full aihealthcarerevenuecycle suite", "24/7 dedicated support"]
-
+    }
   ]
   return (
     <div className="min-h-screen bg-white">

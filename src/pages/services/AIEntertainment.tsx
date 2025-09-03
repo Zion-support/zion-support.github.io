@@ -45,4 +45,7 @@ const AIEntertainment = () => {
               </Link>
             </div>
     </>
-  ),export default AIEntertainment
+  );
+}
+
+export default AIEntertainment

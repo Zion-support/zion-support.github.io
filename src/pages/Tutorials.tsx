@@ -45,4 +45,6 @@ const Tutorials = () => {
               </Link>
             </div>
     </>
-  ),export default Tutorials
+  );
+
+export default Tutorials

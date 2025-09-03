@@ -45,4 +45,7 @@ const AIPoweredContractAnalysis = () => {
               </Link>
             </div>
     </>
-  ),export default AIPoweredContractAnalysis
+  );
+}
+
+export default AIPoweredContractAnalysis

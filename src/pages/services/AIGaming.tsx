@@ -45,4 +45,7 @@ const AIGaming = () => {
               </Link>
             </div>
     </>
-  ),export default AIGaming
+  );
+}
+
+export default AIGaming

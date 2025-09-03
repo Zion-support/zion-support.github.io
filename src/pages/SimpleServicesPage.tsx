@@ -45,4 +45,6 @@ const SimpleServicesPage = () => {
               </Link>
             </div>
     </>
-  ),export default SimpleServicesPage
+  );
+
+export default SimpleServicesPage

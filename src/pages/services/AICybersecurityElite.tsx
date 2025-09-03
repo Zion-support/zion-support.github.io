@@ -45,4 +45,7 @@ const AICybersecurityElite = () => {
               </Link>
             </div>
     </>
-  ),export default AICybersecurityElite
+  );
+}
+
+export default AICybersecurityElite

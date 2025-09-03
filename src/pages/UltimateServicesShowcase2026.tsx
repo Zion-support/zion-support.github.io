@@ -45,4 +45,6 @@ const UltimateServicesShowcase2026 = () => {
               </Link>
             </div>
     </>
-  ),export default UltimateServicesShowcase2026
+  );
+
+export default UltimateServicesShowcase2026

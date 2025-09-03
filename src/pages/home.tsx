@@ -45,4 +45,6 @@ const home = () => {
               </Link>
             </div>
     </>
-  ),export default home
+  );
+
+export default home

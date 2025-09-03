@@ -45,4 +45,7 @@ const AITalentAcquisitionPlatform = () => {
               </Link>
             </div>
     </>
-  ),export default AITalentAcquisitionPlatform
+  );
+}
+
+export default AITalentAcquisitionPlatform

@@ -45,4 +45,7 @@ const AIFinancialFraudDetectionPlatform = () => {
               </Link>
             </div>
     </>
-  ),export default AIFinancialFraudDetectionPlatform
+  );
+}
+
+export default AIFinancialFraudDetectionPlatform

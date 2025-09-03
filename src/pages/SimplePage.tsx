@@ -45,4 +45,6 @@ const SimplePage = () => {
               </Link>
             </div>
     </>
-  ),export default SimplePage
+  );
+
+export default SimplePage

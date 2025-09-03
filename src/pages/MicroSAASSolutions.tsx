@@ -45,4 +45,6 @@ const MicroSAASSolutions = () => {
               </Link>
             </div>
     </>
-  ),export default MicroSAASSolutions
+  );
+
+export default MicroSAASSolutions

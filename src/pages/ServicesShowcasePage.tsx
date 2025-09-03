@@ -45,4 +45,6 @@ const ServicesShowcasePage = () => {
               </Link>
             </div>
     </>
-  ),export default ServicesShowcasePage
+  );
+
+export default ServicesShowcasePage

@@ -45,4 +45,7 @@ const AIAutonomousBusinessOperationsPlatform = () => {
               </Link>
             </div>
     </>
-  ),export default AIAutonomousBusinessOperationsPlatform
+  );
+}
+
+export default AIAutonomousBusinessOperationsPlatform

@@ -45,4 +45,7 @@ const AIEducation = () => {
               </Link>
             </div>
     </>
-  ),export default AIEducation
+  );
+}
+
+export default AIEducation

@@ -45,4 +45,7 @@ const AIPoweredLegalDocumentGenerator = () => {
               </Link>
             </div>
     </>
-  ),export default AIPoweredLegalDocumentGenerator
+  );
+}
+
+export default AIPoweredLegalDocumentGenerator

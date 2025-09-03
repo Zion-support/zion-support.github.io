@@ -45,4 +45,7 @@ const AIIntelligentContractManagementPlatform = () => {
               </Link>
             </div>
     </>
-  ),export default AIIntelligentContractManagementPlatform
+  );
+}
+
+export default AIIntelligentContractManagementPlatform

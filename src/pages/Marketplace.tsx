@@ -45,4 +45,6 @@ const Marketplace = () => {
               </Link>
             </div>
     </>
-  ),export default Marketplace
+  );
+
+export default Marketplace

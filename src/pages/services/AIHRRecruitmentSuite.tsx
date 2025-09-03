@@ -45,4 +45,7 @@ const AIHRRecruitmentSuite = () => {
               </Link>
             </div>
     </>
-  ),export default AIHRRecruitmentSuite
+  );
+}
+
+export default AIHRRecruitmentSuite

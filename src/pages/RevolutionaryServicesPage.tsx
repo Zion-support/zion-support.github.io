@@ -45,4 +45,6 @@ const RevolutionaryServicesPage = () => {
               </Link>
             </div>
     </>
-  ),export default RevolutionaryServicesPage
+  );
+
+export default RevolutionaryServicesPage

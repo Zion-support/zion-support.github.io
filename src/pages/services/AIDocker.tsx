@@ -45,4 +45,7 @@ const AIDocker = () => {
               </Link>
             </div>
     </>
-  ),export default AIDocker
+  );
+}
+
+export default AIDocker

@@ -45,4 +45,7 @@ const AILegalTechPlatform = () => {
               </Link>
             </div>
     </>
-  ),export default AILegalTechPlatform
+  );
+}
+
+export default AILegalTechPlatform

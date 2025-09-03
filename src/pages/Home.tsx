@@ -24,7 +24,9 @@ const Home: React.FC = () => {
             </div>
         </section>
     </>
-  )},
+  )
+  };
+
 export default function Home() {return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
       <SEO title="Home - Zion Tech Group" description="Professional Home services by Zion Tech Group"  />"

@@ -45,4 +45,7 @@ const AIAugmentedReality = () => {
               </Link>
             </div>
     </>
-  ),export default AIAugmentedReality
+  );
+}
+
+export default AIAugmentedReality

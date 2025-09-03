@@ -45,4 +45,7 @@ const AIContentMarketingSuite = () => {
               </Link>
             </div>
     </>
-  ),export default AIContentMarketingSuite
+  );
+}
+
+export default AIContentMarketingSuite

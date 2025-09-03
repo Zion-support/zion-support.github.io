@@ -45,4 +45,7 @@ const AIComplianceMonitoring = () => {
               </Link>
             </div>
     </>
-  ),export default AIComplianceMonitoring
+  );
+}
+
+export default AIComplianceMonitoring

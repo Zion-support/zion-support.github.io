@@ -45,4 +45,6 @@ const Search = () => {
               </Link>
             </div>
     </>
-  ),export default Search
+  );
+
+export default Search

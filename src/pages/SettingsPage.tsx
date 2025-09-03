@@ -45,4 +45,6 @@ const SettingsPage = () => {
               </Link>
             </div>
     </>
-  ),export default SettingsPage
+  );
+
+export default SettingsPage

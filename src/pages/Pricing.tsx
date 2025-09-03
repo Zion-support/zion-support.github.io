@@ -45,4 +45,6 @@ const Pricing = () => {
               </Link>
             </div>
     </>
-  ),export default Pricing
+  );
+
+export default Pricing

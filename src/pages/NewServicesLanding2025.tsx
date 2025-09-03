@@ -45,4 +45,6 @@ const NewServicesLanding2025 = () => {
               </Link>
             </div>
     </>
-  ),export default NewServicesLanding2025
+  );
+
+export default NewServicesLanding2025

@@ -45,4 +45,7 @@ const AIHRTalentAcquisition = () => {
               </Link>
             </div>
     </>
-  ),export default AIHRTalentAcquisition
+  );
+}
+
+export default AIHRTalentAcquisition

@@ -45,4 +45,7 @@ const AIHRRecruitment = () => {
               </Link>
             </div>
     </>
-  ),export default AIHRRecruitment
+  );
+}
+
+export default AIHRRecruitment

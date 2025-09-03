@@ -45,4 +45,6 @@ const ServicesCatalog = () => {
               </Link>
             </div>
     </>
-  ),export default ServicesCatalog
+  );
+
+export default ServicesCatalog

@@ -45,4 +45,6 @@ const MicroSAASInnovationHub2029 = () => {
               </Link>
             </div>
     </>
-  ),export default MicroSAASInnovationHub2029
+  );
+
+export default MicroSAASInnovationHub2029

@@ -45,4 +45,6 @@ const Sitemap = () => {
               </Link>
             </div>
     </>
-  ),export default Sitemap
+  );
+
+export default Sitemap

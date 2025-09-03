@@ -45,4 +45,6 @@ const Solutions = () => {
               </Link>
             </div>
     </>
-  ),export default Solutions
+  );
+
+export default Solutions

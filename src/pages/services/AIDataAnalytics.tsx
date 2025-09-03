@@ -45,4 +45,7 @@ const AIDataAnalytics = () => {
               </Link>
             </div>
     </>
-  ),export default AIDataAnalytics
+  );
+}
+
+export default AIDataAnalytics

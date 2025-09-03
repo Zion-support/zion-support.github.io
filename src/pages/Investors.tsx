@@ -45,4 +45,6 @@ const Investors = () => {
               </Link>
             </div>
     </>
-  ),export default Investors
+  );
+
+export default Investors

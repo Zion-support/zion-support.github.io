@@ -45,4 +45,6 @@ const Privacy = () => {
               </Link>
             </div>
     </>
-  ),export default Privacy
+  );
+
+export default Privacy

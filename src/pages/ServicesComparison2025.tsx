@@ -45,4 +45,6 @@ const ServicesComparison2025 = () => {
               </Link>
             </div>
     </>
-  ),export default ServicesComparison2025
+  );
+
+export default ServicesComparison2025

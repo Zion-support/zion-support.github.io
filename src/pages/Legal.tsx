@@ -45,4 +45,6 @@ const Legal = () => {
               </Link>
             </div>
     </>
-  ),export default Legal
+  );
+
+export default Legal

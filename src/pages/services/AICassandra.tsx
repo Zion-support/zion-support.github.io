@@ -45,4 +45,7 @@ const AICassandra = () => {
               </Link>
             </div>
     </>
-  ),export default AICassandra
+  );
+}
+
+export default AICassandra

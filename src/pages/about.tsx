@@ -45,4 +45,6 @@ const about = () => {
               </Link>
             </div>
     </>
-  ),export default about
+  );
+
+export default about

@@ -45,4 +45,7 @@ const AIBusinessProcessAutomation = () => {
               </Link>
             </div>
     </>
-  ),export default AIBusinessProcessAutomation
+  );
+}
+
+export default AIBusinessProcessAutomation

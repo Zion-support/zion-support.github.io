@@ -45,4 +45,6 @@ const ServicesOverview = () => {
               </Link>
             </div>
     </>
-  ),export default ServicesOverview
+  );
+
+export default ServicesOverview

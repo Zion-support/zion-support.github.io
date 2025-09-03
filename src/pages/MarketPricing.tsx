@@ -45,4 +45,6 @@ const MarketPricing = () => {
               </Link>
             </div>
     </>
-  ),export default MarketPricing
+  );
+
+export default MarketPricing

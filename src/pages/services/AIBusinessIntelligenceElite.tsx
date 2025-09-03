@@ -45,4 +45,7 @@ const AIBusinessIntelligenceElite = () => {
               </Link>
             </div>
     </>
-  ),export default AIBusinessIntelligenceElite
+  );
+}
+
+export default AIBusinessIntelligenceElite

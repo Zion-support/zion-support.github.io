@@ -45,4 +45,6 @@ const Terms = () => {
               </Link>
             </div>
     </>
-  ),export default Terms
+  );
+
+export default Terms

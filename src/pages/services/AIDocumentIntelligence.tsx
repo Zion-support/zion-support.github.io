@@ -45,4 +45,7 @@ const AIDocumentIntelligence = () => {
               </Link>
             </div>
     </>
-  ),export default AIDocumentIntelligence
+  );
+}
+
+export default AIDocumentIntelligence

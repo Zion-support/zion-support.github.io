@@ -45,4 +45,7 @@ const AIDataSecurity = () => {
               </Link>
             </div>
     </>
-  ),export default AIDataSecurity
+  );
+}
+
+export default AIDataSecurity

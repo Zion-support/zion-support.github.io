@@ -45,4 +45,6 @@ const events = () => {
               </Link>
             </div>
     </>
-  ),export default events
+  );
+
+export default events

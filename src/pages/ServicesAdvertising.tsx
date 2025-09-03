@@ -45,4 +45,6 @@ const ServicesAdvertising = () => {
               </Link>
             </div>
     </>
-  ),export default ServicesAdvertising
+  );
+
+export default ServicesAdvertising

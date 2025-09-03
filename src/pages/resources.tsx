@@ -45,4 +45,6 @@ const resources = () => {
               </Link>
             </div>
     </>
-  ),export default resources
+  );
+
+export default resources

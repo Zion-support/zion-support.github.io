@@ -45,4 +45,6 @@ const MicroSAAS = () => {
               </Link>
             </div>
     </>
-  ),export default MicroSAAS
+  );
+
+export default MicroSAAS

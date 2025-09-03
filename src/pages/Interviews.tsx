@@ -45,4 +45,6 @@ const Interviews = () => {
               </Link>
             </div>
     </>
-  ),export default Interviews
+  );
+
+export default Interviews

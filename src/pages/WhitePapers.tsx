@@ -45,4 +45,6 @@ const WhitePapers = () => {
               </Link>
             </div>
     </>
-  ),export default WhitePapers
+  );
+
+export default WhitePapers

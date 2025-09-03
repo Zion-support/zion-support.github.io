@@ -45,4 +45,7 @@ const AI5GNetwork = () => {
               </Link>
             </div>
     </>
-  ),export default AI5GNetwork
+  );
+}
+
+export default AI5GNetwork

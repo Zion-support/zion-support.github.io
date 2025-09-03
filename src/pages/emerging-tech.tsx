@@ -45,4 +45,6 @@ const emergingtech = () => {
               </Link>
             </div>
     </>
-  ),export default emergingtech
+  );
+
+export default emergingtech

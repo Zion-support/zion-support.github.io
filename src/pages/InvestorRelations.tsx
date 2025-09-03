@@ -45,4 +45,6 @@ const InvestorRelations = () => {
               </Link>
             </div>
     </>
-  ),export default InvestorRelations
+  );
+
+export default InvestorRelations

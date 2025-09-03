@@ -9,7 +9,9 @@ const Contact: React.FC = () => {
           <p className="text-lg text-gray-600">Content coming soon...</p>
         </div>
     </>,
-  )},
+  )
+  };
+
 export default Contact;","});,"})","});,"})"
 ,"});,"})"
 ;,"});,"})"

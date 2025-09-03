@@ -45,4 +45,6 @@ const aisolutions = () => {
               </Link>
             </div>
     </>
-  ),export default aisolutions
+  );
+
+export default aisolutions

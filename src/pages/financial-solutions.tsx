@@ -45,4 +45,6 @@ const financialsolutions = () => {
               </Link>
             </div>
     </>
-  ),export default financialsolutions
+  );
+
+export default financialsolutions

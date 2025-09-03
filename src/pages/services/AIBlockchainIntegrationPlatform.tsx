@@ -45,4 +45,7 @@ const AIBlockchainIntegrationPlatform = () => {
               </Link>
             </div>
     </>
-  ),export default AIBlockchainIntegrationPlatform
+  );
+}
+
+export default AIBlockchainIntegrationPlatform
