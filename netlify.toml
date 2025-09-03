@@ -1,7 +1,7 @@
 # Next.js static export project. The build creates a static site in the 'out' folder.
 
 [build]
-  command = "npm ci && npm run build"
+  command = "yarn install && yarn build"
   publish = "out"
   base = "."
 
@@ -88,6 +88,16 @@
   for = "/site.webmanifest"
   [headers.values]
     Content-Type = "application/manifest+json"
+
+# Cloudinary plugin configuration (disabled - uncomment and configure if needed)
+# [[plugins]]
+#   package = "netlify-plugin-cloudinary"
+#   [plugins.inputs]
+#     cloudName = "your-cloud-name"  # Replace with your actual Cloudinary cloud name
+#     apiKey = "your-api-key"        # Replace with your actual API key
+#     apiSecret = "your-api-secret"  # Replace with your actual API secret
+#     imagesPath = "public/images"   # Specify the correct images path
+#     uploadPreset = "your-preset"   # Optional: specify upload preset
 
 # No Next.js plugin needed for static export
 

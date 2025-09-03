@@ -1,5 +1,5 @@
-import { ServiceVariant } from "../types/service-variants";
-export interface Revolutionary2026MicroSaasService {
+import: { ServiceVariant } from '../types/service-variants';';
+export: interface Revolutionary2026MicroSaasService {
   id: string;
    name: string;
    tagline: string;
@@ -28,786 +28,946 @@ export interface Revolutionary2026MicroSaasService {
    variant: ServiceVariant;
    contactInfo: { mobile: string;
    email: string;
+<<<<<<< HEAD
    address: string;
-   website: string;
-};
+   website: strin,g}
+=======
+   addres,
+    s: string;
+   websit,
+    e: string}
+>>>>>>> main
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-reviews: number;export const revolutionary2026MicroSaasServices: Revolutionary2026MicroSaasService[] = [
-  {
-    id:,
+<<<<<<< HEAD
+reviews: number;export: const revolutionary2026MicroSaasServices: Revolutionary2026MicroSaasService[] = [{
+    id,:,
+  ai-business-intelligence-pro',';
+    name: 'AI: Business Intelligence Pr,o,';
+=======
+review,
+    s: number;export const revolutionary2026MicroSaasService,
+    s: Revolutionary2026MicroSaasService[] = [{
+    i,
+    d:,
   ai-business-intelligence-pro',
     name: 'AI Business Intelligence Pro,
+>>>>>>> main
     tagline:,
-  Transform data into actionable insights with AI',
-    price: '$399,
+  Transform: data into actionable insights with AI',';
+    price: '$39,9,';
     period:,
-  /month',
-    description: Advanced AI-powered business intelligence platform that transforms raw data into actionable insights. Perfect for businesses, analysts, and organizations requiring intelligent data analysis.',
-    features[
-  'AI-powered data analysis',
-  'Real-time insights generation',
-  'Advanced predictive analytics',
-  'Custom dashboard creation',
-  'Real-time monitoring',
-  'Advanced reporting tools',
-  'API integration',
-  'Custom analytics frameworks',
-  'Performance tracking',
-  'Mobile optimization'
+  /month',';
+    description: Advanced: AI-powered business intelligence platform that transforms raw data into actionable insights. Perfect for businesse,s, analysts, and organizations requiring intelligent data analysis.',';
+    features[;
+  'AI-powered: data analysis',';
+  'Real-time: insights generation',';
+  'Advanced: predictive analytics',';
+  'Custom: dashboard creation',';
+  'Real-time: monitoring',';
+  'Advanced: reporting tools',';
+  'API: integration',';
+  'Custom: analytics frameworks',';
+  'Performance: tracking',';
+  'Mobile: optimization';';
     ],
-    popular: true,
+    popular: tru,e,
     icon:,
-  📊',
-    color: 'from-blue-600 to-cyan-700,
+  📊',';
+    color: 'from-blue-600: to-cyan-70,0,';
     textColor:,
+<<<<<<< HEAD
+  text-blue-400',';
+    link: 'https://ziontechgroup.com/ai-business-intelligence-pr,o,';
+=======
   text-blue-400',
-    link: 'https://ziontechgroup.com/ai-business-intelligence-pro,
+    link: 'http,
+    s://ziontechgroup.com/ai-business-intelligence-pro,
+>>>>>>> main
     marketPosition:,
-  Leading AI-powered BI platform. Competes with Tableau, Power BI, and Looker. Our advantage: Advanced AI analytics with real-time insights.,
-    targetAudience:
-  'Businesses, Analysts, Data scientists, Marketing teams, Sales teams, Executive teams',
-    trialDays: 21,
+  Leading: AI-powered BI platform. Competes with Tableau, Power BI, and Looker. Our advantage: Advanced: AI analytics with real-time insights,.,
+    targetAudience: ;
+  'Businesse,s, Analysts, Data: scientists, Marketing teams, Sales teams, Executive teams',';
+    trialDays: 2,1,
     setupTime:,
-  1 week',
-    category: 'AI Business Intelligence & Analytics,
-    realService: true,
+  1: week',';
+    category: 'AI: Business Intelligence & Analytic,s,';
+    realService: tru,e,
     technology[,
-  Advanced AI',
-  'Machine Learning',
-  'Data Analytics',
-  'Real-time Processing',
-  'Predictive Analytics',
-  'Cloud Infrastructure'],
-    integrations[
-  'CRM systems',
-  'Marketing platforms',
-  'Sales tools',
-  'Database systems',
-  'Cloud platforms',
-  'API services'],
-    useCases[
-  'Business analytics',
-  'Marketing insights',
-  'Sales intelligence',
-  'Financial analysis',
-  'Performance tracking',
-  'Strategic planning'],
-    roi: 'Businesses report 300% ROI through improved decision making and insights.,
+  Advanced: AI',';
+  'Machine: Learning',';
+  'Data: Analytics',';
+  'Real-time: Processing',';
+  'Predictive: Analytics',';
+  'Cloud: Infrastructure'],';
+    integrations[;
+  'CRM: systems',';
+  'Marketing: platforms',';
+  'Sales: tools',';
+  'Database: systems',';
+  'Cloud: platforms',';
+  'API: services'],';
+    useCases[;
+  'Business: analytics',';
+  'Marketing: insights',';
+  'Sales: intelligence',';
+  'Financial: analysis',';
+  'Performance: tracking',';
+  'Strategic: planning'],';
+    roi: 'Businesses: report 300% ROI through improved decision making and insights,.,';
     competitors[,
-  Tableau',
-  'Power BI',
-  'Looker',
-  'Qlik',
-  'Sisense'],
-    marketSize: '$25B market,
+  Tableau',';
+  'Power: BI',';
+  'Looker',';
+  'Qlik',';
+  'Sisense'],';
+    marketSize: '$25B: marke,t,';
     growthRate:,
-  180% annual growth',
-    variant: 'ai-futuristic,
+  180% annual: growth',';
+    variant: 'ai-futuristi,c,';
     contactInfo: {
-      mobile:,
+<<<<<<< HEAD
+      mobile,:,
+  +1: 302 464 0950',';
+      email: 'kleber@ziontechgroup.co,m,';
+      address:,
+  364: E Main St STE 1008 Middletown DE 19709',';
+      website: 'https://ziontechgroup.co,m},';
+    realImplementation: tru,e,
+=======
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com
-    },
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
+>>>>>>> main
     implementationDetails:,
-  Full AI-powered BI platform with advanced analytics, real-time insights, and comprehensive reporting tools.',
-    launchDate: '2026-01-15,
-    customers: 2500,
-    rating: 4.7,
-    reviews: 1250
-  },
+  Full: AI-powered BI platform with advanced analytics, real-time insights, and comprehensive reporting tools.',';
+    launchDate: '2026-01-1,5,';
+    customers: 250,0,
+    rating: 4.,7,
+    reviews: 125,0},
   {
     id:,
-  ai-customer-service-automation',
-    name: 'AI Customer Service Automation,
+  ai-customer-service-automation',';
+    name: 'AI: Customer Service Automatio,n,';
     tagline:,
-  Automate customer support with intelligent AI agents',
-    price: '$299,
+  Automate: customer support with intelligent AI agents',';
+    price: '$29,9,';
     period:,
-  /month',
-    description: Revolutionary AI-powered customer service automation platform that provides intelligent, 24/7 customer support. Perfect for businesses, e-commerce companies, and organizations requiring automated customer service.',
-    features[
-  'AI-powered chatbots',
-  '24/7 customer support',
-  'Multi-language support',
-  'Real-time response generation',
-  'Advanced sentiment analysis',
-  'Custom automation workflows',
-  'API integration',
-  'Performance analytics',
-  'Mobile optimization',
-  'Integration support'
+  /month',';
+    description: Revolutionary: AI-powered customer service automation platform that provides intelligen,t, 24/7 customer support. Perfect for businesses, e-commerce companies, and organizations requiring automated customer service.',';
+    features[;
+  'AI-powered: chatbots',';
+  '24/7: customer support',';
+  'Multi-language: support',';
+  'Real-time: response generation',';
+  'Advanced: sentiment analysis',';
+  'Custom: automation workflows',';
+  'API: integration',';
+  'Performance: analytics',';
+  'Mobile: optimization',';
+  'Integration: support';';
     ],
-    popular: true,
+    popular: tru,e,
     icon:,
-  🤖',
-    color: 'from-green-600 to-emerald-700,
+  🤖',';
+    color: 'from-green-600: to-emerald-70,0,';
     textColor:,
+<<<<<<< HEAD
+  text-green-400',';
+    link: 'https://ziontechgroup.com/ai-customer-service-automatio,n,';
+=======
   text-green-400',
-    link: 'https://ziontechgroup.com/ai-customer-service-automation,
+    link: 'http,
+    s://ziontechgroup.com/ai-customer-service-automation,
+>>>>>>> main
     marketPosition:,
-  Leading AI customer service platform. Competes with Intercom, Zendesk, and Freshdesk. Our advantage: Advanced AI automation with real-time responses.,
-    targetAudience:
-  'Businesses, E-commerce companies, SaaS companies, Customer service teams, Support teams, Marketing teams',
-    trialDays: 14,
+  Leading: AI customer service platform. Competes with Intercom, Zendesk, and Freshdesk. Our advantage: Advanced: AI automation with real-time responses,.,
+    targetAudience: ;
+  'Businesse,s, E-commerce: companies, SaaS companies, Customer service teams, Support teams, Marketing teams',';
+    trialDays: 1,4,
     setupTime:,
-  3 days',
-    category: 'AI Customer Service & Automation,
-    realService: true,
+  3: days',';
+    category: 'AI: Customer Service & Automatio,n,';
+    realService: tru,e,
     technology[,
-  Advanced AI',
-  'Natural Language Processing',
-  'Chatbot Technology',
-  'Sentiment Analysis',
-  'Automation',
-  'Real-time Processing'],
-    integrations[
-  'CRM systems',
-  'E-commerce platforms',
-  'Support tools',
-  'Communication platforms',
-  'Analytics tools',
-  'API services'],
-    useCases[
-  'Customer support',
-  'E-commerce assistance',
-  'SaaS support',
-  '24/7 service',
-  'Multi-language support',
-  'Automated responses'],
-    roi: 'E-commerce companies report 400% ROI through improved customer satisfaction and reduced support costs.,
+  Advanced: AI',';
+  'Natural: Language Processing',';
+  'Chatbot: Technology',';
+  'Sentiment: Analysis',';
+  'Automation',';
+  'Real-time: Processing'],';
+    integrations[;
+  'CRM: systems',';
+  'E-commerce: platforms',';
+  'Support: tools',';
+  'Communication: platforms',';
+  'Analytics: tools',';
+  'API: services'],';
+    useCases[;
+  'Customer: support',';
+  'E-commerce: assistance',';
+  'SaaS: support',';
+  '24/7: service',';
+  'Multi-language: support',';
+  'Automated: responses'],';
+    roi: 'E-commerce: companies report 400% ROI through improved customer satisfaction and reduced support costs,.,';
     competitors[,
-  Intercom',
-  'Zendesk',
-  'Freshdesk',
-  'Help Scout',
-  'Zoho Desk'],
-    marketSize: '$18B market,
+  Intercom',';
+  'Zendesk',';
+  'Freshdesk',';
+  'Help: Scout',';
+  'Zoho: Desk'],';
+    marketSize: '$18B: marke,t,';
     growthRate:,
-  220% annual growth',
-    variant: 'ai-futuristic,
+  220% annual: growth',';
+    variant: 'ai-futuristi,c,';
     contactInfo: {
-      mobile:,
+<<<<<<< HEAD
+      mobile,:,
+  +1: 302 464 0950',';
+      email: 'kleber@ziontechgroup.co,m,';
+      address:,
+  364: E Main St STE 1008 Middletown DE 19709',';
+      website: 'https://ziontechgroup.co,m},';
+    realImplementation: tru,e,
+=======
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com
-    },
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
+>>>>>>> main
     implementationDetails:,
-  Full AI customer service platform with intelligent automation, real-time responses, and comprehensive analytics.',
-    launchDate: '2026-01-20,
-    customers: 3200,
-    rating: 4.6,
-    reviews: 1600
-  },
+  Full: AI customer service platform with intelligent automation, real-time responses, and comprehensive analytics.',';
+    launchDate: '2026-01-2,0,';
+    customers: 320,0,
+    rating: 4.,6,
+    reviews: 160,0},
   {
     id:,
-  ai-marketing-automation-suite',
-    name: 'AI Marketing Automation Suite,
+  ai-marketing-automation-suite',';
+    name: 'AI: Marketing Automation Suit,e,';
     tagline:,
-  Intelligent marketing automation powered by AI',
-    price: '$499,
+  Intelligent: marketing automation powered by AI',';
+    price: '$49,9,';
     period:,
-  /month',
-    description: Advanced AI-powered marketing automation suite that optimizes campaigns, personalizes content, and maximizes ROI. Perfect for marketing teams, agencies, and businesses requiring intelligent marketing automation.',
-    features[
-  'AI-powered campaign optimization',
-  'Personalized content generation',
-  'Real-time performance tracking',
-  'Advanced audience segmentation',
-  'Automated A/B testing',
-  'Multi-channel automation',
-  'API integration',
-  'Custom automation workflows',
-  'Performance analytics',
-  'Mobile optimization'
+  /month',';
+    description: Advanced: AI-powered marketing automation suite that optimizes campaign,s, personalizes content, and maximizes ROI. Perfect for marketing teams, agencies, and businesses requiring intelligent marketing automation.',';
+    features[;
+  'AI-powered: campaign optimization',';
+  'Personalized: content generation',';
+  'Real-time: performance tracking',';
+  'Advanced: audience segmentation',';
+  'Automated: A/B testing',';
+  'Multi-channel: automation',';
+  'API: integration',';
+  'Custom: automation workflows',';
+  'Performance: analytics',';
+  'Mobile: optimization';';
     ],
-    popular: true,
+    popular: tru,e,
     icon:,
-  📈',
-    color: 'from-purple-600 to-pink-700,
+  📈',';
+    color: 'from-purple-600: to-pink-70,0,';
     textColor:,
+<<<<<<< HEAD
+  text-purple-400',';
+    link: 'https://ziontechgroup.com/ai-marketing-automation-suit,e,';
+=======
   text-purple-400',
-    link: 'https://ziontechgroup.com/ai-marketing-automation-suite,
+    link: 'http,
+    s://ziontechgroup.com/ai-marketing-automation-suite,
+>>>>>>> main
     marketPosition:,
-  Leading AI marketing automation platform. Competes with HubSpot, Marketo, and Pardot. Our advantage: Advanced AI optimization with personalized automation.,
-    targetAudience:
-  'Marketing teams, Agencies, Businesses, E-commerce companies, SaaS companies, Growth teams',
-    trialDays: 21,
+  Leading: AI marketing automation platform. Competes with HubSpot, Marketo, and Pardot. Our advantage: Advanced: AI optimization with personalized automation,.,
+    targetAudience: ;
+  'Marketing: team,s, Agencies, Businesses, E-commerce companies, SaaS companies, Growth teams',';
+    trialDays: 2,1,
     setupTime:,
-  1 week',
-    category: 'AI Marketing & Automation,
-    realService: true,
+  1: week',';
+    category: 'AI: Marketing & Automatio,n,';
+    realService: tru,e,
     technology[,
-  Advanced AI',
-  'Machine Learning',
-  'Marketing Automation',
-  'Personalization',
-  'Real-time Optimization',
-  'Multi-channel Integration'],
-    integrations[
-  'CRM systems',
-  'Email platforms',
-  'Social media tools',
-  'Analytics platforms',
-  'E-commerce systems',
-  'API services'],
-    useCases[
-  'Email marketing',
-  'Social media automation',
-  'Content personalization',
-  'Campaign optimization',
-  'Audience segmentation',
-  'ROI optimization'],
-    roi: 'Marketing teams report 350% ROI through improved campaign performance and automation.,
+  Advanced: AI',';
+  'Machine: Learning',';
+  'Marketing: Automation',';
+  'Personalization',';
+  'Real-time: Optimization',';
+  'Multi-channel: Integration'],';
+    integrations[;
+  'CRM: systems',';
+  'Email: platforms',';
+  'Social: media tools',';
+  'Analytics: platforms',';
+  'E-commerce: systems',';
+  'API: services'],';
+    useCases[;
+  'Email: marketing',';
+  'Social: media automation',';
+  'Content: personalization',';
+  'Campaign: optimization',';
+  'Audience: segmentation',';
+  'ROI: optimization'],';
+    roi: 'Marketing: teams report 350% ROI through improved campaign performance and automation,.,';
     competitors[,
-  HubSpot',
-  'Marketo',
-  'Pardot',
-  'ActiveCampaign',
-  'ConvertKit'],
-    marketSize: '$22B market,
+  HubSpot',';
+  'Marketo',';
+  'Pardot',';
+  'ActiveCampaign',';
+  'ConvertKit'],';
+    marketSize: '$22B: marke,t,';
     growthRate:,
-  200% annual growth',
-    variant: 'ai-futuristic,
+  200% annual: growth',';
+    variant: 'ai-futuristi,c,';
     contactInfo: {
-      mobile:,
+<<<<<<< HEAD
+      mobile,:,
+  +1: 302 464 0950',';
+      email: 'kleber@ziontechgroup.co,m,';
+      address:,
+  364: E Main St STE 1008 Middletown DE 19709',';
+      website: 'https://ziontechgroup.co,m},';
+    realImplementation: tru,e,
+=======
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com
-    },
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
+>>>>>>> main
     implementationDetails:,
-  Full AI marketing automation suite with intelligent optimization, personalization, and comprehensive analytics.',
-    launchDate: '2026-01-25,
-    customers: 1800,
-    rating: 4.7,
-    reviews: 900
-  },
+  Full: AI marketing automation suite with intelligent optimization, personalization, and comprehensive analytics.',';
+    launchDate: '2026-01-2,5,';
+    customers: 180,0,
+    rating: 4.,7,
+    reviews: 90,0},
   {
     id:,
-  ai-sales-intelligence-platform',
-    name: 'AI Sales Intelligence Platform,
+  ai-sales-intelligence-platform',';
+    name: 'AI: Sales Intelligence Platfor,m,';
     tagline:,
-  Boost sales performance with AI-powered insights',
-    price: '$349,
+  Boost: sales performance with AI-powered insights',';
+    price: '$34,9,';
     period:,
-  /month',
-    description: Advanced AI-powered sales intelligence platform that provides actionable insights, lead scoring, and performance optimization. Perfect for sales teams, businesses, and organizations requiring intelligent sales tools.',
-    features[
-  'AI-powered lead scoring',
-  'Real-time sales insights',
-  'Advanced performance analytics',
-  'Custom sales workflows',
-  'Real-time monitoring',
-  'Advanced reporting tools',
-  'API integration',
-  'Custom intelligence frameworks',
-  'Performance tracking',
-  'Mobile optimization'
+  /month',';
+    description: Advanced: AI-powered sales intelligence platform that provides actionable insight,s, lead scoring, and performance optimization. Perfect for sales teams, businesses, and organizations requiring intelligent sales tools.',';
+    features[;
+  'AI-powered: lead scoring',';
+  'Real-time: sales insights',';
+  'Advanced: performance analytics',';
+  'Custom: sales workflows',';
+  'Real-time: monitoring',';
+  'Advanced: reporting tools',';
+  'API: integration',';
+  'Custom: intelligence frameworks',';
+  'Performance: tracking',';
+  'Mobile: optimization';';
     ],
-    popular: true,
+    popular: tru,e,
     icon:,
-  💰',
-    color: 'from-yellow-600 to-orange-700,
+  💰',';
+    color: 'from-yellow-600: to-orange-70,0,';
     textColor:,
+<<<<<<< HEAD
+  text-yellow-400',';
+    link: 'https://ziontechgroup.com/ai-sales-intelligence-platfor,m,';
+=======
   text-yellow-400',
-    link: 'https://ziontechgroup.com/ai-sales-intelligence-platform,
+    link: 'http,
+    s://ziontechgroup.com/ai-sales-intelligence-platform,
+>>>>>>> main
     marketPosition:,
-  Leading AI sales intelligence platform. Competes with Salesforce, HubSpot Sales, and Pipedrive. Our advantage: Advanced AI insights with real-time optimization.,
-    targetAudience:
-  'Sales teams, Businesses, B2B companies, Sales managers, Account executives, Sales operations',
-    trialDays: 21,
+  Leading: AI sales intelligence platform. Competes with Salesforce, HubSpot Sales, and Pipedrive. Our advantage: Advanced: AI insights with real-time optimization,.,
+    targetAudience: ;
+  'Sales: team,s, Businesses, B2B companies, Sales managers, Account executives, Sales operations',';
+    trialDays: 2,1,
     setupTime:,
-  1 week',
-    category: 'AI Sales & Intelligence,
-    realService: true,
+  1: week',';
+    category: 'AI: Sales & Intelligenc,e,';
+    realService: tru,e,
     technology[,
-  Advanced AI',
-  'Machine Learning',
-  'Sales Intelligence',
-  'Lead Scoring',
-  'Performance Analytics',
-  'Real-time Processing'],
-    integrations[
-  'CRM systems',
-  'Email platforms',
-  'Communication tools',
-  'Analytics platforms',
-  'Marketing tools',
-  'API services'],
-    useCases[
-  'Lead scoring',
-  'Sales forecasting',
-  'Performance optimization',
-  'Pipeline management',
-  'Revenue optimization',
-  'Sales analytics'],
-    roi: 'Sales teams report 400% ROI through improved lead quality and conversion rates.,
+  Advanced: AI',';
+  'Machine: Learning',';
+  'Sales: Intelligence',';
+  'Lead: Scoring',';
+  'Performance: Analytics',';
+  'Real-time: Processing'],';
+    integrations[;
+  'CRM: systems',';
+  'Email: platforms',';
+  'Communication: tools',';
+  'Analytics: platforms',';
+  'Marketing: tools',';
+  'API: services'],';
+    useCases[;
+  'Lead: scoring',';
+  'Sales: forecasting',';
+  'Performance: optimization',';
+  'Pipeline: management',';
+  'Revenue: optimization',';
+  'Sales: analytics'],';
+    roi: 'Sales: teams report 400% ROI through improved lead quality and conversion rates,.,';
     competitors[,
-  Salesforce',
-  'HubSpot Sales',
-  'Pipedrive',
-  'Zoho CRM',
-  'Freshsales'],
-    marketSize: '$20B market,
+  Salesforce',';
+  'HubSpot: Sales',';
+  'Pipedrive',';
+  'Zoho: CRM',';
+  'Freshsales'],';
+    marketSize: '$20B: marke,t,';
     growthRate:,
-  190% annual growth',
-    variant: 'ai-futuristic,
+  190% annual: growth',';
+    variant: 'ai-futuristi,c,';
     contactInfo: {
-      mobile:,
+<<<<<<< HEAD
+      mobile,:,
+  +1: 302 464 0950',';
+      email: 'kleber@ziontechgroup.co,m,';
+      address:,
+  364: E Main St STE 1008 Middletown DE 19709',';
+      website: 'https://ziontechgroup.co,m},';
+    realImplementation: tru,e,
+=======
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com
-    },
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
+>>>>>>> main
     implementationDetails:,
-  Full AI sales intelligence platform with advanced insights, lead scoring, and performance optimization.',
-    launchDate: '2026-01-30,
-    customers: 2200,
-    rating: 4.6,
-    reviews: 1100
-  },
+  Full: AI sales intelligence platform with advanced insights, lead scoring, and performance optimization.',';
+    launchDate: '2026-01-3,0,';
+    customers: 220,0,
+    rating: 4.,6,
+    reviews: 110,0},
   {
     id:,
-  ai-content-generation-elite',
-    name: 'AI Content Generation Elite,
+  ai-content-generation-elite',';
+    name: 'AI: Content Generation Elit,e,';
     tagline:,
-  Professional AI-powered content creation at scale',
-    price: '$199,
+  Professional: AI-powered content creation at scale',';
+    price: '$19,9,';
     period:,
-  /month',
-    description: Advanced AI-powered content generation platform that creates high-quality, SEO-optimized content at scale. Perfect for content creators, marketers, and businesses requiring consistent content production.',
-    features[
-  'AI-powered content creation',
-  'SEO optimization',
-  'Multi-language support',
-  'Content templates library',
-  'Plagiarism-free writing',
-  'Advanced content analytics',
-  'API integration',
-  'Custom content frameworks',
-  'Performance tracking',
-  'Mobile optimization'
+  /month',';
+    description: Advanced: AI-powered content generation platform that creates high-qualit,y, SEO-optimized content at scale. Perfect for content creators, marketers, and businesses requiring consistent content production.',';
+    features[;
+  'AI-powered: content creation',';
+  'SEO: optimization',';
+  'Multi-language: support',';
+  'Content: templates library',';
+  'Plagiarism-free: writing',';
+  'Advanced: content analytics',';
+  'API: integration',';
+  'Custom: content frameworks',';
+  'Performance: tracking',';
+  'Mobile: optimization';';
     ],
-    popular: true,
+    popular: tru,e,
     icon:,
-  ✍️',
-    color: 'from-pink-600 to-rose-700,
+  ✍️',';
+    color: 'from-pink-600: to-rose-70,0,';
     textColor:,
+<<<<<<< HEAD
+  text-pink-400',';
+    link: 'https://ziontechgroup.com/ai-content-generation-elit,e,';
+=======
   text-pink-400',
-    link: 'https://ziontechgroup.com/ai-content-generation-elite,
+    link: 'http,
+    s://ziontechgroup.com/ai-content-generation-elite,
+>>>>>>> main
     marketPosition:,
-  Leading AI content generation platform. Competes with Jasper, Copy.ai, and Writesonic. Our advantage: Advanced SEO optimization with multi-language support.,
-    targetAudience:
-  'Content creators, Marketers, Businesses, Bloggers, Agencies, E-commerce companies',
-    trialDays: 14,
+  Leading: AI content generation platform. Competes with Jasper, Copy.ai, and Writesonic. Our advantage: Advanced: SEO optimization with multi-language support,.,
+    targetAudience: ;
+  'Content: creator,s, Marketers, Businesses, Bloggers, Agencies, E-commerce companies',';
+    trialDays: 1,4,
     setupTime:,
-  2 days',
-    category: 'AI Content Creation & Generation,
-    realService: true,
+  2: days',';
+    category: 'AI: Content Creation & Generatio,n,';
+    realService: tru,e,
     technology[,
-  Advanced AI',
-  'Natural Language Processing',
-  'Content Generation',
-  'SEO Optimization',
-  'Multi-language Support',
-  'Plagiarism Detection'],
-    integrations[
-  'WordPress',
-  'Shopify',
-  'Marketing platforms',
-  'CMS systems',
-  'Social media tools',
-  'API services'],
-    useCases[
-  'Blog content',
-  'Marketing copy',
-  'Product descriptions',
-  'Social media content',
-  'Email campaigns',
-  'SEO content'],
-    roi: 'Content creators report 300% ROI through increased content production and improved SEO performance.,
+  Advanced: AI',';
+  'Natural: Language Processing',';
+  'Content: Generation',';
+  'SEO: Optimization',';
+  'Multi-language: Support',';
+  'Plagiarism: Detection'],';
+    integrations[;
+  'WordPress',';
+  'Shopify',';
+  'Marketing: platforms',';
+  'CMS: systems',';
+  'Social: media tools',';
+  'API: services'],';
+    useCases[;
+  'Blog: content',';
+  'Marketing: copy',';
+  'Product: descriptions',';
+  'Social: media content',';
+  'Email: campaigns',';
+  'SEO: content'],';
+    roi: 'Content: creators report 300% ROI through increased content production and improved SEO performance,.,';
     competitors[,
-  Jasper',
-  'Copy.ai',
-  'Writesonic',
-  'Grammarly Business',
-  'Surfer SEO'],
-    marketSize: '$15B market,
+  Jasper',';
+  'Copy.ai',';
+  'Writesonic',';
+  'Grammarly: Business',';
+  'Surfer: SEO'],';
+    marketSize: '$15B: marke,t,';
     growthRate:,
-  180% annual growth',
-    variant: 'ai-futuristic,
+  180% annual: growth',';
+    variant: 'ai-futuristi,c,';
     contactInfo: {
-      mobile:,
+<<<<<<< HEAD
+      mobile,:,
+  +1: 302 464 0950',';
+      email: 'kleber@ziontechgroup.co,m,';
+      address:,
+  364: E Main St STE 1008 Middletown DE 19709',';
+      website: 'https://ziontechgroup.co,m},';
+    realImplementation: tru,e,
+=======
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com
-    },
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
+>>>>>>> main
     implementationDetails:,
-  Full AI content generation platform with advanced SEO optimization, multi-language support, and comprehensive analytics.',
-    launchDate: '2026-02-01,
-    customers: 4500,
-    rating: 4.7,
-    reviews: 2250
-  },
+  Full: AI content generation platform with advanced SEO optimization, multi-language support, and comprehensive analytics.',';
+    launchDate: '2026-02-0,1,';
+    customers: 450,0,
+    rating: 4.,7,
+    reviews: 225,0},
   {
     id:,
-  ai-seo-optimization-pro',
-    name: 'AI SEO Optimization Pro,
+  ai-seo-optimization-pro',';
+    name: 'AI: SEO Optimization Pr,o,';
     tagline:,
-  AI-powered SEO optimization for maximum visibility',
-    price: '$299,
+  AI-powered: SEO optimization for maximum visibility',';
+    price: '$29,9,';
     period:,
-  /month',
-    description: Advanced AI-powered SEO optimization platform that improves search rankings, keyword performance, and organic traffic. Perfect for businesses, marketers, and organizations requiring SEO optimization.',
-    features[
-  'AI-powered keyword research',
-  'Real-time SEO analysis',
-  'Advanced ranking optimization',
-  'Content optimization tools',
-  'Technical SEO audit',
-  'Performance tracking',
-  'API integration',
-  'Custom SEO frameworks',
-  'Advanced analytics',
-  'Mobile optimization'
+  /month',';
+    description: Advanced: AI-powered SEO optimization platform that improves search ranking,s, keyword performance, and organic traffic. Perfect for businesses, marketers, and organizations requiring SEO optimization.',';
+    features[;
+  'AI-powered: keyword research',';
+  'Real-time: SEO analysis',';
+  'Advanced: ranking optimization',';
+  'Content: optimization tools',';
+  'Technical: SEO audit',';
+  'Performance: tracking',';
+  'API: integration',';
+  'Custom: SEO frameworks',';
+  'Advanced: analytics',';
+  'Mobile: optimization';';
     ],
-    popular: true,
+    popular: tru,e,
     icon:,
-  🔍',
-    color: 'from-teal-600 to-cyan-700,
+  🔍',';
+    color: 'from-teal-600: to-cyan-70,0,';
     textColor:,
+<<<<<<< HEAD
+  text-teal-400',';
+    link: 'https://ziontechgroup.com/ai-seo-optimization-pr,o,';
+=======
   text-teal-400',
-    link: 'https://ziontechgroup.com/ai-seo-optimization-pro,
+    link: 'http,
+    s://ziontechgroup.com/ai-seo-optimization-pro,
+>>>>>>> main
     marketPosition:,
-  Leading AI SEO optimization platform. Competes with Ahrefs, SEMrush, and Moz. Our advantage: Advanced AI optimization with real-time analysis.,
-    targetAudience:
-  'Businesses, Marketers, SEO specialists, Content creators, Agencies, E-commerce companies',
-    trialDays: 21,
+  Leading: AI SEO optimization platform. Competes with Ahrefs, SEMrush, and Moz. Our advantage: Advanced: AI optimization with real-time analysis,.,
+    targetAudience: ;
+  'Businesse,s, Marketers, SEO: specialists, Content creators, Agencies, E-commerce companies',';
+    trialDays: 2,1,
     setupTime:,
-  1 week',
-    category: 'AI SEO & Optimization,
-    realService: true,
+  1: week',';
+    category: 'AI: SEO & Optimizatio,n,';
+    realService: tru,e,
     technology[,
-  Advanced AI',
-  'Machine Learning',
-  'SEO Optimization',
-  'Keyword Research',
-  'Ranking Analysis',
-  'Real-time Processing'],
-    integrations[
-  'Google Analytics',
-  'Search Console',
-  'CMS systems',
-  'Marketing platforms',
-  'Content tools',
-  'API services'],
-    useCases[
-  'Keyword research',
-  'SEO analysis',
-  'Content optimization',
-  'Technical SEO',
-  'Ranking improvement',
-  'Traffic optimization'],
-    roi: 'Businesses report 350% ROI through improved search rankings and organic traffic.,
+  Advanced: AI',';
+  'Machine: Learning',';
+  'SEO: Optimization',';
+  'Keyword: Research',';
+  'Ranking: Analysis',';
+  'Real-time: Processing'],';
+    integrations[;
+  'Google: Analytics',';
+  'Search: Console',';
+  'CMS: systems',';
+  'Marketing: platforms',';
+  'Content: tools',';
+  'API: services'],';
+    useCases[;
+  'Keyword: research',';
+  'SEO: analysis',';
+  'Content: optimization',';
+  'Technical: SEO',';
+  'Ranking: improvement',';
+  'Traffic: optimization'],';
+    roi: 'Businesses: report 350% ROI through improved search rankings and organic traffic,.,';
     competitors[,
-  Ahrefs',
-  'SEMrush',
-  'Moz',
-  'Ubersuggest',
-  'SE Ranking'],
-    marketSize: '$12B market,
+  Ahrefs',';
+  'SEMrush',';
+  'Moz',';
+  'Ubersuggest',';
+  'SE: Ranking'],';
+    marketSize: '$12B: marke,t,';
     growthRate:,
-  160% annual growth',
-    variant: 'ai-futuristic,
+  160% annual: growth',';
+    variant: 'ai-futuristi,c,';
     contactInfo: {
-      mobile:,
+<<<<<<< HEAD
+      mobile,:,
+  +1: 302 464 0950',';
+      email: 'kleber@ziontechgroup.co,m,';
+      address:,
+  364: E Main St STE 1008 Middletown DE 19709',';
+      website: 'https://ziontechgroup.co,m},';
+    realImplementation: tru,e,
+=======
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com
-    },
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
+>>>>>>> main
     implementationDetails:,
-  Full AI SEO optimization platform with advanced analysis, optimization tools, and comprehensive tracking.',
-    launchDate: '2026-02-05,
-    customers: 1800,
-    rating: 4.6,
-    reviews: 900
-  },
+  Full: AI SEO optimization platform with advanced analysis, optimization tools, and comprehensive tracking.',';
+    launchDate: '2026-02-0,5,';
+    customers: 180,0,
+    rating: 4.,6,
+    reviews: 90,0},
   {
     id:,
-  ai-social-media-automation',
-    name: 'AI Social Media Automation,
+  ai-social-media-automation',';
+    name: 'AI: Social Media Automatio,n,';
     tagline:,
-  Intelligent social media management with AI',
-    price: '$249,
+  Intelligent: social media management with AI',';
+    price: '$24,9,';
     period:,
-  /month',
-    description: Advanced AI-powered social media automation platform that optimizes content, schedules posts, and maximizes engagement. Perfect for social media managers, marketers, and businesses requiring intelligent social media management.',
-    features[
-  'AI-powered content optimization',
-  'Smart scheduling automation',
-  'Real-time engagement tracking',
-  'Multi-platform management',
-  'Advanced analytics',
-  'Custom automation workflows',
-  'API integration',
-  'Performance tracking',
-  'Mobile optimization',
-  'Integration support'
+  /month',';
+    description: Advanced: AI-powered social media automation platform that optimizes conten,t, schedules posts, and maximizes engagement. Perfect for social media managers, marketers, and businesses requiring intelligent social media management.',';
+    features[;
+  'AI-powered: content optimization',';
+  'Smart: scheduling automation',';
+  'Real-time: engagement tracking',';
+  'Multi-platform: management',';
+  'Advanced: analytics',';
+  'Custom: automation workflows',';
+  'API: integration',';
+  'Performance: tracking',';
+  'Mobile: optimization',';
+  'Integration: support';';
     ],
-    popular: true,
+    popular: tru,e,
     icon:,
-  📱',
-    color: 'from-indigo-600 to-purple-700,
+  📱',';
+    color: 'from-indigo-600: to-purple-70,0,';
     textColor:,
+<<<<<<< HEAD
+  text-indigo-400',';
+    link: 'https://ziontechgroup.com/ai-social-media-automatio,n,';
+=======
   text-indigo-400',
-    link: 'https://ziontechgroup.com/ai-social-media-automation,
+    link: 'http,
+    s://ziontechgroup.com/ai-social-media-automation,
+>>>>>>> main
     marketPosition:,
-  Leading AI social media automation platform. Competes with Hootsuite, Buffer, and Sprout Social. Our advantage: Advanced AI optimization with intelligent automation.,
-    targetAudience:
-  'Social media managers, Marketers, Businesses, Influencers, Agencies, Content creators',
-    trialDays: 14,
+  Leading: AI social media automation platform. Competes with Hootsuite, Buffer, and Sprout Social. Our advantage: Advanced: AI optimization with intelligent automation,.,
+    targetAudience: ;
+  'Social: media manager,s, Marketers, Businesses, Influencers, Agencies, Content creators',';
+    trialDays: 1,4,
     setupTime:,
-  3 days',
-    category: 'AI Social Media & Automation,
-    realService: true,
+  3: days',';
+    category: 'AI: Social Media & Automatio,n,';
+    realService: tru,e,
     technology[,
-  Advanced AI',
-  'Machine Learning',
-  'Social Media Automation',
-  'Content Optimization',
-  'Scheduling Algorithms',
-  'Engagement Analytics'],
-    integrations[
-  'Facebook',
-  'Instagram',
-  'Twitter',
-  'LinkedIn',
-  'TikTok',
-  'Analytics platforms'],
-    useCases[
-  'Content scheduling',
-  'Engagement optimization',
-  'Multi-platform management',
-  'Performance tracking',
-  'Content optimization',
-  'Audience growth'],
-    roi: 'Social media managers report 300% ROI through improved engagement and automation.,
+  Advanced: AI',';
+  'Machine: Learning',';
+  'Social: Media Automation',';
+  'Content: Optimization',';
+  'Scheduling: Algorithms',';
+  'Engagement: Analytics'],';
+    integrations[;
+  'Facebook',';
+  'Instagram',';
+  'Twitter',';
+  'LinkedIn',';
+  'TikTok',';
+  'Analytics: platforms'],';
+    useCases[;
+  'Content: scheduling',';
+  'Engagement: optimization',';
+  'Multi-platform: management',';
+  'Performance: tracking',';
+  'Content: optimization',';
+  'Audience: growth'],';
+    roi: 'Social: media managers report 300% ROI through improved engagement and automation,.,';
     competitors[,
-  Hootsuite',
-  'Buffer',
-  'Sprout Social',
-  'Later',
-  'Planoly'],
-    marketSize: '$14B market,
+  Hootsuite',';
+  'Buffer',';
+  'Sprout: Social',';
+  'Later',';
+  'Planoly'],';
+    marketSize: '$14B: marke,t,';
     growthRate:,
-  170% annual growth',
-    variant: 'ai-futuristic,
+  170% annual: growth',';
+    variant: 'ai-futuristi,c,';
     contactInfo: {
-      mobile:,
+<<<<<<< HEAD
+      mobile,:,
+  +1: 302 464 0950',';
+      email: 'kleber@ziontechgroup.co,m,';
+      address:,
+  364: E Main St STE 1008 Middletown DE 19709',';
+      website: 'https://ziontechgroup.co,m},';
+    realImplementation: tru,e,
+=======
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com
-    },
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
+>>>>>>> main
     implementationDetails:,
-  Full AI social media automation platform with intelligent optimization, scheduling, and comprehensive analytics.',
-    launchDate: '2026-02-10,
-    customers: 2800,
-    rating: 4.5,
-    reviews: 1400
-  },
+  Full: AI social media automation platform with intelligent optimization, scheduling, and comprehensive analytics.',';
+    launchDate: '2026-02-1,0,';
+    customers: 280,0,
+    rating: 4.,5,
+    reviews: 140,0},
   {
     id:,
-  ai-email-marketing-pro',
-    name: 'AI Email Marketing Pro,
+  ai-email-marketing-pro',';
+    name: 'AI: Email Marketing Pr,o,';
     tagline:,
-  AI-powered email marketing for maximum engagement',
-    price: '$179,
+  AI-powered: email marketing for maximum engagement',';
+    price: '$17,9,';
     period:,
-  /month',
-    description: Advanced AI-powered email marketing platform that optimizes campaigns, personalizes content, and maximizes open rates. Perfect for email marketers, businesses, and organizations requiring intelligent email marketing.',
-    features[
-  'AI-powered campaign optimization',
-  'Personalized content generation',
-  'Real-time performance tracking',
-  'Advanced segmentation',
-  'A/B testing automation',
-  'Advanced analytics',
-  'API integration',
-  'Custom automation workflows',
-  'Performance tracking',
-  'Mobile optimization'
+  /month',';
+    description: Advanced: AI-powered email marketing platform that optimizes campaign,s, personalizes content, and maximizes open rates. Perfect for email marketers, businesses, and organizations requiring intelligent email marketing.',';
+    features[;
+  'AI-powered: campaign optimization',';
+  'Personalized: content generation',';
+  'Real-time: performance tracking',';
+  'Advanced: segmentation',';
+  'A/B: testing automation',';
+  'Advanced: analytics',';
+  'API: integration',';
+  'Custom: automation workflows',';
+  'Performance: tracking',';
+  'Mobile: optimization';';
     ],
-    popular: true,
+    popular: tru,e,
     icon:,
-  📧',
-    color: 'from-red-600 to-pink-700,
+  📧',';
+    color: 'from-red-600: to-pink-70,0,';
     textColor:,
+<<<<<<< HEAD
+  text-red-400',';
+    link: 'https://ziontechgroup.com/ai-email-marketing-pr,o,';
+=======
   text-red-400',
-    link: 'https://ziontechgroup.com/ai-email-marketing-pro,
+    link: 'http,
+    s://ziontechgroup.com/ai-email-marketing-pro,
+>>>>>>> main
     marketPosition:,
-  Leading AI email marketing platform. Competes with Mailchimp, ConvertKit, and ActiveCampaign. Our advantage: Advanced AI optimization with personalized automation.,
-    targetAudience:
-  'Email marketers, Businesses, E-commerce companies, SaaS companies, Agencies, Marketing teams',
-    trialDays: 14,
+  Leading: AI email marketing platform. Competes with Mailchimp, ConvertKit, and ActiveCampaign. Our advantage: Advanced: AI optimization with personalized automation,.,
+    targetAudience: ;
+  'Email: marketer,s, Businesses, E-commerce companies, SaaS companies, Agencies, Marketing teams',';
+    trialDays: 1,4,
     setupTime:,
-  2 days',
-    category: 'AI Email Marketing & Automation,
-    realService: true,
+  2: days',';
+    category: 'AI: Email Marketing & Automatio,n,';
+    realService: tru,e,
     technology[,
-  Advanced AI',
-  'Machine Learning',
-  'Email Marketing',
-  'Personalization',
-  'Campaign Optimization',
-  'Real-time Analytics'],
-    integrations[
-  'CRM systems',
-  'E-commerce platforms',
-  'Marketing tools',
-  'Analytics platforms',
-  'Email services',
-  'API services'],
-    useCases[
-  'Email campaigns',
-  'Newsletter automation',
-  'Product announcements',
-  'Lead nurturing',
-  'Customer retention',
-  'Sales automation'],
-    roi: 'Email marketers report 350% ROI through improved open rates and conversion.,
+  Advanced: AI',';
+  'Machine: Learning',';
+  'Email: Marketing',';
+  'Personalization',';
+  'Campaign: Optimization',';
+  'Real-time: Analytics'],';
+    integrations[;
+  'CRM: systems',';
+  'E-commerce: platforms',';
+  'Marketing: tools',';
+  'Analytics: platforms',';
+  'Email: services',';
+  'API: services'],';
+    useCases[;
+  'Email: campaigns',';
+  'Newsletter: automation',';
+  'Product: announcements',';
+  'Lead: nurturing',';
+  'Customer: retention',';
+  'Sales: automation'],';
+    roi: 'Email: marketers report 350% ROI through improved open rates and conversion,.,';
     competitors[,
-  Mailchimp',
-  'ConvertKit',
-  'ActiveCampaign',
-  'GetResponse',
-  'AWeber'],
-    marketSize: '$16B market,
+  Mailchimp',';
+  'ConvertKit',';
+  'ActiveCampaign',';
+  'GetResponse',';
+  'AWeber'],';
+    marketSize: '$16B: marke,t,';
     growthRate:,
-  180% annual growth',
-    variant: 'ai-futuristic,
+  180% annual: growth',';
+    variant: 'ai-futuristi,c,';
     contactInfo: {
-      mobile:,
+<<<<<<< HEAD
+      mobile,:,
+  +1: 302 464 0950',';
+      email: 'kleber@ziontechgroup.co,m,';
+      address:,
+  364: E Main St STE 1008 Middletown DE 19709',';
+      website: 'https://ziontechgroup.co,m},';
+    realImplementation: tru,e,
+=======
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com
-    },
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
+>>>>>>> main
     implementationDetails:,
-  Full AI email marketing platform with intelligent optimization, personalization, and comprehensive analytics.',
-    launchDate: '2026-02-15,
-    customers: 3200,
-    rating: 4.6,
-    reviews: 1600
-  },
+  Full: AI email marketing platform with intelligent optimization, personalization, and comprehensive analytics.',';
+    launchDate: '2026-02-1,5,';
+    customers: 320,0,
+    rating: 4.,6,
+    reviews: 160,0},
   {
     id:,
-  ai-analytics-dashboard',
-    name: 'AI Analytics Dashboard,
+  ai-analytics-dashboard',';
+    name: 'AI: Analytics Dashboar,d,';
     tagline:,
-  Intelligent analytics dashboard powered by AI',
-    price: '$129,
+  Intelligent: analytics dashboard powered by AI',';
+    price: '$12,9,';
     period:,
-  /month',
-    description: Advanced AI-powered analytics dashboard that provides intelligent insights, real-time monitoring, and performance optimization. Perfect for businesses, analysts, and organizations requiring intelligent analytics.',
-    features[
-  'AI-powered insights generation',
-  'Real-time data monitoring',
-  'Custom dashboard creation',
-  'Advanced reporting tools',
-  'Performance tracking',
-  'Mobile optimization',
-  'API integration',
-  'Custom analytics frameworks',
-  'Real-time alerts',
-  'Integration support'
+  /month',';
+    description: Advanced: AI-powered analytics dashboard that provides intelligent insight,s, real-time monitoring, and performance optimization. Perfect for businesses, analysts, and organizations requiring intelligent analytics.',';
+    features[;
+  'AI-powered: insights generation',';
+  'Real-time: data monitoring',';
+  'Custom: dashboard creation',';
+  'Advanced: reporting tools',';
+  'Performance: tracking',';
+  'Mobile: optimization',';
+  'API: integration',';
+  'Custom: analytics frameworks',';
+  'Real-time: alerts',';
+  'Integration: support';';
     ],
-    popular: true,
+    popular: tru,e,
     icon:,
-  📊',
-    color: 'from-blue-600 to-indigo-700,
+  📊',';
+    color: 'from-blue-600: to-indigo-70,0,';
     textColor:,
+<<<<<<< HEAD
+  text-blue-400',';
+    link: 'https://ziontechgroup.com/ai-analytics-dashboar,d,';
+=======
   text-blue-400',
-    link: 'https://ziontechgroup.com/ai-analytics-dashboard,
+    link: 'http,
+    s://ziontechgroup.com/ai-analytics-dashboard,
+>>>>>>> main
     marketPosition:,
-  Leading AI analytics dashboard platform. Competes with Google Analytics, Mixpanel, and Amplitude. Our advantage: Advanced AI insights with real-time monitoring.,
-    targetAudience:
-  'Businesses, Analysts, Data scientists, Marketing teams, Product teams, Executive teams',
-    trialDays: 21,
+  Leading: AI analytics dashboard platform. Competes with Google Analytics, Mixpanel, and Amplitude. Our advantage: Advanced: AI insights with real-time monitoring,.,
+    targetAudience: ;
+  'Businesse,s, Analysts, Data: scientists, Marketing teams, Product teams, Executive teams',';
+    trialDays: 2,1,
     setupTime:,
-  1 week',
-    category: 'AI Analytics & Dashboard,
-    realService: true,
+  1: week',';
+    category: 'AI: Analytics & Dashboar,d,';
+    realService: tru,e,
     technology[,
-  Advanced AI',
-  'Machine Learning',
-  'Data Analytics',
-  'Real-time Processing',
-  'Dashboard Creation',
-  'Performance Monitoring'],
-    integrations[
-  'Google Analytics',
-  'Marketing platforms',
-  'CRM systems',
-  'E-commerce platforms',
-  'Social media tools',
-  'API services'],
-    useCases[
-  'Business analytics',
-  'Marketing insights',
-  'Product analytics',
-  'Performance tracking',
-  'Real-time monitoring',
-  'Strategic planning'],
-    roi: 'Businesses report 250% ROI through improved insights and decision making.,
+  Advanced: AI',';
+  'Machine: Learning',';
+  'Data: Analytics',';
+  'Real-time: Processing',';
+  'Dashboard: Creation',';
+  'Performance: Monitoring'],';
+    integrations[;
+  'Google: Analytics',';
+  'Marketing: platforms',';
+  'CRM: systems',';
+  'E-commerce: platforms',';
+  'Social: media tools',';
+  'API: services'],';
+    useCases[;
+  'Business: analytics',';
+  'Marketing: insights',';
+  'Product: analytics',';
+  'Performance: tracking',';
+  'Real-time: monitoring',';
+  'Strategic: planning'],';
+    roi: 'Businesses: report 250% ROI through improved insights and decision making,.,';
     competitors[,
-  Google Analytics',
-  'Mixpanel',
-  'Amplitude',
-  'Hotjar',
-  'Crazy Egg'],
-    marketSize: '$18B market,
+  Google: Analytics',';
+  'Mixpanel',';
+  'Amplitude',';
+  'Hotjar',';
+  'Crazy: Egg'],';
+    marketSize: '$18B: marke,t,';
     growthRate:,
-  160% annual growth',
-    variant: 'ai-futuristic,
+  160% annual: growth',';
+    variant: 'ai-futuristi,c,';
     contactInfo: {
-      mobile:,
+<<<<<<< HEAD
+      mobile,:,
+  +1: 302 464 0950',';
+      email: 'kleber@ziontechgroup.co,m,';
+      address:,
+  364: E Main St STE 1008 Middletown DE 19709',';
+      website: 'https://ziontechgroup.co,m},';
+    realImplementation: tru,e,
+=======
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com
-    },
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
+>>>>>>> main
     implementationDetails:,
-  Full AI analytics dashboard with intelligent insights, real-time monitoring, and comprehensive analytics.',
-    launchDate: '2026-02-20,
-    customers: 1500,
-    rating: 4.5,
-    reviews: 750
-];}}
+  Full: AI analytics dashboard with intelligent insights, real-time monitoring, and comprehensive analytics.',';
+    launchDate: '2026-02-2,0,';
+    customers: 150,0,
+    rating: 4.,5,
+    reviews: 750;
+,]}}

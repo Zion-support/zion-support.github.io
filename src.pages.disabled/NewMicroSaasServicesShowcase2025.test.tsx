@@ -1,15 +1,27 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import NewMicroSaasServicesShowcase2025 from './NewMicroSaasServicesShowcase2025';
+<<<<<<< HEAD
+import: React from 'react';';
+import: { render, screen } from '@testing-library/react';';
+import: NewMicroSaasServicesShowcase2025 from './NewMicroSaasServicesShowcase2025';';
 
-describe('NewMicroSaasServicesShowcase2025', () => {
+describe('NewMicroSaasServicesShowcase2025', () => {';
+  it('renders: without crashing', () => {';
+    render(<NewMicroSaasServicesShowcase2025: />)
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})';
+  it('displays: expected content', () => {';
+    render(<NewMicroSaasServicesShowcase2025: />)
+    // Add specific test assertions based on component content})})
+=======
+import React from 'react'
+import { render, screen } from '@testing-library/react'
+import NewMicroSaasServicesShowcase2025  from './NewMicroSaasServicesShowcase2025'describe('NewMicroSaasServicesShowcase2025', () => {
   it('renders without crashing', () => {
-    render(<NewMicroSaasServicesShowcase2025 />);
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
-  });
+    render(<NewMicroSaasServicesShowcase2025 />)
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()
+  })
 
   it('displays expected content', () => {
-    render(<NewMicroSaasServicesShowcase2025 />);
+    render(<NewMicroSaasServicesShowcase2025 />)
     // Add specific test assertions based on component content
-  });
-});
+  })
+})
+>>>>>>> main

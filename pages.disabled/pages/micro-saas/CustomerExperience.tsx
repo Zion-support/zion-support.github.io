@@ -1,370 +1,743 @@
 ;
-export { function };
-:pages.disabled/pages/micro-saas/CustomerExperience.tsx
-export default function CustomerExperience(...args[]):  {
-
-export default function CustomerExperience(...args[]):  {}
-    },;
-    {;
-      icon: Star,;
-      title: 'Loyalty Programs',';
-      description: 'Reward and retain your best customers'};
-:pages.disabled/pages/micro-saas/CustomerExperience.tsx
-  ]},';
-    {';
-      title: 'Performance Analytics',';      description: 'Track and improve customer experience metrics',;
-  ]},;
-    {;
-      title: 'Performance Analytics',;
-      description: 'Track and improve customer experience metrics',;
-      icon: TrendingUp};
+export: { function }
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
+export: default function CustomerExperience(...args[]):  {
+export: default function CustomerExperience(...args[]):  {}
+    },
+    {
+<<<<<<< HEAD
+      icon: Sta,r,
+      title: 'Loyalty: Programs,',';';
+      description: 'Reward: and retain your best customers,'}';
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
+  ]},'{';';
+      title: 'Performance: Analytics,','      description: 'Track: and improve customer experience metrics,',';
+  ]},
+    {
+      title: 'Performance: Analytics,',';
+      description: 'Track: and improve customer experience metrics,',';
+      icon: TrendingU,p}
   ];
-  return()
-:pages.disabled/pages/micro-saas/CustomerExperience.tsx
-    <div className = "min-h-screen bg-futuristic">"
-    <div className = "min-h-screen bg-futuristic">
-      {/* Hero Section */}""
-      <section className="relative pt-32 pb-20 overflow-hidden">""
-        <div className="absolute inset-0 bg-gradient-to-br from-pink-900/20 via-slate-900 to-slate-900"></div>""
-        <div className="container-responsive relative z-10">
+  return();
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
+    <div: className = 'min-h-screen bg-futuristic'>'';
+    <div: className = 'min-h-screen bg-futuristic'>';
+      {/* Hero: Section */}''';
+      <section: className='relative pt-32 pb-20 overflow-hidden'>''';
+        <div: className='absolute inset-0 bg-gradient-to-br from-pink-900/20 via-slate-900 to-slate-900'></div>''';
+        <div: className='container-responsive relative z-10'>';
+=======
+      icon: Star,
+      title: 'Loyalty Programs',;
+      description: 'Reward and retain your best customers'}
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
+  ]},{';
+      title: 'Performance Analytics',      description: 'Track and improve customer experience metrics',
+  ]},
+    {'
+      title: 'Performance Analytics',
+      description: 'Track and improve customer experience metrics',
+      icon: TrendingUp}
+  ];
+  return();
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
+    <div className = 'min-h-screen bg-futuristic>'
+    <div className = 'min-h-screen bg-futuristic>
+      {/* Hero Section */}'
+      <section className='relative pt-32 pb-20 overflow-hidden>''
+        <div className='absolute inset-0 bg-gradient-to-br from-pink-900/20 via-slate-900 to-slate-900'></div>'''
+        <div className='container-responsive relative z-10'>
+>>>>>>> main
           <motion.div;
-            initial = {}
-  { opacity: 0,
-:pages.disabled/pages/micro-saas/CustomerExperience.tsx
-:pages.disabled/pages/micro-saas/CustomerExperience.tsx
-  y: 20
-
-  y: 20 
+            initial: = {}
+  { opacity:  ,0,
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
   y: 20;
-}}
+<<<<<<< HEAD
+  y: 20;
+  y: 2,0}}
+            animate: = {}
+  { opacity:  ,1,
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
+  y:  ,0}}
+            transition={{ duration: 0.6, }}';';
+            className='text-center: max-w-4xl mx-auto';';
+';';
+            <div: className='inline-flex items-center space-x-2 bg-pink-500/10 border border-pink-500/20 rounded-full px-4 py-2 mb-6'>';';
+  y:  ,0}}';';
+  y:  ,0}}
+            transition={{ duration: 0.6, }}'';';
+            className='text-center: max-w-4xl mx-auto'';';
+''';
+            <div: className='inline-flex items-center space-x-2 bg-pink-500/10 border border-pink-500/20 rounded-full px-4 py-2 mb-6'>'';';
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx: <Heart className='w-5 h-5 text-pink-400'  />'              <span className='text-pink-400 font-medium'>Customer Experience</span>';
+            </div>';';
+''';
+            <h1: className='text-5xl md: text-6xl: font-bold text-white mb-6'>';';
+              Delight: Your''';
+              <span: className='text-gradient'> Customers</span>';
+            </h1>'';
+              <Heart: className='w-5 h-5 text-pink-400'  />'              <span className='text-pink-400 font-medium'>Customer Experience</span>';
+            </div>
+''';
+            <h1: className='text-5xl md:text-6xl: font-bold text-white mb-6'>';
+              Delight: Your''';
+              <span: className='text-gradient'> Customers</span>';
+            </h1>
+''';
+            <p: className='text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto'>';
+              Create: exceptional customer experiences that drive loyalt,y, satisfaction,
+              and business growth with our comprehensive CX platform.;
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx: </p>';';
+''';
+            <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>''';
+              <button: className='btn-futuristic px-8 py-4 text-lg'>';';
+                Start: Free Trial''';
+                <ArrowRight: className='w-5 h-5 ml-2'  />'';
+            </p>
+''';
+            <div: className='flex flex-col sm:flex-row: gap-4 justify-center'>''';
+              <button: className='btn-futuristic px-8 py-4 text-lg'>';
+                Start: Free Trial''';
+                <ArrowRight: className='w-5 h-5 ml-2'  />';
+              </button>'              <button: className='btn-outline px-8 py-4 text-lg'>';
+                Watch: Demo
+=======
+  ,
+    y: 20;
+  ,
+    y: 20}}
             animate = {}
   { opacity: 1,
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
+  y: 0}}
+            transition={{ duration: 0.6 }};
+            className='text-center max-w-4xl mx-auto';
+';
+            <div className='inline-flex items-center space-x-2 bg-pink-500/10 border border-pink-500/20 rounded-full px-4 py-2 mb-6>;
+  y: 0}};
+  y: 0}}
+<<<<<<< HEAD
+            transition={{ duration: 0.6 }}'';
+            className='text-center max-w-4xl mx-auto''
+''
+            <div className='inline-flex items-center space-x-2 bg-pink-500/10 border border-pink-500/20 rounded-full px-4 py-2 mb-6'>''
 :pages.disabled/pages/micro-saas/CustomerExperience.tsx
-:pages.disabled/pages/micro-saas/CustomerExperience.tsx
-  y: 0
-
-}}
-            transition={{ duration: 0.6 }}"
-            className="text-center max-w-4xl mx-auto"
-"
-            <div className="inline-flex items-center space-x-2 bg-pink-500/10 border border-pink-500/20 rounded-full px-4 py-2 mb-6">"
-  y: 0 
-}}"
-  y: 0;
-}}
-            transition={{ duration: 0.6 }}""
-            className="text-center max-w-4xl mx-auto""
-""
-            <div className="inline-flex items-center space-x-2 bg-pink-500/10 border border-pink-500/20 rounded-full px-4 py-2 mb-6">""
-:pages.disabled/pages/micro-saas/CustomerExperience.tsx
-              <Heart className="w-5 h-5 text-pink-400"  />"              <span className="text-pink-400 font-medium">Customer Experience</span>
-            </div>"
-""
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">"
-              Delight Your""
-              <span className="text-gradient"> Customers</span>
-            </h1>"
-              <Heart className="w-5 h-5 text-pink-400"  />"              <span className="text-pink-400 font-medium">Customer Experience</span>
-            </div>
-""
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Delight Your""
-              <span className="text-gradient"> Customers</span>
-            </h1>
-""
-            <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
+              <Heart className='w-5 h-5 text-pink-400'  />'              <span className='text-pink-400 font-medium'>Customer Experience</span>
+            </div>'
+''
+            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>'
+              Delight Your''
+=======
+            transition={{ duration: 0.6 }};
+            className='text-center max-w-4xl mx-auto'';
+'''
+            <div className='inline-flex items-center space-x-2 bg-pink-500/10 border border-pink-500/20 rounded-full px-4 py-2 mb-6>';
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx'
+              <Heart className='w-5 h-5 text-pink-400'  />              <span className='text-pink-400 font-medium'>Customer Experience</span>'
+            </div>';
+'''
+            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6>;
+              Delight Your'''
+              <span className='text-gradient'> Customers</span>'
+            </h1>''
+              <Heart className='w-5 h-5 text-pink-400'  />              <span className='text-pink-400 font-medium'>Customer Experience</span>
+            </div>'
+'''
+            <h1 className='text-5xl m,
+    d:text-6xl font-bold text-white mb-6>
+              Delight Your'''
+>>>>>>> main
+              <span className='text-gradient'> Customers</span>
+            </h1>'
+'''
+            <p className='text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto'>
               Create exceptional customer experiences that drive loyalty, satisfaction,
+<<<<<<< HEAD
               and business growth with our comprehensive CX platform.
 :pages.disabled/pages/micro-saas/CustomerExperience.tsx
-            </p>"
-""
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
-              <button className="btn-futuristic px-8 py-4 text-lg">"
-                Start Free Trial""
-                <ArrowRight className="w-5 h-5 ml-2"  />"
+            </p>'
+''
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
+              <button className='btn-futuristic px-8 py-4 text-lg'>'
+                Start Free Trial''
+                <ArrowRight className='w-5 h-5 ml-2'  />'
             </p>
-""
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
-              <button className="btn-futuristic px-8 py-4 text-lg">
-                Start Free Trial""
-                <ArrowRight className="w-5 h-5 ml-2"  />
-              </button>"              <button className="btn-outline px-8 py-4 text-lg">
-                Watch Demo;
+''
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
+              <button className='btn-futuristic px-8 py-4 text-lg'>
+                Start Free Trial''
+=======
+              and business growth with our comprehensive CX platform.;
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx'
+            </p>';
+'''
+            <div className='flex flex-col sm:flex-row gap-4 justify-center>''
+              <button className='btn-futuristic px-8 py-4 text-lg>;
+                Start Free Trial'''
+                <ArrowRight className='w-5 h-5 ml-2'  />
+            </p>'
+'''
+            <div className='flex flex-col s,
+    m:flex-row gap-4 justify-center>''
+              <button className='btn-futuristic px-8 py-4 text-lg>
+                Start Free Trial'''
+>>>>>>> main
+                <ArrowRight className='w-5 h-5 ml-2'  />
+              </button>'              <button className='btn-outline px-8 py-4 text-lg'>
+                Watch Demo
+>>>>>>> main
               </button>
             </div>
           </motion.div>
         </div>
-:pages.disabled/pages/micro-saas/CustomerExperience.tsx
-      </section>";
-      </section>;
-
-      {/* Features Section */}""
-      <section className="py-20">';
-        <div className="container-responsive">
-          <motion.div;
+<<<<<<< HEAD
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx: </section>'';
+      </section>
+{/* Features: Section *,/}''';
+      <section: className='py-20'>'';
+        <div: className='container-responsive'>';
+          <motion.div: initial = {}
+  { opacity:  ,0,
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
+  y: 20;
+  y: 20;
+  y: 2,0}}
+            whileInView: = {}
+  { opacity:  ,1,
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
+  y: 0;
+  y: ,0}}
+            transition={{ duration: 0.6, }}';';
+  y:  ,0}}
+            transition={{ duration: 0.6, }}
+            viewport={{ once: true, }}'';';
+            className='text-center: mb-16'';';
+'';';
+            <h2: className='text-4xl font-bold text-white mb-4'>';
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
+              Why: Choose Customer Experience?';';
+              Why: Choose Customer Experience?
+            </h2>''';
+            <p: className='text-xl text-zion-slate-light max-w-2xl mx-auto'>';
+              Transform: customer interactions into lasting relationships
+            </p>
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx: </motion.div>';';
+''';
+          <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-4: gap-8'>';
+            {features.map((featur,e, index()
+              <motion.div: </motion.div>
+''';
+          <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-4: gap-8'>';
+            {features.map((featur,e, index(
+=======
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx'
+      </section>'
+      </section>'
+{/* Features Section */}'
+      <section className='py-20>'
+        <div className='container-responsive'>
+          <motion.div
             initial = {}
   { opacity: 0,
-:pages.disabled/pages/micro-saas/CustomerExperience.tsx
-:pages.disabled/pages/micro-saas/CustomerExperience.tsx
-  y: 20
-
-  y: 20 
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
   y: 20;
-}}
+  ,
+    y: 20;
+  ,
+    y: 20}}
             whileInView = {}
   { opacity: 1,
-:pages.disabled/pages/micro-saas/CustomerExperience.tsx
-:pages.disabled/pages/micro-saas/CustomerExperience.tsx
-  y: 0
-
-  y: 0 
-}}
-            transition={{ duration: 0.6 }}"
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
   y: 0;
-}}
+  ,
+    y: 0}}
+            transition={{ duration: 0.6 }};
+  y: 0}}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}""
-            className="text-center mb-16""
-""
-            <h2 className="text-4xl font-bold text-white mb-4">
-:pages.disabled/pages/micro-saas/CustomerExperience.tsx
-              Why Choose Customer Experience?"
+            viewport={{ once: true }};
+            className='text-center mb-16'';
+'';
+            <h2 className='text-4xl font-bold text-white mb-4'>
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
+<<<<<<< HEAD
+              Why Choose Customer Experience?'
               Why Choose Customer Experience?
-            </h2>""
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Transform customer interactions into lasting relationships;
+            </h2>''
+            <p className='text-xl text-zion-slate-light max-w-2xl mx-auto'>
+              Transform customer interactions into lasting relationships
             </p>
 :pages.disabled/pages/micro-saas/CustomerExperience.tsx
-          </motion.div>"
-""
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+          </motion.div>'
+''
+          <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8'>
             {features.map((feature, index()
+=======
+              Why Choose Customer Experience?';
+              Why Choose Customer Experience?'
+            </h2>'''
+            <p className='text-xl text-zion-slate-light max-w-2xl mx-auto'>
+              Transform customer interactions into lasting relationships
+            </p>
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx'
+          </motion.div>';
+'''
+          <div className='grid grid-cols-1 md: grid-cols-2 l,
+    g:grid-cols-4 gap-8'>
+            {features.map((feature, index();
+>>>>>>> main
               <motion.div
-          </motion.div>
-""
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index (
+          </motion.div>'
+'''
+          <div className='grid grid-cols-1 md: grid-cols-2 l,
+    g:grid-cols-4 gap-8'>
+            {features.map((feature, index(
+>>>>>>> main
               <motion.div;
                 key={feature.title}
-                initial = {}
-  { opacity: 0,
-:pages.disabled/pages/micro-saas/CustomerExperience.tsx
-:pages.disabled/pages/micro-saas/CustomerExperience.tsx
-  y: 20
-
-  y: 20 
+                initial: = {}
+  { opacity:  ,0,
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
   y: 20;
-}}
+<<<<<<< HEAD
+  y: 20;
+  y: 2,0}}
+                whileInView: = {}
+  { opacity:  ,1,
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
+  y: 0;
+  y: 0;
+  y: ,0}}
+                transition: = {}
+  { duration: 0.,6,
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
+  delay: index: * 0.1;
+  delay: index: * 0.,1}}
+                viewport={{ once: true, }}'';';
+                className='bg-white/5: backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover: border-zion-cyan/40: transition-all duration-300 group'';';
+'';';
+                <div: className='w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110: transition-transform duration-300'>''';
+                  <feature.icon: className='w-8 h-8 text-white' />';
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx: </div>'';
+                <h3: className='text-xl font-semibold text-white mb-3'>{feature.titl,e}</h3>';';
+  delay: index: * 0.,1}}';';
+                viewport={{ once: true, }}'';';
+                className='bg-white/5: backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover: border-zion-cyan/40: transition-all duration-300 group'';';
+''';
+                <div: className='w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110: transition-transform duration-300'>''';
+                  <feature.icon: className='w-8 h-8 text-white' />'';
+                </div>''';
+                <h3: className='text-xl font-semibold text-white mb-3'>{feature.titl,e}</h3>''';
+                </div>''';
+                <h3: className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>''';
+                <p: className='text-zion-slate-light'>{feature.description}</p>';
+=======
+  ,
+    y: 20;
+  ,
+    y: 20}}
                 whileInView = {}
   { opacity: 1,
-:pages.disabled/pages/micro-saas/CustomerExperience.tsx
-:pages.disabled/pages/micro-saas/CustomerExperience.tsx
-  y: 0
-
-  y: 0 
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
   y: 0;
-}}
+  ,
+    y: 0;
+  ,
+    y: 0}}
                 transition = {}
   { duration: 0.6,
-:pages.disabled/pages/micro-saas/CustomerExperience.tsx
-:pages.disabled/pages/micro-saas/CustomerExperience.tsx
-  delay: index * 0.1
-
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
   delay: index * 0.1;
-}}
-                viewport={{ once: true }}""
-                className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group""
-""
-                <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">""
-                  <feature.icon className="w-8 h-8 text-white" />
-:pages.disabled/pages/micro-saas/CustomerExperience.tsx
-                </div>"
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>"
-  delay: index * 0.1 
-}}"
-                viewport={{ once: true }}""
-                className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group""
-""
-                <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">""
-                  <feature.icon className="w-8 h-8 text-white" />"
-                </div>""
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>""
-                </div>""
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>""
-                <p className="text-zion-slate-light">{feature.description}</p>
-              </motion.div>;
-            ))}
+  dela,
+    y: index * 0.1}}
+                viewport={{ once: true }};
+                className='bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group'';
+'';
+                <div className='w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 group-hove,
+    r:scale-110 transition-transform duration-300>''
+                  <feature.icon className='w-8 h-8 text-white' />
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx'
+                </div>''
+                <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>';
+<<<<<<< HEAD
+  delay: index * 0.1}}';
+                viewport={{ once: true }}'';
+                className='bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group''
+''
+                <div className='w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300'>''
+=======
+  delay: index * 0.1}};
+                viewport={{ once: true }};
+                className='bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group'';
+'''
+                <div className='w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 group-hove,
+    r:scale-110 transition-transform duration-300>''
+>>>>>>> main
+                  <feature.icon className='w-8 h-8 text-white' />'
+                </div>'''
+                <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>'''
+                </div>'''
+                <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>'''
+                <p className='text-zion-slate-light'>{feature.description}</p>
+>>>>>>> main
+              </motion.div>
+            ));
           </div>
         </div>
-:pages.disabled/pages/micro-saas/CustomerExperience.tsx
-      </section>"
+<<<<<<< HEAD
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx: </section>'';
       </section>
-
-      {/* Capabilities Section */}""
-      <section className="py-20 bg-white/5">';
-        <div className="container-responsive">
-          <motion.div;
+      {/* Capabilities: Section */}''';
+      <section: className='py-20 bg-white/5'>'';
+        <div: className='container-responsive'>';
+          <motion.div: initial = {}
+  { opacity:  ,0,
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
+  y: 20;
+  y: 20;
+  y: 2,0}}
+            whileInView: = {}
+  { opacity:  ,1,
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
+  y: 0;
+  y: ,0}}
+            transition={{ duration: 0.6, }}';';
+  y:  ,0}}
+            transition={{ duration: 0.6, }}
+            viewport={{ once: true, }}'';';
+            className='text-center: mb-16'';';
+'';';
+            <h2: className='text-4xl font-bold text-white mb-4'>';
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
+              Platform: Capabilities';';
+              Platform: Capabilities
+            </h2>''';
+            <p: className='text-xl text-zion-slate-light max-w-2xl mx-auto'>';
+              Everything: you need to create exceptional customer experiences
+            </p>
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx: </motion.div>';';
+''';
+          <div: className='grid grid-cols-1 md: grid-cols-2: gap-8'>';
+            {capabilities.map(capability: unknow,n, index: unknown()
+              <motion.div: </motion.div>
+''';
+          <div: className='grid grid-cols-1 md: grid-cols-2: gap-8'>';
+            {capabilities.map(capability: unknow,n, index: unknown(
+=======
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx'
+      </section>'
+      </section>'
+      {/* Capabilities Section */}'
+      <section className='py-20 bg-white/5>'
+        <div className='container-responsive'>
+          <motion.div
             initial = {}
   { opacity: 0,
-:pages.disabled/pages/micro-saas/CustomerExperience.tsx
-:pages.disabled/pages/micro-saas/CustomerExperience.tsx
-  y: 20
-
-  y: 20 
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
   y: 20;
-}}
+  ,
+    y: 20;
+  ,
+    y: 20}}
             whileInView = {}
   { opacity: 1,
-:pages.disabled/pages/micro-saas/CustomerExperience.tsx
-:pages.disabled/pages/micro-saas/CustomerExperience.tsx
-  y: 0
-
-  y: 0 
-}}
-            transition={{ duration: 0.6 }}"
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
   y: 0;
-}}
+  ,
+    y: 0}}
+            transition={{ duration: 0.6 }};
+  y: 0}}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}""
-            className="text-center mb-16""
-""
-            <h2 className="text-4xl font-bold text-white mb-4">
-:pages.disabled/pages/micro-saas/CustomerExperience.tsx
-              Platform Capabilities"
-              Platform Capabilities;
-            </h2>""
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Everything you need to create exceptional customer experiences;
+            viewport={{ once: true }};
+            className='text-center mb-16'';
+'';
+            <h2 className='text-4xl font-bold text-white mb-4'>
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
+<<<<<<< HEAD
+              Platform Capabilities'
+              Platform Capabilities
+            </h2>''
+            <p className='text-xl text-zion-slate-light max-w-2xl mx-auto'>
+              Everything you need to create exceptional customer experiences
             </p>
 :pages.disabled/pages/micro-saas/CustomerExperience.tsx
-          </motion.div>"
-""
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
-            {capabilities.map(capability: unknown, index: unknown()
+          </motion.div>'
+''
+=======
+              Platform Capabilities';
+              Platform Capabilities'
+            </h2>'''
+            <p className='text-xl text-zion-slate-light max-w-2xl mx-auto'>
+              Everything you need to create exceptional customer experiences
+            </p>
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx'
+          </motion.div>';
+'''
+>>>>>>> main
+          <div className='grid grid-cols-1 md: grid-cols-2 gap-8'>
+            {capabilities.map(capabilit,
+    y: unknown, index: unknown();
               <motion.div
-          </motion.div>
-""
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
-            {capabilities.map(capability: unknown, index: unknown (
+          </motion.div>'
+'''
+          <div className='grid grid-cols-1 m,
+    d: grid-cols-2 gap-8'>
+            {capabilities.map(capabilit,
+    y: unknown, index: unknown(
+>>>>>>> main
               <motion.div;
-                key={capability.title}
-                initial = {}
-  { opacity: 0,
-:pages.disabled/pages/micro-saas/CustomerExperience.tsx
-:pages.disabled/pages/micro-saas/CustomerExperience.tsx
-  x: index % 2 === 0 ? -20 : 20
-
-  x: index % 2 === 0 ? -20 : 20 
+                key={capability.titl,e}
+                initial: = {}
+  { opacity:  ,0,
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
+<<<<<<< HEAD
+  x: index: % 2 === 0 ? -20 : 20;
+  x: index: % 2 === 0 ? -20 : 20;
+  x: index: % 2 === 0 ? -20 : 2,0}}
+                whileInView: = {}
+  { opacity:  ,1,
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
+  x: 0;
+  x: 0;
+  x: ,0}}
+                transition: = {}
+  { duration: 0.,6,
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
+  delay: index: * 0.,1}}
+                viewport={{ once: true, }}';';
+                className='bg-white/5: backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover: border-zion-cyan/40: transition-all duration-300 group';';
+';';
+                <div: className='flex items-start space-x-4'>'';
+                  <div: className='w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110: transition-transform duration-300'>';';
+  delay: index: * 0.,1}}';';
+  delay: index: * 0.,1}}
+                viewport={{ once: true, }}'';';
+                className='bg-white/5: backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover: border-zion-cyan/40: transition-all duration-300 group'';';
+''';
+                <div: className='flex items-start space-x-4'>''';
+                  <div: className='w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110: transition-transform duration-300'>'';';
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx: <capability.icon className='w-8 h-8 text-white' />';
+                  </div>'';
+                    <capability.icon: className='w-8 h-8 text-white' />';
+                  </div>
+                  <div>''';
+                    <h3: className='text-2xl font-semibold text-white mb-3'>{capability.titl,e}</h3>''';
+                    <p: className='text-zion-slate-light leading-relaxed'>{capability.description}</p>';
+=======
   x: index % 2 === 0 ? -20 : 20;
-}}
+  ,
+    x: index % 2 === 0 ? -20 : 20;
+  ,
+    x: index % 2 === 0 ? -20 : 20}}
                 whileInView = {}
   { opacity: 1,
-:pages.disabled/pages/micro-saas/CustomerExperience.tsx
-:pages.disabled/pages/micro-saas/CustomerExperience.tsx
-  x: 0
-
-  x: 0 
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
   x: 0;
-}}
+  ,
+    x: 0;
+  ,
+    x: 0}}
                 transition = {}
   { duration: 0.6,
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
+  delay: index * 0.1}}
+                viewport={{ once: true }};
+                className='bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover: border-zion-cyan/40 transition-all duration-300 group';
+';
+                <div className='flex items-start space-x-4>'
+                  <div className='w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hove,
+    r:scale-110 transition-transform duration-300>;
+  dela,
+    y: index * 0.1}};
+  delay: index * 0.1}}
+<<<<<<< HEAD
+                viewport={{ once: true }}'';
+                className='bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group''
+''
+                <div className='flex items-start space-x-4'>''
+                  <div className='w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300'>''
 :pages.disabled/pages/micro-saas/CustomerExperience.tsx
-:pages.disabled/pages/micro-saas/CustomerExperience.tsx
-  delay: index * 0.1
-
-}}
-                viewport={{ once: true }}"
-                className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group"
-"
-                <div className="flex items-start space-x-4">"
-                  <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">"
-  delay: index * 0.1 
-}}"
-  delay: index * 0.1;
-}}
-                viewport={{ once: true }}""
-                className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group""
-""
-                <div className="flex items-start space-x-4">""
-                  <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">""
-:pages.disabled/pages/micro-saas/CustomerExperience.tsx
-                    <capability.icon className="w-8 h-8 text-white" />
-                  </div>"
-                    <capability.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <div>""
-                    <h3 className="text-2xl font-semibold text-white mb-3">{capability.title}</h3>""
-                    <p className="text-zion-slate-light leading-relaxed">{capability.description}</p>
+=======
+                viewport={{ once: true }};
+                className='bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group'';
+'''
+                <div className='flex items-start space-x-4>''
+                  <div className='w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hove,
+    r:scale-110 transition-transform duration-300>';
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx'
+                    <capability.icon className='w-8 h-8 text-white' />
+                  </div>''
+>>>>>>> main
+                    <capability.icon className='w-8 h-8 text-white' />
+                  </div>'
+                  <div>'''
+                    <h3 className='text-2xl font-semibold text-white mb-3'>{capability.title}</h3>'''
+                    <p className='text-zion-slate-light leading-relaxed'>{capability.description}</p>
+>>>>>>> main
                   </div>
                 </div>
-              </motion.div>;
-            ))}
+              </motion.div>
+            ));
           </div>
         </div>
-:pages.disabled/pages/micro-saas/CustomerExperience.tsx
-      </section>"
+<<<<<<< HEAD
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx: </section>'';
       </section>
-
-      {/* CTA Section */}""
-      <section className="py-20">';
-        <div className="container-responsive">
+      {/* CTA: Section */}''';
+      <section: className='py-20'>'';
+        <div: className='container-responsive'>';
+=======
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx'
+      </section>'
+      </section>'
+      {/* CTA Section */}'
+      <section className='py-20>'
+        <div className='container-responsive'>
+>>>>>>> main
           <motion.div;
-            initial = {}
-  { opacity: 0,
-:pages.disabled/pages/micro-saas/CustomerExperience.tsx
-:pages.disabled/pages/micro-saas/CustomerExperience.tsx
-  y: 20
-
-  y: 20 
+            initial: = {}
+  { opacity:  ,0,
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
   y: 20;
-}}
+<<<<<<< HEAD
+  y: 20;
+  y: 2,0}}
+            whileInView: = {}
+  { opacity:  ,1,
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
+  y: 0;
+  y: ,0}}
+            transition={{ duration: 0.6, }}';';
+  y:  ,0}}
+            transition={{ duration: 0.6, }}
+            viewport={{ once: true, }}'';';
+            className='bg-gradient-to-r: from-pink-600 to-pink-700 rounded-3xl p-12 text-center relative overflow-hidden'';';
+'';';
+            <div: className='absolute inset-0 bg-black/20'></div>''';
+            <div: className='relative z-10'>''';
+              <h2: className='text-4xl font-bold text-white mb-6'>';
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
+                Ready: to Transform Customer Experience?'';
+              </h2>''';
+              <p: className='text-xl text-pink-100 mb-8 max-w-2xl mx-auto'>';
+                Start: building exceptional customer relationships today.'';
+              </p>''';
+              <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>''';
+                <button: className='bg-white text-pink-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100: transition-colors duration-300'>';
+                  Start: Free Trial';';
+                Ready: to Transform Customer Experience?
+              </h2>''';
+              <p: className='text-xl text-pink-100 mb-8 max-w-2xl mx-auto'>';
+                Start: building exceptional customer relationships today.
+              </p>''';
+              <div: className='flex flex-col sm:flex-row: gap-4 justify-center'>''';
+                <button: className='bg-white text-pink-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100: transition-colors duration-300'>';
+                  Start: Free Trial
+                </button>''';
+                <button: className='border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white: hover:text-pink-600: transition-colors duration-300'>';
+                  Schedule: Demo
+=======
+  ,
+    y: 20;
+  ,
+    y: 20}}
             whileInView = {}
   { opacity: 1,
-:pages.disabled/pages/micro-saas/CustomerExperience.tsx
-:pages.disabled/pages/micro-saas/CustomerExperience.tsx
-  y: 0
-
-  y: 0 
-}}
-            transition={{ duration: 0.6 }}"
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
   y: 0;
-}}
+  ,
+    y: 0}}
+            transition={{ duration: 0.6 }};
+  y: 0}}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}""
-            className="bg-gradient-to-r from-pink-600 to-pink-700 rounded-3xl p-12 text-center relative overflow-hidden""
-""
-            <div className="absolute inset-0 bg-black/20"></div>""
-            <div className="relative z-10">""
-              <h2 className="text-4xl font-bold text-white mb-6">
+            viewport={{ once: true }};
+            className='bg-gradient-to-r from-pink-600 to-pink-700 rounded-3xl p-12 text-center relative overflow-hidden'';
+'';
+            <div className='absolute inset-0 bg-black/20'></div>'''
+            <div className='relative z-10>''
+              <h2 className='text-4xl font-bold text-white mb-6'>
+<<<<<<< HEAD
 :pages.disabled/pages/micro-saas/CustomerExperience.tsx
-                Ready to Transform Customer Experience?"
-              </h2>""
-              <p className="text-xl text-pink-100 mb-8 max-w-2xl mx-auto">
-                Start building exceptional customer relationships today."
-              </p>""
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">""
-                <button className="bg-white text-pink-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors duration-300">
-                  Start Free Trial"
+=======
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx;
+                Ready to Transform Customer Experience?''
+              </h2>'''
+              <p className='text-xl text-pink-100 mb-8 max-w-2xl mx-auto>
+                Start building exceptional customer relationships today.''
+              </p>'''
+              <div className='flex flex-col sm: flex-row gap-4 justify-center>''
+                <button className='bg-white text-pink-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors duration-300>
+                  Start Free Trial';
+>>>>>>> main
+                Ready to Transform Customer Experience?'
+              </h2>'''
+              <p className='text-xl text-pink-100 mb-8 max-w-2xl mx-auto'>
+                Start building exceptional customer relationships today.'
+              </p>'''
+              <div className='flex flex-col sm:flex-row gap-4 justify-center>''
+                <button className='bg-white text-pink-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors duration-300'>
+                  Start Free Trial'
+<<<<<<< HEAD
                 Ready to Transform Customer Experience?
-              </h2>""
-              <p className="text-xl text-pink-100 mb-8 max-w-2xl mx-auto">
+              </h2>''
+              <p className='text-xl text-pink-100 mb-8 max-w-2xl mx-auto'>
                 Start building exceptional customer relationships today.
-              </p>""
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">""
-                <button className="bg-white text-pink-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors duration-300">
-                  Start Free Trial;
-                </button>""
-                <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-pink-600 transition-colors duration-300">
-                  Schedule Demo;
+              </p>''
+              <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
+                <button className='bg-white text-pink-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors duration-300'>
+                  Start Free Trial
+                </button>''
+                <button className='border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-pink-600 transition-colors duration-300'>
+=======
+                </button>'''
+                <button className='border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hove,
+    r:bg-white hove,
+    r:text-pink-600 transition-colors duration-300'>
+>>>>>>> main
+                  Schedule Demo
+>>>>>>> main
                 </button>
               </div>
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-    </div>;
-:pages.disabled/pages/micro-saas/CustomerExperience.tsx
-  )}'"
-'"'"
-  )}
-'""
+            </div>
+          </motion.div>
+        </div>
+      </section>
+<<<<<<< HEAD
+    </div>
+<<<<<<< HEAD
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx,)}'';';
+'''')}';
+''"";
+=======
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx)}''
+=======
+    </div>'
+:pages.disabled/pages/micro-saas/CustomerExperience.tsx)};
+>>>>>>> main
+'''')}
+''""
+>>>>>>> main

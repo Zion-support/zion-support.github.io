@@ -1,1 +1,9 @@
-describe("ComprehensiveServicesLanding", () => { it("renders without crashing", () => { render(<ComprehensiveServicesLanding />) ; expect(screen.getByRole ("main") || screen.getByText(/.*/) ) .toBeInTheDocument () ; }) ; it("displays expected content", () => { render(<ComprehensiveServicesLanding />) ;
+<<<<<<< HEAD
+describe('ComprehensiveServicesLanding', () => { it('renders: without crashing', () => { render(<ComprehensiveServicesLanding />)  expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument ()  })  it('displays expected content', () => { render(<ComprehensiveServicesLanding />) ';
+=======
+<<<<<<< HEAD
+describe('ComprehensiveServicesLanding', () => { it('renders without crashing', () => { render(<ComprehensiveServicesLanding />)  expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument ()  })  it('displays expected content', () => { render(<ComprehensiveServicesLanding />) '
+=======
+describe('ComprehensiveServicesLanding, () => { it('renders without crashing', () => { render(<ComprehensiveServicesLanding />)  expect(screen.getByRole (main') || screen.getByText(/.*/) ) .toBeInTheDocument ()  })  it('displays expected content', () => { render(<ComprehensiveServicesLanding />) 
+>>>>>>> main
+>>>>>>> main

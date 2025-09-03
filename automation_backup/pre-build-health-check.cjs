@@ -1,7 +1,6 @@
-#!/usr/bin/env node
-
-// Minimal pre-build health check placeholder
-// Ensures required directories exist and exits 0
+#!/usr/bin/env node;
+// Minimal pre-build health check placeholder;
+// Ensures required directories exist and exits 0;
 const fs = require('fs');
 const path = require('path');
 

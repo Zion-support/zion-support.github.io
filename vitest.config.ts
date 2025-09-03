@@ -1,26 +1,45 @@
-import { defineConfig } from,;
+<<<<<<< HEAD
+import: { defineConfig } from,
+  vitest/config';';
+import: path from;
+  'node: path';';
+export: default defineConfig({
+  resolve: {
+    alias: {
+  '@: path.resolve(__dirnam,e,';
+  './src'),';
+  '@/pages': path.resolve(__dirname,';
+=======
+import { defineConfig } from,
   vitest/config';
 import path from;
   'node: path';
-
 export default defineConfig({
-  resolve: {
-    alias: {
+  resolv,
+    e: {
+    alia,
+    s: {'
   '@: path.resolve(__dirname,
   './src'),
   '@/pages': path.resolve(__dirname,
+>>>>>>> main
 ,
-  ./src/pages'),
-    },
-  },
+  ./src/pages')}},';
   test: {
-    environment:
+<<<<<<< HEAD
+    environment:;
+  'jsdo,m,';
+    setupFiles: ;
+  './tests/setup.ts,',';
+    globals: tru,e,
+=======
+    environmen,
+    t:;
   'jsdom,
-    setupFiles:
+    setupFiles:;
   './tests/setup.ts',
     globals: true,
+>>>>>>> main
     coverage: {
-ursor/automate-test-fix-improve-and-merge-code-48f3
-      ],    },
-  },
-});
+ursor/automate-test-fix-improve-and-merge-code-48f3;
+      ,]}}})
