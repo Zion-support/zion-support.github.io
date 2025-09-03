@@ -1,59 +1,75 @@
 import Head from "next/head";
 import React from "react";
-interface SEOEnhancerProps {;
-;
+
+interface SEOEnhancerProps {
   title?: string;
   description?: string;
-  keywords?: string;
+  keywords?: string[];
   ogImage?: string;
   url?: string;
   type?: string;
-  siteName?: string}
-;
-const SEOEnhancer: React.FC<SEOEnhancerProps> = ({",;
-  title = "Zion Tech Group - Leading Technology Solutions Provider",";
-  description = "Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.",";
-  keywords = "technology solutions, AI development, cloud architecture, digital transformation, micro SaaS, IT services",";
-  ogImage = "https:// comment;
-  url = "https:// comment;
-  type = "website",";
-  siteName = "Zion Tech Group";,
-}) => {";
-  const fullTitle = title.includes("Zion Tech Group") ? title : "${title} - Zion Tech Group";
-  const fullUrl = url.startsWith("http") ? url : "https:// comment;
-  return (;
-<Head>;
-      <title>{fullTitle}</title>;
-      <meta name="description" content="{description}"  />;
-      <meta name="keywords" content="{keywords}"  />";
-      <meta name="author" content="Zion Tech Group"  />";
-      <meta name="robots" content="index, follow"  />";
-      <meta name="viewport" content="width=device-width, initial-scale=1"  />;
-      ;
-      {/* comment */}";
-      <meta property="og:title" content="{fullTitle}"  />";
-      <meta property="og:description" content="{description}"  />";
-      <meta property="og:image" content="{ogImage}"  />";
-      <meta property="og:url" content="{fullUrl}"  />";
-      <meta property="og:type" content="{type}"  />";
-      <meta property="og:site_name" content="{siteName}"  />;
-      ;
-      {/* comment */}";
-      <meta name="twitter: card" content="summary_large_image"  />",;
-      <meta name="twitter:title" content="{fullTitle}"  />";
-      <meta name="twitter:description" content="{description}"  />";
-      <meta name="twitter:image" content="{ogImage}"  />;
-      ;
-      {/* comment */}";
-      <link rel="canonical" href="{fullUrl}"  />;
-      ;
-      {/* comment */}";
-      <link rel="icon" href="/favicon.ico"  />";
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"  />";
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"  />";
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"  />";
-      <link rel="manifest" href="/site.webmanifest"  />;
-    </Head>;
-  )}
-"';
-export default SEOEnhancer
+  noindex?: boolean;
+  structuredData?: object;
+}
+
+const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
+  title = "Zion Tech Group - AI & Technology Solutions",
+  description = "Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud architecture, and innovative development services.",
+  keywords = ["AI services", "technology solutions", "enterprise automation", "cybersecurity", "quantum computing", "blockchain solutions", "cloud services", "digital transformation"],
+  ogImage = "/images/zion-tech-group-og.jpg",
+  url = "https://ziontechgroup.com",
+  type = "website",
+  noindex = false,
+  structuredData
+}) => {
+  const fullTitle = `${title} | Zion Tech Group`;
+
+  return (
+    <Head>
+      <title>{fullTitle}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords.join(', ')} />
+      <meta name="author" content="Zion Tech Group" />
+      <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, follow`} />
+      <link rel="canonical" href={url} />
+
+      {/* Open Graph */}
+      <meta property="og:title" content={fullTitle} />
+      <meta property="og:description" content={description} />
+      <meta property="og:type" content={type} />
+      <meta property="og:image" content={ogImage} />
+      <meta property="og:url" content={url} />
+      <meta property="og:site_name" content="Zion Tech Group" />
+
+      {/* Twitter Card */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={ogImage} />
+
+      {/* Additional Meta Tags */}
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="theme-color" content="#2563eb" />
+      <meta name="msapplication-TileColor" content="#2563eb" />
+
+      {/* Structured Data */}
+      {structuredData && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData)
+          }}
+        />
+      )}
+
+      {/* Favicon */}
+      <link rel="icon" href="/favicon.ico" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      <link rel="manifest" href="/site.webmanifest" />
+    </Head>
+  );
+};
+
+export default SEOEnhancer;

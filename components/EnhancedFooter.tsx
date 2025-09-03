@@ -1,222 +1,185 @@
 import React from "react";
-  FileText,;
-  HelpCircle} from "lucide-react";
-export default function EnhancedFooter() {;
+import Link from "next/link";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Linkedin,
+  Twitter,
+  Github,
+  Facebook,
+  ArrowUp,
+  FileText,
+  HelpCircle
+} from "lucide-react";
 
-  const scrollToTop = () => {";
-    window.scrollTo({ top: 0, behavior: "smooth" });,
-}
-  const currentYear = new Date().getFullYear();,
-}
-  const footerLinks = {},";
-      { name: "IT Services", href: "/services/it-services" },";
-      { name: "Micro SaaS", href: "/services/micro-saas" },";
-      { name: "Web Development", href: "/services/web-development" },";
-      { name: "Cloud Services", href: "/services/cloud-services" },";
-      { name: "AI Development", href: "/services/ai-development" }],;
-    solutions: [",;
-      { name: "AI Content Creation", href: "/solutions/ai-content-creation" },";
-      { name: "Customer Support", href: "/solutions/customer-support" },";
-      { name: "Email Automation", href: "/solutions/email-automation" },";
-      { name: "Event Management", href: "/solutions/event-management" },";
-      { name: "Project Management", href: "/solutions/project-management" },";
-      { name: "Workflow Automation", href: "/solutions/workflow-automation" }],;
-    company: [",;
-      { name: "About Us", href: "/about" },";
-      { name: "Careers", href: "/careers" },";
-      { name: "Partners", href: "/partners" },";
-      { name: "Contact", href: "/contact" },";
-      { name: "Blog", href: "/blog" }],;
-    resources: [",;
-      { name: "Help Center", href: "/help" },";
-      { name: "Pricing Guide", href: "/pricing-guide" },";
-      { name: "Search", href: "/search" },";
-      { name: "Sitemap", href: "/sitemap" }],;
-    legal: [",;
-      { name: "Privacy Policy", href: "/privacy" },";
-      { name: "Terms of Service", href: "/terms" },";
-      { name: "Cookie Policy", href: "/cookies" }]}
-;
-  const socialLinks = [];
+export default function EnhancedFooter() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
-  return (;
-    <footer className="bg-gray-900 text-white">";
-      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">";
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">,;
-          {/* comment */}";
-          <div className="lg: col-span-2">";
-            <div className="flex items-center space-x-2 mb-4">";
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">";
-                <span className="text-white font-bold text-lg">Z</span>;
-              </div>;
-              <div>";
-                <span className="text-xl font-bold">Zion Tech Group</span>";
-                <div className="text-xs text-gray-400">;
-                  Technology Solutions,;
-                </div>;
-            </div>";
-            <p className="text-gray-400 mb-6 max-w-md">,;
-              Leading technology solutions provider specializing in AI,;
-              cybersecurity, cloud infrastructure, and digital transformation,;
-services. We help businesses innovate, scale, and succeed in the,;
-digital age.;
-            </p>";
-            <div className="space-y-3">";
-              <div className="flex items-center space-x-3 text-gray-400">";
-                <Phone className="w-4 h-4"  />";
-                <a href="tel: +13024640950;
-                  className="hover:text-white transition-colors">;
-                  +1 (302) 464-0950,;
-                </a>;
-              </div>";
-              <div className="flex items-center space-x-3 text-gray-400">";
-                <Mail className="w-4 h-4"  />";
-                <a href="mailto: kleber@ziontechgroup.com;
-                  className="hover:text-white transition-colors">;
-                  kleber@ziontechgroup.com,;
-                </a>;
-              </div>";
-              <div className="flex items-center space-x-3 text-gray-400">";
-                <MapPin className="w-4 h-4"  />,;
-                <span>364 E Main St STE 1008, Middletown DE 19709</span>;
-              </div>;
-          {/* comment */}
-;
-          <div>";
-            <h3 className="text-lg font-semibold mb-4 flex items-center">";
-              <Globe className="w-5 h-5 mr-2 text-blue-400"  />;
-              Services,;
-            </h3>";
-            <ul className="space-y-2">;
-              {footerLinks.services.map(link => (";
-                <li key="{link.name}">";
-                  <Link href="{link.href}
-                    className="text-gray-400 hover: text-white transition-colors text-sm">,;
-                    {link.name}
-;
-                  </Link>;
-                </li>;
-              ))}
-;
-            </ul>;
-          </div>;
-          {/* comment */}
-;
-          <div>";
-            <h3 className="text-lg font-semibold mb-4 flex items-center">";
-              <Shield className="w-5 h-5 mr-2 text-green-400"  />;
-              Solutions,;
-            </h3>";
-            <ul className="space-y-2">;
-              {footerLinks.solutions.map(link => (";
-                <li key="{link.name}">";
-                  <Link href="{link.href}
-                    className="text-gray-400 hover: text-white transition-colors text-sm">,;
-                    {link.name}
-;
-                  </Link>;
-                </li>;
-              ))}
-;
-            </ul>;
-          </div>;
-          {/* comment */}
-;
-          <div>";
-            <h3 className="text-lg font-semibold mb-4 flex items-center">";
-              <FileText className="w-5 h-5 mr-2 text-purple-400"  />;
-              Company,;
-            </h3>";
-            <ul className="space-y-2">;
-              {footerLinks.company.map(link => (";
-                <li key="{link.name}">";
-                  <Link href="{link.href}
-                    className="text-gray-400 hover: text-white transition-colors text-sm">,;
-                    {link.name}
-;
-                  </Link>;
-                </li>;
-              ))}
-;
-            </ul>;
-          </div>;
-          {/* comment */}
-;
-          <div>";
-            <h3 className="text-lg font-semibold mb-4 flex items-center">";
-              <HelpCircle className="w-5 h-5 mr-2 text-yellow-400"  />;
-              Resources,;
-            </h3>";
-            <ul className="space-y-2 mb-6">;
-              {footerLinks.resources.map(link => (";
-                <li key="{link.name}">";
-                  <Link href="{link.href}
-                    className="text-gray-400 hover: text-white transition-colors text-sm">,;
-                    {link.name}
-;
-                  </Link>;
-                </li>;
-              ))}
-;
-            </ul>";
-            <h4 className="text-md font-semibold mb-3 text-gray-300">Legal</h4>";
-            <ul className="space-y-2">;
-              {footerLinks.legal.map(link => (";
-                <li key="{link.name}">";
-                  <Link href="{link.href}
-                    className="text-gray-400 hover: text-white transition-colors text-sm">,;
-                    {link.name}
-;
-                  </Link>;
-                </li>;
-              ))}
-;
-            </ul>;
-          </div>;
-        {/* comment */}";
-        <div className="border-t border-gray-800 mt-12 pt-8">";
-          <div className="max-w-2xl mx-auto text-center mb-8">";
-            <h3 className="text-xl font-semibold mb-2">Stay Updated</h3>";
-            <p className="text-gray-400 mb-4">;
-              Subscribe to our newsletter for the latest technology insights and,;
-company updates.;
-            </p>";
-            <form className="flex flex-col sm: flex-row gap-3 max-w-md mx-auto">";
-              <input type="email;
-                placeholder="Enter your email;
-                className="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"  />";
-              <button type="submit;
-                className="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors">;
-                Subscribe,;
-              </button>;
-            </form>;
-          </div>;
-,;
-        {/* comment */}";
-        <div className="border-t border-gray-800 pt-8">";
-          <div className="flex flex-col md: flex-row justify-between items-center">";
-            <div className="text-gray-400 text-sm mb-4 md:mb-0">,;
-              © {currentYear} Zion Tech Group. All rights reserved.;
-            </div>";
-            <div className="flex items-center space-x-6">";
-              <div className="flex items-center space-x-4">;
-                {socialLinks.map(social => (";
-                  <a key="{social.name}
-                    href="{social.href}
-                    target="_blank;
-                    rel="noopener noreferrer;
-                    className="text-gray-400 hover: text-white transition-colors"">;
-                    aria-label="{social.name}">";
-                    <social.icon className="w-5 h-5" />;
-                  </a>;
-                ))}
-;
-              </div>;
-      {/* comment */}";
-      <button onClick="{scrollToTop}
-        className="fixed bottom-8 right-8 bg-blue-600 hover: bg-blue-700 text-white p-3 rounded-full shadow-lg transition-colors z-50;
-        aria-label="Scroll to top">";
-        <ArrowUp className="w-5 h-5"  />;
-      </button>,;
-    </footer>,,;
-  )}"'
+  const currentYear = new Date().getFullYear();
+
+  return (
+    <footer className="bg-black border-t border-white/10">
+      <div className="container mx-auto px-4">
+        {/* Main Footer Content */}
+        <div className="py-16 grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Company Info */}
+          <div className="lg:col-span-1">
+            <Link href="/" className="flex items-center space-x-2 mb-6">
+              <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-lg">Z</span>
+              </div>
+              <span className="text-white font-bold text-2xl">Zion Tech</span>
+            </Link>
+            <p className="text-gray-400 mb-6 leading-relaxed">
+              Leading technology solutions provider helping businesses transform their digital presence
+              with cutting-edge AI, cloud architecture, and innovative development services.
+            </p>
+            <div className="flex space-x-4">
+              <a
+                href="https://linkedin.com/company/ziontechgroup"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-blue-600 transition-all duration-300"
+                aria-label="LinkedIn">
+                <Linkedin className="w-5 h-5" />
+              </a>
+              <a
+                href="https://twitter.com/ziontechgroup"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-blue-600 transition-all duration-300"
+                aria-label="Twitter">
+                <Twitter className="w-5 h-5" />
+              </a>
+              <a
+                href="https://github.com/ziontechgroup"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-blue-600 transition-all duration-300"
+                aria-label="GitHub">
+                <Github className="w-5 h-5" />
+              </a>
+              <a
+                href="https://facebook.com/ziontechgroup"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-blue-600 transition-all duration-300"
+                aria-label="Facebook">
+                <Facebook className="w-5 h-5" />
+              </a>
+            </div>
+          </div>
+
+          {/* Services */}
+          <div>
+            <h3 className="text-white font-semibold text-lg mb-6">Services</h3>
+            <ul className="space-y-3">
+              <li>
+                <Link href="/services/ai-services" className="text-gray-400 hover:text-white transition-colors">
+                  AI Services
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/it-services" className="text-gray-400 hover:text-white transition-colors">
+                  IT Services
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/micro-saas" className="text-gray-400 hover:text-white transition-colors">
+                  Micro SaaS
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/cloud-services" className="text-gray-400 hover:text-white transition-colors">
+                  Cloud Services
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/cybersecurity" className="text-gray-400 hover:text-white transition-colors">
+                  Cybersecurity
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Resources */}
+          <div>
+            <h3 className="text-white font-semibold text-lg mb-6">Resources</h3>
+            <ul className="space-y-3">
+              <li>
+                <Link href="/blog" className="text-gray-400 hover:text-white transition-colors flex items-center">
+                  <FileText className="w-4 h-4 mr-2" />
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link href="/documentation" className="text-gray-400 hover:text-white transition-colors">
+                  Documentation
+                </Link>
+              </li>
+              <li>
+                <Link href="/case-studies" className="text-gray-400 hover:text-white transition-colors">
+                  Case Studies
+                </Link>
+              </li>
+              <li>
+                <Link href="/help" className="text-gray-400 hover:text-white transition-colors flex items-center">
+                  <HelpCircle className="w-4 h-4 mr-2" />
+                  Help Center
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact Info */}
+          <div>
+            <h3 className="text-white font-semibold text-lg mb-6">Contact</h3>
+            <div className="space-y-4">
+              <div className="flex items-center space-x-3">
+                <Mail className="w-5 h-5 text-gray-400" />
+                <span className="text-gray-400">contact@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Phone className="w-5 h-5 text-gray-400" />
+                <span className="text-gray-400">+1 (555) 123-4567</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <MapPin className="w-5 h-5 text-gray-400" />
+                <span className="text-gray-400">San Francisco, CA</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Footer */}
+        <div className="py-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center">
+          <div className="text-gray-400 text-sm">
+            © {currentYear} Zion Tech Group. All rights reserved.
+          </div>
+          <div className="flex space-x-6 mt-4 md:mt-0">
+            <Link href="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
+              Privacy Policy
+            </Link>
+            <Link href="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
+              Terms of Service
+            </Link>
+            <Link href="/cookies" className="text-gray-400 hover:text-white text-sm transition-colors">
+              Cookie Policy
+            </Link>
+          </div>
+        </div>
+
+        {/* Back to Top Button */}
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-6 right-6 w-12 h-12 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-lg transition-all duration-300 flex items-center justify-center"
+          aria-label="Back to top">
+          <ArrowUp className="w-6 h-6" />
+        </button>
+      </div>
+    </footer>
+  );
+}

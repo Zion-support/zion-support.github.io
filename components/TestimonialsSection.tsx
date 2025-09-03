@@ -1,169 +1,148 @@
 import React from "react";
-// comment;
-interface ApiResponse<T = unknown> {;
-  data: T,;
-  statu,;
-    s: number,  message?: string}
-;
-interface User {;
-;
-  id: string,;
-  email: string,;
-  nam,;
-    e: string,;
-  rol,";
-    e: "admin" | "user" | "guest"}
-;
-interface Service {;
-;
-  id: string,;
-  email: string,;
-  nam,;
-    e: string,;
-  rol,";
-    e: "admin" | "user" | "guest"}
-;
-interface Service {;
+import { Star, Quote } from "lucide-react";
 
-  name: string,;
-  description: string,;
-  pric,;
-    e: number,;
-  categor,    y: string}
-;
-interface FormData {;
-;
-  [key: string]: string | number | boolean | File}
-;
-interface ComponentProps {;
-  className?: string;
-  children?: React.ReactNode [key: string]: unknown}
-;
-";
+interface Testimonial {
+  id: string;
+  name: string;
+  company: string;
+  position: string;
+  content: string;
+  rating: number;
+  image?: string;
+}
 
-const TestimonialsSection: React.FC: = () => {;
-  const testimonials = [];
-  return(";
-    <section: className = "py-20 bg-white">",";
-      <div: className="max-w-7xl mx-auto px-4 sm: px-6: lg:px-8">",;
-        <motion.div: initial="{{" opacity: ,0, y: 20}}";
-          animate="{{" opacity:  ,1, y: 0}}";
-          transition="{{" duration: 0.8}}">;
-          className="text-center: mb-16">",",;
-          <h2: className="text-3xl md: text-4xl: font-bold text-gray-900 mb-4">",,;
-What: Our Clients Say,;
-          </h2>",;
-          <p className = "text-xl text-gray-600 max-w-3xl mx-auto">",";
-            Don"t: just take our word for it. Here"s what our satisfied clients have to say about working with us.",;
-          </p>;
-        </motion.div>";
-        <div: className="grid grid-cols-1 md:grid-cols-3: gap-8">" {testimonials.map((testimonia,l, index) => (";
-            <motion.div: key="{testimonial.name}
-              initial="{{" opacity:  ,0, y: 20}}";
-              transition="{{" duration: 0.,6, delay: index: * 0.1}}
-;
-            >";
-              <Card className="h-full hover: shadow-lg: transition-shadow duration-300">",";
-                <CardContent: className="p-6">",";
-                  <div: className="flex items-center mb-4">" {[...Array(testimonial.rating)].map((,_, i) => (;
-                      <Star: key="{i}" className="h-5 w-5 text-yellow-400 fill-current" />";
-                    ))}
-;
-                  </div>";
-                  <blockquote: className = "text-gray-600 mb-6 italic">",";
-                    "{testimonial.content}
-                  </blockquote>";
-                  <div: className = "flex items-center">",";
-                    <div: className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold mr-4">" {",;
-    e: "Sarah Johnson" {,";
-name: "Sarah Johnson",";
-      role: "CEO",";
-      company: "TechStart Inc.",;
-      content: ",;
-        "Zion Tech Group transformed our entire digital infrastructure. Their AI solutions increased our efficiency by 40% and their cloud migration was seamless.",";
-      compunknown: "TechStart Inc.",";
-      content: "Zion Tech Group transformed our entire digital infrastructure. Their AI solutions increased our efficiency by 40% and their cloud migration was seamless.",;
-      rating: 5,";
-      avatar: "/api/placeholder/64/64"} {;
-      name: "Michael Chen",";
-      role: "CTO",";
-      company: "DataCorp",";
-        "The cybersecurity audit they performed saved us from a potential breach. Their expertise and attention to detail are unmatched.",";
-      compunknown: "DataCorp",";
-      content: "The cybersecurity audit they performed saved us from a potential breach. Their expertise and attention to detail are unmatched.",";
-      name: "Emily Rodriguez",";
-      role: "VP of Operations",";
-      company: "GrowthCo",";
-        "Their custom development team delivered exactly what we needed, on time and within budget. Highly recommend their services.",";
-      compunknown: "GrowthCo",";
-      content: "Their custom development team delivered exactly what we needed, on time and within budget. Highly recommend their services.",";
-      avatar: "/api/placeholder/64/64"}];
-  ]";
-  return (;
-    <section className="py-20 bg-white">;
-      <div className="max-w-7xl mx-auto px-4 sm: px-6 l,";
-    g: px-8">;
-  return (";
-    <section className="py-20 bg-white">";
-      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">,;
-        <motion.div,";
-initial="{{" opacit>;
-    y: 0, y: 20 }}";
-          animate="{{" opacity: 1, y: 0 }}";
-          transition="{{" duration: 0.8 }}
-          className="text-center mb-16;
-        >;
-          <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">;
-            What Our Clients Say";
-          </h2>;
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">",;
-            Don"t just take our word for it. Here"s what our satisfied clients,;
-have to say about working with us.";
-        </motion.div>;
-        <div className="grid grid-cols-1 m,";
-    d: grid-cols-3 gap-8">";
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">,;
-            Don&apos,t just take our word for it. Here&apos,s what our satisfied,;
-clients have to say about working with us.";
-        <div className="grid grid-cols-1 md: grid-cols-3 gap-8">";
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">,;
-          {testimonials.map((testimonial, index) => (";
-              key="{testimonial.name}
-              initial="{{" opacity: 0, y: 20 }}";
-              transition="{{" duration: 0.6, delay: index * 0.1 }}";
-              <Card className="h-full hover: shadow-lg transition-shadow duration-300">;
-                <CardContent className="p-6">;
-                  <div className="flex items-center mb-4">,;
-                    {[...Array(testimonial.rating)].map((_, i) => (";
-                      <Star key={i}
-                        className="h-5 w-5 text-yellow-400 fill-current"  />";
-                  </div>;
-                  <blockquote className="text-gray-600 mb-6 italic">;
-                    "{testimonial.content}";
-                  </blockquote>;
-                  <div className="flex items-center">;
-                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold mr-4">;
-                      {testimonial.name.charAt(0)}";
-                    <div>;
-                      <div className="font-semibold text-gray-900">{testimonial.name}</div>";
-                    <div>";
-                      <div: className="font-semibold text-gray-900">{testimonial.name}</div>";
-                      <div: className="text-sm text-gray-500">{testimonial.role} {testimonial.company}</div>";";
-                      <div className = "font-semibold text-gray-900">;
-                        {testimonial.name}";
-                      <div className="text-sm text-gray-500">;
-                        {testimonial.role} {testimonial.compunknown}
-;
-                        {testimonial.role} {testimonial.company}";
-                      <div className="font-semibold text-gray-900">{testimonial.name}</div>";
-                      <div className="text-sm text-gray-500">{testimonial.role} {testimonial.compunknown}</div>;
-                </CardContent>;
-              </Card>;
-    </section>  )}
-;
-export: default TestimonialsSection,;
-  )}
-;
-export default TestimonialsSection,;
-export default TestimonialsSection;}}})))))))
+const TestimonialsSection: React.FC = () => {
+  const testimonials: Testimonial[] = [
+    {
+      id: "1",
+      name: "Sarah Johnson",
+      company: "TechCorp Inc.",
+      position: "CTO",
+      content: "Zion Tech Group transformed our entire infrastructure. Their AI solutions helped us reduce costs by 40% while improving efficiency. Highly recommended!",
+      rating: 5,
+      image: "/images/testimonials/sarah-johnson.jpg"
+    },
+    {
+      id: "2",
+      name: "Michael Chen",
+      company: "StartupXYZ",
+      position: "Founder",
+      content: "The team at Zion Tech Group delivered an exceptional micro SaaS solution that scaled perfectly with our growth. Their expertise is unmatched.",
+      rating: 5,
+      image: "/images/testimonials/michael-chen.jpg"
+    },
+    {
+      id: "3",
+      name: "Emily Rodriguez",
+      company: "Enterprise Solutions",
+      position: "VP of Technology",
+      content: "Outstanding cybersecurity implementation. They identified vulnerabilities we didn't even know existed and provided comprehensive protection.",
+      rating: 5,
+      image: "/images/testimonials/emily-rodriguez.jpg"
+    },
+    {
+      id: "4",
+      name: "David Kim",
+      company: "Global Corp",
+      position: "IT Director",
+      content: "The cloud migration was seamless. Zion Tech Group's expertise in AWS and Azure saved us months of work and potential downtime.",
+      rating: 5,
+      image: "/images/testimonials/david-kim.jpg"
+    },
+    {
+      id: "5",
+      name: "Lisa Thompson",
+      company: "Innovation Labs",
+      position: "Head of Development",
+      content: "Their AI development services are top-notch. The machine learning models they built for us are delivering incredible results.",
+      rating: 5,
+      image: "/images/testimonials/lisa-thompson.jpg"
+    },
+    {
+      id: "6",
+      name: "Robert Wilson",
+      company: "Data Systems",
+      position: "CEO",
+      content: "Professional, reliable, and innovative. Zion Tech Group has been our technology partner for over two years and we couldn't be happier.",
+      rating: 5,
+      image: "/images/testimonials/robert-wilson.jpg"
+    }
+  ];
+
+  const renderStars = (rating: number) => {
+    return Array.from({ length: 5 }, (_, index) => (
+      <Star
+        key={index}
+        className={`w-4 h-4 ${
+          index < rating ? 'text-yellow-400 fill-current' : 'text-gray-300'
+        }`}
+      />
+    ));
+  };
+
+  return (
+    <section className="py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            What Our Clients Say
+          </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Don't just take our word for it. Here's what our satisfied clients have to say about working with us.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {testimonials.map((testimonial) => (
+            <div
+              key={testimonial.id}
+              className="bg-gray-50 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow"
+            >
+              <div className="flex items-center mb-4">
+                <div className="flex space-x-1">
+                  {renderStars(testimonial.rating)}
+                </div>
+              </div>
+
+              <div className="mb-6">
+                <Quote className="w-8 h-8 text-blue-500 mb-4" />
+                <p className="text-gray-700 italic leading-relaxed">
+                  "{testimonial.content}"
+                </p>
+              </div>
+
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
+                  <span className="text-white font-semibold text-lg">
+                    {testimonial.name.charAt(0)}
+                  </span>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900">{testimonial.name}</h4>
+                  <p className="text-sm text-gray-600">{testimonial.position}</p>
+                  <p className="text-sm text-blue-600 font-medium">{testimonial.company}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="text-center mt-16">
+          <div className="bg-blue-50 rounded-lg p-8 max-w-4xl mx-auto">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              Ready to Join Our Success Stories?
+            </h3>
+            <p className="text-gray-600 mb-6">
+              Let's discuss how we can help transform your business with our technology solutions.
+            </p>
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+              Start Your Project
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default TestimonialsSection;

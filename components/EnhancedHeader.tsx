@@ -1,256 +1,142 @@
 import React, { useState, useEffect } from "react";
-  User,;
-  ShoppingCart,;,
+import Link from "next/link";
+import { useRouter } from "next/router";
+import {
+  Brain,
+  Menu,
+  X,
+  User,
+  ShoppingCart,
+  Search,
+  Bell
 } from "lucide-react";
-export default function EnhancedHeader() {;
 
-  const router = useRouter();,
-}
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);,
-}
-  const [searchQuery, setSearchQuery] = useState("");,
-}
-  const [scrolled, setScrolled] = useState(false);,
-}
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);,
-}
-  useEffect(() => {;
-    const handleScroll = () => {;
-      setScrolled(window.scrollY > 50);,
-}
-;
-    window.addEventListener("scroll", handleScroll);,
-}
-    return () => window.removeEventListener("scroll", handleScroll);,
-}
-  }, []);,
-}
-  const handleSearch = async (e: React.FormEvent) => {,;
-    e.preventDefault(),;
-    if (searchQuery.trim()) {;
-      router.push("/search?q="${encodeURIComponent(searchQuery.trim())}");";,
-}
-;
-  const toggleDropdown = (itemName: string) => {,,;
-    setActiveDropdown(activeDropdown === itemName ? null : itemName)}
-;
-  const navigation = [],;,
-},;
-    {";
-      name: "Solutions",";
-      href: "/solutions",;
-      dropdown: [",;
-        { name: "AI Content Creation", href: "/solutions/ai-content-creation" },";
-        { name: "Customer Support", href: "/solutions/customer-support" },";
-        { name: "Email Automation", href: "/solutions/email-automation" },";
-        { name: "Event Management", href: "/solutions/event-management" },";
-        { name: "Project Management", href: "/solutions/project-management" },";
-        { name: "Workflow Automation", href: "/solutions/workflow-automation" },;
-      ],;,
-},";
-    { name: "About", href: "/about" },";
-    { name: "Blog", href: "/blog" },";
-    { name: "Careers", href: "/careers" },";
-    { name: "Contact", href: "/contact" },;
+export default function EnhancedHeader() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const router = useRouter();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const navigation = [
+    { name: 'Services', href: '/services' },
+    { name: 'Solutions', href: '/solutions' },
+    { name: 'About', href: '/about' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Contact', href: '/contact' }
   ];
 
-  return (";
-    <header className = "{"fixed" w-full z-50 transition-all duration-300 ${";
-        scrolled ? "bg-white shadow-lg" : "bg-white/95 backdrop-blur-sm">;,
-}"}
-;
-    >";
-      <div className = "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";
-        <div className="flex justify-between items-center py-4">,;
-          {/* comment */}";
-          <div className="flex items-center">";
-            <Link href="/" className="flex items-center space-x-2">";
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">";
-                <span className="text-white font-bold text-lg">Z</span>;
-              </div>";
-              <div className="hidden sm: block">";
-                <span className="text-xl font-bold text-gray-900">;
-                  Zion Tech Group,;
-                </span>";
-                <div className="text-xs text-gray-500">;
-                  Technology Solutions,;
-                </div>;
-            </Link>;
-          </div>;
-,;
-          {/* comment */}";
-          <nav className="hidden lg: flex items-center space-x-1">;
-            {navigation.map(item => (",;
-              <div key="{item.name}" className="relative">;
-                {item.dropdown ? (";
-                  <div className="{"relative"">";
-                    <button onClick="{()" => toggleDropdown(item.name)}";
-                      className="{"text-sm" font-medium px-4 py-2 rounded-md transition-colors flex items-center ${;
-                        router.pathname === item.href ||";
-                        router.pathname.startsWith(item.href + "/")";
-                          ? "text-blue-600 bg-blue-50;
-                          : "text-gray-700 hover: text-blue-600 hover:bg-gray-50"}"}
-;
-                    >;
-                      {item.name}";
-                      <ChevronDown className=""ml-1" h-4 w-4"}       />;
-                    </button>;
-                    {activeDropdown === item.name && (";
-                      <div className="absolute top-full left-0 mt-1 w-56 bg-white rounded-lg shadow-lg py-2 z-50 border">;
-                        {item.dropdown.map(dropdownItem => (";
-                          <Link key="{dropdownItem.name}
-                            href="{dropdownItem.href}
-                            className="{"block" px-4 py-2 text-sm text-gray-700 hover: bg-blue-50 hover:text-blue-600 transition-colors"">;
-                            onClick="{()" => setActiveDropdown(null)}
-;
-                          >;
-                            {dropdownItem.name}
-;
-                          </Link>;
-                        ))}
-;
-                      </div>;
-                    )}
-;
-                  </div>;
-                ) : (";
-                  <Link href="{item.href}
-                    className="{"text-sm" font-medium px-4 py-2 rounded-md transition-colors ${;
-                      router.pathname === item.href";
-                        ? "text-blue-600 bg-blue-50;
-                        : "text-gray-700 hover: text-blue-600 hover:bg-gray-50"}"}
-;
-                  >;
-                    {item.name}
-;
-                  </Link>;
-                )}
-;
-              </div>;
+  return (
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled 
+        ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200' 
+        : 'bg-white/80 backdrop-blur-sm border-b border-gray-200'
+    }`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <Link href="/" className="flex items-center space-x-2">
+            <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
+              <Brain className="w-5 h-5 text-white" />
+            </div>
+            <span className="font-bold text-xl text-gray-900">Zion Tech Group</span>
+          </Link>
+
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center space-x-8">
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className={`text-sm font-medium transition-colors ${
+                  router.pathname === item.href
+                    ? 'text-blue-600'
+                    : 'text-gray-700 hover:text-blue-600'
+                }`}
+              >
+                {item.name}
+              </Link>
             ))}
-;
-          </nav>;
-          {/* comment */}";
-          <div className=""hidden" md: flex items-center space-x-4"}>";
-            <form onSubmit="{handleSearch}" className="relative">";
-              <input type="text;
-                placeholder="Search...;
-                value="{searchQuery}
-                onChange="{e" => setSearchQuery(e.target.value)}";
-                className="w-64 px-4 py-2 pl-10 text-sm border border-gray-300 rounded-lg focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />";
-              <Search className="absolute left-3 top-2.5 h-4 w-4 text-gray-400"  />;
-            </form>";
-            <div className="flex items-center space-x-3 text-sm text-gray-600">";
-              <a href="tel:+13024640950;
-                className="flex items-center space-x-1 hover:text-blue-600 transition-colors">";
-                <Phone className="h-4 w-4"  />";
-                <span className="hidden lg:inline">+1 (302) 464-0950</span>;
-              </a>";
-              <a href="mailto: kleber@ziontechgroup.com;
-                className="flex items-center space-x-1 hover:text-blue-600 transition-colors">";
-                <Mail className="h-4 w-4"  />";
-                <span className="hidden lg:inline">Contact</span>;
-              </a>;
-            </div>;
-,;
-          {/* comment */}";
-          <button onClick="{()" => setMobileMenuOpen(!mobileMenuOpen)}";
-            className="lg: hidden p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100">;
-            {mobileMenuOpen ? (";
-              <X className="h-6 w-6"  />;
-            ) : (";
-              <Menu className="h-6 w-6"  />,;
-            )}
-;
-          </button>;
-        </div>;
-        {/* comment */}
-;
-        {mobileMenuOpen && (";
-          <div className="lg: hidden">";
-            <div className="{"px-2" pt-2 pb-3 space-y-1 bg-white border-t">;
-              {navigation.map(item => (",;
-                <div key="{item.name}">;
-                  {item.dropdown ? (;
-                    <div>";
-                      <button onClick="{()" => toggleDropdown(item.name)}";
-                        className="{"w-full" flex items-center justify-between px-3 py-2 text-base font-medium rounded-md ${;
-                          router.pathname === item.href ||";
-                          router.pathname.startsWith(item.href + "/")";
-                            ? "text-blue-600 bg-blue-50;
-                            : "text-gray-700 hover: text-blue-600 hover:bg-gray-50"}"}
-;
-                      >;
-                        {item.name}";
-                        <ChevronDown className=""h-4" w-4"}       />;
-                      </button>;
-                      {activeDropdown === item.name && (";
-                        <div className="pl-4 space-y-1">;
-                          {item.dropdown.map(dropdownItem => (";
-                            <Link key="{dropdownItem.name}
-                              href="{dropdownItem.href}
-                              className="{"block" px-3 py-2 text-sm text-gray-600 hover: text-blue-600 hover:bg-gray-50 rounded-md;
-                              onClick="{()" => {,;
-                                setMobileMenuOpen(false),;
-                                setActiveDropdown(null)}}
-;
-                            >;
-                              {dropdownItem.name}
-;
-                            </Link>;
-                          ))}
-;
-                        </div>;
-                      )}
-;
-                    </div>;
-                  ) : (";
-                    <Link href="{item.href}
-                      className="{"block" px-3 py-2 text-base font-medium rounded-md ${;
-                        router.pathname === item.href";
-                          ? "text-blue-600 bg-blue-50;
-                          : "text-gray-700 hover: text-blue-600 hover:bg-gray-50"}"}";
-                      onClick="{()" => setMobileMenuOpen(false)}
-;
-                    >;
-                      {item.name}
-;
-                    </Link>;
-                  )}
-;
-                </div>;
+          </nav>
+
+          {/* Desktop Actions */}
+          <div className="hidden md:flex items-center space-x-4">
+            <button className="p-2 text-gray-600 hover:text-gray-900 transition-colors">
+              <Search className="w-5 h-5" />
+            </button>
+            <button className="p-2 text-gray-600 hover:text-gray-900 transition-colors">
+              <Bell className="w-5 h-5" />
+            </button>
+            <button className="p-2 text-gray-600 hover:text-gray-900 transition-colors">
+              <User className="w-5 h-5" />
+            </button>
+            <Link
+              href="/contact"
+              className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors"
+            >
+              Get Started
+            </Link>
+          </div>
+
+          {/* Mobile menu button */}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden p-2 text-gray-600 hover:text-gray-900 transition-colors"
+            aria-label="Toggle menu"
+          >
+            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
+
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <div className="md:hidden border-t border-gray-200 bg-white">
+            <div className="px-2 pt-2 pb-3 space-y-1">
+              {navigation.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                    router.pathname === item.href
+                      ? 'text-blue-600 bg-blue-50'
+                      : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+                  }`}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
               ))}
-;
-              {/* comment */}";
-              <div className=""px-3" py-2"}>";
-                <form onSubmit="{handleSearch}" className="relative">";
-                  <input type="text;
-                    placeholder="Search...;
-                    value="{searchQuery}
-                    onChange="{e" => setSearchQuery(e.target.value)}";
-                    className="w-full px-4 py-2 pl-10 text-sm border border-gray-300 rounded-lg focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />";
-                  <Search className="absolute left-3 top-2.5 h-4 w-4 text-gray-400"  />;
-                </form>;
-              </div>;
-,;
-              {/* comment */}";
-              <div className="px-3 py-2 space-y-2">";
-                <a href="tel: +13024640950;
-                  className="flex items-center space-x-2 text-sm text-gray-600 hover:text-blue-600">";
-                  <Phone className="h-4 w-4"  />;
-                  <span>+1 (302) 464-0950</span>;
-                </a>";
-                <a href="mailto: kleber@ziontechgroup.com;
-                  className="flex items-center space-x-2 text-sm text-gray-600 hover:text-blue-600">";
-                  <Mail className="h-4 w-4"  />;
-                  <span>kleber@ziontechgroup.com</span>;
-                </a>;
-              </div>;
-          </div>,;
+              <div className="pt-4 border-t border-gray-200">
+                <div className="flex items-center space-x-4 px-3">
+                  <button className="p-2 text-gray-600 hover:text-gray-900 transition-colors">
+                    <Search className="w-5 h-5" />
+                  </button>
+                  <button className="p-2 text-gray-600 hover:text-gray-900 transition-colors">
+                    <Bell className="w-5 h-5" />
+                  </button>
+                  <button className="p-2 text-gray-600 hover:text-gray-900 transition-colors">
+                    <User className="w-5 h-5" />
+                  </button>
+                </div>
+                <Link
+                  href="/contact"
+                  className="block mt-4 mx-3 bg-blue-600 text-white px-4 py-2 rounded-lg text-center font-medium hover:bg-blue-700 transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Get Started
+                </Link>
+              </div>
+            </div>
+          </div>
         )}
-;
-      </div>;
-    </header>;
-  );,
-}
+      </div>
+    </header>
+  );
 }

@@ -1,284 +1,43 @@
-import React, { useEffect } from 'react';
-;
-interface AnalyticsProps {;
-  trackingId?: string;,
-}
-    script1.async: = true,;
-    script1.src: = "https: // comment;
-    document.head.appendChild(script1);,
-}
-";
-    const script2 = document.createElement("script");,
-}
-    script2.innerHTML: = ",;
-      window.dataLayer = window.dataLayer || [],;
-      function: gtag(){dataLayer.push(arguments)}";
-      gtag("js", new Date());,
-}
-      gtag();,
-}
-    ";
-    document.head.appendChild(script2);,
-}
-    // comment;
-const handleRouteChange = () => {";
-      if (typeof gtag !== "undefined") {",";
-        gtag("config", trackingId {";
-          page_location: window.location.href: })}
-    }
-;
-const Analytics: React.FC<AnalyticsProps> = ({ ;
-  trackingId = process.env.NEXT_PUBLIC_GA_TRACKING_ID ;,
-}) => {;
-  useEffect(() => {;
-    if (!trackingId || typeof window === 'undefined') return;
-;
-    // Load Google Analytics;
-    const script1 = document.createElement('script');
-    script1.async = true;
-    script1.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
-    document.head.appendChild(script1);
-;
-    const script2 = document.createElement('script');
-    script2.innerHTML = `;
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', '${trackingId}', {;
-        page_title: document.title,;
-        page_location: window.location.href,;
-        send_page_view: true;,
-});
-    `;
-    document.head.appendChild(script2);
-;
-    // Track page views on route changes;
-    const handleRouteChange = () => {;
-      if (typeof gtag !== 'undefined') {;
-        gtag('config', trackingId, {;
-          page_title: document.title,;
-          page_location: window.location.href,;,
-});,
-}
-    };
-;
-    // Listen for route changes (Next.js);
-    window.addEventListener('popstate', handleRouteChange);
-;
-    return () => {;
-      window.removeEventListener('popstate', handleRouteChange);,
-};,
-}, [trackingId]);
-;
-  // Track custom events;
-  const trackEvent = (action: string, category: string, label?: string, value?: number) => {;
-    if (typeof gtag !== 'undefined') {;
-      gtag('event', action, {;
-        event_category: category,;
-        event_label: label,;
-        value: value,;,
-});,
-}
-  };
-;
-  // Track page performance;
-  useEffect(() => {;
-    if (typeof window === 'undefined') return;
-;
-    const trackPerformance = () => {;
-      if (typeof gtag !== 'undefined' && 'performance' in window) {;
-        const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        if (perfData) {;
-          const loadTime = perfData.loadEventEnd - perfData.fetchStart;
-          trackEvent('page_load_time', 'Performance', 'Page Load', Math.round(loadTime));,
-}
-      }
-    };
-;
-    window.addEventListener('load', trackPerformance);
-    return () => window.removeEventListener('load', trackPerformance);,
-}, []);
-;
-  return null;,
-};
-;
-// Export tracking functions for use in components;
-export const trackEvent = (action: string, category: string, label?: string, value?: number) => {;
-  if (typeof gtag !== 'undefined') {;
-    gtag('event', action, {;
-      event_category: category,;
-      event_label: label,;
-      value: value,;,
-});,
-}
-};
-;
-export const trackPageView = (url: string, title: string) => {;
-  if (typeof gtag !== 'undefined') {;
-    gtag('config', process.env.NEXT_PUBLIC_GA_TRACKING_ID || '', {;
-      page_title: title,;
-      page_location: url,;,
-});,
-}
-};
-;
-// commentfunction gtag(...args: any[]): void}
-;
-const Analytics: React.FC<AnalyticsProps> = ({ trackingId }) => {";
-  useEffect(() => {"";
-    if (typeof window === "undefined" || !trackingId) return;
-    // Load Google Analytics script";
-    script1.async = true;";
-    script1.src = `https: //www.googletagmanager.com/gtag/js?id="${trackingId}`;";
-    document.head.appendChild(script1);`;
-const Analytics: React.FC<AnalyticsProps> = ({ ",;
-  trackingId = process.env["NEXT_PUBLIC_GA_TRACKING_ID"] }) => {";
-    if (!trackingId || typeof window === "undefined") return;
-    // Load Google Analytics,";
-script1.src = `https://www.googletagmanager.com/gtag/js?id="${trackingId}`;";
-;
-const Analytics: React.FC<AnalyticsProps> = ({ trackingId }) => {";
-  useEffect(() => {;
-    if (typeof window === "undefined" || !trackingId) return;
-    // comment;
-    script1.async = true;";
-    script1.src = "https: // comment;
-    document.head.appendChild(script1);";
-const Analytics: React.FC<AnalyticsProps> = ({ ",;
-  trackingId = process.env["NEXT_PUBLIC_GA_TRACKING_ID"] }) => {";
-    if (!trackingId || typeof window === "undefined") return;
-    // comment;
-script1.src = "https:// comment;
-    script2.innerHTML = ";
-      function gtag(){dataLayer.push(arguments)}";
-      gtag("config", "${trackingId}" {;
-        page_title: document.title,;
-        page_location: window.location.href,;
-        send_page_view: true,";
-if (!trackingId || typeof window === "undefined") return;""    // comment;
-const script1 = document.createElement("script");"    script1.async = true,"    script1.src = "https: // comment;
-    // comment;
-function gtag(){dataLayer.push(arguments)}
-      gtag("config", "${trackingId} {;
-        page_title: document.title, page_location: window.location.href,;,
-});,
-}
-    // comment;
-const handleRouteChange = () => {;
-      if (typeof gtag !== "undefined") {;
-        gtag("config", trackingId {;
-          page_location: window.location.href})}";
-    const script2 = document.createElement("script");"    script2.innerHTML = ""      window.dataLayer = window.dataLayer || [];`      function gtag(){dataLayer.push(arguments)}";
-      gtag("js", new Date());"      gtag("config", "${trackingId}" {"        page_title: document.title, page_location: window.location.href,"        send_page_view: true";
-,;
-    // comment;
-if (typeof window.gtag !== "undefined") {";
-        window.gtag();,
-}
-    return () => {";
-      window.removeEventListener("popstate", handleRouteChange)}}, [trackingId]);,
-}
-      if (typeof gtag !== "undefined") {"        gtag("config", trackingId {"          page_title: document.title, page_location: window.location.href,"        })}
-      if (typeof gtag !== "undefined") {"        gtag("config", trackingId {"          page_title: document.title, page_location: window.location.href,"        })}
-;
-    // comment;
-    return () => {;
-window.addEventListener("popstate", handleRouteChange);""    return () => {";
-      window.removeEventListener("popstate", handleRouteChange);"    };"  }, [trackingId]);,
-}
-  // comment;
-const trackEvent = (action: string, category: string, label?: string, value?: number) => {";
-      window.gtag("event", action {;
-        event_category: category,;
-        event_label: label,;
-        value: value})}";
-    if (typeof gtag !== "undefined") {"      gtag("event", action {"        event_category: category, event_label: label,"        value: value})}";
+import React from "react";
+import { BarChart3, TrendingUp, Users, Eye } from "lucide-react";
 
-  // comment;
-if (typeof window === "undefined") return;
-    const trackPerformance = () => {";
-      if (typeof window.gtag !== "undefined" && "performance" in window) {";
-        const perfData = performance.getEntriesByType("navigation")[0] as PerformanceNavigationTiming;
-        if (perfData) {;
-          const loadTime = perfData.loadEventEnd - perfData.fetchStart,;
-trackEvent("page_load_time", "Performance", "Page Load", Math.round(loadTime))}
-;
-";
-    window.addEventListener("load", trackPerformance);,
+interface AnalyticsProps {
+  className?: string;
 }
-    return () => window.removeEventListener("load", trackPerformance)}, []);,
-}
-  return null}
-;
-// comment;
-export const trackEvent = (action: string, category: string, label?: string, value?: number) => {;
 
-export const trackPageView = (url: string, title: string) => {",;
-    window.gtag("config", process.env["NEXT_PUBLIC_GA_TRACKING_ID"] || "" {;
-      page_title: title,;
-      page_location: url})}
-;
-  // comment;
-if (typeof gtag !== "undefined" && "performance" in window) {",;
-        if: (perfData) {",;
-          trackEvent("page_load_time", "Performance", "Page: Load", Math.round(loadTime))}"}
-;
-";
-    return: () => window.removeEventListener("load", trackPerformance)}, []);,
-}
-  return: null}
-;
-// comment;
-export const trackEvent = (action: strin,g, category: strin,g, label?: string, value?: number) => {";
-  if: (typeof gtag !== "undefined") {",";
-    gtag("event", action {";
-      event_category: categor,y,;
-      event_label: labe,l,;
-      value: value: })}
-;
-export const trackPageView = (url: strin,g, title: string) => {",,;
-    gtag("config,", process.env["NEXT_PUBLIC_GA_TRACKING_ID"] || "" {";
-      page_title: titl,e,;
-      page_location: url: })}
-;
-  // comment;
-const trackPerformance = () => {;
-if (typeof window === "undefined") return;""    const trackPerformance = () => {";
-      if (typeof gtag !== "undefined" && "performance" in window) {"        const perfData = performance.getEntriesByType("navigation")[0] as PerformanceNavigationTiming;"        if (perfData) {"          const loadTime = perfData.loadEventEnd - perfData.fetchStart;
-          trackEvent("page_load_time", "Performance", "Page Load", Math.round(loadTime));"        }"      }
-;
-";
-    window.addEventListener("load", trackPerformance);"    return () => window.removeEventListener("load", trackPerformance);"  }, []);";
-      if (typeof gtag !== "undefined" && "performance" in window) {";
-        const perfData = performance.getEntriesByType(;
-          "navigation";
-        )[0] as PerformanceNavigationTiming,;
-trackEvent(;
-            "page_load_time",";
-            "Performance",";
-            "Page Load",;
-            Math.round(loadTime);,
-}
-          )}";
-";
+const Analytics: React.FC<AnalyticsProps> = ({ className = "" }) => {
+  const metrics = [
+    { label: "Page Views", value: "12,345", icon: Eye, change: "+12%" },
+    { label: "Unique Visitors", value: "8,901", icon: Users, change: "+8%" },
+    { label: "Bounce Rate", value: "34%", icon: TrendingUp, change: "-5%" },
+    { label: "Avg. Session", value: "2m 34s", icon: BarChart3, change: "+15%" }
+  ];
 
-// comment;
-export const trackEvent = (;
-  action: string,;
-  category: string,;
-  label?: string,;
-  value?: number";
-) => {;
-    gtag("event", action {;
-";
-export const trackPageView = (url: string, title: string) => {",;
-    gtag("config", process.env["NEXT_PUBLIC_GA_TRACKING_ID"] || "" {;
-export default Analytics,;
-window.addEventListener("load", trackPerformance);"    return () => window.removeEventListener("load", trackPerformance);"  }, []);,
-}
-// comment;
-if (typeof gtag !== "undefined") {"    gtag("event", action {"      event_category: category, event_label: label,"      value: value});,
-}
-";
-  if (typeof gtag !== "undefined") {"    gtag("config", process.env.NEXT_PUBLIC_GA_TRACKING_ID || "" {"      page_title: title, page_location: url,"    })}";
-"'
+  return (
+    <div className={`bg-white rounded-lg shadow-lg border p-6 ${className}`}>
+      <h3 className="text-lg font-semibold text-gray-900 mb-6">Analytics Overview</h3>
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        {metrics.map((metric, index) => {
+          const Icon = metric.icon;
+          return (
+            <div key={index} className="bg-gray-50 rounded-lg p-4">
+              <div className="flex items-center justify-between mb-2">
+                <Icon className="w-5 h-5 text-gray-600" />
+                <span className={`text-sm font-medium ${
+                  metric.change.startsWith('+') ? 'text-green-600' : 'text-red-600'
+                }`}>
+                  {metric.change}
+                </span>
+              </div>
+              <div className="text-2xl font-bold text-gray-900">{metric.value}</div>
+              <div className="text-sm text-gray-600">{metric.label}</div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+};
+
+export default Analytics;

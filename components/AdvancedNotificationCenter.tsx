@@ -1,169 +1,121 @@
 import React, { useState } from "react";
-;
-interface Notification {;
+import { Bell, X, Check } from "lucide-react";
+
+interface Notification {
   id: string;
   title: string;
   message: string;
-  type: "success" | "warning" | "error" | "info";
-  priority: "low" | "medium" | "high" | "critical";
+  type: "info" | "success" | "warning" | "error";
   timestamp: Date;
   read: boolean;
-  archived: boolean;
-  category: string;
-  actionUrl?: string;
-  metadata?: Record<string, any>;,
 }
-;
-interface AdvancedNotificationCenterProps {;
-  notifications: Notification[];
-  onMarkAsRead?: (id: string) => void;
-  onArchive?: (id: string) => void;
-  onDelete?: (id: string) => void;,
-}
-;
-const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({;
-  notifications,;
-  onMarkAsRead,;
-  onArchive,;
-  onDelete;,
-}) => {;
-  const [filter, setFilter] = useState<"all" | "unread" | "archived">("all");
-  const [typeFilter, setTypeFilter] = useState<string>("all");
-;
-  const filteredNotifications = notifications.filter(notification => {;
-    const matchesFilter = filter === "all" || ;
-      (filter === "unread" && !notification.read) ||;
-      (filter === "archived" && notification.archived);
-    ;
-    const matchesType = typeFilter === "all" || notification.type === typeFilter;
-    ;
-    return matchesFilter && matchesType;,
-});
-;
-  const getTypeIcon = (type: string) => {;
-    switch (type) {;
-      case "success":;
-        return "✅";
-      case "warning":;
-        return "⚠️";
-      case "error":;
-        return "❌";
-      case "info":;
-        return "ℹ️";
-      default:;
-        return "📢";,
-}
-  };
-;
-  const getTypeColor = (type: string) => {;
-    switch (type) {;
-      case "success":;
-        return "border-green-500 bg-green-50";
-      case "warning":;
-        return "border-yellow-500 bg-yellow-50";
-      case "error":;
-        return "border-red-500 bg-red-50";
-      case "info":;
-        return "border-blue-500 bg-blue-50";
-      default:;
-        return "border-gray-500 bg-gray-50";,
-}
-  };
-;
-  return (;
-    <div className="bg-white rounded-lg shadow-lg p-6">;
-      <div className="flex justify-between items-center mb-6">;
-        <h2 className="text-2xl font-bold text-gray-900">Notifications</h2>;
-        <div className="flex space-x-2">;
-          <select;
-            value={filter}
-            onChange={(e) => setFilter(e.target.value as any)}
-            className="px-3 py-2 border border-gray-300 rounded-md text-sm">;
-            <option value="all">All</option>;
-            <option value="unread">Unread</option>;
-            <option value="archived">Archived</option>;
-          </select>;
-          <select;
-            value={typeFilter}
-            onChange={(e) => setTypeFilter(e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-md text-sm">;
-            <option value="all">All Types</option>;
-            <option value="success">Success</option>;
-            <option value="warning">Warning</option>;
-            <option value="error">Error</option>;
-            <option value="info">Info</option>;
-          </select>;
-        </div>;
-      </div>;
 
-      <div className="space-y-4">;
-        {filteredNotifications.length === 0 ? (;
-          <div className="text-center py-8 text-gray-500">;
-            No notifications found;
-          </div>;
-        ) : (;
-          filteredNotifications.map((notification) => (;
-            <div;
-              key={notification.id}
-              className={`border-l-4 p-4 rounded-r-lg ${getTypeColor(notification.type)} ${;
-                !notification.read ? "opacity-100" : "opacity-75";,
-}`}
-            >;
-              <div className="flex items-start justify-between">;
-                <div className="flex items-start space-x-3">;
-                  <span className="text-lg">{getTypeIcon(notification.type)}</span>;
-                  <div className="flex-1">;
-                    <h3 className="font-semibold text-gray-900">{notification.title}</h3>;
-                    <p className="text-gray-700 mt-1">{notification.message}</p>;
-                    <div className="flex items-center space-x-4 mt-2 text-sm text-gray-500">;
-                      <span>{notification.timestamp.toLocaleString()}</span>;
-                      <span className="px-2 py-1 bg-gray-200 rounded-full">;
-                        {notification.category}
-                      </span>;
-                      <span className={`px-2 py-1 rounded-full ${;
-                        notification.priority === "critical" ;
-                          ? "bg-red-200 text-red-800";
-                          : notification.priority === "high";
-                          ? "bg-orange-200 text-orange-800";
-                          : notification.priority === "medium";
-                          ? "bg-yellow-200 text-yellow-800";
-                          : "bg-green-200 text-green-800";,
-}`}>;
-                        {notification.priority}
-                      </span>;
-                    </div>;
-                  </div>;
-                </div>;
-                <div className="flex space-x-2">;
-                  {!notification.read && onMarkAsRead && (;
-                    <button;
-                      onClick={() => onMarkAsRead(notification.id)}
-                      className="text-blue-600 hover:text-blue-800 text-sm">;
-                      Mark as read;
-                    </button>;
-                  )}
-                  {onArchive && (;
-                    <button;
-                      onClick={() => onArchive(notification.id)}
-                      className="text-gray-600 hover:text-gray-800 text-sm">;
-                      Archive;
-                    </button>;
-                  )}
-                  {onDelete && (;
-                    <button;
-                      onClick={() => onDelete(notification.id)}
-                      className="text-red-600 hover:text-red-800 text-sm">;
-                      Delete;
-                    </button>;
-                  )}
-                </div>;
-              </div>;
-            </div>;
-          ));
+interface AdvancedNotificationCenterProps {
+  className?: string;
+}
+
+const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({ className = "" }) => {
+  const [notifications, setNotifications] = useState<Notification[]>([
+    {
+      id: "1",
+      title: "Welcome to Zion Tech Group",
+      message: "Thank you for visiting our website. Explore our services and solutions.",
+      type: "info",
+      timestamp: new Date(),
+      read: false
+    }
+  ]);
+
+  const markAsRead = (id: string) => {
+    setNotifications(prev => prev.map(notif => 
+      notif.id === id ? { ...notif, read: true } : notif
+    ));
+  };
+
+  const removeNotification = (id: string) => {
+    setNotifications(prev => prev.filter(notif => notif.id !== id));
+  };
+
+  const getTypeColor = (type: Notification["type"]) => {
+    switch (type) {
+      case "success": return "bg-green-100 text-green-800 border-green-200";
+      case "warning": return "bg-yellow-100 text-yellow-800 border-yellow-200";
+      case "error": return "bg-red-100 text-red-800 border-red-200";
+      default: return "bg-blue-100 text-blue-800 border-blue-200";
+    }
+  };
+
+  return (
+    <div className={`bg-white rounded-lg shadow-lg border ${className}`}>
+      <div className="p-4 border-b">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center space-x-2">
+            <Bell className="w-5 h-5 text-gray-600" />
+            <h3 className="font-semibold text-gray-900">Notifications</h3>
+          </div>
+          <span className="text-sm text-gray-500">
+            {notifications.filter(n => !n.read).length} unread
+          </span>
+        </div>
+      </div>
+
+      <div className="max-h-96 overflow-y-auto">
+        {notifications.length === 0 ? (
+          <div className="p-8 text-center text-gray-500">
+            <Bell className="w-12 h-12 mx-auto mb-4 text-gray-300" />
+            <p>No notifications</p>
+          </div>
+        ) : (
+          <div className="divide-y">
+            {notifications.map(notification => (
+              <div
+                key={notification.id}
+                className={`p-4 hover:bg-gray-50 transition-colors ${
+                  !notification.read ? "bg-blue-50" : ""
+                }`}
+              >
+                <div className="flex items-start justify-between">
+                  <div className="flex-1">
+                    <div className="flex items-center space-x-2 mb-1">
+                      <span className={`px-2 py-1 text-xs rounded-full border ${getTypeColor(notification.type)}`}>
+                        {notification.type}
+                      </span>
+                      {!notification.read && (
+                        <div className="w-2 h-2 bg-blue-500 rounded-full" />
+                      )}
+                    </div>
+                    <h4 className="font-medium text-gray-900">{notification.title}</h4>
+                    <p className="text-sm text-gray-600 mt-1">{notification.message}</p>
+                    <p className="text-xs text-gray-400 mt-2">
+                      {notification.timestamp.toLocaleTimeString()}
+                    </p>
+                  </div>
+                  <div className="flex space-x-1 ml-4">
+                    {!notification.read && (
+                      <button
+                        onClick={() => markAsRead(notification.id)}
+                        className="p-1 text-gray-400 hover:text-green-600 transition-colors"
+                        title="Mark as read"
+                      >
+                        <Check className="w-4 h-4" />
+                      </button>
+                    )}
+                    <button
+                      onClick={() => removeNotification(notification.id)}
+                      className="p-1 text-gray-400 hover:text-red-600 transition-colors"
+                      title="Remove notification"
+                    >
+                      <X className="w-4 h-4" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         )}
-      </div>;
-    </div>;
-  );,
+      </div>
+    </div>
+  );
 };
-;
+
 export default AdvancedNotificationCenter;

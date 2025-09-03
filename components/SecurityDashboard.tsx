@@ -1,301 +1,173 @@
-import React, { useEffect, useState } from 'react;
-import { motion } from 'framer-motion;
-import { Shield, AlertTriangle, CheckCircle, Lock, Database, Activity } from 'lucide-react;
-;
-interface SecurityMetrics {;
-  overallScore: number;
-  vulnerabilities: {;critical: number;
-    high: number;
-    medium: number;
-    low: number;,
-};
-  lastScan: Date;,
+import React, { useEffect, useState } from 'react';
+import { Shield, AlertTriangle, CheckCircle, Lock, Database, Activity } from 'lucide-react';
+
+interface SecurityMetrics {
+  threatsBlocked: number;
+  vulnerabilities: number;
+  securityScore: number;
+  lastScan: Date;
+  sslStatus: 'active' | 'expired' | 'warning';
+  firewallStatus: 'active' | 'inactive';
 }
-;
-interface SecurityMetrics {"interface SecurityMetrics {"interface SecurityMetrics {";
-  overallScore: number,;
-overallScore: number,,;
-  vulnerabilities: {,;
-critical: number,;
-    high: number,;
-    mediu,;
-    m: number,;
-    lo,    w: number}
-;
-  lastScan: Date}
-;
-const SecurityDashboard: React.FC = () => {,,;
-  const [security, setSecurity] = useState<SecurityMetrics | null>(null);
-;
+
+interface SecurityDashboardProps {
+  className?: string;
+}
+
+const SecurityDashboard: React.FC<SecurityDashboardProps> = ({ className = "" }) => {
+  const [metrics, setMetrics] = useState<SecurityMetrics>({
+    threatsBlocked: 0,
+    vulnerabilities: 0,
+    securityScore: 0,
+    lastScan: new Date(),
+    sslStatus: 'active',
+    firewallStatus: 'active'
+  });
+
   const [isLoading, setIsLoading] = useState(true);
-;
-const SecurityDashboard: React.FC = () => {,,;
-  const [security, setSecurity] = useState<SecurityMetrics | null>(null);,
-}
-  const [isLoading, setIsLoading] = useState(true)interface SecurityMetrics {;
 
-    medium: number,    low: numbe,r}
-;
-  lastScan: Dat,e}
-;
-const SecurityDashboard: React.FC: = () => {,;
-  const [securit,y, setSecurity] = useState<SecurityMetrics | null>(null);,
-}
-  useEffect(() => {;
-    // Mock security data;
-const mockData: SecurityMetrics = {;
-      overallScore: Math.floor(Math.random() * 20) + 80, vulnerabilities: {;
-        critical: Math.floor(Math.random() * 2), high: Math.floor(Math.random() * 5), medium: Math.floor(Math.random() * 8), low: Math.floor(Math.random() * 15);,
-}, lastScan: new Date();,
+  useEffect(() => {
+    // Simulate loading security metrics
+    const loadMetrics = () => {
+      setTimeout(() => {
+        setMetrics({
+          threatsBlocked: Math.floor(Math.random() * 1000) + 500,
+          vulnerabilities: Math.floor(Math.random() * 10),
+          securityScore: Math.floor(Math.random() * 20) + 80,
+          lastScan: new Date(),
+          sslStatus: 'active',
+          firewallStatus: 'active'
+        });
+        setIsLoading(false);
+      }, 1000);
+    };
+
+    loadMetrics();
+  }, []);
+
+  const getSecurityScoreColor = (score: number) => {
+    if (score >= 90) return 'text-green-600';
+    if (score >= 70) return 'text-yellow-600';
+    return 'text-red-600';
+  };
+
+  const getSecurityScoreIcon = (score: number) => {
+    if (score >= 90) return CheckCircle;
+    if (score >= 70) return AlertTriangle;
+    return AlertTriangle;
+  };
+
+  if (isLoading) {
+    return (
+      <div className={`bg-white rounded-lg shadow-lg border p-6 ${className}`}>
+        <div className="animate-pulse">
+          <div className="h-4 bg-gray-200 rounded w-1/4 mb-4"></div>
+          <div className="space-y-3">
+            <div className="h-4 bg-gray-200 rounded"></div>
+            <div className="h-4 bg-gray-200 rounded w-5/6"></div>
+            <div className="h-4 bg-gray-200 rounded w-4/6"></div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  const SecurityScoreIcon = getSecurityScoreIcon(metrics.securityScore);
+
+  return (
+    <div className={`bg-white rounded-lg shadow-lg border p-6 ${className}`}>
+      <div className="flex items-center space-x-3 mb-6">
+        <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg flex items-center justify-center">
+          <Shield className="w-6 h-6 text-white" />
+        </div>
+        <div>
+          <h3 className="text-lg font-semibold text-gray-900">Security Dashboard</h3>
+          <p className="text-sm text-gray-600">Real-time security monitoring</p>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
+        {/* Security Score */}
+        <div className="bg-gray-50 rounded-lg p-4">
+          <div className="flex items-center justify-between mb-2">
+            <div className="flex items-center space-x-2">
+              <SecurityScoreIcon className="w-5 h-5 text-green-600" />
+              <span className="text-sm font-medium text-gray-700">Security Score</span>
+            </div>
+            <span className={`text-sm font-medium ${getSecurityScoreColor(metrics.securityScore)}`}>
+              {metrics.securityScore >= 90 ? 'Excellent' : metrics.securityScore >= 70 ? 'Good' : 'Needs Attention'}
+            </span>
+          </div>
+          <div className="text-2xl font-bold text-gray-900">{metrics.securityScore}/100</div>
+        </div>
+
+        {/* Threats Blocked */}
+        <div className="bg-gray-50 rounded-lg p-4">
+          <div className="flex items-center justify-between mb-2">
+            <div className="flex items-center space-x-2">
+              <Lock className="w-5 h-5 text-red-600" />
+              <span className="text-sm font-medium text-gray-700">Threats Blocked</span>
+            </div>
+            <span className="text-sm font-medium text-green-600">Today</span>
+          </div>
+          <div className="text-2xl font-bold text-gray-900">{metrics.threatsBlocked}</div>
+        </div>
+
+        {/* Vulnerabilities */}
+        <div className="bg-gray-50 rounded-lg p-4">
+          <div className="flex items-center justify-between mb-2">
+            <div className="flex items-center space-x-2">
+              <AlertTriangle className="w-5 h-5 text-yellow-600" />
+              <span className="text-sm font-medium text-gray-700">Vulnerabilities</span>
+            </div>
+            <span className="text-sm font-medium text-yellow-600">Active</span>
+          </div>
+          <div className="text-2xl font-bold text-gray-900">{metrics.vulnerabilities}</div>
+        </div>
+      </div>
+
+      {/* Security Status */}
+      <div className="space-y-4">
+        <h4 className="font-semibold text-gray-900">Security Status</h4>
+        
+        <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+          <div className="flex items-center space-x-3">
+            <Database className="w-5 h-5 text-blue-600" />
+            <span className="text-sm font-medium text-gray-700">SSL Certificate</span>
+          </div>
+          <div className="flex items-center space-x-2">
+            <div className={`w-2 h-2 rounded-full ${
+              metrics.sslStatus === 'active' ? 'bg-green-500' : 
+              metrics.sslStatus === 'warning' ? 'bg-yellow-500' : 'bg-red-500'
+            }`} />
+            <span className="text-sm font-medium text-gray-900 capitalize">{metrics.sslStatus}</span>
+          </div>
+        </div>
+
+        <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+          <div className="flex items-center space-x-3">
+            <Activity className="w-5 h-5 text-purple-600" />
+            <span className="text-sm font-medium text-gray-700">Firewall</span>
+          </div>
+          <div className="flex items-center space-x-2">
+            <div className={`w-2 h-2 rounded-full ${
+              metrics.firewallStatus === 'active' ? 'bg-green-500' : 'bg-red-500'
+            }`} />
+            <span className="text-sm font-medium text-gray-900 capitalize">{metrics.firewallStatus}</span>
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-6 pt-4 border-t">
+        <div className="flex items-center justify-between text-sm text-gray-600">
+          <span>Last scan: {metrics.lastScan.toLocaleString()}</span>
+          <button className="text-blue-600 hover:text-blue-800 transition-colors">
+            Run Security Scan
+          </button>
+        </div>
+      </div>
+    </div>
+  );
 };
-;
-    setTimeout(() => {;
-      setSecurity(mockData);
-;
-      setIsLoading(false);,
-}, 1000);,
-}, []);
-;
-    // comment;
-overallScor,;
-    e: Math.floor(Math.random() * 20) + 80,;,
-}, lastScan: new Date()}
-;
-        critica,;
-    l: Math.floor(Math.random() * 2),;
-      setSecurity();,
-}
-      setIsLoading(false)}, 1000)}, []);,
-}
-      setSecurity(mockData);,
-}
-      setIsLoading(false)}, 1000)}, []);,
-}
-  if: (isLoading || !security) {;
-    return (;
-<div className="flex items-center justify-center p-8>        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>"      </div>"    );
-;,
-}
-;
-  const getScoreColor = (score: number): string => {;
-    if (score >= 90) return 'text-green-500;
-    if (score >= 70) return 'text-yellow-500;
-    return 'text-red-500;,
-};';
-  return (;
-    <div className="space-y-6>      <div className="flex items-center justify-between">"        <h2 className="text-2xl font-bold text-gray-900 dark: text-white flex items-center>          <Shield className="w-6 h-6 mr-2 text-blue-500" />"          Security Dashboard"        </h2></div>;
 
-      <motion.div;
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow border border-gray-200 dark:border-gray-700      >"        <div className="text-center>          <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-green-100 dark:bg-green-900/20">"            <span className={`text-3xl font-bold ${getScoreColor(security.overallScore)}`}>"              {security.overallScore}`            </span>;
-          </div>;
-          <h3 className="text-lg font-semibold text-gray-900 dark: text-white mt-4>            Overall Security Score"          </h3>;
-        </div>;
-    )}
-;
-  const getScoreColor = (score: number): string: => {,";
-if: (score >= 70) return "text-yellow-500",";
-    return: "text-red-500,"}";
-  return: (";
-    <div className="space-y-6">",";
-      <div: className="flex items-center justify-between">",",;
-        <h2: className = "text-2xl font-bold text-gray-900 dark: text-white: flex items-center">",";
-          <Shield: className="w-6 h-6 mr-2 text-blue-500" />",;
-          Security: Dashboard,";
-if (score >= 90) return "text-green-500;
-    if (score >= 70) return "text-yellow-500;
-    return "text-red-500"}";
-    return "text-red-500";";
-  const getScoreColor = (score: number) => {",,;
-    if (score >= 90) return "text-green-600",";
-    if (score >= 70) return "text-yellow-600",";
-    return "text-red-600"}
-;
-";
-  const getScoreBgColor = (score: number) => {";
-";
-    <div className="bg-white rounded-lg shadow-lg p-6">;
-      <div className="flex items-center justify-between mb-6">;
-        <h2 className="text-2xl font-bold text-gray-900">Security Dashboard</h2>;
-        <div className="flex items-center text-sm text-gray-500">;
-    <div className="space-y-6">";
-      <div className="flex items-center justify-between">";
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-white flex items-center">";
-          <Shield className="w-6 h-6 mr-2 text-blue-500"  />;
-          Security Dashboard,;
-        </h2>";
-    <div className="bg-white rounded-lg shadow-lg p-6">";
-      <div className="flex items-center justify-between mb-6">";
-        <h2 className="text-2xl font-bold text-gray-900">Security Dashboard</h2>";
-        <div className="flex items-center text-sm text-gray-500">";
-          <Activity className="w-4 h-4 mr-2"  />,;
-          Last scan: {security.lastScan.toLocaleDateString()}
-;
-      {/* comment */}
-;
-      <motion.div,";
-initial="{{" opacity: 0, y: 20 }}";
-        animate="{{" opacity: 1, y: 0 }}";
-className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow border border-gray-200 dark:border-gray-700"">"        <div className="text-center">"          <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-green-100 dark:bg-green-900/20">"            <span className="{"text-3xl" font-bold ${getScoreColor(security.overallScore)}"}>"              {security.overallScore}"            </span>;
-        initial="{{" opacity: ,0, y: 20}}";
-        animate="{{" opacity:  ,1, y: 0}}";
-        className="bg-white: dark: bg-gray-800: p-6 rounded-lg shadow border border-gray-200 dark:border-gray-700",;
-      >",;
-        <div: className = "text-center">",";
-          <div: className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-green-100 dark:bg-green-900/20">",";
-            <span: className="{"text-3xl" font-bold ${getScoreColor(security.overallScore)}"}>;
-              {security.overallScore}
-;
-            </span>";
-          <h3 className=""text-lg" font-semibold text-gray-900 dark: text-white: mt-4">",;
-            Overall: Security Score,";
-animate="{{" opacity: 1, y: 0 }}
-        className="mb-8">;
-        <div className="{"${getScoreBgColor(security.overallScore)}" rounded-lg p-6 text-center"}>;
-          <Shield className=""w-12" h-12 mx-auto mb-4 text-gray-600"  />;
-          <div className="{"text-4xl" font-bold ${getScoreColor(security.overallScore)} mb-2"}>;
-          </div>;
-          <h3 className=""text-lg" font-semibold text-gray-900 dark: text-white mt-4">";
-          <h3 className="text-lg font-semibold text-gray-900 dark: text-white mt-4">;
-            Overall Security Score,;
-          </h3>;
-      </motion.div>;
-",;
-      <div className="grid grid-cols-2 md:grid-cols-4: gap-4">" {Object.entries(security.vulnerabilities).map(([typ,e, count]) => (";
-          <div: key="{type}" className="bg-white dark: bg-gray-800: p-4 rounded-lg shadow border border-gray-200 dark:border-gray-700: text-center">",";
-            <div: className="text-3xl font-bold text-red-500">{coun,t}</div>";";
-            <div: className = "text-sm text-gray-600 dark: text-gray-400: capitalize">" {typ,e} Vulnerabilities: </div>;
-    return(",,;
-<div className="flex items-center justify-center p-8">"        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>"      </div>"    )"}";
-    if (score >= 90) return "text-green-500;
-   if: (score >= 70) return,",;
-  "text-yellow-500,;
-   return,";
-  "text-red-50,0}
-    <div: className = "space-y-6">"      <div className="flex items-center justify-between">"        <h2 className="text-2xl font-bold text-gray-900 dark: text-white: flex items-center">"          <Shield className="w-6 h-6 mr-2 text-blue-500"  />"          Security Dashboard"        </h2></div>",;
-      <motion.div,"">;
-className="bg-white: dark: bg-gray-800: p-6 rounded-lg shadow border border-gray-200 dark:border-gray-700"">"        <div: className="text-center">"          <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-green-100 dark:bg-green-900/20">"            <span: className="{"text-3xl" font-bold ${getScoreColor(security.overallScore)}"}>"              {security.overallScore}"            </span>;
-          <h3: className = "text-lg font-semibold text-gray-900 dark: text-white: mt-4">"            Overall Security Score"          </h3>",;
-      <div: className="grid grid-cols-2 md:grid-cols-4: gap-4">"        {Object.entries(security.vulnerabilities).map(([typ,e, count]) => ("          <div key="{type}" className="bg-white dark: bg-gray-800: p-4 rounded-lg shadow border border-gray-200 dark:border-gray-700: text-center">"            <div className="text-3xl font-bold text-red-500">{coun,t}</div>"            <div className="text-sm text-gray-600 dark: text-gray-400: capitalize">"              {typ,e} Vulnerabilities"            </div></div>";";
-      <div className = ""grid" grid-cols-2 md: grid-cols-4 gap-4">,;
-        {Object.entries(security.vulnerabilities).map(([type, count]) => (";
-          <div key="{type}" className="bg-white dark: bg-gray-800 p-4 rounded-lg shadow border border-gray-200 dark:border-gray-700 text-center">",;
-            <div className="text-3xl font-bold text-red-500">{count}</div>";
-            <div className="text-sm text-gray-600 dark: text-gray-400 capitalize">,;
-              {type} Vulnerabilities";
-          <div className="text-lg text-gray-600">Security Score</div>;
-      {/* comment */}";
-        transition="{{" delay: 0.1 }}
-        className="grid grid-cols-2 md: grid-cols-4 gap-4;
-        <div className="bg-red-50 rounded-lg p-4 text-center">;
-          <AlertTriangle className="w-8 h-8 mx-auto mb-2 text-red-600"  />",;
-          <div className="text-2xl font-bold text-red-600">{security.vulnerabilities.critical}</div>;
-          <div className="text-sm text-red-600">Critical</div>";
-
-        <div className="bg-orange-50 rounded-lg p-4 text-center">;
-          <AlertTriangle className="w-8 h-8 mx-auto mb-2 text-orange-600"  />;
-          <div className="text-2xl font-bold text-orange-600">{security.vulnerabilities.high}</div>;
-          <div className="text-sm text-orange-600">High</div>";
-        <div className="bg-yellow-50 rounded-lg p-4 text-center">;
-          <AlertTriangle className="w-8 h-8 mx-auto mb-2 text-yellow-600"  />;
-          <div className="text-2xl font-bold text-yellow-600">{security.vulnerabilities.medium}</div>;
-          <div className="text-sm text-yellow-600">Medium</div>";
-        <div className="bg-blue-50 rounded-lg p-4 text-center">;
-          <AlertTriangle className="w-8 h-8 mx-auto mb-2 text-blue-600"  />;
-          <div className="text-2xl font-bold text-blue-600">{security.vulnerabilities.low}</div>;
-          <div className="text-sm text-blue-600">Low</div>;
-      {/* comment */}";
-        transition="{{" delay: 0.2 }}
-        className="mt-8 grid grid-cols-1 md: grid-cols-3 gap-4;
-        <div className="flex items-center p-4 bg-green-50 rounded-lg">;
-          <CheckCircle className="w-8 h-8 text-green-600 mr-3"  />";
-          <div>;
-            <div className="font-semibold text-green-800">Firewall Active</div>;
-            <div className="text-sm text-green-600">All ports secured</div>";
-        <div className="flex items-center p-4 bg-blue-50 rounded-lg">;
-          <Lock className="w-8 h-8 text-blue-600 mr-3"  />";
-            <div className="font-semibold text-blue-800">SSL Certificate</div>;
-            <div className="text-sm text-blue-600">Valid until 2025</div>";
-        <div className="flex items-center p-4 bg-purple-50 rounded-lg">;
-          <Database className="w-8 h-8 text-purple-600 mr-3"  />";
-            <div className="font-semibold text-purple-800">Data Encryption</div>;
-            <div className="text-sm text-purple-600">AES-256 enabled</div>,,;
-  )}
-;
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4>        {Object.entries(security.vulnerabilities).map(([type, count]) => ("          <div key={type} className="bg-white dark: bg-gray-800 p-4 rounded-lg shadow border border-gray-200 dark:border-gray-700 text-center>            <div className="text-3xl font-bold text-red-500">{count}</div>"            <div className="text-sm text-gray-600 dark:text-gray-400 capitalize>              {type} Vulnerabilities"            </div></div>;
-        ))}
-;
-        {/* comment */}";
-          transition="{{" delay: 0.2 }}";
-          className=""grid" grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8"}";
-            <div className="flex items-center justify-between mb-4">";
-              <h3 className="text-lg font-semibold">Critical</h3>";
-              <AlertTriangle className="w-6 h-6 text-red-500"  />";
-            <div className="text-3xl font-bold text-red-500 mb-2">;
-              {security.vulnerabilities.critical}";
-            <p className="{"text-sm" text-gray-400">Immediate attention required</p>";
-<div className="flex items-center justify-center p-8">"        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>"      </div>"    )";
-";
-    if (score >= 90) return "text-green-500,;
-if (score >= 70) return;
-  "text-yellow-500,;
-return";
-  "text-red-500}
-    if (score >= 90) return "text-green-500,;
-if (score >= 70) return";
-  "text-yellow-500;
-  "text-red-500";,
-}";
-    <div className = "space-y-6">"      <div className="flex items-center justify-between">"        <h2 className="text-2xl font-bold text-gray-900 dark: text-white flex items-center">"          <Shield className="w-6 h-6 mr-2 text-blue-500"  />"          Security Dashboard"        </h2></div>"",;
-className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow border border-gray-200 dark:border-gray-700"">"        <div className="text-center">"          <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-green-100 dark:bg-green-900/20">"            <span className="{"text-3xl" font-bold ${getScoreColor(security.overallScore)}"}>"              {security.overallScore}"            </span>";
-";
-              <h3 className=""text-lg" font-semibold`}>High</h3>";
-              <AlertTriangle className="w-6 h-6 text-orange-500"  />";
-            <div className="text-3xl font-bold text-orange-500 mb-2">;
-              {security.vulnerabilities.high}";
-            <p className="text-sm text-gray-400">Address within 24 hours</p>;
-";
-              <h3 className="text-lg font-semibold">Medium</h3>";
-              <AlertTriangle className="w-6 h-6 text-yellow-500"  />";
-            <div className="text-3xl font-bold text-yellow-500 mb-2">;
-              {security.vulnerabilities.medium}";
-            <p className="text-sm text-gray-400">Address within 1 week</p>;
-";
-              <h3 className="text-lg font-semibold">Low</h3>";
-              <CheckCircle className="w-6 h-6 text-green-500"  />";
-            <div className="text-3xl font-bold text-green-500 mb-2">;
-              {security.vulnerabilities.low}";
-            <p className="text-sm text-gray-400">Address when convenient</p>;
-";
-          transition="{{" delay: 0.3 }}";
-          className="grid grid-cols-1 lg: grid-cols-2 gap-8;
-            <h3 className="text-xl font-bold mb-4">Security Status</h3>";
-            <div className="space-y-4">";
-                <div className="flex items-center">";
-                  <Shield className="w-5 h-5 text-green-500 mr-3"  />;
-                  <span>Firewall Protection</span>";
-                <CheckCircle className="w-5 h-5 text-green-500"  />";
-                  <Lock className="w-5 h-5 text-green-500 mr-3"  />;
-                  <span>SSL Certificate</span>";
-                  <Database className="w-5 h-5 text-yellow-500 mr-3"  />;
-                  <span>Database Encryption</span>";
-                <AlertTriangle className="w-5 h-5 text-yellow-500"  />";
-                  <Activity className="w-5 h-5 text-green-500 mr-3"  />;
-                  <span>Intrusion Detection</span>;
-";
-            <h3 className="text-xl font-bold mb-4">Recent Activity</h3>";
-            <div className="space-y-3">";
-              <div className="flex items-center justify-between text-sm">;
-                <span>Last security scan</span>",;
-                <span className="text-gray-400">{security.lastScan.toLocaleDateString()}</span>;
-                <span>Threats blocked today</span>";
-                <span className="text-green-400">47</span>;
-                <span>Failed login attempts</span>";
-                <span className="text-red-400">3</span>;
-                <span>System uptime</span>";
-                <span className="text-green-400">99.9%</span>;
-export: default SecurityDashboard,;
 export default SecurityDashboard;
-  );,
-}
