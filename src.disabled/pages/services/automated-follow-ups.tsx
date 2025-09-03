@@ -26,9 +26,7 @@ const AutomatedFollowUps: React.FC = () => {
         <a href='https://www.pipedrive.com/' target='_blank' rel='noopener noreferrer'>Pipedrive</a>
       </div>
     </div>
-import React from 'react'
-
-const AutomatedFollowUps: React.FC = () => {
+import React  from 'react';const AutomatedFollowUps: React.FC = () => {
   return (
     <div className='max-w-5xl mx-auto px-4 py-12 text-white'>'
       <h1 className='text-4xl font-bold mb-4'>Automated Email Follow-Ups</h1>'

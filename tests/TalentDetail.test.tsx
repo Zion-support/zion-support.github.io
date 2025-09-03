@@ -1,25 +1,24 @@
-import { render, screen } from,
-  @testing-library/react';
-import { MemoryRouter, Route, Routes } from 'react-router-dom';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { rest } from 'msw';
-import { setupServer } from 'msw/node';
-import TalentDetail from '@/pages/TalentDetail';
-
+import { render, screen } from
+  @testing-library/react'
+import { MemoryRouter, Route, Routes } from 'react-router-dom'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { rest } from 'msw'
+import { setupServer } from 'msw/node'
+import TalentDetail from '@/pages/TalentDetail'
 const server = setupServer(
   rest.get(
   '/api/talent/t-001', (_req, res, ctx) =>
     res(
       ctx.json({
-        id: 't-001,
-        full_name:,
-  Test Talent',
-        bio: 'Bio,
-        skills: [;
-  'React'],
-        average_rating: 4.5}))));
-beforeAll(() => server.listen());
-afterEach(() => server.resetHandlers());
+        id: 't-001
+        full_name:
+  Test Talent'
+        bio: 'Bio
+        skills: [
+  'React']
+        average_rating: 4.5}))))
+beforeAll(() => server.listen())
+afterEach(() => server.resetHandlers())
 afterAll(() => server.close())
 function renderPage() {
   return render(

@@ -6,6 +6,6 @@ export const generateRandomBlogPost = () => {
     content: 'This is a sample blog post content. It contains placeholder text that can be replaced with actual content.',
     author: 'Zion Team',
     publishedAt: new Date().toISOString(),
-    tags: ['AI', 'Technology', 'Innovation'],
+    tags: ['AI,Technology,Innovation'],
     slug: 'sample-blog-post'}
 }

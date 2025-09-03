@@ -7,76 +7,68 @@ import { ArrowRight, Award, Brain, Code, Globe, Shield, Users, Zap } from 'lucid
 
 export default function Team() {
   const teamMembers = [
+<<<<<<< HEAD
     {
+      name: 'Kleber Santos', role: 'CEO & Founder',
+      expertise: 'AI & Machine Learning', description: 'Visionary leader with 15+ years in AI and technology innovation.',
+      icon: Brain, linkedin: 'https://linkedin.com/in/kleber-santos'
+=======
+  {
       name: 'Kleber Santos',
       role: 'CEO & Founder',
       expertise: 'AI & Machine Learning',
       description: 'Visionary leader with 15+ years in AI and technology innovation.',
       icon: Brain,
       linkedin: 'https://linkedin.com/in/kleber-santos'
+>>>>>>> main
     },
     {
-      name: 'Sarah Johnson',
-      role: 'CTO',
-      expertise: 'Cloud Architecture',
-      description: 'Expert in scalable cloud solutions and enterprise architecture.',
-      icon: Globe,
-      linkedin: 'https://linkedin.com/in/sarah-johnson'
+      name: 'Sarah Johnson', role: 'CTO',
+      expertise: 'Cloud Architecture', description: 'Expert in scalable cloud solutions and enterprise architecture.',
+      icon: Globe, linkedin: 'https://linkedin.com/in/sarah-johnson'
     },
     {
-      name: 'Michael Chen',
-      role: 'Lead AI Engineer',
-      expertise: 'Machine Learning',
-      description: 'Specialist in deep learning and autonomous systems development.',
-      icon: Brain,
-      linkedin: 'https://linkedin.com/in/michael-chen'
+      name: 'Michael Chen', role: 'Lead AI Engineer',
+      expertise: 'Machine Learning', description: 'Specialist in deep learning and autonomous systems development.',
+      icon: Brain, linkedin: 'https://linkedin.com/in/michael-chen'
     },
     {
-      name: 'Emily Rodriguez',
-      role: 'Security Director',
-      expertise: 'Cybersecurity',
-      description: 'Cybersecurity expert with focus on zero-trust architecture.',
-      icon: Shield,
-      linkedin: 'https://linkedin.com/in/emily-rodriguez'
+      name: 'Emily Rodriguez', role: 'Security Director',
+      expertise: 'Cybersecurity', description: 'Cybersecurity expert with focus on zero-trust architecture.',
+      icon: Shield, linkedin: 'https://linkedin.com/in/emily-rodriguez'
     },
     {
-      name: 'David Kim',
-      role: 'DevOps Lead',
-      expertise: 'Infrastructure',
-      description: 'DevOps specialist with expertise in automation and scaling.',
-      icon: Code,
-      linkedin: 'https://linkedin.com/in/david-kim'
+      name: 'David Kim', role: 'DevOps Lead',
+      expertise: 'Infrastructure', description: 'DevOps specialist with expertise in automation and scaling.',
+      icon: Code, linkedin: 'https://linkedin.com/in/david-kim'
     },
     {
-      name: 'Lisa Thompson',
-      role: 'Product Manager',
-      expertise: 'SaaS Solutions',
-      description: 'Product strategist focused on micro SaaS and user experience.',
-      icon: Users,
-      linkedin: 'https://linkedin.com/in/lisa-thompson'
+      name: 'Lisa Thompson', role: 'Product Manager',
+      expertise: 'SaaS Solutions', description: 'Product strategist focused on micro SaaS and user experience.',
+      icon: Users, linkedin: 'https://linkedin.com/in/lisa-thompson'
     }
   ];
 
   const values = [
+<<<<<<< HEAD
     {
+      icon: Brain, title: 'Innovation First',
+=======
+  {
       icon: Brain,
       title: 'Innovation First',
+>>>>>>> main
       description: 'We push the boundaries of technology to deliver cutting-edge solutions.'
-    },
-    {
+    }, {
       icon: Users,
-      title: 'Client Success',
-      description: 'Your success is our success. We\'re committed to delivering exceptional results.'
+      title: 'Client Success', description: 'Your success is our success. We\'re committed to delivering exceptional results.'
     },
     {
-      icon: Shield,
-      title: 'Security & Trust',
+      icon: Shield, title: 'Security & Trust',
       description: 'We maintain the highest security standards and build trust through transparency.'
-    },
-    {
+    }, {
       icon: Zap,
-      title: 'Agile Delivery',
-      description: 'Fast, efficient delivery without compromising on quality or security.'
+      title: 'Agile Delivery', description: 'Fast, efficient delivery without compromising on quality or security.'
     }
   ];
 
@@ -86,7 +78,7 @@ export default function Team() {
         <title>Our Team — Zion Tech Group</title>
         <meta name="description" content="Meet the expert team behind Zion Tech Group. Experienced professionals dedicated to delivering innovative technology solutions." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="https://ziontechgroup.com/team" />
+        <link rel="canonical" href="https: //ziontechgroup.com/team" />
       </Head>
       
       <Navigation />
@@ -109,7 +101,7 @@ export default function Team() {
 
         {/* Team Members */}
         <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Leadership Team</h2>
               <p className="text-lg text-gray-600">
@@ -119,7 +111,7 @@ export default function Team() {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {teamMembers.map((member, index) => (
-                <div key={index} className="bg-white rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+                <div key={index} className="bg-white rounded-lg p-8 shadow-sm hover: shadow-md transition-shadow border border-gray-100">
                   <div className="text-center">
                     <div className="w-24 h-24 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mx-auto mb-6 flex items-center justify-center">
                       <member.icon className="w-12 h-12 text-white" />
@@ -146,7 +138,7 @@ export default function Team() {
 
         {/* Company Values */}
         <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Values</h2>
               <p className="text-lg text-gray-600">
@@ -170,14 +162,14 @@ export default function Team() {
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold text-white mb-6">
               Ready to Work with Our Team?
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Let's discuss how our expert team can help transform your business with innovative technology solutions.
+              Let&apos;s discuss how our expert team can help transform your business with innovative technology solutions.'
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                 Get In Touch
               </Link>
@@ -190,6 +182,6 @@ export default function Team() {
       </main>
       
       <Footer />
-    </>
+</>
   );
 }

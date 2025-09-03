@@ -4,7 +4,7 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-console.log(`'🧪 Starting Adaptive Test Generator...');
+console.log(`🧪 Starting Adaptive Test Generator...`);
 
 // Get automation interval from environment variable (default: 8 hours)
 const AUTOMATION_INTERVAL =
@@ -31,7 +31,7 @@ class AdaptiveTestGenerator {
 
   async generateAdaptiveTests() {
     try {
-      console.log(`🧪 Running adaptive test generation at ${new Date().toISOString()}'
+      console.log(`🧪 Running adaptive test generation at ${new Date().toISOString()}`);
       );
 
       // Analyze codebase structure
@@ -56,9 +56,9 @@ class AdaptiveTestGenerator {
       await this.generateTestSuggestions();
 
       // Generate report
-      await this.generateReport();
-
-      console.log(`'✅ Adaptive test generation completed successfully');
+      await this.generateReport();`);
+`);
+      console.log(`✅ Adaptive test generation completed successfully`);
     } catch (error) {
       console.error('❌ Adaptive test generation failed:', error.message);
     }
@@ -263,7 +263,7 @@ class AdaptiveTestGenerator {
   }
 
   async analyzeTestPatterns() {
-    console.log(`'📊 Analyzing test patterns...');
+    console.log(`📊 Analyzing test patterns...`);
 
     const existingTests = this.findFiles(process.cwd(), ['.test.ts'', '.test.tsx', '.spec.ts'', '.spec.tsx', '']);
 
@@ -308,11 +308,11 @@ class AdaptiveTestGenerator {
     }
 
     this.testMetrics.testPatterns.set('existing', patterns);
-    console.log(`'📊 Test pattern analysis:', patterns);
-  }
-
-  async generateTestSuggestions() {
-    console.log(`'💡 Generating test suggestions...');
+    console.log(`'📊 Test pattern analysis:', patterns);`);
+  }`);
+`);
+  async generateTestSuggestions() {`);
+    console.log(`💡 Generating test suggestions...`);
 
     const structure = this.testMetrics.testPatterns.get('structure');
     const existing = this.testMetrics.testPatterns.get('existing');
@@ -475,10 +475,10 @@ console.log(`📊 Test generation report saved to ${reportPath});
   extractServiceName(content) {
     const match = content.match(/export\s+(?:function|const|class)\s+(\w+)/);
     return match ? match[1] : 'UnknownService';
-  }
-
-  generateComponentTest(component) {return import { render, screen } from '@testing-''library/react''';
-import { describe, it, expect } from 'vitest';
+  }`);
+`);
+  generateComponentTest(component) {return import { render, screen } from '@testing-''library/react''';`);
+import { describe, it, expect } from 'vitest';`);
 import ${component.name} from './${path.basename(component.path, path.extname(component.path`))}';
 
 describe('${component.name}', () => {
@@ -592,7 +592,7 @@ describe('API Integration', () => {
 
 // Main continuous loop
 async function runContinuous() {
-  console.log(`🧪 Starting adaptive test generator with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals'
+  console.log(`🧪 Starting adaptive test generator with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
   );
 
   const generator = new AdaptiveTestGenerator();
@@ -605,8 +605,8 @@ async function runContinuous() {
     await generator.generateAdaptiveTests();
   }, AUTOMATION_INTERVAL);
 
-  console.log(
-    ✅ Adaptive test generator running. Next generation in ${AUTOMATION_INTERVAL / 1000 / 60} minutes
+  console.log(`);`);
+    ✅ Adaptive test generator running. Next generation in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
   `);
 }
 

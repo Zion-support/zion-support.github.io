@@ -23,11 +23,20 @@ const EnhancedNavigation: React.FC = () => {
           </Link>
 
           {/* Desktop Navigation */}
+<<<<<<< HEAD
+          <div className='hidden lg: flex items-center space-x-8'>
+            <Link href='/' className='text-gray-600 hover:text-blue-600 transition-colors'>
+=======
+<<<<<<< HEAD
+          <div className="hidden lg: flex items-center space-x-8">
+=======
           <div className="hidden lg:flex items-center space-x-8">
+>>>>>>> main
             <Link
               href="/"
               className="text-gray-600 hover:text-blue-600 transition-colors"
             >
+>>>>>>> main
               Home
             </Link>
 
@@ -46,11 +55,20 @@ const EnhancedNavigation: React.FC = () => {
                 onMouseEnter={() => setServicesOpen(true)}
                 onMouseLeave={() => setServicesOpen(false)}
               >
+<<<<<<< HEAD
+                <Link href='/services/ai-services' className='block px-4 py-2 text-gray-700 hover: bg-blue-50 hover:text-blue-600'>
+                  AI Services
+=======
                 <Link
                   href="/services/ai-development"
+<<<<<<< HEAD
+                  className="block px-4 py-2 text-gray-700 hover: bg-blue-50 hover:text-blue-600"
+=======
                   className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600"
+>>>>>>> main
                 >
                   AI Development
+>>>>>>> main
                 </Link>
                 <Link
                   href="/services/cloud-services"
@@ -106,10 +124,21 @@ const EnhancedNavigation: React.FC = () => {
                 onMouseEnter={() => setSolutionsOpen(true)}
                 onMouseLeave={() => setSolutionsOpen(false)}
               >
+<<<<<<< HEAD
+                <Link href='/solutions' className='block px-4 py-2 text-gray-700 hover: bg-blue-50 hover:text-blue-600'>
+                  Solutions Overview
+                </Link>
+                <Link href='/solutions/enterprise' className='block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600'>
+=======
                 <Link
                   href="/solutions/enterprise"
+<<<<<<< HEAD
+                  className="block px-4 py-2 text-gray-700 hover: bg-blue-50 hover:text-blue-600"
+=======
                   className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600"
+>>>>>>> main
                 >
+>>>>>>> main
                   Enterprise Solutions
                 </Link>
                 <Link

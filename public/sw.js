@@ -1,16 +1,7 @@
 const CACHE_NAME =;
   'zion-tech-group-v1';
 const urlsToCache = [
-  '/',
-  '/about',
-  '/services',
-  '/contact',
-  '/careers',
-  '/manifest.json',
-  '/favicon.ico',
-  '/apple-touch-icon.png',
-  '/favicon-32x32.png',
-  '/favicon-16x16.png';
+  '/,/about,/services,/contact,/careers,/manifest.json,/favicon.ico,/apple-touch-icon.png,/favicon-32x32.png,/favicon-16x16.png';
 ];
 // Install event - cache resources;
 self.addEventListener(

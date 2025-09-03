@@ -92,6 +92,7 @@ export default function AIDevelopmentService() {
         </h2>
         <div className="mt-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 text-sm">
           {[
+<<<<<<< HEAD
             'OpenAI',
             'Gemini',
             'Cohere',
@@ -104,6 +105,9 @@ export default function AIDevelopmentService() {
             'Postgres',
             'Pinecone',
             'Weaviate',
+=======
+            'OpenAI,Gemini,Cohere,HuggingFace,PyTorch,TensorFlow,LangChain,LlamaIndex,Supabase,Postgres,Pinecone,Weaviate',
+>>>>>>> main
           ].map(t => (
             <div
               key={t}
