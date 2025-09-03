@@ -1,9 +1,17 @@
+<<<<<<< HEAD
 // Build Verification Script
 // This script checks if our components can be imported without syntax errors
 
 /* eslint-disable no-console, no-undef, no-unused-vars */
 console.log('🔍 Starting build verification...');
 
+=======
+  // Build Verification Script;
+// This script checks if our components can be imported without syntax errors;
+  console.log(
+  '🔍 Starting build verification...'
+);
+>>>>>>> origin/main
 try {
   // Test component imports
   console.log('📦 Testing component imports...');
