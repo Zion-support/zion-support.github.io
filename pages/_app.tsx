@@ -63,7 +63,6 @@ function Footer(): any {
         </div>
 
         {/* Services */}
-<<<<<<< HEAD
         <div style={{ display: 'grid', gap: 12 }}>
           <h3 style={{ fontWeight: 700, fontSize: '1.1rem' }}>Services</h3>
           <div style={{ display: 'grid', gap: 8 }}>
@@ -78,22 +77,10 @@ function Footer(): any {
               <div>• 80+ AI Services</div>
               <div>• 80+ IT Solutions</div>
             </div>
-=======
-        <div className="footer-section">
-          <h3>Services</h3>
-          <Link href="/services">All Services</Link>
-          <Link href="/services-catalog">Services Catalog</Link>
-          <Link href="/pricing">Pricing</Link>
-          <div className="text-sm mt-2 space-y-1">
-            <div>• 39+ Micro SaaS Products</div>
-            <div>• 28+ AI Services</div>
-            <div>• 35+ IT Solutions</div>
->>>>>>> cursor/analyze-improve-and-deploy-application-96c5
           </div>
         </div>
 
         {/* Quick Links */}
-<<<<<<< HEAD
         <div style={{ display: 'grid', gap: 12 }}>
           <h3 style={{ fontWeight: 700, fontSize: '1.1rem' }}>Quick Links</h3>
           <div style={{ display: 'grid', gap: 8 }}>
@@ -105,15 +92,6 @@ function Footer(): any {
             <Link href="/terms" style={{ opacity: 0.8, textDecoration: 'none' }}>Terms of Service</Link>
             <a href="https://ziontechgroup.com" style={{ opacity: 0.8, textDecoration: 'none' }}>Main Website</a>
           </div>
-=======
-        <div className="footer-section">
-          <h3>Quick Links</h3>
-          <Link href="/">Home</Link>
-          <Link href="/contact">Contact Us</Link>
-          <Link href="/privacy">Privacy Policy</Link>
-          <Link href="/terms">Terms of Service</Link>
-          <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer">Main Website</a>
->>>>>>> cursor/analyze-improve-and-deploy-application-96c5
         </div>
 
         {/* Contact CTA */}
