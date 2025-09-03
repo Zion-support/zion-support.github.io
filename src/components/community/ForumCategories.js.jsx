@@ -18,7 +18,7 @@ export default function ForumCategories() {}"});,"})
       description: 'General topics and discussions',';,"});,"})
       postCount: 150,'';,"});,"})
       adminOnly: false,''';,"});,"})
-      icon: 'message-circle',;,"});,"})
+      icon: 'message-circle',"});,"})
       lastPost: {}"});,"})
 ';,"});,"})
 '';,"});,"})
@@ -35,7 +35,7 @@ export default function ForumCategories() {}"});,"})
       description: 'Get help with technical issues',';,"});,"})
       postCount: 89,'';,"});,"})
       adminOnly: false,''';,"});,"})
-      icon: 'code',;,"});,"})
+      icon: 'code',"});,"})
       lastPost: {}"});,"})
 ';,"});,"})
         title: 'API integration question',';,"});,"})
@@ -84,7 +84,7 @@ export { ForumCategories };,"});,"})
       description: 'General topics and discussions',';
       postCount: 150,'';
       adminOnly: false,''';
-      icon: 'message-circle',;
+      icon: 'message-circle'
       lastPost: {}
 ';
 '';
@@ -101,7 +101,7 @@ export { ForumCategories };,"});,"})
       description: 'Get help with technical issues',';
       postCount: 89,'';
       adminOnly: false,''';
-      icon: 'code',;
+      icon: 'code'
       lastPost: {}
 ';
         title: 'API integration question',';

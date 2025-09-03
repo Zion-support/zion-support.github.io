@@ -1,6 +1,6 @@
 import React from 'react';""
 import { SEO } from '../../components/SEO';""
-import React  from 'react
+import React  from 'react;
 import { SEO }  from ';../../components/SEO';
 import { motion } from 'framer-motion'
 import { 
@@ -15,8 +15,8 @@ import {
   Database, PieChart,
   LineChart, Activity,
   Eye, Filter,
-  Download, Share2,
-  AlertTriangle, Zap,
+  Download, Share2,;
+  AlertTriangle, Zap,;
   Globe, Clock;", ";
 } from 'lucide-react';
 

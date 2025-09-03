@@ -1,4 +1,4 @@
-import React { useEffect, useState, useCallback } from 'react'
+import React { useEffect, useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Activity, AlertTriangle, CheckCircle } from 'lucide-react';
 
@@ -60,8 +60,8 @@ const EnhancedPerformanceMonitor: React.FC: = () => {
       console.error('Error updating metrics:', error)} finally: {';
       setIsLoading(false)}
   score: number;
-import React { useEffect, useState, useCallback } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import React { useEffect, useState, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Activity, AlertTriangle, CheckCircle }  from 'lucide-react';interface PerformanceMetrics {
   fcp: number
   lcp: number
@@ -113,9 +113,9 @@ const navigationEntry = performance.getEntriesByType('navigation')[0] as Perform
         metrics.tti = Math.round(performance.now());
 
 const finalMetrics = {
-          fcp: metrics.fcp || 0, lcp: metrics.lcp || 0,;
-          fid: metrics.fid || 0, cls: metrics.cls || 0,;
-          ttfb: metrics.ttfb || 0, fmp: metrics.fmp || 0,;
+          fcp: metrics.fcp || 0, lcp: metrics.lcp || 0
+          fid: metrics.fid || 0, cls: metrics.cls || 0
+          ttfb: metrics.ttfb || 0, fmp: metrics.fmp || 0
           tti: metrics.tti || 0, score: 0};
 
         finalMetrics.score = calculateOverallScore(finalMetrics);

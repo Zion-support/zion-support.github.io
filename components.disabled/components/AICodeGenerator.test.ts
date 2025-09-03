@@ -4,8 +4,8 @@ import AICodeGenerator from './AICodeGenerator'
 describe('AICodeGenerator', () => {
 
   it('renders without crashing', () => {
-
-    render(<AICodeGenerator />)
+;
+    render(<AICodeGenerator />);
     expect(screen.getByRole('main')).toBeInTheDocument();
 })
   it('displays correct content', () => {

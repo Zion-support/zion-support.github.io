@@ -72,7 +72,7 @@ const PerformanceEnhancer: React.FC: = () => {
         updateMemoryUsage();
         const memoryInterval = setInterval(updateMemoryUsage, 5000);
         return: () => {
-'use client';
+'use client'
 
 
 // import { usePerformanceOptimization } from '../src/utils/performanceOptimizer';
@@ -110,7 +110,7 @@ const PerformanceEnhancer: React.FC = () => {
   
 'use client'
 
-import React { useEffect, useState, useCallback } from 'react'
+import React { useEffect, useState, useCallback } from 'react';
 // import { usePerformanceOptimization }  from '../src/utils/performanceOptimizer';interface PerformanceMetrics {
   fcp: number | null
    lcp: number | null

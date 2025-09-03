@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link'
+import Link from 'next/link';
 import { ArrowRight, CheckCircle, Star, Zap, Shield, Globe, Database, Network, Brain, Cloud } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
 

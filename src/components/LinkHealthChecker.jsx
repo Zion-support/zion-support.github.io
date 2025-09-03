@@ -10,12 +10,12 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
             if (url.startsWith('http') && !url.includes('ziontechgroup.com')) {}"});,"})
                 return {}"});,"})
                     url,';,"});,"})
-                    status: 'external',;,"});,"})
+                    status: 'external',"});,"})
                     responseTime: Date.now() - startTime,"});,"});
 }}';,"});,"})
             // Check if it's a mailto or tel link'';,"});,"})
             if (url.startsWith('mailto:') || url.startsWith('tel:')) {}"});,"})
-                    status: 'healthy',;,"});,"})
+                    status: 'healthy',"});,"})
             // For internal links, we'll assume they're healthy since they're part of our app'';,"});,"})
             if (url.startsWith('/') || url.includes('ziontechgroup.com')) {}"});,"})
                     responseTime: Date.now () - startTime,"});,"})
@@ -23,7 +23,7 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
             // For now, we'll mark them as external,"});,"});
 }}"});,"})
         catch(error) {}"});,"})
-                status: 'broken',;,"});,"})
+                status: 'broken',"});,"})
                 responseTime: Date.now() - startTime,';,"});,"})
                 error: error instanceof Error ? error.message : 'Unknown error',"});,"});
 };,"});,"})

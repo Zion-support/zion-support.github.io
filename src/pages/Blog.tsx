@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { SEO } from '../components/SEO'
+import { SEO } from '../components/SEO';
 import React from 'react';
 import {SEO } from '@/components/SEO';
 
@@ -15,13 +15,13 @@ export default function Blog() {return (
         </p>
       </div>
     </div>
-import React from &apos
+import React from &apos;
 import Link from &apos;next/link';react';
 import { motion } from &apos;framer-motion';
 import { Link } from &apos;react-router-dom';
 import { SEO } from &apos;../components/SEO';
-import { 
-  Calendar, User, ArrowRight, Tag, Clock, TrendingUp, 
+import { ;
+  Calendar, User, ArrowRight, Tag, Clock, TrendingUp, ;
   Brain, Atom, Rocket, Shield, Globe, Code} from &apos;lucide-react';&apos;&apos;
 
 export default function Blog() {}
@@ -36,9 +36,9 @@ export default function Blog() {}
       category: &quot;AI & Machine Learning&quot,
       tags: [&quot;AI&quot, &quot;Enterprise&quot, &quot;Technology&quot],
       image: &quot;/api/placeholder/600/400&quot,
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { SEO } from '../components/SEO'
+import { SEO } from '../components/SEO';
 import { ;
   Calendar, User, ArrowRight, Tag, Clock, TrendingUp, ;
   Brain, Atom, Rocket, Shield, Globe, Code} from 'lucide-react';
@@ -46,70 +46,70 @@ import { ;
 export default function Blog() {;
   const blogPosts = [;
     {;
-      id: 1,;
-      title: "The Future of AI in Enterprise: 2025 Trends and Predictions",;
-      excerpt: "Explore the latest AI trends transforming enterprise operations and how businesses can leverage these technologies for competitive advantage.",;
-      author: "Dr. Sarah Chen",;
-      date: "2025-01-15",;
-      readTime: "8 min read",;
-      category: "AI & Machine Learning",;
+      id: 1
+      title: "The Future of AI in Enterprise: 2025 Trends and Predictions"
+      excerpt: "Explore the latest AI trends transforming enterprise operations and how businesses can leverage these technologies for competitive advantage."
+      author: "Dr. Sarah Chen"
+      date: "2025-01-15"
+      readTime: "8 min read"
+      category: "AI & Machine Learning"
       tags: ["AI", "Enterprise", "Technology"],;
-      image: "/api/placeholder/600/400",;
+      image: "/api/placeholder/600/400"
       featured: true},;
     {;
-      id: 2,;
-      title: "Quantum Computing Breakthrough: What It Means for Your Business",;
-      excerpt: "Understanding the latest quantum computing advances and their practical applications in solving complex business problems.",;
-      author: "Prof. Michael Rodriguez",;
-      date: "2025-01-12",;
-      readTime: "12 min read",;
-      category: "Quantum Computing",;
+      id: 2
+      title: "Quantum Computing Breakthrough: What It Means for Your Business"
+      excerpt: "Understanding the latest quantum computing advances and their practical applications in solving complex business problems."
+      author: "Prof. Michael Rodriguez"
+      date: "2025-01-12"
+      readTime: "12 min read"
+      category: "Quantum Computing"
       tags: ["Quantum", "Computing", "Innovation"],;
-      image: "/api/placeholder/600/400",;
+      image: "/api/placeholder/600/400"
       featured: true},;
     {;
-      id: 3,;
-      title: "Micro SaaS Revolution: Building Scalable Solutions",;
-      excerpt: "How micro SaaS platforms are changing the software landscape and creating new opportunities for businesses.",;
-      author: "Alex Thompson",;
-      date: "2025-01-10",;
-      readTime: "6 min read",;
-      category: "Micro SaaS",;
+      id: 3
+      title: "Micro SaaS Revolution: Building Scalable Solutions"
+      excerpt: "How micro SaaS platforms are changing the software landscape and creating new opportunities for businesses."
+      author: "Alex Thompson"
+      date: "2025-01-10"
+      readTime: "6 min read"
+      category: "Micro SaaS"
       tags: ["SaaS", "Software", "Business"],;
-      image: "/api/placeholder/600/400",;
+      image: "/api/placeholder/600/400"
       featured: false},;
     {;
-      id: 4,;
-      title: "Cybersecurity in the Age of AI: New Threats and Solutions",;
-      excerpt: "Examining how AI is both creating new security challenges and providing innovative solutions to protect enterprise data.",;
-      author: "Lisa Park",;
-      date: "2025-01-08",;
-      readTime: "10 min read",;
-      category: "Cybersecurity",;
+      id: 4
+      title: "Cybersecurity in the Age of AI: New Threats and Solutions"
+      excerpt: "Examining how AI is both creating new security challenges and providing innovative solutions to protect enterprise data."
+      author: "Lisa Park"
+      date: "2025-01-08"
+      readTime: "10 min read"
+      category: "Cybersecurity"
       tags: ["Security", "AI", "Enterprise"],;
-      image: "/api/placeholder/600/400",;
+      image: "/api/placeholder/600/400"
       featured: false},;
     {;
-      id: 5,;
-      title: "Digital Transformation: A Complete Guide for 2025",;
-      excerpt: "Comprehensive strategies for successful digital transformation initiatives in modern enterprises.",;
-      author: "David Kumar",;
-      date: "2025-01-05",;
-      readTime: "15 min read",;
-      category: "Digital Transformation",;
+      id: 5
+      title: "Digital Transformation: A Complete Guide for 2025"
+      excerpt: "Comprehensive strategies for successful digital transformation initiatives in modern enterprises."
+      author: "David Kumar"
+      date: "2025-01-05"
+      readTime: "15 min read"
+      category: "Digital Transformation"
       tags: ["Digital", "Transformation", "Strategy"],;
-      image: "/api/placeholder/600/400",;
+      image: "/api/placeholder/600/400"
       featured: false},;
     {;
-      id: 6,;
-      title: "Cloud Infrastructure Best Practices for Global Enterprises",;
-      excerpt: "Essential guidelines for designing and managing cloud infrastructure that scales with your business needs.",;
-      author: "Maria Santos",;
-      date: "2025-01-03",;
-      readTime: "9 min read",;
-      category: "Cloud Computing",;
+      id: 6
+      title: "Cloud Infrastructure Best Practices for Global Enterprises"
+      excerpt: "Essential guidelines for designing and managing cloud infrastructure that scales with your business needs."
+      author: "Maria Santos"
+      date: "2025-01-03"
+      readTime: "9 min read"
+      category: "Cloud Computing"
       tags: ["Cloud", "Infrastructure", "Enterprise"],;
-      image: "/api/placeholder/600/400",;
+      image: "/api/placeholder/600/400"
       featured: false}
   ]
 ;

@@ -20,18 +20,18 @@ import { Home, Search, ArrowRight, AlertTriangle const NotFound = () => {}"});,"
     ],"});,"})
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center px-4">"""";,"});,"})
       <motion.div className="max-w-4xl mx-auto text-center" initial = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   y: 20,"});,"});
 }} animate = {}"});,"})
-  { opacity: 1,;,"});,"})
+  { opacity: 1,"});,"})
   y: 0,"});,"});
 }} transition={{ duration: 0.5 }}>""";,"});,"})
         {/* 404 Icon */}"""";,"});,"})
         <motion.div className="mb-8" animate = {}"});,"})
   { scale: [1, 1.1,;,"});,"})
-  1];,"});,"});
+  1],"});,"});
 }} transition = {}"});,"})
-  { duration: 2,;,"});,"})
+  { duration: 2,"});,"})
   repeat: Infinity,"});,"})
 """;,"});,"});
 }}>"""";,"});,"})

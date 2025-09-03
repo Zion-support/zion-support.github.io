@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { Link } from 'react-router-dom';
 import {
   ArrowRight,
@@ -29,8 +29,8 @@ import {
   FileText,
   Image,
   Video,
-  Bot,
-  Phone} from 'lucide-react'
+  Bot,;
+  Phone} from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
 
 export default function ServicesEnhanced() {

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { ArrowRight, CheckCircle, Headphones, MessageSquare, Users, BarChart3, Zap, Shield, Clock, Star, TrendingUp, Globe } from 'lucide-react';
 import PageTransition from '../../src/components/PageTransition';
 

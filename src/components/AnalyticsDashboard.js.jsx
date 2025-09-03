@@ -3,9 +3,9 @@ import { BarChart3, TrendingUp, Activity, Eye, Clock, Target, RefreshCw } from '
 ;,"});,"})
 export const AnalyticsDashboard = ({ className = '', showRealTime = true, refreshInterval = 5000 }) => {;,"});,"})
     const { isTracking, currentSession, performanceMetrics, events, getAnalyticsSummary, trackEvent, trackConversion } = useAnalytics({;,"});,"})
-        enableTracking: true,;,"});,"})
-        enablePerformanceTracking: true,;,"});,"})
-        enableUserBehaviorTracking: true,;,"});,"})
+        enableTracking: true,"});,"})
+        enablePerformanceTracking: true,"});,"})
+        enableUserBehaviorTracking: true,"});,"})
         enableHeatmapTracking: false,"});,"});
 });,"});,"})
     const [isExpanded, setIsExpanded] = useState(false);,"});,"})
@@ -390,7 +390,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
   );,"});,"});
 };'"`;,"});,"})
 '"`'"`;,"});,"})
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 import { BarChart3, TrendingUp, Activity, Eye, Clock, Target, RefreshCw } from 'lucide-react';""
 import React, { useState, useEffect }  from 'react'
 import { BarChart3, TrendingUp, Activity, Eye, Clock, Target, RefreshCw } from 'lucide-react
@@ -478,8 +478,8 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
             </div>
             {/* Time Range Selector */}
             <select value={selectedTimeRange}
-              onChange={e =" > {}"
-                setSelectedTimeRange(e.target.value)''
+              onChange={e =" > {}";
+                setSelectedTimeRange(e.target.value)'';
                 handleDashboardInteraction('time_range_changed', {};""
                   timeRange: e.target.value})';'}}''''
               className='px-2 py-1 bg-white/20 rounded text-xs focus: outline-none focus:ring-2 focus:ring-white/50'''''

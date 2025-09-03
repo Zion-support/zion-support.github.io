@@ -31,7 +31,7 @@ import { Search, Book, Video, MessageCircle, Phone, Mail, FileText, Download } f
   Getting Started;
   ',      description: 'Learn the basics and get up and running quickly, articles: [;
   '        'Welcome to Zion Tech Group;
-  ',;
+  '
   'Setting up your account',
   'Understanding our services',
   '        'First steps guide';

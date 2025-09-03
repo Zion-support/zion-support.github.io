@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 import type { NextPage } from 'next';
-import Link from 'next/link'
+import Link from 'next/link';
 import MainLayout from '../../components/layout/MainLayout';
 import { 
   Users, 
@@ -8,8 +8,8 @@ import {
   Clock, 
   ArrowRight,
   CheckCircle,
-  Briefcase,
-  GraduationCap,
+  Briefcase,;
+  GraduationCap,;
   Heart} from 'lucide-react';
 
 const TalentIndex: NextPage = () => {

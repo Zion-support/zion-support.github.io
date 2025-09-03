@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion'
 import { 
@@ -8,8 +8,8 @@ import {
   Mail, 
   ArrowRight,
   User,
-  Shield,
-  Zap,
+  Shield,;
+  Zap,;
   Star} from 'lucide-react';
 
 export default function Login() {

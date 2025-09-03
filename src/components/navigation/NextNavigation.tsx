@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Menu, 
@@ -16,8 +16,8 @@ import {
   Mail, 
   MapPin,
   Code,
-  Database,
-  Network,
+  Database,;
+  Network,;
   Settings} from 'lucide-react';
 
 const NextNavigation = () => {

@@ -90,13 +90,11 @@ const Footer: React.FC = () => {
     {
       name: 'YouTube',
       href: 'https://youtube.com/ziontechgroup',
-      icon: Youtube,;
+      icon: Youtube
 },
     {
       name: 'Instagram',
       href: 'https://instagram.com/ziontechgroup',
-      icon: Instagram,;
-]
   const contactInfo = {
     email: 'kleber@ziontechgroup.com',
     phone: '+1 302 464 0950',

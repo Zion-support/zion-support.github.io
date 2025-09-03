@@ -37,7 +37,7 @@ export { ThemeToggle };,"});,"})
 export { ThemeToggle };,"});,"})
 ;,"});,"})
 export { ThemeToggle };,"});,"})
-import React from 'react'
+import React from 'react';
 import { SEO } from '@/components/SEO';
 
 "";

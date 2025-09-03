@@ -1,21 +1,21 @@
-import React { useState } from 'react'
-import { Link  } from 'react-router-dom'; import { motion  } from 'framer-motion'
+import React { useState } from 'react';
+import { Link  } from 'react-router-dom'; import { motion  } from 'framer-motion';
 import { Mail, Phone, MapPin, ArrowUp, Heart, CheckCircle, Send, Globe  } from 'lucide-react'; export function FooterNewsletter() { const [email, setEmail] = useState(''); const [isSubscribed, setIsSubscribed] = useState(false); const [isLoading, setIsLoading] = useState(false); const handleSubscribe = async(e) => { e.preventDefault(); if(!email) return; setIsLoading(true);
-import React { useState } from 'react'
-import { Link    } from 'react-router-dom'; import { motion    } from 'framer-motion'
+import React { useState } from 'react';
+import { Link    } from 'react-router-dom'; import { motion    } from 'framer-motion';
 import { Mail, Phone, MapPin, ArrowUp, Heart, CheckCircle, Send, Globe    } from 'lucide-react'; export function FooterNewsletter() { const [email, setEmail] = useState(''); const [isSubscribed, setIsSubscribed] = useState(false); const [isLoading, setIsLoading] = useState(false); const handleSubscribe = async(e) => { e.preventDefault(); if(!email) return; setIsLoading(true);
 
-import React { useState } from 'react'
-import { Link } from 'react - router - dom'; import { motion } from 'framer - motion'
+import React { useState } from 'react';
+import { Link } from 'react - router - dom'; import { motion } from 'framer - motion';
 import { Mail, Phone, MapPin, ArrowUp, Heart, CheckCircle, Send, Globe } from 'lucide - react'; export function FooterNewsletter () { const [email, setEmail] = useState ('') ; const [isSubscribed, setIsSubscribed] = useState (false) ; const [isLoading, setIsLoading] = useState (false) ; const handleSubscribe = async (e) => { e.preventDefault () ; if (!email) return; setIsLoading (true) ;'';,"});,"})
 ;,"});,"})
-import React { useState } from 'react'
-import { Link    } from 'react-router-dom'; import { motion    } from 'framer-motion'
+import React { useState } from 'react';
+import { Link    } from 'react-router-dom'; import { motion    } from 'framer-motion';
 import { Mail, Phone, MapPin, ArrowUp, Heart, CheckCircle, Send, Globe    } from 'lucide-react'; export function FooterNewsletter() { const [email, setEmail] = useState(''); const [isSubscribed, setIsSubscribed] = useState(false); const [isLoading, setIsLoading] = useState(false); const handleSubscribe = async(e) => { e.preventDefault(); if(!email) return; setIsLoading(true);,"});,"})
 import React { useState } from 'react' import { Link } from 'react - router - dom' import { motion } from 'framer - motion' import { Mail, Phone, MapPin, ArrowUp, Heart, CheckCircle, Send, Globe } from 'lucide - react' export function FooterNewsletter () { const [email, setEmail] = useState ('')  const [isSubscribed, setIsSubscribed] = useState (false)  const [isLoading, setIsLoading] = useState (false)  const handleSubscribe = async (e) => { e.preventDefault ()  if (!email) return setIsLoading (true) ';;
 import React { useState } from 'react' import { Link } from 'react - router - dom' import { motion } from 'framer - motion' import { Mail, Phone, MapPin, ArrowUp, Heart, CheckCircle, Send, Globe } from 'lucide - react' export function FooterNewsletter () { const [email, setEmail] = useState ('')  const [isSubscribed, setIsSubscribed] = useState (false)  const [isLoading, setIsLoading] = useState (false)  const handleSubscribe = async (e) => { e.preventDefault ()  if (!email) return setIsLoading (true) ';';
-import React { useState } from 'react' import { Link } from 'react - router - dom' import { motion } from 'framer - motion' import { Mail, Phone, MapPin, ArrowUp, Heart, CheckCircle, Send, Globe } from 'lucide - react' export function FooterNewsletter () { const [email, setEmail] = useState ('')  const [isSubscribed, setIsSubscribed] = useState (false)  const [isLoading, setIsLoading] = useState (false)  const handleSubscribe = async (e) => { e.preventDefault ()  if (!email) return setIsLoading (true) ''
-import React { useState } from 'react' import { Link } from 'react - router - dom' import { motion } from 'framer - motion' import { Mail, Phone, MapPin, ArrowUp, Heart, CheckCircle, Send, Globe } from 'lucide - react' export function FooterNewsletter () { const [email, setEmail] = useState (')  const [isSubscribed, setIsSubscribed] = useState (false)  const [isLoading, setIsLoading] = useState (false)  const handleSubscribe = async (e) => { e.preventDefault ()  if (!email) return setIsLoading (true) '
+import React { useState } from 'react' import { Link } from 'react - router - dom' import { motion } from 'framer - motion' import { Mail, Phone, MapPin, ArrowUp, Heart, CheckCircle, Send, Globe } from 'lucide - react' export function FooterNewsletter () { const [email, setEmail] = useState ('')  const [isSubscribed, setIsSubscribed] = useState (false)  const [isLoading, setIsLoading] = useState (false)  const handleSubscribe = async (e) => { e.preventDefault ()  if (!email) return setIsLoading (true) '';
+import React { useState } from 'react' import { Link } from 'react - router - dom' import { motion } from 'framer - motion' import { Mail, Phone, MapPin, ArrowUp, Heart, CheckCircle, Send, Globe } from 'lucide - react' export function FooterNewsletter () { const [email, setEmail] = useState (')  const [isSubscribed, setIsSubscribed] = useState (false)  const [isLoading, setIsLoading] = useState (false)  const handleSubscribe = async (e) => { e.preventDefault ()  if (!email) return setIsLoading (true) ';
 import React from 'react';
 import {Link } from 'react-router-dom'
 import {Mail, 
@@ -29,8 +29,8 @@ import {Mail,
   ArrowRight,
   Shield,
   Zap,
-  Users,
-  Globe'
+  Users,;
+  Globe';
   Zap,;
   Users,;
   Globe;
@@ -45,8 +45,8 @@ import {
   MapPin, Twitter, 
   Linkedin, Facebook, 
   Instagram, Youtube,
-  ArrowRight, Shield,
-  Zap, Users,
+  ArrowRight, Shield,;
+  Zap, Users,;
   Globe;", ";
 } from 'lucide-react';
 

@@ -1,22 +1,22 @@
-import React { Suspense, lazy } from 'react'
+import React { Suspense, lazy } from 'react';
 import { Routes, Route  } from 'react-router-dom';
-import { HelmetProvider  } from 'react-helmet-async'
+import { HelmetProvider  } from 'react-helmet-async';
 import { Routes, Route    } from 'react-router-dom';
 export default function Page() {
 
 // Core Components
-import { PerformanceOptimizer } from './components/PerformanceOptimizer'
+import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { SEO } from './components/SEO';
-import { ErrorBoundary } from './components/ErrorBoundary'
+import { ErrorBoundary } from './components/ErrorBoundary';
 import { LoadingSpinner  } from './components/ui/loading-spinner';
 
 // Layout Components
-import { EnhancedHeader } from './components/EnhancedHeader'
+import { EnhancedHeader } from './components/EnhancedHeader';
 import { EnhancedFooter } from './components/EnhancedFooter';
 
 // Optimized lazy loading with preloading hints
 const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 ;
 ursor/automate-test-fix-improve-and-merge-code-99d1,"});,"})
@@ -160,11 +160,11 @@ const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.Reac
   return (props: any) => (;
 <Suspense fallback={fallback || <LoadingSpinner />}><LazyComponent {...props} />;
 export default function Page()   {// Core Components;
-  import {SEO } from './components/SEO'
+  import {SEO } from './components/SEO';
 import {ErrorBoundary } from './components/ErrorBoundary';
   import {LoadingSpinner  } from './components/ui/loading-spinner';
 // Layout Components;
-import {EnhancedHeader } from './components/EnhancedHeader'
+import {EnhancedHeader } from './components/EnhancedHeader';
 import {EnhancedFooter } from './components/EnhancedFooter';
 // Optimized lazy loading with preloading hints;
 const createLazyComponent = (importFn: () => Promise<>, fallback?: React.ReactNode) => {const LazyComponent = lazy(importFn)
@@ -275,9 +275,9 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error resetErrorB
       </ErrorBoundary>;
     </HelmetProvider>;
 export default App;
-import { Routes, Route } from 'react-router-dom
+import { Routes, Route } from 'react-router-dom;
 import { HelmetProvider } from 'react-helmet-async';''// Core Components;
-import { SEO } from './components/SEO
+import { SEO } from './components/SEO;
 import { LoadingSpinner } from './components/ui/loading-spinner';''// Layout Components;
 import { EnhancedFooter } from './components/EnhancedFooter';''// Optimized lazy loading with preloading hints';
 const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {const LazyComponent = lazy(importFn);
@@ -339,10 +339,10 @@ import { HelmetProvider } from;"
 
 // Core Components;"
 import { PerformanceOptimizer } from './components/PerformanceOptimizer
-  import { SEO } from './components/SEO
-  import { ErrorBoundary } from './components/ErrorBoundary
+  import { SEO } from './components/SEO;
+  import { ErrorBoundary } from './components/ErrorBoundary;
 // Layout Components;"
-import { EnhancedHeader } from './components/EnhancedHeader
+import { EnhancedHeader } from './components/EnhancedHeader;
 // Optimized lazy loading with preloading hints;
 const createLazyComponent = (importFn: () => Promise<>, fallback?: React.ReactNode) => {  const LazyComponent = lazy(importFn)
   return (props:  ) => (""

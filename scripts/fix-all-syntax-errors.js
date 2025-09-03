@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
 import fs from 'fs'
-import path from 'path'
-import { fileURLToPath } from 'url'
+import path from 'path';
+import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 class SyntaxErrorFixer {
@@ -75,13 +75,13 @@ class SyntaxErrorFixer {
   }
 
   fixImportStatements(content) {
-    // Fix broken import statements
-    content = content.replace(/import\s+(\w+)\s+from\s*;\s*['"`]([^'"`]+)['"`]/g, "import $1 from '$2'")
-    content = content.replace(/import\s+(\w+)\s+from\s*,\s*['"`]([^'"`]+)['"`]/g, "import $1 from '$2'")
+    // Fix broken import statements;
+    content = content.replace(/import\s+(\w+)\s+from\s*;\s*['"`]([^'"`]+)['"`]/g, "import $1 from '$2'");
+    content = content.replace(/import\s+(\w+)\s+from\s*,\s*['"`]([^'"`]+)['"`]/g, "import $1 from '$2'");
     content = content.replace(/import\s+(\w+)\s+from\s*;\s*\n\s*['"`]([^'"`]+)['"`]/g, "import $1 from '$2'")
     content = content.replace(/import\s+(\w+)\s+from\s*,\s*\n\s*['"`]([^'"`]+)['"`]/g, "import $1 from '$2'")
-    // Fix incomplete import statements
-    content = content.replace(/import\s+(\w+)\s+from\s*$/gm, "import $1 from '$1'")
+    // Fix incomplete import statements;
+    content = content.replace(/import\s+(\w+)\s+from\s*$/gm, "import $1 from '$1'");
     return content;
 }
   fixSemicolonIssues(content) {

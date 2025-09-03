@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link'
 import {
@@ -28,8 +28,8 @@ import {
   Settings,
   FileText,
   BarChart3,
-  Calendar,
-  Search,
+  Calendar,;
+  Search,;
   Bell} from 'lucide-react';
 import PageTransition from '../../src/components/PageTransition';
 

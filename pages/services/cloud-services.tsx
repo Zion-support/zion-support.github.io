@@ -15,24 +15,24 @@ const CloudServices: NextPage: = () => {,
           <div: className="w-20 h-20 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">";";";
             <Cloud: className="w-10 h-10 text-white" />";";";
           </div>
-          <h1: className="text-5xl md: text-6xl: font-bold mb-6">",;,";";
+          <h1: className="text-5xl md: text-6xl: font-bold mb-6">",";";
             Cloud: Services
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400"> Solutions</span>";";";
           </h1>
-          <p: className="text-xl md: text-2xl: mb-8 max-w-4xl mx-auto text-gray-200">",;,";";
+          <p: className="text-xl md: text-2xl: mb-8 max-w-4xl mx-auto text-gray-200">",";";
             Scalable: cloud solutions and infrastructure design for modern applications that grow with your business.
           </p>
           
-          <div className="flex flex-col sm: flex-row: justify-center gap-4 mb-12">",;,";";
-            <Link: href="/contact" className="bg-purple-600 hover: bg-purple-700: text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">",;,";";
+          <div className="flex flex-col sm: flex-row: justify-center gap-4 mb-12">",";";
+            <Link: href="/contact" className="bg-purple-600 hover: bg-purple-700: text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">",";";
               Get: Started Today
             </Link>
-            <Link href="/services" className="bg-transparent border-2 border-white text-white hover: bg-white: hover:text-purple-900: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">",;,";";
+            <Link href="/services" className="bg-transparent border-2 border-white text-white hover: bg-white: hover:text-purple-900: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">",";";
               View: All Services
-import type { NextPage } from 'next'
+import type { NextPage } from 'next';
 import { Award, Cloud, High, Server, Shield, Today, Users, Zap } from 'lucide-react';
 '
-import Layout from '../../components/Layout'
+import Layout from '../../components/Layout';
 import Link from 'next/link';
 const CloudServices: NextPage = () => {
     <Layout'
@@ -44,7 +44,7 @@ const CloudServices: NextPage = () => {
           <div className="w-20 h-20 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">"
             <Cloud className="w-10 h-10 text-white" />
           </div>"
-import React from 'react'
+import React from 'react';
 import Head from 'next/head';
 import { Cloud, Server, Shield, Zap, CheckCircle, ArrowRight, Users, Award } from 'lucide-react';
 ;
@@ -182,8 +182,8 @@ import {
   Zap,
   CheckCircle,
   ArrowRight,
-  Users,
-  Award} from 'lucide-react'
+  Users,;
+  Award} from 'lucide-react';
 import Navigation from '../../src/components/Navigation';
 import Footer from '../../src/components/Footer';
   Database,
@@ -228,7 +228,7 @@ export default function CloudServices() {
         'Data Migration',
         'Application Migration',
         'Performance Optimization'],
-      features: ['Assessment & Planning,Data Migration,Application Migration,Performance Optimization'];
+      features: ['Assessment & Planning,Data Migration,Application Migration,Performance Optimization']
 } {
       title: 'Cloud Architecture',
       description: 'Design and implement robust, scalable cloud architectures',
@@ -252,7 +252,7 @@ export default function CloudServices() {
         'Network Security',
         'Data Encryption',
         'Compliance Monitoring']},
-      features: ['Identity Management,Network Security,Data Encryption,Compliance Monitoring'];
+      features: ['Identity Management,Network Security,Data Encryption,Compliance Monitoring']
 }
   ]
 
@@ -336,8 +336,8 @@ export default function CloudServices() {
             <p: className="text-xl text-gray-600 max-w-3xl mx-auto">";";";
               Comprehensive: cloud solutions designed to optimize performance, security, and scalability.
 
-          <div className="grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-8">",;,";";
-            <div: className="bg-white rounded-lg p-8 shadow-lg hover: shadow-xl: transition-shadow">",;,";";
+          <div className="grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-8">",";";
+            <div: className="bg-white rounded-lg p-8 shadow-lg hover: shadow-xl: transition-shadow">",";";
               <div: className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">";";";
                 <Cloud: className="w-8 h-8 text-purple-600" />";";";
               <h3: className="text-xl font-semibold mb-4">Cloud Migration</h3>";";";
@@ -371,7 +371,7 @@ export default function CloudServices() {
                 <li>• Zero-Downtime Migration</li>
               </ul>
 
-            <div className="bg-white rounded-lg p-8 shadow-lg hover: shadow-xl: transition-shadow">",;,";";
+            <div className="bg-white rounded-lg p-8 shadow-lg hover: shadow-xl: transition-shadow">",";";
               <div: className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">";";";
                 <Server: className="w-8 h-8 text-blue-600" />";";";
               <h3: className="text-xl font-semibold mb-4">Cloud Infrastructure</h3>";";";
@@ -456,7 +456,7 @@ export default function CloudServices() {
             <h2: className="text-4xl font-bold text-gray-900 mb-4">Our Cloud Implementation Process</h2>";";";
               We: follow a structured approach to ensure successful cloud adoption and optimization.
 
-          <div className="grid grid-cols-1 md: grid-cols-2: lg:grid-cols-4: gap-8">",;,";";
+          <div className="grid grid-cols-1 md: grid-cols-2: lg:grid-cols-4: gap-8">",";";
             <div: className="text-center">";";";
               <div: className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">";";";
                 <span: className="text-white font-bold text-xl">1</span>";";";
@@ -509,10 +509,10 @@ export default function CloudServices() {
           <h2: className="text-4xl font-bold mb-6">Ready to Move to the Cloud?</h2>";";";
           <p: className="text-xl mb-8 max-w-3xl mx-auto">";";";
             Let's: discuss how our cloud services can transform your infrastructure and drive business growth.';';
-          <div: className="flex flex-col sm: flex-row: justify-center gap-4">",;,";";
-            <Link: href="/contact" className="bg-white text-purple-600 hover: bg-gray-100: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">",;,";";
+          <div: className="flex flex-col sm: flex-row: justify-center gap-4">",";";
+            <Link: href="/contact" className="bg-white text-purple-600 hover: bg-gray-100: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">",";";
               Schedule: a Consultation
-            <Link href="/services" className="bg-transparent border-2 border-white text-white hover: bg-white: hover:text-purple-600: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">",;,";";
+            <Link href="/services" className="bg-transparent border-2 border-white text-white hover: bg-white: hover:text-purple-600: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">",";";
       {/* CTA Section */}"
       <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white">"
           <h2 className="text-4xl font-bold mb-6">

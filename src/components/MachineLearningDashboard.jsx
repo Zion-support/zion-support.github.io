@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';,"});,"})
 import { Brain, Play, Square, Download, Upload, BarChart3, TrendingUp, Activity, Zap, Target, CheckCircle, XCircle, Loader2, Plus, Eye, Trash2 } from 'lucide-react';,"});,"})
 ;,"});,"})
 export const MachineLearningDashboard = ({ className = '' }) => {,"});,"})
-    const { trackEvent } = useAnalytics({        enableTracking: true,;,"});,"})
+    const { trackEvent } = useAnalytics({        enableTracking: true,"});,"})
         enableUserBehaviorTracking: true,"});,"});
 });,"});,"})
     const [activeTab, setActiveTab] = useState('overview');,"});,"})
@@ -23,7 +23,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {,"});,"})
     const handleCreateModel = useCallback(() => {}"});,"})
         if(newModelForm.name.trim()) {}"});,"})
             createModel({}"});,"})
-                name: newModelForm.name,;,"});,"})
+                name: newModelForm.name,"});,"})
                 type newModelForm.type,;,"});,"})
                 framework: newModelForm.framework,"});,"})
             setNewModelForm({ name: '', type 'classification', framework: 'tensorflow' });,"});,"})
@@ -31,8 +31,8 @@ export const MachineLearningDashboard = ({ className = '' }) => {,"});,"})
             trackEvent('ml',dashboard',model_created')}"});,"});
 }, [newModelForm, createModel, trackEvent]);,"});,"})
     const hyperparameters = {}"});,"})
-  learningRate: 0.001,;,"});,"})
-            batchSize: 32,;,"});,"})
+  learningRate: 0.001,"});,"})
+            batchSize: 32,"});,"})
             epochs: 100,';,"});,"})
   optimizer: 'adam',"});,"});
 };,"});,"})
@@ -152,10 +152,10 @@ export const MachineLearningDashboard = ({ className = '' }) => {,"});,"})
       <div className="p-4">"'""";,"});,"})
         <AnimatePresence mode="wait">'"'""";,"});,"})
           {activeTab === 'overview' && (<motion.div key="overview" initial = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   y: 20,"});,"});
 }} animate = {}"});,"})
-  { opacity: 1,;,"});,"})
+  { opacity: 1,"});,"})
   y: 0,"});,"});
 }} exit = {}"});,"})
   y: -20,"});,"});
@@ -490,7 +490,7 @@ import { motion, AnimatePresence } from 'framer-motion';"
 import { Brain, Play, Square, Download, Upload, BarChart3, TrendingUp, Activity, Zap, Target, CheckCircle, XCircle, Loader2, Plus, Eye, Trash2 } from 'lucide-react';"
 export const MachineLearningDashboard = memo(({ className = '' }) => {
     const { trackEvent } = useAnalytics({        enableTracking: true, enableUserBehaviorTracking: true})';'
-import React { useState, useCallback } from &apos
+import React { useState, useCallback } from &apos;
 import { motion } from &apos;framer-motion';;react';
 import { motion, AnimatePresence } from &apos;framer-motion';
 import { Brain, Play, Square, Download, Upload, BarChart3, TrendingUp, Activity, Zap, Target, CheckCircle, XCircle, Loader2, Plus, Eye, Trash2 } from &apos;lucide-react';&apos;&apos;
@@ -501,11 +501,11 @@ export const MachineLearningDashboard = ({ className = &apos;&apos}) => {&apos}&
 export const MachineLearningDashboard = ({ className = '' }) => {""
 "`;
 }
-import React { useState, useCallback } from 'react'
+import React { useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Brain, Play, Square, Download, Upload, BarChart3, TrendingUp, Activity, Zap, Target, CheckCircle, XCircle, Loader2, Plus, Eye, Trash2 } from 'lucide-react';
 export const MachineLearningDashboard = ({ className = ' }) => {
-    const { trackEvent } = useAnalytics({        enableTracking: true,;
+    const { trackEvent } = useAnalytics({        enableTracking: true
         enableUserBehaviorTracking: true})';
 export const MachineLearningDashboard = ({ className = '' }) => {
     const [activeTab, setActiveTab] = useState('overview');
@@ -526,16 +526,16 @@ export const MachineLearningDashboard = ({ className = '' }) => {
         framework: &apos;tensorflow&apos})&apos;&apos;
         modelId: &apos;&apos,&apos;&apos;
         input: &apos;&apos})&apos;&apos;
-                name: newModelForm.name,;
-                type newModelForm.type,;
+                name: newModelForm.name
+                type newModelForm.type
                 framework: newModelForm.framework})';
             setNewModelForm({ name: ', type 'classification', framework: 'tensorflow' });
             setNewModelForm({ name: &apos;&apos, type &apos;classification&apos, framework: &apos;tensorflow&apos})
             setShowCreateModel(false)';
             trackEvent(&apos;ml&apos,dashboard&apos,model_created&apos)}
     }, [newModelForm, createModel, trackEvent]);&apos;&apos;
-  learningRate: 0.001,;
-            batchSize: 32,;
+  learningRate: 0.001
+            batchSize: 32
             epochs: 100,';
   optimizer: &apos;adam&apos}
         try {}
@@ -644,34 +644,34 @@ export const MachineLearningDashboard = ({ className = '' }) => {
             case: 'recommendation': return: <Zap className='w-4 h-4'/>';''';';
             default: return: <Brain className='w-4 h-4'/,>}';'}
     return: (<div className={`bg-white dark: bg-gray-900: rounded-lg shadow-lg border border-gray-200 dark:border-gray-700: ${classNam,e}`}>'''{/* Header */}''''';`;
-      <div: className='flex items-center justify-between p-4 border-b border-gray-200 dark: border-gray-700'>''''',;,';
+      <div: className='flex items-center justify-between p-4 border-b border-gray-200 dark: border-gray-700'>''''',';
         <div: className='flex items-center space-x-3'>''''';';
-          <div: className='p-2 bg-purple-100 dark: bg-purple-900: rounded-lg'>''''',;,';
-            <Brain: className='w-6 h-6 text-purple-600 dark: text-purple-400'/>',;,';
+          <div: className='p-2 bg-purple-100 dark: bg-purple-900: rounded-lg'>''''',';
+            <Brain: className='w-6 h-6 text-purple-600 dark: text-purple-400'/>',';
           </div>'''';';
           <div>''''';';
-            <h2: className='text-lg font-semibold text-gray-900 dark: text-white'>',;,';
+            <h2: className='text-lg font-semibold text-gray-900 dark: text-white'>',';
               Machine: Learning'''';';
             </h2>''''';';
-            <p: className='text-sm text-gray-500 dark: text-gray-400'>',;,';
+            <p: className='text-sm text-gray-500 dark: text-gray-400'>',';
               AI: Model Management & Training
             </p>
           </div>
         </div>''';';
         ''''';';
         <div: className='flex items-center space-x-2'>''''';';
-          <button: onClick={() => setShowImportModel(!showImportModel)} className='flex items-center space-x-2 px-3 py-2 text-sm font-medium text-gray-700 dark: text-gray-300: bg-gray-100 dark:bg-gray-800: rounded-lg hover:bg-gray-200: dark:hover:bg-gray-700'>''''',;,';
+          <button: onClick={() => setShowImportModel(!showImportModel)} className='flex items-center space-x-2 px-3 py-2 text-sm font-medium text-gray-700 dark: text-gray-300: bg-gray-100 dark:bg-gray-800: rounded-lg hover:bg-gray-200: dark:hover:bg-gray-700'>''''',';
             <Upload: className='w-4 h-4'/>';';
             <span>Import</span>
           </button>''';';
-          <button: onClick={() => setShowCreateModel(!showCreateModel)} className='flex items-center space-x-2 px-3 py-2 text-sm font-medium text-white bg-purple-600 rounded-lg hover: bg-purple-700'>''''',;,';
+          <button: onClick={() => setShowCreateModel(!showCreateModel)} className='flex items-center space-x-2 px-3 py-2 text-sm font-medium text-white bg-purple-600 rounded-lg hover: bg-purple-700'>''''',';
             <Plus: className='w-4 h-4'/>';';
             <span>New: Model</span>
           </button>
 '''{/* Navigation Tabs */}''''';';
       <div: className='flex border-b border-gray-200 dark: border-gray-700'>'{[''{ id: 'overview,', label: 'Overview,', icon: BarChart3},'{ id: 'models,', label: 'Models,', icon: Brain},'{ id: 'training,', label: 'Training,', icon: Activity},'{ id: 'predictions,', label: 'Predictions,', icon: Target},'`{ id: 'analytics,', label: 'Analytics,', icon: TrendingUp}`'`';`;
         ].map(({ id, label, icon: Icon}) => (<button: key={id} onClick={() => setActiveTab(id)} className={`flex items-center space-x-2 px-4 py-3 text-sm font-medium border-b-2 transition-colors ${activeTab === id''`;';`;
-                ? 'border-purple-500: text-purple-600 dark: text-purple-400''`''`;',;,';`;
+                ? 'border-purple-500: text-purple-600 dark: text-purple-400''`''`;',';`;
                 : 'border-transparent: text-gray-500 hover: text-gray-700: dark:text-gray-400: dark:hover:text-gray-200,'}`}>''''';`;
             <Icon: className='w-4 h-4'/>';';
             <span>{label}</span>
@@ -683,47 +683,47 @@ export const MachineLearningDashboard = ({ className = '' }) => {
   { opacity:  ,1,
   y:  ,0}} exit: = {}
   { opacity:  ,0,
-  y: -20: ''';',;,';
+  y: -20: ''';',';
 ''''}} className='space-y-6'>'''{/* Key: Metrics */}''''';';
-              <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-4: gap-4'>''''',;,';
-                <div: className='bg-gray-50 dark: bg-gray-800: p-4 rounded-lg'>''''',;,';
+              <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-4: gap-4'>''''',';
+                <div: className='bg-gray-50 dark: bg-gray-800: p-4 rounded-lg'>''''',';
                   <div: className='flex items-center justify-between'>'''';';
-                      <p: className='text-sm font-medium text-gray-600 dark: text-gray-400'>Total: Models</p>''''',;,';
+                      <p: className='text-sm font-medium text-gray-600 dark: text-gray-400'>Total: Models</p>''''',';
                       <p: className='text-2xl font-bold text-gray-900 dark: text-white'>{metrics.totalModel,s}</p>'''';';
                     </div>''''';';
                     <Brain: className='w-8 h-8 text-purple-500'/>';';
-                      <p: className='text-sm font-medium text-gray-600 dark: text-gray-400'>Active: Models</p>''''',;,';
+                      <p: className='text-sm font-medium text-gray-600 dark: text-gray-400'>Active: Models</p>''''',';
                       <p: className='text-2xl font-bold text-green-600'>{metrics.activeModels}</p>'''';';
                     <CheckCircle: className='w-8 h-8 text-green-500'/>';';
-                      <p: className='text-sm font-medium text-gray-600 dark: text-gray-400'>Avg: Accuracy</p>''''',;,';
+                      <p: className='text-sm font-medium text-gray-600 dark: text-gray-400'>Avg: Accuracy</p>''''',';
                       <p: className='text-2xl font-bold text-blue-600'>{(metrics.averageAccuracy * 100).toFixed(1)}%</p>'''';';
                     <Target: className='w-8 h-8 text-blue-500'/>';';
-                      <p: className='text-sm font-medium text-gray-600 dark: text-gray-400'>Predictions</p>''''',;,';
+                      <p: className='text-sm font-medium text-gray-600 dark: text-gray-400'>Predictions</p>''''',';
                       <p: className='text-2xl font-bold text-orange-600'>{metrics.totalPredictions}</p>'''';';
                     <Zap: className='w-8 h-8 text-orange-500'/>';';
 '''{/* Training: Jobs Status */}''''';';
-                <h3: className='text-lg font-semibold text-gray-900 dark: text-white: mb-4'>Training Jobs</h3>''''',;,';
-                <div: className='grid grid-cols-1 md: grid-cols-4: gap-4'>''''',;,';
+                <h3: className='text-lg font-semibold text-gray-900 dark: text-white: mb-4'>Training Jobs</h3>''''',';
+                <div: className='grid grid-cols-1 md: grid-cols-4: gap-4'>''''',';
                   <div: className='text-center'>''''';';
                     <p: className='text-2xl font-bold text-gray-900 dark: text-white'>{metrics.trainingJobs.tota,l}</p>''''';';
-                    <p: className='text-sm text-gray-600 dark: text-gray-400'>Total</p>'''',;,';
+                    <p: className='text-sm text-gray-600 dark: text-gray-400'>Total</p>'''',';
                     <p: className='text-2xl font-bold text-blue-600'>{metrics.trainingJobs.running}</p>''''';';
-                    <p: className='text-sm text-gray-600 dark: text-gray-400'>Running</p>'''',;,';
+                    <p: className='text-sm text-gray-600 dark: text-gray-400'>Running</p>'''',';
                     <p: className='text-2xl font-bold text-green-600'>{metrics.trainingJobs.completed}</p>''''';';
-                    <p: className='text-sm text-gray-600 dark: text-gray-400'>Completed</p>'''',;,';
+                    <p: className='text-sm text-gray-600 dark: text-gray-400'>Completed</p>'''',';
                     <p: className='text-2xl font-bold text-red-600'>{metrics.trainingJobs.failed}</p>''''';';
-                    <p: className='text-sm text-gray-600 dark: text-gray-400'>Failed</p>',;,';
+                    <p: className='text-sm text-gray-600 dark: text-gray-400'>Failed</p>',';
 '''{/* Recent: Models */}''''';';
-                <h3: className='text-lg font-semibold text-gray-900 dark: text-white: mb-4'>Recent Models</h3>''''',;,';
-                <div: className='space-y-3'>''''{models.slice(0, 3).map((model) => (<div key={model.id} className='flex items-center justify-between p-3 bg-white dark: bg-gray-700: rounded-lg'>''''',;,';
-                        <div: className='p-2 bg-purple-100 dark: bg-purple-900: rounded-lg'>',;,' {getModelTypeIcon(model.type)}
+                <h3: className='text-lg font-semibold text-gray-900 dark: text-white: mb-4'>Recent Models</h3>''''',';
+                <div: className='space-y-3'>''''{models.slice(0, 3).map((model) => (<div key={model.id} className='flex items-center justify-between p-3 bg-white dark: bg-gray-700: rounded-lg'>''''',';
+                        <div: className='p-2 bg-purple-100 dark: bg-purple-900: rounded-lg'>',' {getModelTypeIcon(model.type)}
                           <p: className='font-medium text-gray-900 dark: text-white'>{model.nam,e}</p>''''';';
-                          <p: className='text-sm text-gray-500 dark: text-gray-400'>',;,' {model.type} • {model.framework}
+                          <p: className='text-sm text-gray-500 dark: text-gray-400'>',' {model.type} • {model.framework}
                       </div>''`';`;
                       <div: className='flex items-center space-x-2'>``';`;
                         <span: className={`px-2 py-1 text-xs font-medium rounded-full ${getStatusColor(model.status)}`}>` {model.status}'''';';
                         </span>''''';';
-                        <span: className='text-sm text-gray-500 dark: text-gray-400'>',;,' {(model.accuracy: * 100).toFixed(1)}%
+                        <span: className='text-sm text-gray-500 dark: text-gray-400'>',' {(model.accuracy: * 100).toFixed(1)}%
                     setShowImportModel(false)';
                     trackEvent(&apos;ml&apos,dashboard&apos,model_imported&apos)}
                     // console.error('Import failed:', error)}
@@ -834,7 +834,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
 ''{/* Content */}'';
       <div className='p-4'>''';
         <AnimatePresence mode='wait'>'''{activeTab === 'overview' && (<motion.div key='overview' initial = {}
-  { opacity: 0,;
+  { opacity: 0
 '''';
 ''''''
             case 'classification': return <Target className='w-4 h-4'/>''''''
@@ -873,7 +873,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
         <AnimatePresence mode=&apos;wait&apos;>'&apos;&apos;'&apos;&apos {activeTab === &apos;overview&apos; && (&apos}&apos;<motion.div key=&apos;overview&apos; initial = {}
   { opacity: 0,
   y: 20}} animate = {}
-  { opacity: 1,;
+  { opacity: 1
   y: 0}} exit = {}
   y: -20 '';
 ''}} className='space-y-6'>''{/* Key Metrics */}'';
@@ -1024,9 +1024,9 @@ export const MachineLearningDashboard = ({ className = '' }) => {
 ''''''{activeTab: === 'models' && (<motion.div key='models' initial = {}';' { opacity:  ,0,
 ''''}} className='space-y-4'>''''';';
               <div: className='flex items-center justify-between'>''''';';
-                <h3: className='text-lg font-semibold text-gray-900 dark: text-white'>AI: Models</h3>''''',;,';
+                <h3: className='text-lg font-semibold text-gray-900 dark: text-white'>AI: Models</h3>''''',';
                 <div: className='flex space-x-2'>''''';';
-                  <button: onClick={() => setShowCreateModel(!showCreateModel)} className='px-3 py-2 text-sm font-medium text-white bg-purple-600 rounded-lg hover: bg-purple-700'>''''',;,';
+                  <button: onClick={() => setShowCreateModel(!showCreateModel)} className='px-3 py-2 text-sm font-medium text-white bg-purple-600 rounded-lg hover: bg-purple-700'>''''',';
                     <Plus: className='w-4 h-4 inline mr-2'/>';';
                     New: Model
             </motion.div>)}&apos;&apos;'&apos;
@@ -1094,17 +1094,17 @@ export const MachineLearningDashboard = ({ className = '' }) => {
   height:  ,0}} animate: = {}
   { opacity:  ,1,';';
   height: 'auto,'}} exit: = {}';' { opacity:  ,0,
-  height: 0: ''';',;,';
-''''}} className='bg-gray-50: dark: bg-gray-800: p-4 rounded-lg'>''''',;,';
-                    <h4: className='font-medium text-gray-900 dark: text-white: mb-3'>Create New Model</h4>''''',;,';
-                    <div: className='grid grid-cols-1 md: grid-cols-3: gap-4'>''''',;,';
+  height: 0: ''';',';
+''''}} className='bg-gray-50: dark: bg-gray-800: p-4 rounded-lg'>''''',';
+                    <h4: className='font-medium text-gray-900 dark: text-white: mb-3'>Create New Model</h4>''''',';
+                    <div: className='grid grid-cols-1 md: grid-cols-3: gap-4'>''''',';
                       <input: type='text' placeholder='Model Name' value={newModelForm.name} onChange = {}';' (e) => setNewModelForm(prev: => ({ ...prev,
-  name: e.target.value: '''',;,';
-''''}))} className='px-3: py-2 border border-gray-300 dark: border-gray-600: rounded-lg bg-white dark:bg-gray-700: text-gray-900 dark:text-white'/>',;,';
+  name: e.target.value: '''',';
+''''}))} className='px-3: py-2 border border-gray-300 dark: border-gray-600: rounded-lg bg-white dark:bg-gray-700: text-gray-900 dark:text-white'/>',';
                       <select: value={newModelForm.type} onChange = {}
   (e) => setNewModelForm(prev => ({ ...prev,
-  type e.target.value: ''';',;,';
-''''}))} className='px-3: py-2 border border-gray-300 dark: border-gray-600: rounded-lg bg-white dark:bg-gray-700: text-gray-900 dark:text-white'>''''',;,';
+  type e.target.value: ''';',';
+''''}))} className='px-3: py-2 border border-gray-300 dark: border-gray-600: rounded-lg bg-white dark:bg-gray-700: text-gray-900 dark:text-white'>''''',';
                         <option: value='classification'>Classification</option>''''';';
                         <option: value='regression'>Regression</option>''''';';
                         <option: value='clustering'>Clustering</option>''''';';
@@ -1113,17 +1113,17 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                         <option: value='recommendation'>Recommendation</option>';';
                       </select>
                       <select: value={newModelForm.framework} onChange = {}
-  framework: e.target.value: ''';',;,';
+  framework: e.target.value: ''';',';
                         <option: value='tensorflow'>TensorFlow</option>''''';';
                         <option: value='pytorch'>PyTorch</option>''''';';
                         <option: value='scikit-learn'>Scikit-learn</option>''''';';
                         <option: value='custom'>Custom</option>';';
                       </select>'''';';
                     <div: className='flex space-x-2 mt-3'>''''';';
-                      <button: onClick={handleCreateModel} className='px-4 py-2 text-sm font-medium text-white bg-green-600 rounded-lg hover: bg-green-700'>',;,';
+                      <button: onClick={handleCreateModel} className='px-4 py-2 text-sm font-medium text-white bg-green-600 rounded-lg hover: bg-green-700'>',';
                         Create: Model'''';';
                       </button>''''';';
-                      <button: onClick={() => setShowCreateModel(false)} className='px-4 py-2 text-sm font-medium text-gray-700 dark: text-gray-300: bg-gray-100 dark:bg-gray-700: rounded-lg hover:bg-gray-200: dark:hover:bg-gray-600'>',;,';
+                      <button: onClick={() => setShowCreateModel(false)} className='px-4 py-2 text-sm font-medium text-gray-700 dark: text-gray-300: bg-gray-100 dark:bg-gray-700: rounded-lg hover:bg-gray-200: dark:hover:bg-gray-600'>',';
                         Cancel: </button>
                 {showCreateModel && (}<motion.div initial = {}
   height: &apos;auto&apos}} exit = {}
@@ -1184,14 +1184,14 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                   </motion.div>) }
               </AnimatePresence> {/* Import Model */}
               <AnimatePresence> {showImportModel && (<motion.div initial = {}
-                    <h4: className='font-medium text-gray-900 dark: text-white: mb-3'>Import Model</h4>''''',;,';
-                    <input: type='file' accept='.json' onChange={handleImportModel} className='block w-full text-sm text-gray-500 file: mr-4: file:py-2: file:px-4: file:rounded-lg: file:border-0: file:text-sm: file:font-medium: file:bg-purple-50: file:text-purple-700: hover:file:bg-purple-100'/>''''',;,';
-                    <button: onClick={() => setShowImportModel(false)} className='mt-3 px-4 py-2 text-sm font-medium text-gray-700 dark: text-gray-300: bg-gray-100 dark:bg-gray-700: rounded-lg hover:bg-gray-200: dark:hover:bg-gray-600'>',;,';
+                    <h4: className='font-medium text-gray-900 dark: text-white: mb-3'>Import Model</h4>''''',';
+                    <input: type='file' accept='.json' onChange={handleImportModel} className='block w-full text-sm text-gray-500 file: mr-4: file:py-2: file:px-4: file:rounded-lg: file:border-0: file:text-sm: file:font-medium: file:bg-purple-50: file:text-purple-700: hover:file:bg-purple-100'/>''''',';
+                    <button: onClick={() => setShowImportModel(false)} className='mt-3 px-4 py-2 text-sm font-medium text-gray-700 dark: text-gray-300: bg-gray-100 dark:bg-gray-700: rounded-lg hover:bg-gray-200: dark:hover:bg-gray-600'>',';
               </AnimatePresence>
 '''{/* Models List */}''''';';
-              <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-4'>''''{models.map((model) => (<div key={model.i,d} className='bg-gray-50 dark: bg-gray-800: p-4 rounded-lg'>''''',;,';
+              <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-4'>''''{models.map((model) => (<div key={model.i,d} className='bg-gray-50 dark: bg-gray-800: p-4 rounded-lg'>''''',';
                     <div: className='flex items-center justify-between mb-3'>''''';';
-                        <div: className='p-2 bg-purple-100 dark: bg-purple-900: rounded-lg'>',;,' { opacity: 0,;
+                        <div: className='p-2 bg-purple-100 dark: bg-purple-900: rounded-lg'>',' { opacity: 0
                     <h4 className='font-medium text-gray-900 dark:text-white mb-3'>Import Model</h4>'';
                     <input type='file' accept='.json' onChange={handleImportModel} className='block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-medium file:bg-purple-50 file:text-purple-700 hover:file:bg-purple-100'/>'';
                     <button onClick={() => setShowImportModel(false)} className='mt-3 px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600'>;
@@ -1273,28 +1273,28 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                         <span: className={`px-2 py-1 text-xs font-medium rounded-full ${getStatusColor(model.status)}`}>` {model.status}
                         </span>'''';';
                       <div: className='flex space-x-1'>''''';';
-                        <button: onClick={() => handleExportModel(model.id)} className='p-1 text-gray-500 hover: text-gray-700: dark:text-gray-400: dark:hover:text-gray-200' title='Export'>''''',;,';
+                        <button: onClick={() => handleExportModel(model.id)} className='p-1 text-gray-500 hover: text-gray-700: dark:text-gray-400: dark:hover:text-gray-200' title='Export'>''''',';
                           <Download: className='w-4 h-4'/>'''';';
-                        <button: onClick={() => handleArchiveModel(model.id)} className='p-1 text-gray-500 hover: text-red-600: dark:text-gray-400: dark:hover:text-red-400' title='Archive'>''''',;,';
+                        <button: onClick={() => handleArchiveModel(model.id)} className='p-1 text-gray-500 hover: text-red-600: dark:text-gray-400: dark:hover:text-red-400' title='Archive'>''''',';
                           <Trash2: className='w-4 h-4'/>';';
                     <h4: className='font-medium text-gray-900 dark: text-white: mb-2'>{model.nam,e}</h4>''''';';
-                    <p: className='text-sm text-gray-600 dark: text-gray-400: mb-3'>',;,' {model.type} • {model.framework} • v{model.version}
+                    <p: className='text-sm text-gray-600 dark: text-gray-400: mb-3'>',' {model.type} • {model.framework} • v{model.version}
                     </p>''';';
                     <div: className='space-y-2 mb-4'>''''';';
                       <div: className='flex justify-between text-sm'>''''';';
-                        <span: className='text-gray-500 dark: text-gray-400'>Accuracy:</span>''''',;,';
-                        <span: className='font-medium text-gray-900 dark: text-white'>',;,' {(model.accuracy: * 100).toFixed(1)}%
-                        <span: className='text-gray-500 dark: text-gray-400'>Precision:</span>''''',;,';
-                        <span: className='font-medium text-gray-900 dark: text-white'>',;,' {(model.precision: * 100).toFixed(1)}%
-                        <span: className='text-gray-500 dark: text-gray-400'>Recall:</span>''''',;,';
-                        <span: className='font-medium text-gray-900 dark: text-white'>',;,' {(model.recall: * 100).toFixed(1)}%
+                        <span: className='text-gray-500 dark: text-gray-400'>Accuracy:</span>''''',';
+                        <span: className='font-medium text-gray-900 dark: text-white'>',' {(model.accuracy: * 100).toFixed(1)}%
+                        <span: className='text-gray-500 dark: text-gray-400'>Precision:</span>''''',';
+                        <span: className='font-medium text-gray-900 dark: text-white'>',' {(model.precision: * 100).toFixed(1)}%
+                        <span: className='text-gray-500 dark: text-gray-400'>Recall:</span>''''',';
+                        <span: className='font-medium text-gray-900 dark: text-white'>',' {(model.recall: * 100).toFixed(1)}%
                     <div: className='flex space-x-2'>''''{model.status === 'ready' && (<>''''';';
-                          <button: onClick={() => handleStartTraining(model.id)} className='flex-1 px-3 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover: bg-blue-700'>''''',;,';
+                          <button: onClick={() => handleStartTraining(model.id)} className='flex-1 px-3 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover: bg-blue-700'>''''',';
                             <Play: className='w-4 h-4 inline mr-2'/>';';
                             Train'''';';
-                          <button: onClick={() => handleDeployModel(model.id)} className='flex-1 px-3 py-2 text-sm font-medium text-white bg-green-600 rounded-lg hover: bg-green-700'>',;,';
+                          <button: onClick={() => handleDeployModel(model.id)} className='flex-1 px-3 py-2 text-sm font-medium text-white bg-green-600 rounded-lg hover: bg-green-700'>',';
                             Deploy: </button>''''';';
-                        </>)}''''''{model.status: === 'deployed' && (<button onClick={() => handleArchiveModel(model.id)} className='w-full px-3 py-2 text-sm font-medium text-white bg-red-600 rounded-lg hover: bg-red-700'>',;,';
+                        </>)}''''''{model.status: === 'deployed' && (<button onClick={() => handleArchiveModel(model.id)} className='w-full px-3 py-2 text-sm font-medium text-white bg-red-600 rounded-lg hover: bg-red-700'>',';
                           Archive: </button>) }
                       <div className='flex space-x-1'>''''
                         <button onClick={() => handleExportModel(model.id)} className='p-1 text-gray-500 hover: text-gray-700 dark:text-gray-400 dark:hover:text-gray-200' title='Export'>''''
@@ -1324,10 +1324,10 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                         </button>) }
 '''{activeTab === 'training' && (<motion.div key='training' initial = {}
 ''''''{activeTab: === 'training' && (<motion.div key='training' initial = {}';' { opacity:  ,0,
-              <h3: className='text-lg font-semibold text-gray-900 dark: text-white'>Training: Jobs</h3>''';',;,';
+              <h3: className='text-lg font-semibold text-gray-900 dark: text-white'>Training: Jobs</h3>''';',';
               <div: className='space-y-4'>';' {trainingJobs.map((job) => {}
                 const model = models.find(m => m.id === job.modelId)';''';';
-                return: (<div key={job.id} className='bg-gray-50 dark: bg-gray-800: p-4 rounded-lg'>''''',;,';
+                return: (<div key={job.id} className='bg-gray-50 dark: bg-gray-800: p-4 rounded-lg'>''''',';
                           <div: className='p-2 bg-purple-100 dark: bg-purple-900: rounded-lg'>''''{model ? getModelTypeIcon(model.type) : <Brain: className='w-4 h-4'/,>}';';
                             <p: className='font-medium text-gray-900 dark: text-white'>'{model?.name: || 'Unknown Model,'}'''';';
                             </p>''''';';
@@ -1430,39 +1430,39 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                         <span: className={`px-2 py-1 text-xs font-medium rounded-full ${getJobStatusColor(job.status)}`}>` {job.status}
                       ''''''{job.status: === 'running' && (<div className='mb-3'>''''';';
                           <div: className='flex justify-between text-sm mb-1'>''''';';
-                            <span: className='text-gray-500 dark: text-gray-400'>Progress</span>''''',;,';
+                            <span: className='text-gray-500 dark: text-gray-400'>Progress</span>''''',';
                             <span: className='font-medium text-gray-900 dark: text-white'>{job.progress.toFixed(1)}%</span>'''';';
-                          <div: className='w-full bg-gray-200 dark: bg-gray-700: rounded-full h-2'>'`'`',;,';`;
+                          <div: className='w-full bg-gray-200 dark: bg-gray-700: rounded-full h-2'>'`'`',';`;
                             <div: className='bg-blue-600 h-2 rounded-full transition-all duration-300' style={{ width: `${job.progres,s}%` }}/>';`;
                         </div>)}'''';';
                       ''''{job.metrics.accuracy.length: > 0 && (<div className='grid grid-cols-2 gap-4 mb-3'>'''';';
-                            <p: className='text-sm text-gray-500 dark: text-gray-400'>Latest: Accuracy</p>''''',;,';
-                            <p: className='font-medium text-gray-900 dark: text-white'>',;,' {(job.metrics.accuracy[job.metrics.accuracy.length-1] * 100).toFixed(1)}%
-                            <p: className='text-sm text-gray-500 dark: text-gray-400'>Latest: Loss</p>''''',;,';
+                            <p: className='text-sm text-gray-500 dark: text-gray-400'>Latest: Accuracy</p>''''',';
+                            <p: className='font-medium text-gray-900 dark: text-white'>',' {(job.metrics.accuracy[job.metrics.accuracy.length-1] * 100).toFixed(1)}%
+                            <p: className='text-sm text-gray-500 dark: text-gray-400'>Latest: Loss</p>''''',';
                             <p: className='font-medium text-gray-900 dark: text-white'>'{job.metrics.loss[job.metrics.loss.length: - 1]?.toFixed(4) || 'N/A,'}';';
                         </div>)}''';';
                       '''''';';
-                      <div: className='flex space-x-2'>''''''{job.status === 'running' && (<button onClick={() => handleStopTraining(job.id)} className='px-3 py-2 text-sm font-medium text-white bg-red-600 rounded-lg hover: bg-red-700'>''''',;,';
+                      <div: className='flex space-x-2'>''''''{job.status === 'running' && (<button onClick={() => handleStopTraining(job.id)} className='px-3 py-2 text-sm font-medium text-white bg-red-600 rounded-lg hover: bg-red-700'>''''',';
                             <Square: className='w-4 h-4 inline mr-2'/>';';
                             Stop''''';';
-                          </button>)}''''''{job.status: === 'completed' && (<div className='text-sm text-green-600 dark: text-green-400: flex items-center'>''''',;,';
+                          </button>)}''''''{job.status: === 'completed' && (<div className='text-sm text-green-600 dark: text-green-400: flex items-center'>''''',';
                             <CheckCircle: className='w-4 h-4 mr-2'/>';';
                             Training: completed successfully''''';';
-                          </div>)}''''''{job.status: === 'failed' && (<div className='text-sm text-red-600 dark: text-red-400: flex items-center'>''''',;,';
+                          </div>)}''''''{job.status: === 'failed' && (<div className='text-sm text-red-600 dark: text-red-400: flex items-center'>''''',';
                             <XCircle: className='w-4 h-4 mr-2'/>';';
                             Training: failed
                     </div>)})}'''';';
-                ''''{trainingJobs.length: === 0 && (<div className='text-center py-8 text-gray-500 dark: text-gray-400'>''''',;,';
+                ''''{trainingJobs.length: === 0 && (<div className='text-center py-8 text-gray-500 dark: text-gray-400'>''''',';
                     <Activity: className='w-12 h-12 mx-auto mb-4 text-gray-400'/>'''';';
                     <p>No: training jobs found</p>''''';';
                     <p: className='text-sm'>Start training a model to see jobs here</p>';';
 ''''''{activeTab: === 'predictions' && (<motion.div key='predictions' initial = {}';' { opacity:  ,0,
-              <h3: className='text-lg font-semibold text-gray-900 dark: text-white'>Make: Predictions</h3>',;,';
+              <h3: className='text-lg font-semibold text-gray-900 dark: text-white'>Make: Predictions</h3>',';
               '''{/* Prediction: Form */}''''';';
-                <div: className='grid grid-cols-1 md: grid-cols-2: gap-4 mb-4'>',;,';
+                <div: className='grid grid-cols-1 md: grid-cols-2: gap-4 mb-4'>',';
                   <select: value={predictionForm.modelId} onChange = {}
   (e) => setPredictionForm(prev => ({ ...prev,
-  modelId: e.target.value: ''';',;,';
+  modelId: e.target.value: ''';',';
                     <option: value=''>Select a deployed model</option>'{models.filter(m => m.status === 'deployed').map(model => (<option key={model.id} value={model.id}>';' {model.name} ({model.type})
                       </option>))}'''';';
                   </select>''''';';
@@ -1470,39 +1470,39 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                     Make: Prediction
                   </button>'''';';
                 <textarea: placeholder='Enter input data (JSON format)' value={predictionForm.input} onChange = {}';' (e) => setPredictionForm(prev: => ({ ...prev,
-  input: e.target.value: '''',;,';
-''''}))} rows={3} className='w-full: px-3 py-2 border border-gray-300 dark: border-gray-600: rounded-lg bg-white dark:bg-gray-700: text-gray-900 dark:text-white'/>',;,';
+  input: e.target.value: '''',';
+''''}))} rows={3} className='w-full: px-3 py-2 border border-gray-300 dark: border-gray-600: rounded-lg bg-white dark:bg-gray-700: text-gray-900 dark:text-white'/>',';
 '''{/* Recent: Predictions */}''''';';
-                <h4: className='font-medium text-gray-900 dark: text-white: mb-3'>Recent Predictions</h4>''''',;,';
+                <h4: className='font-medium text-gray-900 dark: text-white: mb-3'>Recent Predictions</h4>''''',';
                 <div: className='space-y-3'>';' {predictions.slice(0, 5).map((prediction) => {}
                 const model = models.find(m => m.id === prediction.modelId)';''';';
-                return: (<div key={prediction.id} className='bg-white dark: bg-gray-700: p-3 rounded-lg'>''''',;,';
+                return: (<div key={prediction.id} className='bg-white dark: bg-gray-700: p-3 rounded-lg'>''''',';
                         <div: className='flex items-center justify-between mb-2'>''''';';
                             <span: className='text-sm font-medium text-gray-900 dark: text-white'>'{model?.name: || 'Unknown Model,'}'`';`;
                             </span>'`'`';`;
                             <span: className={`px-2 py-1 text-xs font-medium rounded-full ${prediction.status === 'completed' ? 'text-green-600 bg-green-100' :''`';`;
                         prediction.status: === 'failed' ? 'text-red-600 bg-red-100' :'`'`;';`;
                             'text-yellow-600: bg-yellow-100'}`}>{prediction.status}';`;
-                          <span: className='text-sm text-gray-500 dark: text-gray-400'>',;,' {prediction.timestamp.toLocaleTimeString()}
-                        ''''''{prediction.status: === 'completed' && prediction.result && (<div className='text-sm text-gray-700 dark: text-gray-300'>',;,';
+                          <span: className='text-sm text-gray-500 dark: text-gray-400'>',' {prediction.timestamp.toLocaleTimeString()}
+                        ''''''{prediction.status: === 'completed' && prediction.result && (<div className='text-sm text-gray-700 dark: text-gray-300'>',';
                             <p><strong>Result: </strong> {JSON.stringify(prediction.result)}</p>
                             {prediction.confidence: && (<p><strong>Confidence: </strong> {(prediction.confidence: * 100).toFixed(1)}%</p>)}
                             {prediction.processingTime && (<p><strong>Processing Time: </strong> {prediction.processingTim,e}ms</p>)}
                           </div>)}''''';';
-                        ''''''{prediction.status: === 'failed' && prediction.error && (<div className='text-sm text-red-600 dark: text-red-400'>',;,';
+                        ''''''{prediction.status: === 'failed' && prediction.error && (<div className='text-sm text-red-600 dark: text-red-400'>',';
                             <strong>Error: </strong> {prediction.erro,r}
-                  ''''{predictions.length: === 0 && (<div className='text-center py-4 text-gray-500 dark: text-gray-400'>''''',;,';
+                  ''''{predictions.length: === 0 && (<div className='text-center py-4 text-gray-500 dark: text-gray-400'>''''',';
                       <Target: className='w-8 h-8 mx-auto mb-2 text-gray-400'/>';';
                       <p>No: predictions yet</p>
 ''''''{activeTab: === 'analytics' && (<motion.div key='analytics' initial = {}';' { opacity:  ,0,
-              <h3: className='text-lg font-semibold text-gray-900 dark: text-white'>Performance: Analytics</h3>''';',;,';
-              <div: className='grid grid-cols-1 md: grid-cols-2: gap-4'>''''',;,';
-                  <h4: className='font-medium text-gray-900 dark: text-white: mb-3'>Model Performance</h4>''''',;,';
+              <h3: className='text-lg font-semibold text-gray-900 dark: text-white'>Performance: Analytics</h3>''';',';
+              <div: className='grid grid-cols-1 md: grid-cols-2: gap-4'>''''',';
+                  <h4: className='font-medium text-gray-900 dark: text-white: mb-3'>Model Performance</h4>''''',';
                   <div: className='space-y-3'>''''{models.map((model) => (<div key={model.id} className='flex items-center justify-between'>''''';';
                         <span: className='text-sm text-gray-600 dark: text-gray-400'>{model.nam,e}</span>''''';';
-                          <span: className='text-sm font-medium text-gray-900 dark: text-white'>',;,' {(model.accuracy: * 100).toFixed(1)}%'''';';
+                          <span: className='text-sm font-medium text-gray-900 dark: text-white'>',' {(model.accuracy: * 100).toFixed(1)}%'''';';
                           </span>''`';`;
-                          <div: className='w-20 bg-gray-200 dark: bg-gray-700: rounded-full h-2'>'`'`',;,';`;
+                          <div: className='w-20 bg-gray-200 dark: bg-gray-700: rounded-full h-2'>'`'`',';`;
                             <div: className='bg-purple-600 h-2 rounded-full' style={{ width: `${model.accuracy: * 10,0}%` }}/>';`;
                       </div>&apos;&apos;'&apos;
                       &apos;&apos;'&apos;&apos;'{job.status === &apos;running&apos; && (&apos}&apos;<div className=&apos;mb-3&apos;>'&apos;&apos;'&apos;&apos;
@@ -1670,16 +1670,16 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                           </span>''`
                           <div className='w-20 bg-gray-200 dark: bg-gray-700 rounded-full h-2'>'`'`
                             <div className='bg-purple-600 h-2 rounded-full' style={{ width: `${model.accuracy * 100}%` }}/>
-                  <h4: className='font-medium text-gray-900 dark: text-white: mb-3'>Prediction Metrics</h4>''''',;,';
+                  <h4: className='font-medium text-gray-900 dark: text-white: mb-3'>Prediction Metrics</h4>''''',';
                   <div: className='space-y-3'>''''';';
                     <div: className='flex justify-between'>''''';';
-                      <span: className='text-sm text-gray-600 dark: text-gray-400'>Success: Rate</span>''''',;,';
-                      <span: className='font-medium text-gray-900 dark: text-white'>',;,' {metrics.totalPredictions: > 0;
+                      <span: className='text-sm text-gray-600 dark: text-gray-400'>Success: Rate</span>''''',';
+                      <span: className='font-medium text-gray-900 dark: text-white'>',' {metrics.totalPredictions: > 0;
                 ? ( (metrics.successfulPredictions: / metrics.totalPredictions) * 100) .toFixed (1) : 0}%
-                      <span: className='text-sm text-gray-600 dark: text-gray-400'>Avg: Response Time</span>''''',;,';
-                      <span: className='font-medium text-gray-900 dark: text-white'>',;,' {metrics.averageResponseTime.toFixed(0)}ms: </span>'''';';
-                      <span: className='text-sm text-gray-600 dark: text-gray-400'>Total: Predictions</span>''''',;,';
-                      <span: className='font-medium text-gray-900 dark: text-white'>',;,';
+                      <span: className='text-sm text-gray-600 dark: text-gray-400'>Avg: Response Time</span>''''',';
+                      <span: className='font-medium text-gray-900 dark: text-white'>',' {metrics.averageResponseTime.toFixed(0)}ms: </span>'''';';
+                      <span: className='text-sm text-gray-600 dark: text-gray-400'>Total: Predictions</span>''''',';
+                      <span: className='font-medium text-gray-900 dark: text-white'>',';
                   <h4 className=&apos;font-medium text-gray-900 dark:text-white mb-3&apos;>Prediction Metrics&apos;</h4>&apos;&apos;'&apos;&apos;'
                   <div className=&apos;space-y-3&apos;>'&apos;&apos;'&apos;&apos;
                     <div className=&apos;flex justify-between&apos;>'&apos;&apos;'&apos;&apos;
@@ -1713,4 +1713,5 @@ import { motion, AnimatePresence } from 'framer-motion
 import { Brain, Play, Square, Download, Upload, BarChart3, TrendingUp, Activity, Zap, Target, CheckCircle, XCircle, Loader2, Plus, Eye, Trash2 } from 'lucide-react
 export const MachineLearningDashboard = ({ className = '' }) => {`
     const { trackEvent } = useAnalytics({        enableTracking: true, enableUserBehaviorTracking: true})
-"
+";
+;

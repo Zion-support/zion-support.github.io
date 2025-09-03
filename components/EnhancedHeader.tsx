@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router'
 import {
@@ -7,8 +7,8 @@ import {
   Search,
   Phone,
   Mail,
-  ChevronDown,
-  User,
+  ChevronDown,;
+  User,;
   ShoppingCart,;
 } from 'lucide-react';
 

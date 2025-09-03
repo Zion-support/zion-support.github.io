@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link'
 import {
@@ -11,10 +11,10 @@ import {
   Globe,
   Shield,
   BarChart3,
-  Lightbulb,
-import Layout from '../components/Layout'
+  Lightbulb,;
+import Layout from '../components/Layout';
 import { SEO } from '../components/SEO';
-import { Button } from '../components/ui/Button'
+import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
 import { Badge } from '../components/ui/Badge'
 import {
@@ -38,8 +38,8 @@ import {
   Bot,
   Calendar,
   Workflow,
-  BarChart3,
-  MessageSquare,
+  BarChart3,;
+  MessageSquare,;
   FileText} from 'lucide-react';
 
 export default function Solutions() {

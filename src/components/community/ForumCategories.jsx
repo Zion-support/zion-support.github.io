@@ -16,7 +16,7 @@ export default function ForumCategories() {}"});,"})
             description: 'General topics and discussions',';,"});,"})
             postCount: 150,'';,"});,"})
             adminOnly: false,''';,"});,"})
-            icon: 'message-circle',;,"});,"})
+            icon: 'message-circle',"});,"})
             lastPost: {}"});,"})
                 title: 'Welcome to the community!',''';,"});,"})
                 author: 'Admin',''';,"});,"})
@@ -26,7 +26,7 @@ export default function ForumCategories() {}"});,"})
             name: 'Technical Support',''';,"});,"})
             description: 'Get help with technical issues',';,"});,"})
             postCount: 89,'';,"});,"})
-            icon: 'code',;,"});,"})
+            icon: 'code',"});,"})
                 title: 'API integration question',''';,"});,"})
                 author: 'Developer123',''';,"});,"})
                 date: '2024-01-14',"});,"})
@@ -52,7 +52,7 @@ export { ForumCategories };,"});,"})
             description: 'General topics and discussions',';
             postCount: 150,'';
             adminOnly: false,''';
-            icon: 'message-circle',;
+            icon: 'message-circle'
             lastPost: {}
                 title: 'Welcome to the community!',''';
                 author: 'Admin',''';
@@ -61,7 +61,7 @@ export { ForumCategories };,"});,"})
             name: 'Technical Support',''';
             description: 'Get help with technical issues',';
             postCount: 89,'';
-            icon: 'code',;
+            icon: 'code'
                 title: 'API integration question',''';
                 author: 'Developer123',''';
                 date: '2024-01-14';

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import Head from 'next/head';
 
 interface SEOHeadProps {
@@ -49,7 +49,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       name: 'Zion Tech Group',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://ziontechgroup.com/logo.png',;
+        url: 'https://ziontechgroup.com/logo.png'
 },;
 },
     datePublished: publishedTime,
@@ -101,7 +101,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredData),;
+          __html: JSON.stringify(structuredData)
 }}
       />
 

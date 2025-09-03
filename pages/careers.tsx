@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 import type { NextPage } from 'next';
-import Head from 'next/head'
+import Head from 'next/head';
 import Layout from '../components/Layout';
 import {
   Users,
@@ -12,7 +12,7 @@ import {
   ArrowRight,
   CheckCircle,
   MapPin,
-  Clock,
+  Clock,;
   DollarSign} from 'lucide-react';
   DollarSign
 } from 'lucide-react';
@@ -28,10 +28,8 @@ const Careers: NextPage = () => {
     {
       icon: Home,
       title: 'Remote Work',
-      description: 'Flexible remote work options and home office stipend.'},
       description: 'Flexible remote work options and home office stipend.'
     },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       icon: Award,
       title: 'Growth Opportunities',

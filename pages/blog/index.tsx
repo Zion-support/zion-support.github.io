@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 import type { NextPage } from 'next';
-import Link from 'next/link'
+import Link from 'next/link';
 import MainLayout from '../../components/layout/MainLayout';
 import { Calendar, User, ArrowRight } from 'lucide-react';
 
@@ -86,9 +86,6 @@ const BlogIndex: NextPage = () => {
       </section>
 
       {/* Categories */}
-      <section className=py-8 bg-gray-50">
-        <div className="container mx-auto px-4>
-          <div className={`flex flex-wrap justify-center gap-4`>
             {categories.map((category) => (
               <button key={category}
                 className={`px-6 py-2 rounded-full font-semibold transition-colors ${

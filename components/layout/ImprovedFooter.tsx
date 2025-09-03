@@ -8,8 +8,8 @@ import {
   Twitter, 
   Github, 
   Facebook,
-  Instagram,
-  ArrowRight,
+  Instagram,;
+  ArrowRight,;
   Heart;
 } from 'lucide-react';
 

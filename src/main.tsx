@@ -1,9 +1,9 @@
- import React from 'react'
-import ReactDOM from 'react-dom/client'; import { BrowserRouter  } from 'react-router-dom'
-import { Provider  } from 'react-redux'; import { store } from './store'
-import App from './App'; import './index.css'; ReactDOM.createRoot(document.getElementById('root')!).render(<React.StrictMode> <Provider store={store}> <BrowserRouter> <App /> </BrowserRouter> </Provider> </React.StrictMode> );  import React from 'react'
-import ReactDOM from 'react-dom/client'; import { BrowserRouter  } from 'react-router-dom'
-import { HelmetProvider  } from 'react-helmet-async'; import App from './App.tsx'
+ import React from 'react';
+import ReactDOM from 'react-dom/client'; import { BrowserRouter  } from 'react-router-dom';
+import { Provider  } from 'react-redux'; import { store } from './store';
+import App from './App'; import './index.css'; ReactDOM.createRoot(document.getElementById('root')!).render(<React.StrictMode> <Provider store={store}> <BrowserRouter> <App /> </BrowserRouter> </Provider> </React.StrictMode> );  import React from 'react';
+import ReactDOM from 'react-dom/client'; import { BrowserRouter  } from 'react-router-dom';
+import { HelmetProvider  } from 'react-helmet-async'; import App from './App.tsx';
 import './index.css';
 ,"});,"})
 import { BrowserRouter } from 'react-router-dom';,"});,"})
@@ -27,7 +27,7 @@ const root = ReactDOM.createRoot(;
   document.getElementById('root') as: HTMLElement';';
 );
 root.render(<App: />)
-import React from 'react'
+import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 ;
@@ -35,7 +35,7 @@ import App from './App';
 root.render(<App />);
 );
 root.render(&apos;<App />)
-import React from 'react'
+import React from 'react';
 import { SEO } from '@/components/SEO';
 
 const Main: React.FC = () => {

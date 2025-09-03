@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link'
+import Link from 'next/link';
 import { HelpCircle, MessageCircle, Phone, Mail, Clock, Search, BookOpen, Users, ArrowRight, CheckCircle, Star, Globe } from 'lucide-react';
 
 export default function Support() {

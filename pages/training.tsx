@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link'
 import {
@@ -11,8 +11,8 @@ import {
   Download,
   ArrowRight,
   CheckCircle,
-  Globe,
-  Target,
+  Globe,;
+  Target,;
   Lightbulb} from 'lucide-react';
 
 export default function Training() {
@@ -112,7 +112,7 @@ export default function Training() {
         'Career advancement',
         'Exclusive resources'],
       requirements: ['AI Fundamentals,ML Advanced,Project Portfolio'],
-      benefits: ['Industry recognition,Career advancement,Exclusive resources'];
+      benefits: ['Industry recognition,Career advancement,Exclusive resources']
 },
     {
       title: 'Zion Tech Cloud Architect',
@@ -127,7 +127,7 @@ export default function Training() {
         'Salary increase',
         'Consulting opportunities'],
       requirements: ['Cloud Fundamentals,DevOps Practices,Architecture Design'],
-      benefits: ['High-demand skills,Salary increase,Consulting opportunities'];
+      benefits: ['High-demand skills,Salary increase,Consulting opportunities']
 },
     {
       title: 'Zion Tech Security Professional',
@@ -142,7 +142,7 @@ export default function Training() {
         'Government contracts',
         'Leadership roles']},
       requirements: ['Security Fundamentals,Penetration Testing,Incident Response'],
-      benefits: ['Security clearance,Government contracts,Leadership roles'];
+      benefits: ['Security clearance,Government contracts,Leadership roles']
 }
   ]
 
@@ -157,7 +157,7 @@ export default function Training() {
         'Lifetime access',
         'Mobile friendly',
         'Progress tracking'],
-      features: ['24/7 access,Lifetime access,Mobile friendly,Progress tracking'];
+      features: ['24/7 access,Lifetime access,Mobile friendly,Progress tracking']
 },
     {
       title: 'Live Online Classes',
@@ -168,7 +168,7 @@ export default function Training() {
         'Group projects',
         'Peer networking',
         'Instructor feedback'],
-      features: ['Real-time Q&A,Group projects,Peer networking,Instructor feedback'];
+      features: ['Real-time Q&A,Group projects,Peer networking,Instructor feedback']
 },
     {
       title: 'In-Person Workshops',
@@ -179,7 +179,7 @@ export default function Training() {
         'Equipment training',
         'Networking events',
         'Certification exams'],
-      features: ['Lab access,Equipment training,Networking events,Certification exams'];
+      features: ['Lab access,Equipment training,Networking events,Certification exams']
 },
     {
       title: 'Corporate Training',
@@ -199,7 +199,7 @@ export default function Training() {
       title: 'AI Engineer',
       company: 'Tech Corp',
       rating: 5,
-      features: ['Custom curriculum,Team training,On-site delivery,ROI tracking'];
+      features: ['Custom curriculum,Team training,On-site delivery,ROI tracking']
 }
   ]
 

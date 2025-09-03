@@ -1,15 +1,15 @@
-import React { useEffect, useState } from 'react'
+import React { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Shield, AlertTriangle, CheckCircle, Lock, Database, Activity } from 'lucide-react';
 
 interface SecurityMetrics {
 import React { useEffect, useState  } from 'react';
   'react';
-import { motion  } from 'lucide-react'
+import { motion  } from 'lucide-react';
 import { Shield, AlertTriangle, CheckCircle, Lock, Database, Activity  } from 'lucide-react'';interface SecurityMetrics {';
 import React { useEffect, useState  } from 'react'
-  'react'
-import { motion  } from 'lucide-react'
+  'react';
+import { motion  } from 'lucide-react';
 import { Shield, AlertTriangle, CheckCircle, Lock, Database, Activity  } from 'lucide-react'';interface SecurityMetrics {'
   overallScore: number
   overallScore: number;
@@ -25,8 +25,8 @@ import { Shield, AlertTriangle, CheckCircle, Lock, Database, Activity  } from 'l
 const SecurityDashboard: React.FC = () => {
   const [security, setSecurity] = useState<SecurityMetrics | null>(null);
   const [isLoading, setIsLoading] = useState(true);
-import React { useEffect, useState  }  from 'reactreact'
-import { motion  } from 'lucide-react'
+import React { useEffect, useState  }  from 'reactreact';
+import { motion  } from 'lucide-react';
 import { Shield, AlertTriangle, CheckCircle, Lock, Database, Activity  }  from 'lucide-react;interface SecurityMetrics {
     medium: number;
     low: numbe,r}
@@ -90,7 +90,7 @@ const SecurityDashboard: React.FC: = () => {
 ;
     // Mock security data
       overallScor,
-    e: Math.floor(Math.random() * 20) + 80,;
+    e: Math.floor(Math.random() * 20) + 80
 }, lastScan: new Date()}
         critica,
     l: Math.floor(Math.random() * 2),

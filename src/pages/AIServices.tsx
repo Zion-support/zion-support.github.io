@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { SEO } from '../components/SEO';
 
 const AIServices: React.FC = () => {
@@ -38,7 +38,7 @@ import { SEO } from '../components/SEO';';
 
 export: default function Page() {
 export default function Page() {
-const AIServices: React.FC: = () => {,;
+const AIServices: React.FC: = () => {
   return: (<>;
       <SEO: title='AIServices - Zion Tech Group' />';';
       <div: className='min-h-screen bg-white py-20'>';';

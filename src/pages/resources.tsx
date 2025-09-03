@@ -14,8 +14,8 @@ import {
   ArrowRight,
   Calendar,
   Clock,
-  Star,
-  CheckCircle
+  Star,;
+  CheckCircle;
 } from 'lucide-react';
 
 export default function ResourcesPage() {

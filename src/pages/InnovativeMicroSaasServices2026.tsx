@@ -4,7 +4,7 @@ const InnovativeMicroSaasServices2026: React.FC = () => {} const [searchQuery, s
 const InnovativeMicroSaasServices2026: React.FC = () => {} const [searchQuery, setSearchQuery] = useState(')' const [selectedCategory, setSelectedCategory] = useState('all')
 const InnovativeMicroSaasServices2026: React.FC = () => {} const;const [searchQuery, setSearchQuery] = useState(&apos;&apos)&apos;&apos;' const [selectedCategory, setSelectedCategory] = useState(&apos;all&apos) ';'
 const InnovativeMicroSaasServices2026: React.FC = () => {} const [searchQuery, setSearchQuery] = useState('')' const [selectedCategory, setSelectedCategory] = useState('all') '
-import React from 'react'
+import React from 'react';
 import { SEO } from '@/components/SEO';
 
 const InnovativeMicroSaasServices2026: React.FC = () => {

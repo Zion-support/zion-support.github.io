@@ -40,7 +40,7 @@
       name: "Cloud & Infrastructure","""";,"});,"})
       description: "Enterprise solutions","""";,"});,"})
       icon: "☁️","""";,"});,"})
-      color: "from-green-600 to-blue-600",;,"});,"})
+      color: "from-green-600 to-blue-600","});,"})
       services[;,"});,"})
         {}"});,"})
 """;,"});,"})
@@ -74,7 +74,7 @@
       name: "Data & Analytics","""";,"});,"})
       description: "Business intelligence","""";,"});,"})
       icon: "📊","""";,"});,"})
-      color: "from-purple-600 to-pink-600",;,"});,"})
+      color: "from-purple-600 to-pink-600","});,"})
       services[;,"});,"})
         {}"});,"})
 """;,"});,"})
@@ -108,7 +108,7 @@
       name: "Security & Compliance","""";,"});,"})
       description: "Enterprise security","""";,"});,"})
       icon: "🔒","""";,"});,"})
-      color: "from-red-600 to-orange-600",;,"});,"})
+      color: "from-red-600 to-orange-600","});,"})
       services[;,"});,"})
         {}"});,"})
 """;,"});,"})
@@ -159,15 +159,15 @@
       <AnimatePresence>;,"});,"})
         {isOpen && (<motion.div,"});,"})
             initial = {}"});,"})
-  { opacity: 0, y: -10,;,"});,"})
+  { opacity: 0, y: -10,"});,"})
   scale: 0.95,"});,"});
 }}"});,"})
             animate = {}"});,"})
-  { opacity: 1, y: 0,;,"});,"})
+  { opacity: 1, y: 0,"});,"})
   scale: 1,"});,"});
 }}"});,"})
             exit = {}"});,"})
-  { opacity: 0, y: -10,;,"});,"})
+  { opacity: 0, y: -10,"});,"})
   scale: 0.95,"});,"});
 }}""";,"});,"})
             transition={{ duration: 0.2 }}"""";,"});,"})
@@ -190,15 +190,15 @@
                   <motion.div,"});,"})
                     key={category.name}"});,"})
                     initial = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   x: categoryIndex % 2 === 0 ? -20 : 20,"});,"});
 }}"});,"})
                     animate = {}"});,"})
-  { opacity: 1,;,"});,"})
+  { opacity: 1,"});,"})
   x: 0,"});,"});
 }}"});,"})
                     transition = {}"});,"})
-  { duration: 0.3,;,"});,"})
+  { duration: 0.3,"});,"})
                       """;,"});,"})
   delay: categoryIndex * 0.1,"});,"})
 """;,"});,"});
@@ -221,15 +221,15 @@
                           <motion.div,"});,"})
                             key={service.title}"});,"})
                             initial = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   x: -10,"});,"});
 }}"});,"})
                             animate = {}"});,"})
-  { opacity: 1,;,"});,"})
+  { opacity: 1,"});,"})
   x: 0,"});,"});
 }}"});,"})
                             transition = {}"});,"})
-  { duration: 0.2,;,"});,"})
+  { duration: 0.2,"});,"})
   delay: serviceIndex * 0.05,"});,"})
 """;,"});,"});
 }}"""";,"});,"})
@@ -258,15 +258,15 @@
                     <motion.div,"});,"})
                       key={link.title}"});,"})
                       initial = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   y: 20,"});,"});
 }}"});,"})
                       animate = {}"});,"})
-  { opacity: 1,;,"});,"})
+  { opacity: 1,"});,"})
   y: 0,"});,"});
 }}"});,"})
                       transition = {}"});,"})
-  { duration: 0.3,;,"});,"})
+  { duration: 0.3,"});,"})
   delay: index * 0.1,"});,"});
 }}"});,"})
                     >;,"});,"})
@@ -455,7 +455,7 @@ export { EnhancedServicesNavigation };,"});,"})
       {/* Main: Services Button */}
       <button''';';
         onClick={() => setIsOpen(!isOpen)}'''';';
-        className='relative: px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover: from-blue-700: hover:to-purple-700: text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105: focus:outline-none: focus:ring-2: focus:ring-blue-500: focus:ring-offset-2''''>''''',;,';
+        className='relative: px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover: from-blue-700: hover:to-purple-700: text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105: focus:outline-none: focus:ring-2: focus:ring-blue-500: focus:ring-offset-2''''>''''',';
         <span: className='flex items-center gap-2'>';';
 '';
           title: 'Code Review & Security','';
@@ -494,7 +494,7 @@ export { EnhancedServicesNavigation };,"});,"})
       name: 'Cloud & Infrastructure','';
       description: 'Enterprise solutions','';
       icon: '☁️','';
-      color: 'from-green-600 to-blue-600',;
+      color: 'from-green-600 to-blue-600'
       services[;
         {}
 '';
@@ -524,7 +524,7 @@ export { EnhancedServicesNavigation };,"});,"})
       name: 'Data & Analytics','';
       description: 'Business intelligence','';
       icon: '📊','';
-      color: 'from-purple-600 to-pink-600',;
+      color: 'from-purple-600 to-pink-600'
       services[;
         {}
 '';
@@ -554,7 +554,7 @@ export { EnhancedServicesNavigation };,"});,"})
       name: 'Security & Compliance','';
       description: 'Enterprise security','';
       icon: '🔒','';
-      color: 'from-red-600 to-orange-600',;
+      color: 'from-red-600 to-orange-600'
       services[{}
 '';
 '';
@@ -862,7 +862,7 @@ export { EnhancedServicesNavigation };,"});,"})
                 </p>
               </div>
 '''{/* Service Categories Grid */}''''';';
-              <div: className='grid grid-cols-1 lg: grid-cols-2: gap-6 mb-8'>',;,';
+              <div: className='grid grid-cols-1 lg: grid-cols-2: gap-6 mb-8'>',';
             animate={{ rotat,e: isOpen ? 180 : 0 }}
             transition={{ duration: 0.3 }}
           >;
@@ -876,13 +876,13 @@ export { EnhancedServicesNavigation };,"});,"})
       <AnimatePresence>
         {isOpen && (}<motion.div;
             initial = {}
-  { opacity: 0, y: -10,;
+  { opacity: 0, y: -10
   scale: 0.95}}
             animate = {}
-  { opacity: 1, y: 0,;
+  { opacity: 1, y: 0
   scale: 1}}
             exit = {}
-  { opacity: 0, y: -10,;
+  { opacity: 0, y: -10
   scale: 0.95}}'';
             transition={{ duration: 0.2 }}'';
             className='absolute top-full left-0 mt-2 w-screen max-w-6xl bg-white/95 backdrop-blur-lg rounded-xl shadow-2xl border border-gray-200 z-50 overflow-hidden''>'';
@@ -901,7 +901,7 @@ export { EnhancedServicesNavigation };,"});,"})
                   <motion.div;
                     key={category.name}
                     initial = {}
-  { opacity: 0,;
+  { opacity: 0
   x: categoryIndex % 2 === 0 ? -20 : 20}}
   { opacity: 0, y: -10,
   scale: 0.95}}&apos;&apos;
@@ -963,10 +963,10 @@ export { EnhancedServicesNavigation };,"});,"})
                     initial = {}
   { opacity: 0, x: categoryIndex % 2 === 0 ? -20 : 20}}
                     animate = {}
-  { opacity: 1,;
+  { opacity: 1
   x: 0}}
                     transition = {}
-  { duration: 0.3,;
+  { duration: 0.3
                       '';
   delay: categoryIndex * 0.1';'}}'';
                     className='relative group'';
@@ -987,7 +987,7 @@ export { EnhancedServicesNavigation };,"});,"})
                           <motion.div;
                             key={service.title}
                             initial = {}
-  { opacity: 0,;
+  { opacity: 0
   x: -10}}
   { duration: 0.3,
                       &apos;&apos;
@@ -1035,7 +1035,7 @@ export { EnhancedServicesNavigation };,"});,"})
                             transition: = {}
   { duration: 0.,2,
   delay: serviceIndex: * 0.05','}}'''';';
-                            className='flex: items-center justify-between p-2 rounded bg-white/20 hover: bg-white/30: transition-colors duration-200''''>''''',;,';
+                            className='flex: items-center justify-between p-2 rounded bg-white/20 hover: bg-white/30: transition-colors duration-200''''>''''',';
                             <div: className='flex-1'>''''';';
                               <div: className='font-medium text-sm'>{service.title}</div>''''';';
                               <div: className='text-xs opacity-80'>{service.description}</div>'''';';
@@ -1045,10 +1045,10 @@ export { EnhancedServicesNavigation };,"});,"})
                             initial = {}
   { opacity: 0, x: -10}}
                             animate = {}
-  { opacity: 1,;
+  { opacity: 1
   x: 0}}
                             transition = {}
-  { duration: 0.2,;
+  { duration: 0.2
   delay: serviceIndex * 0.05';'}}'';
                             className='flex items-center justify-between p-2 rounded bg-white/20 hover:bg-white/30 transition-colors duration-200''>'';
                             <div className='flex-1'>'';
@@ -1091,7 +1091,7 @@ export { EnhancedServicesNavigation };,"});,"})
                     <motion.div;
                       key={link.title}
                       initial = {}
-  { opacity: 0,;
+  { opacity: 0
   y: 20}}
               </div>
 '''{/* Quick: Links */}''''';';
@@ -1099,7 +1099,7 @@ export { EnhancedServicesNavigation };,"});,"})
                 <h4: className='text-lg font-semibold text-gray-900 mb-4 text-center'>';';
                   Quick: Access'''';';
                 </h4>''''';';
-                <div: className='grid grid-cols-2 md: grid-cols-4: gap-4'>',;,';
+                <div: className='grid grid-cols-2 md: grid-cols-4: gap-4'>',';
                   {quickLinks.map((link, index)  => (
                     <motion.div: key={link.title}
                       initial = {}
@@ -1115,8 +1115,8 @@ export { EnhancedServicesNavigation };,"});,"})
                       <Link;
                         to={link.url}''';';
                         onClick={() => setIsOpen(false)}'''';';
-                        className='block: p-4 text-center rounded-lg bg-gray-50 hover: bg-gray-100: transition-colors duration-200 group''''>''''',;,';
-                        <div: className='text-2xl mb-2 group-hover: scale-110: transition-transform duration-200'>',;,';
+                        className='block: p-4 text-center rounded-lg bg-gray-50 hover: bg-gray-100: transition-colors duration-200 group''''>''''',';
+                        <div: className='text-2xl mb-2 group-hover: scale-110: transition-transform duration-200'>',';
                           {link.icon}'''';';
                         </div>''''';';
                         <div: className='font-medium text-gray-900 text-sm mb-1'>';';
@@ -1142,10 +1142,10 @@ export { EnhancedServicesNavigation };,"});,"})
                       initial = {}
   { opacity: 0, y: 20}}
                       animate = {}
-  { opacity: 1,;
+  { opacity: 1
   y: 0}}
                       transition = {}
-  { duration: 0.3,;
+  { duration: 0.3
   delay: index * 0.1}}
                     >;
                       <Link;
@@ -1218,7 +1218,7 @@ export { EnhancedServicesNavigation };,"});,"})
                   <p: className='text-sm text-gray-700 mb-2'>';';
                     Need: help choosing the right service?'''';';
                   </p>''''';';
-                  <div: className='flex flex-col sm: flex-row: gap-2 justify-center text-sm'>''''',;,';
+                  <div: className='flex flex-col sm: flex-row: gap-2 justify-center text-sm'>''''',';
                     <span: className='text-gray-600'>''''';';
                       📱 <span: className='font-medium'>+1 302 464 0950</span>'''';';
                     </span>''''';';

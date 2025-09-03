@@ -4,7 +4,7 @@ import { Code, Sparkles, Download, TestTube, FileText, Settings, Zap, Shield, Ga
 import { useAICodeGeneration } from "../hooks/useAICodeGeneration.jsx";,"});,"})
 ;,"});,"})
 export const AICodeGenerator = () => {;,"});,"})
-    const { trackEvent } = useAnalytics({        enableTracking: true,;,"});,"})
+    const { trackEvent } = useAnalytics({        enableTracking: true,"});,"})
         enableUserBehaviorTracking: true,"});,"});
 });,"});,"})
     const [activeTab, setActiveTab] = useState('generate');,"});,"})
@@ -21,11 +21,11 @@ export const AICodeGenerator = () => {;,"});,"})
         framework: 'react',''';,"});,"})
         style: 'functional',''';,"});,"})
         target: 'web',''';,"});,"})
-        quality: 'development',;,"});,"})
-        includeTests: false,;,"});,"})
-        includeDocs: false,;,"});,"})
-        includeErrorHandling: false,;,"});,"})
-        includeLogging: false,;,"});,"})
+        quality: 'development',"});,"})
+        includeTests: false,"});,"})
+        includeDocs: false,"});,"})
+        includeErrorHandling: false,"});,"})
+        includeLogging: false,"});,"})
         includeMetrics: false,"});,"});
 });,"});,"})
     // Handle form submission,"});,"})
@@ -35,9 +35,9 @@ export const AICodeGenerator = () => {;,"});,"})
             return,"});,"})
         await generateCode(form.prompt, form);,"});,"})
         trackEvent('ai_code_generator',form_submitted', form.language, null, {}"});,"})
-            framework: form.framework,;,"});,"})
-            style: form.style,;,"});,"})
-            target: form.target,;,"});,"})
+            framework: form.framework,"});,"})
+            style: form.style,"});,"})
+            target: form.target,"});,"})
             quality: form.quality,"});,"});
 })}, [form, generateCode, trackEvent]);,"});,"})
     // Handle custom code analysis,"});,"})
@@ -93,7 +93,7 @@ export const AICodeGenerator = () => {;,"});,"})
     const handleApplySuggestion = useCallback((suggestion) => {}"});,"})
         applySuggestion(suggestion);,"});,"})
         trackEvent('ai_code_generator',suggestion_applied', suggestion.type, null, {}"});,"})
-            suggestionId: suggestion.id,;,"});,"})
+            suggestionId: suggestion.id,"});,"})
             impact: suggestion.impact,"});,"});
 })}, [applySuggestion, trackEvent]);,"});,"})
     // Clear history,"});,"})
@@ -144,13 +144,13 @@ export const AICodeGenerator = () => {;,"});,"})
       <div className="p-6">"'""";,"});,"})
         <AnimatePresence mode="wait">'"'""";,"});,"})
           {activeTab === 'generate' && (<motion.div key="generate" initial = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   y: 20,"});,"});
 }} animate = {}"});,"})
-  { opacity: 1,;,"});,"})
+  { opacity: 1,"});,"})
   y: 0,"});,"});
 }} exit = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   y: -20 ""","});,"})
 """";,"});,"});
 }} className="space-y-6">""";,"});,"})
@@ -249,13 +249,13 @@ export const AICodeGenerator = () => {;,"});,"})
                 </button>;,"});,"})
                 {/* Advanced Options */}"});,"})
                 {showAdvanced && (<motion.div initial = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   height: 0,"});,"});
 }} animate = {}"});,"})
   { opacity: 1,';,"});,"})
   height: 'auto',"});,"});
 }} exit = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   height: 0 ""","});,"})
 """";,"});,"});
 }} className="grid grid-cols-2 md: grid-cols-5 gap-4 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">',"});,"})
@@ -288,10 +288,10 @@ export const AICodeGenerator = () => {;,"});,"})
               </form>;,"});,"})
               {/* Generated Code Display */}"});,"})
               {generatedCode && (<motion.div initial = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   y: 20,"});,"});
 }} animate = {}"});,"})
-  { opacity: 1,;,"});,"})
+  { opacity: 1,"});,"})
   y: 0 ""","});,"})
 """";,"});,"});
 }} className="space-y-4">"""";,"});,"})
@@ -320,13 +320,13 @@ export const AICodeGenerator = () => {;,"});,"})
             </motion.div>)}'""";,"});,"})
 '"'""";,"});,"})
           {activeTab === 'analyze' && (<motion.div key="analyze" initial = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   y: 20,"});,"});
 }} animate = {}"});,"})
-  { opacity: 1,;,"});,"})
+  { opacity: 1,"});,"})
   y: 0,"});,"});
 }} exit = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   y: -20 ""","});,"})
 """";,"});,"});
 }} className="space-y-6">""";,"});,"})
@@ -348,10 +348,10 @@ export const AICodeGenerator = () => {;,"});,"})
               </button>;,"});,"})
               {/* Analysis Results */}"});,"})
               {codeAnalysis && (<motion.div initial = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   y: 20,"});,"});
 }} animate = {}"});,"})
-  { opacity: 1,;,"});,"})
+  { opacity: 1,"});,"})
   y: 0 ""","});,"})
 """";,"});,"});
 }} className="space-y-6">""";,"});,"})
@@ -414,13 +414,13 @@ export const AICodeGenerator = () => {;,"});,"})
             </motion.div>)}'""";,"});,"})
 '"'""";,"});,"})
           {activeTab === 'optimize' && (<motion.div key="optimize" initial = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   y: 20,"});,"});
 }} animate = {}"});,"})
-  { opacity: 1,;,"});,"})
+  { opacity: 1,"});,"})
   y: 0,"});,"});
 }} exit = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   y: -20 ""","});,"})
 """";,"});,"});
 }} className="space-y-6">"""";,"});,"})
@@ -450,13 +450,13 @@ export const AICodeGenerator = () => {;,"});,"})
             </motion.div>)}'""";,"});,"})
 '"'""";,"});,"})
           {activeTab === 'tests' && (<motion.div key="tests" initial = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   y: 20,"});,"});
 }} animate = {}"});,"})
-  { opacity: 1,;,"});,"})
+  { opacity: 1,"});,"})
   y: 0,"});,"});
 }} exit = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   y: -20 ""","});,"})
 """";,"});,"});
 }} className="space-y-6">"""";,"});,"})
@@ -477,13 +477,13 @@ export const AICodeGenerator = () => {;,"});,"})
             </motion.div>)}'""";,"});,"})
 '"'""";,"});,"})
           {activeTab === 'docs' && (<motion.div key="docs" initial = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   y: 20,"});,"});
 }} animate = {}"});,"})
-  { opacity: 1,;,"});,"})
+  { opacity: 1,"});,"})
   y: 0,"});,"});
 }} exit = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   y: -20 ""","});,"})
 """";,"});,"});
 }} className="space-y-6">"""";,"});,"})
@@ -505,10 +505,10 @@ export const AICodeGenerator = () => {;,"});,"})
         </AnimatePresence>;,"});,"})
         {/* Suggestions Panel */}"});,"})
         {suggestions.length > 0 && (<motion.div initial = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   y: 20,"});,"});
 }} animate = {}"});,"})
-  { opacity: 1,;,"});,"})
+  { opacity: 1,"});,"})
   y: 0 ""","});,"})
 """";,"});,"});
 }} className="mt-8 border-t border-gray-200 dark: border-gray-700 pt-6">"""","});,"})
@@ -517,10 +517,10 @@ export const AICodeGenerator = () => {;,"});,"})
             </h3>"""";,"});,"})
             <div className="grid gap-4">;,"});,"})
               {suggestions.map((suggestion) => (<motion.div key={suggestion.id} initial = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   x: 20,"});,"});
 }} animate = {}"});,"})
-  { opacity: 1,;,"});,"})
+  { opacity: 1,"});,"})
   x: 0 ""","});,"})
 """";,"});,"});
 }} className="p-4 bg-gray-50 dark: bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600">"""","});,"})
@@ -568,10 +568,10 @@ export const AICodeGenerator = () => {;,"});,"})
 ;,"});,"})
         {/* History Panel */}"});,"})
         {history.length > 0 && (<motion.div initial = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   y: 20,"});,"});
 }} animate = {}"});,"})
-  { opacity: 1,;,"});,"})
+  { opacity: 1,"});,"})
   y: 0 ""","});,"})
 """";,"});,"});
 }} className="mt-8 border-t border-gray-200 dark: border-gray-700 pt-6">"""","});,"})
@@ -617,12 +617,12 @@ export const AICodeGenerator = () => {;,"});,"})
       </div>;,"});,"})
     </div>)};'"`;,"});,"})
 '"`'"`;,"});,"})
-import React, { useState, useCallback } from 'react'''
-import { motion, AnimatePresence } from 'framer-motion'''
+import React, { useState, useCallback } from 'react''';
+import { motion, AnimatePresence } from 'framer-motion''';
 import { Code, Sparkles, Download, TestTube, FileText, Settings, Zap, Shield, Gauge, Wrench, Eye, Trash2, Copy, CheckCircle, AlertCircle, Info, Loader2 } from 'lucide-react';""
 import React, { useState, useCallback } from 'react''
-import { motion, AnimatePresence }  from 'framer-motion
-import { Code, Sparkles, Download, TestTube, FileText, Settings, Zap, Shield, Gauge, Wrench, Eye, Trash2, Copy, CheckCircle, AlertCircle, Info, Loader2 } from 'lucide-react
+import { motion, AnimatePresence }  from 'framer-motion;
+import { Code, Sparkles, Download, TestTube, FileText, Settings, Zap, Shield, Gauge, Wrench, Eye, Trash2, Copy, CheckCircle, AlertCircle, Info, Loader2 } from 'lucide-react;
 import { useAICodeGeneration } from '../hooks/useAICodeGeneration.jsx';
 export const AICodeGenerator = () => {
     const { trackEvent } = useAnalytics({        enableTracking: true, enableUserBehaviorTracking: true",";

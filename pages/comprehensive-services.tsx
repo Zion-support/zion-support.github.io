@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link'
 import { 
@@ -60,8 +60,8 @@ import {
   MessageCircle as Communication,
   Search as SearchIcon,
   BarChart as Analytics,
-  Users2 as Team,
-  Settings as Configuration,
+  Users2 as Team,;
+  Settings as Configuration,;
   Palette as Design} from 'lucide-react';
 
 export default function ComprehensiveServices() {
@@ -232,7 +232,7 @@ export default function ComprehensiveServices() {
               </p>
               <div className={`flex flex-col sm:flex-row gap-4 justify-center`>
                 <a href={`tel:${contactInfo.phone}`}
-                  className=`bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center`}
+                  className={`bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center`}
                 >
                   <Phone className={`w-5 h-5 mr-2` />
                   Call Now: {contactInfo.phone}

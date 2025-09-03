@@ -1,4 +1,4 @@
-import React { Component, ErrorInfo, ReactNode } from 'react'
+import React { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw } from 'lucide-react'; Props {children: ReactNode;'
 ursor/automate-test-fix-improve-and-merge-code-99d1
 import React { Component, ErrorInfo, ReactNode  } from 'react';

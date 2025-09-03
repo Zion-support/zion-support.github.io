@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link'
 import {
@@ -36,8 +36,8 @@ import {
   Home,
   Heart,
   Car,
-  TreePine,
-  Satellite,
+  TreePine,;
+  Satellite,;
   Mic} from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
 

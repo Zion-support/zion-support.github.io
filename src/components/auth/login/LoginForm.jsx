@@ -31,7 +31,7 @@ function LoginForm() {}"});,"})
   const [showPassword, setShowPassword] = useState(false);,"});,"})
   const [isSubmitting, setIsSubmitting] = useState(false);,"});,"})
   const form = useForm({}"});,"})
-    resolver: zodResolver(loginSchema),;,"});,"})
+    resolver: zodResolver(loginSchema),"});,"})
     defaultValues: {}"});,"})
 ';,"});,"})
 '';,"});,"})
@@ -199,7 +199,7 @@ export { Page, LoginForm };,"});,"})
 ' ' ' ' ' ' '''";"
 "
 ' ' ' ' ' ' ''";
-import React from 'react'
+import React from 'react';
 import {SEO } from '@/components/SEO';
 
 export default function LoginForm() {return (

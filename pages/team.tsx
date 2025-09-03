@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO'
+import { SEO } from '../components/SEO';
 import { Button } from '../components/ui/Button';
-import { Card } from '../components/ui/Card'
+import { Card } from '../components/ui/Card';
 import { Badge } from '../components/ui/Badge';
 import { 
   Linkedin, Twitter,
@@ -15,14 +15,14 @@ import {
   TrendingUp, Phone,
   MapPin, Calendar,
   GraduationCap, Briefcase,
-  Heart, Sparkles,
-  CheckCircle, ArrowRight} from 'lucide-react'
+  Heart, Sparkles,;
+  CheckCircle, ArrowRight} from 'lucide-react';
 import Head from 'next/head';
-import Link from 'next/link'
+import Link from 'next/link';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer'
+import Footer from '../components/Footer';
 import Navigation from '../components/layout/EnhancedNavigation';
-import Footer from '../components/layout/Footer'
+import Footer from '../components/layout/Footer';
 import { ArrowRight, Award, Brain, Code, Globe, Shield, Users, Zap } from 'lucide-react';
 
 export default function Team() {

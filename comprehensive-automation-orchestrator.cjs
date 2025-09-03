@@ -97,7 +97,7 @@ class ComprehensiveAutomationOrchestrator {
           execSync('yarn install --silent', { 
             cwd: this.projectRoot, 
             stdio: 'pipe',
-            timeout: 300000;
+            timeout: 300000
 });
           this.log('✅ Dependencies installed with yarn');
           return { installed: true, method: 'yarn' };
@@ -122,7 +122,7 @@ class ComprehensiveAutomationOrchestrator {
       execSync('npx tsc --noEmit', { 
         cwd: this.projectRoot, 
         stdio: 'pipe',
-        timeout: 60000;
+        timeout: 60000
 });
       tests.push({ name: 'TypeScript compilation', status: 'pass' });
       this.log('✅ TypeScript compilation passed');
@@ -136,7 +136,7 @@ class ComprehensiveAutomationOrchestrator {
       execSync('npx eslint . --max-warnings 0', { 
         cwd: this.projectRoot, 
         stdio: 'pipe',
-        timeout: 60000;
+        timeout: 60000
 });
       tests.push({ name: 'ESLint', status: 'pass' });
       this.log('✅ ESLint passed');
@@ -150,7 +150,7 @@ class ComprehensiveAutomationOrchestrator {
       execSync('npm run build', { 
         cwd: this.projectRoot, 
         stdio: 'pipe',
-        timeout: 300000;
+        timeout: 300000
 });
       tests.push({ name: 'Build', status: 'pass' });
       this.log('✅ Build passed');
@@ -174,7 +174,7 @@ class ComprehensiveAutomationOrchestrator {
         execSync(`node ${fixImportScript}`, { 
           cwd: this.projectRoot, 
           stdio: 'pipe',
-          timeout: 120000;
+          timeout: 120000
 });
         fixes.push({ type: 'imports', status: 'fixed' });
         this.log('✅ Import issues fixed');
@@ -190,7 +190,7 @@ class ComprehensiveAutomationOrchestrator {
         execSync(`node ${fixSyntaxScript}`, { 
           cwd: this.projectRoot, 
           stdio: 'pipe',
-          timeout: 120000;
+          timeout: 120000
 });
         fixes.push({ type: 'syntax', status: 'fixed' });
         this.log('✅ Syntax issues fixed');
@@ -206,7 +206,7 @@ class ComprehensiveAutomationOrchestrator {
         execSync(`node ${fixMergeScript}`, { 
           cwd: this.projectRoot, 
           stdio: 'pipe',
-          timeout: 120000;
+          timeout: 120000
 });
         fixes.push({ type: 'merge_conflicts', status: 'fixed' });
         this.log('✅ Merge conflicts fixed');
@@ -266,7 +266,7 @@ class EnhancedErrorChecker {
       const result = execSync('npx tsc --noEmit --pretty', { 
         cwd: this.projectRoot, 
         encoding: 'utf8',
-        timeout: 60000;
+        timeout: 60000
 });
       this.log('✅ No TypeScript errors found');
       return { errors: 0, output: result };
@@ -282,7 +282,7 @@ class EnhancedErrorChecker {
       const result = execSync('npx eslint . --format=json', { 
         cwd: this.projectRoot, 
         encoding: 'utf8',
-        timeout: 60000;
+        timeout: 60000
 });
       this.log('✅ No linting errors found');
       return { errors: 0, output: result };
@@ -376,7 +376,7 @@ class SmartBuildOptimizer {
       const buildResult = execSync('npm run build', { 
         cwd: this.projectRoot, 
         encoding: 'utf8',
-        timeout: 300000;
+        timeout: 300000
 });
       
       this.log('✅ Build optimization completed');
@@ -469,7 +469,7 @@ class AutomatedTestingScript {
       const unitResult = execSync('npm test', { 
         cwd: this.projectRoot, 
         encoding: 'utf8',
-        timeout: 120000;
+        timeout: 120000
 });
       testResults.unit.passed = 1;
       testResults.unit.total = 1;
@@ -558,7 +558,7 @@ class PerformanceMonitor {
       execSync('npm run build', { 
         cwd: this.projectRoot, 
         stdio: 'pipe',
-        timeout: 300000;
+        timeout: 300000
 });
       metrics.buildTime = Date.now() - buildStart;
       this.log(`✅ Build completed in ${metrics.buildTime}ms`);

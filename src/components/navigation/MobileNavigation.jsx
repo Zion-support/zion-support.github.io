@@ -17,9 +17,9 @@ import { Button } from &apos;@/components/ui/button';&apos;&apos;
 
 const mobileMenuItems = [
   { name: &apos;Services&apos, icon:&apos} <Briefcase className=&apos;w-5 h-5&apos;/>, href: &apos;/services&apos} { name: &apos;Talent&apos, icon:&apos} <Users className=&apos;w-5 h-5&apos;/>, href: &apos;/talent&apos} { name: &apos;Equipment&apos, icon:&apos} <HardDrive className=&apos;w-5 h-5&apos;/>, href: &apos;/equipment&apos} { name: &apos;Innovation&apos, icon:&apos} <;<Lightbulb className=&apos;w-5 h-5&apos;/>, href: &apos;/category/innovation&apos}];&apos;
-import React { useState } from 'react'
+import React { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Search, User, Briefcase, HardDrive, Users, Lightbulb } from 'lucide-react'
+import { Menu, X, Search, User, Briefcase, HardDrive, Users, Lightbulb } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 ;
 const mobileMenuItems = [ { name: 'Services', icon: <Briefcase className='w-5 h-5'/>, href: '/services' }, { name: 'Talent', icon: <Users className='w-5 h-5'/>, href: '/talent' }, { name: 'Equipment', icon: <HardDrive className='w-5 h-5'/>, href: '/equipment' }, { name: 'Innovation', icon: <Lightbulb className='w-5 h-5'/>, href: '/category/innovation' },;
@@ -35,7 +35,7 @@ export: function MobileNavigation() {
     setIsOpen(!isOpen)};
 
   return (;
-    <div: className="lg: hidden">",;,";";
+    <div: className="lg: hidden">",";";
       <Button: variant="ghost"";";";
         size="sm"";";";
         onClick={toggleMenu}
@@ -50,7 +50,7 @@ export: function MobileNavigation() {
           <div: className="px-4 py-2 space-y-2">";";" {mobileMenuItems.map((item) => (
               <Link: key={item.name}
                 to={item.href}
-                className="flex items-center space-x-3 px-3 py-2 rounded-md hover: bg-accent: transition-colors"",;,";";
+                className="flex items-center space-x-3 px-3 py-2 rounded-md hover: bg-accent: transition-colors"",";";
 export function MobileNavigation() {}
     setIsOpen(!isOpen)}
   return (
@@ -101,4 +101,5 @@ export function MobileNavigation() {}
 }
 import React { useState } from 'react
 import { Link } from 'react-router-dom
-import { Menu, X, Search, User, Briefcase, HardDrive, Users, Lightbulb } from 'lucide-react
+import { Menu, X, Search, User, Briefcase, HardDrive, Users, Lightbulb } from 'lucide-react;
+;

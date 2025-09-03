@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom'
 import { 
   Check, Star, 
   Zap, Shield, 
-  Users, ArrowRight,
-  Crown, Rocket,
+  Users, ArrowRight,;
+  Crown, Rocket,;
   Building} from 'lucide-react';
 
 export const PricingSection: React.FC = () => {
@@ -234,7 +234,7 @@ export const PricingSection: React.FC = () => {
         </motion.div>
       </div>
     </section>
-import React from 'react'
+import React from 'react';
 import {SEO } from '@/components/SEO';
 
 export default function PricingSection() {return (

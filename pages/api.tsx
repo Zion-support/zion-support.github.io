@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link'
+import Link from 'next/link';
 import { Code, Key, Globe, Database, Shield, Zap, ArrowRight, Copy, CheckCircle, ExternalLink, Clock, Users } from 'lucide-react';
 
 export default function API() {
@@ -83,18 +83,18 @@ export default function API() {
 
         {/* API Endpoints */}
         <div className="py-16 bg-gray-50>
-          <div className=container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-gray-900 text-center mb-12>API Endpoints</h2>
-            <div className=space-y-6">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">API Endpoints</h2>
+            <div className="space-y-6">
               {apiEndpoints.map((endpoint, index) => (
-                <div key={index} className="bg-white rounded-lg shadow-md p-6>
-                  <div className=flex items-center justify-between mb-4">
-                    <h3 className={`text-xl font-semibold text-gray-900`>{endpoint.name}</h3>
+                <div key={index} className="bg-white rounded-lg shadow-md p-6">
+                  <div className="flex items-center justify-between mb-4">
+                    <h3 className={`text-xl font-semibold text-gray-900`}>{endpoint.name}</h3>
                     <span className={`px-3 py-1 rounded-full text-sm font-medium ${
                       endpoint.method === 'GET' ? 'bg-green-100 text-green-800' :
                       endpoint.method === 'POST' ? 'bg-blue-100 text-blue-800' :
-                      'bg-gray-100 text-gray-800';
-}`}>
+                      'bg-gray-100 text-gray-800'
+                    }`}>
                       {endpoint.method}
                     </span>
                   </div>

@@ -25,7 +25,7 @@ import {
   Award,
   Globe,
   Search,
-  ArrowRight
+  ArrowRight;
 } from 'lucide-react';
 import { Button } from '../ui/Button';
 import { Badge } from '../ui/Badge';

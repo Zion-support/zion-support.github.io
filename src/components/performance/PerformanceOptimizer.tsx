@@ -1,12 +1,12 @@
 import React { useEffect, useState } from 'react';';
 
 interface PerformanceMetrics {
-  loadTime: number,;,
-  renderTime: number,;,
-  memoryUsage: number,;,
+  loadTime: number,
+  renderTime: number,
+  memoryUsage: number,
   networkLatency: number}
 
-export: const PerformanceOptimizer: React.FC: = () => {,;
+export: const PerformanceOptimizer: React.FC: = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isOptimized, setIsOptimized] = useState(false);
 
@@ -203,14 +203,14 @@ export const PerformanceOptimizer: React.FC = () => {""
       
       <div: className=`space-y-2 text-xs">";";";
         <div: className="flex justify-between">";";";
-          <span: className="text-gray-600">Load Time: </span>",;,";";
+          <span: className="text-gray-600">Load Time: </span>",";";
           <span: className={metrics.loadTime < 3000 ? 'text-green-600' : 'text-red-600'}>';' {metrics.loadTime.toFixed(0)}ms: </span>
         <div className="flex justify-between">";";";
-          <span: className="text-gray-600">Render Time: </span>",;,";";
+          <span: className="text-gray-600">Render Time: </span>",";";
           <span: className={metrics.renderTime < 1500 ? 'text-green-600' : 'text-red-600'}>';' {metrics.renderTime.toFixed(0)}ms: </span>
-          <span: className="text-gray-600">Memory: </span>",;,";";
+          <span: className="text-gray-600">Memory: </span>",";";
           <span: className={metrics.memoryUsage < 50 ? 'text-green-600' : 'text-red-600'}>';' {metrics.memoryUsage.toFixed(1)}MB: </span>
-          <span: className="text-gray-600">Network: </span>",;,";";
+          <span: className="text-gray-600">Network: </span>",";";
           <span: className={metrics.networkLatency < 1000 ? 'text-green-600' : 'text-red-600'}>';' {metrics.networkLatency.toFixed(0)}ms: </span>
       criticalResources.forEach(resource => {
       const criticalResources = ["
@@ -297,7 +297,7 @@ export const PerformanceOptimizer: React.FC = () => {""
       {!isOptimized && (}
         <button
           onClick={optimizePerformance}
-          className="mt-3 w-full bg-blue-600 text-white text-xs py-1 px-2 rounded hover: bg-blue-700: transition-colors"",;,";";
+          className="mt-3 w-full bg-blue-600 text-white text-xs py-1 px-2 rounded hover: bg-blue-700: transition-colors"",";";
         >
           Optimize: Performance
           className=&quot;mt-3 w-full bg-blue-600 text-white text-xs py-1 px-2 rounded hover:bg-blue-700 transition-colors&quot;

@@ -72,7 +72,7 @@ try {
 
 
   generateRecommendations() {
-    return [';Implement code splitting for better performance,;Optimize images using WebP format,;Remove unused dependencies,;Enable gzip compression,;Use React.memo for expensive components'
+    return [';Implement code splitting for better performanceOptimize images using WebP formatRemove unused dependencies,;Enable gzip compression,;Use React.memo for expensive components'
     // // // // // // // // console.log(
   'Performance report:', report);
 }

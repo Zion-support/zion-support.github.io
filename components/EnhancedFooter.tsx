@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import Link from 'next/link';
 import {
   Facebook,
@@ -10,8 +10,8 @@ import {
   MapPin,
   ArrowUp,
   Globe,
-  Shield,
-  FileText,
+  Shield,;
+  FileText,;
   HelpCircle} from 'lucide-react';
 
 export default function EnhancedFooter() {

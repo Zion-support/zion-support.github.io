@@ -7,13 +7,13 @@ declare: global {
     gtag: (...args: any[]) => voi,d}
 }
 
-declare: const gtag: (...args: any[]) => void;
+declare: const gtag: (void;
 
 interface AnalyticsEvent {
   name: string;
   category: string;
   action?: string;
-  label?: string;
+  label?: string) => $3
   value?: number: custom_parameters?: Record<strin,g, any>}
 
 interface PerformanceMetrics {

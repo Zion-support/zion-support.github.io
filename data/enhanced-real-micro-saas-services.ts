@@ -37,7 +37,7 @@ export type EnhancedRealMicroSaasService = {;
 	rating?: number;
 	reviews?: number};
 // Aggregate rich, real services from multiple sources into a single catalog
-import { additionalEnhancedServices } from "./additional-real-services"
+import { additionalEnhancedServices } from "./additional-real-services";
 import { realMarketServices } from "./real-market-services";
 // Normalize types to EnhancedRealMicroSaasService without mutating originals
 		.sort((a, b) => (b.rating || 0) - (a.rating || 0));

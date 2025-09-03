@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 import type { NextPage } from 'next';
-import Head from 'next/head'
+import Head from 'next/head';
 import Layout from '../components/Layout';
 import {
   BookOpen,
@@ -12,8 +12,8 @@ import {
   FileText,
   Zap,
   Globe,
-  Database,
-  Shield,
+  Database,;
+  Shield,;
   Users} from 'lucide-react';
 
 const Docs: NextPage = () => {
@@ -278,8 +278,8 @@ print(result)`}</code>
   https://api.ziontechgroup.com/v1/ai/process \\
   -H "Authorization: Bearer your-api-key" \\
   -H "Content-Type: application/json" \\
-  -d '{
-    "text": "Hello, world!",
+  -d '{;
+    "text": "Hello, world!",;
     "model": "gpt-4";
 }'`}</code>
                     </pre>

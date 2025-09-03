@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 import type { NextPage } from 'next';
-import Head from 'next/head'
+import Head from 'next/head';
 import Layout from '../components/Layout';
 import {
   ArrowRight,
@@ -8,8 +8,8 @@ import {
   Clock,
   Users,
   TrendingUp,
-  Award,
-  Globe,
+  Award,;
+  Globe,;
   Zap} from 'lucide-react';
   Zap
 } from 'lucide-react';

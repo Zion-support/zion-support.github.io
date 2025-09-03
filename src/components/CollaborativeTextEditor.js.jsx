@@ -4,13 +4,13 @@ import { Users, MessageSquare, Sparkles, Save, Download, Loader2 } from 'lucide-
 ;,"});,"})
 ;,"});,"})
 export const CollaborativeTextEditor = ({ roomId, userId, userName, initialContent = '', enableAI = true, enableCollaboration = true, enableVersioning = true, className = '', onSave, onExport }) => {;,"});,"})
-    const { trackEvent } = useAnalytics({        enableTracking: true,;,"});,"})
+    const { trackEvent } = useAnalytics({        enableTracking: true,"});,"})
         enableUserBehaviorTracking: true,"});,"});
 });,"});,"})
     const [editorState, setEditorState] = useState({}"});,"})
         content: initialContent,';,"});,"})
         selection: { start: 0, end: 0, text: '' },;,"});,"})
-        version: 0,;,"});,"})
+        version: 0,"});,"})
         changes[],;,"});,"})
         suggestions[],;,"});,"})
         conflicts[];,"});,"});
@@ -26,11 +26,11 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
         roomId,;,"});,"})
         userId,;,"});,"})
         userName,;,"});,"})
-        enablePresence: true,;,"});,"})
+        enablePresence: true,"});,"})
         enableCursors: true,';,"});,"})
         enableSelection: true,'';,"});,"})
         enableTextSync: true,''';,"});,"})
-        conflictResolution: 'client',;,"});,"})
+        conflictResolution: 'client',"});,"})
         messageRetention: 1000,"});,"});
 }) ;,"});,"})
     // Handle text changes,"});,"})
@@ -40,19 +40,19 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
         setEditorState(prev => {}"});,"})
             const change = {}"});,`})
                 id: `change_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,';,`});,"})
-                type: newContent.length > prev.content.length ? 'insert' : 'delete',;,"});,"})
+                type: newContent.length > prev.content.length ? 'insert' : 'delete',"});,"})
                 position: Math.min(selectionStart, prev.content.length) ,;,"});,"})
-                text: newContent.length > prev.content.length ? newContent.slice(prev.content.length) : null,;,"});,"})
-                length: Math.abs(newContent.length-prev.content.length) ,;,"});,"})
-                timestamp: new Date () ,;,"});,"})
+                text: newContent.length > prev.content.length ? newContent.slice(prev.content.length) : null,"});,"})
+                length: Math.abs(newContent.length-prev.content.length) ,"});,"})
+                timestamp: new Date () ,"});,"})
                 userId,;,"});,"})
                 version: prev.version + 1,"});,"});
 };,"});,"})
             return {}"});,"})
                 ...prev,;,"});,"})
-                content: newContent,;,"});,"})
+                content: newContent,"});,"})
                 selection: { start: selectionStart, end: selectionEnd, text: selectedText },;,"});,"})
-                version: prev.version + 1,;,"});,"})
+                version: prev.version + 1,"});,"})
                 changes[...prev.changes, change];,"});,"});
 }}) ;,"});,"})
         // Sync with other collaborators,"});,"})
@@ -61,8 +61,8 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
 ';,"});,"})
 '';,"});,"})
 ''';,"});,"})
-                type: 'text_change',;,"});,"})
-                content: newContent,;,"});,"})
+                type: 'text_change',"});,"})
+                content: newContent,"});,"})
                 selection: { start: selectionStart, end: selectionEnd },;,"});,"})
                 version: editorState.version + 1,"});,"});
 })}';,"});,"})
@@ -105,7 +105,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
 ``;,"});,`})
                     id: `suggestion_${Date.now()}_1`,'`"";,"});,"})
                     type: 'grammar',"'""";,"});,"})
-                    text: "it's",;,"});,"})
+                    text: "it's","});,"})
                     confidence: 0.95,';,"});,"})
                     position: editorState.content.indexOf('its'),""";,"});,"})
                     length: 3,"'""";,"});,"})
@@ -119,7 +119,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
 ``;,"});,`})
                     id: `suggestion_${Date.now()}_2`,'`"";,"});,"})
                     type: 'style',"""";,"});,"})
-                    text: "extremely",;,"});,"})
+                    text: "extremely","});,"})
                     confidence: 0.88,';,"});,"})
                     position: editorState.content.indexOf('very'),""";,"});,"})
                     length: 4,"'""";,"});,"})
@@ -134,7 +134,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                     id: `suggestion_${Date.now()}_3`,'`"";,"});,"})
                     type: 'completion',"""";,"});,"})
                     text: " include improved efficiency, cost savings, and enhanced user experience.",;,"});,"})
-                    confidence: 0.92,;,"});,"})
+                    confidence: 0.92,"});,"})
                     position: editorState.content.length,""";,"});,"})
                     length: 0,"""";,"});,"})
                     reason: "Complete the sentence with common benefit statements",""";,"});,"})
@@ -173,7 +173,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                 newContent = newContent.replace(searchText, suggestion.text) }"});,"})
             return {}"});,"})
                 ...prev,;,"});,"})
-                content: newContent,;,"});,"})
+                content: newContent,"});,"})
                 suggestions: prev.suggestions.filter(s => s.id !== suggestion.id) }}) ;,"});,"})
         // Focus editor and set cursor position,"});,"})
         if(editorRef.current) {}"});,"})
@@ -224,11 +224,11 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                     // Simple merge strategy - in production, this would use operational transformation,"});,"})
                     return {}"});,"})
                         ...prev,;,"});,"})
-                        content: message.payload.content,;,"});,"})
+                        content: message.payload.content,"});,"})
                         version: Math.max(prev.version, message.payload.version);,"});,"});
 }});,"});,"})
                 trackEvent('editor',collaboration_sync',text_synced', null, {}"});,"})
-                    userId: message.userId,;,"});,"})
+                    userId: message.userId,"});,"})
                     version: message.payload.version,"});,"});
 })}"});,"});
 };,"});,"})
@@ -319,10 +319,10 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
               """";,"});,"})
               <div className="space-y-3">;,"});,"})
                 {editorState.suggestions.map(suggestion => (<motion.div key={suggestion.id} initial = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   x: 20,"});,"});
 }} animate = {}"});,"})
-  { opacity: 1,;,"});,"})
+  { opacity: 1,"});,"})
   x: 0 ""","});,"})
 """";,"});,"});
 }} className="p-3 bg-white dark: bg-gray-600 rounded-lg border border-gray-200 dark:border-gray-500">"'"`,"});,"})
@@ -410,20 +410,20 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
       {/* Collaboration Cursors Overlay */}"""";,"});,"})
       {enableCollaboration && (<div ref={collaborationRef} className="absolute inset-0 pointer-events-none" style={{ zIndex: 10 }}>;,"});,"})
           {collaboration.activeCursors.map(({ x, y, user }) => (<motion.div key={user.id} initial = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   scale: 0,"});,"});
 }} animate = {}"});,"})
-  { opacity: 1,;,"});,"})
+  { opacity: 1,"});,"})
   scale: 1,"});,"});
 }} exit = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   scale: 0 ""","});,"})
 """";,"});,"});
 }} className="absolute w-4 h-4" style = {}"});,"})
   {}"});,"})
-                    left: x,;,"});,"})
+                    left: x,"});,"})
                     top: y,';,"});,"})
-                    transform: 'translate(-50%,;,"});,"})
+                    transform: 'translate(-50%,"});,"})
   -50%);,"});,"})
 ;,"});,"})
 """;,"});,"});
@@ -436,12 +436,12 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
         </div>)}"});,"})
     </div>)};'"`;,"});,"})
 '"`'"`;,"});,"})
-import React, { useState, useCallback, useEffect, useRef } from 'react'
+import React, { useState, useCallback, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';""
-import { Users, MessageSquare, Sparkles, Save, Download, Loader2 } from 'lucide-react'
+import { Users, MessageSquare, Sparkles, Save, Download, Loader2 } from 'lucide-react';
 ;""
-import React, { useState, useCallback, useEffect, useRef }  from 'react'
-import { motion } from 'framer-motion
+import React, { useState, useCallback, useEffect, useRef }  from 'react';
+import { motion } from 'framer-motion;
 import { Users, MessageSquare, Sparkles, Save, Download, Loader2 }  from 'lucide-react';
 ;"
 export const CollaborativeTextEditor = ({ roomId, userId, userName, initialContent = '', enableAI = true, enableCollaboration = true, enableVersioning = true, className = '', onSave, onExport }) => {

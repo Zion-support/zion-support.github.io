@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 import type { NextPage } from 'next';
-import Link from 'next/link'
+import Link from 'next/link';
 import MainLayout from '../../components/layout/MainLayout';
 import { 
   Brain, 
@@ -9,8 +9,8 @@ import {
   Cloud, 
   Shield, 
   BarChart3, 
-  Palette, 
-  CheckCircle,
+  Palette, ;
+  CheckCircle,;
   ArrowRight} from 'lucide-react';
 
   const stats = [

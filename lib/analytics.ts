@@ -54,8 +54,7 @@ export const trackWebVitals = (metric: WebVitalMetric) => {'
 
 declare global {
   interface Window {
-    gtag: (comman,
-    d: string, targetId: string, config?: Record<string, unknown>) => void;
+    gtag: (void) => $3
     gtag: (
       command: string,
       targetId: string,

@@ -1,4 +1,4 @@
-import React { useEffect, useState, useCallback } from 'react'
+import React { useEffect, useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion;
 import {'  BarChart3, Users, '
 import React { useState, useEffect } from 'react'
@@ -6,8 +6,8 @@ import {
   Eye, MousePointer, 
   Clock, TrendingUp, 
   Globe, Smartphone,
-  Monitor, Tablet,
-  Download, Share2,
+  Monitor, Tablet,;
+  Download, Share2,;
   Heart, MessageCircle} from 'lucide-react';
 
 interface AnalyticsData {

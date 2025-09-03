@@ -3,7 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/
 import { Button } from './ui/Button.jsx';,"});,"})
 import { Input } from './ui/input';,"});,"})
 import { Textarea } from './ui/textarea.jsx';,"});,"})
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select'
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
 import { Checkbox } from './ui/checkbox';,"});,"})
 import {}"});,"})
   Mail,;,"});,"})
@@ -28,8 +28,8 @@ export const QuoteRequestForm = () => {}"});,"})
     timeline: '',''';,"});,"})
     budget: '',''';,"});,"})
     urgency: 'medium',''';,"});,"})
-    contactMethod: 'email',;,"});,"})
-    agreeToTerms: false,;,"});,"})
+    contactMethod: 'email',"});,"})
+    agreeToTerms: false,"});,"})
     agreeToMarketing: false});,"});,"})
 ;,"});,"})
   const [isSubmitting, setIsSubmitting] = useState (false) ;,"});,"})
@@ -134,8 +134,8 @@ export const QuoteRequestForm = () => {}"});,"})
         timeline: '',''';,"});,"})
         budget: '',''';,"});,"})
         urgency: 'medium',''';,"});,"})
-        contactMethod: 'email',;,"});,"})
-        agreeToTerms: false,;,"});,"})
+        contactMethod: 'email',"});,"})
+        agreeToTerms: false,"});,"})
         agreeToMarketing: false});,"});,"});
 } catch (error) {}"});,"})
 ';,"});,"})
@@ -458,8 +458,8 @@ import { Input } from &apos;./ui/input';
 import { Textarea } from &apos;./ui/textarea.jsx';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from &apos;./ui/select';import { Checkbox } from &apos;./ui/checkbox';
 import {}
-  Mail,
-  Phone,
+  Mail,;
+  Phone,;
   Building,';
   Send,&apos;
   CheckCircle,&apos;&apos;
@@ -501,13 +501,13 @@ import { Input } from './ui/input';""
 import { Textarea } from './ui/textarea.jsx';""
 import { Textarea } from './ui/textarea.jsx';""
 ""
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
-import { Button} from './ui/Button.jsx'
+import { Button} from './ui/Button.jsx';
 import { Input} from './ui/input';
-import { Textarea} from './ui/textarea.jsx'
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';import { Checkbox} from './ui/checkbox'
-import {}
+import { Textarea} from './ui/textarea.jsx';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';import { Checkbox} from './ui/checkbox';
+import {};
   Mail,;
   Phone,;
   Building,';
@@ -529,8 +529,8 @@ export const QuoteRequestForm = () => {}
     timeline: ','';
     budget: ','';
     urgency: 'medium','';
-    contactMethod: 'email',;
-    agreeToTerms: false,;
+    contactMethod: 'email'
+    agreeToTerms: false
     agreeToMarketing: false});
   const [isSubmitting, setIsSubmitting] = useState (false) ;
   const [isSubmitted, setIsSubmitted] = useState (false) ;
@@ -665,8 +665,8 @@ export const QuoteRequestForm = () => {}
         timeline: ','';
         budget: ','';
         urgency: 'medium','';
-        contactMethod: 'email',;
-        agreeToTerms: false,;
+        contactMethod: 'email'
+        agreeToTerms: false
         agreeToMarketing: false})} catch (error) {}
 ';
 ';
@@ -1459,4 +1459,5 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/
 import { Button } from './ui/Button.jsx
 import { Input } from './ui/input
 import { Textarea } from './ui/textarea.jsx
-"
+";
+;

@@ -1,11 +1,17 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
-// Function to fix syntax errors in a file;
-const fs = require('fs');
-const path = require('path');
+class SyntaxErrorFixer {
+  constructor() {
+    this.projectRoot = process.cwd();
+    this.fixedFiles = [];
+    this.errors = [];
+  }
 
+<<<<<<< HEAD
 // Common syntax fixes
 // Common syntax error patterns and their fixes
 const fixes = [
@@ -193,30 +199,60 @@ function fixSyntaxErrors(filePath) {
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed: ${filePath}`);
-      return true;
-    }
-    
-    return false;
-  } catch (error) { 
-    console.error(`Error fixing ${filePath }:`, error.message);
-    return false;
+=======
+  log(message) {
+    console.log(`[${new Date().toISOString()}] ${message}`);
   }
-}
 
-function processDirectory(dirPath) {
-// Function to recursively find and fix files;
-function fixFilesInDirectory(dir) {
-  const files = fs.readdirSync(dir);
-function findFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
-  const files = [];
-  
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
+  fixFile(filePath) {
+    try {
+      let content = fs.readFileSync(filePath, 'utf8');
+      let modified = false;
+
+      // Fix common syntax errors
+      const fixes = [
+        // Fix trailing semicolons in object properties
+        { pattern: /(\w+):\s*([^,}]+),;/g, replacement: '$1: $2' },
+        // Fix trailing semicolons in arrays
+        { pattern: /(\w+):\s*\[([^\]]+)\];/g, replacement: '$1: [$2]' },
+        // Fix missing semicolons in imports
+        { pattern: /import\s+([^;]+)\s*$/gm, replacement: 'import $1;' },
+        // Fix trailing semicolons in function calls
+        { pattern: /(\w+):\s*\(\)\s*=>\s*([^,}]+);/g, replacement: '$1: () => $2' },
+        // Fix trailing semicolons in object methods
+        { pattern: /(\w+):\s*\([^)]*\)\s*=>\s*([^,}]+);/g, replacement: '$1: ($2) => $3' },
+      ];
+
+      fixes.forEach(fix => {
+        const newContent = content.replace(fix.pattern, fix.replacement);
+        if (newContent !== content) {
+          content = newContent;
+          modified = true;
+        }
+      });
+
+      if (modified) {
+        fs.writeFileSync(filePath, content);
+        this.fixedFiles.push(filePath);
+        this.log(`✅ Fixed syntax errors in: ${filePath}`);
+      }
+
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-1c7d
+      return true;
+    } catch (error) {
+      this.errors.push({ file: filePath, error: error.message });
+      this.log(`❌ Error fixing ${filePath}: ${error.message}`);
+      return false;
+    }
+  }
+
+  findFilesWithExtensions(extensions) {
+    const files = [];
     
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
+    function walkDir(dir) {
+      const items = fs.readdirSync(dir);
       
+<<<<<<< HEAD
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
         traverse(fullPath);
       } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
@@ -248,25 +284,65 @@ function fixFilesInDirectory(dirPath) {
       if (fixSyntaxErrors(filePath)) {
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
         fixedCount++;
+=======
+      for (const item of items) {
+        const fullPath = path.join(dir, item);
+        const stat = fs.statSync(fullPath);
+        
+        if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+          walkDir(fullPath);
+        } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
+          files.push(fullPath);
+        }
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-1c7d
       }
     }
+    
+    walkDir(this.projectRoot);
+    return files;
   }
-  
-  traverse(dir);
-  return files;
+
+  async run() {
+    this.log('🔧 Starting comprehensive syntax error fixing...');
+
+    // Find all TypeScript and JavaScript files
+    const files = this.findFilesWithExtensions(['.tsx', '.ts', '.jsx', '.js']);
+    
+    this.log(`📁 Found ${files.length} files to check`);
+
+    // Fix each file
+    for (const file of files) {
+      this.fixFile(file);
+    }
+
+    // Summary
+    this.log(`\n📊 Summary:`);
+    this.log(`✅ Fixed ${this.fixedFiles.length} files`);
+    this.log(`❌ ${this.errors.length} errors encountered`);
+
+    if (this.fixedFiles.length > 0) {
+      this.log('\n🔧 Fixed files:');
+      this.fixedFiles.forEach(file => this.log(`  - ${file}`));
+    }
+
+    if (this.errors.length > 0) {
+      this.log('\n❌ Errors:');
+      this.errors.forEach(error => this.log(`  - ${error.file}: ${error.error}`));
+    }
+
+    return this.fixedFiles.length > 0;
+  }
 }
 
-// Main execution;
-// Main execution
-const files = findFiles('.');
-let fixedCount = 0;
-
-console.log(`Found ${files.length} files to check...`);
-
-files.forEach(file => {
-  if (fixFile(file)) {
-    fixedCount++;
+// Run the fixer
+const fixer = new SyntaxErrorFixer();
+fixer.run().then(success => {
+  if (success) {
+    console.log('\n🎉 Syntax error fixing completed successfully!');
+  } else {
+    console.log('\n⚠️ No syntax errors were found or fixed.');
   }
+<<<<<<< HEAD
 });
 
 console.log(`Fixed ${fixedCount} files`);
@@ -277,3 +353,9 @@ console.log('Starting syntax error fixes...');
 const fixedCount = fixFilesInDirectory('./components');
 const fixedCount2 = fixFilesInDirectory('./pages');
 console.log(`Fixed ${fixedCount + fixedCount2} files`);
+=======
+}).catch(error => {
+  console.error('❌ Error running syntax fixer:', error);
+  process.exit(1);
+});
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-1c7d

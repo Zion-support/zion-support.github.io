@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
   Mail, Phone, 
   MapPin, Send, 
-  CheckCircle, AlertCircle,
-  User, Building,
+  CheckCircle, AlertCircle,;
+  User, Building,;
   MessageSquare} from 'lucide-react';
 
 export const ContactForm: React.FC = () => {

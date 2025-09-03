@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link'
 import {
@@ -11,26 +11,26 @@ import {
   Star,
   Building,
   Target,
-  Lightbulb,
-  Shield,
+  Lightbulb,;
+  Shield,;
   Cloud} from 'lucide-react';
-import SEO from '../components/SEO'
+import SEO from '../components/SEO';
 import { Card } from '../components/ui/Card';
-import { Button } from '../components/ui/Button'
+import { Button } from '../components/ui/Button';
 import { Badge } from '../components/ui/Badge';
 export default function Partners() {
   const partnerBenefits = [
     {
       icon: Handshake, title: 'Strategic Partners',
-      description: 'Long-term partnerships that drive mutual growth and innovation.', benefits: ['Joint product development', 'Shared resources', 'Market expansion'];
+      description: 'Long-term partnerships that drive mutual growth and innovation.', benefits: ['Joint product development', 'Shared resources', 'Market expansion']
 }, {
       icon: Award,
       title: 'Technology Partners', description: 'Integration partnerships with leading technology providers.',
-      benefits: ['API integrations', 'Technical support', 'Co-marketing opportunities'];
+      benefits: ['API integrations', 'Technical support', 'Co-marketing opportunities']
 }, {
       icon: Users,
       title: 'Channel Partners', description: 'Reseller and distribution partnerships for market reach.',
-      benefits: ['Revenue sharing', 'Training programs', 'Marketing support'];
+      benefits: ['Revenue sharing', 'Training programs', 'Marketing support']
 }, {
       icon: Globe,
       title: 'Global Partners', description: 'International partnerships for worldwide market presence.',

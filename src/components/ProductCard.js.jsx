@@ -1,47 +1,23 @@
   TooltipProvider,;
   TooltipTrigger} from '@/components/ui/tooltip';
-import {useDispatch } from 'react-redux'
+import {useDispatch } from 'react-redux';
 import {addItem } from '@/store/cartSlice';
-import Image from 'next/image'
+import Image from 'next/image';
 import React, {useState } from 'react';
-import {useAuth } from '@/context/auth/AuthProvider'
+import {useAuth } from '@/context/auth/AuthProvider';
 import {useRouter } from 'next/router';
-import {useMediaQuery } from 'usehooks-ts'
+import {useMediaQuery } from 'usehooks-ts';
 import {useEnqueueSnackbar } from '@/context/SnackbarContext';
-import {captureException } from '@/utils/sentry'
-import Link from 'next/link';"
-import { Heart } from 'lucide-react'
-import { useWishlist } from '@/hooks/useWishlist';"
-import { Button } from '@/components/ui/button'
-import {
-  Tooltip, TooltipContent,
-} from '@/components/ui/tooltip';"
-import { useDispatch } from 'react-redux';"
-import { addItem } from '@/store/cartSlice';"
-import Image from 'next/image';"
-import React, { useState } from 'react';"
-import { useAuth } from '@/context/auth/AuthProvider';"
-import { useRouter } from 'next/router';"
-import { useMediaQuery } from 'usehooks-ts';"
-import { useEnqueueSnackbar } from '@/context/SnackbarContext';"
 import Link from 'next/link
 import { Heart } from 'lucide-react
 import { useWishlist } from '@/hooks/useWishlist
 import { Button } from '@/components/ui/button'
 import {
   Tooltip,
-  TooltipContent,
-  TooltipProvider,
+  TooltipContent,;
+  TooltipProvider,;
   TooltipTrigger';
 } from '@/components/ui/tooltip';
-import { useDispatch } from 'react-redux'
-import { addItem } from '@/store/cartSlice';"
-import Image from 'next/image'
-import React, { useState } from 'react';"
-import { useAuth } from '@/context/auth/AuthProvider'
-import { useRouter } from 'next/router';"
-import { useMediaQuery } from 'usehooks-ts'
-import { useEnqueueSnackbar } from '@/context/SnackbarContext';"import { captureException } from '@/utils/sentry';
 
 export default function ProductCard(  {product, onBuy, buyDisabled = false }) {const { isAuthenticated } = useAuth();
   const {isWishlisted, toggle } = useWishlist();

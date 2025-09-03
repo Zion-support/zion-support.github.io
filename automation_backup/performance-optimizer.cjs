@@ -21,10 +21,10 @@ class PerformanceOptimizer {
 
       console.log('Performance optimization completed');
       return this.optimizations;
-    } catch (error) { 
+    } catch (error) {
       console.error('Performance optimization failed:', error.message);
       return null;
-     }
+    }
   }
 
   optimizeImages() {

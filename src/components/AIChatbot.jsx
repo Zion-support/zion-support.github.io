@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion';,"});,"})
 import { MessageCircle, Send, Bot, User, X, Minimize2, Maximize2, Loader2, Sparkles } from 'lucide-react';,"});,"})
 ;,"});,"})
 export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI assistant. How can I help you today?", maxMessages = 50, enableSuggestions = true, enableContext = true, responseDelay = 1000 }) => {;,"});,"})
-    const { trackEvent } = useAnalytics({        enableTracking: true,;,"});,"})
+    const { trackEvent } = useAnalytics({        enableTracking: true,"});,"})
         enableUserBehaviorTracking: true,"});,"});
 });,"});,"})
     const [isOpen, setIsOpen] = useState(false);,"});,"})
@@ -21,8 +21,8 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
         if(isOpen && messages.length === 0) {}"});,"})
             addBotMessage(welcomeMessage, {}"});,"})
 ';,"});,"})
-                intent: 'greeting',;,"});,"})
-                confidence: 1.0,;,"});,"})
+                intent: 'greeting',"});,"})
+                confidence: 1.0,"});,"})
                 suggestions: [,"});,"})
                     "Tell me about your services",;,"});,"})
                     "How can I get a quote?",;,"});,"})
@@ -70,14 +70,14 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
 ';,"});,"})
 '';,"});,"})
 ''';,"});,"})
-            type: 'bot',;,"});,"})
+            type: 'bot',"});,"})
             content,;,"});,"})
             metadata,"});,"});
 });,"});,"})
         // Track bot response'';,"});,"})
         trackChatbotInteraction('bot_response', {}"});,"})
-            messageId: message.id,;,"});,"})
-            intent: metadata?.intent,;,"});,"})
+            messageId: message.id,"});,"})
+            intent: metadata?.intent,"});,"})
             confidence: metadata?.confidence,"});,"});
 }) ;,"});,"})
         return message}, [addMessage, trackChatbotInteraction]) ;,"});,"})
@@ -117,12 +117,12 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
         // Add user message,"});,"})
         const userMessage = addMessage({}"});,"})
 ';,"});,"})
-            type: 'user',;,"});,"})
+            type: 'user',"});,"})
             content: input.trim(),"});,"});
 });,"});,"})
         // Track user input'';,"});,"})
         trackChatbotInteraction('user_input', {}"});,"})
-            messageId: userMessage.id,;,"});,"})
+            messageId: userMessage.id,"});,"})
             inputLength: input.length,"});,"});
 });,"});,"})
         // Clear input'';,"});,"})
@@ -134,8 +134,8 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
             // Add bot response,"});,"})
             addBotMessage(response, {}"});,"})
 ';,"});,"})
-                intent: 'response',;,"});,"})
-                confidence: 0.9,;,"});,"})
+                intent: 'response',"});,"})
+                confidence: 0.9,"});,"})
                 suggestions: [,"});,"})
                     "Tell me more",;,"});,"})
                     "Get a quote",;,"});,"})
@@ -144,7 +144,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
 });,"});,"})
             // Track successful interaction'';,"});,"})
             trackChatbotInteraction('conversation_success', {}"});,"})
-                userInput: input,;,"});,"})
+                userInput: input,"});,"})
                 responseLength: response.length,"});,"});
 }) }"});,"})
         catch (error) {}"});,"})
@@ -152,7 +152,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
             // Handle error'"'""";,"});,"})
             addBotMessage("I apologize, but I'm experiencing some technical difficulties. Please try again or contact our team directly.", {}"});,"})
 ';,"});,"})
-                intent: 'error',;,"});,"})
+                intent: 'error',"});,"})
                 confidence: 0.8,"});,"});
 });,"});,"})
             trackChatbotInteraction('conversation_error', {}"});,"})
@@ -197,10 +197,10 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
     </motion.div>);,"});,"})
     // Get message suggestions,"});,"})
     const MessageSuggestions = ({ suggestions }) => (<motion.div initial = {}"});,"})
-  { opacity: 0,;,"});,"})
+  { opacity: 0,"});,"})
   y: 10,"});,"});
 }} animate = {}"});,"})
-  { opacity: 1,;,"});,"})
+  { opacity: 1,"});,"})
   y: 0,"});,"})
 """;,"});,"})
 """";,"});,"});
@@ -220,13 +220,13 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
       {/* Chatbot Interface */}"});,"})
       <AnimatePresence>;,"});,"})
         {isOpen && (<motion.div initial = {}"});,"})
-  { opacity: 0, scale: 0.9,;,"});,"})
+  { opacity: 0, scale: 0.9,"});,"})
   y: 20,"});,"});
 }} animate = {}"});,"})
-  { opacity: 1, scale: 1,;,"});,"})
+  { opacity: 1, scale: 1,"});,"})
   y: 0,"});,"});
 }} exit = {}"});,"})
-  { opacity: 0, scale: 0.9,;,"});,"})
+  { opacity: 0, scale: 0.9,"});,"})
   y: 20,"});,"})
 '`;,"});,"})
 '`'`;,"});,`});
@@ -260,7 +260,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
   { opacity: 0,';,"});,"})
   x: message.type === 'user' ? 20 : -20,"});,"});
 }} animate = {}"});,"})
-  { opacity: 1,;,"});,"})
+  { opacity: 1,"});,"})
   x: 0,"});,"})
 '`;,"});,"})
 '`'`;,"});,`});
@@ -319,12 +319,12 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
     </>)};'"`;,"});,"})
 '"`'"`;,"});,"})
 export const AIChatbot = ({ welcomeMessage = 'Hello! I'm Zion Tech Group's AI assistant.How can I help you today?', maxMessages = 50, enableSuggestions = true, enableContext = true, responseDelay = 1000 }) => { const { trackEvent } = useAnalytics({ '';
-import React, {useState, useCallback, useEffect, useRef } from 'react'
+import React, {useState, useCallback, useEffect, useRef } from 'react';
 import {motion, AnimatePresence } from 'framer-motion';
-import {MessageCircle, Send, Bot, User, X, Minimize2, Maximize2, Loader2, Sparkles } from 'lucide-react'
+import {MessageCircle, Send, Bot, User, X, Minimize2, Maximize2, Loader2, Sparkles } from 'lucide-react';
 import {useAnalytics } from "../hooks/useAnalytics";
 export const AIChatbot = ({welcomeMessage = "Hello! I&apos;m Zion Tech Group&apos;s AI assistant. How can I help you today?", maxMessages = 50, enableSuggestions = true, enableContext = true, responseDelay = 1000 }) => {const { trackEvent } = useAnalytics({enableTracking: true, enableUserBehaviorTracking: true});
-import React, { useState, useCallback, useEffect, useRef } from &apos
+import React, { useState, useCallback, useEffect, useRef } from &apos;
 import { motion } from &apos;framer-motion';;react';
 import { motion, AnimatePresence } from &apos;framer-motion';
 import { MessageCircle, Send, Bot, User, X, Minimize2, Maximize2, Loader2, Sparkles } from &apos;lucide-react';
@@ -337,9 +337,9 @@ import React, { useState, useCallback, useEffect, useRef } from 'react';""
 import { motion, AnimatePresence } from 'framer-motion';""
 import { MessageCircle, Send, Bot, User, X, Minimize2, Maximize2, Loader2, Sparkles } from 'lucide-react';""
 import { useAnalytics } from "../hooks/useAnalytics";""
-import React, { useState, useCallback, useEffect, useRef } from 'react'
+import React, { useState, useCallback, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MessageCircle, Send, Bot, User, X, Minimize2, Maximize2, Loader2, Sparkles } from 'lucide-react'
+import { MessageCircle, Send, Bot, User, X, Minimize2, Maximize2, Loader2, Sparkles } from 'lucide-react';
 import { useAnalytics } from "../hooks/useAnalytics";"
 import { useAnalytics } from "../hooks/useAnalytics";
 export const AIChatbot = memo(({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&apos;s AI assistant. How can I help you today?", maxMessages = 50, enableSuggestions = true, enableContext = true, responseDelay = 1000 }) => {
@@ -349,8 +349,8 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
         enableTracking: true, enableUserBehaviorTracking: true});
 import React, { useState, useCallback, useEffect, useRef } from 'react
 import { motion, AnimatePresence } from 'framer-motion
-import { MessageCircle, Send, Bot, User, X, Minimize2, Maximize2, Loader2, Sparkles } from 'lucide-react
-import { useAnalytics } from "../hooks/useAnalytics
+import { MessageCircle, Send, Bot, User, X, Minimize2, Maximize2, Loader2, Sparkles } from 'lucide-react;
+import { useAnalytics } from "../hooks/useAnalytics;
 export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&apos;s AI assistant. How can I help you today?", maxMessages = 50, enableSuggestions = true, enableContext = true, responseDelay = 1000 }) => {
 
     const { trackEvent } = useAnalytics({
@@ -394,7 +394,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
                 confidence: 1.0, suggestions: [""
                     "Tell me about your services",""
                     "How can I get a quote?", "What technologies do you use?",""
-                    "Contact information"];
+                    "Contact information"]
 });}
                 confidence: 1.0, suggestions: [
                     "Tell me about your services",
@@ -406,7 +406,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
                 confidence: 1.0, suggestions: ["
                     "Tell me about your services,
                     "How can I get a quote?,What technologies do you use?,
-                    "Contact information"];
+                    "Contact information"]
 });}
     }, [isOpen, messages.length, welcomeMessage]);
     // Auto-scroll to bottom"
@@ -653,7 +653,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
                 confidence: 0.9, suggestions: ["
                     "Tell me more,
                     "Get a quote,View services,
-                    "Contact sales"];
+                    "Contact sales"]
 });
             // Track successful interaction"
             trackChatbotInteraction('conversation_success', {

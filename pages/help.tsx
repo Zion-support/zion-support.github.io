@@ -1,6 +1,6 @@
-import type { NextPage } from 'next'
+import type { NextPage } from 'next';
 import Layout from '../components/Layout';
-import Link from 'next/link'
+import Link from 'next/link';
 import { HelpCircle, Search, MessageCircle, Phone, Mail, BookOpen, Video, FileText, Users, Clock, CheckCircle } from 'lucide-react';
 
 const Help: NextPage = () => {
