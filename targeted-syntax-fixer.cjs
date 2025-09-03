@@ -1,5 +1,8 @@
 #!/usr/bin/env node
 
+/* eslint-env node */
+/* eslint-disable no-console, no-process-exit */
+
 const fs = require('fs');
 const path = require('path');
 
