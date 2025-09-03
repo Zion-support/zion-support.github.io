@@ -354,7 +354,7 @@ export default function MicroSaaS() {
       pricing: '$199 - $899/month',
       delivery: '2-5 weeks',
       category: 'Sustainability SaaS'
-    }
+    },
     {
       title: 'Affiliate Marketing Tracking Platform',
       description: 'Comprehensive affiliate program management with fraud detection and automated payouts',
