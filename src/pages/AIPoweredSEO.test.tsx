@@ -1,1 +1,22 @@
-describe ('AIPoweredSEO', () => {}; '; it ('renders without crashing', () => {}; render (<AIPoweredSEO />) ;'; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ; '; it ('displays expected content', () => {}; render (<AIPoweredSEO />) ;
+<<<<<<< HEAD
+describe('AIPoweredSEO', () => {}; '; it('renders without crashing', () => {}; render(<AIPoweredSEO />) ;'; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; '; it('displays expected content', () => {}; render(<AIPoweredSEO />) ;
+=======
+describe("AIPoweredSEO", () => {}; "; it("renders without crashing", () => {}; render(<AIPoweredSEO / >) , expect(screen.getByRole ("main") || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; "; it("displays expected content", () => {}; render(<AIPoweredSEO  />)
+}
+    render()
+}
+    expect(screen.getByRole("main) || screen.getByText(/.*/)).toBeInTheDocument()
+}
+  })
+}
+""
+  it("displays expected content", () => {
+    render(<AIPoweredSEO /" >)
+}
+    // comment
+  })
+}
+  });"
+"
+});""
+>>>>>>> main

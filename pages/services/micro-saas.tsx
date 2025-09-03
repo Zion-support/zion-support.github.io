@@ -94,64 +94,73 @@ const MicroSaasPage: NextPage = () => {
               Choose from our suite of powerful micro SaaS applications designed to transform your business operations.
             </p>
           </div>
-          <div className="grid lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
             {microSaasServices.map((service) => (
-              <div key={service.id} className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
+              <div key={service.id} className="bg-white rounded-lg shadow-lg p-6 lg:p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                 <div className="flex items-start justify-between mb-6">
-                  <div className="text-5xl">{service.icon}</div>
+                  <div className="text-4xl lg:text-5xl">{service.icon}</div>
                   <div className="text-right">
-                    <div className="text-3xl font-bold text-blue-600">${service.pricing.starter}</div>
-                    <div className="text-sm text-gray-500">Starting price per month</div>
+                    <div className="text-2xl lg:text-3xl font-bold text-blue-600">${service.pricing.starter}</div>
+                    <div className="text-xs lg:text-sm text-gray-500">Starting price per month</div>
                   </div>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.name}</h3>
                 <p className="text-gray-600 mb-6">{service.description}</p>
                 
                 <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, index) => (
-                      <li key={index} className="flex items-center text-gray-600">
-                        <CheckCircle className="w-5 h-5 text-green-500 mr-2 flex-shrink-0" />
-                        {feature}
+                  <h4 className="font-semibold text-gray-900 mb-3 text-sm lg:text-base">Key Features:</h4>
+                  <ul className="space-y-1 lg:space-y-2">
+                    {service.features.slice(0, 4).map((feature, index) => (
+                      <li key={index} className="flex items-start text-gray-600 text-sm lg:text-base">
+                        <CheckCircle className="w-4 h-4 lg:w-5 lg:h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                        <span className="leading-relaxed">{feature}</span>
+                      </li>
+                    ))}
+                    {service.features.length > 4 && (
+                      <li className="text-blue-600 text-sm font-medium">
+                        +{service.features.length - 4} more features
+                      </li>
+                    )}
+                  </ul>
+                </div>
+
+                <div className="mb-6">
+                  <h4 className="font-semibold text-gray-900 mb-3 text-sm lg:text-base">Benefits:</h4>
+                  <ul className="space-y-1 lg:space-y-2">
+                    {service.benefits.slice(0, 3).map((benefit, index) => (
+                      <li key={index} className="flex items-start text-gray-600 text-sm lg:text-base">
+                        <CheckCircle className="w-4 h-4 lg:w-5 lg:h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                        <span className="leading-relaxed">{benefit}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
 
                 <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">Benefits:</h4>
-                  <ul className="space-y-2">
-                    {service.benefits.map((benefit, index) => (
-                      <li key={index} className="flex items-center text-gray-600">
-                        <CheckCircle className="w-5 h-5 text-green-500 mr-2 flex-shrink-0" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">Use Cases:</h4>
-                  <ul className="space-y-2">
-                    {service.useCases.map((useCase, index) => (
-                      <li key={index} className="flex items-center text-gray-600">
-                        <CheckCircle className="w-5 h-5 text-green-500 mr-2 flex-shrink-0" />
+                  <h4 className="font-semibold text-gray-900 mb-3 text-sm lg:text-base">Use Cases:</h4>
+                  <div className="flex flex-wrap gap-1 lg:gap-2">
+                    {service.useCases.slice(0, 3).map((useCase, index) => (
+                      <span key={index} className="inline-block bg-blue-50 text-blue-700 px-2 py-1 rounded text-xs lg:text-sm">
                         {useCase}
-                      </li>
+                      </span>
                     ))}
-                  </ul>
+                    {service.useCases.length > 3 && (
+                      <span className="inline-block bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs lg:text-sm">
+                        +{service.useCases.length - 3} more
+                      </span>
+                    )}
+                  </div>
                 </div>
 
-                <div className="flex justify-between items-center">
+                <div className="flex flex-col sm:flex-row gap-3 sm:justify-between sm:items-center">
                   <Link href={service.link}>
-                    <span className="text-blue-600 hover:text-blue-700 font-medium cursor-pointer inline-flex items-center">
+                    <span className="text-blue-600 hover:text-blue-700 font-medium cursor-pointer inline-flex items-center text-sm lg:text-base">
                       Learn More
                       <ArrowRight className="ml-1 w-4 h-4" />
                     </span>
                   </Link>
                   <Link href="/contact">
-                    <span className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors cursor-pointer">
+                    <span className="bg-blue-600 hover:bg-blue-700 text-white px-4 lg:px-6 py-2 rounded-lg font-medium transition-colors cursor-pointer text-sm lg:text-base text-center block sm:inline-block">
                       Get Started
                     </span>
                   </Link>
@@ -171,10 +180,10 @@ const MicroSaasPage: NextPage = () => {
               Choose the plan that best fits your business needs. All plans include our core features and support.
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg shadow-lg p-8 border-2 border-gray-200">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Starter</h3>
-              <div className="text-4xl font-bold text-blue-600 mb-6">$29<span className="text-lg text-gray-500">/mo</span></div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+            <div className="bg-white rounded-lg shadow-lg p-6 lg:p-8 border-2 border-gray-200 hover:shadow-xl transition-shadow">
+              <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-4">Starter</h3>
+              <div className="text-3xl lg:text-4xl font-bold text-blue-600 mb-6">$29<span className="text-base lg:text-lg text-gray-500">/mo</span></div>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center text-gray-600">
                   <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
@@ -204,12 +213,12 @@ const MicroSaasPage: NextPage = () => {
               </Link>
             </div>
             
-            <div className="bg-white rounded-lg shadow-lg p-8 border-2 border-blue-600 relative">
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                <span className="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-medium">Most Popular</span>
+            <div className="bg-white rounded-lg shadow-lg p-6 lg:p-8 border-2 border-blue-600 relative hover:shadow-xl transition-shadow">
+              <div className="absolute -top-3 lg:-top-4 left-1/2 transform -translate-x-1/2">
+                <span className="bg-blue-600 text-white px-3 lg:px-4 py-1 rounded-full text-xs lg:text-sm font-medium">Most Popular</span>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Professional</h3>
-              <div className="text-4xl font-bold text-blue-600 mb-6">$79<span className="text-lg text-gray-500">/mo</span></div>
+              <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-4">Professional</h3>
+              <div className="text-3xl lg:text-4xl font-bold text-blue-600 mb-6">$79<span className="text-base lg:text-lg text-gray-500">/mo</span></div>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center text-gray-600">
                   <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
@@ -243,9 +252,9 @@ const MicroSaasPage: NextPage = () => {
               </Link>
             </div>
             
-            <div className="bg-white rounded-lg shadow-lg p-8 border-2 border-gray-200">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Enterprise</h3>
-              <div className="text-4xl font-bold text-blue-600 mb-6">$199<span className="text-lg text-gray-500">/mo</span></div>
+            <div className="bg-white rounded-lg shadow-lg p-6 lg:p-8 border-2 border-gray-200 hover:shadow-xl transition-shadow">
+              <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-4">Enterprise</h3>
+              <div className="text-3xl lg:text-4xl font-bold text-blue-600 mb-6">$199<span className="text-base lg:text-lg text-gray-500">/mo</span></div>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center text-gray-600">
                   <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
@@ -292,51 +301,51 @@ const MicroSaasPage: NextPage = () => {
             </p>
           </div>
           <div className="overflow-x-auto">
-            <table className="w-full bg-white rounded-lg shadow-lg">
+            <table className="w-full bg-white rounded-lg shadow-lg min-w-[800px]">
               <thead>
                 <tr className="border-b border-gray-200">
-                  <th className="text-left p-6 font-semibold text-gray-900">Feature</th>
-                  <th className="text-center p-6 font-semibold text-gray-900">AI Content Generator</th>
-                  <th className="text-center p-6 font-semibold text-gray-900">Project Manager</th>
-                  <th className="text-center p-6 font-semibold text-gray-900">Inventory Tracker</th>
-                  <th className="text-center p-6 font-semibold text-gray-900">Support Assistant</th>
+                  <th className="text-left p-4 lg:p-6 font-semibold text-gray-900 text-sm lg:text-base">Feature</th>
+                  <th className="text-center p-4 lg:p-6 font-semibold text-gray-900 text-sm lg:text-base">AI Content Generator</th>
+                  <th className="text-center p-4 lg:p-6 font-semibold text-gray-900 text-sm lg:text-base">Project Manager</th>
+                  <th className="text-center p-4 lg:p-6 font-semibold text-gray-900 text-sm lg:text-base">Inventory Tracker</th>
+                  <th className="text-center p-4 lg:p-6 font-semibold text-gray-900 text-sm lg:text-base">Support Assistant</th>
                 </tr>
               </thead>
               <tbody>
                 <tr className="border-b border-gray-100">
-                  <td className="p-6 font-medium text-gray-900">Starting Price</td>
-                  <td className="p-6 text-center text-blue-600 font-semibold">$29/mo</td>
-                  <td className="p-6 text-center text-blue-600 font-semibold">$19/mo</td>
-                  <td className="p-6 text-center text-blue-600 font-semibold">$39/mo</td>
-                  <td className="p-6 text-center text-blue-600 font-semibold">$25/mo</td>
+                  <td className="p-4 lg:p-6 font-medium text-gray-900 text-sm lg:text-base">Starting Price</td>
+                  <td className="p-4 lg:p-6 text-center text-blue-600 font-semibold text-sm lg:text-base">$29/mo</td>
+                  <td className="p-4 lg:p-6 text-center text-blue-600 font-semibold text-sm lg:text-base">$19/mo</td>
+                  <td className="p-4 lg:p-6 text-center text-blue-600 font-semibold text-sm lg:text-base">$39/mo</td>
+                  <td className="p-4 lg:p-6 text-center text-blue-600 font-semibold text-sm lg:text-base">$25/mo</td>
                 </tr>
                 <tr className="border-b border-gray-100">
-                  <td className="p-6 font-medium text-gray-900">API Access</td>
-                  <td className="p-6 text-center"><CheckCircle className="w-5 h-5 text-green-500 mx-auto" /></td>
-                  <td className="p-6 text-center"><CheckCircle className="w-5 h-5 text-green-500 mx-auto" /></td>
-                  <td className="p-6 text-center"><CheckCircle className="w-5 h-5 text-green-500 mx-auto" /></td>
-                  <td className="p-6 text-center"><CheckCircle className="w-5 h-5 text-green-500 mx-auto" /></td>
+                  <td className="p-4 lg:p-6 font-medium text-gray-900 text-sm lg:text-base">API Access</td>
+                  <td className="p-4 lg:p-6 text-center"><CheckCircle className="w-4 h-4 lg:w-5 lg:h-5 text-green-500 mx-auto" /></td>
+                  <td className="p-4 lg:p-6 text-center"><CheckCircle className="w-4 h-4 lg:w-5 lg:h-5 text-green-500 mx-auto" /></td>
+                  <td className="p-4 lg:p-6 text-center"><CheckCircle className="w-4 h-4 lg:w-5 lg:h-5 text-green-500 mx-auto" /></td>
+                  <td className="p-4 lg:p-6 text-center"><CheckCircle className="w-4 h-4 lg:w-5 lg:h-5 text-green-500 mx-auto" /></td>
                 </tr>
                 <tr className="border-b border-gray-100">
-                  <td className="p-6 font-medium text-gray-900">Mobile App</td>
-                  <td className="p-6 text-center"><CheckCircle className="w-5 h-5 text-green-500 mx-auto" /></td>
-                  <td className="p-6 text-center"><CheckCircle className="w-5 h-5 text-green-500 mx-auto" /></td>
-                  <td className="p-6 text-center"><CheckCircle className="w-5 h-5 text-green-500 mx-auto" /></td>
-                  <td className="p-6 text-center"><CheckCircle className="w-5 h-5 text-green-500 mx-auto" /></td>
+                  <td className="p-4 lg:p-6 font-medium text-gray-900 text-sm lg:text-base">Mobile App</td>
+                  <td className="p-4 lg:p-6 text-center"><CheckCircle className="w-4 h-4 lg:w-5 lg:h-5 text-green-500 mx-auto" /></td>
+                  <td className="p-4 lg:p-6 text-center"><CheckCircle className="w-4 h-4 lg:w-5 lg:h-5 text-green-500 mx-auto" /></td>
+                  <td className="p-4 lg:p-6 text-center"><CheckCircle className="w-4 h-4 lg:w-5 lg:h-5 text-green-500 mx-auto" /></td>
+                  <td className="p-4 lg:p-6 text-center"><CheckCircle className="w-4 h-4 lg:w-5 lg:h-5 text-green-500 mx-auto" /></td>
                 </tr>
                 <tr className="border-b border-gray-100">
-                  <td className="p-6 font-medium text-gray-900">Analytics Dashboard</td>
-                  <td className="p-6 text-center"><CheckCircle className="w-5 h-5 text-green-500 mx-auto" /></td>
-                  <td className="p-6 text-center"><CheckCircle className="w-5 h-5 text-green-500 mx-auto" /></td>
-                  <td className="p-6 text-center"><CheckCircle className="w-5 h-5 text-green-500 mx-auto" /></td>
-                  <td className="p-6 text-center"><CheckCircle className="w-5 h-5 text-green-500 mx-auto" /></td>
+                  <td className="p-4 lg:p-6 font-medium text-gray-900 text-sm lg:text-base">Analytics Dashboard</td>
+                  <td className="p-4 lg:p-6 text-center"><CheckCircle className="w-4 h-4 lg:w-5 lg:h-5 text-green-500 mx-auto" /></td>
+                  <td className="p-4 lg:p-6 text-center"><CheckCircle className="w-4 h-4 lg:w-5 lg:h-5 text-green-500 mx-auto" /></td>
+                  <td className="p-4 lg:p-6 text-center"><CheckCircle className="w-4 h-4 lg:w-5 lg:h-5 text-green-500 mx-auto" /></td>
+                  <td className="p-4 lg:p-6 text-center"><CheckCircle className="w-4 h-4 lg:w-5 lg:h-5 text-green-500 mx-auto" /></td>
                 </tr>
                 <tr>
-                  <td className="p-6 font-medium text-gray-900">24/7 Support</td>
-                  <td className="p-6 text-center"><CheckCircle className="w-5 h-5 text-green-500 mx-auto" /></td>
-                  <td className="p-6 text-center"><CheckCircle className="w-5 h-5 text-green-500 mx-auto" /></td>
-                  <td className="p-6 text-center"><CheckCircle className="w-5 h-5 text-green-500 mx-auto" /></td>
-                  <td className="p-6 text-center"><CheckCircle className="w-5 h-5 text-green-500 mx-auto" /></td>
+                  <td className="p-4 lg:p-6 font-medium text-gray-900 text-sm lg:text-base">24/7 Support</td>
+                  <td className="p-4 lg:p-6 text-center"><CheckCircle className="w-4 h-4 lg:w-5 lg:h-5 text-green-500 mx-auto" /></td>
+                  <td className="p-4 lg:p-6 text-center"><CheckCircle className="w-4 h-4 lg:w-5 lg:h-5 text-green-500 mx-auto" /></td>
+                  <td className="p-4 lg:p-6 text-center"><CheckCircle className="w-4 h-4 lg:w-5 lg:h-5 text-green-500 mx-auto" /></td>
+                  <td className="p-4 lg:p-6 text-center"><CheckCircle className="w-4 h-4 lg:w-5 lg:h-5 text-green-500 mx-auto" /></td>
                 </tr>
               </tbody>
             </table>

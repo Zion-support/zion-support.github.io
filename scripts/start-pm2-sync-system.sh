@@ -143,8 +143,8 @@ start_pm2_system() {
         pm2 delete "$PM2_APP_NAME" "$PM2_MONITOR_NAME" 2>/dev/null || true
     fi
     
-    # Start the PM2 system using ecosystem config
-    log "Starting PM2 processes from ecosystem config..."
+    # Start the PM2 system using ecosystem config with remote-first sync automation
+    log "Starting PM2 processes from ecosystem config with remote-first sync automation..."
     pm2 start ecosystem.config.cjs
     
     # Wait for processes to start
@@ -302,6 +302,7 @@ main() {
     echo
     log "The system will automatically:"
     echo "  • Watch for file changes and sync them to the repository"
+    echo "  • Resolve merge conflicts by accepting remote changes (remote-first strategy)"
     echo "  • Monitor system health and resolve issues automatically"
     echo "  • Run builds, tests, and security scans"
     echo "  • Keep everything synchronized and up-to-date"

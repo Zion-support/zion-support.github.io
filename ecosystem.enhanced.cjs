@@ -1,228 +1,264 @@
 module.exports = {
   apps: [
-    // Main Zion Website Application
+    // Main application
     {
-      name: 'zion-website',
+      name: 'zion-website-enhanced',
       script: 'npm',
-      args: 'run dev',
-      cwd: '/workspace',
+      args: 'start',
+      cwd: './',
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
       env: {
-        NODE_ENV: 'development',
-        PORT: 3000
+        NODE_ENV: 'production',
+        PORT: 3000,
       },
       env_production: {
         NODE_ENV: 'production',
-        PORT: 3000
+        PORT: 3000,
       },
-      log_file: './logs/zion-website.log',
-      out_file: './logs/zion-website-out.log',
-      error_file: './logs/zion-website-error.log',
+      log_file: './logs/zion-website-enhanced.log',
+      error_file: './logs/zion-website-enhanced-error.log',
+      out_file: './logs/zion-website-enhanced-out.log',
+      merge_logs: true,
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
-      merge_logs: true
     },
 
-    // AI Code Analyzer - Advanced code analysis and optimization
-    {
-      name: 'ai-code-analyzer',
-      script: './scripts/automation/intelligent-code-refactorer.cjs',
-      cwd: '/workspace',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      restart_delay: 20000,
-      max_restarts: 5,
-      min_uptime: '60s',
-      log_file: './logs/ai-code-analyzer.log',
-      out_file: './logs/ai-code-analyzer-out.log',
-      error_file: './logs/ai-code-analyzer-error.log',
-      cron_restart: '0 */3 * * *' // Restart every 3 hours
-    },
-
-    // Smart Performance Optimizer - Intelligent performance optimization
-    {
-      name: 'smart-performance-optimizer',
-      script: './scripts/automation/intelligent-performance-optimizer.cjs',
-      cwd: '/workspace',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      restart_delay: 25000,
-      max_restarts: 3,
-      min_uptime: '90s',
-      log_file: './logs/smart-performance-optimizer.log',
-      out_file: './logs/smart-performance-optimizer-out.log',
-      error_file: './logs/smart-performance-optimizer-error.log',
-      cron_restart: '0 */4 * * *' // Restart every 4 hours
-    },
-
-    // Intelligent Dependency Manager - Advanced dependency management
-    {
-      name: 'intelligent-dependency-manager',
-      script: './scripts/automation/smart-dependency-intelligence.cjs',
-      cwd: '/workspace',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      restart_delay: 30000,
-      max_restarts: 3,
-      min_uptime: '120s',
-      log_file: './logs/intelligent-dependency-manager.log',
-      out_file: './logs/intelligent-dependency-manager-out.log',
-      error_file: './logs/intelligent-dependency-manager-error.log',
-      cron_restart: '0 6 * * *' // Restart daily at 6 AM
-    },
-
-    // Smart Deployment Automation - Intelligent deployment management
-    {
-      name: 'smart-deployment-automation',
-      script: './scripts/automation/smart-deployment-automation.cjs',
-      cwd: '/workspace',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      restart_delay: 35000,
-      max_restarts: 2,
-      min_uptime: '180s',
-      log_file: './logs/smart-deployment-automation.log',
-      out_file: './logs/smart-deployment-automation-out.log',
-      error_file: './logs/smart-deployment-automation-error.log',
-      cron_restart: '0 9 * * *' // Restart daily at 9 AM
-    },
-
-    // Predictive Issue Detection - Anticipates and prevents issues
-    {
-      name: 'predictive-issue-detection',
-      script: './scripts/automation/predictive-issue-detection.cjs',
-      cwd: '/workspace',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      restart_delay: 15000,
-      max_restarts: 4,
-      min_uptime: '45s',
-      log_file: './logs/predictive-issue-detection.log',
-      out_file: './logs/predictive-issue-detection-out.log',
-      error_file: './logs/predictive-issue-detection-error.log',
-      cron_restart: '0 */2 * * *' // Restart every 2 hours
-    },
-
-    // Enhanced Error Monitor - Advanced error detection and fixing
+    // Enhanced Error Monitor
     {
       name: 'enhanced-error-monitor',
-      script: './scripts/automation/master-error-detector-fixer.cjs',
-      cwd: '/workspace',
+      script: './scripts/automation/error-monitor.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
-      restart_delay: 10000,
-      max_restarts: 6,
-      min_uptime: '30s',
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        ENHANCED_MODE: 'true',
+      },
+      cron_restart: '0 */2 * * *', // Restart every 2 hours
       log_file: './logs/enhanced-error-monitor.log',
-      out_file: './logs/enhanced-error-monitor-out.log',
       error_file: './logs/enhanced-error-monitor-error.log',
-      cron_restart: '0 */1 * * *' // Restart every hour
+      out_file: './logs/enhanced-error-monitor-out.log',
+      merge_logs: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
-    // Intelligent Build Pipeline - Advanced build optimization
+    // Enhanced Syntax Fixer
     {
-      name: 'intelligent-build-pipeline',
-      script: './scripts/automation/intelligent-build-pipeline.cjs',
-      cwd: '/workspace',
+      name: 'enhanced-syntax-fixer',
+      script: './scripts/automation/syntax-fixer.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
-      restart_delay: 40000,
-      max_restarts: 2,
-      min_uptime: '240s',
-      log_file: './logs/intelligent-build-pipeline.log',
-      out_file: './logs/intelligent-build-pipeline-out.log',
-      error_file: './logs/intelligent-build-pipeline-error.log',
-      cron_restart: '0 7 * * *' // Restart daily at 7 AM
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        ENHANCED_MODE: 'true',
+      },
+      cron_restart: '0 */6 * * *', // Restart every 6 hours
+      log_file: './logs/enhanced-syntax-fixer.log',
+      error_file: './logs/enhanced-syntax-fixer-error.log',
+      out_file: './logs/enhanced-syntax-fixer-out.log',
+      merge_logs: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
-    // Project Health Monitor - Comprehensive project health monitoring
+    // Enhanced Dependency Manager
     {
-      name: 'project-health-monitor',
-      script: './scripts/automation/project-health-monitor.cjs',
-      cwd: '/workspace',
+      name: 'enhanced-dependency-manager',
+      script: './scripts/automation/dependency-manager.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
-      restart_delay: 12000,
-      max_restarts: 5,
-      min_uptime: '40s',
-      log_file: './logs/project-health-monitor.log',
-      out_file: './logs/project-health-monitor-out.log',
-      error_file: './logs/project-health-monitor-error.log',
-      cron_restart: '0 */2 * * *' // Restart every 2 hours
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        ENHANCED_MODE: 'true',
+      },
+      cron_restart: '0 8 * * *', // Restart daily at 8 AM
+      log_file: './logs/enhanced-dependency-manager.log',
+      error_file: './logs/enhanced-dependency-manager-error.log',
+      out_file: './logs/enhanced-dependency-manager-out.log',
+      merge_logs: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
-    // Smart Testing Automation - Intelligent testing and quality assurance
+    // Enhanced Build Monitor
     {
-      name: 'smart-testing-automation',
-      script: './scripts/automation/smart-testing-automation.cjs',
-      cwd: '/workspace',
+      name: 'enhanced-build-monitor',
+      script: './scripts/automation/build-monitor.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
-      restart_delay: 18000,
-      max_restarts: 4,
-      min_uptime: '60s',
-      log_file: './logs/smart-testing-automation.log',
-      out_file: './logs/smart-testing-automation-out.log',
-      error_file: './logs/smart-testing-automation-error.log',
-      cron_restart: '0 5 * * *' // Restart daily at 5 AM
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        ENHANCED_MODE: 'true',
+      },
+      cron_restart: '0 */4 * * *', // Restart every 4 hours
+      log_file: './logs/enhanced-build-monitor.log',
+      error_file: './logs/enhanced-build-monitor-error.log',
+      out_file: './logs/enhanced-build-monitor-out.log',
+      merge_logs: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
-    // Enhanced Security Automation - Advanced security monitoring
+    // AI Code Analyzer
     {
-      name: 'enhanced-security-automation',
-      script: './scripts/automation/enhanced-security-automation.cjs',
-      cwd: '/workspace',
+      name: 'ai-code-analyzer',
+      script: './scripts/automation/ai-code-analyzer.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
-      restart_delay: 22000,
-      max_restarts: 3,
-      min_uptime: '75s',
-      log_file: './logs/enhanced-security-automation.log',
-      out_file: './logs/enhanced-security-automation-out.log',
-      error_file: './logs/enhanced-security-automation-error.log',
-      cron_restart: '0 4 * * *' // Restart daily at 4 AM
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AI_ANALYSIS_MODE: 'true',
+      },
+      cron_restart: '0 */2 * * *', // Restart every 2 hours
+      log_file: './logs/ai-code-analyzer.log',
+      error_file: './logs/ai-code-analyzer-error.log',
+      out_file: './logs/ai-code-analyzer-out.log',
+      merge_logs: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
-    // Unified Automation Dashboard - Centralized automation monitoring
+    // Smart Performance Optimizer
     {
-      name: 'unified-automation-dashboard',
-      script: './scripts/automation/unified-automation-dashboard.cjs',
-      cwd: '/workspace',
+      name: 'smart-performance-optimizer',
+      script: './scripts/automation/smart-performance-optimizer.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
-      restart_delay: 8000,
-      max_restarts: 7,
-      min_uptime: '20s',
-      log_file: './logs/unified-automation-dashboard.log',
-      out_file: './logs/unified-automation-dashboard-out.log',
-      error_file: './logs/unified-automation-dashboard-error.log',
-      cron_restart: '0 */1 * * *' // Restart every hour
-    }
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        PERFORMANCE_OPTIMIZATION_MODE: 'true',
+      },
+      cron_restart: '0 */3 * * *', // Restart every 3 hours
+      log_file: './logs/smart-performance-optimizer.log',
+      error_file: './logs/smart-performance-optimizer-error.log',
+      out_file: './logs/smart-performance-optimizer-out.log',
+      merge_logs: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+    },
+
+    // Enhanced CI/CD Automation
+    {
+      name: 'enhanced-ci-cd-automation',
+      script: './scripts/automation/enhanced-ci-cd-automation.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        CI_CD_MODE: 'true',
+      },
+      cron_restart: '0 */1 * * *', // Restart every hour
+      log_file: './logs/enhanced-ci-cd-automation.log',
+      error_file: './logs/enhanced-ci-cd-automation-error.log',
+      out_file: './logs/enhanced-ci-cd-automation-out.log',
+      merge_logs: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+    },
+
+    // Intelligent Repository Manager
+    {
+      name: 'intelligent-repository-manager',
+      script: './scripts/automation/intelligent-repository-manager.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        REPOSITORY_MANAGEMENT_MODE: 'true',
+      },
+      cron_restart: '0 */1 * * *', // Restart every hour
+      log_file: './logs/intelligent-repository-manager.log',
+      error_file: './logs/intelligent-repository-manager-error.log',
+      out_file: './logs/intelligent-repository-manager-out.log',
+      merge_logs: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+    },
+
+    // Advanced Development Intelligence
+    {
+      name: 'advanced-development-intelligence',
+      script: './scripts/automation/advanced-development-intelligence.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        DEVELOPMENT_INTELLIGENCE_MODE: 'true',
+      },
+      cron_restart: '0 */2 * * *', // Restart every 2 hours
+      log_file: './logs/advanced-development-intelligence.log',
+      error_file: './logs/advanced-development-intelligence-error.log',
+      out_file: './logs/advanced-development-intelligence-out.log',
+      merge_logs: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+    },
+
+    // Intelligent Deployment Orchestrator
+    {
+      name: 'intelligent-deployment-orchestrator',
+      script: './scripts/automation/intelligent-deployment-orchestrator.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        DEPLOYMENT_ORCHESTRATION_MODE: 'true',
+      },
+      cron_restart: '0 */3 * * *', // Restart every 3 hours
+      log_file: './logs/intelligent-deployment-orchestrator.log',
+      error_file: './logs/intelligent-deployment-orchestrator-error.log',
+      out_file: './logs/intelligent-deployment-orchestrator-out.log',
+      merge_logs: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+    },
   ],
 
   deploy: {
     production: {
-      user: 'ubuntu',
+      user: 'miami2',
       host: 'localhost',
       ref: 'origin/main',
       repo: 'https://github.com/Zion-Holdings/zion.app.git',
-      path: '/var/www/zion.app',
+      path: '/Users/miami2/zion-app-clone',
       'pre-deploy-local': '',
-      'post-deploy': 'npm install --legacy-peer-deps && npm run build && pm2 reload ecosystem.enhanced.cjs --env production',
-      'pre-setup': 'mkdir -p /var/www/zion.app/logs'
-    }
-  }
+      'post-deploy':
+        'npm install && npm run build && pm2 reload ecosystem.enhanced.cjs --env production',
+      'pre-setup': '',
+    },
+    staging: {
+      user: 'miami2',
+      host: 'localhost',
+      ref: 'origin/staging',
+      repo: 'https://github.com/Zion-Holdings/zion.app.git',
+      path: '/Users/miami2/zion-app-staging',
+      'pre-deploy-local': '',
+      'post-deploy':
+        'npm install && npm run build && pm2 reload ecosystem.enhanced.cjs --env staging',
+      'pre-setup': '',
+    },
+    development: {
+      user: 'miami2',
+      host: 'localhost',
+      ref: 'origin/main',
+      repo: 'https://github.com/Zion-Holdings/zion.app.git',
+      path: '/Users/miami2/zion-app-dev',
+      'pre-deploy-local': '',
+      'post-deploy':
+        'npm install && npm run build && pm2 reload ecosystem.enhanced.cjs --env development',
+      'pre-setup': '',
+    },
+  },
 };
