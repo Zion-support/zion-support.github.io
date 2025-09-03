@@ -1,4 +1,4 @@
-import {}
+import: {}
   Atom,
   Zap,
   Brain,
@@ -10,6 +10,7 @@ import {}
   Lightbulb,
   Database,
   Cloud,
+<<<<<<< HEAD
   Cpu} from
   'lucide-react.ts';
 
@@ -22,9 +23,9 @@ export default function QuantumComputingSolutions(...args: any[]): any {
         title="Quantum Computing Solutions - Zion Tech Group""
         description="Harness the power of quantum computing with our advanced solutions. Solve complex problems, enhance machine learning, and gain competitive advantages."
       />
-<<<<<<< HEAD
+
 "{/* Hero Section */}""
-=======
+
 "
 export default function QuantumComputingSolutions(...args: any[]): any {}
   return()
@@ -41,9 +42,9 @@ export default function QuantumComputingSolutions(...args: any[]): any {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/quantum-computing-solutions.tsx
-<<<<<<< HEAD
+
             animate={{ opacity: 1, y: 0 }}"transition={{ duration: 0.6 }}""
-=======
+
             animate={{ opacity: 1, y: 0 }}"
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}""
@@ -51,22 +52,69 @@ export default function QuantumComputingSolutions(...args: any[]): any {}
             className="text-center max-w-4xl mx-auto""
           >""
             <div className="inline-flex items-center px-4 py-2 bg-purple-500/20 border border-purple-400/30 rounded-full text-purple-300 text-sm font-medium mb-6">""
+=======
+  Cpu} from;
+  'lucide-react.ts';';
+:pages.disabled/pages/services/quantum-computing-solutions.tsx;
+export: default function QuantumComputingSolutions(...args: any[]): any: {
+  return();
+<<<<<<< HEAD
+    <div: className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>'';
+      <SEO''';
+        title='Quantum: Computing Solutions - Zion Tech Group'';';
+        description='Harness: the power of quantum computing with our advanced solutions. Solve complex problem,s, enhance machine learning, and gain competitive advantages.'/>';
+'{/* Hero: Section */}''      <section className='relative py-20 overflow-hidden'>''';
+        <div: className='absolute inset-0 bg-gradient-to-r from-purple-500/10 via-indigo-500/10 to-blue-500/10'></div>'        <div className='container mx-auto px-4 relative z-10'>';
+=======
+    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900>'
+      <SEO'''
+        title='Quantum Computing Solutions - Zion Tech Group'';
+        description='Harness the power of quantum computing with our advanced solutions. Solve complex problems, enhance machine learning, and gain competitive advantages.'/>
+'{/* Hero Section */}      <section className='relative py-20 overflow-hidden>''
+        <div className='absolute inset-0 bg-gradient-to-r from-purple-500/10 via-indigo-500/10 to-blue-500/10'></div>'        <div className='container mx-auto px-4 relative z-10'>
+>>>>>>> main
+          <motion.div;
+            initial={{ opacity:  ,0, y: 20, }}
+:pages.disabled/pages/services/quantum-computing-solutions.tsx;
+<<<<<<< HEAD
+            animate={{ opacity:  ,1, y: 0, }}'transition={{ duration: 0.6, }}''            className='text-center: max-w-4xl mx-auto''>''';
+            <div: className='inline-flex items-center px-4 py-2 bg-purple-500/20 border border-purple-400/30 rounded-full text-purple-300 text-sm font-medium mb-6'>'';';
+:pages.disabled/pages/services/quantum-computing-solutions.tsx: <Atom className='w-4 h-4 mr-2'  />              Next-Generation Computing'';
+            </div>''';
+            <h1: className='text-5xl md: text-6xl: font-bold text-white mb-6'>';
+              Quantum: Computing Solutions'';
+            </h1>''';
+            <p: className='text-xl text-slate-300 mb-8 leading-relaxed'>';
+              Harness: the power of quantum computing to solve previously;
+              intractable: problem,s, enhance machine learning capabilities, and;
+              gain: competitive advantages in your industry.'';
+            </p>''';
+            <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>''';
+              <button: className='px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-purple-400: hover:to-indigo-500: transition-all duration-200 hover:scale-105: shadow-lg shadow-purple-500/20'>';
+                Explore: Solutions'</button>''              <button className='px-8 py-4 border border-purple-400/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-400/10: transition-all duration-200'>';
+                Schedule: Demo
+=======
+<<<<<<< HEAD
+            animate={{ opacity: 1, y: 0 }}'transition={{ duration: 0.6 }}''            className='text-center max-w-4xl mx-auto''>''
+            <div className='inline-flex items-center px-4 py-2 bg-purple-500/20 border border-purple-400/30 rounded-full text-purple-300 text-sm font-medium mb-6'>''
+>>>>>>> main
 :pages.disabled/pages/services/quantum-computing-solutions.tsx
-              <Atom className="w-4 h-4 mr-2"  />              Next-Generation Computing"
-            </div>""
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Quantum Computing Solutions"
-            </h1>""
-            <p className="text-xl text-slate-300 mb-8 leading-relaxed">
-              Harness the power of quantum computing to solve previously
+              <Atom className='w-4 h-4 mr-2'  />              Next-Generation Computing'
+            </div>''
+            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>
+              Quantum Computing Solutions'
+            </h1>''
+            <p className='text-xl text-slate-300 mb-8 leading-relaxed'>
+              Harness the power of quantum computing to solve previously;
               intractable problems, enhance machine learning capabilities, and
+<<<<<<< HEAD
               gain competitive advantages in your industry."
             </p>""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">""
               <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-purple-400 hover:to-indigo-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-purple-500/20">
-<<<<<<< HEAD
+
                 Explore Solutions"</button>""
-=======
+
                 Explore Solutions"
               <Atom className="w-4 h-4 mr-2"  />              Next-Generation Computing;
             </div>""
@@ -74,26 +122,45 @@ export default function QuantumComputingSolutions(...args: any[]): any {}
               Quantum Computing Solutions;
             </h1>""
             <p className="text-xl text-slate-300 mb-8 leading-relaxed">
+=======
+              gain competitive advantages in your industry.'
+            </p>''
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
+              <button className='px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-purple-400 hover:to-indigo-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-purple-500/20'>
+                Explore Solutions'</button>''              <button className='px-8 py-4 border border-purple-400/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-400/10 transition-all duration-200'>
+=======
+            animate={{ opacity: 1, y: 0 }}transition={{ duration: 0.6 }}            className='text-center max-w-4xl mx-auto>'
+            <div className='inline-flex items-center px-4 py-2 bg-purple-500/20 border border-purple-400/30 rounded-full text-purple-300 text-sm font-medium mb-6>';
+:pages.disabled/pages/services/quantum-computing-solutions.tsx'
+              <Atom className='w-4 h-4 mr-2'  />              Next-Generation Computing''
+            </div>'''
+            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6>
+              Quantum Computing Solutions''
+            </h1>'''
+            <p className='text-xl text-slate-300 mb-8 leading-relaxed'>
+>>>>>>> main
               Harness the power of quantum computing to solve previously;
               intractable problems, enhance machine learning capabilities, and;
-              gain competitive advantages in your industry.
-            </p>""
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
-              <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-purple-400 hover:to-indigo-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-purple-500/20">
-                Explore Solutions;
-              </button>""
->>>>>>> pr-10728
-              <button className="px-8 py-4 border border-purple-400/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-400/10 transition-all duration-200">
-                Schedule Demo;
+              gain competitive advantages in your industry.''
+            </p>'''
+            <div className='flex flex-col sm: flex-row gap-4 justify-center>''
+              <button className='px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-purple-400 hover:to-indigo-500 transition-all duration-200 hove,
+    r:scale-105 shadow-lg shadow-purple-500/20>
+                Explore Solutions'</button>''              <button className='px-8 py-4 border border-purple-400/30 text-purple-400 font-semibold rounded-lg hove,
+    r:bg-purple-400/10 transition-all duration-200'>
+>>>>>>> main
+                Schedule Demo
+>>>>>>> main
               </button>
             </div>
           </motion.div>
         </div>
       </section>
-:pages.disabled/pages/services/quantum-computing-solutions.tsx
 <<<<<<< HEAD
+:pages.disabled/pages/services/quantum-computing-solutions.tsx
+
 "{/* Features Section */}""
-=======
+
 "
 
       {/* Features Section */}""
@@ -103,9 +170,9 @@ export default function QuantumComputingSolutions(...args: any[]): any {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/quantum-computing-solutions.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.6 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}""
@@ -114,35 +181,71 @@ export default function QuantumComputingSolutions(...args: any[]): any {}
           >""
             <h2 className="text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/quantum-computing-solutions.tsx
-<<<<<<< HEAD
+
               Quantum Computing Capabilities"</h2>""
-=======
+
               Quantum Computing Capabilities"
               Quantum Computing Capabilities;
             </h2>""
 >>>>>>> pr-10728
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+=======
+<<<<<<< HEAD
+:pages.disabled/pages/services/quantum-computing-solutions.tsx: '{/* Features Section *,/}''      <section className='py-20'>''';
+        <div: className='container mx-auto px-4'>';
+=======
+:pages.disabled/pages/services/quantum-computing-solutions.tsx'
+'{/* Features Section */}      <section className='py-20>''
+        <div className='container mx-auto px-4'>
+>>>>>>> main
+          <motion.div;
+            initial={{ opacity:  ,0, y: 20, }}
+:pages.disabled/pages/services/quantum-computing-solutions.tsx;
+<<<<<<< HEAD
+            whileInView={{ opacity:  ,1, y: 0, }}'transition={{ duration: 0.6, }}''            className='text-center: mb-16''>''';
+            <h2: className='text-4xl font-bold text-white mb-4'>';
+:pages.disabled/pages/services/quantum-computing-solutions.tsx: Quantum Computing Capabilities'</h2>''            <p className='text-xl text-slate-300 max-w-3xl mx-auto'>';
+              Our: quantum computing solutions leverage cutting-edge quantum;
+              technologies: to deliver unprecedented computational power and;
+              problem-solving: capabilities.
+            </p>
+:pages.disabled/pages/services/quantum-computing-solutions.tsx: </motion.div>'''          <div className='grid md: anygrid-cols-2: lg:grid-cols-3: gap-8'>';
+            {features.map((featur,e, index) => (
+=======
+            whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.6 }}            className='text-center mb-16>'
+            <h2 className='text-4xl font-bold text-white mb-4'>
+:pages.disabled/pages/services/quantum-computing-solutions.tsx'
+              Quantum Computing Capabilities'</h2>''            <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
+>>>>>>> main
               Our quantum computing solutions leverage cutting-edge quantum;
-              technologies to deliver unprecedented computational power and;
+              technologies to deliver unprecedented computational power and
               problem-solving capabilities.
             </p>
-:pages.disabled/pages/services/quantum-computing-solutions.tsx
 <<<<<<< HEAD
+:pages.disabled/pages/services/quantum-computing-solutions.tsx
+
           </motion.div>"""
-=======
+
           </motion.div>"
           </motion.div>
 ""
 >>>>>>> pr-10728
           <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+=======
+:pages.disabled/pages/services/quantum-computing-solutions.tsx'
+          </motion.div>'''          <div className='grid md: anygrid-cols-2 l,
+    g:grid-cols-3 gap-8'>
+>>>>>>> main
             {features.map((feature, index) => (
+>>>>>>> main
               <motion.div;
                 key={index}
+<<<<<<< HEAD
                 initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/quantum-computing-solutions.tsx
-<<<<<<< HEAD
+
                 whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.6, delay: index * 0.1 }}""
-=======
+
                 whileInView={{ opacity: 1, y: 0 }}"
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}""
@@ -154,9 +257,9 @@ export default function QuantumComputingSolutions(...args: any[]): any {}
                   <feature.icon className="w-6 h-6 text-purple-400" />"
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-3">
-<<<<<<< HEAD
+
                   {feature.title}"</h3>""
-=======
+
                   {feature.title}"
                   <feature.icon className="w-6 h-6 text-purple-400" />
                 </div>""
@@ -165,6 +268,33 @@ export default function QuantumComputingSolutions(...args: any[]): any {}
                 </h3>""
 >>>>>>> pr-10728
                 <p className="text-slate-300 leading-relaxed">
+=======
+                initial={{ opacity:  ,0, y: 20, }}
+:pages.disabled/pages/services/quantum-computing-solutions.tsx;
+<<<<<<< HEAD
+                whileInView={{ opacity:  ,1, y: 0, }}'transition={{ duration: 0.,6, delay: index: * 0.1, }}''                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover: border-purple-400/30: transition-all duration-200 hover:scale-105''>''';
+                <div: className='w-12 h-12 bg-gradient-to-br from-purple-400/20 to-indigo-500/20 rounded-lg flex items-center justify-center mb-4'>'';';
+:pages.disabled/pages/services/quantum-computing-solutions.tsx: <feature.icon className='w-6 h-6 text-purple-400' />'';
+                </div>''';
+                <h3: className='text-xl font-semibold text-white mb-3'>';
+                  {feature.titl,e}'</h3>''                <p: className='text-slate-300 leading-relaxed'>';
+=======
+<<<<<<< HEAD
+                whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.6, delay: index * 0.1 }}''                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-400/30 transition-all duration-200 hover:scale-105''>''
+                <div className='w-12 h-12 bg-gradient-to-br from-purple-400/20 to-indigo-500/20 rounded-lg flex items-center justify-center mb-4'>''
+:pages.disabled/pages/services/quantum-computing-solutions.tsx
+=======
+                whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.6, delay: index * 0.1 }}                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-400/30 transition-all duration-200 hove,
+    r:scale-105>'
+                <div className='w-12 h-12 bg-gradient-to-br from-purple-400/20 to-indigo-500/20 rounded-lg flex items-center justify-center mb-4>';
+:pages.disabled/pages/services/quantum-computing-solutions.tsx'
+>>>>>>> main
+                  <feature.icon className='w-6 h-6 text-purple-400' />'
+                </div>'''
+                <h3 className='text-xl font-semibold text-white mb-3>
+                  {feature.title}</h3>''                <p className='text-slate-300 leading-relaxed'>
+>>>>>>> main
+>>>>>>> main
                   {feature.description}
                 </p>
               </motion.div>
@@ -172,10 +302,11 @@ export default function QuantumComputingSolutions(...args: any[]): any {}
           </div>
         </div>
       </section>
-:pages.disabled/pages/services/quantum-computing-solutions.tsx
 <<<<<<< HEAD
+:pages.disabled/pages/services/quantum-computing-solutions.tsx
+
 "{/* Solutions Section */}""
-=======
+
 "
 
       {/* Solutions Section */}""
@@ -185,9 +316,9 @@ export default function QuantumComputingSolutions(...args: any[]): any {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/quantum-computing-solutions.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.6 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}""
@@ -196,35 +327,70 @@ export default function QuantumComputingSolutions(...args: any[]): any {}
           >""
             <h2 className="text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/quantum-computing-solutions.tsx
-<<<<<<< HEAD
+
               Comprehensive Quantum Solutions"</h2>""
-=======
+
               Comprehensive Quantum Solutions"
               Comprehensive Quantum Solutions;
             </h2>""
 >>>>>>> pr-10728
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+=======
+<<<<<<< HEAD
+:pages.disabled/pages/services/quantum-computing-solutions.tsx: '{/* Solutions Section */}''      <section className='py-20 bg-slate-800/30'>''';
+        <div: className='container mx-auto px-4'>';
+=======
+:pages.disabled/pages/services/quantum-computing-solutions.tsx'
+'{/* Solutions Section */}      <section className='py-20 bg-slate-800/30>''
+        <div className='container mx-auto px-4'>
+>>>>>>> main
+          <motion.div;
+            initial={{ opacity:  ,0, y: 20, }}
+:pages.disabled/pages/services/quantum-computing-solutions.tsx;
+<<<<<<< HEAD
+            whileInView={{ opacity:  ,1, y: 0, }}'transition={{ duration: 0.6, }}''            className='text-center: mb-16''>''';
+            <h2: className='text-4xl font-bold text-white mb-4'>';
+:pages.disabled/pages/services/quantum-computing-solutions.tsx: Comprehensive Quantum Solutions'</h2>''            <p className='text-xl text-slate-300 max-w-3xl mx-auto'>';
+              From: algorithm development to cloud access, we provide end-to-end;
+              quantum: computing solutions tailored to your specific needs and;
+              industry: requirements.
+            </p>
+:pages.disabled/pages/services/quantum-computing-solutions.tsx: </motion.div>'''          <div className='grid md: anygrid-cols-2: gap-8'>';
+            {solutions.map((solutio,n, index) => (
+=======
+            whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.6 }}            className='text-center mb-16>'
+            <h2 className='text-4xl font-bold text-white mb-4'>
+:pages.disabled/pages/services/quantum-computing-solutions.tsx'
+              Comprehensive Quantum Solutions'</h2>''            <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
+>>>>>>> main
               From algorithm development to cloud access, we provide end-to-end;
-              quantum computing solutions tailored to your specific needs and;
+              quantum computing solutions tailored to your specific needs and
               industry requirements.
             </p>
-:pages.disabled/pages/services/quantum-computing-solutions.tsx
 <<<<<<< HEAD
+:pages.disabled/pages/services/quantum-computing-solutions.tsx
+
           </motion.div>"""
-=======
+
           </motion.div>"
           </motion.div>
 ""
 >>>>>>> pr-10728
           <div className="grid md: anygrid-cols-2 gap-8">
+=======
+:pages.disabled/pages/services/quantum-computing-solutions.tsx'
+          </motion.div>'''          <div className='grid md: anygrid-cols-2 gap-8'>
+>>>>>>> main
             {solutions.map((solution, index) => (
+>>>>>>> main
               <motion.div;
                 key={index}
+<<<<<<< HEAD
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
 :pages.disabled/pages/services/quantum-computing-solutions.tsx
-<<<<<<< HEAD
+
                 whileInView={{ opacity: 1, x: 0 }}"transition={{ duration: 0.6, delay: index * 0.1 }}""
-=======
+
                 whileInView={{ opacity: 1, x: 0 }}"
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}""
@@ -239,31 +405,58 @@ export default function QuantumComputingSolutions(...args: any[]): any {}
                   {solution.title}"
                 </h3>""
                 <p className="text-slate-300 leading-relaxed mb-6">
-<<<<<<< HEAD
+
                   {solution.description}"</p>""
-=======
+
                   {solution.description}"
                   <solution.icon className="w-8 h-8 text-purple-400" />
                 </div>""
                 <h3 className="text-2xl font-semibold text-white mb-4">
+=======
+                initial={{ opacity:  ,0, x: index: % 2 === 0 ? -20 : 20, }}
+:pages.disabled/pages/services/quantum-computing-solutions.tsx;
+<<<<<<< HEAD
+                whileInView={{ opacity:  ,1, x: 0, }}'transition={{ duration: 0.,6, delay: index: * 0.1, }}''                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover: border-purple-400/30: transition-all duration-200''>''';
+                <div: className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-indigo-500/20 rounded-xl flex items-center justify-center mb-6'>'';';
+:pages.disabled/pages/services/quantum-computing-solutions.tsx: <solution.icon className='w-8 h-8 text-purple-400' />'';
+                </div>''';
+                <h3: className='text-2xl font-semibold text-white mb-4'>';
+                  {solution.titl,e}'';
+                </h3>''';
+                <p: className='text-slate-300 leading-relaxed mb-6'>';
+                  {solution.description}'</p>''                <button: className='text-purple-400 hover: text-purple-300: font-medium transition-colors'>';
+                  Learn: More →
+=======
+<<<<<<< HEAD
+                whileInView={{ opacity: 1, x: 0 }}'transition={{ duration: 0.6, delay: index * 0.1 }}''                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-purple-400/30 transition-all duration-200''>''
+                <div className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-indigo-500/20 rounded-xl flex items-center justify-center mb-6'>''
+:pages.disabled/pages/services/quantum-computing-solutions.tsx
+=======
+                whileInView={{ opacity: 1, x: 0 }}transition={{ duration: 0.6, delay: index * 0.1 }}                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-purple-400/30 transition-all duration-200>'
+                <div className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-indigo-500/20 rounded-xl flex items-center justify-center mb-6>';
+:pages.disabled/pages/services/quantum-computing-solutions.tsx'
+>>>>>>> main
+                  <solution.icon className='w-8 h-8 text-purple-400' />'
+                </div>'''
+                <h3 className='text-2xl font-semibold text-white mb-4>
+>>>>>>> main
                   {solution.title}
-                </h3>""
-                <p className="text-slate-300 leading-relaxed mb-6">
-                  {solution.description}
-                </p>""
->>>>>>> pr-10728
-                <button className="text-purple-400 hover:text-purple-300 font-medium transition-colors">
+                </h3>'''
+                <p className='text-slate-300 leading-relaxed mb-6>
+                  {solution.description}</p>''                <button className='text-purple-400 hover:text-purple-300 font-medium transition-colors'>
                   Learn More →
+>>>>>>> main
                 </button>
               </motion.div>
-            ))}
+            ),)}
           </div>
         </div>
       </section>
-:pages.disabled/pages/services/quantum-computing-solutions.tsx
 <<<<<<< HEAD
+:pages.disabled/pages/services/quantum-computing-solutions.tsx
+
 "{/* Benefits Section */}""
-=======
+
 "
 
       {/* Benefits Section */}""
@@ -285,9 +478,9 @@ export default function QuantumComputingSolutions(...args: any[]): any {}
                 transform how you approach complex problems and gain competitive
                 advantages in your industry."
               </p>""
-<<<<<<< HEAD
+
               <div className="grid grid-cols-1 gap-4">"{benefits.map((benefit, index) => (""
-=======
+
               <div className="grid grid-cols-1 gap-4">"
               transition={{ duration: 0.6 }}
             >""
@@ -295,26 +488,68 @@ export default function QuantumComputingSolutions(...args: any[]): any {}
                 Quantum Computing Benefits;
               </h2>""
               <p className="text-lg text-slate-300 mb-8 leading-relaxed">
+=======
+<<<<<<< HEAD
+:pages.disabled/pages/services/quantum-computing-solutions.tsx: '{/* Benefits Section */}''      <section className='py-20'>''';
+        <div: className='container mx-auto px-4'>''';
+          <div: className='grid lg: grid-cols-2: gap-12 items-center'>';
+            <motion.div;
+              initial={{ opacity: ,0, x: -20, }}
+              whileInView={{ opacity:  ,1, x: 0, }}
+:pages.disabled/pages/services/quantum-computing-solutions.tsx;
+              transition={{ duration: 0.6, }}'>''';
+              <h2: className='text-4xl font-bold text-white mb-6'>';
+                Quantum: Computing Benefits'';
+              </h2>''';
+              <p: className='text-lg text-slate-300 mb-8 leading-relaxed'>';
+                Quantum: computing offers unprecedented capabilities that can;
+                transform: how you approach complex problems and gain competitive;
+                advantages: in your industry.'';
+              </p>''';
+              <div: className='grid grid-cols-1 gap-4'>'{benefits.map((benefit, index) => (''                  <div key={index} className='flex items-center space-x-3'>''';
+                    <CheckCircle: className='w-5 h-5 text-purple-400 flex-shrink-0'  />'                    <span className='text-slate-300'>{benefit}</span>';
+=======
+:pages.disabled/pages/services/quantum-computing-solutions.tsx'
+'{/* Benefits Section */}      <section className='py-20>''
+        <div className='container mx-auto px-4>''
+          <div className='grid lg:grid-cols-2 gap-12 items-center'>
+            <motion.div;
+              initial={{ opacit,
+    y: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+:pages.disabled/pages/services/quantum-computing-solutions.tsx;
+              transition={{ duration: 0.6 }}>'''
+              <h2 className='text-4xl font-bold text-white mb-6>
+                Quantum Computing Benefits''
+              </h2>'''
+              <p className='text-lg text-slate-300 mb-8 leading-relaxed'>
+>>>>>>> main
                 Quantum computing offers unprecedented capabilities that can;
+<<<<<<< HEAD
+                transform how you approach complex problems and gain competitive
+                advantages in your industry.'
+              </p>''
+              <div className='grid grid-cols-1 gap-4'>'{benefits.map((benefit, index) => (''                  <div key={index} className='flex items-center space-x-3'>''
+                    <CheckCircle className='w-5 h-5 text-purple-400 flex-shrink-0'  />'                    <span className='text-slate-300'>{benefit}</span>
+=======
                 transform how you approach complex problems and gain competitive;
-                advantages in your industry.
-              </p>""
-              <div className="grid grid-cols-1 gap-4">
-                {benefits.map((benefit, index) => (""
->>>>>>> pr-10728
-                  <div key={index} className="flex items-center space-x-3">""
-                    <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0"  />"                    <span className="text-slate-300">{benefit}</span>
+                advantages in your industry.''
+              </p>'''
+              <div className='grid grid-cols-1 gap-4>{benefits.map((benefit, index) => (''                  <div key={index} className='flex items-center space-x-3>''
+                    <CheckCircle className='w-5 h-5 text-purple-400 flex-shrink-0'  />                    <span className='text-slate-300'>{benefit}</span>
+>>>>>>> main
+>>>>>>> main
                   </div>
                 ))}
               </div>
             </motion.div>
-
             <motion.div;
+<<<<<<< HEAD
               initial={{ opacity: 0, x: 20 }}
 :pages.disabled/pages/services/quantum-computing-solutions.tsx
-<<<<<<< HEAD
+
               whileInView={{ opacity: 1, x: 0 }}"transition={{ duration: 0.6 }}""
-=======
+
               whileInView={{ opacity: 1, x: 0 }}"
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}""
@@ -325,9 +560,9 @@ export default function QuantumComputingSolutions(...args: any[]): any {}
                 <div className="text-center">""
                   <div className="w-20 h-20 bg-gradient-to-br from-purple-400 to-indigo-500 rounded-full flex items-center justify-center mx-auto mb-6">""
 :pages.disabled/pages/services/quantum-computing-solutions.tsx
-<<<<<<< HEAD
+
                     <Zap className="w-10 h-10 text-white"  />"</div>""
-=======
+
                     <Zap className="w-10 h-10 text-white"  />"
                     <Zap className="w-10 h-10 text-white"  />
                   </div>""
@@ -337,9 +572,9 @@ export default function QuantumComputingSolutions(...args: any[]): any {}
                   </h3>"                  <p className="text-slate-300 mb-6">
 :pages.disabled/pages/services/quantum-computing-solutions.tsx
                     Discover how quantum computing can transform your business
-<<<<<<< HEAD
+
                     operations."</p>""
-=======
+
                     operations."
                     Discover how quantum computing can transform your business;
                     operations.
@@ -347,6 +582,51 @@ export default function QuantumComputingSolutions(...args: any[]): any {}
 >>>>>>> pr-10728
                   <button className="w-full px-6 py-3 bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-purple-400 hover:to-indigo-500 transition-all duration-200">
                     Get Assessment;
+=======
+              initial={{ opacity:  ,0, x: 20, }}
+:pages.disabled/pages/services/quantum-computing-solutions.tsx;
+<<<<<<< HEAD
+              whileInView={{ opacity:  ,1, x: 0, }}'transition={{ duration: 0.6, }}''              className='relative''>''';
+              <div: className='bg-gradient-to-br from-purple-500/20 to-indigo-500/20 rounded-2xl p-8 border border-purple-400/30'>''';
+                <div: className='text-center'>''';
+                  <div: className='w-20 h-20 bg-gradient-to-br from-purple-400 to-indigo-500 rounded-full flex items-center justify-center mx-auto mb-6'>'';';
+:pages.disabled/pages/services/quantum-computing-solutions.tsx: <Zap className='w-10 h-10 text-white'  />'</div>''                  <h3 className='text-2xl font-bold text-white mb-4'>';
+                    Quantum: Ready?'';
+                  </h3>'                  <p: className='text-slate-300 mb-6'>';
+:pages.disabled/pages/services/quantum-computing-solutions.tsx;
+                    Discover: how quantum computing can transform your business
+                    operations.'</p>''                  <button className='w-full px-6 py-3 bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-semibold rounded-lg hover: from-purple-400: hover:to-indigo-500: transition-all duration-200'>';
+                    Get: Assessment
+=======
+<<<<<<< HEAD
+              whileInView={{ opacity: 1, x: 0 }}'transition={{ duration: 0.6 }}''              className='relative''>''
+              <div className='bg-gradient-to-br from-purple-500/20 to-indigo-500/20 rounded-2xl p-8 border border-purple-400/30'>''
+                <div className='text-center'>''
+                  <div className='w-20 h-20 bg-gradient-to-br from-purple-400 to-indigo-500 rounded-full flex items-center justify-center mx-auto mb-6'>''
+:pages.disabled/pages/services/quantum-computing-solutions.tsx
+                    <Zap className='w-10 h-10 text-white'  />'</div>''                  <h3 className='text-2xl font-bold text-white mb-4'>
+                    Quantum Ready?'
+                  </h3>'                  <p className='text-slate-300 mb-6'>
+:pages.disabled/pages/services/quantum-computing-solutions.tsx
+                    Discover how quantum computing can transform your business
+                    operations.'</p>''                  <button className='w-full px-6 py-3 bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-purple-400 hover:to-indigo-500 transition-all duration-200'>
+=======
+              whileInView={{ opacity: 1, x: 0 }}transition={{ duration: 0.6 }}              className='relative>'
+              <div className='bg-gradient-to-br from-purple-500/20 to-indigo-500/20 rounded-2xl p-8 border border-purple-400/30>''
+                <div className='text-center>''
+                  <div className='w-20 h-20 bg-gradient-to-br from-purple-400 to-indigo-500 rounded-full flex items-center justify-center mx-auto mb-6>';
+:pages.disabled/pages/services/quantum-computing-solutions.tsx'
+                    <Zap className='w-10 h-10 text-white'  /></div>''                  <h3 className='text-2xl font-bold text-white mb-4>
+                    Quantum Ready?''
+                  </h3>'                  <p className='text-slate-300 mb-6'>
+:pages.disabled/pages/services/quantum-computing-solutions.tsx;
+                    Discover how quantum computing can transform your business'
+                    operations.'</p>''                  <button className='w-full px-6 py-3 bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-purple-400 hove,
+    r:to-indigo-500 transition-all duration-200'>
+>>>>>>> main
+                    Get Assessment
+>>>>>>> main
+>>>>>>> main
                   </button>
                 </div>
               </div>
@@ -354,10 +634,11 @@ export default function QuantumComputingSolutions(...args: any[]): any {}
           </div>
         </div>
       </section>
-:pages.disabled/pages/services/quantum-computing-solutions.tsx
 <<<<<<< HEAD
+:pages.disabled/pages/services/quantum-computing-solutions.tsx
+
 "{/* CTA Section */}""
-=======
+
 "
 
       {/* CTA Section */}""
@@ -367,9 +648,9 @@ export default function QuantumComputingSolutions(...args: any[]): any {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/quantum-computing-solutions.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.6 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}""
@@ -377,46 +658,108 @@ export default function QuantumComputingSolutions(...args: any[]): any {}
             className="max-w-3xl mx-auto""
           >""
             <h2 className="text-4xl font-bold text-white mb-6">
+=======
+<<<<<<< HEAD
+:pages.disabled/pages/services/quantum-computing-solutions.tsx: '{/* CTA Section *,/}''      <section className='py-20 bg-slate-800/30'>''';
+        <div: className='container mx-auto px-4 text-center'>';
+=======
+:pages.disabled/pages/services/quantum-computing-solutions.tsx'
+'{/* CTA Section */}      <section className='py-20 bg-slate-800/30>''
+        <div className='container mx-auto px-4 text-center'>
+>>>>>>> main
+          <motion.div;
+            initial={{ opacity:  ,0, y: 20, }}
+:pages.disabled/pages/services/quantum-computing-solutions.tsx;
+<<<<<<< HEAD
+            whileInView={{ opacity:  ,1, y: 0, }}'transition={{ duration: 0.6, }}''            className='max-w-3xl: mx-auto''>''';
+            <h2: className='text-4xl font-bold text-white mb-6'>';
+:pages.disabled/pages/services/quantum-computing-solutions.tsx;
+              Ready: for the Quantum Future?'';
+            </h2>''';
+            <p: className='text-xl text-slate-300 mb-8'>';
+              Join: the quantum computing revolution and gain access to;
+              computational: power that was previously unimaginable.'';
+            </p>''';
+            <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>''';
+              <button: className='px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-purple-400: hover:to-indigo-500: transition-all duration-200 hover:scale-105: shadow-lg shadow-purple-500/20'>';
+                Start: Your Quantum Journey'</button>''              <button className='px-8 py-4 border border-purple-400/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-400/10: transition-all duration-200'>';
+                Contact: Our Experts
+=======
+            whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.6 }}            className='max-w-3xl mx-auto>'
+            <h2 className='text-4xl font-bold text-white mb-6'>
+<<<<<<< HEAD
+>>>>>>> main
 :pages.disabled/pages/services/quantum-computing-solutions.tsx
-              Ready for the Quantum Future?"
-            </h2>""
-            <p className="text-xl text-slate-300 mb-8">
+              Ready for the Quantum Future?'
+            </h2>''
+            <p className='text-xl text-slate-300 mb-8'>
               Join the quantum computing revolution and gain access to
+<<<<<<< HEAD
               computational power that was previously unimaginable."
             </p>""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">""
               <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-purple-400 hover:to-indigo-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-purple-500/20">
-<<<<<<< HEAD
+
                 Start Your Quantum Journey"</button>""
-=======
+
                 Start Your Quantum Journey"
               Ready for the Quantum Future?
             </h2>""
             <p className="text-xl text-slate-300 mb-8">
+=======
+              computational power that was previously unimaginable.'
+            </p>''
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
+              <button className='px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-purple-400 hover:to-indigo-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-purple-500/20'>
+                Start Your Quantum Journey'</button>''              <button className='px-8 py-4 border border-purple-400/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-400/10 transition-all duration-200'>
+=======
+:pages.disabled/pages/services/quantum-computing-solutions.tsx;
+              Ready for the Quantum Future?''
+            </h2>'''
+            <p className='text-xl text-slate-300 mb-8'>
+>>>>>>> main
               Join the quantum computing revolution and gain access to;
-              computational power that was previously unimaginable.
-            </p>""
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
-              <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-purple-400 hover:to-indigo-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-purple-500/20">
-                Start Your Quantum Journey;
-              </button>""
->>>>>>> pr-10728
-              <button className="px-8 py-4 border border-purple-400/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-400/10 transition-all duration-200">
-                Contact Our Experts;
+              computational power that was previously unimaginable.''
+            </p>'''
+            <div className='flex flex-col sm: flex-row gap-4 justify-center>''
+              <button className='px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-purple-400 hover:to-indigo-500 transition-all duration-200 hove,
+    r:scale-105 shadow-lg shadow-purple-500/20>
+                Start Your Quantum Journey'</button>''              <button className='px-8 py-4 border border-purple-400/30 text-purple-400 font-semibold rounded-lg hove,
+    r:bg-purple-400/10 transition-all duration-200'>
+>>>>>>> main
+                Contact Our Experts
+>>>>>>> main
               </button>
             </div>
           </motion.div>
         </div>
       </section>
     </div>
-:pages.disabled/pages/services/quantum-computing-solutions.tsx
 <<<<<<< HEAD
+:pages.disabled/pages/services/quantum-computing-solutions.tsx
+
   )}
   '"
 '"'"
-=======
+
   )}'"
 '"'"
   )}
 '""
 >>>>>>> pr-10728
+=======
+<<<<<<< HEAD
+:pages.disabled/pages/services/quantum-computing-solutions.tsx,)}
+  '';';
+''''';
+=======
+:pages.disabled/pages/services/quantum-computing-solutions.tsx)}
+<<<<<<< HEAD
+  ''
+''''
+=======
+  '';
+'''''
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

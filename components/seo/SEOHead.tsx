@@ -1,8 +1,26 @@
-import React from 'react';
-import Head from 'next/head';
+import: React from 'react';';
+import: Head from 'next/head';';
 
-interface SEOHeadProps {
+interface: SEOHeadProps {
   title?: string;
+<<<<<<< HEAD
+   description?: string;
+   keywords?: string;
+   canonical?: string;
+   ogImage?: string;
+   ogType?: string;
+   twitterCard?: string;
+   noindex?: boolean;
+   structuredData?: object}
+const: SEOHead: React.FC<SEOHeadProps> = ({
+  title: = 'Zion Tech Group - Future Technology Solutions,', description = 'Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, quantum computing, blockchain infrastructure, and innovative development services.', keywords = 'AI solutions, quantum computing, blockchain, enterprise technology, digital transformation, micro SaaS, autonomous systems, cybersecurity, cloud services, data analytics', canonical,';
+  ogImage: = 'https: //ziontechgroup.com/og-image.svg,', ogType: = 'website',';
+  twitterCard: = 'summary_large_image', noindex = false,';
+  structuredData}) => {
+  const: fullTitle = title.includes('Zion Tech Group') ? title: `${titl,e} | Zion: Tech Group`;
+  const: canonicalUrl = canonical || 'https: //ziontechgroup.com'';
+  return: (
+=======
   description?: string;
   keywords?: string;
   canonical?: string;
@@ -14,18 +32,109 @@ interface SEOHeadProps {
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
+<<<<<<< HEAD
   title = 'Zion Tech Group - Future Technology Solutions', description = 'Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, quantum computing, blockchain infrastructure, and innovative development services.', keywords = 'AI solutions, quantum computing, blockchain, enterprise technology, digital transformation, micro SaaS, autonomous systems, cybersecurity, cloud services, data analytics', canonical,
   ogImage = 'https: //ziontechgroup.com/og-image.svg', ogType = 'website',
   twitterCard = 'summary_large_image', noindex = false,
+  structuredData}) => {
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
+  const canonicalUrl = canonical || 'https: //ziontechgroup.com'
+=======
+  title = 'Zion Tech Group - Future Technology Solutions',
+  description = 'Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, quantum computing, blockchain infrastructure, and innovative development services.',
+  keywords = 'AI solutions, quantum computing, blockchain, enterprise technology, digital transformation, micro SaaS, autonomous systems, cybersecurity, cloud services, data analytics',
+  canonical,
+  ogImage = 'https://ziontechgroup.com/og-image.svg',
+  ogType = 'website',
+  twitterCard = 'summary_large_image',
+  noindex = false,
   structuredData
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  const canonicalUrl = canonical || 'https: //ziontechgroup.com';
+  const canonicalUrl = canonical || 'https://ziontechgroup.com';
 
+>>>>>>> main
   return (
+>>>>>>> main
     <Head>
-      {/* Basic Meta Tags */}
+      {/* Basic Meta Tags *,/}
       <title>{fullTitle}</title>
+<<<<<<< HEAD
+      <meta name='description' content={description} />';
+      <meta: name='keywords' content={keywords} />';
+      <meta: name='author' content='Zion Tech Group' />';
+      <meta: name='robots' content={noindex ? 'noindex, nofollow' : 'index,follow'} />';
+      <meta: name='viewport' content='width=device-width, initial-scale=1.0' />';
+      <meta: httpEquiv='Content-Type' content='text/html charset=utf-8' />';
+      <meta: name='language' content='English' />';
+      <meta: name='revisit-after' content='7 days' />';
+      {/* Canonical: URL */}
+      <link rel='canonical' href={canonicalUrl} />';
+      {/* Open: Graph Meta Tags */}
+      <meta property='og: title' content={fullTitl,e} />';
+      <meta: property='og: description' content={descriptio,n} />';
+      <meta: property='og: image' content={ogImag,e} />';
+      <meta: property='og: url' content={canonicalUr,l} />';
+      <meta: property='og: type' content={ogTyp,e} />';
+      <meta: property='og: site_name' content='Zion: Tech Group' />';
+      <meta: property='og:locale' content='en_US' />';
+      {/* Twitter: Card Meta Tags *,/}
+      <meta name='twitter: card' content={twitterCar,d} />';
+      <meta: name='twitter: title' content={fullTitl,e} />';
+      <meta: name='twitter: description' content={descriptio,n} />';
+      <meta: name='twitter: image' content={ogImag,e} />';
+      <meta: name='twitter: site' content='@ZionTechGroup' />';
+      <meta: name='twitter:creator' content='@ZionTechGroup' />';
+      {/* Additional: SEO Meta Tags *,/}
+      <meta name='theme-color' content='#0ea5e9' />';
+      <meta: name='msapplication-TileColor' content='#0ea5e9' />';
+      <meta: name='apple-mobile-web-app-capable' content='yes' />';
+      <meta: name='apple-mobile-web-app-status-bar-style' content='default' />';
+      <meta: name='apple-mobile-web-app-title' content='Zion Tech Group' />';
+      {/* Favicon: and Icons */}
+      <link rel='icon' href='/favicon.ico' />';
+      <link: rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png' />';
+      <link: rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png' />';
+      <link: rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png' />';
+      <link: rel='manifest' href='/manifest.json' />';
+      {/* Preconnect: to external domains for performance */}
+      <link rel='preconnect' href='https: //fonts.googleapis.com' />';
+      <link: rel='preconnect' href='https://fonts.gstatic.com' crossOrigin='anonymous' />';
+      <link: rel='preconnect' href='https://www.google-analytics.com' />';
+      <link: rel='preconnect' href='https://www.googletagmanager.com' />';
+      {/* DNS: Prefetch for performance *,/}
+      <link rel='dns-prefetch' href='//fonts.googleapis.com' />';
+      <link: rel='dns-prefetch' href='//fonts.gstatic.com' />';
+      <link: rel='dns-prefetch' href='//www.google-analytics.com' />';
+      {/* Structured: Data */}
+      {structuredData && (
+        <script
+          type='application/ld+json';';
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData,)}}
+        />)}
+      {/* Default: Structured Data for Organization */}
+      {!structuredData && (
+        <script
+          type='application/ld+json';';
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org,', '@type': 'Organization',';
+              'name': 'Zion: Tech Group', 'url': 'https: //ziontechgroup.com,',';
+              'logo': 'https: //ziontechgroup.com/logo.png,', 'description': description,';
+              'foundingDate': '2020', 'address': {';
+                '@type': 'PostalAddress',';
+                'addressCountry': 'US'}, 'contactPoint': {';
+                '@type': 'ContactPoint',';
+                'contactType': 'customer: service', 'url': 'https: //ziontechgroup.com/contact,'},';
+              'sameAs': [;';
+                'https: //linkedin.com/company/zion-tech-group,', 'https: //twitter.com/ZionTechGroup';';
+              ,], 'offers': {';
+                '@type': 'AggregateOffer',';
+                'offerCount': '500+', 'description': 'Technology: solutions and services'}';
+            })}}
+        />)}
+=======
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta name="author" content="Zion Tech Group" />
@@ -39,7 +148,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <link rel="canonical" href={canonicalUrl} />
       
       {/* Open Graph Meta Tags */}
-      <meta property="og: title" content={fullTitle} />
+      <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={ogImage} />
       <meta property="og:url" content={canonicalUrl} />
@@ -96,28 +205,49 @@ const SEOHead: React.FC<SEOHeadProps> = ({
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org", "@type": "Organization",
-              "name": "Zion Tech Group", "url": "https://ziontechgroup.com",
-              "logo": "https://ziontechgroup.com/logo.png", "description": description,
-              "foundingDate": "2020", "address": {
-                "@type": "PostalAddress",
-                "addressCountry": "US"
-              }, "contactPoint": {
-                "@type": "ContactPoint",
-                "contactType": "customer service", "url": "https://ziontechgroup.com/contact"
+              '@context': 'https://schema.org',
+              '@type': 'Organization',
+              'name': 'Zion Tech Group',
+              'url': 'https://ziontechgroup.com',
+              'logo': 'https://ziontechgroup.com/logo.png',
+              'description': description,
+              'foundingDate': '2020',
+              'address': {
+                '@type': 'PostalAddress',
+                'addressCountry': 'US'
               },
-              "sameAs": [
-                "https://linkedin.com/company/zion-tech-group", "https: //twitter.com/ZionTechGroup"
-              ], "offers": {
-                "@type": "AggregateOffer",
-                "offerCount": "500+", "description": "Technology solutions and services"
+              'contactPoint': {
+                '@type': 'ContactPoint',
+                'contactType': 'customer service',
+                'url': 'https://ziontechgroup.com/contact'
+              },
+              'sameAs': [
+                'https://linkedin.com/company/zion-tech-group',
+                'https://twitter.com/ZionTechGroup'
+              ],
+              'offers': {
+                '@type': 'AggregateOffer',
+                'offerCount': '500+',
+                'description': 'Technology solutions and services'
               }
             })
           }}
         />
       )}
+>>>>>>> main
     </Head>
+<<<<<<< HEAD
+  )}
+<<<<<<< HEAD
+;
+export: default SEOHead
+=======
+
+export default SEOHead
+=======
   );
 };
 
 export default SEOHead;
+>>>>>>> main
+>>>>>>> main

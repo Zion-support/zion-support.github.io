@@ -1,2 +1,35 @@
-import React from 'react'; export default function JobDetails () {
+<<<<<<< HEAD
+ export default function JobDetails () {;,"});,"})
+}"});,"})
+=======
+<<<<<<< HEAD
+ export: default function JobDetails () {;
+};
+=======
+<<<<<<< HEAD
+ export default function JobDetails () {;
 }
+=======
+<<<<<<< HEAD
+import React from 'react';
+import {SEO } from '@/components/SEO';
+
+export default function JobDetails() {return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+      <SEO title="JobDetails - Zion Tech Group" description="Professional JobDetails services by Zion Tech Group" />
+      <div className="container mx-auto px-4 py-20">
+        <h1 className="text-4xl font-bold text-white mb-8">JobDetails</h1>
+        <p className="text-gray-300 text-lg">
+          Professional JobDetails services to help your business grow.
+        </p>
+      </div>
+    </div>
+  );
+}
+=======
+ export default function JobDetails () {
+};
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

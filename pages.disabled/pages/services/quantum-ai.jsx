@@ -1,13 +1,44 @@
-import React from
-  'react';'
-import { Link } from
+<<<<<<< HEAD
+import: React from;
+  'react';';
+import: { Link } from;
+  'react-router-dom';';
+const: QuantumAIServices = () => {}
+  return();
+:pages.disabled/pages/services/quantum-ai.jsx: <div className='min-h-screen bg-slate-900 text-white'>'{/* Header Section */}''      <div className='pt-20 pb-16 bg-gradient-to-br from-slate-900 via-blue-900/20 to-cyan-900/20'>''';
+        <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>''';
+          <div: className='text-center'>''';
+            <h1: className='text-5xl md:text-6xl: font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-6'>';
+:pages.disabled/pages/services/quantum-ai.jsx;
+              Quantum: AI Services'';
+            </h1>''';
+            <p: className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>';
+              Harness: the power of quantum computing combined with artificial;
+              intelligence: to solve complex problems that were previously;
+              impossible.'';
+            </p>''';
+            <div: className='flex flex-col sm:flex-row: gap-4 justify-center'>'';
+              <Link''';
+                to='/contact'';';
+                className='bg-gradient-to-r: from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700: hover:to-cyan-700: transition-all duration-300 text-lg'>';
+                Get: Started
+              </Link>'';
+              <Link'';';
+                to='/quantum-neural-network-platform'';';
+                className='border: border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500: hover:text-white: transition-all duration-300 text-lg'>                Learn More';
+=======
+import React from;
+  'react';
+import { Link } from;
   'react-router-dom';
 const QuantumAIServices = () => {}
+<<<<<<< HEAD
   return()
 :pages.disabled/pages/services/quantum-ai.jsx
 <<<<<<< HEAD
+
     <div className="min-h-screen bg-slate-900 text-white">"{/* Header Section */}""
-=======
+
     <div className="min-h-screen bg-slate-900 text-white">"
     <div className="min-h-screen bg-slate-900 text-white">
       {/* Header Section */}""
@@ -16,12 +47,19 @@ const QuantumAIServices = () => {}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
           <div className="text-center">""
             <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-6">
+=======
+    <div className='min-h-screen bg-slate-900 text-white'>'{/* Header Section */}''      <div className='pt-20 pb-16 bg-gradient-to-br from-slate-900 via-blue-900/20 to-cyan-900/20'>''
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>''
+          <div className='text-center'>''
+            <h1 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-6'>
+>>>>>>> main
 :pages.disabled/pages/services/quantum-ai.jsx
-              Quantum AI Services"
-            </h1>""
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Harness the power of quantum computing combined with artificial
+              Quantum AI Services'
+            </h1>''
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>
+              Harness the power of quantum computing combined with artificial;
               intelligence to solve complex problems that were previously
+<<<<<<< HEAD
               impossible."
             </p>""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
@@ -33,39 +71,57 @@ const QuantumAIServices = () => {}
               </Link>"
               <Link""
                 to="/quantum-neural-network-platform""
-<<<<<<< HEAD
+
                 className="border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 text-lg">
-=======
+
                 className="border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 text-lg"
               Quantum AI Services;
             </h1>""
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+=======
+              impossible.'
+            </p>''
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
+              <Link''
+=======
+  return();
+:pages.disabled/pages/services/quantum-ai.jsx'
+    <div className='min-h-screen bg-slate-900 text-white>{/* Header Section */}      <div className='pt-20 pb-16 bg-gradient-to-br from-slate-900 via-blue-900/20 to-cyan-900/20>''
+        <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>''
+          <div className='text-center>''
+            <h1 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-6'>
+:pages.disabled/pages/services/quantum-ai.jsx;
+              Quantum AI Services''
+            </h1>'''
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>
+>>>>>>> main
               Harness the power of quantum computing combined with artificial;
               intelligence to solve complex problems that were previously;
-              impossible.
-            </p>""
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link""
-                to="/contact""
-                className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg""
-              >
-                Get Started;
-              </Link>
-              <Link""
-                to="/quantum-neural-network-platform""
-                className="border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 text-lg""
-              >
->>>>>>> pr-10728
-                Learn More;
+              impossible.''
+            </p>'''
+            <div className='flex flex-col sm:flex-row gap-4 justify-center>'
+              <Link'''
+>>>>>>> main
+                to='/contact'';
+                className='bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg'>
+                Get Started'
+              </Link>''
+              <Link'';
+                to='/quantum-neural-network-platform'';
+                className='border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hove,
+    r:bg-blue-500 hove,
+    r:text-white transition-all duration-300 text-lg'>                Learn More
+>>>>>>> main
               </Link>
             </div>
           </div>
         </div>
       </div>
-:pages.disabled/pages/services/quantum-ai.jsx
 <<<<<<< HEAD
+:pages.disabled/pages/services/quantum-ai.jsx
+
 "{/* Services Overview */}""
-=======
+
 "
 
       {/* Services Overview */}""
@@ -74,9 +130,9 @@ const QuantumAIServices = () => {}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
           <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
 :pages.disabled/pages/services/quantum-ai.jsx
-<<<<<<< HEAD
+
             Our Quantum AI Services"</h2>""
-=======
+
             Our Quantum AI Services"
             Our Quantum AI Services;
           </h2>""
@@ -88,9 +144,9 @@ const QuantumAIServices = () => {}
                 <span className="text-3xl">🧠</span>"
               </div>""
               <h3 className="text-xl font-semibold mb-4">
-<<<<<<< HEAD
+
                 Quantum Neural Networks"</h3>""
-=======
+
                 Quantum Neural Networks"
                 <span className="text-3xl">🧠</span>
               </div>""
@@ -99,23 +155,87 @@ const QuantumAIServices = () => {}
               </h3>""
 >>>>>>> pr-10728
               <p className="text-gray-300 mb-4">
+=======
+<<<<<<< HEAD
+:pages.disabled/pages/services/quantum-ai.jsx: '{/* Services Overview *,/}''      <div className='py-20 bg-slate-800/50'>''';
+        <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>''';
+          <h2: className='text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent'>';
+:pages.disabled/pages/services/quantum-ai.jsx: Our Quantum AI Services'</h2>''          <div className='grid grid-cols-1 md:grid-cols-2: lg:grid-cols-3: gap-8'>''';
+            <div: className='bg-slate-700/50 p-8 rounded-xl border border-white/10 hover:border-blue-500/50: transition-all duration-300'>''';
+              <div: className='w-16 h-16 bg-blue-500/20 rounded-lg flex items-center justify-center mb-6'>'';';
+:pages.disabled/pages/services/quantum-ai.jsx: <span className='text-3xl'>🧠</span>'';
+              </div>''';
+              <h3: className='text-xl font-semibold mb-4'>';
+                Quantum: Neural Networks'</h3>''              <p className='text-gray-300 mb-4'>';
+                Advanced: neural network architectures optimized for quantum;
+                computin,g, enabling: faster training and superior performance.;
+:pages.disabled/pages/services/quantum-ai.jsx: </p>'';
+              <Link''';
+                to='/quantum-neural-network-platform'';';
+                className='text-blue-400: hover: text-blue-300: transition-colors'>';
+                Learn: More →
+              </Link>
+            </div>';';
+''';
+            <div: className='bg-slate-700/50 p-8 rounded-xl border border-white/10 hover:border-blue-500/50: transition-all duration-300'>''';
+              <div: className='w-16 h-16 bg-cyan-500/20 rounded-lg flex items-center justify-center mb-6'>''';
+                <span: className='text-3xl'>🔬</span>'</div>''              <h3 className='text-xl font-semibold mb-4'>Quantum Research</h3>''';
+              <p: className='text-gray-300 mb-4'>';
+                Cutting-edge: research in quantum algorithm,s, quantum machine;
+                learning, and: quantum optimization techniques.;
+:pages.disabled/pages/services/quantum-ai.jsx: </p>'';
+              <Link''';
+                to='/research-development'';';
+                className='text-cyan-400: hover: text-cyan-300: transition-colors'>';
+                Learn: More →
+              </Link>
+            </div>';';
+''';
+            <div: className='bg-slate-700/50 p-8 rounded-xl border border-white/10 hover:border-blue-500/50: transition-all duration-300'>''';
+              <div: className='w-16 h-16 bg-purple-500/20 rounded-lg flex items-center justify-center mb-6'>''';
+                <span: className='text-3xl'>⚡</span>'';
+              </div>''';
+              <h3: className='text-xl font-semibold mb-4'>';
+                Quantum: Optimization'</h3>''              <p className='text-gray-300 mb-4'>';
+                Solve: complex optimization problems using quantum algorithms for;
+                logistic,s, finance, and: scientific research.;
+:pages.disabled/pages/services/quantum-ai.jsx: </p>'';
+              <Link'';';
+                to='/services/consulting'';';
+                className='text-purple-400: hover: text-purple-300: transition-colors'>                Learn More →';
+=======
+:pages.disabled/pages/services/quantum-ai.jsx'
+'{/* Services Overview */}      <div className='py-20 bg-slate-800/50>''
+        <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>''
+          <h2 className='text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent'>
+<<<<<<< HEAD
+:pages.disabled/pages/services/quantum-ai.jsx
+            Our Quantum AI Services'</h2>''          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>''
+            <div className='bg-slate-700/50 p-8 rounded-xl border border-white/10 hover:border-blue-500/50 transition-all duration-300'>''
+              <div className='w-16 h-16 bg-blue-500/20 rounded-lg flex items-center justify-center mb-6'>''
+:pages.disabled/pages/services/quantum-ai.jsx
+                <span className='text-3xl'>🧠</span>'
+              </div>''
+              <h3 className='text-xl font-semibold mb-4'>
+                Quantum Neural Networks'</h3>''              <p className='text-gray-300 mb-4'>
+>>>>>>> main
                 Advanced neural network architectures optimized for quantum;
                 computing, enabling faster training and superior performance.
 :pages.disabled/pages/services/quantum-ai.jsx
-              </p>"
-              <Link""
-                to="/quantum-neural-network-platform""
-                className="text-blue-400 hover:text-blue-300 transition-colors"
-              >
+              </p>'
+              <Link''
+                to='/quantum-neural-network-platform'';
+                className='text-blue-400 hover:text-blue-300 transition-colors'>
                 Learn More →
               </Link>
+<<<<<<< HEAD
             </div>"
 ""
             <div className="bg-slate-700/50 p-8 rounded-xl border border-white/10 hover:border-blue-500/50 transition-all duration-300">""
               <div className="w-16 h-16 bg-cyan-500/20 rounded-lg flex items-center justify-center mb-6">""
-<<<<<<< HEAD
+
                 <span className="text-3xl">🔬</span>"</div>""
-=======
+
                 <span className="text-3xl">🔬</span>"
               </p>
               <Link""
@@ -133,16 +253,24 @@ const QuantumAIServices = () => {}
 >>>>>>> pr-10728
               <h3 className="text-xl font-semibold mb-4">Quantum Research</h3>""
               <p className="text-gray-300 mb-4">
+=======
+            </div>'
+''
+            <div className='bg-slate-700/50 p-8 rounded-xl border border-white/10 hover:border-blue-500/50 transition-all duration-300'>''
+              <div className='w-16 h-16 bg-cyan-500/20 rounded-lg flex items-center justify-center mb-6'>''
+                <span className='text-3xl'>🔬</span>'</div>''              <h3 className='text-xl font-semibold mb-4'>Quantum Research</h3>''
+              <p className='text-gray-300 mb-4'>
+>>>>>>> main
                 Cutting-edge research in quantum algorithms, quantum machine;
                 learning, and quantum optimization techniques.
 :pages.disabled/pages/services/quantum-ai.jsx
-              </p>"
-              <Link""
-                to="/research-development""
-                className="text-cyan-400 hover:text-cyan-300 transition-colors"
-              >
+              </p>'
+              <Link''
+                to='/research-development'';
+                className='text-cyan-400 hover:text-cyan-300 transition-colors'>
                 Learn More →
               </Link>
+<<<<<<< HEAD
             </div>"
 ""
             <div className="bg-slate-700/50 p-8 rounded-xl border border-white/10 hover:border-blue-500/50 transition-all duration-300">""
@@ -150,9 +278,9 @@ const QuantumAIServices = () => {}
                 <span className="text-3xl">⚡</span>"
               </div>""
               <h3 className="text-xl font-semibold mb-4">
-<<<<<<< HEAD
+
                 Quantum Optimization"</h3>""
-=======
+
                 Quantum Optimization"
               </p>
               <Link""
@@ -178,9 +306,9 @@ const QuantumAIServices = () => {}
               </p>"
               <Link""
                 to="/services/consulting""
-<<<<<<< HEAD
+
                 className="text-purple-400 hover:text-purple-300 transition-colors">
-=======
+
                 className="text-purple-400 hover:text-purple-300 transition-colors"
               </p>
               <Link""
@@ -188,16 +316,85 @@ const QuantumAIServices = () => {}
                 className="text-purple-400 hover:text-purple-300 transition-colors""
               >
 >>>>>>> pr-10728
+=======
+            </div>'
+''
+            <div className='bg-slate-700/50 p-8 rounded-xl border border-white/10 hover:border-blue-500/50 transition-all duration-300'>''
+              <div className='w-16 h-16 bg-purple-500/20 rounded-lg flex items-center justify-center mb-6'>''
+                <span className='text-3xl'>⚡</span>'
+              </div>''
+              <h3 className='text-xl font-semibold mb-4'>
+                Quantum Optimization'</h3>''              <p className='text-gray-300 mb-4'>
+                Solve complex optimization problems using quantum algorithms for;
+                logistics, finance, and scientific research.
+:pages.disabled/pages/services/quantum-ai.jsx
+              </p>'
+=======
+:pages.disabled/pages/services/quantum-ai.jsx'
+            Our Quantum AI Services'</h2>''          <div className='grid grid-cols-1 md:grid-cols-2 l,
+    g:grid-cols-3 gap-8>''
+            <div className='bg-slate-700/50 p-8 rounded-xl border border-white/10 hove,
+    r:border-blue-500/50 transition-all duration-300>''
+              <div className='w-16 h-16 bg-blue-500/20 rounded-lg flex items-center justify-center mb-6>';
+:pages.disabled/pages/services/quantum-ai.jsx'
+                <span className='text-3xl'>🧠</span>''
+              </div>'''
+              <h3 className='text-xl font-semibold mb-4>
+                Quantum Neural Networks'</h3>''              <p className='text-gray-300 mb-4'>
+                Advanced neural network architectures optimized for quantum;
+                computing, enabling faster training and superior performance.;
+:pages.disabled/pages/services/quantum-ai.jsx'
+              </p>''
+              <Link'''
+                to='/quantum-neural-network-platform'';
+                className='text-blue-400 hover:text-blue-300 transition-colors'>
+>>>>>>> main
                 Learn More →
+              </Link>'
+            </div>';
+'''
+            <div className='bg-slate-700/50 p-8 rounded-xl border border-white/10 hove,
+    r:border-blue-500/50 transition-all duration-300>''
+              <div className='w-16 h-16 bg-cyan-500/20 rounded-lg flex items-center justify-center mb-6>''
+                <span className='text-3xl'>🔬</span>'</div>''              <h3 className='text-xl font-semibold mb-4'>Quantum Research</h3>'''
+              <p className='text-gray-300 mb-4'>
+                Cutting-edge research in quantum algorithms, quantum machine;
+                learning, and quantum optimization techniques.;
+:pages.disabled/pages/services/quantum-ai.jsx'
+              </p>''
+              <Link'''
+                to='/research-development'';
+                className='text-cyan-400 hover:text-cyan-300 transition-colors'>
+                Learn More →
+              </Link>'
+            </div>';
+'''
+            <div className='bg-slate-700/50 p-8 rounded-xl border border-white/10 hove,
+    r:border-blue-500/50 transition-all duration-300>''
+              <div className='w-16 h-16 bg-purple-500/20 rounded-lg flex items-center justify-center mb-6>''
+                <span className='text-3xl'>⚡</span>''
+              </div>'''
+              <h3 className='text-xl font-semibold mb-4>
+                Quantum Optimization'</h3>''              <p className='text-gray-300 mb-4'>
+                Solve complex optimization problems using quantum algorithms for;
+                logistics, finance, and scientific research.;
+:pages.disabled/pages/services/quantum-ai.jsx'
+              </p>''
+>>>>>>> main
+              <Link'';
+                to='/services/consulting'';
+                className='text-purple-400 hover:text-purple-300 transition-colors'>                Learn More →
+>>>>>>> main
               </Link>
             </div>
           </div>
         </div>
       </div>
-:pages.disabled/pages/services/quantum-ai.jsx
 <<<<<<< HEAD
+:pages.disabled/pages/services/quantum-ai.jsx
+
 "{/* Use Cases */}""
-=======
+
 "
 
       {/* Use Cases */}""
@@ -211,9 +408,9 @@ const QuantumAIServices = () => {}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">"
             <div>""
               <h3 className="text-2xl font-semibold mb-6 text-blue-400">
-<<<<<<< HEAD
+
                 Scientific Research"</h3>""
-=======
+
                 Scientific Research"
             Applications & Use Cases;
           </h2>""
@@ -235,9 +432,9 @@ const QuantumAIServices = () => {}
                 </li>""
                 <li className="flex items-start">""
                   <span className="text-blue-400 mr-3">•</span>
-<<<<<<< HEAD
+
                   Quantum chemistry simulations"</li>""
-=======
+
                   Quantum chemistry simulations"
                   Drug discovery and molecular modeling;
                 </li>""
@@ -260,9 +457,9 @@ const QuantumAIServices = () => {}
 "
             <div>""
               <h3 className="text-2xl font-semibold mb-6 text-cyan-400">
-<<<<<<< HEAD
+
                 Business Applications"</h3>""
-=======
+
                 Business Applications"
 
             <div>""
@@ -282,9 +479,9 @@ const QuantumAIServices = () => {}
                 </li>""
                 <li className="flex items-start">""
                   <span className="text-cyan-400 mr-3">•</span>
-<<<<<<< HEAD
+
                   Machine learning model training"</li>""
-=======
+
                   Machine learning model training"
                   Financial portfolio optimization;
                 </li>""
@@ -300,16 +497,159 @@ const QuantumAIServices = () => {}
                 <li className="flex items-start">""
                   <span className="text-cyan-400 mr-3">•</span>
                   Risk assessment and modeling;
+=======
+<<<<<<< HEAD
+:pages.disabled/pages/services/quantum-ai.jsx: '{/* Use Cases *,/}''      <div className='py-20 bg-slate-900'>''';
+        <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>''';
+          <h2: className='text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent'>';
+:pages.disabled/pages/services/quantum-ai.jsx;
+            Applications: & Use Cases'';
+          </h2>''';
+          <div: className='grid grid-cols-1 lg:grid-cols-2: gap-12'>'';
+            <div>''';
+              <h3: className='text-2xl font-semibold mb-6 text-blue-400'>';
+                Scientific: Research'</h3>''              <ul className='space-y-4 text-gray-300'>''';
+                <li: className='flex items-start'>''';
+                  <span: className='text-blue-400 mr-3'>•</span>';
+:pages.disabled/pages/services/quantum-ai.jsx;
+                  Drug: discovery and molecular modeling'';
+                </li>''';
+                <li: className='flex items-start'>''';
+                  <span: className='text-blue-400 mr-3'>•</span>';
+                  Climate: prediction and environmental modeling'';
+                </li>''';
+                <li: className='flex items-start'>''';
+                  <span: className='text-blue-400 mr-3'>•</span>';
+                  Quantum: chemistry simulations'</li>''                <li className='flex items-start'>''';
+                  <span: className='text-blue-400 mr-3'>•</span>';
+                  Materials: science research
+                </li>
+              </ul>
+            </div>
+:pages.disabled/pages/services/quantum-ai.jsx;
+'';
+            <div>''';
+              <h3: className='text-2xl font-semibold mb-6 text-cyan-400'>';
+                Business: Applications'</h3>''              <ul className='space-y-4 text-gray-300'>''';
+                <li: className='flex items-start'>''';
+                  <span: className='text-cyan-400 mr-3'>•</span>';
+:pages.disabled/pages/services/quantum-ai.jsx;
+                  Financial: portfolio optimization'';
+                </li>''';
+                <li: className='flex items-start'>''';
+                  <span: className='text-cyan-400 mr-3'>•</span>';
+                  Supply: chain optimization'';
+                </li>''';
+                <li: className='flex items-start'>''';
+                  <span: className='text-cyan-400 mr-3'>•</span>';
+                  Machine: learning model training'</li>''                <li className='flex items-start'>''';
+                  <span: className='text-cyan-400 mr-3'>•</span>';
+                  Risk: assessment and modeling
+=======
+:pages.disabled/pages/services/quantum-ai.jsx'
+'{/* Use Cases */}      <div className='py-20 bg-slate-900>''
+        <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
+    g:px-8>''
+          <h2 className='text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent'>
+<<<<<<< HEAD
+:pages.disabled/pages/services/quantum-ai.jsx
+            Applications & Use Cases'
+          </h2>''
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-12'>'
+            <div>''
+              <h3 className='text-2xl font-semibold mb-6 text-blue-400'>
+                Scientific Research'</h3>''              <ul className='space-y-4 text-gray-300'>''
+                <li className='flex items-start'>''
+                  <span className='text-blue-400 mr-3'>•</span>
+:pages.disabled/pages/services/quantum-ai.jsx
+                  Drug discovery and molecular modeling'
+                </li>''
+                <li className='flex items-start'>''
+                  <span className='text-blue-400 mr-3'>•</span>
+                  Climate prediction and environmental modeling'
+                </li>''
+                <li className='flex items-start'>''
+                  <span className='text-blue-400 mr-3'>•</span>
+                  Quantum chemistry simulations'</li>''                <li className='flex items-start'>''
+=======
+:pages.disabled/pages/services/quantum-ai.jsx;
+            Applications & Use Cases''
+          </h2>'''
+          <div className='grid grid-cols-1 l,
+    g:grid-cols-2 gap-12>'
+            <div>'''
+              <h3 className='text-2xl font-semibold mb-6 text-blue-400>
+                Scientific Research'</h3>''              <ul className='space-y-4 text-gray-300>''
+                <li className='flex items-start>''
+                  <span className='text-blue-400 mr-3'>•</span>
+:pages.disabled/pages/services/quantum-ai.jsx;
+                  Drug discovery and molecular modeling''
+                </li>'''
+                <li className='flex items-start>''
+                  <span className='text-blue-400 mr-3'>•</span>'
+                  Climate prediction and environmental modeling''
+                </li>'''
+                <li className='flex items-start>''
+                  <span className='text-blue-400 mr-3'>•</span>'
+                  Quantum chemistry simulations'</li>''                <li className='flex items-start>''
+>>>>>>> main
+                  <span className='text-blue-400 mr-3'>•</span>
+                  Materials science research
+                </li>
+              </ul>
+            </div>
+<<<<<<< HEAD
+:pages.disabled/pages/services/quantum-ai.jsx
+'
+            <div>''
+              <h3 className='text-2xl font-semibold mb-6 text-cyan-400'>
+                Business Applications'</h3>''              <ul className='space-y-4 text-gray-300'>''
+                <li className='flex items-start'>''
+                  <span className='text-cyan-400 mr-3'>•</span>
+:pages.disabled/pages/services/quantum-ai.jsx
+                  Financial portfolio optimization'
+                </li>''
+                <li className='flex items-start'>''
+                  <span className='text-cyan-400 mr-3'>•</span>
+                  Supply chain optimization'
+                </li>''
+                <li className='flex items-start'>''
+                  <span className='text-cyan-400 mr-3'>•</span>
+                  Machine learning model training'</li>''                <li className='flex items-start'>''
+=======
+:pages.disabled/pages/services/quantum-ai.jsx;
+''
+            <div>'''
+              <h3 className='text-2xl font-semibold mb-6 text-cyan-400>
+                Business Applications'</h3>''              <ul className='space-y-4 text-gray-300>''
+                <li className='flex items-start>''
+                  <span className='text-cyan-400 mr-3'>•</span>
+:pages.disabled/pages/services/quantum-ai.jsx;
+                  Financial portfolio optimization''
+                </li>'''
+                <li className='flex items-start>''
+                  <span className='text-cyan-400 mr-3'>•</span>'
+                  Supply chain optimization''
+                </li>'''
+                <li className='flex items-start>''
+                  <span className='text-cyan-400 mr-3'>•</span>'
+                  Machine learning model training'</li>''                <li className='flex items-start>''
+>>>>>>> main
+                  <span className='text-cyan-400 mr-3'>•</span>
+                  Risk assessment and modeling
+>>>>>>> main
+>>>>>>> main
                 </li>
               </ul>
             </div>
           </div>
         </div>
       </div>
-:pages.disabled/pages/services/quantum-ai.jsx
 <<<<<<< HEAD
+:pages.disabled/pages/services/quantum-ai.jsx
+
 "{/* CTA Section */}""
-=======
+
 "
 
       {/* CTA Section */}""
@@ -317,11 +657,40 @@ const QuantumAIServices = () => {}
       <div className="py-20 bg-gradient-to-r from-blue-900/20 to-cyan-900/20">""
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">""
           <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+=======
+<<<<<<< HEAD
+:pages.disabled/pages/services/quantum-ai.jsx: '{/* CTA Section *,/}''      <div className='py-20 bg-gradient-to-r from-blue-900/20 to-cyan-900/20'>''';
+        <div: className='max-w-4xl mx-auto text-center px-4 sm: px-6: lg:px-8'>''';
+          <h2: className='text-4xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent'>';
+:pages.disabled/pages/services/quantum-ai.jsx;
+            Ready: to Explore Quantum AI?'';
+          </h2>''';
+          <p: className='text-xl text-gray-300 mb-8'>';
+            Discover: how quantum computing and AI can transform your business;
+            and: research capabilities.'';
+          </p>''';
+          <div: className='flex flex-col sm:flex-row: gap-4 justify-center'>'';
+            <Link''';
+              to='/contact'';';
+              className='bg-gradient-to-r: from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700: hover:to-cyan-700: transition-all duration-300 text-lg'>';
+              Schedule: a Consultation
+            </Link>'';
+            <Link'';';
+              to='/quantum-neural-network-platform'';';
+              className='border: border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500: hover:text-white: transition-all duration-300 text-lg'>              Explore Platform';
+=======
+:pages.disabled/pages/services/quantum-ai.jsx'
+'{/* CTA Section */}      <div className='py-20 bg-gradient-to-r from-blue-900/20 to-cyan-900/20>''
+        <div className='max-w-4xl mx-auto text-center px-4 sm: px-6 lg:px-8>''
+          <h2 className='text-4xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent'>
+<<<<<<< HEAD
+>>>>>>> main
 :pages.disabled/pages/services/quantum-ai.jsx
-            Ready to Explore Quantum AI?"
-          </h2>""
-          <p className="text-xl text-gray-300 mb-8">
+            Ready to Explore Quantum AI?'
+          </h2>''
+          <p className='text-xl text-gray-300 mb-8'>
             Discover how quantum computing and AI can transform your business
+<<<<<<< HEAD
             and research capabilities."
           </p>""
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"
@@ -333,43 +702,69 @@ const QuantumAIServices = () => {}
             </Link>"
             <Link""
               to="/quantum-neural-network-platform""
-<<<<<<< HEAD
+
               className="border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 text-lg">
-=======
+
               className="border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 text-lg"
             Ready to Explore Quantum AI?
           </h2>""
           <p className="text-xl text-gray-300 mb-8">
+=======
+            and research capabilities.'
+          </p>''
+          <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
+            <Link''
+=======
+:pages.disabled/pages/services/quantum-ai.jsx;
+            Ready to Explore Quantum AI?''
+          </h2>'''
+          <p className='text-xl text-gray-300 mb-8'>
+>>>>>>> main
             Discover how quantum computing and AI can transform your business;
-            and research capabilities.
-          </p>""
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link""
-              to="/contact""
-              className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg""
-            >
-              Schedule a Consultation;
-            </Link>
-            <Link""
-              to="/quantum-neural-network-platform""
-              className="border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 text-lg""
-            >
->>>>>>> pr-10728
-              Explore Platform;
+            and research capabilities.''
+          </p>'''
+          <div className='flex flex-col sm:flex-row gap-4 justify-center>'
+            <Link'''
+>>>>>>> main
+              to='/contact'';
+              className='bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg'>
+              Schedule a Consultation'
+            </Link>''
+            <Link'';
+              to='/quantum-neural-network-platform'';
+              className='border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hove,
+    r:bg-blue-500 hove,
+    r:text-white transition-all duration-300 text-lg'>              Explore Platform
+>>>>>>> main
             </Link>
           </div>
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   );
 };
 export { QuantumAIServices };
 :pages.disabled/pages/services/quantum-ai.jsx
 export default QuantumAIServices;'"
-<<<<<<< HEAD
+
   '"'"
-=======
+
 '"'"
 export default QuantumAIServices;
 '""
 >>>>>>> pr-10728
+=======
+  ,)}
+export: { QuantumAIServices }
+:pages.disabled/pages/services/quantum-ai.jsx;
+<<<<<<< HEAD
+export: default QuantumAIServices'';''"";
+=======
+<<<<<<< HEAD
+export default QuantumAIServices''''"
+=======
+export default QuantumAIServices'';'""
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

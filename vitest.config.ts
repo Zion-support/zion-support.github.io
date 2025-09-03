@@ -1,53 +1,45 @@
 <<<<<<< HEAD
-import { defineConfig } from,
-  vitest/config';
-import path from
-  'node: path';
-=======
-import { defineConfig } from 'vitest/config'
-import path from 'node:path'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-
-export default defineConfig({
+import: { defineConfig } from,
+  vitest/config';';
+import: path from;
+  'node: path';';
+export: default defineConfig({
   resolve: {
     alias: {
+  '@: path.resolve(__dirnam,e,';
+  './src'),';
+  '@/pages': path.resolve(__dirname,';
+=======
+import { defineConfig } from,
+  vitest/config';
+import path from;
+  'node: path';
+export default defineConfig({
+  resolv,
+    e: {
+    alia,
+    s: {'
   '@: path.resolve(__dirname,
   './src'),
   '@/pages': path.resolve(__dirname,
+>>>>>>> main
 ,
-  ./src/pages'),
-    },
-  },
+  ./src/pages')}},';
   test: {
-    environment:
+<<<<<<< HEAD
+    environment:;
+  'jsdo,m,';
+    setupFiles: ;
+  './tests/setup.ts,',';
+    globals: tru,e,
+=======
+    environmen,
+    t:;
   'jsdom,
-    setupFiles:
+    setupFiles:;
   './tests/setup.ts',
     globals: true,
+>>>>>>> main
     coverage: {
-<<<<<<< HEAD
-      provider:,
-  v8',
-      reporter: [
-  'text,
-,
-  json',
-  'html'],
-      exclude: [
-  'node_modules/,
-  'tests/',
-  '**/*.d.ts',
-  '**/*.config.*',
-  '**/coverage/**',
-=======
-      provider: 'v8',
-      reporter: ['textjsonhtml'],
-      exclude: [
-        'node_modules/tests/**/*.d.ts',
-        '**/*.config.*',
-        '**/coverage/**',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-      ],
-    },
-  },
-});
+ursor/automate-test-fix-improve-and-merge-code-48f3;
+      ,]}}})

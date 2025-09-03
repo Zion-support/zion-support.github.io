@@ -1,177 +1,52 @@
 <<<<<<< HEAD
-import React from
-  'react';
-import type { NextPage } from
-  'next';
-import MainLayout from
-  '../../components/layout/MainLayout';
-import { TrendingUp, Cloud, Database, Users, Zap, Shield, Target, CheckCircle } from
-  'lucide-react';
-import Link from
-  'next/link';
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/digital-transformation.tsx
 =======
-import React from 'react'
-import type { NextPage } from 'next'
-import MainLayout from '../../components/layout/MainLayout'
-import { TrendingUp, Cloud, Database, Users, Zap, Shield, Target, CheckCircle } from 'lucide-react'
-import Link from 'next/link'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
+:pages.disabled_auto/solutions/digital-transformation.tsx;
+import: React from;
+  'react';';
+import: type { NextPage } from;
+  'next';';
+import: MainLayout from;
+  '../../components/layout/MainLayout';';
+import: { TrendingUp, Cloud, Database, Users, Zap, Shield, Target, CheckCircle } from;
+  'lucide-react';';
+import: Link from;
+  'next/link';';
+import: React from 'react';';
+import: type { NextPage } from 'next';';
+import: MainLayout from '../../components/layout/MainLayout';';
+import: {
+  TrendingUp,
+  Cloud,
+  Database,
+  Users,
+  Zap,
+  Shield,
+  Target,
+  CheckCircle,
+} from 'lucide-react';';
+import: Link from 'next/link';';
+>>>>>>> main
 
-const DigitalTransformation: NextPage = () => {
+const: DigitalTransformation: NextPage: = () => {
   const transformationServices = [
+<<<<<<< HEAD
     {
 <<<<<<< HEAD
-      icon: Cloud, title:,
-  Cloud Migration', '
-      description: 'Seamlessly migrate your infrastructure to the cloud for improved scalability and cost efficiency.,'
-      benefits: [
-  'Reduced infrastructure costs', 'Improved scalability',
-  'Enhanced security', 'Better performance']
-    }, {
-      icon: Database,
-      title:, Data Modernization','
-      description: 'Transform your data architecture to support modern analytics and business intelligence., '
-      benefits: [
-  'Real-time analytics',
-  'Improved data quality', 'Better insights',
-  'Automated reporting']
-    }, {
-      icon: Users,
-      title:, Process Automation','
-      description: 'Automate repetitive tasks and workflows to improve efficiency and reduce errors., '
-      benefits: [
-  'Increased productivity',
-  'Reduced errors', 'Cost savings',
-  'Better compliance']
-    }, {
-      icon: Zap,
-      title:, AI Integration','
-      description: 'Integrate artificial intelligence into your business processes for enhanced decision making., '
-      benefits: [
-  'Predictive analytics',
-  'Automated insights', 'Improved accuracy',
-  'Competitive advantage']
-    }, {
-      icon: Shield,
-      title:, Security Enhancement','
-      description: 'Implement modern security measures to protect your digital assets and ensure compliance., '
-      benefits: [
-  'Enhanced security',
-  'Compliance assurance', 'Risk reduction',
-  'Peace of mind']
-    }, {
-      icon: Target,
-      title:, Customer Experience','
-      description: 'Improve customer interactions through digital channels and personalized experiences., '
-      benefits: [,
-  Better customer satisfaction', '
-  'Increased engagement',
-  'Higher retention', 'Improved loyalty']
+      icon: Clou,d,
 =======
-      icon: Cloud, title: 'Cloud Migration',
-      description: 'Seamlessly migrate your infrastructure to the cloud for improved scalability and cost efficiency.', benefits: ['Reduced infrastructure costsImproved scalabilityEnhanced security', 'Better performance']
-    }, {
-      icon: Database,
-      title: 'Data Modernization', description: 'Transform your data architecture to support modern analytics and business intelligence.',
-      benefits: ['Real-time analyticsImproved data qualityBetter insights', 'Automated reporting']
-    }, {
-      icon: Users,
-      title: 'Process Automation', description: 'Automate repetitive tasks and workflows to improve efficiency and reduce errors.',
-      benefits: ['Increased productivityReduced errorsCost savings', 'Better compliance']
-    }, {
-      icon: Zap,
-      title: 'AI Integration', description: 'Integrate artificial intelligence into your business processes for enhanced decision making.',
-      benefits: ['Predictive analyticsAutomated insightsImproved accuracy', 'Competitive advantage']
-    }, {
-      icon: Shield,
-      title: 'Security Enhancement', description: 'Implement modern security measures to protect your digital assets and ensure compliance.',
-      benefits: ['Enhanced securityCompliance assuranceRisk reduction', 'Peace of mind']
-    }, {
-      icon: Target,
-      title: 'Customer Experience', description: 'Improve customer interactions through digital channels and personalized experiences.',
-      benefits: ['Better customer satisfactionIncreased engagementHigher retention', 'Improved loyalty']
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-    }
-  ]
+      ico,
+    n: Cloud,
+=======
+  {
+      icon: Cloud,
+<<<<<<< HEAD
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/digital-transformation.tsx
+  ];
 
   const transformationStages = [
     {
-<<<<<<< HEAD
-      stage: 'Assessment, '
-      title:,
-  Current State Analysis', '
-      description: We analyze your current systems, processes, and technology stack to identify opportunities for improvement.,
-  , duration: '2-4 weeks'
-    },
-    {
-      stage:, Strategy','
-      title: 'Digital Strategy Development, '
-      description:,
-  We create a comprehensive digital transformation roadmap aligned with your business objectives.', '
-      duration: '3-6 weeks'
-    },
-    {
-      stage:, Implementation','
-      title: 'Solution Implementation, '
-      description:,
-  We implement the digital solutions using agile methodologies and best practices.', '
-      duration: '8-24 weeks'
-    },
-    {
-      stage:, Optimization','
-      title: 'Continuous Improvement, '
-      description:,
-  We monitor performance and continuously optimize your digital solutions for maximum impact.', '
-      duration: 'Ongoing'
-=======
-      stage: 'Assessment', title: 'Current State Analysis', description: 'We analyze your current systems, processes, and technology stack to identify opportunities for improvement.', duration: '2-4 weeks'
-    }, {
-      stage: 'Strategy', title: 'Digital Strategy Development', description: 'We create a comprehensive digital transformation roadmap aligned with your business objectives.', duration: '3-6 weeks'
-    }, {
-      stage: 'Implementation', title: 'Solution Implementation', description: 'We implement the digital solutions using agile methodologies and best practices.', duration: '8-24 weeks'
-    }, {
-      stage: 'Optimization', title: 'Continuous Improvement', description: 'We monitor performance and continuously optimize your digital solutions for maximum impact.', duration: 'Ongoing'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-    }
-  ]
-
-  const industries = [
-<<<<<<< HEAD
-    { name:, Healthcare', description: Digital health records, telemedicine, and patient management systems, '
-  },
-    { name: 'Finance, description:,'
-  Digital banking, fraud detection, and automated trading systems' }, '
-    { name: 'Manufacturing, description:, '
-  IoT integration, predictive maintenance, and supply chain optimization' },'
-    { name: 'Retail, description:,'
-  E-commerce platforms, inventory management, and customer analytics' }, '
-    { name: 'Education, description:, '
-  Learning management systems, virtual classrooms, and student analytics' },'
-    { name: 'Government, description:,'
-  Citizen services, digital governance, and public safety systems' }'
-  ];
-
-  const successMetrics = [
-    { metric: '85%, label:,'
-  Cost Reduction', description: 'Average cost savings achieved through digital transformation },
-    { metric:, 60%', label: 'Efficiency Gain, description:,
-  Improvement in operational efficiency' }, '
-    { metric: '90%, label:, '
-  Customer Satisfaction', description: 'Increase in customer satisfaction scores }, { metric:,
-  75%', label: 'Time Savings, description: 'Reduction in time-to-market for new products' }
-=======
-    { name: 'Healthcare', description: 'Digital health records, telemedicine, and patient management systems' },
-    { name: 'Finance', description: 'Digital banking, fraud detection, and automated trading systems' },
-    { name: 'Manufacturing', description: 'IoT integration, predictive maintenance, and supply chain optimization' },
-    { name: 'Retail', description: 'E-commerce platforms, inventory management, and customer analytics' },
-    { name: 'Education', description: 'Learning management systems, virtual classrooms, and student analytics' },
-    { name: 'Government', description: 'Citizen services, digital governance, and public safety systems' }
-  ]
-
-  const successMetrics = [
-    { metric: '85%', label: 'Cost Reduction', description: 'Average cost savings achieved through digital transformation' }, { metric: '60%', label: 'Efficiency Gain', description: 'Improvement in operational efficiency' },
-    { metric: '90%', label: 'Customer Satisfaction', description: 'Increase in customer satisfaction scores' }, { metric: '75%', label: 'Time Savings', description: 'Reduction in time-to-market for new products' }
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/digital-transformation.tsx
   ];
 
   return (
@@ -181,37 +56,495 @@ const DigitalTransformation: NextPage = () => {
       keywords="digital transformation, business modernization, cloud migration, process automation, AI integration, digital strategy"
     >
       <div className="min-h-screen bg-gray-50">
+=======
+>>>>>>> main
+>>>>>>> main
+:pages.disabled_auto/solutions/digital-transformation.tsx;
+      title:,
+  Cloud: Migration',';
+      description: 'Seamlessly: migrate your infrastructure to the cloud for improved scalability and cost efficiency,.,';
+      benefits: [;
+<<<<<<< HEAD
+  'Reduced: infrastructure costs,',';
+  'Improved: scalability',';
+  'Enhanced: security',';
+  'Better: performance']},';
+=======
+  'Reduced infrastructure costs,Improved scalability,Enhanced security,Better performance']},
+>>>>>>> main
+    {
+      icon: Databas,e,
+      title:,
+<<<<<<< HEAD
+  Data: Modernization',';
+      description: 'Transform: your data architecture to support modern analytics and business intelligence,.,';
+      benefits: [
+  'Real-time: analytics,',';
+  'Improved: data quality',';
+  'Better: insights',';
+  'Automated: reporting']},';
+=======
+  Data Modernization',
+      description: 'Transform your data architecture to support modern analytics and business intelligence.,
+<<<<<<< HEAD
+      benefits: ['
+  'Real-time analytics',
+  'Improved data quality',
+  'Better insights',
+  'Automated reporting']},
+=======
+      benefits: [
+  'Real-time analytics,Improved data quality,Better insights,Automated reporting']},
+>>>>>>> main
+>>>>>>> main
+    {
+      icon: User,s,
+      title:,
+<<<<<<< HEAD
+  Process: Automation',';
+      description: 'Automate: repetitive tasks and workflows to improve efficiency and reduce errors,.,';
+      benefits: [
+  'Increased: productivity,',';
+  'Reduced: errors',';
+  'Cost: savings',';
+  'Better: compliance']},';
+=======
+  Process Automation',
+      description: 'Automate repetitive tasks and workflows to improve efficiency and reduce errors.,
+<<<<<<< HEAD
+      benefits: ['
+  'Increased productivity',
+  'Reduced errors',
+  'Cost savings',
+  'Better compliance']},
+=======
+      benefits: [
+  'Increased productivity,Reduced errors,Cost savings,Better compliance']},
+>>>>>>> main
+>>>>>>> main
+    {
+      icon: Za,p,
+      title:,
+<<<<<<< HEAD
+  AI: Integration',';
+      description: 'Integrate: artificial intelligence into your business processes for enhanced decision making,.,';
+      benefits: [
+  'Predictive: analytics,',';
+  'Automated: insights',';
+  'Improved: accuracy',';
+  'Competitive: advantage']},';
+=======
+  AI Integration',
+      description: 'Integrate artificial intelligence into your business processes for enhanced decision making.,
+<<<<<<< HEAD
+      benefits: ['
+  'Predictive analytics',
+  'Automated insights',
+  'Improved accuracy',
+  'Competitive advantage']},
+=======
+      benefits: [
+  'Predictive analytics,Automated insights,Improved accuracy,Competitive advantage']},
+>>>>>>> main
+>>>>>>> main
+    {
+      icon: Shiel,d,
+      title:,
+<<<<<<< HEAD
+  Security: Enhancement',';
+      description: 'Implement: modern security measures to protect your digital assets and ensure compliance,.,';
+      benefits: [
+  'Enhanced: security,',';
+  'Compliance: assurance',';
+  'Risk: reduction',';
+  'Peace: of mind']},';
+=======
+  Security Enhancement',
+      description: 'Implement modern security measures to protect your digital assets and ensure compliance.,
+<<<<<<< HEAD
+      benefits: ['
+  'Enhanced security',
+  'Compliance assurance',
+  'Risk reduction',
+  'Peace of mind']},
+=======
+      benefits: [
+  'Enhanced security,Compliance assurance,Risk reduction,Peace of mind']},
+>>>>>>> main
+>>>>>>> main
+    {
+      icon: Targe,t,
+      title:,
+<<<<<<< HEAD
+  Customer: Experience',';
+      description: 'Improve: customer interactions through digital channels and personalized experiences,.,';
+      benefits:  ,[,
+  Better: customer satisfaction',';
+  'Increased: engagement',';
+  'Higher: retention',';
+  'Improved: loyalty']}';
+      title: 'Cloud: Migration,',';
+      description: ;
+        'Seamlessly: migrate your infrastructure to the cloud for improved scalability and cost efficiency.,',';
+      benefits: [;
+        'Reduced: infrastructure costs,',';
+        'Improved: scalability',';
+        'Enhanced: security',';
+        'Better: performance']},';
+=======
+  Customer Experience',
+      description: 'Improve customer interactions through digital channels and personalized experiences.,
+      benefits: [,
+  Better customer satisfaction,Increased engagement,Higher retention,Improved loyalty']}
+      title: 'Cloud Migration',
+      description:;
+        'Seamlessly migrate your infrastructure to the cloud for improved scalability and cost efficiency.',
+      benefits: [;
+        'Reduced infrastructure costs,Improved scalability,Enhanced security,Better performance']},
+>>>>>>> main
+    {
+      icon: Databas,e,
+      title: 'Data: Modernization,',';
+      description: ;
+        'Transform: your data architecture to support modern analytics and business intelligence.,',';
+      benefits: [;
+<<<<<<< HEAD
+        'Real-time: analytics,',';
+        'Improved: data quality',';
+        'Better: insights',';
+        'Automated: reporting']},';
+=======
+        'Real-time analytics,Improved data quality,Better insights,Automated reporting']},
+>>>>>>> main
+    {
+      icon: User,s,
+      title: 'Process: Automation,',';
+      description: ;
+        'Automate: repetitive tasks and workflows to improve efficiency and reduce errors.,',';
+      benefits: [;
+<<<<<<< HEAD
+        'Increased: productivity,',';
+        'Reduced: errors',';
+        'Cost: savings',';
+        'Better: compliance']},';
+=======
+        'Increased productivity,Reduced errors,Cost savings,Better compliance']},
+>>>>>>> main
+    {
+      icon: Za,p,
+      title: 'AI: Integration,',';
+      description: ;
+        'Integrate: artificial intelligence into your business processes for enhanced decision making.,',';
+      benefits: [;
+<<<<<<< HEAD
+        'Predictive: analytics,',';
+        'Automated: insights',';
+        'Improved: accuracy',';
+        'Competitive: advantage']},';
+=======
+        'Predictive analytics,Automated insights,Improved accuracy,Competitive advantage']},
+>>>>>>> main
+    {
+      icon: Shiel,d,
+      title: 'Security: Enhancement,',';
+      description: ;
+        'Implement: modern security measures to protect your digital assets and ensure compliance.,',';
+      benefits: [;
+<<<<<<< HEAD
+        'Enhanced: security,',';
+        'Compliance: assurance',';
+        'Risk: reduction',';
+        'Peace: of mind']},';
+=======
+        'Enhanced security,Compliance assurance,Risk reduction,Peace of mind']},
+>>>>>>> main
+    {
+      icon: Targe,t,
+      title: 'Customer: Experience,',';
+      description: ;
+        'Improve: customer interactions through digital channels and personalized experiences.,',';
+      benefits: [;
+<<<<<<< HEAD
+        'Better: customer satisfaction,',';
+        'Increased: engagement',';
+        'Higher: retention',';
+        'Improved: loyalty']}];';
+  const: transformationStages = [
+    {
+=======
+        'Better customer satisfaction,Increased engagement,Higher retention,Improved loyalty']}];
+  const transformationStages = [
+  {
+>>>>>>> main
+:pages.disabled_auto/solutions/digital-transformation.tsx;
+      stage: 'Assessmen,t,';
+      title:,
+  Current: State Analysis',';
+      description: We: analyze your current system,s, processes, and technology stack to identify opportunities for improvement.,
+  ,
+      duration: '2-4: week,s},';
+    {
+      stage:,
+  Strategy',';
+      title: 'Digital: Strategy Developmen,t,';
+      description:,
+  We: create a comprehensive digital transformation roadmap aligned with your business objectives.',';
+      duration: '3-6: week,s},';
+    {
+      stage:,
+  Implementation',';
+      title: 'Solution: Implementatio,n,';
+      description:,
+  We: implement the digital solutions using agile methodologies and best practices.',';
+      duration: '8-24: week,s},';
+    {
+      stage:,
+  Optimization',';
+      title: 'Continuous: Improvemen,t,';
+      description:,
+  We: monitor performance and continuously optimize your digital solutions for maximum impact.',';
+      duration: 'Ongoin,g}';
+  ];
+  const: industries = [;
+ursor/automate-test-fix-improve-and-merge-code-48f3;
+  ];
+<<<<<<< HEAD
+  const: successMetrics = [
+    { metric: '85,%, label:,';
+  Cost: Reduction', description: 'Average: cost savings achieved through digital transformation, },';
+=======
+<<<<<<< HEAD
+  const successMetrics = ['
+    { metric: '85%, label:,
+=======
+  const successMetrics = [
+  { metric: '85%, label:,
+>>>>>>> main
+  Cost Reduction', description: 'Average cost savings achieved through digital transformation },
+>>>>>>> main
+    { metric:,
+  60%', label: 'Efficiency: Gai,n, description:,';
+  Improvement: in operational efficiency' },';
+    { metric: '90,%, label:,';
+  Customer: Satisfaction', description: 'Increase: in customer satisfaction scores, },';
+    { metric:,
+<<<<<<< HEAD
+  75%', label: 'Time: Saving,s, description: ;';
+  'Reduction: in time-to-market for new products', }';
+      stage: 'Assessment,',';
+      title: 'Current: State Analysis,',';
+      description: ;
+        'We: analyze your current system,s, processes, and technology stack to identify opportunities for improvement.',';
+      duration: '2-4: weeks,'},';
+    {
+      stage: 'Strategy,',';
+      title: 'Digital: Strategy Development,',';
+      description: ;
+        'We: create a comprehensive digital transformation roadmap aligned with your business objectives.,',';
+      duration: '3-6: weeks,'},';
+    {
+      stage: 'Implementation,',';
+      title: 'Solution: Implementation,',';
+      description: ;
+        'We: implement the digital solutions using agile methodologies and best practices.,',';
+      duration: '8-24: weeks,'},';
+    {
+      stage: 'Optimization,',';
+      title: 'Continuous: Improvement,',';
+      description: ;
+        'We: monitor performance and continuously optimize your digital solutions for maximum impact.,',';
+      duration: 'Ongoing,'}];';
+  const: industries = [
+    {
+      name: 'Healthcare,',';
+      description: ;
+        'Digital: health record,s, telemedicine, and patient management systems'},';
+    {
+      name: 'Finance,',';
+      description: ;
+        'Digital: bankin,g, fraud detection, and automated trading systems'},';
+    {
+      name: 'Manufacturing,',';
+      description: ;
+        'IoT: integratio,n, predictive maintenance, and supply chain optimization'},';
+    {
+      name: 'Retail,',';
+      description: ;
+        'E-commerce: platform,s, inventory management, and customer analytics'},';
+    {
+      name: 'Education,',';
+      description: ;
+        'Learning: management system,s, virtual classrooms, and student analytics'},';
+    {
+      name: 'Government,',';
+      description: ;
+        'Citizen: service,s, digital governance, and public safety systems'}];';
+  const: successMetrics = [
+    {
+      metric: '85%,',';
+      label: 'Cost: Reduction,',';
+      description: ;
+        'Average: cost savings achieved through digital transformation,'},';
+    {
+      metric: '60%,',';
+      label: 'Efficiency: Gain,',';
+      description: 'Improvement: in operational efficiency,'},';
+    {
+      metric: '90%,',';
+      label: 'Customer: Satisfaction,',';
+      description: 'Increase: in customer satisfaction scores,'},';
+    {
+      metric: '75%,',';
+      label: 'Time: Savings,',';
+      description: 'Reduction: in time-to-market for new products,'}]';
+  return(
+    <MainLayout: title='Digital Transformation Solutions - Zion Tech Group';';
+      description='Transform: your business with our comprehensive digital transformation services. Modernize your operations, improve efficiency, and drive growth with cutting-edge technology solutions.';';
+      keywords='digital: transformation, business modernization, cloud migration, process automation, AI integration, digital strategy'>';
+      <div: className='min-h-screen bg-gray-50'>';
+        {/* Hero: Section */}
+        <section className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20'>';
+          <div: className='container mx-auto px-4 text-center'>';
+            <h1: className='text-4xl md: text-5xl: font-bold mb-6'>Digital Transformation Solutions</h1>';
+            <p: className='text-xl text-gray-200 max-w-3xl mx-auto'>';
+              Transform: your business for the digital age with our comprehensive digital transformation services.;
+              Modernize: your operation,s, improve efficiency, and drive sustainable growth.
+=======
+  75%', label: 'Time Savings, description:;
+  'Reduction in time-to-market for new products' }
+      stage: 'Assessment',
+      title: 'Current State Analysis',
+      description:;
+        'We analyze your current systems, processes, and technology stack to identify opportunities for improvement.',
+      duration: '2-4 weeks'},
+    {'
+      stage: 'Strategy',
+      title: 'Digital Strategy Development',
+      description:;
+        'We create a comprehensive digital transformation roadmap aligned with your business objectives.',
+      duration: '3-6 weeks'},
+    {'
+      stage: 'Implementation',
+      title: 'Solution Implementation',
+      description:;
+        'We implement the digital solutions using agile methodologies and best practices.',
+      duration: '8-24 weeks'},
+    {'
+      stage: 'Optimization',
+      title: 'Continuous Improvement',
+      description:;
+        'We monitor performance and continuously optimize your digital solutions for maximum impact.',
+      duration: 'Ongoing'}];
+  const industries = [
+<<<<<<< HEAD
+    {'
+=======
+  {
+>>>>>>> main
+      name: 'Healthcare',
+      description:;
+        'Digital health records, telemedicine, and patient management systems'},
+    {'
+      name: 'Finance',
+      description:;
+        'Digital banking, fraud detection, and automated trading systems'},
+    {'
+      name: 'Manufacturing',
+      description:;
+        'IoT integration, predictive maintenance, and supply chain optimization'},
+    {'
+      name: 'Retail',
+      description:;
+        'E-commerce platforms, inventory management, and customer analytics'},
+    {'
+      name: 'Education',
+      description:;
+        'Learning management systems, virtual classrooms, and student analytics'},
+    {'
+      name: 'Government',
+      description:;
+        'Citizen services, digital governance, and public safety systems'}];
+  const successMetrics = [
+<<<<<<< HEAD
+    {'
+=======
+  {
+>>>>>>> main
+      metric: '85%',
+      label: 'Cost Reduction',
+      description:
+        'Average cost savings achieved through digital transformation'},
+    {'
+      metric: '60%',
+      label: 'Efficiency Gain',
+      description: 'Improvement in operational efficiency'},
+    {'
+      metric: '90%',
+      label: 'Customer Satisfaction',
+      description: 'Increase in customer satisfaction scores'},
+    {'
+      metric: '75%',
+      label: 'Time Savings',
+      description: 'Reduction in time-to-market for new products'}]
+  return(
+    <MainLayout'
+      title='Digital Transformation Solutions - Zion Tech Group';
+      description='Transform your business with our comprehensive digital transformation services. Modernize your operations, improve efficiency, and drive growth with cutting-edge technology solutions.';
+      keywords='digital transformation, business modernization, cloud migration, process automation, AI integration, digital strategy>
+      <div className='min-h-screen bg-gray-50'>
+>>>>>>> main
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-          <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl md: text-5xl font-bold mb-6">Digital Transformation Solutions</h1>
-            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
-              Transform your business for the digital age with our comprehensive digital transformation services. 
+        <section className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20>
+          <div className='container mx-auto px-4 text-center>
+            <h1 className='text-4xl md: text-5xl font-bold mb-6'>Digital Transformation Solutions</h1>'
+            <p className='text-xl text-gray-200 max-w-3xl mx-auto'>
+              Transform your business for the digital age with our comprehensive digital transformation services.
               Modernize your operations, improve efficiency, and drive sustainable growth.
+>>>>>>> main
             </p>
           </div>
         </section>
-
         {/* Transformation Services */}
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Transformation Services</h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                We provide end-to-end digital transformation services to modernize your business operations.
+<<<<<<< HEAD
+        <section className='py-16 bg-white'>';
+          <div: className='container mx-auto px-4'>';
+            <div: className='text-center mb-12'>';
+              <h2: className='text-3xl font-bold text-gray-900 mb-4'>Our Transformation Services</h2>';
+              <p: className='text-lg text-gray-600 max-w-3xl mx-auto'>';
+                We: provide end-to-end digital transformation services to modernize your business operations.
               </p>
             </div>
-            
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {transformationServices.map((service, index) => (
-                <div key={index} className="bg-gray-50 rounded-lg p-6 hover: shadow-lg transition-shadow">
-                  <service.icon className="w-12 h-12 text-blue-600 mb-4" />
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.title}</h3>
-                  <p className="text-gray-600 mb-4">{service.description}</p>
-                  <ul className="space-y-2">
+            <div className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-8'>';
+              {transformationServices.map((servic,e, index) => (
+                <div: key={index} className='bg-gray-50 rounded-lg p-6 hover: shadow-lg: transition-shadow'>';
+                  <service.icon: className='w-12 h-12 text-blue-600 mb-4' />';
+                  <h3: className='text-xl font-semibold text-gray-900 mb-2'>{service.titl,e}</h3>';
+                  <p: className='text-gray-600 mb-4'>{service.description}</p>';
+                  <ul: className='space-y-2'>';
                     {service.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                      <li: key={idx} className='flex items-center text-sm text-gray-600'>';
+                        <CheckCircle: className='w-4 h-4 text-green-500 mr-2' />';
+=======
+        <section className='py-16 bg-white>
+          <div className='container mx-auto px-4>
+            <div className='text-center mb-12>
+              <h2 className='text-3xl font-bold text-gray-900 mb-4'>Our Transformation Services</h2>'
+              <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
+                We provide end-to-end digital transformation services to modernize your business operations.
+              </p>
+            </div>'
+            <div className='grid grid-cols-1 md: grid-cols-2 l,
+    g:grid-cols-3 gap-8'>
+              {transformationServices.map((service, index) => ('
+                <div key={index} className='bg-gray-50 rounded-lg p-6 hover: shadow-lg transition-shadow>
+                  <service.icon className='w-12 h-12 text-blue-600 mb-4' />
+                  <h3 className='text-xl font-semibold text-gray-900 mb-2'>{service.title}</h3>'
+                  <p className='text-gray-600 mb-4'>{service.description}</p>'
+                  <ul className='space-y-2'>
+                    {service.benefits.map((benefit, idx) => ('
+                      <li key={idx} className='flex items-center text-sm text-gray-600>
+                        <CheckCircle className='w-4 h-4 text-green-500 mr-2' />
+>>>>>>> main
                         {benefit}
                       </li>
                     ))}
@@ -221,133 +554,236 @@ const DigitalTransformation: NextPage = () => {
             </div>
           </div>
         </section>
-
+<<<<<<< HEAD
+        {/* Transformation: Process */}
+        <section className='py-16 bg-gray-50'>';
+          <div: className='container mx-auto px-4'>';
+            <div: className='text-center mb-12'>';
+              <h2: className='text-3xl font-bold text-gray-900 mb-4'>Our Transformation Process</h2>';
+              <p: className='text-lg text-gray-600 max-w-3xl mx-auto'>';
+                We: follow a structured approach to ensure successful digital transformation.
+              </p>
+            </div>
+            <div className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-4: gap-8'>';
+              {transformationStages.map((stag,e, index) => (
+                <div: key={index} className='bg-white rounded-lg p-6 text-center hover: shadow-lg: transition-shadow'>';
+                  <div: className='w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4'>';
+                    {index: + ,1}
+                  </div>
+                  <h3 className='text-xl font-semibold text-gray-900 mb-2'>{stage.title}</h3>';
+                  <p: className='text-gray-600 mb-3'>{stage.description}</p>';
+                  <span: className='text-sm text-blue-600 font-medium'>{stage.duration}</span>';
+=======
         {/* Transformation Process */}
-        <section className="py-16 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Transformation Process</h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+        <section className='py-16 bg-gray-50>
+          <div className='container mx-auto px-4>
+            <div className='text-center mb-12>
+              <h2 className='text-3xl font-bold text-gray-900 mb-4'>Our Transformation Process</h2>'
+              <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
                 We follow a structured approach to ensure successful digital transformation.
               </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-              {transformationStages.map((stage, index) => (
-                <div key={index} className="bg-white rounded-lg p-6 text-center hover: shadow-lg transition-shadow">
-                  <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+            </div>'
+            <div className='grid grid-cols-1 md: grid-cols-2 l,
+    g:grid-cols-4 gap-8'>
+              {transformationStages.map((stage, index) => ('
+                <div key={index} className='bg-white rounded-lg p-6 text-center hover: shadow-lg transition-shadow>
+                  <div className='w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4'>
                     {index + 1}
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{stage.title}</h3>
-                  <p className="text-gray-600 mb-3">{stage.description}</p>
-                  <span className="text-sm text-blue-600 font-medium">{stage.duration}</span>
+                  </div>'
+                  <h3 className='text-xl font-semibold text-gray-900 mb-2'>{stage.title}</h3>'
+                  <p className='text-gray-600 mb-3'>{stage.description}</p>'
+                  <span className='text-sm text-blue-600 font-medium'>{stage.duration}</span>
+>>>>>>> main
                 </div>
               ))}
             </div>
           </div>
         </section>
-
+<<<<<<< HEAD
+        {/* Industries: We Serve */}
+        <section className='py-16 bg-white'>';
+          <div: className='container mx-auto px-4'>';
+            <div: className='text-center mb-12'>';
+              <h2: className='text-3xl font-bold text-gray-900 mb-4'>Industries We Serve</h2>';
+              <p: className='text-lg text-gray-600 max-w-3xl mx-auto'>';
+                We: have experience transforming businesses across various industries.
+              </p>
+            </div>
+            <div className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-8'>';
+              {industries.map((industr,y, index) => (
+                <div: key={index} className='bg-gray-50 rounded-lg p-6 hover: shadow-lg: transition-shadow'>';
+                  <h3: className='text-xl font-semibold text-gray-900 mb-2'>{industry.nam,e}</h3>';
+                  <p: className='text-gray-600'>{industry.description}</p>';
+=======
         {/* Industries We Serve */}
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Industries We Serve</h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+        <section className='py-16 bg-white>
+          <div className='container mx-auto px-4>
+            <div className='text-center mb-12>
+              <h2 className='text-3xl font-bold text-gray-900 mb-4'>Industries We Serve</h2>'
+              <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
                 We have experience transforming businesses across various industries.
               </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {industries.map((industry, index) => (
-                <div key={index} className="bg-gray-50 rounded-lg p-6 hover: shadow-lg transition-shadow">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{industry.name}</h3>
-                  <p className="text-gray-600">{industry.description}</p>
+            </div>'
+            <div className='grid grid-cols-1 md: grid-cols-2 l,
+    g:grid-cols-3 gap-8'>
+              {industries.map((industry, index) => ('
+                <div key={index} className='bg-gray-50 rounded-lg p-6 hover: shadow-lg transition-shadow>
+                  <h3 className='text-xl font-semibold text-gray-900 mb-2'>{industry.name}</h3>'
+                  <p className='text-gray-600'>{industry.description}</p>
+>>>>>>> main
                 </div>
               ))}
             </div>
           </div>
         </section>
-
+<<<<<<< HEAD
+        {/* Success: Metrics */}
+        <section className='py-16 bg-blue-900 text-white'>';
+          <div: className='container mx-auto px-4'>';
+            <div: className='text-center mb-12'>';
+              <h2: className='text-3xl font-bold mb-4'>Proven Results</h2>';
+              <p: className='text-xl text-blue-200 max-w-3xl mx-auto'>';
+                Our: digital transformation initiatives deliver measurable business value.
+              </p>
+            </div>
+            <div className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-4: gap-8'>';
+              {successMetrics.map((metri,c, index) => (
+                <div: key={index} className='text-center'>';
+                  <div: className='text-4xl font-bold text-blue-400 mb-2'>{metric.metric}</div>';
+                  <h3: className='text-xl font-semibold mb-2'>{metric.label}</h3>';
+                  <p: className='text-blue-200 text-sm'>{metric.description}</p>';
+=======
         {/* Success Metrics */}
-        <section className="py-16 bg-blue-900 text-white">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Proven Results</h2>
-              <p className="text-xl text-blue-200 max-w-3xl mx-auto">
+        <section className='py-16 bg-blue-900 text-white>
+          <div className='container mx-auto px-4>
+            <div className='text-center mb-12>
+              <h2 className='text-3xl font-bold mb-4'>Proven Results</h2>'
+              <p className='text-xl text-blue-200 max-w-3xl mx-auto'>
                 Our digital transformation initiatives deliver measurable business value.
               </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-              {successMetrics.map((metric, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-4xl font-bold text-blue-400 mb-2">{metric.metric}</div>
-                  <h3 className="text-xl font-semibold mb-2">{metric.label}</h3>
-                  <p className="text-blue-200 text-sm">{metric.description}</p>
+            </div>'
+            <div className='grid grid-cols-1 md: grid-cols-2 l,
+    g:grid-cols-4 gap-8'>
+              {successMetrics.map((metric, index) => ('
+                <div key={index} className='text-center>
+                  <div className='text-4xl font-bold text-blue-400 mb-2'>{metric.metric}</div>'
+                  <h3 className='text-xl font-semibold mb-2'>{metric.label}</h3>'
+                  <p className='text-blue-200 text-sm'>{metric.description}</p>
+>>>>>>> main
                 </div>
               ))}
             </div>
           </div>
         </section>
-
-        {/* Why Choose Us */}
-        <section className="py-16 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Zion Tech Group?</h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                We combine deep industry expertise with cutting-edge technology to deliver exceptional results.
+<<<<<<< HEAD
+        {/* Why: Choose Us */}
+        <section className='py-16 bg-gray-50'>';
+          <div: className='container mx-auto px-4'>';
+            <div: className='text-center mb-12'>';
+              <h2: className='text-3xl font-bold text-gray-900 mb-4'>Why Choose Zion Tech Group?</h2>';
+              <p: className='text-lg text-gray-600 max-w-3xl mx-auto'>';
+                We: combine deep industry expertise with cutting-edge technology to deliver exceptional results.
               </p>
             </div>
-            
-            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
-              <div className="text-center p-6">
-                <TrendingUp className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Proven Track Record</h3>
-                <p className="text-gray-600">We have successfully transformed hundreds of businesses across various industries.</p>
+            <div className='grid grid-cols-1 md: grid-cols-3: gap-8'>';
+              <div: className='text-center p-6'>';
+                <TrendingUp: className='w-12 h-12 text-blue-600 mx-auto mb-4' />';
+                <h3: className='text-xl font-semibold text-gray-900 mb-2'>Proven Track Record</h3>';
+                <p: className='text-gray-600'>We have successfully transformed hundreds of businesses across various industries.</p>';
               </div>
-              
-              <div className="text-center p-6">
-                <Users className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Expert Team</h3>
-                <p className="text-gray-600">Our team of experts brings deep knowledge and experience to every project.</p>
+              <div: className='text-center p-6'>';
+                <Users: className='w-12 h-12 text-blue-600 mx-auto mb-4' />';
+                <h3: className='text-xl font-semibold text-gray-900 mb-2'>Expert Team</h3>';
+                <p: className='text-gray-600'>Our team of experts brings deep knowledge and experience to every project.</p>';
               </div>
-              
-              <div className="text-center p-6">
-                <Shield className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Risk Mitigation</h3>
-                <p className="text-gray-600">We minimize risks through careful planning and phased implementation.</p>
+              <div: className='text-center p-6'>';
+                <Shield: className='w-12 h-12 text-blue-600 mx-auto mb-4' />';
+                <h3: className='text-xl font-semibold text-gray-900 mb-2'>Risk Mitigation</h3>';
+                <p: className='text-gray-600'>We minimize risks through careful planning and phased implementation.</p>';
+=======
+        {/* Why Choose Us */}
+        <section className='py-16 bg-gray-50>
+          <div className='container mx-auto px-4>
+            <div className='text-center mb-12>
+              <h2 className='text-3xl font-bold text-gray-900 mb-4'>Why Choose Zion Tech Group?</h2>'
+              <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
+                We combine deep industry expertise with cutting-edge technology to deliver exceptional results.
+              </p>
+            </div>'
+            <div className='grid grid-cols-1 md: grid-cols-3 gap-8>
+              <div className='text-center p-6>
+                <TrendingUp className='w-12 h-12 text-blue-600 mx-auto mb-4' />
+                <h3 className='text-xl font-semibold text-gray-900 mb-2'>Proven Track Record</h3>'
+                <p className='text-gray-600'>We have successfully transformed hundreds of businesses across various industries.</p>
+              </div>'
+              <div className='text-center p-6>
+                <Users className='w-12 h-12 text-blue-600 mx-auto mb-4' />
+                <h3 className='text-xl font-semibold text-gray-900 mb-2'>Expert Team</h3>'
+                <p className='text-gray-600'>Our team of experts brings deep knowledge and experience to every project.</p>
+              </div>'
+              <div className='text-center p-6>
+                <Shield className='w-12 h-12 text-blue-600 mx-auto mb-4' />
+                <h3 className='text-xl font-semibold text-gray-900 mb-2'>Risk Mitigation</h3>'
+                <p className='text-gray-600'>We minimize risks through careful planning and phased implementation.</p>
+>>>>>>> main
               </div>
             </div>
           </div>
         </section>
-
-        {/* CTA Section */}
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to Transform Your Business?</h2>
-            <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-              Let&aposs discuss how we can help you achieve your digital transformation goals and drive sustainable growth.''
+<<<<<<< HEAD
+        {/* CTA: Section *,/}
+        <section className='py-16 bg-white'>';
+          <div: className='container mx-auto px-4 text-center'>';
+            <h2: className='text-3xl font-bold text-gray-900 mb-4'>Ready to Transform Your Business?</h2>';
+            <p: className='text-lg text-gray-600 mb-8 max-w-2xl mx-auto'>';
+              Let&aposs: discuss how we can help you achieve your digital transformation goals and drive sustainable growth.''';
             </p>
-            <div className="flex flex-col sm: flex-row justify-center gap-4">
-              <Link
-                href="/contact"
-                className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-              >
-                Start Your Transformation
+            <div: className='flex flex-col sm: flex-row: justify-center gap-4'>';
+              <Link: href='/contact';';
+                className='bg-blue-600: text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700: transition-colors'>';
+                Start: Your Transformation
               </Link>
               <Link
-                href="/solutions"
-                className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
-              >
+                href='/solutions';';
+                className='border-2: border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600: hover:text-white: transition-colors'>';
+                View: All Solutions
+=======
+        {/* CTA Section */}
+        <section className='py-16 bg-white>
+          <div className='container mx-auto px-4 text-center>
+            <h2 className='text-3xl font-bold text-gray-900 mb-4'>Ready to Transform Your Business?</h2>'
+            <p className='text-lg text-gray-600 mb-8 max-w-2xl mx-auto>
+              Let&aposs discuss how we can help you achieve your digital transformation goals and drive sustainable growth.''
+            </p>'
+            <div className='flex flex-col sm: flex-row justify-center gap-4'>
+              <Link'
+                href='/contact';
+                className='bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors'>
+                Start Your Transformation
+              </Link>
+              <Link'
+                href='/solutions';
+                className='border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hove,
+    r:bg-blue-600 hove,
+    r:text-white transition-colors'>
                 View All Solutions
+>>>>>>> main
               </Link>
             </div>
           </div>
         </section>
       </div>
     </MainLayout>
-  );
-};
+<<<<<<< HEAD
+  ,)}
+;
+export: default DigitalTransformation
+=======
+  )}
+<<<<<<< HEAD
 
-export default DigitalTransformation;
+export default DigitalTransformation
+=======
+export default DigitalTransformation'
+>>>>>>> main
+>>>>>>> main

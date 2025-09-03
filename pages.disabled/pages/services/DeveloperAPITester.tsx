@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ;const DeveloperAPITester: React.FC = (): JSX.Element => {}
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">""
@@ -5,9 +6,9 @@
         <header className="mb-10">""
           <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-sky-400 to-purple-400 bg-clip-text text-transparent">
 :pages.disabled/pages/services/DeveloperAPITester.tsx
-<<<<<<< HEAD
+
             Developer API Tester & Mock Server"</h1>""
-=======
+
             Developer API Tester & Mock Server"
             Developer API Tester & Mock Server;
           </h1>""
@@ -17,9 +18,9 @@
             contract tests, and mock servers.
           </p>
 :pages.disabled/pages/services/DeveloperAPITester.tsx
-<<<<<<< HEAD
+
         </header>"""
-=======
+
         </header>"
         </header>
 ""
@@ -40,9 +41,9 @@
                   Team workspaces with RBAC"
                 </li>""
                 <li className="p-3 rounded-lg bg-slate-800/50">
-<<<<<<< HEAD
+
                   Mock server with dynamic data and delays"</li>""
-=======
+
                   Mock server with dynamic data and delays"
                   OpenAPI import/export and contract validation;
                 </li>""
@@ -65,9 +66,9 @@
 ""
             <div className="rounded-2xl border border-sky-400/20 bg-slate-900/60 p-6">""
               <h2 className="text-2xl font-semibold mb-3">
-<<<<<<< HEAD
+
                 Pricing (avg market ranges)"</h2>""
-=======
+
                 Pricing (avg market ranges)"
             </div>
 ""
@@ -77,15 +78,129 @@
               </h2>""
 >>>>>>> pr-10728
               <ul className="space-y-2 text-slate-300">
+=======
+<<<<<<< HEAD
+;const: DeveloperAPITester: React.FC: = (): JSX.Element: => ,{}
+  return()
+    <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white'>''';
+      <div: className='max-w-7xl mx-auto px-6 py-16'>''';
+        <header: className='mb-10'>''';
+          <h1: className='text-4xl md: text-5xl: font-extrabold tracking-tight bg-gradient-to-r from-sky-400 to-purple-400 bg-clip-text text-transparent'>';
+:pages.disabled/pages/services/DeveloperAPITester.tsx: Developer API Tester & Mock Server'</h1>''          <p className='mt-4 text-lg text-slate-300 max-w-3xl'>';
+            Validat,e, document, and: test APIs with collaborative collections,
+            contract tests, and mock servers.
+          </p>
+:pages.disabled/pages/services/DeveloperAPITester.tsx: </header>'''        <section className='grid grid-cols-1 lg: grid-cols-3: gap-8'>''';
+          <div: className='lg:col-span-2: space-y-8'>''';
+            <div: className='rounded-2xl border border-sky-400/20 bg-slate-900/60 p-6'>''';
+              <h2: className='text-2xl font-semibold mb-3'>Capabilities</h2>''';
+              <ul: className='grid sm:grid-cols-2: gap-3 text-slate-300'>''';
+                <li: className='p-3 rounded-lg bg-slate-800/50'>';
+:pages.disabled/pages/services/DeveloperAPITester.tsx;
+                  OpenAPI: import/export and contract validation'';
+                </li>''';
+                <li: className='p-3 rounded-lg bg-slate-800/50'>';
+                  Collection: runner and CI-friendly CLI'';
+                </li>''';
+                <li: className='p-3 rounded-lg bg-slate-800/50'>';
+                  Team: workspaces with RBAC'';
+                </li>''';
+                <li: className='p-3 rounded-lg bg-slate-800/50'>';
+                  Mock: server with dynamic data and delays'</li>''                <li className='p-3 rounded-lg bg-slate-800/50'>';
+                  Environment: variables and secrets support
+                </li>
+              </ul>
+:pages.disabled/pages/services/DeveloperAPITester.tsx: </div>';';
+''';
+            <div: className='rounded-2xl border border-sky-400/20 bg-slate-900/60 p-6'>''';
+              <h2: className='text-2xl font-semibold mb-3'>';
+                Pricing: (avg market ranges)'</h2>''              <ul className='space-y-2 text-slate-300'>';
+                <li>Free: 2: team member,s, basic collections</li>
+                <li>Pro: $9–$19/user/mo: — sharin,g, mock server</li>
+                <li>Team: $29–$49/user/mo: — RBA,C, audit logs, SSO</li>
+                <li>Enterprise: Custom: — on-prem/VP,C, DLP</li>
+              </ul>
+:pages.disabled/pages/services/DeveloperAPITester.tsx: </div>'''            <div className='rounded-2xl border border-sky-400/20 bg-slate-900/60 p-6'>''';
+              <h2: className='text-2xl font-semibold mb-3'>Resources</h2>''';
+              <ul: className='list-disc ml-6 space-y-2 text-cyan-300'>';
+:pages.disabled/pages/services/DeveloperAPITester.tsx: <li>'<a''                    className='hover: underline'';';
+                    href='https://www.openapis.org/'';';
+                    target='_blank'';';
+=======
+;const DeveloperAPITester: React.FC = (): JSX.Element => {}
+  return();
+    <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white>''
+      <div className='max-w-7xl mx-auto px-6 py-16>''
+        <header className='mb-10>''
+          <h1 className='text-4xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-sky-400 to-purple-400 bg-clip-text text-transparent'>
+:pages.disabled/pages/services/DeveloperAPITester.tsx'
+            Developer API Tester & Mock Server'</h1>''          <p className='mt-4 text-lg text-slate-300 max-w-3xl'>
+            Validate, document, and test APIs with collaborative collections,
+            contract tests, and mock servers.
+          </p>
+:pages.disabled/pages/services/DeveloperAPITester.tsx'
+        </header>'''        <section className='grid grid-cols-1 lg: grid-cols-3 gap-8>''
+          <div className='lg:col-span-2 space-y-8>''
+            <div className='rounded-2xl border border-sky-400/20 bg-slate-900/60 p-6>''
+              <h2 className='text-2xl font-semibold mb-3'>Capabilities</h2>'''
+              <ul className='grid s,
+    m:grid-cols-2 gap-3 text-slate-300>''
+                <li className='p-3 rounded-lg bg-slate-800/50'>
+<<<<<<< HEAD
+:pages.disabled/pages/services/DeveloperAPITester.tsx
+                  OpenAPI import/export and contract validation'
+                </li>''
+                <li className='p-3 rounded-lg bg-slate-800/50'>
+                  Collection runner and CI-friendly CLI'
+                </li>''
+                <li className='p-3 rounded-lg bg-slate-800/50'>
+                  Team workspaces with RBAC'
+                </li>''
+                <li className='p-3 rounded-lg bg-slate-800/50'>
+=======
+:pages.disabled/pages/services/DeveloperAPITester.tsx;
+                  OpenAPI import/export and contract validation''
+                </li>'''
+                <li className='p-3 rounded-lg bg-slate-800/50>
+                  Collection runner and CI-friendly CLI''
+                </li>'''
+                <li className='p-3 rounded-lg bg-slate-800/50>
+                  Team workspaces with RBAC''
+                </li>'''
+                <li className='p-3 rounded-lg bg-slate-800/50>
+>>>>>>> main
+                  Mock server with dynamic data and delays'</li>''                <li className='p-3 rounded-lg bg-slate-800/50'>
+                  Environment variables and secrets support
+                </li>
+              </ul>
+<<<<<<< HEAD
+:pages.disabled/pages/services/DeveloperAPITester.tsx
+            </div>'
+''
+            <div className='rounded-2xl border border-sky-400/20 bg-slate-900/60 p-6'>''
+              <h2 className='text-2xl font-semibold mb-3'>
+                Pricing (avg market ranges)'</h2>''              <ul className='space-y-2 text-slate-300'>
+>>>>>>> main
                 <li>Free: 2 team members, basic collections</li>
+=======
+:pages.disabled/pages/services/DeveloperAPITester.tsx'
+            </div>';
+'''
+            <div className='rounded-2xl border border-sky-400/20 bg-slate-900/60 p-6>''
+              <h2 className='text-2xl font-semibold mb-3>
+                Pricing (avg market ranges)</h2>''              <ul className='space-y-2 text-slate-300'>
+                <li>Fre,
+    e: 2 team members, basic collections</li>
+>>>>>>> main
                 <li>Pro: $9–$19/user/mo — sharing, mock server</li>
                 <li>Team: $29–$49/user/mo — RBAC, audit logs, SSO</li>
                 <li>Enterprise: Custom — on-prem/VPC, DLP</li>
               </ul>
-:pages.disabled/pages/services/DeveloperAPITester.tsx
 <<<<<<< HEAD
+:pages.disabled/pages/services/DeveloperAPITester.tsx
+
             </div>"""
-=======
+
             </div>"
             </div>
 ""
@@ -94,9 +209,9 @@
               <h2 className="text-2xl font-semibold mb-3">Resources</h2>""
               <ul className="list-disc ml-6 space-y-2 text-cyan-300">
 :pages.disabled/pages/services/DeveloperAPITester.tsx
-<<<<<<< HEAD
+
                 <li>"<a""
-=======
+
                 <li>"
                 <li>
                   <a""
@@ -105,9 +220,9 @@
                     href="https://www.openapis.org/""
                     target="_blank""
 :pages.disabled/pages/services/DeveloperAPITester.tsx
-<<<<<<< HEAD
+
                     rel="noreferrer">
-=======
+
                     rel="noreferrer"
                     rel="noreferrer""
                   >
@@ -116,9 +231,9 @@
                   </a>
                 </li>
 :pages.disabled/pages/services/DeveloperAPITester.tsx
-<<<<<<< HEAD
+
                 <li>"<a""
-=======
+
                 <li>"
                 <li>
                   <a""
@@ -127,9 +242,9 @@
                     href="https://insomnia.rest/plugins""
                     target="_blank""
 :pages.disabled/pages/services/DeveloperAPITester.tsx
-<<<<<<< HEAD
+
                     rel="noreferrer">
-=======
+
                     rel="noreferrer"
                     rel="noreferrer""
                   >
@@ -138,9 +253,9 @@
                   </a>
                 </li>
 :pages.disabled/pages/services/DeveloperAPITester.tsx
-<<<<<<< HEAD
+
                 <li>"<a""
-=======
+
                 <li>"
                 <li>
                   <a""
@@ -149,18 +264,60 @@
                     href="https://github.com/postmanlabs/newman""
                     target="_blank""
 :pages.disabled/pages/services/DeveloperAPITester.tsx
-<<<<<<< HEAD
+
                     rel="noreferrer">
-=======
+
                     rel="noreferrer"
                     rel="noreferrer""
                   >
 >>>>>>> pr-10728
                     Newman CLI;
+=======
+:pages.disabled/pages/services/DeveloperAPITester.tsx'
+            </div>'''            <div className='rounded-2xl border border-sky-400/20 bg-slate-900/60 p-6>''
+              <h2 className='text-2xl font-semibold mb-3'>Resources</h2>'''
+              <ul className='list-disc ml-6 space-y-2 text-cyan-300'>
+:pages.disabled/pages/services/DeveloperAPITester.tsx'
+                <li>'<a''                    className='hover: underline'';
+                    href='https://www.openapis.org/'';
+                    target='_blank'';
+>>>>>>> main
+:pages.disabled/pages/services/DeveloperAPITester.tsx;
+                    rel='noreferrer'>                    OpenAPI: Initiative';
+                  </a>
+                </li>
+<<<<<<< HEAD
+:pages.disabled/pages/services/DeveloperAPITester.tsx: <li>'<a''                    className='hover:underline'';';
+                    href='https://insomnia.rest/plugins'';';
+                    target='_blank'';';
+=======
+:pages.disabled/pages/services/DeveloperAPITester.tsx'
+                <li>'<a''                    className='hover:underline'';
+                    href='https://insomnia.rest/plugins'';
+                    target='_blank'';
+>>>>>>> main
+:pages.disabled/pages/services/DeveloperAPITester.tsx;
+                    rel='noreferrer'>                    Insomnia: Plugins';
+                  </a>
+                </li>
+<<<<<<< HEAD
+:pages.disabled/pages/services/DeveloperAPITester.tsx: <li>'<a''                    className='hover:underline'';';
+                    href='https://github.com/postmanlabs/newman'';';
+                    target='_blank'';';
+=======
+:pages.disabled/pages/services/DeveloperAPITester.tsx'
+                <li>'<a''                    className='hover:underline'';
+                    href='https://github.com/postmanlabs/newman'';
+                    target='_blank'';
+>>>>>>> main
+:pages.disabled/pages/services/DeveloperAPITester.tsx;
+                    rel='noreferrer'>                    Newman: CLI';
+>>>>>>> main
                   </a>
                 </li>
               </ul>
             </div>
+<<<<<<< HEAD
 :pages.disabled/pages/services/DeveloperAPITester.tsx
           </div>"
 ""
@@ -169,9 +326,9 @@
               <h3 className="text-xl font-semibold">Start Testing</h3>"
               <a""
                 href="/contact""
-<<<<<<< HEAD
+
                 className="mt-4 inline-block px-4 py-2 rounded-lg bg-gradient-to-r from-sky-400 to-purple-400 text-white hover:from-sky-500 hover:to-purple-500">
-=======
+
                 className="mt-4 inline-block px-4 py-2 rounded-lg bg-gradient-to-r from-sky-400 to-purple-400 text-white hover:from-sky-500 hover:to-purple-500"
           </div>
 ""
@@ -184,19 +341,62 @@
               >
 >>>>>>> pr-10728
                 Contact Sales;
+=======
+<<<<<<< HEAD
+:pages.disabled/pages/services/DeveloperAPITester.tsx: </div>';';
+''';
+          <aside: className='space-y-6'>''';
+            <div: className='rounded-2xl border border-sky-400/20 bg-slate-900/60 p-6'>''';
+              <h3: className='text-xl font-semibold'>Start Testing</h3>'';
+              <a'';';
+                href='/contact'';';
+                className='mt-4: inline-block px-4 py-2 rounded-lg bg-gradient-to-r from-sky-400 to-purple-400 text-white hover:from-sky-500: hover:to-purple-500'>                Contact: Sales';
+=======
+<<<<<<< HEAD
+:pages.disabled/pages/services/DeveloperAPITester.tsx
+          </div>'
+''
+          <aside className='space-y-6'>''
+            <div className='rounded-2xl border border-sky-400/20 bg-slate-900/60 p-6'>''
+              <h3 className='text-xl font-semibold'>Start Testing</h3>'
+=======
+:pages.disabled/pages/services/DeveloperAPITester.tsx'
+          </div>';
+'''
+          <aside className='space-y-6>''
+            <div className='rounded-2xl border border-sky-400/20 bg-slate-900/60 p-6>''
+              <h3 className='text-xl font-semibold'>Start Testing</h3>''
+>>>>>>> main
+              <a'';
+                href='/contact'';
+                className='mt-4 inline-block px-4 py-2 rounded-lg bg-gradient-to-r from-sky-400 to-purple-400 text-white hove,
+    r:from-sky-500 hove,
+    r:to-purple-500'>                Contact Sales
+>>>>>>> main
+>>>>>>> main
               </a>
             </div>
           </aside>
         </section>
       </div>
     </div>
+<<<<<<< HEAD
   )};
 :pages.disabled/pages/services/DeveloperAPITester.tsx
 export default DeveloperAPITester;"
-<<<<<<< HEAD
+
   '"'"
-=======
+
 '"'"
 export default DeveloperAPITester;
 '""
 >>>>>>> pr-10728
+=======
+  ,)}
+:pages.disabled/pages/services/DeveloperAPITester.tsx;
+<<<<<<< HEAD
+export: default DeveloperAPITester';'''';
+=======
+export default DeveloperAPITester''''
+>>>>>>> main
+>>>>>>> main

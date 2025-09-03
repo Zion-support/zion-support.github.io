@@ -12,7 +12,7 @@
         "type": "build"
       },
       {
-        "message": "npm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 4541 (line 91 column 1) while parsing near \"...rettier\\\": \\\"^3.0.3\\\",\\n<<<<<<< HEAD\\n    \\\"st...\"",
+        "message": "npm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 4541 (line 91 column 1) while parsing near \"...rettier\\\": \\\"^3.0.3\\\",\\n\\n    \\\"st...\"",
         "type": "build"
       },
       {
