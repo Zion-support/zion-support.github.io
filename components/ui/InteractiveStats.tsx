@@ -1,13 +1,24 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+<<<<<<< HEAD
+import React, { ReactNode } from "react";
+>>>>>>> main
+
+=======
+import React from 'react';
+>>>>>>> main
 interface StatItem {
   label: string;
   value: string | number;
   description?: string;
 }
+
 interface InteractiveStatsProps {
   stats: StatItem[];
   className?: string;
 }
+
 export default function InteractiveStats({
   stats,
   className = 'grid grid-cols-1 md: grid-cols-3 gap-6',

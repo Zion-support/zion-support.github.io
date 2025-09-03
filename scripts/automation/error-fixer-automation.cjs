@@ -20,7 +20,7 @@ class ErrorFixerAutomation {
   }
 
   async run() {
-    console.log(`'🚀 Starting Error Fixer Automation...');
+    console.log(`🚀 Starting Error Fixer Automation...`);
 
     try {
       // Create reports directory
@@ -41,7 +41,7 @@ class ErrorFixerAutomation {
       // Generate report
       this.generateReport();
 
-      console.log(`'✅ Error Fixer Automation completed successfully!');
+      console.log(`✅ Error Fixer Automation completed successfully!`);
       console.log(📊 Fixed ${this.fixesApplied.length} issues);console.log(📊 Found ${this.errorsFound.length} remaining issues``);
     } catch (error) {
       console.error('❌ Error Fixer Automation failed:', error);
@@ -56,7 +56,7 @@ class ErrorFixerAutomation {
   }
 
   async fixMergeConflicts() {
-    console.log(`'🔧 Fixing merge conflicts...');
+    console.log(`🔧 Fixing merge conflicts...`);
 
     const files = glob.sync('**/*.{js,jsx,ts,tsx}', {
       ignore: ['node_modules/**', 'dist/**', 'build/**', '.git/**'],
@@ -71,12 +71,12 @@ class ErrorFixerAutomation {
         ) {console.log(`  Fixing merge conflicts in ${file});
 
           // Remove merge conflict markers and keep the first version
-          let fixedContent = content
-            .replace(
-              /\n([\s\S]*?)\n              '$1'
+          let fixedContent = content`);
+            .replace(`);
+              /\n([\s\S]*?)\n              '$1`);
             )
             .replace(
-              /\n([\s\S]*?)\n              '$1'
+              /\n([\s\S]*?)\n              '$1`);
             );
 
           fs.writeFileSync(file, fixedContent);
@@ -84,15 +84,15 @@ class ErrorFixerAutomation {
             type: 'merge_conflict',
             file,
             description: 'Removed merge conflict markers',
-          });
-        }
+          });`);
+        }`);
       } catch (error) {this.logError(Error fixing merge conflicts in ${file}`, error`);
       }
     }
   }
 
   async fixSyntaxErrors() {
-    console.log(`'🔧 Fixing syntax errors...');
+    console.log(`🔧 Fixing syntax errors...`);
 
     // Fix common syntax errors
     const syntaxFixes = [
@@ -137,7 +137,7 @@ class ErrorFixerAutomation {
   }
 
   async fixUnusedImports() {
-    console.log(`'🔧 Fixing unused imports...');
+    console.log(`🔧 Fixing unused imports...`);
 
     try {
       // Run ESLint with --fix to auto-fix unused imports
@@ -156,7 +156,7 @@ class ErrorFixerAutomation {
   }
 
   async fixTypeScriptErrors() {
-    console.log(`'🔧 Fixing TypeScript errors...');
+    console.log(`🔧 Fixing TypeScript errors...`);
 
     const files = glob.sync('**/*.{ts,tsx}', {
       ignore: ['node_modules/**', 'dist/**', 'build/**', '.git/**'],
@@ -196,7 +196,7 @@ class ErrorFixerAutomation {
   }
 
   async fixLintingErrors() {
-    console.log(`'🔧 Fixing linting errors...');
+    console.log(`🔧 Fixing linting errors...`);
 
     try {
       // Run ESLint with auto-fix
@@ -250,7 +250,7 @@ class ErrorFixerAutomation {
   }
 
   async fixMissingExports() {
-    console.log(`'🔧 Fixing missing exports...');
+    console.log(`🔧 Fixing missing exports...`);
 
     const files = glob.sync('**/*.{js,jsx,ts,tsx}', {
       ignore: ['node_modules/**', 'dist/**', 'build/**', '.git/**'],
@@ -287,7 +287,7 @@ class ErrorFixerAutomation {
   }
 
   async fixImportErrors() {
-    console.log(`'🔧 Fixing import errors...');
+    console.log(`🔧 Fixing import errors...`);
 
     const files = glob.sync('**/*.{js,jsx,ts,tsx}', {
       ignore: ['node_modules/**', 'dist/**', 'build/**', '.git/**'],
@@ -324,7 +324,7 @@ class ErrorFixerAutomation {
   }
 
   async fixUndefinedVariables() {
-    console.log(`'🔧 Fixing undefined variables...');
+    console.log(`🔧 Fixing undefined variables...`);
 
     const files = glob.sync('**/*.{js,jsx,ts,tsx}', {
       ignore: ['node_modules/**', 'dist/**', 'build/**', '.git/**'],
@@ -358,7 +358,7 @@ class ErrorFixerAutomation {
   }
 
   async fixConsoleStatements() {
-    console.log(`'🔧 Fixing console statements...');
+    console.log(`🔧 Fixing console statements...`);
 
     const files = glob.sync('**/*.{js,jsx,ts,tsx}', {
       ignore: ['node_modules/**', 'dist/**', 'build/**', '.git/**'],

@@ -1,40 +1,37 @@
 
 :pages.disabled/pages/services/Transformation.tsx;
 const DigitalTransformation = () => {
-  const transformationServices = [{title: 'Process Automation','';
-      description: 'Streamline workflows with intelligent automation and AI-powered solutions.','';
-      price: 'From $15,000/project','';
-      features: ['Workflow automation', 'AI-powered decision making', 'Process optimization', 'Performance monitoring'],
+  const transformationServices = [
+  {title: 'Process Automation,';
+      description: 'Streamline workflows with intelligent automation and AI-powered solutions.,';
+      price: 'From $15,000/project,';
+      features: ['Workflow automation,AI-powered decision making,Process optimization,Performance monitoring'],
       icon: Zap},
 :pages.disabled/pages/services/Transformation.tsx{
 ''';
-      title: 'Legacy Modernization','';
-      description: 'Update and integrate legacy systems with modern technologies.','';
-      price: 'From $25,000/project','';
-      features: ['System assessment', 'Modernization planning', 'Data migration', 'Integration services'],
+      title: 'Legacy Modernization,';
+      description: 'Update and integrate legacy systems with modern technologies.,';
+      price: 'From $25,000/project,';
+      features: ['System assessment,Modernization planning,Data migration,Integration services'],
 :pages.disabled/pages/services/Transformation.tsx;
       icon: RefreshCw},'{'
-      title: 'Change Management',';
-      description: 'Guide your team through digital adoption and transformation.',';
-      price: 'From $8,000/month','      features: ['Change strategy', 'Training programs', 'Communication plans', 'Success measurement'],
+      title: 'Change Management,;
+      description: 'Guide your team through digital adoption and transformation.,;
+      price: 'From $8,000/month,      features: ['Change strategy,Training programs,Communication plans,Success measurement'],
       icon: Users}
   ];
 :pages.disabled/pages/services/Transformation.tsx;
   '{'
-      name: 'Technology',';
-      description: 'Modernize your technology stack and infrastructure',';
+      name: 'Technology,;
+      description: 'Modernize your technology stack and infrastructure,;
       icon: BarChart3,';
-      features: ['Cloud migration', 'API integration', 'Data modernization', 'Security enhancement']}
+      features: ['Cloud migration,API integration,Data modernization,Security enhancement']}
   ]';
-  const benefits = [''Increased operational efficiency and productivity',';
-    'Enhanced customer experience and satisfaction',';
-    'Improved data insights and decision making',';
-    'Reduced operational costs and manual work',';
-    'Faster time to market for new products',';Better competitive positioning in the market';
+  const benefits = [''Increased operational efficiency and productivity',Enhanced customer experience and satisfaction',Improved data insights and decision making',Reduced operational costs and manual work',Faster time to market for new products,;Better competitive positioning in the market';
   ];
 :pages.disabled/pages/services/Transformation.tsx;
 ';
-  return (''
+  return (
     <div className = 'min-h-screen bg-slate-900 text-white'>'{/* Hero Section */}''
       <section className='relative pt-24 pb-16 px-4 sm:px-6 lg:px-8'>''
         <div className='max-w-7xl mx-auto text-center'>''
@@ -74,8 +71,7 @@ const DigitalTransformation = () => {
               your business and drive sustainable growth.
             </p>
 :pages.disabled/pages/services/Transformation.tsx
-          </div>';
-''
+          </div>'
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>'{transformationServices.map((service, index) => (''
               <div key={index} className='bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-indigo-500/50 transition-all duration-300'>''
                 <div className='w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4'>''
@@ -109,8 +105,7 @@ const DigitalTransformation = () => {
               comprehensive digital-first organization.
             </p>
 :pages.disabled/pages/services/Transformation.tsx
-          </div>';
-''
+          </div>'
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>'{transformationAreas.map((area, index) => (''
               <div key={index} className='bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-indigo-500/50 transition-all duration-300'>''
                 <div className='w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4'>''
