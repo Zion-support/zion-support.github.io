@@ -130,11 +130,6 @@
   },
   "repository": {
     "type": "git",
-<<<<<<< HEAD
-    "url": "git+https://github.com/your-org/your-repo.git"
-  }
-}
-=======
     "url": "git+https://github.com/Zion-Technologies/Website.git"
   },
   "keywords": [
@@ -149,4 +144,3 @@
   "author": "Zion Tech Group",
   "license": "MIT"
 }
->>>>>>> cursor/analyze-improve-and-deploy-application-a94a
