@@ -53,131 +53,27 @@ export default defineConfig({
 						'@radix-ui/react-tabs',
 						'@radix-ui/react-toast',
 						'@radix-ui/react-toggle',
+						'@radix-ui/react-toggle-group',
 						'@radix-ui/react-tooltip'
 					],
-					'animation-vendor': ['framer-motion'],
 					'utils-vendor': ['clsx', 'tailwind-merge', 'class-variance-authority'],
 					'icons-vendor': ['lucide-react'],
-					'state-vendor': ['@reduxjs/toolkit', 'react-redux'],
-					'router-vendor': ['react-router-dom']
-				},
-				chunkFileNames: 'js/[name]-[hash].js',
-				entryFileNames: 'js/[name]-[hash].js',
-				assetFileNames: (assetInfo) => {
-					if (/\.(css)$/.test(assetInfo.name || '')) return 'css/[name]-[hash].[ext]';
-					if (/\.(png|jpe?g|gif|svg|webp|ico)$/.test(assetInfo.name || '')) return 'images/[name]-[hash].[ext]';
-					if (/\.(woff2?|eot|ttf|otf)$/.test(assetInfo.name || '')) return 'fonts/[name]-[hash].[ext]';
-					return 'assets/[name]-[hash].[ext]';
+					'animation-vendor': ['framer-motion']
 				}
 			}
-		},
-		terserOptions: {
-			compress: {
-				drop_console: true,
-				drop_debugger: true,
-				pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
-				// Enhanced compression
-				passes: 2,
-				unsafe: true,
-				unsafe_comps: true,
-				unsafe_math: true,
-				unsafe_proto: true,
-				unsafe_regexp: true,
-				unsafe_undefined: true
-			},
-			mangle: { 
-				safari10: true,
-				// Enhanced mangling
-				properties: {
-					regex: /^_/
-				}
-			}
-		},
-		chunkSizeWarningLimit: 1000,
-		// Enhanced build options
-		reportCompressedSize: false,
-		emptyOutDir: true,
-		assetsInlineLimit: 4096
+		}
+	},
+	server: {
+		port: 3000,
+		host: true,
+		open: true
 	},
 	optimizeDeps: {
 		include: [
 			'react',
 			'react-dom',
-			'react-router-dom',
 			'framer-motion',
-			'lucide-react',
-			'@radix-ui/react-accordion',
-			'@radix-ui/react-alert-dialog',
-			'@radix-ui/react-aspect-ratio',
-			'@radix-ui/react-avatar',
-			'@radix-ui/react-checkbox',
-			'@radix-ui/react-context-menu',
-			'@radix-ui/react-dialog',
-			'@radix-ui/react-dropdown-menu',
-			'@radix-ui/react-label',
-			'@radix-ui/react-popover',
-			'@radix-ui/react-progress',
-			'@radix-ui/react-radio-group',
-			'@radix-ui/react-scroll-area',
-			'@radix-ui/react-select',
-			'@radix-ui/react-separator',
-			'@radix-ui/react-slider',
-			'@radix-ui/react-slot',
-			'@radix-ui/react-switch',
-			'@radix-ui/react-tabs',
-			'@radix-ui/react-toast',
-			'@radix-ui/react-tooltip'		],
-		exclude: ['@radix-ui/react-icons'],
-		// Enhanced dependency optimization
-		esbuildOptions: {
-			target: 'esnext'
-		}
-	},
-	css: { 
-		devSourcemap: false
-	},
-	esbuild: {
-		jsx: 'automatic',
-	},
-	server: {
-		port: 3000,
-		host: true,
-		open: true,
-		cors: true,
-		hmr: { overlay: false },
-		// Enhanced dev server
-		fs: {
-			allow: ['..']
-		}
-	},
-	preview: { 
-		port: 4173, 
-		host: true, 
-		open: true 
-	},
-	define: {
-		__DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
-		__PROD__: JSON.stringify(process.env.NODE_ENV === 'production'),
-		// Enhanced global definitions
-		'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
-	},
-	envPrefix: ['VITE_', 'ZION_'],
-	// Enhanced experimental features
-	experimental: {
-		renderBuiltUrl(filename, { hostType }) {
-			if (hostType === 'js') {
-				return { js: `__ASSET__${filename}__` }
-			} else {
-				return { relative: true }
-			}
-		}
+			'lucide-react'
+		]
 	}
 });
-import { defineConfig  } from "vite";
-import react from "@vitejs/plugin-react";
-export default defineConfig({;
-  plugins: [react()],;
-  server: {;
-    port: 3000,;,
-},;,
-})
