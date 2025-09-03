@@ -1,55 +1,50 @@
 {
-  "timestamp": "2025-09-03T16:00:25.531Z",
-  "overall": "secure",
+  "timestamp": "2025-09-03T16:32:17.031Z",
+  "status": "warning",
   "checks": [
     {
-      "name": "Secrets Scan",
+      "name": "Package Dependencies",
       "status": "pass",
-      "duration": "1ms",
-      "timestamp": "2025-09-03T16:00:25.320Z"
+      "message": "Dependencies analyzed",
+      "severity": "info"
     },
     {
-      "name": "Dependencies",
+      "name": "Code Analysis",
       "status": "pass",
-      "duration": "210ms",
-      "timestamp": "2025-09-03T16:00:25.530Z"
+      "message": "Analyzed 13 code files",
+      "severity": "info"
     },
     {
       "name": "File Permissions",
       "status": "pass",
-      "duration": "1ms",
-      "timestamp": "2025-09-03T16:00:25.531Z"
+      "message": "File permissions checked",
+      "severity": "info"
     },
     {
-      "name": "HTTPS Configuration",
-      "status": "pass",
-      "duration": "0ms",
-      "timestamp": "2025-09-03T16:00:25.531Z"
+      "name": "Network Configuration",
+      "status": "warning",
+      "message": "Custom network configuration detected",
+      "severity": "info"
     },
     {
-      "name": "Content Security Policy",
-      "status": "pass",
-      "duration": "0ms",
-      "timestamp": "2025-09-03T16:00:25.531Z"
-    },
-    {
-      "name": "Environment Variables",
-      "status": "pass",
-      "duration": "0ms",
-      "timestamp": "2025-09-03T16:00:25.531Z"
+      "name": "NPM Audit",
+      "status": "warning",
+      "message": "NPM audit not available or failed",
+      "severity": "info"
     }
   ],
-  "summary": {
-    "total": 6,
-    "passed": 6,
-    "failed": 0,
-    "warnings": 0
-  },
+  "vulnerabilities": [
+    {
+      "name": "Vulnerable Package",
+      "description": "Package vite may have known vulnerabilities",
+      "severity": "moderate",
+      "fix": "Update vite to latest version"
+    }
+  ],
   "recommendations": [
-    "Keep dependencies updated regularly",
-    "Use environment variables for sensitive data",
-    "Implement Content Security Policy",
-    "Enable HTTPS in production",
-    "Review file permissions regularly"
+    "Review and fix all identified vulnerabilities",
+    "Implement regular security scanning in CI/CD pipeline",
+    "Use environment variables for sensitive configuration",
+    "Keep dependencies updated regularly"
   ]
 }

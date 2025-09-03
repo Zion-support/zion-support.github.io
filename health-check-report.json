@@ -1,42 +1,52 @@
 {
-  "timestamp": "2025-09-03T16:00:25.296Z",
-  "overall": "healthy",
+  "timestamp": "2025-09-03T16:31:06.384Z",
+  "status": "healthy",
   "checks": [
     {
-      "name": "Node Modules",
+      "name": "Node.js Version",
       "status": "pass",
-      "duration": "1ms",
-      "timestamp": "2025-09-03T16:00:25.289Z"
+      "message": "Node.js v22.16.0 is supported"
     },
     {
-      "name": "Project Structure",
+      "name": "Package.json",
       "status": "pass",
-      "duration": "0ms",
-      "timestamp": "2025-09-03T16:00:25.289Z"
+      "message": "Package.json is valid"
     },
     {
-      "name": "System Resources",
+      "name": "Build Script",
       "status": "pass",
-      "duration": "7ms",
-      "timestamp": "2025-09-03T16:00:25.296Z"
+      "message": "Build script exists"
     },
     {
       "name": "Dependencies",
       "status": "pass",
-      "duration": "0ms",
-      "timestamp": "2025-09-03T16:00:25.296Z"
+      "message": "node_modules directory exists"
     },
     {
-      "name": "Build System",
+      "name": "File: next.config.js",
       "status": "pass",
-      "duration": "0ms",
-      "timestamp": "2025-09-03T16:00:25.296Z"
+      "message": "File exists"
+    },
+    {
+      "name": "File: pages/_app.tsx",
+      "status": "pass",
+      "message": "File exists"
+    },
+    {
+      "name": "File: pages/index.tsx",
+      "status": "pass",
+      "message": "File exists"
+    },
+    {
+      "name": "Disk Space",
+      "status": "pass",
+      "message": "Disk usage: 12%"
+    },
+    {
+      "name": "Memory Usage",
+      "status": "pass",
+      "message": "Memory usage: 8%"
     }
   ],
-  "summary": {
-    "total": 5,
-    "passed": 5,
-    "failed": 0,
-    "warnings": 0
-  }
+  "recommendations": []
 }
