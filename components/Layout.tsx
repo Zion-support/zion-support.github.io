@@ -1,7 +1,6 @@
 import React from 'react';
-import Head from 'next/head';
-import EnhancedNavigation from './layout/EnhancedNavigation';
-import EnhancedFooter from './layout/EnhancedFooter';
+import Link from 'next/link';
+import SEOHead from './SEOHead';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -20,18 +19,47 @@ const Layout: React.FC<LayoutProps> = ({
 }) => {
   return (
     <>
-      <Head>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="keywords" content={keywords} />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:image" content={ogImage} />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <SEOHead
+        title={title}
+        description={description}
+        keywords={keywords}
+        ogImage={ogImage}
+      />
       <div className="min-h-screen flex flex-col">
-        <EnhancedNavigation />
-        <main className="flex-1 pt-16">{children}</main>
-        <EnhancedFooter />
+        <header style={{
+          position: 'sticky', top: 0, zIndex: 50, background: '#0b1220', color: 'white',
+          borderBottom: '1px solid rgba(255,255,255,0.1)'
+        }}>
+          <nav style={{
+            maxWidth: 1200, margin: '0 auto', padding: '10px 16px', display: 'flex',
+            alignItems: 'center', justifyContent: 'space-between', gap: 12
+          }}>
+            <Link href="/" style={{ fontWeight: 800, letterSpacing: 0.3 }}>Zion Tech Group</Link>
+            <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+              <Link href="/" style={{ opacity: 0.9 }}>Home</Link>
+              <Link href="/services" style={{ opacity: 0.9 }}>Services</Link>
+              <Link href="/pricing" style={{ opacity: 0.9 }}>Pricing</Link>
+              <Link href="/contact" style={{ fontWeight: 600, background: '#22d3ee', color: '#0b1220', padding: '6px 10px', borderRadius: 8 }}>Contact</Link>
+            </div>
+          </nav>
+        </header>
+        <main className="flex-1">{children}</main>
+        <footer style={{ background: '#0b1220', color: 'white', marginTop: 40, borderTop: '1px solid rgba(255,255,255,0.1)' }}>
+          <div style={{ maxWidth: 1200, margin: '0 auto', padding: '24px 16px', display: 'grid', gap: 16 }}>
+            <div style={{ display: 'grid', gap: 8 }}>
+              <strong>Zion Tech Group</strong>
+              <span>Mobile: +1 302 464 0950</span>
+              <span>Email: <a href="mailto:kleber@ziontechgroup.com" style={{ color: '#93c5fd' }}>kleber@ziontechgroup.com</a></span>
+              <span>Address: 364 E Main St STE 1008 Middletown DE 19709</span>
+            </div>
+            <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+              <Link href="/services" style={{ opacity: 0.9 }}>Services</Link>
+              <Link href="/pricing" style={{ opacity: 0.9 }}>Pricing</Link>
+              <Link href="/contact" style={{ opacity: 0.9 }}>Contact</Link>
+            </div>
+            <small style={{ opacity: 0.7 }}>© {new Date().getFullYear()} Zion Tech Group. All rights reserved.</small>
+          </div>
+        </footer>
       </div>
     </>
   )

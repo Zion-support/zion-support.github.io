@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import Layout from '../components/Layout';
 
 const PricingPage: React.FC = () => {
@@ -20,7 +21,7 @@ const PricingPage: React.FC = () => {
                 <li>MVP: $20,000–$60,000</li>
                 <li>Enterprise: $75,000+</li>
               </ul>
-              <a href="/contact" className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">Request Quote</a>
+              <Link href="/contact" className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">Request Quote</Link>
             </div>
 
             <div className="border rounded-xl p-6 shadow-sm">
@@ -31,7 +32,7 @@ const PricingPage: React.FC = () => {
                 <li>Growth: $30,000–$80,000</li>
                 <li>Scale: $100,000+</li>
               </ul>
-              <a href="/contact" className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">Request Quote</a>
+              <Link href="/contact" className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">Request Quote</Link>
             </div>
 
             <div className="border rounded-xl p-6 shadow-sm">
@@ -42,7 +43,7 @@ const PricingPage: React.FC = () => {
                 <li>Migration: $10,000–$40,000</li>
                 <li>Managed: from $2,000/mo</li>
               </ul>
-              <a href="/contact" className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">Request Quote</a>
+              <Link href="/contact" className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">Request Quote</Link>
             </div>
 
             <div className="border rounded-xl p-6 shadow-sm">
@@ -53,7 +54,7 @@ const PricingPage: React.FC = () => {
                 <li>Remediation: $8,000–$50,000</li>
                 <li>Managed SOC: from $3,000/mo</li>
               </ul>
-              <a href="/contact" className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">Request Quote</a>
+              <Link href="/contact" className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">Request Quote</Link>
             </div>
 
             <div className="border rounded-xl p-6 shadow-sm">
@@ -64,7 +65,7 @@ const PricingPage: React.FC = () => {
                 <li>Dashboards: $6,000–$25,000</li>
                 <li>ML Ops: $25,000+</li>
               </ul>
-              <a href="/contact" className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">Request Quote</a>
+              <Link href="/contact" className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">Request Quote</Link>
             </div>
 
             <div className="border rounded-xl p-6 shadow-sm">
@@ -75,7 +76,7 @@ const PricingPage: React.FC = () => {
                 <li>MVP App: $20,000–$70,000</li>
                 <li>Enterprise: $80,000+</li>
               </ul>
-              <a href="/contact" className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">Request Quote</a>
+              <Link href="/contact" className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">Request Quote</Link>
             </div>
           </div>
         </div>
