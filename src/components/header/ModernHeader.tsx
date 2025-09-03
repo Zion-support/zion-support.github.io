@@ -51,7 +51,7 @@ export function ModernHeader() {
             <div className="hidden lg:flex items-center space-x-4">
               <Link href="/pricing" className="hover:text-blue-200 transition-colors">Pricing</Link>
               <Link href="/careers" className="hover:text-blue-200 transition-colors">Careers</Link>
-              <Link to="/support" className="hover:text-blue-200 transition-colors">Support</Link>
+              <Link href="/support" className="hover:text-blue-200 transition-colors">Support</Link>
             </div>
           </div>
         </div>
@@ -98,7 +98,7 @@ export function ModernHeader() {
                       {services.map((service) => (
                         <Link
                           key={service.name}
-                          to={service.href}
+                          href={service.href}
                           className="block p-3 rounded-lg hover:bg-gray-50 transition-colors"
                         >
                           <div className="font-medium text-gray-900">{service.name}</div>
@@ -171,7 +171,7 @@ export function ModernHeader() {
                 {services.map((service) => (
                   <Link
                     key={service.name}
-                    to={service.href}
+                    href={service.href}
                     className="block pl-4 text-gray-600 hover:text-blue-600 transition-colors"
                     onClick={closeMobileMenu}
                   >
