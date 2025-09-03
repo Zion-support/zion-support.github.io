@@ -13,11 +13,11 @@ class IntelligentPerformanceMonitor {
   constructor() {
     this.projectRoot = process.cwd();
     this.logFile = path.join(
-      this.projectRoot,logs',
+      this.projectRoot, 'logs',
       'performance-monitor.log'
     );
     this.performanceHistory = path.join(
-      this.projectRoot,logs',
+      this.projectRoot, 'logs',
       'performance-history.json'
     );
     this.metrics = {
@@ -39,7 +39,7 @@ class IntelligentPerformanceMonitor {
   }
 
   async initialize() {
-    console.log(`'📊 Intelligent Performance Monitor Initialized');
+    console.log(`📊 Intelligent Performance Monitor Initialized`);
     this.ensureLogDirectory();
     this.loadPerformanceHistory();
     
@@ -85,7 +85,7 @@ class IntelligentPerformanceMonitor {
   }
 
   startContinuousMonitoring() {
-    console.log(`'🔍 Starting continuous performance monitoring...');
+    console.log(`🔍 Starting continuous performance monitoring...`);
     
     // Initial performance measurement
     this.measurePerformance();
@@ -103,7 +103,7 @@ class IntelligentPerformanceMonitor {
   }
 
   async measurePerformance() {
-    console.log(`'📈 Measuring application performance...');
+    console.log(`📈 Measuring application performance...`);
     
     const startTime = Date.now();
     const measurement = {
@@ -228,7 +228,7 @@ class IntelligentPerformanceMonitor {
   }
 
   async measureBundleSize(measurement) {
-    console.log(`'📦 Measuring bundle size...');
+    console.log(`📦 Measuring bundle size...`);
     
     try {
       // Check for build output directory
@@ -292,7 +292,7 @@ class IntelligentPerformanceMonitor {
   }
 
   async measureRuntimePerformance(measurement) {
-    console.log(`'⚡ Measuring runtime performance...');
+    console.log(`⚡ Measuring runtime performance...`);
     
     try {
       // Get system resource usage

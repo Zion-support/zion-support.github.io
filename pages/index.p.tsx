@@ -1,5 +1,5 @@
-import React from 'react';
-import Head from 'next/head';
+const React = dynamic(() => import('react'), { ssr: false });;
+const Head = dynamic(() => import('next/head'), { ssr: false });;
 
 export default function Index() {
   return (

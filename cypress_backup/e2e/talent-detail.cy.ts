@@ -6,7 +6,9 @@ describe('talent detail page', () => {
         id: 't-123',
         full_name: 'Cypress Talent',
         bio: 'Testing bio',
-        skills: ['Cypress']}}).as('getTalent');
+        skills: ['Cypress'],
+      },
+    }).as('getTalent');
     cy.visit('/talent/t-123');
     cy.wait('@getTalent');
     cy.get('[data-testid="talent-name"]').should('contain', 'Cypress Talent');

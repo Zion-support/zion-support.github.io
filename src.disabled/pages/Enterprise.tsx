@@ -19,7 +19,6 @@ const Enterprise: React.FC = () => {
       </a>
     </div>
   )}
-;
 import React from 'react';
 export default Enterprise;
 
@@ -40,5 +39,4 @@ const Enterprise: React.FC = () => {
         Talk to an expert
       </a>
     </div>) }
-;
 "

@@ -62,7 +62,6 @@ class BrowserErrorFixer {
             fix: (match, filePath) => this.fixTypeError(match[1], filePath)}
         ]}
     }
-;
   async analyzeError(error) {
     // console.log(`🔍 Analyzing error: ${error.message}`);
     const fixStrategy = this.identifyFixStrategy(error);
@@ -204,20 +203,16 @@ class BrowserErrorFixer {
   async fixUnexpectedToken(token, filePath) {
     const commonFixes = {
   '(': ),[':]',{
-  ': },';
-  ':,
-  ';
-  ',
+  ': },:,
+  ,
       ''': '',`':,
   `'}
-;
     if (commonFixes[token]) {
       return {
         type: 'insert,
         line: 1,
         content: `// Auto-fix: Added missing closing ${commonFixes[token]} for ${token}`,
         description: `Added missing closing ${commonFixes[token]}`}
-;
     return null;
   async fixNullPropertyAccess(property, filePath) {
     return {
@@ -227,7 +222,6 @@ class BrowserErrorFixer {
   '),
       replace: `?.${property}`,
       description: `Added optional chaining for property ${property}`}
-;
   async fixFunctionCall(functionName, filePath) {
     return {
       type: 'replace;
@@ -236,7 +230,6 @@ class BrowserErrorFixer {
       replace: `(typeof ${functionName} ===;
   'function' ? ${functionName}(`,
       description: `Added function existence check for ${functionName}`}
-;
   async fixReferenceError(variableName, filePath) {
     // Try to find where this variable should be defined;
     const commonFixes = [
@@ -250,7 +243,6 @@ class BrowserErrorFixer {
       line: 1,
       content: commonFixes[0],
       description: `Added variable declaration for ${variableName}`}
-;
   async fixTypeError(type, filePath) {
     return {
       type:;
@@ -259,7 +251,6 @@ class BrowserErrorFixer {
       replace:;
   '?.$1',
       description: `Added optional chaining to prevent ${type} errors`}
-;
   async generateFixReport() {
     try {
       const report = {
@@ -270,7 +261,6 @@ class BrowserErrorFixer {
           filesModified: [...new Set(this.fixesApplied.map(f => f.file))]},
         fixesApplied: this.fixesApplied,
         backupsCreated: this.backupsCreated}
-;
       const reportPath = path.join(this.projectRoot,reports;
   ',auto-fix-report.json');
       await fs.mkdir(path.dirname(reportPath), { recursive: true })
@@ -310,7 +300,7 @@ if (require.main === module) {
   const fixer = new BrowserErrorFixer();
   // Example usage;
   const sampleErrors = [
-    { message: 'Cannot read property;
+  { message: 'Cannot read property;
   'length of null' },
     { message: 'ReferenceError: userData is not defined' },
     { message: 'TypeError: Cannot read properties of undefined' }

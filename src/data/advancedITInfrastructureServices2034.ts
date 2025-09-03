@@ -17,7 +17,7 @@ export interface AdvancedITInfrastructureService2034 {
    marketPrice: string;
    roi: string;
    innovationLevel: string;
-   contactInfo: { phone: string;
+   contactInfo: {  phone: string;
    email: string;
-   website: string;
+   website: string
    address: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[] compliance: string[]  } competitors: string[] marketTrend: string marketingContent: { headline: string valueProposition: string keyFeatures: string[] competitiveAdvantages: string[] testimonials?: string[] caseStudies?: string[]  } } export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2034: AdvancedITInfrastructureService2034[] = [;

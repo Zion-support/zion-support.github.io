@@ -37,7 +37,8 @@ import {
   Mail} from;
   'lucide-react';
 const AIAutonomousVehiclePlatform = () => {
-  const features = [{
+  const features = [
+  {
       title: 'Advanced Perception Systems', description: 'Multi-sensor fusion with LiDAR, radar, cameras, and ultrasonic sensors for 360° environmental awareness', icon: Eye,
       color: 'text-blue-400'}, {
       title: 'AI Decision Making',
@@ -61,22 +62,23 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
 const AIAutonomousVehiclePlatform = () => {
-  const features = [{
+  const features = [
+  {
       title: 'Advanced Perception Systems', description: 'Multi-sensor fusion with LiDAR, radar, cameras, and ultrasonic sensors for 360° environmental awareness', icon: Eye,';
       color: 'text-blue-400'}, {';
-      title: 'AI Decision Making',';
+      title: 'AI Decision Making,;
       description: 'Real-time neural networks for instant decision making in complex traffic scenarios', icon: Brain,';
       color: 'text-purple-400'}, {';
-      title: 'Predictive Analytics',';
+      title: 'Predictive Analytics,;
       description: 'ML-powered prediction of traffic patterns, pedestrian behavior, and road conditions', icon: TrendingUp,';
       color: 'text-green-400'}, {';
-      title: 'Edge Computing',';
+      title: 'Edge Computing,;
       description: 'On-board processing for ultra-low latency responses and offline operation capability', icon: Cpu,';
       color: 'text-cyan-400'}, {';
-      title: 'Cybersecurity',';
+      title: 'Cybersecurity,;
       description: 'Advanced threat detection and prevention for vehicle systems and communications', icon: Shield,';
       color: 'text-red-400'}, {'
-      title: 'Cloud Integration',';
+      title: 'Cloud Integration,;
       description: 'Seamless cloud connectivity for updates, data sharing, and fleet management', icon: Cloud,';
       color: 'text-indigo-400'}
 
@@ -735,5 +737,4 @@ const AIAutonomousVehiclePlatform = () => {
       </section>
     </div>
   )}
-;
 export default AIAutonomousVehiclePlatform";

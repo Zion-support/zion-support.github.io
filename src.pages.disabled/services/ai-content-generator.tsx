@@ -1,8 +1,6 @@
-import React from 'react';
-import Layout from '../../components/Layout';
-import { Brain, PenTool, CheckCircle, Star, Phone, Mail, MapPin } from 'lucide-react';
-
-const AIContentGenerator: React.FC = () => {
+import React from 'react'
+import Layout from '../../components/Layout'
+import { Brain, PenTool, CheckCircle, Star, Phone, Mail, MapPin }  from 'lucide-react';const AIContentGenerator: React.FC = () => {
   return (
     <Layout
       title='AI Content Generator - Zion Tech Group';
@@ -267,5 +265,4 @@ const AIContentGenerator: React.FC = () => {
       </section>
     </Layout>
   )}
-;
 export default AIContentGenerator

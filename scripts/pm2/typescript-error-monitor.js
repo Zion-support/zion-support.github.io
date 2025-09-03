@@ -1,10 +1,8 @@
 #!/usr/bin/env node;
 import { execSync, spawn } from;
   'child_process';
-import fs from;
-  'fs';
-import path from;
-  'path';
+import fs from "fsfs';
+import path from "pathpath';
 class TypeScriptErrorMonitor {
   constructor() {
     this.checkInterval = process.env.CHECK_INTERVAL || 180000 // 3 minutes;
@@ -39,7 +37,6 @@ class TypeScriptErrorMonitor {
         failed: [],
         skipped: []},
       recommendations: []}
-;
     try {
       // Run TypeScript compiler to get errors;
       const errors = await this.getTypeScriptErrors();
@@ -177,18 +174,12 @@ class TypeScriptErrorMonitor {
       // Add common missing imports;
       const commonImports = {
   'React': 'import React from;
-  'react';
-  'useState': 'import { useState } from;
-  'react'';
-  'useEffect': 'import { useEffect } from;
-  'react'';
-  'useRef': 'import { useRef } from;
-  'react'';
-  'FC': 'import { FC } from;
-  'react'';
-  'ReactNode': 'import { ReactNode } from;
+  'reactuseState': 'import { useState } from;
+  'react'useEffect': 'import { useEffect } from;
+  'react'useRef': 'import { useRef } from;
+  'react'FC': 'import { FC } from;
+  'react'ReactNode': 'import { ReactNode } from;
   'react''}
-;
       if (commonImports[missingName]) {
         lines.unshift(commonImports[missingName]);
         return true}
@@ -210,10 +201,7 @@ class TypeScriptErrorMonitor {
   './') || moduleName.startsWith(
   '../')) {
         const extensions = [
-  '.ts',
-  '.tsx',
-  '.js',
-  '.jsx'];
+  '.ts,.tsx,.js,.jsx'];
         for (const ext of extensions) {
           const newImport = line.replace(moduleName, moduleName + ext);
           const resolvedPath = path.resolve(
@@ -282,7 +270,6 @@ class TypeScriptErrorMonitor {
   generateRecommendations(errors) {
     const recommendations = [];
     const errorCounts = {}
-;
     // Count error types;
     errors.forEach(error => {
       errorCounts[error.code] = (errorCounts[error.code] || 0) + 1})
@@ -304,7 +291,6 @@ class TypeScriptErrorMonitor {
   'TS2345': `Review function argument types (${count} occurrences)`,
   'TS2322': `Fix type assignments or add type assertions (${count} occurrences)`,
   'TS7006': `Add explicit type annotations for parameters (${count} occurrences)`}
-;
     return recommendations[code]}
   saveReport(report) {
     try {

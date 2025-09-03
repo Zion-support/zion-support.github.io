@@ -17,7 +17,18 @@
    marketPrice: string;
    roi: string;
    innovationLevel: string;
-   contactInfo: { phone: string;
+   contactInfo: {  phone: string;
    email: string;
+<<<<<<< HEAD
    website: string;
-   address: string} technicalSpecs: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]} competitors?: string[] marketSize?: string}  export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = ['';
+   addres,s: string} technicalSpecs: { technology: string[] integrations: string[] apiEndpoints: number uptime: string securit,y: string[]} competitors?: string[] marketSize?: string}  export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [&apos;';&apos;'
+=======
+   website: string
+<<<<<<< HEAD
+   address: string} technicalSpecs: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]} competitors?: string[] marketSize?: string}  export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = ['';""
+""
+=======
+   address: string} technicalSpecs: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]} competitors?: string[] marketSize?: string}  export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = ['
+"
+>>>>>>> main
+>>>>>>> main

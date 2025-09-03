@@ -335,7 +335,7 @@ class TypeScriptErrorFixer {
   }
 }
 
-console.log(`'🔧 Starting TypeScript error fixer automation...');
+console.log(`🔧 Starting TypeScript error fixer automation...`);
 
 const errorFixer = new TypeScriptErrorFixer();
 

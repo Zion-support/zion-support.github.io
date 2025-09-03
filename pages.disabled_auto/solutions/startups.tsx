@@ -10,7 +10,7 @@ import Link from;
   'next/link';
 const Startups: NextPage = () => {
   const solutions = [
-    {
+  {
 :pages.disabled_auto/solutions/startups.tsx;
       title:;
   'MVP Development,
@@ -18,10 +18,7 @@ const Startups: NextPage = () => {
   'Rapid development of minimum viable products to validate your ideas',
       icon: <Rocket className='w-8 h-8' />,
       features: [,
-  Agile development methodology',
-  'Rapid prototyping',
-  'User feedback integration',
-  'Scalable architecture';
+  Agile development methodology,Rapid prototyping,User feedback integration,Scalable architecture';
       ]},
     {
       title: 'AI-Powered Analytics,
@@ -29,10 +26,7 @@ const Startups: NextPage = () => {
   'Data-driven insights to make informed business decisions',
       icon: <Target className='w-8 h-8' />,
       features: [,
-  Real-time analytics dashboard',
-  'Predictive modeling',
-  'Customer behavior analysis',
-  'Performance optimization';
+  Real-time analytics dashboard,Predictive modeling,Customer behavior analysis,Performance optimization';
       ]},
     {
       title: 'Cloud Infrastructure,
@@ -40,10 +34,7 @@ const Startups: NextPage = () => {
   'Scalable cloud solutions that grow with your startup',
       icon: <Globe className='w-8 h-8' />,
       features: [,
-  Auto-scaling infrastructure',
-  'Cost optimization',
-  'High availability',
-  'Global deployment';
+  Auto-scaling infrastructure,Cost optimization,High availability,Global deployment';
       ]},
     {
       title: 'Digital Marketing Automation,
@@ -51,37 +42,29 @@ const Startups: NextPage = () => {
   'Automated marketing tools to accelerate growth',
       icon: <Zap className='w-8 h-8' />,
       features: [
-  'Lead generation automation',
-  'Email marketing campaigns',
-  'Social media management',
-  'Conversion optimization'
+  'Lead generation automation,Email marketing campaigns,Social media management,Conversion optimization'
       title: 'MVP Development', description: 'Rapid development of minimum viable products to validate your ideas',
       icon: <Rocket className='w-8 h-8' />, features: [;
-        'Agile development methodology',
-        'Rapid prototyping', 'User feedback integration',
-        'Scalable architecture'
+        'Agile development methodology,Rapid prototyping,User feedback integration,Scalable architecture'
       ]}, {
       title: 'AI-Powered Analytics',
       description: 'Data-driven insights to make informed business decisions', icon: <Target className='w-8 h-8' />,
       features: [
-        'Real-time analytics dashboard', 'Predictive modeling',
-        'Customer behavior analysis', 'Performance optimization'
+        'Real-time analytics dashboard,Predictive modeling,Customer behavior analysis,Performance optimization'
       ]}, {
       title: 'Cloud Infrastructure',
       description: 'Scalable cloud solutions that grow with your startup', icon: <Globe className='w-8 h-8' />,
       features: [
-        'Auto-scaling infrastructure', 'Cost optimization',
-        'High availability', 'Global deployment'
+        'Auto-scaling infrastructure,Cost optimization,High availability,Global deployment'
       ]}, {
       title: 'Digital Marketing Automation',
       description: 'Automated marketing tools to accelerate growth', icon: <Zap className='w-8 h-8' />,
       features: [
-        'Lead generation automation', 'Email marketing campaigns',
-        'Social media management', 'Conversion optimization';
+        'Lead generation automation,Email marketing campaigns,Social media management,Conversion optimization';
       ]}
   ];
   const benefits = [
-    {
+  {
 :pages.disabled_auto/solutions/startups.tsx
       icon: <Rocket className='w-6 h-6' />,
       title:,
@@ -112,7 +95,8 @@ const Startups: NextPage = () => {
       icon: <Users className='w-6 h-6' />,
       title: 'Expert Guidance', description: 'Access to experienced entrepreneurs and technical experts'}
   ];
-  const packages = [{
+  const packages = [
+  {
 :pages.disabled_auto/solutions/startups.tsx;
       name:,
   Launch',
@@ -120,11 +104,7 @@ const Startups: NextPage = () => {
   ,
       description: 'Perfect for early-stage startups,
       features: [;
-  'MVP development (4-6 weeks)',
-  'Basic cloud infrastructure',
-  'Essential integrations',
-  'Email support',
-  'Basic analytics setup';
+  'MVP development (4-6 weeks),Basic cloud infrastructure,Essential integrations,Email support,Basic analytics setup';
       ],
       popular: false},
     {
@@ -134,12 +114,7 @@ const Startups: NextPage = () => {
   ,
       description: 'Ideal for growing startups,
       features: [;
-  'Full product development (8-12 weeks)',
-  'Advanced cloud infrastructure',
-  'AI-powered analytics',
-  'Priority support',
-  'Marketing automation',
-  'Team training';
+  'Full product development (8-12 weeks),Advanced cloud infrastructure,AI-powered analytics,Priority support,Marketing automation,Team training';
       ],
       popular: true},
     {
@@ -150,34 +125,22 @@ const Startups: NextPage = () => {
   Complete solution for established startups',
       features: [;
   'Custom development timeline,
-  'Enterprise-grade infrastructure',
-  'Advanced AI solutions',
-  'Dedicated team',
-  '24/7 support',
-  'Custom integrations',
-  'Ongoing optimization';
+  'Enterprise-grade infrastructure,Advanced AI solutions,Dedicated team,24/7 support,Custom integrations,Ongoing optimization';
       ],
       popular: false;
       name: 'Launch', price: '$2,999', description: 'Perfect for early-stage startups',
       features: [;
-        'MVP development (4-6 weeks)', 'Basic cloud infrastructure',
-        'Essential integrations', 'Email support',
-        'Basic analytics setup';
+        'MVP development (4-6 weeks),Basic cloud infrastructure,Essential integrations,Email support,Basic analytics setup';
       ], popular: false},
     {
       name: 'Scale', price: '$7,999', description: 'Ideal for growing startups',
       features: [;
-        'Full product development (8-12 weeks)', 'Advanced cloud infrastructure',
-        'AI-powered analytics', 'Priority support',
-        'Marketing automation', 'Team training';
+        'Full product development (8-12 weeks),Advanced cloud infrastructure,AI-powered analytics,Priority support,Marketing automation,Team training';
       ], popular: true},
     {
       name: 'Enterprise', price: 'Custom',
       description: 'Complete solution for established startups', features: [;
-        'Custom development timeline',
-        'Enterprise-grade infrastructure', 'Advanced AI solutions',
-        'Dedicated team', '24/7 support',
-        'Custom integrations', 'Ongoing optimization';
+        'Custom development timeline,Enterprise-grade infrastructure,Advanced AI solutions,Dedicated team,24/7 support,Custom integrations,Ongoing optimization';
       ], popular: false}
   ]
   return(
@@ -403,5 +366,4 @@ const Startups: NextPage = () => {
       </section>
     </MainLayout>
   )}
-;
 export default Startups

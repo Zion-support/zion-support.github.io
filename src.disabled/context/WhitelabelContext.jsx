@@ -12,7 +12,6 @@ export function WhitelabelProvider({ children }) {
     setPrimaryColor,
     customTheme,
     setCustomTheme}
-;
   return (
     <WhitelabelContext.Provider value={value}>
       {children}
