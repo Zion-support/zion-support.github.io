@@ -164,7 +164,7 @@ export default function Services2026ShowcasePage() {
     ...enterpriseIT2026ServicesV2];
   // Enhanced categories for 2026;
   const categories = [
-    { id:,
+  { id:,
   all;
   ', name: 'All 2026 Services, icon: '🚀;
   ', count: all2026Services.length },
@@ -192,7 +192,7 @@ export default function Services2026ShowcasePage() {
   ', count: all2026Services.filter(s => s.category.includes('SaaS)).length }
   ];
   const priceRanges = [
-    { id:,
+  { id:,
   all;
   ', name: 'All Prices, range:,
   All;
@@ -215,7 +215,7 @@ export default function Services2026ShowcasePage() {
   ' }
   ];
   const sortOptions = [
-    { id: 'name, name:,
+  { id: 'name, name:,
   Name A-Z;
   ' },
     { id: 'price-low, name:,
@@ -265,9 +265,8 @@ export default function Services2026ShowcasePage() {
   ') {
       filtered = filtered.filter(service => {
         const price = parseInt(service.price.replace('$;
-  ', '').replace(
-  ',', ';
-  '));
+  ,').replace(
+  ,, ));
         if (selectedPriceRange === 'low
   ') return price < 1000;
         if (selectedPriceRange === 'medium;
@@ -282,19 +281,15 @@ export default function Services2026ShowcasePage() {
         case 'price-low;
   ': return parseInt(a.price.replace('$, ,
   ').replace(
-  ',', ';
-  ')) - parseInt(b.price.replace('$;
-  ', '').replace(
-  ',', ';
-  '));
+  ,, )) - parseInt(b.price.replace('$;
+  ,').replace(
+  ,, ));
         case 'price-high;
   ': return parseInt(b.price.replace('$, ,
   ').replace(
-  ',', ';
-  ')) - parseInt(a.price.replace('$;
-  ', '').replace(
-  ',', ';
-  '));
+  ,, )) - parseInt(a.price.replace('$;
+  ,').replace(
+  ,, ));
         case 'popularity;
   ': return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
         case 'newest:;

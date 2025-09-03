@@ -1,6 +1,6 @@
 import React from 'react';
-import EnhancedHeader from './EnhancedHeader';
-import EnhancedFooter from './EnhancedFooter';
+import Navigation from './Navigation';
+import Footer from './Footer';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -8,12 +8,10 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <div className='min-h-screen flex flex-col'>
-      <EnhancedHeader />
-      <main className='flex-1'>
-        {children}
-      </main>
-      <EnhancedFooter />
+    <div className="min-h-screen flex flex-col">
+      <Navigation />
+      <main className="flex-1">{children}</main>
+      <Footer />
     </div>
   );
 };

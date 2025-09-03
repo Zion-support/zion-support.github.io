@@ -16,7 +16,7 @@ const Header: React.FC = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)}, []);
   const navigationItems = [
-    { name: 'Home', href: '/' },
+  { name: 'Home', href: '/' },
     { name: 'Services', href: '/services' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' }]
