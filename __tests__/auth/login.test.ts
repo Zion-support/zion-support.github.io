@@ -1,7 +1,7 @@
 import { loginUser } from
   @/services/authService' // registerUser removed as it;s not the focus;'
-import { NextApiRequest, NextApiResponse }  from 'next;''
-import { vi, Mock, describe, it, expect, beforeEach, afterEach }  from 'vitest;''
+import { NextApiRequest, NextApiResponse }  from 'next;"
+import { vi, Mock, describe, it, expect, beforeEach, afterEach }  from 'vitest;"
 // Mock Supabase client
 // Changed from let to const as mockSignInWithPassword is not reassigned, only its properties (mock state) are changed.
 const mockSignInWithPassword: Mock = vi.fn()
@@ -29,7 +29,7 @@ vi.mock('@supabase/supabase-js, async importOriginal => {'
     __internalMockSignInWithPassword: mockSignInWithPassword}
 })
 // Import the handler
-import loginHandler from '../../pages/api/auth/login''
+import loginHandler from '../../pages/api/auth/login"
 // Import the mock functions from the mocked module
 // More specific type for the imported module if its structure is known.
 const supabaseMockModule = (await import('@supabase/supabase-js;)) as {'

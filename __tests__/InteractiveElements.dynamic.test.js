@@ -1,21 +1,21 @@
 
-import React   from 'react''
-import { render, screen, fireEvent }   from '@testing-library/react''
+import React   from 'react"
+import { render, screen, fireEvent }   from '@testing-library/react"
 import '@testing-library/jest-dom
-import InteractiveElementsdynamic   from '../components/InteractiveElements.dynamic''
+import InteractiveElementsdynamic   from '../components/InteractiveElements.dynamic"
   describe('InteractiveElementsdynamic', () => {'
   test('renders without crashing', () => {'
-    render(<InteractiveElementsdynamic  />)
-    expect(screen.getByTestId('interactiveelements.dynamic')).toBeInTheDocument()})'
+    render(<InteractiveElementsdynamic  / / />)
+    expect(screen.getByTestId("interactiveelements.dynamic")).toBeInTheDocument()})'
   test('displays correct content', () => {'
-    render(<InteractiveElementsdynamic  />)
+    render(<InteractiveElementsdynamic  / / />)
     // Add specific content tests based on component
   })
   test('handles user interactions', () => {'
-    render(<InteractiveElementsdynamic  />)
+    render(<InteractiveElementsdynamic  / / />)
     // Add interaction tests based on component functionality
   })
   test('applies correct styling', () => {'
-    render(<InteractiveElementsdynamic  />)
+    render(<InteractiveElementsdynamic  / / />)
     // Add styling tests if needed
   })})

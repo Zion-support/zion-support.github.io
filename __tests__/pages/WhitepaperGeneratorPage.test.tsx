@@ -7,8 +7,8 @@ import {
   act} from '@testing-library/react
 import
   '@testing-library/jest-dom
-import WhitepaperGeneratorPage   from '@/pages/WhitepaperGeneratorPage''
-import { supabase }   from '@/lib/supabaseClient''
+import WhitepaperGeneratorPage   from '@/pages/WhitepaperGeneratorPage"
+import { supabase }   from '@/lib/supabaseClient"
 import * as recharts  from 'recharts'// For mocking ResponsiveContainer;'
 // --- Mocks ---
 jest.mock(
@@ -107,7 +107,7 @@ const mockSupabaseInvoke = supabase.functions.invoke as jest.Mock
     mockRevokeObjectURL.mockReset()})
   test(
   'renders initial layout with all input fields and buttons', () => {'
-    render(<WhitepaperGeneratorPage  />)
+    render(<WhitepaperGeneratorPage  / />)
     expect(screen.getByLabelText(/Token Name: /i)).toBeInTheDocument()
     expect(screen.getByLabelText(/Token Supply:/i)).toBeInTheDocument()
     expect(screen.getByLabelText(/Use Cases:/i)).toBeInTheDocument()
@@ -126,7 +126,7 @@ const mockSupabaseInvoke = supabase.functions.invoke as jest.Mock
   'button', { name: /Submit to Counsel/i })).not.toBeInTheDocument()})'
   test(
   'updates token name state on input change', () => {'
-    render(<WhitepaperGeneratorPage  />)
+    render(<WhitepaperGeneratorPage  / />)
     const tokenNameInput = screen.getByLabelText(/Token Name:/i)
     fireEvent.change(tokenNameInput, { target: { value:
   'New Token Name' } })'
@@ -141,7 +141,7 @@ const mockSupabaseInvoke = supabase.functions.invoke as jest.Mock
       mockSupabaseInvoke.mockResolvedValueOnce({
         data: { whitepaperDraft: mockGeneratedDraft }
         error: null})
-      render(<WhitepaperGeneratorPage  />)
+      render(<WhitepaperGeneratorPage  / />)
       const generateButton = screen.getByRole(
   'button', {'
         name: /Generate Whitepaper Draft/i})
@@ -170,7 +170,7 @@ const mockSupabaseInvoke = supabase.functions.invoke as jest.Mock
         data: null
         error: { message:
   'Generation failed' }})'
-      render(<WhitepaperGeneratorPage  />)
+      render(<WhitepaperGeneratorPage  / />)
       fireEvent.click(
         screen.getByRole(
   'button', { name: /Generate Whitepaper Draft/i }));'
@@ -184,7 +184,7 @@ const mockSupabaseInvoke = supabase.functions.invoke as jest.Mock
         data: { whitepaperDraft:
   '## Test\nContent },'
         error: null})
-      render(<WhitepaperGeneratorPage  />)
+      render(<WhitepaperGeneratorPage  / />)
       fireEvent.click(
         screen.getByRole(
   'button', { name: /Generate Whitepaper Draft/i }));'
@@ -236,7 +236,7 @@ const mockSupabaseInvoke = supabase.functions.invoke as jest.Mock
         data: { whitepaperDraft:
   '## Share\nContent },'
         error: null})
-      render(<WhitepaperGeneratorPage  />)
+      render(<WhitepaperGeneratorPage  / />)
       fireEvent.click(
         screen.getByRole(
   'button', { name: /Generate Whitepaper Draft/i }));'
@@ -328,7 +328,7 @@ const mockSupabaseInvoke = supabase.functions.invoke as jest.Mock
         data: { whitepaperDraft:
   '## Counsel\nContent },'
         error: null})
-      render(<WhitepaperGeneratorPage  />)
+      render(<WhitepaperGeneratorPage  / />)
       fireEvent.click(
         screen.getByRole(
   'button', { name: /Generate Whitepaper Draft/i }));'

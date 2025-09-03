@@ -1,5 +1,5 @@
-import { render, screen, fireEvent, waitFor }   from '@testing-library/react''
-import Profile   from '@/pages/Profile''
+import { render, screen, fireEvent, waitFor }   from '@testing-library/react"
+import Profile   from '@/pages/Profile"
 import { vi, expect, test, beforeEach, afterEach }  from 'vitest'// Added beforeEach, afterEach;'
 // Define the UserProfile structure based on usage
 interface UserProfile {
@@ -43,7 +43,7 @@ const mockFetchImplementation = (
       avatarUrl: '
       notifications: { email: true, push: false }}
     global.fetch = mockFetchImplementation(mockProfileData)
-    render(<Profile  />)
+    render(<Profile  / />)
     await screen.findByDisplayValue(
   Jane') // Wait for the name field to be populated;'
     expect(global.fetch).toHaveBeenCalledWith(
@@ -65,7 +65,7 @@ const mockFetchImplementation = (
       name: 'New Name;}'
     // Mock initial fetch
     global.fetch = mockFetchImplementation(initialProfileData)
-    render(<Profile  />)
+    render(<Profile  / />)
     await screen.findByDisplayValue('Jane;) // Ensure initial data is loaded;'
     // Mock the PUT request response
     (global.fetch as vi.Mock).mockResolvedValueOnce({

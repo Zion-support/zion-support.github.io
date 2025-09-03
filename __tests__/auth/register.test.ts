@@ -1,4 +1,4 @@
-import { describe, expect, test, vi, beforeEach }   from 'vitest''
+import { describe, expect, test, vi, beforeEach }   from 'vitest"
 import handler  from '@/pages/api/auth/register'// Assuming this is the Next.js API handler;'
 import { z }  from 'zod'// Used by the handler;'
 import type { NextApiRequest, NextApiResponse }    from 'next

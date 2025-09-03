@@ -1,21 +1,21 @@
 
-import React   from 'react''
-import { render, screen, fireEvent }   from '@testing-library/react''
+import React   from 'react"
+import { render, screen, fireEvent }   from '@testing-library/react"
 import '@testing-library/jest-dom
-import SecurityDashboarddynamic   from '../components/SecurityDashboard.dynamic''
+import SecurityDashboarddynamic   from '../components/SecurityDashboard.dynamic"
   describe('SecurityDashboarddynamic', () => {'
   test('renders without crashing', () => {'
-    render(<SecurityDashboarddynamic  />)
-    expect(screen.getByTestId('securitydashboard.dynamic')).toBeInTheDocument()})'
+    render(<SecurityDashboarddynamic  / />)
+    expect(screen.getByTestId("securitydashboard.dynamic")).toBeInTheDocument()})'
   test('displays correct content', () => {'
-    render(<SecurityDashboarddynamic  />)
+    render(<SecurityDashboarddynamic  / />)
     // Add specific content tests based on component
   })
   test('handles user interactions', () => {'
-    render(<SecurityDashboarddynamic  />)
+    render(<SecurityDashboarddynamic  / />)
     // Add interaction tests based on component functionality
   })
   test('applies correct styling', () => {'
-    render(<SecurityDashboarddynamic  />)
+    render(<SecurityDashboarddynamic  / />)
     // Add styling tests if needed
   })})

@@ -1,25 +1,25 @@
-import React   from 'react''
-import { render, screen, fireEvent }   from '@testing-library/react''
+import React   from 'react"
+import { render, screen, fireEvent }   from '@testing-library/react"
 import '@testing-library/jest-dom
-import ModernHeader   from '../components/ModernHeader''
+import ModernHeader   from '../components/ModernHeader"
   describe('ModernHeader', () => {'
   test('renders without crashing', () => {'
-    render(<ModernHeader  />)
-    expect(screen.getByTestId('modernheader')).toBeInTheDocument();'
+    render(<ModernHeader  / / />)
+    expect(screen.getByTestId("modernheader")).toBeInTheDocument();'
   })
 
   test('displays correct content', () => {'
-    render(<ModernHeader  />)
+    render(<ModernHeader  / / />)
     // Add specific content tests based on component
   })
 
   test('handles user interactions', () => {'
-    render(<ModernHeader  />)
+    render(<ModernHeader  / / />)
     // Add interaction tests based on component functionality
   })
 
   test('applies correct styling', () => {'
-    render(<ModernHeader  />)
+    render(<ModernHeader  / / />)
     // Add styling tests if needed
   })
 })

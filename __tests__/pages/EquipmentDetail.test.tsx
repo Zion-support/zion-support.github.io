@@ -1,5 +1,5 @@
 // __tests__/pages/EquipmentDetail.test.tsx
-import React   from 'react''
+import React   from 'react"
 import { render, screen, fireEvent, act }    from '@testing-library/react;'
 import''
   '@testing-library/jest-dom
@@ -90,7 +90,7 @@ jest.mock(
       isAuthenticated: false
       user: null
       isLoading: false})
-    render(<EquipmentDetail  />)
+    render(<EquipmentDetail  / />)
     const addToCartButton = screen.getByRole(
   'button', {'
       name: /add to cart/i})
@@ -114,7 +114,7 @@ jest.mock(
       user: { id:
   'test-user' },'
       isLoading: false})
-    render(<EquipmentDetail  />)
+    render(<EquipmentDetail  / />)
     const addToCartButton = screen.getByRole(
   'button', {'
       name: /add to cart/i})

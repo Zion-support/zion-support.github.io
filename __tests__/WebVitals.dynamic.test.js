@@ -1,21 +1,21 @@
 
-import React   from 'react''
-import { render, screen, fireEvent }   from '@testing-library/react''
+import React   from 'react"
+import { render, screen, fireEvent }   from '@testing-library/react"
 import '@testing-library/jest-dom
-import WebVitalsdynamic   from '../components/WebVitals.dynamic''
+import WebVitalsdynamic   from '../components/WebVitals.dynamic"
   describe('WebVitalsdynamic', () => {'
   test('renders without crashing', () => {'
-    render(<WebVitalsdynamic  />)
-    expect(screen.getByTestId('webvitals.dynamic')).toBeInTheDocument()})'
+    render(<WebVitalsdynamic  / />)
+    expect(screen.getByTestId("webvitals.dynamic")).toBeInTheDocument()})'
   test('displays correct content', () => {'
-    render(<WebVitalsdynamic  />)
+    render(<WebVitalsdynamic  / />)
     // Add specific content tests based on component
   })
   test('handles user interactions', () => {'
-    render(<WebVitalsdynamic  />)
+    render(<WebVitalsdynamic  / />)
     // Add interaction tests based on component functionality
   })
   test('applies correct styling', () => {'
-    render(<WebVitalsdynamic  />)
+    render(<WebVitalsdynamic  / />)
     // Add styling tests if needed
   })})

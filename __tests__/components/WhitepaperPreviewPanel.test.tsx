@@ -1,4 +1,4 @@
-import React   from 'react''
+import React   from 'react"
 import { render, screen }    from '@testing-library/react;'
 import''
   '@testing-library/jest-dom
@@ -89,7 +89,7 @@ const mockDistributionData = [
   'mock-markdown').length).toBeGreaterThanOrEqual(mockSections.length * 2)})'
   test(
   'renders 'no sections' message if sections array is empty', () => {'
-    render(<WhitepaperPreviewPanel sections={[]} distributionChartData={[]}  />)
+    render(<WhitepaperPreviewPanel sections={[]} distributionChartData={[]}  / />)
     expect(
       screen.getByText(/Whitepaper preview will appear here/i)).toBeInTheDocument()})
   test(

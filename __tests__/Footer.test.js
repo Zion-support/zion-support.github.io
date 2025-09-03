@@ -1,25 +1,25 @@
-import React   from 'react''
-import { render, screen, fireEvent }   from '@testing-library/react''
+import React   from 'react"
+import { render, screen, fireEvent }   from '@testing-library/react"
 import '@testing-library/jest-dom
-import Footer   from '../components/Footer''
+import Footer   from '../components/Footer"
   describe('Footer', () => {'
   test('renders without crashing', () => {'
-    render(<Footer  />)
-    expect(screen.getByTestId('footer')).toBeInTheDocument();'
+    render(<Footer  / / />)
+    expect(screen.getByTestId("footer")).toBeInTheDocument();'
   })
 
   test('displays correct content', () => {'
-    render(<Footer  />)
+    render(<Footer  / / />)
     // Add specific content tests based on component
   })
 
   test('handles user interactions', () => {'
-    render(<Footer  />)
+    render(<Footer  / / />)
     // Add interaction tests based on component functionality
   })
 
   test('applies correct styling', () => {'
-    render(<Footer  />)
+    render(<Footer  / / />)
     // Add styling tests if needed
   })
 })

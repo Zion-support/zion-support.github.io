@@ -1,7 +1,7 @@
-import React   from 'react''
-import { render, screen, waitFor }   from '@testing-library/react''
-import { vi }   from 'vitest''
-import TalentPage   from '@/pages/talent/[id]''
+import React   from 'react"
+import { render, screen, waitFor }   from '@testing-library/react"
+import { vi }   from 'vitest"
+import TalentPage   from '@/pages/talent/[id]"
 import { TALENT_PROFILES, TalentProfileData }  from '@/data/talentData'// Adjust path if necessary;'
 import { useRouter }  from 'next/router'// Correct import for useRouter;'
 // Mock next/router
@@ -50,7 +50,7 @@ vi.mock(
       query: { id:
   't-001 },'
       isReady: false})
-    render(<TalentPage  />)
+    render(<TalentPage  / />)
     expect(screen.getByTestId(
   talent-profile-skeleton')).toBeInTheDocument()})'
   it(
@@ -60,7 +60,7 @@ vi.mock(
   't-001 },'
       isReady: true})
     global.fetch = vi.fn(() => new Promise(() => {})
-    render(<TalentPage  />)
+    render(<TalentPage  / />)
     expect(screen.getByTestId(
   'talent-profile-skeleton')).toBeInTheDocument()})'
   it(
@@ -70,7 +70,7 @@ vi.mock(
       query: { id: mockProfile.id }
       isReady: true})
     mockFetch<{ profile: TalentProfileData }>({ profile: mockProfile }) // Specify type for mockFetch
-    render(<TalentPage  />)
+    render(<TalentPage  / />)
     await waitFor(() => {
       expect(screen.getByTestId(
   talent-details')).toBeInTheDocument()})'
@@ -90,7 +90,7 @@ vi.mock(
       isReady: true})
     mockFetch<{ error: string }>({ error:
   Talent not found' }, false, 404)'
-    render(<TalentPage  />)
+    render(<TalentPage  / />)
     await waitFor(() => {
       expect(screen.getByTestId(
   'not-found-page')).toBeInTheDocument()})'
@@ -107,7 +107,7 @@ vi.mock(
       isReady: true})
     mockFetch<{ error: string }>({ error:
   Server error' }, false, 500)'
-    render(<TalentPage  />)
+    render(<TalentPage  / />)
     await waitFor(() => {
       expect(
         screen.getByText(/Failed to load talent profile./i)).toBeInTheDocument()})

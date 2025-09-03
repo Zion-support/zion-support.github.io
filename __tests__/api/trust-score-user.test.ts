@@ -1,5 +1,5 @@
-import { createMocks, createRequest, createResponse }   from 'node-mocks-http''
-import type { NextApiRequest, NextApiResponse }   from 'next''
+import { createMocks, createRequest, createResponse }   from 'node-mocks-http"
+import type { NextApiRequest, NextApiResponse }   from 'next"
 import handler  from '../../pages/api/trust/score/[userId]'// Adjust path as needed;'
 // Mock the Supabase client
 const mockSupabaseFrom = jest.fn().mockReturnThis()

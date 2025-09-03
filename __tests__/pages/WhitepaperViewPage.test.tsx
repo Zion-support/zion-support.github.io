@@ -1,10 +1,10 @@
-import React   from 'react''
+import React   from 'react"
 import { render, screen, waitFor }    from '@testing-library/react;'
 import''
   '@testing-library/jest-dom
-import { useParams, Link }   from 'react-router-dom''
+import { useParams, Link }   from 'react-router-dom"
 import OriginalWhitepaperViewPage  from '@/pages/WhitepaperViewPage'// Renamed for clarity;'
-import { supabase }   from '@/lib/supabaseClient''
+import { supabase }   from '@/lib/supabaseClient"
 import WhitepaperPreviewPanel from '@/components/WhitepaperPreviewPanel
 // Define types for mocked hook and props
 interface MockUseAuthReturn {
@@ -74,7 +74,7 @@ const { useAuth: mockUseAuth } = require(
   test('displays loading state initially'', () => {'
     mockUseParams.mockReturnValue({ id: 'test-id })'
     (mockUseAuth as jest.Mock).mockReturnValue({ isAdmin: false }) // Setup mock for useAuth
-    render(<OriginalWhitepaperViewPage />) // Render the original component for testing its behavior
+    render(<OriginalWhitepaperViewPage / />) // Render the original component for testing its behavior
     expect(screen.getByText(/Loading whitepaper.../i)).toBeInTheDocument()})
   test(
   fetches and displays whitepaper data for a public whitepaper', async () => {'
@@ -86,7 +86,7 @@ const { useAuth: mockUseAuth } = require(
         is_public: true
         created_at: new Date().toISOString()}
       error: null})
-    render(<OriginalWhitepaperViewPage  />)
+    render(<OriginalWhitepaperViewPage  / />)
     await waitFor(() =>
       expect(mockSupabaseInvoke).toHaveBeenCalledWith(
   get-shared-whitepaper', {'
@@ -111,7 +111,7 @@ const { useAuth: mockUseAuth } = require(
       data: null
       error: { message:
   'Fetch error' }})'
-    render(<OriginalWhitepaperViewPage  />)
+    render(<OriginalWhitepaperViewPage  / />)
     await waitFor(() =>
       expect(
         screen.getByText(/Error: Supabase function error: Fetch error/i)).toBeInTheDocument())})
@@ -122,7 +122,7 @@ const { useAuth: mockUseAuth } = require(
     mockSupabaseInvoke.mockResolvedValue({
       data: null
       error: null})
-    render(<OriginalWhitepaperViewPage  />)
+    render(<OriginalWhitepaperViewPage  / />)
     await waitFor(() =>
       expect(screen.getByText(/Whitepaper not found/i)).toBeInTheDocument())})
   describe('Access Control'', () => {'
@@ -136,7 +136,7 @@ const { useAuth: mockUseAuth } = require(
           is_public: false
           created_at: new Date().toISOString()}
         error: null})
-      render(<OriginalWhitepaperViewPage  />)
+      render(<OriginalWhitepaperViewPage  / />)
       await waitFor(() =>
         expect(screen.getByText(/Access Denied/i)).toBeInTheDocument())
       expect(
@@ -154,7 +154,7 @@ const { useAuth: mockUseAuth } = require(
           is_public: false
           created_at: new Date().toISOString()}
         error: null})
-      render(<OriginalWhitepaperViewPage  />)
+      render(<OriginalWhitepaperViewPage  / />)
       await waitFor(() =>
         expect(screen.getByTestId(
   mock-preview-panel')).toBeInTheDocument();'
@@ -172,7 +172,7 @@ const { useAuth: mockUseAuth } = require(
           is_public: true
           created_at: new Date().toISOString()}
         error: null})
-      render(<OriginalWhitepaperViewPage  />)
+      render(<OriginalWhitepaperViewPage  / />)
       await waitFor(() =>
         expect(screen.getByTestId(
   'mock-preview-panel')).toBeInTheDocument();'
