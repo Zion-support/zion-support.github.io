@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
 import { services, getServicesByCategory } from '../data/services';
-import { ArrowRight, CheckCircle, Clock, Users, Shield, Zap, TrendingUp, Award } from "lucide-react";
+import { ArrowRight, CheckCircle, Clock, Users, Shield, Zap, TrendingUp, Award, Globe } from "lucide-react";
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
