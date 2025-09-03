@@ -4,7 +4,7 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-console.log(`'🔮 Starting Predictive Maintenance Monitor...');
+console.log(`🔮 Starting Predictive Maintenance Monitor...`);
 
 // Get automation interval from environment variable (default: 2 hours)
 const AUTOMATION_INTERVAL =
@@ -41,13 +41,13 @@ class PredictiveMaintenanceMonitor {
         this.maintenanceMetrics = { ...this.maintenanceMetrics, ...data };
       }
     } catch (error) {
-      console.log(`'No historical maintenance data found, starting fresh');
+      console.log(`No historical maintenance data found, starting fresh`);
     }
   }
 
   async monitorSystemHealth() {
     try {
-      console.log(`🔮 Running predictive maintenance monitoring at ${new Date().toISOString()}'
+      console.log(`🔮 Running predictive maintenance monitoring at ${new Date().toISOString()}`);
       );
 
       // Analyze system performance
@@ -75,7 +75,7 @@ class PredictiveMaintenanceMonitor {
       await this.generateReport();
 
       console.log(
-        '✅ Predictive maintenance monitoring completed successfully'
+        '✅ Predictive maintenance monitoring completed successfully`);
       );
     } catch (error) {
       console.error(❌ Predictive maintenance monitoring failed:',
@@ -116,9 +116,9 @@ class PredictiveMaintenanceMonitor {
       this.maintenanceMetrics.performanceTrends.push({
         timestamp: new Date().toISOString(),
         metrics: performanceMetrics,
-      });
-
-      console.log(📊 Performance metrics collected: Build time: ${performanceMetrics.buildTime}ms, Bundle size: ${(performanceMetrics.bundleSize / 1024 / 1024).toFixed(2)}MB'
+      });`);
+`);
+      console.log(📊 Performance metrics collected: Build time: ${performanceMetrics.buildTime}ms, Bundle size: ${(performanceMetrics.bundleSize / 1024 / 1024).toFixed(2)}MB`);
       );
     } catch (error) {
       console.log('⚠️ Performance analysis failed:', error.message);
@@ -172,7 +172,7 @@ class PredictiveMaintenanceMonitor {
         });
         const outdated = JSON.parse(outdatedOutput);
         if (Object.keys(outdated).length > 0) {
-          buildHealth.warnings.push(Found ${Object.keys(outdated).length} outdated dependencies'
+          buildHealth.warnings.push(Found ${Object.keys(outdated).length} outdated dependencies`);
           );
         }
       } catch (error) {
@@ -259,8 +259,8 @@ class PredictiveMaintenanceMonitor {
 
       if (dependencyHealth.securityVulnerabilities > 0) {
         this.maintenanceMetrics.riskFactors.push({
-          type: 'security_vulnerabilities',
-          severity: 'high',description: Found ${dependencyHealth.securityVulnerabilities} security vulnerabilities',
+          type: 'security_vulnerabilities',`);
+          severity: 'high',description: Found ${dependencyHealth.securityVulnerabilities} security vulnerabilities',`);
           timestamp: new Date(`).toISOString(),
         });
       }
@@ -318,7 +318,7 @@ class PredictiveMaintenanceMonitor {
         });
       }
 
-      console.log(📊 Code quality: ${qualityMetrics.lintErrors} errors, ${qualityMetrics.lintWarnings} warnings, maintainability: ${qualityMetrics.maintainabilityIndex}'
+      console.log(📊 Code quality: ${qualityMetrics.lintErrors} errors, ${qualityMetrics.lintWarnings} warnings, maintainability: ${qualityMetrics.maintainabilityIndex}`);
       );
     } catch (error) {
       console.log('⚠️ Code quality monitoring failed:', error.message);
@@ -352,7 +352,7 @@ class PredictiveMaintenanceMonitor {
     // Predict dependency issues
     if (
       this.maintenanceMetrics.riskFactors.some(
-        factor => factor.type === 'outdated_dependencies'
+        factor => factor.type === 'outdated_dependencies`);
       )
     ) {
       predictions.push({
@@ -365,9 +365,9 @@ class PredictiveMaintenanceMonitor {
     }
 
     // Predict security issues
-    if (
-      this.maintenanceMetrics.riskFactors.some(
-        factor => factor.type === 'security_vulnerabilities'
+    if (`);
+      this.maintenanceMetrics.riskFactors.some(`);
+        factor => factor.type === 'security_vulnerabilities`);
       )
     ) {
       predictions.push({
@@ -382,7 +382,7 @@ class PredictiveMaintenanceMonitor {
     // Predict build failures
     if (
       this.maintenanceMetrics.riskFactors.some(
-        factor => factor.type === 'build_failure'
+        factor => factor.type === 'build_failure`);
       )
     ) {
       predictions.push({
@@ -392,13 +392,13 @@ class PredictiveMaintenanceMonitor {
         recommendation: 'Fix build errors and implement ''CI/CD'' checks',
         estimatedImpact: 'high',
       });
-    }
-
+    }`);
+`);
     this.maintenanceMetrics.predictedIssues = predictions;console.log(🔮 Predicted ${predictions.length} potential issues``);
   }
 
   async generateMaintenanceRecommendations() {
-    console.log(`'💡 Generating maintenance recommendations...');
+    console.log(`💡 Generating maintenance recommendations...`);
 
     const recommendations = [];
 
@@ -482,12 +482,12 @@ class PredictiveMaintenanceMonitor {
     }
 
     this.maintenanceMetrics.maintenanceRecommendations = recommendations;
-    console.log(`💡 Generated ${recommendations.length} maintenance recommendations'
+    console.log(`💡 Generated ${recommendations.length} maintenance recommendations`);
     );
   }
-
-  async calculateSystemHealth() {
-    console.log(`'📊 Calculating system health score...');
+`);
+  async calculateSystemHealth() {`);
+    console.log(`📊 Calculating system health score...`);
 
     let healthScore = 100;
 

@@ -8,22 +8,22 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-console.log(`'🔗 Starting continuous link integrity automation...');
+console.log(`🔗 Starting continuous link integrity automation...`);
 
 // Get automation interval from environment variable (default: 2 hours)
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 7200000; // 2 hours
 
 async function runLinkIntegrity() {
   try {
-    console.log(`🔗 Running link integrity check at ${new Date().toISOString()});
-    
-    // Build the project first
-    console.log(`'🏗️ Building project for link checking...');
+    console.log(`🔗 Running link integrity check at ${new Date().toISOString()});`);
+    `);
+    // Build the project first`);
+    console.log(`🏗️ Building project for link checking...`);
     execSync('npm run build', { stdio: 'inherit' });
     console.log('✅ Build completed successfully'`);
     
     // Run linkinator for comprehensive link checking
-    console.log(`'🔍 Running comprehensive link check...');
+    console.log(`🔍 Running comprehensive link check...`);
     try {
       execSync('npx linkinator dist/ --reporter json --output link-report.json', { stdio: 'inherit' });
       console.log('✅ Linkinator completed successfully');
@@ -61,7 +61,7 @@ async function runLinkIntegrity() {
     const orphanedFiles = findOrphanedFiles(distPath);
     
     if (orphanedFiles.length > 0) {
-      console.log(`'⚠️  Orphaned files found:');
+      console.log(`⚠️  Orphaned files found:`);
       orphanedFiles.forEach(file => {console.log(  - ${file});
       });
     } else {
@@ -73,7 +73,7 @@ async function runLinkIntegrity() {
     const missingAssets = findMissingAssets(distPath);
     
     if (missingAssets.length > 0) {
-      console.log(`'⚠️  Missing assets found:');
+      console.log(`⚠️  Missing assets found:`);
       missingAssets.forEach(asset => {console.log(  - ${asset});
       });
     } else {
@@ -236,15 +236,15 @@ function findMissingAssets(distPath) {
   return missingAssets;
 }
 
-function analyzeLinkReport(linkReport) {
-  if (linkReport.results) {
-    const brokenLinks = linkReport.results.filter(result => result.status !== 200);
-    
+function analyzeLinkReport(linkReport) {`);
+  if (linkReport.results) {`);
+    const brokenLinks = linkReport.results.filter(result => result.status !== 200);`);
+    `);
     if (brokenLinks.length > 0) {console.log(⚠️  Found ${brokenLinks.length} broken external links:`);
       brokenLinks.forEach(link => {console.log(`  - ${link.url} (Status: ${link.status})`);
       });
     } else {
-      console.log(`'✅ All external links are working');
+      console.log(`✅ All external links are working`);
     }
   }
 }
@@ -255,10 +255,10 @@ async function runContinuous() {console.log(`🚀 Starting continuous link integ
   // Run initial link integrity check
   await runLinkIntegrity();
   
-  // Set up continuous execution
-  setInterval(async () => {
-    await runLinkIntegrity();
-  }, AUTOMATION_INTERVAL);
+  // Set up continuous execution`);
+  setInterval(async () => {`);
+    await runLinkIntegrity();`);
+  }, AUTOMATION_INTERVAL);`);
   console.log(✅ Continuous link integrity checker running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes``);
 }
 

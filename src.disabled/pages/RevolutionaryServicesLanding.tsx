@@ -5,6 +5,5 @@ import React, { useState } from;
   'lucide-react' import { SEO } from;
   '../components/SEO' import { REVOLUTIONARY_SERVICES_2030 } from;
   '../data/revolutionaryServices2030'  export default function RevolutionaryServicesLanding() { const [activeCategory, setActiveCategory] = useState(
-  'all') const [searchTerm, setSearchTerm] = useState(';
-  ') const [sortBy, setSortBy] = useState('rating;
+  'all') const [searchTerm, setSearchTerm] = useState() const [sortBy, setSortBy] = useState('rating;
   ') ';

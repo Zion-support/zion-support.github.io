@@ -98,7 +98,7 @@ const PerformanceMonitor: React.FC = () => {
     const sendMetrics = () => {
       if (typeof window !== 'undefined' && (window as unknown).gtag) {
         // Send to Google Analytics;
-        (window as unknown).gtag('event', 'web_vitals', {
+        (window as unknown).gtag('event,web_vitals', {
           event_category: 'Performance', event_label: 'Core Web Vitals',
           custom_map: {
             metric_1: 'fcp', metric_2: 'lcp',

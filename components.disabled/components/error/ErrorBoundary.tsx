@@ -25,7 +25,7 @@ class ErrorBoundary extends Component<Props, State> {
   override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
-      errorInfo
+      errorInfo,
     });
 
     // Log error to console in development
@@ -47,21 +47,21 @@ class ErrorBoundary extends Component<Props, State> {
     fetch('/api/analytics/error', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify({
         error: {
           message: error.message,
           stack: error.stack,
-          name: error.name
+          name: error.name,
         },
         errorInfo: {
-          componentStack: errorInfo.componentStack
+          componentStack: errorInfo.componentStack,
         },
         url: window.location.href,
         timestamp: Date.now(),
-        userAgent: navigator.userAgent
-      })
+        userAgent: navigator.userAgent,
+      }),
     }).catch(console.error);
   };
 
@@ -100,7 +100,8 @@ class ErrorBoundary extends Component<Props, State> {
               Something went wrong
             </h1>
             <p className="text-gray-600 text-center mb-6">
-              We&apos;re sorry, but something unexpected happened. Please try refreshing the page.
+              We&apos;re sorry, but something unexpected happened. Please try
+              refreshing the page.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <button

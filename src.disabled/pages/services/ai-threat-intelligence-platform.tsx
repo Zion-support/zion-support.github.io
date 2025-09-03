@@ -2,53 +2,57 @@ import React from;
   'react' import { motion } from;
   'framer-motion' import { Link } from;
   'react-router-dom' import {  Shield, Brain, Zap, Users, BarChart3, Rocket, CheckCircle, Star, ArrowRight, Globe, Cpu, Database, Cloud, Lock, TrendingUp, Target, Heart, Eye, Activity, Code, Server, Network, Phone, Mail, MapPin, DollarSign, Clock, Award, Lightbulb, Sparkles, AlertTriangle, ShieldCheck, Activity as ActivityIcon, BarChart, Settings, Monitor, Database as DatabaseIcon, Globe as GlobeIcon, Zap as ZapIcon, Users as UsersIcon, Lock as LockIcon, } from;
-  'lucide-react'  export function AIThreatIntelligencePlatform() { const features = [ { icon: Brain, title:,
-  AI-Powered Threat Detection', description: ';Advanced machine learning algorithms that detect and analyze threats in real-time, benefits: [';Zero-day threat detection',';Behavioral analysis',';Predictive threat modeling', ], }, { icon: Shield, title:,
-  Enterprise Security', description: ';Bank-grade security with SOC2 compliance and zero-trust architecture, benefits: [';End-to-end encryption',';Multi-factor authentication',';Regular security audits', ], }, { icon: Activity, title:,
-  Real-Time Monitoring', description: ';24/7 continuous monitoring of your entire digital infrastructure, benefits: [';Instant threat alerts',';Live security dashboards',';Automated response', ], }, { icon: BarChart3, title:,
-  Advanced Analytics', description: 'Comprehensive threat intelligence and security analytics, benefits: [';Threat trend analysis',';Risk assessment',';Compliance reporting', ], }, { icon: Zap, title:,
-  Automated Response', description: ';Intelligent automated incident response and threat mitigation, benefits: [';Instant threat blocking',';Automated remediation',';Incident orchestration', ], }, { icon: Cloud, title:,
+  'lucide-react'  export function AIThreatIntelligencePlatform() { const features = [
+  { icon: Brain, title:,
+  AI-Powered Threat Detection', description: ';Advanced machine learning algorithms that detect and analyze threats in real-time, benefits: [';Zero-day threat detection,;Behavioral analysis,;Predictive threat modeling', ], }, { icon: Shield, title:,
+  Enterprise Security', description: ';Bank-grade security with SOC2 compliance and zero-trust architecture, benefits: [';End-to-end encryption,;Multi-factor authentication,;Regular security audits', ], }, { icon: Activity, title:,
+  Real-Time Monitoring', description: ';24/7 continuous monitoring of your entire digital infrastructure, benefits: [';Instant threat alerts,;Live security dashboards,;Automated response', ], }, { icon: BarChart3, title:,
+  Advanced Analytics', description: 'Comprehensive threat intelligence and security analytics, benefits: [';Threat trend analysis,;Risk assessment,;Compliance reporting', ], }, { icon: Zap, title:,
+  Automated Response', description: ';Intelligent automated incident response and threat mitigation, benefits: [';Instant threat blocking,;Automated remediation,;Incident orchestration', ], }, { icon: Cloud, title:,
   Cloud-Native', description: ';Built for the cloud with automatic scaling and high availability, benefits: [;
-  99.99% uptime guarantee',';Global deployment',';Auto-scaling infrastructure', ], }, ]  const pricingPlans = [ { name: 'Professional, price:,
+  99.99% uptime guarantee,;Global deployment,;Auto-scaling infrastructure', ], }, ]  const pricingPlans = [
+  { name: 'Professional, price:,
   $2, 499', period: '/month, description:,
   Perfect for mid-sized organizations', features: [;Up to 1, 000 endpoints,
-  ,';AI threat detection',';Real-time monitoring',';Automated response',';Email support',';Basic analytics',';SOC 2 compliance',';API access', ], cta: 'Start Free Trial, popular: false, }, { name:,
+  ,';AI threat detection,;Real-time monitoring,;Automated response,;Email support,;Basic analytics,;SOC 2 compliance,;API access', ], cta: 'Start Free Trial, popular: false, }, { name:,
   Enterprise', price: $4, 999,
   , period: '/month, description:,
   For large organizations with advanced security needs', features: [';Unlimited endpoints,
-  Advanced AI capabilities',';24/7 security monitoring',';Custom threat models',';Priority support',';Advanced analytics',';Custom integrations',';Dedicated security team',';White-label options',';SLA guarantees', ], cta: 'Contact Sales, popular: true, }, { name:,
+  Advanced AI capabilities,;24/7 security monitoring,;Custom threat models,;Priority support,;Advanced analytics,;Custom integrations,;Dedicated security team,;White-label options,;SLA guarantees', ], cta: 'Contact Sales, popular: true, }, { name:,
   Government', price: 'Custom, period:,
   ', description: 'For government agencies and defense contractors, features: [;
   All Enterprise features;
-  ',';FedRAMP compliance;
-  ',';Classified data handling;
-  ',';On-premise deployment;
-  ',';Custom security protocols;
-  ',';24/7 dedicated support;
-  ',';Security clearance support;
-  ',';Compliance consulting;
-  ', ], cta: 'Contact Government Sales, popular: false, }, ]  const useCases = [ { title:,
+  ,;FedRAMP compliance;
+  ,;Classified data handling;
+  ,;On-premise deployment;
+  ,;Custom security protocols;
+  ,;24/7 dedicated support;
+  ,;Security clearance support;
+  ,;Compliance consulting;
+  ', ], cta: 'Contact Government Sales, popular: false, }, ]  const useCases = [
+  { title:,
   Financial Institutions;
   ', description: 'Protect critical financial systems from cyber threats, icon: DollarSign, benefits: [;
   Fraud detection;
-  ',';Compliance monitoring;
-  ',';Real-time threat response;
+  ,;Compliance monitoring;
+  ,;Real-time threat response;
   ', ], }, { title: 'Healthcare Organizations, description: 'Secure patient data and healthcare systems;
   ', icon: Heart, benefits: [;
   HIPAA compliance;
-  ',';Patient data protection;
-  ',';Medical device security;
+  ,;Patient data protection;
+  ,;Medical device security;
   ', ], }, { title: 'Government Agencies, description: 'Defend against nation-state cyber threats;
   ', icon: Shield, benefits: [;
   Classified data protection;
-  ',';Threat intelligence sharing;
-  ',';Compliance management;
+  ,;Threat intelligence sharing;
+  ,;Compliance management;
   ', ], }, { title: 'Manufacturing, description: 'Protect industrial control systems and IoT devices;
   ', icon: Settings, benefits: [;
   OT security;
-  ',';Supply chain protection;
-  ',';Operational continuity;
-  ', ], }, ]  const stats = [ { number: '95%, label:,
+  ,;Supply chain protection;
+  ,;Operational continuity;
+  ', ], }, ]  const stats = [
+  { number: '95%, label:,
   Reduction in Security Incidents;
   ' }, { number: '<1s, label:,
   Average Response Time;
@@ -59,4 +63,4 @@ import React from;
   border-red-500;
   ': 'border-gray-700 } relative`} >' {plan.popular && ('' <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>'' <span className='bg-red-500 text-white px-4 py-2 rounded-full text-sm font-semibold'> Most Popular </span> </div>' )}'' <div className='text-center mb-8'>'' <h3 className='text-2xl font-bold mb-2'>{plan.name}</h3>'' <div className='text-4xl font-bold text-red-400 mb-2'>' {plan.price}'' <span className='text-lg text-gray-400'>{plan.period}</span>' </div>'' <p className='text-gray-400'>{plan.description}</p>' </div>'' <ul className='space-y-4 mb-8'> {plan.features.map((feature, featureIndex) => ( <li' key={featureIndex}'' className='flex items-center text-gray-300'' >'' <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' /> {feature} </li> ))} </ul>' <Link'' to='/contact' className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${ plan.popular ?,
   bg-gradient-to-r from-red-500 to-orange-600 text-white hover: from-red-600 hover:to-orange-700;
-  ' : 'bg-gray-700 text-white hover:bg-gray-600 }`} > {plan.cta} </Link> </motion.div> ))} </div> </div> </section>' {}'' <section className='py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-red-900 to-orange-900'>'' <div className='max-w-4xl mx-auto text-center'> <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}' >'' <h2 className='text-3xl md: text-4xl font-bold mb-4'> Ready to Secure Your Organization?' </h2>'' <p className='text-xl text-gray-300 mb-8'> Join thousands of organizations that trust our AI-powered threat intelligence platform' </p>'' <div className='flex flex-col sm: flex-row gap-4 justify-center'>' <Link'' to='/contact'' className='inline-flex items-center px-8 py-4 bg-white text-red-600 font-semibold rounded-lg hover: bg-gray-100 transition-all duration-300' >' Start Free Trial'' <ArrowRight className='ml-2 w-5 h-5' /> </Link>' <Link'' to='/contact'' className='inline-flex items-center px-8 py-4 border border-white text-white font-semibold rounded-lg hover: bg-white hover:text-red-600 transition-all duration-300' > Schedule Demo </Link> </div> </motion.div> </div> </section>' {}'' <section className='py-16 px-4 sm: px-6 lg:px-8 bg-gray-800'>'' <div className='max-w-7xl mx-auto'>'' <div className='grid grid-cols-1 md: grid-cols-3 gap-8 text-center'>'' <div className='flex flex-col items-center'>'' <Phone className='w-8 h-8 text-red-400 mb-4' />'' <h3 className='text-lg font-semibold mb-2'>Phone</h3>'' <p className='text-gray-400'>+1 302 464 0950</p>' </div>'' <div className='flex flex-col items-center'>'' <Mail className='w-8 h-8 text-red-400 mb-4' />'' <h3 className='text-lg font-semibold mb-2'>Email</h3>'' <p className='text-gray-400'>kleber@ziontechgroup.com</p>' </div>'' <div className='flex flex-col items-center'>'' <MapPin className='w-8 h-8 text-red-400 mb-4' />'' <h3 className='text-lg font-semibold mb-2'>Address</h3>'' <p className='text-gray-400'> 364 E Main St STE 1008 <br / / /> Middletown DE 19709 </p> </div> </div> </div> </section> </div> ) }';';''"`
+  ' : 'bg-gray-700 text-white hover:bg-gray-600 }`} > {plan.cta} </Link> </motion.div> ))} </div> </div> </section>' {}'' <section className='py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-red-900 to-orange-900'>'' <div className='max-w-4xl mx-auto text-center'> <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}' >'' <h2 className='text-3xl md: text-4xl font-bold mb-4'> Ready to Secure Your Organization?' </h2>'' <p className='text-xl text-gray-300 mb-8'> Join thousands of organizations that trust our AI-powered threat intelligence platform' </p>'' <div className='flex flex-col sm: flex-row gap-4 justify-center'>' <Link'' to='/contact'' className='inline-flex items-center px-8 py-4 bg-white text-red-600 font-semibold rounded-lg hover: bg-gray-100 transition-all duration-300' >' Start Free Trial'' <ArrowRight className='ml-2 w-5 h-5' /> </Link>' <Link'' to='/contact'' className='inline-flex items-center px-8 py-4 border border-white text-white font-semibold rounded-lg hover: bg-white hover:text-red-600 transition-all duration-300' > Schedule Demo </Link> </div> </motion.div> </div> </section>' {}'' <section className='py-16 px-4 sm: px-6 lg:px-8 bg-gray-800'>'' <div className='max-w-7xl mx-auto'>'' <div className='grid grid-cols-1 md: grid-cols-3 gap-8 text-center'>'' <div className='flex flex-col items-center'>'' <Phone className='w-8 h-8 text-red-400 mb-4' />'' <h3 className='text-lg font-semibold mb-2'>Phone</h3>'' <p className='text-gray-400'>+1 302 464 0950</p>' </div>'' <div className='flex flex-col items-center'>'' <Mail className='w-8 h-8 text-red-400 mb-4' />'' <h3 className='text-lg font-semibold mb-2'>Email</h3>'' <p className='text-gray-400'>kleber@ziontechgroup.com</p>' </div>'' <div className='flex flex-col items-center'>'' <MapPin className='w-8 h-8 text-red-400 mb-4' />'' <h3 className='text-lg font-semibold mb-2'>Address</h3>'' <p className='text-gray-400'> 364 E Main St STE 1008 <br / / /> Middletown DE 19709 </p> </div> </div> </div> </section> </div> ) };''"`

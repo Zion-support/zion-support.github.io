@@ -68,6 +68,7 @@ export default function IoTPlatforms() {
         </h2>
         <div className="mt-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 text-sm">
           {[
+<<<<<<< HEAD
             'MQTT',
             'LoRaWAN',
             'Azure IoT',
@@ -78,6 +79,9 @@ export default function IoTPlatforms() {
             'Grafana',
             'Kafka',
             'NATS',
+=======
+            'MQTT,LoRaWAN,Azure IoT,AWS IoT,GCP IoT,InfluxDB,Timescale,Grafana,Kafka,NATS',
+>>>>>>> main
           ].map(t => (
             <div
               key={t}

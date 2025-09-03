@@ -33,11 +33,10 @@ interface ComponentProps {
   [key: string]: unknown;
 }
 
-
-
 // Declare gtag function for TypeScript
 declare global {
-  function gtag(...args: unknown[]): void}
+  function gtag(...args: unknown[]): void;
+}
 
 interface AnalyticsProps {
   trackingId?: string;
@@ -56,7 +55,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId }) => {
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments)}
       gtag('js', new Date());
-      gtag('config', '${trackingId}', {
+      gtag('config,${trackingId}', {
         page_title: document.title, page_location: window.location.href,
         send_page_view: true
       })
@@ -89,9 +88,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId }) => {
         if (perfData) {
           const loadTime = perfData.loadEventEnd - perfData.fetchStart;
           trackEvent(
-            'page_load_time',
-            'Performance',
-            'Page Load',
+            'page_load_time,Performance,Page Load',
             Math.round(loadTime)
           );
         }
