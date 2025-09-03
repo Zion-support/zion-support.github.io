@@ -1,24 +1,24 @@
-import React from
-  'react';
-import { motion } from
-  'framer-motion';
-import { SEO } from
-  '../components/SEO';
-import { Button } from
-  '../components/ui/Button';
-import { Card } from
-  '../components/ui/Card';
-import { Badge } from
-  '../components/ui/Badge';
-import { 
-  CheckCircle, 
-  Star, 
-  Zap, 
-  Shield, 
-  Users, 
-  Globe, 
-  Phone, 
-  Mail, 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
+import React from 'react';
+<<<<<<< HEAD
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+import { Button } from '../components/ui/Button';
+import { Card } from '../components/ui/Card';
+import { Badge } from '../components/ui/Badge';
+<<<<<<< HEAD
+import {
+  CheckCircle,
+  Star,
+  Zap,
+  Shield,
+  Users,
+  Globe,
+  Phone,
+  Mail,
   ArrowRight,
   DollarSign,
   TrendingUp,
@@ -37,194 +37,872 @@ import {
   Calculator,
   BookOpen,
   Lightbulb,
-  HelpCircle
+  HelpCircle,
+} from 'lucide-react';
+import { Network } from 'lucide-react';
 } from
   'lucide-react';
+=======
+import { 
+  CheckCircle, Star, 
+  Zap, Shield, 
+  Users, Globe, 
+  Phone, Mail, 
+  ArrowRight, DollarSign,
+  TrendingUp, Award,
+  Clock, Target,
+  Brain, Server,
+  Cloud, Database,
+  Lock, BarChart3,
+  Rocket, Heart,
+  Sparkles, Calculator,
+  BookOpen, Lightbulb,
+  HelpCircle
+} from 'lucide-react';
+=======
+import Head from 'next/head';
+import Link from 'next/link';
+import { ModernHeader } from '../src/components/header/ModernHeader';
+import { SimpleFooter } from '../src/components/layout/SimpleFooter';
+import { CheckCircle, Star, Zap, Shield, Brain, Cloud, Code, ArrowRight } from 'lucide-react';
+>>>>>>> main
+>>>>>>> main
 
-const PricingGuide: React.FC = () => {
-  const pricingFactors = [
+export default function PricingGuide() {
+  const pricingTiers = [
     {
-      factor: "Project Complexity",
-      description: "The complexity of your AI solution directly impacts development time and cost",
+<<<<<<< HEAD
+      factor: "Project Complexity", description: "The complexity of your AI solution directly impacts development time and cost",
       details: [
-        "Simple automation: $2,000 - $5,000",
-        "Custom AI models: $5,000 - $15,000",
-        "Enterprise solutions: $15,000 - $50,000+"
-      ],
-      icon: Brain,
+        "Simple automation: $2, 000 - $5,000", "Custom AI models: $5,000 - $15, 000",
+        "Enterprise solutions: $15, 000 - $50,000+"
+      ], icon: Brain,
       color: "from-blue-500 to-cyan-500"
-    },
-    {
+    }, {
       factor: "Data Requirements",
-      description: "Amount and quality of data needed for training and implementation",
-      details: [
-        "Small datasets: $1,000 - $3,000",
-        "Medium datasets: $3,000 - $8,000",
-        "Large datasets: $8,000 - $20,000+"
-      ],
-      icon: Database,
+      description: "Amount and quality of data needed for training and implementation", details: [
+        "Small datasets: $1,000 - $3, 000",
+        "Medium datasets: $3, 000 - $8,000", "Large datasets: $8,000 - $20, 000+"
+      ], icon: Database,
       color: "from-green-500 to-emerald-500"
-    },
-    {
+    }, {
       factor: "Integration Needs",
-      description: "Complexity of integrating with existing systems and platforms",
-      details: [
-        "Basic integrations: $1,500 - $4,000",
-        "Complex integrations: $4,000 - $10,000",
-        "Enterprise integrations: $10,000 - $25,000+"
-      ],
-      icon: Network,
+      description: "Complexity of integrating with existing systems and platforms", details: [
+        "Basic integrations: $1,500 - $4, 000",
+        "Complex integrations: $4, 000 - $10,000", "Enterprise integrations: $10,000 - $25, 000+"
+      ], icon: Network,
       color: "from-purple-500 to-pink-500"
-    },
-    {
+    }, {
       factor: "Timeline Requirements",
-      description: "How quickly you need the solution delivered",
-      details: [
+      description: "How quickly you need the solution delivered", details: [
         "Standard timeline: Base price",
-        "Rush delivery (50% faster): +30% cost",
-        "Emergency delivery (75% faster): +50% cost"
-      ],
-      icon: Clock,
+        "Rush delivery (50% faster): +30% cost", "Emergency delivery (75% faster): +50% cost"
+      ], icon: Clock,
       color: "from-orange-500 to-red-500"
     }
   ];
 
   const pricingExamples = [
     {
-      scenario: "Small Business Automation",
-      description: "AI-powered customer service chatbot for a small e-commerce business",
+      scenario: "Small Business Automation", description: "AI-powered customer service chatbot for a small e-commerce business",
       features: [
-        "Natural language processing",
-        "Basic customer support automation",
-        "Integration with existing CRM",
-        "Monthly maintenance included"
-      ],
-      price: "$3,500 - $5,500",
-      timeline: "4-6 weeks",
-      roi: "300% ROI within 6 months"
+        "Natural language processing", "Basic customer support automation",
+        "Integration with existing CRM", "Monthly maintenance included"
+      ], price: "$3,500 - $5, 500",
+      timeline: "4-6 weeks", roi: "300% ROI within 6 months"
     },
     {
-      scenario: "Enterprise AI Platform",
-      description: "Comprehensive AI platform for large manufacturing company",
+      scenario: "Enterprise AI Platform", description: "Comprehensive AI platform for large manufacturing company",
       features: [
-        "Custom machine learning models",
-        "Predictive maintenance system",
-        "Real-time analytics dashboard",
-        "Multi-site deployment",
+        "Custom machine learning models", "Predictive maintenance system",
+        "Real-time analytics dashboard", "Multi-site deployment",
         "24/7 support and monitoring"
-      ],
-      price: "$25,000 - $75,000",
-      timeline: "12-16 weeks",
-      roi: "500% ROI within 12 months"
+      ], price: "$25,000 - $75, 000",
+      timeline: "12-16 weeks", roi: "500% ROI within 12 months"
     },
     {
-      scenario: "Healthcare AI Solution",
-      description: "AI-powered diagnostic tool for medical practice",
+      scenario: "Healthcare AI Solution", description: "AI-powered diagnostic tool for medical practice",
       features: [
-        "Medical image analysis",
-        "Patient data integration",
-        "HIPAA compliance",
-        "Clinical decision support",
+        "Medical image analysis", "Patient data integration",
+        "HIPAA compliance", "Clinical decision support",
         "Training and certification"
-      ],
-      price: "$15,000 - $35,000",
-      timeline: "8-12 weeks",
-      roi: "400% ROI within 8 months"
+      ], price: "$15,000 - $35, 000",
+      timeline: "8-12 weeks", roi: "400% ROI within 8 months"
     }
   ];
 
   const costSavingTips = [
     {
-      tip: "Start with MVP",
-      description: "Begin with a minimum viable product and iterate based on results",
+      tip: "Start with MVP", description: "Begin with a minimum viable product and iterate based on results",
       savings: "Save 40-60% on initial development"
-    },
-    {
+    }, {
       tip: "Use Existing Frameworks",
-      description: "Leverage our pre-built AI frameworks and templates",
-      savings: "Reduce development time by 50%"
+      description: "Leverage our pre-built AI frameworks and templates", savings: "Reduce development time by 50%"
     },
     {
-      tip: "Phased Implementation",
-      description: "Implement solution in phases to spread costs over time",
+      tip: "Phased Implementation", description: "Implement solution in phases to spread costs over time",
       savings: "Improve cash flow and reduce risk"
+    }, {
+      tip: "Long-term Partnership",
+      description: "Sign annual contracts for ongoing development and support", savings: "Get 20% discount on all services"
+=======
+      name: 'Starter',
+      price: '$2,500',
+      period: '/month',
+      description: 'Perfect for small businesses getting started',
+      features: [
+        'Basic AI automation',
+        'Cloud infrastructure setup',
+        'Email support',
+        'Monthly reporting'
+      ],
+      popular: false
     },
     {
-      tip: "Long-term Partnership",
-      description: "Sign annual contracts for ongoing development and support",
-      savings: "Get 20% discount on all services"
+      name: 'Professional',
+      price: '$7,500',
+      period: '/month',
+      description: 'Ideal for growing companies',
+      features: [
+        'Advanced AI solutions',
+        'Custom cloud architecture',
+        'Priority support',
+        'Weekly reporting',
+        'Security monitoring',
+        'API integrations'
+      ],
+      popular: true
+    },
+    {
+      name: 'Enterprise',
+      price: 'Custom',
+      period: '',
+      description: 'Tailored solutions for large organizations',
+      features: [
+        'Full AI transformation',
+        'Multi-cloud architecture',
+        '24/7 dedicated support',
+        'Real-time monitoring',
+        'Custom development',
+        'Compliance management',
+        'Training & onboarding'
+      ],
+      popular: false
+    }
+  ];
+
+  const serviceCategories = [
+    {
+      icon: Brain,
+      title: 'AI Services',
+      services: [
+        { name: 'AI Content Creation', price: 'From $199/mo' },
+        { name: 'AI Email Automation', price: 'From $149/mo' },
+        { name: 'AI Customer Support', price: 'From $179/mo' },
+        { name: 'AI Financial Analytics', price: 'From $299/mo' }
+      ]
+    },
+    {
+      icon: Cloud,
+      title: 'Cloud & Infrastructure',
+      services: [
+        { name: 'Cloud Cost Optimization', price: 'Assessments $4k–$12k' },
+        { name: 'MLOps Platform Setup', price: 'Starting $15k–$60k' },
+        { name: 'Data Engineering', price: 'Starting $10k–$40k' },
+        { name: 'IoT Edge Computing', price: 'From $399/mo' }
+      ]
+    },
+    {
+      icon: Shield,
+      title: 'Cybersecurity',
+      services: [
+        { name: 'SOC-as-a-Service', price: 'From $3k/mo' },
+        { name: 'Compliance Copilot', price: 'From $249/mo' },
+        { name: 'Security Audits', price: 'Starting $5k–$15k' },
+        { name: 'Zero-Trust Implementation', price: 'Starting $10k–$30k' }
+      ]
+    },
+    {
+      icon: Code,
+      title: 'Micro SaaS',
+      services: [
+        { name: 'Mobile Survey Platform', price: 'From $99/mo' },
+        { name: 'Predictive Maintenance', price: 'From $299/mo' },
+        { name: 'AI Content Localization', price: 'From $199/mo' },
+        { name: 'Custom Applications', price: 'Starting $8k–$25k' }
+      ]
+>>>>>>> main
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="Pricing Guide - Zion Tech Group" 
-        description="Comprehensive guide to understanding AI solution pricing. Learn about cost factors, get estimates, and find the best pricing strategy for your project."
-      />
+    <>
+      <Head>
+        <title>Pricing Guide - Zion Tech Group</title>
+        <meta name="description" content="Transparent pricing for AI services, cloud solutions, cybersecurity, and micro SaaS platforms. Get custom quotes for your business needs." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="canonical" href="https://ziontechgroup.com/pricing-guide" />
+      </Head>
       
+      <ModernHeader />
+      
+      <main className="min-h-screen bg-white">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+                Transparent Pricing for
+                <span className="text-blue-600 block">Technology Solutions</span>
+              </h1>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+                Get clear, upfront pricing for our AI services, cloud solutions, and custom development. 
+                No hidden fees, no surprises.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Tiers */}
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Service Packages</h2>
+              <p className="text-xl text-gray-600">Choose the package that fits your business needs</p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {pricingTiers.map((tier, index) => (
+                <div
+                  key={index}
+                  className={`relative rounded-2xl border-2 p-8 ${
+                    tier.popular
+                      ? 'border-blue-500 bg-blue-50'
+                      : 'border-gray-200 bg-white'
+                  }`}
+                >
+                  {tier.popular && (
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-medium">
+                        Most Popular
+                      </span>
+                    </div>
+                  )}
+                  
+                  <div className="text-center mb-8">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">{tier.name}</h3>
+                    <p className="text-gray-600 mb-4">{tier.description}</p>
+                    <div className="flex items-baseline justify-center">
+                      <span className="text-4xl font-bold text-gray-900">{tier.price}</span>
+                      <span className="text-gray-600 ml-1">{tier.period}</span>
+                    </div>
+                  </div>
+                  
+                  <ul className="space-y-4 mb-8">
+                    {tier.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center">
+                        <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                        <span className="text-gray-700">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <Link
+                    href="/contact"
+                    className={`block w-full text-center py-3 px-6 rounded-lg font-medium transition-colors ${
+                      tier.popular
+                        ? 'bg-blue-600 text-white hover:bg-blue-700'
+                        : 'bg-gray-900 text-white hover:bg-gray-800'
+                    }`}
+                  >
+                    Get Started
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Service Categories */}
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Service Categories</h2>
+              <p className="text-xl text-gray-600">Detailed pricing for individual services</p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {serviceCategories.map((category, index) => {
+                const IconComponent = category.icon;
+                return (
+                  <div key={index} className="bg-white rounded-xl p-6 shadow-lg">
+                    <div className="flex items-center mb-6">
+                      <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                        <IconComponent className="h-6 w-6 text-blue-600" />
+                      </div>
+                      <h3 className="text-xl font-semibold text-gray-900">{category.title}</h3>
+=======
+<<<<<<< HEAD
+ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
+  ArrowRight,;,"});,"})
+  DollarSign,;,"});,"})
+  TrendingUp,;,"});,"})
+  Award,;,"});,"})
+  Clock,;,"});,"})
+  Target,;,"});,"})
+  Network,;,"});,"})
+  Brain,;,"});,"})
+  Server,;,"});,"})
+  Cloud,;,"});,"})
+  Database,;,"});,"})
+  Lock,;,"});,"})
+  BarChart3,;,"});,"})
+  Rocket,;,"});,"})
+  Heart,;,"});,"})
+  Sparkles,;,"});,"})
+  Calculator,;,"});,"})
+  BookOpen,;,"});,"})
+  Lightbulb,;,"});,"})
+ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
+} from 'lucide-react';,"});,"})
+import { Network } from 'lucide-react';,"});,"})
+;,"});,"})
+} from;,"});,"})
+  'lucide-react';,"});,"})
+>>>>>>> origin/main;,"});,"})
+const PricingGuide: React.FC = () => {;,"});,"})
+  const pricingFactors = [;,"});,"})
+    {;,"});,"})
+      factor: 'Project Complexity',;,"});,"})
+      description:;,"});,"})
+        'The complexity of your AI solution directly impacts development time and cost',;,"});,"})
+      details: [;,"});,"})
+        'Simple automation: $2, 000 - $5,000',;,"});,"})
+        'Custom AI models: $5,000 - $15, 000',;,"});,"})
+        'Enterprise solutions: $15, 000 - $50,000+',;,"});,"})
+      ],;,"});,"})
+      icon: Brain,;,"});,"})
+      color: 'from-blue-500 to-cyan-500',;,"});,"})
+    },;,"});,"})
+    {;,"});,"})
+      factor: 'Data Requirements',;,"});,"})
+      description:;,"});,"})
+        'Amount and quality of data needed for training and implementation',;,"});,"})
+      details: [;,"});,"})
+        'Small datasets: $1,000 - $3, 000',;,"});,"})
+        'Medium datasets: $3, 000 - $8,000',;,"});,"})
+        'Large datasets: $8,000 - $20, 000+',;,"});,"})
+      ],;,"});,"})
+      icon: Database,;,"});,"})
+      color: 'from-green-500 to-emerald-500',;,"});,"})
+    },;,"});,"})
+    {;,"});,"})
+      factor: 'Integration Needs',;,"});,"})
+      description:;,"});,"})
+        'Complexity of integrating with existing systems and platforms',;,"});,"})
+      details: [;,"});,"})
+        'Basic integrations: $1,500 - $4, 000',;,"});,"})
+        'Complex integrations: $4, 000 - $10,000',;,"});,"})
+        'Enterprise integrations: $10,000 - $25, 000+',;,"});,"})
+      ],;,"});,"})
+      icon: Network,;,"});,"})
+      color: 'from-purple-500 to-pink-500',;,"});,"})
+    },;,"});,"})
+    {;,"});,"})
+      factor: 'Timeline Requirements',;,"});,"})
+      description: 'How quickly you need the solution delivered',;,"});,"})
+      details: [;,"});,"})
+        'Standard timeline: Base price',;,"});,"})
+        'Rush delivery (50% faster): +30% cost',;,"});,"})
+        'Emergency delivery (75% faster): +50% cost',;,"});,"})
+      ],;,"});,"})
+      icon: Clock,;,"});,"})
+      color: 'from-orange-500 to-red-500',;,"});,"})
+    },;,"});,"})
+  ];,"});,"})
+;,"});,"})
+  const pricingExamples = [;,"});,"})
+    {;,"});,"})
+      scenario: 'Small Business Automation',;,"});,"})
+      description:;,"});,"})
+        'AI-powered customer service chatbot for a small e-commerce business',;,"});,"})
+      features: [;,"});,"})
+        'Natural language processing',;,"});,"})
+        'Basic customer support automation',;,"});,"})
+        'Integration with existing CRM',;,"});,"})
+        'Monthly maintenance included',;,"});,"})
+      ],;,"});,"})
+      price: '$3,500 - $5, 500',;,"});,"})
+      timeline: '4-6 weeks',;,"});,"})
+      roi: '300% ROI within 6 months',;,"});,"})
+    },;,"});,"})
+    {;,"});,"})
+      scenario: 'Enterprise AI Platform',;,"});,"})
+      description: 'Comprehensive AI platform for large manufacturing company',;,"});,"})
+      features: [;,"});,"})
+        'Custom machine learning models',;,"});,"})
+        'Predictive maintenance system',;,"});,"})
+        'Real-time analytics dashboard',;,"});,"})
+        'Multi-site deployment',;,"});,"})
+        '24/7 support and monitoring',;,"});,"})
+      ],;,"});,"})
+      price: '$25,000 - $75, 000',;,"});,"})
+      timeline: '12-16 weeks',;,"});,"})
+      roi: '500% ROI within 12 months',;,"});,"})
+    },;,"});,"})
+    {;,"});,"})
+      scenario: 'Healthcare AI Solution',;,"});,"})
+      description: 'AI-powered diagnostic tool for medical practice',;,"});,"})
+      features: [;,"});,"})
+        'Medical image analysis',;,"});,"})
+        'Patient data integration',;,"});,"})
+        'HIPAA compliance',;,"});,"})
+        'Clinical decision support',;,"});,"})
+        'Training and certification',;,"});,"})
+      ],;,"});,"})
+      price: '$15,000 - $35, 000',;,"});,"})
+      timeline: '8-12 weeks',;,"});,"})
+      roi: '400% ROI within 8 months',;,"});,"})
+    },;,"});,"})
+  ];,"});,"})
+;,"});,"})
+  const costSavingTips = [;,"});,"})
+    {;,"});,"})
+      tip: 'Start with MVP',;,"});,"})
+      description:;,"});,"})
+        'Begin with a minimum viable product and iterate based on results',;,"});,"})
+      savings: 'Save 40-60% on initial development',;,"});,"})
+    },;,"});,"})
+    {;,"});,"})
+      tip: 'Use Existing Frameworks',;,"});,"})
+      description: 'Leverage our pre-built AI frameworks and templates',;,"});,"})
+      savings: 'Reduce development time by 50%',;,"});,"})
+    },;,"});,"})
+    {;,"});,"})
+      tip: 'Phased Implementation',;,"});,"})
+      description: 'Implement solution in phases to spread costs over time',;,"});,"})
+      savings: 'Improve cash flow and reduce risk',;,"});,"})
+    },;,"});,"})
+    {;,"});,"})
+      tip: 'Long-term Partnership',;,"});,"})
+      description: 'Sign annual contracts for ongoing development and support',;,"});,"})
+      savings: 'Get 20% discount on all services',;,"});,"})
+    },;,"});,"})
+  ];,"});,"})
+;,"});,"})
+  return (;,"});,"})
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;,"});,"})
+      <SEO;,"});,"})
+        title="Pricing Guide - Zion Tech Group";,"});,"})
+        description="Comprehensive guide to understanding AI solution pricing. Learn about cost factors, get estimates, and find the best pricing strategy for your project.";,"});,"})
+      />;,"});,"})
+      {/* Hero Section */}"});,"})
+      <section className="relative py-20 px-4 sm: px-6 lg:px-8">;,"});,"})
+        <div className="max-w-7xl mx-auto text-center">;,"});,"})
+          <motion.div;,"});,"})
+            initial={{ opacity: 0, y: 20 }}"});,"})
+            animate={{ opacity: 1, y: 0 }}"});,"})
+            transition={{ duration: 0.6 }}"});,"})
+          >;,"});,"})
+            <Badge variant="secondary" className="mb-4">;,"});,"})
+              <Calculator className="w-4 h-4 mr-2" />;,"});,"})
+              Pricing Guide;,"});,"})
+            </Badge>;,"});,"})
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">;,"});,"})
+              AI Solution Pricing Guide;,"});,"})
+            </h1>;,"});,"})
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;,"});,"})
+              Understand the factors that influence AI solution costs and get;,"});,"})
+              accurate estimates for your project.;,"});,"})
+            </p>;,"});,"})
+          </motion.div>;,"});,"})
+        </div>;,"});,"})
+      </section>;,"});,"})
+      {/* Pricing Factors */}"});,"})
+      <section className="py-20 px-4 sm:px-6 lg:px-8">;,"});,"})
+        <div className="max-w-7xl mx-auto">;,"});,"})
+          <motion.div;,"});,"})
+            initial={{ opacity: 0, y: 20 }}"});,"})
+            animate={{ opacity: 1, y: 0 }}"});,"})
+            transition={{ duration: 0.6 }}"});,"})
+            className="text-center mb-16";,"});,"})
+          >;,"});,"})
+            <h2 className="text-4xl font-bold text-white mb-4">;,"});,"})
+              What Affects AI Solution Pricing?;,"});,"})
+            </h2>;,"});,"})
+            <p className="text-xl text-gray-300">;,"});,"})
+              Several key factors determine the cost of your AI implementation;,"});,"})
+            </p>;,"});,"})
+          </motion.div>;,"});,"})
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;,"});,"})
+            {pricingFactors.map((factor, index) => (;,"});,"})
+              <motion.div;,"});,"})
+                key={factor.factor}"});,"})
+                initial={{ opacity: 0, y: 20 }}"});,"})
+                animate={{ opacity: 1, y: 0 }}"});,"})
+                transition={{ duration: 0.6, delay: 0.1 * index }}"});,"})
+              >;,"});,"})
+                <Card className="p-8 h-full">;,"});,"})
+                  <div className="flex items-start mb-6">;,"});,"})
+                    <div;,"});,"})
+                      className={`p-3 rounded-lg bg-gradient-to-r ${factor.color} mr-4`}"});,"})
+                    >;,"});,"})
+                      <factor.icon className="w-6 h-6 text-white" />;,"});,"})
+                    </div>;,"});,"})
+                    <div>;,"});,"})
+                      <h3 className="text-2xl font-bold text-white mb-2">;,"});,"})
+                        {factor.factor}"});,"})
+                      </h3>;,"});,"})
+                      <p className="text-gray-300">{factor.description}</p>;,"});,"})
+                    </div>;,"});,"})
+                  </div>;,"});,"})
+                  <ul className="space-y-3">;,"});,"})
+                    {factor.details.map((detail, detailIndex) => (;,"});,"})
+                      <li;,"});,"})
+                        key={detailIndex}"});,"})
+                        className="flex items-center text-gray-300";,"});,"})
+                      >;,"});,"})
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />;,"});,"})
+                        {detail}"});,"})
+                      </li>;,"});,"})
+                    ))}"});,"})
+                  </ul>;,"});,"})
+                </Card>;,"});,"})
+              </motion.div>;,"});,"})
+            ))}"});,"})
+          </div>;,"});,"})
+        </div>;,"});,"})
+      </section>;,"});,"})
+      {/* Pricing Examples */}"});,"})
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-slate-800/50">;,"});,"})
+        <div className="max-w-7xl mx-auto">;,"});,"})
+          <motion.div;,"});,"})
+            initial={{ opacity: 0, y: 20 }}"});,"})
+            animate={{ opacity: 1, y: 0 }}"});,"})
+            transition={{ duration: 0.6 }}"});,"})
+            className="text-center mb-16";,"});,"})
+          >;,"});,"})
+            <h2 className="text-4xl font-bold text-white mb-4">;,"});,"})
+              Real-World Pricing Examples;,"});,"})
+            </h2>;,"});,"})
+            <p className="text-xl text-gray-300">;,"});,"})
+              See how different project types are priced;,"});,"})
+            </p>;,"});,"})
+          </motion.div>;,"});,"})
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;,"});,"})
+            {pricingExamples.map((example, index) => (;,"});,"})
+              <motion.div;,"});,"})
+                key={example.scenario}"});,"})
+                initial={{ opacity: 0, y: 20 }}"});,"})
+                animate={{ opacity: 1, y: 0 }}"});,"})
+                transition={{ duration: 0.6, delay: 0.1 * index }}"});,"})
+              >;,"});,"})
+                <Card className="p-8 h-full">;,"});,"})
+                  <div className="text-center mb-6">;,"});,"})
+                    <h3 className="text-xl font-bold text-white mb-2">;,"});,"})
+                      {example.scenario}"});,"})
+                    </h3>;,"});,"})
+                    <p className="text-gray-300 text-sm mb-4">;,"});,"})
+                      {example.description}"});,"})
+                    </p>;,"});,"})
+                    <div className="text-3xl font-bold text-blue-400 mb-2">;,"});,"})
+                      {example.price}"});,"})
+                    </div>;,"});,"})
+                    <div className="text-sm text-gray-400">;,"});,"})
+                      Timeline: {example.timeline}"});,"})
+                    </div>;,"});,"})
+                  </div>;,"});,"})
+                  <ul className="space-y-3 mb-6">;,"});,"})
+                    {example.features.map((feature, featureIndex) => (;,"});,"})
+                      <li;,"});,"})
+                        key={featureIndex}"});,"})
+                        className="flex items-center text-gray-300 text-sm";,"});,"})
+                      >;,"});,"})
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />;,"});,"})
+                        {feature}"});,"})
+                      </li>;,"});,"})
+                    ))}"});,"})
+                  </ul>;,"});,"})
+                  <div className="text-center">;,"});,"})
+                    <Badge variant="secondary" className="text-green-400">;,"});,"})
+                      <TrendingUp className="w-4 h-4 mr-1" />;,"});,"})
+                      {example.roi}"});,"})
+                    </Badge>;,"});,"})
+                  </div>;,"});,"})
+                </Card>;,"});,"})
+              </motion.div>;,"});,"})
+            ))}"});,"})
+          </div>;,"});,"})
+        </div>;,"});,"})
+      </section>;,"});,"})
+      {/* Cost Saving Tips */}"});,"})
+      <section className="py-20 px-4 sm: px-6 lg:px-8">;,"});,"})
+        <div className="max-w-7xl mx-auto">;,"});,"})
+          <motion.div;,"});,"})
+            initial={{ opacity: 0, y: 20 }}"});,"})
+            animate={{ opacity: 1, y: 0 }}"});,"})
+            transition={{ duration: 0.6 }}"});,"})
+            className="text-center mb-16";,"});,"})
+          >;,"});,"})
+            <h2 className="text-4xl font-bold text-white mb-4">;,"});,"})
+              How to Save on AI Development Costs;,"});,"})
+            </h2>;,"});,"})
+            <p className="text-xl text-gray-300">;,"});,"})
+              Smart strategies to maximize your AI investment;,"});,"})
+            </p>;,"});,"})
+          </motion.div>;,"});,"})
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;,"});,"})
+            {costSavingTips.map((tip, index) => (;,"});,"})
+              <motion.div;,"});,"})
+                key={tip.tip}"});,"})
+                initial={{ opacity: 0, y: 20 }}"});,"})
+                animate={{ opacity: 1, y: 0 }}"});,"})
+                transition={{ duration: 0.6, delay: 0.1 * index }}"});,"})
+              >;,"});,"})
+                <Card className="p-6">;,"});,"})
+                  <div className="flex items-start">;,"});,"})
+                    <div className="p-2 rounded-lg bg-gradient-to-r from-green-500 to-emerald-500 mr-4">;,"});,"})
+                      <Lightbulb className="w-5 h-5 text-white" />;,"});,"})
+                    </div>;,"});,"})
+                    <div className="flex-1">;,"});,"})
+                      <h3 className="text-lg font-bold text-white mb-2">;,"});,"})
+                        {tip.tip}"});,"})
+                      </h3>;,"});,"})
+                      <p className="text-gray-300 mb-3">{tip.description}</p>;,"});,"})
+                      <Badge variant="secondary" className="text-green-400">;,"});,"})
+                        {tip.savings}"});,"})
+                      </Badge>;,"});,"})
+                    </div>;,"});,"})
+                  </div>;,"});,"})
+                </Card>;,"});,"})
+              </motion.div>;,"});,"})
+            ))}"});,"})
+          </div>;,"});,"})
+        </div>;,"});,"})
+      </section>;,"});,"})
+      {/* CTA Section */}"});,"})
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-slate-800/50">;,"});,"})
+        <div className="max-w-4xl mx-auto text-center">;,"});,"})
+          <motion.div;,"});,"})
+            initial={{ opacity: 0, y: 20 }}"});,"})
+            animate={{ opacity: 1, y: 0 }}"});,"})
+            transition={{ duration: 0.6 }}"});,"})
+          >;,"});,"})
+            <h2 className="text-4xl font-bold text-white mb-6">;,"});,"})
+              Get Your Custom Quote;,"});,"})
+            </h2>;,"});,"})
+            <p className="text-xl text-gray-300 mb-8">;,"});,"})
+              Ready to get started? Contact us for a personalized quote based on;,"});,"})
+              your specific requirements.;,"});,"})
+            </p>;,"});,"})
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">;,"});,"})
+              <Button;,"});,"})
+                size="lg";,"});,"})
+                className="bg-gradient-to-r from-blue-500 to-purple-600 text-white";,"});,"})
+              >;,"});,"})
+                <Calculator className="w-5 h-5 mr-2" />;,"});,"})
+                Get Free Quote;,"});,"})
+              </Button>;,"});,"})
+              <Button size="lg" variant="outline">;,"});,"})
+                <HelpCircle className="w-5 h-5 mr-2" />;,"});,"})
+                Ask Questions;,"});,"})
+              </Button>;,"});,"})
+            </div>;,"});,"})
+          </motion.div>;,"});,"})
+        </div>;,"});,"})
+      </section>;,"});,"})
+    </div>;,"});,"})
+  );,"});,"})
+};,"});,"})
+;,"});,"})
+export default PricingGuide;,"});,"})
+;,"});,"})
+=======
+import React from 'react';
+<<<<<<< HEAD
+import { motion } from 'framer-motion';
+import SEO from '../components/SEO';
+import { Button } from '../components/ui/Button';
+import { Card } from '../components/ui/Card';
+import { Badge } from '../components/ui/Badge';
+const PricingGuide: React.FC = () => {
+  const pricingFactors = [
+=======
+import Head from 'next/head';
+import Link from 'next/link';
+import {
+  CheckCircle,
+  Star,
+  Users,
+  Building,
+  ArrowRight,
+  Phone,
+  Mail,
+  Calculator,
+<<<<<<< HEAD
+  BookOpen,
+  Lightbulb,
+  HelpCircle,
+  Network'
+} from 'lucide-react';
+
+const PricingGuide: React.FC = () => {
+  const pricingFactors = [
+    {'
+      facto,
+    r: 'Project Complexity', description: 'The complexity of your AI solution directly impacts development time and cost',
+      details: ['
+        'Simple automatio,
+    n: $2,000 - $5,000', 'Custom AI models: $5,000 - $15,000',
+        'Enterprise solutions: $15,000 - $50,000+'
+      ], icon: Brain,
+      color: 'from-blue-500 to-cyan-500'
+    }, {'
+      factor: 'Data Requirements',
+      description: 'Amount and quality of data needed for training and implementation', details: ['
+        'Small dataset,
+    s: $1,000 - $3,000',
+        'Medium datasets: $3,000 - $8,000', 'Large datasets: $8,000 - $20,000+'
+      ], icon: Database,
+      color: 'from-green-500 to-emerald-500'
+    }, {'
+      factor: 'Integration Needs',
+      description: 'Complexity of integrating with existing systems and platforms', details: ['
+        'Basic integration,
+    s: $1,500 - $4,000',
+        'Complex integrations: $4,000 - $10,000', 'Enterprise integrations: $10,000 - $25,000+'
+      ], icon: Network,
+      color: 'from-purple-500 to-pink-500'
+    }, {'
+      factor: 'Timeline Requirements',
+      description: 'How quickly you need the solution delivered', details: ['
+        'Standard timelin,
+    e: Base price',
+        'Rush delivery (50% faster): +30% cost', 'Emergency delivery (75% faster): +50% cost'
+      ], icon: Clock,
+      color: 'from-orange-500 to-red-500'
+    }
+  ];
+
+  const pricingExamples = [
+    {'
+      scenario: 'Small Business Automation', description: 'AI-powered customer service chatbot for a small e-commerce business',
+      features: ['
+        'Natural language processing', 'Basic customer support automation',
+        'Integration with existing CRM', 'Monthly maintenance included''
+      ], price: '$3,500 - $5,500',
+      timeline: '4-6 weeks', roi: '300% ROI within 6 months'
+    },
+    {'
+      scenario: 'Enterprise AI Platform', description: 'Comprehensive AI platform for large manufacturing company',
+      features: ['
+        'Custom machine learning models', 'Predictive maintenance system',
+        'Real-time analytics dashboard', 'Multi-site deployment',
+        '24/7 support and monitoring''
+      ], price: '$25,000 - $75,000',
+      timeline: '12-16 weeks', roi: '500% ROI within 12 months'
+    },
+    {'
+      scenario: 'Healthcare AI Solution', description: 'AI-powered diagnostic tool for medical practice',
+      features: ['
+        'Medical image analysis', 'Patient data integration',
+        'HIPAA compliance', 'Clinical decision support',
+        'Training and certification''
+      ], price: '$15,000 - $35,000',
+      timeline: '8-12 weeks', roi: '400% ROI within 8 months'
+    }
+  ];
+
+  const costSavingTips = [
+    {'
+      tip: 'Start with MVP', description: 'Begin with a minimum viable product and iterate based on results',
+      savings: 'Save 40-60% on initial development'
+    }, {'
+      tip: 'Use Existing Frameworks',
+      description: 'Leverage our pre-built AI frameworks and templates', savings: 'Reduce development time by 50%'
+    },
+    {'
+      tip: 'Phased Implementation', description: 'Implement solution in phases to spread costs over time',
+      savings: 'Improve cash flow and reduce risk'
+    }, {'
+      tip: 'Long-term Partnership',
+      description: 'Sign annual contracts for ongoing development and support', savings: 'Get 20% discount on all services'
+    }
+  ];
+  return ('
+    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
+      <SEO'
+        title='Pricing Guide - Zion Tech Group''
+        description='Comprehensive guide to understanding AI solution pricing. Learn about cost factors, get estimates, and find the best pricing strategy for your project.'
+      />
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+<<<<<<< HEAD
+      <section className="relative py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
+=======
+      <section className='relative py-20 px-4 sm: px-6 l,
+    g:px-8>
+        <div className='max-w-7xl mx-auto text-center'>
+>>>>>>> main
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacit,
+    y: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-          >
-            <Badge variant="secondary" className="mb-4">
-              <Calculator className="w-4 h-4 mr-2" />
-              Pricing Guide
-            </Badge>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-              AI Solution Pricing Guide
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Understand the factors that influence AI solution costs and get accurate estimates for your project.
+          >'
+            <Badge variant='secondary' className='mb-4>
+              <Calculator className='w-4 h-4 mr-2' />
+              Pricing Guide;
+            </Badge>'
+            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>
+              AI Solution Pricing Guide;
+            </h1>'
+            <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
+              Understand the factors that influence AI solution costs and get accurate estimates for your project.;
             </p>
           </motion.div>
         </div>
       </section>
-
       {/* Pricing Factors */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      <section className='py-20 px-4 sm: px-6 l,
+    g:px-8>
+        <div className='max-w-7xl mx-auto'>
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacit,
+    y: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              What Affects AI Solution Pricing?
-            </h2>
-            <p className="text-xl text-gray-300">
-              Several key factors determine the cost of your AI implementation
+            className='text-center mb-16'
+          >'
+            <h2 className='text-4xl font-bold text-white mb-4'>
+              What Affects AI Solution Pricing?;
+            </h2>'
+            <p className='text-xl text-gray-300'>
+              Several key factors determine the cost of your AI implementation;
             </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          </motion.div>'
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {pricingFactors.map((factor, index) => (
               <motion.div
                 key={factor.factor}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 * index }}
-              >
-                <Card className="p-8 h-full">
-                  <div className="flex items-start mb-6">
-                    <div className={`p-3 rounded-lg bg-gradient-to-r ${factor.color} mr-4`}>
-                      <factor.icon className="w-6 h-6 text-white" />
+              >'
+                <Card className='p-8 h-full>
+                  <div className='flex items-start mb-6>
+                    <div className={`p-3 rounded-lg bg-gradient-to-r ${factor.color} mr-4`}>`
+                      <factor.icon className='w-6 h-6 text-white' />
                     </div>
-                    <div>
-                      <h3 className="text-2xl font-bold text-white mb-2">{factor.factor}</h3>
-                      <p className="text-gray-300">{factor.description}</p>
+                    <div>'
+                      <h3 className='text-2xl font-bold text-white mb-2'>{factor.factor}</h3>'
+                      <p className='text-gray-300'>{factor.description}</p>
                     </div>
-                  </div>
-                  
-                  <ul className="space-y-3">
-                    {factor.details.map((detail, detailIndex) => (
-                      <li key={detailIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
+                  </div>'
+                  <ul className='space-y-3'>
+                    {factor.details.map((detail, detailIndex) => ('
+                      <li key={detailIndex} className='flex items-center text-gray-300>
+                        <CheckCircle className='w-5 h-5 text-green-500 mr-3 flex-shrink-0' />
                         {detail}
                       </li>
                     ))}
@@ -235,52 +913,55 @@ const PricingGuide: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Pricing Examples */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
+<<<<<<< HEAD
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-slate-800/50">
         <div className="max-w-7xl mx-auto">
+=======
+      <section className='py-20 px-4 sm: px-6 l,
+    g:px-8 bg-slate-800/50>
+        <div className='max-w-7xl mx-auto'>
+>>>>>>> main
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacit,
+    y: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Real-World Pricing Examples
-            </h2>
-            <p className="text-xl text-gray-300">
-              See how different project types are priced
+            className='text-center mb-16'
+          >'
+            <h2 className='text-4xl font-bold text-white mb-4'>
+              Real-World Pricing Examples;
+            </h2>'
+            <p className='text-xl text-gray-300'>
+              See how different project types are priced;
             </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          </motion.div>'
+          <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
             {pricingExamples.map((example, index) => (
               <motion.div
                 key={example.scenario}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 * index }}
-              >
-                <Card className="p-8 h-full">
-                  <div className="text-center mb-6">
-                    <h3 className="text-xl font-bold text-white mb-2">{example.scenario}</h3>
-                    <p className="text-gray-300 text-sm mb-4">{example.description}</p>
-                    <div className="text-3xl font-bold text-blue-400 mb-2">{example.price}</div>
-                    <div className="text-sm text-gray-400">Timeline: {example.timeline}</div>
-                  </div>
-                  
-                  <ul className="space-y-3 mb-6">
-                    {example.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
+              >'
+                <Card className='p-8 h-full>
+                  <div className='text-center mb-6>
+                    <h3 className='text-xl font-bold text-white mb-2'>{example.scenario}</h3>'
+                    <p className='text-gray-300 text-sm mb-4'>{example.description}</p>'
+                    <div className='text-3xl font-bold text-blue-400 mb-2'>{example.price}</div>'
+                    <div className='text-sm text-gray-400'>Timeline: {example.timeline}</div>
+                  </div>'
+                  <ul className='space-y-3 mb-6'>
+                    {example.features.map((feature, featureIndex) => ('
+                      <li key={featureIndex} className='flex items-center text-gray-300 text-sm>
+                        <CheckCircle className='w-4 h-4 text-green-500 mr-3 flex-shrink-0' />
                         {feature}
                       </li>
                     ))}
-                  </ul>
-                  
-                  <div className="text-center">
-                    <Badge variant="secondary" className="text-green-400">
-                      <TrendingUp className="w-4 h-4 mr-1" />
+                  </ul>'
+                  <div className='text-center>
+                    <Badge variant='secondary' className='text-green-400>
+                      <TrendingUp className='w-4 h-4 mr-1' />
                       {example.roi}
                     </Badge>
                   </div>
@@ -290,54 +971,70 @@ const PricingGuide: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Cost Saving Tips */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+<<<<<<< HEAD
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
+=======
+      <section className='py-20 px-4 sm: px-6 l,
+    g:px-8>
+        <div className='max-w-7xl mx-auto'>
+>>>>>>> main
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacit,
+    y: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
+            className='text-center mb-16'
+          >'
+            <h2 className='text-4xl font-bold text-white mb-4'>
               How to Save on AI Development Costs
-            </h2>
-            <p className="text-xl text-gray-300">
+            </h2>'
+            <p className='text-xl text-gray-300'>
               Smart strategies to maximize your AI investment
             </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          </motion.div>'
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {costSavingTips.map((tip, index) => (
               <motion.div
                 key={tip.tip}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 * index }}
-              >
-                <Card className="p-6">
-                  <div className="flex items-start">
-                    <div className="p-2 rounded-lg bg-gradient-to-r from-green-500 to-emerald-500 mr-4">
-                      <Lightbulb className="w-5 h-5 text-white" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-lg font-bold text-white mb-2">{tip.tip}</h3>
-                      <p className="text-gray-300 mb-3">{tip.description}</p>
-                      <Badge variant="secondary" className="text-green-400">
+              >'
+                <Card className='p-6>
+                  <div className='flex items-start>
+                    <div className='p-2 rounded-lg bg-gradient-to-r from-green-500 to-emerald-500 mr-4>
+                      <Lightbulb className='w-5 h-5 text-white' />
+                    </div>'
+                    <div className='flex-1>
+                      <h3 className='text-lg font-bold text-white mb-2'>{tip.tip}</h3>'
+                      <p className='text-gray-300 mb-3'>{tip.description}</p>'
+                      <Badge variant='secondary' className='text-green-400'>
                         {tip.savings}
                       </Badge>
+>>>>>>> main
                     </div>
+                    
+                    <ul className="space-y-3">
+                      {category.services.map((service, serviceIndex) => (
+                        <li key={serviceIndex} className="flex justify-between items-center">
+                          <span className="text-gray-700">{service.name}</span>
+                          <span className="text-blue-600 font-medium">{service.price}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                </Card>
-              </motion.div>
-            ))}
+                );
+              })}
+            </div>
           </div>
-        </div>
-      </section>
+<<<<<<< HEAD
+        </section>
 
+<<<<<<< HEAD
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-slate-800/50">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -346,25 +1043,567 @@ const PricingGuide: React.FC = () => {
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Get Your Custom Quote
+=======
+        {/* CTA Section */}
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl font-bold text-white mb-6">
+              Need a Custom Quote?
+>>>>>>> main
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Ready to get started? Contact us for a personalized quote based on your specific requirements.
+            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+              Every business is unique. Contact us for a personalized pricing proposal tailored to your specific needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-gradient-to-r from-blue-500 to-purple-600 text-white">
-                <Calculator className="w-5 h-5 mr-2" />
-                Get Free Quote
-              </Button>
-              <Button size="lg" variant="outline">
-                <HelpCircle className="w-5 h-5 mr-2" />
-                Ask Questions
-              </Button>
-            </div>
-          </motion.div>
+              <Link
+                href="/contact"
+                className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-50 transition-colors font-semibold text-lg inline-flex items-center justify-center"
+              >
+                Get Custom Quote
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+              <Link
+                href="/services"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold text-lg inline-flex items-center justify-center"
+              >
+                View All Services
+=======
         </div>
       </section>
-    </div>
-  );
-};
+      {/* CTA Section */}
+      <section className='py-20 px-4 sm: px-6 l,
+    g:px-8 bg-slate-800/50>
+        <div className='max-w-4xl mx-auto text-center'>
+          <motion.div
+            initial={{ opacit,
+    y: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >'
+            <h2 className='text-4xl font-bold text-white mb-6'>
+              Get Your Custom Quote;
+            </h2>'
+            <p className='text-xl text-gray-300 mb-8'>
+              Ready to get started? Contact us for a personalized quote based on your specific requirements.;
+            </p>'
+            <div className='flex flex-col sm:flex-row gap-4 justify-center>
+              <Button size='lg' className='bg-gradient-to-r from-blue-500 to-purple-600 text-white>
+                <Calculator className='w-5 h-5 mr-2' />
+                Get Free Quote;
+              </Button>'
+              <Button size='lg' variant='outline>
+                <HelpCircle className='w-5 h-5 mr-2' />
+                Ask Questions;
+              </Button>
+=======
+  TrendingUp,
+  Shield,
+  Clock,
+  Award,
+} from 'lucide-react';
 
-export default PricingGuide;
+export default function PricingGuide() {
+<<<<<<< HEAD
+  const plans = [
+>>>>>>> main
+    {
+      name: 'Starter', price: '$99',
+      period: '/month', description: 'Perfect for small businesses getting started',
+      features: [
+        'Up to 5 team members', 'Basic AI services',
+        'Email support', 'Standard templates',
+        'Basic analytics', '1GB storage'
+      ], popular: false,
+      cta: 'Start Free Trial'
+    }, {
+      name: 'Professional',
+      price: '$299', period: '/month',
+      description: 'Ideal for growing businesses', features: [
+        'Up to 25 team members',
+        'Advanced AI services', 'Priority support',
+        'Custom templates', 'Advanced analytics',
+        '10GB storage', 'API access',
+        'Custom integrations'
+      ], popular: true,
+      cta: 'Start Free Trial'
+    }, {
+      name: 'Enterprise',
+      price: 'Custom', period: '',
+      description: 'For large organizations', features: [
+        'Unlimited team members',
+        'Full AI suite', '24/7 dedicated support',
+        'White-label options', 'Custom analytics',
+        'Unlimited storage', 'Full API access',
+        'Custom development', 'SLA guarantee'
+      ], popular: false,
+      cta: 'Contact Sales'
+    }
+  ];
+
+  const addOns = [
+    {
+      name: 'Additional AI Credits', price: '$0.10',
+      description: 'Per AI-generated content piece', icon: Brain
+    },
+    {
+      name: 'Extra Storage', price: '$5',
+      description: 'Per 10GB per month', icon: Database
+    },
+    {
+      name: 'Priority Support', price: '$99',
+      description: 'Per month for faster response', icon: Shield
+    },
+    {
+      name: 'Custom Development', price: '$150',
+      description: 'Per hour for custom features', icon: Network
+    }
+  ];
+
+  const faqs = [
+    {
+      question: 'Can I change my plan at any time?', answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we\'ll prorate any billing differences.'
+    },
+    {
+      question: 'Is there a free trial available?', answer: 'Yes, we offer a 14-day free trial for all plans. No credit card required to start your trial.'
+    }, {
+      question: 'What payment methods do you accept?',
+      answer: 'We accept all major credit cards, PayPal, and bank transfers for annual subscriptions.'
+    }, {
+      question: 'Do you offer discounts for annual subscriptions?',
+      answer: 'Yes, we offer 20% off when you pay annually. This applies to all plans except Enterprise.'
+    },
+    {
+      question: 'What happens if I exceed my plan limits?', answer: 'We\'ll notify you when you\'re approaching your limits. You can upgrade your plan or purchase additional credits as needed.'
+    },
+    {
+      question: 'Is there a setup fee?', answer: 'No setup fees for Starter and Professional plans. Enterprise plans may include setup fees depending on custom requirements.'
+=======
+  const pricingTiers = [
+  {
+      name: 'Startup',
+      price: '$2,500',
+      period: '/month',
+      description: 'Perfect for startups and small businesses',
+      icon: Users,
+      features: [
+<<<<<<< HEAD
+        'Basic AI automation',
+        'Cloud infrastructure setup',
+        'Email support',
+        'Monthly reporting',
+        'Up to 5 team members',
+        'Basic security features',
+=======
+        'Basic AI automation,Cloud infrastructure setup,Email support,Monthly reporting,Up to 5 team members,Basic security features'
+>>>>>>> main
+      ],
+      popular: false,
+    },
+    {
+      name: 'Professional',
+      price: '$7,500',
+      period: '/month',
+      description: 'Ideal for growing businesses',
+      icon: Building,
+      features: [
+<<<<<<< HEAD
+        'Advanced AI solutions',
+        'Full cloud migration',
+        'Priority support',
+        'Weekly reporting',
+        'Up to 25 team members',
+        'Advanced security',
+        'API integrations',
+        'Custom dashboards',
+=======
+        'Advanced AI solutions,Full cloud migration,Priority support,Weekly reporting,Up to 25 team members,Advanced security,API integrations,Custom dashboards'
+>>>>>>> main
+      ],
+      popular: true,
+    },
+    {
+      name: 'Enterprise',
+      price: 'Custom',
+      period: '',
+      description: 'Tailored solutions for large organizations',
+      icon: Award,
+      features: [
+<<<<<<< HEAD
+        'Custom AI development',
+        'Multi-cloud architecture',
+        '24/7 dedicated support',
+        'Real-time monitoring',
+        'Unlimited team members',
+        'Enterprise security',
+        'Custom integrations',
+        'Dedicated account manager',
+        'SLA guarantees',
+=======
+        'Custom AI development,Multi-cloud architecture,24/7 dedicated support,Real-time monitoring,Unlimited team members,Enterprise security,Custom integrations,Dedicated account manager,SLA guarantees'
+>>>>>>> main
+      ],
+      popular: false,
+    },
+  ];
+
+  const addOnServices = [
+  {
+      name: 'AI Development',
+      price: '$150/hour',
+      description: 'Custom AI model development and training',
+    },
+    {
+      name: 'Cloud Migration',
+      price: '$5, 000',
+      description: 'Complete cloud infrastructure migration',
+    },
+    {
+      name: 'Security Audit',
+      price: '$3, 500',
+      description: 'Comprehensive security assessment and recommendations',
+    },
+    {
+      name: 'Training & Support',
+      price: '$200/hour',
+<<<<<<< HEAD
+      description: 'Team training and ongoing technical support',
+    },
+=======
+      description: 'Team training and ongoing technical support'
+>>>>>>> main
+    }
+>>>>>>> main
+  ];
+
+  return (
+    <>
+      <Head>
+        <title>Pricing Guide - Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Transparent pricing for AI services, cloud solutions, and technology consulting. Choose the plan that fits your business needs."
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+
+      <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+        {/* Hero Section */}
+<<<<<<< HEAD
+        <section className='relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600'>
+          <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-20 sm:py-32'>
+            <div className='text-center'>
+              <Badge className='mb-4 bg-white/20 text-white border-white/30'>
+=======
+        <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-20 sm:py-32">
+            <div className="text-center">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
+>>>>>>> main
+                Transparent Pricing
+              </h1>
+              <p className="text-xl sm:text-2xl text-blue-100 max-w-4xl mx-auto mb-8">
+                Choose the perfect plan for your business needs. No hidden fees,
+                no surprises.
+              </p>
+<<<<<<< HEAD
+              <div className='flex flex-col sm: flex-row gap-4 justify-center'>
+                <Button size='lg' className='bg-white text-blue-600 hover:bg-blue-50'>
+                  Start Free Trial
+                  <ArrowRight className='ml-2 h-5 w-5' />
+                </Button>
+                <Button size='lg' variant='outline' className='border-white text-white hover:bg-white hover:text-blue-600'>
+                  Contact Sales
+                </Button>
+=======
+              <div className="flex items-center justify-center space-x-4 text-blue-100">
+                <div className="flex items-center">
+                  <Shield className="w-5 h-5 mr-2" />
+                  <span>30-day money-back guarantee</span>
+                </div>
+                <div className="flex items-center">
+                  <Clock className="w-5 h-5 mr-2" />
+                  <span>Cancel anytime</span>
+                </div>
+>>>>>>> main
+              </div>
+>>>>>>> main
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Tiers */}
+        <section className="py-20 sm: py-32">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+                Choose Your Plan
+              </h2>
+              <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+                Flexible pricing options designed to scale with your business
+              </p>
+            </div>
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+
+            <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>
+              {plans.map((plan, index) => (
+                <Card key={index} className={`p-8 relative ${plan.popular ? 'ring-2 ring-blue-500 shadow-xl scale-105' : ''}`}>
+                  {plan.popular && (
+                    <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
+                      <Badge className='bg-blue-500 text-white'>Most Popular</Badge>
+=======
+            
+>>>>>>> main
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              {pricingTiers.map((tier, index) => (
+                <div
+                  key={index}
+                  className={`relative bg-white rounded-2xl shadow-lg p-8 ${tier.popular ? 'ring-2 ring-blue-500 transform scale-105' : ''}`}
+                >
+                  {tier.popular && (
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                        Most Popular
+                      </span>
+>>>>>>> main
+                    </div>
+                  )}
+
+                  <div className="text-center mb-8">
+                    <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <tier.icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                      {tier.name}
+                    </h3>
+                    <p className="text-gray-600 mb-4">{tier.description}</p>
+                    <div className="flex items-baseline justify-center">
+                      <span className="text-4xl font-bold text-gray-900">
+                        {tier.price}
+                      </span>
+                      <span className="text-gray-600 ml-1">{tier.period}</span>
+                    </div>
+                  </div>
+
+                  <ul className="space-y-4 mb-8">
+                    {tier.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center">
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
+                        <span className="text-gray-700">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <Link href="/contact">
+                    <button
+                      className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                        tier.popular
+                          ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover: from-blue-700 hover:to-purple-700'
+                          : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+                      }`}
+                    >
+                      Get Started
+                      <ArrowRight className="w-4 h-4 ml-2 inline" />
+                    </button>
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+<<<<<<< HEAD
+        {/* Add-ons Section */}
+        <section className='py-20 bg-white'>
+          <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>
+            <div className='text-center mb-16'>
+              <h2 className='text-3xl sm:text-4xl font-bold text-gray-900 mb-4'>
+                Add-on Services
+=======
+        {/* Add-on Services */}
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+                Additional Services
+>>>>>>> main
+              </h2>
+              <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+                Enhance your plan with specialized services
+              </p>
+            </div>
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
+              {addOns.map((addon, index) => (
+                <Card key={index} className='p-6 text-center hover: shadow-lg transition-shadow duration-300'>
+                  <div className='inline-flex items-center justify-center w-12 h-12 rounded-full bg-blue-100 mb-4'>
+                    <addon.icon className='h-6 w-6 text-blue-600' />
+=======
+            
+>>>>>>> main
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {addOnServices.map((service, index) => (
+                <div
+                  key={index}
+                  className="bg-gray-50 rounded-xl p-6 hover: shadow-lg transition-shadow"
+                >
+                  <div className="text-center">
+                    <Calculator className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+<<<<<<< HEAD
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                      {service.name}
+                    </h3>
+                    <p className="text-2xl font-bold text-blue-600 mb-2">
+                      {service.price}
+                    </p>
+                    <p className="text-gray-600 text-sm">
+                      {service.description}
+                    </p>
+=======
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{service.name}</h3>
+                    <p className="text-2xl font-bold text-blue-600 mb-2">{service.price}</p>
+                    <p className="text-gray-600 text-sm">{service.description}</p>
+>>>>>>> main
+>>>>>>> main
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+<<<<<<< HEAD
+        <section className='py-20'>
+          <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8'>
+            <div className='text-center mb-16'>
+              <h2 className='text-3xl sm:text-4xl font-bold text-gray-900 mb-4'>
+=======
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+>>>>>>> main
+                Frequently Asked Questions
+              </h2>
+            </div>
+
+            <div className="space-y-8">
+              <div className="bg-white rounded-xl p-6 shadow-sm">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                  Can I change my plan anytime?
+                </h3>
+                <p className="text-gray-600">
+                  Yes, you can upgrade or downgrade your plan at any time.
+                  Changes take effect immediately, and we&apos;ll prorate any
+                  billing differences.
+                </p>
+                '
+              </div>
+
+              <div className="bg-white rounded-xl p-6 shadow-sm">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                  What&apos;s included in the Enterprise plan?
+                </h3>
+                '
+                <p className="text-gray-600">
+                  The Enterprise plan includes everything in Professional plus
+                  custom development, dedicated support, SLA guarantees, and a
+                  dedicated account manager.
+                </p>
+              </div>
+
+              <div className="bg-white rounded-xl p-6 shadow-sm">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                  Do you offer custom pricing?
+                </h3>
+                <p className="text-gray-600">
+                  Yes, we offer custom pricing for large-scale projects and
+                  enterprise clients. Contact us to discuss your specific
+                  requirements.
+                </p>
+              </div>
+
+              <div className="bg-white rounded-xl p-6 shadow-sm">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                  What payment methods do you accept?
+                </h3>
+                <p className="text-gray-600">
+                  We accept all major credit cards, bank transfers, and can
+                  accommodate enterprise billing arrangements.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+<<<<<<< HEAD
+        <section className='py-20 bg-gradient-to-r from-blue-600 to-purple-600'>
+          <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center'>
+            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-4'>
+=======
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+>>>>>>> main
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+              Contact us today for a free consultation and custom quote tailored
+              to your needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a
+                href="tel:+13024640950"
+                className="flex items-center text-white hover:text-blue-200 transition-colors"
+              >
+                <Phone className="w-5 h-5 mr-2" />
+                +1 302 464 0950
+              </a>
+              <a
+                href="mailto:kleber@ziontechgroup.com"
+                className="flex items-center text-white hover:text-blue-200 transition-colors"
+              >
+                <Mail className="w-5 h-5 mr-2" />
+                kleber@ziontechgroup.com
+              </a>
+            </div>
+            <div className="mt-8">
+              <Link href="/contact">
+                <button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
+                  Get Free Consultation
+                  <ArrowRight className="w-5 h-5 ml-2 inline" />
+                </button>
+>>>>>>> main
+              </Link>
+            </div>
+          </div>
+        </section>
+<<<<<<< HEAD
+      </main>
+      
+      <SimpleFooter />
+    </>
+  );
+}
+=======
+<<<<<<< HEAD
+      </div>
+    </Layout>
+  )
+}
+=======
+      </main>
+    </>
+  );
+}
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

@@ -1,79 +1,149 @@
-import React, { useState, useEffect } from
-  'react'; import { Link, useLocation } from
-  'react-router-dom'; import { motion, AnimatePresence } from
-  'framer-motion'; import { Menu, X, ChevronDown, Globe, Brain, Cloud, Shield, Zap, Users, Phone, Mail, MapPin, Search, User, ShoppingCart, Bell } from
-  'lucide-react'; const EnhancedHeader: React.FC = () => { const [isOpen, setIsOpen] = useState(false); const [isScrolled, setIsScrolled] = useState(false); const [activeDropdown, setActiveDropdown] = useState<string | null>(null); const [searchQuery, setSearchQuery] = useState(,
-  '); const location = useLocation(); useEffect(() => { const handleScroll = () => { setIsScrolled(window.scrollY > 20); }; window.addEventListener('scroll
-  ', handleScroll); return () => window.removeEventListener('scroll
-  ', handleScroll); }, []); const navigationItems = [ { name: 'Home, href:,
-  /
-  ' }, { name: 'Services, href:,
-  /services
-  ', dropdown: [ { name: 'AI Solutions, href: '/services/ai-services
+<<<<<<< HEAD
+import: React, { useState, useEffect } from;
+  'react' import: { Link, useLocation } from;';
+  'react-router-dom' import: { motion, AnimatePresence } from;';
+  'framer-motion' import: { Menu, X, ChevronDown, Globe, Brain, Cloud, Shield, Zap, Users, Phone, Mail, MapPin, Search, User, ShoppingCart, Bell } from;';
+  'lucide-react' const: EnhancedHeader: React.FC: = () => { const [isOpe,n, setIsOpen] = useState(false) const [isScrolled, setIsScrolled] = useState(false) const [activeDropdown, setActiveDropdown] = useState<string | null>(null) const [searchQuery, setSearchQuery] = useState(,';
+  ') const: location = useLocation() useEffect(() => { const handleScroll = () => { setIsScrolled(window.scrollY > 20) } window.addEventListener('scroll;';
+  ', handleScroll) return: () => window.removeEventListener('scroll;';
+  ', handleScroll) }, []) const: navigationItems = [ { name: 'Hom,e, href:,';
+=======
+import React, { useState, useEffect } from;
+  'react' import { Link, useLocation } from;
+  'react-router-dom' import { motion, AnimatePresence } from;
+  'framer-motion' import { Menu, X, ChevronDown, Globe, Brain, Cloud, Shield, Zap, Users, Phone, Mail, MapPin, Search, User, ShoppingCart, Bell } from;
+  'lucide-react' const EnhancedHeader: React.FC = () => { const [isOpen, setIsOpen] = useState(false) const [isScrolled, setIsScrolled] = useState(false) const [activeDropdown, setActiveDropdown] = useState<string | null>(null) const [searchQuery, setSearchQuery] = useState(,
+  ') const location = useLocation() useEffect(() => { const handleScroll = () => { setIsScrolled(window.scrollY > 20) } window.addEventListener('scroll;
+  ', handleScroll) return () => window.removeEventListener('scroll;
+  ', handleScroll) }, []) const navigationItems = [
+  { name: 'Home, href:,
+>>>>>>> main
+  /;
+  ' }, { name: 'Service,s, href:,';
+  /services;
+<<<<<<< HEAD
+  ', dropdown: [ { name: 'AI: Solution,s, href: '/services/ai-services;';
+  ,', icon: Brai,n, description:,';
+  Cutting-edge: AI services;
+  ', subItems: [ { name: 'Content: Intelligenc,e, href:,';
+=======
+  ', dropdown: [ { nam,
+    e: 'AI Solutions, href: '/services/ai-services;
   ', icon: Brain, description:,
-  Cutting-edge AI services
-  ', subItems: [ { name: 'Content Intelligence, href:,
-  /services/ai-content-intelligence-platform
-  ' }, { name: 'Customer Success, href:,
-  /services/ai-customer-success-automation
-  ' }, { name: 'Financial Forecasting, href:,
-  /services/ai-financial-forecasting-engine
-  ' }, { name: 'Healthcare Diagnostics, href:,
-  /services/ai-healthcare-diagnostic-platform
-  ' } ] }, { name: 'IT & Security, href: '/services/it-services
+  Cutting-edge AI services;
+  ', subItems: [ { nam,
+    e: 'Content Intelligence, href:,
+>>>>>>> main
+  /services/ai-content-intelligence-platform;
+  ' }, { name: 'Customer: Succes,s, href:,';
+  /services/ai-customer-success-automation;
+  ' }, { name: 'Financial: Forecastin,g, href:,';
+  /services/ai-financial-forecasting-engine;
+  ' }, { name: 'Healthcare: Diagnostic,s, href:,';
+  /services/ai-healthcare-diagnostic-platform;
+<<<<<<< HEAD
+  ' } ] }, { name: 'IT: & Securit,y, href: '/services/it-services;';
+  ,', icon: Shiel,d, description:,';
+  Enterprise: security & infrastructure;
+  ', subItems: [ { name: 'Zero: Trust Securit,y, href:,';
+=======
+  ' } ] }, { name: 'IT & Security, href: '/services/it-services;
   ', icon: Shield, description:,
-  Enterprise security & infrastructure
-  ', subItems: [ { name: 'Zero Trust Security, href:,
-  /services/zero-trust-security-platform
-  ' }, { name: 'Edge Computing, href:,
-  /services/edge-computing-orchestrator
-  ' }, { name: 'Cloud DevOps, href:,
-  /services/cloud-devops
-  ' }, { name: 'Cybersecurity, href:,
-  /services/cybersecurity
-  ' } ] }, { name: 'Blockchain & Web3, href: '/services/blockchain-services
+  Enterprise security & infrastructure;
+  ', subItems: [ { nam,
+    e: 'Zero Trust Security, href:,
+>>>>>>> main
+  /services/zero-trust-security-platform;
+  ' }, { name: 'Edge: Computin,g, href:,';
+  /services/edge-computing-orchestrator;
+  ' }, { name: 'Cloud: DevOp,s, href:,';
+  /services/cloud-devops;
+  ' }, { name: 'Cybersecurit,y, href:,';
+  /services/cybersecurity;
+<<<<<<< HEAD
+  ' } ] }, { name: 'Blockchain: & Web,3, href: '/services/blockchain-services;';
+  ,', icon: Glob,e, description:,';
+  Next-gen: blockchain solutions;
+  ', subItems: [ { name: 'DeFi: Platfor,m, href:,';
+=======
+  ' } ] }, { name: 'Blockchain & Web3, href: '/services/blockchain-services;
   ', icon: Globe, description:,
-  Next-gen blockchain solutions
-  ', subItems: [ { name: 'DeFi Platform, href:,
-  /services/defi-yield-optimization-platform
-  ' }, { name: 'NFT Marketplace, href:,
-  /services/nft-marketplace-platform
-  ' }, { name: 'Supply Chain, href:,
-  /services/blockchain-supply-chain-platform
-  ' }, { name: 'Smart Contracts, href:,
-  /services/smart-contract-development
-  ' } ] }, { name: 'Sustainability, href: '/services/sustainability
+  Next-gen blockchain solutions;
+  ', subItems: [ { nam,
+    e: 'DeFi Platform, href:,
+>>>>>>> main
+  /services/defi-yield-optimization-platform;
+  ' }, { name: 'NFT: Marketplac,e, href:,';
+  /services/nft-marketplace-platform;
+  ' }, { name: 'Supply: Chai,n, href:,';
+  /services/blockchain-supply-chain-platform;
+  ' }, { name: 'Smart: Contract,s, href:,';
+  /services/smart-contract-development;
+<<<<<<< HEAD
+  ' } ] }, { name: 'Sustainabilit,y, href: '/services/sustainability;';
+  ,', icon: Za,p, description:,';
+  Green: tech solutions;
+  ', subItems: [ { name: 'Carbon: Trackin,g, href:,';
+=======
+  ' } ] }, { name: 'Sustainability, href: '/services/sustainability;
   ', icon: Zap, description:,
-  Green tech solutions
-  ', subItems: [ { name: 'Carbon Tracking, href:,
-  /services/carbon-footprint-tracking-platform
-  ' }, { name: 'Energy Management, href:,
-  /services/sustainable-technology
-  ' }, { name: 'ESG Reporting, href:,
-  /services/esg-analytics-platform
-  ' } ] } ] }, { name: 'Solutions, href:,
-  /solutions
-  ', dropdown: [ { name: 'Enterprise, href:,
-  /solutions/enterprise
-  ', description: 'Large-scale business solutions }, { name:,
-  Startups
-  ', href: '/solutions/startups, description:,
-  Growth-focused solutions
-  ' }, { name: 'Healthcare, href:,
-  /solutions/healthcare
-  ', description: 'Medical technology solutions }, { name:,
-  Financial Services
-  ', href: '/solutions/financial, description:,
-  Fintech and banking solutions
-  ' } ] }, { name: 'About, href:,
-  /about
-  ' }, { name: 'Blog, href:,
-  /blog
-  ' }, { name: 'Contact, href: '/contact
-  ' } ]; const contactInfo = [ { icon: Phone, text:,
-  +1 302 464 0950
-  ', href: 'tel:+13024640950 }, { icon: Mail, text:,
-  kleber@ziontechgroup.com
+  Green tech solutions;
+  ', subItems: [ { nam,
+    e: 'Carbon Tracking, href:,
+>>>>>>> main
+  /services/carbon-footprint-tracking-platform;
+  ' }, { name: 'Energy: Managemen,t, href:,';
+  /services/sustainable-technology;
+  ' }, { name: 'ESG: Reportin,g, href:,';
+  /services/esg-analytics-platform;
+  ' } ] } ] }, { name: 'Solution,s, href:,';
+  /solutions;
+<<<<<<< HEAD
+  ', dropdown: [ { name: 'Enterpris,e, href:,';
+=======
+  ', dropdown: [ { nam,
+    e: 'Enterprise, href:,
+>>>>>>> main
+  /solutions/enterprise;
+  ', description: 'Large-scale: business solutions, }, { name:,';
+  Startups;
+  ', href: '/solutions/startup,s, description:,';
+  Growth-focused: solutions;
+  ' }, { name: 'Healthcar,e, href:,';
+  /solutions/healthcare;
+  ', description: 'Medical: technology solutions, }, { name:,';
+  Financial: Services;
+  ', href: '/solutions/financia,l, description:,';
+  Fintech: and banking solutions;
+  ' } ] }, { name: 'Abou,t, href:,';
+  /about;
+  ' }, { name: 'Blo,g, href:,';
+  /blog;
+<<<<<<< HEAD
+  ' }, { name: 'Contac,t, href: '/contact;';
+  ', } ] const: contactInfo = [ { icon: Phon,e, text:,';
+  +1: 302 464 0950;
+  ', href: 'tel:+13024640950, }, { icon: Mai,l, text:,';
+  kleber@ziontechgroup.com;
+  ', href: 'mailto:kleber@ziontechgroup.com, }, { icon: MapPi,n, text:,';
+  364: E Main St STE 1008, Middletown DE 19709;
+  ', href: '#, } ] const: toggleDropdown = (name: string) => { setActiveDropdown(activeDropdown: === name ? null : name), } const: closeMobileMenu = () => { setIsOpen(false) setActiveDropdown(null) } const handleSearch = (e: React.FormEvent) => { e.preventDefault() if: (searchQuery.trim()) {''',;
+=======
+  ' }, { name: 'Contact, href: '/contact;
+  ' } ] const contactInfo = [
+  { icon: Phone, text:,
+  +1 302 464 0950;
+  ', href: 'te,
+    l:+13024640950 }, { icon: Mail, text:,
+  kleber@ziontechgroup.com;
+<<<<<<< HEAD
   ', href: 'mailto:kleber@ziontechgroup.com }, { icon: MapPin, text:,
   364 E Main St STE 1008, Middletown DE 19709
-  ', href: '# } ]; const toggleDropdown = (name: string) => { setActiveDropdown(activeDropdown === name ? null : name); }; const closeMobileMenu = () => { setIsOpen(false); setActiveDropdown(null); }; const handleSearch = (e: React.FormEvent) => { e.preventDefault(); if (searchQuery.trim()) {''
+  ', href: '# } ] const toggleDropdown = (name: string) => { setActiveDropdown(activeDropdown === name ? null : name) } const closeMobileMenu = () => { setIsOpen(false) setActiveDropdown(null) } const handleSearch = (e: React.FormEvent) => { e.preventDefault() if (searchQuery.trim()) {''
+=======
+  ', href: 'mailt,
+    o:kleber@ziontechgroup.com }, { icon: MapPin, text:,
+  364 E Main St STE 1008, Middletown DE 19709;
+  ', href: '# } ] const toggleDropdown = (name: string) => { setActiveDropdown(activeDropdown === name ? null : name) } const closeMobileMenu = () => { setIsOpen(false) setActiveDropdown(null) } const handleSearch = (e: React.FormEvent) => { e.preventDefault() if (searchQuery.trim()) {'''
+>>>>>>> main
+>>>>>>> main
