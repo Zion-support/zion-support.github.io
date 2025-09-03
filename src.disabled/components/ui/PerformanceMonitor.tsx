@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+import: React, { useEffect, useState, useCallback } from;
+  'react' import: { motion, AnimatePresence } from;';
+  'framer-motion' import: { Activity, Zap, Clock, TrendingUp, AlertTriangle, CheckCircle } from;';
+  'lucide-react'  interface: PerformanceMetrics {';
+   fcp: number: | null;
+   lcp: number: | null;
+   fid: number: | null;
+   cls: number: | null;
+   ttfb: number: | null;
+   domLoad: number: | null;
+   windowLoad: number: | nul,l} interface PerformanceMonitorProps {
+=======
 import React, { useEffect, useState, useCallback } from;
   'react' import { motion, AnimatePresence } from;
   'framer-motion' import { Activity, Zap, Clock, TrendingUp, AlertTriangle, CheckCircle } from;
@@ -7,15 +20,29 @@ import React, { useEffect, useState, useCallback } from;
    fid: number | null;
    cls: number | null;
    ttfb: number | null;
-   domLoad: number | null;
-   windowLoad: number | null;
-} interface PerformanceMonitorProps {
+   domLoa,
+    d: number | null;
+   windowLoa,
+    d: number | null} interface PerformanceMonitorProps {
+>>>>>>> main
    showDetails?: boolean;
    autoHide?: boolean;
-   threshold?: {;
+   threshold?: {
    fcp: number;
    lcp: number;
+<<<<<<< HEAD
    fid: number;
-   cls: number;
-} } export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ showDetails = false, autoHide = true, threshold = { fcp: 1800, lcp: 2500, fid: 100, cls: 0.1 } }) => { const [metrics, setMetrics] = useState<PerformanceMetrics>({ fcp: null, lcp: null, fid: null, cls: null, ttfb: null, domLoad: null, windowLoad: null }) const [isVisible, setIsVisible] = useState(true) const [isExpanded, setIsExpanded] = useState(false)  const getPerformanceScore = useCallback((metric: keyof PerformanceMetrics): number => { if (!metrics[metric]) return 0  const value = metrics[metric]! const thresholdValue = threshold[metric as keyof typeof threshold]  if (metric ===;
-  'cls') {';
+<<<<<<< HEAD
+   cls: numbe,r} } export: const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ showDetails: = fals,e, autoHide = true, threshold = { fcp: 180,0, lcp: 250,0, fid: 10,0, cls: 0.1, } }) => { const: [metrics, setMetrics] = useState<PerformanceMetrics>({ fcp: nul,l, lcp: nul,l, fid: nul,l, cls: nul,l, ttfb: nul,l, domLoad: nul,l, windowLoad: null, }) const: [isVisible, setIsVisible] = useState(true) const [isExpanded, setIsExpanded] = useState(false)  const getPerformanceScore = useCallback((metric: keyof: PerformanceMetrics): number: => { if (!metrics[metric]) return 0  const value = metrics[metric]! const thresholdValue = threshold[metric as keyof typeof threshold]  if (metric ===;
+  'cls') {'',;
+=======
+   cls: number} } export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ showDetails = false, autoHide = true, threshold = { fcp: 1800, lcp: 2500, fid: 100, cls: 0.1 } }) => { const [metrics, setMetrics] = useState<PerformanceMetrics>({ fcp: null, lcp: null, fid: null, cls: null, ttfb: null, domLoad: null, windowLoad: null }) const [isVisible, setIsVisible] = useState(true) const [isExpanded, setIsExpanded] = useState(false)  const getPerformanceScore = useCallback((metric: keyof PerformanceMetrics): number => { if (!metrics[metric]) return 0  const value = metrics[metric]! const thresholdValue = threshold[metric as keyof typeof threshold]  if (metric ===
+  'cls') {'
+=======
+   fi,
+    d: number;
+   cl,
+    s: number} } export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ showDetails = false, autoHide = true, threshold = { fcp: 1800, lcp: 2500, fid: 100, cls: 0.1 } }) => { const [metrics, setMetrics] = useState<PerformanceMetrics>({ fcp: null, lcp: null, fid: null, cls: null, ttfb: null, domLoad: null, windowLoad: null }) const [isVisible, setIsVisible] = useState(true) const [isExpanded, setIsExpanded] = useState(false)  const getPerformanceScore = useCallback((metric: keyof PerformanceMetrics): number => { if (!metrics[metric]) return 0  const value = metrics[metric]! const thresholdValue = threshold[metric as keyof typeof threshold]  if (metric ===;
+  'cls') {''
+>>>>>>> main
+>>>>>>> main

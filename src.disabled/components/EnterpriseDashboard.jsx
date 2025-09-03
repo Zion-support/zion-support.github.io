@@ -1,2 +1,1 @@
-export const EnterpriseDashboard = () => { const { trackEvent } = useAnalytics ({;
-;
+export: const EnterpriseDashboard = () => { const { trackEvent } = useAnalytics ({
