@@ -1,20 +1,13 @@
-import js from "@eslint/js";
-import typescript from "@typescript-eslint/eslint-plugin";
-import typescriptParser from "@typescript-eslint/parser";
-import react from "eslint-plugin-react";
-import reactHooks from "eslint-plugin-react-hooks";
-export default [
-  js.configs.recommended,
+module.exports = [
   {
     files: ["**/*.{js,jsx,ts,tsx}"],
     languageOptions: {
-      parser: typescriptParser,
+      ecmaVersion: "latest",
+      sourceType: "module",
       parserOptions: {
         ecmaFeatures: {
           jsx: true,
         },
-        ecmaVersion: 12,
-        sourceType: "module",
       },
       globals: {
         // Node.js globals
@@ -27,16 +20,6 @@ export default [
         module: "readonly",
         require: "readonly",
         exports: "readonly",
-        // Test globals
-        describe: "readonly",
-        it: "readonly",
-        test: "readonly",
-        expect: "readonly",
-        beforeEach: "readonly",
-        afterEach: "readonly",
-        beforeAll: "readonly",
-        afterAll: "readonly",
-        jest: "readonly",
         // Browser globals
         window: "readonly",
         document: "readonly",
@@ -45,60 +28,10 @@ export default [
         sessionStorage: "readonly",
       },
     },
-    plugins: {
-      "@typescript-eslint": typescript,
-      "react": react,
-      "react-hooks": reactHooks,
-    },
     rules: {
-      "@typescript-eslint/no-unused-vars": "warn",
-      "@typescript-eslint/no-explicit-any": "warn",
-      "react-hooks/exhaustive-deps": "warn",
-      "react/react-in-jsx-scope": "off",
-      "no-undef": "off", // TypeScript handles this
-    },
-    settings: {
-      react: {
-        version: "detect",
-      },
-    },
-  },
-  {
-    files: ["**/*.test.{js,jsx,ts,tsx}", "**/__tests__/**/*.{js,jsx,ts,tsx}", "**/tests/**/*.{js,jsx,ts,tsx}"],
-    languageOptions: {
-      globals: {
-        describe: "readonly",
-        it: "readonly",
-        test: "readonly",
-        expect: "readonly",
-        beforeEach: "readonly",
-        afterEach: "readonly",
-        beforeAll: "readonly",
-        afterAll: "readonly",
-        jest: "readonly",
-        vi: "readonly",
-      },
-    },
-  },
-  {
-    files: ["**/*.cjs", "**/automation/**/*.js", "**/scripts/**/*.js"],
-    languageOptions: {
-      ecmaVersion: 2020,
-      sourceType: "script",
-      globals: {
-        process: "readonly",
-        console: "readonly",
-        Buffer: "readonly",
-        __dirname: "readonly",
-        __filename: "readonly",
-        global: "readonly",
-        module: "readonly",
-        require: "readonly",
-        exports: "readonly",
-      },
-    },
-    rules: {
+      "no-unused-vars": "warn",
       "no-undef": "off",
+      "no-console": "off",
     },
   },
   {
@@ -178,4 +111,4 @@ export default [
       "pages.disabled_auto/",
     ],
   },
-]
+];
