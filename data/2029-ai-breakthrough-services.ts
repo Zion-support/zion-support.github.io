@@ -1,26 +1,26 @@
 export interface AIBreakthroughService2029 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  realImplementation: boolean;
+  id: string
+  name: string
+  tagline: string
+  price: string
+  description: string
+  features: string[]
+  link: string
+  marketPosition: string
+  targetAudience: string
+  roi: string
+  competitors: string[]
+  marketSize: string
+  growthRate: string
+  realImplementation: boolean
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string};
-  category: string;
-  technology: string[];
-  benefits: string[];
-  useCases: string[];
+    mobile: string
+    email: string
+    address: string}
+  category: string
+  technology: string[]
+  benefits: string[]
+  useCases: string[]
 export const aiBreakthroughServices2029: AIBreakthroughService2029[] = [
   {
     id: "ai-consciousness-evolution-platform",
@@ -271,4 +271,4 @@ export const aiBreakthroughServices2029: AIBreakthroughService2029[] = [
       "Empathy simulation",
       "Sentiment analysis"
     ]
-];}}
+]}}

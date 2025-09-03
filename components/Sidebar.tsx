@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
   DollarSign,
-  X} from 'lucide-react';
-
+  X} from 'lucide-react'
 interface SidebarProps {
 
   isOpen: boolean,
@@ -9,31 +8,27 @@ interface SidebarProps {
 
 export default function Sidebar() {
 
-  const router = useRouter();
-  const [expandedSections, setExpandedSections] = useState<string[]>([]);
-
-  const toggleSection = (section: string) => {;
+  const router = useRouter()
+  const [expandedSections, setExpandedSections] = useState<string[]>([])
+  const toggleSection = (section: string) => {,
     setExpandedSections(),
         ? prev.filter(),,
-        : [...prev, section];
-    );
-  };
-
+        : [...prev, section]
+    )
+  }
   const mainNavigation = ['
   { name: 'Home', href: '/', icon: Home },'
-    { name: 'About', href: '/about', icon: Users },';
-    { name: 'Contact', href: '/contact', icon: Phone },';
-    { name: 'Blog', href: '/blog', icon: FileText },';
-    { name: 'Careers', href: '/careers', icon: Briefcase }];
-
+    { name: 'About', href: '/about', icon: Users },'
+    { name: 'Contact', href: '/contact', icon: Phone },'
+    { name: 'Blog', href: '/blog', icon: FileText },'
+    { name: 'Careers', href: '/careers', icon: Briefcase }]
   const services = ['
   { name: 'AI Services', href: '/ai-services', icon: Brain },'
     { name: 'IT Services', href: '/it-services', icon: Network },'
-    { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud },';
-    { name: 'Web Development', href: '/services/web-development', icon: Code },';
-    { name: 'Cloud Services', href: '/services/cloud-services', icon: Server },';
-    { name: 'AI Development', href: '/services/ai-development', icon: Cpu }];
-
+    { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud },'
+    { name: 'Web Development', href: '/services/web-development', icon: Code },'
+    { name: 'Cloud Services', href: '/services/cloud-services', icon: Server },'
+    { name: 'AI Development', href: '/services/ai-development', icon: Cpu }]
   const solutions = [
     {'
       name: 'AI Content Creation','
@@ -72,16 +67,14 @@ export default function Sidebar() {
     { name: 'API Reference', href: '/api', icon: Code },'
     { name: 'Help & Support', href: '/help', icon: HelpCircle },'
     { name: 'Training', href: '/training', icon: Users },'
-    { name: 'Case Studies', href: '/case-studies', icon: BarChart3 },';
-    { name: 'Pricing Guide', href: '/pricing-guide', icon: DollarSign },';
-    { name: 'Search', href: '/search', icon: Search },';
-    { name: 'Sitemap', href: '/sitemap', icon: Globe }];
-
-  const legal = [';
-  { name: 'Privacy Policy', href: '/privacy', icon: Lock },';
-    { name: 'Terms of Service', href: '/terms', icon: FileText },';
-    { name: 'Cookie Policy', href: '/cookies', icon: Settings }];
-
+    { name: 'Case Studies', href: '/case-studies', icon: BarChart3 },'
+    { name: 'Pricing Guide', href: '/pricing-guide', icon: DollarSign },'
+    { name: 'Search', href: '/search', icon: Search },'
+    { name: 'Sitemap', href: '/sitemap', icon: Globe }]
+  const legal = ['
+  { name: 'Privacy Policy', href: '/privacy', icon: Lock },'
+    { name: 'Terms of Service', href: '/terms', icon: FileText },'
+    { name: 'Cookie Policy', href: '/cookies', icon: Settings }]
   const contactInfo = ['
     { icon: Phone, text: '+1 302 464 0950', href: 'tel:+13024640950' },
     {
@@ -98,11 +91,10 @@ export default function Sidebar() {
   ]
 
   const socialLinks = ['
-  { icon: Linkedin, href: '#', label: 'LinkedIn' },';
-    { icon: Twitter, href: '#', label: 'Twitter' },';
-    { icon: Facebook, href: '#', label: 'Facebook' },';
-    { icon: Instagram, href: '#', label: 'Instagram' }];
-
+  { icon: Linkedin, href: '#', label: 'LinkedIn' },'
+    { icon: Twitter, href: '#', label: 'Twitter' },'
+    { icon: Facebook, href: '#', label: 'Facebook' },'
+    { icon: Instagram, href: '#', label: 'Instagram' }]
   const renderNavSection = (
     title: string,
     items: any[],
@@ -139,15 +131,13 @@ export default function Sidebar() {
                 <item.icon className="`w-4" h-4`} />"
                 <span className="text-sm">{item.name}</span>
               </Link>
-            ))};
-          </div>;
-        )};
-      </div>;
-    );
-  };
-
-  if (!isOpen) return null;
-
+            ))}
+          </div>
+        )}
+      </div>
+    )
+  }
+  if (!isOpen) return null
   return (
     <>
       {/* Overlay */}"
@@ -269,5 +259,4 @@ export default function Sidebar() {
         </div>
       </div>
     </>
-  )}"';
-;
+  )}"'

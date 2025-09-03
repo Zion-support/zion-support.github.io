@@ -1,15 +1,15 @@
 export interface AddedService {
-  id: string;
-  name: string;
-  tagline: string;
-  description: string;
-  price: string | number;
-  period?: string;
-  category: string;
-  features: string[];
-  icon?: string;
-  link?: string;
-  rating?: number;
+  id: string
+  name: string
+  tagline: string
+  description: string
+  price: string | number
+  period?: string
+  category: string
+  features: string[]
+  icon?: string
+  link?: string
+  rating?: number
 export const added2025Services: AddedService[] = [
   {
     id: 'ai-assistant-pro',

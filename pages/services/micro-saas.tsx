@@ -1,8 +1,7 @@
-import React from "react";
+import React from "react"
       description: 'Track record of successful implementations with measurable ROI for our clients.',,
-    };
-  ];
-
+    }
+  ]
   return ("
     <MainLayout title = "Micro SaaS Solutions - Zion Tech Group""
       description="Powerful, affordable micro SaaS applications designed to solve specific business challenges. Streamline your operations with our innovative solutions."
@@ -372,7 +371,7 @@ and streamline your operations with cutting-edge technology.
         </div>
       </section>
     </MainLayout>;,
-  ),;
-};
+  ),
+}
 "
-export default MicroSaasPage;
+export default MicroSaasPage

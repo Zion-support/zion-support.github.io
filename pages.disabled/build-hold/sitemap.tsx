@@ -1,8 +1,7 @@
-import React from,;
-  react';
-import Link from;
-  'next/link';
-
+import React from,
+  react'
+import Link from
+  'next/link'
 const SitemapPage: React.FC = () => {
   const routes = [
     '/',
@@ -29,7 +28,7 @@ const SitemapPage: React.FC = () => {
     '/terms',
 ursor/automate-test-fix-improve-and-merge-code-99d1
   ]
-  ];
+  ]
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
 
   return (
@@ -47,11 +46,11 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
               {path}
             </Link>
           </li>
-        ));
+        ))
       </ul>
     </div>
   )}
-;
+
 export: default SitemapPage
 
 export default SitemapPage

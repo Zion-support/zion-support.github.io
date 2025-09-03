@@ -1,14 +1,12 @@
 import React, {useState } from 'react'
 '
 export default function ComprehensivePricing2025() {''
-  const [billingCycle, setBillingCycle] = useState();
-  const [selectedPlan, setSelectedPlan] = useState('professional');
-
-  const plans = [;
-    {';
-export default function ComprehensivePricing2025()   {const [billingCycle, setBillingCycle] = useState();
-  const [selectedPlan, setSelectedPlan] = useState('professional');
-
+  const [billingCycle, setBillingCycle] = useState()
+  const [selectedPlan, setSelectedPlan] = useState('professional')
+  const plans = [
+    {'
+export default function ComprehensivePricing2025()   {const [billingCycle, setBillingCycle] = useState()
+  const [selectedPlan, setSelectedPlan] = useState('professional')
   const plans = [{'
       id: 'starter','
       name: 'Starter','
@@ -108,10 +106,10 @@ export default function ComprehensivePricing2025()   {const [billingCycle, setBi
       description: 'End-to-end business transformation consulting',
       price: { monthl,
     y: 299, yearly: 2990 },
-      icon: Rocket};
-  ];
-';
-  const savings = billingCycle === 'yearly' ? 20 : 0;
+      icon: Rocket}
+  ]
+'
+  const savings = billingCycle === 'yearly' ? 20 : 0
 '
   return ('
     <div className = "min-h-screen bg-zion-blue-dark">"
@@ -124,9 +122,8 @@ export default function ComprehensivePricing2025()   {const [billingCycle, setBi
             </h1>"",
             <p className="text-xl m,"
     d: text-2xl text-zion-slate-light mb-8 leading-relaxed">',,
-    {name: 'Digital Transformation',;""""""""
-  const [selectedPlan, setSelectedPlan] = useState('professional');
-
+    {name: 'Digital Transformation',""""""""
+  const [selectedPlan, setSelectedPlan] = useState('professional')
   const plans = ["
     {"""
       id: 'starter', """
@@ -261,10 +258,10 @@ export default function ComprehensivePricing2025()   {const [billingCycle, setBi
       name: 'Digital Transformation,'
       description: 'End-to-end business transformation consulting',
       price: { monthly: 299, yearly: 2990 },
-      icon: Rocket};
-  ]";
-"";
-  const savings = billingCycle === 'yearly' ? 20 : 0;
+      icon: Rocket}
+  ]"
+""
+  const savings = billingCycle === 'yearly' ? 20 : 0
 "
   return ("""
     <div className = "min-h-screen bg-zion-blue-dark">
@@ -290,12 +287,12 @@ with flexible options to scale as you grow.
                 Monthly,
               </span>
               <button`"
-                onClick="{()" => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}";
-                className="{`relative" w-16 h-8 rounded-full transition-colors duration-300 ${`;
-                  billingCycle === 'yearly' ? 'bg-zion-cyan' : 'bg-zion-purple/30';
+                onClick="{()" => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}"
+                className="{`relative" w-16 h-8 rounded-full transition-colors duration-300 ${`
+                  billingCycle === 'yearly' ? 'bg-zion-cyan' : 'bg-zion-purple/30'
 }`}
               >`"
-                <div className = "{`absolute" top-1 w-6 h-6 bg-white rounded-full transition-transform duration-300 ${`;
+                <div className = "{`absolute" top-1 w-6 h-6 bg-white rounded-full transition-transform duration-300 ${`
                   billingCycle === 'yearly' ? 'translate-x-8' : 'translate-x-1'>
 }`} />
               </button>`"
@@ -308,8 +305,8 @@ with flexible options to scale as you grow.
                 Monthly,
               </span>"
               <button onClick="{()" => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}"
-                className="{`relative" w-16 h-8 rounded-full transition-colors duration-300 ${;
-                  billingCycle === 'yearly' ? 'bg-zion-cyan' : 'bg-zion-purple/30;
+                className="{`relative" w-16 h-8 rounded-full transition-colors duration-300 ${
+                  billingCycle === 'yearly' ? 'bg-zion-cyan' : 'bg-zion-purple/30
 }`}
               >"
                 <div className = "{`absolute" top-1 w-6 h-6 bg-white rounded-full transition-transform duration-300 ${ billingCycle === 'yearly' ? 'translate-x-8' : 'translate-x-1' }`} />
@@ -319,8 +316,8 @@ with flexible options to scale as you grow.
                 {billingCycle === 'yearly' && ("
               <button `""
                 onClick="{()" =" > setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}``"
-                className="{`relative" w-16 h-8 rounded-full transition-colors duration-300 ${"";
-                  billingCycle === 'yearly' ? 'bg-zion-cyan' : 'bg-zion-purple/30', `;
+                className="{`relative" w-16 h-8 rounded-full transition-colors duration-300 ${""
+                  billingCycle === 'yearly' ? 'bg-zion-cyan' : 'bg-zion-purple/30', `
 }`}
               >`"
                 <div className = "{`absolute" top-1 w-6 h-6 bg-white rounded-full transition-transform duration-300 ${`">
@@ -369,7 +366,7 @@ with flexible options to scale as you grow.
               <div key="{plan.id}`""
                 className="{`relative" rounded-2xl p-8 transition-all duration-300 ${"
                   plan.popular""
-                    ? 'bg-gradient-to-br from-zion-purple/20 to-zion-cyan/20 border-2 border-zion-cyan scale-105';
+                    ? 'bg-gradient-to-br from-zion-purple/20 to-zion-cyan/20 border-2 border-zion-cyan scale-105'
                     : 'bg-zion-blue-dark/50 border border-zion-purple/20 hover:border-zion-purple/40', `>
 }`}` >`}"
                 {plan.popular && ("""
@@ -439,14 +436,14 @@ with flexible options to scale as you grow.
                     className="{`w-full" py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${"
                       plan.popular""
                         ? 'bg-gradient-to-r from-zion-purple to-zion-cyan text-white hover: from-zion-purple/80 hover:to-zion-cyan/80'',,
-                        : 'bg-zion-purple/20 text-zion-cyan border border-zion-purple/30 hover:bg-zion-purple/30', `;
+                        : 'bg-zion-purple/20 text-zion-cyan border border-zion-purple/30 hover:bg-zion-purple/30', `
 }`}"
                   >`"
                     {selectedPlan = == plan.id ? 'Current Plan' : 'Choose Plan'}
                   </button>
                 </div>"
 """
-                <div className="space-y-4">""";
+                <div className="space-y-4">"""
                   <h4 className="font-semibold text-white mb-4">What&apos;s included: </h4>',
                   {plan.features.map((feature, index) => ("""
                     <div key = "{index}" className="flex items-start space-x-3">"""
@@ -549,15 +546,15 @@ with flexible options to scale as you grow.
           <div className="max-w-4xl mx-auto space-y-6">
             {["
               {"
-                question: 'Can I change my plan at any time?',;
-                answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes will be prorated and reflected in your next billing cycle.;
+                question: 'Can I change my plan at any time?',
+                answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes will be prorated and reflected in your next billing cycle.
 },'
               {''
                 question: 'Do you offer custom pricing for enterprise clients?','
                 answer: 'Absolutely! We provide custom pricing and solutions for enterprise clients with specific requirements. Contact our sales team for a personalized quote.'},'
               {''
                 question: 'What payment methods do you accept?','
-                answer: 'We accept all major credit cards, PayPal, and bank transfers for annual plans. Enterprise clients can also arrange for invoicing.;
+                answer: 'We accept all major credit cards, PayPal, and bank transfers for annual plans. Enterprise clients can also arrange for invoicing.
 },'
               {''
                 question: 'Is there a setup fee?','
@@ -571,13 +568,13 @@ with flexible options to scale as you grow.
 """
           <div className="max-w-4xl mx-auto space-y-6">
             {[{'
-                question: 'Can I change my plan at any time?',;
-                answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes will be prorated and reflected in your next billing cycle.;
+                question: 'Can I change my plan at any time?',
+                answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes will be prorated and reflected in your next billing cycle.
 },'
               {question: 'Do you offer custom pricing for enterprise clients?','
                 answer: 'Absolutely! We provide custom pricing and solutions for enterprise clients with specific requirements. Contact our sales team for a personalized quote.'},'
               {question: 'What payment methods do you accept?','
-                answer: 'We accept all major credit cards, PayPal, and bank transfers for annual plans. Enterprise clients can also arrange for invoicing.;
+                answer: 'We accept all major credit cards, PayPal, and bank transfers for annual plans. Enterprise clients can also arrange for invoicing.
 },'
               {question: 'Is there a setup fee?','
                 answer: 'No setup fees for our standard plans. Custom enterprise solutions may have one-time implementation fees depending on complexity.'},'
@@ -680,6 +677,6 @@ with flexible options to scale as you grow.
         </div>
       </section>
     </div>",
-  )}"";
-  );}"`""
+  )}""
+  )}"`""
 "

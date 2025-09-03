@@ -184,4 +184,4 @@ export const quantumBreakthroughServices2025 = [
       'Renewable energy integration',
       'Energy storage management',
       'Demand response optimization',
-];
+]

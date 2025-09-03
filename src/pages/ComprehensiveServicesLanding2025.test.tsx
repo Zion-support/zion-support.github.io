@@ -1,12 +1,12 @@
-describe('ComprehensiveServicesLanding2025', () => {}; '; it('renders without crashing', () => {}; render(<ComprehensiveServicesLanding2025 / >) ,; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; '; it('displays expected content', () => {}; render(<ComprehensiveServicesLanding2025 />) ;
-    render();
-    expect(screen.getByRole('main) || screen.getByText(/.*/)).toBeInTheDocument();
+describe('ComprehensiveServicesLanding2025', () => {}; '; it('renders without crashing', () => {}; render(<ComprehensiveServicesLanding2025 / >) , expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; '; it('displays expected content', () => {}; render(<ComprehensiveServicesLanding2025 />) 
+    render()
+    expect(screen.getByRole('main) || screen.getByText(/.*/)).toBeInTheDocument()
   })
 ''
   it('displays expected content', () => {
-    render(<ComprehensiveServicesLanding2025 /" >);
+    render(<ComprehensiveServicesLanding2025 /" >)
     // Add more specific tests here,
-  });
+  })
   });"
 "
 });"

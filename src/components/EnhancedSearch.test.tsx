@@ -1,5 +1,5 @@
-import React from "react";
-import { SEO } from "@/components/SEO";
+import React from "react"
+import { SEO } from "@/components/SEO"
 export default function EnhancedSearch.test() {return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
       <SEO title="EnhancedSearch.test - Zion Tech Group" description="Professional EnhancedSearch.test services by Zion Tech Group" />"
@@ -8,7 +8,7 @@ export default function EnhancedSearch.test() {return (
         <p className="text-gray-300 text-lg">
           Professional EnhancedSearch.test services to help your business grow.
         </p>
-      </div>;
-    </div>;
+      </div>
+    </div>
   );"
 }"

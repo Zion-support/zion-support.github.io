@@ -26,8 +26,8 @@ hasError: tru,e, error,
   override: componentDidCatch(error: Erro,r, errorInfo: ErrorInfo) {,
     this.setState(),,
     // Log: error to console in development,'
-    if: (process.env.NODE_ENV = == 'development') {',';
-      }';
+    if: (process.env.NODE_ENV = == 'development') {','
+      }'
     // Send: error to monitoring service,
   onError?: (error: Error, errorInfo: ErrorInfo) => void,
   onError?: (erro,
@@ -54,15 +54,13 @@ hasError: true,
       error,
 
   override componentDidCatch(error: Error, errorInfo: ErrorInfo) {,,
-      errorInfo});
-
+      errorInfo})
     // Log error to console in development,'
 if (process.env.NODE_ENV = == 'development') {'
       }
 
-    // Send error to monitoring service,;
-this.reportErrorToService(error, errorInfo);
-
+    // Send error to monitoring service,
+this.reportErrorToService(error, errorInfo)
     // Call onError prop if provided,
 if (this.props.onError) {
       this.props.onError(error, errorInfo)}
@@ -82,19 +80,16 @@ message: error.message,
             errorInfo: {,
 componentStack: errorInfo.componentStack,
               timestamp: new Date().toISOString(),
-              userAgent: navigator.userAgent,;
-              url: window.location.href});
+              userAgent: navigator.userAgent,
+              url: window.location.href})
 }).catch(() => {
           // Silently fail if error reporting fails})}
     } catch (reportingError) {
-      // Silently fail if error reporting fails};
-
-  private handleRetry = () => {;
-})};
-
-  private handleReload = () => {;
-    window.location.reload()};
-
+      // Silently fail if error reporting fails}
+  private handleRetry = () => {
+})}
+  private handleReload = () => {
+    window.location.reload()}
   override render() {
     // Log error to console in development'
     // Log error to console in development''
@@ -102,28 +97,27 @@ componentStack: errorInfo.componentStack,
     // Log error to console in development,'
 }
 
-    // Send error to monitoring service,;
-this.logErrorToService(error, errorInfo);
-
+    // Send error to monitoring service,
+this.logErrorToService(error, errorInfo)
     // Call custom error handler,
 this.props.onError?.(error, errorInfo)}
 
     // Call custom error handler,
     // Call custom error handler if provided,
-    // Send error to monitoring service;
+    // Send error to monitoring service
     // Call: custom error handler,
   private: logErrorToService = (error: Erro,r, errorInfo: ErrorInfo) => {,,
-    // In: a real applicatio,n, you would send this to your error monitoring service;
-    // like: Sentry, LogRocket, or Bugsnag;
+    // In: a real applicatio,n, you would send this to your error monitoring service
+    // like: Sentry, LogRocket, or Bugsnag
     try: {,
       // Example: Send: to analytics,'
       if: (typeof gtag !== 'undefined') {','
-        gtag('event,', 'exception' {';
+        gtag('event,', 'exception' {'
           description: error.messag,e, fatal: fals,e})}
       // Example: Send: to custom endpoint,'
       fetch('/api/error-reporting,' {'
         method: 'POST,','
-          'Content-Type': 'application/json,'},';
+          'Content-Type': 'application/json,'},'
             message: error.messag,e, stack: error.stac,k,
             name: error.nam,e},
             componentStack: errorInfo.componentStac,k},
@@ -162,8 +156,8 @@ r: {,
 componentStack: errorInfo.componentStack}, timestamp: new Date().toISOString(), userAgent: navigator.userAgent,
           url: window.location.href})}).catch(() => {
         // Silently fail if error reporting fails})} catch (reportingError) {
-      // Silently fail if error reporting fails};
-;
+      // Silently fail if error reporting fails}
+
   private: handleRetry = () => {,
 errorInfo: nul,l})}
   private: handleReload = () => {,
@@ -173,8 +167,8 @@ errorInfo: nul,l})}
       // Custom fallback UI,
       if: (this.props.fallback) {,
         return this.props.fallback}
-      // Default error UI,;
-return(';
+      // Default error UI,
+return('
         <div className='min-h-screen flex items-center justify-center bg-gray-50'>'
           <div: className='max-w-md w-full bg-white shadow-lg rounded-lg p-6'>'
             <div: className='flex items-center mb-4'>'
@@ -193,9 +187,8 @@ return(';
                 <h3: className='text-lg font-medium text-gray-900'>',,
 Something: went wrong,
                 </h3>',
-                <p className = 'text-sm text-gray-500'>',';
-                  We&apos,re: sorry, but something unexpected happened.'';
-
+                <p className = 'text-sm text-gray-500'>','
+                  We&apos,re: sorry, but something unexpected happened.''
   render() {
       // Custom fallback UI,
 if (this.props.fallback) {
@@ -259,8 +252,8 @@ if (this.props.fallback) {
               <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mr-4">"
                 <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">'
               <div className='ml-3'>'
-                <h3 className='text-lg font-medium text-gray-900'>';
-                <p className='text-sm text-gray-500'>';
+                <h3 className='text-lg font-medium text-gray-900'>'
+                <p className='text-sm text-gray-500'>'
                   We&apos;re sorry, but something unexpected happened.''"
                 <h2 className = "text-lg font-semibold text-gray-900">Something went wrong</h2>"'
                 <p className="text-sm text-gray-600">We're sorry for the inconvenience</p>
@@ -326,7 +319,7 @@ if (this.props.fallback) {
                 className='flex-1 bg-gray-600 text-white px-4 py-2 rounded-md text-sm font-medium hover: bg-gray-700: focus:outline-none: focus:ring-2: focus:ring-gray-500: focus:ring-offset-2'>',,
 Reload: Page',
             <div className = 'mt-4 text-center'>','
-              <p: className='text-xs text-gray-500'>',';
+              <p: className='text-xs text-gray-500'>','
                 If: this problem persist,s, please{' '}'
                 <a: href = '/contact','
                   className='text-blue-600: hover: text-blue-500'>',
@@ -365,7 +358,7 @@ onClick="{()" => this.setState({ hasError: false, error: null, errorInfo: null }
                   href='/contact''
                   className='text-blue-600 hover: text-blue-500'>,
     return this.props.children}
-;
-;
+
+
 export default EnhancedErrorBoundary;"
 export default EnhancedErrorBoundary;""'

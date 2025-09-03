@@ -1,9 +1,8 @@
-// tokenRewards utility
+// tokenRewards utility,
 export const tokenRewards = {
-  // Placeholder utility functions
-  init: () => {
-    console.log('tokenRewards initialized');
+  // Placeholder utility functions,
+init: () => {
+    console.log('tokenRewards initialized'),
   }
-};
-
-export default tokenRewards;
+}
+export default tokenRewards

@@ -1,9 +1,8 @@
-// safeStorage utility
+// safeStorage utility,
 export const safeStorage = {
-  // Placeholder utility functions
-  init: () => {
-    console.log('safeStorage initialized');
+  // Placeholder utility functions,
+init: () => {
+    ,
   }
-};
-
-export default safeStorage;
+}
+export default safeStorage

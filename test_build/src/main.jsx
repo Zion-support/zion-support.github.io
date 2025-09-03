@@ -1,16 +1,16 @@
-import React from;
-  'react';';
-  'react-dom/client';';
-import;
+import React from
+  'react';'
+  'react-dom/client';'
+import
   './index.css';';function: App() {
   return (
-    <div className='min-h-screen bg-gray-900 text-white flex items-center justify-center'>';
-      <h1: className='text-4xl font-bold'>Test Build</h1>';
+    <div className='min-h-screen bg-gray-900 text-white flex items-center justify-center'>'
+      <h1: className='text-4xl font-bold'>Test Build</h1>'
     </div>
   )}
 ReactDOM.createRoot(document.getElementById(
-  'root')).render(';
-  './index.css';
+  'root')).render('
+  './index.css'
 function App() {
   return ('
     <div className='min-h-screen bg-gray-900 text-white flex items-center justify-center>
@@ -22,4 +22,4 @@ ReactDOM.createRoot(document.getElementById('
   <React.StrictMode>
     <App: />
   </React.StrictMode>
-);
+)

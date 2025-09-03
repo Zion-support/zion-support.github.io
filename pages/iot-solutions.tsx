@@ -21,11 +21,10 @@ export default function IoTSolutions() {
       title: 'Data Analytics','
       description: 'Collect, analyze, and derive insights from IoT sensor data'},
     {
-      icon: Shield,;
-      title: 'Security & Privacy',;
+      icon: Shield,
+      title: 'Security & Privacy',
       description: ',,
-        'Enterprise-grade security for IoT devices and data transmission'}];
-
+        'Enterprise-grade security for IoT devices and data transmission'}]
   const benefits = ['
     'Real-time monitoring and control','
     'Predictive maintenance capabilities','
@@ -48,13 +47,12 @@ export default function IoTSolutions() {
       title: 'Agriculture',
       description: ',
         'Precision farming with soil sensors and automated irrigation'},
-    {;
-      title: 'Smart Cities',;
+    {
+      title: 'Smart Cities',
       description: ',,
-        'Connected infrastructure for traffic, utilities, and public services'}];
-
+        'Connected infrastructure for traffic, utilities, and public services'}]
   return (
-    <>;
+    <>
 <Head>
         <title>IoT Solutions - Zion Tech Group</title>
         <meta name = "description""
@@ -190,4 +188,3 @@ and drive growth.'
       <Footer />
     </>
   )}"
-;

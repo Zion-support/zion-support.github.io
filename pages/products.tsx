@@ -1,9 +1,9 @@
 const React = dynamic(() => import('react'), { ssr: false })
 const Head = dynamic(() => import('next/head'), { ssr: false })
 const Link = dynamic(() => import('next/link'), { ssr: false })
-      ],";
-      category: "AI Solutions",";
-      pricing: "Starting at $2,999/month";
+      ],"
+      category: "AI Solutions","
+      pricing: "Starting at $2,999/month"
 },
     {
       id: 2,"
@@ -18,7 +18,7 @@ const Link = dynamic(() => import('next/link'), { ssr: false })
         "Disaster recovery"
       ],"
       category: "Cloud Solutions","
-      pricing: "Starting at $1,999/month";
+      pricing: "Starting at $1,999/month"
 },
     {
       id: 3,"
@@ -33,7 +33,7 @@ const Link = dynamic(() => import('next/link'), { ssr: false })
         "Security training"
       ],"
       category: "Security","
-      pricing: "Starting at $1,499/month";
+      pricing: "Starting at $1,499/month"
 },
     {
       id: 4,"
@@ -48,7 +48,7 @@ const Link = dynamic(() => import('next/link'), { ssr: false })
         "Custom integrations"
       ],"
       category: "IoT Solutions","
-      pricing: "Starting at $2,499/month";
+      pricing: "Starting at $2,499/month"
 },
     {
       id: 5,"
@@ -80,10 +80,9 @@ const Link = dynamic(() => import('next/link'), { ssr: false })
       pricing: "Starting at $999/month"}
   ]
 "
-  const categories = ["All", "AI Solutions", "Cloud Solutions", "Security", "IoT Solutions", "Blockchain", "Networking"];
-
+  const categories = ["All", "AI Solutions", "Cloud Solutions", "Security", "IoT Solutions", "Blockchain", "Networking"]
   return (
-    <PageTransition>;
+    <PageTransition>
 <Head>
         <title>Products & Solutions — Zion Tech Group</title>"
         <meta name = "description" content="Explore Zion Tech Group's comprehensive suite of technology products and solutions designed to transform your business." />"
@@ -265,4 +264,4 @@ transformation and drive business growth.
         </div>
       </section>
     </PageTransition>",
-  )};
+  )}

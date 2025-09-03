@@ -1,8 +1,9 @@
 import React from 'react'
+import Head from 'next/head'
 
 interface LayoutProps {
 
-  children: React.ReactNode,,
+  children: React.ReactNode,
   title?: string,
   description?: string,
 }
@@ -14,7 +15,7 @@ const Layout: React.FCimport Layout from "../components/Layout",
   description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.'
 }) => {
   return (
-    <>;
+    <>
 <Head>
         <title>{title}</title>
         <meta name = "description" content="{description}" />"
@@ -37,7 +38,7 @@ const Layout: React.FCimport Layout from "../components/Layout",
         <Footer />
       </div>
     </>
-  );
-};
+  )
+}
 "'
-export default Layout;
+export default Layout

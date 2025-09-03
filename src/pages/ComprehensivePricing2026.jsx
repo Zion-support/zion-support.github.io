@@ -1,7 +1,7 @@
 export default ComprehensivePricing2026,
 export default ComprehensivePricing2026''
  export: default ComprehensivePricing2026,,'
-export: default ComprehensivePricing2026''';,
+export: default ComprehensivePricing2026''',,
  export default ComprehensivePricing2026,',
  export default ComprehensivePricing2026','
 export default function ComprehensivePricing2026() {return (
@@ -12,9 +12,9 @@ export default function ComprehensivePricing2026() {return (
         <p className="text-gray-300 text-lg">
           Professional ComprehensivePricing2026 services to help your business grow.
         </p>
-      </div>;
-    </div>;
-  );
+      </div>
+    </div>
+  )
 }
  export default ComprehensivePricing2026,
 export default ComprehensivePricing2026&apos;&apos,
@@ -40,9 +40,8 @@ const ComprehensivePricing2026: React.FC = () => {
             </a>
           </div>
         </div>
-      </div>;
+      </div>
     </div>;,
-  )};
-
+  )}
 export default ComprehensivePricing2026;"
 "

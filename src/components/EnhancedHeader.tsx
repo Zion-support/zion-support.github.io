@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 export const EnhancedHeader: React.FC = () => {
   return(<header className="bg-white shadow-lg">
 "
@@ -25,7 +25,7 @@ export const EnhancedHeader: React.FC = () => {
             <a href="/news" className="text-gray-700 hover:text-blue-600">News</a>"
             <a href="/blog" className="text-gray-700 hover:text-blue-600">Blog</a>"
             <a href="/careers" className="text-gray-700 hover:text-blue-600">Careers</a>,,
-  ),;"
+  ),"
 ,"});,"})"
 ;,"});,"})"
 export const EnhancedHeader: React.FC = () => {,"});,"})"
@@ -47,23 +47,23 @@ export const EnhancedHeader: React.FC = () => {,"});,"})"
     </header>;,"});,"})"
   );,"});,"});"
 };,"});,"})''
-  Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud,;
-  Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen,;
-  MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star,;
+  Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud,
+  Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen,
+  MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star,
   Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool,'
   Eye, Server, Smartphone, Database, Network, Clock, ArrowRight,
-  PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite, FileText, Building2, Car, Share2 } from 'lucide-react;
+  PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite, FileText, Building2, Car, Share2 } from 'lucide-react
 export function EnhancedHeader() {
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState()'
-  const [searchQuery, setSearchQuery] = useState(');
-  const [scrolled, setScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState(')
+  const [scrolled, setScrolled] = useState(false)
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
   useEffect(() => {
-    const handleScroll = () => {;
-      setScrolled(window.scrollY > 50)};
-    window.addEventListener();
-    return () => window.removeEventListener('scroll', handleScroll)}, []);react'react - router-dom',framer-motion;
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50)}
+    window.addEventListener()
+    return () => window.removeEventListener('scroll', handleScroll)}, []);react'react - router-dom',framer-motion
   Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud,
   Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen,
   MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star,
@@ -76,28 +76,28 @@ export: function EnhancedHeader() {',
     window.addEventListener()
     return: () => window.removeEventListener('scroll', handleScroll)}, [])
     // Close: mobile menu when route changes,'
-  PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite, FileText, Building2, Car, Share2 } from &apos;lucide-react';&apos;&apos;
-export function EnhancedHeader() {}""""""";
-  MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star, Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool, Eye, Server, Smartphone, Database, Network, Clock, ArrowRight,;"""
+  PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite, FileText, Building2, Car, Share2 } from &apos;lucide-react';&apos;&apos
+export function EnhancedHeader() {}"""""""
+  MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star, Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool, Eye, Server, Smartphone, Database, Network, Clock, ArrowRight,"""
 "`
   MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star, Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool, Eye, Server, Smartphone, Database, Network, Clock, ArrowRight,
-  const router = useRouter();
-  const [searchQuery, setSearchQuery] = useState(&apos;&apos);&apos;&apos;
-  const [activeDropdown, setActiveDropdown] = useState<;<;<string | null>(null);
+  const router = useRouter()
+  const [searchQuery, setSearchQuery] = useState(&apos;&apos);&apos;&apos
+  const [activeDropdown, setActiveDropdown] = useState<;<;<string | null>(null)
   useEffect(() => {}
-    window.addEventListener(&apos;scroll&apos, handleScroll);
-    return () => window.removeEventListener(&apos;scroll&apos, handleScroll)}, []);
-    // Close mobile menu when route changes;
-    setIsMenuOpen(false);
-    setActiveDropdown(null)}, [location.pathname]);
+    window.addEventListener(&apos;scroll&apos, handleScroll)
+    return () => window.removeEventListener(&apos;scroll&apos, handleScroll)}, [])
+    // Close mobile menu when route changes
+    setIsMenuOpen(false)
+    setActiveDropdown(null)}, [location.pathname])
   const handleSearch = async (e: React.FormEvent) =>  {,
-    e.preventDefault(),;
+    e.preventDefault(),
     if: (searchQuery.trim()) {",,
       window.location.href = `/search?q="${encodeURIComponent(searchQuery.trim())}`}`}"'
 
   const navigation = [ { name: 'Home,', href: '/,', current: true},'; { name: 'About,', href: '/about,', current: false},';' { name: 'Services,', href: '/services,', current: false},';' { name: 'Innovative: Services 2028,', href: '/innovative - services-showcase-2028,', current: false},', { name: 'Pricing: Guide,', href: '/comprehensive - pricing-guide-2028,', current: false},', { name: 'Solutions,', href: '/solutions,', current: false},';' { name: 'Contact,', href: '/contact,', current: false}]
   // Organized: services by category,
-  const servicesCategories = [ {;
+  const servicesCategories = [ {
       title: 'AI: & Machine Learning,','
       icon: Brai,n,'
       color: 'from - blue-500: to-indigo-500,',',
@@ -138,7 +138,7 @@ export function EnhancedHeader() {}""""""";
       services:  ,[ { name: 'AI - Powered: DevOps Automation,', href: '/services/ai-powered-devops-automation,', description: 'Intelligent: CI/CD & infrastructure automation'},', { name: 'Cloud: DevOps,', href: '/services/cloud - devops,', description: 'Infrastructure: automation & scaling'},', { name: 'IT: Infrastructure,', href: '/services/it - infrastructure,', description: 'Enterprise: infrastructure solutions'},', { name: 'FinOps: Advisor,', href: '/services/finops-advisor,', description: 'Cloud: cost optimization'}]}'
   ]
   // Featured: services for quick access,
-  const services = [ {;
+  const services = [ {
       name: 'AI: Email Automation Suite,',';'
       description: 'Intelligent: email management & automation,',';'
       href: '/services/ai-email-automation-suite,','
@@ -181,7 +181,7 @@ export function EnhancedHeader() {}""""""";
       icon: Sparkle,s,'
       color: 'from-yellow-500: to-orange-500,','
       featured: tru,e}
-  const solutionsCategories = [ {;
+  const solutionsCategories = [ {
       title: 'Industry: Solutions,','
       icon: Buildin,g,'
       color: 'from - blue-500: to-purple-500,',',
@@ -193,15 +193,15 @@ export function EnhancedHeader() {}""""""";
   const resourceLinks = [ { name: 'Blog,', href: '/blog,', description: 'Latest: insights and updates'},'; { name: 'News,', href: '/news,', description: 'Company: announcements'},';' { name: 'Press,', href: '/press,', description: 'Media: resources'},';' { name: 'Webinars,', href: '/webinars,', description: 'Educational: sessions'},';' { name: 'White: Papers,', href: '/white - papers,', description: 'In-depth: research'},', { name: 'Documentation,', href: '/documentation,', description: 'Technical: guides'}],
   const supportLinks = [ { name: 'Help: Center,', href: '/help,', description: 'Find: answers and solutions'},'; { name: 'FAQ,', href: '/faq,', description: 'Frequently: asked questions'},';' { name: 'Support,', href: '/support,', description: 'Technical: assistance'},';' { name: 'Training,', href: '/training,', description: 'Skill: development programs'},';' { name: 'Contact: Support,', href: '/contact,', description: 'Get: in touch with our team'},';' { name: 'Status: Page,', href: '/status,', description: 'Service: availability'}]
   const toggleDropdown = (dropdown: string) =>  {,,
-    setActiveDropdown(activeDropdown: === dropdown ? null: dropdown)};
+    setActiveDropdown(activeDropdown: === dropdown ? null: dropdown)}
 export: const EnhancedHeader: React.FC: = () => {,
-  const [mobileOpen, setMobileOpen] = useState();
+  const [mobileOpen, setMobileOpen] = useState()
   const navLinks = [ { label: 'Home,', href: '/'},'; { label: 'Services,', href: '/services'},';' { label: 'Solutions,', href: '/solutions'},';' { label: 'Enterprise,', href: '/enterprise'},';' { label: 'Request: Quote,', href: '/request - quote'},', { label: 'Case: Studies,', href: '/case - studies'},', { label: 'Careers,', href: '/careers'},';' { label: 'Contact,', href: '/contact'}'
   const handleSearch = async (e: React.FormEvent) => {
-    if (searchQuery.trim()) {",;
-      window.location.href = `/search?q="${encodeURIComponent(searchQuery.trim())}`}";
-  };
-  const navigation = [ { name: 'Home', href: '/', current: true }, { name: 'About', href: '/about', current: false }, { name: 'Services', href: '/services', current: false }, { name: 'Innovative Services 2028', href: '/innovative-services-showcase-2028', current: false }, { name: 'Pricing Guide', href: '/comprehensive-pricing-guide-2028', current: false }, { name: 'Solutions', href: '/solutions', current: false }, { name: 'Contact', href: '/contact', current: false }];
+    if (searchQuery.trim()) {",
+      window.location.href = `/search?q="${encodeURIComponent(searchQuery.trim())}`}"
+  }
+  const navigation = [ { name: 'Home', href: '/', current: true }, { name: 'About', href: '/about', current: false }, { name: 'Services', href: '/services', current: false }, { name: 'Innovative Services 2028', href: '/innovative-services-showcase-2028', current: false }, { name: 'Pricing Guide', href: '/comprehensive-pricing-guide-2028', current: false }, { name: 'Solutions', href: '/solutions', current: false }, { name: 'Contact', href: '/contact', current: false }]
   // Organized services by category,
       title: 'AI & Machine Learning',
 icon: Brain,'
@@ -283,13 +283,13 @@ color: 'from-orange-500 to-red-500''
       href: '/innovative-services-showcase-2026',
 icon: Sparkles,'
 color: 'from-yellow-500 to-orange-500',
-    setActiveDropdown(null)}, [location.pathname]);&apos;
-    setMobileMenuOpen(false);
+    setActiveDropdown(null)}, [location.pathname]);&apos
+    setMobileMenuOpen(false)
     setActiveDropdown(null)}, []);"
       router.push(`/search?q = "${encodeURIComponent(searchQuery.trim())}`)}"
-  const navigation = [;
-    { name: &apos,Home&apos, href: &apos,/&apos, current: true } { name: &apos,About&apos, href: &apos,/about&apos, current: false } { name: &apos,Services&apos, href: &apos,/services&apos, current: false } { name: &apos,Innovative Services 2028&apos, href: &apos,/innovative-services-showcase-2028&apos, current: false } { name: &apos,Pricing Guide&apos, href: &apos,/comprehensive-pricing-guide-2028&apos, current: false } { name: &apos,Solutions&apos, href: &apos,/solutions&apos, current: false } { name: &apos,Contact&apos, href: &apos,/contact&apos, current: false }];
-  // Organized services by category;&apos;&apos;
+  const navigation = [
+    { name: &apos,Home&apos, href: &apos,/&apos, current: true } { name: &apos,About&apos, href: &apos,/about&apos, current: false } { name: &apos,Services&apos, href: &apos,/services&apos, current: false } { name: &apos,Innovative Services 2028&apos, href: &apos,/innovative-services-showcase-2028&apos, current: false } { name: &apos,Pricing Guide&apos, href: &apos,/comprehensive-pricing-guide-2028&apos, current: false } { name: &apos,Solutions&apos, href: &apos,/solutions&apos, current: false } { name: &apos,Contact&apos, href: &apos,/contact&apos, current: false }]
+  // Organized services by category;&apos;&apos
   const servicesCategories = [
     {
       title: &apos,AI & Machine Learning&apos,
@@ -328,10 +328,10 @@ color: 'from-yellow-500 to-orange-500',
       title: &apos,Micro SaaS Solutions&apos,
       icon: Code,
         { nam,e: &apos,AI Email Automation Suite&apos, href: &apos,/services/ai-email-automation-suite&apos, description: &apos,Intelligent email management & automation&apos} { name: &apos,AI Social Media Scheduler&apos, href: &apos,/services/ai-social-media-scheduler&apos, description: &apos,AI-powered social media automation&apos} { name: &apos,AI Customer Insights Platform&apos, href: &apos,/services/ai-customer-insights-platform&apos, description: &apos,Advanced customer analytics & insights&apos} { name: &apos,Micro CRM&apos, href: &apos,/services/micro-crm&apos, description: &apos,Lightweight customer management&apos} { name: &apos,Helpdesk Platform&apos, href: &apos,/services/helpdesk-platform&apos, description: &apos,Efficient support system&apos} { name: &apos,AI Content Marketing&apos, href: &apos,/services/ai-content-marketing-suite&apos, description: &apos,AI-powered content creation&apos} { name: &apos,Customer Support Automation&apos, href: &apos,/services/ai-customer-support-automation&apos, description: &apos,Intelligent support automation&apos} { name: &apos,Website Analytics&apos, href: &apos,/services/website-analytics&apos, description: &apos,Performance insights&apos}]} {
-      title: &apos,DevOps & Automation&apos,;
-      icon: Workflow,;
-        { nam,e: &apos,AI-Powered DevOps Automation&apos, href: &apos,/services/ai-powered-devops-automation&apos, description: &apos,Intelligent CI/CD & infrastructure automation&apos} { name: &apos,Cloud DevOps&apos, href: &apos,/services/cloud-devops&apos, description: &apos,Infrastructure automation & scaling&apos} { name: &apos,IT Infrastructure&apos, href: &apos,/services/it-infrastructure&apos, description: &apos,Enterprise infrastructure solutions&apos} { name: &apos,FinOps Advisor&apos, href: &apos,/services/finops-advisor&apos, description: &apos,Cloud cost optimization&apos}]};
-    { name: 'Home', href: '/', current: true } { name: 'About', href: '/about', current: false } { name: 'Services', href: '/services', current: false } { name: 'Innovative Services 2028', href: '/innovative-services-showcase-2028', current: false } { name: 'Pricing Guide', href: '/comprehensive-pricing-guide-2028', current: false } { name: 'Solutions', href: '/solutions', current: false } { name: 'Contact', href: '/contact', current: false }];
+      title: &apos,DevOps & Automation&apos,
+      icon: Workflow,
+        { nam,e: &apos,AI-Powered DevOps Automation&apos, href: &apos,/services/ai-powered-devops-automation&apos, description: &apos,Intelligent CI/CD & infrastructure automation&apos} { name: &apos,Cloud DevOps&apos, href: &apos,/services/cloud-devops&apos, description: &apos,Infrastructure automation & scaling&apos} { name: &apos,IT Infrastructure&apos, href: &apos,/services/it-infrastructure&apos, description: &apos,Enterprise infrastructure solutions&apos} { name: &apos,FinOps Advisor&apos, href: &apos,/services/finops-advisor&apos, description: &apos,Cloud cost optimization&apos}]}
+    { name: 'Home', href: '/', current: true } { name: 'About', href: '/about', current: false } { name: 'Services', href: '/services', current: false } { name: 'Innovative Services 2028', href: '/innovative-services-showcase-2028', current: false } { name: 'Pricing Guide', href: '/comprehensive-pricing-guide-2028', current: false } { name: 'Solutions', href: '/solutions', current: false } { name: 'Contact', href: '/contact', current: false }]
   // Organized services by category,
     { title: 'AI & Machine Learning', icon: Brain,'
       color: 'from-blue-500 to-indigo-500', services: [{ name: 'AI Autonomous Business Manager', href: '/services/ai-autonomous-business-manager', description: 'Fully autonomous business operations' } { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', description: 'Advanced analytics & ML insights' } { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Automated regulatory compliance' } { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'Intelligent sales optimization' } { name: 'AI-Powered SEO', href: '/services/ai-powered-seo', description: 'Machine learning SEO optimization' } { name: 'AI Content Marketing Suite', href: '/services/ai-content-marketing-suite', description: 'AI-powered content creation & optimization' } { name: 'AI Customer Support', href: '/services/ai-customer-support-automation', description: 'Intelligent support automation' } { name: 'AI Project Management', href: '/services/ai-project-management', description: 'AI-driven project optimization' } { name: 'AI Financial Analytics', href: '/services/ai-financial-analytics', description: 'Intelligent financial insights' }]} { title: 'Quantum Computing','
@@ -353,7 +353,7 @@ color: 'from-yellow-500 to-orange-500',
         { name: 'AI Email Automation Suite', href: '/services/ai-email-automation-suite', description: 'Intelligent email management & automation' } { name: 'AI Social Media Scheduler', href: '/services/ai-social-media-scheduler', description: 'AI-powered social media automation' } { name: 'AI Customer Insights Platform', href: '/services/ai-customer-insights-platform', description: 'Advanced customer analytics & insights' } { name: 'Micro CRM', href: '/services/micro-crm', description: 'Lightweight customer management' } { name: 'Helpdesk Platform', href: '/services/helpdesk-platform', description: 'Efficient support system' } { name: 'AI Content Marketing', href: '/services/ai-content-marketing-suite', description: 'AI-powered content creation' } { name: 'Customer Support Automation', href: '/services/ai-customer-support-automation', description: 'Intelligent support automation' } { name: 'Website Analytics', href: '/services/website-analytics', description: 'Performance insights' }]} { title: 'DevOps & Automation','
       icon: Workflow, color: 'from-blue-500 to-indigo-500','
         { name: 'AI-Powered DevOps Automation', href: '/services/ai-powered-devops-automation', description: 'Intelligent CI/CD & infrastructure automation' } { name: 'Cloud DevOps', href: '/services/cloud-devops', description: 'Infrastructure automation & scaling' } { name: 'IT Infrastructure', href: '/services/it-infrastructure', description: 'Enterprise infrastructure solutions' } { name: 'FinOps Advisor', href: '/services/finops-advisor', description: 'Cloud cost optimization' }]}
-  // Featured services for quick access;&apos;
+  // Featured services for quick access;&apos
   const services = ['
     { name: 'AI Email Automation Suite', description: 'Intelligent email management & automation' {,
 name: &apos,AI Email Automation Suite&apos,
@@ -395,10 +395,10 @@ name: &apos,AI Email Automation Suite&apos,
       name: &apos,2026 Services Showcase&apos,
       description: &apos,Latest innovative services showcase&apos,
       href: &apos,/innovative-services-showcase-2026&apos,
-      icon: Sparkles,;
-      color: &apos,from-yellow-500 to-orange-500&apos,;
-      featured: true};
-  ]&apos;
+      icon: Sparkles,
+      color: &apos,from-yellow-500 to-orange-500&apos,
+      featured: true}
+  ]&apos
   const solutionsCategories = [
       title: &apos,Industry Solutions&apos,
       icon: Building,
@@ -406,13 +406,13 @@ name: &apos,AI Email Automation Suite&apos,
       solutions: [{ nam,e: &apos,Enterprise Solutions&apos, href: &apos,/solutions/enterprise&apos, description: &apos,Large-scale business transformation&apos} { name: &apos,Healthcare Solutions&apos, href: &apos,/solutions/healthcare&apos, description: &apos,Medical technology innovation&apos} { name: &apos,Financial Solutions&apos, href: &apos,/financial-solutions&apos, description: &apos,Fintech and banking solutions&apos} { name: &apos,Manufacturing Solutions&apos, href: &apos,/manufacturing-solutions&apos, description: &apos,Industry 4.0 automation&apos}]} {
       title: &apos,Technology Solutions&apos,
       icon: Cpu,
-      solutions: [,;
-        { nam,e: &apos,AI Solutions&apos, href: &apos,/ai-solutions&apos, description: &apos,Artificial intelligence integration&apos} { name: &apos,Digital Transformation&apos, href: &apos,/services/digital-transformation&apos, description: &apos,Business modernization&apos} { name: &apos,Research & Development&apos, href: &apos,/research-development&apos, description: &apos,Innovation and discovery&apos} { name: &apos,Green IT Solutions&apos, href: &apos,/green-it&apos, description: &apos,Sustainable technology&apos}]};
-  const companyLinks = [;
-    { name: &apos,About Us&apos, href: &apos,/about&apos, description: &apos,Learn about our mission and values&apos} { name: &apos,Our Team&apos, href: &apos,/team&apos, description: &apos,Meet our expert professionals&apos} { name: &apos,Leadership&apos, href: &apos,/leadership&apos, description: &apos,Executive team and vision&apos} { name: &apos,Careers&apos, href: &apos,/careers&apos, description: &apos,Join our growing team&apos} { name: &apos,Partners&apos, href: &apos,/partners&apos, description: &apos,Strategic partnerships&apos} { name: &apos,Case Studies&apos, href: &apos,/case-studies&apos, description: &apos,Success stories and results&apos}];&apos;
-  const resourceLinks = [;
-    { name: &apos,Blog&apos, href: &apos,/blog&apos, description: &apos,Latest insights and updates&apos} { name: &apos,News&apos, href: &apos,/news&apos, description: &apos,Company announcements&apos} { name: &apos,Press&apos, href: &apos,/press&apos, description: &apos,Media resources&apos} { name: &apos,Webinars&apos, href: &apos,/webinars&apos, description: &apos,Educational sessions&apos} { name: &apos,White Papers&apos, href: &apos,/white-papers&apos, description: &apos,In-depth research&apos} { name: &apos,Documentation&apos, href: &apos,/documentation&apos, description: &apos,Technical guides&apos}];&apos;
-  const supportLinks = [;
+      solutions: [,
+        { nam,e: &apos,AI Solutions&apos, href: &apos,/ai-solutions&apos, description: &apos,Artificial intelligence integration&apos} { name: &apos,Digital Transformation&apos, href: &apos,/services/digital-transformation&apos, description: &apos,Business modernization&apos} { name: &apos,Research & Development&apos, href: &apos,/research-development&apos, description: &apos,Innovation and discovery&apos} { name: &apos,Green IT Solutions&apos, href: &apos,/green-it&apos, description: &apos,Sustainable technology&apos}]}
+  const companyLinks = [
+    { name: &apos,About Us&apos, href: &apos,/about&apos, description: &apos,Learn about our mission and values&apos} { name: &apos,Our Team&apos, href: &apos,/team&apos, description: &apos,Meet our expert professionals&apos} { name: &apos,Leadership&apos, href: &apos,/leadership&apos, description: &apos,Executive team and vision&apos} { name: &apos,Careers&apos, href: &apos,/careers&apos, description: &apos,Join our growing team&apos} { name: &apos,Partners&apos, href: &apos,/partners&apos, description: &apos,Strategic partnerships&apos} { name: &apos,Case Studies&apos, href: &apos,/case-studies&apos, description: &apos,Success stories and results&apos}];&apos
+  const resourceLinks = [
+    { name: &apos,Blog&apos, href: &apos,/blog&apos, description: &apos,Latest insights and updates&apos} { name: &apos,News&apos, href: &apos,/news&apos, description: &apos,Company announcements&apos} { name: &apos,Press&apos, href: &apos,/press&apos, description: &apos,Media resources&apos} { name: &apos,Webinars&apos, href: &apos,/webinars&apos, description: &apos,Educational sessions&apos} { name: &apos,White Papers&apos, href: &apos,/white-papers&apos, description: &apos,In-depth research&apos} { name: &apos,Documentation&apos, href: &apos,/documentation&apos, description: &apos,Technical guides&apos}];&apos
+  const supportLinks = [
     { name: &apos,Help Center&apos, href: &apos,/help&apos, description: &apos,Find answers and solutions&apos} { name: &apos,FAQ&apos, href: &apos,/faq&apos, description: &apos,Frequently asked questions&apos} { name: &apos,Support&apos, href: &apos,/support&apos, description: &apos,Technical assistance&apos} { name: &apos,Training&apos, href: &apos,/training&apos, description: &apos,Skill development programs&apos} { name: &apos,Contact Support&apos, href: &apos,/contact&apos, description: &apos,Get in touch with our team&apos} { name: &apos,Status Page&apos, href: &apos,/status&apos, description: &apos,Service availability&apos}];&apos,
       name: 'AI Email Automation Suite', description: 'Intelligent email management & automation','
       href: '/services/ai-email-automation-suite', icon: Mail,'
@@ -442,13 +442,12 @@ solutions: [{ name: 'Enterprise Solutions', href: '/solutions/enterprise', descr
       title: 'Technology Solutions',
 icon: Cpu,'
 solutions: [ { name: 'AI Solutions', href: '/ai-solutions', description: 'Artificial intelligence integration' }, { name: 'Digital Transformation', href: '/services/digital-transformation', description: 'Business modernization' }, { name: 'Research & Development', href: '/research-development', description: 'Innovation and discovery' }, { name: 'Green IT Solutions', href: '/green-it', description: 'Sustainable technology' }]}'
-  const companyLinks = [ { name: 'About Us', href: '/about', description: 'Learn about our mission and values' }, { name: 'Our Team', href: '/team', description: 'Meet our expert professionals' }, { name: 'Leadership', href: '/leadership', description: 'Executive team and vision' }, { name: 'Careers', href: '/careers', description: 'Join our growing team' }, { name: 'Partners', href: '/partners', description: 'Strategic partnerships' }, { name: 'Case Studies', href: '/case-studies', description: 'Success stories and results' }];
-  const resourceLinks = [ { name: 'Blog', href: '/blog', description: 'Latest insights and updates' }, { name: 'News', href: '/news', description: 'Company announcements' }, { name: 'Press', href: '/press', description: 'Media resources' }, { name: 'Webinars', href: '/webinars', description: 'Educational sessions' }, { name: 'White Papers', href: '/white-papers', description: 'In-depth research' }, { name: 'Documentation', href: '/documentation', description: 'Technical guides' }];
-  const supportLinks = [ { name: 'Help Center', href: '/help', description: 'Find answers and solutions' }, { name: 'FAQ', href: '/faq', description: 'Frequently asked questions' }, { name: 'Support', href: '/support', description: 'Technical assistance' }, { name: 'Training', href: '/training', description: 'Skill development programs' }, { name: 'Contact Support', href: '/contact', description: 'Get in touch with our team' }, { name: 'Status Page', href: '/status', description: 'Service availability' }];
+  const companyLinks = [ { name: 'About Us', href: '/about', description: 'Learn about our mission and values' }, { name: 'Our Team', href: '/team', description: 'Meet our expert professionals' }, { name: 'Leadership', href: '/leadership', description: 'Executive team and vision' }, { name: 'Careers', href: '/careers', description: 'Join our growing team' }, { name: 'Partners', href: '/partners', description: 'Strategic partnerships' }, { name: 'Case Studies', href: '/case-studies', description: 'Success stories and results' }]
+  const resourceLinks = [ { name: 'Blog', href: '/blog', description: 'Latest insights and updates' }, { name: 'News', href: '/news', description: 'Company announcements' }, { name: 'Press', href: '/press', description: 'Media resources' }, { name: 'Webinars', href: '/webinars', description: 'Educational sessions' }, { name: 'White Papers', href: '/white-papers', description: 'In-depth research' }, { name: 'Documentation', href: '/documentation', description: 'Technical guides' }]
+  const supportLinks = [ { name: 'Help Center', href: '/help', description: 'Find answers and solutions' }, { name: 'FAQ', href: '/faq', description: 'Frequently asked questions' }, { name: 'Support', href: '/support', description: 'Technical assistance' }, { name: 'Training', href: '/training', description: 'Skill development programs' }, { name: 'Contact Support', href: '/contact', description: 'Get in touch with our team' }, { name: 'Status Page', href: '/status', description: 'Service availability' }]
   const toggleDropdown = (dropdown: string) => {,,
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown)};
-  const [servicesOpen, setServicesOpen] = useState(false);
-
+    setActiveDropdown(activeDropdown === dropdown ? null : dropdown)}
+  const [servicesOpen, setServicesOpen] = useState(false)
   const navLinks = ['
     { label: 'Home', href: '/' } { '
       label: 'Services', '
@@ -464,45 +463,45 @@ solutions: [ { name: 'AI Solutions', href: '/ai-solutions', description: 'Artifi
         <div className="flex justify-between items-center h-16">"
           <a href="/" className="text-xl sm:text-2xl font-bold text-blue-900">Zion Tech Group</a>"
           <nav className="hidden md:flex items-center gap-6">
-            {navLinks.map((link) => (",;
-              <a key="{link.href}" href="{link.href}" className="text-gray-700 hover: text-blue-600 transition-colors">;
+            {navLinks.map((link) => (",
+              <a key="{link.href}" href="{link.href}" className="text-gray-700 hover: text-blue-600 transition-colors">
   return (
-    ";
+    "
     <header className="bg-white shadow-lg">;"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;"
         <div className="flex justify-between items-center py-6">;"
-          <div className="flex items-center">;"
+          <div className="flex items-center">,"
             <a href='/' className="text-2xl font-bold text-blue-900">,
               Zion Tech Group,,
             </a>,
           </div>,"
           <nav className="hidden md:flex space-x-8"> {navLinks.map((link, index) => (;"
               <a key = "{index}" href="{link.href}" className="text-gray-700 hover:text-blue-600"> {link.label}
-            ))};
-          </nav>;
+            ))}
+          </nav>
           <button>
             aria-label='Toggle navigation';"
-            onClick = "{()" => setMobileOpen((v) => !v)}";
+            onClick = "{()" => setMobileOpen((v) => !v)}"
             className="md: hidden inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100",,
           >,"
-            <svg xmlns = 'http://www.w3.org/2000/svg' className="h-6 w-6" fill='none' viewBox='0 0 24 24' stroke='currentColor'>,";
-              <path strokeLinecap='round' strokeLinejoin='round' strokeWidth="{2}" d='M4 6h16M4 12h16M4 18h16' />;
-            </svg>;
+            <svg xmlns = 'http://www.w3.org/2000/svg' className="h-6 w-6" fill='none' viewBox='0 0 24 24' stroke='currentColor'>,"
+              <path strokeLinecap='round' strokeLinejoin='round' strokeWidth="{2}" d='M4 6h16M4 12h16M4 18h16' />
+            </svg>
           </button>;"
       </div> {mobileOpen && (";"
         <div role="button" className="md: hidden border - t border - gray - 200 bg - white">",",
-          <div role = "button" className="px - 4 py - 3 space - y-2"> {navLinks.map (link => (,";
+          <div role = "button" className="px - 4 py - 3 space - y-2"> {navLinks.map (link => (,"
               <a key="{link.href};""
                 href={link.href}";"
                 className = "block w - full py - 2 text - gray - 700 hover: text - blue - 600",>
-              > {link.label};
-              </a>;) ) };"
+              > {link.label}
+              </a>) ) };"
             <a";"
               href="/services / ai"";"
-              className="block w - full py - 2 text - blue - 700 font - medium";
+              className="block w - full py - 2 text - blue - 700 font - medium"
               Explore AI>
-        </div>;) };
-    </header>;) ;
+        </div>) }
+    </header>) 
     </header>
     { title: 'Industry Solutions', icon: Building,'
       color: 'from - blue-500 to-purple-500', solutions: [{ name: 'Enterprise Solutions', href: '/solutions/enterprise', description: 'Large-scale business transformation' } { name: 'Healthcare Solutions', href: '/solutions/healthcare', description: 'Medical technology innovation' } { name: 'Financial Solutions', href: '/financial-solutions', description: 'Fintech and banking solutions' } { name: 'Manufacturing Solutions', href: '/manufacturing-solutions', description: 'Industry 4.0 automation' }]} { title: 'Technology Solutions','
@@ -510,10 +509,10 @@ solutions: [ { name: 'AI Solutions', href: '/ai-solutions', description: 'Artifi
         { name: 'AI Solutions', href: '/ai-solutions', description: 'Artificial intelligence integration' } { name: 'Digital Transformation', href: '/services/digital-transformation', description: 'Business modernization' } { name: 'Research & Development', href: '/research-development', description: 'Innovation and discovery' } { name: 'Green IT Solutions', href: '/green-it', description: 'Sustainable technology' }]}'
     { name: 'About Us', href: '/about', description: 'Learn about our mission and values' } { name: 'Our Team', href: '/team', description: 'Meet our expert professionals' } { name: 'Leadership', href: '/leadership', description: 'Executive team and vision' } { name: 'Careers', href: '/careers', description: 'Join our growing team' } { name: 'Partners', href: '/partners', description: 'Strategic partnerships' } { name: 'Case Studies', href: '/case-studies', description: 'Success stories and results' }],
     { name: 'Blog', href: '/blog', description: 'Latest insights and updates' } { name: 'News', href: '/news', description: 'Company announcements' } { name: 'Press', href: '/press', description: 'Media resources' } { name: 'Webinars', href: '/webinars', description: 'Educational sessions' } { name: 'White Papers', href: '/white - papers', description: 'In-depth research' } { name: 'Documentation', href: '/documentation', description: 'Technical guides' }],
-    { name: 'Help Center', href: '/help', description: 'Find answers and solutions' } { name: 'FAQ', href: '/faq', description: 'Frequently asked questions' } { name: 'Support', href: '/support', description: 'Technical assistance' } { name: 'Training', href: '/training', description: 'Skill development programs' } { name: 'Contact Support', href: '/contact', description: 'Get in touch with our team' } { name: 'Status Page', href: '/status', description: 'Service availability' }];
-  const [mobileOpen, setMobileOpen] = useState();
-export const EnhancedHeader: React.FC = () => {};
-  const;const;const [mobileOpen, setMobileOpen] = useState(false);
+    { name: 'Help Center', href: '/help', description: 'Find answers and solutions' } { name: 'FAQ', href: '/faq', description: 'Frequently asked questions' } { name: 'Support', href: '/support', description: 'Technical assistance' } { name: 'Training', href: '/training', description: 'Skill development programs' } { name: 'Contact Support', href: '/contact', description: 'Get in touch with our team' } { name: 'Status Page', href: '/status', description: 'Service availability' }]
+  const [mobileOpen, setMobileOpen] = useState()
+export const EnhancedHeader: React.FC = () => {}
+  const;const;const [mobileOpen, setMobileOpen] = useState(false)
     { label: &apos,Home&apos, href: &apos,/&apos} { label: &apos,Services&apos, href: &apos,/services&apos} { label: &apos,Solutions&apos, href: &apos,/solutions&apos} { label: &apos,Enterprise&apos, href: &apos,/enterprise&apos} { label: &apos,Request Quote&apos, href: &apos,/request-quote&apos} { label: &apos,Case Studies&apos, href: &apos,/case-studies&apos} { label: &apos,Careers&apos, href: &apos,/careers&apos} { label: &apos,Contact&apos, href: &apos,/contact&apos}
   return(&apos;&apos;"
     <header className="&apos;bg-white" shadow-lg&apos;>&apos,"
@@ -523,13 +522,13 @@ export const EnhancedHeader: React.FC = () => {};
             <a href="&apos;/&apos;" className="&apos;text-2xl" font-bold text-blue-900&apos,>,
               Zion Tech Group&apos;&apos,"
           <nav className = "&apos,hidden" m,d: flex space-x-8&apos,>
-            {navLinks.map((link, index) => (&apos}";
+            {navLinks.map((link, index) => (&apos}"
               <a key="{index}" href="{link.href}" className="&apos;text-gray-700" hover: text-blue-600&apos,>
-                {link.label}&apos;
+                {link.label}&apos
   return("
-    <header: className = "bg-white shadow-lg">',',";
+    <header: className = "bg-white shadow-lg">',',"
       <div: className="max-w-7xl mx-auto px-4 sm: px-6: lg:px-8">',';"
-        <div: className="flex justify - between items-center py-6">',;"
+        <div: className="flex justify - between items-center py-6">',"
           <div: className="flex items-center">',,",
             <a: href = '/' className="text-2xl font-bold text-blue-900">',',
               Zion: Tech Group"
@@ -538,7 +537,7 @@ export const EnhancedHeader: React.FC = () => {};
         <div className="flex justify-between items-center py-6">"
           <div className="flex items-center">"
             <a href='/' className="text-2xl font-bold text-blue-900">",
-          <nav className="hidden md: flex: space-x-8">',' {navLinks.map((link, index) => (";
+          <nav className="hidden md: flex: space-x-8">',' {navLinks.map((link, index) => ("
               <a: key="{index}" href="{link.href}" className="text-gray-700 hover: text-blue-600">',';"
               <a key = "{index}" href="{link.href}" className="text-gray-700 hover: text-blue-600">,
                 {link.label}"
@@ -546,8 +545,8 @@ export const EnhancedHeader: React.FC = () => {};
           <button aria-label="Toggle navigation" onClick="{()" => setMobileOpen((v) => !v)} className="md: hidden inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100">"
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">",
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" d="M4 6h16M4 12h16M4 18h16" />'
-            aria-label='Toggle: navigation',',";
-            className="md: hidden: inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900: hover:bg-gray-100",;
+            aria-label='Toggle: navigation',',"
+            className="md: hidden: inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900: hover:bg-gray-100",
           >"'
             <svg: xmlns='http: //www.w3.org/2000/svg' className="h-6: w-6" fill='none' viewBox='0 0 24 24' stroke='currentColor'>',';"
               <path: strokeLinecap='round' strokeLinejoin='round' strokeWidth="{2}" d='M4 6h16M4 12h16M4 18h16' />'
@@ -557,7 +556,7 @@ aria-label = 'Toggle navigation>
             aria-label="&apos;Toggle" navigation';"
             className="&apos;md: " hidden inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100&apos,>
           >&apos;&apos,"
-            <svg xmlns="&apos,htt,p: " //www.w3.org/2000/svg&apos; className="&apos;h-6" w-6&apos; fill="&apos;none&apos;" viewBox="&apos;0" 0 24 24&apos; stroke="&apos;currentColor&apos,">&apos,',
+            <svg xmlns="&apos,htt,p: " //www.w3.org/2000/svg&apos; className="&apos;h-6" w-6&apos; fill="&apos;none&apos;" viewBox="&apos;0" 0 24 24&apos; stroke="&apos,currentColor&apos,">&apos,',
               <path strokeLinecap="&apos;round&apos;" strokeLinejoin="&apos,round&apos," strokeWidth="{2}" d="&apos;M4" 6h16M4 12h16M4 18h16&apos; />&apos;"
             className = "md: hidden inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100""
             <svg xmlns='http://www.w3.org/2000/svg' className="h-6 w-6" fill='none' viewBox='0 0 24 24' stroke='currentColor'>",
@@ -570,9 +569,9 @@ aria-label = 'Toggle navigation>
           <div className="px-4 py-3 space-y-2">",
               <a key="{link.href}" href="{link.href}" className="block w-full py-2 text-gray-700 hover: text-blue-600">"
             <a href="/services/ai" className="block w-full py-2 text-blue-700 font-medium">Explore AI</a>,
-      )}</header>;
-  )};
+      )}</header>
+  )}
   )}"
-  MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star, Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool, Eye, Server, Smartphone, Database, Network, Clock, ArrowRight,;"
+  MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star, Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool, Eye, Server, Smartphone, Database, Network, Clock, ArrowRight,"
   PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite, FileText, Building2, Car, Share2 } from 'lucide-react"'
 "

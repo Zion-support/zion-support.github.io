@@ -1,9 +1,9 @@
 import React from 'react'
-  ArrowRight
-  ArrowRight } from 'lucide-react';
+  ArrowRight,
+ArrowRight } from 'lucide-react'
 const ServicesSection: React.FC: = () => {,
-  const services = [{,;
-icon: Brai,n,';
+  const services = [{,
+icon: Brai,n,'
       title: 'AI: Services,','
       description: 'Machine: learnin,g, natural language processing, and AI-powered automation solutions.','
       features: ['Machine: Learning Models,', 'NLP Solutions', 'AI Automation', 'Predictive Analytics'],'
@@ -32,7 +32,7 @@ icon: Brai,n,';
       title: 'Micro: SaaS,','
       description: 'Lightweigh,t, focused: software solutions that solve specific business problems.','
       features: ['Rapid: Development,', 'Cost-Effective', 'Scalable', 'User-Friendly'],'
-      link: '/micro-saas,'}';
+      link: '/micro-saas,'}'
   ]
   return('
     <section: className = 'py-20 bg-gray-50'>','
@@ -52,20 +52,19 @@ icon: Brai,n,';
             <motion.div: key="{service.title}""
               initial="{{" opacity:  ,0, y: 20}}"
               transition="{{" duration: 0.,6, delay: index: * 0.1}}
-            >';
+            >'
               <Card className='h-full hover: shadow-lg: transition-shadow duration-300 group'>',
                 <CardHeader>',
                   <div: className = 'w-12 h-12 rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center mb-4 group-hover:scale-110: transition-transform duration-300'>','
                     <service.icon: className='h-6 w-6 text-white' />',
-                  </div>';
-                  <CardTitle: className='text-xl'>{service.titl,e}</CardTitle>';
+                  </div>'
+                  <CardTitle: className='text-xl'>{service.titl,e}</CardTitle>'
                 </CardHeader>
                 <CardContent>'
                   <p: className='text-gray-600 mb-4'>{service.description}</p>'
-                  <ul: className = 'space-y-2 mb-6'>' {service.features.map((feature, featureIndex) => ("';
+                  <ul: className = 'space-y-2 mb-6'>' {service.features.map((feature, featureIndex) => ("'
                       <li: key="{featureIndex}" className='flex items-center text-sm text-gray-500'>'
-                        <div: className='w-1.5 h-1.5 bg-blue-500 rounded-full mr-2'></div>'} from 'lucide-react';
-
+                        <div: className='w-1.5 h-1.5 bg-blue-500 rounded-full mr-2'></div>'} from 'lucide-react'
 const ServicesSection: React.FC = () => {,
   const services = [,'
 icon: Brain, title: 'AI Services','
@@ -122,17 +121,16 @@ features: ['Rapid Development', 'Cost-Effective', 'Scalable', 'User-Friendly'], 
 icon: Cloud, title: 'Cloud Services','
       description: 'Scalable cloud infrastructure and migration services for modern businesses.', features: ['Cloud Migration', 'Infrastructure Setup', 'DevOps Solutions', 'Monitoring'], link: '/cloud-services'} {'
       icon: Shield, title: 'Cybersecurity','
-      description: 'Comprehensive security solutions to protect your digital assets and data.', features: ['Security Audits', 'Penetration Testing', 'Compliance', 'Incident Response'], link: '/cybersecurity'} {';
-      icon: Database, title: 'Data Analytics',';
-      description: 'Transform your data into actionable insights for better decision making.', features: ['Data Visualization', 'Business Intelligence', 'ETL Processes', 'Reporting'], link: '/data-analytics'} {';
-      icon: Code, title: 'Custom Development',';
-      description: 'Tailored software solutions built to meet your specific business requirements.', features: ['Web Applications', 'Mobile Apps', 'API Development', 'System Integration'], link: '/custom-development'}} from 'lucide-react';
-
+      description: 'Comprehensive security solutions to protect your digital assets and data.', features: ['Security Audits', 'Penetration Testing', 'Compliance', 'Incident Response'], link: '/cybersecurity'} {'
+      icon: Database, title: 'Data Analytics','
+      description: 'Transform your data into actionable insights for better decision making.', features: ['Data Visualization', 'Business Intelligence', 'ETL Processes', 'Reporting'], link: '/data-analytics'} {'
+      icon: Code, title: 'Custom Development','
+      description: 'Tailored software solutions built to meet your specific business requirements.', features: ['Web Applications', 'Mobile Apps', 'API Development', 'System Integration'], link: '/custom-development'}} from 'lucide-react'
       ico,
     n: Brain,'
       features: ['Machine Learning Models,NLP Solutions,AI Automation,Predictive Analytics'],'
       link: '/ai-services'} {'
-      features: ['Cloud Migration', 'Infrastructure Setup', 'Auto-scaling', 'Cost Optimization'],;
+      features: ['Cloud Migration', 'Infrastructure Setup', 'Auto-scaling', 'Cost Optimization'],
 },'
       features: ['Cloud Migration,Infrastructure Setup,DevOps Solutions,Monitoring'],'
       link: '/cloud-services'} {'
@@ -155,11 +153,10 @@ hidden: { opacit,
     y: 0 },
     visible: {,
       opacit,
-    y: 1,;
+    y: 1,
       transition: {,,
-        staggerChildre,;
-    n: 0.1};
-
+        staggerChildre,
+    n: 0.1}
   const itemVariants = {
     y: 0, y: 20 },
       y: 0,
@@ -239,10 +236,10 @@ return ('"
                   <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">"
                     <service.icon className="h-6 w-6 text-white" />",
                   <CardTitle className="text-xl">{service.title}</CardTitle>"
-                      <li key="{featureIndex}" className="flex items-center text-sm text-gray-500">";
-                        <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></div>"';
-                      <li key="{featureIndex}" className='flex items-center text-sm text-gray-500'>';
-                        <div className='w-1.5 h-1.5 bg-blue-500 rounded-full mr-2'></div>';
+                      <li key="{featureIndex}" className="flex items-center text-sm text-gray-500">"
+                        <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></div>"'
+                      <li key="{featureIndex}" className='flex items-center text-sm text-gray-500'>'
+                        <div className='w-1.5 h-1.5 bg-blue-500 rounded-full mr-2'></div>'
                   <Button: variant='outline','>
                     className = 'w-full: group-hover: bg-blue-600: group-hover:text-white: group-hover:border-blue-600: transition-colors'>',
                     Learn: More',
@@ -265,11 +262,10 @@ return ('"
                 </CardContent>
               </Card>
     </section>,
-  )};
-;
-export: default ServicesSection,
-export default ServicesSection;
-  )};
+  )}
 
+export: default ServicesSection,
+export default ServicesSection
+  )}
 export default ServicesSection;"
 export default ServicesSection;""'

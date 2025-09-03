@@ -1,28 +1,28 @@
-import React from 'react'; export default function RequestQuote() { const [formData, setFormData] = useState({ firstName: ", lastName: ", email: ", phone: ", comp: ", projectType: ", budget: ", timeline: ", description: ", urgency: "medium"}); const [submissionStatus, setSubmissionStatus] = useState("idle"); const projectTypes = [{ value: "web-development", label: "Web Development", icon: Globe, description: "Custom websites and web applications"}, { value: "mobile-app", label: "Mobile App Development", icon: Smartphone, description: "iOS and Android applications"}, { value: "ai-ml", label: "AI & Machine Learning", icon: Brain, description: "Intelligent automation and analytics"}, { value: "cloud-infrastructure", label: "Cloud Infrastructure", icon: Cloud, description: "AWS, Azure, GCP solutions"}, { value: "cybersecurity", label: "Cybersecurity", icon: Shield, description: "Security audits and implementation"}, { value: "data-analytics", label: "Data Analytics", icon: BarChart3, description: "Business intelligence and reporting"}, { value: "ui-ux-design", label: "UI/UX Design", icon: Palette, description: "User interface and experience design"}, { value: "software-development", label: "Custom Software", icon: Code, description: "Enterprise software solutions"}, { value: "devops", label: "DevOps & CI/CD", icon: Server, description: "Automation and deployment pipelines"}, { value: "network-infrastructure", label: "Network Infrastructure", icon: Wifi, description: "Network design and setup"}, { value: "database-design", label: "Database Design", icon: Database, description: "Database architecture and optimization"}, { value: "consulting", label: "IT Consulting", icon: Briefcase, description: "Strategic technology guidance"}]; const budgetRanges = [{ value: "under-10k", label: "Under $10,000", description: "Small projects and MVPs"}, { value: "10k-25k", label: "$10,000 - $25,000", description: "Medium-sized applications"}, { value: "25k-50k", label: "$25,000 - $50,000", description: "Complex applications"}, { value: "50k-100k", label: "$50,000 - $100,000", description: "Enterprise solutions"}, { value: "100k-plus", label: "$100,000+", description: "Large-scale projects"}, { value: "custom", label: "Custom Pricing", description: "Let"s discuss your needs"}]; const timelineOptions = [" { value: "asap", label: "ASAP", description: "Immediate start required" }, { value: "1-2-weeks", label: "1-2 Weeks", description: "Quick turnaround needed"}, { value: "1-month", label: "1 Month", description: "Standard project timeline"}, { value: "2-3-months", label: "2-3 Months", description: "Complex project timeline"}, { value: "3-plus-months", label: "3+ Months", description: "Long-term project"}, { value: "flexible", label: "Flexible", description: "Timeline can be discussed"}]; const urgencyLevels = [{ value: "low", label: "Low", description: "No immediate deadline", color: "text-green-400"}, { value: "medium", label: "Medium", description: "Standard project timeline", color: "text-yellow-400"}, { value: "high", label: "High", description: "Urgent delivery needed", color: "text-orange-400"}, { value: "critical", label: "Critical", description: "Emergency situation", color: "text-red-400"}]; const handleInputChange = e => { const { name, value } = e.target; setFormData(prev => ({ ...prev, [name]: value})); }; const handleSubmit = async e => { e.preventDefault(); setSubmissionStatus("submitting");" export default function RequestQuote() { const [formData, setFormData] = useState({ firstName: ", lastName: ", email: ", phone: ", comp: ", projectType: ", budget: ", timeline: ", description: ", urgency: "medium"}); const [submissionStatus, setSubmissionStatus] = useState("idle"); const projectTypes = [{ value: "web-development", label: "Web Development", icon: Globe, description: "Custom websites and web applications"}, { value: "mobile-app", label: "Mobile App Development", icon: Smartphone, description: "iOS and Android applications"}, { value: "ai-ml", label: "AI & Machine Learning", icon: Brain, description: "Intelligent automation and analytics"}, { value: "cloud-infrastructure", label: "Cloud Infrastructure", icon: Cloud, description: "AWS, Azure, GCP solutions"}, { value: "cybersecurity", label: "Cybersecurity", icon: Shield, description: "Security audits and implementation"}, { value: "data-analytics", label: "Data Analytics", icon: BarChart3, description: "Business intelligence and reporting"}, { value: "ui-ux-design", label: "UI/UX Design", icon: Palette, description: "User interface and experience design"}, { value: "software-development", label: "Custom Software", icon: Code, description: "Enterprise software solutions"}, { value: "devops", label: "DevOps & CI/CD", icon: Server, description: "Automation and deployment pipelines"}, { value: "network-infrastructure", label: "Network Infrastructure", icon: Wifi, description: "Network design and setup"}, { value: "database-design", label: "Database Design", icon: Database, description: "Database architecture and optimization"}, { value: "consulting", label: "IT Consulting", icon: Briefcase, description: "Strategic technology guidance"}]; const budgetRanges = [{ value: "under-10k", label: "Under $10,000", description: "Small projects and MVPs"}, { value: "10k-25k", label: "$10,000 - $25,000", description: "Medium-sized applications"}, { value: "25k-50k", label: "$25,000 - $50,000", description: "Complex applications"}, { value: "50k-100k", label: "$50,000 - $100,000", description: "Enterprise solutions"}, { value: "100k-plus", label: "$100,000+", description: "Large-scale projects"}, { value: "custom", label: "Custom Pricing", description: "Let"s discuss your needs"}]; const timelineOptions = [" { value: "asap", label: "ASAP", description: "Immediate start required" }, { value: "1-2-weeks", label: "1-2 Weeks", description: "Quick turnaround needed"}, { value: "1-month", label: "1 Month", description: "Standard project timeline"}, { value: "2-3-months", label: "2-3 Months", description: "Complex project timeline"}, { value: "3-plus-months", label: "3+ Months", description: "Long-term project"}, { value: "flexible", label: "Flexible", description: "Timeline can be discussed"}]; const urgencyLevels = [{ value: "low", label: "Low", description: "No immediate deadline", color: "text-green-400"}, { value: "medium", label: "Medium", description: "Standard project timeline", color: "text-yellow-400"}, { value: "high", label: "High", description: "Urgent delivery needed", color: "text-orange-400"}, { value: "critical", label: "Critical", description: "Emergency situation", color: "text-red-400"}]; const handleInputChange = e => { const { name, value } = e.target; setFormData(prev => ({ ...prev, [name]: value})); }; const handleSubmit = async e => { e.preventDefault(); setSubmissionStatus("submitting");" export default function RequestQuote() { const [formData, setFormData] = useState({ firstName: ", lastName: ", email: ", phone: ", comp: ", projectType: ", budget: ", timeline: ", description: ", urgency: "medium"}); const [submissionStatus, setSubmissionStatus] = useState("idle"); const projectTypes = [ { value: "web-development", label: "Web Development", icon: Globe, description: "Custom websites and web applications"}, { value: "mobile-app", label: "Mobile App Development", icon: Smartphone, description: "iOS and Android applications"}, { value: "ai-ml", label: "AI & Machine Learning", icon: Brain, description: "Intelligent automation and analytics"}, { value: "cloud-infrastructure", label: "Cloud Infrastructure", icon: Cloud, description: "AWS, Azure, GCP solutions"}, { value: "cybersecurity", label: "Cybersecurity", icon: Shield, description: "Security audits and implementation"}, { value: "data-analytics", label: "Data Analytics", icon: BarChart3, description: "Business intelligence and reporting"}, { value: "ui-ux-design", label: "UI/UX Design", icon: Palette, description: "User interface and experience design"}, { value: "software-development", label: "Custom Software", icon: Code, description: "Enterprise software solutions"}, { value: "devops", label: "DevOps & CI/CD", icon: Server, description: "Automation and deployment pipelines"}, { value: "network-infrastructure", label: "Network Infrastructure", icon: Wifi, description: "Network design and setup"}, { value: "database-design", label: "Database Design", icon: Database, description: "Database architecture and optimization"}, { value: "consulting", label: "IT Consulting", icon: Briefcase, description: "Strategic technology guidance"}]; const budgetRanges = [ { value: "under-10k", label: "Under $10,000", description: "Small projects and MVPs"}, { value: "10k-25k", label: "$10,000 - $25, 000", description: "Medium-sized applications"}, { value: "25k-50k", label: "$25, 000 - $50,000", description: "Complex applications"}, { value: "50k-100k", label: "$50,000 - $100, 000", description: "Enterprise solutions"}, { value: "100k-plus", label: "$100, 000+", description: "Large-scale projects"}, { value: "custom", label: "Custom Pricing", description: "Let&quot,s discuss your needs"}]; const timelineOptions = [" { value: "asap", label: "ASAP", description: "Immediate start required" }, { value: "1-2-weeks", label: "1-2 Weeks", description: "Quick turnaround needed"}, { value: "1-month", label: "1 Month", description: "Standard project timeline"}, { value: "2-3-months", label: "2-3 Months", description: "Complex project timeline"}, { value: "3-plus-months", label: "3+ Months", description: "Long-term project"}, { value: "flexible", label: "Flexible", description: "Timeline can be discussed"}]; const urgencyLevels = [ { value: "low", label: "Low", description: "No immediate deadline", color: "text-green-400"}, { value: "medium", label: "Medium", description: "Standard project timeline", color: "text-yellow-400"}, { value: "high", label: "High", description: "Urgent delivery needed", color: "text-orange-400"}, { value: "critical", label: "Critical", description: "Emergency situation", color: "text-red-400"}]; const handleInputChange = e => { const { name, value } = e.target; setFormData(prev => ({ ...prev, [name]: value})); }; const handleSubmit = async e => { e.preventDefault(); setSubmissionStatus("submitting");""""
+import React from 'react'; export default function RequestQuote() { const [formData, setFormData] = useState({ firstName: ", lastName: ", email: ", phone: ", comp: ", projectType: ", budget: ", timeline: ", description: ", urgency: "medium"}); const [submissionStatus, setSubmissionStatus] = useState("idle"); const projectTypes = [{ value: "web-development", label: "Web Development", icon: Globe, description: "Custom websites and web applications"}, { value: "mobile-app", label: "Mobile App Development", icon: Smartphone, description: "iOS and Android applications"}, { value: "ai-ml", label: "AI & Machine Learning", icon: Brain, description: "Intelligent automation and analytics"}, { value: "cloud-infrastructure", label: "Cloud Infrastructure", icon: Cloud, description: "AWS, Azure, GCP solutions"}, { value: "cybersecurity", label: "Cybersecurity", icon: Shield, description: "Security audits and implementation"}, { value: "data-analytics", label: "Data Analytics", icon: BarChart3, description: "Business intelligence and reporting"}, { value: "ui-ux-design", label: "UI/UX Design", icon: Palette, description: "User interface and experience design"}, { value: "software-development", label: "Custom Software", icon: Code, description: "Enterprise software solutions"}, { value: "devops", label: "DevOps & CI/CD", icon: Server, description: "Automation and deployment pipelines"}, { value: "network-infrastructure", label: "Network Infrastructure", icon: Wifi, description: "Network design and setup"}, { value: "database-design", label: "Database Design", icon: Database, description: "Database architecture and optimization"}, { value: "consulting", label: "IT Consulting", icon: Briefcase, description: "Strategic technology guidance"}]; const budgetRanges = [{ value: "under-10k", label: "Under $10,000", description: "Small projects and MVPs"}, { value: "10k-25k", label: "$10,000 - $25,000", description: "Medium-sized applications"}, { value: "25k-50k", label: "$25,000 - $50,000", description: "Complex applications"}, { value: "50k-100k", label: "$50,000 - $100,000", description: "Enterprise solutions"}, { value: "100k-plus", label: "$100,000+", description: "Large-scale projects"}, { value: "custom", label: "Custom Pricing", description: "Let"s discuss your needs"}]; const timelineOptions = [" { value: "asap", label: "ASAP", description: "Immediate start required" }, { value: "1-2-weeks", label: "1-2 Weeks", description: "Quick turnaround needed"}, { value: "1-month", label: "1 Month", description: "Standard project timeline"}, { value: "2-3-months", label: "2-3 Months", description: "Complex project timeline"}, { value: "3-plus-months", label: "3+ Months", description: "Long-term project"}, { value: "flexible", label: "Flexible", description: "Timeline can be discussed"}]; const urgencyLevels = [{ value: "low", label: "Low", description: "No immediate deadline", color: "text-green-400"}, { value: "medium", label: "Medium", description: "Standard project timeline", color: "text-yellow-400"}, { value: "high", label: "High", description: "Urgent delivery needed", color: "text-orange-400"}, { value: "critical", label: "Critical", description: "Emergency situation", color: "text-red-400"}]; const handleInputChange = e => { const { name, value } = e.target; setFormData(prev => ({ ...prev, [name]: value}))}; const handleSubmit = async e => { e.preventDefault(); setSubmissionStatus("submitting");" export default function RequestQuote() { const [formData, setFormData] = useState({ firstName: ", lastName: ", email: ", phone: ", comp: ", projectType: ", budget: ", timeline: ", description: ", urgency: "medium"}); const [submissionStatus, setSubmissionStatus] = useState("idle"); const projectTypes = [{ value: "web-development", label: "Web Development", icon: Globe, description: "Custom websites and web applications"}, { value: "mobile-app", label: "Mobile App Development", icon: Smartphone, description: "iOS and Android applications"}, { value: "ai-ml", label: "AI & Machine Learning", icon: Brain, description: "Intelligent automation and analytics"}, { value: "cloud-infrastructure", label: "Cloud Infrastructure", icon: Cloud, description: "AWS, Azure, GCP solutions"}, { value: "cybersecurity", label: "Cybersecurity", icon: Shield, description: "Security audits and implementation"}, { value: "data-analytics", label: "Data Analytics", icon: BarChart3, description: "Business intelligence and reporting"}, { value: "ui-ux-design", label: "UI/UX Design", icon: Palette, description: "User interface and experience design"}, { value: "software-development", label: "Custom Software", icon: Code, description: "Enterprise software solutions"}, { value: "devops", label: "DevOps & CI/CD", icon: Server, description: "Automation and deployment pipelines"}, { value: "network-infrastructure", label: "Network Infrastructure", icon: Wifi, description: "Network design and setup"}, { value: "database-design", label: "Database Design", icon: Database, description: "Database architecture and optimization"}, { value: "consulting", label: "IT Consulting", icon: Briefcase, description: "Strategic technology guidance"}]; const budgetRanges = [{ value: "under-10k", label: "Under $10,000", description: "Small projects and MVPs"}, { value: "10k-25k", label: "$10,000 - $25,000", description: "Medium-sized applications"}, { value: "25k-50k", label: "$25,000 - $50,000", description: "Complex applications"}, { value: "50k-100k", label: "$50,000 - $100,000", description: "Enterprise solutions"}, { value: "100k-plus", label: "$100,000+", description: "Large-scale projects"}, { value: "custom", label: "Custom Pricing", description: "Let"s discuss your needs"}]; const timelineOptions = [" { value: "asap", label: "ASAP", description: "Immediate start required" }, { value: "1-2-weeks", label: "1-2 Weeks", description: "Quick turnaround needed"}, { value: "1-month", label: "1 Month", description: "Standard project timeline"}, { value: "2-3-months", label: "2-3 Months", description: "Complex project timeline"}, { value: "3-plus-months", label: "3+ Months", description: "Long-term project"}, { value: "flexible", label: "Flexible", description: "Timeline can be discussed"}]; const urgencyLevels = [{ value: "low", label: "Low", description: "No immediate deadline", color: "text-green-400"}, { value: "medium", label: "Medium", description: "Standard project timeline", color: "text-yellow-400"}, { value: "high", label: "High", description: "Urgent delivery needed", color: "text-orange-400"}, { value: "critical", label: "Critical", description: "Emergency situation", color: "text-red-400"}]; const handleInputChange = e => { const { name, value } = e.target; setFormData(prev => ({ ...prev, [name]: value}))}; const handleSubmit = async e => { e.preventDefault(); setSubmissionStatus("submitting");" export default function RequestQuote() { const [formData, setFormData] = useState({ firstName: ", lastName: ", email: ", phone: ", comp: ", projectType: ", budget: ", timeline: ", description: ", urgency: "medium"}); const [submissionStatus, setSubmissionStatus] = useState("idle"); const projectTypes = [ { value: "web-development", label: "Web Development", icon: Globe, description: "Custom websites and web applications"}, { value: "mobile-app", label: "Mobile App Development", icon: Smartphone, description: "iOS and Android applications"}, { value: "ai-ml", label: "AI & Machine Learning", icon: Brain, description: "Intelligent automation and analytics"}, { value: "cloud-infrastructure", label: "Cloud Infrastructure", icon: Cloud, description: "AWS, Azure, GCP solutions"}, { value: "cybersecurity", label: "Cybersecurity", icon: Shield, description: "Security audits and implementation"}, { value: "data-analytics", label: "Data Analytics", icon: BarChart3, description: "Business intelligence and reporting"}, { value: "ui-ux-design", label: "UI/UX Design", icon: Palette, description: "User interface and experience design"}, { value: "software-development", label: "Custom Software", icon: Code, description: "Enterprise software solutions"}, { value: "devops", label: "DevOps & CI/CD", icon: Server, description: "Automation and deployment pipelines"}, { value: "network-infrastructure", label: "Network Infrastructure", icon: Wifi, description: "Network design and setup"}, { value: "database-design", label: "Database Design", icon: Database, description: "Database architecture and optimization"}, { value: "consulting", label: "IT Consulting", icon: Briefcase, description: "Strategic technology guidance"}]; const budgetRanges = [ { value: "under-10k", label: "Under $10,000", description: "Small projects and MVPs"}, { value: "10k-25k", label: "$10,000 - $25, 000", description: "Medium-sized applications"}, { value: "25k-50k", label: "$25, 000 - $50,000", description: "Complex applications"}, { value: "50k-100k", label: "$50,000 - $100, 000", description: "Enterprise solutions"}, { value: "100k-plus", label: "$100, 000+", description: "Large-scale projects"}, { value: "custom", label: "Custom Pricing", description: "Let&quot,s discuss your needs"}]; const timelineOptions = [" { value: "asap", label: "ASAP", description: "Immediate start required" }, { value: "1-2-weeks", label: "1-2 Weeks", description: "Quick turnaround needed"}, { value: "1-month", label: "1 Month", description: "Standard project timeline"}, { value: "2-3-months", label: "2-3 Months", description: "Complex project timeline"}, { value: "3-plus-months", label: "3+ Months", description: "Long-term project"}, { value: "flexible", label: "Flexible", description: "Timeline can be discussed"}]; const urgencyLevels = [ { value: "low", label: "Low", description: "No immediate deadline", color: "text-green-400"}, { value: "medium", label: "Medium", description: "Standard project timeline", color: "text-yellow-400"}, { value: "high", label: "High", description: "Urgent delivery needed", color: "text-orange-400"}, { value: "critical", label: "Critical", description: "Emergency situation", color: "text-red-400"}]; const handleInputChange = e => { const { name, value } = e.target; setFormData(prev => ({ ...prev, [name]: value}))}; const handleSubmit = async e => { e.preventDefault(); setSubmissionStatus("submitting");""""
 "
 ;,"});,"})"
- export default function RequestQuote() { const [formData, setFormData] = useState({ firstName: ", lastName: ", email: ", phone: ", comp: ", projectType: ", budget: ", timeline: ", description: ", urgency: "medium"}); const [submissionStatus, setSubmissionStatus] = useState("idle"); const projectTypes = [ { value: "web-development", label: "Web Development", icon: Globe, description: "Custom websites and web applications"}, { value: "mobile-app", label: "Mobile App Development", icon: Smartphone, description: "iOS and Android applications"}, { value: "ai-ml", label: "AI & Machine Learning", icon: Brain, description: "Intelligent automation and analytics"}, { value: "cloud-infrastructure", label: "Cloud Infrastructure", icon: Cloud, description: "AWS, Azure, GCP solutions"}, { value: "cybersecurity", label: "Cybersecurity", icon: Shield, description: "Security audits and implementation"}, { value: "data-analytics", label: "Data Analytics", icon: BarChart3, description: "Business intelligence and reporting"}, { value: "ui-ux-design", label: "UI/UX Design", icon: Palette, description: "User interface and experience design"}, { value: "software-development", label: "Custom Software", icon: Code, description: "Enterprise software solutions"}, { value: "devops", label: "DevOps & CI/CD", icon: Server, description: "Automation and deployment pipelines"}, { value: "network-infrastructure", label: "Network Infrastructure", icon: Wifi, description: "Network design and setup"}, { value: "database-design", label: "Database Design", icon: Database, description: "Database architecture and optimization"}, { value: "consulting", label: "IT Consulting", icon: Briefcase, description: "Strategic technology guidance"}]; const budgetRanges = [ { value: "under-10k", label: "Under $10,000", description: "Small projects and MVPs"}, { value: "10k-25k", label: "$10,000 - $25, 000", description: "Medium-sized applications"}, { value: "25k-50k", label: "$25, 000 - $50,000", description: "Complex applications"}, { value: "50k-100k", label: "$50,000 - $100, 000", description: "Enterprise solutions"}, { value: "100k-plus", label: "$100, 000+", description: "Large-scale projects"}, { value: "custom", label: "Custom Pricing", description: "Let&quot,s discuss your needs"}]; const timelineOptions = [" { value: "asap", label: "ASAP", description: "Immediate start required" }, { value: "1-2-weeks", label: "1-2 Weeks", description: "Quick turnaround needed"}, { value: "1-month", label: "1 Month", description: "Standard project timeline"}, { value: "2-3-months", label: "2-3 Months", description: "Complex project timeline"}, { value: "3-plus-months", label: "3+ Months", description: "Long-term project"}, { value: "flexible", label: "Flexible", description: "Timeline can be discussed"}]; const urgencyLevels = [ { value: "low", label: "Low", description: "No immediate deadline", color: "text-green-400"}, { value: "medium", label: "Medium", description: "Standard project timeline", color: "text-yellow-400"}, { value: "high", label: "High", description: "Urgent delivery needed", color: "text-orange-400"}, { value: "critical", label: "Critical", description: "Emergency situation", color: "text-red-400"}]; const handleInputChange = e => { const { name, value } = e.target; setFormData(prev => ({ ...prev, [name]: value})); }; const handleSubmit = async e => { e.preventDefault(); setSubmissionStatus("submitting");""""";,"});,"})"
+ export default function RequestQuote() { const [formData, setFormData] = useState({ firstName: ", lastName: ", email: ", phone: ", comp: ", projectType: ", budget: ", timeline: ", description: ", urgency: "medium"}); const [submissionStatus, setSubmissionStatus] = useState("idle"); const projectTypes = [ { value: "web-development", label: "Web Development", icon: Globe, description: "Custom websites and web applications"}, { value: "mobile-app", label: "Mobile App Development", icon: Smartphone, description: "iOS and Android applications"}, { value: "ai-ml", label: "AI & Machine Learning", icon: Brain, description: "Intelligent automation and analytics"}, { value: "cloud-infrastructure", label: "Cloud Infrastructure", icon: Cloud, description: "AWS, Azure, GCP solutions"}, { value: "cybersecurity", label: "Cybersecurity", icon: Shield, description: "Security audits and implementation"}, { value: "data-analytics", label: "Data Analytics", icon: BarChart3, description: "Business intelligence and reporting"}, { value: "ui-ux-design", label: "UI/UX Design", icon: Palette, description: "User interface and experience design"}, { value: "software-development", label: "Custom Software", icon: Code, description: "Enterprise software solutions"}, { value: "devops", label: "DevOps & CI/CD", icon: Server, description: "Automation and deployment pipelines"}, { value: "network-infrastructure", label: "Network Infrastructure", icon: Wifi, description: "Network design and setup"}, { value: "database-design", label: "Database Design", icon: Database, description: "Database architecture and optimization"}, { value: "consulting", label: "IT Consulting", icon: Briefcase, description: "Strategic technology guidance"}]; const budgetRanges = [ { value: "under-10k", label: "Under $10,000", description: "Small projects and MVPs"}, { value: "10k-25k", label: "$10,000 - $25, 000", description: "Medium-sized applications"}, { value: "25k-50k", label: "$25, 000 - $50,000", description: "Complex applications"}, { value: "50k-100k", label: "$50,000 - $100, 000", description: "Enterprise solutions"}, { value: "100k-plus", label: "$100, 000+", description: "Large-scale projects"}, { value: "custom", label: "Custom Pricing", description: "Let&quot,s discuss your needs"}]; const timelineOptions = [" { value: "asap", label: "ASAP", description: "Immediate start required" }, { value: "1-2-weeks", label: "1-2 Weeks", description: "Quick turnaround needed"}, { value: "1-month", label: "1 Month", description: "Standard project timeline"}, { value: "2-3-months", label: "2-3 Months", description: "Complex project timeline"}, { value: "3-plus-months", label: "3+ Months", description: "Long-term project"}, { value: "flexible", label: "Flexible", description: "Timeline can be discussed"}]; const urgencyLevels = [ { value: "low", label: "Low", description: "No immediate deadline", color: "text-green-400"}, { value: "medium", label: "Medium", description: "Standard project timeline", color: "text-yellow-400"}, { value: "high", label: "High", description: "Urgent delivery needed", color: "text-orange-400"}, { value: "critical", label: "Critical", description: "Emergency situation", color: "text-red-400"}]; const handleInputChange = e => { const { name, value } = e.target; setFormData(prev => ({ ...prev, [name]: value}))}; const handleSubmit = async e => { e.preventDefault(); setSubmissionStatus("submitting");""""";,"});,"})"
 ;,"});,"})"
- export default function RequestQuote() { const [formData, setFormData] = useState({ firstName: ", lastName: ", email: ", phone: ", comp: ", projectType: ", budget: ", timeline: ", description: ", urgency: "medium"}); const [submissionStatus, setSubmissionStatus] = useState("idle"); const projectTypes = [{ value: "web-development", label: "Web Development", icon: Globe, description: "Custom websites and web applications"}, { value: "mobile-app", label: "Mobile App Development", icon: Smartphone, description: "iOS and Android applications"}, { value: "ai-ml", label: "AI & Machine Learning", icon: Brain, description: "Intelligent automation and analytics"}, { value: "cloud-infrastructure", label: "Cloud Infrastructure", icon: Cloud, description: "AWS, Azure, GCP solutions"}, { value: "cybersecurity", label: "Cybersecurity", icon: Shield, description: "Security audits and implementation"}, { value: "data-analytics", label: "Data Analytics", icon: BarChart3, description: "Business intelligence and reporting"}, { value: "ui-ux-design", label: "UI/UX Design", icon: Palette, description: "User interface and experience design"}, { value: "software-development", label: "Custom Software", icon: Code, description: "Enterprise software solutions"}, { value: "devops", label: "DevOps & CI/CD", icon: Server, description: "Automation and deployment pipelines"}, { value: "network-infrastructure", label: "Network Infrastructure", icon: Wifi, description: "Network design and setup"}, { value: "database-design", label: "Database Design", icon: Database, description: "Database architecture and optimization"}, { value: "consulting", label: "IT Consulting", icon: Briefcase, description: "Strategic technology guidance"}]; const budgetRanges = [{ value: "under-10k", label: "Under $10,000", description: "Small projects and MVPs"}, { value: "10k-25k", label: "$10,000 - $25,000", description: "Medium-sized applications"}, { value: "25k-50k", label: "$25,000 - $50,000", description: "Complex applications"}, { value: "50k-100k", label: "$50,000 - $100,000", description: "Enterprise solutions"}, { value: "100k-plus", label: "$100,000+", description: "Large-scale projects"}, { value: "custom", label: "Custom Pricing", description: "Let"s discuss your needs"}]; const timelineOptions = [" { value: "asap", label: "ASAP", description: "Immediate start required" }, { value: "1-2-weeks", label: "1-2 Weeks", description: "Quick turnaround needed"}, { value: "1-month", label: "1 Month", description: "Standard project timeline"}, { value: "2-3-months", label: "2-3 Months", description: "Complex project timeline"}, { value: "3-plus-months", label: "3+ Months", description: "Long-term project"}, { value: "flexible", label: "Flexible", description: "Timeline can be discussed"}]; const urgencyLevels = [{ value: "low", label: "Low", description: "No immediate deadline", color: "text-green-400"}, { value: "medium", label: "Medium", description: "Standard project timeline", color: "text-yellow-400"}, { value: "high", label: "High", description: "Urgent delivery needed", color: "text-orange-400"}, { value: "critical", label: "Critical", description: "Emergency situation", color: "text-red-400"}]; const handleInputChange = e => { const { name, value } = e.target; setFormData(prev => ({ ...prev, [name]: value})); }; const handleSubmit = async e => { e.preventDefault(); setSubmissionStatus("submitting");,"});,"})"''';,"});,"})","});,"})","})"
-  Calculator,;,"});,"})"
-  Clock,;,"});,"})"
-  CheckCircle,;,"});,"})"
-  AlertCircle,;,"});,"})"
-  Send,;,"});,"})"
-  Phone,;,"});,"})"
-  Mail,;,"});,"})"
-  MapPin,;,"});,"})"
-  Star,;,"});,"})"
-  Users,;,"});,"})"
-  Zap,;,"});,"})"
-  Shield,;,"});,"})"
-  Brain,;,"});,"})"
-  Cloud,;,"});,"})"
-  Smartphone,;,"});,"})"
-  Globe,;,"});,"})"
-  Database,;,"});,"})"
-  BarChart3,;,"});,"})"
-  Palette,;,"});,"})"
+ export default function RequestQuote() { const [formData, setFormData] = useState({ firstName: ", lastName: ", email: ", phone: ", comp: ", projectType: ", budget: ", timeline: ", description: ", urgency: "medium"}); const [submissionStatus, setSubmissionStatus] = useState("idle"); const projectTypes = [{ value: "web-development", label: "Web Development", icon: Globe, description: "Custom websites and web applications"}, { value: "mobile-app", label: "Mobile App Development", icon: Smartphone, description: "iOS and Android applications"}, { value: "ai-ml", label: "AI & Machine Learning", icon: Brain, description: "Intelligent automation and analytics"}, { value: "cloud-infrastructure", label: "Cloud Infrastructure", icon: Cloud, description: "AWS, Azure, GCP solutions"}, { value: "cybersecurity", label: "Cybersecurity", icon: Shield, description: "Security audits and implementation"}, { value: "data-analytics", label: "Data Analytics", icon: BarChart3, description: "Business intelligence and reporting"}, { value: "ui-ux-design", label: "UI/UX Design", icon: Palette, description: "User interface and experience design"}, { value: "software-development", label: "Custom Software", icon: Code, description: "Enterprise software solutions"}, { value: "devops", label: "DevOps & CI/CD", icon: Server, description: "Automation and deployment pipelines"}, { value: "network-infrastructure", label: "Network Infrastructure", icon: Wifi, description: "Network design and setup"}, { value: "database-design", label: "Database Design", icon: Database, description: "Database architecture and optimization"}, { value: "consulting", label: "IT Consulting", icon: Briefcase, description: "Strategic technology guidance"}]; const budgetRanges = [{ value: "under-10k", label: "Under $10,000", description: "Small projects and MVPs"}, { value: "10k-25k", label: "$10,000 - $25,000", description: "Medium-sized applications"}, { value: "25k-50k", label: "$25,000 - $50,000", description: "Complex applications"}, { value: "50k-100k", label: "$50,000 - $100,000", description: "Enterprise solutions"}, { value: "100k-plus", label: "$100,000+", description: "Large-scale projects"}, { value: "custom", label: "Custom Pricing", description: "Let"s discuss your needs"}]; const timelineOptions = [" { value: "asap", label: "ASAP", description: "Immediate start required" }, { value: "1-2-weeks", label: "1-2 Weeks", description: "Quick turnaround needed"}, { value: "1-month", label: "1 Month", description: "Standard project timeline"}, { value: "2-3-months", label: "2-3 Months", description: "Complex project timeline"}, { value: "3-plus-months", label: "3+ Months", description: "Long-term project"}, { value: "flexible", label: "Flexible", description: "Timeline can be discussed"}]; const urgencyLevels = [{ value: "low", label: "Low", description: "No immediate deadline", color: "text-green-400"}, { value: "medium", label: "Medium", description: "Standard project timeline", color: "text-yellow-400"}, { value: "high", label: "High", description: "Urgent delivery needed", color: "text-orange-400"}, { value: "critical", label: "Critical", description: "Emergency situation", color: "text-red-400"}]; const handleInputChange = e => { const { name, value } = e.target; setFormData(prev => ({ ...prev, [name]: value}))}; const handleSubmit = async e => { e.preventDefault(); setSubmissionStatus("submitting");,"});,"})"''';,"});,"})","});,"})","})"
+  Calculator,,"});,"})"
+  Clock,,"});,"})"
+  CheckCircle,,"});,"})"
+  AlertCircle,,"});,"})"
+  Send,,"});,"})"
+  Phone,,"});,"})"
+  Mail,,"});,"})"
+  MapPin,,"});,"})"
+  Star,,"});,"})"
+  Users,,"});,"})"
+  Zap,,"});,"})"
+  Shield,,"});,"})"
+  Brain,,"});,"})"
+  Cloud,,"});,"})"
+  Smartphone,,"});,"})"
+  Globe,,"});,"})"
+  Database,,"});,"})"
+  BarChart3,,"});,"})"
+  Palette,,"});,"})"
   Code,';,"});,"})"
   Server,'';,"});,"})"
   Wifi,''';,"});,"})"
@@ -51,7 +51,7 @@ export default function RequestQuote() {}"});,"})"
       value: 'web-development',''';,"});,"})"
       label: 'Web Development','';,"});,"})"
       icon: Globe,''';,"});,"})"
-      description: 'Custom websites and web applications'},;,"});,"})"
+      description: 'Custom websites and web applications'},,"});,"})"
     {}"});,"})"
 ';,"});,"})"
 '';,"});,"})"
@@ -59,7 +59,7 @@ export default function RequestQuote() {}"});,"})"
       value: 'mobile-app',''';,"});,"})"
       label: 'Mobile App Development','';,"});,"})"
       icon: Smartphone,''';,"});,"})"
-      description: 'iOS and Android applications'},;,"});,"})"
+      description: 'iOS and Android applications'},,"});,"})"
     {}"});,"})"
 ';,"});,"})"
 '';,"});,"})"
@@ -67,7 +67,7 @@ export default function RequestQuote() {}"});,"})"
       value: 'ai-ml',''';,"});,"})"
       label: 'AI & Machine Learning','';,"});,"})"
       icon: Brain,''';,"});,"})"
-      description: 'Intelligent automation and analytics'},;,"});,"})"
+      description: 'Intelligent automation and analytics'},,"});,"})"
     {}"});,"})"
 ';,"});,"})"
 '';,"});,"})"
@@ -75,7 +75,7 @@ export default function RequestQuote() {}"});,"})"
       value: 'cloud-infrastructure',''';,"});,"})"
       label: 'Cloud Infrastructure','';,"});,"})"
       icon: Cloud,''';,"});,"})"
-      description: 'AWS, Azure, GCP solutions'},;,"});,"})"
+      description: 'AWS, Azure, GCP solutions'},,"});,"})"
     {}"});,"})"
 ';,"});,"})"
 '';,"});,"})"
@@ -83,7 +83,7 @@ export default function RequestQuote() {}"});,"})"
       value: 'cybersecurity',''';,"});,"})"
       label: 'Cybersecurity','';,"});,"})"
       icon: Shield,''';,"});,"})"
-      description: 'Security audits and implementation'},;,"});,"})"
+      description: 'Security audits and implementation'},,"});,"})"
     {}"});,"})"
 ';,"});,"})"
 '';,"});,"})"
@@ -91,7 +91,7 @@ export default function RequestQuote() {}"});,"})"
       value: 'data-analytics',''';,"});,"})"
       label: 'Data Analytics','';,"});,"})"
       icon: BarChart3,''';,"});,"})"
-      description: 'Business intelligence and reporting'},;,"});,"})"
+      description: 'Business intelligence and reporting'},,"});,"})"
     {}"});,"})"
 ';,"});,"})"
 '';,"});,"})"
@@ -99,7 +99,7 @@ export default function RequestQuote() {}"});,"})"
       value: 'ui-ux-design',''';,"});,"})"
       label: 'UI/UX Design','';,"});,"})"
       icon: Palette,''';,"});,"})"
-      description: 'User interface and experience design'},;,"});,"})"
+      description: 'User interface and experience design'},,"});,"})"
     {}"});,"})"
 ';,"});,"})"
 '';,"});,"})"
@@ -107,7 +107,7 @@ export default function RequestQuote() {}"});,"})"
       value: 'software-development',''';,"});,"})"
       label: 'Custom Software','';,"});,"})"
       icon: Code,''';,"});,"})"
-      description: 'Enterprise software solutions'},;,"});,"})"
+      description: 'Enterprise software solutions'},,"});,"})"
     {}"});,"})"
 ';,"});,"})"
 '';,"});,"})"
@@ -115,7 +115,7 @@ export default function RequestQuote() {}"});,"})"
       value: 'devops',''';,"});,"})"
       label: 'DevOps & CI/CD','';,"});,"})"
       icon: Server,''';,"});,"})"
-      description: 'Automation and deployment pipelines'},;,"});,"})"
+      description: 'Automation and deployment pipelines'},,"});,"})"
     {}"});,"})"
 ';,"});,"})"
 '';,"});,"})"
@@ -123,7 +123,7 @@ export default function RequestQuote() {}"});,"})"
       value: 'network-infrastructure',''';,"});,"})"
       label: 'Network Infrastructure','';,"});,"})"
       icon: Wifi,''';,"});,"})"
-      description: 'Network design and setup'},;,"});,"})"
+      description: 'Network design and setup'},,"});,"})"
     {}"});,"})"
 ';,"});,"})"
 '';,"});,"})"
@@ -131,7 +131,7 @@ export default function RequestQuote() {}"});,"})"
       value: 'database-design',''';,"});,"})"
       label: 'Database Design','';,"});,"})"
       icon: Database,''';,"});,"})"
-      description: 'Database architecture and optimization'},;,"});,"})"
+      description: 'Database architecture and optimization'},,"});,"})"
     {}"});,"})"
 ';,"});,"})"
       value: 'consulting',';,"});,"})"
@@ -146,35 +146,35 @@ export default function RequestQuote() {}"});,"})"
 ''';,"});,"})"
       value: 'under-10k',''';,"});,"})"
       label: 'Under $10,000',''';,"});,"})"
-      description: 'Small projects and MVPs'},;,"});,"})"
+      description: 'Small projects and MVPs'},,"});,"})"
     {}"});,"})"
 ';,"});,"})"
 '';,"});,"})"
 ''';,"});,"})"
       value: '10k-25k',''';,"});,"})"
       label: '$10,000 - $25,000',''';,"});,"})"
-      description: 'Medium-sized applications'},;,"});,"})"
+      description: 'Medium-sized applications'},,"});,"})"
     {}"});,"})"
 ';,"});,"})"
 '';,"});,"})"
 ''';,"});,"})"
       value: '25k-50k',''';,"});,"})"
       label: '$25,000 - $50,000',''';,"});,"})"
-      description: 'Complex applications'},;,"});,"})"
+      description: 'Complex applications'},,"});,"})"
     {}"});,"})"
 ';,"});,"})"
 '';,"});,"})"
 ''';,"});,"})"
       value: '50k-100k',''';,"});,"})"
       label: '$50,000 - $100,000',''';,"});,"})"
-      description: 'Enterprise solutions'},;,"});,"})"
+      description: 'Enterprise solutions'},,"});,"})"
     {}"});,"})"
 ';,"});,"})"
 '';,"});,"})"
 ''';,"});,"})"
       value: '100k-plus',''';,"});,"})"
       label: '$100,000+',''';,"});,"})"
-      description: 'Large-scale projects'},;,"});,"})"
+      description: 'Large-scale projects'},,"});,"})"
     {}"});,"})"
 ';,"});,"})"
       value: 'custom',';,"});,"})"
@@ -182,35 +182,35 @@ export default function RequestQuote() {}"});,"})"
       description: "Let's discuss your needs"}"});,"})"
   ],"});,"})"
   const timelineOptions = ['';,"});,"})"
-    { value: 'asap', label: 'ASAP', description: 'Immediate start required' },;,"});,"})"
+    { value: 'asap', label: 'ASAP', description: 'Immediate start required' },,"});,"})"
     {}"});,"})"
 ';,"});,"})"
 '';,"});,"})"
 ''';,"});,"})"
       value: '1-2-weeks',''';,"});,"})"
       label: '1-2 Weeks',''';,"});,"})"
-      description: 'Quick turnaround needed'},;,"});,"})"
+      description: 'Quick turnaround needed'},,"});,"})"
     {}"});,"})"
 ';,"});,"})"
 '';,"});,"})"
 ''';,"});,"})"
       value: '1-month',''';,"});,"})"
       label: '1 Month',''';,"});,"})"
-      description: 'Standard project timeline'},;,"});,"})"
+      description: 'Standard project timeline'},,"});,"})"
     {}"});,"})"
 ';,"});,"})"
 '';,"});,"})"
 ''';,"});,"})"
       value: '2-3-months',''';,"});,"})"
       label: '2-3 Months',''';,"});,"})"
-      description: 'Complex project timeline'},;,"});,"})"
+      description: 'Complex project timeline'},,"});,"})"
     {}"});,"})"
 ';,"});,"})"
 '';,"});,"})"
 ''';,"});,"})"
       value: '3-plus-months',''';,"});,"})"
       label: '3+ Months',''';,"});,"})"
-      description: 'Long-term project'},;,"});,"})"
+      description: 'Long-term project'},,"});,"})"
     {}"});,"})"
 ';,"});,"})"
       value: 'flexible',';,"});,"})"
@@ -225,7 +225,7 @@ export default function RequestQuote() {}"});,"})"
       value: 'low',''';,"});,"})"
       label: 'Low',''';,"});,"})"
       description: 'No immediate deadline',''';,"});,"})"
-      color: 'text-green-400'},;,"});,"})"
+      color: 'text-green-400'},,"});,"})"
     {}"});,"})"
 ';,"});,"})"
 '';,"});,"})"
@@ -233,7 +233,7 @@ export default function RequestQuote() {}"});,"})"
       value: 'medium',''';,"});,"})"
       label: 'Medium',''';,"});,"})"
       description: 'Standard project timeline',''';,"});,"})"
-      color: 'text-yellow-400'},;,"});,"})"
+      color: 'text-yellow-400'},,"});,"})"
     {}"});,"})"
 ';,"});,"})"
 '';,"});,"})"
@@ -241,7 +241,7 @@ export default function RequestQuote() {}"});,"})"
       value: 'high',''';,"});,"})"
       label: 'High',''';,"});,"})"
       description: 'Urgent delivery needed',''';,"});,"})"
-      color: 'text-orange-400'},;,"});,"})"
+      color: 'text-orange-400'},,"});,"})"
     {}"});,"})"
 ';,"});,"})"
       value: 'critical',';,"});,"})"
@@ -252,7 +252,7 @@ export default function RequestQuote() {}"});,"})"
   const handleInputChange = e => {}"});,"})"
     const { name, value } = e.target,"});,"})"
     setFormData(prev => ({}"});,"})"
-      ...prev,;,"});,"})"
+      ...prev,,"});,"})"
       [name]: value}));,"});,"});"
 };,"});,"})"
   const handleSubmit = async e => {}"});,"})"
@@ -796,25 +796,25 @@ export { RequestQuote };,"});,"})"
 export { RequestQuote };,"});,"})"
 ;,"});,"})"
 export { RequestQuote };,"});,"})'
- export default function RequestQuote() { const [formData, setFormData] = useState({ firstName: ', lastName: ', email: ', phone: ', comp: ', projectType: ', budget: ', timeline: ', description: ', urgency: 'medium'}) const [submissionStatus, setSubmissionStatus] = useState('idle') const projectTypes = [ { value: 'web-development', label: 'Web Development', icon: Globe, description: 'Custom websites and web applications'}, { value: 'mobile-app', label: 'Mobile App Development', icon: Smartphone, description: 'iOS and Android applications'}, { value: 'ai-ml', label: 'AI & Machine Learning', icon: Brain, description: 'Intelligent automation and analytics'}, { value: 'cloud-infrastructure', label: 'Cloud Infrastructure', icon: Cloud, description: 'AWS, Azure, GCP solutions'}, { value: 'cybersecurity', label: 'Cybersecurity', icon: Shield, description: 'Security audits and implementation'}, { value: 'data-analytics', label: 'Data Analytics', icon: BarChart3, description: 'Business intelligence and reporting'}, { value: 'ui-ux-design', label: 'UI/UX Design', icon: Palette, description: 'User interface and experience design'}, { value: 'software-development', label: 'Custom Software', icon: Code, description: 'Enterprise software solutions'}, { value: 'devops', label: 'DevOps & CI/CD', icon: Server, description: 'Automation and deployment pipelines'}, { value: 'network-infrastructure', label: 'Network Infrastructure', icon: Wifi, description: 'Network design and setup'}, { value: 'database-design', label: 'Database Design', icon: Database, description: 'Database architecture and optimization'}, { value: 'consulting', label: 'IT Consulting', icon: Briefcase, description: 'Strategic technology guidance'}] const budgetRanges = [ { value: 'under-10k', label: 'Under $10,000', description: 'Small projects and MVPs'}, { value: '10k-25k', label: '$10,000 - $25, 000', description: 'Medium-sized applications'}, { value: '25k-50k', label: '$25, 000 - $50,000', description: 'Complex applications'}, { value: '50k-100k', label: '$50,000 - $100, 000', description: 'Enterprise solutions'}, { value: '100k-plus', label: '$100, 000 + ', description: 'Large-scale projects'}, { value: 'custom', label: 'Custom Pricing', description: 'Let&quots discuss your needs'}] const timelineOptions = [' { value: 'asap', label: 'ASAP', description: 'Immediate start required' }, { value: '1-2-weeks', label: '1-2 Weeks', description: 'Quick turnaround needed'}, { value: '1-month', label: '1 Month', description: 'Standard project timeline'}, { value: '2-3-months', label: '2-3 Months', description: 'Complex project timeline'}, { value: '3-plus-months', label: '3+ Months', description: 'Long-term project'}, { value: 'flexible', label: 'Flexible', description: 'Timeline can be discussed'}] const urgencyLevels = [ { value: 'low', label: 'Low', description: 'No immediate deadline', color: 'text-green-400'}, { value: 'medium', label: 'Medium', description: 'Standard project timeline', color: 'text-yellow-400'}, { value: 'high', label: 'High', description: 'Urgent delivery needed', color: 'text-orange-400'}, { value: 'critical', label: 'Critical', description: 'Emergency situation', color: 'text-red-400'}] const handleInputChange = e => { const { name, value } = e.target setFormData(prev => ({ ...prev, [name]: value})) } const handleSubmit = async e => { e.preventDefault() setSubmissionStatus('submitting')',;import { useState } from 'react''
-  Calculator,;
-  Clock,;
-  CheckCircle,;
-  AlertCircle,;
-  Send,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  Star,;
-  Users,;
-  Zap,;
-  Shield,;
-  Brain,;
-  Cloud,;
-  Smartphone,;
-  Globe,;
-  Database,;
-  BarChart3,;
+ export default function RequestQuote() { const [formData, setFormData] = useState({ firstName: ', lastName: ', email: ', phone: ', comp: ', projectType: ', budget: ', timeline: ', description: ', urgency: 'medium'}) const [submissionStatus, setSubmissionStatus] = useState('idle') const projectTypes = [ { value: 'web-development', label: 'Web Development', icon: Globe, description: 'Custom websites and web applications'}, { value: 'mobile-app', label: 'Mobile App Development', icon: Smartphone, description: 'iOS and Android applications'}, { value: 'ai-ml', label: 'AI & Machine Learning', icon: Brain, description: 'Intelligent automation and analytics'}, { value: 'cloud-infrastructure', label: 'Cloud Infrastructure', icon: Cloud, description: 'AWS, Azure, GCP solutions'}, { value: 'cybersecurity', label: 'Cybersecurity', icon: Shield, description: 'Security audits and implementation'}, { value: 'data-analytics', label: 'Data Analytics', icon: BarChart3, description: 'Business intelligence and reporting'}, { value: 'ui-ux-design', label: 'UI/UX Design', icon: Palette, description: 'User interface and experience design'}, { value: 'software-development', label: 'Custom Software', icon: Code, description: 'Enterprise software solutions'}, { value: 'devops', label: 'DevOps & CI/CD', icon: Server, description: 'Automation and deployment pipelines'}, { value: 'network-infrastructure', label: 'Network Infrastructure', icon: Wifi, description: 'Network design and setup'}, { value: 'database-design', label: 'Database Design', icon: Database, description: 'Database architecture and optimization'}, { value: 'consulting', label: 'IT Consulting', icon: Briefcase, description: 'Strategic technology guidance'}] const budgetRanges = [ { value: 'under-10k', label: 'Under $10,000', description: 'Small projects and MVPs'}, { value: '10k-25k', label: '$10,000 - $25, 000', description: 'Medium-sized applications'}, { value: '25k-50k', label: '$25, 000 - $50,000', description: 'Complex applications'}, { value: '50k-100k', label: '$50,000 - $100, 000', description: 'Enterprise solutions'}, { value: '100k-plus', label: '$100, 000 + ', description: 'Large-scale projects'}, { value: 'custom', label: 'Custom Pricing', description: 'Let&quots discuss your needs'}] const timelineOptions = [' { value: 'asap', label: 'ASAP', description: 'Immediate start required' }, { value: '1-2-weeks', label: '1-2 Weeks', description: 'Quick turnaround needed'}, { value: '1-month', label: '1 Month', description: 'Standard project timeline'}, { value: '2-3-months', label: '2-3 Months', description: 'Complex project timeline'}, { value: '3-plus-months', label: '3+ Months', description: 'Long-term project'}, { value: 'flexible', label: 'Flexible', description: 'Timeline can be discussed'}] const urgencyLevels = [ { value: 'low', label: 'Low', description: 'No immediate deadline', color: 'text-green-400'}, { value: 'medium', label: 'Medium', description: 'Standard project timeline', color: 'text-yellow-400'}, { value: 'high', label: 'High', description: 'Urgent delivery needed', color: 'text-orange-400'}, { value: 'critical', label: 'Critical', description: 'Emergency situation', color: 'text-red-400'}] const handleInputChange = e => { const { name, value } = e.target setFormData(prev => ({ ...prev, [name]: value})) } const handleSubmit = async e => { e.preventDefault() setSubmissionStatus('submitting')',import { useState } from 'react''
+  Calculator,
+  Clock,
+  CheckCircle,
+  AlertCircle,
+  Send,
+  Phone,
+  Mail,
+  MapPin,
+  Star,
+  Users,
+  Zap,
+  Shield,
+  Brain,
+  Cloud,
+  Smartphone,
+  Globe,
+  Database,
+  BarChart3,
   Palette,
   Code,'
   Server,''
@@ -835,8 +835,8 @@ export default function RequestQuote() {}
     timeline: '','''
     description: '','''
     urgency: 'medium'})'
-  const [submissionStatus, setSubmissionStatus] = useState('idle');
-  const projectTypes = [];
+  const [submissionStatus, setSubmissionStatus] = useState('idle')
+  const projectTypes = []
     {}'
 '
 ''
@@ -844,7 +844,7 @@ export default function RequestQuote() {}
       value: 'web - development',''',
       label: 'Web Development',''
       icon: Globe,'''
-      description: 'Custom websites and web applications'},;
+      description: 'Custom websites and web applications'},
     {}'
 '
 ''
@@ -852,7 +852,7 @@ export default function RequestQuote() {}
       value: 'mobile - app',''',
       label: 'Mobile App Development',''
       icon: Smartphone,'''
-      description: 'iOS and Android applications'},;
+      description: 'iOS and Android applications'},
     {}'
 '
 ''
@@ -860,7 +860,7 @@ export default function RequestQuote() {}
       value: 'ai - ml',''',
       label: 'AI & Machine Learning',''
       icon: Brain,'''
-      description: 'Intelligent automation and analytics'},;
+      description: 'Intelligent automation and analytics'},
     {}'
 '
 ''
@@ -868,7 +868,7 @@ export default function RequestQuote() {}
       value: 'cloud - infrastructure',''',
       label: 'Cloud Infrastructure',''
       icon: Cloud,'''
-      description: 'AWS, Azure, GCP solutions'},;
+      description: 'AWS, Azure, GCP solutions'},
     {}'
 '
 ''
@@ -876,7 +876,7 @@ export default function RequestQuote() {}
       value: 'cybersecurity','''
       label: 'Cybersecurity',''
       icon: Shield,'''
-      description: 'Security audits and implementation'},;
+      description: 'Security audits and implementation'},
     {}'
 '
 ''
@@ -884,7 +884,7 @@ export default function RequestQuote() {}
       value: 'data - analytics',''',
       label: 'Data Analytics',''
       icon: BarChart3,'''
-      description: 'Business intelligence and reporting'},;
+      description: 'Business intelligence and reporting'},
     {}'
 '
 ''
@@ -892,7 +892,7 @@ export default function RequestQuote() {}
       value: 'ui - ux-design',''',
       label: 'UI / UX Design','',
       icon: Palette,'''
-      description: 'User interface and experience design'},;
+      description: 'User interface and experience design'},
     {}'
 '
 ''
@@ -900,7 +900,7 @@ export default function RequestQuote() {}
       value: 'software - development',''',
       label: 'Custom Software',''
       icon: Code,'''
-      description: 'Enterprise software solutions'},;
+      description: 'Enterprise software solutions'},
     {}'
 '
 ''
@@ -908,7 +908,7 @@ export default function RequestQuote() {}
       value: 'devops','''
       label: 'DevOps & CI / CD','',
       icon: Server,'''
-      description: 'Automation and deployment pipelines'},;
+      description: 'Automation and deployment pipelines'},
     {}'
 '
 ''
@@ -916,7 +916,7 @@ export default function RequestQuote() {}
       value: 'network - infrastructure',''',
       label: 'Network Infrastructure',''
       icon: Wifi,'''
-      description: 'Network design and setup'},;
+      description: 'Network design and setup'},
     {}'
 '
 ''
@@ -924,18 +924,18 @@ export default function RequestQuote() {}
       value: 'database - design',''',
       label: 'Database Design',''
       icon: Database,'''
-      description: 'Database architecture and optimization'},;
+      description: 'Database architecture and optimization'},
     {}'
 '
       value: 'consulting','
       label: 'IT Consulting','
 icon: Briefcase,'
- export default function RequestQuote() { const [formData, setFormData] = useState({ firstName: ', lastName: ', email: ', phone: ', comp: ', projectType: ', budget: ', timeline: ', description: ', urgency: 'medium'}) const [submissionStatus, setSubmissionStatus] = useState('idle') const projectTypes = [ { value: 'web-development', label: 'Web Development', icon: Globe, description: 'Custom websites and web applications'}, { value: 'mobile-app', label: 'Mobile App Development', icon: Smartphone, description: 'iOS and Android applications'}, { value: 'ai-ml', label: 'AI & Machine Learning', icon: Brain, description: 'Intelligent automation and analytics'}, { value: 'cloud-infrastructure', label: 'Cloud Infrastructure', icon: Cloud, description: 'AWS, Azure, GCP solutions'}, { value: 'cybersecurity', label: 'Cybersecurity', icon: Shield, description: 'Security audits and implementation'}, { value: 'data-analytics', label: 'Data Analytics', icon: BarChart3, description: 'Business intelligence and reporting'}, { value: 'ui-ux-design', label: 'UI/UX Design', icon: Palette, description: 'User interface and experience design'}, { value: 'software-development', label: 'Custom Software', icon: Code, description: 'Enterprise software solutions'}, { value: 'devops', label: 'DevOps & CI/CD', icon: Server, description: 'Automation and deployment pipelines'}, { value: 'network-infrastructure', label: 'Network Infrastructure', icon: Wifi, description: 'Network design and setup'}, { value: 'database-design', label: 'Database Design', icon: Database, description: 'Database architecture and optimization'}, { value: 'consulting', label: 'IT Consulting', icon: Briefcase, description: 'Strategic technology guidance'}] const budgetRanges = [ { value: 'under-10k', label: 'Under $10,000', description: 'Small projects and MVPs'}, { value: '10k-25k', label: '$10,000 - $25, 000', description: 'Medium-sized applications'}, { value: '25k-50k', label: '$25, 000 - $50,000', description: 'Complex applications'}, { value: '50k-100k', label: '$50,000 - $100, 000', description: 'Enterprise solutions'}, { value: '100k-plus', label: '$100, 000 + ', description: 'Large-scale projects'}, { value: 'custom', label: 'Custom Pricing', description: 'Let&quots discuss your needs'}] const timelineOptions = [' { value: 'asap', label: 'ASAP', description: 'Immediate start required' }, { value: '1-2-weeks', label: '1-2 Weeks', description: 'Quick turnaround needed'}, { value: '1-month', label: '1 Month', description: 'Standard project timeline'}, { value: '2-3-months', label: '2-3 Months', description: 'Complex project timeline'}, { value: '3-plus-months', label: '3+ Months', description: 'Long-term project'}, { value: 'flexible', label: 'Flexible', description: 'Timeline can be discussed'}] const urgencyLevels = [ { value: 'low', label: 'Low', description: 'No immediate deadline', color: 'text-green-400'}, { value: 'medium', label: 'Medium', description: 'Standard project timeline', color: 'text-yellow-400'}, { value: 'high', label: 'High', description: 'Urgent delivery needed', color: 'text-orange-400'}, { value: 'critical', label: 'Critical', description: 'Emergency situation', color: 'text-red-400'}] const handleInputChange = e => { const { name, value } = e.target setFormData(prev => ({ ...prev, [name]: value})) } const handleSubmit = async e => { e.preventDefault() setSubmissionStatus('submitting')',;import { useState } from 'react''''"'
+ export default function RequestQuote() { const [formData, setFormData] = useState({ firstName: ', lastName: ', email: ', phone: ', comp: ', projectType: ', budget: ', timeline: ', description: ', urgency: 'medium'}) const [submissionStatus, setSubmissionStatus] = useState('idle') const projectTypes = [ { value: 'web-development', label: 'Web Development', icon: Globe, description: 'Custom websites and web applications'}, { value: 'mobile-app', label: 'Mobile App Development', icon: Smartphone, description: 'iOS and Android applications'}, { value: 'ai-ml', label: 'AI & Machine Learning', icon: Brain, description: 'Intelligent automation and analytics'}, { value: 'cloud-infrastructure', label: 'Cloud Infrastructure', icon: Cloud, description: 'AWS, Azure, GCP solutions'}, { value: 'cybersecurity', label: 'Cybersecurity', icon: Shield, description: 'Security audits and implementation'}, { value: 'data-analytics', label: 'Data Analytics', icon: BarChart3, description: 'Business intelligence and reporting'}, { value: 'ui-ux-design', label: 'UI/UX Design', icon: Palette, description: 'User interface and experience design'}, { value: 'software-development', label: 'Custom Software', icon: Code, description: 'Enterprise software solutions'}, { value: 'devops', label: 'DevOps & CI/CD', icon: Server, description: 'Automation and deployment pipelines'}, { value: 'network-infrastructure', label: 'Network Infrastructure', icon: Wifi, description: 'Network design and setup'}, { value: 'database-design', label: 'Database Design', icon: Database, description: 'Database architecture and optimization'}, { value: 'consulting', label: 'IT Consulting', icon: Briefcase, description: 'Strategic technology guidance'}] const budgetRanges = [ { value: 'under-10k', label: 'Under $10,000', description: 'Small projects and MVPs'}, { value: '10k-25k', label: '$10,000 - $25, 000', description: 'Medium-sized applications'}, { value: '25k-50k', label: '$25, 000 - $50,000', description: 'Complex applications'}, { value: '50k-100k', label: '$50,000 - $100, 000', description: 'Enterprise solutions'}, { value: '100k-plus', label: '$100, 000 + ', description: 'Large-scale projects'}, { value: 'custom', label: 'Custom Pricing', description: 'Let&quots discuss your needs'}] const timelineOptions = [' { value: 'asap', label: 'ASAP', description: 'Immediate start required' }, { value: '1-2-weeks', label: '1-2 Weeks', description: 'Quick turnaround needed'}, { value: '1-month', label: '1 Month', description: 'Standard project timeline'}, { value: '2-3-months', label: '2-3 Months', description: 'Complex project timeline'}, { value: '3-plus-months', label: '3+ Months', description: 'Long-term project'}, { value: 'flexible', label: 'Flexible', description: 'Timeline can be discussed'}] const urgencyLevels = [ { value: 'low', label: 'Low', description: 'No immediate deadline', color: 'text-green-400'}, { value: 'medium', label: 'Medium', description: 'Standard project timeline', color: 'text-yellow-400'}, { value: 'high', label: 'High', description: 'Urgent delivery needed', color: 'text-orange-400'}, { value: 'critical', label: 'Critical', description: 'Emergency situation', color: 'text-red-400'}] const handleInputChange = e => { const { name, value } = e.target setFormData(prev => ({ ...prev, [name]: value})) } const handleSubmit = async e => { e.preventDefault() setSubmissionStatus('submitting')',import { useState } from 'react''''"'
     description: '', ''';""'
     urgency: 'medium'})';''
- export default function RequestQuote() { const [formData, setFormData] = useState({ firstName: ', lastName: ', email: ', phone: ', comp: ', projectType: ', budget: ', timeline: ', description: ', urgency: 'medium'}) const [submissionStatus, setSubmissionStatus] = useState('idle') const projectTypes = [;
-  { value: 'web-development', label: 'Web Development', icon: Globe, description: 'Custom websites and web applications'}, { value: 'mobile-app', label: 'Mobile App Development', icon: Smartphone, description: 'iOS and Android applications'}, { value: 'ai-ml', label: 'AI & Machine Learning', icon: Brain, description: 'Intelligent automation and analytics'}, { value: 'cloud-infrastructure', label: 'Cloud Infrastructure', icon: Cloud, description: 'AWS, Azure, GCP solutions'}, { value: 'cybersecurity', label: 'Cybersecurity', icon: Shield, description: 'Security audits and implementation'}, { value: 'data-analytics', label: 'Data Analytics', icon: BarChart3, description: 'Business intelligence and reporting'}, { value: 'ui-ux-design', label: 'UI/UX Design', icon: Palette, description: 'User interface and experience design'}, { value: 'software-development', label: 'Custom Software', icon: Code, description: 'Enterprise software solutions'}, { value: 'devops', label: 'DevOps & CI/CD', icon: Server, description: 'Automation and deployment pipelines'}, { value: 'network-infrastructure', label: 'Network Infrastructure', icon: Wifi, description: 'Network design and setup'}, { value: 'database-design', label: 'Database Design', icon: Database, description: 'Database architecture and optimization'}, { value: 'consulting', label: 'IT Consulting', icon: Briefcase, description: 'Strategic technology guidance'}] const budgetRanges = [;
-  { value: 'under-10k', label: 'Under $10,000', description: 'Small projects and MVPs'}, { value: '10k-25k', label: '$10,000 - $25, 000', description: 'Medium-sized applications'}, { value: '25k-50k', label: '$25, 000 - $50,000', description: 'Complex applications'}, { value: '50k-100k', label: '$50,000 - $100, 000', description: 'Enterprise solutions'}, { value: '100k-plus', label: '$100, 000+', description: 'Large-scale projects'}, { value: 'custom', label: 'Custom Pricing', description: 'Let&quots discuss your needs'}] const timelineOptions = [' { value: 'asap', label: 'ASAP', description: 'Immediate start required' }, { value: '1-2-weeks', label: '1-2 Weeks', description: 'Quick turnaround needed'}, { value: '1-month', label: '1 Month', description: 'Standard project timeline'}, { value: '2-3-months', label: '2-3 Months', description: 'Complex project timeline'}, { value: '3-plus-months', label: '3+ Months', description: 'Long-term project'}, { value: 'flexible', label: 'Flexible', description: 'Timeline can be discussed'}] const urgencyLevels = [;
+ export default function RequestQuote() { const [formData, setFormData] = useState({ firstName: ', lastName: ', email: ', phone: ', comp: ', projectType: ', budget: ', timeline: ', description: ', urgency: 'medium'}) const [submissionStatus, setSubmissionStatus] = useState('idle') const projectTypes = [
+  { value: 'web-development', label: 'Web Development', icon: Globe, description: 'Custom websites and web applications'}, { value: 'mobile-app', label: 'Mobile App Development', icon: Smartphone, description: 'iOS and Android applications'}, { value: 'ai-ml', label: 'AI & Machine Learning', icon: Brain, description: 'Intelligent automation and analytics'}, { value: 'cloud-infrastructure', label: 'Cloud Infrastructure', icon: Cloud, description: 'AWS, Azure, GCP solutions'}, { value: 'cybersecurity', label: 'Cybersecurity', icon: Shield, description: 'Security audits and implementation'}, { value: 'data-analytics', label: 'Data Analytics', icon: BarChart3, description: 'Business intelligence and reporting'}, { value: 'ui-ux-design', label: 'UI/UX Design', icon: Palette, description: 'User interface and experience design'}, { value: 'software-development', label: 'Custom Software', icon: Code, description: 'Enterprise software solutions'}, { value: 'devops', label: 'DevOps & CI/CD', icon: Server, description: 'Automation and deployment pipelines'}, { value: 'network-infrastructure', label: 'Network Infrastructure', icon: Wifi, description: 'Network design and setup'}, { value: 'database-design', label: 'Database Design', icon: Database, description: 'Database architecture and optimization'}, { value: 'consulting', label: 'IT Consulting', icon: Briefcase, description: 'Strategic technology guidance'}] const budgetRanges = [
+  { value: 'under-10k', label: 'Under $10,000', description: 'Small projects and MVPs'}, { value: '10k-25k', label: '$10,000 - $25, 000', description: 'Medium-sized applications'}, { value: '25k-50k', label: '$25, 000 - $50,000', description: 'Complex applications'}, { value: '50k-100k', label: '$50,000 - $100, 000', description: 'Enterprise solutions'}, { value: '100k-plus', label: '$100, 000+', description: 'Large-scale projects'}, { value: 'custom', label: 'Custom Pricing', description: 'Let&quots discuss your needs'}] const timelineOptions = [' { value: 'asap', label: 'ASAP', description: 'Immediate start required' }, { value: '1-2-weeks', label: '1-2 Weeks', description: 'Quick turnaround needed'}, { value: '1-month', label: '1 Month', description: 'Standard project timeline'}, { value: '2-3-months', label: '2-3 Months', description: 'Complex project timeline'}, { value: '3-plus-months', label: '3+ Months', description: 'Long-term project'}, { value: 'flexible', label: 'Flexible', description: 'Timeline can be discussed'}] const urgencyLevels = [
   { value: 'low', label: 'Low', description: 'No immediate deadline', color: 'text-green-400'}, { value: 'medium', label: 'Medium', description: 'Standard project timeline', color: 'text-yellow-400'}, { value: 'high', label: 'High', description: 'Urgent delivery needed', color: 'text-orange-400'}, { value: 'critical', label: 'Critical', description: 'Emergency situation', color: 'text-red-400'}] const handleInputChange = e => { const { name, value } = e.target setFormData(prev => ({ ...prev, [name]: value})) } const handleSubmit = async e => { e.preventDefault() setSubmissionStatus('submitting')'';import { useState } from "react,";export default function RequestQuote() {}"
   const [formData, setFormData] = useState({}"
 ''
@@ -951,7 +951,7 @@ icon: Briefcase,'
     timeline: ','''
     description: ',''
     urgency: 'medium'})'
-  const [submissionStatus, setSubmissionStatus] = useState();
+  const [submissionStatus, setSubmissionStatus] = useState()
   const projectTypes = []"
     {}""
 '''
@@ -1295,15 +1295,15 @@ icon: Briefcase,'
     const { name, value } = e.target,
 setFormData(prev => ({}
       ...prev, [name]: value}))}"
-  const handleSubmit = async e => {}"";
-    e.preventDefault()'';
-    setSubmissionStatus();
+  const handleSubmit = async e => {}""
+    e.preventDefault()''
+    setSubmissionStatus()
     // Simulate API call,"
 setTimeout(() => {}""
 '''
 '''
 '''''
-      setSubmissionStatus();
+      setSubmissionStatus()
       // Reset form after success,
 setTimeout(() => {}"
         setFormData({}""
@@ -1318,11 +1318,11 @@ setTimeout(() => {}"
           projectType: '','''''
           budget: '', '''''
           timeline: '','''''
-          description: '', '''';
+          description: '', ''''
           urgency: 'medium'})';''
         setSubmissionStatus('idle')}, 3000)}, 2000)}
-  const isFormValid = formData.firstName &&;
-    formData.lastName &&";
+  const isFormValid = formData.firstName &&
+    formData.lastName &&"
     formData.email &&";"
     formData.projectType';''
 ''''
@@ -1337,9 +1337,9 @@ setTimeout(() => {}"
           description: ','''
           urgency: 'medium'})'
         setSubmissionStatus('idle')}, 3000)}, 2000)}
-  const isFormValid = formData.firstName &&;
-    formData.lastName &&";
-    formData.email &&";
+  const isFormValid = formData.firstName &&
+    formData.lastName &&"
+    formData.email &&"
     formData.projectType,'
 return (''''
     <div className = "min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">'''''
@@ -1506,7 +1506,7 @@ initial="{{" opacity: 0, x: -30 }}"
                         <label key="{type.value}""
                           className="{`flex" items-start p-4 rounded-lg border cursor-pointer transition-all duration-300 ${}`"
 '''
-                            formData.projectType === type.value''`";
+                            formData.projectType === type.value''`"
                               ? 'border-cyan-400 bg-cyan-400/20'''`"`">
                               : 'border-white/20 hover:border-cyan-400/50'``,`;"
 }`}"" >'''''
@@ -1663,7 +1663,7 @@ initial="{{" opacity: 0, x: -30 }}"
                       animate="{{" opacity: 1, y: 0 }}''''
                       className="flex items-center p-4 bg-green-500/20 border border-green-500/50 rounded-lg"'' >'''''"
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3" /" >''''"
-                      <span className="text-green-400">'';
+                      <span className="text-green-400">''
                         Thank you! We&apos;ve received your quote request and will'
                       className = "flex items-center p-4 bg-green-500/20 border border-green-500/50 rounded-lg"" >''''
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3" /" >''''
@@ -1860,18 +1860,17 @@ initial="{{" opacity: 0, x: 30 }}"
           </div>
         </div>
       </section>
-    </div>)};
-;
-export { RequestQuote };
-;
-export { RequestQuote };
-;
-export { RequestQuote };
-;
-export { RequestQuote };
-;
-export { RequestQuote };
+    </div>)}
 
+export { RequestQuote }
+
+export { RequestQuote }
+
+export { RequestQuote }
+
+export { RequestQuote }
+
+export { RequestQuote }
 export { RequestQuote }
 
 export { RequestQuote }

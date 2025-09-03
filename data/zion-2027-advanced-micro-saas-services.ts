@@ -1,42 +1,41 @@
-import { ServiceVariant } from '../types/service-variants';
-
+import { ServiceVariant } from '../types/service-variants'
 export interface Zion2027AdvancedMicroSaasService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
+  id: string
+  name: string
+  tagline: string
+  price: string
+  period: string
+  description: string
+  features: string[]
+  popular: boolean
+  icon: string
+  color: string
+  textColor: string
+  link: string
+  marketPosition: string
+  targetAudience: string
+  trialDays: number
+  setupTime: string
+  category: string
+  realService: boolean
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
+  roi: string
+  competitors: string[]
+  marketSize: string
+  growthRate: string
+  variant: ServiceVariant
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string};
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
+    mobile: string
+    email: string
+    address: string
+    website: string}
+  realImplementation: boolean
+  implementationDetails: string
+  launchDate: string
+  customers: number
+  rating: number
   reviews: number}
 
 const contact = {
@@ -44,8 +43,7 @@ const contact = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',
-};
-
+}
 export const zion2027AdvancedMicroSaasServices: Zion2027AdvancedMicroSaasService[] =
   [
     // AI-Powered Autonomous Financial Trading Platform
@@ -902,4 +900,4 @@ export const zion2027AdvancedMicroSaasServices: Zion2027AdvancedMicroSaasService
       rating: 4.8,
       reviews: 1450,
     },
-  ];
+  ]

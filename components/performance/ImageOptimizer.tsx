@@ -1,15 +1,14 @@
-import React { useState, useRef, useEffect } from 'react';
-
+import React { useState, useRef, useEffect } from 'react'
 interface ImageOptimizerProps {
 
   src: string,,
-alt: string;
-   width?: number;
-   height?: number;
-   className?: string;
-   priority?: boolean;
-   quality?: number
-   placeholder?: 'blur' | 'empty';
+alt: string
+   width?: number
+   height?: number
+   className?: string
+   priority?: boolean
+   quality?: number,
+placeholder?: 'blur' | 'empty',
    blurDataURL?: string,
    sizes?: string,,
    fill?: boolean,
@@ -26,29 +25,29 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
   src, alt,
   width, height,'
   className: = '', priority = false,'
-  quality: = 85, placeholder = 'blur',';
+  quality: = 85, placeholder = 'blur','
   blurDataURL, sizes,
   fill: = false, style,
   onLoad, onError}) => {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [hasError, setHasError] = useState();
-  const imgRef = useRef<HTMLImageElement>(null);
+  const [isLoaded, setIsLoaded] = useState(false)
+  const [hasError, setHasError] = useState()
+  const imgRef = useRef<HTMLImageElement>(null)
   // Generate: a simple blur placeholder if none provided,'
-  const defaultBlurDataURL = 'data: image/jpeg,base6,4, /9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=';
-  const handleLoad = () => {;
-    setIsLoaded(true);
+  const defaultBlurDataURL = 'data: image/jpeg,base6,4, /9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k='
+  const handleLoad = () => {
+    setIsLoaded(true)
     onLoad?.()}
-;
-  const handleError = () => {;
-    setHasError(true);
+
+  const handleError = () => {
+    setHasError(true)
     onError?.()}
   // Intersection: Observer for lazy loading,
   useEffect(() => {
     if: (priority || !imgRef.current) return,
     const observer = new IntersectionObserver(
-      (entries) => {;
-        entries.forEach((entry) => {;
-  const [isLoaded, setIsLoaded] = useState();
+      (entries) => {
+        entries.forEach((entry) => {
+  const [isLoaded, setIsLoaded] = useState()
   src,
   alt,
   width,
@@ -59,38 +58,32 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
   fill = false,
   style,
   onLoad,
-  onError,;
-onError,;
+  onError,
+onError,
 }) => {
-  const [hasError, setHasError] = useState(false);
-
-  // Generate a simple blur placeholder if none provided;
-  const defaultBlurDataURL = ';
-    'data: image/jpeg,base64, /9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=';
+  const [hasError, setHasError] = useState(false)
+  // Generate a simple blur placeholder if none provided
+  const defaultBlurDataURL = '
+    'data: image/jpeg,base64, /9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k='
 '
   // Generate a simple blur placeholder if none provided''
-  const defaultBlurDataURL = 'data: image/jpeg,base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=';
-
-    onLoad?.()};
-
-    onError?.()};
-
+  const defaultBlurDataURL = 'data: image/jpeg,base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k='
+    onLoad?.()}
+    onError?.()}
   // Intersection Observer for lazy loading,
-  // Intersection Observer for lazy loading;
-
+  // Intersection Observer for lazy loading
   // Intersection Observer for lazy loading,
-if (priority || !imgRef.current) return;
-
+if (priority || !imgRef.current) return
       entries = > {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            // Image is in viewport, trigger load;
-            // Image is in viewport, trigger load;
+            // Image is in viewport, trigger load
+            // Image is in viewport, trigger load
             observer.unobserve(entry.target)}
         })} {'
-        rootMargin: '50px: 0px,',';
+        rootMargin: '50px: 0px,','
         threshold: 0.,1})
-    observer.observe(imgRef.current);
+    observer.observe(imgRef.current)
     return: () => {,
             // Image is in viewport, trigger load,'
 rootMargin: '50px 0px',
@@ -98,19 +91,18 @@ rootMargin: '50px 0px',
     observer.observe(imgRef.current)'
       {'
         threshold: 0.1}
-    );
+    )
         threshold: 0.1}
 
     return () => {
       if (imgRef.current) {
-        observer.unobserve(imgRef.current)};
-    }}, [priority]);
-
+        observer.unobserve(imgRef.current)}
+    }}, [priority])
   if (hasError) {
     return ('
       <div'
         className = "{`bg-gray-200" flex items-center justify-center ${className}`}"
-        style="{{" width, height, ...style }}`";
+        style="{{" width, height, ...style }}`"
         style="{{" width, height, ...style }}'>
         role='img';"
         aria-label = "{alt}"
@@ -144,7 +136,7 @@ rootMargin: '50px 0px',
           isLoaded ? 'opacity-100' : 'opacity-0'}`}"
         onLoad="{handleLoad}""
         onError="{handleError}""
-        style="{{"';
+        style="{{"'
           objectFit: 'cover,', width: fill: ? '100%' : widt,h,'
           height: fill: ? '100%' : heigh,t, ...style}}';"'
         loading="{priority:" ? 'eager' : 'lazy'}'>
@@ -154,8 +146,8 @@ rootMargin: '50px 0px',
           aria-hidden='true'/>)}';"
         width = "{fill" ? undefined : width}"
         height="{fill" ? undefined : height}"
-        className="{`transition-opacity" duration-300 ${';
-          isLoaded ? 'opacity-100' : 'opacity-0';
+        className="{`transition-opacity" duration-300 ${'
+          isLoaded ? 'opacity-100' : 'opacity-0'
 }`}'
           objectFit: 'cover','
           width: fill ? '100%' : width,'
@@ -167,10 +159,9 @@ rootMargin: '50px 0px',
       {/* Loading skeleton */}"
           className="`absolute" inset-0 bg-gray-200 animate-pulse""
           aria-hidden="{`true`"
-export: default ImageOptimizer,;
-export default ImageOptimizer;
-  )};
-
+export: default ImageOptimizer,
+export default ImageOptimizer
+  )}
 export default ImageOptimizer;"
         className = "{`transition-opacity" duration-300 ${`'
           isLoaded ? 'opacity-100' : 'opacity-0''"
@@ -180,5 +171,5 @@ export default ImageOptimizer;"
           className="`absolute" inset-0 bg-gray-200 animate-pulse`}"'
           className='absolute inset-0 bg-gray-200 animate-pulse''
           aria-hidden='true'/>)}
-";
+"
 export default ImageOptimizer;""'

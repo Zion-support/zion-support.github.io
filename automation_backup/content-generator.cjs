@@ -1,20 +1,18 @@
-#!/usr/bin/env node;
-const fs = require('fs');
-const path = require('path');
-
+#!/usr/bin/env node
+const fs = require('fs')
+const path = require('path')
 class ContentGenerator {
   constructor() {
     this.templates = {
       blog: this.getBlogTemplate(),
       component: this.getComponentTemplate(),
-      page: this.getPageTemplate(),;
-};
+      page: this.getPageTemplate(),
+}
   }
 
   getBlogTemplate() {
-    return `import type { NextPage } from 'next';
-import Head from 'next/head';
-
+    return `import type { NextPage } from 'next'
+import Head from 'next/head'
 const BlogPost: NextPage = () => {
   return (
     <>
@@ -29,17 +27,15 @@ const BlogPost: NextPage = () => {
         </div>
       </div>
     </>
-  );
-};
-
-export default BlogPost;`;
+  )
+}
+export default BlogPost;`
   }
 
   getComponentTemplate() {
-    return `import React from 'react';
-
+    return `import React from 'react'
 interface ComponentProps {
-  // Add props here;
+  // Add props here
 }
 
 const Component: React.FC<ComponentProps> = ({}) => {
@@ -47,16 +43,14 @@ const Component: React.FC<ComponentProps> = ({}) => {
     <div className="">
       {/* Component content */}
     </div>
-  );
-};
-
-export default Component;`;
+  )
+}
+export default Component;`
   }
 
   getPageTemplate() {
-    return `import type { NextPage } from 'next';
-import Head from 'next/head';
-
+    return `import type { NextPage } from 'next'
+import Head from 'next/head'
 const Page: NextPage = () => {
   return (
     <>
@@ -69,43 +63,40 @@ const Page: NextPage = () => {
         {/* Page content */}
       </div>
     </>
-  );
-};
-
-export default Page;`;
+  )
+}
+export default Page;`
   }
 
   generateContent(type, name, options = {}) {
-    const template = this.templates[type];
+    const template = this.templates[type]
     if (!template) {
-      console.error('Unknown content type:', type);
-      return;
+      console.error('Unknown content type:', type)
+      return
     }
 
-    const content = template;
+    const content = template
       .replace(/Blog Post Title/g, options.title || name)
       .replace(
         /Blog post description/g,
         options.description || `Generated content`
       )
       .replace(/Component/g, name)
-      .replace(/Page Title/g, options.title || name);
-
-    const fileName = `${name.toLowerCase().replace(/\s+/g, '-')}.${type === `blog` ? 'tsx' : type === 'component' ? 'tsx' : 'tsx'}`;
-    const filePath = path.join(__dirname, '..', '..', `generated`, fileName);
-
-    // Ensure directory exists;
-    const dir = path.dirname(filePath);
+      .replace(/Page Title/g, options.title || name)
+    const fileName = `${name.toLowerCase().replace(/\s+/g, '-')}.${type === `blog` ? 'tsx' : type === 'component' ? 'tsx' : 'tsx'}`
+    const filePath = path.join(__dirname, '..', '..', `generated`, fileName)
+    // Ensure directory exists
+    const dir = path.dirname(filePath)
     if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir, { recursive: true });
+      fs.mkdirSync(dir, { recursive: true })
     }
 
-    fs.writeFileSync(filePath, content);
-    console.log(`✅ Generated ${type}: ${fileName}`);
+    fs.writeFileSync(filePath, content)
+    console.log(`✅ Generated ${type}: ${fileName}`)
   }
 }
 
 // Example usage:
-// const generator = new ContentGenerator();
-// generator.generateContent(`blog`, 'My Blog Post', { title: 'My Blog Post', description: 'A great blog post' });
-console.log('Content generator ready');
+// const generator = new ContentGenerator()
+// generator.generateContent(`blog`, 'My Blog Post', { title: 'My Blog Post', description: 'A great blog post' })
+console.log('Content generator ready')

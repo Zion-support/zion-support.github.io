@@ -1,10 +1,10 @@
-import React, { useState, useEffect, createContext, useContext } from 'react' ; const AccessibilityContext = createContext(undefined); export const useAccessibility = () => {; const context = useContext(AccessibilityContext); if(!context) {; throw new Error('useAccessibility must be used within an AccessibilityProvider'); ; return context}; ; const AccessibilityContext = createContext(null); export const useAccessibility = () => {; const context = useContext(AccessibilityContext); if(!context) {; throw new Error('useAccessibility must be used within an AccessibilityProvider')}; return context}; ;};""";"
+import React, { useState, useEffect, createContext, useContext } from 'react' ; const AccessibilityContext = createContext(undefined); export const useAccessibility = () => {; const context = useContext(AccessibilityContext); if(!context) {; throw new Error('useAccessibility must be used within an AccessibilityProvider'); ; return context}; ; const AccessibilityContext = createContext(null); export const useAccessibility = () => {; const context = useContext(AccessibilityContext); if(!context) {; throw new Error('useAccessibility must be used within an AccessibilityProvider')}; return context}; };""";"
         window.addEventListener('keydown', handleKeyDown);";"";"
         return () => window.removeEventListener('keydown', handleKeyDown)}, [isOpen, toggleHighContrast, toggleReducedMotion]);";"";"
     return (<>;"";""";"
       {/*   */}";"";"";"
       <motion.button whileHover="{{" scale: 1.1 }} whileTap="{{" scale: 0.9 }} onClick="{()" => setIsOpen(true)} className="fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-br from-zion-cyan to-zion-purple text-white rounded-full shadow-2xl shadow-zion-cyan/25 z-50 flex items-center justify-center hover: shadow-2xl hover:shadow-zion-cyan/40 transition-all duration-300" aria-label="Open Accessibility Settings">";"";"";"
-        <Accessibility className="w-6 h-6"/>;","",",
+        <Accessibility className="w-6 h-6"/>,","",",
       </motion.button>;","","
       {/*   */};"";""";"
       <AnimatePresence>";"";"";"
@@ -44,112 +44,112 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"});,"})"
                     if (document.activeElement === lastFocusableElement) {;,"});,"})"
                         e.preventDefault();,"});,"})"
 ursor/automate-test-fix-improve-and-merge-code-99d1,"});,"})'" ;,"});,"})'
-  'useAccessibility must be used within an AccessibilityProvider')  return context };
+  'useAccessibility must be used within an AccessibilityProvider')  return context }
 ;"""
   'react';"""
   'framer-motion';"""
-  '../ui/button;
-const AccessibilityContext = createContext(undefined);
-export const useAccessibility = () => {;
-    const context = useContext(AccessibilityContext);
+  '../ui/button
+const AccessibilityContext = createContext(undefined)
+export const useAccessibility = () => {
+    const context = useContext(AccessibilityContext)
     if (!context) {'
         throw new Error(""
-  'useAccessibility must be used within an AccessibilityProvider')  return context };
+  'useAccessibility must be used within an AccessibilityProvider')  return context }
 ;""
   'react';""
   'framer-motion';""
-  '../ui/button;
-const AccessibilityContext = createContext(undefined);
-export const useAccessibility = () => {const context = useContext(AccessibilityContext);
+  '../ui/button
+const AccessibilityContext = createContext(undefined)
+export const useAccessibility = () => {const context = useContext(AccessibilityContext)
     if (!context) {"
         throw new Error("
-  'useAccessibility must be used within an AccessibilityProvider');
-    return context}// Accessibility Provider Component;
-export const AccessibilityProvider = memo(({children }) => {const [highContrast, setHighContrast] = useState(false);
-ursor/automate-test-fix-improve-and-merge-code-48f3}, [])    // Save settings to localStorage;
-    useEffect(() => {const settings = {;
-  react&apos,framer-motion';;
-  &apos;framer-motion&apos;../ui/button&apos;&apos, const AccessibilityContext = createContext(undefined) export const useAccessibility = () => {} const;const;const context = useContext(AccessibilityContext) if (!context) { throw new Error(;
+  'useAccessibility must be used within an AccessibilityProvider')
+    return context}// Accessibility Provider Component
+export const AccessibilityProvider = memo(({children }) => {const [highContrast, setHighContrast] = useState(false)
+ursor/automate-test-fix-improve-and-merge-code-48f3}, [])    // Save settings to localStorage
+    useEffect(() => {const settings = {
+  react&apos,framer-motion';
+  &apos;framer-motion&apos;../ui/button&apos;&apos, const AccessibilityContext = createContext(undefined) export const useAccessibility = () => {} const;const;const context = useContext(AccessibilityContext) if (!context) { throw new Error(
   &apos;useAccessibility must be used within an AccessibilityProvider&apos)  return context };"""
-  '../ui/button' const AccessibilityContext = createContext(undefined) export const useAccessibility = () => { const context = useContext(AccessibilityContext) if (!context) { throw new Error("";
+  '../ui/button' const AccessibilityContext = createContext(undefined) export const useAccessibility = () => { const context = useContext(AccessibilityContext) if (!context) { throw new Error(""
   'useAccessibility must be used within an AccessibilityProvider')  return context };"
 ;""""""
   'react';""""""
   'framer-motion';"""""
   'framer-motion'
-  'useAccessibility must be used within an AccessibilityProvider')  return context };
-;react;framer-motion;../ui/button';&apos;&apos;
-const AccessibilityContext = createContext(undefined);
-export const useAccessibility = () => {};
-    const;const;const context = useContext(AccessibilityContext);
+  'useAccessibility must be used within an AccessibilityProvider')  return context }
+;react;framer-motion;../ui/button';&apos;&apos
+const AccessibilityContext = createContext(undefined)
+export const useAccessibility = () => {}
+    const;const;const context = useContext(AccessibilityContext)
     if (!context) {
         throw new Error(
-  &apos;useAccessibility must be used within an AccessibilityProvider&apos);
-    return context}// Accessibility Provider Component;&apos;
-export const AccessibilityProvider = ({ children }) => {};
+  &apos;useAccessibility must be used within an AccessibilityProvider&apos)
+    return context}// Accessibility Provider Component;&apos
+export const AccessibilityProvider = ({ children }) => {}
     const;const;const [highContrast, setHighContrast] = useState(false);"'
   'framer-motion'""
-  '../ui/button' const AccessibilityContext = createContext(undefined) export const useAccessibility = () => { const context = useContext(AccessibilityContext) if (!context) { throw new Error(";
+  '../ui/button' const AccessibilityContext = createContext(undefined) export const useAccessibility = () => { const context = useContext(AccessibilityContext) if (!context) { throw new Error("
   'useAccessibility must be used within an AccessibilityProvider')  return context };"
 ;"""
   'react,""
   'framer-motion,""
-  '../ui/button;
-const AccessibilityContext = createContext(undefined);
-export const useAccessibility = () => {;
-    const context = useContext(AccessibilityContext);
-    if (!context) {;
+  '../ui/button
+const AccessibilityContext = createContext(undefined)
+export const useAccessibility = () => {
+    const context = useContext(AccessibilityContext)
+    if (!context) {
         throw new Error(
-  'useAccessibility must be used within an AccessibilityProvider');
-    return context}// Accessibility Provider Component;
+  'useAccessibility must be used within an AccessibilityProvider')
+    return context}// Accessibility Provider Component
 export const AccessibilityProvider = ({ children }) => {;"
     if (!context) {"""
         throw new Error(""
-  'useAccessibility must be used within an AccessibilityProvider');
-    return context}// Accessibility Provider Component;
-export const AccessibilityProvider = memo(({ children }) => {;
-    const [highContrast, setHighContrast] = useState(false);
-ursor/automate-test-fix-improve-and-merge-code-48f3}, [])    // Save settings to localStorage;
-    useEffect(() => {;
-        const settings = {;
-  highContrast,;
-            reducedMotion,;
-            fontSize,;
-            colorBlindMode;
-ursor/automate-test-fix-improve-and-merge-code-48f3;
-    useEffect(() => {;
-        const root = document.documentElement;
-        // High contrast mode;
-        if (highContrast) {;
-;
+  'useAccessibility must be used within an AccessibilityProvider')
+    return context}// Accessibility Provider Component
+export const AccessibilityProvider = memo(({ children }) => {
+    const [highContrast, setHighContrast] = useState(false)
+ursor/automate-test-fix-improve-and-merge-code-48f3}, [])    // Save settings to localStorage
+    useEffect(() => {
+        const settings = {
+  highContrast,
+            reducedMotion,
+            fontSize,
+            colorBlindMode
+ursor/automate-test-fix-improve-and-merge-code-48f3
+    useEffect(() => {
+        const root = document.documentElement
+        // High contrast mode
+        if (highContrast) {
+
             root.classList.add(
-  'high-contrast');
-        else {;
+  'high-contrast')
+        else {
             root.classList.remove(
-  'high-contrast');
-        // Reduced motion;
-        if (reducedMotion) {;
+  'high-contrast')
+        // Reduced motion
+        if (reducedMotion) {
             root.classList.add(
-  'reduced-motion');
-        else {;
+  'reduced-motion')
+        else {
             root.classList.remove(
-  'reduced-motion');// Font size;
+  'reduced-motion');// Font size
     useEffect(() => {}
-        const settings = {;
-  highContrast, reducedMotion,;
-            fontSize, colorBlindMode;
-ursor/automate-test-fix-improve-and-merge-code-48f3;
+        const settings = {
+  highContrast, reducedMotion,
+            fontSize, colorBlindMode
+ursor/automate-test-fix-improve-and-merge-code-48f3
     useEffect(() => {}}
-        const root = document.documentElement;
+        const root = document.documentElement
         // High contrast mode,
         if (highContrast) {'
-            root.classList.add();
+            root.classList.add()
         else {'"
             root.classList.remove(""
-  'high-contrast');
+  'high-contrast')
         // Reduced motion,
         if (reducedMotion) {'
-            root.classList.add();
+            root.classList.add()
         else {'"
             root.classList.remove(""
   'reduced-motion');// Font size;"
@@ -158,50 +158,50 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
   '14px': fontSize ===;"""
   'large' ?;"""
   '18px' :;""
-  '16px;
+  '16px
         // Color blind mode;"
         root.style.filter = colorBlindMode ===;"""
   'none' ?;""
   'none' :;"
             colorBlindMode ===;"""
   'protanopia' ?;""
-  'url(#protanopia) :;
+  'url(#protanopia) :
                 colorBlindMode = = =,
   'deuteranopia' ?,
   'url(#deuteranopia) :
-';url(#tritanopia)}, [highContrast, reducedMotion, fontSize, colorBlindMode]);
-    const toggleHighContrast = () => setHighContrast(!highContrast);const toggleReducedMotion = () => setReducedMotion(!reducedMotion);
-    const value = {;
-  highContrast, reducedMotion,;
-        if (highContrast) {;
-;
+';url(#tritanopia)}, [highContrast, reducedMotion, fontSize, colorBlindMode])
+    const toggleHighContrast = () => setHighContrast(!highContrast);const toggleReducedMotion = () => setReducedMotion(!reducedMotion)
+    const value = {
+  highContrast, reducedMotion,
+        if (highContrast) {
+
             root.classList.add(
-  &apos;high-contrast&apos);
+  &apos;high-contrast&apos)
         else {
             root.classList.remove(
-  &apos;high-contrast&apos);
-        // Reduced motion;
+  &apos;high-contrast&apos)
+        // Reduced motion
         if (reducedMotion) {
             root.classList.add(
-  &apos;reduced-motion&apos);
+  &apos;reduced-motion&apos)
         else {
             root.classList.remove(
-  &apos;reduced-motion&apos);// Font size;
-        root.style.fontSize = fontSize ===;
-  &apos;small&apos; ?;
-  &apos;14px&apos;: fontSize ===;
-  &apos;large&apos; ?;
+  &apos;reduced-motion&apos);// Font size
+        root.style.fontSize = fontSize ===
+  &apos;small&apos; ?
+  &apos;14px&apos;: fontSize ===
+  &apos;large&apos; ?
   &apos;18px&apos; :
-  &apos;16px;
-        // Color blind mode;
-        root.style.filter = colorBlindMode ===;
-  &apos;none&apos; ?;
-  &apos;none&apos; :;
-            colorBlindMode ===;
-  &apos;protanopia&apos; ?;
-  &apos;url(#protanopia)&apos; :;
-                colorBlindMode ===;
-  &apos;deuteranopia&apos; ?;
+  &apos;16px
+        // Color blind mode
+        root.style.filter = colorBlindMode ===
+  &apos;none&apos; ?
+  &apos;none&apos; :
+            colorBlindMode ===
+  &apos;protanopia&apos; ?
+  &apos;url(#protanopia)&apos; :
+                colorBlindMode ===
+  &apos;deuteranopia&apos; ?
   &apos;url(#deuteranopia)&apos; :
 ';url(#tritanopia)}, [highContrast, reducedMotion, fontSize, colorBlindMode]);&apos;&apos;"
         if (highContrast) {"""
@@ -209,7 +209,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
   'high-contrast');"
         else {"""
             root.classList.remove(""
-  'high-contrast');
+  'high-contrast')
         // Reduced motion;"
         if (reducedMotion) {"""
             root.classList.add(""
@@ -236,92 +236,92 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
                 colorBlindMode = = =,
   'deuteranopia' ?,
   'url(#deuteranopia)' :
-';url(#tritanopia)}, [highContrast, reducedMotion, fontSize, colorBlindMode]);
-    const toggleHighContrast = () => setHighContrast(!highContrast);const toggleReducedMotion = () => setReducedMotion(!reducedMotion);
-    const value = {;
-  highContrast,;
-        reducedMotion,;
-        fontSize,;
-        colorBlindMode,;
-        toggleHighContrast,;
-        toggleReducedMotion,;
-        setFontSize,;
+';url(#tritanopia)}, [highContrast, reducedMotion, fontSize, colorBlindMode])
+    const toggleHighContrast = () => setHighContrast(!highContrast);const toggleReducedMotion = () => setReducedMotion(!reducedMotion)
+    const value = {
+  highContrast,
+        reducedMotion,
+        fontSize,
+        colorBlindMode,
+        toggleHighContrast,
+        toggleReducedMotion,
+        setFontSize,
   setColorBlindMode}"
     return (<AccessibilityContext.Provider value="{value}">;"
                 colorBlindMode ===;""
   'deuteranopia' ?;""
   'url(#deuteranopia)' :;"'
 ';url(#tritanopia)}, [highContrast, reducedMotion, fontSize, colorBlindMode])
-    const toggleHighContrast = () => setHighContrast(!highContrast)const toggleReducedMotion = () => setReducedMotion();
-    const value = {;
-  highContrast, reducedMotion,;
-    const toggleHighContrast = () => setHighContrast(!highContrast);const toggleReducedMotion = () => setReducedMotion();
+    const toggleHighContrast = () => setHighContrast(!highContrast)const toggleReducedMotion = () => setReducedMotion()
+    const value = {
+  highContrast, reducedMotion,
+    const toggleHighContrast = () => setHighContrast(!highContrast);const toggleReducedMotion = () => setReducedMotion()
     const value = {highContrast, reducedMotion,
         fontSize, colorBlindMode,
         toggleHighContrast, toggleReducedMotion,
         setFontSize, setColorBlindMode}"
-    return (<AccessibilityContext .Provider value={value}" >"";
-    return (<AccessibilityContext.Provider value="{value}">";
-    return (<AccessibilityContext .Provider value={value}" >;
-      {children};
+    return (<AccessibilityContext .Provider value={value}" >""
+    return (<AccessibilityContext.Provider value="{value}">"
+    return (<AccessibilityContext .Provider value={value}" >
+      {children}
     <;<;</AccessibilityContext.Provider>)}
-// Accessibility Panel Component;
-export const AccessibilityPanel = () => {;
-    const [isOpen, setIsOpen] = useState(false);
-    const { highContrast, reducedMotion, fontSize, colorBlindMode, toggleHighContrast, toggleReducedMotion, setFontSize, setColorBlindMode } = useAccessibility();
-    // Keyboard shortcuts;
-    useEffect(() => {;
-        const handleKeyDown = (event) => {;
-export const AccessibilityPanel = () => {const [isOpen, setIsOpen] = useState(false);
-    const { highContrast, reducedMotion, fontSize, colorBlindMode, toggleHighContrast, toggleReducedMotion, setFontSize, setColorBlindMode } = useAccessibility();
-    // Keyboard shortcuts;
-    useEffect(() => {const handleKeyDown = (event) => {;
-export const AccessibilityPanel = () => {};
-    const;const;const [isOpen, setIsOpen] = useState(false);
-    const { highContrast, reducedMotion, fontSize, colorBlindMode, toggleHighContrast, toggleReducedMotion, setFontSize, setColorBlindMode } = useAccessibility();
-    // Keyboard shortcuts;
+// Accessibility Panel Component
+export const AccessibilityPanel = () => {
+    const [isOpen, setIsOpen] = useState(false)
+    const { highContrast, reducedMotion, fontSize, colorBlindMode, toggleHighContrast, toggleReducedMotion, setFontSize, setColorBlindMode } = useAccessibility()
+    // Keyboard shortcuts
+    useEffect(() => {
+        const handleKeyDown = (event) => {
+export const AccessibilityPanel = () => {const [isOpen, setIsOpen] = useState(false)
+    const { highContrast, reducedMotion, fontSize, colorBlindMode, toggleHighContrast, toggleReducedMotion, setFontSize, setColorBlindMode } = useAccessibility()
+    // Keyboard shortcuts
+    useEffect(() => {const handleKeyDown = (event) => {
+export const AccessibilityPanel = () => {}
+    const;const;const [isOpen, setIsOpen] = useState(false)
+    const { highContrast, reducedMotion, fontSize, colorBlindMode, toggleHighContrast, toggleReducedMotion, setFontSize, setColorBlindMode } = useAccessibility()
+    // Keyboard shortcuts
     useEffect(() => {}
-        const handleKeyDown = (event) => {;
-ursor/automate-test-fix-improve-and-merge-code-48f3;
-                event.preventDefault();
-                setIsOpen(!isOpen);
+        const handleKeyDown = (event) => {
+ursor/automate-test-fix-improve-and-merge-code-48f3
+                event.preventDefault()
+                setIsOpen(!isOpen)
             // Ctrl/Cmd + Shift + H to toggle high contrast;"
             if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key ===;""
   'H') {
-                event.preventDefault();
-                toggleHighContrast();
-            // Ctrl/Cmd + Shift + M to toggle reduced motion;
+                event.preventDefault()
+                toggleHighContrast()
+            // Ctrl/Cmd + Shift + M to toggle reduced motion
             if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key ===,
-  'H') {;
+  'H') {
   &apos;H&apos) {
-                event.preventDefault();
+                event.preventDefault()
                 toggleReducedMotion();"
-;};"""
+};"""
         window.addEventListener('keydown', handleKeyDown);";""
         return () => window.removeEventListener('keydown', handleKeyDown)}, [isOpen, toggleHighContrast, toggleReducedMotion]);";""
     return (<>;"";"""
       {/*   */}";"";""
-      <motion.button whileHover="{{" scale: 1.1 }} whileTap="{{" scale: 0.9 }} onClick="{()" => setIsOpen(true)} className="fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-br from-zion-cyan to-zion-purple text-white rounded-full shadow-2xl shadow-zion-cyan/25 z-50 flex items-center justify-center hover: shadow-2xl hover:shadow-zion-cyan/40 transition-all duration-300" aria-label="Open Accessibility Settings">";"";""
+      <motion.button whileHover="{{" scale: 1.1 }} whileTap="{{" scale: 0.9 }} onClick="{()" => setIsOpen(true)} className="fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-br from-zion-cyan to-zion-purple text-white rounded-full shadow-2xl shadow-zion-cyan/25 z-50 flex items-center justify-center hover: shadow-2xl hover:shadow-zion-cyan/40 transition-all duration-300" aria-label="Open Accessibility Settings">";"",""
         <Accessibility className="w-6 h-6"/>,","",
       </motion.button>,",""
       {/*   */};"";"""
       <AnimatePresence>";"";""
-        {isOpen && (<motion.div initial="{{" opacity: 0 }} animate="{{" opacity: 1 }} exit="{{" opacity: 0 }} className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4" onClick="{()" => setIsOpen(false)}>;
-                toggleHighContrast();
-            // Ctrl/Cmd + Shift + M to toggle reduced motion;
+        {isOpen && (<motion.div initial="{{" opacity: 0 }} animate="{{" opacity: 1 }} exit="{{" opacity: 0 }} className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4" onClick="{()" => setIsOpen(false)}>
+                toggleHighContrast()
+            // Ctrl/Cmd + Shift + M to toggle reduced motion
             if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key ===,
-  'M') {;
-                event.preventDefault();
-                toggleReducedMotion()};
+  'M') {
+                event.preventDefault()
+                toggleReducedMotion()}
         window.addEventListener(
-  'keydown', handleKeyDown);
-        return () => window.removeEventListener(;
+  'keydown', handleKeyDown)
+        return () => window.removeEventListener(
   'keydown', handleKeyDown)}, [isOpen, toggleHighContrast, toggleReducedMotion])'
     return (<>';{/*   */}';"
       <motion.button whileHover = "{{" scale: 1.1 }} whileTap="{{" scale: 0.9 }} onClick="{()" => setIsOpen(true)} className="fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-br from-zion-cyan to-zion-purple text-white rounded-full shadow-2xl shadow-zion-cyan/25 z-50 flex items-center justify-center hover: shadow-2xl hover:shadow-zion-cyan/40 transition-all duration-300" aria-label='Open Accessibility Settings'>',"
-        <Accessibility className="w-6 h-6"/>',;
+        <Accessibility className="w-6 h-6"/>',
       </motion.button>'{/*   */}';"
-      <AnimatePresence>''        {isOpen && (<motion.div initial="{{" opacity: 0 }} animate="{{" opacity: 1 }} exit="{{" opacity: 0 }} className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4" onClick="{()" => setIsOpen(false)}>;
+      <AnimatePresence>''        {isOpen && (<motion.div initial="{{" opacity: 0 }} animate="{{" opacity: 1 }} exit="{{" opacity: 0 }} className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4" onClick="{()" => setIsOpen(false)}>
             <motion.div initial = {>
   { scale: 0.9,
 opacity: 0}} animate = {;"
@@ -337,7 +337,7 @@ opacity: 0,","",""}} className="bg-zion-blue-dark border border-zion-cyan/20 rou
                 </h2>";"";"";"
                 <Button variant="ghost" size="sm" onClick="{()" => setIsOpen(false)} className="text-zion-slate-light hover: text-white">";"";"";"
                   <X className="w-4 h-4"/>;";"";"
-                </Button>;","",",
+                </Button>,","",",
               </div>;"",""","
               {/*   */}";"";"";"
               <div className="space-y-6">;"";""";"
@@ -399,11 +399,11 @@ opacity: 0,","",""}} className="bg-zion-blue-dark border border-zion-cyan/20 rou
                       <kbd className="px-2 py-1 bg-zion-blue-light/20 rounded text-xs">Ctrl/Cmd + Shift + M</kbd>;";"
                     </div>;""";"
                   </div>;";"";"
-                </div>;","",",
+                </div>,","",",
               </div>;"",""","
               {/*   */}";"";"";"
-              <div className="mt-6 pt-4 border-t border-zion-cyan/20">";"";"";
-  opacity: 0}} animate = {;
+              <div className="mt-6 pt-4 border-t border-zion-cyan/20">";"";""
+  opacity: 0}} animate = {
   { scale: 1,"
 opacity: 1,""}} exit = {;";""
   { scale: 0.9",","
@@ -415,7 +415,7 @@ opacity: 0,","","}} className="bg-zion-blue-dark border border-zion-cyan/20 roun
                   Accessibility Settings;"";"""
                 </h2>";"";""
                 <Button variant="ghost" size="sm" onClick="{()" => setIsOpen(false)} className="text-zion-slate-light hover: text-white">";"";""
-                  <X className="w-4 h-4"/>;";""
+                  <X className="w-4 h-4"/>;",""
                 </Button>,","",
               </div>,"","""
               {/*   */}";"";""
@@ -444,7 +444,7 @@ opacity: 0,","","}} className="bg-zion-blue-dark border border-zion-cyan/20 roun
                 <div>";"";""
                   <h3 className="text-white font-medium mb-3">Font Size</h3>";"";""
                   <div className="flex gap-2">";"";""
-                    {['small', 'medium', 'large'].map((size) => (<Button key="{size}" variant="{fontSize" === size ? "default" : "outline"} size="sm" onClick="{()" => setFontSize(size)} className="{fontSize" === size ? "bg-zion-cyan text-white" : "border-zion-cyan/30 text-zion-cyan"}>;
+                    {['small', 'medium', 'large'].map((size) => (<Button key="{size}" variant="{fontSize" === size ? "default" : "outline"} size="sm" onClick="{()" => setFontSize(size)} className="{fontSize" === size ? "bg-zion-cyan text-white" : "border-zion-cyan/30 text-zion-cyan"}>
                         {size.charAt(0).toUpperCase() + size.slice(1)};"
                       </Button>))};"""
                   </div>;";""
@@ -477,37 +477,37 @@ opacity: 0,","","}} className="bg-zion-blue-dark border border-zion-cyan/20 roun
                       <span>Reduced Motion: </span>";"";""
                       <kbd className="px-2 py-1 bg-zion-blue-light/20 rounded text-xs">Ctrl/Cmd + Shift + M</kbd>;"
                     </div>;"""
-                  </div>;";""
+                  </div>;",""
                 </div>,","",
               </div>,"","""
               {/*   */}";"";""
               <div className="mt-6 pt-4 border-t border-zion-cyan/20">";"";""
-                <p className="text-xs text-zion-slate-light text-center">;
-                  These settings are saved locally and will persist across sessions.;
-                </p>;
+                <p className="text-xs text-zion-slate-light text-center">
+                  These settings are saved locally and will persist across sessions.
+                </p>
               </div>;"
             </motion.div>;"""
           </motion.div>)};";""
       </AnimatePresence>;";""
 </>)};"";"""
 // Skip to Content Link";"";""
-export const SkipToContent = () => (<a href="#main-content" className="sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-medium z-50 hover:bg-zion-cyan-light transition-colors duration-300">;
+export const SkipToContent = () => (<a href="#main-content" className="sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-medium z-50 hover:bg-zion-cyan-light transition-colors duration-300">
     Skip to main content;"
   </a>);";"
 // Focus Trap Hook;""";"
 export const useFocusTrap = (isActive) => {;";"";"
     useEffect(() => {;";"";"
         if (!isActive);"";""";"
-            return;";"";"";
+            return;";"";""
   </a>);"
 // Focus Trap Hook;"""
 export const useFocusTrap = (isActive) => {;";""
-    useEffect(() => {;";""
+    useEffect(() => {;",""
         if (!isActive),"",""",
             return;","",""
-        const focusableElements = 'button, [href], input, select, textarea, [tabindex]: not([tabindex="-1"])';
-        const container = document.activeElement?.closest('[data-focus-trap]');
-        if();
+        const focusableElements = 'button, [href], input, select, textarea, [tabindex]: not([tabindex="-1"])'
+        const container = document.activeElement?.closest('[data-focus-trap]')
+        if()
   opacity: 1'}} exit = {'{ scale: 0.9,';"
   opacity: 0','}} className="bg - zion-blue-dark border border-zion-cyan/20 rounded-2xl p-6 max-w-md w-full max-h-[90vh] overflow-y-auto" onClick="{(e)" => e.stopPropagation()}>',{/*   */}';"
               <div className="flex items-center justify-between mb-6">';"
@@ -540,8 +540,8 @@ export const useFocusTrap = (isActive) => {;";""
                   <h3 className="text-white font-medium mb-3">Font Size</h3>';"
                   <div className = "flex gap - 2">',{[,
   'small',
-  'medium',;"
-  'large'].map((size) => (<Button key = "{size}" variant="{fontSize" === size ? 'default' : 'outline'} size='sm' onClick="{()" => setFontSize(size)} className="{fontSize" === size ? 'bg-zion-cyan text-white' : 'border-zion-cyan/30 text-zion-cyan'}>{size.charAt(0).toUpperCase() + size.slice(1)};
+  'medium',"
+  'large'].map((size) => (<Button key = "{size}" variant="{fontSize" === size ? 'default' : 'outline'} size='sm' onClick="{()" => setFontSize(size)} className="{fontSize" === size ? 'bg-zion-cyan text-white' : 'border-zion-cyan/30 text-zion-cyan'}>{size.charAt(0).toUpperCase() + size.slice(1)}
                       </Button>))}'
                   </div>'
                 </div>'{/*   */}'
@@ -550,7 +550,7 @@ export const useFocusTrap = (isActive) => {;";""
                   <div className = "grid grid - cols-2 gap-2">',{[,
   'none',
   'protanopia',
-  'deuteranopia',;"
+  'deuteranopia',"
   'tritanopia'].map((mode) => (<Button key = "{mode}" variant="{colorBlindMode" === mode ? 'default'  : 'outline'} size='sm' onClick="{()" => setColorBlindMode(mode)} className="{colorBlindMode" === mode ? 'bg - zion-cyan text-white' : 'border-zion-cyan / 30 text-zion-cyan'}>{mode.charAt(0).toUpperCase() + mode.slice(1)}',
                       </Button>))}',
                   </div>',
@@ -576,8 +576,8 @@ export const useFocusTrap = (isActive) => {;";""
                   </div>',',
                 </div>','
               </div>','{/*   */}';"
-              <div className="mt-6 pt-4 border-t border-zion-cyan/20">''                <p className="text-xs text-zion-slate-light text-center">;
-                  These settings are saved locally and will persist across sessions.;
+              <div className="mt-6 pt-4 border-t border-zion-cyan/20">''                <p className="text-xs text-zion-slate-light text-center">
+                  These settings are saved locally and will persist across sessions.
                 </p>
               </div>'
             </motion.div>'
@@ -585,30 +585,30 @@ export const useFocusTrap = (isActive) => {;";""
       </AnimatePresence>'
 </>)}';'
 // Skip to Content Link';"
-export const SkipToContent = () => (<a href='#main-content' className="sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-medium z-50 hover:bg-zion-cyan-light transition-colors duration-300">;
-    Skip to main content;
+export const SkipToContent = () => (<a href='#main-content' className="sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-medium z-50 hover:bg-zion-cyan-light transition-colors duration-300">
+    Skip to main content,
   </a>)
 // Focus Trap Hook','
 export const useFocusTrap = (isActive) => {',
     useEffect(() => {',',
         if (!isActive)','
             return',
-        const focusableElements = ;
-  button, [href], input, select, textarea, [tabindex]: not([tabindex='-1']);
-        const container = document.activeElement?.closest(;
+        const focusableElements = 
+  button, [href], input, select, textarea, [tabindex]: not([tabindex='-1'])
+        const container = document.activeElement?.closest(
   &apos;M&apos) {
-                event.preventDefault();
-                toggleReducedMotion()};
+                event.preventDefault()
+                toggleReducedMotion()}
         window.addEventListener('
   'keydown', handleKeyDown)'''
-  &apos;keydown&apos, handleKeyDown);
-        return () => window.removeEventListener(;
+  &apos;keydown&apos, handleKeyDown)
+        return () => window.removeEventListener(
   &apos;keydown&apos, handleKeyDown)}, [isOpen, toggleHighContrast, toggleReducedMotion])&apos,
     return (&apos;&apos;<>';&apos;{/*   */}&apos;&apos;&apos,"
-      <motion.button whileHover="{{" scale: 1.1 }} whileTap="{{" scale: 0.9 }} onClick="{()" => setIsOpen(true)} className="&apos;fixed" bottom-6 right-6 w-14 h-14 bg-gradient-to-br from-zion-cyan to-zion-purple text-white rounded-full shadow-2xl shadow-zion-cyan/25 z-50 flex items-center justify-center hover:shadow-2xl hove,r: shadow-zion-cyan/40 transition-all duration-300&apos; aria-label="&apos;Open" Accessibility Settings&apos;>&apos;&apos,&apos,',
+      <motion.button whileHover="{{" scale: 1.1 }} whileTap="{{" scale: 0.9 }} onClick="{()" => setIsOpen(true)} className="&apos;fixed" bottom-6 right-6 w-14 h-14 bg-gradient-to-br from-zion-cyan to-zion-purple text-white rounded-full shadow-2xl shadow-zion-cyan/25 z-50 flex items-center justify-center hover:shadow-2xl hove,r: shadow-zion-cyan/40 transition-all duration-300&apos; aria-label="&apos;Open" Accessibility Settings&apos;>&apos,&apos,&apos,',
         <Accessibility className="&apos;w-6" h-6&apos;/>&apos;&apos,''
       </motion.button>&apos,{/*   */}';&apos;&apos,"
-      <AnimatePresence>&apos;&apos,        {isOpen && (&apos}&apos;<motion.div initial="{{" opacity: 0 }} animate="{{" opacity: 1 }} exit="{{" opacity: 0 }} className="&apos;fixed" inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4&apos; onClick="{()" => setIsOpen(false)}>&apos;
+      <AnimatePresence>&apos;&apos,        {isOpen && (&apos}&apos;<motion.div initial="{{" opacity: 0 }} animate="{{" opacity: 1 }} exit="{{" opacity: 0 }} className="&apos;fixed" inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4&apos; onClick="{()" => setIsOpen(false)}>&apos
             <motion.div initial = {
   { scale: 0.9>
   opacity: 0}} animate = {
@@ -620,7 +620,7 @@ export const useFocusTrap = (isActive) => {',
                   <Accessibility className="&apos;w-5" h-5 text-zion-cyan&apos;/>'
                   Accessibility Settings';&apos;&apos,'
                 </h2>&apos;&apos;&apos,"
-                <Button variant="&apos;ghost&apos;" size="&apos;sm&apos;" onClick="{()" => setIsOpen(false)} className="&apos;text-zion-slate-light" hover: text-white&apos;>&apos;&apos,&apos,"
+                <Button variant="&apos;ghost&apos;" size="&apos;sm&apos;" onClick="{()" => setIsOpen(false)} className="&apos;text-zion-slate-light" hover: text-white&apos;>&apos,&apos,&apos,"
                   <X className="&apos;w-4" h-4&apos;/>&apos;&apos,'
                 </Button>&apos;&apos,'',
               </div>',&apos,{/*   */}&apos;&apos;&apos,"
@@ -667,22 +667,22 @@ export const useFocusTrap = (isActive) => {',
                   </h3>&apos;&apos;&apos,"
                   <div className="&apos;space-y-2" text-sm text-zion-slate-light&apos;>&apos;&apos;&apos,"
                     <div className="&apos;flex" justify-between&apos;>';&apos;&apos,'
-                      <span>Open Panel: </span>&apos;&apos,&apos,"
+                      <span>Open Panel: </span>&apos,&apos,&apos,"
                       <kbd className="&apos;px-2" py-1 bg-zion-blue-light/20 rounded text-xs&apos;>Ctrl/Cmd + Shift + A&apos;</kbd>';&apos;&apos,'
                     </div>&apos;&apos;&apos,"
                     <div className="&apos;flex" justify-between&apos;>';&apos;&apos,'
-                      <span>High Contrast: </span>&apos;&apos,&apos,"
+                      <span>High Contrast: </span>&apos,&apos,&apos,"
                       <kbd className="&apos;px-2" py-1 bg-zion-blue-light/20 rounded text-xs&apos;>Ctrl/Cmd + Shift + H&apos;</kbd>';&apos;&apos,'
                     </div>&apos;&apos;&apos,',
                     <div className="&apos;flex" justify-between&apos;>';&apos,&apos,''
-                      <span>Reduced Motio,n: </span>&apos;&apos,&apos,"
+                      <span>Reduced Motio,n: </span>&apos,&apos,&apos,"
                       <kbd className="&apos;px-2" py-1 bg-zion-blue-light/20 rounded text-xs&apos;>Ctrl/Cmd + Shift + M&apos;</kbd>'
                     </div>&apos;&apos,'
                   </div>&apos;&apos,'
                 </div>&apos;&apos,'',
               </div>',&apos,{/*   */}&apos;&apos;&apos,"
               <div className="&apos;mt-6" pt-4 border-t border-zion-cyan/20&apos;>'&apos;&apos,'                <p className="&apos;text-xs" text-zion-slate-light text-center&apos;>
-                  These settings are saved locally and will persist across sessions.&apos;
+                  These settings are saved locally and will persist across sessions.&apos
                 </p>'
               </div>&apos;&apos,'
             </motion.div>';&apos;&apos,'
@@ -691,22 +691,22 @@ export const useFocusTrap = (isActive) => {',
 </>)}';'
 // Skip to Content Link&apos;&apos;&apos,"
 export const SkipToContent = () => (<;<a href="&apos;#main-content&apos;" className="&apos;sr-only" focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-medium z-50 hove,r: bg-zion-cyan-light transition-colors duration-300&apos;>
-    Skip to main content&apos;
+    Skip to main content&apos
   <;</a>)
-// Focus Trap Hook';&apos,&apos,
-export const useFocusTrap = (isActive) => {';
+// Focus Trap Hook',&apos,&apos,
+export const useFocusTrap = (isActive) => {'
     useEffect(() => {',
         if (!isActive)',',
-            return',&apos,&apos}}&apos;
-        const focusableElements = ,;
-  button, [href], input, select, textarea, [tabindex]: not([tabindex=&apos;-1&apos])';&apos;&apos;
-        const container = document.activeElement?.closest(;
-  &apos;[data-focus-trap]&apos)        if (!container);
+            return',&apos,&apos}}&apos
+        const focusableElements = ,
+  button, [href], input, select, textarea, [tabindex]: not([tabindex=&apos;-1&apos])';&apos;&apos
+        const container = document.activeElement?.closest(
+  &apos;[data-focus-trap]&apos)        if (!container)
             return;&apos;"
             // Ctrl/Cmd + Shift + H to toggle high contrast;"""
             if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key ===;""
   'H') {
-                event.preventDefault();
+                event.preventDefault()
                 toggleHighContrast();"
             // Ctrl/Cmd + Shift + M to toggle reduced motion;"""
             if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key ===;""
@@ -716,14 +716,14 @@ export const useFocusTrap = (isActive) => {';
         window.addEventListener(""
   'keydown', handleKeyDown)'
         return () => window.removeEventListener(""
-  'keydown', handleKeyDown)}, [isOpen, toggleHighContrast, toggleReducedMotion])'';
+  'keydown', handleKeyDown)}, [isOpen, toggleHighContrast, toggleReducedMotion])''
     return (<>';{/*   */}'''''
       <motion.button whileHover = "{{" scale: 1.1 }} whileTap="{{" scale: 0.9 }} onClick="{()" => setIsOpen(true)} className="fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-br from-zion-cyan to-zion-purple text-white rounded-full shadow-2xl shadow-zion-cyan/25 z-50 flex items-center justify-center hover: shadow-2xl hover:shadow-zion-cyan/40 transition-all duration-300" aria-label='Open Accessibility Settings'>''''
         <Accessibility className="w-6 h-6"/>''',
-      </motion.button>'{/*   */}''';
+      </motion.button>'{/*   */}'''
     return (<>';{/*   */}'';''
       <motion .button whileHover = "{{" scale: 1.1 }} whileTap="{{" scale: 0.9 }} onClick="{()" =" > setIsOpen(true)} className="fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-br from-zion-cyan to-zion-purple text-white rounded-full shadow-2xl shadow-zion-cyan/25 z-50 flex items-center justify-center hover: shadow-2xl hover:shadow-zion-cyan/40 transition-all duration-300" aria-label='Open Accessibility Settings'>'',''"
-        <Accessibility className="w-6 h-6"/" >'';
+        <Accessibility className="w-6 h-6"/" >''
       </motion.button>'{/*   */}';''
       <AnimatePresence>'''        {isOpen && (<motion .div initial = "{{" opacity: 0 }} animate="{{" opacity: 1 }} exit="{{" opacity: 0 }} className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4" onClick="{()" =" > setIsOpen(false)}>'
             <motion .div initial = {
@@ -738,15 +738,15 @@ export const useFocusTrap = (isActive) => {';
                 </h2>'';'''
                 <Button variant = 'ghost' size='sm' onClick="{()" =" > setIsOpen(false)} className="text-zion-slate-light hover: text-white">'',''"
                   <X className="w-4 h-4"/" >''
-                event.preventDefault(),;
+                event.preventDefault(),
                 toggleReducedMotion()}
-        window.addEventListener();
+        window.addEventListener()
         return () => window.removeEventListener(''
-  'keydown', handleKeyDown)}, [isOpen, toggleHighContrast, toggleReducedMotion])'';
+  'keydown', handleKeyDown)}, [isOpen, toggleHighContrast, toggleReducedMotion])''
     return (<>';{/*   */},'
       <motion.button whileHover = "{{" scale: 1.1 }} whileTap="{{" scale: 0.9 }} onClick="{()" => setIsOpen(true)} className="fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-br from-zion-cyan to-zion-purple text-white rounded-full shadow-2xl shadow-zion-cyan/25 z-50 flex items-center justify-center hover: shadow-2xl hove,"
     r: shadow-zion-cyan/40 transition-all duration-300" aria-label='Open Accessibility Settings>',''
-        <Accessibility className="w-6 h-6"/>'';
+        <Accessibility className="w-6 h-6"/>''
       </motion.button>'{/*   */},'
       <AnimatePresence>'''        {isOpen && (<motion.div initial = "{{" opacity: 0 }} animate="{{" opacity: 1 }} exit="{{" opacity: 0 }} className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4" onClick="{()" => setIsOpen(false)}>'
             <motion.div initial = {
@@ -755,11 +755,11 @@ export const useFocusTrap = (isActive) => {';
   opacity: 1'}} exit = {'{ scale: 0.9, ',
   opacity: 0',''}} className="bg - zion-blue-dark border border-zion-cyan/20 rounded-2xl p-6 max-w-md w-full max-h-[90vh] overflow-y-auto" onClick="{(e)" => e.stopPropagation()}>',{/*   */}'''
               <div className = "flex items-center justify-between mb-6">''''
-                <h2 className="text-xl font-bold text-white flex items-center gap-2">'''';
+                <h2 className="text-xl font-bold text-white flex items-center gap-2">''''
                   <Accessibility className="w - 5 h-5 text-zion-cyan"/>','
                   Accessibility Settings'''
                 </h2>''''
-                <Button variant = 'ghost' size='sm' onClick="{()" => setIsOpen(false)} className="text-zion-slate-light hover: text-white">'''',";
+                <Button variant = 'ghost' size='sm' onClick="{()" => setIsOpen(false)} className="text-zion-slate-light hover: text-white">'''',"
 opacity: 0','}} className="bg-zion-blue-dark border border-zion-cyan/20 rounded-2xl p-6 max-w-md w-full max-h-[90vh] overflow-y-auto" onClick="{(e)" => e.stopPropagation()}>';{/*   */},
               <div className = "flex items - center justify-between mb-6>",'
                 <h2 className="text - xl font-bold text-white flex items-center gap-2>",'
@@ -772,7 +772,7 @@ opacity: 0','}} className="bg-zion-blue-dark border border-zion-cyan/20 rounded-
                 </h2>'';''
                 <Button variant = 'ghost' size='sm' onClick="{()" => setIsOpen(false)} className="text-zion-slate-light hover: text-white>",''
                   <X className="w-4 h-4"/>'''
-                </Button>''';
+                </Button>'''
               </div>',{/*   */},'
               <div className="space-y-6>;{/*   */};""
                 <div className="flex items-center justify-between>;"
@@ -783,7 +783,7 @@ opacity: 0','}} className="bg-zion-blue-dark border border-zion-cyan/20 rounded-
                   <div>''''
                     <h3 className="text-white font-medium mb-1">High Contrast</h3>''''
                     <p className="text-sm text-zion-slate-light">Increase contrast for better visibility</p>'''
-                  </div>'''';
+                  </div>''''
               </div>';'{/*   */}'';''
               <div className = "space - y-6">',{/*   */}'','
                 <div className = "flex items - center justify-between">','
@@ -792,18 +792,18 @@ opacity: 0','}} className="bg-zion-blue-dark border border-zion-cyan/20 rounded-
                     <p className="text - sm text-zion-slate-light">Increase contrast for better visibility</p>','
                   </div>'','
                   <Button variant = "{highContrast" ? 'default' : 'outline'} size='sm' onClick="{toggleHighContrast}" className="{highContrast" ? 'bg-zion-cyan text-white' : 'border-zion-cyan/30 text-zion-cyan'}>'''{highContrast ? <Eye className="w-4 h-4"/> : <EyeOff className="w-4 h-4"/>}'
-                  </Button>''';
+                  </Button>'''
                 </div>';{/*   */},'
                 <div className="flex items-center justify-between>;""
                   <Button variant = "{highContrast" ? 'default' : 'outline'} size='sm' onClick="{toggleHighContrast}" className="{highContrast" ? 'bg-zion-cyan text-white' : 'border-zion-cyan/30 text-zion-cyan'}" >'''{highContrast ? <Eye className="w-4 h-4"/" > : <EyeOff className="w-4 h-4"/" >}'"
                   <Button variant="{highContrast" ? 'default' : 'outline'} size='sm' onClick="{toggleHighContrast}" className="{highContrast" ? 'bg-zion-cyan text-white' : 'border-zion-cyan/30 text-zion-cyan'}>'''{highContrast ? <Eye className="w-4 h-4"/> : <EyeOff className="w-4 h-4"/>}''
-                  </Button>'';
+                  </Button>''
                 </div>';'{/*   */}''''
                 <div className = "flex items-center justify-between">'''
                   <div>''''
                     <h3 className="text-white font-medium mb-1">Reduced Motion</h3>''''
                     <p className="text-sm text-zion-slate-light">Minimize animations and transitions</p>'''
-                  </div>'''';
+                  </div>''''
                 </div>';'{/*   */}'';''
                 <div className = "flex items - center justify-between">','
                   <div>'','
@@ -811,7 +811,7 @@ opacity: 0','}} className="bg-zion-blue-dark border border-zion-cyan/20 rounded-
                     <p className="text - sm text-zion-slate-light">Minimize animations and transitions</p>','
                   </div>'','
                   <Button variant = "{reducedMotion" ? 'default' : 'outline'} size='sm' onClick="{toggleReducedMotion}" className="{reducedMotion" ? 'bg-zion-cyan text-white' : 'border-zion-cyan/30 text-zion-cyan'}>'''{reducedMotion ? <VolumeX className="w-4 h-4"/> : <Volume2 className="w-4 h-4"/>}'
-                  </Button>''';
+                  </Button>'''
                 </div>'{/*   */},''
                 <div>'';''
                   <h3 className="text - white font-medium mb-3">Font Size</h3>'','
@@ -819,7 +819,7 @@ opacity: 0','}} className="bg-zion-blue-dark border border-zion-cyan/20 rounded-
   'small', 'medium',"
   'large'].map((size) => (<Button key = "{size}" variant="{fontSize" === size ? 'default' : 'outline'} size='sm' onClick="{()" => setFontSize(size)} className="{fontSize" === size ? 'bg-zion-cyan text-white' : 'border-zion-cyan/30 text-zion-cyan'}>{size.charAt(0).toUpperCase() + size.slice(1)}'
                       </Button>))}''
-                  </div>''';
+                  </div>'''
                 </div>'{/*   */},''
                 <div>'';''
                   <h3 className="text - white font-medium mb-3">Color Blind Support</h3>'','
@@ -827,7 +827,7 @@ opacity: 0','}} className="bg-zion-blue-dark border border-zion-cyan/20 rounded-
   'none', 'protanopia',"
   'deuteranopia', 'tritanopia'].map((mode) => (<Button key = "{mode}" variant="{colorBlindMode" === mode ? 'default' : 'outline'} size='sm' onClick="{()" => setColorBlindMode(mode)} className="{colorBlindMode" === mode ? 'bg-zion-cyan text-white' : 'border-zion-cyan/30 text-zion-cyan'}>{mode.charAt(0).toUpperCase() + mode.slice(1)}''
                       </Button>))}''
-                  </div>''';
+                  </div>'''
                 </div>';{/*   */},'
                 <div className="bg - zion-blue-dark/50 rounded-lg p-4>",'
                   <h3 className="text - white font-medium mb-3 flex items-center gap-2>",'
@@ -838,7 +838,7 @@ opacity: 0','}} className="bg-zion-blue-dark border border-zion-cyan/20 rounded-
                 </div>'{/*   */}''''
                 <div>''''
                   <h3 className="text-white font-medium mb-3">Font Size</h3>''''
-                  <div className="flex gap-2">'''{[';
+                  <div className="flex gap-2">'''{['
                 </div>'{/*   */}';'''
                 <div>'';''
                   <h3 className="text - white font-medium mb-3">Font Size</h3>'','
@@ -852,7 +852,7 @@ opacity: 0','}} className="bg-zion-blue-dark border border-zion-cyan/20 rounded-
                 </div>'{/*   */}''''
                 <div>''''
                   <h3 className="text-white font-medium mb-3">Color Blind Support</h3>''''
-                  <div className="grid grid-cols-2 gap-2">'''{[';
+                  <div className="grid grid-cols-2 gap-2">'''{['
                 </div>'{/*   */}';'''
                 <div>'';''
                   <h3 className="text - white font-medium mb-3">Color Blind Support</h3>'','
@@ -862,10 +862,10 @@ opacity: 0','}} className="bg-zion-blue-dark border border-zion-cyan/20 rounded-
   'none', 'protanopia',"'
   'deuteranopia', 'tritanopia'].map((mode) => (<Button key="{mode}" variant="{colorBlindMode" === mode ? 'default' : 'outline'} size='sm' onClick="{()" => setColorBlindMode(mode)} className="{colorBlindMode" === mode ? 'bg-zion-cyan text-white' : 'border-zion-cyan/30 text-zion-cyan'}>{mode.charAt(0).toUpperCase() + mode.slice(1)}'''
                       </Button>))}'''
-                  </div>'';
+                  </div>''
                 </div>';'{/*   */}''''
                 <div className = "bg-zion-blue-dark/50 rounded-lg p-4">''''
-                  <h3 className="text-white font-medium mb-3 flex items-center gap-2">'''';
+                  <h3 className="text-white font-medium mb-3 flex items-center gap-2">''''
                     <Keyboard className = "w - 4 h-4 text-zion-cyan"/>','
                     Keyboard Shortcuts'''
                   </h3>''''
@@ -893,7 +893,7 @@ opacity: 0','}} className="bg-zion-blue-dark border border-zion-cyan/20 rounded-
                       <kbd className="px-2 py-1 bg-zion-blue-light/20 rounded text-xs">Ctrl/Cmd + Shift + A</kbd>','',
                     </div>'',''
                     <div className = "flex justify-between>,"
-                      <span>High Contras,;
+                      <span>High Contras,
     t: </span>'','
                       <kbd className="px-2 py-1 bg-zion-blue-light/20 rounded text-xs">Ctrl/Cmd + Shift + H</kbd>','',
                     </div>'',''
@@ -903,12 +903,12 @@ opacity: 0','}} className="bg-zion-blue-dark border border-zion-cyan/20 rounded-
                       <kbd className="px-2 py-1 bg-zion-blue-light/20 rounded text-xs">Ctrl/Cmd + Shift + M</kbd>''
                     </div>''''
                   </div>''''
-                </div>''';
+                </div>'''
               </div>',{/*   */},'
               <div className = "mt-6 pt-4 border-t border-zion-cyan/20>"                <p className="text-xs text-zion-slate-light text-center>
                   These settings are saved locally and will persist across sessions."
                 </p>"
-              </div>''';
+              </div>'''
                     <div className="flex justify - between">','
                       <span>Reduced Motion: </span>'',''
                       <kbd className = "px-2 py-1 bg-zion-blue-light/20 rounded text-xs">Ctrl/Cmd + Shift + M</kbd>"""
@@ -924,39 +924,39 @@ opacity: 0','}} className="bg-zion-blue-dark border border-zion-cyan/20 rounded-
               </div>'''
             </motion.div>'''
           </motion.div>)}'''
-      </AnimatePresence>'';
+      </AnimatePresence>''
 </>)}';';''
 // Skip to Content Link''''
 export const SkipToContent = () => (<a href='#main-content' className="sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-medium z-50 hover:bg-zion-cyan-light transition-colors duration-300">',,
-            </motion.div>',';
+            </motion.div>','
           </motion.div>)};''
       </AnimatePresence>';''
 </>)};;;''
 // Skip to Content Link'';''
 export const SkipToContent = () => (<a href='#main-content' className="sr-only focus: not-sr-only focus:absolute focus:top-4 focu>
     s:left-4 bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-medium z-50 hove,">
-    r: bg-zion-cyan-light transition-colors duration-300">;
-    Skip to main content";
+    r: bg-zion-cyan-light transition-colors duration-300">
+    Skip to main content"
   </a>);""
-// Focus Trap Hook';''
+// Focus Trap Hook',''
 export const useFocusTrap = (isActive) => {',
     useEffect(() => {',"'
         if (!isActive)',"",
             return','',''
         const focusableElements = , button, [href], input, select, textarea, [tabindex]: not([tabindex='-1'])';"
-        const container = document.activeElement?.closest();
+        const container = document.activeElement?.closest()
 // Focus Trap Hook';''
-export const useFocusTrap = (isActive) => {';
+export const useFocusTrap = (isActive) => {'
     useEffect(() => {'
-        if();
+        if()
             return';''
-        const focusableElements = , button, [href], input, select, textarea, [tabindex]: not([tabindex='-1']);
-        const container = document.activeElement?.closest(';
-  '[data-focus-trap])        if();
+        const focusableElements = , button, [href], input, select, textarea, [tabindex]: not([tabindex='-1'])
+        const container = document.activeElement?.closest('
+  '[data-focus-trap])        if()
         if (!isActive)'
             return';'';''
-        const focusableElements = , button, [href], input, select, textarea, [tabindex]: not([tabindex='-1'])';
-        const container = document.activeElement?.closest(";
+        const focusableElements = , button, [href], input, select, textarea, [tabindex]: not([tabindex='-1'])'
+        const container = document.activeElement?.closest("
                 event.preventDefault();"
                 toggleReducedMotion()}"
         window.addEventListener("
@@ -1041,8 +1041,8 @@ export const useFocusTrap = (isActive) => {';
                 </p>"
               </div>''
             </motion.div>
-          </motion.div>)};
-      </AnimatePresence>;
+          </motion.div>)}
+      </AnimatePresence>
 </>)}
 // Skip to Content Link'''
 export const SkipToContent = () => (<a href='#main-content' className="sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-medium z-50 hover:bg-zion-cyan-light transition-colors duration-300">
@@ -1052,78 +1052,78 @@ export const SkipToContent = () => (<a href='#main-content' className="sr-only f
 export const useFocusTrap = (isActive) => {
     useEffect(() => {"
         if (!isActive),"
-            return,;
-const focusableElements =, button, [href], input, select, textarea, [tabindex]: not([tabindex='-1'])";
-        const container = document.activeElement?.closest(";
-  '[data-focus-trap]')        if (!container);
-            return;
-        const firstFocusableElement = focusableContent[0];
-        const lastFocusableElement = focusableContent[focusableContent.length - 1];
-ursor/automate-test-fix-improve-and-merge-code-48f3;
-                if (e.shiftKey) {                    if (document.activeElement === firstFocusableElement) {;
-                        e.preventDefault();
-                        lastFocusableElement.focus();
-                else {;
-                    if (document.activeElement === lastFocusableElement) {;
+            return,
+const focusableElements =, button, [href], input, select, textarea, [tabindex]: not([tabindex='-1'])"
+        const container = document.activeElement?.closest("
+  '[data-focus-trap]')        if (!container)
+            return
+        const firstFocusableElement = focusableContent[0]
+        const lastFocusableElement = focusableContent[focusableContent.length - 1]
+ursor/automate-test-fix-improve-and-merge-code-48f3
+                if (e.shiftKey) {                    if (document.activeElement === firstFocusableElement) {
+                        e.preventDefault()
+                        lastFocusableElement.focus()
+                else {
+                    if (document.activeElement === lastFocusableElement) {
                         e.preventDefault();"
                         firstFocusableElement.focus();";"
-;};";"";"
+};";"";"
         document.addEventListener('keydown', handleTabKey);";"";"
         return () => document.removeEventListener('keydown', handleTabKey)}, [isActive])};"";""";"
 // Screen Reader Only Text";"";"";"
 export const SrOnly = ({ children }) => (<span className="sr-only">{children}</span>);";"";"
 export default AccessibilityPanel;"";""";"
 }}}}}}}}}}}}}}}";"";"" ; const AccessibilityContext = createContext(undefined); export const useAccessibility = () => {; const context = useContext(AccessibilityContext); if(!context) {; throw new Error('useAccessibility must be used within an AccessibilityProvider'); ; return context}; ; const AccessibilityContext = createContext(null); export const useAccessibility = () => {; const context = useContext(AccessibilityContext); if(!context) {; throw new Error('useAccessibility must be used within an AccessibilityProvider')}; return context};                         firstFocusableElement.focus();"
-;};";""
+};";""
         document.addEventListener('keydown', handleTabKey);";""
         return () => document.removeEventListener('keydown', handleTabKey)}, [isActive])};"";"""
 // Screen Reader Only Text";"";""
 export const SrOnly = ({ children }) => (<span className="sr-only">{children}</span>);";""
 export default AccessibilityPanel;"";"";"
 }}}}}}}}}}}}}}}";"";"
-                        firstFocusableElement.focus()};
+                        firstFocusableElement.focus()}
         document.addEventListener(
-  'keydown', handleTabKey);
-        return () => document.removeEventListener(;
+  'keydown', handleTabKey)
+        return () => document.removeEventListener(
   'keydown', handleTabKey)}, [isActive])}'
 // Screen Reader Only Text';"'
 export const SrOnly = ({ children }) => (<span className="sr-only">{children}</span>)';"
 export default AccessibilityPanel';'}}}}}}}}}}}}}}}';"import React, { useState, useEffect, createContext, useContext } from 'react'
-;
-                else {;
+
+                else {
                     if (document.activeElement === lastFocusableElement) {;"
                         e.preventDefault();""
                         firstFocusableElement.focus()}'
         document.addEventListener(""
   'keydown', handleTabKey)'
-        return () => document.removeEventListener(""";
+        return () => document.removeEventListener("""
   'keydown', handleTabKey)}, [isActive])}';""
 // Screen Reader Only Text'';'''
 export const SrOnly = ({ children }) => (<span className="sr-only">{children}</span>)';"
 export default AccessibilityPanel';'}}}}}}}}}}}}}}}'';"import React, { useState, useEffect, createContext, useContext } from 'react'"
 ;"""
-;"";
+;""
 }
-                        e.preventDefault();
+                        e.preventDefault()
                         firstFocusableElement.focus()}
-        document.addEventListener();
-        return () => document.removeEventListener(';
+        document.addEventListener()
+        return () => document.removeEventListener('
   'keydown', handleTabKey)}, [isActive])}
 // Screen Reader Only Text'';''
 export const SrOnly = ({ children }) => (<span className="sr-only">{children}</span>);"
-export default AccessibilityPanel';}}}}}}}}}}}}}}};"import React, { useState, useEffect, createContext, useContext } from 'react'
-";
+export default AccessibilityPanel'}}}}}}}}}}}}}}};"import React, { useState, useEffect, createContext, useContext } from 'react'
+"
                         firstFocusableElement.focus()}'
         document.addEventListener('
-  &apos;keydown&apos, handleTabKey);
-        return () => document.removeEventListener(;
+  &apos;keydown&apos, handleTabKey)
+        return () => document.removeEventListener(
   &apos;keydown&apos, handleTabKey)}, [isActive])}'
 // Screen Reader Only Text&apos;&apos;&apos,"
 export const SrOnly = ({ children }) => (<;<span className="&apos;sr-only&apos;">{children}&apos;<;</span>)';&apos;&apos,
 export default AccessibilityPanel';&apos}}}}}}}}}}}}}}}&apos;&quot;import React, { useState, useEffect, createContext, useContext } from &apos;react&apos;framer-motion&apos;../ui/button&apos;&apos, const AccessibilityContext = createContext(undefined) export const useAccessibility = () => {} const;const context = useContext(AccessibilityContext) if(!context) { throw new Error(&apos;useAccessibility must be used within an AccessibilityProvider&apos)  return context }
 ;lucide-react&apos;../ui/button&apos;&apos, const AccessibilityContext = createContext(null) export const useAccessibility = () => {} const;const;const context = useContext(AccessibilityContext) if(!context) { throw new Error(&apos;useAccessibility must be used within an AccessibilityProvider&apos)} return context};&apos,'
   'keydown', handleTabKey)'
-        return () => document.removeEventListener(;
+        return () => document.removeEventListener(
   'keydown', handleTabKey)}, [isActive])}'
 // Screen Reader Only Text'''''
 // Screen Reader Only Text'';''
@@ -1135,12 +1135,12 @@ export default AccessibilityPanel';'}}}}}}}}}}}}}}}''import React, { useState, u
                         firstFocusableElement.focus()}"
         document.addEventListener("
   'keydown', handleTabKey)"
-        return () => document.removeEventListener("";
+        return () => document.removeEventListener(""
   'keydown', handleTabKey)}, [isActive])};"
 // Screen Reader Only Text''
-export const SrOnly = ({ children }) => (<span className="sr-only">{children}</span>)";
+export const SrOnly = ({ children }) => (<span className="sr-only">{children}</span>)"
 export default AccessibilityPanel}}}}}}}}}}}}}}}'import React, { useState, useEffect, createContext, useContext } from 'react'const AccessibilityContext = createContext(undefined) export const useAccessibility = () => { const context = useContext(AccessibilityContext) if(!context) { throw new Error('useAccessibility must be used within an AccessibilityProvider')  return context }";"
 ;"const AccessibilityContext = createContext(null) export const useAccessibility = () => { const context = useContext(AccessibilityContext) if(!context) { throw new Error('useAccessibility must be used within an AccessibilityProvider')} return context};"
-;";
+;"
 }"
 "

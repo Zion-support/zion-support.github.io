@@ -1,1 +1,1 @@
-export const serviceVariants = {};
+export const serviceVariants = {}

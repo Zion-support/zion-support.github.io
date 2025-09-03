@@ -97,7 +97,7 @@ export const AICodeGenerator = () => {;,"});,"})"
     const handleClearHistory = useCallback(() => {}"});,"})"
         clearHistory();""";,"});,"})"
         trackEvent('ai_code_generator',history_cleared',manual')}, [clearHistory, trackEvent]);"""";,"});,"})
-    return (";
+    return ("
     <div className="bg-white dark: bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden">""","});,"})"
       {/*   */}"""";,"});,"})"
       <div className="bg-gradient-to-r from-purple-500 to-blue-500 p-6 text-white">"""";,"});,"})"
@@ -159,7 +159,7 @@ export const AICodeGenerator = () => {;,"});,"})"
                     Describe what you want to build,"});,"})"
                   </label>;,"});,"})"
                   <textarea value="{form.prompt}" onChange = {}"});,"})"
-  (e) => setForm(prev => ({ ...prev,;,"});,"})"
+  (e) => setForm(prev => ({ ...prev,,"});,"})"
   prompt: e.target.value ""","});,"})"
 """";,"});,"});"
 }))} placeholder="e.g., Create a React component for a user profile card with avatar, name, email, and edit button..." className="w-full h-32 p-4 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 resize-none" required/>,"});,"})"
@@ -172,7 +172,7 @@ export const AICodeGenerator = () => {;,"});,"})"
                       Language,"});,"})"
                     </label>;,"});,"})"
                     <select value="{form.language}" onChange = {}"});,"})"
-  (e) => setForm(prev => ({ ...prev,;,"});,"})"
+  (e) => setForm(prev => ({ ...prev,,"});,"})"
   language: e.target.value ""","});,"})"
 """";,"});,"});"
 }))} className="w-full p-2 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100">"""","});,"})"
@@ -192,7 +192,7 @@ export const AICodeGenerator = () => {;,"});,"})"
                       Framework,"});,"})"
                     </label>';,"});,"})"
                     <select value="{form.framework" || ''} onChange = {}"});,"})"
-  (e) => setForm(prev => ({ ...prev,;,"});,"})"
+  (e) => setForm(prev => ({ ...prev,,"});,"})"
   framework: e.target.value || null ""","});,"})"
 """";,"});,"});"
 }))} className="w-full p-2 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100">"""","});,"})"
@@ -213,7 +213,7 @@ export const AICodeGenerator = () => {;,"});,"})"
                       Style,"});,"})"
                     </label>;,"});,"})"
                     <select value="{form.style}" onChange = {}"});,"})"
-  (e) => setForm(prev => ({ ...prev,;,"});,"})"
+  (e) => setForm(prev => ({ ...prev,,"});,"})"
   style: e.target.value ""","});,"})"
 """";,"});,"});"
 }))} className="w-full p-2 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100">"""","});,"})"
@@ -229,7 +229,7 @@ export const AICodeGenerator = () => {;,"});,"})"
                       Quality,"});,"})"
                     </label>;,"});,"})"
                     <select value="{form.quality}" onChange = {}"});,"})"
-  (e) => setForm(prev => ({ ...prev,;,"});,"})"
+  (e) => setForm(prev => ({ ...prev,,"});,"})"
   quality: e.target.value ""","});,"})"
 """";,"});,"});"
 }))} className="w-full p-2 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100">"""","});,"})"
@@ -265,7 +265,7 @@ export const AICodeGenerator = () => {;,"});,"})"
                     { key: 'includeMetrics', label: 'Metrics', icon: Gauge }"""";,"});,"})"
                 ].map(({ key, label, icon: Icon }) => (<label key="{key}" className="flex items-center gap-2 cursor-pointer">"""";,"});,"})"
                         <input type="checkbox" checked="{form[key]}" onChange = {}"});,"})"
-  (e) => setForm(prev => ({ ...prev,;,"});,"})"
+  (e) => setForm(prev => ({ ...prev,,"});,"})"
   [key]: e.target.checked """;,"});,"})"
 """";,"});,"});"
 }))} className="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 rounded focus: ring-purple-500 dark:focus:ring-purple-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>"""","});,"})"
@@ -366,7 +366,7 @@ export const AICodeGenerator = () => {;,"});,"})"
                     if (typeof value === 'number') {}"});,"})"
 """;,"});,"})"
 ""`;,"});,"})
-                        return (";
+                        return ("
     <div key="{key}" className="text-center p-4 bg-gray-50 dark: bg-gray-700 rounded-lg">`"`,"});,`})"
                             <Icon className="{`w-8" h-8 mx-auto mb-2 text-${color}-500`}/>`""";,"});,"})"
                             <div className="text-2xl font-bold text-gray-900 dark: text-white">,"});,"})"
@@ -621,8 +621,8 @@ export const AICodeGenerator = () => {"'
 })''
     const [activeTab, setActiveTab] = useState('generate')""
     const [showAdvanced, setShowAdvanced] = useState(false)'''
-    const [customCode, setCustomCode] = useState();
-    const [copied, setCopied] = useState();
+    const [customCode, setCustomCode] = useState()
+    const [copied, setCopied] = useState()
     const { isGenerating, isAnalyzing, generatedCode, codeAnalysis, suggestions, history, generateCode, analyzeCode, applySuggestion, optimizeCode, generateTests, generateDocs, clearHistory, exportCode } = useAICodeGeneration()"
     const [form, setForm] = useState({}""
 '''
@@ -642,8 +642,8 @@ export const AICodeGenerator = () => {"'
         target: 'web,'''
         quality: 'development', includeTests: false, includeDocs: false, includeErrorHandling: false, includeLogging: false, includeMetrics: false})
     // Handle form submission,
-const handleSubmit = useCallback(async (e) => {};
-        e.preventDefault();
+const handleSubmit = useCallback(async (e) => {}
+        e.preventDefault()
         if(!form.prompt.trim())"
             return""
         await generateCode(form.prompt, form)'''
@@ -655,33 +655,33 @@ const handleAnalyzeCustomCode = useCallback(async () => {}
             return""
         await analyzeCode(customCode, form.language)'''
         trackEvent('ai_code_generator', custom_code_analyzed', form.language, customCode.length)}, [customCode, form.language, analyzeCode, trackEvent])'
-    // Handle code optimization,;
-const handleOptimizeCode = useCallback(async (focus) => {};
-        if();
+    // Handle code optimization,
+const handleOptimizeCode = useCallback(async (focus) => {}
+        if()
             return,
 const codeToOptimize = generatedCode || customCode,
 const optimizedCode = await optimizeCode(codeToOptimize, focus)"
-        if (generatedCode) {}"";
-'';
-            // Update generated code'';
+        if (generatedCode) {}""
+''
+            // Update generated code''
             // Note: In a real implementation, you&apos;d want to update the state properly", '"
 }'''
         trackEvent('ai_code_generator',code_optimized', focus, optimizedCode.length)}, [generatedCode, customCode, optimizeCode, trackEvent])'
     // Handle test generation,
-const handleGenerateTests = useCallback(async () => {}";
-        if(!generatedCode && !customCode)"";
-            return'';
+const handleGenerateTests = useCallback(async () => {}"
+        if(!generatedCode && !customCode)""
+            return''
         const codeToTest = generatedCode || customCode';""'
-        const testCode = await generateTests(codeToTest, form.language)';
+        const testCode = await generateTests(codeToTest, form.language)'
         // In a real implementation, you&apos;d want to display the test code''''''
         // ';''
         trackEvent('ai_code_generator', tests_generated', form.language, testCode.length)}, [generatedCode, customCode, generateTests, form.language, trackEvent])'
     // Handle documentation generation,
 const handleGenerateDocs = useCallback(async () => {}"
-        if(!generatedCode && !customCode)"";
-            return'';
-        const codeToDoc = generatedCode || customCode'';
-        const docs = await generateDocs(codeToDoc, form.language)';
+        if(!generatedCode && !customCode)""
+            return''
+        const codeToDoc = generatedCode || customCode''
+        const docs = await generateDocs(codeToDoc, form.language)'
         // In a real implementation, you&apos;d want to display the documentation''''''
         // ';''
         trackEvent('ai_code_generator', docs_generated', form.language, docs.length)}, [generatedCode, customCode, generateDocs, form.language, trackEvent])'
@@ -718,9 +718,9 @@ const copyToClipboard = useCallback(async (code) => {}
 const handleApplySuggestion = useCallback((suggestion) => {}""
         applySuggestion(suggestion)'''
         trackEvent('ai_code_generator', suggestion_applied', suggestion.type, null, {}'
-            suggestionId: suggestion.id, impact: suggestion.impact})}, [applySuggestion, trackEvent]);
-    // Clear history,";
-const handleClearHistory = useCallback(() => {}"";
+            suggestionId: suggestion.id, impact: suggestion.impact})}, [applySuggestion, trackEvent])
+    // Clear history,"
+const handleClearHistory = useCallback(() => {}""
         clearHistory()'';'''
         trackEvent('ai_code_generator', history_cleared',manual')}, [clearHistory, trackEvent])';'''
     return ("
@@ -1176,7 +1176,7 @@ const handleClearHistory = useCallback(() => {}"";
                 </div>) ) }
             </div>
           </motion.div>) }"
-      </div>"`"";
-    </div>)}''`"`"";
-''`''`"`"";
-";
+      </div>"`""
+    </div>)}''`"`""
+''`''`"`""
+"

@@ -5,8 +5,7 @@ const Navigation = dynamic(() => import('../src/components/Navigation'), { ssr: 
 const Footer = dynamic(() => import('../src/components/Footer'), { ssr: false })
 
 const Demo = () => {'
-  const [selectedDemo, setSelectedDemo] = useState('ai-services');
-
+  const [selectedDemo, setSelectedDemo] = useState('ai-services')
   const demos = [
     {'
       id: 'ai-services','
@@ -71,10 +70,10 @@ const Demo = () => {'
       role: 'IT Director','
       content: 'The IT services demo covered everything we needed. Very comprehensive and professional.',
       rating: 5}
-  ];
-;
+  ]
+
   return (
-    <>;
+    <>
 <Head>
         <title>Live Demo - Zion Tech Group</title>
         <meta name = "description" content="See our AI services, IT solutions, and micro SaaS development in action. Book a personalized demo today." />"
@@ -254,6 +253,6 @@ const Demo = () => {'
       
       <Footer />
     </>,
-  )};
+  )}
 "
-export default Demo;
+export default Demo

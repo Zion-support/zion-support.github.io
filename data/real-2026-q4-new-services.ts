@@ -1,8 +1,8 @@
 export interface Real2026Q4NewService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
+  id: string
+  name: string
+  tagline: string
+  price: string
   features: string[]}
 export const real2026Q4NewServices: Real2026Q4NewService[] = [
   {
@@ -16,4 +16,4 @@ export const real2026Q4NewServices: Real2026Q4NewService[] = [
       'Cutting-edge solutions',
     ],
   },
-];
+]

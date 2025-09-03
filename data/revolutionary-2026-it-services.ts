@@ -1,16 +1,16 @@
 export interface Revolutionary2026ItService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
-  realImplementation: boolean;
+  id: string
+  name: string
+  tagline: string
+  price: string
+  description: string
+  features: string[]
+  link: string
+  category: string
+  realImplementation: boolean
   contactInfo: {
-    mobile: string;
-    email: string;
+    mobile: string
+    email: string
 export const revolutionary2026ITServices: Revolutionary2026ItService[] = [
   {
     id: "2026-revolutionary-it",

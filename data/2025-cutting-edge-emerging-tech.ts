@@ -184,4 +184,4 @@ export const cuttingEdgeEmergingTechServices2025 = [
       'Drone automation',
       'Robotic system development',
       'Logistics automation',
-];
+]

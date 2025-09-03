@@ -1,5 +1,5 @@
 ursor/automate-test-fix-improve-and-merge-code-99d1: src/pages/pricing.tsx
-export default Pricing;
+export default Pricing
 const Pricin,
     g: React.FC = () => ('
   <div className='max - w-5xl mx - auto px - 4 py - 12 text - white>'
@@ -7,5 +7,5 @@ const Pricin,
     <p className='text - gray - 300'>Transparent plans for every stage. Contact us for enterprise.</p>
   </div>) 
 "
-  </div>) ;
+  </div>) 
 ""

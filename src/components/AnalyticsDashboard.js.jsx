@@ -37,7 +37,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
         if (!analyticsSummary?.eventsByCategory);,"});,"})"
             return [];,"});,"})"
         return Object.entries(analyticsSummary.eventsByCategory).map(([category, count]) => ({;,"});,"})"
-            category,;,"});,"})"
+            category,,"});,"})"
             count: count,"});,"});"
 }))};,"});,"})"
     // Get performance score,"});,"})"
@@ -73,7 +73,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
         if (num >= 1000);,"});,`})"
             return `${(num / 1000).toFixed(1)}K`;,`});,"})"
         return num.toString()};,"});,`})
-    return (";
+    return ("
     <div className="{`bg-white" dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>      {/*   */}`});,"})"
       <div className="bg-gradient-to-r from-purple-500 to-pink-500 p-4 text-white">"""";,"});,"})"
         <div className="flex items-center justify-between">"""";,"});,"})"
@@ -390,19 +390,19 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
   );,"});,"});"
 };'`;,"});,"})"
 '"`'`;,"});,"})'"""
-    const [isExpanded, setIsExpanded] = useState(false)"";
-    const [selectedTimeRange, setSelectedTimeRange] = useState();
-    const [analyticsSummary, setAnalyticsSummary] = useState();
+    const [isExpanded, setIsExpanded] = useState(false)""
+    const [selectedTimeRange, setSelectedTimeRange] = useState()
+    const [analyticsSummary, setAnalyticsSummary] = useState()
     // Auto-refresh analytics data,
 useEffect(() => {
-        if();
+        if()
             return,
 const interval = setInterval(() => {
             updateAnalyticsSummary()}, refreshInterval)
-        return () => clearInterval(interval)}, [showRealTime, refreshInterval]);
-    // Update analytics summary,;
-const updateAnalyticsSummary = () => {;
-        const summary = getAnalyticsSummary();
+        return () => clearInterval(interval)}, [showRealTime, refreshInterval])
+    // Update analytics summary,
+const updateAnalyticsSummary = () => {
+        const summary = getAnalyticsSummary()
         if (summary) {
             setAnalyticsSummary(summary)}
     }
@@ -415,36 +415,36 @@ const handleDashboardInteraction = (action, metadata) => {""
     // Track conversion goal,"
 const handleTrackConversion = () => {"`'
         trackConversion('dashboard_engagement', 1, { timeRange: selectedTimeRange })}
-    // Get events by category for chart,;
-const getEventsByCategory = () => {;
-        if();
+    // Get events by category for chart,
+const getEventsByCategory = () => {
+        if()
             return []
         return Object.entries(analyticsSummary.eventsByCategory).map(([category, count]) => ({
             category, count: count}))}
     // Get performance score,
-const getPerformanceScore = () => {;
-        if();
+const getPerformanceScore = () => {
+        if()
             return 0,
-let score = 100;
-        // Deduct points for poor performance,;
-if();
+let score = 100
+        // Deduct points for poor performance,
+if()
             score -= 20,
-else if();
+else if()
             score -= 10,
-if();
+if()
             score -= 15,
-else if();
+else if()
             score -= 5,
-if();
+if()
             score -= 25,
-else if();
+else if()
             score -= 10,
 return Math.max(0, score)}
     // Format duration,
-const formatDuration = (seconds) => {;
-        if();
-            return `${seconds}s`;
-        const minutes = Math.floor();
+const formatDuration = (seconds) => {
+        if()
+            return `${seconds}s`
+        const minutes = Math.floor()
         const remainingSeconds = seconds % 60`
         return `${minutes}m ${remainingSeconds}s`}
     // Format number with K/M suffix,
@@ -468,9 +468,9 @@ const formatNumber = (num) => {
               className="{`flex" items-center gap-1 px-2 py-1 rounded-full text-xs font-medium ${isTracking ? 'bg-green-500/20 text-green-100' : 'bg-red-500/20 text-red-100'}`}`" >'`"`'"
               <div '`'`"``"
                 className="{`w-2" h-2 rounded-full ${isTracking ? 'bg-green-400' : 'bg-red-400'}`}`" ></div>'''
-              {isTracking ? 'Tracking' : 'Stopped'};
-            </div>;
-            {/*   */}";
+              {isTracking ? 'Tracking' : 'Stopped'}
+            </div>
+            {/*   */}"
             <select value="{selectedTimeRange}"">
               onChange = "{e" =" > {}",
                 setSelectedTimeRange(e.target.value)'';"
@@ -499,7 +499,7 @@ const formatNumber = (num) => {
 ''
 '''
 '''
-'''';
+''''
                 isExpanded ? 'Collapse dashboard'  : 'Expand dashboard'', ',
 }'''
             >'''''
@@ -580,7 +580,7 @@ const formatNumber = (num) => {
 ''''
         <div className="space-y-2 max-h-32 overflow-y-auto">
           {events,
-            .slice();
+            .slice()
             .reverse()"
             .map(event => (""
               <div '''''
@@ -753,7 +753,7 @@ Referrer: '''''
         <div className="flex gap-2">",
           <button onClick="{()" =" > {}"
 '''
-              handleDashboardInteraction('refresh_clicked')"";
+              handleDashboardInteraction('refresh_clicked')""
               updateAnalyticsSummary()';'}}''''
             className = "flex-1 px-3 py-2 bg-blue-500 hover: bg-blue-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center justify-center gap-2"''''
 ''
@@ -765,7 +765,7 @@ Referrer: '''''
             Refresh Data,
           </button>",
           <button onClick="{()" =" > {}"
-              handleTrackConversion()'';
+              handleTrackConversion()''
               handleDashboardInteraction('conversion_tracked')';'}}'''''
             className = "px-3 py-2 bg-green-500 hover: bg-green-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2"''''
               handleTrackConversion()'',

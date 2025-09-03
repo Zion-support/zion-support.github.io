@@ -13,8 +13,8 @@
           </Button>
         </div>
       </div>
-    </div>;
-  );
+    </div>
+  )
 };"'
 export default ErrorPage'';"
 export default ErrorPage'';"'

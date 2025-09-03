@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
-    render(<AIChatbot />);
-    expect(screen.getByRole('main')).toBeInTheDocument();
+    render(<AIChatbot />)
+    expect(screen.getByRole('main')).toBeInTheDocument()
 })
   it('displays correct content', () => {
 
@@ -9,5 +9,5 @@ import { render, screen } from '@testing-library/react'
   it('handles user interactions', () => {
 
     render(<AIChatbot />)
-    // Add interaction tests based on component functionality});
+    // Add interaction tests based on component functionality})
 })

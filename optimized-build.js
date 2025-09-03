@@ -1,7 +1,6 @@
 
-const { execSync } = require('child_process');
-const fs = require('fs');
-
+const { execSync } = require('child_process')
+const fs = require('fs')
 class BuildOptimizer {
   constructor() {
     this.buildSteps = [
@@ -12,19 +11,18 @@ class BuildOptimizer {
 }
 
   async optimizedBuild() {
-    console.log('Starting optimized build process...');
-    
+    console.log('Starting optimized build process...')
     for (const step of this.buildSteps) {
       try {
-        console.log(``Executing: ${step}``);
-        execSync(step, { stdio: 'inherit' });
+        console.log(``Executing: ${step}``)
+        execSync(step, { stdio: 'inherit' })
       } catch (error) {
-        console.warn(`Step failed but continuing: ${step}`);
+        console.warn(`Step failed but continuing: ${step}`)
       }
     }
     
-    console.log('Build process completed');
+    console.log('Build process completed')
   }
 }
 
-new BuildOptimizer().optimizedBuild();
+new BuildOptimizer().optimizedBuild()

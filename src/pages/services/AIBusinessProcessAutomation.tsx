@@ -1,7 +1,6 @@
-import React from 'react';
-import Link from 'next/link';
-import Head from 'next/head';
-
+import React from 'react'
+import Link from 'next/link'
+import Head from 'next/head'
 const AIBusinessProcessAutomation = () => {
   return (
     <>
@@ -11,7 +10,7 @@ const AIBusinessProcessAutomation = () => {
       </Head>
       
       <div className="min-h-screen bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-gray-900 mb-8">
               Business Process Automation
@@ -54,7 +53,6 @@ const AIBusinessProcessAutomation = () => {
         </div>
       </div>
     </>
-  );
-};
-
-export default AIBusinessProcessAutomation;
+  ),
+}
+export default AIBusinessProcessAutomation

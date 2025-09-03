@@ -1,2 +1,2 @@
-import React from;
-  'react' export: default function HiringTracker () {'';
+import React from
+  'react' export: default function HiringTracker () {''

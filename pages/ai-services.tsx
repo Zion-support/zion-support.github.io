@@ -1,10 +1,9 @@
-import React from "react";
-import Head from "next/head";
-import Link from "next/link";
-import { ArrowRight, Award, BarChart3, Bot, Brain, CheckCircle, Eye, MessageSquare, Shield, Zap } from 'lucide-react';
-import Navigation from "../src/components/Navigation";
-import Footer from '../src/components/Footer';
-
+import React from "react"
+import Head from "next/head"
+import Link from "next/link"
+import { ArrowRight, Award, BarChart3, Bot, Brain, CheckCircle, Eye, MessageSquare, Shield, Zap } from 'lucide-react'
+import Navigation from "../src/components/Navigation"
+import Footer from '../src/components/Footer'
 export default function AIServices() {
   return (
     <>
@@ -27,15 +26,15 @@ export default function AIServices() {
               From machine learning to autonomous systems, we deliver intelligent solutions that drive growth.
             </p>
             <div className="flex justify-center space-x-4">
-              <Link 
-                href="/contact"
+              <Link
+href="/contact"
                 className="inline-flex items-center px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors"
               >
                 Get Started
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-              <Link 
-                href="/services"
+              <Link
+href="/services"
                 className="inline-flex items-center px-8 py-3 border border-blue-600 text-blue-600 hover:bg-blue-50 font-medium rounded-lg transition-colors"
               >
                 View All Services
@@ -140,7 +139,7 @@ export default function AIServices() {
         <section className="py-16 px-4 bg-white">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">Why Choose Our AI Services?</h2>
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md: grid-cols-3 gap-8">
               <div className="text-center">
                 <Award className="w-16 h-16 text-blue-600 mx-auto mb-6" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Expert Team</h3>
@@ -169,5 +168,5 @@ export default function AIServices() {
       
       <Footer />
     </>
-  );
+  )
 }

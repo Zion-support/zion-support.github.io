@@ -1,13 +1,13 @@
 export interface ZionEmergingTechService2029 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  benefits: string[];
-  marketPrice: string;
+  id: string
+  name: string
+  tagline: string
+  price: string
+  period: string
+  description: string
+  features: string[]
+  benefits: string[]
+  marketPrice: string
   category:
     | 'Space'
     | 'Energy'
@@ -20,27 +20,27 @@ export interface ZionEmergingTechService2029 {
     | 'GreenTech'
     | 'SmartCities'
     | 'DigitalTwin'
-    | 'Metaverse';
-  icon: string;
-  isPopular?: boolean;
-  isNew?: boolean;
-  link: string;
+    | 'Metaverse'
+  icon: string
+  isPopular?: boolean
+  isNew?: boolean
+  link: string
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string};
-  realImplementation: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
+    mobile: string
+    email: string
+    address: string
+    website: string}
+  realImplementation: boolean
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
+  roi: string
+  competitors: string[]
+  marketSize: string
+  growthRate: string
+  launchDate: string
+  customers: number
+  rating: number
   reviews: number}
 export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [
   // Space Technology Solutions
@@ -818,16 +818,16 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [
     rating: 4.6,
     reviews: 156,
   },
-];
+]
 export const getServicesByCategory = (
   category: ZionEmergingTechService2029['category']
 ) => {
   return zionEmergingTechServices2029.filter(
     service => service.category === category
-  )};
+  )}
 export const getPopularServices = () => {
-  return zionEmergingTechServices2029.filter(service => service.isPopular);
-};
+  return zionEmergingTechServices2029.filter(service => service.isPopular)
+}
 export const getNewServices = () => {
-  return zionEmergingTechServices2029.filter(service => service.isNew);
-};
+  return zionEmergingTechServices2029.filter(service => service.isNew)
+}

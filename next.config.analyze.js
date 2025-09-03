@@ -1,6 +1,5 @@
 
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
-
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 module.exports = {
   webpack: (config, { isServer }) => {
     if (!isServer) {
@@ -10,7 +9,7 @@ module.exports = {
           openAnalyzer: false,
           reportFilename: 'bundle-analysis.html'
         })
-      );
+      )
     }
     return config}
-};
+}

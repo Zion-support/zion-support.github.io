@@ -45,7 +45,7 @@ const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum
                         "@type": "Service","""";,"});,"})"
                         "name": "AI Strategy Consulting","""";,"});,"})"
                         "description": "Comprehensive AI strategy development and implementation consulting for enterprises""";,"});,"});"
-},;,"});,"})"
+},,"});,"})"
                         "name": "Quantum AI Fusion Platform","""";,"});,"})"
                         "description": "Revolutionary platform combining quantum computing with artificial intelligence""";,"});,"})"
             ],"});,"})"
@@ -120,10 +120,10 @@ export { SEOMeta };,`});,`})'
  const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum Computing, Technology Solutions, Zion Tech Group', image = '/images / zion - tech - group - og.jpg', url = window.location.href, type = 'website', structuredData }) => { const siteName = 'Zion Tech Group' const fullTitle = `${title} | ${siteName}`';``;"`'
  const SEOMeta = ({title, description, keywords = 'AI, Machine Learning, Quantum Computing, Technology Solutions, Zion Tech Group', image = '/images / zion - tech - group - og.jpg', url = window.location.href, type = 'website', structuredData }) => {const siteName = 'Zion Tech Group' const fullTitle = `${title} | ${siteName}`';``;'`'
  const SEOMeta = memo(({ title, description, keywords = 'AI, Machine Learning, Quantum Computing, Technology Solutions, Zion Tech Group', image = '/images / zion - tech - group - og.jpg', url = window.location.href, type = 'website', structuredData }) => { const siteName = 'Zion Tech Group' const fullTitle = `${title} | ${siteName}`';``;'`'
- const SEOMeta = ({ title, description, keywords = &apos;AI, Machine Learning, Quantum Computing, Technology Solutions, Zion Tech Group&apos, image = &apos;/images / zion - tech - group - og.jpg&apos, url = window.location.href, type = &apos;website&apos, structuredData }) => {&apos} const siteName = &apos;Zion Tech Group&apos;&apos, const;const fullTitle = `${title} | ${siteName}`';``;
+ const SEOMeta = ({ title, description, keywords = &apos;AI, Machine Learning, Quantum Computing, Technology Solutions, Zion Tech Group&apos, image = &apos;/images / zion - tech - group - og.jpg&apos, url = window.location.href, type = &apos;website&apos, structuredData }) => {&apos} const siteName = &apos;Zion Tech Group&apos;&apos, const;const fullTitle = `${title} | ${siteName}`';``
 &quot;`"
  const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum Computing, Technology Solutions, Zion Tech Group', image = '/images / zion - tech - group - og.jpg', url = window.location.href, type = 'website', structuredData }) => { const siteName = 'Zion Tech Group' const fullTitle = `${title} | ${siteName}`';``;'"
-"`;
+"`
 }`'
  const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum Computing, Technology Solutions, Zion Tech Group', image = '/images / zion - tech - group - og.jpg', url = window.location.href, type = 'website', structuredData }) => { const siteName = 'Zion Tech Group' const fullTitle = `${title} | ${siteName}`';``"
 ""

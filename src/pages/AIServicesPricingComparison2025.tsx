@@ -3,9 +3,8 @@ import React, { useState } from 'react'
   Filter} from 'lucide-react'
 
 const AIServicesPricingComparison2025: React.FC = () => {',,
-  const [activeCategory, setActiveCategory] = useState();
-  const [searchTerm, setSearchTerm] = useState('');
-
+  const [activeCategory, setActiveCategory] = useState()
+  const [searchTerm, setSearchTerm] = useState('')
   const categories = ['
     { id: 'all', name: 'All Services', icon: '🚀' },'
     { id: 'Legal Technology', name: 'Legal Technology', icon: '⚖️' },'
@@ -352,34 +351,31 @@ name: "IBM Quantum",
       roi: "1000% within 15 months","
       setupTime: "10-12 weeks","
       website: "https://ziontechgroup.com/ai-quantum-platform"}
-  ];
-;
-  const filteredServices = pricingComparison.filter(service => {;
-    const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
-    const matchesSearch = service.service.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         service.category.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch});
+  ]
 
+  const filteredServices = pricingComparison.filter(service => {
+    const matchesCategory = activeCategory === 'all' || service.category === activeCategory
+    const matchesSearch = service.service.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.category.toLowerCase().includes(searchTerm.toLowerCase())
+    return matchesCategory && matchesSearch})
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {,
 opacity: 1,
-      transition: {,;
-staggerChildren: 0.1};
-    };
-  };
-
+      transition: {,
+staggerChildren: 0.1}
+    }
+  }
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
     visible: {,
 y: 0,
       opacity: 1,
       transition: {,
-duration: 0.5,";
-        ease: "easeOut"};
-    };
-  };
-
+duration: 0.5,"
+        ease: "easeOut"}
+    }
+  }
   return (
     <>
       <Helmet>
@@ -609,8 +605,8 @@ Call: +1 302 464 0950,
             </motion.div>
           </div>
         </section>
-      </div>;
+      </div>
     </>
-  )};
+  )}
 "
 export default AIServicesPricingComparison2025;"

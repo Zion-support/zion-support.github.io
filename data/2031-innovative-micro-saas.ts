@@ -1,43 +1,43 @@
 export interface InnovativeMicroSaas2031 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string[];
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
+  id: string
+  name: string
+  tagline: string
+  price: string
+  period: string
+  description: string
+  features: string[]
+  popular: boolean
+  icon: string
+  color: string
+  textColor: string
+  link: string
+  marketPosition: string
+  targetAudience: string[]
+  trialDays: number
+  setupTime: string
+  category: string
+  realService: boolean
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
+  roi: string
+  competitors: string[]
+  marketSize: string
+  growthRate: string
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string};
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-  innovationLevel: 'Revolutionary' | 'Breakthrough' | 'Advanced' | 'Emerging';
-  patentStatus: 'Patented' | 'Patent Pending' | 'Trade Secret' | 'Open Source';
-  aiCapabilities: string[];
+    mobile: string
+    email: string
+    address: string
+    website: string}
+  realImplementation: boolean
+  implementationDetails: string
+  launchDate: string
+  customers: number
+  rating: number
+  reviews: number
+  innovationLevel: 'Revolutionary' | 'Breakthrough' | 'Advanced' | 'Emerging'
+  patentStatus: 'Patented' | 'Patent Pending' | 'Trade Secret' | 'Open Source'
+  aiCapabilities: string[]
 export const innovativeMicroSaas2031: InnovativeMicroSaas2031[] = [
   // AI BUSINESS INTELLIGENCE SUITE
   {
@@ -303,4 +303,4 @@ export const innovativeMicroSaas2031: InnovativeMicroSaas2031[] = [
     patentStatus: 'Patent Pending',
     aiCapabilities['Autonomous AI', 'Strategic Planning', 'Decision Making', 'Resource Optimization', 'Business Intelligence'],
     marketDisruption: 'Revolutionizes business management by introducing autonomous operations, enabling fully automated strategic planning and resource optimization.'
-];}}
+]}}

@@ -134,15 +134,15 @@ export { SEOHead };,"});,"})"
 export { SEOHead };,"});,"})"
 ;,"});,"})"
 export { SEOHead };,"});,`})'
- const SEOHead = ({ title = 'Zion Tech Group - AI - Powered Technology Solutions & Services', description = 'Discover innovative AI, quantum computing, and technology solutions. Expert consulting, enterprise services, and cutting - edge platforms for modern businesses.', keywords = 'AI services, quantum computing, technology consulting, enterprise solutions, cybersecurity, cloud services, digital transformation', image = '/images / zion - tech - group - og.jpg', url = 'https: '''',import { Helmet } from 'react-helmet-async';const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & Services', description = 'Discover innovative AI, quantum computing, and technology solutions. Expert consulting, enterprise services, and cutting-edge platforms for modern businesses.', keywords = 'AI services, quantum computing, technology consulting, enterprise solutions, cybersecurity, cloud services, digital transformation', image = '/images/zion-tech-group-og.jpg', url = 'https://ziontechgroup.com', type = 'website', publishedTime, modifiedTime, author = 'Zion Tech Group' }) => {};
+ const SEOHead = ({ title = 'Zion Tech Group - AI - Powered Technology Solutions & Services', description = 'Discover innovative AI, quantum computing, and technology solutions. Expert consulting, enterprise services, and cutting - edge platforms for modern businesses.', keywords = 'AI services, quantum computing, technology consulting, enterprise solutions, cybersecurity, cloud services, digital transformation', image = '/images / zion - tech - group - og.jpg', url = 'https: '''',import { Helmet } from 'react-helmet-async';const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & Services', description = 'Discover innovative AI, quantum computing, and technology solutions. Expert consulting, enterprise services, and cutting-edge platforms for modern businesses.', keywords = 'AI services, quantum computing, technology consulting, enterprise solutions, cybersecurity, cloud services, digital transformation', image = '/images/zion-tech-group-og.jpg', url = 'https://ziontechgroup.com', type = 'website', publishedTime, modifiedTime, author = 'Zion Tech Group' }) => {}
 '
 ''
 '''
-    const siteName = 'Zion Tech Group;
+    const siteName = 'Zion Tech Group
     const fullTitle = title === siteName ? title : `${title} | ${siteName}`;"
  const SEOHead = ({ title = 'Zion Tech Group - AI - Powered Technology Solutions & Services', description = 'Discover innovative AI, quantum computing, and technology solutions. Expert consulting, enterprise services, and cutting - edge platforms for modern businesses.', keywords = 'AI services, quantum computing, technology consulting, enterprise solutions, cybersecurity, cloud services, digital transformation', image = '/images / zion - tech - group - og.jpg', url = 'https: '''',import { Helmet } from 'react-helmet-async';`'"
-const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & Services', description = 'Discover innovative AI, quantum computing, and technology solutions. Expert consulting, enterprise services, and cutting-edge platforms for modern businesses.', keywords = 'AI services, quantum computing, technology consulting, enterprise solutions, cybersecurity, cloud services, digital transformation', image = '/images/zion-tech-group-og.jpg', url = 'https: //ziontechgroup.com', type = 'website', publishedTime, modifiedTime, author = 'Zion Tech Group' }) => {}"";
- const SEOHead = ({ title = 'Zion Tech Group - AI - Powered Technology Solutions & Services', description = 'Discover innovative AI, quantum computing, and technology solutions. Expert consulting, enterprise services, and cutting - edge platforms for modern businesses.', keywords = 'AI services, quantum computing, technology consulting, enterprise solutions, cybersecurity, cloud services, digital transformation', image = '/images / zion - tech - group - og.jpg', url = 'https: '''',import { Helmet } from "react-helmet-async,";
+const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & Services', description = 'Discover innovative AI, quantum computing, and technology solutions. Expert consulting, enterprise services, and cutting-edge platforms for modern businesses.', keywords = 'AI services, quantum computing, technology consulting, enterprise solutions, cybersecurity, cloud services, digital transformation', image = '/images/zion-tech-group-og.jpg', url = 'https: //ziontechgroup.com', type = 'website', publishedTime, modifiedTime, author = 'Zion Tech Group' }) => {}""
+ const SEOHead = ({ title = 'Zion Tech Group - AI - Powered Technology Solutions & Services', description = 'Discover innovative AI, quantum computing, and technology solutions. Expert consulting, enterprise services, and cutting - edge platforms for modern businesses.', keywords = 'AI services, quantum computing, technology consulting, enterprise solutions, cybersecurity, cloud services, digital transformation', image = '/images / zion - tech - group - og.jpg', url = 'https: '''',import { Helmet } from "react-helmet-async,"
 const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & Services', description = 'Discover innovative AI, quantum computing, and technology solutions. Expert consulting, enterprise services, and cutting-edge platforms for modern businesses.', keywords = 'AI services, quantum computing, technology consulting, enterprise solutions, cybersecurity, cloud services, digital transformation', image = '/images/zion-tech-group-og.jpg', url = 'https://ziontechgroup.com', type = 'website', publishedTime, modifiedTime, author = 'Zion Tech Group' }) => {}`'
 ''
 '''
@@ -206,10 +206,10 @@ const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & 
             'description': description,'''''
             'address': {}""
 '''''
-'''';
-                '@type': 'PostalAddress', '''';
-                'streetAddress': '364 E Main St STE 1008','''';
-                'addressLocality': 'Middletown', '''';
+''''
+                '@type': 'PostalAddress', ''''
+                'streetAddress': '364 E Main St STE 1008',''''
+                'addressLocality': 'Middletown', ''''
                 'addressRegion': 'DE',''''
                 'postalCode': '19709', ''''
                 'addressCountry': 'US'''','
@@ -275,7 +275,7 @@ const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & 
 '''''
 '''''
                         '@type': 'ImageObject', '''''
-                        '@type': 'ImageObject,''';
+                        '@type': 'ImageObject,'''
                         'url': 'https://ziontechgroup.com/images/zion - tech-group-logo.png'''}''', ',
 },'''''
                 'datePublished': publishedTime, '''''
@@ -288,18 +288,18 @@ const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & 
                     '@id': url}
             })}
         </script>)}
-    </Helmet>)};
-export default SEOHead;
-;
-export { SEOHead };
-;
-export { SEOHead };
-;
-export { SEOHead };
-;
-export { SEOHead };
-;
-export { SEOHead };
+    </Helmet>)}
+export default SEOHead
+
+export { SEOHead }
+
+export { SEOHead }
+
+export { SEOHead }
+
+export { SEOHead }
+
+export { SEOHead }
     </Helmet>)}
 export default SEOHead,
 export { SEOHead }

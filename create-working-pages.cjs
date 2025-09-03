@@ -1,43 +1,40 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-
+const fs = require('fs')
+const path = require('path')
 class WorkingPagesCreator {
   constructor() {
-    this.projectRoot = process.cwd();
+    this.projectRoot = process.cwd()
   }
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
+    console.log(`[${new Date().toISOString()}] ${message}`)
   }
 
   createWorkingPricingGuide() {
-    const filePath = path.join(this.projectRoot, 'pages/pricing-guide.tsx');
-
-    const content = `import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { CheckCircle, Star, Zap, Shield, Globe, TrendingUp, Brain, Cloud, Network, Phone, Mail } from 'lucide-react';
-import { Layout } from '../components/Layout';
-
+    const filePath = path.join(this.projectRoot, 'pages/pricing-guide.tsx')
+    const content = `import React from 'react'
+import Head from 'next/head'
+import { motion } from 'framer-motion'
+import { CheckCircle, Star, Zap, Shield, Globe, TrendingUp, Brain, Cloud, Network, Phone, Mail } from 'lucide-react'
+import { Layout } from '../components/Layout'
 export default function PricingGuide() {
   const costSavingTips = [
     {
       question: 'Can I change my plan at any time?', 
-      answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we\'ll prorate any billing differences.';
+      answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we\'ll prorate any billing differences.'
 },
     {
       question: 'Is there a free trial available?', 
-      answer: 'Yes, we offer a 14-day free trial for all plans. No credit card required to start your trial.';
+      answer: 'Yes, we offer a 14-day free trial for all plans. No credit card required to start your trial.'
 },
     {
       question: 'What payment methods do you accept?',
-      answer: 'We accept all major credit cards, PayPal, and bank transfers for annual subscriptions.';
+      answer: 'We accept all major credit cards, PayPal, and bank transfers for annual subscriptions.'
 },
     {
       question: 'Do you offer discounts for annual subscriptions?',
-      answer: 'Yes, we offer up to 20% discount for annual subscriptions compared to monthly billing.';
+      answer: 'Yes, we offer up to 20% discount for annual subscriptions compared to monthly billing.'
 }
   ]
 
@@ -235,24 +232,21 @@ export default function PricingGuide() {
         </div>
       </section>
     </Layout>
-  );
-}`;
-
-    fs.writeFileSync(filePath, content, 'utf8');
-    this.log('✅ Created working pricing-guide.tsx');
-    return true;
+  )
+}`
+    fs.writeFileSync(filePath, content, 'utf8')
+    this.log('✅ Created working pricing-guide.tsx')
+    return true
   }
 
   createWorkingSitemap() {
-    const filePath = path.join(this.projectRoot, 'pages/sitemap.tsx');
-
-    const content = `import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { Sitemap, ExternalLink, ArrowRight } from 'lucide-react';
-import { Layout } from '../components/Layout';
-import { Card } from '../components/ui/Card';
-
+    const filePath = path.join(this.projectRoot, 'pages/sitemap.tsx')
+    const content = `import React from 'react'
+import Head from 'next/head'
+import { motion } from 'framer-motion'
+import { Sitemap, ExternalLink, ArrowRight } from 'lucide-react'
+import { Layout } from '../components/Layout'
+import { Card } from '../components/ui/Card'
 export default function SitemapPage() {
   const siteStructure = [
     {
@@ -364,41 +358,37 @@ export default function SitemapPage() {
         </div>
       </section>
     </Layout>
-  );
-}`;
-
-    fs.writeFileSync(filePath, content, 'utf8');
-    this.log('✅ Created working sitemap.tsx');
-    return true;
+  )
+}`
+    fs.writeFileSync(filePath, content, 'utf8')
+    this.log('✅ Created working sitemap.tsx')
+    return true
   }
 
   async createWorkingPages() {
-    this.log('🔧 Creating working pages...');
-
-    let createdCount = 0;
-
-    if (this.createWorkingPricingGuide()) createdCount++;
-    if (this.createWorkingSitemap()) createdCount++;
-
-    this.log(`🎉 Created ${createdCount} working pages!`);
-    return createdCount > 0;
+    this.log('🔧 Creating working pages...')
+    let createdCount = 0
+    if (this.createWorkingPricingGuide()) createdCount++
+    if (this.createWorkingSitemap()) createdCount++
+    this.log(`🎉 Created ${createdCount} working pages!`)
+    return createdCount > 0
   }
 }
 
 // Run the creator
-const creator = new WorkingPagesCreator();
+const creator = new WorkingPagesCreator()
 creator
   .createWorkingPages()
   .then(success => {
     if (success) {
-      console.log('✅ Working pages created successfully!');
-      process.exit(0);
+      console.log('✅ Working pages created successfully!')
+      process.exit(0)
     } else {
-      console.log('❌ No pages were created.');
-      process.exit(0);
+      console.log('❌ No pages were created.')
+      process.exit(0)
     }
   })
   .catch(error => {
-    console.error('❌ Fatal error:', error);
-    process.exit(1);
-  });
+    console.error('❌ Fatal error:', error)
+    process.exit(1)
+  })

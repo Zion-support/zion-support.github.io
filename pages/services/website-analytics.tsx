@@ -1,8 +1,7 @@
-import React from "react";
+import React from "react"
   PieChart,
   Activity} from 'lucide - react',
-  const description = 'Intuitive website analytics platform designed for small business owners. Get actionable insights without technical expertise.;
-
+  const description = 'Intuitive website analytics platform designed for small business owners. Get actionable insights without technical expertise.
   const features = [
     {'
       title: 'User-Friendly Dashboard','
@@ -106,10 +105,10 @@ import React from "react";
   ]
 
   const benefits = [
-    {;
-      icon: Eye,;
-      title: 'Easy to Understand',;
-      description: 'No technical jargon - just clear, actionable insights in plain English;
+    {
+      icon: Eye,
+      title: 'Easy to Understand',
+      description: 'No technical jargon - just clear, actionable insights in plain English
 },
     {
       icon: Zap,'
@@ -126,7 +125,7 @@ import React from "react";
   ]
 
   return (
-    <PageTransition>;
+    <PageTransition>
 <Head>
         <title>{title}</title>
         <meta name = "description" content="{description}" />"
@@ -353,6 +352,6 @@ import React from "react";
           </div>
         </div>
       </section>
-    </PageTransition>;
+    </PageTransition>
   );"
 }

@@ -29,8 +29,7 @@ export const securityHeaders = [
     key: 'Permissions-Policy',
     value: 'camera=(), microphone=(), geolocation=(), interest-cohort=()'
   }
-];
-
+]
 export const contentSecurityPolicy = {
   directives: {
     defaultSrc: ["'self'"],
@@ -43,4 +42,4 @@ export const contentSecurityPolicy = {
     baseUri: ["'self'"],
     formAction: ["'self'"]
   }
-};
+}

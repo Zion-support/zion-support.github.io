@@ -1,9 +1,8 @@
 const React = dynamic(() => import('react'), { ssr: false })
 const Link = dynamic(() => import('next/link'), { ssr: false })
-    { number: '99.9%', label: 'Uptime Guarantee' },;
-    { number: '24/7', label: 'Support Available' },;
-  ];
-
+    { number: '99.9%', label: 'Uptime Guarantee' },
+    { number: '24/7', label: 'Support Available' },
+  ]
   const services = [
     {
       title: "AI Services","
@@ -20,11 +19,10 @@ const Link = dynamic(() => import('next/link'), { ssr: false })
     {"
       title: "Micro SaaS","
       description: "Scalable software as a service solutions",
-      icon: Cloud,";
+      icon: Cloud,"
       href: "/micro-saas",,
-    };
-  ];
-
+    }
+  ]
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       <SEO title="Zion Tech Group - Leading AI & Technology Solutions" "
@@ -177,9 +175,9 @@ icon: CheckCircle,"
                 icon: Zap,"
                 title: "Fast Delivery","
                 description: "Agile development with rapid deployment capabilities and continuous integration",
-              };
-            ].map((feature, index) => {;
-              const IconComponent = feature.icon;
+              }
+            ].map((feature, index) => {
+              const IconComponent = feature.icon
               return (
                 <motion.div,"
 key = "{feature.title}""
@@ -196,9 +194,9 @@ key = "{feature.title}""
                     </div>
                   </div>",
                   <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>"
-                  <p className="text-gray-600 text-sm md:text-base leading-relaxed">{feature.description}</p>;
-                </motion.div>;
-              );
+                  <p className="text-gray-600 text-sm md:text-base leading-relaxed">{feature.description}</p>
+                </motion.div>
+              )
             })}
           </div>
         </div>
@@ -261,7 +259,7 @@ initial="{{" opacity: 0, y: 30 }}"
         </div>
       </section>
     </div>,
-  ),;
-};
+  ),
+}
 "
-export default Home;
+export default Home

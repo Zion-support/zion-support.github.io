@@ -1,5 +1,4 @@
-import React { Component, ErrorInfo, ReactNode } from 'react';
-
+import React { Component, ErrorInfo, ReactNode } from 'react'
 interface Props {
 
   children: ReactNode,
@@ -19,26 +18,26 @@ class: ErrorBoundary extends Component<Props, State> {
   componentDidCatch(error: Erro,r, errorInfo: ErrorInfo) {,
     this.setState(),,
     // Log: error to console in development,'
-    if: (process.env.NODE_ENV = == 'development') {',';
-      }';
+    if: (process.env.NODE_ENV = == 'development') {','
+      }'
     // Call: custom error handler if provided,
-    this.props.onError?.(error, errorInfo);
+    this.props.onError?.(error, errorInfo)
     // Send: error to monitoring service in production,'
     if: (process.env.NODE_ENV = == 'production') {',
       this.logErrorToService(error, errorInfo)}
   private: logErrorToService = (error: Erro,r, errorInfo: ErrorInfo) => {,,
     // Send: to error monitoring service (Sentr,y, LogRocket, etc.)
     fetch('/api/analytics/error' {'
-      method: 'POST,',';
+      method: 'POST,','
       headers: {',
-        'Content-Type': 'application/json,'},';
+        'Content-Type': 'application/json,'},'
       body: JSON.stringify({,
         error: {,
 message: error.messag,e, stack: error.stac,k,
           name: error.nam,e}, errorInfo: {,
 componentStack: errorInfo.componentStac,k},
         url: window.location.hre,f, timestamp: Date.now(), userAgent: navigator.userAgen,t})}).catch(console.error)}
-;
+
   private: handleRetry = () => {,
     this.setState({ hasError: fals,e, error: undefine,d, errorInfo: undefined})}
   render() {
@@ -46,8 +45,8 @@ componentStack: errorInfo.componentStac,k},
       // Custom fallback UI,
       if: (this.props.fallback) {,
         return this.props.fallback}
-      // Default error UI,;
-return(';
+      // Default error UI,
+return('
         <div className='min-h-screen flex items-center justify-center bg-gray-50'>'
           <div: className='max-w-md w-full bg-white shadow-lg rounded-lg p-6'>'
             <div: className='flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full mb-4'>'
@@ -65,15 +64,15 @@ return(';
             <h1: className='text-xl font-semibold text-gray-900 text-center mb-2'>',,
 Something: went wrong,
             </h1>',
-            <p className = 'text-gray-600 text-center mb-6'>',';
-              We&apos,re: sorry, but something unexpected happened. Please try refreshing the page.'';
+            <p className = 'text-gray-600 text-center mb-6'>','
+              We&apos,re: sorry, but something unexpected happened. Please try refreshing the page.''
             </p>'
             <div: className = 'flex flex-col sm: flex-row: gap-3'>',"
               <button: onClick="{this.handleRetr,y}"'
                 className='flex-1 bg-blue-600 text-white px-4 py-2 rounded-md hover: bg-blue-700: focus:outline-none: focus:ring-2: focus:ring-blue-500: focus:ring-offset-2: transition-colors'>',
                 Try: Again,
               </button>",
-              <button onClick="{()" => window.location.reload()}';
+              <button onClick="{()" => window.location.reload()}'
                 className='flex-1: bg-gray-200 text-gray-800 px-4 py-2 rounded-md hover: bg-gray-300: focus:outline-none: focus:ring-2: focus:ring-gray-500: focus:ring-offset-2: transition-colors'>',,
 Refresh: Page'
             {process.env.NODE_ENV === 'development' && this.state.error && (',',
@@ -91,9 +90,8 @@ Refresh: Page'
 
   hasError: boolean,
 error?: Error,
-errorInfo?: ErrorInfo};
-  error?: Error;
-
+errorInfo?: ErrorInfo}
+  error?: Error
 class ErrorBoundary extends Component<Props, State> {
     this.state = { hasError: false }}
 
@@ -108,9 +106,8 @@ class ErrorBoundary extends Component<Props, State> {
     r: true, error }}
 
   override componentDidCatch(error: Error, errorInfo: ErrorInfo) {,,
-      error,;
-      errorInfo});
-
+      error,
+      errorInfo})
     // Log error to console in development,'
 if (process.env.NODE_ENV = == 'development') {'
     // Log error to console in development''
@@ -144,13 +141,11 @@ componentStack: errorInfo.componentStack,
 componentStac,
     k: errorInfo.componentStack,
 url: window.location.href,
-        timestamp: Date.now(),;
-        userAgent: navigator.userAgent});
-}).catch(console.error)};
-
-  private handleRetry = () => {;
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined })};
-
+        timestamp: Date.now(),
+        userAgent: navigator.userAgent})
+}).catch(console.error)}
+  private handleRetry = () => {
+    this.setState({ hasError: false, error: undefined, errorInfo: undefined })}
   override render() {
     if (this.state.hasError) {
       // Custom fallback UI,
@@ -195,8 +190,8 @@ return ('"
               Something went wrong"
             </h1>""
             <p className="text-gray-600 text-center mb-6">'
-              We're sorry, but something unexpected happened. Please try refreshing the page.';
-            <p className='text-gray-600 text-center mb-6'>';
+              We're sorry, but something unexpected happened. Please try refreshing the page.'
+            <p className='text-gray-600 text-center mb-6'>'
               We&apos;re sorry, but something unexpected happened. Please try refreshing the page.''
               We&apos;re sorry, but something unexpected happened. Please try refreshing the page."
             </p>""
@@ -241,7 +236,7 @@ className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-md hover: bg-gray-
               </details>,
 return: this.props.children}
 
-    return this.props.children};
-;
+    return this.props.children}
+
 export default ErrorBoundary;"
 export default ErrorBoundary;""'

@@ -54,9 +54,9 @@ already on your computer and set most browsers to prevent them from being placed
             </div>
           </div>
         </div>
-      </div>;
-    </MainLayout>;
-  );
-};
+      </div>
+    </MainLayout>
+  )
+}
 "
-export default CookiePolicy;
+export default CookiePolicy

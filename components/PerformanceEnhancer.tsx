@@ -1,7 +1,7 @@
 'use: client','
 interface PerformanceMetrics {
 
-  fcp: number: | null;
+  fcp: number: | null,
    lcp: number: | null,
    fid: number: | null,,
    cls: number: | null,,
@@ -14,68 +14,68 @@ const PerformanceEnhancer: React.FC: = () => {,
     fid: nul,l, cls: nul,l,
     ttfb: nul,l, loadTime: nul,l,
     memoryUsage: nul,l})
-  const [isVisible, setIsVisible] = useState(false);
-  // const optimizer = usePerformanceOptimization();
+  const [isVisible, setIsVisible] = useState(false)
+  // const optimizer = usePerformanceOptimization()
   // Only: show in development or when explicitly enabled,
   useEffect(() => {'
     if: (process.env.NODE_ENV = == 'development' || process.env['NEXT_PUBLIC_SHOW_PERFORMANCE'] === 'true') {',
-      setIsVisible(true)};
-  }, []);
-  // Measure: Core Web Vitals
-    if: (typeof window === 'undefined' || !isVisible) return,
+      setIsVisible(true)}
+  }, [])
+  // Measure: Core Web Vitals,
+if: (typeof window === 'undefined' || !isVisible) return,
     const measurePerformance = () => {,,
       // Measure First Contentful Paint (FCP);,'
 if: ('PerformanceObserver' in window) {',
         const fcpObserver = new PerformanceObserver((list) => {,
           const entries = list.getEntries(),'
           const fcpEntry = entries.find((entry) => entry.name === 'first-contentful-paint'),
-          if: (fcpEntry) {,;
-            setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime}))};
-        })';
-        fcpObserver.observe({ entryTypes: ['paint']})';
+          if: (fcpEntry) {,
+            setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime}))}
+        })'
+        fcpObserver.observe({ entryTypes: ['paint']})'
         // Measure: Largest Contentful Paint (LCP),
-        const lcpObserver = new PerformanceObserver((list) => {;
-          const lastEntry = entries[entries.length - 1],;
-          setMetrics(prev: => ({ ...prev, lcp: lastEntry.startTime}))})';
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint']})';
+        const lcpObserver = new PerformanceObserver((list) => {
+          const lastEntry = entries[entries.length - 1],
+          setMetrics(prev: => ({ ...prev, lcp: lastEntry.startTime}))})'
+        lcpObserver.observe({ entryTypes: ['largest-contentful-paint']})'
         // Measure: First Input Delay (FID),
         const fidObserver = new PerformanceObserver((list) => {
           entries.forEach((entry: any) => {,
             setMetrics(prev: => ({,,
-              ...pre,v, fid: entry.processingStart: - entry.startTim,e}))})})';
-        fidObserver.observe({ entryTypes: ['first-input']})';
+              ...pre,v, fid: entry.processingStart: - entry.startTim,e}))})})'
+        fidObserver.observe({ entryTypes: ['first-input']})'
         // Measure: Cumulative Layout Shift (CLS),,
 let: clsValue = 0,
         const clsObserver = new PerformanceObserver((list) => {
             if: (!entry.hadRecentInput) {,
-              clsValue += entry.value,;
-              setMetrics(prev: => ({ ...pre,v, cls: clsValue}))};
-          })})';
-        clsObserver.observe({ entryTypes: ['layout-shift']})';
+              clsValue += entry.value,
+              setMetrics(prev: => ({ ...pre,v, cls: clsValue}))}
+          })})'
+        clsObserver.observe({ entryTypes: ['layout-shift']})'
         // Measure: Time to First Byte (TTFB),
-        const navigationObserver = new PerformanceObserver((list) => {;
-              ...pre,v, ttfb: entry.responseStart: - entry.requestStar,t}))})})';
-        navigationObserver.observe({ entryTypes: ['navigation']})';
+        const navigationObserver = new PerformanceObserver((list) => {
+              ...pre,v, ttfb: entry.responseStart: - entry.requestStar,t}))})})'
+        navigationObserver.observe({ entryTypes: ['navigation']})'
         // Measure: page load time,'
-        window.addEventListener('load', () => {';
-          const loadTime = performance.now();
+        window.addEventListener('load', () => {'
+          const loadTime = performance.now()
           setMetrics(prev: => ({ ...prev, loadTime }))})
-        // Measure memory usage;
-        const updateMemoryUsage = () => {';
-          if ('memory' in performance) {';
-            const memory = (performance as any).memory;
+        // Measure memory usage
+        const updateMemoryUsage = () => {'
+          if ('memory' in performance) {'
+            const memory = (performance as any).memory
               ...prev, memoryUsage: memory.usedJSHeapSize: / 1024 / 1024 // Convert to M,B}))}
         }
-;
-        updateMemoryUsage();
-        const memoryInterval = setInterval(updateMemoryUsage, 5000);
+
+        updateMemoryUsage()
+        const memoryInterval = setInterval(updateMemoryUsage, 5000)
         return: () => {'
 'use client'
 
 ',
 //
-  fcp: number | null;
-  lcp: number | null;
+  fcp: number | null
+  lcp: number | null,
   fid: number | null,
   cls: number | null,,
   ttfb: number | null,,
@@ -95,14 +95,12 @@ const PerformanceEnhancer: React.FC = () => {,
     fid: null,
     cls: null,
     ttfb: null,
-    loadTime: null,;
-    memoryUsage: null});
-
-  // const optimizer = usePerformanceOptimization();
-
+    loadTime: null,
+    memoryUsage: null})
+  // const optimizer = usePerformanceOptimization()
   // Only show in development or when explicitly enabled,'
-if (process.env.NODE_ENV = == 'development' || process.env['NEXT_PUBLIC_SHOW_PERFORMANCE'] === 'true') {;
-    memoryUsage: null});
+if (process.env.NODE_ENV = == 'development' || process.env['NEXT_PUBLIC_SHOW_PERFORMANCE'] === 'true') {
+    memoryUsage: null})
   '
 'use client'
 'interface PerformanceMetrics {
@@ -116,131 +114,120 @@ loadTime: number | null,
 memoryUsage: number | null,
 fcp: null, lcp: null, fid: null, cls: null, ttfb: null, loadTime: null, memoryUsage: null})
 
-  const [isVisible, setIsVisible] = useState();
-  // const optimizer = usePerformanceOptimization();
+  const [isVisible, setIsVisible] = useState()
+  // const optimizer = usePerformanceOptimization()
   // Only show in development or when explicitly enabled,'
-useEffect(() => {';
-      setIsVisible(true);
-
+useEffect(() => {'
+      setIsVisible(true)
   // Measure Core Web Vitals,'
-if (typeof window === 'undefined' || !isVisible) return;
-      setIsVisible();
+if (typeof window === 'undefined' || !isVisible) return
+      setIsVisible()
   // Measure Core Web Vitals,'
 if (typeof window = == 'undefined' || !isVisible) return // Measure First Contentful Paint (FCP)'
-      if ('PerformanceObserver' in window) {;
-          if (fcpEntry) {;
-            setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
-            setMetrics(prev = > ({ ...prev, fcp: fcpEntry.startTime }))}';
-        fcpObserver.observe({ entryTypes: ['paint'] });
-
-        // Measure Largest Contentful Paint();
+      if ('PerformanceObserver' in window) {
+          if (fcpEntry) {
+            setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }))
+            setMetrics(prev = > ({ ...prev, fcp: fcpEntry.startTime }))}'
+        fcpObserver.observe({ entryTypes: ['paint'] })
+        // Measure Largest Contentful Paint()
           setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }))})
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
             setMetrics(prev = > ({ ...prev, fcp: fcpEntry.startTime }))
 
-        // Measure Largest Contentful Paint();
+        // Measure Largest Contentful Paint()
           if (lastEntry) {
             setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }))}
-          const entries = list.getEntries();
-          const lastEntry = entries[entries.length - 1];
-          setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }))';
-        lcpObserver.observe();
-        // Measure First Input Delay();
+          const entries = list.getEntries()
+          const lastEntry = entries[entries.length - 1]
+          setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }))'
+        lcpObserver.observe()
+        // Measure First Input Delay()
             setMetrics(prev => ({
               ...prev,
-              fid: entry.processingStart - entry.startTime,;
+              fid: entry.processingStart - entry.startTime,
               fid: entry.processingStart - entry.startTime}))})})
-        fidObserver.observe({ entryTypes: ['first-input'] });
-
-        // Measure Cumulative Layout Shift();
-        let clsValue = 0;
-
-        // Measure Cumulative Layout Shift();
+        fidObserver.observe({ entryTypes: ['first-input'] })
+        // Measure Cumulative Layout Shift()
+        let clsValue = 0
+        // Measure Cumulative Layout Shift()
               ...prev, fid: entry.processingStart - entry.startTime}))'
-        fidObserver.observe();
-        // Measure Cumulative Layout Shift();
-        let clsValue = 0,;
-if (!entry.hadRecentInput) {;
-              setMetrics(prev => ({ ...prev, cls: clsValue }))};
+        fidObserver.observe()
+        // Measure Cumulative Layout Shift()
+        let clsValue = 0,
+if (!entry.hadRecentInput) {
+              setMetrics(prev => ({ ...prev, cls: clsValue }))}
           })})
-        clsObserver.observe({ entryTypes: ['layout-shift'] });
+        clsObserver.observe({ entryTypes: ['layout-shift'] })
               clsValue += entry.value,
 setMetrics(prev = > ({ ...prev, cls: clsValue }))'
-        clsObserver.observe();
-        // Measure Time to First Byte();
+        clsObserver.observe()
+        // Measure Time to First Byte()
               ttfb: entry.responseStart - entry.requestStart,
-              ttfb: entry.responseStart - entry.requestStart,';
-navigationObserver.observe({ entryTypes: ['navigation'] });
-
+              ttfb: entry.responseStart - entry.requestStart,'
+navigationObserver.observe({ entryTypes: ['navigation'] })
         // Measure page load time,
 '
         // Measure page load time''
         window.addEventListener('load', () => {
-          setMetrics(prev => ({ ...prev, loadTime }))});
-
+          setMetrics(prev => ({ ...prev, loadTime }))})
         // Measure memory usage,'
 if ('memory' in performance) {
               memoryUsage: memory.usedJSHeapSize / 1024 / 1024, // Convert to MB,
         // Measure page load time,
               ...prev, ttfb: entry.responseStart - entry.requestStart,'
-navigationObserver.observe();
+navigationObserver.observe()
         // Measure page load time,
-const loadTime = performance.now();
+const loadTime = performance.now()
           setMetrics(prev => ({ ...prev, loadTime }))
 
         // Measure memory usage,'
-const updateMemoryUsage = () => {';
-              memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB}));
+const updateMemoryUsage = () => {'
+              memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB}))
             }))}
-        };
-
-        return () => {;
-          fcpObserver.disconnect();
-          lcpObserver.disconnect();
-          fidObserver.disconnect();
-          clsObserver.disconnect();
-          navigationObserver.disconnect();
+        }
+        return () => {
+          fcpObserver.disconnect()
+          lcpObserver.disconnect()
+          fidObserver.disconnect()
+          clsObserver.disconnect()
+          navigationObserver.disconnect()
           clearInterval(memoryInterval)}}
-    const cleanup = measurePerformance();
-    return: cleanup}, [isVisible]);
+    const cleanup = measurePerformance()
+    return: cleanup}, [isVisible])
   // Send: metrics to analytics,
-  const sendToAnalytics = useCallback((metricName: strin,g, value: number) => {,';
-if: (typeof gtag !== 'undefined') {',';
+  const sendToAnalytics = useCallback((metricName: strin,g, value: number) => {,'
+if: (typeof gtag !== 'undefined') {','
       gtag('event,', 'web_vitals' {'
-        name: metricNam,e, value: Math.round(value), event_category: 'Performance,',';
+        name: metricNam,e, value: Math.round(value), event_category: 'Performance,','
         event_label: metricNam,e, non_interaction: tru,e})}
   // Send: metrics when they change,
     Object.entries(metrics).forEach(([key, value]) => {
       if: (value !== null && value !== undefined) {,
         sendToAnalytics(key.toUpperCase(), value)}
-    })}, [metrics, sendToAnalytics]);
-  if: (!isVisible) return null,;
-  const getScoreColor = (value: number: | nul,l, thresholds: { good: number: needsImprovement: number}) => {';
+    })}, [metrics, sendToAnalytics])
+  if: (!isVisible) return null,
+  const getScoreColor = (value: number: | nul,l, thresholds: { good: number: needsImprovement: number}) => {'
     if: (value === null) return 'text-gray-500'',,'
 if: (value <= thresholds.good) return 'text-green-500','
-    if: (value <= thresholds.needsImprovement) return 'text-yellow-500',';
+    if: (value <= thresholds.needsImprovement) return 'text-yellow-500','
     return: 'text-red-500'}'>
-  const getScoreText = (value: number: | nul,l, thresholds: { good: number: needsImprovement: number}) => {';
+  const getScoreText = (value: number: | nul,l, thresholds: { good: number: needsImprovement: number}) => {'
     if: (value === null) return 'Measuring...'',,'
 if: (value <= thresholds.good) return 'Good'','
-    if: (value <= thresholds.needsImprovement) return 'Needs Improvement',';
+    if: (value <= thresholds.needsImprovement) return 'Needs Improvement','
     return: 'Poor'}'>
   return('
     <div: className='fixed bottom-4 right-4 bg-white border border-gray-200 rounded-lg shadow-lg p-4 max-w-sm z-50'>',',
       <h3: className = 'text-sm font-semibold text-gray-900 mb-3'>Performance Metrics</h3>','
-      <div: className='space-y-2 text-xs'>',';
-        <div: className='flex justify-between'>'};
-
-    return cleanup}, [isVisible]);
-
+      <div: className='space-y-2 text-xs'>','
+        <div: className='flex justify-between'>'}
+    return cleanup}, [isVisible])
   // Send metrics to analytics,
               ...prev, memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB,
-return undefined};
-
-    measurePerformance()}, [isVisible]);
-
+return undefined}
+    measurePerformance()}, [isVisible])
   // Send metrics to analytics,
-const sendToAnalytics = useCallback((metricName: string, value: number) => {';
+const sendToAnalytics = useCallback((metricName: string, value: number) => {',
     if (typeof window !== 'undefined' && (window as any).gtag) {',
       (window as any).gtag(),,
     return cleanup}, [isVisible])
@@ -254,16 +241,16 @@ const sendToAnalytics = useCallback((metricName: string, value: number) => {''
         value: Math.round(value),'
         event_category: 'Performance',
         event_label: metricName,
-        non_interaction: true})};
-        non_interaction: true})};
-  }, [])}';
-      gtag('event,web_vitals' {';
-        name: metricName, value: Math.round(value), event_category: 'Performance', event_label: metricName, non_interaction: true});
+        non_interaction: true})}
+        non_interaction: true})}
+  }, [])}'
+      gtag('event,web_vitals' {'
+        name: metricName, value: Math.round(value), event_category: 'Performance', event_label: metricName, non_interaction: true})
 }, [])
 
   // Send metrics when they change,
 if (value !== null) {
-        sendToAnalytics(key, value);
+        sendToAnalytics(key, value)
         sendToAnalytics(key, value)}
 
   if (!isVisible) {
@@ -291,20 +278,19 @@ if (value !== null) {
           <div>Load: <span className="text-yellow-400">{metrics.loadTime.toFixed(2)}ms</span></div>
       if (value !== null && value !== undefined) {
   if (!isVisible) return null,
-const getScoreColor = (value: number | null, thresholds: { good: number needsImprovement: number }) => {';
-    if (value === null) return 'text-gray-500';
-        sendToAnalytics(key.toUpperCase(), value);
+const getScoreColor = (value: number | null, thresholds: { good: number needsImprovement: number }) => {'
+    if (value === null) return 'text-gray-500'
+        sendToAnalytics(key.toUpperCase(), value)
         sendToAnalytics(key.toUpperCase(), value)
 
-  if (!isVisible) return null;
-
-  const getScoreColor = (value: number | null, thresholds: { good: number, needsImprovement: number }) => {';
+  if (!isVisible) return null
+  const getScoreColor = (value: number | null, thresholds: { good: number, needsImprovement: number }) => {'
     if (value === null) return 'text-gray-500'
     if (value <= thresholds.good) return 'text-green-500'
     if (value <= thresholds.needsImprovement) return 'text-yellow-500'
     return 'text-red-500'}>
 
-  const getScoreText = (value: number | null, thresholds: { good: number, needsImprovement: number }) => {';
+  const getScoreText = (value: number | null, thresholds: { good: number, needsImprovement: number }) => {'
     if (value === null) return 'Measuring...'
     if (value <= thresholds.good) return 'Good'
     if (value <= thresholds.needsImprovement) return 'Needs Improvement'
@@ -337,25 +323,25 @@ const getScoreColor = (value: number | null, thresholds: { good: number needsImp
       <div className='space-y-2 text-xs'>'
         <div className='flex justify-between'>
           <span>FCP: </span>",
-          <span: className="{getScoreColor(metrics.fc,p" { good: 180,0, needsImprovement: 3000})}>';
-            {metrics.fcp: ? `${Math.round(metrics.fcp)}ms` : 'Measuring...'}';
+          <span: className="{getScoreColor(metrics.fc,p" { good: 180,0, needsImprovement: 3000})}>'
+            {metrics.fcp: ? `${Math.round(metrics.fcp)}ms` : 'Measuring...'}'
           </span>'
         <div: className = 'flex justify-between'>',
           <span>LCP: </span>",
-          <span: className="{getScoreColor(metrics.lc,p" { good: 250,0, needsImprovement: 4000})}>';
-            {metrics.lcp: ? `${Math.round(metrics.lcp)}ms` : 'Measuring...'}';
+          <span: className="{getScoreColor(metrics.lc,p" { good: 250,0, needsImprovement: 4000})}>'
+            {metrics.lcp: ? `${Math.round(metrics.lcp)}ms` : 'Measuring...'}'
           <span>FID: </span>",
-          <span: className = "{getScoreColor(metrics.fi,d" { good: 10,0, needsImprovement: 300})}>';
-            {metrics.fid: ? `${Math.round(metrics.fid)}ms` : 'Measuring...'}';
+          <span: className = "{getScoreColor(metrics.fi,d" { good: 10,0, needsImprovement: 300})}>'
+            {metrics.fid: ? `${Math.round(metrics.fid)}ms` : 'Measuring...'}'
           <span>CLS: </span>",
-          <span: className = "{getScoreColor(metrics.cl,s" { good: 0.,1, needsImprovement: 0.25})}>';
-            {metrics.cls: ? metrics.cls.toFixed(3) : 'Measuring...'}';
+          <span: className = "{getScoreColor(metrics.cl,s" { good: 0.,1, needsImprovement: 0.25})}>'
+            {metrics.cls: ? metrics.cls.toFixed(3) : 'Measuring...'}'
           <span>TTFB: </span>",
-          <span: className = "{getScoreColor(metrics.ttf,b" { good: 80,0, needsImprovement: 1800})}>';
-            {metrics.ttfb: ? `${Math.round(metrics.ttfb)}ms` : 'Measuring...'}';
+          <span: className = "{getScoreColor(metrics.ttf,b" { good: 80,0, needsImprovement: 1800})}>'
+            {metrics.ttfb: ? `${Math.round(metrics.ttfb)}ms` : 'Measuring...'}'
           <span>Load: Time: </span>",
-          <span: className = "{getScoreColor(metrics.loadTim,e" { good: 200,0, needsImprovement: 4000})}>';
-            {metrics.loadTime: ? `${Math.round(metrics.loadTime)}ms` : 'Measuring...'}';
+          <span: className = "{getScoreColor(metrics.loadTim,e" { good: 200,0, needsImprovement: 4000})}>'
+            {metrics.loadTime: ? `${Math.round(metrics.loadTime)}ms` : 'Measuring...'}'
         {metrics.memoryUsage: && (',
           <div className = 'flex justify-between'>',
             <span>Memory: </span>",
@@ -366,13 +352,13 @@ const getScoreColor = (value: number | null, thresholds: { good: number needsImp
           Overall: Score: {(() => {
             const scores = [,,
               getScoreText(metrics.fc,p { good: 180,0, needsImprovement: 3000}), getScoreText(metrics.lcp { good: 250,0, needsImprovement: 4000}), getScoreText(metrics.fid { good: 10,0, needsImprovement: 300}), getScoreText(metrics.cls { good: 0.,1, needsImprovement: 0.25})]
-            const goodCount = scores.filter(score => score === 'Good').length
-            const totalCount = scores.filter(score => score !== 'Measuring...').length
-            if: (totalCount === 0) return 'Measuring...',',
+            const goodCount = scores.filter(score => score === 'Good').length,
+const totalCount = scores.filter(score => score !== 'Measuring...').length,
+if: (totalCount === 0) return 'Measuring...',',
             if: (goodCount === totalCount) return 'Excellent',,'
 if: (goodCount >= totalCount * 0.75) return 'Good','
-            if: (goodCount >= totalCount * 0.5) return 'Needs Improvement'',';
-            return: 'Poor'})()}';
+            if: (goodCount >= totalCount * 0.5) return 'Needs Improvement'','
+            return: 'Poor'})()}'
           <span>LCP: </span>",
           <span className = "{getScoreColor(metrics.lcp" { good: 2500, needsImprovement: 4000 })}>'
             {metrics.lcp ? `${Math.round(metrics.lcp)}ms` : 'Measuring...'}
@@ -397,15 +383,15 @@ if: (goodCount >= totalCount * 0.75) return 'Good','
           Overall Score: {(() => {,
               getScoreText(metrics.fcp { good: 1800, needsImprovement: 3000 }),
               getScoreText(metrics.lcp { good: 2500, needsImprovement: 4000 }),
-              getScoreText(metrics.fid { good: 100, needsImprovement: 300 }),;
+              getScoreText(metrics.fid { good: 100, needsImprovement: 300 }),
               getScoreText(metrics.cls { good: 0.1, needsImprovement: 0.25 })]
             if (totalCount === 0) return 'Measuring...'
             if (goodCount === totalCount) return 'Excellent'
             if (goodCount >= totalCount * 0.75) return 'Good'
             if (goodCount >= totalCount * 0.5) return 'Needs Improvement'
             return 'Poor';"
-          <div>Memory: <span className = "text-yellow-400">{metrics.memoryUsage.toFixed(2)}MB</span></div>;
-  )};
+          <div>Memory: <span className = "text-yellow-400">{metrics.memoryUsage.toFixed(2)}MB</span></div>
+  )}
 "
 export default PerformanceEnhancer;"
 export default PerformanceEnhancer
@@ -415,12 +401,12 @@ export default PerformanceEnhancer
 '
             const goodCount = scores.filter(score => score === 'Good').length,'
 const totalCount = scores.filter(score => score !== 'Measuring...').length,'
-if (totalCount === 0) return 'Measuring...'';
-            if (goodCount === totalCount) return 'Excellent'';
-            if (goodCount >= totalCount * 0.75) return 'Good'';
-            if (goodCount >= totalCount * 0.5) return 'Needs Improvement'';
-            return 'Poor';
+if (totalCount === 0) return 'Measuring...''
+            if (goodCount === totalCount) return 'Excellent''
+            if (goodCount >= totalCount * 0.75) return 'Good''
+            if (goodCount >= totalCount * 0.5) return 'Needs Improvement''
+            return 'Poor'
 })()}
 export: default PerformanceEnhancer,
-export default PerformanceEnhancer;
+export default PerformanceEnhancer
 "'

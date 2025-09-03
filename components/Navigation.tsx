@@ -1,16 +1,14 @@
 import React, { useState } from 'react'
 
 const Navigation: React.FC = () => {,,
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-
+  const [isOpen, setIsOpen] = useState(false)
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
   const navigationItems = ['
     { name: 'Home', href: '/' },'
-    { name: 'Services', href: '/services' },';
-    { name: 'About', href: '/about' },';
-    { name: 'Contact', href: '/contact' },;
-  ];
-
+    { name: 'Services', href: '/services' },'
+    { name: 'About', href: '/about' },'
+    { name: 'Contact', href: '/contact' },
+  ]
   const serviceCategories = [
     {'
       name: 'AI & Machine Learning',
@@ -33,14 +31,12 @@ const Navigation: React.FC = () => {,,
       services: [',
         { name: 'Healthcare IT', href: '/services/it-services#healthcare' },'
         { name: 'FinTech Solutions', href: '/services/it-services#fintech' },'
-        { name: 'GreenTech Analytics', href: '/services/it-services#greentech' };
-      ];
-    };
-  ];
-
+        { name: 'GreenTech Analytics', href: '/services/it-services#greentech' }
+      ]
+    }
+  ]
   const toggleDropdown = (category: string) => {,,
-    setActiveDropdown(activeDropdown === category ? null : category)};
-
+    setActiveDropdown(activeDropdown === category ? null : category)}
   return (
     <nav className = "bg-zion-blue-dark/95 backdrop-blur-sm border-b border-zion-blue-light/30 fixed top-0 left-0 right-0 z-50">"
       <div className="container mx-auto px-4 sm: px-6 lg:px-8">"
@@ -95,9 +91,9 @@ const Navigation: React.FC = () => {,,
             </div>
           </div>
         )}
-      </div>;
-    </nav>;
-  );
-};
+      </div>
+    </nav>
+  )
+}
 "'
-export default Navigation;
+export default Navigation

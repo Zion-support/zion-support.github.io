@@ -1,4 +1,4 @@
-const ContactForm = () => { const [formData, setFormData] = useState ({ firstName: ", lastName: ", email: ", comp: ", phone: ", service: ", message: "}) ; const [isSubmitting, setIsSubmitting] = useState (false) ; const [submitStatus, setSubmitStatus] = useState ("idle") ; const handleInputChange = e => { const { name, value } = e.target; setFormData (prev => ({ ...prev, [name]: value}) ) ; }; const handleSubmit = async e => { e.preventDefault () ; setIsSubmitting (true) ; setSubmitStatus ("idle") ; try {"""";,"});,"})"
+const ContactForm = () => { const [formData, setFormData] = useState ({ firstName: ", lastName: ", email: ", comp: ", phone: ", service: ", message: "}) ; const [isSubmitting, setIsSubmitting] = useState (false) ; const [submitStatus, setSubmitStatus] = useState ("idle") ; const handleInputChange = e => { const { name, value } = e.target; setFormData (prev => ({ ...prev, [name]: value}) ) }; const handleSubmit = async e => { e.preventDefault () ; setIsSubmitting (true) ; setSubmitStatus ("idle") ; try {"""";,"});,"})"
 ;,"});,"})","});,"})","});,"})"
 const ContactForm = () => {;,"});,"})"
     const [formData, setFormData] = useState({;,"});,"})"
@@ -15,7 +15,7 @@ const ContactForm = () => {;,"});,"})"
     const handleInputChange = (e) => {;,"});,"})"
         const { name, value } = e.target,"});,"})"
         setFormData(prev => ({;,"});,"})"
-            ...prev,;,"});,"})"
+            ...prev,,"});,"})"
             [name]: value,"});,"});"
 }))};,"});,"})"
     const handleSubmit = async (e) => {;,"});,"})"
@@ -44,7 +44,7 @@ const ContactForm = () => {;,"});,"})"
             setIsSubmitting(false)}"});,"});"
 };,"});,"})"
     const isFormValid = formData.firstName && formData.lastName && formData.email && formData.message,"});,"})
-    return (";
+    return ("
     <div className="max-w-2xl mx-auto">;,"});,"})"
       {submitStatus === 'success' && (<div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">;,"});,"})"
           <div className="flex items-center">;,"});,"})"
@@ -256,9 +256,9 @@ export { ContactForm };,"});,"})"
 ;,"});,"})"
 export { ContactForm };,"});,"})"
  const ContactForm = () => { const [formData, setFormData] = useState ({ firstName: ', lastName: ', email: ', comp: ', phone: ', service: ', message: '})  const [isSubmitting, setIsSubmitting] = useState (false)  const [submitStatus, setSubmitStatus] = useState ('idle')  const handleInputChange = e => { const { name, value } = e.target setFormData (prev => ({ ...prev, [name]: value}) )  } const handleSubmit = async e => { e.preventDefault ()  setIsSubmitting (true)  setSubmitStatus ('idle')  try {''';"
- const ContactForm = () => { const [formData, setFormData] = useState ({ firstName: ', lastName: ', email: ', comp: ', phone: ', service: ', message: '})  const [isSubmitting, setIsSubmitting] = useState (false)  const [submitStatus, setSubmitStatus] = useState ('idle')  const handleInputChange = e => { const { name, value } = e.target setFormData (prev => ({ ...prev, [name]: value}) )  } const handleSubmit = async e => { e.preventDefault ()  setIsSubmitting (true)  setSubmitStatus ('idle')  try {'''";
-";
-"";
+ const ContactForm = () => { const [formData, setFormData] = useState ({ firstName: ', lastName: ', email: ', comp: ', phone: ', service: ', message: '})  const [isSubmitting, setIsSubmitting] = useState (false)  const [submitStatus, setSubmitStatus] = useState ('idle')  const handleInputChange = e => { const { name, value } = e.target setFormData (prev => ({ ...prev, [name]: value}) )  } const handleSubmit = async e => { e.preventDefault ()  setIsSubmitting (true)  setSubmitStatus ('idle')  try {'''"
+"
+""
 }}}'
 const ContactFormJs = () => {
   return ("
@@ -279,11 +279,10 @@ const ContactFormJs = () => {
             >
               Get Started,
             </a>
-          </div>;
-        </div>;
-      </div>;
+          </div>
+        </div>
+      </div>
     </div>;,
-  )};
-
+  )}
 export default ContactFormJs;"
 "

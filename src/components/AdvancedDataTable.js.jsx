@@ -159,7 +159,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
         return (<span className="{`truncate" ${column.align === 'center' ? 'text-center' : column.align === 'right' ? 'text-right' : 'text-left'}`}>;,`});,"})"
         {value}`;,"});,"})"
       </span>)};``;,"});,`})
-    return (";
+    return ("
     <div className="{`bg-white" dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>`"";,"});,"})"
       {/*   */}"""";,"});,"})"
       <div className="p-4 border-b border-gray-200 dark: border-gray-700 bg-gray-50 dark:bg-gray-700">"""","});,"})"
@@ -260,13 +260,13 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
   y: 0 '`,"});,"})"
 '`'`;,"});,`});"
 }} className="{`flex" items-center px-4 py-3 border-b border-gray-100 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors ${onRowClick ? 'cursor-pointer' : ''} ${selectedItems.has(String(item.id || JSON.stringify(item))) ? 'bg-blue-50 dark:bg-blue-900/20' : ''}`} onClick = {}`});,"})"
-  () => onRowClick?.(item,;,"});,"})"
+  () => onRowClick?.(item,,"});,"})"
   index);,"});,"})"
 """;,"});,"});"
 }>"""";,"});,"})"
                 {enableSelection && (<div className="w-8 mr-2">"""";,"});,"})"
                     <input type="checkbox" checked="{selectedItems.has(String(item.id" || JSON.stringify(item)))} onChange = {}"});,"})"
-  (e) => handleSelectionChange(item,;,"});,"})"
+  (e) => handleSelectionChange(item,,"});,"})"
   e.target.checked)""";,"});,"})"
 """";,"});,"});"
 } onClick="{(e)" => e.stopPropagation()} className="w-4 h-4 text-blue-600 border-gray-300 rounded focus: ring-blue-500"/>,"});,"})"
@@ -301,7 +301,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
             """";,"});,"})"
             <div className="flex items-center gap-2">;,"});,"})"
               <button onClick = {}"});,"})"
-  () => setCurrentPage(prev => Math.max(1,;,"});,"})"
+  () => setCurrentPage(prev => Math.max(1,,"});,"})"
   prev - 1))""";,"});,"})"
 """";,"});,"});"
 } disabled="{currentPage" === 1} className="px-3 py-1 text-sm border border-gray-300 dark: border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors">,"});,"})"
@@ -319,7 +319,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                   </button>)})}"});,"})"
 ;,"});,"})"
               <button onClick = {}"});,"})"
-  () => setCurrentPage(prev => Math.min(totalPages,;,"});,"})"
+  () => setCurrentPage(prev => Math.min(totalPages,,"});,"})"
   prev + 1))""";,"});,"})"
 """";,"});,"});"
 } disabled="{currentPage" === totalPages} className="px-3 py-1 text-sm border border-gray-300 dark: border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors">,"});,"})"
@@ -329,29 +329,29 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
           </div>;,"});,"})"
         </div>)}"});,"})"
     </div>)};'`;,"});,"})"
-'"`'`;,"});,"})""""""""""""";
+'"`'`;,"});,"})"""""""""""""
 export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = true, enableSorting = true, enablePagination = true, enableSelection = false, enableActions = false, enableExport = false, pageSize = 20, className = '', onRowClick, onSelectionChange, onExport }) => {;"
     const { trackEvent } = useAnalytics({        enableTracking: true, enableUserBehaviorTracking: true","
 })'''
     // State management'''
-    const [searchQuery, setSearchQuery] = useState();
-    const [sortConfig, setSortConfig] = useState();
-    const [filters, setFilters] = useState();
+    const [searchQuery, setSearchQuery] = useState()
+    const [sortConfig, setSortConfig] = useState()
+    const [filters, setFilters] = useState()
     const [selectedItems, setSelectedItems] = useState(new Set())
-    const [currentPage, setCurrentPage] = useState();
-    const [showFilters, setShowFilters] = useState();
+    const [currentPage, setCurrentPage] = useState()
+    const [showFilters, setShowFilters] = useState()
     // Process data based on search, filters, and sorting,
 const processedData = useMemo(() => {}
         let result = [...data]
-        // Apply search,;
-if (searchQuery.trim()) {};
-            result = result.filter(item => columns.some(col => {};
-                const value = String(item[col.key]).toLowerCase();
+        // Apply search,
+if (searchQuery.trim()) {}
+            result = result.filter(item => columns.some(col => {}
+                const value = String(item[col.key]).toLowerCase()
                 return value.includes(searchQuery.toLowerCase())}))}
         // Apply filters,
 filters.forEach(filter => {}
-            result = result.filter(item => {};
-                const value = String(item[filter.key]).toLowerCase();
+            result = result.filter(item => {}
+                const value = String(item[filter.key]).toLowerCase()
                 const filterValue = filter.value.toLowerCase()"
                 switch (filter.operator) {}""
 '''
@@ -383,26 +383,26 @@ if(sortConfig) {}
                     return sortConfig.direction === 'asc' ? -1 : 1""
                 if (aVal > bVal)'''
                     return sortConfig.direction === 'asc' ? 1 : -1,
-return 0})};
-        return result}, [data, searchQuery, filters, sortConfig, columns]);
-    // Pagination,;
-const totalPages = Math.ceil();
+return 0})}
+        return result}, [data, searchQuery, filters, sortConfig, columns])
+    // Pagination,
+const totalPages = Math.ceil()
     const paginatedData = enablePagination,
         ? processedData.slice((currentPage - 1) * pageSize, currentPage * pageSize)
-        : processedData,;
-    // Virtual scrolling,;
-const { virtualItems, containerProps, listProps } = useVirtualScroll();
+        : processedData,
+    // Virtual scrolling,
+const { virtualItems, containerProps, listProps } = useVirtualScroll()
     // Handle sorting,
-const handleSort = useCallback((key) => {};
-        if();
+const handleSort = useCallback((key) => {}
+        if()
             return,
 setSortConfig(prev => {}"
             if (prev?.key === key) {}""
 '''
 '''
 '''''
-                return prev.direction === 'asc''''';
-                    ? { key, direction: 'desc' }'';
+                return prev.direction === 'asc'''''
+                    ? { key, direction: 'desc' }''
                     : null}''';""'
             return { key, direction: 'asc' }})'
         trackEvent('table', column_sorted', String(key))}, [enableSorting, trackEvent])''
@@ -410,27 +410,27 @@ setSortConfig(prev => {}"
             return { key, direction: 'asc' }})'
         trackEvent('table',column_sorted', String(key))}, [enableSorting, trackEvent])
     // Handle filter change,
-const handleFilterChange = useCallback((key, value, operator) => {};
-        setFilters();
+const handleFilterChange = useCallback((key, value, operator) => {}
+        setFilters()
             if(value.trim()) {}"
                 newFilters.push({ key, value, operator })}""
             return newFilters})'''
         trackEvent('table', filter_applied', String(key), null, { operator, value })}, [trackEvent])'
     // Handle selection,
-const handleSelectionChange = useCallback((item, checked) => {};
-        const itemKey = String(item.id || JSON.stringify(item));
-        const newSelection = new Set();
+const handleSelectionChange = useCallback((item, checked) => {}
+        const itemKey = String(item.id || JSON.stringify(item))
+        const newSelection = new Set()
         if(checked) {}
             newSelection.add(itemKey)}
         else {}
             newSelection.delete(itemKey)}
-        setSelectedItems();
+        setSelectedItems()
         onSelectionChange?.(Array.from(newSelection).map(key => data.find(item => String(item.id || JSON.stringify(item)) === key)))}, [selectedItems, onSelectionChange, data])
     // Handle select all,
 const handleSelectAll = useCallback((checked) => {}
-        if(checked) {};
-            const allKeys = new Set(paginatedData.map(item => String(item.id || JSON.stringify(item))));
-            setSelectedItems();
+        if(checked) {}
+            const allKeys = new Set(paginatedData.map(item => String(item.id || JSON.stringify(item))))
+            setSelectedItems()
             onSelectionChange?.(paginatedData)}
         else {}
             setSelectedItems(new Set())
@@ -450,9 +450,9 @@ const generateCSV = (data, columns) => {}""
 '''
 '''
 '''''
-        const headers = columns.map(col => col.header).join(')';
-        const rows = data.map(item => columns.map(col => {}"`;
-'''';
+        const headers = columns.map(col => col.header).join(')'
+        const rows = data.map(item => columns.map(col => {}"`
+''''
             const value = item[col.key]'',''
             return typeof value = == 'string' && value.includes(') ? `'${value}'` : value}).join('))'''
             const value = item[col.key]''''
@@ -460,18 +460,18 @@ const generateCSV = (data, columns) => {}""
         return [headers, ...rows].join('"\n')}
     // Download CSV,"
 const downloadCSV = (content, filename) => {}`"
-'';
-'';
-'''';
-        const blob = new Blob([content], { type: 'text/csv' })'';
-        const url = window.URL.createObjectURL(blob)';
+''
+''
 ''''
-        const blob = new Blob([content], { type: 'text/csv' });
-        const url = window.URL.createObjectURL(blob);
-        const a = document.createElement();
+        const blob = new Blob([content], { type: 'text/csv' })''
+        const url = window.URL.createObjectURL(blob)'
+''''
+        const blob = new Blob([content], { type: 'text/csv' })
+        const url = window.URL.createObjectURL(blob)
+        const a = document.createElement()
         a.href = url,
 a.download = filename,
-a.click();
+a.click()
         window.URL.revokeObjectURL(url)}
     // Get sort icon,
 const getSortIcon = (key) => {}"
@@ -577,13 +577,13 @@ const renderCell = (column, item, index) => {}
 '''''
         {/*   */}''''
         <div {...containerProps} className="relative">"
-          <div {...listProps}" >"";
-            {virtualItems.map((item, index) => (<motion .div key="{String(item.id" || index)} initial = {}";
+          <div {...listProps}" >""
+            {virtualItems.map((item, index) => (<motion .div key="{String(item.id" || index)} initial = {}"
   { opacity: 0, y: 20}} animate = {}"`"">
   { opacity: 1, y: 0 '`"`'",,
 '`'`",``;"
 }} className = "{`flex" items-center px-4 py-3 border-b border-gray-100 dark: border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors ${onRowClick ? 'cursor-pointer' : ''} ${selectedItems.has(String(item.id || JSON.stringify(item))) ? 'bg-blue-50 dark: bg-blue-900/20' : ''}`} onClick = {}"
-  () =` > onRowClick?.(item, index)";
+  () =` > onRowClick?.(item, index)"
 ''', '
 }>''''
                 {enableSelection && (<div className = "w-8 mr-2">''''
@@ -628,7 +628,7 @@ const renderCell = (column, item, index) => {}
               {Array.from({ length: Math.min(5, totalPages) }, (_, i) => {}`"
 `"`""
 `'`"`'"
-`'`'`"`"";
+`'`'`"`""
                 const page = i + 1`;`'`'`"`'"
                 return (<button key = "{page}" onClick="{()" =` > setCurrentPage(page)} className="{`px-3" py-1 text-sm rounded transition-colors ${currentPage === page''`'`'`"`"
                         ? 'bg-blue-500 text-white''`'`'`'`"`"
@@ -645,5 +645,5 @@ const renderCell = (column, item, index) => {}
           </div>",
         </div>)}"`""
     </div>)}''`"`""
-''`'`"`'";
-";
+''`'`"`'"
+"

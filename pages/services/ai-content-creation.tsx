@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-;
+
   return (
 <Layout title = "AI Content Creation - Zion Tech Group""
       description="Transform your content strategy with AI-powered content generation tools. Create engaging blog posts, social media content, and marketing copy at scale."
@@ -160,6 +160,6 @@ that resonates with your audience and drives results.
         </div>
       </section>
     </Layout>;,
-  )};
+  )}
 "
-export default AIContentCreation;
+export default AIContentCreation

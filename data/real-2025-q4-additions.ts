@@ -1,50 +1,50 @@
 export interface Q4Service {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular?: boolean;
-  icon?: string;
-  color?: string;
-  textColor?: string;
-  link: string;
-  marketPosition?: string;
-  targetAudience?: string;
-  trialDays?: number;
-  setupTime?: string;
-  category: string;
-  realService: boolean;
-  technology?: string[];
-  integrations?: string[];
-  useCases?: string[];
-  roi?: string;
-  competitors?: string[];
-  marketSize?: string;
-  growthRate?: string;
-  variant?: string;
+  id: string
+  name: string
+  tagline: string
+  price: string
+  period: string
+  description: string
+  features: string[]
+  popular?: boolean
+  icon?: string
+  color?: string
+  textColor?: string
+  link: string
+  marketPosition?: string
+  targetAudience?: string
+  trialDays?: number
+  setupTime?: string
+  category: string
+  realService: boolean
+  technology?: string[]
+  integrations?: string[]
+  useCases?: string[]
+  roi?: string
+  competitors?: string[]
+  marketSize?: string
+  growthRate?: string
+  variant?: string
   contactInfo?: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string};
-  realImplementation: boolean;
-  implementationDetails?: string;
-  launchDate?: string;
-  customers?: number;
-  rating?: number;
+    mobile: string
+    email: string
+    address: string
+    website: string}
+  realImplementation: boolean
+  implementationDetails?: string
+  launchDate?: string
+  customers?: number
+  rating?: number
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709'
-  ;
-  ;
-  ;
-  ;
-  website: 'https://ziontechgroup.com';
-};
+  
+  
+  
+  
+  website: 'https://ziontechgroup.com'
+}
 export const realQ4Services2025: RealQ4Service[] = [
 	{
 		id: 'affiliate-marketing-hub',
@@ -255,7 +255,7 @@ export const realQ4Services2025: RealQ4Service[] = [
 		customers: 70,
 		rating: 4.5,
 		reviews: 28
-];
+]
 export const real2025Q4Additions = [
   {
     id: 'ai-governed-rag-platform',
@@ -270,13 +270,13 @@ export const real2025Q4Additions = [
       'Evals and drift tracking',
       'Human-in-the-loop approvals',
       'Observability and cost caps',
-      'SDKs for Node/Python';
-    ],;
+      'SDKs for Node/Python'
+    ],
     popular: true
     icon: '🧠'
     color: 'from-cyan-600 to-blue-700'
     textColor: 'text-cyan-300'
-    link: `https://ziontechgroup.com/services/${toSlug('ai-governed-rag-platform')}`,;
+    link: `https://ziontechgroup.com/services/${toSlug('ai-governed-rag-platform')}`,
     marketPosition: 'Safer alternative to DIY RAG; comparable to Guardrails/Evals + vector DB stacks.',
     targetAudience: 'Platform, data, and compliance teams',
     trialDays: 14,

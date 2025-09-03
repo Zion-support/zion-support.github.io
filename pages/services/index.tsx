@@ -1,19 +1,17 @@
-import React from "react";
-
+import React from "react"
   const stats = ['
-    { number: '80+', label: 'Micro SaaS Solutions', icon: Zap }, { number: '35+', label: 'IT Services', icon: Shield },;
-    { number: '30+', label: 'AI Services', icon: Globe }, { number: '500+', label: 'Projects Completed', icon: TrendingUp }];
-
-  const benefits = [;
-    {;
-      icon: <DollarSign className="w-8 h-8" />, title: 'Competitive Pricing',;
-      description: 'Transparent, market-competitive pricing with flexible plans to fit your budget and scale with your business.;
+    { number: '80+', label: 'Micro SaaS Solutions', icon: Zap }, { number: '35+', label: 'IT Services', icon: Shield },
+    { number: '30+', label: 'AI Services', icon: Globe }, { number: '500+', label: 'Projects Completed', icon: TrendingUp }]
+  const benefits = [
+    {
+      icon: <DollarSign className="w-8 h-8" />, title: 'Competitive Pricing',
+      description: 'Transparent, market-competitive pricing with flexible plans to fit your budget and scale with your business.
 },
     {"
       icon: <Target className = "w-8 h-8" />, title: 'Proven Results','
       description: 'Track record of successful implementations with measurable ROI and client satisfaction across all industries.'}, {"
-      icon: <Rocket className="w-8 h-8" />,;
-      title: 'Fast Implementation', description: 'Rapid deployment and implementation with minimal downtime, getting you up and running quickly.;
+      icon: <Rocket className="w-8 h-8" />,
+      title: 'Fast Implementation', description: 'Rapid deployment and implementation with minimal downtime, getting you up and running quickly.
 }, {"
       icon: <Award className = "w-8 h-8" />,'
       title: 'Expert Support', description: '24/7 expert support from our experienced team of developers, engineers, and AI specialists.'
@@ -83,13 +81,12 @@ icon: Brain,'
       green: 'bg-green-100 text-green-600','
       purple: 'bg-purple-100 text-purple-600','
       orange: 'bg-orange-100 text-orange-600','
-      red: 'bg-red-100 text-red-600',;
-      indigo: 'bg-indigo-100 text-indigo-600',;
-      pink: 'bg-pink-100 text-pink-600',;
+      red: 'bg-red-100 text-red-600',
+      indigo: 'bg-indigo-100 text-indigo-600',
+      pink: 'bg-pink-100 text-pink-600',
       teal: 'bg-teal-100 text-teal-600'},
-    return colorMap[color] || 'bg-gray-100 text-gray-600;
-  };
-
+    return colorMap[color] || 'bg-gray-100 text-gray-600
+  }
   return ("
     <MainLayout title = "Our Services - Zion Tech Group""
       description="Comprehensive technology services including AI development, web development, mobile apps, cloud solutions, cybersecurity, and more."
@@ -136,9 +133,9 @@ className="grid grid-cols-2 md: grid-cols-4 gap-8"">
               initial="{{" opacity: 0, y: 30 }}"
               animate="{{" opacity: 1, y: 0 }}"
               transition="{{" duration: 0.8, delay: 0.6 }}
-            >;
-              {stats.map((stat, index) => {;
-                const IconComponent = stat.icon;
+            >
+              {stats.map((stat, index) => {
+                const IconComponent = stat.icon
                 return (
                   <motion.div,"
 key = "{stat.label}""
@@ -150,9 +147,9 @@ key = "{stat.label}""
                       <IconComponent className="w-8 h-8 text-blue-400 group-hover: text-purple-400 transition-colors" />
                     </div>",
                     <div className="text-3xl font-bold text-blue-400 group-hover:text-purple-400 transition-colors">{stat.number}</div>"
-                    <div className="text-gray-300">{stat.label}</div>;
-                  </motion.div>;
-                );
+                    <div className="text-gray-300">{stat.label}</div>
+                  </motion.div>
+                )
               })}
             </motion.div>
           </div>
@@ -406,8 +403,8 @@ key="{service.id}""
                   <div className="{`text-lg" font-semibold text-green-600`>
                     From ${service.pricing.starter}/mo"
           <div className="`grid" md:grid-cols-2 lg:grid-cols-3 gap-8`}>
-            {services.map((service, index) => {;
-              const IconComponent = service.icon;
+            {services.map((service, index) => {
+              const IconComponent = service.icon
               return ("
                 <div key = "{index}" className="{`bg-white" rounded-lg p-8 shadow-lg hover: shadow-xl transition-shadow`>",
                   <div className="{`w-12" h-12 rounded-lg flex items-center justify-center mb-6 ${getColorClasses(service.color)}`}>"
@@ -496,8 +493,8 @@ initial="{{" opacity: 0, y: 30 }}"
           >"
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
-            </h2>";
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">;
+            </h2>"
+            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
               Let&apos;s discuss how our comprehensive technology solutions can help your business achieve its goals and stay ahead of the competition.''
             </p>"
             <div className = "flex flex-col sm: flex-row justify-center gap-4">"
@@ -522,6 +519,6 @@ initial="{{" opacity: 0, y: 30 }}"
         </div>
       </section>
     </MainLayout>,,
-  )};
+  )}
 "
-export default ServicesIndex;
+export default ServicesIndex

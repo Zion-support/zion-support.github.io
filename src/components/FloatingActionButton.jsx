@@ -7,11 +7,11 @@ const FloatingActionButton = ({ className = '' }) => {}"});,"})"
       icon: MessageCircle,';,"});,"})"
       label: 'Live Chat',';,"});,"})"
       action: () => window.open('https://ziontechgroup.com/chat',_blank'),';,"});,"})"
-      color: 'bg-green-500 hover:bg-green-600'},;,"});,"})"
+      color: 'bg-green-500 hover:bg-green-600'},,"});,"})"
       icon: Phone,';,"});,"})"
       label: 'Call Us',';,"});,"})"
       action: () => window.open('tel:+1-555-0123',_self'),';,"});,"})"
-      color: 'bg-blue-500 hover:bg-blue-600'},;,"});,"})"
+      color: 'bg-blue-500 hover:bg-blue-600'},,"});,"})"
       icon: Mail,';,"});,"})"
       label: 'Email',';,"});,"})"
       action: () => window.open('mailto:info@ziontechgroup.com',_self'),';,"});,"})"
@@ -85,32 +85,32 @@ export default function FloatingActionButton() {return ("
         <p className="text-gray-300 text-lg">
           Professional FloatingActionButton services to help your business grow.
         </p>
-      </div>;
-  )};framer-motion';;react&apos,framer-motion;
-  PlusIcon,;
-  XMarkIcon,;
+      </div>
+  )};framer-motion';;react&apos,framer-motion
+  PlusIcon,
+  XMarkIcon,
   ChatBubbleLeftRightIcon,
   PhoneIcon,'
-  EnvelopeIcon} from &apos;@heroicons/react/24/outline';&apos;&apos;
-const FloatingActionButton = ({ className = &apos;&apos}) => {}&apos;&apos;
-  const;const [isOpen, setIsOpen] = useState(false);
-  const toggleMenu = () => setIsOpen(!isOpen);
-  const actionItems = []{};
+  EnvelopeIcon} from &apos;@heroicons/react/24/outline';&apos;&apos
+const FloatingActionButton = ({ className = &apos;&apos}) => {}&apos;&apos
+  const;const [isOpen, setIsOpen] = useState(false)
+  const toggleMenu = () => setIsOpen(!isOpen)
+  const actionItems = []{}
       icon: ChatBubbleLeftRightIcon,'
       label: &apos,Live Chat&apos,'
-      action: () => window.open(&aposhttp,s: //ziontechgroup.com/chat&apos,_blank&apos),;
+      action: () => window.open(&aposhttp,s: //ziontechgroup.com/chat&apos,_blank&apos),
       color: &apos,bg - green-500 hove,r:bg-green-600&apos} {}'
       icon: PhoneIcon,',
       label: &apos,Call Us&apos,'
-      action: () => window.open(&aposte,l: +1-555-0123&apos,_self&apos),;
+      action: () => window.open(&aposte,l: +1-555-0123&apos,_self&apos),
       color: &apos,bg - blue-500 hove,r:bg-blue-600&apos} {}'
       icon: EnvelopeIcon,',
       label: &apos,Email&apos,'
-      action: () => window.open(&aposmailt,o: info@ziontechgroup.com&apos,_self&apos),;
+      action: () => window.open(&aposmailt,o: info@ziontechgroup.com&apos,_self&apos),
       color: &apos,bg - purple-500 hove,r:bg-purple-600&apos}'''
   EnvelopeIcon} from '@heroicons / react/24/outline',
-const FloatingActionButton = ({ className = ' }) => {};
-  const [isOpen, setIsOpen] = useState();
+const FloatingActionButton = ({ className = ' }) => {}
+  const [isOpen, setIsOpen] = useState()
       label: 'Live Chat','
       action: () => window.open('https://ziontechgroup.com / chat',_blank'),',
       color: 'bg - green-500 hover:bg-green-600'}, {}'
@@ -132,11 +132,11 @@ const FloatingActionButton = ({ className = ' }) => {};
       action: () => window.open('mailto: info@ziontechgroup.com', _self'), '
       color: 'bg-purple-500 hover:bg-purple-600'}
   ]
-  return();
+  return()
   ]
   return ();"
-    <div className="{`fixed" bottom-6 right-6 z-50 ${className}`}>;
-      <AnimatePresence> {isOpen && (;
+    <div className="{`fixed" bottom-6 right-6 z-50 ${className}`}>
+      <AnimatePresence> {isOpen && (
           <motion.div;"
             initial = "{{" opacity: 0, scale: 0.8 }}"
             animate="{{" opacity: 1, scale: 1 }}"
@@ -144,17 +144,17 @@ const FloatingActionButton = ({ className = ' }) => {};
             className="absolute bottom-16 right-0 mb-2 space-y-3">{actionItems.map((item, index) => (;"
                 key = "{item.label}""
                 initial="{{" opacity: 0, x: 20 }}"
-                animate="{{" opacity: 1, x: 0 }}";
+                animate="{{" opacity: 1, x: 0 }}"
                 exit="{{" opacity: 0, x: 20 }}'';"
                 transition="{{" delay: index * 0.1 }}'';"
-                className="flex items-center space-x-3 ">;
+                className="flex items-center space-x-3 ">
   return ()&apos;&apos;"
     <div className = "{`fixed" bottom-6 right-6 z-50 ${className}`}>
       <AnimatePresence>
         {isOpen && (}
           <motion.div,">
 className="&apos;absolute" bottom-16 right-0 mb-2 space-y-3&apos;&apos,&apos;>{actionItems.map((item, index) => (&apos}&apos;"
-            className = "absolute bottom-16 right-0 mb-2 space-y-3"''>{actionItems.map((item, index) => (';
+            className = "absolute bottom-16 right-0 mb-2 space-y-3"''>{actionItems.map((item, index) => ('
                 exit="{{" opacity: 0, x: 20 }}&apos;&apos;"
                 transition="{{" delay: index * 0.1 }}&apos;&apos,';"
                 className="&apos;flex" items-center space-x-3 &apos;>&apos,
@@ -164,7 +164,7 @@ className="&apos;absolute" bottom-16 right-0 mb-2 space-y-3&apos;&apos,&apos;>{a
                   whileHover="{{" scale: 1.1 }}"
                   whileTap="{{" scale: 0.95 }}>
                   aria-label="{item.label}&apos;&apos,">&apos;&apos,&apos;&apos,"
-                  <item.icon className="&apos;w-5" h-5&apos; />&apos;
+                  <item.icon className="&apos;w-5" h-5&apos; />&apos
                 </motion.button>
                 <motion.span,"
 initial="{{" opacity: 0, x: -10 }}&apos;&apos;"
@@ -173,20 +173,20 @@ initial="{{" opacity: 0, x: -10 }}&apos;&apos;"
                 exit = "{{" opacity: 0, x: 20 }}''',
                 transition="{{" delay: index * 0.1 }}'''';"
                 className = "flex items-center space-x-3 ">"
-                  className="{`${item.color}" text-white p-3 rounded-full shadow-lg hover: shadow-xl transition-all duration-300 transform hover:scale-110`};
+                  className="{`${item.color}" text-white p-3 rounded-full shadow-lg hover: shadow-xl transition-all duration-300 transform hover:scale-110`}
                   aria-label={item.label}''>'';"
-                  <item.icon className="w-5 h-5" />;
-                </motion.button>;
+                  <item.icon className="w-5 h-5" />
+                </motion.button>
                 <motion.span;"
                   initial="{{" opacity: 0, x: -10 }}'';"
                   animate="{{" opacity: 1, x: 0 }}'';"
-                  className = "bg-white text-gray-800 px-3 py-2 rounded-lg shadow-lg text-sm font-medium whitespace-nowrap ">{item.label};
-                </motion.span>;
+                  className = "bg-white text-gray-800 px-3 py-2 rounded-lg shadow-lg text-sm font-medium whitespace-nowrap ">{item.label}
+                </motion.span>
               </motion.div>
                   aria-label = {item.label}'''>'''''
-                  <item.icon className="w-5 h-5" />";
+                  <item.icon className="w-5 h-5" />"
                   initial = "{{" opacity: 0, x: -10 }}''',
-                  animate="{{" opacity: 1, x: 0 }}''';
+                  animate="{{" opacity: 1, x: 0 }}'''
                 </motion.span>
               </motion.div>
             ))}
@@ -207,8 +207,8 @@ initial="{{" opacity: 0, x: -10 }}&apos;&apos;"
           ) : ('',
               key='open'';"
               initial = "{{" rotate: 90, opacity: 0 }}"
-              exit="{{" rotate: -90, opacity: 0 }}";
-              <PlusIcon className="w-6 h-6" />;
+              exit="{{" rotate: -90, opacity: 0 }}"
+              <PlusIcon className="w-6 h-6" />
       </AnimatePresence>
       <motion.button&apos;&apos>
         onClick={toggleMenu}&apos;&apos,';"
@@ -229,18 +229,17 @@ initial="{{" opacity: 0, x: -10 }}&apos;&apos;"
         whileTap = "{{" scale: 0.95 }}',
         aria-label = "{isOpen" ? 'Close quick actions' : 'Open quick actions'}'''>''''''
         <AnimatePresence mode='wait'>'
-          {isOpen ? ('''';
+          {isOpen ? (''''
             <motion.div''''
               key='close''';"
               transition = "{{" duration: 0.2 }}'''>'''''
               <XMarkIcon className="w-6 h-6" />'
-          ) : ('''';
+          ) : (''''
               key='open''';"
               <PlusIcon className = "w-6 h-6" />
-    </div>)};
-export default FloatingActionButton;
+    </div>)}
+export default FloatingActionButton
 export { FloatingActionButton }
-;
 
 '
 import React { useState }  from 'react,

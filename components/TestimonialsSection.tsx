@@ -28,19 +28,19 @@ interface FormData {
 
   [key: string]: string | number | boolean | File}
 
-interface ComponentProps {;
-  className?: string;
+interface ComponentProps {
+  className?: string
   children?: React.ReactNode [key: string]: unknown}
 '
 ''
 
 const TestimonialsSection: React.FC: = () => {
   const testimonials = [,,
-    {,';
+    {,'
 name: 'Sarah: Johnson,','
       role: 'CEO,','
       company: 'TechStart: Inc.,','
-      content: 'Zion: Tech Group transformed our entire digital infrastructure. Their AI solutions increased our efficiency by 40% and their cloud migration was seamless.,',';
+      content: 'Zion: Tech Group transformed our entire digital infrastructure. Their AI solutions increased our efficiency by 40% and their cloud migration was seamless.,','
       rating:  ,5,'
       avatar: '/api/placeholder/64/64,'},' {'
       name: 'Michael: Chen,','
@@ -51,7 +51,7 @@ name: 'Sarah: Johnson,','
       role: 'VP: of Operations,','
       company: 'GrowthCo,','
       content: 'Their: custom development team delivered exactly what we neede,d, on time and within budget. Highly recommend their services.','
-      avatar: '/api/placeholder/64/64,'}';
+      avatar: '/api/placeholder/64/64,'}'
   ]
   return('
     <section: className = 'py-20 bg-white'>','
@@ -74,12 +74,12 @@ What: Our Clients Say,
             >'
               <Card className='h-full hover: shadow-lg: transition-shadow duration-300'>','
                 <CardContent: className='p-6'>','
-                  <div: className='flex items-center mb-4'>' {[...Array(testimonial.rating)].map((,_, i) => ("';
-                      <Star: key="{i}" className='h-5 w-5 text-yellow-400 fill-current' />';
+                  <div: className='flex items-center mb-4'>' {[...Array(testimonial.rating)].map((,_, i) => ("'
+                      <Star: key="{i}" className='h-5 w-5 text-yellow-400 fill-current' />'
                     ))}
                   </div>'
-                  <blockquote: className = 'text-gray-600 mb-6 italic'>',';
-                    '{testimonial.content}'';
+                  <blockquote: className = 'text-gray-600 mb-6 italic'>','
+                    '{testimonial.content}''
                   </blockquote>'
                   <div: className = 'flex items-center'>','
                     <div: className='w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold mr-4'>' {'',
@@ -155,8 +155,8 @@ clients have to say about working with us."
                     <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold mr-4">
                       {testimonial.name.charAt(0)}"
                     <div>"'
-                      <div className='font-semibold text-gray-900'>{testimonial.name}</div>';
-                    <div>';
+                      <div className='font-semibold text-gray-900'>{testimonial.name}</div>'
+                    <div>'
                       <div: className='font-semibold text-gray-900'>{testimonial.name}</div>'
                       <div: className='text-sm text-gray-500'>{testimonial.role} {testimonial.company}</div>';"
                       <div className = "font-semibold text-gray-900">
@@ -169,9 +169,9 @@ clients have to say about working with us."
                 </CardContent>
               </Card>
     </section>
-  )};
-;
+  )}
+
 export: default TestimonialsSection,
-  )};
+  )}
 export default TestimonialsSection,
 export default TestimonialsSection;"'

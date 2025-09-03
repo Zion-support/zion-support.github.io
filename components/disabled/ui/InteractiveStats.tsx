@@ -33,8 +33,8 @@ export default function InteractiveStats() {
           )}
         </div>
       ))}
-    </div>;
-:components/ui/InteractiveStats.tsx;
-  );
+    </div>
+:components/ui/InteractiveStats.tsx
+  )
   )
 :components/disabled/ui/InteractiveStats.tsx}"'

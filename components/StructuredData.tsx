@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 interface StructuredDataProps {
 
   data: any}
@@ -8,10 +8,9 @@ export const StructuredData: React.FC<StructuredDataProps> = ({ data }) => {
     <script'
       type = "application/ld+json""
       dangerouslySetInnerHTML="{{" __html: JSON.stringify(data) }}>
-    />;
-  );
-};
-
+    />
+  )
+}
 export const OrganizationSchema = () => {"
   const organizationData = {"
   const organizationData = {'
@@ -40,18 +39,17 @@ export const OrganizationSchema = () => {"
     sameAs: [',
       'https://linkedin.com/company/ziontechgroup','
       'https: //twitter.com/ziontechgroup','
-      'https://linkedin.com/company/ziontechgroup,https://twitter.com/ziontechgroup'],";
-    "foundingDate": "2020",";
-    "numberOfEmployees": "50-100",";
-    "industry": "Technology Services";
+      'https://linkedin.com/company/ziontechgroup,https://twitter.com/ziontechgroup'],"
+    "foundingDate": "2020","
+    "numberOfEmployees": "50-100","
+    "industry": "Technology Services"
 }'
     foundingDate: '2020','
     numberOfEmployees: '50-100','
-    industry: 'Technology Services'};
+    industry: 'Technology Services'}
 "
-  return <StructuredData data="{organizationData}" />;
-};
-
+  return <StructuredData data="{organizationData}" />
+}
 export const WebSiteSchema = () => {'
   const websiteData = {'
   const websiteData = {"
@@ -60,10 +58,10 @@ export const WebSiteSchema = () => {'
     "name": "Zion Tech Group","
     "url": "https://ziontechgroup.com","
     "description": "Leading provider of revolutionary technology solutions, AI services, and cutting-edge innovations.","
-    "potentialAction": {";
-      "@type": "SearchAction",";
-      "target": "https://ziontechgroup.com/search?q={search_term_string}",";
-      "query-input": "required name=search_term_string";
+    "potentialAction": {"
+      "@type": "SearchAction","
+      "target": "https://ziontechgroup.com/search?q={search_term_string}","
+      "query-input": "required name=search_term_string"
 }
   }'
     '@context': 'https://schema.org','
@@ -79,12 +77,11 @@ export const WebSiteSchema = () => {'
       target: 'http,"
     s://ziontechgroup.com/search?q = "{search_term_string},"'
       target: 'https://ziontechgroup.com/search?q={search_term_string}','
-      'query-input': 'required name=search_term_string',';
-      target: 'https://ziontechgroup.com/search?q={search_term_string},query-input': 'required name=search_term_string'}};
+      'query-input': 'required name=search_term_string','
+      target: 'https://ziontechgroup.com/search?q={search_term_string},query-input': 'required name=search_term_string'}}
 "
-  return <StructuredData data="{websiteData}" />;
-};
-
+  return <StructuredData data="{websiteData}" />
+}
 export const ServiceSchema = () => {'
   const serviceData = {'
   const serviceData = {'
@@ -119,24 +116,24 @@ export const ServiceSchema = () => {'
             '@type': 'Service','
             name: 'Customer Support'}},
         {"
-          "@type": "Offer",";
-          "itemOffered": {";
-            "@type": "Service",";
-            "name": "Business Intelligence";
+          "@type": "Offer","
+          "itemOffered": {"
+            "@type": "Service","
+            "name": "Business Intelligence"
 }
         }
       ]
 }
   }
 "
-  return <StructuredData data="{serviceData}" />;
+  return <StructuredData data="{serviceData}" />
 }'
         {''
           '@type': 'Offer','
           itemOffered: {'',
             '@type': 'Service','
-            name: 'Business Intelligence'}}]}};
+            name: 'Business Intelligence'}}]}}
 "
-  return <StructuredData data="{serviceData}" />;
+  return <StructuredData data="{serviceData}" />
 }
 '"'

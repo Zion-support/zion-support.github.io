@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
-  ];
-;
+  ]
+
   return (
 <Layout title = "E-commerce Return Management - Zion Tech Group""
       description="Streamline your e-commerce returns with automated workflows, return label generation, and comprehensive tracking. Reduce costs and improve customer satisfaction."
@@ -159,8 +159,8 @@ import type { NextPage } from 'next'
             </a></Link>
           </div>
         </div>
-      </section>;
+      </section>
     </Layout>;,
-  )};
+  )}
 "
-export default EcommerceReturns;
+export default EcommerceReturns

@@ -1,8 +1,7 @@
 import React from 'react'
-  ArrowRight,;
+  ArrowRight,
   Heart
-} from 'lucide-react';
-
+} from 'lucide-react'
 const ImprovedFooter: React.FC = () => {,
   const currentYear = new Date().getFullYear(),
 
@@ -42,11 +41,10 @@ const ImprovedFooter: React.FC = () => {,
     legal: [',
       { name: 'Privacy Policy', href: '/privacy' },'
       { name: 'Terms of Service', href: '/terms' },'
-      { name: 'Cookie Policy', href: '/cookies' },';
-      { name: 'GDPR Compliance', href: '/gdpr' };
-    ];
-};
-
+      { name: 'Cookie Policy', href: '/cookies' },'
+      { name: 'GDPR Compliance', href: '/gdpr' }
+    ]
+}
   const socialLinks = ['
     { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },'
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },'
@@ -220,11 +218,11 @@ with cutting-edge AI, cloud architecture, and innovative development services.
                 </Link>
               ))}
             </div>
-          </div>;
-        </div>;
-      </div>;
-    </footer>;
-  );
-};
+          </div>
+        </div>
+      </div>
+    </footer>
+  )
+}
 "'
-export default ImprovedFooter;
+export default ImprovedFooter

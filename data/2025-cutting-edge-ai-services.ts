@@ -184,4 +184,4 @@ export const cuttingEdgeAIServices2025 = [
       'Marketing and advertising creative',
       'Product design and innovation',
       'Artistic expression and creation',
-];
+]

@@ -1,14 +1,13 @@
-import React from "react";
+import React from "react"
   FileText,
-  MessageSquare} from 'lucide-react;
-
+  MessageSquare} from 'lucide-react
 export default function ProjectManagement() {
 
   const features = [
-    {;
+    {
       icon: Target,'
-      title: 'Task Management',;
-      description: 'Create, assign, and track tasks with priority levels and due dates.;
+      title: 'Task Management',
+      description: 'Create, assign, and track tasks with priority levels and due dates.
 },
     {
       icon: Users,'
@@ -37,7 +36,7 @@ export default function ProjectManagement() {
       <SEO title = "Project Management Platform - Zion Tech Group""
         description="Advanced project management tools with team collaboration, task tracking, and reporting. Streamline your projects.""
         keywords="project management, task management, team collaboration, time tracking, project planning">
-      />;
+      />
 <Head>
         <title>Project Management Platform - Zion Tech Group</title>
       </Head>
@@ -123,4 +122,4 @@ to deliver projects more efficiently.
         </div>
       </section>
     </>",
-  )};
+  )}

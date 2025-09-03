@@ -37,8 +37,7 @@ export const accessibilityConfig = {
     enterKey: true,
     spaceKey: true
   }
-};
-
+}
 // Accessibility utilities
 export const accessibilityUtils = {
   // Generate unique IDs for ARIA attributes
@@ -52,14 +51,13 @@ export const accessibilityUtils = {
   // Announce to screen readers
   announce: ({
     const announcement = document.createElement('div')) => $3
-    announcement.setAttribute('aria-live', 'polite');
-    announcement.setAttribute('aria-atomic', 'true');
-    announcement.className = 'sr-only';
-    announcement.textContent = message;
-    document.body.appendChild(announcement);
-    
+    announcement.setAttribute('aria-live', 'polite')
+    announcement.setAttribute('aria-atomic', 'true')
+    announcement.className = 'sr-only'
+    announcement.textContent = message
+    document.body.appendChild(announcement)
     setTimeout(() => {
-      document.body.removeChild(announcement);
-    }, 1000);
+      document.body.removeChild(announcement)
+    }, 1000)
   }
-};
+}

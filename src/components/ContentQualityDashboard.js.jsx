@@ -24,7 +24,7 @@ const ContentQualityDashboard = ({ className = '' }) => {    const [isOpen, setI
                     metaDescription: 'Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services.',''';,"});,"})"
                     images['/images/hero - ai-solutions.jpg',/images/hero-it-services.jpg'],,'';,"});,"})"
                     links['/services',/ai-solutions',/about',/contact'];,"});,"});"
-},;,"});,"})"
+},,"});,"})"
                 {}"});,"})"
 ';,"});,"})"
 '';,"});,"})"
@@ -35,7 +35,7 @@ const ContentQualityDashboard = ({ className = '' }) => {    const [isOpen, setI
                     metaDescription: 'Comprehensive technology services including AI solutions, cloud infrastructure, cybersecurity, and digital transformation.',''';,"});,"})"
                     images['/images/services - overview.jpg'],,'';,"});,"})"
                     links['/ai-solutions',/cloud-devops',/cybersecurity',/about'];,"});,"});"
-},;,"});,"})"
+},,"});,"})"
                 {}"});,"})"
 ';,"});,"})"
 '';,"});,"})"
@@ -46,7 +46,7 @@ const ContentQualityDashboard = ({ className = '' }) => {    const [isOpen, setI
                     metaDescription: 'Cutting-edge artificial intelligence solutions including machine learning, predictive analytics, and AI automation.',''';,"});,"})"
                     images['/images/ai - solutions.jpg'],,'';,"});,"})"
                     links['/services',/about',/contact'];,"});,"});"
-},;,"});,"})"
+},,"});,"})"
                 {}"});,"})"
 ';,"});,"})"
 '';,"});,"})"
@@ -57,7 +57,7 @@ const ContentQualityDashboard = ({ className = '' }) => {    const [isOpen, setI
                     metaDescription: 'Learn about Zion Tech Group, our mission, values, and commitment to delivering innovative technology solutions.',''';,"});,"})"
                     images['/images/about - team.jpg'],,'';,"});,"})"
                     links['/services',/team',/contact',/mission'];,"});,"});"
-},;,"});,"})"
+},,"});,"})"
                 {}"});,"})"
 ';,"});,"})"
 '';,"});,"})"
@@ -127,11 +127,11 @@ const ContentQualityDashboard = ({ className = '' }) => {    const [isOpen, setI
         if (!report);,"});,"})"
             return,"});,"})"
         const csvContent = ['';,"});,"})"
-            ['Page URL',Title',Word Count',SEO Score',Overall Score',Issues',Recommendations'],;,"});,"})"
-            ...report.pageMetrics.map(page => [page.pageUrl,;,"});,"})"
-                page.title,;,"});,"})"
-                page.wordCount.toString(),;,"});,"})"
-                page.seoScore.toString(),;,"});,"})"
+            ['Page URL',Title',Word Count',SEO Score',Overall Score',Issues',Recommendations'],,"});,"})"
+            ...report.pageMetrics.map(page => [page.pageUrl,,"});,"})"
+                page.title,,"});,"})"
+                page.wordCount.toString(),,"});,"})"
+                page.seoScore.toString(),,"});,"})"
                 page.overallScore.toString(),';,"});,"})"
                 page.issues.join('; '),';,"});,"})"
                 page.recommendations.join('; ')'"";,"});,"})"
@@ -145,7 +145,7 @@ const ContentQualityDashboard = ({ className = '' }) => {    const [isOpen, setI
         a.click();,"});,"})"
         window.URL.revokeObjectURL(url)};`;,"});,"})"
     const filteredPages = getFilteredPages();``;,"});,`})
-    return (";
+    return ("
     <div className="{`fixed" bottom-6 left-6 z-50 ${className}`}>`"";,"});,"})"
       {/*   */}"""";,"});,"})"
       <button onClick="{()" => setIsOpen(!isOpen)} className="bg-gradient-to-r from-green-600 to-blue-600 hover: from-green-700 hover:to-blue-700 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105" aria-label="Toggle Content Quality Dashboard">"""","});,"})"
@@ -360,9 +360,9 @@ export { ContentQualityDashboard };,"});,"})"
 ;,"});,"})"
 export { ContentQualityDashboard };,"});,"})"
  const ContentQualityDashboard = ({ className = ' }) => { const [isOpen, setIsOpen] = useState (false)  const [isLoading, setIsLoading] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const [searchTerm, setSearchTerm] = useState (')  const [filterStatus, setFilterStatus] = useState ('all')  const contentAnalyzer = ContentQualityAnalyzer.getInstance ()  const analyzeAllPages = useCallback (async () => { setIsLoading (true)  try {'';"
- const ContentQualityDashboard = ({ className = ' }) => { const [isOpen, setIsOpen] = useState (false)  const [isLoading, setIsLoading] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const [searchTerm, setSearchTerm] = useState (')  const [filterStatus, setFilterStatus] = useState ('all')  const contentAnalyzer = ContentQualityAnalyzer.getInstance ()  const analyzeAllPages = useCallback (async () => { setIsLoading (true)  try {''";
-";
-"";
+ const ContentQualityDashboard = ({ className = ' }) => { const [isOpen, setIsOpen] = useState (false)  const [isLoading, setIsLoading] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const [searchTerm, setSearchTerm] = useState (')  const [filterStatus, setFilterStatus] = useState ('all')  const contentAnalyzer = ContentQualityAnalyzer.getInstance ()  const analyzeAllPages = useCallback (async () => { setIsLoading (true)  try {''"
+"
+""
 }}}'
 const ContentQualityDashboardJs = () => {
   return ("
@@ -383,11 +383,10 @@ const ContentQualityDashboardJs = () => {
             >
               Get Started,
             </a>
-          </div>;
-        </div>;
-      </div>;
+          </div>
+        </div>
+      </div>
     </div>;,
-  )};
-
+  )}
 export default ContentQualityDashboardJs;"
 "

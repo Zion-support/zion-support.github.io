@@ -1,39 +1,39 @@
 export interface CuttingEdgeInnovativeService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
+  id: string
+  name: string
+  tagline: string
+  price: string
+  period: string
+  description: string
+  features: string[]
+  popular: boolean
+  icon: string
+  color: string
+  textColor: string
+  link: string
+  marketPosition: string
+  targetAudience: string
+  trialDays: number
+  setupTime: string
+  category: string
+  realService: boolean
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
+  roi: string
+  competitors: string[]
+  marketSize: string
+  growthRate: string
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string};
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
+    mobile: string
+    email: string
+    address: string
+    website: string}
+  realImplementation: boolean
+  implementationDetails: string
+  launchDate: string
+  customers: number
+  rating: number
 export const cuttingEdgeInnovativeServices2025: CuttingEdgeInnovativeService[] = [
   // AI-POWERED INNOVATIVE SERVICES
   {
@@ -493,13 +493,13 @@ export const cuttingEdgeInnovativeServices2025: CuttingEdgeInnovativeService[] =
     customers: 18,
     rating: 4.7,
     reviews: 42
-];
+]
 export const serviceCategories2025: string[] = Array.from(
   new Set(
     cuttingEdgeInnovativeServices2025
       .map((s) => s.category)
-      .filter((v): v is string = > Boolean(v));
-  );
-).sort();
-export const getServicesByCategory2025 = (category: string) => {;
-  if (!category || category === 'All') return cuttingEdgeInnovativeServices2025;
+      .filter((v): v is string = > Boolean(v))
+  )
+).sort()
+export const getServicesByCategory2025 = (category: string) => {
+  if (!category || category === 'All') return cuttingEdgeInnovativeServices2025

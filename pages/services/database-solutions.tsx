@@ -1,7 +1,7 @@
-import React from "react";
-      icon: Server,;
-      title: 'Database Administration',;
-      description: '24/7 monitoring, maintenance, and optimization of your database systems;
+import React from "react"
+      icon: Server,
+      title: 'Database Administration',
+      description: '24/7 monitoring, maintenance, and optimization of your database systems
 },
     {
       icon: Shield,'
@@ -224,7 +224,7 @@ the perfect database solution for your business.
           </div>
         </div>
       </section>
-;
-      <Footer />;
+
+      <Footer />
     </ErrorBoundary>";,
-  )};
+  )}

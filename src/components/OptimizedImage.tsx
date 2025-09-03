@@ -7,20 +7,19 @@ export default function OptimizedImage() {return ("
         <p className="{`text-gray-300" text-lg`>
           Professional OptimizedImage services to help your business grow.
         </p>
-      </div>;
-    </div>;
-  );
+      </div>
+    </div>
+  )
 }'
-interface OptimizedImageProps { src: string;
+interface OptimizedImageProps { src: string,
 ,
 interface OptimizedImageProps {,,
   src: string,,
-alt: string,',react;
-
+alt: string,',react
 interface OptimizedImageProps {
 
   src: string,
-  al,t: string;
+  al,t: string,
   width?: number,
   height?: number,,
   className?: string,
@@ -29,29 +28,27 @@ interface OptimizedImageProps {
 
 export default function OptimizedImage() {
 
-  quality?: number};
-;
-export default function OptimizedImage({;
-  src,;
-  alt,;
-  width = 800,;
-  height = 600,,
-  className = ',;
-  priority = false,;
-  quality = 75}: OptimizedImageProps) {;
-  const [isLoading, setIsLoading] = useState(true);
-  const [hasError, setHasError] = useState(false);
-;
-  return (";
-    <div className="{`relative" overflow-hidden ${className}`}>;
-      {isLoading && (;"
-        <div className="`absolute" inset-0 bg-gray-200 animate-pulse`} />;
-      )}
-      <Image;
+  quality?: number}
 
 export default function OptimizedImage({
-  quality?: number}&apos;&apos;
+  src,
+  alt,
+  width = 800,
+  height = 600,,
+  className = ',
+  priority = false,
+  quality = 75}: OptimizedImageProps) {
+  const [isLoading, setIsLoading] = useState(true)
+  const [hasError, setHasError] = useState(false)
 
+  return ("
+    <div className="{`relative" overflow-hidden ${className}`}>
+      {isLoading && (;"
+        <div className="`absolute" inset-0 bg-gray-200 animate-pulse`} />
+      )}
+      <Image
+export default function OptimizedImage({
+  quality?: number}&apos;&apos
 export default function OptimizedImage(;{
   src,
   alt,
@@ -59,9 +56,9 @@ export default function OptimizedImage(;{
   height = 600,'
   className = '',
   priority = false,
-  quality = 75}: OptimizedImageProps) {;
+  quality = 75}: OptimizedImageProps) {
   className = &apos;&apos,
-  priority = false,;
+  priority = false,
   quality = 75}: OptimizedImageProps) {&apos}&apos>``
 // Image optimization component,'
 export const OptimizedImage = ({ 
@@ -69,18 +66,17 @@ export const OptimizedImage = ({
   alt, 
   width, 
   height, 
-  priority = false,;
+  priority = false,
   className = '',>
-  ...props}) => {;
-  const [isLoading, setIsLoading] = useState(true);
-  const [hasError, setHasError] = useState(false);
-
+  ...props}) => {
+  const [isLoading, setIsLoading] = useState(true)
+  const [hasError, setHasError] = useState(false)
   return ("
     <div className = "{`relative" overflow-hidden ${className}`}>
       {isLoading && ("
         <div className="`absolute" inset-0 bg-gray-200 animate-pulse` />
-      )};
-      {isLoading && (}";
+      )}
+      {isLoading && (}"
         <div className="&quot;absolute" inset-0 bg-gray-200 animate-pulse&quot; />
       )}&quot;"
       <Image src = "{src}""
@@ -92,19 +88,19 @@ export const OptimizedImage = ({
         className="{`transition-opacity" duration-300 ${isLoading ? 'opacity-0' : 'opacity-100'}`}"
         onLoad="{()" => setIsLoading(false)}"
         onError="{()" => {
-          setHasError(true)";
-        onError="{()" => {;
-          setHasError(true);
+          setHasError(true)"
+        onError="{()" => {
+          setHasError(true)
           setIsLoading(false)}}"
         placeholder="`blur`;""
-        blurDataURL="data:image/jpegbase64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=";
-      />;
+        blurDataURL="data:image/jpegbase64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
+      />
       {hasError && (;"
         <div className="absolute inset-0 flex items-center justify-center bg-gray-100">;"
-          <span className="text-gray-500">Failed to load image</span>;
-        </div>;
+          <span className="text-gray-500">Failed to load image</span>
+        </div>
       )}
-    </div>;
+    </div>
   )}"
         placeholder = "blur""
         blurDataURL="data: image/jpeg,base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
@@ -116,22 +112,22 @@ export const OptimizedImage = ({
       )}
     </div>
   )}"
-        quality="{quality}"";
+        quality="{quality}""
         className="{`transition-opacity" duration-300 ${isLoading ? &apos;opacity-0&apos; : &apos;opacity-100&apos}`}"
         quality = "{85}""
         placeholder="`blur`}""
         blurDataURL="data: image/jpeg,base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="{`""
         onLoad="{()" => setIsLoading(false)}"
-        onError="{()" => {;
-          setIsLoading(false);
-          setHasError(true);
+        onError="{()" => {
+          setIsLoading(false)
+          setHasError(true)
           setIsLoading(false)}}"
         placeholder="&quot;blur&quot;""
         blurDataURL="&quot;data:image/jpegbase64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=&quot;"
       />
       {hasError && (&quot}"
         <div className="&quot;absolute" inset-0 flex items-center justify-center bg-gray-100&quot;>&quot;`"
-          <span className="&quot;text-gray-500&quot;">Failed to load image&quot;</span>;
+          <span className="&quot;text-gray-500&quot;">Failed to load image&quot;</span>
 }}"
         className = "{`transition-opacity" duration-300 ${isLoading ? 'opacity-0' : 'opacity-100'}`}
         {...props}
@@ -141,9 +137,8 @@ export const OptimizedImage = ({
           <span className="text-gray-400">Failed to load image</span>
         </div>
       )}
-    </div>;
-  );
-};
-
+    </div>
+  )
+}
 export default OptimizedImage;"
 ;"

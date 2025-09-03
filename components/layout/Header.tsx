@@ -1,19 +1,17 @@
 import React, { useState, useEffect } from 'react'
 const Header: React.FC = () => {,,
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const router = useRouter();
-  const location = { pathname: router.pathname };
-
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
+  const router = useRouter()
+  const location = { pathname: router.pathname }
   useEffect(() => {
-    const handleScroll = () => {;
-      setIsScrolled(window.scrollY > 20);
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20)
     }
     window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
   const navigation = ['
     { name: 'Home', href: '/', icon: Home },
     { '
@@ -41,23 +39,20 @@ const Header: React.FC = () => {,,
         { name: 'Webinars', href: '/webinars', icon: Calendar, description: 'Expert-led sessions' },'
         { name: 'Pricing Guide', href: '/pricing-guide', icon: DollarSign, description: 'Comprehensive pricing info' }
       ]
-    },';
-    { name: 'Team', href: '/team', icon: Award },';
-    { name: 'Contact', href: '/contact', icon: Phone };
-  ];
-
+    },'
+    { name: 'Team', href: '/team', icon: Award },'
+    { name: 'Contact', href: '/contact', icon: Phone }
+  ]
   const quickLinks = ['
-    { name: 'Get Quote', href: '/contact', type: 'primary' },';
-    { name: 'Free Consultation', href: '/contact?type=consultation', type: 'secondary' },';
-    { name: 'View Portfolio', href: '/portfolio', type: 'link' },;
-  ];
-
+    { name: 'Get Quote', href: '/contact', type: 'primary' },'
+    { name: 'Free Consultation', href: '/contact?type=consultation', type: 'secondary' },'
+    { name: 'View Portfolio', href: '/portfolio', type: 'link' },
+  ]
   const serviceCategories = ['
-    { name: 'Micro SaaS', href: '/services/micro-saas' },';
-    { name: 'IT Services', href: '/services/it-services' },';
-    { name: 'AI Services', href: '/services/ai-services' },;
-  ];
-
+    { name: 'Micro SaaS', href: '/services/micro-saas' },'
+    { name: 'IT Services', href: '/services/it-services' },'
+    { name: 'AI Services', href: '/services/ai-services' },
+  ]
   return (
     <header className = "{`fixed" top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled '
@@ -284,9 +279,9 @@ className="lg: hidden border-t border-gray-200 py-4"">
             </div>
           </motion.div>
         )}
-      </AnimatePresence>;
-    </header>;
-  );
-};
+      </AnimatePresence>
+    </header>
+  )
+}
 "'
-export default Header;
+export default Header

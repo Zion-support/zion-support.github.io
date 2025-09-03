@@ -1,16 +1,16 @@
 export interface AdditionalRealService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
-  realImplementation: boolean;
+  id: string
+  name: string
+  tagline: string
+  price: string
+  description: string
+  features: string[]
+  link: string
+  category: string
+  realImplementation: boolean
   contactInfo: {
-    mobile: string;
-    email: string;
+    mobile: string
+    email: string
 export const additionalEnhancedServices: AdditionalRealService[] = [
   {
     id: "ai-automation-suite",
@@ -683,8 +683,8 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
       'MRR/ARR trends and cohorts',
       'Anomaly flags and forecasts',
       'CSV/Stripe imports',
-      'Board-ready reports';
-    ],;
+      'Board-ready reports'
+    ],
     popular: true
     icon: '📈'
     color: 'from-fuchsia-600 to-pink-700'

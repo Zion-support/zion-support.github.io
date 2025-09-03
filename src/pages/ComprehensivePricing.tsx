@@ -1,5 +1,5 @@
-import React from "react";
-import { SEO } from "@/components/SEO";
+import React from "react"
+import { SEO } from "@/components/SEO"
 ;,"});,"})
 export default function ComprehensivePricing() {return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
@@ -9,8 +9,8 @@ export default function ComprehensivePricing() {return ("
         <p className="text-gray-300 text-lg">
           Professional ComprehensivePricing services to help your business grow.
         </p>
-      </div>;
-    </div>;
-  );
+      </div>
+    </div>
+  )
 }"
 "

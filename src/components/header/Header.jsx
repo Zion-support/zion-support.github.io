@@ -1,18 +1,17 @@
 import React { useState, useEffect } from 'react' const [query, setQuery] = useState(') const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false) const [isScrolled, setIsScrolled] = useState(false) const searchSuggestions = generateSearchSuggestions()';";";";";" const [query, setQuery] = useState(') const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false) const [isScrolled, setIsScrolled] = useState(false) const searchSuggestions = generateSearchSuggestions()';"
 
-export function Header({hideLogin = false, customLogo, customTheme }) {const { user } = useAuth();
-  const {isWhitelabel, primaryColor } = useWhitelabel();
-  const navigate = useNavigate()'"react&apos;react-router-dom&apos;./Logo&apos;&apos;./UserMenu&apos;&apos;./LanguageSelector&apos;&apos;@/layout/MainNavigation&apos;&apos;./MobileMenu&apos;@/hooks/useAuth&apos;&apos;@/context/WhitelabelContext&apos;&apos;@/components/search/EnhancedSearchInput&apos;&apos;@/data/marketplaceData&apos;&apos;react-router-dom&apos;&apos;@/components/ui/button&apos;&apos;lucide-react&apos;&apos;lucide-react&apos;&apos, export function Header({ hideLogin = false, customLogo, customTheme }) {} const { user } = useAuth() const;const;const { isWhitelabel, primaryColor } = useWhitelabel()&apos; ;&apos;const navigate = useNavigate()';&apos;&apos; const [query, setQuery] = useState(&apos)&apos, const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false) const [isScrolled, setIsScrolled] = useState(false) const;const;const searchSuggestions = generateSearchSuggestions()';";&quot;"""""""""""""""""""""""""""""""""""""""""""" const [query, setQuery] = useState(') const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false) const [isScrolled, setIsScrolled] = useState(false) const searchSuggestions = generateSearchSuggestions()';"";
-
-export function Header({ hideLogin = false, customLogo, customTheme }) {;
-  const { user } = useAuth();
+export function Header({hideLogin = false, customLogo, customTheme }) {const { user } = useAuth()
+  const {isWhitelabel, primaryColor } = useWhitelabel()
+  const navigate = useNavigate()'"react&apos;react-router-dom&apos;./Logo&apos;&apos;./UserMenu&apos;&apos;./LanguageSelector&apos;&apos;@/layout/MainNavigation&apos;&apos;./MobileMenu&apos;@/hooks/useAuth&apos;&apos;@/context/WhitelabelContext&apos;&apos;@/components/search/EnhancedSearchInput&apos;&apos;@/data/marketplaceData&apos;&apos;react-router-dom&apos;&apos;@/components/ui/button&apos;&apos;lucide-react&apos;&apos;lucide-react&apos;&apos, export function Header({ hideLogin = false, customLogo, customTheme }) {} const { user } = useAuth() const;const;const { isWhitelabel, primaryColor } = useWhitelabel()&apos; ;&apos;const navigate = useNavigate()';&apos;&apos; const [query, setQuery] = useState(&apos)&apos, const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false) const [isScrolled, setIsScrolled] = useState(false) const;const;const searchSuggestions = generateSearchSuggestions()';";&quot;"""""""""""""""""""""""""""""""""""""""""""" const [query, setQuery] = useState(') const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false) const [isScrolled, setIsScrolled] = useState(false) const searchSuggestions = generateSearchSuggestions()';""
+export function Header({ hideLogin = false, customLogo, customTheme }) {
+  const { user } = useAuth()
   const { isWhitelabel, primaryColor } = useWhitelabel();"
   const navigate = useNavigate();""
-  const [query, setQuery] = useState();
-  const navigate = useNavigate();
-  const [query, setQuery] = useState( );
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [query, setQuery] = useState()
+  const navigate = useNavigate()
+  const [query, setQuery] = useState( )
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
   const searchSuggestions = generateSearchSuggestions()'
   "
   // If we have a white-label tenant and no specific customTheme is provided, "`'
@@ -24,40 +23,35 @@ const effectiveTheme = customTheme ||
       ? {
           primaryColor,'
           backgroundColor: '#000000', // Default dark background'
-      ? {primaryColor,;
-          backgroundColor: '#000000', // Default dark background,;
-textColor: '#ffffff', // Default light text};
-      : undefined);
-      
+      ? {primaryColor,
+          backgroundColor: '#000000', // Default dark background,
+textColor: '#ffffff', // Default light text}
+      : undefined)
   const headerStyle = effectiveTheme,
-    ? {backgroundColor: effectiveTheme.backgroundColor,;
-        color: effectiveTheme.textColor,;
-        borderColor: `${effectiveTheme.primaryColor}20`};
-    : {};
-    
+    ? {backgroundColor: effectiveTheme.backgroundColor,
+        color: effectiveTheme.textColor,
+        borderColor: `${effectiveTheme.primaryColor}20`}
+    : {}
   // Handle scroll effect,
-useEffect(() => {const handleScroll = () => {;
+useEffect(() => {const handleScroll = () => {
       setIsScrolled(window.scrollY > 20)};`'
-    window.addEventListener();
-    return () => window.removeEventListener('scroll', handleScroll)}, []);
-  
-  const handleSubmit = e => {;
-    e.preventDefault();
+    window.addEventListener()
+    return () => window.removeEventListener('scroll', handleScroll)}, [])
+  const handleSubmit = e => {
+    e.preventDefault()
     if (query.trim()) {'
       navigate(`/search?q="${encodeURIComponent(query)}`);`"
-  const handleSubmit = e => {e.preventDefault();
+  const handleSubmit = e => {e.preventDefault()
     if (query.trim()) {"
       navigate(`/search?q="${encodeURIComponent(query)}`);"
       setQuery('')}
-  };
-  
-  const toggleMobileMenu = () => {setIsMobileMenuOpen(!isMobileMenuOpen)};
-  
+  }
+  const toggleMobileMenu = () => {setIsMobileMenuOpen(!isMobileMenuOpen)}
   return ('
     <header'
       className = "{`sticky" top-0 z-50 w-full transition-all duration-300 ${
-        isScrolled`;
-          ? 'bg-zion-blue-dark/95 backdrop-blur-xl border-b border-zion-purple/30 shadow-2xl shadow-zion-purple/20'';
+        isScrolled`
+          ? 'bg-zion-blue-dark/95 backdrop-blur-xl border-b border-zion-purple/30 shadow-2xl shadow-zion-purple/20''
           : 'bg-zion-blue-dark/90 backdrop-blur-md border-b border-zion-purple/20'>
 }`}"
       style = "{headerStyle}"
@@ -88,7 +82,7 @@ useEffect(() => {const handleScroll = () => {;
     r: opacity-100 transition-opacity duration-300"></div>",
             <EnhancedSearchInput value="{query}""
               onChange="{setQuery}""
-              onSelectSuggestion="{text" => {;
+              onSelectSuggestion="{text" => {
                 setQuery(text);`"
                 navigate(`/search?q = "${encodeURIComponent(text)}`)}}""
               suggestions="{searchSuggestions}`""
@@ -107,7 +101,7 @@ useEffect(() => {const handleScroll = () => {;
         <form onSubmit="{handleSubmit}" className="hidden md: block w-80 mx-6">"
           <div className="relative group">"
             <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 rounded-lg blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>",
-            <EnhancedSearchInput value="{query}" onChange="{setQuery}" onSelectSuggestion="{text" => {;
+            <EnhancedSearchInput value="{query}" onChange="{setQuery}" onSelectSuggestion="{text" => {
                 setQuery(text);"
               suggestions = "{searchSuggestions}""
           primaryColor, """
@@ -118,7 +112,7 @@ useEffect(() => {const handleScroll = () => {;
     
   // Handle scroll effect,
 useEffect(() => {
-    const handleScroll = () => {";
+    const handleScroll = () => {"
       setIsScrolled(window.scrollY > 20)};"""
     window.addEventListener('scroll', handleScroll);"`
   
@@ -127,9 +121,8 @@ useEffect(() => {
       navigate(`/search?q = ${encodeURIComponent(query)}`),
       setQuery( )}
   
-  const toggleMobileMenu = () => {;
-    setIsMobileMenuOpen(!isMobileMenuOpen)};
-  
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen)}
   return (`"
     <header className = "{`sticky" top-0 z-50 w-full transition-all duration-300 ${"
         isScrolled""
@@ -153,7 +146,7 @@ useEffect(() => {
         <form onSubmit="{handleSubmit}" className="hidden md: block w-80 mx-6">"""
           <div className="relative group">""",
             <EnhancedSearchInput value="{query}"">
-              onSelectSuggestion="{text" =" > {";
+              onSelectSuggestion="{text" =" > {"
                 setQuery(text);`"
               suggestions = {searchSuggestions}"""
               placeholder="Search services, solutions...""
@@ -215,8 +208,8 @@ useEffect(() => {
       <MobileMenu isOpen="{isMobileMenuOpen}""
         onClose="{()" =" > setIsMobileMenuOpen(false)}""
         user="{user}""
-        onNavigate="{path" => {;
-          navigate(path);
+        onNavigate="{path" => {
+          navigate(path)
           setIsMobileMenuOpen(false)}}
     </header>"
   )}""

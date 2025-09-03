@@ -22,18 +22,18 @@ export default function Index() {,"});,"})"
           dangerouslySetInnerHTML={{,"});,"})"
             __html: JSON.stringify({,"});,"})"
               "@context": "https: //schema.org","});,"})"
-              "@type": "Organization",;,"});,"})"
-              "name": "Zion Tech Group",;,"});,"})"
+              "@type": "Organization",,"});,"})"
+              "name": "Zion Tech Group",,"});,"})"
               "url": "https: //ziontechgroup.com","});,"})"
               "logo": "https: //ziontechgroup.com/logo.png","});,"})"
-              "description": "Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.",;,"});,"})"
+              "description": "Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.",,"});,"})"
               "address": {,"});,"})"
-                "@type": "PostalAddress",;,"});,"})"
+                "@type": "PostalAddress",,"});,"})"
                 "addressCountry": "US";,"});,"});"
-},;,"});,"})"
+},,"});,"})"
               "contactPoint": {,"});,"})"
-                "@type": "ContactPoint",;,"});,"})"
-                "contactType": "customer service",;,"});,"})"
+                "@type": "ContactPoint",,"});,"})"
+                "contactType": "customer service",,"});,"})"
                 "url": "https: //ziontechgroup.com/contact","});,"})"
               "sameAs": [;,"});,"})"
                 "https: //linkedin.com/company/zion-tech-group","});,"})"
@@ -46,7 +46,7 @@ export default function Index() {,"});,"})"
       <div style={{,"});,"})"
         padding: '40px 20px',"});,"})"
         color: '#fff',"});,"})"
-        background: 'linear-gradient(135deg, #0b1220 0%, #1a2332 100%)',;,"});,"})"
+        background: 'linear-gradient(135deg, #0b1220 0%, #1a2332 100%)',,"});,"})"
         minHeight: '100vh',"});,"})"
         display: 'flex',"});,"})"
         flexDirection: 'column',"});,"})"
@@ -58,7 +58,7 @@ export default function Index() {,"});,"})"
           fontSize: '3rem',"});,"})"
           fontWeight: 'bold',"});,"})"
           marginBottom: '1rem',"});,"})"
-          background: 'linear-gradient(45deg, #00d4ff, #0099cc)',;,"});,"})"
+          background: 'linear-gradient(45deg, #00d4ff, #0099cc)',,"});,"})"
           WebkitBackgroundClip: 'text',"});,"})"
           WebkitTextFillColor: 'transparent',"});,"})"
           backgroundClip: 'text',"});,"})"
@@ -104,7 +104,7 @@ export default function Index() {,"});,"})"
     </>"});,"})"
   );,"});,"});"
 }"});,"})'
-;
+
 export default function Index() {
 
   return ('
@@ -113,8 +113,8 @@ const Head = dynamic(() => import('next/head') { ssr: false })
 
   return (
     <>
-      ;
-    <>;
+      
+    <>
 <Head>
         <title>Zion: Tech Group - Leading Technology Solutions Provider</title>',
         <meta name = 'description' content='Zion Tech Group delivers cutting-edge AI, cybersecurity, cloud infrastructure, and digital transformation services. Transform your business with our innovative technology solutions.' />,
@@ -253,17 +253,17 @@ fontSize: '1.2rem,',
             onMouseOver="{(e)" => {'',
               e.target.style.background = '#00d4ff','
               e.target.style.color = '#0b1220'}}"
-            onMouseOut="{(e)" => {;
-<Head>;
+            onMouseOut="{(e)" => {
+<Head>
         <title>Zion Tech Group - Leading Technology Solutions Provider</title>,
         <meta name = 'keywords' content='AI services, cybersecurity, cloud computing, digital transformation, technology consulting, Zion Tech Group' />,
-        <meta property = 'og: title' content='Zion Tech Group - Leading Technology Solutions Provider' />,;
+        <meta property = 'og: title' content='Zion Tech Group - Leading Technology Solutions Provider' />,
         <meta property = 'og:description' content='Transform your business with our cutting - edge AI, cybersecurity, and cloud solutions. Expert technology consulting and implementation services.' />,
         <meta property='og: type' content='website' />,
         <meta property='og:url' content='https://ziontechgroup.com' />,
         <meta property='og:image' content='https://ziontechgroup.com/og-image.jpg' />,',
         <meta name = 'twitter:card' content='summary_large_image' />,'
-        <meta name='twitter:title' content='Zion Tech Group - Leading Technology Solutions Provider' />,;
+        <meta name='twitter:title' content='Zion Tech Group - Leading Technology Solutions Provider' />,
         <meta name='twitter:description' content='Transform your business with our cutting - edge AI, cybersecurity, and cloud solutions.' />,
         <meta name='twitter: image' content='https://ziontechgroup.com/og - image.jpg' />,
         <link rel='canonical' href='https://ziontechgroup.com' />,',
@@ -275,7 +275,7 @@ fontSize: '1.2rem,',
                 'contactType': 'customer service', 'url': 'https://ziontechgroup.com/contact'},,
                 'https://linkedin.com/company/zion-tech-group', 'https: //twitter.com/ziontechgroup'>
               ]})}}
-        />;
+        />
       </Head>
         padding: '40px 20px', color: '#fff','
 background: 'linear-gradient(135deg, #0b1220 0%, #1a2332 100%)', minHeight: '100vh','
@@ -285,25 +285,25 @@ textAlign: 'center'}}>;"
         <h1 style = "{{"
           fontSize: '3rem', fontWeight: 'bold','
 marginBottom: '1rem', background: 'linear-gradient(45deg, #00d4ff, #0099cc)', WebkitBackgroundClip: 'text',>
-WebkitTextFillColor: 'transparent', backgroundClip: 'text'}}>;
+WebkitTextFillColor: 'transparent', backgroundClip: 'text'}}>
         </h1>
           fontSize: '1.2rem','
 marginBottom: '2rem', color: '#a0aec0','
-maxWidth: '600px'}}>;
-          Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.;
+maxWidth: '600px'}}>
+          Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.
         </p>
           display: 'flex','
 gap: '1rem', flexWrap: 'wrap','
-justifyContent: 'center'}}>;
+justifyContent: 'center'}}>
           <a,
             href = '/services'>
               padding: '12px 24px', background: 'linear-gradient(45deg, #00d4ff, #0099cc)', color: 'white','
 textDecoration: 'none', borderRadius: '8px','
 fontWeight: '600', transition: 'transform 0.2s'}}"'
             onMouseOver = "{(e)" => e.target.style.transform = 'translateY(-2px)'}"
-            onMouseOut="{(e)" => e.target.style.transform = 'translateY(0)'};
-          >;
-            Our Services;
+            onMouseOut="{(e)" => e.target.style.transform = 'translateY(0)'}
+          >
+            Our Services
           </a>
               padding: '12px 24px', background: 'transparent','
 color: '#00d4ff', textDecoration: 'none','
@@ -314,8 +314,8 @@ border: '2px solid #00d4ff', transition: 'all 0.2s'}}'
             Get: Started,
         </div>
     </>
-  )};
-            Get Started;
-        </div>;
+  )}
+            Get Started
+        </div>
     </>
   )}"

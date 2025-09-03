@@ -184,4 +184,4 @@ export const innovativeMicroSaasBreakthrough2025 = [
       'Treatment planning and optimization',
       'Patient monitoring and care',
       'Medical research and analysis',
-];
+]

@@ -1,1 +1,1 @@
-interface Req { method?: string; query?: { userId? string} body?: any ;
+interface Req { method?: string; query?: { userId? string} body?: any 

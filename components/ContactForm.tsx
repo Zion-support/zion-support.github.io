@@ -13,7 +13,7 @@ const ContactForm: React.FC = () => {
     name: '','
     email: '','
     company: '','
-    service: '',';
+    service: '','
     message: ''})
     'AI & Machine Learning','
     'Cloud & DevOps','
@@ -22,18 +22,17 @@ const ContactForm: React.FC = () => {
     'Mobile Development','
     'Data Analytics','
     'Digital Transformation',
-  const validateForm = (): boolean => {;
-;
-    const newErrors: Partial<FormData> = {};
+  const validateForm = (): boolean => {
+
+    const newErrors: Partial<FormData> = {}
     // Reset form after 3 seconds,
 setTimeout(() => {
 
-      setIsSubmitted(false);
+      setIsSubmitted(false)
       setFormData({
 
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-
+    const { name, value } = e.target
+    setFormData(prev => ({ ...prev, [name]: value }))
     // Clear error when user starts typing,
 if (errors[name as keyof FormData]) {
 
@@ -53,5 +52,5 @@ if (errors[name as keyof FormData]) {
 
             {isSubmitting ? (
               <>"
-                <div className="`animate-spin" rounded-full h-5 w-5 border-b-2 border-white`}></div>;
+                <div className="`animate-spin" rounded-full h-5 w-5 border-b-2 border-white`}></div>
 export default ContactForm;"'

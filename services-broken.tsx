@@ -1,10 +1,8 @@
-import React from 'react';
-} from 'lucide-react';
-
+import React from 'react'
+} from 'lucide-react'
 export default function Services() {
-	const title = 'Services — Zion Tech Group';
-	const description = 'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.';
-
+	const title = 'Services — Zion Tech Group'
+	const description = 'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.'
 	return (
 		<>
 			{/* Hero Section */}
@@ -292,5 +290,5 @@ export default function Services() {
 				</div>
 			</section>
 		</>
-	);
+	)
 }

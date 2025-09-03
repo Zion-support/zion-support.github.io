@@ -3,9 +3,9 @@ const Head = dynamic(() => import('next/head'), { ssr: false })
 const Link = dynamic(() => import('next/link'), { ssr: false })
 const Navigation = dynamic(() => import('../src/components/Navigation'), { ssr: false })
 const Footer = dynamic(() => import('../src/components/Footer'), { ssr: false })
-;
+
   return (
-    <>;
+    <>
 <Head>
         <title>Download Brochures - Zion Tech Group</title>
         <meta name = "description content="Download" our comprehensive brochures to learn more about our AI services, IT solutions, and micro SaaS development capabilities." />"
@@ -165,6 +165,6 @@ className="w-full" bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hov
       
       <Footer />
     </>
-  )};
+  )}
 "
-export default Brochure;
+export default Brochure

@@ -1,16 +1,16 @@
 export interface EmergingTech2027Service {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
-  realImplementation: boolean;
+  id: string
+  name: string
+  tagline: string
+  price: string
+  description: string
+  features: string[]
+  link: string
+  category: string
+  realImplementation: boolean
   contactInfo: {
-    mobile: string;
-    email: string;
+    mobile: string
+    email: string
 export const emergingTech2027Services: EmergingTech2027Service[] = [
   {
     id: "2027-emerging-tech",

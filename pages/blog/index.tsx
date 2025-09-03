@@ -1,8 +1,7 @@
-import React from "react";
-  ];
-;
-  const categories = ['All', 'Technology', 'AI', 'Development', 'Innovation', 'Blockchain', 'Cloud'];
+import React from "react"
+  ]
 
+  const categories = ['All', 'Technology', 'AI', 'Development', 'Innovation', 'Blockchain', 'Cloud']
   return (
     <MainLayout title = "Blog - Zion Tech Group,"
 description="Stay" updated with the latest insights, trends, and innovations in technology from Zion Tech Group's expert team."
@@ -96,8 +95,8 @@ className="flex-1" px-4 py-3 rounded-lg text-gray-900"
             </button>
           </div>
         </div>
-      </section>;
+      </section>
     </MainLayout>;,
-  )};
+  )}
 "
-export default BlogIndex;
+export default BlogIndex

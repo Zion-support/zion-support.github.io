@@ -22,10 +22,10 @@ const AdvancedServiceInnovationHub = () => {}"});,"})"
             timeline: '2025-2030','';,"});,"})"
             adoption: 85,''';,"});,"})"
             investment: '$50B+',''';,"});,"})"
-            keyPlayers['IBM',Google',Microsoft',Startups'],;''';,"});,"})"
-            technologies['Quantum Computing',Quantum Algorithms',Quantum Software'],;''';,"});,"})"
+            keyPlayers['IBM',Google',Microsoft',Startups'],''';,"});,"})"
+            technologies['Quantum Computing',Quantum Algorithms',Quantum Software'],''';,"});,"})"
             status: 'Emerging',"});,"});"
-},;,"});,"})"
+},,"});,"})"
         {}"});,"})"
 ';,"});,"})"
 '';,"});,"})"
@@ -38,10 +38,10 @@ const AdvancedServiceInnovationHub = () => {}"});,"})"
             timeline: '2030-2040','';,"});,"})"
             adoption: 45,''';,"});,"})"
             investment: '$100B+',''';,"});,"})"
-            keyPlayers['OpenAI',Anthropic',Research Labs',Universities'],;''';,"});,"})"
-            technologies['AI Consciousness',General AI',Neural Networks'],;''';,"});,"})"
+            keyPlayers['OpenAI',Anthropic',Research Labs',Universities'],''';,"});,"})"
+            technologies['AI Consciousness',General AI',Neural Networks'],''';,"});,"})"
             status: 'Emerging',"});,"});"
-},;,"});,"})"
+},,"});,"})"
         {}"});,"})"
 ';,"});,"})"
 '';,"});,"})"
@@ -54,10 +54,10 @@ const AdvancedServiceInnovationHub = () => {}"});,"})"
             timeline: '2030-2040','';,"});,"})"
             adoption: 30,''';,"});,"})"
             investment: '$200B+',''';,"});,"})"
-            keyPlayers['SpaceX',Blue Origin',Asteroid Mining Companies'],;''';,"});,"})"
-            technologies['Space Robotics',Resource Processing',Space Logistics'],;''';,"});,"})"
+            keyPlayers['SpaceX',Blue Origin',Asteroid Mining Companies'],''';,"});,"})"
+            technologies['Space Robotics',Resource Processing',Space Logistics'],''';,"});,"})"
             status: 'Emerging',"});,"});"
-},;,"});,"})"
+},,"});,"})"
         {}"});,"})"
 ';,"});,"})"
 '';,"});,"})"
@@ -70,10 +70,10 @@ const AdvancedServiceInnovationHub = () => {}"});,"})"
             timeline: '2030-2040','';,"});,"})"
             adoption: 60,''';,"});,"})"
             investment: '$500B+',''';,"});,"})"
-            keyPlayers['ITER',Private Fusion Companies',Government Labs'],;''';,"});,"})"
-            technologies['Fusion Physics',Plasma Confinement',Energy Conversion'],;''';,"});,"})"
+            keyPlayers['ITER',Private Fusion Companies',Government Labs'],''';,"});,"})"
+            technologies['Fusion Physics',Plasma Confinement',Energy Conversion'],''';,"});,"})"
             status: 'Growing',"});,"});"
-},;,"});,"})"
+},,"});,"})"
         {}"});,"})"
 ';,"});,"})"
 '';,"});,"})"
@@ -86,10 +86,10 @@ const AdvancedServiceInnovationHub = () => {}"});,"})"
             timeline: '2025-2035','';,"});,"})"
             adoption: 70,''';,"});,"})"
             investment: '$150B+',''';,"});,"})"
-            keyPlayers['Ginkgo Bioworks',Twist Bioscience',Research Institutions'],;''';,"});,"})"
+            keyPlayers['Ginkgo Bioworks',Twist Bioscience',Research Institutions'],''';,"});,"})"
             technologies['DNA Programming',Genetic Engineering',Bio - Manufacturing'],,'';,"});,"})"
             status: 'Growing',"});,"});"
-},;,"});,"})"
+},,"});,"})"
         {}"});,"})"
 ';,"});,"})"
 '';,"});,"})"
@@ -102,7 +102,7 @@ const AdvancedServiceInnovationHub = () => {}"});,"})"
             timeline: '2030-2040','';,"});,"})"
             adoption: 40,''';,"});,"})"
             investment: '$80B+',''';,"});,"})"
-            keyPlayers['Neuralink',Kernel',Medical Device Companies'],;''';,"});,"})"
+            keyPlayers['Neuralink',Kernel',Medical Device Companies'],''';,"});,"})"
             technologies['Neural Interfaces',Signal Processing',AI / ML'],,'';,"});,"})"
             status: 'Emerging',"});,"});"
 }"});,"})"
@@ -152,7 +152,7 @@ const AdvancedServiceInnovationHub = () => {}"});,"})"
         { id: 'green-tech', name: 'Green Technology', icon: <Leaf className="w-4 h-4"/> },"""";,"});,"})"
         { id: 'biotech-ai', name: 'Biotech AI', icon: <Dna className="w-4 h-4"/> }""";,"});,"})"
     ]"""";,"});,"})
-    return (";
+    return ("
     <div className="max-w-7xl mx-auto p-6">;,"});,"})"
       {/*   */}"});,"})"
       <motion.div initial = {}"});,"})"
@@ -610,9 +610,9 @@ export { AdvancedServiceInnovationHub };,"});,"})"
 export { AdvancedServiceInnovationHub };,"});,"})"
 ;,"});,"})"
 export { AdvancedServiceInnovationHub };,"});,"})'"""";"
-const AdvancedServiceInnovationHub = () => {}"";
-'';
-'';
+const AdvancedServiceInnovationHub = () => {}""
+''
+''
 ''';""'
     const [selectedCategory, setSelectedCategory] = useState('all')';''
     const [selectedImpact, setSelectedImpact] = useState('all')';''
@@ -622,7 +622,7 @@ const AdvancedServiceInnovationHub = () => {}"";
     const [selectedImpact, setSelectedImpact] = useState('all')'
     const [selectedStatus, setSelectedStatus] = useState('all')'
     const [searchTerm, setSearchTerm] = useState('')'
-    const [viewMode, setViewMode] = useState();
+    const [viewMode, setViewMode] = useState()
     // Mock data - in real app this would come from API,
 const innovationTrends = []"
         {}""
@@ -634,9 +634,9 @@ const innovationTrends = []"
             description: 'The transition from quantum research to practical commercial applications across industries.', '''''
             category: 'quantum','''''
             impact: 'High', '''''
-            timeline: '2025-2030','';
-            adoption: 85, '''';
-            investment: '$50B+','''';
+            timeline: '2025-2030',''
+            adoption: 85, ''''
+            investment: '$50B+',''''
             keyPlayers['IBM', Google',Microsoft', Startups'], ';'''
             technologies['Quantum Computing', Quantum Algorithms',Quantum Software'], ';''
             status: 'Emerging'}, {}""
@@ -819,31 +819,31 @@ const innovationTrends = []"
             case 'Disruptive': return 'bg-purple-100 text-purple-800''''
             default: return 'bg-gray-100 text-gray-800'}
     }
-    const getCategoryIcon = (category) => {}";
-        switch(category) {}"";
-'''';
-'''''';
+    const getCategoryIcon = (category) => {}"
+        switch(category) {}""
+''''
+''''''
             case 'quantum': return <Atom className="w - 5 h-5"/" >'',''"
             case 'ai': return <Brain className="w - 5 h-5"/" >'',''"
             case 'space - tech': return <Satellite className="w-5 h-5"/" >'',''"
             case 'green - tech': return <Leaf className="w-5 h-5"/" >'',''"
             case 'biotech - ai': return <Dna className="w-5 h-5"/" >','"
-            default: return <Cpu className="w-5 h-5"/" >}",;
+            default: return <Cpu className="w-5 h-5"/" >}",
 }'';'''
     const categories = [''''''
         { id: 'all', name: 'All Categories', icon: <Globe className="w-4 h-4"/" > }, ''''''"
         { id: 'quantum', name: 'Quantum Technology', icon: <Atom className="w-4 h-4"/" > },''''''"
         { id: 'ai', name: 'Artificial Intelligence', icon: <Brain className="w-4 h-4"/" > }, ''''''"
-        { id: 'space-tech', name: 'Space Technology', icon: <Satellite className="w-4 h-4"/" > },''''''";
-        { id: 'green-tech', name: 'Green Technology', icon: <Leaf className="w-4 h-4"/" > }, ''''''";
-        { id: 'biotech-ai', name: 'Biotech AI', icon: <Dna className="w-4 h-4"/" > }''',';
+        { id: 'space-tech', name: 'Space Technology', icon: <Satellite className="w-4 h-4"/" > },''''''"
+        { id: 'green-tech', name: 'Green Technology', icon: <Leaf className="w-4 h-4"/" > }, ''''''"
+        { id: 'biotech-ai', name: 'Biotech AI', icon: <Dna className="w-4 h-4"/" > }''','
 ]';'''
             case 'quantum': return <Atom className = "w-5 h-5"/" >'''
             case 'ai': return <Brain className="w-5 h-5"/" >'''
             case 'space-tech': return <Satellite className="w-5 h-5"/" >'''
-            case 'green-tech': return <Leaf className="w-5 h-5"/" >''';
-            case 'biotech-ai': return <Dna className="w-5 h-5"/" >';
-            default: return <Cpu className="w-5 h-5"/" >}",;
+            case 'green-tech': return <Leaf className="w-5 h-5"/" >'''
+            case 'biotech-ai': return <Dna className="w-5 h-5"/" >'
+            default: return <Cpu className="w-5 h-5"/" >}",
 }''
     const categories = [''''''
         { id: 'all', name: 'All Categories', icon: <Globe className="w-4 h-4"/" > },'''''
@@ -1248,10 +1248,10 @@ const innovationTrends = []"
             Our innovation hub provides the insights and strategies you need to stay ahead""
             of emerging technologies and capitalize on future opportunities.'''''
           </p>'''''
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">'''',;
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">'''',
             <Button className="bg-white text-zion-purple hover:bg-zion-slate-light" onClick = {}"">
 ''>
-  () =" > window.open('mailto: kleber@ziontechgroup.com?subject="Innovation" Strategy Consultation', _blank')";
+  () =" > window.open('mailto: kleber@ziontechgroup.com?subject="Innovation" Strategy Consultation', _blank')"
 ''', '
 }>''''
               <Users className = "w-5 h-5 mr-2"/" >"
@@ -1259,7 +1259,7 @@ const innovationTrends = []"
             </Button>'''''
             <Button variant='outline' className="border-white text-white hover: bg-white hover:text-zion-purple" onClick = {}""
 '''
-  () =" > window.open('tel: +13024640950', _blank')";
+  () =" > window.open('tel: +13024640950', _blank')"
 ''', '
 }>''''
               <Zap className = "w-5 h-5 mr-2"/" >"
@@ -1279,4 +1279,4 @@ export { AdvancedServiceInnovationHub }
 export { AdvancedServiceInnovationHub }
 "
 export { AdvancedServiceInnovationHub }"`""
-";
+"

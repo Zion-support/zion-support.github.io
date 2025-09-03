@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
   Globe,
   Clock} from 'lucide-react'
 
@@ -33,10 +33,10 @@ export default function WorkflowAutomation() {
 
   return (
     <>
-      <SEO title="Workflow Automation Platform - Zion Tech Group"";
+      <SEO title="Workflow Automation Platform - Zion Tech Group""
         description="Streamline business processes with custom workflow automation and integration capabilities. Boost efficiency."">
         keywords="workflow automation, process automation, business automation, integration, workflow management">
-      />;
+      />
 <Head>
         <title>Workflow Automation Platform - Zion Tech Group</title>
       </Head>
@@ -122,4 +122,4 @@ to increase efficiency and reduce manual work.
         </div>
       </section>
     </>",
-  )};
+  )}

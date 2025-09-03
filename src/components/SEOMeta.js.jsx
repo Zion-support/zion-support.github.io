@@ -59,7 +59,7 @@ const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum
                         "name": "AI Strategy Consulting","""";,"});,"})"
                         "description": "Comprehensive AI strategy development and implementation consulting for enterprises""";,"});,"});"
 }"});,"});"
-},;,"});,"})"
+},,"});,"})"
                 {}"});,"})"
 """;,"});,"})"
 """";,"});,"})"
@@ -160,7 +160,7 @@ export { SEOMeta };,"});,`})'
  const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum Computing, Technology Solutions, Zion Tech Group', image = '/images / zion - tech - group - og.jpg', url = window.location.href, type = 'website', structuredData }) => { const siteName = 'Zion Tech Group' const fullTitle = `${title} | ${siteName}`';``;"
  const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum Computing, Technology Solutions, Zion Tech Group', image = '/images / zion - tech - group - og.jpg', url = window.location.href, type = 'website', structuredData }) => { const siteName = 'Zion Tech Group' const fullTitle = `${title} | ${siteName}`';`"'
 "
-"";
+""
 }`'
 const SEOMetaJs = () => {
   return ("
@@ -181,11 +181,10 @@ const SEOMetaJs = () => {
             >
               Get Started,
             </a>
-          </div>;
-        </div>;
-      </div>;
+          </div>
+        </div>
+      </div>
     </div>;,
-  )};
-
+  )}
 export default SEOMetaJs;"
 "

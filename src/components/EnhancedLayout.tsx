@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 export default function EnhancedLayout() {return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950>"
       <SEO title="EnhancedLayout" - Zion Tech Group" description="Professional EnhancedLayout services by Zion Tech Group />"
@@ -7,16 +7,16 @@ export default function EnhancedLayout() {return (
         <p className="text-gray-300" text-lg`>
           Professional EnhancedLayout services to help your business grow.
         </p>
-      </div>;
-    </div>;
-  );
+      </div>
+    </div>
+  )
 }'
 interface EnhancedLayoutProps {
 
-  children: ReactNode;
-  title?: string;
-  description?: string;
-  keywords?: string;
+  children: ReactNode
+  title?: string
+  description?: string
+  keywords?: string,
   ogImage?: string,
   canonical?: string,,
   noindex?: boolean,
@@ -32,10 +32,9 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({,
   canonical,
   noindex = false,
   showPerformanceMetrics = false,
-  showSEOAnalysis = false}) => {;
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '');
-
+  showSEOAnalysis = false}) => {
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
+  const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '')
   return ("
     <PerformanceOptimizer enabled = "{true}" "
       showMetrics="{showPerformanceMetrics}""
@@ -44,7 +43,7 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({,
     >"
       <SEOOptimizer autoAnalyze="{true}""
         showDetails="{showSEOAnalysis}">
-      >;
+      >
 <Head>
           {/*   */}
           <title>{fullTitle}</title>"
@@ -83,7 +82,7 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({,
           
           {/*   */}"
           <meta name="geo.region" content="US-DE" />"
-          <meta name="geo.placename" content="Middletown" />";
+          <meta name="geo.placename" content="Middletown" />"
           <meta name="geo.position" content="39.4496;-75.7163" />"
           <meta name = "ICBM" content="39.4496, -75.7163" />
           
@@ -145,14 +144,14 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({,
                   "streetAddress": "364 E Main St STE 1008","
                   "addressLocality": "Middletown","
                   "addressRegion": "DE","
-                  "postalCode": "19709",";
-                  "addressCountry": "US";
+                  "postalCode": "19709","
+                  "addressCountry": "US"
 },"
                 "contactPoint": {"
                   "@type": "ContactPoint","
                   "telephone": "+1-302-464-0950","
                   "contactType": "customer service","
-                  "email": "kleber@ziontechgroup.com";
+                  "email": "kleber@ziontechgroup.com"
 },"
                 "sameAs": ["
                   "https://linkedin.com/company/ziontechgroup","
@@ -162,17 +161,17 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({,
                   {"
                     "@type": "Service","
                     "name": "AI Development","
-                    "description": "Custom AI solutions and machine learning models";
+                    "description": "Custom AI solutions and machine learning models"
 },
                   {"
                     "@type": "Service","
                     "name": "Cloud Architecture","
-                    "description": "Scalable cloud solutions and infrastructure design";
+                    "description": "Scalable cloud solutions and infrastructure design"
 }>
                   {"
                     "@type": "Service","
                     "name": "Digital Transformation","
-                    "description": "End-to-end digital transformation services";
+                    "description": "End-to-end digital transformation services"
 }
                 ]
 })>
@@ -185,9 +184,8 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({,
           {children}
         </div>
       </SEOOptimizer>
-    </PerformanceOptimizer>;
-  );
-};
-
+    </PerformanceOptimizer>
+  )
+}
 export default EnhancedLayout;"
 "

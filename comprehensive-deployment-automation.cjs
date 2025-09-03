@@ -1,14 +1,13 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
 class ComprehensiveDeploymentAutomation {
   constructor() {
-    this.projectRoot = process.cwd();
-    this.reportsDir = path.join(this.projectRoot, 'deployment-reports');
-    this.logFile = path.join(this.reportsDir, 'deployment-automation.log');
+    this.projectRoot = process.cwd()
+    this.reportsDir = path.join(this.projectRoot, 'deployment-reports')
+    this.logFile = path.join(this.reportsDir, 'deployment-automation.log')
     this.results = {
       timestamp: new Date().toISOString(),
       status: 'running',
@@ -18,8 +17,8 @@ class ComprehensiveDeploymentAutomation {
       deployment: {},
       postDeployment: {},
       rollback: {}
-    };
-    this.ensureDirectories();
+    }
+    this.ensureDirectories()
   }
 
   ensureDirectories() {
@@ -27,32 +26,29 @@ class ComprehensiveDeploymentAutomation {
       'deployment-reports',
       'backup',
       'deployment/logs'
-    ];
-    
+    ]
     dirs.forEach(dir => {
-      const dirPath = path.join(this.projectRoot, dir);
+      const dirPath = path.join(this.projectRoot, dir)
       if (!fs.existsSync(dirPath)) {
-        fs.mkdirSync(dirPath, { recursive: true });
+        fs.mkdirSync(dirPath, { recursive: true })
       }
-    });
+    })
   }
 
   log(message, level = 'INFO') {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level}] ${message}`;
-    console.log(logMessage);
-    
+    const timestamp = new Date().toISOString()
+    const logMessage = `[${timestamp}] [${level}] ${message}`
+    console.log(logMessage)
     try {
-      fs.appendFileSync(this.logFile, logMessage + '\n');
+      fs.appendFileSync(this.logFile, logMessage + '\n')
     } catch (error) {
-      console.error('Failed to write to log file:', error.message);
+      console.error('Failed to write to log file:', error.message)
     }
   }
 
   async runCommand(command, description, options = {}) {
-    this.log(`🚀 Starting: ${description}`);
-    const startTime = Date.now();
-    
+    this.log(`🚀 Starting: ${description}`)
+    const startTime = Date.now()
     try {
       const result = execSync(command, {
         cwd: this.projectRoot,
@@ -60,35 +56,31 @@ class ComprehensiveDeploymentAutomation {
         timeout: options.timeout || 600000, // 10 minutes default
         stdio: options.silent ? 'pipe' : 'inherit',
         ...options
-      });
-      
-      const duration = Date.now() - startTime;
-      this.log(`✅ Completed: ${description} (${duration}ms)`);
-      
+      })
+      const duration = Date.now() - startTime
+      this.log(`✅ Completed: ${description} (${duration}ms)`)
       return { 
         success: true, 
         output: result, 
         duration,
         command,
         description
-      };
+      }
     } catch (error) {
-      const duration = Date.now() - startTime;
-      this.log(`❌ Failed: ${description} - ${error.message} (${duration}ms)`, 'ERROR');
-      
+      const duration = Date.now() - startTime
+      this.log(`❌ Failed: ${description} - ${error.message} (${duration}ms)`, 'ERROR')
       return { 
         success: false, 
         error: error.message, 
         duration,
         command,
         description
-      };
+      }
     }
   }
 
   async preDeploymentChecks() {
-    this.log('🔍 Running pre-deployment checks...');
-    
+    this.log('🔍 Running pre-deployment checks...')
     const checks = [
       {
         command: 'git status --porcelain',
@@ -105,36 +97,32 @@ class ComprehensiveDeploymentAutomation {
         description: 'Lint Check',
         validator: () => true // Allow with warnings
       }
-    ];
-
-    const results = [];
+    ]
+    const results = []
     for (const check of checks) {
-      const result = await this.runCommand(check.command, check.description, { silent: true });
-      
+      const result = await this.runCommand(check.command, check.description, { silent: true })
       if (check.validator) {
-        result.validated = check.validator(result.output || '');
+        result.validated = check.validator(result.output || '')
       }
       
-      results.push(result);
+      results.push(result)
     }
 
     this.results.preDeployment = {
       completed: true,
       results,
       passed: results.every(r => r.success && (r.validated !== false))
-    };
-
-    return results;
+    }
+    return results
   }
 
   confirmDirtyRepo() {
-    this.log('⚠️ Repository has uncommitted changes. Continuing with deployment...', 'WARN');
+    this.log('⚠️ Repository has uncommitted changes. Continuing with deployment...', 'WARN')
     return true; // Auto-continue for automation
   }
 
   async buildApplication() {
-    this.log('🏗️ Building application...');
-    
+    this.log('🏗️ Building application...')
     const buildSteps = [
       {
         command: 'npm run clean',
@@ -149,15 +137,13 @@ class ComprehensiveDeploymentAutomation {
         description: 'Build Application',
         timeout: 900000 // 15 minutes
       }
-    ];
-
-    const results = [];
+    ]
+    const results = []
     for (const step of buildSteps) {
       const result = await this.runCommand(step.command, step.description, { 
         timeout: step.timeout 
-      });
-      results.push(result);
-      
+      })
+      results.push(result)
       if (!result.success) {
         break; // Stop on first failure
       }
@@ -167,14 +153,12 @@ class ComprehensiveDeploymentAutomation {
       completed: true,
       results,
       success: results.every(r => r.success)
-    };
-
-    return results;
+    }
+    return results
   }
 
   async runTests() {
-    this.log('🧪 Running test suite...');
-    
+    this.log('🧪 Running test suite...')
     const testSteps = [
       {
         command: 'npm run test:coverage',
@@ -186,21 +170,19 @@ class ComprehensiveDeploymentAutomation {
         description: 'Linting Tests',
         optional: true
       }
-    ];
-
-    const results = [];
+    ]
+    const results = []
     for (const step of testSteps) {
       const result = await this.runCommand(step.command, step.description, { 
         silent: true 
-      });
-      
+      })
       if (!result.success && !step.optional) {
-        this.log(`❌ Critical test failed: ${step.description}`, 'ERROR');
+        this.log(`❌ Critical test failed: ${step.description}`, 'ERROR')
       } else if (!result.success && step.optional) {
-        this.log(`⚠️ Optional test failed: ${step.description}`, 'WARN');
+        this.log(`⚠️ Optional test failed: ${step.description}`, 'WARN')
       }
       
-      results.push(result);
+      results.push(result)
     }
 
     this.results.tests = {
@@ -208,17 +190,14 @@ class ComprehensiveDeploymentAutomation {
       results,
       criticalPassed: results.filter(r => !r.optional).every(r => r.success),
       allPassed: results.every(r => r.success)
-    };
-
-    return results;
+    }
+    return results
   }
 
   async createBackup() {
-    this.log('💾 Creating backup...');
-    
-    const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
-    const backupDir = path.join(this.projectRoot, 'backup', `backup-${timestamp}`);
-    
+    this.log('💾 Creating backup...')
+    const timestamp = new Date().toISOString().replace(/[:.]/g, '-')
+    const backupDir = path.join(this.projectRoot, 'backup', `backup-${timestamp}`)
     try {
       // Create backup of critical files
       const criticalFiles = [
@@ -226,33 +205,28 @@ class ComprehensiveDeploymentAutomation {
         'package-lock.json',
         'next.config.mjs',
         'tsconfig.json'
-      ];
-      
-      fs.mkdirSync(backupDir, { recursive: true });
-      
+      ]
+      fs.mkdirSync(backupDir, { recursive: true })
       for (const file of criticalFiles) {
-        const srcPath = path.join(this.projectRoot, file);
-        const destPath = path.join(backupDir, file);
-        
+        const srcPath = path.join(this.projectRoot, file)
+        const destPath = path.join(backupDir, file)
         if (fs.existsSync(srcPath)) {
-          fs.copyFileSync(srcPath, destPath);
+          fs.copyFileSync(srcPath, destPath)
         }
       }
       
-      this.log(`✅ Backup created: ${backupDir}`);
-      return { success: true, backupDir };
+      this.log(`✅ Backup created: ${backupDir}`)
+      return { success: true, backupDir }
     } catch (error) {
-      this.log(`❌ Backup failed: ${error.message}`, 'ERROR');
-      return { success: false, error: error.message };
+      this.log(`❌ Backup failed: ${error.message}`, 'ERROR')
+      return { success: false, error: error.message }
     }
   }
 
   async deployApplication() {
-    this.log('🚀 Deploying application...');
-    
+    this.log('🚀 Deploying application...')
     // Create backup first
-    const backup = await this.createBackup();
-    
+    const backup = await this.createBackup()
     const deploymentSteps = [
       {
         command: 'npm run build:production',
@@ -263,23 +237,21 @@ class ComprehensiveDeploymentAutomation {
         command: 'echo "Deployment simulation completed"',
         description: 'Deploy to Production (Simulated)'
       }
-    ];
-
-    const results = [];
+    ]
+    const results = []
     for (const step of deploymentSteps) {
       let result = await this.runCommand(step.command, step.description, { 
         silent: true 
-      });
-      
+      })
       // Try fallback if available
       if (!result.success && step.fallback) {
-        this.log(`⚠️ Trying fallback command for: ${step.description}`, 'WARN');
+        this.log(`⚠️ Trying fallback command for: ${step.description}`, 'WARN')
         result = await this.runCommand(step.fallback, `${step.description} (Fallback)`, { 
           silent: true 
-        });
+        })
       }
       
-      results.push(result);
+      results.push(result)
     }
 
     this.results.deployment = {
@@ -287,14 +259,12 @@ class ComprehensiveDeploymentAutomation {
       results,
       backup,
       success: results.every(r => r.success)
-    };
-
-    return results;
+    }
+    return results
   }
 
   async postDeploymentChecks() {
-    this.log('🔍 Running post-deployment checks...');
-    
+    this.log('🔍 Running post-deployment checks...')
     const checks = [
       {
         command: 'echo "Health check passed"',
@@ -304,30 +274,27 @@ class ComprehensiveDeploymentAutomation {
         command: 'echo "Performance check passed"',
         description: 'Performance Check'
       }
-    ];
-
-    const results = [];
+    ]
+    const results = []
     for (const check of checks) {
       const result = await this.runCommand(check.command, check.description, { 
         silent: true 
-      });
-      results.push(result);
+      })
+      results.push(result)
     }
 
     this.results.postDeployment = {
       completed: true,
       results,
       success: results.every(r => r.success)
-    };
-
-    return results;
+    }
+    return results
   }
 
   async generateDeploymentReport() {
-    const reportPath = path.join(this.reportsDir, 'deployment-report.json');
-    
-    this.results.status = 'completed';
-    this.results.completedAt = new Date().toISOString();
+    const reportPath = path.join(this.reportsDir, 'deployment-report.json')
+    this.results.status = 'completed'
+    this.results.completedAt = new Date().toISOString()
     this.results.summary = {
       overallSuccess: this.calculateOverallSuccess(),
       preDeploymentPassed: this.results.preDeployment.passed,
@@ -335,16 +302,15 @@ class ComprehensiveDeploymentAutomation {
       testsSuccess: this.results.tests.criticalPassed,
       deploymentSuccess: this.results.deployment.success,
       postDeploymentSuccess: this.results.postDeployment.success
-    };
-
+    }
     try {
-      fs.writeFileSync(reportPath, JSON.stringify(this.results, null, 2));
-      this.log(`📊 Deployment report generated: ${reportPath}`);
+      fs.writeFileSync(reportPath, JSON.stringify(this.results, null, 2))
+      this.log(`📊 Deployment report generated: ${reportPath}`)
     } catch (error) {
-      this.log(`❌ Failed to generate report: ${error.message}`, 'ERROR');
+      this.log(`❌ Failed to generate report: ${error.message}`, 'ERROR')
     }
 
-    return this.results;
+    return this.results
   }
 
   calculateOverallSuccess() {
@@ -354,47 +320,42 @@ class ComprehensiveDeploymentAutomation {
       this.results.tests.criticalPassed &&
       this.results.deployment.success &&
       this.results.postDeployment.success
-    );
+    )
   }
 
   async run() {
-    this.log('🎯 Starting Comprehensive Deployment Automation');
-    const startTime = Date.now();
-
+    this.log('🎯 Starting Comprehensive Deployment Automation')
+    const startTime = Date.now()
     try {
       // Run deployment pipeline
-      await this.preDeploymentChecks();
-      await this.buildApplication();
-      await this.runTests();
-      await this.deployApplication();
-      await this.postDeploymentChecks();
-
+      await this.preDeploymentChecks()
+      await this.buildApplication()
+      await this.runTests()
+      await this.deployApplication()
+      await this.postDeploymentChecks()
       // Generate comprehensive report
-      const report = await this.generateDeploymentReport();
-      
-      const totalDuration = Date.now() - startTime;
-      this.log(`🎉 Deployment automation completed in ${totalDuration}ms`);
-      this.log(`📊 Overall Success: ${report.summary.overallSuccess}`);
-
-      return report;
+      const report = await this.generateDeploymentReport()
+      const totalDuration = Date.now() - startTime
+      this.log(`🎉 Deployment automation completed in ${totalDuration}ms`)
+      this.log(`📊 Overall Success: ${report.summary.overallSuccess}`)
+      return report
     } catch (error) {
-      this.log(`❌ Deployment automation failed: ${error.message}`, 'ERROR');
-      this.results.status = 'failed';
-      this.results.error = error.message;
-      
-      await this.generateDeploymentReport();
-      throw error;
+      this.log(`❌ Deployment automation failed: ${error.message}`, 'ERROR')
+      this.results.status = 'failed'
+      this.results.error = error.message
+      await this.generateDeploymentReport()
+      throw error
     }
   }
 }
 
 // Run the deployment automation
 if (require.main === module) {
-  const deployment = new ComprehensiveDeploymentAutomation();
+  const deployment = new ComprehensiveDeploymentAutomation()
   deployment.run().catch(error => {
-    console.error('❌ Deployment automation failed:', error);
-    process.exit(1);
-  });
+    console.error('❌ Deployment automation failed:', error)
+    process.exit(1)
+  })
 }
 
-module.exports = ComprehensiveDeploymentAutomation;
+module.exports = ComprehensiveDeploymentAutomation

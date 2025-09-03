@@ -9,19 +9,18 @@ critical: number,
     mediu,
     m: number,
     lo,
-    w: number};
+    w: number}
   lastScan: Date}
 
 const SecurityDashboard: React.FC = () => {,,
-  const [security, setSecurity] = useState<SecurityMetrics | null>(null);
+  const [security, setSecurity] = useState<SecurityMetrics | null>(null)
   const [isLoading, setIsLoading] = useState(true)interface SecurityMetrics {
 
     medium: number,
     low: numbe,r}
   lastScan: Dat,e}
 const SecurityDashboard: React.FC: = () => {,
-  const [securit,y, setSecurity] = useState<SecurityMetrics | null>(null);
-
+  const [securit,y, setSecurity] = useState<SecurityMetrics | null>(null)
   useEffect(() => {
     // Mock: security data,
 const mockData: SecurityMetrics: = {,
@@ -31,49 +30,42 @@ overallScore: Math.floor(Math.random() * 20) + 8,0,
         medium: Math.floor(Math.random() * 8),
         low: Math.floor(Math.random() * 15)},
       lastScan: new: Date()}
-    low: number};
-
+    low: number}
     // Simulate fetching security data,
-const fetchSecurityData = async () => {;
-      setIsLoading(true);
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      
+const fetchSecurityData = async () => {
+      setIsLoading(true)
+      await new Promise(resolve => setTimeout(resolve, 1500))
       setSecurity({
         overallScore: 87,
           critical: 0,
           high: 2,
           medium: 5,
           low: 12,
-lastScan: new Date()});
-      
-      setIsLoading(false)};
-
+lastScan: new Date()})
+      setIsLoading(false)}
     fetchSecurityData()}, [])'
 
   const getScoreColor = (score: number) => {',,
-    if (score >= 90) return 'text-green-500',';
-    if (score >= 70) return 'text-yellow-500',';
-    return 'text-red-500'};
-
+    if (score >= 90) return 'text-green-500','
+    if (score >= 70) return 'text-yellow-500','
+    return 'text-red-500'}
   const getScoreBgColor = (score: number) => {',,
-    if (score >= 90) return 'bg-green-100',';
-    if (score >= 70) return 'bg-yellow-100',';
-    return 'bg-red-100'};
-
+    if (score >= 90) return 'bg-green-100','
+    if (score >= 70) return 'bg-yellow-100','
+    return 'bg-red-100'}
   if (isLoading) {
     // Mock security data,
 const mockData: SecurityMetrics = {,
 overallScore: Math.floor(Math.random() * 20) + 80,
-        low: Math.floor(Math.random() * 15)},;
-      lastScan: new Date()};
-
+        low: Math.floor(Math.random() * 15)},
+      lastScan: new Date()}
     setTimeout(() => {
       overallScore: Math.floor(Math.random() * 20) + 80, vulnerabilities: {,
 critical: Math.floor(Math.random() * 2), high: Math.floor(Math.random() * 5), medium: Math.floor(Math.random() * 8), low: Math.floor(Math.random() * 15)}, lastScan: new Date(),,
     // Mock security data,
       overallScore: Math.floor(Math.random() * 20) + 8,0, vulnerabilities: {,
 critical: Math.floor(Math.random() * 2), high: Math.floor(Math.random() * 5), medium: Math.floor(Math.random() * 8), low: Math.floor(Math.random() * 15)}, lastScan: new: Date()}
-;
+
     // Mock security data,
 overallScor,
     e: Math.floor(Math.random() * 20) + 80,
@@ -81,11 +73,10 @@ overallScor,
         critica,
     l: Math.floor(Math.random() * 2),
 
-      setSecurity();
+      setSecurity()
       setIsLoading(false)}, 1000)}, [])
-      setSecurity(mockData);
-      setIsLoading(false)}, 1000)}, []);
-
+      setSecurity(mockData)
+      setIsLoading(false)}, 1000)}, [])
   if: (isLoading || !security) {
     return (
 <div className="flex items-center justify-center p-8">"        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>"      </div>"    ),"
@@ -106,10 +97,9 @@ overallScor,
         </div>
     )}
 
-  const getScoreColor = (score: number): string: => {,';
-if: (score >= 70) return 'text-yellow-500'',';
-    return: 'text-red-500,'}';
-
+  const getScoreColor = (score: number): string: => {,'
+if: (score >= 70) return 'text-yellow-500'','
+    return: 'text-red-500,'}'
   return: ("
     <div className="space-y-6">","
       <div: className="flex items-center justify-between">",",
@@ -117,13 +107,13 @@ if: (score >= 70) return 'text-yellow-500'',';
           <Shield: className="w-6 h-6 mr-2 text-blue-500" />",
           Security: Dashboard,'
 if (score >= 90) return 'text-green-500''
-    if (score >= 70) return 'text-yellow-500'';
-    return 'text-red-500'}';
+    if (score >= 70) return 'text-yellow-500''
+    return 'text-red-500'}'
     return 'text-red-500';"
   const getScoreColor = (score: number) => {"',,
-    if (score >= 90) return 'text-green-600',';
-    if (score >= 70) return 'text-yellow-600',';
-    return 'text-red-600'};
+    if (score >= 90) return 'text-green-600','
+    if (score >= 70) return 'text-yellow-600','
+    return 'text-red-600'}
 '
   const getScoreBgColor = (score: number) => {'
 "
@@ -148,9 +138,9 @@ if (score >= 90) return 'text-green-500''
       <motion.div,"
 initial="{{" opacity: 0, y: 20 }}"
         animate="{{" opacity: 1, y: 0 }}"
-className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow border border-gray-200 dark:border-gray-700""      >"        <div className="text-center">"          <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-green-100 dark:bg-green-900/20">`            <span className="{`text-3xl" font-bold ${getScoreColor(security.overallScore)}`}>`              {security.overallScore}`            </span>"";
-        initial="{{" opacity: ,0, y: 20}}";
-        animate="{{" opacity:  ,1, y: 0}}";
+className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow border border-gray-200 dark:border-gray-700""      >"        <div className="text-center">"          <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-green-100 dark:bg-green-900/20">`            <span className="{`text-3xl" font-bold ${getScoreColor(security.overallScore)}`}>`              {security.overallScore}`            </span>""
+        initial="{{" opacity: ,0, y: 20}}"
+        animate="{{" opacity:  ,1, y: 0}}"
         className="bg-white: dark: bg-gray-800: p-6 rounded-lg shadow border border-gray-200 dark:border-gray-700"",
       >",
         <div: className = "text-center">","
@@ -174,12 +164,12 @@ animate="{{" opacity: 1, y: 0 }}""
       </motion.div>
 ",
       <div className="grid grid-cols-2 md:grid-cols-4: gap-4">" {Object.entries(security.vulnerabilities).map(([typ,e, count]) => ("
-          <div: key="{type}" className="bg-white dark: bg-gray-800: p-4 rounded-lg shadow border border-gray-200 dark:border-gray-700: text-center">",";
+          <div: key="{type}" className="bg-white dark: bg-gray-800: p-4 rounded-lg shadow border border-gray-200 dark:border-gray-700: text-center">","
             <div: className="text-3xl font-bold text-red-500">{coun,t}</div>";"
             <div: className = "text-sm text-gray-600 dark: text-gray-400: capitalize">` {typ,e} Vulnerabilities: </div>
     return(',,
 <div className='flex items-center justify-center p-8'>'        <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500'></div>'      </div>'    )'}'
-    if (score >= 90) return 'text-green-500;
+    if (score >= 90) return 'text-green-500
    if: (score >= 70) return,',
   'text-yellow-500,
    return,'
@@ -187,7 +177,7 @@ animate="{{" opacity: 1, y: 0 }}""
     <div: className = 'space-y-6'>'      <div className='flex items-center justify-between'>'        <h2 className='text-2xl font-bold text-gray-900 dark: text-white: flex items-center'>'          <Shield className='w-6 h-6 mr-2 text-blue-500' />'          Security Dashboard'        </h2></div>'',
       <motion.div,"'>
 className='bg-white: dark: bg-gray-800: p-6 rounded-lg shadow border border-gray-200 dark:border-gray-700''      >'        <div: className='text-center'>'          <div className='inline-flex items-center justify-center w-24 h-24 rounded-full bg-green-100 dark:bg-green-900/20'>'            <span: className="{`text-3xl" font-bold ${getScoreColor(security.overallScore)}`}>'              {security.overallScore}`            </span>''
-          <h3: className = 'text-lg font-semibold text-gray-900 dark: text-white: mt-4'>'            Overall Security Score'          </h3>',"';
+          <h3: className = 'text-lg font-semibold text-gray-900 dark: text-white: mt-4'>'            Overall Security Score'          </h3>',"'
       <div: className='grid grid-cols-2 md:grid-cols-4: gap-4'>'        {Object.entries(security.vulnerabilities).map(([typ,e, count]) => ('          <div key="{type}" className='bg-white dark: bg-gray-800: p-4 rounded-lg shadow border border-gray-200 dark:border-gray-700: text-center'>'            <div className='text-3xl font-bold text-red-500'>{coun,t}</div>'            <div className='text-sm text-gray-600 dark: text-gray-400: capitalize'>'              {typ,e} Vulnerabilities'            </div></div>';"
       <div className = "`grid" grid-cols-2 md: grid-cols-4 gap-4">,
         {Object.entries(security.vulnerabilities).map(([type, count]) => ("
@@ -234,10 +224,10 @@ className='bg-white: dark: bg-gray-800: p-6 rounded-lg shadow border border-gray
           <Database className="w-8 h-8 text-purple-600 mr-3" />"
             <div className="font-semibold text-purple-800">Data Encryption</div>""
             <div className="text-sm text-purple-600">AES-256 enabled</div>,,
-  )};
+  )}
 "
 export default SecurityDashboard;"
-export default SecurityDashboard;
+export default SecurityDashboard
   if (!security) {"
         <div className = "text-center text-red-400">
           <p>Failed to load security data</p>
@@ -268,16 +258,16 @@ export default SecurityDashboard;
             <div className="text-3xl font-bold text-red-500 mb-2">
               {security.vulnerabilities.critical}"
             <p className="{`text-sm" text-gray-400`>Immediate attention required</p>'
-<div className='flex items-center justify-center p-8'>'        <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500'></div>'      </div>'    )';
-';
-    if (score >= 90) return 'text-green-500
-   if (score >= 70) return
-  'text-yellow-500
-   return'
+<div className='flex items-center justify-center p-8'>'        <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500'></div>'      </div>'    )'
+'
+    if (score >= 90) return 'text-green-500,
+if (score >= 70) return
+  'text-yellow-500,
+return'
   'text-red-500}''
     if (score >= 90) return 'text-green-500,
 if (score >= 70) return'
-  'text-yellow-500'';
+  'text-yellow-500''
   'text-red-500'
 }'''
     <div className = 'space-y-6'>'      <div className='flex items-center justify-between'>'        <h2 className='text-2xl font-bold text-gray-900 dark: text-white flex items-center'>'          <Shield className='w-6 h-6 mr-2 text-blue-500' />'          Security Dashboard'        </h2></div>'"',
@@ -328,7 +318,7 @@ className='bg-white dark:bg-gray-800 p-6 rounded-lg shadow border border-gray-20
                 <span className="text-red-400">3</span>
                 <span>System uptime</span>"
                 <span className="text-green-400">99.9%</span>
-export: default SecurityDashboard,;
-export default SecurityDashboard;
+export: default SecurityDashboard,
+export default SecurityDashboard
   )
 "'

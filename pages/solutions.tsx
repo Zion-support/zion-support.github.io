@@ -1,6 +1,6 @@
 const React = dynamic(() => import('react'), { ssr: false })
 const Head = dynamic(() => import('next/head'), { ssr: false })
-const Link = dynamic(() => import('next/link'), { ssr: false });
+const Link = dynamic(() => import('next/link'), { ssr: false })
   MessageSquare,
   FileText} from 'lucide-react'
 
@@ -72,19 +72,18 @@ export default function Solutions() {
       href: '/solutions/workflow-automation',
       features: [',
         'Process Automation','
-        'Integration Management',;
-        'Approval Workflows',;
-        'Performance Monitoring'],;
-      color: 'red'}];
-
+        'Integration Management',
+        'Approval Workflows',
+        'Performance Monitoring'],
+      color: 'red'}]
   const stats = ['
     { number: '95%', label: 'Process Efficiency' },'
-    { number: '60%', label: 'Time Savings' },;
-    { number: '40%', label: 'Cost Reduction' },;
-    { number: '99%', label: 'Customer Satisfaction' },;
-      title: 'Expert Support',;
+    { number: '60%', label: 'Time Savings' },
+    { number: '40%', label: 'Cost Reduction' },
+    { number: '99%', label: 'Customer Satisfaction' },
+      title: 'Expert Support',
       description: ',,
-        'Get dedicated support from our team of technology experts and specialists.'}];
+        'Get dedicated support from our team of technology experts and specialists.'}]
 '
   const industries = ['
   const industries = ['
@@ -97,10 +96,10 @@ export default function Solutions() {
     'Professional Services','
     'Non-Profit Organizations','
     'Healthcare & Medical,Financial Services,E-commerce & Retail,Manufacturing,Education,Real Estate,Professional Services,Non-Profit Organizations'
-  ];
-;
+  ]
+
   return (
-    <>;
+    <>
 <Head>'
         <title>Solutions - Zion Tech Group</title>'
         <meta name = "description" content="Comprehensive technology solutions for enterprises, small businesses, and startups. Custom development and digital transformation services." />""
@@ -408,7 +407,7 @@ requirements.
                 <h3 className="text-2xl font-bold mb-6">
                   Ready to Get Started?
                 </h3>"
-                <p className="text-lg mb-6">;
+                <p className="text-lg mb-6">
                   Let&apos;s discuss your specific needs and find the perfect,
 solution for your business. Our experts are here to help you,'
 succeed.'
@@ -507,5 +506,5 @@ solution that fits your specific needs.
       </main>
     </>
   );"
-}";
+}"
 }"

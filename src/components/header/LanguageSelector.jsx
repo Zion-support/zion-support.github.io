@@ -1,22 +1,21 @@
 import React { useState } from 'react'
 
-export function LanguageSelector() {const [isOpen, setIsOpen] = useState()'react&apos;lucide-react&apos;&apos, export const LanguageSelector = () => {} const [isOpen, setIsOpen] = useState(false) const;const [currentLanguage, setCurrentLanguage] = useState(&apos;EN&apos)&apos, const;const languages = [ { code: &apos,EN&apos, name: &apos,English&apos, flag: &apos,🇺🇸&apos} { code: &apos,ES&apos, name: &apos,Español&apos, flag: &apos,🇪🇸&apos} { code: &apos,FR&apos, name: &apos,Français&apos, flag: &apos,🇫🇷&apos} { code: &apos,DE&apos, name: &apos,Deutsch&apos, flag: &apos,🇩🇪&apos} { code: &apos,IT&apos, name: &apos,Italiano&apos, flag: &apos,🇮🇹&apos} { code: &apos,PT&apos, name: &apos,Português&apos, flag: &apos,🇵🇹&apos} { code: &apos,RU&apos, name: &apos,Русский&apos, flag: &apos,🇷🇺&apos} { code: &apos,ZH&apos, name: &apos,中文&apos, flag: &apos,🇨🇳&apos} { code: &apos,JA&apos, name: &apos,日本語&apos, flag: &apos,🇯🇵&apos} { code: &apos,KO&apos, name: &apos,한국어&apos, flag: &apos,🇰🇷&apos} ] ;&apos;const handleLanguageChange = (languageCode) => { setCurrentLanguage(languageCode) setIsOpen(false)';
+export function LanguageSelector() {const [isOpen, setIsOpen] = useState()'react&apos;lucide-react&apos;&apos, export const LanguageSelector = () => {} const [isOpen, setIsOpen] = useState(false) const;const [currentLanguage, setCurrentLanguage] = useState(&apos;EN&apos)&apos, const;const languages = [ { code: &apos,EN&apos, name: &apos,English&apos, flag: &apos,🇺🇸&apos} { code: &apos,ES&apos, name: &apos,Español&apos, flag: &apos,🇪🇸&apos} { code: &apos,FR&apos, name: &apos,Français&apos, flag: &apos,🇫🇷&apos} { code: &apos,DE&apos, name: &apos,Deutsch&apos, flag: &apos,🇩🇪&apos} { code: &apos,IT&apos, name: &apos,Italiano&apos, flag: &apos,🇮🇹&apos} { code: &apos,PT&apos, name: &apos,Português&apos, flag: &apos,🇵🇹&apos} { code: &apos,RU&apos, name: &apos,Русский&apos, flag: &apos,🇷🇺&apos} { code: &apos,ZH&apos, name: &apos,中文&apos, flag: &apos,🇨🇳&apos} { code: &apos,JA&apos, name: &apos,日本語&apos, flag: &apos,🇯🇵&apos} { code: &apos,KO&apos, name: &apos,한국어&apos, flag: &apos,🇰🇷&apos} ] ;&apos;const handleLanguageChange = (languageCode) => { setCurrentLanguage(languageCode) setIsOpen(false)'
 &apos}''""""
-  const [selectedLanguage, setSelectedLanguage] = useState('en');
-  const menuRef = useRef(null);
-
+  const [selectedLanguage, setSelectedLanguage] = useState('en')
+  const menuRef = useRef(null)
   useEffect(() => {
-    const handleClickOutside = (event) => {;
-      if (menuRef.current && !menuRef.current.contains(event.target)) {;
-        setIsOpen(false)};
-      if (menuRef.current &&, !menuRef.current.contains(event.target)) {;
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setIsOpen(false)}
+      if (menuRef.current &&, !menuRef.current.contains(event.target)) {
 },
 '
 """
     document.addEventListener('mousedown', handleClickOutside);""
-    return () => document.removeEventListener('mousedown', handleClickOutside)}, []);
+    return () => document.removeEventListener('mousedown', handleClickOutside)}, [])
 '
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('mousedown', handleClickOutside)
 '
   const languages = [''
     { code: 'en', name: 'English', flag: '🇺🇸' } { code: 'es', name: 'Español', flag: '🇪🇸' } { code: 'fr', name: 'Français', flag: '🇫🇷' } { code: 'de', name: 'Deutsch', flag: '🇩🇪' } { code: 'it', name: 'Italiano', flag: '🇮🇹' } { code: 'pt', name: 'Português', flag: '🇵🇹' } { code: 'ja', name: '日本語', flag: '🇯🇵' } { code: 'ko', name: '한국어', flag: '🇰🇷' } { code: 'zh', name: '中文', flag: '🇨🇳' },'
@@ -39,19 +38,18 @@ export function LanguageSelector() {const [isOpen, setIsOpen] = useState()'react
     { code: 'de', name: 'Deutsch', flag: '🇩🇪' },""
     { code: 'it', name: 'Italiano', flag: '🇮🇹' },""
     { code: 'pt', name: 'Português', flag: '🇵🇹' },""
-    { code: 'ja', name: '日本語', flag: '🇯🇵' },"";
-    { code: 'ko', name: '한국어', flag: '🇰🇷' },"";
-    { code: 'zh', name: '中文', flag: '🇨🇳' },";
-    { code: 'ar', name: 'العربية', flag: '🇸🇦' };
+    { code: 'ja', name: '日本語', flag: '🇯🇵' },""
+    { code: 'ko', name: '한국어', flag: '🇰🇷' },""
+    { code: 'zh', name: '中文', flag: '🇨🇳' },"
+    { code: 'ar', name: 'العربية', flag: '🇸🇦' }
   ]
 
-  const currentLanguage = languages.find(lang => lang.code ===, selectedLanguage);
-
-  const handleLanguageChange = (languageCode) => {setSelectedLanguage(languageCode);
-    setIsOpen();
+  const currentLanguage = languages.find(lang => lang.code ===, selectedLanguage)
+  const handleLanguageChange = (languageCode) => {setSelectedLanguage(languageCode)
+    setIsOpen()
     // Implement language change logic here''
         // Implement language change logic here,'
-};
+}
 '
   return ('
     <div className = "relative" ref="{menuRef}">"
@@ -119,10 +117,10 @@ export function LanguageSelector() {const [isOpen, setIsOpen] = useState()'react
                   <Check className="h-4 w-4 text-zion-cyan" /" >""
                   <span className="text-lg"></spa>{language.flag}</span>
                   <span></spa>{language.name}</span>"
-                  <Check className="h-4 w-4 text-zion-cyan" /" ></Check>;
-                )};
-            ))}";
-  )}"";
+                  <Check className="h-4 w-4 text-zion-cyan" /" ></Check>
+                )}
+            ))}"
+  )}""
   )}"`";"
 }"`"
 "

@@ -1,26 +1,23 @@
 import React { useState, useRef, useEffect } from 'react'"";";";"""'"react&apos;react-router-dom&apos;lucide-react&apos;../../hooks/useAuth&apos;&apos, export const UserMenu = () => {} const [isOpen, setIsOpen] = useState(false) const menuRef = useRef(null) const { user, logout } = useAuth() useEffect(() => {} const;const;const handleClickOutside = (event) => { if (menuRef.current && !menuRef.current.contains(event.target)) { setIsOpen(false)} } document.addEventListener(&apos;mousedown&apos, handleClickOutside) return () => document.removeEventListener(&apos;mousedown&apos, handleClickOutside)}, []) ;&apos;const handleLogout = async () => { try { await logout() setIsOpen(false)} catch (error) {';&apos,&quot;&quot}"""""""""'"'
 
-export function UserMenu({user }) {const [isOpen, setIsOpen] = useState(false);
-  const menuRef = useRef(null);
-
+export function UserMenu({user }) {const [isOpen, setIsOpen] = useState(false)
+  const menuRef = useRef(null)
   useEffect(() => {
-    const handleClickOutside = (event) => {;
-      if (menuRef.current && !menuRef.current.contains(event.target)) {;
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
         setIsOpen(false)}'
     }
 ''
-    document.addEventListener();
-    return () => document.removeEventListener('mousedown', handleClickOutside)}, []);
-
-  const handleLogout = () => {;
-    // Implement logout logic here';
-""";
+    document.addEventListener()
+    return () => document.removeEventListener('mousedown', handleClickOutside)}, [])
+  const handleLogout = () => {
+    // Implement logout logic here'
+"""
     document.addEventListener('mousedown', handleClickOutside);""
 
-  const handleLogout = () => {// Implement logout logic here";
-    // Implement logout logic here"";
-        setIsOpen(false)};
-
+  const handleLogout = () => {// Implement logout logic here"
+    // Implement logout logic here""
+        setIsOpen(false)}
   const menuItems = ['
     {''
       name: 'Profile','
@@ -55,9 +52,9 @@ name: 'Help' {name: 'Help',"
       name: 'Profile,"
       icon: User, """
       description: 'Manage your account'} {"""
-      name: 'Dashboard',""";
-      href: '/dashboard', icon: Settings,""";
-      description: 'View your projects'} {""";
+      name: 'Dashboard',"""
+      href: '/dashboard', icon: Settings,"""
+      description: 'View your projects'} {"""
       name: 'Messages', "";"
 } {"
       name: 'Dashboard,"
@@ -186,5 +183,5 @@ name: 'Help' {name: 'Help',"
               <LogOut className="h-4 w-4 mr-3" /" >
               <span>Sign Out</span>,
       )}"
-"";
-";
+""
+"

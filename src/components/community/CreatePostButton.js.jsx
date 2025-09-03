@@ -11,7 +11,7 @@ export { CreatePostButton }
 export { CreatePostButton }
 
 export { CreatePostButton }
-;
-export { CreatePostButton }";
+
+export { CreatePostButton }"
 ;"""
 "

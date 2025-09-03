@@ -9,7 +9,7 @@ const AdvancedServiceRecommendation = () => {}"});,"})"
         budget: '',''';,"});,"})"
         timeline: '',''';,"});,"})"
         technologyMaturity: '',"});,"})"
-        primaryGoals[],;,"});,"})"
+        primaryGoals[],,"});,"})"
         challenges[];,"});,"});"
 });,"});,"})"
     const [recommendations, setRecommendations] = useState([]);,"});,"})"
@@ -44,16 +44,16 @@ const AdvancedServiceRecommendation = () => {}"});,"})"
             category: 'ai',''';,"});,"})"
             price: '$25,000/month',''';,"});,"})"
             duration: '6-12 months',''';,"});,"})"
-            tags['AI',CRM',Automation',Analytics'],;''';,"});,"})"
+            tags['AI',CRM',Automation',Analytics'],''';,"});,"})"
             features['AI - powered insights',Automated workflows',Predictive analytics'],,'';,"});,"})"
-            benefits['Improved customer retention',Increased sales efficiency',Better decision making'],;''';,"});,"})"
+            benefits['Improved customer retention',Increased sales efficiency',Better decision making'],''';,"});,"})"
             technology['AI / ML',Cloud Computing',Big Data',Automation'],,'';,"});,"})"
-            targetAudience['Enterprise',Financial Services',Healthcare',Technology Companies'],;''';,"});,"})"
+            targetAudience['Enterprise',Financial Services',Healthcare',Technology Companies'],''';,"});,"})"
             image: '/images/services/ai-crm.jpg',''';,"});,"})"
             link: 'https://ziontechgroup.com/services/ai-crm-platform',''';,"});,"})"
             contactInfo: '+1 302 464 0950',''';,"});,"})"
             email: 'kleber@ziontechgroup.com',"});,"});"
-},;,"});,"})"
+},,"});,"})"
         {}"});,"})"
 ';,"});,"})"
 '';,"});,"})"
@@ -64,16 +64,16 @@ const AdvancedServiceRecommendation = () => {}"});,"})"
             category: 'quantum',''';,"});,"})"
             price: '$150,000/month',''';,"});,"})"
             duration: '12-18 months',''';,"});,"})"
-            tags['Quantum Computing',Research',Optimization'],;''';,"});,"})"
-            features['Quantum processors access',Algorithm development',Research support'],;''';,"});,"})"
-            benefits['Solve intractable problems',Research acceleration',Competitive advantage'],;''';,"});,"})"
-            technology['Quantum Computing',Quantum Algorithms',Research Tools'],;''';,"});,"})"
-            targetAudience['Research Institutions',Pharmaceutical Companies',Financial Services'],;''';,"});,"})"
+            tags['Quantum Computing',Research',Optimization'],''';,"});,"})"
+            features['Quantum processors access',Algorithm development',Research support'],''';,"});,"})"
+            benefits['Solve intractable problems',Research acceleration',Competitive advantage'],''';,"});,"})"
+            technology['Quantum Computing',Quantum Algorithms',Research Tools'],''';,"});,"})"
+            targetAudience['Research Institutions',Pharmaceutical Companies',Financial Services'],''';,"});,"})"
             image: '/images/services/quantum-computing.jpg',''';,"});,"})"
             link: 'https://ziontechgroup.com/services/quantum-computing-service',''';,"});,"})"
             contactInfo: '+1 302 464 0950',''';,"});,"})"
             email: 'kleber@ziontechgroup.com',"});,"});"
-},;,"});,"})"
+},,"});,"})"
         {}"});,"})"
 ';,"});,"})"
 '';,"});,"})"
@@ -84,11 +84,11 @@ const AdvancedServiceRecommendation = () => {}"});,"})"
             category: 'blockchain',''';,"});,"})"
             price: '$75,000/month',''';,"});,"})"
             duration: '8-14 months',''';,"});,"})"
-            tags['Blockchain',Supply Chain',Transparency'],;''';,"});,"})"
+            tags['Blockchain',Supply Chain',Transparency'],''';,"});,"})"
             features['End - to-end tracking',Smart contracts',Transparency'],,'';,"});,"})"
-            benefits['Enhanced transparency',Reduced fraud',Improved efficiency'],;''';,"});,"})"
-            technology['Blockchain',Smart Contracts',IoT',Cloud Computing'],;''';,"});,"})"
-            targetAudience['Manufacturing',Retail',Logistics',Food & Beverage'],;''';,"});,"})"
+            benefits['Enhanced transparency',Reduced fraud',Improved efficiency'],''';,"});,"})"
+            technology['Blockchain',Smart Contracts',IoT',Cloud Computing'],''';,"});,"})"
+            targetAudience['Manufacturing',Retail',Logistics',Food & Beverage'],''';,"});,"})"
             image: '/images/services/blockchain-supply-chain.jpg',''';,"});,"})"
             link: 'https://ziontechgroup.com/services/blockchain-supply-chain',''';,"});,"})"
             contactInfo: '+1 302 464 0950',''';,"});,"})"
@@ -168,12 +168,12 @@ const AdvancedServiceRecommendation = () => {}"});,"})"
                 const timeToValue = complexity === 'Simple' ? '2-4 months' :'';,"});,"})"
                     complexity === 'Moderate' ? '4-8 months' : '8-12 months';,"});,"})"
                 return {}"});,"})"
-                    service,;,"});,"})"
-                    matchScore,;,"});,"})"
-                    reasoning,;,"});,"})"
-                    priority,;,"});,"})"
+                    service,,"});,"})"
+                    matchScore,,"});,"})"
+                    reasoning,,"});,"})"
+                    priority,,"});,"})"
                     implementationComplexity: complexity,"});,"})"
-                    expectedROI,;,"});,"})"
+                    expectedROI,,"});,"})"
                     timeToValue,"});,"});"
 }}) .sort((a, b) => b.matchScore - a.matchScore) ;,"});,"})"
             setRecommendations(recs) ;,"});,"})"
@@ -203,7 +203,7 @@ const AdvancedServiceRecommendation = () => {}"});,"})"
         return clientProfile.industry && clientProfile.compSize && clientProfile.budget &&;,"});,"})"
             clientProfile.timeline && clientProfile.technologyMaturity &&""";,"});,"})"
             clientProfile.primaryGoals.length > 0 && clientProfile.challenges.length > 0};"""";,"});,"})
-    return (";
+    return ("
     <div className="max-w-7xl mx-auto p-6">;,"});,"})"
       {/*   */}"});,"})"
       <motion.div initial = {}"});,"})"
@@ -238,7 +238,7 @@ const AdvancedServiceRecommendation = () => {}"});,"})"
           <div>"""";,"});,"})"
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Industry</label>;,"});,"})"
             <select value="{clientProfile.industry}" onChange = {}"});,"})"
-  (e) => setClientProfile(prev => ({ ...prev,;,"});,"})"
+  (e) => setClientProfile(prev => ({ ...prev,,"});,"})"
   industry: e.target.value ""","});,"})"
 """";,"});,"});"
 }))} className="w-full p-3 border border-zion-slate-light rounded-md">"""";,"});,"})"
@@ -250,7 +250,7 @@ const AdvancedServiceRecommendation = () => {}"});,"})"
           <div>"""";,"});,"})"
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Comp Size</label>;,"});,"})"
             <select value="{clientProfile.compSize}" onChange = {}"});,"})"
-  (e) => setClientProfile(prev => ({ ...prev,;,"});,"})"
+  (e) => setClientProfile(prev => ({ ...prev,,"});,"})"
   compSize: e.target.value ""","});,"})"
 """";,"});,"});"
 }))} className="w-full p-3 border border-zion-slate-light rounded-md">"""";,"});,"})"
@@ -262,7 +262,7 @@ const AdvancedServiceRecommendation = () => {}"});,"})"
           <div>"""";,"});,"})"
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Budget Range</label>;,"});,"})"
             <select value="{clientProfile.budget}" onChange = {}"});,"})"
-  (e) => setClientProfile(prev => ({ ...prev,;,"});,"})"
+  (e) => setClientProfile(prev => ({ ...prev,,"});,"})"
   budget: e.target.value ""","});,"})"
 """";,"});,"});"
 }))} className="w-full p-3 border border-zion-slate-light rounded-md">"""";,"});,"})"
@@ -274,7 +274,7 @@ const AdvancedServiceRecommendation = () => {}"});,"})"
           <div>"""";,"});,"})"
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Implementation Timeline</label>;,"});,"})"
             <select value="{clientProfile.timeline}" onChange = {}"});,"})"
-  (e) => setClientProfile(prev => ({ ...prev,;,"});,"})"
+  (e) => setClientProfile(prev => ({ ...prev,,"});,"})"
   timeline: e.target.value ""","});,"})"
 """";,"});,"});"
 }))} className="w-full p-3 border border-zion-slate-light rounded-md">"""";,"});,"})"
@@ -286,7 +286,7 @@ const AdvancedServiceRecommendation = () => {}"});,"})"
           <div>"""";,"});,"})"
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Technology Maturity Level</label>;,"});,"})"
             <select value="{clientProfile.technologyMaturity}" onChange = {}"});,"})"
-  (e) => setClientProfile(prev => ({ ...prev,;,"});,"})"
+  (e) => setClientProfile(prev => ({ ...prev,,"});,"})"
   technologyMaturity: e.target.value ""","});,"})"
 """";,"});,"});"
 }))} className="w-full p-3 border border-zion-slate-light rounded-md">"""";,"});,"})"
@@ -303,7 +303,7 @@ const AdvancedServiceRecommendation = () => {}"});,"})"
                 <input type="checkbox" checked="{clientProfile.primaryGoals.includes(goal)}" onChange = {}"});,"})"
   (e) => {}"});,"})"
                 if(e.target.checked) {}"});,"})"
-                    setClientProfile(prev => ({ ...prev, primaryGoals[...prev.primaryGoals,;,"});,"})"
+                    setClientProfile(prev => ({ ...prev, primaryGoals[...prev.primaryGoals,,"});,"})"
   goal] ;,"});,"})"
 ;,"});,"});"
 }) ) }"});,"})"
@@ -323,7 +323,7 @@ const AdvancedServiceRecommendation = () => {}"});,"})"
                 <input type="checkbox" checked="{clientProfile.challenges.includes(challenge)}" onChange = {}"});,"})"
   (e) => {}"});,"})"
                 if(e.target.checked) {}"});,"})"
-                    setClientProfile(prev => ({ ...prev, challenges[...prev.challenges,;,"});,"})"
+                    setClientProfile(prev => ({ ...prev, challenges[...prev.challenges,,"});,"})"
   challenge] ;,"});,"})"
 ;,"});,"});"
 }) ) }"});,"})"
@@ -504,7 +504,7 @@ export { AdvancedServiceRecommendation };,"});,"})"
 ;,"});,"})"
 export { AdvancedServiceRecommendation };,"});,"})"
 ;,"});,"})"
-export { AdvancedServiceRecommendation };,"});,"})'"""";
+export { AdvancedServiceRecommendation };,"});,"})'""""
 const AdvancedServiceRecommendation = () => {}"
     const [clientProfile, setClientProfile] = useState({}""
 '''
@@ -513,24 +513,24 @@ const AdvancedServiceRecommendation = () => {}"
         industry: '', '''''
         compSize: '','''''
         budget: '', '''''
-        timeline: '','''';
-        technologyMaturity: '', primaryGoals[], challenges[]})"";
-    const [recommendations, setRecommendations] = useState([])'';
+        timeline: '',''''
+        technologyMaturity: '', primaryGoals[], challenges[]})""
+    const [recommendations, setRecommendations] = useState([])''
     const [isAnalyzing, setIsAnalyzing] = useState(false)';""'
     const [showResults, setShowResults] = useState(false)';''
-    const industries = ['''';
-        'Technology', Healthcare',Financial Services', Manufacturing',Retail', Education',Government', Energy',Transportation', Media''',;''
+    const industries = [''''
+        'Technology', Healthcare',Financial Services', Manufacturing',Retail', Education',Government', Energy',Transportation', Media''',''
 ]';''
-    const compSizes = ['''';
-        'Startup (1-50 employees), Small Business (51-200 employees), Medium Business (201-1000 employees), Enterprise (1000+ employees)'', ';
+    const compSizes = [''''
+        'Startup (1-50 employees), Small Business (51-200 employees), Medium Business (201-1000 employees), Enterprise (1000+ employees)'', '
 ]';''
-    const budgets = ['''';
+    const budgets = [''''
         'Under $50K', $50K - $200K',$200K-$500K', $500K-$1M',$1M + ''',,
 ]','
-    const technologyMaturityLevels = ['''';
+    const technologyMaturityLevels = [''''
         'Early Adopter', Growing',Mature', Advanced',Innovation Leader''',
 ]';''
-    const primaryGoals = ['''';
+    const primaryGoals = [''''
         'Cost Reduction', Revenue Growth',Operational Efficiency', Digital Transformation',Innovation', Competitive Advantage',Customer Experience', Risk Management',Sustainability''',
 ]';''
 ''''
@@ -540,21 +540,21 @@ const AdvancedServiceRecommendation = () => {}"
         timeline: ',''
         technologyMaturity: '', primaryGoals[], challenges[]})"'
     const [recommendations, setRecommendations] = useState([])'
-    const [isAnalyzing, setIsAnalyzing] = useState();
+    const [isAnalyzing, setIsAnalyzing] = useState()
     const [showResults, setShowResults] = useState(false)'
-    const industries = ['''';
-        'Technology',Healthcare',Financial Services',Manufacturing',Retail',Education',Government',Energy',Transportation',Media''',;
+    const industries = [''''
+        'Technology',Healthcare',Financial Services',Manufacturing',Retail',Education',Government',Energy',Transportation',Media''',
 ]'
-    const compSizes = ['''';
-        'Startup (1-50 employees),Small Business (51-200 employees),Medium Business (201-1000 employees),Enterprise (1000+ employees)''];
-    const budgets = ['''';
-        'Under $50K',$50K-$200K',$200K-$500K',$500K-$1M',$1M+''',;
+    const compSizes = [''''
+        'Startup (1-50 employees),Small Business (51-200 employees),Medium Business (201-1000 employees),Enterprise (1000+ employees)'']
+    const budgets = [''''
+        'Under $50K',$50K-$200K',$200K-$500K',$500K-$1M',$1M+''',
 ]'
-    const technologyMaturityLevels = ['''';
-        'Early Adopter',Growing',Mature',Advanced',Innovation Leader''',;
+    const technologyMaturityLevels = [''''
+        'Early Adopter',Growing',Mature',Advanced',Innovation Leader''',
 ]'
-    const primaryGoals = ['''';
-        'Cost Reduction',Revenue Growth',Operational Efficiency',Digital Transformation',Innovation',Competitive Advantage',Customer Experience',Risk Management',Sustainability''',;
+    const primaryGoals = [''''
+        'Cost Reduction',Revenue Growth',Operational Efficiency',Digital Transformation',Innovation',Competitive Advantage',Customer Experience',Risk Management',Sustainability''',
 ]'
     const challenges = ['''''
         'Legacy Systems', Data Security',Scalability Issues', Talent Shortage',Regulatory Compliance', Integration Complexity',Performance Issues', Cost Management',Technology Debt']
@@ -566,9 +566,9 @@ const AdvancedServiceRecommendation = () => {}"
             id: 'ai-crm-platform', '''''
             title: 'AI-Powered CRM Platform','''''
             description: 'Advanced customer relationship management platform with AI-driven insights and automation.', '''''
-            category: 'ai','''';
-            price: '$25, 000/month','''';
-            duration: '6-12 months', '''';
+            category: 'ai',''''
+            price: '$25, 000/month',''''
+            duration: '6-12 months', ''''
             tags['AI',CRM', Automation',Analytics'], ';'''
             features['AI - powered insights', Automated workflows',Predictive analytics'], ','
             benefits['Improved customer retention', Increased sales efficiency',Better decision making'], ';''
@@ -699,11 +699,11 @@ if(service.targetAudience?.some((audience) => audience.toLowerCase().includes(pr
         else if (profile.technologyMaturity === 'Early Adopter' && ['basic-services', consulting'].includes(service.category))'
             score += 20,
         // Goal alignment,
-const goalMatches = profile.primaryGoals.filter(goal => service.benefits.some ( (benefit) => benefit.toLowerCase () .includes(goal.toLowerCase () ) ) ) .length,;
-score += (goalMatches / profile.primaryGoals.length) * 20,;
-return Math.min(100, score) };
-    const generateRecommendations = () => {};
-        setIsAnalyzing();
+const goalMatches = profile.primaryGoals.filter(goal => service.benefits.some ( (benefit) => benefit.toLowerCase () .includes(goal.toLowerCase () ) ) ) .length,
+score += (goalMatches / profile.primaryGoals.length) * 20,
+return Math.min(100, score) }
+    const generateRecommendations = () => {}
+        setIsAnalyzing()
         // Simulate analysis time,
 setTimeout(() => {}
             const recs = mockServices.map(service => {}
@@ -731,11 +731,11 @@ setTimeout(() => {}
                 const expectedROI = matchScore >= 80 ? 'High ROI expected' : '''
                     matchScore >= 60 ? 'Moderate ROI expected' : 'ROI to be evaluated''
                 const timeToValue = complexity === 'Simple' ? '2-4 months' :'''
-                    complexity === 'Moderate' ? '4-8 months' : '8-12 months;
-                return {};
-                    service, matchScore, reasoning, priority, implementationComplexity: complexity, expectedROI, timeToValue}}) .sort((a, b) => b.matchScore - a.matchScore) ;
-            setRecommendations();
-            setIsAnalyzing();
+                    complexity === 'Moderate' ? '4-8 months' : '8-12 months
+                return {}
+                    service, matchScore, reasoning, priority, implementationComplexity: complexity, expectedROI, timeToValue}}) .sort((a, b) => b.matchScore - a.matchScore) 
+            setRecommendations()
+            setIsAnalyzing()
             setShowResults(true) }, 2000) }
     const getPriorityColor = (priority) => {}"
         switch (priority) {}""
@@ -756,10 +756,10 @@ setTimeout(() => {}
             case 'Moderate': return 'bg-yellow-100 text-yellow-800''''
             case 'Simple': return 'bg-green-100 text-green-800''''
             default: return 'bg-gray-100 text-gray-800'}
-    };
-    const isFormComplete = () => {}";
-        return clientProfile.industry && clientProfile.compSize && clientProfile.budget &&"";
-            clientProfile.timeline && clientProfile.technologyMaturity &&'''';
+    }
+    const isFormComplete = () => {}"
+        return clientProfile.industry && clientProfile.compSize && clientProfile.budget &&""
+            clientProfile.timeline && clientProfile.technologyMaturity &&''''
             clientProfile.primaryGoals.length > 0 && clientProfile.challenges.length > 0}',''
         return clientProfile.industry && clientProfile.compSize && clientProfile.budget &&"
             clientProfile.timeline && clientProfile.technologyMaturity &&''''
@@ -886,7 +886,7 @@ setTimeout(() => {}
         </div>
       </motion.div>
       {/*   */}
-      {showResults && (<motion .div initial = {}";
+      {showResults && (<motion .div initial = {}"
   { opacity: 0, y: 20}} animate = {}""">
   { opacity: 1, y: 0','}} transition="{{" delay: 0.2 }}" >'''';"
 }} animate = {}""
@@ -1002,7 +1002,7 @@ setTimeout(() => {}
               <div className="flex flex-col sm: flex-row gap-4 justify-center">'''',
                 <Button className="bg-white text-zion-purple hover:bg-zion-slate-light" onClick = {}""
 '''
-  () =" > window.open('mailto: kleber@ziontechgroup.com?subject="Service" Recommendation Consultation', _blank')";
+  () =" > window.open('mailto: kleber@ziontechgroup.com?subject="Service" Recommendation Consultation', _blank')"
 ''', '
 }>''''
                   <Users className = "w-5 h-5 mr-2"/" >"
@@ -1010,7 +1010,7 @@ setTimeout(() => {}
                 </Button>'''''
                 <Button variant='outline' className="border-white text-white hover: bg-white hover:text-zion-purple" onClick = {}""
 '''
-  () =" > window.open('tel: +13024640950', _blank')";
+  () =" > window.open('tel: +13024640950', _blank')"
 ''', '
 }>''''
                   <Zap className = "w-5 h-5 mr-2"/" >"
@@ -1031,4 +1031,4 @@ export { AdvancedServiceRecommendation }
 export { AdvancedServiceRecommendation }
 "
 export { AdvancedServiceRecommendation }"`""
-";
+"

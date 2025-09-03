@@ -1,7 +1,7 @@
-import React from "react";
-;
+import React from "react"
+
   return (
-    <>;
+    <>
 <Head>
         <title>Cloud & DevOps Services - Zion Tech Group</title>
         <meta name = "description" content="Professional cloud migration, DevOps implementation, and infrastructure management services. Scale your business with modern cloud solutions." />"
@@ -209,6 +209,6 @@ import React from "react";
       
       <Footer />
     </>
-  )};
+  )}
 "
-export default CloudDevOps;
+export default CloudDevOps

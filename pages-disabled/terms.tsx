@@ -1,8 +1,6 @@
-import React from 'react';
-
+import React from 'react'
 const TermsOfService: NextPage = () => {
-  const lastUpdated = 'December 2024';
-
+  const lastUpdated = 'December 2024'
   return (
     <MainLayout
       title="Terms of Service - Zion Tech Group"
@@ -200,7 +198,6 @@ const TermsOfService: NextPage = () => {
         </section>
       </div>
     </MainLayout>
-  );
-};
-
-export default TermsOfService;
+  )
+}
+export default TermsOfService

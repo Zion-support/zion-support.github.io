@@ -1,11 +1,11 @@
-import React from 'react'; export default function ForumCategories() { const categories = [{ id: "1", name: "General Discussion", description: "General topics and discussions", postCount: 150, adminOnly: false, icon: "message-circle", lastPost: { title: "Welcome to the community!", author: "Admin", date: "2024-01-15" } { id: "2", name: "Technical Support", description: "Get help with technical issues", postCount: 89, adminOnly: false, icon: "code", lastPost: { title: "API integration question", author: "Developer123", date: "2024-01-14" ], return (";
-    <div className="space-y-4">" {categories.map((category) => (<div key="{category.id}" className="bg-white/10 backdrop-blur-sm rounded-lg p-4">" <h3 className="text-lg font-semibold text-zion-cyan mb-2">{category.name}</h3>" <p className="text-zion-slate-light mb-2">{category.description}</p>" <div className="flex justify-between text-sm text-zion-slate-light"> <span>{category.postCount} posts</span> {category.lastPost && (<span>Last: {category.lastPost.title} by {category.lastPost.author}</span>)} </div> </div>))} </div>)} ";"" export default function ForumCategories() { const categories = [{ id: "1", name: "General Discussion", description: "General topics and discussions", postCount: 150, adminOnly: false, icon: "message-circle", lastPost: { title: "Welcome to the community!", author: "Admin", date: "2024-01-15" } { id: "2", name: "Technical Support", description: "Get help with technical issues", postCount: 89, adminOnly: false, icon: "code", lastPost: { title: "API integration question", author: "Developer123", date: "2024-01-14" ], return (";
+import React from 'react'; export default function ForumCategories() { const categories = [{ id: "1", name: "General Discussion", description: "General topics and discussions", postCount: 150, adminOnly: false, icon: "message-circle", lastPost: { title: "Welcome to the community!", author: "Admin", date: "2024-01-15" } { id: "2", name: "Technical Support", description: "Get help with technical issues", postCount: 89, adminOnly: false, icon: "code", lastPost: { title: "API integration question", author: "Developer123", date: "2024-01-14" ], return ("
+    <div className="space-y-4">" {categories.map((category) => (<div key="{category.id}" className="bg-white/10 backdrop-blur-sm rounded-lg p-4">" <h3 className="text-lg font-semibold text-zion-cyan mb-2">{category.name}</h3>" <p className="text-zion-slate-light mb-2">{category.description}</p>" <div className="flex justify-between text-sm text-zion-slate-light"> <span>{category.postCount} posts</span> {category.lastPost && (<span>Last: {category.lastPost.title} by {category.lastPost.author}</span>)} </div> </div>))} </div>)} ";"" export default function ForumCategories() { const categories = [{ id: "1", name: "General Discussion", description: "General topics and discussions", postCount: 150, adminOnly: false, icon: "message-circle", lastPost: { title: "Welcome to the community!", author: "Admin", date: "2024-01-15" } { id: "2", name: "Technical Support", description: "Get help with technical issues", postCount: 89, adminOnly: false, icon: "code", lastPost: { title: "API integration question", author: "Developer123", date: "2024-01-14" ], return ("
     <div className="space-y-4">" {categories.map((category) => (<div key="{category.id}" className="bg-white/10 backdrop-blur-sm rounded-lg p-4">" <h3 className="text-lg font-semibold text-zion-cyan mb-2">{category.name}</h3>" <p className="text-zion-slate-light mb-2">{category.description}</p>" <div className="flex justify-between text-sm text-zion-slate-light"> <span>{category.postCount} posts</span> {category.lastPost && (<span>Last: {category.lastPost.title} by {category.lastPost.author}</span>)} </div> </div>))} </div>)} ";"
 "
 ;,"});,"})"
- export default function ForumCategories() { const categories = [ { id: "1", name: "General Discussion", description: "General topics and discussions", postCount: 150, adminOnly: false, icon: "message-circle", lastPost: { title: "Welcome to the community!", author: "Admin", date: "2024-01-15" } { id: "2", name: "Technical Support", description: "Get help with technical issues", postCount: 89, adminOnly: false, icon: "code", lastPost: { title: "API integration question", author: "Developer123", date: "2024-01-14" ], return (";
+ export default function ForumCategories() { const categories = [ { id: "1", name: "General Discussion", description: "General topics and discussions", postCount: 150, adminOnly: false, icon: "message-circle", lastPost: { title: "Welcome to the community!", author: "Admin", date: "2024-01-15" } { id: "2", name: "Technical Support", description: "Get help with technical issues", postCount: 89, adminOnly: false, icon: "code", lastPost: { title: "API integration question", author: "Developer123", date: "2024-01-14" ], return ("
     <div className="space-y-4">" {categories.map((category) => (<div key="{category.id}" className="bg-white/10 backdrop-blur-sm rounded-lg p-4">" <h3 className="text-lg font-semibold text-zion-cyan mb-2">{category.name}</h3>" <p className="text-zion-slate-light mb-2">{category.description}</p>" <div className="flex justify-between text-sm text-zion-slate-light"> <span>{category.postCount} posts</span> {category.lastPost && (<span>Last: {category.lastPost.title} by {category.lastPost.author}</span>)} </div> </div>))} </div>)} ";"""";,"});,"})"
- export default function ForumCategories() { const categories = [{ id: "1", name: "General Discussion", description: "General topics and discussions", postCount: 150, adminOnly: false, icon: "message-circle", lastPost: { title: "Welcome to the community!", author: "Admin", date: "2024-01-15" } { id: "2", name: "Technical Support", description: "Get help with technical issues", postCount: 89, adminOnly: false, icon: "code", lastPost: { title: "API integration question", author: "Developer123", date: "2024-01-14" ], return (";
+ export default function ForumCategories() { const categories = [{ id: "1", name: "General Discussion", description: "General topics and discussions", postCount: 150, adminOnly: false, icon: "message-circle", lastPost: { title: "Welcome to the community!", author: "Admin", date: "2024-01-15" } { id: "2", name: "Technical Support", description: "Get help with technical issues", postCount: 89, adminOnly: false, icon: "code", lastPost: { title: "API integration question", author: "Developer123", date: "2024-01-14" ], return ("
     <div className="space-y-4">" {categories.map((category) => (<div key="{category.id}" className="bg-white/10 backdrop-blur-sm rounded-lg p-4">" <h3 className="text-lg font-semibold text-zion-cyan mb-2">{category.name}</h3>" <p className="text-zion-slate-light mb-2">{category.description}</p>" <div className="flex justify-between text-sm text-zion-slate-light"> <span>{category.postCount} posts</span> {category.lastPost && (<span>Last: {category.lastPost.title} by {category.lastPost.author}</span>)} </div> </div>))} </div>)} ";";,"});,"})"
 ,"});,"})"
 export default function ForumCategories() {}"});,"})"
@@ -24,7 +24,7 @@ export default function ForumCategories() {}"});,"})"
                 title: 'Welcome to the community!',''';,"});,"})"
                 author: 'Admin',''';,"});,"})"
                 date: '2024-01-15',"});,"});"
-},;,"});,"})"
+},,"});,"})"
             id: '2',''';,"});,"})"
             name: 'Technical Support',''';,"});,"})"
             description: 'Get help with technical issues',';,"});,"})"
@@ -34,7 +34,7 @@ export default function ForumCategories() {}"});,"})"
                 author: 'Developer123',''';,"});,"})"
                 date: '2024-01-14',"});,"})"
     ],"});,"})
-    return (";
+    return ("
     <div className="space-y-4">"""";,"});,"})"
       {categories.map((category) => (<div key="{category.id}" className="bg-white/10 backdrop-blur-sm rounded-lg p-4">"""";,"});,"})"
           <h3 className="text-lg font-semibold text-zion-cyan mb-2">{category.name}</h3>"""";,"});,"})"
@@ -48,7 +48,7 @@ export default function ForumCategories() {}"});,"})"
 export { ForumCategories };,"});,"})'
  export default function ForumCategories() { const categories = [ { id: '1', name: 'General Discussion', description: 'General topics and discussions', postCount: 150, adminOnly: false, icon: 'message-circle', lastPost: { title: 'Welcome to the community!', author: 'Admin', date: '2024-01-15' } { id: '2', name: 'Technical Support', description: 'Get help with technical issues', postCount: 89, adminOnly: false, icon: 'code', lastPost: { title: 'API integration question', author: 'Developer123', date: '2024-01-14' ] return (",,
     <div className="space-y-4">' {categories.map((category) => (<div key="{category.id}" className="bg-white/10 backdrop-blur-sm rounded-lg p-4">' <h3 className="text-lg font-semibold text-zion-cyan mb-2">{category.name}</h3>' <p className="text-zion-slate-light mb-2">{category.description}</p>' <div className="flex justify-between text-sm text-zion-slate-light"> <span>{category.postCount} posts</span> {category.lastPost && (<span>Last: {category.lastPost.title} by {category.lastPost.author}</span>)} </div> </div>))} </div>)} '';;export default function ForumCategories() {}
-    const categories = [] {};
+    const categories = [] {}
 '
 ''
 '''
@@ -71,14 +71,14 @@ title: 'API integration question','''
                 author: 'Developer123','''
                 date: '2024-01-14',
     ]
-    return (";
+    return ("
     <div className="space-y-4">'''' {categories.map((category) => (<div key="{category.id}" className="bg-white/10 backdrop-blur-sm rounded-lg p-4">'''';"
           <h3 className="text-lg font-semibold text-zion-cyan mb-2">{category.name}</h3>'''';"
           <p className="text-zion-slate-light mb-2">{category.description}</p>'''';"
-          <div className = "flex justify-between text-sm text-zion-slate-light">";
+          <div className = "flex justify-between text-sm text-zion-slate-light">"
  export: { function } export default function ForumCategories() { const categories = [ { id: "1,', name: 'General: Discussion,', description: 'General: topics and discussions,', postCount: 15,0, adminOnly: fals,e, icon: 'message-circle,', lastPost: { title: 'Welcome: to the community!,', author: 'Admin,', date: '2024-01-15,'}} { id: '2,', name: 'Technical: Support,', description: 'Get: help with technical issues,', postCount: 8,9, adminOnly: fals,e, icon: 'code,', lastPost: { title: 'API: integration question,', author: 'Developer123,', date: '2024-01-14,'}}] return() <div: className="space-y-4"> {categories.map(category => ( <div key={category.id}' className="bg-white/10 backdrop-blur-sm rounded-lg p-4" >' <h3 className="text-lg font-semibold text-zion-cyan mb-2"> {category.name} </h3>' <p className="text-zion-slate-light mb-2">{category.description}</p>' <div className="flex justify-between text-sm text-zion-slate-light"> <span>{category.postCount} posts</span> {category.lastPost && ( <span> Last: {category.lastPost.titl,e} by: {category.lastPost.author} </span> )} </div> </div> ))} </div> ) } '';export: { function }'
-export: default function ForumCategories() {};
-  const categories = []{};
+export: default function ForumCategories() {}
+  const categories = []{}
 ';'
 '';'
 ''';'
@@ -103,23 +103,23 @@ export: default function ForumCategories() {};
   return: (),"
     <div: className="space - y-4">',' {categories.map(category: => (',
         <div''',','
-          key={category.id}'''',;"
+          key={category.id}'''',"
           className = "bg - white / 10: backdrop-blur-sm rounded-lg p-4"''>''''',',"'
           <h3: className="text-lg font-semibold text-zion-cyan mb-2">',' {category.name}'''',,
-          </h3>''''',;"
-          <p: className="text - zion-slate-light mb-2">{category.description}</p>''''',;"
+          </h3>''''',"
+          <p: className="text - zion-slate-light mb-2">{category.description}</p>''''',"
           <div: className = "flex justify-between text-sm text-zion-slate-light">',',
             <span>{category.postCount} posts</span>
             {category.lastPost: && (,
               <span>,
 Last: {category.lastPost.titl,e} by: {category.lastPost.author}
               </span>'
- export { function } export default function ForumCategories() { const categories = [ { id: '1', name: 'General Discussion', description: 'General topics and discussions', postCount: 150, adminOnly: false, icon: 'message-circle', lastPost: { titl,;
-    e: 'Welcome to the community!', author: 'Admin', date: '2024-01-15'}} { id: '2', name: 'Technical Support', description: 'Get help with technical issues', postCount: 89, adminOnly: false, icon: 'code', lastPost: { titl,";
+ export { function } export default function ForumCategories() { const categories = [ { id: '1', name: 'General Discussion', description: 'General topics and discussions', postCount: 150, adminOnly: false, icon: 'message-circle', lastPost: { titl,
+    e: 'Welcome to the community!', author: 'Admin', date: '2024-01-15'}} { id: '2', name: 'Technical Support', description: 'Get help with technical issues', postCount: 89, adminOnly: false, icon: 'code', lastPost: { titl,"
     e: 'API integration question', author: 'Developer123', date: '2024-01-14'}}] return() <div className="space-y-4"> {categories.map(category => ( <div key="{category.id}" className="bg-white/10 backdrop-blur-sm rounded-lg p-4"" >' <h3 className="text-lg font-semibold text-zion-cyan mb-2"> {category.name} </h3>' <p className="text-zion-slate-light mb-2">{category.description}</p>' <div className="flex justify-between text-sm text-zion-slate-light"> <span>{category.postCount} posts</span> {category.lastPost && ( <span> Last: {category.lastPost.title} by {category.lastPost.author} </span> )} </div> </div> ))} </div> ) } '',export { function }"
  export { function } export default function ForumCategories() { const categories = [ { id: '1', name: 'General Discussion', description: 'General topics and discussions', postCount: 150, adminOnly: false, icon: 'message-circle', lastPost: { title: 'Welcome to the community!', author: 'Admin', date: '2024-01-15'}} { id: '2', name: 'Technical Support', description: 'Get help with technical issues', postCount: 89, adminOnly: false, icon: 'code', lastPost: { title: 'API integration question', author: 'Developer123', date: '2024-01-14'}}] return() <div className="space-y-4"> {categories.map(category => ( <div key={category.id}' className="bg-white/10 backdrop-blur-sm rounded-lg p-4" >' <h3 className="text-lg font-semibold text-zion-cyan mb-2"> {category.name} </h3>' <p className="text-zion-slate-light mb-2">{category.description}</p>' <div className="flex justify-between text-sm text-zion-slate-light"> <span>{category.postCount} posts</span> {category.lastPost && ( <span> Last: {category.lastPost.title} by {category.lastPost.author} </span> )} </div> </div> ))} </div> ) } ';export { function }
 export default function ForumCategories() {}
-  const categories = []{};
+  const categories = []{}
       id: '1',''
       name: 'General Discussion',''
       postCount: 150,'
@@ -133,24 +133,24 @@ export default function ForumCategories() {}
  export {function } export default function ForumCategories()   {const categories = [{ id: '1', name: 'General Discussion', description: 'General topics and discussions', postCount: 150, adminOnly: false, icon: 'message-circle', lastPost: { title: 'Welcome to the community!', author: 'Admin', date: '2024-01-15'}} {id: '2', name: 'Technical Support', description: 'Get help with technical issues', postCount: 89, adminOnly: false, icon: 'code', lastPost: { title: 'API integration question', author: 'Developer123', date: '2024-01-14'}}] return() <div className="space-y-4"> {categories.map(category => ( <div key={category.id}' className="bg-white/10 backdrop-blur-sm rounded-lg p-4"" >' <h3 className="text-lg font-semibold text-zion-cyan mb-2"> {category.name} </h3>' <p className="text-zion-slate-light mb-2">{category.description}</p>' <div className="flex justify-between text-sm text-zion-slate-light"> <span>{category.postCount} posts</span> {category.lastPost && ( <span> Last: {category.lastPost.title} by {category.lastPost.author} </span> )} </div> </div> ))} </div> ) } '';export {function }
 export default function ForumCategories()   {}"
  export default function ForumCategories() {} const categories = [  { id: &apos,1&apos, name: &apos,General Discussion&apos, description: &apos,General topics and discussions&apos, postCount: 150, adminOnly: false, icon: &apos,message-circle&apos, lastPost: { titl,e: &apos,Welcome to the community!&apos, author: &apos,Admin&apos, date: &apos,2024-01-15&apos}} { id: &apos,2&apos, name: &apos,Technical Support&apos, description: &apos,Get help with technical issues&apos, postCount: 89, adminOnly: false, icon: &apos,code&apos, lastPost: { titl,e: &apos,API integration question&apos, author: &apos,Developer123&apos, date: &apos,2024-01-14&apos}}] return()&apos;&apos; <div className="&apos;space-y-4&apos;"> {categories.map(category => (&apos} <div key="{category.id}&apos;" className="&apos;bg-white/10" backdrop-blur-sm rounded-lg p-4&apos; >&apos;&apos, <h3 className="&apos;text-lg" font-semibold text-zion-cyan mb-2&apos;> {category.name}&apos; </h3>&apos;&apos, <p className="&apos;text-zion-slate-light" mb-2&apos;>{category.description}&apos;</p>&apos;&apos, <div className="&apos;flex" justify-between text-sm text-zion-slate-light&apos;>&apos, <span>{category.postCount} posts</span> {category.lastPost && (} <span> Last: {category.lastPost.title} by {category.lastPost.author} </span> )} </div> </div> ))} <;</div> ) } &apos;&apos;&apos,'export default function ForumCategories() {}
-&apos;
-&apos;&apos;
+&apos
+&apos;&apos
       id: &apos,1&apos,&apos;&apos,
       name: &apos,General Discussion&apos,'&apos,
-      description: &apos,General topics and discussions&apos,;
-      postCount: 150,&apos;
-      adminOnly: false,&apos;&apos;
+      description: &apos,General topics and discussions&apos,
+      postCount: 150,&apos
+      adminOnly: false,&apos;&apos
       icon: &apos,message-circle&apos,'
         title: &apos,Welcome to the community!&apos,'&apos,
-        author: &apos,Admin&apos,'&apos;
+        author: &apos,Admin&apos,'&apos
         date: &apos,2024-01-15&apos}} {}
       id: &apos,2&apos,&apos;&apos,
       name: &apos,Technical Support&apos,'&apos,
-      description: &apos,Get help with technical issues&apos,;
-      postCount: 89,&apos;
+      description: &apos,Get help with technical issues&apos,
+      postCount: 89,&apos
       icon: &apos,code&apos,'
         title: &apos,API integration question&apos,'
-        author: &apos,Developer123&apos,;
+        author: &apos,Developer123&apos,
         date: &apos,2024-01-14&apos}}
   return ();"
     <div className = "space - y-4"> {categories.map(category => (,
@@ -160,12 +160,12 @@ export default function ForumCategories()   {}"
           <h3 className="text - lg font-semibold text-zion-cyan mb-2"> {category.name}'',
           </h3>'';"
           <p className="text-zion-slate-light mb-2">{category.description}</p>'';"
-          <div className="flex justify-between text-sm text-zion-slate-light">;
-            <span>{category.postCount} posts</span> {category.lastPost && (;
-              <span>;
+          <div className="flex justify-between text-sm text-zion-slate-light">
+            <span>{category.postCount} posts</span> {category.lastPost && (
+              <span>
   return ()&apos;&apos;"
     <div className="&apos;space-y-4&apos;">
-      {categories.map(category = > (&apos};
+      {categories.map(category = > (&apos}
         <div&apos;&apos>
           key={category.id}&apos;&apos,';"
           className="&apos;bg-white/10" backdrop-blur-sm rounded-lg p-4&apos;&apos,&apos;>'&apos;&apos,&apos;&apos;"
@@ -174,9 +174,9 @@ export default function ForumCategories()   {}"
           </h3>&apos;&apos,&apos;&apos,"
           <p className="&apos;text-zion-slate-light" mb-2&apos;>{category.description}&apos;</p>&apos;&apos,&apos;&apos,"
           <div className="&apos;flex" justify-between text-sm text-zion-slate-light&apos;>&apos,
- export { function } export default function ForumCategories() { const categories = [";
-  { id: '1', name: 'General Discussion', description: 'General topics and discussions', postCount: 150, adminOnly: false, icon: 'message-circle', lastPost: { title: 'Welcome to the community!', author: 'Admin', date: '2024-01-15'}} { id: '2', name: 'Technical Support', description: 'Get help with technical issues', postCount: 89, adminOnly: false, icon: 'code', lastPost: { title: 'API integration question', author: 'Developer123', date: '2024-01-14'}}] return() <div className="space-y-4"> {categories.map(category => ( <div key={category.id}' className="bg-white/10 backdrop-blur-sm rounded-lg p-4" >' <h3 className="text-lg font-semibold text-zion-cyan mb-2"> {category.name} </h3>' <p className="text-zion-slate-light mb-2">{category.description}</p>' <div className="flex justify-between text-sm text-zion-slate-light"> <span>{category.postCount} posts</span> {category.lastPost && ( <span> Last: {category.lastPost.title} by {category.lastPost.author} </span> )} </div> </div> ))} </div> ) } ''export { function }";
-  const categories = []{}"";
+ export { function } export default function ForumCategories() { const categories = ["
+  { id: '1', name: 'General Discussion', description: 'General topics and discussions', postCount: 150, adminOnly: false, icon: 'message-circle', lastPost: { title: 'Welcome to the community!', author: 'Admin', date: '2024-01-15'}} { id: '2', name: 'Technical Support', description: 'Get help with technical issues', postCount: 89, adminOnly: false, icon: 'code', lastPost: { title: 'API integration question', author: 'Developer123', date: '2024-01-14'}}] return() <div className="space-y-4"> {categories.map(category => ( <div key={category.id}' className="bg-white/10 backdrop-blur-sm rounded-lg p-4" >' <h3 className="text-lg font-semibold text-zion-cyan mb-2"> {category.name} </h3>' <p className="text-zion-slate-light mb-2">{category.description}</p>' <div className="flex justify-between text-sm text-zion-slate-light"> <span>{category.postCount} posts</span> {category.lastPost && ( <span> Last: {category.lastPost.title} by {category.lastPost.author} </span> )} </div> </div> ))} </div> ) } ''export { function }"
+  const categories = []{}""
 '
 '';""
 ''';''
@@ -226,10 +226,10 @@ export default function ForumCategories()   {}"
         author: 'Developer123', '
         date: '2024-01-14'}}
   ]
-  return ()";
-  return ()""";
-    <div className="space-y-4">;
-      {categories.map(category => (';
+  return ()"
+  return ()"""
+    <div className="space-y-4">
+      {categories.map(category => ('
         <div'''
           className = "bg-white/10 backdrop-blur-sm rounded-lg p-4">''''
           <h3 className="text-lg font-semibold text-zion-cyan mb-2>"
@@ -238,7 +238,7 @@ export default function ForumCategories()   {}"
           <p className="text-zion-slate-light mb-2">{category.description}</p>'''''
           <div className="flex justify-between text-sm text-zion-slate-light">"
   ]"""
-      {categories.map(category => (""";
+      {categories.map(category => ("""
           key={category.id}'''';"""
           className = "bg-white/10 backdrop-blur-sm rounded-lg p-4"''>'''''
           <h3 className="text-lg font-semibold text-zion-cyan mb-2">""
@@ -246,7 +246,7 @@ export default function ForumCategories()   {}"
           </h3>'''''
           <p className="text-zion-slate-light mb-2">{category.description}</p>''''
           <div className="flex justify-between text-sm text-zion-slate-light">""
-      {categories.map(category => (";
+      {categories.map(category => ("
         <div''';' key={category.id}''''; className = "bg-white/10 backdrop-blur-sm rounded-lg p-4"''>'''''
           <h3 className="text-lg font-semibold text-zion-cyan mb-2">"
       {categories.map(category => ("
@@ -255,7 +255,7 @@ export default function ForumCategories()   {}"
           className="bg-white/10 backdrop-blur-sm rounded-lg p-4">'''''
           <h3 className="text-lg font-semibold text-zion-cyan mb-2">""
           <div className="flex justify-between text-sm text-zion-slate-light">"
- export default function ForumCategories() { const categories = [;
+ export default function ForumCategories() { const categories = [
   { id: '1', name: 'General Discussion', description: 'General topics and discussions', postCount: 150, adminOnly: false, icon: 'message-circle', lastPost: { title: 'Welcome to the community!', author: 'Admin', date: '2024-01-15' } { id: '2', name: 'Technical Support', description: 'Get help with technical issues', postCount: 89, adminOnly: false, icon: 'code', lastPost: { title: 'API integration question', author: 'Developer123', date: '2024-01-14' ] return (",,
     <div className="space-y-4">' {categories.map((category) => (<div key="{category.id}" className="bg-white/10 backdrop-blur-sm rounded-lg p-4">' <h3 className="text-lg font-semibold text-zion-cyan mb-2">{category.name}</h3>' <p className="text-zion-slate-light mb-2">{category.description}</p>' <div className="flex justify-between text-sm text-zion-slate-light"> <span>{category.postCount} posts</span> {category.lastPost && (<span>Last: {category.lastPost.title} by {category.lastPost.author}</span>)} </div> </div>))} </div>)} '';export default function ForumCategories() {}
     const categories = []"
@@ -292,21 +292,21 @@ title: 'API integration question,'''
     return ("
     <div className="space-y-4">'''',
       {categories.map((category) => (<div key="{category.id}" className="bg-white/10 backdrop-blur-sm rounded-lg p-4">''''
-          <h3 className="text-lg font-semibold text-zion-cyan mb-2">{category.name}</h3>'''';
-          <div className="flex justify-between text-sm text-zion-slate-light">"";
-            {category.lastPost && (};
-                Last: {category.lastPost.title} by {category.lastPost.author};
-              </span>;
+          <h3 className="text-lg font-semibold text-zion-cyan mb-2">{category.name}</h3>''''
+          <div className="flex justify-between text-sm text-zion-slate-light">""
+            {category.lastPost && (}
+                Last: {category.lastPost.title} by {category.lastPost.author}
+              </span>
             )}
-          </div>;
+          </div>
         </div>))}
     </div>)}
 export {ForumCategories }"
 "
 export { ForumCategories }
-;
+
 export: { ForumCategories }
-export { ForumCategories };
+export { ForumCategories }
 "
 """
 export { ForumCategories }"""

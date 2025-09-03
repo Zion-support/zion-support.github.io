@@ -1,8 +1,6 @@
-import React from 'react';
-
+import React from 'react'
 const CookiePolicy: NextPage = () => {
-  const lastUpdated = 'December 2024';
-
+  const lastUpdated = 'December 2024'
   return (
     <MainLayout
       title="Cookie Policy - Zion Tech Group"
@@ -229,7 +227,6 @@ const CookiePolicy: NextPage = () => {
         </section>
       </div>
     </MainLayout>
-  );
-};
-
-export default CookiePolicy;
+  )
+}
+export default CookiePolicy

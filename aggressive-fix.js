@@ -1,18 +1,15 @@
 #!/usr/bin/env node
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 function createValidReactComponent(filePath) {
-  const fileName = path.basename(filePath, path.extname(filePath));
+  const fileName = path.basename(filePath, path.extname(filePath))
   const componentName = fileName
     .split('-')
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
     .join('')
-    .replace(/[^a-zA-Z0-9]/g, '');
-
-  return `import React from 'react';
-
+    .replace(/[^a-zA-Z0-9]/g, '')
+  return `import React from 'react'
 export default function ${componentName}() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
@@ -30,15 +27,14 @@ export default function ${componentName}() {
         </div>
       </div>
     </div>
-  );
+  )
 }
-`;
+`
 }
 
 function fixFile(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    
+    const content = fs.readFileSync(filePath, 'utf8')
     // If file is severely corrupted, rewrite it completely
     if (content.length < 50 || 
         content.includes('Parsing error') ||
@@ -59,39 +55,36 @@ function fixFile(filePath) {
         content.includes('Component definition is missing display name') ||
         content.includes('Assign object to a variable before exporting as module default')) {
       
-      const newContent = createValidReactComponent(filePath);
-      fs.writeFileSync(filePath, newContent);
+      const newContent = createValidReactComponent(filePath)
+      fs.writeFileSync(filePath, newContent)
       return true}
     
     return false} catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message)
     return false}
 }
 
 function processDirectory(dirPath) {
-  let fixedCount = 0;
-  
+  let fixedCount = 0
   try {
-    const items = fs.readdirSync(dirPath);
-    
+    const items = fs.readdirSync(dirPath)
     for (const item of items) {
-      const fullPath = path.join(dirPath, item);
-      const stat = fs.statSync(fullPath);
-      
+      const fullPath = path.join(dirPath, item)
+      const stat = fs.statSync(fullPath)
       if (stat.isDirectory()) {
-        fixedCount += processDirectory(fullPath);
+        fixedCount += processDirectory(fullPath)
       } else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx')) {
         if (fixFile(fullPath)) {
-          fixedCount++;
+          fixedCount++
         }
       }
     }
   } catch (error) {
-    console.error(`Error processing directory ${dirPath}:`, error.message);
+    console.error(`Error processing directory ${dirPath}:`, error.message)
   }
   
   return fixedCount}
 
-console.log('Starting aggressive fix...');
-const fixedCount = processDirectory(path.join(__dirname, 'src'));
-console.log(``Fixed ${fixedCount} files``);
+console.log('Starting aggressive fix...')
+const fixedCount = processDirectory(path.join(__dirname, 'src'))
+console.log(``Fixed ${fixedCount} files``)

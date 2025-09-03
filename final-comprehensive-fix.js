@@ -1,12 +1,10 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
+import fs from 'fs'
+import path from 'path'
+import { fileURLToPath } from 'url'
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 // List of all corrupted files that need to be completely rewritten
 const corruptedFiles = [
   // Main pages directory
@@ -161,17 +159,14 @@ const corruptedFiles = [
   'src/pages/services/AI-Powered-Legal-Document-Generator.tsx',
   'src/pages/services/AI-Supply-Chain-Optimization-Platform.tsx',
   'src/pages/services/AI-Supply-Chain-Optimization.tsx'
-];
-
+]
 // Function to create a proper React component
 function createPageComponent(fileName) {
-  const componentName = fileName.replace(/[^a-zA-Z0-9]/g, '');
-  const displayName = fileName.replace(/\.tsx|\.jsx/g, '').replace(/([A-Z])/g, ' $1').trim();
-  
-  return `import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-
+  const componentName = fileName.replace(/[^a-zA-Z0-9]/g, '')
+  const displayName = fileName.replace(/\.tsx|\.jsx/g, '').replace(/([A-Z])/g, ' $1').trim()
+  return `import React from 'react'
+import Head from 'next/head'
+import Link from 'next/link'
 const ${componentName} = () => {
   return (
     <>
@@ -224,10 +219,9 @@ const ${componentName} = () => {
         </div>
       </div>
     </>
-  );
-};
-
-export default ${componentName};`;
+  )
+}
+export default ${componentName};`
 }
 
 // Function to fix Redux files properly
@@ -236,56 +230,48 @@ function fixReduxFiles() {
     'src/store/hooks.ts',
     'src/store/index.ts',
     'src/store/wishlistSlice.ts'
-  ];
-  
+  ]
   reduxFiles.forEach(filePath => {
     try {
       if (fs.existsSync(filePath)) {
-        let content = fs.readFileSync(filePath, 'utf8');
-        
+        let content = fs.readFileSync(filePath, 'utf8')
         // Fix common TypeScript syntax errors
         content = content.replace(/import\s*{([^}]*)\s*}\s*from\s*['"]react-redux['"];/, 
-          'import { $1 } from "react-redux";');
-        
+          'import { $1 } from "react-redux";')
         // Fix generic type syntax
-        content = content.replace(/useSelector<([^>]*)>/g, 'useSelector<$1>');
-        content = content.replace(/useDispatch<([^>]*)>/g, 'useDispatch<$1>');
-        
+        content = content.replace(/useSelector<([^>]*)>/g, 'useSelector<$1>')
+        content = content.replace(/useDispatch<([^>]*)>/g, 'useDispatch<$1>')
         // Fix common parsing errors
         content = content.replace(/import\s*{([^}]*)\s*}\s*from\s*['"]@reduxjs\/toolkit['"];/, 
-          'import { $1 } from "@reduxjs/toolkit";');
-        
-        fs.writeFileSync(filePath, content);
-        console.log(`Fixed Redux file: ${filePath}`);
+          'import { $1 } from "@reduxjs/toolkit";')
+        fs.writeFileSync(filePath, content)
+        console.log(`Fixed Redux file: ${filePath}`)
       }
     } catch (error) {
-      console.error(`Error fixing Redux file ${filePath}:`, error.message);
+      console.error(`Error fixing Redux file ${filePath}:`, error.message)
     }
-  });
+  })
 }
 
 // Function to fix test files
 function fixTestFiles() {
   const testFiles = [
     'src/test/App.test.tsx'
-  ];
-  
+  ]
   testFiles.forEach(filePath => {
     try {
       if (fs.existsSync(filePath)) {
-        let content = fs.readFileSync(filePath, 'utf8');
-        
+        let content = fs.readFileSync(filePath, 'utf8')
         // Fix common test syntax errors
         content = content.replace(/import\s*{([^}]*)\s*}\s*from\s*['"]@testing-library\/react['"];/, 
-          'import { $1 } from "@testing-library/react";');
-        
-        fs.writeFileSync(filePath, content);
-        console.log(`Fixed test file: ${filePath}`);
+          'import { $1 } from "@testing-library/react";')
+        fs.writeFileSync(filePath, content)
+        console.log(`Fixed test file: ${filePath}`)
       }
     } catch (error) {
-      console.error(`Error fixing test file ${filePath}:`, error.message);
+      console.error(`Error fixing test file ${filePath}:`, error.message)
     }
-  });
+  })
 }
 
 // Function to remove problematic files
@@ -293,46 +279,40 @@ function removeProblematicFiles() {
   const problematicFiles = [
     'src/pages/EnterpriseIT.js.jsx',
     'src/pages/launch/index.js.jsx'
-  ];
-  
+  ]
   problematicFiles.forEach(filePath => {
     try {
       if (fs.existsSync(filePath)) {
-        fs.unlinkSync(filePath);
-        console.log(`Removed problematic file: ${filePath}`);
+        fs.unlinkSync(filePath)
+        console.log(`Removed problematic file: ${filePath}`)
       }
     } catch (error) {
-      console.error(`Error removing ${filePath}:`, error.message);
+      console.error(`Error removing ${filePath}:`, error.message)
     }
-  });
+  })
 }
 
 // Main execution
-console.log('Starting final comprehensive fix...');
-
+console.log('Starting final comprehensive fix...')
 // 1. Fix corrupted files by rewriting them
-console.log('Fixing corrupted files...');
+console.log('Fixing corrupted files...')
 corruptedFiles.forEach(filePath => {
   try {
-    const fileName = path.basename(filePath, path.extname(filePath));
-    const newContent = createPageComponent(fileName);
-    fs.writeFileSync(filePath, newContent);
-    console.log(`Rewrote corrupted file: ${filePath}`);
+    const fileName = path.basename(filePath, path.extname(filePath))
+    const newContent = createPageComponent(fileName)
+    fs.writeFileSync(filePath, newContent)
+    console.log(`Rewrote corrupted file: ${filePath}`)
   } catch (error) {
-    console.error(`Error rewriting ${filePath}:`, error.message);
+    console.error(`Error rewriting ${filePath}:`, error.message)
   }
-});
-
+})
 // 2. Fix Redux files
-console.log('Fixing Redux files...');
-fixReduxFiles();
-
+console.log('Fixing Redux files...')
+fixReduxFiles()
 // 3. Fix test files
-console.log('Fixing test files...');
-fixTestFiles();
-
+console.log('Fixing test files...')
+fixTestFiles()
 // 4. Remove problematic files
-console.log('Removing problematic files...');
-removeProblematicFiles();
-
-console.log('Final comprehensive fix completed!');
+console.log('Removing problematic files...')
+removeProblematicFiles()
+console.log('Final comprehensive fix completed!')

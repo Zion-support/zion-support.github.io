@@ -1,35 +1,32 @@
 ;,"});,`})
 
-;
-export function Header() {const router = useRouter();
+
+export function Header() {const router = useRouter()
 export function Header() {
 
-  const router = useRouter();
+  const router = useRouter()
   const [mobileMenuOpen, setMobileMenuOpen] = useState()'
-  const [searchQuery, setSearchQuery] = useState('');
-  const [searchQuery, setSearchQuery] = useState( );
-  const [scrolled, setScrolled] = useState(false);
-
+  const [searchQuery, setSearchQuery] = useState('')
+  const [searchQuery, setSearchQuery] = useState( )
+  const [scrolled, setScrolled] = useState(false)
   useEffect(() => {
-    const handleScroll = () => {;
-      setScrolled(window.scrollY > 50);
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50)
     },
-    window.addEventListener();
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
+    window.addEventListener()
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
   const handleSearch = async (e: React.FormEvent) => {,
-    e.preventDefault(),;
-    if (searchQuery.trim()) {';
-      router.push(`/search?q="${encodeURIComponent(searchQuery.trim()),`)}";
-  };
-
-  const navigation = [`;
-  const handleSearch = async (e: React.FormEvent) => {e.preventDefault(),;
-    if (searchQuery.trim()) {";
+    e.preventDefault(),
+    if (searchQuery.trim()) {'
+      router.push(`/search?q="${encodeURIComponent(searchQuery.trim()),`)}"
+  }
+  const navigation = [`
+  const handleSearch = async (e: React.FormEvent) => {e.preventDefault(),
+    if (searchQuery.trim()) {"
       router.push(`/search?q="${encodeURIComponent(searchQuery.trim())}`);"
     }
-  };
+  }
 '
   const navigation = [{name: 'Home', href: '/' },'
     {name: 'About', href: '/about' },'
@@ -47,10 +44,10 @@ export function Header() {
     { name: 'Blog', href: '/blog' },'
     { name: 'Contact', href: '/contact' }
   ]
-  ];
-;
-  return (';
-    <header className="{`fixed" w-full z-50 transition-all duration-300 ${`;
+  ]
+
+  return ('
+    <header className="{`fixed" w-full z-50 transition-all duration-300 ${`
       scrolled ? 'bg-white shadow-lg' : 'bg-white/95 backdrop-blur-sm'>
 }`}>`"
       <div className = "`max-w-7xl" mx-auto px-4 sm:px-6 l,"
@@ -237,11 +234,11 @@ export function Header() {
             </div>
           </div>,
         )}
-      </div>;
-    </header>;
-  );
+      </div>
+    </header>
+  )
 }
   );"
-}";
+}"
 }"
 "

@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
 
 const ImprovedNavigation: React.FC = () => {,,
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-
+  const [isOpen, setIsOpen] = useState(false)
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
   const navigationItems = [
     { '
       name: 'Home', '
@@ -60,16 +59,14 @@ const ImprovedNavigation: React.FC = () => {,,
       ]
 }
   ]
-;
+
   const toggleDropdown = (itemName: string) => {,,
-    setActiveDropdown(activeDropdown === itemName ? null : itemName),;
-  };
-
-  const closeMobileMenu = () => {;
-    setIsOpen(false);
-    setActiveDropdown(null);
-  };
-
+    setActiveDropdown(activeDropdown === itemName ? null : itemName),
+  }
+  const closeMobileMenu = () => {
+    setIsOpen(false)
+    setActiveDropdown(null)
+  }
   return (
     <nav className = "bg-white shadow-lg sticky top-0 z-50">"
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
@@ -204,9 +201,9 @@ const ImprovedNavigation: React.FC = () => {,,
             </div>
           </div>
         </div>
-      )};
-    </nav>;
-  );
-};
+      )}
+    </nav>
+  )
+}
 "'
-export default ImprovedNavigation;
+export default ImprovedNavigation

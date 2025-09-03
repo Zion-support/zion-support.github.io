@@ -98,7 +98,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
         // Validate field,"});,"})"
         const error = validateField(name, value);,"});,"})"
         setValidation(prev => ({}"});,"})"
-            ...prev,;,"});,"})"
+            ...prev,,"});,"})"
             [name]: {}"});,"})"
                 isValid: !error,';,"});,"})"
                 message: error || '',"});,"})"
@@ -117,9 +117,9 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
         const value = formData[name];,"});,"})"
         const error = validateField(name, value);,"});,"})"
         setValidation(prev => ({}"});,"})"
-            ...prev,;,"});,"})"
+            ...prev,,"});,"})"
             [name]: {}"});,"})"
-                ...prev[name],;,"});,"})"
+                ...prev[name],,"});,"})"
                 isValid: !error,';,"});,"})"
                 message: error || '',"});,"})"
                 isTouched: true,"});,"});"
@@ -214,7 +214,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
           </div>;,"});,"})"
           {/*   */}';,"});,"})"
           {field.type === 'textarea' ? (<textarea name="{field.name}" value="{fieldValue}" onChange = {}"});,"})"
-  (e) => handleFieldChange(field.name,;,"});,"})"
+  (e) => handleFieldChange(field.name,,"});,"})"
   e.target.value)`;,"});,"})"
 ``;,"});,`});"
 } onBlur="{()" => handleFieldBlur(field.name)} placeholder="{field.placeholder}" className="{`w-full" pl-10 pr-3 py-3 border rounded-lg focus: outline-none focus:ring-2 transition-all duration-200 ${fieldValidation?.isTouched',"});,`})"
@@ -222,7 +222,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
                         ? 'border-green-500 focus: ring-green-200'''`,"});,"})"
                         : 'border-red-500 focus: ring-red-200''`'`,"});,"})"
                     : 'border-gray-300 focus:ring-blue-200 focus:border-blue-500'}`} rows="{4}/">) : field.type === 'select' ? (<select name="{field.name}" value="{fieldValue}" onChange = {}"});,"})"
-  (e) => handleFieldChange(field.name,;,"});,"})"
+  (e) => handleFieldChange(field.name,,"});,"})"
   e.target.value)`;,"});,"})"
 ``;,"});,`});"
 } onBlur="{()" => handleFieldBlur(field.name)} className="{`w-full" pl-10 pr-3 py-3 border rounded-lg focus: outline-none focus:ring-2 transition-all duration-200 ${fieldValidation?.isTouched',"});,`})"
@@ -236,7 +236,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
                 </option>))}'"'"";,"});,"})"
             </select>) : field.type === 'checkbox' ? (<div className="flex items-center space-x-3">"""";,"});,"})"
               <input type="checkbox" name="{field.name}" checked="{fieldValue}" onChange = {}"});,"})"
-  (e) => handleFieldChange(field.name,;,"});,"})"
+  (e) => handleFieldChange(field.name,,"});,"})"
   e.target.checked)""";,"});,"})"
 """";,"});,"});"
 } className="w-4 h-4 text-blue-600 border-gray-300 rounded focus: ring-blue-500"/>"""","});,"})"
@@ -244,7 +244,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
                 {field.placeholder}"});,"})"
               </span>';,"});,"})"
             </div>) : (<input type="{isPasswordField" && showPassword[field.name] ? 'text' : field.type} name="{field.name}" value="{fieldValue}" onChange = {}"});,"})"
-  (e) => handleFieldChange(field.name,;,"});,"})"
+  (e) => handleFieldChange(field.name,,"});,"})"
   e.target.value)`;,"});,"})"
 ``;,"});,`});"
 } onBlur="{()" => handleFieldBlur(field.name)} placeholder="{field.placeholder}" className="{`w-full" pl-10 pr-3 py-3 border rounded-lg focus: outline-none focus:ring-2 transition-all duration-200 ${fieldValidation?.isTouched',"});,`})"
@@ -355,18 +355,18 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
       </form>;,"});,"})"
     </motion.div>)};'`;,"});,"})"
 '"`'`;,"});,"})"""""""""
-    const { trackEvent, trackConversion } = useAnalytics();
-    const [formData, setFormData] = useState();
-    const [validation, setValidation] = useState();
-    const [isSubmitting, setIsSubmitting] = useState();
-    const [isSubmitted, setIsSubmitted] = useState();
-    const [showPassword, setShowPassword] = useState();
-    const [progress, setProgress] = useState();
+    const { trackEvent, trackConversion } = useAnalytics()
+    const [formData, setFormData] = useState()
+    const [validation, setValidation] = useState()
+    const [isSubmitting, setIsSubmitting] = useState()
+    const [isSubmitted, setIsSubmitted] = useState()
+    const [showPassword, setShowPassword] = useState()
+    const [progress, setProgress] = useState()
     // Initialize form data and validation,
 useEffect(() => {}
-        const initialValidation = {}";
-        fields.forEach();
-        setFormData();
+        const initialValidation = {}"
+        fields.forEach()
+        setFormData()
         setValidation(initialValidation)}, [fields])
     // Update progress based on filled fields,"
 useEffect(() => {}""
@@ -376,20 +376,20 @@ useEffect(() => {}""
         const filledFields = Object.values(formData).filter(value => typeof value === 'boolean' ? value : value.toString().trim() !== '').length,
 const totalFields = fields.length,
 setProgress((filledFields / totalFields) * 100)}, [formData, fields.length])
-    // Validate field,;
-const validateField = useCallback((name, value) => {};
-        const field = fields.find();
-        if();
+    // Validate field,
+const validateField = useCallback((name, value) => {}
+        const field = fields.find()
+        if()
             return null,
         // Required field validation,"
 if (field.required) {}""
 '''
             if (typeof value === 'boolean' && !value) {}""
-'';
-                return 'This field is required'}'';
+''
+                return 'This field is required'}''
             if (typeof value == = 'string' && value.trim() === '') {}"",
 '';"
-                return 'This field is required'}", ";
+                return 'This field is required'}", "
 }'''
         // Skip validation for empty non-required fields''
         if (!field.required && (typeof value = == 'string' && value.trim() === '')) {}""
@@ -398,11 +398,11 @@ if (field.required) {}""
         if (typeof value === 'string') {}""
             const stringValue = value.trim()'''
             // Email validation'''
-            if (field.type === 'email' && stringValue) {};
-                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/";
-                if (!emailPattern.test(stringValue)) {}"";
-'';
-                    return 'Please enter a valid email address'}", ";
+            if (field.type === 'email' && stringValue) {}
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/"
+                if (!emailPattern.test(stringValue)) {}""
+''
+                    return 'Please enter a valid email address'}", "
 }'''
             // Phone validation'''
             if (field.type = == 'tel' && stringValue) {}
@@ -427,19 +427,19 @@ if (field.validation?.pattern && !field.validation.pattern.test(stringValue)) {}
 '''
 '''
 '''''
-                return 'Please enter a valid value'};
-            // Custom validation,;
-if(field.validation?.custom) {};
-                const customError = field.validation.custom();
-                if();
+                return 'Please enter a valid value'}
+            // Custom validation,
+if(field.validation?.custom) {}
+                const customError = field.validation.custom()
+                if()
                     return customError}
         }
         return null}, [fields])
     // Handle field change,
-const handleFieldChange = useCallback((name, value) => {};
-        setFormData(prev => ({ ...prev, [name]: value }));
-        // Validate field,;
-const error = validateField();
+const handleFieldChange = useCallback((name, value) => {}
+        setFormData(prev => ({ ...prev, [name]: value }))
+        // Validate field,
+const error = validateField()
         setValidation(prev => ({}"
             ...prev, [name]: {}""
                 isValid: !error, '''
@@ -449,13 +449,13 @@ const error = validateField();
 if (enableAnalytics) {}""
 '''
 '''
-'''';
-            trackEvent('form', field_changed', name, null, { fieldName: name, value: String(value) })};
+''''
+            trackEvent('form', field_changed', name, null, { fieldName: name, value: String(value) })}
 }, [validateField, enableAnalytics, trackEvent])
     // Handle field blur,
-const handleFieldBlur = useCallback((name) => {};
-        const value = formData[name];
-        const error = validateField();
+const handleFieldBlur = useCallback((name) => {}
+        const value = formData[name]
+        const error = validateField()
         setValidation(prev => ({}"
             ...prev, [name]: {}""
                 ...prev[name], isValid: !error,'''
@@ -463,10 +463,10 @@ const handleFieldBlur = useCallback((name) => {};
         }))}, [formData, validateField])
     // Check if form is valid,
 const isFormValid = useCallback(() => {}
-        return Object.values(validation).every(v => v.isValid)}, [validation]);
-    // Handle form submission,;
-const handleSubmit = useCallback(async (e) => {};
-        e.preventDefault();
+        return Object.values(validation).every(v => v.isValid)}, [validation])
+    // Handle form submission,
+const handleSubmit = useCallback(async (e) => {}
+        e.preventDefault()
         if(!isFormValid()) {}
             // Track validation error,"
 if (enableAnalytics) {}""
@@ -474,7 +474,7 @@ if (enableAnalytics) {}""
                 trackEvent('form', validation_error',form_submission_failed', null, {}
                     errors: Object.values(validation).filter(v => !v.isValid).length})}
             return}
-        setIsSubmitting();
+        setIsSubmitting()
         try {}
             // Track form submission start,"
 if (enableAnalytics) {}""
@@ -482,21 +482,21 @@ if (enableAnalytics) {}""
 '''
 '''''
                 trackEvent('form', submission_started',form_submitted')}
-            await onSubmit();
+            await onSubmit()
             // Track successful submission,"
 if (enableAnalytics) {}""
 '''
-'';
+''
 ''';""'
                 trackEvent('form', submission_success',form_completed')';''
                 trackEvent('form',submission_success',form_completed')'
                 trackConversion('form_submission', 1, { formType: title })}
-            setIsSubmitted();
+            setIsSubmitted()
             // Reset form after successful submission,
 setTimeout(() => {}
-                setIsSubmitted();
-                setFormData();
-                setValidation();
+                setIsSubmitted()
+                setFormData()
+                setValidation()
                 setProgress(0)}, 5000)}
         catch(error) {}
             // Track submission error,"
@@ -516,9 +516,9 @@ const togglePasswordVisibility = useCallback((fieldName) => {}
         setShowPassword(prev => ({ ...prev, [fieldName]: !prev[fieldName] }))}, [])
     // Get field icon,
 const getFieldIcon = useCallback((field) => {}"
-        switch(field.type) {}"";
-'''';
-'''''';
+        switch(field.type) {}""
+''''
+''''''
             case 'email': return <Mail className="w - 4 h-4"/" >'',''"
             case 'tel': return <Phone className="w - 4 h-4"/" >'',''"
             case 'textarea': return <MessageSquare className="w - 4 h-4"/" >'',''"
@@ -547,17 +547,17 @@ const renderField = useCallback((field) => {}""
           {/*   */}''''
           <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
             {getFieldIcon(field)}"
-          </div>"";
-          {/*   */}'';
+          </div>""
+          {/*   */}''
           {field.type === 'textarea' ? (<textarea name="{field.name}" value="{fieldValue}" onChange = {}`">
-  (e) =" > handleFieldChange(field.name, e.target.value)`"";
+  (e) =" > handleFieldChange(field.name, e.target.value)`""
 ``", ``;"
 } onBlur = "{()" => handleFieldBlur(field.name)} placeholder="{field.placeholder}" className="{`w-full" pl-10 pr-3 py-3 border rounded-lg focus: outline-none focus:ring-2 transition-all duration-200 ${fieldValidation?.isTouched'''
                     ? fieldValidation.isValid''`"
                         ? 'border-green-500 focus:ring-green-200'''`"`""
                         : 'border-red-500 focus:ring-red-200''`'`"`"",
                     : 'border-gray-300 focus:ring-blue-200 focus:border-blue-500'}`} rows="{4}/">) : field.type === 'select' ? (<select name="{field.name}" value="{fieldValue}" onChange = {}`"
-  (e) =` > handleFieldChange(field.name, e.target.value)`"";
+  (e) =` > handleFieldChange(field.name, e.target.value)`""
 ``", ``;"
 } onBlur = "{()" => handleFieldBlur(field.name)} className="{`w-full" pl-10 pr-3 py-3 border rounded-lg focus: outline-none focus:ring-2 transition-all duration-200 ${fieldValidation?.isTouched'''
                     ? fieldValidation.isValid''`"
@@ -576,7 +576,7 @@ const renderField = useCallback((field) => {}""
                 {field.placeholder}""
               </span>'''
             </div>) : (<input type="{isPasswordField" && showPassword[field.name] ? 'text' : field.type} name="{field.name}" value="{fieldValue}" onChange = {}`"
-  (e) =" > handleFieldChange(field.name, e.target.value)`"";
+  (e) =" > handleFieldChange(field.name, e.target.value)`""
 ``", ``;"
 } onBlur = "{()" => handleFieldBlur(field.name)} placeholder="{field.placeholder}" className="{`w-full" pl-10 pr-3 py-3 border rounded-lg focus: outline-none focus:ring-2 transition-all duration-200 ${fieldValidation?.isTouched'''
                     ? fieldValidation.isValid''`"
@@ -671,4 +671,4 @@ const renderField = useCallback((field) => {}""
       </form>"`""
     </motion.div>)}''`"`""
 ''`'`"`'"
-";
+"

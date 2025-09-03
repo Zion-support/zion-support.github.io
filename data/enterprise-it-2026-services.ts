@@ -1,16 +1,16 @@
 export interface EnterpriseIt2026Service {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
-  realImplementation: boolean;
+  id: string
+  name: string
+  tagline: string
+  price: string
+  description: string
+  features: string[]
+  link: string
+  category: string
+  realImplementation: boolean
   contactInfo: {
-    mobile: string;
-    email: string;
+    mobile: string
+    email: string
 export const enterpriseIT2026Services: EnterpriseIt2026Service[] = [
   {
     id: "2026-enterprise-it",

@@ -26,12 +26,11 @@ icon: MessageCircle,
     {
       icon: BookOpen,"
       title: "Documentation","
-      description: "Browse our comprehensive guides",";
+      description: "Browse our comprehensive guides","
       action: "View Docs",,
-    };
-  ];
-
-  return (";
+    }
+  ]
+  return ("
 <Layout title = "Help & Support - Zion Tech Group" description="Get help and support for all your technology needs with Zion Tech Group.">"
       <div className="min-h-screen bg-gray-50 py-12">"
         <div className="container mx-auto px-4">
@@ -112,6 +111,6 @@ icon: MessageCircle,
         </div>
       </div>
     </Layout>;,
-  )};
+  )}
 "
 export default Help'

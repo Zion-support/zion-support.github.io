@@ -1,18 +1,18 @@
-// apiClient service
+// apiClient service,
 export class apiClientService {
   constructor() {
-    this.baseUrl = process.env.NEXT_PUBLIC_API_URL || '/api';
+    this.baseUrl = process.env.NEXT_PUBLIC_API_URL || '/api'
   }
 
   async get() {
     try {
-      const response = await fetch(`${this.baseUrl}/apiclient`);
-      return await response.json();
+      const response = await fetch(`${this.baseUrl}/apiclient`)
+      return await response.json()
     } catch (error) {
-      console.error('Error fetching data:', error);
-      throw error;
+      console.error('Error fetching data:', error)
+      throw error
     }
   }
 }
 
-export default new apiClientService();
+export default new apiClientService()

@@ -184,4 +184,4 @@ export const innovativeAIAutomationServices2025 = [
       'Investment portfolio management',
       'Retirement planning',
       'Tax optimization',
-];
+]

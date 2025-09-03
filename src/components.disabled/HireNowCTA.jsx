@@ -3,9 +3,9 @@
 ;,"});,"})"
 ;import { MessageCircle, Calendar, Star } from 'lucide-react';,"});,"})"
 export const HireNowCTA = ({}"});,"})"
-  hourlyRate,;,"});,"})"
-  availability,;,"});,"})"
-  rating,;,"});,"})"
+  hourlyRate,,"});,"})"
+  availability,,"});,"})"
+  rating,,"});,"})"
   reviewCount}) => {}"});,"})"
   return();,"});,"})"
     <Card className="sticky top-4">""";,"});,"})"
@@ -71,11 +71,11 @@ export const HireNowCTA = ({}"});,"})"
 '"'"";,"});,`})'
 ;import {MessageCircle, Calendar, Star } from 'lucide-react'
 
-;import { MessageCircle, Calendar, Star } from &apos;lucide-react';&apos;&apos;
-export const HireNowCTA = ({};
-  hourlyRate,;
-  availability,;
-  rating,;
+;import { MessageCircle, Calendar, Star } from &apos;lucide-react';&apos;&apos
+export const HireNowCTA = ({}
+  hourlyRate,
+  availability,
+  rating,
   reviewCount}) => {}
   return();"
     <Card className="sticky top - 4">'',
@@ -96,7 +96,7 @@ export const HireNowCTA = ({};
             <div className="flex items-center space-x-1">'';"
               <Star className="w-4 h-4 text-yellow-400 fill-current" />'';"
               <span className="font-medium">{rating}</span>'';"
-              <span className="text-gray-500">({reviewCount})</span>;
+              <span className="text-gray-500">({reviewCount})</span>
             </div>
           </div>''
 '';"
@@ -115,7 +115,7 @@ export const HireNowCTA = ({};
           <div className="text-3xl font-bold text-blue-600 mb-2>"
             ${hourlyRate}"'''
           </div>'''''
-          <div className="text-gray-600">per hour</div>';
+          <div className="text-gray-600">per hour</div>'
         </div>''';''
 '''''
         <div className = "space-y-3>"'''
@@ -125,7 +125,7 @@ export const HireNowCTA = ({};
               <Star className="w-4 h-4 text-yellow-400 fill-current" /` >'''''
               <span className="font-medium">{rating}</span>'''''
               <span className="text-gray-500">({reviewCount})</span>'
-            </div>';
+            </div>'
           </div>''';''
 '''''
           <div className = "flex items-center justify-between>"'''
@@ -159,27 +159,27 @@ export const HireNowCTA = ({};
             <span className="&apos;text-gray-600&apos;">Availability&apos;</span>&apos;&apos,
             <Badge&apos;&apos;"
               variant="{availability" === &apos;available&apos; ? &apos;default&apos; : &apos;secondary&apos}"
-              className = "{}";
-;
-&apos;
+              className = "{}"
+
+&apos
 &apos;&apos,
                 availability === &apos;available&apos;&apos,&apos>
                   ? &apos;bg-green-100 text-green-800&apos;&apos,&apos>
                   : &apos;&apos}
-            >{availability}&apos;&apos;
+            >{availability}&apos;&apos
             </Badge>
           </div>
         </div>&apos;&apos,
 &apos;&apos,&apos;&apos,"
         <div className="&apos;space-y-3&apos;">'&apos;&apos,&apos;&apos;"
-          <Button className="&apos;w-full" bg-blue-600 hover: bg-blue-700&apos;>'&apos,&apos,&apos;&apos;"
+          <Button className="&apos;w-full" bg-blue-600 hover: bg-blue-700&apos,>'&apos,&apos,&apos;&apos;"
             <MessageCircle className="&apos;w-4" h-4 mr-2&apos; />
-            Send Message&apos;
+            Send Message&apos
           </Button>&apos;&apos,
 &apos;&apos,&apos;&apos,"
           <Button variant="&apos;outline&apos;" className="&apos;w-full&apos;">'&apos;&apos,&apos;&apos;"
             <Calendar className="&apos;w-4" h-4 mr-2&apos; />
-            Schedule Call&apos;
+            Schedule Call&apos
           </Button>
         </div>&apos;&apos,
 &apos;&apos,&apos;&apos,',
@@ -199,7 +199,7 @@ export const HireNowCTA = ({};
             ${hourlyRate}'''''
           </div>''''
           <div className="text-gray-600">per hour</div>'
-        </div>'''';
+        </div>''''
         </div>''';''
 ''''
         <div className = "space-y-3">''''
@@ -211,11 +211,11 @@ export const HireNowCTA = ({};
               <span className="text-gray-500">({reviewCount})</span>"
             </div>`"
             </div>'
-          </div>'''';
+          </div>''''
           </div>''';''
 ''''
           <div className = "flex items-center justify-between">''''
-            <span className="text-gray-600">Availability</span>'';
+            <span className="text-gray-600">Availability</span>''
             <Badge'' variant = "{availability" === 'available' ? 'default' : 'secondary'} className="{}" ', ''; ''';' availability === 'available'''''; ? 'bg-green-100 text-green-800'''''; : ''} >{availability}'
             <Badge''
               variant = "{availability" === 'available' ? 'default' : 'secondary'}"
@@ -228,7 +228,7 @@ export const HireNowCTA = ({};
                   : ''}" >{availability}"
             </Badge>"
           </div>"""
-              className = "{}";
+              className = "{}"
 '
 '
 ''
@@ -236,24 +236,24 @@ export const HireNowCTA = ({};
                   ? 'bg - green-100 text-green-800''',
                   : '}
             >{availability}
-            </Badge>;
+            </Badge>
           </div>
         </div>''
 '';"
         <div className="space-y-3">'';"
-          <Button className="w-full bg-blue-600 hover: bg-blue-700">'';"
+          <Button className="w-full bg-blue-600 hover: bg-blue-700">'',"
             <MessageCircle className="w-4 h-4 mr-2" />,
             Send Message,
           </Button>''
 '';"
           <Button variant='outline' className="w-full">'';"
-            <Calendar className="w-4 h-4 mr-2" />;
-            Schedule Call;
+            <Calendar className="w-4 h-4 mr-2" />
+            Schedule Call
           </Button>
         </div>'',
 '';"
-        <div className="text-center text-sm text-gray-500">;
-          <p>Response time: Usually within 2 hours</p>;
+        <div className="text-center text-sm text-gray-500">
+          <p>Response time: Usually within 2 hours</p>,
           <p>Available for new projects</p>,
         </div>,,
       </CardContent>,
@@ -283,7 +283,7 @@ export const HireNowCTA = ({};
             Schedule Call"
           </Button>"
           </div>'
-        </div>'''';
+        </div>''''
         </div>''',''
 ''''
         <div className = "space-y-3">''''

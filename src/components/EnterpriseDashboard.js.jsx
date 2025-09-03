@@ -23,8 +23,8 @@ export const EnterpriseDashboard = () => {;,"});,"})"
             status: 'healthy',''';,"});,"})"
             trend: 'stable',"});,"})"
             change: 2,"});,"})"
-            threshold: { warning: 70, critical: 90 },;,"});,"})"
-            lastUpdated: new Date () },;,"});,"})"
+            threshold: { warning: 70, critical: 90 },,"});,"})"
+            lastUpdated: new Date () },,"});,"})"
         {}"});,"})"
 ';,"});,"})"
 '';,"});,"})"
@@ -36,8 +36,8 @@ export const EnterpriseDashboard = () => {;,"});,"})"
             status: 'warning',''';,"});,"})"
             trend: 'up',"});,"})"
             change: 8,"});,"})"
-            threshold: { warning: 75, critical: 90 },;,"});,"})"
-            lastUpdated: new Date () },;,"});,"})"
+            threshold: { warning: 75, critical: 90 },,"});,"})"
+            lastUpdated: new Date () },,"});,"})"
         {}"});,"})"
 ';,"});,"})"
 '';,"});,"})"
@@ -49,8 +49,8 @@ export const EnterpriseDashboard = () => {;,"});,"})"
             status: 'healthy',''';,"});,"})"
             trend: 'stable',"});,"})"
             change: 1,"});,"})"
-            threshold: { warning: 80, critical: 95 },;,"});,"})"
-            lastUpdated: new Date () },;,"});,"})"
+            threshold: { warning: 80, critical: 95 },,"});,"})"
+            lastUpdated: new Date () },,"});,"})"
         {}"});,"})"
 ';,"});,"})"
 '';,"});,"})"
@@ -62,7 +62,7 @@ export const EnterpriseDashboard = () => {;,"});,"})"
             status: 'healthy',''';,"});,"})"
             trend: 'down',"});,"})"
             change: -5,"});,"})"
-            threshold: { warning: 100, critical: 150 },;,"});,"})"
+            threshold: { warning: 100, critical: 150 },,"});,"})"
             lastUpdated: new Date () }"});,"})"
     ]) ;,"});,"})"
     const [serviceStatuses] = useState ([];,"});,"})"
@@ -76,7 +76,7 @@ export const EnterpriseDashboard = () => {;,"});,"})"
             uptime: 99.98,"});,"})"
             responseTime: 45,"});,"})"
             errorRate: 0.02,"});,"});"
-},;,"});,"})"
+},,"});,"})"
         {}"});,"})"
 ';,"});,"})"
 '';,"});,"})"
@@ -87,7 +87,7 @@ export const EnterpriseDashboard = () => {;,"});,"})"
             uptime: 99.95,"});,"})"
             responseTime: 12,"});,"})"
             errorRate: 0.01,"});,"});"
-},;,"});,"})"
+},,"});,"})"
         {}"});,"})"
 ';,"});,"})"
 '';,"});,"})"
@@ -98,7 +98,7 @@ export const EnterpriseDashboard = () => {;,"});,"})"
             uptime: 99.87,"});,"})"
             responseTime: 89,"});,"})"
             errorRate: 0.15,"});,"});"
-},;,"});,"})"
+},,"});,"})"
         {}"});,"})"
 ';,"});,"})"
 '';,"});,"})"
@@ -125,7 +125,7 @@ export const EnterpriseDashboard = () => {;,"});,"})"
             status: 'investigating',''';,"});,"})"
             affected['user - 123',user-456'],,'';,"});,"})"
             source: 'Security Monitoring System',"});,"});"
-},;,"});,"})"
+},,"});,"})"
         {}"});,"})"
 ';,"});,"})"
 '';,"});,"})"
@@ -155,7 +155,7 @@ export const EnterpriseDashboard = () => {;,"});,"})"
             ipAddress: '192.168.1.100',''';,"});,"})"
             userAgent: 'Chrome/91.0.4472.124',''';,"});,"})"
             status: 'success',"});,"});"
-},;,"});,"})"
+},,"});,"})"
         {}"});,"})"
 ';,"});,"})"
 '';,"});,"})"
@@ -253,7 +253,7 @@ export const EnterpriseDashboard = () => {;,"});,"})"
             default: '',"});,"})"
                 return 'text-gray-600 bg-gray-100 dark:text-gray-400 dark:bg-gray-900/30'}""";,"});,"});"
 };"""";,"});,"})
-    return (";
+    return ("
     <div className="bg-white dark: bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden">""","});,"})"
       {/*   */}"""";,"});,"})"
       <div className="bg-gradient-to-r from-indigo-500 to-purple-500 p-6 text-white">"""";,"});,"})"
@@ -752,7 +752,7 @@ export const EnterpriseDashboard = () => {"'
     const [isRefreshing, setIsRefreshing] = useState(false)'''
     const [dateRange, setDateRange] = useState('24h')'''
     const [searchQuery, setSearchQuery] = useState('')'''
-    const [filterStatus, setFilterStatus] = useState();
+    const [filterStatus, setFilterStatus] = useState()
     // Mock data - in production, this would come from real-time APIs,
 const [systemMetrics] = useState([]"
         {}""
@@ -826,7 +826,7 @@ const [systemMetrics] = useState([]"
             status: 'healthy,'''
             trend: 'down', change: -5, threshold: { warning: 100, critical: 150 }, lastUpdated: new Date () }
     ]) 
-    const [serviceStatuses] = useState();
+    const [serviceStatuses] = useState()
     const [securityAlerts] = useState ([]"
         {}""
 '''
@@ -922,8 +922,8 @@ const [systemMetrics] = useState([]"
             status: 'success'}
     ]) 
     // Refresh data,
-const refreshData = useCallback(async () => {};
-        setIsRefreshing();
+const refreshData = useCallback(async () => {}
+        setIsRefreshing()
         try {}
             // Simulate API call,
 await new Promise(resolve => setTimeout(resolve, 1000))"
@@ -943,9 +943,9 @@ await new Promise(resolve => setTimeout(resolve, 1000))"
         finally {}
             setIsRefreshing(false)}
     }, [activeTab, dateRange, trackEvent])
-    // Auto-refresh effect,;
-useEffect(() => {};
-        const interval = setInterval();
+    // Auto-refresh effect,
+useEffect(() => {}
+        const interval = setInterval()
         return () => clearInterval(interval)}, [refreshInterval, refreshData])"
     // Filtered data""
     const filtered = securityAlerts'''
@@ -996,9 +996,9 @@ const getSeverityColor = (severity) => {}"
             case 'medium':'''
                 return 'text-yellow-600 bg-yellow-100 dark:text-yellow-400 dark:bg-yellow-900/30',
             case 'low':''',,
-                return 'text-blue-600 bg-blue-100 dark:text-blue-400 dark:bg-blue-900/30',;
+                return 'text-blue-600 bg-blue-100 dark:text-blue-400 dark:bg-blue-900/30',
 default: ''',,
-                return 'text-gray-600 bg-gray-100 dark:text-gray-400 dark:bg-gray-900/30'}''', ';
+                return 'text-gray-600 bg-gray-100 dark:text-gray-400 dark:bg-gray-900/30'}''', '
 }';'''
     return ("'
     <div className = "bg-white dark: bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden">''''',
@@ -1441,5 +1441,5 @@ default: ''',,
         </AnimatePresence>"
       </div>"`""
     </div>)}''`"`""
-''`''`"`"";
-";
+''`''`"`""
+"

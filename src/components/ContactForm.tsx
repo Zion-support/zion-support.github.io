@@ -7,39 +7,35 @@ export const ContactForm: React.FC = () => {,
     firstName: '', lastName: '','
     email: '', company: '','
     phone: '', service: '','
-    message: '', budget: '',;
-    timeline: ''});
-
-  const [isSubmitting, setIsSubmitting] = useState();
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-
+    message: '', budget: '',
+    timeline: ''})
+  const [isSubmitting, setIsSubmitting] = useState()
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {,,
-    const { name, value } = e.target;
-    setFormData(prev = > ({;
-      ...prev, [name]: value}));
-  };
-
+    const { name, value } = e.target
+    setFormData(prev = > ({
+      ...prev, [name]: value}))
+  }
   const handleSubmit = async (e: React.FormEvent) => {,
     e.preventDefault(),
     setIsSubmitting(true),
-    ;
-    // Simulate form submission,;
-try {;
+    
+    // Simulate form submission,
+try {
       await new Promise(resolve = > setTimeout(resolve, 2000)),
-      setSubmitStatus('success');
+      setSubmitStatus('success')
       setFormData({'
         firstName: '', lastName: '','
         email: '', company: '','
         phone: '', service: '','
         message: '', budget: '','
-        timeline: ''});
+        timeline: ''})
     } catch (error) {'
-      setSubmitStatus('error');
+      setSubmitStatus('error')
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false)
     }
-  };
-
+  }
   const services = ['
     'AI & Machine Learning', 'Cloud & DevOps','
     'Enterprise Security', 'Digital Transformation','
@@ -65,10 +61,10 @@ initial="{{" opacity: 0, scale: 0.9 }}"
         className="text-center py-12"
       >"
         <div className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">"
-          <CheckCircle className="w-10 h-10 text-white" />;
-        </div>";
-        <h3 className="text-2xl font-bold text-white mb-4">Thank You!</h3>";
-        <p className="text-zion-slate-light mb-6">;
+          <CheckCircle className="w-10 h-10 text-white" />
+        </div>"
+        <h3 className="text-2xl font-bold text-white mb-4">Thank You!</h3>"
+        <p className="text-zion-slate-light mb-6">
           Your message has been sent successfully. We&apos;ll get back to you within 24 hours.''
         </p>"
         <button onClick = "{()" => setSubmitStatus('idle')}"
@@ -82,8 +78,8 @@ initial="{{" opacity: 0, scale: 0.9 }}"
   return ("
     <div className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8">"
       <div className="text-center mb-8">"
-        <h2 className="text-3xl font-bold text-white mb-4">Get In Touch</h2>";
-        <p className="text-zion-slate-light">;
+        <h2 className="text-3xl font-bold text-white mb-4">Get In Touch</h2>"
+        <p className="text-zion-slate-light">
           Ready to transform your business? Let&apos;s discuss how we can help you achieve your goals.''
         </p>
       </div>
@@ -302,6 +298,6 @@ type="submit""
           </motion.button>
         </form>
       </div>
-    </div>;
+    </div>
   );"
 };"

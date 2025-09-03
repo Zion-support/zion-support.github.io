@@ -1,18 +1,15 @@
 #!/usr/bin/env node
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 function createValidComponent(filePath) {
-  const fileName = path.basename(filePath, path.extname(filePath));
+  const fileName = path.basename(filePath, path.extname(filePath))
   const componentName = fileName
     .split('-')
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
     .join('')
-    .replace(/[^a-zA-Z0-9]/g, '');
-
-  return `import React from 'react';
-
+    .replace(/[^a-zA-Z0-9]/g, '')
+  return `import React from 'react'
 export default function ${componentName}() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
@@ -30,9 +27,9 @@ export default function ${componentName}() {
         </div>
       </div>
     </div>
-  );
+  )
 }
-`;
+`
 }
 
 // List of most critical files to fix
@@ -149,22 +146,20 @@ const criticalFiles = [
   'src/pages/services/SecurityHeadersCSP.tsx',
   'src/pages/services/WebsiteAnalytics.tsx',
   'src/pages/services/ZeroTrustNetworkAccess.tsx'
-];
-
-let fixedCount = 0;
-
+]
+let fixedCount = 0
 for (const filePath of criticalFiles) {
-  const fullPath = path.join(__dirname, filePath);
+  const fullPath = path.join(__dirname, filePath)
   if (fs.existsSync(fullPath)) {
     try {
-      const newContent = createValidComponent(fullPath);
-      fs.writeFileSync(fullPath, newContent);
-      fixedCount++;
-      console.log(``Fixed: ${filePath}``);
+      const newContent = createValidComponent(fullPath)
+      fs.writeFileSync(fullPath, newContent)
+      fixedCount++
+      console.log(``Fixed: ${filePath}``)
     } catch (error) {
-      console.error(`Error fixing ${filePath}:`, error.message);
+      console.error(`Error fixing ${filePath}:`, error.message)
     }
   }
 }
 
-console.log(``Fixed ${fixedCount} critical files``);
+console.log(``Fixed ${fixedCount} critical files``)

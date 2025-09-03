@@ -1,18 +1,17 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-const glob = require('glob');
-
+const fs = require('fs')
+const path = require('path')
+const glob = require('glob')
 class AutomationSyntaxFixer {
   constructor() {
-    this.projectRoot = process.cwd();
-    this.fixedCount = 0;
-    this.skippedCount = 0;
+    this.projectRoot = process.cwd()
+    this.fixedCount = 0
+    this.skippedCount = 0
   }
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
+    console.log(`[${new Date().toISOString()}] ${message}`)
   }
 
   async findAutomationScripts() {
@@ -22,18 +21,17 @@ class AutomationSyntaxFixer {
       'scripts/**/*.mjs'
     ]
 
-    const allScripts = [];
+    const allScripts = []
     for (const pattern of patterns) {
-      const files = glob.sync(pattern, { cwd: this.projectRoot });
-      allScripts.push(...files);
+      const files = glob.sync(pattern, { cwd: this.projectRoot })
+      allScripts.push(...files)
     }
 
-    return allScripts;
+    return allScripts
   }
 
   fixSyntaxErrors(content) {
-    let fixed = content;
-
+    let fixed = content
     // Fix common syntax errors
     const fixes = [
       // Fix import statements with commas
@@ -57,31 +55,29 @@ class AutomationSyntaxFixer {
     ]
 
     for (const fix of fixes) {
-      fixed = fixed.replace(fix.pattern, fix.replacement);
+      fixed = fixed.replace(fix.pattern, fix.replacement)
     }
 
-    return fixed;
+    return fixed
   }
 
   async fixScriptFile(filePath) {
     try {
-      const fullPath = path.join(this.projectRoot, filePath);
-      const content = fs.readFileSync(fullPath, 'utf8');
-      
+      const fullPath = path.join(this.projectRoot, filePath)
+      const content = fs.readFileSync(fullPath, 'utf8')
       // Check if file has syntax errors
-      const hasErrors = this.detectSyntaxErrors(content);
-      
+      const hasErrors = this.detectSyntaxErrors(content)
       if (hasErrors) {
-        const fixedContent = this.fixSyntaxErrors(content);
-        fs.writeFileSync(fullPath, fixedContent, 'utf8');
-        this.fixedCount++;
-        this.log(`✅ Fixed syntax errors in: ${filePath}`);
+        const fixedContent = this.fixSyntaxErrors(content)
+        fs.writeFileSync(fullPath, fixedContent, 'utf8')
+        this.fixedCount++
+        this.log(`✅ Fixed syntax errors in: ${filePath}`)
       } else {
-        this.skippedCount++;
-        this.log(`⏭️  No syntax errors found in: ${filePath}`);
+        this.skippedCount++
+        this.log(`⏭️  No syntax errors found in: ${filePath}`)
       }
     } catch (error) {
-      this.log(`❌ Error processing ${filePath}: ${error.message}`);
+      this.log(`❌ Error processing ${filePath}: ${error.message}`)
     }
   }
 
@@ -95,24 +91,22 @@ class AutomationSyntaxFixer {
       /console\.log\(`([^`]*)\$\{([^}]*)\?\?([^}]*)\}([^`]*)`\)/,  // malformed template literals
     ]
 
-    return errorPatterns.some(pattern => pattern.test(content));
+    return errorPatterns.some(pattern => pattern.test(content))
   }
 
   async run() {
-    this.log('🔍 Starting automation script syntax fixer...');
-    
-    const scripts = await this.findAutomationScripts();
-    this.log(`Found ${scripts.length} automation scripts to check`);
-    
+    this.log('🔍 Starting automation script syntax fixer...')
+    const scripts = await this.findAutomationScripts()
+    this.log(`Found ${scripts.length} automation scripts to check`)
     for (const script of scripts) {
-      await this.fixScriptFile(script);
+      await this.fixScriptFile(script)
     }
     
-    this.log(`🎉 Automation syntax fixer completed!`);
-    this.log(`📊 Summary: ${this.fixedCount} files fixed, ${this.skippedCount} files skipped`);
+    this.log(`🎉 Automation syntax fixer completed!`)
+    this.log(`📊 Summary: ${this.fixedCount} files fixed, ${this.skippedCount} files skipped`)
   }
 }
 
 // Run the fixer
-const fixer = new AutomationSyntaxFixer();
-fixer.run().catch(console.error);
+const fixer = new AutomationSyntaxFixer()
+fixer.run().catch(console.error)

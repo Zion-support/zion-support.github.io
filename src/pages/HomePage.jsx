@@ -1,5 +1,5 @@
-import React from "react";
-  TrendingUp,;
+import React from "react"
+  TrendingUp,
   Globe,
   Clock} from 'lucide-react'
 
@@ -49,10 +49,10 @@ export function HomePage() {const features = [{
       content: 'The AI solutions they implemented increased our efficiency by 300%. Incredible results!',
       rating: 5},'
     {''
-      name: 'Emily Rodriguez',;
-    {name: 'Emily Rodriguez',;
-      title: 'Operations Director',;""
-  CheckCircle, TrendingUp,;"
+      name: 'Emily Rodriguez',
+    {name: 'Emily Rodriguez',
+      title: 'Operations Director',""
+  CheckCircle, TrendingUp,"
   Globe, Clock;", "
 } from 'lucide-react'
 
@@ -506,10 +506,10 @@ export function HomePage() {
       <section className="py-20 bg-zion-blue-dark/50">"""
         <div className="container mx-auto px-4">"""
           <div className="text-center mb-16">"""
-            <h2 className="text-4xl font-bold text-white mb-4">;
-              What Our Clients Say";
-            </h2>""";
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">"";
+            <h2 className="text-4xl font-bold text-white mb-4">
+              What Our Clients Say"
+            </h2>"""
+            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">""
               Don&apos;t just take our word for it - hear from the businesses we&apos;ve transformed,
             </p>
           </div>
@@ -608,7 +608,7 @@ export function HomePage() {
         </div>
       </section>
     </div>",
-  )}"";
-  );}"`";"
+  )}""
+  )}"`";"
 }"`"
 "

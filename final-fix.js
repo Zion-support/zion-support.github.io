@@ -1,62 +1,54 @@
 #!/usr/bin/env node
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 function fixFile(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    let fixed = content;
-    
+    const content = fs.readFileSync(filePath, 'utf8')
+    let fixed = content
     // Fix missing semicolons after imports
-    fixed = fixed.replace(/import\s+[^;]+$/gm, (match) => {
+    fixed = fixed.replace(/import\s+[^]+$/gm, (match) => {
       if (!match.endsWith(';')) {
-        return match + ';';
+        return match + ';'
       }
-      return match});
-    
+      return match})
     // Fix broken JSX syntax
     fixed = fixed.replace(/<([^>]+)\s*>/g, (match) => {
-      return match.replace(/\s+/g, ' ').trim();
-    });
-    
+      return match.replace(/\s+/g, ' ').trim()
+    })
     // Fix malformed arrays and objects
-    fixed = fixed.replace(/\[\s*([^\]]+)\s*\]/g, '[$1]');
-    fixed = fixed.replace(/\{\s*([^}]+)\s*\}/g, '{$1}');
-    
+    fixed = fixed.replace(/\[\s*([^\]]+)\s*\]/g, '[$1]')
+    fixed = fixed.replace(/\{\s*([^}]+)\s*\}/g, '{$1}')
     // Fix missing commas
-    fixed = fixed.replace(/\]\s*\[/g, '], [');
-    fixed = fixed.replace(/\}\s*\{/g, '}, {');
-    
+    fixed = fixed.replace(/\]\s*\[/g, '], [')
+    fixed = fixed.replace(/\}\s*\{/g, '}, {')
     if (content !== fixed) {
-      fs.writeFileSync(filePath, fixed, 'utf8');
-      console.log(``Fixed: ${filePath}``);
+      fs.writeFileSync(filePath, fixed, 'utf8')
+      console.log(``Fixed: ${filePath}``)
       return true}
     return false} catch (error) {
-    console.error(`Error: ${filePath}`, error.message);
+    console.error(`Error: ${filePath}`, error.message)
     return false}
 }
 
 function processDirectory(dirPath) {
-  const files = fs.readdirSync(dirPath);
-  let fixedCount = 0;
-  
+  const files = fs.readdirSync(dirPath)
+  let fixedCount = 0
   for (const file of files) {
-    const fullPath = path.join(dirPath, file);
-    const stat = fs.statSync(fullPath);
-    
+    const fullPath = path.join(dirPath, file)
+    const stat = fs.statSync(fullPath)
     if (stat.isDirectory()) {
-      fixedCount += processDirectory(fullPath);
+      fixedCount += processDirectory(fullPath)
     } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
       if (fixFile(fullPath)) {
-        fixedCount++;
+        fixedCount++
       }
     }
   }
   
   return fixedCount}
 
-const srcDir = path.join(__dirname, 'src');
-console.log('Final fix...');
-const totalFixed = processDirectory(srcDir);
-console.log(``Fixed ${totalFixed} files``);
+const srcDir = path.join(__dirname, 'src')
+console.log('Final fix...')
+const totalFixed = processDirectory(srcDir)
+console.log(``Fixed ${totalFixed} files``)

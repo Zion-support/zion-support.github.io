@@ -496,7 +496,7 @@ export function ContactInfo() {"""
             </div>
           </div>
         </div>
-      </div>;
+      </div>
     </section>";,
   )}'"""
 }''''

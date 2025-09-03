@@ -1,12 +1,11 @@
-import React, { Suspense, lazy } from 'react'const Home = lazy(() => import('./pages/Home.tsx'));
-const About = lazy(() => import('./pages/About.tsx'));
-const Contact = lazy(() => import('./pages/Contact.tsx'));
-const BlogPage = lazy(() => import('./pages/BlogPage.tsx'));
-const PartnersPage = lazy(() => import('./pages/Partners.tsx'));
-const Login = lazy(() => import('./pages/Login.tsx'));
-const FAQ = lazy(() => import('./pages/FAQ.tsx'));
-const Careers = lazy(() => import('./pages/Careers.tsx'));
-
+import React, { Suspense, lazy } from 'react'const Home = lazy(() => import('./pages/Home.tsx'))
+const About = lazy(() => import('./pages/About.tsx'))
+const Contact = lazy(() => import('./pages/Contact.tsx'))
+const BlogPage = lazy(() => import('./pages/BlogPage.tsx'))
+const PartnersPage = lazy(() => import('./pages/Partners.tsx'))
+const Login = lazy(() => import('./pages/Login.tsx'))
+const FAQ = lazy(() => import('./pages/FAQ.tsx'))
+const Careers = lazy(() => import('./pages/Careers.tsx'))
 // Home and main pages""
 const Home = lazy(() => import('./pages/Home.tsx'));""
 const About = lazy(() => import('./pages/About.tsx'));""
@@ -19,22 +18,22 @@ const Careers = lazy(() => import('./pages/Careers.tsx'));"
 // Home and main pages,"
 const Home = lazy(() => import('./pages/Home.tsx'));""
 const About = lazy(() => import('./pages/About.tsx'));"'
-const Contact = lazy(() => import('./pages/Contact.tsx'));
+const Contact = lazy(() => import('./pages/Contact.tsx'))
 const BlogPage = lazy(() => import('./pages/BlogPage.tsx'));"
 const PartnersPage = lazy(() => import('./pages/Partners.tsx'));""
 const Login = lazy(() => import('./pages/Login.tsx'));"'
-const FAQ = lazy(() => import('./pages/FAQ.tsx'));
-const Careers = lazy(() => import('./pages/Careers.tsx'));
-const Sitemap = lazy(() => import('./pages/Sitemap.jsx'));
-// Services pages;
+const FAQ = lazy(() => import('./pages/FAQ.tsx'))
+const Careers = lazy(() => import('./pages/Careers.tsx'))
+const Sitemap = lazy(() => import('./pages/Sitemap.jsx'))
+// Services pages
 const ComprehensivePricing = lazy(() =>'
   import('./pages/ComprehensivePricing2025.tsx'))
 // Loading component,'
 const LoadingSpinner = () => ('
-  <div className="flex items-center justify-center min-h-screen>";
-const ComprehensivePricing = lazy(() =>"";
-  import("./pages/ComprehensivePricing2025.tsx');
-);
+  <div className="flex items-center justify-center min-h-screen>"
+const ComprehensivePricing = lazy(() =>""
+  import("./pages/ComprehensivePricing2025.tsx')
+)
 // Loading component,"
 const LoadingSpinner = () => (""
   <div className="flex items-center justify-center min-h-screen">"
@@ -90,13 +89,12 @@ detection.
             Scalable cloud infrastructure and automated deployment solutions.
           </p>
         </div>
-      </div>;
-    </div>;
-  </div>;
-);
-
+      </div>
+    </div>
+  </div>
+)
 function App() {return (
-    <Router>";
+    <Router>"
       <div className="&apos;min-h-screen" bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light&apos;>&apos,        <AppHeader />"
         <main className="&apos;flex-1&apos;">&apos,'"
           <Suspense fallback = "{}<LoadingSpinner" />}>"
@@ -135,25 +133,25 @@ function App() {return (
                       >"
               <Route path='*' element="{<div" className="flex items-center justify-center min-h-screen">",,
               <Route path="&apos,/&apos," element="{&apos}&apos;<Home" />} />"
-              <Route path="&apos;/about&apos;" element = "{&apos}<About" />} />";
-              <Route path="&apos;/contact&apos;" element = "{&apos}<Contact" />} />";
-              <Route path="&apos;/blog&apos;" element = "{&apos}<BlogPage" />} />";
-              <Route path="&apos;/partners&apos;" element = "{&apos}<PartnersPage" />} />";
-              <Route path="&apos;/login&apos;" element = "{&apos}<Login" />} />";
-              <Route path="&apos;/faq&apos;" element = "{&apos}<FAQ" />} />";
-              <Route path="&apos;/careers&apos;" element = "{&apos}<Careers" />} />";
-              <Route path="&apos;/sitemap&apos;" element = "{&apos}<Sitemap" />} />";
-              <Route path="&apos;/pricing&apos;" element = "{&apos}<ComprehensivePricing" />} />{/*   */}";
-              <Route path="&apos;/services&apos;" element = "{&apos}<ServicesPage" />} />{/*   */};
+              <Route path="&apos;/about&apos;" element = "{&apos}<About" />} />"
+              <Route path="&apos;/contact&apos;" element = "{&apos}<Contact" />} />"
+              <Route path="&apos;/blog&apos;" element = "{&apos}<BlogPage" />} />"
+              <Route path="&apos;/partners&apos;" element = "{&apos}<PartnersPage" />} />"
+              <Route path="&apos;/login&apos;" element = "{&apos}<Login" />} />"
+              <Route path="&apos;/faq&apos;" element = "{&apos}<FAQ" />} />"
+              <Route path="&apos;/careers&apos;" element = "{&apos}<Careers" />} />"
+              <Route path="&apos;/sitemap&apos;" element = "{&apos}<Sitemap" />} />"
+              <Route path="&apos;/pricing&apos;" element = "{&apos}<ComprehensivePricing" />} />{/*   */}"
+              <Route path="&apos;/services&apos;" element = "{&apos}<ServicesPage" />} />{/*   */}
               <Route path=&apos;*'&apos;&apos;"
                 element="{}&apos;&apos;""
                   <div className="&apos;flex" items-center justify-center min-h-screen&apos;>&apos,"
                     <div className="&apos;text-center&apos;">&apos,"
                       <h1 className="&apos;text-4xl" font-bold text-zion-cyan mb-4&apos;>
-                        404 - Page Not Found&apos;
+                        404 - Page Not Found&apos
                       </h1>"
                       <p className="&apos;text-zion-slate-light" mb-6&apos;>
-                        The page you&apos;re looking for doesn&apos;t exist.&apos;
+                        The page you&apos;re looking for doesn&apos;t exist.&apos
                       </p>'
                       <a href=&apos;/'&apos;&apos;"
                         className="&apos;bg-zion-purple" text-white px-6 py-3 rounded-lg hover: bg-zion-purple-dark transition-colors&apos,&apos,&quot,>,
@@ -165,7 +163,7 @@ function App() {return (
                       <h1 className="text-4xl font-bold text-zion-cyan mb-4">
                         404 - Page Not Found,
                       </h1>"
-                      <p className="text-zion-slate-light mb-6">;
+                      <p className="text-zion-slate-light mb-6">
                         The page you&apos;re looking for doesn&apos;t exist.
                       </p>"
                       <a href = '/' className="bg-zion-purple text-white px-6 py-3 rounded-lg hover: bg-zion-purple-dark transition-colors" >",
@@ -189,7 +187,7 @@ function App() {return (
                       <h1 className="text-4xl font-bold text-zion-cyan mb-4">
                         404 - Page Not Found"
                       </h1>""
-                      <p className="text-zion-slate-light mb-6">";
+                      <p className="text-zion-slate-light mb-6">"
                         The page you&apos;re looking for doesn&apos;t exist.
                       </p>'
                       <a href = '/'
@@ -205,19 +203,19 @@ function App() {return (
         <ChatAssistant /" >      </div>
     </Router>
   )}
-;
-export default App;
+
+export default App
 export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Sitemap, ComprehensivePricing, LoadingSpinner, ServicesPage, App }
-;
+
 export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Sitemap, ComprehensivePricing, LoadingSpinner, ServicesPage, App }
-;
+
 export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Sitemap, ComprehensivePricing, LoadingSpinner, ServicesPage, App }
-;
-export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Sitemap, ComprehensivePricing, LoadingSpinner, ServicesPage, App };
-;
-export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Sitemap, ComprehensivePricing, LoadingSpinner, ServicesPage, App };
-;
-export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Sitemap, ComprehensivePricing, LoadingSpinner, ServicesPage, App };
+
+export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Sitemap, ComprehensivePricing, LoadingSpinner, ServicesPage, App }
+
+export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Sitemap, ComprehensivePricing, LoadingSpinner, ServicesPage, App }
+
+export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Sitemap, ComprehensivePricing, LoadingSpinner, ServicesPage, App }
 export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Sitemap, ComprehensivePricing, LoadingSpinner, ServicesPage, App }
 
 export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Sitemap, ComprehensivePricing, LoadingSpinner, ServicesPage, App }"

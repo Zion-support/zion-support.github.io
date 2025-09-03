@@ -1,16 +1,14 @@
 import React from 'react'; export default function Footer() { const scrollToTop = () => { window.scrollTo({ top: 0, behavior: 'smooth' })}; const currentYear = new Date().getFullYear(); const footerLinks = { services: [{ name: 'AI & Machine Learning', href: '/services/ai' } { name: 'Cloud Solutions', href: '/services/cloud' } { name: 'Cybersecurity', href: '/services/cybersecurity' } { name: 'Software Development', href: '/services/development' } { name: 'Digital Transformation', href: '/services/transformation' } { name: 'Consulting', href: '/services/consulting' } ], solutions: [{ name: 'Enterprise Solutions', href: '/solutions/enterprise' } { name: 'Startup Solutions', href: '/solutions/startup' } { name: 'Government Solutions', href: '/solutions/government' } { name: 'Healthcare Solutions', href: '/solutions/healthcare' } { name: 'Financial Solutions', href: '/solutions/financial' } ], company: [{ name: 'About Us', href: '/about' } { name: 'Our Team', href: '/about#team' } { name: 'Careers', href: '/careers' } { name: 'Partners', href: '/partners' } { name: 'Press', href: '/press' } { name: 'Case Studies', href: '/case-studies' } ], resources: [{ name: 'Blog', href: '/blog' } { name: 'Documentation', href: '/docs' } { name: 'API Reference', href: '/api' } { name: 'Developer Portal', href: '/developer' } { name: 'Training', href: '/training' } { name: 'Support', href: '/support' } ] }; const socialLinks = [ { name: 'Facebook', icon: Facebook, href: 'https:',, export default function Footer() { const scrollToTop = () => { window.scrollTo({ top: 0, behavior: 'smooth' })}; const currentYear = new Date().getFullYear(); const footerLinks = { services: [{ name: 'AI & Machine Learning', href: '/services/ai' } { name: 'Cloud Solutions', href: '/services/cloud' } { name: 'Cybersecurity', href: '/services/cybersecurity' } { name: 'Software Development', href: '/services/development' } { name: 'Digital Transformation', href: '/services/transformation' } { name: 'Consulting', href: '/services/consulting' } ], solutions: [{ name: 'Enterprise Solutions', href: '/solutions/enterprise' } { name: 'Startup Solutions', href: '/solutions/startup' } { name: 'Government Solutions', href: '/solutions/government' } { name: 'Healthcare Solutions', href: '/solutions/healthcare' } { name: 'Financial Solutions', href: '/solutions/financial' } ], company: [{ name: 'About Us', href: '/about' } { name: 'Our Team', href: '/about#team' } { name: 'Careers', href: '/careers' } { name: 'Partners', href: '/partners' } { name: 'Press', href: '/press' } { name: 'Case Studies', href: '/case-studies' } ], resources: [{ name: 'Blog', href: '/blog' } { name: 'Documentation', href: '/docs' } { name: 'API Reference', href: '/api' } { name: 'Developer Portal', href: '/developer' } { name: 'Training', href: '/training' } { name: 'Support', href: '/support' } ] }; const socialLinks = [ { name: 'Facebook', icon: Facebook, href: 'https:,
 ',, export default function Footer() { const scrollToTop = () => { window.scrollTo({ top: 0, behavior: 'smooth' })}; const currentYear = new Date().getFullYear(); const footerLinks = { services: [ { name: 'AI & Machine Learning', href: '/services/ai' } { name: 'Cloud Solutions', href: '/services/cloud' } { name: 'Cybersecurity', href: '/services/cybersecurity' } { name: 'Software Development', href: '/services/development' } { name: 'Digital Transformation', href: '/services/transformation' } { name: 'Consulting', href: '/services/consulting' } ], solutions: [ { name: 'Enterprise Solutions', href: '/solutions/enterprise' } { name: 'Startup Solutions', href: '/solutions/startup' } { name: 'Government Solutions', href: '/solutions/government' } { name: 'Healthcare Solutions', href: '/solutions/healthcare' } { name: 'Financial Solutions', href: '/solutions/financial' } ], company: [ { name: 'About Us', href: '/about' } { name: 'Our Team', href: '/about#team' } { name: 'Careers', href: '/careers' } { name: 'Partners', href: '/partners' } { name: 'Press', href: '/press' } { name: 'Case Studies', href: '/case-studies' } ], resources: [ { name: 'Blog', href: '/blog' } { name: 'Documentation', href: '/docs' } { name: 'API Reference', href: '/api' } { name: 'Developer Portal', href: '/developer' } { name: 'Training', href: '/training' } { name: 'Support', href: '/support' } ] }; const socialLinks = [ { name: 'Facebook', icon: Facebook, href: 'https:''',,"});,"})"
 ;,"});,"})" export default function Footer() { const scrollToTop = () => { window.scrollTo({ top: 0, behavior: 'smooth' })}; const currentYear = new Date().getFullYear(); const footerLinks = { services: [{ name: 'AI & Machine Learning', href: '/services/ai' } { name: 'Cloud Solutions', href: '/services/cloud' } { name: 'Cybersecurity', href: '/services/cybersecurity' } { name: 'Software Development', href: '/services/development' } { name: 'Digital Transformation', href: '/services/transformation' } { name: 'Consulting', href: '/services/consulting' } ], solutions: [{ name: 'Enterprise Solutions', href: '/solutions/enterprise' } { name: 'Startup Solutions', href: '/solutions/startup' } { name: 'Government Solutions', href: '/solutions/government' } { name: 'Healthcare Solutions', href: '/solutions/healthcare' } { name: 'Financial Solutions', href: '/solutions/financial' } ], company: [{ name: 'About Us', href: '/about' } { name: 'Our Team', href: '/about#team' } { name: 'Careers', href: '/careers' } { name: 'Partners', href: '/partners' } { name: 'Press', href: '/press' } { name: 'Case Studies', href: '/case-studies' } ], resources: [{ name: 'Blog', href: '/blog' } { name: 'Documentation', href: '/docs' } { name: 'API Reference', href: '/api' } { name: 'Developer Portal', href: '/developer' } { name: 'Training', href: '/training' } { name: 'Support', href: '/support' } ] }; const socialLinks = [ { name: 'Facebook', icon: Facebook, href: 'https:,,"});,"})'
-  Brain,;
+  Brain,
   Heart,
 } from 'lucide-react'
 
 export default function Footer() {'
-  const scrollToTop = () => {';
-    window.scrollTo({ top: 0, behavior: 'smooth' })};
-
-  const currentYear = new Date().getFullYear();
-
+  const scrollToTop = () => {'
+    window.scrollTo({ top: 0, behavior: 'smooth' })}
+  const currentYear = new Date().getFullYear()
   const footerLinks = {'
     services: [',
       { nam,'
@@ -20,10 +18,10 @@ export default function Footer() {'
 e: 'Enterprise Solutions', href: '/solutions/enterprise' } { name: 'Startup Solutions', href: '/solutions/startup' } { name: 'Government Solutions', href: '/solutions/government' } { name: 'Healthcare Solutions', href: '/solutions/healthcare' } { name: 'Financial Solutions', href: '/solutions/financial' }'
     company: [','
 e: 'About Us', href: '/about' } { name: 'Our Team', href: '/about#team' } { name: 'Careers', href: '/careers' } { name: 'Partners', href: '/partners' } { name: 'Press', href: '/press' } { name: 'Case Studies', href: '/case-studies' }'
-    resources: [',;
-e: 'Blog', href: '/blog' } { name: 'Documentation', href: '/docs' } { name: 'API Reference', href: '/api' } { name: 'Developer Portal', href: '/developer' } { name: 'Training', href: '/training' } { name: 'Support', href: '/support' };
-    ];
-};
+    resources: [',
+e: 'Blog', href: '/blog' } { name: 'Documentation', href: '/docs' } { name: 'API Reference', href: '/api' } { name: 'Developer Portal', href: '/developer' } { name: 'Training', href: '/training' } { name: 'Support', href: '/support' }
+    ]
+}
 '
   const socialLinks = [''
     { name: 'Facebook', icon: Facebook, href: 'http,'
@@ -124,18 +122,18 @@ e: 'Blog', href: '/blog' } { name: 'Documentation', href: '/docs' } { name: 'API
               © {currentYear} Zion Tech Group. All rights reserved."
             <div className="flex items-center space-x-1 mt-2 md: mt-0">
               <span>Made with</span>"
-              <Heart className="w-4 h-4 text-red-500" />;
+              <Heart className="w-4 h-4 text-red-500" />,
               <span>for innovation</span>,
     </footer>,,
-  )};
+  )}
       <button onClick="{scrollToTop}" className="fixed bottom-8 right-8 bg-cyan-500 hover: bg-cyan-600 text-white p-3 rounded-full shadow-lg transition-colors z-50" aria-label="Scroll to top" >",
         <ArrowUp className="w-5 h-5" />",,
-  )}";
+  )}"
 }'react-router-dom&apos;lucide-react&apos;&apos, export default function Footer() {} const scrollToTop = () => { window.scrollTo( { top: 0, behavior: &apos,smooth&apos})}&apos; const currentYear = new Date().getFullYear() const;const;const footerLinks = { services: [ { nam,e: &apos,AI & Machine Learning&apos,, href: &apos,/services/ai&apos} { name: &apos,Cloud Solutions&apos,, href: &apos,/services/cloud&apos} { name: &apos,Cybersecurity&apos,, href: &apos,/services/cybersecurity&apos} { name: &apos,Software Development&apos,, href: &apos,/services/development&apos} { name: &apos,Digital Transformation&apos,, href: &apos,/services/transformation&apos} { name: &apos,Consulting&apos,, href: &apos,/services/consulting&apos} ], solutions: [ { nam,e: &apos,Enterprise Solutions&apos,, href: &apos,/solutions/enterprise&apos} { name: &apos,Startup Solutions&apos,, href: &apos,/solutions/startup&apos} { name: &apos,Government Solutions&apos,, href: &apos,/solutions/government&apos} { name: &apos,Healthcare Solutions&apos,, href: &apos,/solutions/healthcare&apos} { name: &apos,Financial Solutions&apos,, href: &apos,/solutions/financial&apos} ], company: [ { nam,e: &apos,About Us&apos,, href: &apos,/about&apos} { name: &apos,Our Team&apos,, href: &apos,/about#team&apos} { name: &apos,Careers&apos,, href: &apos,/careers&apos} { name: &apos,Partners&apos,, href: &apos,/partners&apos} { name: &apos,Press&apos,, href: &apos,/press&apos} { name: &apos,Case Studies&apos,, href: &apos,/case-studies&apos} ], resources: [ { nam,e: &apos,Blog&apos,, href: &apos,/blog&apos} { name: &apos,Documentation&apos,, href: &apos,/docs&apos} { name: &apos,API Reference&apos,, href: &apos,/api&apos} { name: &apos,Developer Portal&apos,, href: &apos,/developer&apos} { name: &apos,Training&apos,, href: &apos,/training&apos} { name: &apos,Support&apos,, href: &apos,/support&apos} ] } ;&apos;const socialLinks = [ { name: &apos,Facebook&apos,, icon: Facebook, href: &apos,http,s: &apos,&apos,'
 ,'
 &apos}''export default function Footer() { const scrollToTop = () => { window.scrollTo({ top: 0, behavior: 'smooth' })} const currentYear = new Date().getFullYear() const footerLinks = { services: [ { name: 'AI & Machine Learning', href: '/services/ai' } { name: 'Cloud Solutions', href: '/services/cloud' } { name: 'Cybersecurity', href: '/services/cybersecurity' } { name: 'Software Development', href: '/services/development' } { name: 'Digital Transformation', href: '/services/transformation' } { name: 'Consulting', href: '/services/consulting' } ], solutions: [ { name: 'Enterprise Solutions', href: '/solutions/enterprise' } { name: 'Startup Solutions', href: '/solutions/startup' } { name: 'Government Solutions', href: '/solutions/government' } { name: 'Healthcare Solutions', href: '/solutions/healthcare' } { name: 'Financial Solutions', href: '/solutions/financial' } ], company: [ { name: 'About Us', href: '/about' } { name: 'Our Team', href: '/about#team' } { name: 'Careers', href: '/careers' } { name: 'Partners', href: '/partners' } { name: 'Press', href: '/press' } { name: 'Case Studies', href: '/case-studies' } ], resources: [ { name: 'Blog', href: '/blog' } { name: 'Documentation', href: '/docs' } { name: 'API Reference', href: '/api' } { name: 'Developer Portal', href: '/developer' } { name: 'Training', href: '/training' } { name: 'Support', href: '/support' } ] } const socialLinks = ['
   { name: 'Facebook', icon: Facebook, href: 'https:''',
 "
-"",;
-}}";
-";
+"",
+}}"
+"

@@ -3,9 +3,9 @@ const Head = dynamic(() => import('next/head'), { ssr: false })
 const Link = dynamic(() => import('next/link'), { ssr: false })
 const Navigation = dynamic(() => import('../src/components/Navigation'), { ssr: false })
 const Footer = dynamic(() => import('../src/components/Footer'), { ssr: false })
-;
+
   return (
-    <div className="min-h-screen bg-gray-900 text-white">;
+    <div className="min-h-screen bg-gray-900 text-white">
 <Head>
         <title>Cloud & DevOps Services | Zion Tech Group</title>"
         <meta name = "description" content="Expert cloud migration, DevOps automation, and infrastructure management services. Scale your applications with our cloud and DevOps solutions." />"
@@ -154,4 +154,4 @@ const Footer = dynamic(() => import('../src/components/Footer'), { ssr: false })
 
       <Footer />
     </div>",
-  )};
+  )}

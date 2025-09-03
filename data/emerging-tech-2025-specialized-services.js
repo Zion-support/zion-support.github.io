@@ -651,7 +651,7 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [
         complianceStandards['FDA', 'EPA', 'USDA', 'Biosafety Guidelines', 'GMO Regulations'],
         supportLevel: 'enterprise'
 
-];
+]
 // Market analysis for emerging technology services
 export const EMERGING_TECH_MARKET_ANALYSIS = {
   totalMarketSize: '$892B',
@@ -679,5 +679,5 @@ export const EMERGING_TECH_MARKET_ANALYSIS = {
 
 
 
-};
+}
 }

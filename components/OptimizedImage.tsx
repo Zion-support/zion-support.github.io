@@ -2,12 +2,12 @@
 interface OptimizedImageProps {
 
   src: string,,
-alt: string;
-  width?: number;
-  height?: number;
-  className?: string;
-  blurDataURL?: string;
-  sizes?: string;
+alt: string
+  width?: number
+  height?: number
+  className?: string
+  blurDataURL?: string
+  sizes?: string,
   fill?: boolean,
   style?: React.CSSProperties,,
   onClick?: () => void,
@@ -22,27 +22,24 @@ alt: string;
   onError,
   loading = 'lazy','
   objectFit = 'cover','
-  objectPosition = 'center';
-  const [isLoading, setIsLoading] = useState(true);
-  const [hasError, setHasError] = useState(false);
-  const [isInView, setIsInView] = useState(priority);
-  const imageRef = useRef<HTMLDivElement>(null);
-
-  const [isLoading, setIsLoading] = useState(true);
-  const [hasError, setHasError] = useState(false);
-  const [isInView, setIsInView] = useState(priority);
-  const imageRef = useRef<HTMLDivElement>(null);
-
+  objectPosition = 'center'
+  const [isLoading, setIsLoading] = useState(true)
+  const [hasError, setHasError] = useState(false)
+  const [isInView, setIsInView] = useState(priority)
+  const imageRef = useRef<HTMLDivElement>(null)
+  const [isLoading, setIsLoading] = useState(true)
+  const [hasError, setHasError] = useState(false)
+  const [isInView, setIsInView] = useState(priority)
+  const imageRef = useRef<HTMLDivElement>(null)
   // Intersection Observer for lazy loading,
 useEffect(() => {
-    if (priority) return;
-
-    const observer = new IntersectionObserver();
+    if (priority) return
+    const observer = new IntersectionObserver()
       ([entry]) => {
 
         if (entry.isIntersecting) {
-;
-          setIsInView(true);
+
+          setIsInView(true)
           <svg"""
             className = "mx-auto h-8 w-8 mb-2""""
             fill="none""""
@@ -56,4 +53,3 @@ useEffect(() => {
 
       <div`'
         ref={imageRef}`'`"'
-;

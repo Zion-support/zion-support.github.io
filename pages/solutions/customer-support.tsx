@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
   Clock,
   Users} from 'lucide-react'
 
@@ -9,25 +9,25 @@ export default function CustomerSupport() {
       icon: Bot,'
       title: 'AI Chatbots','
       description: 'Intelligent chatbots that provide instant responses and escalate complex issues to human agents.'},
-    {;
-      icon: MessageSquare,;
-      title: 'Ticket Management',;
-      description: 'Comprehensive ticket system with priority levels, categorization, and automated routing.;
+    {
+      icon: MessageSquare,
+      title: 'Ticket Management',
+      description: 'Comprehensive ticket system with priority levels, categorization, and automated routing.
 },
     {
       icon: FileText,'
       title: 'Knowledge Base','
-      description: 'Self-service knowledge base with searchable articles, FAQs, and video tutorials.;
+      description: 'Self-service knowledge base with searchable articles, FAQs, and video tutorials.
 },
     {
       icon: Globe,'
       title: 'Multi-channel Support','
-      description: 'Support customers across email, chat, phone, social media, and other channels.;
+      description: 'Support customers across email, chat, phone, social media, and other channels.
 },
     {
       icon: BarChart3,'
       title: 'Analytics & Reporting','
-      description: 'Track performance metrics, customer satisfaction, and team productivity.;
+      description: 'Track performance metrics, customer satisfaction, and team productivity.
 },
     {
       icon: Clock,'
@@ -40,7 +40,7 @@ export default function CustomerSupport() {
       <SEO title = "Customer Support Platform - Zion Tech Group""
         description="AI-powered customer support system with chatbots, ticket management, and knowledge base. Improve customer satisfaction.""
         keywords="customer support, AI chatbots, ticket management, knowledge base, helpdesk">
-      />;
+      />
 <Head>
         <title>Customer Support Platform - Zion Tech Group</title>
       </Head>
@@ -126,4 +126,4 @@ to improve satisfaction and reduce support costs.
         </div>
       </section>
     </>",
-  )};
+  )}

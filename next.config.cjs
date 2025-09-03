@@ -10,7 +10,7 @@ const nextConfig = {
     // Allow production builds to successfully complete even if
     // there are type errors.
   experimental: {
-    // Removed deprecated options;
+    // Removed deprecated options
 },
   typescript: {
     ignoreBuildErrors: true},
@@ -41,17 +41,14 @@ const nextConfig = {
         /contracts/,
         /hardhat/,
         /^components\//, // Exclude root components directory
-      ]});
-    
-
+      ]})
     // Add fallback for problematic modules
     config.resolve.fallback = {
       ...config.resolve.fallback,
       fs: false,
       net: false,
-      tls: false};
-
-    return config;
+      tls: false}
+    return config
 =======
 >>>>>>> cursor/automate-test-fix-improve-and-merge-code-1c7d
   },
@@ -76,7 +73,7 @@ const nextConfig = {
       config.resolve.alias = {
         ...config.resolve.alias,
         '@': new URL('./src', import.meta.url).pathname,
-      };
+      }
     }
     return config},
   async headers() {
@@ -98,8 +95,7 @@ const nextConfig = {
           },
         ],
       },
-    ];
+    ]
   },
-};
-
-module.exports = nextConfig;
+}
+module.exports = nextConfig

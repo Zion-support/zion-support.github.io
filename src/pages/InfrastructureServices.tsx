@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 const InfrastructureServices: React.FC = () => {
   return(<>
       <SEO title="InfrastructureServices - Zion Tech Group" />"
@@ -8,8 +8,7 @@ const InfrastructureServices: React.FC = () => {
           <p className="text-lg text-gray-600">Content coming soon...</p>
         </div>
     </>,
-  )};
-
+  )}
 export default InfrastructureServices;"
 ,"});,"})","});,"})"
 ;,"});,"})"
@@ -26,25 +25,23 @@ const InfrastructureServices: React.FC = () => {,"});,"})"
   );,"});,"});"
 };,"});,"})"
 export default InfrastructureServices,"});,"})'"
-      <div: className="min - h-screen bg-white py-20">',;"
-        <div: className="max - w-4xl mx-auto px-4">',;"
-          <h1: className="text - 4xl font-bold text-gray-900 mb-8">InfrastructureServices</h1>',;"
-          <p: className="text-lg text-gray-600">Content coming soon...</p>',,,
-;,
-export: default InfrastructureServices;
-  return (<>;
+      <div: className="min - h-screen bg-white py-20">',"
+        <div: className="max - w-4xl mx-auto px-4">',"
+          <h1: className="text - 4xl font-bold text-gray-900 mb-8">InfrastructureServices</h1>',"
+          <p: className="text-lg text-gray-600">Content coming soon...</p>',,,,
+export: default InfrastructureServices
+  return (<>
       <SEO title='InfrastructureServices - Zion Tech Group' />;"
       <div className="min-h-screen bg-white py-20">;"
-        <div className="max-w-4xl mx-auto px-4">;"
+        <div className="max-w-4xl mx-auto px-4">,"
           <h1 className="text-4xl font-bold text-gray-900 mb-8">InfrastructureServices</h1>,"
           <p className="text-lg text-gray-600">Content coming soon...</p>,,
         </div>,
     </>'
-export default function Page()   {const InfrastructureServices: React.FC = () => {',,../components/SEO';&apos;&apos;
-
+export default function Page()   {const InfrastructureServices: React.FC = () => {',,../components/SEO';&apos;&apos
 export default function Page() {}
 const InfrastructureServices: React.FC = () =>  {,
-  return (}<>";
+  return (}<>"
       <;<SEO title="&apos;InfrastructureServices" - Zion Tech Group&apos; />&apos;"
       <div className="&apos;min-h-screen" bg-white py-20&apos;>&apos,"
         <div className="&apos;max-w-4xl" mx-auto px-4&apos;>&apos,"
@@ -71,8 +68,8 @@ const InfrastructureServices: React.FC = () => {""
         <div className="max-w-4xl mx-auto px-4">""
           <h1 className="text-4xl font-bold text-gray-900 mb-8">InfrastructureServices</h1>""
           <p className="text-lg text-gray-600">Content coming soon...</p>,,
-  )}";
-"";
+  )}"
+""
 }"
 ""
 "

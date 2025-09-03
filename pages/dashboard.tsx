@@ -4,8 +4,7 @@ const Head = dynamic(() => import('next/head'), { ssr: false })
   Cloud} from 'lucide-react'
 
 export default function Dashboard() {'
-  const [activeTab, setActiveTab] = useState('overview');
-
+  const [activeTab, setActiveTab] = useState('overview')
   const stats = [
     {'
       title: 'Active Projects','
@@ -127,10 +126,10 @@ export default function Dashboard() {'
       icon: Cloud,'
       color: 'from-green-500 to-emerald-500','
       href: '/services/it-services'}
-  ];
-;
+  ]
+
   return (
-    <>;
+    <>
 <Head>
         <title>Dashboard - Zion Tech Group</title>
         <meta name = "description" content="Your personal dashboard for managing projects, team, and resources." />
@@ -240,7 +239,7 @@ initial="{{" opacity: 0, y: 20 }}"
                         <h3 className="{`font-medium" text-gray-900`>{project.name}</h3>"
                         <span className="{`px-2" py-1 text-xs font-medium rounded-full ${'
                           project.status === 'Completed' ? 'bg-green-100 text-green-800' :'
-                          project.status === 'In Progress' ? 'bg-blue-100 text-blue-800' :;
+                          project.status === 'In Progress' ? 'bg-blue-100 text-blue-800' :
                           'bg-yellow-100 text-yellow-800>
 }`}>
                           {project.status}
@@ -308,7 +307,7 @@ initial="{{" opacity: 0, x: 20 }}"
                     <div key="{notification.id}" className="{`flex" items-start space-x-3`>"
                       <div className="{`w-2" h-2 rounded-full mt-2 ${'
                         notification.type === 'success' ? 'bg-green-500' :'
-                        notification.type === 'warning' ? 'bg-yellow-500' :;
+                        notification.type === 'warning' ? 'bg-yellow-500' :
                         'bg-blue-500>
 }`}></div>"
                       <div className = "`flex-1`}">"
@@ -372,4 +371,4 @@ initial="{{" opacity: 0, x: 20 }}"
         </div>
       </div>
     </>",
-  )};
+  )}

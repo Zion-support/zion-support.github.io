@@ -4,17 +4,15 @@ const Head = dynamic(() => import('next/head'), { ssr: false })
 export default function SearchPage() {
 
   const router = useRouter()'
-  const [searchQuery, setSearchQuery] = useState('');
-  const [searchResults, setSearchResults] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
-
+  const [searchQuery, setSearchQuery] = useState('')
+  const [searchResults, setSearchResults] = useState([])
+  const [isLoading, setIsLoading] = useState(false)
   useEffect(() => {
     if (router.query.q) {
-      setSearchQuery(router.query.q as string);
-      performSearch(router.query.q as string);
+      setSearchQuery(router.query.q as string)
+      performSearch(router.query.q as string)
     }
-  }, [router.query.q]);
-
+  }, [router.query.q])
   const performSearch = async (query: string) => {,
     if (!query.trim()) return,
 
@@ -58,37 +56,33 @@ const mockResults = [
           type: 'page',
 },
       ].filter(
-        result =>;
-          result.title.toLowerCase().includes(query.toLowerCase()) ||;
-          result.description.toLowerCase().includes(query.toLowerCase());
-      );
-
-      setSearchResults(mockResults);
+        result =>
+          result.title.toLowerCase().includes(query.toLowerCase()) ||
+          result.description.toLowerCase().includes(query.toLowerCase())
+      )
+      setSearchResults(mockResults)
     } catch (error) {'
           } finally {
-      setIsLoading(false);
+      setIsLoading(false)
     }
-  };
-
-  const handleSearch = (e: React.FormEvent) => {,;
-    e.preventDefault(),;
-    if (searchQuery.trim()) {;
+  }
+  const handleSearch = (e: React.FormEvent) => {,
+    e.preventDefault(),
+    if (searchQuery.trim()) {
       router.push(`/search?q="${encodeURIComponent(searchQuery.trim())}`);"
     }
-  };
-
+  }
   const getIconForType = (type: string) => {
     switch (type) {'
       case 'service':",
         return <Zap className="w-5 h-5 text-blue-600" />,'
-      case 'page':";
-        return <FileText className="w-5 h-5 text-green-600" />,;
+      case 'page':"
+        return <FileText className="w-5 h-5 text-green-600" />,
       default: ",,
-        return <Globe className="w-5 h-5 text-gray-600" />};
-  };
-
+        return <Globe className="w-5 h-5 text-gray-600" />}
+  }
   return (
-    <>;
+    <>
 <Head>
         <title>Search - Zion Tech Group</title>"
         <meta name = "description""
@@ -171,7 +165,7 @@ const mockResults = [
               <h3 className="text-xl font-semibold text-gray-900 mb-2">
                 No results found,
               </h3>"
-              <p className="text-gray-600 mb-6">";
+              <p className="text-gray-600 mb-6">"
                 We couldn&apos;t find any results for "{router.query.q}". Try,'
 different keywords or browse our services.'
               </p>"
@@ -230,5 +224,5 @@ resources.
         </div>
       </div>
     </>
-  );
+  )
 }"

@@ -1,7 +1,6 @@
-import React from 'react';
-import Link from 'next/link';
-import { ArrowRight, Phone, Mail } from 'lucide-react';
-
+import React from 'react'
+import Link from 'next/link'
+import { ArrowRight, Phone, Mail } from 'lucide-react'
 export default function Serviceportfoliodashboard() {
   return (
     <div className="min-h-screen bg-white">
@@ -11,7 +10,7 @@ export default function Serviceportfoliodashboard() {
           This is a placeholder component for serviceportfoliodashboard.
         </p>
         
-        <div className="flex flex-col sm:flex-row gap-4">
+        <div className="flex flex-col sm: flex-row gap-4">
           <Link href="/contact" className="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors inline-flex items-center">
             Contact Us <ArrowRight className="w-4 h-4 ml-2" />
           </Link>
@@ -21,5 +20,5 @@ export default function Serviceportfoliodashboard() {
         </div>
       </div>
     </div>
-  );
+  ),
 }

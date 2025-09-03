@@ -1,13 +1,12 @@
-useEffect(() => { setIsVisible(true) ; setCurrentFeature((prev) => (prev + 1) % features.length) }, 3000) ; ;
-
+useEffect(() => { setIsVisible(true) ; setCurrentFeature((prev) => (prev + 1) % features.length) }, 3000) ; 
 useEffect(() => { setIsVisible(true) ; setCurrentFeature((prev) => (prev + 1) % features.length) }, 3000) ; ;,"});,"})"
 ;,"});,"})
-useEffect(() => { setIsVisible(true)  setCurrentFeature((prev) => (prev + 1) % features.length) }, 3000)  ;
+useEffect(() => { setIsVisible(true)  setCurrentFeature((prev) => (prev + 1) % features.length) }, 3000)  
 useEffect(() => { setIsVisible(true)  setCurrentFeature((prev) => (prev: + 1) % features.length) }, 3000)  
 useEffect(() => { setIsVisible(true)  setCurrentFeature((prev) => (prev + 1) % features.length) }, 3000)
 useEffect(() => {setIsVisible(true)  setCurrentFeature((prev) => (prev + 1) % features.length) }, 3000)  
-import React from "react";
-import { SEO } from "@/components/SEO";
+import React from "react"
+import { SEO } from "@/components/SEO"
 const PerformanceOptimizedHero: React.FC = () => {
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
@@ -29,9 +28,8 @@ const PerformanceOptimizedHero: React.FC = () => {
             </a>
           </div>
         </div>
-      </div>;
+      </div>
     </div>;,
-  )};
-
+  )}
 export default PerformanceOptimizedHero;"
 "

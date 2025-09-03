@@ -1,10 +1,9 @@
-import React from "react";
-      green: 'bg-green-100 text-green-600',;
-      purple: 'bg-purple-100 text-purple-600',;
+import React from "react"
+      green: 'bg-green-100 text-green-600',
+      purple: 'bg-purple-100 text-purple-600',
       red: 'bg-red-100 text-red-600'},
-    return colorMap[color] || 'bg-gray-100 text-gray-600;
-  };
-
+    return colorMap[color] || 'bg-gray-100 text-gray-600
+  }
   return (
     <MainLayout title = "Our Products - Zion Tech Group""
       description="Explore our innovative technology products including AI platforms, blockchain solutions, IoT management, and cybersecurity tools."
@@ -25,8 +24,8 @@ import React from "react";
       <section className="py-20">"
         <div className="container mx-auto px-4">"
           <div className="grid lg: grid-cols-2 gap-12">,,
-            {products.map((product, index) => {;
-              const IconComponent = product.icon;
+            {products.map((product, index) => {
+              const IconComponent = product.icon
               return ("
                 <div key = "{index}" className="bg-white rounded-lg p-8 shadow-lg hover: shadow-xl transition-shadow">"
                   <div className="{`flex" items-start mb-6`>",
@@ -129,8 +128,8 @@ import React from "react";
             </Link>
           </div>
         </div>
-      </section>;
+      </section>
     </MainLayout>;,
-  )};
+  )}
 "
-export default ProductsIndex;
+export default ProductsIndex

@@ -1,9 +1,9 @@
 const React = dynamic(() => import('react'), { ssr: false })
 const Head = dynamic(() => import('next/head'), { ssr: false })
 const Link = dynamic(() => import('next/link'), { ssr: false })
-      type: "Full-time",";
-      experience: "3+ years",";
-      description: "Build modern web applications using React, Node.js, and cloud technologies.";
+      type: "Full-time","
+      experience: "3+ years","
+      description: "Build modern web applications using React, Node.js, and cloud technologies."
 },
     {
       id: 4,"
@@ -12,7 +12,7 @@ const Link = dynamic(() => import('next/link'), { ssr: false })
       location: "Remote","
       type: "Full-time","
       experience: "4+ years","
-      description: "Manage infrastructure, CI/CD pipelines, and ensure system reliability.";
+      description: "Manage infrastructure, CI/CD pipelines, and ensure system reliability."
 },
     {
       id: 5,"
@@ -41,10 +41,10 @@ const Link = dynamic(() => import('next/link'), { ssr: false })
     "Team building events","
     "Unlimited PTO","
     "401(k) matching"
-  ];
-;
+  ]
+
   return (
-    <PageTransition>;
+    <PageTransition>
 <Head>
         <title>Join Our Team — Zion Tech Group</title>"
         <meta name = "description" content="Join Zion Tech Group and be part of a team that's shaping the future of technology. Explore our open positions and career opportunities." />"
@@ -212,4 +212,4 @@ vision of creating meaningful impact.
         </div>
       </section>
     </PageTransition>",
-  )};
+  )}

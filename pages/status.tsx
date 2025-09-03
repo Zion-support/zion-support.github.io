@@ -1,20 +1,18 @@
 const React = dynamic(() => import('react'), { ssr: false })
-  const getStatusIcon = (status: string) => {;
+  const getStatusIcon = (status: string) => {,
     switch (status) {,
       case 'operational': return <CheckCircle className="w-5 h-5 text-green-500" />,",
       case 'degraded': return <AlertCircle className = "w-5 h-5 text-yellow-500" />,"
-      case 'outage': return <XCircle className="w-5 h-5 text-red-500" />,";
-      default: return <Clock className="w-5 h-5 text-gray-500" />};
-  };
-
-  const getStatusColor = (status: string) => {;
+      case 'outage': return <XCircle className="w-5 h-5 text-red-500" />,"
+      default: return <Clock className="w-5 h-5 text-gray-500" />}
+  }
+  const getStatusColor = (status: string) => {,
     switch (status) {,
       case 'operational': return 'text-green-600 bg-green-100',',
       case 'degraded': return 'text-yellow-600 bg-yellow-100','
       case 'outage': return 'text-red-600 bg-red-100','
-      default: return 'text-gray-600 bg-gray-100'};
-  };
-
+      default: return 'text-gray-600 bg-gray-100'}
+  }
   const incidents = [
     {'
       id: 1, title: 'Scheduled Maintenance - API Services','
@@ -48,10 +46,10 @@ const React = dynamic(() => import('react'), { ssr: false })
           <div className="container mx-auto px-4">"
             <div className="text-center mb-12">"
               <div className="flex items-center justify-center mb-4">"
-                <CheckCircle className="w-12 h-12 text-green-500 mr-3" />";
-                <h2 className="text-3xl font-bold text-gray-900">All Systems Operational</h2>;
-              </div>";
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">;
+                <CheckCircle className="w-12 h-12 text-green-500 mr-3" />"
+                <h2 className="text-3xl font-bold text-gray-900">All Systems Operational</h2>
+              </div>"
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
                 All services are running normally. We&apos;re monitoring our systems 24/7 to ensure optimal performance.''
               </p>
             </div>
@@ -171,7 +169,7 @@ const React = dynamic(() => import('react'), { ssr: false })
                         <p className="text-gray-600 mb-2">{incident.description}</p>"
                         <div className="flex items-center text-sm text-gray-500">"
                           <span className="{`mr-4`">Date: {incident.date}</span>"
-                          <span className="{`px-2" py-1 rounded-full text-xs font-medium ${;
+                          <span className="{`px-2" py-1 rounded-full text-xs font-medium ${
                             incident.impact === 'minor' ? 'bg-yellow-100 text-yellow-800' : 'bg-red-100 text-red-800>
 }`}>
                             {incident.impact} impact,
@@ -244,6 +242,6 @@ const React = dynamic(() => import('react'), { ssr: false })
         </section>
       </div>
     </MainLayout>;,
-  )};
+  )}
 "
-export default Status;
+export default Status

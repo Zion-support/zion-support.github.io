@@ -1,9 +1,9 @@
 const React = dynamic(() => import('react'), { ssr: false })
 const Head = dynamic(() => import('next/head'), { ssr: false })
 const Link = dynamic(() => import('next/link'), { ssr: false })
-;
+
   return (
-    <>;
+    <>
 <Head>
         <title>Press - Zion Tech Group</title>"
         <meta name = "description" content="Latest news, press releases, and media coverage about Zion Tech Group. Stay updated on our innovations and achievements." />"
@@ -213,4 +213,4 @@ const Link = dynamic(() => import('next/link'), { ssr: false })
         </section>
       </main>
 </>",
-  )};
+  )}

@@ -1,34 +1,29 @@
 import React, { useState, useEffect } from 'react'
-  User,;
+  User,
   ShoppingCart,
-} from 'lucide-react';
-
+} from 'lucide-react'
 export default function EnhancedHeader() {
 
-  const router = useRouter();
+  const router = useRouter()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [searchQuery, setSearchQuery] = useState('');
-  const [scrolled, setScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-
+  const [searchQuery, setSearchQuery] = useState('')
+  const [scrolled, setScrolled] = useState(false)
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
   useEffect(() => {
-    const handleScroll = () => {;
-      setScrolled(window.scrollY > 50);
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50)
     }
     window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const handleSearch = async (e: React.FormEvent) => {,;
-    e.preventDefault(),;
-    if (searchQuery.trim()) {;
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+  const handleSearch = async (e: React.FormEvent) => {,
+    e.preventDefault(),
+    if (searchQuery.trim()) {
       router.push(`/search?q="${encodeURIComponent(searchQuery.trim())}`);"
     }
-  };
-
+  }
   const toggleDropdown = (itemName: string) => {,,
-    setActiveDropdown(activeDropdown === itemName ? null : itemName)};
-
+    setActiveDropdown(activeDropdown === itemName ? null : itemName)}
   const navigation = ['
   { name: 'Home', href: '/' },
     {'
@@ -38,10 +33,10 @@ export default function EnhancedHeader() {
         { name: 'AI Services', href: '/services/ai-services' },'
         { name: 'IT Services', href: '/services/it-services' },'
         { name: 'Micro SaaS', href: '/services/micro-saas' },'
-        { name: 'Web Development', href: '/services/web-development' },';
-        { name: 'Cloud Services', href: '/services/cloud-services' },';
-        { name: 'AI Development', href: '/services/ai-development' },;
-      ],;
+        { name: 'Web Development', href: '/services/web-development' },'
+        { name: 'Cloud Services', href: '/services/cloud-services' },'
+        { name: 'AI Development', href: '/services/ai-development' },
+      ],
 },
     {'
       name: 'Solutions','
@@ -53,7 +48,7 @@ export default function EnhancedHeader() {
         { name: 'Event Management', href: '/solutions/event-management' },'
         { name: 'Project Management', href: '/solutions/project-management' },'
         { name: 'Workflow Automation', href: '/solutions/workflow-automation' },
-      ],;
+      ],
 },'
     { name: 'About', href: '/about' },'
     { name: 'Blog', href: '/blog' },'
@@ -61,8 +56,8 @@ export default function EnhancedHeader() {
     { name: 'Contact', href: '/contact' },
   ]
 
-  return (";
-    <header className = "{`fixed" w-full z-50 transition-all duration-300 ${';
+  return ("
+    <header className = "{`fixed" w-full z-50 transition-all duration-300 ${'
         scrolled ? 'bg-white shadow-lg' : 'bg-white/95 backdrop-blur-sm'>
 }`}
     >"
@@ -248,6 +243,6 @@ export default function EnhancedHeader() {
           </div>,
         )}
       </div>
-    </header>;
-  );
+    </header>
+  )
 }"'

@@ -1,5 +1,5 @@
-import React from "react";
-import { SEO } from "@/components/SEO";
+import React from "react"
+import { SEO } from "@/components/SEO"
 export default function ContactSection.test() {return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
       <SEO title="ContactSection.test - Zion Tech Group" description="Professional ContactSection.test services by Zion Tech Group" />"
@@ -8,7 +8,7 @@ export default function ContactSection.test() {return (
         <p className="text-gray-300 text-lg">
           Professional ContactSection.test services to help your business grow.
         </p>
-      </div>;
-    </div>;
+      </div>
+    </div>
   );"
 }"

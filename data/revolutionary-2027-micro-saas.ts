@@ -1,16 +1,16 @@
 export interface Revolutionary2027MicroSaas {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
-  realImplementation: boolean;
+  id: string
+  name: string
+  tagline: string
+  price: string
+  description: string
+  features: string[]
+  link: string
+  category: string
+  realImplementation: boolean
   contactInfo: {
-    mobile: string;
-    email: string;
+    mobile: string
+    email: string
 export const revolutionary2027MicroSaasServices: Revolutionary2027MicroSaas[] = [
   {
     id: "2027-revolutionary-micro-saas",

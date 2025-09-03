@@ -15,29 +15,24 @@ export default function RequestQuote() {
     timeline: '','
     budget: '','
     description: '','
-    requirements: ''});
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
+    requirements: ''})
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSubmitted, setIsSubmitted] = useState(false)
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {,,
-    const { name, value } = e.target;
+    const { name, value } = e.target
     setFormData(prev = > ({
-      ...prev,;
-      [name]: value}));
-  };
-
+      ...prev,
+      [name]: value}))
+  }
   const handleSubmit = async (e: React.FormEvent) => {,
     e.preventDefault(),
-    setIsSubmitting(true),;
-    ;
-    // Simulate API call,;
-await new Promise(resolve => setTimeout(resolve, 2000));
+    setIsSubmitting(true),
     
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-  };
-
+    // Simulate API call,
+await new Promise(resolve => setTimeout(resolve, 2000))
+    setIsSubmitting(false)
+    setIsSubmitted(true)
+  }
   const serviceTypes = ['
     'AI & Machine Learning','
     'Micro SAAS Development','
@@ -86,10 +81,10 @@ await new Promise(resolve => setTimeout(resolve, 2000));
       title: 'Quick Start','
       description: 'Begin your project immediately'}
   ]
-;
-  if (isSubmitted) {;
+
+  if (isSubmitted) {
     return (
-      <>;
+      <>
 <Head>
           <title>Quote Request Submitted - Zion Tech Group</title>'
           <meta name = "description" content="Your quote request has been submitted successfully. We'll get back to you within 24 hours." />
@@ -147,7 +142,7 @@ initial="{{" scale: 0 }}"
     )}
 
   return (
-    <>;
+    <>
 <Head>
         <title>Request a Quote - Zion Tech Group</title>"
         <meta name = "description" content="Get a personalized quote for your technology project. Fast response, competitive pricing, expert team." />
@@ -446,4 +441,4 @@ rows="{4}""
         </div>
       </div>
     </>",
-  )};
+  )}

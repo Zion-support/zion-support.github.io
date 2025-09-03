@@ -1,5 +1,5 @@
 import { type ClassValue, clsx } from 'clsx'
 export function cn(...inputs: ClassValue[]) {,
-  return twMerge(clsx(inputs))};
+  return twMerge(clsx(inputs))}
 export default function Page() {""'
 "

@@ -1,14 +1,13 @@
 const React = dynamic(() => import('react'), { ssr: false })
 const Head = dynamic(() => import('next/head'), { ssr: false })
-const Link = dynamic(() => import('next/link'), { ssr: false });
+const Link = dynamic(() => import('next/link'), { ssr: false })
   Satellite,
   Mic} from 'lucide - react',
 const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: false })
 
 export default function MicroSaaS() {'
-  const title = 'Micro SaaS Solutions — Zion Tech Group';
-  const description = 'Custom micro SaaS applications and software solutions tailored to your business needs. Scalable, secure, and innovative.;
-
+  const title = 'Micro SaaS Solutions — Zion Tech Group'
+  const description = 'Custom micro SaaS applications and software solutions tailored to your business needs. Scalable, secure, and innovative.
   const microSaaSServices = [
   {'
       title: 'AI-Powered Email Responder','
@@ -1334,10 +1333,10 @@ export default function MicroSaaS() {'
       description: 'Tailored to your specific needs',
       icon: Settings,'
       stat: '100%'}
-  ];
-;
+  ]
+
   return (
-    <PageTransition>;
+    <PageTransition>
 <Head>
         <title>{title}</title>
         <meta name = "description content="{description}" />"
@@ -1567,4 +1566,4 @@ className="text-sm" font-semibold leading-6 text-white hover: text-orange-100"
         </div>
       </section>
     </PageTransition>",
-  )};
+  )}

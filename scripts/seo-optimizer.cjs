@@ -1,19 +1,18 @@
 #!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
-
+const fs = require('fs')
+const path = require('path')
 class SEOOptimizer {
   constructor() {
-    this.projectRoot = process.cwd();
-    this.seoEnhancements = [];
+    this.projectRoot = process.cwd()
+    this.seoEnhancements = []
   }
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
+    console.log(`[${new Date().toISOString()}] ${message}`)
   }
 
   async createRobotsTxt() {
-    this.log('🤖 Creating robots.txt...');
+    this.log('🤖 Creating robots.txt...')
     try {
       const robotsContent = `User-agent: *
 Allow: /
@@ -31,18 +30,17 @@ Allow: /services/
 Allow: /solutions/
 Allow: /blog/
 Allow: /about/
-Allow: /contact/`;
-
-      fs.writeFileSync(path.join(this.projectRoot, 'public', 'robots.txt'), robotsContent);
-      this.seoEnhancements.push('robots.txt created');
-      this.log('✅ robots.txt created successfully');
+Allow: /contact/`
+      fs.writeFileSync(path.join(this.projectRoot, 'public', 'robots.txt'), robotsContent)
+      this.seoEnhancements.push('robots.txt created')
+      this.log('✅ robots.txt created successfully')
     } catch (error) {
-      this.log(`❌ Failed to create robots.txt: ${error.message}`);
+      this.log(`❌ Failed to create robots.txt: ${error.message}`)
     }
   }
 
   async createSitemap() {
-    this.log('🗺️ Creating sitemap...');
+    this.log('🗺️ Creating sitemap...')
     try {
       const sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -76,18 +74,17 @@ Allow: /contact/`;
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-</urlset>`;
-
-      fs.writeFileSync(path.join(this.projectRoot, 'public', 'sitemap.xml'), sitemapContent);
-      this.seoEnhancements.push('sitemap.xml created');
-      this.log('✅ sitemap.xml created successfully');
+</urlset>`
+      fs.writeFileSync(path.join(this.projectRoot, 'public', 'sitemap.xml'), sitemapContent)
+      this.seoEnhancements.push('sitemap.xml created')
+      this.log('✅ sitemap.xml created successfully')
     } catch (error) {
-      this.log(`❌ Failed to create sitemap: ${error.message}`);
+      this.log(`❌ Failed to create sitemap: ${error.message}`)
     }
   }
 
   async createManifest() {
-    this.log('📱 Creating web app manifest...');
+    this.log('📱 Creating web app manifest...')
     try {
       const manifestContent = {
         name: "Zion Tech Group",
@@ -109,30 +106,27 @@ Allow: /contact/`;
             type: "image/png"
           }
         ]
-      };
-
+      }
       fs.writeFileSync(
         path.join(this.projectRoot, 'public', 'manifest.json'),
         JSON.stringify(manifestContent, null, 2)
-      );
-      this.seoEnhancements.push('manifest.json created');
-      this.log('✅ manifest.json created successfully');
+      )
+      this.seoEnhancements.push('manifest.json created')
+      this.log('✅ manifest.json created successfully')
     } catch (error) {
-      this.log(`❌ Failed to create manifest: ${error.message}`);
+      this.log(`❌ Failed to create manifest: ${error.message}`)
     }
   }
 
   async run() {
-    this.log('🚀 Starting SEO optimization...');
-    
-    await this.createRobotsTxt();
-    await this.createSitemap();
-    await this.createManifest();
-    
-    this.log(`✅ SEO optimization completed. Enhancements: ${this.seoEnhancements.join(', ')}`);
+    this.log('🚀 Starting SEO optimization...')
+    await this.createRobotsTxt()
+    await this.createSitemap()
+    await this.createManifest()
+    this.log(`✅ SEO optimization completed. Enhancements: ${this.seoEnhancements.join(', ')}`)
   }
 }
 
 // Run the SEO optimizer
-const seoOptimizer = new SEOOptimizer();
-seoOptimizer.run().catch(console.error);
+const seoOptimizer = new SEOOptimizer()
+seoOptimizer.run().catch(console.error)

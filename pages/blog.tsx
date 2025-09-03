@@ -25,9 +25,9 @@ id: 1,
       title: "Cloud Migration Best Practices: A Complete Guide","
       excerpt: "Learn the essential steps and best practices for successful cloud migration in your organization.","
       date: "2024-01-05","
-      author: "Zion Tech Team",";
+      author: "Zion Tech Team","
       category: "Cloud Services",,
-    };
+    }
   ]'
 
   return ("
@@ -116,7 +116,7 @@ id: 1,
         </section>
       </div>
     </MainLayout>;,
-  ),;
-};
+  ),
+}
 "
-export default Blog;
+export default Blog

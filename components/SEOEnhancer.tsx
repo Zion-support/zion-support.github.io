@@ -2,11 +2,11 @@ import React from 'react'
 
 interface SEOEnhancerProps {
 
-  title?: string;
-  description?: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
+  title?: string
+  description?: string
+  keywords?: string
+  image?: string
+  url?: string
   type?: string}
 
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({',
@@ -16,9 +16,8 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({',
   image = '/images/zion-tech-group-og.jpg','
   url = 'https://ziontechgroup.com','
   type = 'website'
-}) => {';
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  
+}) => {'
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
   return (
 <Head>
       <title>{fullTitle}</title>
@@ -41,9 +40,9 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({',
       <meta name="twitter:description content="{description}" />"
       <meta name=twitter:image" content="{image}" />
       "
-      <link rel="canonical" href="{url}" />;
-    </Head>;
-  );
-};
+      <link rel="canonical" href="{url}" />
+    </Head>
+  )
+}
 "'
-export default SEOEnhancer;
+export default SEOEnhancer

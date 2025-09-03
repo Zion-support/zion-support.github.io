@@ -183,15 +183,15 @@ export function ServicesComparisonTable() {}"""
 '''''
   const serviceCategories = ['AI Services', IT Services',Micro SAAS']
   const getFeatureIcon = hasFeature => {}"
-    return hasFeature ? (""";
-      <Check className="w-4 h-4 text-green-500" /" >'''';
-    ) : ('''';
-      <X className="w-4 h-4 text-red-500" /" >"";
+    return hasFeature ? ("""
+      <Check className="w-4 h-4 text-green-500" /" >''''
+    ) : (''''
+      <X className="w-4 h-4 text-red-500" /" >""
     );", "
 }'
-      <X className = "w-4 h-4 text-red-500" /" >";
+      <X className = "w-4 h-4 text-red-500" /" >"
     );"}'
-  return();
+  return()
             const avgPrice = services.reduce((sum, service) => sum + (service.price || 0), 0) /
               services.length,"
 return()""
@@ -333,9 +333,9 @@ your business needs"
                         className="border-blue-500 text-blue-600 ">"
                         {service.category}"""
                     <Button className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover: from-blue-700 hover:to-indigo-700">
-                      Learn More,;
+                      Learn More,
               );,
-            )}";
+            )}"
   )}'"""
 }''''
 '''''';"

@@ -1,4 +1,4 @@
-import { Helmet  } from 'react - helmet-async', SEOProps {title?: string;description?: string;
+import { Helmet  } from 'react - helmet-async', SEOProps {title?: string;description?: string
 export const SEO: React.FC < SEOProps> = ({,
 '
 export default function Page() {
@@ -7,21 +7,21 @@ export default function Page() {
 
 interface SEOProps {
 
-  title?: string;
-  description?: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
+  title?: string
+  description?: string
+  keywords?: string
+  image?: string
+  url?: string
   type?: string},
 title = 'Zion Tech Group - Leading Technology Solutions', description = 'Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.', keywords = 'AI, cybersecurity, cloud infrastructure, digital transformation, technology solutions, Zion Tech Group', image = '/og - image.svg','  url = 'https: //ziontechgroup.com', type = 'website''}) => {'  return (
-    <Helmet>;
-      {/*   */};
-      <title>{title}</title>;
+    <Helmet>
+      {/*   */}
+      <title>{title}</title>
       <meta name="description" content="{description}" / />"      <meta name="keywords" content="{keywords}" / />"      <meta name="author" content="Zion Tech Group" / />"      <meta name="robots" content="index, follow" / />"      <link rel="canonical" href="{url}" / />""      {/*   */}";"
       <meta property="og: type" content="{type}" / />"      <meta property="og:url" content="{url}" / />"      <meta property="og:title" content="{title}" / />"      <meta property="og:description" content="{description}" / />"      <meta property="og:image" content="{image}" / />"      <meta property="og:site_name" content="Zion Tech Group" / />""      {/*   */}"";"
       <meta property="twitter:card" content="summary_large_image" / />"      <meta property="twitter:url" content="{url}" / />"      <meta property="twitter:title" content="{title}" / />"      <meta property="twitter:description" content="{description}" / />"      <meta property="twitter:image" content="{image}" / />""      {/*   */}";"
       <meta name="viewport" content="width = device - width, initial - scale = 1.0" / />"      <meta httpEquiv="X - UA - Compatible" content="IE = edge" / />"      "      {/*   */}"";"
-      <script type="application / ld + json">"        {JSON.stringify ({"          "@context": "https://schema.org", "@type": "Organization","          "name": "Zion Tech Group", "url": "https://ziontechgroup.com","          "logo": "https://ziontechgroup.com / logo.svg", "description": description,"          "sameAs": ["            "https://linkedin.com / company / zion - tech - group", "https: //twitter.com / ziontechgroup""          ], "contactPoint": {"            "@type": "ContactPoint","            "telephone": "+1 - 555 - ZION - TECH", "contactType": "customer service""          }"        }) }</script></Helmet>";) ;"
+      <script type="application / ld + json">"        {JSON.stringify ({"          "@context": "https://schema.org", "@type": "Organization","          "name": "Zion Tech Group", "url": "https://ziontechgroup.com","          "logo": "https://ziontechgroup.com / logo.svg", "description": description,"          "sameAs": ["            "https://linkedin.com / company / zion - tech - group", "https: //twitter.com / ziontechgroup""          ], "contactPoint": {"            "@type": "ContactPoint","            "telephone": "+1 - 555 - ZION - TECH", "contactType": "customer service""          }"        }) }</script></Helmet>") ;"
 };";"
 ursor/automate-test-fix-improve-and-merge-code-99d1,"});,"})","});,"})"
 ;,"});,"})"
@@ -34,45 +34,45 @@ interface SEOProps {;,"});,"})"
   image?: string,"});,"})"
   url?: string,"});,"})"
   type?: string,"});,"})"
-ursor/automate-test-fix-improve-and-merge-code-99d1,"});,"})interface SEOProps {;
-  title?: string;
+ursor/automate-test-fix-improve-and-merge-code-99d1,"});,"})interface SEOProps {
+  title?: string
   description?: string,
 export default function Page() {
 
 export default function Page() {
 
-interface SEOProps {;
-  title?: string;
-   description?: string;
-   keywords?: string;
-   image?: string;
-   url?: string;
+interface SEOProps {
+  title?: string
+   description?: string
+   keywords?: string
+   image?: string
+   url?: string
    type?: string}
 export const SEO: React.FC<SEOProps> = ({,
 ursor/automate-test-fix-improve-and-merge-code-48f3,
     <Helmet>      {/*   */}
       <title>{title}</title>;"
-      <meta name = 'description' content="{description}" />'      <meta name='keywords' content="{keywords}" />'      <meta name='author' content='Zion Tech Group' />'      <meta name='robots' content='index, follow' />'      <link rel='canonical' href="{url}" />'      {/*   */}";
+      <meta name = 'description' content="{description}" />'      <meta name='keywords' content="{keywords}" />'      <meta name='author' content='Zion Tech Group' />'      <meta name='robots' content='index, follow' />'      <link rel='canonical' href="{url}" />'      {/*   */}"
       <meta property='og: type' content="{type}" />'      <meta property='og:url' content="{url}" />'      <meta property='og:title' content="{title}" />'      <meta property='og:description' content="{description}" />'      <meta property='og:image' content="{image}" />'      <meta property='og:site_name' content='Zion Tech Group' />'      {/*   */}';"
-      <meta property = 'twitter:card' content='summary_large_image' />'      <meta property='twitter:url' content="{url}" />'      <meta property='twitter:title' content="{title}" />'      <meta property='twitter:description' content="{description}" />'      <meta property='twitter:image' content="{image}" />'      {/*   */}";
+      <meta property = 'twitter:card' content='summary_large_image' />'      <meta property='twitter:url' content="{url}" />'      <meta property='twitter:title' content="{title}" />'      <meta property='twitter:description' content="{description}" />'      <meta property='twitter:image' content="{image}" />'      {/*   */}"
       <meta name='viewport' content='width="device - width," initial-scale=1.0' />'      <meta httpEquiv='X-UA-Compatible' content='IE=edge' />'      '      {/*   */}',
-      <script type = 'application/ld+json'>'        {JSON.stringify({'          '@context': 'https://schema.org', '@type': 'Organization','          'name': 'Zion Tech Group', 'url': 'https://ziontechgroup.com','          'logo': 'https://ziontechgroup.com/logo.svg', 'description': description,'          'sameAs': ['            'https://linkedin.com/company/zion-tech-group', 'https: //twitter.com/ziontechgroup'          ], 'contactPoint': {'            '@type': 'ContactPoint','            'telephone': '+1-555-ZION-TECH', 'contactType': 'customer service'          }'        })}</script></Helmet>')};
+      <script type = 'application/ld+json'>'        {JSON.stringify({'          '@context': 'https://schema.org', '@type': 'Organization','          'name': 'Zion Tech Group', 'url': 'https://ziontechgroup.com','          'logo': 'https://ziontechgroup.com/logo.svg', 'description': description,'          'sameAs': ['            'https://linkedin.com/company/zion-tech-group', 'https: //twitter.com/ziontechgroup'          ], 'contactPoint': {'            '@type': 'ContactPoint','            'telephone': '+1-555-ZION-TECH', 'contactType': 'customer service'          }'        })}</script></Helmet>')}
   &apos;react-helmet-async&apos;interface SEOProps {
 
-  title?: string;
-  description?: string,react-helmet-async';&apos;&apos;
+  title?: string
+  description?: string,react-helmet-async';&apos;&apos
 export default function Page() {}
 export default function Page() {
 
 interface SEOProps ;{'
 
-interface SEOProps {title?: string;
+interface SEOProps {title?: string
 interface SEOProps {
 
-  title?: string;
-  description?: string;
-  keywords?: string;
-  image?: string;
+  title?: string
+  description?: string
+  keywords?: string
+  image?: string
   url?: string'
   type?: string}
 "
@@ -101,10 +101,10 @@ export const SEO: React.FC<SEOProps> = ({""",
 export const SEO: React.FC<SEOProps> = ({'',
 export const SEO: React.FC<SEOProps> = ({title = 'Zion Tech Group - Leading Technology Solutions Provider','
   description = 'Leading technology solutions provider offering AI services, IT services, and micro SaaS solutions. Enterprise-grade infrastructure and development services.','
-  keywords = 'technology solutions, AI services, IT services, micro SaaS, enterprise software, cloud services, cybersecurity',;
-  image = 'https: //ziontechgroup.com/og-image.jpg',;
-  url = 'https: //ziontechgroup.com',;
-  type = 'website;
+  keywords = 'technology solutions, AI services, IT services, micro SaaS, enterprise software, cloud services, cybersecurity',
+  image = 'https: //ziontechgroup.com/og-image.jpg',
+  url = 'https: //ziontechgroup.com',
+  type = 'website
 }) => {const structuredData = {'
     '@context': 'https: //schema.org',
 export function SEO({'
@@ -115,18 +115,18 @@ export function SEO({'
     'cybersecurity', 'digital transformation','
     'machine learning', 'enterprise software','
     'IT consulting', 'Zion Tech Group''
-  ], author = 'Zion Tech Group',;
-  publishedTime, modifiedTime,;
-  noindex = false}: SEOProps) {;
-  const router = useRouter();
-  const canonicalUrl = url || `https: //ziontechgroup.com${router.asPath}`;
+  ], author = 'Zion Tech Group',
+  publishedTime, modifiedTime,
+  noindex = false}: SEOProps) {
+  const router = useRouter()
+  const canonicalUrl = url || `https: //ziontechgroup.com${router.asPath}`
 export const SEO: React.FC<SEOProps> = ({',
   title = 'Zion Tech Group - Leading Technology Solutions','
   description = 'Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.','
   keywords = 'AI, cybersecurity, cloud infrastructure, digital transformation, technology solutions, Zion Tech Group','
   image = '/og-image.svg','
-  url = 'https://ziontechgroup.com',;
-  type = 'website;
+  url = 'https://ziontechgroup.com',
+  type = 'website
 }) => {
   return(<Helmet>
       {/*   */}
@@ -147,11 +147,11 @@ title = 'Zion Tech Group - Leading Technology Solutions', description = 'Leading
   url = 'https://ziontechgroup.com','
   type = 'website'
 ursor/automate-test-fix-improve-and-merge-code-48f3}
-    <Helmet>      {/*   */};
-      <title>{title}</title>";
+    <Helmet>      {/*   */}
+      <title>{title}</title>"
       <;<meta name="&apos;description&apos;" content="{description}" />&apos;&apos,      <meta name="&apos;keywords&apos;" content="{keywords}" />&apos;&apos,      <meta name="&apos;author&apos;" content="&apos;Zion" Tech Group&apos; />&apos;&apos,      <meta name="&apos;robots&apos;" content="&apos;index," follow&apos; />&apos;&apos,      <link rel="&apos;canonical&apos;" href="{url}" />&apos;&apos;      {/*   */}&apos;&apos;"
-      <meta property="&apos;og:" type&apos, content="{type}" />&apos;&apos,      <meta property="&apos;og:" url&apos, content="{url}" />&apos;&apos,      <meta property="&apos;og:" title&apos, content="{title}" />&apos;&apos,      <meta property="&apos;og:" description&apos, content="{description}" />&apos;&apos,      <meta property="&apos;og:" image&apos, content="{image}" />&apos;&apos,      <meta property="&apos;og: " site_name&apos; content="&apos,Zion" Tech Group&apos, />&apos,&apos,      {/*   */}&apos;&apos,"
-      <meta property="&apos;twitter: " card&apos; content="&apos;summary_large_image&apos," />&apos,&apos,'      <meta property="&apos,twitte,r:" url&apos, content="{url}" />&apos;&apos,      <meta property="&apos;twitter:" title&apos, content="{title}" />&apos;&apos,      <meta property="&apos;twitter:" description&apos, content="{description}" />&apos;&apos,      <meta property="&apos;twitter:" image&apos, content="{image}" />&apos;&apos;      {/*   */}&apos;&apos;"
+      <meta property="&apos;og:" type&apos, content="{type}" />&apos;&apos,      <meta property="&apos;og:" url&apos, content="{url}" />&apos;&apos,      <meta property="&apos;og:" title&apos, content="{title}" />&apos;&apos,      <meta property="&apos;og:" description&apos, content="{description}" />&apos;&apos,      <meta property="&apos;og:" image&apos, content="{image}" />&apos;&apos,      <meta property="&apos;og: " site_name&apos, content="&apos,Zion" Tech Group&apos, />&apos,&apos,      {/*   */}&apos;&apos,"
+      <meta property="&apos;twitter: " card&apos; content="&apos,summary_large_image&apos," />&apos,&apos,'      <meta property="&apos,twitte,r:" url&apos, content="{url}" />&apos;&apos,      <meta property="&apos;twitter:" title&apos, content="{title}" />&apos;&apos,      <meta property="&apos;twitter:" description&apos, content="{description}" />&apos;&apos,      <meta property="&apos;twitter:" image&apos, content="{image}" />&apos;&apos;      {/*   */}&apos;&apos;"
       <meta name="&apos;viewport&apos;" content="&apos;width=device-width," initial-scale="1.0&apos;" />&apos;&apos,      <meta httpEquiv="&apos;X-UA-Compatible&apos;" content="&apos;IE=edge&apos;" />&apos;      &apos;      {/*   */}&apos;&apos,"
       <script type="&apos;application/ld+json&apos;">&apos;        {JSON.stringify({&apos;          &apos;@context&apos;: &apos;https: //schema.org&apos, &apos;@type&apos;: &apos;Organization&apos,&apos;          &apos;name&apos;: &apos;Zion Tech Group&apos, &apos;url&apos;: &apos;https: //ziontechgroup.com&apos,&apos;          &apos;logo&apos;: &apos;https: //ziontechgroup.com/logo.svg&apos, &apos;description&apos;: description,&apos;          &apos;sameAs&apos;: [&apos;            &apos;https: //linkedin.com/company/zion-tech-group&apos, &apos;https: //twitter.com/ziontechgroup&apos,&apos], &apos;contactPoint&apos;: {&apos;            &apos;@type&apos;: &apos;ContactPoint&apos,&apos;            &apos;telephone&apos;: &apos;+1-555-ZION-TECH&apos, &apos;contactType&apos;: &apos;customer service&apos;&apos}&apos})}&apos;&apos;</script></Helmet>&apos)}';''
   title = 'Zion Tech Group - Leading Technology Solutions Provider','
@@ -176,10 +176,10 @@ ursor/automate-test-fix-improve-and-merge-code-48f3}
       'https: //twitter.com/ziontechgroup'',
       'https://twitter.com/ziontechgroup'],'
     'contactPoint': {''
-      '@type': 'ContactPoint',;
-      'telephone': '+1-302-464-0950',;
-      'contactType': 'customer service',;
-      'email': 'kleber@ziontechgroup.com;
+      '@type': 'ContactPoint',
+      'telephone': '+1-302-464-0950',
+      'contactType': 'customer service',
+      'email': 'kleber@ziontechgroup.com
 },'
     'address': {'
       '@type': 'PostalAddress','
@@ -189,8 +189,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3}
       'postalCode': '19709','
       'addressCountry': 'US''
       'contactType': 'customer service'}
-  };
-
+  }
   return (
 <Head>
       {/*   */}'
@@ -356,8 +355,8 @@ ursor/automate-test-fix-improve-and-merge-code-48f3}
           ],"
           "contactPoint": {"
             "@type": "ContactPoint","
-            "telephone": "+1-555-ZION-TECH",";
-            "contactType": "customer service";
+            "telephone": "+1-555-ZION-TECH","
+            "contactType": "customer service"
 }
         })}
       </script>
@@ -365,17 +364,17 @@ ursor/automate-test-fix-improve-and-merge-code-48f3}
       <script type = "application/ld+json">
         {JSON.stringify(structuredData)}
       </script>
-    </Helmet>;
+    </Helmet>
   );"
 };"
   title = 'Zion Tech Group - Advanced AI Solutions','
   description = 'Leading provider of AI-powered solutions, cloud infrastructure, and digital transformation services.','
   keywords = 'AI, artificial intelligence, cloud computing, digital transformation, automation','
   image = '/og-image.jpg','
-  url = 'https: //ziontechgroup.com',;
-  type = 'website;
-}) => {return (";
-  );};"""
+  url = 'https: //ziontechgroup.com',
+  type = 'website
+}) => {return ("
+  )};"""
   title = 'Zion Tech Group - Advanced AI Solutions', """
   description = 'Leading provider of AI-powered solutions, cloud infrastructure, and digital transformation services.',"""
   keywords = 'AI, artificial intelligence, cloud computing, digital transformation, automation', """
@@ -441,13 +440,13 @@ ursor/automate-test-fix-improve-and-merge-code-48f3}
       <link rel="canonical" href="{url}" /" >""
       <meta name="robots" content="index, follow" /" >""
       <meta name="author" content="Zion Tech Group" /" >"
-    </Head>;
-  );};
+    </Head>
+  )}
 "
 "
 export default SEO;"
 ""
-  );
-};
+  )
+}
 };"
 "

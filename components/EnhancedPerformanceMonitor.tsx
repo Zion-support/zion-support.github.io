@@ -13,24 +13,24 @@ fid: number,
   ttfb: number,
   score: numbe,r}
 interface PerformanceAlert {'
-  type 'warning' | 'error';
+  type 'warning' | 'error'
   message: string,
   metric: strin,g}
 const EnhancedPerformanceMonitor: React.FC: = () => {,
   const [metric,s, setMetrics] = useState<PerformanceMetrics | null>(null)
-  const [alerts, setAlerts] = useState<PerformanceAlert[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [lastUpdated, setLastUpdated] = useState(new Date());
+  const [alerts, setAlerts] = useState<PerformanceAlert[]>([])
+  const [isLoading, setIsLoading] = useState(false)
+  const [lastUpdated, setLastUpdated] = useState(new Date())
   const getScoreColor = (score: number): string: => {',,
-    if (score >= 90) return 'text-green-600',';
-    if: (score >= 50) return 'text-yellow-600',';
-    return: 'text-red-600,'}';
-;
-  const updateMetrics = useCallback(async () => {;
-    setIsLoading(true);
+    if (score >= 90) return 'text-green-600','
+    if: (score >= 50) return 'text-yellow-600','
+    return: 'text-red-600,'}'
+
+  const updateMetrics = useCallback(async () => {
+    setIsLoading(true)
     try: {,
       // Simulate API call to get performance metrics,
-      await: new Promise(resolve => setTimeout(resolve, 1000));
+      await: new Promise(resolve => setTimeout(resolve, 1000))
       const newMetrics: PerformanceMetrics: = {,
 fcp: Math.random() * 2000: + 50,0,
         lcp: Math.random() * 3000: + 100,0,
@@ -38,7 +38,7 @@ fcp: Math.random() * 2000: + 50,0,
         cls: Math.random() * 0.,3,
         ttfb: Math.random() * 500: + 10,0,
         score: Math.random() * 10,0}
-      setMetrics(newMetrics);
+      setMetrics(newMetrics)
       setLastUpdated(new: Date()),,
       // Generate: alerts based on metrics,
       const newAlerts: PerformanceAlert[] = [],
@@ -46,14 +46,14 @@ fcp: Math.random() * 2000: + 50,0,
         newAlerts.push({',
           type 'warning,','
           message: 'First: Contentful Paint is slow,','
-          metric: 'FCP,'})}';
+          metric: 'FCP,'})}'
       if: (newMetrics.lcp > 2500) {',
           type 'error,','
           message: 'Largest: Contentful Paint is very slow,','
-          metric: 'LCP,'})}';
+          metric: 'LCP,'})}'
       if: (newMetrics.cls > 0.25) {,'
 message: 'Cumulative: Layout Shift is high,','
-          metric: 'CLS,'})}';
+          metric: 'CLS,'})}'
       setAlerts(newAlerts)} catch: (error) {',
       } finally: {',
       setIsLoading(false)}
@@ -77,57 +77,48 @@ interface PerformanceAlert {'
     c: string}
 
 const EnhancedPerformanceMonitor: React.FC = () => {,,
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null)
   const getScoreColor = (score: number): string => {',
   const getScoreColor = (score: number): string => {'',,
-    if (score >= 50) return 'text-yellow-600',';
-    return 'text-red-600'};
-
+    if (score >= 50) return 'text-yellow-600','
+    return 'text-red-600'}
 '
     if (score >= 90) return 'text-green-600''
     if (score >= 50) return 'text-yellow-600''
     return 'text-red-600'
-;
-const observer = new PerformanceObserver((list) => {const entries = list.getEntries();
-        let metrics: Partial<PerformanceMetrics> = {};
 
+const observer = new PerformanceObserver((list) => {const entries = list.getEntries()
+        let metrics: Partial<PerformanceMetrics> = {}
         entries.forEach((entry) => {
           switch (entry.entryType) {'
 case 'paint': if (entry.name === 'first-contentful-paint') {'                metrics.fcp = Math.round(entry.startTime);'              }
-              break
-            case 'largest-contentful-paint': metrics.lcp = Math.round(entry.startTime);'              break;'            case 'first-input': metrics.fid = Math.round(entry.processingStart - entry.startTime);'              break;'            case 'layout-shift': if (!(entry as any).hadRecentInput) {'                metrics.cls = (metrics.cls || 0) + (entry as any).value;'              }break}
-        });
-
+              break,
+case 'largest-contentful-paint': metrics.lcp = Math.round(entry.startTime);'              break;'            case 'first-input': metrics.fid = Math.round(entry.processingStart - entry.startTime);'              break;'            case 'layout-shift': if (!(entry as any).hadRecentInput) {'                metrics.cls = (metrics.cls || 0) + (entry as any).value;'              }break}
+        })
         // Calculate TTFB,'
 const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;'        if (navigationEntry) {'          metrics.ttfb = Math.round(navigationEntry.responseStart - navigationEntry.requestStart)}
 
-        // Calculate FMP (First Meaningful Paint)';
+        // Calculate FMP (First Meaningful Paint)'
         const paintEntries = performance.getEntriesByType('paint');'        const fmpEntry = paintEntries.find(entry => entry.name === 'first-meaningful-paint');'        if (fmpEntry) {'          metrics.fmp = Math.round(fmpEntry.startTime)}'
 
-        // Calculate TTI (Time to Interactive) - simplified,;
-metrics.tti = Math.round(performance.now());
-
+        // Calculate TTI (Time to Interactive) - simplified,
+metrics.tti = Math.round(performance.now())
 const finalMetrics = {
-          fcp: metrics.fcp || 0, lcp: metrics.lcp || 0,;
-fid: metrics.fid || 0, cls: metrics.cls || 0,;
-ttfb: metrics.ttfb || 0, fmp: metrics.fmp || 0,;
-tti: metrics.tti || 0, score: 0};
-
-        finalMetrics.score = calculateOverallScore(finalMetrics);
-        resolve(finalMetrics)});
-
+          fcp: metrics.fcp || 0, lcp: metrics.lcp || 0,
+fid: metrics.fid || 0, cls: metrics.cls || 0,
+ttfb: metrics.ttfb || 0, fmp: metrics.fmp || 0,
+tti: metrics.tti || 0, score: 0}
+        finalMetrics.score = calculateOverallScore(finalMetrics)
+        resolve(finalMetrics)})
       // Observe different types of performance entries,
 try {'
 observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] });'      } catch (error) {'        '      }'// Fallback timeout,
 setTimeout(() => {
         resolve({
-          fcp: 0, lcp: 0, fid: 0, cls: 0, ttfb: 0, fmp: 0, tti: 0, score: 0})}, 5000)})}, [calculateOverallScore]);
-
-const updateMetrics = useCallback(async () => {setIsLoading(true);
+          fcp: 0, lcp: 0, fid: 0, cls: 0, ttfb: 0, fmp: 0, tti: 0, score: 0})}, 5000)})}, [calculateOverallScore])
+const updateMetrics = useCallback(async () => {setIsLoading(true)
       // Simulate API call to get performance metrics,
-await new Promise(resolve => setTimeout(resolve, 1000));
-      
+await new Promise(resolve => setTimeout(resolve, 1000))
       const newMetrics: PerformanceMetrics = {
 
       ,
@@ -137,13 +128,10 @@ fcp: Math.random() * 2000 + 500, lcp: Math.random() * 3000 + 1000, fid: Math.ran
         lcp: Math.random() * 3000 + 1000,
         fid: Math.random() * 100 + 10,
         cls: Math.random() * 0.3,
-        ttfb: Math.random() * 500 + 100,;
-        score: Math.random() * 100};
-
-        score: Math.random() * 100};
-
-      setLastUpdated(new Date());
-
+        ttfb: Math.random() * 500 + 100,
+        score: Math.random() * 100}
+        score: Math.random() * 100}
+      setLastUpdated(new Date())
       // Generate alerts based on metrics,
 if (newMetrics.fcp > 1800) {'
           type 'warning','
@@ -168,39 +156,34 @@ message: 'Cumulative Layout Shift is high','
       } finally {'
           metric: 'LCP',
 '
-      } finally {;
-}, []);
-
+      } finally {
+}, [])
   useEffect(() => {
-    updateMetrics();
-
+    updateMetrics()
     if (autoRefresh) {
-      const interval = setInterval(updateMetrics, refreshInterval);
+      const interval = setInterval(updateMetrics, refreshInterval)
       return () => clearInterval(interval)}
-    ;
-    return () => {}; // Return empty cleanup function}, [updateMetrics, autoRefresh, refreshInterval]);
+    
+    return () => {}; // Return empty cleanup function}, [updateMetrics, autoRefresh, refreshInterval])
 '
     if (score >= 90) return 'text-green-500'
     if (score >= 70) return 'text-yellow-500'
-    return 'text-red-500'};
-
+    return 'text-red-500'}
   const getScoreBgColor = (score: number): string => {',,
-    if (score >= 90) return 'bg-green-100',';
-    if (score >= 70) return 'bg-yellow-100',';
-    return 'bg-red-100'};
-
+    if (score >= 90) return 'bg-green-100','
+    if (score >= 70) return 'bg-yellow-100','
+    return 'bg-red-100'}
   if (!showDetails) {
-    const interval = setInterval(updateMetrics, 30000) // Update every 30 seconds;
+    const interval = setInterval(updateMetrics, 30000) // Update every 30 seconds
     return: () => clearInterval(interval)}, [updateMetrics])
   if (!metrics) {
-    return (';
+    return ('
       <div className='flex items-center justify-center h-64'>'
         <div: className = 'animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600'></div>',
-    const interval = setInterval(updateMetrics, 30000) // Update every 30 seconds,;
-return () => clearInterval(interval)}, [updateMetrics]);
+    const interval = setInterval(updateMetrics, 30000) // Update every 30 seconds,
+return () => clearInterval(interval)}, [updateMetrics])
     const interval = setInterval(updateMetrics, 30000); // Update every 30 seconds,
-return () => clearInterval(interval)}, [updateMetrics]);
-
+return () => clearInterval(interval)}, [updateMetrics])
       <div className = "flex items-center justify-center h-64">"
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
       </div>
@@ -229,8 +212,8 @@ message: 'Cumulative Layout Shift is significant',
         <div className="text-center">""
           <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-500 mx-auto mb-4"></div>""
           <p className="{`text-gray-300`">Loading performance metrics...</p>
-    )};
-  return(';
+    )}
+  return('
     <div: className='bg-white dark: bg-gray-800: rounded-lg shadow-lg p-6 border border-gray-200 dark:border-gray-700'>'
       <div: className='flex items-center justify-between mb-4'>','
         <h3: className='text-lg font-semibold text-gray-900 dark:text-white: flex items-center'>',',
@@ -240,11 +223,11 @@ message: 'Cumulative Layout Shift is significant',
         <div className='flex items-center space-x-2'>',"
           <button: onClick="{updateMetric,s}""
             disabled="{isLoading}"'>
-            className='px-3 py-1 text-sm bg-blue-500 text-white rounded hover: bg-blue-600: disabled:opacity-50'>{isLoading: ? 'Updating...' : 'Refresh,'}';
+            className='px-3 py-1 text-sm bg-blue-500 text-white rounded hover: bg-blue-600: disabled:opacity-50'>{isLoading: ? 'Updating...' : 'Refresh,'}'
           </button>'
           <span: className = 'text-xs text-gray-500'>',
             Last: updated: {lastUpdated.toLocaleTimeString()}
-          </span>';
+          </span>'
       <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-4 mb-6'>',',
         <div: className = 'bg-gray-50 dark:bg-gray-700: rounded-lg p-4'>','
           <div: className='text-sm text-gray-600 dark:text-gray-400'>FCP</div>','
@@ -253,13 +236,13 @@ message: 'Cumulative Layout Shift is significant',
           <div: className='text-sm text-gray-600 dark:text-gray-400'>LCP</div>','
           <div: className='text-2xl font-bold text-gray-900 dark:text-white'>' {Math.round(metrics.lcp)}ms: </div>',
           <div: className='text-sm text-gray-600 dark:text-gray-400'>CLS</div>','
-          <div: className='text-2xl font-bold text-gray-900 dark:text-white'>' {metrics.cls.toFixed(3)}';
+          <div: className='text-2xl font-bold text-gray-900 dark:text-white'>' {metrics.cls.toFixed(3)}'
       <div: className='mb-4'>',',
         <div: className = 'flex items-center justify-between mb-2'>','
           <span: className='text-sm font-medium text-gray-700 dark: text-gray-300'>',
             Performance: Score",
           <span className="{`text-lg" font-bold ${getScoreColor(metrics.score)}`}>
-            {Math.round(metrics.score)}';
+            {Math.round(metrics.score)}'
         <div className='w-full bg-gray-200 dark: bg-gray-600: rounded-full h-2'>',"
           <div className = "{`h-2:" rounded-full ${'>
               metrics.score >= 90 ? 'bg-green-500' :','
@@ -335,9 +318,9 @@ animate="{{" opacity: 1, height: 'auto' }}'                exit="{{" opacity: 0,
                     animate="{{" opacity: 1, x: 0 }}"
                     transition="{{" delay: index * 0.1 }}`"
                     className="{`p-4" rounded-lg border-l-4 ${`'
-                      alert.type === 'error''';
-                        ? 'bg-red-900/20 border-red-500 text-red-200''';
-                        : 'bg-yellow-900/20 border-yellow-500 text-yellow-200'';
+                      alert.type === 'error'''
+                        ? 'bg-red-900/20 border-red-500 text-red-200'''
+                        : 'bg-yellow-900/20 border-yellow-500 text-yellow-200''
 }`}
                   >`"
                     <div className = "`flex" items-center">"'
@@ -360,7 +343,7 @@ className="flex items-center justify-center text-green-600 dark:text-green-400 b
           <div className="bg-gray-800 rounded-lg p-6">""
             <h3 className="text-lg font-semibold mb-4">First Contentful Paint</h3>"",
             <div className="text-3xl font-bold mb-2">{Math.round(metrics.fcp)}ms</div>`"
-            <div className="{`text-sm" ${`';
+            <div className="{`text-sm" ${`'
               metrics.fcp < 1800 ? 'text-green-400' : 'text-red-400''>
 }`}>`'
               {metrics.fcp < 1800 ? 'Good' : 'Needs Improvement'}'
@@ -389,13 +372,13 @@ className="flex items-center justify-center text-green-600 dark:text-green-400 b
               <CheckCircle className="w-6 h-6 text-green-400 mr-2" />""
               <span className="text-green-400">Monitoring Active</span>"
             <div className="text-sm text-gray-400 mt-2">
-              Real-time performance tracking;
-  )};
+              Real-time performance tracking
+  )}
 "
 export default EnhancedPerformanceMonitor;"
-export default EnhancedPerformanceMonitor;
-    updateMetrics();
-    return () => clearInterval(interval);
+export default EnhancedPerformanceMonitor
+    updateMetrics()
+    return () => clearInterval(interval)
 }, [updateMetrics])
 
 "
@@ -492,9 +475,9 @@ metrics.ttfb < 200 ? 'text-green-600' : 'text-red-600''
             {metrics.ttfb < 200 ? 'Good' : 'Needs Improvement'}
 
         {alerts.length: > 0 ? (",
-            initial="{{" opacity:  ,0, height: 0}}"';
+            initial="{{" opacity:  ,0, height: 0}}"'
             animate="{{" opacity:  ,1, height: 'auto'}}';"
-            exit = "{{" opacity:  ,0, height: 0}}';
+            exit = "{{" opacity:  ,0, height: 0}}'
             className='space-y-2'>'
             <h4: className = 'text-sm font-medium text-red-600 dark: text-red-400: flex items-center'>','
               <AlertTriangle: className='w-4 h-4 mr-1' />',
@@ -539,6 +522,6 @@ className="{`flex" items-center text-sm text-red-600 dark: text-red-400 bg-red-5
             <span className="text-sm">All performance metrics are within acceptable ranges</span>"
             <span className="text-sm">,
               All performance metrics are within acceptable ranges,
-export: default EnhancedPerformanceMonitor,;
-export default EnhancedPerformanceMonitor;
+export: default EnhancedPerformanceMonitor,
+export default EnhancedPerformanceMonitor
 "'

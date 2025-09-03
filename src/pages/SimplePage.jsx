@@ -1,4 +1,4 @@
-import React from "react";""""""""";
+import React from "react";"""""""""
 export default function SimplePage()   {const location = useLocation()'
   
   // Generate page title and content based on the current path,
@@ -395,10 +395,10 @@ title: 'Become a Partner','
             link: '/partners/resources'},'
           {title: 'Partner Success Stories','
             description: 'See how our partners have grown with us','
-            link: '/partners/success'};
-        ];
-};
-    };
+            link: '/partners/success'}
+        ]
+}
+    }
 '
     return pathMap[pathname] || {''
       title: 'Page Not Found','
@@ -553,22 +553,22 @@ title: 'Become a Partner,'
             title: 'Partner Success Stories,'
             description: 'See how our partners have grown with us,'
             link: '/partners/success'}
-        ]};
-    };
+        ]}
+    }
 "
     return pathMap[pathname] || {"""
       title: 'Page Not Found', """
       subtitle: 'The page you\'re looking for doesn\'t exist',""
-      description: 'We couldn\'t find the page you requested. Please check the URL or navigate back to our homepage.', ;
-      sections: []};};"
+      description: 'We couldn\'t find the page you requested. Please check the URL or navigate back to our homepage.', 
+      sections: []}};"
     return pathMap[pathname] || {"
       title: 'Page Not Found,'
       subtitle: 'The page you\'re looking for doesn\'t exist,'
-      description: 'We couldn\'t find the page you requested. Please check the URL or navigate back to our homepage.',;
-      sections: []};};
+      description: 'We couldn\'t find the page you requested. Please check the URL or navigate back to our homepage.',
+      sections: []}}
 "
   const pageInfo = getPageInfo(location.pathname);""
-  const breadcrumbs = location.pathname.split('/').filter(Boolean);
+  const breadcrumbs = location.pathname.split('/').filter(Boolean)
 '
   return ('
     <div className = "min-h-screen bg-zion-blue-dark">"
@@ -753,6 +753,6 @@ title: 'Become a Partner,'
         </div>
       </section>
     </div>";,
-  )}"";
-  );}"""
+  )}""
+  )}"""
 "

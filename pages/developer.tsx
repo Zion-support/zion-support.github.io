@@ -84,16 +84,16 @@ icon: BookOpen,'
       description: 'Manage your databases with our web interface',
       icon: Database,'
       link: '/database'}
-  ];
-;
+  ]
+
   return (
-    <>;
+    <>
 <Head>
         <title>Developer Resources - Zion Tech Group</title>
         <meta name = "description" content="Developer resources, documentation, code samples, and tools to help you build amazing applications with Zion Tech Group services." />"
         <meta name="viewport" content="width="device-width," initial-scale=1" />
       </Head>
-      ";
+      "
 <Layout title = "Developer Resources""
         description="Everything you need to build amazing applications"
       >
@@ -282,6 +282,6 @@ icon: BookOpen,'
         </section>
       </Layout>
     </>,
-  )};
+  )}
 "
-export default Developer;
+export default Developer

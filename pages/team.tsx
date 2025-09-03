@@ -50,10 +50,10 @@ export default function Team() {
       title: "Head of Cloud Solutions", bio: "Cloud architecture expert with certifications in AWS, Azure, and GCP. Led cloud migration projects for enterprise clients.","
       image: "/api/placeholder/300/300", expertise: ["Cloud Architecture", "Migration", "DevOps"], education: "BS in Computer Science, UT Austin", experience: "6+ years","
       linkedin: "https://linkedin.com/in/alexthompson", twitter: "https://twitter.com/alexthompson","
-      email: "alex@ziontechgroup.com", featured: false};
-  ];
-;
-  const leadership = teamMembers.filter(member => member.featured);
+      email: "alex@ziontechgroup.com", featured: false}
+  ]
+
+  const leadership = teamMembers.filter(member => member.featured)
   const otherMembers = teamMembers.filter(member => !member.featured)'
 
   const companyStats = ["
@@ -113,15 +113,15 @@ icon: Brain, title: 'Innovation First',
       icon: Users,'
       title: 'Client Success', description: 'Your success is our success. We\'re committed to delivering exceptional results.'},
     {'
-      icon: Shield, title: 'Security & Trust',;
-      description: 'We maintain the highest security standards and build trust through transparency.'}, {;
-      icon: Zap,;
-      title: 'Agile Delivery', description: 'Fast, efficient delivery without compromising on quality or security.;
+      icon: Shield, title: 'Security & Trust',
+      description: 'We maintain the highest security standards and build trust through transparency.'}, {
+      icon: Zap,
+      title: 'Agile Delivery', description: 'Fast, efficient delivery without compromising on quality or security.
 }
   ]
 
   return (
-    <>;
+    <>
 <Head>
         <title>Our Team — Zion Tech Group</title>"
         <meta name = "description" content="Meet the expert team behind Zion Tech Group. Experienced professionals dedicated to delivering innovative technology solutions." />"
@@ -378,7 +378,7 @@ initial="{{" opacity: 0, y: 20 }}"
             <h2 className="text-4xl font-bold text-white mb-6">
               Join Our Team,
             </h2>"
-            <p className="text-xl text-gray-300 mb-8">;
+            <p className="text-xl text-gray-300 mb-8">
               We&apos;re always looking for talented individuals who share our passion for AI and innovation. ''
               Join us in building the future of technology.
             </p>"
@@ -492,4 +492,4 @@ in AI, cloud computing, cybersecurity, and software development.
       
       <Footer />
 </>",
-  )};
+  )}

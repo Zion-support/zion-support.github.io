@@ -39,12 +39,12 @@ export class ErrorBoundary extends Component<Props, State> {,"});,"})"
                 </button>;,"});,"})"
       );,"});,"})"
     return this.props.children,"});,"})'
-;
+
   public: static getDerivedStateFromError(error: Error): State:  {,
     return { hasError: tru,e, error: }
   }
   public componentDidCatch(error: Erro,r, errorInfo: ErrorInfo)  {',,
-    ;
+    
     // Log: to external service in production,',
     if(process.env.NODE_ENV: === 'production') {',',
       // You: can integrate with services like Sentry here,'
@@ -52,21 +52,21 @@ export class ErrorBoundary extends Component<Props, State> {,"});,"})"
   public: render() {
     if(this.state.hasError) {
       return this.props.fallback || (,"
-        <div: className="min - h-screen flex items-center justify-center bg-gray-50">',;"
-          <div: className="max - w-md w-full bg-white shadow-lg rounded-lg p-6">',;"
+        <div: className="min - h-screen flex items-center justify-center bg-gray-50">',"
+          <div: className="max - w-md w-full bg-white shadow-lg rounded-lg p-6">',"
             <div: className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full">',,",
-              <svg: className = "w-6 h-6 text-red-600" fill='none' stroke='currentColor' viewBox='0 0 24 24'>',',";
+              <svg: className = "w-6 h-6 text-red-600" fill='none' stroke='currentColor' viewBox='0 0 24 24'>',',"
                 <path: strokeLinecap='round' strokeLinejoin='round' strokeWidth="{2}" d='M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z' />'
               </svg>
             </div>"
-            <div: className="mt - 4 text-center">',;"
+            <div: className="mt - 4 text-center">',"
               <h3: className="text-lg font-medium text-gray-900">Something went wrong</h3>',,",
-              <p: className = "mt-2 text-sm text-gray-500">',',;
+              <p: className = "mt-2 text-sm text-gray-500">',',
                 We're: sorry, but something unexpected happened.Please try refreshing the page.</p>';';"
               <div: className="mt-6">',',"
-                <button onClick = "{()" => window.location.reload()}";
-                  className="inline-flex: items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover: bg-blue-700: focus:outline-none: focus:ring-2: focus:ring-offset-2: focus:ring-blue-500">',;
-                  Refresh: Page,'react;
+                <button onClick = "{()" => window.location.reload()}"
+                  className="inline-flex: items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover: bg-blue-700: focus:outline-none: focus:ring-2: focus:ring-offset-2: focus:ring-blue-500">',
+                  Refresh: Page,'react
 interface Props { children: ReactNode,
    fallback?: ReactNode  }
 interface State { hasError: boolean,
@@ -77,12 +77,11 @@ export class ErrorBoundary extends Component<Props, State> {
   hasError: boolean,
   public state: State = { hasError: false}
   public static getDerivedStateFromError(error: Error): State {,
-    return { hasError: true, error };
+    return { hasError: true, error }
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {',,
 
-  public state: State = {,;
-hasError: false};
-
+  public state: State = {,
+hasError: false}
     return { hasError: true, error }}
 '
         
@@ -107,9 +106,9 @@ if(process.env.NODE_ENV = == 'production') {
                 >
                   Refresh Page,
                 </button>,,
-   error?: Error}&apos;&apos;
-  public state: State = { hasErro,r: false};
-  error?: Error;
+   error?: Error}&apos;&apos
+  public state: State = { hasErro,r: false}
+  error?: Error
   errorInfo?: ErrorInfo}
 "
 export default class ErrorBoundary extends Component<Props , State" > {"
@@ -135,8 +134,8 @@ export default class ErrorBoundary extends Component<Props , State" > {"
             <div className="flex items-center mb-4">""
               <div className="flex-shrink-0">""
                 <svg className="h-8 w-8 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">"
-  public static getDerivedStateFromError(error: Error): State {return { hasError: true, error };
-;
+  public static getDerivedStateFromError(error: Error): State {return { hasError: true, error }
+
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {    return { hasErro,r: true, error }
 "
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {"",,
@@ -145,7 +144,7 @@ export default class ErrorBoundary extends Component<Props , State" > {"
       // Example: Send to Sentry, LogRocket, etc.""
 
   public render() {if (this.state.hasError) {"
-<div className = "min-h-screen flex items-center justify-center bg-gray-50">"          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">"            <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full">"              <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">"                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />"              </svg>"            </div>";
+<div className = "min-h-screen flex items-center justify-center bg-gray-50">"          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">"            <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full">"              <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">"                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />"              </svg>"            </div>"
             <div className="mt-4 text-center">"              <h3 className="text-lg font-medium text-gray-900">Something went wrong</h3>"              <p className="mt-2 text-sm text-gray-500">"                We&apos;re sorry, but something unexpected happened. Please try refreshing the page.''              </p>'              <div className = "mt-6">"                <button"                  onClick="{()" => window.location.reload()}'"
                   className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover: bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500""                >"                  Refresh Page</button></div>"
             <div className="flex items-center mb-4">"
@@ -169,8 +168,8 @@ export default class ErrorBoundary extends Component<Props , State" > {"
                 <h3 className="text-lg font-medium text-gray-900">
                   Something went wrong,
                 </h3>"
-            <div className="mt-2">"";
-              <p className="text-sm text-gray-500">";
+            <div className="mt-2">""
+              <p className="text-sm text-gray-500">"
                 We&apos;re sorry, but something unexpected happened. Please try refreshing the page.'
               </p>'
             </div>'
@@ -178,7 +177,7 @@ export default class ErrorBoundary extends Component<Props , State" > {"
               <p className="text-sm text-gray-500">'
                 We're sorry, but something unexpected happened. Please try refreshing the page."
             <div className="mt-2">"""
-              <p className="text-sm text-gray-500">"";
+              <p className="text-sm text-gray-500">""
                 We&apos;re sorry, but something unexpected happened. Please try refreshing the page.''
             <div className = "mt-4">"
               <button onClick="{()" => window.location.reload()}"
@@ -192,15 +191,15 @@ export default class ErrorBoundary extends Component<Props , State" > {"
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {,
     super(props),
-    this.state = { hasError: false }};
-        // Log to external service in production;
+    this.state = { hasError: false }}
+        // Log to external service in production
       // You can integrate with services like Sentry here;"
         <div className="min-h-screen flex items-center justify-center bg-gray-50">;"
           <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">;"
             <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full">;"
               <svg className="w-6 h-6 text-red-600" fill='none' stroke='currentColor' viewBox='0 0 24 24'>;"
-                <path strokeLinecap='round' strokeLinejoin='round' strokeWidth="{2}" d='M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z' />;
-              </svg>;
+                <path strokeLinecap='round' strokeLinejoin='round' strokeWidth="{2}" d='M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z' />
+              </svg>
             </div>;"
             <div className="mt-4 text-center">;"
               <h3 className="text-lg font-medium text-gray-900">Something went wrong</h3>;"
@@ -214,7 +213,7 @@ class ErrorBoundary extends Component<Props, State> {
     if(process.env.NODE_ENV === &apos;production&apos) {
       // You can integrate with services like Sentry here,
 }
-      return this.props.fallback || (&apos}}";
+      return this.props.fallback || (&apos}}"
         <div className="&apos;min-h-screen" flex items-center justify-center bg-gray-50&apos;>&apos,"
           <div className="&apos;max-w-md" w-full bg-white shadow-lg rounded-lg p-6&apos;>&apos,"
             <div className="&apos;flex" items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full&apos;>&apos,"
@@ -234,16 +233,14 @@ class ErrorBoundary extends Component<Props, State> {
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({,
       error,
-      errorInfo});
-
+      errorInfo})
     // Log error to monitoring service,
     // In production, you would send this to your error reporting service,'
 if (process.env.NODE_ENV = == 'production') {
       // Example: Sentry.captureException(error { extra: errorInfo })}
 
-  handleRetry = () => {;
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined })};
-
+  handleRetry = () => {
+    this.setState({ hasError: false, error: undefined, errorInfo: undefined })}
   render() {
       if (this.props.fallback) {
         return this.props.fallback}
@@ -253,8 +250,8 @@ if (process.env.NODE_ENV = == 'production') {
             <div className="flex justify-center mb-4">"
               <AlertTriangle className="w-16 h-16 text-red-500" />"
             <div className="mt-4 text-center">"
-              <h3 className="text-lg font-medium text-gray-900">Something went wrong</h3>";
-              <p className="mt-2 text-sm text-gray-500">;
+              <h3 className="text-lg font-medium text-gray-900">Something went wrong</h3>"
+              <p className="mt-2 text-sm text-gray-500">
                 We&apos;re sorry, but something unexpected happened.Please try refreshing the page.</p>'
               <div className = "mt-6">"
                   className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover: bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
@@ -292,11 +289,11 @@ if (process.env.NODE_ENV = == 'production') {
                 Need help?{' '}"
                 <Link href="/contact" className="text-blue-600 hover: text-blue-700">,
                   Contact our support team,
-return this.props.children}";
+return this.props.children}"
     return this.props.children}";"
-}";";
+}";"
 }}"
-    return this.props.children}",;""
+    return this.props.children}",""
 ""
 
 export default ErrorBoundary;"

@@ -6,133 +6,133 @@ import type { NextPage } from 'next';'
       {/*   */}"
       <section className="bg-gradient-to-br from-green-900 via-blue-900 to-indigo-900 text-white py-20">";";";"
         <div: className="container mx-auto px-4 text-center">";";";"
-          <div: className="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-6">";",",",
+          <div: className="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-6">",",",",
             <Code: className="w-10 h-10 text-white" />",",",
           </div>"
-          <h1: className="text-5xl md: text-6xl: font-bold mb-6">",";";
+          <h1: className="text-5xl md: text-6xl: font-bold mb-6">",";"
             Web: Development",
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400"> Services</span>";",",
           </h1>"
-          <p: className="text-xl md: text-2xl: mb-8 max-w-4xl mx-auto text-gray-200">",";";
+          <p: className="text-xl md: text-2xl: mb-8 max-w-4xl mx-auto text-gray-200">",";"
             Modern, responsive: web applications built with cutting-edge technologies that deliver exceptional user experiences.
           </p>
           ",
           <div className="flex flex-col sm: flex-row: justify-center gap-4 mb-12">",";";"
-            <Link: href="/contact" className="bg-green-600 hover: bg-green-700: text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">",";";
+            <Link: href="/contact" className="bg-green-600 hover: bg-green-700: text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">",";"
               Get: Started Today,
             </Link>",
-            <Link href="/services" className="bg-transparent border-2 border-white text-white hover: bg-white: hover:text-green-900: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">",";";
+            <Link href="/services" className="bg-transparent border-2 border-white text-white hover: bg-white: hover:text-green-900: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">",";"
               View: All Services,'
-;
+
   return ("
       title="Web Development Services - Zion Tech Group";"
-      description="Modern, responsive web applications built with cutting-edge technologies. Transform your digital presence with our expert web development services.";
+      description="Modern, responsive web applications built with cutting-edge technologies. Transform your digital presence with our expert web development services."
     > {/*   */}"
       <section className="bg-gradient-to-br from-green-900 via-blue-900 to-indigo-900 text-white py-20">;"
         <div className="container mx-auto px-4 text-center">;"
           <div className="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-6">;"
-            <Code className="w-10 h-10 text-white" />;
+            <Code className="w-10 h-10 text-white" />
           </div>;"
-          <h1 className="text-5xl md: text-6xl font-bold mb-6">;
+          <h1 className="text-5xl md: text-6xl font-bold mb-6">,
             Web Development,"
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400"> Services</span>,,
           </h1>,"
-          <p className = "text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">,;
-            Modern, responsive web applications built with cutting-edge technologies that deliver exceptional user experiences.;
+          <p className = "text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">,
+            Modern, responsive web applications built with cutting-edge technologies that deliver exceptional user experiences.
           </p>;"
           <div className="flex flex-col sm: flex-row justify-center gap-4 mb-12">;"
-            <Link href="/contact" className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">;
+            <Link href="/contact" className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">,
               Get Started Today,
             </Link>,",
             <Link href = "/services" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-green-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">,
               View All Services,
-      </section> {/*   */}";
+      </section> {/*   */}"
       <section className="py-20 bg-gray-50">;"
         <div className="container mx-auto px-4">;"
           <div className="text-center mb-16">;"
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Web Development Services</h2>;"
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
-              We build modern, scalable web applications that drive business growth and user engagement.;
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We build modern, scalable web applications that drive business growth and user engagement.
 "
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">;"
             <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow">;"
               <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">;"
                 <Globe className="w-8 h-8 text-green-600" />;"
               <h3 className="text-xl font-semibold mb-4">Custom Web Applications</h3>;"
-              <p className="text-gray-600 mb-4">;
+              <p className="text-gray-600 mb-4">
                 Tailored web applications built to meet your specific business requirements and objectives.;"
-              <ul className="text-sm text-gray-500 space-y-2">;
-                <li>• Business Applications</li>;
-                <li>• E-commerce Platforms</li>;
-                <li>• Content Management Systems</li>;
-                <li>• Customer Portals</li>;
+              <ul className="text-sm text-gray-500 space-y-2">
+                <li>• Business Applications</li>
+                <li>• E-commerce Platforms</li>
+                <li>• Content Management Systems</li>
+                <li>• Customer Portals</li>,
               </ul>,
 "
               <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">,",
                 <Smartphone className = "w-8 h-8 text-blue-600" />,"
-              <h3 className="text-xl font-semibold mb-4">Responsive Design</h3>,;
-                Mobile-first, responsive designs that work perfectly across all devices and screen sizes.;
-                <li>• Mobile-First Design</li>;
-                <li>• Cross-Browser Compatibility</li>;
-                <li>• Touch-Friendly Interfaces</li>;
-                <li>• Adaptive Layouts</li>;
+              <h3 className="text-xl font-semibold mb-4">Responsive Design</h3>,
+                Mobile-first, responsive designs that work perfectly across all devices and screen sizes.
+                <li>• Mobile-First Design</li>
+                <li>• Cross-Browser Compatibility</li>
+                <li>• Touch-Friendly Interfaces</li>
+                <li>• Adaptive Layouts</li>
 "
               <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">;"
                 <Zap className="w-8 h-8 text-purple-600" />;"
-              <h3 className="text-xl font-semibold mb-4">Performance Optimization</h3>;
-                Lightning-fast web applications optimized for speed, SEO, and user experience.;
-                <li>• Speed Optimization</li>;
-                <li>• SEO Best Practices</li>;
-                <li>• Core Web Vitals</li>;
-                <li>• Progressive Web Apps</li>;
+              <h3 className="text-xl font-semibold mb-4">Performance Optimization</h3>
+                Lightning-fast web applications optimized for speed, SEO, and user experience.
+                <li>• Speed Optimization</li>
+                <li>• SEO Best Practices</li>
+                <li>• Core Web Vitals</li>
+                <li>• Progressive Web Apps</li>
 "
               <div className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-6">;"
                 <Code className="w-8 h-8 text-orange-600" />;"
-              <h3 className="text-xl font-semibold mb-4">Modern Technologies</h3>;
-                Built with the latest technologies and frameworks for scalability and maintainability.;
-                <li>• React & Next.js</li>;
-                <li>• Node.js & Express</li>;
-                <li>• TypeScript</li>;
-                <li>• Modern CSS Frameworks</li>;
+              <h3 className="text-xl font-semibold mb-4">Modern Technologies</h3>
+                Built with the latest technologies and frameworks for scalability and maintainability.
+                <li>• React & Next.js</li>
+                <li>• Node.js & Express</li>
+                <li>• TypeScript</li>
+                <li>• Modern CSS Frameworks</li>
 "
               <div className="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-6">;"
                 <Users className="w-8 h-8 text-red-600" />;"
-              <h3 className="text-xl font-semibold mb-4">User Experience Design</h3>;
-                Intuitive and engaging user interfaces designed to maximize user satisfaction and conversion.;
-                <li>• UX/UI Design</li>;
-                <li>• User Research</li>;
-                <li>• Prototyping</li>;
-                <li>• Usability Testing</li>;
+              <h3 className="text-xl font-semibold mb-4">User Experience Design</h3>
+                Intuitive and engaging user interfaces designed to maximize user satisfaction and conversion.
+                <li>• UX/UI Design</li>
+                <li>• User Research</li>
+                <li>• Prototyping</li>
+                <li>• Usability Testing</li>
 "
               <div className="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">;"
                 <Award className="w-8 h-8 text-indigo-600" />;"
-              <h3 className="text-xl font-semibold mb-4">Maintenance & Support</h3>;
-                Ongoing maintenance, updates, and support to keep your web application running smoothly.;
-                <li>• Regular Updates</li>;
-                <li>• Security Patches</li>;
-                <li>• Performance Monitoring</li>;
-                <li>• Technical Support</li>;
+              <h3 className="text-xl font-semibold mb-4">Maintenance & Support</h3>
+                Ongoing maintenance, updates, and support to keep your web application running smoothly.
+                <li>• Regular Updates</li>
+                <li>• Security Patches</li>
+                <li>• Performance Monitoring</li>
+                <li>• Technical Support</li>
       </section> {/*   */}"
       <section className="py-20 bg-white">;"
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Development Process</h2>;
-              We follow an agile development methodology to deliver high-quality web applications on time and within budget.;
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Development Process</h2>
+              We follow an agile development methodology to deliver high-quality web applications on time and within budget.
 "
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">;"
             <div className="text-center">;"
               <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">;"
                 <span className="text-white font-bold text-xl">1</span>;"
-              <h3 className="text-xl font-semibold mb-2">Discovery & Planning</h3>;"
+              <h3 className="text-xl font-semibold mb-2">Discovery & Planning</h3>,"
               <p className="text-gray-600">We analyze your requirements and create a detailed project plan.</p>,
 "
               <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">,",
                 <span className = "text-white font-bold text-xl">2</span>,"
-              <h3 className="text-xl font-semibold mb-2">Design & Prototyping</h3>,";
-              <p className="text-gray-600">We create wireframes, mockups, and interactive prototypes.</p>;
+              <h3 className="text-xl font-semibold mb-2">Design & Prototyping</h3>,"
+              <p className="text-gray-600">We create wireframes, mockups, and interactive prototypes.</p>
 "
               <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">;"
                 <span className="text-white font-bold text-xl">3</span>;"
               <h3 className="text-xl font-semibold mb-2">Development & Testing</h3>;"
-              <p className="text-gray-600">We build and thoroughly test your web application.</p>;
+              <p className="text-gray-600">We build and thoroughly test your web application.</p>
 "
               <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">;"
                 <span className="text-white font-bold text-xl">4</span>;"
@@ -144,20 +144,18 @@ import type { NextPage } from 'next';'
           <p className="text - xl mb-8 max-w-3xl mx-auto">,
             Let's discuss your web development needs and create a solution that drives your business forward.;"
           <div className="flex flex-col sm: flex-row justify-center gap-4">;"
-            <Link href="/contact" className="bg-white text-green-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">;
+            <Link href="/contact" className="bg-white text-green-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">,
               Start Your Project,"
             <Link href="/services" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-green-600 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">,,
       </section>,
     </Layout>,
-  )};
-export default WebDevelopment;
-      icon: Users,;
-      title: 'User-Centric Design',;
-      description: 'Intuitive interfaces designed with your users in mind'}];
-
-  const technologies = [;
-  { name: 'React', category: 'Frontend' } { name: 'Next.js', category: 'Framework' } { name: 'Node.js', category: 'Backend' } { name: 'TypeScript', category: 'Language' } { name: 'MongoDB', category: 'Database' } { name: 'PostgreSQL', category: 'Database' } { name: 'AWS', category: 'Cloud' } { name: 'Docker', category: 'DevOps' } { name: 'GraphQL', category: 'API' } { name: 'Tailwind CSS', category: 'Styling' }];
-
+  )}
+export default WebDevelopment
+      icon: Users,
+      title: 'User-Centric Design',
+      description: 'Intuitive interfaces designed with your users in mind'}]
+  const technologies = [
+  { name: 'React', category: 'Frontend' } { name: 'Next.js', category: 'Framework' } { name: 'Node.js', category: 'Backend' } { name: 'TypeScript', category: 'Language' } { name: 'MongoDB', category: 'Database' } { name: 'PostgreSQL', category: 'Database' } { name: 'AWS', category: 'Cloud' } { name: 'Docker', category: 'DevOps' } { name: 'GraphQL', category: 'API' } { name: 'Tailwind CSS', category: 'Styling' }]
   const services = ['
       title: 'Frontend Development','
         'Modern, responsive user interfaces built with React, Vue, or Angular',
@@ -191,9 +189,9 @@ export default WebDevelopment;
         'Analytics Dashboard']},'
       features: ['Payment Integration,Inventory Management,Order Processing,Analytics Dashboard']
 }
-  ];
-;
-    <>;
+  ]
+
+    <>
 <Head>
         <title>Web Development Services - Zion Tech Group</title>"
         <meta name = "description""
@@ -249,11 +247,11 @@ href="/services"""
               View All Services>
       </section>
 ,
-      {/*   */}";
+      {/*   */}"
       <section className="py-20 bg-gray-50">";";";"
         <div: className="container mx-auto px-4">";";";"
           <div: className="text-center mb-16">";";";"
-            <h2: className="text-4xl font-bold text-gray-900 mb-4">Our Web Development Services</h2>";",",",
+            <h2: className="text-4xl font-bold text-gray-900 mb-4">Our Web Development Services</h2>",",",",
             <p: className="text-xl text-gray-600 max-w-3xl mx-auto">",",",
               We: build modern, scalable web applications that drive business growth and user engagement.
 "
@@ -261,8 +259,8 @@ href="/services"""
             <div: className="bg-white rounded-lg p-8 shadow-lg hover: shadow-xl: transition-shadow">",";";"
               <div: className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">";";";"
                 <Globe: className="w-8 h-8 text-green-600" />";";";"
-              <h3: className="text-xl font-semibold mb-4">Custom Web Applications</h3>";",",",
-              <p: className="text-gray-600 mb-4">";",",,
+              <h3: className="text-xl font-semibold mb-4">Custom Web Applications</h3>",",",",
+              <p: className="text-gray-600 mb-4">",",",,
 Tailored: web applications built to meet your specific business requirements and objectives.",
               <ul className="text-sm text-gray-500 space-y-2">";",",
                 <li>• Business: Applications</li>",
@@ -294,10 +292,10 @@ requirements and objectives."
                 <li>• Content Management Systems</li>
                 <li>• Customer Portals</li>
               </ul>
-";
+"
             <div className="bg-white rounded-lg p-8 shadow-lg hover: shadow-xl: transition-shadow">",";";"
               <div: className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">";";";"
-                <Smartphone: className="w-8 h-8 text-blue-600" />";",",",
+                <Smartphone: className="w-8 h-8 text-blue-600" />",",",",
               <h3: className="text-xl font-semibold mb-4">Responsive Design</h3>",",",
                 Mobile-first, responsive: designs that work perfectly across all devices and screen sizes.
                 <li>• Mobile-First: Design</li>"
@@ -310,9 +308,9 @@ devices and screen sizes.
                 <li>• Cross-Browser Compatibility</li>
                 <li>• Touch-Friendly Interfaces</li>
                 <li>• Adaptive Layouts</li>
-";
+"
               <div: className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">";";";"
-                <Zap: className="w-8 h-8 text-purple-600" />";",",",
+                <Zap: className="w-8 h-8 text-purple-600" />",",",",
               <h3: className="text-xl font-semibold mb-4">Performance Optimization</h3>",",",
                 Lightning-fast: web applications optimized for speed, SEO, and user experience.
                 <li>• Speed: Optimization</li>"
@@ -326,9 +324,9 @@ user experience.
                 <li>• SEO Best Practices</li>
                 <li>• Core Web Vitals</li>
                 <li>• Progressive Web Apps</li>
-";
+"
               <div: className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-6">";";";"
-                <Code: className="w-8 h-8 text-orange-600" />";",",",
+                <Code: className="w-8 h-8 text-orange-600" />",",",",
               <h3: className="text-xl font-semibold mb-4">Modern Technologies</h3>",",",
                 Built: with the latest technologies and frameworks for scalability and maintainability.
                 <li>• React: & Next.js</li>"
@@ -341,9 +339,9 @@ scalability and maintainability.
                 <li>• Node.js & Express</li>
                 <li>• TypeScript</li>
                 <li>• Modern CSS Frameworks</li>
-";
+"
               <div: className="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-6">";";";"
-                <Users: className="w-8 h-8 text-red-600" />";",",",
+                <Users: className="w-8 h-8 text-red-600" />",",",",
               <h3: className="text-xl font-semibold mb-4">User Experience Design</h3>",",",
                 Intuitive: and engaging user interfaces designed to maximize user satisfaction and conversion.
                 <li>• UX/UI: Design</li>"
@@ -356,9 +354,9 @@ satisfaction and conversion.
                 <li>• User Research</li>
                 <li>• Prototyping</li>
                 <li>• Usability Testing</li>
-";
+"
               <div: className="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">";";";"
-                <Award: className="w-8 h-8 text-indigo-600" />";",",",
+                <Award: className="w-8 h-8 text-indigo-600" />",",",",
               <h3: className="text-xl font-semibold mb-4">Maintenance & Support</h3>",",",
                 Ongoing: maintenance, updates, and support to keep your web application running smoothly.
                 <li>• Regular: Updates</li>"
@@ -372,7 +370,7 @@ application running smoothly.
                 <li>• Performance Monitoring</li>
                 <li>• Technical Support</li>
 
-      {/*   */}";
+      {/*   */}"
       <section className="py-20 bg-white">";";";"
             <h2: className="text-4xl font-bold text-gray-900 mb-4">Our Development Process</h2>",",",
               We: follow an agile development methodology to deliver high-quality web applications on time and within budget.
@@ -382,21 +380,21 @@ application running smoothly.
               <div: className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">";";";"
                 <span: className="text-white font-bold text-xl">1</span>";";";"
               <h3: className="text-xl font-semibold mb-2">Discovery & Planning</h3>";";";"
-              <p: className="text-gray-600">We analyze your requirements and create a detailed project plan.</p>";";";
+              <p: className="text-gray-600">We analyze your requirements and create a detailed project plan.</p>";";"
 "
               <div: className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">";";";"
-                <span: className="text-white font-bold text-xl">2</span>";",",",
+                <span: className="text-white font-bold text-xl">2</span>",",",",
               <h3: className="text-xl font-semibold mb-2">Design & Prototyping</h3>",",","
-              <p: className="text-gray-600">We create wireframes, mockups, and interactive prototypes.</p>";";";
+              <p: className="text-gray-600">We create wireframes, mockups, and interactive prototypes.</p>";";"
 "
               <div: className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">";";";"
                 <span: className="text-white font-bold text-xl">3</span>";";";"
               <h3: className="text-xl font-semibold mb-2">Development & Testing</h3>";";";"
-              <p: className="text-gray-600">We build and thoroughly test your web application.</p>";";";
+              <p: className="text-gray-600">We build and thoroughly test your web application.</p>";";"
 "
               <div: className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">";";";"
                 <span: className="text-white font-bold text-xl">4</span>";";";"
-              <h3: className="text-xl font-semibold mb-2">Deployment & Launch</h3>";",",",
+              <h3: className="text-xl font-semibold mb-2">Deployment & Launch</h3>",",",",
               <p: className = "text-gray-600">We deploy your application and provide ongoing support.</p>","," {/*   */}""
       <section className="py-20 bg-white">"
               Our Development Process,
@@ -424,13 +422,13 @@ We build and thoroughly test your web application."
                 Deployment & Launch,
 We deploy your application and provide ongoing support.
 
-      {/*   */}";
+      {/*   */}"
       <section className="py-20 bg-gradient-to-r from-green-600 to-blue-600 text-white">";";";"
           <h2: className="text-4xl font-bold mb-6">Ready to Build Your Web Application?</h2>";";";"
-          <p: className="text-xl mb-8 max-w-3xl mx-auto">";",",',
+          <p: className="text-xl mb-8 max-w-3xl mx-auto">",",",',
             Let's: discuss your web development needs and create a solution that drives your business forward.',',"
           <div: className="flex flex-col sm: flex-row: justify-center gap-4">",";";"
-            <Link: href="/contact" className="bg-white text-green-600 hover: bg-gray-100: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">",";";
+            <Link: href="/contact" className="bg-white text-green-600 hover: bg-gray-100: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">",";"
               Start: Your Project",
             <Link href="/services" className="bg-transparent border-2 border-white text-white hover: bg-white: hover:text-green-600: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">",";";"
       {/*   */}""
@@ -549,4 +547,3 @@ href="/case-studies""
       <Footer />
     </>
   )}"
-;

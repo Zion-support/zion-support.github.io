@@ -13,18 +13,15 @@ const navigation = ['
       { name: 'Micro SaaS', href: '/micro-saas', icon: Zap, description: 'Scalable SaaS applications' },'
       { name: 'All Services', href: '/services', icon: Users, description: 'Complete service portfolio' }
     ]
-},;
-  { name: 'About', href: '/about' },;
-  { name: 'Contact', href: '/contact' };
-];
-
+},
+  { name: 'About', href: '/about' },
+  { name: 'Contact', href: '/contact' }
+]
 const Navigation: React.FC = () => {,,
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-
+  const [isOpen, setIsOpen] = useState(false)
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
   const toggleDropdown = (name: string) => {,,
-    setActiveDropdown(activeDropdown === name ? null : name)};
-
+    setActiveDropdown(activeDropdown === name ? null : name)}
   return (
     <nav className = "bg-gray-900/95 backdrop-blur-md border-b border-gray-800 sticky top-0 z-50">"
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
@@ -188,9 +185,9 @@ initial="{{" opacity: 0, height: 0 }}"
             </div>
           </motion.div>
         )}
-      </AnimatePresence>;
-    </nav>;
-  );
-};
+      </AnimatePresence>
+    </nav>
+  )
+}
 "
 export default Navigation;"

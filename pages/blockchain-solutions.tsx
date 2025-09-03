@@ -1,13 +1,13 @@
 const React = dynamic(() => import('react'), { ssr: false })
-;
+
   return (
-    <>;
+    <>
 <Head>
         <title>Blockchain Solutions - Zion Tech Group</title>
         <meta name = "description" content="Comprehensive blockchain solutions including smart contracts, DeFi, NFTs, and cross-chain integration services." />"
         <meta name="viewport" content="width="device-width," initial-scale=1" />
       </Head>
-      ";
+      "
 <Layout title = "Blockchain Solutions""
         description="Transform your business with cutting-edge blockchain technology and decentralized solutions"
       >
@@ -113,6 +113,6 @@ const React = dynamic(() => import('react'), { ssr: false })
         </section>
       </Layout>
     </>,
-  )};
+  )}
 "
-export default BlockchainSolutions;
+export default BlockchainSolutions

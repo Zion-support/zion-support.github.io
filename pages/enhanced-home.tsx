@@ -58,16 +58,16 @@ icon: Brain,'
     { number: '98%', label: 'Client Satisfaction' },'
     { number: '50+', label: 'Countries Served' },'
     { number: '24/7', label: 'Support Available' }
-  ];
-;
+  ]
+
   return (
-    <>;
+    <>
 <Head>
         <title>Zion Tech Group - Leading Technology Solutions</title>
         <meta name = "description" content="Transform your business with cutting-edge AI, cloud solutions, and innovative technology services from Zion Tech Group." />"
         <meta name="viewport" content="width="device-width," initial-scale=1" />
       </Head>
-      ";
+      "
 <Layout title = "Zion Tech Group - Leading Technology Solutions""
         description="Transform your business with cutting-edge AI, cloud solutions, and innovative technology services"
       >
@@ -81,7 +81,7 @@ icon: Brain,'
             <motion.div,"
 className="absolute top-20 left-20 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl""
               animate="{{"
-                x: [0, 100, 0],;
+                x: [0, 100, 0],
                 y: [0, -100, 0],>
 }}"
               transition = "{{"
@@ -92,7 +92,7 @@ className="absolute top-20 left-20 w-72 h-72 bg-blue-500/20 rounded-full blur-3x
             <motion.div,"
 className="absolute bottom-20 right-20 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl""
               animate="{{"
-                x: [0, -100, 0],;
+                x: [0, -100, 0],
                 y: [0, 100, 0],>
 }}"
               transition = "{{"
@@ -271,6 +271,6 @@ whileHover="{{" scale: 1.05 }}"
         </section>
       </Layout>
     </>
-  )};
+  )}
 "
-export default EnhancedHome;
+export default EnhancedHome

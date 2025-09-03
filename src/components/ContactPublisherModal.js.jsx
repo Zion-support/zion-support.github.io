@@ -59,7 +59,7 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
             setIsLoading(false); // Set loading false,"});,"});"
 }""";,"});,"});"
 };"""";,"});,"})
-    return (";
+    return ("
     <div ref="{modalRef}" className="fixed inset-0 bg-black/50 flex items-center justify-center z-50" role="dialog" aria-modal="true" aria-labelledby="contact-publisher-title" onClick="{onClose}">"""";,"});,"})"
       <div className="bg-white dark:bg-zion-blue-dark p-6 rounded-lg shadow-lg min-w-[300px]" onClick="{(e)" => e.stopPropagation()}>"""";,"});,"})"
         <h2 id="contact-publisher-title">Contact Publisher</h2>""";,"});,"})"
@@ -95,30 +95,30 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
     const [message, setMessage] = useState('')';''
     const [subject, setSubject] = useState('')'
     const [message, setMessage] = useState('')'
-    const [error, setError] = useState();
+    const [error, setError] = useState()
     const [isLoading, setIsLoading] = useState(false) // New loading state,
-const firstInputRef = useRef();
-    const modalRef = useRef();
+const firstInputRef = useRef()
+    const modalRef = useRef()
     useEffect(() => {}
-        if();
+        if()
             return,"
 function handleKeyDown(e) {}""
 '''
             if (e.key === 'Escape') {}
-                e.preventDefault()";
+                e.preventDefault()"
                 onClose()}", "
 }'''
-        const removeTrap = modalRef.current ? focusManagement.trapFocus(modalRef.current) : null'';
+        const removeTrap = modalRef.current ? focusManagement.trapFocus(modalRef.current) : null''
         firstInputRef.current?.focus()'
                 onClose()}"}''
         const removeTrap = modalRef.current ? focusManagement.trapFocus(modalRef.current) : null'
         firstInputRef.current?.focus()'
         document.addEventListener('keydown', handleKeyDown)"
         return () => {}""
-'';
-'';
-'''';
-            document.removeEventListener();
+''
+''
+''''
+            document.removeEventListener()
             removeTrap && removeTrap()}}, [isOpen, onClose])
     if (!isOpen) {}
         return null}
@@ -127,10 +127,10 @@ function handleKeyDown(e) {}""
         if (!subject.trim() || !message.trim()) {}""
 '''
 '''
-'''';
-            setError('Subject and message are required.')'';
-            return}'''';
-        setError();
+''''
+            setError('Subject and message are required.')''
+            return}''''
+        setError()
         setIsLoading(true) // Set loading true,"
 try {}""
             await sendMessage({ productId }, { sellerId }, { subject }, { message })'''
@@ -141,7 +141,7 @@ try {}""
         catch (err) {}""
 '''
 '''
-'''';
+''''
             // ';''
             toast.error('Failed to send message. Please try again.')';''
             // Optionally, set a specific error message state if needed'''''
@@ -190,8 +190,8 @@ try {}""
       </div>"""
     </div>)}'"""
           </button>
-        </form>;
-      </div>;
+        </form>
+      </div>
     </div>)}''''
 '''''';"
       </div>""

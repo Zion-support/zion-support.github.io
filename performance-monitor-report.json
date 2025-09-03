@@ -1,33 +1,835 @@
 {
-  "timestamp": "2025-09-02T22:04:21.713Z",
-  "performance": {
-    "success": false,
-    "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nFailed to compile.\n\n./node_modules/next/dist/client/components/redirect-status-code.js\nError: Cannot find module '@babel/plugin-proposal-class-properties'\nRequire stack:\n- /workspace/node_modules/next/dist/compiled/babel/bundle.js\n- /workspace/node_modules/next/dist/compiled/babel/code-frame.js\n- /workspace/node_modules/next/dist/next-devtools/server/shared.js\n- /workspace/node_modules/next/dist/server/patch-error-inspect.js\n- /workspace/node_modules/next/dist/server/node-environment-extensions/error-inspect.js\n- /workspace/node_modules/next/dist/server/node-environment.js\n- /workspace/node_modules/next/dist/build/utils.js\n- /workspace/node_modules/next/dist/build/entries.js\n- /workspace/node_modules/next/dist/build/index.js\n- /workspace/node_modules/next/dist/cli/next-build.js\n\nMake sure that all the Babel plugins and presets you are using\nare defined as dependencies or devDependencies in your package.json\nfile. It's possible that the missing plugin is loaded by a preset\nyou are using that forgot to add the plugin to its dependencies: you\ncan workaround this problem by explicitly adding the missing package\nto your top-level package.json.\n\n    at Function.<anonymous> (node:internal/modules/cjs/loader:1401:15)\n    at /workspace/node_modules/next/dist/server/require-hook.js:57:36\n    at resolve (node:internal/modules/helpers:145:19)\n    at tryRequireResolve (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:89098)\n    at resolveStandardizedNameForRequire (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:89450)\n    at resolveStandardizedName (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:89908)\n    at loadPlugin (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:87183)\n    at loadPlugin.next (<anonymous>)\n    at createDescriptor (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:71159)\n    at createDescriptor.next (<anonymous>)\n    at evaluateSync (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:38619)\n    at /workspace/node_modules/next/dist/compiled/babel/bundle.js:1:35992\n    at Array.map (<anonymous>)\n    at Function.sync (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:35984)\n    at Function.all (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:38364)\n    at Generator.next (<anonymous>)\n    at createDescriptors (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:70614)\n    at createDescriptors.next (<anonymous>)\n    at createPluginDescriptors (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:70517)\n    at createPluginDescriptors.next (<anonymous>)\n    at /workspace/node_modules/next/dist/compiled/babel/bundle.js:1:132236\n    at Generator.next (<anonymous>)\n    at mergeChainOpts (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:65975)\n    at mergeChainOpts.next (<anonymous>)\n    at chainWalker (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:65249)\n    at chainWalker.next (<anonymous>)\n    at loadFileChain (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:62758)\n    at loadFileChain.next (<anonymous>)\n    at buildRootChain (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:60148)\n    at buildRootChain.next (<anonymous>)\n    at loadPrivatePartialConfig (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:105747)\n    at loadPrivatePartialConfig.next (<anonymous>)\n    at loadPartialConfig (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:106546)\n    at loadPartialConfig.next (<anonymous>)\n    at evaluateSync (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:38619)\n    at sync (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:36635)\n    at stopHiding - secret - don't use this - v1 (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:128983)\n    at loadPartialConfigSync (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:101584)\n    at Object.loadPartialConfig (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:101779)\n    at hasBabelConfig (/workspace/node_modules/next/dist/telemetry/events/version.js:22:62)\n    at eventCliSession (/workspace/node_modules/next/dist/telemetry/events/version.js:53:25)\n    at /workspace/node_modules/next/dist/build/index.js:459:58\n    at async Span.traceAsyncFn (/workspace/node_modules/next/dist/trace/trace.js:157:20)\n    at async build (/workspace/node_modules/next/dist/build/index.js:378:9)\n\nImport trace for requested module:\n./node_modules/next/dist/client/components/redirect-status-code.js\n./node_modules/next/dist/server/route-modules/pages/pages-handler.js\n\n./node_modules/next/dist/pages/_error.js\nError: Cannot find module '@babel/plugin-proposal-class-properties'\nRequire stack:\n- /workspace/node_modules/next/dist/compiled/babel/bundle.js\n- /workspace/node_modules/next/dist/compiled/babel/code-frame.js\n- /workspace/node_modules/next/dist/next-devtools/server/shared.js\n- /workspace/node_modules/next/dist/server/patch-error-inspect.js\n- /workspace/node_modules/next/dist/server/node-environment-extensions/error-inspect.js\n- /workspace/node_modules/next/dist/server/node-environment.js\n- /workspace/node_modules/next/dist/build/utils.js\n- /workspace/node_modules/next/dist/build/entries.js\n- /workspace/node_modules/next/dist/build/index.js\n- /workspace/node_modules/next/dist/cli/next-build.js\n\nMake sure that all the Babel plugins and presets you are using\nare defined as dependencies or devDependencies in your package.json\nfile. It's possible that the missing plugin is loaded by a preset\nyou are using that forgot to add the plugin to its dependencies: you\ncan workaround this problem by explicitly adding the missing package\nto your top-level package.json.\n\n    at Function.<anonymous> (node:internal/modules/cjs/loader:1401:15)\n    at /workspace/node_modules/next/dist/server/require-hook.js:57:36\n    at resolve (node:internal/modules/helpers:145:19)\n    at tryRequireResolve (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:89098)\n    at resolveStandardizedNameForRequire (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:89450)\n    at resolveStandardizedName (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:89908)\n    at loadPlugin (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:87183)\n    at loadPlugin.next (<anonymous>)\n    at createDescriptor (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:71159)\n    at createDescriptor.next (<anonymous>)\n    at evaluateSync (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:38619)\n    at /workspace/node_modules/next/dist/compiled/babel/bundle.js:1:35992\n    at Array.map (<anonymous>)\n    at Function.sync (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:35984)\n    at Function.all (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:38364)\n    at Generator.next (<anonymous>)\n    at createDescriptors (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:70614)\n    at createDescriptors.next (<anonymous>)\n    at createPluginDescriptors (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:70517)\n    at createPluginDescriptors.next (<anonymous>)\n    at /workspace/node_modules/next/dist/compiled/babel/bundle.js:1:132236\n    at Generator.next (<anonymous>)\n    at mergeChainOpts (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:65975)\n    at mergeChainOpts.next (<anonymous>)\n    at chainWalker (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:65249)\n    at chainWalker.next (<anonymous>)\n    at loadFileChain (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:62758)\n    at loadFileChain.next (<anonymous>)\n    at buildRootChain (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:60148)\n    at buildRootChain.next (<anonymous>)\n    at loadPrivatePartialConfig (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:105747)\n    at loadPrivatePartialConfig.next (<anonymous>)\n    at loadPartialConfig (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:106546)\n    at loadPartialConfig.next (<anonymous>)\n    at evaluateSync (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:38619)\n    at sync (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:36635)\n    at stopHiding - secret - don't use this - v1 (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:128983)\n    at loadPartialConfigSync (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:101584)\n    at Object.loadPartialConfig (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:101779)\n    at hasBabelConfig (/workspace/node_modules/next/dist/telemetry/events/version.js:22:62)\n    at eventCliSession (/workspace/node_modules/next/dist/telemetry/events/version.js:53:25)\n    at /workspace/node_modules/next/dist/build/index.js:459:58\n    at async Span.traceAsyncFn (/workspace/node_modules/next/dist/trace/trace.js:157:20)\n    at async build (/workspace/node_modules/next/dist/build/index.js:378:9)\n\nImport trace for requested module:\n./node_modules/next/dist/pages/_error.js\n\n./node_modules/next/dist/shared/lib/errors/constants.js\nError: Cannot find module '@babel/plugin-proposal-class-properties'\nRequire stack:\n- /workspace/node_modules/next/dist/compiled/babel/bundle.js\n- /workspace/node_modules/next/dist/compiled/babel/code-frame.js\n- /workspace/node_modules/next/dist/next-devtools/server/shared.js\n- /workspace/node_modules/next/dist/server/patch-error-inspect.js\n- /workspace/node_modules/next/dist/server/node-environment-extensions/error-inspect.js\n- /workspace/node_modules/next/dist/server/node-environment.js\n- /workspace/node_modules/next/dist/build/utils.js\n- /workspace/node_modules/next/dist/build/entries.js\n- /workspace/node_modules/next/dist/build/index.js\n- /workspace/node_modules/next/dist/cli/next-build.js\n\nMake sure that all the Babel plugins and presets you are using\nare defined as dependencies or devDependencies in your package.json\nfile. It's possible that the missing plugin is loaded by a preset\nyou are using that forgot to add the plugin to its dependencies: you\ncan workaround this problem by explicitly adding the missing package\nto your top-level package.json.\n\n    at Function.<anonymous> (node:internal/modules/cjs/loader:1401:15)\n    at /workspace/node_modules/next/dist/server/require-hook.js:57:36\n    at resolve (node:internal/modules/helpers:145:19)\n    at tryRequireResolve (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:89098)\n    at resolveStandardizedNameForRequire (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:89450)\n    at resolveStandardizedName (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:89908)\n    at loadPlugin (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:87183)\n    at loadPlugin.next (<anonymous>)\n    at createDescriptor (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:71159)\n    at createDescriptor.next (<anonymous>)\n    at evaluateSync (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:38619)\n    at /workspace/node_modules/next/dist/compiled/babel/bundle.js:1:35992\n    at Array.map (<anonymous>)\n    at Function.sync (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:35984)\n    at Function.all (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:38364)\n    at Generator.next (<anonymous>)\n    at createDescriptors (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:70614)\n    at createDescriptors.next (<anonymous>)\n    at createPluginDescriptors (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:70517)\n    at createPluginDescriptors.next (<anonymous>)\n    at /workspace/node_modules/next/dist/compiled/babel/bundle.js:1:132236\n    at Generator.next (<anonymous>)\n    at mergeChainOpts (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:65975)\n    at mergeChainOpts.next (<anonymous>)\n    at chainWalker (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:65249)\n    at chainWalker.next (<anonymous>)\n    at loadFileChain (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:62758)\n    at loadFileChain.next (<anonymous>)\n    at buildRootChain (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:60148)\n    at buildRootChain.next (<anonymous>)\n    at loadPrivatePartialConfig (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:105747)\n    at loadPrivatePartialConfig.next (<anonymous>)\n    at loadPartialConfig (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:106546)\n    at loadPartialConfig.next (<anonymous>)\n    at evaluateSync (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:38619)\n    at sync (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:36635)\n    at stopHiding - secret - don't use this - v1 (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:128983)\n    at loadPartialConfigSync (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:101584)\n    at Object.loadPartialConfig (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:101779)\n    at hasBabelConfig (/workspace/node_modules/next/dist/telemetry/events/version.js:22:62)\n    at eventCliSession (/workspace/node_modules/next/dist/telemetry/events/version.js:53:25)\n    at /workspace/node_modules/next/dist/build/index.js:459:58\n    at async Span.traceAsyncFn (/workspace/node_modules/next/dist/trace/trace.js:157:20)\n    at async build (/workspace/node_modules/next/dist/build/index.js:378:9)\n\nImport trace for requested module:\n./node_modules/next/dist/shared/lib/errors/constants.js\n./node_modules/next/dist/server/stream-utils/node-web-streams-helper.js\n./node_modules/next/dist/server/render-result.js\n./node_modules/next/dist/server/route-modules/pages/pages-handler.js\n\n./node_modules/next/dist/shared/lib/get-hostname.js\nError: Cannot find module '@babel/plugin-proposal-class-properties'\nRequire stack:\n- /workspace/node_modules/next/dist/compiled/babel/bundle.js\n- /workspace/node_modules/next/dist/compiled/babel/code-frame.js\n- /workspace/node_modules/next/dist/next-devtools/server/shared.js\n- /workspace/node_modules/next/dist/server/patch-error-inspect.js\n- /workspace/node_modules/next/dist/server/node-environment-extensions/error-inspect.js\n- /workspace/node_modules/next/dist/server/node-environment.js\n- /workspace/node_modules/next/dist/build/utils.js\n- /workspace/node_modules/next/dist/build/entries.js\n- /workspace/node_modules/next/dist/build/index.js\n- /workspace/node_modules/next/dist/cli/next-build.js\n\nMake sure that all the Babel plugins and presets you are using\nare defined as dependencies or devDependencies in your package.json\nfile. It's possible that the missing plugin is loaded by a preset\nyou are using that forgot to add the plugin to its dependencies: you\ncan workaround this problem by explicitly adding the missing package\nto your top-level package.json.\n\n    at Function.<anonymous> (node:internal/modules/cjs/loader:1401:15)\n    at /workspace/node_modules/next/dist/server/require-hook.js:57:36\n    at resolve (node:internal/modules/helpers:145:19)\n    at tryRequireResolve (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:89098)\n    at resolveStandardizedNameForRequire (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:89450)\n    at resolveStandardizedName (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:89908)\n    at loadPlugin (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:87183)\n    at loadPlugin.next (<anonymous>)\n    at createDescriptor (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:71159)\n    at createDescriptor.next (<anonymous>)\n    at evaluateSync (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:38619)\n    at /workspace/node_modules/next/dist/compiled/babel/bundle.js:1:35992\n    at Array.map (<anonymous>)\n    at Function.sync (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:35984)\n    at Function.all (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:38364)\n    at Generator.next (<anonymous>)\n    at createDescriptors (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:70614)\n    at createDescriptors.next (<anonymous>)\n    at createPluginDescriptors (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:70517)\n    at createPluginDescriptors.next (<anonymous>)\n    at /workspace/node_modules/next/dist/compiled/babel/bundle.js:1:132236\n    at Generator.next (<anonymous>)\n    at mergeChainOpts (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:65975)\n    at mergeChainOpts.next (<anonymous>)\n    at chainWalker (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:65249)\n    at chainWalker.next (<anonymous>)\n    at loadFileChain (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:62758)\n    at loadFileChain.next (<anonymous>)\n    at buildRootChain (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:60148)\n    at buildRootChain.next (<anonymous>)\n    at loadPrivatePartialConfig (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:105747)\n    at loadPrivatePartialConfig.next (<anonymous>)\n    at loadPartialConfig (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:106546)\n    at loadPartialConfig.next (<anonymous>)\n    at evaluateSync (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:38619)\n    at sync (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:36635)\n    at stopHiding - secret - don't use this - v1 (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:128983)\n    at loadPartialConfigSync (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:101584)\n    at Object.loadPartialConfig (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:101779)\n    at hasBabelConfig (/workspace/node_modules/next/dist/telemetry/events/version.js:22:62)\n    at eventCliSession (/workspace/node_modules/next/dist/telemetry/events/version.js:53:25)\n    at /workspace/node_modules/next/dist/build/index.js:459:58\n    at async Span.traceAsyncFn (/workspace/node_modules/next/dist/trace/trace.js:157:20)\n    at async build (/workspace/node_modules/next/dist/build/index.js:378:9)\n\nImport trace for requested module:\n./node_modules/next/dist/shared/lib/get-hostname.js\n./node_modules/next/dist/server/web/next-url.js\n./node_modules/next/dist/server/web/spec-extension/request.js\n./node_modules/next/dist/server/web/spec-extension/adapters/next-request.js\n./node_modules/next/dist/server/pipe-readable.js\n./node_modules/next/dist/server/render-result.js\n./node_modules/next/dist/server/route-modules/pages/pages-handler.js\n\n./node_modules/next/dist/shared/lib/invariant-error.js\nError: Cannot find module '@babel/plugin-proposal-class-properties'\nRequire stack:\n- /workspace/node_modules/next/dist/compiled/babel/bundle.js\n- /workspace/node_modules/next/dist/compiled/babel/code-frame.js\n- /workspace/node_modules/next/dist/next-devtools/server/shared.js\n- /workspace/node_modules/next/dist/server/patch-error-inspect.js\n- /workspace/node_modules/next/dist/server/node-environment-extensions/error-inspect.js\n- /workspace/node_modules/next/dist/server/node-environment.js\n- /workspace/node_modules/next/dist/build/utils.js\n- /workspace/node_modules/next/dist/build/entries.js\n- /workspace/node_modules/next/dist/build/index.js\n- /workspace/node_modules/next/dist/cli/next-build.js\n\nMake sure that all the Babel plugins and presets you are using\nare defined as dependencies or devDependencies in your package.json\nfile. It's possible that the missing plugin is loaded by a preset\nyou are using that forgot to add the plugin to its dependencies: you\ncan workaround this problem by explicitly adding the missing package\nto your top-level package.json.\n\n    at Function.<anonymous> (node:internal/modules/cjs/loader:1401:15)\n    at /workspace/node_modules/next/dist/server/require-hook.js:57:36\n    at resolve (node:internal/modules/helpers:145:19)\n    at tryRequireResolve (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:89098)\n    at resolveStandardizedNameForRequire (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:89450)\n    at resolveStandardizedName (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:89908)\n    at loadPlugin (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:87183)\n    at loadPlugin.next (<anonymous>)\n    at createDescriptor (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:71159)\n    at createDescriptor.next (<anonymous>)\n    at evaluateSync (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:38619)\n    at /workspace/node_modules/next/dist/compiled/babel/bundle.js:1:35992\n    at Array.map (<anonymous>)\n    at Function.sync (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:35984)\n    at Function.all (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:38364)\n    at Generator.next (<anonymous>)\n    at createDescriptors (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:70614)\n    at createDescriptors.next (<anonymous>)\n    at createPluginDescriptors (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:70517)\n    at createPluginDescriptors.next (<anonymous>)\n    at /workspace/node_modules/next/dist/compiled/babel/bundle.js:1:132236\n    at Generator.next (<anonymous>)\n    at mergeChainOpts (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:65975)\n    at mergeChainOpts.next (<anonymous>)\n    at chainWalker (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:65249)\n    at chainWalker.next (<anonymous>)\n    at loadFileChain (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:62758)\n    at loadFileChain.next (<anonymous>)\n    at buildRootChain (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:60148)\n    at buildRootChain.next (<anonymous>)\n    at loadPrivatePartialConfig (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:105747)\n    at loadPrivatePartialConfig.next (<anonymous>)\n    at loadPartialConfig (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:106546)\n    at loadPartialConfig.next (<anonymous>)\n    at evaluateSync (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:38619)\n    at sync (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:36635)\n    at stopHiding - secret - don't use this - v1 (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:128983)\n    at loadPartialConfigSync (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:101584)\n    at Object.loadPartialConfig (/workspace/node_modules/next/dist/compiled/babel/bundle.js:1:101779)\n    at hasBabelConfig (/workspace/node_modules/next/dist/telemetry/events/version.js:22:62)\n    at eventCliSession (/workspace/node_modules/next/dist/telemetry/events/version.js:53:25)\n    at /workspace/node_modules/next/dist/build/index.js:459:58\n    at async Span.traceAsyncFn (/workspace/node_modules/next/dist/trace/trace.js:157:20)\n    at async build (/workspace/node_modules/next/dist/build/index.js:378:9)\n\nImport trace for requested module:\n./node_modules/next/dist/shared/lib/invariant-error.js\n./node_modules/next/dist/server/render-result.js\n./node_modules/next/dist/server/route-modules/pages/pages-handler.js\n\n\n> Build failed because of webpack errors\n",
-    "buildTime": 1751},
-  "bundle": {
-    "size": 8563853,
-    "sizeInMB": "8.17",
-    "status": "good";
-},
-  "dependencies": {
-    "totalDeps": 45,
-    "outdatedDeps": [
-      {
-        "dep": "react",
-        "current": "^18.2.0",
-        "recommended": "18.2.0";
-},
-      {
-        "dep": "next",
-        "current": "^15.5.2",
-        "recommended": "15.5.2";
-}
-    ],
-    "securityIssues": [];
-},
-  "summary": {
-    "buildStatus": "unknown",
-    "bundleStatus": "good",
-    "totalDependencies": 45,
-    "outdatedDependencies": 2}
+  "timestamp": "2025-09-03T04:40:48.301Z",
+  "metrics": {
+    "bundleSize": "18M",
+    "buildTime": 0,
+    "pageLoadTime": 0,
+    "memoryUsage": 0
+  },
+  "optimizations": [
+    {
+      "type": "large_files",
+      "files": [
+        {
+          "path": "src/components/AICodeGenerator.jsx",
+          "size": 133962
+        },
+        {
+          "path": "src/components/AboutSection.jsx",
+          "size": 122462
+        },
+        {
+          "path": "src/components/BlockchainWeb3Dashboard.jsx",
+          "size": 100715
+        },
+        {
+          "path": "src/components/CaseStudiesSection.js.jsx",
+          "size": 126970
+        },
+        {
+          "path": "src/components/CaseStudiesSection.jsx",
+          "size": 291327
+        },
+        {
+          "path": "src/components/CategoriesSection.jsx",
+          "size": 127437
+        },
+        {
+          "path": "src/components/ClientSuccessStoriesSection.js.jsx",
+          "size": 150606
+        },
+        {
+          "path": "src/components/ClientSuccessStoriesSection.jsx",
+          "size": 382036
+        },
+        {
+          "path": "src/components/CollaborationPlatform.jsx",
+          "size": 144542
+        },
+        {
+          "path": "src/components/ContactCTA.tsx",
+          "size": 314187
+        },
+        {
+          "path": "src/components/ContactSection.jsx",
+          "size": 130708
+        },
+        {
+          "path": "src/components/Dashboard.jsx",
+          "size": 127157
+        },
+        {
+          "path": "src/components/EnhancedAbout.js.jsx",
+          "size": 106722
+        },
+        {
+          "path": "src/components/EnhancedAbout.jsx",
+          "size": 278008
+        },
+        {
+          "path": "src/components/EnhancedComprehensiveServicesShowcase.js.jsx",
+          "size": 155439
+        },
+        {
+          "path": "src/components/EnhancedComprehensiveServicesShowcase.jsx",
+          "size": 131175
+        },
+        {
+          "path": "src/components/EnhancedHero.jsx",
+          "size": 128626
+        },
+        {
+          "path": "src/components/EnhancedHero.tsx",
+          "size": 122127
+        },
+        {
+          "path": "src/components/EnhancedTestimonials.tsx",
+          "size": 125550
+        },
+        {
+          "path": "src/components/EnterpriseDashboard.jsx",
+          "size": 129112
+        },
+        {
+          "path": "src/components/FuturisticLoader.jsx",
+          "size": 112955
+        },
+        {
+          "path": "src/components/GlobalPresenceSection.js.jsx",
+          "size": 130931
+        },
+        {
+          "path": "src/components/GlobalPresenceSection.jsx",
+          "size": 268116
+        },
+        {
+          "path": "src/components/HeroSection.jsx",
+          "size": 160275
+        },
+        {
+          "path": "src/components/InnovationResearchSection.js.jsx",
+          "size": 122864
+        },
+        {
+          "path": "src/components/InnovationResearchSection.jsx",
+          "size": 315830
+        },
+        {
+          "path": "src/components/InnovativeServicesShowcase.js.jsx",
+          "size": 141156
+        },
+        {
+          "path": "src/components/InnovativeServicesShowcase.jsx",
+          "size": 115924
+        },
+        {
+          "path": "src/components/InteractiveServiceShowcase.jsx",
+          "size": 127148
+        },
+        {
+          "path": "src/components/InteractiveTestimonials.js.jsx",
+          "size": 119892
+        },
+        {
+          "path": "src/components/InteractiveTestimonials.jsx",
+          "size": 244815
+        },
+        {
+          "path": "src/components/MachineLearningDashboard.jsx",
+          "size": 143359
+        },
+        {
+          "path": "src/components/MainNavigation.jsx",
+          "size": 159582
+        },
+        {
+          "path": "src/components/MobileNavigation.tsx",
+          "size": 108317
+        },
+        {
+          "path": "src/components/ModernServicesShowcase.tsx",
+          "size": 144437
+        },
+        {
+          "path": "src/components/ModernTestimonials.tsx",
+          "size": 143698
+        },
+        {
+          "path": "src/components/PerformanceDashboard.tsx",
+          "size": 154409
+        },
+        {
+          "path": "src/components/PricingSection.jsx",
+          "size": 242357
+        },
+        {
+          "path": "src/components/ProjectManagementDashboard.js.jsx",
+          "size": 138164
+        },
+        {
+          "path": "src/components/ProjectManagementDashboard.jsx",
+          "size": 333269
+        },
+        {
+          "path": "src/components/ROICalculator.tsx",
+          "size": 208926
+        },
+        {
+          "path": "src/components/ResponsiveNavigation.tsx",
+          "size": 189779
+        },
+        {
+          "path": "src/components/SecurityComplianceDashboard.js.jsx",
+          "size": 126817
+        },
+        {
+          "path": "src/components/SecurityComplianceDashboard.jsx",
+          "size": 200671
+        },
+        {
+          "path": "src/components/SecurityComplianceSection.js.jsx",
+          "size": 174063
+        },
+        {
+          "path": "src/components/SecurityComplianceSection.jsx",
+          "size": 375176
+        },
+        {
+          "path": "src/components/ServiceComparisonTool.tsx",
+          "size": 170921
+        },
+        {
+          "path": "src/components/ServicesBenefitsShowcase.jsx",
+          "size": 195881
+        },
+        {
+          "path": "src/components/ServicesShowcase.jsx",
+          "size": 167641
+        },
+        {
+          "path": "src/components/Sitemap.jsx",
+          "size": 116413
+        },
+        {
+          "path": "src/components/TechSolutionsSection.jsx",
+          "size": 219613
+        },
+        {
+          "path": "src/components/TechnologyStackSection.js.jsx",
+          "size": 131551
+        },
+        {
+          "path": "src/components/TechnologyStackSection.jsx",
+          "size": 275503
+        },
+        {
+          "path": "src/components/TestimonialCarousel.jsx",
+          "size": 147171
+        },
+        {
+          "path": "src/components/auth/login/LoginContent.jsx",
+          "size": 123651
+        },
+        {
+          "path": "src/components/conflicted/RequestQuote.js.jsx",
+          "size": 106400
+        },
+        {
+          "path": "src/components/disabled/AdvancedAIBusinessProcessAutomation.jsx",
+          "size": 173164
+        },
+        {
+          "path": "src/components/disabled/AdvancedAIServicesHub.tsx",
+          "size": 120701
+        },
+        {
+          "path": "src/components/home/EnhancedServicesShowcase.jsx",
+          "size": 121296
+        },
+        {
+          "path": "src/components/home/ExpandedServicesPreview.jsx",
+          "size": 145922
+        },
+        {
+          "path": "src/components/home/FeatureCTAs.jsx",
+          "size": 123914
+        },
+        {
+          "path": "src/components/home/FeatureHighlights.jsx",
+          "size": 144347
+        },
+        {
+          "path": "src/components/home/MicroSaasServicesSection.jsx",
+          "size": 138135
+        },
+        {
+          "path": "src/components/mobile-app/AppStoreBanner.jsx",
+          "size": 113428
+        },
+        {
+          "path": "src/components/mobile-app/CommunityTrust.jsx",
+          "size": 139139
+        },
+        {
+          "path": "src/components/navigation/ModernNavigation.tsx",
+          "size": 148399
+        },
+        {
+          "path": "src/components/navigation/SidebarNavigation.tsx",
+          "size": 131174
+        },
+        {
+          "path": "src/components/services/ITServicePricingTable.jsx",
+          "size": 121004
+        },
+        {
+          "path": "src/components/services/PageSections/EnterpriseCallToAction.jsx",
+          "size": 163966
+        },
+        {
+          "path": "src/components/services/PageSections/ServiceIncludes.jsx",
+          "size": 219087
+        },
+        {
+          "path": "src/components/testimonials/TestimonialsSection.tsx",
+          "size": 115890
+        },
+        {
+          "path": "src/components/ui/FuturisticHero.jsx",
+          "size": 105760
+        },
+        {
+          "path": "src/components/unused/Marketplace.js.jsx",
+          "size": 124955
+        },
+        {
+          "path": "src/components/unused/Marketplace.jsx",
+          "size": 234727
+        },
+        {
+          "path": "src/pages/404.jsx",
+          "size": 108872
+        },
+        {
+          "path": "src/pages/5g-enterprise-solutions.jsx",
+          "size": 157657
+        },
+        {
+          "path": "src/pages/AIAutonomousBusinessOperations.jsx",
+          "size": 145309
+        },
+        {
+          "path": "src/pages/AIAutonomousBusinessPlatform.jsx",
+          "size": 396226
+        },
+        {
+          "path": "src/pages/AIAutonomousBusinessPlatform2029.jsx",
+          "size": 209558
+        },
+        {
+          "path": "src/pages/AIAutonomousBusinessProcessAutomation.jsx",
+          "size": 258812
+        },
+        {
+          "path": "src/pages/AIAutonomousLegalResearchAssistant.jsx",
+          "size": 166463
+        },
+        {
+          "path": "src/pages/AIAutonomousVehicle.jsx",
+          "size": 401539
+        },
+        {
+          "path": "src/pages/AIBusinessIntelligence.jsx",
+          "size": 133913
+        },
+        {
+          "path": "src/pages/AIBusinessSolutions.jsx",
+          "size": 126862
+        },
+        {
+          "path": "src/pages/AICodeReview.jsx",
+          "size": 165884
+        },
+        {
+          "path": "src/pages/AIContentCreation.tsx",
+          "size": 391787
+        },
+        {
+          "path": "src/pages/AIContentCreationStudio.tsx",
+          "size": 195806
+        },
+        {
+          "path": "src/pages/AIContentGenerator.jsx",
+          "size": 138504
+        },
+        {
+          "path": "src/pages/AICybersecurity.tsx",
+          "size": 396156
+        },
+        {
+          "path": "src/pages/AIHealthcarePlatform.tsx",
+          "size": 327474
+        },
+        {
+          "path": "src/pages/AIPoweredITAssetManagement.jsx",
+          "size": 112159
+        },
+        {
+          "path": "src/pages/APIDocumentation.tsx",
+          "size": 264092
+        },
+        {
+          "path": "src/pages/About.jsx",
+          "size": 107938
+        },
+        {
+          "path": "src/pages/Accessibility.jsx",
+          "size": 225749
+        },
+        {
+          "path": "src/pages/AdvancedPricingGuide2025.tsx",
+          "size": 442551
+        },
+        {
+          "path": "src/pages/AdvancedServices.jsx",
+          "size": 160841
+        },
+        {
+          "path": "src/pages/AdvancedServices2025.jsx",
+          "size": 315422
+        },
+        {
+          "path": "src/pages/AgenticRagHelpdesk.jsx",
+          "size": 134244
+        },
+        {
+          "path": "src/pages/AllServicesIndex2026.tsx",
+          "size": 151435
+        },
+        {
+          "path": "src/pages/AllServicesOverview.tsx",
+          "size": 304304
+        },
+        {
+          "path": "src/pages/Automation.tsx",
+          "size": 203797
+        },
+        {
+          "path": "src/pages/AutonomousBusinessOperationsPlatform.jsx",
+          "size": 589923
+        },
+        {
+          "path": "src/pages/Blockchain.jsx",
+          "size": 382885
+        },
+        {
+          "path": "src/pages/BlockchainServicesPage.jsx",
+          "size": 121264
+        },
+        {
+          "path": "src/pages/BusinessSolutionsPage.jsx",
+          "size": 105819
+        },
+        {
+          "path": "src/pages/CaseStudiesPage.tsx",
+          "size": 153465
+        },
+        {
+          "path": "src/pages/CloudDevOps.tsx",
+          "size": 396056
+        },
+        {
+          "path": "src/pages/CloudInfrastructure.jsx",
+          "size": 288162
+        },
+        {
+          "path": "src/pages/CloudSolutions.tsx",
+          "size": 215858
+        },
+        {
+          "path": "src/pages/Compliance.tsx",
+          "size": 239998
+        },
+        {
+          "path": "src/pages/ComprehensiveInnovativeServices2025.tsx",
+          "size": 287736
+        },
+        {
+          "path": "src/pages/ComprehensiveInnovativeServices2030.tsx",
+          "size": 341448
+        },
+        {
+          "path": "src/pages/ComprehensiveMarketingPage2026.tsx",
+          "size": 516205
+        },
+        {
+          "path": "src/pages/ComprehensiveMicroSAASServices2025.tsx",
+          "size": 270459
+        },
+        {
+          "path": "src/pages/ComprehensivePricing.jsx",
+          "size": 169627
+        },
+        {
+          "path": "src/pages/ComprehensivePricing2028.tsx",
+          "size": 261950
+        },
+        {
+          "path": "src/pages/ComprehensiveServices2029.tsx",
+          "size": 164842
+        },
+        {
+          "path": "src/pages/ComprehensiveServicesAdvertising2030.tsx",
+          "size": 193767
+        },
+        {
+          "path": "src/pages/ComprehensiveServicesLanding2025.jsx",
+          "size": 270837
+        },
+        {
+          "path": "src/pages/ComprehensiveServicesLanding2026.tsx",
+          "size": 213788
+        },
+        {
+          "path": "src/pages/ComprehensiveServicesOverview2032.tsx",
+          "size": 194204
+        },
+        {
+          "path": "src/pages/ComprehensiveServicesShowcase2027Page.tsx",
+          "size": 554568
+        },
+        {
+          "path": "src/pages/ComprehensiveServicesShowcase2031.tsx",
+          "size": 168584
+        },
+        {
+          "path": "src/pages/CuttingEdgeServices2025.tsx",
+          "size": 410412
+        },
+        {
+          "path": "src/pages/Dashboard.tsx",
+          "size": 227029
+        },
+        {
+          "path": "src/pages/DataProtection.tsx",
+          "size": 485205
+        },
+        {
+          "path": "src/pages/EmergingTech.jsx",
+          "size": 201436
+        },
+        {
+          "path": "src/pages/EnhancedServices2025.tsx",
+          "size": 102007
+        },
+        {
+          "path": "src/pages/EnhancedZionTechServices2025.tsx",
+          "size": 217245
+        },
+        {
+          "path": "src/pages/EnterpriseIT.jsx",
+          "size": 148087
+        },
+        {
+          "path": "src/pages/ExpandedServicesPlus.tsx",
+          "size": 138115
+        },
+        {
+          "path": "src/pages/ExpandedServicesPricing2027.tsx",
+          "size": 263568
+        },
+        {
+          "path": "src/pages/GetStarted.jsx",
+          "size": 125412
+        },
+        {
+          "path": "src/pages/GovernmentSolutions.jsx",
+          "size": 282590
+        },
+        {
+          "path": "src/pages/HealthcareSolutions.jsx",
+          "size": 308168
+        },
+        {
+          "path": "src/pages/Help.jsx",
+          "size": 295565
+        },
+        {
+          "path": "src/pages/Home2026.tsx",
+          "size": 324529
+        },
+        {
+          "path": "src/pages/ITConsulting.tsx",
+          "size": 243986
+        },
+        {
+          "path": "src/pages/ITInfrastructure.jsx",
+          "size": 129851
+        },
+        {
+          "path": "src/pages/ITOnsiteServices.jsx",
+          "size": 292908
+        },
+        {
+          "path": "src/pages/Infrastructure.jsx",
+          "size": 407092
+        },
+        {
+          "path": "src/pages/InnovationServicesMarketing.jsx",
+          "size": 217102
+        },
+        {
+          "path": "src/pages/InnovativeMicroSAASShowcase2026.tsx",
+          "size": 287581
+        },
+        {
+          "path": "src/pages/InnovativeServices.tsx",
+          "size": 141896
+        },
+        {
+          "path": "src/pages/InnovativeServices2025.jsx",
+          "size": 164001
+        },
+        {
+          "path": "src/pages/InnovativeServices2027.tsx",
+          "size": 289147
+        },
+        {
+          "path": "src/pages/InnovativeServicesHub.tsx",
+          "size": 115728
+        },
+        {
+          "path": "src/pages/InnovativeServicesShowcase2025.jsx",
+          "size": 217005
+        },
+        {
+          "path": "src/pages/IoTServicesPage.jsx",
+          "size": 108164
+        },
+        {
+          "path": "src/pages/ManufacturingSolutions.jsx",
+          "size": 129768
+        },
+        {
+          "path": "src/pages/MicroSAASPage.jsx",
+          "size": 120023
+        },
+        {
+          "path": "src/pages/Mobile.jsx",
+          "size": 102221
+        },
+        {
+          "path": "src/pages/MobileDevelopment.jsx",
+          "size": 389498
+        },
+        {
+          "path": "src/pages/NewServicesOverview.jsx",
+          "size": 217847
+        },
+        {
+          "path": "src/pages/News.jsx",
+          "size": 115594
+        },
+        {
+          "path": "src/pages/OnsiteSupport.jsx",
+          "size": 424116
+        },
+        {
+          "path": "src/pages/PricingPage.jsx",
+          "size": 220960
+        },
+        {
+          "path": "src/pages/QuantumComputing.jsx",
+          "size": 388319
+        },
+        {
+          "path": "src/pages/QuantumEdgeComputingPlatform.jsx",
+          "size": 157282
+        },
+        {
+          "path": "src/pages/QuantumNeuralNetworkPlatform.jsx",
+          "size": 119550
+        },
+        {
+          "path": "src/pages/ServiceComparison.jsx",
+          "size": 112290
+        },
+        {
+          "path": "src/pages/ServiceInnovationHub.jsx",
+          "size": 149702
+        },
+        {
+          "path": "src/pages/ServicePortfolioDashboard.jsx",
+          "size": 148429
+        },
+        {
+          "path": "src/pages/ServiceRecommendations.jsx",
+          "size": 151855
+        },
+        {
+          "path": "src/pages/ServicesMarketingPage.jsx",
+          "size": 204593
+        },
+        {
+          "path": "src/pages/ServicesShowcase.jsx",
+          "size": 139562
+        },
+        {
+          "path": "src/pages/StartupSolutions.jsx",
+          "size": 171065
+        },
+        {
+          "path": "src/pages/SupplyChain.jsx",
+          "size": 176027
+        },
+        {
+          "path": "src/pages/Support.jsx",
+          "size": 102539
+        },
+        {
+          "path": "src/pages/Sustainability.jsx",
+          "size": 177199
+        },
+        {
+          "path": "src/pages/Testimonials.jsx",
+          "size": 269297
+        },
+        {
+          "path": "src/pages/UltimateHomepage2025.jsx",
+          "size": 253215
+        },
+        {
+          "path": "src/pages/UltimatePricing2025.jsx",
+          "size": 142546
+        },
+        {
+          "path": "src/pages/accessibility-auditor.jsx",
+          "size": 128849
+        },
+        {
+          "path": "src/pages/advanced-cybersecurity-suite.jsx",
+          "size": 141161
+        },
+        {
+          "path": "src/pages/affiliate-attribution-hub.jsx",
+          "size": 139432
+        },
+        {
+          "path": "src/pages/ai-powered-it-asset-management.jsx",
+          "size": 127815
+        },
+        {
+          "path": "src/pages/ai-services/AIAutonomousLegalAssistant.tsx",
+          "size": 346957
+        },
+        {
+          "path": "src/pages/ai-services/ai-autonomous-research-assistant.tsx",
+          "size": 161951
+        },
+        {
+          "path": "src/pages/ai-services/ai-supply-chain-optimization.tsx",
+          "size": 194108
+        },
+        {
+          "path": "src/pages/autonomous-business-operations-platform.jsx",
+          "size": 126393
+        },
+        {
+          "path": "src/pages/it-services/advanced-cybersecurity-suite.tsx",
+          "size": 229408
+        },
+        {
+          "path": "src/pages/micro-saas/QuantumCryptography.tsx",
+          "size": 311645
+        },
+        {
+          "path": "src/pages/micro-saas/ai-content-marketing-suite.tsx",
+          "size": 195333
+        },
+        {
+          "path": "src/pages/micro-saas/ai-workflow-orchestrator.tsx",
+          "size": 212320
+        },
+        {
+          "path": "pages/services.tsx",
+          "size": 169922
+        },
+        {
+          "path": "pages/services.tsx.disabled",
+          "size": 119885
+        }
+      ],
+      "recommendation": "Consider code splitting or lazy loading for large files"
+    },
+    {
+      "type": "unused_dependencies",
+      "dependencies": [
+        "@esbuild/linux-x64",
+        "@radix-ui/react-alert-dialog",
+        "@radix-ui/react-avatar",
+        "@radix-ui/react-checkbox",
+        "@radix-ui/react-collapsible",
+        "@radix-ui/react-dialog",
+        "@radix-ui/react-dropdown-menu",
+        "@radix-ui/react-hover-card",
+        "@radix-ui/react-label",
+        "@radix-ui/react-menubar",
+        "@radix-ui/react-navigation-menu",
+        "@radix-ui/react-popover",
+        "@radix-ui/react-progress",
+        "@radix-ui/react-radio-group",
+        "@radix-ui/react-scroll-area",
+        "@radix-ui/react-select",
+        "@radix-ui/react-separator",
+        "@radix-ui/react-slider",
+        "@radix-ui/react-slot",
+        "@radix-ui/react-switch",
+        "@radix-ui/react-tabs",
+        "@radix-ui/react-toast",
+        "@radix-ui/react-toggle",
+        "@radix-ui/react-toggle-group",
+        "@radix-ui/react-tooltip",
+        "@supabase/supabase-js",
+        "@types/node",
+        "@types/react",
+        "@types/react-dom",
+        "class-variance-authority",
+        "framer-motion",
+        "lucide-react",
+        "next",
+        "path",
+        "react",
+        "react-datepicker",
+        "react-dom",
+        "react-error-boundary",
+        "tailwindcss-animate"
+      ],
+      "recommendation": "Remove unused dependencies to reduce bundle size"
+    },
+    {
+      "type": "anti_patterns",
+      "patterns": [
+        {
+          "file": "src/components/PerformanceMonitor.tsx",
+          "pattern": "console.log in production code",
+          "line": 46
+        },
+        {
+          "file": "src/components/seo/SEOEnhancer.tsx",
+          "pattern": "console.log in production code",
+          "line": 93
+        }
+      ],
+      "recommendation": "Optimize performance anti-patterns"
+    }
+  ],
+  "recommendations": [
+    "Implement code splitting for large components",
+    "Use lazy loading for non-critical components",
+    "Optimize images and assets",
+    "Remove unused dependencies",
+    "Implement proper caching strategies",
+    "Use React.memo for expensive components",
+    "Optimize bundle size with webpack analysis"
+  ]
 }

@@ -1,40 +1,40 @@
 export interface SpecializedIndustrySolution {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  industry: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
+  id: string
+  name: string
+  tagline: string
+  price: string
+  period: string
+  description: string
+  features: string[]
+  popular: boolean
+  icon: string
+  color: string
+  textColor: string
+  link: string
+  marketPosition: string
+  targetAudience: string
+  trialDays: number
+  setupTime: string
+  category: string
+  industry: string
+  realService: boolean
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
+  roi: string
+  competitors: string[]
+  marketSize: string
+  growthRate: string
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string};
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
+    mobile: string
+    email: string
+    address: string
+    website: string}
+  realImplementation: boolean
+  implementationDetails: string
+  launchDate: string
+  customers: number
+  rating: number
 export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
   // MANUFACTURING & INDUSTRIAL SOLUTIONS
   {
@@ -399,14 +399,14 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
     customers: 18,
     rating: 4.6,
     reviews: 42
-];
+]
 export const industryCategories2025: string[] = Array.from(
   new Set(
     specializedIndustrySolutions2025
       .map((s) => s.industry)
-      .filter((v): v is string = > Boolean(v));
-  );
-).sort();
-export const getSolutionsByIndustry = (industry: string) => {;
-  if (!industry || industry === 'All') return specializedIndustrySolutions2025;
-    .sort((a, b) => (b.rating || 0) - (a.rating || 0));
+      .filter((v): v is string = > Boolean(v))
+  )
+).sort()
+export const getSolutionsByIndustry = (industry: string) => {
+  if (!industry || industry === 'All') return specializedIndustrySolutions2025
+    .sort((a, b) => (b.rating || 0) - (a.rating || 0))

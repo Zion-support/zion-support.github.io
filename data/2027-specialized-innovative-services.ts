@@ -1,39 +1,39 @@
 export interface SpecializedInnovativeService2027 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
+  id: string
+  name: string
+  tagline: string
+  price: string
+  period: string
+  description: string
+  features: string[]
+  popular: boolean
+  icon: string
+  color: string
+  textColor: string
+  link: string
+  marketPosition: string
+  targetAudience: string
+  trialDays: number
+  setupTime: string
+  category: string
+  realService: boolean
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
+  roi: string
+  competitors: string[]
+  marketSize: string
+  growthRate: string
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string};
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
+    mobile: string
+    email: string
+    address: string
+    website: string}
+  realImplementation: boolean
+  implementationDetails: string
+  launchDate: string
+  customers: number
+  rating: number
   reviews: number}
 export const specializedInnovativeServices2027: SpecializedInnovativeService2027[] = [
   // SPACE TECHNOLOGY SERVICES
@@ -545,24 +545,24 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     customers: 89,
     rating: 4.8,
     reviews: 167
-];
+]
 // Helper functions for service management
-export const getSpecializedServiceById = (id: string) => {;
-  return specializedInnovativeServices2027.find(service => service.id === id)};
-export const getSpecializedServicesByCategory = (category: string) => {;
-  return specializedInnovativeServices2027.filter(service => service.category === category)};
-export const getSpecializedPopularServices = () => {;
-  return specializedInnovativeServices2027.filter(service => service.popular);
-};
-export const getSpecializedServicesByPriceRange = (minPrice: number, maxPrice: number) => {;
-  return specializedInnovativeServices2027.filter(service => {;
-    const price = parseInt(service.price.replace(/[^0-9]/g, ''));
-    return price >= minPrice && price <= maxPrice})};
-export const searchSpecializedServices = (query: string) => {;
-  const lowercaseQuery = query.toLowerCase();
-  return specializedInnovativeServices2027.filter(service = > ;
-    service.name.toLowerCase().includes(lowercaseQuery) ||;
-    service.description.toLowerCase().includes(lowercaseQuery) ||;
-    service.category.toLowerCase().includes(lowercaseQuery);
-  )};
+export const getSpecializedServiceById = (id: string) => {
+  return specializedInnovativeServices2027.find(service => service.id === id)}
+export const getSpecializedServicesByCategory = (category: string) => {
+  return specializedInnovativeServices2027.filter(service => service.category === category)}
+export const getSpecializedPopularServices = () => {
+  return specializedInnovativeServices2027.filter(service => service.popular)
+}
+export const getSpecializedServicesByPriceRange = (minPrice: number, maxPrice: number) => {
+  return specializedInnovativeServices2027.filter(service => {
+    const price = parseInt(service.price.replace(/[^0-9]/g, ''))
+    return price >= minPrice && price <= maxPrice})}
+export const searchSpecializedServices = (query: string) => {
+  const lowercaseQuery = query.toLowerCase()
+  return specializedInnovativeServices2027.filter(service = > 
+    service.name.toLowerCase().includes(lowercaseQuery) ||
+    service.description.toLowerCase().includes(lowercaseQuery) ||
+    service.category.toLowerCase().includes(lowercaseQuery)
+  )}
 export default specializedInnovativeServices2027}}

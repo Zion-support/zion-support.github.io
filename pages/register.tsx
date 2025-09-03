@@ -14,31 +14,26 @@ export default function Register() {
     company: '','
     phone: '',
     agreeToTerms: false,
-    subscribeNewsletter: true});
-
-  const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isRegistered, setIsRegistered] = useState(false);
-
+    subscribeNewsletter: true})
+  const [showPassword, setShowPassword] = useState(false)
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isRegistered, setIsRegistered] = useState(false)
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {,,
-    const { name, value, type, checked } = e.target;
+    const { name, value, type, checked } = e.target
     setFormData(prev = > ({
-      ...prev,;
-      [name]: type === 'checkbox' ? checked : value}));
-  };
-
+      ...prev,
+      [name]: type === 'checkbox' ? checked : value}))
+  }
   const handleSubmit = async (e: React.FormEvent) => {,
     e.preventDefault(),
-    setIsSubmitting(true),;
-    ;
-    // Simulate registration process,;
-await new Promise(resolve => setTimeout(resolve, 2000));
+    setIsSubmitting(true),
     
-    setIsSubmitting(false);
-    setIsRegistered(true);
-  };
-
+    // Simulate registration process,
+await new Promise(resolve => setTimeout(resolve, 2000))
+    setIsSubmitting(false)
+    setIsRegistered(true)
+  }
   const benefits = [
     {
       icon: Users,'
@@ -48,10 +43,10 @@ await new Promise(resolve => setTimeout(resolve, 2000));
       icon: Zap,'
       title: 'Priority Support','
       description: 'Get priority access to our support team and faster response times'},
-    {;
-      icon: Star,;
-      title: 'Exclusive Content',;
-      description: 'Access to exclusive resources, whitepapers, and case studies;
+    {
+      icon: Star,
+      title: 'Exclusive Content',
+      description: 'Access to exclusive resources, whitepapers, and case studies
 },
     {
       icon: Shield,'
@@ -61,7 +56,7 @@ await new Promise(resolve => setTimeout(resolve, 2000));
 
   if (isRegistered) {
     return (
-      <>;
+      <>
 <Head>
           <title>Registration Successful - Zion Tech Group</title>
           <meta name = "description" content="Welcome to Zion Tech Group! Your account has been created successfully." />
@@ -119,7 +114,7 @@ initial="{{" scale: 0 }}"
     )}
 
   return (
-    <>;
+    <>
 <Head>
         <title>Create Account - Zion Tech Group</title>"
         <meta name = "description" content="Create your account to access our platform, services, and expert network." />
@@ -399,4 +394,4 @@ checked="{formData.agreeToTerms}""
         </div>
       </div>
     </>",
-  )};
+  )}

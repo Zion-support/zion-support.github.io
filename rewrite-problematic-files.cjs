@@ -1,27 +1,24 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-
+const fs = require('fs')
+const path = require('path')
 class FileRewriter {
   constructor() {
-    this.projectRoot = process.cwd();
+    this.projectRoot = process.cwd()
   }
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
+    console.log(`[${new Date().toISOString()}] ${message}`)
   }
 
   rewriteNotFoundPage() {
-    const filePath = path.join(this.projectRoot, 'pages/NotFound.tsx');
-
-    const content = `import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Phone, Mail, Home, ArrowLeft } from 'lucide-react';
-import { Layout } from '../components/Layout';
-
+    const filePath = path.join(this.projectRoot, 'pages/NotFound.tsx')
+    const content = `import React from 'react'
+import Head from 'next/head'
+import Link from 'next/link'
+import { motion } from 'framer-motion'
+import { Phone, Mail, Home, ArrowLeft } from 'lucide-react'
+import { Layout } from '../components/Layout'
 export default function NotFound() {
   return (
     <Layout
@@ -94,77 +91,69 @@ export default function NotFound() {
         </motion.div>
       </div>
     </Layout>
-  );
-}`;
-
-    fs.writeFileSync(filePath, content, 'utf8');
-    this.log('✅ Rewrote NotFound.tsx');
-    return true;
+  )
+}`
+    fs.writeFileSync(filePath, content, 'utf8')
+    this.log('✅ Rewrote NotFound.tsx')
+    return true
   }
 
   rewriteContactPage() {
-    const filePath = path.join(this.projectRoot, 'pages/contact.tsx');
-
-    const content = `import React, { useState } from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
-import { Layout } from '../components/Layout';
-
+    const filePath = path.join(this.projectRoot, 'pages/contact.tsx')
+    const content = `import React, { useState } from 'react'
+import Head from 'next/head'
+import { motion } from 'framer-motion'
+import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from 'lucide-react'
+import { Layout } from '../components/Layout'
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
     service: '',
-    message: '';
-});
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
+    message: ''
+})
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSubmitted, setIsSubmitted] = useState(false)
   const handleInputChange = (e) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target
     setFormData(prev => ({
       ...prev,
-      [name]: value;
-}));
-  };
-
+      [name]: value
+}))
+  }
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
+    e.preventDefault()
+    setIsSubmitting(true)
     // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-  };
-
+    await new Promise(resolve => setTimeout(resolve, 2000))
+    setIsSubmitting(false)
+    setIsSubmitted(true)
+  }
   const contactMethods = [
     {
       icon: Phone,
       title: 'Phone',
       details: '+1 (555) 123-4567',
-      description: 'Call us for immediate assistance';
+      description: 'Call us for immediate assistance'
 },
     {
       icon: Mail,
       title: 'Email',
       details: 'info@ziontechgroup.com',
-      description: 'Send us an email anytime';
+      description: 'Send us an email anytime'
 },
     {
       icon: MapPin,
       title: 'Office',
       details: '123 Tech Street, Innovation City',
-      description: 'Visit our headquarters';
+      description: 'Visit our headquarters'
 },
     {
       icon: Clock,
       title: 'Hours',
       details: 'Mon-Fri 9AM-6PM EST',
-      description: 'We\'re here to help';
+      description: 'We\'re here to help'
 }
   ]
 
@@ -433,48 +422,46 @@ export default function Contact() {
         </div>
       </section>
     </Layout>
-  );
-}`;
-
-    fs.writeFileSync(filePath, content, 'utf8');
-    this.log('✅ Rewrote contact.tsx');
-    return true;
+  )
+}`
+    fs.writeFileSync(filePath, content, 'utf8')
+    this.log('✅ Rewrote contact.tsx')
+    return true
   }
 
   async rewriteAllProblematicFiles() {
-    this.log('🔧 Rewriting problematic files...');
-
+    this.log('🔧 Rewriting problematic files...')
     const rewrites = [
       () => this.rewriteNotFoundPage(),
       () => this.rewriteContactPage(),
     ]
 
-    let rewrittenCount = 0;
+    let rewrittenCount = 0
     for (const rewrite of rewrites) {
       if (rewrite()) {
-        rewrittenCount++;
+        rewrittenCount++
       }
     }
 
-    this.log(`🎉 Rewrote ${rewrittenCount} problematic files!`);
-    return rewrittenCount > 0;
+    this.log(`🎉 Rewrote ${rewrittenCount} problematic files!`)
+    return rewrittenCount > 0
   }
 }
 
 // Run the rewriter
-const rewriter = new FileRewriter();
+const rewriter = new FileRewriter()
 rewriter
   .rewriteAllProblematicFiles()
   .then(success => {
     if (success) {
-      console.log('✅ Problematic files rewritten successfully!');
-      process.exit(0);
+      console.log('✅ Problematic files rewritten successfully!')
+      process.exit(0)
     } else {
-      console.log('❌ No files were rewritten.');
-      process.exit(0);
+      console.log('❌ No files were rewritten.')
+      process.exit(0)
     }
   })
   .catch(error => {
-    console.error('❌ Fatal error:', error);
-    process.exit(1);
-  });
+    console.error('❌ Fatal error:', error)
+    process.exit(1)
+  })

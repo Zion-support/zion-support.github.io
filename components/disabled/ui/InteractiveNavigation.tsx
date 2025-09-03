@@ -5,5 +5,4 @@ const InteractiveNavigation: React.FC = () => {  return ('
     </nav>,
   )}
 
-export default InteractiveNavigation';
-;
+export default InteractiveNavigation'

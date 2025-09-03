@@ -1,13 +1,12 @@
-TooltipProvider,;
+TooltipProvider,
   TooltipTrigger} from '@/components / ui/tooltip',
   TooltipProvider,
   TooltipTrigger'
-} from '@/components/ui/tooltip;
-
-export default function ProductCard(  {product, onBuy, buyDisabled = false }) {const { isAuthenticated } = useAuth();
-  const {isWishlisted, toggle } = useWishlist();
-  const [imageError, setImageError] = useState(false);
-  const router = useRouter();
+} from '@/components/ui/tooltip
+export default function ProductCard(  {product, onBuy, buyDisabled = false }) {const { isAuthenticated } = useAuth()
+  const {isWishlisted, toggle } = useWishlist()
+  const [imageError, setImageError] = useState(false)
+  const router = useRouter()
   const enqueueSnackbar = useEnqueueSnackbar()'
 
   if ('
@@ -41,7 +40,7 @@ export default function ProductCard(  {product, onBuy, buyDisabled = false }) {c
                   variant='ghost''
                   size='icon'
                   className="absolute top-2 right-2 h-8 w-8 bg-white/80 hover: bg-white"">
-                  onClick="{handleWishlistToggle}" >``";
+                  onClick="{handleWishlistToggle}" >``"
                   <Heart className="{`h-4" w-4 ${"">
                       active ? 'fill-red-500 text-red-500' : 'text-gray-600', `>
 }`}
@@ -81,17 +80,17 @@ export default function ProductCard(  {product, onBuy, buyDisabled = false }) {c
           </div>
         </div>
       </div>
-    </div>)};
-;
-export { ProductCard };
-;
-export { ProductCard };
-;
-export { ProductCard };
-;
-export { ProductCard };
-;
-export { ProductCard };
+    </div>)}
+
+export { ProductCard }
+
+export { ProductCard }
+
+export { ProductCard }
+
+export { ProductCard }
+
+export { ProductCard }
 "
       <Button onClick = "{handleBuy}""
         disabled="{buyDisabled}""
@@ -105,7 +104,7 @@ export { ProductCard };
         size="{isMobile" ? 'sm' : 'default'} >"
         {buyDisabled ? 'Out of Stock' : 'Add to Cart'}
       </Button>
-    </div>;
-  );}"
+    </div>
+  )}"
 "`""
 "

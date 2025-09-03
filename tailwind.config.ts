@@ -1,5 +1,4 @@
-import type { Config } from 'tailwindcss';
-
+import type { Config } from 'tailwindcss'
 export default {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -71,4 +70,4 @@ export default {
     require('@tailwindcss/typography'),
     require('@tailwindcss/aspect-ratio'),
   ],
-} satisfies Config;
+} satisfies Config

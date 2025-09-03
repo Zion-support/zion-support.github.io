@@ -12,11 +12,11 @@ module.exports = {
       max_memory_restart: "1G,
       env: {
         NODE_ENV: development,
-        PORT: 3000;
+        PORT: 3000
 },
       env_production: {
         NODE_ENV: "production",
-        NODE_OPTIONS: --max-old-space-size=6144 --openssl-legacy-provider;
+        NODE_OPTIONS: --max-old-space-size=6144 --openssl-legacy-provider
 }
         NODE_ENV: development",
         PORT: 3000
@@ -38,7 +38,7 @@ module.exports = {
       watch: false,
       max_memory_restart: 1G,
       env: {
-        NODE_ENV: "production";
+        NODE_ENV: "production"
 }
         NODE_ENV: production
       }
@@ -54,11 +54,11 @@ module.exports = {
       max_memory_restart: "1G,
       env: {
         NODE_ENV: production,
-        AUTOMATION_INTERVAL: "300000" // 5 minutes;
+        AUTOMATION_INTERVAL: "300000" // 5 minutes
 },
       log_file: ./automation/logs/pm2-error-prevention.log,
       error_file: "./automation/logs/pm2-error-prevention-error.log",
-      out_file: ./automation/logs/pm2-error-prevention-out.log;
+      out_file: ./automation/logs/pm2-error-prevention-out.log
 }
         NODE_ENV: production",
         AUTOMATION_INTERVAL: "300000 // 5 minutes
@@ -78,7 +78,7 @@ module.exports = {
       max_memory_restart: 512M,
       env: {
         NODE_ENV: "production",
-        AUTOMATION_INTERVAL: 900000 // 15 minutes;
+        AUTOMATION_INTERVAL: 900000 // 15 minutes
 }
         NODE_ENV: production",
         AUTOMATION_INTERVAL: "900000 // 15 minutes
@@ -95,7 +95,7 @@ module.exports = {
       max_memory_restart: 512M",
       env: {
         NODE_ENV: "production,
-        AUTOMATION_INTERVAL: 1800000" // 30 minutes;
+        AUTOMATION_INTERVAL: 1800000" // 30 minutes
 }
         NODE_ENV: "production,
         AUTOMATION_INTERVAL: 1800000 // 30 minutes
@@ -112,7 +112,7 @@ module.exports = {
       max_memory_restart: "512M,
       env: {
         NODE_ENV: production,
-        AUTOMATION_INTERVAL: "2700000" // 45 minutes;
+        AUTOMATION_INTERVAL: "2700000" // 45 minutes
 }
         NODE_ENV: production,
         AUTOMATION_INTERVAL: 2700000 // 45 minutes
@@ -129,7 +129,7 @@ module.exports = {
       max_memory_restart: 512M,
       env: {
         NODE_ENV: production",
-        AUTOMATION_INTERVAL: "2400000 // 40 minutes;
+        AUTOMATION_INTERVAL: "2400000 // 40 minutes
 }
         NODE_ENV: production,
         AUTOMATION_INTERVAL: 2400000" // 40 minutes
@@ -146,7 +146,7 @@ module.exports = {
       max_memory_restart: 512M,
       env: {
         NODE_ENV: "production",
-        AUTOMATION_INTERVAL: 3600000 // 1 hour;
+        AUTOMATION_INTERVAL: 3600000 // 1 hour
 }
         NODE_ENV: production",
         AUTOMATION_INTERVAL: "3600000 // 1 hour
@@ -163,7 +163,7 @@ module.exports = {
       max_memory_restart: 512M",
       env: {
         NODE_ENV: "production,
-        AUTOMATION_INTERVAL: 1800000" // 30 minutes;
+        AUTOMATION_INTERVAL: 1800000" // 30 minutes
 }
         NODE_ENV: "production,
         AUTOMATION_INTERVAL: 1800000 // 30 minutes
@@ -180,7 +180,7 @@ module.exports = {
       max_memory_restart: "512M,
       env: {
         NODE_ENV: production,
-        AUTOMATION_INTERVAL: "7200000" // 2 hours;
+        AUTOMATION_INTERVAL: "7200000" // 2 hours
 }
         NODE_ENV: production,
         AUTOMATION_INTERVAL: 7200000 // 2 hours
@@ -197,7 +197,7 @@ module.exports = {
       max_memory_restart: 512M,
       env: {
         NODE_ENV: production",
-        AUTOMATION_INTERVAL: "3600000 // 1 hour;
+        AUTOMATION_INTERVAL: "3600000 // 1 hour
 }
         NODE_ENV: production,
         AUTOMATION_INTERVAL: 3600000" // 1 hour
@@ -214,7 +214,7 @@ module.exports = {
       max_memory_restart: 512M,
       env: {
         NODE_ENV: "production",
-        AUTOMATION_INTERVAL: 14400000 // 4 hours;
+        AUTOMATION_INTERVAL: 14400000 // 4 hours
 }
         NODE_ENV: production",
         AUTOMATION_INTERVAL: "14400000 // 4 hours
@@ -231,7 +231,7 @@ module.exports = {
       max_memory_restart: 512M",
       env: {
         NODE_ENV: "production,
-        AUTOMATION_INTERVAL: 21600000" // 6 hours;
+        AUTOMATION_INTERVAL: 21600000" // 6 hours
 }
         NODE_ENV: "production,
         AUTOMATION_INTERVAL: 21600000 // 6 hours
@@ -248,7 +248,7 @@ module.exports = {
       max_memory_restart: "512M,
       env: {
         NODE_ENV: production,
-        AUTOMATION_INTERVAL: "7200000" // 2 hours;
+        AUTOMATION_INTERVAL: "7200000" // 2 hours
 }
         NODE_ENV: production,
         AUTOMATION_INTERVAL: 7200000 // 2 hours
@@ -265,7 +265,7 @@ module.exports = {
       max_memory_restart: 512M,
       env: {
         NODE_ENV: production",
-        AUTOMATION_INTERVAL: "10800000 // 3 hours;
+        AUTOMATION_INTERVAL: "10800000 // 3 hours
 }
         NODE_ENV: production,
         AUTOMATION_INTERVAL: 10800000" // 3 hours
@@ -282,7 +282,7 @@ module.exports = {
       max_memory_restart: 512M,
       env: {
         NODE_ENV: "production",
-        AUTOMATION_INTERVAL: 7200000 // 2 hours;
+        AUTOMATION_INTERVAL: 7200000 // 2 hours
 }
         NODE_ENV: production",
         AUTOMATION_INTERVAL: "7200000 // 2 hours
@@ -299,7 +299,7 @@ module.exports = {
       max_memory_restart: 512M",
       env: {
         NODE_ENV: "production,
-        AUTOMATION_INTERVAL: 14400000" // 4 hours;
+        AUTOMATION_INTERVAL: 14400000" // 4 hours
 }
         NODE_ENV: "production,
         AUTOMATION_INTERVAL: 14400000 // 4 hours
@@ -316,7 +316,7 @@ module.exports = {
       max_memory_restart: "512M,
       env: {
         NODE_ENV: production,
-        AUTOMATION_INTERVAL: "21600000" // 6 hours;
+        AUTOMATION_INTERVAL: "21600000" // 6 hours
 }
         NODE_ENV: production,
         AUTOMATION_INTERVAL: 21600000 // 6 hours
@@ -333,12 +333,12 @@ module.exports = {
       watch: false,
       max_memory_restart: 1G,
       env: {
-        NODE_ENV: "production";
+        NODE_ENV: "production"
 },
       cron_restart: 0 */6 * * *, // Every 6 hours
       log_file: "logs/auto-fix-and-build.log",
       out_file: logs/auto-fix-and-build-out.log,
-      error_file: "logs/auto-fix-and-build-error.log";
+      error_file: "logs/auto-fix-and-build-error.log"
 }
   ],
   deploy: {
@@ -350,10 +350,10 @@ module.exports = {
       path: /workspace/production,
       "pre-deploy-local": ,
       "post-deploy": npm install && npm run build && pm2 reload ecosystem.config.cjs --env production,
-      "pre-setup": ;
+      "pre-setup": 
 }
   }
-}; 
+}
     {
       name: 'zion-website',
       script: 'npm',
@@ -528,7 +528,7 @@ module.exports = {
       min_uptime: '5s',
       restart_delay: 2000,
       cron_restart: '0 2 * * *', // Run daily at 2 AM
-      pmx: true;
+      pmx: true
 }
       pmx: true},
 
@@ -650,7 +650,7 @@ module.exports = {
       pre-setup: "
     }
   }
-}; 
+}
   ],
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   deploy: {
@@ -664,4 +664,4 @@ module.exports = {
         'npm install && pm2 reload ecosystem.config.cjs --env production',
     },
   },
-};
+}

@@ -1,8 +1,7 @@
-import React from "react";
+import React from "react"
       description: 'AI solutions that grow with your business and adapt to changing needs.',,
-    };
-  ];
-
+    }
+  ]
   return ("
     <MainLayout title = "AI & Machine Learning Services - Zion Tech Group,"
 description="Custom" AI model development, process automation, analytics platforms, and chatbot solutions. Leverage the power of artificial intelligence to transform your business."
@@ -355,8 +354,8 @@ description="Custom" AI model development, process automation, analytics platfor
       {/*   */}"
       <section className="py-20 bg-blue-900 text-white>"
         <div className="container" mx-auto px-4 text-center">"
-          <h2 className="text-4xl font-bold mb-6>Ready to Harness the Power of AI?</h2>";
-          <p className="text-xl" mb-8 text-gray-200 max-w-3xl mx-auto">;
+          <h2 className="text-4xl font-bold mb-6>Ready to Harness the Power of AI?</h2>"
+          <p className="text-xl" mb-8 text-gray-200 max-w-3xl mx-auto">
             Let&apos;s discuss how our AI services can help automate your processes, ''
             gain insights, and create competitive advantages for your business.
           </p>"
@@ -376,7 +375,7 @@ description="Custom" AI model development, process automation, analytics platfor
         </div>
       </section>
     </MainLayout>,
-  ),;
-};
+  ),
+}
 "
-export default AIServicesPage;
+export default AIServicesPage

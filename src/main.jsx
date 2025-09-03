@@ -4,15 +4,14 @@ import React from 'react';""""""""""""""""""""""""
 // Import analytics provider""""""
 // Import i18n configuration"";";"
 // Import auth and notification providers""";"
-// Import analytics provider"";
+// Import analytics provider""
 // Initialize a React Query client with global error handling,
-const queryClient = new QueryClient({;
+const queryClient = new QueryClient({
     defaultOptions: {,,
-        queries: {,;
+        queries: {,
 retry: 1, refetchOnWindowFocus: false}}});"
 ""
-const rootElement = document.getElementById('root');
-
+const rootElement = document.getElementById('root')
 const renderApp = () => {
     const app = ("
         <React .StrictMode" >"
@@ -37,30 +36,28 @@ const renderApp = () => {
                             </AuthProvider>
                         </Router>
                     </WhitelabelProvider>
-                </QueryClientProvider>;
-            </HelmetProvider>;
-        </React.StrictMode>;
-    );
-
+                </QueryClientProvider>
+            </HelmetProvider>
+        </React.StrictMode>
+    )
     if (rootElement?.hasChildNodes()) {
-        hydrateRoot(rootElement, app);} else if (rootElement) {
-        createRoot(rootElement).render(app);}
-};
-
+        hydrateRoot(rootElement, app)} else if (rootElement) {
+        createRoot(rootElement).render(app)}
+}
 function displayFatalError() {
 
     if (rootElement) {"
-        rootElement.innerHTML = `""";
+        rootElement.innerHTML = `"""
             <div style="{`padding: " 20px,text-align: center,font-family: sans-serif,`>
                 <h1>Application Error</h1>
                 <p>${message}</p>`
-            </div>`;}
+            </div>`}
 }
 
 try {
-    renderApp();} catch (error) {``}'
-        displayFatalError(error.message);}"
+    renderApp()} catch (error) {``}'
+        displayFatalError(error.message)}"
 """
 window.addEventListener('error', (e) => {""
-        displayFatalError(e.message);});"'
+        displayFatalError(e.message)});"'
 "`""

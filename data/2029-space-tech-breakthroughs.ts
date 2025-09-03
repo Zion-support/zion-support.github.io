@@ -1,26 +1,26 @@
 export interface SpaceTechBreakthroughService2029 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  realImplementation: boolean;
+  id: string
+  name: string
+  tagline: string
+  price: string
+  description: string
+  features: string[]
+  link: string
+  marketPosition: string
+  targetAudience: string
+  roi: string
+  competitors: string[]
+  marketSize: string
+  growthRate: string
+  realImplementation: boolean
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string};
-  category: string;
-  technology: string[];
-  benefits: string[];
-  useCases: string[];
+    mobile: string
+    email: string
+    address: string}
+  category: string
+  technology: string[]
+  benefits: string[]
+  useCases: string[]
 export const spaceTechBreakthroughServices2029: SpaceTechBreakthroughService2029[] = [
   {
     id: "space-mining-automation-platform",
@@ -271,4 +271,4 @@ export const spaceTechBreakthroughServices2029: SpaceTechBreakthroughService2029
       "Unbreakable security",
       "Space-time messaging"
     ]
-];}}
+]}}

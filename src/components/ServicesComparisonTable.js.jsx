@@ -310,15 +310,15 @@ export function ServicesComparisonTable() {}"});,"})"
 '''''
   const serviceCategories = ['AI Services', IT Services',Micro SAAS']
   const getFeatureIcon = hasFeature => {}"
-    return hasFeature ? (""";
-      <Check className="w-4 h-4 text-green-500" /" >'''';
-    ) : ('''';
-      <X className="w-4 h-4 text-red-500" /" >"";
+    return hasFeature ? ("""
+      <Check className="w-4 h-4 text-green-500" /" >''''
+    ) : (''''
+      <X className="w-4 h-4 text-red-500" /" >""
     );", "
 }'
-      <X className = "w-4 h-4 text-red-500" /" >";
+      <X className = "w-4 h-4 text-red-500" /" >"
     );"}'
-  return();
+  return()
             const avgPrice = services.reduce((sum, service) => sum + (service.price || 0), 0) /
               services.length,"
 return()""
@@ -581,9 +581,9 @@ your business needs"
               ),
             )}
           </div>
-        </div>;
-      </div>;
-    </div>;
+        </div>
+      </div>
+    </div>
   );"
 }'"""
 }''''

@@ -23,9 +23,9 @@ const MainLayout: React.FC<MainLayoutProps> = ({,
       <main className="flex-grow">
         {children}
       </main>
-      <Footer />;
-    </div>;
-  );
-};
+      <Footer />
+    </div>
+  )
+}
 "'
-export default MainLayout;
+export default MainLayout

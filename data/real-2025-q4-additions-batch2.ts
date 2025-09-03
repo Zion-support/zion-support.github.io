@@ -1,19 +1,19 @@
 export interface AdditionalQ42025Service {
-	id: string;
-	name: string;
-	tagline: string;
-	price: string;
-	period: string;
-	description: string;
-	features: string[];
-	category: string;
-	link: string;
-	marketPosition?: string;
-	roi?: string;
-	competitors?: string[];
-	useCases?: string[];
-	integrations?: string[];
-	trialDays?: number;
+	id: string
+	name: string
+	tagline: string
+	price: string
+	period: string
+	description: string
+	features: string[]
+	category: string
+	link: string
+	marketPosition?: string
+	roi?: string
+	competitors?: string[]
+	useCases?: string[]
+	integrations?: string[]
+	trialDays?: number
 export const real2025Q4AdditionsBatch2: AdditionalQ42025Service[] = [
 	{
 		id: 'devsecops-copilot',

@@ -1,42 +1,42 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants'
 export interface RevolutionaryAIInnovationService2029 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  benefits: string[];
-  category: string;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string[];
-  trialDays: number;
-  setupTime: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
+  id: string
+  name: string
+  tagline: string
+  price: string
+  period: string
+  description: string
+  features: string[]
+  benefits: string[]
+  category: string
+  icon: string
+  color: string
+  textColor: string
+  link: string
+  marketPosition: string
+  targetAudience: string[]
+  trialDays: number
+  setupTime: string
+  realService: boolean
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
+  roi: string
+  competitors: string[]
+  marketSize: string
+  growthRate: string
+  variant: string
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string};
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-  isPopular?: boolean;
+    mobile: string
+    email: string
+    address: string}
+  realImplementation: boolean
+  implementationDetails: string
+  launchDate: string
+  customers: number
+  rating: number
+  reviews: number
+  isPopular?: boolean
   isNew?: boolean}
 export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationService2029[] =
   [
@@ -571,24 +571,24 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
       rating: 4.6,
       reviews: 23,
     },
-  ];
+  ]
 export const getAIServicesByCategory = (category: string) => {
   return revolutionaryAIInnovationServices2029.filter(
     service => service.category === category
-  )};
+  )}
 export const getPopularAIServices = () => {
   return revolutionaryAIInnovationServices2029.filter(
     service => service.isPopular
-  );
-};
+  )
+}
 export const getNewAIServices = () => {
-  return revolutionaryAIInnovationServices2029.filter(service => service.isNew);
-};
+  return revolutionaryAIInnovationServices2029.filter(service => service.isNew)
+}
 export const getAIServicesByPriceRange = (
   minPrice: number,
   maxPrice: number
 ) => {
   return revolutionaryAIInnovationServices2029.filter(service => {
-    const price = parseInt(service.price.replace('$', '').replace(',', ''));
-    return price >= minPrice && price <= maxPrice});
+    const price = parseInt(service.price.replace('$', '').replace(',', ''))
+    return price >= minPrice && price <= maxPrice})
 }>

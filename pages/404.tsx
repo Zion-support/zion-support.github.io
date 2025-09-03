@@ -1,11 +1,10 @@
-const React = dynamic(() => import('react'), { ssr: false });
+const React = dynamic(() => import('react'), { ssr: false })
 const Link = dynamic(() => import('next/link'), { ssr: false })
-    { name: 'Help Center', url: '/help', icon: FileText },;
-    { name: 'Privacy Policy', url: '/privacy', icon: Shield };
-  ];
-
+    { name: 'Help Center', url: '/help', icon: FileText },
+    { name: 'Privacy Policy', url: '/privacy', icon: Shield }
+  ]
   return (
-    <>;
+    <>
 <Head>
         <title>Page Not Found - Zion Tech Group</title>
         <meta name = "description""
@@ -24,7 +23,7 @@ const Link = dynamic(() => import('next/link'), { ssr: false })
             <h2 className="text-3xl font-bold text-white mb-4">
               Page Not Found,
             </h2>"
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">;
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               The page you are looking for doesn&apos;t exist or has been moved.
               Let&apos;s help you find what you need.
             </p>
@@ -76,7 +75,7 @@ const Link = dynamic(() => import('next/link'), { ssr: false })
 
           {/*   */}"
           <div className="mt-12 text-center">"
-            <p className="text-gray-300 mb-4">;
+            <p className="text-gray-300 mb-4">
               Still can&apos;t find what you&apos;re looking for?
             </p>"
             <div className = "flex flex-col sm: flex-row gap-4 justify-center">"
@@ -100,4 +99,3 @@ const Link = dynamic(() => import('next/link'), { ssr: false })
   ),
 }
 "
-;

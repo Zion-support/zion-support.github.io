@@ -1,50 +1,50 @@
 export interface EmergingTechInnovationService {
-  id: string;
-  name: string;
-  tagline: string;
-  description: string;
-  price: string;
-  period: string;
-  features: string[];
-  category: string;
-  marketSize: string;
-  targetAudience: string[];
-  competitiveAdvantage: string;
-  useCases: string[];
-  integrations: string[];
-  compliance: string[];
-  website: string;
+  id: string
+  name: string
+  tagline: string
+  description: string
+  price: string
+  period: string
+  features: string[]
+  category: string
+  marketSize: string
+  targetAudience: string[]
+  competitiveAdvantage: string
+  useCases: string[]
+  integrations: string[]
+  compliance: string[]
+  website: string
   contact: {
-    phone: string;
-    email: string;
-    address: string};
-  trialDays: number;
-  setupTime: string;
-  competitors: string[];
-  roi: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-  technologyStack: string[];
-  innovationLevel: string;
-  futureProofing: string;
-  researchPartnerships: string[];
-  popular?: boolean;
-  icon?: string;
-  color?: string;
-  textColor?: string;
-  link?: string;
-  marketPosition?: string;
-  technology?: string[];
-  growthRate?: string;
-  variant?: string;
+    phone: string
+    email: string
+    address: string}
+  trialDays: number
+  setupTime: string
+  competitors: string[]
+  roi: string
+  launchDate: string
+  customers: number
+  rating: number
+  reviews: number
+  technologyStack: string[]
+  innovationLevel: string
+  futureProofing: string
+  researchPartnerships: string[]
+  popular?: boolean
+  icon?: string
+  color?: string
+  textColor?: string
+  link?: string
+  marketPosition?: string
+  technology?: string[]
+  growthRate?: string
+  variant?: string
   contactInfo?: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string};
-  realImplementation?: boolean;
+    mobile: string
+    email: string
+    address: string
+    website: string}
+  realImplementation?: boolean
   implementationDetails?: string}
 
 export const emergingTechInnovations2025: EmergingTechInnovationService[] = [
@@ -122,4 +122,4 @@ export const emergingTechInnovations2025: EmergingTechInnovationService[] = [
     growthRate: '45% YoY',
     variant: 'premium',
   },
-];
+]

@@ -1,8 +1,7 @@
-import React from "react";
+import React from "react"
   Search,
   Bell} from 'lucide - react',
-  const description = 'Comprehensive customer support platform with AI chatbots, ticket management, live chat, and knowledge base creation.;
-
+  const description = 'Comprehensive customer support platform with AI chatbots, ticket management, live chat, and knowledge base creation.
   const features = [
     {'
       title: 'AI-Powered Chatbots','
@@ -106,10 +105,10 @@ import React from "react";
   ]
 
   const benefits = [
-    {;
-      icon: Zap,;
-      title: 'Reduce Response Time by 80%',;
-      description: 'AI chatbots provide instant responses, reducing customer wait times significantly;
+    {
+      icon: Zap,
+      title: 'Reduce Response Time by 80%',
+      description: 'AI chatbots provide instant responses, reducing customer wait times significantly
 },
     {
       icon: Users,'
@@ -126,7 +125,7 @@ import React from "react";
   ]
 
   return (
-    <PageTransition>;
+    <PageTransition>
 <Head>
         <title>{title}</title>
         <meta name = "description" content="{description}" />"
@@ -353,6 +352,6 @@ import React from "react";
           </div>
         </div>
       </section>
-    </PageTransition>;
+    </PageTransition>
   );"
 }

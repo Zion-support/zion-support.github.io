@@ -2,18 +2,18 @@ import React from 'react'
 
 interface SEOHeadProps {
 
-  title?: string;
-  description?: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
-  type?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  author?: string;
-  section?: string;
-  tags?: string[];
-  noindex?: boolean;
+  title?: string
+  description?: string
+  keywords?: string
+  image?: string
+  url?: string
+  type?: string
+  publishedTime?: string
+  modifiedTime?: string
+  author?: string
+  section?: string
+  tags?: string[]
+  noindex?: boolean
   nofollow?: boolean}
 
 const SEOHead: React.FC<SEOHeadProps> = ({',
@@ -28,14 +28,13 @@ const SEOHead: React.FC<SEOHeadProps> = ({',
   author = 'Zion Tech Group',
   section,
   tags = [],
-  noindex = false,;
-  nofollow = false,;
+  noindex = false,
+  nofollow = false,
 }) => {
-  const robots = [';
-    noindex ? 'noindex' : 'index',';
-    nofollow ? 'nofollow' : 'follow',';
-  ].join(', ');
-
+  const robots = ['
+    noindex ? 'noindex' : 'index','
+    nofollow ? 'nofollow' : 'follow','
+  ].join(', ')
   const structuredData = {'
     '@context': 'https://schema.org','
     '@type': type === 'article' ? 'Article' : 'WebPage',
@@ -47,20 +46,19 @@ const SEOHead: React.FC<SEOHeadProps> = ({',
     publisher: {',
       '@type': 'Organization','
       name: 'Zion Tech Group',
-      logo: {',;
-        '@type': 'ImageObject',';
+      logo: {',
+        '@type': 'ImageObject','
         url: 'https://ziontechgroup.com/logo.png',,
-},;
+},
 },
     datePublished: publishedTime,
     dateModified: modifiedTime,
     mainEntityOfPage: {',
       '@type': 'WebPage','
-      '@id': url,;
+      '@id': url,
 },'
-    ...(tags.length > 0 && { keywords: tags.join(', ') }),;
-};
-
+    ...(tags.length > 0 && { keywords: tags.join(', ') }),
+}
   return (
 <Head>
       {/* Basic Meta Tags */}
@@ -110,8 +108,8 @@ const SEOHead: React.FC<SEOHeadProps> = ({',
       <meta name="apple-mobile-web-app-capable" content="yes" />"
       <meta name="apple-mobile-web-app-status-bar-style" content="default" />"
       <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-    </Head>;
-  );
-};
+    </Head>
+  )
+}
 "'
-export default SEOHead;
+export default SEOHead

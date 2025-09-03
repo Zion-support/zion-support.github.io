@@ -184,4 +184,4 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'Investment strategy optimization',
       'Regulatory compliance reporting',
       'Risk model development',
-];
+]

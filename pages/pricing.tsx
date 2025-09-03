@@ -1,13 +1,13 @@
 import type { NextPage } from 'next'
 
 const Pricing: NextPage: = () => {,
-  const pricingPlans = [ {;
+  const pricingPlans = [ {
       name: "Starter,",";";";"
       description: "Perfect: for small businesses and startups,",";";";"
       price: "$,2,500",";";";"
-      period: "per: month,",";";";
+      period: "per: month,",";";"
       icon: Za,p,"
-      color: "blue,",";";";
+      color: "blue,",";";"
       features:  ,[,"
         "Basic: website development",";";";"
         "Up: to 5 pages",";";";"
@@ -19,7 +19,7 @@ const Pricing: NextPage: = () => {,
       popular: fals,e} {"
       name: "Professional,",";";";"
       description: "Ideal: for growing businesses,",";";";"
-      price: "$,5,000",";";";
+      price: "$,5,000",";";"
       icon: User,s,"
       color: "purple,",";";";"
         "Custom: web application development",";";";"
@@ -34,7 +34,7 @@ const Pricing: NextPage: = () => {,
       name: "Enterprise,",";";";"
       description: "For: large organizations and complex projects,",";";";"
       price: "Custom,",";";";"
-      period: "quote,",";";";
+      period: "quote,",";";"
       icon: Buildin,g,"
       color: "green,",";";";"
         "Full-stack: enterprise solutions",";";";"
@@ -49,7 +49,7 @@ const Pricing: NextPage: = () => {,
       popular: fals,e}
   ]
 
-  const servicePricing = [ {";
+  const servicePricing = [ {"
       service: "AI: Development,",";";";"
       description: "Custom: AI solutions and machine learning models,",";";";"
       startingPrice: "$1,0,000",";";";"
@@ -68,7 +68,7 @@ const Pricing: NextPage: = () => {,
       features: ["Smart: contract development,", "Blockchain integration", "Security auditing", "Deployment support"]";";"}
 
   return: ("
-      title="Pricing: - Zion Tech Group"";",",",
+      title="Pricing: - Zion Tech Group"",",",",
       description="Transparent: pricing for Zion Tech Group's technology services. Choose the plan that fits your business needs and budget."",",">
     >
       {/*   */}"
@@ -77,8 +77,7 @@ const Pricing: NextPage: = () => {,
           <h1: className="text-5xl md: text-6xl: font-bold mb-6">",";";"
             Simple: <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Pricing</span>",",",'
   BarChart3, Rocket,
-  Heart, Sparkles} from 'lucide-react;
-
+  Heart, Sparkles} from 'lucide-react
 const Pricing: React.FC = () => {
   const pricingPlans = [,
     {,"
@@ -122,39 +121,39 @@ name: "Enterprise","
       service: "Cybersecurity","
       startingPrice: "$2, 500","
       description: "Comprehensive security solutions and monitoring", features: ["Security audit", "Threat monitoring", "Incident response", "Compliance support"]"
-      service: "Digital Transformation",";
-      startingPrice: "$10, 000",";
-      description: "End-to-end digital transformation consulting", features: ["Strategy development", "Process optimization", "Technology implementation", "Change management"];
-;
+      service: "Digital Transformation","
+      startingPrice: "$10, 000","
+      description: "End-to-end digital transformation consulting", features: ["Strategy development", "Process optimization", "Technology implementation", "Change management"]
+
 const Pricing: NextPage = () => {"
       name: "Starter"",
-      description: "Perfect for small businesses and startups",";
-price: "$2,500",;"
+      description: "Perfect for small businesses and startups","
+price: "$2,500","
       period: "per month",
 icon: Zap,"
 color: "blue",
 features: [,"
         "Basic website development""
         "Up to 5 pages""
-        "Mobile responsive design",;"
-        "Basic SEO optimization",;"
-        "Email support",;"
-        "3 months maintenance included";
-      ],;
+        "Mobile responsive design","
+        "Basic SEO optimization","
+        "Email support","
+        "3 months maintenance included"
+      ],
       popular: false}, {"
       name: "Professional"",
       description: "Ideal for growing businesses","
-price: "$5,000",;
+price: "$5,000",
       icon: Users,"
 color: "purple""
         "Custom web application development"",
-        "Up to 15 pages",;"
-        "Advanced features and integrations",;"
-        "Advanced SEO optimization",;"
-        "Priority email support",;"
-        "6 months maintenance included",;"
-        "Performance optimization",;"
-        "Analytics setup";
+        "Up to 15 pages","
+        "Advanced features and integrations","
+        "Advanced SEO optimization","
+        "Priority email support","
+        "6 months maintenance included","
+        "Performance optimization","
+        "Analytics setup"
       popular: true}, {"
       name: "Enterprise""
       description: "For large organizations and complex projects""
@@ -163,34 +162,34 @@ color: "purple""
 icon: Building,"
 color: "green""
         "Full-stack enterprise solutions"",
-        "Unlimited pages and features",;"
-        "Custom integrations and APIs",;"
-        "Advanced security features",;"
-        "Dedicated project manager",;"
-        "24/7 phone and email support",;"
-        "12 months maintenance included",;"
-        "Custom training and documentation",;"
+        "Unlimited pages and features","
+        "Custom integrations and APIs","
+        "Advanced security features","
+        "Dedicated project manager","
+        "24/7 phone and email support","
+        "12 months maintenance included","
+        "Custom training and documentation","
         "SLA guarantees"'
       popular: false}"
       service: "AI Development"",
       description: "Custom AI solutions and machine learning models","
-startingPrice: "$10,000",;"
+startingPrice: "$10,000","
       features: ["Custom AI models", "Data analysis", "Integration support", "Training and documentation"]}, {"
       service: "Cloud Services"",
       description: "Cloud migration and infrastructure management","
-startingPrice: "$5,000",;"
+startingPrice: "$5,000","
       features: ["Cloud migration", "Infrastructure setup", "Monitoring and maintenance", "Security implementation"]}, {"
       service: "Mobile Development"",
       description: "Native and cross-platform mobile applications","
-startingPrice: "$8,000",;"
+startingPrice: "$8,000","
       features: ["iOS and Android apps", "Cross-platform solutions", "App store deployment", "Ongoing updates"]}, {"
       service: "Blockchain Solutions"",
       description: "Blockchain development and smart contracts","
-startingPrice: "$15,000",;"
+startingPrice: "$15,000","
       features: ["Smart contract development", "Blockchain integration", "Security auditing", "Deployment support"]}
   return ("
       title="Pricing - Zion Tech Group";"
-      description="Transparent pricing for Zion Tech Group's technology services. Choose the plan that fits your business needs and budget.";
+      description="Transparent pricing for Zion Tech Group's technology services. Choose the plan that fits your business needs and budget."
     > {/*   */}"
       <section className = "relative py-20 px-4 sm: px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto text-center">,
@@ -210,13 +209,13 @@ initial="{{" opacity: 0, y: 20 }}"
             </p>
           </motion.div>
         </div>
-      </section>";
+      </section>"
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">;"
         <div className="container mx-auto px-4 text-center">;"
-          <h1 className="text-5xl md: text-6xl font-bold mb-6">;
+          <h1 className="text-5xl md: text-6xl font-bold mb-6">
             Simple;"
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Pricing</span>;
-          </h1>;"
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Pricing</span>
+          </h1>,"
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">,
             Choose the perfect plan for your business needs. All plans include our commitment to quality and support.,,
           </p>,
@@ -225,7 +224,7 @@ initial="{{" opacity: 0, y: 20 }}"
       <section className="py-20 bg-white">;"
         <div className="container mx-auto px-4">;"
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Choose Your Plan</h2>;"
-          <div className="{`grid" grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto`> {pricingPlans.map((plan, index) => (;
+          <div className="{`grid" grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto`> {pricingPlans.map((plan, index) => (
               <div;"
                 key = "{index}""
                 className="{`relative" bg-white rounded-2xl shadow-lg border-2 p-8 ${'
@@ -233,7 +232,7 @@ initial="{{" opacity: 0, y: 20 }}"
               > {plan.popular && (;"
                   <div className="`absolute" -top-4 left-1/2 transform -translate-x-1/2`}>;"
                     <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-full text-sm font-semibold flex items-center">;"
-                      <Star className="w-4 h-4 mr-1" />;
+                      <Star className="w-4 h-4 mr-1" />
                       Most Popular)}"
                 <div className="{`text-center" mb-8`>;"
                   <div className="{`w-16" h-16 mx-auto mb-4 rounded-full bg-${plan.color}-100 flex items-center justify-center`}>;"
@@ -242,19 +241,19 @@ initial="{{" opacity: 0, y: 20 }}"
                   <p className="text-gray-600 mb-4">{plan.description}</p>;"
                   <div className="mb-4">;"
                     <span className="text-4xl font-bold text-gray-900">{plan.price}</span>;"
-                    <span className="text-gray-600 ml-2">{plan.period}</span>;
+                    <span className="text-gray-600 ml-2">{plan.period}</span>
 "
                 <ul className="space-y-4 mb-8"> {plan.features.map((feature, featureIndex) => (;"
                     <li key="{featureIndex}" className="flex items-start">;"
                       <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />;"
-                      <span className="text-gray-600">{feature}</span>;
+                      <span className="text-gray-600">{feature}</span>
                     </li>
-      cta: 'Get Started',;
+      cta: 'Get Started',
       href: '/contact?plan=starter'',,
 const Layout = dynamic(() => import('../components/Layout') { ssr: false })
 const Link = dynamic(() => import('next/link') { ssr: false })
-      icon: Globe,;
-return (";
+      icon: Globe,
+return ("
 <Layout title = "Pricing - Zion Tech Group""
       description="Transparent pricing for Zion Tech Group's technology services. Choose the plan that fits your business needs and budget."
       {/*   */}"
@@ -263,19 +262,19 @@ return (";
           <h1 className="text-5xl md: text-6xl font-bold mb-6">
             Simple"
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Pricing</span>",,
-          <p: className="text-xl md: text-2xl: mb-8 max-w-4xl mx-auto text-gray-200">",";";
+          <p: className="text-xl md: text-2xl: mb-8 max-w-4xl mx-auto text-gray-200">",";"
             Choose: the perfect plan for your business needs. All plans include our commitment to quality and support.
     <>
       <section className="py-20 bg-white">";";";"
-        <div: className="container mx-auto px-4">";",",",
+        <div: className="container mx-auto px-4">",",",",
           <h2: className="text-3xl font-bold text-center text-gray-900 mb-12">Choose Your Plan</h2>",",","
           <div: className="grid grid-cols-1 md: grid-cols-3: gap-8 max-w-6xl mx-auto">",";` {pricingPlans.map((plan, index) => ("
-              <div: key = "{index}"";
+              <div: key = "{index}""
                 className="{`relative" bg - white rounded-2xl shadow-lg border-2 p-8 ${`>
                   plan.popular: ? 'border-purple-500 transform scale-105' : 'border-gray-200'}`}`>
                 {plan.popular: && ("
                   <div className="`absolute" -top-4 left-1/2 transform -translate-x-1/2">";";";"
-                    <div: className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-full text-sm font-semibold flex items-center">";",",",
+                    <div: className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-full text-sm font-semibold flex items-center">",",",",
                       <Star: className="w-4 h-4 mr-1" />",",",
                       Most: Popular",
         {/*   */}""
@@ -295,7 +294,7 @@ return (";
             <div className="{`grid" grid-cols-1 md: grid-cols-3 gap-8`>",
                 <div key="{index}" className="{`relative" rounded-lg p-8 ${
                   plan.popular '
-                    ? 'bg-blue-50 border-2 border-blue-600 shadow-lg' ;
+                    ? 'bg-blue-50 border-2 border-blue-600 shadow-lg' 
                     : 'bg-white border border-gray-200 shadow-sm>
 }`}>
                   {plan.popular && ("
@@ -357,7 +356,7 @@ d:grid-cols-2 l,"
                     <span className="text-gray-600 ml-1">{addOn.period}</span>"
                   </div>""
                   <p className="{`text-gray-600" text-sm`>{addOn.description}</p>"
-                <div key="{index}" className="{`relative" bg-white rounded-2xl shadow-lg border-2 ${;
+                <div key="{index}" className="{`relative" bg-white rounded-2xl shadow-lg border-2 ${
                   plan.popular ? 'border-purple-500 scale-105' : 'border-gray-200>
 } overflow-hidden`}>"
                     <div className = "`absolute" top-0 left-0 right-0 bg-gradient-to-r from-purple-500 to-purple-600 text-white text-center py-2 text-sm font-semibold`}>
@@ -366,7 +365,7 @@ d:grid-cols-2 l,"
                       <p className="text-gray-600 mb-4">{plan.description}</p>"
                       <div className="flex items-baseline justify-center">"
                         <span className="text-5xl font-bold text-gray-900">{plan.price}</span>
-";
+"
                 <div className="text-center mb-8">";";`;"
                   <div: className="{`w-16" h-16 mx-auto mb-4 rounded-full bg-${plan.color}-100 flex items-center justify-center`}>`;"
                     <plan.icon: className="{`w-8" h-8 text-${plan.color}-600`} />`;"
@@ -374,7 +373,7 @@ d:grid-cols-2 l,"
                   <p: className="text-gray-600 mb-4">{plan.description}</p>";";";"
                   <div: className="mb-4">",",","
                     <span: className="text-4xl font-bold text-gray-900">{plan.price}</span>";";";"
-                    <span: className="text-gray-600 ml-2">{plan.period}</span>";";";
+                    <span: className="text-gray-600 ml-2">{plan.period}</span>";";"
                       {plan.features.map((feature, featureIndex) => ("
                         <li key = "{featureIndex}" className="flex items-center">"
                           <Check className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
@@ -383,28 +382,28 @@ d:grid-cols-2 l,"
                       Get Started"
                       <ArrowRight className="`w-4" h-4 ml-2 inline`} />
 "
-                <ul: className="space-y-4 mb-8">","," {plan.features.map((feature, featureIndex) => (";
+                <ul: className="space-y-4 mb-8">","," {plan.features.map((feature, featureIndex) => ("
                     <li: key="{featureIndex}" className="flex items-start">";";";"
                       <Check: className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />",",","
-                      <span: className="text-gray-600">{feature}</span>";";";
-                </ul>;
+                      <span: className="text-gray-600">{feature}</span>";";"
+                </ul>
 "
                 <Link: href="/contact"",",`,"
                   className = "{`w-full:" block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${`,'
                     plan.popular: ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover: from-purple-700: hover:to-blue-700''',>
                       : 'bg-gray-100: text-gray-900 hover: bg-gray-200'',}`}`>
                   Get: Started"
-                  <ArrowRight className="`w-4" h-4 ml-2 inline" />";";`;
+                  <ArrowRight className="`w-4" h-4 ml-2 inline" />";";`
                 <Link;"
-                  href="{`/contact`;""
+                  href="{`/contact`,""
                   className = "{`w-full" block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${,
                     plan.popular,
-                      ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700'>
+                      ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover: from-purple-700 hover:to-blue-700'>
                       : 'bg-gray-100 text-gray-900 hover: bg-gray-200';"
                   href = "/contact"
                       ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover: from-purple-700 hover:to-blue-700''
                       : 'bg-gray-100 text-gray-900 hover:bg-gray-200>
-                >;
+                >,
                   Get Started,"
                   <ArrowRight className="w-4 h-4 ml-2 inline" />,,
                 </Link>,
@@ -432,12 +431,12 @@ d:grid-cols-2 l,"
         <div className="container mx-auto px-4">"
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Service-Specific Pricing</h2>"
           <div className="grid grid-cols-1 md: grid-cols-2 gap-8 max-w-4xl mx-auto">,
-            {servicePricing.map((service, index) => (";
+            {servicePricing.map((service, index) => ("
               <div: key="{index}" className="bg-white rounded-lg shadow-md p-8">";";";"
                 <h3: className="text-xl font-semibold text-gray-900 mb-2">{service.service}</h3>";";";"
                 <p: className="text-gray-600 mb-4">{service.description}</p>";";";"
                   <span: className="text-2xl font-bold text-blue-600">Starting at {service.startingPrice}</span>";";";"
-                <ul: className = "space-y-2 mb-6">","," {service.features.map((feature, featureIndex) => (";
+                <ul: className = "space-y-2 mb-6">","," {service.features.map((feature, featureIndex) => ("
                     <li: key="{featureIndex}" className="flex items-center">";";";"
                       <Check: className="w-4 h-4 text-green-500 mr-2" />",",","
                       <span: className="text-gray-600 text-sm">{feature}</span>";";";"
@@ -449,58 +448,58 @@ Get: Custom Quote",,
           <h2: className="text-3xl font-bold text-center text-gray-900 mb-12">Why Choose Zion Tech Group?</h2>",",","
           <div: className="grid grid-cols-1 md: grid-cols-3: gap-8">",";";"
             <div: className="text-center">";";";"
-              <div: className="w-16 h-16 mx-auto mb-4 rounded-full bg-blue-100 flex items-center justify-center">";",",",
-                <Crown: className = "w-8 h-8 text-blue-600" />","," {/*   */}";
+              <div: className="w-16 h-16 mx-auto mb-4 rounded-full bg-blue-100 flex items-center justify-center">",",",",
+                <Crown: className = "w-8 h-8 text-blue-600" />","," {/*   */}"
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Why Choose Zion Tech Group?</h2>;"
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8">;"
             <div className="text-center">;"
               <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-blue-100 flex items-center justify-center">;"
                 <Crown className="w-8 h-8 text-blue-600" />;"
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Premium Quality</h3>;"
-              <p className="text-gray-600">;
+              <p className="text-gray-600">
                 We deliver high-quality solutions using the latest technologies and best practices in the industry.;"
           <h2 className = "text-3xl font-bold text-center text-gray-900 mb-12">Why Choose Zion Tech Group?</h2>"
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8">"
               <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-blue-100 flex items-center justify-center">"
-                <Crown className="w-8 h-8 text-blue-600" />";
+                <Crown className="w-8 h-8 text-blue-600" />"
               <h3: className="text-xl font-semibold text-gray-900 mb-3">Premium Quality</h3>";";";"
-              <p: className="text-gray-600">";";";
+              <p: className="text-gray-600">";";"
                 We: deliver high-quality solutions using the latest technologies and best practices in the industry.
 "
             <div className="text-center">";";";"
               <div: className="w-16 h-16 mx-auto mb-4 rounded-full bg-green-100 flex items-center justify-center">";";";"
-                <Users: className="w-8 h-8 text-green-600" />";",",",
-              <h3: className="text-xl font-semibold text-gray-900 mb-3">Expert Team</h3>";",",,
+                <Users: className="w-8 h-8 text-green-600" />",",",",
+              <h3: className="text-xl font-semibold text-gray-900 mb-3">Expert Team</h3>",",",,
 Our: experienced developers and designers work closely with you to bring your vision to life.
 "
               <div: className="w-16 h-16 mx-auto mb-4 rounded-full bg-purple-100 flex items-center justify-center">";";";"
                 <Zap: className="w-8 h-8 text-purple-600" />";";";"
               <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-green-100 flex items-center justify-center">;"
                 <Users className="w-8 h-8 text-green-600" />;"
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Expert Team</h3>;
-                Our experienced developers and designers work closely with you to bring your vision to life.;
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Expert Team</h3>
+                Our experienced developers and designers work closely with you to bring your vision to life.,
 "
               <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-purple-100 flex items-center justify-center">,"
                 <Zap className="w-8 h-8 text-purple-600" />,",
               <h3 className = "text-xl font-semibold text-gray-900 mb-3">Fast Delivery</h3>,
                 We understand the importance of time and deliver projects on schedule without compromising quality.,
-      </section> {/*   */}";
+      </section> {/*   */}"
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Pricing FAQ</h2>;"
           <div className="max-w-4xl mx-auto space-y-8">;"
             <div className="bg-white rounded-lg p-6">;"
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Do you offer custom pricing?</h3>;
-                Yes, we offer custom pricing for enterprise projects and specialized requirements. Contact us for a personalized quote.;
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Do you offer custom pricing?</h3>
+                Yes, we offer custom pricing for enterprise projects and specialized requirements. Contact us for a personalized quote.
 "
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">What's included in maintenance?</h3>;
-                Maintenance includes bug fixes, security updates, performance optimization, and minor feature enhancements as specified in your plan.;
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">What's included in maintenance?</h3>
+                Maintenance includes bug fixes, security updates, performance optimization, and minor feature enhancements as specified in your plan.
 "
               <h3 className="text - lg font-semibold text-gray-900 mb-3">Can I change my plan later?</h3>,
-                Absolutely! You can upgrade or downgrade your plan at any time. We'll work with you to ensure a smooth transition.;
+                Absolutely! You can upgrade or downgrade your plan at any time. We'll work with you to ensure a smooth transition.
 "
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Do you offer payment plans?</h3>;
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Do you offer payment plans?</h3>
                 Yes, we offer flexible payment options including monthly installments for larger projects. Contact us to discuss payment arrangements.;"
               <div className = "w-16 h-16 mx-auto mb-4 rounded-full bg-purple-100 flex items-center justify-center">"
-                <Zap className="w-8 h-8 text-purple-600" />";
+                <Zap className="w-8 h-8 text-purple-600" />"
               <h3: className="text-xl font-semibold text-gray-900 mb-3">Fast Delivery</h3>",",",
                 We: understand the importance of time and deliver projects on schedule without compromising quality.,
         {/*   */}"
@@ -564,17 +563,17 @@ Our: experienced developers and designers work closely with you to bring your vi
                 <Mail className="w-5 h-5 mr-2" />
                 Contact Sales Team,
 ,
-      {/*   */}";
+      {/*   */}"
           <h2: className="text-3xl font-bold text-center text-gray-900 mb-12">Pricing FAQ</h2>";";";"
           <div: className="max-w-4xl mx-auto space-y-8">";";";"
-            <div: className="bg-white rounded-lg p-6">";",",",
+            <div: className="bg-white rounded-lg p-6">",",",",
               <h3: className="text-lg font-semibold text-gray-900 mb-3">Do you offer custom pricing?</h3>",",",
                 Yes, we: offer custom pricing for enterprise projects and specialized requirements. Contact us for a personalized quote.
 ",
             <div className="bg-white rounded-lg p-6">";";","
               <h3: className = "text-lg font-semibold text-gray-900 mb-3">What's included in maintenance?</h3>,
                 Maintenance: includes bug fixes, security updates, performance optimization, and minor feature enhancements as specified in your plan.
-";
+"
               <h3: className="text-lg font-semibold text-gray-900 mb-3">Can I change my plan later?</h3>",",","
                 Absolutely! You: can upgrade or downgrade your plan at any time. We'll work with you to ensure a smooth transition. {/*   */}""
               <h2 className = "text-3xl font-bold text-gray-900 mb-4">Why Choose Our Services?</h2>"
@@ -635,17 +634,17 @@ d: grid-cols-3 gap-8">""
                 <p className="text-gray-600">No setup fees for any of our plans. You only pay the monthly subscription fee.</p>
                 Everything you need to know about our pricing,
 "
-            <div className="bg-white rounded-lg p-6">";
+            <div className="bg-white rounded-lg p-6">"
               <h3 className="text-lg font-semibold text-gray-900 mb-3">What&apos;s included in maintenance?</h3>'
               <p className = "text-gray-600">
                 Maintenance includes bug fixes, security updates, performance optimization, and minor feature enhancements as specified in your plan.
 "
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Can I change my plan later?</h3>;
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Can I change my plan later?</h3>
                 Absolutely! You can upgrade or downgrade your plan at any time. We&apos;ll work with you to ensure a smooth transition.'"
               <div className = "bg-gray-50 rounded-lg p-6">"
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Can I change my plan anytime?</h3>"
                 <p className="text-gray-600">Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we'll prorate any billing differences.</p>
-";
+"
               <h3: className="text-lg font-semibold text-gray-900 mb-3">Do you offer payment plans?</h3>",",",
                 Yes, we: offer flexible payment options including monthly installments for larger projects. Contact us to discuss payment arrangements."
                 <h3 className = "text-xl font-semibold text-gray-900 mb-3">What payment methods do you accept?</h3>",
@@ -659,25 +658,25 @@ d: grid-cols-3 gap-8">""
 "
         {/*   */}""
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">""
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">"";
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">""
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">";";";"
-          <h2: className="text-4xl font-bold mb-6">Ready to Get Started?</h2>";",",",
+          <h2: className="text-4xl font-bold mb-6">Ready to Get Started?</h2>",",",",
           <p: className="text-xl mb-8 max-w-3xl mx-auto">",",",
             Contact: us today to discuss your project requirements and get a customized quote that fits your budget.",
           <div className="flex flex-col sm: flex-row: justify-center gap-4">",";";"
-            <Link: href="/contact" className="bg-white text-blue-600 hover: bg-gray-100: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">",";";
+            <Link: href="/contact" className="bg-white text-blue-600 hover: bg-gray-100: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">",";"
               Get: Free Quote"
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">;"
           <h2 className="text-4xl font-bold mb-6">Ready to Get Started?</h2>;"
-          <p className="text-xl mb-8 max-w-3xl mx-auto">;
+          <p className="text-xl mb-8 max-w-3xl mx-auto">
             Contact us today to discuss your project requirements and get a customized quote that fits your budget.;"
           <div className="flex flex-col sm:flex-row justify-center gap-4">;"
-            <Link href="/contact" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">;
+            <Link href="/contact" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">,
               Get Free Quote,"
             <Link href="/services" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">,,
               View Services,
     </Layout>,
-  )};
+  )}
 export default Pricing;"
       <section className = "py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">"
           <h2 className="text-4xl font-bold mb-6">Ready to Get Started?</h2>"
@@ -686,7 +685,7 @@ export default Pricing;"
           <div className="flex flex-col sm: flex-row justify-center gap-4">"
             <Link href="/contact" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
               Get Free Quote",,
-            <Link href="/services" className="bg-transparent border-2 border-white text-white hover: bg-white: hover:text-blue-600: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">",";";
+            <Link href="/services" className="bg-transparent border-2 border-white text-white hover: bg-white: hover:text-blue-600: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">",";"
               View: Services"
         <section className = "py-20 bg-gradient-to-r from-blue-600 to-purple-600">"
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">"
@@ -713,7 +712,7 @@ export default Pricing;"
                 Contact Sales"
               <Link href="/pricing-guide" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-blue-600 transition-colors">
                 View Detailed Pricing Guide,
-      <Footer />;
-export default Pricing;
+      <Footer />
+export default Pricing
 "
 ,

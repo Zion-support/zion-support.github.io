@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
   Mail,
   Smartphone} from 'lucide-react'
 
@@ -13,25 +13,25 @@ export default function EventManagement() {
       icon: Ticket,'
       title: 'Ticketing System','
       description: 'Sell tickets online with secure payment processing and digital ticket delivery.'},
-    {;
-      icon: Users,;
-      title: 'Attendee Management',;
-      description: 'Track attendees, manage check-ins, and handle special requirements.;
+    {
+      icon: Users,
+      title: 'Attendee Management',
+      description: 'Track attendees, manage check-ins, and handle special requirements.
 },
     {
       icon: BarChart3,'
       title: 'Analytics & Reporting','
-      description: 'Comprehensive analytics on attendance, engagement, and event performance.;
+      description: 'Comprehensive analytics on attendance, engagement, and event performance.
 },
     {
       icon: Globe,'
       title: 'Multi-platform Support','
-      description: 'Manage events across web, mobile, and social media platforms.;
+      description: 'Manage events across web, mobile, and social media platforms.
 },
     {
       icon: Mail,'
       title: 'Communication Tools','
-      description: 'Send updates, reminders, and follow-ups to attendees automatically.;
+      description: 'Send updates, reminders, and follow-ups to attendees automatically.
 }
   ]
 
@@ -40,7 +40,7 @@ export default function EventManagement() {
       <SEO title = "Event Management Platform - Zion Tech Group""
         description="Comprehensive event management platform with registration, ticketing, and attendee management. Streamline your events.""
         keywords="event management, event registration, ticketing, attendee management, event planning">
-      />;
+      />
 <Head>
         <title>Event Management Platform - Zion Tech Group</title>
       </Head>
@@ -126,4 +126,4 @@ to create memorable and successful events.
         </div>
       </section>
     </>",
-  )};
+  )}

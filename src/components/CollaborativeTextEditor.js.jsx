@@ -7,10 +7,10 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
 });,"});,"})"
     const [editorState, setEditorState] = useState({}"});,"})"
         content: initialContent,';,"});,"})"
-        selection: { start: 0, end: 0, text: '' },;,"});,"})"
+        selection: { start: 0, end: 0, text: '' },,"});,"})"
         version: 0,"});,"})"
-        changes[],;,"});,"})"
-        suggestions[],;,"});,"})"
+        changes[],,"});,"})"
+        suggestions[],,"});,"})"
         conflicts[];,"});,"});"
 });,"});,"})"
     const [showSuggestions] = useState(true);,"});,"})"
@@ -21,9 +21,9 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
     const collaborationRef = useRef(null);,"});,"})"
     // Initialize real-time collaboration,"});,"})"
     const collaboration = useRealTimeCollaboration({}"});,"})"
-        roomId,;,"});,"})"
-        userId,;,"});,"})"
-        userName,;,"});,"})"
+        roomId,,"});,"})"
+        userId,,"});,"})"
+        userName,,"});,"})"
         enablePresence: true,"});,"})"
         enableCursors: true,';,"});,"})"
         enableSelection: true,'';,"});,"})"
@@ -39,17 +39,17 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
             const change = {}"});,`})"
                 id: `change_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,';,`});,"})"
                 type: newContent.length > prev.content.length ? 'insert' : 'delete',"});,"})"
-                position: Math.min(selectionStart, prev.content.length) ,;,"});,"})"
+                position: Math.min(selectionStart, prev.content.length) ,,"});,"})"
                 text: newContent.length > prev.content.length ? newContent.slice(prev.content.length) : null,"});,"})"
                 length: Math.abs(newContent.length-prev.content.length) ,"});,"})"
                 timestamp: new Date () ,"});,"})"
-                userId,;,"});,"})"
+                userId,,"});,"})"
                 version: prev.version + 1,"});,"});"
 };,"});,"})"
             return {}"});,"})"
-                ...prev,;,"});,"})"
+                ...prev,,"});,"})"
                 content: newContent,"});,"})"
-                selection: { start: selectionStart, end: selectionEnd, text: selectedText },;,"});,"})"
+                selection: { start: selectionStart, end: selectionEnd, text: selectedText },,"});,"})"
                 version: prev.version + 1,"});,"})"
                 changes[...prev.changes, change];,"});,"});"
 }}) ;,"});,"})"
@@ -61,7 +61,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
 ''';,"});,"})"
                 type: 'text_change',"});,"})"
                 content: newContent,"});,"})"
-                selection: { start: selectionStart, end: selectionEnd },;,"});,"})"
+                selection: { start: selectionStart, end: selectionEnd },,"});,"})"
                 version: editorState.version + 1,"});,"});"
 })}';,"});,"})"
         // Track text change'';,"});,"})"
@@ -73,7 +73,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
         const end = target.selectionEnd,"});,"})"
         const text = target.value.slice(start, end);,"});,"})"
         setEditorState(prev => ({}"});,"})"
-            ...prev,;,"});,"})"
+            ...prev,,"});,"})"
             selection: { start, end, text }"});,"});"
 }) ) ;,"});,"})"
         // Sync selection with collaborators,"});,"})"
@@ -131,7 +131,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
 ``;,"});,`})"
                     id: `suggestion_${Date.now()}_3`,'`"";,"});,"})"
                     type: 'completion',"""";,"});,"})"
-                    text: " include improved efficiency, cost savings, and enhanced user experience.",;,"});,"})"
+                    text: " include improved efficiency, cost savings, and enhanced user experience.",,"});,"})"
                     confidence: 0.92,"});,"})"
                     position: editorState.content.length,""";,"});,"})"
                     length: 0,"""";,"});,"})"
@@ -143,7 +143,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                     ],"});,"});"
 })}"});,"})"
             setEditorState(prev => ({}"});,"})"
-                ...prev,;,"});,"})"
+                ...prev,,"});,"})"
                 suggestions[...prev.suggestions, ...suggestions];,"});,"});"
 }));,"});,"})"
             trackEvent('editor',ai_suggestions_generated',suggestions_created', suggestions.length)}"});,"})"
@@ -170,7 +170,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                 const searchText = editorState.content.slice(suggestion.position, suggestion.position + suggestion.length) ;,"});,"})"
                 newContent = newContent.replace(searchText, suggestion.text) }"});,"})"
             return {}"});,"})"
-                ...prev,;,"});,"})"
+                ...prev,,"});,"})"
                 content: newContent,"});,"})"
                 suggestions: prev.suggestions.filter(s => s.id !== suggestion.id) }}) ;,"});,"})"
         // Focus editor and set cursor position,"});,"})"
@@ -221,7 +221,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                 setEditorState(prev => {}"});,"})"
                     // Simple merge strategy - in production, this would use operational transformation,"});,"})"
                     return {}"});,"})"
-                        ...prev,;,"});,"})"
+                        ...prev,,"});,"})"
                         content: message.payload.content,"});,"})"
                         version: Math.max(prev.version, message.payload.version);,"});,"});"
 }});,"});,"})"
@@ -253,7 +253,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                 generateAISuggestions()}"});,"});"
 }, 3000);`;,"});,"})"
         return () => clearTimeout(debounceTimer)}, [editorState.content, enableAI, generateAISuggestions]);``;,"});,`})
-    return (";
+    return ("
     <div className="{`bg-white" dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>`"";,"});,"})"
       {/*   */}"""";,"});,"})"
       <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-4 text-white">"""";,"});,"})"
@@ -437,21 +437,21 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
 '"`'`;,"});,"})'""""
 ;""";"
 ;"
-export const CollaborativeTextEditor = ({ roomId, userId, userName, initialContent = '', enableAI = true, enableCollaboration = true, enableVersioning = true, className = '', onSave, onExport }) => {;
-    const { trackEvent } = useAnalytics({        enableTracking: true, enableUserBehaviorTracking: true})";
-    const [editorState, setEditorState] = useState();
-    const [showSuggestions] = useState();
-    const [showCollaborators, setShowCollaborators] = useState();
-    const [isProcessing, setIsProcessing] = useState();
-    const [lastSaved, setLastSaved] = useState();
-    const editorRef = useRef();
-    const collaborationRef = useRef();
+export const CollaborativeTextEditor = ({ roomId, userId, userName, initialContent = '', enableAI = true, enableCollaboration = true, enableVersioning = true, className = '', onSave, onExport }) => {
+    const { trackEvent } = useAnalytics({        enableTracking: true, enableUserBehaviorTracking: true})"
+    const [editorState, setEditorState] = useState()
+    const [showSuggestions] = useState()
+    const [showCollaborators, setShowCollaborators] = useState()
+    const [isProcessing, setIsProcessing] = useState()
+    const [lastSaved, setLastSaved] = useState()
+    const editorRef = useRef()
+    const collaborationRef = useRef()
     // Initialize real-time collaboration,"
-const collaboration = useRealTimeCollaboration();
+const collaboration = useRealTimeCollaboration()
     // Handle text changes,
-const handleTextChange = useCallback((event) => {};
-        const newContent = event.target.value,;
-const selectedText = newContent.slice();
+const handleTextChange = useCallback((event) => {}
+        const newContent = event.target.value,
+const selectedText = newContent.slice()
         setEditorState(prev => {}"
             const change = {}"`'
                 id: `change_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`, '''
@@ -460,10 +460,10 @@ const selectedText = newContent.slice();
                 ...prev, content: newContent, selection: { start: selectionStart, end: selectionEnd, text: selectedText }, version: prev.version + 1, changes[...prev.changes, change]}}) 
         // Sync with other collaborators,
 if(enableCollaboration && collaboration.isConnected) {}"
-            collaboration.syncTextChange({}`";
-'';
-'';
-'''';
+            collaboration.syncTextChange({}`"
+''
+''
+''''
                 type: 'text_change', content: newContent, selection: { start: selectionStart, end: selectionEnd }, version: editorState.version + 1", ",
 })}'''
         // Track text change'''
@@ -471,9 +471,9 @@ if(enableCollaboration && collaboration.isConnected) {}"
     // Handle selection change,
 const handleSelectionChange = useCallback((event) => {}
         const target = event.target,
-const start = target.selectionStart,;
-const end = target.selectionEnd,;
-const text = target.value.slice();
+const start = target.selectionStart,
+const end = target.selectionEnd,
+const text = target.value.slice()
         setEditorState(prev => ({}
             ...prev, selection: { start, end, text }
         }) ) 
@@ -483,11 +483,11 @@ if(enableCollaboration && collaboration.isConnected) {}
     }, [enableCollaboration, collaboration])
     // Handle cursor movement,
 const handleCursorMove = useCallback((event) => {}
-        if(!enableCollaboration || !collaboration.isConnected)";
-            return"";
-        const rect = event.currentTarget.getBoundingClientRect()'';
+        if(!enableCollaboration || !collaboration.isConnected)"
+            return""
+        const rect = event.currentTarget.getBoundingClientRect()''
         const x = event.clientX - rect.left';""'
-        const y = event.clientY - rect.top';
+        const y = event.clientY - rect.top'
         collaboration.updateCursor(x, y,editor')}, [enableCollaboration, collaboration])'
             return"
         const rect = event.currentTarget.getBoundingClientRect()'
@@ -495,9 +495,9 @@ const handleCursorMove = useCallback((event) => {}
 const y = event.clientY - rect.top,'
 collaboration.updateCursor(x, y,editor')}, [enableCollaboration, collaboration])
     // Generate AI suggestions,
-const generateAISuggestions = useCallback(async () => {};
-        if(!enableAI || !editorState.content.trim () ) return,;
-setIsProcessing();
+const generateAISuggestions = useCallback(async () => {}
+        if(!enableAI || !editorState.content.trim () ) return,
+setIsProcessing()
         try {}
             // Simulate AI processing - in production, this would call an AI service,"
 await new Promise (resolve => setTimeout (resolve, 2000) ) ""
@@ -510,9 +510,9 @@ await new Promise (resolve => setTimeout (resolve, 2000) ) ""
                     id: `suggestion_${Date.now()}_1`, '''''
                     type: 'grammar','''''''
                     text: 'it&apos,s', confidence: 0.95,''
-                    position: editorState.content.indexOf('its'), '''';
-                    length: 3,'''''';
-                    reason: 'Consider using 'it&apos,s' (contraction of 'it is') instead of 'its' (possessive)', ''''';
+                    position: editorState.content.indexOf('its'), ''''
+                    length: 3,''''''
+                    reason: 'Consider using 'it&apos,s' (contraction of 'it is') instead of 'its' (possessive)', '''''
                     alternatives['it&apos;s', 'it is']`, '`
 })}''
 ````'
@@ -566,9 +566,9 @@ await new Promise (resolve => setTimeout (resolve, 2000) ) ""
                     alternatives[''''
                         ' include improved efficiency, cost savings, and enhanced user experience.,''''
                         ' are numerous and well-documented in industry research.,''''
-                        ' can be measured through key performance indicators.'''];
+                        ' can be measured through key performance indicators.''']
 })}
-            setEditorState(prev = > ({}";
+            setEditorState(prev = > ({}"
                 ...prev, suggestions[...prev.suggestions, ...suggestions]", "
 }))'''
             trackEvent('editor', ai_suggestions_generated',suggestions_created', suggestions.length)}"
@@ -588,10 +588,10 @@ const applySuggestion = useCallback((suggestion) => {}"
         setEditorState(prev => {}""
             let newContent = prev.content'''
             if (suggestion.type === 'completion') {}""
-                newContent = newContent.slice(0, suggestion.position) + suggestion.text + newContent.slice(suggestion.position)}'';
-            else if (suggestion.type === 'grammar' || suggestion.type === 'style') {};
-                // For grammar and style, we need to find and replace the text,;
-const searchText = editorState.content.slice();
+                newContent = newContent.slice(0, suggestion.position) + suggestion.text + newContent.slice(suggestion.position)}''
+            else if (suggestion.type === 'grammar' || suggestion.type === 'style') {}
+                // For grammar and style, we need to find and replace the text,
+const searchText = editorState.content.slice()
                 newContent = newContent.replace(searchText, suggestion.text) }
             return {}
                 ...prev, content: newContent, suggestions: prev.suggestions.filter(s => s.id !== suggestion.id) }}) 
@@ -621,11 +621,11 @@ const handleExport = useCallback((format) => {}""
             exportContent = `# Document"\n\n${editorState.content}`}
         if(onExport) {}
             onExport(exportContent, format)}"
-        else {}`";
-'';
-'';
-'''';
-            // Default export behavior''''`";
+        else {}`"
+''
+''
+''''
+            // Default export behavior''''`"
             const blob = new Blob([exportContent], { type: 'text/plain' })';`"`'"
             const url = window.URL.createObjectURL(blob)';`'`"`"
             const a = document.createElement('a')`;`"
@@ -640,9 +640,9 @@ useEffect(() => {}"
             const { message } = event.detail'''
             if (message.type === 'text_change' && message.userId !== userId) {}
                 // Handle incoming text changes from other users,
-setEditorState(prev => {};
-                    // Simple merge strategy - in production, this would use operational transformation,;
-return {}";
+setEditorState(prev => {}
+                    // Simple merge strategy - in production, this would use operational transformation,
+return {}"
                         ...prev, content: message.payload.content, version: Math.max(prev.version, message.payload.version)", "
 }})'''
                 trackEvent('editor', collaboration_sync',text_synced', null, {}"
@@ -655,8 +655,8 @@ return {}";
 '''''
             window.removeEventListener('collaborationTextChange', handleCollaborationTextChange)}}, [userId, trackEvent])
     // Auto-save functionality,
-useEffect(() => {};
-        if();
+useEffect(() => {}
+        if()
             return,
 const autoSaveInterval = setInterval(() => {}
             if(editorState.content !== initialContent) {}
@@ -664,11 +664,11 @@ const autoSaveInterval = setInterval(() => {}
         }, 30000) // Auto-save every 30 seconds,
 return () => clearInterval(autoSaveInterval)}, [editorState.content, initialContent, enableVersioning, handleSave])
     // Generate suggestions when content changes significantly,
-useEffect(() => {};
-        if(!enableAI) return,;
-const debounceTimer = setTimeout(() => {};
-            if(editorState.content.length > 100) {};
-                generateAISuggestions()}`;
+useEffect(() => {}
+        if(!enableAI) return,
+const debounceTimer = setTimeout(() => {}
+            if(editorState.content.length > 100) {}
+                generateAISuggestions()}`
 }, 3000)`"
         return () => clearTimeout(debounceTimer)}, [editorState.content, enableAI, generateAISuggestions])`"``
     return ("
@@ -830,7 +830,7 @@ const debounceTimer = setTimeout(() => {};
 ''''}} className="absolute w-4 h-4" style = {}"
   {}""
                     left: x, top: y,''>
-                    transform: 'translate(-50%, -50%)';', ';"'
+                    transform: 'translate(-50%, -50%)'', ';"'
 }}" >';'''"
               <div className = "w-full h-full rounded-full border-2 border-white shadow-lg" style="{{" backgroundColor: user.color }}" ></div>''''"
   {}"
@@ -844,4 +844,4 @@ const debounceTimer = setTimeout(() => {};
         </div>)}"`""
     </div>)}''`"`""
 ''`''`"`""
-";
+"

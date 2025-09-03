@@ -1,8 +1,6 @@
-import React from 'react';
-
+import React from 'react'
 const PrivacyPolicy: NextPage = () => {
-  const lastUpdated = 'December 2024';
-
+  const lastUpdated = 'December 2024'
   return (
     <MainLayout
       title="Privacy Policy - Zion Tech Group"
@@ -171,7 +169,6 @@ const PrivacyPolicy: NextPage = () => {
         </section>
       </div>
     </MainLayout>
-  );
-};
-
-export default PrivacyPolicy;
+  )
+}
+export default PrivacyPolicy

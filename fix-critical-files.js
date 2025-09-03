@@ -1,8 +1,7 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-import path from 'path';
-
+import fs from 'fs'
+import path from 'path'
 // List of critical files that need to be fixed
 const criticalFiles = [
   'src/pages/services/index.tsx',
@@ -10,12 +9,10 @@ const criticalFiles = [
   'tailwind.config.ts',
   'vite.config.ts',
   'vitest.config.ts'
-];
-
+]
 function fixServicesIndex() {
-  const content = `import React from "react";
-import { Link } from "react-router-dom";
-
+  const content = `import React from "react"
+import { Link } from "react-router-dom"
 const ServicesIndex: React.FC = () => {
   const links = [
     { to: '/ai-services', label: 'AI Services' },
@@ -24,8 +21,7 @@ const ServicesIndex: React.FC = () => {
     { to: '/services/ai-email-responder', label: 'AI Email Responder' },
     { to: '/services/automated-follow-ups', label: 'Automated Follow-Ups' },
     { to: '/services/ai-seo-optimizer', label: 'AI SEO Optimizer' }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gray-50 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -53,21 +49,18 @@ const ServicesIndex: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
-
-export default ServicesIndex;
-`;
-  
-  fs.writeFileSync('src/pages/services/index.tsx', content);
-  console.log('Fixed src/pages/services/index.tsx');
+  )
+}
+export default ServicesIndex
+`
+  fs.writeFileSync('src/pages/services/index.tsx', content)
+  console.log('Fixed src/pages/services/index.tsx')
 }
 
 function fixSolutions() {
-  const content = `import React from "react";
-import Head from "next/head";
-import Link from "next/link";
-
+  const content = `import React from "react"
+import Head from "next/head"
+import Link from "next/link"
 export default function Solutions() {
   return (
     <>
@@ -126,17 +119,15 @@ export default function Solutions() {
         </div>
       </main>
     </>
-  );
+  )
 }
-`;
-  
-  fs.writeFileSync('src/pages/solutions.tsx', content);
-  console.log('Fixed src/pages/solutions.tsx');
+`
+  fs.writeFileSync('src/pages/solutions.tsx', content)
+  console.log('Fixed src/pages/solutions.tsx')
 }
 
 function fixTailwindConfig() {
-  const content = `import type { Config } from 'tailwindcss';
-
+  const content = `import type { Config } from 'tailwindcss'
 export default {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -208,57 +199,50 @@ export default {
     require('@tailwindcss/typography'),
     require('@tailwindcss/aspect-ratio'),
   ],
-} satisfies Config;
-`;
-  
-  fs.writeFileSync('tailwind.config.ts', content);
-  console.log('Fixed tailwind.config.ts');
+} satisfies Config
+`
+  fs.writeFileSync('tailwind.config.ts', content)
+  console.log('Fixed tailwind.config.ts')
 }
 
 function fixViteConfig() {
-  const content = `import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-
+  const content = `import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   server: {
     port: 3000,
   },
-});
-`;
-  
-  fs.writeFileSync('vite.config.ts', content);
-  console.log('Fixed vite.config.ts');
+})
+`
+  fs.writeFileSync('vite.config.ts', content)
+  console.log('Fixed vite.config.ts')
 }
 
 function fixVitestConfig() {
-  const content = `import { defineConfig } from 'vitest/config';
-import react from '@vitejs/plugin-react';
-
+  const content = `import { defineConfig } from 'vitest/config'
+import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   test: {
     environment: 'jsdom',
   },
-});
-`;
-  
-  fs.writeFileSync('vitest.config.ts', content);
-  console.log('Fixed vitest.config.ts');
+})
+`
+  fs.writeFileSync('vitest.config.ts', content)
+  console.log('Fixed vitest.config.ts')
 }
 
 // Run the fixes
-console.log('Starting critical file fixes...');
-
+console.log('Starting critical file fixes...')
 try {
-  fixServicesIndex();
-  fixSolutions();
-  fixTailwindConfig();
-  fixViteConfig();
-  fixVitestConfig();
-  
-  console.log('All critical files have been fixed!');
+  fixServicesIndex()
+  fixSolutions()
+  fixTailwindConfig()
+  fixViteConfig()
+  fixVitestConfig()
+  console.log('All critical files have been fixed!')
 } catch (error) {
-  console.error('Error fixing files:', error);
-  process.exit(1);
+  console.error('Error fixing files:', error)
+  process.exit(1)
 }

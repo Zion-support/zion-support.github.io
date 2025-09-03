@@ -1,8 +1,7 @@
-import React from "react";
+import React from "react"
   FileText,
   MessageSquare} from 'lucide - react',
-  const description = 'Advanced affiliate marketing tracking platform with fraud detection, cross-device attribution, and automated commission payouts.;
-
+  const description = 'Advanced affiliate marketing tracking platform with fraud detection, cross-device attribution, and automated commission payouts.
   const features = [
     {'
       title: 'Advanced Attribution Tracking','
@@ -103,10 +102,10 @@ import React from "react";
         'SLA guarantee'
       ],
       popular: false}
-  ];
-;
+  ]
+
   return (
-    <PageTransition>;
+    <PageTransition>
 <Head>
         <title>{title}</title>
         <meta name = "description" content="{description}" />"
@@ -310,6 +309,6 @@ import React from "react";
           </div>
         </div>
       </section>
-    </PageTransition>;
+    </PageTransition>
   );"
 }

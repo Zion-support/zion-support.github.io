@@ -1,7 +1,6 @@
-import { render } from '@testing-library/react';
-import WhitepaperGeneratorPage from '../../pages/WhitepaperGeneratorPage';
-
+import { render } from '@testing-library/react'
+import WhitepaperGeneratorPage from '../../pages/WhitepaperGeneratorPage'
 test('renders whitepaper generator page', () => {
-  render(<WhitepaperGeneratorPage />);
+  render(<WhitepaperGeneratorPage />)
   // Add more tests as needed
-});
+})

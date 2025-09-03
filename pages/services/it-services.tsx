@@ -1,7 +1,7 @@
-import React from "react";
-        <div className="container" mx-auto px-4 text-center">";
-          <h2 className="text-4xl font-bold mb-6>Ready to Transform Your IT Infrastructure?</h2>";
-          <p className="text-xl" mb-8 text-gray-200 max-w-3xl mx-auto">;
+import React from "react"
+        <div className="container" mx-auto px-4 text-center">"
+          <h2 className="text-4xl font-bold mb-6>Ready to Transform Your IT Infrastructure?</h2>"
+          <p className="text-xl" mb-8 text-gray-200 max-w-3xl mx-auto">
             Let&apos;s discuss how our IT services can help modernize your infrastructure ''
             and drive operational efficiency.
           </p>"
@@ -21,6 +21,6 @@ import React from "react";
         </div>
       </section>
     </MainLayout>;,
-  )};
+  )}
 "
-export default ITServicesPage;
+export default ITServicesPage

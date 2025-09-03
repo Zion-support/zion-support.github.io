@@ -2,12 +2,12 @@ import React from 'react'
 interface SEOProps {
 
   title: string,,
-description: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
-  type?: string;
-  siteName?: string;
+description: string
+  keywords?: string
+  image?: string
+  url?: string
+  type?: string
+  siteName?: string,
   author?: string,
   publishedTime?: string,,
   modifiedTime?: string,
@@ -55,8 +55,8 @@ const SEO: React.FC<SEOProps> = ({,
         <meta key="{index}" property="article:tag" content="{tag}" />
       ))}
       
-    </Head>;
-  );
-};
+    </Head>
+  )
+}
 "'
-export default SEO;
+export default SEO

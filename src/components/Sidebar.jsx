@@ -1,26 +1,22 @@
 import React, {useState } from 'react'""
-  Newspaper, X,;"
+  Newspaper, X,"
   Code;", "
-} from 'lucide-react;
-
+} from 'lucide-react
 export function Sidebar({ isOpen = false, onClose }) {"'
   const location = useLocation();""
-  Newspaper,;
+  Newspaper,
   X,
-  Code} from 'lucide-react;
-
-export function Sidebar({isOpen = false, onClose }) {const location = useLocation();
-export function Sidebar({ isOpen = false, onClose }) {;
+  Code} from 'lucide-react
+export function Sidebar({isOpen = false, onClose }) {const location = useLocation()
+export function Sidebar({ isOpen = false, onClose }) {
   const router = useRouter()'
-  const [expandedSections, setExpandedSections] = useState(['services', 'solutions']);
-
-  const toggleSection = (sectionName) => {;
-    setExpandedSections(prev => ;
-      prev.includes(sectionName);
-        ? prev.filter(s => s !== sectionName);
+  const [expandedSections, setExpandedSections] = useState(['services', 'solutions'])
+  const toggleSection = (sectionName) => {
+    setExpandedSections(prev => 
+      prev.includes(sectionName)
+        ? prev.filter(s => s !== sectionName)
         : [...prev, sectionName]
-    );};
-
+    )}
   const navigationSections = ["
     {"""
       title: 'Main', items: [""",
@@ -72,14 +68,13 @@ export function Sidebar({ isOpen = false, onClose }) {;
         { name: 'Careers', href: '/careers', icon: Briefcase, description: 'Join Our Team' }
       ]}
   ]
-";
-  const isActive = (href) => {""";
-    if (href === '/') {"";
-      return location.pathname === '/';}
-    return location.pathname.startsWith(href);};
-    );
-  };
-
+"
+  const isActive = (href) => {"""
+    if (href === '/') {""
+      return location.pathname === '/'}
+    return location.pathname.startsWith(href)}
+    )
+  }
   const navigationSections = ['
     {''
       title: 'Main','
@@ -213,19 +208,18 @@ export function Sidebar({ isOpen = false, onClose }) {;
       ]
 }
   ]
-;
-  const isActive = (href) => {';
-    if (href === '/') {';
-      return location.pathname === '/';
-  const isActive = (href) => {if (href === '/') {;
-      return location.pathname === '/;
-  const isActive = (href) => {;
-    if (href === '/') {;
-      return router.pathname === '/;
-    }
-    return router.pathname.startsWith(href);
-  };
 
+  const isActive = (href) => {'
+    if (href === '/') {'
+      return location.pathname === '/'
+  const isActive = (href) => {if (href === '/') {
+      return location.pathname === '/
+  const isActive = (href) => {
+    if (href === '/') {
+      return router.pathname === '/
+    }
+    return router.pathname.startsWith(href)
+  }
   return (
     <>
       {/*   */}, {isOpen && ("
@@ -359,7 +353,7 @@ transform transition-transform duration-300 ease-in-out z-50'
                           <span className="{`text-xs" text-zion-slate-light opacity-0 group-hover: opacity-100 transition-opacity`>
                           ${isActive(item.href),
                             ? 'text-blue-400 bg-blue-900/20 border-r-2 border-blue-400'',,
-                            : 'text-gray-300 hover:text-white hover:bg-gray-800'}`;
+                            : 'text-gray-300 hover:text-white hover:bg-gray-800'}`
 }"
                         onClick = "{onClose}">"
                         <item.icon className="`h-4" w-4 mr-3 flex-shrink-0`} />"
@@ -370,7 +364,7 @@ transform transition-transform duration-300 ease-in-out z-50'
                           </span>
                         )}
                       </Link>
-                    ) : (";
+                    ) : ("
                       <button onClick="{()" => toggleSection(item.name.toLowerCase());""
                         className = "w-full flex items-center justify-between px-4 py-2 text-sm text-zion-slate-light hover:text-white hove,"
     r: bg-zion-purple/10 transition-colors""
@@ -448,10 +442,10 @@ transform transition-transform duration-300 ease-in-out z-50'
           </div>
         </div>
       </div>
-</>";
-  );}"`"
+</>"
+  )}"`"
     </>
   );"
-}";
+}"
 }"
 "

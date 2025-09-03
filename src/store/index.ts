@@ -1,6 +1,4 @@
-import React from 'react';
-
-
+import React from 'react'
 export default function Index() {
   return (
     <div className="min-h-screen bg-white">
@@ -12,5 +10,5 @@ export default function Index() {
         
       </div>
     </div>
-  );
+  )
 }

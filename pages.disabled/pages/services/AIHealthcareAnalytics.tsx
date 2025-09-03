@@ -10,10 +10,9 @@ import {}
   Mail,
   Zap,
   Brain,
-  Clock,;
-  Database} from;
-  'lucide-react';
-
+  Clock,
+  Database} from
+  'lucide-react'
   return ("
     <div className=min-h-screen bg-white">"
       <section className=bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark py-20 text-center">"
@@ -26,11 +25,11 @@ import {}
             AI Healthcare Analytics Platform"</h1>
 
             AI Healthcare Analytics Platform
-            <Heart className=w-4 h-4 mr-2  /> AI-Powered Healthcare Analytics;
+            <Heart className=w-4 h-4 mr-2  /> AI-Powered Healthcare Analytics
           </div>          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
-            AI Healthcare Analytics Platform;
+            AI Healthcare Analytics Platform
           </h1>
-            Transform healthcare delivery with AI-powered analytics, predictive;
+            Transform healthcare delivery with AI-powered analytics, predictive
             insights, and clinical decision support.
           </p>
         </div>
@@ -53,7 +52,7 @@ import {}
         <div className=grid md:grid-cols-2 gap-10>
           <div>"
             <h2 className="text-3xl font-bold text-zion-slate-dark mb-4>
-              Key Features;
+              Key Features
             </h2>
             <ul className=space-y-3>
               {features.map(feature => ("
@@ -75,7 +74,7 @@ import {}
             <ul className='space-y-3'>'{features.map(feature => (''                <li key="{feature}" className='flex items-start'>''
                   <Check className='w-5 h-5 text-zion-cyan mr-3 mt-0.5'  />'                  <span className='text-zion-slate-dark'>{feature}</span>
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx'
-      </section>';
+      </section>'
 '''
       <section className='py-16 max-w-6xl mx-auto px-6>''
         <div className='grid md:grid-cols-2 gap-10>'
@@ -86,7 +85,7 @@ import {}
             <ul className='space-y-3>{features.map(feature => (''                <li key={feature} className='flex items-start>''
                   <Check className='w-5 h-5 text-zion-cyan mr-3 mt-0.5'  />                  <span className='text-zion-slate-dark'>{feature}</span>
                 </li>
-              ));
+              ))
             </ul>
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx
           </div>
@@ -101,13 +100,13 @@ import {}
           </div>
           <div>
             <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">
-              Healthcare Benefits;
+              Healthcare Benefits
             </h2>
             <ul className=space-y-3>
               {benefits.map(benefit => (
                 <li key="{benefit}" className=flex items-start>
                   <Zap className="w-5 h-5 text-zion-cyan mr-3 mt-0.5"  />                  <span className=text-zion-slate-dark>{benefit}</span>                </li>
-              ));
+              ))
             </ul>
           </div>
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx
@@ -127,7 +126,7 @@ import {}
 "
         <div className="mt-12>
           <h2 className=text-3xl font-bold text-zion-slate-dark mb-6 text-center>
-            Use Cases;
+            Use Cases
           </h2>"
           <div className="grid md:grid-cols-3 gap-6>
             {useCases.map(useCase => (
@@ -143,7 +142,7 @@ import {}
                 <div className='text-zion-slate-dark font-semibold'>
                   {useCase}
                 </div>              </div>
-            ));
+            ))
           </div>
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx
         </div>
@@ -162,7 +161,7 @@ import {}
 
         <div className=mt-16>
           <h2 className="text-3xl font-bold text-zion-slate-dark mb-6 text-center">
-            Specialty Solutions;
+            Specialty Solutions
           </h2>
           <div className=grid md:grid-cols-3 gap-6>
             {healthcareSolutions.map(solution => (
@@ -198,7 +197,7 @@ import {}
                     <li'key={sol}"                      className='flex items-start text-sm text-zion-slate-dark>'
                       <Check className='w-4 h-4 text-zion-cyan mr-2 mt-0.5'  />                      {sol}
                     </li>
-                  ));
+                  ))
                 </ul>
               </div>
             ))}
@@ -220,7 +219,7 @@ import {}
 
         <div className=mt-16>"
           <h2 className="text-3xl font-bold text-zion-slate-dark mb-6 text-center>
-            Pricing Plans;
+            Pricing Plans
           </h2>
           <div className=grid md:grid-cols-3 gap-6>
             {tiers.map(tier => (
@@ -243,7 +242,7 @@ import {}
                 <div className='text-2xl font-bold text-zion-cyan mb-2>
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx{tier.price}</div>''                <ul className='text-sm text-zion-slate-dark space-y-1'>
                   {tier.details.map(detail => (
-                    <li key={detail}>{detail}</li>                  ));
+                    <li key={detail}>{detail}</li>                  ))
                 </ul>
               </div>
             ))}
@@ -273,13 +272,13 @@ import {}
 "
         <div className="mt-16>
           <h2 className=text-3xl font-bold text-zion-slate-dark mb-6 text-center>
-            Technical Specifications;
+            Technical Specifications
           </h2>"
           <div className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-sm>
             <div className=grid md:grid-cols-2 gap-8>
               <div>"
                 <h3 className="text-xl font-semibold text-zion-slate-dark mb-4>
-                  Technology Stack;
+                  Technology Stack
                 </h3>
                 <div className=flex flex-wrap gap-2>
                   {technicalSpecs.technology.map(tech => (
@@ -288,23 +287,23 @@ import {}
                       className="px-3 py-1 bg-zion-cyan/10 text-zion-cyan rounded-full text-sm
                     >
                       {tech}
-:pages.disabled/pages/services/AIHealthcareAnalytics.tsx: </div>';
-''';
-        <div: className='mt-16'>''';
-          <h2: className='text-3xl font-bold text-zion-slate-dark mb-6 text-center'>';
-            Technical: Specifications'';
-          </h2>''';
-          <div: className='bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-sm'>''';
-            <div: className='grid md: grid-cols-2: gap-8'>'';
-              <div>''';
-                <h3: className='text-xl font-semibold text-zion-slate-dark mb-4'>';
-                  Technology: Stack'';
-                </h3>''';
-                <div: className='flex flex-wrap gap-2'>';
+:pages.disabled/pages/services/AIHealthcareAnalytics.tsx: </div>'
+'''
+        <div: className='mt-16'>'''
+          <h2: className='text-3xl font-bold text-zion-slate-dark mb-6 text-center'>'
+            Technical: Specifications''
+          </h2>'''
+          <div: className='bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-sm'>'''
+            <div: className='grid md: grid-cols-2: gap-8'>''
+              <div>'''
+                <h3: className='text-xl font-semibold text-zion-slate-dark mb-4'>'
+                  Technology: Stack''
+                </h3>'''
+                <div: className='flex flex-wrap gap-2'>'
                   {technicalSpecs.technology.map(tech: => (
-                    <span';
+                    <span'
                       key={tec,h}''>
-                      className='px-3: py-1 bg-zion-cyan/10 text-zion-cyan rounded-full text-sm'>                      {tech}';
+                      className='px-3: py-1 bg-zion-cyan/10 text-zion-cyan rounded-full text-sm'>                      {tech}'
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx
         </div>'
 ''
@@ -319,7 +318,7 @@ import {}
                   Technology Stack'
                 </h3>''
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx'
-        </div>';
+        </div>'
 '''
         <div className='mt-16>''
           <h2 className='text-3xl font-bold text-zion-slate-dark mb-6 text-center>
@@ -333,11 +332,11 @@ import {}
                 </h3>'''
                 <div className='flex flex-wrap gap-2'>
                   {technicalSpecs.technology.map(tech => ('
-                    <span';
+                    <span'
                       key={tech}>
                       className='px-3 py-1 bg-zion-cyan/10 text-zion-cyan rounded-full text-sm'>                      {tech}
                     </span>
-                  ));
+                  ))
                 </div>
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx
               </div>"
@@ -356,7 +355,7 @@ import {}
               </div>
               <div>"
                 <h3 className=text-xl font-semibold text-zion-slate-dark mb-4">
-                  EHR Integrations;
+                  EHR Integrations
                 </h3>"
                 <div className=flex flex-wrap gap-2">
                   {technicalSpecs.integrations.map(integration => (
@@ -366,7 +365,7 @@ import {}
                     >
                       {integration}
                     </span>
-                  ));
+                  ))
                 </div>
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx
               </div>
@@ -387,7 +386,7 @@ import {}
             <div className="mt-6" grid md:grid-cols-3 gap-6>
               <div>
                 <h4 className="font-semibold" text-zion-slate-dark mb-2>
-                  Security & Compliance;
+                  Security & Compliance
                 </h4>
                 <div className=space-y-1">
                   {technicalSpecs.security.map(sec => (
@@ -396,7 +395,7 @@ import {}
                       className=flex items-center text-sm text-zion-slate-dark""
                     >
                       <Shield className=w-4 h-4 text-zion-cyan mr-2  />                      {sec}                    </div>
-                  ));
+                  ))
                 </div>
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx
               </div>
@@ -409,7 +408,7 @@ import {}
               </div>
               <div>"
                 <h4 className="font-semibold text-zion-slate-dark mb-2>
-                  Uptime;
+                  Uptime
                 </h4>
                 <div className=text-2xl font-bold text-zion-cyan>                  {technicalSpecs.uptime}
                 </div>
@@ -428,7 +427,7 @@ import {}
               </div>
               <div>
                 <h4 className="font-semibold" text-zion-slate-dark mb-2>
-                  Compliance Standards;
+                  Compliance Standards
                 </h4>
                 <div className=space-y-1">
                   {technicalSpecs.compliance.map(comp => (
@@ -437,7 +436,7 @@ import {}
                       className=flex items-center text-sm text-zion-slate-dark""
                     >
                       <Shield className=w-4 h-4 text-zion-cyan mr-2  />                      {comp}                    </div>
-                  ));
+                  ))
                 </div>
               </div>
             </div>
@@ -476,12 +475,12 @@ import {}
           <div className=mt-4> </a""
 
           <div className=mt-4>"
-              <Phone className="w-4 h-4 mr-2  /> +1 302 464 0950;
+              <Phone className="w-4 h-4 mr-2  /> +1 302 464 0950
             </a>
             <a
               href=mailto:kleber@ziontechgroup.com
               className="inline-flex items-center px-5 py-3 border border-zion-cyan text-zion-cyan rounded-lg"
-            >              <Mail className=w-4 h-4 mr-2  /> kleber@ziontechgroup.com;
+            >              <Mail className=w-4 h-4 mr-2  /> kleber@ziontechgroup.com
             </a>
           </div>
           <div className="mt-4">
@@ -491,14 +490,14 @@ import {}
               rel=noreferrer
               className=inline-flex items-center text-zion-cyan hover:text-zion-cyan-dark
             >""
-              Learn More <ExternalLink className=w-4 h-4 ml-2  />            </a>            <a'';
+              Learn More <ExternalLink className=w-4 h-4 ml-2  />            </a>            <a''
               href='mailto:kleber@ziontechgroup.com''>
               className='inline-flex items-center px-5 py-3 border border-zion-cyan text-zion-cyan rounded-lg'>              <Mail className='w-4 h-4 mr-2'  /> kleber@ziontechgroup.com'
             </a>''
           </div>'''
           <div className='mt-4> </a''              href='http>
-    s: //ziontechgroup.com'';
-              target='_blank'';
+    s: //ziontechgroup.com''
+              target='_blank''
               rel='noreferrer''>
               className='inline-flex items-center text-zion-cyan hove,
     r:text-zion-cyan-dark>'
@@ -507,14 +506,14 @@ import {}
         </div>
       </section>
     </div>
-  )};
-;
+  )}
+
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx
 export { AIHealthcareAnalytics };export default AIHealthcareAnalytics;'"
 
   '"'
 
 ''
-export { AIHealthcareAnalytics };export default AIHealthcareAnalytics;
+export { AIHealthcareAnalytics };export default AIHealthcareAnalytics
 '"
 >>>>>>> pr-10728

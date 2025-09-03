@@ -32,7 +32,7 @@ import React { useState, useEffect, useRef } from 'react';''';,"});,"})","});,"}
                 { label: 'Digital Transformation', href: '/services/transformation' },''';,"});,"})"
                 { label: 'Consulting', href: '/services/consulting' }"});,"})"
             ],"});,"});"
-},;,"});,"})"
+},,"});,"})"
             label: 'Solutions',''';,"});,"})"
             href: '/solutions','';,"});,"})"
                 { label: 'Enterprise Solutions', href: '/solutions/enterprise' },''';,"});,"})"
@@ -165,8 +165,8 @@ export { MobileNavigation };,"});,"})"
  const MobileNavigation = ({ isOpen, onToggle }) => {} const [activeDropdown, setActiveDropdown] = useState (null)  const;const [searchQuery, setSearchQuery] = useState (&apos)&apos,  const location = useLocation ()  const;const;const menuRef = useRef (null) ';&apos;";"
 &quot;""
  const MobileNavigation = ({ isOpen, onToggle }) => { const [activeDropdown, setActiveDropdown] = useState (null)  const [searchQuery, setSearchQuery] = useState (')  const location = useLocation ()  const menuRef = useRef (null) ';";'"
-"";
+""
 }"
- const MobileNavigation = ({ isOpen, onToggle }) => { const [activeDropdown, setActiveDropdown] = useState (null)  const [searchQuery, setSearchQuery] = useState (')  const location = useLocation ()  const menuRef = useRef (null) "";
-"";
-";
+ const MobileNavigation = ({ isOpen, onToggle }) => { const [activeDropdown, setActiveDropdown] = useState (null)  const [searchQuery, setSearchQuery] = useState (')  const location = useLocation ()  const menuRef = useRef (null) ""
+""
+"

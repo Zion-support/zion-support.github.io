@@ -3,8 +3,7 @@ import React, { useState } from 'react'
   Building} from 'lucide-react'
 
 export const PricingSection: React.FC = () => {',,
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('annual');
-
+  const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('annual')
   const plans = [
     {'
       name: 'Starter', icon: Rocket,'
@@ -37,11 +36,10 @@ export const PricingSection: React.FC = () => {',,
         'Unlimited team members', 'Custom SLA guarantees','
         'On-premise deployment options', 'White-label solutions''
       ], cta: 'Contact Sales','
-      popular: false, color: 'from-yellow-500 to-orange-500'};
-  ];
-;
-  const savings = billingCycle === 'annual' ? 25 : 0;
+      popular: false, color: 'from-yellow-500 to-orange-500'}
+  ]
 
+  const savings = billingCycle === 'annual' ? 25 : 0
   return (
     <section className = "py-24 bg-gradient-to-b from-zion-blue to-zion-blue-light relative overflow-hidden">
       {/*   */}"
@@ -79,8 +77,8 @@ with no hidden fees or surprises.
               className="`relative" w-16 h-8 bg-zion-purple/20 rounded-full p-1 transition-colors duration-200`
             >
               <motion.div>
-layout,";
-className="{`w-6" h-6 bg-zion-cyan rounded-full shadow-lg ${;
+layout,"
+className="{`w-6" h-6 bg-zion-cyan rounded-full shadow-lg ${
                   billingCycle === 'annual' ? 'ml-8' : 'ml-0>
 }`}
               />
@@ -103,8 +101,8 @@ initial="{{" opacity: 0, scale: 0.8 }}"
 
         {/*   */}"
         <div className="{`grid" grid-cols-1 md: grid-cols-3 gap-8`>,
-          {plans.map((plan, index) => {;
-            const IconComponent = plan.icon;
+          {plans.map((plan, index) => {
+            const IconComponent = plan.icon
             return (
               <motion.div,"
 key = "{plan.name}""
@@ -234,7 +232,7 @@ export default function PricingSection() {return ("
         <p className="text-gray-300 text-lg">
           Professional PricingSection services to help your business grow.
         </p>
-      </div>;
-    </div>;
+      </div>
+    </div>
   );"
 }"

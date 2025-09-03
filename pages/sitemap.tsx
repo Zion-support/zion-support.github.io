@@ -1,17 +1,17 @@
 const React = dynamic(() => import('react'), { ssr: false })
-      ];
-};
+      ]
+}
 ,"});,"})","});,"})","});,"})","});,"})","});,"})","});,"})"
-  Map, ArrowRight,;,"});,"})"
-  ExternalLink, Home,;,"});,"})"
-  Users, Briefcase,;,"});,"})"
-  Phone, DollarSign,;,"});,"})"
-  FileText, BookOpen,;,"});,"})"
-  Award, Shield,;,"});,"})"
-  Globe, Search,;,"});,"})"
-  Filter, Calendar,;,"});,"})"
-  Star, TrendingUp,;,"});,"})"
-  Brain, Cloud,;,"});,"})"
+  Map, ArrowRight,,"});,"})"
+  ExternalLink, Home,,"});,"})"
+  Users, Briefcase,,"});,"})"
+  Phone, DollarSign,,"});,"})"
+  FileText, BookOpen,,"});,"})"
+  Award, Shield,,"});,"})"
+  Globe, Search,,"});,"})"
+  Filter, Calendar,,"});,"})"
+  Star, TrendingUp,,"});,"})"
+  Brain, Cloud,,"});,"})"
 ursor/automate-test-fix-improve-and-merge-code-99d1,"});,"})"
             animate="{{" opacity: 1, y: 0 }}"});,"})"
             transition="{{" duration: 0.6 }}"});,"})"
@@ -35,21 +35,21 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"});,"})"
     </>"});,"})"
 const Sitemap: React.FC = () => {,"});,"})"
   const links = [;,"});,"})"
-    { name: 'Home', url: '/' },;,"});,"})"
-    { name: 'About', url: '/about' },;,"});,"})"
-    { name: 'Services', url: '/services' },;,"});,"})"
-    { name: 'AI Services', url: '/services/ai-services' },;,"});,"})"
-    { name: 'IT Services', url: '/services/it-services' },;,"});,"})"
-    { name: 'Micro SaaS', url: '/services/micro-saas' },;,"});,"})"
-    { name: 'Solutions', url: '/solutions' },;,"});,"})"
-    { name: 'Enterprise', url: '/solutions/enterprise' },;,"});,"})"
-    { name: 'Small Business', url: '/solutions/small-business' },;,"});,"})"
-    { name: 'Startups', url: '/solutions/startups' },;,"});,"})"
-    { name: 'Products', url: '/products' },;,"});,"})"
-    { name: 'Contact', url: '/contact' },;,"});,"})"
-    { name: 'Careers', url: '/careers' },;,"});,"})"
-    { name: 'Privacy', url: '/privacy' },;,"});,"})"
-    { name: 'Terms', url: '/terms' },;,"});,"})"
+    { name: 'Home', url: '/' },,"});,"})"
+    { name: 'About', url: '/about' },,"});,"})"
+    { name: 'Services', url: '/services' },,"});,"})"
+    { name: 'AI Services', url: '/services/ai-services' },,"});,"})"
+    { name: 'IT Services', url: '/services/it-services' },,"});,"})"
+    { name: 'Micro SaaS', url: '/services/micro-saas' },,"});,"})"
+    { name: 'Solutions', url: '/solutions' },,"});,"})"
+    { name: 'Enterprise', url: '/solutions/enterprise' },,"});,"})"
+    { name: 'Small Business', url: '/solutions/small-business' },,"});,"})"
+    { name: 'Startups', url: '/solutions/startups' },,"});,"})"
+    { name: 'Products', url: '/products' },,"});,"})"
+    { name: 'Contact', url: '/contact' },,"});,"})"
+    { name: 'Careers', url: '/careers' },,"});,"})"
+    { name: 'Privacy', url: '/privacy' },,"});,"})"
+    { name: 'Terms', url: '/terms' },,"});,"})"
   ],"});,"})"
 ;,"});,"})"
   return ("});,"})"
@@ -75,8 +75,7 @@ const React = dynamic(() => import('react'), { ssr: false })
 const Head = dynamic(() => import('next/head'), { ssr: false })
 const Link = dynamic(() => import('next/link'), { ssr: false })
   Mail,
-  MapPin} from 'lucide-react;
-
+  MapPin} from 'lucide-react
 export default function Sitemap() {
 
   const currentYear = new Date().getFullYear()'
@@ -87,11 +86,10 @@ export default function Sitemap() {
     { name: 'Contact', href: '/contact', description: 'Contact information' },'
     { name: 'Blog', href: '/blog', description: 'Latest news and insights' },'
     { name: 'Careers', href: '/careers', description: 'Job opportunities' },
-    {;
-      name: 'Partners',;
-      href: '/partners',;
-      description: 'Partnership information'}];
-
+    {
+      name: 'Partners',
+      href: '/partners',
+      description: 'Partnership information'}]
   const services = [
     {'
       name: 'AI Services','
@@ -113,11 +111,10 @@ export default function Sitemap() {
       name: 'Cloud Services','
       href: '/services/cloud-services','
       description: 'Cloud infrastructure solutions'},
-    {;
-      name: 'AI Development',;
-      href: '/services/ai-development',;
-      description: 'AI development services'}];
-
+    {
+      name: 'AI Development',
+      href: '/services/ai-development',
+      description: 'AI development services'}]
   const solutions = [
     {'
       name: 'AI Content Creation','
@@ -139,11 +136,10 @@ export default function Sitemap() {
       name: 'Project Management','
       href: '/solutions/project-management','
       description: 'Project management solutions'},
-    {;
-      name: 'Workflow Automation',;
-      href: '/solutions/workflow-automation',;
-      description: 'Business process automation'}];
-
+    {
+      name: 'Workflow Automation',
+      href: '/solutions/workflow-automation',
+      description: 'Business process automation'}]
   const resources = [
     {'
       name: 'Documentation','
@@ -156,11 +152,10 @@ export default function Sitemap() {
       name: 'Case Studies','
       href: '/case-studies','
       description: 'Success stories'},
-    {;
-      name: 'Pricing Guide',;
-      href: '/pricing-guide',;
-      description: 'Pricing information'}];
-
+    {
+      name: 'Pricing Guide',
+      href: '/pricing-guide',
+      description: 'Pricing information'}]
   const legal = [
     {'
       name: 'Privacy Policy','
@@ -170,11 +165,10 @@ export default function Sitemap() {
       name: 'Terms of Service','
       href: '/terms','
       description: 'Terms and conditions'},
-    {;
-      name: 'Cookie Policy',;
-      href: '/cookies',;
-      description: 'Cookie usage policy'}];
-
+    {
+      name: 'Cookie Policy',
+      href: '/cookies',
+      description: 'Cookie usage policy'}]
   const contactInfo = ['
     { icon: Phone, text: '+1 302 464 0950', href: 'tel:+13024640950' },
     {
@@ -182,9 +176,9 @@ export default function Sitemap() {
       text: 'kleber@ziontechgroup.com','
       href: 'mailto:kleber@ziontechgroup.com'},
     {
-      icon: MapPin,;
-      text: '364 E Main St STE 1008, Middletown DE 19709',;
-      href: '#'},;
+      icon: MapPin,
+      text: '364 E Main St STE 1008, Middletown DE 19709',
+      href: '#'},
   Database, Code,
   Building, Zap} from 'lucide-react'
 
@@ -285,11 +279,10 @@ const SitemapPage = () => {
       description: 'Get in touch with our team for consultations','
       url: '/contact',
       icon: Phone,'
-      category: 'Contact'};
-  ];
-;
-  const categories = ['Main', 'Services', 'Solutions', 'Company', 'Contact'];
+      category: 'Contact'}
+  ]
 
+  const categories = ['Main', 'Services', 'Solutions', 'Company', 'Contact']
   return (
     <>"
       <SEO title = "Sitemap - Zion Tech Group""
@@ -301,18 +294,18 @@ const SitemapPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">,
           <motion.div,"
 initial="{{" opacity: 0, y: 20 }}
-  Database, Network,;
+  Database, Network,
   Zap, Target,>
   CheckCircle} from 'lucide - react','const Sitemap: React.FC = () => {',
-  const lastUpdated = new Date().toISOString().split('T')[0],''  const mainPages = [,";
-    { name: "Home", url: "/", description: "Welcome to Zion Tech Group", icon: Home },"    { name: "About", url: "/about", description: "Learn about our company and mission", icon: Users },"    { name: "Services", url: "/services", description: "Our AI and technology solutions", icon: Briefcase },"    { name: "Contact", url: "/contact", description: "Get in touch with our team", icon: Phone },"    { name: "Careers", url: "/careers", description: "Join our team of experts", icon: Users },"    { name: "Team", url: "/team", description: "Meet our leadership and experts", icon: Award },"    { name: "Pricing", url: "/pricing", description: "Transparent pricing for our services", icon: DollarSign },"    { name: "Blog", url: "/blog", description: "Latest insights and technology trends", icon: BookOpen },"    { name: "Case Studies", url: "/case-studies", description: "Success stories from our clients", icon: TrendingUp },"    { name: "White Papers", url: "/white-papers", description: "Research and insights", icon: FileText },"    { name: "Webinars", url: "/webinars", description: "Expert-led educational sessions", icon: Calendar },"    { name: "Privacy Policy", url: "/privacy", description: "How we protect your data", icon: Shield },"    { name: "Terms of Service", url: "/terms", description: "Terms and conditions", icon: FileText }"  ]";
+  const lastUpdated = new Date().toISOString().split('T')[0],''  const mainPages = [,"
+    { name: "Home", url: "/", description: "Welcome to Zion Tech Group", icon: Home },"    { name: "About", url: "/about", description: "Learn about our company and mission", icon: Users },"    { name: "Services", url: "/services", description: "Our AI and technology solutions", icon: Briefcase },"    { name: "Contact", url: "/contact", description: "Get in touch with our team", icon: Phone },"    { name: "Careers", url: "/careers", description: "Join our team of experts", icon: Users },"    { name: "Team", url: "/team", description: "Meet our leadership and experts", icon: Award },"    { name: "Pricing", url: "/pricing", description: "Transparent pricing for our services", icon: DollarSign },"    { name: "Blog", url: "/blog", description: "Latest insights and technology trends", icon: BookOpen },"    { name: "Case Studies", url: "/case-studies", description: "Success stories from our clients", icon: TrendingUp },"    { name: "White Papers", url: "/white-papers", description: "Research and insights", icon: FileText },"    { name: "Webinars", url: "/webinars", description: "Expert-led educational sessions", icon: Calendar },"    { name: "Privacy Policy", url: "/privacy", description: "How we protect your data", icon: Shield },"    { name: "Terms of Service", url: "/terms", description: "Terms and conditions", icon: FileText }"  ]"
   const servicePages = [;"
     { name: "AI Services", url: "/ai-services", description: "Artificial Intelligence solutions", icon: Brain },"    { name: "IT Services", url: "/it-services", description: "Information Technology services", icon: Network },"    { name: "Micro SaaS", url: "/micro-saas", description: "Micro Software as a Service solutions", icon: Cloud },"    { name: "AI Cybersecurity Platform", url: "/services/ai-autonomous-cybersecurity-platform", description: "AI-powered security solutions", icon: Shield },"    { name: "AI Customer Experience", url: "/services/ai-customer-experience-platform", description: "AI-driven customer experience", icon: Users },"    { name: "AI Healthcare Diagnostics", url: "/services/ai-healthcare-diagnostics", description: "AI medical diagnostic tools", icon: Brain },"    { name: "AI Enterprise Orchestrator", url: "/services/ai-enterprise-orchestrator", description: "Enterprise AI orchestration", icon: Zap },"    { name: "AI Healthcare Analytics", url: "/services/ai-healthcare-analytics-platform", description: "Healthcare data analytics", icon: Database },"    { name: "AI Supply Chain", url: "/services/ai-autonomous-supply-chain", description: "Supply chain optimization", icon: Target },"    { name: "AI Financial Planning", url: "/services/ai-financial-planning", description: "AI financial planning tools", icon: DollarSign }"  ]""
   const contentPages = [;"
     { name: "Pricing Guide", url: "/pricing-guide", description: "Comprehensive pricing information", icon: DollarSign },"    { name: "Services Overview", url: "/services-overview", description: "Overview of all our services", icon: Briefcase }"  ]""
   const categories = [;"
     { name: "Main Pages", pages: mainPages, color: "from-blue-500 to-cyan-500" }, { name: "Services", pages: servicePages, color: "from-purple-500 to-pink-500" },"    { name: "Content", pages: contentPages, color: "from-green-500 to-emerald-500" }"  ]""
-  return (";
+  return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"      <SEO "        title="Sitemap - Zion Tech Group" "        description="Navigate through all pages and content on the Zion Tech Group website. Find what you&apos;re looking for quickly and easily."      />'      '
       {/*   */}"
       <section className = "relative py-20 px-4 sm: px-6 lg:px-8">"        <div className="max-w-7xl mx-auto text-center">"          <motion.div"            initial="{{" opacity: 0, y: 20 }}""
@@ -344,9 +337,8 @@ initial="{{" opacity: 0, y: 20 }}
           </motion.div>
 "
           <div className="grid gap-8">,
-            {categories.map((category, categoryIndex) => {;
-              const categoryPages = pages.filter(page => page.category === category);
-              
+            {categories.map((category, categoryIndex) => {
+              const categoryPages = pages.filter(page => page.category === category)
               return (
                 <motion.div,"
 key = "{category}""
@@ -397,9 +389,9 @@ key="{page.url}""
                         </Card>
                       </motion.div>,
                     ))}
-                  </div>;
-                </motion.div>;
-              );
+                  </div>
+                </motion.div>
+              )
             })}
           </div>
 
@@ -596,10 +588,10 @@ name: 'Privacy Policy','
         { name: 'Cookie Policy', path: '/cookies', description: 'Cookie usage policy' }
       ]
 }
-  ];
-;
+  ]
+
   return (
-    <>;
+    <>
 <Head>
         <title>Sitemap - Zion Tech Group</title>"
         <meta name = "description" content="Complete sitemap of Zion Tech Group website. Find all our pages, services, and resources in one place." />"
@@ -662,7 +654,7 @@ name: 'Privacy Policy','
       <SEO title="Sitemap - Zion Tech Group"">
         description="Complete sitemap of Zion Tech Group website. Find all pages, services, and resources in one place.""
         keywords="sitemap, navigation, website structure, pages, links"
-      />;
+      />
 <Head>
         <title>Sitemap - Zion Tech Group</title>"
         <meta name = "description""
@@ -801,7 +793,7 @@ platforms we provide,
 and privacy information,
                 </li>
               </ul>
-              <p>;
+              <p>
                 If you can&apos;t find what you&apos,re looking for, please,'
 don&apos;t hesitate to{' '}"
                 <Link href = "/contact""
@@ -858,10 +850,9 @@ key="{section.category}""
         </div>
       </div>
     </>
-  );
-};
-
-export default SitemapPage;
+  )
+}
+export default SitemapPage
       </section>
 
       {/*   */}"
@@ -893,7 +884,7 @@ className="text-center""            >"              <div className="p-6 rounded-
             animate="{{" opacity: 1, y: 0 }}"
             transition="{{" duration: 0.6 }}
           >"
-            <h2 className="text-4xl font-bold text-white mb-6">"              Need Help Finding Something?"            </h2>";
+            <h2 className="text-4xl font-bold text-white mb-6">"              Need Help Finding Something?"            </h2>"
             <p className="text-xl text-gray-300 mb-8">"              Can&apos;t find what you&apos;re looking for? Our team is here to help you navigate our website and find the information you need."            </p>"
             <div className = "flex flex-col sm: flex-row gap-4 justify-center">"              <a"                href="/contact""                className="inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:opacity-90 transition-opacity""              >"                <Phone className="w-5 h-5 mr-2" />"                Contact Support"              </a>""
               <a href="/services""                className="inline-flex items-center px-6 py-3 rounded-lg border border-slate-600 text-gray-300 hover:bg-slate-700 transition-colors""              >"                <Briefcase className="w-5 h-5 mr-2" />"                Browse Services"              </a></div>"",
@@ -1204,11 +1195,10 @@ const Sitemap: React.FC = () => {
     { name: 'Small Business', url: '/solutions/small-business' },'
     { name: 'Startups', url: '/solutions/startups' },'
     { name: 'Products', url: '/products' },'
-    { name: 'Contact', url: '/contact' },;
-    { name: 'Careers', url: '/careers' },;
-    { name: 'Privacy', url: '/privacy' },;
-    { name: 'Terms', url: '/terms' }];
-
+    { name: 'Contact', url: '/contact' },
+    { name: 'Careers', url: '/careers' },
+    { name: 'Privacy', url: '/privacy' },
+    { name: 'Terms', url: '/terms' }]
   return ("
     <div className = "min-h-screen px-6 py-16 max-w-4xl mx-auto">"
       <h1 className="text-3xl font-bold mb-6">Sitemap</h1>"
@@ -1221,13 +1211,13 @@ const Sitemap: React.FC = () => {
             </a>
           </li>
         ))}
-      </ul>;
-    </div>;
-  );
+      </ul>
+    </div>
+  )
 }
-  );
-};
+  )
+}
 export default SitemapPage}
 }
-};
+}
 export default SitemapPage;"

@@ -1,26 +1,26 @@
 export interface EnterpriseITBreakthroughService2029 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  realImplementation: boolean;
+  id: string
+  name: string
+  tagline: string
+  price: string
+  description: string
+  features: string[]
+  link: string
+  marketPosition: string
+  targetAudience: string
+  roi: string
+  competitors: string[]
+  marketSize: string
+  growthRate: string
+  realImplementation: boolean
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string};
-  category: string;
-  technology: string[];
-  benefits: string[];
-  useCases: string[];
+    mobile: string
+    email: string
+    address: string}
+  category: string
+  technology: string[]
+  benefits: string[]
+  useCases: string[]
 export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughService2029[] = [
   {
     id: "ai-business-intelligence-suite",
@@ -271,4 +271,4 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
       "Incident response",
       "Compliance management"
     ]
-];}}
+]}}

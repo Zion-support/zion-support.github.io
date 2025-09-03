@@ -1,90 +1,86 @@
 
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
-
+const { execSync } = require('child_process')
+const fs = require('fs')
+const path = require('path')
 class SecurityAuditor {
   constructor() {
-    this.reportsDir = path.join(process.cwd(), 'security-reports');
-    this.ensureDirectories();
+    this.reportsDir = path.join(process.cwd(), 'security-reports')
+    this.ensureDirectories()
   }
 
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true });
+      fs.mkdirSync(this.reportsDir, { recursive: true })
     }
   }
 
   async runNpmAudit() {
-    console.log('🔍 Running npm audit...');
+    console.log('🔍 Running npm audit...')
     try {
       const result = execSync(command, {
         cwd: this.projectRoot,
         encoding: 'utf8',
-        timeout: 300000,;
-});
-      this.log(`✅ Completed: ${description}`);
-      return { success: true, output: result };
-      const command = 'npm audit --audit-level=moderate --json > ./security-reports/npm-audit.json';
-      execSync(command, { stdio: 'inherit' });
-      console.log('✅ NPM audit completed');
+        timeout: 300000,
+})
+      this.log(`✅ Completed: ${description}`)
+      return { success: true, output: result }
+      const command = 'npm audit --audit-level=moderate --json > ./security-reports/npm-audit.json'
+      execSync(command, { stdio: 'inherit' })
+      console.log('✅ NPM audit completed')
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     } catch (error) {
-      console.log('❌ NPM audit failed: ', error.message);
+      console.log('❌ NPM audit failed: ', error.message)
     }
   }
 
   async runSnykAudit() {
-    console.log('🔍 Running Snyk audit...');
+    console.log('🔍 Running Snyk audit...')
     try {
-      const command = 'npx snyk test --json > ./security-reports/snyk-audit.json';
-      execSync(command, { stdio: 'inherit' });
-      console.log('✅ Snyk audit completed');
+      const command = 'npx snyk test --json > ./security-reports/snyk-audit.json'
+      execSync(command, { stdio: 'inherit' })
+      console.log('✅ Snyk audit completed')
     } catch (error) {
       // npm audit returns non-zero exit code when vulnerabilities are found
       // This is expected behavior, so we'll treat it as a successful audit with findings
       return { 
         success: true, 
         output: error.stdout || error.message,
-        vulnerabilitiesFound: true ;
-};
+        vulnerabilitiesFound: true 
+}
     }
   }
 
   async checkEnvironmentVariables() {
-    this.log('🔐 Checking environment variables...');
-    
-    const envFiles = ['.env', '.env.local', '.env.production', '.env.development'];
-    const findings = [];
-
+    this.log('🔐 Checking environment variables...')
+    const envFiles = ['.env', '.env.local', '.env.production', '.env.development']
+    const findings = []
     for (const envFile of envFiles) {
-      const envPath = path.join(this.projectRoot, envFile);
+      const envPath = path.join(this.projectRoot, envFile)
       if (fs.existsSync(envPath)) {
-        const content = fs.readFileSync(envPath, 'utf8');
-        
+        const content = fs.readFileSync(envPath, 'utf8')
         // Check for common security issues
         if (content.includes('PASSWORD=') && !content.includes('PASSWORD=***')) {
           findings.push({
             file: envFile,
             issue: 'Plain text password detected',
-            severity: 'high';
-});
+            severity: 'high'
+})
         }
         
         if (content.includes('SECRET=') && !content.includes('SECRET=***')) {
           findings.push({
             file: envFile,
             issue: 'Plain text secret detected',
-            severity: 'high';
-});
+            severity: 'high'
+})
         }
         
         if (content.includes('API_KEY=') && !content.includes('API_KEY=***')) {
           findings.push({
             file: envFile,
             issue: 'Plain text API key detected',
-            severity: 'medium';
-});
+            severity: 'medium'
+})
         }
       }
     }
@@ -92,21 +88,18 @@ class SecurityAuditor {
     return {
       success: true,
       findings: findings,
-      filesChecked: envFiles.length;
-};
+      filesChecked: envFiles.length
+}
   }
 
   async checkCodeSecurity() {
-    this.log('🔍 Checking code for security issues...');
-    
-    const srcDir = path.join(this.projectRoot, 'src');
-    const pagesDir = path.join(this.projectRoot, 'pages');
-    const securityIssues = [];
-
+    this.log('🔍 Checking code for security issues...')
+    const srcDir = path.join(this.projectRoot, 'src')
+    const pagesDir = path.join(this.projectRoot, 'pages')
+    const securityIssues = []
     const checkFile = (filePath) => {
       try {
-        const content = fs.readFileSync(filePath, 'utf8');
-        
+        const content = fs.readFileSync(filePath, 'utf8')
         // Check for dangerous patterns
         const dangerousPatterns = [
           { pattern: /eval\s*\(/, message: 'eval() usage detected', severity: 'high' },
@@ -121,68 +114,62 @@ class SecurityAuditor {
             securityIssues.push({
               file: filePath,
               issue: message,
-              severity: severity;
-});
+              severity: severity
+})
           }
-        });
+        })
       } catch (error) {
-        // Skip files that can't be read;
+        // Skip files that can't be read
 }
-    };
-
+    }
     // Check source files
     if (fs.existsSync(srcDir)) {
-      this.scanDirectory(srcDir, ['.js', '.jsx', '.ts', '.tsx'], checkFile);
+      this.scanDirectory(srcDir, ['.js', '.jsx', '.ts', '.tsx'], checkFile)
     }
 
     // Check pages
     if (fs.existsSync(pagesDir)) {
-      this.scanDirectory(pagesDir, ['.js', '.jsx', '.ts', '.tsx'], checkFile);
+      this.scanDirectory(pagesDir, ['.js', '.jsx', '.ts', '.tsx'], checkFile)
     }
 
     return {
       success: true,
       issues: securityIssues,
-      filesScanned: securityIssues.length;
-};
+      filesScanned: securityIssues.length
+}
   }
 
   scanDirectory(dir, extensions, callback) {
-    const items = fs.readdirSync(dir);
-    
+    const items = fs.readdirSync(dir)
     for (const item of items) {
-      const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
-
+      const fullPath = path.join(dir, item)
+      const stat = fs.statSync(fullPath)
       if (stat.isDirectory()) {
-        this.scanDirectory(fullPath, extensions, callback);
+        this.scanDirectory(fullPath, extensions, callback)
       } else if (extensions.includes(path.extname(item))) {
-        callback(fullPath);
+        callback(fullPath)
       }
     }
   }
 
   async checkHTTPSConfiguration() {
-    this.log('🔒 Checking HTTPS configuration...');
-    
-    const nextConfigPath = path.join(this.projectRoot, 'next.config.js');
-    const findings = [];
-
+    this.log('🔒 Checking HTTPS configuration...')
+    const nextConfigPath = path.join(this.projectRoot, 'next.config.js')
+    const findings = []
     if (fs.existsSync(nextConfigPath)) {
-      const content = fs.readFileSync(nextConfigPath, 'utf8');
-      
+      const content = fs.readFileSync(nextConfigPath, 'utf8')
       if (!content.includes('https') && !content.includes('secure')) {
         findings.push({
           issue: 'No HTTPS configuration found in next.config.js',
-          severity: 'medium';
-});
+          severity: 'medium'
+})
       }
     }
 
     return {
       success: true,
-      findings: findings;
-};
+      findings: findings
+}
   }
 
   async generateReport(results) {
@@ -193,80 +180,73 @@ class SecurityAuditor {
         successful: Object.values(results).filter(r => r.success).length,
         failed: Object.values(results).filter(r => !r.success).length,
         totalIssues: Object.values(results).reduce((sum, r) => {
-          return sum + (r.findings ? r.findings.length : 0) + (r.issues ? r.issues.length : 0);
-        }, 0);
+          return sum + (r.findings ? r.findings.length : 0) + (r.issues ? r.issues.length : 0)
+        }, 0)
 },
       results: results,
-      recommendations: this.generateRecommendations(results);
-};
-
-    const reportFile = path.join(this.reportsDir, 'security-audit-report.json');
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-    
-    this.log(`📊 Security audit report generated: ${reportFile}`);
-    return report;
+      recommendations: this.generateRecommendations(results)
+}
+    const reportFile = path.join(this.reportsDir, 'security-audit-report.json')
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2))
+    this.log(`📊 Security audit report generated: ${reportFile}`)
+    return report
   }
 
   generateRecommendations(results) {
-    const recommendations = [];
-
+    const recommendations = []
     if (results.dependencies && results.dependencies.vulnerabilitiesFound) {
       recommendations.push({
         type: 'dependencies',
         message: 'Vulnerabilities found in dependencies. Run npm audit fix to resolve.',
-        action: 'npm audit fix';
-});
+        action: 'npm audit fix'
+})
     }
 
     if (results.environment && results.environment.findings.length > 0) {
       recommendations.push({
         type: 'environment',
         message: 'Security issues found in environment files. Review and secure sensitive data.',
-        issues: results.environment.findings.length;
-});
+        issues: results.environment.findings.length
+})
     }
 
     if (results.codeSecurity && results.codeSecurity.issues.length > 0) {
       recommendations.push({
         type: 'code',
         message: 'Security issues found in code. Review and fix dangerous patterns.',
-        issues: results.codeSecurity.issues.length;
-});
+        issues: results.codeSecurity.issues.length
+})
     }
 
-    return recommendations;
+    return recommendations
   }
 
   async run() {
-    this.log('🎯 Starting Security Audit');
-    
+    this.log('🎯 Starting Security Audit')
     const results = {
       dependencies: await this.auditDependencies(),
       environment: await this.checkEnvironmentVariables(),
       codeSecurity: await this.checkCodeSecurity(),
-      httpsConfig: await this.checkHTTPSConfiguration();
-};
-
-    const report = await this.generateReport(results);
-
-    this.log('🎉 Security Audit Completed');
-    this.log(`📊 Summary: ${report.summary.successful}/${report.summary.totalChecks} checks successful`);
-    this.log(`🔍 Total issues found: ${report.summary.totalIssues}`);
-    
+      httpsConfig: await this.checkHTTPSConfiguration()
+}
+    const report = await this.generateReport(results)
+    this.log('🎉 Security Audit Completed')
+    this.log(`📊 Summary: ${report.summary.successful}/${report.summary.totalChecks} checks successful`)
+    this.log(`🔍 Total issues found: ${report.summary.totalIssues}`)
     if (report.recommendations.length > 0) {
-      this.log('💡 Security Recommendations:');
+      this.log('💡 Security Recommendations:')
       report.recommendations.forEach(rec => {
-        this.log(`   - ${rec.message}`);
-      });
+        this.log(`   - ${rec.message}`)
+      })
     }
 
-    return report;
-      console.log('❌ Snyk audit failed: ', error.message);
+    return report
+      console.log('❌ Snyk audit failed: ', error.message)
     }
   }
 
   async generateSecurityReport() {
-    console.log('📊 Generating security report...');
+    console.log('📊 Generating security report...')
     const report = {
       timestamp: new Date().toISOString(),
       audits: {
@@ -281,19 +261,17 @@ class SecurityAuditor {
         'Validate all inputs',
         'Use environment variables for secrets'
       ]
-    };
-    
+    }
     fs.writeFileSync(
       path.join(this.reportsDir, 'security-report.json'),
       JSON.stringify(report, null, 2)
-    );
-    
-    console.log('✅ Security report generated');
+    )
+    console.log('✅ Security report generated')
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   }
 }
 
-const auditor = new SecurityAuditor();
-auditor.runNpmAudit();
-auditor.runSnykAudit();
-auditor.generateSecurityReport();
+const auditor = new SecurityAuditor()
+auditor.runNpmAudit()
+auditor.runSnykAudit()
+auditor.generateSecurityReport()

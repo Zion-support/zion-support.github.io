@@ -1,9 +1,9 @@
 const React = dynamic(() => import('react'), { ssr: false })
 } from'
-  'lucide-react;
-;
+  'lucide-react
+
   return (
-    <>;
+    <>
 <Head>
         <title>Pricing Guide - Zion Tech Group</title>"
         <meta name = "description" content="Transparent pricing for AI services, cloud solutions, cybersecurity, and micro SaaS platforms. Get custom quotes for your business needs." />"
@@ -43,7 +43,7 @@ const React = dynamic(() => import('react'), { ssr: false })
                 <div key="{index}""
                   className="{`relative" rounded-2xl border-2 p-8 ${
                     tier.popular'
-                      ? 'border-blue-500 bg-blue-50';
+                      ? 'border-blue-500 bg-blue-50'
                       : 'border-gray-200 bg-white>
 }`}
                 >
@@ -96,35 +96,35 @@ const React = dynamic(() => import('react'), { ssr: false })
             </div>
             "
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">,
-              {serviceCategories.map((category, index) => {;
-                const IconComponent = category.icon;
+              {serviceCategories.map((category, index) => {
+                const IconComponent = category.icon
                 return ("
                   <div key = "{index}" className="bg-white rounded-xl p-6 shadow-lg">"
                     <div className="flex items-center mb-6">"
                       <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">"
                         <IconComponent className="h-6 w-6 text-blue-600" />
-                      </div>";
-                      <h3 className="text-xl font-semibold text-gray-900">{category.title}</h3>";
+                      </div>"
+                      <h3 className="text-xl font-semibold text-gray-900">{category.title}</h3>"
 ursor/automate-test-fix-improve-and-merge-code-99d1,"});,"})"
-  ArrowRight,;,"});,"})"
-  DollarSign,;,"});,"})"
-  TrendingUp,;,"});,"})"
+  ArrowRight,,"});,"})"
+  DollarSign,,"});,"})"
+  TrendingUp,,"});,"})"
   Award,,"});,"})"
-  Clock,;,"});,"})"
-  Target,;,"});,"})"
-  Network,;,"});,"})"
-  Brain,;,"});,"})"
-  Server,;,"});,"})"
-  Cloud,;,"});,"})"
-  Database,;,"});,"})"
-  Lock,;,"});,"})"
-  BarChart3,;,"});,"})"
-  Rocket,;,"});,"})"
-  Heart,;,"});,"})"
-  Sparkles,;,"});,"})"
-  Calculator,;,"});,"})"
-  BookOpen,;,"});,"})"
-  Lightbulb,;,"});,"})"
+  Clock,,"});,"})"
+  Target,,"});,"})"
+  Network,,"});,"})"
+  Brain,,"});,"})"
+  Server,,"});,"})"
+  Cloud,,"});,"})"
+  Database,,"});,"})"
+  Lock,,"});,"})"
+  BarChart3,,"});,"})"
+  Rocket,,"});,"})"
+  Heart,,"});,"})"
+  Sparkles,,"});,"})"
+  Calculator,,"});,"})"
+  BookOpen,,"});,"})"
+  Lightbulb,,"});,"})"
 ursor/automate-test-fix-improve-and-merge-code-99d1,"});,"});"
 } from 'lucide-react';,"});,"})","});,"})"
 ;,"});,"});"
@@ -135,119 +135,119 @@ const PricingGuide: React.FC = () => {,"});,"})"
     {;,"});,"})"
       factor: 'Project Complexity',"});,"})"
       description:;,"});,"})"
-        'The complexity of your AI solution directly impacts development time and cost',;,"});,"})"
+        'The complexity of your AI solution directly impacts development time and cost',,"});,"})"
       details: [,"});,"})"
-        'Simple automation: $2, 000 - $5,000',;,"});,"})"
-        'Custom AI models: $5,000 - $15, 000',;,"});,"})"
-        'Enterprise solutions: $15, 000 - $50,000+',;,"});,"})"
-      ],;,"});,"})"
+        'Simple automation: $2, 000 - $5,000',,"});,"})"
+        'Custom AI models: $5,000 - $15, 000',,"});,"})"
+        'Enterprise solutions: $15, 000 - $50,000+',,"});,"})"
+      ],,"});,"})"
       icon: Brain,"});,"})"
       color: 'from-blue-500 to-cyan-500',"});,"});"
-},;,"});,"})"
+},,"});,"})"
     {;,"});,"})"
       factor: 'Data Requirements',"});,"})"
       description:;,"});,"})"
-        'Amount and quality of data needed for training and implementation',;,"});,"})"
+        'Amount and quality of data needed for training and implementation',,"});,"})"
       details: [,"});,"})"
-        'Small datasets: $1,000 - $3, 000',;,"});,"})"
-        'Medium datasets: $3, 000 - $8,000',;,"});,"})"
-        'Large datasets: $8,000 - $20, 000+',;,"});,"})"
-      ],;,"});,"})"
+        'Small datasets: $1,000 - $3, 000',,"});,"})"
+        'Medium datasets: $3, 000 - $8,000',,"});,"})"
+        'Large datasets: $8,000 - $20, 000+',,"});,"})"
+      ],,"});,"})"
       icon: Database,"});,"})"
       color: 'from-green-500 to-emerald-500',"});,"});"
-},;,"});,"})"
+},,"});,"})"
     {;,"});,"})"
       factor: 'Integration Needs',"});,"})"
       description:;,"});,"})"
-        'Complexity of integrating with existing systems and platforms',;,"});,"})"
+        'Complexity of integrating with existing systems and platforms',,"});,"})"
       details: [,"});,"})"
-        'Basic integrations: $1,500 - $4, 000',;,"});,"})"
-        'Complex integrations: $4, 000 - $10,000',;,"});,"})"
-        'Enterprise integrations: $10,000 - $25, 000+',;,"});,"})"
-      ],;,"});,"})"
+        'Basic integrations: $1,500 - $4, 000',,"});,"})"
+        'Complex integrations: $4, 000 - $10,000',,"});,"})"
+        'Enterprise integrations: $10,000 - $25, 000+',,"});,"})"
+      ],,"});,"})"
       icon: Network,"});,"})"
       color: 'from-purple-500 to-pink-500',"});,"});"
-},;,"});,"})"
+},,"});,"})"
     {;,"});,"})"
       factor: 'Timeline Requirements',"});,"})"
       description: 'How quickly you need the solution delivered',"});,"})"
       details: [,"});,"})"
         'Standard timeline: Base price',"});,"})"
-        'Rush delivery (50% faster): +30% cost',;,"});,"})"
-        'Emergency delivery (75% faster): +50% cost',;,"});,"})"
-      ],;,"});,"})"
+        'Rush delivery (50% faster): +30% cost',,"});,"})"
+        'Emergency delivery (75% faster): +50% cost',,"});,"})"
+      ],,"});,"})"
       icon: Clock,"});,"})"
       color: 'from-orange-500 to-red-500',"});,"});"
-},;,"});,"})"
+},,"});,"})"
   ],"});,"})"
 ;,"});,"})"
   const pricingExamples = [;,"});,"})"
     {;,"});,"})"
       scenario: 'Small Business Automation',"});,"})"
       description:;,"});,"})"
-        'AI-powered customer service chatbot for a small e-commerce business',;,"});,"})"
+        'AI-powered customer service chatbot for a small e-commerce business',,"});,"})"
       features: [,"});,"})"
-        'Natural language processing',;,"});,"})"
-        'Basic customer support automation',;,"});,"})"
-        'Integration with existing CRM',;,"});,"})"
-        'Monthly maintenance included',;,"});,"})"
-      ],;,"});,"})"
-      price: '$3,500 - $5, 500',;,"});,"})"
+        'Natural language processing',,"});,"})"
+        'Basic customer support automation',,"});,"})"
+        'Integration with existing CRM',,"});,"})"
+        'Monthly maintenance included',,"});,"})"
+      ],,"});,"})"
+      price: '$3,500 - $5, 500',,"});,"})"
       timeline: '4-6 weeks',"});,"})"
       roi: '300% ROI within 6 months',"});,"});"
-},;,"});,"})"
+},,"});,"})"
     {;,"});,"})"
       scenario: 'Enterprise AI Platform',"});,"})"
       description: 'Comprehensive AI platform for large manufacturing company',"});,"})"
       features: [,"});,"})"
-        'Custom machine learning models',;,"});,"})"
-        'Predictive maintenance system',;,"});,"})"
-        'Real-time analytics dashboard',;,"});,"})"
-        'Multi-site deployment',;,"});,"})"
-        '24/7 support and monitoring',;,"});,"})"
-      ],;,"});,"})"
-      price: '$25,000 - $75, 000',;,"});,"})"
+        'Custom machine learning models',,"});,"})"
+        'Predictive maintenance system',,"});,"})"
+        'Real-time analytics dashboard',,"});,"})"
+        'Multi-site deployment',,"});,"})"
+        '24/7 support and monitoring',,"});,"})"
+      ],,"});,"})"
+      price: '$25,000 - $75, 000',,"});,"})"
       timeline: '12-16 weeks',"});,"})"
       roi: '500% ROI within 12 months',"});,"});"
-},;,"});,"})"
+},,"});,"})"
     {;,"});,"})"
       scenario: 'Healthcare AI Solution',"});,"})"
       description: 'AI-powered diagnostic tool for medical practice',"});,"})"
       features: [,"});,"})"
-        'Medical image analysis',;,"});,"})"
-        'Patient data integration',;,"});,"})"
-        'HIPAA compliance',;,"});,"})"
-        'Clinical decision support',;,"});,"})"
-        'Training and certification',;,"});,"})"
-      ],;,"});,"})"
-      price: '$15,000 - $35, 000',;,"});,"})"
+        'Medical image analysis',,"});,"})"
+        'Patient data integration',,"});,"})"
+        'HIPAA compliance',,"});,"})"
+        'Clinical decision support',,"});,"})"
+        'Training and certification',,"});,"})"
+      ],,"});,"})"
+      price: '$15,000 - $35, 000',,"});,"})"
       timeline: '8-12 weeks',"});,"})"
       roi: '400% ROI within 8 months',"});,"});"
-},;,"});,"})"
+},,"});,"})"
   ],"});,"})"
 ;,"});,"})"
   const costSavingTips = [;,"});,"})"
     {;,"});,"})"
       tip: 'Start with MVP',"});,"})"
       description:;,"});,"})"
-        'Begin with a minimum viable product and iterate based on results',;,"});,"})"
+        'Begin with a minimum viable product and iterate based on results',,"});,"})"
       savings: 'Save 40-60% on initial development',"});,"});"
-},;,"});,"})"
+},,"});,"})"
     {;,"});,"})"
       tip: 'Use Existing Frameworks',"});,"})"
       description: 'Leverage our pre-built AI frameworks and templates',"});,"})"
       savings: 'Reduce development time by 50%',"});,"});"
-},;,"});,"})"
+},,"});,"})"
     {;,"});,"})"
       tip: 'Phased Implementation',"});,"})"
       description: 'Implement solution in phases to spread costs over time',"});,"})"
       savings: 'Improve cash flow and reduce risk',"});,"});"
-},;,"});,"})"
+},,"});,"})"
     {;,"});,"})"
       tip: 'Long-term Partnership',"});,"})"
       description: 'Sign annual contracts for ongoing development and support',"});,"})"
       savings: 'Get 20% discount on all services',"});,"});"
-},;,"});,"})"
+},,"});,"})"
   ],"});,"})"
 ;,"});,"})"
   return ("});,"})"
@@ -575,9 +575,9 @@ initial="{{" opacit>
     y: 0, y: 20 }}"
             animate="{{" opacity: 1, y: 0 }}"
             transition="{{" duration: 0.6 }}>
-          >';
-            <Badge variant='secondary' className='mb-4>;
-              <Calculator className='w-4 h-4 mr-2' />;
+          >'
+            <Badge variant='secondary' className='mb-4>
+              <Calculator className='w-4 h-4 mr-2' />
               Pricing Guide,
             </Badge>''
             <h1 className = 'text-5xl md: text-6xl font-bold text-white mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>,
@@ -600,11 +600,11 @@ initial="{{" opacit>
             transition="{{" duration: 0.6 }}'
             className='text-center mb-16''
           >''
-            <h2 className='text-4xl font-bold text-white mb-4'>;
+            <h2 className='text-4xl font-bold text-white mb-4'>
               What Affects AI Solution Pricing?
             </h2>''
-            <p className = 'text-xl text-gray-300'>;
-              Several key factors determine the cost of your AI implementation;
+            <p className = 'text-xl text-gray-300'>
+              Several key factors determine the cost of your AI implementation
             </p>'
           </motion.div>''
           <div className = 'grid grid-cols-1 md: grid-cols-2 gap-8'>,
@@ -652,11 +652,11 @@ initial="{{" opacit>
             transition="{{" duration: 0.6 }}'
             className='text-center mb-16''
           >''
-            <h2 className='text-4xl font-bold text-white mb-4'>;
+            <h2 className='text-4xl font-bold text-white mb-4'>
               Real-World Pricing Examples,
             </h2>''
-            <p className = 'text-xl text-gray-300'>;
-              See how different project types are priced;
+            <p className = 'text-xl text-gray-300'>
+              See how different project types are priced
             </p>'
           </motion.div>''
           <div className = 'grid grid-cols-1 lg: grid-cols-3 gap-8'>,
@@ -743,8 +743,8 @@ key="{tip.tip}""
                         </li>
                       ))}
                     </ul>
-                  </div>;
-                );
+                  </div>
+                )
               })}
             </div>
           </div>
@@ -792,10 +792,10 @@ initial="{{" opacit>
             animate="{{" opacity: 1, y: 0 }}"
             transition="{{" duration: 0.6 }}'
           >''
-            <h2 className='text-4xl font-bold text-white mb-6'>;
+            <h2 className='text-4xl font-bold text-white mb-6'>
               Get Your Custom Quote,
             </h2>''
-            <p className = 'text-xl text-gray-300 mb-8'>;
+            <p className = 'text-xl text-gray-300 mb-8'>
               Ready to get started? Contact us for a personalized quote based on your specific requirements.
             </p>''
             <div className = 'flex flex-col sm: flex-row gap-4 justify-center>'
@@ -809,7 +809,7 @@ initial="{{" opacit>
               </Button>
   TrendingUp,
   Shield,
-  Clock,;
+  Clock,
   Award} from 'lucide-react'
 
 export default function PricingGuide() {
@@ -860,19 +860,19 @@ export default function PricingGuide() {
       name: 'Custom Development', price: '$150','
       description: 'Per hour for custom features', icon: Network}
   ]
-;
-  const faqs = [;
-    {;
-      question: 'Can I change my plan at any time?', answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we\'ll prorate any billing differences.;
+
+  const faqs = [
+    {
+      question: 'Can I change my plan at any time?', answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we\'ll prorate any billing differences.
 },
     {'
-      question: 'Is there a free trial available?', answer: 'Yes, we offer a 14-day free trial for all plans. No credit card required to start your trial.;
+      question: 'Is there a free trial available?', answer: 'Yes, we offer a 14-day free trial for all plans. No credit card required to start your trial.
 }, {'
       question: 'What payment methods do you accept?','
-      answer: 'We accept all major credit cards, PayPal, and bank transfers for annual subscriptions.;
+      answer: 'We accept all major credit cards, PayPal, and bank transfers for annual subscriptions.
 }, {'
       question: 'Do you offer discounts for annual subscriptions?','
-      answer: 'Yes, we offer 20% off when you pay annually. This applies to all plans except Enterprise.;
+      answer: 'Yes, we offer 20% off when you pay annually. This applies to all plans except Enterprise.
 },
     {'
       question: 'What happens if I exceed my plan limits?', answer: 'We\'ll notify you when you\'re approaching your limits. You can upgrade your plan or purchase additional credits as needed.'},
@@ -928,11 +928,10 @@ name: 'Startup','
         'Enterprise security','
         'Custom integrations','
         'Dedicated account manager','
-        'SLA guarantees',;
-        'Custom AI development,Multi-cloud architecture,24/7 dedicated support,Real-time monitoring,Unlimited team members,Enterprise security,Custom integrations,Dedicated account manager,SLA guarantees;
-      ],;
-      popular: false}];
-
+        'SLA guarantees',
+        'Custom AI development,Multi-cloud architecture,24/7 dedicated support,Real-time monitoring,Unlimited team members,Enterprise security,Custom integrations,Dedicated account manager,SLA guarantees
+      ],
+      popular: false}]
   const addOnServices = [
   {'
       name: 'AI Development','
@@ -951,10 +950,10 @@ name: 'Startup','
       price: '$200/hour','
       description: 'Team training and ongoing technical support'},'
       description: 'Team training and ongoing technical support'}
-  ];
-;
+  ]
+
   return (
-    <>;
+    <>
 <Head>
         <title>Pricing Guide - Zion Tech Group</title>"
         <meta name = "description""
@@ -1145,7 +1144,7 @@ name: 'Startup','
                   Can I change my plan anytime?
                 </h3>"
                 <p className="text-gray-600">,
-                  Yes, you can upgrade or downgrade your plan at any time.;
+                  Yes, you can upgrade or downgrade your plan at any time.
                   Changes take effect immediately, and we&apos;ll prorate any,
 billing differences.
                 </p>'
@@ -1153,7 +1152,7 @@ billing differences.
               </div>
 "
               <div className = "bg-white rounded-xl p-6 shadow-sm">"
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">;
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">
                   What&apos;s included in the Enterprise plan?
                 </h3>'
                 '
@@ -1231,10 +1230,10 @@ to your needs.
     </>
   )}
       </div>
-    </Layout>;
-  );
+    </Layout>
+  )
 }
       </main>
     </>
-  );
+  )
 }"

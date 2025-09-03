@@ -1,42 +1,42 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants'
 export interface RevolutionarySpecializedIndustryService2029 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  benefits: string[];
-  category: string;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string[];
-  trialDays: number;
-  setupTime: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
+  id: string
+  name: string
+  tagline: string
+  price: string
+  period: string
+  description: string
+  features: string[]
+  benefits: string[]
+  category: string
+  icon: string
+  color: string
+  textColor: string
+  link: string
+  marketPosition: string
+  targetAudience: string[]
+  trialDays: number
+  setupTime: string
+  realService: boolean
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
+  roi: string
+  competitors: string[]
+  marketSize: string
+  growthRate: string
+  variant: string
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string};
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-  isPopular?: boolean;
+    mobile: string
+    email: string
+    address: string}
+  realImplementation: boolean
+  implementationDetails: string
+  launchDate: string
+  customers: number
+  rating: number
+  reviews: number
+  isPopular?: boolean
   isNew?: boolean}
 export const revolutionarySpecializedIndustryServices2029: RevolutionarySpecializedIndustryService2029[] =
   [
@@ -653,26 +653,26 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       reviews: 17,
       isNew: true,
     },
-  ];
+  ]
 export const getSpecializedIndustryServicesByCategory = (category: string) => {
   return revolutionarySpecializedIndustryServices2029.filter(
     service => service.category === category
-  )};
+  )}
 export const getPopularSpecializedIndustryServices = () => {
   return revolutionarySpecializedIndustryServices2029.filter(
     service => service.isPopular
-  );
-};
+  )
+}
 export const getNewSpecializedIndustryServices = () => {
   return revolutionarySpecializedIndustryServices2029.filter(
     service => service.isNew
-  );
-};
+  )
+}
 export const getSpecializedIndustryServicesByPriceRange = (
   minPrice: number,
   maxPrice: number
 ) => {
   return revolutionarySpecializedIndustryServices2029.filter(service => {
-    const price = parseInt(service.price.replace('$', '').replace(',', ''));
-    return price >= minPrice && price <= maxPrice});
+    const price = parseInt(service.price.replace('$', '').replace(',', ''))
+    return price >= minPrice && price <= maxPrice})
 }>

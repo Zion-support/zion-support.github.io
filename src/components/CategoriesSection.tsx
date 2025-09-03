@@ -1,5 +1,5 @@
-import React from "react";
-import { SEO } from "@/components/SEO";
+import React from "react"
+import { SEO } from "@/components/SEO"
 export default function CategoriesSection() {return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
       <SEO title="CategoriesSection - Zion Tech Group" description="Professional CategoriesSection services by Zion Tech Group" />"
@@ -8,7 +8,7 @@ export default function CategoriesSection() {return (
         <p className="text-gray-300 text-lg">
           Professional CategoriesSection services to help your business grow.
         </p>
-      </div>;
-    </div>;
+      </div>
+    </div>
   );"
 }"

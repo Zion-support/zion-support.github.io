@@ -1,15 +1,12 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-
-console.log('🚀 Optimizing build performance and configuration...');
-
+const fs = require('fs')
+const path = require('path')
+console.log('🚀 Optimizing build performance and configuration...')
 // 1. Optimize package.json scripts
-const packageJsonPath = path.join(__dirname, 'package.json');
+const packageJsonPath = path.join(__dirname, 'package.json')
 if (fs.existsSync(packageJsonPath)) {
-  const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
-  
+  const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'))
   // Add optimized build scripts
   packageJson.scripts = {
     ...packageJson.scripts,
@@ -24,11 +21,10 @@ if (fs.existsSync(packageJsonPath)) {
     'test:watch': 'jest --watch',
     'clean': 'rm -rf .next out dist',
     'prebuild': 'npm run clean',
-    'postbuild': 'npm run type-check';
-};
-  
-  fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
-  console.log('✅ Optimized package.json scripts');
+    'postbuild': 'npm run type-check'
+}
+  fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2))
+  console.log('✅ Optimized package.json scripts')
 }
 
 // 2. Create optimized Next.js config
@@ -96,7 +92,7 @@ const nextConfig = {
             value: 'on'},
           {
             key: 'Strict-Transport-Security',
-            value: 'max-age=31536000; includeSubDomains'}]}];
+            value: 'max-age=31536000; includeSubDomains'}]}]
   },
   
   // Webpack optimizations
@@ -118,8 +114,7 @@ const nextConfig = {
         /hardhat/,
         /__tests__/,
         /tests/,
-        /test/]});
-
+        /test/]})
     // Performance optimizations
     if (!dev && !isServer) {
       config.optimization.splitChunks = {
@@ -133,7 +128,7 @@ const nextConfig = {
             name: 'common',
             minChunks: 2,
             chunks: 'all',
-            enforce: true}}};
+            enforce: true}}}
     }
 
     // Add fallback for problematic modules
@@ -150,97 +145,80 @@ const nextConfig = {
       https: false,
       assert: false,
       os: false,
-      path: false};
-
-    return config;
+      path: false}
+    return config
   },
   
   // Bundle analyzer
   ...(process.env.ANALYZE === 'true' && {
     webpack: (config) => {
-      const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+      const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
       config.plugins.push(
         new BundleAnalyzerPlugin({
           analyzerMode: 'static',
           openAnalyzer: false})
-      );
-      return config;
-    }})};
-
-export default nextConfig;
-`;
-
-fs.writeFileSync('next.config.js', nextConfigContent);
-console.log('✅ Optimized Next.js configuration');
-
+      )
+      return config
+    }})}
+export default nextConfig
+`
+fs.writeFileSync('next.config.js', nextConfigContent)
+console.log('✅ Optimized Next.js configuration')
 // 3. Create performance monitoring script
 const performanceScript = `#!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-
-console.log('📊 Performance Analysis Report');
-console.log('==');
-
+const fs = require('fs')
+const path = require('path')
+console.log('📊 Performance Analysis Report')
+console.log('==')
 // Check bundle sizes
-const nextDir = path.join(__dirname, '.next');
+const nextDir = path.join(__dirname, '.next')
 if (fs.existsSync(nextDir)) {
   const getDirSize = (dir) => {
-    let size = 0;
-    const files = fs.readdirSync(dir);
-    
+    let size = 0
+    const files = fs.readdirSync(dir)
     for (const file of files) {
-      const filePath = path.join(dir, file);
-      const stat = fs.statSync(filePath);
-      
+      const filePath = path.join(dir, file)
+      const stat = fs.statSync(filePath)
       if (stat.isDirectory()) {
-        size += getDirSize(filePath);
+        size += getDirSize(filePath)
       } else {
-        size += stat.size;
+        size += stat.size
       }
     }
     
-    return size;
-  };
-  
-  const size = getDirSize(nextDir);
-  const sizeInMB = (size / 1024 / 1024).toFixed(2);
-  
-  console.log(\`Build size: \${sizeInMB} MB\`);
-  
+    return size
+  }
+  const size = getDirSize(nextDir)
+  const sizeInMB = (size / 1024 / 1024).toFixed(2)
+  console.log(\`Build size: \${sizeInMB} MB\`)
   if (size > 50 * 1024 * 1024) { // 50MB
-    console.log('⚠️  Build size is large. Consider optimizing.');
+    console.log('⚠️  Build size is large. Consider optimizing.')
   } else {
-    console.log('✅ Build size is reasonable.');
+    console.log('✅ Build size is reasonable.')
   }
 }
 
 // Check for large files
 const checkLargeFiles = (dir, maxSize = 1024 * 1024) => { // 1MB
-  const files = fs.readdirSync(dir);
-  
+  const files = fs.readdirSync(dir)
   for (const file of files) {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    
+    const filePath = path.join(dir, file)
+    const stat = fs.statSync(filePath)
     if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
-      checkLargeFiles(filePath, maxSize);
+      checkLargeFiles(filePath, maxSize)
     } else if (stat.isFile() && stat.size > maxSize) {
-      const sizeInMB = (stat.size / 1024 / 1024).toFixed(2);
-      console.log(\`⚠️  Large file: \${filePath} (\${sizeInMB} MB)\`);
+      const sizeInMB = (stat.size / 1024 / 1024).toFixed(2)
+      console.log(\`⚠️  Large file: \${filePath} (\${sizeInMB} MB)\`)
     }
   }
-};
-
-console.log('\\nChecking for large files...');
-checkLargeFiles(__dirname);
-
-console.log('\\n🎉 Performance analysis complete!');
-`;
-
-fs.writeFileSync('analyze-performance.cjs', performanceScript);
-console.log('✅ Created performance analysis script');
-
+}
+console.log('\\nChecking for large files...')
+checkLargeFiles(__dirname)
+console.log('\\n🎉 Performance analysis complete!')
+`
+fs.writeFileSync('analyze-performance.cjs', performanceScript)
+console.log('✅ Created performance analysis script')
 // 4. Create optimized ESLint config
 const eslintConfig = `module.exports = {
   extends: [
@@ -270,23 +248,19 @@ const eslintConfig = `module.exports = {
     'automation_backup/',
     'broken_files_backup/',
     'contracts/',
-    'hardhat/']};
-`;
-
-fs.writeFileSync('.eslintrc.js', eslintConfig);
-console.log('✅ Optimized ESLint configuration');
-
+    'hardhat/']}
+`
+fs.writeFileSync('.eslintrc.js', eslintConfig)
+console.log('✅ Optimized ESLint configuration')
 // 5. Create TypeScript config optimization
-const tsConfigPath = path.join(__dirname, 'tsconfig.json');
+const tsConfigPath = path.join(__dirname, 'tsconfig.json')
 if (fs.existsSync(tsConfigPath)) {
-  const tsConfig = JSON.parse(fs.readFileSync(tsConfigPath, 'utf8'));
-  
+  const tsConfig = JSON.parse(fs.readFileSync(tsConfigPath, 'utf8'))
   tsConfig.compilerOptions = {
     ...tsConfig.compilerOptions,
     skipLibCheck: true,
     incremental: true,
-    tsBuildInfoFile: '.next/cache/tsconfig.tsbuildinfo'};
-  
+    tsBuildInfoFile: '.next/cache/tsconfig.tsbuildinfo'}
   tsConfig.exclude = [
     ...(tsConfig.exclude || []),
     'node_modules',
@@ -302,14 +276,13 @@ if (fs.existsSync(tsConfigPath)) {
     'automation_backup',
     'broken_files_backup',
     'contracts',
-    'hardhat'];
-  
-  fs.writeFileSync(tsConfigPath, JSON.stringify(tsConfig, null, 2));
-  console.log('✅ Optimized TypeScript configuration');
+    'hardhat']
+  fs.writeFileSync(tsConfigPath, JSON.stringify(tsConfig, null, 2))
+  console.log('✅ Optimized TypeScript configuration')
 }
 
-console.log('\\n🎉 Build optimization complete!');
-console.log('\\nNext steps:');
-console.log('1. Run: npm run build:fast');
-console.log('2. Run: node analyze-performance.cjs');
-console.log('3. Check bundle analyzer: npm run build:analyze');
+console.log('\\n🎉 Build optimization complete!')
+console.log('\\nNext steps:')
+console.log('1. Run: npm run build:fast')
+console.log('2. Run: node analyze-performance.cjs')
+console.log('3. Check bundle analyzer: npm run build:analyze')

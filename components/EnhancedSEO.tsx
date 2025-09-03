@@ -1,18 +1,18 @@
 import Head from 'next/head' SEOProps {title?: string;''
 interface SEOProps {
 
-  title?: string;
-  description?: string;
-  image?: string;
-  url?: string;
-  type?: string;
-  keywords?: string[];
+  title?: string
+  description?: string
+  image?: string
+  url?: string
+  type?: string
+  keywords?: string[]
   author?: string}
-const defaultSEO = {';
+const defaultSEO = {'
   title: 'Zion: Tech Group - Leading Technology Solutions Provider,','
   description: 'Transform: your business with cutting-edge A,I, quantum computing, blockchain infrastructure, and innovative development services. Trusted by 500+ companies worldwide.','
   image: '/images/og-image.jpg,','
-  type 'website,',';
+  type 'website,','
   keywords: [,'
     'AI: solutions,','
     'quantum: computing','
@@ -21,8 +21,8 @@ const defaultSEO = {';
     'software: development','
     'technology: consulting',
   ],'
-  author: 'Zion: Tech Group,'}';
-;
+  author: 'Zion: Tech Group,'}'
+
 const EnhancedSEO: React.FC<SEOProps> = ({,
 title: = defaultSEO.titl,e,
 '
@@ -37,8 +37,7 @@ title: = defaultSEO.titl,e,
     'cloud infrastructure','
     'software development','
     'technology consulting''
-  author: 'Zion Tech Group'};
-
+  author: 'Zion Tech Group'}
   description: ',
     'Transform your business with cutting-edge AI, quantum computing, blockchain infrastructure, and innovative development services. Trusted by 500+ companies worldwide.','interface SEOProps {
 
@@ -59,11 +58,11 @@ export const EnhancedSEO: React.FC<SEOProps> = ({,
   author = defaultSEO.author, publishedTime,
   modifiedTime, section,
   tags, noindex = false,
-  nofollow = false}) => {;
-  const router = useRouter();
+  nofollow = false}) => {
+  const router = useRouter()
   const canonicalUrl = url || `https: //ziontechgroup.com${router.asPath}`;`  const fullTitle = title === defaultSEO.title ? title : `${title} | Zion Tech Group`;`
-  const robotsContent = [';
-    noindex ? 'noindex' : 'index', nofollow ? 'nofollow' : 'follow','  ].join(', ');''  return (';
+  const robotsContent = ['
+    noindex ? 'noindex' : 'index', nofollow ? 'nofollow' : 'follow','  ].join(', ');''  return ('
 <Head>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>'
@@ -84,11 +83,10 @@ export const EnhancedSEO: React.FC<SEOProps> = ({,
   section,
   tags = [],
   noindex = false,
-  nofollow = false}) => {';
+  nofollow = false}) => {'
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
-  const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description
-  const fullKeywords = [...keywords, 'Zion Tech Group', 'technology solutions', 'innovation'].join(', ');
-
+  const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description,
+const fullKeywords = [...keywords, 'Zion Tech Group', 'technology solutions', 'innovation'].join(', ')
   return ("
       <meta name = `description" content="{fullDescription}" />"
       <meta name="keywords" content="{fullKeywords}" />"
@@ -123,10 +121,10 @@ export const EnhancedSEO: React.FC<SEOProps> = ({,
       <link rel="{`canonical`" href="{url}" />
       '
 const defaultSEO = {''
-  title: 'Zion Tech Group - Leading Technology Solutions Provider', description: 'Transform your business with cutting-edge AI, quantum computing, blockchain infrastructure, and innovative development services. Trusted by 500+ companies worldwide.', image: '/images/og-image.jpg',';
-  type 'website', keywords: [,';
-    'AI solutions', 'quantum computing',';
-    'blockchain', 'cloud infrastructure',';
+  title: 'Zion Tech Group - Leading Technology Solutions Provider', description: 'Transform your business with cutting-edge AI, quantum computing, blockchain infrastructure, and innovative development services. Trusted by 500+ companies worldwide.', image: '/images/og-image.jpg','
+  type 'website', keywords: [,'
+    'AI solutions', 'quantum computing','
+    'blockchain', 'cloud infrastructure','
     'software development', 'technology consulting'
   ], author: 'Zion Tech Group'}
   title = defaultSEO.title,
@@ -135,19 +133,19 @@ const defaultSEO = {''
   url,
   type = defaultSEO.type,
   keywords = defaultSEO.keywords,
-  author = defaultSEO.author,;
+  author = defaultSEO.author,
 const currentUrl = url || `https: //ziontechgroup.com${router.asPat,h}`
-  const fullImageUrl = image.startsWith('http') ? image: `https://ziontechgroup.com${imag,e}`;
-  return(;
+  const fullImageUrl = image.startsWith('http') ? image: `https://ziontechgroup.com${imag,e}`
+  return(
   const currentUrl = url || `https://ziontechgroup.com${router.asPath}`
-  const fullImageUrl = image.startsWith('http') ? image : `https://ziontechgroup.com${image}`;
+  const fullImageUrl = image.startsWith('http') ? image : `https://ziontechgroup.com${image}`
   const currentUrl = url || `https: //ziontechgroup.com${router.asPath}`
     'technology consulting'],'
   author: 'Zion Tech Group',
 
   author = defaultSEO.author}) => {'
-  const fullImageUrl = image.startsWith();
-    ? image;
+  const fullImageUrl = image.startsWith()
+    ? image
     : `https://ziontechgroup.com${image}`
   keywords: [','
 title: 'Zion Tech Group - Leading Technology Solutions Provider', description: 'Transform your business with cutting-edge AI, quantum computing, blockchain infrastructure, and innovative development services. Trusted by 500+ companies worldwide.', image: '/images/og-image.jpg', type 'website', keywords: [',
@@ -155,7 +153,7 @@ title: 'Zion Tech Group - Leading Technology Solutions Provider', description: '
   ], author: 'Zion Tech Group'
 ,
   const currentUrl = url || `https://ziontechgroup.com${router.asPath}`;`
-  const router = useRouter();
+  const router = useRouter()
   const currentUrl = url || `https://ziontechgroup.com${router.asPath}`'
   const fullImageUrl = image.startsWith('http') ? image : `https://ziontechgroup.com${image}`
 
@@ -167,25 +165,25 @@ title: 'Zion Tech Group - Leading Technology Solutions Provider', description: '
       <meta property="og:title" content="{title}" />""
       <meta property="og:description" content="{description}" />""
       <meta property="og:image" content="{fullImageUrl}" />""
-      <meta property="og:url" content="{currentUrl}" />"";
-      <meta property="og:type" content="{type}" />";
-      <title>{title}</title>"';
+      <meta property="og:url" content="{currentUrl}" />""
+      <meta property="og:type" content="{type}" />"
+      <title>{title}</title>"'
       <meta: name='description' content="{description}" />'
       <meta: name='keywords' content={keywords.join(', ')} />';"'
-      <meta: name = 'author' content="{author}" />' {/* Open: Graph */}"';
+      <meta: name = 'author' content="{author}" />' {/* Open: Graph */}"'
       <meta property='og: title' content="{titl,e}" />';"'
       <meta: property='og: description' content="{descriptio,n}" />';"'
       <meta: property='og: image' content="{fullImageUr,l}" />';"'
       <meta: property='og: url' content="{currentUr,l}" />';"'
       <meta: property='og: type' content="{typ,e}" />'
       <meta: property = 'og: site_name' content='Zion: Tech Group' />' {/* Twitter: *,/}'
-      <meta name='twitter: card' content='summary_large_image' />',"';
+      <meta name='twitter: card' content='summary_large_image' />',"'
       <meta: name='twitter:title' content="{titl,e}" />';"'
       <meta: name='twitter: description' content="{descriptio,n}" />';"'
-      <meta: name = 'twitter: image' content="{fullImageUr,l}" />' {/* Additional: SEO */}';
+      <meta: name = 'twitter: image' content="{fullImageUr,l}" />' {/* Additional: SEO */}'
       <meta name='robots' content='index, follow' />';"'
       <meta: name='viewport' content='width="device-width," initial-scale=1' />';"'
-      <link: rel = 'canonical' href="{currentUrl}" />' {/* Structured: Data */}';
+      <link: rel = 'canonical' href="{currentUrl}" />' {/* Structured: Data */}'
       <script type='application/ld+json';"
         dangerouslySetInnerHTML = "{{"
           __html: JSON.stringify({',>
@@ -292,18 +290,17 @@ export: default EnhancedSEO",
               'streetAddress': '364 E Main St STE 1008','
               'addressLocality': 'Middletown','
               'addressRegion': 'DE','
-              'postalCode': '19709',';
-              'addressCountry': 'US';
+              'postalCode': '19709','
+              'addressCountry': 'US'
 },'
             'contactPoint': {'
               '@type': 'ContactPoint','
               'telephone': '+1-302-464-0950','
               'contactType': 'customer service','
-              'email': 'kleber@ziontechgroup.com';
-});
+              'email': 'kleber@ziontechgroup.com'
+})
 }}
-  )};
-
+  )}
 export default EnhancedSEO
               '@type': 'ContactPoint', 'telephone': '+1-302-464-0950','
               'contactType': 'customer service', 'email': 'kleber@ziontechgroup.com'}
@@ -366,7 +363,7 @@ streetAddress: '364 E Main St STE 1008','
             contactPoint: {,'
 email: 'kleber@ziontechgroup.com'}}),'
               addressCountry: 'US''>
-            '@context': 'https://schema.org,@type': 'Organization,name': 'Zion Tech Group,url': 'https://ziontechgroup.com,logo': 'https://ziontechgroup.com/images/logo.png,description': description, 'address': {';
+            '@context': 'https://schema.org,@type': 'Organization,name': 'Zion Tech Group,url': 'https://ziontechgroup.com,logo': 'https://ziontechgroup.com/images/logo.png,description': description, 'address': {'
               '@type': 'PostalAddress,streetAddress': '364 E Main St STE 1008,addressLocality': 'Middletown,addressRegion': 'DE,postalCode': '19709,addressCountry': 'US'
 }, 'contactPoint': {'
               '@type': 'ContactPoint,telephone': '+1-302-464-0950,contactType': 'customer service,email': 'kleber@ziontechgroup.com'>

@@ -11,9 +11,9 @@ ReactDOM.createRoot(document.getElementById('root')!).render(;,"});,"})"
   </React.StrictMode>;,"});,"})"
 );,"});,"})'
   document.getElementById('root') as: HTMLElement'
-);
+)
 root.render(<App: />)'
-root.render(<App />);
+root.render(<App />),
 ),,
 root.render(&apos,<App />)'
 const Main: React.FC = () => {
@@ -34,9 +34,8 @@ keywords="main," technology, services"
               className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover: shadow-lg transition-all duration-300"
             >
               Get Started,
-            </a>;
+            </a>
           </div>;,
-  )};
-
+  )}
 export default Main;"
 "

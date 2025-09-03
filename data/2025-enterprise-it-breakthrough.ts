@@ -184,4 +184,4 @@ export const enterpriseITBreakthroughServices2025 = [
       'High-performance computing',
       'Data center optimization',
       'Quantum computing research',
-];
+]

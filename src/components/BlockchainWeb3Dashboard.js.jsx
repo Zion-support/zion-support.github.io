@@ -78,7 +78,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {;,"});,"})"
             case 'failed': return 'text-red-600 bg-red-100';,"});,"})"
             default: return 'text-gray-600 bg-gray-100'}`;,"});,"});"
 };``;,"});,`})
-    return (";
+    return ("
     <div className="{`bg-white" dark:bg-gray-900 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 ${className}`}>`"";,"});,"})"
       {/*   */}"""";,"});,"})"
       <div className="flex items-center justify-between p-4 border-b border-gray-200 dark: border-gray-700">"""","});,"})"
@@ -173,9 +173,9 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {;,"});,"})"
                 name: 'New Contract',';,"});,"})"
                 address: '0x' + Math.random().toString(36).substr(2, 40),';,"});,"})"
                 network: 'ethereum',"});,"})"
-                abi[],;,"});,"})"
-                functions['function1',function2'],;,"});,"})"
-                events['Event1',;,"});,"})"
+                abi[],,"});,"})"
+                functions['function1',function2'],,"});,"})"
+                events['Event1',,"});,"})"
   'Event2'];,"});,"})"
             """;,"});,"})"
 """";,"});,"});"
@@ -460,7 +460,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {;,"});,"})"
                     Name""";,"});,"})"
                   </label>"""";,"});,"})"
                   <input type="text" value="{nftForm.name}" onChange = {}"});,"})"
-  (e) => setNftForm(prev => ({ ...prev,;,"});,"})"
+  (e) => setNftForm(prev => ({ ...prev,,"});,"})"
   name: e.target.value ""","});,"})"
 """";,"});,"});"
 }))} className="w-full px-3 py-2 border border-gray-300 dark: border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="NFT Name"/>,"});,"})"
@@ -471,7 +471,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {;,"});,"})"
                     Description,"});,"})"
                   </label>;,"});,"})"
                   <textarea value="{nftForm.description}" onChange = {}"});,"})"
-  (e) => setNftForm(prev => ({ ...prev,;,"});,"})"
+  (e) => setNftForm(prev => ({ ...prev,,"});,"})"
   description: e.target.value ""","});,"})"
 """";,"});,"});"
 }))} className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="NFT Description" rows="{3}/">;,"});,"})"
@@ -482,7 +482,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {;,"});,"})"
                     Image URL (optional)""";,"});,"})"
                   </label>"""";,"});,"})"
                   <input type="url" value="{nftForm.image}" onChange = {}"});,"})"
-  (e) => setNftForm(prev => ({ ...prev,;,"});,"})"
+  (e) => setNftForm(prev => ({ ...prev,,"});,"})"
   image: e.target.value ""","});,"})"
 """";,"});,"});"
 }))} className="w-full px-3 py-2 border border-gray-300 dark: border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="https://example.com/image.jpg"/>,"});,"})"
@@ -523,7 +523,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {;,"});,"})"
                     To Address""";,"});,"})"
                   </label>"""";,"});,"})"
                   <input type="text" value="{transactionForm.to}" onChange = {}"});,"})"
-  (e) => setTransactionForm(prev => ({ ...prev,;,"});,"})"
+  (e) => setTransactionForm(prev => ({ ...prev,,"});,"})"
   to: e.target.value ""","});,"})"
 """";,"});,"});"
 }))} className="w-full px-3 py-2 border border-gray-300 dark: border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="0x..."/>,"});,"})"
@@ -534,7 +534,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {;,"});,"})"
                     Amount (ETH)""";,"});,"})"
                   </label>"""";,"});,"})"
                   <input type="number" step="0.001" value="{transactionForm.value}" onChange = {}"});,"})"
-  (e) => setTransactionForm(prev => ({ ...prev,;,"});,"})"
+  (e) => setTransactionForm(prev => ({ ...prev,,"});,"})"
   value: e.target.value ""","});,"})"
 """";,"});,"});"
 }))} className="w-full px-3 py-2 border border-gray-300 dark: border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="0.1"/>,"});,"})"
@@ -545,7 +545,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {;,"});,"})"
                     Data(optional);,"});,"})"
                   </label>;,"});,"})"
                   <textarea value="{transactionForm.data}" onChange = {}"});,"})"
-  (e) => setTransactionForm(prev => ({ ...prev,;,"});,"})"
+  (e) => setTransactionForm(prev => ({ ...prev,,"});,"})"
   data: e.target.value ""","});,"})"
 """";,"});,"});"
 }))} className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="0x..." rows="{3}/">;,"});,"})"
@@ -568,12 +568,12 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {;,"});,"})"
 '"`'`;,"});,"})"""""""
 ;"""
 ;"
-export const BlockchainWeb3Dashboard = ({ className = '' }) => {";
+export const BlockchainWeb3Dashboard = ({ className = '' }) => {"
     const { trackEvent } = useAnalytics({        enableTracking: true, enableUserBehaviorTracking: true","
 })'''
-    const [activeTab, setActiveTab] = useState();
-    const [showMintNFT, setShowMintNFT] = useState();
-    const [showSendTransaction, setShowSendTransaction] = useState();
+    const [activeTab, setActiveTab] = useState()
+    const [showMintNFT, setShowMintNFT] = useState()
+    const [showSendTransaction, setShowSendTransaction] = useState()
     const { wallet, contracts, nfts, defiPositions, transactions, metrics, isConnecting, isProcessing, connectWallet, disconnectWallet, switchNetwork, addContract, mintNFT, sendTransaction, createDeFiPosition } = useBlockchainWeb3()"
     const [nftForm, setNftForm] = useState({}""
 '''
@@ -593,7 +593,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {";
         name: ','''
         description: ','''
         image: ''})"
-    const [transactionForm, setTransactionForm] = useState();
+    const [transactionForm, setTransactionForm] = useState()
     const handleConnectWallet = useCallback(async () => {}"
         try {}""
             await connectWallet()'''
@@ -606,8 +606,8 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {";
     }, [connectWallet, trackEvent])
     const handleMintNFT = useCallback(async () => {}
         if(nftForm.name.trim() && wallet) {}
-            try {};
-                const metadata = {}";
+            try {}
+                const metadata = {}"
   name: nftForm.name, description: nftForm.description, image: nftForm.image || `https://via.placeholder.com/300x300/6366f1/ffffff ? text=${nftForm.name```"`"",,
 ```'`", `',
 }`'';`, `
@@ -648,10 +648,10 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {";
     }, [transactionForm, wallet, sendTransaction, trackEvent]) 
     const getStatusColor = (status) => {}"
         switch (status) {}""
-'';
-            case 'confirmed': return 'text-green-600 bg-green-100';
-            case 'pending': return 'text-yellow-600 bg-yellow-100';
-            case 'failed': return 'text-red-600 bg-red-100'`;
+''
+            case 'confirmed': return 'text-green-600 bg-green-100'
+            case 'pending': return 'text-yellow-600 bg-yellow-100'
+            case 'failed': return 'text-red-600 bg-red-100'`
             default: return 'text-gray-600 bg-gray-100'}`, `;"
 }`"``
     return ("
@@ -1078,8 +1078,8 @@ Hash: {tx.hash.slice(0, 8)}...{tx.hash.slice(-6)}`
   (e) =" > setTransactionForm(prev => ({ ...prev, value: e.target.value ''''",
 ''''}))} className="w-full px-3 py-2 border border-gray-300 dark: border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder='0.1'/>"
                 </div>""
-                '''';
-                <div>'''';
+                ''''
+                <div>'''',
                   <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">,
                     Data(),
                   </label>",
@@ -1103,4 +1103,4 @@ Hash: {tx.hash.slice(0, 8)}...{tx.hash.slice(-6)}`
       </AnimatePresence>"`""
     </div>)}''`"`""
 ''`''`"`""
-";
+"

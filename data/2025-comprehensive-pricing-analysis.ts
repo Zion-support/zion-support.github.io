@@ -1,37 +1,37 @@
 export interface PricingAnalysis {
-  serviceId: string;
-  serviceName: string;
-  category: string;
-  currentPrice: string;
-  period: string;
+  serviceId: string
+  serviceName: string
+  category: string
+  currentPrice: string
+  period: string
   marketAnalysis: {
-    averageMarketPrice: string;
-    priceRange: string;
-    competitivePosition: string;
-    valueProposition: string;
-    targetMarket: string;
-    marketSize: string;
-    growthRate: string};
+    averageMarketPrice: string
+    priceRange: string
+    competitivePosition: string
+    valueProposition: string
+    targetMarket: string
+    marketSize: string
+    growthRate: string}
   pricingStrategy: {
-    strategy: string;
-    justification: string;
-    priceElasticity: string;
-    bundlingOptions: string[];
-    discountStructure: string[]};
+    strategy: string
+    justification: string
+    priceElasticity: string
+    bundlingOptions: string[]
+    discountStructure: string[]}
   competitiveAnalysis: {
-    directCompetitors: string[];
-    indirectCompetitors: string[];
-    competitiveAdvantages: string[];
-    differentiationFactors: string[]};
+    directCompetitors: string[]
+    indirectCompetitors: string[]
+    competitiveAdvantages: string[]
+    differentiationFactors: string[]}
   roiAnalysis: {
-    customerROI: string;
-    implementationCost: string;
-    paybackPeriod: string;
-    totalCostOfOwnership: string};
+    customerROI: string
+    implementationCost: string
+    paybackPeriod: string
+    totalCostOfOwnership: string}
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
+    mobile: string
+    email: string
+    address: string
 export const comprehensivePricingAnalysis2025: PricingAnalysis[] = [
   // AI AUTONOMOUS BUSINESS MANAGER
   {
@@ -327,4 +327,4 @@ export const comprehensivePricingAnalysis2025: PricingAnalysis[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-];
+]

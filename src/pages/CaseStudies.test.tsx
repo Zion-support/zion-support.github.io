@@ -1,12 +1,12 @@
-describe('CaseStudies', () => {}; '; it('renders without crashing', () => {}; render(<CaseStudies / >) ,; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; '; it('displays expected content', () => {}; render(<CaseStudies />) ;
-    render();
-    expect(screen.getByRole('main) || screen.getByText(/.*/)).toBeInTheDocument();
+describe('CaseStudies', () => {}; '; it('renders without crashing', () => {}; render(<CaseStudies / >) , expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; '; it('displays expected content', () => {}; render(<CaseStudies />) 
+    render()
+    expect(screen.getByRole('main) || screen.getByText(/.*/)).toBeInTheDocument()
   })
 ''
   it('displays expected content', () => {
-    render(<CaseStudies /" >);
+    render(<CaseStudies /" >)
     // Add more specific tests here,
-  });
+  })
   });"
 "
 });"

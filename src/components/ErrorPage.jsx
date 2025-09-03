@@ -1,8 +1,8 @@
-export const ErrorPage = ({}"";
+export const ErrorPage = ({}""
   statusCode = 404, ','
   title = 'Page Not Found', ','
   message = 'The page you are looking for does not exist.'}) => {}"
-  return()"";
+  return()""
 ;import { Link } from 'react - router-dom',
   message = 'The page you are looking for does not exist.'}) => {}"
   return()    <div className="min-h-screen bg-zion-blue flex items-center justify-center">''''
@@ -19,8 +19,8 @@ export const ErrorPage = ({}"";
           </Button>
         </div>
       </div>
-    </div>;
-  );
+    </div>
+  )
 };"
 export default ErrorPage'';"'
 export default ErrorPage'';'
@@ -28,7 +28,7 @@ export default ErrorPage'';'
 ''''''"
 "
   )}'
-export default ErrorPage&apos,;&quot;&quot,
-export default ErrorPage&apos,;'
+export default ErrorPage&apos,&quot;&quot,
+export default ErrorPage&apos,'
 &apos;&apos,&apos,&quot;"
 &quot;""

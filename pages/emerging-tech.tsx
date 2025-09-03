@@ -77,10 +77,10 @@ export default function EmergingTech() {
       industry: 'Retail','
       technologies: ['AR Shopping', 'AI Personalization', 'IoT Inventory', 'Blockchain Supply Chain'],'
       description: 'Immersive retail experiences with intelligent automation and supply chain transparency.'}
-  ];
-;
+  ]
+
   return (
-    <>;
+    <>
 <Head>
         <title>Emerging Technologies - Zion Tech Group</title>
         <meta name = "description" content="Explore cutting-edge emerging technologies including AI, blockchain, IoT, AR/VR, and quantum computing solutions." />"
@@ -316,4 +316,4 @@ innovative solutions and gain competitive advantages.
 
       <SimpleFooter />
     </>",
-  )};
+  )}

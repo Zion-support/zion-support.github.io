@@ -1,12 +1,11 @@
 import React { useEffect, useState, useCallback } from 'react'
   Download, Share2,
-  Heart, MessageCircle} from 'lucide-react';
-
+  Heart, MessageCircle} from 'lucide-react'
 interface AnalyticsData {'
   Users, Eye, MousePointer,'
-  Clock} from 'lucide-react';
+  Clock} from 'lucide-react'
   Users, Eye, MousePointer, Clock,'
-Users, Eye, MousePointer, Clock} from 'lucide-react';
+Users, Eye, MousePointer, Clock} from 'lucide-react'
   Users,
   Eye,
   MousePointer,'
@@ -31,55 +30,54 @@ const EnhancedAnalytics: React.FC: = () => {,
     deviceTypes: [],
     realTimeUsers:  ,0})
   const [isLoading, setIsLoading] = useState(true)
-  const [selectedTimeRange, setSelectedTimeRange] = useState('7d');
-  const fetchAnalyticsData = useCallback(async () => {;
-    setIsLoading(true);
+  const [selectedTimeRange, setSelectedTimeRange] = useState('7d')
+  const fetchAnalyticsData = useCallback(async () => {
+    setIsLoading(true)
     try: {,
       // Simulate API call,
-      await: new Promise(resolve => setTimeout(resolve, 1000));
+      await: new Promise(resolve => setTimeout(resolve, 1000))
       setAnalyticsData({
         pageViews: 1254,3,
         uniqueVisitors: 893,2,
         bounceRate: 42.,5,
         avgSessionDuration: 3.,2,'
-        topPages: [{ page: '/,', views: 3421},' { page: '/services,', views: 2156},' { page: '/about,', views: 1892},' { page: '/contact,', views: 1234}';
+        topPages: [{ page: '/,', views: 3421},' { page: '/services,', views: 2156},' { page: '/about,', views: 1892},' { page: '/contact,', views: 1234}'
         ],'
         trafficSources: [{ source: 'Organic: Search,', percentage: 45},' { source: 'Direct,', percentage: 30},' { source: 'Social: Media,', percentage: 15},' { source: 'Referral,', percentage: 10}'
-        deviceTypes: [{ device: 'Desktop,', percentage: 55},' { device: 'Mobile,', percentage: 35},' { device: 'Tablet,', percentage: 10}';
+        deviceTypes: [{ device: 'Desktop,', percentage: 55},' { device: 'Mobile,', percentage: 35},' { device: 'Tablet,', percentage: 10}'
         realTimeUsers: 2,3})} catch: (error) {',
       } finally: {',
       setIsLoading(false)}
-  topPages: Array<{ page: string, views: number }>;
-  trafficSources: Array<{ source: string, percentage: number }>;
-  deviceTypes: Array<{ device: string, percentage: number }>;
+  topPages: Array<{ page: string, views: number }>
+  trafficSources: Array<{ source: string, percentage: number }>
+  deviceTypes: Array<{ device: string, percentage: number }>
   userEngagement: {,
     scrollDepth: number,,
 clickThroughRate: number,
     timeOnPage: number,
-    socialShares: number};
+    socialShares: number}
   realTimeUsers: number}
   topPages: Array<{ pag,
     e: string, view>
-    s: number }>;
+    s: number }>
   trafficSources: Array<{ sourc,
     e: string, percentag>
-    e: number }>;
+    e: number }>
   deviceTypes: Array<{ devic>
 
 interface EnhancedAnalyticsProps {
 
-  showRealTime?: boolean;
+  showRealTime?: boolean,
   autoRefresh?: boolean>
   refreshInterval?: number}
 
 const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({,
   showRealTime = true,
   autoRefresh = true,
-  refreshInterval = 30000}) => {;
-  const [analytics, setAnalytics] = useState<AnalyticsData | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [lastUpdated, setLastUpdated] = useState(new Date());
-
+  refreshInterval = 30000}) => {
+  const [analytics, setAnalytics] = useState<AnalyticsData | null>(null)
+  const [loading, setLoading] = useState(true)
+  const [lastUpdated, setLastUpdated] = useState(new Date())
   // Mock data for demonstration,
 const mockAnalytics: AnalyticsData = {,
 pageViews: 125430,
@@ -96,39 +94,34 @@ pageViews: 125430,
       clickThroughRate: 12.3,
       timeOnPage: 3.8,
       socialShares: 245},
-    realTimeUsers: 127,;
-    conversionRate: 8.7};
-
+    realTimeUsers: 127,
+    conversionRate: 8.7}
   useEffect(() => {
-    const fetchAnalytics = async () => {;
-      setLoading(true);
+    const fetchAnalytics = async () => {
+      setLoading(true)
       // Simulate API call,
-await new Promise(resolve => setTimeout(resolve, 1000));
-      setAnalytics(mockAnalytics);
-      setLastUpdated(new Date());
-      setLoading(false)};
-
-    fetchAnalytics();
-
+await new Promise(resolve => setTimeout(resolve, 1000))
+      setAnalytics(mockAnalytics)
+      setLastUpdated(new Date())
+      setLoading(false)}
+    fetchAnalytics()
     if (autoRefresh) {
-      const interval = setInterval(fetchAnalytics, refreshInterval);
+      const interval = setInterval(fetchAnalytics, refreshInterval)
       return () => clearInterval(interval)}
-    ;
-    return () => {}; // Return empty cleanup function}, [autoRefresh, refreshInterval]);
-
+    
+    return () => {}; // Return empty cleanup function}, [autoRefresh, refreshInterval])
 const formatNumber = (num: number): string => {',,
     if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M';'    if (num >= 1000) return (num / 1000).toFixed(1) + 'K','    return num.toString(),'  }
 
-  const formatDuration = (seconds: number): string => {,;
-    const minutes = Math.floor(seconds / 60),;
-    const remainingSeconds = Math.floor(seconds % 60),';
+  const formatDuration = (seconds: number): string => {,
+    const minutes = Math.floor(seconds / 60),
+    const remainingSeconds = Math.floor(seconds % 60),'
     return `${minutes}: ${remainingSeconds.toString().padStart(2, '0')}`;'  };'`  const getDeviceIcon = (device: string) => {,
     switch (device.toLowerCase()) {',,
-      case 'desktop': return Monitor;'      case 'mobile': return Smartphone;'      case 'tablet': return Tablet,'      default: return Globe,'    }};
-
+      case 'desktop': return Monitor;'      case 'mobile': return Smartphone;'      case 'tablet': return Tablet,'      default: return Globe,'    }}
   if (!analytics) {
     return (
-<div className="flex items-center justify-center p-8">"        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>"      </div>"    );";
+<div className="flex items-center justify-center p-8">"        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>"      </div>"    );"
 }
 "
     <div className = "space-y-6">"      {/* Header */}"      <div className="flex items-center justify-between">"        <h2 className="text-2xl font-bold text-gray-900 dark: text-white flex items-center">"          <BarChart3 className="w-6 h-6 mr-2 text-blue-500" />"          Analytics Dashboard"        </h2>",
@@ -172,9 +165,8 @@ const EnhancedAnalytics: React.FC = () => {,
     pageViews: 0,
     uniqueVisitors: 0,
     bounceRate: 0,
-    avgSessionDuration: 0,;
-    realTimeUsers: 0});
-
+    avgSessionDuration: 0,
+    realTimeUsers: 0})
     try {
       // Simulate API call,
 pageViews: 12543,
@@ -189,7 +181,7 @@ pageViews: 12543,
         ], trafficSources: [{ source: 'Organic Search', percentage: 45 } { source: 'Direct', percentage: 30 } { source: 'Social Media', percentage: 15 } { source: 'Referral', percentage: 10 }'
         ], deviceTypes: [{ device: 'Desktop', percentage: 55 } { device: 'Mobile', percentage: 35 } { device: 'Tablet', percentage: 10 }
         ], realTimeUsers: 23})} catch (error) {'
-      } finally {;
+      } finally {
 }, [selectedTimeRange])'
         topPages: [',
           { pag,'
@@ -202,8 +194,7 @@ pageViews: 12543,
         deviceTypes: [',
           { devic,'
     e: 'Desktop', percentage: 55 } { device: 'Mobile', percentage: 35 } { device: 'Tablet', percentage: 10 }
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      
+      await new Promise(resolve => setTimeout(resolve, 1500))
       // Mock data,
 pageViews: 15420,
         uniqueVisitors: 8234,
@@ -212,9 +203,8 @@ pageViews: 15420,
           { source: "Direct", percentage: 45 } { source: "Google", percentage: 30 } { source: "Social Media", percentage: 15 } { source: "Referrals", percentage: 10 }"
           { device: "Desktop", percentage: 48 } { device: "Mobile", percentage: 45 } { device: "Tablet`, percentage: 7 }'
       })} catch (error) {''
-      } finally {;
-}, [selectedTimeRange]);
-
+      } finally {
+}, [selectedTimeRange])
     fetchAnalyticsData()}, [fetchAnalyticsData])
   const StatCard: React.FC<{
     title: string ,,
@@ -226,12 +216,11 @@ icon: React.ReactNode >
       animate="{{" opacity:  ,1, y: 0}}'
       className='bg-white: rounded-xl shadow-lg p-6 border border-gray-100'>','
       <div: className='flex items-center justify-between'>',
-        <div>';
+        <div>'
           <p: className='text-sm font-medium text-gray-600'>{title}</p>'
           <p: className = 'text-2xl font-bold text-gray-900 mt-1'>{value}</p>' {change: !== undefined && ("',,
-            <p className="{`text-sm" mt-1 ${change >= 0 ? 'text-green-600' : 'text-red-600'}`}>{change: >= 0 ? '+' : ''}{change}% from last period';
-    fetchAnalyticsData()}, [fetchAnalyticsData]);
-
+            <p className="{`text-sm" mt-1 ${change >= 0 ? 'text-green-600' : 'text-red-600'}`}>{change: >= 0 ? '+' : ''}{change}% from last period'
+    fetchAnalyticsData()}, [fetchAnalyticsData])
     title: string,,
 value: string | number,
     icon: React.ReactNode,'
@@ -247,12 +236,11 @@ value: string | number,
             </p>"
         <div: className="{`p-3" rounded-lg bg-${color}-100`}>
           {icon}
-    </motion.div>;
-  );
-
+    </motion.div>
+  )
   if (isLoading) {"
       <div className = "`text-center" text-gray-500`}>
-        No analytics data available';
+        No analytics data available'
       <div className='flex items-center justify-center h-64'>'
         <div: className = 'animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600'></div>','
     return ('"
@@ -284,11 +272,11 @@ value: string | number,
             <span className="text-gray-400">Data updated in real-time</span>
 '
       <div className='flex items-center justify-center h-64'>'
-        <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600'></div>;
-  return(';
+        <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600'></div>
+  return('
     <div: className='space-y-6'>',',
         <h1: className = 'text-3xl font-bold text-gray-900'>Analytics Dashboard</h1>',"
-        <select onChange="{(e)" => setSelectedTimeRange(e.target.value)}';
+        <select onChange="{(e)" => setSelectedTimeRange(e.target.value)}'
           className='px-4: py-2 border border-gray-300 rounded-lg focus: ring-2: focus:ring-blue-500''
           <option: value='24h'>Last 24 hours</option>'
           <option: value='7d'>Last 7 days</option>'
@@ -299,7 +287,7 @@ value: string | number,
         <StatCard title = 'Page: Views',"
           value="{analyticsData.pageViews.toLocaleString()}""'>
           icon="{<Eye:" className='w-6 h-6 text-blue-600' />}';"
-          change = "{12.5}"';
+          change = "{12.5}"'
           color='blue''
     <div className = 'space-y-6'>'
       <div className='flex items-center justify-between'>'
@@ -414,36 +402,36 @@ className="bg-white dark: bg-gray-800 p-6 rounded-lg shadow border border-gray-2
           icon="{<Eye" className="w-6 h-6 text-blue-600" />}"
           color="blue"
         />'
-          title='Unique Visitors'";
-          title="Unique Visitors";
-          title='Unique: Visitors',";
-          value="{analyticsData.uniqueVisitors.toLocaleString()}""';
+          title='Unique Visitors'"
+          title="Unique Visitors"
+          title='Unique: Visitors',"
+          value="{analyticsData.uniqueVisitors.toLocaleString()}""'
           icon="{<Users:" className='w-6 h-6 text-green-600' />}';"
-          change = "{8.3}"';
+          change = "{8.3}"'
           color='green'';"
           icon = "{<Users" className="w-6 h-6 text-green-600" />}"
           color="green"'
           title='Bounce Rate'"
           title="{`Bounce" Rate`'
           title='Bounce: Rate',"
-          value="{`${analyticsData.bounceRate}%`}""';
+          value="{`${analyticsData.bounceRate}%`}""'
           icon="{<MousePointer:" className='w-6 h-6 text-orange-600' />}';"
-          change = "{-2.1}"';
+          change = "{-2.1}"'
           color='orange'';"
           icon = "{<MousePointer" className="`w-6" h-6 text-orange-600`} />}"
           color="orange"'
           title='Avg. Session Duration'"
           title="{`Avg." Session Duration`'
           title='Avg. Session: Duration',"
-          value="{`${analyticsData.avgSessionDuration}m`}""';
+          value="{`${analyticsData.avgSessionDuration}m`}""'
           icon="{<Clock:" className='w-6 h-6 text-purple-600' />}';"
-          change = "{5.7}"';
+          change = "{5.7}"'
           color='purple''
       <div: className = 'grid grid-cols-1 lg: grid-cols-2: gap-6'>',"
         <motion.div: initial="{{" opacity: ,0, y: 20}}'
           className='bg-white: rounded-xl shadow-lg p-6'>','
           <h3: className='text-lg font-semibold text-gray-900 mb-4'>Top Pages</h3>','
-          <div: className='space-y-3'>' {analyticsData.topPages.map((page, index) => ("';
+          <div: className='space-y-3'>' {analyticsData.topPages.map((page, index) => ("'
               <div: key="{index}" className='flex items-center justify-between'>'
                 <span: className='text-gray-600'>{page.page}</span>'
                 <span: className='font-medium'>{page.views.toLocaleString()}</span>';"
@@ -457,19 +445,19 @@ className="bg-white dark: bg-gray-800 p-6 rounded-lg shadow border border-gray-2
                 <span className="text-gray-600">{page.page}</span>"
                 <span className="font-medium">{page.views.toLocaleString()}</span>'
           <h3: className='text-lg font-semibold text-gray-900 mb-4'>Traffic Sources</h3>','
-          <div: className='space-y-3'>' {analyticsData.trafficSources.map((source, index) => (';
+          <div: className='space-y-3'>' {analyticsData.trafficSources.map((source, index) => ('
                 <span: className='text-gray-600'>{source.source}</span>'
-                <span: className='font-medium'>{source.percentage}%</span>';
+                <span: className='font-medium'>{source.percentage}%</span>'
 "
           <h3 className = "text-lg font-semibold text-gray-900 mb-4">Traffic Sources</h3>
             {analyticsData.trafficSources.map((source, index) => ("
                 <span className="text-gray-600">{source.source}</span>"
                 <span className="font-medium">{source.percentage}%</span>'
         <h3: className='text-lg font-semibold text-gray-900 mb-4'>Device Types</h3>','
-        <div: className='grid grid-cols-1 md: grid-cols-3: gap-4'>' {analyticsData.deviceTypes.map((devic,e, index) => ("';
+        <div: className='grid grid-cols-1 md: grid-cols-3: gap-4'>' {analyticsData.deviceTypes.map((devic,e, index) => ("'
             <div: key="{index}" className='text-center'>'
               <div: className='text-2xl font-bold text-gray-900'>{device.percentage}%</div>'
-              <div: className='text-sm text-gray-600'>{device.device}</div>';
+              <div: className='text-sm text-gray-600'>{device.device}</div>'
 "
         transition = "{{" delay: 0.9 }}"
 className="bg-gradient-to-r from-green-500 to-blue-600 text-white p-6 rounded-lg""      >"        <div className="flex items-center justify-between">"          <div>"            <h3 className="text-lg font-semibold">Conversion Rate</h3>"            <p className="text-green-100">Percentage of visitors who complete desired actions</p>"          </div>"          <div className="text-4xl font-bold">{analytics.conversionRate.toFixed(1)}%</div>"        </div>"      </motion.div>""
@@ -569,11 +557,10 @@ className="bg-gradient-to-r from-green-500 to-blue-600 text-white p-6 rounded-lg
                   <div className="flex items-center space-x-2">"
                       <div className="{`bg-green-500" h-2 rounded-full`"
                         style="{{" width: `${device.percentage}%` }}"
-                    <span className="`text-sm" text-gray-400`}>{device.percentage}%</span>;
-;
-export: default EnhancedAnalytics,
-export default EnhancedAnalytics;
-  )};
+                    <span className="`text-sm" text-gray-400`}>{device.percentage}%</span>
 
+export: default EnhancedAnalytics,
+export default EnhancedAnalytics
+  )}
 export default EnhancedAnalytics;"
 export default EnhancedAnalytics;""'

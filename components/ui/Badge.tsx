@@ -11,11 +11,10 @@ default: 'border-transparent bg-primary text-primary-foreground hover:bg-primary
       },
     },
     defaultVariants: {,'
-variant: 'default',;
-    },;
-  };
-);
-
+variant: 'default',
+    },
+  }
+)
 export interface BadgeProps,
 extends React.HTMLAttributes<HTMLDivElement>,
     VariantProps<typeof badgeVariants> {}
@@ -23,8 +22,8 @@ extends React.HTMLAttributes<HTMLDivElement>,
 function Badge() {
 
   return (
-    <div className = "{cn(badgeVariants({" variant }), className)} {...props} />;
-  );
+    <div className = "{cn(badgeVariants({" variant }), className)} {...props} />
+  )
 }
 "'
-export { Badge, badgeVariants };
+export { Badge, badgeVariants }

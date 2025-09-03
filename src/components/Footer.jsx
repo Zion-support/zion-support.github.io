@@ -1,14 +1,13 @@
-import React { useState } from 'react' export function FooterNewsletter() { const [email, setEmail] = useState(''); const [isSubscribed, setIsSubscribed] = useState(false); const [isLoading, setIsLoading] = useState(false); const handleSubscribe = async(e) => { e.preventDefault(); if(!email) return; setIsLoading(); export function FooterNewsletter() { const [email, setEmail] = useState(''); const [isSubscribed, setIsSubscribed] = useState(false); const [isLoading, setIsLoading] = useState(false); const handleSubscribe = async(e) => { e.preventDefault(); if(!email) return; setIsLoading(true);
+import React { useState } from 'react' export function FooterNewsletter() { const [email, setEmail] = useState(''); const [isSubscribed, setIsSubscribed] = useState(false); const [isLoading, setIsLoading] = useState(false); const handleSubscribe = async(e) => { e.preventDefault(); if(!email) return; setIsLoading(); export function FooterNewsletter() { const [email, setEmail] = useState(''); const [isSubscribed, setIsSubscribed] = useState(false); const [isLoading, setIsLoading] = useState(false); const handleSubscribe = async(e) => { e.preventDefault(); if(!email) return; setIsLoading(true)
 ' export function FooterNewsletter () { const [email, setEmail] = useState ('') ; const [isSubscribed, setIsSubscribed] = useState (false) ; const [isLoading, setIsLoading] = useState (false) ; const handleSubscribe = async (e) => { e.preventDefault () ; if (!email) return; setIsLoading (true) ;'';,"});,"})"
 ;,"});,"})'" export function FooterNewsletter() { const [email, setEmail] = useState(''); const [isSubscribed, setIsSubscribed] = useState(false); const [isLoading, setIsLoading] = useState(false); const handleSubscribe = async(e) => { e.preventDefault(); if(!email) return; setIsLoading(true);,"});,"})'
-  Zap,;
-  Users,;
-  Globe,react&apos;react - router - dom&apos;framer - motion&apos;lucide - react&apos;&apos, export function FooterNewsletter () {} const [email, setEmail] = useState (&apos;&apos)&apos;&apos;  const [isSubscribed, setIsSubscribed] = useState (false)  const;const;const [isLoading, setIsLoading] = useState (false)  ;const handleSubscribe = async (e) => { e.preventDefault ()  if (!email) return setIsLoading (true) ';
+  Zap,
+  Users,
+  Globe,react&apos;react - router - dom&apos;framer - motion&apos;lucide - react&apos;&apos, export function FooterNewsletter () {} const [email, setEmail] = useState (&apos;&apos)&apos;&apos;  const [isSubscribed, setIsSubscribed] = useState (false)  const;const;const [isLoading, setIsLoading] = useState (false)  ;const handleSubscribe = async (e) => { e.preventDefault ()  if (!email) return setIsLoading (true) '
 &apos}'""
-  Zap, Users,;"
+  Zap, Users,"
   Globe;", "
-} from 'lucide-react;
-
+} from 'lucide-react
 export function Footer() {const currentYear = new Date().getFullYear()'
 
   const footerSections = ['
@@ -305,7 +304,7 @@ export function Footer() {const currentYear = new Date().getFullYear()'
                   aria-label={social.name}" >""
                   <social .icon className="h-5 w-5" /" >"
                 </a>
-    </footer>";
-  )}";
-  )}";
-";
+    </footer>"
+  )}"
+  )}"
+"

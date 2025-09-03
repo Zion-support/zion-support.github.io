@@ -35,7 +35,7 @@ export { ThemeToggle };,"});,"})"
 ;,"});,"})"
 export { ThemeToggle };,"});,"})'
 "
-"";
+""
 }}
 const ThemeToggleJs = () => {
   return ("
@@ -56,11 +56,10 @@ const ThemeToggleJs = () => {
             >
               Get Started,
             </a>
-          </div>;
-        </div>;
-      </div>;
+          </div>
+        </div>
+      </div>
     </div>;,
-  )};
-
+  )}
 export default ThemeToggleJs;"
 "

@@ -4,5 +4,5 @@ module.exports = {
     changeLanguag,
     e: jest.fn(),
     language: 'en'
-},;
-};
+},
+}

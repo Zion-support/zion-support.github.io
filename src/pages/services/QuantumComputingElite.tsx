@@ -1,7 +1,6 @@
-import React from 'react';
-import Link from 'next/link';
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from 'lucide-react';
-
+import React from 'react'
+import Link from 'next/link'
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from 'lucide-react'
 export default function Quantumcomputingelite() {
   const features = [
     'AI-powered quantumcomputingelite optimization',
@@ -10,8 +9,7 @@ export default function Quantumcomputingelite() {
     'Predictive quantumcomputingelite insights',
     'Custom AI models for quantumcomputingelite',
     'Enterprise-grade security and compliance'
-  ];
-
+  ]
   const benefits = [
     'Improve quantumcomputingelite performance by 50-80%',
     'Reduce operational costs by 35-65%',
@@ -19,8 +17,7 @@ export default function Quantumcomputingelite() {
     'Optimize resource utilization',
     'Scale operations efficiently',
     'Maximize ROI and efficiency'
-  ];
-
+  ]
   const useCases = [
     'Software Development',
     'E-commerce & Retail',
@@ -28,8 +25,7 @@ export default function Quantumcomputingelite() {
     'Healthcare & Life Sciences',
     'Media & Entertainment',
     'Technology & SaaS'
-  ];
-
+  ]
   const pricing = [
     {
       name: 'Starter',
@@ -46,8 +42,7 @@ export default function Quantumcomputingelite() {
       price: '$1,999/mo',
       details: ['Unlimited users', 'Custom AI models', 'Full quantumcomputingelite suite', '24/7 dedicated support']
     }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-white">
       <section className="bg-gradient-to-br from-indigo-500 via-blue-500 to-cyan-500 py-20 text-center">
@@ -146,7 +141,7 @@ export default function Quantumcomputingelite() {
           <p className="text-indigo-100 text-xl mb-8">
             Get started with our AI-powered quantumcomputingelite platform today.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <Link href="/contact" className="px-8 py-3 bg-white text-indigo-600 rounded-lg hover:bg-gray-100 transition-colors inline-flex items-center">
               Get Started <ArrowRight className="w-4 h-4 ml-2" />
             </Link>
@@ -157,5 +152,5 @@ export default function Quantumcomputingelite() {
         </div>
       </section>
     </div>
-  );
+  ),
 }

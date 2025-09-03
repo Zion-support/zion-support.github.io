@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-;
+
   return (
 <Layout title = "AI Email Responder - Zion Tech Group""
       description="Automate your email responses with AI-powered email management. Reduce response time, improve customer satisfaction, and scale your support operations."
@@ -160,6 +160,6 @@ import type { NextPage } from 'next'
         </div>
       </section>
     </Layout>;,
-  )};
+  )}
 "
-export default AIEmailResponder;
+export default AIEmailResponder

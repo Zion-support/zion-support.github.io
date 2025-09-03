@@ -1,29 +1,27 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-
+const fs = require('fs')
+const path = require('path')
 class ComprehensiveSyntaxFixer {
   constructor() {
-    this.projectRoot = process.cwd();
-    this.fixedFiles = [];
-    this.errors = [];
+    this.projectRoot = process.cwd()
+    this.fixedFiles = []
+    this.errors = []
   }
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
+    console.log(`[${new Date().toISOString()}] ${message}`)
   }
 
   fixFile(filePath) {
     try {
       if (!fs.existsSync(filePath)) {
-        return false;
+        return false
       }
 
-      let content = fs.readFileSync(filePath, 'utf8');
-      let originalContent = content;
-      let changes = 0;
-
+      let content = fs.readFileSync(filePath, 'utf8')
+      let originalContent = content
+      let changes = 0
       // Fix merge conflicts
       const mergeConflictFixes = [
         // Remove merge conflict markers
@@ -51,8 +49,7 @@ class ComprehensiveSyntaxFixer {
           pattern: />>>>>>> [^\n]+\n/g,
           replacement: ''
         }
-      ];
-
+      ]
       // Fix syntax errors
       const syntaxFixes = [
         // Fix semicolons in object literals
@@ -87,7 +84,7 @@ class ComprehensiveSyntaxFixer {
         },
         // Fix broken imports
         {
-          pattern: /import\s+([^;]+);\s*import/g,
+          pattern: /import\s+([^]+);\s*import/g,
           replacement: 'import $1\nimport'
         },
         // Fix broken function parameters
@@ -140,26 +137,23 @@ class ComprehensiveSyntaxFixer {
           pattern: /(null|undefined)\s*;\s*([,}])/g,
           replacement: '$1$2'
         }
-      ];
-
+      ]
       // Apply merge conflict fixes
       mergeConflictFixes.forEach(fix => {
-        const before = content;
-        content = content.replace(fix.pattern, fix.replacement);
+        const before = content
+        content = content.replace(fix.pattern, fix.replacement)
         if (content !== before) {
-          changes++;
+          changes++
         }
-      });
-
+      })
       // Apply syntax fixes
       syntaxFixes.forEach(fix => {
-        const before = content;
-        content = content.replace(fix.pattern, fix.replacement);
+        const before = content
+        content = content.replace(fix.pattern, fix.replacement)
         if (content !== before) {
-          changes++;
+          changes++
         }
-      });
-
+      })
       // Additional specific fixes
       const specificFixes = [
         // Fix broken JSX in Layout.tsx
@@ -174,18 +168,17 @@ class ComprehensiveSyntaxFixer {
         // Fix broken MainLayout.tsx
         {
           pattern: /import React from 'react'; import Header from '\.\/Header'; import Footer from '\.\/Footer'; import PerformanceOptimizer from '\.\.\/PerformanceOptimizer'; import AccessibilityEnhancer from '\.\.\/AccessibilityEnhancer'; import SEOEnhancer from '\.\.\/SEOEnhancer'; interface MainLayoutProps { children: React\.ReactNode; title\?: string; description\?: string; keywords\? string, } const MainLayout: React\.FC<MainLayoutProps> = \(\{ children, title = 'Zion Tech Group', description = 'Leading technology solutions and AI services', keywords = 'technology, AI, software development, consulting' \}\) => \{ return \( <div className="min-h-screen flex flex-col> <SEOEnhancer title=\{title\} description="\{description\}" keywords=\{keywords\} \/> <PerformanceOptimizer \/> <AccessibilityEnhancer \/> <Header \/> <main className=flex-1> \{children\} <\/main> <Footer \/> <\/div> \); \}; export default MainLayout;/g,
-          replacement: `import React from 'react';
-import Header from './Header';
-import Footer from './Footer';
-import PerformanceOptimizer from '../PerformanceOptimizer';
-import AccessibilityEnhancer from '../AccessibilityEnhancer';
-import SEOEnhancer from '../SEOEnhancer';
-
+          replacement: `import React from 'react'
+import Header from './Header'
+import Footer from './Footer'
+import PerformanceOptimizer from '../PerformanceOptimizer'
+import AccessibilityEnhancer from '../AccessibilityEnhancer'
+import SEOEnhancer from '../SEOEnhancer'
 interface MainLayoutProps {
-  children: React.ReactNode;
-  title?: string;
-  description?: string;
-  keywords?: string;
+  children: React.ReactNode
+  title?: string
+  description?: string
+  keywords?: string
 }
 
 const MainLayout: React.FC<MainLayoutProps> = ({
@@ -205,46 +198,42 @@ const MainLayout: React.FC<MainLayoutProps> = ({
       </main>
       <Footer />
     </div>
-  );
-};
-
+  )
+}
 export default MainLayout;`
         }
-      ];
-
+      ]
       specificFixes.forEach(fix => {
-        const before = content;
-        content = content.replace(fix.pattern, fix.replacement);
+        const before = content
+        content = content.replace(fix.pattern, fix.replacement)
         if (content !== before) {
-          changes++;
+          changes++
         }
-      });
-
+      })
       if (content !== originalContent) {
-        fs.writeFileSync(filePath, content, 'utf8');
+        fs.writeFileSync(filePath, content, 'utf8')
         this.fixedFiles.push({
           file: filePath,
           changes: changes
-        });
-        this.log(`✅ Fixed ${changes} issues in ${filePath}`);
-        return true;
+        })
+        this.log(`✅ Fixed ${changes} issues in ${filePath}`)
+        return true
       }
 
-      return false;
+      return false
     } catch (error) {
       this.errors.push({
         file: filePath,
         error: error.message
-      });
-      this.log(`❌ Error fixing ${filePath}: ${error.message}`);
-      return false;
+      })
+      this.log(`❌ Error fixing ${filePath}: ${error.message}`)
+      return false
     }
   }
 
   async fixAllFiles() {
-    this.log('Starting comprehensive syntax fixing...');
-    
-    const fileExtensions = ['.tsx', '.ts', '.jsx', '.js', '.json'];
+    this.log('Starting comprehensive syntax fixing...')
+    const fileExtensions = ['.tsx', '.ts', '.jsx', '.js', '.json']
     const ignorePatterns = [
       'node_modules',
       '.next',
@@ -252,35 +241,32 @@ export default MainLayout;`
       'build',
       'out',
       '.git'
-    ];
-
-    const files = this.getAllFiles(this.projectRoot, fileExtensions, ignorePatterns);
-    this.log(`Found ${files.length} files to check`);
-
-    let fixedCount = 0;
+    ]
+    const files = this.getAllFiles(this.projectRoot, fileExtensions, ignorePatterns)
+    this.log(`Found ${files.length} files to check`)
+    let fixedCount = 0
     for (const file of files) {
       if (this.fixFile(file)) {
-        fixedCount++;
+        fixedCount++
       }
     }
 
-    this.log('\n=== COMPREHENSIVE SYNTAX FIX SUMMARY ===');
-    this.log(`Total files processed: ${files.length}`);
-    this.log(`Files fixed: ${fixedCount}`);
-    this.log(`Errors encountered: ${this.errors.length}`);
-
+    this.log('\n=== COMPREHENSIVE SYNTAX FIX SUMMARY ===')
+    this.log(`Total files processed: ${files.length}`)
+    this.log(`Files fixed: ${fixedCount}`)
+    this.log(`Errors encountered: ${this.errors.length}`)
     if (this.fixedFiles.length > 0) {
-      this.log('\n✅ Fixed files:');
+      this.log('\n✅ Fixed files:')
       this.fixedFiles.forEach(file => {
-        this.log(`  - ${file.file} (${file.changes} changes)`);
-      });
+        this.log(`  - ${file.file} (${file.changes} changes)`)
+      })
     }
 
     if (this.errors.length > 0) {
-      this.log('\n❌ Errors:');
+      this.log('\n❌ Errors:')
       this.errors.forEach(error => {
-        this.log(`  - ${error.file}: ${error.error}`);
-      });
+        this.log(`  - ${error.file}: ${error.error}`)
+      })
     }
 
     // Save results
@@ -293,44 +279,40 @@ export default MainLayout;`
         fixed: this.fixedFiles,
         errors: this.errors
       }
-    };
-
-    fs.writeFileSync('comprehensive-syntax-fix-results.json', JSON.stringify(results, null, 2));
-    this.log('\nResults saved to comprehensive-syntax-fix-results.json');
+    }
+    fs.writeFileSync('comprehensive-syntax-fix-results.json', JSON.stringify(results, null, 2))
+    this.log('\nResults saved to comprehensive-syntax-fix-results.json')
   }
 
   getAllFiles(dir, extensions, ignorePatterns) {
-    let files = [];
-    
+    let files = []
     try {
-      const items = fs.readdirSync(dir);
-      
+      const items = fs.readdirSync(dir)
       for (const item of items) {
-        const fullPath = path.join(dir, item);
-        const stat = fs.statSync(fullPath);
-        
+        const fullPath = path.join(dir, item)
+        const stat = fs.statSync(fullPath)
         if (stat.isDirectory()) {
           if (!ignorePatterns.some(pattern => fullPath.includes(pattern))) {
-            files = files.concat(this.getAllFiles(fullPath, extensions, ignorePatterns));
+            files = files.concat(this.getAllFiles(fullPath, extensions, ignorePatterns))
           }
         } else if (stat.isFile()) {
-          const ext = path.extname(item);
+          const ext = path.extname(item)
           if (extensions.includes(ext)) {
-            files.push(fullPath);
+            files.push(fullPath)
           }
         }
       }
     } catch (error) {
-      this.log(`Error reading directory ${dir}: ${error.message}`);
+      this.log(`Error reading directory ${dir}: ${error.message}`)
     }
     
-    return files;
+    return files
   }
 }
 
 // Run the fixer
-const fixer = new ComprehensiveSyntaxFixer();
+const fixer = new ComprehensiveSyntaxFixer()
 fixer.fixAllFiles().catch(error => {
-  console.error('Fatal error: ', error);
-  process.exit(1);
-});
+  console.error('Fatal error: ', error)
+  process.exit(1)
+})

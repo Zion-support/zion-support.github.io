@@ -53,9 +53,9 @@ unauthorized access, alteration, disclosure, or destruction.
             </div>
           </div>
         </div>
-      </div>;
-    </MainLayout>;
-  );
-};
+      </div>
+    </MainLayout>
+  )
+}
 "
-export default PrivacyPolicy;
+export default PrivacyPolicy

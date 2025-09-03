@@ -2,9 +2,8 @@ const React = dynamic(() => import('react'), { ssr: false })
 const Head = dynamic(() => import('next/head'), { ssr: false })
 const MarketplacePage: React.FC = () => {
   const sections = [',,
-    { title: 'Products', href: '/marketplace/products', description: 'AI tools, software, and platforms.' }, { title: 'Talent', href: '/marketplace/talent', description: 'Expert contractors and fractional teams.' },;
-    { title: 'Equipment', href: '/marketplace/equipment', description: 'Hardware and infrastructure.' }, { title: 'Services', href: '/marketplace/services', description: 'Professional and managed services.' }];
-
+    { title: 'Products', href: '/marketplace/products', description: 'AI tools, software, and platforms.' }, { title: 'Talent', href: '/marketplace/talent', description: 'Expert contractors and fractional teams.' },
+    { title: 'Equipment', href: '/marketplace/equipment', description: 'Hardware and infrastructure.' }, { title: 'Services', href: '/marketplace/services', description: 'Professional and managed services.' }]
   return (
     <MainLayout title = "Marketplace - Zion Tech Group" description="Discover products, talent, equipment, and services in our marketplace.">"
       <section className="container mx-auto px-4 py-12">"
@@ -96,10 +95,10 @@ export default function Marketplace() {
     { number: '10K+', label: 'Happy Customers', icon: Users },'
     { number: '4.8/5', label: 'Average Rating', icon: Star },'
     { number: '99.9%', label: 'Uptime Guarantee', icon: TrendingUp }
-  ];
-;
+  ]
+
   return (
-    <>;
+    <>
 <Head>
         <title>Marketplace - Zion Tech Group</title>"
         <meta name = "description" content="Discover and purchase AI solutions, SaaS tools, IT services, and templates from our comprehensive marketplace." />"
@@ -317,4 +316,4 @@ export default function Marketplace() {
 
       <SimpleFooter />
     </>",
-  )};
+  )}

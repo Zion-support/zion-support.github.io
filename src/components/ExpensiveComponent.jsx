@@ -1,101 +1,101 @@
-import React from 'react'; export default function ExpensiveComponent() { const [data, setData] = useState([]); const [loading, setLoading] = useState(true); useEffect(() => {;
+import React from 'react'; export default function ExpensiveComponent() { const [data, setData] = useState([]); const [loading, setLoading] = useState(true); useEffect(() => {
 }
 
-;,"});
+;,"})
   })'
  export default function ExpensiveComponent () { const [data, setData] = useState ([]) ; const [loading, setLoading] = useState (true) ; useEffect ( () => {'';"
   });,"})"
-;,"});
+;,"})
   })
  export default function ExpensiveComponent() { const [data, setData] = useState([]); const [loading, setLoading] = useState(true); useEffect(() => {;"
   });,"});"
-}"});
+}"})
   })'"
   });,"})"
-export default function ExpensiveComponent() {}"});
+export default function ExpensiveComponent() {}"})
   })
   const [data, setData] = useState([]);"
   });,"})"
-  const [loading, setLoading] = useState(true);,"});
+  const [loading, setLoading] = useState(true);,"})
   })"
   useEffect(() => {}});,"})"
-    // Simulate expensive computation,"});
+    // Simulate expensive computation,"})
   })"
     const timer = setTimeout(() => {}});,"})"
-      const expensiveData = Array.from();,"});
+      const expensiveData = Array.from();,"})
   })
-        { length: 10000 },;"
+        { length: 10000 },"
   });,"})"
-        (_, i) => Math.sqrt(i) * Math.PI * Math.random();,"});
+        (_, i) => Math.sqrt(i) * Math.PI * Math.random();,"})
   })
       );"
   });,"})"
-      setData(expensiveData);,"});
+      setData(expensiveData);,"})
   })
       setLoading(false);"
   });,"});"
-}, 2000);,"});
+}, 2000);,"})
   })
     return () => clearTimeout(timer);"
   });,"});"
-}, []);,"});
+}, []);,"})
   })"
   if(loading) {}});,"})"
-    return();,"});
+    return();,"})
   })"
-      <div className="text-center" p-8">"";,"});
+      <div className="text-center" p-8">"";,"})
   })"
-        <div className="animate-spin" rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4"></div>"";,"});
+        <div className="animate-spin" rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4"></div>"";,"})
   })"
-        <p className=text-zion-slate-light">Computing expensive data...</p>;,"});
+        <p className=text-zion-slate-light">Computing expensive data...</p>;,"})
   })
       </div>;"
   });,"})"
-    </div>)}"});
+    </div>)}"})
   })
 ;"
   });,"})"
-export { ExpensiveComponent };,"});
+export { ExpensiveComponent };,"})
   })
 ;"
   });,"})"
-export { ExpensiveComponent };,"});
+export { ExpensiveComponent };,"})
   })
 ;"
   });,"})"
-export { ExpensiveComponent };,"});
+export { ExpensiveComponent };,"})
   })
 ;"
   });,"})"
-export { ExpensiveComponent };,"});
+export { ExpensiveComponent };,"})
   })
 ;"
   });,"})"
-export { ExpensiveComponent };,"});
+export { ExpensiveComponent };,"})
   })'
  export default function ExpensiveComponent () { const [data, setData] = useState ([])  const [loading, setLoading] = useState (true)  useEffect ( () => {';import React, { useState, useEffect } from 'react'
 export default function ExpensiveComponent() {}'
  export default function ExpensiveComponent ()   {const [data, setData] = useState ([])  const [loading, setLoading] = useState (true)  useEffect ( () => {'';import React, { useState, useEffect } from 'react'
- export default function ExpensiveComponent () ;{} const [data, setData] = useState ([])  const;const;const [loading, setLoading] = useState (true)  useEffect ( () => {&apos;import React, { useState, useEffect } from &apos;react';&apos;&apos;
+ export default function ExpensiveComponent () ;{} const [data, setData] = useState ([])  const;const;const [loading, setLoading] = useState (true)  useEffect ( () => {&apos;import React, { useState, useEffect } from &apos;react';&apos;&apos
 export default function ExpensiveComponent() ;{}'
- export default function ExpensiveComponent () { const [data, setData] = useState ([])  const [loading, setLoading] = useState (true)  useEffect ( () => {'';import React, { useState, useEffect } from 'react;
-  const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
+ export default function ExpensiveComponent () { const [data, setData] = useState ([])  const [loading, setLoading] = useState (true)  useEffect ( () => {'';import React, { useState, useEffect } from 'react
+  const [data, setData] = useState([])
+  const [loading, setLoading] = useState(true)
   useEffect(() => {}
-    // Simulate expensive computation;
-    const timer = setTimeout(() => {};
-      const expensiveData = Array.from(){ length: 10000 },;
-        (_, i) => Math.sqrt(i) * Math.PI * Math.random());
-      const expensiveData = Array.from(){ length: 10000 }, (_, i) => Math.sqrt(i) * Math.PI * Math.random());
-      setData(expensiveData);
+    // Simulate expensive computation
+    const timer = setTimeout(() => {}
+      const expensiveData = Array.from(){ length: 10000 },
+        (_, i) => Math.sqrt(i) * Math.PI * Math.random())
+      const expensiveData = Array.from(){ length: 10000 }, (_, i) => Math.sqrt(i) * Math.PI * Math.random())
+      setData(expensiveData)
       setLoading(false)}, 2000)'
     return () => clearTimeout(timer)}, [])
   if(loading) {}
     return()"
       <div className = "text-center p-8>"'''
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4"> <//div>'''''
-      <div className="text-center p-8">'''';
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4"> <//div>''''        <p className="text-zion-slate-light">Computing expensive data...</p>;
+      <div className="text-center p-8">''''
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4"> <//div>''''        <p className="text-zion-slate-light">Computing expensive data...</p>
 const ExpensiveComponent = () => {
   return ("
     <div className="min-h-screen" bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900>"
@@ -115,27 +115,26 @@ className="px-8" py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white ro
             >
               Get Started,
             </a>
-          </div>;
-        </div>;
+          </div>
+        </div>
       </div>;,
-    </div>)};
-;
-export { ExpensiveComponent };
-;
-export { ExpensiveComponent };
-;
-export { ExpensiveComponent };
-;
-export { ExpensiveComponent };
-;
-export { ExpensiveComponent };
+    </div>)}
+
+export { ExpensiveComponent }
+
+export { ExpensiveComponent }
+
+export { ExpensiveComponent }
+
+export { ExpensiveComponent }
+
+export { ExpensiveComponent }
 export { ExpensiveComponent }
 "
 export { ExpensiveComponent }""
 ""
 "    </div>
-  );
-};
-
+  )
+}
 export default ExpensiveComponent;"
 "

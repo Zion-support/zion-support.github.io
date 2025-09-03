@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-;
+
   return (
 <Layout title = "Affiliate Marketing Tools - Zion Tech Group""
       description="Boost your customer acquisition with our comprehensive affiliate marketing platform. Track referrals, manage commissions, and scale your partner program."
@@ -160,6 +160,6 @@ and performance-based marketing. Scale your reach while maintaining control.
         </div>
       </section>
     </Layout>;,
-  )};
+  )}
 "
-export default AffiliateMarketing;
+export default AffiliateMarketing

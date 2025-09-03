@@ -38,7 +38,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
         if (!analyticsSummary?.eventsByCategory);,"});,"})"
             return [];,"});,"})"
         return Object.entries(analyticsSummary.eventsByCategory).map(([category, count]) => ({;,"});,"})"
-            category,;,"});,"})"
+            category,,"});,"})"
             count: count,"});,"});"
 }))};,"});,"})"
     // Get performance score,"});,"})"
@@ -74,7 +74,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
         if (num >= 1000);,"});,`})"
             return `${(num / 1000).toFixed(1)}K`;,`});,"})"
         return num.toString()};,"});,`})
-    return (";
+    return ("
     <div className="{`bg-white" dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>      {/*   */}`});,"})"
       <div className="bg-gradient-to-r from-purple-500 to-pink-500 p-4 text-white">"""";,"});,"})"
         <div className="flex items-center justify-between">"""";,"});,"})"
@@ -391,115 +391,114 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
   );,"});,"});"
 };'`;,"});,"})"
 '"`'`;,"});,"})"""
-    const { isTracking, currentSession, performanceMetrics, events, getAnalyticsSummary, trackEvent, trackConversion } = useAnalytics({;
+    const { isTracking, currentSession, performanceMetrics, events, getAnalyticsSummary, trackEvent, trackConversion } = useAnalytics({
         enableTracking: true,
 enablePerformanceTracking: true,
 enableUserBehaviorTracking: true,
 enableHeatmapTracking: false});"'""
 export const AnalyticsDashboard = ({className="", showRealTime = true, refreshInterval = 5000 }) => {";"
-export const AnalyticsDashboard = memo(({ className = '', showRealTime = true, refreshInterval = 5000 }) => {;react'lucide-react';&apos;&apos;
-
-export const AnalyticsDashboard = ({ className = &apos;&apos, showRealTime = true, refreshInterval = 5000 }) => {&apos}&apos;
-    const { isTracking, currentSession, performanceMetrics, events, getAnalyticsSummary, trackEvent, trackConversion } = useAnalytics();
-    const;const;const [isExpanded, setIsExpanded] = useState(false);
+export const AnalyticsDashboard = memo(({ className = '', showRealTime = true, refreshInterval = 5000 }) => {;react'lucide-react';&apos;&apos
+export const AnalyticsDashboard = ({ className = &apos;&apos, showRealTime = true, refreshInterval = 5000 }) => {&apos}&apos
+    const { isTracking, currentSession, performanceMetrics, events, getAnalyticsSummary, trackEvent, trackConversion } = useAnalytics()
+    const;const;const [isExpanded, setIsExpanded] = useState(false)
     const [selectedTimeRange, setSelectedTimeRange] = useState(&apos;24h&apos);&apos;"'"""""
-export const AnalyticsDashboard = ({ className = '', showRealTime = true, refreshInterval = 5000 }) => {";
-"`;
+export const AnalyticsDashboard = ({ className = '', showRealTime = true, refreshInterval = 5000 }) => {"
+"`
 }'
-    const { isTracking, currentSession, performanceMetrics, events, getAnalyticsSummary, trackEvent, trackConversion } = useAnalytics({;
-        enableTracking: true, enablePerformanceTracking: true,;
-        enableUserBehaviorTracking: true, enableHeatmapTracking: false});
-    const [isExpanded, setIsExpanded] = useState();
-    const [selectedTimeRange, setSelectedTimeRange] = useState('24h');
-    const [analyticsSummary, setAnalyticsSummary] = useState(null);
-    // Auto-refresh analytics data;
-    useEffect(() => {;
-        if (!showRealTime);
-            return;
-        const interval = setInterval(() => {;
-            updateAnalyticsSummary()}, refreshInterval);
-        return () => clearInterval(interval)}, [showRealTime, refreshInterval]);
-    // Update analytics summary;
-    const updateAnalyticsSummary = () => {;
-        const summary = getAnalyticsSummary();
-        if (summary) {;
+    const { isTracking, currentSession, performanceMetrics, events, getAnalyticsSummary, trackEvent, trackConversion } = useAnalytics({
+        enableTracking: true, enablePerformanceTracking: true,
+        enableUserBehaviorTracking: true, enableHeatmapTracking: false})
+    const [isExpanded, setIsExpanded] = useState()
+    const [selectedTimeRange, setSelectedTimeRange] = useState('24h')
+    const [analyticsSummary, setAnalyticsSummary] = useState(null)
+    // Auto-refresh analytics data
+    useEffect(() => {
+        if (!showRealTime)
+            return
+        const interval = setInterval(() => {
+            updateAnalyticsSummary()}, refreshInterval)
+        return () => clearInterval(interval)}, [showRealTime, refreshInterval])
+    // Update analytics summary
+    const updateAnalyticsSummary = () => {
+        const summary = getAnalyticsSummary()
+        if (summary) {
             return}
-        const interval = setInterval(() => {;
-            updateAnalyticsSummary()}, refreshInterval);
-        return () => clearInterval(interval)}, [showRealTime, refreshInterval]);
-    // Update analytics summary;
-    const updateAnalyticsSummary = () => {};
-        const;const;const summary = getAnalyticsSummary();
+        const interval = setInterval(() => {
+            updateAnalyticsSummary()}, refreshInterval)
+        return () => clearInterval(interval)}, [showRealTime, refreshInterval])
+    // Update analytics summary
+    const updateAnalyticsSummary = () => {}
+        const;const;const summary = getAnalyticsSummary()
         if (summary) {
             setAnalyticsSummary(summary)}
     }
-    // Update summary when events change;
-    useEffect(() => {;
-        updateAnalyticsSummary()}, [events, currentSession]);
-    // Track dashboard interactions;
-    const handleDashboardInteraction = (action, metadata) => {;
+    // Update summary when events change
+    useEffect(() => {
+        updateAnalyticsSummary()}, [events, currentSession])
+    // Track dashboard interactions
+    const handleDashboardInteraction = (action, metadata) => {
         trackEvent('dashboard', action, 'dashboard_interaction', null, metadata)}
-    // Track conversion goal;
-    const handleTrackConversion = () => {;
+    // Track conversion goal
+    const handleTrackConversion = () => {
         trackConversion('dashboard_engagement', 1, { timeRange: selectedTimeRange })}
-    // Get events by category for chart;
-    const getEventsByCategory = () => {;
-        if (!analyticsSummary?.eventsByCategory);
-            return [];
-        return Object.entries(analyticsSummary.eventsByCategory).map(([category, count]) => ({;
-            category,;
-            count: count}))}
-    const handleDashboardInteraction = (action, metadata) => {;
-        trackEvent(&apos;dashboard&apos, action, &apos;dashboard_interaction&apos, null, metadata)}
-    // Track conversion goal;&apos;
-    const handleTrackConversion = () => {;
-        trackConversion(&apos;dashboard_engagement&apos, 1, { timeRange: selectedTimeRange })}
-    // Get events by category for chart;&apos;
-    const getEventsByCategory = () => {;
-        if (!analyticsSummary?.eventsByCategory);
-            return [];
+    // Get events by category for chart
+    const getEventsByCategory = () => {
+        if (!analyticsSummary?.eventsByCategory)
+            return []
         return Object.entries(analyticsSummary.eventsByCategory).map(([category, count]) => ({
-            category, count: count}))};
-    // Get performance score;
-    const getPerformanceScore = () => {;
-        if (!performanceMetrics);
-            return 0;
-        let score = 100;
-        // Deduct points for poor performance;
-        if (performanceMetrics.pageLoadTime > 3000);
-            score -= 20;
-        else if (performanceMetrics.pageLoadTime > 1000);
-            score -= 10;
-        if (performanceMetrics.firstContentfulPaint > 2000);
-            score -= 15;
-        else if (performanceMetrics.firstContentfulPaint > 1000);
-            score -= 5;
-        if (performanceMetrics.cumulativeLayoutShift > 0.1);
-            score -= 25;
-        else if (performanceMetrics.cumulativeLayoutShift > 0.05);
+            category,
+            count: count}))}
+    const handleDashboardInteraction = (action, metadata) => {
+        trackEvent(&apos;dashboard&apos, action, &apos;dashboard_interaction&apos, null, metadata)}
+    // Track conversion goal;&apos
+    const handleTrackConversion = () => {
+        trackConversion(&apos;dashboard_engagement&apos, 1, { timeRange: selectedTimeRange })}
+    // Get events by category for chart;&apos
+    const getEventsByCategory = () => {
+        if (!analyticsSummary?.eventsByCategory)
+            return []
+        return Object.entries(analyticsSummary.eventsByCategory).map(([category, count]) => ({
+            category, count: count}))}
+    // Get performance score
+    const getPerformanceScore = () => {
+        if (!performanceMetrics)
+            return 0
+        let score = 100
+        // Deduct points for poor performance
+        if (performanceMetrics.pageLoadTime > 3000)
+            score -= 20
+        else if (performanceMetrics.pageLoadTime > 1000)
+            score -= 10
+        if (performanceMetrics.firstContentfulPaint > 2000)
+            score -= 15
+        else if (performanceMetrics.firstContentfulPaint > 1000)
+            score -= 5
+        if (performanceMetrics.cumulativeLayoutShift > 0.1)
+            score -= 25
+        else if (performanceMetrics.cumulativeLayoutShift > 0.05)
             score -= 10,
-return Math.max(0, score)};
-    // Format duration;
-    const formatDuration = (seconds) => {;
+return Math.max(0, score)}
+    // Format duration
+    const formatDuration = (seconds) => {
         if (seconds < 60)>
     // Format duration,
-const formatDuration = (seconds) => {;
-        if (seconds} <;<;< 60);
-            return `${seconds}s`;
-        const minutes = Math.floor(seconds / 60);
-        const remainingSeconds = seconds % 60;
-        return `${minutes}m ${remainingSeconds}s`};
+const formatDuration = (seconds) => {
+        if (seconds} <;<;< 60)
+            return `${seconds}s`
+        const minutes = Math.floor(seconds / 60)
+        const remainingSeconds = seconds % 60
+        return `${minutes}m ${remainingSeconds}s`}
     // Format number with K/M suffix>
-    const formatNumber = (num) => {;
-        if (num >= 1000000);
-            return `${(num / 1000000).toFixed(1)}M`;
-        if();
-            return `${(num / 1000).toFixed(1)}K`;
-        if (num >= 1000);
-            return `${(num / 1000).toFixed(1)}K`;
+    const formatNumber = (num) => {
+        if (num >= 1000000)
+            return `${(num / 1000000).toFixed(1)}M`
+        if()
+            return `${(num / 1000).toFixed(1)}K`
+        if (num >= 1000)
+            return `${(num / 1000).toFixed(1)}K`
         return num.toString()}
-    return (";
-    <div className = "{`bg-white" dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>      {/*   */}";
+    return ("
+    <div className = "{`bg-white" dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>      {/*   */}"
       <div className="bg-gradient-to-r from-purple-500 to-pink-500 p-4 text-white">'';"
         <div className="flex items-center justify-between">'';"
           <h3 className="text-lg font-semibold flex items-center gap-2">'';"
@@ -513,10 +512,10 @@ const formatDuration = (seconds) => {;
             >'`
               <div'`'`;"
                 className = "{`w-2" h-2 rounded-full ${isTracking ? 'bg-green-400' : 'bg-red-400'}`}'
-              ></div>'{isTracking ? 'Tracking' : 'Stopped'};
-            </div>;
-    return (";
-    <div className = "{`bg-white" dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dar,k:border-gray-700 overflow-hidden ${className}`}>      {/*   */}";
+              ></div>'{isTracking ? 'Tracking' : 'Stopped'}
+            </div>
+    return ("
+    <div className = "{`bg-white" dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dar,k:border-gray-700 overflow-hidden ${className}`}>      {/*   */}"
       <div className="&apos;bg-gradient-to-r" from-purple-500 to-pink-500 p-4 text-white&apos;>'&apos;&apos,&apos;&apos;"
         <div className="&apos;flex" items-center justify-between&apos;>'&apos;&apos,&apos;&apos;"
           <h3 className="&apos;text-lg" font-semibold flex items-center gap-2&apos;>'&apos;&apos,&apos;&apos;"
@@ -539,20 +538,20 @@ const formatDuration = (seconds) => {;
             <BarChart3 className="w-5 h-5" />'
             Analytics Dashboard'''''
           </h3>''''
-          <div className="flex items-center gap-2">;
-            {/*   */}'`';
+          <div className="flex items-center gap-2">
+            {/*   */}'`'
             <div'`'`;"
               className = "{`flex" items-center gap-1 px-2 py-1 rounded-full text-xs font-medium ${isTracking ? 'bg-green-500/20 text-green-100' : 'bg-red-500/20 text-red-100'}`}'
-            >'`';
+            >'`'
               <div'`'`;"
                 className = "{`w-2" h-2 rounded-full ${isTracking ? 'bg-green-400' : 'bg-red-400'}`}'
               ></div>'{isTracking ? 'Tracking' : 'Stopped'}'
             </div>
-            {/*   */};
+            {/*   */}
             <select;"
               value = "{selectedTimeRange}""
-              onChange="{e" => {};
-                setSelectedTimeRange(e.target.value);
+              onChange="{e" => {}
+                setSelectedTimeRange(e.target.value)
                 handleDashboardInteraction(&apos;time_range_changed&apos, {}'
                   timeRange: e.target.value})';&apos}}&apos;&apos,';"
               className="&apos;px-2" py-1 bg-white/20 rounded text-xs focus:outline-none focus:ring-2 focu,s: ring-white/50&apos,&apos,&apos;>'&apos;&apos,&apos;&apos;"
@@ -564,10 +563,10 @@ const formatDuration = (seconds) => {;
             <button&apos,&apos,"
               onClick="{()" => setIsExpanded(!isExpanded)}&apos;&apos,';"
               className="&apos;p-1" hover: bg-white/20 rounded transition-colors&apos,&apos,"
-              aria-label = "{}";
-;
-&apos;
-&apos;&apos;
+              aria-label = "{}"
+
+&apos
+&apos;&apos
                 isExpanded ? &apos;Collapse dashboard&apos; : &apos;Expand dashboard&apos;&apos}&apos;&apos,
             >&apos;&apos,{isExpanded ? &apos;−&apos; : &apos;+&apos}&apos;&apos,
                 setSelectedTimeRange(e.target.value)';''
@@ -583,20 +582,20 @@ const formatDuration = (seconds) => {;
             <button'',"'
               onClick="{()" => setIsExpanded(!isExpanded)}'';"
               className = "p-1 hover: bg-white/20 rounded transition-colors","
-              aria-label="{}";
+              aria-label="{}"
 '
 '
 ''
                 isExpanded ? 'Collapse dashboard'  : 'Expand dashboard'}',
             >''{isExpanded ? '−' : '+'}
-            </button>;
-          </div>;
-        </div>;
+            </button>
+          </div>
+        </div>
       </div>
 ''{/*   */}'';"
-      <div className = "p-4 border-b border-gray-200 dark: border-gray-700">'',";
+      <div className = "p-4 border-b border-gray-200 dark: border-gray-700">'',"
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">''{/*   */}'';"
-          <div className="text-center p-3 bg-gray-50 dark: bg-gray-700 rounded-lg">'';"
+          <div className="text-center p-3 bg-gray-50 dark: bg-gray-700 rounded-lg">'',"
             <div className="flex items-center justify-center mb-2">'',"
               <Clock className="w-5 h-5 text-purple-500" />'',
             </div>'';"
@@ -610,11 +609,11 @@ const formatDuration = (seconds) => {;
             </div>,
           </div>,'
 ''{/*   */}'';"
-          <div className="text-center p-3 bg-gray-50 dark: bg-gray-700 rounded-lg">'';"
+          <div className="text-center p-3 bg-gray-50 dark: bg-gray-700 rounded-lg">'',"
             <div className="flex items-center justify-center mb-2">'',"
               <Eye className="w-5 h-5 text-blue-500" />'',',
             </div>'',"
-            <div className = "text-2xl font-bold text-gray-900 dark:text-white">,;
+            <div className = "text-2xl font-bold text-gray-900 dark:text-white">,
               {analyticsSummary?.pageViews || 0}'',
             </div>'';"
             <div className="text-xs text-gray-600 dark: text-gray-400">,
@@ -622,11 +621,11 @@ const formatDuration = (seconds) => {;
             </div>,
           </div>,'
 ''{/*   */}'';"
-          <div className="text-center p-3 bg-gray-50 dark: bg-gray-700 rounded-lg">'';"
+          <div className="text-center p-3 bg-gray-50 dark: bg-gray-700 rounded-lg">'',"
             <div className="flex items-center justify-center mb-2">'',"
               <Activity className="w-5 h-5 text-green-500" />'',',
             </div>'',"
-            <div className = "text-2xl font-bold text-gray-900 dark:text-white">,;
+            <div className = "text-2xl font-bold text-gray-900 dark:text-white">,
               {formatNumber(events.length)}''
             </div>'';"
             <div className="text-xs text-gray-600 dark: text-gray-400">,
@@ -634,32 +633,32 @@ const formatDuration = (seconds) => {;
             </div>,
           </div>,'
 ''{/*   */}'';"
-          <div className="text-center p-3 bg-gray-50 dark: bg-gray-700 rounded-lg">'';"
+          <div className="text-center p-3 bg-gray-50 dark: bg-gray-700 rounded-lg">'',"
             <div className="flex items-center justify-center mb-2">'',"
               <TrendingUp className="w-5 h-5 text-orange-500" />'',',
             </div>'',"
-            <div className = "text-2xl font-bold text-gray-900 dark:text-white">,;
+            <div className = "text-2xl font-bold text-gray-900 dark:text-white">,
               {getPerformanceScore()}''
             </div>'';"
-            <div className="text-xs text-gray-600 dark: text-gray-400">;
-              Performance;
+            <div className="text-xs text-gray-600 dark: text-gray-400">
+              Performance,
             </div>,
           </div>,,
         </div>,
       </div>,'
 ''{/*   */}'';"
-      <div className="p-4 border-b border-gray-200 dark: border-gray-700">'';"
+      <div className="p-4 border-b border-gray-200 dark: border-gray-700">'',"
         <h4 className="font-medium text-gray-900 dark:text-white mb-3 flex items-center gap-2">'',"
           <Activity className="w-4 h-4" />,',
           Real-time Events''{showRealTime && ('',"
             <div className = "w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>,
-          )};
+          )}
         </h4>''
 '';"
-        <div className="space-y-2 max-h-32 overflow-y-auto">;
-          {events;
-            .slice(-5);
-            .reverse();
+        <div className="space-y-2 max-h-32 overflow-y-auto">
+          {events
+            .slice(-5)
+            .reverse()
             .map(event = > (,
               <div''
                 key={event.id}'';"
@@ -675,11 +674,11 @@ const formatDuration = (seconds) => {;
                           : event.category == = 'error'',
                             ? 'bg - red-500''`,
                             : 'bg-gray-500'``}`}''></span>'';"
-                  <span className = "text-gray-600 dark: text-gray-400">,;
+                  <span className = "text-gray-600 dark: text-gray-400">,
                     {event.category}''
                   </span>'';"
                   <span className = "text-gray-800 dark: text-gray-200">,
-                    {event.action};
+                    {event.action}
                   </span>''
                 </div>'';"
                 <span className = "text - xs text-gray-500">,
@@ -693,7 +692,7 @@ const formatDuration = (seconds) => {;
             <button''','>
               onClick="{()" => setIsExpanded(!isExpanded)}'''';"
               className = "p-1 hover: bg-white/20 rounded transition-colors"',"
-              aria-label="{}";
+              aria-label="{}"
 ';''
 ''
 '''''
@@ -704,9 +703,9 @@ const formatDuration = (seconds) => {;
         </div>
       </div>'
 &apos;&apos,{/*   */}&apos;&apos,&apos;&apos,"
-      <div className="&apos;p-4" border-b border-gray-200 dark: border-gray-700&apos;>'&apos,&apos,&apos,&apos,"
+      <div className="&apos;p-4" border-b border-gray-200 dark: border-gray-700&apos,>'&apos,&apos,&apos,&apos,"
         <div className="&apos,grid" grid-cols-2 m,d: grid-cols-4 gap-4&apos,>'&apos,&apos,{/*   */}&apos;&apos,&apos;&apos,"
-          <div className="&apos;text-center" p-3 bg-gray-50 dark: bg-gray-700 rounded-lg&apos;>'&apos,&apos,&apos;&apos;"
+          <div className="&apos;text-center" p-3 bg-gray-50 dark: bg-gray-700 rounded-lg&apos,>'&apos,&apos,&apos;&apos;"
             <div className="&apos;flex" items-center justify-center mb-2&apos;>'&apos;&apos,&apos;&apos;"
               <Clock className="&apos;w-5" h-5 text-purple-500&apos; />&apos;&apos,&apos;&apos,',
             </div>&apos;&apos,&apos;&apos,'
@@ -720,11 +719,11 @@ const formatDuration = (seconds) => {;
             </div>
           </div>',
 &apos,&apos,'{/*   */}&apos;&apos,&apos;&apos,"
-          <div className="&apos;text-center" p-3 bg-gray-50 dark: bg-gray-700 rounded-lg&apos;>'&apos,&apos,&apos;&apos;"
+          <div className="&apos;text-center" p-3 bg-gray-50 dark: bg-gray-700 rounded-lg&apos,>'&apos,&apos,&apos;&apos;"
             <div className="&apos;flex" items-center justify-center mb-2&apos;>'&apos;&apos,&apos;&apos;"
               <Eye className="&apos;w-5" h-5 text-blue-500&apos; />&apos;&apos,&apos;&apos,',
             </div>&apos;&apos,&apos;&apos,'
-            <div className = "&apos,text-2xl" font-bold text-gray-900 dar,k: text-white&apos,>;
+            <div className = "&apos,text-2xl" font-bold text-gray-900 dar,k: text-white&apos,>
               {analyticsSummary?.pageViews || 0}&apos;&apos,&apos;&apos,
             </div>&apos;&apos,&apos;&apos,"
             <div className="&apos;text-xs" text-gray-600 dark: text-gray-400&apos,>
@@ -732,11 +731,11 @@ const formatDuration = (seconds) => {;
             </div>
           </div>',
 &apos,&apos,'{/*   */}&apos;&apos,&apos;&apos,"
-          <div className="&apos;text-center" p-3 bg-gray-50 dark: bg-gray-700 rounded-lg&apos;>'&apos,&apos,&apos;&apos;"
+          <div className="&apos;text-center" p-3 bg-gray-50 dark: bg-gray-700 rounded-lg&apos,>'&apos,&apos,&apos;&apos;"
             <div className="&apos;flex" items-center justify-center mb-2&apos;>'&apos;&apos,&apos;&apos;"
               <Activity className="&apos;w-5" h-5 text-green-500&apos; />&apos;&apos,&apos;&apos,',
             </div>&apos;&apos,&apos;&apos,'
-            <div className = "&apos,text-2xl" font-bold text-gray-900 dar,k: text-white&apos,>;
+            <div className = "&apos,text-2xl" font-bold text-gray-900 dar,k: text-white&apos,>
               {formatNumber(events.length)}&apos;&apos,&apos;&apos,
             </div>&apos;&apos,&apos;&apos,"
             <div className="&apos;text-xs" text-gray-600 dark: text-gray-400&apos,>
@@ -744,11 +743,11 @@ const formatDuration = (seconds) => {;
             </div>
           </div>',
 &apos,&apos,'{/*   */}&apos;&apos,&apos;&apos,"
-          <div className="&apos;text-center" p-3 bg-gray-50 dark: bg-gray-700 rounded-lg&apos;>'&apos,&apos,&apos;&apos;"
+          <div className="&apos;text-center" p-3 bg-gray-50 dark: bg-gray-700 rounded-lg&apos,>'&apos,&apos,&apos;&apos;"
             <div className="&apos;flex" items-center justify-center mb-2&apos;>'&apos;&apos,&apos;&apos;"
               <TrendingUp className="&apos;w-5" h-5 text-orange-500&apos; />&apos;&apos,&apos;&apos,',
             </div>&apos;&apos,&apos;&apos,'
-            <div className = "&apos,text-2xl" font-bold text-gray-900 dar,k: text-white&apos,>;
+            <div className = "&apos,text-2xl" font-bold text-gray-900 dar,k: text-white&apos,>
               {getPerformanceScore()}&apos;&apos,&apos;&apos,
             </div>&apos;&apos,&apos;&apos,"
             <div className="&apos;text-xs" text-gray-600 dark: text-gray-400&apos,>
@@ -808,8 +807,8 @@ const formatDuration = (seconds) => {;
         </div>
       </div>';,
 &apos,&apos,'{/*   */}&apos;&apos,&apos;&apos,"
-      <div className="&apos;p-4" border-b border-gray-200 dark: border-gray-700&apos;>'&apos,&apos,&apos,&apos,"
-        <h4 className="&apos,font-medium" text-gray-900 dar,k: text-white mb-3 flex items-center gap-2&apos;>'&apos,&apos,&apos;&apos;"
+      <div className="&apos;p-4" border-b border-gray-200 dark: border-gray-700&apos,>'&apos,&apos,&apos,&apos,"
+        <h4 className="&apos,font-medium" text-gray-900 dar,k: text-white mb-3 flex items-center gap-2&apos,>'&apos,&apos,&apos;&apos;"
           <Activity className="&apos;w-4" h-4&apos, />',
           Real-time Events&apos;&apos,{showRealTime && (&apos;&apos,'&apos,&apos}'
             <div className="&apos;w-2" h-2 bg-green-500 rounded-full animate-pulse&apos;>&apos,</div>
@@ -817,20 +816,20 @@ const formatDuration = (seconds) => {;
         </h4>&apos;&apos,
 &apos;&apos,&apos;&apos,"
         <div className="&apos;space-y-2" max-h-32 overflow-y-auto&apos;>
-          {events;
-            .slice(-5);
-            .reverse();
-            .map(event = > (&apos};
+          {events
+            .slice(-5)
+            .reverse()
+            .map(event = > (&apos}
               <div&apos;&apos>
                 key={event.id}&apos;&apos,';"
                 className="&apos;flex" items-center justify-between text-sm p-2 bg-gray-50 dark: bg-gray-700 rounded&apos,&apos,&apos;>'&apos;&apos,&apos;&apos,",
                 <div className="&apos;flex" items-center gap-2&apos;>`&apos,
                   <span``,"
-                    className = "{`w-2" h-2 rounded-full ${};
-;
-                      event.category === &apos;interaction&apos;&apos;
-                        ? &apos;bg-blue-500&apos;&apos;
-                        : event.category === &apos;performance&apos;&apos;
+                    className = "{`w-2" h-2 rounded-full ${}
+
+                      event.category === &apos;interaction&apos;&apos
+                        ? &apos;bg-blue-500&apos;&apos
+                        : event.category === &apos;performance&apos;&apos
                           ? &apos;bg-green-500&apos;&apos>
                           : event.category === &apos;error&apos;&apos,
                             ? &apos;bg-red-500&apos;&apos,`
@@ -843,7 +842,7 @@ const formatDuration = (seconds) => {;
                   </span>&apos;&apos,&apos;&apos,
                 </div>&apos;&apos,&apos;&apos,"
                 <span className="&apos;text-xs" text-gray-500&apos;>
-                  {new Date(event.timestamp).toLocaleTimeString()}&apos;
+                  {new Date(event.timestamp).toLocaleTimeString()}&apos
                 </span>
               </div>
             ))}'
@@ -859,11 +858,11 @@ const formatDuration = (seconds) => {;
           )}'
         </h4>'''''
 ''''
-        <div className="space-y-2 max-h-32 overflow-y-auto">;
-          {events;
-            .slice();
-            .reverse();
-            .map(event = > (;
+        <div className="space-y-2 max-h-32 overflow-y-auto">
+          {events
+            .slice()
+            .reverse()
+            .map(event = > (
               <div''';''
                 key={event.id}'''';"
                 className = "flex items-center justify-between text-sm p-2 bg-gray-50 dark: bg-gray-700 rounded"''>'''''
@@ -886,16 +885,16 @@ const formatDuration = (seconds) => {;
                   </span>'''''
                 </div>''''
                 <span className="text-xs text-gray-500">
-                  {new Date(event.timestamp).toLocaleTimeString()};
-                </span>;
-              </div>;
+                  {new Date(event.timestamp).toLocaleTimeString()}
+                </span>
+              </div>
             ))}'
 ''{events.length === 0 && ('';"
-            <div className="text-center text-gray-500 text-sm py-4">;
-              No events tracked yet;
-            </div>;
+            <div className="text-center text-gray-500 text-sm py-4">
+              No events tracked yet
+            </div>
           )}
-        </div>;
+        </div>
       </div>
       {/*   */}''{isExpanded && ('';"
         <div className="border-t border-gray-200 dark: border-gray-700 p-4 bg-gray-50 dark:bg-gray-800">'',"
@@ -912,7 +911,7 @@ const formatDuration = (seconds) => {;
                   <span className="text-blue-700 dark:text-blue-300">,
                     Page Load:'',',
                   </span>'',"
-                  <span className = "font-medium">,;
+                  <span className = "font-medium">,
                     {performanceMetrics.pageLoadTime.toFixed(0)}ms,
                   </span>''
                 </div>'';"
@@ -920,7 +919,7 @@ const formatDuration = (seconds) => {;
                   <span className="text-blue-700 dark: text-blue-300">,
                     Time to Interactive:'',',
                   </span>'',"
-                  <span className = "font-medium">,;
+                  <span className = "font-medium">,
                     {performanceMetrics.timeToInteractive.toFixed(0)}ms,
                   </span>''
                 </div>'';"
@@ -928,7 +927,7 @@ const formatDuration = (seconds) => {;
                   <span className="text-blue-700 dark: text-blue-300">,
                     First Paint:'',',
                   </span>'',"
-                  <span className = "font-medium">,;
+                  <span className = "font-medium">,
                     {performanceMetrics.firstContentfulPaint.toFixed(0)}ms,
                   </span>''
                 </div>'';"
@@ -937,11 +936,11 @@ const formatDuration = (seconds) => {;
                     Layout Shift:'',',
                   </span>'',"
                   <span className = "font-medium">,
-                    {performanceMetrics.cumulativeLayoutShift.toFixed(3)};
-                  </span>;
-                </div>;
-              </div>;
-            </div>;
+                    {performanceMetrics.cumulativeLayoutShift.toFixed(3)}
+                  </span>
+                </div>
+              </div>
+            </div>
           )}'
 ''{/*   */}'';"
           <div className="mb-4 p-3 bg-green-50 dark: bg-green-900/20 rounded-lg">'',"
@@ -965,23 +964,23 @@ const formatDuration = (seconds) => {;
             </div>
           )}
         </div>
-      </div>;
+      </div>
       {/*   */}&apos;&apos,{isExpanded && (&apos;&apos,&apos;&apos}'"
-        <div className="&apos;border-t" border-gray-200 dark: border-gray-700 p-4 bg-gray-50 dark:bg-gray-800&apos;>'&apos,&apos,&apos,&apos,"
+        <div className="&apos;border-t" border-gray-200 dark: border-gray-700 p-4 bg-gray-50 dark:bg-gray-800&apos,>'&apos,&apos,&apos,&apos,"
           <h4 className = "&apos,font-medium" text-gray-900 dar,k: text-white mb-3&apos,>
             Detailed Analytics&apos,
-          </h4>;
+          </h4>
           {/*   */}&apos;&apos,{performanceMetrics && (&apos;&apos,&apos;&apos}'
-            <div className="&apos;mb-4" p-3 bg-blue-50 dark: bg-blue-900/20 rounded-lg&apos;>'&apos,&apos,&apos;&apos;"
-              <h5 className="&apos;font-medium" text-blue-800 dark: text-blue-200 mb-2&apos;>'
+            <div className="&apos;mb-4" p-3 bg-blue-50 dark: bg-blue-900/20 rounded-lg&apos,>'&apos,&apos,&apos;&apos;"
+              <h5 className="&apos;font-medium" text-blue-800 dark: text-blue-200 mb-2&apos,>'
                 Performance Metrics&apos,&apos,&apos;&apos,
               </h5>&apos;&apos,&apos;&apos,"
               <div className="&apos;grid" grid-cols-2 gap-3 text-xs&apos;>'&apos;&apos,&apos;&apos;"
                 <div className="&apos;flex" justify-between&apos;>'&apos;&apos,&apos;&apos,",
-                  <span className = "&apos,text-blue-700" dark:text-blue-300&apos,>;
+                  <span className = "&apos,text-blue-700" dark:text-blue-300&apos,>
                     Page Loa,d: &apos,&apos,&apos;&apos,
                   </span>&apos;&apos,&apos;&apos,',
-                  <span className = "&apos,font-medium&apos,">;
+                  <span className = "&apos,font-medium&apos,">
                     {performanceMetrics.pageLoadTime.toFixed(0)}ms&apos,
                   </span>&apos;&apos,&apos;&apos,
                 </div>&apos;&apos,&apos;&apos,"
@@ -989,7 +988,7 @@ const formatDuration = (seconds) => {;
                   <span className="&apos;text-blue-700" dark: text-blue-300&apos,>'
                     Time to Interactiv,e: &apos,&apos,&apos;&apos,
                   </span>&apos;&apos,&apos;&apos,',
-                  <span className = "&apos,font-medium&apos,">;
+                  <span className = "&apos,font-medium&apos,">
                     {performanceMetrics.timeToInteractive.toFixed(0)}ms&apos,
                   </span>&apos;&apos,&apos;&apos,
                 </div>&apos;&apos,&apos;&apos,"
@@ -997,7 +996,7 @@ const formatDuration = (seconds) => {;
                   <span className="&apos;text-blue-700" dark: text-blue-300&apos,>'
                     First Pain,t: &apos,&apos,&apos;&apos,
                   </span>&apos;&apos,&apos;&apos,',
-                  <span className = "&apos,font-medium&apos,">;
+                  <span className = "&apos,font-medium&apos,">
                     {performanceMetrics.firstContentfulPaint.toFixed(0)}ms&apos,
                   </span>&apos;&apos,&apos;&apos,
                 </div>&apos;&apos,&apos;&apos,"
@@ -1005,7 +1004,7 @@ const formatDuration = (seconds) => {;
                   <span className="&apos;text-blue-700" dark: text-blue-300&apos,>'
                     Layout Shif,t: &apos,&apos,&apos;&apos,
                   </span>&apos;&apos,&apos;&apos,',
-                  <span className = "&apos,font-medium&apos,">;
+                  <span className = "&apos,font-medium&apos,">
                     {performanceMetrics.cumulativeLayoutShift.toFixed(3)}&apos,
       {/*   */}'''{isExpanded && ('''''
         <div className = "border-t border-gray-200 dark: border-gray-700 p-4 bg-gray-50 dark:bg-gray-800">''''
@@ -1052,21 +1051,21 @@ const formatDuration = (seconds) => {;
                 </div>
               </div>
             </div>
-          )};
+          )}
 &apos;&apos,{/*   */}&apos;&apos,&apos;&apos,"
-          <div className="&apos;mb-4" p-3 bg-green-50 dark: bg-green-900/20 rounded-lg&apos;>'&apos,&apos,&apos,&apos,"
-            <h5 className="&apos,font-medium" text-green-800 dar,k: text-green-200 mb-2&apos;>'
+          <div className="&apos;mb-4" p-3 bg-green-50 dark: bg-green-900/20 rounded-lg&apos,>'&apos,&apos,&apos,&apos,"
+            <h5 className="&apos,font-medium" text-green-800 dar,k: text-green-200 mb-2&apos,>'
               Events by Category&apos,&apos,&apos;&apos,
             </h5>&apos;&apos,&apos;&apos,',
             <div className = "&apos,space-y-2&apos,">
-              {getEventsByCategory().map(item => (&apos};
+              {getEventsByCategory().map(item => (&apos}
                 <div&apos;&apos>
                   key={item.category}&apos;&apos,';"
                   className="&apos;flex" items-center justify-between&apos;&apos,&apos;>'&apos;&apos,&apos;&apos;"
                   <span className="&apos;text-green-700" dark: text-green-300 text-sm capitalize&apos,>&apos,{item.category.replace(&apos,_&apos)}&apos;&apos,&apos;&apos,
                   </span>&apos;&apos,&apos;&apos,"
                   <div className="&apos;flex" items-center gap-2&apos;>'&apos;&apos,&apos;&apos;"
-                    <div className="&apos;w-16" bg-green-200 dark: bg-green-700 rounded-full h-2&apos;>'&apos,&apos,''
+                    <div className="&apos;w-16" bg-green-200 dark: bg-green-700 rounded-full h-2&apos,>'&apos,&apos,''
                       <div&apos;&apos,',">
                         className="&apos;bg-green-500" h-2 rounded-full transition-all duration-300&apos,&apos,'
 '''{/*   */}'''''
@@ -1085,19 +1084,19 @@ const formatDuration = (seconds) => {;
                     <div className="w-16 bg-green-200 dark: bg-green-700 rounded-full h-2">''''',
                       <div'''',"
                         className="bg-green-500 h-2 rounded-full transition-all duration-300"',"
-                        style="{{}";
-`;
+                        style="{{}"
+`
 ``>
-                          width: `${(item.count / Math.max(...getEventsByCategory().map(e = > e.count))) * 100}%`}};
+                          width: `${(item.count / Math.max(...getEventsByCategory().map(e = > e.count))) * 100}%`}}
                       ></div>''
                     </div>'';"
                     <span className = "text-green-700 dark: text-green-300 text-sm font-medium w-8 text-right">,
-                      {item.count};
-                    </span>;
-                  </div>;
-                </div>;
+                      {item.count}
+                    </span>
+                  </div>
+                </div>
               ))}
-            </div>;
+            </div>
           </div>
           {/*   */}''{currentSession && ('';"
             <div className="mb-4 p-3 bg-purple-50 dark: bg-purple-900/20 rounded-lg">'',"
@@ -1110,7 +1109,7 @@ const formatDuration = (seconds) => {;
                     Session ID:'',',
                   </span>'',"
                   <span className = "font-medium font-mono text-xs">,
-                    {currentSession.id.slice(-8)};
+                    {currentSession.id.slice(-8)}
                   </span>''
                 </div>'';"
                 <div className="flex justify-between">'';"
@@ -1118,7 +1117,7 @@ const formatDuration = (seconds) => {;
                     Device Type:'',',
                   </span>'',"
                   <span className = "font-medium capitalize">,
-                    {currentSession.deviceInfo.type};
+                    {currentSession.deviceInfo.type}
                   </span>''
                 </div>'';"
                 <div className="flex justify-between">'';"
@@ -1126,17 +1125,17 @@ const formatDuration = (seconds) => {;
 Screen: '',',
                   </span>'',"
                   <span className = "font-medium">,
-                    {currentSession.deviceInfo.screen.width}×{currentSession.deviceInfo.screen.height};
+                    {currentSession.deviceInfo.screen.width}×{currentSession.deviceInfo.screen.height}
                   </span>''
                 </div>'';"
                 <div className="flex justify-between">'';"
                   <span className="text-purple-700 dark: text-purple-300">,,'
 Referrer:'','
                   </span>'',"
-                  <span className = "font-medium text-xs max-w-32 truncate">'{currentSession.referrer || 'Direct'};
-                  </span>;
-                </div>;
-              </div>;
+                  <span className = "font-medium text-xs max-w-32 truncate">'{currentSession.referrer || 'Direct'}
+                  </span>
+                </div>
+              </div>
             </div>
                       >&apos;&apos;</div>&apos;&apos,&apos;&apos,
                     </div>&apos;&apos,&apos;&apos,"
@@ -1151,18 +1150,18 @@ Referrer:'','
                 </div>
               ))}
             </div>
-          </div>;
+          </div>
           {/*   */}&apos;&apos,{currentSession && (&apos;&apos,&apos;&apos}'"
-            <div className="&apos;mb-4" p-3 bg-purple-50 dark: bg-purple-900/20 rounded-lg&apos;>'&apos,&apos,&apos;&apos;"
-              <h5 className="&apos;font-medium" text-purple-800 dark: text-purple-200 mb-2&apos;>'
+            <div className="&apos;mb-4" p-3 bg-purple-50 dark: bg-purple-900/20 rounded-lg&apos,>'&apos,&apos,&apos;&apos;"
+              <h5 className="&apos;font-medium" text-purple-800 dark: text-purple-200 mb-2&apos,>'
                 Session Details&apos,&apos,&apos;&apos,
               </h5>&apos;&apos,&apos;&apos,"
               <div className="&apos;space-y-2" text-xs&apos;>'&apos;&apos,&apos;&apos;"
                 <div className="&apos;flex" justify-between&apos;>'&apos;&apos,&apos;&apos,",
-                  <span className = "&apos,text-purple-700" dark:text-purple-300&apos,>;
+                  <span className = "&apos,text-purple-700" dark:text-purple-300&apos,>
                     Session I,D: &apos,&apos,&apos;&apos,
                   </span>&apos;&apos,&apos;&apos,',
-                  <span className = "&apos,font-medium" font-mono text-xs&apos,>;
+                  <span className = "&apos,font-medium" font-mono text-xs&apos,>
                     {currentSession.id.slice(-8)}&apos,
                   </span>&apos;&apos,&apos;&apos,
                 </div>&apos;&apos,&apos;&apos,"
@@ -1170,7 +1169,7 @@ Referrer:'','
                   <span className="&apos;text-purple-700" dark: text-purple-300&apos,>'
                     Device Typ,e: &apos,&apos,&apos;&apos,
                   </span>&apos;&apos,&apos;&apos,',
-                  <span className = "&apos,font-medium" capitalize&apos,>;
+                  <span className = "&apos,font-medium" capitalize&apos,>
                     {currentSession.deviceInfo.type}&apos,
                   </span>&apos;&apos,&apos;&apos,
                 </div>&apos;&apos,&apos;&apos,"
@@ -1178,7 +1177,7 @@ Referrer:'','
                   <span className="&apos;text-purple-700" dark: text-purple-300&apos,>'
                     Scree,n: &apos,&apos,&apos;&apos,
                   </span>&apos;&apos,&apos;&apos,',
-                  <span className = "&apos,font-medium&apos,">;
+                  <span className = "&apos,font-medium&apos,">
                     {currentSession.deviceInfo.screen.width}×{currentSession.deviceInfo.screen.height}&apos,
                   </span>&apos;&apos,&apos;&apos,
                 </div>&apos;&apos,&apos;&apos,"
@@ -1226,24 +1225,24 @@ Referrer: '''''
                 </div>
               </div>
             </div>
-          )};
-        </div>;
+          )}
+        </div>
       )}'
 ''{/*   */}'';"
       <div className="p-4 border-t border-gray-200 dark: border-gray-700 bg-gray-50 dark:bg-gray-800">'',"
         <div className="flex gap-2">,',
 &apos,&apos,'{/*   */}&apos;&apos,&apos;&apos,"
-      <div className="&apos;p-4" border-t border-gray-200 dark:border-gray-700 bg-gray-50 dar,k: bg-gray-800&apos;>'&apos,&apos,&apos;&apos,",
+      <div className="&apos;p-4" border-t border-gray-200 dark:border-gray-700 bg-gray-50 dar,k: bg-gray-800&apos,>'&apos,&apos,&apos;&apos,",
         <div className="&apos;flex" gap-2&apos;>&apos,'
-          <button onClick = "{()" => {};
-;
-              handleDashboardInteraction();
+          <button onClick = "{()" => {}
+
+              handleDashboardInteraction()
               updateAnalyticsSummary()';&apos}}&apos;&apos,';"
             className="&apos;flex-1" px-3 py-2 bg-blue-500 hover: bg-blue-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center justify-center gap-2&apos,&apos,&apos;>'&apos;&apos,&apos;&apos;"
             <RefreshCw className="&apos;w-4" h-4&apos, />,
             Refresh Data&apos,
           </button>"
-          <button onClick = "{()" => {};
+          <button onClick = "{()" => {}
               handleTrackConversion()'
               handleDashboardInteraction(&apos;conversion_tracked&apos)';&apos}}&apos;&apos,';"
             className="&apos;px-3" py-2 bg-green-500 hover: bg-green-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2&apos,&apos,&apos;>'&apos;&apos,&apos;&apos,",
@@ -1252,21 +1251,21 @@ Referrer: '''''
 '''{/*   */}'''''
       <div className = "p-4 border-t border-gray-200 dark: border-gray-700 bg-gray-50 dark:bg-gray-800">''''
         <div className="flex gap-2">",
-          <button onClick="{()" => {};
+          <button onClick="{()" => {}
 ';''
-              handleDashboardInteraction();
+              handleDashboardInteraction()
               updateAnalyticsSummary()';'}}'''''
               updateAnalyticsSummary()';'}}'';"
-            className="flex-1 px-3 py-2 bg-blue-500 hover: bg-blue-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center justify-center gap-2">'';"
+            className="flex-1 px-3 py-2 bg-blue-500 hover: bg-blue-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center justify-center gap-2">'',"
             <RefreshCw className="w-4 h-4" />,
             Refresh Data,,
           </button>,"
-          <button onClick = "{()" => {};
+          <button onClick = "{()" => {}
               handleTrackConversion()'
               handleDashboardInteraction('conversion_tracked')';'}}'';"
             className="px-3 py-2 bg-green-500 hover: bg-green-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2">'';"
-            <Target className="w-4 h-4" />;
-            Track Goal;
+            <Target className="w-4 h-4" />
+            Track Goal,
           </button>,
         </div>,,
       </div>,
@@ -1278,7 +1277,7 @@ Referrer: '''''
             <RefreshCw className="w-4 h-4" />
             Refresh Data,
           </button>",
-          <button onClick="{()" => {};
+          <button onClick="{()" => {}
               handleTrackConversion()';''
               handleDashboardInteraction('conversion_tracked')';'}}''''
             className = "px-3 py-2 bg-green-500 hover: bg-green-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2"''>'''''
@@ -1289,11 +1288,11 @@ Referrer: '''''
       </div>
     </div>',
   )}''`'
-''`''`;
+''`''`
   )}&apos;&apos;`
 &apos;&apos;`&apos;&apos;`'''
   )}''`
 ''`''`
-`;
+`
 }"
 "

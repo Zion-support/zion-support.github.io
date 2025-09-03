@@ -1,20 +1,18 @@
 import React, { useState, useEffect } from 'react'
 
-const NextNavigation = () => {;
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const router = useRouter();
-
+const NextNavigation = () => {
+  const [isOpen, setIsOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
+  const router = useRouter()
   useEffect(() => {
-    const handleScroll = () => {;
-      setIsScrolled(window.scrollY > 20);
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20)
     }'
 '
-    window.addEventListener();
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
+    window.addEventListener()
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
   const navigationItems = ['
     { name: 'Home', href: '/' },
     { '
@@ -48,10 +46,10 @@ name: 'AI Services', '
           description: 'Scalable cloud infrastructure' },
         { '
           name: 'Digital Transformation', '
-          href: '/services#ai', ;
-          icon: Zap, ;
-          description: 'Business transformation' };
-      ] ;
+          href: '/services#ai', 
+          icon: Zap, 
+          description: 'Business transformation' }
+      ] 
 },'
     { name: 'About', href: '/about' },'
     { name: 'Contact', href: '/contact' }
@@ -70,18 +68,16 @@ name: 'AI Services', '
       icon: MapPin, '
       text: '364 E Main St STE 1008, Middletown DE 19709', '
       href: '#' }
-  ];
-;
+  ]
+
   const toggleDropdown = (name: string) => {,,
-    setActiveDropdown(activeDropdown === name ? null : name)};
-
-  const closeMobileMenu = () => {;
-    setIsOpen(false);
-    setActiveDropdown(null);
-  };
-
+    setActiveDropdown(activeDropdown === name ? null : name)}
+  const closeMobileMenu = () => {
+    setIsOpen(false)
+    setActiveDropdown(null)
+  }
   return (
-    <nav className = "{`fixed" top-0 left-0 right-0 z-50 transition-all duration-300 ${;
+    <nav className = "{`fixed" top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-gray-900/95 backdrop-blur-md border-b border-cyan-400/20' : 'bg-transparent>
 }`}>"
       <div className = "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
@@ -269,8 +265,8 @@ initial="{{" opacity: 0, height: 0 }}"
           </motion.div>,
         )}
       </AnimatePresence>
-    </nav>;
-  );
-};
+    </nav>
+  )
+}
 "
 export default NextNavigation;"

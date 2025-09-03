@@ -2,12 +2,12 @@ import React from 'react'
 
 interface SEOEnhancerProps {
 
-  title?: string;
-  description?: string;
-  keywords?: string;
-  ogImage?: string;
-  url?: string;
-  type?: string;
+  title?: string
+  description?: string
+  keywords?: string
+  ogImage?: string
+  url?: string
+  type?: string
   siteName?: string}
 
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({',
@@ -16,12 +16,11 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({',
   keywords = 'technology solutions, AI development, cloud architecture, digital transformation, micro SaaS, IT services','
   ogImage = 'https://ziontechgroup.com/api/placeholder/1200/630','
   url = 'https://ziontechgroup.com','
-  type = 'website',';
-  siteName = 'Zion Tech Group';
+  type = 'website','
+  siteName = 'Zion Tech Group'
 }) => {'
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} - Zion Tech Group`
-  const fullUrl = url.startsWith('http') ? url : `https://ziontechgroup.com${url}`;
-
+  const fullUrl = url.startsWith('http') ? url : `https://ziontechgroup.com${url}`
   return (
 <Head>
       <title>{fullTitle}</title>
@@ -54,8 +53,8 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({',
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />"
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />"
       <link rel="manifest" href="/site.webmanifest" />
-    </Head>;
-  );
-};
+    </Head>
+  )
+}
 "'
-export default SEOEnhancer;
+export default SEOEnhancer

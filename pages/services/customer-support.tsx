@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-;
+
   return (
 <Layout title = "Customer Support Platform - Zion Tech Group""
       description="Comprehensive customer support platform with AI chatbots, multi-channel support, and advanced analytics. Improve customer satisfaction and scale your support operations."
@@ -160,6 +160,6 @@ exceptional customer experiences while optimizing your support operations.
         </div>
       </section>
     </Layout>;,
-  )};
+  )}
 "
-export default CustomerSupport;
+export default CustomerSupport

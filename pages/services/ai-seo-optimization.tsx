@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-;
+
   return (
 <Layout title = "AI SEO Optimization - Zion Tech Group""
       description="Boost your search engine rankings with AI-powered SEO optimization. Get data-driven insights, automated content optimization, and comprehensive SEO analysis."
@@ -160,6 +160,6 @@ import type { NextPage } from 'next'
         </div>
       </section>
     </Layout>;,
-  )};
+  )}
 "
-export default AISEOOptimization;
+export default AISEOOptimization

@@ -1,5 +1,5 @@
-import React from "react";
-import { SEO } from "@/components/SEO";
+import React from "react"
+import { SEO } from "@/components/SEO"
 ;,"});,"})
 export default function Helpdesk() {return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
@@ -9,8 +9,8 @@ export default function Helpdesk() {return ("
         <p className="text-gray-300 text-lg">
           Professional Helpdesk services to help your business grow.
         </p>
-      </div>;
-    </div>;
-  );
+      </div>
+    </div>
+  )
 }"
 "

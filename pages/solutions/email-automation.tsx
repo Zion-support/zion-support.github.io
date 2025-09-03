@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
   Aperture,
   Clock} from 'lucide-react'
 
@@ -17,15 +17,15 @@ export default function EmailAutomation() {
       icon: Aperture,'
       title: 'A/B Testing','
       description: 'Optimize your email campaigns with built-in A/B testing and performance analytics.'},
-    {;
-      icon: BarChart3,;
-      title: 'Analytics Dashboard',;
-      description: 'Track open rates, click-through rates, and conversions with detailed reporting.;
+    {
+      icon: BarChart3,
+      title: 'Analytics Dashboard',
+      description: 'Track open rates, click-through rates, and conversions with detailed reporting.
 },
     {
       icon: Clock,'
       title: 'Automated Triggers','
-      description: 'Set up automated emails based on user behavior, time delays, and custom conditions.;
+      description: 'Set up automated emails based on user behavior, time delays, and custom conditions.
 },
     {
       icon: Zap,'
@@ -80,10 +80,10 @@ export default function EmailAutomation() {
 
   return (
     <>
-      <SEO title="Email Automation - Zion Tech Group"";
+      <SEO title="Email Automation - Zion Tech Group""
         description="Intelligent email marketing automation with personalized campaigns and advanced analytics. Boost your email marketing ROI."">
         keywords="email automation, email marketing, drip campaigns, personalization, A/B testing">
-      />;
+      />
 <Head>
         <title>Email Automation - Zion Tech Group</title>
       </Head>
@@ -221,4 +221,4 @@ to increase engagement and drive conversions.
         </div>
       </section>
     </>",
-  )};
+  )}

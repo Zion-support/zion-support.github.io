@@ -1,19 +1,17 @@
 const React = dynamic(() => import('react'), { ssr: false })
 const Head = dynamic(() => import('next/head'), { ssr: false })
 const Link = dynamic(() => import('next/link'), { ssr: false })
-  ];
-;
-  const categories = ['All', 'Artificial Intelligence', 'Cloud Computing', 'Software Development', 'Cybersecurity', 'Data Analytics'];
-  const [selectedCategory, setSelectedCategory] = React.useState();
-  const [searchQuery, setSearchQuery] = React.useState('');
+  ]
 
-  const filteredWhitepapers = whitepapers.filter(paper => {;
-    const matchesCategory = selectedCategory === 'All' || paper.category === selectedCategory;
-    const matchesSearch = paper.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-                         paper.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-                         paper.topics.some(topic => topic.toLowerCase().includes(searchQuery.toLowerCase()));
-    return matchesCategory && matchesSearch});
-
+  const categories = ['All', 'Artificial Intelligence', 'Cloud Computing', 'Software Development', 'Cybersecurity', 'Data Analytics']
+  const [selectedCategory, setSelectedCategory] = React.useState()
+  const [searchQuery, setSearchQuery] = React.useState('')
+  const filteredWhitepapers = whitepapers.filter(paper => {
+    const matchesCategory = selectedCategory === 'All' || paper.category === selectedCategory
+    const matchesSearch = paper.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         paper.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         paper.topics.some(topic => topic.toLowerCase().includes(searchQuery.toLowerCase()))
+    return matchesCategory && matchesSearch})
   return (
     <MainLayout title = "Whitepapers - Zion Tech Group""
       description="Download our comprehensive whitepapers and research reports on technology trends and best practices."
@@ -35,5 +33,5 @@ const Link = dynamic(() => import('next/link'), { ssr: false })
               <input type="text""
                 placeholder="Search whitepapers...""
                 className="w-full pl-12 pr-4 py-4 rounded-lg text-gray-900 focus: outline-none focus:ring-2 focus:ring-blue-400"
-              />;
+              />,
     <>,

@@ -3,7 +3,7 @@ import React from 'react'
 interface SEOProps {
 
   title: string,,
-description: string;
+description: string,
   keywords?: string,
   image?: string,,
   url?: string,
@@ -16,13 +16,13 @@ const SEO: React.FC<SEOProps> = ({,
   keywords,
   image,
   url,'
-  type = 'website',';
-  siteName = 'Zion Tech Group';
+  type = 'website','
+  siteName = 'Zion Tech Group'
 }) => {
   const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`
   const fullImage = image || '/images/og-image.jpg'
-  const fullUrl = url || 'https: //ziontechgroup.com',;
-;
+  const fullUrl = url || 'https: //ziontechgroup.com',
+
   return (
 <Head>
       <title>{fullTitle}</title>'
@@ -59,14 +59,14 @@ const SEO: React.FC<SEOProps> = ({,
               'streetAddress': '364 E Main St STE 1008','
               'addressLocality': 'Middletown','
               'addressRegion': 'DE','
-              'postalCode': '19709',';
-              'addressCountry': 'US';
+              'postalCode': '19709','
+              'addressCountry': 'US'
 },'
             'contactPoint': {'
               '@type': 'ContactPoint','
               'telephone': '+1-302-464-0950','
               'contactType': 'customer service','
-              'email': 'kleber@ziontechgroup.com';
+              'email': 'kleber@ziontechgroup.com'
 },'
             'sameAs': ['
               'https://linkedin.com/company/ziontechgroup','
@@ -77,7 +77,7 @@ const SEO: React.FC<SEOProps> = ({,
 }}
       />
     </Head>
-  );
-};
+  )
+}
 "'
-export default SEO;
+export default SEO

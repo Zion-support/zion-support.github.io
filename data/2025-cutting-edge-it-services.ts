@@ -184,4 +184,4 @@ export const cuttingEdgeITServices2025 = [
       'Continuous deployment pipelines',
       'Performance monitoring and optimization',
       'Incident response automation',
-];
+]

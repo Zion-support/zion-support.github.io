@@ -1,7 +1,7 @@
 ''';,"});,"})"
 ''';,"});,"})","});,"})","});,"})","});,"})","});,"})"
 const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {}"});,"})
-    return (";
+    return ("
     <div className="text-center py-16">"""";,"});,"})"
       <div className="bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex">"""";,"});,"})"
         <MessageSquare className="h-10 w-10 text-zion-purple"/>""";,"});,"})"
@@ -32,19 +32,19 @@ export { EmptyState };,"});,"})"
 ;,"});,"})"
 export { EmptyState };,"});,"})
 const EmptyState = ({title, subtitle, cta, href, hasSession }) => {}"
-  return()";
-const EmptyState = memo(({ title, subtitle, cta, href, hasSession }) => {}";
-  return()";
-'next/link';next/link&apos;lucide-react&apos,@/components/ui/button;
-  Tooltip,;
+  return()"
+const EmptyState = memo(({ title, subtitle, cta, href, hasSession }) => {}"
+  return()"
+'next/link';next/link&apos;lucide-react&apos,@/components/ui/button
+  Tooltip,
   TooltipContent,
   TooltipProvider,'
   TooltipTrigger} from &apos;@/components/ui/tooltip';&apos;&apos,
 ';''
   Tooltip, TooltipContent,
   TooltipProvider, ';''
-  TooltipTrigger} from '@/components/ui/tooltip;
-const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {}";
+  TooltipTrigger} from '@/components/ui/tooltip
+const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {}"
   return()""'
   return();"
     <div className="text-center py-16">'';"
@@ -52,20 +52,20 @@ const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {}";
         <MessageSquare className="h - 10 w-10 text-zion-purple" />'',
       </div>'';"
       <h2 className="text-xl font-medium mb-2">{title}</h2>'';"
-      <p className="text-muted-foreground mb-6">{subtitle}</p>;
-      <TooltipProvider>;
-        <Tooltip>;
-          <TooltipTrigger asChild>;
-            {hasSession ? (;
+      <p className="text-muted-foreground mb-6">{subtitle}</p>
+      <TooltipProvider>
+        <Tooltip>
+          <TooltipTrigger asChild>
+            {hasSession ? (
               <Button asChild>;"
-                <Link href="{href}">{cta}</Link>;
-              </Button>;
-            ) : (;
-              <Button disabled>{cta}</Button>;
+                <Link href="{href}">{cta}</Link>
+              </Button>
+            ) : (
+              <Button disabled>{cta}</Button>
             )}
-          </TooltipTrigger>;
+          </TooltipTrigger>
           {!hasSession && <TooltipContent>Login required</TooltipContent>}
-        </Tooltip>;
+        </Tooltip>
       </TooltipProvider>;"
   return()"""
 ""
@@ -96,16 +96,16 @@ const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {}";
           {!hasSession &&} <TooltipContent>Login required</TooltipContent>}
         </Tooltip>
       </TooltipProvider>
-    </div>)};
-export;export default EmptyState;
-export { EmptyState }
-;
-export { EmptyState }
-;
+    </div>)}
+export;export default EmptyState
 export { EmptyState }
 
 export { EmptyState }
-;
+
+export { EmptyState }
+
+export { EmptyState }
+
 export { EmptyState }'
 const EmptyState: React.FC = () => {
   return ("
@@ -128,9 +128,8 @@ const EmptyState: React.FC = () => {
             </a>
           </div>
         </div>
-      </div>;
+      </div>
     </div>;,
-  )};
-
+  )}
 export default EmptyState;"
 "

@@ -25,7 +25,7 @@ const SEOOptimizer = () => {}"});,"})"
                     images['/images/hero - ai-solutions.jpg',/images/hero-it-services.jpg'],,'';,"});,"})"
                     links['/services',/ai - solutions',/about',/contact'],,'';,"});,"})"
                     keywords['AI solutions',quantum computing',cybersecurity',digital transformation'];,"});,"});"
-},;,"});,"})"
+},,"});,"})"
                 {}"});,"})"
 ';,"});,"})"
 '';,"});,"})"
@@ -33,11 +33,11 @@ const SEOOptimizer = () => {}"});,"})"
                     url: '/services',''';,"});,"})"
                     title: 'Our Services - Comprehensive Technology Solutions',''';,"});,"})"
                     metaDescription: 'Comprehensive technology services including AI solutions, cloud infrastructure, cybersecurity, and digital transformation.',''';,"});,"})"
-                    headings['AI Solutions',Cloud & DevOps',Cybersecurity',Digital Transformation'],;''';,"});,"})"
+                    headings['AI Solutions',Cloud & DevOps',Cybersecurity',Digital Transformation'],''';,"});,"})"
                     images['/images/services - overview.jpg'],,'';,"});,"})"
                     links['/ai - solutions',/cloud-devops',/cybersecurity',/about'],,'';,"});,"})"
                     keywords['technology services',AI solutions',cloud infrastructure',cybersecurity'];,"});,"});"
-},;,"});,"})"
+},,"});,"})"
                 {}"});,"})"
 ';,"});,"})"
 '';,"});,"})"
@@ -45,9 +45,9 @@ const SEOOptimizer = () => {}"});,"})"
                     url: '/ai-solutions',''';,"});,"})"
                     title: 'AI Solutions - Artificial Intelligence Services',''';,"});,"})"
                     metaDescription: 'Cutting-edge artificial intelligence solutions including machine learning, predictive analytics, and AI automation.',''';,"});,"})"
-                    headings['Machine Learning',Predictive Analytics',AI Automation',Business Intelligence'],;''';,"});,"})"
+                    headings['Machine Learning',Predictive Analytics',AI Automation',Business Intelligence'],''';,"});,"})"
                     images['/images/ai - solutions.jpg'],,'';,"});,"})"
-                    links['/services',/about',/contact'],;''';,"});,"})"
+                    links['/services',/about',/contact'],''';,"});,"})"
                     keywords['artificial intelligence',machine learning',predictive analytics',AI automation'];,"});,"});"
 }"});,"})"
             ],"});,"})"
@@ -63,8 +63,8 @@ const SEOOptimizer = () => {}"});,"})"
                     images: page.images,"});,"})"
                     links: page.links,"});,"})"
                     keywords: page.keywords,"});,"})"
-                    score,;,"});,"})"
-                    issues,;,"});,"})"
+                    score,,"});,"})"
+                    issues,,"});,"})"
                     recommendations,"});,"});"
 }}) ;,"});,"})"
             const totalPages = pageAnalyses.length,"});,"})"
@@ -81,11 +81,11 @@ const SEOOptimizer = () => {}"});,"})"
                 .map(([issue]) => issue);,"});,"})"
             const summary = generateSummary(pageAnalyses, topIssues);,"});,"})"
             setReport({}"});,"})"
-                totalPages,;,"});,"})"
-                averageScore,;,"});,"})"
-                pagesWithIssues,;,"});,"})"
-                topIssues,;,"});,"})"
-                pageAnalyses,;,"});,"})"
+                totalPages,,"});,"})"
+                averageScore,,"});,"})"
+                pagesWithIssues,,"});,"})"
+                topIssues,,"});,"})"
+                pageAnalyses,,"});,"})"
                 summary,"});,"});"
 }) }"});,"})"
         catch (error) {}"});,"})"
@@ -248,7 +248,7 @@ const SEOOptimizer = () => {}"});,"})"
         if (!report);,"});,"})"
             return,"});,"})"
         const csvContent = ['';,"});,"})"
-            ['Page URL',Title',SEO Score',Issues',Recommendations'],;,"});,"})"
+            ['Page URL',Title',SEO Score',Issues',Recommendations'],,"});,"})"
             ...report.pageAnalyses.map(page => [page.pageUrl,';,"});,"})"
                 page.title,'';,"});,"})"
                 page.score.toString(),'''`;,"});,"})"
@@ -279,7 +279,7 @@ const SEOOptimizer = () => {}"});,"})"
         if (score >= 40)';,"});,"})"
             return 'Fair';""";,"});,"})"
         return 'Poor'};"""";,"});,"})
-    return (";
+    return ("
     <div className="fixed bottom-6 right-24 z-50">""";,"});,"})"
       {/*   */}"""";,"});,"})"
       <button onClick="{()" => setIsOpen(!isOpen)} className="bg-gradient-to-r from-purple-600 to-pink-600 hover: from-purple-700 hover:to-pink-700 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105" aria-label="Toggle SEO Optimizer">"""","});,"})"
@@ -467,13 +467,13 @@ export { SEOOptimizer };,"});,"})"
 ;,"});,"})"
 export { SEOOptimizer };,"});,"})'
  const SEOOptimizer = () => { const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const analyzeSEO = useCallback (async () => { setIsAnalyzing (true)  try {'';import React, { useState, useEffect, useCallback } from 'react''''
- const SEOOptimizer = () => { const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const analyzeSEO = useCallback (async () => { setIsAnalyzing (true)  try {'';
-const SEOOptimizer = () => {};
-    const [isOpen, setIsOpen] = useState();
-    const [isAnalyzing, setIsAnalyzing] = useState();
-    const [report, setReport] = useState();
-    const [selectedPage, setSelectedPage] = useState();
-    const analyzeSEO = useCallback (async () => {};
+ const SEOOptimizer = () => { const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const analyzeSEO = useCallback (async () => { setIsAnalyzing (true)  try {''
+const SEOOptimizer = () => {}
+    const [isOpen, setIsOpen] = useState()
+    const [isAnalyzing, setIsAnalyzing] = useState()
+    const [report, setReport] = useState()
+    const [selectedPage, setSelectedPage] = useState()
+    const analyzeSEO = useCallback (async () => {}
         setIsAnalyzing()'
         try {}
             // Simulate analyzing all pages for SEO,
@@ -481,9 +481,9 @@ const samplePages = []"
                 {}""
 '''
 '''
-'''';
-                    url: '/', '''';
-                    title: 'Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services','''';
+''''
+                    url: '/', ''''
+                    title: 'Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services',''''
                     metaDescription: 'Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services.',''';""'
                     headings['AI - Powered Business Solutions', Comprehensive IT Services',Micro-SaaS Solutions'], ','
                     images['/images/hero - ai-solutions.jpg', /images/hero-it-services.jpg'], ',''
@@ -540,9 +540,9 @@ const samplePages = []"
                     links['/services',/about',/contact'],'
                     keywords['artificial intelligence',machine learning',predictive analytics',AI automation']}
             ]
-            const pageAnalyses = samplePages.map();
-                const issues = identifySEOIssues();
-                const recommendations = generateSEORecommendations();
+            const pageAnalyses = samplePages.map()
+                const issues = identifySEOIssues()
+                const recommendations = generateSEORecommendations()
                 return {}
                     pageUrl: page.url, title: page.title, metaDescription: page.metaDescription, headings: page.headings, images: page.images, links: page.links, keywords: page.keywords, score, issues, recommendations}}) 
             const totalPages = pageAnalyses.length,
@@ -550,14 +550,14 @@ const averageScore = Math.round(pageAnalyses.reduce ( (sum, page) => sum + page.
             const pagesWithIssues = pageAnalyses.filter(page => page.issues.length > 0) .length,
             // Collect all issues and count frequency,
 const issueCounts = {}
-            pageAnalyses.forEach(page => {};
-                page.issues.forEach(issue => {};
-                    issueCounts[issue] = (issueCounts[issue] || 0) + 1})});
-            const topIssues = Object.entries();
+            pageAnalyses.forEach(page => {}
+                page.issues.forEach(issue => {}
+                    issueCounts[issue] = (issueCounts[issue] || 0) + 1})})
+            const topIssues = Object.entries()
                 .sort(([, a], [, b]) => b - a)
-                .slice();
+                .slice()
                 .map(([issue]) => issue)
-            const summary = generateSummary();
+            const summary = generateSummary()
             setReport({}
                 totalPages, averageScore, pagesWithIssues, topIssues, pageAnalyses, summary}) }"
         catch (error) {}""
@@ -676,18 +676,18 @@ if(page.keywords.length >= 3) {}
         if (issues.some(issue => issue.includes('keyword targeting'))) {}""
 '''
             recommendations.push('Research and include relevant keywords naturally throughout the content')}'''
-        if (issues.some(issue => issue.includes('URL'))) {}"`;
-'';
-'';
-'''';
-            recommendations.push('Use SEO-friendly URLs with hyphens and descriptive terms')}'''';
+        if (issues.some(issue => issue.includes('URL'))) {}"`
+''
+''
+''''
+            recommendations.push('Use SEO-friendly URLs with hyphens and descriptive terms')}''''
         recommendations.push('Ensure content is unique, valuable, and addresses user intent')';''
         recommendations.push('Implement structured data markup for better search engine understanding')';''
 ''''
             recommendations.push('Use SEO-friendly URLs with hyphens and descriptive terms')}''''
         recommendations.push('Ensure content is unique, valuable, and addresses user intent')'
         recommendations.push('Implement structured data markup for better search engine understanding')'
-        recommendations.push();
+        recommendations.push()
         return recommendations}
     const generateSummary = (pageAnalyses, topIssues) => {}
         const totalPages = pageAnalyses.length,
@@ -725,15 +725,15 @@ let summary = `Analyzed ${totalPages} pages for SEO.`
             return'''
         const csvContent = ['''
             ['Page URL', Title',SEO Score', Issues',Recommendations'], ...report.pageAnalyses.map(page => [page.pageUrl,'''
-                page.title, ''`";
-                page.score.toString(), '''`"`'";
-                page.issues.join('), ''`'`"`"";
-                page.recommendations.join(')'`'`'`", `"";
-])'`'`'`'`", ``";
+                page.title, ''`"
+                page.score.toString(), '''`"`'"
+                page.issues.join('), ''`'`"`""
+                page.recommendations.join(')'`'`'`", `""
+])'`'`'`'`", ``"
 ].map(row = > row.map(cell => `'${cell}'`).join(')).join('\n')',''
-        const blob = new Blob([csvContent], { type: 'text/csv' })'';
-        const url = window.URL.createObjectURL(blob)';
-        const a = document.createElement('a')'';
+        const blob = new Blob([csvContent], { type: 'text/csv' })''
+        const url = window.URL.createObjectURL(blob)'
+        const a = document.createElement('a')''
         a.href = url','
             ['Page URL',Title',SEO Score',Issues',Recommendations'], ...report.pageAnalyses.map(page = > [page.pageUrl,''
                 page.title,''`'
@@ -745,9 +745,9 @@ let summary = `Analyzed ${totalPages} pages for SEO.`
         const blob = new Blob([csvContent], { type: 'text/csv' })'
         const url = window.URL.createObjectURL(blob)'
         const a = document.createElement('a')'
-        a.href = url,;
-a.download = 'seo-optimization-report.csv;
-        a.click();
+        a.href = url,
+a.download = 'seo-optimization-report.csv
+        a.click()
         window.URL.revokeObjectURL(url)}"
     const getScoreColor = (score) => {}`"
         if (score >= 80)'''
@@ -759,10 +759,10 @@ a.download = 'seo-optimization-report.csv;
         return 'text-red-600 bg-red-50 border-red-200'}"
     const getScoreText = (score) => {}""
         if (score >= 80)'''
-            return 'Excellent';
-        if (score >= 60)'';
-            return 'Good';
-        if (score >= 40)'';
+            return 'Excellent'
+        if (score >= 60)''
+            return 'Good'
+        if (score >= 40)''
             return 'Fair''
         return 'Poor'}';''
     return ("'
@@ -944,19 +944,19 @@ a.download = 'seo-optimization-report.csv;
               Export,
             </button>
           </div>;,
-        </div>)};
-    </div>)};
-export default SEOOptimizer;
-;
-export { SEOOptimizer };
-;
-export { SEOOptimizer };
-;
-export { SEOOptimizer };
-;
-export { SEOOptimizer };
-;
-export { SEOOptimizer };
+        </div>)}
+    </div>)}
+export default SEOOptimizer
+
+export { SEOOptimizer }
+
+export { SEOOptimizer }
+
+export { SEOOptimizer }
+
+export { SEOOptimizer }
+
+export { SEOOptimizer }
     </div>)}
 export default SEOOptimizer,
 export { SEOOptimizer }

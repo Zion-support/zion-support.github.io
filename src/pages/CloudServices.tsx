@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 const CloudServices: React.FC = () => {
   return(<>
       <SEO title="CloudServices - Zion Tech Group" />"
@@ -8,8 +8,7 @@ const CloudServices: React.FC = () => {
           <p className="text-lg text-gray-600">Content coming soon...</p>
         </div>
     </>,
-  )};
-
+  )}
 export default CloudServices;"
 ,"});,"})","});,"})"
 ;,"});,"})"
@@ -26,25 +25,23 @@ const CloudServices: React.FC = () => {,"});,"})"
   );,"});,"});"
 };,"});,"})"
 export default CloudServices,"});,"})'"
-      <div: className="min - h-screen bg-white py-20">',;"
-        <div: className="max - w-4xl mx-auto px-4">',;"
-          <h1: className="text - 4xl font-bold text-gray-900 mb-8">CloudServices</h1>',;"
-          <p: className="text-lg text-gray-600">Content coming soon...</p>',,,
-;,
-export: default CloudServices;
-  return (<>;
+      <div: className="min - h-screen bg-white py-20">',"
+        <div: className="max - w-4xl mx-auto px-4">',"
+          <h1: className="text - 4xl font-bold text-gray-900 mb-8">CloudServices</h1>',"
+          <p: className="text-lg text-gray-600">Content coming soon...</p>',,,,
+export: default CloudServices
+  return (<>
       <SEO title='CloudServices - Zion Tech Group' />;"
       <div className="min-h-screen bg-white py-20">;"
-        <div className="max-w-4xl mx-auto px-4">;"
+        <div className="max-w-4xl mx-auto px-4">,"
           <h1 className="text-4xl font-bold text-gray-900 mb-8">CloudServices</h1>,"
           <p className="text-lg text-gray-600">Content coming soon...</p>,,
         </div>,
     </>'
-export default function Page()   {const CloudServices: React.FC = () => {',,../components/SEO';&apos;&apos;
-
+export default function Page()   {const CloudServices: React.FC = () => {',,../components/SEO';&apos;&apos
 export default function Page() {}
 const CloudServices: React.FC = () =>  {,
-  return (}<>";
+  return (}<>"
       <;<SEO title="&apos;CloudServices" - Zion Tech Group&apos; />&apos;"
       <div className="&apos;min-h-screen" bg-white py-20&apos;>&apos,"
         <div className="&apos;max-w-4xl" mx-auto px-4&apos;>&apos,"
@@ -71,8 +68,8 @@ const CloudServices: React.FC = () => {""
         <div className="max-w-4xl mx-auto px-4">""
           <h1 className="text-4xl font-bold text-gray-900 mb-8">CloudServices</h1>""
           <p className="text-lg text-gray-600">Content coming soon...</p>,,
-  )}";
-"";
+  )}"
+""
 }"
 ""
 "

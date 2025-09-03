@@ -1,9 +1,8 @@
-// serviceMapper utility
+// serviceMapper utility,
 export const serviceMapper = {
-  // Placeholder utility functions
-  init: () => {
-    console.log('serviceMapper initialized');
+  // Placeholder utility functions,
+init: () => {
+    console.log('serviceMapper initialized'),
   }
-};
-
-export default serviceMapper;
+}
+export default serviceMapper

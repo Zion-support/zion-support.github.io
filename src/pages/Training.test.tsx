@@ -1,12 +1,12 @@
-describe('Training', () => {}; '; it('renders without crashing', () => {}; render(<Training / >) ,; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; '; it('displays expected content', () => {}; render(<Training />) ;
-    render();
-    expect(screen.getByRole('main) || screen.getByText(/.*/)).toBeInTheDocument();
+describe('Training', () => {}; '; it('renders without crashing', () => {}; render(<Training / >) , expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; '; it('displays expected content', () => {}; render(<Training />) 
+    render()
+    expect(screen.getByRole('main) || screen.getByText(/.*/)).toBeInTheDocument()
   })
 ''
   it('displays expected content', () => {
-    render(<Training /" >);
+    render(<Training /" >)
     // Add more specific tests here,
-  });
+  })
   });"
 "
 });"

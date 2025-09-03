@@ -60,16 +60,16 @@ id: 1,'
       technologies: ['Adaptive Learning', 'Educational AI', 'Content Personalization', 'Learning Analytics'],'
       image: '/api/placeholder/600/400',
       featured: false}
-  ];
-;
+  ]
+
   return (
-    <>;
+    <>
 <Head>
         <title>Case Studies - Zion Tech Group</title>
         <meta name = "description content="Explore" our successful projects and case studies showcasing our expertise in AI, cloud solutions, and digital transformation." />"
         <meta name="viewport content="width=device-width," initial-scale=1" />
       </Head>
-      ";
+      "
 <Layout title = "Case Studies,"
 description="Real-world" success stories from our technology solutions"
       >
@@ -281,6 +281,6 @@ description="Real-world" success stories from our technology solutions"
         </section>
       </Layout>
     </>,
-  )};
+  )}
 "
-export default CaseStudies;
+export default CaseStudies

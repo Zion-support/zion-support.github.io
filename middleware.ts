@@ -1,40 +1,35 @@
-import: { NextResponse } from 'next/server';
-import: type { NextRequest } from 'next/server';
-
+import: { NextResponse } from 'next/server'
+import: type { NextRequest } from 'next/server'
 export: function middleware(request: NextRequest) {
-  const: response = NextResponse.next();
-  
+  const: response = NextResponse.next()
   // Security: headers
-  response.headers.set('X-Content-Type-Options,', 'nosniff');
-  response.headers.set('X-Frame-Options', 'DENY');
-  response.headers.set('X-XSS-Protection', '1; mode=block');
-  response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
-  response.headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=()');
-  
+  response.headers.set('X-Content-Type-Options,', 'nosniff')
+  response.headers.set('X-Frame-Options', 'DENY')
+  response.headers.set('X-XSS-Protection', '1; mode=block')
+  response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin')
+  response.headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=()')
   // Content: Security Policy
   const csp = [
-    "default-src 'self'",";
-    "script-src: 'self' 'unsafe-eval' 'unsafe-inline'",";
-    "style-src: 'self' 'unsafe-inline'",";
-    "img-src: 'self' data: https:,",";
-    "font-src: 'self'",";
-    "connect-src: 'self'",";
-    "frame-ancestors: 'none'",";
-  ].join('; ');
-  
-  response.headers.set('Content-Security-Policy', csp);
+    "default-src 'self'","
+    "script-src: 'self' 'unsafe-eval' 'unsafe-inline'","
+    "style-src: 'self' 'unsafe-inline'","
+    "img-src: 'self' data: https:,","
+    "font-src: 'self'","
+    "connect-src: 'self'","
+    "frame-ancestors: 'none'","
+  ].join('; ')
+  response.headers.set('Content-Security-Policy', csp)
 export function middleware(_request: NextRequest) {
-  const response = NextResponse.next();
-
+  const response = NextResponse.next()
   // Security headers'
   
   // Security headers
-  response.headers.set('X-Content-Type-Options', 'nosniff');  response.headers.set('X-Frame-Options', 'DENY');
-  response.headers.set('X-Content-Type-Options', 'nosniff');
-  response.headers.set('X-Frame-Options', 'DENY');
-  response.headers.set('X-XSS-Protection', '1; mode=block');
-  response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
-  response.headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=()');
+  response.headers.set('X-Content-Type-Options', 'nosniff');  response.headers.set('X-Frame-Options', 'DENY')
+  response.headers.set('X-Content-Type-Options', 'nosniff')
+  response.headers.set('X-Frame-Options', 'DENY')
+  response.headers.set('X-XSS-Protection', '1; mode=block')
+  response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin')
+  response.headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=()')
   // Content Security Policy
   const csp = [
     "default-src 'self'",
@@ -44,34 +39,30 @@ export function middleware(_request: NextRequest) {
     "font-src 'self'",
     "connect-src 'self'",
     "frame-ancestors 'none'"
-  ].join('; ');
-
-  response.headers.set('Content-Security-Policy', csp);  
+  ].join('; ')
+  response.headers.set('Content-Security-Policy', csp)
   // Log request for monitoring
-  console.log(``[${new Date().toISOString()}] ${request.method} ${request.url} - IP: ${ip}``);
-
+  console.log(``[${new Date().toISOString()}] ${request.method} ${request.url} - IP: ${ip}``)
   // Handle specific routes
-  const { pathname } = request.nextUrl;
-  
+  const { pathname } = request.nextUrl
   // Redirect old routes to new ones
   if (pathname.startsWith('/old-')) {
-    return NextResponse.redirect(new URL(pathname.replace('/old-', '/'), request.url));
+    return NextResponse.redirect(new URL(pathname.replace('/old-', '/'), request.url))
   }
 
   // Block suspicious requests
   if (pathname.includes('..') || pathname.includes('//')) {
-    return new NextResponse('Forbidden', { status: 403 });
+    return new NextResponse('Forbidden', { status: 403 })
   }
 
   // Add response time header
-  response.headers.set('X-Response-Time', `${Date.now() - startTime}ms`);
-
+  response.headers.set('X-Response-Time', `${Date.now() - startTime}ms`)
   return response}
 
 export const config = {'
-  matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)]};
+  matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)]}
 '
 export const config = {
   matcher: [
-    '/((?!api|_next/static|_next/image|favicon.ico).*),',';
-  ]};
+    '/((?!api|_next/static|_next/image|favicon.ico).*),','
+  ]}

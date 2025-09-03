@@ -75,16 +75,16 @@ step: 1,'
     { name: 'PHP', icon: '🐘', popular: false },'
     { name: 'Go', icon: '🐹', popular: false },'
     { name: 'Ruby', icon: '💎', popular: false }
-  ];
-;
+  ]
+
   return (
-    <>;
+    <>
 <Head>
         <title>Documentation - Zion Tech Group</title>
         <meta name = "description" content="Comprehensive documentation for Zion Tech Group APIs, SDKs, and services. Get started quickly with our guides and examples." />"
         <meta name="viewport" content="width="device-width," initial-scale=1" />
       </Head>
-      ";
+      "
 <Layout title = "Documentation""
         description="Complete documentation for our APIs and services"
       >
@@ -219,16 +219,14 @@ step: 1,'
                   <span className="text-gray-400 text-sm">JavaScript</span>
                 </div>"
                 <pre className="text-green-400 text-sm overflow-x-auto">
-                  <code>{`// Initialize the SDK,;
-const zion = new ZionSDK({;
-  apiKey: 'your-api-key',;
-  environment: 'production'});
-
+                  <code>{`// Initialize the SDK,
+const zion = new ZionSDK({
+  apiKey: 'your-api-key',
+  environment: 'production'})
 // Make a request,
-const result = await zion.ai.process({;
-  text: 'Hello, world!',;
-  model: 'gpt-4'});
-
+const result = await zion.ai.process({
+  text: 'Hello, world!',
+  model: 'gpt-4'})
 `}</code>
                 </pre>
               </div>
@@ -238,8 +236,8 @@ const result = await zion.ai.process({;
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">Python Example</h3>"
                   <div className="bg-gray-100 rounded p-4">"
                     <pre className="text-sm text-gray-800">,
-                      <code>{`from zion
-result = zion.ai.process();
+                      <code>{`from zion,
+result = zion.ai.process()
 print(result)`}</code>
                     </pre>
                   </div>
@@ -253,8 +251,8 @@ print(result)`}</code>
   https: //api.ziontechgroup.com/v1/ai/process \\"
   -H "Authorization: Bearer your-api-key" \\"
   -H "Content-Type: application/json" \\',
-  -d '{,";
-    "text": "Hello, world!",;"
+  -d '{,"
+    "text": "Hello, world!","
     "model": "gpt - 4",
 }'`}</code>
                     </pre>
@@ -311,6 +309,6 @@ print(result)`}</code>
         </section>
       </Layout>
     </>,
-  )};
+  )}
 "
-export default Docs;
+export default Docs

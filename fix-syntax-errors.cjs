@@ -1,8 +1,7 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-
+const fs = require('fs')
+const path = require('path')
 // Function to fix common syntax errors
 function fixSyntaxErrors(content) {
   // Remove corrupted content patterns
@@ -28,14 +27,14 @@ function fixSyntaxErrors(content) {
     
     // Remove corrupted patterns
     .replace(/; return\(\); <div[^>]*>/g, 'return (\n    <div')
-    .replace(/; export default[^;]*;.*$/g, ');\n\nexport default ComponentName;')
+    .replace(/; export default[^]*;.*$/g, ');\n\nexport default ComponentName;')
     
     // Fix malformed template literals
     .replace(/`\s*\{\s*activeTab === '([^']+)' && \(\s*`/g, '{activeTab === "$1" && (')
     .replace(/`\s*\}\s*\{\s*activeTab === '([^']+)' && \(/g, '}\n{activeTab === "$1" && (')
     
     // Remove duplicate content
-    .replace(/(import React[^;]+;[\s\S]*?export default[^;]+;)\1+/g, '$1')
+    .replace(/(import React[^]+;[\s\S]*?export default[^]+)\1+/g, '$1')
     
     // Clean up extra semicolons and commas
     .replace(/;+$/gm, ';')
@@ -48,50 +47,45 @@ function fixSyntaxErrors(content) {
     // Remove corrupted patterns at the end
     .replace(/;,"\}\);,"\}\)\s*$/g, ');\n\nexport default ComponentName;')
     .replace(/>>>>>>> pr-\d+.*$/g, '')
-    .replace(/;,"\}\);,"\}\)\s*$/g, ');\n\nexport default ComponentName;');
-
-  return fixed;
+    .replace(/;,"\}\);,"\}\)\s*$/g, ');\n\nexport default ComponentName;')
+  return fixed
 }
 
 // Function to process a single file
 function processFile(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    
+    const content = fs.readFileSync(filePath, 'utf8')
     // Skip if file is too corrupted
     if (content.length < 100 || content.includes('>>>>>>> pr-')) {
-      console.log(`Skipping corrupted file: ${filePath}`);
-      return;
+      console.log(`Skipping corrupted file: ${filePath}`)
+      return
     }
     
-    const fixed = fixSyntaxErrors(content);
-    
+    const fixed = fixSyntaxErrors(content)
     if (fixed !== content) {
-      fs.writeFileSync(filePath, fixed);
-      console.log(`Fixed: ${filePath}`);
+      fs.writeFileSync(filePath, fixed)
+      console.log(`Fixed: ${filePath}`)
     }
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message)
   }
 }
 
 // Function to recursively process directory
 function processDirectory(dirPath) {
-  const items = fs.readdirSync(dirPath);
-  
+  const items = fs.readdirSync(dirPath)
   for (const item of items) {
-    const fullPath = path.join(dirPath, item);
-    const stat = fs.statSync(fullPath);
-    
+    const fullPath = path.join(dirPath, item)
+    const stat = fs.statSync(fullPath)
     if (stat.isDirectory()) {
-      processDirectory(fullPath);
+      processDirectory(fullPath)
     } else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js')) {
-      processFile(fullPath);
+      processFile(fullPath)
     }
   }
 }
 
 // Main execution
-console.log('Starting syntax error fixes...');
-processDirectory('./src');
-console.log('Syntax error fixes completed!');
+console.log('Starting syntax error fixes...')
+processDirectory('./src')
+console.log('Syntax error fixes completed!')

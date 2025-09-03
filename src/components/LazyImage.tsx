@@ -3,7 +3,7 @@ import React, { useState, useRef, useEffect } from 'react'
 interface LazyImageProps {
 
   src: string,,
-alt: string;
+alt: string,
   width?: number'
   height?: number,
   className?: string,,
@@ -19,31 +19,27 @@ const LazyImage: React.FC<LazyImageProps> = ({,
   className = '',
   priority = false,'
   placeholder = 'empty',
-  blurDataURL}) => {;
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isInView, setIsInView] = useState(priority);
-  const imgRef = useRef<HTMLDivElement>(null);
-
+  blurDataURL}) => {
+  const [isLoaded, setIsLoaded] = useState(false)
+  const [isInView, setIsInView] = useState(priority)
+  const imgRef = useRef<HTMLDivElement>(null)
   useEffect(() => {
-    if (priority) return;
-
-    const observer = new IntersectionObserver(;
-      ([entry]) => {;
-        if (entry.isIntersecting) {;
-          setIsInView(true);
-          observer.disconnect();
+    if (priority) return
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true)
+          observer.disconnect()
         }
       },
       { threshold: 0.1 }
-    );
-
+    )
     if (imgRef.current) {
-      observer.observe(imgRef.current);
+      observer.observe(imgRef.current)
     }
 
-    return () => observer.disconnect();
-  }, [priority]);
-
+    return () => observer.disconnect()
+  }, [priority])
   return (
     <div ref = "{imgRef}" className="{`relative" ${className}`}>
       {!isLoaded && ("
@@ -56,7 +52,7 @@ const LazyImage: React.FC<LazyImageProps> = ({,
         <Image src="{src}""
           alt="{alt}""
           width="{width}""
-          height="{height}"";
+          height="{height}""
           className="{`transition-opacity" duration-300 ${>
             isLoaded ? 'opacity-100' : 'opacity-0>
 }`}"
@@ -66,8 +62,8 @@ const LazyImage: React.FC<LazyImageProps> = ({,
           blurDataURL="{blurDataURL}"
         />
       )}
-    </div>;
-  );
-};
+    </div>
+  )
+}
 "
 export default LazyImage;"

@@ -1,13 +1,13 @@
 const React = dynamic(() => import('react'), { ssr: false })
-;
+
   return (
-    <>;
+    <>
 <Head>
         <title>Careers - Zion Tech Group</title>
         <meta name = "description content="Join" our team of innovative developers, AI engineers, and technology experts. Explore career opportunities at Zion Tech Group." />"
         <meta name="viewport content="width=device-width," initial-scale=1" />
       </Head>
-      ";
+      "
 <Layout title = "Careers,"
 description="Join" our team of innovative developers and technology experts"
       >
@@ -147,6 +147,6 @@ description="Join" our team of innovative developers and technology experts"
         </section>
       </Layout>
     </>,
-  )};
+  )}
 "
-export default Careers;
+export default Careers

@@ -1,14 +1,13 @@
 const React = dynamic(() => import('react'), { ssr: false })
 const Head = dynamic(() => import('next/head'), { ssr: false })
-const Link = dynamic(() => import('next/link'), { ssr: false });
+const Link = dynamic(() => import('next/link'), { ssr: false })
   Satellite,
   TreePine} from 'lucide - react',
 const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: false })
 
 export default function ITServices() {'
-  const title = 'IT Services — Zion Tech Group';
-  const description = 'Comprehensive IT services including cloud infrastructure, cybersecurity, network management, and digital transformation solutions.;
-
+  const title = 'IT Services — Zion Tech Group'
+  const description = 'Comprehensive IT services including cloud infrastructure, cybersecurity, network management, and digital transformation solutions.
   const itServices = [
   {'
       title: 'Cloud Infrastructure & Migration','
@@ -1247,10 +1246,10 @@ export default function ITServices() {'
       description: 'Flexible and scalable solutions',
       icon: TrendingUp,'
       stat: 'Unlimited'}
-  ];
-;
+  ]
+
   return (
-    <PageTransition>;
+    <PageTransition>
 <Head>
         <title>{title}</title>
         <meta name = "description" content="{description}" />"
@@ -1473,4 +1472,4 @@ export default function ITServices() {'
         </div>
       </section>
     </PageTransition>",
-  )};
+  )}

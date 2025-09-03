@@ -1,15 +1,12 @@
 import React from 'react'
   FileText,
-  HelpCircle} from 'lucide-react';
-
+  HelpCircle} from 'lucide-react'
 export default function EnhancedFooter() {
 
-  const scrollToTop = () => {';
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
-  const currentYear = new Date().getFullYear();
-
+  const scrollToTop = () => {'
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+  const currentYear = new Date().getFullYear()
   const footerLinks = {
     services: [',
       { name: 'AI Services', href: '/services/ai-services' },'
@@ -36,11 +33,10 @@ export default function EnhancedFooter() {
       { name: 'Pricing Guide', href: '/pricing-guide' },'
       { name: 'Search', href: '/search' },'
       { name: 'Sitemap', href: '/sitemap' }],
-    legal: [',;
-      { name: 'Privacy Policy', href: '/privacy' },';
-      { name: 'Terms of Service', href: '/terms' },';
-      { name: 'Cookie Policy', href: '/cookies' }]};
-
+    legal: [',
+      { name: 'Privacy Policy', href: '/privacy' },'
+      { name: 'Terms of Service', href: '/terms' },'
+      { name: 'Cookie Policy', href: '/cookies' }]}
   const socialLinks = [
     {'
       name: 'Facebook',
@@ -255,5 +251,4 @@ company updates.
         <ArrowUp className="w-5 h-5" />
       </button>,
     </footer>,,
-  )}"';
-;
+  )}"'

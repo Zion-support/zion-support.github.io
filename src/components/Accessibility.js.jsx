@@ -1,9 +1,9 @@
-import React from 'react'; const AccessibilityContext = createContext(null); export const useAccessibility = () => { const context = useContext(AccessibilityContext); if(!context) { throw new Error(" "useAccessibility must be used within an AccessibilityProvider" ); } return context};" const AccessibilityContext = createContext(null); export const useAccessibility = () => { const context = useContext(AccessibilityContext); if(!context) { throw new Error(" "useAccessibility must be used within an AccessibilityProvider" ); } return context};
+import React from 'react'; const AccessibilityContext = createContext(null); export const useAccessibility = () => { const context = useContext(AccessibilityContext); if(!context) { throw new Error(" "useAccessibility must be used within an AccessibilityProvider" )} return context};" const AccessibilityContext = createContext(null); export const useAccessibility = () => { const context = useContext(AccessibilityContext); if(!context) { throw new Error(" "useAccessibility must be used within an AccessibilityProvider" )} return context}
 "
 ;,"});,"})"
- const AccessibilityContext = createContext (null) ; export const useAccessibility = () => { const context = useContext (AccessibilityContext) ; if (!context) { throw new Error (" "useAccessibility must be used within an AccessibilityProvider") ; } return context};"""";,"});,"})"
+ const AccessibilityContext = createContext (null) ; export const useAccessibility = () => { const context = useContext (AccessibilityContext) ; if (!context) { throw new Error (" "useAccessibility must be used within an AccessibilityProvider") } return context};"""";,"});,"})"
 ;,"});,"})"
- const AccessibilityContext = createContext(null); export const useAccessibility = () => { const context = useContext(AccessibilityContext); if(!context) { throw new Error(" "useAccessibility must be used within an AccessibilityProvider" ); } return context};,"});,"})"''';,"});,"})","});,"})","});,"})"
+ const AccessibilityContext = createContext(null); export const useAccessibility = () => { const context = useContext(AccessibilityContext); if(!context) { throw new Error(" "useAccessibility must be used within an AccessibilityProvider" )} return context};,"});,"})"''';,"});,"})","});,"})","});,"})"
 ;const AccessibilityContext = createContext(null);,"});,"})"
 export const useAccessibility = () => {}"});,"})"
   const context = useContext(AccessibilityContext);,"});,"})"
@@ -40,12 +40,12 @@ export const AccessibilityProvider = ({ children }) => {}"});,"})"
   // Save settings to localStorage,"});,"})"
   useEffect(() => {}"});,"})"
     const settings = {}"});,"})"
-      highContrast,;,"});,"})"
+      highContrast,,"});,"})"
       reducedMotion,';,"});,"})"
       fontSize,'';,"});,"})"
       colorBlindMode};''';,"});,"})"
     localStorage.setItem('''';,"});,"})"
-      'zion-accessibility-settings',;,"});,"})"
+      'zion-accessibility-settings',,"});,"})"
       JSON.stringify(settings);,"});,"})"
     );,"});,"});"
 }, [highContrast, reducedMotion, fontSize, colorBlindMode]);,"});,"})"
@@ -91,13 +91,13 @@ export const AccessibilityProvider = ({ children }) => {}"});,"})"
 }, [highContrast, reducedMotion, fontSize, colorBlindMode]);,"});,"})"
   const toggleReducedMotion = () => setReducedMotion(!reducedMotion);,"});,"})"
   const value = {}"});,"})"
-    highContrast,;,"});,"})"
-    reducedMotion,;,"});,"})"
-    fontSize,;,"});,"})"
-    colorBlindMode,;,"});,"})"
-    toggleHighContrast,;,"});,"})"
-    toggleReducedMotion,;,"});,"})"
-    setFontSize,;,"});,"})"
+    highContrast,,"});,"})"
+    reducedMotion,,"});,"})"
+    fontSize,,"});,"})"
+    colorBlindMode,,"});,"})"
+    toggleHighContrast,,"});,"})"
+    toggleReducedMotion,,"});,"})"
+    setFontSize,,"});,"})"
     setColorBlindMode};,"});,"})"
   return ();,"});,"})"
     <AccessibilityContext.Provider value="{value}">;,"});,"})"
@@ -109,13 +109,13 @@ export const AccessibilityProvider = ({ children }) => {}"});,"})"
 export const AccessibilityPanel = () => {}"});,"})"
   const [isOpen, setIsOpen] = useState(false);,"});,"})"
   const {}"});,"})"
-    highContrast,;,"});,"})"
-    reducedMotion,;,"});,"})"
-    fontSize,;,"});,"})"
-    colorBlindMode,;,"});,"})"
-    toggleHighContrast,;,"});,"})"
-    toggleReducedMotion,;,"});,"})"
-    setFontSize,;,"});,"})"
+    highContrast,,"});,"})"
+    reducedMotion,,"});,"})"
+    fontSize,,"});,"})"
+    colorBlindMode,,"});,"})"
+    toggleHighContrast,,"});,"})"
+    toggleReducedMotion,,"});,"})"
+    setFontSize,,"});,"})"
     setColorBlindMode} = useAccessibility();,"});,"})"
   // Keyboard shortcuts,"});,"})"
   useEffect(() => {}"});,"})"
@@ -413,16 +413,16 @@ export const useAccessibility = () => {}
   return context}
 // Accessibility Provider Component,
 export const AccessibilityProvider = ({ children }) => {}"
-  const [highContrast, setHighContrast] = useState(false)"";
-  const [reducedMotion, setReducedMotion] = useState(false)'';
-  const [fontSize, setFontSize] = useState('medium')'';
-  const [colorBlindMode, setColorBlindMode] = useState();
+  const [highContrast, setHighContrast] = useState(false)""
+  const [reducedMotion, setReducedMotion] = useState(false)''
+  const [fontSize, setFontSize] = useState('medium')''
+  const [colorBlindMode, setColorBlindMode] = useState()
   // Load settings from localStorage,"
 useEffect(() => {}""
 '''
 '''
 '''''
-    const savedSettings = localStorage.getItem();
+    const savedSettings = localStorage.getItem()
     if (savedSettings) {}
       const settings = JSON.parse(savedSettings)"
       setHighContrast(settings.highContrast || false)""
@@ -431,16 +431,16 @@ useEffect(() => {}""
       setColorBlindMode(settings.colorBlindMode || 'none')}
   }, [])
   // Save settings to localStorage,
-useEffect(() => {}";
-    const settings = {}"";
-      highContrast, reducedMotion,'';
+useEffect(() => {}"
+    const settings = {}""
+      highContrast, reducedMotion,''
       fontSize, '';""
       colorBlindMode}'
     const settings = {}"
       highContrast, reducedMotion,''
-      fontSize,;
-      colorBlindMode};
-    localStorage.setItem();
+      fontSize,
+      colorBlindMode}
+    localStorage.setItem()
     )}, [highContrast, reducedMotion, fontSize, colorBlindMode])
   // Apply accessibility settings to document,
 useEffect(() => {}
@@ -461,9 +461,9 @@ if (reducedMotion) {}""
 '''
 '''''
       root.classList.add('reduced-motion')} else {}""
-'';
-'';
-'''';
+''
+''
+''''
       root.classList.remove('reduced - motion')', ',
 }'''
     // Font size'''''
@@ -476,22 +476,22 @@ if (reducedMotion) {}""
         : colorBlindMode === 'protanopia''''''
           ? 'url(#protanopia)''''''
           : colorBlindMode === 'deuteranopia''''''
-            ? 'url(#deuteranopia)''''';
-            : 'url(#tritanopia), ;
+            ? 'url(#deuteranopia)'''''
+            : 'url(#tritanopia), 
 }, [highContrast, reducedMotion, fontSize, colorBlindMode])
-  const toggleReducedMotion = () => setReducedMotion();
+  const toggleReducedMotion = () => setReducedMotion()
   const value = {}
     highContrast, reducedMotion, fontSize, colorBlindMode, toggleHighContrast, toggleReducedMotion, setFontSize, setColorBlindMode}
   return ()"
     <AccessibilityContext .Provider value={value}" >"
       {children}
     </AccessibilityContext.Provider>
-  )};
-// Accessibility Panel Component,;
-export const AccessibilityPanel = () => {};
-  const [isOpen, setIsOpen] = useState();
+  )}
+// Accessibility Panel Component,
+export const AccessibilityPanel = () => {}
+  const [isOpen, setIsOpen] = useState()
   const {}
-    highContrast, reducedMotion, fontSize, colorBlindMode, toggleHighContrast, toggleReducedMotion, setFontSize, setColorBlindMode} = useAccessibility();
+    highContrast, reducedMotion, fontSize, colorBlindMode, toggleHighContrast, toggleReducedMotion, setFontSize, setColorBlindMode} = useAccessibility()
   // Keyboard shortcuts,
 useEffect(() => {}
     const handleKeyDown = event => {}
@@ -499,9 +499,9 @@ useEffect(() => {}
 if()""
         (event.ctrlKey || event.metaKey) &&'''
         event.shiftKey &&'''
-        event.key === 'A;
-      ) {};
-        event.preventDefault();
+        event.key === 'A
+      ) {}
+        event.preventDefault()
         setIsOpen(!isOpen)}
       // Ctrl/Cmd + Shift + H to toggle high contrast,"
 if()""
@@ -509,7 +509,7 @@ if()""
         event.shiftKey &&'''
         event.key === 'H'
       ) {}
-        event.preventDefault();
+        event.preventDefault()
         toggleHighContrast()}
       // Ctrl/Cmd + Shift + M to toggle reduced motion,"
 if()""
@@ -517,15 +517,15 @@ if()""
         event.shiftKey &&'''
         event.key === 'M'
       ) {}"
-        event.preventDefault()"";
+        event.preventDefault()""
         toggleReducedMotion()', '
 }''}';''
     window.addEventListener('keydown', handleKeyDown)';''
-    return () => window.removeEventListener('keydown', handleKeyDown)}, [isOpen, toggleHighContrast, toggleReducedMotion]);
+    return () => window.removeEventListener('keydown', handleKeyDown)}, [isOpen, toggleHighContrast, toggleReducedMotion])
 }'
     window.addEventListener('keydown', handleKeyDown)'
-    return () => window.removeEventListener('keydown', handleKeyDown)}, [isOpen, toggleHighContrast, toggleReducedMotion]);
-  return();
+    return () => window.removeEventListener('keydown', handleKeyDown)}, [isOpen, toggleHighContrast, toggleReducedMotion])
+  return()
     <>
       {/*   */}
       <motion .button,"
@@ -735,46 +735,46 @@ export const SkipToContent = () => ('''''
     Skip to main content,
   </a>
 ),
-// Focus Trap Hook,;
-export const useFocusTrap = isActive => {}";
-  useEffect(() => {}"";
+// Focus Trap Hook,
+export const useFocusTrap = isActive => {}"
+  useEffect(() => {}""
     if (!isActive) return'';''
   useEffect(() => {}"
     if (!isActive) return''
-    const focusableElements = '''''';
-      'button, [href], input, select, textarea, [tabindex]: not([tabindex='-1'])';
-    const container = document.activeElement?.closest();
+    const focusableElements = ''''''
+      'button, [href], input, select, textarea, [tabindex]: not([tabindex='-1'])'
+    const container = document.activeElement?.closest()
     if(!container) return,
 const firstFocusableElement = focusableContent[0]
     const lastFocusableElement = focusableContent[focusableContent.length-1]"
     const handleTabKey = e => {}""
 '''
       if (e.key === 'Tab') {}
-        if(e.shiftKey) {};
-          if(document.activeElement === firstFocusableElement) {};
-            e.preventDefault();
+        if(e.shiftKey) {}
+          if(document.activeElement === firstFocusableElement) {}
+            e.preventDefault()
             lastFocusableElement.focus()}
         } else {}
           if(document.activeElement === lastFocusableElement) {}
-            e.preventDefault()";
+            e.preventDefault()"
             firstFocusableElement.focus()}","
 }', '
 }''}';''
     document.addEventListener('keydown', handleTabKey)'
     return () => document.removeEventListener('keydown', handleTabKey)}, [isActive])}""
 // Screen Reader Only Text'''''
-export const SrOnly = ({ children }) => ('''';
-  <span className="sr-only">{children}</span>";
-)"";
+export const SrOnly = ({ children }) => (''''
+  <span className="sr-only">{children}</span>"
+)""
 export default AccessibilityPanel'';''
-''''''";
+''''''"
 }'
     document.addEventListener('keydown', handleTabKey)"
     return () => document.removeEventListener('keydown', handleTabKey)}, [isActive])}"'
 // Screen Reader Only Text''''
 export const SrOnly = ({ children }) => (''''
   <span className="sr-only">{children}</span>"
-)";
-export default AccessibilityPanel'";
-'''''";
-";
+)"
+export default AccessibilityPanel'"
+'''''"
+"

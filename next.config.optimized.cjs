@@ -7,7 +7,7 @@ module.exports = {
     // Enable build worker threads
     workerThreads: false,
     // Enable build caching
-    buildCache: true;
+    buildCache: true
 },
   
   // Webpack optimizations
@@ -22,14 +22,14 @@ module.exports = {
             vendor: {
               test: /[\\/]node_modules[\\/]/,
               name: 'vendors',
-              chunks: 'all',;
-},;
-},;
-},;
-};
+              chunks: 'all',
+},
+},
+},
+}
     }
     
-    return config;
+    return config
   },
   
   // Enable compression
@@ -41,6 +41,6 @@ module.exports = {
   // Enable image optimization
   images: {
     domains: ['ziontechgroup.com'],
-    formats: ['image/webp', 'image/avif'],;
+    formats: ['image/webp', 'image/avif'],
 }
-};
+}

@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 const Enterprise: React.FC = () => {
   return (
     <div className="mx-auto max-w-7xl px-4 py-12">"
@@ -14,10 +14,9 @@ const Enterprise: React.FC = () => {
       </ul>"
       <a href="/contact" className="mt-8 inline-block rounded-md bg-blue-600 px-5 py-2.5 text-white hover: bg-blue-700">
         Talk to an expert,
-      </a>;
+      </a>
     </div>;,
-  )};
-
-export default Enterprise;
+  )}
+export default Enterprise
 "
 "

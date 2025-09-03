@@ -1,6 +1,6 @@
 const React = dynamic(() => import('react'), { ssr: false })
 const Head = dynamic(() => import('next/head'), { ssr: false })
-const Link = dynamic(() => import('next/link'), { ssr: false });
+const Link = dynamic(() => import('next/link'), { ssr: false })
   Target,
   Lightbulb} from 'lucide-react'
 
@@ -86,11 +86,10 @@ export default function Training() {
         'API development','
         'Deployment strategies','
         'Project portfolio','
-        'Frontend development (React),Backend development (Node.js),Database design,API development,Deployment strategies,Project portfolio;
-      ],;
-      instructor: 'Emily Davis',;
-      category: 'Development'}];
-
+        'Frontend development (React),Backend development (Node.js),Database design,API development,Deployment strategies,Project portfolio
+      ],
+      instructor: 'Emily Davis',
+      category: 'Development'}]
   const certificationPaths = [
   {'
       title: 'Zion Tech AI Specialist','
@@ -176,11 +175,10 @@ export default function Training() {
       description: 'Customized training programs for your organization',
       icon: Target,
       features: [',
-        'Custom curriculum',;
-        'Team training',;
-        'On-site delivery',;
-        'ROI tracking']}];
-
+        'Custom curriculum',
+        'Team training',
+        'On-site delivery',
+        'ROI tracking']}]
   const testimonials = [
     {
       quote: ',
@@ -210,13 +208,12 @@ export default function Training() {
     {
       quote: ',
         'The cybersecurity training was comprehensive and practical. I now feel confident handling security challenges in my role.','
-      author: 'Maria Garcia',;
-      title: 'Security Analyst',;
-      company: 'Financial Services',;
-      rating: 5}];
-
+      author: 'Maria Garcia',
+      title: 'Security Analyst',
+      company: 'Financial Services',
+      rating: 5}]
   return (
-    <>;
+    <>
 <Head>
         <title>Training & Education - Zion Tech Group</title>"
         <meta name = "description""
@@ -321,7 +318,7 @@ cutting-edge technologies.
                             program.level === 'Beginner''
                               ? 'bg-green-100 text-green-800''
                               : program.level === 'Intermediate''
-                                ? 'bg-yellow-100 text-yellow-800';
+                                ? 'bg-yellow-100 text-yellow-800'
                                 : 'bg-red-100 text-red-800>
 }`}
                         >
@@ -363,7 +360,7 @@ cutting-edge technologies.
                   </div>
 "
                   <div className="mb-6">"
-                    <h4 className="text-lg font-semibold text-gray-900 mb-3">;
+                    <h4 className="text-lg font-semibold text-gray-900 mb-3">
                       What You&apos;ll Learn:{' '}
                     </h4>'
                     '
@@ -542,4 +539,3 @@ with our training programs.
       </main>
     </>
   )}"
-;

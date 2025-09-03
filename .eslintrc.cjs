@@ -4,4 +4,4 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'warn'
   },
   ignorePatterns: ['node_modules/', '.next/', 'out/']
-};
+}

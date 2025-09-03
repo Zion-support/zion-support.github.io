@@ -1,20 +1,20 @@
 export interface Service {
-  id: string;
-  name: string;
-  category: 'micro-saas' | 'it-services' | 'ai-services';
-  description: string;
-  features: string[];
+  id: string
+  name: string
+  category: 'micro-saas' | 'it-services' | 'ai-services'
+  description: string
+  features: string[]
   pricing: {
-    starter: number;
-    professional: number;
-    enterprise: number;
-    currency: string;
-  };
-  benefits: string[];
-  useCases: string[];
-  technologies: string[];
-  link: string;
-  icon: string;
+    starter: number
+    professional: number
+    enterprise: number
+    currency: string
+  }
+  benefits: string[]
+  useCases: string[]
+  technologies: string[]
+  link: string
+  icon: string
 }
 
 export const services: Service[] = [
@@ -6467,12 +6467,10 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/mlops-foundations',
     icon: '⚙️'
   }
-];
-
+]
 export const getServicesByCategory = (category: Service['category']) => {
-  return services.filter(service => service.category === category);
-};
-
+  return services.filter(service => service.category === category)
+}
 export const getServiceById = (id: string) => {
-  return services.find(service => service.id === id);
-};
+  return services.find(service => service.id === id)
+}

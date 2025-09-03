@@ -1,22 +1,22 @@
-import React from "react";
-      icon: Heart,;
-      title: 'Health & Wellness',;
-      description: 'Comprehensive health insurance, dental, vision, and wellness programs.;
+import React from "react"
+      icon: Heart,
+      title: 'Health & Wellness',
+      description: 'Comprehensive health insurance, dental, vision, and wellness programs.
 },
     {
       icon: GraduationCap,'
       title: 'Learning & Development','
-      description: 'Annual learning budget, conference attendance, and skill development programs.;
+      description: 'Annual learning budget, conference attendance, and skill development programs.
 },
     {
       icon: Briefcase,'
       title: 'Flexible Work','
-      description: 'Remote work options, flexible hours, and work-life balance initiatives.;
+      description: 'Remote work options, flexible hours, and work-life balance initiatives.
 },
     {
       icon: Users,'
       title: 'Team Culture','
-      description: 'Collaborative environment, team events, and inclusive workplace culture.;
+      description: 'Collaborative environment, team events, and inclusive workplace culture.
 }
   ]
 
@@ -48,17 +48,17 @@ individuals who want to make a difference.
           </div>
           "
           <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">,,
-            {benefits.map((benefit, index) => {;
-              const IconComponent = benefit.icon;
+            {benefits.map((benefit, index) => {
+              const IconComponent = benefit.icon
               return ("
                 <div key = "{index}" className="text-center">"
                   <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">"
                     <IconComponent className="h-8 w-8 text-blue-600" />
                   </div>"
                   <h3 className="text-lg font-semibold mb-2">{benefit.title}</h3>"
-                  <p className="text-gray-600">{benefit.description}</p>;
-                </div>;
-              );
+                  <p className="text-gray-600">{benefit.description}</p>
+                </div>
+              )
             })}
           </div>
         </div>
@@ -163,9 +163,9 @@ that make a real difference in the world.
 
       {/*   */}"
       <section className="py-20 bg-blue-600 text-white">"
-        <div className="container mx-auto px-4 text-center">";
+        <div className="container mx-auto px-4 text-center">"
           <h2 className="text-4xl font-bold mb-4">Don&apos;t See Your Role?</h2>"
-          <p className = "text-xl mb-8 max-w-2xl mx-auto">;
+          <p className = "text-xl mb-8 max-w-2xl mx-auto">
             We&apos;re always looking for talented individuals. Send us your resume and let us know how you can contribute to our team.
           </p>"
           <Link href = "/contact" className="bg-white text-blue-600 hover: bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors inline-flex items-center">
@@ -175,6 +175,6 @@ that make a real difference in the world.
         </div>
       </section>
     </MainLayout>,,
-  )};
+  )}
 "
-export default TalentIndex;
+export default TalentIndex

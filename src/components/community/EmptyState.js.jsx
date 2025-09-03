@@ -1,7 +1,7 @@
 ''';,"});,"})"
 ''';,"});,"})","});,"})","});,"})","})"
-  Tooltip,;,"});,"})"
-  TooltipContent,;,"});,"})"
+  Tooltip,,"});,"})"
+  TooltipContent,,"});,"})"
   TooltipProvider,';,"});,"})"
   TooltipTrigger} from '@/components/ui/tooltip';,"});,"})"
 const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {}"});,"})"
@@ -68,8 +68,8 @@ export { EmptyState }
 export { EmptyState }
 
 export { EmptyState }
-;
-export { EmptyState };
-";
+
+export { EmptyState }
+"
 export { EmptyState };"""
 "

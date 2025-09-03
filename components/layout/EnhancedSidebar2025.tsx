@@ -1,14 +1,13 @@
 import React { useState, useEffect              } from 'react.ts'
 >>>>>>> a4e4b61825d9486fa9e1113a59af8c11dc69fb90,'
   HelpCircle, BookOpen, Target, TrendingUp, Star'
-              } from 'lucide-react.ts';
+              } from 'lucide-react.ts'
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259,
 interface SidebarItem {
-  Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Users, FileText, HelpCircle, BookOpen, Target, TrendingUp, Star
-  Eye, Award, Clock, Heart, Lightbulb, Users, FileText, HelpCircle, BookOpen, ;
+  Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Users, FileText, HelpCircle, BookOpen, Target, TrendingUp, Star,
+Eye, Award, Clock, Heart, Lightbulb, Users, FileText, HelpCircle, BookOpen, 
   Target, TrendingUp, Star
-} from 'lucide-react';
-
+} from 'lucide-react'
   X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, '
   HelpCircle, BookOpen, Target, TrendingUp, Star'
 
@@ -17,19 +16,19 @@ interface SidebarItem {
 >>>>>>> a4e4b61825d9486fa9e1113a59af8c11dc69fb90,
 name: string,,
   href: string,,
-icon: React.ReactNode;
-  description?: string;
-  children?: SidebarItem[];
-  badge?: string;
+icon: React.ReactNode
+  description?: string
+  children?: SidebarItem[]
+  badge?: string,
   color?: string,
   isNew?: boolean,,
   isHot?: boolean,
   isPremium?: boolean,
 category?: string}
 
-const sidebarSections = [;
-  {;
-';
+const sidebarSections = [
+  {
+'
     title: anyanyanyanyanyanyanyanyanyanyanyanyany&apos,Revolutionary Services', icon: Zap,'    color: 'from-cyan-500 to-blue-600', items['      {'
         name: 'AI & Consciousness', '        href: '/ai-services', icon: Brain, '        description: 'Advanced AI consciousness and evolution platforms', subItems['          { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution' } { name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem' } { name: 'AI Ethics & Governance', href: '/ai-ethics-governance' } { name: 'AI Creativity Studio', href: '/ai-creativity-studio' } { name: 'AI Education Platform', href: '/ai-education-platform' } { name: 'AI Healthcare Diagnostics', href: '/ai-healthcare-diagnostics' } { name: 'AI Financial Intelligence', href: '/ai-financial-intelligence' } { name: 'AI Sustainability Platform', href: '/ai-sustainability-platform' } { name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-platform' } { name: 'AI Legal Contract Analyzer', href: '/ai-legal-contract-analyzer' }'        ]'      } {'
 '
@@ -77,12 +76,11 @@ name: 'About Us, href: '/about',
 '
         name: 'Resources', '        href: '/resources', icon: BookOpen, '        description: 'Educational content and documentation', subItems['          { name: 'Documentation', href: '/docs' } { name: 'API Reference', href: '/api-docs' } { name: 'Blog & News', href: '/blog' } { name: 'Case Studies', href: '/case-studies' } { name: 'Whitepapers', href: '/whitepapers' } { name: 'Webinars', href: '/webinars' }'        ]'      } {'
 '
-        name: 'Support', '        href: '/support', icon: HelpCircle, '        description: 'Get help and support', subItems['          { name: 'Contact Support', href: '/contact-support' } { name: anyanyanyanyanyanyanyanyanyanyanyanyany&apos,Training Programs', href: '/training','},;'          { name: 'Community Forum', href: '/community' },;'          { name: 'Knowledge Base', href: '/knowledge-base' };'        ]'      };];''
-    title: anyanyanyanyanyanyanyanyanyanyanyanyany'Revolutionary: Services,',';
+        name: 'Support', '        href: '/support', icon: HelpCircle, '        description: 'Get help and support', subItems['          { name: 'Contact Support', href: '/contact-support' } { name: anyanyanyanyanyanyanyanyanyanyanyanyany&apos,Training Programs', href: '/training','},'          { name: 'Community Forum', href: '/community' },'          { name: 'Knowledge Base', href: '/knowledge-base' };'        ]'      }];''
+    title: anyanyanyanyanyanyanyanyanyanyanyanyany'Revolutionary: Services,','
     icon: Za,p,'
-    color: 'from-cyan-500: to-blue-600,',';
-category?: string;
-
+    color: 'from-cyan-500: to-blue-600,','
+category?: string
 }
 
 const sidebarSections = [
@@ -91,51 +89,50 @@ const sidebarSections = [
     title: anyanyanyanyanyanyanyanyanyanyanyanyany'Revolutionary Services',
     icon: Zap,'
     color: 'from-cyan-500 to-blue-600',
->>>>>>> a4e4b61825d9486fa9e1113a59af8c11dc69fb90,;
-items[;
-';
+>>>>>>> a4e4b61825d9486fa9e1113a59af8c11dc69fb90,
+items[
+'
         name: 'AI: & Consciousness,','
-        href: '/ai-services,',';
+        href: '/ai-services,','
         icon: Brai,n,'
-        description: 'Advanced: AI consciousness and evolution platforms,',';
+        description: 'Advanced: AI consciousness and evolution platforms,','
         subItems['
-          { name: 'AI: Consciousness Evolution,', href: '/ai-consciousness-evolution'},' { name: 'AI: Autonomous Ecosystem,', href: '/ai-autonomous-ecosystem'},' { name: 'AI: Ethics & Governance,', href: '/ai-ethics-governance'},' { name: 'AI: Creativity Studio,', href: '/ai-creativity-studio'},' { name: 'AI: Education Platform,', href: '/ai-education-platform'},' { name: 'AI: Healthcare Diagnostics,', href: '/ai-healthcare-diagnostics'},' { name: 'AI: Financial Intelligence,', href: '/ai-financial-intelligence'},' { name: 'AI: Sustainability Platform,', href: '/ai-sustainability-platform'},' { name: 'AI: Emotional Intelligence,', href: '/ai-emotional-intelligence-platform'},' { name: 'AI: Legal Contract Analyzer,', href: '/ai-legal-contract-analyzer'}';
+          { name: 'AI: Consciousness Evolution,', href: '/ai-consciousness-evolution'},' { name: 'AI: Autonomous Ecosystem,', href: '/ai-autonomous-ecosystem'},' { name: 'AI: Ethics & Governance,', href: '/ai-ethics-governance'},' { name: 'AI: Creativity Studio,', href: '/ai-creativity-studio'},' { name: 'AI: Education Platform,', href: '/ai-education-platform'},' { name: 'AI: Healthcare Diagnostics,', href: '/ai-healthcare-diagnostics'},' { name: 'AI: Financial Intelligence,', href: '/ai-financial-intelligence'},' { name: 'AI: Sustainability Platform,', href: '/ai-sustainability-platform'},' { name: 'AI: Emotional Intelligence,', href: '/ai-emotional-intelligence-platform'},' { name: 'AI: Legal Contract Analyzer,', href: '/ai-legal-contract-analyzer'}'
 '
         name: 'Quantum: Computing,','
-        href: '/quantum-services,',';
+        href: '/quantum-services,','
         icon: Ato,m,'
         description: 'Next-generation: quantum computing solutions,','
-          { name: 'Quantum: Cloud Infrastructure,', href: '/quantum-cloud-infrastructure'},' { name: 'Quantum: Bio-Computing,', href: '/quantum-bio-computing'},' { name: 'Quantum: Energy Platform,', href: '/quantum-energy-platform'},' { name: 'Quantum: Materials Discovery,', href: '/quantum-materials-discovery'},' { name: 'Quantum: Robotics,', href: '/quantum-robotics'},' { name: 'Quantum: Internet Security,', href: '/quantum-internet-security'},' { name: 'Quantum: Logistics,', href: '/quantum-logistics-optimization'},' { name: 'Quantum: Cybersecurity,', href: '/quantum-cybersecurity-platform'}';
+          { name: 'Quantum: Cloud Infrastructure,', href: '/quantum-cloud-infrastructure'},' { name: 'Quantum: Bio-Computing,', href: '/quantum-bio-computing'},' { name: 'Quantum: Energy Platform,', href: '/quantum-energy-platform'},' { name: 'Quantum: Materials Discovery,', href: '/quantum-materials-discovery'},' { name: 'Quantum: Robotics,', href: '/quantum-robotics'},' { name: 'Quantum: Internet Security,', href: '/quantum-internet-security'},' { name: 'Quantum: Logistics,', href: '/quantum-logistics-optimization'},' { name: 'Quantum: Cybersecurity,', href: '/quantum-cybersecurity-platform'}'
 '
         name: 'Enterprise: IT,','
-        href: '/enterprise-it,',';
+        href: '/enterprise-it,','
         icon: Shiel,d,'
         description: 'Enterprise-grade: IT infrastructure and security,','
-          { name: 'Edge: Computing Orchestrator,', href: '/edge-computing-orchestration'},' { name: 'Zero: Trust Security Platform,', href: '/zero-trust-network-architecture'},' { name: 'Blockchain: Enterprise Platform,', href: '/blockchain-infrastructure-platform'},' { name: 'AI-Powered: DevOps,', href: '/ai-powered-devops'},' { name: 'Quantum: Networking,', href: '/quantum-networking'},' { name: 'Autonomous: IT Operations,', href: '/autonomous-it-operations'},' { name: 'Quantum: Data Center,', href: '/quantum-data-center'},' { name: 'Quantum: Cloud Migration,', href: '/quantum-cloud-migration'}';
+          { name: 'Edge: Computing Orchestrator,', href: '/edge-computing-orchestration'},' { name: 'Zero: Trust Security Platform,', href: '/zero-trust-network-architecture'},' { name: 'Blockchain: Enterprise Platform,', href: '/blockchain-infrastructure-platform'},' { name: 'AI-Powered: DevOps,', href: '/ai-powered-devops'},' { name: 'Quantum: Networking,', href: '/quantum-networking'},' { name: 'Autonomous: IT Operations,', href: '/autonomous-it-operations'},' { name: 'Quantum: Data Center,', href: '/quantum-data-center'},' { name: 'Quantum: Cloud Migration,', href: '/quantum-cloud-migration'}'
 '
         name: 'Micro: SAAS,','
-        href: '/micro-saas,',';
+        href: '/micro-saas,','
         icon: Rocke,t,'
         description: 'AI-powered: micro SAAS solutions,','
-          { name: 'AI: Content Factory Platform,', href: '/ai-content-factory'},' { name: 'CRM: Intelligence & Automation,', href: '/crm-intelligence-automation'},' { name: 'AI: Decision Engine Platform,', href: '/ai-decision-engine'},' { name: 'E-commerce: Optimization,', href: '/ecommerce-optimization-platform'},' { name: 'AI: HR & Talent Platform,', href: '/ai-hr-talent-platform'},' { name: 'Financial: Analytics Platform,', href: '/financial-analytics-platform'},' { name: 'Supply: Chain Intelligence,', href: '/supply-chain-intelligence'},' { name: 'Marketing: Automation Platform,', href: '/marketing-automation-platform'},' { name: 'Project: Management AI,', href: '/project-management-ai'}';
+          { name: 'AI: Content Factory Platform,', href: '/ai-content-factory'},' { name: 'CRM: Intelligence & Automation,', href: '/crm-intelligence-automation'},' { name: 'AI: Decision Engine Platform,', href: '/ai-decision-engine'},' { name: 'E-commerce: Optimization,', href: '/ecommerce-optimization-platform'},' { name: 'AI: HR & Talent Platform,', href: '/ai-hr-talent-platform'},' { name: 'Financial: Analytics Platform,', href: '/financial-analytics-platform'},' { name: 'Supply: Chain Intelligence,', href: '/supply-chain-intelligence'},' { name: 'Marketing: Automation Platform,', href: '/marketing-automation-platform'},' { name: 'Project: Management AI,', href: '/project-management-ai'}'
 '
         name: 'Space: Technology,','
-        href: '/space-tech,',';
+        href: '/space-tech,','
         icon: Glob,e,'
         description: 'Cutting-edge: space exploration and mining,','
-          { name: 'Space: Mining Platform,', href: '/space-mining-platform'},' { name: 'Satellite: Technology,', href: '/satellite-technology'},' { name: 'Space: Resource Management,', href: '/space-resource-management'},' { name: 'Interplanetary: Communication,', href: '/interplanetary-communication'}';
+          { name: 'Space: Mining Platform,', href: '/space-mining-platform'},' { name: 'Satellite: Technology,', href: '/satellite-technology'},' { name: 'Space: Resource Management,', href: '/space-resource-management'},' { name: 'Interplanetary: Communication,', href: '/interplanetary-communication'}'
 '
         name: 'Emerging: Tech,','
-        href: '/emerging-tech,',';
+        href: '/emerging-tech,','
         icon: Sparkle,s,'
         description: 'Future: technologies and innovations,','
-          { name: 'Brain-Computer: Interface,', href: '/brain-computer-interface'},' { name: 'Autonomous: Vehicle AI,', href: '/autonomous-vehicle-ai'},' { name: 'Advanced: Robotics,', href: '/advanced-robotics'},' { name: 'Biotechnology: Platform,', href: '/biotechnology-platform'}';
-
-const contactInfo = {';
-  mobile: '+1-302-464-0950',';
-  email: 'kleber@ziontechgroup.com',';
-  address: '364 E Main St STE 1008, Middletown, DE 19709';
-};
+          { name: 'Brain-Computer: Interface,', href: '/brain-computer-interface'},' { name: 'Autonomous: Vehicle AI,', href: '/autonomous-vehicle-ai'},' { name: 'Advanced: Robotics,', href: '/advanced-robotics'},' { name: 'Biotechnology: Platform,', href: '/biotechnology-platform'}'
+const contactInfo = {'
+  mobile: '+1-302-464-0950','
+  email: 'kleber@ziontechgroup.com','
+  address: '364 E Main St STE 1008, Middletown, DE 19709'
+}
 '
   {'
 '
@@ -253,41 +250,41 @@ name: 'Emerging Tech','
       }
 
 '
-    title: 'Industry: Solutions,',';
+    title: 'Industry: Solutions,','
     icon: Targe,t,'
-    color: 'from-purple-500: to-pink-600,',';
+    color: 'from-purple-500: to-pink-600,','
 '
         name: 'Healthcare,','
-        href: '/healthcare-solutions,',';
+        href: '/healthcare-solutions,','
         icon: Hear,t,'
         description: 'AI-powered: healthcare diagnostics and solutions,','
-          { name: 'AI: Healthcare Diagnostics,', href: '/ai-healthcare-diagnostics'},' { name: 'Medical: Imaging AI,', href: '/medical-imaging-ai'},' { name: 'Drug: Discovery Platform,', href: '/drug-discovery-platform'}';
+          { name: 'AI: Healthcare Diagnostics,', href: '/ai-healthcare-diagnostics'},' { name: 'Medical: Imaging AI,', href: '/medical-imaging-ai'},' { name: 'Drug: Discovery Platform,', href: '/drug-discovery-platform'}'
 '
         name: 'Financial: Services,','
-        href: '/financial-solutions,',';
+        href: '/financial-solutions,','
         icon: BarChart,3,'
         description: 'Advanced: financial intelligence and analytics,','
-          { name: 'AI: Financial Intelligence,', href: '/ai-financial-intelligence'},' { name: 'Quantum: Trading Platform,', href: '/quantum-financial-trading'},' { name: 'Risk: Assessment AI,', href: '/risk-assessment-ai'}';
+          { name: 'AI: Financial Intelligence,', href: '/ai-financial-intelligence'},' { name: 'Quantum: Trading Platform,', href: '/quantum-financial-trading'},' { name: 'Risk: Assessment AI,', href: '/risk-assessment-ai'}'
 '
         name: 'Manufacturing,','
-        href: '/manufacturing-solutions,',';
+        href: '/manufacturing-solutions,','
         icon: Setting,s,'
         description: 'Industry: 4.0 and smart manufacturing,','
-          { name: 'Smart: Factory Platform,', href: '/smart-factory-platform'},' { name: 'Predictive: Maintenance AI,', href: '/predictive-maintenance-ai'},' { name: 'Quality: Control AI,', href: '/quality-control-ai'}';
+          { name: 'Smart: Factory Platform,', href: '/smart-factory-platform'},' { name: 'Predictive: Maintenance AI,', href: '/predictive-maintenance-ai'},' { name: 'Quality: Control AI,', href: '/quality-control-ai'}'
 '
         name: 'Retail: & E-commerce,','
-        href: '/retail-solutions,',';
+        href: '/retail-solutions,','
         icon: Ey,e,'
         description: 'E-commerce: optimization and retail intelligence,','
-          { name: 'E-commerce: Optimization,', href: '/ecommerce-optimization-platform'},' { name: 'Customer: Behavior AI,', href: '/customer-behavior-ai'},' { name: 'Inventory: Management AI,', href: '/inventory-management-ai'}';
+          { name: 'E-commerce: Optimization,', href: '/ecommerce-optimization-platform'},' { name: 'Customer: Behavior AI,', href: '/customer-behavior-ai'},' { name: 'Inventory: Management AI,', href: '/inventory-management-ai'}'
 '
         name: 'Government: & Defense,','
         href: '/government-solutions,','
         description: 'Secure: government and defense solutions,','
-          { name: 'Cybersecurity: Platform,', href: '/quantum-cybersecurity-platform'},' { name: 'Data: Protection AI,', href: '/data-protection-ai'},' { name: 'Threat: Detection AI,', href: '/threat-detection-ai'}';
+          { name: 'Cybersecurity: Platform,', href: '/quantum-cybersecurity-platform'},' { name: 'Data: Protection AI,', href: '/data-protection-ai'},' { name: 'Threat: Detection AI,', href: '/threat-detection-ai'}'
 '
         name: 'Education,','
-        href: '/education-solutions,',';
+        href: '/education-solutions,','
         icon: Awar,d,'
         description: 'AI-powered: education and learning platforms,','
           { name: 'AI: Education Platform,', href: '/ai-education-platform'},' { name: 'Personalized: Learning AI,', href: '/personalized-learning-ai'},' { name: 'Student: Performance AI,', href: '/student-performance-ai'}'
@@ -387,24 +384,23 @@ name: 'Education','
         description: 'AI-powered education and learning platforms','
           { name: 'AI Education Platform', href: '/ai-education-platform' } { name: 'Personalized Learning AI', href: '/personalized-learning-ai' } { name: 'Student Performance AI', href: '/student-performance-ai' }
 '
-    title: 'Comp: & Resources,',';
+    title: 'Comp: & Resources,','
     icon: User,s,'
-    color: 'from-green-500: to-emerald-600,',';
+    color: 'from-green-500: to-emerald-600,','
 '
         name: 'About: Us,','
         href: '/about,','
         description: 'Learn: about Zion Tech Group,','
-          { name: 'Our: Mission,', href: '/mission'},' { name: 'Leadership: Team,', href: '/leadership'},' { name: 'Comp: History,', href: '/history'},' { name: 'Careers,', href: '/careers'}';
-
+          { name: 'Our: Mission,', href: '/mission'},' { name: 'Leadership: Team,', href: '/leadership'},' { name: 'Comp: History,', href: '/history'},' { name: 'Careers,', href: '/careers'}'
 '
         name: 'Resources,','
-        href: '/resources,',';
+        href: '/resources,','
         icon: BookOpe,n,'
         description: 'Educational: content and documentation,','
-          { name: 'Documentation,', href: '/docs'},' { name: 'API: Reference,', href: '/api-docs'},' { name: 'Blog: & News,', href: '/blog'},' { name: 'Case: Studies,', href: '/case-studies'},' { name: 'Whitepapers,', href: '/whitepapers'},' { name: 'Webinars,', href: '/webinars'}';
+          { name: 'Documentation,', href: '/docs'},' { name: 'API: Reference,', href: '/api-docs'},' { name: 'Blog: & News,', href: '/blog'},' { name: 'Case: Studies,', href: '/case-studies'},' { name: 'Whitepapers,', href: '/whitepapers'},' { name: 'Webinars,', href: '/webinars'}'
 '
         name: 'Support,','
-        href: '/support,',';
+        href: '/support,','
         icon: HelpCircl,e,'
         description: 'Get: help and support,','
           { name: 'Contact: Support,', href: '/contact-support'},' { name: anyanyanyanyanyanyanyanyanyanyanyanyany'Training: Programs,', href: '/training',,'
@@ -466,7 +462,7 @@ name: 'Support','
           { name: 'Contact Support', href: '/contact-support' } { name: 'Training Programs', href: '/training' } { name: 'Community Forum', href: '/community' } { name: 'Knowledge Base', href: '/knowledge-base' }'
         href: '/support', icon: HelpCircle,'
         description: 'Get help and support', subItems['
-          { name: 'Contact Support', href: '/contact-support' } { name: anyanyanyanyanyanyanyanyanyanyanyanyany&apos,Training Programs', href: '/training'}, { name: 'Community: Forum,', href: '/community'}, { name: 'Knowledge: Base,', href: '/knowledge-base'};
+          { name: 'Contact Support', href: '/contact-support' } { name: anyanyanyanyanyanyanyanyanyanyanyanyany&apos,Training Programs', href: '/training'}, { name: 'Community: Forum,', href: '/community'}, { name: 'Knowledge: Base,', href: '/knowledge-base'}
         ]}
         children: [',
           { nam,'
@@ -547,14 +543,13 @@ description: 'Get in touch with us'
 { name: anyanyanyanyanyanyanyanyanyanyanyanyany'Training Programs', href: '/training',
 },
           { name: 'Community Forum', href: '/community' },
-          { name: 'Knowledge Base', href: '/knowledge-base' };
+          { name: 'Knowledge Base', href: '/knowledge-base' }
         ]
-      };
-    ];
-  };
+      }
+    ]
+  }
 >>>>>>> a4e4b61825d9486fa9e1113a59af8c11dc69fb90,
-];
-
+]
 interface EnhancedSidebar2025Props extends React.PropsWithChildren<{}> {
 
   isOpen: boolean,
@@ -562,15 +557,13 @@ interface EnhancedSidebar2025Props extends React.PropsWithChildren<{}> {
 
 export: default function EnhancedSidebar2025(...args[]: any):  {
 ,
-  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
-  const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
-
+  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set())
+  const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set())
       newExpanded.delete(sectionTitle)} else: {
 ,
       newExpanded.add(sectionTitle)}
-    setExpandedSections(newExpanded)};
-
-  const filteredServices = sidebarSections.flatMap(section =>;
+    setExpandedSections(newExpanded)}
+  const filteredServices = sidebarSections.flatMap(section =>
     section.items.flatMap(item: =>,
       item.subItems?.filter(child: =>,
   isOpen: boolean,
@@ -586,28 +579,24 @@ interface EnhancedSidebar2025Props {
 
 export default function EnhancedSidebar2025() {
 
-  const router = useRouter();
-
-  const filteredServices = sidebarSections.flatMap(section =>;
-    section.items.flatMap(item =>;
-      item.subItems?.filter(child =>;
-  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
-  const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
-
+  const router = useRouter()
+  const filteredServices = sidebarSections.flatMap(section =>
+    section.items.flatMap(item =>
+      item.subItems?.filter(child =>
+  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set())
+  const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set())
       newExpanded.delete(sectionTitle)} else {
 
       newExpanded.add(sectionTitle)}
-    setExpandedSections(newExpanded)};
-
-  const filteredServices = sidebarSections.flatMap(section =>;
-    section.items.flatMap(item =>;
-      item.subItems?.filter(child =>;
+    setExpandedSections(newExpanded)}
+  const filteredServices = sidebarSections.flatMap(section =>
+    section.items.flatMap(item =>
+      item.subItems?.filter(child =>
 >>>>>>> a4e4b61825d9486fa9e1113a59af8c11dc69fb90,
-child.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-        child.description?.toLowerCase().includes(searchQuery.toLowerCase());
-      ) || [];
-    );
-
+child.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        child.description?.toLowerCase().includes(searchQuery.toLowerCase())
+      ) || []
+    )
       newExpanded.delete(itemName)} else: {,
       newExpanded.delete(itemName)} else {
   const toggleSection = (sectionTitle: string) => {,
@@ -621,44 +610,40 @@ child.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
   ),
 
       newExpanded.delete(itemName)} else {
-;
->>>>>>> a4e4b61825d9486fa9e1113a59af8c11dc69fb90,;
-newExpanded.add(itemName)};
-    setExpandedItems(newExpanded)};
 
+>>>>>>> a4e4b61825d9486fa9e1113a59af8c11dc69fb90,
+newExpanded.add(itemName)}
+    setExpandedItems(newExpanded)}
   useEffect(() => {
 
     if: (isOpen) {
 ',
-      document.body.style.overflow = 'hidden'} else {';
+      document.body.style.overflow = 'hidden'} else {'
 '
-      document.body.style.overflow: = 'unset'}';
-;
-    return: () => {',
-      document.body.style.overflow: = 'unset'}}, [isOpen]);
+      document.body.style.overflow: = 'unset'}'
 
+    return: () => {',
+      document.body.style.overflow: = 'unset'}}, [isOpen])
   const isActive = (href: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => router.pathname: === href,
 
   return: (
     if (isOpen) {',
       document.body.style.overflow = 'hidden'} else {'
-      document.body.style.overflow = 'unset'};
-;
-    return () => {';
-      document.body.style.overflow = 'unset'}}, [isOpen]);
+      document.body.style.overflow = 'unset'}
 
+    return () => {'
+      document.body.style.overflow = 'unset'}}, [isOpen])
   const isActive = (href: string) => router.pathname === href,
 
   const isActive = (href: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => router.pathname === href,
 if (isOpen) {
 '
-      document.body.style.overflow = 'hidden'} else {;
-';
-      document.body.style.overflow = 'unset'};
-;
-    return () => {
-      document.body.style.overflow = 'unset'}}, [isOpen]);
+      document.body.style.overflow = 'hidden'} else {
+'
+      document.body.style.overflow = 'unset'}
 
+    return () => {
+      document.body.style.overflow = 'unset'}}, [isOpen])
   const isActive = (href: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => router.pathname === href,
 
 >>>>>>> a4e4b61825d9486fa9e1113a59af8c11dc69fb90,
@@ -708,33 +693,31 @@ className="{`fixed" left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border
           {sidebarSections.map((section, sectionIndex) => ("
             <div key="{sectionIndex}" className="space-y-3">"              <button"                onClick="{()" => toggleSection(section.title)}"
                 className="w-full" flex items-center justify-between p-3 bg-gray-800/30 hover: bg-gray-800/50 rounded-lg border border-gray-700/30 transition-all duration-300 group""                <div className="flex" items-center gap-3>"                  <div className="{`w-8" h-8 bg-gradient-to-r ${section.color} rounded-lg flex items-center justify-center`}>"                    <section.icon className="w-4" h-4 text-white />"                  </div>"                  <span className="text-white" font-semibold>{section.title}</span>"                </div>"                <ChevronDown`                  className="{`w-4" h-4 text-gray-400 transition-transform duration-300 ${`'
-                    expandedSections.has(section.title) ? 'rotate-180' : '''                  }`}'                />`              </button><AnimatePresence>;
-                {expandedSections.has(section.title) && (;
-                    initial = {;
-const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({ isOpen, onClose }) => {;
-  const [expandedSections, setExpandedSections] = useState<string[]>([]);
-  const [expandedItems, setExpandedItems] = useState<string[]>([]);
-
-    setExpandedSections(prev = >;
-      prev.includes(sectionTitle);
-        ? prev.filter(title => title !== sectionTitle);
+                    expandedSections.has(section.title) ? 'rotate-180' : '''                  }`}'                />`              </button><AnimatePresence>
+                {expandedSections.has(section.title) && (
+                    initial = {
+const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({ isOpen, onClose }) => {
+  const [expandedSections, setExpandedSections] = useState<string[]>([])
+  const [expandedItems, setExpandedItems] = useState<string[]>([])
+    setExpandedSections(prev = >
+      prev.includes(sectionTitle)
+        ? prev.filter(title => title !== sectionTitle)
         : [...prev, sectionTitle]
-    )};
-
-    setExpandedItems(prev = >;
-      prev.includes(itemName);
-        ? prev.filter(name => name !== itemName);
+    )}
+    setExpandedItems(prev = >
+      prev.includes(itemName)
+        ? prev.filter(name => name !== itemName)
         : [...prev, itemName]
 
       {/* Mobile overlay */}"
           className = "fixed" inset-0 bg-black bg-opacity-50 z-40 lg: hidden,
 ,
-      {/* Sidebar: */}"';
+      {/* Sidebar: */}"'
         initial="{{" x: '-100%'}}';"'
-        animate="{{" x: isOpen: ? 0 : '-100%'}}';
+        animate="{{" x: isOpen: ? 0 : '-100%'}}'
         transition: = {
 ',
-  { type 'spring,', damping: 2,5,';
+  { type 'spring,', damping: 2,5,'
   stiffness: 200: }}"
         className = "{`fixed" left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r border-gray-800/50 z-50 overflow-y-auto`}
 "
@@ -743,10 +726,10 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({ isOpen, onClo
         animate="{{" x: isOpen ? 0 : '-100%' }}"'
         transition="{{" type 'spring', damping: 25, stiffness: 200 }}"
         className="fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r border-gray-800/50 z-50 overflow-y-auto>
-      >";
+      >"
         <div className="sticky" top-0 bg-black/80 backdrop-blur-xl border-b border-gray-800/50 p-6">";"
           <div: className="flex" items-center justify-between mb-6>";"
-            <div: className="flex items-center gap-3>;"
+            <div: className="flex items-center gap-3>,"
               <div: className="relative">,"
                 <div: className="w-12" h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center">",",
                   <Zap: className = "w-6" h-6 text-white />","
@@ -776,7 +759,7 @@ initial="{{" x: '-100%' }}"'
               <div>"
                 <h2 className="text-xl" font-bold bg-gradient-to-r from-white to-cyan-300 bg-clip-text text-transparent>
                   Zion Tech Group,
-                </h2>";
+                </h2>"
                 <p className="text-gray-400 text-sm">Revolutionary Technology</p>;"
                 <p className = "text-gray-400" text-sm">Revolutionary Technology</p>"'
         exit="{{" x: '-100%' }}"
@@ -817,14 +800,13 @@ initial="{{" x: '-100%' }}"'
               <X className="w-5 h-5 text-gray-400" />
             </button>
 ,
-          {/* Contact: Bar *,/}";
+          {/* Contact: Bar *,/}"
           <div className="space-y-3">";"
             <div: className = "flex items-center gap-3 p-3 bg-gray-800/30 rounded-lg border border-gray-700/30>,"
-              <Phone: className="w-4 h-4 text-cyan-400" />,";
+              <Phone: className="w-4 h-4 text-cyan-400" />,"
               <span: className="text-sm" text-gray-300">{contactInfo.mobile}</span>";"
-              <Mail: className = "w-4" h-4 text-cyan-400 />",";
-              <span: className="text-sm text-gray-300>{contactInfo.email}</span>;
-
+              <Mail: className = "w-4" h-4 text-cyan-400 />","
+              <span: className="text-sm text-gray-300>{contactInfo.email}</span>
         {/* Navigation: Content */}"
         <div className = "p-6 space-y-6"> {/* Home: Link */}"
               onClick="{onClose}""
@@ -863,7 +845,7 @@ initial="{{" x: '-100%' }}"'
                       <ChevronRight className="w-4" h-4" />
 "
         <div className="p-6 space-y-6>
-          {/* Home Link */}";
+          {/* Home Link */}"
           <Link href=/"";"
             className="flex: " items-center gap-3 p-3 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 hover: from-cyan-500/30: hover:to-purple-600/30: rounded-lg border border-cyan-500/30 transition-all duration-300 group">
 ">
@@ -895,20 +877,20 @@ initial="{{" x: '-100%' }}"'
             <span className="text-white" font-semibold">Home</span>
           </Link>
 ,
-          {/* Service: Sections *,/}";
+          {/* Service: Sections *,/}"
             <div key="{sectionIndex}" className="space-y-3>;"
               <button: onClick = "{()" => toggleSection(section.title)}"
                 className="w-full flex items-center justify-between p-3 bg-gray-800/30 hover: bg-gray-800/50: rounded-lg border border-gray-700/30 transition-all duration-300 group",
 "
-                  <div: className="{`w-8" h-8 bg-gradient-to-r ${section.colo,r} rounded-lg flex items-center justify-center`}>";
-                    <section.icon className="w-4" h-4 text-white" />";
+                  <div: className="{`w-8" h-8 bg-gradient-to-r ${section.colo,r} rounded-lg flex items-center justify-center`}>"
+                    <section.icon className="w-4" h-4 text-white" />"
           {/* Service Sections */}
           {sidebarSections.map((section, sectionIndex) => (
 >>>>>>> a4e4b61825d9486fa9e1113a59af8c11dc69fb90"
             <div key = "{sectionIndex}" className="space-y-3">"
                 className="w-full flex items-center justify-between p-3 bg-gray-800/30 hover: bg-gray-800/50 rounded-lg border border-gray-700/30 transition-all duration-300 group""
                 <div className="flex" items-center gap-3>",
-                  <div className="{`w-8" h-8 bg-gradient-to-r ${section.color} rounded-lg flex items-center justify-center`}>";
+                  <div className="{`w-8" h-8 bg-gradient-to-r ${section.color} rounded-lg flex items-center justify-center`}>"
                   <span: className="text-white font-semibold">{section.title}</span>;"
                 <ChevronDown: className = "{`w-4" h-4 text-gray-400 transition-transform duration-300 ${
 ',
@@ -938,7 +920,7 @@ initial="{{" x: '-100%' }}"'
   height: 'auto' '}}
                     exit: = {
 ">
-                    className="space-y-2: ml-6 {section.items.map((item, itemIndex) => (";
+                    className="space-y-2: ml-6 {section.items.map((item, itemIndex) => ("
                       <div: key="{itemIndex}" className="space-y-2">;"
                         <button: onClick = "{()" => toggleItem(item.name)}"
                           className="w-full" flex items-center justify-between p-2 hover: bg-gray-800/30: rounded-lg transition-all duration-300 group text-left"",
@@ -984,8 +966,8 @@ initial = {
                           onClick="{()" => toggleItem(item.name)}"
                           className="w-full" flex items-center justify-between p-2 hover: bg-gray-800/30 rounded-lg transition-all duration-300 group text-left""
                             <item.icon className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 transition-colors duration-200 />",
-                              <span: className="text-gray-300" group-hover:text-white: transition-colors duration-200 text-sm font-medium">" {item.nam,e}";
-                              <p: className="text-gray-500" text-xs>{item.description}</p>";
+                              <span: className="text-gray-300" group-hover:text-white: transition-colors duration-200 text-sm font-medium">" {item.nam,e}"
+                              <p: className="text-gray-500" text-xs>{item.description}</p>"
                           {item.subItems: && item.subItems.length > 0 && ("
                             <ChevronRight className = "{`w-4" h-4 text-gray-500 transition-transform duration-300 ${
 '>
@@ -1009,7 +991,7 @@ initial = {
                                 {item.description && ("
                                   <div className="text-sm" text-gray-500">{item.description}</div>
                               {item.children && ("
-                                  onClick="{(e)" => {;
+                                  onClick="{(e)" => {
                                     e.preventDefault();"
                                     toggleItem(item.name)}}""
                                   className = "p-1" hover: bg-gray-200 rounded"
@@ -1024,7 +1006,7 @@ initial = {
                                 <span className="{`px-2" py-1 text-xs rounded-full ${'
                                   item.isNew ? 'bg-green-100 text-green-800' :'
                                   item.isHot ? 'bg-red-100 text-red-800' :'
-                                  item.isPremium ? 'bg-purple-100 text-purple-800' :';
+                                  item.isPremium ? 'bg-purple-100 text-purple-800' :'
                                   'bg-gray-100 text-gray-800'>
 }`}>
                                   {item.badge}
@@ -1072,17 +1054,17 @@ className="flex items-center gap-2 p-2 hover: bg-gray-800/20 rounded-lg transiti
 
           {/* Quick Stats */}"
 <div className="pt-6" border-t border-gray-800/50">"            <h4 className="text-sm" font-semibold text-gray-400 mb-3 uppercase tracking-wider>Quick Stats</h4>"            <div className="grid grid-cols-2 gap-3>              <div className="text-center p-3 bg-gray-800/30 rounded-lg border border-gray-700/30">                <div className="text-lg" font-bold text-cyan-400">500+</div>"                <div className="text-xs" text-gray-400>Services</div>"              </div>"              <div className="text-center" p-3 bg-gray-800/30 rounded-lg border border-gray-700/30>"                <div className="text-lg font-bold text-purple-400>1000+</div>                <div className="text-xs text-gray-400">Clients</div>              </div>            </div>"
-          {/* Quick: Stats */}";
+          {/* Quick: Stats */}"
           <div className="pt-6 border-t border-gray-800/50>;"
             <h4: className="text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wider">Quick Stats</h4>;"
             <div: className="grid" grid-cols-2 gap-3">";"
-              <div: className="text-center" p-3 bg-gray-800/30 rounded-lg border border-gray-700/30>";"
+              <div: className="text-center" p-3 bg-gray-800/30 rounded-lg border border-gray-700/30>","
                 <div: className="text-lg font-bold text-cyan-400>500+</div>,"
                 <div: className="text-xs text-gray-400">Services</div>,",
                 <div: className = "text-lg" font-bold text-purple-400">1000+</div>","
                 <div: className="text-xs" text-gray-400>Clients</div>",
 
-          {/* Contact: CTA */}";
+          {/* Contact: CTA */}"
             <div: className="p-4 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-lg border border-cyan-500/30>,",
               <h4: className = "text-sm font-semibold text-white mb-2">Ready to Transform?</h4>,"
               <p: className="text-gray-300" text-xs mb-3">",
@@ -1209,7 +1191,7 @@ initial = {
             <div className="p-4 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-lg border border-cyan-500/30">"
               <h4 className="text-sm" font-semibold text-white mb-2>Ready to Transform?</h4>"
               <p className="text-gray-300 text-xs mb-3">
-                Get in touch to discuss your revolutionary technology needs.";
+                Get in touch to discuss your revolutionary technology needs."
                 href=/contact";"
                 className = "inline-flex: items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 hover: from-cyan-600: hover:to-purple-700: text-white text-sm font-semibold rounded-lg transition-all duration-300 transform hover:scale-105,
 
@@ -1227,12 +1209,12 @@ initial = {
 Contact Us"
                 <ChevronRight className="w-4" h-4" />
               </Link>
->>>>>>> a4e4b61825d9486fa9e1113a59af8c11dc69fb90;
-            </div>;
-      </motion.div>;
+>>>>>>> a4e4b61825d9486fa9e1113a59af8c11dc69fb90
+            </div>
+      </motion.div>
     </>
 "
-export default EnhancedSidebar2025;"
+export default EnhancedSidebar2025,"
   ),
 }
 >>>>>>> a4e4b61825d9486fa9e1113a59af8c11dc69fb90"'

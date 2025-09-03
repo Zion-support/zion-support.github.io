@@ -28,9 +28,9 @@ const nextConfig = {
       config.resolve.alias = {
         ...config.resolve.alias,
         '@': new URL('./src', import.meta.url).pathname,
-      };
+      }
     }
-    return config;
+    return config
   },
   async headers() {
     return [
@@ -51,8 +51,7 @@ const nextConfig = {
           },
         ],
       },
-    ];
+    ]
   },
-};
-
-export default nextConfig;
+}
+export default nextConfig

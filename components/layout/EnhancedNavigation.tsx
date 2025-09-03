@@ -22,10 +22,10 @@ const EnhancedNavigation = () => {
               Contact,
             </Link>
           </div>
-        </div>;
-      </div>;
+        </div>
+      </div>
     </nav>;,
-  ),;
-};
+  ),
+}
 "'
-export default EnhancedNavigation;
+export default EnhancedNavigation

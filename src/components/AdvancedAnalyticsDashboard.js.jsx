@@ -1,14 +1,14 @@
 import React, { useState } from 'react';''';,"});,"})","});,"})","})"
-  TrendingUp,;,"});,"})"
-  TrendingDown,;,"});,"})"
-  Users,;,"});,"})"
-  DollarSign,;,"});,"})"
-  Target,;,"});,"})"
-  BarChart3,;,"});,"})"
-  PieChart,;,"});,"})"
-  Activity,;,"});,"})"
-  Star,;,"});,"})"
-  ArrowUpRight,;,"});,"})"
+  TrendingUp,,"});,"})"
+  TrendingDown,,"});,"})"
+  Users,,"});,"})"
+  DollarSign,,"});,"})"
+  Target,,"});,"})"
+  BarChart3,,"});,"})"
+  PieChart,,"});,"})"
+  Activity,,"});,"})"
+  Star,,"});,"})"
+  ArrowUpRight,,"});,"})"
   ArrowDownRight,';,"});,"})"
   Shield,'';,"});,"})"
   Brain,''';,"});,"})"
@@ -30,15 +30,15 @@ const AdvancedAnalyticsDashboard = () => {}"});,"})"
       change: 12.5,''';,"});,"})"
       changeType: 'increase','';,"});,"})"
       icon: <DollarSign className="w-6 h-6" />,''';,"});,"})"
-      color: 'from-green-500 to-emerald-600'},;,"});,"})"
+      color: 'from-green-500 to-emerald-600'},,"});,"})"
     {}"});,"})"
 ';,"});,"})"
       title: 'Active Clients',';,"});,"})"
-      value: '1,247',;,"});,"})"
+      value: '1,247',,"});,"})"
       change: 8.2,'"";,"});,"})"
       changeType: 'increase',"""";,"});,"})"
       icon: <Users className="w-6 h-6" />,';,"});,"})"
-      color: 'from-blue-500 to-cyan-600'},;,"});,"})"
+      color: 'from-blue-500 to-cyan-600'},,"});,"})"
     {}"});,"})"
 ';,"});,"})"
       title: 'Service Performance',';,"});,"})"
@@ -46,7 +46,7 @@ const AdvancedAnalyticsDashboard = () => {}"});,"})"
       change: 2.1,'"";,"});,"})"
       changeType: 'increase',"""";,"});,"})"
       icon: <Target className="w-6 h-6" />,';,"});,"})"
-      color: 'from-purple-500 to-pink-600'},;,"});,"})"
+      color: 'from-purple-500 to-pink-600'},,"});,"})"
     {}"});,"})"
 ';,"});,"})"
       title: 'Client Satisfaction',';,"});,"})"
@@ -66,7 +66,7 @@ const AdvancedAnalyticsDashboard = () => {}"});,"})"
       growth: 15.2,';,"});,"})"
       clients: 89,'';,"});,"})"
       revenue: 450000,''';,"});,"})"
-      status: 'trending'},;,"});,"})"
+      status: 'trending'},,"});,"})"
     {}"});,"})"
 ';,"});,"})"
 '';,"});,"})"
@@ -76,7 +76,7 @@ const AdvancedAnalyticsDashboard = () => {}"});,"})"
       growth: 28.7,';,"});,"})"
       clients: 23,'';,"});,"})"
       revenue: 1200000,''';,"});,"})"
-      status: 'trending'},;,"});,"})"
+      status: 'trending'},,"});,"})"
     {}"});,"})"
 ';,"});,"})"
 '';,"});,"})"
@@ -86,7 +86,7 @@ const AdvancedAnalyticsDashboard = () => {}"});,"})"
       growth: 12.4,';,"});,"})"
       clients: 156,'';,"});,"})"
       revenue: 780000,''';,"});,"})"
-      status: 'stable'},;,"});,"})"
+      status: 'stable'},,"});,"})"
     {}"});,"})"
 ';,"});,"})"
 '';,"});,"})"
@@ -96,7 +96,7 @@ const AdvancedAnalyticsDashboard = () => {}"});,"})"
       growth: 18.9,';,"});,"})"
       clients: 203,'';,"});,"})"
       revenue: 920000,''';,"});,"})"
-      status: 'trending'},;,"});,"})"
+      status: 'trending'},,"});,"})"
     {}"});,"})"
 ';,"});,"})"
 '';,"});,"})"
@@ -466,13 +466,13 @@ export { AdvancedAnalyticsDashboard };,"});,"})"
 export { AdvancedAnalyticsDashboard };,"});,"})"
 ;,"});,"})"
 export { AdvancedAnalyticsDashboard };,"});,"})'";"
-const AdvancedAnalyticsDashboard = () => {}"";
-'';
-'';
+const AdvancedAnalyticsDashboard = () => {}""
+''
+''
 ''';""'
   const [timeRange, setTimeRange] = useState('30d')';''
   const [timeRange, setTimeRange] = useState('30d')'
-  const [selectedMetric, setSelectedMetric] = useState();
+  const [selectedMetric, setSelectedMetric] = useState()
   // Mock data - in real app this would come from API,
 const metrics = []"
     {}""
@@ -572,9 +572,9 @@ const metrics = []"
     { label: 'IoT', value: 5, color: 'from-orange-500 to-yellow-600' }
   ]
   const getStatusIcon = status => {}"
-    switch (status) {}"";
-'''';
-      case 'trending': '''';
+    switch (status) {}""
+''''
+      case 'trending': ''''
         return <TrendingUp className="w - 4 h-4 text-green-500" /" >'',
       case 'stable': '''''
         return <Activity className="w - 4 h-4 text-blue-500" /" >'',
@@ -597,11 +597,11 @@ const metrics = []"
       case 'trending': '''
         return 'bg-green-100 text-green-800''
       case 'stable':'''
-        return 'bg-blue-100 text-blue-800';
-      case 'declining':'';
-        return 'bg-red-100 text-red-800';
+        return 'bg-blue-100 text-blue-800'
+      case 'declining':''
+        return 'bg-red-100 text-red-800'
       default: ''',,
-        return 'bg-gray-100 text-gray-800'}",";
+        return 'bg-gray-100 text-gray-800'}","
 }'
         return 'bg-gray-100 text-gray-800'}"}'
   return (''''
@@ -892,7 +892,7 @@ insights to optimize your business performance and make data-driven""
               className="bg-white text-zion-purple hover:bg-zion-slate-light""
               onClick="{()" =" >''
                 window.open('',,
-                  'mailto: kleber@ziontechgroup.com?subject="Analytics" Dashboard Access', _blank'';
+                  'mailto: kleber@ziontechgroup.com?subject="Analytics" Dashboard Access', _blank''
                 )", "
 }'''''
             >''''
@@ -923,4 +923,4 @@ export { AdvancedAnalyticsDashboard }
 export { AdvancedAnalyticsDashboard }
 "
 export { AdvancedAnalyticsDashboard }"`""
-";
+"

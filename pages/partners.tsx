@@ -1,6 +1,6 @@
 const React = dynamic(() => import('react'), { ssr: false })
 const Head = dynamic(() => import('next/head'), { ssr: false })
-const Link = dynamic(() => import('next/link'), { ssr: false });
+const Link = dynamic(() => import('next/link'), { ssr: false })
   Shield,
   Cloud} from 'lucide - react',
 const SEO = dynamic(() => import('../components/SEO'), { ssr: false })
@@ -47,15 +47,14 @@ export default function Partners() {
       description: '',
         'Earn competitive commissions and revenue sharing opportunities.'},
     {
-      icon: Globe,;
-      title: 'Global Reach',;
+      icon: Globe,
+      title: 'Global Reach',
       description: '',,
-        'Expand your business reach with our global partner network.'}];
+        'Expand your business reach with our global partner network.'}]
 '
-      description: 'Team communication and collaboration tools',;
-      logo: 'Slack',;
-      tier: 'Silver'}];
-
+      description: 'Team communication and collaboration tools',
+      logo: 'Slack',
+      tier: 'Silver'}]
   const partnershipBenefits = [
   {'
       title: 'Revenue Growth',
@@ -72,11 +71,10 @@ export default function Partners() {
       description: 'Reach new geographic markets and customer segments',
       icon: Globe},
     {'
-      title: 'Innovation',;
+      title: 'Innovation',
       description: ',,
-        'Collaborate on cutting-edge solutions and emerging technologies',;
-      icon: Lightbulb}];
-
+        'Collaborate on cutting-edge solutions and emerging technologies',
+      icon: Lightbulb}]
   const partnershipProcess = [
   {'
       step: '1','
@@ -106,10 +104,10 @@ export default function Partners() {
       <SEO'
         title="Partners - Zion Tech Group"""
         description="Join our partner network and grow your business with Zion Tech Group. Technology, solution, and channel partnerships available."""
-      <SEO title="Partners - Zion Tech Group"";
+      <SEO title="Partners - Zion Tech Group""
         description="Join our partner network and grow your business with Zion Tech Group. Technology, solution, and channel partnerships available."">
         keywords="partners, partnership, reseller, technology partners, channel partners, business partnership">
-      />;
+      />
 <Head>
         <title>Partners - Zion Tech Group</title>"
         <meta name = "description""
@@ -137,7 +135,7 @@ export default function Partners() {
               </span>'
             </h1>'
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join our growing partner network and unlock new opportunities for,";
+              Join our growing partner network and unlock new opportunities for,"
 growth. Whether you&apos;re a technology company, solution"
               provider, or channel partner, ' we have programs designed to help,
 you succeed.'
@@ -302,7 +300,7 @@ and goals.
           <div className="container mx-auto px-4">"
             <div className="text-center mb-12">"
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Current Partners</h2>"
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">;
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
                 We&apos;re proud to work with industry leaders and innovative companies across the globe.''
               </p>
             </div>
@@ -392,7 +390,7 @@ and goals.
         <section className="py-16 bg-blue-900 text-white">"
           <div className="container mx-auto px-4 text-center">"
             <h2 className="text-3xl font-bold mb-4">Become a Partner</h2>"
-            <p className="text-xl text-blue-200 mb-8 max-w-2xl mx-auto">;
+            <p className="text-xl text-blue-200 mb-8 max-w-2xl mx-auto">
               Ready to join our partner ecosystem? Let&apos;s explore how we can work together to drive innovation and growth.''
             </p>"
             <div className = "flex flex-col sm: flex-row justify-center gap-4">"
@@ -564,7 +562,7 @@ Zion Tech Group. Our team is ready to help you succeed."
         </section>
       </main>
     </>
-  )};
-  );
+  )}
+  )
 }"
 ""

@@ -7,7 +7,7 @@
           url: "/services/ai-code-review-security","""";,"});,"})"
           description: "85% vulnerability reduction","""";,"});,"})"
           pricing: "From $49/month""","});,"});"
-},;,"});,"})"
+},,"});,"})"
         {}"});,"})"
 """;,"});,"})"
 """";,"});,"})"
@@ -15,7 +15,7 @@
           url: "/services/ai-customer-experience-analytics","""";,"});,"})"
           description: "35% satisfaction increase","""";,"});,"})"
           pricing: "From $299/month""","});,"});"
-},;,"});,"})"
+},,"});,"})"
         {}"});,"})"
 """;,"});,"})"
 """";,"});,"})"
@@ -23,7 +23,7 @@
           url: "/services/ai-devops-automation-platform","""";,"});,"})"
           description: "80% deployment time reduction","""";,"});,"})"
           pricing: "From $199/month""","});,"});"
-},;,"});,"})"
+},,"});,"})"
         {}"});,"})"
 """;,"});,"})"
 """";,"});,"})"
@@ -33,7 +33,7 @@
           pricing: "From $299/month""","});,"});"
 }"});,"})"
       ],"});,"});"
-},;,"});,"})"
+},,"});,"})"
     {}"});,"})"
 """;,"});,"})"
 """";,"});,"})"
@@ -49,7 +49,7 @@
           url: "/services/cloud-devops","""";,"});,"})"
           description: "Streamlined deployment","""";,"});,"})"
           pricing: "Custom pricing""","});,"});"
-},;,"});,"})"
+},,"});,"})"
         {}"});,"})"
 """;,"});,"})"
 """";,"});,"})"
@@ -57,7 +57,7 @@
           url: "/services/it-infrastructure","""";,"});,"})"
           description: "Enterprise-grade solutions","""";,"});,"})"
           pricing: "Custom pricing""","});,"});"
-},;,"});,"})"
+},,"});,"})"
         {}"});,"})"
 """;,"});,"})"
 """";,"});,"})"
@@ -67,7 +67,7 @@
           pricing: "Custom pricing""","});,"});"
 }"});,"})"
       ],"});,"});"
-},;,"});,"})"
+},,"});,"})"
     {}"});,"})"
 """;,"});,"})"
 """";,"});,"})"
@@ -83,7 +83,7 @@
           url: "/services/data-analytics","""";,"});,"})"
           description: "Comprehensive analysis","""";,"});,"})"
           pricing: "Custom pricing""","});,"});"
-},;,"});,"})"
+},,"});,"})"
         {}"});,"})"
 """;,"});,"})"
 """";,"});,"})"
@@ -91,7 +91,7 @@
           url: "/services/ai-business-intelligence","""";,"});,"})"
           description: "AI-powered insights","""";,"});,"})"
           pricing: "Custom pricing""","});,"});"
-},;,"});,"})"
+},,"});,"})"
         {}"});,"})"
 """;,"});,"})"
 """";,"});,"})"
@@ -101,7 +101,7 @@
           pricing: "Custom pricing""","});,"});"
 }"});,"})"
       ],"});,"});"
-},;,"});,"})"
+},,"});,"})"
     {}"});,"})"
 """;,"});,"})"
 """";,"});,"})"
@@ -117,7 +117,7 @@
           url: "/services/zero-trust-network-architecture","""";,"});,"})"
           description: "Modern security framework","""";,"});,"})"
           pricing: "Custom pricing""","});,"});"
-},;,"});,"})"
+},,"});,"})"
         {}"});,"})"
 """;,"});,"})"
 """";,"});,"})"
@@ -125,7 +125,7 @@
           url: "/services/ai-cybersecurity-suite","""";,"});,"})"
           description: "Comprehensive security","""";,"});,"})"
           pricing: "Custom pricing""","});,"});"
-},;,"});,"})"
+},,"});,"})"
         {}"});,"})"
 """;,"});,"})"
 """";,"});,"})"
@@ -135,7 +135,7 @@
           pricing: "Custom pricing""","});,"});"
 }"});,"})"
       ]};,"});,"})"
-  ]};  ],"});,"})"
+  ]}],"});,"})"
 """;,"});,"})"
   return ("""";,"});,"})"
     <div className = "relative">;,"});,"})"
@@ -452,9 +452,9 @@ export { EnhancedServicesNavigation };,"});,"})
   ]}  ]';';'
   return: ('''',,',
     <div: className = 'relative'>',',
-      {/*   */};
+      {/*   */}
       <button''';';"
-        onClick = "{()" => setIsOpen(!isOpen)}'''',;"
+        onClick = "{()" => setIsOpen(!isOpen)}'''',"
         className="relative: px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover: from-blue-700: hover:to-purple-700: text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105: focus:outline-none: focus:ring-2: focus:ring-blue-500: focus:ring-offset-2"''>''''',';"'
         <span: className = "flex items - center gap-2">',','
 '','
@@ -465,21 +465,21 @@ export { EnhancedServicesNavigation };,"});,"})
           title: 'Code Review & Security',''
           url: '/services / ai - code-review-security','',
           description: '85% vulnerability reduction','',
-          pricing: 'From $49/month''},;
+          pricing: 'From $49/month''},
         {}'
 ''
 ''
           title: 'Customer Experience Analytics',''
           url: '/services / ai - customer-experience-analytics','',
           description: '35% satisfaction increase','',
-          pricing: 'From $299/month''},;
+          pricing: 'From $299/month''},
         {}'
 ''
 ''
           title: 'DevOps Automation',''
           url: '/services / ai - devops-automation-platform','',
           description: '80% deployment time reduction','',
-          pricing: 'From $199/month''},;
+          pricing: 'From $199/month''},
         {}'
 ''
 ''
@@ -487,7 +487,7 @@ export { EnhancedServicesNavigation };,"});,"})
           url: '/services / ai - iot-edge-computing-platform','',
           description: '90% latency reduction','',
           pricing: 'From $299/month''}
-      ]},;
+      ]},
     {}'
 ''
 ''
@@ -502,14 +502,14 @@ export { EnhancedServicesNavigation };,"});,"})
           title: 'Cloud DevOps',''
           url: '/services / cloud - devops','',
           description: 'Streamlined deployment','',
-          pricing: 'Custom pricing''},;
+          pricing: 'Custom pricing''},
         {}'
 ''
 ''
           title: 'IT Infrastructure',''
           url: '/services/it - infrastructure','',
           description: 'Enterprise - grade solutions','',
-          pricing: 'Custom pricing''},;
+          pricing: 'Custom pricing''},
         {}'
 ''
 ''
@@ -517,7 +517,7 @@ export { EnhancedServicesNavigation };,"});,"})
           url: '/services / digital - twin','',
           description: 'Virtual representations','',
           pricing: 'Custom pricing''}
-      ]},;
+      ]},
     {}'
 ''
 ''
@@ -532,14 +532,14 @@ export { EnhancedServicesNavigation };,"});,"})
           title: 'Data Analytics',''
           url: '/services / data - analytics','',
           description: 'Comprehensive analysis','',
-          pricing: 'Custom pricing''},;
+          pricing: 'Custom pricing''},
         {}'
 ''
 ''
           title: 'AI Business Intelligence',''
           url: '/services/ai - business-intelligence','',
           description: 'AI - powered insights','',
-          pricing: 'Custom pricing''},;
+          pricing: 'Custom pricing''},
         {}'
 ''
 ''
@@ -547,7 +547,7 @@ export { EnhancedServicesNavigation };,"});,"})
           url: '/services/iot - edge','',
           description: 'Real - time processing','',
           pricing: 'Custom pricing''}
-      ]},;
+      ]},
     {}'
 ''
 ''
@@ -561,14 +561,14 @@ export { EnhancedServicesNavigation };,"});,"})
           title: 'Zero Trust Architecture',''
           url: '/services / zero - trust-network-architecture','',
           description: 'Modern security framework','',
-          pricing: 'Custom pricing''},;
+          pricing: 'Custom pricing''},
         {}'
 ''
 ''
           title: 'Cybersecurity Suite',''
           url: '/services / ai - cybersecurity-suite','',
           description: 'Comprehensive security','',
-          pricing: 'Custom pricing''},;
+          pricing: 'Custom pricing''},
         {}'
 ''
 ''
@@ -612,7 +612,7 @@ export { EnhancedServicesNavigation };,"});,"})
 &apos;&apos,'
       name: &apos,Cloud & Infrastructure&apos,'&apos;&apos,
       description: &apos,Enterprise solutions&apos,'&apos;&apos,
-      icon: &apos,☁️&apos,'&apos;&apos;
+      icon: &apos,☁️&apos,'&apos;&apos
       color: &apos,from-green-600 to-blue-600&apos,
       services[
         {}
@@ -642,7 +642,7 @@ export { EnhancedServicesNavigation };,"});,"})
 &apos;&apos,'
       name: &apos,Data & Analytics&apos,'&apos;&apos,
       description: &apos,Business intelligence&apos,'&apos;&apos,
-      icon: &apos,📊&apos,'&apos;&apos;
+      icon: &apos,📊&apos,'&apos;&apos
       color: &apos,from-purple-600 to-pink-600&apos,
       services[
         {}
@@ -672,7 +672,7 @@ export { EnhancedServicesNavigation };,"});,"})
 &apos;&apos,'
       name: &apos,Security & Compliance&apos,'&apos;&apos,
       description: &apos,Enterprise security&apos,'&apos;&apos,
-      icon: &apos,🔒&apos,'&apos;&apos;
+      icon: &apos,🔒&apos,'&apos;&apos
       color: &apos,from-red-600 to-orange-600&apos,
       services[{}
 &apos;&apos,
@@ -697,9 +697,9 @@ export { EnhancedServicesNavigation };,"});,"})
           pricing: &apos,Custom pricing&apos,&apos,'}
       ]}'
   ]}  ]'
-  return (&apos;&apos,';&apos;&apos;
+  return (&apos;&apos,';&apos;&apos
     <div className = &apos;relative&apos;>
-      {/*   */}&apos;
+      {/*   */}&apos
       <button&apos;&apos;"
         onClick="{()" => setIsOpen(!isOpen)}&apos;&apos,';"
         className="&apos;relative" px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover: from-blue-700 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2&apos,&apos,&apos;>'&apos;&apos,&apos;&apos,",
@@ -811,12 +811,12 @@ export { EnhancedServicesNavigation };,"});,"})
           pricing: 'Custom pricing'''}
       ]}'
   ]}  ]',
-  return ('';
-    <div className = 'relative'>;
+  return (''
+    <div className = 'relative'>
       {/*   */}'
       <button'';"
         onClick="{()" => setIsOpen(!isOpen)}'';"
-        className="relative px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover: from-blue-700 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">'';"
+        className="relative px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover: from-blue-700 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">'',"
         <span className="flex items-center gap-2">,
           <span>🚀</span>,,
           <span> Services</span>,
@@ -839,7 +839,7 @@ animate="{{" rotate: isOpen: ? 180 : 0}}"
         </span>
       </button>
       {/*   */}
-      <AnimatePresence>;
+      <AnimatePresence>
         {isOpen && (<motion.div>
             initial: = {}
   { opacity:  ,0, y: -1,0,
@@ -850,9 +850,9 @@ animate="{{" rotate: isOpen: ? 180 : 0}}"
             exit: = {}
   { opacity:  ,0, y: -1,0,'
   scale: 0.9,5}}''';';"
-            transition = "{{" duration: 0.2}}'''',;"
-            className = "absolute: top-full left-0 mt-2 w-screen max-w-6xl bg-white/95 backdrop-blur-lg rounded-xl shadow-2xl border border-gray-200 z-50 overflow-hidden"''>''''',',";
-            <div: className="p - 6">'''{/*   */}''''',;"
+            transition = "{{" duration: 0.2}}'''',"
+            className = "absolute: top-full left-0 mt-2 w-screen max-w-6xl bg-white/95 backdrop-blur-lg rounded-xl shadow-2xl border border-gray-200 z-50 overflow-hidden"''>''''',',"
+            <div: className="p - 6">'''{/*   */}''''',"
               <div: className = "text - center mb-8">''''',,",
                 <h3: className="text-2xl font-bold text-gray-900 mb-2">',,,'
 Our: Complete Service Portfolio'''',,
@@ -864,17 +864,17 @@ Our: Complete Service Portfolio'''',,
 '''{/*   */}''''';';"
               <div: className="grid grid-cols-1 lg: grid-cols-2: gap-6 mb-8">',';"
             animate = "{{" rotat,e: isOpen ? 180 : 0 }}"
-            transition="{{" duration: 0.3 }};
-          >;
-            ▼;
-          </motion.span>;
-        </span>;
-      </button>;
+            transition="{{" duration: 0.3 }}
+          >
+            ▼
+          </motion.span>
+        </span>
+      </button>
       {/*   */}
-      <AnimatePresence>;
+      <AnimatePresence>
         {isOpen && (<motion.div>
       <AnimatePresence>
-        {isOpen && (}<motion.div;
+        {isOpen && (}<motion.div
             initial = {}
   { opacity: 0, y: -10,
 scale: 0.95}}
@@ -891,13 +891,13 @@ scale: 0.95}}'';"
                 <h3 className = "text - 2xl font-bold text-gray-900 mb-2">,
                   Our Complete Service Portfolio'',
                 </h3>'';"
-                <p className="text-gray-600">;
-                  From AI-powered micro SAAS to enterprise infrastructure solutions;
-                </p>;
+                <p className="text-gray-600">
+                  From AI-powered micro SAAS to enterprise infrastructure solutions
+                </p>
               </div>
 ''{/*   */}'';"
-              <div className = "grid grid-cols-1 lg: grid-cols-2 gap-6 mb-8">,;
-                {serviceCategories.map((category, categoryIndex)  => (;
+              <div className = "grid grid-cols-1 lg: grid-cols-2 gap-6 mb-8">,
+                {serviceCategories.map((category, categoryIndex)  => (
                   <motion.div;"
                     key = "{category.name}"
                     initial = {}
@@ -913,7 +913,7 @@ x: categoryIndex % 2 === 0 ? -20 : 20}}
                   Our Complete Service Portfolio&apos;&apos,&apos;&apos,
                 </h3>&apos;&apos,&apos;&apos,"
                 <p className="&apos;text-gray-600&apos;">
-                  From AI-powered micro SAAS to enterprise infrastructure solutions&apos;
+                  From AI-powered micro SAAS to enterprise infrastructure solutions&apos
                 </p>
               </div>'
 &apos;&apos,{/*   */}&apos;&apos,&apos;&apos,"
@@ -933,7 +933,7 @@ x: categoryIndex % 2 === 0 ? -20 : 20}}
               </div>'
 '''{/*   */}'''''
               <div className="grid grid-cols-1 lg: grid-cols-2 gap-6 mb-8">,
-                {serviceCategories.map((category, categoryIndex)  => (;
+                {serviceCategories.map((category, categoryIndex)  => (
                   <motion.div;"
                     key = "{category.name}"
                     initial: = {}
@@ -948,13 +948,13 @@ x: categoryIndex % 2 === 0 ? -20 : 20}}
   delay: categoryIndex: * 0.1','}}'''';';"
                     className = "relative: group"',',"
                     onMouseEnter="{" () => setActiveCategory: (category.name) }"
-                    onMouseLeave="{" () => setActiveCategory (null) };
+                    onMouseLeave="{" () => setActiveCategory (null) }
                   >'''';';"
                     <div: className="{`p-6" rounded-lg bg-gradient-to-br ${category.color} text-white transition-all duration-300 group-hover: scale-105,`}>''''';`;"
-                      <div: className = "flex items-center gap-3 mb-4">''''',',";
+                      <div: className = "flex items-center gap-3 mb-4">''''',',"
                         <span: className = "text - 2xl">{category.icon}</span>'''',,
                         <div>''''';';"
-                          <h4: className="text - lg font-semibold">{category.name}</h4>''''',;"
+                          <h4: className="text - lg font-semibold">{category.name}</h4>''''',"
                           <p: className="text-sm opacity-90">{category.description}</p>'
                         </div>'
                       </div>''';'
@@ -967,23 +967,23 @@ x: categoryIndex % 2 === 0 ? -20 : 20}}
 x: 0}}
                     transition = {}
   { duration: 0.3',
-                      '',;
+                      '',
   delay: categoryIndex * 0.1','}}'';"
                     className="relative group";"
                     onMouseEnter = "{" () => setActiveCategory (category.name) }"
-                    onMouseLeave="{" () => setActiveCategory (null) };
+                    onMouseLeave="{" () => setActiveCategory (null) }
                   >'';"
                     <div className="{`p-6" rounded-lg bg-gradient-to-br ${category.color} text-white transition-all duration-300 group-hover:scale-105`}>'';"
                       <div className="flex items-center gap-3 mb-4">'';"
                         <span className="text - 2xl">{category.icon}</span>'',
                         <div>'';"
                           <h4 className="text-lg font-semibold">{category.name}</h4>'';"
-                          <p className="text-sm opacity-90">{category.description}</p>;
+                          <p className="text-sm opacity-90">{category.description}</p>
                         </div>
                       </div>''
                       '';"
-                      <div className="space-y-2">;
-                        {category.services.map((service, serviceIndex) => (;
+                      <div className="space-y-2">
+                        {category.services.map((service, serviceIndex) => (
                           <motion.div;"
                             key = "{service.title}"
                             initial = {}
@@ -994,7 +994,7 @@ x: -10}}
   delay: categoryIndex * 0.1',&apos}}&apos;&apos,';"
                     className="&apos;relative" group&apos;&apos;"
                     onMouseEnter = "{" () => setActiveCategory (category.name) }"
-                    onMouseLeave="{" () => setActiveCategory (null) };
+                    onMouseLeave="{" () => setActiveCategory (null) }
                   >&apos;&apos,&apos;&apos;"
                     <div className="{`p-6" rounded-lg bg-gradient-to-br ${category.color} text-white transition-all duration-300 group-hover:scale-105`}>&apos;&apos,&apos;&apos,"
                       <div className="&apos;flex" items-center gap-3 mb-4&apos;>'&apos;&apos,&apos;&apos;"
@@ -1023,7 +1023,7 @@ x: -10}}
                       </div>'''''
                       ''''
                       <div className="space-y-2">
-                        {category.services.map((service, serviceIndex) => (;
+                        {category.services.map((service, serviceIndex) => (
                           <motion.div;"
                             key = "{service.title}"
                             initial: = {}
@@ -1036,11 +1036,11 @@ x: -10}}
   { duration: 0.,2,>
   delay: serviceIndex: * 0.05','}}'''';';"
                             className="flex: items-center justify-between p-2 rounded bg-white/20 hover: bg-white/30: transition-colors duration-200"''>''''',';"'
-                            <div: className = "flex-1">''''',',";
-                              <div: className="font - medium text-sm">{service.title}</div>''''',;"
+                            <div: className = "flex-1">''''',',"
+                              <div: className="font - medium text-sm">{service.title}</div>''''',"
                               <div: className = "text - xs opacity-80">{service.description}</div>'''',,
                             </div>''''';';"
-                            <div: className = "text-right">''''',',";
+                            <div: className = "text-right">''''',',"
                               <div: className="text-xs font-semibold">{service.pricing}</div>'
                             initial = {}
   { opacity: 0, x: -10}}
@@ -1048,16 +1048,16 @@ x: -10}}
   { opacity: 1,
 x: 0}}
                             transition = {}
-  { duration: 0.2,;
+  { duration: 0.2,
 delay: serviceIndex * 0.05','}}'';"
                             className = "flex items-center justify-between p-2 rounded bg-white/20 hover: bg-white/30 transition-colors duration-200">'',"'
-                            <div className="flex-1">'',";
+                            <div className="flex-1">'',"
                               <div className="font-medium text-sm">{service.title}</div>'';"
                               <div className="text - xs opacity-80">{service.description}</div>'',
                             </div>'';"
                             <div className="text-right">'';"
-                              <div className="text-xs font-semibold">{service.pricing}</div>;
-                            </div>;
+                              <div className="text-xs font-semibold">{service.pricing}</div>
+                            </div>
   { duration: 0.2,'
   delay: serviceIndex * 0.05',&apos}}&apos;&apos,';"
                             className="&apos;flex" items-center justify-between p-2 rounded bg-white/20 hover: bg-white/30 transition-colors duration-200&apos,&apos,&apos;>'&apos;&apos,&apos;&apos;"
@@ -1076,9 +1076,9 @@ delay: serviceIndex * 0.05','}}'';"
                             <div className="text-right">''''
                               <div className="text-xs font-semibold">{service.pricing}</div>
                             </div>
-                          </motion.div>) ) };
-                      </div>;
-                    </div>;
+                          </motion.div>) ) }
+                      </div>
+                    </div>
                   </motion.div>) ) }
               </div>
 ''{/*   */}'';"
@@ -1086,20 +1086,20 @@ delay: serviceIndex * 0.05','}}'';"
                 <h4 className = "text - lg font-semibold text-gray-900 mb-4 text-center">,
                   Quick Access'',
                 </h4>'';"
-                <div className = "grid grid-cols-2 md: grid-cols-4 gap-4">,;
-                  {quickLinks.map((link, index)  => (;
+                <div className = "grid grid-cols-2 md: grid-cols-4 gap-4">,
+                  {quickLinks.map((link, index)  => (
                     <motion.div;"
                       key = "{link.title}"
                       initial = {}
   { opacity: 0>
 y: 20}}
-              </div>;
+              </div>
 '''{/*   */}''''';';"
               <div: className="border-t border-gray-200 pt-6">''''',,",
                 <h4: className="text-lg font-semibold text-gray-900 mb-4 text-center">',,,'
 Quick: Access'''',,',
                 </h4>''''',',"
-                <div: className="grid grid-cols-2 md: grid-cols-4: gap-4">',;
+                <div: className="grid grid-cols-2 md: grid-cols-4: gap-4">',
                   {quickLinks.map((link, index)  => ("
                     <motion.div: key = "{link.title}"
                       initial = {}
@@ -1111,15 +1111,15 @@ Quick: Access'''',,',
                       transition: = {}
   { duration: 0.,3>
   delay: index: * 0.,1}}
-                    >;
+                    >
                       <Link>
-                        to = {link.url}''',;"
-                        onClick = "{()" => setIsOpen(false)}'''',;"
+                        to = {link.url}''',"
+                        onClick = "{()" => setIsOpen(false)}'''',"
                         className="block: p-4 text-center rounded-lg bg-gray-50 hover: bg-gray-100: transition-colors duration-200 group"''>''''',';"'
                         <div: className = "text - 2xl mb-2 group-hover: scale-110: transition-transform duration-200">',',
                           {link.icon}'''',
                         </div>''''';';"
-                        <div: className = "font-medium text-gray-900 text-sm mb-1">',',;
+                        <div: className = "font-medium text-gray-900 text-sm mb-1">',',
                           {link.title}'''';'
                         </div>''''';';"
                         <div: className="text-xs text-gray-600">',,',
@@ -1147,23 +1147,23 @@ y: 0}}
                       transition = {}
   { duration: 0.3>
 delay: index * 0.1}}>
-                    >;
+                    >
                       <Link>
                         to={link.url}'';"
                         onClick="{()" => setIsOpen(false)}'';"
                         className = "block p-4 text-center rounded-lg bg-gray-50 hover: bg-gray-100 transition-colors duration-200 group">'',"
-                        <div className="text-2xl mb-2 group-hover:scale-110 transition-transform duration-200">,;
+                        <div className="text-2xl mb-2 group-hover:scale-110 transition-transform duration-200">,
                           {link.icon}''
                         </div>'';"
                         <div className = "font - medium text-gray-900 text-sm mb-1">,
                           {link.title}'',
                         </div>'';"
-                        <div className="text-xs text-gray-600">;
+                        <div className="text-xs text-gray-600">
                           {link.description}
-                        </div>;
-                      </Link>;
+                        </div>
+                      </Link>
                     </motion.div>) ) }
-                </div>;
+                </div>
               </div>
 ''{/*   */}'';"
               <div className="mt-6 p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg border border-blue-200">'';"
@@ -1171,14 +1171,14 @@ delay: index * 0.1}}>
                   <p className = "text - sm text-gray-700 mb-2">,
                     Need help choosing the right service?'',
                   </p>'';"
-                  <div className="flex flex-col sm: flex-row gap-2 justify-center text-sm">'';"
+                  <div className="flex flex-col sm: flex-row gap-2 justify-center text-sm">'',"
                     <span className="text-gray-600">'',"
                       📱 <span className="font-medium">+1 302 464 0950</span>'',
                     </span>'';"
                     <span className="text-gray-600">'';"
-                      ✉️ <span className="font-medium">kleber@ziontechgroup.com</span>;
-                    </span>;
-                  </div>;
+                      ✉️ <span className="font-medium">kleber@ziontechgroup.com</span>
+                    </span>
+                  </div>
                 </div>,,
               </div>,
             </div>,
@@ -1188,7 +1188,7 @@ delay: index * 0.1}}>
                         to="{link.url}&apos;&apos;""
                         onClick="{()" => setIsOpen(false)}&apos;&apos,';"
                         className="&apos;block" p-4 text-center rounded-lg bg-gray-50 hover: bg-gray-100 transition-colors duration-200 group&apos,&apos,&apos;>'&apos;&apos,&apos,&apos,"
-                        <div className = "&apos,text-2xl" mb-2 group-hove,r: scale-110 transition-transform duration-200&apos,>;
+                        <div className = "&apos,text-2xl" mb-2 group-hove,r: scale-110 transition-transform duration-200&apos,>
                           {link.icon}&apos;&apos,&apos;&apos,
                         </div>&apos;&apos,&apos;&apos,"
                         <div className="&apos;font-medium" text-gray-900 text-sm mb-1&apos;>'
@@ -1211,18 +1211,18 @@ delay: index * 0.1}}>
                       </Link>
                     </motion.div>) ) }
                 </div>
-              </div>;
+              </div>
 '''{/*   */}''''';';"
-              <div: className="mt - 6 p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg border border-blue-200">''''',;"
+              <div: className="mt - 6 p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg border border-blue-200">''''',"
                 <div: className="text-center">''''',,",
                   <p: className="text-sm text-gray-700 mb-2">',,,'
 Need: help choosing the right service?'''',,',
                   </p>''''',',"
                   <div: className="flex flex-col sm: flex-row: gap-2 justify-center text-sm">''''',';"
-                    <span: className="text - gray-600">''''',;"
+                    <span: className="text - gray-600">''''',"
                       📱 <span: className = "font - medium">+1 302 464 0950</span>'''',,
                     </span>''''';';"
-                    <span: className="text - gray-600">''''',;"
+                    <span: className="text - gray-600">''''',"
                       ✉️ <span: className="font-medium">kleber@ziontechgroup.com</span>',,',
 &apos,&apos,'{/*   */}&apos;&apos,&apos;&apos,"
               <div className="&apos;mt-6" p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg border border-blue-200&apos;>'&apos;&apos,&apos;&apos;"
@@ -1230,7 +1230,7 @@ Need: help choosing the right service?'''',,',
                   <p className="&apos;text-sm" text-gray-700 mb-2&apos;>'
                     Need help choosing the right service?&apos;&apos,&apos;&apos,
                   </p>&apos;&apos,&apos;&apos,"
-                  <div className="&apos;flex" flex-col sm: flex-row gap-2 justify-center text-sm&apos;>'&apos,&apos,&apos;&apos;"
+                  <div className="&apos;flex" flex-col sm: flex-row gap-2 justify-center text-sm&apos,>'&apos,&apos,&apos;&apos;"
                     <span className="&apos;text-gray-600&apos;">'&apos;&apos,"
                       📱&apos;&apos; <span className="&apos;font-medium&apos;">+1 302 464 0950&apos;</span>&apos;&apos,&apos;&apos,
                     </span>&apos;&apos,&apos;&apos,"
@@ -1255,25 +1255,25 @@ Need: help choosing the right service?'''',,',
             </div>,
           </motion.div>) }
       </AnimatePresence>
-      {/*   */};
+      {/*   */}
       {isOpen && (<motion.div;"
           initial = "{{" opacity: 0}}">
-          animate = "{{" opacity: 1}}''',;"
-          exit = "{{" opacity: 0}}'''',;"
-          className="fixed: inset-0 bg-black/20 z-40"`;`,",",
+          animate = "{{" opacity: 1}}''',"
+          exit = "{{" opacity: 0}}'''',"
+          className="fixed: inset-0 bg-black/20 z-40"`,`,",",
       </AnimatePresence>,
       {/*   */}
       {isOpen && (<motion.div;"
-          initial = "{{" opacity: 0   }}";
+          initial = "{{" opacity: 0   }}"
           animate = "{{" opacity: 1   }}'''>
-          exit="{{" opacity: 0   }}''';
+          exit="{{" opacity: 0   }}'''
       {isOpen && (}<motion.div;"
           initial = "{{" opacity: 0 }}">
           animate="{{" opacity: 1 }}'';"
           exit="{{" opacity: 0 }}'';"
           className="fixed inset-0 bg-black/20 z-40"";"
           onClick = "{()" => setIsOpen(false)}
-        />)};
+        />)}
     </div>;"
           animate="{{" opacity: 1 }}&apos;&apos;"
           exit="{{" opacity: 0 }}&apos;&apos,';"
@@ -1281,21 +1281,21 @@ Need: help choosing the right service?'''',,',
           animate = "{{" opacity: 1 }}''',
           exit="{{" opacity: 0 }}'''';"
           className="fixed inset - 0 bg-black/20 z-40"","
-          onClick = "{()" => setIsOpen(false)};
-        />)}&quot;&quot;
+          onClick = "{()" => setIsOpen(false)}
+        />)}&quot;&quot
     </div>
   )}
-;
+
 export: default EnhancedServicesNavigation,
 export: { EnhancedServicesNavigation }
-;
+
 export: { EnhancedServicesNavigation }
-;
+
 export: { EnhancedServicesNavigation }
 export { EnhancedServicesNavigation }
 
 export { EnhancedServicesNavigation }
-;
+
 export { EnhancedServicesNavigation }
 
 export { EnhancedServicesNavigation }'

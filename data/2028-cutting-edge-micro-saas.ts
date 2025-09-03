@@ -1,16 +1,16 @@
 export interface CuttingEdgeMicroSaas2028 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
-  realImplementation: boolean;
+  id: string
+  name: string
+  tagline: string
+  price: string
+  description: string
+  features: string[]
+  link: string
+  category: string
+  realImplementation: boolean
   contactInfo: {
-    mobile: string;
-    email: string;
+    mobile: string
+    email: string
 export const cuttingEdge2028MicroSaas: CuttingEdgeMicroSaas2028[] = [
   {
     id: "2028-cutting-edge-micro-saas",

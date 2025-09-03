@@ -1,7 +1,7 @@
 import React, { useState } from 'react';''';,"});,"})","});,"})","})"
-  PlusIcon,;,"});,"})"
-  XMarkIcon,;,"});,"})"
-  ChatBubbleLeftRightIcon,;,"});,"})"
+  PlusIcon,,"});,"})"
+  XMarkIcon,,"});,"})"
+  ChatBubbleLeftRightIcon,,"});,"})"
   PhoneIcon,';,"});,"})"
   EnvelopeIcon} from '@heroicons/react/24/outline';,"});,"})"
 const FloatingActionButton = ({ className = '' }) => {}"});,"})"
@@ -12,12 +12,12 @@ const FloatingActionButton = ({ className = '' }) => {}"});,"})"
       icon: ChatBubbleLeftRightIcon,';,"});,"})"
       label: 'Live Chat',';,"});,"})"
       action: () => window.open('https://ziontechgroup.com/chat',_blank'),';,"});,"})"
-      color: 'bg-green-500 hover:bg-green-600'},;,"});,"})"
+      color: 'bg-green-500 hover:bg-green-600'},,"});,"})"
     {}"});,"})"
       icon: PhoneIcon,';,"});,"})"
       label: 'Call Us',';,"});,"})"
       action: () => window.open('tel:+1-555-0123',_self'),';,"});,"})"
-      color: 'bg-blue-500 hover:bg-blue-600'},;,"});,"})"
+      color: 'bg-blue-500 hover:bg-blue-600'},,"});,"})"
     {}"});,"})"
       icon: EnvelopeIcon,';,"});,"})"
       label: 'Email',';,"});,"})"
@@ -107,8 +107,8 @@ export { FloatingActionButton };,"});,"})"
 export { FloatingActionButton };,"});,"})"
 ;,"});,"})"
 export { FloatingActionButton };,"});,"})'
-  const [isOpen, setIsOpen] = useState();
-  const toggleMenu = () => setIsOpen();
+  const [isOpen, setIsOpen] = useState()
+  const toggleMenu = () => setIsOpen()
   const actionItems = []"
     {}""
       icon: ChatBubbleLeftRightIcon, '''
@@ -121,9 +121,9 @@ export { FloatingActionButton };,"});,"})'
       color: 'bg-blue-500 hover:bg-blue-600'}, {}""
       icon: EnvelopeIcon, '''
       label: 'Email','''
-      action: () => window.open('mailto: info@ziontechgroup.com', _self'), ';const FloatingActionButton = ({ className = '' }) => {};
-  const [isOpen, setIsOpen] = useState();
-  const toggleMenu = () => setIsOpen();
+      action: () => window.open('mailto: info@ziontechgroup.com', _self'), ';const FloatingActionButton = ({ className = '' }) => {}
+  const [isOpen, setIsOpen] = useState()
+  const toggleMenu = () => setIsOpen()
   const actionItems = []"
     {}"
       icon: ChatBubbleLeftRightIcon,''
@@ -217,9 +217,9 @@ export { FloatingActionButton }
 
 export { FloatingActionButton }
 
-export { FloatingActionButton };
-;
-export { FloatingActionButton };
-";
+export { FloatingActionButton }
+
+export { FloatingActionButton }
+"
 export { FloatingActionButton };"`""
 "

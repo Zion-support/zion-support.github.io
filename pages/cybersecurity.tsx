@@ -3,9 +3,9 @@ const Head = dynamic(() => import('next/head'), { ssr: false })
 const Link = dynamic(() => import('next/link'), { ssr: false })
 const Navigation = dynamic(() => import('../src/components/Navigation'), { ssr: false })
 const Footer = dynamic(() => import('../src/components/Footer'), { ssr: false })
-;
+
   return (
-    <div className="min-h-screen bg-gray-900 text-white">;
+    <div className="min-h-screen bg-gray-900 text-white">
 <Head>
         <title>Cybersecurity Services | Zion Tech Group</title>"
         <meta name = "description" content="Comprehensive cybersecurity services including security assessments, data protection, monitoring, and incident response. Protect your business with our expert security solutions." />"
@@ -154,4 +154,4 @@ advanced security assessments, data protection, and 24/7 monitoring to keep your
 
       <Footer />
     </div>",
-  )};
+  )}

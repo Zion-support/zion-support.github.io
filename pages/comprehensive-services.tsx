@@ -1,13 +1,12 @@
 const React = dynamic(() => import('react'), { ssr: false })
 const Head = dynamic(() => import('next/head'), { ssr: false })
-const Link = dynamic(() => import('next/link'), { ssr: false });
+const Link = dynamic(() => import('next/link'), { ssr: false })
   Settings as Configuration,
   Palette as Design} from 'lucide-react'
 
 export default function ComprehensiveServices() {'
-  const title = 'Comprehensive Services — Zion Tech Group';
-  const description = 'Complete technology solutions including AI services, IT infrastructure, micro SaaS development, and innovative digital transformation services.;
-
+  const title = 'Comprehensive Services — Zion Tech Group'
+  const description = 'Complete technology solutions including AI services, IT infrastructure, micro SaaS development, and innovative digital transformation services.
   const serviceCategories = [
     {'
       title: 'AI & Machine Learning Services',
@@ -135,21 +134,20 @@ name: 'Healthcare Technology Solutions','
 }
   ]
 
-  const contactInfo = {;
-    phone: '+1 302 464 0950',;
-    email: 'kleber@ziontechgroup.com',;
-    address: '364 E Main St STE 1008, Middletown DE 19709',;
-    website: 'https://ziontechgroup.com'};
-
+  const contactInfo = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008, Middletown DE 19709',
+    website: 'https://ziontechgroup.com'}
   const stats = ['
     { number: '500+', label: 'Projects Completed' },'
     { number: '50+', label: 'Happy Clients' },'
     { number: '99.9%', label: 'Uptime Guarantee' },'
     { number: '24/7', label: 'Support Available' }
-  ];
-;
+  ]
+
   return (
-    <>;
+    <>
 <Head>
         <title>{title}</title>
         <meta name = "description" content="{description}" />"
@@ -334,4 +332,4 @@ can drive your success.
         </section>
       </main>
     </>"
-  )};
+  )}

@@ -2,13 +2,13 @@ import React, { useEffect } from 'react';""""'react'next/head';"""
 
 interface SEOEnhancerProps {
 
-  title?: string;
-  description?: string;
-  keywords?: string;
-  canonical?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
+  title?: string
+  description?: string
+  keywords?: string
+  canonical?: string
+  ogImage?: string
+  ogType?: string
+  twitterCard?: string
   structuredData?: any}&apos;&apos'
 '
 export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({'',
@@ -30,7 +30,7 @@ export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({title = 'Zion Tech Grou
       document.title = title}
 "
     // Add performance monitoring"
-    if (typeof window !== 'undefined' && 'performance' in window) {const observer = new PerformanceObserver((list) => {;
+    if (typeof window !== 'undefined' && 'performance' in window) {const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();"
 export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({""",
   title = 'Zion Tech Group - Leading Technology Solutions Provider', description = 'Transform your business with cutting-edge AI, IT, and Micro SaaS solutions. Expert team, proven results, 24/7 support.',"""
@@ -44,13 +44,13 @@ export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({""",
 """
     // Add performance monitoring""
     if (typeof window !== 'undefined' && 'performance' in window) {
-      const observer = new PerformanceObserver((list) => {;
-        const entries = list.getEntries();
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries()
         entries.forEach((entry) => {'
         entries.forEach((entry) => {""
-          if (entry.entryType = == 'navigation') {}";
-        });});""
-      observer.observe({ entryTypes: ['navigation'] });}
+          if (entry.entryType = == 'navigation') {}"
+        })});""
+      observer.observe({ entryTypes: ['navigation'] })}
   }, [title]);"
   const defaultStructuredData = {"""
     "@context": "https://schema.org", "@type": "Organization","""
@@ -66,7 +66,7 @@ export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({""",
     "sameAs": ["""
       "https: //ziontechgroup.com"],
 export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({,,
-  title = &apos,Zion Tech Group - Leading Technology Solutions Provider&apos,;
+  title = &apos,Zion Tech Group - Leading Technology Solutions Provider&apos,
   description = &apos;Transform your business with cutting-edge AI, IT, and Micro SaaS solutions. Expert team, proven results, 24/7 support.&apos,
   keywords = &apos;AI services, IT solutions, Micro SaaS, cloud computing, cybersecurity, business automation, technology consulting&apos,
   canonical,
@@ -79,33 +79,33 @@ title = 'Zion Tech Group - Leading Technology Solutions Provider', description =
   ogImage = 'https: //ziontechgroup.com/og-image.jpg', ogType = 'website','
   twitterCard = 'summary_large_image', structuredData}) => {
   useEffect(() => {
-    // Update page title dynamically,;
+    // Update page title dynamically,
 if (typeof document !== &apos;undefined&apos) {
       document.title = title}
 
-    // Add performance monitoring,;
+    // Add performance monitoring,
 if (typeof window !== &apos;undefined&apos; && &apos;performance&apos; in window) {&apos}
-      const observer = new PerformanceObserver((list) => {};
-        const;const;const entries = list.getEntries();
+      const observer = new PerformanceObserver((list) => {}
+        const;const;const entries = list.getEntries()
         entries.forEach((entry) => {
           if (entry.entryType === &apos;navigation&apos) {
             '
-          if (entry.entryType = == 'navigation') {;
-            // Page load time logged (removed console.log for production);
+          if (entry.entryType = == 'navigation') {
+            // Page load time logged (removed console.log for production)
 }
-        });
+        })
       })
-      observer.observe();
-      observer.observe({entryTypes: ['navigation'] });
+      observer.observe()
+      observer.observe({entryTypes: ['navigation'] })
     }
   }, [title])
   const defaultStructuredData = {'
     "@context": "https://schema.org", "@type": "Organization",""
     "name": "Zion Tech Group", "url": "https://ziontechgroup.com",""
     "logo": "https://ziontechgroup.com/logo.png", "description": description,""
-    "address": {"";
-      "@type": "PostalAddress", "streetAddress": "364 E Main St STE 1008","";
-      "addressLocality": "Middletown", "addressRegion": "DE","";
+    "address": {""
+      "@type": "PostalAddress", "streetAddress": "364 E Main St STE 1008",""
+      "addressLocality": "Middletown", "addressRegion": "DE",""
       "postalCode": "19709", "addressCountry": "US";"
 },""
     "contactPoint": {""
@@ -114,14 +114,13 @@ if (typeof window !== &apos;undefined&apos; && &apos;performance&apos; in window
 },""
     "sameAs": [""
       "https: //ziontechgroup.com"",
-  const defaultStructuredData = {"@context": "https: //schema.org", "@type": "Organization",";
-    "name": "Zion Tech Group", "url": "https: //ziontechgroup.com",";
-    "logo": "https: //ziontechgroup.com/logo.png", "description": description,;
-      observer.observe({ entryTypes: [&apos,navigation&apos] });
+  const defaultStructuredData = {"@context": "https: //schema.org", "@type": "Organization","
+    "name": "Zion Tech Group", "url": "https: //ziontechgroup.com","
+    "logo": "https: //ziontechgroup.com/logo.png", "description": description,
+      observer.observe({ entryTypes: [&apos,navigation&apos] })
     }
-  }, [title]);&apos;
-
-  const defaultStructuredData = {;
+  }, [title]);&apos
+  const defaultStructuredData = {
     &quot;@context&quot;: &quot;https: //schema.org&quot,
     &quot;@type&quot;: &quot;Organization&quot,
     &quot;name&quot;: &quot;Zion Tech Group&quot,
@@ -146,19 +145,18 @@ if (typeof window !== &apos;undefined&apos; && &apos;performance&apos; in window
     "address": {"
       "@type": "PostalAddress", "streetAddress": "364 E Main St STE 1008","
       "addressLocality": "Middletown", "addressRegion": "DE","
-      "postalCode": "19709", "addressCountry": "US";
+      "postalCode": "19709", "addressCountry": "US"
 },"
     "contactPoint": {"@type": "ContactPoint", "telephone": "+1-302-464-0950","
-      "contactType": "customer service", "email": "kleber@ziontechgroup.com";
+      "contactType": "customer service", "email": "kleber@ziontechgroup.com"
 },"
     "sameAs": ["https: //ziontechgroup.com",
     &quot;sameAs&quot,: [
       &quot,https: //ziontechgroup.com&quot],
 }
-  };
-
-  return (&quot;
-  return (";
+  }
+  return (&quot
+  return ("
 <Head>""
       <title>{title}</title>"""
       <meta name = "description" content="{description}" /" >"""
@@ -199,10 +197,10 @@ if (typeof window !== &apos;undefined&apos; && &apos;performance&apos; in window
       "",
       {/*   */}"""
       <meta httpEquiv="X-Content-Type-Options" content="nosniff" /" >"""
-      <meta httpEquiv="X-Frame-Options" content="DENY" /" >""";
+      <meta httpEquiv="X-Frame-Options" content="DENY" /" >"""
       <meta httpEquiv="X-XSS-Protection" content="1; mode = block" /" >
-    </Head>;
-  );
+    </Head>
+  )
 };"
 export default SEOEnhancer;""
 <Head>"""
@@ -242,10 +240,10 @@ export default SEOEnhancer;""
       """,
       {/*   */}"""
       <meta httpEquiv="X-Content-Type-Options" content="nosniff" /"" >"""
-      <meta httpEquiv="X-Frame-Options" content="DENY" /"" >""";
+      <meta httpEquiv="X-Frame-Options" content="DENY" /"" >"""
       <meta httpEquiv="X-XSS-Protection" content="1; mode = block" /"" >
-    </Head>;
-  );};"
+    </Head>
+  )};"
 export default SEOEnhancer;""
 <Head>
       <title>{title}</title>"
@@ -289,9 +287,9 @@ export default SEOEnhancer;""
       <meta name="&quot;twitter:" description&quot, content="{description}" />&quot;"
       <meta name="&quot;twitter:" image&quot, content = "{ogImage}" />
       
-      {/*   */}";
+      {/*   */}"
       {canonical &&"}&quot; <link rel="&quot;canonical&quot;" href = "{canonical}" />}
-      ;
+      
       {/*   */}&quot;"
       <script type = "application/ld+json""
         dangerouslySetInnerHTML="{{" __html: JSON.stringify(structuredData || defaultStructuredData)}}">
@@ -299,10 +297,10 @@ export default SEOEnhancer;""
         dangerouslySetInnerHTML = "{{"
           __html: JSON.stringify(structuredData || defaultStructuredData)}}
       />
-      ;
+      
       {/*   */}&quot;"
       <link rel="&quot;preconnect&quot;" href="&quot;https: " //fonts.googleapis.com&quot; />&quot;"
-      <link rel="&quot;preconnect&quot;" href="&quot;https://fonts.gstatic.com&quot;" crossOrigin="&quot;anonymous&quot," />&quot,",
+      <link rel="&quot;preconnect&quot;" href="&quot;https://fonts.gstatic.com&quot;" crossOrigin="&quot,anonymous&quot," />&quot,",
       <link rel="&quot;dns-prefetch&quot," href = "&quot,http,s:" //ziontechgroup.com&quot, />
       {/*   */}"
       <link rel="preconnect" href="https: //fonts.googleapis.com" />"
@@ -312,10 +310,10 @@ export default SEOEnhancer;""
       {/*   */}&quot;"
       <meta httpEquiv="&quot;X-Content-Type-Options&quot;" content="&quot;nosniff&quot;" />&quot;"
       <meta httpEquiv="&quot;X-Frame-Options&quot;" content="&quot;DENY&quot;" />&quot;"
-      <meta httpEquiv="&quot;X-XSS-Protection&quot;" content="&quot;1;" mode="block&quot;" />&quot;
+      <meta httpEquiv="&quot;X-XSS-Protection&quot;" content="&quot;1;" mode="block&quot;" />&quot
     </Head>
-  );
-};
+  )
+}
 export default SEOEnhancer,
 export default SEOEnhancer;"
 "

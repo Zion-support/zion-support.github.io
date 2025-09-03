@@ -7,30 +7,26 @@ export default function Login() {
 
   const [formData, setFormData] = useState({'
     email: '','
-    password: ''});
-  const [showPassword, setShowPassword] = useState(false);
-  const [isLoading, setIsLoading] = useState();
-  const [error, setError] = useState('');
-
+    password: ''})
+  const [showPassword, setShowPassword] = useState(false)
+  const [isLoading, setIsLoading] = useState()
+  const [error, setError] = useState('')
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {,,
-    const { name, value } = e.target;
+    const { name, value } = e.target
     setFormData(prev = > ({
-      ...prev,;
-      [name]: value}));
-  };
-
+      ...prev,
+      [name]: value}))
+  }
   const handleSubmit = async (e: React.FormEvent) => {,
     e.preventDefault(),,
     setIsLoading(true),'
     setError(''),
     
     // Simulate login process,
-await new Promise(resolve => setTimeout(resolve, 2000));
-    
+await new Promise(resolve => setTimeout(resolve, 2000))
     // Simulate successful login,'
-window.location.href = '/dashboard;
-  };
-
+window.location.href = '/dashboard
+  }
   const benefits = [
     {
       icon: User,'
@@ -48,10 +44,10 @@ window.location.href = '/dashboard;
       icon: Star,'
       title: 'Premium Features','
       description: 'Access to exclusive tools'}
-  ];
-;
+  ]
+
   return (
-    <>;
+    <>
 <Head>
         <title>Sign In - Zion Tech Group</title>
         <meta name = "description" content="Sign in to your Zion Tech Group account to access your dashboard and services." />
@@ -226,4 +222,4 @@ value="{formData.password}""
         </div>
       </div>
     </>",
-  )};
+  )}

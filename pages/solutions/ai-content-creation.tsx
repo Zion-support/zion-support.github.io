@@ -1,19 +1,18 @@
-import React from "react";
+import React from "react"
   PenTool,
-  BarChart3} from 'lucide-react;
-
+  BarChart3} from 'lucide-react
 export default function AIContentCreation() {
 
   const features = [
-    {;
+    {
       icon: FileText,'
-      title: 'Blog Post Generation',;
-      description: 'Create engaging, SEO-optimized blog posts automatically with AI-powered content generation.;
+      title: 'Blog Post Generation',
+      description: 'Create engaging, SEO-optimized blog posts automatically with AI-powered content generation.
 },
     {
       icon: PenTool,'
       title: 'Social Media Content','
-      description: 'Generate compelling social media posts, captions, and hashtags for all platforms.;
+      description: 'Generate compelling social media posts, captions, and hashtags for all platforms.
 },
     {
       icon: Search,'
@@ -80,10 +79,10 @@ export default function AIContentCreation() {
 
   return (
     <>
-      <SEO title="AI Content Creation - Zion Tech Group"";
+      <SEO title="AI Content Creation - Zion Tech Group""
         description="Automated content generation using advanced AI models for blogs, social media, and marketing materials. Boost your content strategy with AI."">
         keywords="AI content creation, automated content, blog generation, social media content, SEO optimization">
-      />;
+      />
 <Head>
         <title>AI Content Creation - Zion Tech Group</title>
       </Head>
@@ -221,4 +220,4 @@ to scale their content marketing efforts.
         </div>
       </section>
     </>",
-  )};
+  )}

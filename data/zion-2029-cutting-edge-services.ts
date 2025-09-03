@@ -1,13 +1,13 @@
 export interface ZionCuttingEdgeService2029 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  benefits: string[];
-  marketPrice: string;
+  id: string
+  name: string
+  tagline: string
+  price: string
+  period: string
+  description: string
+  features: string[]
+  benefits: string[]
+  marketPrice: string
   category:
     | 'AI'
     | 'IT'
@@ -20,27 +20,27 @@ export interface ZionCuttingEdgeService2029 {
     | 'Fintech'
     | 'Healthcare'
     | 'IoT'
-    | 'Blockchain';
-  icon: string;
-  isPopular?: boolean;
-  isNew?: boolean;
-  link: string;
+    | 'Blockchain'
+  icon: string
+  isPopular?: boolean
+  isNew?: boolean
+  link: string
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string};
-  realImplementation: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
+    mobile: string
+    email: string
+    address: string
+    website: string}
+  realImplementation: boolean
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
+  roi: string
+  competitors: string[]
+  marketSize: string
+  growthRate: string
+  launchDate: string
+  customers: number
+  rating: number
   reviews: number}
 export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
   // AI-Powered Quantum Computing Solutions
@@ -778,16 +778,16 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
     rating: 4.8,
     reviews: 234,
   },
-];
+]
 export const getServicesByCategory = (
   category: ZionCuttingEdgeService2029['category']
 ) => {
   return zionCuttingEdgeServices2029.filter(
     service => service.category === category
-  )};
+  )}
 export const getPopularServices = () => {
-  return zionCuttingEdgeServices2029.filter(service => service.isPopular);
-};
+  return zionCuttingEdgeServices2029.filter(service => service.isPopular)
+}
 export const getNewServices = () => {
-  return zionCuttingEdgeServices2029.filter(service => service.isNew);
-};
+  return zionCuttingEdgeServices2029.filter(service => service.isNew)
+}

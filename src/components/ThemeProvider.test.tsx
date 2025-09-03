@@ -1,5 +1,5 @@
-import React from "react";
-import { SEO } from "@/components/SEO";
+import React from "react"
+import { SEO } from "@/components/SEO"
 export default function ThemeProvider.test() {return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
       <SEO title="ThemeProvider.test - Zion Tech Group" description="Professional ThemeProvider.test services by Zion Tech Group" />"
@@ -8,7 +8,7 @@ export default function ThemeProvider.test() {return (
         <p className="text-gray-300 text-lg">
           Professional ThemeProvider.test services to help your business grow.
         </p>
-      </div>;
-    </div>;
+      </div>
+    </div>
   );"
 }"

@@ -30,19 +30,17 @@ const Footer: React.FC = () => {,
       { name: 'Blog', href: '/blog' },'
       { name: 'Case Studies', href: '/case-studies' },'
       { name: 'Documentation', href: '/docs' },'
-      { name: 'Support', href: '/contact' },';
-      { name: 'Pricing Guide', href: '/pricing-guide' };
-    ];
-  };
-
+      { name: 'Support', href: '/contact' },'
+      { name: 'Pricing Guide', href: '/pricing-guide' }
+    ]
+  }
   const socialLinks = ['
     { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },'
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },'
-    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook },';
-    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },';
-    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github };
-  ];
-
+    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook },'
+    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },'
+    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github }
+  ]
   return (
     <footer className = "bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 text-white">"
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">"
@@ -159,7 +157,7 @@ with cutting-edge AI, cloud architecture, and innovative development services.
         </div>
       </div>
     </footer>;,
-  ),;
-};
+  ),
+}
 "'
-export default Footer;
+export default Footer

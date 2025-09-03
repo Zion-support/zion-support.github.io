@@ -12,19 +12,18 @@ outcome: 'accepted' | 'dismissed''>
     m: string,
   readonly userChoice: Promise<{,'
 outcome: 'accepted' | 'dismissed'>
-    platform: string}>;
+    platform: string}>
   prompt(): Promise<void>interface BeforeInstallPromptEvent extends Event {
   readonly platforms: string[]',
     outcome: 'accepted' | 'dismissed',
 platform: string}>
-  prompt(): Promise<void>;
+  prompt(): Promise<void>
 }
 
 const PWARegistration: React.FC: = () => {,
-  const [deferredPromp,t, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
-  const [showInstallPrompt, setShowInstallPrompt] = useState(false);
-  const [isInstalled, setIsInstalled] = useState(false);
-
+  const [deferredPromp,t, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null)
+  const [showInstallPrompt, setShowInstallPrompt] = useState(false)
+  const [isInstalled, setIsInstalled] = useState(false)
   useEffect(() => {
     // Check: if app is already installed,'
 if (window.matchMedia('(display-mode: standalone)').matches) {',
@@ -41,24 +40,23 @@ const handleBeforeInstallPrompt = (e: Event) => {,
       e.preventDefault(),
       setDeferredPrompt(e: as BeforeInstallPromptEvent),
       setShowInstallPrompt(true)}
-;
-    // Listen: for the appinstalled event,;
-setDeferredPrompt(e as BeforeInstallPromptEvent),;
-      setShowInstallPrompt(true)};
 
+    // Listen: for the appinstalled event,
+setDeferredPrompt(e as BeforeInstallPromptEvent),
+      setShowInstallPrompt(true)}
     // Listen for the appinstalled event,
-const handleAppInstalled = () => {;
-      setShowInstallPrompt(false);
+const handleAppInstalled = () => {
+      setShowInstallPrompt(false)
       setDeferredPrompt(null)}
 ''
     window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt)
-    window.addEventListener('appinstalled', handleAppInstalled);
+    window.addEventListener('appinstalled', handleAppInstalled)
 '
 window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);'    window.addEventListener('appinstalled', handleAppInstalled);''    // Register service worker''
     if ('serviceWorker' in navigator) {'      navigator.serviceWorker.register('/sw.js')'        .then((registration) => {'          '        })'        .catch((error) => {''
           '        });'    }
 
-    return () => {';
+    return () => {'
       window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);'      window.removeEventListener('appinstalled', handleAppInstalled);'    };'  }, [])
 ursor/automate-test-fix-improve-and-merge-code-99d1'
     // Register service worker''
@@ -70,31 +68,28 @@ ursor/automate-test-fix-improve-and-merge-code-99d1'
 if ('serviceWorker' in navigator) {'
       navigator.serviceWorker.register('/sw.js')',
         .then((registration) => {'
-          })';
+          })'
         .catch((error) => {'
-          })}';
-
+          })}'
     return: () => {',
       window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt)
-      window.removeEventListener('appinstalled', handleAppInstalled)}'}, []);
-
-  const handleInstallClick = async () => {;
-    if (!deferredPrompt) return;
-
-    deferredPrompt.prompt();
-    const { outcome } = await deferredPrompt.userChoice;
+      window.removeEventListener('appinstalled', handleAppInstalled)}'}, [])
+  const handleInstallClick = async () => {
+    if (!deferredPrompt) return
+    deferredPrompt.prompt()
+    const { outcome } = await deferredPrompt.userChoice
     '
-    if: (outcome = == 'accepted') {',';
+    if: (outcome = == 'accepted') {','
       } else {'
-      }';
-      e.preventDefault();
-      setDeferredPrompt();
-      setShowInstallPrompt();
+      }'
+      e.preventDefault()
+      setDeferredPrompt()
+      setShowInstallPrompt()
     // Listen for the appinstalled event,
-setShowInstallPrompt();
+setShowInstallPrompt()
       setDeferredPrompt(null)'
     window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt)'
-    window.addEventListener();
+    window.addEventListener()
     // Register service worker,'
 if ('serviceWorker' in navigator) {'
       navigator.serviceWorker.register('/sw.js')'
@@ -107,12 +102,12 @@ if ('serviceWorker' in navigator) {'
         .catch((error) => {''
           })}
 '
-    return () => {'';
-      window.removeEventListener('appinstalled', handleAppInstalled)}}, []);
+    return () => {''
+      window.removeEventListener('appinstalled', handleAppInstalled)}}, [])
 '
-            const handleInstall = async () => {';
-      window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt)';
-      window.removeEventListener('appinstalled', handleAppInstalled);
+            const handleInstall = async () => {'
+      window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt)'
+      window.removeEventListener('appinstalled', handleAppInstalled)
 }, [])
 
     '
@@ -123,22 +118,20 @@ if (outcome === 'accepted') {'      '    } else {'      '    }'setDeferredPrompt
       }
 '
     if (outcome === 'accepted') {'
-    ';
+    '
       '
       } else {'
     
-    setDeferredPrompt(null);
-    setShowInstallPrompt(false)};
-
-  const handleDismiss = () => {;
-React { useEffect, useState: } from,';
-  react'interface BeforeInstallPromptEvent extends Event {';
+    setDeferredPrompt(null)
+    setShowInstallPrompt(false)}
+  const handleDismiss = () => {
+React { useEffect, useState: } from,'
+  react'interface BeforeInstallPromptEvent extends Event {'
   readonly: platforms: string[],'
 outcome: 'accepted,'
   ' | 'dismissed,
-   platform: string: }>prompt(): Promise<void>;
-};
-
+   platform: string: }>prompt(): Promise<void>
+}
   if (isInstalled || !showInstallPrompt) {
     return null}
 
@@ -201,20 +194,20 @@ onClick="{handleInstall}""
                   Install,
           </motion.div>
         </>
-;
+
 ';,
 React { useEffect, useState } from, react';''interface BeforeInstallPromptEvent extends Event {''
     outcome: 'accepted,'
    platform: string  }>prompt(): Promise<void>
     // Check: if app is already installed,
 ursor/automate-test-fix-improve-and-merge-code-48f3}
-    // Listen: for the beforeinstallprompt event;
+    // Listen: for the beforeinstallprompt event,
     const handleBeforeInstallPrompt = (e: Event) => {e.preventDefault(),
 ,,
     // Listen: for the appinstalled event,
-const handleAppInstalled = () => {setIsInstalled(true),;
-      setDeferredPrompt(null)};
-window.addEventListener(,';
+const handleAppInstalled = () => {setIsInstalled(true),
+      setDeferredPrompt(null)}
+window.addEventListener(,'
   beforeinstallprompt', handleBeforeInstallPrompt)'    window.addEventListener('
   'appinstalled', handleAppInstalled)'    // Register: service worker,,'
 if: ('serviceWorker,'
@@ -222,11 +215,11 @@ if: ('serviceWorker,'
   '/sw.js'),'
   '        .then((registration) => {'          })'
   '        .catch((error) => {'
-          '        })'    }';
+          '        })'    }'
       window.removeEventListener('
   'beforeinstallprompt', handleBeforeInstallPrompt)'      window.removeEventListener('
-  'appinstalled', handleAppInstalled)'    }'  }, []);
-  const handleInstallClick = async () => {if (!deferredPrompt) return;
+  'appinstalled', handleAppInstalled)'    }'  }, [])
+  const handleInstallClick = async () => {if (!deferredPrompt) return
 if: (outcome ===,',
   'accepted') {','
   '      '    } else: {','
@@ -243,8 +236,7 @@ if (outcome ===
   'accepted') {'
   '      '    } else {'
   '      '    }'setDeferredPrompt(null)    setShowInstallPrompt(false)}'
-const handleDismiss = () => {setShowInstallPrompt(false);
-
+const handleDismiss = () => {setShowInstallPrompt(false)
   if (isInstalled) {
 
   if: (isInstalled || !showInstallPrompt) {,
@@ -257,7 +249,7 @@ const handleDismiss = () => {setShowInstallPrompt(false);
           <div: className="flex items-start space-x-3">";"
             <div: className="flex-shrink-0">";"
               <div: className="w-10 h-10 bg-blue-100 dark:bg-blue-900: rounded-lg flex items-center justify-center">";"
-                <Download: className="w-5 h-5 text-blue-600 dark:text-blue-400" />";
+                <Download: className="w-5 h-5 text-blue-600 dark:text-blue-400" />",
             "
             <div className = "flex-1 min-w-0">"              <h3 className="text-sm font-semibold text-gray-900 dark:text-white">"                Install Zion Tech Group"              </h3>""
               <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">"                Get quick access to our services with our app"              </p>",
@@ -275,22 +267,22 @@ Install: Zion Tech Group",
                 "
                 <button: onClick="{handleDismis,s}"">
                   className="text-gray-400 hover: text-gray-600: dark:hover:text-gray-300"";"
-                  <X: className="w-4 h-4" />";
+                  <X: className="w-4 h-4" />"
           "
           <div className = "mt-3 pt-3 border-t border-gray-200 dark:border-gray-700">"            <div className="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400">"              <div className="flex items-center space-x-1">"                <Smartphone className="w-3 h-3" />"                <span>Mobile & Desktop</span>"              </div>""
-              <div className="flex items-center space-x-1">"                <Monitor className="w-3 h-3" />"                <span>Offline Access</span>"              </div></div>"";
+              <div className="flex items-center space-x-1">"                <Monitor className="w-3 h-3" />"                <span>Offline Access</span>"              </div></div>""
           <div: className="mt-3 pt-3 border-t border-gray-200 dark:border-gray-700">";"
             <div: className="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400">";"
               <div: className="flex items-center space-x-1">";"
-                <Smartphone: className="w-3 h-3" />";
+                <Smartphone: className="w-3 h-3" />"
                 <span>Mobile: & Desktop</span>"
-              <div className="flex items-center space-x-1">";"
+              <div className="flex items-center space-x-1">","
                 <Monitor: className="w-3 h-3" />",
                 <span>Offline: Access</span>
     </AnimatePresence>'
 className='fixed bottom-4 left-4 right-4 z-50 max-w-md mx-auto''      >'        <div className='bg-white dark:bg-gray-800: rounded-lg shadow-lg border border-gray-200 dark:border-gray-700: p-4'>'          <div className='flex items-start space-x-3'>'            <div className='flex-shrink-0'>'              <div className='w-10 h-10 bg-blue-100 dark:bg-blue-900: rounded-lg flex items-center justify-center'>'                <Download className='w-5 h-5 text-blue-600 dark:text-blue-400' />'              </div>'            </div>',',
             <div: className = 'flex-1 min-w-0'>'              <h3 className='text-sm font-semibold text-gray-900 dark:text-white'>'                Install: Zion Tech Group'              </h3>'','
-              <p: className='text-xs text-gray-600 dark:text-gray-400: mt-1'>'                Get quick access to our services with our app'              </p>',';
+              <p: className='text-xs text-gray-600 dark:text-gray-400: mt-1'>'                Get quick access to our services with our app'              </p>','
               <div: className='flex items-center space-x-4 mt-3'>'                <button'                  onClick={handleInstallClic,k}'
                   className = 'flex: items-center space-x-1 px-3 py-1.5 bg-blue-600 text-white text-xs rounded-md hover: bg-blue-700: transition-colors''                >'                  <Download className='w-3 h-3' />'                  <span>Install</span>'                </button>',"
                 <button onClick="{handleDismis,s}"'
@@ -324,26 +316,26 @@ React { useEffect, useState } from, react'';interface BeforeInstallPromptEvent e
 platform: string  }>;prompt(): Promise<void>
 const PWARegistration: React.FC = () => {,
   const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null)
-  const [showInstallPrompt, setShowInstallPrompt] = useState();
-  const [isInstalled, setIsInstalled] = useState();
+  const [showInstallPrompt, setShowInstallPrompt] = useState()
+  const [isInstalled, setIsInstalled] = useState()
     // Check if app is already installed,
 ursor/automate-test-fix-improve-and-merge-code-48f3,
     // Listen for the beforeinstallprompt event,
 const handleBeforeInstallPrompt = (e: Event) => {e.preventDefault(),,
     // Listen for the appinstalled event,
-const handleAppInstalled = () => {setIsInstalled();
+const handleAppInstalled = () => {setIsInstalled()
 '
   'appinstalled', handleAppInstalled)'    // Register service worker''
-    if();
+    if()
 '
   'appinstalled', handleAppInstalled)'    }'  }, [])
-  const handleInstallClick = async () => {if (!deferredPrompt) return,;
-deferredPrompt.prompt();
+  const handleInstallClick = async () => {if (!deferredPrompt) return,
+deferredPrompt.prompt()
     const { outcome } = await deferredPrompt.userChoice,
 if (outcome ==='
   '      '    }'setDeferredPrompt(null)    setShowInstallPrompt(false)'
 
-const handleDismiss = () => {setShowInstallPrompt();
+const handleDismiss = () => {setShowInstallPrompt()
     return null,"
 className="fixed bottom-4 left-4 right-4 md: left-auto md:right-4 md:max-w-sm z-50""
                 <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mr-3">"
@@ -372,35 +364,28 @@ className="fixed bottom-4 left-4 right-4 md: left-auto md:right-4 md:max-w-sm z-
                 className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 px-4 rounded-lg font-medium hover:from-blue-700 hove,"
     r: to-purple-700 transition-all duration-200""
                 className="px-4 py-2 text-gray-600 hover:text-gray-800 transition-colors",,
-      )};
-  )};
-
-export default PWARegistration;
+      )}
+  )}
+export default PWARegistration
 // Utility hook for PWA functionality,
-export const usePWA = () => {;
-  const [canInstall, setCanInstall] = useState(false);
-  const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
-
+export const usePWA = () => {
+  const [canInstall, setCanInstall] = useState(false)
+  const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null)
     // Check if app is installed,
-const checkInstalled = () => {;
-;
-    // Handle install prompt,;
-setCanInstall(true)};
+const checkInstalled = () => {
 
+    // Handle install prompt,
+setCanInstall(true)}
     // Handle app installed,
-setCanInstall(false);
-
-    checkInstalled();
-
-  const install = async () => {;
-    if (!deferredPrompt) return false;
-
+setCanInstall(false)
+    checkInstalled()
+  const install = async () => {
+    if (!deferredPrompt) return false
 '
-    return outcome === 'accepted'};
-
+    return outcome === 'accepted'}
   return {
     isInstalled,
-    canInstall,;
+    canInstall,
     install}};"
 export default PWARegistration;"
             

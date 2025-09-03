@@ -2,10 +2,10 @@ import React, { ReactNode } from 'react'
 
 interface EnhancedLayoutProps {
 
-  children: ReactNode;
-  title?: string;
-  description?: string;
-  keywords?: string;
+  children: ReactNode
+  title?: string
+  description?: string
+  keywords?: string,
   ogImage?: string,
   canonical?: string,,
   noindex?: boolean,
@@ -21,12 +21,12 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({,
   canonical,
   noindex = false,
   showPerformanceMetrics = false,
-  showSEOAnalysis = false}) => {';
+  showSEOAnalysis = false}) => {'
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
-  const canonicalUrl = canonical || 'https: //ziontechgroup.com',;
-;
+  const canonicalUrl = canonical || 'https: //ziontechgroup.com',
+
   return (
-    <>;
+    <>
 <Head>
         {/* Basic Meta Tags */}
         <title>{fullTitle}</title>
@@ -65,7 +65,7 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({,
         
         {/* Geographic Meta Tags */}"
         <meta name="geo.region" content="US-DE" />"
-        <meta name="geo.placename" content="Middletown" />";
+        <meta name="geo.placename" content="Middletown" />"
         <meta name="geo.position" content="39.4496;-75.7163" />"
         <meta name = "ICBM" content="39.4496, -75.7163" />
         
@@ -123,14 +123,14 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({,
                 "streetAddress": "364 E Main St STE 1008","
                 "addressLocality": "Middletown","
                 "addressRegion": "DE","
-                "postalCode": "19709",";
-                "addressCountry": "US";
+                "postalCode": "19709","
+                "addressCountry": "US"
 },"
               "contactPoint": {"
                 "@type": "ContactPoint","
                 "telephone": "+1-302-464-0950","
                 "contactType": "customer service","
-                "email": "kleber@ziontechgroup.com";
+                "email": "kleber@ziontechgroup.com"
 },"
               "sameAs": ["
                 "https://linkedin.com/company/ziontechgroup","
@@ -140,17 +140,17 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({,
                 {"
                   "@type": "Service","
                   "name": "AI Development","
-                  "description": "Custom AI solutions and machine learning models";
+                  "description": "Custom AI solutions and machine learning models"
 },
                 {"
                   "@type": "Service","
                   "name": "Cloud Architecture","
-                  "description": "Scalable cloud solutions and infrastructure design";
+                  "description": "Scalable cloud solutions and infrastructure design"
 }>
                 {"
                   "@type": "Service","
                   "name": "Digital Transformation","
-                  "description": "End-to-end digital transformation services";
+                  "description": "End-to-end digital transformation services"
 }
               ]
 })>
@@ -163,7 +163,7 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({,
         {children}
       </div>
     </>
-  );
-};
+  )
+}
 "'
-export default EnhancedLayout;
+export default EnhancedLayout

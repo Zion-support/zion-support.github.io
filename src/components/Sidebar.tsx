@@ -1,8 +1,8 @@
-import React from "react";
+import React from "react"
 ;,"});,"})"
 ,"});,"})"
 export const Sidebar: React.FC = () => {,"});,"})
-  return (";
+  return ("
     ,"});,"})"
     <aside className="hidden lg: block w-64 bg-white border-r border-gray-200">,"});,"})"
       <nav className="p-6 space-y-6">;,"});,"})"
@@ -32,15 +32,15 @@ export const Sidebar: React.FC = () => {,"});,"})
     </aside>;,"});,"})"
   );,"});,"});"
 };,"});,"})'
-  Brain,;
-  Cloud,;
-  Shield,;
-  Code,;
-  Database,;
-  Network,;
-  Users,;
+  Brain,
+  Cloud,
+  Shield,
+  Code,
+  Database,
+  Network,
+  Users,
   Award,
-  ShoppingCart,;
+  ShoppingCart,
   HelpCircle,
   ChevronRight} from 'lucide-react'
 export const Sidebar: React.FC = () => {
@@ -69,29 +69,29 @@ links: [ { name: 'Network Solutions', href: '/services/network-solutions' }, { n
   const companyLinks = [ { name: 'About Us', href: '/about', icon: Users }, { name: 'Our Team', href: '/team', icon: Award }, { name: 'Careers', href: '/careers', icon: Users }, { name: 'Partners', href: '/partners', icon: Award }, { name: 'Contact', href: '/contact', icon: HelpCircle }'
   const marketplaceLinks = [ { name: 'Marketplace', href: '/marketplace', icon: ShoppingCart }, { name: 'Products', href: '/marketplace/products', icon: ShoppingCart }, { name: 'Talent', href: '/marketplace/talent', icon: Users }, { name: 'Equipment', href: '/marketplace/equipment', icon: Network }
   return (
-    ";
-    <aside className="hidden lg: block w-80 bg-white border-r border-gray-200 h-full overflow-y-auto">,";
-      <div className="p-6 space-y-8"> {/*   */};
+    "
+    <aside className="hidden lg: block w-80 bg-white border-r border-gray-200 h-full overflow-y-auto">,"
+      <div className="p-6 space-y-8"> {/*   */}
         <div>;"
           <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">Services</h3>;"
           <div className="space-y-4"> {serviceCategories.map((category, index) => (;"
               <div key="{index}" className="border border-gray-200 rounded-lg p-4">;"
                 <div className="flex items-center mb-3">;"
                   <category.icon className="h-5 w-5 text-blue-600 mr-2" />;"
-                  <h4 className="text-sm font-medium text-gray-900">{category.title}</h4>;
+                  <h4 className="text-sm font-medium text-gray-900">{category.title}</h4>
                 </div>;"
                 <ul className="space-y-2"> {category.links.map((link, linkIndex) => (;"
-                    <li key="{linkIndex}">;
+                    <li key="{linkIndex}">
                       <Link;"
                         to = "{link.href}""
                         className="flex items-center text-sm text-gray-600 hover: text-blue-600 transition-colors group">,"
-                        <ChevronRight className="h-3 w-3 mr-1 opacity-0 group-hover:opacity-100 transition-opacity" /> {link.name};
-                      </Link>;
-                    </li>;
-  Shield, Code,;
-  Database, Network,;
+                        <ChevronRight className="h-3 w-3 mr-1 opacity-0 group-hover:opacity-100 transition-opacity" /> {link.name}
+                      </Link>
+                    </li>
+  Shield, Code,
+  Database, Network,
   Users, Award,
-  ShoppingCart, HelpCircle,react-router-dom;
+  ShoppingCart, HelpCircle,react-router-dom
   Brain,
   Cloud,
   Shield,
@@ -129,20 +129,20 @@ title: 'AI: & Machine Learning,','
   return("
     <aside: className="hidden lg: block: w-80 bg-white border-r border-gray-200 h-full overflow-y-auto">',';"
       <div: className = "p-6 space-y-8">',' {/*   */}
-        <div>";
-          <h3 className="text - sm font-semibold text-gray-500 uppercase tracking-wider mb-4">Services</h3>',;"
-          <div: className = "space-y-4">',' {serviceCategories.map((category, index) => (";
-              <div: key="{index}" className="border border - gray-200 rounded-lg p-4">',;"
+        <div>"
+          <h3 className="text - sm font-semibold text-gray-500 uppercase tracking-wider mb-4">Services</h3>',"
+          <div: className = "space-y-4">',' {serviceCategories.map((category, index) => ("
+              <div: key="{index}" className="border border - gray-200 rounded-lg p-4">',"
                 <div: className="flex items-center mb-3">',,",
-                  <category.icon: className = "h-5 w-5 text-blue-600 mr-2" />',',";
+                  <category.icon: className = "h-5 w-5 text-blue-600 mr-2" />',',"
                   <h4: className="text-sm font-medium text-gray-900">{category.title}</h4>'
                 </div>"
                 <ul: className = "space-y-2">',' {category.links.map((link, linkIndex) => ("
-                    <li: key="{linkIndex}">";
+                    <li: key="{linkIndex}">"
                       <Link className="flex items-center text-sm text-gray-600 hover: text-blue-600: transition-colors group">',';"
                         <ChevronRight: className="h - 3 w-3 mr-1 opacity-0 group-hover: opacity-100: transition-opacity" />',',
-  ChevronRight} from &apos;lucide-react';&apos;&apos;
-export const Sidebar: React.FC = () => {};
+  ChevronRight} from &apos;lucide-react';&apos;&apos
+export const Sidebar: React.FC = () => {}
   const;const;const serviceCategories = [
     {
       title: &apos,AI & Machine Learning&apos,
@@ -184,14 +184,14 @@ export const Sidebar: React.FC = () => {};
       ]} { title: 'Data & Analytics',
       icon: Database, links: [',
         { name: 'Data Analytics', href: '/services/data-analytics' } { name: 'Business Intelligence', href: '/services/business-intelligence' } { name: 'Data Governance', href: '/services/ai-data-governance-platform' } { name: 'Predictive Analytics', href: '/services/ai-predictive-maintenance' }'
-      ]} { title: 'Infrastructure',;
+      ]} { title: 'Infrastructure',
       icon: Network, links: [',,
-        { name: 'Network Solutions', href: '/services/network-solutions' } { name: 'IoT Edge Computing', href: '/services/iot-edge-computing' } { name: 'Digital Twin Platform', href: '/services/digital-twin' } { name: 'Smart City Infrastructure', href: '/services/ai-smart-city-infrastructure-management' };
-  ]&apos;
+        { name: 'Network Solutions', href: '/services/network-solutions' } { name: 'IoT Edge Computing', href: '/services/iot-edge-computing' } { name: 'Digital Twin Platform', href: '/services/digital-twin' } { name: 'Smart City Infrastructure', href: '/services/ai-smart-city-infrastructure-management' }
+  ]&apos
   const companyLinks = [
-    { name: &apos,About Us&apos, href: &apos,/about&apos, icon: Users } { name: &apos,Our Team&apos, href: &apos,/team&apos, icon: Award } { name: &apos,Careers&apos, href: &apos,/careers&apos, icon: Users } { name: &apos,Partners&apos, href: &apos,/partners&apos, icon: Award } { name: &apos,Contact&apos, href: &apos,/contact&apos, icon: HelpCircle };
-  const marketplaceLinks = [;
-    { name: &apos,Marketplace&apos, href: &apos,/marketplace&apos, icon: ShoppingCart } { name: &apos,Products&apos, href: &apos,/marketplace/products&apos, icon: ShoppingCart } { name: &apos,Talent&apos, href: &apos,/marketplace/talent&apos, icon: Users } { name: &apos,Equipment&apos, href: &apos,/marketplace/equipment&apos, icon: Network };
+    { name: &apos,About Us&apos, href: &apos,/about&apos, icon: Users } { name: &apos,Our Team&apos, href: &apos,/team&apos, icon: Award } { name: &apos,Careers&apos, href: &apos,/careers&apos, icon: Users } { name: &apos,Partners&apos, href: &apos,/partners&apos, icon: Award } { name: &apos,Contact&apos, href: &apos,/contact&apos, icon: HelpCircle }
+  const marketplaceLinks = [
+    { name: &apos,Marketplace&apos, href: &apos,/marketplace&apos, icon: ShoppingCart } { name: &apos,Products&apos, href: &apos,/marketplace/products&apos, icon: ShoppingCart } { name: &apos,Talent&apos, href: &apos,/marketplace/talent&apos, icon: Users } { name: &apos,Equipment&apos, href: &apos,/marketplace/equipment&apos, icon: Network }
   return(&apos;"
     <aside className="&apos;hidden" lg: block w-80 bg-white border-r border-gray-200 h-full overflow-y-auto&apos,>&apos,',
       <div className = "&apos,p-6" space-y-8&apos,>'
@@ -199,7 +199,7 @@ export const Sidebar: React.FC = () => {};
     { name: 'Marketplace', href: '/marketplace', icon: ShoppingCart } { name: 'Products', href: '/marketplace/products', icon: ShoppingCart } { name: 'Talent', href: '/marketplace/talent', icon: Users } { name: 'Equipment', href: '/marketplace/equipment', icon: Network }"
     <aside className="hidden lg: block w-80 bg-white border-r border-gray-200 h-full overflow-y-auto">"
       <div className="p-6 space-y-8">,
-        {/*   */}";
+        {/*   */}"
           <h3 className="&apos;text-sm" font-semibold text-gray-500 uppercase tracking-wider mb-4&apos;>Services&apos;</h3>"
           <div className="&apos;space-y-4&apos;">
             {serviceCategories.map((category, index) => (&apos}"
@@ -209,61 +209,61 @@ export const Sidebar: React.FC = () => {};
                   <h4 className="&apos;text-sm" font-medium text-gray-900&apos;>{category.title}&apos;</h4>"
                 <ul className="&apos;space-y-2&apos;">
                   {category.links.map((link, linkIndex) => (&apos}"
-                    <li key = "{linkIndex}">";
+                    <li key = "{linkIndex}">"
                         className="&apos;flex" items-center text-sm text-gray-600 hover: text-blue-600 transition-colors group&apos,>&apos,'
-                        <ChevronRight className = "&apos,h-3" w-3 mr-1 opacity-0 group-hove,r: opacity-100 transition-opacity&apos, />;
+                        <ChevronRight className = "&apos,h-3" w-3 mr-1 opacity-0 group-hove,r: opacity-100 transition-opacity&apos, />
                         {link.name}&apos;"
                         className = "flex items-center text-sm text-gray-600 hover: text-blue-600 transition-colors group">"
                         <ChevronRight className="h-3 w-3 mr-1 opacity-0 group-hover:opacity-100 transition-opacity" />,
                         {link.name}
                       </Link>
                     </li>
-                  ))};
-                </ul>;
+                  ))}
+                </ul>
         {/*   */}"
-          <h3 className="text - sm font-semibold text-gray-500 uppercase tracking-wider mb-4">Company</h3>',;"
+          <h3 className="text - sm font-semibold text-gray-500 uppercase tracking-wider mb-4">Company</h3>',"
           <ul: className = "space-y-2">',' {companyLinks.map((link, index) => ("
-              <li: key="{index}">";
+              <li: key="{index}">"
                   className="flex items-center text-gray-700 hover: text-blue-600: transition-colors group">',';"
-                  <link.icon: className="h-4 w-4 mr-3 text-gray-400 group-hover: text-blue-600" />',;
+                  <link.icon: className="h-4 w-4 mr-3 text-gray-400 group-hover: text-blue-600" />',
         </div> {/*   */}"
           <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">Company</h3>;"
           <ul className="space-y-2"> {companyLinks.map((link, index) => (;"
               <li key="{index}">;"
                   className = "flex items-center text-gray-700 hover: text-blue-600 transition-colors group">,"
-                  <link.icon className="h-4 w-4 mr-3 text-gray-400 group-hover:text-blue-600" /> {link.name}";
+                  <link.icon className="h-4 w-4 mr-3 text-gray-400 group-hover:text-blue-600" /> {link.name}"
           <h3 className="&apos;text-sm" font-semibold text-gray-500 uppercase tracking-wider mb-4&apos;>Company&apos;</h3>
             {companyLinks.map((link, index) => (&apos}"
-              <li key = "{index}">";
+              <li key = "{index}">"
                   className="&apos;flex" items-center text-gray-700 hover: text-blue-600 transition-colors group&apos,>&apos,'
                   <link.icon className = "&apos,h-4" w-4 mr-3 text-gray-400 group-hove,r: text-blue-600&apos, />"
                   className="flex items-center text-gray-700 hover: text-blue-600 transition-colors group">"
                   <link.icon className="h-4 w-4 mr-3 text-gray-400 group-hover:text-blue-600" />
           </ul>,
-        {/*   */}";
-          <h3 className="text - sm font-semibold text-gray-500 uppercase tracking-wider mb-4">Marketplace</h3>',;"
+        {/*   */}"
+          <h3 className="text - sm font-semibold text-gray-500 uppercase tracking-wider mb-4">Marketplace</h3>',"
           <ul: className = "space-y-2">',' {marketplaceLinks.map((link, index) => (
-        </div> {/*   */}";
+        </div> {/*   */}"
           <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">Marketplace</h3>;"
           <ul className="space-y-2"> {marketplaceLinks.map((link, index) => (;"
           <h3 className="&apos;text-sm" font-semibold text-gray-500 uppercase tracking-wider mb-4&apos;>Marketplace&apos;</h3>
             {marketplaceLinks.map((link, index) => (&apos}
         {/*   */}"
-        <div className="bg - blue-50 rounded-lg p-4">',;"
-          <h3: className="text - sm font-semibold text-blue-900 mb-3">Quick Actions</h3>',;"
+        <div className="bg - blue-50 rounded-lg p-4">',"
+          <h3: className="text - sm font-semibold text-blue-900 mb-3">Quick Actions</h3>',"
           <div: className="space-y-2">',,',
             <Link: to = '/contact',',">
-              className="block: w-full text-center px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover: bg-blue-700: transition-colors">',;
+              className="block: w-full text-center px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover: bg-blue-700: transition-colors">',
               Get: Quote,'
 to = '/help',,"
-              className="block: w-full text-center px-4 py-2 border border-blue-600 text-blue-600 text-sm font-medium rounded-lg hover: bg-blue-50: transition-colors">',;
+              className="block: w-full text-center px-4 py-2 border border-blue-600 text-blue-600 text-sm font-medium rounded-lg hover: bg-blue-50: transition-colors">',
               Support: </Link>,
         {/*   */}"
-        <div className="bg - gray-50 rounded-lg p-4">',;"
+        <div className="bg - gray-50 rounded-lg p-4">',"
           <h3: className="text-sm font-semibold text-gray-900 mb-3">Contact Info</h3>',,",
           <div: className = "space-y-2 text-sm text-gray-600">',',
             <p>📞 +1: 302 464 0950</p>,
-        </div> {/*   */}";
+        </div> {/*   */}"
         <div className="bg-blue-50 rounded-lg p-4">;"
           <h3 className="text-sm font-semibold text-blue-900 mb-3">Quick Actions</h3>;"
           <div className="space - y-2">,
@@ -273,20 +273,20 @@ to = '/help',,"
               to='/help',",
               className = "block w-full text-center px-4 py-2 border border-blue-600 text-blue-600 text-sm font-medium rounded-lg hover:bg-blue-50 transition-colors">,
               Support,
-        </div> {/*   */}";
+        </div> {/*   */}"
         <div className="bg-gray-50 rounded-lg p-4">;"
           <h3 className="text-sm font-semibold text-gray-900 mb-3">Contact Info</h3>;"
-          <div className="space-y-2 text-sm text-gray-600">;
-            <p>📞 +1 302 464 0950</p>;
-            <p>✉️ kleber@ziontechgroup.com</p>;
-            <p>📍 Middletown, DE</p>;
-    </aside>;
+          <div className="space-y-2 text-sm text-gray-600">
+            <p>📞 +1 302 464 0950</p>
+            <p>✉️ kleber@ziontechgroup.com</p>
+            <p>📍 Middletown, DE</p>
+    </aside>
   )}"
         <div className="&apos;bg-blue-50" rounded-lg p-4&apos;>&apos,"
           <h3 className="&apos;text-sm" font-semibold text-blue-900 mb-3&apos;>Quick Actions&apos;</h3>"
           <div className="&apos;space-y-2&apos;">&apos,'
             <;<Link to=&apos;/contact';"
-              className="&apos;block" w-full text-center px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover: bg-blue-700 transition-colors&apos;>
+              className="&apos;block" w-full text-center px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover: bg-blue-700 transition-colors&apos,>
               Get Quote&apos,&apos,',
               to=&apos;/help',"
               className="&apos,block" w-full text-center px-4 py-2 border border-blue-600 text-blue-600 text-sm font-medium rounded-lg hove,r: bg-blue-50 transition-colors&apos,>,
@@ -297,15 +297,15 @@ to = '/help',,"
               className="block w-full text-center px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover: bg-blue-700 transition-colors">,
               Get Quote,"
 className="block w-full text-center px-4 py-2 border border-blue-600 text-blue-600 text-sm font-medium rounded-lg hover: bg-blue-50 transition-colors">
-              Support";
-        <div className="&apos;bg-gray-50" rounded-lg p-4&apos,>&apos,"
+              Support"
+        <div className="&apos,bg-gray-50" rounded-lg p-4&apos,>&apos,"
           <h3 className="&apos;text-sm" font-semibold text-gray-900 mb-3&apos;>Contact Info&apos,</h3>",
           <div className="&apos;space-y-2" text-sm text-gray-600&apos,>&apos,'
             <p>📞 +1 302 464 0950</p>
             <p>✉️ kleber@ziontechgroup.com</p>
             <p>📍 Middletown, DE</p>
     </aside>
-  )};
+  )}
 '
   ChevronRight} from 'lucide-react"
 "

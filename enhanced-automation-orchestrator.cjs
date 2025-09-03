@@ -1,14 +1,13 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-const { execSync, spawn } = require('child_process');
-
+const fs = require('fs')
+const path = require('path')
+const { execSync, spawn } = require('child_process')
 class EnhancedAutomationOrchestrator {
   constructor() {
-    this.projectRoot = process.cwd();
-    this.reportsDir = path.join(this.projectRoot, 'automation-reports');
-    this.logFile = path.join(this.reportsDir, 'enhanced-automation.log');
+    this.projectRoot = process.cwd()
+    this.reportsDir = path.join(this.projectRoot, 'automation-reports')
+    this.logFile = path.join(this.reportsDir, 'enhanced-automation.log')
     this.results = {
       timestamp: new Date().toISOString(),
       status: 'running',
@@ -19,8 +18,8 @@ class EnhancedAutomationOrchestrator {
       performance: {},
       security: {},
       quality: {}
-    };
-    this.ensureDirectories();
+    }
+    this.ensureDirectories()
   }
 
   ensureDirectories() {
@@ -31,32 +30,29 @@ class EnhancedAutomationOrchestrator {
       'reports',
       'test-reports',
       'security-reports'
-    ];
-    
+    ]
     dirs.forEach(dir => {
-      const dirPath = path.join(this.projectRoot, dir);
+      const dirPath = path.join(this.projectRoot, dir)
       if (!fs.existsSync(dirPath)) {
-        fs.mkdirSync(dirPath, { recursive: true });
+        fs.mkdirSync(dirPath, { recursive: true })
       }
-    });
+    })
   }
 
   log(message, level = 'INFO') {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level}] ${message}`;
-    console.log(logMessage);
-    
+    const timestamp = new Date().toISOString()
+    const logMessage = `[${timestamp}] [${level}] ${message}`
+    console.log(logMessage)
     try {
-      fs.appendFileSync(this.logFile, logMessage + '\n');
+      fs.appendFileSync(this.logFile, logMessage + '\n')
     } catch (error) {
-      console.error('Failed to write to log file:', error.message);
+      console.error('Failed to write to log file:', error.message)
     }
   }
 
   async runCommand(command, description, options = {}) {
-    this.log(`🚀 Starting: ${description}`);
-    const startTime = Date.now();
-    
+    this.log(`🚀 Starting: ${description}`)
+    const startTime = Date.now()
     try {
       const result = execSync(command, {
         cwd: this.projectRoot,
@@ -64,35 +60,31 @@ class EnhancedAutomationOrchestrator {
         timeout: options.timeout || 300000,
         stdio: options.silent ? 'pipe' : 'inherit',
         ...options
-      });
-      
-      const duration = Date.now() - startTime;
-      this.log(`✅ Completed: ${description} (${duration}ms)`);
-      
+      })
+      const duration = Date.now() - startTime
+      this.log(`✅ Completed: ${description} (${duration}ms)`)
       return { 
         success: true, 
         output: result, 
         duration,
         command,
         description
-      };
+      }
     } catch (error) {
-      const duration = Date.now() - startTime;
-      this.log(`❌ Failed: ${description} - ${error.message} (${duration}ms)`, 'ERROR');
-      
+      const duration = Date.now() - startTime
+      this.log(`❌ Failed: ${description} - ${error.message} (${duration}ms)`, 'ERROR')
       return { 
         success: false, 
         error: error.message, 
         duration,
         command,
         description
-      };
+      }
     }
   }
 
   async runSecurityAudit() {
-    this.log('🔒 Running enhanced security audit...');
-    
+    this.log('🔒 Running enhanced security audit...')
     const securityTasks = [
       {
         command: 'npm audit --audit-level=moderate',
@@ -104,29 +96,26 @@ class EnhancedAutomationOrchestrator {
         description: 'Enhanced Security Scan',
         category: 'comprehensive'
       }
-    ];
-
-    const securityResults = [];
+    ]
+    const securityResults = []
     for (const task of securityTasks) {
-      const result = await this.runCommand(task.command, task.description, { silent: true });
+      const result = await this.runCommand(task.command, task.description, { silent: true })
       securityResults.push({
         ...result,
         category: task.category
-      });
+      })
     }
 
     this.results.security = {
       completed: true,
       results: securityResults,
       summary: this.generateSecuritySummary(securityResults)
-    };
-
-    return securityResults;
+    }
+    return securityResults
   }
 
   async runPerformanceOptimization() {
-    this.log('⚡ Running performance optimization...');
-    
+    this.log('⚡ Running performance optimization...')
     const performanceTasks = [
       {
         command: 'node scripts/performance-monitor-enhanced.cjs',
@@ -138,29 +127,26 @@ class EnhancedAutomationOrchestrator {
         description: 'Performance Optimization',
         category: 'optimization'
       }
-    ];
-
-    const performanceResults = [];
+    ]
+    const performanceResults = []
     for (const task of performanceTasks) {
-      const result = await this.runCommand(task.command, task.description, { silent: true });
+      const result = await this.runCommand(task.command, task.description, { silent: true })
       performanceResults.push({
         ...result,
         category: task.category
-      });
+      })
     }
 
     this.results.performance = {
       completed: true,
       results: performanceResults,
       summary: this.generatePerformanceSummary(performanceResults)
-    };
-
-    return performanceResults;
+    }
+    return performanceResults
   }
 
   async runQualityChecks() {
-    this.log('🔍 Running enhanced quality checks...');
-    
+    this.log('🔍 Running enhanced quality checks...')
     const qualityTasks = [
       {
         command: 'npm run lint:fix',
@@ -177,29 +163,26 @@ class EnhancedAutomationOrchestrator {
         description: 'Code Quality Enhancement',
         category: 'enhancement'
       }
-    ];
-
-    const qualityResults = [];
+    ]
+    const qualityResults = []
     for (const task of qualityTasks) {
-      const result = await this.runCommand(task.command, task.description, { silent: true });
+      const result = await this.runCommand(task.command, task.description, { silent: true })
       qualityResults.push({
         ...result,
         category: task.category
-      });
+      })
     }
 
     this.results.quality = {
       completed: true,
       results: qualityResults,
       summary: this.generateQualitySummary(qualityResults)
-    };
-
-    return qualityResults;
+    }
+    return qualityResults
   }
 
   async runBuildOptimization() {
-    this.log('🏗️ Running build optimization...');
-    
+    this.log('🏗️ Running build optimization...')
     const buildTasks = [
       {
         command: 'npm run clean',
@@ -211,23 +194,21 @@ class EnhancedAutomationOrchestrator {
         description: 'Build Optimization',
         category: 'optimization'
       }
-    ];
-
-    const buildResults = [];
+    ]
+    const buildResults = []
     for (const task of buildTasks) {
-      const result = await this.runCommand(task.command, task.description, { silent: true });
+      const result = await this.runCommand(task.command, task.description, { silent: true })
       buildResults.push({
         ...result,
         category: task.category
-      });
+      })
     }
 
-    return buildResults;
+    return buildResults
   }
 
   async runTestSuite() {
-    this.log('🧪 Running comprehensive test suite...');
-    
+    this.log('🧪 Running comprehensive test suite...')
     const testTasks = [
       {
         command: 'npm run test:coverage',
@@ -239,133 +220,121 @@ class EnhancedAutomationOrchestrator {
         description: 'Automated Testing Suite',
         category: 'integration'
       }
-    ];
-
-    const testResults = [];
+    ]
+    const testResults = []
     for (const task of testTasks) {
-      const result = await this.runCommand(task.command, task.description, { silent: true });
+      const result = await this.runCommand(task.command, task.description, { silent: true })
       testResults.push({
         ...result,
         category: task.category
-      });
+      })
     }
 
-    return testResults;
+    return testResults
   }
 
   generateSecuritySummary(results) {
-    const successful = results.filter(r => r.success).length;
-    const failed = results.filter(r => !r.success).length;
-    
+    const successful = results.filter(r => r.success).length
+    const failed = results.filter(r => !r.success).length
     return {
       total: results.length,
       successful,
       failed,
       status: failed === 0 ? 'SECURE' : 'NEEDS_ATTENTION'
-    };
+    }
   }
 
   generatePerformanceSummary(results) {
-    const successful = results.filter(r => r.success).length;
-    const failed = results.filter(r => !r.success).length;
-    const avgDuration = results.reduce((acc, r) => acc + r.duration, 0) / results.length;
-    
+    const successful = results.filter(r => r.success).length
+    const failed = results.filter(r => !r.success).length
+    const avgDuration = results.reduce((acc, r) => acc + r.duration, 0) / results.length
     return {
       total: results.length,
       successful,
       failed,
       averageDuration: avgDuration,
       status: failed === 0 ? 'OPTIMIZED' : 'NEEDS_OPTIMIZATION'
-    };
+    }
   }
 
   generateQualitySummary(results) {
-    const successful = results.filter(r => r.success).length;
-    const failed = results.filter(r => !r.success).length;
-    
+    const successful = results.filter(r => r.success).length
+    const failed = results.filter(r => !r.success).length
     return {
       total: results.length,
       successful,
       failed,
       status: failed === 0 ? 'HIGH_QUALITY' : 'NEEDS_IMPROVEMENT'
-    };
+    }
   }
 
   async generateReport() {
-    const reportPath = path.join(this.reportsDir, 'enhanced-automation-report.json');
-    
-    this.results.status = 'completed';
-    this.results.completedAt = new Date().toISOString();
+    const reportPath = path.join(this.reportsDir, 'enhanced-automation-report.json')
+    this.results.status = 'completed'
+    this.results.completedAt = new Date().toISOString()
     this.results.summary = {
       totalSteps: this.results.steps.length,
       totalErrors: this.results.errors.length,
       totalFixes: this.results.fixes.length,
       totalImprovements: this.results.improvements.length,
       overallStatus: this.calculateOverallStatus()
-    };
-
+    }
     try {
-      fs.writeFileSync(reportPath, JSON.stringify(this.results, null, 2));
-      this.log(`📊 Enhanced report generated: ${reportPath}`);
+      fs.writeFileSync(reportPath, JSON.stringify(this.results, null, 2))
+      this.log(`📊 Enhanced report generated: ${reportPath}`)
     } catch (error) {
-      this.log(`❌ Failed to generate report: ${error.message}`, 'ERROR');
+      this.log(`❌ Failed to generate report: ${error.message}`, 'ERROR')
     }
 
-    return this.results;
+    return this.results
   }
 
   calculateOverallStatus() {
-    const securityOk = !this.results.security.summary || this.results.security.summary.status === 'SECURE';
-    const performanceOk = !this.results.performance.summary || this.results.performance.summary.status === 'OPTIMIZED';
-    const qualityOk = !this.results.quality.summary || this.results.quality.summary.status === 'HIGH_QUALITY';
-
+    const securityOk = !this.results.security.summary || this.results.security.summary.status === 'SECURE'
+    const performanceOk = !this.results.performance.summary || this.results.performance.summary.status === 'OPTIMIZED'
+    const qualityOk = !this.results.quality.summary || this.results.quality.summary.status === 'HIGH_QUALITY'
     if (securityOk && performanceOk && qualityOk) {
-      return 'EXCELLENT';
+      return 'EXCELLENT'
     } else if (securityOk && (performanceOk || qualityOk)) {
-      return 'GOOD';
+      return 'GOOD'
     } else {
-      return 'NEEDS_IMPROVEMENT';
+      return 'NEEDS_IMPROVEMENT'
     }
   }
 
   async run() {
-    this.log('🎯 Starting Enhanced Automation Orchestrator');
-    const startTime = Date.now();
-
+    this.log('🎯 Starting Enhanced Automation Orchestrator')
+    const startTime = Date.now()
     try {
       // Run all automation tasks
-      await this.runSecurityAudit();
-      await this.runPerformanceOptimization();
-      await this.runQualityChecks();
-      await this.runBuildOptimization();
-      await this.runTestSuite();
-
+      await this.runSecurityAudit()
+      await this.runPerformanceOptimization()
+      await this.runQualityChecks()
+      await this.runBuildOptimization()
+      await this.runTestSuite()
       // Generate comprehensive report
-      const report = await this.generateReport();
-      
-      const totalDuration = Date.now() - startTime;
-      this.log(`🎉 Enhanced Automation Orchestrator completed successfully in ${totalDuration}ms`);
-      this.log(`📊 Overall Status: ${report.summary.overallStatus}`);
-
-      return report;
+      const report = await this.generateReport()
+      const totalDuration = Date.now() - startTime
+      this.log(`🎉 Enhanced Automation Orchestrator completed successfully in ${totalDuration}ms`)
+      this.log(`📊 Overall Status: ${report.summary.overallStatus}`)
+      return report
     } catch (error) {
-      this.log(`❌ Enhanced Automation Orchestrator failed: ${error.message}`, 'ERROR');
-      this.results.status = 'failed';
-      this.results.error = error.message;
-      
-      await this.generateReport();
-      throw error;
+      this.log(`❌ Enhanced Automation Orchestrator failed: ${error.message}`, 'ERROR')
+      this.results.status = 'failed'
+      this.results.error = error.message
+      await this.generateReport()
+      throw error
     }
   }
 }
 
 // Run the enhanced automation orchestrator
 if (require.main === module) {
-  const orchestrator = new EnhancedAutomationOrchestrator();
+  const orchestrator = new EnhancedAutomationOrchestrator()
   orchestrator.run().catch(error => {
-    console.error('❌ Enhanced Automation Orchestrator failed:', error);
-    process.exit(1);
-  });
+    console.error('❌ Enhanced Automation Orchestrator failed:', error)
+    process.exit(1)
+  })
 }
 
-module.exports = EnhancedAutomationOrchestrator;
+module.exports = EnhancedAutomationOrchestrator

@@ -1,8 +1,8 @@
 export interface RealAugmentedService2025Batch3 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
+  id: string
+  name: string
+  tagline: string
+  price: string
   features: string[]}
 
 export const augmentedServicesBatch3: RealAugmentedService2025Batch3[] = [
@@ -24,4 +24,4 @@ export const augmentedServicesBatch3: RealAugmentedService2025Batch3[] = [
     price: '$699',
     features: ['Premium features', 'Enterprise support', 'Custom integrations'],
   },
-];
+]

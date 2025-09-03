@@ -1,6 +1,5 @@
 const React = dynamic(() => import('react'), { ssr: false })
-  const description = 'Comprehensive AI, IT, and Micro SaaS solutions for modern businesses.;
-
+  const description = 'Comprehensive AI, IT, and Micro SaaS solutions for modern businesses.
   const mainServices = [
     {
       id: "ai","
@@ -156,12 +155,11 @@ bg: "bg-indigo-600","
       gray: {,"
 bg: "bg-gray-600","
         hover: "hover:bg-gray-700","
-        text: "text-gray-600",";
-        hoverText: "hover:text-gray-500",";
-        border: "hover:border-gray-300"};
-    };
-    return colors[color as keyof typeof colors] || colors.blue};
-
+        text: "text-gray-600","
+        hoverText: "hover:text-gray-500","
+        border: "hover:border-gray-300"}
+    }
+    return colors[color as keyof typeof colors] || colors.blue}
   return (
     <PageTransition>
       {/*   */}"
@@ -250,11 +248,11 @@ that transform your business operations and drive growth.
           <div className="text-center mb-16">"
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Innovative Micro SaaS Solutions</h2>"
             <p className="text-xl text-gray-600">Cutting-edge tools and platforms for modern businesses</p>
-          </div>;
+          </div>,
 ",
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,,
-            {newServices.map((service, index) => {;
-              const colors = getColorClasses(service.color);
+            {newServices.map((service, index) => {
+              const colors = getColorClasses(service.color)
               return ("
                 <div key = "{index}""
                   className="group relative rounded-2xl border border-gray-200 bg-white p-6 shadow-sm hover: shadow-lg transition-all duration-300 hover:border-gray-300"
@@ -329,4 +327,4 @@ that transform your business operations and drive growth.
         </div>
       </section>
     </PageTransition>",,
-  )};
+  )}

@@ -1,6 +1,6 @@
-import React from "react";
-;
-	return();
+import React from "react"
+
+	return()
 						</h1>"
 						<p className="mt-6 text-lg leading-8 text-gray-600">
 							Unlock the power of language with advanced NLP technology. From sentiment analysis to language translation, transform text into actionable insights.
@@ -473,4 +473,4 @@ import React from "react";
 				</div>
 			</section>
 		</PageTransition>",
-	)};
+	)}

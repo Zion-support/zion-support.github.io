@@ -90,43 +90,38 @@ const Footer: React.FC = () => {,
         { name: 'Recommendation Engine', href: '/services/recommendation-engine' },'
         { name: 'AI-Powered Search', href: '/services/ai-powered-search' },'
         { name: 'AI Content Moderation', href: '/services/ai-content-moderation' },'
-        { name: 'AI Fraud Detection', href: '/services/ai-fraud-detection' },;
-      ];
-    };
-  ];
-
+        { name: 'AI Fraud Detection', href: '/services/ai-fraud-detection' },
+      ]
+    }
+  ]
   const quickLinks = ["
     { name: "About Us", href: "/about" },"
     { name: "Our Team", href: "/team" },"
     { name: "Careers", href: "/careers" },"
     { name: "Case Studies", href: "/case-studies" },"
     { name: "Blog", href: "/blog" },"
-    { name: "White Papers", href: "/white-papers" },";
-    { name: "Webinars", href: "/webinars" },";
-    { name: "Pricing", href: "/pricing" };
-  ];
-
+    { name: "White Papers", href: "/white-papers" },"
+    { name: "Webinars", href: "/webinars" },"
+    { name: "Pricing", href: "/pricing" }
+  ]
   const legalLinks = ["
     { name: "Privacy Policy", href: "/privacy" },"
-    { name: "Terms of Service", href: "/terms" },";
-    { name: "Cookie Policy", href: "/cookies" },";
-    { name: "Sitemap", href: "/sitemap" };
-  ];
-
+    { name: "Terms of Service", href: "/terms" },"
+    { name: "Cookie Policy", href: "/cookies" },"
+    { name: "Sitemap", href: "/sitemap" }
+  ]
   const socialLinks = ["
     { name: "LinkedIn", href: "https://linkedin.com/company/ziontechgroup", icon: Linkedin },"
     { name: "Twitter", href: "https://twitter.com/ziontechgroup", icon: Twitter },"
-    { name: "GitHub", href: "https://github.com/ziontechgroup", icon: Github },";
-    { name: "YouTube", href: "https://youtube.com/ziontechgroup", icon: Youtube },";
-    { name: "Instagram", href: "https://instagram.com/ziontechgroup", icon: Instagram };
-  ];
-
+    { name: "GitHub", href: "https://github.com/ziontechgroup", icon: Github },"
+    { name: "YouTube", href: "https://youtube.com/ziontechgroup", icon: Youtube },"
+    { name: "Instagram", href: "https://instagram.com/ziontechgroup", icon: Instagram }
+  ]
   const contactInfo = {"
-    email: "contact@ziontechgroup.com",";
-    phone: "+1 (555) 123-4567",";
-    address: "123 Technology Drive, San Francisco, CA 94105";
-  };
-
+    email: "contact@ziontechgroup.com","
+    phone: "+1 (555) 123-4567","
+    address: "123 Technology Drive, San Francisco, CA 94105"
+  }
   return ("
     <footer className = "bg-slate-900 border-t border-slate-700">
       {/* Main Footer Content */}"
@@ -293,9 +288,9 @@ const Footer: React.FC = () => {,
             </div>
           </div>
         </div>
-      </div>;
-    </footer>;
-  );
-};
+      </div>
+    </footer>
+  )
+}
 "'
-export default Footer;
+export default Footer

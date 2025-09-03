@@ -1,7 +1,7 @@
-import React from "react";
+import React from "react"
 >
   return (
-    <>;
+    <>
 <Head>
         <title>Cybersecurity Services - Zion Tech Group</title>
         <meta name = "description" content="Comprehensive cybersecurity services including security assessment, network protection, data security, and incident response. Protect your business from cyber threats." />"
@@ -173,6 +173,6 @@ import React from "react";
       
       <Footer />
     </>
-  )};
+  )}
 "
-export default Cybersecurity;
+export default Cybersecurity

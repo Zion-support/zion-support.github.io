@@ -49,7 +49,7 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
       validationResult.suggestedFix &&'';,"});,"})"
       validationResult.suggestedFix.startsWith('Redirect to: '),"});,"})"
     ) {}"});,"})"
-';,"});,"})"
+',"});,"})"
 '';,"});,"})"
 ''';,"});,"})"
       const newUrl = validationResult.suggestedFix.replace('Redirect to: '),"});,"})"
@@ -62,7 +62,7 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
 });,"});,"})"
       // Add to fixed links list,"});,"})"
       const fix = {}"});,"})"
-        originalUrl,;,"});,"})"
+        originalUrl,,"});,"})"
         newUrl,';,"});,"})"
         type: 'redirect',';,"});,"})"
         reason: 'Automatically fixed broken internal link'};,"});,"})"
@@ -285,10 +285,10 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
 };,"});,"})"
 export default LinkMonitor;"`;,"});,"})"
 '`'"`;,"});,"})'
- export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true}) => { const [brokenLinks, setBrokenLinks] = useState ([])  const [fixedLinks, setFixedLinks] = useState ([])  const [isScanning, setIsScanning] = useState (false)  const [scanProgress, setScanProgress] = useState (0)  const [lastScanTime, setLastScanTime] = useState (null) ';
-";
-"";
+ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true}) => { const [brokenLinks, setBrokenLinks] = useState ([])  const [fixedLinks, setFixedLinks] = useState ([])  const [isScanning, setIsScanning] = useState (false)  const [scanProgress, setScanProgress] = useState (0)  const [lastScanTime, setLastScanTime] = useState (null) '
+"
+""
 }"
-";
+"
 };"
 "

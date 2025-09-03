@@ -1,5 +1,4 @@
-import React from "react";
-
+import React from "react"
 export function SiteFooter() {
 
   const currentYear = new Date().getFullYear()'
@@ -117,11 +116,11 @@ export function SiteFooter() {
                 </a>
               ))}
             </div>
-          </div>;
-        </div>;
-      </div>;
-    </footer>;
-  );
+          </div>
+        </div>
+      </div>
+    </footer>
+  )
 }
 "
 export default SiteFooter;"

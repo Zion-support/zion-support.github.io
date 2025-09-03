@@ -1,40 +1,40 @@
 export interface CuttingEdgeComprehensiveService2027 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  tags: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
+  id: string
+  name: string
+  tagline: string
+  price: string
+  period: string
+  description: string
+  features: string[]
+  popular: boolean
+  icon: string
+  color: string
+  textColor: string
+  link: string
+  marketPosition: string
+  targetAudience: string
+  trialDays: number
+  setupTime: string
+  category: string
+  realService: boolean
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
+  tags: string[]
+  roi: string
+  competitors: string[]
+  marketSize: string
+  growthRate: string
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string};
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
+    mobile: string
+    email: string
+    address: string
+    website: string}
+  realImplementation: boolean
+  implementationDetails: string
+  launchDate: string
+  customers: number
+  rating: number
   reviews: number}
 export const cuttingEdgeComprehensiveServices2027: CuttingEdgeComprehensiveService2027[] = [
   // AI-POWERED INNOVATIVE SERVICES
@@ -648,25 +648,25 @@ export const cuttingEdgeComprehensiveServices2027: CuttingEdgeComprehensiveServi
     customers: 89,
     rating: 4.8,
     reviews: 167
-];
+]
 // Helper functions for service management
-export const getServiceById = (id: string) => {;
-  return cuttingEdgeComprehensiveServices2027.find(service => service.id === id)};
-export const getServicesByCategory = (category: string) => {;
-  return cuttingEdgeComprehensiveServices2027.filter(service => service.category === category)};
-export const getPopularServices = () => {;
-  return cuttingEdgeComprehensiveServices2027.filter(service => service.popular);
-};
-export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {;
-  return cuttingEdgeComprehensiveServices2027.filter(service => {;
-    const price = parseInt(service.price.replace(/[^0-9]/g, ''));
-    return price >= minPrice && price <= maxPrice})};
-export const searchServices = (query: string) => {;
-  const lowercaseQuery = query.toLowerCase();
-  return cuttingEdgeComprehensiveServices2027.filter(service = > ;
-    service.name.toLowerCase().includes(lowercaseQuery) ||;
-    service.description.toLowerCase().includes(lowercaseQuery) ||;
-    service.category.toLowerCase().includes(lowercaseQuery) ||;
-    service.tags.some(tag => tag.toLowerCase().includes(lowercaseQuery));
-  )};
+export const getServiceById = (id: string) => {
+  return cuttingEdgeComprehensiveServices2027.find(service => service.id === id)}
+export const getServicesByCategory = (category: string) => {
+  return cuttingEdgeComprehensiveServices2027.filter(service => service.category === category)}
+export const getPopularServices = () => {
+  return cuttingEdgeComprehensiveServices2027.filter(service => service.popular)
+}
+export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {
+  return cuttingEdgeComprehensiveServices2027.filter(service => {
+    const price = parseInt(service.price.replace(/[^0-9]/g, ''))
+    return price >= minPrice && price <= maxPrice})}
+export const searchServices = (query: string) => {
+  const lowercaseQuery = query.toLowerCase()
+  return cuttingEdgeComprehensiveServices2027.filter(service = > 
+    service.name.toLowerCase().includes(lowercaseQuery) ||
+    service.description.toLowerCase().includes(lowercaseQuery) ||
+    service.category.toLowerCase().includes(lowercaseQuery) ||
+    service.tags.some(tag => tag.toLowerCase().includes(lowercaseQuery))
+  )}
 export default cuttingEdgeComprehensiveServices2027}}

@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
   Lightbulb,
   TrendingUp} from 'lucide-react'
 
@@ -50,10 +50,10 @@ export default function Solutions() {
   ]
 
   const benefits = [
-    {;
-      icon: Zap,;
-      title: 'Lightning Fast Setup',;
-      description: 'Get your solution up and running in minutes, not months.;
+    {
+      icon: Zap,
+      title: 'Lightning Fast Setup',
+      description: 'Get your solution up and running in minutes, not months.
 },
     {
       icon: Shield,'
@@ -74,7 +74,7 @@ export default function Solutions() {
       <SEO title = "Solutions - Zion Tech Group""
         description="Comprehensive technology solutions for modern businesses. AI-powered tools, automation platforms, and custom software solutions.""
         keywords="solutions, AI tools, automation, software, business solutions, technology">
-      />;
+      />
 <Head>
         <title>Solutions - Zion Tech Group</title>
       </Head>
@@ -472,7 +472,7 @@ your specific business needs and challenges.
       <section className="py-20 bg-gray-900 text-white">"
         <div className="container mx-auto px-4 text-center">"
           <h2 className="text-4xl font-bold mb-6">Ready to Find Your Solution?</h2>"
-          <p className="text-xl mb-8 text-gray-300 max-w-3xl mx-auto">;
+          <p className="text-xl mb-8 text-gray-300 max-w-3xl mx-auto">
             Let&apos;s discuss your business needs and find the perfect technology solution to drive your success.''
           </p>"
           <div className = "flex flex-col sm: flex-row justify-center gap-4">"
@@ -503,4 +503,4 @@ your specific business needs and challenges.
         </div>
       </section>
     </>",
-  )};
+  )}

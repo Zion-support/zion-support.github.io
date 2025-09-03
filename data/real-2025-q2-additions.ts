@@ -1,8 +1,8 @@
 export interface Real2025Q2Addition {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
+  id: string
+  name: string
+  tagline: string
+  price: string
 export const real2025Q2Additions: Real2025Q2Addition[] = [
   {
     id: 'ai-meeting-notes',
@@ -27,5 +27,5 @@ export const real2025Q2Additions: Real2025Q2Addition[] = [
       'Incident timelines and labels',
       'Hosted status pages'
     ]
-];
+]
 }}

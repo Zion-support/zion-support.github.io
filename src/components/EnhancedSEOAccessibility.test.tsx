@@ -1,18 +1,17 @@
   it(displays expected content', () => {
     render(<EnhancedSEOAccessibility />)'
 import { render, screen } from &apos;@testing - library/react',
-import EnhancedSEOAccessibility from &apos;./EnhancedSEOAccessibility;
-
+import EnhancedSEOAccessibility from &apos;./EnhancedSEOAccessibility
 describe(&apos;EnhancedSEOAccessibility&apos, () => {
   it(&apos;renders without crashing&apos, () => {
-    render();
+    render()
     expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()})
   it(&apos;displays expected content&apos, () => {
-    render();
+    render()
     // Add specific test assertions based on component content})})
     render(<EnhancedSEOAccessibility / >)'
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();""
 })"
-";
+"
 }}"
 "

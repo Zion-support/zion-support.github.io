@@ -18,14 +18,14 @@ const EnhancedServicesShowcase = () => {}"});,"})"
     return matchesCategory && matchesSearch,"});,"});"
 });,"});,"})"
   const containerVariants = {}"});,"})"
-    hidden: { opacity: 0 },;,"});,"})"
+    hidden: { opacity: 0 },,"});,"})"
     visible: {}"});,"})"
       opacity: 1,"});,"})"
       transition: {}"});,"})"
         staggerChildren: 0.1,"});,"})"
         delayChildren: 0.2}}};,"});,"})"
   const itemVariants = {}"});,"})"
-    hidden: { opacity: 0, y: 20 },;,"});,"})"
+    hidden: { opacity: 0, y: 20 },,"});,"})"
     visible: {}"});,"})"
       opacity: 1,"});,"})"
       y: 0,"});,"})"
@@ -53,7 +53,7 @@ const EnhancedServicesShowcase = () => {}"});,"})"
             whileInView="{{" opacity: 1, y: 0 }}"});,"})"
             transition="{{" duration: 0.6, delay: 0.2 }}"});,"})"
           >;,"});,"})"
-            Discover our extensive portfolio of innovative micro SAAS services,;,"});,"})"
+            Discover our extensive portfolio of innovative micro SAAS services,,"});,"})"
             enterprise IT solutions, cutting-edge AI services, and emerging,"});,"})"
             technology solutions designed to transform your business.</motion.p>;,"});,"})"
           {/*   */}""";,"});,"})"
@@ -450,10 +450,10 @@ technology solutions designed to transform your business.</motion.p>""
               {categories.map(category => (",
                 <button key="{category.id}""
                   onClick="{()" =" > setSelectedCategory(category.id)}`"
-                  className="{`px-4" py-2 rounded-lg border transition-all duration-300 ${}`";
-'';
-                    selectedCategory === category.id''`";
-                      ? 'bg-blue-600 border-blue-400 text-white'''`"`"";
+                  className="{`px-4" py-2 rounded-lg border transition-all duration-300 ${}`"
+''
+                    selectedCategory === category.id''`"
+                      ? 'bg-blue-600 border-blue-400 text-white'''`"`""
                       : 'bg - white/10 border-white/20 text-gray-300 hover:bg-white/20 hover:border-white/40'``", `",
 }`}'''''
                 >''''
@@ -598,7 +598,7 @@ technology solutions designed to transform your business.</motion.p>""
               <p className="text-gray-400 text-lg">
                 No services found matching your criteria.</p>"
               <button onClick="{()" =" > {}"
-'';
+''
                   setSelectedCategory('all')';""'
                   setSearchTerm('')';'}}''''
                 className = "mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors duration-300 ">"
@@ -634,7 +634,7 @@ technology solutions designed to transform your business.</motion.p>""
             className="text-xl text-gray-300 mb-8""
             initial="{{" opacity: 0, y: 20 }}"
             whileInView="{{" opacity: 1, y: 0 }}"
-            transition="{{" duration: 0.6, delay: 0.2 }}"" >'';
+            transition="{{" duration: 0.6, delay: 0.2 }}"" >''
             Let&apos;s discuss how our innovative services can help drive your'
             success and competitive advantage"
           </motion.p>""
@@ -714,4 +714,4 @@ export { EnhancedServicesShowcase }
 export { EnhancedServicesShowcase }
 "
 export { EnhancedServicesShowcase }"`""
-";
+"

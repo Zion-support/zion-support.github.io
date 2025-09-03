@@ -641,7 +641,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
         setupTime: '1 week',
         complianceStandards['GDPR', 'CCPA', 'SOC2', 'Legal Ethics'],
         supportLevel: 'premium'
-];
+]
 // Additional specialized service categories
 export const SERVICE_CATEGORIES = {
   'Micro SAAS': [
@@ -680,7 +680,7 @@ export const SERVICE_CATEGORIES = {
         'Education & Training',
   'Creative Industries'
     ]
-};
+}
 // Market analysis and pricing information
 export const MARKET_ANALYSIS = {
   totalMarketSize: '$2.8T',
@@ -701,5 +701,5 @@ export const MARKET_ANALYSIS = {
         'Comprehensive compliance frameworks',
   '24/7 autonomous operations'
     ]
-};
+}
 }

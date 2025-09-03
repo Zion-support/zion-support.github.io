@@ -1,7 +1,7 @@
 import React from 'react'
 interface InteractiveSearchProps {
 
-  placeholder?: string;
+  placeholder?: string
   onSearch?: (query: string) => void,
   className?: string}
 
@@ -9,10 +9,9 @@ export default function InteractiveSearch() {
 
   const handleSubmit = (e: React.FormEvent) => {,
     e.preventDefault(),,
-    const formData = new FormData(e.target as HTMLFormElement),';
-    const query = formData.get('search') as string,;
-    onSearch?.(query)};
-
+    const formData = new FormData(e.target as HTMLFormElement),'
+    const query = formData.get('search') as string,
+    onSearch?.(query)}
   return ("
     <form onSubmit = "{handleSubmit}" className="{className}">"
       <div className="relative">"
@@ -28,7 +27,7 @@ export default function InteractiveSearch() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
           </svg>
         </button>
-      </div>;
-    </form>;
-  );
+      </div>
+    </form>
+  )
 }"'
