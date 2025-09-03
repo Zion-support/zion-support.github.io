@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '../../src/lib/utils';
 
@@ -48,3 +49,15 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 Button.displayName = 'Button';
 
 export { Button, buttonVariants };
+=======
+
+type Props = React.ButtonHTMLAttributes<HTMLButtonElement> & {
+
+  children: React.ReactNode;
+};
+
+export default function Button({ children, ...rest }: Props) {
+
+  return <button {...rest}>{children}</button>;
+}
+>>>>>>> a4e4b61825d9486fa9e1113a59af8c11dc69fb90

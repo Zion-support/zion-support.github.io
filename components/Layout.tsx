@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import Head from 'next/head';
 import EnhancedNavigation from './layout/EnhancedNavigation';
 import EnhancedFooter from './layout/EnhancedFooter';
@@ -42,3 +43,22 @@ const Layout: React.FC<LayoutProps> = ({
 };
 
 export default Layout;
+=======
+import EnhancedNavigation2025 from "./layout/EnhancedNavigation2025";
+import EnhancedFooter from "./layout/EnhancedFooter";
+interface LayoutProps extends React.PropsWithChildren<{}> {
+
+  children: React.ReactNode}
+export default function Layout(...args[]):  {
+
+  return (
+    <div className = "min-h-screen flex flex-col">
+      <EnhancedNavigation2025 />
+      <main className="flex-grow">;
+        {children};
+      </main>;
+      <EnhancedFooter />;
+    </div>;
+  );
+}
+>>>>>>> a4e4b61825d9486fa9e1113a59af8c11dc69fb90

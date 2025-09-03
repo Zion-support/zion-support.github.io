@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
+=======
+import React from 'react';
+>>>>>>> a4e4b61825d9486fa9e1113a59af8c11dc69fb90
 import Link from 'next/link';
-import { Menu, X, ChevronDown } from 'lucide-react';
 
 const EnhancedNavigation: React.FC = () => {
+<<<<<<< HEAD
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [solutionsOpen, setSolutionsOpen] = useState(false);
@@ -121,9 +125,41 @@ const EnhancedNavigation: React.FC = () => {
             </div>
           </div>
         )}
+=======
+  return (
+    <nav className="bg-white shadow-lg">
+      <div className="container mx-auto px-4">
+        <div className="flex justify-between items-center py-4">
+          <div className="text-xl font-bold text-gray-800">Logo</div>
+          <div className="hidden md:flex space-x-8">
+            <Link href="/" legacyBehavior>
+              <a className="text-gray-600 hover:text-gray-900">Home</a>
+            </Link>
+            <Link href="/services" legacyBehavior>
+              <a className="text-gray-600 hover:text-gray-900">Services</a>
+            </Link>
+            <Link href="/products" legacyBehavior>
+              <a className="text-gray-600 hover:text-gray-900">Products</a>
+            </Link>
+            <Link href="/solutions" legacyBehavior>
+              <a className="text-gray-600 hover:text-gray-900">Solutions</a>
+            </Link>
+            <Link href="/about" legacyBehavior>
+              <a className="text-gray-600 hover:text-gray-900">About</a>
+            </Link>
+            <Link href="/contact" legacyBehavior>
+              <a className="text-gray-600 hover:text-gray-900">Contact</a>
+            </Link>
+          </div>
+        </div>
+>>>>>>> a4e4b61825d9486fa9e1113a59af8c11dc69fb90
       </div>
     </nav>
   );
 };
 
+<<<<<<< HEAD
 export default EnhancedNavigation;
+=======
+export default EnhancedNavigation;
+>>>>>>> a4e4b61825d9486fa9e1113a59af8c11dc69fb90

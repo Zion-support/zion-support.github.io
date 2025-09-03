@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { cn } from '../../lib/utils';
 
 const Card = React.forwardRef<
@@ -76,3 +77,16 @@ const CardFooter = React.forwardRef<
 CardFooter.displayName = 'CardFooter';
 
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
+=======
+
+type Props = {
+
+  children: React.ReactNode;
+  className?: string;
+};
+
+export default function Card({ children, className }: Props) {
+
+  return <div className={className}>{children}</div>;
+}
+>>>>>>> a4e4b61825d9486fa9e1113a59af8c11dc69fb90
