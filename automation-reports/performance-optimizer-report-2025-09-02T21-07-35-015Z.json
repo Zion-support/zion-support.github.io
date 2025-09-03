@@ -7,6 +7,6 @@
     "consoleLogsRemoved": 1,
     "buildSize": 0,
     "buildSuccess": false,
-    "success": true
-  }
+    "success": true;
+}
 }

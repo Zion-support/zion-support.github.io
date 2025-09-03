@@ -1,17 +1,9 @@
-<<<<<<< HEAD
 export: default {
   plugins:  ,{}
 }
-=======
-<<<<<<< HEAD
 module.exports = {
   plugins: {
     tailwindcss: {},
-    autoprefixer: {},
-  },
-=======
+    autoprefixer: {}},
 export default {
-  plugins: {},
->>>>>>> main
-};
->>>>>>> main
+  plugins: {}};

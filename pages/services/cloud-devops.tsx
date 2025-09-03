@@ -18,7 +18,7 @@ const CloudDevOps = () => {
         'Cost optimization',
         'Performance tuning'
       ]
-    },
+},
     {
       title: 'DevOps Implementation',
       description: 'Implement modern DevOps practices and tools',
@@ -30,7 +30,7 @@ const CloudDevOps = () => {
         'Monitoring & logging',
         'Automated testing'
       ]
-    },
+},
     {
       title: 'Infrastructure Management',
       description: 'Manage and optimize your cloud infrastructure',
@@ -42,7 +42,7 @@ const CloudDevOps = () => {
         'Backup & disaster recovery',
         'Security hardening'
       ]
-    },
+},
     {
       title: 'Monitoring & Analytics',
       description: 'Comprehensive monitoring and performance analytics',
@@ -54,48 +54,48 @@ const CloudDevOps = () => {
         'Log aggregation',
         'Cost tracking'
       ]
-    }
-  ];
+}
+  ]
 
   const technologies = [
     {
       name: 'AWS',
       description: 'Amazon Web Services cloud platform',
-      icon: Cloud
-    },
+      icon: Cloud;
+},
     {
       name: 'Azure',
       description: 'Microsoft Azure cloud services',
-      icon: Cloud
-    },
+      icon: Cloud;
+},
     {
       name: 'Docker',
       description: 'Containerization platform',
-      icon: Server
-    },
+      icon: Server;
+},
     {
       name: 'Kubernetes',
       description: 'Container orchestration',
-      icon: Settings
-    },
+      icon: Settings;
+},
     {
       name: 'Terraform',
       description: 'Infrastructure as Code',
-      icon: GitBranch
-    },
+      icon: GitBranch;
+},
     {
       name: 'Jenkins',
       description: 'CI/CD automation',
-      icon: Zap
-    }
-  ];
+      icon: Zap;
+}
+  ]
 
   const stats = [
     { number: '99.9%', label: 'Uptime', description: 'Reliable infrastructure' },
     { number: '50%', label: 'Cost Reduction', description: 'Average savings' },
     { number: '10x', label: 'Faster Deployment', description: 'Improved efficiency' },
     { number: '24/7', label: 'Support', description: 'Round-the-clock monitoring' }
-  ];
+  ]
 
   return (
     <>

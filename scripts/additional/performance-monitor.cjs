@@ -14,8 +14,8 @@ class PerformanceMonitor {
       timestamp: new Date().toISOString(),
       memory: process.memoryUsage(),
       uptime: process.uptime(),
-      cpu: process.cpuUsage()
-    };
+      cpu: process.cpuUsage();
+};
     
     // Check bundle size
     const buildDir = path.join(this.projectRoot, '.next');

@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 #!/''usr/bin/env'' node;
-=======
 #!/'usr/bin/env' node;
 
->>>>>>> main
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -22,22 +19,14 @@ class CriticalErrorAlertSystem {;
       dependencyIssues: 5,;
     };
   }
-<<<<<<< HEAD
 
   ensureDirectories() {
     ['this.logsPath', `this.reportsPath`].forEach(dir => {
       if (!fs.existsSync(dir)) {
-=======
-;
-  ensureDirectories() {;
-    ['this.logsPath', 'this.reportsPath'].forEach(dir => {;
-      if (!fs.existsSync(dir)) {;
->>>>>>> main
-        fs.mkdirSync(dir, { recursive: true });
+<<<<<<< HEAD        fs.mkdirSync(dir, { recursive: true });
       }
     });
   }
-<<<<<<< HEAD
 
   log(message, level = `INFO`) {
     const timestamp = new Date().toISOString();
@@ -53,7 +42,6 @@ class CriticalErrorAlertSystem {;
 
     const criticalErrors = [];
 
-=======
 ;
   log(message, level = 'INFO') {;
     const timestamp = new Date().toISOString();
@@ -69,65 +57,46 @@ class CriticalErrorAlertSystem {;
 ;
     const criticalErrors = [];
 ;
->>>>>>> main
     // Check build status;
     const buildStatus = await this.checkBuildStatus();
     if (buildStatus.critical) {;
       criticalErrors.push(buildStatus);
     }
-<<<<<<< HEAD
 
-=======
-;
->>>>>>> main
-    // Check TypeScript errors;
+<<<<<<< HEAD    // Check TypeScript errors;
     const tsStatus = await this.checkTypeScriptStatus();
     if (tsStatus.critical) {;
       criticalErrors.push(tsStatus);
     }
-<<<<<<< HEAD
 
-=======
 ;
->>>>>>> main
     // Check ESLint errors;
     const lintStatus = await this.checkLintStatus();
     if (lintStatus.critical) {;
       criticalErrors.push(lintStatus);
     }
-<<<<<<< HEAD
 
-=======
-;
->>>>>>> main
-    // Check dependency issues;
+<<<<<<< HEAD    // Check dependency issues;
     const depStatus = await this.checkDependencyStatus();
     if (depStatus.critical) {;
       criticalErrors.push(depStatus);
     }
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
 ;
->>>>>>> main
     // Check system resources;
     const resourceStatus = await this.checkSystemResources();
     if (resourceStatus.critical) {;
       criticalErrors.push(resourceStatus);
     }
-=======
 
     // Check system resources
     const resourceStatus = await this.checkSystemResources();`);
     if (resourceStatus.critical) {`);
       criticalErrors.push(resourceStatus);`);
     }`);
->>>>>>> main
 this.log(Found ${criticalErrors.length} critical error conditions`);
     return criticalErrors;
   }
-<<<<<<< HEAD
 
   async checkBuildStatus() {
     try {
@@ -136,17 +105,7 @@ this.log(Found ${criticalErrors.length} critical error conditions`);
         cwd: this.workspacePath,
         stdio: 'pipe',
         timeout: 300000,
-=======
-;
-  async checkBuildStatus() {;
-    try {;
-      this.log('🔍 Checking build status...');
-      execSync('npm run build', {;
-        cwd: this.workspacePath,;
-        stdio: 'pipe',;
-        timeout: 300000,;
->>>>>>> main
-      });
+<<<<<<< HEAD      });
 ;
       return {;
         type: 'build',;
@@ -154,32 +113,16 @@ this.log(Found ${criticalErrors.length} critical error conditions`);
         message: 'Build successful',;
         severity: 'low',;
       };
-<<<<<<< HEAD
     } catch (error) {  
       const errorCount = this.countBuildErrors(error.stdout || ``);
 
       return {
         type: `build`,
         critical: errorCount >= this.criticalThresholds.buildFailures,message: `Build failed with ${errorCount  } errors`,
-        severity:
-          errorCount >= this.criticalThresholds.buildFailures;
+        severity: errorCount >= this.criticalThresholds.buildFailures;
             ? `critical`
             : `high`,
-        errorCount,
-=======
-    } catch (error) {;
-      const errorCount = this.countBuildErrors(error.stdout || ');
-;
-      return {;
-        type: 'build',;
-        critical: errorCount >= this.criticalThresholds.buildFailures,message: `Build failed with ${errorCount} errors`,;
-        severity:;
-          errorCount >= this.criticalThresholds.buildFailures;
-            ? 'critical';
-            : 'high',;
-        errorCount,;
->>>>>>> main
-      };
+        errorCount,      };
     }
   }
 ;
@@ -198,32 +141,16 @@ this.log(Found ${criticalErrors.length} critical error conditions`);
         message: 'TypeScript check passed',;
         severity: 'low',;
       };
-<<<<<<< HEAD
     } catch (error) {  
       const errorCount = this.countTypeScriptErrors(error.stdout || ``);
 
       return {
         type: `typescript`,
         critical: errorCount >= this.criticalThresholds.typeErrors,message: `TypeScript check failed with ${errorCount  } errors`,
-        severity:
-          errorCount >= this.criticalThresholds.typeErrors;
+        severity: errorCount >= this.criticalThresholds.typeErrors;
             ? `critical`
             : `high`,
-        errorCount,
-=======
-    } catch (error) {;
-      const errorCount = this.countTypeScriptErrors(error.stdout || ');
-;
-      return {;
-        type: 'typescript',;
-        critical: errorCount >= this.criticalThresholds.typeErrors,message: `TypeScript check failed with ${errorCount} errors`,;
-        severity:;
-          errorCount >= this.criticalThresholds.typeErrors;
-            ? 'critical';
-            : 'high',;
-        errorCount,;
->>>>>>> main
-      };
+        errorCount,      };
     }
   }
 ;
@@ -242,32 +169,16 @@ this.log(Found ${criticalErrors.length} critical error conditions`);
         message: 'ESLint check passed',;
         severity: 'low',;
       };
-<<<<<<< HEAD
     } catch (error) {  
       const errorCount = this.countLintErrors(error.stdout || ``);
 
       return {
         type: `lint`,
         critical: errorCount >= this.criticalThresholds.lintErrors,message: `ESLint check failed with ${errorCount  } errors`,
-        severity:
-          errorCount >= this.criticalThresholds.lintErrors;
+        severity: errorCount >= this.criticalThresholds.lintErrors;
             ? `critical`
             : `high`,
-        errorCount,
-=======
-    } catch (error) {;
-      const errorCount = this.countLintErrors(error.stdout || ');
-;
-      return {;
-        type: 'lint',;
-        critical: errorCount >= this.criticalThresholds.lintErrors,message: `ESLint check failed with ${errorCount} errors`,;
-        severity:;
-          errorCount >= this.criticalThresholds.lintErrors;
-            ? 'critical';
-            : 'high',;
-        errorCount,;
->>>>>>> main
-      };
+        errorCount,      };
     }
   }
 ;
@@ -286,53 +197,34 @@ this.log(Found ${criticalErrors.length} critical error conditions`);
         message: 'Dependencies check passed',;
         severity: 'low',;
       };
-<<<<<<< HEAD
     } catch (error) {  
       const issueCount = this.countDependencyIssues(error.stdout || ``);
 
       return {
         type: `dependencies`,
         critical: issueCount >= this.criticalThresholds.dependencyIssues,message: `Dependency check failed with ${issueCount  } issues`,
-        severity:
-          issueCount >= this.criticalThresholds.dependencyIssues;
+        severity: issueCount >= this.criticalThresholds.dependencyIssues;
             ? `critical`
             : `high`,
-        issueCount,
-=======
-    } catch (error) {;
-      const issueCount = this.countDependencyIssues(error.stdout || ');
-;
-      return {;
-        type: 'dependencies',;
-        critical: issueCount >= this.criticalThresholds.dependencyIssues,message: `Dependency check failed with ${issueCount} issues`,;
-        severity:;
-          issueCount >= this.criticalThresholds.dependencyIssues;
-            ? 'critical';
-            : 'high',;
-        issueCount,;
->>>>>>> main
-      };
+        issueCount,      };
     }
   }
 ;
   async checkSystemResources() {;
     try {;
       this.log('🔍 Checking system resources...');
-<<<<<<< HEAD
 
       // Check disk space;
       const diskSpace = execSync('df -h .', {
         cwd: this.workspacePath,
         encoding: 'utf8',
-        stdio: 'pipe',
-      });
+        stdio: 'pipe'});
 
       // Check memory;
       const memory = execSync('free -h', {
         cwd: this.workspacePath,
         encoding: 'utf8',
         stdio: 'pipe',
-=======
 ;
       // Check disk space;
       const diskSpace = execSync('df -h .', {;
@@ -346,13 +238,11 @@ this.log(Found ${criticalErrors.length} critical error conditions`);
         cwd: this.workspacePath,;
         encoding: 'utf8',;
         stdio: 'pipe',;
->>>>>>> main
       });
 ;
       // Parse disk space (simplified);
       const diskLines = diskSpace.split('\n');
       const usageLine = diskLines.find(line => line.includes('%'));
-<<<<<<< HEAD
       if (usageLine) {
         const usage = parseInt(usageLine.match(/(\d+)%/)?.[1] || `0`);
         if (usage > 90) {
@@ -360,8 +250,7 @@ this.log(Found ${criticalErrors.length} critical error conditions`);
             type: `system`,
             critical: true,message: `Disk usage critical: ${usage}%`,
             severity: `critical`,
-            details: { diskUsage: usage },
-          };
+            details: { diskUsage: usage }};
         }
       }
 
@@ -369,16 +258,14 @@ this.log(Found ${criticalErrors.length} critical error conditions`);
         type: `system`,
         critical: false,
         message: 'System resources OK',
-        severity: 'low',
-      };
+        severity: 'low'};
     } catch (error) {  
       return {
         type: 'system',
         critical: false,
         message: 'Could not check system resources',
         severity: 'medium',
-        error: error.message,
-        };
+        error: error.message};
     }
   }
 
@@ -428,84 +315,7 @@ this.log(Found ${criticalErrors.length} critical error conditions`);
     // Create alert file;
     const alertFile = path.join(
       this.reportsPath,critical-alert-${Date.now()}.json`
-=======
-      if (usageLine) {;
-        const usage = parseInt(usageLine.match(/(\d+)%/)?.[1] || '0');
-        if (usage > 90) {;
-          return {;
-            type: 'system',;
-            critical: true,message: `Disk usage critical: ${usage}%`,;
-            severity: 'critical',;
-            details: { diskUsage: usage },;
-          };
-        }
-      }
-;
-      return {;
-        type: 'system',;
-        critical: false,;
-        message: 'System resources OK',;
-        severity: 'low',;
-      };
-    } catch (error) {;
-      return {;
-        type: 'system',;
-        critical: false,;
-        message: 'Could not check system resources',;
-        severity: 'medium',;
-        error: error.message,;
-      };
-    }
-  }
-;
-  countBuildErrors(output) {;
-    const errorLines = output;
-      .split('\n');
-      .filter(;
-        line =>;
-          line.includes('error') ||;
-          line.includes('Error') ||;
-          line.includes('ERROR');
-      );
-    return errorLines.length;
-  }
-;
-  countTypeScriptErrors(output) {;
-    const errorLines = output;
-      .split('\n');
-      .filter(line => line.includes('error TS') || line.includes('warning TS'));
-    return errorLines.length;
-  }
-;
-  countLintErrors(output) {;
-    const errorLines = output;
-      .split('\n');
-      .filter(line => line.includes('error') || line.includes('warning'));
-    return errorLines.length;
-  }
-;
-  countDependencyIssues(output) {;
-    const issueLines = output;
-      .split('\n');
-      .filter(;
-        line =>;
-          line.includes('UNMET PEER DEPENDENCY') ||;
-          line.includes('npm ERR!') ||;
-          line.includes('conflicts');
-      );
-    return issueLines.length;
-  }
-;
-  async sendAlert(error) {;
-    this.log(🚨 SENDING CRITICAL ALERT: ${error.type.toUpperCase()} - ${error.message}',;
-      'CRITICAL';
-    );
-;
-    // Create alert file;
-    const alertFile = path.join(;
-      this.reportsPath,critical-alert-${Date.now()}.json';
->>>>>>> main
-    );
+<<<<<<< HEAD    );
     const alertData = {;
       timestamp: new Date().toISOString(),;
       type: error.type,;
@@ -516,7 +326,6 @@ this.log(Found ${criticalErrors.length} critical error conditions`);
     };
 ;
     fs.writeFileSync(alertFile, JSON.stringify(alertData, null, 2));
-<<<<<<< HEAD
 
     // Log to console with high visibility;
     console.error(`\n` + '='.repeat(80));
@@ -526,7 +335,6 @@ this.log(Found ${criticalErrors.length} critical error conditions`);
     console.error(`IMMEDIATE ACTION REQUIRED!`);
     console.error(`=`.repeat(80) + `\n`);
 
-=======
 ;
     // Log to console with high visibility;
     console.error('\n' + '='.repeat(80));
@@ -536,12 +344,10 @@ this.log(Found ${criticalErrors.length} critical error conditions`);
     console.error('IMMEDIATE ACTION REQUIRED!');
     console.error('='.repeat(80) + '\n');
 ;
->>>>>>> main
     // Store in alert historythis.alertHistory.set(`${error.type}-${Date.now()}`, alertData);
 ;
     return alertData;
   }
-<<<<<<< HEAD
 
   async generateReport(criticalErrors) {
     this.log(`📊 Generating critical error alert report...`);
@@ -551,55 +357,24 @@ this.log(Found ${criticalErrors.length} critical error conditions`);
       summary: {
         totalCriticalErrors: criticalErrors.length,
         criticalTypes: criticalErrors.map(e => e.type),
-        highestSeverity:
-          criticalErrors.length > 0;
+        highestSeverity: criticalErrors.length > 0;
             ? Math.max(
                 ...criticalErrors.map(e =>
                   e.severity === `critical` ? 3 : e.severity === 'high' ? 2 : 1;
                 )
               )
-            : 0,
-      },
+            : 0},
       criticalErrors: criticalErrors,
       alertHistory: Array.from(this.alertHistory.values()),
-      recommendations: ['Address critical errors immediately'', 'Review error patterns and implement preventive measures', 'Consider rolling back to last stable version'', 'Implement automated error recovery systems', ``],
-    };
+      recommendations: ['Address critical errors immediately'', 'Review error patterns and implement preventive measures', 'Consider rolling back to last stable version'', 'Implement automated error recovery systems', ``]};
 
     const reportFile = path.join(
       this.reportsPath,critical-error-alert-report.json`
-=======
-;
-  async generateReport(criticalErrors) {;
-    this.log('📊 Generating critical error alert report...');
-;
-    const report = {;
-      timestamp: new Date().toISOString(),;
-      summary: {;
-        totalCriticalErrors: criticalErrors.length,;
-        criticalTypes: criticalErrors.map(e => e.type),;
-        highestSeverity:;
-          criticalErrors.length > 0;
-            ? Math.max(;
-                ...criticalErrors.map(e =>;
-                  e.severity === 'critical' ? 3 : e.severity === 'high' ? 2 : 1;
-                );
-              );
-            : 0,;
-      },;
-      criticalErrors: criticalErrors,;
-      alertHistory: Array.from(this.alertHistory.values()),;
-      recommendations: ['Address critical errors immediately', 'Review error patterns and implement preventive measures', 'Consider rolling back to last stable version', 'Implement automated error recovery systems', '],;
-    };
-;
-    const reportFile = path.join(;
-      this.reportsPath,critical-error-alert-report.json';
->>>>>>> main
-    );
+<<<<<<< HEAD    );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 this.log(`📄 Report generated: ${reportFile}`);
     return report;
   }
-<<<<<<< HEAD
 
   async run() {
     this.log(`🚀 Starting Critical Error Alert System...`);
@@ -613,7 +388,6 @@ this.log(`📄 Report generated: ${reportFile}`);
         return { success: true, criticalErrors: [], alerts: [] };
       }
 
-=======
 ;
   async run() {;
     this.log('🚀 Starting Critical Error Alert System...');
@@ -627,7 +401,6 @@ this.log(`📄 Report generated: ${reportFile}`);
         return { success: true, criticalErrors: [], alerts: [] };
       }
 ;
->>>>>>> main
       // Send alerts for critical errors;
       const alerts = [];
       for (const error of criticalErrors) {;
@@ -636,7 +409,6 @@ this.log(`📄 Report generated: ${reportFile}`);
           alerts.push(alert);
         }
       }
-<<<<<<< HEAD
 
       // Generate report;
       const report = await this.generateReport(criticalErrors);
@@ -649,44 +421,21 @@ this.log(`📄 Report generated: ${reportFile}`);
         success: alerts.length === 0,
         criticalErrors: criticalErrors,
         alerts: alerts,
-        report,
-      };
+        report};
     } catch (error) {  
       this.log(💥 Critical Error Alert System failed: ${error.message  }`,
         `ERROR`
-=======
-;
-      // Generate report;
-      const report = await this.generateReport(criticalErrors);
-;
-      this.log('🎉 Critical Error Alert System completed!');
-      this.log(📊 Detected ${criticalErrors.length} critical error conditions';
-      );this.log(`🚨 Sent ${alerts.length} critical alerts');
-;
-      return {;
-        success: alerts.length === 0,;
-        criticalErrors: criticalErrors,;
-        alerts: alerts,;
-        report,;
-      };
-    } catch (error) {;
-      this.log(💥 Critical Error Alert System failed: ${error.message}',;
-        'ERROR';
->>>>>>> main
-      );
+<<<<<<< HEAD      );
       throw error;
     }
   }
 }
-<<<<<<< HEAD
 
 // Run the automation if called directly;
 if (require.main === module) {
-=======
 ;
 // Run the automation if called directly;
 if (require.main === module) {;
->>>>>>> main
   const alertSystem = new CriticalErrorAlertSystem();
   alertSystem.run().catch(console.error);
 }

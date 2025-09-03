@@ -26,8 +26,8 @@ class CodeQualityChecker {
           issues.push({
             file,
             type: 'console.log',
-            message: 'Console.log statement found in production code'
-          });
+            message: 'Console.log statement found in production code';
+});
         }
         
         // Check for TODO comments
@@ -35,8 +35,8 @@ class CodeQualityChecker {
           issues.push({
             file,
             type: 'todo',
-            message: 'TODO or FIXME comment found'
-          });
+            message: 'TODO or FIXME comment found';
+});
         }
         
         // Check for large files
@@ -44,12 +44,12 @@ class CodeQualityChecker {
           issues.push({
             file,
             type: 'large-file',
-            message: 'File is larger than 10KB'
-          });
+            message: 'File is larger than 10KB';
+});
         }
       } catch (error) {
-        // Skip files that can't be read
-      }
+        // Skip files that can't be read;
+}
     }
     
     console.log(`📊 Found ${issues.length} code quality issues`);

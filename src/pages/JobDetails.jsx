@@ -1,16 +1,10 @@
 <<<<<<< HEAD
- export default function JobDetails () {;,"});,"})
+ export default function JobDetails () {;,"});,"});
 }"});,"})
-=======
-<<<<<<< HEAD
  export: default function JobDetails () {;
 };
-=======
-<<<<<<< HEAD
  export default function JobDetails () {;
 }
-=======
-<<<<<<< HEAD
 import React from 'react';
 import {SEO } from '@/components/SEO';
 
@@ -26,10 +20,9 @@ export default function JobDetails() {return (
     </div>
   );
 }
-=======
- export default function JobDetails () {
+ export default function JobDetails () {;
 };
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
+=======
+ export default function JobDetails () {;,"});,})
+}});,"})
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

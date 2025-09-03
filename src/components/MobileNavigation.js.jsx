@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
  const MobileNavigation = ({ isOpen, onToggle }) => { const [activeDropdown, setActiveDropdown] = useState (null) ; const [searchQuery, setSearchQuery] = useState (") ; const location = useLocation () ; const menuRef = useRef (null) ;"""";,"});,"})
 ;,"});,"})
@@ -7,7 +6,7 @@ import { Link, useLocation } from 'react-router-dom';''';,"});,"})
 import { motion, AnimatePresence } from 'framer-motion';''';,"});,"})
 import { X, ChevronDown, Search, User, Bell } from 'lucide-react';,"});,"})
 const MobileNavigation = ({ isOpen, onToggle }) => {}"});,"})
-    const [activeDropdown, setActiveDropdown] = useState(null);';,"});,"})
+    const [activeDropdown, setActiveDropdown] = useState(null);,"});,"})
     const [searchQuery, setSearchQuery] = useState('');,"});,"})
     const location = useLocation();,"});,"})
     const menuRef = useRef(null);,"});,"})
@@ -18,8 +17,8 @@ const MobileNavigation = ({ isOpen, onToggle }) => {}"});,"})
     useEffect ( () => {}"});,"})
         const handleClickOutside = (event) => {}"});,"})
             if (menuRef.current && !menuRef.current.contains(event.target)) {}"});,"})
-                onToggle()}"});,"})
-        };,"});,"})
+                onToggle()}"});,"});
+};,"});,"})
         if (isOpen) {}"});,"})
 ';,"});,"})
 '';,"});,"})
@@ -46,8 +45,8 @@ const MobileNavigation = ({ isOpen, onToggle }) => {}"});,"})
                 { label: 'Cloud Services', href: '/services/cloud' },''';,"});,"})
                 { label: 'Digital Transformation', href: '/services/transformation' },''';,"});,"})
                 { label: 'Consulting', href: '/services/consulting' }"});,"})
-            ];,"});,"})
-        },;,"});,"})
+            ],"});,"});
+},;,"});,"})
         {}"});,"})
 ';,"});,"})
 '';,"});,"})
@@ -59,8 +58,8 @@ const MobileNavigation = ({ isOpen, onToggle }) => {}"});,"})
                 { label: 'Startup Solutions', href: '/solutions/startup' },''';,"});,"})
                 { label: 'Government Solutions', href: '/solutions/government' },''';,"});,"})
                 { label: 'Healthcare Solutions', href: '/solutions/healthcare' }"});,"})
-            ];,"});,"})
-        },;,"});,"})
+            ],"});,"});
+},;,"});,"})
         {}"});,"})
 ';,"});,"})
 '';,"});,"})
@@ -73,8 +72,8 @@ const MobileNavigation = ({ isOpen, onToggle }) => {}"});,"})
                 { label: 'Finance', href: '/industries/finance' },''';,"});,"})
                 { label: 'Manufacturing', href: '/industries/manufacturing' },''';,"});,"})
                 { label: 'Education', href: '/industries/education' }"});,"})
-            ];,"});,"})
-        },;,"});,"})
+            ],"});,"});
+},;,"});,"})
         {}"});,"})
 ';,"});,"})
 '';,"});,"})
@@ -87,13 +86,13 @@ const MobileNavigation = ({ isOpen, onToggle }) => {}"});,"})
                 { label: 'News', href: '/news' },''';,"});,"})
                 { label: 'Press', href: '/press' },''';,"});,"})
                 { label: 'Contact', href: '/contact' }"});,"})
-            ];,"});,"})
-        }"});,"})
-    ];,"});,"})
+            ],"});,"});
+}"});,"})
+    ],"});,"})
     const toggleDropdown = (label) => {}"});,"})
         setActiveDropdown(activeDropdown === label ? null : label)};,"});,"})
     const handleSearch = (e) => {}"});,"})
-        e.preventDefault();';,"});,"})
+        e.preventDefault();,"});,"})
         // Implement search functionality'';,"});,"})
         // console.log('Search query:', searchQuery)};,"});,"})
     const menuVariants = {}"});,"})
@@ -105,27 +104,27 @@ const MobileNavigation = ({ isOpen, onToggle }) => {}"});,"})
             opacity: 0,;,"});,"})
             transition: {}"});,"})
                 duration: 0.3,';,"});,"})
-  ease: 'easeInOut';,"});,"})
-}"});,"})
-        },;,"});,"})
+  ease: 'easeInOut';,"});,"});
+}"});,"});
+},;,"});,"})
         open: {}"});,"})
             x: 0,;,"});,"})
             opacity: 1,;,"});,"})
             transition: {}"});,"})
                 duration: 0.3,';,"});,"})
-                ease: 'easeInOut';,"});,"})
-            }"});,"})
-        }"});,"})
-    };,"});,"})
+                ease: 'easeInOut';,"});,"});
+}"});,"});
+}"});,"});
+};,"});,"})
     const dropdownVariants = {}"});,"})
   closed: {}"});,"})
             height: 0,;,"});,"})
             opacity: 0,;,"});,"})
             transition: {}"});,"})
                 duration: 0.2,';,"});,"})
-  ease: 'easeInOut';,"});,"})
-}"});,"})
-        },;,"});,"})
+  ease: 'easeInOut';,"});,"});
+}"});,"});
+},;,"});,"})
         open: {}"});,"})
 ';,"});,"})
 '';,"});,"})
@@ -134,10 +133,10 @@ const MobileNavigation = ({ isOpen, onToggle }) => {}"});,"})
             opacity: 1,;,"});,"})
             transition: {}"});,"})
                 duration: 0.2,';,"});,"})
-                ease: 'easeInOut';,"});,"})
-            }"});,"})
-        }"});,"})
-    };,"});,"})
+                ease: 'easeInOut';,"});,"});
+}"});,"});
+}"});,"});
+};,"});,"})
     return (<AnimatePresence>;,"});,"})
       {isOpen && (<>;,"});,"})
           {/* Backdrop */}"});,"})
@@ -244,18 +243,9 @@ export { MobileNavigation };,"});,"})
 export { MobileNavigation };,"});,"})
 ;,"});,"})
 export { MobileNavigation };,"});,"})
->>>>>>> pr-10728;,"});,"})
-=======
-<<<<<<< HEAD
  const MobileNavigation = ({ isOpen, onToggle }) => { const [activeDropdown, setActiveDropdown] = useState (null)  const [searchQuery, setSearchQuery] = useState (')  const location = useLocation ()  const menuRef = useRef (null) ';'";
-=======
-<<<<<<< HEAD
  const MobileNavigation = ({ isOpen, onToggle }) => { const [activeDropdown, setActiveDropdown] = useState (null)  const [searchQuery, setSearchQuery] = useState (')  const location = useLocation ()  const menuRef = useRef (null) ';'"'"
-=======
  const MobileNavigation = ({ isOpen, onToggle }) => { const [activeDropdown, setActiveDropdown] = useState (null)  const [searchQuery, setSearchQuery] = useState (')  const location = useLocation ()  const menuRef = useRef (null) "
->>>>>>> main
 
-""
+"";
 }
->>>>>>> main
->>>>>>> main

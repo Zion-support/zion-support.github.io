@@ -1,26 +1,12 @@
 <<<<<<< HEAD
- import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 export default function ProfilePage () {;,"});,"})
+ import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 export default function ProfilePage () {,"});,"});
 }"});,"})
-=======
-<<<<<<< HEAD
- import: { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 export default function ProfilePage () {;
-};
-=======
-<<<<<<< HEAD
  import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 export default function ProfilePage () {;
+};
 }
-=======
-<<<<<<< HEAD
- import {MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 export default function ProfilePage ()   {,;
-};
-=======
-<<<<<<< HEAD
+ import {MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 export default function ProfilePage ()   {,};
  import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2} export default ;function ProfilePage () {
-};
-=======
-<<<<<<< HEAD
- import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 export default function ProfilePage () {,;, };
-=======
+ import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 export default function ProfilePage () {,};
 import React from 'react';
 import { SEO } from '@/components/SEO';
 
@@ -46,16 +32,10 @@ const ProfilePage = () => {
               Get Started
             </a>
           </div>
-        </div>
-      </div>
-    </div>
-  );
-};
->>>>>>> main
+  )};
 
+=======
+ import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 export default function ProfilePage () {;,"});,})
+}});,"})
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
 export default ProfilePage;
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

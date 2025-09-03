@@ -8,48 +8,48 @@ const DigitalTransformation: NextPage = () => {
   const transformationServices = [
     {
       icon: Cloud, title: 'Cloud Migration',
-      description: 'Seamlessly migrate your infrastructure to the cloud for improved scalability and cost efficiency.', benefits: ['Reduced infrastructure costs', 'Improved scalability', 'Enhanced security', 'Better performance']
-    }, {
+      description: 'Seamlessly migrate your infrastructure to the cloud for improved scalability and cost efficiency.', benefits: ['Reduced infrastructure costs', 'Improved scalability', 'Enhanced security', 'Better performance'];
+}, {
       icon: Database,
       title: 'Data Modernization', description: 'Transform your data architecture to support modern analytics and business intelligence.',
-      benefits: ['Real-time analytics', 'Improved data quality', 'Better insights', 'Automated reporting']
-    }, {
+      benefits: ['Real-time analytics', 'Improved data quality', 'Better insights', 'Automated reporting'];
+}, {
       icon: Users,
       title: 'Process Automation', description: 'Automate repetitive tasks and workflows to improve efficiency and reduce errors.',
-      benefits: ['Increased productivity', 'Reduced errors', 'Cost savings', 'Better compliance']
-    }, {
+      benefits: ['Increased productivity', 'Reduced errors', 'Cost savings', 'Better compliance'];
+}, {
       icon: Zap,
       title: 'AI Integration', description: 'Integrate artificial intelligence into your business processes for enhanced decision making.',
-      benefits: ['Predictive analytics', 'Automated insights', 'Improved accuracy', 'Competitive advantage']
-    }, {
+      benefits: ['Predictive analytics', 'Automated insights', 'Improved accuracy', 'Competitive advantage'];
+}, {
       icon: Shield,
       title: 'Security Enhancement', description: 'Implement modern security measures to protect your digital assets and ensure compliance.',
-      benefits: ['Enhanced security', 'Compliance assurance', 'Risk reduction', 'Peace of mind']
-    }, {
+      benefits: ['Enhanced security', 'Compliance assurance', 'Risk reduction', 'Peace of mind'];
+}, {
       icon: Target,
       title: 'Customer Experience', description: 'Improve customer interactions through digital channels and personalized experiences.',
-      benefits: ['Better customer satisfaction', 'Increased engagement', 'Higher retention', 'Improved loyalty']
-    }
-  ];
+      benefits: ['Better customer satisfaction', 'Increased engagement', 'Higher retention', 'Improved loyalty'];
+}
+  ]
 
   const transformationStages = [
     {
       stage: 'Assessment', title: 'Current State Analysis',
-      description: 'We analyze your current systems, processes, and technology stack to identify opportunities for improvement.', duration: '2-4 weeks'
-    },
+      description: 'We analyze your current systems, processes, and technology stack to identify opportunities for improvement.', duration: '2-4 weeks';
+},
     {
       stage: 'Strategy', title: 'Digital Strategy Development',
-      description: 'We create a comprehensive digital transformation roadmap aligned with your business objectives.', duration: '3-6 weeks'
-    },
+      description: 'We create a comprehensive digital transformation roadmap aligned with your business objectives.', duration: '3-6 weeks';
+},
     {
       stage: 'Implementation', title: 'Solution Implementation',
-      description: 'We implement the digital solutions using agile methodologies and best practices.', duration: '8-24 weeks'
-    },
+      description: 'We implement the digital solutions using agile methodologies and best practices.', duration: '8-24 weeks';
+},
     {
       stage: 'Optimization', title: 'Continuous Improvement',
-      description: 'We monitor performance and continuously optimize your digital solutions for maximum impact.', duration: 'Ongoing'
-    }
-  ];
+      description: 'We monitor performance and continuously optimize your digital solutions for maximum impact.', duration: 'Ongoing';
+}
+  ]
 
   const industries = [
     { name: 'Healthcare', description: 'Digital health records, telemedicine, and patient management systems' },
@@ -58,12 +58,12 @@ const DigitalTransformation: NextPage = () => {
     { name: 'Retail', description: 'E-commerce platforms, inventory management, and customer analytics' },
     { name: 'Education', description: 'Learning management systems, virtual classrooms, and student analytics' },
     { name: 'Government', description: 'Citizen services, digital governance, and public safety systems' }
-  ];
+  ]
 
   const successMetrics = [
     { metric: '85%', label: 'Cost Reduction', description: 'Average cost savings achieved through digital transformation' }, { metric: '60%', label: 'Efficiency Gain', description: 'Improvement in operational efficiency' },
     { metric: '90%', label: 'Customer Satisfaction', description: 'Increase in customer satisfaction scores' }, { metric: '75%', label: 'Time Savings', description: 'Reduction in time-to-market for new products' }
-  ];
+  ]
 
   return (
     <MainLayout

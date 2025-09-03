@@ -34,8 +34,8 @@ class AdvancedBuildOptimizer {
       
       this.log('🎉 Build optimization completed successfully!', 'success');
       this.log(`⏱️ Total time: ${Date.now() - this.startTime}ms`);
-      
-    } catch (error) {
+      ;
+} catch (error) {
       this.log(`Build optimization failed: ${error.message}`, 'error');
       this.errors.push(error);
       process.exit(1);
@@ -51,7 +51,7 @@ class AdvancedBuildOptimizer {
       'build',
       'out',
       'node_modules/.cache'
-    ];
+    ]
 
     for (const artifact of artifacts) {
       if (fs.existsSync(artifact)) {
@@ -80,8 +80,8 @@ class AdvancedBuildOptimizer {
       } catch (auditError) {
         this.log('Security vulnerabilities found, consider running npm audit fix', 'error');
       }
-      
-    } catch (error) {
+      ;
+} catch (error) {
       this.log(`Dependency optimization failed: ${error.message}`, 'error');
     }
   }
@@ -162,8 +162,8 @@ class AdvancedBuildOptimizer {
       duration: Date.now() - this.startTime,
       optimizations: this.optimizations,
       errors: this.errors.map(e => e.message),
-      recommendations: this.generateRecommendations()
-    };
+      recommendations: this.generateRecommendations();
+};
 
     const reportPath = path.join(process.cwd(), 'build-optimization-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));

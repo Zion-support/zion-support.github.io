@@ -1,11 +1,7 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 import {SEO } from '@/components/SEO';
 
-<<<<<<< HEAD
 ;,"});,"})
-=======
 export default function Support() {return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
       <SEO title="Support - Zion Tech Group" description="Professional Support services by Zion Tech Group" />
@@ -18,5 +14,3 @@ export default function Support() {return (
     </div>
   );
 }
->>>>>>> main
->>>>>>> main

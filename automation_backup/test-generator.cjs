@@ -7,8 +7,8 @@ class TestGenerator {
     this.testTemplates = {
       component: this.getComponentTestTemplate(),
       page: this.getPageTestTemplate(),
-      utility: this.getUtilityTestTemplate(),
-    };
+      utility: this.getUtilityTestTemplate(),;
+};
   }
 
   getComponentTestTemplate() {
@@ -41,9 +41,9 @@ jest.mock('next/router', () => ({
       route: '/',
       pathname: '/',
       query: {},
-      asPath: '/',
-    };
-  },
+      asPath: '/',;
+};
+  },;
 }));
 
 describe('Page', () => {

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useCallback } from 'react';''';,"});,"})
 import { motion, AnimatePresence } from 'framer-motion';''';,"});,"})
 import { Code, Sparkles, Download, TestTube, FileText, Settings, Zap, Shield, Gauge, Wrench, Eye, Trash2, Copy, CheckCircle, AlertCircle, Info, Loader2 } from 'lucide-react';,"});,"})
@@ -6,10 +5,10 @@ import { useAICodeGeneration } from "../hooks/useAICodeGeneration.jsx";,"});,"})
 ;,"});,"})
 export const AICodeGenerator = () => {;,"});,"})
     const { trackEvent } = useAnalytics({        enableTracking: true,;,"});,"})
-        enableUserBehaviorTracking: true;,"});,"})
-    });';,"});,"})
+        enableUserBehaviorTracking: true;,"});,"});
+});,"});,"})
     const [activeTab, setActiveTab] = useState('generate');,"});,"})
-    const [showAdvanced, setShowAdvanced] = useState(false);';,"});,"})
+    const [showAdvanced, setShowAdvanced] = useState(false);,"});,"})
     const [customCode, setCustomCode] = useState('');,"});,"})
     const [copied, setCopied] = useState(false);,"});,"})
     const { isGenerating, isAnalyzing, generatedCode, codeAnalysis, suggestions, history, generateCode, analyzeCode, applySuggestion, optimizeCode, generateTests, generateDocs, clearHistory, exportCode } = useAICodeGeneration();,"});,"})
@@ -27,25 +26,25 @@ export const AICodeGenerator = () => {;,"});,"})
         includeDocs: false,;,"});,"})
         includeErrorHandling: false,;,"});,"})
         includeLogging: false,;,"});,"})
-        includeMetrics: false;,"});,"})
-    });,"});,"})
+        includeMetrics: false;,"});,"});
+});,"});,"})
     // Handle form submission;,"});,"})
     const handleSubmit = useCallback(async (e) => {}"});,"})
         e.preventDefault();,"});,"})
         if(!form.prompt.trim());,"});,"})
             return;,"});,"})
-        await generateCode(form.prompt, form);';,"});,"})
+        await generateCode(form.prompt, form);,"});,"})
         trackEvent('ai_code_generator',form_submitted', form.language, null, {}"});,"})
             framework: form.framework,;,"});,"})
             style: form.style,;,"});,"})
             target: form.target,;,"});,"})
-            quality: form.quality;,"});,"})
-        })}, [form, generateCode, trackEvent]);,"});,"})
+            quality: form.quality;,"});,"});
+})}, [form, generateCode, trackEvent]);,"});,"})
     // Handle custom code analysis;,"});,"})
     const handleAnalyzeCustomCode = useCallback(async () => {}"});,"})
         if(!customCode.trim());,"});,"})
             return;,"});,"})
-        await analyzeCode(customCode, form.language);';,"});,"})
+        await analyzeCode(customCode, form.language);,"});,"})
         trackEvent('ai_code_generator',custom_code_analyzed', form.language, customCode.length)}, [customCode, form.language, analyzeCode, trackEvent]);,"});,"})
     // Handle code optimization;,"});,"})
     const handleOptimizeCode = useCallback(async (focus) => {}"});,"})
@@ -56,13 +55,13 @@ export const AICodeGenerator = () => {;,"});,"})
         if (generatedCode) {}"});,"})
 ';,"});,"})
             // Update generated code'';,"});,"})
-            // Note: In a real implementation, you'd want to update the state properly;,"});,"})
-        }';,"});,"})
+            // Note: In a real implementation, you'd want to update the state properly;,"});,"});
+}';,"});,"})
         trackEvent('ai_code_generator',code_optimized', focus, optimizedCode.length)}, [generatedCode, customCode, optimizeCode, trackEvent]);,"});,"})
     // Handle test generation;,"});,"})
     const handleGenerateTests = useCallback(async () => {}"});,"})
         if(!generatedCode && !customCode);,"});,"})
-            return;';,"});,"})
+            return;,"});,"})
         const codeToTest = generatedCode || customCode;'';,"});,"})
         const testCode = await generateTests(codeToTest, form.language);''';,"});,"})
         // In a real implementation, you'd want to display the test code'''';,"});,"})
@@ -71,7 +70,7 @@ export const AICodeGenerator = () => {;,"});,"})
     // Handle documentation generation;,"});,"})
     const handleGenerateDocs = useCallback(async () => {}"});,"})
         if(!generatedCode && !customCode);,"});,"})
-            return;';,"});,"})
+            return;,"});,"})
         const codeToDoc = generatedCode || customCode;'';,"});,"})
         const docs = await generateDocs(codeToDoc, form.language);''';,"});,"})
         // In a real implementation, you'd want to display the documentation'''';,"});,"})
@@ -82,21 +81,21 @@ export const AICodeGenerator = () => {;,"});,"})
         try {}"});,"})
             await navigator.clipboard.writeText(code);,"});,"})
             setCopied(true);,"});,"})
-            setTimeout(() => setCopied(false), 2000);';,"});,"})
+            setTimeout(() => setCopied(false), 2000);,"});,"})
             trackEvent('ai_code_generator',code_copied',clipboard', code.length)}"});,"})
         catch (error) {}"});,"})
 ';,"});,"})
 '';,"});,"})
 ''';,"});,"})
-            // console.error('Failed to copy code:', error)}"});,"})
-    }, [trackEvent]);,"});,"})
+            // console.error('Failed to copy code:', error)}"});,"});
+}, [trackEvent]);,"});,"})
     // Apply suggestion;,"});,"})
     const handleApplySuggestion = useCallback((suggestion) => {}"});,"})
-        applySuggestion(suggestion);';,"});,"})
+        applySuggestion(suggestion);,"});,"})
         trackEvent('ai_code_generator',suggestion_applied', suggestion.type, null, {}"});,"})
             suggestionId: suggestion.id,;,"});,"})
-            impact: suggestion.impact;,"});,"})
-        })}, [applySuggestion, trackEvent]);,"});,"})
+            impact: suggestion.impact;,"});,"});
+})}, [applySuggestion, trackEvent]);,"});,"})
     // Clear history;,"});,"})
     const handleClearHistory = useCallback(() => {}"});,"})
         clearHistory();'""";,"});,"})
@@ -146,14 +145,14 @@ export const AICodeGenerator = () => {;,"});,"})
         <AnimatePresence mode="wait">'"'""";,"});,"})
           {activeTab === 'generate' && (<motion.div key="generate" initial = {}"});,"})
   { opacity: 0,;,"});,"})
-  y: 20;,"});,"})
+  y: 20;,"});,"});
 }} animate = {}"});,"})
   { opacity: 1,;,"});,"})
-  y: 0;,"});,"})
+  y: 0;,"});,"});
 }} exit = {}"});,"})
   { opacity: 0,;,"});,"})
   y: -20 """;,"});,"})
-"""";,"});,"})
+"""";,"});,"});
 }} className="space-y-6">""";,"});,"})
               {/* Generation Form */}"""";,"});,"})
               <form onSubmit={handleSubmit} className="space-y-4">""";,"});,"})
@@ -164,7 +163,7 @@ export const AICodeGenerator = () => {;,"});,"})
                   <textarea value={form.prompt} onChange = {}"});,"})
   (e) => setForm(prev => ({ ...prev,;,"});,"})
   prompt: e.target.value """;,"});,"})
-"""";,"});,"})
+"""";,"});,"});
 }))} placeholder="e.g., Create a React component for a user profile card with avatar, name, email, and edit button..." className="w-full h-32 p-4 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 resize-none" required/>;,"});,"})
                 </div>;,"});,"})
 """;,"});,"})
@@ -177,7 +176,7 @@ export const AICodeGenerator = () => {;,"});,"})
                     <select value={form.language} onChange = {}"});,"})
   (e) => setForm(prev => ({ ...prev,;,"});,"})
   language: e.target.value """;,"});,"})
-"""";,"});,"})
+"""";,"});,"});
 }))} className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100">"""";,"});,"})
                       <option value="typescript">TypeScript</option>"""";,"});,"})
                       <option value="javascript">JavaScript</option>"""";,"});,"})
@@ -197,7 +196,7 @@ export const AICodeGenerator = () => {;,"});,"})
                     <select value={form.framework || ''} onChange = {}"});,"})
   (e) => setForm(prev => ({ ...prev,;,"});,"})
   framework: e.target.value || null """;,"});,"})
-"""";,"});,"})
+"""";,"});,"});
 }))} className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100">"""";,"});,"})
                       <option value="">None</option>"""";,"});,"})
                       <option value="react">React</option>"""";,"});,"})
@@ -218,7 +217,7 @@ export const AICodeGenerator = () => {;,"});,"})
                     <select value={form.style} onChange = {}"});,"})
   (e) => setForm(prev => ({ ...prev,;,"});,"})
   style: e.target.value """;,"});,"})
-"""";,"});,"})
+"""";,"});,"});
 }))} className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100">"""";,"});,"})
                       <option value="functional">Functional</option>"""";,"});,"})
                       <option value="oop">OOP</option>"""";,"});,"})
@@ -234,7 +233,7 @@ export const AICodeGenerator = () => {;,"});,"})
                     <select value={form.quality} onChange = {}"});,"})
   (e) => setForm(prev => ({ ...prev,;,"});,"})
   quality: e.target.value """;,"});,"})
-"""";,"});,"})
+"""";,"});,"});
 }))} className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100">"""";,"});,"})
                       <option value="prototype">Prototype</option>"""";,"});,"})
                       <option value="development">Development</option>"""";,"});,"})
@@ -251,14 +250,14 @@ export const AICodeGenerator = () => {;,"});,"})
                 {/* Advanced Options */}"});,"})
                 {showAdvanced && (<motion.div initial = {}"});,"})
   { opacity: 0,;,"});,"})
-  height: 0;,"});,"})
+  height: 0;,"});,"});
 }} animate = {}"});,"})
   { opacity: 1,';,"});,"})
-  height: 'auto';,"});,"})
+  height: 'auto';,"});,"});
 }} exit = {}"});,"})
   { opacity: 0,;,"});,"})
   height: 0 """;,"});,"})
-"""";,"});,"})
+"""";,"});,"});
 }} className="grid grid-cols-2 md:grid-cols-5 gap-4 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">';,"});,"})
                     {['';,"});,"})
                     { key: 'includeTests', label: 'Tests', icon: TestTube },';,"});,"})
@@ -270,7 +269,7 @@ export const AICodeGenerator = () => {;,"});,"})
                         <input type="checkbox" checked={form[key]} onChange = {}"});,"})
   (e) => setForm(prev => ({ ...prev,;,"});,"})
   [key]: e.target.checked """;,"});,"})
-"""";,"});,"})
+"""";,"});,"});
 }))} className="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 rounded focus:ring-purple-500 dark:focus:ring-purple-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>"""";,"});,"})
                         <Icon className="w-4 h-4 text-gray-600 dark:text-gray-400"/>"""";,"});,"})
                         <span className="text-sm text-gray-700 dark:text-gray-300">{label}</span>;,"});,"})
@@ -290,11 +289,11 @@ export const AICodeGenerator = () => {;,"});,"})
               {/* Generated Code Display */}"});,"})
               {generatedCode && (<motion.div initial = {}"});,"})
   { opacity: 0,;,"});,"})
-  y: 20;,"});,"})
+  y: 20;,"});,"});
 }} animate = {}"});,"})
   { opacity: 1,;,"});,"})
   y: 0 """;,"});,"})
-"""";,"});,"})
+"""";,"});,"});
 }} className="space-y-4">"""";,"});,"})
                   <div className="flex items-center justify-between">"""";,"});,"})
                     <h3 className="text-lg font-semibold text-gray-900 dark:text-white">;,"});,"})
@@ -322,14 +321,14 @@ export const AICodeGenerator = () => {;,"});,"})
 '"'""";,"});,"})
           {activeTab === 'analyze' && (<motion.div key="analyze" initial = {}"});,"})
   { opacity: 0,;,"});,"})
-  y: 20;,"});,"})
+  y: 20;,"});,"});
 }} animate = {}"});,"})
   { opacity: 1,;,"});,"})
-  y: 0;,"});,"})
+  y: 0;,"});,"});
 }} exit = {}"});,"})
   { opacity: 0,;,"});,"})
   y: -20 """;,"});,"})
-"""";,"});,"})
+"""";,"});,"});
 }} className="space-y-6">""";,"});,"})
               <div>"""";,"});,"})
                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">;,"});,"})
@@ -350,11 +349,11 @@ export const AICodeGenerator = () => {;,"});,"})
               {/* Analysis Results */}"});,"})
               {codeAnalysis && (<motion.div initial = {}"});,"})
   { opacity: 0,;,"});,"})
-  y: 20;,"});,"})
+  y: 20;,"});,"});
 }} animate = {}"});,"})
   { opacity: 1,;,"});,"})
   y: 0 """;,"});,"})
-"""";,"});,"})
+"""";,"});,"});
 }} className="space-y-6">""";,"});,"})
                   {/* Metrics Overview */}"""";,"});,"})
                   <div className="grid grid-cols-2 md:grid-cols-5 gap-4">';,"});,"})
@@ -365,7 +364,7 @@ export const AICodeGenerator = () => {;,"});,"})
                     { key: 'performance', label: 'Performance', icon: Gauge, color: 'yellow' },';,"});,"})
                     { key: 'accessibility', label: 'Accessibility', icon: Eye, color: 'purple' }"});,"})
                 ].map(({ key, label, icon: Icon, color }) => {}"});,"})
-                    const value = codeAnalysis[key];';,"});,"})
+                    const value = codeAnalysis[key];,"});,"})
                     if (typeof value === 'number') {}"});,"})
 """;,"});,"})
 ""`;,"});,"})
@@ -416,14 +415,14 @@ export const AICodeGenerator = () => {;,"});,"})
 '"'""";,"});,"})
           {activeTab === 'optimize' && (<motion.div key="optimize" initial = {}"});,"})
   { opacity: 0,;,"});,"})
-  y: 20;,"});,"})
+  y: 20;,"});,"});
 }} animate = {}"});,"})
   { opacity: 1,;,"});,"})
-  y: 0;,"});,"})
+  y: 0;,"});,"});
 }} exit = {}"});,"})
   { opacity: 0,;,"});,"})
   y: -20 """;,"});,"})
-"""";,"});,"})
+"""";,"});,"});
 }} className="space-y-6">"""";,"});,"})
               <div className="text-center py-8">"""";,"});,"})
                 <Zap className="w-16 h-16 text-yellow-500 mx-auto mb-4"/>"""";,"});,"})
@@ -452,14 +451,14 @@ export const AICodeGenerator = () => {;,"});,"})
 '"'""";,"});,"})
           {activeTab === 'tests' && (<motion.div key="tests" initial = {}"});,"})
   { opacity: 0,;,"});,"})
-  y: 20;,"});,"})
+  y: 20;,"});,"});
 }} animate = {}"});,"})
   { opacity: 1,;,"});,"})
-  y: 0;,"});,"})
+  y: 0;,"});,"});
 }} exit = {}"});,"})
   { opacity: 0,;,"});,"})
   y: -20 """;,"});,"})
-"""";,"});,"})
+"""";,"});,"});
 }} className="space-y-6">"""";,"});,"})
               <div className="text-center py-8">"""";,"});,"})
                 <TestTube className="w-16 h-16 text-green-500 mx-auto mb-4"/>"""";,"});,"})
@@ -479,14 +478,14 @@ export const AICodeGenerator = () => {;,"});,"})
 '"'""";,"});,"})
           {activeTab === 'docs' && (<motion.div key="docs" initial = {}"});,"})
   { opacity: 0,;,"});,"})
-  y: 20;,"});,"})
+  y: 20;,"});,"});
 }} animate = {}"});,"})
   { opacity: 1,;,"});,"})
-  y: 0;,"});,"})
+  y: 0;,"});,"});
 }} exit = {}"});,"})
   { opacity: 0,;,"});,"})
   y: -20 """;,"});,"})
-"""";,"});,"})
+"""";,"});,"});
 }} className="space-y-6">"""";,"});,"})
               <div className="text-center py-8">"""";,"});,"})
                 <FileText className="w-16 h-16 text-indigo-500 mx-auto mb-4"/>"""";,"});,"})
@@ -507,11 +506,11 @@ export const AICodeGenerator = () => {;,"});,"})
         {/* Suggestions Panel */}"});,"})
         {suggestions.length > 0 && (<motion.div initial = {}"});,"})
   { opacity: 0,;,"});,"})
-  y: 20;,"});,"})
+  y: 20;,"});,"});
 }} animate = {}"});,"})
   { opacity: 1,;,"});,"})
   y: 0 """;,"});,"})
-"""";,"});,"})
+"""";,"});,"});
 }} className="mt-8 border-t border-gray-200 dark:border-gray-700 pt-6">"""";,"});,"})
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">;,"});,"})
               AI Suggestions ({suggestions.length})""";,"});,"})
@@ -519,11 +518,11 @@ export const AICodeGenerator = () => {;,"});,"})
             <div className="grid gap-4">;,"});,"})
               {suggestions.map((suggestion) => (<motion.div key={suggestion.id} initial = {}"});,"})
   { opacity: 0,;,"});,"})
-  x: 20;,"});,"})
+  x: 20;,"});,"});
 }} animate = {}"});,"})
   { opacity: 1,;,"});,"})
   x: 0 """;,"});,"})
-"""";,"});,"})
+"""";,"});,"});
 }} className="p-4 bg-gray-50 dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600">"""";,"});,"})
                   <div className="flex items-start justify-between mb-3">"'"`;,"});,"})
                     <div className="flex items-center gap-2">'`'`;,"});,"})
@@ -570,11 +569,11 @@ export const AICodeGenerator = () => {;,"});,"})
         {/* History Panel */}"});,"})
         {history.length > 0 && (<motion.div initial = {}"});,"})
   { opacity: 0,;,"});,"})
-  y: 20;,"});,"})
+  y: 20;,"});,"});
 }} animate = {}"});,"})
   { opacity: 1,;,"});,"})
   y: 0 """;,"});,"})
-"""";,"});,"})
+"""";,"});,"});
 }} className="mt-8 border-t border-gray-200 dark:border-gray-700 pt-6">"""";,"});,"})
             <div className="flex items-center justify-between mb-4">"""";,"});,"})
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white">;,"});,"})
@@ -618,19 +617,15 @@ export const AICodeGenerator = () => {;,"});,"})
       </div>;,"});,"})
     </div>)};'"`;,"});,"})
 '"`'"`;,"});,"})
-=======
-<<<<<<< HEAD
 import React, { useState, useCallback } from 'react'''
 import { motion, AnimatePresence } from 'framer-motion'''
 import { Code, Sparkles, Download, TestTube, FileText, Settings, Zap, Shield, Gauge, Wrench, Eye, Trash2, Copy, CheckCircle, AlertCircle, Info, Loader2 } from 'lucide-react';""
-=======
 import React, { useState, useCallback } from 'react''
 import { motion, AnimatePresence }  from 'framer-motion
 import { Code, Sparkles, Download, TestTube, FileText, Settings, Zap, Shield, Gauge, Wrench, Eye, Trash2, Copy, CheckCircle, AlertCircle, Info, Loader2 } from 'lucide-react
->>>>>>> main
 import { useAICodeGeneration } from '../hooks/useAICodeGeneration.jsx';
 export const AICodeGenerator = () => {
-    const { trackEvent } = useAnalytics({        enableTracking: true, enableUserBehaviorTracking: true","
+    const { trackEvent } = useAnalytics({        enableTracking: true, enableUserBehaviorTracking: true",";
 })''
     const [activeTab, setActiveTab] = useState('generate')""
     const [showAdvanced, setShowAdvanced] = useState(false)''
@@ -639,7 +634,6 @@ export const AICodeGenerator = () => {
     const { isGenerating, isAnalyzing, generatedCode, codeAnalysis, suggestions, history, generateCode, analyzeCode, applySuggestion, optimizeCode, generateTests, generateDocs, clearHistory, exportCode } = useAICodeGeneration()
     const [form, setForm] = useState({}""
 ''
-<<<<<<< HEAD
 ''
 ''''
         prompt: '', ''''
@@ -647,17 +641,14 @@ export const AICodeGenerator = () => {
         framework: 'react', ''''
         style: 'functional',''''
         target: 'web', ''''
-        quality: 'development', includeTests: false, includeDocs: false, includeErrorHandling: false, includeLogging: false, includeMetrics: false, })
-=======
+        quality: 'development', includeTests: false, includeDocs: false, includeErrorHandling: false, includeLogging: false, includeMetrics: false})
 '''
         prompt: ',''
         language: 'typescript,''
         framework: 'react,''
         style: 'functional,''
         target: 'web,''
-        quality: 'development', includeTests: false, includeDocs: false, includeErrorHandling: false, includeLogging: false, includeMetrics: false,
-})
->>>>>>> main
+        quality: 'development', includeTests: false, includeDocs: false, includeErrorHandling: false, includeLogging: false, includeMetrics: false})
     // Handle form submission
     const handleSubmit = useCallback(async (e) => {}
         e.preventDefault()
@@ -665,8 +656,7 @@ export const AICodeGenerator = () => {
             return""
         await generateCode(form.prompt, form)''
         trackEvent('ai_code_generator', form_submitted', form.language, null, {}'
-            framework: form.framework, style: form.style, target: form.target, quality: form.quality,
-})}, [form, generateCode, trackEvent])
+            framework: form.framework, style: form.style, target: form.target, quality: form.quality})}, [form, generateCode, trackEvent])
     // Handle custom code analysis
     const handleAnalyzeCustomCode = useCallback(async () => {}
         if(!customCode.trim())
@@ -682,12 +672,11 @@ export const AICodeGenerator = () => {
         if (generatedCode) {}""
 ''
             // Update generated code''
-            // Note: In a real implementation, you&apos;d want to update the state properly", '"
+            // Note: In a real implementation, you&apos;d want to update the state properly", '";
 }''
         trackEvent('ai_code_generator',code_optimized', focus, optimizedCode.length)}, [generatedCode, customCode, optimizeCode, trackEvent])'
     // Handle test generation
     const handleGenerateTests = useCallback(async () => {}
-<<<<<<< HEAD
         if(!generatedCode && !customCode)""
             return''
         const codeToTest = generatedCode || customCode';"'"
@@ -704,7 +693,6 @@ export const AICodeGenerator = () => {
         // In a real implementation, you&apos;d want to display the documentation'''''
         // console.log('Generated docs: ', docs)';'
         trackEvent('ai_code_generator', docs_generated', form.language, docs.length)}, [generatedCode, customCode, generateDocs, form.language, trackEvent])'
-=======
         if(!generatedCode && !customCode)"
             return'
         const codeToTest = generatedCode || customCode
@@ -721,7 +709,6 @@ export const AICodeGenerator = () => {
         // In a real implementation, you'd want to display the documentation''''
         // console.log('Generated docs:', docs)
         trackEvent('ai_code_generator',docs_generated', form.language, docs.length)}, [generatedCode, customCode, generateDocs, form.language, trackEvent])
->>>>>>> main
     // Copy code to clipboard
     const copyToClipboard = useCallback(async (code) => {}
         try {}
@@ -739,20 +726,16 @@ export const AICodeGenerator = () => {
     const handleApplySuggestion = useCallback((suggestion) => {}""
         applySuggestion(suggestion)''
         trackEvent('ai_code_generator', suggestion_applied', suggestion.type, null, {}'
-            suggestionId: suggestion.id, impact: suggestion.impact,
-})}, [applySuggestion, trackEvent])
+            suggestionId: suggestion.id, impact: suggestion.impact})}, [applySuggestion, trackEvent])
     // Clear history
-<<<<<<< HEAD
     const handleClearHistory = useCallback(() => {}""
         clearHistory()'';''
         trackEvent('ai_code_generator', history_cleared',manual')}, [clearHistory, trackEvent])';'''
     return (<div className='bg-white dark: bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden'>''''
-=======
     const handleClearHistory = useCallback(() => {}"
         clearHistory()'
         trackEvent('ai_code_generator',history_cleared',manual')}, [clearHistory, trackEvent])'
     return (<div className='bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden'>'''
->>>>>>> main
       {/* Header */}''''
       <div className='bg-gradient-to-r from-purple-500 to-blue-500 p-6 text-white'>''''
         <div className='flex items-center justify-between'>''''
@@ -796,13 +779,10 @@ export const AICodeGenerator = () => {
       <div className='p-6'>''''''
         <AnimatePresence mode='wait'>''''''
           {activeTab === 'generate' && (<motion.div key='generate' initial = {}
-  { opacity: 0, y: 20,
-}} animate = {}
-  { opacity: 1, y: 0,
-}} exit = {}""
+  { opacity: 0, y: 20}} animate = {}
+  { opacity: 1, y: 0}} exit = {}""
   { opacity: 0, y: -20 ''''
-'''',
-}} className='space-y-6'>''''
+''''}} className='space-y-6'>''''
               {/* Generation Form */}''''
               <form onSubmit={handleSubmit} className='space-y-4'>''''
                 <div>''''
@@ -811,8 +791,7 @@ export const AICodeGenerator = () => {
                   </label>
                   <textarea value={form.prompt} onChange = {}""
   (e) =" > setForm(prev => ({ ...prev, prompt: e.target.value ''''"
-'''',
-}))} placeholder='e.g., Create a React component for a user profile card with avatar, name, email, and edit button...' className='w-full h-32 p-4 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 resize-none' required/>
+''''}))} placeholder='e.g., Create a React component for a user profile card with avatar, name, email, and edit button...' className='w-full h-32 p-4 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 resize-none' required/>
                 </div>""
 ''''
                 {/* Basic Options */}''''
@@ -823,8 +802,7 @@ export const AICodeGenerator = () => {
                     </label>
                     <select value={form.language} onChange = {}""
   (e) =" > setForm(prev => ({ ...prev, language: e.target.value ''''"
-'''',
-}))} className='w-full p-2 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100'>''''
+''''}))} className='w-full p-2 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100'>''''
                       <option value='typescript'>TypeScript</option>''''
                       <option value='javascript'>JavaScript</option>''''
                       <option value='python'>Python</option>''''
@@ -842,8 +820,7 @@ export const AICodeGenerator = () => {
                     </label>''
                     <select value={form.framework || ''} onChange = {}""
   (e) =" > setForm(prev => ({ ...prev, framework: e.target.value || null ''''"
-'''',
-}))} className='w-full p-2 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100'>''''
+''''}))} className='w-full p-2 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100'>''''
                       <option value=''>None</option>''''
                       <option value='react'>React</option>''''
                       <option value='vue'>Vue</option>''''
@@ -862,8 +839,7 @@ export const AICodeGenerator = () => {
                     </label>
                     <select value={form.style} onChange = {}""
   (e) =" > setForm(prev => ({ ...prev, style: e.target.value ''''"
-'''',
-}))} className='w-full p-2 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100'>''''
+''''}))} className='w-full p-2 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100'>''''
                       <option value='functional'>Functional</option>''''
                       <option value='oop'>OOP</option>''''
                       <option value='procedural'>Procedural</option>''''
@@ -877,8 +853,7 @@ export const AICodeGenerator = () => {
                     </label>
                     <select value={form.quality} onChange = {}""
   (e) =" > setForm(prev => ({ ...prev, quality: e.target.value ''''"
-'''',
-}))} className='w-full p-2 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100'>''''
+''''}))} className='w-full p-2 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100'>''''
                       <option value='prototype'>Prototype</option>''''
                       <option value='development'>Development</option>''''
                       <option value='production'>Production</option>
@@ -893,24 +868,20 @@ export const AICodeGenerator = () => {
                 </button>
                 {/* Advanced Options */}
                 {showAdvanced && (<motion.div initial = {}
-  { opacity: 0, height: 0,
-}} animate = {}""
+  { opacity: 0, height: 0}} animate = {}""
   { opacity: 1, ''
-  height: 'auto',
-}} exit = {}""
+  height: 'auto'}} exit = {}""
   { opacity: 0, height: 0 ''''
-'''',
-}} className='grid grid-cols-2 md: grid-cols-5 gap-4 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg'>''
+''''}} className='grid grid-cols-2 md: grid-cols-5 gap-4 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg'>''
                     {[''
                     { key: 'includeTests', label: 'Tests', icon: TestTube }, ''
                     { key: 'includeDocs', label: 'Docs', icon: FileText },''
                     { key: 'includeErrorHandling', label: 'Error Handling', icon: AlertCircle }, ''
                     { key: 'includeLogging', label: 'Logging', icon: Info },''''
-                    { key: 'includeMetrics', label: 'Metrics', icon: Gauge }'''', 
-].map(({ key, label, icon: Icon }) => (<label key={key} className='flex items-center gap-2 cursor-pointer'>''''
+                    { key: 'includeMetrics', label: 'Metrics', icon: Gauge }''''].map(({ key, label, icon: Icon }) => (<label key={key} className='flex items-center gap-2 cursor-pointer'>''''
                         <input type='checkbox' checked={form[key]} onChange = {}""
   (e) =" > setForm(prev => ({ ...prev, [key]: e.target.checked ''''"
-'''', }))} className='w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 rounded focus: ring-purple-500 dark:focus:ring-purple-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600'/>''''
+''''}))} className='w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 rounded focus: ring-purple-500 dark:focus:ring-purple-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600'/>''''
                         <Icon className='w-4 h-4 text-gray-600 dark:text-gray-400'/" >''''"
                         <span className='text-sm text-gray-700 dark:text-gray-300'>{label}</span>
                       </label>))}""
@@ -928,11 +899,9 @@ export const AICodeGenerator = () => {
               </form>
               {/* Generated Code Display */}
               {generatedCode && (<motion.div initial = {}
-  { opacity: 0, y: 20,
-}} animate = {}""
+  { opacity: 0, y: 20}} animate = {}""
   { opacity: 1, y: 0 ''''
-'''',
-}} className='space-y-4'>''''
+''''}} className='space-y-4'>''''
                   <div className='flex items-center justify-between'>''''
                     <h3 className='text-lg font-semibold text-gray-900 dark: text-white'>""
                       Generated Code''''
@@ -958,13 +927,10 @@ export const AICodeGenerator = () => {
             </motion.div>)}''''
 ''''''
           {activeTab === 'analyze' && (<motion.div key='analyze' initial = {}
-  { opacity: 0, y: 20,
-}} animate = {}
-  { opacity: 1, y: 0,
-}} exit = {}""
+  { opacity: 0, y: 20}} animate = {}
+  { opacity: 1, y: 0}} exit = {}""
   { opacity: 0, y: -20 ''''
-'''',
-}} className='space-y-6'>''''
+''''}} className='space-y-6'>''''
               <div>''''
                 <label className='block text-sm font-medium text-gray-700 dark: text-gray-300 mb-2'>""
                   Paste code to analyze''''
@@ -983,11 +949,9 @@ export const AICodeGenerator = () => {
               </button>
               {/* Analysis Results */}
               {codeAnalysis && (<motion.div initial = {}
-  { opacity: 0, y: 20,
-}} animate = {}""
+  { opacity: 0, y: 20}} animate = {}""
   { opacity: 1, y: 0 ''''
-'''',
-}} className='space-y-6'>''''
+''''}} className='space-y-6'>''''
                   {/* Metrics Overview */}''''
                   <div className='grid grid-cols-2 md: grid-cols-5 gap-4'>''
                     {[''
@@ -1047,13 +1011,10 @@ export const AICodeGenerator = () => {
             </motion.div>)}''''
 ''''''
           {activeTab === 'optimize' && (<motion.div key='optimize' initial = {}
-  { opacity: 0, y: 20,
-}} animate = {}
-  { opacity: 1, y: 0,
-}} exit = {}""
+  { opacity: 0, y: 20}} animate = {}
+  { opacity: 1, y: 0}} exit = {}""
   { opacity: 0, y: -20 ''''
-'''',
-}} className='space-y-6'>''''
+''''}} className='space-y-6'>''''
               <div className='text-center py-8'>''''
                 <Zap className='w-16 h-16 text-yellow-500 mx-auto mb-4'/" >''''"
                 <h3 className='text-xl font-semibold text-gray-900 dark: text-white mb-2'>""
@@ -1080,13 +1041,10 @@ export const AICodeGenerator = () => {
             </motion.div>)}''''
 ''''''
           {activeTab === 'tests' && (<motion.div key='tests' initial = {}
-  { opacity: 0, y: 20,
-}} animate = {}
-  { opacity: 1, y: 0,
-}} exit = {}""
+  { opacity: 0, y: 20}} animate = {}
+  { opacity: 1, y: 0}} exit = {}""
   { opacity: 0, y: -20 ''''
-'''',
-}} className='space-y-6'>''''
+''''}} className='space-y-6'>''''
               <div className='text-center py-8'>''''
                 <TestTube className='w-16 h-16 text-green-500 mx-auto mb-4'/" >''''"
                 <h3 className='text-xl font-semibold text-gray-900 dark: text-white mb-2'>""
@@ -1104,13 +1062,10 @@ export const AICodeGenerator = () => {
             </motion.div>)}''''
 ''''''
           {activeTab === 'docs' && (<motion.div key='docs' initial = {}
-  { opacity: 0, y: 20,
-}} animate = {}
-  { opacity: 1, y: 0,
-}} exit = {}""
+  { opacity: 0, y: 20}} animate = {}
+  { opacity: 1, y: 0}} exit = {}""
   { opacity: 0, y: -20 ''''
-'''',
-}} className='space-y-6'>''''
+''''}} className='space-y-6'>''''
               <div className='text-center py-8'>''''
                 <FileText className='w-16 h-16 text-indigo-500 mx-auto mb-4'/" >''''"
                 <h3 className='text-xl font-semibold text-gray-900 dark: text-white mb-2'>""
@@ -1129,21 +1084,17 @@ export const AICodeGenerator = () => {
         </AnimatePresence>
         {/* Suggestions Panel */}
         {suggestions.length > 0 && (<motion.div initial = {}
-  { opacity: 0, y: 20,
-}} animate = {}""
+  { opacity: 0, y: 20}} animate = {}""
   { opacity: 1, y: 0 ''''
-'''',
-}} className='mt-8 border-t border-gray-200 dark: border-gray-700 pt-6'>''''
+''''}} className='mt-8 border-t border-gray-200 dark: border-gray-700 pt-6'>''''
             <h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-4'>""
               AI Suggestions ({suggestions.length})''''
             </h3>''''
             <div className='grid gap-4'>
               {suggestions.map((suggestion) => (<motion.div key={suggestion.id} initial = {}
-  { opacity: 0, x: 20,
-}} animate = {}""
+  { opacity: 0, x: 20}} animate = {}""
   { opacity: 1, x: 0 ''''
-'''',
-}} className='p-4 bg-gray-50 dark: bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600'>''''`
+''''}} className='p-4 bg-gray-50 dark: bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600'>''''`
                   <div className='flex items-start justify-between mb-3'>'''`"`'"
                     <div className='flex items-center gap-2'>'`'`"`"
                       <span className={`px-2 py-1 text-xs rounded-full ${suggestion.type === 'security' ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300' :''`
@@ -1188,11 +1139,9 @@ export const AICodeGenerator = () => {
 
         {/* History Panel */}
         {history.length > 0 && (<motion.div initial = {}
-  { opacity: 0, y: 20,
-}} animate = {}""
+  { opacity: 0, y: 20}} animate = {}""
   { opacity: 1, y: 0 ''''
-'''',
-}} className='mt-8 border-t border-gray-200 dark: border-gray-700 pt-6'>''''
+''''}} className='mt-8 border-t border-gray-200 dark: border-gray-700 pt-6'>''''
             <div className='flex items-center justify-between mb-4'>''''
               <h3 className='text-lg font-semibold text-gray-900 dark:text-white'>""
                 Generation History ({history.length})''''
@@ -1235,4 +1184,3 @@ export const AICodeGenerator = () => {
       </div>"`"
     </div>)}''`"`"
 ''`''`"`"
->>>>>>> main

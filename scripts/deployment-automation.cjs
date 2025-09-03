@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -15,8 +14,8 @@ class DeploymentAutomation {
       environment: process.env.NODE_ENV || 'development',
       branch: this.getCurrentBranch(),
       commit: this.getCurrentCommit(),
-      status: 'pending'
-    };
+      status: 'pending';
+};
     
     // Ensure logs directory exists
     if (!fs.existsSync(this.logDir)) {
@@ -59,16 +58,16 @@ class DeploymentAutomation {
         cwd: this.projectRoot,
         encoding: 'utf8',
         stdio: options.silent ? 'pipe' : 'inherit',
-        ...options
-      });
+        ...options;
+});
       
       const duration = Date.now() - startTime;
       this.deploymentResults.steps.push({
         name,
         status: 'success',
         duration,
-        command
-      });
+        command;
+});
       
       this.log(`Completed: ${name} (${duration}ms)`);
       return result;
@@ -79,8 +78,8 @@ class DeploymentAutomation {
         status: 'failed',
         duration,
         command,
-        error: error.message
-      });
+        error: error.message;
+});
       
       this.log(`Failed: ${name} - ${error.message}`, 'ERROR');
       throw error;
@@ -100,7 +99,7 @@ class DeploymentAutomation {
       const gitStatus = execSync('git status --porcelain', { encoding: 'utf8' });
       if (gitStatus.trim()) {
         this.log('Warning: There are uncommitted changes', 'WARN');
-        this.log('Uncommitted files:', 'WARN');
+        this.log('Uncommitted files: ', 'WARN');
         this.log(gitStatus, 'WARN');
       }
     } catch (error) {
@@ -172,8 +171,8 @@ class DeploymentAutomation {
       await this.runStep('Save PM2 configuration', 'pm2 save');
       
       this.log('Production deployment completed successfully');
-      
-    } catch (error) {
+      ;
+} catch (error) {
       this.log(`Production deployment failed: ${error.message}`, 'ERROR');
       throw error;
     }
@@ -194,8 +193,8 @@ class DeploymentAutomation {
       );
       
       this.log('Staging deployment completed successfully');
-      
-    } catch (error) {
+      ;
+} catch (error) {
       this.log(`Staging deployment failed: ${error.message}`, 'ERROR');
       throw error;
     }
@@ -216,7 +215,7 @@ class DeploymentAutomation {
       try {
         await this.runStep(
           'Smoke tests',
-          'npm run test:smoke',
+          'npm run test: smoke',
           { continueOnError: true }
         );
       } catch (error) {
@@ -224,8 +223,8 @@ class DeploymentAutomation {
       }
       
       this.log('Post-deployment tests completed');
-      
-    } catch (error) {
+      ;
+} catch (error) {
       this.log(`Post-deployment tests failed: ${error.message}`, 'WARN');
     }
   }
@@ -262,8 +261,8 @@ class DeploymentAutomation {
       branch: this.deploymentResults.branch,
       commit: this.deploymentResults.commit,
       environment: this.deploymentResults.environment,
-      duration: this.deploymentResults.steps.reduce((sum, step) => sum + step.duration, 0)
-    };
+      duration: this.deploymentResults.steps.reduce((sum, step) => sum + step.duration, 0);
+};
     
     // Save notification (in real app, you'd send to Slack, email, etc.)
     const notificationFile = path.join(this.logDir, 'deployment-notifications.json');
@@ -315,8 +314,8 @@ class DeploymentAutomation {
       this.log(`✅ Deployment to ${environment} completed successfully`);
       
       return this.deploymentResults;
-      
-    } catch (error) {
+      ;
+} catch (error) {
       this.deploymentResults.status = 'failed';
       this.log(`❌ Deployment failed: ${error.message}`, 'ERROR');
       
@@ -344,22 +343,20 @@ if (require.main === module) {
       process.exit(0);
     })
     .catch(error => {
-      console.error('\n❌ Deployment automation failed:', error.message);
+      console.error('\n❌ Deployment automation failed: ', error.message);
       process.exit(1);
     });
 }
 
 module.exports = DeploymentAutomation;
-=======
 #!/usr/bin/env node;
 
-const { execSync } = require('child_process');';const fs = require('fs');';';class DeploymentAutomation {;
+const { execSync } = require('child_process');const fs = require('fs');';class DeploymentAutomation {;
   constructor() {;
-    this.projectRoot = process.cwd();,
-}
+    this.projectRoot = process.cwd();}
 ;
   async deploy() {;
-    console.log('🚀 Starting deployment automation...');';';    try {;
+    console.log('🚀 Starting deployment automation...');';    try {;
       // Run tests;
       this.runTests();
 ;
@@ -375,29 +372,26 @@ const { execSync } = require('child_process');';const fs = require('fs');';';cla
       // Deploy to production;
       this.deployToProduction();
 ;
-      console.log('✅ Deployment completed successfully');';    } catch (error) {;';      console.error('❌ Deployment "failed":', error.message);';      process.exit(1);,';}
+      console.log('✅ Deployment completed successfully');    } catch (error) {;      console.error('❌ Deployment "failed":', error.message);      process.exit(1);,';}
   }
 ;
   runTests() {;
-    console.log('🧪 Running tests...');';    execSync('npm run test', { "stdio": 'inherit' });';  }';;
+    console.log('🧪 Running tests...');    execSync('npm run test', { "stdio": 'inherit' });  }';;
   buildApplication() {;
-    console.log('🏗️ Building application...');';    execSync('npm run build', { "stdio": 'inherit' });';  }';;
+    console.log('🏗️ Building application...');    execSync('npm run build', { "stdio": 'inherit' });  }';;
   deployToStaging() {;
-    console.log('🚀 Deploying to staging...');';    // Add your staging deployment logic here;,';}
+    console.log('🚀 Deploying to staging...');    // Add your staging deployment logic here;,';}
 ;
   runSmokeTests() {;
-    console.log('💨 Running smoke tests...');';    // Add your smoke test logic here;,';}
+    console.log('💨 Running smoke tests...');    // Add your smoke test logic here;,';}
 ;
   deployToProduction() {;
-    console.log('🌟 Deploying to production...');';    // Add your production deployment logic here;,
-}
+    console.log('🌟 Deploying to production...');    // Add your production deployment logic here;}
 }
 ;
 // Run the deployment;
 if (require.main === module) {;
   const deployment = new DeploymentAutomation();
-  deployment.deploy().catch(console.error);,
-}
+  deployment.deploy().catch(console.error);}
 ;
 module.exports = DeploymentAutomation;
->>>>>>> main

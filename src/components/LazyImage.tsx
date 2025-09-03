@@ -21,7 +21,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
   className = '',
   priority = false,
   placeholder = 'empty',
-  blurDataURL
+  blurDataURL;
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
@@ -62,8 +62,8 @@ const LazyImage: React.FC<LazyImageProps> = ({
           width={width}
           height={height}
           className={`transition-opacity duration-300 ${
-            isLoaded ? 'opacity-100' : 'opacity-0'
-          }`}
+            isLoaded ? 'opacity-100' : 'opacity-0';
+}`}
           onLoad={() => setIsLoaded(true)}
           priority={priority}
           placeholder={placeholder}

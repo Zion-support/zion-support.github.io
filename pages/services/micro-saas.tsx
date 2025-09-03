@@ -11,19 +11,19 @@ const MicroSaasPage: NextPage = () => {
   const benefits = [
     {
       icon: <Zap className="w-8 h-8" />, title: 'Lightning Fast Setup',
-      description: 'Get up and running in minutes, not months. Our micro SaaS solutions are designed for quick deployment.'
-    },
+      description: 'Get up and running in minutes, not months. Our micro SaaS solutions are designed for quick deployment.';
+},
     {
       icon: <Users className="w-8 h-8" />, title: 'Scalable Solutions',
-      description: 'Start small and grow as your business expands. Our solutions scale with your needs.'
-    }, {
+      description: 'Start small and grow as your business expands. Our solutions scale with your needs.';
+}, {
       icon: <Shield className="w-8 h-8" />,
-      title: 'Enterprise Security', description: 'Bank-level security with SOC 2 compliance, ensuring your data is always protected.'
-    }, {
+      title: 'Enterprise Security', description: 'Bank-level security with SOC 2 compliance, ensuring your data is always protected.';
+}, {
       icon: <Star className="w-8 h-8" />,
-      title: 'Proven Results', description: 'Track record of successful implementations with measurable ROI for our clients.'
-    }
-  ];
+      title: 'Proven Results', description: 'Track record of successful implementations with measurable ROI for our clients.';
+}
+  ]
 
   return (
     <MainLayout

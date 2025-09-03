@@ -5,8 +5,8 @@
     "totalOptimizations": 361,
     "bundleSize": {
       "maxFileSize": 512000,
-      "maxTotalSize": 5242880
-    },
+      "maxTotalSize": 5242880;
+},
     "recommendations": [
       "Consider implementing code splitting for large components",
       "Use React.memo for expensive components",
@@ -14,5 +14,5 @@
       "Implement lazy loading for non-critical components",
       "Use CSS-in-JS libraries for better tree shaking"
     ]
-  }
+}
 }

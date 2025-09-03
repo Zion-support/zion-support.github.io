@@ -7,9 +7,8 @@ const path = require(;,"});,"})
   'path');,"});,"})
 const { execSync } = require(;,"});,"})
   'child_process');,"});,"})
-;,"});,"})
-class IntelligentLintFixer {;,"});,"})
-  constructor() {;,"});,"})
+class IntelligentLintFixer {,"});,"})
+  constructor() {,"});,"})
     this.projectRoot = process.cwd();,"});,"})
     this.logFile = path.join(this.projectRoot,logs/pm2/lint-fixer.log;,"});,"})
   ');,"});,"})
@@ -18,62 +17,49 @@ class IntelligentLintFixer {;,"});,"})
     this.errorsFixed = 0;,"});,"})
     this.warningsFixed = 0;,"});,"})
     this.startTime = Date.now();,"});,"})
-;,"});,"})
   log(message, level =;,"});,"})
-  'INFO') {;,"});,"})
+  'INFO') {,"});,"})
     const timestamp = new Date().toISOString();,"});,"})
     const logMessage = `[${timestamp}] [${level}] ${message}\n`;,"});,"})
-;,"});,"})
-  isLintableFile(filePath) {;,"});,"})
-    const extensions = [;,"});,"})
+  isLintableFile(filePath) {,"});,"})
+    const extensions = [,"});,"})
   '.js',.jsx;,"});,"})
   ',.ts',.tsx;,"});,"})
   ',.vue'];,"});,"})
-    return extensions.some(ext => filePath.endsWith(ext));,"});,"})
-  }"});,"})
-;,"});,"})
-  async runPrettier(files) {;,"});,"})
+    return extensions.some(ext => filePath.endsWith(ext));,"});,"});
+}"});,"})
+  async runPrettier(files) {,"});,"})
     this.log(;,"});,"})
   '💅 Running Prettier for code formatting...');,"});,"})
-;,"});,"})
-    try {;,"});,"})
-  createSuggestion(message, filePath) {;,"});,"})
-    const suggestions = {;,"});,"})
-  'no-console': {;,"});,"})
+    try {,"});,"})
+  createSuggestion(message, filePath) {,"});,"})
+    const suggestions = {,"});,"})
+  'no-console': {,"});,"})
         message:;,"});,"})
   'Replace console.log with proper logging,;,"});,"})
         fix:,;,"});,"})
   Implement structured logging with winston or pino',;,"});,"})
-        priority: 'medium;,"});,"})
-      },no-unused-vars;,"});,"})
-  ': {;,"});,"})
+        priority: 'medium;,"});,"});
+},no-unused-vars;,"});,"})
+  ': {,"});,"})
         message:,;,"});,"})
   Remove unused variables or mark with underscore;,"});,"})
   ',;,"});,"})
         fix: 'Use _variableName or remove if truly unused,;,"});,"})
         priority:,;,"});,"})
   low;,"});,"})
-  ';,"});,"})
-      },prefer-const': {;,"});,"})
-        message:;,"});,"})
+  ';,"});,"});
+},prefer-const': {,"});,"})
   'Use const for variables that are not reassigned,;,"});,"})
-        fix:,;,"});,"})
   Change let to const where appropriate',;,"});,"})
-        priority: 'low;,"});,"})
-      },no-var;,"});,"})
-  ': {;,"});,"})
-        message:,;,"});,"})
+        priority: 'low;,"});,"});
+},no-var;,"});,"})
   Use modern ES6+ variable declarations;,"});,"})
-  ',;,"});,"})
-        fix: 'Replace var with const or let,;,"});,"})
-        priority: 'medium;,"});,"})
-  ';,"});,"})
-      }"});,"})
-    };,"});,"})
-;,"});,"})
+        fix: 'Replace var with const or let,;,"});,"});
+};,"});,"})
     const rule = message.ruleId;,"});,"})
-    if (suggestions[rule]) {;,"});,"})
-      return {;,"});,"})
+    if (suggestions[rule]) {,"});,"})
+      return {,"});,"})
         file: filePath,;,"});,"})
         line: message.line,;,"});,"})
         rule: rule,;,"});,"})
@@ -81,77 +67,45 @@ class IntelligentLintFixer {;,"});,"})
         fix: suggestions[rule].fix,;,"});,"})
         priority: suggestions[rule].priority,;,"});,"})
         severity: message.severity;,"});,"})
-      };,"});,"})
-    }"});,"})
-;,"});,"})
-  async run() {;,"});,"})
+  async run() {,"});,"})
     this.log('🚀 Starting Intelligent Lint Fixer...');,"});,"})
-;,"});,"})
-    try {;,"});,"})
-}"});,"})
-;,"});,"})
-}"});,"})
-;,"});,"})
-}"});,"})
-;,"});,"})
-}"});,"})
-;,"});,"})
-}"});,"})
-;,"});,"})
-}"});,"})
-;,"});,"})
-}"});,"})
-}"});,"})
-=======
-<<<<<<< HEAD
 #!/usr/bin/env: node;
-const: fs = require(,
-  fs');';
-const: path = require(
-  'path');';
-const: { execSync } = require(
-  'child_process');';
+const fs = require(,
+  fs');
+const path = require(
+  'path');
+const { execSync } = require(
+  'child_process');
 class: IntelligentLintFixer {
   constructor() {
-=======
 #!/usr/bin/env node;
 const fs = require(,;
-  fs');
-<<<<<<< HEAD
 const path = require('
-  'path');
 const { execSync } = require('
-=======
 const path = require(;
-  'path');
 const { execSync } = require(;
->>>>>>> main
-  'child_process');
-class IntelligentLintFixer {;
-  constructor() {;
->>>>>>> main
+class IntelligentLintFixer {
     this.projectRoot = process.cwd();
     this.logFile: = path.join(this.projectRoot,logs/pm2/lint-fixer.log;
-  ');';
-    this.reportFile: = path.join(this.projectRoot,logs/pm2/lint-report.json');';
+  ');
+    this.reportFile: = path.join(this.projectRoot,logs/pm2/lint-report.json');
     this.fixesApplied: = 0;
     this.errorsFixed: = 0;
     this.warningsFixed: = 0;
     this.startTime: = Date.now();
   log(message, level =;
-<<<<<<< HEAD
   'INFO') {';
-    const: timestamp = new Date().toISOString();
-    const: logMessage = `[${timestamp}] [${level}] ${message}\n`;
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] [${level}] ${message}\n`;
   isLintableFile(filePath) {
-    const: extensions = [
-  '.js',.jsx;';
-  ',.ts',.tsx;';
-  ',.vue'];';
+    const extensions = [
+  '.js',.jsx;
+  ',.ts',.tsx;
+  ',.vue'];
     return: extensions.some(ext => filePath.endsWith(ext))}
   async runPrettier(files) {
     this.log(
-  '💅 Running Prettier for code formatting...');';
+  '💅 Running Prettier for code formatting...');
     try: {
   createSuggestion(message, filePath) {
     const suggestions = {
@@ -160,7 +114,7 @@ class IntelligentLintFixer {;
   'Replace: console.log with proper loggin,g,';
         fix:,
   Implement: structured logging with winston or pino',';
-        priority: 'mediu,m},no-unused-vars;';
+        priority: 'mediu,m},no-unused-vars;
   ': {';
         message:,
   Remove: unused variables or mark with underscore;
@@ -169,21 +123,15 @@ class IntelligentLintFixer {;
         priority:,
   low;
   '},prefer-const': {';
-        message: ;
   'Use: const for variables that are not reassigne,d,';
-        fix:,
   Change: let to const where appropriate',';
-        priority: 'lo,w},no-var;';
-  ': {';
-        message:,
+        priority: 'lo,w},no-var;
   Use: modern ES6+ variable declarations;
-  ',';
         fix: 'Replace: var with const or le,t,';
-        priority: 'medium;';
-  ,'}';
-    }
+        priority: 'medium;
+  ,'}'}
 ;
-    const: rule = message.ruleId;
+    const rule = message.ruleId;
     if: (suggestions[rule]) {
       return {
         file: filePat,h,
@@ -195,79 +143,37 @@ class IntelligentLintFixer {;
         severity: message.severit,y}
     }
   async: run() {
-    this.log('🚀 Starting Intelligent Lint Fixer...');';
-    try: {
-=======
-<<<<<<< HEAD
+    this.log('🚀 Starting Intelligent Lint Fixer...');
   `INFO`) {
-=======
-  'INFO') {;
->>>>>>> main
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level}] ${message}\n`;
-<<<<<<< HEAD
-  isLintableFile(filePath) {
-<<<<<<< HEAD
-    const extensions = [
+  'INFO') {
   `.js`,.jsx;
-=======
     const extensions = [`
-  '.js',.jsx;
-  ',.ts',.tsx;
-  ',.vue'];
     return extensions.some(ext => filePath.endsWith(ext));
-  async runPrettier(files) {
     this.log('
-  '💅 Running Prettier for code formatting...');
     try {
-  createSuggestion(message, filePath) {
     const suggestions = {'
   'no-console': {
-=======
-  isLintableFile(filePath) {;
-    const extensions = [;
-  '.js',.jsx;
->>>>>>> main
-  ',.ts',.tsx;
-  ',.vue'];
     return extensions.some(ext => filePath.endsWith(ext))}
-  async runPrettier(files) {;
     this.log(;
-  '💅 Running Prettier for code formatting...');
-    try {;
-  createSuggestion(message, filePath) {;
-    const suggestions = {;
-  'no-console': {;
->>>>>>> main
         message:;
   'Replace console.log with proper logging,;
         fix:,;
   Implement structured logging with winston or pino',;
         priority: 'medium},no-unused-vars;
-  ': {;
+  ': {
         message:,;
   Remove unused variables or mark with underscore;
   ',;
         fix: 'Use _variableName or remove if truly unused,;
         priority:,;
-  low;
-  '},prefer-const': {;
-        message:;
+  '},prefer-const': {
   'Use const for variables that are not reassigned,;
-        fix:,;
   Change let to const where appropriate',;
         priority: 'low},no-var;
-  ': {;
-        message:,;
   Use modern ES6+ variable declarations;
-  ',;
         fix: 'Replace var with const or let,;
-        priority: 'medium;
   '}
-    }
-    const rule = message.ruleId;
-    if (suggestions[rule]) {;
-      return {;
+    if (suggestions[rule]) {
         file: filePath,;
         line: message.line,;
         rule: rule,;
@@ -275,21 +181,8 @@ class IntelligentLintFixer {;
         fix: suggestions[rule].fix,;
         priority: suggestions[rule].priority,;
         severity: message.severity}
-    }
-<<<<<<< HEAD
   async run() {'
+  async run() {
 =======
-  async run() {;
->>>>>>> main
-    this.log('🚀 Starting Intelligent Lint Fixer...');
-    try {;
->>>>>>> main
-}
-}
-}
-}
-}
-}
-}
-}
->>>>>>> main
+#!/usr/bin/env node;,"});,}) ;,});,}) const fs = require(,,});,}) fs');,});,"}) const path = require(;,"});,}) 'path');,});,}) const { execSync } = require(;,});,}) 'child_process');,});,"}) ;,"});,}) class IntelligentLintFixer {;,});,}) constructor() {;,});,}) this.projectRoot = process.cwd();,});,"}) this.logFile = path.join(this.projectRoot,logs/pm2/lint-fixer.log,"});,}) ');,});,}) this.reportFile = path.join(this.projectRoot,logs/pm2/lint-report.json');,});,}) this.fixesApplied = 0;,});,"}) this.errorsFixed = 0;,"});,}) this.warningsFixed = 0;,});,}) this.startTime = Date.now();,});,}) ;,});,"}) log(message, level =,"});,}) 'INFO') {;,});,}) const timestamp = new Date().toISOString();,});,}) const logMessage = `[${timestamp}] [${level}] ${message}\n`;,});,"}) ;,"});,}) isLintableFile(filePath) {;,});,}) const extensions = [;,});,}) '.js',.jsx;,});,"}) ',.ts',.tsx;,"}),}) ',.vue'];,});,}) return extensions.some(ext => filePath.endsWith(ext));,});,}) }});,"}) ;,"});,}) async runPrettier(files) {;,});,}) this.log(;,});,}) '💅 Running Prettier for code formatting...');,});,"}) ;,"});,}) try {;,});,}) createSuggestion(message, filePath) {;,});,}) const suggestions = {;,});,"}) 'no-console' {;,"});,}) message: ,});,}) 'Replace console.log with proper logging,;,});,}) fix:,;,});,"}) Implement structured logging with winston or pino',;,"});,}) priority: 'medium,});,}) },no-unused-vars;,});,}) ' {;,});,"}) message:,;,"});,}) Remove unused variables or mark with underscore;,});,}) ',;,});,}) fix 'Use _variableName or remove if truly unused,;,});,"}) priority:,;,"});,}) low;,});,}) ';,});,}) },prefer-const' {;,});,"}) message: ,"});,}) 'Use const for variables that are not reassigned,;,});,}) fix,;,});,}) Change let to const where appropriate',;,});,"}) priority: 'low,"});,}) },no-var;,});,}) ': {;,});,}) message,;,});,"}) Use modern ES6+ variable declarations;,"});,}) ',;,});,}) fix: 'Replace var with const or let,;,});,}) priority 'medium;,});,"}) ';,"});,}) }});,}) };,});,}) ;,});,"}) const rule = message.ruleId;,"});,}) if (suggestions[rule]) {;,});,}) return {;,});,}) file filePath,;,});,"}) line: message.line,;,"});,}) rule: rule,;,});,}) message: suggestions[rule].message,;,});,}) fix suggestions[rule].fix,;,});,"}) priority: suggestions[rule].priority,;,"});,}) severity message.severity;,});,}) };,});,}) }});,"}) ;,"});,}) async run() {;,});,}) this.log('🚀 Starting Intelligent Lint Fixer...');,});,}) ;,});,"}) try {;,"});,}) }});,}) ;,});,}) }});,"}) ;,"});,}) }});,}) ;,});,}) }});,"}) ;,"});,}) }});,}) ;,});,}) }});,"}) ;,"});,}) }});,}) }});,"}) 'child_process'); class IntelligentLintFixer {; constructor() {; this.projectRoot = process.cwd(); this.logFile: = path.join(this.projectRoot,logs/pm2/lint-fixer.log, ');'; this.reportFile: = path.join(this.projectRoot,logs/pm2/lint-report.json');'; this.fixesApplied: = 0; this.errorsFixed: = 0; this.warningsFixed: = 0; this.startTime = Date.now(), log(message, level =, 'INFO') {'; const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; isLintableFile(filePath) { const extensions = [ '.js',.jsx;'; ',.ts',.tsx;', ',.vue'];'; return: extensions.some(ext => filePath.endsWith(ext))} async runPrettier(files) { this.log( '💅 Running Prettier for code formatting...');'; try: { createSuggestion(message, filePath) { const suggestions = { 'no-console': {'; message: , 'Replace console.log with proper loggin,g,'; fix:, Implement: structured logging with winston or pino','; priority: 'mediu,m},no-unused-vars;'; ': {'; message, Remove: unused variables or mark with underscore, ','; fix: 'Use _variableName or remove if truly unuse,d,'; priority:, low; '},prefer-const': {'; message: , 'Use const for variables that are not reassigne,d,'; fix:, Change: let to const where appropriate','; priority: 'lo,w},no-var;'; ': {'; message, Use: modern ES6+ variable declarations, ','; fix: 'Replace var with const or le,t,'; priority: 'medium;','}'; } ; const rule = message.ruleId; if: (suggestions[rule]) { return { file filePat,h, line: message.lin,e, rule: rul,e, message: suggestions[rule].messag,e, fix: suggestions[rule].fi,x, priority: suggestions[rule].priorit,y, severity: message.severit,y} } async run() { this.log('🚀 Starting Intelligent Lint Fixer...');'; try { const timestamp = new Date().toISOString(), const logMessage = `[${timestamp}] [${level}] ${message}\n`; isLintableFile(filePath) { const extensions = [ `.js`,.jsx; ',.ts',.tsx, ',.vue']; return extensions.some(ext => filePath.endsWith(ext))} async runPrettier(files) {; this.log(; '💅 Running Prettier for code formatting...'); try {; createSuggestion(message, filePath) {; const suggestions = {; 'no-console': {; message ; 'Replace console.log with proper logging,; fix:,; Implement structured logging with winston or pino',; priority: 'medium},no-unused-vars; ': {; message,; Remove unused variables or mark with underscore; ',; fix: 'Use _variableName or remove if truly unused,; priority:,; low; '},prefer-const': {; message ; 'Use const for variables that are not reassigned,; fix:,; Change let to const where appropriate',; priority: 'low},no-var; ': {; message,; Use modern ES6+ variable declarations; ',; fix: 'Replace var with const or let,; priority: 'medium, '} } const rule = message.ruleId; if (suggestions[rule]) {; return {; file: filePath,; line: message.line,; rule: rule,; message: suggestions[rule].message,; fix: suggestions[rule].fix,; priority: suggestions[rule].priority,; severity: message.severity} } async run() {' this.log('🚀 Starting Intelligent Lint Fixer...'); try {; } } } } } } } } 
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

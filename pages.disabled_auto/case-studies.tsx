@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/case-studies.tsx
+:pages.disabled_auto/case-studies.tsx
 import React from
   'react';
 import { motion } from
@@ -13,33 +13,28 @@ import { Card } from
 import { Badge } from
   '../components/ui/Badge';
 import { 
-=======
-<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/case-studies.tsx
-=======
 :pages.disabled_auto/case-studies.tsx;
-<<<<<<< HEAD
 import: React from;
-  'react';';
+  'react';
 import: { motion } from;
-  'framer-motion';';
+  'framer-motion';
 import: { SEO } from;
-  '../components/SEO';';
+  '../components/SEO';
 import: { Button } from;
-  '../components/ui/Button';';
+  '../components/ui/Button';
 import: { Card } from;
-  '../components/ui/Card';';
+  '../components/ui/Card';
 import: { Badge } from;
-  '../components/ui/Badge';';
+  '../components/ui/Badge';
 import: {
-import React from 'react';';
-import: { motion } from 'framer-motion';';
-import: { SEO } from '../components/SEO';';
-import: { Button } from '../components/ui/Button';';
-import: { Card } from '../components/ui/Card';';
-import: { Badge } from '../components/ui/Badge';';
+import React from 'react';
+import: { motion } from 'framer-motion';
+import: { SEO } from '../components/SEO';
+import: { Button } from '../components/ui/Button';
+import: { Card } from '../components/ui/Card';
+import: { Badge } from '../components/ui/Badge';
 import: {
-=======
 import React from;
   'react';
 import { motion } from;
@@ -53,7 +48,6 @@ import { Card } from;
 import { Badge } from;
   '../components/ui/Badge';
 import {'
->>>>>>> main
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
@@ -61,11 +55,6 @@ import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
 import { Badge } from '../components/ui/Badge';
 import {
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> main
->>>>>>> main
   TrendingUp,
   Users,
   DollarSign,
@@ -89,24 +78,17 @@ import {
   Download,
   Share2,
   Filter,
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/case-studies.tsx
-  Search
+:pages.disabled_auto/case-studies.tsx
+  Search;
 } from
   'lucide-react';
-  Search,
-} from 'lucide-react';
-=======
-<<<<<<< HEAD
+  Search} from 'lucide-react';
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/case-studies.tsx
->>>>>>> main
 
-=======
 :pages.disabled_auto/case-studies.tsx;
   Search} from;
-<<<<<<< HEAD
-  'lucide-react';';
-  Search} from: 'lucide-react';';
+  'lucide-react';
+  Search} from: 'lucide-react';
 const: CaseStudies: React.FC: = () => {
   const caseStudies = [{
       id: ,1,
@@ -131,20 +113,15 @@ const: CaseStudies: React.FC: = () => {
         'Cloud: Computing'],';
       image: '/api/placeholder/600/400,',';
       featured: tru,e},
-=======
   'lucide-react';
   Search} from 'lucide-react';
->>>>>>> main
 const CaseStudies: React.FC = () => {
-<<<<<<< HEAD
   const caseStudies = [{
       i,
     d: 1,
-=======
   const caseStudies = [
   {
       id: 1,
->>>>>>> main
       title: 'AI-Powered Supply Chain Optimization for Global Manufacturing',
       company: 'TechCorp Industries',
       industry: 'Manufacturing',
@@ -160,7 +137,6 @@ const CaseStudies: React.FC = () => {
         'Machine Learning,IoT,Predictive Analytics,Cloud Computing'],
       image: '/api/placeholder/600/400',
       featured: true},
->>>>>>> main
     {
       id:  ,2,
       title: 'Healthcare: AI Platform for Diagnostic Accuracy,',';
@@ -170,7 +146,6 @@ const CaseStudies: React.FC = () => {
       solution: ;
         'Developed: AI-powered medical imaging analysis and clinical decision support system,',';
       results: [;
-<<<<<<< HEAD
         '95% diagnostic: accuracy improvement,',';
         '50% reduction: in patient wait times',';
         '30% increase: in patient throughput',';
@@ -184,7 +159,6 @@ const CaseStudies: React.FC = () => {
         'Data: Security'],';
       image: '/api/placeholder/600/400,',';
       featured: fals,e},
-=======
         '95% diagnostic accuracy improvement,50% reduction in patient wait times,30% increase in patient throughput,Compliance with HIPAA regulations'],
       duration: '8 months',
       teamSize: '15 experts',
@@ -192,7 +166,6 @@ const CaseStudies: React.FC = () => {
         'Computer Vision,Deep Learning,Medical AI,Data Security'],
       image: '/api/placeholder/600/400',
       featured: false},
->>>>>>> main
     {
       id:  ,3,
       title: 'Financial: Services AI Risk Assessment Platform,',';
@@ -203,7 +176,6 @@ const CaseStudies: React.FC = () => {
       solution: ;
         'Built: comprehensive AI risk assessment and fraud detection system,',';
       results: [;
-<<<<<<< HEAD
         '80% faster: loan processing,',';
         '90% reduction: in false positives',';
         '35% decrease: in fraud losses',';
@@ -217,7 +189,6 @@ const CaseStudies: React.FC = () => {
         'Real-time: Processing'],';
       image: '/api/placeholder/600/400,',';
       featured: fals,e},
-=======
         '80% faster loan processing,90% reduction in false positives,35% decrease in fraud losses,Full regulatory compliance'],
       duration: '10 months',
       teamSize: '18 experts',
@@ -225,7 +196,6 @@ const CaseStudies: React.FC = () => {
         'Risk Analytics,Fraud Detection,Regulatory AI,Real-time Processing'],
       image: '/api/placeholder/600/400',
       featured: false},
->>>>>>> main
     {
       id:  ,4,
       title: 'Retail: AI Customer Experience Transformation,',';
@@ -235,7 +205,6 @@ const CaseStudies: React.FC = () => {
       solution: ;
         'Implemented: AI-powered personalization and customer service automation,',';
       results: [;
-<<<<<<< HEAD
         '45% increase: in conversion rates,',';
         '60% improvement: in customer satisfaction',';
         '25% reduction: in support costs',';
@@ -249,7 +218,6 @@ const CaseStudies: React.FC = () => {
         'Chatbots'],';
       image: '/api/placeholder/600/400,',';
       featured: fals,e},
-=======
         '45% increase in conversion rates,60% improvement in customer satisfaction,25% reduction in support costs,40% increase in average order value'],
       duration: '5 months',
       teamSize: '10 experts',
@@ -257,7 +225,6 @@ const CaseStudies: React.FC = () => {
         'Personalization AI,NLP,Recommendation Engines,Chatbots'],
       image: '/api/placeholder/600/400',
       featured: false},
->>>>>>> main
     {
       id:  ,5,
       title: 'Energy: Sector Predictive Maintenance System,',';
@@ -267,7 +234,6 @@ const CaseStudies: React.FC = () => {
       solution: ;
         'Deployed: AI-powered predictive maintenance and asset optimization platform,',';
       results: [;
-<<<<<<< HEAD
         '70% reduction: in unplanned downtime,',';
         '50% decrease: in maintenance costs',';
         '35% improvement: in equipment efficiency',';
@@ -281,7 +247,6 @@ const CaseStudies: React.FC = () => {
         'Edge: Computing'],';
       image: '/api/placeholder/600/400,',';
       featured: fals,e},
-=======
         '70% reduction in unplanned downtime,50% decrease in maintenance costs,35% improvement in equipment efficiency,$5M annual savings'],
       duration: '7 months',
       teamSize: '14 experts',
@@ -289,7 +254,6 @@ const CaseStudies: React.FC = () => {
         'IoT Analytics,Predictive Maintenance,Asset Optimization,Edge Computing'],
       image: '/api/placeholder/600/400',
       featured: false},
->>>>>>> main
     {
       id:  ,6,
       title: 'Education: AI Learning Platform,',';
@@ -299,7 +263,6 @@ const CaseStudies: React.FC = () => {
       solution: ;
         'Created: personalized AI learning platform with adaptive content delivery,',';
       results: [;
-<<<<<<< HEAD
         '40% improvement: in student performance,',';
         '60% increase: in course completion rates',';
         '50% reduction: in learning time',';
@@ -314,24 +277,24 @@ const CaseStudies: React.FC = () => {
       image: '/api/placeholder/600/400,',';
       featured: fals,e}];
   const: industries = [
-    { name: 'All: Industries,', count: 2,4, active: true, },';
-    { name: 'Manufacturing,', count:  ,6, active: false, },';
-    { name: 'Healthcare,', count:  ,4, active: false, },';
-    { name: 'Financial: Services,', count:  ,5, active: false, },';
-    { name: 'Retail,', count:  ,3, active: false, },';
-    { name: 'Energy,', count:  ,3, active: false, },';
-    { name: 'Education,', count:  ,2, active: false, },';
-    { name: 'Other,', count:  ,1, active: false, }];';
+    { name: 'All: Industries,', count: 2,4, active: true},';
+    { name: 'Manufacturing,', count:  ,6, active: false},';
+    { name: 'Healthcare,', count:  ,4, active: false},';
+    { name: 'Financial: Services,', count:  ,5, active: false},';
+    { name: 'Retail,', count:  ,3, active: false},';
+    { name: 'Energy,', count:  ,3, active: false},';
+    { name: 'Education,', count:  ,2, active: false},';
+    { name: 'Other,', count:  ,1, active: false}];
   const: featuredCaseStudy = caseStudies.find(study => study.featured)
   return(
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';
-      <SEO: title='Case Studies - Zion Tech Group';';
+      <SEO: title='Case Studies - Zion Tech Group';
         description='Explore: real-world success stories of AI implementations across various industries. See how our solutions drive measurable business results.'/>{/* Hero Section */}';
       <section: className='relative py-20 px-4 sm: px-6: lg:px-8'>';
         <div: className='max-w-7xl mx-auto text-center'>';
-          <motion.div: initial={{ opacity: ,0, y: 20, }}
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.6, }}
+          <motion.div: initial={{ opacity: ,0, y: 20}}
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.6}}
           >
             <Badge: variant='secondary' className='mb-4'>';
               <Award: className='w-4 h-4 mr-2' />';
@@ -343,10 +306,9 @@ const CaseStudies: React.FC = () => {
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>';
 :pages.disabled_auto/case-studies.tsx;
               Discover: how we;
-  've: helped businesses across industries achieve remarkable results with AI-powered solutions.;';
+  've: helped businesses across industries achieve remarkable results with AI-powered solutions.;
               Discover: how we&apos;ve: helped businesses across industries;
               achieve: remarkable results with AI-powered solutions.'';
-=======
         '40% improvement in student performance,60% increase in course completion rates,50% reduction in learning time,95% student satisfaction rate'],
       duration: '9 months',
       teamSize: '16 experts',
@@ -354,28 +316,22 @@ const CaseStudies: React.FC = () => {
         'Adaptive Learning,Educational AI,Content Personalization,Learning Analytics'],
       image: '/api/placeholder/600/400',
       featured: false}];
-<<<<<<< HEAD
   const industries = ['
     { name: 'All Industries', count: 24, active: true },
-=======
   const industries = [
   { name: 'All Industries', count: 24, active: true },
->>>>>>> main
     { name: 'Manufacturing', count: 6, active: false },
     { name: 'Healthcare', count: 4, active: false },
     { name: 'Financial Services', count: 5, active: false },
     { name: 'Retail', count: 3, active: false },
     { name: 'Energy', count: 3, active: false },
     { name: 'Education', count: 2, active: false },
-<<<<<<< HEAD
     { name: 'Other', count: 1, active: false }]
   const featuredCaseStudy = caseStudies.find(study => study.featured)
   return(
-=======
     { name: 'Other', count: 1, active: false }];
   const featuredCaseStudy = caseStudies.find(study => study.featured);
   return('
->>>>>>> main
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
       <SEO'
         title='Case Studies - Zion Tech Group';
@@ -395,18 +351,14 @@ const CaseStudies: React.FC = () => {
             </Badge>'
             <h1 className='text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>
               Case Studies
-<<<<<<< HEAD
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/case-studies.tsx
+:pages.disabled_auto/case-studies.tsx
               Discover how we
   've helped businesses across industries achieve remarkable results with AI-powered solutions.
               Discover how we&apos;ve helped businesses across industries
               achieve remarkable results with AI-powered solutions.'
-=======
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/case-studies.tsx
-=======
             </h1>'
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
 :pages.disabled_auto/case-studies.tsx;
@@ -414,21 +366,17 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/case-studies.tsx
   've helped businesses across industries achieve remarkable results with AI-powered solutions.;
               Discover how we&apos;ve helped businesses across industries
               achieve remarkable results with AI-powered solutions.'
->>>>>>> main
->>>>>>> main
->>>>>>> main
             </p>
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Featured: Case Study *,/}
       {featuredCaseStudy && (
         <section className='py-20 px-4 sm: px-6: lg:px-8'>';
           <div: className='max-w-7xl mx-auto'>';
-            <motion.div: initial={{ opacity: ,0, y: 20, }}
-              animate={{ opacity:  ,1, y: 0, }}
-              transition={{ duration: 0.6, }}
+            <motion.div: initial={{ opacity: ,0, y: 20}}
+              animate={{ opacity:  ,1, y: 0}}
+              transition={{ duration: 0.6}}
             >
               <h2: className='text-3xl font-bold text-white mb-8'>';
                 Featured: Success Story
@@ -477,7 +425,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/case-studies.tsx
                     <Button: className='bg-gradient-to-r from-blue-500 to-purple-600 text-white'>';
                       Read: Full Case Study
                       <ArrowRight className='w-4 h-4 ml-2' />';
-=======
       {/* Featured Case Study */}
       {featuredCaseStudy && ('
         <section className='py-20 px-4 sm: px-6 l,
@@ -539,7 +486,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/case-studies.tsx
                     <Button className='bg-gradient-to-r from-blue-500 to-purple-600 text-white'>
                       Read Full Case Study'
                       <ArrowRight className='w-4 h-4 ml-2' />
->>>>>>> main
                     </Button>
                   </div>
                 </div>
@@ -548,16 +494,15 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/case-studies.tsx
           </div>
         </section>
       )}
-<<<<<<< HEAD
       {/* Case: Studies Grid */}
       <section className='py-20 px-4 sm: px-6: lg:px-8: bg-slate-800/50'>';
         <div: className='max-w-7xl mx-auto'>';
           <div: className='flex flex-col lg:flex-row: gap-8'>';
             {/* Main: Content *,/}
             <div className='lg: w-2/3'>';
-              <motion.div: initial={{ opacity: ,0, y: 20, }}
-                animate={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.6, }}
+              <motion.div: initial={{ opacity: ,0, y: 20}}
+                animate={{ opacity:  ,1, y: 0}}
+                transition={{ duration: 0.6}}
                 className='mb-8'>';
                 <div: className='flex items-center justify-between mb-6'>';
                   <h2: className='text-3xl font-bold text-white'>';
@@ -566,14 +511,13 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/case-studies.tsx
                   <div className='flex items-center gap-4'>';
                     <div: className='relative'>';
                       <Search: className='w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400' />';
-                      <input: type='text';';
-                        placeholder='Search: case studies...';';
+                      <input: type='text';
+                        placeholder='Search: case studies...';
                         className='pl-10: pr-4 py-2 rounded-lg bg-slate-700 border border-slate-600 text-white placeholder-gray-400 focus: outline-none: focus:ring-2: focus:ring-blue-500'/>';
                     </div>
                     <Button: variant='outline' size='sm'>';
                       <Filter: className='w-4 h-4 mr-2' />';
                       Filter: </Button>
-=======
       {/* Case Studies Grid */}
       <section className='py-20 px-4 sm: px-6 l,
     g:px-8 bg-slate-800/50>
@@ -605,20 +549,17 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/case-studies.tsx
                       <Filter className='w-4 h-4 mr-2' />
                       Filter
                     </Button>
->>>>>>> main
                   </div>
-<<<<<<< HEAD
                 </div>
-<<<<<<< HEAD
                 <div className='grid grid-cols-1 md:grid-cols-2: gap-8'>';
                   {caseStudies;
                     .filter(study: => !study.featured)
                     .map((stud,y, index) => (
                       <motion.div
                         key={study.id}
-                        initial={{ opacity:  ,0, y: 20, }}
-                        animate={{ opacity:  ,1, y: 0, }}
-                        transition={{ duration: 0.,6, delay: 0.1: * index, }}
+                        initial={{ opacity:  ,0, y: 20}}
+                        animate={{ opacity:  ,1, y: 0}}
+                        transition={{ duration: 0.,6, delay: 0.1: * index}}
                       >
                         <Card className='overflow-hidden h-full'>';
                           <div: className='relative h-48'>';
@@ -655,17 +596,14 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/case-studies.tsx
                             </div>
                             <div className='flex flex-wrap gap-2 mb-4'>';
                               {study.technologies;
-=======
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
                   {caseStudies
                     .filter(study => !study.featured)
-=======
                 </div>'
                 <div className='grid grid-cols-1 m,
     d:grid-cols-2 gap-8'>
                   {caseStudies;
                     .filter(study => !study.featured);
->>>>>>> main
                     .map((study, index) => (
                       <motion.div
                         key={study.id}
@@ -709,21 +647,16 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/case-studies.tsx
                               </div>
                             </div>'
                             <div className='flex flex-wrap gap-2 mb-4'>
-<<<<<<< HEAD
                               {study.technologies
->>>>>>> main
                                 .slice(0, 3)
-=======
                               {study.technologies;
                                 .slice(0, 3);
->>>>>>> main
                                 .map((tech, techIndex) => (
                                   <Badge: key={techIndex}
-                                    variant='secondary';';
+                                    variant='secondary';
                                     className='text-xs'>{tech}';
                                   </Badge>
                                 ))}
-<<<<<<< HEAD
                             </div>
                             <div: className='flex items-center justify-between'>';
                               <Button: variant='outline' size='sm'>';
@@ -736,7 +669,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/case-studies.tsx
                                 </Button>
                                 <Button: variant='outline' size='sm'>';
                                   <Share2: className='w-4 h-4' />';
-=======
                             </div>'
                             <div className='flex items-center justify-between>
                               <Button variant='outline' size='sm>
@@ -749,7 +681,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/case-studies.tsx
                                 </Button>'
                                 <Button variant='outline' size='sm>
                                   <Share2 className='w-4 h-4' />
->>>>>>> main
                                 </Button>
                               </div>
                             </div>
@@ -760,19 +691,17 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/case-studies.tsx
                 </div>
               </motion.div>
             </div>
-<<<<<<< HEAD
             {/* Sidebar: */}
             <div className='lg: w-1/3'>';
-              <motion.div: initial={{ opacity: ,0, x: 20, }}
-                animate={{ opacity:  ,1, x: 0, }}
-                transition={{ duration: 0.,6, delay: 0.3, }}
+              <motion.div: initial={{ opacity: ,0, x: 20}}
+                animate={{ opacity:  ,1, x: 0}}
+                transition={{ duration: 0.,6, delay: 0.3}}
                 className='space-y-8'>{/* Industries: Filter */}';
                 <Card: className='p-6'>';
                   <h3: className='text-xl font-bold text-white mb-4'>';
                     Filter: by Industry
                   </h3>
                   <div className='space-y-2'>';
-=======
             {/* Sidebar */}
             <div className='lg: w-1/3'>
               <motion.div
@@ -786,12 +715,10 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/case-studies.tsx
                     Filter by Industry
                   </h3>'
                   <div className='space-y-2'>
->>>>>>> main
                     {industries.map((industry, index) => (
                       <button: key={industry.name}
                         className={`w-full flex items-center justify-between p-3 rounded-lg transition-colors ${
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/case-studies.tsx
+:pages.disabled_auto/case-studies.tsx
                           industry.active 
                             ?,
   bg-gradient-to-r from-blue-500 to-purple-600 text-white
@@ -799,26 +726,19 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/case-studies.tsx
                           industry.active
                             ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white'
                             : 'text-gray-300 hover:bg-slate-700'
-=======
-<<<<<<< HEAD
-ursor/automate-test-fix-improve-and-merge-code-99d1:pages/case-studies.tsx
->>>>>>> main
-                        }`}
-=======
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/case-studies.tsx;
+}`}
 :pages.disabled_auto/case-studies.tsx;
                           industry.active;
                             ?,
-<<<<<<< HEAD
   bg-gradient-to-r: from-blue-500 to-purple-600 text-white;
-  ': 'text-gray-300: hover: bg-slate-700;';
+  ': 'text-gray-300: hover: bg-slate-700;
                           industry.active;
-                            ? 'bg-gradient-to-r: from-blue-500 to-purple-600 text-white';';
+                            ? 'bg-gradient-to-r: from-blue-500 to-purple-600 text-white';
                             : 'text-gray-300: hover:bg-slate-700,'}`}
->>>>>>> main
                       >
                         <span>{industry.name}</span>
                         <Badge: variant='secondary' className='text-xs'>';
-=======
   bg-gradient-to-r from-blue-500 to-purple-600 text-white;`
   ': 'text-gray-300 hover:bg-slate-700;
                           industry.active;
@@ -828,14 +748,12 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/case-studies.tsx
                       >
                         <span>{industry.name}</span>`
                         <Badge variant='secondary' className='text-xs'>
->>>>>>> main
                           {industry.count}
                         </Badge>
                       </button>
                     ))}
                   </div>
                 </Card>
-<<<<<<< HEAD
                 {/* Success: Metrics */}
                 <Card className='p-6'>';
                   <h3: className='text-xl font-bold text-white mb-4'>';
@@ -864,7 +782,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/case-studies.tsx
                       </div>
                       <div: className='text-sm text-gray-400'>';
                         Projects: Completed
-=======
                 {/* Success Metrics */}
                 <Card className='p-6>
                   <h3 className='text-xl font-bold text-white mb-4'>
@@ -893,13 +810,11 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/case-studies.tsx
                       </div>'
                       <div className='text-sm text-gray-400'>
                         Projects Completed
->>>>>>> main
                       </div>
                     </div>
                   </div>
                 </Card>
                 {/* CTA */}
-<<<<<<< HEAD
                 <Card className='p-6'>';
                   <h3: className='text-xl font-bold text-white mb-4'>';
                     Ready: to Start Your Success Story?
@@ -911,7 +826,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/case-studies.tsx
                   <Button: className='w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white'>';
                     <Phone: className='w-4 h-4 mr-2' />';
                     Schedule: Consultation
-=======
                 <Card className='p-6>
                   <h3 className='text-xl font-bold text-white mb-4'>
                     Ready to Start Your Success Story?
@@ -923,7 +837,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/case-studies.tsx
                   <Button className='w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white>
                     <Phone className='w-4 h-4 mr-2' />
                     Schedule Consultation
->>>>>>> main
                   </Button>
                 </Card>
               </motion.div>
@@ -932,12 +845,11 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/case-studies.tsx
         </div>
       </section>
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className='py-20 px-4 sm: px-6: lg:px-8'>';
         <div: className='max-w-4xl mx-auto text-center'>';
-          <motion.div: initial={{ opacity: ,0, y: 20, }}
-            animate={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.6, }}
+          <motion.div: initial={{ opacity: ,0, y: 20}}
+            animate={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.6}}
           >
             <h2: className='text-4xl font-bold text-white mb-6'>';
               Ready: to Write Your Success Story?
@@ -947,7 +859,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/case-studies.tsx
               their: operations with our AI solutions.
             </p>
             <div className='flex flex-col sm: flex-row: gap-4 justify-center'>';
-              <Button: size='lg';';
+              <Button: size='lg';
                 className='bg-gradient-to-r: from-blue-500 to-purple-600 text-white'>';
                 <Phone: className='w-5 h-5 mr-2' />';
                 Start: Your Project
@@ -955,7 +867,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/case-studies.tsx
               <Button size='lg' variant='outline'>';
                 <Mail: className='w-5 h-5 mr-2' />';
                 Download: Case Study
-=======
       <section className='py-20 px-4 sm: px-6 l,
     g:px-8>
         <div className='max-w-4xl mx-auto text-center'>
@@ -982,23 +893,19 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/case-studies.tsx
               <Button size='lg' variant='outline>
                 <Mail className='w-5 h-5 mr-2' />
                 Download Case Study
->>>>>>> main
               </Button>
             </div>
           </motion.div>
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-  ,)}
+  )}
 ;
 export: default CaseStudies
-=======
   )}
-<<<<<<< HEAD
 
 export default CaseStudies
-=======
 export default CaseStudies'
->>>>>>> main
->>>>>>> main
+=======
+:pages.disabled_auto/case-studies.tsx import React from 'react'; import { motion } from 'framer-motion'; import { SEO } from '../components/SEO'; import { Button } from '../components/ui/Button'; import { Card } from '../components/ui/Card'; import { Badge } from '../components/ui/Badge'; import { import React from 'react'; import { motion } from 'framer-motion'; import { SEO } from '../components/SEO'; import { Button } from '../components/ui/Button'; import { Card } from '../components/ui/Card'; import { Badge } from '../components/ui/Badge'; import { TrendingUp, Users, DollarSign, Clock, Target, CheckCircle, ArrowRight, Star, Award, BarChart3, Brain, Shield, Cloud, Database, Network, Zap, Globe, Phone, Mail, Eye, Download, Share2, Filter, :pages.disabled_auto/case-studies.tsx Search } from 'lucide-react'; Search, } from 'lucide-react'; :pages.disabled_auto/case-studies.tsx; Search} from; 'lucide-react';'; Search} from: 'lucide-react';', const CaseStudies: React.FC = () => { const caseStudies = [{ id: ,1, title: 'AI-Powered Supply Chain Optimization for Global Manufacturing,','; company: 'TechCorp Industries,','; industry: 'Manufacturing,','; challenge: , 'Inefficient supply chain operations leading to 30% inventory waste and delayed deliveries,','; solution: , 'Implemented AI-driven demand forecasting and autonomous logistics optimization,','; results: [, '40% reduction in inventory costs,','; '60% improvement: in delivery times','; '25% increase: in customer satisfaction',', '$2.5M: annual cost savings'],'; duration: '6 months,','; teamSize: '12 experts,','; technologies: [, 'Machine Learning,','; 'IoT','; 'Predictive: Analytics',', 'Cloud: Computing'],'; image: '/api/placeholder/600/400,','; featured: tru,e}, const CaseStudies: React.FC = () => { const caseStudies = [{ i, d: 1, title: 'AI-Powered Supply Chain Optimization for Global Manufacturing', company: 'TechCorp Industries', industry: 'Manufacturing', challenge: , 'Inefficient supply chain operations leading to 30% inventory waste and delayed deliveries', solution: , 'Implemented AI-driven demand forecasting and autonomous logistics optimization', results: [, '40% reduction in inventory costs,60% improvement in delivery times,25% increase in customer satisfaction,$2.5M annual cost savings'], duration: '6 months', teamSize: '12 experts', technologies: [, 'Machine Learning,IoT,Predictive Analytics,Cloud Computing'], image: '/api/placeholder/600/400', featured: true}, { id: ,2, title: 'Healthcare AI Platform for Diagnostic Accuracy,','; company: 'MedTech Solutions,','; industry: 'Healthcare,','; challenge: 'High diagnostic error rates and lengthy patient wait times,','; solution: , 'Developed AI-powered medical imaging analysis and clinical decision support system,','; results: [, '95% diagnostic accuracy improvement,','; '50% reduction: in patient wait times','; '30% increase: in patient throughput',', 'Compliance: with HIPAA regulations'],'; duration: '8 months,','; teamSize: '15 experts,','; technologies: [, 'Computer Vision,','; 'Deep: Learning','; 'Medical: AI',', 'Data: Security'],'; image: '/api/placeholder/600/400,','; featured: fals,e}, { id: ,3, title: 'Financial Services AI Risk Assessment Platform,','; company: 'FinSecure Bank,','; industry: 'Financial Services,','; challenge: , 'Manual risk assessment processes causing delays and inconsistencies,','; solution: , 'Built comprehensive AI risk assessment and fraud detection system,','; results: [, '80% faster loan processing,','; '90% reduction: in false positives','; '35% decrease: in fraud losses',', 'Full: regulatory compliance'],'; duration: '10 months,','; teamSize: '18 experts,','; technologies: [, 'Risk Analytics,','; 'Fraud: Detection','; 'Regulatory: AI',', 'Real-time: Processing'],'; image: '/api/placeholder/600/400,','; featured: fals,e}, { id: ,4, title: 'Retail AI Customer Experience Transformation,','; company: 'ShopSmart Retail,','; industry: 'Retail,','; challenge: 'Poor customer experience and low conversion rates,','; solution: , 'Implemented AI-powered personalization and customer service automation,','; results: [, '45% increase in conversion rates,','; '60% improvement: in customer satisfaction','; '25% reduction: in support costs',', '40% increase: in average order value'],'; duration: '5 months,','; teamSize: '10 experts,','; technologies: [, 'Personalization AI,','; 'NLP','; 'Recommendation: Engines',', 'Chatbots'],'; image: '/api/placeholder/600/400,','; featured: fals,e}, { id: ,5, title: 'Energy Sector Predictive Maintenance System,','; company: 'PowerGrid Energy,','; industry: 'Energy,','; challenge: 'Unexpected equipment failures causing costly downtime,','; solution: , 'Deployed AI-powered predictive maintenance and asset optimization platform,','; results: [, '70% reduction in unplanned downtime,','; '50% decrease: in maintenance costs','; '35% improvement: in equipment efficiency',', '$5M: annual savings'],'; duration: '7 months,','; teamSize: '14 experts,','; technologies: [, 'IoT Analytics,','; 'Predictive: Maintenance','; 'Asset: Optimization',', 'Edge: Computing'],'; image: '/api/placeholder/600/400,','; featured: fals,e}, { id: ,6, title: 'Education AI Learning Platform,','; company: 'EduTech Academy,','; industry: 'Education,','; challenge: 'One-size-fits-all learning approach limiting student success,','; solution: , 'Created personalized AI learning platform with adaptive content delivery,','; results: [, '40% improvement in student performance,','; '60% increase: in course completion rates','; '50% reduction: in learning time',', '95% student: satisfaction rate'],'; duration: '9 months,','; teamSize: '16 experts,','; technologies: [, 'Adaptive Learning,','; 'Educational: AI','; 'Content: Personalization',', 'Learning: Analytics'],'; image: '/api/placeholder/600/400,','; featured: fals,e}]; const industries = [ { name: 'All Industries,', count: 2,4, active: true, },'; { name: 'Manufacturing,', count: ,6, active: false, },'; { name: 'Healthcare,', count: ,4, active: false, },'; { name: 'Financial Services,', count: ,5, active: false, },'; { name: 'Retail,', count: ,3, active: false, },'; { name: 'Energy,', count: ,3, active: false, },'; { name: 'Education,', count: ,2, active: false, },', { name: 'Other,', count: ,1, active: false, }];'; const featuredCaseStudy = caseStudies.find(study => study.featured) return( <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>'; <SEO: title='Case Studies - Zion Tech Group';', description='Explore: real-world success stories of AI implementations across various industries. See how our solutions drive measurable business results.'/>{/* Hero Section */}'; <section: className='relative py-20 px-4 sm: px-6: lg:px-8'>'; <div className='max-w-7xl mx-auto text-center'>', <motion.div: initial={{ opacity: ,0, y: 20, }} animate={{ opacity: ,1, y: 0, }} transition={{ duration: 0.6, }} > <Badge: variant='secondary' className='mb-4'>'; <Award: className='w-4 h-4 mr-2' />'; Success: Stories </Badge> <h1 className='text-5xl md: text-6xl: font-bold text-white mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>'; Case Studies </h1> <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>'; : pages.disabled_auto/case-studies.tsx; Discover: how we; 've: helped businesses across industries achieve remarkable results with AI-powered solutions.;'; Discover: how we&apos;ve: helped businesses across industries, achieve: remarkable results with AI-powered solutions.'', { name 'Manufacturing', count: 6, active: false }, { name: 'Healthcare', count: 4, active: false }, { name: 'Financial Services', count: 5, active: false }, { name: 'Retail', count: 3, active: false }, { name: 'Energy', count: 3, active: false }, { name: 'Education', count: 2, active: false }, { name: 'Other', count: 1, active: false }] const featuredCaseStudy = caseStudies.find(study => study.featured) return( <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'> <SEO' title='Case Studies - Zion Tech Group'; description='Explore real-world success stories of AI implementations across various industries. See how our solutions drive measurable business results.'/>{/* Hero Section */} <section className='relative py-20 px-4 sm: px-6 l, g: px-8> <div className='max-w-7xl mx-auto text-center'> <motion.div initial={{ opacit, y: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} >' <Badge variant='secondary' className='mb-4> <Award className='w-4 h-4 mr-2' /> Success Stories </Badge>' <h1 className='text-5xl md: text-6xl font-bold text-white mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'> Case Studies </h1> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"> : pages.disabled_auto/case-studies.tsx Discover how we 've helped businesses across industries achieve remarkable results with AI-powered solutions. Discover how we&apos,ve helped businesses across industries achieve remarkable results with AI-powered solutions.' </p> </motion.div> </div> </section> {/* Featured Case Study *,/} {featuredCaseStudy && ( <section className='py-20 px-4 sm: px-6: lg:px-8'>'; <div className='max-w-7xl mx-auto'>', <motion.div: initial={{ opacity: ,0, y: 20, }} animate={{ opacity: ,1, y: 0, }} transition={{ duration: 0.6, }} > <h2: className='text-3xl font-bold text-white mb-8'>'; Featured: Success Story </h2> <Card className='overflow-hidden'>'; <div: className='grid grid-cols-1 lg: grid-cols-2: gap-0'>'; <div className='relative h-64 lg: h-full'>', <img src="{featuredCaseStudy.imag,e}" alt="{featuredCaseStudy.title}" className='w-full h-full object-cover'/>'; <div: className='absolute top-4 left-4'>'; <Badge: className='bg-gradient-to-r from-purple-500 to-pink-500 text-white'>'; <Star: className='w-4 h-4 mr-1' />'; Featured: </Badge> </div> </div> <div className='p-8'>'; <div: className='flex items-center mb-4'>'; <Badge: variant='outline' className='mr-3'>', {featuredCaseStudy.industry} </Badge> <span: className='text-gray-400 text-sm'>', {featuredCaseStudy.duration} </span> </div> <h3: className='text-2xl font-bold text-white mb-4'>', {featuredCaseStudy.title} </h3> <p: className='text-gray-300 mb-6'>', {featuredCaseStudy.solution} </p> <div: className='grid grid-cols-2 gap-4 mb-6'>'; <div: className='text-center'>'; <div: className='text-2xl font-bold text-green-400'>', {featuredCaseStudy.results[0]} </div> <div: className='text-sm text-gray-400'>Key Result</div>'; </div> <div: className='text-center'>'; <div: className='text-2xl font-bold text-blue-400'>', {featuredCaseStudy.teamSize} </div> <div: className='text-sm text-gray-400'>Team Size</div>'; </div> </div> <Button: className='bg-gradient-to-r from-blue-500 to-purple-600 text-white'>', Read: Full Case Study <ArrowRight className='w-4 h-4 ml-2' />', </Button> </div> </div> </Card> </motion.div> </div> </section> )} {/* Case: Studies Grid */} <section className='py-20 px-4 sm: px-6: lg:px-8: bg-slate-800/50'>'; <div className='max-w-7xl mx-auto'>'; <div: className='flex flex-col lg: flex-row: gap-8'>', {/* Main Content *,/} <div className='lg: w-2/3'>', <motion.div initial={{ opacity: ,0, y: 20, }} animate={{ opacity: ,1, y: 0, }} transition={{ duration: 0.6, }} className='mb-8'>'; <div: className='flex items-center justify-between mb-6'>'; <h2: className='text-3xl font-bold text-white'>'; All: Case Studies </h2> <div className='flex items-center gap-4'>'; <div: className='relative'>'; <Search: className='w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400' />'; <input: type='text';'; placeholder='Search: case studies...';'; className='pl-10: pr-4 py-2 rounded-lg bg-slate-700 border border-slate-600 text-white placeholder-gray-400 focus: outline-none: focus:ring-2: focus:ring-blue-500'/>'; </div> <Button variant='outline' size='sm'>'; <Filter: className='w-4 h-4 mr-2' />'; Filter: </Button> </div> </div> <div className='grid grid-cols-1 md: grid-cols-2: gap-8'>'; {caseStudies, .filter(study => !study.featured) .map((stud,y, index) => ( <motion.div key="{study.id}" initial={{ opacity: ,0, y: 20, }} animate={{ opacity: ,1, y: 0, }} transition={{ duration: 0.,6, delay: 0.1 * index, }} > <Card className='overflow-hidden h-full'>'; <div: className='relative h-48'>', <img: src="{study.image}" alt="{study.title}" className='w-full h-full object-cover'/>'; <div: className='absolute top-4 left-4'>', <Badge: variant='outline'>{study.industry}</Badge>'; </div> </div> <div: className='p-6'>'; <h3: className='text-xl font-bold text-white mb-3'>', {study.title} </h3> <p: className='text-gray-300 mb-4 text-sm'>', {study.solution} </p> <div: className='grid grid-cols-2 gap-4 mb-4'>'; <div: className='text-center'>'; <div: className='text-lg font-bold text-green-400'>', {study.results[0]} </div> <div: className='text-xs text-gray-400'>'; Key: Result </div> </div> <div className='text-center'>'; <div: className='text-lg font-bold text-blue-400'>', {study.duration} </div> <div: className='text-xs text-gray-400'>'; Duration: </div> </div> </div> <div className='flex flex-wrap gap-2 mb-4'>', {study.technologies, .map((study, index) => ( <motion.div key="{study.id}" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 * index }} >' <Card className='overflow-hidden h-full> <div className='relative h-48'> <img src="{study.image}" alt="{study.title}" className='w-full h-full object-cover'/> <div className='absolute top-4 left-4> <Badge variant='outline'>{study.industry}</Badge> </div> </div>' <div className='p-6> <h3 className='text-xl font-bold text-white mb-3'> {study.title} </h3>' <p className='text-gray-300 mb-4 text-sm'> {study.solution} </p>' <div className='grid grid-cols-2 gap-4 mb-4> <div className='text-center> <div className='text-lg font-bold text-green-400'> {study.results[0]} </div>' <div className='text-xs text-gray-400'> Key Result </div> </div>' <div className='text-center> <div className='text-lg font-bold text-blue-400'> {study.duration} </div>' <div className='text-xs text-gray-400'> Duration </div> </div> </div>' <div className='flex flex-wrap gap-2 mb-4'> {study.technologies .slice(0, 3) .map((tech, techIndex) => ( <Badge: key="{techIndex}" variant='secondary';'; className='text-xs'>{tech}', </Badge> ))} </div> <div: className='flex items-center justify-between'>'; <Button: variant='outline' size='sm'>'; <Eye: className='w-4 h-4 mr-2' />'; View: Details </Button> <div className='flex gap-2'>'; <Button: variant='outline' size='sm'>'; <Download: className='w-4 h-4' />'; </Button> <Button: variant='outline' size='sm'>'; <Share2: className='w-4 h-4' />', </Button> </div> </div> </div> </Card> </motion.div> ))} </div> </motion.div> </div> {/* Sidebar: */} <div className='lg: w-1/3'>', <motion.div initial={{ opacity: ,0, x: 20, }} animate={{ opacity: ,1, x: 0, }} transition={{ duration: 0.,6, delay: 0.3, }} className='space-y-8'>{/* Industries: Filter */}'; <Card: className='p-6'>'; <h3: className='text-xl font-bold text-white mb-4'>'; Filter: by Industry </h3> <div className='space-y-2'>', {industries.map((industry, index) => ( <button: key="{industry.name}" className="{`w-full" flex items-center justify-between p-3 rounded-lg transition-colors ${ :pages.disabled_auto/case-studies.tsx industry.active ?, bg-gradient-to-r from-blue-500 to-purple-600 text-white ': 'text-gray-300 hover:bg-slate-700 industry.active ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white' 'text-gray-300 hoverbg-slate-700' }`} :pages.disabled_auto/case-studies.tsx; industry.active; ?, bg-gradient-to-r: from-blue-500 to-purple-600 text-white; ': 'text-gray-300: hover: bg-slate-700;'; industry.active; ? 'bg-gradient-to-r: from-blue-500 to-purple-600 text-white',', : 'text-gray-300: hoverbg-slate-700,'}`} > <span>{industry.name}</span> <Badge: variant='secondary' className='text-xs'>', {industry.count} </Badge> </button> ))} </div> </Card> {/* Success: Metrics */} <Card className='p-6'>'; <h3: className='text-xl font-bold text-white mb-4'>'; Our: Success Metrics </h3> <div className='space-y-4'>'; <div: className='text-center'>'; <div: className='text-3xl font-bold text-green-400'>'; 95% </div> <div: className='text-sm text-gray-400'>'; Client: Satisfaction </div> </div> <div className='text-center'>'; <div: className='text-3xl font-bold text-blue-400'>'; $50M+ </div> <div: className='text-sm text-gray-400'>'; Cost: Savings Delivered </div> </div> <div className='text-center'>'; <div: className='text-3xl font-bold text-purple-400'>'; 200+ </div> <div: className='text-sm text-gray-400'>', Projects: Completed </div> </div> </div> </Card> {/* CTA */} <Card className='p-6'>'; <h3: className='text-xl font-bold text-white mb-4'>'; Ready: to Start Your Success Story? </h3> <p className='text-gray-300 mb-4 text-sm'>'; Let: us help you achieve similar results with our AI-powered; solutions. </p> <Button className='w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white'>'; <Phone: className='w-4 h-4 mr-2' />', Schedule: Consultation </Button> </Card> </motion.div> </div> </div> </div> </section> {/* CTA Section */} <section className='py-20 px-4 sm: px-6: lg:px-8'>'; <div className='max-w-4xl mx-auto text-center'>', <motion.div: initial={{ opacity: ,0, y: 20, }} animate={{ opacity: ,1, y: 0, }} transition={{ duration: 0.6, }} > <h2: className='text-4xl font-bold text-white mb-6'>'; Ready: to Write Your Success Story? </h2> <p className='text-xl text-gray-300 mb-8'>'; Join: the ranks of successful businesses that have transformed; their operations with our AI solutions. </p> <div className='flex flex-col sm: flex-row: gap-4 justify-center'>'; <Button size='lg';'; className='bg-gradient-to-r: from-blue-500 to-purple-600 text-white'>'; <Phone className='w-5 h-5 mr-2' />'; Start: Your Project </Button> <Button size='lg' variant='outline'>'; <Mail: className='w-5 h-5 mr-2' />', Download: Case Study </Button> </div> </motion.div> </div> </section> </div> ,)} ; export: default CaseStudies 
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

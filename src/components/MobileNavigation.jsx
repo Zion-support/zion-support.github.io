@@ -1,9 +1,8 @@
-<<<<<<< HEAD
-import React, { useState, useEffect, useRef } from 'react';''';,"});,"})
+import React { useState, useEffect, useRef } from 'react';''';,"});,"})
 import { Link, useLocation } from 'react-router-dom';''';,"});,"})
 import { motion, AnimatePresence } from 'framer-motion';,"});,"})
 import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, onToggle }) => {}"});,"})
-    const [activeDropdown, setActiveDropdown] = useState(null);';,"});,"})
+    const [activeDropdown, setActiveDropdown] = useState(null);,"});,"})
     const [searchQuery, setSearchQuery] = useState('');,"});,"})
     const location = useLocation();,"});,"})
     const menuRef = useRef(null);,"});,"})
@@ -11,11 +10,10 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
     useEffect ( () => {}"});,"})
         onToggle () }, [location.pathname]) ;,"});,"})
     // Close menu when clicking outside;,"});,"})
-    useEffect ( () => {}"});,"})
         const handleClickOutside = (event) => {}"});,"})
             if (menuRef.current && !menuRef.current.contains(event.target)) {}"});,"})
-                onToggle()}"});,"})
-        };,"});,"})
+                onToggle()}"});,"});
+};,"});,"})
         if (isOpen) {}"});,"})
 ';,"});,"})
 '';,"});,"})
@@ -23,16 +21,10 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
             document.addEventListener('mousedown', handleClickOutside);''';,"});,"})
             document.body.style.overflow = 'hidden'}"});,"})
         return () => {}"});,"})
-';,"});,"})
-'';,"});,"})
-''';,"});,"})
             document.removeEventListener('mousedown', handleClickOutside);''';,"});,"})
             document.body.style.overflow = 'unset'}}, [isOpen, onToggle]);,"});,"})
     const navigationItems = [];,"});,"})
         {}"});,"})
-';,"});,"})
-'';,"});,"})
-''';,"});,"})
             label: 'Services',''';,"});,"})
             href: '/services','';,"});,"})
             children[;''';,"});,"})
@@ -42,95 +34,50 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
                 { label: 'Cloud Services', href: '/services/cloud' },''';,"});,"})
                 { label: 'Digital Transformation', href: '/services/transformation' },''';,"});,"})
                 { label: 'Consulting', href: '/services/consulting' }"});,"})
-            ];,"});,"})
-        },;,"});,"})
-        {}"});,"})
-';,"});,"})
-'';,"});,"})
-''';,"});,"})
+            ],"});,"});
+},;,"});,"})
             label: 'Solutions',''';,"});,"})
             href: '/solutions','';,"});,"})
-            children[;''';,"});,"})
                 { label: 'Enterprise Solutions', href: '/solutions/enterprise' },''';,"});,"})
                 { label: 'Startup Solutions', href: '/solutions/startup' },''';,"});,"})
                 { label: 'Government Solutions', href: '/solutions/government' },''';,"});,"})
                 { label: 'Healthcare Solutions', href: '/solutions/healthcare' }"});,"})
-            ];,"});,"})
-        },;,"});,"})
-        {}"});,"})
-';,"});,"})
-'';,"});,"})
-''';,"});,"})
             label: 'Industries',''';,"});,"})
             href: '/industries','';,"});,"})
-            children[;''';,"});,"})
                 { label: 'Technology', href: '/industries/technology' },''';,"});,"})
                 { label: 'Healthcare', href: '/industries/healthcare' },''';,"});,"})
                 { label: 'Finance', href: '/industries/finance' },''';,"});,"})
                 { label: 'Manufacturing', href: '/industries/manufacturing' },''';,"});,"})
                 { label: 'Education', href: '/industries/education' }"});,"})
-            ];,"});,"})
-        },;,"});,"})
-        {}"});,"})
-';,"});,"})
-'';,"});,"})
-''';,"});,"})
             label: 'Comp',''';,"});,"})
             href: '/about','';,"});,"})
-            children[;''';,"});,"})
                 { label: 'About Us', href: '/about' },''';,"});,"})
                 { label: 'Careers', href: '/careers' },''';,"});,"})
                 { label: 'News', href: '/news' },''';,"});,"})
                 { label: 'Press', href: '/press' },''';,"});,"})
                 { label: 'Contact', href: '/contact' }"});,"})
-            ];,"});,"})
-    ];,"});,"})
     const toggleDropdown = (label) => {}"});,"})
         setActiveDropdown(activeDropdown === label ? null : label)};,"});,"})
     const handleSearch = (e) => {}"});,"})
-        e.preventDefault();';,"});,"})
+        e.preventDefault();,"});,"})
         // Implement search functionality'';,"});,"})
         // // // // // // // // console.log('Search query:', searchQuery);,"});,"})
-    };';,"});,"})
         // console.log('Search query:', searchQuery)};,"});,"})
     const menuVariants = {}"});,"})
   closed: {}"});,"})
-';,"});,"})
-'';,"});,"})
-''';,"});,"})
             x: '100%',;,"});,"})
             opacity: 0,;,"});,"})
             transition: {}"});,"})
                 duration: 0.3,';,"});,"})
-  ease: 'easeInOut';,"});,"})
+  ease: 'easeInOut';,"});,"});
 }"});,"})
-        },;,"});,"})
         open: {}"});,"})
             x: 0,;,"});,"})
             opacity: 1,;,"});,"})
-            transition: {}"});,"})
-                duration: 0.3,';,"});,"})
-                ease: 'easeInOut';,"});,"})
-    };,"});,"})
     const dropdownVariants = {}"});,"})
-  closed: {}"});,"})
             height: 0,;,"});,"})
-            opacity: 0,;,"});,"})
-            transition: {}"});,"})
                 duration: 0.2,';,"});,"})
-  ease: 'easeInOut';,"});,"})
-}"});,"})
-        },;,"});,"})
-        open: {}"});,"})
-';,"});,"})
-'';,"});,"})
-''';,"});,"})
             height: 'auto',;,"});,"})
-            opacity: 1,;,"});,"})
-            transition: {}"});,"})
-                duration: 0.2,';,"});,"})
-                ease: 'easeInOut';,"});,"})
-    };,"});,"})
     return (<AnimatePresence>;,"});,"})
       {isOpen && (<>;,"});,"})
           {/* Backdrop */}"});,"})
@@ -145,20 +92,16 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
                   <span className="text-white font-bold text-sm">Z</span>""";,"});,"})
                 </div>"""";,"});,"})
                 <span className="text-white font-semibold">Zion Tech</span>""";,"});,"})
-              </div>"""";,"});,"})
               <button onClick={onToggle} className="p-2 text-zion-slate-light hover:text-white transition-colors" aria-label="Close menu">;,"});,"})
                 <X size={24}/>;,"});,"})
               </button>;,"});,"})
             </div>;,"});,"})
-""";,"});,"})
             {/* Search Bar */}"""";,"});,"})
             <div className="p-4 border-b border-zion-cyan/20">"""";,"});,"})
               <form onSubmit={handleSearch} className="relative">"""";,"});,"})
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light" size={20}/>"""";,"});,"})
                 <input type="text" placeholder="Search services..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="w-full pl-10 pr-4 py-3 bg-white/10 border border-zion-cyan/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:bg-white/20 transition-all"/>;,"});,"})
               </form>;,"});,"})
-            </div>;,"});,"})
-""";,"});,"})
             {/* User Actions */}"""";,"});,"})
             <div className="flex items-center gap-2 p-4 border-b border-zion-cyan/20">"""";,"});,"})
               <button className="flex-1 flex items-center justify-center gap-2 py-2 px-4 bg-zion-cyan/20 border border-zion-cyan/30 rounded-lg text-zion-cyan hover:bg-zion-cyan/30 transition-colors">;,"});,"})
@@ -167,9 +110,6 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
               </button>"""";,"});,"})
               <button className="p-2 text-zion-slate-light hover:text-white transition-colors" aria-label="Notifications">;,"});,"})
                 <Bell size={20}/>;,"});,"})
-              </button>;,"});,"})
-            </div>;,"});,"})
-""";,"});,"})
             {/* Navigation Menu */}"""";,"});,"})
             <div className="flex-1 overflow-y-auto py-4">"""";,"});,"})
               <nav className="space-y-2">"""";,"});,"})
@@ -185,7 +125,6 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
                                 {item.children.map((child) => (<Link key={child.href} to={child.href} className="block py-2 px-4 text-zion-slate-light hover:text-white hover:bg-white/5 rounded-lg transition-colors">;,"});,"})
                                     {child.label}"});,"})
                                   </Link>) ) }"});,"})
-                              </div>;,"});,"})
                             </motion.div>)}""";,"});,"})
                         </AnimatePresence>"""";,"});,"})
                       </div>) : (<Link to={item.href} className="block py-3 px-4 text-white hover:bg-white/10 rounded-lg transition-colors">;,"});,"})
@@ -193,7 +132,6 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
                       </Link>) }"});,"})
                   </div>) ) }"});,"})
               </nav>;,"});,"})
-""";,"});,"})
               {/* Quick Actions */}"""";,"});,"})
               <div className="px-4 mt-6 space-y-2">"""";,"});,"})
                 <Link to="/contact" className="block w-full py-3 px-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white text-center rounded-lg font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all">;,"});,"})
@@ -202,8 +140,6 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
                 <Link to="/request-quote" className="block w-full py-3 px-4 border border-zion-cyan/30 text-zion-cyan text-center rounded-lg hover:bg-zion-cyan/10 transition-colors">;,"});,"})
                   Request Quote;,"});,"})
                 </Link>;,"});,"})
-              </div>;,"});,"})
-""";,"});,"})
               {/* Contact Info */}"""";,"});,"})
               <div className="px-4 mt-6 p-4 bg-white/5 rounded-lg border border-zion-cyan/20">"""";,"});,"})
                 <h3 className="text-zion-cyan font-semibold mb-3">Contact Us</h3>"""";,"});,"})
@@ -211,69 +147,28 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
                   <p>📱 +1 302 464 0950</p>;,"});,"})
                   <p>✉️ kleber@ziontechgroup.com</p>;,"});,"})
                   <p>📍 Middletown, DE 19709</p>;,"});,"})
-                </div>;,"});,"})
-              </div>;,"});,"})
-            </div>;,"});,"})
-""";,"});,"})
             {/* Footer */}"""";,"});,"})
             <div className="p-4 border-t border-zion-cyan/20">"""";,"});,"})
               <div className="flex items-center justify-center gap-4 text-zion-slate-light">"""";,"});,"})
                 <a href="#" className="hover:text-zion-cyan transition-colors">Privacy</a>"""";,"});,"})
                 <a href="#" className="hover:text-zion-cyan transition-colors">Terms</a>"""";,"});,"})
                 <a href="#" className="hover:text-zion-cyan transition-colors">Support</a>;,"});,"})
-              </div>;,"});,"})
-            </div>;,"});,"})
           </motion.div>;,"});,"})
         </>)}"});,"})
     </AnimatePresence>)};,"});,"})
-export default MobileNavigation;,"});,"})
+export default MobileNavigation;,"});,"});
 }}}}}}}}}</motion.div>}"});,"})
 ;,"});,"})
 export { MobileNavigation };,"});,"})
-;,"});,"})
-export { MobileNavigation };,"});,"})
-;,"});,"})
-export { MobileNavigation };,"});,"})
-;,"});,"})
-export { MobileNavigation };,"});,"})
-;,"});,"})
-export { MobileNavigation };,"});,"})
-=======
-<<<<<<< HEAD
- const: MobileNavigation = ({ isOpen, onToggle }) => { const [activeDropdown, setActiveDropdown] = useState (null)  const [searchQuery, setSearchQuery] = useState (')  const location = useLocation ()  const menuRef = useRef (null) ';'";";";";
-=======
-<<<<<<< HEAD
+ const MobileNavigation = ({ isOpen, onToggle }) => { const [activeDropdown, setActiveDropdown] = useState (null)  const [searchQuery, setSearchQuery] = useState (')  const location = useLocation ()  const menuRef = useRef (null) ';'";";";";
  const MobileNavigation = ({ isOpen, onToggle }) => { const [activeDropdown, setActiveDropdown] = useState (null)  const [searchQuery, setSearchQuery] = useState (')  const location = useLocation ()  const menuRef = useRef (null) ';'"'"
-=======
-<<<<<<< HEAD
  const MobileNavigation = ({ isOpen, onToggle }) => { const [activeDropdown, setActiveDropdown] = useState (null)  const [searchQuery, setSearchQuery] = useState (')  const location = useLocation ()  const menuRef = useRef (null) ';";""
-=======
-<<<<<<< HEAD
  const MobileNavigation = ({isOpen, onToggle }) => { const [activeDropdown, setActiveDropdown] = useState (null)  const [searchQuery, setSearchQuery] = useState (')  const location = useLocation ()  const menuRef = useRef (null) ';'";'"
-=======
-<<<<<<< HEAD
  const MobileNavigation = memo(({ isOpen, onToggle }) => { const [activeDropdown, setActiveDropdown] = useState (null)  const [searchQuery, setSearchQuery] = useState (')  const location = useLocation ()  const menuRef = useRef (null) ';'";'"
-=======
-<<<<<<< HEAD
  const MobileNavigation = ({ isOpen, onToggle }) => {} const [activeDropdown, setActiveDropdown] = useState (null)  const;const [searchQuery, setSearchQuery] = useState (&apos;)&apos;'  const location = useLocation ()  const;const;const menuRef = useRef (null) ';&apos;";
 &quot;"
-=======
-<<<<<<< HEAD
  const MobileNavigation = ({ isOpen, onToggle }) => { const [activeDropdown, setActiveDropdown] = useState (null)  const [searchQuery, setSearchQuery] = useState (')  const location = useLocation ()  const menuRef = useRef (null) ';'";'"
-<<<<<<< HEAD
-""
+"";
 }
-=======
-=======
  const MobileNavigation = ({ isOpen, onToggle }) => { const [activeDropdown, setActiveDropdown] = useState (null)  const [searchQuery, setSearchQuery] = useState (')  const location = useLocation ()  const menuRef = useRef (null) "
 "
-}
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

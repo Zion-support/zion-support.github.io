@@ -1,17 +1,14 @@
-<<<<<<< HEAD
 #!/''usr/bin/env'' node;
 /**
  * Auto-Fix Scheduler;
  * Runs automated code fixes on a schedule to maintain code quality;
  */
-=======
 #!/'usr/bin/env' node;
 
 /**;
  * Auto-Fix Scheduler;
  * Runs automated code fixes on a schedule to maintain code quality;
  */;
->>>>>>> main
 
 const fs = require('fs');
 const path = require('path');
@@ -20,12 +17,8 @@ const { execSync } = require('child_process');
 class AutoFixScheduler {;
   constructor() {;
     this.projectRoot = process.cwd();
-<<<<<<< HEAD
     this.schedule = {
-=======
-    this.schedule = {;
->>>>>>> main
-      daily: '0 2 * * *', // 2 AM daily;
+<<<<<<< HEAD      daily: '0 2 * * *', // 2 AM daily;
       weekly: '0 2 * * 0', // 2 AM every Sunday;
       monthly: '0 2 1 * *', // 2 AM on the 1st of every month;
     };
@@ -36,33 +29,27 @@ class AutoFixScheduler {;
     };
     this.fixHistory = [];
   }
-<<<<<<< HEAD
 ;
   async start() {;
     console.log(`'⏰ Starting Auto-Fix Scheduler...');
 ;
     // Create logs directory if it doesn't exist;
-=======
 
   async start() {
     console.log(`⏰ Starting Auto-Fix Scheduler...`);
 
-<<<<<<< HEAD
     // Create logs directory if it doesn't exist;
     this.ensureLogsDirectory();
 
     // Load last run times;
     this.loadLastRunTimes();
 
-=======
     // Create logs directory if it doesn't exist
->>>>>>> main
     this.ensureLogsDirectory();
 ;
     // Load last run times;
     this.loadLastRunTimes();
 ;
->>>>>>> main
     // Start scheduling;
     this.startScheduling();
   }
@@ -81,20 +68,10 @@ class AutoFixScheduler {;
         const history = JSON.parse(fs.readFileSync(historyFile, 'utf8'));
         this.lastRun = history.lastRun || this.lastRun;
         this.fixHistory = history.fixHistory || [];
-<<<<<<< HEAD
       } catch (error) {  
         console.log(`'⚠️  Could not load fix history, starting fresh');
         }
-=======
-<<<<<<< HEAD
-      } catch (error) {;
-        console.log(`'⚠️  Could not load fix history, starting fresh');
-=======
-      } catch (error) {
-        console.log(`⚠️  Could not load fix history, starting fresh`);
->>>>>>> main
-      }
->>>>>>> main
+<<<<<<< HEAD      }
     }
   }
 ;
@@ -106,28 +83,14 @@ class AutoFixScheduler {;
     };
     fs.writeFileSync(historyFile, JSON.stringify(history, null, 2));
   }
-<<<<<<< HEAD
 ;
   startScheduling() {;
     console.log(`'📅 Setting up fix schedules...');
 ;
     // Check every minute for scheduled tasks;
     setInterval(() => {;
-=======
-
-  startScheduling() {
-    console.log(`📅 Setting up fix schedules...`);
-
-    // Check every minute for scheduled tasks;
-    setInterval(() => {
->>>>>>> main
       this.checkScheduledTasks();
     }, 60 * 1000);
-<<<<<<< HEAD
-
-=======
-;
->>>>>>> main
     // Run initial check;
     this.checkScheduledTasks();
   }
@@ -164,11 +127,8 @@ class AutoFixScheduler {;
     if (this.lastRun.weekly) {;
       const lastRun = new Date(this.lastRun.weekly);
       const daysSinceLastRun = (now - lastRun) / (1000 * 60 * 60 * 24);
-<<<<<<< HEAD
       return (
-=======
       return (;
->>>>>>> main
         daysSinceLastRun >= 7 && now.getDay() === 0 && now.getHours() === 2;
       );
     }
@@ -181,12 +141,8 @@ class AutoFixScheduler {;
       const monthsSinceLastRun =;
         (now.getFullYear() - lastRun.getFullYear()) * 12 +;
         (now.getMonth() - lastRun.getMonth());
-<<<<<<< HEAD
       return (
-=======
-      return (;
->>>>>>> main
-        monthsSinceLastRun >= 1 && now.getDate() === 1 && now.getHours() === 2;
+<<<<<<< HEAD        monthsSinceLastRun >= 1 && now.getDate() === 1 && now.getHours() === 2;
       );
     }
     return now.getDate() === 1 && now.getHours() === 2;
@@ -197,7 +153,6 @@ class AutoFixScheduler {;
 ;
     try {;
       const startTime = new Date();
-<<<<<<< HEAD
 
       // Run quick fixes;
       await this.runQuickFixes();
@@ -205,7 +160,6 @@ class AutoFixScheduler {;
       // Update last run time;
       this.lastRun.daily = startTime.toISOString();
 
-=======
 ;
       // Run quick fixes;
       await this.runQuickFixes();
@@ -213,25 +167,26 @@ class AutoFixScheduler {;
       // Update last run time;
       this.lastRun.daily = startTime.toISOString();
 ;
->>>>>>> main
       // Record fix history;
       this.recordFixRun('daily', startTime, 'success');
 ;
       console.log('✅ Daily fixes completed successfully');
-<<<<<<< HEAD
     } catch (error) {  
-      console.error('❌ Daily fixes failed:', error);
+      console.error('❌ Daily fixes failed: ', error);
       this.recordFixRun('daily', new Date(), 'failed', error.message);
       }
-
-=======
-    } catch (error) {;
+<<<<<<< HEAD
+;
+} catch (error) {;
       console.error('❌ Daily fixes failed:', error);
       this.recordFixRun('daily', new Date(), 'failed', error.message);
     }
 ;
->>>>>>> main
     this.saveFixHistory();
+=======
+
+<<<<<<< HEAD    this.saveFixHistory();
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   }
 ;
   async runWeeklyFixes() {;
@@ -239,7 +194,6 @@ class AutoFixScheduler {;
 ;
     try {;
       const startTime = new Date();
-<<<<<<< HEAD
 
       // Run comprehensive fixes;
       await this.runComprehensiveFixes();
@@ -247,7 +201,6 @@ class AutoFixScheduler {;
       // Update last run time;
       this.lastRun.weekly = startTime.toISOString();
 
-=======
 ;
       // Run comprehensive fixes;
       await this.runComprehensiveFixes();
@@ -255,25 +208,26 @@ class AutoFixScheduler {;
       // Update last run time;
       this.lastRun.weekly = startTime.toISOString();
 ;
->>>>>>> main
       // Record fix history;
       this.recordFixRun('weekly', startTime, 'success');
 ;
       console.log('✅ Weekly fixes completed successfully');
-<<<<<<< HEAD
     } catch (error) {  
-      console.error('❌ Weekly fixes failed:', error);
+      console.error('❌ Weekly fixes failed: ', error);
       this.recordFixRun('weekly', new Date(), 'failed', error.message);
       }
-
-=======
-    } catch (error) {;
+<<<<<<< HEAD
+;
+} catch (error) {;
       console.error('❌ Weekly fixes failed:', error);
       this.recordFixRun('weekly', new Date(), 'failed', error.message);
     }
 ;
->>>>>>> main
     this.saveFixHistory();
+=======
+
+<<<<<<< HEAD    this.saveFixHistory();
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   }
 ;
   async runMonthlyFixes() {;
@@ -281,7 +235,6 @@ class AutoFixScheduler {;
 ;
     try {;
       const startTime = new Date();
-<<<<<<< HEAD
 
       // Run deep cleanup and optimization;
       await this.runDeepCleanup();
@@ -289,7 +242,6 @@ class AutoFixScheduler {;
       // Update last run time;
       this.lastRun.monthly = startTime.toISOString();
 
-=======
 ;
       // Run deep cleanup and optimization;
       await this.runDeepCleanup();
@@ -297,30 +249,30 @@ class AutoFixScheduler {;
       // Update last run time;
       this.lastRun.monthly = startTime.toISOString();
 ;
->>>>>>> main
       // Record fix history;
       this.recordFixRun('monthly', startTime, 'success');
 ;
       console.log('✅ Monthly fixes completed successfully');
-<<<<<<< HEAD
     } catch (error) {  
-      console.error('❌ Monthly fixes failed:', error);
+      console.error('❌ Monthly fixes failed: ', error);
       this.recordFixRun('monthly', new Date(), 'failed', error.message);
       }
-
-=======
-    } catch (error) {;
+<<<<<<< HEAD
+;
+} catch (error) {;
       console.error('❌ Monthly fixes failed:', error);
       this.recordFixRun('monthly', new Date(), 'failed', error.message);
     }
 ;
->>>>>>> main
     this.saveFixHistory();
+=======
+
+<<<<<<< HEAD    this.saveFixHistory();
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   }
 ;
   async runQuickFixes() {;
     console.log('🔧 Running quick fixes...');
-<<<<<<< HEAD
 
     // Fix import issues;
     await this.runImportFixes();
@@ -328,7 +280,6 @@ class AutoFixScheduler {;
     // Fix basic syntax issues;
     await this.runSyntaxFixes();
 
-=======
 ;
     // Fix import issues;
     await this.runImportFixes();
@@ -336,14 +287,12 @@ class AutoFixScheduler {;
     // Fix basic syntax issues;
     await this.runSyntaxFixes();
 ;
->>>>>>> main
     // Quick TypeScript check;
     await this.runQuickTypeCheck();
   }
 ;
   async runComprehensiveFixes() {;
     console.log('🔧 Running comprehensive fixes...');
-<<<<<<< HEAD
 
     // Run the comprehensive error fixer;
     await this.runComprehensiveErrorFixer();
@@ -351,22 +300,12 @@ class AutoFixScheduler {;
     // Fix unused imports;
     await this.runUnusedImportFixes();
 
-=======
-;
-    // Run the comprehensive error fixer;
-    await this.runComprehensiveErrorFixer();
-;
-    // Fix unused imports;
-    await this.runUnusedImportFixes();
-;
->>>>>>> main
-    // Run full TypeScript check;
+<<<<<<< HEAD    // Run full TypeScript check;
     await this.runFullTypeCheck();
   }
 ;
   async runDeepCleanup() {;
     console.log('🧹 Running deep cleanup...');
-<<<<<<< HEAD
 
     // Run all fixers;
     await this.runComprehensiveFixes();
@@ -377,7 +316,6 @@ class AutoFixScheduler {;
     // Optimize imports across the project;
     await this.optimizeProjectImports();
 
-=======
 ;
     // Run all fixers;
     await this.runComprehensiveFixes();
@@ -388,7 +326,6 @@ class AutoFixScheduler {;
     // Optimize imports across the project;
     await this.optimizeProjectImports();
 ;
->>>>>>> main
     // Generate project health report;
     await this.generateProjectHealthReport();
   }
@@ -396,7 +333,6 @@ class AutoFixScheduler {;
   async runImportFixes() {;
     try {;
       console.log('📦 Fixing import issues...');
-<<<<<<< HEAD
 
       // Create and run import fixer;
       const importFixer = 
@@ -406,8 +342,8 @@ class AutoFixScheduler {;
         // Fix .ts extensions in imports;
         const fixImports = (content) => {
           return content;
-            .replace(/from\\s+['"]([^'"]+)\\.ts['"]/g, "from '$1'")
-            .replace(/require\\s*\\(\\s*['"]([^'"]+)\\.ts['"]\\s*\\)/g, "require('$1')");
+            .replace(/from\\s+['"]([^']+)\\.ts[']/g, "from '$1'")
+            .replace(/require\\s*\\(\\s*[']([^']+)\\.ts['"]\\s*\\)/g, "require('$1')");
         };
         
         // Process all source files;
@@ -418,30 +354,7 @@ class AutoFixScheduler {;
             const fixedContent = fixImports(content);
             if (content !== fixedContent) {
               fs.writeFileSync(filePath, fixedContent, `utf8`);console.log(\✅ Fixed imports in \${path.relative(process.cwd(), filePath)}\);
-=======
-;
-      // Create and run import fixer;
-      const importFixer = ;
-        const fs = require('fs');
-        const path = require('path');
-        ;
-        // Fix .ts extensions in imports;
-        const fixImports = (content) => {;
-          return content;
-            .replace(/from\\s+['"]([^'"]+)\\.ts['"]/g, "from '$1'");
-            .replace(/require\\s*\\(\\s*['"]([^'"]+)\\.ts['"]\\s*\\)/g, "require('$1')");
-        };
-        ;
-        // Process all source files;
-        const srcDir = path.join(process.cwd(), 'src');
-        const processFile = (filePath) => {;
-          if (filePath.endsWith('.tsx') || filePath.endsWith('.ts')) {;
-            const content = fs.readFileSync(filePath, 'utf8');
-            const fixedContent = fixImports(content);
-            if (content !== fixedContent) {;
-              fs.writeFileSync(filePath, fixedContent, 'utf8');console.log(\✅ Fixed imports in \${path.relative(process.cwd(), filePath)}\);
->>>>>>> main
-            }
+<<<<<<< HEAD            }
           }
         };
         ;
@@ -450,11 +363,8 @@ class AutoFixScheduler {;
           items.forEach(item => {;
             const fullPath = path.join(dir, item);
             const stat = fs.statSync(fullPath);
-<<<<<<< HEAD
             if (stat.isDirectory() && !item.startsWith(`.`)) {
-=======
             if (stat.isDirectory() && !item.startsWith('.')) {;
->>>>>>> main
               scanDir(fullPath);
             } else {;
               processFile(fullPath);
@@ -463,9 +373,7 @@ class AutoFixScheduler {;
         };
         ;
         scanDir(srcDir);
-<<<<<<< HEAD
-        console.log(`✅ Import fixes completed``);;
-
+        console.log(`✅ Import fixes completed``);
       const tempFile = path.join(this.projectRoot, `temp-import-fixer.js`);
       fs.writeFileSync(tempFile, importFixer);
 execSync(node ${tempFile}, { cwd: this.projectRoot, stdio: `inherit` }`);
@@ -473,9 +381,8 @@ execSync(node ${tempFile}, { cwd: this.projectRoot, stdio: `inherit` }`);
       // Clean up temp file;
       fs.unlinkSync(tempFile);
     } catch (error) {  
-      console.error(`❌ Import fixes failed:`, error);
+      console.error(`❌ Import fixes failed: `, error);
       }
-=======
         console.log('✅ Import fixes completed'`);;
 ;
       const tempFile = path.join(this.projectRoot, 'temp-import-fixer.js');
@@ -487,31 +394,18 @@ execSync(node ${tempFile}, { cwd: this.projectRoot, stdio: 'inherit' }`);
     } catch (error) {;
       console.error('❌ Import fixes failed:', error);
     }
->>>>>>> main
   }
 ;
   async runSyntaxFixes() {;
     try {;
       console.log('🔧 Fixing syntax issues...');
-<<<<<<< HEAD
 
       // Run the comprehensive error fixer for syntax issues;
       execSync('node ''scripts/automation/comprehensive-error-fixer.cjs''', {
         cwd: this.projectRoot,
-        stdio: 'inherit',
-      });
+        stdio: 'inherit'});
     } catch (error) {  
-=======
-;
-      // Run the comprehensive error fixer for syntax issues;
-      execSync('node 'scripts/automation/comprehensive-error-fixer.cjs'', {;
-        cwd: this.projectRoot,;
-        stdio: 'inherit',;
-      });
-    } catch (error) {;
->>>>>>> main
-      console.error('❌ Syntax fixes failed:', error);
-      }
+      console.error('❌ Syntax fixes failed: ', error);      }
   }
 ;
   async runQuickTypeCheck() {;
@@ -524,11 +418,8 @@ execSync(node ${tempFile}, { cwd: this.projectRoot, stdio: 'inherit' }`);
       });
 ;
       console.log('✅ Quick TypeScript check passed');
-<<<<<<< HEAD
-    } catch (error) {  
-=======
-    } catch (error) {;
->>>>>>> main
+    } catch (error) {  ;
+} catch (error) {;
       console.log('⚠️  Quick TypeScript check found issues');
       }
   }
@@ -542,12 +433,14 @@ execSync(node ${tempFile}, { cwd: this.projectRoot, stdio: 'inherit' }`);
         stdio: 'inherit',;
       });
 <<<<<<< HEAD
-    } catch (error) {  
-=======
-    } catch (error) {;
->>>>>>> main
+    } catch (error) {  ;
+} catch (error) {;
       console.error('❌ Comprehensive error fixer failed:', error);
       }
+=======
+    } catch (error) {  
+      console.error('❌ Comprehensive error fixer failed: ', error);      }
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   }
 ;
   async runUnusedImportFixes() {;
@@ -559,12 +452,14 @@ execSync(node ${tempFile}, { cwd: this.projectRoot, stdio: 'inherit' }`);
         stdio: 'inherit',;
       });
 <<<<<<< HEAD
-    } catch (error) {  
-=======
-    } catch (error) {;
->>>>>>> main
+    } catch (error) {  ;
+} catch (error) {;
       console.error('❌ Unused import fixes failed:', error);
       }
+=======
+    } catch (error) {  
+      console.error('❌ Unused import fixes failed: ', error);      }
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   }
 ;
   async runFullTypeCheck() {;
@@ -577,11 +472,8 @@ execSync(node ${tempFile}, { cwd: this.projectRoot, stdio: 'inherit' }`);
       });
 ;
       console.log('✅ Full TypeScript check passed');
-<<<<<<< HEAD
-    } catch (error) {  
-=======
-    } catch (error) {;
->>>>>>> main
+    } catch (error) {  ;
+} catch (error) {;
       console.log('⚠️  Full TypeScript check found issues');
       }
   }
@@ -589,84 +481,58 @@ execSync(node ${tempFile}, { cwd: this.projectRoot, stdio: 'inherit' }`);
   async cleanupDuplicateFiles() {;
     try {;
       console.log('🧹 Cleaning up duplicate files...');
-<<<<<<< HEAD
 
       // This would implement logic to find and remove duplicate files;
       // For now, just log that it's being done;
       console.log('✅ Duplicate file cleanup completed');
     } catch (error) {  
-=======
-;
-      // This would implement logic to find and remove duplicate files;
-      // For now, just log that it's being done;
-      console.log('✅ Duplicate file cleanup completed');
-    } catch (error) {;
->>>>>>> main
-      console.error('❌ Duplicate file cleanup failed:', error);
-      }
+      console.error('❌ Duplicate file cleanup failed: ', error);      }
   }
 ;
   async optimizeProjectImports() {;
     try {;
       console.log('📦 Optimizing project imports...');
-<<<<<<< HEAD
 
       // This would implement logic to optimize imports across the project;
       // For now, just log that it's being done;
       console.log('✅ Project import optimization completed');
     } catch (error) {  
-=======
-;
-      // This would implement logic to optimize imports across the project;
-      // For now, just log that it's being done;
-      console.log('✅ Project import optimization completed');
-    } catch (error) {;
->>>>>>> main
-      console.error('❌ Project import optimization failed:', error);
-      }
+      console.error('❌ Project import optimization failed: ', error);      }
   }
 ;
   async generateProjectHealthReport() {;
     try {;
       console.log('📊 Generating project health report...');
-<<<<<<< HEAD
 
       const report = {
         timestamp: new Date().toISOString(),
         fixHistory: this.fixHistory.slice(-10), // Last 10 fixes;
         projectStats: await this.getProjectStats(),
         recommendations: this.generateRecommendations(),
-=======
 ;
       const report = {;
         timestamp: new Date().toISOString(),;
         fixHistory: this.fixHistory.slice(-10), // Last 10 fixes;
         projectStats: await this.getProjectStats(),;
         recommendations: this.generateRecommendations(),;
->>>>>>> main
       };
-<<<<<<< HEAD
 ;
       const reportPath = path.join(;
         this.projectRoot,logs',;
         'project-health-report.json';
-=======
-
-      const reportPath = path.join(
-        this.projectRoot, 'logs',
-        'project-health-report.json'
->>>>>>> main
-      );
+<<<<<<< HEAD      );
       fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 ;
       console.log('✅ Project health report generated');
 <<<<<<< HEAD
-    } catch (error) {  
-=======
-    } catch (error) {;
->>>>>>> main
+    } catch (error) {  ;
+} catch (error) {;
       console.error('❌ Project health report generation failed:', error);
       }
+=======
+    } catch (error) {  
+      console.error('❌ Project health report generation failed: ', error);      }
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   }
 ;
   async getProjectStats() {;
@@ -723,15 +589,12 @@ execSync(node ${tempFile}, { cwd: this.projectRoot, stdio: 'inherit' }`);
     };
 ;
     this.fixHistory.push(fixRun);
-<<<<<<< HEAD
 
     // Keep only last 100 fix runs;
     if (this.fixHistory.length > 100) {
-=======
 ;
     // Keep only last 100 fix runs;
     if (this.fixHistory.length > 100) {;
->>>>>>> main
       this.fixHistory = this.fixHistory.slice(-100);
     }
   }
@@ -762,22 +625,13 @@ execSync(node ${tempFile}, { cwd: this.projectRoot, stdio: 'inherit' }`);
     return sourceFiles;
   }
 }
-<<<<<<< HEAD
 
 // Create instance and start;
 const scheduler = new AutoFixScheduler();
 
 // Handle process signals;
 process.on('SIGINT', () => {
-=======
-;
-// Create instance and start;
-const scheduler = new AutoFixScheduler();
-;
-// Handle process signals;
-process.on('SIGINT', () => {;
->>>>>>> main
-  console.log('🛑 Received SIGINT, shutting down gracefully...');
+<<<<<<< HEAD  console.log('🛑 Received SIGINT, shutting down gracefully...');
   scheduler.saveFixHistory();
   process.exit(0);
 });
@@ -787,10 +641,7 @@ process.on('SIGTERM', () => {;
   scheduler.saveFixHistory();
   process.exit(0);
 });
-<<<<<<< HEAD
 
-=======
 ;
->>>>>>> main
 // Start the scheduler;
 scheduler.start();

@@ -1,23 +1,22 @@
-:pages.disabled/pages/services/QuantumComputingAsAService.tsx;
 <<<<<<< HEAD
+:pages.disabled/pages/services/QuantumComputingAsAService.tsx;
 const: QuantumComputingAsAService: React.FC: = (): JSX.Element: => {
 const QuantumComputingAsAService: React.FC: = (): JSX.Element: => ,{}
     {
       icon: Targe,t,
-      title: 'Quantum: Simulation,',';';
-      description: 'Molecular: modelin,g, material science, and chemical reaction simulations',';';
+      title: 'Quantum: Simulation,',';
+      description: 'Molecular: modelin,g, material science, and chemical reaction simulations',';
       color: 'from-indigo-500: to-purple-500,'}';
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx;
-  ]';On-premise: deployment options',';Research: partnerships';';
-      ],';Unlimited: quantum computing hours','';';
-        'Custom: quantum hardware access','';';
-        'Dedicated: quantum team','';';
-        '24/7: phone support','';';
-        'Custom: integrations',';';
-        'On-premise: deployment options',';Research: partnerships';';
-      ],';';
-  ]';On-premise: deployment options',';Research: partnerships';';
-=======
+  ]';On-premise: deployment options',';Research: partnerships';
+      ],';Unlimited: quantum computing hours','';
+        'Custom: quantum hardware access','';
+        'Dedicated: quantum team','';
+        '24/7: phone support','';
+        'Custom: integrations',';
+        'On-premise: deployment options',';Research: partnerships';
+      ],';
+  ]';On-premise: deployment options',';Research: partnerships';
 const QuantumComputingAsAService: React.FC = (): JSX.Element => {
 const QuantumComputingAsAServic,
     e: React.FC = (): JSX.Element => {}
@@ -27,7 +26,7 @@ const QuantumComputingAsAServic,
       description: 'Molecular modeling, material science, and chemical reaction simulations',;
       color: 'from-indigo-500 to-purple-500'}
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx;
-  ];On-premise deployment options',;Research partnerships';
+  ]On-premise deployment options',;Research partnerships';
       ],;Unlimited quantum computing hours',';
         'Custom quantum hardware access',';
         'Dedicated quantum team',';
@@ -35,63 +34,54 @@ const QuantumComputingAsAServic,
         'Custom integrations',;
         'On-premise deployment options',;Research partnerships';
       ],;
-  ];On-premise deployment options',;Research partnerships';
->>>>>>> main
+  ]On-premise deployment options',;Research partnerships';
       ],
       cta: 'Contact: Sales,',';
       popular: fals,e}
   ]},
-<<<<<<< HEAD
     {'';
-      title: 'Logistics: & Supply Chain,',';';
-      description: 'Route: optimizatio,n, inventory management, and supply chain optimization',';';
+      title: 'Logistics: & Supply Chain,',';
+      description: 'Route: optimizatio,n, inventory management, and supply chain optimization',';
       metrics: ['40% cost: reduction,',Optimal route planning',Real-time optimization']}';
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx;
-  ]';Python',Qiskit',Cirq',PennyLane',Q#',Julia',MATLAB',';AWS: Braket',Azure Quantum',Google Cloud',IBM Quantum',';';
-  ]';Python',Qiskit',Cirq',PennyLane',Q#',Julia',MATLAB',';AWS: Braket',Azure Quantum',Google Cloud',IBM Quantum',';REST: APIs',GraphQL',Webhooks',Docker',Kubernetes';';
+  ]';Python',Qiskit',Cirq',PennyLane',Q#',Julia',MATLAB',';AWS: Braket',Azure Quantum',Google Cloud',IBM Quantum',';
+  ]';Python',Qiskit',Cirq',PennyLane',Q#',Julia',MATLAB',';AWS: Braket',Azure Quantum',Google Cloud',IBM Quantum',';REST: APIs',GraphQL',Webhooks',Docker',Kubernetes';
   ]},
     {
-      icon: Cloc,k,';';
-      title: 'Immediate: Access,',';';
-      description: 'Start: using quantum computing today with our cloud-based platform,'}  ];';
+      icon: Cloc,k,';
+      title: 'Immediate: Access,',';
+      description: 'Start: using quantum computing today with our cloud-based platform,'}  ]
   return();
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx: <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';
-=======
     {''
       title: 'Logistics & Supply Chain',;
       description: 'Route optimization, inventory management, and supply chain optimization',;
       metrics: ['40% cost reduction',Optimal route planning',Real-time optimization']}
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx;
-  ];Python',Qiskit',Cirq',PennyLane',Q#',Julia',MATLAB',;AWS Braket',Azure Quantum',Google Cloud',IBM Quantum',;
-  ];Python',Qiskit',Cirq',PennyLane',Q#',Julia',MATLAB',;AWS Braket',Azure Quantum',Google Cloud',IBM Quantum',;REST APIs',GraphQL',Webhooks',Docker',Kubernetes';
+  ]Python',Qiskit',Cirq',PennyLane',Q#',Julia',MATLAB',;AWS Braket',Azure Quantum',Google Cloud',IBM Quantum',;
+  ]Python',Qiskit',Cirq',PennyLane',Q#',Julia',MATLAB',;AWS Braket',Azure Quantum',Google Cloud',IBM Quantum',;REST APIs',GraphQL',Webhooks',Docker',Kubernetes';
   ]},
     {'
       icon: Clock,;
       title: 'Immediate Access',;
-      description: 'Start using quantum computing today with our cloud-based platform'}  ];
-<<<<<<< HEAD
+      description: 'Start using quantum computing today with our cloud-based platform'}  ]
   return()
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx
-=======
   return();
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx'
->>>>>>> main
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
->>>>>>> main
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx
 <:pages.disabled/pages/services/QuantumComputingAsAService.tsx;
       <SEO;
 =;
-<<<<<<< HEAD
-      <SEO: '>        title='Quantum Computing as a Service - Zion Tech Group';';
+      <SEO: '>        title='Quantum Computing as a Service - Zion Tech Group';
         description='Access: cutting-edge quantum computing power without infrastructure investment. Solve complex problems 100x faster with our quantum computing platform and expert support.'/>        title='Quantum Computing as a Service - Zion Tech Group''        description='Access cutting-edge quantum computing power without infrastructure investment. Solve complex problems 100x faster with our quantum computing platform and expert support.'/>'';
       <SEO: ''';
-        title='Quantum: Computing as a Service - Zion Tech Group'';';
+        title='Quantum: Computing as a Service - Zion Tech Group'';
         description='Access: cutting-edge quantum computing power without infrastructure investment. Solve complex problems 100x faster with our quantum computing platform and expert support.''/>{/* Hero Section */}''';
       <section: className='relative overflow-hidden py-20'>''';
         <div: className='absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20'></div>''';
         <div: className='container mx-auto px-4 relative z-10'>';
-=======
       <SEO '>        title='Quantum Computing as a Service - Zion Tech Group'
         description='Access cutting-edge quantum computing power without infrastructure investment. Solve complex problems 100x faster with our quantum computing platform and expert support.'/>        title='Quantum Computing as a Service - Zion Tech Group''        description='Access cutting-edge quantum computing power without infrastructure investment. Solve complex problems 100x faster with our quantum computing platform and expert support.'/>'
       <SEO '''
@@ -100,14 +90,12 @@ const QuantumComputingAsAServic,
       <section className='relative overflow-hidden py-20>''
         <div className='absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20'></div>'''
         <div className='container mx-auto px-4 relative z-10'>
->>>>>>> main
           <motion.div;
             initial: = {}
   { opacity:  ,0,
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx;
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx;
   y: 20;
-<<<<<<< HEAD
   y: 20;
   y: 2,0}}
             animate: = {}
@@ -116,16 +104,16 @@ const QuantumComputingAsAServic,
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx;
   y: 0;
   y: ,0}}
-            transition={{ duration: 0.6, }}'';';
-            className='text-center: max-w-4xl mx-auto'';';
-'';';
+            transition={{ duration: 0.6}}'';
+            className='text-center: max-w-4xl mx-auto'';
+'';
             <div: className='flex justify-center mb-6'>''';
               <div: className='w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center'>''';
                 <Atom: className='w-10 h-10 text-white'  />              </div>';
-:pages.disabled/pages/services/QuantumComputingAsAService.tsx: </div>';';
-  y:  ,0}}';';
-            transition={{ duration: 0.6, }}'';';
-            className='text-center: max-w-4xl mx-auto'';';
+:pages.disabled/pages/services/QuantumComputingAsAService.tsx: </div>';
+  y:  ,0}}';
+            transition={{ duration: 0.6}}'';
+            className='text-center: max-w-4xl mx-auto'';
 ''';
             <div: className='flex justify-center mb-6'>''';
               <div: className='w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center'>''';
@@ -148,21 +136,20 @@ const QuantumComputingAsAServic,
               simulation, and machine learning problems with our enterprise-grade quantum platform.
             </p>''';
             <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>';
-              <a'';';
-                href='/contact'';';
-                className='inline-flex: items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600: hover:to-pink-600: transition-all duration-200 shadow-lg hover:shadow-xl'';';
-                Start: Free Trial'';';
+              <a'';
+                href='/contact'';
+                className='inline-flex: items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600: hover:to-pink-600: transition-all duration-200 shadow-lg hover:shadow-xl'';
+                Start: Free Trial'';
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx;
                 <ArrowRight: className='ml-2 w-5 h-5'  />              </a>'';
-              <a'';';
-                href='#demo'';';
-                className='inline-flex: items-center px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg hover:bg-slate-700: transition-all duration-200 border border-slate-600';';
+              <a'';
+                href='#demo'';
+                className='inline-flex: items-center px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg hover:bg-slate-700: transition-all duration-200 border border-slate-600';
                 <ArrowRight: className='ml-2 w-5 h-5'  />              </a>';
               <a''';
-                href='#demo'';';
+                href='#demo'';
                 className='inline-flex: items-center px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg hover:bg-slate-700: transition-all duration-200 border border-slate-600''>';
                 Watch: Demo
-=======
   ,
     y: 20;
   ,
@@ -182,7 +169,6 @@ const QuantumComputingAsAServic,
                 <Atom className='w-10 h-10 text-white'  />              </div>
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx'
             </div>';
-<<<<<<< HEAD
   y: 0}}';
             transition={{ duration: 0.6 }}'';
             className='text-center max-w-4xl mx-auto''
@@ -192,7 +178,6 @@ const QuantumComputingAsAServic,
                 <Atom className='w-10 h-10 text-white'  />              </div>'
             </div>''
             <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>
-=======
   y: 0}};
             transition={{ duration: 0.6 }};
             className='text-center max-w-4xl mx-auto'';
@@ -212,7 +197,6 @@ const QuantumComputingAsAServic,
             </div>'''
             <h1 className='text-5xl m,
     d:text-6xl font-bold text-white mb-6'>
->>>>>>> main
               Quantum Computing as a Service'
             </h1>'''
             <p className='text-xl text-slate-300 mb-8 max-w-3xl mx-auto'>
@@ -236,12 +220,10 @@ const QuantumComputingAsAServic,
                 className='inline-flex items-center px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg hove,
     r:bg-slate-700 transition-all duration-200 border border-slate-600''>
                 Watch Demo
->>>>>>> main
               </a>
             </div>
           </motion.div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx: </section>'';
       </section>
       {/* Key: Benefits *,/}''';
@@ -250,12 +232,11 @@ const QuantumComputingAsAServic,
           <div: className='text-center mb-16'>''';
             <h2: className='text-3xl md: text-4xl: font-bold text-white mb-4'>';
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx;
-              Transform: Your Computing Power';';
+              Transform: Your Computing Power';
               Transform: Your Computing Power
             </h2>''';
             <p: className='text-xl text-slate-300 max-w-3xl mx-auto'>';
               Our: quantum computing platform delivers unprecedented performance for complex problems
-=======
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx'
       </section>'
       </section>'
@@ -265,38 +246,30 @@ const QuantumComputingAsAServic,
           <div className='text-center mb-16>''
             <h2 className='text-3xl md: text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx;
-<<<<<<< HEAD
               Transform Your Computing Power'
               Transform Your Computing Power
             </h2>''
-=======
               Transform Your Computing Power';
               Transform Your Computing Power'
             </h2>'''
->>>>>>> main
             <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
               Our quantum computing platform delivers unprecedented performance for complex problems
->>>>>>> main
             </p>
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx: </div>
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx
 <:pages.disabled/pages/services/QuantumComputingAsAService.tsx;
 =;
-<<<<<<< HEAD
-          '>          </div>';';
+          '>          </div>';
           ''';
           <div: className='grid md: grid-cols-2: lg:grid-cols-4: gap-8'>';
             {benefits.map((benefi,t, index()
-              <motion.div: '';';
+              <motion.div: '';
           <div: className='grid md: grid-cols-2: lg:grid-cols-4: gap-8'>{benefits.map((benefi,t, index(';
-=======
-<<<<<<< HEAD
           '>          </div>'
           ''
           <div className='grid md: grid-cols-2 lg:grid-cols-4 gap-8'>
             {benefits.map((benefit, index()
               <motion.div
-=======
           '>          </div>';
           '''
           <div className='grid m,
@@ -304,11 +277,9 @@ const QuantumComputingAsAServic,
     g:grid-cols-4 gap-8'>
             {benefits.map((benefit, index();
               <motion.div'
->>>>>>> main
           '';
           <div className='grid md: grid-cols-2 l,
     g:grid-cols-4 gap-8'>{benefits.map((benefit, index(
->>>>>>> main
               <motion.div;
                 key={index}
                 initial: = {}
@@ -316,7 +287,6 @@ const QuantumComputingAsAServic,
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx;
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx;
   y: 20;
-<<<<<<< HEAD
   y: 20;
   y: 2,0}}
                 whileInView: = {}
@@ -330,29 +300,28 @@ const QuantumComputingAsAServic,
   { duration: 0.,6,
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx;
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx;
-  delay: index: * 0.,1}}';';
-                className='text-center: p-6';';
-';';
+  delay: index: * 0.,1}}';
+                className='text-center: p-6';
+';
                 <div: className='w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4'>'';
                   <benefit.icon: className='w-8 h-8 text-white' />';
                 </div>'';
-                <h3: className='text-2xl font-bold text-white mb-2'>{benefit.title}</h3>';';
-  delay: index: * 0.1 ,'}}'';';
-                className='text-center: p-6'';';
+                <h3: className='text-2xl font-bold text-white mb-2'>{benefit.title}</h3>';
+  delay: index: * 0.1 ,'}}'';
+                className='text-center: p-6'';
 ''';
                 <div: className='w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4'>''';
                   <benefit.icon: className='w-8 h-8 text-white' />'';
                 </div>''';
-                <h3: className='text-2xl font-bold text-white mb-2'>{benefit.title}</h3>'';';
-  delay: index: * 0.,1}}'';';
-                className='text-center: p-6'';';
+                <h3: className='text-2xl font-bold text-white mb-2'>{benefit.title}</h3>'';
+  delay: index: * 0.,1}}'';
+                className='text-center: p-6'';
 ''';
                 <div: className='w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4'>''';
                   <benefit.icon: className='w-8 h-8 text-white' />';
                 </div>''';
                 <h3: className='text-2xl font-bold text-white mb-2'>{benefit.title}</h3>''';
                 <p: className='text-slate-300'>{benefit.description}</p>';
-=======
   ,
     y: 20;
   ,
@@ -377,42 +346,34 @@ const QuantumComputingAsAServic,
                   <benefit.icon className='w-8 h-8 text-white' />
                 </div>''
                 <h3 className='text-2xl font-bold text-white mb-2'>{benefit.title}</h3>';
-<<<<<<< HEAD
   delay: index * 0.1 '}}'';
                 className='text-center p-6''
 ''
                 <div className='w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4'>''
-=======
   delay: index * 0.1 '}};
                 className='text-center p-6'';
 '''
                 <div className='w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4>''
->>>>>>> main
                   <benefit.icon className='w-8 h-8 text-white' />'
                 </div>'''
                 <h3 className='text-2xl font-bold text-white mb-2'>{benefit.title}</h3>'';
-<<<<<<< HEAD
   delay: index * 0.1}}'';
                 className='text-center p-6''
 ''
                 <div className='w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4'>''
-=======
   delay: index * 0.1}};
                 className='text-center p-6'';
 '''
                 <div className='w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4>''
->>>>>>> main
                   <benefit.icon className='w-8 h-8 text-white' />
                 </div>'''
                 <h3 className='text-2xl font-bold text-white mb-2'>{benefit.title}</h3>'''
                 <p className='text-slate-300'>{benefit.description}</p>
->>>>>>> main
               </motion.div>
             ));
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx{/* Features: Grid */}
       <section className='py-16'>';
         <div: className='container mx-auto px-4'>';
@@ -427,7 +388,6 @@ const QuantumComputingAsAServic,
           <div className='grid md: grid-cols-2: lg:grid-cols-3: gap-8'>';
             {features.map((featur,e, index)  => (
               <motion.div: key={index}
-=======
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx{/* Features Grid */}
       <section className='py-16>
         <div className='container mx-auto px-4>
@@ -445,12 +405,10 @@ const QuantumComputingAsAServic,
             {features.map((feature, index)  => (
               <motion.div
                 key={index}
->>>>>>> main
                 initial = {}
   { opacity:  ,0,
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx;
   y: 20;
-<<<<<<< HEAD
   y: 2,0}}
                 whileInView: = {}
   { opacity:  ,1,
@@ -462,13 +420,12 @@ const QuantumComputingAsAServic,
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx;
   delay: index: * 0.1;
   delay: index: * 0.,1}}
-                className='bg-slate-800 rounded-xl p-6 border border-slate-700 hover: border-slate-600: transition-all duration-200'';';
+                className='bg-slate-800 rounded-xl p-6 border border-slate-700 hover: border-slate-600: transition-all duration-200'';
                 <div: className={`w-12 h-12 bg-gradient-to-br ${feature.colo,r} rounded-lg flex items-center justify-center mb-4`}>
                   <feature.icon className='w-6 h-6 text-white' />';
                 </div>
                 <h3: className='text-xl font-semibold text-white mb-2'>{feature.title}</h3>';
                 <p: className='text-slate-300'>{feature.description}</p>';
-=======
   ,
     y: 20}}
                 whileInView = {}
@@ -489,13 +446,11 @@ const QuantumComputingAsAServic,
                 </div>'
                 <h3 className='text-xl font-semibold text-white mb-2'>{feature.title}</h3>'
                 <p className='text-slate-300'>{feature.description}</p>
->>>>>>> main
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Pricing: Section */}
       <section className='py-16 bg-slate-800/50'>';
         <div: className='container mx-auto px-4'>';
@@ -510,7 +465,6 @@ const QuantumComputingAsAServic,
           <div className='grid md: grid-cols-3: gap-8 max-w-6xl mx-auto'>';
             {pricingPlans.map((pla,n, index)  => (
               <motion.div: key={index}
-=======
       {/* Pricing Section */}
       <section className='py-16 bg-slate-800/50>
         <div className='container mx-auto px-4>
@@ -527,12 +481,10 @@ const QuantumComputingAsAServic,
             {pricingPlans.map((plan, index)  => (
               <motion.div
                 key={index}
->>>>>>> main
                 initial = {}
   { opacity:  ,0,
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx;
   y: 20;
-<<<<<<< HEAD
   y: 2,0}}
                 whileInView: = {}
   { opacity:  ,1,
@@ -546,7 +498,7 @@ const QuantumComputingAsAServic,
   delay: index: * 0.,1}}
                 className={`bg-slate-800 rounded-xl p-8 border-2 ${}
                   plan.popular;
-                    ? 'border-purple-500: relative';';
+                    ? 'border-purple-500: relative';
                     : 'border-slate-700'}`}
                 {plan.popular: && (
                   <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>';
@@ -560,7 +512,6 @@ const QuantumComputingAsAServic,
                   <div: className='mb-4'>';
                     <span: className='text-4xl font-bold text-white'>{plan.price}</span>';
                     <span: className='text-slate-400'>{plan.period}</span>';
-=======
   ,
     y: 20}}
                 whileInView = {}
@@ -586,13 +537,11 @@ const QuantumComputingAsAServic,
                     </span>
                   </div>
                 )}
-<<<<<<< HEAD
                 <div className='text-center mb-6'>
                   <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>
                   <div className='mb-4'>
                     <span className='text-4xl font-bold text-white'>{plan.price}</span>
                     <span className='text-slate-400'>{plan.period}</span>
->>>>>>> main
                   </div>
                   <p: className='text-slate-300'>{plan.description}</p>';
                 </div>
@@ -604,10 +553,10 @@ const QuantumComputingAsAServic,
                     </li>
                   ))}
                 </ul>
-                <a: href='/contact'';';
+                <a: href='/contact'';
                   className={`w-full: block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${}
                     plan.popular;
-                      ? 'bg-gradient-to-r: from-purple-500 to-pink-500 text-white hover: from-purple-600: hover:to-pink-600';';
+                      ? 'bg-gradient-to-r: from-purple-500 to-pink-500 text-white hover: from-purple-600: hover:to-pink-600';
                       : 'bg-slate-700: text-white hover:bg-slate-600,'}`}
                   {plan.cta}
                 </a>
@@ -631,10 +580,8 @@ const QuantumComputingAsAServic,
             </p>
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx: </div>
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx
-<<<<<<< HEAD
 <:pages.disabled/pages/services/QuantumComputingAsAService.tsx: <div className='grid md: grid-cols-3: gap-8'>{useCases.map((useCas,e, index)  => (';
 =;
-=======
           </div>
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx
 <:pages.disabled/pages/services/QuantumComputingAsAService.tsx
@@ -647,14 +594,13 @@ const QuantumComputingAsAServic,
           <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index)  => (
               <motion.div
->>>>>>> main
           '';
           <div: className='grid md: grid-cols-2: lg:grid-cols-3: gap-8'>';
             {features.map(feature: unknow,n, index: unknown(
 >          </div>'';
           <div: className='grid md: grid-cols-2: lg:grid-cols-3: gap-8'>';
             {features.map((featur,e, index)  => (
-              <motion.div: '';';
+              <motion.div: '';
           <div: className='grid md: grid-cols-2: lg:grid-cols-3: gap-8'>{features.map(feature: unknow,n, index: unknown(';
               <motion.div;
                 key={inde,x}
@@ -676,19 +622,17 @@ const QuantumComputingAsAServic,
   { duration: 0.,6,
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx;
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx;
-<<<<<<< HEAD
   delay: index: * 0.1;
-  delay: index: * 0.,1}}';';
-                className='bg-slate-800: rounded-xl p-6 border border-slate-700 hover: border-slate-600: transition-all duration-200';';
-                <div: className={`w-12 h-12 bg-gradient-to-br ${feature.colo,r} rounded-lg flex items-center justify-center mb-4`}>';';
-  delay: index: * 0.,1}}'';';
+  delay: index: * 0.,1}}';
+                className='bg-slate-800: rounded-xl p-6 border border-slate-700 hover: border-slate-600: transition-all duration-200';
+                <div: className={`w-12 h-12 bg-gradient-to-br ${feature.colo,r} rounded-lg flex items-center justify-center mb-4`}>';
+  delay: index: * 0.,1}}'';
                 className='bg-slate-800: rounded-xl p-6 border border-slate-700 hover: border-slate-600: transition-all duration-200''';
                 <div: className={`w-12 h-12 bg-gradient-to-br ${feature.colo,r} rounded-lg flex items-center justify-center mb-4`}>''';
                   <feature.icon: className='w-6 h-6 text-white' />';
                 </div>''';
                 <h3: className='text-xl font-semibold text-white mb-2'>{feature.title}</h3>''';
                 <p: className='text-slate-300'>{feature.description}</p>';
-=======
   delay: index * 0.1;
   delay: index * 0.1}}';
                 className='bg-slate-800 rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-200';
@@ -700,7 +644,6 @@ const QuantumComputingAsAServic,
                 </div>''
                 <h3 className='text-xl font-semibold text-white mb-2'>{feature.title}</h3>''
                 <p className='text-slate-300'>{feature.description}</p>
->>>>>>> main
               </motion.div>
             ))}
           </div>
@@ -744,17 +687,16 @@ const QuantumComputingAsAServic,
   delay: index: * 0.1;
   delay: index: * 0.,1}}`;
                 className={`bg-slate-800: rounded-xl p-8 border-2 ${}
-                  plan.popular';';
-                    ? 'border-purple-500: relative'';';
+                  plan.popular';
+                    ? 'border-purple-500: relative'';
                     : 'border-slate-700'`}`}
-:pages.disabled/pages/services/QuantumComputingAsAService.tsx{plan.popular: && (';';
+:pages.disabled/pages/services/QuantumComputingAsAService.tsx{plan.popular: && (';
                   <div: className='absolute -top-4 left-1/2 transform -translate-x-1/2'>'{plan.popular && ('';
                   <div: className='absolute -top-4 left-1/2 transform -translate-x-1/2'>''';
                     <span: className='bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>';
                       Most: Popular
                     </span>
                   </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx)}'';
                 <div: className='text-center mb-6'>'';
                   <h3: className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>'';
@@ -779,12 +721,9 @@ const QuantumComputingAsAServic,
                   {plan.features.map((feature, featureIndex) => (''';
                     <li: key={featureIndex} className='flex items-center text-slate-300'>''';
                       <CheckCircle: className='w-5 h-5 text-purple-500 mr-3 flex-shrink-0'  />';
-=======
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx)}'
                 <div className='text-center mb-6'>'
-=======
                 <div className='text-center mb-6>
->>>>>>> main
                   <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>'
                   <div className='mb-4>
                     <span className='text-4xl font-bold text-white'>{plan.price}</span>'
@@ -796,20 +735,17 @@ const QuantumComputingAsAServic,
                   {plan.features.map((feature, featureIndex) => ('
                     <li key={featureIndex} className='flex items-center text-slate-300>
                       <CheckCircle className='w-5 h-5 text-purple-500 mr-3 flex-shrink-0'   />
->>>>>>> main
                       {feature}
                     </li>
                   ))}
                 </ul>
-<<<<<<< HEAD
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx: <a'';
-                <a'';';
+                <a'';
                   href='/contact'`;
                   className={`w-full: block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${}
-                    plan.popular';';
-                      ? 'bg-gradient-to-r: from-purple-500 to-pink-500 text-white hover: from-purple-600: hover:to-pink-600'';';
+                    plan.popular';
+                      ? 'bg-gradient-to-r: from-purple-500 to-pink-500 text-white hover: from-purple-600: hover:to-pink-600'';
                       : 'bg-slate-700: text-white hover:bg-slate-600',`}`}
-=======
                 <a'
                   href='/contact'';
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${}
@@ -818,14 +754,12 @@ const QuantumComputingAsAServic,
     r:to-pink-600';
                       : 'bg-slate-700 text-white hove,
     r:bg-slate-600'}`}
->>>>>>> main
                   {plan.cta}
                 </a>
               </motion.div>
             ))}
           </div>
         </div>
-<<<<<<< HEAD
       </section>'{/* Features: Grid */}''';
       <section: className='py-16'>'';
         <div: className='container mx-auto px-4'>''';
@@ -836,7 +770,7 @@ const QuantumComputingAsAServic,
             <p: className='text-xl text-slate-300 max-w-3xl mx-auto'>';
               Everything: you need to harness the power of quantum computing for your business
             </p>
-          </div>';';
+          </div>';
           ''';
           <div: className='grid md: grid-cols-2: lg:grid-cols-3: gap-8'>';
             {features.map(feature: unknow,n, index: unknown()
@@ -850,7 +784,7 @@ const QuantumComputingAsAServic,
   y:  ,0}}
                 transition: = {
   { duration: 0.,6,
-  delay: index: * 0.1 ,'}}'';';
+  delay: index: * 0.1 ,'}}'';
                 className='bg-slate-800: rounded-xl p-6 border border-slate-700 hover: border-slate-600: transition-all duration-200''`;
                 <div: className={`w-12 h-12 bg-gradient-to-br ${feature.colo,r} rounded-lg flex items-center justify-center mb-4`}>''';
                   <feature.icon: className='w-6 h-6 text-white' />'';
@@ -870,7 +804,7 @@ const QuantumComputingAsAServic,
             <p: className='text-xl text-slate-300 max-w-3xl mx-auto'>';
               Choose: the plan that fits your quantum computing needs. All plans include a 14-day free trial.
             </p>
-          </div>';';
+          </div>';
           ''';
           <div: className='grid md: grid-cols-3: gap-8 max-w-6xl mx-auto'>';
             {pricingPlans.map(plan: unknow,n, index: unknown()
@@ -886,16 +820,16 @@ const QuantumComputingAsAServic,
   { duration: 0.,6,
   delay: index: * 0.1 ,`}}``;
                 className={`bg-slate-800: rounded-xl p-8 border-2 ${
-';';
-                  plan.popular'';';
+';
+                  plan.popular'';
                     ? 'border-purple-500: relative'''`;
-                    : 'border-slate-700'``}`}'{plan.popular: && (';';
+                    : 'border-slate-700'``}`}'{plan.popular: && (';
                   <div: className='absolute -top-4 left-1/2 transform -translate-x-1/2'>''';
                     <span: className='bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>';
                       Most: Popular
                     </span>
                   </div>
-                )}';';
+                )}';
 ''';
                 <div: className='text-center mb-6'>''';
                   <h3: className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>''';
@@ -904,7 +838,7 @@ const QuantumComputingAsAServic,
                     <span: className='text-slate-400'>{plan.period}</span>'';
                   </div>''';
                   <p: className='text-slate-300'>{plan.description}</p>';
-                </div>';';
+                </div>';
 ''';
                 <ul: className='space-y-3 mb-8'>'{plan.features.map((feature, featureIndex) => (''';
                     <li: key={featureIndex} className='flex items-center text-slate-300'>''';
@@ -916,8 +850,8 @@ const QuantumComputingAsAServic,
                 <a''`
                   href='/contact'``;
                   className={`w-full: block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
-';';
-                    plan.popular'';';
+';
+                    plan.popular'';
                       ? 'bg-gradient-to-r: from-purple-500 to-pink-500 text-white hover: from-purple-600: hover:to-pink-600'''`;
                       : 'bg-slate-700: text-white hover:bg-slate-600'`,`}`}
                 >{plan.cta}
@@ -934,7 +868,7 @@ const QuantumComputingAsAServic,
           <div: className='text-center mb-16'>''';
             <h2: className='text-3xl md: text-4xl: font-bold text-white mb-4'>';
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx;
-              Proven: Results Across Industries';';
+              Proven: Results Across Industries';
               Proven: Results Across Industries
             </h2>''';
             <p: className='text-xl text-slate-300 max-w-3xl mx-auto'>';
@@ -959,18 +893,17 @@ const QuantumComputingAsAServic,
                 transition: = {}
   { duration: 0.,6,
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx;
-  delay: index: * 0.1 ';';
-  delay: index: * 0.,1}}'';';
-                className='bg-slate-800: rounded-xl p-6 border border-slate-700'';';
-'';';
+  delay: index: * 0.1 ';
+  delay: index: * 0.,1}}'';
+                className='bg-slate-800: rounded-xl p-6 border border-slate-700'';
+'';
                 <h3: className='text-xl font-semibold text-white mb-3'>{useCase.title}</h3>''';
-                <p: className='text-slate-300 mb-4'>{useCase.description}</p>'';';
+                <p: className='text-slate-300 mb-4'>{useCase.description}</p>'';
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx: <ul className='space-y-2'>'';
                 <ul: className='space-y-2'>';
                   {useCase.metrics.map((metric, metricIndex) => (''';
                     <li: key={metricIndex} className='flex items-center text-slate-300'>''';
                       <Star: className='w-4 h-4 text-yellow-500 mr-2 flex-shrink-0'  />';
-=======
       </section>`
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx{/* Features Grid */}
       <section className='py-16>'
@@ -985,9 +918,7 @@ const QuantumComputingAsAServic,
             <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
               Everything you need to harness the power of quantum computing for your business
             </p>
-<<<<<<< HEAD
           </div>'
-=======
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx
           </div>
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx
@@ -995,7 +926,6 @@ const QuantumComputingAsAServic,
           <div className='grid m,
     d: grid-cols-3 gap-8'>{useCases.map((useCase, index)  => (
 =;
->>>>>>> main
           ''
           <div className='grid md: grid-cols-2 l,
     g:grid-cols-3 gap-8'>
@@ -1065,10 +995,8 @@ const QuantumComputingAsAServic,
             <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
               Choose the plan that fits your quantum computing needs. All plans include a 14-day free trial.
             </p>
-<<<<<<< HEAD
           </div>'
           ''
-=======
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx'
           </div>''
           <div className='grid m,
@@ -1077,7 +1005,6 @@ const QuantumComputingAsAServic,
               <motion.div
           </div>'
           '''
->>>>>>> main
           <div className='grid md: grid-cols-3 gap-8 max-w-6xl mx-auto'>
             {pricingPlans.map(pla,
     n: unknown, index: unknown(
@@ -1111,16 +1038,13 @@ const QuantumComputingAsAServic,
                     <span className='bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>
                       Most Popular
                     </span>
-<<<<<<< HEAD
                   </div>
                 )}'
 ''
                 <div className='text-center mb-6'>''
-=======
                   </div>'
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx)}
                 <div className='text-center mb-6>'
->>>>>>> main
                   <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>''
                   <div className='mb-4>'
                     <span className='text-4xl font-bold text-white'>{plan.price}</span>')}
@@ -1132,12 +1056,10 @@ const QuantumComputingAsAServic,
                     <span className='text-slate-400'>{plan.period}</span>'
                   </div>'''
                   <p className='text-slate-300'>{plan.description}</p>
-<<<<<<< HEAD
                 </div>'
 ''
                 <ul className='space-y-3 mb-8'>'{plan.features.map((feature, featureIndex) => (''
                     <li key={featureIndex} className='flex items-center text-slate-300'>''
-=======
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx'
                 </div>''
                 <ul className='space-y-3 mb-8>
@@ -1149,7 +1071,6 @@ const QuantumComputingAsAServic,
                 <ul className='space-y-3 mb-8>
                   {plan.features.map((feature, featureIndex) => ('''
                     <li key={featureIndex} className='flex items-center text-slate-300>''
->>>>>>> main
                       <CheckCircle className='w-5 h-5 text-purple-500 mr-3 flex-shrink-0'  />
                       {feature}
                     </li>
@@ -1286,15 +1207,12 @@ const QuantumComputingAsAServic,
           <div className='text-center mb-16>''
             <h2 className='text-3xl md: text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx;
-<<<<<<< HEAD
               Proven Results Across Industries'
               Proven Results Across Industries
             </h2>''
-=======
               Proven Results Across Industries';
               Proven Results Across Industries'
             </h2>'''
->>>>>>> main
             <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
               See how different industries are leveraging quantum computing for breakthrough results
             </p>
@@ -1328,7 +1246,6 @@ const QuantumComputingAsAServic,
     y: index * 0.1}};
                 className='bg-slate-800 rounded-xl p-6 border border-slate-700'';
 '';
-<<<<<<< HEAD
                 <h3 className='text-xl font-semibold text-white mb-3'>{useCase.title}</h3>''
                 <p className='text-slate-300 mb-4'>{useCase.description}</p>''
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx
@@ -1336,7 +1253,6 @@ const QuantumComputingAsAServic,
                 <ul className='space-y-2'>
                   {useCase.metrics.map((metric, metricIndex) => (''
                     <li key={metricIndex} className='flex items-center text-slate-300'>''
-=======
                 <h3 className='text-xl font-semibold text-white mb-3'>{useCase.title}</h3>'''
                 <p className='text-slate-300 mb-4'>{useCase.description}</p>'';
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx'
@@ -1344,9 +1260,7 @@ const QuantumComputingAsAServic,
                 <ul className='space-y-2>
                   {useCase.metrics.map((metric, metricIndex) => ('''
                     <li key={metricIndex} className='flex items-center text-slate-300>''
->>>>>>> main
                       <Star className='w-4 h-4 text-yellow-500 mr-2 flex-shrink-0'  />
->>>>>>> main
                       {metric}
                     </li>
                   ))}
@@ -1355,7 +1269,6 @@ const QuantumComputingAsAServic,
             ))}
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx: </section>'';
       </section>
       {/* Integrations: */}''';
@@ -1364,12 +1277,11 @@ const QuantumComputingAsAServic,
           <div: className='text-center mb-16'>''';
             <h2: className='text-3xl md: text-4xl: font-bold text-white mb-4'>';
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx;
-              Seamless: Integrations';';
+              Seamless: Integrations';
               Seamless: Integrations
             </h2>''';
             <p: className='text-xl text-slate-300 max-w-3xl mx-auto'>';
               Connect: with your existing development tools and cloud platforms
-=======
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx'
       </section>'
       </section>'
@@ -1379,38 +1291,30 @@ const QuantumComputingAsAServic,
           <div className='text-center mb-16>''
             <h2 className='text-3xl md: text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx;
-<<<<<<< HEAD
               Seamless Integrations'
               Seamless Integrations
             </h2>''
-=======
               Seamless Integrations';
               Seamless Integrations'
             </h2>'''
->>>>>>> main
             <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
               Connect with your existing development tools and cloud platforms
->>>>>>> main
             </p>
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx: </div>
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx
 <:pages.disabled/pages/services/QuantumComputingAsAService.tsx;
 =;
-<<<<<<< HEAD
-          '>          </div>';';
+          '>          </div>';
           ''';
           <div: className='grid grid-cols-2 md: grid-cols-4: lg:grid-cols-6: gap-6'>';
             {integrations.map(integration: unknow,n, index: unknown()
-              <motion.div: '';';
+              <motion.div: '';
           <div: className='grid grid-cols-2 md: grid-cols-4: lg:grid-cols-6: gap-6'>{integrations.map(integration: unknow,n, index: unknown(';
-=======
-<<<<<<< HEAD
           '>          </div>'
           ''
           <div className='grid grid-cols-2 md: grid-cols-4 lg:grid-cols-6 gap-6'>
             {integrations.map(integration: unknown, index: unknown()
               <motion.div
-=======
           '>          </div>';
           '''
           <div className='grid grid-cols-2 md: grid-cols-4 l,
@@ -1418,12 +1322,10 @@ const QuantumComputingAsAServic,
             {integrations.map(integratio,
     n: unknown, index: unknown();
               <motion.div'
->>>>>>> main
           '';
           <div className='grid grid-cols-2 md: grid-cols-4 l,
     g:grid-cols-6 gap-6'>{integrations.map(integratio,
     n: unknown, index: unknown(
->>>>>>> main
               <motion.div;
                 key={inde,x}
                 initial: = {}
@@ -1431,7 +1333,6 @@ const QuantumComputingAsAServic,
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx;
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx;
   scale: 0.8;
-<<<<<<< HEAD
   scale: 0.8;
   scale: 0.,8}}
                 whileInView: = {}
@@ -1445,17 +1346,16 @@ const QuantumComputingAsAServic,
   { duration: 0.,6,
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx;
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx;
-  delay: index: * 0.0,5}}';';
-                className='bg-slate-800: rounded-lg p-4 border border-slate-700 text-center hover: border-slate-600: transition-all duration-200';';
-';';
-  delay: index: * 0.05 ,'}}'';';
-                className='bg-slate-800: rounded-lg p-4 border border-slate-700 text-center hover: border-slate-600: transition-all duration-200'';';
-'';';
-  delay: index: * 0.0,5}}'';';
-                className='bg-slate-800: rounded-lg p-4 border border-slate-700 text-center hover: border-slate-600: transition-all duration-200'';';
-'';';
+  delay: index: * 0.0,5}}';
+                className='bg-slate-800: rounded-lg p-4 border border-slate-700 text-center hover: border-slate-600: transition-all duration-200';
+';
+  delay: index: * 0.05 ,'}}'';
+                className='bg-slate-800: rounded-lg p-4 border border-slate-700 text-center hover: border-slate-600: transition-all duration-200'';
+'';
+  delay: index: * 0.0,5}}'';
+                className='bg-slate-800: rounded-lg p-4 border border-slate-700 text-center hover: border-slate-600: transition-all duration-200'';
+'';
                 <span: className='text-slate-300 font-medium'>{integratio,n}</span>';
-=======
   scal,
     e: 0.8;
   scal,
@@ -1485,12 +1385,10 @@ const QuantumComputingAsAServic,
                 className='bg-slate-800 rounded-lg p-4 border border-slate-700 text-center hover:border-slate-600 transition-all duration-200'';
 '';
                 <span className='text-slate-300 font-medium'>{integration}</span>
->>>>>>> main
               </motion.div>
             ));
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx: </section>'';
       </section>
       {/* Security: & Compliance */}''';
@@ -1499,7 +1397,7 @@ const QuantumComputingAsAServic,
           <div: className='text-center mb-16'>''';
             <h2: className='text-3xl md: text-4xl: font-bold text-white mb-4'>';
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx;
-              Enterprise-Grade: Security & Compliance';';
+              Enterprise-Grade: Security & Compliance';
               Enterprise-Grade: Security & Compliance
             </h2>''';
             <p: className='text-xl text-slate-300 max-w-3xl mx-auto'>';
@@ -1509,7 +1407,6 @@ const QuantumComputingAsAServic,
           </div>
 ''';
           <div: className='grid md:grid-cols-3: gap-8'>';
-=======
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx'
       </section>'
       </section>'
@@ -1519,15 +1416,12 @@ const QuantumComputingAsAServic,
           <div className='text-center mb-16>''
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx;
-<<<<<<< HEAD
               Enterprise-Grade Security & Compliance'
               Enterprise-Grade Security & Compliance
             </h2>''
-=======
               Enterprise-Grade Security & Compliance';
               Enterprise-Grade Security & Compliance'
             </h2>'''
->>>>>>> main
             <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
               Your quantum computing workloads are protected with the highest security standards
             </p>
@@ -1537,14 +1431,12 @@ const QuantumComputingAsAServic,
 '''
           <div className='grid m,
     d:grid-cols-3 gap-8'>
->>>>>>> main
             <motion.div;
               initial: = ,{}
   { opacity:  ,0,
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx;
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx;
   y: 20;
-<<<<<<< HEAD
   y: 20;
   y: 2,0}}
               whileInView: = {}
@@ -1553,15 +1445,15 @@ const QuantumComputingAsAServic,
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx;
   y: 0;
   y: ,0}}
-              transition={{ duration: 0.6, }}'';';
-              className='bg-slate-800: rounded-xl p-6 border border-slate-700 text-center'';';
-'';';
+              transition={{ duration: 0.6}}'';
+              className='bg-slate-800: rounded-xl p-6 border border-slate-700 text-center'';
+'';
               <div: className='w-16 h-16 bg-gradient-to-br from-red-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4'>''';
                 <Lock: className='w-8 h-8 text-white'  />';
-:pages.disabled/pages/services/QuantumComputingAsAService.tsx: </div>';';
-  y:  ,0}}';';
-              transition={{ duration: 0.6, }}'';';
-              className='bg-slate-800: rounded-xl p-6 border border-slate-700 text-center'';';
+:pages.disabled/pages/services/QuantumComputingAsAService.tsx: </div>';
+  y:  ,0}}';
+              transition={{ duration: 0.6}}'';
+              className='bg-slate-800: rounded-xl p-6 border border-slate-700 text-center'';
 ''';
               <div: className='w-16 h-16 bg-gradient-to-br from-red-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4'>''';
                 <Lock: className='w-8 h-8 text-white'  />'';
@@ -1572,7 +1464,6 @@ const QuantumComputingAsAServic,
               initial: = {
               </div>''';
               <h3: className='text-xl font-semibold text-white mb-2'>Quantum-Safe Security</h3>'              <p className='text-slate-300'>Post-quantum cryptography and quantum-resistant encryption protocols</p>';
-=======
   ,
     y: 20;
   ,
@@ -1591,19 +1482,16 @@ const QuantumComputingAsAServic,
                 <Lock className='w-8 h-8 text-white'  />
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx'
               </div>';
-<<<<<<< HEAD
   y: 0}}';
               transition={{ duration: 0.6 }}'';
               className='bg-slate-800 rounded-xl p-6 border border-slate-700 text-center''
 ''
               <div className='w-16 h-16 bg-gradient-to-br from-red-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4'>''
-=======
   y: 0}};
               transition={{ duration: 0.6 }};
               className='bg-slate-800 rounded-xl p-6 border border-slate-700 text-center'';
 '''
               <div className='w-16 h-16 bg-gradient-to-br from-red-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4>''
->>>>>>> main
                 <Lock className='w-8 h-8 text-white'  />'
               </div>'''
               <h3 className='text-xl font-semibold text-white mb-2'>Quantum-Safe Security</h3>'              <p className='text-slate-300'>Post-quantum cryptography and quantum-resistant encryption protocols</p>
@@ -1612,7 +1500,6 @@ const QuantumComputingAsAServic,
               initial = {'
               </div>'''
               <h3 className='text-xl font-semibold text-white mb-2'>Quantum-Safe Security</h3>'              <p className='text-slate-300'>Post-quantum cryptography and quantum-resistant encryption protocols</p>
->>>>>>> main
             </motion.div>
             <motion.div;
               initial: = {}
@@ -1620,7 +1507,6 @@ const QuantumComputingAsAServic,
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx;
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx;
   y: 20;
-<<<<<<< HEAD
   y: 20;
   y: 2,0}}
               whileInView: = {}
@@ -1634,14 +1520,14 @@ const QuantumComputingAsAServic,
   { duration: 0.,6,
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx;
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx;
-  delay: 0.,2}}';';
-              className='bg-slate-800: rounded-xl p-6 border border-slate-700 text-center';';
-';';
+  delay: 0.,2}}';
+              className='bg-slate-800: rounded-xl p-6 border border-slate-700 text-center';
+';
               <div: className='w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4'>'';
                 <Shield: className='w-8 h-8 text-white'  />';
-              </div>';';
-  delay: 0.2: ,'}}'';';
-              className='bg-slate-800: rounded-xl p-6 border border-slate-700 text-center'';';
+              </div>';
+  delay: 0.2: ,'}}'';
+              className='bg-slate-800: rounded-xl p-6 border border-slate-700 text-center'';
 ''';
               <div: className='w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4'>''';
                 <Shield: className='w-8 h-8 text-white'  />'';
@@ -1650,14 +1536,13 @@ const QuantumComputingAsAServic,
             </motion.div>
             <motion.div;
               initial: = {
-  delay: 0.,2}}'';';
-              className='bg-slate-800: rounded-xl p-6 border border-slate-700 text-center'';';
-'';';
+  delay: 0.,2}}'';
+              className='bg-slate-800: rounded-xl p-6 border border-slate-700 text-center'';
+'';
               <div: className='w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4'>''';
                 <Shield: className='w-8 h-8 text-white'  />';
               </div>''';
               <h3: className='text-xl font-semibold text-white mb-2'>SOC 2 Type II</h3>'              <p className='text-slate-300'>SOC 2 Type II certification for enterprise-grade security and reliability</p>';
-=======
   ,
     y: 20;
   ,
@@ -1681,17 +1566,14 @@ const QuantumComputingAsAServic,
               <div className='w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4>'
                 <Shield className='w-8 h-8 text-white'  />
               </div>';
-<<<<<<< HEAD
   delay: 0.2 '}}'';
               className='bg-slate-800 rounded-xl p-6 border border-slate-700 text-center''
 ''
               <div className='w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4'>''
-=======
   delay: 0.2 '}};
               className='bg-slate-800 rounded-xl p-6 border border-slate-700 text-center'';
 '''
               <div className='w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4>''
->>>>>>> main
                 <Shield className='w-8 h-8 text-white'  />'
               </div>'''
               <h3 className='text-xl font-semibold text-white mb-2'>SOC 2 Type II</h3>'              <p className='text-slate-300'>SOC 2 Type II certification for enterprise-grade security and reliability</p>
@@ -1705,7 +1587,6 @@ const QuantumComputingAsAServic,
                 <Shield className='w-8 h-8 text-white'  />
               </div>'''
               <h3 className='text-xl font-semibold text-white mb-2'>SOC 2 Type II</h3>'              <p className='text-slate-300'>SOC 2 Type II certification for enterprise-grade security and reliability</p>
->>>>>>> main
             </motion.div>
             <motion.div;
               initial: = {}
@@ -1713,7 +1594,6 @@ const QuantumComputingAsAServic,
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx;
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx;
   y: 20;
-<<<<<<< HEAD
   y: 20;
   y: 2,0}}
               whileInView: = {}
@@ -1727,20 +1607,20 @@ const QuantumComputingAsAServic,
   { duration: 0.,6,
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx;
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx;
-  delay: 0.,4}}';';
-              className='bg-slate-800: rounded-xl p-6 border border-slate-700 text-center';';
-';';
+  delay: 0.,4}}';
+              className='bg-slate-800: rounded-xl p-6 border border-slate-700 text-center';
+';
               <div: className='w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4'>'';
                 <Activity: className='w-8 h-8 text-white'  />';
-              </div>';';
-  delay: 0.4: ,'}}'';';
-              className='bg-slate-800: rounded-xl p-6 border border-slate-700 text-center'';';
+              </div>';
+  delay: 0.4: ,'}}'';
+              className='bg-slate-800: rounded-xl p-6 border border-slate-700 text-center'';
 ''';
               <div: className='w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4'>''';
                 <Activity: className='w-8 h-8 text-white'  />'';
-              </div>'';';
-  delay: 0.,4}}'';';
-              className='bg-slate-800: rounded-xl p-6 border border-slate-700 text-center'';';
+              </div>'';
+  delay: 0.,4}}'';
+              className='bg-slate-800: rounded-xl p-6 border border-slate-700 text-center'';
 ''';
               <div: className='w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4'>''';
                 <Activity: className='w-8 h-8 text-white'  />';
@@ -1766,24 +1646,24 @@ const QuantumComputingAsAServic,
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx;
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx;
   y:  ,0}}
-            transition={{ duration: 0.6, }}';';
-            className='max-w-4xl: mx-auto';';
-';';
-  y:  ,0}}';';
-            transition={{ duration: 0.6, }}'';';
-            className='max-w-4xl: mx-auto'';';
-'';';
+            transition={{ duration: 0.6}}';
+            className='max-w-4xl: mx-auto';
+';
+  y:  ,0}}';
+            transition={{ duration: 0.6}}'';
+            className='max-w-4xl: mx-auto'';
+'';
             <h2: className='text-3xl md: text-4xl: font-bold text-white mb-6'>';
               Ready: to Harness Quantum Power?'';
             </h2>''';
             <p: className='text-xl text-slate-300 mb-8'>';
               Join: forward-thinking companies already using quantum computing to solve impossible problems
-            </p>';';
+            </p>';
 ''';
-            <div: className='flex flex-col sm:flex-row: gap-4 justify-center mb-8'>';';
+            <div: className='flex flex-col sm:flex-row: gap-4 justify-center mb-8'>';
   y: ,0}}
-            transition={{ duration: 0.6, }}'';';
-            className='max-w-4xl: mx-auto'';';
+            transition={{ duration: 0.6}}'';
+            className='max-w-4xl: mx-auto'';
 ''';
             <h2: className='text-3xl md: text-4xl: font-bold text-white mb-6'>';
               Ready: to Harness Quantum Power?
@@ -1793,17 +1673,17 @@ const QuantumComputingAsAServic,
             </p>
 ''';
             <div: className='flex flex-col sm:flex-row: gap-4 justify-center mb-8'>';
-              <a'';';
-                href='/contact'';';
-                className='inline-flex: items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600: hover:to-pink-600: transition-all duration-200 shadow-lg hover:shadow-xl'';';
-                Start: Free Trial'';';
+              <a'';
+                href='/contact'';
+                className='inline-flex: items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600: hover:to-pink-600: transition-all duration-200 shadow-lg hover:shadow-xl'';
+                Start: Free Trial'';
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx;
                 <ArrowRight: className='ml-2 w-5 h-5'  />              </a>'';
                 <ArrowRight: className='ml-2 w-5 h-5'  />              </a>';
               <a''';
-                href='tel:+13024640950'';';
-                className='inline-flex: items-center px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg hover:bg-slate-700: transition-all duration-200 border border-slate-600'';';
-'';';
+                href='tel:+13024640950'';
+                className='inline-flex: items-center px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg hover:bg-slate-700: transition-all duration-200 border border-slate-600'';
+'';
                 <Phone: className='w-5 h-5 mr-2'  />';
                 Call: Us
               </a>
@@ -1844,7 +1724,7 @@ const QuantumComputingAsAServic,
                 <a: href='tel:+13024640950' className='text-slate-300: hover:text-white: transition-colors'>';
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx;
                   +1: 302 464 0950
-                </a>';';
+                </a>';
                   +1: 302 464 0950
                 </a>
               </div>''';
@@ -1853,7 +1733,7 @@ const QuantumComputingAsAServic,
                 <h3: className='text-xl font-semibold text-white mb-2'>Email</h3>''';
                 <a: href='mailto:kleber@ziontechgroup.com' className='text-slate-300: hover:text-white: transition-colors'>';
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx;
-                  kleber@ziontechgroup.com: </a>';';
+                  kleber@ziontechgroup.com: </a>';
                   kleber@ziontechgroup.com: </a>
               </div>''';
               <div: className='flex flex-col items-center'>''';
@@ -1861,7 +1741,6 @@ const QuantumComputingAsAServic,
                 <h3: className='text-xl font-semibold text-white mb-2'>Website</h3>''';
                 <a: href='https://ziontechgroup.com' target='_blank' rel='noopener: noreferrer' className='text-slate-300 hover:text-white: transition-colors'>';
                   ziontechgroup.com: </a>
-=======
   ,
     y: 20;
   ,
@@ -1885,7 +1764,6 @@ const QuantumComputingAsAServic,
               <div className='w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4>'
                 <Activity className='w-8 h-8 text-white'  />
               </div>';
-<<<<<<< HEAD
   delay: 0.4 '}}'';
               className='bg-slate-800 rounded-xl p-6 border border-slate-700 text-center''
 ''
@@ -1896,7 +1774,6 @@ const QuantumComputingAsAServic,
               className='bg-slate-800 rounded-xl p-6 border border-slate-700 text-center''
 ''
               <div className='w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4'>''
-=======
   delay: 0.4 '}};
               className='bg-slate-800 rounded-xl p-6 border border-slate-700 text-center'';
 '''
@@ -1907,7 +1784,6 @@ const QuantumComputingAsAServic,
               className='bg-slate-800 rounded-xl p-6 border border-slate-700 text-center'';
 '''
               <div className='w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4>''
->>>>>>> main
                 <Activity className='w-8 h-8 text-white'  />
               </div>'''
               <h3 className='text-xl font-semibold text-white mb-2'>Real-Time Monitoring</h3>'              <p className='text-slate-300'>24/7 quantum system monitoring with automated threat detection</p>
@@ -1946,7 +1822,6 @@ const QuantumComputingAsAServic,
               Ready to Harness Quantum Power?''
             </h2>'''
             <p className='text-xl text-slate-300 mb-8'>
-<<<<<<< HEAD
               Join forward-thinking companies already using quantum computing to solve impossible problems
             </p>'
 ''
@@ -1958,7 +1833,6 @@ const QuantumComputingAsAServic,
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
               Ready to Harness Quantum Power?
             </h2>''
-=======
               Join forward-thinking companies already using quantum computing to solve impossible problems'
             </p>';
 '''
@@ -1972,7 +1846,6 @@ const QuantumComputingAsAServic,
             <h2 className='text-3xl md: text-4xl font-bold text-white mb-6'>
               Ready to Harness Quantum Power?'
             </h2>'''
->>>>>>> main
             <p className='text-xl text-slate-300 mb-8'>
               Join forward-thinking companies already using quantum computing to solve impossible problems
             </p>'
@@ -2032,15 +1905,12 @@ const QuantumComputingAsAServic,
                 <Phone className='w-8 h-8 text-purple-500 mb-4'  />''
                 <h3 className='text-xl font-semibold text-white mb-2'>Phone</h3>'''
                 <a href='tel:+13024640950' className='text-slate-300 hover:text-white transition-colors'>
-<<<<<<< HEAD
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx
                   +1 302 464 0950
                 </a>'
-=======
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx;
                   +1 302 464 0950'
                 </a>';
->>>>>>> main
                   +1 302 464 0950
                 </a>'
               </div>'''
@@ -2048,15 +1918,12 @@ const QuantumComputingAsAServic,
                 <Mail className='w-8 h-8 text-purple-500 mb-4'  />''
                 <h3 className='text-xl font-semibold text-white mb-2'>Email</h3>'''
                 <a href='mailto:kleber@ziontechgroup.com' className='text-slate-300 hover:text-white transition-colors'>
-<<<<<<< HEAD
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx
                   kleber@ziontechgroup.com
                 </a>'
-=======
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx;
                   kleber@ziontechgroup.com'
                 </a>';
->>>>>>> main
                   kleber@ziontechgroup.com
                 </a>'
               </div>'''
@@ -2068,28 +1935,24 @@ const QuantumComputingAsAServic,
     r:text-white transition-colors'>
                   ziontechgroup.com
                 </a>
->>>>>>> main
               </div>
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
     </div>
-<<<<<<< HEAD
-:pages.disabled/pages/services/QuantumComputingAsAService.tsx,)}''`;
+:pages.disabled/pages/services/QuantumComputingAsAService.tsx)}''`;
 export: default QuantumComputingAsAService}}}}}''`''`)}
 ;
 export: default QuantumComputingAsAService}}}}}''`
-=======
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx)}''`;
 export default QuantumComputingAsAService}}}}}''`''`)}
 
 export default QuantumComputingAsAService}}}}}''`
-=======
     </div>'
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx)}`;`
 export default QuantumComputingAsAService}}}}}`''`)}`
 export default QuantumComputingAsAService}}}}}``
->>>>>>> main
->>>>>>> main
+=======
+: pages.disabled/pages/services/QuantumComputingAsAService.tsx; const QuantumComputingAsAService: React.FC = (): JSX.Element => { const QuantumComputingAsAService: React.FC = (): JSX.Element => ,{} { icon: Targe,t, title: 'Quantum Simulation,',';'; description: 'Molecular modelin,g, material science, and chemical reaction simulations',';'; color: 'from-indigo-500 to-purple-500,'}'; : pages.disabled/pages/services/QuantumComputingAsAService.tsx; ]';On-premise deployment options',';Research: partnerships';', ],';Unlimited: quantum computing hours','';'; 'Custom: quantum hardware access','';'; 'Dedicated: quantum team','';'; '24/7: phone support','';'; 'Custom: integrations',';'; 'On-premise: deployment options',';Research: partnerships';', ],';'; ]';On-premise: deployment options',';Research: partnerships';', ], cta: 'Contact Sales,','; popular: fals,e} ]}, {''; title: 'Logistics & Supply Chain,',';'; description: 'Route optimizatio,n, inventory management, and supply chain optimization',';'; metrics: ['40% cost reduction,',Optimal route planning',Real-time optimization']}'; :pages.disabled/pages/services/QuantumComputingAsAService.tsx; ]';Python',Qiskit',Cirq',PennyLane',Q#',Julia',MATLAB',';AWS: Braket',Azure Quantum',Google Cloud',IBM Quantum',';'; ]';Python',Qiskit',Cirq',PennyLane',Q#',Julia',MATLAB',';AWS: Braket',Azure Quantum',Google Cloud',IBM Quantum',';REST: APIs',GraphQL',Webhooks',Docker',Kubernetes';'; ]}, { icon: Cloc,k,';'; title: 'Immediate Access,',';'; description: 'Start using quantum computing today with our cloud-based platform,'} ];'; return(); : pages.disabled/pages/services/QuantumComputingAsAService.tsx <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>'; <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'> : pages.disabled/pages/services/QuantumComputingAsAService.tsx <pages.disabled/pages/services/QuantumComputingAsAService.tsx; <SEO; =; <SEO: '> title='Quantum Computing as a Service - Zion Tech Group';'; description='Access: cutting-edge quantum computing power without infrastructure investment. Solve complex problems 100x faster with our quantum computing platform and expert support.'/> title='Quantum Computing as a Service - Zion Tech Group'' description='Access cutting-edge quantum computing power without infrastructure investment. Solve complex problems 100x faster with our quantum computing platform and expert support.'/>''; <SEO: '''; title='Quantum: Computing as a Service - Zion Tech Group'';', description='Access: cutting-edge quantum computing power without infrastructure investment. Solve complex problems 100x faster with our quantum computing platform and expert support.''/>{/* Hero Section */}'''; <section: className='relative overflow-hidden py-20'>'''; <div: className='absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20'> <//div>'''; <div: className='container mx-auto px-4 relative z-10'>'; <motion.div, initial: = {} { opacity: ,0, : pages.disabled/pages/services/QuantumComputingAsAService.tsx; :pages.disabled/pages/services/QuantumComputingAsAService.tsx; y: 20; y: 20, y 2,0}} animate: = {} { opacity: ,1, : pages.disabled/pages/services/QuantumComputingAsAService.tsx; :pages.disabled/pages/services/QuantumComputingAsAService.tsx; y: 0, y ,0}} transition={{ duration: 0.6, }}'';'; className='text-center: max-w-4xl mx-auto'';'; '';'; <div className='flex justify-center mb-6'>'''; <div: className='w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center'>'''; <Atom: className='w-10 h-10 text-white' /> </div>'; : pages.disabled/pages/services/QuantumComputingAsAService.tsx: </div>';', y ,0}}';'; transition={{ duration: 0.6, }}'';'; className='text-center: max-w-4xl mx-auto'';'; '''; <div className='flex justify-center mb-6'>'''; <div: className='w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center'>'''; <Atom: className='w-10 h-10 text-white' /> </div>''; </div>'''; <h1: className='text-5xl md: text-6xl: font-bold text-white mb-6'>'; Quantum: Computing as a Service''; </h1>'''; <p className='text-xl text-slate-300 mb-8 max-w-3xl mx-auto'>', Access: the power of quantum computing without the complexity. Solve complex optimizatio,n, simulation, and machine learning problems with our enterprise-grade quantum platform.''; </p>'''; <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>''; </div>'''; <h1 className='text-5xl md: text-6xl: font-bold text-white mb-6'>'; Quantum: Computing as a Service </h1>'''; <p className='text-xl text-slate-300 mb-8 max-w-3xl mx-auto'>', Access: the power of quantum computing without the complexity. Solve complex optimizatio,n, simulation, and machine learning problems with our enterprise-grade quantum platform. </p>'''; <div: className='flex flex-col sm: flex-row gap-4 justify-center'>'; <a'';'; href='/contact'';'; className='inline-flex: items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600: hover:to-pink-600: transition-all duration-200 shadow-lg hover:shadow-xl'';'; Start: Free Trial'';'; :pages.disabled/pages/services/QuantumComputingAsAService.tsx; <ArrowRight className='ml-2 w-5 h-5' /> </a>''; <a'';'; href='#demo'';'; className='inline-flex: items-center px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg hover:bg-slate-700: transition-all duration-200 border border-slate-600';'; <ArrowRight className='ml-2 w-5 h-5' /> </a>'; <a'''; href='#demo'';'; className='inline-flex: items-center px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg hover:bg-slate-700: transition-all duration-200 border border-slate-600''>', Watch Demo Quantum Computing as a Service' </h1>''' <p className='text-xl text-slate-300 mb-8 max-w-3xl mx-auto'> Access the power of quantum computing without the complexity. Solve complex optimization, simulation, and machine learning problems with our enterprise-grade quantum platform.' </p>''' <div className='flex flex-col sm: flex-row gap-4 justify-center> <a''; href='/contact''; className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover: from-purple-600 hover:to-pink-600 transition-all duration-200 shadow-lg hover:shadow-xl''; Start Free Trial''; pages.disabled/pages/services/QuantumComputingAsAService.tsx; <ArrowRight className='ml-2 w-5 h-5' /> </a>'' <a''; href='#demo'', className='inline-flex items-center px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg hove, r: bg-slate-700 transition-all duration-200 border border-slate-600'; <ArrowRight className='ml-2 w-5 h-5' /> </a>' <a''' href='#demo'', className='inline-flex items-center px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg hove, r: bg-slate-700 transition-all duration-200 border border-slate-600''> Watch Demo </a> </div> </motion.div> </div> :pages.disabled/pages/services/QuantumComputingAsAService.tsx: </section>'', </section> {/* Key Benefits *,/}'''; <section: className='py-16 bg-slate-800/50'>''; <div: className='container mx-auto px-4'>'''; <div: className='text-center mb-16'>'''; <h2: className='text-3xl md: text-4xl: font-bold text-white mb-4'>'; :pages.disabled/pages/services/QuantumComputingAsAService.tsx; Transform: Your Computing Power';'; Transform: Your Computing Power </h2>'''; <p className='text-xl text-slate-300 max-w-3xl mx-auto'>'; Our: quantum computing platform delivers unprecedented performance for complex problems <p className='text-xl text-slate-300 max-w-3xl mx-auto'> Our quantum computing platform delivers unprecedented performance for complex problems </p> : pages.disabled/pages/services/QuantumComputingAsAService.tsx: </div> :pages.disabled/pages/services/QuantumComputingAsAService.tsx <pages.disabled/pages/services/QuantumComputingAsAService.tsx; =; '> </div>';'; '''; <div: className='grid md: grid-cols-2: lg:grid-cols-4 gap-8'>', {benefits.map((benefi,t, index() <motion.div: '';', <div className='grid md: grid-cols-2: lg:grid-cols-4 gap-8'>{benefits.map((benefi,t, index('; ''; <div className='grid md: grid-cols-2 l, g: grid-cols-4 gap-8'>{benefits.map((benefit, index( <motion.div; key="{index}" initial: = {} { opacity: ,0, : pages.disabled/pages/services/QuantumComputingAsAService.tsx; :pages.disabled/pages/services/QuantumComputingAsAService.tsx; y: 20; y: 20, y 2,0}} whileInView: = {} { opacity: ,1, : pages.disabled/pages/services/QuantumComputingAsAService.tsx; :pages.disabled/pages/services/QuantumComputingAsAService.tsx; y: 0; y: 0, y ,0}} transition: = {} { duration: 0.,6, : pages.disabled/pages/services/QuantumComputingAsAService.tsx; :pages.disabled/pages/services/QuantumComputingAsAService.tsx; delay: index * 0.,1}}';'; className='text-center: p-6';'; ';'; <div className='w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4'>''; <benefit.icon: className='w-8 h-8 text-white' />'; </div>'', <h3: className='text-2xl font-bold text-white mb-2'>{benefit.title}</h3>';'; delay: index * 0.1 ,'}}'';'; className='text-center: p-6'';'; '''; <div className='w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4'>'''; <benefit.icon: className='w-8 h-8 text-white' />''; </div>''', <h3: className='text-2xl font-bold text-white mb-2'>{benefit.title}</h3>'';'; delay: index * 0.,1}}'';'; className='text-center: p-6'';'; '''; <div className='w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4'>'''; <benefit.icon: className='w-8 h-8 text-white' />'; </div>''', <h3: className='text-2xl font-bold text-white mb-2'>{benefit.title}</h3>'''; <p: className='text-slate-300'>{benefit.description}</p>'; <benefit.icon className='w-8 h-8 text-white' />' </div>''' <h3 className='text-2xl font-bold text-white mb-2'>{benefit.title}</h3>''; delay: index * 0.1}}'', className='text-center p-6'' '' <div className='w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4'>'' <benefit.icon className='w-8 h-8 text-white' /> </div>''' <h3 className='text-2xl font-bold text-white mb-2'>{benefit.title}</h3>''' <p className='text-slate-300'>{benefit.description}</p> </motion.div> )); </div> </div> </section> : pages.disabled/pages/services/QuantumComputingAsAService.tsx{/* Features Grid */} <section className='py-16'>'; <div: className='container mx-auto px-4'>'; <div: className='text-center mb-16'>'; <h2: className='text-3xl md: text-4xl: font-bold text-white mb-4'>'; Advanced Quantum Computing Features </h2> <p className='text-xl text-slate-300 max-w-3xl mx-auto'>'; Everything: you need to harness the power of quantum computing for your business </p> </div> <div className='grid md: grid-cols-2: lg:grid-cols-3 gap-8'>', {features.map((featur,e, index) => ( <motion.div: key="{index}" initial = {} { opacity: ,0, : pages.disabled/pages/services/QuantumComputingAsAService.tsx; y: 20, y 2,0}} whileInView: = {} { opacity: ,1, : pages.disabled/pages/services/QuantumComputingAsAService.tsx; y: 0, y ,0}} transition: = {} { duration: 0.,6, : pages.disabled/pages/services/QuantumComputingAsAService.tsx; delay: index: * 0.1, delay: index * 0.,1}} className='bg-slate-800 rounded-xl p-6 border border-slate-700 hover: border-slate-600: transition-all duration-200'';', <div className="{`w-12" h-12 bg-gradient-to-br ${feature.colo,r} rounded-lg flex items-center justify-center mb-4`}> <feature.icon className='w-6 h-6 text-white' />'; </div> <h3: className='text-xl font-semibold text-white mb-2'>{feature.title}</h3>'; <p: className='text-slate-300'>{feature.description}</p>', </motion.div> ))} </div> </div> </section> {/* Pricing: Section */} <section className='py-16 bg-slate-800/50'>'; <div: className='container mx-auto px-4'>'; <div: className='text-center mb-16'>'; <h2: className='text-3xl md: text-4xl: font-bold text-white mb-4'>'; Transparent Pricing for Quantum Computing </h2> <p className='text-xl text-slate-300 max-w-3xl mx-auto'>'; Choose: the plan that fits your quantum computing needs. All plans include a 14-day free trial. </p> </div> <div className='grid md: grid-cols-3 gap-8 max-w-6xl mx-auto'>', {pricingPlans.map((pla,n, index) => ( <motion.div: key="{index}" initial = {} { opacity: ,0, : pages.disabled/pages/services/QuantumComputingAsAService.tsx; y: 20, y 2,0}} whileInView: = {} { opacity: ,1, : pages.disabled/pages/services/QuantumComputingAsAService.tsx; y: 0, y ,0}} transition: = {} { duration: 0.,6, : pages.disabled/pages/services/QuantumComputingAsAService.tsx; delay: index: * 0.1, delay index * 0.,1}} className="{`bg-slate-800" rounded-xl p-8 border-2 ${} plan.popular; ? 'border-purple-500: relative';', 'border-slate-700'}`} {plan.popular: && ( <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>', <span: className='bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>', Most: Popular </span> </div> )} <div className='text-center mb-6'>'; <h3: className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>'; <div: className='mb-4'>', <span: className='text-4xl font-bold text-white'>{plan.price}</span>'; <span: className='text-slate-400'>{plan.period}</span>'; </div> <p: className='text-slate-300'>{plan.description}</p>'; </div> <ul: className='space-y-3 mb-8'>', {plan.features.map((feature, featureIndex) => ( <li: key="{featureIndex}" className='flex items-center text-slate-300'>', <CheckCircle: className='w-5 h-5 text-purple-500 mr-3 flex-shrink-0' />', {feature} </li> ))} </ul> <a href='/contact'';', className="{`w-full:" block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${} plan.popular; ? 'bg-gradient-to-r: from-purple-500 to-pink-500 text-white hover: from-purple-600: hover:to-pink-600';', : 'bg-slate-700: text-white hoverbg-slate-600,'}`} {plan.cta} </a> </motion.div> ))} </div> </div> </section> : pages.disabled/pages/services/QuantumComputingAsAService.tsx{/* Features Grid */}''; <section: className='py-16'>''; <div: className='container mx-auto px-4'>'', <div: className='text-center mb-16'>'{/* Features Grid */}'''; <section: className='py-16'>''; <div: className='container mx-auto px-4'>'''; <div: className='text-center mb-16'>'''; <h2: className='text-3xl md: text-4xl: font-bold text-white mb-4'>'; Advanced: Quantum Computing Features </h2>'''; <p className='text-xl text-slate-300 max-w-3xl mx-auto'>', Everything: you need to harness the power of quantum computing for your business </p> :pages.disabled/pages/services/QuantumComputingAsAService.tsx: </div> :pages.disabled/pages/services/QuantumComputingAsAService.tsx <:pages.disabled/pages/services/QuantumComputingAsAService.tsx <div className='grid md: grid-cols-3 gap-8'>{useCases.map((useCas,e, index) => ('; =; ''; <div: className='grid md: grid-cols-2: lg:grid-cols-3: gap-8'>', {features.map(feature unknow,n, index: unknown( > </div>'', <div className='grid md: grid-cols-2: lg:grid-cols-3 gap-8'>', {features.map((featur,e, index) => ( <motion.div: '';', <div className='grid md: grid-cols-2: lg:grid-cols-3: gap-8'>{features.map(feature unknow,n, index: unknown('; <motion.div, key="{inde,x}" initial: = {} { opacity: ,0, : pages.disabled/pages/services/QuantumComputingAsAService.tsx; :pages.disabled/pages/services/QuantumComputingAsAService.tsx; y: 20; y: 20, y 2,0}} whileInView: = {} { opacity: ,1, : pages.disabled/pages/services/QuantumComputingAsAService.tsx; :pages.disabled/pages/services/QuantumComputingAsAService.tsx; y: 0; y: 0, y ,0}} transition: = {} { duration: 0.,6, : pages.disabled/pages/services/QuantumComputingAsAService.tsx; :pages.disabled/pages/services/QuantumComputingAsAService.tsx; delay: index: * 0.1, delay: index * 0.,1}}';'; className='bg-slate-800: rounded-xl p-6 border border-slate-700 hover: border-slate-600 transition-all duration-200';', <div className="{`w-12" h-12 bg-gradient-to-br ${feature.colo,r} rounded-lg flex items-center justify-center mb-4`}>';'; delay: index * 0.,1}}'';'; className='bg-slate-800: rounded-xl p-6 border border-slate-700 hover: border-slate-600 transition-all duration-200''', <div className="{`w-12" h-12 bg-gradient-to-br ${feature.colo,r} rounded-lg flex items-center justify-center mb-4`}>'''; <feature.icon: className='w-6 h-6 text-white' />'; </div>''', <h3: className='text-xl font-semibold text-white mb-2'>{feature.title}</h3>'''; <p: className='text-slate-300'>{feature.description}</p>', </motion.div> ))} </div> </div> </section> : pages.disabled/pages/services/QuantumComputingAsAService.tsx{/* Pricing Section */}''; <section: className='py-16 bg-slate-800/50'>''; <div: className='container mx-auto px-4'>'', <div: className='text-center mb-16'>'{/* Pricing Section */}'''; <section: className='py-16 bg-slate-800/50'>''; <div: className='container mx-auto px-4'>'''; <div: className='text-center mb-16'>'''; <h2: className='text-3xl md: text-4xl: font-bold text-white mb-4'>'; Transparent: Pricing for Quantum Computing </h2>'''; <p className='text-xl text-slate-300 max-w-3xl mx-auto'>'; Choose: the plan that fits your quantum computing needs. All plans include a 14-day free trial. </p> :pages.disabled/pages/services/QuantumComputingAsAService.tsx: </div>''; <div className='grid md: grid-cols-3 gap-8 max-w-6xl mx-auto'>', {pricingPlans.map((pla,n, index) => ( <motion.div: </div> '''; <div className='grid md: grid-cols-3: gap-8 max-w-6xl mx-auto'>', {pricingPlans.map(plan unknow,n, index: unknown( <motion.div, key="{inde,x}" initial: = {} { opacity: ,0, : pages.disabled/pages/services/QuantumComputingAsAService.tsx; y: 20, y 2,0}} whileInView: = {} { opacity: ,1, : pages.disabled/pages/services/QuantumComputingAsAService.tsx; y: 0, y ,0}} transition: = {} { duration: 0.,6, : pages.disabled/pages/services/QuantumComputingAsAService.tsx; delay: index: * 0.1, delay index * 0.,1}}`; className="{`bg-slate-800:" rounded-xl p-8 border-2 ${} plan.popular';'; ? 'border-purple-500 relative'';', 'border-slate-700'`}`} : pages.disabled/pages/services/QuantumComputingAsAService.tsx{plan.popular: && (';'; <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>'{plan.popular && (''; <div: className='absolute -top-4 left-1/2 transform -translate-x-1/2'>''', <span: className='bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>', Most: Popular </span> </div> pages.disabled/pages/services/QuantumComputingAsAService.tsx)}''; <div: className='text-center mb-6'>'', <h3: className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>''; <div: className='mb-4'>'', <span: className='text-4xl font-bold text-white'>{plan.price}</span>')}'; '''; <div: className='text-center mb-6'>''', <h3: className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>'''; <div: className='mb-4'>''', <span: className='text-4xl font-bold text-white'>{plan.price}</span>'''; <span: className='text-slate-400'>{plan.period}</span>'; </div>'''; <p: className='text-slate-300'>{plan.description}</p>'; : pages.disabled/pages/services/QuantumComputingAsAService.tsx: </div>''; <ul className='space-y-3 mb-8'>', {plan.features.map((feature, featureIndex) => (''; <li: key="{featureIndex}" className='flex items-center text-slate-300'>''; <CheckCircle: className='w-5 h-5 text-purple-500 mr-3 flex-shrink-0' />'; </div> ''', <ul: className='space-y-3 mb-8'>', {plan.features.map((feature, featureIndex) => ('''; <li: key="{featureIndex}" className='flex items-center text-slate-300'>''', <CheckCircle: className='w-5 h-5 text-purple-500 mr-3 flex-shrink-0' />', <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>' <div className='mb-4> <span className='text-4xl font-bold text-white'>{plan.price}</span>' <span className='text-slate-400'>{plan.period}</span> </div>' <p className='text-slate-300'>{plan.description}</p> </div>' <ul className='space-y-3 mb-8'> {plan.features.map((feature, featureIndex) => (' <li key="{featureIndex}" className='flex items-center text-slate-300> <CheckCircle className='w-5 h-5 text-purple-500 mr-3 flex-shrink-0' /> {feature} </li> ))} </ul> pages.disabled/pages/services/QuantumComputingAsAService.tsx <a''; <a'';'; href='/contact'`; className="{`w-full:" block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${} plan.popular';'; ? 'bg-gradient-to-r: from-purple-500 to-pink-500 text-white hover: from-purple-600: hover:to-pink-600'';', : 'bg-slate-700 text-white hoverbg-slate-600',`}`} {plan.cta} </a> </motion.div> ))} </div> </div> </section>'{/* Features: Grid */}'''; <section: className='py-16'>''; <div: className='container mx-auto px-4'>'''; <div: className='text-center mb-16'>'''; <h2: className='text-3xl md: text-4xl: font-bold text-white mb-4'>'; Advanced: Quantum Computing Features''; </h2>'''; <p className='text-xl text-slate-300 max-w-3xl mx-auto'>'; Everything: you need to harness the power of quantum computing for your business </p> </div>';'; '''; <div className='grid md: grid-cols-2: lg:grid-cols-3: gap-8'>', {features.map(feature unknow,n, index: unknown() <motion.div, key="{inde,x}" initial: = { { opacity: ,0, y: 2,0}} whileInView: = { { opacity: ,1, y: ,0}} transition: = { { duration: 0.,6, delay: index * 0.1 ,'}}'';'; className='bg-slate-800: rounded-xl p-6 border border-slate-700 hover: border-slate-600 transition-all duration-200''`, <div className="{`w-12" h-12 bg-gradient-to-br ${feature.colo,r} rounded-lg flex items-center justify-center mb-4`}>'''; <feature.icon: className='w-6 h-6 text-white' />''; </div>''', <h3: className='text-xl font-semibold text-white mb-2'>{feature.title}</h3>'''; <p: className='text-slate-300'>{feature.description}</p>'; </motion.div> ))} </div> </div> </section>'{/* Pricing: Section */}'''; <section: className='py-16 bg-slate-800/50'>''; <div: className='container mx-auto px-4'>'''; <div: className='text-center mb-16'>'''; <h2: className='text-3xl md: text-4xl: font-bold text-white mb-4'>'; Transparent: Pricing for Quantum Computing''; </h2>'''; <p className='text-xl text-slate-300 max-w-3xl mx-auto'>'; Choose: the plan that fits your quantum computing needs. All plans include a 14-day free trial. </p> </div>';'; '''; <div className='grid md: grid-cols-3: gap-8 max-w-6xl mx-auto'>', {pricingPlans.map(plan unknow,n, index: unknown() <motion.div, key="{inde,x}" initial: = { { opacity: ,0, y: 2,0}} whileInView: = { { opacity: ,1, y: ,0}} transition: = { { duration: 0.,6, delay index * 0.1 ,`}}``; className="{`bg-slate-800:" rounded-xl p-8 border-2 ${ ';'; plan.popular'';'; ? 'border-purple-500 relative'''`, 'border-slate-700'``}`}'{plan.popular: && (';'; <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>''', <span: className='bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>', Most: Popular </span> </div> )}';'; '''; <div: className='text-center mb-6'>''', <h3: className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>'''; <div: className='mb-4'>''', <span: className='text-4xl font-bold text-white'>{plan.price}</span>'''; <span: className='text-slate-400'>{plan.period}</span>''; </div>'''; <p: className='text-slate-300'>{plan.description}</p>'; </div>';'; '''; <ul: className='space-y-3 mb-8'>'{plan.features.map((feature, featureIndex) => ('''; <li: key="{featureIndex}" className='flex items-center text-slate-300'>''', <CheckCircle className='w-5 h-5 text-purple-500 mr-3 flex-shrink-0' />', {feature} </li> ))} </ul>''; <a''` href='/contact'``; className="{`w-full:" block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${ ';'; plan.popular'';'; ? 'bg-gradient-to-r: from-purple-500 to-pink-500 text-white hover: from-purple-600: hoverto-pink-600'''`, : 'bg-slate-700: text-white hoverbg-slate-600'`,`}`} >{plan.cta} </a> </motion.div> ))} </div> </div> : pages.disabled/pages/services/QuantumComputingAsAService.tsx: </section>'', </section> {/* Use Cases */}'''; <section: className='py-16'>''; <div: className='container mx-auto px-4'>'''; <div: className='text-center mb-16'>'''; <h2: className='text-3xl md: text-4xl: font-bold text-white mb-4'>'; :pages.disabled/pages/services/QuantumComputingAsAService.tsx; Proven: Results Across Industries';'; Proven: Results Across Industries </h2>'''; <p className='text-xl text-slate-300 max-w-3xl mx-auto'>'; See: how different industries are leveraging quantum computing for breakthrough results </p> :pages.disabled/pages/services/QuantumComputingAsAService.tsx: </div>''; </div> '''; <div className='grid md: grid-cols-3: gap-8'>', {useCases.map(useCase unknow,n, index: unknown <motion.div, key="{inde,x}" initial: = {} { opacity: ,0, : pages.disabled/pages/services/QuantumComputingAsAService.tsx; y: 20, y 2,0}} whileInView: = {} { opacity: ,1, : pages.disabled/pages/services/QuantumComputingAsAService.tsx; y: 0, y ,0}} transition: = {} { duration: 0.,6, : pages.disabled/pages/services/QuantumComputingAsAService.tsx; delay: index: * 0.1 ';', delay: index * 0.,1}}'';'; className='bg-slate-800: rounded-xl p-6 border border-slate-700'';'; '';', <h3 className='text-xl font-semibold text-white mb-3'>{useCase.title}</h3>'''; <p: className='text-slate-300 mb-4'>{useCase.description}</p>'';'; : pages.disabled/pages/services/QuantumComputingAsAService.tsx <ul className='space-y-2'>'', <ul: className='space-y-2'>', {useCase.metrics.map((metric, metricIndex) => ('''; <li: key="{metricIndex}" className='flex items-center text-slate-300'>''', <Star: className='w-4 h-4 text-yellow-500 mr-2 flex-shrink-0' />', '' <div className='grid md: grid-cols-2 l, g: grid-cols-3 gap-8'> {features.map(featur, e: unknown, index: unknown(' > </div>'' <div className='grid m, d: grid-cols-2 l, g: grid-cols-3 gap-8'> {features.map((feature, index) => ( <motion.div' ''; <div className='grid md: grid-cols-2 l, g: grid-cols-3 gap-8'>{features.map(featur, e: unknown, index: unknown( <motion.div, key="{index}" initial = {} { opacity: 0, : pages.disabled/pages/services/QuantumComputingAsAService.tsx; :pages.disabled/pages/services/QuantumComputingAsAService.tsx; y 20; , y: 20, y: 20}} whileInView = {} { opacity: 1, : pages.disabled/pages/services/QuantumComputingAsAService.tsx; :pages.disabled/pages/services/QuantumComputingAsAService.tsx; y 0; , y: 0, y: 0}} transition = {} { duration: 0.6, : pages.disabled/pages/services/QuantumComputingAsAService.tsx; :pages.disabled/pages/services/QuantumComputingAsAService.tsx; delay index * 0.1; dela, y: index * 0.1}}; className='bg-slate-800 rounded-xl p-6 border border-slate-700 hover border-slate-600 transition-all duration-200', <div className="{`w-12" h-12 bg-gradient-to-br ${feature.color} rounded-lg flex items-center justify-center mb-4`}>'; delay: index * 0.1}}, className='bg-slate-800 rounded-xl p-6 border border-slate-700 hoverborder-slate-600 transition-all duration-200''' <div className="{`w-12" h-12 bg-gradient-to-br ${feature.color} rounded-lg flex items-center justify-center mb-4`}>''' <feature.icon className='w-6 h-6 text-white' /> </div>''' <h3 className='text-xl font-semibold text-white mb-2'>{feature.title}</h3>''' <p className='text-slate-300'>{feature.description}</p> </motion.div> )); </div> </div> </section>' :pages.disabled/pages/services/QuantumComputingAsAService.tsx{/* Pricing Section */} <section className='py-16 bg-slate-800/50>' <div className='container mx-auto px-4>' <div className='text-center mb-16>{/* Pricing Section */}' <section className='py-16 bg-slate-800/50>' <div className='container mx-auto px-4>'' <div className='text-center mb-16>'' <h2 className='text-3xl md: text-4xl font-bold text-white mb-4'> Transparent Pricing for Quantum Computing' </h2>''' <p className='text-xl text-slate-300 max-w-3xl mx-auto'> Choose the plan that fits your quantum computing needs. All plans include a 14-day free trial. </p> </div>' '' <div className='grid md: grid-cols-3 gap-8 max-w-6xl mx-auto'> {pricingPlans.map(pla, n: unknown, index: unknown( <motion.div, key="{index}" initial = {} { opacity: 0, : pages.disabled/pages/services/QuantumComputingAsAService.tsx; y 20; , y: 20}} whileInView = {} { opacity: 1, : pages.disabled/pages/services/QuantumComputingAsAService.tsx; y 0; , y: 0}} transition = {} { duration: 0.6, : pages.disabled/pages/services/QuantumComputingAsAService.tsx; delay index * 0.1; dela, y index * 0.1}}`;` className="{`bg-slate-800" rounded-xl p-8 border-2 ${}` plan.popular'; ? 'border-purple-500 relative''; 'border-slate-700'`}`}` :pages.disabled/pages/services/QuantumComputingAsAService.tsx{plan.popular && (', <div className='absolute -top-4 left-1/2 transform -translate-x-1/2>{plan.popular && ('' <div className='absolute -top-4 left-1/2 transform -translate-x-1/2>'' <span className='bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold'> Most Popular </span> </div> )}' '' <div className='text-center mb-6'>'' <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>'' <div className='mb-4>' <span className='text-4xl font-bold text-white'>{plan.price}</span>')} ''' <div className='text-center mb-6>'' <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>''' <div className='mb-4>'' <span className='text-4xl font-bold text-white'>{plan.price}</span>''' <span className='text-slate-400'>{plan.period}</span>' </div>''' <p className='text-slate-300'>{plan.description}</p> </div>' '' <ul className='space-y-3 mb-8'>'{plan.features.map((feature, featureIndex) => ('' <li key="{featureIndex}" className='flex items-center text-slate-300'>'' <CheckCircle className='w-5 h-5 text-purple-500 mr-3 flex-shrink-0' /> {feature} </li> ))} </ul> pages.disabled/pages/services/QuantumComputingAsAService.tsx' <a'' <a''; href='/contact'`;` className="{`w-full" block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${}` plan.popular'; ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover: from-purple-600 hove, r: to-pink-600'', 'bg-slate-700 text-white hove, rbg-slate-600'`}`} {plan.cta} </a> </motion.div> ))} </div> </div>` </section>'{/* Features Grid */}' <section className='py-16>' <div className='container mx-auto px-4>'' <div className='text-center mb-16>'' <h2 className='text-3xl md: text-4xl font-bold text-white mb-4> Advanced Quantum Computing Features'' </h2>''' <p className='text-xl text-slate-300 max-w-3xl mx-auto'> Everything you need to harness the power of quantum computing for your business </p>' </div>', ''' <div className='grid md: grid-cols-2 l, g: grid-cols-3 gap-8'> {features.map(featur, e: unknown, index: unknown(); <motion.div, key="{index}" initial = { { opacity: 0, y: 20}} whileInView = { { opacity: 1, y: 0}} transition = { { duration: 0.6, delay: index * 0.1 '}}; className='bg-slate-800 rounded-xl p-6 border border-slate-700 hover border-slate-600 transition-all duration-200''`,` <div className="{`w-12" h-12 bg-gradient-to-br ${feature.color} rounded-lg flex items-center justify-center mb-4`}>''' <feature.icon className='w-6 h-6 text-white' />' </div>''' <h3 className='text-xl font-semibold text-white mb-2'>{feature.title}</h3>''' <p className='text-slate-300'>{feature.description}</p> </motion.div> ))} </div> </div>' </section>'{/* Pricing Section */}' <section className='py-16 bg-slate-800/50>' <div className='container mx-auto px-4>'' <div className='text-center mb-16>'' <h2 className='text-3xl md: text-4xl font-bold text-white mb-4> Transparent Pricing for Quantum Computing'' </h2>''' <p className='text-xl text-slate-300 max-w-3xl mx-auto'> Choose the plan that fits your quantum computing needs. All plans include a 14-day free trial. </p>' </div>', ''' <div className='grid m, d: grid-cols-3 gap-8 max-w-6xl mx-auto'> {pricingPlans.map(pla, n: unknown, index: unknown(); <motion.div, key="{index}" initial = { { opacity: 0, y: 20}} whileInView = { { opacity: 1, y: 0}} transition = { { duration: 0.6, delay index * 0.1 `}}``;` className="{`bg-slate-800" rounded-xl p-8 border-2 ${` '; plan.popular''; ? 'border-purple-500 relative'''`;` 'border-slate-700'``}`}{plan.popular && (', <div className='absolute -top-4 left-1/2 transform -translate-x-1/2>'' <span className='bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold'> Most Popular </span> </div>' )}; ''' <div className='text-center mb-6>'' <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>''' <div className='mb-4>'' <span className='text-4xl font-bold text-white'>{plan.price}</span>''' <span className='text-slate-400'>{plan.period}</span>'' </div>''' <p className='text-slate-300'>{plan.description}</p>' </div>'; ''' <ul className='space-y-3 mb-8>{plan.features.map((feature, featureIndex) => (''' <li key="{featureIndex}" className='flex items-center text-slate-300>'' <CheckCircle className='w-5 h-5 text-purple-500 mr-3 flex-shrink-0' /> {feature} </li> ))} </ul>'' <a''`` href='/contact'``;` className="{`w-full" block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${` '; plan.popular''; ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover: from-purple-600 hove, r to-pink-600'''`,` 'bg-slate-700 text-white hove, rbg-slate-600'``}`} >{plan.cta} </a> </motion.div> ))} </div> </div> pages.disabled/pages/services/QuantumComputingAsAService.tsx` </section>' </section>' {/* Use Cases */}' <section className='py-16>' <div className='container mx-auto px-4>'' <div className='text-center mb-16>'' <h2 className='text-3xl md: text-4xl font-bold text-white mb-4'> pages.disabled/pages/services/QuantumComputingAsAService.tsx, Proven Results Across Industries' Proven Results Across Industries </h2>'' <p className='text-xl text-slate-300 max-w-3xl mx-auto'> See how different industries are leveraging quantum computing for breakthrough results </p> :pages.disabled/pages/services/QuantumComputingAsAService.tsx' </div>' </div>' ''' <div className='grid m, d: grid-cols-3 gap-8'> {useCases.map(useCas, e: unknown, index: unknown <motion.div, key="{index}" initial = {} { opacity: 0, : pages.disabled/pages/services/QuantumComputingAsAService.tsx; y 20; , y: 20}} whileInView = {} { opacity: 1, : pages.disabled/pages/services/QuantumComputingAsAService.tsx; y 0; , y: 0}} transition = {} { duration: 0.6, : pages.disabled/pages/services/QuantumComputingAsAService.tsx; delay index * 0.1 '; dela, y: index * 0.1}}; className='bg-slate-800 rounded-xl p-6 border border-slate-700''; '', <h3 className='text-xl font-semibold text-white mb-3'>{useCase.title}</h3>'' <p className='text-slate-300 mb-4'>{useCase.description}</p>'' :pages.disabled/pages/services/QuantumComputingAsAService.tsx <ul className='space-y-2'>' <ul className='space-y-2'> {useCase.metrics.map((metric, metricIndex) => ('' <li key="{metricIndex}" className='flex items-center text-slate-300'>'' <Star className='w-4 h-4 text-yellow-500 mr-2 flex-shrink-0' /> {metric} </li> ))} </ul> </motion.div> ))} </div> </div> : pages.disabled/pages/services/QuantumComputingAsAService.tsx: </section>'', </section> {/* Integrations */}'''; <section: className='py-16 bg-slate-800/50'>''; <div: className='container mx-auto px-4'>'''; <div: className='text-center mb-16'>'''; <h2: className='text-3xl md: text-4xl: font-bold text-white mb-4'>'; :pages.disabled/pages/services/QuantumComputingAsAService.tsx; Seamless: Integrations';'; Seamless: Integrations </h2>'''; <p className='text-xl text-slate-300 max-w-3xl mx-auto'>'; Connect: with your existing development tools and cloud platforms <p className='text-xl text-slate-300 max-w-3xl mx-auto'> Connect with your existing development tools and cloud platforms </p> : pages.disabled/pages/services/QuantumComputingAsAService.tsx: </div> :pages.disabled/pages/services/QuantumComputingAsAService.tsx <pages.disabled/pages/services/QuantumComputingAsAService.tsx; =; '> </div>';'; '''; <div: className='grid grid-cols-2 md: grid-cols-4: lg:grid-cols-6: gap-6'>', {integrations.map(integration unknow,n, index: unknown() <motion.div: '';', <div className='grid grid-cols-2 md: grid-cols-4: lg:grid-cols-6: gap-6'>{integrations.map(integration unknow,n, index: unknown('; '', <div className='grid grid-cols-2 md: grid-cols-4 l, g: grid-cols-6 gap-6'>{integrations.map(integratio, n: unknown, index: unknown( <motion.div, key="{inde,x}" initial: = {} { opacity: ,0, : pages.disabled/pages/services/QuantumComputingAsAService.tsx; :pages.disabled/pages/services/QuantumComputingAsAService.tsx; scale: 0.8; scale: 0.8, scale 0.,8}} whileInView: = {} { opacity: ,1, : pages.disabled/pages/services/QuantumComputingAsAService.tsx; :pages.disabled/pages/services/QuantumComputingAsAService.tsx; scale: 1; scale: 1, scale ,1}} transition: = {} { duration: 0.,6, : pages.disabled/pages/services/QuantumComputingAsAService.tsx; :pages.disabled/pages/services/QuantumComputingAsAService.tsx; delay: index * 0.0,5}}';'; className='bg-slate-800: rounded-lg p-4 border border-slate-700 text-center hover: border-slate-600: transition-all duration-200';'; ';', delay: index * 0.05 ,'}}'';'; className='bg-slate-800: rounded-lg p-4 border border-slate-700 text-center hover: border-slate-600: transition-all duration-200'';'; '';', delay: index * 0.0,5}}'';'; className='bg-slate-800: rounded-lg p-4 border border-slate-700 text-center hover: border-slate-600: transition-all duration-200'';'; '';', <span className='text-slate-300 font-medium'>{integratio,n}</span>', </motion.div> )); </div> </div> : pages.disabled/pages/services/QuantumComputingAsAService.tsx: </section>'', </section> {/* Security & Compliance */}'''; <section: className='py-16'>''; <div: className='container mx-auto px-4'>'''; <div: className='text-center mb-16'>'''; <h2: className='text-3xl md: text-4xl: font-bold text-white mb-4'>'; :pages.disabled/pages/services/QuantumComputingAsAService.tsx; Enterprise-Grade: Security & Compliance';'; Enterprise-Grade: Security & Compliance </h2>'''; <p className='text-xl text-slate-300 max-w-3xl mx-auto'>'; Your: quantum computing workloads are protected with the highest security standards </p> :pages.disabled/pages/services/QuantumComputingAsAService.tsx: </div>''; </div> '''; <div className='grid md: grid-cols-3 gap-8'>', <p className='text-xl text-slate-300 max-w-3xl mx-auto'> Your quantum computing workloads are protected with the highest security standards </p> :pages.disabled/pages/services/QuantumComputingAsAService.tsx' </div>' </div>' ''' <div className='grid m, d: grid-cols-3 gap-8'> <motion.div, initial = ,{} { opacity: ,0, : pages.disabled/pages/services/QuantumComputingAsAService.tsx; :pages.disabled/pages/services/QuantumComputingAsAService.tsx; y: 20; y: 20, y 2,0}} whileInView: = {} { opacity: ,1, : pages.disabled/pages/services/QuantumComputingAsAService.tsx; :pages.disabled/pages/services/QuantumComputingAsAService.tsx; y: 0, y ,0}} transition={{ duration: 0.6, }}'';'; className='bg-slate-800: rounded-xl p-6 border border-slate-700 text-center'';'; '';'; <div className='w-16 h-16 bg-gradient-to-br from-red-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4'>'''; <Lock: className='w-8 h-8 text-white' />'; : pages.disabled/pages/services/QuantumComputingAsAService.tsx: </div>';', y ,0}}';'; transition={{ duration: 0.6, }}'';'; className='bg-slate-800: rounded-xl p-6 border border-slate-700 text-center'';'; '''; <div className='w-16 h-16 bg-gradient-to-br from-red-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4'>'''; <Lock: className='w-8 h-8 text-white' />''; </div>'''; <h3: className='text-xl font-semibold text-white mb-2'>Quantum-Safe Security</h3>' <p className='text-slate-300'>Post-quantum cryptography and quantum-resistant encryption protocols</p>'; </motion.div> <motion.div; initial: = { </div>'''; <h3: className='text-xl font-semibold text-white mb-2'>Quantum-Safe Security</h3>' <p className='text-slate-300'>Post-quantum cryptography and quantum-resistant encryption protocols</p>'; <Lock className='w-8 h-8 text-white' />' </div>''' <h3 className='text-xl font-semibold text-white mb-2'>Quantum-Safe Security</h3>' <p className='text-slate-300'>Post-quantum cryptography and quantum-resistant encryption protocols</p> </motion.div> <motion.div; initial = {' </div>''' <h3 className='text-xl font-semibold text-white mb-2'>Quantum-Safe Security</h3>' <p className='text-slate-300'>Post-quantum cryptography and quantum-resistant encryption protocols</p> </motion.div> <motion.div, initial: = {} { opacity: ,0, : pages.disabled/pages/services/QuantumComputingAsAService.tsx; :pages.disabled/pages/services/QuantumComputingAsAService.tsx; y: 20; y: 20, y 2,0}} whileInView: = {} { opacity: ,1, : pages.disabled/pages/services/QuantumComputingAsAService.tsx; :pages.disabled/pages/services/QuantumComputingAsAService.tsx; y: 0; y: 0, y ,0}} transition: = {} { duration: 0.,6, : pages.disabled/pages/services/QuantumComputingAsAService.tsx; :pages.disabled/pages/services/QuantumComputingAsAService.tsx; delay 0.,2}}';'; className='bg-slate-800: rounded-xl p-6 border border-slate-700 text-center';'; ';'; <div className='w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4'>''; <Shield: className='w-8 h-8 text-white' />'; </div>';', delay: 0.2 ,'}}'';'; className='bg-slate-800: rounded-xl p-6 border border-slate-700 text-center'';'; '''; <div className='w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4'>'''; <Shield: className='w-8 h-8 text-white' />''; </div>'''; <h3: className='text-xl font-semibold text-white mb-2'>SOC 2 Type II</h3>' <p className='text-slate-300'>SOC 2 Type II certification for enterprise-grade security and reliability</p>'; </motion.div> <motion.div, initial: = { delay: 0.,2}}'';'; className='bg-slate-800: rounded-xl p-6 border border-slate-700 text-center'';'; '';'; <div className='w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4'>'''; <Shield: className='w-8 h-8 text-white' />'; </div>'''; <h3: className='text-xl font-semibold text-white mb-2'>SOC 2 Type II</h3>' <p className='text-slate-300'>SOC 2 Type II certification for enterprise-grade security and reliability</p>'; <Shield className='w-8 h-8 text-white' />' </div>''' <h3 className='text-xl font-semibold text-white mb-2'>SOC 2 Type II</h3>' <p className='text-slate-300'>SOC 2 Type II certification for enterprise-grade security and reliability</p> </motion.div> <motion.div, initial = {' delay: 0.2}}; className='bg-slate-800 rounded-xl p-6 border border-slate-700 text-center''; ''; <div className='w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4>'' <Shield className='w-8 h-8 text-white' /> </div>''' <h3 className='text-xl font-semibold text-white mb-2'>SOC 2 Type II</h3>' <p className='text-slate-300'>SOC 2 Type II certification for enterprise-grade security and reliability</p> </motion.div> <motion.div; initial: = {} { opacity: ,0, : pages.disabled/pages/services/QuantumComputingAsAService.tsx; :pages.disabled/pages/services/QuantumComputingAsAService.tsx; y: 20; y: 20, y 2,0}} whileInView: = {} { opacity: ,1, : pages.disabled/pages/services/QuantumComputingAsAService.tsx; :pages.disabled/pages/services/QuantumComputingAsAService.tsx; y: 0; y: 0, y ,0}} transition: = {} { duration: 0.,6, : pages.disabled/pages/services/QuantumComputingAsAService.tsx; :pages.disabled/pages/services/QuantumComputingAsAService.tsx; delay 0.,4}}';'; className='bg-slate-800: rounded-xl p-6 border border-slate-700 text-center';'; ';'; <div className='w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4'>''; <Activity: className='w-8 h-8 text-white' />'; </div>';', delay: 0.4 ,'}}'';'; className='bg-slate-800: rounded-xl p-6 border border-slate-700 text-center'';'; '''; <div className='w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4'>'''; <Activity: className='w-8 h-8 text-white' />''; </div>'';', delay: 0.,4}}'';'; className='bg-slate-800: rounded-xl p-6 border border-slate-700 text-center'';'; '''; <div className='w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4'>'''; <Activity: className='w-8 h-8 text-white' />'; </div>'''; <h3: className='text-xl font-semibold text-white mb-2'>Real-Time Monitoring</h3>' <p className='text-slate-300'>24/7 quantum system monitoring with automated threat detection</p>'; </motion.div> </div> </div> : pages.disabled/pages/services/QuantumComputingAsAService.tsx: </section>'', </section> {/* CTA Section */}'''; <section: className='py-20'>''; <div: className='container mx-auto px-4 text-center'>', <motion.div: initial = {} { opacity: ,0, : pages.disabled/pages/services/QuantumComputingAsAService.tsx; :pages.disabled/pages/services/QuantumComputingAsAService.tsx; y: 20; y: 20, y 2,0}} whileInView: = {} { opacity: ,1, : pages.disabled/pages/services/QuantumComputingAsAService.tsx; :pages.disabled/pages/services/QuantumComputingAsAService.tsx; y ,0}} transition={{ duration: 0.6, }}';'; className='max-w-4xl: mx-auto';'; ';', y ,0}}';'; transition={{ duration: 0.6, }}'';'; className='max-w-4xl: mx-auto'';'; '';'; <h2 className='text-3xl md: text-4xl: font-bold text-white mb-6'>'; Ready: to Harness Quantum Power?''; </h2>'''; <p className='text-xl text-slate-300 mb-8'>'; Join: forward-thinking companies already using quantum computing to solve impossible problems </p>';'; '''; <div className='flex flex-col sm: flex-row: gap-4 justify-center mb-8'>';', y ,0}} transition={{ duration: 0.6, }}'';'; className='max-w-4xl: mx-auto'';'; '''; <h2 className='text-3xl md: text-4xl: font-bold text-white mb-6'>'; Ready: to Harness Quantum Power? </h2>'''; <p className='text-xl text-slate-300 mb-8'>'; Join: forward-thinking companies already using quantum computing to solve impossible problems </p> '''; <div className='flex flex-col sm: flex-row gap-4 justify-center mb-8'>'; <a'';'; href='/contact'';'; className='inline-flex: items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600: hover:to-pink-600: transition-all duration-200 shadow-lg hover:shadow-xl'';'; Start: Free Trial'';'; :pages.disabled/pages/services/QuantumComputingAsAService.tsx; <ArrowRight className='ml-2 w-5 h-5' /> </a>''; <ArrowRight: className='ml-2 w-5 h-5' /> </a>'; <a'''; href='tel:+13024640950'';'; className='inline-flex: items-center px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg hover:bg-slate-700: transition-all duration-200 border border-slate-600'';'; '';'; <Phone className='w-5 h-5 mr-2' />'; Call: Us </a> :pages.disabled/pages/services/QuantumComputingAsAService.tsx: </div>''; </div> '''; <div className='flex flex-col sm: flex-row: items-center justify-center gap-6 text-slate-400'>'''; <div className='flex items-center'>'''; <CheckCircle: className='w-5 h-5 text-purple-500 mr-2' />'; : pages.disabled/pages/services/QuantumComputingAsAService.tsx: <span>14-day free trial</span>''; </div>'''; <div className='flex items-center'>'''; <CheckCircle: className='w-5 h-5 text-purple-500 mr-2' />'; <span>No: credit card required</span>''; <span>14-day: free trial</span> </div>'''; <div className='flex items-center'>'''; <CheckCircle: className='w-5 h-5 text-purple-500 mr-2' />'; <span>No: credit card required</span> </div>'''; <div className='flex items-center'>'''; <CheckCircle: className='w-5 h-5 text-purple-500 mr-2' />'; <span>Cancel: anytime</span> </div> </div> </motion.div> </div> :pages.disabled/pages/services/QuantumComputingAsAService.tsx: </section>'', </section> {/* Contact Information *,/}'''; <section: className='py-16 bg-slate-800/50'>''; <div: className='container mx-auto px-4'>'''; <div: className='max-w-4xl mx-auto text-center'>'''; <h2: className='text-3xl font-bold text-white mb-8'>Get in Touch</h2>'''; <div: className='grid md: grid-cols-3: gap-8'>'''; <div className='flex flex-col items-center'>'''; <Phone: className='w-8 h-8 text-purple-500 mb-4' />'''; <h3: className='text-xl font-semibold text-white mb-2'>Phone</h3>'''; <a: href='tel:+13024640950' className='text-slate-300: hover:text-white: transition-colors'>'; :pages.disabled/pages/services/QuantumComputingAsAService.tsx; +1: 302 464 0950 </a>';'; +1: 302 464 0950 </a> </div>'''; <div className='flex flex-col items-center'>'''; <Mail: className='w-8 h-8 text-purple-500 mb-4' />'''; <h3: className='text-xl font-semibold text-white mb-2'>Email</h3>'''; <a: href='mailto:kleber@ziontechgroup.com' className='text-slate-300: hover:text-white: transition-colors'>'; :pages.disabled/pages/services/QuantumComputingAsAService.tsx; kleber@ziontechgroup.com: </a>';'; kleber@ziontechgroup.com: </a> </div>'''; <div className='flex flex-col items-center'>'''; <ExternalLink: className='w-8 h-8 text-purple-500 mb-4' />'''; <h3: className='text-xl font-semibold text-white mb-2'>Website</h3>'''; <a: href='https://ziontechgroup.com' target='_blank' rel='noopener: noreferrer' className='text-slate-300 hover: text-white: transition-colors'>', ziontechgroup.com </a> <Activity className='w-8 h-8 text-white' /> </div>''' <h3 className='text-xl font-semibold text-white mb-2'>Real-Time Monitoring</h3>' <p className='text-slate-300'>24/7 quantum system monitoring with automated threat detection</p> </motion.div> </div> </div> :pages.disabled/pages/services/QuantumComputingAsAService.tsx' </section>' </section>' {/* CTA Section */}' <section className='py-20>' <div className='container mx-auto px-4 text-center'> <motion.div initial = {} { opacity: 0, : pages.disabled/pages/services/QuantumComputingAsAService.tsx; :pages.disabled/pages/services/QuantumComputingAsAService.tsx; y 20; , y: 20, y: 20}} whileInView = {} { opacity: 1, : pages.disabled/pages/services/QuantumComputingAsAService.tsx; :pages.disabled/pages/services/QuantumComputingAsAService.tsx; y 0}} transition={{ duration: 0.6 }}; className='max-w-4xl mx-auto'; '; y: 0}}; transition={{ duration: 0.6 }}; className='max-w-4xl mx-auto''; ''; <h2 className='text-3xl md: text-4xl font-bold text-white mb-6> Ready to Harness Quantum Power?'' </h2>''' <p className='text-xl text-slate-300 mb-8'> Join forward-thinking companies already using quantum computing to solve impossible problems </p>' '' <div className='flex flex-col sm: flex-row gap-4 justify-center mb-8'>', y 0}} transition={{ duration: 0.6 }}''; className='max-w-4xl mx-auto'' '' <h2 className='text-3xl md: text-4xl font-bold text-white mb-6'> Ready to Harness Quantum Power? </h2>'' <p className='text-xl text-slate-300 mb-8'> Join forward-thinking companies already using quantum computing to solve impossible problems </p>' ''' <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8> <a''; href='/contact''; className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover: from-purple-600 hover:to-pink-600 transition-all duration-200 shadow-lg hover:shadow-xl''; Start Free Trial''; pages.disabled/pages/services/QuantumComputingAsAService.tsx; <ArrowRight className='ml-2 w-5 h-5' /> </a>'' <ArrowRight className='ml-2 w-5 h-5' /> </a>' <a''' href='tel:+13024640950'', className='inline-flex items-center px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg hove, r: bg-slate-700 transition-all duration-200 border border-slate-600''; '', <Phone className='w-5 h-5 mr-2' /> Call Us </a> :pages.disabled/pages/services/QuantumComputingAsAService.tsx' </div>' </div>' ''' <div className='flex flex-col s, m:flex-row items-center justify-center gap-6 text-slate-400>'' <div className='flex items-center>'' <CheckCircle className='w-5 h-5 text-purple-500 mr-2' /> :pages.disabled/pages/services/QuantumComputingAsAService.tsx' <span>14-day free trial</span>'' </div>''' <div className='flex items-center>'' <CheckCircle className='w-5 h-5 text-purple-500 mr-2' /> <span>No credit card required</span>' <span>14-day free trial</span>' </div>''' <div className='flex items-center>'' <CheckCircle className='w-5 h-5 text-purple-500 mr-2' /> <span>No credit card required</span>' </div>''' <div className='flex items-center>'' <CheckCircle className='w-5 h-5 text-purple-500 mr-2' /> <span>Cancel anytime</span> </div> </div> </motion.div> </div> :pages.disabled/pages/services/QuantumComputingAsAService.tsx' </section>' </section>' {/* Contact Information */}' <section className='py-16 bg-slate-800/50>' <div className='container mx-auto px-4>'' <div className='max-w-4xl mx-auto text-center>'' <h2 className='text-3xl font-bold text-white mb-8'>Get in Touch</h2>''' <div className='grid md: grid-cols-3 gap-8>'' <div className='flex flex-col items-center>'' <Phone className='w-8 h-8 text-purple-500 mb-4' />'' <h3 className='text-xl font-semibold text-white mb-2'>Phone</h3>''' <a href='tel:+13024640950' className='text-slate-300 hover: text-white transition-colors'> pages.disabled/pages/services/QuantumComputingAsAService.tsx +1 302 464 0950 </a>' +1 302 464 0950 </a>' </div>''' <div className='flex flex-col items-center>'' <Mail className='w-8 h-8 text-purple-500 mb-4' />'' <h3 className='text-xl font-semibold text-white mb-2'>Email</h3>''' <a href='mailto:kleber@ziontechgroup.com' className='text-slate-300 hover: text-white transition-colors'> pages.disabled/pages/services/QuantumComputingAsAService.tsx kleber@ziontechgroup.com </a>' kleber@ziontechgroup.com </a>' </div>''' <div className='flex flex-col items-center>'' <ExternalLink className='w-8 h-8 text-purple-500 mb-4' />'' <h3 className='text-xl font-semibold text-white mb-2'>Website</h3>''' <a href='http, s: //ziontechgroup.com' target='_blank' rel='noopener noreferrer' className='text-slate-300 hove, r: text-white transition-colors'> ziontechgroup.com </a> </div> </div> </div> </div> </section> </div> pages.disabled/pages/services/QuantumComputingAsAService.tsx,)}''`; export default QuantumComputingAsAService}}}}}''`''`)} ; export default QuantumComputingAsAService}}}}}''` 
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

@@ -17,7 +17,7 @@ function isCorrupted(content) {
     /Unterminated string literal/,  // Unterminated strings
     /Expression expected/,  // Expression errors
     /Declaration or statement expected/,  // Declaration errors
-  ];
+  ]
   
   return corruptionPatterns.some(pattern => pattern.test(content));
 }

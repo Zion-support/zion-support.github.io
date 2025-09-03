@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/''usr/bin/env'' node;
 const fs = require('fs');
 const path = require('path');
@@ -11,7 +10,6 @@ class MasterAutomationController {
     this.isRunning = false;
     this.logFile = path.join(
       this.projectRoot, `master-automation-controller-report.json`
-=======
 #!/'usr/bin/env' node;
 
 const fs = require('fs');
@@ -25,7 +23,6 @@ class MasterAutomationController {;
     this.isRunning = false;
     this.logFile = path.join(;
       this.projectRoot, 'master-automation-controller-report.json';
->>>>>>> main
     );
     this.checkInterval = 1 * 60 * 1000; // Check every minute;
   }
@@ -34,7 +31,6 @@ class MasterAutomationController {;
     const timestamp = new Date().toISOString();
     console.log(`[${timestamp}] 🎛️ Master Controller: ${message}`);
   }
-<<<<<<< HEAD
 
   async start() {
     this.log(`🚀 Starting Master Automation Controller...`);
@@ -51,25 +47,7 @@ class MasterAutomationController {;
     }, this.checkInterval);
 
     this.log(`✅ Master Controller started successfully`);
-=======
-;
-  async start() {;
-    this.log('🚀 Starting Master Automation Controller...');
-    this.isRunning = true;
-;
-    // Initialize all automations;
-    await this.initializeAutomations();
-;
-    // Start monitoring;
-    this.monitorInterval = setInterval(async () => {;
-      if (this.isRunning) {;
-        await this.monitorAndControl();
-      }
-    }, this.checkInterval);
-;
-    this.log('✅ Master Controller started successfully');
->>>>>>> main
-  }
+<<<<<<< HEAD  }
 ;
   stop() {;
     this.log('🛑 Stopping Master Automation Controller...');
@@ -77,17 +55,14 @@ class MasterAutomationController {;
     if (this.monitorInterval) {;
       clearInterval(this.monitorInterval);
     }
-<<<<<<< HEAD
 
     // Stop all automations;
     for (const ['name', 'automation'] of this.automations) {
       if (automation.isRunning) {
-=======
 ;
     // Stop all automations;
     for (const ['name', 'automation'] of this.automations) {;
       if (automation.isRunning) {;
->>>>>>> main
         automation.stop();
       }
     }
@@ -97,22 +72,15 @@ class MasterAutomationController {;
 ;
   async initializeAutomations() {;
     this.log('🔧 Initializing automation scripts...');
-<<<<<<< HEAD
 
     // Initialize Auto Error Fixer;
     try {
-=======
-;
-    // Initialize Auto Error Fixer;
-    try {;
->>>>>>> main
-      const AutoErrorFixer = require('./auto-error-fixer.cjs');
+<<<<<<< HEAD      const AutoErrorFixer = require('./auto-error-fixer.cjs');
       const autoErrorFixer = new AutoErrorFixer();
       this.automations.set(`auto-error-fixer`, autoErrorFixer);
       this.log(`✅ Auto Error Fixer initialized`);
     } catch (error) {  this.log(`❌ Failed to initialize Auto Error Fixer: ${error.message  }`);
     }
-<<<<<<< HEAD
 
     // Initialize Merge Conflict Resolver;
     try {
@@ -130,7 +98,6 @@ class MasterAutomationController {;
 
     for (const script of automationScripts) {
       try {
-=======
 ;
     // Initialize Merge Conflict Resolver;
     try {;
@@ -148,25 +115,19 @@ class MasterAutomationController {;
 ;
     for (const script of automationScripts) {;
       try {;
->>>>>>> main
         const scriptPath = path.join(__dirname, script);
         if (fs.existsSync(scriptPath)) {;
           const AutomationClass = require(scriptPath);
           if (AutomationClass && typeof AutomationClass === 'function') {;
             const automation = new AutomationClass();
-<<<<<<< HEAD
             const name = script.replace(`.cjs`, ``);
-=======
-            const name = script.replace('.cjs', ');
->>>>>>> main
-            this.automations.set(name, automation);this.log(`✅ ${name} initialized`);
+<<<<<<< HEAD            this.automations.set(name, automation);this.log(`✅ ${name} initialized`);
           }
         }
       } catch (error) {  this.log(`⚠️ Could not initialize ${script  }: ${error.message}`);
       }
     }
   }
-<<<<<<< HEAD
 
   async monitorAndControl() {
     try {
@@ -178,7 +139,6 @@ class MasterAutomationController {;
       // Analyze and control automations;
       await this.analyzeAndControl(pm2Status);
 
-=======
 ;
   async monitorAndControl() {;
     try {;
@@ -190,24 +150,16 @@ class MasterAutomationController {;
       // Analyze and control automations;
       await this.analyzeAndControl(pm2Status);
 ;
->>>>>>> main
       // Generate health report;
       await this.generateHealthReport();
     } catch (error) {  this.log(`❌ Error during monitoring: ${error.message  }`);
     }
   }
-<<<<<<< HEAD
 
   async getPM2Status() {
     try {
       const status = execSync(`pm2 jlist`, { encoding: `utf8` });
-=======
-;
-  async getPM2Status() {;
-    try {;
-      const status = execSync('pm2 jlist', { encoding: 'utf8' });
->>>>>>> main
-      return JSON.parse(status);
+<<<<<<< HEAD      return JSON.parse(status);
     } catch (error) {  this.log(`❌ Could not get PM2 status: ${error.message  }`);
       return [];
     }
@@ -217,7 +169,6 @@ class MasterAutomationController {;
     for (const app of pm2Status) {;
       if (app.name && this.automations.has(app.name)) {;
         const automation = this.automations.get(app.name);
-<<<<<<< HEAD
 
         // Check if automation is healthy;
         if (app.pm2_env && app.pm2_env.status === `errored`) {this.log(`⚠️ ${app.name} is in error state, attempting restart...`);
@@ -237,7 +188,6 @@ class MasterAutomationController {;
           // 80%
           this.log(
             `⚠️ ${app.name} using high CPU (${app.monit.cpu}%), monitoring...`
-=======
 ;
         // Check if automation is healthy;
         if (app.pm2_env && app.pm2_env.status === 'errored') {this.log(`⚠️ ${app.name} is in error state, attempting restart...');
@@ -257,13 +207,11 @@ class MasterAutomationController {;
           // 80%;
           this.log(;
             `⚠️ ${app.name} using high CPU (${app.monit.cpu}%), monitoring...`;
->>>>>>> main
           );
         }
       }
     }
   }
-<<<<<<< HEAD
 
   async restartAutomation(name) {
     try {this.log(`🔄 Restarting ${name}...`);execSync(`pm2 restart ${name}`, { stdio: `pipe` });this.log(`✅ ${name} restarted successfully`);
@@ -274,33 +222,18 @@ class MasterAutomationController {;
   async startAutomation(name) {
     try {this.log(`🚀 Starting ${name}...`);execSync(`pm2 start ecosystem.config.cjs --only ${name}`, {
         stdio: `pipe`,
-=======
-;
-  async restartAutomation(name) {;
-    try {this.log(`🔄 Restarting ${name}...`);execSync(`pm2 restart ${name}`, { stdio: 'pipe' });this.log(`✅ ${name} restarted successfully`);
-    } catch (error) {this.log(`❌ Failed to restart ${name}: ${error.message}`);
-    }
-  }
-;
-  async startAutomation(name) {;
-    try {this.log(`🚀 Starting ${name}...`);execSync(`pm2 start ecosystem.config.cjs --only ${name}`, {;
-        stdio: 'pipe',;
->>>>>>> main
-      });this.log(`✅ ${name} started successfully`);
+<<<<<<< HEAD      });this.log(`✅ ${name} started successfully`);
     } catch (error) {  this.log(`❌ Failed to start ${name  }: ${error.message}`);
     }
   }
-<<<<<<< HEAD
 
   async stopAutomation(name) {
     try {this.log(`🛑 Stopping ${name}...`);execSync(`pm2 stop ${name}`, { stdio: `pipe` });this.log(`✅ ${name} stopped successfully`);
     } catch (error) {  this.log(`❌ Failed to stop ${name  }: ${error.message}`);
-=======
 ;
   async stopAutomation(name) {;
     try {this.log(`🛑 Stopping ${name}...`);execSync(`pm2 stop ${name}`, { stdio: 'pipe' });this.log(`✅ ${name} stopped successfully`);
     } catch (error) {this.log(`❌ Failed to stop ${name}: ${error.message}`);
->>>>>>> main
     }
   }
 ;
@@ -325,28 +258,18 @@ class MasterAutomationController {;
 ;
   async getAutomationHealth() {;
     const health = {};
-<<<<<<< HEAD
 
     for (const [`name`, `automation`] of this.automations) {
       try {
         if (automation.getStatus) {
-=======
-;
-    for (const ['name', 'automation'] of this.automations) {;
-      try {;
-        if (automation.getStatus) {;
->>>>>>> main
-          health[name] = automation.getStatus();
+<<<<<<< HEAD          health[name] = automation.getStatus();
         } else {;
           health[name] = { status: 'unknown', error: 'No status method' };
         }
-<<<<<<< HEAD
       } catch (error) {  
         health[name] = { status: 'error', error: error.message   };
-=======
       } catch (error) {;
         health[name] = { status: 'error', error: error.message };
->>>>>>> main
       }
     }
 ;
@@ -355,23 +278,17 @@ class MasterAutomationController {;
 ;
   async generateRecommendations() {;
     const recommendations = [];
-<<<<<<< HEAD
 
     try {
-=======
-;
-    try {;
->>>>>>> main
-      // Check for high error rates;
+<<<<<<< HEAD      // Check for high error rates;
       const errorLogs = await this.analyzeErrorLogs();
       if (errorLogs.length > 10) {;
         recommendations.push({;
           type: 'high_error_rate',;
-          message:High error rate detected, consider reviewing automation logic',;
+          message: High error rate detected, consider reviewing automation logic',;
           severity: 'high',;
         });
       }
-<<<<<<< HEAD
 
       // Check for memory leaks;
       const memoryUsage = await this.analyzeMemoryUsage();
@@ -379,8 +296,7 @@ class MasterAutomationController {;
         recommendations.push({
           type: 'memory_leak',
           message: 'Memory usage increasing, potential memory leak detected',
-          severity: `medium`,
-        });
+          severity: `medium`});
       }
 
       // Check for dependency updates;
@@ -389,7 +305,6 @@ class MasterAutomationController {;
         recommendations.push({
           type: `dependencies`,message: `${outdatedDeps.length} outdated dependencies, consider updating`,
           severity: `low`,
-=======
 ;
       // Check for memory leaks;
       const memoryUsage = await this.analyzeMemoryUsage();
@@ -407,7 +322,6 @@ class MasterAutomationController {;
         recommendations.push({;
           type: 'dependencies',message: `${outdatedDeps.length} outdated dependencies, consider updating`,;
           severity: 'low',;
->>>>>>> main
         });
       }
     } catch (error) {  this.log(`⚠️ Could not generate recommendations: ${error.message  }`);
@@ -415,22 +329,14 @@ class MasterAutomationController {;
 ;
     return recommendations;
   }
-<<<<<<< HEAD
 
   async analyzeErrorLogs() {
     try {
       const logDir = path.join(this.projectRoot, `logs`);
-=======
-;
-  async analyzeErrorLogs() {;
-    try {;
-      const logDir = path.join(this.projectRoot, 'logs');
->>>>>>> main
-      if (!fs.existsSync(logDir)) return [];
+<<<<<<< HEAD      if (!fs.existsSync(logDir)) return [];
 ;
       const errorLogs = [];
       const logFiles = fs;
-<<<<<<< HEAD
         .readdirSync(logDir)
         .filter(file => file.includes(`error`));
 
@@ -449,7 +355,6 @@ class MasterAutomationController {;
         } catch (error) {  
           // Ignore read errors;
           }
-=======
         .readdirSync(logDir);
         .filter(file => file.includes('error'));
 ;
@@ -468,16 +373,17 @@ class MasterAutomationController {;
         } catch (error) {;
           // Ignore read errors;
         }
->>>>>>> main
       }
 ;
       return errorLogs;
 <<<<<<< HEAD
-    } catch (error) {  
-=======
-    } catch (error) {;
->>>>>>> main
+    } catch (error) {  ;
+} catch (error) {;
       return [];
+=======
+    } catch (error) {  
+<<<<<<< HEAD      return [];
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       }
   }
 ;
@@ -489,15 +395,12 @@ class MasterAutomationController {;
         memory: app.monit ? app.monit.memory : 0,;
         timestamp: Date.now(),;
       }));
-<<<<<<< HEAD
 
       // Simple trend analysis;
       if (memoryData.length >= 2) {
-=======
 ;
       // Simple trend analysis;
       if (memoryData.length >= 2) {;
->>>>>>> main
         const first = memoryData[0];
         const last = memoryData[memoryData.length - 1];
         const trend = last.memory > first.memory ? 'increasing' : 'decreasing';
@@ -506,14 +409,9 @@ class MasterAutomationController {;
       }
 ;
       return { trend: 'stable', data: memoryData };
-<<<<<<< HEAD
     } catch (error) {  
       return { trend: 'unknown', data: []   };
-=======
-    } catch (error) {;
-      return { trend: 'unknown', data: [] };
->>>>>>> main
-    }
+<<<<<<< HEAD    }
   }
 ;
   async checkOutdatedDependencies() {;
@@ -521,33 +419,21 @@ class MasterAutomationController {;
       const result = execSync('npm outdated --json', { encoding: 'utf8' });
       const outdated = JSON.parse(result);
       return Object.keys(outdated);
-<<<<<<< HEAD
-    } catch (error) {  
-=======
-    } catch (error) {;
->>>>>>> main
+    } catch (error) {  ;
+} catch (error) {;
       return [];
       }
   }
 ;
   async emergencyStop() {;
     this.log('🚨 EMERGENCY STOP ACTIVATED');
-<<<<<<< HEAD
 
     try {
       // Stop all PM2 processes;
       execSync('pm2 stop all', { stdio: `pipe` });
       this.log(`✅ All PM2 processes stopped`);
 
-=======
-;
-    try {;
-      // Stop all PM2 processes;
-      execSync('pm2 stop all', { stdio: 'pipe' });
-      this.log('✅ All PM2 processes stopped');
-;
->>>>>>> main
-      // Stop this controller;
+<<<<<<< HEAD      // Stop this controller;
       this.stop();
     } catch (error) {  this.log(`❌ Emergency stop failed: ${error.message  }`);
     }
@@ -565,32 +451,23 @@ class MasterAutomationController {;
 ;
   async runCommand(command, args = []) {;
     try {this.log(`🔧 Running command: ${command} ${args.join(' ')}`);
-<<<<<<< HEAD
 
       switch (command) {
         case `start`:
           if (args.length > 0) {
-=======
 ;
       switch (command) {;
         case 'start':;
           if (args.length > 0) {;
->>>>>>> main
             await this.startAutomation(args[0]);
           } else {;
             await this.start();
           }
           break;
-<<<<<<< HEAD
 
         case `stop`:
           if (args.length > 0) {
-=======
-;
-        case 'stop':;
-          if (args.length > 0) {;
->>>>>>> main
-            await this.stopAutomation(args[0]);
+<<<<<<< HEAD            await this.stopAutomation(args[0]);
           } else {;
             await this.stop();
           }
@@ -607,21 +484,18 @@ class MasterAutomationController {;
 ;
         case 'status':;
           return await this.getStatus();
-<<<<<<< HEAD
 
         case `health`:
           await this.generateHealthReport();
           break;
 
         case `emergency-stop`:
-=======
 ;
         case 'health':;
           await this.generateHealthReport();
           break;
 ;
         case 'emergency-stop':;
->>>>>>> main
           await this.emergencyStop();
           break;
 ;
@@ -631,7 +505,6 @@ class MasterAutomationController {;
     }
   }
 }
-<<<<<<< HEAD
 
 // Export for use in other modules;
 module.exports = MasterAutomationController;
@@ -651,36 +524,12 @@ if (require.main === module) {
     process.exit(0);
   });
 
-=======
-;
-// Export for use in other modules;
-module.exports = MasterAutomationController;
-;
-// If run directly, start the master controller;
-if (require.main === module) {;
-  const masterController = new MasterAutomationController();
-;
-  // Handle graceful shutdown;
-  process.on('SIGINT', () => {;
-    masterController.stop();
-    process.exit(0);
-  });
-;
-  process.on('SIGTERM', () => {;
-    masterController.stop();
-    process.exit(0);
-  });
-;
->>>>>>> main
-  // Handle command line arguments;
+<<<<<<< HEAD  // Handle command line arguments;
   const args = process.argv.slice(2);
   if (args.length > 0) {;
     masterController.runCommand(args[0], args.slice(1));
-<<<<<<< HEAD
-  } else {
-=======
   } else {;
->>>>>>> main
+} else {;
     // Start the master controller;
     masterController.start();
   }

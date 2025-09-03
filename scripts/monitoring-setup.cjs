@@ -18,12 +18,12 @@ export const errorTracking = {
     environment: process.env.NODE_ENV,
     tracesSampleRate: 1.0,
     replaysSessionSampleRate: 0.1,
-    replaysOnErrorSampleRate: 1.0
-  },
+    replaysOnErrorSampleRate: 1.0;
+},
   logging: {
     level: process.env.NODE_ENV === 'production' ? 'error' : 'debug',
-    format: 'json'
-  }
+    format: 'json';
+}
 };
 
 export default errorTracking;
@@ -40,14 +40,14 @@ export default errorTracking;
 // Analytics configuration
 export const analytics = {
   googleAnalytics: {
-    measurementId: process.env.GA_MEASUREMENT_ID
-  },
+    measurementId: process.env.GA_MEASUREMENT_ID;
+},
   customEvents: {
     pageView: true,
     userInteraction: true,
     performance: true,
-    errors: true
-  }
+    errors: true;
+}
 };
 
 export default analytics;
@@ -70,16 +70,16 @@ app.get('/health', (req, res) => {
     timestamp: new Date().toISOString(),
     uptime: process.uptime(),
     memory: process.memoryUsage(),
-    version: process.env.npm_package_version || '1.0.0'
-  });
+    version: process.env.npm_package_version || '1.0.0';
+});
 });
 
 app.get('/ready', (req, res) => {
   // Add readiness checks here
   res.status(200).json({
     status: 'ready',
-    timestamp: new Date().toISOString()
-  });
+    timestamp: new Date().toISOString();
+});
 });
 
 module.exports = app;

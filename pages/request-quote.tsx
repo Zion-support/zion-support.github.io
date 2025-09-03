@@ -11,7 +11,7 @@ import {
   ArrowRight,
   Phone,
   Mail,
-  MapPin
+  MapPin;
 } from 'lucide-react';
 
 export default function RequestQuote() {
@@ -25,8 +25,8 @@ export default function RequestQuote() {
     timeline: '',
     budget: '',
     description: '',
-    requirements: ''
-  });
+    requirements: '';
+});
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -35,8 +35,8 @@ export default function RequestQuote() {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: value
-    }));
+      [name]: value;
+}));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -62,14 +62,14 @@ export default function RequestQuote() {
     'Mobile App Development',
     'Web Development',
     'Other'
-  ];
+  ]
 
   const projectSizes = [
     'Small Project (< $10K)',
     'Medium Project ($10K - $50K)',
     'Large Project ($50K - $200K)',
     'Enterprise Project (> $200K)'
-  ];
+  ]
 
   const timelines = [
     'ASAP',
@@ -78,30 +78,30 @@ export default function RequestQuote() {
     '2-3 months',
     '3-6 months',
     '6+ months'
-  ];
+  ]
 
   const benefits = [
     {
       icon: Clock,
       title: 'Fast Response',
-      description: 'Get your quote within 24 hours'
-    },
+      description: 'Get your quote within 24 hours';
+},
     {
       icon: DollarSign,
       title: 'Competitive Pricing',
-      description: 'Best value for your investment'
-    },
+      description: 'Best value for your investment';
+},
     {
       icon: Users,
       title: 'Expert Team',
-      description: 'Certified professionals'
-    },
+      description: 'Certified professionals';
+},
     {
       icon: Zap,
       title: 'Quick Start',
-      description: 'Begin your project immediately'
-    }
-  ];
+      description: 'Begin your project immediately';
+}
+  ]
 
   if (isSubmitted) {
     return (

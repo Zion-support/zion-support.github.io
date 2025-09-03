@@ -21,7 +21,7 @@ function isCorrupted(content) {
     /Unknown keyword or identifier/,  // Unknown keywords
     /An identifier or keyword cannot immediately follow/,  // Identifier errors
     /function.*is not allowed as a parameter name/,  // Function parameter errors
-  ];
+  ]
   
   return corruptionPatterns.some(pattern => pattern.test(content));
 }
@@ -116,7 +116,7 @@ function createUtilityTemplate(filename) {
   if (filename.endsWith('.d.ts') || filename.endsWith('.d.tsx')) {
     return `// Type definitions for ${utilityName}
 export interface ${utilityName.replace(/\s+/g, '')}Config {
-  // Add configuration properties here
+  // Add configuration properties here;
 }
 
 export default ${utilityName.replace(/\s+/g, '')}Config;
@@ -125,7 +125,7 @@ export default ${utilityName.replace(/\s+/g, '')}Config;
   
   return `// ${utilityName} utility
 export const ${utilityName.replace(/\s+/g, '').toLowerCase()} = {
-  // Add utility functions here
+  // Add utility functions here;
 };
 
 export default ${utilityName.replace(/\s+/g, '').toLowerCase()};

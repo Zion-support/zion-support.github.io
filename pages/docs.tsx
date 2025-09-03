@@ -14,7 +14,7 @@ import {
   Globe,
   Database,
   Shield,
-  Users
+  Users;
 } from 'lucide-react';
 
 const Docs: NextPage = () => {
@@ -23,21 +23,21 @@ const Docs: NextPage = () => {
       step: 1,
       title: 'Get Your API Key',
       description: 'Sign up for a free account and get your API key',
-      icon: Shield
-    },
+      icon: Shield;
+},
     {
       step: 2,
       title: 'Install SDK',
       description: 'Install our SDK in your preferred language',
-      icon: Code
-    },
+      icon: Code;
+},
     {
       step: 3,
       title: 'Make Your First Request',
       description: 'Start building with our comprehensive API',
-      icon: Zap
-    }
-  ];
+      icon: Zap;
+}
+  ]
 
   const sections = [
     {
@@ -50,7 +50,7 @@ const Docs: NextPage = () => {
         'API Overview',
         'Rate Limits'
       ]
-    },
+},
     {
       title: 'API Reference',
       description: 'Complete API documentation with examples',
@@ -61,7 +61,7 @@ const Docs: NextPage = () => {
         'Error Handling',
         'SDKs'
       ]
-    },
+},
     {
       title: 'Guides',
       description: 'Step-by-step tutorials and best practices',
@@ -72,7 +72,7 @@ const Docs: NextPage = () => {
         'Webhooks',
         'Security'
       ]
-    },
+},
     {
       title: 'Advanced Features',
       description: 'Advanced functionality and customization',
@@ -83,8 +83,8 @@ const Docs: NextPage = () => {
         'Real-time Updates',
         'Analytics'
       ]
-    }
-  ];
+}
+  ]
 
   const languages = [
     { name: 'JavaScript', icon: '🟨', popular: true },
@@ -93,7 +93,7 @@ const Docs: NextPage = () => {
     { name: 'PHP', icon: '🐘', popular: false },
     { name: 'Go', icon: '🐹', popular: false },
     { name: 'Ruby', icon: '💎', popular: false }
-  ];
+  ]
 
   return (
     <>
@@ -244,13 +244,13 @@ import { ZionSDK } from '@zion/sdk';
 
 const zion = new ZionSDK({
   apiKey: 'your-api-key',
-  environment: 'production'
+  environment: 'production';
 });
 
 // Make a request
 const result = await zion.ai.process({
   text: 'Hello, world!',
-  model: 'gpt-4'
+  model: 'gpt-4';
 });
 
 console.log(result);`}</code>
@@ -286,8 +286,8 @@ print(result)`}</code>
   -H "Content-Type: application/json" \\
   -d '{
     "text": "Hello, world!",
-    "model": "gpt-4"
-  }'`}</code>
+    "model": "gpt-4";
+}'`}</code>
                     </pre>
                   </div>
                 </div>

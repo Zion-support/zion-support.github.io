@@ -1,17 +1,14 @@
-<<<<<<< HEAD
 #!/''usr/bin/env'' node;
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require(`child_process`);
 
 console.log(``🏗️ Starting continuous build and test automation...`);
-=======
 #!/'usr/bin/env' node;
 
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-<<<<<<< HEAD
 ;
 console.log(`'🏗️ Starting continuous build and test automation...');
 ;
@@ -30,108 +27,93 @@ async function runDailyBuildTest() {;
       console.log('✅ Dependencies installed'`);
     } catch (error) {;
       console.log(`'⚠️  Dependency installation failed but continuing...');
-=======
 
 console.log(`🏗️ Starting continuous build and test automation...`);
->>>>>>> main
 
 // Get automation interval from environment variable (default: 1 hour)
 const AUTOMATION_INTERVAL =
   parseInt(process.env.AUTOMATION_INTERVAL) || 3600000; // 1 hour;
 async function runDailyBuildTest() {
   try {
-<<<<<<< HEAD
     console.log(`🏗️ Running build and test at ${new Date().toISOString()});
 
     // Install dependencies;
     console.log(``📦 Installing dependencies...`);
-=======
-    console.log(`🏗️ Running build and test at ${new Date().toISOString()});`);
-`);
-    // Install dependencies`);
-    console.log(`📦 Installing dependencies...`);
->>>>>>> main
-    try {
+<<<<<<< HEAD    try {
       execSync(`npm ci`, { stdio: 'inherit' });
       console.log('✅ Dependencies installed'`);
-<<<<<<< HEAD
     } catch (error) {  
       console.log(`'⚠️  Dependency installation failed but continuing...');
       }
-
-=======
-    } catch (error) {
+;
+} catch (error) {
       console.log(`⚠️  Dependency installation failed but continuing...`);
->>>>>>> main
     }
 ;
->>>>>>> main
     // Run linting;
     console.log('🔍 Running linting...');
     try {;
       execSync('npm run lint', { stdio: 'inherit' });
       console.log('✅ Linting completed');
-<<<<<<< HEAD
     } catch (error) {  
       console.log('⚠️  Linting failed but continuing...');
       }
-
-=======
-    } catch (error) {;
+<<<<<<< HEAD
+;
+} catch (error) {;
       console.log('⚠️  Linting failed but continuing...');
     }
 ;
->>>>>>> main
     // Run type checking;
+=======
+
+<<<<<<< HEAD    // Run type checking;
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     console.log('🔍 Running type checking...');
     try {;
       execSync('npm run type-check', { stdio: 'inherit' });
       console.log('✅ Type checking completed');
-<<<<<<< HEAD
     } catch (error) {  
       console.log('⚠️  Type checking issues found but continuing...');
       }
-
-=======
-    } catch (error) {;
+;
+} catch (error) {;
       console.log('⚠️  Type checking issues found but continuing...');
     }
 ;
->>>>>>> main
     // Run tests;
     console.log('🧪 Running tests...');
     try {;
       execSync('npm test', { stdio: 'inherit' });
       console.log('✅ Tests completed');
-<<<<<<< HEAD
     } catch (error) {  
       console.log('⚠️  Tests failed but continuing...');
       }
-
-=======
-    } catch (error) {;
+<<<<<<< HEAD
+;
+} catch (error) {;
       console.log('⚠️  Tests failed but continuing...');
     }
 ;
->>>>>>> main
     // Build project;
+=======
+
+<<<<<<< HEAD    // Build project;
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     console.log('🏗️ Building project...');
     try {;
       execSync('npm run build', { stdio: 'inherit' });
       console.log('✅ Build completed');
-<<<<<<< HEAD
     } catch (error) {  
       console.log('⚠️  Build failed but continuing...');
       return;
       }
-
-=======
-    } catch (error) {;
+;
+} catch (error) {;
       console.log('⚠️  Build failed but continuing...');
       return;
     }
 ;
->>>>>>> main
     // Verify build output;
     const distPath = path.join(process.cwd(), 'dist');
     if (!fs.existsSync(distPath)) {;
@@ -146,17 +128,12 @@ async function runDailyBuildTest() {
     }
 ;
     console.log('✅ Build verification completed');
-<<<<<<< HEAD
 
-=======
-;
->>>>>>> main
-    // Run performance tests;
+<<<<<<< HEAD    // Run performance tests;
     console.log('📊 Running performance tests...');
     try {;
       execSync('npm run lighthouse', { stdio: 'inherit' });
       console.log('✅ Performance tests completed');
-<<<<<<< HEAD
     } catch (error) {  
       console.log('⚠️  Performance tests failed but continuing...');
       }
@@ -165,15 +142,14 @@ async function runDailyBuildTest() {
     const report = {
       timestamp: new Date().toISOString(),
       buildSuccess: true,
-      summary: `Build and test completed`,
-    };
+      summary: `Build and test completed`};
 
     const reportPath = path.join(process.cwd(), `daily-build-test-report.json`);
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));console.log(📊 Report saved to ${reportPath});
 
     console.log(`✅ Continuous build and test completed successfully`);
   } catch (error) {  
-    console.error(`❌ Continuous build and test failed:`, error.message);
+    console.error(`❌ Continuous build and test failed: `, error.message);
     // Don`t exit, just log the error and continue;
     }
 }
@@ -196,9 +172,8 @@ async function runContinuous() {
 }
 
 // Handle graceful shutdown;
-process.on(`SIGINT`, () => {
-=======
-    } catch (error) {;
+process.on(`SIGINT`, () => {;
+} catch (error) {;
       console.log('⚠️  Performance tests failed but continuing...');
     }
 ;
@@ -238,7 +213,6 @@ async function runContinuous() {;
 ;
 // Handle graceful shutdown;
 process.on('SIGINT', () => {;
->>>>>>> main
   console.log('🛑 Received SIGINT, shutting down gracefully...');
   process.exit(0);
 });
@@ -247,15 +221,8 @@ process.on('SIGTERM', () => {;
   console.log('🛑 Received SIGTERM, shutting down gracefully...');
   process.exit(0);
 });
-<<<<<<< HEAD
 
 // Start the continuous build and test;
 runContinuous().catch(error => {
-=======
-;
-// Start the continuous build and test;
-runContinuous().catch(error => {;
->>>>>>> main
-  console.error('❌ Failed to start continuous build and test:', error);
-  process.exit(1);
+  console.error('❌ Failed to start continuous build and test: ', error);  process.exit(1);
 });

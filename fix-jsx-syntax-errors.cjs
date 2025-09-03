@@ -29,7 +29,7 @@ function fixJSXSyntaxErrors(filePath) {
       // Fix array element semicolons in JSX;
       { pattern: /'([^']*);',/g, replacement: "'$1'," },
       { pattern: /"([^"]*);",/g, replacement: '"$1",' },
-    ];
+    ]
 
     fixes.forEach(fix => {
       const newContent = content.replace(fix.pattern, fix.replacement);

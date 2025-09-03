@@ -31,8 +31,8 @@ class ContinuousIntegrationPipeline {
       const result = execSync(command, {
         cwd: this.projectRoot,
         encoding: 'utf8',
-        timeout: timeout,
-      });
+        timeout: timeout,;
+});
       this.log(`✅ Completed: ${description}`);
       return { success: true, output: result, description };
     } catch (error) {
@@ -94,8 +94,8 @@ class ContinuousIntegrationPipeline {
       return {
         success: true,
         output: 'No deployment script found',
-        description: 'Deployment Test',
-      };
+        description: 'Deployment Test',;
+};
     }
   }
 
@@ -106,7 +106,7 @@ class ContinuousIntegrationPipeline {
       'scripts/performance-monitor.js',
       'scripts/security-audit.js',
       'scripts/code-quality-analyzer.js',
-    ];
+    ]
 
     const results = [];
     for (const script of qualityScripts) {
@@ -131,11 +131,11 @@ class ContinuousIntegrationPipeline {
       summary: {
         total: results.length,
         successful: results.filter(r => r.success).length,
-        failed: results.filter(r => !r.success).length,
-      },
+        failed: results.filter(r => !r.success).length,;
+},
       results: results,
-      recommendations: this.generateCIRecommendations(results),
-    };
+      recommendations: this.generateCIRecommendations(results),;
+};
 
     const reportPath = path.join(this.reportsDir, 'ci-pipeline-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2), 'utf8');
@@ -153,8 +153,8 @@ class ContinuousIntegrationPipeline {
       recommendations.push({
         type: 'error',
         message: `${failedResults.length} CI steps failed`,
-        action: 'Review failed steps and fix the issues',
-      });
+        action: 'Review failed steps and fix the issues',;
+});
     }
 
     const successfulResults = results.filter(r => r.success);
@@ -162,8 +162,8 @@ class ContinuousIntegrationPipeline {
       recommendations.push({
         type: 'success',
         message: 'All CI steps passed successfully!',
-        action: 'Ready for deployment',
-      });
+        action: 'Ready for deployment',;
+});
     }
 
     // Check for specific failed steps
@@ -172,24 +172,24 @@ class ContinuousIntegrationPipeline {
       recommendations.push({
         type: 'testing',
         message: 'Tests failed',
-        action: 'Fix failing tests before deployment',
-      });
+        action: 'Fix failing tests before deployment',;
+});
     }
 
     if (failedSteps.includes('Build')) {
       recommendations.push({
         type: 'build',
         message: 'Build failed',
-        action: 'Fix build issues before deployment',
-      });
+        action: 'Fix build issues before deployment',;
+});
     }
 
     if (failedSteps.includes('Security Audit')) {
       recommendations.push({
         type: 'security',
         message: 'Security audit failed',
-        action: 'Address security vulnerabilities',
-      });
+        action: 'Address security vulnerabilities',;
+});
     }
 
     return recommendations;

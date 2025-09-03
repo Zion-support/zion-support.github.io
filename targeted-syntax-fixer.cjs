@@ -26,13 +26,13 @@ class TargetedSyntaxFixer {
         // Fix missing semicolons after import statements
         {
           pattern: /^import\s+.*from\s+['"][^'"]+['"]\s*$/gm,
-          replacement: (match) => match.endsWith(';') ? match : match + ';'
-        },
+          replacement: (match) => match.endsWith(';') ? match : match + ';';
+},
         // Fix missing semicolons after export statements
         {
           pattern: /^export\s+.*from\s+['"][^'"]+['"]\s*$/gm,
-          replacement: (match) => match.endsWith(';') ? match : match + ';'
-        },
+          replacement: (match) => match.endsWith(';') ? match : match + ';';
+},
         // Fix unterminated string literals
         {
           pattern: /(['"])([^'"]*?)(\n|$)/g,
@@ -57,7 +57,7 @@ class TargetedSyntaxFixer {
             return key + ': ' + value + next;
           }
         }
-      ];
+      ]
 
       fixes.forEach(fix => {
         const newContent = fixedContent.replace(fix.pattern, fix.replacement);
@@ -72,8 +72,8 @@ class TargetedSyntaxFixer {
         this.fixedFiles.push(filePath);
         this.log(`Fixed: ${filePath}`);
       }
-
-    } catch (error) {
+;
+} catch (error) {
       this.errors.push({ file: filePath, error: error.message });
       this.log(`Error fixing ${filePath}: ${error.message}`);
     }

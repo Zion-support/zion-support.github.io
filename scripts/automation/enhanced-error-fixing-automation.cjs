@@ -1,16 +1,9 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
-=======
-<<<<<<< HEAD
 #!/'usr/bin/env' node;
-=======
 #!/usr/bin/env node
->>>>>>> main
 
->>>>>>> main
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
 ;
 console.log(`'🚀 Starting Enhanced Error Fixing Automation System...');
 ;
@@ -60,7 +53,7 @@ class EnhancedErrorFixingAutomation {;
       console.log(`✅ Enhanced error fixing completed successfully! Applied ${this.fixesApplied} fixes.';
       );
     } catch (error) {;
-      console.error('❌ Enhanced error fixing failed:', error.message);
+      console.error('❌ Enhanced error fixing failed: ', error.message);
       await this.generateErrorReport(error);
     }
   }
@@ -70,7 +63,6 @@ class EnhancedErrorFixingAutomation {;
     if (!fs.existsSync(logsDir)) {;
       fs.mkdirSync(logsDir, { recursive: true });
 <<<<<<< HEAD
-=======
     }
   }
 ;
@@ -170,7 +162,6 @@ class EnhancedErrorFixingAutomation {;
       content = content.replace(;
         new RegExp(import.*from\\s+['"]${moduleName}['"], 'g'),import { } from '${moduleName}';
       );
-=======
 const { execSync, spawn } = require('child_process');
 const glob = require(`glob`);
 
@@ -224,8 +215,8 @@ class EnhancedErrorFixingAutomation {
         this.fixesApplied.push({
           type: `eslint_config`,
           file: config,
-          description: `Removed old ESLint configuration file`
-        });
+          description: `Removed old ESLint configuration file`;
+});
       }
     }
 
@@ -267,22 +258,17 @@ export default [
         it: 'readonly',
         test: 'readonly',
         expect: 'readonly',
-        vi: 'readonly',
-      },
+        vi: 'readonly'},
       parser: tsparser,
       parserOptions: {
         ecmaFeatures: {
-          jsx: true,
-        },
-        project: './tsconfig.json',
-      },
-    },
+          jsx: true},
+        project: './tsconfig.json'}},
     plugins: {
       react,
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
-      '@typescript-eslint': tseslint,
-    },
+      '@typescript-eslint': tseslint},
     rules: {
       'react/jsx-uses-react': 'error',
       'react/jsx-uses-vars': 'error',
@@ -296,32 +282,27 @@ export default [
       'no-console': 'warn',
       'no-debugger': 'error',
       'prefer-const': 'error',
-      'no-var': 'error',
-    },
-  },
+      'no-var': 'error'}},
   {
     files: ['**/*.{ts,tsx}'],
     languageOptions: {
       parser: tsparser,
       parserOptions: {
-        project: './tsconfig.json',
-      },
-    },
+        project: './tsconfig.json'}},
     rules: {
       '@typescript-eslint/no-unused-vars': 'error',
-      '@typescript-eslint/no-explicit-any': 'warn',
-    },
-  },
-];`;
+      '@typescript-eslint/no-explicit-any': 'warn'}}];`;
       
       fs.writeFileSync(flatConfigPath, flatConfig);
       this.fixesApplied.push({
         type: 'eslint_config',
         file: 'eslint.config.js',
-        description: 'Created ESLint flat configuration'
-      });
->>>>>>> main
+        description: 'Created ESLint flat configuration';
+});
     }
+=======
+<<<<<<< HEAD    }
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   }
 
   async fixTypeScriptErrors() {
@@ -367,8 +348,7 @@ export default [
         case '7006': // Parameter implicitly has 'any' type;
           await this.fixImplicitAny(lines, line - 1, message);
           break;
-        default:
-          // Generic fix: add type annotations where missing;
+        default: // Generic fix: add type annotations where missing;
           await this.addTypeAnnotations(lines, line - 1, message);
       }
       
@@ -378,10 +358,10 @@ export default [
         file: filePath,
         line,
         errorCode,
-        description: `Fixed TypeScript error: ${message}`
-      });
-      
-    } catch (error) {  
+        description: `Fixed TypeScript error: ${message}`;
+});
+      ;
+} catch (error) {  
       this.log(`Failed to fix TypeScript error in ${filePath  }: ${error.message}`, `error`);
     }
   }
@@ -400,17 +380,15 @@ export default [
           'react-dom': 'react-dom',
           'next': 'next',
           '@types/react': '@types/react',
-          '@types/node': '@types/node'
-        };
+          '@types/node': '@types/node';
+};
         
         if (moduleFixes[moduleName]) {
           lines[lineIndex] = line.replace(moduleName, moduleFixes[moduleName]);
         }
       }
->>>>>>> main
     }
   }
-<<<<<<< HEAD
 ;
   fixPropertyError(content, error) {;
     // Fix property access errors;
@@ -421,7 +399,6 @@ export default [
       // Add optional chaining or type assertion;
       content = content.replace(new RegExp(\\.${propertyName}`, 'g'`),?.${propertyName}';
       );
-=======
 
   async fixPropertyAccess(lines, lineIndex, message) {
     const line = lines[lineIndex];
@@ -433,10 +410,8 @@ export default [
         // Add optional chaining;
         lines[lineIndex] = line.replace(new RegExp(`\\.${property}\\b`), `?.${property}`);
       }
->>>>>>> main
     }
   }
-<<<<<<< HEAD
 ;
   fixTypeError(content, error) {;
     // Fix type assignment errors;
@@ -466,7 +441,7 @@ export default [
       console.log(`'✅ ESLint auto-fix completed');
       this.fixesApplied += 10; // Estimate;
     } catch (error) {;
-      console.warn('⚠️  ESLint auto-fix had issues:', error.message);
+      console.warn('⚠️  ESLint auto-fix had issues: ', error.message);
     }
   }
 ;
@@ -486,7 +461,7 @@ export default [
         if (content !== originalContent) {;
           fs.writeFileSync(file, content);
           this.fixesApplied++;
-=======
+<<<<<<< HEAD
 
   async fixTypeMismatch(lines, lineIndex, message) {
     const line = lines[lineIndex];
@@ -543,21 +518,21 @@ export default [
     this.log('Fixing merge conflicts...');
     
     const files = glob.sync('**/*.{js,jsx,ts,tsx,json,md}', {
-      ignore: ['node_modules/**', 'dist/**', 'build/**', '.git/**']
-    });
+      ignore: ['node_modules/**', 'dist/**', 'build/**', '.git/**'];
+});
     
     for (const file of files) {
       try {
         const content = fs.readFileSync(file, 'utf8');
-        if (content.includes('<<<<<<<') || content.includes('=======') || content.includes('>>>>>>>')) {
+        if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>')) {
           const fixedContent = this.resolveMergeConflicts(content);
           fs.writeFileSync(file, fixedContent);
           
           this.fixesApplied.push({
             type: `merge_conflict`,
             file,
-            description: `Resolved merge conflict markers`
-          });
+            description: `Resolved merge conflict markers`;
+});
           
           this.log(`Fixed merge conflicts in ${file}`);
         }
@@ -570,10 +545,7 @@ export default [
   resolveMergeConflicts(content) {
     // Simple merge conflict resolution - keep the first version;
     return content;
-      .replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n[\s\S]*?\n>>>>>>> [^\n]+\n?/g, `$1`)
-      .replace(/<<<<<<< [^\n]+\n[\s\S]*?\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+\n?/g, '$1');
-  }
-
+      .replace(/\n([\s\S]*?)\n\n[\s\S]*?\n      .replace(/
   async fixESLintErrors() {
     this.log('Fixing ESLint errors...');
     
@@ -583,8 +555,8 @@ export default [
     if (eslintResult.success) {
       this.fixesApplied.push({
         type: 'eslint_auto_fix',
-        description: 'Applied ESLint auto-fixes'
-      });
+        description: 'Applied ESLint auto-fixes';
+});
       this.log('ESLint auto-fixes applied successfully');
     } else {
       this.log('ESLint auto-fix failed, attempting manual fixes...', 'warn');
@@ -604,12 +576,13 @@ export default [
         if (match) {
           const [, filePath, line, column, message] = match;
           await this.fixESLintError(filePath, parseInt(line), parseInt(column), message);
->>>>>>> main
         }
+=======
+<<<<<<< HEAD        }
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       }
     }
   }
-<<<<<<< HEAD
 ;
   fixImportStatements(content) {;
     // Fix duplicate imports;
@@ -895,7 +868,6 @@ export default [
           walkDir(fullPath);
         } else if (item.endsWith('.ts') || item.endsWith('.tsx')) {;
           files.push(fullPath);
-=======
 
   async fixESLintError(filePath, line, column, message) {
     try {
@@ -910,7 +882,6 @@ export default [
         if (varMatch) {
           const varName = varMatch[1];
           lines[line - 1] = lines[line - 1].replace(new RegExp(`\\b${varName}\\b`), `_${varName}`);
->>>>>>> main
         }
       } else if (message.includes(`no-console`)) {
         // Remove console statements;
@@ -925,10 +896,10 @@ export default [
         type: `eslint_error`,
         file: filePath,
         line,
-        description: `Fixed ESLint error: ${message}`
-      });
-      
-    } catch (error) {  
+        description: `Fixed ESLint error: ${message}`;
+});
+      ;
+} catch (error) {  
       this.log(`Failed to fix ESLint error in ${filePath  }: ${error.message}`, `error`);
     }
   }
@@ -946,14 +917,13 @@ export default [
       'eslint', '@eslint/js', 'globals', 'eslint-plugin-react',
       'eslint-plugin-react-hooks', 'eslint-plugin-react-refresh',
       `@typescript-eslint/eslint-plugin`, `@typescript-eslint/parser`
-    ];
+    ]
     
     for (const dep of commonDeps) {
       if (!packageJson.dependencies?.[dep] && !packageJson.devDependencies?.[dep]) {
         missingDeps.push(dep);
       }
     }
-<<<<<<< HEAD
 ;
     if (fs.existsSync(srcDir)) {;
       walkDir(srcDir);
@@ -1011,7 +981,6 @@ if (require.main === module) {;
 }
 ;
 module.exports = EnhancedErrorFixingAutomation;
-=======
     
     if (missingDeps.length > 0) {
       this.log(`Installing missing dependencies: ${missingDeps.join(', ')}`);
@@ -1019,8 +988,8 @@ module.exports = EnhancedErrorFixingAutomation;
       
       this.fixesApplied.push({
         type: `dependency_install`,
-        description: `Installed missing dependencies: ${missingDeps.join(`, `)}`
-      });
+        description: `Installed missing dependencies: ${missingDeps.join(`, `)}`;
+});
     }
   }
 
@@ -1063,8 +1032,8 @@ module.exports = EnhancedErrorFixingAutomation;
       this.log(`Report: ${report.summary.typescriptFixes} TypeScript, ${report.summary.eslintFixes} ESLint, ${report.summary.mergeConflictFixes} merge conflicts, ${report.summary.dependencyFixes} dependencies`);
       
       return report;
-      
-    } catch (error) {  
+      ;
+} catch (error) {  
       this.log(`Error fixing automation failed: ${error.message  }`, `error`);
       throw error;
     }

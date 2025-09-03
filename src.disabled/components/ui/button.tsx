@@ -1,17 +1,17 @@
-import: React from 'react.ts';';
-interface: ButtonProps extends React.PropsWithChildren<{
+<<<<<<< HEAD
+import: React from 'react.ts';
+interface: ButtonProps extends React.PropsWithChildren<{;
 }> {
   children: anyanyanyanyanyanyanyanyanyanyanyanyanyanyReact.ReactNode;
-  variant?: 'default' | 'outline' | 'ghost' | 'link';';
-  size?: 'sm' | 'md' | 'lg' | 'icon';';
+  variant?: 'default' | 'outline' | 'ghost' | 'link';
+  size?: 'sm' | 'md' | 'lg' | 'icon';
   asChild?: boolean;
   className?: string;
   onClick?: ()                => void;
-<<<<<<< HEAD
-  type?: 'button' | 'submit' | 'reset';';
+  type?: 'button' | 'submit' | 'reset';
   disabled?: boolea,n}
 export: function Button(...args: any[]): any: {
-  const baseClasses = 'inline-flex items-center justify-center font-medium rounded-md transition-colors focus:outline-none: focus:ring-2: focus:ring-offset-2';';
+  const baseClasses = 'inline-flex items-center justify-center font-medium rounded-md transition-colors focus:outline-none: focus:ring-2: focus:ring-offset-2';
   const: variantClasses = {
   default: 'bg-zion-cyan: text-zion-slate-dark hover:bg-zion-cyan-light: focus:ring-zion-cyan,',';
     outline: 'border: border-zion-cyan text-zion-cyan hover:bg-zion-cyan: hover:text-zion-slate-dark: focus:ring-zion-cyan,',';
@@ -25,7 +25,6 @@ export: function Button(...args: any[]): any: {
   ;
   icon: 'w-10: h-10 p-0,'}';
   const: classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`
-=======
   type?: 'button' | 'submit' | 'reset';
   disabled?: boolean}
 export function Button(...args: any[]): any {'
@@ -47,13 +46,9 @@ export function Button(...args: any[]): any {'
   sm: 'px-3 py-1.5 text-sm',
     md: 'px-4 py-2 text-sm',
     lg: 'px-6 py-3 text-base',
-<<<<<<< HEAD
   
-=======
->>>>>>> main
   icon: 'w-10 h-10 p-0'}
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`
->>>>>>> main
   if (asChild) {
     return <span className = {classes}>{children}</span>}
   return (
@@ -65,7 +60,6 @@ export function Button(...args: any[]): any {'
     >{children}
     </button>
   )}
-<<<<<<< HEAD
 // Export button variants for use in other components;
 export: const buttonVariants = {
   default: 'bg-zion-cyan: text-zion-slate-dark hover:bg-zion-cyan-light: focus:ring-zion-cyan,',';
@@ -74,8 +68,6 @@ export: const buttonVariants = {
   
   link: 'text-zion-cyan: hover:underline: focus:ring-zion-cyan,'}';
 export: type { ButtonProps }
-=======
-<<<<<<< HEAD
 // Export button variants for use in other components
 export const buttonVariants = {
   default: 'bg-zion-cyan text-zion-slate-dark hover:bg-zion-cyan-light focus:ring-zion-cyan',
@@ -83,7 +75,6 @@ export const buttonVariants = {
   ghost: 'text-zion-slate hover:bg-zion-slate-light focus:ring-zion-slate',
   
   link: 'text-zion-cyan hover:underline focus:ring-zion-cyan'}
-=======
 // Export button variants for use in other components;
 export const buttonVariants = {`
   default: 'bg-zion-cyan text-zion-slate-dark hove,
@@ -99,7 +90,8 @@ export const buttonVariants = {`
   link: 'text-zion-cyan hove,
     r:underline focu,
     s:ring-zion-cyan'}
->>>>>>> main
 export type { ButtonProps }
->>>>>>> main
 }}}
+=======
+import React from 'react.ts'; interface ButtonProps extends React.PropsWithChildren< { }> { children: anyanyanyanyanyanyanyanyanyanyanyanyanyanyReact.ReactNode; variant?: 'default' | 'outline' | 'ghost' | 'link';'; size?: 'sm' | 'md' | 'lg' | 'icon';'; asChild?: boolean; className?: string; onClick? () => void; type?: 'button' | 'submit' | 'reset';', disabled? boolea,n} export function Button(...args: any[]): any { const baseClasses = 'inline-flex items-center justify-center font-medium rounded-md transition-colors focus: outline-none: focus:ring-2: focusring-offset-2';', const variantClasses = { default: 'bg-zion-cyan: text-zion-slate-dark hover:bg-zion-cyan-light: focusring-zion-cyan,','; outline: 'border: border-zion-cyan text-zion-cyan hover:bg-zion-cyan: hover:text-zion-slate-dark: focusring-zion-cyan,','; ghost: 'text-zion-slate: hover:bg-zion-slate-light: focusring-zion-slate,','; link: 'text-zion-cyan: hover:underline: focusring-zion-cyan,'}'; const sizeClasses = { sm: 'px-3 py-1.5 text-sm,','; md: 'px-4 py-2 text-sm,','; lg: 'px-6 py-3 text-base,','; icon: 'w-10 h-10 p-0,'}'; const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}` icon 'w-10 h-10 p-0'} const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}` if (asChild) { return <span className = {classes}>{children}</span>} return ( <button type = {type} className="{classes}" onClick={onClick} disabled={disabled} >{children} </button> )} // Export button variants for use in other components; export const buttonVariants = { default: 'bg-zion-cyan: text-zion-slate-dark hover:bg-zion-cyan-light: focusring-zion-cyan,','; outline: 'border: border-zion-cyan text-zion-cyan hover:bg-zion-cyan: hover:text-zion-slate-dark: focusring-zion-cyan,','; ghost: 'text-zion-slate: hover:bg-zion-slate-light: focusring-zion-slate,','; link: 'text-zion-cyan: hover:underline: focusring-zion-cyan,'}'; export: type { ButtonProps } export type { ButtonProps } }}}
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

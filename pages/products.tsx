@@ -6,7 +6,6 @@ import { ArrowRight, CheckCircle, Star, Zap, Shield, Globe, Database, Network, B
 export default function Products() {
   const products = [
     {
-<<<<<<< HEAD
       title: 'AI Business Intelligence Platform', description: 'Transform your data into actionable insights with our advanced AI-powered analytics platform.',
       features: [
         'Real-time data visualization', 'Predictive analytics',
@@ -14,8 +13,8 @@ export default function Products() {
         'Multi-source data integration'
       ], pricing: 'Starting at $299/month',
       category: 'AI & Analytics', rating: 4.9,
-      users: '500+', image: '/products/ai-bi-platform.jpg'
-    },
+      users: '500+', image: '/products/ai-bi-platform.jpg';
+},
     {
       title: 'Cloud Migration Suite', description: 'Seamlessly migrate your infrastructure to the cloud with our comprehensive migration tools.',
       features: [
@@ -24,8 +23,8 @@ export default function Products() {
         '24/7 migration support'
       ], pricing: 'Starting at $199/month',
       category: 'Cloud Computing', rating: 4.8,
-      users: '300+', image: '/products/cloud-migration.jpg'
-    },
+      users: '300+', image: '/products/cloud-migration.jpg';
+},
     {
       title: 'Cybersecurity Monitoring System', description: 'Protect your business with our advanced threat detection and response platform.',
       features: [
@@ -34,8 +33,8 @@ export default function Products() {
         '24/7 SOC support'
       ], pricing: 'Starting at $399/month',
       category: 'Cybersecurity', rating: 4.9,
-      users: '200+', image: '/products/cybersecurity-monitoring.jpg'
-    },
+      users: '200+', image: '/products/cybersecurity-monitoring.jpg';
+},
     {
       title: 'Micro SaaS Development Kit', description: 'Build and launch your own micro SaaS products with our comprehensive development framework.',
       features: [
@@ -44,8 +43,8 @@ export default function Products() {
         'Deployment automation'
       ], pricing: 'Starting at $149/month',
       category: 'SaaS Development', rating: 4.7,
-      users: '150+', image: '/products/micro-saas-kit.jpg'
-    },
+      users: '150+', image: '/products/micro-saas-kit.jpg';
+},
     {
       title: 'Digital Transformation Hub', description: 'Accelerate your digital transformation with our integrated suite of modernization tools.',
       features: [
@@ -54,8 +53,8 @@ export default function Products() {
         'ROI tracking'
       ], pricing: 'Starting at $249/month',
       category: 'Digital Transformation', rating: 4.8,
-      users: '400+', image: '/products/digital-transformation.jpg'
-    },
+      users: '400+', image: '/products/digital-transformation.jpg';
+},
     {
       title: 'IoT Edge Computing Platform', description: 'Connect and manage your IoT devices with our powerful edge computing solution.',
       features: [
@@ -64,17 +63,16 @@ export default function Products() {
         'Remote monitoring'
       ], pricing: 'Starting at $179/month',
       category: 'IoT & Edge Computing', rating: 4.6,
-      users: '100+', image: '/products/iot-edge-platform.jpg'
-    }
-  ];
+      users: '100+', image: '/products/iot-edge-platform.jpg';
+}
+  ]
 
   const categories = [
     'All Products', 'AI & Analytics',
     'Cloud Computing', 'Cybersecurity',
     'SaaS Development', 'Digital Transformation',
     'IoT & Edge Computing'
-  ];
-=======
+  ]
       id: 1,
       name: "AI-Powered Analytics Platform",
       description: "Transform your data into actionable insights with our advanced AI analytics platform.",
@@ -87,8 +85,8 @@ export default function Products() {
         "Automated reporting"
       ],
       category: "AI Solutions",
-      pricing: "Starting at $2,999/month"
-    },
+      pricing: "Starting at $2,999/month";
+},
     {
       id: 2,
       name: "Cloud Infrastructure Suite",
@@ -102,8 +100,8 @@ export default function Products() {
         "Disaster recovery"
       ],
       category: "Cloud Solutions",
-      pricing: "Starting at $1,999/month"
-    },
+      pricing: "Starting at $1,999/month";
+},
     {
       id: 3,
       name: "Cybersecurity Shield",
@@ -117,8 +115,8 @@ export default function Products() {
         "Security training"
       ],
       category: "Security",
-      pricing: "Starting at $1,499/month"
-    },
+      pricing: "Starting at $1,499/month";
+},
     {
       id: 4,
       name: "IoT Management Platform",
@@ -132,8 +130,8 @@ export default function Products() {
         "Custom integrations"
       ],
       category: "IoT Solutions",
-      pricing: "Starting at $2,499/month"
-    },
+      pricing: "Starting at $2,499/month";
+},
     {
       id: 5,
       name: "Blockchain Solutions",
@@ -147,8 +145,8 @@ export default function Products() {
         "Digital identity"
       ],
       category: "Blockchain",
-      pricing: "Custom pricing"
-    },
+      pricing: "Custom pricing";
+},
     {
       id: 6,
       name: "Global Connectivity Suite",
@@ -162,12 +160,11 @@ export default function Products() {
         "Performance optimization"
       ],
       category: "Networking",
-      pricing: "Starting at $999/month"
-    }
-  ];
+      pricing: "Starting at $999/month";
+}
+  ]
 
   const categories = ["All", "AI Solutions", "Cloud Solutions", "Security", "IoT Solutions", "Blockchain", "Networking"];
->>>>>>> main
 
   return (
     <>
@@ -179,7 +176,6 @@ export default function Products() {
       </Head>
 
       {/* Hero Section */}
-<<<<<<< HEAD
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl md: text-6xl font-bold mb-6">
@@ -188,7 +184,6 @@ export default function Products() {
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
             Powerful, scalable solutions designed to transform your business and drive innovation.
           </p>
-=======
       <section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
@@ -200,7 +195,6 @@ export default function Products() {
               transformation and drive business growth.
             </p>
           </div>
->>>>>>> main
         </div>
       </section>
 
@@ -214,8 +208,8 @@ export default function Products() {
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                   category === "All"
                     ? "bg-blue-600 text-white"
-                    : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-                }`}
+                    : "bg-gray-100 text-gray-700 hover:bg-gray-200";
+}`}
               >
                 {category}
               </button>
@@ -224,7 +218,6 @@ export default function Products() {
         </div>
       </section>
 
-<<<<<<< HEAD
           {/* Products Grid */}
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
             {products.map((product, index) => (
@@ -238,7 +231,6 @@ export default function Products() {
                     <div className="flex items-center gap-1">
                       <Star className="w-4 h-4 text-yellow-400 fill-current" />
                       <span className="text-sm text-gray-600">{product.rating}</span>
-=======
       {/* Products Grid */}
       <section className="py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -254,7 +246,6 @@ export default function Products() {
                       <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-medium">
                         {product.category}
                       </span>
->>>>>>> main
                     </div>
                   </div>
                   
@@ -273,7 +264,6 @@ export default function Products() {
                   <div className="flex items-center justify-between">
                     <div className="text-lg font-semibold text-blue-600">
                       {product.pricing}
-<<<<<<< HEAD
                     </span>
                   </div>
                   
@@ -281,12 +271,10 @@ export default function Products() {
                     <Link 
                       href={`/products/${product.title.toLowerCase().replace(/\s+/g, '-')}`}
                       className="flex-1 bg-blue-600 hover: bg-blue-700 text-white text-center py-2 px-4 rounded-lg font-semibold transition-colors"
-=======
                     </div>
                     <Link
                       href="/contact"
                       className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
->>>>>>> main
                     >
                       Learn More
                       <ArrowRight className="h-4 w-4 ml-1" />
@@ -311,13 +299,10 @@ export default function Products() {
             </p>
           </div>
           
-<<<<<<< HEAD
           <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
-=======
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             <div className="bg-white p-6 rounded-xl shadow-md text-center">
->>>>>>> main
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Zap className="h-8 w-8 text-blue-600" />
               </div>

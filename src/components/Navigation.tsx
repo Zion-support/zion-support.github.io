@@ -11,7 +11,7 @@ import {
   Users, 
   Settings,
   Network,
-  Cpu
+  Cpu;
 } from 'lucide-react';
 
 const navigation = [
@@ -25,7 +25,7 @@ const navigation = [
       { name: 'Micro SaaS', href: '/micro-saas', icon: Zap, description: 'Scalable SaaS applications' },
       { name: 'All Services', href: '/services', icon: Users, description: 'Complete service portfolio' }
     ]
-  },
+},
   { name: 'About', href: '/about' },
   { name: 'Contact', href: '/contact' }
 ];

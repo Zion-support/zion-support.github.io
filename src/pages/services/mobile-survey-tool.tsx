@@ -17,7 +17,7 @@ import {
   Clock,
   Download,
   Share2,
-  Eye
+  Eye;
 } from 'lucide-react';
 
 const MobileSurveyTool: React.FC = () => {
@@ -25,34 +25,34 @@ const MobileSurveyTool: React.FC = () => {
     {
       icon: Smartphone,
       title: "Mobile-First Design",
-      description: "Optimized for mobile devices with responsive design that adapts to any screen size for maximum engagement."
-    },
+      description: "Optimized for mobile devices with responsive design that adapts to any screen size for maximum engagement.";
+},
     {
       icon: Zap,
       title: "Adaptive Question Flow",
-      description: "Dynamic surveys that change based on user responses, providing personalized experiences and richer data."
-    },
+      description: "Dynamic surveys that change based on user responses, providing personalized experiences and richer data.";
+},
     {
       icon: Download,
       title: "Offline Data Collection",
-      description: "Collect responses even without internet connection, syncing automatically when connectivity is restored."
-    },
+      description: "Collect responses even without internet connection, syncing automatically when connectivity is restored.";
+},
     {
       icon: BarChart3,
       title: "Real-Time Analytics",
-      description: "Instant insights with live dashboards, charts, and reports to track survey performance and responses."
-    },
+      description: "Instant insights with live dashboards, charts, and reports to track survey performance and responses.";
+},
     {
       icon: Share2,
       title: "Multi-Channel Distribution",
-      description: "Share surveys via SMS, email, social media, QR codes, and embeddable widgets for maximum reach."
-    },
+      description: "Share surveys via SMS, email, social media, QR codes, and embeddable widgets for maximum reach.";
+},
     {
       icon: Shield,
       title: "Enterprise Security",
-      description: "Bank-level security with data encryption, GDPR compliance, and secure data storage."
-    }
-  ];
+      description: "Bank-level security with data encryption, GDPR compliance, and secure data storage.";
+}
+  ]
 
   const benefits = [
     "Increase survey completion rates by 65%",
@@ -61,30 +61,30 @@ const MobileSurveyTool: React.FC = () => {
     "Get real-time insights and analytics",
     "Improve data quality with smart validation",
     "Scale to thousands of respondents"
-  ];
+  ]
 
   const useCases = [
     {
       title: "Customer Feedback",
       description: "Gather real-time customer satisfaction and feedback across all touchpoints.",
-      icon: MessageSquare
-    },
+      icon: MessageSquare;
+},
     {
       title: "Market Research",
       description: "Conduct comprehensive market research with adaptive questioning techniques.",
-      icon: Target
-    },
+      icon: Target;
+},
     {
       title: "Employee Surveys",
       description: "Measure employee engagement and satisfaction with confidential, mobile-friendly surveys.",
-      icon: Users
-    },
+      icon: Users;
+},
     {
       title: "Event Feedback",
       description: "Collect instant feedback at events, conferences, and workshops using QR codes.",
-      icon: Star
-    }
-  ];
+      icon: Star;
+}
+  ]
 
   const pricing = [
     {
@@ -99,7 +99,7 @@ const MobileSurveyTool: React.FC = () => {
         "Basic analytics",
         "Email support"
       ]
-    },
+},
     {
       name: "Professional",
       price: "$45",
@@ -113,8 +113,8 @@ const MobileSurveyTool: React.FC = () => {
         "Priority support",
         "API access"
       ],
-      popular: true
-    },
+      popular: true;
+},
     {
       name: "Enterprise",
       price: "$95",
@@ -129,8 +129,8 @@ const MobileSurveyTool: React.FC = () => {
         "SSO integration",
         "Custom reporting"
       ]
-    }
-  ];
+}
+  ]
 
   return (
     <>
@@ -340,8 +340,8 @@ const MobileSurveyTool: React.FC = () => {
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
                       plan.popular 
                         ? 'bg-green-600 text-white hover:bg-green-700' 
-                        : 'bg-gray-900 text-white hover:bg-gray-800'
-                    }`}
+                        : 'bg-gray-900 text-white hover:bg-gray-800';
+}`}
                   >
                     Get Started
                   </a>

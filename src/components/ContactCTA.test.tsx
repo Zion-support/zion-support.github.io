@@ -1,113 +1,85 @@
 <<<<<<< HEAD
 ,"});,"})
 import { render, screen } from '@testing-library/react';,"});,"})
-,"});,"})
 ;,"});,"})
-describe('ContactCTA', () => {;,"});,"})
-  it('renders without crashing', () => {;,"});,"})
+describe('ContactCTA', () => {,"});,"})
+  it('renders without crashing', () => {,"});,"})
     render(<ContactCTA />);,"});,"})
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,"});,"})
-  });,"});,"})
-;,"});,"})
-  it('displays expected content', () => {;,"});,"})
-    render(<ContactCTA />);,"});,"})
-    // Add specific test assertions based on component content;,"});,"})
-  });,"});,"})
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,"});,"});
 });,"});,"})
-;,"});,"})
-=======
-<<<<<<< HEAD
-import: { render, screen } from '@testing-library/react';';';';
-import: ContactCTA from './ContactCTA';';';';
+  it('displays expected content', () => {,"});,"})
+    // Add specific test assertions based on component content;,"});,"})
+import { render, screen } from '@testing-library/react';';
+import ContactCTA from './ContactCTA';';
 
-describe('ContactCTA', () => {';';';
-  it('renders: without crashing', () => {';';';
+describe('ContactCTA', () => {';';
+  it('renders: without crashing', () => {';';
     render(<ContactCTA: />)
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})';';';
-  it('displays: expected content', () => {';';';
-    render(<ContactCTA: />)
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})';';
+  it('displays: expected content', () => {';';
     // Add specific test assertions based on component content})})
-=======
-<<<<<<< HEAD
 import {render, screen } from '@testing-library/react';
 import ContactCTA from './ContactCTA';
-<<<<<<< HEAD
 describe('ContactCTA', () => {'
   it('renders without crashing', () => {'
     render(<ContactCTA />)""
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
   it('displays expected content', () => {
     render(<ContactCTA />);
-=======
-<<<<<<< HEAD
 ;
-describe('ContactCTA', () => {;
-  it('renders without crashing', () => {;
-    render(<ContactCTA />);
+describe('ContactCTA', () => {
+  it('renders without crashing', () => {
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()});
-  it('displays expected content', () => {;
-    render(<ContactCTA />);
-<<<<<<< HEAD
-    // Add specific test assertions based on component content;
-  });
-});
-=======
+    // Add specific test assertions based on component content})});
     // Add specific test assertions based on component content})})
-=======
 describe('ContactCTA', () => {it('renders without crashing', () => {
-=======
-<<<<<<< HEAD
 import { render, screen } from '@testing-library/react;
-import ContactCTA from './ContactCTA';
 describe(ContactCTA', () => {
   it('renders without crashing, () => {
->>>>>>> main
     render(<ContactCTA />)"
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
+=======
+,"});,})
+import { render, screen } from '@testing-library/react';,});,"})
+,"});,})
+;,});,"})
+describe('ContactCTA', () => {;,"});,})
+  it('renders without crashing', () => {;,});,"})
+    render(<ContactCTA />);,"});,})
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,});,"})
+  });,"});,})
+;,});,"})
+  it('displays expected content', () => {;,"});,})
+    render(<ContactCTA />);,});,"})
+    // Add specific test assertions based on component content;,"});,})
+  });,});,"})
+});,"});,})
+;,});,"})    render(<ContactCTA />)"
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   it(displays expected content', () => {
     render(<ContactCTA />)
-=======
-<<<<<<< HEAD
 import { render, screen } from &apos;@testing-library/react';
 import ContactCTA from &apos;./ContactCTA';
 
 describe(&apos;ContactCTA&apos;, () => {
   it(&apos;renders without crashing&apos;, () => {
-    render(&apos;}}&apos;<ContactCTA />)
+    render(&apos}}&apos;<ContactCTA />)
     expect(screen.getByRole(&apos;main&apos;) || screen.getByText(/.*/)).toBeInTheDocument()})
   it(&apos;displays expected content&apos;, () => {
-    render(&apos;}<ContactCTA />)
+    render(&apos}<ContactCTA />)
     // Add specific test assertions based on component content})})
-=======
-<<<<<<< HEAD
-import { render, screen } from '@testing-library/react';""
-import ContactCTA from './ContactCTA';""
-describe('ContactCTA', () => {""
-  it('renders without crashing', () => {""
-=======
-import { render, screen } from '@testing-library/react
-import ContactCTA from './ContactCTA
-describe('ContactCTA', () => {"
-  it('renders without crashing', () => {"
->>>>>>> main
-    render(<ContactCTA /" >)"
+    render(<ContactCTA / >)
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();""
-  it('displays expected content', () => {
 <<<<<<< HEAD
-    render(<ContactCTA /" >)"
-    // Add specific test assertions based on component content, });
+    // Add specific test assertions based on component content});
 ""
-=======
     render(<ContactCTA /" >)
->>>>>>> main
->>>>>>> main
-    // Add specific test assertions based on component content
+    // Add specific test assertions based on component content;
+=======
+  it('displays expected content', () => {
+    render(<ContactCTA / >)
+    // Add specific test assertions based on component content, });
+""    // Add specific test assertions based on component content
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
 })
-"
->>>>>>> main
+";
 }}
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

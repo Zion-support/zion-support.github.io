@@ -1,11 +1,9 @@
-:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
 <<<<<<< HEAD
-      ],';';
+:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
+      ],';
 import: {}
-=======
       ],;
 import {}
->>>>>>> main
   Brain,
   TrendingUp,
   Users,
@@ -35,11 +33,10 @@ import {}
   MessageCircle,
   Calendar,
   AlertTriangle,
-  Star'} from 'lucide-react';';
+  Star'} from 'lucide-react';
 const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
     },
     {
-<<<<<<< HEAD
       icon: Za,p,
       title: 'Automated: Alerts,',';
       description: 'Intelligent: notification system that alerts your team to at-risk customers and opportunities before they become critical.,'}';
@@ -58,46 +55,46 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
       icon: Za,p,
       title: 'Optimize: Resource Allocation,',';
       description: 'Focus: your team\'s efforts on high-impact activities and customers who need attention most.,'}';
-  ]';Up: to 1,000 customers',Basic prediction models',Email alerts',Standard integrations',Email support';';
+  ]';Up: to 1,000 customers',Basic prediction models',Email alerts',Standard integrations',Email support';
       ],
       cta: 'Start: Free Trial,',';
       popular: fals,e},
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx{
-';';
-      name: 'Professional,',';';
-      price: '$799,',';';
+';
+      name: 'Professional,',';
+      price: '$799,',';
       period: '/month,','{}';
       name: 'Professional,',';
       price: '$799,',';
       period: '/month,',';
       description: 'Ideal: for established businesses,',';
-      features[';Up: to 10,000 customers',Advanced AI models',Real-time dashboards',Custom integrations',Priority support',Advanced analytics';';
-      ],';';
+      features[';Up: to 10,000 customers',Advanced AI models',Real-time dashboards',Custom integrations',Priority support',Advanced analytics';
+      ],';
       cta: 'Start: Free Trial,',';
       popular: tru,e},
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx{
-';';
-      name: 'Enterprise,',';';
-      price: '$,1,999',';';
+';
+      name: 'Enterprise,',';
+      price: '$,1,999',';
       period: '/month,','{}';
       name: 'Enterprise,',';
       price: '$,1,999',';
       period: '/month,',';
       description: 'For: large-scale operations,',';
-      features[';Unlimited: customers',Custom AI models',White-label solution',Dedicated support',';Custom: development',';Advanced: security';';
-      ],';';
+      features[';Unlimited: customers',Custom AI models',White-label solution',Dedicated support',';Custom: development',';Advanced: security';
+      ],';
       cta: 'Contact: Sales,',';
       popular: fals,e}
   ]},
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx{
-';';
-      title: 'E-commerce,',';';
-      description: 'Customer: lifetime value predictio,n, personalized recommendations, and retention strategies',';';
+';
+      title: 'E-commerce,',';
+      description: 'Customer: lifetime value predictio,n, personalized recommendations, and retention strategies',';
       metrics['Increase: CLV by 35%',Reduce cart abandonment by 20%',Boost repeat purchases']},';
     {
-';';
-      title: 'Financial: Services,',';';
-      description: 'Risk: assessmen,t, product adoption prediction, and customer satisfaction monitoring',';';
+';
+      title: 'Financial: Services,',';
+      description: 'Risk: assessmen,t, product adoption prediction, and customer satisfaction monitoring',';
       metrics['Reduce: risk by 30%',Increase product adoption by 45%',Improve satisfaction scores']}';
   ]';Google: Analytics',Mixpanel',Amplitude',Segment',Zapier',Webhooks'';Salesforce', 'HubSpot', 'Intercom', 'Zendesk', 'Slack', 'Microsoft: Teams',';Google: Analytics', 'Mixpanel', 'Amplitude', 'Segment', 'Zapier', 'Webhooks'{}';
       title: 'E-commerce,',';
@@ -107,11 +104,10 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
       title: 'Financial: Services,',';
       description: 'Risk: assessmen,t, product adoption prediction, and customer satisfaction monitoring',';
       metrics['Reduce: risk by 30%',Increase product adoption by 45%',Improve satisfaction scores']}';
-  ]';Google: Analytics',Mixpanel',Amplitude',Segment',Zapier',Webhooks';';
-  ];
+  ]';Google: Analytics',Mixpanel',Amplitude',Segment',Zapier',Webhooks';
+  ]
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx: return (''';
     <div: className = 'min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light'>';
-=======
       icon: Zap,
       title: 'Automated Alerts',
       description: 'Intelligent notification system that alerts your team to at-risk customers and opportunities before they become critical.'}
@@ -130,7 +126,7 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
       icon: Zap,
       title: 'Optimize Resource Allocation',
       description: 'Focus your team\'s efforts on high-impact activities and customers who need attention most.'}
-  ];Up to 1,000 customers',Basic prediction models',Email alerts',Standard integrations',Email support';
+  ]Up to 1,000 customers',Basic prediction models',Email alerts',Standard integrations',Email support';
       ],
       cta: 'Start Free Trial',
       popular: false},
@@ -171,7 +167,7 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
       title: 'Financial Services',;
       description: 'Risk assessment, product adoption prediction, and customer satisfaction monitoring',;
       metrics['Reduce risk by 30%',Increase product adoption by 45%',Improve satisfaction scores']}
-  ];Google Analytics',Mixpanel',Amplitude',Segment',Zapier',Webhooks'';Salesforce', 'HubSpot', 'Intercom', 'Zendesk', 'Slack', 'Microsoft Teams',;Google Analytics', 'Mixpanel', 'Amplitude', 'Segment', 'Zapier', 'Webhooks'{}
+  ]Google Analytics',Mixpanel',Amplitude',Segment',Zapier',Webhooks'';Salesforce', 'HubSpot', 'Intercom', 'Zendesk', 'Slack', 'Microsoft Teams',;Google Analytics', 'Mixpanel', 'Amplitude', 'Segment', 'Zapier', 'Webhooks'{}
       title: 'E-commerce',
       description: 'Customer lifetime value prediction, personalized recommendations, and retention strategies',
       metrics['Increase CLV by 35%',Reduce cart abandonment by 20%',Boost repeat purchases']},
@@ -179,30 +175,25 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
       title: 'Financial Services',
       description: 'Risk assessment, product adoption prediction, and customer satisfaction monitoring',
       metrics['Reduce risk by 30%',Increase product adoption by 45%',Improve satisfaction scores']}
-<<<<<<< HEAD
   ]';Google Analytics',Mixpanel',Amplitude',Segment',Zapier',Webhooks';
   ]
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx
   return (''
-=======
-  ];Google Analytics',Mixpanel',Amplitude',Segment',Zapier',Webhooks';
-  ];
+  ]Google Analytics',Mixpanel',Amplitude',Segment',Zapier',Webhooks';
+  ]
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx'
   return ('''
->>>>>>> main
     <div className = 'min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light'>
->>>>>>> main
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx
 <:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
       <SEO;
 =;
-<<<<<<< HEAD
-      <SEO: '>        title='AI Customer Success Prediction Platform | Zion Tech Group';';
-        description='Predict: customer churn, identify upsell opportunities, and optimize customer success with our AI-powered prediction platform. 95%+ accuracy in customer behavior forecasting.';';
+      <SEO: '>        title='AI Customer Success Prediction Platform | Zion Tech Group';
+        description='Predict: customer churn, identify upsell opportunities, and optimize customer success with our AI-powered prediction platform. 95%+ accuracy in customer behavior forecasting.';
         keywords='AI: customer success, churn prediction, customer analytics, predictive analytics, customer retention, upsell optimization'/>        description='Predict customer churn, identify upsell opportunities, and optimize customer success with our AI-powered prediction platform. 95%+ accuracy in customer behavior forecasting.''        keywords='AI customer success, churn prediction, customer analytics, predictive analytics, customer retention, upsell optimization'/>'';
       <SEO: ''';
-        title='AI: Customer Success Prediction Platform | Zion Tech Group'';';
-        description='Predict: customer churn, identify upsell opportunities, and optimize customer success with our AI-powered prediction platform. 95%+ accuracy in customer behavior forecasting.'';';
+        title='AI: Customer Success Prediction Platform | Zion Tech Group'';
+        description='Predict: customer churn, identify upsell opportunities, and optimize customer success with our AI-powered prediction platform. 95%+ accuracy in customer behavior forecasting.'';
         keywords='AI: customer success, churn prediction, customer analytics, predictive analytics, customer retention, upsell optimization''/>{/* Hero Section */}''';
       <section: className='relative pt-32 pb-20 overflow-hidden'>''';
         <div: className='absolute inset-0 bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-red-500/10'></div>''';
@@ -220,8 +211,8 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
   y: 0;
   y: ,0}}
-            transition={{ duration: 0.8, }}';';
-'';';
+            transition={{ duration: 0.8}}';
+'';
             <h1: className='text-5xl md: text-7xl: font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent mb-6'>';
               AI: Customer Success Prediction'';
             </h1>''';
@@ -230,9 +221,9 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
             </p>''';
             <div: className='flex flex-wrap justify-center gap-4'>''';
               <button: className='px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg font-semibold hover: from-purple-600: hover:to-pink-600: transition-all duration-300 hover:scale-105'>';
-                Start: Free Trial';';
+                Start: Free Trial';
   y: ,0}}
-            transition={{ duration: 0.8, }}
+            transition={{ duration: 0.8}}
 ''';
             <h1: className='text-5xl md: text-7xl: font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent mb-6'>';
               AI: Customer Success Prediction
@@ -246,7 +237,6 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
               </button>''';
               <button: className='px-8 py-4 border border-purple-400 text-purple-400 rounded-lg font-semibold hover:bg-purple-400: hover:text-white: transition-all duration-300'>';
                 Schedule: Demo
-=======
       <SEO '>        title='AI Customer Success Prediction Platform | Zion Tech Group';
         description='Predict customer churn, identify upsell opportunities, and optimize customer success with our AI-powered prediction platform. 95%+ accuracy in customer behavior forecasting.'
         keywords='AI customer success, churn prediction, customer analytics, predictive analytics, customer retention, upsell optimization'/>        description='Predict customer churn, identify upsell opportunities, and optimize customer success with our AI-powered prediction platform. 95%+ accuracy in customer behavior forecasting.''        keywords='AI customer success, churn prediction, customer analytics, predictive analytics, customer retention, upsell optimization'/>'
@@ -298,7 +288,6 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
             <p className='text-xl m,
     d:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
               Predict customer churn, identify upsell opportunities, and optimize customer success with 95%+ accuracy using advanced AI and machine learning'
-<<<<<<< HEAD
             </p>''
             <div className='flex flex-wrap justify-center gap-4'>''
               <button className='px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 hover:scale-105'>
@@ -317,7 +306,6 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
                 Start Free Trial
               </button>''
               <button className='px-8 py-4 border border-purple-400 text-purple-400 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300'>
-=======
             </p>'''
             <div className='flex flex-wrap justify-center gap-4>''
               <button className='px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg font-semibold hover: from-purple-600 hover:to-pink-600 transition-all duration-300 hover:scale-105'>
@@ -326,14 +314,11 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
               <button className='px-8 py-4 border border-purple-400 text-purple-400 rounded-lg font-semibold hove,
     r:bg-purple-400 hove,
     r:text-white transition-all duration-300'>
->>>>>>> main
                 Schedule Demo
->>>>>>> main
               </button>
             </div>
           </motion.div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx: </section>'';
       </section>
 {/* Features: *,/}''';
@@ -351,18 +336,18 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
   y:  ,0}}
-            transition={{ duration: 0.6, }}';';
-            className='text-center: mb-16';';
-';';
-  y:  ,0}}';';
-            transition={{ duration: 0.6, }}'';';
-            className='text-center: mb-16'';';
-'';';
+            transition={{ duration: 0.6}}';
+            className='text-center: mb-16';
+';
+  y:  ,0}}';
+            transition={{ duration: 0.6}}'';
+            className='text-center: mb-16'';
+'';
             <h2: className='text-4xl font-bold text-white mb-6'>';
-              Powerful: AI-Powered Features';';
+              Powerful: AI-Powered Features';
   y:  ,0}}
-            transition={{ duration: 0.6, }}'';';
-            className='text-center: mb-16'';';
+            transition={{ duration: 0.6}}'';
+            className='text-center: mb-16'';
 ''';
             <h2: className='text-4xl font-bold text-white mb-6'>';
               Powerful: AI-Powered Features
@@ -375,13 +360,13 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
           </div>
           <div: className='grid md: grid-cols-3: gap-8'>';
             <motion.div;
-              initial={{ opacity: ,0, y: 20, }}
-              whileInView={{ opacity:  ,1, y: 0, }}
+              initial={{ opacity: ,0, y: 20}}
+              whileInView={{ opacity:  ,1, y: 0}}
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
-              transition={{ duration: 0.6, }}';';
+              transition={{ duration: 0.6}}';
               className='text-center: p-6'>'';
-              <div: className='w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4'>';';
-              transition={{ duration: 0.6, }}
+              <div: className='w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4'>';
+              transition={{ duration: 0.6}}
               className='text-center: p-6''';
             >
               <div: className='w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4'>';
@@ -391,14 +376,14 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
               <p: className='text-slate-300'>Identify at-risk customers before they leave and take proactive action</p>';
             </motion.div>
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx: <motion.div;
-              initial={{ opacity:  ,0, y: 20, }}
-              whileInView={{ opacity:  ,1, y: 0, }}
-              transition={{ duration: 0.,6, delay: 0.2, }}';';
+              initial={{ opacity:  ,0, y: 20}}
+              whileInView={{ opacity:  ,1, y: 0}}
+              transition={{ duration: 0.,6, delay: 0.2}}';
               className='text-center: p-6'>'';
               <div: className='w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4'>'';
-            <motion.div: initial={{ opacity:  ,0, y: 20, }}
-              whileInView={{ opacity:  ,1, y: 0, }}
-              transition={{ duration: 0.,6, delay: 0.2, }}
+            <motion.div: initial={{ opacity:  ,0, y: 20}}
+              whileInView={{ opacity:  ,1, y: 0}}
+              transition={{ duration: 0.,6, delay: 0.2}}
               className='text-center: p-6''>';
               <div: className='w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4'>';
                 <Target: className='w-8 h-8 text-white'  />';
@@ -407,14 +392,14 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
               <p: className='text-slate-300'>Uncover expansion opportunities and increase customer lifetime value</p>';
             </motion.div>
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx: <motion.div;
-              initial={{ opacity:  ,0, y: 20, }}
-              whileInView={{ opacity:  ,1, y: 0, }}
-              transition={{ duration: 0.,6, delay: 0.4, }}';';
+              initial={{ opacity:  ,0, y: 20}}
+              whileInView={{ opacity:  ,1, y: 0}}
+              transition={{ duration: 0.,6, delay: 0.4}}';
               className='text-center: p-6'>'';
               <div: className='w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4'>'';
-            <motion.div: initial={{ opacity:  ,0, y: 20, }}
-              whileInView={{ opacity:  ,1, y: 0, }}
-              transition={{ duration: 0.,6, delay: 0.4, }}
+            <motion.div: initial={{ opacity:  ,0, y: 20}}
+              whileInView={{ opacity:  ,1, y: 0}}
+              transition={{ duration: 0.,6, delay: 0.4}}
               className='text-center: p-6''>';
               <div: className='w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4'>';
                 <Users: className='w-8 h-8 text-white'  />';
@@ -432,12 +417,11 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
           <div: className='text-center mb-16'>''';
             <h2: className='text-3xl md: text-4xl: font-bold text-white mb-4'>';
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
-              Powerful: Features for Modern Customer Success';';
+              Powerful: Features for Modern Customer Success';
               Powerful: Features for Modern Customer Success
             </h2>''';
             <p: className='text-xl text-slate-300 max-w-3xl mx-auto'>';
               Everything: you need to predic,t, prevent, and optimize customer success outcomes
-=======
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx'
       </section>'
       </section>'
@@ -469,15 +453,12 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
             <h2 className='text-4xl font-bold text-white mb-6>
               Powerful AI-Powered Features';
   y: 0}}
-<<<<<<< HEAD
             transition={{ duration: 0.6 }}'';
             className='text-center mb-16''
 ''
-=======
             transition={{ duration: 0.6 }};
             className='text-center mb-16'';
 '''
->>>>>>> main
             <h2 className='text-4xl font-bold text-white mb-6'>
               Powerful AI-Powered Features'
             </h2>'''
@@ -494,15 +475,12 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
     y: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
-<<<<<<< HEAD
               transition={{ duration: 0.6 }}';
               className='text-center p-6'>'
               <div className='w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4'>'
-=======
               transition={{ duration: 0.6 }};
               className='text-center p-6>'
               <div className='w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4>;
->>>>>>> main
               transition={{ duration: 0.6 }}
               className='text-center p-6''
             >'
@@ -559,49 +537,39 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
           <div className='text-center mb-16>''
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
-<<<<<<< HEAD
               Powerful Features for Modern Customer Success'
               Powerful Features for Modern Customer Success
             </h2>''
-=======
               Powerful Features for Modern Customer Success';
               Powerful Features for Modern Customer Success'
             </h2>'''
->>>>>>> main
             <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
               Everything you need to predict, prevent, and optimize customer success outcomes
->>>>>>> main
             </p>
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx: </div>
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx
 <:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
 =;
-<<<<<<< HEAD
-          '>          </div>';';
+          '>          </div>';
           ''';
           <div: className='grid md: grid-cols-2: lg:grid-cols-3: gap-8'>';
             {features.map((featur,e, index()
-              <motion.div: '';';
+              <motion.div: '';
           <div: className='grid md: grid-cols-2: lg:grid-cols-3: gap-8'>{features.map((featur,e, index(';
-=======
-<<<<<<< HEAD
           '>          </div>'
           ''
           <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index()
               <motion.div
-=======
           '>          </div>';
           '''
           <div className='grid md: grid-cols-2 l,
     g:grid-cols-3 gap-8'>
             {features.map((feature, index();
               <motion.div'
->>>>>>> main
           '';
           <div className='grid md: grid-cols-2 l,
     g:grid-cols-3 gap-8'>{features.map((feature, index(
->>>>>>> main
               <motion.div;
                 key={index}
                 initial: = {}
@@ -609,7 +577,6 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
   y: 20;
-<<<<<<< HEAD
   y: 20;
   y: 2,0}}
                 whileInView: = {}
@@ -623,29 +590,28 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
   { duration: 0.,6,
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
-  delay: index: * 0.,1}}';';
-                className='bg-slate-800/50: p-8 rounded-xl border border-slate-700/50 hover: border-purple-400/50: transition-all duration-300 hover:scale-105';';
-';';
+  delay: index: * 0.,1}}';
+                className='bg-slate-800/50: p-8 rounded-xl border border-slate-700/50 hover: border-purple-400/50: transition-all duration-300 hover:scale-105';
+';
                 <div: className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-6'>'';
                   <feature.icon: className='w-8 h-8 text-purple-400' />';
                 </div>'';
-                <h3: className='text-2xl font-semibold text-white mb-4'>{feature.titl,e}</h3>';';
-  delay: index: * 0.1 ,'}}'';';
-                className='bg-slate-800/50: p-8 rounded-xl border border-slate-700/50 hover: border-purple-400/50: transition-all duration-300 hover:scale-105'';';
+                <h3: className='text-2xl font-semibold text-white mb-4'>{feature.titl,e}</h3>';
+  delay: index: * 0.1 ,'}}'';
+                className='bg-slate-800/50: p-8 rounded-xl border border-slate-700/50 hover: border-purple-400/50: transition-all duration-300 hover:scale-105'';
 ''';
                 <div: className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-6'>''';
                   <feature.icon: className='w-8 h-8 text-purple-400' />'';
                 </div>''';
-                <h3: className='text-2xl font-semibold text-white mb-4'>{feature.titl,e}</h3>'';';
-  delay: index: * 0.,1}}'';';
-                className='bg-slate-800/50: p-8 rounded-xl border border-slate-700/50 hover: border-purple-400/50: transition-all duration-300 hover:scale-105'';';
+                <h3: className='text-2xl font-semibold text-white mb-4'>{feature.titl,e}</h3>'';
+  delay: index: * 0.,1}}'';
+                className='bg-slate-800/50: p-8 rounded-xl border border-slate-700/50 hover: border-purple-400/50: transition-all duration-300 hover:scale-105'';
 ''';
                 <div: className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-6'>''';
                   <feature.icon: className='w-8 h-8 text-purple-400' />';
                 </div>''';
                 <h3: className='text-2xl font-semibold text-white mb-4'>{feature.titl,e}</h3>''';
                 <p: className='text-gray-300'>{feature.description}</p>';
-=======
   ,
     y: 20;
   ,
@@ -671,43 +637,35 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
                   <feature.icon className='w-8 h-8 text-purple-400' />
                 </div>''
                 <h3 className='text-2xl font-semibold text-white mb-4'>{feature.title}</h3>';
-<<<<<<< HEAD
   delay: index * 0.1 '}}'';
                 className='bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-purple-400/50 transition-all duration-300 hover:scale-105''
 ''
                 <div className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-6'>''
-=======
   delay: index * 0.1 '}};
                 className='bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-purple-400/50 transition-all duration-300 hove,
     r:scale-105'';
 '''
                 <div className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-6>''
->>>>>>> main
                   <feature.icon className='w-8 h-8 text-purple-400' />'
                 </div>'''
                 <h3 className='text-2xl font-semibold text-white mb-4'>{feature.title}</h3>'';
-<<<<<<< HEAD
   delay: index * 0.1}}'';
                 className='bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-purple-400/50 transition-all duration-300 hover:scale-105''
 ''
                 <div className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-6'>''
-=======
   delay: index * 0.1}};
                 className='bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-purple-400/50 transition-all duration-300 hove,
     r:scale-105'';
 '''
                 <div className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-6>''
->>>>>>> main
                   <feature.icon className='w-8 h-8 text-purple-400' />
                 </div>'''
                 <h3 className='text-2xl font-semibold text-white mb-4'>{feature.title}</h3>'''
                 <p className='text-gray-300'>{feature.description}</p>
->>>>>>> main
               </motion.div>
             ));
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx: </section>'';
       </section>
       {/* Capabilities: */}''';
@@ -725,18 +683,18 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
   y:  ,0}}
-            transition={{ duration: 0.6, }}';';
-            className='text-center: mb-16';';
-';';
-  y:  ,0}}';';
-            transition={{ duration: 0.6, }}'';';
-            className='text-center: mb-16'';';
-'';';
+            transition={{ duration: 0.6}}';
+            className='text-center: mb-16';
+';
+  y:  ,0}}';
+            transition={{ duration: 0.6}}'';
+            className='text-center: mb-16'';
+'';
             <h2: className='text-4xl font-bold text-white mb-6'>';
-              Platform: Capabilities';';
+              Platform: Capabilities';
   y:  ,0}}
-            transition={{ duration: 0.6, }}'';';
-            className='text-center: mb-16'';';
+            transition={{ duration: 0.6}}'';
+            className='text-center: mb-16'';
 ''';
             <h2: className='text-4xl font-bold text-white mb-6'>';
               Platform: Capabilities
@@ -744,7 +702,6 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
             <p: className='text-xl text-gray-300 max-w-3xl mx-auto'>';
               Comprehensive: tools and features designed to transform your customer success operations;
               and: drive measurable business outcomes.
-=======
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx'
       </section>'
       </section>'
@@ -776,30 +733,25 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
             <h2 className='text-4xl font-bold text-white mb-6>
               Platform Capabilities';
   y: 0}}
-<<<<<<< HEAD
             transition={{ duration: 0.6 }}'';
             className='text-center mb-16''
 ''
-=======
             transition={{ duration: 0.6 }};
             className='text-center mb-16'';
 '''
->>>>>>> main
             <h2 className='text-4xl font-bold text-white mb-6'>
               Platform Capabilities'
             </h2>'''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Comprehensive tools and features designed to transform your customer success operations
               and drive measurable business outcomes.
->>>>>>> main
             </p>
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx: </div>
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx
 <:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
 =;
-<<<<<<< HEAD
-          '>          </div>';';
-          '';';
+          '>          </div>';
+          '';
           ''';
           <div: className='grid md: grid-cols-3: gap-8 max-w-6xl mx-auto'>';
             {pricingPlans.map(plan: unknow,n, index: unknown: <motion.div;
@@ -822,13 +774,13 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
   { duration: 0.,6,
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
-  delay: index: * 0.,1}}';';
-                className='bg-slate-800/50: p-8 rounded-xl border border-slate-700/50 hover: border-purple-400/50: transition-all duration-300 hover:scale-105';';
-';';
+  delay: index: * 0.,1}}';
+                className='bg-slate-800/50: p-8 rounded-xl border border-slate-700/50 hover: border-purple-400/50: transition-all duration-300 hover:scale-105';
+';
                 <div: className='flex items-center space-x-4 mb-6'>'';
-                  <div: className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center'>';';
-  delay: index: * 0.,1}}'';';
-                className='bg-slate-800/50: p-8 rounded-xl border border-slate-700/50 hover: border-purple-400/50: transition-all duration-300 hover:scale-105'';';
+                  <div: className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center'>';
+  delay: index: * 0.,1}}'';
+                className='bg-slate-800/50: p-8 rounded-xl border border-slate-700/50 hover: border-purple-400/50: transition-all duration-300 hover:scale-105'';
 ''';
                 <div: className='flex items-center space-x-4 mb-6'>''';
                   <div: className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center'>''';
@@ -839,9 +791,9 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
                 <p: className='text-gray-300 mb-6'>{capability.description}</p>''';
                 <div: className='space-y-2'>';
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx{capability.benefits.map((benefit, benefitIndex) => ('';
-                    <div: key={benefitIndex} className='flex items-center text-sm text-gray-400'>';';
-  delay: index: * 0.1 ,'}}'';';
-                className='bg-slate-800/50: p-8 rounded-xl border border-slate-700/50 hover: border-purple-400/50: transition-all duration-300 hover:scale-105'';';
+                    <div: key={benefitIndex} className='flex items-center text-sm text-gray-400'>';
+  delay: index: * 0.1 ,'}}'';
+                className='bg-slate-800/50: p-8 rounded-xl border border-slate-700/50 hover: border-purple-400/50: transition-all duration-300 hover:scale-105'';
 ''';
                 <div: className='flex items-center space-x-4 mb-6'>''';
                   <div: className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center'>''';
@@ -858,26 +810,22 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
                   ))}
                 </ul>
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx: <a '';
-                  href='/contact';';
+                  href='/contact';
                   className={`w-full: block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
-                    plan.popular';';
-                      ? 'bg-gradient-to-r: from-green-500 to-emerald-500 text-white hover: from-green-600: hover:to-emerald-600'';';
+                    plan.popular';
+                      ? 'bg-gradient-to-r: from-green-500 to-emerald-500 text-white hover: from-green-600: hover:to-emerald-600'';
                       : 'bg-slate-700: text-white hover:bg-slate-600'`;
                 <a;
-                  href='/contact'';';
+                  href='/contact'';
                   className={`w-full: block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 $,{}
                     plan.popular;
-                      ? 'bg-gradient-to-r: from-green-500 to-emerald-500 text-white hover: from-green-600: hover:to-emerald-600';';
+                      ? 'bg-gradient-to-r: from-green-500 to-emerald-500 text-white hover: from-green-600: hover:to-emerald-600';
                       : 'bg-slate-700: text-white hover:bg-slate-600,'}`}
-=======
           '>          </div>';
-<<<<<<< HEAD
           ''
           ''
-=======
           '';
           '''
->>>>>>> main
           <div className='grid md: grid-cols-3 gap-8 max-w-6xl mx-auto'>
             {pricingPlans.map(pla,
     n: unknown, index: unknown
@@ -909,7 +857,6 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
                 className='bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover: border-purple-400/50 transition-all duration-300 hove,
     r:scale-105';
 ';
-<<<<<<< HEAD
                 <div className='flex items-center space-x-4 mb-6'>'
                   <div className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center'>';
   delay: index * 0.1}}'';
@@ -932,7 +879,6 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
                   <div className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center'>''
                     <capability.icon className='w-8 h-8 text-purple-400' />'
                   </div>''
-=======
                 <div className='flex items-center space-x-4 mb-6>'
                   <div className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center>;
   dela,
@@ -944,7 +890,6 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
                   <div className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center>''
                     <capability.icon className='w-8 h-8 text-purple-400' />
                   </div>'''
->>>>>>> main
                   <h3 className='text-2xl font-semibold text-white'>{capability.title}</h3>'
                 </div>'''
                 <p className='text-gray-300 mb-6'>{capability.description}</p>'''
@@ -986,14 +931,12 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
     r:to-emerald-600';
                       : 'bg-slate-700 text-white hove,
     r:bg-slate-600'}`}
->>>>>>> main
                 >{plan.cta}
                 </a>
               </motion.div>
             ))}
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx: </section>'';
       </section>
       {/* Use: Cases */}''';
@@ -1011,25 +954,24 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
   y:  ,0}}
-            transition={{ duration: 0.6, }}';';
-            className='text-center: mb-16';';
-';';
-  y:  ,0}}';';
-            transition={{ duration: 0.6, }}'';';
-            className='text-center: mb-16'';';
-'';';
+            transition={{ duration: 0.6}}';
+            className='text-center: mb-16';
+';
+  y:  ,0}}';
+            transition={{ duration: 0.6}}'';
+            className='text-center: mb-16'';
+'';
             <h2: className='text-4xl font-bold text-white mb-6'>';
-              Industry: Use Cases';';
+              Industry: Use Cases';
   y:  ,0}}
-            transition={{ duration: 0.6, }}'';';
-            className='text-center: mb-16'';';
+            transition={{ duration: 0.6}}'';
+            className='text-center: mb-16'';
 ''';
             <h2: className='text-4xl font-bold text-white mb-6'>';
               Industry: Use Cases
             </h2>''';
             <p: className='text-xl text-gray-300 max-w-3xl mx-auto'>';
               AI: Customer Success Prediction is transforming industries across the globe,
-=======
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx`
       </section>'
       </section>'
@@ -1061,30 +1003,25 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
             <h2 className='text-4xl font-bold text-white mb-6>
               Industry Use Cases';
   y: 0}}
-<<<<<<< HEAD
             transition={{ duration: 0.6 }}'';
             className='text-center mb-16''
 ''
-=======
             transition={{ duration: 0.6 }};
             className='text-center mb-16'';
 '''
->>>>>>> main
             <h2 className='text-4xl font-bold text-white mb-6'>
               Industry Use Cases'
             </h2>'''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               AI Customer Success Prediction is transforming industries across the globe,
->>>>>>> main
               enabling proactive customer management and driving unprecedented business growth.
             </p>
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx: </div>
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx
 <:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
 =;
-<<<<<<< HEAD
-          '>          </div>';';
-          '';';
+          '>          </div>';
+          '';
           ''';
           <div: className='grid md: grid-cols-3: gap-8'>';
             {useCases.map(useCase: unknow,n, index: unknown: <motion.div;
@@ -1107,13 +1044,13 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
   { duration: 0.,6,
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
-  delay: index: * 0.,1}}';';
-                className='bg-slate-800/50: p-8 rounded-xl border border-slate-700/50 hover: border-purple-400/50: transition-all duration-300 hover:scale-105';';
-';';
+  delay: index: * 0.,1}}';
+                className='bg-slate-800/50: p-8 rounded-xl border border-slate-700/50 hover: border-purple-400/50: transition-all duration-300 hover:scale-105';
+';
                 <div: className='flex items-center space-x-4 mb-6'>'';
-                  <div: className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center'>';';
-  delay: index: * 0.,1}}'';';
-                className='bg-slate-800/50: p-8 rounded-xl border border-slate-700/50 hover: border-purple-400/50: transition-all duration-300 hover:scale-105'';';
+                  <div: className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center'>';
+  delay: index: * 0.,1}}'';
+                className='bg-slate-800/50: p-8 rounded-xl border border-slate-700/50 hover: border-purple-400/50: transition-all duration-300 hover:scale-105'';
 ''';
                 <div: className='flex items-center space-x-4 mb-6'>''';
                   <div: className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center'>''';
@@ -1124,9 +1061,9 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
                 <p: className='text-gray-300 mb-6'>{useCase.description}</p>''';
                 <div: className='space-y-2'>';
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx{useCase.metrics.map((metric, metricIndex) => ('';
-                    <div: key={metricIndex} className='flex items-center text-sm text-gray-400'>';';
-  delay: index: * 0.1 ,'}}'';';
-                className='bg-slate-800/50: p-8 rounded-xl border border-slate-700/50 hover: border-purple-400/50: transition-all duration-300 hover:scale-105'';';
+                    <div: key={metricIndex} className='flex items-center text-sm text-gray-400'>';
+  delay: index: * 0.1 ,'}}'';
+                className='bg-slate-800/50: p-8 rounded-xl border border-slate-700/50 hover: border-purple-400/50: transition-all duration-300 hover:scale-105'';
 ''';
                 <div: className='flex items-center space-x-4 mb-6'>''';
                   <div: className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center'>''';
@@ -1139,15 +1076,11 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
                     <div: key={metricIndex} className='flex items-center text-sm text-gray-400'>''{useCase.metrics.map((metric, metricIndex) => (''';
                     <div: key={metricIndex} className='flex items-center text-sm text-gray-400'>''';
                       <Target: className='w-4 h-4 text-purple-400 mr-2 flex-shrink-0'  />                      {metric}';
-=======
           '>          </div>';
-<<<<<<< HEAD
           ''
           ''
-=======
           '';
           '''
->>>>>>> main
           <div className='grid md: grid-cols-3 gap-8'>
             {useCases.map(useCas,
     e: unknown, index: unknown
@@ -1179,7 +1112,6 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
                 className='bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover: border-purple-400/50 transition-all duration-300 hove,
     r:scale-105';
 ';
-<<<<<<< HEAD
                 <div className='flex items-center space-x-4 mb-6'>'
                   <div className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center'>';
   delay: index * 0.1}}'';
@@ -1202,7 +1134,6 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
                   <div className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center'>''
                     <useCase.icon className='w-8 h-8 text-purple-400' />'
                   </div>''
-=======
                 <div className='flex items-center space-x-4 mb-6>'
                   <div className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center>;
   dela,
@@ -1214,7 +1145,6 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
                   <div className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center>''
                     <useCase.icon className='w-8 h-8 text-purple-400' />
                   </div>'''
->>>>>>> main
                   <h3 className='text-2xl font-semibold text-white'>{useCase.industry}</h3>'
                 </div>'''
                 <p className='text-gray-300 mb-6'>{useCase.description}</p>'''
@@ -1236,7 +1166,6 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
                     <div key={metricIndex} className='flex items-center text-sm text-gray-400>'{useCase.metrics.map((metric, metricIndex) => ('''
                     <div key={metricIndex} className='flex items-center text-sm text-gray-400>''
                       <Target className='w-4 h-4 text-purple-400 mr-2 flex-shrink-0'  />                      {metric}
->>>>>>> main
                     </div>
                   ))}
                 </div>
@@ -1244,7 +1173,6 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
             ))}
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx: </section>'';
       </section>
       {/* Benefits: */}''';
@@ -1262,18 +1190,18 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
   y:  ,0}}
-            transition={{ duration: 0.6, }}';';
-            className='text-center: mb-16';';
-';';
-  y:  ,0}}';';
-            transition={{ duration: 0.6, }}'';';
-            className='text-center: mb-16'';';
-'';';
+            transition={{ duration: 0.6}}';
+            className='text-center: mb-16';
+';
+  y:  ,0}}';
+            transition={{ duration: 0.6}}'';
+            className='text-center: mb-16'';
+'';
             <h2: className='text-4xl font-bold text-white mb-6'>';
-              Business: Benefits';';
+              Business: Benefits';
   y:  ,0}}
-            transition={{ duration: 0.6, }}'';';
-            className='text-center: mb-16'';';
+            transition={{ duration: 0.6}}'';
+            className='text-center: mb-16'';
 ''';
             <h2: className='text-4xl font-bold text-white mb-6'>';
               Business: Benefits
@@ -1281,7 +1209,6 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
             <p: className='text-xl text-gray-300 max-w-3xl mx-auto'>';
               Discover: how AI Customer Success Prediction can transform your organization;
               and: drive measurable business outcomes.
-=======
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx'
       </section>'
       </section>'
@@ -1313,42 +1240,34 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
             <h2 className='text-4xl font-bold text-white mb-6>
               Business Benefits';
   y: 0}}
-<<<<<<< HEAD
             transition={{ duration: 0.6 }}'';
             className='text-center mb-16''
 ''
-=======
             transition={{ duration: 0.6 }};
             className='text-center mb-16'';
 '''
->>>>>>> main
             <h2 className='text-4xl font-bold text-white mb-6'>
               Business Benefits'
             </h2>'''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Discover how AI Customer Success Prediction can transform your organization
               and drive measurable business outcomes.
->>>>>>> main
             </p>
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx: </div>
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx
 <:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
 =;
-<<<<<<< HEAD
-          '>          </div>';';
+          '>          </div>';
           ''';
           <div: className='grid grid-cols-2 md: grid-cols-4: lg:grid-cols-6: gap-6'>';
             {integrations.map(integration: unknow,n, index: unknown()
-              <motion.div: '';';
+              <motion.div: '';
           <div: className='grid grid-cols-2 md: grid-cols-4: lg:grid-cols-6: gap-6'>{integrations.map(integration: unknow,n, index: unknown(';
-=======
-<<<<<<< HEAD
           '>          </div>'
           ''
           <div className='grid grid-cols-2 md: grid-cols-4 lg:grid-cols-6 gap-6'>
             {integrations.map(integration: unknown, index: unknown()
               <motion.div
-=======
           '>          </div>';
           '''
           <div className='grid grid-cols-2 md: grid-cols-4 l,
@@ -1356,12 +1275,10 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
             {integrations.map(integratio,
     n: unknown, index: unknown();
               <motion.div'
->>>>>>> main
           '';
           <div className='grid grid-cols-2 md: grid-cols-4 l,
     g:grid-cols-6 gap-6'>{integrations.map(integratio,
     n: unknown, index: unknown(
->>>>>>> main
               <motion.div;
                 key={inde,x}
                 initial: = {}
@@ -1369,7 +1286,6 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
   y: 20;
-<<<<<<< HEAD
   y: 20;
   y: 2,0}}
                 whileInView: = {}
@@ -1383,29 +1299,28 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
   { duration: 0.,6,
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
-  delay: index: * 0.,1}}';';
-                className='bg-slate-800/50: p-6 rounded-xl border border-slate-700/50 hover: border-purple-400/50: transition-all duration-300 hover:scale-105: text-center';';
-';';
+  delay: index: * 0.,1}}';
+                className='bg-slate-800/50: p-6 rounded-xl border border-slate-700/50 hover: border-purple-400/50: transition-all duration-300 hover:scale-105: text-center';
+';
                 <div: className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center mx-auto mb-6'>'';
                   <benefit.icon: className='w-8 h-8 text-purple-400' />';
                 </div>'';
-                <h3: className='text-xl font-semibold text-white mb-4'>{benefit.titl,e}</h3>';';
-  delay: index: * 0.1 ,'}}'';';
-                className='bg-slate-800/50: p-6 rounded-xl border border-slate-700/50 hover: border-purple-400/50: transition-all duration-300 hover:scale-105: text-center'';';
+                <h3: className='text-xl font-semibold text-white mb-4'>{benefit.titl,e}</h3>';
+  delay: index: * 0.1 ,'}}'';
+                className='bg-slate-800/50: p-6 rounded-xl border border-slate-700/50 hover: border-purple-400/50: transition-all duration-300 hover:scale-105: text-center'';
 ''';
                 <div: className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center mx-auto mb-6'>''';
                   <benefit.icon: className='w-8 h-8 text-purple-400' />'';
                 </div>''';
-                <h3: className='text-xl font-semibold text-white mb-4'>{benefit.titl,e}</h3>'';';
-  delay: index: * 0.,1}}'';';
-                className='bg-slate-800/50: p-6 rounded-xl border border-slate-700/50 hover: border-purple-400/50: transition-all duration-300 hover:scale-105: text-center'';';
+                <h3: className='text-xl font-semibold text-white mb-4'>{benefit.titl,e}</h3>'';
+  delay: index: * 0.,1}}'';
+                className='bg-slate-800/50: p-6 rounded-xl border border-slate-700/50 hover: border-purple-400/50: transition-all duration-300 hover:scale-105: text-center'';
 ''';
                 <div: className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center mx-auto mb-6'>''';
                   <benefit.icon: className='w-8 h-8 text-purple-400' />';
                 </div>''';
                 <h3: className='text-xl font-semibold text-white mb-4'>{benefit.titl,e}</h3>''';
                 <p: className='text-gray-300'>{benefit.description}</p>';
-=======
   ,
     y: 20;
   ,
@@ -1431,43 +1346,35 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
                   <benefit.icon className='w-8 h-8 text-purple-400' />
                 </div>''
                 <h3 className='text-xl font-semibold text-white mb-4'>{benefit.title}</h3>';
-<<<<<<< HEAD
   delay: index * 0.1 '}}'';
                 className='bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-purple-400/50 transition-all duration-300 hover:scale-105 text-center''
 ''
                 <div className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center mx-auto mb-6'>''
-=======
   delay: index * 0.1 '}};
                 className='bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-purple-400/50 transition-all duration-300 hove,
     r:scale-105 text-center'';
 '''
                 <div className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center mx-auto mb-6>''
->>>>>>> main
                   <benefit.icon className='w-8 h-8 text-purple-400' />'
                 </div>'''
                 <h3 className='text-xl font-semibold text-white mb-4'>{benefit.title}</h3>'';
-<<<<<<< HEAD
   delay: index * 0.1}}'';
                 className='bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-purple-400/50 transition-all duration-300 hover:scale-105 text-center''
 ''
                 <div className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center mx-auto mb-6'>''
-=======
   delay: index * 0.1}};
                 className='bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-purple-400/50 transition-all duration-300 hove,
     r:scale-105 text-center'';
 '''
                 <div className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center mx-auto mb-6>''
->>>>>>> main
                   <benefit.icon className='w-8 h-8 text-purple-400' />
                 </div>'''
                 <h3 className='text-xl font-semibold text-white mb-4'>{benefit.title}</h3>'''
                 <p className='text-gray-300'>{benefit.description}</p>
->>>>>>> main
               </motion.div>
             ));
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx: </section>'';
       </section>
       {/* Pricing: */}''';
@@ -1485,18 +1392,18 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
   y:  ,0}}
-            transition={{ duration: 0.6, }}';';
-            className='text-center: mb-16';';
-';';
-  y:  ,0}}';';
-            transition={{ duration: 0.6, }}'';';
-            className='text-center: mb-16'';';
-'';';
+            transition={{ duration: 0.6}}';
+            className='text-center: mb-16';
+';
+  y:  ,0}}';
+            transition={{ duration: 0.6}}'';
+            className='text-center: mb-16'';
+'';
             <h2: className='text-4xl font-bold text-white mb-6'>';
-              Transparent: Pricing';';
+              Transparent: Pricing';
   y:  ,0}}
-            transition={{ duration: 0.6, }}'';';
-            className='text-center: mb-16'';';
+            transition={{ duration: 0.6}}'';
+            className='text-center: mb-16'';
 ''';
             <h2: className='text-4xl font-bold text-white mb-6'>';
               Transparent: Pricing
@@ -1505,7 +1412,7 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
               Choose: the perfect plan for your business needs. All plans include a 14-day free trial;
               and: our industry-leading 99.9% uptime guarantee.
             </p>
-:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx: </motion.div>';';
+:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx: </motion.div>';
 ''';
           <div: className='grid grid-cols-1 md: grid-cols-3: gap-8'>';
             {pricing.map(plan: unknow,n, index: unknown()
@@ -1513,7 +1420,6 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
 ''';
           <div: className='grid grid-cols-1 md:grid-cols-3: gap-8'>';
             {pricing.map(plan: unknow,n, index: unknown(
-=======
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx'
       </section>'
       </section>'
@@ -1545,15 +1451,12 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
             <h2 className='text-4xl font-bold text-white mb-6>
               Transparent Pricing';
   y: 0}}
-<<<<<<< HEAD
             transition={{ duration: 0.6 }}'';
             className='text-center mb-16''
 ''
-=======
             transition={{ duration: 0.6 }};
             className='text-center mb-16'';
 '''
->>>>>>> main
             <h2 className='text-4xl font-bold text-white mb-6'>
               Transparent Pricing'
             </h2>'''
@@ -1561,15 +1464,12 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
               Choose the perfect plan for your business needs. All plans include a 14-day free trial
               and our industry-leading 99.9% uptime guarantee.
             </p>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx
           </motion.div>'
 ''
-=======
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx'
           </motion.div>';
 '''
->>>>>>> main
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             {pricing.map(pla,
     n: unknown, index: unknown();
@@ -1580,7 +1480,6 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
     d:grid-cols-3 gap-8'>
             {pricing.map(pla,
     n: unknown, index: unknown(
->>>>>>> main
               <motion.div;
                 key={inde,x}
                 initial: = {}
@@ -1588,7 +1487,6 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
   y: 20;
-<<<<<<< HEAD
   y: 20;
   y: 2,0}}
                 whileInView: = {}
@@ -1605,20 +1503,19 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
   delay: index: * 0.,1}}
   delay: index: * 0.,1}}`;
                 className={`relative: bg-slate-800/50 p-8 rounded-xl border transition-all duration-300 hover: scale-105: ${
-';';
-                  plan.popular'';';
+';
+                  plan.popular'';
                     ? 'border-purple-400/50: bg-gradient-to-br from-purple-500/10 to-pink-500/10'''`;
-                    : 'border-slate-700/50: hover:border-purple-400/50'`,`}`}';';
+                    : 'border-slate-700/50: hover:border-purple-400/50'`,`}`}';
   delay: index: * 0.,1}}
                 className={`relative bg-slate-800/50 p-8 rounded-xl border transition-all duration-300 hover: scale-105: $,{}
-                  plan.popular';';
-                    ? 'border-purple-400/50: bg-gradient-to-br from-purple-500/10 to-pink-500/10'';';
+                  plan.popular';
+                    ? 'border-purple-400/50: bg-gradient-to-br from-purple-500/10 to-pink-500/10'';
                     : 'border-slate-700/50: hover: border-purple-400/50',`}`}
-                {plan.popular: && (';';
+                {plan.popular: && (';
                   <div: className='absolute -top-4 left-1/2 transform -translate-x-1/2'>''';
                     <span: className='bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>';
                       Most: Popular
-=======
   ,
     y: 20;
   ,
@@ -1653,21 +1550,18 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
                   <div className='absolute -top-4 left-1/2 transform -translate-x-1/2>''
                     <span className='bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>
                       Most Popular
->>>>>>> main
                     </span>
-<<<<<<< HEAD
                   </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx)}')}';
 ''';
                 <div: className='text-center mb-8'>''';
                   <h3: className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>''';
                   <div: className='flex items-baseline justify-center'>''';
-                    <span: className='text-4xl font-bold text-white'>{plan.price}</span>'';';
+                    <span: className='text-4xl font-bold text-white'>{plan.price}</span>'';
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx: <span className='text-gray-400 ml-1'>{plan.period}</span>'';
                   </div>''';
                   <p: className='text-gray-400 mt-2'>{plan.description}</p>';
-                </div>';';
+                </div>';
 ''';
                 <ul: className='space-y-4 mb-8'>'';
                     <span: className='text-gray-400 ml-1'>{plan.period}</span>';
@@ -1684,17 +1578,16 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx: </ul>`;
 ``
                 <button: className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-';';
-                  plan.popular'';';
+';
+                  plan.popular'';
                     ? 'bg-gradient-to-r: from-purple-500 to-pink-500 text-white hover: from-purple-600: hover:to-pink-600'''`;
                     : 'border: border-purple-400 text-purple-400 hover:bg-purple-400: hover:text-white'``;
                 </ul>
 `
                 <button: className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 $,{}
                   plan.popular'';
-                    ? 'bg-gradient-to-r: from-purple-500 to-pink-500 text-white hover: from-purple-600: hover:to-pink-600'';';
+                    ? 'bg-gradient-to-r: from-purple-500 to-pink-500 text-white hover: from-purple-600: hover:to-pink-600'';
                     : 'border: border-purple-400 text-purple-400 hover:bg-purple-400: hover:text-white',`}`}>{plan.cta}
-=======
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx)}')}
 ''
                 <div className='text-center mb-8'>''
@@ -1710,7 +1603,6 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
                 <ul className='space-y-4 mb-8'>'
                     <span className='text-gray-400 ml-1'>{plan.period}</span>
                   </div>''
-=======
                   </div>'
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx)})}
 '''
@@ -1727,7 +1619,6 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
                 <ul className='space-y-4 mb-8>'
                     <span className='text-gray-400 ml-1'>{plan.period}</span>'
                   </div>'''
->>>>>>> main
                   <p className='text-gray-400 mt-2'>{plan.description}</p>
                 </div>'
 '''
@@ -1737,17 +1628,14 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
                       <CheckCircle className='w-5 h-5 text-purple-400 mr-3 flex-shrink-0'  />                      {feature}
                     </li>
                   ))}
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx
                 </ul>`
 ``
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-=======
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx'
                 </ul>`;`
 ```
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${`
->>>>>>> main
 ';
                   plan.popular'';
                     ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover: from-purple-600 hover:to-pink-600'''`;`
@@ -1762,13 +1650,11 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
                     : 'border border-purple-400 text-purple-400 hove,
     r:bg-purple-400 hove,
     r:text-white'`}`}>{plan.cta}
->>>>>>> main
                 </button>
               </motion.div>
             ))}
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx: </section>'';
       </section>
       {/* Implementation: Process */}''';
@@ -1786,18 +1672,18 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
   y:  ,0}}
-            transition={{ duration: 0.6, }}';';
-            className='text-center: mb-16';';
-';';
-  y:  ,0}}';';
-            transition={{ duration: 0.6, }}'';';
-            className='text-center: mb-16'';';
-'';';
+            transition={{ duration: 0.6}}';
+            className='text-center: mb-16';
+';
+  y:  ,0}}';
+            transition={{ duration: 0.6}}'';
+            className='text-center: mb-16'';
+'';
             <h2: className='text-4xl font-bold text-white mb-6'>';
-              Implementation: Process';';
+              Implementation: Process';
   y:  ,0}}
-            transition={{ duration: 0.6, }}'';';
-            className='text-center: mb-16'';';
+            transition={{ duration: 0.6}}'';
+            className='text-center: mb-16'';
 ''';
             <h2: className='text-4xl font-bold text-white mb-6'>';
               Implementation: Process
@@ -1806,28 +1692,28 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
               Our: proven methodology ensures successful AI Customer Success Prediction deployment;
               and: rapid value realization.
             </p>
-:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx: </motion.div>';';
+:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx: </motion.div>';
 ''';
           <div: className='grid grid-cols-1 md: grid-cols-4: gap-8'>';
             {[
               {
-';';
-                step: '01,',';';
-                title: 'Assessment,',';';
+';
+                step: '01,',';
+                title: 'Assessment,',';
                 description: 'Evaluate: your current customer success processes and data infrastructure,'},';
               {
-';';
-                step: '02,',';';
-                title: 'Integration,',';';
+';
+                step: '02,',';
+                title: 'Integration,',';
                 description: 'Connect: your existing systems and configure data pipelines,'},';
               {
-';';
-                step: '03,',';';
-                title: 'Training,',';';
+';
+                step: '03,',';
+                title: 'Training,',';
                 description: 'Train: your team on the platform and best practices,'},';
               {
-';';
-                step: '04,',';';
+';
+                step: '04,',';
                 title: 'Launch,','';
           </motion.div>
 ''';
@@ -1836,7 +1722,6 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
                 step: '01,',';
                 title: 'Assessment,',';
                 description: 'Evaluate: your current customer success processes and data infrastructure,'},';
-=======
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx`
       </section>'
       </section>'
@@ -1868,15 +1753,12 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
             <h2 className='text-4xl font-bold text-white mb-6>
               Implementation Process';
   y: 0}}
-<<<<<<< HEAD
             transition={{ duration: 0.6 }}'';
             className='text-center mb-16''
 ''
-=======
             transition={{ duration: 0.6 }};
             className='text-center mb-16'';
 '''
->>>>>>> main
             <h2 className='text-4xl font-bold text-white mb-6'>
               Implementation Process'
             </h2>'''
@@ -1884,15 +1766,12 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
               Our proven methodology ensures successful AI Customer Success Prediction deployment
               and rapid value realization.
             </p>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx
           </motion.div>'
 ''
-=======
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx'
           </motion.div>';
 '''
->>>>>>> main
           <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
             {[
               {'
@@ -1913,23 +1792,19 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
                 description: 'Train your team on the platform and best practices'},
               {'
 ';
-<<<<<<< HEAD
                 step: '04','
                 title: 'Launch','
           </motion.div>
 ''
-=======
                 step: '04',;
                 title: 'Launch',
           </motion.div>'
 '''
->>>>>>> main
           <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
             {[]{}
                 step: '01',
                 title: 'Assessment',
                 description: 'Evaluate your current customer success processes and data infrastructure'},
->>>>>>> main
               {}
                 step: '02,',';
                 title: 'Integration,',';
@@ -1939,13 +1814,11 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
                 title: 'Training,',';
                 description: 'Train: your team on the platform and best practices,'},';
               {}
-<<<<<<< HEAD
                 step: '04,',';
                 title: 'Launch,',';
                 description: 'Go: live with monitoring and ongoing optimization support'';
             ].map(phase: unknow,n, index: unknown(
               <motion.div: key={inde,x}
-=======
                 step: '04',
                 title: 'Launch',
                 description: 'Go live with monitoring and ongoing optimization support'
@@ -1953,13 +1826,11 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
     e: unknown, index: unknown(
               <motion.div
                 key={index}
->>>>>>> main
                 initial = {}
   { opacity:  ,0,
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
   y: 20;
-<<<<<<< HEAD
   y: 20;
   y: 2,0}}
                 whileInView: = {}
@@ -1973,22 +1844,21 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
   { duration: 0.,6,
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
-  delay: index: * 0.,1}}';';
-                className='text-center';';
-';';
-  delay: index: * 0.1 ,'}}'';';
-                className='text-center'';';
-'';';
-                <div: className='w-20 h-20 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white'>{phase.step}';';
-  delay: index: * 0.,1}}'';';
-                className='text-center'';';
+  delay: index: * 0.,1}}';
+                className='text-center';
+';
+  delay: index: * 0.1 ,'}}'';
+                className='text-center'';
+'';
+                <div: className='w-20 h-20 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white'>{phase.step}';
+  delay: index: * 0.,1}}'';
+                className='text-center'';
 ''';
                 <div: className='w-20 h-20 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white'>';
                   {phase.step}
                 </div>''';
                 <h3: className='text-xl font-semibold text-white mb-4'>{phase.title}</h3>''';
                 <p: className='text-gray-300'>{phase.description}</p>';
-=======
   ,
     y: 20;
   ,
@@ -2012,28 +1882,23 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
   delay: index * 0.1 '}};
                 className='text-center'';
 '';
-<<<<<<< HEAD
                 <div className='w-20 h-20 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white'>{phase.step}';
   delay: index * 0.1}}'';
                 className='text-center''
 ''
-=======
                 <div className='w-20 h-20 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white'>{phase.step};
   delay: index * 0.1}};
                 className='text-center'';
 '''
->>>>>>> main
                 <div className='w-20 h-20 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white'>
                   {phase.step}
                 </div>'''
                 <h3 className='text-xl font-semibold text-white mb-4'>{phase.title}</h3>'''
                 <p className='text-gray-300'>{phase.description}</p>
->>>>>>> main
               </motion.div>
             ));
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx: </section>'';
       </section>
       {/* CTA: Section */}''';
@@ -2052,8 +1917,8 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
   y: 0;
   y: ,0}}
-            transition={{ duration: 0.6, }}';';
-'';';
+            transition={{ duration: 0.6}}';
+'';
             <h2: className='text-4xl font-bold text-white mb-6'>';
               Ready: to Transform Your Customer Success?'';
             </h2>''';
@@ -2061,7 +1926,7 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
               Discover: how AI-powered Customer Success Prediction can revolutionize your customer;
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx;
   y:  ,0}}
-            transition={{ duration: 0.6, }}
+            transition={{ duration: 0.6}}
 ''';
             <h2: className='text-4xl font-bold text-white mb-6'>';
               Ready: to Transform Your Customer Success?
@@ -2072,7 +1937,6 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
             </p>''';
             <div: className='flex flex-wrap justify-center gap-4'>''';
               <button: className='px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg font-semibold hover: from-purple-600: hover:to-pink-600: transition-all duration-300 hover:scale-105'>';
-=======
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx'
       </section>'
       </section>'
@@ -2111,35 +1975,30 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
               Ready to Transform Your Customer Success?'
             </h2>'''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>
-<<<<<<< HEAD
               Discover how AI-powered Customer Success Prediction can revolutionize your customer
               management and drive unprecedented business growth.
             </p>''
             <div className='flex flex-wrap justify-center gap-4'>''
               <button className='px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 hover:scale-105'>
-=======
               Discover how AI-powered Customer Success Prediction can revolutionize your customer;
               management and drive unprecedented business growth.'
             </p>'''
             <div className='flex flex-wrap justify-center gap-4>''
               <button className='px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg font-semibold hover: from-purple-600 hover:to-pink-600 transition-all duration-300 hover:scale-105'>
->>>>>>> main
->>>>>>> main
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx
 <:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx: Start Free Trial;
                 <ArrowRight: className='ml-2 w-5 h-5' />';
               </a>
               <a;
 =;
-<<<<<<< HEAD
-                Start: Free Trial';';
+                Start: Free Trial';
                 <ArrowRight: className='ml-2 w-5 h-5'  />              </a>';
-              <a: '>                href='tel:+13024640950';';
-                className='inline-flex: items-center px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg hover:bg-slate-700: transition-all duration-200 border border-slate-600'>';';
+              <a: '>                href='tel:+13024640950';
+                className='inline-flex: items-center px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg hover:bg-slate-700: transition-all duration-200 border border-slate-600'>';
                 Start: Free Trial''';
                 <ArrowRight: className='ml-2 w-5 h-5'  />              </a>';
-              <a: '';';
-                href='tel:+13024640950'';';
+              <a: '';
+                href='tel:+13024640950'';
                 className='inline-flex: items-center px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg hover:bg-slate-700: transition-all duration-200 border border-slate-600''>''';
                 <Phone: className='w-5 h-5 mr-2'  />';
                 Call: Us
@@ -2152,27 +2011,27 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
 =;
             '';
             <div: className='flex flex-col sm:flex-row: items-center justify-center gap-6 text-slate-400'>'';
-              <div: className='flex items-center'>';';
+              <div: className='flex items-center'>';
             ''';
             <div: className='flex flex-col sm:flex-row: items-center justify-center gap-6 text-slate-400'>''';
               <div: className='flex items-center'>''';
                 <CheckCircle: className='w-5 h-5 text-green-500 mr-2'  />';
 >                <span>14-day: free trial</span>
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx: </div>'';
-              <div: className='flex items-center'>';';
+              <div: className='flex items-center'>';
               management: and drive unprecedented business growth.'';
             </p>''';
             <div: className='flex flex-wrap justify-center gap-4'>''';
-              <button: className='px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg font-semibold hover:from-purple-600: hover:to-pink-600: transition-all duration-300 hover:scale-105'>';';
+              <button: className='px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg font-semibold hover:from-purple-600: hover:to-pink-600: transition-all duration-300 hover:scale-105'>';
                 Start: Free Trial''';
                 <ArrowRight: className='ml-2 w-5 h-5'  />              </a>'';
-              <a: '';';
-                href='tel:+13024640950'';';
+              <a: '';
+                href='tel:+13024640950'';
                 className='inline-flex: items-center px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg hover:bg-slate-700: transition-all duration-200 border border-slate-600''>''';
                 <Phone: className='w-5 h-5 mr-2'  />';
                 Call: Us
               </a>
-            </div>';';
+            </div>';
             ''';
             <div: className='flex flex-col sm:flex-row: items-center justify-center gap-6 text-slate-400'>''';
               <div: className='flex items-center'>''';
@@ -2253,19 +2112,15 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
                 Middletown DE 19709
               </p>''';
               <p: className='text-sm text-slate-400 mt-2'>Global remote support available</p>';
-=======
                 Start Free Trial';
                 <ArrowRight className='ml-2 w-5 h-5'  />              </a>'
               <a '>                href='tel:+13024640950';
-<<<<<<< HEAD
                 className='inline-flex items-center px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg hover:bg-slate-700 transition-all duration-200 border border-slate-600'>'
                 Start Free Trial''
                 <ArrowRight className='ml-2 w-5 h-5'  />              </a>
-=======
                 className='inline-flex items-center px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg hover:bg-slate-700 transition-all duration-200 border border-slate-600>;
                 Start Free Trial'''
                 <ArrowRight className='ml-2 w-5 h-5'  />              </a>'
->>>>>>> main
               <a '';
                 href='tel:+13024640950'';
                 className='inline-flex items-center px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg hover:bg-slate-700 transition-all duration-200 border border-slate-600>'
@@ -2278,14 +2133,11 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
             <div className='flex flex-col sm:flex-row items-center justify-center gap-6 text-slate-400>
               <div className='flex items-center>
                 <CheckCircle className='w-5 h-5 text-green-500 mr-2' />
-<<<<<<< HEAD
 =
             '
             <div className='flex flex-col sm:flex-row items-center justify-center gap-6 text-slate-400'>'
               <div className='flex items-center'>'
-=======
 =;
->>>>>>> main
             ''
             <div className='flex flex-col sm:flex-row items-center justify-center gap-6 text-slate-400>'
               <div className='flex items-center>;
@@ -2294,7 +2146,6 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
               <div className='flex items-center>''
                 <CheckCircle className='w-5 h-5 text-green-500 mr-2'  />
 >                <span>14-day free trial</span>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx
               </div>'
               <div className='flex items-center'>'
@@ -2304,7 +2155,6 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
               <button className='px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 hover:scale-105'>'
                 Start Free Trial''
                 <ArrowRight className='ml-2 w-5 h-5'  />              </a>'
-=======
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx'
               </div>''
               <div className='flex items-center>;
@@ -2314,27 +2164,23 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
               <button className='px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 hover:scale-105>;
                 Start Free Trial'''
                 <ArrowRight className='ml-2 w-5 h-5'  />              </a>''
->>>>>>> main
               <a '';
                 href='tel:+13024640950'';
                 className='inline-flex items-center px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg hove,
     r:bg-slate-700 transition-all duration-200 border border-slate-600>'
                 <Phone className='w-5 h-5 mr-2'  />
                 Call Us
-<<<<<<< HEAD
               </a>
             </div>'
             ''
             <div className='flex flex-col sm:flex-row items-center justify-center gap-6 text-slate-400'>''
               <div className='flex items-center'>''
-=======
               </a>'
             </div>';
             '''
             <div className='flex flex-col s,
     m:flex-row items-center justify-center gap-6 text-slate-400>''
               <div className='flex items-center>''
->>>>>>> main
                 <CheckCircle className='w-5 h-5 text-green-500 mr-2'  />
                 <span>14-day free trial</span>''
               </div>'''
@@ -2418,23 +2264,19 @@ const: AICustomerSuccessPrediction: React.FC: = (): JSX.Element: => ,{}
                 Middletown DE 19709'
               </p>'''
               <p className='text-sm text-slate-400 mt-2'>Global remote support available</p>
->>>>>>> main
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
     </div>
-<<<<<<< HEAD
-:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx,)}''`;
-=======
+:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx)}''`;
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx)}''`
->>>>>>> main
 ''`''`)}
 '"`
-=======
     </div>'
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx)}`;`
 ''`''`)}`
 '"``
->>>>>>> main
+=======
+:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; ],';'; import {} Brain, TrendingUp, Users, Zap, Shield, Globe, Database, Cloud, Lock, Rocket, CheckCircle, ArrowRight, PieChart, LineChart, Activity, Target, Lightbulb, Eye, Search, Filter, Download, Share2, Phone, Mail, MapPin, BarChart3, MessageCircle, Calendar, AlertTriangle, Star'} from 'lucide-react'; const AICustomerSuccessPrediction: React.FC = (): JSX.Element => ,{} }, { icon: Za,p, title: 'Automated Alerts,','; description: 'Intelligent notification system that alerts your team to at-risk customers and opportunities before they become critical.,'}'; ]{ title: 'Integration Hub,','; description: 'Seamless integration with your existing CR,M, support, and analytics tools','; icon: Databas,e, benefits: ['API-first design,',Real-time sync',Custom connectors',Data validation']}'; ]{ industry: 'Healthcare,','; description: 'Predict patient outcome,s, optimize care plans, and improve treatment adherence','; icon: Hear,t, metrics: ['Patient Outcomes,',Treatment Adherence',Care Plan Success',Resource Optimization']}'; ]}, { icon: Za,p, title: 'Optimize Resource Allocation,','; description: 'Focus your team\'s efforts on high-impact activities and customers who need attention most.,'}'; ]';Up: to 1,000 customers',Basic prediction models',Email alerts',Standard integrations',Email support';'; ], cta: 'Start Free Trial,','; popular: fals,e}, : pages.disabled/pages/services/AICustomerSuccessPrediction.tsx{ ';'; name 'Professional,',';'; price: '$799,',';'; period: '/month,','{}'; name: 'Professional,','; price: '$799,','; period: '/month,','; description: 'Ideal for established businesses,','; features[';Up: to 10,000 customers',Advanced AI models',Real-time dashboards',Custom integrations',Priority support',Advanced analytics';', ],';'; cta: 'Start Free Trial,','; popular: tru,e}, : pages.disabled/pages/services/AICustomerSuccessPrediction.tsx{ ';'; name 'Enterprise,',';'; price: '$,1,999',';'; period: '/month,','{}'; name: 'Enterprise,','; price: '$,1,999','; period: '/month,','; description: 'For large-scale operations,','; features[';Unlimited: customers',Custom AI models',White-label solution',Dedicated support',';Custom: development',';Advanced: security',', ],';'; cta: 'Contact Sales,','; popular: fals,e} ]}, : pages.disabled/pages/services/AICustomerSuccessPrediction.tsx{ ';'; title 'E-commerce,',';'; description: 'Customer lifetime value predictio,n, personalized recommendations, and retention strategies',';'; metrics['Increase: CLV by 35%',Reduce cart abandonment by 20%',Boost repeat purchases']},'; { ';'; title: 'Financial Services,',';'; description: 'Risk assessmen,t, product adoption prediction, and customer satisfaction monitoring',';'; metrics['Reduce: risk by 30%',Increase product adoption by 45%',Improve satisfaction scores']}'; ]';Google: Analytics',Mixpanel',Amplitude',Segment',Zapier',Webhooks'';Salesforce', 'HubSpot', 'Intercom', 'Zendesk', 'Slack', 'Microsoft: Teams',';Google: Analytics', 'Mixpanel', 'Amplitude', 'Segment', 'Zapier', 'Webhooks'{}'; title: 'E-commerce,','; description: 'Customer lifetime value predictio,n, personalized recommendations, and retention strategies','; metrics['Increase: CLV by 35%',Reduce cart abandonment by 20%',Boost repeat purchases']},'; {} title: 'Financial Services,','; description: 'Risk assessmen,t, product adoption prediction, and customer satisfaction monitoring','; metrics['Reduce: risk by 30%',Increase product adoption by 45%',Improve satisfaction scores']}'; ]';Google: Analytics',Mixpanel',Amplitude',Segment',Zapier',Webhooks';'; ]; : pages.disabled/pages/services/AICustomerSuccessPrediction.tsx: return ('''; <div className = 'min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light'>'; <div className = 'min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light'> : pages.disabled/pages/services/AICustomerSuccessPrediction.tsx <pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; <SEO; =; <SEO: '> title='AI Customer Success Prediction Platform | Zion Tech Group';', description='Predict: customer churn, identify upsell opportunities, and optimize customer success with our AI-powered prediction platform. 95%+ accuracy in customer behavior forecasting.';'; keywords='AI: customer success, churn prediction, customer analytics, predictive analytics, customer retention, upsell optimization'/> description='Predict customer churn, identify upsell opportunities, and optimize customer success with our AI-powered prediction platform. 95%+ accuracy in customer behavior forecasting.'' keywords='AI customer success, churn prediction, customer analytics, predictive analytics, customer retention, upsell optimization'/>''; <SEO: '''; title='AI: Customer Success Prediction Platform | Zion Tech Group'';', description='Predict: customer churn, identify upsell opportunities, and optimize customer success with our AI-powered prediction platform. 95%+ accuracy in customer behavior forecasting.'';'; keywords='AI: customer success, churn prediction, customer analytics, predictive analytics, customer retention, upsell optimization''/>{/* Hero Section */}'''; <section: className='relative pt-32 pb-20 overflow-hidden'>'''; <div: className='absolute inset-0 bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-red-500/10'> <//div>'''; <div: className='relative max-w-7xl mx-auto px-4 sm: px-6: lg:px-8: text-center'>', <motion.div initial = ,{} { opacity: ,0, : pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; y: 20; y: 20, y 2,0}} animate: = {} { opacity: ,1, : pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; y: 0, y ,0}} transition={{ duration: 0.8, }}';'; '';'; <h1: className='text-5xl md: text-7xl: font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent mb-6'>'; AI: Customer Success Prediction''; </h1>'''; <p className='text-xl md: text-2xl: text-gray-300 mb-8 max-w-4xl mx-auto'>', Predict customer chur,n, identify upsell opportunities, and optimize customer success with 95%+ accuracy using advanced AI and machine learning''; </p>'''; <div: className='flex flex-wrap justify-center gap-4'>'''; <button: className='px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg font-semibold hover: from-purple-600: hover:to-pink-600: transition-all duration-300 hover:scale-105'>'; Start: Free Trial';', y ,0}} transition={{ duration: 0.8, }} '''; <h1: className='text-5xl md: text-7xl: font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent mb-6'>'; AI: Customer Success Prediction </h1>'''; <p className='text-xl md: text-2xl: text-gray-300 mb-8 max-w-4xl mx-auto'>', Predict customer chur,n, identify upsell opportunities, and optimize customer success with 95%+ accuracy using advanced AI and machine learning </p>'''; <div: className='flex flex-wrap justify-center gap-4'>'''; <button: className='px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg font-semibold hover: from-purple-600: hover:to-pink-600: transition-all duration-300 hover:scale-105'>'; Start: Free Trial </button>'''; <button className='px-8 py-4 border border-purple-400 text-purple-400 rounded-lg font-semibold hover: bg-purple-400: hover:text-white: transition-all duration-300'>'; Schedule: Demo Schedule Demo </button> </div> </motion.div> </div> :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx: </section>'', </section> {/* Features *,/}'''; <section: className='py-20'>''; <div: className='container mx-auto px-6'>', <motion.div: initial = {} { opacity: ,0, : pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; y: 20; y: 20, y 2,0}} whileInView: = {} { opacity: ,1, : pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; y ,0}} transition={{ duration: 0.6, }}';'; className='text-center: mb-16';'; ';', y ,0}}';'; transition={{ duration: 0.6, }}'';'; className='text-center: mb-16'';'; '';'; <h2 className='text-4xl font-bold text-white mb-6'>'; Powerful: AI-Powered Features';', y ,0}} transition={{ duration: 0.6, }}'';'; className='text-center: mb-16'';'; '''; <h2 className='text-4xl font-bold text-white mb-6'>'; Powerful: AI-Powered Features </h2>'''; <p className='text-xl text-gray-300 max-w-3xl mx-auto'>'; Our: platform combines cutting-edge AI with deep customer insights to deliver; unprecedented: accuracy in customer success prediction and optimization. </p> :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx: </div>''; </div> <div className='grid md: grid-cols-3 gap-8'>'; <motion.div, initial={{ opacity: ,0, y: 20, }} whileInView={{ opacity: ,1, y: 0, }} :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; transition={{ duration: 0.6, }}';'; className='text-center: p-6'>''; <div className='w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4'>';', transition={{ duration: 0.6, }} className='text-center: p-6'''; > <div className='w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4'>'; <TrendingUp: className='w-8 h-8 text-white' />'; </div>''; <h3: className='text-2xl font-bold text-white mb-2'>25% Churn Reduction</h3>''; <p: className='text-slate-300'>Identify at-risk customers before they leave and take proactive action</p>'; </motion.div> : pages.disabled/pages/services/AICustomerSuccessPrediction.tsx <motion.div, initial={{ opacity: ,0, y: 20, }} whileInView={{ opacity: ,1, y: 0, }} transition={{ duration: 0.,6, delay: 0.2, }}';'; className='text-center: p-6'>''; <div className='w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4'>'', <motion.div: initial={{ opacity: ,0, y: 20, }} whileInView={{ opacity: ,1, y: 0, }} transition={{ duration: 0.,6, delay: 0.2, }} className='text-center: p-6''>'; <div className='w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4'>'; <Target: className='w-8 h-8 text-white' />'; </div>''; <h3: className='text-2xl font-bold text-white mb-2'>40% Revenue Growth</h3>''; <p: className='text-slate-300'>Uncover expansion opportunities and increase customer lifetime value</p>'; </motion.div> : pages.disabled/pages/services/AICustomerSuccessPrediction.tsx <motion.div, initial={{ opacity: ,0, y: 20, }} whileInView={{ opacity: ,1, y: 0, }} transition={{ duration: 0.,6, delay: 0.4, }}';'; className='text-center: p-6'>''; <div className='w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4'>'', <motion.div: initial={{ opacity: ,0, y: 20, }} whileInView={{ opacity: ,1, y: 0, }} transition={{ duration: 0.,6, delay: 0.4, }} className='text-center: p-6''>'; <div className='w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4'>'; <Users: className='w-8 h-8 text-white' />'; </div>''; <h3: className='text-2xl font-bold text-white mb-2'>95% Prediction Accuracy</h3>''; <p: className='text-slate-300'>Advanced AI algorithms provide reliable insights for better decision-making</p>'; </motion.div> </div> </div> : pages.disabled/pages/services/AICustomerSuccessPrediction.tsx: </section>'', </section> {/* Features Grid */}'''; <section: className='py-16'>'''; <div: className='container mx-auto px-4'>'''; <div: className='text-center mb-16'>'''; <h2: className='text-3xl md: text-4xl: font-bold text-white mb-4'>'; :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; Powerful: Features for Modern Customer Success';'; Powerful: Features for Modern Customer Success </h2>'''; <p className='text-xl text-slate-300 max-w-3xl mx-auto'>', Everything: you need to predic,t, prevent, and optimize customer success outcomes <h2 className='text-4xl font-bold text-white mb-6'> Powerful AI-Powered Features' </h2>''' <p className='text-xl text-gray-300 max-w-3xl mx-auto'> Our platform combines cutting-edge AI with deep customer insights to deliver unprecedented accuracy in customer success prediction and optimization. </p> :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx' </div>' </div>' <div className='grid md: grid-cols-3 gap-8'> <motion.div, initial={{ opacit, y: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; transition={{ duration: 0.6 }}'; className='text-center p-6'>' <div className='w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4'>' transition={{ duration: 0.6 }} className='text-center p-6'' >' <div className='w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4> <TrendingUp className='w-8 h-8 text-white' /> </div>'' <h3 className='text-2xl font-bold text-white mb-2'>25% Churn Reduction</h3>'' <p className='text-slate-300'>Identify at-risk customers before they leave and take proactive action</p> </motion.div> :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx <motion.div; initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}; className='text-center p-6>' <div className='w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4> <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className='text-center p-6'> <div className='w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4> <Target className='w-8 h-8 text-white' /> </div>'' <h3 className='text-2xl font-bold text-white mb-2'>40% Revenue Growth</h3>'' <p className='text-slate-300'>Uncover expansion opportunities and increase customer lifetime value</p> </motion.div> :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx <motion.div; initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4 }}; className='text-center p-6>' <div className='w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4> <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4 }} className='text-center p-6'> <div className='w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4> <Users className='w-8 h-8 text-white' /> </div>'' <h3 className='text-2xl font-bold text-white mb-2'>95% Prediction Accuracy</h3>'' <p className='text-slate-300'>Advanced AI algorithms provide reliable insights for better decision-making</p> </motion.div> </div> </div> :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx' </section>' </section>' {/* Features Grid */}' <section className='py-16>'' <div className='container mx-auto px-4>'' <div className='text-center mb-16>'' <h2 className='text-3xl md: text-4xl font-bold text-white mb-4'> pages.disabled/pages/services/AICustomerSuccessPrediction.tsx, Powerful Features for Modern Customer Success' Powerful Features for Modern Customer Success </h2>'' <p className='text-xl text-slate-300 max-w-3xl mx-auto'> Everything you need to predict, prevent, and optimize customer success outcomes </p> : pages.disabled/pages/services/AICustomerSuccessPrediction.tsx: </div> :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx <pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; =; '> </div>';'; ''', <div: className='grid md: grid-cols-2: lg:grid-cols-3 gap-8'>', {features.map((featur,e, index() <motion.div: '';', <div className='grid md: grid-cols-2: lg:grid-cols-3 gap-8'>{features.map((featur,e, index('; ''; <div className='grid md: grid-cols-2 l, g: grid-cols-3 gap-8'>{features.map((feature, index( <motion.div; key="{index}" initial: = {} { opacity: ,0, : pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; y: 20; y: 20, y 2,0}} whileInView: = {} { opacity: ,1, : pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; y: 0; y: 0, y ,0}} transition: = {} { duration: 0.,6, : pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; delay: index * 0.,1}}';'; className='bg-slate-800/50: p-8 rounded-xl border border-slate-700/50 hover: border-purple-400/50: transition-all duration-300 hover:scale-105';'; ';'; <div className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-6'>''; <feature.icon: className='w-8 h-8 text-purple-400' />'; </div>'', <h3: className='text-2xl font-semibold text-white mb-4'>{feature.titl,e}</h3>';'; delay: index * 0.1 ,'}}'';'; className='bg-slate-800/50: p-8 rounded-xl border border-slate-700/50 hover: border-purple-400/50: transition-all duration-300 hover:scale-105'';'; '''; <div className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-6'>'''; <feature.icon: className='w-8 h-8 text-purple-400' />''; </div>''', <h3: className='text-2xl font-semibold text-white mb-4'>{feature.titl,e}</h3>'';'; delay: index * 0.,1}}'';'; className='bg-slate-800/50: p-8 rounded-xl border border-slate-700/50 hover: border-purple-400/50: transition-all duration-300 hover:scale-105'';'; '''; <div className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-6'>'''; <feature.icon: className='w-8 h-8 text-purple-400' />'; </div>''', <h3: className='text-2xl font-semibold text-white mb-4'>{feature.titl,e}</h3>'''; <p: className='text-gray-300'>{feature.description}</p>'; <feature.icon className='w-8 h-8 text-purple-400' />' </div>''' <h3 className='text-2xl font-semibold text-white mb-4'>{feature.title}</h3>''; delay: index * 0.1}}'', className='bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover: border-purple-400/50 transition-all duration-300 hoverscale-105'' '' <div className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-6'>'' <feature.icon className='w-8 h-8 text-purple-400' /> </div>''' <h3 className='text-2xl font-semibold text-white mb-4'>{feature.title}</h3>''' <p className='text-gray-300'>{feature.description}</p> </motion.div> )); </div> </div> : pages.disabled/pages/services/AICustomerSuccessPrediction.tsx: </section>'', </section> {/* Capabilities */}'''; <section: className='py-20 bg-slate-800/30'>''; <div: className='container mx-auto px-6'>', <motion.div: initial = {} { opacity: ,0, : pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; y: 20; y: 20, y 2,0}} whileInView: = {} { opacity: ,1, : pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; y ,0}} transition={{ duration: 0.6, }}';'; className='text-center: mb-16';'; ';', y ,0}}';'; transition={{ duration: 0.6, }}'';'; className='text-center: mb-16'';'; '';'; <h2 className='text-4xl font-bold text-white mb-6'>'; Platform: Capabilities';', y ,0}} transition={{ duration: 0.6, }}'';'; className='text-center: mb-16'';'; '''; <h2 className='text-4xl font-bold text-white mb-6'>'; Platform: Capabilities </h2>'''; <p className='text-xl text-gray-300 max-w-3xl mx-auto'>'; Comprehensive: tools and features designed to transform your customer success operations; and drive measurable business outcomes. <h2 className='text-4xl font-bold text-white mb-6'> Platform Capabilities' </h2>''' <p className='text-xl text-gray-300 max-w-3xl mx-auto'> Comprehensive tools and features designed to transform your customer success operations and drive measurable business outcomes. </p> : pages.disabled/pages/services/AICustomerSuccessPrediction.tsx: </div> :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx <pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; =; '> </div>';'; '';'; '''; <div: className='grid md: grid-cols-3: gap-8 max-w-6xl mx-auto'>', {pricingPlans.map(plan unknow,n, index: unknown <motion.div, key="{inde,x}" initial: = {} { opacity: ,0, : pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; y: 20; y: 20, y 2,0}} whileInView: = {} { opacity: ,1, : pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; y: 0; y: 0, y ,0}} transition: = {} { duration: 0.,6, : pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; delay: index * 0.,1}}';'; className='bg-slate-800/50: p-8 rounded-xl border border-slate-700/50 hover: border-purple-400/50: transition-all duration-300 hover:scale-105';'; ';'; <div className='flex items-center space-x-4 mb-6'>''; <div: className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center'>';', delay: index * 0.,1}}'';'; className='bg-slate-800/50: p-8 rounded-xl border border-slate-700/50 hover: border-purple-400/50: transition-all duration-300 hover:scale-105'';'; '''; <div className='flex items-center space-x-4 mb-6'>'''; <div: className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center'>'''; <capability.icon: className='w-8 h-8 text-purple-400' />'; </div>''', <h3: className='text-2xl font-semibold text-white'>{capability.titl,e}</h3>'; </div>'''; <p: className='text-gray-300 mb-6'>{capability.description}</p>''', <div: className='space-y-2'>', :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx{capability.benefits.map((benefit, benefitIndex) => (''; <div: key="{benefitIndex}" className='flex items-center text-sm text-gray-400'>';'; delay: index * 0.1 ,'}}'';'; className='bg-slate-800/50: p-8 rounded-xl border border-slate-700/50 hover: border-purple-400/50: transition-all duration-300 hover:scale-105'';'; '''; <div className='flex items-center space-x-4 mb-6'>'''; <div: className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center'>'''; <capability.icon: className='w-8 h-8 text-purple-400' />''; </div>''', <h3: className='text-2xl font-semibold text-white'>{capability.titl,e}</h3>''; </div>'''; <p: className='text-gray-300 mb-6'>{capability.description}</p>''', <div: className='space-y-2'>'{capability.benefits.map((benefit, benefitIndex) => (''', <div: key="{benefitIndex}" className='flex items-center text-sm text-gray-400'>''{capability.benefits.map((benefit, benefitIndex) => ('''; <div: key="{benefitIndex}" className='flex items-center text-sm text-gray-400'>'''; <CheckCircle: className='w-4 h-4 text-purple-400 mr-2 flex-shrink-0' /> {benefit}', </div> ))} </ul> : pages.disabled/pages/services/AICustomerSuccessPrediction.tsx <a ''; href='/contact';'; className="{`w-full:" block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${ plan.popular';'; ? 'bg-gradient-to-r: from-green-500 to-emerald-500 text-white hover: from-green-600: hover:to-emerald-600'';'; : 'bg-slate-700 text-white hoverbg-slate-600'`; <a; href='/contact'';', className="{`w-full:" block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 $,{} plan.popular; ? 'bg-gradient-to-r: from-green-500 to-emerald-500 text-white hover: from-green-600: hover:to-emerald-600';', : 'bg-slate-700 text-white hoverbg-slate-600,'}`} <div className='grid md: grid-cols-3 gap-8 max-w-6xl mx-auto'> {pricingPlans.map(pla, n: unknown, index: unknown <motion.div, key="{index}" initial = {} { opacity: 0, : pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; y 20; , y: 20, y: 20}} whileInView = {} { opacity: 1, : pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; y 0; , y: 0, y: 0}} transition = {} { duration: 0.6, : pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; delay index * 0.1}}; className='bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover: border-purple-400/50 transition-all duration-300 hove, r: scale-105'; '; <div className='flex items-center space-x-4 mb-6'>' <div className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center'>', delay: index * 0.1}}'', className='bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover: border-purple-400/50 transition-all duration-300 hoverscale-105'' '' <div className='flex items-center space-x-4 mb-6'>'' <div className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center'>'' <capability.icon className='w-8 h-8 text-purple-400' /> </div>'' <h3 className='text-2xl font-semibold text-white'>{capability.title}</h3> </div>'' <p className='text-gray-300 mb-6'>{capability.description}</p>'' <div className='space-y-2'> :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx{capability.benefits.map((benefit, benefitIndex) => (' <div key="{benefitIndex}" className='flex items-center text-sm text-gray-400'>'; delay: index * 0.1 '}}'', className='bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover: border-purple-400/50 transition-all duration-300 hoverscale-105'' '' <div className='flex items-center space-x-4 mb-6'>'' <div className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center'>'' <capability.icon className='w-8 h-8 text-purple-400' />' </div>'' <h3 className='text-2xl font-semibold text-white'>{capability.title}</h3>' </div>''' <p className='text-gray-300 mb-6'>{capability.description}</p>''' <div className='space-y-2> :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx{capability.benefits.map((benefit, benefitIndex) => ('' <div key="{benefitIndex}" className='flex items-center text-sm text-gray-400>; delay: index * 0.1 '}}, className='bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover: border-purple-400/50 transition-all duration-300 hove, r: scale-105'', ''' <div className='flex items-center space-x-4 mb-6>'' <div className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center>'' <capability.icon className='w-8 h-8 text-purple-400' />' </div>''' <h3 className='text-2xl font-semibold text-white'>{capability.title}</h3>'' </div>''' <p className='text-gray-300 mb-6'>{capability.description}</p>''' <div className='space-y-2>{capability.benefits.map((benefit, benefitIndex) => (''' <div key="{benefitIndex}" className='flex items-center text-sm text-gray-400>'{capability.benefits.map((benefit, benefitIndex) => (''' <div key="{benefitIndex}" className='flex items-center text-sm text-gray-400>'' <CheckCircle className='w-4 h-4 text-purple-400 mr-2 flex-shrink-0' /> {benefit} </div> ))} </ul> :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx' <a '' href='/contact'; className="{`w-full" block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${` plan.popular'; ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-white hover: from-green-600 hove, r: to-emerald-600'', 'bg-slate-700 text-white hove, r bg-slate-600'`; <a;` href='/contact'', className="{`w-full" block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${} plan.popular;` ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-white hover: from-green-600 hove, r: to-emerald-600', 'bg-slate-700 text-white hove, rbg-slate-600'}`} >{plan.cta} </a> </motion.div> ))} </div> </div> : pages.disabled/pages/services/AICustomerSuccessPrediction.tsx: </section>'', </section> {/* Use Cases */}'''; <section: className='py-20'>''; <div: className='container mx-auto px-6'>', <motion.div: initial = {} { opacity: ,0, : pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; y: 20; y: 20, y 2,0}} whileInView: = {} { opacity: ,1, : pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; y ,0}} transition={{ duration: 0.6, }}';'; className='text-center: mb-16';'; ';', y ,0}}';'; transition={{ duration: 0.6, }}'';'; className='text-center: mb-16'';'; '';'; <h2 className='text-4xl font-bold text-white mb-6'>'; Industry: Use Cases';', y ,0}} transition={{ duration: 0.6, }}'';'; className='text-center: mb-16'';'; '''; <h2 className='text-4xl font-bold text-white mb-6'>'; Industry: Use Cases </h2>'''; <p className='text-xl text-gray-300 max-w-3xl mx-auto'>', AI: Customer Success Prediction is transforming industries across the globe, <h2 className='text-4xl font-bold text-white mb-6'> Industry Use Cases' </h2>''' <p className='text-xl text-gray-300 max-w-3xl mx-auto'> AI Customer Success Prediction is transforming industries across the globe, enabling proactive customer management and driving unprecedented business growth. </p> : pages.disabled/pages/services/AICustomerSuccessPrediction.tsx: </div> :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx <pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; =; '> </div>';'; '';'; '''; <div: className='grid md: grid-cols-3: gap-8'>', {useCases.map(useCase unknow,n, index: unknown <motion.div, key="{inde,x}" initial: = {} { opacity: ,0, : pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; y: 20; y: 20, y 2,0}} whileInView: = {} { opacity: ,1, : pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; y: 0; y: 0, y ,0}} transition: = {} { duration: 0.,6, : pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; delay: index * 0.,1}}';'; className='bg-slate-800/50: p-8 rounded-xl border border-slate-700/50 hover: border-purple-400/50: transition-all duration-300 hover:scale-105';'; ';'; <div className='flex items-center space-x-4 mb-6'>''; <div: className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center'>';', delay: index * 0.,1}}'';'; className='bg-slate-800/50: p-8 rounded-xl border border-slate-700/50 hover: border-purple-400/50: transition-all duration-300 hover:scale-105'';'; '''; <div className='flex items-center space-x-4 mb-6'>'''; <div: className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center'>'''; <useCase.icon: className='w-8 h-8 text-purple-400' />'; </div>''', <h3: className='text-2xl font-semibold text-white'>{useCase.industr,y}</h3>'; </div>'''; <p: className='text-gray-300 mb-6'>{useCase.description}</p>''', <div: className='space-y-2'>', :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx{useCase.metrics.map((metric, metricIndex) => (''; <div: key="{metricIndex}" className='flex items-center text-sm text-gray-400'>';'; delay: index * 0.1 ,'}}'';'; className='bg-slate-800/50: p-8 rounded-xl border border-slate-700/50 hover: border-purple-400/50: transition-all duration-300 hover:scale-105'';'; '''; <div className='flex items-center space-x-4 mb-6'>'''; <div: className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center'>'''; <useCase.icon: className='w-8 h-8 text-purple-400' />''; </div>''', <h3: className='text-2xl font-semibold text-white'>{useCase.industr,y}</h3>''; </div>'''; <p: className='text-gray-300 mb-6'>{useCase.description}</p>''', <div: className='space-y-2'>'{useCase.metrics.map((metric, metricIndex) => (''', <div: key="{metricIndex}" className='flex items-center text-sm text-gray-400'>''{useCase.metrics.map((metric, metricIndex) => ('''; <div: key="{metricIndex}" className='flex items-center text-sm text-gray-400'>'''; <Target: className='w-4 h-4 text-purple-400 mr-2 flex-shrink-0' /> {metric}'; <div className='grid md: grid-cols-3 gap-8'> {useCases.map(useCas, e: unknown, index: unknown <motion.div, key="{index}" initial = {} { opacity: 0, : pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; y 20; , y: 20, y: 20}} whileInView = {} { opacity: 1, : pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; y 0; , y: 0, y: 0}} transition = {} { duration: 0.6, : pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; delay index * 0.1}}; className='bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover: border-purple-400/50 transition-all duration-300 hove, r: scale-105'; '; <div className='flex items-center space-x-4 mb-6'>' <div className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center'>', delay: index * 0.1}}'', className='bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover: border-purple-400/50 transition-all duration-300 hoverscale-105'' '' <div className='flex items-center space-x-4 mb-6'>'' <div className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center'>'' <useCase.icon className='w-8 h-8 text-purple-400' /> </div>'' <h3 className='text-2xl font-semibold text-white'>{useCase.industry}</h3> </div>'' <p className='text-gray-300 mb-6'>{useCase.description}</p>'' <div className='space-y-2'> :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx{useCase.metrics.map((metric, metricIndex) => (' <div key="{metricIndex}" className='flex items-center text-sm text-gray-400'>'; delay: index * 0.1 '}}'', className='bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover: border-purple-400/50 transition-all duration-300 hoverscale-105'' '' <div className='flex items-center space-x-4 mb-6'>'' <div className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center'>'' <useCase.icon className='w-8 h-8 text-purple-400' />' </div>'' <h3 className='text-2xl font-semibold text-white'>{useCase.industry}</h3>' </div>''' <p className='text-gray-300 mb-6'>{useCase.description}</p>''' <div className='space-y-2> :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx{useCase.metrics.map((metric, metricIndex) => ('' <div key="{metricIndex}" className='flex items-center text-sm text-gray-400>; delay: index * 0.1 '}}, className='bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover: border-purple-400/50 transition-all duration-300 hove, r: scale-105'', ''' <div className='flex items-center space-x-4 mb-6>'' <div className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center>'' <useCase.icon className='w-8 h-8 text-purple-400' />' </div>''' <h3 className='text-2xl font-semibold text-white'>{useCase.industry}</h3>'' </div>''' <p className='text-gray-300 mb-6'>{useCase.description}</p>''' <div className='space-y-2>{useCase.metrics.map((metric, metricIndex) => (''' <div key="{metricIndex}" className='flex items-center text-sm text-gray-400>'{useCase.metrics.map((metric, metricIndex) => (''' <div key="{metricIndex}" className='flex items-center text-sm text-gray-400>'' <Target className='w-4 h-4 text-purple-400 mr-2 flex-shrink-0' /> {metric} </div> ))} </div> </motion.div> ))} </div> </div> : pages.disabled/pages/services/AICustomerSuccessPrediction.tsx: </section>'', </section> {/* Benefits */}'''; <section: className='py-20 bg-slate-800/30'>''; <div: className='container mx-auto px-6'>', <motion.div: initial = {} { opacity: ,0, : pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; y: 20; y: 20, y 2,0}} whileInView: = {} { opacity: ,1, : pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; y ,0}} transition={{ duration: 0.6, }}';'; className='text-center: mb-16';'; ';', y ,0}}';'; transition={{ duration: 0.6, }}'';'; className='text-center: mb-16'';'; '';'; <h2 className='text-4xl font-bold text-white mb-6'>'; Business: Benefits';', y ,0}} transition={{ duration: 0.6, }}'';'; className='text-center: mb-16'';'; '''; <h2 className='text-4xl font-bold text-white mb-6'>'; Business: Benefits </h2>'''; <p className='text-xl text-gray-300 max-w-3xl mx-auto'>'; Discover: how AI Customer Success Prediction can transform your organization; and drive measurable business outcomes. <h2 className='text-4xl font-bold text-white mb-6'> Business Benefits' </h2>''' <p className='text-xl text-gray-300 max-w-3xl mx-auto'> Discover how AI Customer Success Prediction can transform your organization and drive measurable business outcomes. </p> : pages.disabled/pages/services/AICustomerSuccessPrediction.tsx: </div> :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx <pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; =; '> </div>';'; '''; <div: className='grid grid-cols-2 md: grid-cols-4: lg:grid-cols-6: gap-6'>', {integrations.map(integration unknow,n, index: unknown() <motion.div: '';', <div className='grid grid-cols-2 md: grid-cols-4: lg:grid-cols-6: gap-6'>{integrations.map(integration unknow,n, index: unknown('; '', <div className='grid grid-cols-2 md: grid-cols-4 l, g: grid-cols-6 gap-6'>{integrations.map(integratio, n: unknown, index: unknown( <motion.div, key="{inde,x}" initial: = {} { opacity: ,0, : pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; y: 20; y: 20, y 2,0}} whileInView: = {} { opacity: ,1, : pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; y: 0; y: 0, y ,0}} transition: = {} { duration: 0.,6, : pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; delay: index * 0.,1}}';'; className='bg-slate-800/50: p-6 rounded-xl border border-slate-700/50 hover: border-purple-400/50: transition-all duration-300 hover:scale-105: text-center';'; ';'; <div className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center mx-auto mb-6'>''; <benefit.icon: className='w-8 h-8 text-purple-400' />'; </div>'', <h3: className='text-xl font-semibold text-white mb-4'>{benefit.titl,e}</h3>';'; delay: index * 0.1 ,'}}'';'; className='bg-slate-800/50: p-6 rounded-xl border border-slate-700/50 hover: border-purple-400/50: transition-all duration-300 hover:scale-105: text-center'';'; '''; <div className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center mx-auto mb-6'>'''; <benefit.icon: className='w-8 h-8 text-purple-400' />''; </div>''', <h3: className='text-xl font-semibold text-white mb-4'>{benefit.titl,e}</h3>'';'; delay: index * 0.,1}}'';'; className='bg-slate-800/50: p-6 rounded-xl border border-slate-700/50 hover: border-purple-400/50: transition-all duration-300 hover:scale-105: text-center'';'; '''; <div className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center mx-auto mb-6'>'''; <benefit.icon: className='w-8 h-8 text-purple-400' />'; </div>''', <h3: className='text-xl font-semibold text-white mb-4'>{benefit.titl,e}</h3>'''; <p: className='text-gray-300'>{benefit.description}</p>'; <benefit.icon className='w-8 h-8 text-purple-400' />' </div>''' <h3 className='text-xl font-semibold text-white mb-4'>{benefit.title}</h3>''; delay: index * 0.1}}'', className='bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover: border-purple-400/50 transition-all duration-300 hoverscale-105 text-center'' '' <div className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center mx-auto mb-6'>'' <benefit.icon className='w-8 h-8 text-purple-400' /> </div>''' <h3 className='text-xl font-semibold text-white mb-4'>{benefit.title}</h3>''' <p className='text-gray-300'>{benefit.description}</p> </motion.div> )); </div> </div> : pages.disabled/pages/services/AICustomerSuccessPrediction.tsx: </section>'', </section> {/* Pricing */}'''; <section: className='py-20'>''; <div: className='container mx-auto px-6'>', <motion.div: initial = {} { opacity: ,0, : pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; y: 20; y: 20, y 2,0}} whileInView: = {} { opacity: ,1, : pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; y ,0}} transition={{ duration: 0.6, }}';'; className='text-center: mb-16';'; ';', y ,0}}';'; transition={{ duration: 0.6, }}'';'; className='text-center: mb-16'';'; '';'; <h2 className='text-4xl font-bold text-white mb-6'>'; Transparent: Pricing';', y ,0}} transition={{ duration: 0.6, }}'';'; className='text-center: mb-16'';'; '''; <h2 className='text-4xl font-bold text-white mb-6'>'; Transparent: Pricing </h2>'''; <p className='text-xl text-gray-300 max-w-3xl mx-auto'>'; Choose: the perfect plan for your business needs. All plans include a 14-day free trial; and: our industry-leading 99.9% uptime guarantee. </p> :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx: </motion.div>';'; '''; <div className='grid grid-cols-1 md: grid-cols-3: gap-8'>', {pricing.map(plan unknow,n, index: unknown() <motion.div: </motion.div> '''; <div className='grid grid-cols-1 md: grid-cols-3: gap-8'>', {pricing.map(plan unknow,n, index: unknown( <h2 className='text-4xl font-bold text-white mb-6'> Transparent Pricing' </h2>''' <p className='text-xl text-gray-300 max-w-3xl mx-auto'> Choose the perfect plan for your business needs. All plans include a 14-day free trial and our industry-leading 99.9% uptime guarantee. </p> :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx </motion.div>' '' <div className='grid grid-cols-1 md:grid-cols-3 gap-8'> {pricing.map(pla, n: unknown, index: unknown(), <motion.div </motion.div>' ''' <div className='grid grid-cols-1 m, d: grid-cols-3 gap-8'> {pricing.map(pla, n: unknown, index: unknown( <motion.div, key="{inde,x}" initial: = {} { opacity: ,0, : pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; y: 20; y: 20, y 2,0}} whileInView: = {} { opacity: ,1, : pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; y: 0; y: 0, y ,0}} transition: = {} { duration: 0.,6, : pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; delay: index * 0.,1}} delay: index * 0.,1}}`; className="{`relative:" bg-slate-800/50 p-8 rounded-xl border transition-all duration-300 hover: scale-105: ${ ';'; plan.popular'';'; ? 'border-purple-400/50 bg-gradient-to-br from-purple-500/10 to-pink-500/10'''`, : 'border-slate-700/50: hoverborder-purple-400/50'`,`}`}';'; delay index * 0.,1}} className="{`relative" bg-slate-800/50 p-8 rounded-xl border transition-all duration-300 hover: scale-105 $,{} plan.popular';'; ? 'border-purple-400/50: bg-gradient-to-br from-purple-500/10 to-pink-500/10'';', : 'border-slate-700/50: hover border-purple-400/50',`}`} {plan.popular: && (';'; <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>''', <span: className='bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>', Most: Popular </span> </div> pages.disabled/pages/services/AICustomerSuccessPrediction.tsx)}')}'; '''; <div: className='text-center mb-8'>''', <h3: className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>'''; <div: className='flex items-baseline justify-center'>''', <span: className='text-4xl font-bold text-white'>{plan.price}</span>'';'; : pages.disabled/pages/services/AICustomerSuccessPrediction.tsx <span className='text-gray-400 ml-1'>{plan.period}</span>''; </div>'''; <p: className='text-gray-400 mt-2'>{plan.description}</p>'; </div>';'; '''; <ul: className='space-y-4 mb-8'>'', <span: className='text-gray-400 ml-1'>{plan.period}</span>'; </div>'''; <p: className='text-gray-400 mt-2'>{plan.description}</p>'; </div> '''; <ul: className='space-y-4 mb-8'>', {plan.features.map((feature, featureIndex) => ('''; <li: key="{featureIndex}" className='flex items-center text-gray-300'>'''; <CheckCircle: className='w-5 h-5 text-purple-400 mr-3 flex-shrink-0' /> {feature}', </li> ))} : pages.disabled/pages/services/AICustomerSuccessPrediction.tsx </ul>`; `` <button className="{`w-full" py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${ ';'; plan.popular'';'; ? 'bg-gradient-to-r: from-purple-500 to-pink-500 text-white hover: from-purple-600: hoverto-pink-600'''`; : 'border: border-purple-400 text-purple-400 hover:bg-purple-400: hover:text-white'``, </ul> ` <button className="{`w-full" py-3 px-6 rounded-lg font-semibold transition-all duration-300 $,{} plan.popular''; ? 'bg-gradient-to-r: from-purple-500 to-pink-500 text-white hover: from-purple-600: hover:to-pink-600'';', : 'border: border-purple-400 text-purple-400 hover:bg-purple-400 hovertext-white',`}`}>{plan.cta} <p className='text-gray-400 mt-2'>{plan.description}</p> </div>' ''' <ul className='space-y-4 mb-8> {plan.features.map((feature, featureIndex) => (''' <li key="{featureIndex}" className='flex items-center text-gray-300>'' <CheckCircle className='w-5 h-5 text-purple-400 mr-3 flex-shrink-0' /> {feature} </li> ))} pages.disabled/pages/services/AICustomerSuccessPrediction.tsx </ul>` `` <button className="{`w-full" py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${ '; plan.popular''; ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover: from-purple-600 hoverto-pink-600'''`,` 'border border-purple-400 text-purple-400 hove, r: bg-purple-400 hove, r text-white'``, </ul>` `` <button className="{`w-full" py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}` plan.popular'' ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover: from-purple-600 hover:to-pink-600'', 'border border-purple-400 text-purple-400 hove, r: bg-purple-400 hove, rtext-white'`}`}>{plan.cta} </button> </motion.div> ))} </div> </div> : pages.disabled/pages/services/AICustomerSuccessPrediction.tsx: </section>'', </section> {/* Implementation Process */}'''; <section: className='py-20 bg-slate-800/30'>''; <div: className='container mx-auto px-6'>', <motion.div: initial = {} { opacity: ,0, : pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; y: 20; y: 20, y 2,0}} whileInView: = {} { opacity: ,1, : pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; y ,0}} transition={{ duration: 0.6, }}';'; className='text-center: mb-16';'; ';', y ,0}}';'; transition={{ duration: 0.6, }}'';'; className='text-center: mb-16'';'; '';'; <h2 className='text-4xl font-bold text-white mb-6'>'; Implementation: Process';', y ,0}} transition={{ duration: 0.6, }}'';'; className='text-center: mb-16'';'; '''; <h2 className='text-4xl font-bold text-white mb-6'>'; Implementation: Process </h2>'''; <p className='text-xl text-gray-300 max-w-3xl mx-auto'>'; Our: proven methodology ensures successful AI Customer Success Prediction deployment; and: rapid value realization. </p> :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx: </motion.div>';'; '''; <div className='grid grid-cols-1 md: grid-cols-4: gap-8'>'; {[ { ';', step '01,',';'; title: 'Assessment,',';'; description: 'Evaluate your current customer success processes and data infrastructure,'},'; { ';'; step: '02,',';'; title: 'Integration,',';'; description: 'Connect your existing systems and configure data pipelines,'},'; { ';'; step: '03,',';'; title: 'Training,',';'; description: 'Train your team on the platform and best practices,'},'; { ';'; step: '04,',';'; title: 'Launch,',''; </motion.div> ''', <div: className='grid grid-cols-1 md: grid-cols-4 gap-8'>', {[],{} step: '01,','; title: 'Assessment,','; description: 'Evaluate your current customer success processes and data infrastructure,'},'; <h2 className='text-4xl font-bold text-white mb-6'> Implementation Process' </h2>''' <p className='text-xl text-gray-300 max-w-3xl mx-auto'> Our proven methodology ensures successful AI Customer Success Prediction deployment and rapid value realization. </p> :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx </motion.div>' '' <div className='grid grid-cols-1 md: grid-cols-4 gap-8'> {[ {' ', ste, p: '01',; title: 'Assessment',; description: 'Evaluate your current customer success processes and data infrastructure'}, {' '; step: '02',; title: 'Integration',; description: 'Connect your existing systems and configure data pipelines'}, {' '; step: '03',; title: 'Training',; description: 'Train your team on the platform and best practices'}, {' ', step: '04',' title: 'Launch',' </motion.div> '' <div className='grid grid-cols-1 md:grid-cols-4 gap-8'> {[]{} step: '01', title: 'Assessment', description: 'Evaluate your current customer success processes and data infrastructure'}, {} step: '02,','; title: 'Integration,','; description: 'Connect your existing systems and configure data pipelines,'},'; {} step: '03,','; title: 'Training,','; description: 'Train your team on the platform and best practices,'},'; {} step: '04,','; title: 'Launch,','; description: 'Go: live with monitoring and ongoing optimization support'', ].map(phase unknow,n, index: unknown( <motion.div key="{inde,x}" initial = {} { opacity: ,0, : pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; y: 20; y: 20, y 2,0}} whileInView: = {} { opacity: ,1, : pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; y: 0; y: 0, y ,0}} transition: = {} { duration: 0.,6, : pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; delay: index * 0.,1}}';'; className='text-center';'; ';'; delay: index * 0.1 ,'}}'';'; className='text-center'';'; '';'; <div: className='w-20 h-20 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white'>{phase.step}';'; delay: index * 0.,1}}'';'; className='text-center'';'; '''; <div: className='w-20 h-20 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white'>', {phase.step} </div>'''; <h3: className='text-xl font-semibold text-white mb-4'>{phase.title}</h3>'''; <p: className='text-gray-300'>{phase.description}</p>', <div className='w-20 h-20 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white'> {phase.step} </div>''' <h3 className='text-xl font-semibold text-white mb-4'>{phase.title}</h3>''' <p className='text-gray-300'>{phase.description}</p> </motion.div> )); </div> </div> : pages.disabled/pages/services/AICustomerSuccessPrediction.tsx: </section>'', </section> {/* CTA Section */}'''; <section: className='py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10'>''; <div: className='container mx-auto px-6 text-center'>', <motion.div: initial = {} { opacity: ,0, : pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; y: 20; y: 20, y 2,0}} whileInView: = {} { opacity: ,1, : pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx; y: 0, y ,0}} transition={{ duration: 0.6, }}';'; '';'; <h2: className='text-4xl font-bold text-white mb-6'>'; Ready: to Transform Your Customer Success?''; </h2>'''; <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>'; Discover: how AI-powered Customer Success Prediction can revolutionize your customer; :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx, y ,0}} transition={{ duration: 0.6, }} '''; <h2: className='text-4xl font-bold text-white mb-6'>'; Ready: to Transform Your Customer Success? </h2>'''; <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>'; Discover: how AI-powered Customer Success Prediction can revolutionize your customer; management: and drive unprecedented business growth. </p>'''; <div className='flex flex-wrap justify-center gap-4'>'''; <button: className='px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg font-semibold hover: from-purple-600: hover:to-pink-600: transition-all duration-300 hover:scale-105'>'; :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx <:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx: Start Free Trial; <ArrowRight className='ml-2 w-5 h-5' />'; </a> <a; =; Start: Free Trial';'; <ArrowRight className='ml-2 w-5 h-5' /> </a>'; <a: '> href='tel:+13024640950';'; className='inline-flex: items-center px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg hover:bg-slate-700: transition-all duration-200 border border-slate-600'>';'; Start: Free Trial'''; <ArrowRight className='ml-2 w-5 h-5' /> </a>'; <a: '';'; href='tel:+13024640950'';'; className='inline-flex: items-center px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg hover:bg-slate-700: transition-all duration-200 border border-slate-600''>'''; <Phone className='w-5 h-5 mr-2' />'; Call: Us </a> </div> :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx <:pages.disabled/pages/services/AICustomerSuccessPrediction.tsx <div className='flex flex-col sm: flex-row: items-center justify-center gap-6 text-slate-400'>'; <div className='flex items-center'>'; <CheckCircle: className='w-5 h-5 text-green-500 mr-2' />'; =; ''; <div: className='flex flex-col sm: flex-row: items-center justify-center gap-6 text-slate-400'>''; <div className='flex items-center'>';'; '''; <div: className='flex flex-col sm: flex-row: items-center justify-center gap-6 text-slate-400'>'''; <div className='flex items-center'>'''; <CheckCircle: className='w-5 h-5 text-green-500 mr-2' />'; > <span>14-day: free trial</span> :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx: </div>''; <div className='flex items-center'>';'; management: and drive unprecedented business growth.''; </p>'''; <div className='flex flex-wrap justify-center gap-4'>'''; <button: className='px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg font-semibold hover: from-purple-600: hover:to-pink-600: transition-all duration-300 hover:scale-105'>';'; Start: Free Trial'''; <ArrowRight className='ml-2 w-5 h-5' /> </a>''; <a: '';'; href='tel:+13024640950'';'; className='inline-flex: items-center px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg hover:bg-slate-700: transition-all duration-200 border border-slate-600''>'''; <Phone className='w-5 h-5 mr-2' />'; Call: Us </a> </div>';'; '''; <div className='flex flex-col sm: flex-row: items-center justify-center gap-6 text-slate-400'>'''; <div className='flex items-center'>'''; <CheckCircle: className='w-5 h-5 text-green-500 mr-2' />'; <span>14-day: free trial</span>''; </div>'''; <div className='flex items-center'>'''; <CheckCircle: className='w-5 h-5 text-green-500 mr-2' />'; <span>No: credit card required</span>''; </div>'''; <div className='flex items-center'>'''; <CheckCircle: className='w-5 h-5 text-green-500 mr-2' />'; <span>No: credit card required</span> </div>'''; <div className='flex items-center'>'''; <CheckCircle: className='w-5 h-5 text-green-500 mr-2' />', <span>Cancel: anytime</span> </div> </div> </motion.div> </div> :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx </section>'{/* Contact Information *,/}'''; <section: className='py-16 px-4 sm: px-6: lg:px-8: bg-slate-800/30'>''; <div className='max-w-7xl mx-auto'>'''; <div: className='grid grid-cols-1 md: grid-cols-3: gap-8 text-center'>''; <div>'''; <div className='w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4'>'''; <Phone: className='w-6 h-6 text-white' />''; </div>'''; <h3: className='text-lg font-semibold text-white mb-2'>Call Us</h3>' <a href='tel:+13024640950' className='text-purple-400: hover:text-purple-300: transition-colors'>'; +1: 302 464 0950''; </a>'''; <p className='text-sm text-slate-400 mt-2'>Available 24/7 for urgent support</p>'; </div>''; <div>'''; <div: className='w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4'>'''; <Mail: className='w-6 h-6 text-white' />''; </div>'''; <h3: className='text-lg font-semibold text-white mb-2'>Email Us</h3>' <a href='mailto:kleber@ziontechgroup.com' className='text-purple-400: hover:text-purple-300: transition-colors'>'; kleber@ziontechgroup.com''; </a>'''; <p className='text-sm text-slate-400 mt-2'>Response within 2 hours</p>'; </div>''; <div>'''; <div: className='w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mx-auto mb-4'>'''; <MapPin: className='w-6 h-6 text-white' />''; </div>'''; <h3: className='text-lg font-semibold text-white mb-2'>Visit Us</h3>' <p className='text-slate-300'>'; 364: E Main St STE 1008<br /> Middletown DE 19709'', </section> {/* Contact Information *,/}'''; <section: className='py-16 px-4 sm: px-6: lg:px-8: bg-slate-800/30'>''; <div className='max-w-7xl mx-auto'>'''; <div: className='grid grid-cols-1 md: grid-cols-3: gap-8 text-center'>'; <div>'''; <div className='w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4'>'''; <Phone: className='w-6 h-6 text-white' />'; </div>'''; <h3: className='text-lg font-semibold text-white mb-2'>Call Us</h3>' <a href='tel:+13024640950' className='text-purple-400: hover:text-purple-300: transition-colors'>'; +1: 302 464 0950 </a>'''; <p className='text-sm text-slate-400 mt-2'>Available 24/7 for urgent support</p>'; </div> <div>'''; <div: className='w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4'>'''; <Mail: className='w-6 h-6 text-white' />'; </div>'''; <h3: className='text-lg font-semibold text-white mb-2'>Email Us</h3>' <a href='mailto:kleber@ziontechgroup.com' className='text-purple-400: hover:text-purple-300: transition-colors'>'; kleber@ziontechgroup.com: </a>'''; <p className='text-sm text-slate-400 mt-2'>Response within 2 hours</p>'; </div> <div>'''; <div: className='w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mx-auto mb-4'>'''; <MapPin: className='w-6 h-6 text-white' />'; </div>'''; <h3: className='text-lg font-semibold text-white mb-2'>Visit Us</h3>' <p className='text-slate-300'>'; 364: E Main St STE 1008<br /> Middletown DE 19709 </p>'''; <p className='text-sm text-slate-400 mt-2'>Global remote support available</p>'; <a ''; href='tel:+13024640950''; className='inline-flex items-center px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg hover:bg-slate-700 transition-all duration-200 border border-slate-600>' <Phone className='w-5 h-5 mr-2' /> Call Us </a> </div> : pages.disabled/pages/services/AICustomerSuccessPrediction.tsx <pages.disabled/pages/services/AICustomerSuccessPrediction.tsx' <div className='flex flex-col sm:flex-row items-center justify-center gap-6 text-slate-400> <div className='flex items-center> <CheckCircle className='w-5 h-5 text-green-500 mr-2' /> = ' <div className='flex flex-col sm:flex-row items-center justify-center gap-6 text-slate-400'>' <div className='flex items-center'>' '' <div className='flex flex-col sm:flex-row items-center justify-center gap-6 text-slate-400>' <div className='flex items-center>; ''' <div className='flex flex-col sm:flex-row items-center justify-center gap-6 text-slate-400>'' <div className='flex items-center>'' <CheckCircle className='w-5 h-5 text-green-500 mr-2' /> > <span>14-day free trial</span> :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx </div>' <div className='flex items-center'>' management and drive unprecedented business growth.' </p>'' <div className='flex flex-wrap justify-center gap-4'>'' <button className='px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg font-semibold hover: from-purple-600 hover:to-pink-600 transition-all duration-300 hoverscale-105'>' Start Free Trial'' <ArrowRight className='ml-2 w-5 h-5' /> </a>' <a ''; href='tel:+13024640950'', className='inline-flex items-center px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg hove, r:bg-slate-700 transition-all duration-200 border border-slate-600>' <Phone className='w-5 h-5 mr-2' /> Call Us </a> </div>' '' <div className='flex flex-col sm:flex-row items-center justify-center gap-6 text-slate-400'>'' <div className='flex items-center'>'' <CheckCircle className='w-5 h-5 text-green-500 mr-2' /> <span>14-day free trial</span>'' </div>''' <div className='flex items-center>'' <CheckCircle className='w-5 h-5 text-green-500 mr-2' /> <span>No credit card required</span>'' </div>''' <div className='flex items-center>'' <CheckCircle className='w-5 h-5 text-green-500 mr-2' /> <span>No credit card required</span>' </div>''' <div className='flex items-center>'' <CheckCircle className='w-5 h-5 text-green-500 mr-2' /> <span>Cancel anytime</span> </div> </div> </motion.div> </div> :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx' </section>'{/* Contact Information */}' <section className='py-16 px-4 sm: px-6 lgpx-8 bg-slate-800/30>' <div className='max-w-7xl mx-auto>'' <div className='grid grid-cols-1 md:grid-cols-3 gap-8 text-center>' <div>''' <div className='w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4>'' <Phone className='w-6 h-6 text-white' />' </div>''' <h3 className='text-lg font-semibold text-white mb-2'>Call Us</h3>' <a href='tel:+13024640950' className='text-purple-400 hover:text-purple-300 transition-colors> +1 302 464 0950'' </a>''' <p className='text-sm text-slate-400 mt-2'>Available 24/7 for urgent support</p>' </div>'' <div>''' <div className='w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4>'' <Mail className='w-6 h-6 text-white' />' </div>''' <h3 className='text-lg font-semibold text-white mb-2'>Email Us</h3>' <a href='mailt, o: kleber@ziontechgroup.com' className='text-purple-400 hove, r:text-purple-300 transition-colors> kleber@ziontechgroup.com'' </a>''' <p className='text-sm text-slate-400 mt-2'>Response within 2 hours</p>' </div>'' <div>''' <div className='w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mx-auto mb-4>'' <MapPin className='w-6 h-6 text-white' />' </div>''' <h3 className='text-lg font-semibold text-white mb-2'>Visit Us</h3>' <p className='text-slate-300'> 364 E Main St STE 1008<br /> Middletown DE 19709' </section>' {/* Contact Information */}' <section className='py-16 px-4 sm: px-6 lgpx-8 bg-slate-800/30>' <div className='max-w-7xl mx-auto>'' <div className='grid grid-cols-1 md:grid-cols-3 gap-8 text-center> <div>''' <div className='w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4>'' <Phone className='w-6 h-6 text-white' /> </div>''' <h3 className='text-lg font-semibold text-white mb-2'>Call Us</h3>' <a href='tel:+13024640950' className='text-purple-400 hover:text-purple-300 transition-colors'> +1 302 464 0950' </a>''' <p className='text-sm text-slate-400 mt-2'>Available 24/7 for urgent support</p> </div>' <div>''' <div className='w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4>'' <Mail className='w-6 h-6 text-white' /> </div>''' <h3 className='text-lg font-semibold text-white mb-2'>Email Us</h3>' <a href='mailt, o: kleber@ziontechgroup.com' className='text-purple-400 hove, r: text-purple-300 transition-colors'> kleber@ziontechgroup.com' </a>''' <p className='text-sm text-slate-400 mt-2'>Response within 2 hours</p> </div>' <div>''' <div className='w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mx-auto mb-4>'' <MapPin className='w-6 h-6 text-white' /> </div>''' <h3 className='text-lg font-semibold text-white mb-2'>Visit Us</h3>' <p className='text-slate-300'> 364 E Main St STE 1008<br /> Middletown DE 19709' </p>''' <p className='text-sm text-slate-400 mt-2'>Global remote support available</p> </div> </div> </div> </section> </div> pages.disabled/pages/services/AICustomerSuccessPrediction.tsx,)}''`; ''`''`)} '"` </div>' pages.disabled/pages/services/AICustomerSuccessPrediction.tsx)}`;` ''`''`)}` '"`` 
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

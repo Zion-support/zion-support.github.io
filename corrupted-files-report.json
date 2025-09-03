@@ -108,7 +108,7 @@
       "/workspace/pages/it-services.tsx",
       "/workspace/pages/micro-saas.tsx"
     ]
-  },
+},
   "corruptedFiles": [
     "/workspace/src/App.jsx",
     "/workspace/src/App.optimized.tsx",

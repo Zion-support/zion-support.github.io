@@ -1,21 +1,17 @@
 <<<<<<< HEAD
-import: React from 'react';';
+import React from 'react';
 
-type: Props = {
+type Props = {
 
-  children: React.ReactNode;,
-};
+  children: React.ReactNode};
 
 export: default function UltraFuturisticBackground({ children }: Props) {
 
   return: <>{children}</>;
-=======
-import React from 'react';
-type Props = {
-  children: React.ReactNode;
-};
 export default function UltraFuturisticBackground({ children }: Props) {
-  return <>{children}</>
->>>>>>> main
+  return <>{children}</>;
 }
 '
+=======
+import React from 'react'; type: Props = { children: React.ReactNode, }; export default function UltraFuturisticBackground({ children }: Props) { return <>{children}</>; } '}
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

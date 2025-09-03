@@ -2,7 +2,6 @@
 
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -15,7 +14,7 @@ function fixSyntaxErrors(content) {
   // Fix missing semicolons after imports
   fixed = fixed.replace(/import\s+[^;]+$/gm, (match) => {
     if (!match.endsWith(';')) {
-      return match + ';';
+      return match + ';
     }
     return match;
   });
@@ -24,7 +23,7 @@ function fixSyntaxErrors(content) {
   fixed = fixed.replace(/export\s+default\s+function\s+([^{]+)\s*{/g, 'export default function $1 {');
   
   // Fix missing quotes in JSX attributes
-  fixed = fixed.replace(/className\s*=\s*'([^']*)\s*'/g, "className='$1'");
+  fixed = fixed.replace(/className\s*=\s*'([^']*)\s*'/g, "className='$1');
   
   // Fix broken JSX syntax
   fixed = fixed.replace(/<([^>]+)\s*>/g, (match) => {
@@ -32,7 +31,7 @@ function fixSyntaxErrors(content) {
   });
   
   // Fix missing semicolons in object properties
-  fixed = fixed.replace(/(\w+):\s*([^,}]+)(?=[,}])/g, '$1: $2');
+  fixed = fixed.replace(/(\w+):\s*([^}]+)(?=[}])/g, '$1: $2');
   
   // Fix malformed array syntax
   fixed = fixed.replace(/\[\s*([^\]]+)\s*\]/g, '[$1]');
@@ -41,7 +40,7 @@ function fixSyntaxErrors(content) {
   fixed = fixed.replace(/\]\s*\[/g, '], [');
   
   // Fix broken string literals
-  fixed = fixed.replace(/'([^']*)\s*'/g, "'$1'");
+  fixed = fixed.replace(/'([^']*)\s*'/g, '$1'");
   
   return fixed;
 }
@@ -55,7 +54,6 @@ function processFile(filePath) {
     if (content !== fixed) {
       fs.writeFileSync(filePath, fixed, 'utf8');
       console.log(`Fixed: ${filePath}`);
-=======
 import { execSync } from 'child_process';
 
 // Function to fix common syntax errors in files
@@ -70,7 +68,7 @@ function fixSyntaxErrors(filePath) {
       match => {
         if (!match.endsWith(';')) {
           modified = true;
-          return match + ';';
+          return match + ';
         }
         return match;
       }
@@ -96,7 +94,7 @@ function fixSyntaxErrors(filePath) {
       match => {
         if (!match.endsWith(';')) {
           modified = true;
-          return match + ';';
+          return match + ';
         }
         return match;
       }
@@ -161,21 +159,15 @@ function fixSyntaxErrors(filePath) {
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed syntax errors in: ${filePath}`);
->>>>>>> main
       return true;
     }
     return false;
   } catch (error) {
-<<<<<<< HEAD
     console.error(`Error processing ${filePath}:`, error.message);
-=======
-    console.error(`Error fixing ${filePath}:`, error.message);
->>>>>>> main
-    return false;
+<<<<<<< HEAD    return false;
   }
 }
 
-<<<<<<< HEAD
 // Function to recursively find and process files
 function processDirectory(dirPath) {
   const files = fs.readdirSync(dirPath);
@@ -202,7 +194,6 @@ const srcDir = path.join(__dirname, 'src');
 console.log('Starting syntax error fixes...');
 const totalFixed = processDirectory(srcDir);
 console.log(`Fixed ${totalFixed} files`);
-=======
 // Function to find all TypeScript and JavaScript files
 function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
   let files = [];
@@ -268,4 +259,3 @@ if (import.meta.url === `file://${process.argv[1]}`) {
 }
 
 export { fixSyntaxErrors, findFiles };
->>>>>>> main

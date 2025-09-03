@@ -10,14 +10,14 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_MODE: 'true',
-      },
+        AUTOMATION_MODE: 'true',;
+},
       log_file: './automation/logs/error-orchestrator.log',
       error_file: './automation/logs/error-orchestrator-error.log',
       out_file: './automation/logs/error-orchestrator-out.log',
       merge_logs: true,
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
-    },
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',;
+},
 
     // Comprehensive Error Fixer - Runs every 2 hours;
     {
@@ -36,8 +36,8 @@ module.exports = {
       error_file: './automation/logs/comprehensive-error-fixer-error.log',
       out_file: './automation/logs/comprehensive-error-fixer-out.log',
       merge_logs: true,
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
-    },
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',;
+},
 
     // TypeScript Error Fixer - Runs every 30 minutes;
     {
@@ -56,8 +56,8 @@ module.exports = {
       error_file: './automation/logs/typescript-error-fixer-error.log',
       out_file: './automation/logs/typescript-error-fixer-out.log',
       merge_logs: true,
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
-    },
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',;
+},
 
     // Build Error Monitor - Runs every hour;
     {
@@ -76,8 +76,8 @@ module.exports = {
       error_file: './automation/logs/build-error-monitor-error.log',
       out_file: './automation/logs/build-error-monitor-out.log',
       merge_logs: true,
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
-    },
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',;
+},
 
     // Import/Export Fixer - Runs every 15 minutes;
     {
@@ -96,8 +96,8 @@ module.exports = {
       error_file: './automation/logs/import-export-fixer-error.log',
       out_file: './automation/logs/import-export-fixer-out.log',
       merge_logs: true,
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
-    },
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',;
+},
 
     // Enhanced Error Detector - runs every 10 minutes (HIGHEST PRIORITY)
     {
@@ -116,8 +116,8 @@ module.exports = {
       error_file: './automation/logs/enhanced-error-detector-error.log',
       out_file: './automation/logs/enhanced-error-detector-out.log',
       merge_logs: true,
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
-    },
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',;
+},
 
     // Main application;
     {
@@ -131,13 +131,13 @@ module.exports = {
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
-        PORT: 3000,
-      },
+        PORT: 3000,;
+},
       env_production: {
         NODE_ENV: 'production',
-        PORT: 3000,
-      },
-    },
+        PORT: 3000,;
+},;
+},
   ],
 
   deploy: {
@@ -150,7 +150,7 @@ module.exports = {
       'pre-deploy-local': '',
       'post-deploy':
         'npm install && pm2 reload ecosystem-error-automation.config.cjs',
-      'pre-setup': '',
-    },
-  },
+      'pre-setup': '',;
+},;
+},;
 };

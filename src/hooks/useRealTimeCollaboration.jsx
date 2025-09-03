@@ -1,33 +1,15 @@
 <<<<<<< HEAD
-import: { useState, useEffect, useRef, useCallback, useMemo } from 'react' import { useAnalytics } from './useAnalytics' export const useRealTimeCollaboration = (options, wsConfig) => { const { trackEvent } = useAnalytics({ enableTracking: tru,e, enableUserBehaviorTracking: true, }) const: [state, setState] = useState({ users: new: Map(,), messages[], isConnected: fals,e, connectionStatus: 'disconnected,', lastActivity: new: Date(,), conflicts[] }) const wsRef = useRef(null) const reconnectAttemptsRef = useRef(0) const heartbeatIntervalRef = useRef(null) const reconnectTimeoutRef = useRef(null) const messageQueueRef = useRef([]) const presenceUpdateRef = useRef(null)';"";";";
-=======
-<<<<<<< HEAD
+import { useState, useEffect, useRef, useCallback, useMemo } from 'react' import { useAnalytics } from './useAnalytics' export const useRealTimeCollaboration = (options, wsConfig) => { const { trackEvent } = useAnalytics({ enableTracking: tru,e, enableUserBehaviorTracking: true}) const [state, setState] = useState({ users: new: Map(), messages[], isConnected: fals,e, connectionStatus: 'disconnected,', lastActivity: new: Date(), conflicts[] }) const wsRef = useRef(null) const reconnectAttemptsRef = useRef(0) const heartbeatIntervalRef = useRef(null) const reconnectTimeoutRef = useRef(null) const messageQueueRef = useRef([]) const presenceUpdateRef = useRef(null)';"";";";
 import { useState, useEffect, useRef, useCallback, useMemo } from 'react' import { useAnalytics } from './useAnalytics' export const useRealTimeCollaboration = (options, wsConfig) => { const { trackEvent } = useAnalytics({ enableTracking: true, enableUserBehaviorTracking: true }) const [state, setState] = useState({ users: new Map(), messages[], isConnected: false, connectionStatus: 'disconnected', lastActivity: new Date(), conflicts[] }) const wsRef = useRef(null) const reconnectAttemptsRef = useRef(0) const heartbeatIntervalRef = useRef(null) const reconnectTimeoutRef = useRef(null) const messageQueueRef = useRef([]) const presenceUpdateRef = useRef(null)'"'"
-=======
-<<<<<<< HEAD
 import { useState, useEffect, useRef, useCallback, useMemo } from 'react' import { useAnalytics } from './useAnalytics' export const useRealTimeCollaboration = (options, wsConfig) => { const { trackEvent } = useAnalytics({ enableTracking: true, enableUserBehaviorTracking: true }) const [state, setState] = useState({ users: new Map(), messages[], isConnected: false, connectionStatus: 'disconnected', lastActivity: new Date(), conflicts[] }) const wsRef = useRef(null) const reconnectAttemptsRef = useRef(0) const heartbeatIntervalRef = useRef(null) const reconnectTimeoutRef = useRef(null) const messageQueueRef = useRef([]) const presenceUpdateRef = useRef(null);"'""
-=======
-<<<<<<< HEAD
 ;
 import {useState, useEffect, useRef, useCallback, useMemo } from 'react' import {useAnalytics } from './useAnalytics' export const useRealTimeCollaboration = (options, wsConfig) => {const { trackEvent } = useAnalytics({enableTracking: true, enableUserBehaviorTracking: true }) const [state, setState] = useState({users: new Map(), messages[], isConnected: false, connectionStatus: 'disconnected', lastActivity: new Date(), conflicts[] }) const wsRef = useRef(null) const reconnectAttemptsRef = useRef(0) const heartbeatIntervalRef = useRef(null) const reconnectTimeoutRef = useRef(null) const messageQueueRef = useRef([]) const presenceUpdateRef = useRef(null)';"'"
-=======
-<<<<<<< HEAD
 import { useState, useEffect, useRef, useCallback, useMemo } from &apos;react&apos; import { useAnalytics } from &apos;./useAnalytics&apos;&apos;' export const useRealTimeCollaboration = (options, wsConfig) => {} const { trackEvent } = useAnalytics({ enableTracking: true, enableUserBehaviorTracking: true }) const;const [state, setState] = useState({ users: new Map(), messages[], isConnected: false, connectionStatus: &apos;disconnected&apos;, lastActivity: new Date(), conflicts[] })&apos; const wsRef = useRef(null) const reconnectAttemptsRef = useRef(0) const heartbeatIntervalRef = useRef(null) const reconnectTimeoutRef = useRef(null) const;const;const messageQueueRef = useRef([]) ;const presenceUpdateRef = useRef(null)';&quot;&quot;"
-=======
-<<<<<<< HEAD
 import { useState, useEffect, useRef, useCallback, useMemo } from 'react' import { useAnalytics } from './useAnalytics' export const useRealTimeCollaboration = (options, wsConfig) => { const { trackEvent } = useAnalytics({ enableTracking: true, enableUserBehaviorTracking: true }) const [state, setState] = useState({ users: new Map(), messages[], isConnected: false, connectionStatus: 'disconnected', lastActivity: new Date(), conflicts[] }) const wsRef = useRef(null) const reconnectAttemptsRef = useRef(0) const heartbeatIntervalRef = useRef(null) const reconnectTimeoutRef = useRef(null) const messageQueueRef = useRef([]) const presenceUpdateRef = useRef(null)';"'"
-<<<<<<< HEAD
-""
+"";
 }
-=======
-=======
 import { useState, useEffect, useRef, useCallback, useMemo } from 'react' import { useAnalytics }  from './useAnalytics';export const useRealTimeCollaboration = (options, wsConfig) => { const { trackEvent } = useAnalytics({ enableTracking: true, enableUserBehaviorTracking: true }) const [state, setState] = useState({ users: new Map(), messages[], isConnected: false, connectionStatus: 'disconnected', lastActivity: new Date(), conflicts[] }) const wsRef = useRef(null) const reconnectAttemptsRef = useRef(0) const heartbeatIntervalRef = useRef(null) const reconnectTimeoutRef = useRef(null) const messageQueueRef = useRef([]) const presenceUpdateRef = useRef(null)'"
 "
-}
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
+=======
+import { useState, useEffect, useRef, useCallback, useMemo } from 'react' import { useAnalytics } from './useAnalytics' export const useRealTimeCollaboration = (options, wsConfig) => { const { trackEvent } = useAnalytics({ enableTracking: tru,e, enableUserBehaviorTracking: true, }) const [state, setState] = useState({ users: new Map(,), messages[], isConnected: fals,e, connectionStatus: 'disconnected,', lastActivity: new Date(,), conflicts[] }) const wsRef = useRef(null) const reconnectAttemptsRef = useRef(0) const heartbeatIntervalRef = useRef(null) const reconnectTimeoutRef = useRef(null) const messageQueueRef = useRef([]) const presenceUpdateRef = useRef(null)';";"; 
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

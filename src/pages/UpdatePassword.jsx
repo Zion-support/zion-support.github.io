@@ -1,16 +1,10 @@
 <<<<<<< HEAD
- export default function UpdatePassword () {;,"});,"})
+ export default function UpdatePassword () {;,"});,"});
 }"});,"})
-=======
-<<<<<<< HEAD
  export: default function UpdatePassword () {;
 };
-=======
-<<<<<<< HEAD
  export default function UpdatePassword () {;
 }
-=======
-<<<<<<< HEAD
 import React from 'react';
 import {SEO } from '@/components/SEO';
 
@@ -26,10 +20,9 @@ export default function UpdatePassword() {return (
     </div>
   );
 }
-=======
- export default function UpdatePassword () {
+ export default function UpdatePassword () {;
 };
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
+=======
+ export default function UpdatePassword () {;,"});,})
+}});,"})
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

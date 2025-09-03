@@ -36,8 +36,8 @@ class LintAutomationManager {
       this.log(`🔍 Running ESLint...`);
       const result = execSync('npm run lint', { 
         encoding: 'utf8',
-        stdio: 'pipe'
-      });
+        stdio: 'pipe';
+});
       this.log(`✅ Lint completed successfully`);
       return { success: true, output: result };
     } catch (error) { 
@@ -51,8 +51,8 @@ class LintAutomationManager {
       this.log(`🔧 Attempting to fix lint errors...`);
       const result = execSync('npm run lint -- --fix', { 
         encoding: 'utf8',
-        stdio: 'pipe'
-      });
+        stdio: 'pipe';
+});
       this.log(`✅ Lint errors fixed successfully`);
       return { success: true, output: result };
     } catch (error) { 
@@ -94,8 +94,8 @@ class LintAutomationManager {
     try {
       const result = execSync(`npx eslint "${filePath}" --fix`, { 
         encoding: `utf8`,
-        stdio: `pipe`
-      });
+        stdio: `pipe`;
+});
       this.log(`✅ Fixed issues in: ${filePath}`);
     } catch (error) { 
       this.log(`❌ Issues found in ${filePath }: ${error.stdout || error.message}`);

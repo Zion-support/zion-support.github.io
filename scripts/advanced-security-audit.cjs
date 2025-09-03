@@ -32,8 +32,8 @@ class AdvancedSecurityAudit {
       const result = execSync('npm audit --json', {
         cwd: this.projectRoot,
         encoding: 'utf8',
-        timeout: 60000,
-      });
+        timeout: 60000,;
+});
 
       const auditData = JSON.parse(result);
 
@@ -44,14 +44,14 @@ class AdvancedSecurityAudit {
       return {
         success: true,
         vulnerabilities: auditData.vulnerabilities?.total || 0,
-        data: auditData,
-      };
+        data: auditData,;
+};
     } catch (error) {
       this.log(`❌ Dependencies audit failed: ${error.message}`);
       return {
         success: false,
-        error: error.message,
-      };
+        error: error.message,;
+};
     }
   }
 
@@ -62,39 +62,39 @@ class AdvancedSecurityAudit {
       {
         pattern: /eval\s*\(/g,
         severity: 'high',
-        message: 'Use of eval() detected',
-      },
+        message: 'Use of eval() detected',;
+},
       {
         pattern: /innerHTML\s*=/g,
         severity: 'medium',
-        message: 'Direct innerHTML assignment detected',
-      },
+        message: 'Direct innerHTML assignment detected',;
+},
       {
         pattern: /document\.write/g,
         severity: 'medium',
-        message: 'Use of document.write detected',
-      },
+        message: 'Use of document.write detected',;
+},
       {
         pattern: /localStorage\.setItem/g,
         severity: 'low',
-        message: 'localStorage usage detected',
-      },
+        message: 'localStorage usage detected',;
+},
       {
         pattern: /sessionStorage\.setItem/g,
         severity: 'low',
-        message: 'sessionStorage usage detected',
-      },
+        message: 'sessionStorage usage detected',;
+},
       {
         pattern: /password.*=.*['"]/g,
         severity: 'high',
-        message: 'Potential hardcoded password',
-      },
+        message: 'Potential hardcoded password',;
+},
       {
         pattern: /api[_-]?key.*=.*['"]/g,
         severity: 'high',
-        message: 'Potential hardcoded API key',
-      },
-    ];
+        message: 'Potential hardcoded API key',;
+},
+    ]
 
     const issues = [];
     const files = this.getAllFiles(this.projectRoot, [
@@ -115,13 +115,13 @@ class AdvancedSecurityAudit {
               file: path.relative(this.projectRoot, file),
               severity: check.severity,
               message: check.message,
-              matches: matches.length,
-            });
+              matches: matches.length,;
+});
           }
         }
       } catch (error) {
-        // Skip files that can't be read
-      }
+        // Skip files that can't be read;
+}
     }
 
     this.log(`📊 Code security check: ${issues.length} issues found`);
@@ -129,8 +129,8 @@ class AdvancedSecurityAudit {
     return {
       success: true,
       issues: issues,
-      totalIssues: issues.length,
-    };
+      totalIssues: issues.length,;
+};
   }
 
   async checkEnvironmentVariables() {
@@ -141,7 +141,7 @@ class AdvancedSecurityAudit {
       '.env.local',
       '.env.production',
       '.env.development',
-    ];
+    ]
     const issues = [];
 
     for (const envFile of envFiles) {
@@ -165,15 +165,15 @@ class AdvancedSecurityAudit {
                   issues.push({
                     file: envFile,
                     key: key.trim(),
-                    message: 'Potential sensitive environment variable',
-                  });
+                    message: 'Potential sensitive environment variable',;
+});
                 }
               }
             }
           }
         } catch (error) {
-          // Skip files that can't be read
-        }
+          // Skip files that can't be read;
+}
       }
     }
 
@@ -184,8 +184,8 @@ class AdvancedSecurityAudit {
     return {
       success: true,
       issues: issues,
-      totalIssues: issues.length,
-    };
+      totalIssues: issues.length,;
+};
   }
 
   async checkFilePermissions() {
@@ -197,7 +197,7 @@ class AdvancedSecurityAudit {
       '.env',
       '.env.local',
       '.env.production',
-    ];
+    ]
 
     const issues = [];
 
@@ -214,12 +214,12 @@ class AdvancedSecurityAudit {
             issues.push({
               file: file,
               permissions: permissions,
-              message: 'File is world-readable',
-            });
+              message: 'File is world-readable',;
+});
           }
         } catch (error) {
-          // Skip files that can't be accessed
-        }
+          // Skip files that can't be accessed;
+}
       }
     }
 
@@ -228,8 +228,8 @@ class AdvancedSecurityAudit {
     return {
       success: true,
       issues: issues,
-      totalIssues: issues.length,
-    };
+      totalIssues: issues.length,;
+};
   }
 
   getAllFiles(dir, extensions = []) {
@@ -258,8 +258,8 @@ class AdvancedSecurityAudit {
         }
       }
     } catch (error) {
-      // Skip directories that can't be read
-    }
+      // Skip directories that can't be read;
+}
 
     return files;
   }
@@ -273,8 +273,8 @@ class AdvancedSecurityAudit {
       codeSecurity: await this.checkCodeSecurity(),
       environmentVariables: await this.checkEnvironmentVariables(),
       filePermissions: await this.checkFilePermissions(),
-      recommendations: [],
-    };
+      recommendations: [],;
+};
 
     // Generate recommendations
     if (
@@ -284,8 +284,8 @@ class AdvancedSecurityAudit {
       report.recommendations.push({
         type: 'dependencies',
         message: `${report.dependencies.vulnerabilities} vulnerabilities found in dependencies`,
-        action: 'Run npm audit fix to resolve vulnerabilities',
-      });
+        action: 'Run npm audit fix to resolve vulnerabilities',;
+});
     }
 
     const highSeverityIssues = report.codeSecurity.issues.filter(
@@ -295,8 +295,8 @@ class AdvancedSecurityAudit {
       report.recommendations.push({
         type: 'code',
         message: `${highSeverityIssues.length} high severity security issues found`,
-        action: 'Review and fix high severity security issues in code',
-      });
+        action: 'Review and fix high severity security issues in code',;
+});
     }
 
     if (report.environmentVariables.totalIssues > 0) {
@@ -304,8 +304,8 @@ class AdvancedSecurityAudit {
         type: 'environment',
         message: `${report.environmentVariables.totalIssues} potential sensitive environment variables found`,
         action:
-          'Review environment variables and ensure sensitive data is properly secured',
-      });
+          'Review environment variables and ensure sensitive data is properly secured',;
+});
     }
 
     const reportPath = path.join(

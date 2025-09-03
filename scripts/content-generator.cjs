@@ -35,8 +35,8 @@ class ContentGenerator {
       
       console.log('✅ Content generation completed successfully!');
       this.saveReport();
-      
-    } catch (error) {
+      ;
+} catch (error) {
       console.error('❌ Error generating content:', error);
     }
   }
@@ -83,8 +83,8 @@ Transform your business with cutting-edge artificial intelligence solutions.
 ## Get Started Today
 
 Ready to leverage AI for your business? Contact us for a free consultation.
-        `
-      },
+        `;
+},
       'it-services': {
         title: 'IT Services',
         description: 'Complete IT solutions for digital transformation',
@@ -123,8 +123,8 @@ Comprehensive IT services to drive your digital transformation.
 ## Ready to Transform Your IT?
 
 Contact us today for a free IT assessment.
-        `
-      }
+        `;
+}
     };
 
     for (const [serviceType, template] of Object.entries(serviceTemplates)) {
@@ -174,8 +174,8 @@ Comprehensive technology solutions designed for enterprise-scale organizations.
 ## Get Your Enterprise Solution
 
 Schedule a consultation with our enterprise team.
-        `
-      }
+        `;
+}
     };
 
     for (const [solutionType, template] of Object.entries(solutionTemplates)) {
@@ -216,8 +216,8 @@ Modernize your business processes and systems.
 ## Get Started Today
 
 Ready to transform your business? Contact us now.
-        `
-      }
+        `;
+}
     };
 
     for (const [pageType, template] of Object.entries(landingTemplates)) {
@@ -230,8 +230,8 @@ Ready to transform your business? Contact us now.
       timestamp: new Date().toISOString(),
       generatedContent: Object.fromEntries(this.generatedContent),
       totalPages: this.generatedContent.size,
-      placeholderPages: this.placeholderPages.length
-    };
+      placeholderPages: this.placeholderPages.length;
+};
 
     const reportPath = path.join(this.projectRoot, 'content-generation-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));

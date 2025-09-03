@@ -5,40 +5,40 @@
     "dependencyFix": {
       "success": true,
       "duration": 18468,
-      "errors": []
-    },
+      "errors": [];
+},
     "typescriptFix": {
       "success": true,
       "duration": 1050,
-      "errors": []
-    },
+      "errors": [];
+},
     "healthCheck": {
       "success": true,
       "duration": 1276,
-      "errors": []
-    },
+      "errors": [];
+},
     "securityScan": {
       "success": true,
       "duration": 213,
-      "errors": []
-    },
+      "errors": [];
+},
     "performanceOptimize": {
       "success": true,
       "duration": 643,
-      "errors": []
-    },
+      "errors": [];
+},
     "buildTest": {
       "success": false,
       "duration": 715,
       "errors": [
         "Command failed: yarn build"
       ]
-    }
+}
   },
   "summary": {
     "totalPhases": 6,
     "successfulPhases": 5,
     "failedPhases": 1,
-    "overallSuccess": false
-  }
+    "overallSuccess": false;
+}
 }

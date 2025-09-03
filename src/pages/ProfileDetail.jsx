@@ -1,16 +1,10 @@
 <<<<<<< HEAD
- export default function ProfileDetail () {;,"});,"})
+ export default function ProfileDetail () {;,"});,"});
 }"});,"})
-=======
-<<<<<<< HEAD
  export: default function ProfileDetail () {;
 };
-=======
-<<<<<<< HEAD
  export default function ProfileDetail () {;
 }
-=======
-<<<<<<< HEAD
 import React from 'react';
 import {SEO } from '@/components/SEO';
 
@@ -26,10 +20,9 @@ export default function ProfileDetail() {return (
     </div>
   );
 }
-=======
- export default function ProfileDetail () {
+ export default function ProfileDetail () {;
 };
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
+=======
+ export default function ProfileDetail () {;,"});,})
+}});,"})
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

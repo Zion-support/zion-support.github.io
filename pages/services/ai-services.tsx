@@ -11,19 +11,19 @@ const AIServicesPage: NextPage = () => {
   const benefits = [
     {
       icon: <Brain className="w-8 h-8" />, title: 'Advanced AI',
-      description: 'Cutting-edge machine learning and AI technologies to solve complex business problems.'
-    }, {
+      description: 'Cutting-edge machine learning and AI technologies to solve complex business problems.';
+}, {
       icon: <Zap className="w-8 h-8" />,
-      title: 'Rapid Implementation', description: 'Quick deployment of AI solutions with proven methodologies and best practices.'
-    },
+      title: 'Rapid Implementation', description: 'Quick deployment of AI solutions with proven methodologies and best practices.';
+},
     {
       icon: <Users className="w-8 h-8" />, title: 'Expert Team',
-      description: 'AI specialists with deep expertise in machine learning and data science.'
-    }, {
+      description: 'AI specialists with deep expertise in machine learning and data science.';
+}, {
       icon: <Shield className="w-8 h-8" />,
-      title: 'Scalable Solutions', description: 'AI solutions that grow with your business and adapt to changing needs.'
-    }
-  ];
+      title: 'Scalable Solutions', description: 'AI solutions that grow with your business and adapt to changing needs.';
+}
+  ]
 
   return (
     <MainLayout

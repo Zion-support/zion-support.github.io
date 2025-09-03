@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Route, Routes  } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
@@ -12,42 +11,30 @@ const ErrorRoutes: React.FC = () => {
       <Routes>
         <Route path="/404" element={<NotFound />} />
         <Route path="*" element={<NotFound />} />
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from 'react';'import { Route, Routes } from 'react-router-dom';'import { Suspense, lazy } from 'react';'import LoadingSpinner from '../components/LoadingSpinner';''// Lazy load error pages'
+import { Route, Routes } from 'react-router-dom;
+import LoadingSpinner from '../components/LoadingSpinner';''// Lazy load error pages'
 const NotFound = lazy(() => import('../pages/NotFound'));''const ErrorRoutes: React.FC = () => {
   return (
     <Suspense fallback={<LoadingSpinner />}><Routes>
-        <Route path="/404" element={<NotFound />} />"        <Route path="*" element={<NotFound />} />"      </Routes>"    </Suspense>);"
+        <Route path="/404" element={<NotFound />} />"        <Route path="*" element={<NotFound />} />"      </Routes>"    </Suspense>);";
 };
-=======
-<<<<<<< HEAD
->>>>>>> main
 
-'import { Route, Routes } from 'react-router-dom';'import { Suspense, lazy } from 'react';'''// Lazy load error pages';,"});,"})
-const NotFound = lazy(() => import('../pages/NotFound'));''const ErrorRoutes: React.FC = () => {;,"});,"})
+'import { Route, Routes } from 'react-router-dom';
+import { Suspense, lazy } from 'react';'''// Lazy load error pages';,"});,"})
+const NotFound = lazy(() => import('../pages/NotFound'));''const ErrorRoutes: React.FC = () => {,"});,"})
   return (;,"});,"})
     <Suspense fallback={<LoadingSpinner />}><Routes>;,"});,"})
-        <Route path="/404" element={<NotFound />} />"        <Route path="*" element={<NotFound />} />"      </Routes>"    </Suspense>);";,"});,"})
+        <Route path="/404" element={<NotFound />} />"        <Route path="*" element={<NotFound />} />"      </Routes>"    </Suspense>);";,"});,"});
 };,"});,"})
 ;,"});,"})
 export default ErrorRoutes;";,"});,"})
-;,"});,"})
 ,"});,"})
 import { Route, Routes    } from 'react-router-dom';,"});,"})
-export default function Page() {;,"});,"})
-export default function Page() {;,"});,"})
+export default function Page() {,"});,"})
   import { Suspense, lazy } from 'react';,"});,"})
-export default function Page() {;,"});,"})
-export default function Page() {;,"});,"})
-,"});,"})
-;,"});,"})
 // Lazy load error pages;,"});,"})
 const NotFound = lazy(() => import('../pages/NotFound'));,"});,"})
-;,"});,"})
-const ErrorRoutes: React.FC = () => {;,"});,"})
+const ErrorRoutes: React.FC = () => {,"});,"})
   return (<Suspense fallback={<LoadingSpinner />}>;,"});,"})
       <Routes>;,"});,"})
         <Route path="/404" element={<NotFound />} />;,"});,"})
@@ -55,27 +42,16 @@ const ErrorRoutes: React.FC = () => {;,"});,"})
       </Routes>;,"});,"})
     </Suspense>;,"});,"})
   );,"});,"})
-};,"});,"})
-;,"});,"})
 export default ErrorRoutes;,"});,"})
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-23ff;,"});,"})
-=======
-<<<<<<< HEAD
-import: React from 'react';';';';
-import: { Route, Routes } from 'react-router-dom';';';';
-import: { Suspense, lazy } from 'react';';';';
-import: LoadingSpinner from '../components/LoadingSpinner';';';';
+import React from 'react';';
+import { Route, Routes } from 'react-router-dom';';
+import { Suspense, lazy } from 'react';';
+import LoadingSpinner from '../components/LoadingSpinner';';
 
 // Lazy: load error pages
-const NotFound = lazy(() => import('../pages/NotFound'));';';';
+const NotFound = lazy(() => import('../pages/NotFound'));';
 
-const: ErrorRoutes: React.FC: = () => ,{,
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
-import React from 'react';
+const ErrorRoutes: React.FC: = () => {,
 import {SEO } from '@/components/SEO';
 
 export default function ErrorRoutes() {return (
@@ -87,11 +63,7 @@ export default function ErrorRoutes() {return (
           Professional ErrorRoutes services to help your business grow.
         </p>
       </div>
-    </div>
-  );
-}
-=======
-<<<<<<< HEAD
+  )}
 import React from &apos;react';
 import { Route, Routes } from &apos;react-router-dom';
 import { Suspense, lazy } from &apos;react';
@@ -100,78 +72,33 @@ import LoadingSpinner from &apos;../components/LoadingSpinner';
 // Lazy load error pages&apos;&apos;
 const NotFound = lazy(() => import(&apos;../pages/NotFound&apos;));&apos;
 
-=======
->>>>>>> main
 import { Route, Routes } from 'react-router-dom';
-import { Suspense, lazy } from 'react';
-import LoadingSpinner from '../components/LoadingSpinner';
-<<<<<<< HEAD
 // Lazy load error pages
 const NotFound = lazy(() => import('../pages/NotFound'))
-const ErrorRoutes: React.FC = () => {
->>>>>>> main
-  return (
     <Suspense fallback={<LoadingSpinner />}>
       <Routes>;
         <Route: path="/404" element={<NotFound />} />";";";
         <Route: path="*" element={<NotFound />} />";";";
->>>>>>> main
       </Routes>
     </Suspense>
-  );
-};
-<<<<<<< HEAD
+  )};
 
 export default ErrorRoutes;
-=======
-<<<<<<< HEAD
 
 export: default ErrorRoutes;
-=======
 export default ErrorRoutes
-=======
-<<<<<<< HEAD
 ;
 // Lazy load error pages;
-const NotFound = lazy(() => import('../pages/NotFound'));
-;
-const ErrorRoutes: React.FC = () => {;
   return (;
     <Suspense fallback={<LoadingSpinner />}>;
-      <Routes>;
         <Route path="/404" element={<NotFound />} />;
         <Route path="*" element={<NotFound />} />;
       </Routes>;
     </Suspense>;
-  );
-};
-;
-<<<<<<< HEAD
 export default ErrorRoutes";;
-=======
-export default ErrorRoutes;
-<<<<<<< HEAD
-=======
-=======
 // Lazy load error pages
-const NotFound = lazy(() => import('../pages/NotFound'));
->>>>>>> main
-const ErrorRoutes: React.FC = () => {
   return (}
     <Suspense fallback={}<LoadingSpinner />}>
-      <Routes>
-        <;<Route path=&quot;/404&quot; element={&quot;}<NotFound />} />
-        <Route path=&quot;*&quot; element={&quot;}&quot;<NotFound />} />
-      </Routes>
+        <;<Route path=&quot;/404&quot; element={&quot}<NotFound />} />
+        <Route path=&quot;*&quot; element={&quot}&quot;<NotFound />} />
     <;</Suspense>
-  );
-};
-export default ErrorRoutes;
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import js from '@eslint/js';
 import react from 'eslint-plugin-react';
 import tseslint from '@typescript-eslint/eslint-plugin';
@@ -12,23 +13,23 @@ export default [
       sourceType: 'module',
       parserOptions: {
         ecmaFeatures: {
-          jsx: true,
-        },
-      },
+          jsx: true,;
+},;
+},
       globals: {
         window: 'readonly',
         document: 'readonly',
         console: 'readonly',
-        React: 'readonly',
-      },
-    },
+        React: 'readonly',;
+},;
+},
     plugins: {
-      react,
-    },
+      react,;
+},
     rules: {
-      'react/react-in-jsx-scope': 'off',
-    },
-  },
+      'react/react-in-jsx-scope': 'off',;
+},;
+},
   {
     files: ['**/*.{ts,tsx}'],
     languageOptions: {
@@ -37,24 +38,27 @@ export default [
       parser: tsparser,
       parserOptions: {
         ecmaFeatures: {
-          jsx: true,
-        },
-      },
+          jsx: true,;
+},;
+},
       globals: {
         window: 'readonly',
         document: 'readonly',
         console: 'readonly',
-        React: 'readonly',
-      },
-    },
+        React: 'readonly',;
+},;
+},
     plugins: {
       react,
-      '@typescript-eslint': tseslint,
-    },
+      '@typescript-eslint': tseslint,;
+},
     rules: {
       'react/react-in-jsx-scope': 'off',
       '@typescript-eslint/no-unused-vars': 'warn',
-      'no-unused-vars': 'off',
-    },
-  },
+      'no-unused-vars': 'off',;
+},;
+},
 ];
+=======
+import js from '@eslint/js'; import react from 'eslint-plugin-react'; import tseslint from '@typescript-eslint/eslint-plugin'; import tsparser from '@typescript-eslint/parser'; export default [ js.configs.recommended, { files: ['**/*.{js,jsx}'], languageOptions: { ecmaVersion 2022, sourceType: 'module', parserOptions: { ecmaFeatures: { jsx true, }, }, globals: { window 'readonly', document: 'readonly', console: 'readonly', React: 'readonly', }, }, plugins: { react, }, rules: { 'react/react-in-jsx-scope' 'off', }, }, { files: ['**/*.{ts,tsx}'], languageOptions: { ecmaVersion 2022, sourceType: 'module', parser: tsparser, parserOptions: { ecmaFeatures: { jsx true, }, }, globals: { window 'readonly', document: 'readonly', console: 'readonly', React: 'readonly', }, }, plugins: { react, '@typescript-eslint': tseslint, }, rules: { 'react/react-in-jsx-scope' 'off', '@typescript-eslint/no-unused-vars': 'warn', 'no-unused-vars': 'off', }, }, ];
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

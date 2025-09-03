@@ -31,8 +31,8 @@ class AutomationLauncher {
       const process = spawn(`node`, [scriptPath], {
         stdio: 'pipe',
         detached: false,
-        ...options,
-      });
+        ...options,;
+});
 
       process.stdout.on(`data`, data => {
         this.log(`[${name}] ${data.toString().trim()}`);
@@ -69,27 +69,27 @@ class AutomationLauncher {
       {
         name: 'intelligent-orchestrator',
         script: 'intelligent-orchestrator.cjs',
-        args: ['continuous'],
-      },
+        args: ['continuous'],;
+},
       {
         name: 'automation-dashboard',
         script: 'automation-dashboard.cjs',
-        args: ['start'],
-      },
+        args: ['start'],;
+},
       { name: 'lint-monitor', script: 'lint-monitor.cjs', args: ['start'] },
       { name: 'code-quality', script: 'code-quality-monitor.cjs' },
       { name: 'performance', script: 'performance-optimizer.cjs' },
       { name: 'security-scanner', script: 'security-scanner.cjs' },
       { name: 'seo-optimizer', script: 'seo-optimizer.cjs' },
       { name: 'test-generator', script: `test-generator.cjs` },
-    ];
+    ]
 
     for (const system of systems) {
       const scriptPath = path.join(__dirname, system.script);
       if (fs.existsSync(scriptPath)) {
         await this.startSystem(system.name, scriptPath, {
-          args: system.args || [],
-        });
+          args: system.args || [],;
+});
 
         // Add delay between starts;
         await this.sleep(2000);
@@ -117,8 +117,8 @@ class AutomationLauncher {
     const status = {
       running: this.processes.size,
       systems: Array.from(this.processes.keys()),
-      totalSystems: this.processes.size,
-    };
+      totalSystems: this.processes.size,;
+};
 
     this.log(`📊 Status: ${status.running} systems running`);
     this.log(`📊 Systems: ${status.systems.join(', ')}`);
@@ -145,8 +145,8 @@ class AutomationLauncher {
       timestamp: new Date().toISOString(),
       runningSystems: Array.from(this.processes.keys()),
       totalSystems: this.processes.size,
-      uptime: this.getUptime(),
-    };
+      uptime: this.getUptime(),;
+};
 
     const reportPath = path.join(__dirname, `logs`, `automation-report.json`);
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));

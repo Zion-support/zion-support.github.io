@@ -1,17 +1,14 @@
-<<<<<<< HEAD
 #!/''usr/bin/env'' node;
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require(`path`);
 
 console.log(``🎯 Starting comprehensive code quality automation...`);
-=======
 #!/'usr/bin/env' node;
 
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
 ;
 console.log(`'🎯 Starting comprehensive code quality automation...');
 ;
@@ -22,27 +19,19 @@ const AUTOMATION_INTERVAL =;
 async function runCodeQualityAutomation() {;
   try {;
     console.log(`🎯 Running code quality automation at ${new Date().toISOString()}';
-=======
 
 console.log(`🎯 Starting comprehensive code quality automation...`);
->>>>>>> main
 
 // Get automation interval from environment variable (default: 20 minutes)
 const AUTOMATION_INTERVAL =
   parseInt(process.env.AUTOMATION_INTERVAL) || 1200000; // 20 minutes;
 async function runCodeQualityAutomation() {
   try {
-<<<<<<< HEAD
     console.log(`🎯 Running code quality automation at ${new Date().toISOString()}`
-=======
-    console.log(`🎯 Running code quality automation at ${new Date().toISOString()}`);
->>>>>>> main
->>>>>>> main
-    );
+<<<<<<< HEAD    );
 ;
     let totalImprovements = 0;
     let qualityScore = 0;
-<<<<<<< HEAD
 
     // 1. Code formatting and style;
     console.log(``🎨 Improving code formatting and style...`);
@@ -54,16 +43,12 @@ async function runCodeQualityAutomation() {
     const importImprovements = await organizeImports();
     totalImprovements += importImprovements;
 
-=======
-<<<<<<< HEAD
 ;
     // 1. Code formatting and style;
     console.log(`'🎨 Improving code formatting and style...');
-=======
 `);
     // 1. Code formatting and style`);
     console.log(`🎨 Improving code formatting and style...`);
->>>>>>> main
     const formattingImprovements = await improveCodeFormatting();
     totalImprovements += formattingImprovements;
 ;
@@ -72,48 +57,32 @@ async function runCodeQualityAutomation() {
     const importImprovements = await organizeImports();
     totalImprovements += importImprovements;
 ;
->>>>>>> main
     // 3. Code structure optimization;
     console.log('🏗️ Optimizing code structure...');
     const structureImprovements = await optimizeCodeStructure();
     totalImprovements += structureImprovements;
-<<<<<<< HEAD
 
-=======
-;
->>>>>>> main
-    // 4. Performance optimizations;
+<<<<<<< HEAD    // 4. Performance optimizations;
     console.log('⚡ Optimizing performance...');
     const performanceImprovements = await optimizePerformance();
     totalImprovements += performanceImprovements;
-<<<<<<< HEAD
 
-=======
 ;
->>>>>>> main
     // 5. Security improvements;
     console.log('🔒 Improving security...');
     const securityImprovements = await improveSecurity();
     totalImprovements += securityImprovements;
-<<<<<<< HEAD
 
-=======
-;
->>>>>>> main
-    // 6. Accessibility improvements;
+<<<<<<< HEAD    // 6. Accessibility improvements;
     console.log('♿ Improving accessibility...');
     const accessibilityImprovements = await improveAccessibility();
     totalImprovements += accessibilityImprovements;
-<<<<<<< HEAD
 
-=======
 ;
->>>>>>> main
     // 7. Test coverage improvements;
     console.log('🧪 Improving test coverage...');
     const testImprovements = await improveTestCoverage();
     totalImprovements += testImprovements;
-<<<<<<< HEAD
 
     // 8. Documentation improvements;
     console.log(`📚 Improving documentation...`);
@@ -142,9 +111,7 @@ async function runCodeQualityAutomation() {
         security: securityImprovements,
         accessibility: accessibilityImprovements,
         testing: testImprovements,
-        documentation: docImprovements,
-      },
-    };
+        documentation: docImprovements}};
 
     const reportPath = path.join(
       process.cwd(),code-quality-automation-report.json`
@@ -154,76 +121,31 @@ async function runCodeQualityAutomation() {
     console.log(✅ Code quality automation completed successfully - Made ${totalImprovements} improvements, Quality Score: ${qualityScore}/100`
     `);
   } catch (error) {  
-    console.error(`❌ Code quality automation failed:', error.message);
+    console.error(`❌ Code quality automation failed: ', error.message);
     }
-=======
-;
-    // 8. Documentation improvements;
-    console.log('📚 Improving documentation...');
-    const docImprovements = await improveDocumentation();
-    totalImprovements += docImprovements;
-;
-    // Calculate quality score;
-    qualityScore = Math.min(100, Math.max(0, 50 + totalImprovements * 2));
-;
-    // Run final quality assessment;
-    console.log('🔍 Running final quality assessment...');
-    await runQualityAssessment();
-;
-    // Generate comprehensive quality report;
-    const report = {;
-      timestamp: new Date().toISOString(),;
-      totalImprovements,;
-      qualityScore,;
-      summary: Code quality automation completed - Made ${totalImprovements} improvements, Quality Score: ${qualityScore}/100,;
-      status: 'completed',;
-      details: {;
-        formatting: formattingImprovements,;
-        imports: importImprovements,;
-        structure: structureImprovements,;
-        performance: performanceImprovements,;
-        security: securityImprovements,;
-        accessibility: accessibilityImprovements,;
-        testing: testImprovements,;
-        documentation: docImprovements,;
-      },;
-    };
-;
-    const reportPath = path.join(;
-      process.cwd(),code-quality-automation-report.json';
-    );
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));console.log(✅ Code quality automation report saved to ${reportPath}');
-;
-    console.log(✅ Code quality automation completed successfully - Made ${totalImprovements} improvements, Quality Score: ${qualityScore}/100';
-    `);
-  } catch (error) {;
-    console.error('❌ Code quality automation failed:', error.message);
-  }
->>>>>>> main
-}
+<<<<<<< HEAD}
 ;
 async function improveCodeFormatting() {;
   let improvements = 0;
-<<<<<<< HEAD
 
   try {
     // Run Prettier if available;
     try {
-      execSync('npx prettier --write "src/**/*.{js,jsx,ts,tsx}"', {
-        stdio: 'pipe',
+<<<<<<< HEAD
+      execSync('npx prettier --write "src/**/*.{js,jsx,ts,tsx}", {
 =======
+      execSync('npx prettier --write "src/**/*.{js,jsx,ts,tsx}', {
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
+        stdio: 'pipe',
 ;
   try {;
     // Run Prettier if available;
     try {;
-      execSync('npx prettier --write "src/**/*.{js,jsx,ts,tsx}"', {;
+      execSync('npx prettier --write "src/**/*.{js,jsx,ts,tsx}", {;
         stdio: 'pipe',;
->>>>>>> main
       });
       improvements += 5;
-<<<<<<< HEAD
       console.log(`'  ✅ Applied Prettier formatting');
-<<<<<<< HEAD
     } catch (error) {  
       console.log(`'  ⚠️  Prettier not available, using manual formatting');
       }
@@ -240,16 +162,18 @@ async function improveCodeFormatting() {;
               f.endsWith('.tsx') ||
               f.endsWith('.ts') ||
               f.endsWith('.js') ||
-              f.endsWith('.jsx')
-=======
-    } catch (error) {;
+<<<<<<< HEAD
+              f.endsWith('.jsx');
+} catch (error) {;
       console.log(`'  ⚠️  Prettier not available, using manual formatting');
-=======
       console.log(`  ✅ Applied Prettier formatting`);
     } catch (error) {
       console.log(`  ⚠️  Prettier not available, using manual formatting`);
->>>>>>> main
     }
+=======
+              f.endsWith('.jsx')
+<<<<<<< HEAD    }
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
 ;
     // Fix common formatting issues manually;
     const filesToFormat = [''src/components'', ''src/pages'', ''src/utils'', ''src/services'', '];
@@ -264,7 +188,6 @@ async function improveCodeFormatting() {;
               f.endsWith('.ts') ||;
               f.endsWith('.js') ||;
               f.endsWith('.jsx');
->>>>>>> main
           );
 ;
         for (const file of files) {;
@@ -272,7 +195,6 @@ async function improveCodeFormatting() {;
           try {;
             let content = fs.readFileSync(filePath', 'utf8');
             let modified = false;
-<<<<<<< HEAD
 
             // Fix common formatting issues;
             // Remove extra blank lines;
@@ -294,7 +216,6 @@ async function improveCodeFormatting() {;
           } catch (error) {  
             // Skip files that can`t be read;
             }
-=======
 ;
             // Fix common formatting issues;
             // Remove extra blank lines;
@@ -316,7 +237,6 @@ async function improveCodeFormatting() {;
           } catch (error) {;
             // Skip files that can't be read;
           }
->>>>>>> main
         }
       }
     }
@@ -330,7 +250,6 @@ async function improveCodeFormatting() {;
 ;
 async function organizeImports() {;
   let improvements = 0;
-<<<<<<< HEAD
 
   try {
     const filesToOrganize = [```src/components'''', '''src/pages''', '''src/utils'''', '''src/services''', ''];
@@ -345,23 +264,7 @@ async function organizeImports() {;
               f.endsWith('.ts') ||
               f.endsWith('.js') ||
               f.endsWith('.jsx')
-=======
-;
-  try {;
-    const filesToOrganize = [''src/components'', ''src/pages'', ''src/utils'', ''src/services'', '];
-;
-    for (const dir of filesToOrganize) {;
-      if (fs.existsSync(dir)) {;
-        const files = fs;
-          .readdirSync(dir);
-          .filter(;
-            f =>;
-              f.endsWith('.tsx') ||;
-              f.endsWith('.ts') ||;
-              f.endsWith('.js') ||;
-              f.endsWith('.jsx');
->>>>>>> main
-          );
+<<<<<<< HEAD          );
 ;
         for (const file of files) {;
           const filePath = path.join(dir, 'file);
@@ -372,7 +275,6 @@ async function organizeImports() {;
             const lines = content.split('\n');
             const importLines = [];
             const otherLines = [];
-<<<<<<< HEAD
 
             // Separate imports from other code;
             lines.forEach(line => {
@@ -380,7 +282,6 @@ async function organizeImports() {;
                 line.trim().startsWith('import ') ||
                 line.trim().startsWith('export ')
               ) {
-=======
 ;
             // Separate imports from other code;
             lines.forEach(line => {;
@@ -388,13 +289,11 @@ async function organizeImports() {;
                 line.trim().startsWith('import ') ||;
                 line.trim().startsWith('export ');
               ) {;
->>>>>>> main
                 importLines.push(line);
               } else {;
                 otherLines.push(line);
               }
             });
-<<<<<<< HEAD
 
             // Sort imports;
             importLines.sort((a, b) => {
@@ -406,26 +305,12 @@ async function organizeImports() {;
               if (a.includes('@') && !b.includes('@')) return -1;
               if (!a.includes('@') && b.includes('@')) return 1;
 
-=======
-;
-            // Sort imports;
-            importLines.sort((a, b) => {;
-              // React imports first;
-              if (a.includes('react') && !b.includes('react')) return -1;
-              if (!a.includes('react') && b.includes('react')) return 1;
-;
-              // Third-party libraries;
-              if (a.includes('@') && !b.includes('@')) return -1;
-              if (!a.includes('@') && b.includes('@')) return 1;
-;
->>>>>>> main
-              // Relative imports last;
+<<<<<<< HEAD              // Relative imports last;
               if (a.startsWith('.') && !b.startsWith('.')) return 1;
               if (!a.startsWith('.') && b.startsWith('.')) return -1;
 ;
               return a.localeCompare(b);
             });
-<<<<<<< HEAD
 
             // Reconstruct file with organized imports;
             const newContent = ['...importLines', '', '...otherLines'].join('\n`);
@@ -437,7 +322,6 @@ async function organizeImports() {;
           } catch (error) {  
             // Skip files that can`t be read;
             }
-=======
 ;
             // Reconstruct file with organized imports;
             const newContent = ['...importLines', ', '...otherLines'].join('\n');
@@ -449,7 +333,6 @@ async function organizeImports() {;
           } catch (error) {;
             // Skip files that can't be read;
           }
->>>>>>> main
         }
       }
     }
@@ -463,7 +346,6 @@ async function organizeImports() {;
 ;
 async function optimizeCodeStructure() {;
   let improvements = 0;
-<<<<<<< HEAD
 
   try {
     const filesToOptimize = [```src/components`'', '''src/pages''', '''src/utils'''];
@@ -472,24 +354,13 @@ async function optimizeCodeStructure() {;
       if (fs.existsSync(dir)) {
         const files = fs;
           .readdirSync(dir)
-=======
-;
-  try {;
-    const filesToOptimize = [''src/components'', ''src/pages'', ''src/utils''];
-;
-    for (const dir of filesToOptimize) {;
-      if (fs.existsSync(dir)) {;
-        const files = fs;
-          .readdirSync(dir);
->>>>>>> main
-          .filter(f => f.endsWith('.tsx') || f.endsWith('.ts'));
+<<<<<<< HEAD          .filter(f => f.endsWith('.tsx') || f.endsWith('.ts'));
 ;
         for (const file of files) {;
           const filePath = path.join(dir, 'file);
           try {;
             let content = fs.readFileSync(filePath', 'utf8');
             let modified = false;
-<<<<<<< HEAD
 
             // Remove unused variables and functions;
             const lines = content.split('\n');
@@ -498,7 +369,6 @@ async function optimizeCodeStructure() {;
               if (
                 line.trim().match(/^(const|let|var)\s+\w+\s*=\s*[^;]+;?\s*$/)
               ) {
-=======
 ;
             // Remove unused variables and functions;
             const lines = content.split('\n');
@@ -507,7 +377,6 @@ async function optimizeCodeStructure() {;
               if (;
                 line.trim().match(/^(const|let|var)\s+\w+\s*=\s*[^;]+;?\s*$/);
               ) {;
->>>>>>> main
                 const varName = line.match(/(const|let|var)\s+(\w+)/)?.[2];
                 if (;
                   varName &&;
@@ -524,7 +393,6 @@ async function optimizeCodeStructure() {;
               content = filteredLines.join('\n');
               modified = true;
             }
-<<<<<<< HEAD
 
             // Optimize component structure;
             if (file.endsWith('.tsx')) {
@@ -543,27 +411,7 @@ async function optimizeCodeStructure() {;
           } catch (error) {  
             // Skip files that can`t be read;
             }
-=======
-;
-            // Optimize component structure;
-            if (file.endsWith('.tsx')) {;
-              // Move hooks to top of component;
-              const hookPattern = /(use[A-Z][a-zA-Z]*)\s*\(/g;
-              if (hookPattern.test(content)) {;
-                // This is a basic optimization - in practice, you'd want more sophisticated analysis;
-                modified = true;
-              }
-            }
-;
-            if (modified) {;
-              fs.writeFileSync(filePath, content, 'utf8');
-              improvements++;
-            }
-          } catch (error) {;
-            // Skip files that can't be read;
-          }
->>>>>>> main
-        }
+<<<<<<< HEAD        }
       }
     }
 console.log(`  ✅ Optimized structure in ${improvements} files`);
@@ -575,7 +423,6 @@ console.log(`  ✅ Optimized structure in ${improvements} files`);
 ;
 async function optimizePerformance() {;
   let improvements = 0;
-<<<<<<< HEAD
 
   try {
     const filesToOptimize = [```src/components`'', '''src/pages''', '''src/utils'''];
@@ -584,7 +431,6 @@ async function optimizePerformance() {;
       if (fs.existsSync(dir)) {
         const files = fs;
           .readdirSync(dir)
-=======
 ;
   try {;
     const filesToOptimize = [''src/components'', ''src/pages'', ''src/utils''];
@@ -593,7 +439,6 @@ async function optimizePerformance() {;
       if (fs.existsSync(dir)) {;
         const files = fs;
           .readdirSync(dir);
->>>>>>> main
           .filter(f => f.endsWith('.tsx') || f.endsWith('.ts'));
 ;
         for (const file of files) {;
@@ -601,7 +446,6 @@ async function optimizePerformance() {;
           try {;
             let content = fs.readFileSync(filePath', 'utf8');
             let modified = false;
-<<<<<<< HEAD
 
             // Add React.memo for components;
             if (
@@ -611,25 +455,13 @@ async function optimizePerformance() {;
             ) {
               content = content.replace(
                 /export default function (\w+)/,export default React.memo(function $1'
-=======
-;
-            // Add React.memo for components;
-            if (;
-              file.endsWith('.tsx') &&;
-              content.includes('export default function') &&;
-              !content.includes('React.memo');
-            ) {;
-              content = content.replace(;
-                /export default function (\w+)/,export default React.memo(function $1';
->>>>>>> main
-              );
+<<<<<<< HEAD              );
               content = content.replace(;
                 /function (\w+)\(/g,;
                 'const $1 = React.memo(({';
               );
               modified = true;
             }
-<<<<<<< HEAD
 
             // Add useCallback for event handlers;
             if (
@@ -662,7 +494,6 @@ async function optimizePerformance() {;
           } catch (error) {  
             // Skip files that can`t be read;
             }
-=======
 ;
             // Add useCallback for event handlers;
             if (;
@@ -695,7 +526,6 @@ async function optimizePerformance() {;
           } catch (error) {;
             // Skip files that can't be read;
           }
->>>>>>> main
         }
       }
     }
@@ -708,7 +538,6 @@ console.log(`  ✅ Applied ${improvements} performance optimizations`);
 ;
 async function improveSecurity() {;
   let improvements = 0;
-<<<<<<< HEAD
 
   try {
     const filesToSecure = [```src/utils`'', '''src/services''', '''src/components'''];
@@ -717,36 +546,23 @@ async function improveSecurity() {;
       if (fs.existsSync(dir)) {
         const files = fs;
           .readdirSync(dir)
-=======
-;
-  try {;
-    const filesToSecure = [''src/utils'', ''src/services'', ''src/components''];
-;
-    for (const dir of filesToSecure) {;
-      if (fs.existsSync(dir)) {;
-        const files = fs;
-          .readdirSync(dir);
->>>>>>> main
-          .filter(f => f.endsWith('.js') || f.endsWith('.ts'));
+<<<<<<< HEAD          .filter(f => f.endsWith('.js') || f.endsWith('.ts'));
 ;
         for (const file of files) {;
           const filePath = path.join(dir, 'file);
           try {;
             let content = fs.readFileSync(filePath', 'utf8');
             let modified = false;
-<<<<<<< HEAD
 
             // Fix prototype pollution;
             if (content.includes('.hasOwnProperty(')) {
               content = content.replace(
                 /\.hasOwnProperty\(/g,Object.prototype.hasOwnProperty.call('
-=======
 ;
             // Fix prototype pollution;
             if (content.includes('.hasOwnProperty(')) {;
               content = content.replace(;
                 /\.hasOwnProperty\(/g,Object.prototype.hasOwnProperty.call(';
->>>>>>> main
               );
               modified = true;
             }
@@ -758,7 +574,6 @@ async function improveSecurity() {;
               );
               modified = true;
             }
-<<<<<<< HEAD
 
             // Fix innerHTML usage;
             if (content.includes('.innerHTML')) {
@@ -773,23 +588,7 @@ async function improveSecurity() {;
           } catch (error) {  
             // Skip files that can`t be read;
             }
-=======
-;
-            // Fix innerHTML usage;
-            if (content.includes('.innerHTML')) {;
-              content = content.replace(/\.innerHTML\s*=/g, '.textContent =');
-              modified = true;
-            }
-;
-            if (modified) {;
-              fs.writeFileSync(filePath, content, 'utf8');
-              improvements++;
-            }
-          } catch (error) {;
-            // Skip files that can't be read;
-          }
->>>>>>> main
-        }
+<<<<<<< HEAD        }
       }
     }
 console.log(`  ✅ Applied ${improvements} security improvements`);
@@ -801,21 +600,18 @@ console.log(`  ✅ Applied ${improvements} security improvements`);
 ;
 async function improveAccessibility() {;
   let improvements = 0;
-<<<<<<< HEAD
 
   try {
     const filesToImprove = [```src/components`'', '''src/pages'''];
 
     for (const dir of filesToImprove) {
       if (fs.existsSync(dir)) {
-=======
 ;
   try {;
     const filesToImprove = [''src/components'', ''src/pages''];
 ;
     for (const dir of filesToImprove) {;
       if (fs.existsSync(dir)) {;
->>>>>>> main
         const files = fs.readdirSync(dir).filter(f => f.endsWith('.tsx'));
 ;
         for (const file of files) {;
@@ -823,11 +619,10 @@ async function improveAccessibility() {;
           try {;
             let content = fs.readFileSync(filePath', 'utf8');
             let modified = false;
-<<<<<<< HEAD
 
             // Add missing alt attributes to images;
             if (content.includes('<img') && !content.includes('alt=')) {
-              content = content.replace(/<img\s+/g, '<img alt="Image" ');
+              content = content.replace(/<img\s+/g, '<img alt=Image" ');
               modified = true;
             }
 
@@ -860,45 +655,7 @@ async function improveAccessibility() {;
           } catch (error) {  
             // Skip files that can`t be read;
             }
-=======
-;
-            // Add missing alt attributes to images;
-            if (content.includes('<img') && !content.includes('alt=')) {;
-              content = content.replace(/<img\s+/g, '<img alt="Image" ');
-              modified = true;
-            }
-;
-            // Add missing aria-labels to interactive elements;
-            if (;
-              content.includes('<button') &&;
-              !content.includes('aria-label=') &&;
-              !content.includes('aria-labelledby=');
-            ) {;
-              content = content.replace(;
-                /<button\s+/g,<button aria-label='Button" ';
-              );
-              modified = true;
-            }
-;
-            // Add missing role attributes;
-            if (;
-              content.includes('<div') &&;
-              content.includes('onClick') &&;
-              !content.includes('role=');
-            ) {;
-              content = content.replace(/<div\s+/g, '<div role="button" ');
-              modified = true;
-            }
-;
-            if (modified) {;
-              fs.writeFileSync(filePath, content, 'utf8');
-              improvements++;
-            }
-          } catch (error) {;
-            // Skip files that can't be read;
-          }
->>>>>>> main
-        }
+<<<<<<< HEAD        }
       }
     }
 console.log(`  ✅ Applied ${improvements} accessibility improvements`);
@@ -910,7 +667,6 @@ console.log(`  ✅ Applied ${improvements} accessibility improvements`);
 ;
 async function improveTestCoverage() {;
   let improvements = 0;
-<<<<<<< HEAD
 
   try {
     // Check if test files exist and create basic tests if missing;
@@ -927,7 +683,6 @@ async function improveTestCoverage() {;
 
           if (!fs.existsSync(testFilePath)) {
             try {
-=======
 ;
   try {;
     // Check if test files exist and create basic tests if missing;
@@ -944,20 +699,13 @@ async function improveTestCoverage() {;
 ;
           if (!fs.existsSync(testFilePath)) {;
             try {;
->>>>>>> main
               const testContent = generateBasicTest(componentName);
               fs.writeFileSync(testFilePath`, testContent, `utf8`);
               improvements++;console.log(`    ✅ Created test file for ${componentName}`);
-<<<<<<< HEAD
             } catch (error) {  
               // Skip if can`t create test file;
               }
-=======
-            } catch (error) {;
-              // Skip if can't create test file;
-            }
->>>>>>> main
-          }
+<<<<<<< HEAD          }
         }
       }
     }
@@ -967,7 +715,6 @@ console.log(`  ✅ Created ${improvements} test files`);
 ;
   return improvements;
 }
-<<<<<<< HEAD
 
 function generateBasicTest(componentName) {return `import React from `react`;
 import { render, screen } from '@testing-'`library/react```;
@@ -975,7 +722,6 @@ import ${componentName} from `./${componentName}`;
 
 describe(`${componentName}`, () => {
   it(`renders without crashing`, () => {
-=======
 ;
 function generateBasicTest(componentName) {return `import React from 'react';
 import { render, screen } from '@testing-'library/react'';
@@ -983,26 +729,19 @@ import ${componentName} from './${componentName}';
 ;
 describe('${componentName}', () => {;
   it('renders without crashing', () => {;
->>>>>>> main
     render(<${componentName} />);
     expect(screen.getByRole(`main`) || screen.getByText(/.*/)).toBeInTheDocument();
   });
-<<<<<<< HEAD
 
   it(`displays expected content`, () => {
-=======
-;
-  it('displays expected content', () => {;
->>>>>>> main
-    render(<${componentName} />);
+<<<<<<< HEAD    render(<${componentName} />);
     // Add specific test assertions based on component content;
   });
-});;
+});
 }
 ;
 async function improveDocumentation() {;
   let improvements = 0;
-<<<<<<< HEAD
 
   try {
     const filesToDocument = [```src/components`'', '''src/utils''', '''src/services'''];
@@ -1013,7 +752,6 @@ async function improveDocumentation() {;
           .readdirSync(dir)
           .filter(
             f => f.endsWith('.ts') || f.endsWith('.tsx') || f.endsWith('.js')
-=======
 ;
   try {;
     const filesToDocument = [''src/components'', ''src/utils'', ''src/services''];
@@ -1024,7 +762,6 @@ async function improveDocumentation() {;
           .readdirSync(dir);
           .filter(;
             f => f.endsWith('.ts') || f.endsWith('.tsx') || f.endsWith('.js');
->>>>>>> main
           );
 ;
         for (const file of files) {;
@@ -1032,12 +769,8 @@ async function improveDocumentation() {;
           try {;
             let content = fs.readFileSync(filePath', 'utf8');
             let modified = false;
-<<<<<<< HEAD
 
-=======
-;
->>>>>>> main
-            // Add JSDoc comments to functions;
+<<<<<<< HEAD            // Add JSDoc comments to functions;
             const functionPattern = /(function\s+\w+\s*\([^)]*\)\s*\{)/g;
             if (functionPattern.test(content) && !content.includes('/**')) {;
               content = content.replace(;
@@ -1045,7 +778,6 @@ async function improveDocumentation() {;
               );
               modified = true;
             }
-<<<<<<< HEAD
 
             // Add component documentation;
             if (
@@ -1057,7 +789,6 @@ async function improveDocumentation() {;
               const docComment = `/**
  * ${componentName} Component;
  * 
-=======
 ;
             // Add component documentation;
             if (;
@@ -1069,7 +800,6 @@ async function improveDocumentation() {;
               const docComment = '/**;
  * ${componentName} Component;
  * ;
->>>>>>> main
  * @description ${componentName} component for the application;
  * @param {Object} props - Component props;
  * @returns {JSX.Element} Rendered component;
@@ -1077,7 +807,6 @@ async function improveDocumentation() {;
               content = docComment + content;
               modified = true;
             }
-<<<<<<< HEAD
 
             if (modified) {
               fs.writeFileSync(filePath, content, `utf8`);
@@ -1086,17 +815,7 @@ async function improveDocumentation() {;
           } catch (error) {  
             // Skip files that can`t be read;
             }
-=======
-;
-            if (modified) {;
-              fs.writeFileSync(filePath, content, 'utf8');
-              improvements++;
-            }
-          } catch (error) {;
-            // Skip files that can't be read;
-          }
->>>>>>> main
-        }
+<<<<<<< HEAD        }
       }
     }
 ;
@@ -1106,7 +825,6 @@ async function improveDocumentation() {;
 ;
   return improvements;
 }
-<<<<<<< HEAD
 ;
 async function runQualityAssessment() {;
   try {;
@@ -1116,11 +834,9 @@ async function runQualityAssessment() {;
     const loc = countLinesOfCode('src');console.log(`    📊 Lines of code: ${loc});
 ;
     // Count test files;
-=======
 
 async function runQualityAssessment() {
   try {
-<<<<<<< HEAD
     console.log(``  🔍 Running code quality metrics...`);
 
     // Count lines of code;
@@ -1148,14 +864,12 @@ async function runQualityAssessment() {
       console.log(`    ⚠️  Type checking has issues`);
       }
   } catch (error) {  console.log(    ⚠️  Quality assessment failed: ${error.message  });
-=======
     console.log(`  🔍 Running code quality metrics...`);
 
     // Count lines of code
     const loc = countLinesOfCode('src');console.log(`    📊 Lines of code: ${loc});`);
 `);
     // Count test files`);
->>>>>>> main
     const testFiles = countTestFiles('src');console.log(    🧪 Test files: ${testFiles}``);
 ;
     // Check for common issues;
@@ -1164,31 +878,21 @@ async function runQualityAssessment() {
     // Run linting;
     try {;
       execSync('npm run lint', { stdio: 'pipe' });
-<<<<<<< HEAD
       console.log(`'    ✅ Linting passed');
     } catch (error) {;
       console.log(`'    ⚠️  Linting has issues');
-=======
-      console.log(`    ✅ Linting passed`);
-    } catch (error) {
-      console.log(`    ⚠️  Linting has issues`);
->>>>>>> main
-    }
+<<<<<<< HEAD    }
 ;
     // Run type checking;
     try {;
       execSync('npm run type-check', { stdio: 'pipe' });
-<<<<<<< HEAD
       console.log(`'    ✅ Type checking passed');
     } catch (error) {;
-=======
       console.log(`    ✅ Type checking passed`);
     } catch (error) {
->>>>>>> main
       console.log('    ⚠️  Type checking has issues');
     }
   } catch (error) {console.log(    ⚠️  Quality assessment failed: ${error.message});
->>>>>>> main
   }
 }
 ;
@@ -1204,7 +908,6 @@ function countLinesOfCode(dir) {;
 ;
       if (stat.isDirectory()) {;
         count += countLinesOfCode(fullPath);
-<<<<<<< HEAD
       } else if (
         item.endsWith(`.ts`) ||
         item.endsWith(`.tsx`) ||
@@ -1222,9 +925,9 @@ function countLinesOfCode(dir) {;
   } catch (error) {  
     // Skip directories that can't be accessed;
     }
-
-=======
-      } else if (;
+<<<<<<< HEAD
+;
+} else if (;
         item.endsWith('.ts') ||;
         item.endsWith('.tsx') ||;
         item.endsWith('.js') ||;
@@ -1242,8 +945,11 @@ function countLinesOfCode(dir) {;
     // Skip directories that can't be accessed;
   }
 ;
->>>>>>> main
   return count;
+=======
+
+<<<<<<< HEAD  return count;
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
 }
 ;
 function countTestFiles(dir) {;
@@ -1262,23 +968,19 @@ function countTestFiles(dir) {;
         count++;
       }
     }
-<<<<<<< HEAD
   } catch (error) {  
     // Skip directories that can't be accessed;
     }
-
-=======
-  } catch (error) {;
+;
+} catch (error) {;
     // Skip directories that can't be accessed;
   }
 ;
->>>>>>> main
   return count;
 }
 ;
 async function checkCommonIssues() {;
   let issues = 0;
-<<<<<<< HEAD
 
   try {
     // Check for console statements;
@@ -1296,26 +998,7 @@ async function checkCommonIssues() {;
     // Skip if check fails;
     }
 
-=======
-;
-  try {;
-    // Check for console statements;
-    const consoleFiles = findFilesWithPattern('src', 'console.');
-    issues += consoleFiles.length;
-;
-    // Check for TODO comments;
-    const todoFiles = findFilesWithPattern('src', 'TODO');
-    issues += todoFiles.length;
-;
-    // Check for FIXME comments;
-    const fixmeFiles = findFilesWithPattern('src', 'FIXME');
-    issues += fixmeFiles.length;
-  } catch (error) {;
-    // Skip if check fails;
-  }
-;
->>>>>>> main
-  return issues;
+<<<<<<< HEAD  return issues;
 }
 ;
 function findFilesWithPattern(dir, pattern) {;
@@ -1330,7 +1013,6 @@ function findFilesWithPattern(dir, pattern) {;
 ;
       if (stat.isDirectory()) {;
         files.push(...findFilesWithPattern(fullPath', pattern));
-<<<<<<< HEAD
       } else if (
         item.endsWith('.ts') ||
         item.endsWith('.tsx') ||
@@ -1374,7 +1056,6 @@ async function runContinuous() {
 // Handle graceful shutdown;
 process.on(`SIGINT`, () => {
   console.log(`🛑 Received SIGINT, shutting down gracefully...');
-=======
       } else if (;
         item.endsWith('.ts') ||;
         item.endsWith('.tsx') ||;
@@ -1418,7 +1099,6 @@ async function runContinuous() {;
 // Handle graceful shutdown;
 process.on('SIGINT', () => {;
   console.log('🛑 Received SIGINT, shutting down gracefully...');
->>>>>>> main
   process.exit(0);
 });
 ;
@@ -1426,15 +1106,8 @@ process.on('SIGTERM', () => {;
   console.log('🛑 Received SIGTERM, shutting down gracefully...');
   process.exit(0);
 });
-<<<<<<< HEAD
 
 // Start the code quality automation;
 runContinuous().catch(error => {
-=======
-;
-// Start the code quality automation;
-runContinuous().catch(error => {;
->>>>>>> main
-  console.error('❌ Failed to start code quality automation:', error);
-  process.exit(1);
+  console.error('❌ Failed to start code quality automation: ', error);  process.exit(1);
 });

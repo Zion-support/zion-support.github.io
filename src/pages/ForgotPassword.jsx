@@ -1,16 +1,10 @@
 <<<<<<< HEAD
- export default function ForgotPassword () {;,"});,"})
+ export default function ForgotPassword () {;,"});,"});
 }"});,"})
-=======
-<<<<<<< HEAD
  export: default function ForgotPassword () {;
 };
-=======
-<<<<<<< HEAD
  export default function ForgotPassword () {;
 }
-=======
-<<<<<<< HEAD
 import React from 'react';
 import {SEO } from '@/components/SEO';
 
@@ -26,10 +20,9 @@ export default function ForgotPassword() {return (
     </div>
   );
 }
-=======
- export default function ForgotPassword () {
+ export default function ForgotPassword () {;
 };
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
+=======
+ export default function ForgotPassword () {;,"});,})
+}});,"})
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

@@ -30,7 +30,7 @@ class SecurityScanner {
       /api[_-]?key\s*[:=]\s*['"][^'"]+['"]/gi,
       /secret\s*[:=]\s*['"][^'"]+['"]/gi,
       /token\s*[:=]\s*['"][^'"]+['"]/gi
-    ];
+    ]
     
     const files = this.findSourceFiles();
     
@@ -45,8 +45,8 @@ class SecurityScanner {
           }
         }
       } catch (error) {
-        // Skip files that can't be read
-      }
+        // Skip files that can't be read;
+}
     }
     
     console.log('✅ Secret scanning completed');
@@ -102,8 +102,8 @@ class SecurityScanner {
             this.recommendations.push(`Review ${file} for production-ready configuration`);
           }
         } catch (error) {
-          // Skip files that can't be read
-        }
+          // Skip files that can't be read;
+}
       }
     }
     

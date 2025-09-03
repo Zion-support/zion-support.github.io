@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 #!/''usr/bin/env'' node;
-=======
 #!/'usr/bin/env' node;
 
->>>>>>> main
 const { execSync, spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -14,22 +11,13 @@ class ESLintErrorFixer {;
     this.logFile = path.join(;
       this.projectRoot,'automation/logs/eslint-error-fixer.log';
     );
-<<<<<<< HEAD
     this.errorLogFile = path.join(
       this.projectRoot,
       ''automation/logs/eslint-error-fixer-error.log''`
     );
     this.reportFile = path.join(
       this.projectRoot,eslint-error-fixer-report.json`
-=======
-    this.errorLogFile = path.join(;
-      this.projectRoot,;
-      'automation/logs/eslint-error-fixer-error.log'';
-    );
-    this.reportFile = path.join(;
-      this.projectRoot,eslint-error-fixer-report.json';
->>>>>>> main
-    );
+<<<<<<< HEAD    );
 ;
     this.ensureLogsDirectory();
 ;
@@ -47,29 +35,20 @@ class ESLintErrorFixer {;
       fs.mkdirSync(logsDir, { recursive: true });
     }
   }
-<<<<<<< HEAD
 
   log(message, type = `info`) {
-=======
 ;
   log(message, type = 'info') {;
->>>>>>> main
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}\n`;
 ;
     fs.appendFileSync(this.logFile, logMessage);
-<<<<<<< HEAD
 
     if (type === `error`) {
-=======
-;
-    if (type === 'error') {;
->>>>>>> main
-      fs.appendFileSync(this.errorLogFile, logMessage);
+<<<<<<< HEAD      fs.appendFileSync(this.errorLogFile, logMessage);
     }
 console.log(`[${type.toUpperCase()}] ${message}`);
   }
-<<<<<<< HEAD
 
   async runCommand(command, options = {}) {
     return new Promise((resolve, reject) => {
@@ -77,14 +56,12 @@ console.log(`[${type.toUpperCase()}] ${message}`);
         stdio: `pipe`,
         shell: true,
         cwd: this.projectRoot,
-        ...options,
-      });
+        ...options});
 
       let stdout = ``;
       let stderr = '';
 
       child.stdout.on('data', data => {
-=======
 ;
   async runCommand(command, options = {}) {;
     return new Promise((resolve, reject) => {;
@@ -99,7 +76,6 @@ console.log(`[${type.toUpperCase()}] ${message}`);
       let stderr = ';
 ;
       child.stdout.on('data', data => {;
->>>>>>> main
         stdout += data.toString();
       });
 ;
@@ -123,18 +99,11 @@ console.log(`[${type.toUpperCase()}] ${message}`);
 ;
   async detectESLintErrors() {;
     this.log('Detecting ESLint errors...');
-<<<<<<< HEAD
 
     try {
       const result = await this.runCommand('npm', { args: ['run', `lint`] });
       this.log(`No ESLint errors detected`);
-=======
-;
-    try {;
-      const result = await this.runCommand('npm', { args: ['run', 'lint'] });
-      this.log('No ESLint errors detected');
->>>>>>> main
-      return [];
+<<<<<<< HEAD      return [];
     } catch (error) {  this.log(`ESLint errors detected: ${error.stderr  }`, `error`);
       return this.parseESLintErrors(error.stderr);
     }
@@ -142,21 +111,17 @@ console.log(`[${type.toUpperCase()}] ${message}`);
 ;
   parseESLintErrors(stderr) {;
     const errors = [];
-<<<<<<< HEAD
     const lines = stderr.split(`\n`);
 
     for (const line of lines) {
       if (line.includes('error')) {
-=======
     const lines = stderr.split('\n');
 ;
     for (const line of lines) {;
       if (line.includes('error')) {;
->>>>>>> main
         const match = line.match(/(.+\.(jsx?|tsx?)):(\d+):(\d+)/);
         if (match) {;
           const ruleMatch = line.match(/error\s+([^\s]+)/);
-<<<<<<< HEAD
           errors.push({
             file: match[1],
             line: parseInt(match[3]),
@@ -164,16 +129,7 @@ console.log(`[${type.toUpperCase()}] ${message}`);
             message: line.split(` - `)[1] || line,
             rule: ruleMatch ? ruleMatch[1] : null,
             type: `eslint`,
-=======
-          errors.push({;
-            file: match[1],;
-            line: parseInt(match[3]),;
-            column: parseInt(match[4]),;
-            message: line.split(' - ')[1] || line,;
-            rule: ruleMatch ? ruleMatch[1] : null,;
-            type: 'eslint',;
->>>>>>> main
-          });
+<<<<<<< HEAD          });
         }
       }
     }
@@ -182,7 +138,6 @@ console.log(`[${type.toUpperCase()}] ${message}`);
   }
 ;
   async fixESLintErrors(errors) {this.log(`Fixing ${errors.length} ESLint errors...`);
-<<<<<<< HEAD
 
     // First try auto-fix;
     try {
@@ -206,7 +161,6 @@ console.log(`[${type.toUpperCase()}] ${message}`);
     // Apply manual fixes for remaining errors;
     for (const error of errors) {
       try {
-=======
 ;
     // First try auto-fix;
     try {;
@@ -230,7 +184,6 @@ console.log(`[${type.toUpperCase()}] ${message}`);
     // Apply manual fixes for remaining errors;
     for (const error of errors) {;
       try {;
->>>>>>> main
         await this.fixESLintError(error);
         this.fixes.applied.push({;
           error,;
@@ -245,7 +198,6 @@ console.log(`[${type.toUpperCase()}] ${message}`);
       }
     }
   }
-<<<<<<< HEAD
 
   async fixESLintError(error) {
     if (!fs.existsSync(error.file)) {this.log(`File not found: ${error.file}`, `warn`);
@@ -260,23 +212,7 @@ console.log(`[${type.toUpperCase()}] ${message}`);
       error.rule === 'no-unused-vars' ||
       error.message.includes('unused variable')
     ) {
-=======
-;
-  async fixESLintError(error) {;
-    if (!fs.existsSync(error.file)) {this.log(`File not found: ${error.file}`, 'warn');
-      return;
-    }
-;
-    const content = fs.readFileSync(error.file, 'utf8');
-    const lines = content.split('\n');
-;
-    // Handle different ESLint error types;
-    if (;
-      error.rule === 'no-unused-vars' ||;
-      error.message.includes('unused variable');
-    ) {;
->>>>>>> main
-      await this.fixUnusedVariableError(error, lines);
+<<<<<<< HEAD      await this.fixUnusedVariableError(error, lines);
     } else if (;
       error.rule === 'semi' ||;
       error.message.includes('missing semicolon');
@@ -291,17 +227,14 @@ console.log(`[${type.toUpperCase()}] ${message}`);
       error.message.includes('console');
     ) {;
       await this.fixConsoleError(error, lines);
-<<<<<<< HEAD
     } else if (
       error.rule === 'prefer-const' ||
       error.message.includes('prefer const`)
-    ) {
-=======
-    } else if (;
+    ) {;
+} else if (;
       error.rule === 'prefer-const' ||;
       error.message.includes('prefer const');
     ) {;
->>>>>>> main
       await this.fixPreferConstError(error, lines);
     } else {;
       await this.fixGenericESLintError(error, lines);
@@ -312,28 +245,19 @@ console.log(`[${type.toUpperCase()}] ${message}`);
     if (error.line > lines.length) return;
 ;
     const targetLine = lines[error.line - 1];
-<<<<<<< HEAD
     const varMatch = error.message.match(
-      /[`"]([^`"]+)[`"] is defined but never used/
-=======
-    const varMatch = error.message.match(;
-      /['"]([^'"]+)['"] is defined but never used/;
->>>>>>> main
-    );
+      /[`"]([^`]+)[`] is defined but never used/    );
 ;
     if (varMatch) {;
       const varName = varMatch[1];
-<<<<<<< HEAD
 
       // Remove unused variable declaration;
       const fixedLine = targetLine.replace(new RegExp(`(const|let|var)\\s+${varName}\\s*=\\s*[^;]+;?`, `g`),
         ``
-=======
 ;
       // Remove unused variable declaration;
       const fixedLine = targetLine.replace(new RegExp(`(const|let|var)\\s+${varName}\\s*=\\s*[^;]+;?`, 'g'),;
         ';
->>>>>>> main
       );
 ;
       if (fixedLine !== targetLine) {;
@@ -347,7 +271,6 @@ console.log(`[${type.toUpperCase()}] ${message}`);
     if (error.line > lines.length) return;
 ;
     const targetLine = lines[error.line - 1];
-<<<<<<< HEAD
 
     // Add missing semicolon if line doesn't end with one;
     if (
@@ -361,23 +284,7 @@ console.log(`[${type.toUpperCase()}] ${message}`);
       !targetLine.trim().endsWith(',') &&
       !targetLine.trim().endsWith(':')
     ) {
-=======
-;
-    // Add missing semicolon if line doesn't end with one;
-    if (;
-      !targetLine.trim().endsWith(';') &&;
-      !targetLine.trim().endsWith('{') &&;
-      !targetLine.trim().endsWith('}') &&;
-      !targetLine.trim().endsWith('(') &&;
-      !targetLine.trim().endsWith('[') &&;
-      !targetLine.trim().endsWith(')') &&;
-      !targetLine.trim().endsWith(']') &&;
-      !targetLine.trim().endsWith(',') &&;
-      !targetLine.trim().endsWith(':');
-    ) {;
->>>>>>> main
-      lines[error.line - 1] = targetLine + ';';
-      fs.writeFileSync(error.file, lines.join('\n'));
+      lines[error.line - 1] = targetLine + ';';      fs.writeFileSync(error.file, lines.join('\n'));
     }
   }
 ;
@@ -385,15 +292,12 @@ console.log(`[${type.toUpperCase()}] ${message}`);
     if (error.line > lines.length) return;
 ;
     const targetLine = lines[error.line - 1];
-<<<<<<< HEAD
 
     // Convert single quotes to double quotes or vice versa;
     if (error.message.includes('single quotes')) {
-=======
 ;
     // Convert single quotes to double quotes or vice versa;
     if (error.message.includes('single quotes')) {;
->>>>>>> main
       const fixedLine = targetLine.replace(/'/g, '"');
       if (fixedLine !== targetLine) {;
         lines[error.line - 1] = fixedLine;
@@ -431,16 +335,10 @@ console.log(`[${type.toUpperCase()}] ${message}`);
     if (error.line > lines.length) return;
 ;
     const targetLine = lines[error.line - 1];
-<<<<<<< HEAD
 
     // Comment out console statements;
     if (targetLine.includes('console.')) {
-=======
-;
-    // Comment out console statements;
-    if (targetLine.includes('console.')) {;
->>>>>>> main
-      const fixedLine = '// ' + targetLine;
+<<<<<<< HEAD      const fixedLine = '// ' + targetLine;
       lines[error.line - 1] = fixedLine;
       fs.writeFileSync(error.file, lines.join('\n'));
     }
@@ -450,15 +348,12 @@ console.log(`[${type.toUpperCase()}] ${message}`);
     if (error.line > lines.length) return;
 ;
     const targetLine = lines[error.line - 1];
-<<<<<<< HEAD
 
     // Convert let to const;
     if (targetLine.includes('let ')) {
-=======
 ;
     // Convert let to const;
     if (targetLine.includes('let ')) {;
->>>>>>> main
       const fixedLine = targetLine.replace(/let /g, 'const ');
       if (fixedLine !== targetLine) {;
         lines[error.line - 1] = fixedLine;
@@ -471,7 +366,6 @@ console.log(`[${type.toUpperCase()}] ${message}`);
     if (error.line > lines.length) return;
 ;
     const targetLine = lines[error.line - 1];
-<<<<<<< HEAD
 
     // Generic fixes for common ESLint issues;
     let fixedLine = targetLine;
@@ -480,21 +374,9 @@ console.log(`[${type.toUpperCase()}] ${message}`);
     fixedLine = fixedLine.replace(/\s+$/, '');
 
     // Fix multiple spaces;
-    fixedLine = fixedLine.replace(/[ ]{2,}/g, ' ');
+    fixedLine = fixedLine.replace(/[ ]{2}/g, ' ');
 
-=======
-;
-    // Generic fixes for common ESLint issues;
-    let fixedLine = targetLine;
-;
-    // Remove trailing spaces;
-    fixedLine = fixedLine.replace(/\s+$/, ');
-;
-    // Fix multiple spaces;
-    fixedLine = fixedLine.replace(/[ ]{2,}/g, ' ');
-;
->>>>>>> main
-    // Fix missing spaces around operators;
+<<<<<<< HEAD    // Fix missing spaces around operators;
     fixedLine = fixedLine.replace(/([^=!<>])=([^=])/g, '$1 = $2');
     fixedLine = fixedLine.replace(/([^=!<>])==([^=])/g, '$1 == $2');
     fixedLine = fixedLine.replace(/([^=!<>])===([^=])/g, '$1 === $2');
@@ -512,7 +394,6 @@ console.log(`[${type.toUpperCase()}] ${message}`);
 ;
     if (fs.existsSync(eslintConfigPath)) {;
       let config = fs.readFileSync(eslintConfigPath, 'utf8');
-<<<<<<< HEAD
 
       // Update rules to be less strict for error fixing;
       const updatedConfig = 'module.exports = {
@@ -521,50 +402,20 @@ console.log(`[${type.toUpperCase()}] ${message}`);
     es2021: true,
     node: true,
   },
-  extends: ['eslint:recommended'', 'plugin:''react/recommended''', 'plugin:react-''hooks/recommended'''', 'plugin:@typescript-''eslint/recommended''', ''],
-  parser: '@typescript-''eslint/parser''',
+  extends: ['eslint:recommended'', 'plugin: ''react/recommended''', 'plugin: react-''hooks/recommended'''', 'plugin: @typescript-''eslint/recommended''', ''],  parser: '@typescript-''eslint/parser''',
   parserOptions: {
     ecmaFeatures: {
-      jsx: true,
-    },
+      jsx: true},
     ecmaVersion: 12,
-    sourceType: 'module',
-  },
+    sourceType: 'module'},
   plugins: ['react'', '@typescript-eslint', ''],
-  rules: {''react/react-in-jsx-scope''': 'off',''react/prop-types''': 'off',@typescript-''eslint/no-unused-vars''': 'warn',@typescript-''eslint/no-explicit-any''': 'warn',no-console': 'warn',no-unused-vars': 'warn',semi': 'warn',quotes': 'warn',indent': 'warn',prefer-const': 'warn',no-trailing-spaces': 'warn',no-multiple-empty-lines': 'warn',eol-last': 'warn',comma-dangle': 'warn',object-curly-spacing': 'warn',array-bracket-spacing': 'warn',comma-spacing': 'warn',key-spacing': 'warn',keyword-spacing': 'warn',space-before-blocks': 'warn',space-before-function-paren': 'warn',space-in-parens': 'warn',space-infix-ops': 'warn',space-unary-ops': 'warn',spaced-comment': 'warn',template-tag-spacing': 'warn',arrow-spacing': 'warn',block-spacing': 'warn',brace-style': 'warn',camelcase': 'warn',capitalized-comments': 'off',consistent-this': 'warn',func-name-matching': 'warn',func-names': 'warn',func-style': 'warn',id-blacklist': 'off',id-length': 'off',id-match': 'off',line-comment-position': 'off',lines-around-comment': 'warn',lines-around-directive': 'warn',max-depth': 'warn',max-len': 'off',max-lines': 'off',max-nested-callbacks': 'warn',max-params': 'warn',max-statements': 'off',max-statements-per-line': 'warn',multiline-comment-style': 'off',new-cap': 'warn',new-parens': 'warn',newline-after-var': 'off',newline-before-return': 'off',newline-per-chained-call': 'off',no-array-constructor': 'warn',no-bitwise': 'warn',no-continue': 'warn',no-inline-comments': 'off',no-lonely-if': 'warn',no-mixed-operators': 'warn',no-mixed-spaces-and-tabs': 'warn',no-multi-assign': 'warn',no-multiple-empty-lines': 'warn',no-negated-condition': 'warn',no-nested-ternary': 'warn',no-new-object': 'warn',no-plusplus': 'warn',no-restricted-syntax': 'off',no-tabs': 'warn',no-ternary': 'off',no-trailing-spaces': 'warn',no-underscore-dangle': 'warn',no-unneeded-ternary': 'warn',no-whitespace-before-property': 'warn',nonblock-statement-body-position': 'warn',object-curly-newline': 'warn',object-curly-spacing': 'warn',object-property-newline': 'off',one-var': 'off',one-var-declaration-per-line': 'warn',operator-assignment': 'warn',operator-linebreak': 'warn',padded-blocks': 'off',padding-line-between-statements': 'off',quote-props': 'warn',quotes': 'warn',require-jsdoc': 'off',semi': 'warn',semi-spacing': 'warn',semi-style': 'warn',sort-keys': 'off',sort-vars': 'off',space-before-blocks': 'warn',space-before-function-paren': 'warn',space-in-parens': 'warn',space-infix-ops': 'warn',space-unary-ops': 'warn',spaced-comment': 'warn',switch-colon-spacing': 'warn',template-tag-spacing': 'warn',unicode-bom': 'warn',wrap-regex': 'warn'
-  },
+  rules: {''react/react-in-jsx-scope''': 'off',''react/prop-types''': 'off',@typescript-''eslint/no-unused-vars''': 'warn',@typescript-''eslint/no-explicit-any''': 'warn',no-console': 'warn',no-unused-vars': 'warn',semi': 'warn',quotes': 'warn',indent': 'warn',prefer-const': 'warn',no-trailing-spaces': 'warn',no-multiple-empty-lines': 'warn',eol-last': 'warn',comma-dangle': 'warn',object-curly-spacing': 'warn',array-bracket-spacing': 'warn',comma-spacing': 'warn',key-spacing': 'warn',keyword-spacing': 'warn',space-before-blocks': 'warn',space-before-function-paren': 'warn',space-in-parens': 'warn',space-infix-ops': 'warn',space-unary-ops': 'warn',spaced-comment': 'warn',template-tag-spacing': 'warn',arrow-spacing': 'warn',block-spacing': 'warn',brace-style': 'warn',camelcase': 'warn',capitalized-comments': 'off',consistent-this': 'warn',func-name-matching': 'warn',func-names': 'warn',func-style': 'warn',id-blacklist': 'off',id-length': 'off',id-match': 'off',line-comment-position': 'off',lines-around-comment': 'warn',lines-around-directive': 'warn',max-depth': 'warn',max-len': 'off',max-lines': 'off',max-nested-callbacks': 'warn',max-params': 'warn',max-statements': 'off',max-statements-per-line': 'warn',multiline-comment-style': 'off',new-cap': 'warn',new-parens': 'warn',newline-after-var': 'off',newline-before-return': 'off',newline-per-chained-call': 'off',no-array-constructor': 'warn',no-bitwise': 'warn',no-continue': 'warn',no-inline-comments': 'off',no-lonely-if': 'warn',no-mixed-operators': 'warn',no-mixed-spaces-and-tabs': 'warn',no-multi-assign': 'warn',no-multiple-empty-lines': 'warn',no-negated-condition': 'warn',no-nested-ternary': 'warn',no-new-object': 'warn',no-plusplus': 'warn',no-restricted-syntax': 'off',no-tabs': 'warn',no-ternary': 'off',no-trailing-spaces': 'warn',no-underscore-dangle': 'warn',no-unneeded-ternary': 'warn',no-whitespace-before-property': 'warn',nonblock-statement-body-position': 'warn',object-curly-newline': 'warn',object-curly-spacing': 'warn',object-property-newline': 'off',one-var': 'off',one-var-declaration-per-line': 'warn',operator-assignment': 'warn',operator-linebreak': 'warn',padded-blocks': 'off',padding-line-between-statements': 'off',quote-props': 'warn',quotes': 'warn',require-jsdoc': 'off',semi': 'warn',semi-spacing': 'warn',semi-style': 'warn',sort-keys': 'off',sort-vars': 'off',space-before-blocks': 'warn',space-before-function-paren': 'warn',space-in-parens': 'warn',space-infix-ops': 'warn',space-unary-ops': 'warn',spaced-comment': 'warn',switch-colon-spacing': 'warn',template-tag-spacing': 'warn',unicode-bom': 'warn',wrap-regex': 'warn';
+},
   settings: {
     react: {
       version: `detect`,
     },
-=======
-;
-      // Update rules to be less strict for error fixing;
-      const updatedConfig = 'module.exports = {;
-  env: {;
-    browser: true,;
-    es2021: true,;
-    node: true,;
-  },;
-  extends: ['eslint:recommended', 'plugin:'react/recommended'', 'plugin:react-'hooks/recommended'', 'plugin:@typescript-'eslint/recommended'', '],;
-  parser: '@typescript-'eslint/parser'',;
-  parserOptions: {;
-    ecmaFeatures: {;
-      jsx: true,;
-    },;
-    ecmaVersion: 12,;
-    sourceType: 'module',;
-  },;
-  plugins: ['react', '@typescript-eslint', '],;
-  rules: {'react/react-in-jsx-scope'': 'off','react/prop-types'': 'off',@typescript-'eslint/no-unused-vars'': 'warn',@typescript-'eslint/no-explicit-any'': 'warn',no-console': 'warn',no-unused-vars': 'warn',semi': 'warn',quotes': 'warn',indent': 'warn',prefer-const': 'warn',no-trailing-spaces': 'warn',no-multiple-empty-lines': 'warn',eol-last': 'warn',comma-dangle': 'warn',object-curly-spacing': 'warn',array-bracket-spacing': 'warn',comma-spacing': 'warn',key-spacing': 'warn',keyword-spacing': 'warn',space-before-blocks': 'warn',space-before-function-paren': 'warn',space-in-parens': 'warn',space-infix-ops': 'warn',space-unary-ops': 'warn',spaced-comment': 'warn',template-tag-spacing': 'warn',arrow-spacing': 'warn',block-spacing': 'warn',brace-style': 'warn',camelcase': 'warn',capitalized-comments': 'off',consistent-this': 'warn',func-name-matching': 'warn',func-names': 'warn',func-style': 'warn',id-blacklist': 'off',id-length': 'off',id-match': 'off',line-comment-position': 'off',lines-around-comment': 'warn',lines-around-directive': 'warn',max-depth': 'warn',max-len': 'off',max-lines': 'off',max-nested-callbacks': 'warn',max-params': 'warn',max-statements': 'off',max-statements-per-line': 'warn',multiline-comment-style': 'off',new-cap': 'warn',new-parens': 'warn',newline-after-var': 'off',newline-before-return': 'off',newline-per-chained-call': 'off',no-array-constructor': 'warn',no-bitwise': 'warn',no-continue': 'warn',no-inline-comments': 'off',no-lonely-if': 'warn',no-mixed-operators': 'warn',no-mixed-spaces-and-tabs': 'warn',no-multi-assign': 'warn',no-multiple-empty-lines': 'warn',no-negated-condition': 'warn',no-nested-ternary': 'warn',no-new-object': 'warn',no-plusplus': 'warn',no-restricted-syntax': 'off',no-tabs': 'warn',no-ternary': 'off',no-trailing-spaces': 'warn',no-underscore-dangle': 'warn',no-unneeded-ternary': 'warn',no-whitespace-before-property': 'warn',nonblock-statement-body-position': 'warn',object-curly-newline': 'warn',object-curly-spacing': 'warn',object-property-newline': 'off',one-var': 'off',one-var-declaration-per-line': 'warn',operator-assignment': 'warn',operator-linebreak': 'warn',padded-blocks': 'off',padding-line-between-statements': 'off',quote-props': 'warn',quotes': 'warn',require-jsdoc': 'off',semi': 'warn',semi-spacing': 'warn',semi-style': 'warn',sort-keys': 'off',sort-vars': 'off',space-before-blocks': 'warn',space-before-function-paren': 'warn',space-in-parens': 'warn',space-infix-ops': 'warn',space-unary-ops': 'warn',spaced-comment': 'warn',switch-colon-spacing': 'warn',template-tag-spacing': 'warn',unicode-bom': 'warn',wrap-regex': 'warn';
-  },;
-  settings: {;
-    react: {;
-      version: 'detect',;
-    },;
->>>>>>> main
-  },};`;
-;
+  },};`;;
       fs.writeFileSync(eslintConfigPath, updatedConfig);
       this.log(`Updated ESLint configuration for error fixing`);
     }
@@ -592,21 +443,18 @@ console.log(`[${type.toUpperCase()}] ${message}`);
 ;
   generateRecommendations() {;
     const recommendations = [];
-<<<<<<< HEAD
 
     if (this.errors.length > 0) {
       recommendations.push({
         priority: `high`,
         message: `Consider updating ESLint configuration`,
         action: 'Review ESLint rules and update configuration',
-=======
 ;
     if (this.errors.length > 0) {;
       recommendations.push({;
         priority: 'high',;
         message: 'Consider updating ESLint configuration',;
         action: 'Review ESLint rules and update configuration',;
->>>>>>> main
       });
     }
 ;
@@ -623,7 +471,6 @@ console.log(`[${type.toUpperCase()}] ${message}`);
 ;
   async run() {;
     this.log('Starting ESLint Error Fixer...');
-<<<<<<< HEAD
 
     try {
       // Update ESLint configuration;
@@ -637,38 +484,19 @@ console.log(`[${type.toUpperCase()}] ${message}`);
         await this.fixESLintErrors(this.errors);
       } else {
         this.log(`No ESLint errors detected`);
-=======
-;
-    try {;
-      // Update ESLint configuration;
-      await this.updateESLintConfig();
-;
-      // Detect ESLint errors;
-      this.errors = await this.detectESLintErrors();
-;
-      if (this.errors.length > 0) {;
-        // Fix ESLint errors;
-        await this.fixESLintErrors(this.errors);
-      } else {;
-        this.log('No ESLint errors detected');
->>>>>>> main
-      }
+<<<<<<< HEAD      }
 ;
       const report = this.generateReport();
-<<<<<<< HEAD
       this.log(`ESLint Error Fixer completed successfully`);
 
-=======
       this.log('ESLint Error Fixer completed successfully');
 ;
->>>>>>> main
       return report;
     } catch (error) {  this.log(`ESLint Error Fixer failed: ${error.message  }`, `error`);
       throw error;
     }
   }
 }
-<<<<<<< HEAD
 
 // Run the ESLint error fixer;
 if (require.main === module) {
@@ -677,20 +505,10 @@ if (require.main === module) {
     .run()
     .then(report => {
       console.log(`ESLint Error Fixer completed successfully`);
-=======
-;
-// Run the ESLint error fixer;
-if (require.main === module) {;
-  const fixer = new ESLintErrorFixer();
-  fixer;
-    .run();
-    .then(report => {;
-      console.log('ESLint Error Fixer completed successfully');
->>>>>>> main
-      process.exit(0);
+<<<<<<< HEAD      process.exit(0);
     });
     .catch(error => {;
-      console.error('ESLint Error Fixer failed:', error);
+      console.error('ESLint Error Fixer failed: ', error);
       process.exit(1);
     });
 }

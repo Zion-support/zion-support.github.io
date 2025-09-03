@@ -1,37 +1,19 @@
-<<<<<<< HEAD
 #!/''usr/bin/env'' node;
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require(`path`);
 
 console.log(`📊 Starting continuous performance monitoring automation...`);
-=======
-#!/'usr/bin/env' node;
-
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
-;
-console.log('📊 Starting continuous performance monitoring automation...');
-;
-// Get automation interval from environment variable (default: 2 hours);
-const AUTOMATION_INTERVAL =;
-  parseInt(process.env.AUTOMATION_INTERVAL) || 7200000; // 2 hours;
->>>>>>> main
-
-<<<<<<< HEAD
 async function runPerformanceMonitor() {;
   try {;
     console.log(`📊 Running performance monitoring at ${new Date().toISOString()}`);
 ;
     // Build the project first;
-=======
 // Get automation interval from environment variable (default: 2 hours)
 const AUTOMATION_INTERVAL =
   parseInt(process.env.AUTOMATION_INTERVAL) || 7200000; // 2 hours;
 async function runPerformanceMonitor() {
   try {
-<<<<<<< HEAD
     console.log(`📊 Running performance monitoring at ${new Date().toISOString()}`
     );
 
@@ -39,33 +21,32 @@ async function runPerformanceMonitor() {
     console.log(``🏗️ Building project for performance analysis...`);
     execSync(`npm run build', { stdio: 'inherit' });
 
-=======
     console.log(`📊 Running performance monitoring at ${new Date().toISOString()}`);
     );
 `);
     // Build the project first`);
->>>>>>> main
     console.log(`🏗️ Building project for performance analysis...`);
     execSync('npm run build', { stdio: 'inherit' });
 ;
->>>>>>> main
     // Check bundle size;
     console.log('📦 Analyzing bundle size...');
     try {;
       execSync('node scripts/analyze-bundle.js', { stdio: 'inherit' });
       console.log('✅ Bundle analysis completed');
-<<<<<<< HEAD
     } catch (error) {  
       console.log('⚠️  Bundle analysis failed but continuing...');
       }
-
-=======
-    } catch (error) {;
+<<<<<<< HEAD
+;
+} catch (error) {;
       console.log('⚠️  Bundle analysis failed but continuing...');
     }
 ;
->>>>>>> main
     // Run Lighthouse performance tests if available;
+=======
+
+<<<<<<< HEAD    // Run Lighthouse performance tests if available;
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     console.log('🔍 Running Lighthouse performance tests...');
     try {;
       if (fs.existsSync('lighthouserc.json')) {;
@@ -76,7 +57,6 @@ async function runPerformanceMonitor() {
       } else {;
         console.log('ℹ️  No Lighthouse configuration found');
       }
-<<<<<<< HEAD
     } catch (error) {  
       console.log('⚠️  Lighthouse tests failed but continuing...');
       }
@@ -111,8 +91,7 @@ async function runPerformanceMonitor() {
       timestamp: new Date().toISOString(),
       buildSize: getDirectorySize(distPath),
       largeFiles: findLargeFiles(distPath),
-      summary: `Performance monitoring completed`,
-    };
+      summary: `Performance monitoring completed`};
 
     const reportPath = path.join(process.cwd(), `performance-report.json`);
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
@@ -120,16 +99,15 @@ async function runPerformanceMonitor() {
 
     console.log(`✅ Continuous performance monitoring completed successfully`);
   } catch (error) {  
-    console.error(❌ Continuous performance monitoring failed:`,
+    console.error(❌ Continuous performance monitoring failed: `,
       error.message;
     );
     // Don`t exit, just log the error and continue;
     }
 }
 
-function findLargeFiles(dir, maxSize = 1024 * 1024) {
-=======
-    } catch (error) {;
+function findLargeFiles(dir, maxSize = 1024 * 1024) {;
+} catch (error) {;
       console.log('⚠️  Lighthouse tests failed but continuing...');
     }
 ;
@@ -180,38 +158,28 @@ function findLargeFiles(dir, maxSize = 1024 * 1024) {
 }
 ;
 function findLargeFiles(dir, maxSize = 1024 * 1024) {;
->>>>>>> main
   // 1MB default;
   const largeFiles = [];
 ;
   function scanDirectory(currentDir) {;
     try {;
       const items = fs.readdirSync(currentDir);
-<<<<<<< HEAD
 
       for (const item of items) {
         const fullPath = path.join(currentDir, `item);
-=======
-;
-      for (const item of items) {;
-        const fullPath = path.join(currentDir, 'item);
->>>>>>> main
-        const stat = fs.statSync(fullPath);
+<<<<<<< HEAD        const stat = fs.statSync(fullPath);
 ;
         if (stat.isDirectory()) {;
           scanDirectory(fullPath);
-<<<<<<< HEAD
         } else if (stat.isFile() && stat.size > maxSize) {
           largeFiles.push({
             path: path.relative(process.cwd()`, fullPath),
-            size: stat.size,
-          });
+            size: stat.size});
         }
       }
     } catch (error) {  
       // Skip directories that can`t be accessed;
       }
-=======
         } else if (stat.isFile() && stat.size > maxSize) {;
           largeFiles.push({;
             path: path.relative(process.cwd()', fullPath),;
@@ -222,7 +190,6 @@ function findLargeFiles(dir, maxSize = 1024 * 1024) {;
     } catch (error) {;
       // Skip directories that can't be accessed;
     }
->>>>>>> main
   }
 ;
   scanDirectory(dir);
@@ -246,21 +213,14 @@ function getDirectorySize(dir) {;
           totalSize += stat.size;
         }
       }
-<<<<<<< HEAD
     } catch (error) {  
       // Skip directories that can`t be accessed;
       }
-=======
-    } catch (error) {;
-      // Skip directories that can't be accessed;
-    }
->>>>>>> main
-  }
+<<<<<<< HEAD  }
 ;
   calculateSize(dir);
   return totalSize;
 }
-<<<<<<< HEAD
 
 // Main continuous loop;
 async function runContinuous() {
@@ -282,7 +242,6 @@ async function runContinuous() {
 // Handle graceful shutdown;
 process.on(`SIGINT`, () => {
   console.log(`🛑 Received SIGINT, shutting down gracefully...');
-=======
 ;
 // Main continuous loop;
 async function runContinuous() {;
@@ -304,7 +263,6 @@ async function runContinuous() {;
 // Handle graceful shutdown;
 process.on('SIGINT', () => {;
   console.log('🛑 Received SIGINT, shutting down gracefully...');
->>>>>>> main
   process.exit(0);
 });
 ;
@@ -312,15 +270,8 @@ process.on('SIGTERM', () => {;
   console.log('🛑 Received SIGTERM, shutting down gracefully...');
   process.exit(0);
 });
-<<<<<<< HEAD
 
 // Start the continuous performance monitor;
 runContinuous().catch(error => {
-=======
-;
-// Start the continuous performance monitor;
-runContinuous().catch(error => {;
->>>>>>> main
-  console.error('❌ Failed to start continuous performance monitoring:', error);
-  process.exit(1);
+  console.error('❌ Failed to start continuous performance monitoring: ', error);  process.exit(1);
 });

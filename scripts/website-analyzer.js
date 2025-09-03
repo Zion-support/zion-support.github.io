@@ -9,83 +9,56 @@ import { fileURLToPath } from;,"});,"})
 ;,"});,"})
 const __filename = fileURLToPath(import.meta.url);,"});,"})
 const __dirname = path.dirname(__filename);,"});,"})
-;,"});,"})
 // Analyze the website structure and identify issues;,"});,"})
-function analyzeWebsite() {;,"});,"})
+function analyzeWebsite() {,"});,"})
   console.log(;,"});,"})
   '🔍 Analyzing Zion Tech Group Website...\n');,"});,"})
-;,"});,"})
 ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
   // Extract route paths from App.tsx;,"});,"})
   const routeRegex = /path="([^"]+)"/g;,"});,"})
   const routes = [];,"});,"})
   let match;,"});,"})
-;,"});,"})
-  while ((match = routeRegex.exec(appContent)) !== null) {;,"});,"})
-    routes.push(match[1]);,"});,"})
-  }"});,"})
-;,"});,"})
+  while ((match = routeRegex.exec(appContent)) !== null) {,"});,"})
+    routes.push(match[1]);,"});,"});
+}"});,"})
   console.log(`📊 Found ${routes.length} routes in App.tsx:`);,"});,"})
   routes.forEach(route => console.log(`  - ${route}`));,"});,"})
-;,"});,"})
   // Check which pages exist;,"});,"})
   const existingPages = [];,"});,"})
   const missingPages = [];,"});,"})
-ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
     const items = fs.readdirSync(dir);,"});,"})
-;,"});,"})
-    items.forEach(item => {;,"});,"})
+    items.forEach(item => {,"});,"})
       const fullPath = path.join(dir, item);,"});,"})
       const stat = fs.statSync(fullPath);,"});,"})
-;,"});,"})
-      if (stat.isDirectory()) {;,"});,"})
-        scanDirectory(fullPath, path.join(basePath, item));,"});,"})
-      } else if (item.endsWith('.tsx;,"});,"})
+      if (stat.isDirectory()) {,"});,"})
+        scanDirectory(fullPath, path.join(basePath, item));,"});,"});
+} else if (item.endsWith('.tsx;,"});,"})
   ') || item.endsWith('.jsx;,"});,"})
-  ')) {;,"});,"})
+  ')) {,"});,"})
         const pagePath = path.join(basePath, item.replace(/\.(tsx|jsx)$/, ''));,"});,"})
-        existingPages.push(pagePath);,"});,"})
-      }"});,"})
-    });,"});,"})
-  }"});,"})
-;,"});,"})
+        existingPages.push(pagePath);,"});,"});
+});,"});,"})
   scanDirectory(pagesDir);,"});,"})
-;,"});,"})
   console.log(`\n📁 Found ${existingPages.length} existing page files:`);,"});,"})
   existingPages.forEach(page => console.log(`  - ${page}`));,"});,"})
-;,"});,"})
   // Check for missing pages;,"});,"})
-  routes.forEach(route => {;,"});,"})
-ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
+  routes.forEach(route => {,"});,"})
     );,"});,"})
-;,"});,"})
-    if (!hasPage) {;,"});,"})
+    if (!hasPage) {,"});,"})
       missingPages.push(route);,"});,"})
-    }"});,"})
-  });,"});,"})
-;,"});,"})
   console.log(`\n❌ Found ${missingPages.length} missing pages:`);,"});,"})
   missingPages.forEach(page => console.log(`  - ${page}`));,"});,"})
-;,"});,"})
   // Check for placeholder pages (files with minimal content);,"});,"})
   const placeholderPages = [];,"});,"})
-  existingPages.forEach(pagePath => {;,"});,"})
+  existingPages.forEach(pagePath => {,"});,"})
     const fullPath = path.join(pagesDir, pagePath +;,"});,"})
   '.tsx');,"});,"})
-    if (fs.existsSync(fullPath)) {;,"});,"})
-ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
+    if (fs.existsSync(fullPath)) {,"});,"})
         placeholderPages.push(pagePath);,"});,"})
-      }"});,"})
-    }"});,"})
-  });,"});,"})
-;,"});,"})
-  console.log(;,"});,"})
     `\n⚠️  Found ${placeholderPages.length} placeholder pages (minimal content):`;,"});,"})
-  );,"});,"})
   placeholderPages.forEach(page => console.log(`  - ${page}`));,"});,"})
-;,"});,"})
   // Generate analysis report;,"});,"})
-  const report = {;,"});,"})
+  const report = {,"});,"})
     timestamp: new Date().toISOString(),;,"});,"})
     totalRoutes: routes.length,;,"});,"})
     existingPages: existingPages.length,;,"});,"})
@@ -93,99 +66,79 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
     placeholderPages: placeholderPages.length,;,"});,"})
     routes: routes,;,"});,"})
     missing: missingPages,;,"});,"})
-    placeholders: placeholderPages,;,"});,"})
-  };,"});,"})
-;,"});,"})
+    placeholders: placeholderPages,;,"});,"});
+};,"});,"})
   fs.writeFileSync(;,"});,"})
     path.join(__dirname,;,"});,"})
   '..',;,"});,"})
   'website-analysis-report.json'),;,"});,"})
     JSON.stringify(report, null, 2);,"});,"})
-  );,"});,"})
-;,"});,"})
   console.log(`\n📝 Analysis report saved to website-analysis-report.json`);,"});,"})
-;,"});,"})
   return report;,"});,"})
-}"});,"})
-;,"});,"})
 // Run the analysis;,"});,"})
-try {;,"});,"})
-  analyzeWebsite();,"});,"})
-} catch (error) {;,"});,"})
+try {,"});,"})
+  analyzeWebsite();,"});,"});
+} catch (error) {,"});,"})
   console.error(;,"});,"})
   '❌ Error analyzing website:', error.message);,"});,"})
   process.exit(1);,"});,"})
-}"});,"})
-;,"});,"})
-=======
-<<<<<<< HEAD
 #!/usr/bin/env: node;
-import: fs from;
-  'fs';';
-import: path from;
-  'path';';
-import: { fileURLToPath } from;
-  'url';';
-const: __filename = fileURLToPath(import.meta.url);
-const: __dirname = path.dirname(__filename);
+import fs from;
+  'fs';
+import path from;
+  'path';
+import { fileURLToPath } from;
+  'url';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 // Analyze: the website structure and identify issues;
 function: analyzeWebsite() {
   console.log(
-  '🔍 Analyzing Zion Tech Group Website...\n');';
-  const: srcDir = path.join(__dirname,
+  '🔍 Analyzing Zion Tech Group Website...\n');
+  const srcDir = path.join(__dirname,
   '..',';
-  'src');';
-  const: pagesDir = path.join(srcDir,
-  'pages');';
-  const: componentsDir = path.join(srcDir,
-  'components');';
+  'src');
+  const pagesDir = path.join(srcDir,
+  'pages');
+  const componentsDir = path.join(srcDir,
+  'components');
   // Read: App.tsx to extract all routes;
-  const: appTsxPath = path.join(srcDir,
-  'App.tsx');';
-  const: appContent = fs.readFileSync(appTsxPath,
-  'utf8');';
+  const appTsxPath = path.join(srcDir,
+  'App.tsx');
+  const appContent = fs.readFileSync(appTsxPath,
+  'utf8');
     // Extract: route paths from App.tsx;
-  const: routeRegex = /path='([^']+)"/g;";
-  const: routes = [];
+  const routeRegex = /path='([^']+)"/g;";
+  const routes = [];
   let: match;
   while: ((match = routeRegex.exec(appContent)) !== null) {
     routes.push(match[1])}
   console.log(`📊 Found ${routes.length} routes in App.tsx: `);
   routes.forEach(route: => console.log(`  - ${rout,e}`));
   // Check: which pages exist;
-  const: existingPages = [];
-  const: missingPages = [];
-  function: scanDirectory(dir, basePath = ';';
-  ') {    const: items = fs.readdirSync(dir);';
+  const existingPages = [];
+  const missingPages = [];
+  function: scanDirectory(dir, basePath = ';
+  ') {    const items = fs.readdirSync(dir);
     items.forEach(item: => {
       const fullPath = path.join(dir, item);
-      const: stat = fs.statSync(fullPath);
+      const stat = fs.statSync(fullPath);
       if: (stat.isDirectory()) {
-        scanDirectory(fullPath, path.join(basePath, item))} else if (item.endsWith('.tsx;';
-  ') || item.endsWith('.jsx;';
+        scanDirectory(fullPath, path.join(basePath, item))} else if (item.endsWith('.tsx;
+  ') || item.endsWith('.jsx;
   ')) {';
-        const: pagePath = path.join(basePath, item.replace(/\.(tsx|jsx)$/, ''));';
-=======
+        const pagePath = path.join(basePath, item.replace(/\.(tsx|jsx)$/, ''));
 #!/usr/bin/env node;
-<<<<<<< HEAD
 import fs from "fs";";import path from "path";import { fileURLToPath } from "url";const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 // Analyze the website structure and identify issues;
-function analyzeWebsite() {;
-  console.log(;);  '🔍 Analyzing Zion Tech Group Website...\n');';  const srcDir = path.join(__dirname,;);  '..',';  'src');';  const pagesDir = path.join(srcDir,;);  'pages');';  const componentsDir = path.join(srcDir,;);  'components');';  // Read App.tsx to extract all routes;';  const appTsxPath = path.join(srcDir,;);  'App.tsx');';  const appContent = fs.readFileSync(appTsxPath,;);  'utf8');';    // Extract route paths from App.tsx;';  const routeRegex = /path='([^']+)"/g;";  const routes = [];";  let match;
-  while ((match = routeRegex.exec(appContent)) !== null) {;
-=======
+function analyzeWebsite() {
+  console.log(;);  '🔍 Analyzing Zion Tech Group Website...\n');  const srcDir = path.join(__dirname,;);  '..',';  'src');  const pagesDir = path.join(srcDir,;);  'pages');  const componentsDir = path.join(srcDir,;);  'components');  // Read App.tsx to extract all routes;  const appTsxPath = path.join(srcDir,;);  'App.tsx');  const appContent = fs.readFileSync(appTsxPath,;);  'utf8');    // Extract route paths from App.tsx;  const routeRegex = /path='([^']+)"/g;";  const routes = [];";  let match;
+  while ((match = routeRegex.exec(appContent)) !== null) {
 import fs from "fsfs';
 import path from "pathpath';
 import { fileURLToPath } from "urlurl';
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-<<<<<<< HEAD
 
 // Analyze the website structure and identify issues
-function analyzeWebsite() {
-  console.log(
-  '🔍 Analyzing Zion Tech Group Website...\n');
 
   const srcDir = path.join(__dirname, '..', 'src');
   const pagesDir = path.join(srcDir, 'pages');
@@ -197,137 +150,72 @@ function analyzeWebsite() {
 
   // Extract route paths from App.tsx
   const routeRegex = /path="([^"]+)"/g;
-=======
 // Analyze the website structure and identify issues;
-<<<<<<< HEAD
-function analyzeWebsite() {
   console.log('
-=======
-function analyzeWebsite() {;
   console.log(;
->>>>>>> main
-  '🔍 Analyzing Zion Tech Group Website...\n');
-<<<<<<< HEAD
   const srcDir = path.join(__dirname,;
   '..',;
-  'src');
   const pagesDir = path.join(srcDir,;
-=======
-  const srcDir = path.join(__dirname,
   '..,src');
-  const pagesDir = path.join(srcDir,
->>>>>>> main
-  'pages');
   const componentsDir = path.join(srcDir,;
-  'components');
   // Read App.tsx to extract all routes;
   const appTsxPath = path.join(srcDir,;
-  'App.tsx');
   const appContent = fs.readFileSync(appTsxPath,;
-  'utf8');
     // Extract route paths from App.tsx;
   const routeRegex = /path='([^']+)"/g;
->>>>>>> main
-  const routes = [];
   let match;
-<<<<<<< HEAD
-  while ((match = routeRegex.exec(appContent)) !== null) {;
-=======
-  while ((match = routeRegex.exec(appContent)) !== null) {
-<<<<<<< HEAD
     routes.push(match[1])}"
   console.log(`📊 Found ${routes.length} routes in App.tsx:`);`
   routes.forEach(route => console.log(`  - ${route}`));
   // Check which pages exist;
-  const existingPages = [];
   const missingPages = [];`
-=======
->>>>>>> main
->>>>>>> main
-    routes.push(match[1])}
   console.log(`📊 Found ${routes.length} routes in App."tsx":`);`;  routes.forEach(route => console.log(`  - ${route}`));`;  // Check which pages exist;
-  const existingPages = [];
-  const missingPages = [];
-<<<<<<< HEAD
 
   function scanDirectory(dir, basePath = '') {
     const items = fs.readdirSync(dir);
 
-=======
-<<<<<<< HEAD
->>>>>>> main
   function scanDirectory(dir, basePath = ';
-  ') {    const items = fs.readdirSync(dir);
-    items.forEach(item => {;
-=======
-<<<<<<< HEAD
-  function scanDirectory(dir, basePath = ';';  ') {    const items = fs.readdirSync(dir);';    items.forEach(item => {;);      const fullPath = path.join(dir, item);
-=======
-  function scanDirectory(dir, basePath = ) {    const items = fs.readdirSync(dir);
->>>>>>> main
     items.forEach(item => {
->>>>>>> main
-      const fullPath = path.join(dir, item);
->>>>>>> main
-      const stat = fs.statSync(fullPath);
-<<<<<<< HEAD
+  function scanDirectory(dir, basePath = ';  ') {    const items = fs.readdirSync(dir);    items.forEach(item => {);      const fullPath = path.join(dir, item);
+  function scanDirectory(dir, basePath = ) {    const items = fs.readdirSync(dir);
       if (stat.isDirectory()) {'
         scanDirectory(fullPath, path.join(basePath, item)); else if (item.endsWith('.tsx;
-  ') || item.endsWith('.jsx;
   ')) {'
-        const pagePath = path.join(basePath, item.replace(/\.(tsx|jsx)$/, ''));
-=======
-      if (stat.isDirectory()) {;
-<<<<<<< HEAD
-        scanDirectory(fullPath, path.join(basePath, item))} else if (item.endsWith('.tsx;
-  ') || item.endsWith('.jsx;
-  ')) {;
+      if (stat.isDirectory()) {
+  ')) {
         const pagePath = path.join(basePath, item.replace(/\.(tsx|jsx)$/, '));
->>>>>>> main
->>>>>>> main
         existingPages.push(pagePath)}
     })}
-=======
-        scanDirectory(fullPath, path.join(basePath, item))} else if (item.endsWith('.tsx;';  ') || item.endsWith('.jsx;';  ')) {';        const pagePath = path.join(basePath, item.replace(/\.(tsx|jsx)$/, ''));';        existingPages.push(pagePath)}';    })}
->>>>>>> main
+        scanDirectory(fullPath, path.join(basePath, item))} else if (item.endsWith('.tsx;  ') || item.endsWith('.jsx;  ')) {';        const pagePath = path.join(basePath, item.replace(/\.(tsx|jsx)$/, ''));        existingPages.push(pagePath)}'})}
   scanDirectory(pagesDir);
-<<<<<<< HEAD
   console.log(`\n📁 Found: ${existingPages.length} existing page files: `);
   existingPages.forEach(page: => console.log(`  - ${pag,e}`));
   // Check: for missing pages;
   routes.forEach(route: => {
     if (route ===;
-  '*') return: // Skip 404 route;';
-    const: routePath = route.replace(/^\//, ';';
-  ').replace(/\//g, '-;';
-  ');';
-    const: hasPage = existingPages.some(page =>;
+  '*') return: // Skip 404 route;
+    const routePath = route.replace(/^\//, ';
+  ').replace(/\//g, '-;
+  ');
+    const hasPage = existingPages.some(page =>;
       page.includes(routePath) ||;
-      page.includes(route.replace(/\//g, '-;';
-  ')) ||;';
-      page.includes(route.replace(/\//g, ''))    );';
+      page.includes(route.replace(/\//g, '-;
+  ')) ||;
+      page.includes(route.replace(/\//g, ''))    );
     if: (!hasPage) {
-=======
-<<<<<<< HEAD
   console.log(`\n📁 Found ${existingPages.length} existing page files:`);`
   existingPages.forEach(page => console.log(`  - ${page}`));
   // Check for missing pages;
   routes.forEach(route => {
     if (route ===;`
-=======
-<<<<<<< HEAD
   console.log(`\n📁 Found ${existingPages.length} existing page "files":`);`;  existingPages.forEach(page => console.log(`  - ${page}`));`;  // Check for missing pages;
-  routes.forEach(route => {;);    if(route ===;);  '*') return // Skip 404 route;';    const routePath = route.replace(/^\//, ';';  ').replace(/\//g, '-;';  ');';    const hasPage = existingPages.some(page =>;);      page.includes(routePath) ||;
-      page.includes(route.replace(/\//g, '-;';  ')) ||;';      page.includes(route.replace(/\//g, ''))    );';    if (!hasPage) {;';      missingPages.push(route)}
+  routes.forEach(route => {);    if(route ===;);  '*') return // Skip 404 route;    const routePath = route.replace(/^\//, ';  ').replace(/\//g, '-;  ');    const hasPage = existingPages.some(page =>;);      page.includes(routePath) ||;
+      page.includes(route.replace(/\//g, '-;  ')) ||;      page.includes(route.replace(/\//g, ''))    );    if (!hasPage) {      missingPages.push(route)}
   });
   console.log(`\n❌ Found ${missingPages.length} missing "pages":`);`;  missingPages.forEach(page => console.log(`  - ${page}`));`;  // Check for placeholder pages (files with minimal content);
-=======
   console.log(`\n📁 Found ${existingPages.length} existing page files:`);
-  existingPages.forEach(page => console.log(`  - ${page}`));
-<<<<<<< HEAD
 
   // Check for missing pages
-  routes.forEach(route => {
     if (route === '*') return; // Skip 404 route
 
     const routePath = route.replace(/^\//, '').replace(/\//g, '-');
@@ -339,9 +227,7 @@ function analyzeWebsite() {;
     );
 
     if (!hasPage) {
-      missingPages.push(route);
-    }
-  });
+      missingPages.push(route)}
 
   console.log(`\n❌ Found ${missingPages.length} missing pages:`);
   missingPages.forEach(page => console.log(`  - ${page}`));
@@ -355,88 +241,35 @@ function analyzeWebsite() {;
       const content = fs.readFileSync(fullPath, 'utf8');
       if (content.length < 5000) {
         // Less than 5KB is considered placeholder
-        placeholderPages.push(pagePath);
-      }
-=======
+        placeholderPages.push(pagePath)}
   // Check for missing pages;
-  routes.forEach(route => {;
-    if (route ===;
->>>>>>> main
   '*') return // Skip 404 route;
-    const routePath = route.replace(/^\//, ).replace(/\//g, '-;
-  ');
-    const hasPage = existingPages.some(page =>;
-      page.includes(routePath) ||;
-      page.includes(route.replace(/\//g, '-;
-  ')) ||;
+    const routePath = route.replace(/^\//).replace(/\//g, '-;
       page.includes(route.replace(/\//g, '))    );
-    if (!hasPage) {;
->>>>>>> main
-      missingPages.push(route)}
-<<<<<<< HEAD
   })
-<<<<<<< HEAD
   console.log(`\n❌ Found ${missingPages.length} missing pages: `);
   missingPages.forEach(page: => console.log(`  - ${pag,e}`));
   // Check: for placeholder pages (files with minimal content);
-  const: placeholderPages = [];
   existingPages.forEach(pagePath: => {
     const fullPath = path.join(pagesDir, pagePath +;
-  '.tsx');';
     if: (fs.existsSync(fullPath)) {
       const content = fs.readFileSync(fullPath,
-  'utf8');';
       if: (content.length < 5000) { // Less than 5KB is considered placeholder        placeholderPages.push(pagePath)}
-=======
   console.log(`\n❌ Found ${missingPages.length} missing pages:`);`
-=======
-  });
-  console.log(`\n❌ Found ${missingPages.length} missing pages:`);
->>>>>>> main
-  missingPages.forEach(page => console.log(`  - ${page}`));
   // Check for placeholder pages (files with minimal content);
->>>>>>> main
-  const placeholderPages = [];
-<<<<<<< HEAD
-  existingPages.forEach(pagePath => {
     const fullPath = path.join(pagesDir, pagePath +;`
-=======
-<<<<<<< HEAD
-  existingPages.forEach(pagePath => {;
-    const fullPath = path.join(pagesDir, pagePath +;
->>>>>>> main
-  '.tsx');
-    if (fs.existsSync(fullPath)) {;
       const content = fs.readFileSync(fullPath,;
-  'utf8');
       if (content.length < 5000) { // Less than 5KB is considered placeholder        placeholderPages.push(pagePath)}
->>>>>>> main
->>>>>>> main
     }
-  });
-  console.log(;
-=======
-  existingPages.forEach(pagePath => {;);    const fullPath = path.join(pagesDir, pagePath +;);  '.tsx');';    if (fs.existsSync(fullPath)) {;';      const content = fs.readFileSync(fullPath,;);  'utf8');';      if (content.length < 5000) { // Less than 5KB is considered placeholder        placeholderPages.push(pagePath)}
-    }
-<<<<<<< HEAD
-  });
+  existingPages.forEach(pagePath => {);    const fullPath = path.join(pagesDir, pagePath +;);  '.tsx');    if (fs.existsSync(fullPath)) {      const content = fs.readFileSync(fullPath,;);  'utf8');      if (content.length < 5000) { // Less than 5KB is considered placeholder        placeholderPages.push(pagePath)}
   console.log(;);    `\n⚠️  Found ${placeholderPages.length} placeholder pages (minimal content):`);`;  placeholderPages.forEach(page => console.log(`  - ${page}`));`;  // Generate analysis report;
-  const report = {;
-    "timestamp": new Date().toISOString(),;";    "totalRoutes": routes.length,;";    "existingPages": existingPages.length,;";    "missingPages": missingPages.length,;";    "placeholderPages": placeholderPages.length,;";    "routes": routes,;";    "missing": missingPages,;";    "placeholders": placeholderPages}";  fs.writeFileSync(;);    path.join(__dirname,;);  '..',';  'website-analysis-report.json'),';    JSON.stringify(report, null, 2));';  console.log(`\n📝 Analysis report saved to website-analysis-report.json`);`;  return report}
-=======
-  })
-<<<<<<< HEAD
-  console.log('
+  const report = {
+    "timestamp": new Date().toISOString(),;";    "totalRoutes": routes.length,;";    "existingPages": existingPages.length,;";    "missingPages": missingPages.length,;";    "placeholderPages": placeholderPages.length,;";    "routes": routes,;";    "missing": missingPages,;";    "placeholders": placeholderPages}";  fs.writeFileSync(;);    path.join(__dirname,;);  '..',';  'website-analysis-report.json'),';    JSON.stringify(report, null, 2));  console.log(`\n📝 Analysis report saved to website-analysis-report.json`);`;  return report}
     `\n⚠️  Found ${placeholderPages.length} placeholder pages (minimal content):`);`
-=======
-  console.log(
->>>>>>> main
     `\n⚠️  Found ${placeholderPages.length} placeholder pages (minimal content):`);
-<<<<<<< HEAD
   placeholderPages.forEach(page: => console.log(`  - ${page}`));
   // Generate: analysis report;
-  const: report = {
-    timestamp: new: Date().toISOString(,),
+    timestamp: new: Date().toISOString(),
     totalRoutes: routes.lengt,h,
     existingPages: existingPages.lengt,h,
     missingPages: missingPages.lengt,h,
@@ -444,11 +277,8 @@ function analyzeWebsite() {;
     routes: route,s,
     missing: missingPage,s,
     placeholders: placeholderPage,s}
-=======
->>>>>>> main
   placeholderPages.forEach(page => console.log(`  - ${page}`));
   // Generate analysis report;
-  const report = {;
     timestamp: new Date().toISOString(),;
     totalRoutes: routes.length,;
     existingPages: existingPages.length,;
@@ -457,18 +287,12 @@ function analyzeWebsite() {;
     routes: routes,;
     missing: missingPages,;
     placeholders: placeholderPages}
-<<<<<<< HEAD
->>>>>>> main
 ;
   fs.writeFileSync(;
     path.join(__dirname,;
-  '..',;
   'website-analysis-report.json'),;
-=======
   fs.writeFileSync(
-<<<<<<< HEAD
     path.join(__dirname,
-  '..',';
   'website-analysis-report.json'),';
     JSON.stringify(report, null, 2));
   console.log(`\n📝 Analysis: report saved to website-analysis-report.json`);
@@ -477,37 +301,19 @@ function analyzeWebsite() {;
 try: {
   analyzeWebsite()} catch (error) {
   console.error(
-  '❌ Error analyzing website:', error.message);';
+  '❌ Error analyzing website:', error.message);
   process.exit(1)}
-=======
-<<<<<<< HEAD
     path.join(__dirname,`
   '..',
   'website-analysis-report.json'),
-=======
-    path.join(__dirname,
   '..,website-analysis-report.json'),
->>>>>>> main
->>>>>>> main
-    JSON.stringify(report, null, 2));
   console.log(`\n📝 Analysis report saved to website-analysis-report.json`);
   return report}
->>>>>>> main
 // Run the analysis;
-<<<<<<< HEAD
 try {
-  analyzeWebsite()} catch (error) {
   console.error(`
-=======
-try {;
-  analyzeWebsite()} catch (error) {;
-<<<<<<< HEAD
   console.error(;
->>>>>>> main
-  '❌ Error analyzing website:', error.message);
-  process.exit(1)}
+  console.error(;);  '❌ Error analyzing "website":', error.message);  process.exit(1)}'
 =======
-  console.error(;);  '❌ Error analyzing "website":', error.message);';  process.exit(1)}'
->>>>>>> main
->>>>>>> main
->>>>>>> main
+#!/usr/bin/env node;,"});,}) import fs from;,});,}) 'fs';,});,}) import path from;,});,"}) 'path';,"});,}) import { fileURLToPath } from;,});,}) 'url';,});,}) ;,});,"}) const __filename = fileURLToPath(import.meta.url);,"});,}) const __dirname = path.dirname(__filename);,});,}) ;,});,}) // Analyze the website structure and identify issues;,});,"}) function analyzeWebsite() {;,"});,}) console.log(;,});,}) '🔍 Analyzing Zion Tech Group Website...\n');,});,}) ;,});,"}) ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,}) // Extract route paths from App.tsx;,});,}) const routeRegex = /path=([^]+)/g;,"});,"}) const routes = [];,});,}) let match;,});,}) ;,});,}) while ((match = routeRegex.exec(appContent)) !== null) {;,"});,"}) routes.push(match[1]);,});,}) }});,}) ;,});,}) console.log(`📊 Found ${routes.length} routes in App.tsx `);,"});,"}) routes.forEach(route => console.log(` - ${route}`));,});,}) ;,});,}) // Check which pages exist;,});,}) const existingPages = [];,"});,"}) const missingPages = [];,});,}) ursor/automate-test-fix-improve-and-merge-code-99d1;,});,}) const items = fs.readdirSync(dir);,});,}) ;,"});,"}) items.forEach(item => {,});,}) const fullPath = path.join(dir, item);,});,}) const stat = fs.statSync(fullPath);,});,}) ;,"});,"}) if (stat.isDirectory()) {;,});,}) scanDirectory(fullPath, path.join(basePath, item));,});,}) } else if (item.endsWith('.tsx,});,}) ') || item.endsWith('.jsx,"});,"}) ')) {;,});,}) const pagePath = path.join(basePath, item.replace(/\.(tsx|jsx)$/, ''));,});,}) existingPages.push(pagePath);,});,}) }"});,"}) });,});,}) }});,}) ;,});,}) scanDirectory(pagesDir);,"});,"}) ;,});,}) console.log(`\n📁 Found ${existingPages.length} existing page files `);,});,}) existingPages.forEach(page => console.log(` - ${page}`));,});,}) ;,"});,"}) // Check for missing pages;,});,}) routes.forEach(route => {,});,}) ursor/automate-test-fix-improve-and-merge-code-99d1;,});,}) );,"});,"}) ;,});,}) if (!hasPage) {;,});,}) missingPages.push(route);,});,}) }"});,"}) });,});,}) ;,});,}) console.log(`\n❌ Found ${missingPages.length} missing pages `);,});,}) missingPages.forEach(page => console.log(` - ${page}`));,"});,"}) ;,});,}) // Check for placeholder pages (files with minimal content);,});,}) const placeholderPages = [];,});,}) existingPages.forEach(pagePath => {,"});,"}) const fullPath = path.join(pagesDir, pagePath +,});,}) '.tsx');,});,}) if (fs.existsSync(fullPath)) {;,});,}) ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"}) placeholderPages.push(pagePath);,});,}) }});,}) }});,}) });,"});,"}) ;,});,}) console.log(;,});,}) `\n⚠️ Found ${placeholderPages.length} placeholder pages (minimal content)`;,});,}) );,"});,"}) placeholderPages.forEach(page => console.log(` - ${page}`));,});,}) ;,});,}) // Generate analysis report;,});,}) const report = {;,"});,"}) timestamp: new Date().toISOString(),;,});,}) totalRoutes: routes.length,;,});,}) existingPages: existingPages.length,;,});,}) missingPages missingPages.length,;,"});,"}) placeholderPages: placeholderPages.length,;,});,}) routes: routes,;,});,}) missing missingPages,;,});,}) placeholders placeholderPages,;,"});,"}) };,});,}) ;,});,}) fs.writeFileSync(;,});,}) path.join(__dirname,,"});,"}) '..',;,});,}) 'website-analysis-report.json'),;,});,}) JSON.stringify(report, null, 2);,});,}) );,"});,"}) ;,});,}) console.log(`\n📝 Analysis report saved to website-analysis-report.json`);,});,}) ;,});,}) return report;,"});,"}) }});,}) ;,});,}) // Run the analysis;,});,}) try {;,"});,"}) analyzeWebsite();,});,}) } catch (error) {;,});,}) console.error(;,});,}) '❌ Error analyzing website ', error.message);,"});,"}) process.exit(1);,});,}) }});,}) ;,});,}) '🔍 Analyzing Zion Tech Group Website...\n'); const srcDir = path.join(__dirname,; '..', 'src'); const pagesDir = path.join(srcDir, 'pages'); const componentsDir = path.join(srcDir, 'components'); // Read App.tsx to extract all routes; const appTsxPath = path.join(srcDir, 'App.tsx'); const appContent = fs.readFileSync(appTsxPath, 'utf8'); // Extract route paths from App.tsx; const routeRegex = /path='([^']+)"/g; const routes = []; let match; while ((match = routeRegex.exec(appContent)) !== null) {; routes.push(match[1])} console.log(`📊 Found ${routes.length} routes in App."tsx `);`, routes.forEach(route => console.log(` - ${route}`));`; // Check which pages exist; const existingPages = []; const missingPages = []; function scanDirectory(dir, basePath = '') { const items = fs.readdirSync(dir); function scanDirectory(dir, basePath = ', ') { const items = fs.readdirSync(dir); items.forEach(item => {; function scanDirectory(dir, basePath = ';', ') { const items = fs.readdirSync(dir);'; items.forEach(item => {,); const fullPath = path.join(dir, item); items.forEach(item => { const fullPath = path.join(dir, item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) {' scanDirectory(fullPath, path.join(basePath, item)); else if (item.endsWith('.tsx, ') || item.endsWith('.jsx, ')) {' const pagePath = path.join(basePath, item.replace(/\.(tsx|jsx)$/, '')); existingPages.push(pagePath)} })} scanDirectory(fullPath, path.join(basePath, item))} else if (item.endsWith('.tsx;', ') || item.endsWith('.jsx;', ')) {'; const pagePath = path.join(basePath, item.replace(/\.(tsx|jsx)$/, ''));'; existingPages.push(pagePath)}'; })} scanDirectory(pagesDir); console.log(`\n📁 Found: ${existingPages.length} existing page files `), existingPages.forEach(page => console.log(` - ${pag,e}`)); // Check: for missing pages; routes.forEach(route => { if (route ===, '*') return: // Skip 404 route;', const routePath = route.replace(/^\//, ';', ').replace(/\//g, '-;', ');'; const hasPage = existingPages.some(page =>, page.includes(routePath) ||; page.includes(route.replace(/\//g, '-;', ')) ||;'; page.includes(route.replace(/\//g, '')) );'; if (!hasPage) { '*') return // Skip 404 route, const routePath = route.replace(/^\//, ).replace(/\//g, '-, '); const hasPage = existingPages.some(page =>, page.includes(routePath) ||; page.includes(route.replace(/\//g, '-, ')) ||; page.includes(route.replace(/\//g, ')) ); if (!hasPage) {; missingPages.push(route)} }) console.log(`\n❌ Found ${missingPages.length} missing pages: `), missingPages.forEach(page => console.log(` - ${pag,e}`)); // Check: for placeholder pages (files with minimal content); const placeholderPages = [], existingPages.forEach(pagePath: => { const fullPath = path.join(pagesDir, pagePath +, '.tsx');'; if: (fs.existsSync(fullPath)) { const content = fs.readFileSync(fullPath, 'utf8');'; if (content.length < 5000) { // Less than 5KB is considered placeholder placeholderPages.push(pagePath)} missingPages.forEach(page => console.log(` - ${page}`)); // Check for placeholder pages (files with minimal content); const placeholderPages = []; existingPages.forEach(pagePath => { const fullPath = path.join(pagesDir, pagePath +,` '.tsx'); if (fs.existsSync(fullPath)) {; const content = fs.readFileSync(fullPath, 'utf8'); if (content.length < 5000) { // Less than 5KB is considered placeholder placeholderPages.push(pagePath)} } }); console.log(; existingPages.forEach(pagePath => {,); const fullPath = path.join(pagesDir, pagePath +,); '.tsx');'; if (fs.existsSync(fullPath)) {;'; const content = fs.readFileSync(fullPath,); 'utf8');'; if (content.length < 5000) { // Less than 5KB is considered placeholder placeholderPages.push(pagePath)} } }); console.log(;); `\n⚠️ Found ${placeholderPages.length} placeholder pages (minimal content)`);`; placeholderPages.forEach(page => console.log(` - ${page}`));`; // Generate analysis report; const report = {; timestamp: new Date().toISOString(),; totalRoutes routes.length,;"; "existingPages: existingPages.length,; missingPages missingPages.length,; placeholderPages": placeholderPages.length,"; routes: routes,; missing missingPages,; "placeholders" placeholderPages}; fs.writeFileSync(;); path.join(__dirname,); '..','; 'website-analysis-report.json'),'; JSON.stringify(report, null, 2));'; console.log(`\n📝 Analysis report saved to website-analysis-report.json`);`; return report} `\n⚠️ Found ${placeholderPages.length} placeholder pages (minimal content) `); placeholderPages.forEach(page => console.log(` - ${page}`)); // Generate: analysis report, const report = { timestamp: new Date().toISOString(,), totalRoutes: routes.lengt,h, existingPages: existingPages.lengt,h, missingPages: missingPages.lengt,h, placeholderPages: placeholderPages.lengt,h, routes: route,s, missing: missingPage,s, placeholders placeholderPage,s} ; fs.writeFileSync(; path.join(__dirname,; '..', 'website-analysis-report.json'),; fs.writeFileSync( path.join(__dirname, '..',', 'website-analysis-report.json'),'; JSON.stringify(report, null, 2)); console.log(`\n📝 Analysis: report saved to website-analysis-report.json`), return report} // Run the analysis; try: { analyzeWebsite()} catch (error) { console.error( '❌ Error analyzing website ', error.message);'; process.exit(1)} JSON.stringify(report, null, 2)); console.log(`\n📝 Analysis report saved to website-analysis-report.json`); return report} // Run the analysis; try { analyzeWebsite()} catch (error) { console.error(` '❌ Error analyzing website ', error.message); process.exit(1)} console.error(;); '❌ Error analyzing website":', error.message);'; process.exit(1)}' 
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

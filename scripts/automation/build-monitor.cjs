@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 #!/''usr/bin/env'' node;
-=======
 #!/'usr/bin/env' node;
 
->>>>>>> main
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -16,14 +13,9 @@ class BuildMonitor {;
     this.errorsFound = [];
     this.startTime = Date.now();
   }
-<<<<<<< HEAD
 
   log(message, type = `info`) {
-=======
-;
-  log(message, type = 'info') {;
->>>>>>> main
-    const timestamp = new Date().toISOString();
+<<<<<<< HEAD    const timestamp = new Date().toISOString();
     console.log(`[${timestamp}] [${type.toUpperCase()}] ${message}`);
   }
 ;
@@ -32,7 +24,6 @@ class BuildMonitor {;
       fs.mkdirSync(dirPath, { recursive: true });
     }
   }
-<<<<<<< HEAD
 
   async runCommand(command, options = {}) {
     try {
@@ -45,7 +36,6 @@ class BuildMonitor {;
       return { success: true, output: result };
     } catch (error) {  
       return { success: false, output: error.message, code: error.status   };
-=======
 ;
   async runCommand(command, options = {}) {;
     try {;
@@ -58,7 +48,6 @@ class BuildMonitor {;
       return { success: true, output: result };
     } catch (error) {;
       return { success: false, output: error.message, code: error.status };
->>>>>>> main
     }
   }
 ;
@@ -66,21 +55,14 @@ class BuildMonitor {;
     this.log('Checking build health...');
     ;
     const result = await this.runCommand('npm run build');
-<<<<<<< HEAD
     
     if (result.success) {
       this.log(`Build completed successfully`, `success`);
-=======
-    ;
-    if (result.success) {;
-      this.log('Build completed successfully', 'success');
->>>>>>> main
-      return true;
+<<<<<<< HEAD      return true;
     } else {this.log(`Build failed: ${result.output}`, `error`);this.errorsFound.push(`Build failed: ${result.output}`);
       return false;
     }
   }
-<<<<<<< HEAD
 
   async fixBuildIssues(buildError) {
     this.log(`Attempting to fix build issues...`);
@@ -91,7 +73,6 @@ class BuildMonitor {;
       this.fixesApplied.push('Installed missing dependencies');
     }
     
-=======
 ;
   async fixBuildIssues(buildError) {;
     this.log('Attempting to fix build issues...');
@@ -102,7 +83,6 @@ class BuildMonitor {;
       this.fixesApplied.push('Installed missing dependencies');
     }
     ;
->>>>>>> main
     // Try to fix TypeScript errors;
     const typeCheckResult = await this.runCommand('npx tsc --noEmit');
     if (typeCheckResult.success) {;
@@ -110,12 +90,8 @@ class BuildMonitor {;
     } else {;
       this.fixesApplied.push('TypeScript errors detected - manual review needed');
     }
-<<<<<<< HEAD
     
-=======
-    ;
->>>>>>> main
-    // Try to fix linting errors;
+<<<<<<< HEAD    // Try to fix linting errors;
     const lintResult = await this.runCommand('npx eslint --fix src/');
     if (lintResult.success) {;
       this.fixesApplied.push('Auto-fixed linting errors');
@@ -137,19 +113,16 @@ class BuildMonitor {;
 ;
   async fixSyntaxErrors() {;
     this.log('Checking for syntax errors...');
-<<<<<<< HEAD
     
     // This would typically involve parsing files and checking syntax;
     // For now, we'll just run a basic check;
     const result = await this.runCommand('node -c ''src/main.jsx'' 2>&1 || true');
     if (result.success) {
-=======
     ;
     // This would typically involve parsing files and checking syntax;
     // For now, we'll just run a basic check;
     const result = await this.runCommand('node -c 'src/main.jsx' 2>&1 || true');
     if (result.success) {;
->>>>>>> main
       this.log('No obvious syntax errors detected', 'success');
     }
   }
@@ -160,7 +133,6 @@ class BuildMonitor {;
     const result = await this.runCommand('npx tsc --noEmit');
     if (result.success) {;
       this.log('No TypeScript type errors detected', 'success');
-<<<<<<< HEAD
     } else {
       this.log(`TypeScript type errors detected`, `warn`);this.errorsFound.push(`TypeScript errors: ${result.output}`);
     }
@@ -176,26 +148,7 @@ class BuildMonitor {;
       fixesApplied: this.fixesApplied,
       summary: {
         buildSuccessful: this.errorsFound.length === 0,
-        totalErrors: this.errorsFound.length,
-=======
-    } else {;
-      this.log('TypeScript type errors detected', 'warn');this.errorsFound.push(`TypeScript errors: ${result.output}`);
-    }
-  }
-;
-  async generateReport() {;
-    this.log('Generating build monitor report...');
-    ;
-    const report = {;
-      timestamp: new Date().toISOString(),;
-      duration: Date.now() - this.startTime,;
-      errorsFound: this.errorsFound,;
-      fixesApplied: this.fixesApplied,;
-      summary: {;
-        buildSuccessful: this.errorsFound.length === 0,;
-        totalErrors: this.errorsFound.length,;
->>>>>>> main
-        totalFixes: this.fixesApplied.length;
+        totalErrors: this.errorsFound.length,        totalFixes: this.fixesApplied.length;
       }
     };
 ;
@@ -203,19 +156,16 @@ class BuildMonitor {;
     fs.writeFileSync(this.logFile, JSON.stringify(report, null, 2));
     this.log(`Build monitor report generated: ${this.logFile}`);
   }
-<<<<<<< HEAD
 
   async run() {
     this.log(`Starting build monitoring process...`);
     
     try {
-=======
 ;
   async run() {;
     this.log('Starting build monitoring process...');
     ;
     try {;
->>>>>>> main
       const buildHealthy = await this.checkBuildHealth();
       ;
       if (!buildHealthy) {;
@@ -226,24 +176,15 @@ class BuildMonitor {;
       }
       ;
       await this.generateReport();
-<<<<<<< HEAD
       
       this.log(`Build monitoring completed`, `success`);
     } catch (error) {  this.log(`Error during build monitoring: ${error.message  }`, `error`);this.errorsFound.push(`Process error: ${error.message}`);
-=======
-      ;
-      this.log('Build monitoring completed', 'success');
-    } catch (error) {this.log(`Error during build monitoring: ${error.message}`, 'error');this.errorsFound.push(`Process error: ${error.message}`);
->>>>>>> main
-      await this.generateReport();
+<<<<<<< HEAD      await this.generateReport();
     }
   }
 }
-<<<<<<< HEAD
 
-=======
 ;
->>>>>>> main
 // Run the build monitor;
 const monitor = new BuildMonitor();
 monitor.run().catch(console.error);

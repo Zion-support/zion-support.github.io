@@ -38,16 +38,16 @@ class HealthChecker {
           resolve({
             status: 'healthy',
             responseTime,
-            statusCode: res.statusCode,
-          });
+            statusCode: res.statusCode,;
+});
         } else {
           this.log('warn', `Application health check failed with status ${res.statusCode}`);
           resolve({
             status: 'unhealthy',
             responseTime,
             statusCode: res.statusCode,
-            reason: `HTTP ${res.statusCode}`,
-          });
+            reason: `HTTP ${res.statusCode}`,;
+});
         }
       });
 
@@ -56,8 +56,8 @@ class HealthChecker {
         resolve({
           status: 'unhealthy',
           responseTime: Date.now() - startTime,
-          reason: error.message,
-        });
+          reason: error.message,;
+});
       });
 
       req.setTimeout(this.maxResponseTime, () => {
@@ -67,8 +67,8 @@ class HealthChecker {
         resolve({
           status: 'unhealthy',
           responseTime,
-          reason: 'timeout',
-        });
+          reason: 'timeout',;
+});
       });
     });
   }
@@ -84,13 +84,13 @@ class HealthChecker {
         status: diskUsage < 90 ? 'healthy' : 'warning',
         diskUsage: Math.round(diskUsage),
         freeSpace: Math.round(freeSpace / 1024 / 1024 / 1024), // GB
-        totalSpace: Math.round(totalSpace / 1024 / 1024 / 1024), // GB
-      };
+        totalSpace: Math.round(totalSpace / 1024 / 1024 / 1024), // GB;
+};
     } catch (error) {
       return {
         status: 'error',
-        error: error.message,
-      };
+        error: error.message,;
+};
     }
   }
 
@@ -105,13 +105,13 @@ class HealthChecker {
         heapUsed: Math.round(memUsage.heapUsed / 1024 / 1024), // MB
         heapTotal: Math.round(memUsage.heapTotal / 1024 / 1024), // MB
         external: Math.round(memUsage.external / 1024 / 1024), // MB
-        usagePercent: Math.round(memUsagePercent),
-      };
+        usagePercent: Math.round(memUsagePercent),;
+};
     } catch (error) {
       return {
         status: 'error',
-        error: error.message,
-      };
+        error: error.message,;
+};
     }
   }
 
@@ -121,7 +121,7 @@ class HealthChecker {
         'package.json',
         'next.config.cjs',
         'ecosystem.config.cjs',
-      ];
+      ]
       
       const missingFiles = [];
       const fileStats = {};
@@ -133,8 +133,8 @@ class HealthChecker {
           fileStats[file] = {
             exists: true,
             size: stats.size,
-            modified: stats.mtime,
-          };
+            modified: stats.mtime,;
+};
         } else {
           missingFiles.push(file);
           fileStats[file] = { exists: false };
@@ -144,13 +144,13 @@ class HealthChecker {
       return {
         status: missingFiles.length === 0 ? 'healthy' : 'warning',
         missingFiles,
-        fileStats,
-      };
+        fileStats,;
+};
     } catch (error) {
       return {
         status: 'error',
-        error: error.message,
-      };
+        error: error.message,;
+};
     }
   }
 
@@ -162,8 +162,8 @@ class HealthChecker {
       application: await this.checkApplicationHealth(),
       diskSpace: await this.checkDiskSpace(),
       memoryUsage: await this.checkMemoryUsage(),
-      fileSystem: await this.checkFileSystem(),
-    };
+      fileSystem: await this.checkFileSystem(),;
+};
     
     // Determine overall health status
     const statuses = [
@@ -171,7 +171,7 @@ class HealthChecker {
       results.diskSpace.status,
       results.memoryUsage.status,
       results.fileSystem.status,
-    ];
+    ]
     
     if (statuses.includes('unhealthy') || statuses.includes('error')) {
       results.overallStatus = 'unhealthy';

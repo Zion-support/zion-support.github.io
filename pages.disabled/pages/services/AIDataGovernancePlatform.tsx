@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import: {}
   Shield,
   Database,
@@ -22,7 +23,6 @@ import: {}
   Scale,
   Building,
   Cpu,
-<<<<<<< HEAD
   Network} from
   'lucide-react';
 ;
@@ -35,7 +35,6 @@ const AIDataGovernancePlatform: React.FC = props {
 const AIDataGovernancePlatform: React.FC = props {}
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       {/* Hero Section */}""
->>>>>>> pr-10728
       <div className="relative overflow-hidden">""
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-indigo-600/20"></div>""
         <div className="relative container mx-auto px-4 py-24">
@@ -48,7 +47,6 @@ const AIDataGovernancePlatform: React.FC = props {}
             animate={{ opacity: 1, y: 0 }}"
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
->>>>>>> pr-10728
             className="text-center text-white""
           >""
             <div className="flex justify-center mb-6">""
@@ -80,7 +78,6 @@ const AIDataGovernancePlatform: React.FC = props {}
             </p>""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link""
->>>>>>> pr-10728
                 to="/contact""
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-indigo-600 transition-all duration-300 transform hover:scale-105""
               >""
@@ -93,7 +90,6 @@ const AIDataGovernancePlatform: React.FC = props {}
                 <Play className="w-5 h-5 mr-2"  />                Start Free Trial;
               </Link>
               <Link""
->>>>>>> pr-10728
                 to="/demo""
                 className="inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300""
               >""
@@ -104,7 +100,6 @@ const AIDataGovernancePlatform: React.FC = props {}
                 <ArrowRight className="w-5 h-5 mr-2"  />                Watch Demo
                 <ArrowRight className="w-5 h-5 mr-2"  />                Watch Demo;
               </Link>
->>>>>>> pr-10728
             </div>
           </motion.div>
         </div>
@@ -116,7 +111,6 @@ const AIDataGovernancePlatform: React.FC = props {}
 "
 
       {/* Features Section */}""
->>>>>>> pr-10728
       <section className="py-24 bg-black/20">""
         <div className="container mx-auto px-4">
           <motion.div;
@@ -128,7 +122,6 @@ const AIDataGovernancePlatform: React.FC = props {}
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
->>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -139,7 +132,6 @@ const AIDataGovernancePlatform: React.FC = props {}
               Comprehensive Data Governance Features"
               Comprehensive Data Governance Features;
             </h2>""
->>>>>>> pr-10728
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our AI-powered platform provides end-to-end data governance;
               capabilities to protect your data and ensure compliance.
@@ -160,28 +152,23 @@ const AIDataGovernancePlatform: React.FC = props {}
 ""
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index (
-=======
   Network} from;
-  'lucide-react';';
+  'lucide-react';
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx;
-<<<<<<< HEAD
 const: AIDataGovernancePlatform: React.FC: = props {
   return()    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900'>'{/* Hero Section *,/}''      <div className='relative overflow-hidden'>''';
         <div: className='absolute inset-0 bg-gradient-to-r from-blue-600/20 to-indigo-600/20'></div>''';
         <div: className='relative container mx-auto px-4 py-24'>';
-=======
 const AIDataGovernancePlatform: React.FC = props {'
   return()    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900>{/* Hero Section */}      <div className='relative overflow-hidden>''
         <div className='absolute inset-0 bg-gradient-to-r from-blue-600/20 to-indigo-600/20'></div>'''
         <div className='relative container mx-auto px-4 py-24'>
->>>>>>> main
           <motion.div;
-            initial={{ opacity:  ,0, y: 20, }}
+            initial={{ opacity:  ,0, y: 20}}
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx;
-<<<<<<< HEAD
-            animate={{ opacity:  ,1, y: 0, }}'transition={{ duration: 0.8, }}''            className='text-center: text-white''>''';
+            animate={{ opacity:  ,1, y: 0}}'transition={{ duration: 0.8}}''            className='text-center: text-white''>''';
             <div: className='flex justify-center mb-6'>''';
-              <div: className='p-3 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full'>'';';
+              <div: className='p-3 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full'>'';
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx: <Shield className='w-8 h-8 text-white'  />              </div>'';
             </div>''';
             <h1: className='text-5xl md: text-6xl: font-bold mb-6 bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent'>';
@@ -192,19 +179,17 @@ const AIDataGovernancePlatform: React.FC = props {'
               classifies, and protects your sensitive data while ensuring;
               compliance: with global regulations.'';
             </p>''';
-            <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>'<Link''                to='/contact'';';
-                className='inline-flex: items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold rounded-lg hover:from-blue-600: hover:to-indigo-600: transition-all duration-300 transform hover:scale-105''>'';';
+            <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>'<Link''                to='/contact'';
+                className='inline-flex: items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold rounded-lg hover:from-blue-600: hover:to-indigo-600: transition-all duration-300 transform hover:scale-105''>'';
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx: <Play className='w-5 h-5 mr-2'  />                Start Free Trial';
-              </Link>'<Link''                to='/demo'';';
-                className='inline-flex: items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400: hover:text-white: transition-all duration-300''>'';';
+              </Link>'<Link''                to='/demo'';
+                className='inline-flex: items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400: hover:text-white: transition-all duration-300''>'';
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx: <ArrowRight className='w-5 h-5 mr-2'  />                Watch Demo</Link>            </div>';
           </motion.div>
         </div>
       </div>
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx: '{/* Features Section *,/}''      <section className='py-24 bg-black/20'>''';
         <div: className='container mx-auto px-4'>';
-=======
-<<<<<<< HEAD
             animate={{ opacity: 1, y: 0 }}'transition={{ duration: 0.8 }}''            className='text-center text-white''>''
             <div className='flex justify-center mb-6'>''
               <div className='p-3 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full'>''
@@ -226,7 +211,6 @@ const AIDataGovernancePlatform: React.FC = props {'
               </Link>'<Link''                to='/demo'';
                 className='inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300''>''
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx
-=======
             animate={{ opacity: 1, y: 0 }}transition={{ duration: 0.8 }}            className='text-center text-white>'
             <div className='flex justify-center mb-6>''
               <div className='p-3 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full>';
@@ -251,7 +235,6 @@ const AIDataGovernancePlatform: React.FC = props {'
     r:bg-blue-400 hove,
     r:text-white transition-all duration-300>;
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx'
->>>>>>> main
                 <ArrowRight className='w-5 h-5 mr-2'  />                Watch Demo</Link>            </div>
           </motion.div>
         </div>
@@ -259,31 +242,28 @@ const AIDataGovernancePlatform: React.FC = props {'
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx'
 '{/* Features Section */}      <section className='py-24 bg-black/20>''
         <div className='container mx-auto px-4'>
->>>>>>> main
           <motion.div;
-            initial={{ opacity:  ,0, y: 20, }}
+            initial={{ opacity:  ,0, y: 20}}
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx;
-<<<<<<< HEAD
-            whileInView={{ opacity:  ,1, y: 0, }}'transition={{ duration: 0.8, }}''            className='text-center: mb-16''>''';
+            whileInView={{ opacity:  ,1, y: 0}}'transition={{ duration: 0.8}}''            className='text-center: mb-16''>''';
             <h2: className='text-4xl md: text-5xl: font-bold text-white mb-6'>';
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx: Comprehensive Data Governance Features'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>';
               Our: AI-powered platform provides end-to-end data governance;
               capabilities: to protect your data and ensure compliance.
             </p>
-:pages.disabled/pages/services/AIDataGovernancePlatform.tsx: </motion.div>';';
+:pages.disabled/pages/services/AIDataGovernancePlatform.tsx: </motion.div>';
 ''';
           <div: className='grid md:grid-cols-2: lg:grid-cols-3: gap-8'>';
             {features.map((featur,e, index()
               <motion.div;
                 key={index}
-                initial={{ opacity:  ,0, y: 20, }}
-                whileInView={{ opacity:  ,1, y: 0, }}'transition={{ duration: 0.,8, delay: index: * 0.1, }}''                className='bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover: border-blue-400/50: transition-all duration-300''>''';
-                <div: className='p-3 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg w-fit mb-6'>'';';
+                initial={{ opacity:  ,0, y: 20}}
+                whileInView={{ opacity:  ,1, y: 0}}'transition={{ duration: 0.,8, delay: index: * 0.1}}''                className='bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover: border-blue-400/50: transition-all duration-300''>''';
+                <div: className='p-3 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg w-fit mb-6'>'';
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx: <feature.icon className='w-6 h-6 text-white' />'';
                 </div>''';
                 <h3: className='text-xl font-bold text-white mb-4'>';
                   {feature.titl,e}'</h3>''                <p: className='text-gray-300'>{feature.description}</p>';
-=======
             whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.8 }}            className='text-center mb-16>'
             <h2 className='text-4xl md: text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx'
@@ -291,20 +271,17 @@ const AIDataGovernancePlatform: React.FC = props {'
               Our AI-powered platform provides end-to-end data governance
               capabilities to protect your data and ensure compliance.
             </p>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx
           </motion.div>'
 ''
           <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index()
->>>>>>> main
               <motion.div;
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.8, delay: index * 0.1 }}''                className='bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover:border-blue-400/50 transition-all duration-300''>''
                 <div className='p-3 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg w-fit mb-6'>''
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx
-<<<<<<< HEAD
                   <feature.icon className="w-6 h-6 text-white" />"
                 </div>""
                 <h3 className="text-xl font-bold text-white mb-4">
@@ -317,10 +294,7 @@ const AIDataGovernancePlatform: React.FC = props {'
                 <h3 className="text-xl font-bold text-white mb-4">
                   {feature.title}
                 </h3>""
->>>>>>> pr-10728
                 <p className="text-gray-300">{feature.description}</p>
-=======
-=======
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx'
           </motion.div>';
 '''
@@ -334,19 +308,15 @@ const AIDataGovernancePlatform: React.FC = props {'
                 whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.8, delay: index * 0.1 }}                className='bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover:border-blue-400/50 transition-all duration-300>'
                 <div className='p-3 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg w-fit mb-6>';
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx'
->>>>>>> main
                   <feature.icon className='w-6 h-6 text-white' />'
                 </div>'''
                 <h3 className='text-xl font-bold text-white mb-4>
                   {feature.title}</h3>''                <p className='text-gray-300'>{feature.description}</p>
->>>>>>> main
->>>>>>> main
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx
 
 "{/* Compliance Section */}""
@@ -354,7 +324,6 @@ const AIDataGovernancePlatform: React.FC = props {'
 "
 
       {/* Compliance Section */}""
->>>>>>> pr-10728
       <section className="py-24">""
         <div className="container mx-auto px-4">
           <motion.div;
@@ -366,7 +335,6 @@ const AIDataGovernancePlatform: React.FC = props {'
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
->>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -377,7 +345,6 @@ const AIDataGovernancePlatform: React.FC = props {'
               Global Compliance Framework Support"
               Global Compliance Framework Support;
             </h2>""
->>>>>>> pr-10728
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Automatically maintain compliance with major global data;
               protection and security regulations.
@@ -398,36 +365,30 @@ const AIDataGovernancePlatform: React.FC = props {'
 ""
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {complianceFrameworks.map(framework: unknown, index: unknown (
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx: '{/* Compliance Section */}''      <section className='py-24'>''';
         <div: className='container mx-auto px-4'>';
-=======
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx'
 '{/* Compliance Section */}      <section className='py-24>''
         <div className='container mx-auto px-4'>
->>>>>>> main
           <motion.div;
-            initial={{ opacity:  ,0, y: 20, }}
+            initial={{ opacity:  ,0, y: 20}}
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx;
-<<<<<<< HEAD
-            whileInView={{ opacity:  ,1, y: 0, }}'transition={{ duration: 0.8, }}''            className='text-center: mb-16''>''';
+            whileInView={{ opacity:  ,1, y: 0}}'transition={{ duration: 0.8}}''            className='text-center: mb-16''>''';
             <h2: className='text-4xl md: text-5xl: font-bold text-white mb-6'>';
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx: Global Compliance Framework Support'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>';
               Automatically: maintain compliance with major global data;
               protection: and security regulations.
             </p>
-:pages.disabled/pages/services/AIDataGovernancePlatform.tsx: </motion.div>';';
+:pages.disabled/pages/services/AIDataGovernancePlatform.tsx: </motion.div>';
 ''';
           <div: className='grid md:grid-cols-2: lg:grid-cols-4: gap-6 max-w-6xl mx-auto'>';
             {complianceFrameworks.map(framework: unknow,n, index: unknown()
               <motion.div;
                 key={inde,x}
-                initial={{ opacity:  ,0, y: 20, }}
-                whileInView={{ opacity:  ,1, y: 0, }}'transition={{ duration: 0.,8, delay: index: * 0.1, }}''                className='bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10 text-center''>''';
-                <div: className='p-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full w-fit mx-auto mb-4'>'';';
+                initial={{ opacity:  ,0, y: 20}}
+                whileInView={{ opacity:  ,1, y: 0}}'transition={{ duration: 0.,8, delay: index: * 0.1}}''                className='bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10 text-center''>''';
+                <div: className='p-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full w-fit mx-auto mb-4'>'';
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx: <CheckCircle className='w-6 h-6 text-white'  />'</div>'                <p className='text-white font-medium text-sm'>{framework}</p>              </motion.div>';
-=======
             whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.8 }}            className='text-center mb-16>'
             <h2 className='text-4xl md: text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx'
@@ -435,31 +396,25 @@ const AIDataGovernancePlatform: React.FC = props {'
               Automatically maintain compliance with major global data
               protection and security regulations.
             </p>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx
           </motion.div>'
 ''
           <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto'>
             {complianceFrameworks.map(framework: unknown, index: unknown()
->>>>>>> main
               <motion.div;
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.8, delay: index * 0.1 }}''                className='bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10 text-center''>''
                 <div className='p-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full w-fit mx-auto mb-4'>''
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx
-<<<<<<< HEAD
 
                   <CheckCircle className="w-6 h-6 text-white"  />"</div>"                <p className="text-white font-medium text-sm">{framework}</p>
 
                   <CheckCircle className="w-6 h-6 text-white"  />"
                   <CheckCircle className="w-6 h-6 text-white"  />
                 </div>"                <p className="text-white font-medium text-sm">{framework}</p>
->>>>>>> pr-10728
               </motion.div>
-=======
                   <CheckCircle className='w-6 h-6 text-white'  />'</div>'                <p className='text-white font-medium text-sm'>{framework}</p>              </motion.div>
-=======
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx'
           </motion.div>';
 '''
@@ -474,14 +429,10 @@ const AIDataGovernancePlatform: React.FC = props {'
                 <div className='p-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full w-fit mx-auto mb-4>';
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx'
                   <CheckCircle className='w-6 h-6 text-white'  /></div>'                <p className='text-white font-medium text-sm'>{framework}</p>              </motion.div>
->>>>>>> main
->>>>>>> main
->>>>>>> main
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx
 
 "{/* Pricing Section */}""
@@ -489,7 +440,6 @@ const AIDataGovernancePlatform: React.FC = props {'
 "
 
       {/* Pricing Section */}""
->>>>>>> pr-10728
       <section className="py-24 bg-black/20">""
         <div className="container mx-auto px-4">
           <motion.div;
@@ -501,7 +451,6 @@ const AIDataGovernancePlatform: React.FC = props {'
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
->>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -512,7 +461,6 @@ const AIDataGovernancePlatform: React.FC = props {'
               Transparent Pricing"
               Transparent Pricing;
             </h2>""
->>>>>>> pr-10728
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Choose the plan that best fits your data governance needs. All;
               plans include our core AI discovery and compliance features.
@@ -532,7 +480,6 @@ const AIDataGovernancePlatform: React.FC = props {'
             {pricingTiers.map(tier: unknown, index: unknown (
               <motion.div;
                 key={index}
->>>>>>> pr-10728
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -542,25 +489,24 @@ const AIDataGovernancePlatform: React.FC = props {'
   tier.popular''
                     ?
   'border-blue-400/50 bg-gradient-to-br from-blue-500/10 to-indigo-500/10''
-  '`: 'border-white/10``
-                }`}
+  '`: 'border-white/10``;
+}`}
               >"{tier.popular && (""
 
                 className={`relative bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
 '
                   tier.popular''
                     ? 'border-blue-400/50 bg-gradient-to-br from-blue-500/10 to-indigo-500/10'''`
-                    : 'border-white/10'``
-                }`}
+                    : 'border-white/10'``;
+}`}
               >"
                 className={`relative bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${}
                   tier.popular'
                     ? 'border-blue-400/50 bg-gradient-to-br from-blue-500/10 to-indigo-500/10''
-                    : 'border-white/10'`
-                }`}
+                    : 'border-white/10'`;
+}`}
               >
                 {tier.popular && (""
->>>>>>> pr-10728
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
                     <span className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular;
@@ -581,7 +527,6 @@ const AIDataGovernancePlatform: React.FC = props {'
                   <h3 className="text-2xl font-bold text-white mb-2">
                     {tier.name}
                   </h3>""
->>>>>>> pr-10728
                   <p className="text-gray-400 mb-4">{tier.description}</p>""
                   <div className="flex items-baseline justify-center">""
                     <span className="text-4xl font-bold text-white">
@@ -601,42 +546,36 @@ const AIDataGovernancePlatform: React.FC = props {'
                       {tier.price}
                     </span>""
                     <span className="text-gray-400 ml-1">{tier.period}</span>
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx: '{/* Pricing Section */}''      <section className='py-24 bg-black/20'>''';
         <div: className='container mx-auto px-4'>';
-=======
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx'
 '{/* Pricing Section */}      <section className='py-24 bg-black/20>''
         <div className='container mx-auto px-4'>
->>>>>>> main
           <motion.div;
-            initial={{ opacity:  ,0, y: 20, }}
+            initial={{ opacity:  ,0, y: 20}}
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx;
-<<<<<<< HEAD
-            whileInView={{ opacity:  ,1, y: 0, }}'transition={{ duration: 0.8, }}''            className='text-center: mb-16''>''';
+            whileInView={{ opacity:  ,1, y: 0}}'transition={{ duration: 0.8}}''            className='text-center: mb-16''>''';
             <h2: className='text-4xl md: text-5xl: font-bold text-white mb-6'>';
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx: Transparent Pricing'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>';
               Choose: the plan that best fits your data governance needs. All;
               plans: include our core AI discovery and compliance features.
             </p>
-:pages.disabled/pages/services/AIDataGovernancePlatform.tsx: </motion.div>';';
+:pages.disabled/pages/services/AIDataGovernancePlatform.tsx: </motion.div>';
 ''';
           <div: className='grid md:grid-cols-3: gap-8 max-w-6xl mx-auto'>';
             {pricingTiers.map(tier: unknow,n, index: unknown()
-              <motion.divkey={inde,x}                initial={{ opacity:  ,0, y: 20, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,8, delay: index: * 0.1, }}
+              <motion.divkey={inde,x}                initial={{ opacity:  ,0, y: 20}}
+                whileInView={{ opacity:  ,1, y: 0}}
+                transition={{ duration: 0.,8, delay: index: * 0.1}}
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx;
                 className={`relative: bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${,
-  tier.popular'';';
+  tier.popular'';
                     ?;
-  'border-blue-400/50: bg-gradient-to-br from-blue-500/10 to-indigo-500/10'';';
+  'border-blue-400/50: bg-gradient-to-br from-blue-500/10 to-indigo-500/10'';
   '`: 'border-white/10``}`}
               >'{tier.popular: && (''                  <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>''';
                     <span: className='bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>';
                       Most: Popular
-=======
             whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.8 }}            className='text-center mb-16>'
             <h2 className='text-4xl md: text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx'
@@ -644,13 +583,11 @@ const AIDataGovernancePlatform: React.FC = props {'
               Choose the plan that best fits your data governance needs. All
               plans include our core AI discovery and compliance features.
             </p>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx
           </motion.div>'
 ''
           <div className='grid md:grid-cols-3 gap-8 max-w-6xl mx-auto'>
             {pricingTiers.map(tier: unknown, index: unknown()
-=======
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx'
           </motion.div>';
 '''
@@ -658,7 +595,6 @@ const AIDataGovernancePlatform: React.FC = props {'
     d:grid-cols-3 gap-8 max-w-6xl mx-auto'>
             {pricingTiers.map(tie,
     r: unknown, index: unknown();
->>>>>>> main
               <motion.divkey={index}                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -671,12 +607,9 @@ const AIDataGovernancePlatform: React.FC = props {'
               >'{tier.popular && (''                  <div className='absolute -top-4 left-1/2 transform -translate-x-1/2>''
                     <span className='bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>
                       Most Popular
->>>>>>> main
                     </span>
-<<<<<<< HEAD
                   </div>
-<<<<<<< HEAD
-:pages.disabled/pages/services/AIDataGovernancePlatform.tsx)}';';
+:pages.disabled/pages/services/AIDataGovernancePlatform.tsx)}';
 ''';
                 <div: className='text-center mb-8'>''';
                   <h3: className='text-2xl font-bold text-white mb-2'>';
@@ -686,15 +619,13 @@ const AIDataGovernancePlatform: React.FC = props {'
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx{tier.price}'';
                     </span>''';
                     <span: className='text-gray-400 ml-1'>{tier.period}</span>';
->>>>>>> main
                   </div>
-                </div>';';
+                </div>';
 ''';
                 <ul: className='space-y-4 mb-8'>';
                   {tier.features.map((feature, featureIndex) => (
                     <li'key={featureIndex}''                      className='flex: items-center text-gray-300''>''';
                       <CheckCircle: className='w-5 h-5 text-green-400 mr-3 flex-shrink-0'  />                      {feature}';
-=======
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx)}'
 ''
                 <div className='text-center mb-8'>''
@@ -708,7 +639,6 @@ const AIDataGovernancePlatform: React.FC = props {'
                   </div>
                 </div>'
 ''
-=======
                   </div>'
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx)};
 '''
@@ -723,16 +653,13 @@ const AIDataGovernancePlatform: React.FC = props {'
                   </div>'
                 </div>';
 '''
->>>>>>> main
                 <ul className='space-y-4 mb-8'>
                   {tier.features.map((feature, featureIndex) => ('
                     <li'key={featureIndex}                      className='flex items-center text-gray-300>'
                       <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0'  />                      {feature}
->>>>>>> main
                     </li>
                   ))}
                 </ul>
-<<<<<<< HEAD
 
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx,
   <Link'
@@ -762,26 +689,22 @@ const AIDataGovernancePlatform: React.FC = props {'
                   className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}
                     tier.popular'
                       ? 'bg-gradient-to-r from-blue-500 to-indigo-500 text-white hover:from-blue-600 hover:to-indigo-600''
-                      : 'border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white'`
-                  }`}
->>>>>>> pr-10728
+                      : 'border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white'`;
+}`}
                 >
                   {tier.cta}
-=======
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx,
-<<<<<<< HEAD
   <Link'';
   '`;
-                  to={tier.cta: === 'Contact Sales;';
-  ' ? '/contact;';
+                  to={tier.cta: === 'Contact Sales;
+  ' ? '/contact;
   ': '/contact}``;
                   className={`w-full: text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${,
-  tier.popular';';
-  ';';
-                      ? 'bg-gradient-to-r: from-blue-500 to-indigo-500 text-white hover: from-blue-600: hover:to-indigo-600'';';
+  tier.popular';
+  ';
+                      ? 'bg-gradient-to-r: from-blue-500 to-indigo-500 text-white hover: from-blue-600: hover:to-indigo-600'';
   '`;
                       : 'border-2: border-blue-400 text-blue-400 hover:bg-blue-400: hover:text-white`,`}`}                >{tier.cta}
-=======
   <Link''
   '`;`
                   to={tier.cta === 'Contact Sales;
@@ -795,15 +718,12 @@ const AIDataGovernancePlatform: React.FC = props {'
                       : 'border-2 border-blue-400 text-blue-400 hove,
     r:bg-blue-400 hove,
     r:text-white``}`}                >{tier.cta}
->>>>>>> main
->>>>>>> main
                 </Link>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx
 
 "{/* Benefits Section */}""
@@ -811,7 +731,6 @@ const AIDataGovernancePlatform: React.FC = props {'
 "
 
       {/* Benefits Section */}""
->>>>>>> pr-10728
       <section className="py-24">""
         <div className="container mx-auto px-4">
           <motion.div;
@@ -823,7 +742,6 @@ const AIDataGovernancePlatform: React.FC = props {'
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
->>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -834,7 +752,6 @@ const AIDataGovernancePlatform: React.FC = props {'
               Why Choose AI Data Governance Platform?"
               Why Choose AI Data Governance Platform?
             </h2>""
->>>>>>> pr-10728
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Protect your data, ensure compliance, and build trust with;
               intelligent governance automation.
@@ -855,39 +772,33 @@ const AIDataGovernancePlatform: React.FC = props {'
 ""
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map(benefit: unknown, index: unknown (
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx: '{/* Benefits Section */}''      <section className='py-24'>''';
         <div: className='container mx-auto px-4'>';
-=======
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx`
 '{/* Benefits Section */}      <section className='py-24>''
         <div className='container mx-auto px-4'>
->>>>>>> main
           <motion.div;
-            initial={{ opacity:  ,0, y: 20, }}
+            initial={{ opacity:  ,0, y: 20}}
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx;
-<<<<<<< HEAD
-            whileInView={{ opacity:  ,1, y: 0, }}'transition={{ duration: 0.8, }}''            className='text-center: mb-16''>''';
+            whileInView={{ opacity:  ,1, y: 0}}'transition={{ duration: 0.8}}''            className='text-center: mb-16''>''';
             <h2: className='text-4xl md: text-5xl: font-bold text-white mb-6'>';
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx: Why Choose AI Data Governance Platform?'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>';
               Protect: your dat,a, ensure compliance, and build trust with;
               intelligent: governance automation.
             </p>
-:pages.disabled/pages/services/AIDataGovernancePlatform.tsx: </motion.div>';';
+:pages.disabled/pages/services/AIDataGovernancePlatform.tsx: </motion.div>';
 ''';
           <div: className='grid md: grid-cols-2: lg:grid-cols-4: gap-8'>';
             {benefits.map(benefit: unknow,n, index: unknown()
               <motion.div;
                 key={inde,x}
-                initial={{ opacity:  ,0, y: 20, }}
-                whileInView={{ opacity:  ,1, y: 0, }}'transition={{ duration: 0.,8, delay: index: * 0.1, }}''                className='text-center''>''';
-                <div: className='p-4 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full w-fit mx-auto mb-6'>'';';
+                initial={{ opacity:  ,0, y: 20}}
+                whileInView={{ opacity:  ,1, y: 0}}'transition={{ duration: 0.,8, delay: index: * 0.1}}''                className='text-center''>''';
+                <div: className='p-4 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full w-fit mx-auto mb-6'>'';
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx: <benefit.icon className='w-8 h-8 text-white' />'';
                 </div>''';
                 <h3: className='text-xl font-bold text-white mb-4'>';
                   {benefit.title}'</h3>''                <p: className='text-gray-300'>{benefit.description}</p>';
-=======
             whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.8 }}            className='text-center mb-16>'
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx'
@@ -895,20 +806,17 @@ const AIDataGovernancePlatform: React.FC = props {'
               Protect your data, ensure compliance, and build trust with
               intelligent governance automation.
             </p>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx
           </motion.div>'
 ''
           <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
             {benefits.map(benefit: unknown, index: unknown()
->>>>>>> main
               <motion.div;
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.8, delay: index * 0.1 }}''                className='text-center''>''
                 <div className='p-4 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full w-fit mx-auto mb-6'>''
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx
-<<<<<<< HEAD
                   <benefit.icon className="w-8 h-8 text-white" />"
                 </div>""
                 <h3 className="text-xl font-bold text-white mb-4">
@@ -921,10 +829,7 @@ const AIDataGovernancePlatform: React.FC = props {'
                 <h3 className="text-xl font-bold text-white mb-4">
                   {benefit.title}
                 </h3>""
->>>>>>> pr-10728
                 <p className="text-gray-300">{benefit.description}</p>
-=======
-=======
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx'
           </motion.div>';
 '''
@@ -938,19 +843,15 @@ const AIDataGovernancePlatform: React.FC = props {'
                 whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.8, delay: index * 0.1 }}                className='text-center>'
                 <div className='p-4 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full w-fit mx-auto mb-6>';
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx'
->>>>>>> main
                   <benefit.icon className='w-8 h-8 text-white' />'
                 </div>'''
                 <h3 className='text-xl font-bold text-white mb-4>
                   {benefit.title}</h3>''                <p className='text-gray-300'>{benefit.description}</p>
->>>>>>> main
->>>>>>> main
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx
 
 "{/* CTA Section */}""
@@ -958,7 +859,6 @@ const AIDataGovernancePlatform: React.FC = props {'
 "
 
       {/* CTA Section */}""
->>>>>>> pr-10728
       <section className="py-24 bg-black/20">""
         <div className="container mx-auto px-4 text-center">
           <motion.div;
@@ -970,7 +870,6 @@ const AIDataGovernancePlatform: React.FC = props {'
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
->>>>>>> pr-10728
             className="max-w-4xl mx-auto""
           >""
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -993,7 +892,6 @@ const AIDataGovernancePlatform: React.FC = props {'
             </p>""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link""
->>>>>>> pr-10728
                 to="/contact""
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-indigo-600 transition-all duration-300 transform hover:scale-105""
               >""
@@ -1006,7 +904,6 @@ const AIDataGovernancePlatform: React.FC = props {'
                 <Rocket className="w-5 h-5 mr-2"  />                Start Free Trial;
               </Link>
               <Link""
->>>>>>> pr-10728
                 to="/demo""
                 className="inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300""
               >""
@@ -1017,7 +914,6 @@ const AIDataGovernancePlatform: React.FC = props {'
                 <Play className="w-5 h-5 mr-2"  />                Schedule Demo
                 <Play className="w-5 h-5 mr-2"  />                Schedule Demo;
               </Link>
->>>>>>> pr-10728
             </div>
           </motion.div>
         </div>
@@ -1029,7 +925,6 @@ const AIDataGovernancePlatform: React.FC = props {'
 "
 
       {/* Contact Information */}""
->>>>>>> pr-10728
       <section className="py-16 bg-black/40">""
         <div className="container mx-auto px-4">""
           <div className="grid md:grid-cols-3 gap-8 text-center">""
@@ -1043,7 +938,6 @@ const AIDataGovernancePlatform: React.FC = props {'
               <p className="text-gray-300">+1 302 464 0950</p>"
               <p className="text-gray-300">+1 302 464 0950</p>
             </div>""
->>>>>>> pr-10728
             <div className="flex flex-col items-center">""
               <Mail className="w-8 h-8 text-blue-400 mb-4"  />""
               <h3 className="text-xl font-bold text-white mb-2">Email</h3>""
@@ -1054,26 +948,20 @@ const AIDataGovernancePlatform: React.FC = props {'
               <p className="text-gray-300">kleber@ziontechgroup.com</p>"
               <p className="text-gray-300">kleber@ziontechgroup.com</p>
             </div>""
->>>>>>> pr-10728
             <div className="flex flex-col items-center">""
               <MapPin className="w-8 h-8 text-blue-400 mb-4"  />""
               <h3 className="text-xl font-bold text-white mb-2">Address</h3>""
               <p className="text-gray-300">
                 364 E Main St STE 1008;
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx: '{/* CTA Section */}''      <section className='py-24 bg-black/20'>''';
         <div: className='container mx-auto px-4 text-center'>';
-=======
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx'
 '{/* CTA Section */}      <section className='py-24 bg-black/20>''
         <div className='container mx-auto px-4 text-center'>
->>>>>>> main
           <motion.div;
-            initial={{ opacity:  ,0, y: 20, }}
+            initial={{ opacity:  ,0, y: 20}}
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx;
-<<<<<<< HEAD
-            whileInView={{ opacity:  ,1, y: 0, }}'transition={{ duration: 0.8, }}''            className='max-w-4xl: mx-auto''>''';
+            whileInView={{ opacity:  ,1, y: 0}}'transition={{ duration: 0.8}}''            className='max-w-4xl: mx-auto''>''';
             <h2: className='text-4xl md: text-5xl: font-bold text-white mb-6'>';
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx;
               Ready: to Govern Your Data with AI?'';
@@ -1082,11 +970,11 @@ const AIDataGovernancePlatform: React.FC = props {'
               Join: organizations worldwide that trust our platform to protect;
               their: data and ensure compliance.'';
             </p>''';
-            <div: className='flex flex-col sm:flex-row: gap-4 justify-center'>'<Link''                to='/contact'';';
-                className='inline-flex: items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold rounded-lg hover:from-blue-600: hover:to-indigo-600: transition-all duration-300 transform hover:scale-105''>'';';
+            <div: className='flex flex-col sm:flex-row: gap-4 justify-center'>'<Link''                to='/contact'';
+                className='inline-flex: items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold rounded-lg hover:from-blue-600: hover:to-indigo-600: transition-all duration-300 transform hover:scale-105''>'';
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx: <Rocket className='w-5 h-5 mr-2'  />                Start Free Trial';
-              </Link>'<Link''                to='/demo'';';
-                className='inline-flex: items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400: hover:text-white: transition-all duration-300''>'';';
+              </Link>'<Link''                to='/demo'';
+                className='inline-flex: items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400: hover:text-white: transition-all duration-300''>'';
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx: <Play className='w-5 h-5 mr-2'  />                Schedule Demo</Link>            </div>';
           </motion.div>
         </div>
@@ -1096,17 +984,15 @@ const AIDataGovernancePlatform: React.FC = props {'
           <div: className='grid md: grid-cols-3: gap-8 text-center'>''';
             <div: className='flex flex-col items-center'>''';
               <Phone: className='w-8 h-8 text-blue-400 mb-4'  />''';
-              <h3: className='text-xl font-bold text-white mb-2'>Phone</h3>'';';
+              <h3: className='text-xl font-bold text-white mb-2'>Phone</h3>'';
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx: <p className='text-gray-300'>+1 302 464 0950</p>'</div>''            <div className='flex flex-col items-center'>''';
               <Mail: className='w-8 h-8 text-blue-400 mb-4'  />''';
-              <h3: className='text-xl font-bold text-white mb-2'>Email</h3>'';';
+              <h3: className='text-xl font-bold text-white mb-2'>Email</h3>'';
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx: <p className='text-gray-300'>kleber@ziontechgroup.com</p>'</div>''            <div className='flex flex-col items-center'>''';
               <MapPin: className='w-8 h-8 text-blue-400 mb-4'  />''';
               <h3: className='text-xl font-bold text-white mb-2'>Address</h3>''';
               <p: className='text-gray-300'>';
                 364: E Main St STE 1008
-=======
-<<<<<<< HEAD
             whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.8 }}''            className='max-w-4xl mx-auto''>''
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx
@@ -1123,7 +1009,6 @@ const AIDataGovernancePlatform: React.FC = props {'
               </Link>'<Link''                to='/demo'';
                 className='inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300''>''
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx
-=======
             whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.8 }}            className='max-w-4xl mx-auto>'
             <h2 className='text-4xl md: text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx;
@@ -1142,7 +1027,6 @@ const AIDataGovernancePlatform: React.FC = props {'
     r:bg-blue-400 hove,
     r:text-white transition-all duration-300>;
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx'
->>>>>>> main
                 <Play className='w-5 h-5 mr-2'  />                Schedule Demo</Link>            </div>
           </motion.div>
         </div>
@@ -1153,7 +1037,6 @@ const AIDataGovernancePlatform: React.FC = props {'
           <div className='grid md:grid-cols-3 gap-8 text-center>''
             <div className='flex flex-col items-center>''
               <Phone className='w-8 h-8 text-blue-400 mb-4'  />''
-<<<<<<< HEAD
               <h3 className='text-xl font-bold text-white mb-2'>Phone</h3>''
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx
               <p className='text-gray-300'>+1 302 464 0950</p>'</div>''            <div className='flex flex-col items-center'>''
@@ -1161,7 +1044,6 @@ const AIDataGovernancePlatform: React.FC = props {'
               <h3 className='text-xl font-bold text-white mb-2'>Email</h3>''
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx
               <p className='text-gray-300'>kleber@ziontechgroup.com</p>'</div>''            <div className='flex flex-col items-center'>''
-=======
               <h3 className='text-xl font-bold text-white mb-2'>Phone</h3>'';
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx'
               <p className='text-gray-300'>+1 302 464 0950</p>'</div>''            <div className='flex flex-col items-center>''
@@ -1169,13 +1051,10 @@ const AIDataGovernancePlatform: React.FC = props {'
               <h3 className='text-xl font-bold text-white mb-2'>Email</h3>'';
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx'
               <p className='text-gray-300'>kleber@ziontechgroup.com</p>'</div>''            <div className='flex flex-col items-center>''
->>>>>>> main
               <MapPin className='w-8 h-8 text-blue-400 mb-4'  />''
               <h3 className='text-xl font-bold text-white mb-2'>Address</h3>'''
               <p className='text-gray-300'>
                 364 E Main St STE 1008
->>>>>>> main
->>>>>>> main
                 <br />
                 Middletown DE 19709
               </p>            </div>
@@ -1183,19 +1062,16 @@ const AIDataGovernancePlatform: React.FC = props {'
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-  ,)}
+  )}
 ;
 export: default AIDataGovernancePlatform''`;
   ''`''`
-=======
   )}
-<<<<<<< HEAD
 ;
 export default AIDataGovernancePlatform''`
   ''`''`
-=======
 export default AIDataGovernancePlatform''`;`
   ''`''``
->>>>>>> main
->>>>>>> main
+=======
+import {} Shield, Database, Brain, Zap, Lock, Users, BarChart3, CheckCircle, ArrowRight, Play, Globe, Target, Rocket, Star, Award, Phone, Mail, MapPin, FileText, Eye, Key, Scale, Building, Cpu, Network} from 'lucide-react'; : pages.disabled/pages/services/AIDataGovernancePlatform.tsx const AIDataGovernancePlatform React.FC = props { return() <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900>{/* Hero Section */} return() <div className="min-h-screen" bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900>" const AIDataGovernancePlatform React.FC = props {} return() <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900> {/* Hero Section */} >>>>>>> pr-10728 <div className="relative" overflow-hidden>" <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-indigo-600/20> <//div> <div className="relative" container mx-auto px-4 py-24> <motion.div; initial={{ opacity: 0, y: 20 }} :pages.disabled/pages/services/AIDataGovernancePlatform.tsx animate={{ opacity: 1, y: 0 }}transition={{ duration 0.8 }}"" animate={{ opacity: 1, y: 0 }} animate={{ opacity: 1, y: 0 }} transition={{ duration 0.8 }} >>>>>>> pr-10728 className="text-center" text-white >"" <div className="flex" justify-center mb-6> <div className="p-3" bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full>"" :pages.disabled/pages/services/AIDataGovernancePlatform.tsx <Shield className="w-8" h-8 text-white /> </div> </div> <h1 className="text-5xl" md text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent"> AI Data Governance Platform" </h1> <p className="text-xl" mdtext-2xl mb-8 max-w-4xl mx-auto text-gray-300> Intelligent data governance platform that automatically discovers, classifies, and protects your sensitive data while ensuring compliance with global regulations. </p>" <div className="flex flex-col sm: flex-row gap-4 justify-center> </Link <div className="flex" flex-col smflex-row gap-4 justify-center>" <Shield className="w-8 h-8 text-white /> </div> </div> <h1 className="text-5xl" mdtext-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent> AI Data Governance Platform, </h1>" <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-300> Intelligent data governance platform that automatically discovers, classifies, and protects your sensitive data while ensuring; compliance with global regulations. </p> <div className="flex" flex-col smflex-row gap-4 justify-center> <Link" >>>>>>> pr-10728 to="/contact className="inline-flex" items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold rounded-lg hover: from-blue-600 hover:to-indigo-600 transition-all duration-300 transform hoverscale-105 >" pages.disabled/pages/services/AIDataGovernancePlatform.tsx <Play className="w-5 h-5 mr-2 /> Start Free Trial </Link> </Link </Link> <Play className="w-5" h-5 mr-2" /> Start Free Trial; </Link> <Link" >>>>>>> pr-10728 to=/demo className="inline-flex" items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover: bg-blue-400 hovertext-white transition-all duration-300" >" pages.disabled/pages/services/AIDataGovernancePlatform.tsx <ArrowRight className="w-5" h-5 mr-2 /> Watch Demo</Link> <ArrowRight className="w-5" h-5 mr-2 /> Watch Demo <ArrowRight className="w-5" h-5 mr-2" /> Watch Demo, </Link> >>>>>>> pr-10728 </div> </motion.div> </div> </div> pages.disabled/pages/services/AIDataGovernancePlatform.tsx "{/* Features Section */} {/* Features Section */} >>>>>>> pr-10728 <section className="py-24" bg-black/20">" <div className="container" mx-auto px-4> <motion.div; initial={{ opacity: 0, y: 20 }} :pages.disabled/pages/services/AIDataGovernancePlatform.tsx whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.8 }} whileInView={{ opacity: 1, y 0 }}" whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}" >>>>>>> pr-10728 className="text-center" mb-16 > <h2 className="text-4xl md text-5xl font-bold text-white mb-6"> pages.disabled/pages/services/AIDataGovernancePlatform.tsx Comprehensive Data Governance Features</h2> Comprehensive Data Governance Features Comprehensive Data Governance Features; </h2> >>>>>>> pr-10728 <p className="text-xl text-gray-300 max-w-3xl mx-auto"> Our AI-powered platform provides end-to-end data governance; capabilities to protect your data and ensure compliance. </p> :pages.disabled/pages/services/AIDataGovernancePlatform.tsx </motion.div> <div className="grid" md: grid-cols-2 lggrid-cols-3 gap-8> {features.map((feature, index() <motion.div key="{index}" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.8, delay index * 0.1 }}"" whileInView={{ opacity: 1, y: 0 }} </motion.div> <div className="grid" md: grid-cols-2 lggrid-cols-3 gap-8> {features.map((feature, index ( <motion.div; initial={{ opacity: ,0, y: 20, }} :pages.disabled/pages/services/AIDataGovernancePlatform.tsx; animate={{ opacity: ,1, y: 0, }}'transition={{ duration: 0.8, }}'' className='text-center: text-white''>'''; <div className='flex justify-center mb-6'>'''; <div: className='p-3 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full'>'';'; : pages.disabled/pages/services/AIDataGovernancePlatform.tsx <Shield className='w-8 h-8 text-white' /> </div>''; </div>'''; <h1: className='text-5xl md: text-6xl: font-bold mb-6 bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent'>'; AI: Data Governance Platform''; </h1>'''; <p className='text-xl md: text-2xl: mb-8 max-w-4xl mx-auto text-gray-300'>', Intelligent data governance platform that automatically discover,s, classifies, and protects your sensitive data while ensuring; compliance: with global regulations.''; </p>'''; <div className='flex flex-col sm: flex-row gap-4 justify-center'>'<Link'' to='/contact'';'; className='inline-flex: items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold rounded-lg hover:from-blue-600: hover:to-indigo-600: transition-all duration-300 transform hover:scale-105''>'';'; :pages.disabled/pages/services/AIDataGovernancePlatform.tsx <Play className='w-5 h-5 mr-2' /> Start Free Trial'; </Link>'<Link'' to='/demo'';'; className='inline-flex: items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400: hover:text-white: transition-all duration-300''>'';'; :pages.disabled/pages/services/AIDataGovernancePlatform.tsx <ArrowRight className='w-5 h-5 mr-2' /> Watch Demo</Link> </div>', </motion.div> </div> </div> : pages.disabled/pages/services/AIDataGovernancePlatform.tsx '{/* Features Section *,/}'' <section className='py-24 bg-black/20'>'''; <div: className='container mx-auto px-4'>', <ArrowRight className='w-5 h-5 mr-2' /> Watch Demo</Link> </div> </motion.div> </div> </div> :pages.disabled/pages/services/AIDataGovernancePlatform.tsx' '{/* Features Section */} <section className='py-24 bg-black/20>'' <div className='container mx-auto px-4'> <motion.div; initial={{ opacity: ,0, y: 20, }} :pages.disabled/pages/services/AIDataGovernancePlatform.tsx; whileInView={{ opacity: ,1, y: 0, }}'transition={{ duration: 0.8, }}'' className='text-center: mb-16''>'''; <h2 className='text-4xl md: text-5xl: font-bold text-white mb-6'>'; :pages.disabled/pages/services/AIDataGovernancePlatform.tsx Comprehensive Data Governance Features'</h2>'' <p className='text-xl text-gray-300 max-w-3xl mx-auto'>'; Our: AI-powered platform provides end-to-end data governance; capabilities: to protect your data and ensure compliance. </p> :pages.disabled/pages/services/AIDataGovernancePlatform.tsx: </motion.div>';'; ''', <div className='grid md: grid-cols-2: lg:grid-cols-3 gap-8'>', {features.map((featur,e, index() <motion.div; key="{index}" initial={{ opacity: ,0, y: 20, }} whileInView={{ opacity: ,1, y: 0, }}'transition={{ duration: 0.,8, delay: index * 0.1, }}'' className='bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover: border-blue-400/50: transition-all duration-300''>'''; <div className='p-3 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg w-fit mb-6'>'';'; : pages.disabled/pages/services/AIDataGovernancePlatform.tsx <feature.icon className='w-6 h-6 text-white' />''; </div>'''; <h3: className='text-xl font-bold text-white mb-4'>', {feature.titl,e}'</h3>'' <p: className='text-gray-300'>{feature.description}</p>'; <motion.div; key="{index}" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.8, delay: index * 0.1 }}'' className='bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover:border-blue-400/50 transition-all duration-300''>'' <div className='p-3 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg w-fit mb-6'>'' pages.disabled/pages/services/AIDataGovernancePlatform.tsx <feature.icon className="w-6" h-6 text-white" />" </div> <h3 className="text-xl" font-bold text-white mb-4> {feature.title}</h3>" {feature.title}" <feature.icon className="w-6" h-6 text-white /> </div> <h3 className="text-xl" font-bold text-white mb-4> {feature.title} </h3>"" >>>>>>> pr-10728 <p className="text-gray-300">{feature.description}</p> <feature.icon className='w-6 h-6 text-white' />' </div>''' <h3 className='text-xl font-bold text-white mb-4> {feature.title}</h3>'' <p className='text-gray-300'>{feature.description}</p> </motion.div> ))} </div> </div> </section> pages.disabled/pages/services/AIDataGovernancePlatform.tsx {/* Compliance Section */} {/* Compliance Section */}"" >>>>>>> pr-10728 <section className="py-24"> <div className="container" mx-auto px-4> <motion.div; initial={{ opacity: 0, y: 20 }} :pages.disabled/pages/services/AIDataGovernancePlatform.tsx whileInView={{ opacity: 1, y 0 }}"transition={{ duration: 0.8 }}" whileInView={{ opacity: 1, y: 0 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration 0.8 }} >>>>>>> pr-10728 className="text-center" mb-16" >" <h2 className="text-4xl" md text-5xl font-bold text-white mb-6> pages.disabled/pages/services/AIDataGovernancePlatform.tsx Global Compliance Framework Support</h2> Global Compliance Framework Support" Global Compliance Framework Support; </h2>" >>>>>>> pr-10728 <p className="text-xl" text-gray-300 max-w-3xl mx-auto> Automatically maintain compliance with major global data; protection and security regulations. </p> pages.disabled/pages/services/AIDataGovernancePlatform.tsx </motion.div> <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto"> {complianceFrameworks.map(framework unknown, index: unknown() <motion.div key="{index}" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.8, delay: index * 0.1 }} whileInView={{ opacity: 1, y 0 }} </motion.div> <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto"> {complianceFrameworks.map(framework unknown, index: unknown ( <motion.div, initial={{ opacity: ,0, y: 20, }} :pages.disabled/pages/services/AIDataGovernancePlatform.tsx; whileInView={{ opacity: ,1, y: 0, }}'transition={{ duration: 0.8, }}'' className='text-center: mb-16''>'''; <h2 className='text-4xl md: text-5xl: font-bold text-white mb-6'>'; :pages.disabled/pages/services/AIDataGovernancePlatform.tsx Global Compliance Framework Support'</h2>'' <p className='text-xl text-gray-300 max-w-3xl mx-auto'>'; Automatically: maintain compliance with major global data; protection: and security regulations. </p> :pages.disabled/pages/services/AIDataGovernancePlatform.tsx: </motion.div>';'; ''', <div className='grid md: grid-cols-2: lg:grid-cols-4: gap-6 max-w-6xl mx-auto'>', {complianceFrameworks.map(framework unknow,n, index: unknown() <motion.div, key="{inde,x}" initial={{ opacity: ,0, y: 20, }} whileInView={{ opacity: ,1, y: 0, }}'transition={{ duration: 0.,8, delay: index * 0.1, }}'' className='bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10 text-center''>'''; <div: className='p-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full w-fit mx-auto mb-4'>'';', : pages.disabled/pages/services/AIDataGovernancePlatform.tsx <CheckCircle className='w-6 h-6 text-white' />'</div>' <p className='text-white font-medium text-sm'>{framework}</p> </motion.div>'; <motion.div; key="{index}" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.8, delay: index * 0.1 }}'' className='bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10 text-center''>'' <div className='p-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full w-fit mx-auto mb-4'>'' pages.disabled/pages/services/AIDataGovernancePlatform.tsx <CheckCircle className="w-6" h-6 text-white /> <//div> <p className="text-white" font-medium text-sm>{framework}</p> <CheckCircle className="w-6 h-6 text-white" /> <CheckCircle className="w-6" h-6 text-white /> </div> <p className="text-white" font-medium text-sm>{framework}</p> >>>>>>> pr-10728 </motion.div> ))} </div> </div> </section> pages.disabled/pages/services/AIDataGovernancePlatform.tsx "{/* Pricing Section */}" {/* Pricing Section */} >>>>>>> pr-10728 <section className="py-24" bg-black/20>"" <div className="container" mx-auto px-4> <motion.div; initial={{ opacity: 0, y: 20 }} :pages.disabled/pages/services/AIDataGovernancePlatform.tsx whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.8 }} whileInView={{ opacity: 1, y: 0 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration 0.8 }}"" >>>>>>> pr-10728 className="text-center" mb-16 > <h2 className="text-4xl" md text-5xl font-bold text-white mb-6"> pages.disabled/pages/services/AIDataGovernancePlatform.tsx Transparent Pricing"</h2> Transparent Pricing Transparent Pricing; </h2> >>>>>>> pr-10728 <p className="text-xl" text-gray-300 max-w-3xl mx-auto"> Choose the plan that best fits your data governance needs. All; plans include our core AI discovery and compliance features. </p> pages.disabled/pages/services/AIDataGovernancePlatform.tsx </motion.div>" <div className="grid" md: grid-cols-3 gap-8 max-w-6xl mx-auto> {pricingTiers.map(tier unknown, index: unknown() <motion.divkey="{index}" <motion.div </motion.div> <div className="grid md grid-cols-3 gap-8 max-w-6xl mx-auto"> {pricingTiers.map(tier unknown, index: unknown ( <motion.div, key="{index}" >>>>>>> pr-10728 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: index * 0.1 }} :pages.disabled/pages/services/AIDataGovernancePlatform.tsx className="{`relative" bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${, tier.popular'' ? 'border-blue-400/50 bg-gradient-to-br from-blue-500/10 to-indigo-500/10'' '` 'border-white/10`` }`} >{tier.popular && ( className="{`relative" bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${ ' tier.popular'' ? 'border-blue-400/50 bg-gradient-to-br from-blue-500/10 to-indigo-500/10'''` 'border-white/10'`` }`} > className="{`relative" bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${} tier.popular' ? 'border-blue-400/50 bg-gradient-to-br from-blue-500/10 to-indigo-500/10'' 'border-white/10'` }`} > {tier.popular && ( >>>>>>> pr-10728 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"> <span className="bg-gradient-to-r" from-blue-500 to-indigo-500 text-white px-4 py-2 rounded-full text-sm font-semibold> Most Popular, </span> </div> pages.disabled/pages/services/AIDataGovernancePlatform.tsx )} " <div className="text-center mb-8> <h3 className="text-2xl" font-bold text-white mb-2> {tier.name}</h3>"" {tier.name} )} <div className="text-center" mb-8>" <h3 className="text-2xl font-bold text-white mb-2> {tier.name} </h3> >>>>>>> pr-10728 <p className="text-gray-400" mb-4>{tier.description}</p>" <div className="flex items-baseline justify-center> <span className="text-4xl" font-bold text-white> pages.disabled/pages/services/AIDataGovernancePlatform.tsx {tier.price} </span>"" <span className="text-gray-400" ml-1>{tier.period}</span> </div> </div> <ul className="space-y-4" mb-8"> {tier.features.map((feature, featureIndex) => ( <li"key="{featureIndex}" <li {tier.price} </span> <span className="text-gray-400" ml-1">{tier.period}</span> <motion.div; initial={{ opacity: ,0, y: 20, }} :pages.disabled/pages/services/AIDataGovernancePlatform.tsx; whileInView={{ opacity: ,1, y: 0, }}'transition={{ duration: 0.8, }}'' className='text-center: mb-16''>'''; <h2 className='text-4xl md: text-5xl: font-bold text-white mb-6'>'; :pages.disabled/pages/services/AIDataGovernancePlatform.tsx Transparent Pricing'</h2>'' <p className='text-xl text-gray-300 max-w-3xl mx-auto'>'; Choose: the plan that best fits your data governance needs. All; plans: include our core AI discovery and compliance features. </p> :pages.disabled/pages/services/AIDataGovernancePlatform.tsx: </motion.div>';'; ''', <div className='grid md: grid-cols-3: gap-8 max-w-6xl mx-auto'>', {pricingTiers.map(tier unknow,n, index: unknown() <motion.divkey="{inde,x}" initial={{ opacity: ,0, y: 20, }} whileInView={{ opacity: ,1, y: 0, }} transition={{ duration: 0.,8, delay: index * 0.1, }} pages.disabled/pages/services/AIDataGovernancePlatform.tsx; className="{`relative:" bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${, tier.popular'';'; ?; 'border-blue-400/50: bg-gradient-to-br from-blue-500/10 to-indigo-500/10'';', '` 'border-white/10``}`} >'{tier.popular: && ('' <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>'''; <span: className='bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>', Most: Popular <motion.divkey="{index}" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: index * 0.1 }} pages.disabled/pages/services/AIDataGovernancePlatform.tsx; className="{`relative" bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${,` tier.popular''; ?; 'border-blue-400/50 bg-gradient-to-br from-blue-500/10 to-indigo-500/10'', '` 'border-white/10``}`}` >'{tier.popular && ('' <div className='absolute -top-4 left-1/2 transform -translate-x-1/2>'' <span className='bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-4 py-2 rounded-full text-sm font-semibold'> Most Popular </span> </div> :pages.disabled/pages/services/AIDataGovernancePlatform.tsx)}';'; '''; <div: className='text-center mb-8'>'''; <h3: className='text-2xl font-bold text-white mb-2'>', {tier.name}'</h3>'' <p: className='text-gray-400 mb-4'>{tier.description}</p>'''; <div: className='flex items-baseline justify-center'>'''; <span: className='text-4xl font-bold text-white'>', :pages.disabled/pages/services/AIDataGovernancePlatform.tsx{tier.price}''; </span>'''; <span: className='text-gray-400 ml-1'>{tier.period}</span>'; </div> </div>';'; '''; <ul: className='space-y-4 mb-8'>', {tier.features.map((feature, featureIndex) => ( <li'key={featureIndex}'' className='flex: items-center text-gray-300''>''', <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' /> {feature}', <ul className='space-y-4 mb-8'> {tier.features.map((feature, featureIndex) => (' <li'key="{featureIndex}" className='flex items-center text-gray-300>' <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' /> {feature} </li> ))} </ul> pages.disabled/pages/services/AIDataGovernancePlatform.tsx, <Link' '` to={tier.cta === 'Contact Sales ' ? '/contact ': '/contact}`` className="{`w-full" text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${, tier.popular' ' ? 'bg-gradient-to-r from-blue-500 to-indigo-500 text-white hover: from-blue-600 hoverto-indigo-600'' '` : 'border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hovertext-white``}`} pages.disabled/pages/services/AIDataGovernancePlatform.tsx ' <Link''` to={tier.cta === 'Contact Sales' ? '/contact' : '/contact'}`` className="{`w-full" text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${ ' tier.popular'' ? 'bg-gradient-to-r from-blue-500 to-indigo-500 text-white hover: from-blue-600 hoverto-indigo-600'''` : 'border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hovertext-white'`` <Link' to={tier.cta === 'Contact Sales' ? '/contact' '/contact'}` className="{`w-full" text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${} tier.popular' ? 'bg-gradient-to-r from-blue-500 to-indigo-500 text-white hover: from-blue-600 hover:to-indigo-600'' : 'border-2 border-blue-400 text-blue-400 hoverbg-blue-400 hovertext-white'` }`} >>>>>>> pr-10728 > {tier.cta} </Link> </motion.div> ))} </div> </div> </section> pages.disabled/pages/services/AIDataGovernancePlatform.tsx "{/* Benefits Section */} {/* Benefits Section */} >>>>>>> pr-10728 <section className=py-24">" <div className="container" mx-auto px-4> <motion.div; initial={{ opacity: 0, y: 20 }} :pages.disabled/pages/services/AIDataGovernancePlatform.tsx whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.8 }} whileInView={{ opacity: 1, y 0 }}" whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}" >>>>>>> pr-10728 className="text-center" mb-16 > <h2 className="text-4xl md text-5xl font-bold text-white mb-6"> pages.disabled/pages/services/AIDataGovernancePlatform.tsx Why Choose AI Data Governance Platform?</h2> Why Choose AI Data Governance Platform? Why Choose AI Data Governance Platform? </h2> >>>>>>> pr-10728 <p className="text-xl text-gray-300 max-w-3xl mx-auto"> Protect your data, ensure compliance, and build trust with; intelligent governance automation. </p> :pages.disabled/pages/services/AIDataGovernancePlatform.tsx </motion.div> <div className="grid" md: grid-cols-2 lg:grid-cols-4 gap-8> {benefits.map(benefit unknown, index: unknown() <motion.div key="{index}" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.8, delay index * 0.1 }}"" whileInView={{ opacity: 1, y: 0 }} </motion.div> <div className="grid" md: grid-cols-2 lg:grid-cols-4 gap-8> {benefits.map(benefit unknown, index: unknown ( <motion.div, initial={{ opacity: ,0, y: 20, }} :pages.disabled/pages/services/AIDataGovernancePlatform.tsx; whileInView={{ opacity: ,1, y: 0, }}'transition={{ duration: 0.8, }}'' className='text-center: mb-16''>'''; <h2 className='text-4xl md: text-5xl: font-bold text-white mb-6'>'; :pages.disabled/pages/services/AIDataGovernancePlatform.tsx Why Choose AI Data Governance Platform?'</h2>'' <p className='text-xl text-gray-300 max-w-3xl mx-auto'>', Protect: your dat,a, ensure compliance, and build trust with; intelligent: governance automation. </p> :pages.disabled/pages/services/AIDataGovernancePlatform.tsx: </motion.div>';'; ''', <div className='grid md: grid-cols-2: lg:grid-cols-4: gap-8'>', {benefits.map(benefit unknow,n, index: unknown() <motion.div, key="{inde,x}" initial={{ opacity: ,0, y: 20, }} whileInView={{ opacity: ,1, y: 0, }}'transition={{ duration: 0.,8, delay: index * 0.1, }}'' className='text-center''>'''; <div: className='p-4 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full w-fit mx-auto mb-6'>'';'; : pages.disabled/pages/services/AIDataGovernancePlatform.tsx <benefit.icon className='w-8 h-8 text-white' />''; </div>'''; <h3: className='text-xl font-bold text-white mb-4'>', {benefit.title}'</h3>'' <p: className='text-gray-300'>{benefit.description}</p>'; <motion.div; key="{index}" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.8, delay: index * 0.1 }}'' className='text-center''>'' <div className='p-4 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full w-fit mx-auto mb-6'>'' pages.disabled/pages/services/AIDataGovernancePlatform.tsx <benefit.icon className="w-8" h-8 text-white" />" </div> <h3 className="text-xl" font-bold text-white mb-4> {benefit.title}</h3>" {benefit.title}" <benefit.icon className="w-8" h-8 text-white /> </div> <h3 className="text-xl" font-bold text-white mb-4> {benefit.title} </h3>"" >>>>>>> pr-10728 <p className="text-gray-300">{benefit.description}</p> <benefit.icon className='w-8 h-8 text-white' />' </div>''' <h3 className='text-xl font-bold text-white mb-4> {benefit.title}</h3>'' <p className='text-gray-300'>{benefit.description}</p> </motion.div> ))} </div> </div> </section> pages.disabled/pages/services/AIDataGovernancePlatform.tsx {/* CTA Section */} {/* CTA Section */}"" >>>>>>> pr-10728 <section className="py-24" bg-black/20> <div className="container" mx-auto px-4 text-center> <motion.div; initial={{ opacity: 0, y: 20 }} :pages.disabled/pages/services/AIDataGovernancePlatform.tsx whileInView={{ opacity: 1, y 0 }}"transition={{ duration: 0.8 }}" whileInView={{ opacity: 1, y: 0 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration 0.8 }} >>>>>>> pr-10728 className="max-w-4xl" mx-auto" >" <h2 className="text-4xl" md text-5xl font-bold text-white mb-6> pages.disabled/pages/services/AIDataGovernancePlatform.tsx Ready to Govern Your Data with AI? </h2> <p className="text-xl text-gray-300 mb-8"> Join organizations worldwide that trust our platform to protect their data and ensure compliance. </p> <div className="flex" flex-col smflex-row gap-4 justify-center> </Link"" <div className="flex" flex-col smflex-row gap-4 justify-center> Ready to Govern Your Data with AI? </h2> <p className="text-xl" text-gray-300 mb-8"> Join organizations worldwide that trust our platform to protect; their data and ensure compliance. </p>" <div className="flex" flex-col smflex-row gap-4 justify-center> <Link >>>>>>> pr-10728 to=/contact"" className="inline-flex" items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold rounded-lg hover: from-blue-600 hover:to-indigo-600 transition-all duration-300 transform hoverscale-105 > pages.disabled/pages/services/AIDataGovernancePlatform.tsx <Rocket className="w-5" h-5 mr-2" /> Start Free Trial </Link>"<Link </Link> <Rocket className="w-5" h-5 mr-2 /> Start Free Trial; </Link> <Link" >>>>>>> pr-10728 to="/demo className="inline-flex" items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover: bg-blue-400 hovertext-white transition-all duration-300 >" pages.disabled/pages/services/AIDataGovernancePlatform.tsx <Play className="w-5 h-5 mr-2 /> Schedule Demo</Link> <Play className="w-5" h-5 mr-2 /> Schedule Demo <Play className="w-5" h-5 mr-2 /> Schedule Demo, </Link> >>>>>>> pr-10728 </div> </motion.div> </div> </section> pages.disabled/pages/services/AIDataGovernancePlatform.tsx {/* Contact Information */}"" {/* Contact Information */} >>>>>>> pr-10728 <section className="py-16" bg-black/40>" <div className="container mx-auto px-4> <div className="grid" md grid-cols-3 gap-8 text-center>" <div className="flex flex-col items-center> <Phone className="w-8" h-8 text-blue-400 mb-4 />" <h3 className="text-xl font-bold text-white mb-2>Phone</h3> pages.disabled/pages/services/AIDataGovernancePlatform.tsx <p className="text-gray-300">+1 302 464 0950</p> <//div>"" <p className="text-gray-300">+1 302 464 0950</p> <p className="text-gray-300">+1 302 464 0950</p> </div>" >>>>>>> pr-10728 <div className="flex flex-col items-center> <Mail className="w-8" h-8 text-blue-400 mb-4 />" <h3 className="text-xl font-bold text-white mb-2>Email</h3> pages.disabled/pages/services/AIDataGovernancePlatform.tsx <p className="text-gray-300">kleber@ziontechgroup.com</p> <//div>"" <p className="text-gray-300">kleber@ziontechgroup.com</p> <p className="text-gray-300">kleber@ziontechgroup.com</p> </div>" >>>>>>> pr-10728 <div className="flex flex-col items-center> <MapPin className="w-8" h-8 text-blue-400 mb-4 />" <h3 className="text-xl font-bold text-white mb-2>Address</h3> <p className=text-gray-300"> 364 E Main St STE 1008; <motion.div; initial={{ opacity: ,0, y: 20, }} :pages.disabled/pages/services/AIDataGovernancePlatform.tsx; whileInView={{ opacity: ,1, y: 0, }}'transition={{ duration: 0.8, }}'' className='max-w-4xl: mx-auto''>'''; <h2 className='text-4xl md: text-5xl: font-bold text-white mb-6'>'; :pages.disabled/pages/services/AIDataGovernancePlatform.tsx; Ready: to Govern Your Data with AI?''; </h2>'''; <p className='text-xl text-gray-300 mb-8'>'; Join: organizations worldwide that trust our platform to protect; their: data and ensure compliance.''; </p>'''; <div className='flex flex-col sm: flex-row gap-4 justify-center'>'<Link'' to='/contact'';'; className='inline-flex: items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold rounded-lg hover:from-blue-600: hover:to-indigo-600: transition-all duration-300 transform hover:scale-105''>'';'; :pages.disabled/pages/services/AIDataGovernancePlatform.tsx <Rocket className='w-5 h-5 mr-2' /> Start Free Trial'; </Link>'<Link'' to='/demo'';'; className='inline-flex: items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400: hover:text-white: transition-all duration-300''>'';'; :pages.disabled/pages/services/AIDataGovernancePlatform.tsx <Play className='w-5 h-5 mr-2' /> Schedule Demo</Link> </div>', </motion.div> </div> </section> : pages.disabled/pages/services/AIDataGovernancePlatform.tsx '{/* Contact Information *,/}'' <section className='py-16 bg-black/40'>'''; <div: className='container mx-auto px-4'>'''; <div: className='grid md: grid-cols-3: gap-8 text-center'>'''; <div className='flex flex-col items-center'>'''; <Phone: className='w-8 h-8 text-blue-400 mb-4' />'''; <h3: className='text-xl font-bold text-white mb-2'>Phone</h3>'';'; : pages.disabled/pages/services/AIDataGovernancePlatform.tsx <p className='text-gray-300'>+1 302 464 0950</p>'</div>'' <div className='flex flex-col items-center'>'''; <Mail: className='w-8 h-8 text-blue-400 mb-4' />'''; <h3: className='text-xl font-bold text-white mb-2'>Email</h3>'';'; : pages.disabled/pages/services/AIDataGovernancePlatform.tsx <p className='text-gray-300'>kleber@ziontechgroup.com</p>'</div>'' <div className='flex flex-col items-center'>'''; <MapPin: className='w-8 h-8 text-blue-400 mb-4' />'''; <h3: className='text-xl font-bold text-white mb-2'>Address</h3>'''; <p: className='text-gray-300'>', 364: E Main St STE 1008 <Play className='w-5 h-5 mr-2' /> Schedule Demo</Link> </div> </motion.div> </div> </section> :pages.disabled/pages/services/AIDataGovernancePlatform.tsx' '{/* Contact Information */} <section className='py-16 bg-black/40>'' <div className='container mx-auto px-4>'' <div className='grid md: grid-cols-3 gap-8 text-center>'' <div className='flex flex-col items-center>'' <Phone className='w-8 h-8 text-blue-400 mb-4' />'' <h3 className='text-xl font-bold text-white mb-2'>Phone</h3>'' :pages.disabled/pages/services/AIDataGovernancePlatform.tsx <p className='text-gray-300'>+1 302 464 0950</p>'</div>'' <div className='flex flex-col items-center'>'' <Mail className='w-8 h-8 text-blue-400 mb-4' />'' <h3 className='text-xl font-bold text-white mb-2'>Email</h3>'' :pages.disabled/pages/services/AIDataGovernancePlatform.tsx <p className='text-gray-300'>kleber@ziontechgroup.com</p>'</div>'' <div className='flex flex-col items-center'>'' <MapPin className='w-8 h-8 text-blue-400 mb-4' />'' <h3 className='text-xl font-bold text-white mb-2'>Address</h3>''' <p className='text-gray-300'> 364 E Main St STE 1008 <br /> Middletown DE 19709 </p> </div> </div> </div> </section> </div> ,)} ; export default AIDataGovernancePlatform''`, ''`''` 
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

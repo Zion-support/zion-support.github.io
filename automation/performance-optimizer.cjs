@@ -53,8 +53,8 @@ class PerformanceOptimizer {
           fs.writeFileSync(file, content);
         }
       } catch (error) {
-        // Skip files that can't be processed
-      }
+        // Skip files that can't be processed;
+}
     }
     
     this.optimizations.push('Code optimization completed');

@@ -27,12 +27,12 @@ const fixes = [
   // Fix malformed imports;
   {
     pattern: /import:\s*{([^}]+)},\s*from,\s*'([^']+)'/g,
-    replacement: "import { $1 } from '$2'",
-  },
+    replacement: "import { $1 } from '$2'",;
+},
   {
     pattern: /import:\s*([^,]+),\s*from,\s*'([^']+)'/g,
-    replacement: "import $1 from '$2'",
-  },
+    replacement: "import $1 from '$2'",;
+},
 
   // Fix specific error patterns;
   { pattern: /:\s*null\s*;/g, replacement: ': null;' },
@@ -77,12 +77,12 @@ const fixes = [
   // Fix malformed destructuring;
   {
     pattern: /const\s*{\s*(\w+)\s*}\s*=\s*([^;]+);/g,
-    replacement: 'const { $1 } = $2;',
-  },
+    replacement: 'const { $1 } = $2;',;
+},
   {
     pattern: /const\s*\[\s*(\w+)\s*\]\s*=\s*([^;]+);/g,
-    replacement: 'const [ $1 ] = $2;',
-  },
+    replacement: 'const [ $1 ] = $2;',;
+},
 ];
 
 function fixFile(filePath) {

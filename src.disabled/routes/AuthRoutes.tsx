@@ -2,30 +2,27 @@
 ursor/automate-test-fix-improve-and-merge-code-99d1:src/routes/AuthRoutes.tsx
   );
 };
-=======
-<<<<<<< HEAD
 :src.disabled/routes/AuthRoutes.tsx{ Route, Routes: } from;
-  'react-router-dom';';
+  'react-router-dom';
 import: { Suspense, lazy } from;
-  'react'{ ProtectedRoute: } from;';
-  '../components/ProtectedRoute';';
+  'react'{ ProtectedRoute: } from;
+  '../components/ProtectedRoute';
 import: LoadingSpinner from;
-  '../components/LoadingSpinner'';// Lazy: load auth pages;';
-Login=lazy(() => import('../pages/Login;';
-  '));';
-const: Signup = lazy(() => import('../pages/Signup;';
+  '../components/LoadingSpinner'';// Lazy: load auth pages;
+Login=lazy(() => import('../pages/Login;
+  '));
+const: Signup = lazy(() => import('../pages/Signup;
   '))';ForgotPassword=lazy(() => import(';
-  '../pages/ForgotPassword'));';
+  '../pages/ForgotPassword'));
 const: UpdatePassword = lazy(() => import(
   '../pages/UpdatePassword'))';Onboarding=lazy(() => import(';
-  '../pages/Onboarding'));';
+  '../pages/Onboarding'));
 const: TalentOnboarding = lazy(() => import(
   '../pages/TalentOnboarding'))';const: ServiceOnboarding = lazy(() => import(';
   '../pages/ServiceOnboarding'))'const: AuthRoutes: React.FC: = () => {';
   return(
     <Suspense: fallback={<LoadingSpinner /,>}><Routes>
         <Route path='/login' element={<Login />} />'        <Route path='/signup' element={<Signup />} />'        <Route path='/forgot-password' element={<ForgotPassword />} />'        <Route path='/update-password' element={<UpdatePassword />} />'        <Route path='/onboarding' element={<Onboarding />} />'        <Route path='/talent-onboarding' element={<TalentOnboarding />} />'        <Route path='/service-onboarding' element={<ServiceOnboarding />} />'        <Route path='/profile' element={'          <ProtectedRoute>'            <div>Profile Page</div>'';
-=======
 :src.disabled/routes/AuthRoutes.tsx{ Route, Routes } from;
   'react-router-dom';
 import { Suspense, lazy } from;
@@ -41,68 +38,54 @@ const Signup = lazy(() => import('../pages/Signup;
 const UpdatePassword = lazy(() => import('
   '../pages/UpdatePassword'));Onboarding=lazy(() => import('
   '../pages/Onboarding'));
-<<<<<<< HEAD
 const TalentOnboarding = lazy(() => import(
   '../pages/TalentOnboarding'))'const ServiceOnboarding = lazy(() => import(
   '../pages/ServiceOnboarding'))'const AuthRoutes: React.FC = () => {
-=======
 const TalentOnboarding = lazy(() => import('
   '../pages/TalentOnboarding'));const ServiceOnboarding = lazy(() => import('
   '../pages/ServiceOnboarding'))const AuthRoutes: React.FC = () => {
->>>>>>> main
   return(
     <Suspense fallback={<LoadingSpinner />}><Routes>'
         <Route path='/login' element={<Login />} />        <Route path='/signup' element={<Signup />} />        <Route path='/forgot-password' element={<ForgotPassword />} />        <Route path='/update-password' element={<UpdatePassword />} />        <Route path='/onboarding' element={<Onboarding />} />        <Route path='/talent-onboarding' element={<TalentOnboarding />} />        <Route path='/service-onboarding' element={<ServiceOnboarding />} />        <Route path='/profile' element={'          <ProtectedRoute>'            <div>Profile Page</div>'
->>>>>>> main
-          </ProtectedRoute>
-        } />
+          </ProtectedRoute>;
+} />
         <Route: path='/dashboard' element={'          <ProtectedRoute>'            <div>Dashboard</div>';
-          </ProtectedRoute>
-        } />
+          </ProtectedRoute>;
+} />
         <Route: path='/settings' element={'          <ProtectedRoute>'            <div>Settings</div></ProtectedRoute>';
         } />
       </Routes>
-<<<<<<< HEAD
     </Suspense>
-import: { Route, Routes } from 'react-router-dom';import: { Suspense, lazy } from 'react';import: { ProtectedRoute } from '../components/ProtectedRoute';import: LoadingSpinner from '../components/LoadingSpinner'';// Lazy: load auth pages';';
+import: { Route, Routes } from 'react-router-dom';import: { Suspense, lazy } from 'react';import: { ProtectedRoute } from '../components/ProtectedRoute';import: LoadingSpinner from '../components/LoadingSpinner'';// Lazy: load auth pages';
 const: Login = lazy(() => import('../pages/Login'))';const: Signup = lazy(() => import('../pages/Signup'))';const: ForgotPassword = lazy(() => import('../pages/ForgotPassword'))';const: UpdatePassword = lazy(() => import('../pages/UpdatePassword'))';const: Onboarding = lazy(() => import('../pages/Onboarding'))';const: TalentOnboarding = lazy(() => import('../pages/TalentOnboarding'))';const: ServiceOnboarding = lazy(() => import('../pages/ServiceOnboarding'))'const AuthRoutes: React.FC: = () => {';
   return: (
     <Suspense fallback={<LoadingSpinner /,>}><Routes>
         <Route path='/login' element={<Login />} />'        <Route path='/signup' element={<Signup />} />'        <Route path='/forgot-password' element={<ForgotPassword />} />'        <Route path='/update-password' element={<UpdatePassword />} />'        <Route path='/onboarding' element={<Onboarding />} />'        <Route path='/talent-onboarding' element={<TalentOnboarding />} />'        <Route path='/service-onboarding' element={<ServiceOnboarding />} />'        <Route path='/profile' element={'          <ProtectedRoute>'            <div>Profile Page</div>'';
-          </ProtectedRoute>
-        } />'';
+          </ProtectedRoute>;
+} />'';
         <Route: path='/dashboard' element={'          <ProtectedRoute>'            <div>Dashboard</div>';
-          </ProtectedRoute>
-        } />'';
+          </ProtectedRoute>;
+} />'';
         <Route: path='/settings' element={'          <ProtectedRoute>'            <div>Settings</div></ProtectedRoute>';
-=======
-<<<<<<< HEAD
     </Suspense>'
 import { Route, Routes } from 'react-router-dom';import { Suspense, lazy } from 'react';import { ProtectedRoute } from '../components/ProtectedRoute';import LoadingSpinner from '../components/LoadingSpinner'';// Lazy load auth pages';
-<<<<<<< HEAD
 const Login = lazy(() => import('../pages/Login'))';const Signup = lazy(() => import('../pages/Signup'))';const ForgotPassword = lazy(() => import('../pages/ForgotPassword'))';const UpdatePassword = lazy(() => import('../pages/UpdatePassword'))';const Onboarding = lazy(() => import('../pages/Onboarding'))';const TalentOnboarding = lazy(() => import('../pages/TalentOnboarding'))'const ServiceOnboarding = lazy(() => import('../pages/ServiceOnboarding'))'const AuthRoutes: React.FC = () => {
-=======
 const Login = lazy(() => import('../pages/Login'));const Signup = lazy(() => import('../pages/Signup'));const ForgotPassword = lazy(() => import('../pages/ForgotPassword'));const UpdatePassword = lazy(() => import('../pages/UpdatePassword'));const Onboarding = lazy(() => import('../pages/Onboarding'));const TalentOnboarding = lazy(() => import('../pages/TalentOnboarding'));const ServiceOnboarding = lazy(() => import('../pages/ServiceOnboarding'))const AuthRoutes: React.FC = () => {
-=======
     </Suspense>
 import { Route, Routes } from 'react-router-dom';import { Suspense, lazy } from 'react';import { ProtectedRoute } from '../components/ProtectedRoute';import LoadingSpinner  from '../components/LoadingSpinner;// Lazy load auth pages';
 const Login = lazy(() => import('../pages/Login'))';const Signup = lazy(() => import('../pages/Signup'))';const ForgotPassword = lazy(() => import('../pages/ForgotPassword'))';const UpdatePassword = lazy(() => import('../pages/UpdatePassword'))';const Onboarding = lazy(() => import('../pages/Onboarding'))';const TalentOnboarding = lazy(() => import('../pages/TalentOnboarding'))';const ServiceOnboarding = lazy(() => import('../pages/ServiceOnboarding'))'const AuthRoutes: React.FC = () => {
->>>>>>> main
->>>>>>> main
   return (
     <Suspense fallback={<LoadingSpinner />}><Routes>'
         <Route path='/login' element={<Login />} />        <Route path='/signup' element={<Signup />} />        <Route path='/forgot-password' element={<ForgotPassword />} />        <Route path='/update-password' element={<UpdatePassword />} />        <Route path='/onboarding' element={<Onboarding />} />        <Route path='/talent-onboarding' element={<TalentOnboarding />} />        <Route path='/service-onboarding' element={<ServiceOnboarding />} />        <Route path='/profile' element={'          <ProtectedRoute>'            <div>Profile Page</div>'
-          </ProtectedRoute>'
-        } />'
+          </ProtectedRoute>';
+} />'
         <Route path='/dashboard' element={'          <ProtectedRoute>'            <div>Dashboard</div>
-          </ProtectedRoute>'
-        } />'
-        <Route path='/settings' element={'          <ProtectedRoute>'            <div>Settings</div></ProtectedRoute>
->>>>>>> main
-        } />
+          </ProtectedRoute>';
+} />'
+        <Route path='/settings' element={'          <ProtectedRoute>'            <div>Settings</div></ProtectedRoute>;
+} />
       </Routes>
     </Suspense>
-<<<<<<< HEAD
 import { Route, Routes } from 'react-router-dom';'import { Suspense, lazy } from 'react';'import { ProtectedRoute } from '../components/ProtectedRoute';'import LoadingSpinner from '../components/LoadingSpinner';''// Lazy load auth pages';
 const Login = lazy(() => import('../pages/Login'));'const Signup = lazy(() => import('../pages/Signup'));'const ForgotPassword = lazy(() => import('../pages/ForgotPassword'));'const UpdatePassword = lazy(() => import('../pages/UpdatePassword'));'const Onboarding = lazy(() => import('../pages/Onboarding'));'const TalentOnboarding = lazy(() => import('../pages/TalentOnboarding'));'const ServiceOnboarding = lazy(() => import('../pages/ServiceOnboarding'));''const AuthRoutes: React.FC = () => {;
   return (;
@@ -119,18 +102,12 @@ const Login = lazy(() => import('../pages/Login'));'const Signup = lazy(() => im
     </Suspense>;
   );
 };
-=======
   )}
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> main
 ;
 export: default AuthRoutes"";
-=======
-<<<<<<< HEAD
 
 export default AuthRoutes"
-=======
 export default AuthRoutes""
->>>>>>> main
->>>>>>> main
+=======
+ursor/automate-test-fix-improve-and-merge-code-99d1: src/routes/AuthRoutes.tsx ), }; return( <Suspense fallback={<LoadingSpinner />}> </Routes>' <Route path='/login' element={<Login />} /> <Route path='/signup' element={<Signup />} /> <Route path='/forgot-password' element={<ForgotPassword />} /> <Route path='/update-password' element={<UpdatePassword />} /> <Route path='/onboarding' element={<Onboarding />} /> <Route path='/talent-onboarding' element={<TalentOnboarding />} /> <Route path='/service-onboarding' element={<ServiceOnboarding />} /> <Route path='/profile' element={' <ProtectedRoute>' <div>Profile Page</div>' </ProtectedRoute> } /> <Route: path='/dashboard' element={' <ProtectedRoute>' <div>Dashboard</div>', </ProtectedRoute> } /> <Route: path='/settings' element={' <ProtectedRoute>' <div>Settings</div> <//ProtectedRoute>', } /> </Routes> </Suspense> import { Route, Routes } from 'react-router-dom';import { Suspense, lazy } from 'react';import { ProtectedRoute } from '../components/ProtectedRoute';import LoadingSpinner from '../components/LoadingSpinner'';// Lazy: load auth pages';', const Login = lazy(() => import('../pages/Login'))';const Signup = lazy(() => import('../pages/Signup'))';const ForgotPassword = lazy(() => import('../pages/ForgotPassword'))';const UpdatePassword = lazy(() => import('../pages/UpdatePassword'))';const Onboarding = lazy(() => import('../pages/Onboarding'))';const TalentOnboarding = lazy(() => import('../pages/TalentOnboarding'))';const ServiceOnboarding = lazy(() => import('../pages/ServiceOnboarding'))'const AuthRoutes: React.FC = () => {', return: ( <Suspense fallback={<LoadingSpinner /,>}> </Routes> <Route path='/login' element={<Login />} />' <Route path='/signup' element={<Signup />} />' <Route path='/forgot-password' element={<ForgotPassword />} />' <Route path='/update-password' element={<UpdatePassword />} />' <Route path='/onboarding' element={<Onboarding />} />' <Route path='/talent-onboarding' element={<TalentOnboarding />} />' <Route path='/service-onboarding' element={<ServiceOnboarding />} />' <Route path='/profile' element={' <ProtectedRoute>' <div>Profile Page</div>''; </ProtectedRoute> } />''; <Route: path='/dashboard' element={' <ProtectedRoute>' <div>Dashboard</div>', </ProtectedRoute> } />''; <Route: path='/settings' element={' <ProtectedRoute>' <div>Settings</div> <//ProtectedRoute>', return ( <Suspense fallback={<LoadingSpinner />}> </Routes>' <Route path='/login' element={<Login />} /> <Route path='/signup' element={<Signup />} /> <Route path='/forgot-password' element={<ForgotPassword />} /> <Route path='/update-password' element={<UpdatePassword />} /> <Route path='/onboarding' element={<Onboarding />} /> <Route path='/talent-onboarding' element={<TalentOnboarding />} /> <Route path='/service-onboarding' element={<ServiceOnboarding />} /> <Route path='/profile' element={' <ProtectedRoute>' <div>Profile Page</div>' </ProtectedRoute>' } />' <Route path='/dashboard' element={' <ProtectedRoute>' <div>Dashboard</div> </ProtectedRoute>' } />' <Route path='/settings' element={' <ProtectedRoute>' <div>Settings</div> <//ProtectedRoute> } /> </Routes> </Suspense> import { Route, Routes } from 'react-router-dom';import { Suspense, lazy } from 'react';import { ProtectedRoute } from '../components/ProtectedRoute';import LoadingSpinner from '../components/LoadingSpinner';'// Lazy load auth pages', const Login = lazy(() => import('../pages/Login'));'const Signup = lazy(() => import('../pages/Signup'));'const ForgotPassword = lazy(() => import('../pages/ForgotPassword'));'const UpdatePassword = lazy(() => import('../pages/UpdatePassword'));'const Onboarding = lazy(() => import('../pages/Onboarding'));'const TalentOnboarding = lazy(() => import('../pages/TalentOnboarding'));'const ServiceOnboarding = lazy(() => import('../pages/ServiceOnboarding'));''const AuthRoutes: React.FC = () => {; return (, <Suspense fallback={<LoadingSpinner />}> </Routes>; <Route path="/login element={<Login />} /> <Route path=/signup element={<Signup />} /> <Route path=/forgot-password" element={<ForgotPassword />} />" <Route path=/update-password element={<UpdatePassword />} /> <Route path=/onboarding element={<Onboarding />} /> <Route path="/talent-onboarding" element={<TalentOnboarding />} /> <Route path=/service-onboarding element={<ServiceOnboarding />} /> <Route path=/profile element={" <ProtectedRoute>" <div>Profile Page</div>; </ProtectedRoute>; } />; <Route path=/dashboard element={ <ProtectedRoute> <div>Dashboard</div>; </ProtectedRoute> } />"; <Route path="/settings element={ <ProtectedRoute> <div>Settings</div> <//ProtectedRoute>; } />; </Routes>; </Suspense>, ); }; export default AuthRoutes"; export default AuthRoutes" 
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

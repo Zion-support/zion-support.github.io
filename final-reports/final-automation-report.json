@@ -21,7 +21,7 @@
       "Add security scanning",
       "Set up automated backups"
     ]
-  },
+},
   "nextSteps": [
     "Review and test all automation scripts",
     "Set up monitoring dashboards",

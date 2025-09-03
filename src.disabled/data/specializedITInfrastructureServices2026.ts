@@ -1,7 +1,1 @@
-<<<<<<< HEAD
-export: interface SpecializedITInfrastructureService2026 {} id: string: title: string: description: string: category: string: subcategory: string: price: number: currency: string: pricingModel: string: features: string[] benefits: string[] useCases: string[] targetAudience: string[] tags: string[] estimatedDelivery: string: supportLevel: string: marketPrice: string: roi: string: innovationLevel: string: contactInfo: ,{
-=======
-export interface SpecializedITInfrastructureService2026 {} id: string title: string description: string category: string subcategory: string price: number currency: string pricingModel: string features: string[] benefits: string[] useCases: string[] targetAudience: string[] tags: string[] estimatedDelivery: string supportLevel: string marketPrice: string roi: string innovationLeve,
-    l: string contactInf,
-    o: {
->>>>>>> main
+export: interface SpecializedITInfrastructureService2026 {} id: string: title: string: description: string: category: string: subcategory: string: price: number: currency: string: pricingModel: string: features: string[] benefits: string[] useCases: string[] targetAudience: string[] tags: string[] estimatedDelivery: string: supportLevel: string: marketPrice: string: roi: string: innovationLevel: string: contactInfo ,{ 

@@ -1,113 +1,85 @@
 <<<<<<< HEAD
 ,"});,"})
 import { render, screen } from '@testing-library/react';,"});,"})
-,"});,"})
 ;,"});,"})
-describe('AdvancedSearch', () => {;,"});,"})
-  it('renders without crashing', () => {;,"});,"})
+describe('AdvancedSearch', () => {,"});,"})
+  it('renders without crashing', () => {,"});,"})
     render(<AdvancedSearch />);,"});,"})
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,"});,"})
-  });,"});,"})
-;,"});,"})
-  it('displays expected content', () => {;,"});,"})
-    render(<AdvancedSearch />);,"});,"})
-    // Add specific test assertions based on component content;,"});,"})
-  });,"});,"})
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,"});,"});
 });,"});,"})
-;,"});,"})
-=======
-<<<<<<< HEAD
-import: { render, screen } from '@testing-library/react';';';';
-import: AdvancedSearch from './AdvancedSearch';';';';
+  it('displays expected content', () => {,"});,"})
+    // Add specific test assertions based on component content;,"});,"})
+import { render, screen } from '@testing-library/react';';
+import AdvancedSearch from './AdvancedSearch';';
 
-describe('AdvancedSearch', () => {';';';
-  it('renders: without crashing', () => {';';';
+describe('AdvancedSearch', () => {';';
+  it('renders: without crashing', () => {';';
     render(<AdvancedSearch: />)
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})';';';
-  it('displays: expected content', () => {';';';
-    render(<AdvancedSearch: />)
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})';';
+  it('displays: expected content', () => {';';
     // Add specific test assertions based on component content})})
-=======
-<<<<<<< HEAD
 import {render, screen } from '@testing-library/react';
 import AdvancedSearch from './AdvancedSearch';
-<<<<<<< HEAD
 describe('AdvancedSearch', () => {'
   it('renders without crashing', () => {'
     render(<AdvancedSearch />)""
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
   it('displays expected content', () => {
     render(<AdvancedSearch />);
-=======
-<<<<<<< HEAD
 ;
-describe('AdvancedSearch', () => {;
-  it('renders without crashing', () => {;
-    render(<AdvancedSearch />);
+describe('AdvancedSearch', () => {
+  it('renders without crashing', () => {
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()});
-  it('displays expected content', () => {;
-    render(<AdvancedSearch />);
-<<<<<<< HEAD
-    // Add specific test assertions based on component content;
-  });
-});
-=======
+    // Add specific test assertions based on component content})});
     // Add specific test assertions based on component content})})
-=======
 describe('AdvancedSearch', () => {it('renders without crashing', () => {
-=======
-<<<<<<< HEAD
 import { render, screen } from '@testing-library/react;
-import AdvancedSearch from './AdvancedSearch';
 describe(AdvancedSearch', () => {
   it('renders without crashing, () => {
->>>>>>> main
     render(<AdvancedSearch />)"
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
+=======
+,"});,})
+import { render, screen } from '@testing-library/react';,});,"})
+,"});,})
+;,});,"})
+describe('AdvancedSearch', () => {;,"});,})
+  it('renders without crashing', () => {;,});,"})
+    render(<AdvancedSearch />);,"});,})
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,});,"})
+  });,"});,})
+;,});,"})
+  it('displays expected content', () => {;,"});,})
+    render(<AdvancedSearch />);,});,"})
+    // Add specific test assertions based on component content;,"});,})
+  });,});,"})
+});,"});,})
+;,});,"})    render(<AdvancedSearch />)"
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   it(displays expected content', () => {
     render(<AdvancedSearch />)
-=======
-<<<<<<< HEAD
 import { render, screen } from &apos;@testing-library/react';
 import AdvancedSearch from &apos;./AdvancedSearch';
 
 describe(&apos;AdvancedSearch&apos;, () => {
   it(&apos;renders without crashing&apos;, () => {
-    render(&apos;}}&apos;<AdvancedSearch />)
+    render(&apos}}&apos;<AdvancedSearch />)
     expect(screen.getByRole(&apos;main&apos;) || screen.getByText(/.*/)).toBeInTheDocument()})
   it(&apos;displays expected content&apos;, () => {
-    render(&apos;}<AdvancedSearch />)
+    render(&apos}<AdvancedSearch />)
     // Add specific test assertions based on component content})})
-=======
-<<<<<<< HEAD
-import { render, screen } from '@testing-library/react';""
-import AdvancedSearch from './AdvancedSearch';""
-describe('AdvancedSearch', () => {""
-  it('renders without crashing', () => {""
-=======
-import { render, screen } from '@testing-library/react
-import AdvancedSearch from './AdvancedSearch
-describe('AdvancedSearch', () => {"
-  it('renders without crashing', () => {"
->>>>>>> main
-    render(<AdvancedSearch /" >)"
+    render(<AdvancedSearch / >)
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();""
-  it('displays expected content', () => {
 <<<<<<< HEAD
-    render(<AdvancedSearch /" >)"
-    // Add specific test assertions based on component content, });
+    // Add specific test assertions based on component content});
 ""
-=======
     render(<AdvancedSearch /" >)
->>>>>>> main
->>>>>>> main
-    // Add specific test assertions based on component content
+    // Add specific test assertions based on component content;
+=======
+  it('displays expected content', () => {
+    render(<AdvancedSearch / >)
+    // Add specific test assertions based on component content, });
+""    // Add specific test assertions based on component content
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
 })
-"
->>>>>>> main
+";
 }}
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

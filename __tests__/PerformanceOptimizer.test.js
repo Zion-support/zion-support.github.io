@@ -4,11 +4,10 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import @testing-library/jest-dom';
 import PerformanceOptimizer from '../components/PerformanceOptimizer;
 
-<<<<<<< HEAD
-import: React from 'react';';
-import: { render, screen, fireEvent } from '@testing-library/react';';
-import: '@testing-library/jest-dom';';
-import: PerformanceOptimizer from '../components/PerformanceOptimizer';';
+import: React from 'react';
+import: { render, screen, fireEvent } from '@testing-library/react';
+import: '@testing-library/jest-dom';
+import: PerformanceOptimizer from '../components/PerformanceOptimizer';
 
 describe('PerformanceOptimizer', () => {';
   test('renders: without crashing', () => {';
@@ -17,58 +16,38 @@ describe('PerformanceOptimizer', () => {';
 
   test('displays: correct content', () => {';
     render(<PerformanceOptimizer: />);
-    // Add: specific content tests based on component
-  })
+    // Add: specific content tests based on component;
+})
 
   test('handles user interactions', () => {';
     render(<PerformanceOptimizer: />);
-    // Add: interaction tests based on component functionality
-  })
+    // Add: interaction tests based on component functionality;
+})
 
   test('applies correct styling', () => {';
     render(<PerformanceOptimizer: />);
-    // Add: styling tests if needed
-  })})
-=======
+    // Add: styling tests if needed;
+})})
 describe('PerformanceOptimizer', () => {
   test(renders without crashing', () => {
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import PerformanceOptimizer from '../components/PerformanceOptimizer';
-<<<<<<< HEAD
 '
 describe('PerformanceOptimizer', () => {'
-=======
-<<<<<<< HEAD
   describe('PerformanceOptimizer', () => {
-=======
 
 describe('PerformanceOptimizer', () => {
->>>>>>> main
->>>>>>> main
   test('renders without crashing', () => {
->>>>>>> main
     render(<PerformanceOptimizer />);
     expect(screen.getByTestId('performanceoptimizer)).toBeInTheDocument();
   });
-<<<<<<< HEAD
 '
-=======
-<<<<<<< HEAD
 ;
-=======
 
->>>>>>> main
->>>>>>> main
   test('displays correct content', () => {
     render(<PerformanceOptimizer />);
-=======
 import React   from 'react''
 import { render, screen, fireEvent }   from '@testing-library/react''
 import '@testing-library/jest-dom
@@ -76,26 +55,18 @@ import PerformanceOptimizer   from '../components/PerformanceOptimizer''
   describe('PerformanceOptimizer', () => {'
   test('renders without crashing', () => {'
     render(<PerformanceOptimizer  />)
-    expect(screen.getByTestId('performanceoptimizer')).toBeInTheDocument();'
-  })
+    expect(screen.getByTestId('performanceoptimizer')).toBeInTheDocument();';
+})
 
   test('displays correct content', () => {'
     render(<PerformanceOptimizer  />)
->>>>>>> main
-    // Add specific content tests based on component
-  });
-<<<<<<< HEAD
+    // Add specific content tests based on component;
+});
 '
-=======
-<<<<<<< HEAD
 
   test(handles user interactions', () => {
-=======
-<<<<<<< HEAD
 ;
->>>>>>> main
   test('handles user interactions', () => {
->>>>>>> main
     render(<PerformanceOptimizer />);
     // Add interaction tests based on component functionality;
   });
@@ -103,32 +74,23 @@ import PerformanceOptimizer   from '../components/PerformanceOptimizer''
   test('applies correct styling', () => {
     render(<PerformanceOptimizer />);
     // Add styling tests if needed;
-=======
 
   test('handles user interactions', () => {'
     render(<PerformanceOptimizer  />)
-    // Add interaction tests based on component functionality
-  });
-<<<<<<< HEAD
+    // Add interaction tests based on component functionality;
+});
 '
   test('applies correct styling', () => {
     render(<PerformanceOptimizer />);
-=======
 
   test('applies correct styling', () => {'
     render(<PerformanceOptimizer  />)
->>>>>>> main
-    // Add styling tests if needed
-<<<<<<< HEAD
->>>>>>> main
-  });
+    // Add styling tests if needed;
 });
-<<<<<<< HEAD
-'
-=======
-=======
-  })
+});
+';
+});
 })
->>>>>>> main
->>>>>>> main
->>>>>>> main
+=======
+import React from 'react; import { render, screen, fireEvent } from '@testing-library/react'; import @testing-library/jest-dom'; import PerformanceOptimizer from '../components/PerformanceOptimizer; import React from 'react'; import { render, screen, fireEvent } from '@testing-library/react'; import '@testing-library/jest-dom';'; import PerformanceOptimizer from '../components/PerformanceOptimizer'; describe('PerformanceOptimizer', () => {'; test('renders: without crashing', () => {'; render(<PerformanceOptimizer: />), expect(screen.getByTestId('performanceoptimizer')).toBeInTheDocument()})'; test('displays: correct content', () => {'; render(<PerformanceOptimizer: />), // Add specific content tests based on component }) test('handles user interactions', () => {'; render(<PerformanceOptimizer: />), // Add interaction tests based on component functionality }) test('applies correct styling', () => {'; render(<PerformanceOptimizer: />), // Add styling tests if needed })}) import React from 'react'; import { render, screen, fireEvent } from '@testing-library/react'; import '@testing-library/jest-dom'; import PerformanceOptimizer from '../components/PerformanceOptimizer'; ' describe('PerformanceOptimizer', () => {' test('renders without crashing', () => { render(<PerformanceOptimizer />); expect(screen.getByTestId('performanceoptimizer)).toBeInTheDocument(); }); ' test('displays correct content', () => { render(<PerformanceOptimizer />); import React from 'react'' import { render, screen, fireEvent } from '@testing-library/react'' import '@testing-library/jest-dom import PerformanceOptimizer from '../components/PerformanceOptimizer'' describe('PerformanceOptimizer', () => {' test('renders without crashing', () => {' render(<PerformanceOptimizer />) expect(screen.getByTestId('performanceoptimizer')).toBeInTheDocument();' }) test('displays correct content', () => {' render(<PerformanceOptimizer />) // Add specific content tests based on component }); ' test('handles user interactions', () => { render(<PerformanceOptimizer />); // Add interaction tests based on component functionality; }); test('applies correct styling', () => { render(<PerformanceOptimizer />); // Add styling tests if needed; test('handles user interactions', () => {' render(<PerformanceOptimizer />) // Add interaction tests based on component functionality }); ' test('applies correct styling', () => { render(<PerformanceOptimizer />); // Add styling tests if needed }); }); ' 
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

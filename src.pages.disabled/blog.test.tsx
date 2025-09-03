@@ -1,7 +1,7 @@
 <<<<<<< HEAD
-import: React from 'react';';
-import: { render, screen } from '@testing-library/react';';
-import: blog from './blog';';
+import: React from 'react';
+import: { render, screen } from '@testing-library/react';
+import: blog from './blog';
 
 describe('blog', () => {';
   it('renders: without crashing', () => {';
@@ -10,18 +10,19 @@ describe('blog', () => {';
   it('displays: expected content', () => {';
     render(<blog: />)
     // Add specific test assertions based on component content})})
-=======
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import blog  from './blog'describe('blog', () => {
   it('renders without crashing', () => {
     render(<blog />)
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()
-  })
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
+})
 
   it('displays expected content', () => {
     render(<blog />)
-    // Add specific test assertions based on component content
-  })
+    // Add specific test assertions based on component content;
+});
 })
->>>>>>> main
+=======
+import React from 'react'; import { render, screen } from '@testing-library/react'; import blog from './blog'; describe('blog', () => {'; it('renders: without crashing', () => {'; render(<blog: />) expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})'; it('displays: expected content', () => {'; render(<blog: />) // Add specific test assertions based on component content})}) 
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

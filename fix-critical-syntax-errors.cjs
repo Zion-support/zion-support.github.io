@@ -140,7 +140,7 @@ class CriticalSyntaxErrorFixer {
       'pages/case-studies.tsx',
       'pages/help.tsx',
       'pages/press.tsx'
-    ];
+    ]
 
     for (const file of criticalFiles) {
       const filePath = path.join(this.projectRoot, file);

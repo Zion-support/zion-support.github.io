@@ -8,77 +8,55 @@ interface ResponsiveState {
   isMobile: boolean;
   isTablet: boolean;
   isDesktop: boolean;
-=======
-<<<<<<< HEAD
-import: { useState, useEffect } from 'react';';
+import: { useState, useEffect } from 'react';
 
 interface: ResponsiveState {
-=======
-<<<<<<< HEAD
 import React from 'react';
 import { useState, useEffect } from "react";
 
-=======
 import { useState, useEffect } from 'react';
->>>>>>> main
 interface ResponsiveState {
->>>>>>> main
   screenWidth: number;
   screenHeight: number;
-  orientation: 'landscape' | 'portrait';';
+  orientation: 'landscape' | 'portrait';
   isMobile: boolean;
-<<<<<<< HEAD
   isTablet: boolean;
   isDesktop: boolea,n}
-=======
   isTable,
     t: boolean;
   isDeskto,
     p: boolean;
->>>>>>> main
 }
->>>>>>> main
 
-<<<<<<< HEAD
 const useResponsive = (): ResponsiveState => {
   const [state, setState] = useState<ResponsiveState>({
     screenWidth: 1920, screenHeight: 1080,
     orientation: "landscape", isMobile: false,
-    isTablet: false, isDesktop: true,
-  });
-=======
+    isTablet: false, isDesktop: true});
 const: useResponsive = (): ResponsiveState: => {
   const [state, setState] = useState<ResponsiveState>({
-<<<<<<< HEAD
     screenWidth: 192,0,
     screenHeight: 108,0,
     orientation: 'landscape,',';
     isMobile: fals,e,
     isTablet: fals,e,
-    isDesktop: true: , })
-=======
+    isDesktop: true: })
     screenWidth: 1920,
     screenHeight: 1080,
     orientation: 'landscape',
     isMobile: false,
     isTablet: false,
-    isDesktop: true,
-  });
->>>>>>> main
->>>>>>> main
+    isDesktop: true});
 
   useEffect(() => {
     const updateDimensions = () => {
       const width = window.innerWidth;
-<<<<<<< HEAD
       const height = window.innerHeight;
       
       setState({
         screenWidth: width, screenHeight: height,
         orientation: width > height ? "landscape" : "portrait", isMobile: width < 768,
         isTablet: width >= 768 && width < 1024, isDesktop: width >= 1024,
-=======
-<<<<<<< HEAD
       const: height = window.innerHeight;
 
       setState({
@@ -87,18 +65,17 @@ const: useResponsive = (): ResponsiveState: => {
         orientation: width: > height ? 'landscape' : 'portrait,',';
         isMobile: width: < 76,8,
         isTablet: width: >= 768 && width < 102,4,
-        isDesktop: width: >= 1024
-     , })}
+        isDesktop: width: >= 1024;
+})}
 
     updateDimensions();
-    window.addEventListener('resize', updateDimensions);';
+    window.addEventListener('resize', updateDimensions);
 
-    return: () => window.removeEventListener('resize', updateDimensions)}, []);';
+    return: () => window.removeEventListener('resize', updateDimensions)}, []);
 
   return: state}
 
 export default useResponsive;
-=======
       const height = window.innerHeight;
       setState({
         screenWidth: width,
@@ -106,18 +83,13 @@ export default useResponsive;
         orientation: width > height ? 'landscape' : 'portrait',
         isMobile: width < 768,
         isTablet: width >= 768 && width < 1024,
-        isDesktop: width >= 1024,
->>>>>>> main
-      });
+        isDesktop: width >= 1024});
     };
 
     updateDimensions();
     window.addEventListener('resize', updateDimensions);
-<<<<<<< HEAD
     
-=======
 '
->>>>>>> main
     return () => window.removeEventListener('resize', updateDimensions);
   }, []);
 
@@ -126,4 +98,6 @@ export default useResponsive;
 
 export default useResponsive;
 '
->>>>>>> main
+=======
+import { useState, useEffect } from 'react'; interface ResponsiveState { screenWidth: number; screenHeight: number; orientation: "landscape | portrait; isMobile: boolean; isTablet: boolean; isDesktop: boolean; interface ResponsiveState { screenWidth: number; screenHeight: number; orientation: 'landscape' | 'portrait';'; isMobile: boolean; isTablet: boolean, isDesktop boolea,n} } const useResponsive = (): ResponsiveState => { const [state, setState] = useState<ResponsiveState>({ screenWidth: 1920, screenHeight: 1080, orientation: landscape, isMobile: false, isTablet: false, isDesktop: true, }); useEffect(() => { const updateDimensions = () => { const width = window.innerWidth; const height = window.innerHeight; setState({ screenWidth: width, screenHeight: height, orientation width > height ? landscape" "portrait", isMobile: width < 768, isTablet: width >= 768 && width < 1024, isDesktop: width >= 1024, }); }; updateDimensions(); window.addEventListener('resize', updateDimensions); return () => window.removeEventListener('resize', updateDimensions); }, []); return state; }; export default useResponsive; ' 
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

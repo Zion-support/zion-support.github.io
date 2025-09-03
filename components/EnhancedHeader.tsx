@@ -9,7 +9,7 @@ import {
   Mail,
   ChevronDown,
   User,
-  ShoppingCart,
+  ShoppingCart,;
 } from 'lucide-react';
 
 export default function EnhancedHeader() {
@@ -39,65 +39,42 @@ export default function EnhancedHeader() {
   };
 
   const navigation = [
-    { name: 'Home', href: '/' },
+  { name: 'Home', href: '/' },
     {
       name: 'Services',
       href: '/services',
       dropdown: [
-        { name: 'AI Services', href: '/ai-services' },
-        { name: 'IT Services', href: '/it-services' },
-        { name: 'Micro SaaS', href: '/micro-saas' },
-        { name: 'Cybersecurity', href: '/cybersecurity' },
-        { name: 'Cloud Platforms', href: '/cloud-platforms' },
-        { name: 'Data Analytics', href: '/data-analytics' },
-        { name: 'IoT Solutions', href: '/iot-solutions' },
-        { name: 'Blockchain Solutions', href: '/blockchain-solutions' },
-      ],
-    },
+        { name: 'AI Services', href: '/services/ai-services' },
+        { name: 'IT Services', href: '/services/it-services' },
+        { name: 'Micro SaaS', href: '/services/micro-saas' },
+        { name: 'Web Development', href: '/services/web-development' },
+        { name: 'Cloud Services', href: '/services/cloud-services' },
+        { name: 'AI Development', href: '/services/ai-development' },
+      ],;
+},
     {
       name: 'Solutions',
       href: '/solutions',
       dropdown: [
-        { name: 'AI Chatbots', href: '/solutions/ai-chatbots' },
-        { name: 'DevOps Automation', href: '/solutions/devops' },
-        { name: 'Cloud Migration', href: '/solutions/cloud-migration' },
-        { name: 'Custom Development', href: '/solutions/custom-development' },
-        { name: 'Digital Transformation', href: '/solutions/digital-transformation' },
+        { name: 'AI Content Creation', href: '/solutions/ai-content-creation' },
+        { name: 'Customer Support', href: '/solutions/customer-support' },
         { name: 'Email Automation', href: '/solutions/email-automation' },
+        { name: 'Event Management', href: '/solutions/event-management' },
+        { name: 'Project Management', href: '/solutions/project-management' },
         { name: 'Workflow Automation', href: '/solutions/workflow-automation' },
-      ],
-    },
-    {
-      name: 'Company',
-      href: '/about',
-      dropdown: [
-        { name: 'About Us', href: '/about' },
-        { name: 'Our Team', href: '/team' },
-        { name: 'Careers', href: '/careers' },
-        { name: 'Partners', href: '/partners' },
-        { name: 'Press', href: '/press' },
-      ],
-    },
-    {
-      name: 'Resources',
-      href: '/blog',
-      dropdown: [
-        { name: 'Blog', href: '/blog' },
-        { name: 'Case Studies', href: '/case-studies' },
-        { name: 'White Papers', href: '/whitepapers' },
-        { name: 'Documentation', href: '/docs' },
-        { name: 'Support', href: '/support' },
-        { name: 'Help', href: '/help' },
-      ],
-    },
+      ],;
+},
+    { name: 'About', href: '/about' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Careers', href: '/careers' },
     { name: 'Contact', href: '/contact' },
-  ];
+  ]
 
   return (
     <header
       className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white shadow-lg' : 'bg-white/95 backdrop-blur-sm'
-      }`}
+        scrolled ? 'bg-white shadow-lg' : 'bg-white/95 backdrop-blur-sm';
+}`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
@@ -130,8 +107,8 @@ export default function EnhancedHeader() {
                         router.pathname === item.href ||
                         router.pathname.startsWith(item.href + '/')
                           ? 'text-blue-600 bg-blue-50'
-                          : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
-                      }`}
+                          : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50';
+}`}
                     >
                       {item.name}
                       <ChevronDown className="ml-1 h-4 w-4" />
@@ -157,8 +134,8 @@ export default function EnhancedHeader() {
                     className={`text-sm font-medium px-4 py-2 rounded-md transition-colors ${
                       router.pathname === item.href
                         ? 'text-blue-600 bg-blue-50'
-                        : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
-                    }`}
+                        : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50';
+}`}
                   >
                     {item.name}
                   </Link>
@@ -224,8 +201,8 @@ export default function EnhancedHeader() {
                           router.pathname === item.href ||
                           router.pathname.startsWith(item.href + '/')
                             ? 'text-blue-600 bg-blue-50'
-                            : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
-                        }`}
+                            : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50';
+}`}
                       >
                         {item.name}
                         <ChevronDown className="h-4 w-4" />
@@ -254,8 +231,8 @@ export default function EnhancedHeader() {
                       className={`block px-3 py-2 text-base font-medium rounded-md ${
                         router.pathname === item.href
                           ? 'text-blue-600 bg-blue-50'
-                          : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
-                      }`}
+                          : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50';
+}`}
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       {item.name}

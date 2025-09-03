@@ -15,8 +15,8 @@ class MasterAutomationSuite {
       testsPassed: 0,
       buildSuccess: false,
       performanceScore: 0,
-      securityIssues: 0
-    };
+      securityIssues: 0;
+};
   }
 
   ensureDirectories() {
@@ -38,8 +38,8 @@ class MasterAutomationSuite {
         cwd: this.projectRoot,
         encoding: 'utf8',
         timeout: options.timeout || 300000,
-        stdio: options.stdio || 'pipe'
-      });
+        stdio: options.stdio || 'pipe';
+});
       this.log(`✅ ${description} completed`, 'SUCCESS');
       return { success: true, output: result };
     } catch (error) {
@@ -62,7 +62,7 @@ class MasterAutomationSuite {
         'pages/case-studies.tsx', 
         'pages/help.tsx',
         'pages/press.tsx'
-      ];
+      ]
       
       let fixedCount = 0;
       
@@ -101,8 +101,8 @@ class MasterAutomationSuite {
     try {
       const result = execSync(`node -e "${syntaxFixer}"`, { 
         cwd: this.projectRoot, 
-        encoding: 'utf8' 
-      });
+        encoding: 'utf8' ;
+});
       this.results.syntaxFixes = parseInt(result.toString().match(/Fixed (\d+) files/)?.[1] || '0');
       this.log(`Fixed ${this.results.syntaxFixes} syntax errors`, 'SUCCESS');
     } catch (error) {
@@ -168,8 +168,8 @@ class MasterAutomationSuite {
           }
         }
       } catch (error) {
-        // Skip directories we can't read
-      }
+        // Skip directories we can't read;
+}
     };
 
     scanDirectory(dirPath);
@@ -200,8 +200,8 @@ class MasterAutomationSuite {
         testsPassed: this.results.testsPassed,
         buildSuccess: this.results.buildSuccess,
         performanceScore: this.results.performanceScore,
-        securityIssues: this.results.securityIssues
-      },
+        securityIssues: this.results.securityIssues;
+},
       recommendations: this.generateRecommendations(),
       nextSteps: [
         'Review and test the application',
@@ -209,7 +209,7 @@ class MasterAutomationSuite {
         'Run user acceptance tests',
         'Deploy to production'
       ]
-    };
+};
 
     const reportPath = path.join(this.reportsDir, 'master-automation-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));

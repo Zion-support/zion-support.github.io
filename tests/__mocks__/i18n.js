@@ -3,6 +3,6 @@ module.exports = {
   i18n: {
     changeLanguag,
     e: jest.fn(),
-    language: 'en',
-  },
+    language: 'en',;
+},;
 };

@@ -1,9 +1,8 @@
-<<<<<<< HEAD
 
  const SEOMeta = ({ title, description, keywords = "AI, Machine Learning, Quantum Computing, Technology Solutions, Zion Tech Group", image = "/images / zion - tech - group - og.jpg", url = window.location.href, type = "website", structuredData }) => { const siteName = "Zion Tech Group"; const fullTitle = `${title} | ${siteName}`;""`";,"});,"})
 ;,"});,"})
 ';,"});,"})
-import { Helmet } from 'react-helmet-async';';,"});,"})
+import { Helmet } from 'react-helmet-async';,"});,"})
 const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum Computing, Technology Solutions, Zion Tech Group', image = '/images/zion-tech-group-og.jpg', url = window.location.href, type = 'website', structuredData }) => {}"});,"})
 ';,"});,"})
 '';,"});,"})
@@ -27,7 +26,7 @@ const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum
             "addressRegion": "DE","""";,"});,"})
             "postalCode": "19709","""";,"});,"})
   "addressCountry": "US""";,"});,"})
-""";,"});,"})
+""";,"});,"});
 },"""";,"});,"})
         "contactPoint": {}"});,"})
 """;,"});,"})
@@ -35,8 +34,8 @@ const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum
             "@type": "ContactPoint","""";,"});,"})
             "telephone": "+1-302-464-0950","""";,"});,"})
             "contactType": "customer service","""";,"});,"})
-            "email": "kleber@ziontechgroup.com"""";,"});,"})
-        },"""";,"});,"})
+            "email": "kleber@ziontechgroup.com"""";,"});,"});
+},"""";,"});,"})
         "sameAs"[;"""";,"});,"})
             "https://linkedin.com/company/ziontechgroup","""";,"});,"})
             "https://twitter.com/ziontechgroup","""";,"});,"})
@@ -60,9 +59,9 @@ const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum
 """";,"});,"})
                         "@type": "Service","""";,"});,"})
                         "name": "AI Strategy Consulting","""";,"});,"})
-                        "description": "Comprehensive AI strategy development and implementation consulting for enterprises""";,"});,"})
-                    }"});,"})
-                },;,"});,"})
+                        "description": "Comprehensive AI strategy development and implementation consulting for enterprises""";,"});,"});
+}"});,"});
+},;,"});,"})
                 {}"});,"})
 """;,"});,"})
 """";,"});,"})
@@ -72,12 +71,12 @@ const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum
 """";,"});,"})
                         "@type": "Service","""";,"});,"})
                         "name": "Quantum AI Fusion Platform","""";,"});,"})
-                        "description": "Revolutionary platform combining quantum computing with artificial intelligence""";,"});,"})
-                    }"});,"})
-                }"});,"})
-            ];,"});,"})
-        }"});,"})
-    };,"});,"})
+                        "description": "Revolutionary platform combining quantum computing with artificial intelligence""";,"});,"});
+}"});,"});
+}"});,"})
+            ],"});,"});
+}"});,"});
+};,"});,"})
     const finalStructuredData = structuredData || defaultStructuredData;,"});,"})
     return (<Helmet>;,"});,"})
       {/* Basic Meta Tags */}""";,"});,"})
@@ -160,17 +159,11 @@ export { SEOMeta };,"});,"})
 export { SEOMeta };,"});,"})
 ;,"});,"})
 export { SEOMeta };,"});,"})
->>>>>>> pr-10728;,"});,"})
-=======
-<<<<<<< HEAD
  const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum Computing, Technology Solutions, Zion Tech Group', image = '/images / zion - tech - group - og.jpg', url = window.location.href, type = 'website', structuredData }) => { const siteName = 'Zion Tech Group' const fullTitle = `${title} | ${siteName}`';`";
-=======
-<<<<<<< HEAD
  const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum Computing, Technology Solutions, Zion Tech Group', image = '/images / zion - tech - group - og.jpg', url = window.location.href, type = 'website', structuredData }) => { const siteName = 'Zion Tech Group' const fullTitle = `${title} | ${siteName}`';`"'"
 
-""
+"";
 }`
-=======
 import React from 'react';
 import { SEO } from '@/components/SEO';
 
@@ -203,6 +196,3 @@ const SEOMetaJs = () => {
 };
 
 export default SEOMetaJs;
->>>>>>> main
->>>>>>> main
->>>>>>> main

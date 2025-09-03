@@ -15,8 +15,8 @@ class ComprehensiveBuildAutomation {
       errors: [],
       warnings: [],
       metrics: {},
-      overallStatus: 'pending'
-    };
+      overallStatus: 'pending';
+};
     
     // Ensure directories exist
     [this.logDir, this.reportsDir].forEach(dir => {
@@ -45,8 +45,8 @@ class ComprehensiveBuildAutomation {
         cwd: this.projectRoot,
         encoding: 'utf8',
         stdio: options.silent ? 'pipe' : 'inherit',
-        ...options
-      });
+        ...options;
+});
       
       const duration = Date.now() - startTime;
       this.buildResults.steps.push({
@@ -54,8 +54,8 @@ class ComprehensiveBuildAutomation {
         status: 'success',
         duration,
         command,
-        output: options.silent ? result : 'See console output'
-      });
+        output: options.silent ? result : 'See console output';
+});
       
       this.log(`Completed step: ${name} (${duration}ms)`);
       return result;
@@ -68,14 +68,14 @@ class ComprehensiveBuildAutomation {
         status: 'failed',
         duration,
         command,
-        error: errorMessage
-      });
+        error: errorMessage;
+});
       
       this.buildResults.errors.push({
         step: name,
         error: errorMessage,
-        timestamp: new Date().toISOString()
-      });
+        timestamp: new Date().toISOString();
+});
       
       this.log(`Failed step: ${name} - ${errorMessage}`, 'ERROR');
       
@@ -159,8 +159,8 @@ class ComprehensiveBuildAutomation {
       this.buildResults.warnings.push({
         type: 'linting',
         message: 'Linting issues found',
-        details: error.message
-      });
+        details: error.message;
+});
       return false;
     }
   }
@@ -180,8 +180,8 @@ class ComprehensiveBuildAutomation {
       this.buildResults.warnings.push({
         type: 'typescript',
         message: 'Type checking issues found',
-        details: error.message
-      });
+        details: error.message;
+});
       return false;
     }
   }
@@ -208,8 +208,8 @@ class ComprehensiveBuildAutomation {
       this.buildResults.warnings.push({
         type: 'testing',
         message: 'Test failures or issues found',
-        details: error.message
-      });
+        details: error.message;
+});
       return false;
     }
   }
@@ -256,8 +256,8 @@ class ComprehensiveBuildAutomation {
     
     try {
       calculateSize(dirPath);
-      return Math.round(totalSize / 1024 / 1024 * 100) / 100; // MB
-    } catch (error) {
+      return Math.round(totalSize / 1024 / 1024 * 100) / 100; // MB;
+} catch (error) {
       return 0;
     }
   }
@@ -277,8 +277,8 @@ class ComprehensiveBuildAutomation {
       this.buildResults.warnings.push({
         type: 'security',
         message: 'Security vulnerabilities found',
-        details: error.message
-      });
+        details: error.message;
+});
       return false;
     }
   }
@@ -305,8 +305,8 @@ class ComprehensiveBuildAutomation {
       failedSteps: this.buildResults.steps.filter(s => s.status === 'failed').length,
       totalDuration: this.buildResults.steps.reduce((sum, step) => sum + step.duration, 0),
       errorCount: this.buildResults.errors.length,
-      warningCount: this.buildResults.warnings.length
-    };
+      warningCount: this.buildResults.warnings.length;
+};
     
     // Save report
     const reportFile = path.join(this.reportsDir, `build-report-${Date.now()}.json`);
@@ -378,8 +378,8 @@ class ComprehensiveBuildAutomation {
       this.log(`Report: ${reportFile}`);
       
       return this.buildResults;
-      
-    } catch (error) {
+      ;
+} catch (error) {
       this.log(`Build automation failed: ${error.message}`, 'ERROR');
       this.buildResults.overallStatus = 'failed';
       await this.generateReport();

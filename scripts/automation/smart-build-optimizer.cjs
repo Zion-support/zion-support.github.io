@@ -1,17 +1,14 @@
-<<<<<<< HEAD
 #!/''usr/bin/env'' node;
 /**
  * Smart Build Optimizer - PM2 Automation;
  * Intelligent build optimization with performance analysis and auto-tuning;
  */
-=======
 #!/'usr/bin/env' node;
 
 /**;
  * Smart Build Optimizer - PM2 Automation;
  * Intelligent build optimization with performance analysis and auto-tuning;
  */;
->>>>>>> main
 
 const fs = require('fs');
 const path = require('path');
@@ -21,7 +18,6 @@ const crypto = require('crypto');
 class SmartBuildOptimizer {;
   constructor() {;
     this.projectRoot = process.cwd();
-<<<<<<< HEAD
     this.logFile = path.join(;
       this.projectRoot,logs',;
       'smart-build-optimizer.log';
@@ -33,43 +29,24 @@ class SmartBuildOptimizer {;
     this.optimizationsLog = path.join(;
       this.projectRoot,logs',;
       'build-optimizations.json';
-=======
-    this.logFile = path.join(
-      this.projectRoot, 'logs',
-      'smart-build-optimizer.log'
-    );
-    this.performanceLog = path.join(
-      this.projectRoot, 'logs',
-      'build-performance.json'
-    );
-    this.optimizationsLog = path.join(
-      this.projectRoot, 'logs',
-      'build-optimizations.json'
->>>>>>> main
-    );
+<<<<<<< HEAD    );
     this.ensureLogsDirectory();
 ;
     this.buildHistory = [];
-<<<<<<< HEAD
     this.optimizationStrategies = {
       vite: {build.rollupOptions.output.manualChunks':
           'Split vendor chunks intelligently',build.rollupOptions.treeshake':
-          'Enable tree shaking for smaller bundles',build.minify': 'Use esbuild for faster minification',build.sourcemap': 'Conditional source maps for production',
-      },
+          'Enable tree shaking for smaller bundles',build.minify': 'Use esbuild for faster minification',build.sourcemap': 'Conditional source maps for production'},
       typescript: {
         incremental: 'Enable incremental compilation',
         tsBuildInfoFile: 'Use build info file for faster rebuilds',
-        skipLibCheck: 'Skip library checking for faster builds',
-      },
+        skipLibCheck: 'Skip library checking for faster builds'},
       dependencies: {
         preinstall: 'Use npm ci for faster installs',
         cache: 'Leverage npm cache effectively',
-        parallel: `Install dependencies in parallel`,
-      },
-    };
+        parallel: `Install dependencies in parallel`}};
 
     this.performanceThresholds = {
-=======
     this.optimizationStrategies = {;
       vite: {build.rollupOptions.output.manualChunks':;
           'Split vendor chunks intelligently',build.rollupOptions.treeshake':;
@@ -88,7 +65,6 @@ class SmartBuildOptimizer {;
     };
 ;
     this.performanceThresholds = {;
->>>>>>> main
       buildTime: 300000, // 5 minutes;
       bundleSize: 5000000, // 5MB;
       installTime: 120000, // 2 minutes;
@@ -102,18 +78,12 @@ class SmartBuildOptimizer {;
       fs.mkdirSync(logsDir, { recursive: true });
     }
   }
-<<<<<<< HEAD
 
   log(message, level = `INFO`) {
-=======
-;
-  log(message, level = 'INFO') {;
->>>>>>> main
-    const timestamp = new Date().toISOString();
+<<<<<<< HEAD    const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
     fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`);
   }
-<<<<<<< HEAD
 
   async runOptimization() {
     this.log(`Starting smart build optimization...`);
@@ -123,8 +93,7 @@ class SmartBuildOptimizer {;
       currentPerformance: {},
       optimizations: [],
       recommendations: [],
-      applied: [],
-    };
+      applied: []};
 
     try {
       // 1. Analyze current build performance;
@@ -150,7 +119,6 @@ class SmartBuildOptimizer {;
       await this.testOptimizations(optimization.applied);
 
       this.log(Build optimization completed: ${optimization.applied.length} optimizations applied`
-=======
 ;
   async runOptimization() {;
     this.log('Starting smart build optimization...');
@@ -187,7 +155,6 @@ class SmartBuildOptimizer {;
       await this.testOptimizations(optimization.applied);
 ;
       this.log(Build optimization completed: ${optimization.applied.length} optimizations applied';
->>>>>>> main
       );
     } catch (error) {  this.log(`Build optimization failed: ${error.message  }`, `ERROR`);
     }
@@ -204,90 +171,60 @@ class SmartBuildOptimizer {;
       memoryUsage: 0,;
       cpuUsage: 0,;
     };
-<<<<<<< HEAD
 
     try {
-=======
-;
-    try {;
->>>>>>> main
-      // Measure build time;
+<<<<<<< HEAD      // Measure build time;
       const buildStart = Date.now();
       await this.runBuild();
       performance.buildTime = Date.now() - buildStart;
-<<<<<<< HEAD
 
       // Measure bundle size;
       performance.bundleSize = await this.measureBundleSize();
 
-=======
 ;
       // Measure bundle size;
       performance.bundleSize = await this.measureBundleSize();
 ;
->>>>>>> main
       // Measure install time;
       const installStart = Date.now();
       await this.runInstall();
       performance.installTime = Date.now() - installStart;
-<<<<<<< HEAD
 
-=======
-;
->>>>>>> main
-      // Measure rebuild time;
+<<<<<<< HEAD      // Measure rebuild time;
       const rebuildStart = Date.now();
       await this.runRebuild();
       performance.rebuildTime = Date.now() - rebuildStart;
-<<<<<<< HEAD
 
       // Measure system resources;
       performance.memoryUsage = process.memoryUsage().heapUsed;
       performance.cpuUsage = process.cpuUsage().user;
 
       this.log(Performance analysis: Build=${performance.buildTime}ms, Bundle=${performance.bundleSize}bytes, Install=${performance.installTime}ms`
-=======
 ;
       // Measure system resources;
       performance.memoryUsage = process.memoryUsage().heapUsed;
       performance.cpuUsage = process.cpuUsage().user;
 ;
       this.log(Performance analysis: Build=${performance.buildTime}ms, Bundle=${performance.bundleSize}bytes, Install=${performance.installTime}ms';
->>>>>>> main
       );
     } catch (error) {  this.log(`Performance analysis failed: ${error.message  }`, `WARN`);
     }
 ;
     return performance;
   }
-<<<<<<< HEAD
 
   async runBuild() {
     return new Promise((resolve, reject) => {
       const build = spawn('npm', ['run', 'build'], {
         cwd: this.projectRoot,
-        stdio: `pipe`,
-      });
+        stdio: `pipe`});
 
       build.on(`close`, code => {
         if (code === 0) {
-=======
-;
-  async runBuild() {;
-    return new Promise((resolve, reject) => {;
-      const build = spawn('npm', ['run', 'build'], {;
-        cwd: this.projectRoot,;
-        stdio: 'pipe',;
-      });
-;
-      build.on('close', code => {;
-        if (code === 0) {;
->>>>>>> main
-          resolve();
+<<<<<<< HEAD          resolve();
         } else {reject(new Error(`Build failed with code ${code}`));
         }
       });
-<<<<<<< HEAD
 
       build.on(`error`, reject);
     });
@@ -297,12 +234,10 @@ class SmartBuildOptimizer {;
     return new Promise((resolve, reject) => {
       const install = spawn(`npm`, ['install'], {
         cwd: this.projectRoot,
-        stdio: `pipe`,
-      });
+        stdio: `pipe`});
 
       install.on(`close`, code => {
         if (code === 0) {
-=======
 ;
       build.on('error', reject);
     });
@@ -317,12 +252,10 @@ class SmartBuildOptimizer {;
 ;
       install.on('close', code => {;
         if (code === 0) {;
->>>>>>> main
           resolve();
         } else {reject(new Error(`Install failed with code ${code}`));
         }
       });
-<<<<<<< HEAD
 
       install.on(`error`, reject);
     });
@@ -332,32 +265,14 @@ class SmartBuildOptimizer {;
     return new Promise((resolve, reject) => {
       const rebuild = spawn(`npm`, ['run', 'build'], {
         cwd: this.projectRoot,
-        stdio: `pipe`,
-      });
+        stdio: `pipe`});
 
       rebuild.on(`close`, code => {
         if (code === 0) {
-=======
-;
-      install.on('error', reject);
-    });
-  }
-;
-  async runRebuild() {;
-    return new Promise((resolve, reject) => {;
-      const rebuild = spawn('npm', ['run', 'build'], {;
-        cwd: this.projectRoot,;
-        stdio: 'pipe',;
-      });
-;
-      rebuild.on('close', code => {;
-        if (code === 0) {;
->>>>>>> main
-          resolve();
+<<<<<<< HEAD          resolve();
         } else {reject(new Error(`Rebuild failed with code ${code}`));
         }
       });
-<<<<<<< HEAD
 
       rebuild.on(`error`, reject);
     });
@@ -366,7 +281,6 @@ class SmartBuildOptimizer {;
   async measureBundleSize() {
     try {
       const distPath = path.join(this.projectRoot, `dist`);
-=======
 ;
       rebuild.on('error', reject);
     });
@@ -375,7 +289,6 @@ class SmartBuildOptimizer {;
   async measureBundleSize() {;
     try {;
       const distPath = path.join(this.projectRoot, 'dist');
->>>>>>> main
       if (!fs.existsSync(distPath)) return 0;
 ;
       let totalSize = 0;
@@ -394,7 +307,6 @@ class SmartBuildOptimizer {;
 ;
   getAllFilesRecursive(dir, files = []) {;
     const items = fs.readdirSync(dir);
-<<<<<<< HEAD
 
     for (const item of items) {
       const fullPath = path.join(dir, `item);
@@ -403,17 +315,7 @@ class SmartBuildOptimizer {;
       if (stat.isDirectory()) {
         this.getAllFilesRecursive(fullPath`, files);
       } else {
-=======
-;
-    for (const item of items) {;
-      const fullPath = path.join(dir, 'item);
-      const stat = fs.statSync(fullPath);
-;
-      if (stat.isDirectory()) {;
-        this.getAllFilesRecursive(fullPath', files);
-      } else {;
->>>>>>> main
-        files.push(fullPath);
+<<<<<<< HEAD        files.push(fullPath);
       }
     }
 ;
@@ -422,7 +324,6 @@ class SmartBuildOptimizer {;
 ;
   async identifyOptimizations(performance) {;
     const optimizations = [];
-<<<<<<< HEAD
 
     // Build time optimizations;
     if (performance.buildTime > this.performanceThresholds.buildTime) {
@@ -431,8 +332,7 @@ class SmartBuildOptimizer {;
         priority: 'HIGH',
         description: 'Build time exceeds threshold',
         action: 'Optimize Vite configuration and TypeScript settings',
-        config: 'vite.config.ts',
-      });
+        config: 'vite.config.ts'});
     }
 
     // Bundle size optimizations;
@@ -442,8 +342,7 @@ class SmartBuildOptimizer {;
         priority: 'HIGH',
         description: 'Bundle size exceeds threshold',
         action: 'Implement code splitting and tree shaking',
-        config: 'vite.config.ts',
-      });
+        config: 'vite.config.ts'});
     }
 
     // Install time optimizations;
@@ -453,8 +352,7 @@ class SmartBuildOptimizer {;
         priority: 'MEDIUM',
         description: 'Install time exceeds threshold',
         action: 'Optimize dependency installation',
-        config: 'package.json',
-      });
+        config: 'package.json'});
     }
 
     // Rebuild time optimizations;
@@ -465,7 +363,6 @@ class SmartBuildOptimizer {;
         description: 'Rebuild time exceeds threshold',
         action: `Enable incremental compilation`,
         config: `tsconfig.json`,
-=======
 ;
     // Build time optimizations;
     if (performance.buildTime > this.performanceThresholds.buildTime) {;
@@ -508,7 +405,6 @@ class SmartBuildOptimizer {;
         description: 'Rebuild time exceeds threshold',;
         action: 'Enable incremental compilation',;
         config: 'tsconfig.json',;
->>>>>>> main
       });
     }
 ;
@@ -534,42 +430,31 @@ class SmartBuildOptimizer {;
 ;
     return applied;
   }
-<<<<<<< HEAD
 
   async applyOptimization(optimization) {
     switch (optimization.type) {
       case `BUILD_TIME`:
-=======
-;
-  async applyOptimization(optimization) {;
-    switch (optimization.type) {;
-      case 'BUILD_TIME':;
->>>>>>> main
-        return await this.optimizeBuildTime();
+<<<<<<< HEAD        return await this.optimizeBuildTime();
       case 'BUNDLE_SIZE':;
         return await this.optimizeBundleSize();
       case 'INSTALL_TIME':;
         return await this.optimizeInstallTime();
       case 'REBUILD_TIME':;
         return await this.optimizeRebuildTime();
-      default:;
+      default: ;
         return { success: false, message: 'Unknown optimization type' };
     }
   }
-<<<<<<< HEAD
 
   async optimizeBuildTime() {
     try {
-=======
 ;
   async optimizeBuildTime() {;
     try {;
->>>>>>> main
       // Optimize Vite config;
       const viteConfigPath = path.join(this.projectRoot, 'vite.config.ts');
       if (fs.existsSync(viteConfigPath)) {;
         let config = fs.readFileSync(viteConfigPath, 'utf8');
-<<<<<<< HEAD
 
         // Add build optimizations;
         if (!config.includes('build.rollupOptions')) {
@@ -579,34 +464,15 @@ class SmartBuildOptimizer {;
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
-          utils: ['lodash', 'date-fns']
-        }
+          utils: ['lodash', 'date-fns'];
+}
       }
     },
     minify: 'esbuild',
     sourcemap: false,
     chunkSizeWarningLimit: 1000;
   },`
-=======
-;
-        // Add build optimizations;
-        if (!config.includes('build.rollupOptions')) {;
-          config = config.replace(export default defineConfig({', `export default defineConfig({;
-  build: {;
-    rollupOptions: {;
-      output: {;
-        manualChunks: {;
-          vendor: ['react', 'react-dom'],;
-          utils: ['lodash', 'date-fns'];
-        }
-      }
-    },;
-    minify: 'esbuild',;
-    sourcemap: false,;
-    chunkSizeWarningLimit: 1000;
-  },`;
->>>>>>> main
-          );
+<<<<<<< HEAD          );
 ;
           fs.writeFileSync(viteConfigPath, config);
           return {;
@@ -617,23 +483,20 @@ class SmartBuildOptimizer {;
       }
 ;
       return { success: true, message: 'Build time optimization applied' };
-<<<<<<< HEAD
     } catch (error) {  
       return { success: false, message: error.message   };
     }
   }
 
   async optimizeBundleSize() {
-    try {
-=======
-    } catch (error) {;
+    try {;
+} catch (error) {;
       return { success: false, message: error.message };
     }
   }
 ;
   async optimizeBundleSize() {;
     try {;
->>>>>>> main
       // Optimize TypeScript config;
       const tsConfigPath = path.join(this.projectRoot, 'tsconfig.json');
       if (fs.existsSync(tsConfigPath)) {;
@@ -655,29 +518,31 @@ class SmartBuildOptimizer {;
       }
 ;
       return { success: true, message: 'Bundle size optimization applied' };
-<<<<<<< HEAD
     } catch (error) {  
       return { success: false, message: error.message   };
     }
   }
 
   async optimizeInstallTime() {
-    try {
-=======
-    } catch (error) {;
+<<<<<<< HEAD
+    try {;
+} catch (error) {;
       return { success: false, message: error.message };
     }
   }
 ;
   async optimizeInstallTime() {;
     try {;
->>>>>>> main
       // Add npm scripts for faster installs;
+=======
+    try {
+<<<<<<< HEAD      // Add npm scripts for faster installs;
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
       const packagePath = path.join(this.projectRoot, 'package.json');
       if (fs.existsSync(packagePath)) {;
         const pkg = JSON.parse(fs.readFileSync(packagePath, 'utf8'));
 ;
-        if (!pkg.scripts['install:fast']) {;
+        if (!pkg.scripts['install: fast']) {;
           pkg.scripts['install:fast'] = 'npm ci --prefer-offline --no-audit';
           pkg.scripts['install:clean'] =rm -rf node_modules package-lock.json && npm install';
 ;
@@ -687,23 +552,20 @@ class SmartBuildOptimizer {;
       }
 ;
       return { success: true, message: 'Install time optimization applied' };
-<<<<<<< HEAD
     } catch (error) {  
       return { success: false, message: error.message   };
     }
   }
 
   async optimizeRebuildTime() {
-    try {
-=======
-    } catch (error) {;
+    try {;
+} catch (error) {;
       return { success: false, message: error.message };
     }
   }
 ;
   async optimizeRebuildTime() {;
     try {;
->>>>>>> main
       // Enable incremental compilation;
       const tsConfigPath = path.join(this.projectRoot, 'tsconfig.json');
       if (fs.existsSync(tsConfigPath)) {;
@@ -720,19 +582,13 @@ class SmartBuildOptimizer {;
       }
 ;
       return { success: true, message: 'Rebuild time optimization applied' };
-<<<<<<< HEAD
     } catch (error) {  
       return { success: false, message: error.message   };
-=======
-    } catch (error) {;
-      return { success: false, message: error.message };
->>>>>>> main
-    }
+<<<<<<< HEAD    }
   }
 ;
   generateRecommendations(optimization) {;
     const recommendations = [];
-<<<<<<< HEAD
 
     // Performance recommendations;
     if (
@@ -743,8 +599,7 @@ class SmartBuildOptimizer {;
         category: 'PERFORMANCE',
         priority: 'HIGH',
         suggestion: 'Consider using esbuild for faster builds',
-        action: 'Update Vite configuration to use esbuild minifier',
-      });
+        action: 'Update Vite configuration to use esbuild minifier'});
     }
 
     if (
@@ -755,9 +610,8 @@ class SmartBuildOptimizer {;
         category: 'BUNDLE_SIZE',
         priority: 'HIGH',
         suggestion: 'Implement dynamic imports for code splitting',
-        action:Use React.lazy() and dynamic imports for route-based splitting',
-      });
-    }
+        action: Use React.lazy() and dynamic imports for route-based splitting',
+      });    }
 
     // Development workflow recommendations;
     recommendations.push({
@@ -765,7 +619,6 @@ class SmartBuildOptimizer {;
       priority: 'MEDIUM',
       suggestion: 'Use npm ci for faster, reliable installs',
       action: 'Run npm ci instead of npm install in ''CI/CD'` environments`,
-=======
 ;
     // Performance recommendations;
     if (;
@@ -798,7 +651,6 @@ class SmartBuildOptimizer {;
       priority: 'MEDIUM',;
       suggestion: 'Use npm ci for faster, reliable installs',;
       action: 'Run npm ci instead of npm install in 'CI/CD' environments',;
->>>>>>> main
     });
 ;
     return recommendations;
@@ -810,7 +662,6 @@ class SmartBuildOptimizer {;
         this.optimizationsLog,;
         JSON.stringify(optimization, null, 2);
       );
-<<<<<<< HEAD
       this.log(`Optimization results saved`);
     } catch (error) {  
       this.log(Failed to save optimization results: ${error.message  }`,
@@ -829,32 +680,11 @@ class SmartBuildOptimizer {;
         );
       } catch (error) {  
         this.log( `Optimization test failed for ${optimization.type  }: ${error.message}`,WARN`
-=======
-      this.log('Optimization results saved');
-    } catch (error) {;
-      this.log(Failed to save optimization results: ${error.message}',;
-        'ERROR';
-      );
-    }
-  }
-;
-  async testOptimizations(optimizations) {;
-    this.log('Testing applied optimizations...');
-;
-    for (const optimization of optimizations) {;
-      try {;
-        const performance = await this.analyzeBuildPerformance();
-        this.log(Optimization test for ${optimization.type}: Build time = ${performance.buildTime}ms';
-        );
-      } catch (error) {;
-        this.log( `Optimization test failed for ${optimization.type}: ${error.message}',WARN';
->>>>>>> main
-        );
+<<<<<<< HEAD        );
       }
     }
   }
 }
-<<<<<<< HEAD
 
 // Main execution;
 if (require.main === module) {
@@ -864,7 +694,6 @@ if (require.main === module) {
   optimizer;
     .runOptimization()
     .then(optimization => {
-=======
 ;
 // Main execution;
 if (require.main === module) {;
@@ -874,12 +703,11 @@ if (require.main === module) {;
   optimizer;
     .runOptimization();
     .then(optimization => {;
->>>>>>> main
       console.log('Smart Build Optimization completed successfully');
       process.exit(0);
     });
     .catch(error => {;
-      console.error('Smart Build Optimization failed:', error);
+      console.error('Smart Build Optimization failed: ', error);
       process.exit(1);
     });
 }

@@ -22,7 +22,7 @@ class EmptyTestFixer {
       '__tests__/**/*.test.js',
       '__tests__/**/*.test.tsx',
       '__tests__/**/*.test.ts'
-    ];
+    ]
 
     const allTestFiles = [];
     for (const pattern of testPatterns) {
@@ -92,13 +92,13 @@ describe('${componentName}', () => {
 
   test('displays correct content', () => {
     render(<${componentName} />);
-    // Add specific content tests based on component
-  });
+    // Add specific content tests based on component;
+});
 
   test('handles user interactions', () => {
     render(<${componentName} />);
-    // Add interaction tests based on component functionality
-  });
+    // Add interaction tests based on component functionality;
+});
 });
 ` : `
 const { describe, test, expect } = require('@jest/globals');
@@ -110,12 +110,12 @@ describe('${componentName}', () => {
   });
 
   test('should have expected properties', () => {
-    // Add specific property tests based on component
-  });
+    // Add specific property tests based on component;
+});
 
   test('should handle expected functionality', () => {
-    // Add functionality tests based on component
-  });
+    // Add functionality tests based on component;
+});
 });
 `;
 

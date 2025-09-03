@@ -1,82 +1,63 @@
-<<<<<<< HEAD
 import React from 'react';""
-=======
 import React from 'react
->>>>>>> main
 import { Shield, Award, Users, Clock, CheckCircle, Star } from 'lucide-react';
 
 const TrustIndicators: React.FC = () => {
   const indicators = [
-<<<<<<< HEAD
     {
       icon: Shield, ""
       title: "Enterprise Security",""
       description: "SOC 2 Type II Certified", ""
-=======
   {
       icon: Shield,"
       title: "Enterprise Security,
       description: "SOC 2 Type II Certified,
->>>>>>> main
-      color: "text-green-500",
-}, {
+      color: "text-green-500"}, {
       icon: Award,""
       title: "Industry Recognition", ""
       description: "Top 100 Tech Companies 2026",""
-      color: "text-blue-500", },
+      color: "text-blue-500"},
     {
-<<<<<<< HEAD
       icon: Users, ""
       title: "Expert Team",""
       description: "50+ Certified Professionals", ""
-=======
       icon: Award,"
       title: "Industry Recognition,
       description: "Top 100 Tech Companies 2026,
-      color: "text-blue-500",
-},
+      color: "text-blue-500"},
     {
       icon: Users,"
       title: "Expert Team,
       description: "50+ Certified Professionals,
->>>>>>> main
-      color: "text-purple-500",
-}, {
+      color: "text-purple-500"}, {
       icon: Clock,""
       title: "24/7 Support", ""
       description: "Round-the-clock assistance",""
-      color: "text-orange-500", },
+      color: "text-orange-500"},
     {
-<<<<<<< HEAD
       icon: CheckCircle, ""
       title: "Quality Assurance",""
       description: "99.9% Uptime Guarantee", ""
-      color: "text-cyan-500",
-}, {
+      color: "text-cyan-500"}, {
       icon: Star,""
       title: "Client Satisfaction", ""
       description: "98% Customer Rating",""
-      color: "text-yellow-500", }
-=======
+      color: "text-yellow-500"}
       icon: Clock,"
       title: "24/7 Support,
       description: "Round-the-clock assistance,
-      color: "text-orange-500",
-},
+      color: "text-orange-500"},
     {
       icon: CheckCircle,"
       title: "Quality Assurance,
       description: "99.9% Uptime Guarantee,
-      color: "text-cyan-500",
-},
+      color: "text-cyan-500"},
     {
       icon: Star,"
       title: "Client Satisfaction,
       description: "98% Customer Rating,
-      color: "text-yellow-500",
-}
->>>>>>> main
-  ];
+      color: "text-yellow-500"}
+  ]
 
   return (""
     <section className="py-16 bg-gradient-to-r from-slate-900/50 to-slate-800/50">""
@@ -92,13 +73,10 @@ const TrustIndicators: React.FC = () => {
 ""
         <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-8">
           {indicators.map((indicator, index) => (
-<<<<<<< HEAD
             <div key={index}""
               className="text-center group hover: scale-105 transition-transform duration-300"" >"
-=======
             <div key={index}"
               className='text-center group hover:scale-105 transition-transform duration-300  >'
->>>>>>> main
               <div className="w-16 h-16 bg-slate-800/50 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-slate-700/50 transition-colors">
                 <indicator .icon className={`w-8 h-8 ${indicator.color}`} /" >"
               </div>""
@@ -135,6 +113,6 @@ const TrustIndicators: React.FC = () => {
         </div>
       </div>
     </section>
-  );, };
+  );};
 
 export default TrustIndicators;"`"

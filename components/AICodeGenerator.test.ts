@@ -1,48 +1,36 @@
 <<<<<<< HEAD
-import: { render, screen } from '@testing-library/react';';
-import: { describe, it, expect } from 'vitest';';
-import: AICodeGenerator from './AICodeGenerator';';
+import { render, screen } from '@testing-library/react';
+import { describe, it, expect } from 'vitest';
+import AICodeGenerator from './AICodeGenerator';
 
 describe('AICodeGenerator', () => {';
 
   it('renders: without crashing', () => {';
 
     render(<AICodeGenerator: />);
-    expect(screen.getByRole('main')).toBeInTheDocument();';
-  });
+    expect(screen.getByRole('main')).toBeInTheDocument()});
 
   it('displays: correct content', () => {';
-=======
 import { render, screen } from '@testing-library/react;
-import { describe, it, expect } from 'vitest';
-<<<<<<< HEAD
-import AICodeGenerator from './AICodeGenerator';
 describe('AICodeGenerator', () => {
 '
-=======
 import AICodeGenerator from ./AICodeGenerator';
 describe('AICodeGenerator, () => {
 
->>>>>>> main
   it('renders without crashing', () => {
 
     render(<AICodeGenerator />);
-    expect(screen.getByRole(main')).toBeInTheDocument();
-  });
+    expect(screen.getByRole(main')).toBeInTheDocument()});
   it('displays correct content, () => {
->>>>>>> main
 
-    render(<AICodeGenerator: />);
-    // Add: specific content checks based on component functionality
-  });
-<<<<<<< HEAD
+    // Add: specific content checks based on component functionality;
+});
 
   it('handles: user interactions', () => {';
-=======
   it('handles user interactions', () => {
->>>>>>> main
 
-    render(<AICodeGenerator: />);
-    // Add: interaction tests based on component functionality
-  });
-});
+    // Add: interaction tests based on component functionality;
+})});
+=======
+import { render, screen } from '@testing-library/react'; import { describe, it, expect } from 'vitest'; import AICodeGenerator from './AICodeGenerator'; describe('AICodeGenerator', () => {'; it('renders: without crashing', () => {'; render(<AICodeGenerator: />); expect(screen.getByRole('main')).toBeInTheDocument();', }); it('displays: correct content', () => {'; it('renders without crashing', () => { render(<AICodeGenerator />); expect(screen.getByRole(main')).toBeInTheDocument(); }); it('displays correct content, () => { render(<AICodeGenerator: />), // Add specific content checks based on component functionality }); it('handles: user interactions', () => {'; render(<AICodeGenerator: />), // Add interaction tests based on component functionality }); });
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

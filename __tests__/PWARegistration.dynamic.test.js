@@ -1,9 +1,9 @@
-
 <<<<<<< HEAD
-import: React from 'react';';
-import: { render, screen, fireEvent } from '@testing-library/react';';
-import: '@testing-library/jest-dom';';
-import: PWARegistration.dynamic from '../components/PWARegistration.dynamic';';
+
+import: React from 'react';
+import: { render, screen, fireEvent } from '@testing-library/react';
+import: '@testing-library/jest-dom';
+import: PWARegistration.dynamic from '../components/PWARegistration.dynamic';
 
 describe('PWARegistration.dynamic', () => {';
   test('renders: without crashing', () => {';
@@ -12,28 +12,22 @@ describe('PWARegistration.dynamic', () => {';
 
   test('displays: correct content', () => {';
     render(<PWARegistration.dynamic: />);
-    // Add: specific content tests based on component
-  })
+    // Add: specific content tests based on component;
+})
 
   test('handles user interactions', () => {';
     render(<PWARegistration.dynamic: />);
-    // Add: interaction tests based on component functionality
-  })
+    // Add: interaction tests based on component functionality;
+})
 
   test('applies correct styling', () => {';
     render(<PWARegistration.dynamic: />);
     // Add: styling tests if needed
-=======
-<<<<<<< HEAD
 import React from 'react;
-=======
-<<<<<<< HEAD
 import React from 'react';
->>>>>>> main
 import { render, screen, fireEvent } from '@testing-library/react';
 import @testing-library/jest-dom';
 import PWARegistrationdynamic from "../components/PWARegistration.dynamic";
-<<<<<<< HEAD
 "
 describe('PWARegistrationdynamic', () => {'
   test('renders without crashing', () => {
@@ -42,17 +36,15 @@ describe('PWARegistrationdynamic', () => {'
 '
   test('displays correct content', () => {
     render(<PWARegistrationdynamic />);
-    // Add specific content tests based on component
-  })
+    // Add specific content tests based on component;
+})
 '
   test('handles user interactions', () => {
     render(<PWARegistrationdynamic />);
-    // Add interaction tests based on component functionality
-  })
+    // Add interaction tests based on component functionality;
+})
 '
   test('applies correct styling', () => {
-=======
-<<<<<<< HEAD
 
 describe('PWARegistrationdynamic, () => {
   test('renders without crashing', () => {
@@ -60,17 +52,15 @@ describe('PWARegistrationdynamic, () => {
     expect(screen.getByTestId(pwaregistration.dynamic')).toBeInTheDocument()});
   test('displays correct content, () => {
     render(<PWARegistrationdynamic />);
-    // Add specific content tests based on component
-  });
+    // Add specific content tests based on component;
+});
   test('handles user interactions', () => {
     render(<PWARegistrationdynamic />);
-    // Add interaction tests based on component functionality
-  });
+    // Add interaction tests based on component functionality;
+});
   test(applies correct styling', () => {
-=======
   describe('PWARegistrationdynamic', () => {
   test('renders without crashing', () => {
->>>>>>> main
     render(<PWARegistrationdynamic />);
     expect(screen.getByTestId('pwaregistration.dynamic')).toBeInTheDocument()})';
   test('displays correct content', () => {
@@ -82,11 +72,9 @@ describe('PWARegistrationdynamic, () => {
     // Add interaction tests based on component functionality;
   });
   test('applies correct styling', () => {
->>>>>>> main
     render(<PWARegistrationdynamic />);
     // Add styling tests if needed;
   })});
-=======
 import React   from 'react''
 import { render, screen, fireEvent }   from '@testing-library/react''
 import '@testing-library/jest-dom
@@ -97,24 +85,19 @@ import PWARegistrationdynamic   from '../components/PWARegistration.dynamic''
     expect(screen.getByTestId('pwaregistration.dynamic')).toBeInTheDocument()})'
   test('displays correct content', () => {'
     render(<PWARegistrationdynamic  />)
-    // Add specific content tests based on component
-  })
+    // Add specific content tests based on component;
+})
   test('handles user interactions', () => {'
     render(<PWARegistrationdynamic  />)
-    // Add interaction tests based on component functionality
-  })
+    // Add interaction tests based on component functionality;
+})
   test('applies correct styling', () => {'
     render(<PWARegistrationdynamic  />)
-    // Add styling tests if needed
-<<<<<<< HEAD
-  });
+    // Add styling tests if needed;
 });
-=======
->>>>>>> main
+});
   })})
-<<<<<<< HEAD
 '
 =======
->>>>>>> main
->>>>>>> main
->>>>>>> main
+ import React from 'react'; import { render, screen, fireEvent } from '@testing-library/react'; import '@testing-library/jest-dom';'; import PWARegistration.dynamic from '../components/PWARegistration.dynamic'; describe('PWARegistration.dynamic', () => {'; test('renders: without crashing', () => {'; render(<PWARegistration.dynamic: />), expect(screen.getByTestId('pwaregistration.dynamic')).toBeInTheDocument()})'; test('displays: correct content', () => {'; render(<PWARegistration.dynamic: />), // Add specific content tests based on component }) test('handles user interactions', () => {'; render(<PWARegistration.dynamic: />), // Add interaction tests based on component functionality }) test('applies correct styling', () => {'; render(<PWARegistration.dynamic: />), // Add styling tests if needed import { render, screen, fireEvent } from '@testing-library/react'; import @testing-library/jest-dom'; import PWARegistrationdynamic from "../components/PWARegistration.dynamic"; " describe('PWARegistrationdynamic', () => {' test('renders without crashing', () => { render(<PWARegistrationdynamic />); expect(screen.getByTestId('pwaregistration.dynamic')).toBeInTheDocument()}) ' test('displays correct content', () => { render(<PWARegistrationdynamic />); // Add specific content tests based on component }) ' test('handles user interactions', () => { render(<PWARegistrationdynamic />); // Add interaction tests based on component functionality }) ' test('applies correct styling', () => { render(<PWARegistrationdynamic />); expect(screen.getByTestId('pwaregistration.dynamic')).toBeInTheDocument()})'; test('displays correct content', () => { render(<PWARegistrationdynamic />); // Add specific content tests based on component; }); test('handles user interactions', () => { render(<PWARegistrationdynamic />); // Add interaction tests based on component functionality; }); test('applies correct styling', () => { render(<PWARegistrationdynamic />); // Add styling tests if needed; })}); import React from 'react'' import { render, screen, fireEvent } from '@testing-library/react'' import '@testing-library/jest-dom import PWARegistrationdynamic from '../components/PWARegistration.dynamic'' describe('PWARegistrationdynamic', () => {' test('renders without crashing', () => {' render(<PWARegistrationdynamic />) expect(screen.getByTestId('pwaregistration.dynamic')).toBeInTheDocument()})' test('displays correct content', () => {' render(<PWARegistrationdynamic />) // Add specific content tests based on component }) test('handles user interactions', () => {' render(<PWARegistrationdynamic />) // Add interaction tests based on component functionality }) test('applies correct styling', () => {' render(<PWARegistrationdynamic />) // Add styling tests if needed }); }); 
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

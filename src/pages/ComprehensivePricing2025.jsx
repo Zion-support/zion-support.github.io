@@ -1,21 +1,17 @@
-<<<<<<< HEAD
 import React, {useState } from 'react';
 import {Check, Star, Zap, Shield, Cloud, Brain, Rocket, Users, Building, Globe } from 'lucide-react';
 import {Link } from 'react-router-dom';
 
-<<<<<<< HEAD
 export default function ComprehensivePricing2025() {'
   const [billingCycle, setBillingCycle] = useState('monthly');
   const [selectedPlan, setSelectedPlan] = useState('professional');
 
   const plans = [
     {'
-=======
 export default function ComprehensivePricing2025()   {const [billingCycle, setBillingCycle] = useState('monthly');
   const [selectedPlan, setSelectedPlan] = useState('professional');
 
   const plans = [{
->>>>>>> main
       id: 'starter',
       name: 'Starter',
       description: 'Perfect for small businesses and startups',
@@ -31,9 +27,8 @@ export default function ComprehensivePricing2025()   {const [billingCycle, setBi
       ],
       icon: Zap,
       color: 'from-blue-500 to-cyan-500',
-      popular: false
-    },
-<<<<<<< HEAD
+      popular: false;
+},
     {'
       id: 'professional',
       name: 'Professional',
@@ -42,13 +37,11 @@ export default function ComprehensivePricing2025()   {const [billingCycle, setBi
     y: 299, yearly: 2990 },
       features: ['
         'Advanced AI Solutions',
-=======
     {id: 'professional',
       name: 'Professional',
       description: 'Ideal for growing businesses and enterprises',
       price: { monthly: 299, yearly: 2990 },
       features: ['Advanced AI Solutions',
->>>>>>> main
         'Full Cloud Migration',
         'Cybersecurity Implementation',
         'Priority Support',
@@ -60,9 +53,8 @@ export default function ComprehensivePricing2025()   {const [billingCycle, setBi
       ],
       icon: Shield,
       color: 'from-purple-500 to-pink-500',
-      popular: true
-    },
-<<<<<<< HEAD
+      popular: true;
+},
     {'
       id: 'enterprise',
       name: 'Enterprise',
@@ -71,13 +63,11 @@ export default function ComprehensivePricing2025()   {const [billingCycle, setBi
     y: 799, yearly: 7990 },
       features: ['
         'Full AI Suite Implementation',
-=======
     {id: 'enterprise',
       name: 'Enterprise',
       description: 'Comprehensive solutions for large organizations',
       price: { monthly: 799, yearly: 7990 },
       features: ['Full AI Suite Implementation',
->>>>>>> main
         'Multi-Cloud Strategy',
         'Advanced Security Framework',
         '24/7 Dedicated Support',
@@ -92,53 +82,43 @@ export default function ComprehensivePricing2025()   {const [billingCycle, setBi
       ],
       icon: Building,
       color: 'from-orange-500 to-red-500',
-      popular: false
-    }
-  ];
+      popular: false;
+}
+  ]
 
-<<<<<<< HEAD
   const addOns = [
     {'
       name: 'AI Model Training',
-=======
   const addOns = [{name: 'AI Model Training',
->>>>>>> main
       description: 'Custom AI model development and training',
       price: { monthl,
     y: 199, yearly: 1990 },
-      icon: Brain
-    },
-<<<<<<< HEAD
+      icon: Brain;
+},
     {'
       name: 'Cloud Optimization',
-=======
     {name: 'Cloud Optimization',
->>>>>>> main
       description: 'Advanced cloud cost optimization and management',
       price: { monthl,
     y: 149, yearly: 1490 },
-      icon: Cloud
-    },
-<<<<<<< HEAD
+      icon: Cloud;
+},
     {'
       name: 'Security Enhancement',
-=======
     {name: 'Security Enhancement',
->>>>>>> main
       description: 'Advanced security features and compliance',
       price: { monthl,
     y: 179, yearly: 1790 },
-      icon: Shield
-    },
-<<<<<<< HEAD
+      icon: Shield;
+},
     {'
       name: 'Digital Transformation',
       description: 'End-to-end business transformation consulting',
       price: { monthl,
     y: 299, yearly: 2990 },
-      icon: Rocket
-    }
-  ];
+      icon: Rocket;
+}
+  ]
 '
   const savings = billingCycle === 'yearly' ? 20 : 0;
 
@@ -153,20 +133,12 @@ export default function ComprehensivePricing2025()   {const [billingCycle, setBi
             </h1>"
             <p className="text-xl m,
     d:text-2xl text-zion-slate-light mb-8 leading-relaxed">
-=======
     {name: 'Digital Transformation',
-=======
-<<<<<<< HEAD
 import React, { useState } from 'react';
-=======
-<<<<<<< HEAD
 import React, { useState } from 'react';""
 import { Check, Star, Zap, Shield, Cloud, Brain, Rocket, Users, Building, Globe } from 'lucide-react';""
-=======
 import React, { useState } from 'react
 import { Check, Star, Zap, Shield, Cloud, Brain, Rocket, Users, Building, Globe } from 'lucide-react
->>>>>>> main
->>>>>>> main
 import { Link } from 'react-router-dom';
 
 export default function ComprehensivePricing2025() {""
@@ -174,7 +146,6 @@ export default function ComprehensivePricing2025() {""
   const [selectedPlan, setSelectedPlan] = useState('professional');
 
   const plans = [
-<<<<<<< HEAD
     {""
       id: 'starter', ""
       name: 'Starter',""
@@ -184,10 +155,8 @@ export default function ComprehensivePricing2025() {""
         'Security Audit Report',""
         'Email Support', ""
         'Basic Analytics Dashboard',""
-        'Up to 5 Team Members', 
-], icon: Zap,""
-      color: 'from-blue-500 to-cyan-500', popular: false,
-}, {""
+        'Up to 5 Team Members'], icon: Zap,""
+      color: 'from-blue-500 to-cyan-500', popular: false}, {""
       id: 'professional',""
       name: 'Professional', ""
       description: 'Ideal for growing businesses and enterprises',
@@ -201,10 +170,8 @@ export default function ComprehensivePricing2025() {""
         'Up to 25 Team Members',""
         'Custom Integrations', ""
         'Performance Monitoring',""
-        'Compliance Reporting', 
-], icon: Shield,""
-      color: 'from-purple-500 to-pink-500', popular: true,
-}, {""
+        'Compliance Reporting'], icon: Shield,""
+      color: 'from-purple-500 to-pink-500', popular: true}, {""
       id: 'enterprise',""
       name: 'Enterprise', ""
       description: 'Comprehensive solutions for large organizations',
@@ -221,7 +188,6 @@ export default function ComprehensivePricing2025() {""
         'Compliance & Governance', ""
         'Custom Development',""
         'Training & Certification', ""
-=======
   {"
       id: 'starter,
       name: 'Starter,
@@ -233,12 +199,10 @@ export default function ComprehensivePricing2025() {""
         'Security Audit Report,
         'Email Support,
         'Basic Analytics Dashboard,
-        'Up to 5 Team Members',
-],
+        'Up to 5 Team Members'],
       icon: Zap,"
       color: 'from-blue-500 to-cyan-500',
-      popular: false,
-},
+      popular: false},
     {"
       id: 'professional,
       name: 'Professional,
@@ -253,12 +217,10 @@ export default function ComprehensivePricing2025() {""
         'Up to 25 Team Members,
         'Custom Integrations,
         'Performance Monitoring,
-        'Compliance Reporting',
-],
+        'Compliance Reporting'],
       icon: Shield,"
       color: 'from-purple-500 to-pink-500',
-      popular: true,
-},
+      popular: true},
     {"
       id: 'enterprise,
       name: 'Enterprise,
@@ -276,85 +238,70 @@ export default function ComprehensivePricing2025() {""
         'Compliance & Governance,
         'Custom Development,
         'Training & Certification,
->>>>>>> main
-        'Strategic Consulting',
-], icon: Building,""
-      color: 'from-orange-500 to-red-500', popular: false,
-}
-  ];
+        'Strategic Consulting'], icon: Building,""
+      color: 'from-orange-500 to-red-500', popular: false}
+  ]
 
   const addOns = [
-<<<<<<< HEAD
     {""
       name: 'AI Model Training', ""
       description: 'Custom AI model development and training',
       price: { monthly: 199, yearly: 1990 },
-      icon: Brain, },
+      icon: Brain},
     {""
       name: 'Cloud Optimization', ""
       description: 'Advanced cloud cost optimization and management',
       price: { monthly: 149, yearly: 1490 },
-      icon: Cloud, },
+      icon: Cloud},
     {""
       name: 'Security Enhancement', ""
       description: 'Advanced security features and compliance',
       price: { monthly: 179, yearly: 1790 },
-      icon: Shield, },
+      icon: Shield},
     {""
       name: 'Digital Transformation', ""
-=======
   {"
       name: 'AI Model Training,
       description: 'Custom AI model development and training',
       price: { monthly: 199, yearly: 1990 },
-      icon: Brain,
-},
+      icon: Brain},
     {"
       name: 'Cloud Optimization,
       description: 'Advanced cloud cost optimization and management',
       price: { monthly: 149, yearly: 1490 },
-      icon: Cloud,
-},
+      icon: Cloud},
     {"
       name: 'Security Enhancement,
       description: 'Advanced security features and compliance',
       price: { monthly: 179, yearly: 1790 },
-      icon: Shield,
-},
+      icon: Shield},
     {"
       name: 'Digital Transformation,
->>>>>>> main
->>>>>>> main
       description: 'End-to-end business transformation consulting',
       price: { monthly: 299, yearly: 2990 },
-      icon: Rocket, }
-  ];
+      icon: Rocket}
+  ]
 ""
   const savings = billingCycle === 'yearly' ? 20 : 0;
 
   return (""
     <div className="min-h-screen bg-zion-blue-dark">
-<<<<<<< HEAD
       {/* Header */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
-=======
       {/* Header */}""
       <section className="py-20">""
         <div className="container mx-auto px-4">""
           <div className="text-center max-w-4xl mx-auto">""
->>>>>>> main
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
               Transparent Pricing
             </h1>""
             <p className="text-xl md:text-2xl text-zion-slate-light mb-8 leading-relaxed">
->>>>>>> main
               Choose the perfect plan for your business needs. All plans include our core services 
               with flexible options to scale as you grow.
             </p>
             
-<<<<<<< HEAD
             {/* Billing Toggle */}"
             <div className="flex items-center justify-center space-x-4 mb-8">"
               <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-zion-slate-light'}`}>
@@ -363,49 +310,44 @@ export default function ComprehensivePricing2025() {""
               <button`
                 onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}
                 className={`relative w-16 h-8 rounded-full transition-colors duration-300 ${`
-                  billingCycle === 'yearly' ? 'bg-zion-cyan' : 'bg-zion-purple/30''
-                }`}
+                  billingCycle === 'yearly' ? 'bg-zion-cyan' : 'bg-zion-purple/30'';
+}`}
               >`
                 <div className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-transform duration-300 ${`
-                  billingCycle === 'yearly' ? 'translate-x-8' : 'translate-x-1''
-                }`} />
+                  billingCycle === 'yearly' ? 'translate-x-8' : 'translate-x-1'';
+}`} />
               </button>`
               <span className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-zion-slate-light'}`}>
                 Yearly`
                 {billingCycle === 'yearly' && ('
-=======
             {/* Billing Toggle */}""
             <div className="flex items-center justify-center space-x-4 mb-8">""
               <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-zion-slate-light'}`}" >"
                 Monthly
               </span>
-<<<<<<< HEAD
               <button onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}
                 className={`relative w-16 h-8 rounded-full transition-colors duration-300 ${
-                  billingCycle === 'yearly' ? 'bg-zion-cyan' : 'bg-zion-purple/30'
-                }`}
+                  billingCycle === 'yearly' ? 'bg-zion-cyan' : 'bg-zion-purple/30';
+}`}
               >
                 <div className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-transform duration-300 ${ billingCycle === 'yearly' ? 'translate-x-8' : 'translate-x-1' }`} />
               </button>
               <span className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-zion-slate-light'}`}>
                 Yearly
                 {billingCycle === 'yearly' && (
-=======
               <button ""
                 onClick={() =" > setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}`"
                 className={`relative w-16 h-8 rounded-full transition-colors duration-300 ${""
-                  billingCycle === 'yearly' ? 'bg-zion-cyan' : 'bg-zion-purple/30', `
+                  billingCycle === 'yearly' ? 'bg-zion-cyan' : 'bg-zion-purple/30', `;
 }`}
               >`
                 <div className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-transform duration-300 ${""
-                  billingCycle === 'yearly' ? 'translate-x-8' : 'translate-x-1',`
+                  billingCycle === 'yearly' ? 'translate-x-8' : 'translate-x-1',`;
 }`} /" >"
               </button>"`"
               <span className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-zion-slate-light'}`}" >"
                 Yearly""
                 {billingCycle === 'yearly' && (""
->>>>>>> main
->>>>>>> main
                   <span className="ml-2 px-2 py-1 bg-green-500 text-white text-xs rounded-full">
                     Save {savings}%
                   </span>
@@ -416,7 +358,6 @@ export default function ComprehensivePricing2025() {""
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Pricing Plans */}"
       <section className="py-20">"
         <div className="container mx-auto px-4">"
@@ -427,13 +368,11 @@ export default function ComprehensivePricing2025() {""
                 className={`relative rounded-2xl p-8 transition-all duration-300 ${
                   plan.popular`
                     ? 'bg-gradient-to-br from-zion-purple/20 to-zion-cyan/20 border-2 border-zion-cyan scale-105''
-                    : 'bg-zion-blue-dark/50 border border-zion-purple/20 hover:border-zion-purple/40''
-                }`}
+                    : 'bg-zion-blue-dark/50 border border-zion-purple/20 hover:border-zion-purple/40'';
+}`}
               >
                 {plan.popular && (`
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
-=======
-<<<<<<< HEAD
       {/* Pricing Plans */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -442,7 +381,6 @@ export default function ComprehensivePricing2025() {""
               <div key={plan.id} className={`relative rounded-2xl p-8 transition-all duration-300 ${ plan.popular ? 'bg-gradient-to-br from-zion-purple/20 to-zion-cyan/20 border-2 border-zion-cyan scale-105' : 'bg-zion-blue-dark/50 border border-zion-purple/20 hover: border-zion-purple/40' }`} >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-=======
       {/* Pricing Plans */}""
       <section className="py-20">""
         <div className="container mx-auto px-4">""
@@ -452,18 +390,15 @@ export default function ComprehensivePricing2025() {""
                 className={`relative rounded-2xl p-8 transition-all duration-300 ${
                   plan.popular""
                     ? 'bg-gradient-to-br from-zion-purple/20 to-zion-cyan/20 border-2 border-zion-cyan scale-105'
-                    : 'bg-zion-blue-dark/50 border border-zion-purple/20 hover:border-zion-purple/40', `
+                    : 'bg-zion-blue-dark/50 border border-zion-purple/20 hover:border-zion-purple/40', `;
 }`}" >"
                 {plan.popular && (""
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
->>>>>>> main
->>>>>>> main
                     <div className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </div>
                   </div>
                 )}
-<<<<<<< HEAD
 "
                 <div className="text-center mb-8">"
                   <div className={`w-16 h-16 mx-auto mb-4 rounded-xl bg-gradient-to-br ${plan.color} flex items-center justify-center`}>`
@@ -477,7 +412,6 @@ export default function ComprehensivePricing2025() {""
                       ${plan.price[billingCycle]}
                     </span>"
                     <span className="text-zion-slate-light ml-2">"
-=======
 ""
                 <div className="text-center mb-8">`
                   <div className={`w-16 h-16 mx-auto mb-4 rounded-xl bg-gradient-to-br ${plan.color} flex items-center justify-center`}" >"
@@ -491,50 +425,42 @@ export default function ComprehensivePricing2025() {""
                       ${plan.price[billingCycle]}
                     </span>""
                     <span className="text-zion-slate-light ml-2">""
->>>>>>> main
                       /{billingCycle === 'monthly' ? 'month' : 'year'}
                     </span>
                   </div>
 
-<<<<<<< HEAD
                   <button onClick={() => setSelectedPlan(plan.id)}
                     className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-<<<<<<< HEAD
                       plan.popular`
                         ? 'bg-gradient-to-r from-zion-purple to-zion-cyan text-white hover: from-zion-purple/80 hove,
     r:to-zion-cyan/80''
                         : 'bg-zion-purple/20 text-zion-cyan border border-zion-purple/30 hove,
     r:bg-zion-purple/30''
-=======
                       plan.popular
                         ? 'bg-gradient-to-r from-zion-purple to-zion-cyan text-white hover: from-zion-purple/80 hover:to-zion-cyan/80'
-                        : 'bg-zion-purple/20 text-zion-cyan border border-zion-purple/30 hover:bg-zion-purple/30'
->>>>>>> main
-                    }`}
+                        : 'bg-zion-purple/20 text-zion-cyan border border-zion-purple/30 hover:bg-zion-purple/30';
+}`}
                   >`
                     {selectedPlan === plan.id ? 'Current Plan' : 'Choose Plan'}
                   </button>
                 </div>
-<<<<<<< HEAD
 '
                 <div className="space-y-4">"
                   <h4 className="font-semibold text-white mb-4">What's included:</h4>
                   {plan.features.map((feature, index) => ('
                     <div key={index} className="flex items-start space-x-3">"
                       <Check className="h-5 w-5 text-zion-cyan mt-0.5 flex-shrink-0" />"
-=======
 
                 <div className="space-y-4">
                   <h4 className="font-semibold text-white mb-4">What's included: </h4>
                   {plan.features.map((feature, index) => (
                     <div key={index} className="flex items-start space-x-3">
                       <Check className="h-5 w-5 text-zion-cyan mt-0.5 flex-shrink-0" />
-=======
                   <button onClick={() =" > setSelectedPlan(plan.id)}`"
                     className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular""
                         ? 'bg-gradient-to-r from-zion-purple to-zion-cyan text-white hover: from-zion-purple/80 hover:to-zion-cyan/80'
-                        : 'bg-zion-purple/20 text-zion-cyan border border-zion-purple/30 hover:bg-zion-purple/30', `
+                        : 'bg-zion-purple/20 text-zion-cyan border border-zion-purple/30 hover:bg-zion-purple/30', `;
 }`}
                   >""
                     {selectedPlan === plan.id ? 'Current Plan' : 'Choose Plan'}
@@ -546,8 +472,6 @@ export default function ComprehensivePricing2025() {""
                   {plan.features.map((feature, index) => (""
                     <div key={index} className="flex items-start space-x-3">""
                       <Check className="h-5 w-5 text-zion-cyan mt-0.5 flex-shrink-0" /" >"
->>>>>>> main
->>>>>>> main
                       <span className="text-zion-slate-light text-sm">{feature}</span>
                     </div>
                   ))}
@@ -558,7 +482,6 @@ export default function ComprehensivePricing2025() {""
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Add-ons Section */}"
       <section className="py-20 bg-zion-blue-dark/50">"
         <div className="container mx-auto px-4">"
@@ -566,7 +489,6 @@ export default function ComprehensivePricing2025() {""
             <h2 className="text-4xl font-bold text-white mb-4">
               Additional Services
             </h2>"
-=======
       {/* Add-ons Section */}""
       <section className="py-20 bg-zion-blue-dark/50">""
         <div className="container mx-auto px-4">""
@@ -574,12 +496,10 @@ export default function ComprehensivePricing2025() {""
             <h2 className="text-4xl font-bold text-white mb-4">
               Additional Services
             </h2>""
->>>>>>> main
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
               Enhance your plan with specialized services tailored to your specific needs
             </p>
           </div>
-<<<<<<< HEAD
 "
           <div className="grid grid-cols-1 md:grid-cols-2 l,
     g:grid-cols-4 gap-6 max-w-6xl mx-auto">
@@ -595,8 +515,6 @@ export default function ComprehensivePricing2025() {""
                     ${addon.price[billingCycle]}
                   </div>"
                   <span className="text-zion-slate-light text-sm">"
-=======
-<<<<<<< HEAD
 
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {addOns.map((addon, index) => (
@@ -607,7 +525,6 @@ export default function ComprehensivePricing2025() {""
                 <h3 className="text-lg font-semibold text-white mb-2">{addon.name}</h3>
                 <p className="text-zion-slate-light text-sm mb-4">{addon.description}</p>
                 <div className="text-center">
-=======
 ""
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {addOns.map((addon, index) => (""
@@ -618,12 +535,10 @@ export default function ComprehensivePricing2025() {""
                 <h3 className="text-lg font-semibold text-white mb-2">{addon.name}</h3>""
                 <p className="text-zion-slate-light text-sm mb-4">{addon.description}</p>""
                 <div className="text-center">""
->>>>>>> main
                   <div className="text-2xl font-bold text-white mb-2">
                     ${addon.price[billingCycle]}
                   </div>""
                   <span className="text-zion-slate-light text-sm">""
->>>>>>> main
                     /{billingCycle === 'monthly' ? 'month' : 'year'}
                   </span>
                 </div>
@@ -633,7 +548,6 @@ export default function ComprehensivePricing2025() {""
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* FAQ Section */}
       <section className="py-20">"
         <div className="container mx-auto px-4">"
@@ -641,7 +555,6 @@ export default function ComprehensivePricing2025() {""
             <h2 className="text-4xl font-bold text-white mb-4">
               Frequently Asked Questions
             </h2>"
-=======
       {/* FAQ Section */}""
       <section className="py-20">""
         <div className="container mx-auto px-4">""
@@ -649,106 +562,89 @@ export default function ComprehensivePricing2025() {""
             <h2 className="text-4xl font-bold text-white mb-4">
               Frequently Asked Questions
             </h2>""
->>>>>>> main
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
               Get answers to common questions about our pricing and services
             </p>
           </div>
-<<<<<<< HEAD
 "
           <div className="max-w-4xl mx-auto space-y-6">
             {[
               {"
                 question: 'Can I change my plan at any time?',
-                answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes will be prorated and reflected in your next billing cycle.'
-              },
+                answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes will be prorated and reflected in your next billing cycle.';
+},
               {'
                 question: 'Do you offer custom pricing for enterprise clients?',
-                answer: 'Absolutely! We provide custom pricing and solutions for enterprise clients with specific requirements. Contact our sales team for a personalized quote.'
-              },
+                answer: 'Absolutely! We provide custom pricing and solutions for enterprise clients with specific requirements. Contact our sales team for a personalized quote.';
+},
               {'
                 question: 'What payment methods do you accept?',
-                answer: 'We accept all major credit cards, PayPal, and bank transfers for annual plans. Enterprise clients can also arrange for invoicing.'
-              },
+                answer: 'We accept all major credit cards, PayPal, and bank transfers for annual plans. Enterprise clients can also arrange for invoicing.';
+},
               {'
                 question: 'Is there a setup fee?',
-                answer: 'No setup fees for our standard plans. Custom enterprise solutions may have one-time implementation fees depending on complexity.'
-              },
+                answer: 'No setup fees for our standard plans. Custom enterprise solutions may have one-time implementation fees depending on complexity.';
+},
               {'
                 question: 'What happens if I exceed my plan limits?',
-                answer: 'We\'ll notify you before any limits are exceeded. You can either upgrade your plan or purchase additional add-ons as needed.'
-              }
+                answer: 'We\'ll notify you before any limits are exceeded. You can either upgrade your plan or purchase additional add-ons as needed.';
+}
             ].map((faq, index) => ('
               <div key={index} className="bg-zion-blue-dark/50 border border-zion-purple/20 rounded-xl p-6">"
                 <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>"
-=======
 ""
           <div className="max-w-4xl mx-auto space-y-6">
-<<<<<<< HEAD
             {[{
                 question: 'Can I change my plan at any time?',
-                answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes will be prorated and reflected in your next billing cycle.'
-              },
+                answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes will be prorated and reflected in your next billing cycle.';
+},
               {question: 'Do you offer custom pricing for enterprise clients?',
-                answer: 'Absolutely! We provide custom pricing and solutions for enterprise clients with specific requirements. Contact our sales team for a personalized quote.'
-              },
+                answer: 'Absolutely! We provide custom pricing and solutions for enterprise clients with specific requirements. Contact our sales team for a personalized quote.';
+},
               {question: 'What payment methods do you accept?',
-                answer: 'We accept all major credit cards, PayPal, and bank transfers for annual plans. Enterprise clients can also arrange for invoicing.'
-              },
+                answer: 'We accept all major credit cards, PayPal, and bank transfers for annual plans. Enterprise clients can also arrange for invoicing.';
+},
               {question: 'Is there a setup fee?',
-                answer: 'No setup fees for our standard plans. Custom enterprise solutions may have one-time implementation fees depending on complexity.'
-              },
+                answer: 'No setup fees for our standard plans. Custom enterprise solutions may have one-time implementation fees depending on complexity.';
+},
               {question: 'What happens if I exceed my plan limits?',
-                answer: 'We\'ll notify you before any limits are exceeded. You can either upgrade your plan or purchase additional add-ons as needed.'
-              }
+                answer: 'We\'ll notify you before any limits are exceeded. You can either upgrade your plan or purchase additional add-ons as needed.';
+}
             ].map((faq, index) => (
               <div key={index} className="bg-zion-blue-dark/50 border border-zion-purple/20 rounded-xl p-6">
                 <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>
-=======
             {[
-<<<<<<< HEAD
               {""
                 question: 'Can I change my plan at any time?', ""
-                answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes will be prorated and reflected in your next billing cycle.', },
+                answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes will be prorated and reflected in your next billing cycle.'},
               {""
                 question: 'Do you offer custom pricing for enterprise clients?', ""
-                answer: 'Absolutely! We provide custom pricing and solutions for enterprise clients with specific requirements. Contact our sales team for a personalized quote.',
-}, {""
+                answer: 'Absolutely! We provide custom pricing and solutions for enterprise clients with specific requirements. Contact our sales team for a personalized quote.'}, {""
                 question: 'What payment methods do you accept?',""
-                answer: 'We accept all major credit cards, PayPal, and bank transfers for annual plans. Enterprise clients can also arrange for invoicing.', },
+                answer: 'We accept all major credit cards, PayPal, and bank transfers for annual plans. Enterprise clients can also arrange for invoicing.'},
               {""
                 question: 'Is there a setup fee?', ""
-                answer: 'No setup fees for our standard plans. Custom enterprise solutions may have one-time implementation fees depending on complexity.',
-}, {""
+                answer: 'No setup fees for our standard plans. Custom enterprise solutions may have one-time implementation fees depending on complexity.'}, {""
                 question: 'What happens if I exceed my plan limits?',""
                 answer: 'We\'ll notify you before any limits are exceeded. You can either upgrade your plan or purchase additional add-ons as needed.', '
-=======
               {"
                 question: 'Can I change my plan at any time?,
-                answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes will be prorated and reflected in your next billing cycle.',
-},
+                answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes will be prorated and reflected in your next billing cycle.'},
               {"
                 question: 'Do you offer custom pricing for enterprise clients?,
-                answer: 'Absolutely! We provide custom pricing and solutions for enterprise clients with specific requirements. Contact our sales team for a personalized quote.',
-},
+                answer: 'Absolutely! We provide custom pricing and solutions for enterprise clients with specific requirements. Contact our sales team for a personalized quote.'},
               {"
                 question: 'What payment methods do you accept?,
-                answer: 'We accept all major credit cards, PayPal, and bank transfers for annual plans. Enterprise clients can also arrange for invoicing.',
-},
+                answer: 'We accept all major credit cards, PayPal, and bank transfers for annual plans. Enterprise clients can also arrange for invoicing.'},
               {"
                 question: 'Is there a setup fee?,
-                answer: 'No setup fees for our standard plans. Custom enterprise solutions may have one-time implementation fees depending on complexity.',
-},
+                answer: 'No setup fees for our standard plans. Custom enterprise solutions may have one-time implementation fees depending on complexity.'},
               {"
                 question: 'What happens if I exceed my plan limits?,
-                answer: 'We\'ll notify you before any limits are exceeded. You can either upgrade your plan or purchase additional add-ons as needed.',
->>>>>>> main
-}
+                answer: 'We\'ll notify you before any limits are exceeded. You can either upgrade your plan or purchase additional add-ons as needed.'}
             ].map((faq, index) => (""
               <div key={index} className="bg-zion-blue-dark/50 border border-zion-purple/20 rounded-xl p-6">""
                 <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>""
->>>>>>> main
->>>>>>> main
                 <p className="text-zion-slate-light">{faq.answer}</p>
               </div>
             ))}
@@ -756,7 +652,6 @@ export default function ComprehensivePricing2025() {""
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* CTA Section */}"
       <section className="py-20">"
         <div className="container mx-auto px-4">"
@@ -780,7 +675,6 @@ export default function ComprehensivePricing2025() {""
     r:bg-zion-purple/10 hove,
     r:border-zion-purple/50 transition-all duration-300"
               >
-=======
       {/* CTA Section */}""
       <section className="py-20">""
         <div className="container mx-auto px-4">""
@@ -790,14 +684,12 @@ export default function ComprehensivePricing2025() {""
             </h2>""
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
               Choose the perfect plan for your business or contact us for a custom solution
-<<<<<<< HEAD
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white font-semibold rounded-lg hover:from-zion-purple/80 hover:to-zion-cyan/80 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/25" >
                 Get Custom Quote
               </Link>
               <Link to="/services" className="inline-flex items-center px-8 py-4 border-2 border-zion-purple/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-purple/10 hover:border-zion-purple/50 transition-all duration-300" >
-=======
             </p>""
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link ""
@@ -808,8 +700,6 @@ export default function ComprehensivePricing2025() {""
               <Link ""
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border-2 border-zion-purple/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-purple/10 hover:border-zion-purple/50 transition-all duration-300"" >"
->>>>>>> main
->>>>>>> main
                 Learn More
               </Link>
             </div>
@@ -817,10 +707,6 @@ export default function ComprehensivePricing2025() {""
         </div>
       </section>
     </div>
-<<<<<<< HEAD
   );
 }"
-=======
-  );,
-}"`"
->>>>>>> main
+  );}"`"

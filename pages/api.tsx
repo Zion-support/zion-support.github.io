@@ -11,25 +11,25 @@ export default function API() {
       endpoint: '/api/auth/login',
       description: 'Authenticate users and get access tokens',
       parameters: ['email', 'password'],
-      response: 'JWT token'
-    },
+      response: 'JWT token',
+},
     {
       name: 'User Profile',
       method: 'GET',
       endpoint: '/api/user/profile',
       description: 'Get user profile information',
       parameters: ['token'],
-      response: 'User profile data'
-    },
+      response: 'User profile data';
+},
     {
       name: 'Services List',
       method: 'GET',
       endpoint: '/api/services',
       description: 'Get list of available services',
       parameters: ['category', 'limit'],
-      response: 'Array of services'
-    }
-  ];
+      response: 'Array of services';
+}
+  ]
 
   return (
     <>
@@ -93,8 +93,8 @@ export default function API() {
                     <span className={`px-3 py-1 rounded-full text-sm font-medium ${
                       endpoint.method === 'GET' ? 'bg-green-100 text-green-800' :
                       endpoint.method === 'POST' ? 'bg-blue-100 text-blue-800' :
-                      'bg-gray-100 text-gray-800'
-                    }`}>
+                      'bg-gray-100 text-gray-800';
+}`}>
                       {endpoint.method}
                     </span>
                   </div>
@@ -115,8 +115,7 @@ export default function API() {
                       </ul>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">Response:</h4>
-                      <p className="text-sm text-gray-600">{endpoint.response}</p>
+                      <h4 className="font-semibold text-gray-900 mb-2">Response</h4>                      <p className="text-sm text-gray-600">{endpoint.response}</p>
                     </div>
                   </div>
                 </div>
@@ -134,18 +133,11 @@ export default function API() {
                 Ready to integrate with our APIs? Get your API key and start building amazing applications.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300"
-                >
+                <Link href="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300">
                   Get API Key
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
-                <Link
-                  href="/docs"
-                  className="inline-flex items-center px-8 py-3 border border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-all duration-300"
-                >
-                  View Full Documentation
+                <Link href="/docs" className="inline-flex items-center px-8 py-3 border border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-all duration-300">                  View Full Documentation
                   <ExternalLink className="ml-2 w-5 h-5" />
                 </Link>
               </div>

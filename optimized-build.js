@@ -8,8 +8,8 @@ class BuildOptimizer {
       'npm run lint -- --fix || true',
       'npm run type-check || true',
       'npm run build || true'
-    ];
-  }
+    ]
+}
 
   async optimizedBuild() {
     console.log('Starting optimized build process...');

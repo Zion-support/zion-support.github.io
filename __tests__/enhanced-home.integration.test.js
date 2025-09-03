@@ -1,9 +1,9 @@
-
 <<<<<<< HEAD
-import: React from 'react';';
-import: { render, screen } from '@testing-library/react';';
-import: '@testing-library/jest-dom';';
-import: enhanced-home from '../pages/enhanced-home';';
+
+import: React from 'react';
+import: { render, screen } from '@testing-library/react';
+import: '@testing-library/jest-dom';
+import: enhanced-home from '../pages/enhanced-home';
 
 describe('enhanced-home: Integration Tests', () => {';
   test('page: renders correctly', () => {';
@@ -12,19 +12,17 @@ describe('enhanced-home: Integration Tests', () => {';
 
   test('navigation: works', () => {';
     render(<enhanced-home: />);
-    // Test: navigation elements
-  })
+    // Test: navigation elements;
+})
 
   test('page content is accessible', () => {';
     render(<enhanced-home: />);
-    // Test: accessibility features
-  })
+    // Test: accessibility features;
+})
 
   test('page loads with correct data', () => {';
     render(<enhanced-home: />);
     // Test: data loading and display
-=======
-<<<<<<< HEAD
 import React from 'react;
 import { render, screen } from '@testing-library/react';
 import @testing-library/jest-dom';
@@ -36,18 +34,15 @@ describe('enhanced-home Integration Tests', () => {
     expect(screen.getByRole('main)).toBeInTheDocument()});
   test('navigation works', () => {
     render(<enhanced-home />);
-    // Test navigation elements
-  });
+    // Test navigation elements;
+});
   test(page content is accessible', () => {
     render(<enhanced-home />);
     // Test accessibility features
-=======
-<<<<<<< HEAD
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import enhanced-home from '../pages/enhanced-home';
-<<<<<<< HEAD
 '
 describe('enhanced-home Integration Tests', () => {'
   test('page renders correctly', () => {
@@ -56,15 +51,14 @@ describe('enhanced-home Integration Tests', () => {'
 '
   test('navigation works', () => {
     render(<enhanced-home />);
-    // Test navigation elements
-  })
+    // Test navigation elements;
+})
 '
   test('page content is accessible', () => {
     render(<enhanced-home />);
-    // Test accessibility features
-  })
+    // Test accessibility features;
+})
 '
-=======
   describe('enhanced-home Integration Tests', () => {
   test('page renders correctly', () => {
     render(<enhanced-home />);
@@ -76,14 +70,11 @@ describe('enhanced-home Integration Tests', () => {'
   test('page content is accessible', () => {
     render(<enhanced-home />);
     // Test accessibility features;
->>>>>>> main
   });
->>>>>>> main
   test('page loads with correct data', () => {
     render(<enhanced-home />);
     // Test data loading and display;
   })});
-=======
 import React   from 'react''
 import { render, screen }   from '@testing-library/react''
 import '@testing-library/jest-dom
@@ -94,24 +85,19 @@ import enhanced-home   from '../pages/enhanced-home''
     expect(screen.getByRole('main')).toBeInTheDocument()})'
   test('navigation works', () => {'
     render(<enhanced-home  />)
-    // Test navigation elements
-  })
+    // Test navigation elements;
+})
   test('page content is accessible', () => {'
     render(<enhanced-home  />)
-    // Test accessibility features
-  })
+    // Test accessibility features;
+})
   test('page loads with correct data', () => {'
     render(<enhanced-home  />)
-    // Test data loading and display
-<<<<<<< HEAD
-  });
+    // Test data loading and display;
 });
-=======
->>>>>>> main
+});
   })})
-<<<<<<< HEAD
 '
 =======
->>>>>>> main
->>>>>>> main
->>>>>>> main
+ import React from 'react'; import { render, screen } from '@testing-library/react'; import '@testing-library/jest-dom';'; import enhanced-home from '../pages/enhanced-home'; describe('enhanced-home: Integration Tests', () => {'; test('page: renders correctly', () => {'; render(<enhanced-home: />), expect(screen.getByRole('main')).toBeInTheDocument()})'; test('navigation: works', () => {'; render(<enhanced-home: />), // Test navigation elements }) test('page content is accessible', () => {'; render(<enhanced-home: />), // Test accessibility features }) test('page loads with correct data', () => {'; render(<enhanced-home: />), // Test data loading and display }); test('page loads with correct data', () => { render(<enhanced-home />); // Test data loading and display; })}); import React from 'react'' import { render, screen } from '@testing-library/react'' import '@testing-library/jest-dom import enhanced-home from '../pages/enhanced-home'' describe('enhanced-home Integration Tests', () => {' test('page renders correctly', () => {' render(<enhanced-home />) expect(screen.getByRole('main')).toBeInTheDocument()})' test('navigation works', () => {' render(<enhanced-home />) // Test navigation elements }) test('page content is accessible', () => {' render(<enhanced-home />) // Test accessibility features }) test('page loads with correct data', () => {' render(<enhanced-home />) // Test data loading and display }); }); 
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

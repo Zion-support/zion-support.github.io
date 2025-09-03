@@ -44,7 +44,7 @@ class TestFileFixer {
       /it\([^)]*\)\s*\{\}\s*render/, // it followed by {} and render
       /expect\([^)]*\)\s*\.toBeInTheDocument\s*\(\)\s*\}\)\s*'/, // expect followed by quote
       /render\(<[^>]*>\s*\)\s*'/, // render followed by quote
-    ];
+    ]
 
     return corruptionPatterns.some(pattern => pattern.test(content));
   }
@@ -70,8 +70,8 @@ describe('${componentName}', () => {
 
   it('displays expected content', () => {
     render(<${componentName} />);
-    // Add more specific tests here
-  });
+    // Add more specific tests here;
+});
 });
 `;
   }
@@ -118,8 +118,8 @@ describe('${componentName}', () => {
     return {
       totalFiles: testFiles.length,
       fixedFiles: this.fixedCount,
-      errors: this.errors,
-    };
+      errors: this.errors,;
+};
   }
 }
 

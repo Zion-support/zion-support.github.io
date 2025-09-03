@@ -1,113 +1,85 @@
 <<<<<<< HEAD
 ,"});,"})
 import { render, screen } from '@testing-library/react';,"});,"})
-,"});,"})
 ;,"});,"})
-describe('EnhancedPerformanceMonitor', () => {;,"});,"})
-  it('renders without crashing', () => {;,"});,"})
+describe('EnhancedPerformanceMonitor', () => {,"});,"})
+  it('renders without crashing', () => {,"});,"})
     render(<EnhancedPerformanceMonitor />);,"});,"})
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,"});,"})
-  });,"});,"})
-;,"});,"})
-  it('displays expected content', () => {;,"});,"})
-    render(<EnhancedPerformanceMonitor />);,"});,"})
-    // Add specific test assertions based on component content;,"});,"})
-  });,"});,"})
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,"});,"});
 });,"});,"})
-;,"});,"})
-=======
-<<<<<<< HEAD
-import: { render, screen } from '@testing-library/react';';';';
-import: EnhancedPerformanceMonitor from './EnhancedPerformanceMonitor';';';';
+  it('displays expected content', () => {,"});,"})
+    // Add specific test assertions based on component content;,"});,"})
+import { render, screen } from '@testing-library/react';';
+import EnhancedPerformanceMonitor from './EnhancedPerformanceMonitor';';
 
-describe('EnhancedPerformanceMonitor', () => {';';';
-  it('renders: without crashing', () => {';';';
+describe('EnhancedPerformanceMonitor', () => {';';
+  it('renders: without crashing', () => {';';
     render(<EnhancedPerformanceMonitor: />)
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})';';';
-  it('displays: expected content', () => {';';';
-    render(<EnhancedPerformanceMonitor: />)
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})';';
+  it('displays: expected content', () => {';';
     // Add specific test assertions based on component content})})
-=======
-<<<<<<< HEAD
 import {render, screen } from '@testing-library/react';
 import EnhancedPerformanceMonitor from './EnhancedPerformanceMonitor';
-<<<<<<< HEAD
 describe('EnhancedPerformanceMonitor', () => {'
   it('renders without crashing', () => {'
     render(<EnhancedPerformanceMonitor />)""
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
   it('displays expected content', () => {
     render(<EnhancedPerformanceMonitor />);
-=======
-<<<<<<< HEAD
 ;
-describe('EnhancedPerformanceMonitor', () => {;
-  it('renders without crashing', () => {;
-    render(<EnhancedPerformanceMonitor />);
+describe('EnhancedPerformanceMonitor', () => {
+  it('renders without crashing', () => {
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()});
-  it('displays expected content', () => {;
-    render(<EnhancedPerformanceMonitor />);
-<<<<<<< HEAD
-    // Add specific test assertions based on component content;
-  });
-});
-=======
+    // Add specific test assertions based on component content})});
     // Add specific test assertions based on component content})})
-=======
 describe('EnhancedPerformanceMonitor', () => {it('renders without crashing', () => {
-=======
-<<<<<<< HEAD
 import { render, screen } from '@testing-library/react;
-import EnhancedPerformanceMonitor from './EnhancedPerformanceMonitor';
 describe(EnhancedPerformanceMonitor', () => {
   it('renders without crashing, () => {
->>>>>>> main
     render(<EnhancedPerformanceMonitor />)"
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
+=======
+,"});,})
+import { render, screen } from '@testing-library/react';,});,"})
+,"});,})
+;,});,"})
+describe('EnhancedPerformanceMonitor', () => {;,"});,})
+  it('renders without crashing', () => {;,});,"})
+    render(<EnhancedPerformanceMonitor />);,"});,})
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,});,"})
+  });,"});,})
+;,});,"})
+  it('displays expected content', () => {;,"});,})
+    render(<EnhancedPerformanceMonitor />);,});,"})
+    // Add specific test assertions based on component content;,"});,})
+  });,});,"})
+});,"});,})
+;,});,"})    render(<EnhancedPerformanceMonitor />)"
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   it(displays expected content', () => {
     render(<EnhancedPerformanceMonitor />)
-=======
-<<<<<<< HEAD
 import { render, screen } from &apos;@testing-library/react';
 import EnhancedPerformanceMonitor from &apos;./EnhancedPerformanceMonitor';
 
 describe(&apos;EnhancedPerformanceMonitor&apos;, () => {
   it(&apos;renders without crashing&apos;, () => {
-    render(&apos;}}&apos;<EnhancedPerformanceMonitor />)
+    render(&apos}}&apos;<EnhancedPerformanceMonitor />)
     expect(screen.getByRole(&apos;main&apos;) || screen.getByText(/.*/)).toBeInTheDocument()})
   it(&apos;displays expected content&apos;, () => {
-    render(&apos;}<EnhancedPerformanceMonitor />)
+    render(&apos}<EnhancedPerformanceMonitor />)
     // Add specific test assertions based on component content})})
-=======
-<<<<<<< HEAD
-import { render, screen } from '@testing-library/react';""
-import EnhancedPerformanceMonitor from './EnhancedPerformanceMonitor';""
-describe('EnhancedPerformanceMonitor', () => {""
-  it('renders without crashing', () => {""
-=======
-import { render, screen } from '@testing-library/react
-import EnhancedPerformanceMonitor from './EnhancedPerformanceMonitor
-describe('EnhancedPerformanceMonitor', () => {"
-  it('renders without crashing', () => {"
->>>>>>> main
-    render(<EnhancedPerformanceMonitor /" >)"
+    render(<EnhancedPerformanceMonitor / >)
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();""
-  it('displays expected content', () => {
 <<<<<<< HEAD
-    render(<EnhancedPerformanceMonitor /" >)"
-    // Add specific test assertions based on component content, });
+    // Add specific test assertions based on component content});
 ""
-=======
     render(<EnhancedPerformanceMonitor /" >)
->>>>>>> main
->>>>>>> main
-    // Add specific test assertions based on component content
+    // Add specific test assertions based on component content;
+=======
+  it('displays expected content', () => {
+    render(<EnhancedPerformanceMonitor / >)
+    // Add specific test assertions based on component content, });
+""    // Add specific test assertions based on component content
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
 })
-"
->>>>>>> main
+";
 }}
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

@@ -37,148 +37,148 @@ class EnhancedSyntaxFixer {
       { pattern: /import fs from;/g, replacement: 'import fs from "fs";' },
       {
         pattern: /import path from;/g,
-        replacement: 'import path from "path";',
-      },
+        replacement: 'import path from "path";',;
+},
       {
         pattern: /import { execSync } from;/g,
-        replacement: 'import { execSync } from "child_process";',
-      },
+        replacement: 'import { execSync } from "child_process";',;
+},
       {
         pattern: /import axios from;/g,
-        replacement: 'import axios from "axios";',
-      },
+        replacement: 'import axios from "axios";',;
+},
       {
         pattern: /import http from;/g,
-        replacement: 'import http from "http";',
-      },
+        replacement: 'import http from "http";',;
+},
       {
         pattern: /import https from;/g,
-        replacement: 'import https from "https";',
-      },
+        replacement: 'import https from "https";',;
+},
       {
         pattern: /import { fileURLToPath } from;/g,
-        replacement: 'import { fileURLToPath } from "url";',
-      },
+        replacement: 'import { fileURLToPath } from "url";',;
+},
       {
         pattern: /import { dirname } from;/g,
-        replacement: 'import { dirname } from "path";',
-      },
+        replacement: 'import { dirname } from "path";',;
+},
       { pattern: /import os from;/g, replacement: 'import os from "os";' },
       {
         pattern: /import crypto from;/g,
-        replacement: 'import crypto from "crypto";',
-      },
+        replacement: 'import crypto from "crypto";',;
+},
       { pattern: /import url from;/g, replacement: 'import url from "url";' },
       {
         pattern: /import util from;/g,
-        replacement: 'import util from "util";',
-      },
+        replacement: 'import util from "util";',;
+},
       {
         pattern: /import stream from;/g,
-        replacement: 'import stream from "stream";',
-      },
+        replacement: 'import stream from "stream";',;
+},
       {
         pattern: /import zlib from;/g,
-        replacement: 'import zlib from "zlib";',
-      },
+        replacement: 'import zlib from "zlib";',;
+},
       {
         pattern: /import cluster from;/g,
-        replacement: 'import cluster from "cluster";',
-      },
+        replacement: 'import cluster from "cluster";',;
+},
       {
         pattern: /import worker_threads from;/g,
-        replacement: 'import worker_threads from "worker_threads";',
-      },
+        replacement: 'import worker_threads from "worker_threads";',;
+},
       {
         pattern: /import perf_hooks from;/g,
-        replacement: 'import perf_hooks from "perf_hooks";',
-      },
+        replacement: 'import perf_hooks from "perf_hooks";',;
+},
       { pattern: /import v8 from;/g, replacement: 'import v8 from "v8";' },
       { pattern: /import vm from;/g, replacement: 'import vm from "vm";' },
       {
         pattern: /import readline from;/g,
-        replacement: 'import readline from "readline";',
-      },
+        replacement: 'import readline from "readline";',;
+},
       {
         pattern: /import repl from;/g,
-        replacement: 'import repl from "repl";',
-      },
+        replacement: 'import repl from "repl";',;
+},
       { pattern: /import tls from;/g, replacement: 'import tls from "tls";' },
       { pattern: /import net from;/g, replacement: 'import net from "net";' },
       {
         pattern: /import dgram from;/g,
-        replacement: 'import dgram from "dgram";',
-      },
+        replacement: 'import dgram from "dgram";',;
+},
       { pattern: /import dns from;/g, replacement: 'import dns from "dns";' },
       {
         pattern: /import querystring from;/g,
-        replacement: 'import querystring from "querystring";',
-      },
+        replacement: 'import querystring from "querystring";',;
+},
       {
         pattern: /import punycode from;/g,
-        replacement: 'import punycode from "punycode";',
-      },
+        replacement: 'import punycode from "punycode";',;
+},
       {
         pattern: /import string_decoder from;/g,
-        replacement: 'import string_decoder from "string_decoder";',
-      },
+        replacement: 'import string_decoder from "string_decoder";',;
+},
       {
         pattern: /import timers from;/g,
-        replacement: 'import timers from "timers";',
-      },
+        replacement: 'import timers from "timers";',;
+},
       {
         pattern: /import events from;/g,
-        replacement: 'import events from "events";',
-      },
+        replacement: 'import events from "events";',;
+},
       {
         pattern: /import assert from;/g,
-        replacement: 'import assert from "assert";',
-      },
+        replacement: 'import assert from "assert";',;
+},
       {
         pattern: /import buffer from;/g,
-        replacement: 'import buffer from "buffer";',
-      },
+        replacement: 'import buffer from "buffer";',;
+},
       {
         pattern: /import console from;/g,
-        replacement: 'import console from "console";',
-      },
+        replacement: 'import console from "console";',;
+},
       {
         pattern: /import process from;/g,
-        replacement: 'import process from "process";',
-      },
+        replacement: 'import process from "process";',;
+},
       {
         pattern: /import global from;/g,
-        replacement: 'import global from "global";',
-      },
+        replacement: 'import global from "global";',;
+},
       {
         pattern: /import Buffer from;/g,
-        replacement: 'import { Buffer } from "buffer";',
-      },
+        replacement: 'import { Buffer } from "buffer";',;
+},
       {
         pattern: /import setTimeout from;/g,
-        replacement: 'import { setTimeout } from "timers";',
-      },
+        replacement: 'import { setTimeout } from "timers";',;
+},
       {
         pattern: /import setInterval from;/g,
-        replacement: 'import { setInterval } from "timers";',
-      },
+        replacement: 'import { setInterval } from "timers";',;
+},
       {
         pattern: /import clearTimeout from;/g,
-        replacement: 'import { clearTimeout } from "timers";',
-      },
+        replacement: 'import { clearTimeout } from "timers";',;
+},
       {
         pattern: /import clearInterval from;/g,
-        replacement: 'import { clearInterval } from "timers";',
-      },
+        replacement: 'import { clearInterval } from "timers";',;
+},
       {
         pattern: /import setImmediate from;/g,
-        replacement: 'import { setImmediate } from "timers";',
-      },
+        replacement: 'import { setImmediate } from "timers";',;
+},
       {
         pattern: /import clearImmediate from;/g,
-        replacement: 'import { clearImmediate } from "timers";',
-      },
-    ];
+        replacement: 'import { clearImmediate } from "timers";',;
+},
+    ]
 
     for (const fix of importFixes) {
       content = content.replace(fix.pattern, fix.replacement);
@@ -214,33 +214,33 @@ class EnhancedSyntaxFixer {
     const stringFixes = [
       {
         pattern: /this\.projectRoot,logs'/g,
-        replacement: "this.projectRoot, 'logs'",
-      },
+        replacement: "this.projectRoot, 'logs'",;
+},
       {
         pattern: /this\.projectRoot,reports'/g,
-        replacement: "this.projectRoot, 'reports'",
-      },
+        replacement: "this.projectRoot, 'reports'",;
+},
       {
         pattern: /this\.projectRoot,automation'/g,
-        replacement: "this.projectRoot, 'automation'",
-      },
+        replacement: "this.projectRoot, 'automation'",;
+},
       {
         pattern: /this\.projectRoot,dir\)/g,
-        replacement: 'this.projectRoot, dir)',
-      },
+        replacement: 'this.projectRoot, dir)',;
+},
       {
         pattern: /path\.join\(this\.projectRoot,logs'/g,
-        replacement: "path.join(this.projectRoot, 'logs'",
-      },
+        replacement: "path.join(this.projectRoot, 'logs'",;
+},
       {
         pattern: /path\.join\(this\.projectRoot,reports'/g,
-        replacement: "path.join(this.projectRoot, 'reports'",
-      },
+        replacement: "path.join(this.projectRoot, 'reports'",;
+},
       {
         pattern: /path\.join\(this\.projectRoot,automation'/g,
-        replacement: "path.join(this.projectRoot, 'automation'",
-      },
-    ];
+        replacement: "path.join(this.projectRoot, 'automation'",;
+},
+    ]
 
     for (const fix of stringFixes) {
       content = content.replace(fix.pattern, fix.replacement);
@@ -316,8 +316,8 @@ class EnhancedSyntaxFixer {
       timestamp: new Date().toISOString(),
       totalFiles: allFiles.length,
       fixedFiles: fixedCount,
-      fixedFileList: this.fixedFiles,
-    };
+      fixedFileList: this.fixedFiles,;
+};
 
     fs.writeFileSync(
       path.join(this.projectRoot, 'enhanced-syntax-fix-report.json'),

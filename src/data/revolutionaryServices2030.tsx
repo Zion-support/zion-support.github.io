@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 export interface RevolutionaryService2030 { id: string; title: string; description: string; category: string; subcategory: string; pricing: { monthly: number; yearly: number; custom: string; currency: string; pricingModel: string; marketPrice: string}; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; technologies: string[]; integrations: string[]; support: string[]; website: string; contactEmail: string; phone: string; email: string; website: string; address: string} ; export interface MicroSaasService { id: number; name: string; category: string; pricing: string; description: string; price: number; pricingModel: string; userLimit: string; features: string[]; benefits: string[]; targetAudience: string[]; tags: string[]; contactInfo: ServiceContact; marketPrice: string; competitors: string[]; roi: string; setupTime: string; integrations: string[]; freeTier: boolean; trialPeriod: string; innovationLevel: string; marketSize: string; growthRate: string} ; export interface ITService { id: number; name: string; category: string; description: string; hourlyRate: number; projectRate: number; features: string[]; benefits: string[]; targetAudience: string[]; tags: string[]; contactInfo: ServiceContact; marketPrice: string; responseTime: string; sla: string; certifications: string[]; deliveryTime: string; support: string; innovationLevel: string; marketSize: string; compliance: string[] } ; export interface AIService { id: number; name: string; category: string; description: string; pricing: string; price: number; pricingModel: string; features: string[]; benefits: string[]; targetAudience: string[]; tags: string[]; contactInfo: ServiceContact; marketPrice: string; aiModels: string[]; accuracy: string; trainingData: string; compliance: string[]; aiScore: number; useCases: string[]; innovationLevel: string; marketSize: string; ethicalAI: string[] }"});,"})
-=======
-<<<<<<< HEAD
 export: interface RevolutionaryService2030 {
   id: string,;,
    title: string,;,
@@ -56,7 +53,7 @@ export: interface RevolutionaryService2030 {
    support: string,;,
    innovationLevel: string,;,
    marketSize: string,;,
-   compliance: string[,]}  export: interface AIService {
+   compliance: string[]}  export: interface AIService {
   id: number,;,
    name: string,;,
    category: string,;,
@@ -78,18 +75,11 @@ export: interface RevolutionaryService2030 {
    useCases: string[],;,
    innovationLevel: string,;,
    marketSize: string,;,
-   ethicalAI: string[,]}
-=======
-<<<<<<< HEAD
+   ethicalAI: string[]}
 export interface RevolutionaryService2030 { id: string;
-=======
-<<<<<<< HEAD
 export interface RevolutionaryService2030 {;
   id: string;
-=======
 export interface RevolutionaryService2030 {id: string;
->>>>>>> main
->>>>>>> main
    title: string;
    description: string;
    category: string;
@@ -98,27 +88,18 @@ export interface RevolutionaryService2030 {id: string;
    yearly: number;
    custom: string;
    currency: string;
-<<<<<<< HEAD
    pricingMode,
     l: string
    marketPric,
     e: string} features: string[] benefits: string[] useCases: string[] targetAudience: string[] technologies: string[] integrations: string[] support: string[] website: string contactEmail: string phone: string email: string websit,
     e: string addres,
     s: string}  export interface MicroSaasService {
-=======
-<<<<<<< HEAD
    pricingModel: string;
-<<<<<<< HEAD
    marketPrice: string  } features: string[] benefits: string[] useCases: string[] targetAudience: string[] technologies: string[] integrations: string[] support: string[] website: string contactEmail: string phone: string email: string website: string address: string}  export interface MicroSaasService { id: number;
-=======
    marketPrice: string} features: string[] benefits: string[] useCases: string[] targetAudience: string[] technologies: string[] integrations: string[] support: string[] website: string contactEmail: string phone: string email: string website: string address: string}  export interface MicroSaasService {;
->>>>>>> main
   id: number;
-=======
    pricingModel: string
    marketPrice: string} features: string[] benefits: string[] useCases: string[] targetAudience: string[] technologies: string[] integrations: string[] support: string[] website: string contactEmail: string phone: string email: string website: string address: string}  export interface MicroSaasService {id: number;
->>>>>>> main
->>>>>>> main
    name: string;
    category: string;
    pricing: string;
@@ -139,24 +120,15 @@ export interface RevolutionaryService2030 {id: string;
    freeTier: boolean;
    trialPeriod: string;
    innovationLevel: string;
-<<<<<<< HEAD
    marketSiz,
     e: string;
    growthRat,
     e: string}  export interface ITService {
-=======
    marketSize: string;
-<<<<<<< HEAD
    growthRate: string  }  export interface ITService { id: number;
-=======
-<<<<<<< HEAD
    growthRate: string}  export interface ITService {;
->>>>>>> main
   id: number;
-=======
    growthRate: string}  export interface ITService {id: number;
->>>>>>> main
->>>>>>> main
    name: string;
    category: string;
    description: string;
@@ -174,24 +146,15 @@ export interface RevolutionaryService2030 {id: string;
    deliveryTime: string;
    support: string;
    innovationLevel: string;
-<<<<<<< HEAD
    marketSiz,
     e: string;
    complianc,
     e: string[]}  export interface AIService {
-=======
    marketSize: string;
-<<<<<<< HEAD
    compliance: string[]  }  export interface AIService { id: number;
-=======
-<<<<<<< HEAD
    compliance: string[]}  export interface AIService {;
->>>>>>> main
   id: number;
-=======
    compliance: string[]}  export interface AIService {id: number;
->>>>>>> main
->>>>>>> main
    name: string;
    category: string;
    description: string;
@@ -211,18 +174,10 @@ export interface RevolutionaryService2030 {id: string;
    aiScore: number;
    useCases: string[];
    innovationLevel: string;
-<<<<<<< HEAD
    marketSiz,
     e: string;
    ethicalA,
     I: string[]}
-=======
    marketSize: string;
-<<<<<<< HEAD
    ethicalAI: string[]  }
-=======
    ethicalAI: string[]}
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

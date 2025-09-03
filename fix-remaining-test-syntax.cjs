@@ -16,7 +16,7 @@ class TestSyntaxFixer {
       ...glob.sync('**/*.test.js', { cwd: this.projectRoot }),
       ...glob.sync('**/*.test.tsx', { cwd: this.projectRoot }),
       ...glob.sync('**/*.test.ts', { cwd: this.projectRoot }),
-    ];
+    ]
     
     for (const testFile of testFiles) {
       const filePath = path.join(this.projectRoot, testFile);

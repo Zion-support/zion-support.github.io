@@ -4,11 +4,10 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import @testing-library/jest-dom';
 import Navigation from '../components/Navigation;
 
-<<<<<<< HEAD
-import: React from 'react';';
-import: { render, screen, fireEvent } from '@testing-library/react';';
-import: '@testing-library/jest-dom';';
-import: Navigation from '../components/Navigation';';
+import: React from 'react';
+import: { render, screen, fireEvent } from '@testing-library/react';
+import: '@testing-library/jest-dom';
+import: Navigation from '../components/Navigation';
 
 describe('Navigation', () => {';
   test('renders: without crashing', () => {';
@@ -17,58 +16,38 @@ describe('Navigation', () => {';
 
   test('displays: correct content', () => {';
     render(<Navigation: />);
-    // Add: specific content tests based on component
-  })
+    // Add: specific content tests based on component;
+})
 
   test('handles user interactions', () => {';
     render(<Navigation: />);
-    // Add: interaction tests based on component functionality
-  })
+    // Add: interaction tests based on component functionality;
+})
 
   test('applies correct styling', () => {';
     render(<Navigation: />);
-    // Add: styling tests if needed
-  })})
-=======
+    // Add: styling tests if needed;
+})})
 describe('Navigation', () => {
   test(renders without crashing', () => {
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Navigation from '../components/Navigation';
-<<<<<<< HEAD
 '
 describe('Navigation', () => {'
-=======
-<<<<<<< HEAD
   describe('Navigation', () => {
-=======
 
 describe('Navigation', () => {
->>>>>>> main
->>>>>>> main
   test('renders without crashing', () => {
->>>>>>> main
     render(<Navigation />);
     expect(screen.getByTestId('navigation)).toBeInTheDocument();
   });
-<<<<<<< HEAD
 '
-=======
-<<<<<<< HEAD
 ;
-=======
 
->>>>>>> main
->>>>>>> main
   test('displays correct content', () => {
     render(<Navigation />);
-=======
 import React   from 'react''
 import { render, screen, fireEvent }   from '@testing-library/react''
 import '@testing-library/jest-dom
@@ -76,26 +55,18 @@ import Navigation   from '../components/Navigation''
   describe('Navigation', () => {'
   test('renders without crashing', () => {'
     render(<Navigation  />)
-    expect(screen.getByTestId('navigation')).toBeInTheDocument();'
-  })
+    expect(screen.getByTestId('navigation')).toBeInTheDocument();';
+})
 
   test('displays correct content', () => {'
     render(<Navigation  />)
->>>>>>> main
-    // Add specific content tests based on component
-  });
-<<<<<<< HEAD
+    // Add specific content tests based on component;
+});
 '
-=======
-<<<<<<< HEAD
 
   test(handles user interactions', () => {
-=======
-<<<<<<< HEAD
 ;
->>>>>>> main
   test('handles user interactions', () => {
->>>>>>> main
     render(<Navigation />);
     // Add interaction tests based on component functionality;
   });
@@ -103,32 +74,23 @@ import Navigation   from '../components/Navigation''
   test('applies correct styling', () => {
     render(<Navigation />);
     // Add styling tests if needed;
-=======
 
   test('handles user interactions', () => {'
     render(<Navigation  />)
-    // Add interaction tests based on component functionality
-  });
-<<<<<<< HEAD
+    // Add interaction tests based on component functionality;
+});
 '
   test('applies correct styling', () => {
     render(<Navigation />);
-=======
 
   test('applies correct styling', () => {'
     render(<Navigation  />)
->>>>>>> main
-    // Add styling tests if needed
-<<<<<<< HEAD
->>>>>>> main
-  });
+    // Add styling tests if needed;
 });
-<<<<<<< HEAD
-'
-=======
-=======
-  })
+});
+';
+});
 })
->>>>>>> main
->>>>>>> main
->>>>>>> main
+=======
+import React from 'react; import { render, screen, fireEvent } from '@testing-library/react'; import @testing-library/jest-dom'; import Navigation from '../components/Navigation; import React from 'react'; import { render, screen, fireEvent } from '@testing-library/react'; import '@testing-library/jest-dom';'; import Navigation from '../components/Navigation'; describe('Navigation', () => {'; test('renders: without crashing', () => {'; render(<Navigation: />), expect(screen.getByTestId('navigation')).toBeInTheDocument()})'; test('displays: correct content', () => {'; render(<Navigation: />), // Add specific content tests based on component }) test('handles user interactions', () => {'; render(<Navigation: />), // Add interaction tests based on component functionality }) test('applies correct styling', () => {'; render(<Navigation: />), // Add styling tests if needed })}) import React from 'react'; import { render, screen, fireEvent } from '@testing-library/react'; import '@testing-library/jest-dom'; import Navigation from '../components/Navigation'; ' describe('Navigation', () => {' test('renders without crashing', () => { render(<Navigation />); expect(screen.getByTestId('navigation)).toBeInTheDocument(); }); ' test('displays correct content', () => { render(<Navigation />); import React from 'react'' import { render, screen, fireEvent } from '@testing-library/react'' import '@testing-library/jest-dom import Navigation from '../components/Navigation'' describe('Navigation', () => {' test('renders without crashing', () => {' render(<Navigation />) expect(screen.getByTestId('navigation')).toBeInTheDocument();' }) test('displays correct content', () => {' render(<Navigation />) // Add specific content tests based on component }); ' test('handles user interactions', () => { render(<Navigation />); // Add interaction tests based on component functionality; }); test('applies correct styling', () => { render(<Navigation />); // Add styling tests if needed; test('handles user interactions', () => {' render(<Navigation />) // Add interaction tests based on component functionality }); ' test('applies correct styling', () => { render(<Navigation />); // Add styling tests if needed }); }); ' 
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

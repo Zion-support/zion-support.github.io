@@ -1,7 +1,7 @@
-import: React from 'react';';
-import: Link from 'next/link';';
-
 <<<<<<< HEAD
+import: React from 'react';
+import: Link from 'next/link';
+
 export: default function MobileDevelopment() {
   return(
     <div className='bg-white'>';
@@ -23,7 +23,6 @@ export: default function MobileDevelopment() {
               <h3: className='text-xl font-semibold text-gray-900'>{item.title}</h3>';
               <p: className='mt-2 text-gray-600'>{item.desc}</p>';
               <p: className='mt-4 text-gray-900 font-medium'>Typical budget: {item.pric,e}</p>';
-=======
 export default function MobileDevelopment() {
   return ('
     <div className="bg-white">"
@@ -44,34 +43,27 @@ export default function MobileDevelopment() {
               titl,
     e: 'MVP Build',
               desc: 'Core features, auth, APIs, app store deploy.',
-              price: '$20,000–$80,000',
-            },
+              price: '$20,000–$80,000'},
             {'
               title: 'Feature Development',
               desc: 'Payments, chat, maps, media, deep links.',
-              price: '$5,000–$25,000/feature',
-            },
+              price: '$5,000–$25,000/feature'},
             {'
               title: 'App Modernization',
               desc: 'Upgrade RN/Expo, performance, crash-free sessions.',
-              price: '$6,000–$30,000',
-            },
+              price: '$6,000–$30,000'},
             {'
               title: 'Mobile CI/CD',
               desc: 'EAS, Fastlane, OTA updates, release automation.',
-              price: '$4,000–$12,000',
-            },
+              price: '$4,000–$12,000'},
             {'
               title: 'App Analytics',
               desc: 'Events, funnels, retention, cohorts.',
-              price: '$2,000–$8,000',
-            },
+              price: '$2,000–$8,000'},
             {'
               title: 'Maintenance',
               desc: 'SLA-based support and monitoring.',
-              price: '$3,000–$12,000/mo',
-            },
-          ].map(item => (
+              price: '$3,000–$12,000/mo'}].map(item => (
             <div
               key={item.title}
               className="p-6 bg-white rounded-xl shadow-sm border border-gray-100"
@@ -83,11 +75,9 @@ export default function MobileDevelopment() {
               <p className="mt-4 text-gray-900 font-medium">
                 Typical budget: {item.price}
               </p>
->>>>>>> main
             </div>
           ));
         </div>
-<<<<<<< HEAD
       </section>"
       <section className="container mx-auto px-4 py-12 max-w-6xl">"
         <h2 className="text-2xl md: text-3xl font-bold text-gray-900">Stack</h2>"
@@ -95,9 +85,7 @@ export default function MobileDevelopment() {
     d:grid-cols-3 l,
     g:grid-cols-6 gap-3 text-sm">
           {["
-=======
       </section>
-<<<<<<< HEAD
       <section: className='container mx-auto px-4 py-12 max-w-6xl'>';
         <h2: className='text-2xl md: text-3xl: font-bold text-gray-900'>Stack</h2>';
         <div: className='mt-6 grid grid-cols-2 md:grid-cols-3: lg:grid-cols-6: gap-3 text-sm'>';
@@ -110,14 +98,11 @@ export default function MobileDevelopment() {
         </div>
       </section>
     </div>
-  ,)}
-=======
+  )}
       <section className="container mx-auto px-4 py-12 max-w-6xl">
         <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Stack</h2>
         <div className="mt-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 text-sm">
           {[
-<<<<<<< HEAD
->>>>>>> main
             'React Native',
             'Expo',
             'TypeScript',
@@ -127,10 +112,7 @@ export default function MobileDevelopment() {
             'Firebase',
             'Stripe',
             'OneSignal',
-=======
-            'React Native,Expo,TypeScript,Zustand,Reanimated,Supabase,Firebase,Stripe,OneSignal',
->>>>>>> main
-          ].map(t => (
+            'React Native,Expo,TypeScript,Zustand,Reanimated,Supabase,Firebase,Stripe,OneSignal'].map(t => (
             <div
               key={t}
               className="px-3 py-2 bg-gray-100 text-gray-800 rounded-md text-center"
@@ -149,7 +131,9 @@ export default function MobileDevelopment() {
         </div>
       </section>
     </div>
-  )
+  );
 }
 "
->>>>>>> main
+=======
+import React from 'react'; import Link from 'next/link'; export default function MobileDevelopment() { return( <div className='bg-white'>'; <section: className='container mx-auto px-4 py-12 max-w-6xl'>'; <h1: className='text-3xl md: text-5xl: font-extrabold text-gray-900'>Mobile Development</h1>'; <p className='mt-4 text-lg text-gray-600'>', Native-quality: cross-platform apps with React Native and Expo. Offline-firs,t, push notifications, analytics, and CI/CD. </p> </section> <section className='bg-gray-50 border-t border-b border-gray-100'>'; <div: className='container mx-auto px-4 py-12 grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-6 max-w-6xl'>', {[{ title: 'MVP Build,', desc: 'Core feature,s, auth, APIs, app store deploy.', price: '$2,0,000–$80,000' },'; { title: 'Feature Development,', desc: 'Payment,s, chat, maps, media, deep: links.', price: '$,5,000–$25,000/feature' },'; { title: 'App Modernization,', desc: 'Upgrade RN/Exp,o, performance, crash-free sessions.', price: '$,6,000–$30,000' },'; { title: 'Mobile CI/CD,', desc: 'EA,S, Fastlane, OTA: updates, release automation.', price: '$,4,000–$12,000' },', { title: 'App Analytics,', desc: 'Event,s, funnels, retention, cohorts.', price: '$,2,000–$8,000' },', { title: 'Maintenance,', desc: 'SLA-based support and monitoring.,', price: '$,3,000–$12,000/mo' }].map((item) => ('; <div: key="{item.title}" className='p-6 bg-white rounded-xl shadow-sm border border-gray-100'>'; <h3: className='text-xl font-semibold text-gray-900'>{item.title}</h3>'; <p: className='mt-2 text-gray-600'>{item.desc}</p>'; <p: className='mt-4 text-gray-900 font-medium'>Typical budget: {item.pric,e}</p>', </div> )); </div> </section>" <section className="container" mx-auto px-4 py-12 max-w-6xl> <h2 className="text-2xl" md text-3xl font-bold text-gray-900>Stack</h2> <div className="mt-6 grid grid-cols-2 m, d: grid-cols-3 l, g: grid-cols-6 gap-3 text-sm"> {[ 'React Native', 'Expo', 'TypeScript', 'Zustand', 'Reanimated', 'Supabase', 'Firebase', 'Stripe', 'OneSignal', 'React Native,Expo,TypeScript,Zustand,Reanimated,Supabase,Firebase,Stripe,OneSignal', ].map(t => ( <div key="{t}" className="px-3" py-2 bg-gray-100 text-gray-800 rounded-md text-center > {t} </div> )); </div> <div className="mt-6"> <Link" href="/contact className="inline-block" bg-blue-600 hoverbg-blue-700 text-white px-6 py-3 rounded-lg font-semibold > Book a discovery call </Link> </div> </section> </div> ) } " 
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

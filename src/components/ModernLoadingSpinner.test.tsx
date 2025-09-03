@@ -1,113 +1,85 @@
 <<<<<<< HEAD
 ,"});,"})
 import { render, screen } from '@testing-library/react';,"});,"})
-,"});,"})
 ;,"});,"})
-describe('ModernLoadingSpinner', () => {;,"});,"})
-  it('renders without crashing', () => {;,"});,"})
+describe('ModernLoadingSpinner', () => {,"});,"})
+  it('renders without crashing', () => {,"});,"})
     render(<ModernLoadingSpinner />);,"});,"})
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,"});,"})
-  });,"});,"})
-;,"});,"})
-  it('displays expected content', () => {;,"});,"})
-    render(<ModernLoadingSpinner />);,"});,"})
-    // Add specific test assertions based on component content;,"});,"})
-  });,"});,"})
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,"});,"});
 });,"});,"})
-;,"});,"})
-=======
-<<<<<<< HEAD
-import: { render, screen } from '@testing-library/react';';';';
-import: ModernLoadingSpinner from './ModernLoadingSpinner';';';';
+  it('displays expected content', () => {,"});,"})
+    // Add specific test assertions based on component content;,"});,"})
+import { render, screen } from '@testing-library/react';';
+import ModernLoadingSpinner from './ModernLoadingSpinner';';
 
-describe('ModernLoadingSpinner', () => {';';';
-  it('renders: without crashing', () => {';';';
+describe('ModernLoadingSpinner', () => {';';
+  it('renders: without crashing', () => {';';
     render(<ModernLoadingSpinner: />)
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})';';';
-  it('displays: expected content', () => {';';';
-    render(<ModernLoadingSpinner: />)
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})';';
+  it('displays: expected content', () => {';';
     // Add specific test assertions based on component content})})
-=======
-<<<<<<< HEAD
 import {render, screen } from '@testing-library/react';
 import ModernLoadingSpinner from './ModernLoadingSpinner';
-<<<<<<< HEAD
 describe('ModernLoadingSpinner', () => {'
   it('renders without crashing', () => {'
     render(<ModernLoadingSpinner />)""
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
   it('displays expected content', () => {
     render(<ModernLoadingSpinner />);
-=======
-<<<<<<< HEAD
 ;
-describe('ModernLoadingSpinner', () => {;
-  it('renders without crashing', () => {;
-    render(<ModernLoadingSpinner />);
+describe('ModernLoadingSpinner', () => {
+  it('renders without crashing', () => {
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()});
-  it('displays expected content', () => {;
-    render(<ModernLoadingSpinner />);
-<<<<<<< HEAD
-    // Add specific test assertions based on component content;
-  });
-});
-=======
+    // Add specific test assertions based on component content})});
     // Add specific test assertions based on component content})})
-=======
 describe('ModernLoadingSpinner', () => {it('renders without crashing', () => {
-=======
-<<<<<<< HEAD
 import { render, screen } from '@testing-library/react;
-import ModernLoadingSpinner from './ModernLoadingSpinner';
 describe(ModernLoadingSpinner', () => {
   it('renders without crashing, () => {
->>>>>>> main
     render(<ModernLoadingSpinner />)"
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
+=======
+,"});,})
+import { render, screen } from '@testing-library/react';,});,"})
+,"});,})
+;,});,"})
+describe('ModernLoadingSpinner', () => {;,"});,})
+  it('renders without crashing', () => {;,});,"})
+    render(<ModernLoadingSpinner />);,"});,})
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,});,"})
+  });,"});,})
+;,});,"})
+  it('displays expected content', () => {;,"});,})
+    render(<ModernLoadingSpinner />);,});,"})
+    // Add specific test assertions based on component content;,"});,})
+  });,});,"})
+});,"});,})
+;,});,"})    render(<ModernLoadingSpinner />)"
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   it(displays expected content', () => {
     render(<ModernLoadingSpinner />)
-=======
-<<<<<<< HEAD
 import { render, screen } from &apos;@testing-library/react';
 import ModernLoadingSpinner from &apos;./ModernLoadingSpinner';
 
 describe(&apos;ModernLoadingSpinner&apos;, () => {
   it(&apos;renders without crashing&apos;, () => {
-    render(&apos;}}&apos;<ModernLoadingSpinner />)
+    render(&apos}}&apos;<ModernLoadingSpinner />)
     expect(screen.getByRole(&apos;main&apos;) || screen.getByText(/.*/)).toBeInTheDocument()})
   it(&apos;displays expected content&apos;, () => {
-    render(&apos;}<ModernLoadingSpinner />)
+    render(&apos}<ModernLoadingSpinner />)
     // Add specific test assertions based on component content})})
-=======
-<<<<<<< HEAD
-import { render, screen } from '@testing-library/react';""
-import ModernLoadingSpinner from './ModernLoadingSpinner';""
-describe('ModernLoadingSpinner', () => {""
-  it('renders without crashing', () => {""
-=======
-import { render, screen } from '@testing-library/react
-import ModernLoadingSpinner from './ModernLoadingSpinner
-describe('ModernLoadingSpinner', () => {"
-  it('renders without crashing', () => {"
->>>>>>> main
-    render(<ModernLoadingSpinner /" >)"
+    render(<ModernLoadingSpinner / >)
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();""
-  it('displays expected content', () => {
 <<<<<<< HEAD
-    render(<ModernLoadingSpinner /" >)"
-    // Add specific test assertions based on component content, });
+    // Add specific test assertions based on component content});
 ""
-=======
     render(<ModernLoadingSpinner /" >)
->>>>>>> main
->>>>>>> main
-    // Add specific test assertions based on component content
+    // Add specific test assertions based on component content;
+=======
+  it('displays expected content', () => {
+    render(<ModernLoadingSpinner / >)
+    // Add specific test assertions based on component content, });
+""    // Add specific test assertions based on component content
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
 })
-"
->>>>>>> main
+";
 }}
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

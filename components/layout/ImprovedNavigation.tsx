@@ -9,12 +9,12 @@ const ImprovedNavigation: React.FC = () => {
   const navigationItems = [
     { 
       name: 'Home', 
-      href: '/' 
-    },
+      href: '/' ;
+},
     { 
       name: 'About', 
-      href: '/about' 
-    },
+      href: '/about' ;
+},
     { 
       name: 'Services', 
       href: '/services',
@@ -28,7 +28,7 @@ const ImprovedNavigation: React.FC = () => {
         { name: 'Data Analytics', href: '/data-analytics' },
         { name: 'Cybersecurity', href: '/cybersecurity' }
       ]
-    },
+},
     { 
       name: 'Solutions', 
       href: '/solutions',
@@ -40,7 +40,7 @@ const ImprovedNavigation: React.FC = () => {
         { name: 'Finance', href: '/solutions/finance' },
         { name: 'E-commerce', href: '/solutions/ecommerce' }
       ]
-    },
+},
     { 
       name: 'Resources', 
       href: '/resources',
@@ -51,7 +51,7 @@ const ImprovedNavigation: React.FC = () => {
         { name: 'Webinars', href: '/webinars' },
         { name: 'Documentation', href: '/docs' }
       ]
-    },
+},
     { 
       name: 'Company', 
       href: '/company',
@@ -60,8 +60,8 @@ const ImprovedNavigation: React.FC = () => {
         { name: 'Careers', href: '/careers' },
         { name: 'Contact', href: '/contact' }
       ]
-    }
-  ];
+}
+  ]
 
   const toggleDropdown = (itemName: string) => {
     setActiveDropdown(activeDropdown === itemName ? null : itemName);

@@ -28,7 +28,7 @@ import {
   FileText,
   MessageSquare,
   PieChart,
-  Activity
+  Activity;
 } from 'lucide-react';
 
 export default function WebsiteAnalytics() {
@@ -48,7 +48,7 @@ export default function WebsiteAnalytics() {
         'Customizable widgets',
         'Drag-and-drop interface'
       ]
-    },
+},
     {
       title: 'Traffic Analysis',
       description: 'Comprehensive visitor behavior and traffic source insights',
@@ -61,7 +61,7 @@ export default function WebsiteAnalytics() {
         'Referral source tracking',
         'Search engine performance'
       ]
-    },
+},
     {
       title: 'Conversion Tracking',
       description: 'Track and optimize your business goals and conversions',
@@ -74,7 +74,7 @@ export default function WebsiteAnalytics() {
         'Phone call tracking',
         'ROI measurement tools'
       ]
-    },
+},
     {
       title: 'Marketing Performance',
       description: 'Measure the effectiveness of your marketing campaigns',
@@ -87,8 +87,8 @@ export default function WebsiteAnalytics() {
         'Content performance analysis',
         'A/B testing results'
       ]
-    }
-  ];
+}
+  ]
 
   const pricing = [
     {
@@ -104,8 +104,8 @@ export default function WebsiteAnalytics() {
         'Standard reports',
         'Mobile app access'
       ],
-      popular: false
-    },
+      popular: false;
+},
     {
       name: 'Professional',
       price: '$79',
@@ -120,8 +120,8 @@ export default function WebsiteAnalytics() {
         'E-commerce tracking',
         'API access'
       ],
-      popular: true
-    },
+      popular: true;
+},
     {
       name: 'Business',
       price: '$199',
@@ -136,32 +136,32 @@ export default function WebsiteAnalytics() {
         'Advanced integrations',
         'SLA guarantee'
       ],
-      popular: false
-    }
-  ];
+      popular: false;
+}
+  ]
 
   const benefits = [
     {
       icon: Eye,
       title: 'Easy to Understand',
-      description: 'No technical jargon - just clear, actionable insights in plain English'
-    },
+      description: 'No technical jargon - just clear, actionable insights in plain English';
+},
     {
       icon: Zap,
       title: 'Real-time Data',
-      description: 'Get instant updates on your website performance and visitor behavior'
-    },
+      description: 'Get instant updates on your website performance and visitor behavior';
+},
     {
       icon: Target,
       title: 'Goal-Focused',
-      description: 'Track what matters most to your business with custom goal setting'
-    },
+      description: 'Track what matters most to your business with custom goal setting';
+},
     {
       icon: Smartphone,
       title: 'Mobile Access',
-      description: 'Monitor your analytics on-the-go with our mobile-optimized interface'
-    }
-  ];
+      description: 'Monitor your analytics on-the-go with our mobile-optimized interface';
+}
+  ]
 
   return (
     <>

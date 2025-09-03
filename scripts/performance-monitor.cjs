@@ -1,175 +1,72 @@
-#!/usr/bin/env node;
 
-/**;
- * Performance Monitoring Script;
- * Monitors application performance metrics;
- */;
-
-<<<<<<< HEAD
-const fs = require('fs');
+const { execSync } = require('child_process');const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
-;
-class PerformanceMonitor {;
-  constructor() {;
-    this.metrics = {;
-      timestamp: new Date().toISOString(),;
-      buildTime: null,;
-      bundleSize: null,;
-      testResults: null,;
-      performance: {}
-    };
-  }
-=======
-const fs = require('fs');';const path = require('path');';const { execSync } = require('child_process');';';class PerformanceMonitor {;
-  constructor() {;
-    this.metrics = {;
-      "timestamp": new Date().toISOString(),;";      "buildTime": null,;";      "bundleSize": null,;";      "testResults": null,;";      "performance": {},;,";};,
-}
->>>>>>> main
-;
-  async measureBuildTime() {;
-    const startTime = Date.now();
-    try {;
+
+class PerformanceMonitor {
+  constructor() {
 <<<<<<< HEAD
-      execSync('npm run build', { stdio: 'pipe' });
-      const buildTime = Date.now() - startTime;
-      this.metrics.buildTime = buildTime;
-      console.log(`📦 Build completed in ${buildTime}ms`);
-      return buildTime;
-    } catch (error) {;
-      console.log('❌ Build failed');
-      throw error;
-    }
-=======
-      execSync('npm run build', { "stdio": 'pipe' });';      const buildTime = Date.now() - startTime;';      this.metrics.buildTime = buildTime;
-      console.log(`📦 Build completed in ${buildTime}ms`);`;      return buildTime;,
-} catch (error) {;
-      console.log('❌ Build failed');';      throw error;,';}
->>>>>>> main
-  }
-;
-  async measureBundleSize() {;
-    try {;
-<<<<<<< HEAD
-      const buildDir = path.join(process.cwd(), '.next');
-      if (!fs.existsSync(buildDir)) {;
-        throw new Error('Build directory not found');
-      }
-      ;
-      const getDirSize = (dir) => {;
-        let size = 0;
-        const files = fs.readdirSync(dir);
-        ;
-        for (const file of files) {;
-          const filePath = path.join(dir, file);
-          const stat = fs.statSync(filePath);
-          ;
-          if (stat.isDirectory()) {;
-            size += getDirSize(filePath);
-          } else {;
-            size += stat.size;
-          }
-        }
-        ;
-        return size;
-      };
-      ;
-      const bundleSize = getDirSize(buildDir);
-      this.metrics.bundleSize = bundleSize;console.log(`📊 Bundle size: ${(bundleSize / 1024 / 1024).toFixed(2)} MB`);
-      return bundleSize;
-    } catch (error) {;
-      console.log('❌ Failed to measure bundle size');
-      throw error;
-    }
-=======
-      const buildDir = path.join(process.cwd(), '.next');';      if (!fs.existsSync(buildDir)) {;';        throw new Error('Build directory not found');';      }';;
-      const getDirSize = dir => {;
-        let size = 0;
-        const files = fs.readdirSync(dir);
-;
-        for (const file of files) {;
-          const filePath = path.join(dir, file);
-          const stat = fs.statSync(filePath);
-;
-          if (stat.isDirectory()) {;
-            size += getDirSize(filePath);,
-} else {;
-            size += stat.size;,
-}
-        }
-;
-        return size;,
+    this.projectRoot = process.cwd();
+    this.metrics = {
+      buildTime: 0,
+      bundleSize: 0,
+      memoryUsage: 0,
+      timestamp: new Date().toISOString();
 };
-;
-      const bundleSize = getDirSize(buildDir);
-      this.metrics.bundleSize = bundleSize;
-      console.log(;);        `📊 Bundle "size": ${(bundleSize / 1024 / 1024).toFixed(2)} MB``;      );
-      return bundleSize;,
-} catch (error) {;
-      console.log('❌ Failed to measure bundle size');';      throw error;,';}
->>>>>>> main
+=======
+    this.reportsDir = path.join(process.cwd(), 'performance-reports');
+    this.ensureDirectories();
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   }
-;
-  async runTests() {;
-    try {;
-<<<<<<< HEAD
-      const result = execSync('npm test', { encoding: 'utf8', stdio: 'pipe' });
-      this.metrics.testResults = { status: 'passed', output: result };
-      console.log('✅ Tests passed');
-      return result;
-    } catch (error) {;
-      this.metrics.testResults = { status: 'failed', error: error.message };
-      console.log('❌ Tests failed');
-      throw error;
+
+  ensureDirectories() {
+    if (!fs.existsSync(this.reportsDir)) {
+      fs.mkdirSync(this.reportsDir, { recursive: true });
     }
   }
-;
-  async generateReport() {;
-    const reportPath = path.join(process.cwd(), 'performance-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(this.metrics, null, 2));console.log(`📄 Performance report saved to: ${reportPath}`);
-  }
-;
-  async run() {;
-    console.log('🚀 Starting performance monitoring...\n');
-    ;
-    try {;
-      await this.measureBuildTime();
-      await this.measureBundleSize();
-      await this.runTests();
-    } catch (error) {console.log(`❌ Performance monitoring failed: ${error.message}`);
-    }
-    ;
-=======
-      const result = execSync('npm test', { "encoding": 'utf8', "stdio": 'pipe' });';      this.metrics.testResults = { "status": 'passed', "output": result };';      console.log('✅ Tests passed');';      return result;,';} catch (error) {;
-      this.metrics.testResults = { "status": 'failed', "error": error.message };';      console.log('❌ Tests failed');';      throw error;,';}
-  }
-;
-  async generateReport() {;
-    const reportPath = path.join(process.cwd(), 'performance-report.json');';    fs.writeFileSync(reportPath, JSON.stringify(this.metrics, null, 2));
-    console.log(`📄 Performance report saved "to": ${reportPath}`);`;  }
-;
-  async run() {;
-    console.log('🚀 Starting performance monitoring...\n');';';    try {;
-      await this.measureBuildTime();
-      await this.measureBundleSize();
-      await this.runTests();,
-} catch (error) {;
-      console.log(`❌ Performance monitoring "failed": ${error.message}`);`;    }
-;
->>>>>>> main
-    await this.generateReport();
-    return this.metrics;,
-}
+
+  async runLighthouse() {
+    console.log('🔍 Running Lighthouse audit...');
+    try {
 <<<<<<< HEAD
+      const { execSync } = require('child_process');
+      execSync('NODE_OPTIONS="--max-old-space-size=8192" npm run build', {
+        cwd: this.projectRoot,
+        stdio: 'inherit';
+});
+      
+      this.metrics.buildTime = Date.now() - startTime;
+      this.metrics.memoryUsage = process.memoryUsage();
+      
+      // Check bundle size
+      const buildDir = path.join(this.projectRoot, '.next');
+      if (fs.existsSync(buildDir)) {
+        this.metrics.bundleSize = this.getDirectorySize(buildDir);
+      }
+      
+      this.saveMetrics();
+      console.log('✅ Performance monitoring completed');
 =======
+      const command = 'npx lighthouse http://localhost:3000 --output=html --output-path=./performance-reports/lighthouse-report.html --chrome-flags="--headless"';
+      execSync(command, { stdio: 'inherit' });
+      console.log('✅ Lighthouse audit completed');
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
+    } catch (error) {
+      console.log('❌ Lighthouse audit failed:', error.message);
+    }
+  }
+
+  async runBundleAnalysis() {
+    console.log('📦 Running bundle analysis...');
+    try {
+      const command = 'ANALYZE=true npm run build';
+      execSync(command, { stdio: 'inherit' });
+      console.log('✅ Bundle analysis completed');
+    } catch (error) {
+      console.log('❌ Bundle analysis failed:', error.message);
+    }
+  }
 }
->>>>>>> main
-;
-// Run performance monitoring if called directly;
-if (require.main === module) {;
-  const monitor = new PerformanceMonitor();
-  monitor.run().catch(console.error);,
-}
-;
-module.exports = PerformanceMonitor;
+
+const monitor = new PerformanceMonitor();
+monitor.runLighthouse();
+monitor.runBundleAnalysis();

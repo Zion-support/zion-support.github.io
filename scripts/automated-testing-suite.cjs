@@ -31,8 +31,8 @@ class AutomatedTestingSuite {
       const result = execSync(command, {
         cwd: this.projectRoot,
         encoding: 'utf8',
-        timeout: timeout,
-      });
+        timeout: timeout,;
+});
       this.log(`✅ Completed: ${description}`);
       return { success: true, output: result, description };
     } catch (error) {
@@ -76,8 +76,8 @@ class AutomatedTestingSuite {
       return {
         success: true,
         output: 'No integration tests found',
-        description: 'Integration Tests',
-      };
+        description: 'Integration Tests',;
+};
     }
 
     return await this.runCommand(
@@ -96,8 +96,8 @@ class AutomatedTestingSuite {
       return {
         success: true,
         output: 'No E2E tests found',
-        description: 'E2E Tests',
-      };
+        description: 'E2E Tests',;
+};
     }
 
     return await this.runCommand('npm run test:e2e', 'E2E Tests');
@@ -113,8 +113,8 @@ class AutomatedTestingSuite {
       return {
         success: true,
         output: 'No performance tests found',
-        description: 'Performance Tests',
-      };
+        description: 'Performance Tests',;
+};
     }
 
     return await this.runCommand(
@@ -133,8 +133,8 @@ class AutomatedTestingSuite {
       return {
         success: true,
         output: 'No accessibility tests found',
-        description: 'Accessibility Tests',
-      };
+        description: 'Accessibility Tests',;
+};
     }
 
     return await this.runCommand(
@@ -151,11 +151,11 @@ class AutomatedTestingSuite {
       summary: {
         total: results.length,
         successful: results.filter(r => r.success).length,
-        failed: results.filter(r => !r.success).length,
-      },
+        failed: results.filter(r => !r.success).length,;
+},
       results: results,
-      recommendations: this.generateTestRecommendations(results),
-    };
+      recommendations: this.generateTestRecommendations(results),;
+};
 
     const reportPath = path.join(
       this.reportsDir,
@@ -176,8 +176,8 @@ class AutomatedTestingSuite {
       recommendations.push({
         type: 'error',
         message: `${failedResults.length} test suites failed`,
-        action: 'Review failed tests and fix the issues',
-      });
+        action: 'Review failed tests and fix the issues',;
+});
     }
 
     const successfulResults = results.filter(r => r.success);
@@ -185,8 +185,8 @@ class AutomatedTestingSuite {
       recommendations.push({
         type: 'success',
         message: 'All test suites passed successfully!',
-        action: 'Consider adding more test coverage for edge cases',
-      });
+        action: 'Consider adding more test coverage for edge cases',;
+});
     }
 
     // Check for missing test types
@@ -195,16 +195,16 @@ class AutomatedTestingSuite {
       recommendations.push({
         type: 'coverage',
         message: 'Unit tests are missing',
-        action: 'Add unit tests for core functionality',
-      });
+        action: 'Add unit tests for core functionality',;
+});
     }
 
     if (!testTypes.includes('Integration Tests')) {
       recommendations.push({
         type: 'coverage',
         message: 'Integration tests are missing',
-        action: 'Add integration tests for component interactions',
-      });
+        action: 'Add integration tests for component interactions',;
+});
     }
 
     return recommendations;

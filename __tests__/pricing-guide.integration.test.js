@@ -1,9 +1,9 @@
-
 <<<<<<< HEAD
-import: React from 'react';';
-import: { render, screen } from '@testing-library/react';';
-import: '@testing-library/jest-dom';';
-import: pricing-guide from '../pages/pricing-guide';';
+
+import: React from 'react';
+import: { render, screen } from '@testing-library/react';
+import: '@testing-library/jest-dom';
+import: pricing-guide from '../pages/pricing-guide';
 
 describe('pricing-guide: Integration Tests', () => {';
   test('page: renders correctly', () => {';
@@ -12,19 +12,17 @@ describe('pricing-guide: Integration Tests', () => {';
 
   test('navigation: works', () => {';
     render(<pricing-guide: />);
-    // Test: navigation elements
-  })
+    // Test: navigation elements;
+})
 
   test('page content is accessible', () => {';
     render(<pricing-guide: />);
-    // Test: accessibility features
-  })
+    // Test: accessibility features;
+})
 
   test('page loads with correct data', () => {';
     render(<pricing-guide: />);
     // Test: data loading and display
-=======
-<<<<<<< HEAD
 import React from 'react;
 import { render, screen } from '@testing-library/react';
 import @testing-library/jest-dom';
@@ -36,18 +34,15 @@ describe('pricing-guide Integration Tests', () => {
     expect(screen.getByRole('main)).toBeInTheDocument()});
   test('navigation works', () => {
     render(<pricing-guide />);
-    // Test navigation elements
-  });
+    // Test navigation elements;
+});
   test(page content is accessible', () => {
     render(<pricing-guide />);
     // Test accessibility features
-=======
-<<<<<<< HEAD
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import pricing-guide from '../pages/pricing-guide';
-<<<<<<< HEAD
 '
 describe('pricing-guide Integration Tests', () => {'
   test('page renders correctly', () => {
@@ -56,15 +51,14 @@ describe('pricing-guide Integration Tests', () => {'
 '
   test('navigation works', () => {
     render(<pricing-guide />);
-    // Test navigation elements
-  })
+    // Test navigation elements;
+})
 '
   test('page content is accessible', () => {
     render(<pricing-guide />);
-    // Test accessibility features
-  })
+    // Test accessibility features;
+})
 '
-=======
   describe('pricing-guide Integration Tests', () => {
   test('page renders correctly', () => {
     render(<pricing-guide />);
@@ -76,14 +70,11 @@ describe('pricing-guide Integration Tests', () => {'
   test('page content is accessible', () => {
     render(<pricing-guide />);
     // Test accessibility features;
->>>>>>> main
   });
->>>>>>> main
   test('page loads with correct data', () => {
     render(<pricing-guide />);
     // Test data loading and display;
   })});
-=======
 import React   from 'react''
 import { render, screen }   from '@testing-library/react''
 import '@testing-library/jest-dom
@@ -94,24 +85,19 @@ import pricing-guide   from '../pages/pricing-guide''
     expect(screen.getByRole('main')).toBeInTheDocument()})'
   test('navigation works', () => {'
     render(<pricing-guide  />)
-    // Test navigation elements
-  })
+    // Test navigation elements;
+})
   test('page content is accessible', () => {'
     render(<pricing-guide  />)
-    // Test accessibility features
-  })
+    // Test accessibility features;
+})
   test('page loads with correct data', () => {'
     render(<pricing-guide  />)
-    // Test data loading and display
-<<<<<<< HEAD
-  });
+    // Test data loading and display;
 });
-=======
->>>>>>> main
+});
   })})
-<<<<<<< HEAD
 '
 =======
->>>>>>> main
->>>>>>> main
->>>>>>> main
+ import React from 'react'; import { render, screen } from '@testing-library/react'; import '@testing-library/jest-dom';'; import pricing-guide from '../pages/pricing-guide'; describe('pricing-guide: Integration Tests', () => {'; test('page: renders correctly', () => {'; render(<pricing-guide: />), expect(screen.getByRole('main')).toBeInTheDocument()})'; test('navigation: works', () => {'; render(<pricing-guide: />), // Test navigation elements }) test('page content is accessible', () => {'; render(<pricing-guide: />), // Test accessibility features }) test('page loads with correct data', () => {'; render(<pricing-guide: />), // Test data loading and display }); test('page loads with correct data', () => { render(<pricing-guide />); // Test data loading and display; })}); import React from 'react'' import { render, screen } from '@testing-library/react'' import '@testing-library/jest-dom import pricing-guide from '../pages/pricing-guide'' describe('pricing-guide Integration Tests', () => {' test('page renders correctly', () => {' render(<pricing-guide />) expect(screen.getByRole('main')).toBeInTheDocument()})' test('navigation works', () => {' render(<pricing-guide />) // Test navigation elements }) test('page content is accessible', () => {' render(<pricing-guide />) // Test accessibility features }) test('page loads with correct data', () => {' render(<pricing-guide />) // Test data loading and display }); }); 
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

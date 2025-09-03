@@ -36,69 +36,69 @@ class AutomationDashboard {
         name: `lint-monitor`,
         path: 'lint-monitor.js',
         category: 'code-quality',
-        status: 'available',
-      },
+        status: 'available',;
+},
       {
         name: 'lint-fixer',
         path: 'lint-error-fixer.js',
         category: 'code-quality',
-        status: 'available',
-      },
+        status: 'available',;
+},
       {
         name: 'lint-manager',
         path: 'lint-automation-manager.js',
         category: 'code-quality',
-        status: 'available',
-      },
+        status: 'available',;
+},
       {
         name: 'code-quality',
         path: 'code-quality-monitor.js',
         category: 'analysis',
-        status: 'available',
-      },
+        status: 'available',;
+},
       {
         name: 'performance',
         path: 'performance-optimizer.js',
         category: 'optimization',
-        status: 'available',
-      },
+        status: 'available',;
+},
       {
         name: 'content-generator',
         path: 'content-generator.js',
         category: 'generation',
-        status: 'available',
-      },
+        status: 'available',;
+},
       {
         name: 'seo-optimizer',
         path: 'seo-optimizer.js',
         category: 'seo',
-        status: 'available',
-      },
+        status: 'available',;
+},
       {
         name: 'security-scanner',
         path: 'security-scanner.js',
         category: 'security',
-        status: 'available',
-      },
+        status: 'available',;
+},
       {
         name: 'test-generator',
         path: 'test-generator.js',
         category: 'testing',
-        status: 'available',
-      },
+        status: 'available',;
+},
       {
         name: 'intelligent-orchestrator',
         path: 'intelligent-orchestrator.js',
         category: 'orchestration',
-        status: 'available',
-      },
+        status: 'available',;
+},
       {
         name: 'automation-factory',
         path: 'automation-factory.js',
         category: 'factory',
-        status: 'available',
-      },
-    ];
+        status: 'available',;
+},
+    ]
 
     for (const system of systems) {
       const systemPath = path.join(__dirname, system.path);
@@ -112,8 +112,8 @@ class AutomationDashboard {
           totalExecutionTime: 0,
           averageExecutionTime: 0,
           uptime: 0,
-          isRunning: false,
-        });
+          isRunning: false,;
+});
       }
     }
   }
@@ -140,8 +140,8 @@ class AutomationDashboard {
           system.successCount / (system.successCount + system.failureCount) ||
           0,
         averageExecutionTime: system.averageExecutionTime,
-        uptime: system.uptime,
-      };
+        uptime: system.uptime,;
+};
 
       this.metrics.set(name, metrics);
     }
@@ -159,8 +159,8 @@ class AutomationDashboard {
           type: `warning`,
           system: name,
           message: `Low success rate: ${(successRate * 100).toFixed(1)}%`,
-          timestamp: new Date().toISOString(),
-        });
+          timestamp: new Date().toISOString(),;
+});
       }
 
       if (system.averageExecutionTime > 30000) {
@@ -168,8 +168,8 @@ class AutomationDashboard {
           type: `warning`,
           system: name,
           message: `Slow execution time: ${system.averageExecutionTime}ms`,
-          timestamp: new Date().toISOString(),
-        });
+          timestamp: new Date().toISOString(),;
+});
       }
 
       if (
@@ -180,8 +180,8 @@ class AutomationDashboard {
           type: `error`,
           system: name,
           message: `System not running recently`,
-          timestamp: new Date().toISOString(),
-        });
+          timestamp: new Date().toISOString(),;
+});
       }
     }
   }
@@ -201,8 +201,8 @@ class AutomationDashboard {
 
       const result = execSync(`node "${system.path}"`, {
         encoding: `utf8`,
-        stdio: `pipe`,
-      });
+        stdio: `pipe`,;
+});
 
       const executionTime = Date.now() - startTime;
       this.updateSystemMetrics(systemName, true, executionTime);
@@ -283,8 +283,8 @@ class AutomationDashboard {
                         <span class="px-2 py-1 rounded-full text-xs font-medium ${
                           system.isRunning;
                             ? 'bg-green-100 text-green-800'
-                            : 'bg-gray-100 text-gray-800'
-                        }">
+                            : 'bg-gray-100 text-gray-800';
+}">
                             ${system.isRunning ? `Running` : `Idle`}
                         </span>
                     </div>
@@ -311,16 +311,16 @@ class AutomationDashboard {
                 <div class="p-3 rounded-lg mb-2 ${
                   alert.type === `error'
                     ? 'bg-red-100 text-red-800'
-                    : 'bg-yellow-100 text-yellow-800`
-                }">
+                    : 'bg-yellow-100 text-yellow-800`;
+}">
                     <strong>${alert.system}:</strong> ${alert.message}
                     <span class="text-xs ml-2">${new Date(alert.timestamp).toLocaleString()}</span>
                 </div>
             `
                     )
                     .join(``)
-                : '<p class="text-gray-500">No alerts</p>'
-            }
+                : '<p class="text-gray-500">No alerts</p>';
+}
         </div>
 
         <!-- Performance Chart -->
@@ -359,8 +359,8 @@ class AutomationDashboard {
                     borderColor: `rgb(59, 130, 246)`,
                     backgroundColor: 'rgba(59, 130, 246, 0.1)',
                     tension: 0.1;
-                }]
-            },
+                }];
+},
             options: {
                 responsive: true,
                 scales: {
@@ -414,13 +414,13 @@ class AutomationDashboard {
           s => s.isRunning;
         ).length,
         totalAlerts: this.alerts.length,
-        averageSuccessRate: this.calculateAverageSuccessRate(),
-      },
+        averageSuccessRate: this.calculateAverageSuccessRate(),;
+},
       systems: {},
       metrics: {},
       alerts: this.alerts,
-      recommendations: this.generateRecommendations(),
-    };
+      recommendations: this.generateRecommendations(),;
+};
 
     // System details;
     for (const [name, system] of this.automationSystems) {
@@ -435,8 +435,8 @@ class AutomationDashboard {
           0,
         averageExecutionTime: system.averageExecutionTime,
         lastRun: system.lastRun?.toISOString(),
-        uptime: system.uptime,
-      };
+        uptime: system.uptime,;
+};
     }
 
     // Metrics;
@@ -470,8 +470,8 @@ class AutomationDashboard {
           type: `performance`,
           system: name,
           message: `Improve ${name} reliability - current success rate: ${(successRate * 100).toFixed(1)}%`,
-          priority: `high`,
-        });
+          priority: `high`,;
+});
       }
 
       if (system.averageExecutionTime > 30000) {
@@ -479,8 +479,8 @@ class AutomationDashboard {
           type: `optimization`,
           system: name,
           message: `Optimize ${name} performance - average execution time: ${system.averageExecutionTime}ms`,
-          priority: `medium`,
-        });
+          priority: `medium`,;
+});
       }
 
       if (
@@ -491,8 +491,8 @@ class AutomationDashboard {
           type: `maintenance`,
           system: name,
           message: `Schedule regular runs for ${name} - last run: ${system.lastRun ? new Date(system.lastRun).toLocaleString() : 'Never'}`,
-          priority: `low`,
-        });
+          priority: `low`,;
+});
       }
     }
 
@@ -528,8 +528,8 @@ class AutomationDashboard {
             JSON.stringify({
               systems: Array.from(this.automationSystems.entries()),
               metrics: Array.from(this.metrics.entries()),
-              alerts: this.alerts,
-            })
+              alerts: this.alerts,;
+})
           );
           break;
 

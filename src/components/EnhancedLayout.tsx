@@ -1,20 +1,18 @@
-<<<<<<< HEAD
 import React from 'react';
 import {SEO } from '@/components/SEO';
 
 export default function EnhancedLayout() {return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
-      <SEO title="EnhancedLayout - Zion Tech Group" description="Professional EnhancedLayout services by Zion Tech Group" />
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold text-white mb-8">EnhancedLayout</h1>
-        <p className="text-gray-300 text-lg">
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950>
+      <SEO title="EnhancedLayout" - Zion Tech Group" description="Professional EnhancedLayout services by Zion Tech Group />
+      <div className="container" mx-auto px-4 py-20">
+        <h1 className="text-4xl font-bold text-white mb-8>EnhancedLayout</h1>
+        <p className="text-gray-300" text-lg">
           Professional EnhancedLayout services to help your business grow.
         </p>
       </div>
     </div>
   );
 }
-=======
 import React, { ReactNode } from 'react';
 import Head from 'next/head';
 import { PerformanceOptimizer } from './PerformanceOptimizer';
@@ -42,7 +40,7 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({
   canonical,
   noindex = false,
   showPerformanceMetrics = false,
-  showSEOAnalysis = false
+  showSEOAnalysis = false;
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '');
@@ -162,14 +160,14 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({
                   "addressLocality": "Middletown",
                   "addressRegion": "DE",
                   "postalCode": "19709",
-                  "addressCountry": "US"
-                },
+                  "addressCountry": "US";
+},
                 "contactPoint": {
                   "@type": "ContactPoint",
                   "telephone": "+1-302-464-0950",
                   "contactType": "customer service",
-                  "email": "kleber@ziontechgroup.com"
-                },
+                  "email": "kleber@ziontechgroup.com";
+},
                 "sameAs": [
                   "https://linkedin.com/company/ziontechgroup",
                   "https://twitter.com/ziontechgroup"
@@ -178,21 +176,21 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({
                   {
                     "@type": "Service",
                     "name": "AI Development",
-                    "description": "Custom AI solutions and machine learning models"
-                  },
+                    "description": "Custom AI solutions and machine learning models";
+},
                   {
                     "@type": "Service",
                     "name": "Cloud Architecture",
-                    "description": "Scalable cloud solutions and infrastructure design"
-                  },
+                    "description": "Scalable cloud solutions and infrastructure design";
+},
                   {
                     "@type": "Service",
                     "name": "Digital Transformation",
-                    "description": "End-to-end digital transformation services"
-                  }
+                    "description": "End-to-end digital transformation services";
+}
                 ]
-              })
-            }}
+});
+}}
           />
         </Head>
         
@@ -206,4 +204,3 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({
 };
 
 export default EnhancedLayout;
->>>>>>> main

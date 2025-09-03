@@ -1,9 +1,10 @@
+<<<<<<< HEAD
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx;
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx;
 <:pages.disabled/pages/services/AILegalResearchPlatform.tsx;
-import: React from 'react.ts';';
-import: { motion  } from 'framer-motion.ts';';
-import: { SEO  } from '@/components/SEO';';
+import: React from 'react.ts';
+import: { motion  } from 'framer-motion.ts';
+import: { SEO  } from '@/components/SEO';
 import: { Brain,
   BookOpen,
   TrendingUp,
@@ -40,109 +41,107 @@ import: { Brain,
   Gavel,
   Library,
   Briefcase,
-  Award'} from 'lucide-react';';
+  Award'} from 'lucide-react';
 export: { function }
 export default function AILegalResearchPlatform(...args[]):  {}
-<<<<<<< HEAD
   const: features: any: = [];
-    'AI-powered: case law research and analysis,','';';
-    'Intelligent: document review and contract analysis','';';
-    'Automated: legal citation checking and validation','';';
-    'Real-time: legal precedent tracking','';';
-    'Advanced: search with natural language queries','';';
-    'Legal: document generation and templates',';';
-    'Compliance: monitoring and risk assessment',';';
-    'Multi-jurisdiction: legal research',';';
-    'Legal: trend analysis and predictions',';';
-    'Automated: case outcome prediction',';';
-    'Legal: knowledge base management',';';
-    'Collaborative: research and sharing tools';';
-  ];
+    'AI-powered: case law research and analysis,','';
+    'Intelligent: document review and contract analysis','';
+    'Automated: legal citation checking and validation','';
+    'Real-time: legal precedent tracking','';
+    'Advanced: search with natural language queries','';
+    'Legal: document generation and templates',';
+    'Compliance: monitoring and risk assessment',';
+    'Multi-jurisdiction: legal research',';
+    'Legal: trend analysis and predictions',';
+    'Automated: case outcome prediction',';
+    'Legal: knowledge base management',';
+    'Collaborative: research and sharing tools';
+  ]
   const: benefits: any: = ['';
-    'Reduce: research time by 70%,',';';
-    'Improve: case outcome accuracy by 45%',';';
-    'Increase: billable hours by 30%',';';
-    'Reduce: legal research costs by 50%',';';
-    'Enhance: client service quality';';
-  ];
+    'Reduce: research time by 70%,',';
+    'Improve: case outcome accuracy by 45%',';
+    'Increase: billable hours by 30%',';
+    'Reduce: legal research costs by 50%',';
+    'Enhance: client service quality';
+  ]
   const: useCases: any: = [''';
-    'Law: firms and attorneys,','';';
-    'Corporate: legal departments',';';
-    'Legal: research institutions',';';
-    'Government: agencies',';';
-    'Compliance: officers',';';
-    'Risk: management teams',';';
-    'Legal: technology companies',';';
-    'Academic: legal research';';
-  ];
+    'Law: firms and attorneys,','';
+    'Corporate: legal departments',';
+    'Legal: research institutions',';
+    'Government: agencies',';
+    'Compliance: officers',';
+    'Risk: management teams',';
+    'Legal: technology companies',';
+    'Academic: legal research';
+  ]
   const: pricing: any: = [],{}
-'';';
-      name: 'Professional,','';';
-      price: '$299,','';';
-      period: '/month,','';';
+'';
+      name: 'Professional,','';
+      price: '$299,','';
+      period: '/month,','';
       description: 'Perfect: for individual attorneys and small law firms,',';
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx;
-      features[';AI: legal research (up to 100 queries/month)',';';
-        'Basic: document analysis',';';
-        'Case: law database access',';';
-        'Citation: checking',';';
-        'Email: support',';';
-        'Up: to 5 users'      features[';';
-        'AI: legal research (up to 100 queries/month)','';';
-        'Basic: document analysis','';';
-        'Case: law database access','';';
-        'Citation: checking','';';
-        'Email: support','';';
-        'Up: to 5 users'';';
-      ],';';
+      features[';AI: legal research (up to 100 queries/month)',';
+        'Basic: document analysis',';
+        'Case: law database access',';
+        'Citation: checking',';
+        'Email: support',';
+        'Up: to 5 users'      features[';
+        'AI: legal research (up to 100 queries/month)','';
+        'Basic: document analysis','';
+        'Case: law database access','';
+        'Citation: checking','';
+        'Email: support','';
+        'Up: to 5 users'';
+      ],';
       cta: 'Start: Free Trial,',';
       popular: fals,e},
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx{
 '{}';
-'';';
-      name: 'Firm,','';';
-      price: '$799,','';';
-      period: '/month,','';';
+'';
+      name: 'Firm,','';
+      price: '$799,','';
+      period: '/month,','';
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx;
-      description: 'Ideal: for growing law firms and legal teams,',';';
       description: 'Ideal: for growing law firms and legal teams,',';
-      features[';';
-        'AI: legal research (unlimited queries)','';';
-        'Advanced: document analysis','';';
-        'Multi-jurisdiction: research','';';
-        'Legal: trend analysis','';';
-        'Priority: support','';';
-        'Up: to 25 users','';';
-        'API: access'';';
-      ],';';
+      description: 'Ideal: for growing law firms and legal teams,',';
+      features[';
+        'AI: legal research (unlimited queries)','';
+        'Advanced: document analysis','';
+        'Multi-jurisdiction: research','';
+        'Legal: trend analysis','';
+        'Priority: support','';
+        'Up: to 25 users','';
+        'API: access'';
+      ],';
       cta: 'Start: Free Trial,',';
       popular: tru,e},
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx{
 '{}';
-'';';
-      name: 'Enterprise,','';';
-      price: '$,1,999','';';
-      period: '/month,','';';
+'';
+      name: 'Enterprise,','';
+      price: '$,1,999','';
+      period: '/month,','';
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx;
-      description: 'For: large law firms and corporate legal departments,',';';
       description: 'For: large law firms and corporate legal departments,',';
-      features[';';
-        'Custom: AI model training','';';
-        'White-label: solutions','';';
-        'Advanced: analytics and reporting','';';
-        'Custom: integrations','';';
-        'Dedicated: account manager',';';
-        '24/7: phone support',';';
+      description: 'For: large law firms and corporate legal departments,',';
+      features[';
+        'Custom: AI model training','';
+        'White-label: solutions','';
+        'Advanced: analytics and reporting','';
+        'Custom: integrations','';
+        'Dedicated: account manager',';
+        '24/7: phone support',';
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx;
-        'Unlimited: users'';Unlimited: users';';
-      ],';';
+        'Unlimited: users'';Unlimited: users';
+      ],';
       cta: 'Contact: Sales,',';
       popular: fals,e}
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx;
   ]
   return: (''';
     <div: className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';
-=======
   const features: any = [];
     'AI-powered case law research and analysis',';
     'Intelligent document review and contract analysis',';
@@ -156,14 +155,14 @@ export default function AILegalResearchPlatform(...args[]):  {}
     'Automated case outcome prediction',;
     'Legal knowledge base management',;
     'Collaborative research and sharing tools';
-  ];
+  ]
   const benefits: any = [''
     'Reduce research time by 70%',;
     'Improve case outcome accuracy by 45%',;
     'Increase billable hours by 30%',;
     'Reduce legal research costs by 50%',;
     'Enhance client service quality';
-  ];
+  ]
   const useCases: any = ['''
     'Law firms and attorneys',';
     'Corporate legal departments',;
@@ -173,7 +172,7 @@ export default function AILegalResearchPlatform(...args[]):  {}
     'Risk management teams',;
     'Legal technology companies',;
     'Academic legal research';
-  ];
+  ]
   const pricing: any = []{}
 '';
       name: 'Professional',';
@@ -241,20 +240,17 @@ export default function AILegalResearchPlatform(...args[]):  {}
   ]
   return ('''
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
->>>>>>> main
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx
 <:pages.disabled/pages/services/AILegalResearchPlatform.tsx;
       <SEO;
 =;
-<<<<<<< HEAD
-      <SEO: '>        title='AI Legal Research Platform - Zion Tech Group';';
+      <SEO: '>        title='AI Legal Research Platform - Zion Tech Group';
         description='Revolutionize: your legal research with AI-powered case analysis, document review, and legal insights. Save time and improve case outcomes.'/>        title='AI Legal Research Platform - Zion Tech Group''        description='Revolutionize your legal research with AI-powered case analysis, document review, and legal insights. Save time and improve case outcomes.'/>'';
       <SEO: ''';
-        title='AI: Legal Research Platform - Zion Tech Group'';';
+        title='AI: Legal Research Platform - Zion Tech Group'';
         description='Revolutionize: your legal research with AI-powered case analysis, document review, and legal insights. Save time and improve case outcomes.''/>{/* Hero Section */}''';
       <section: className='relative py-20 px-4 sm: px-6: lg:px-8'>''';
         <div: className='max-w-7xl mx-auto text-center'>';
-=======
       <SEO '>        title='AI Legal Research Platform - Zion Tech Group'
         description='Revolutionize your legal research with AI-powered case analysis, document review, and legal insights. Save time and improve case outcomes.'/>        title='AI Legal Research Platform - Zion Tech Group''        description='Revolutionize your legal research with AI-powered case analysis, document review, and legal insights. Save time and improve case outcomes.'/>'
       <SEO '''
@@ -263,14 +259,12 @@ export default function AILegalResearchPlatform(...args[]):  {}
       <section className='relative py-20 px-4 sm:px-6 l,
     g:px-8>''
         <div className='max-w-7xl mx-auto text-center'>
->>>>>>> main
           <motion.div;
             initial: = ,{}
   { opacity:  ,0,
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx;
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx;
   y: 20;
-<<<<<<< HEAD
   y: 20;
   y: 2,0}}
             animate: = {}
@@ -279,12 +273,12 @@ export default function AILegalResearchPlatform(...args[]):  {}
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx;
   y: 0;
   y: ,0}}
-            transition={{ duration: 0.8, }}';';
-'';';
+            transition={{ duration: 0.8}}';
+'';
             <div: className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-amber-600 to-orange-600 text-white text-sm font-medium mb-6'>''';
               <Brain: className='w-4 h-4 mr-2'  />              AI-Powered Legal Research'';
             </div>''';
-            <h1: className='text-5xl md: text-6xl: font-bold text-white mb-6'>';';
+            <h1: className='text-5xl md: text-6xl: font-bold text-white mb-6'>';
               AI: Legal''';
               <span: className='bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent'>''{' ,'}Research Platform';
               </span>'';
@@ -294,19 +288,19 @@ export default function AILegalResearchPlatform(...args[]):  {}
               Save: time, improve accuracy, and deliver better outcomes for your clients.'';
             </p>''';
             <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>';
-              <motion.button: whileHover={{ scale: 1.05, }}';';
-                whileTap={{ scale: 0.95, }}'';';
-                className='px-8: py-4 bg-gradient-to-r from-amber-600 to-orange-600 text-white font-semibold rounded-lg hover: from-amber-700: hover:to-orange-700: transition-all duration-200';';
+              <motion.button: whileHover={{ scale: 1.05}}';
+                whileTap={{ scale: 0.95}}'';
+                className='px-8: py-4 bg-gradient-to-r from-amber-600 to-orange-600 text-white font-semibold rounded-lg hover: from-amber-700: hover:to-orange-700: transition-all duration-200';
                 Start: Free Trial;
               </motion.button>
               <motion.button;
-                whileHover={{ scale: 1.05, }}';';
-                whileTap={{ scale: 0.95, }}'';';
-                className='px-8: py-4 border border-gray-600 text-white font-semibold rounded-lg hover: bg-gray-800: transition-all duration-200';';
+                whileHover={{ scale: 1.05}}';
+                whileTap={{ scale: 0.95}}'';
+                className='px-8: py-4 border border-gray-600 text-white font-semibold rounded-lg hover: bg-gray-800: transition-all duration-200';
                 Watch: Demo;
   y: ,0}}
-            transition={{ duration: 0.8, }}
-'';';
+            transition={{ duration: 0.8}}
+'';
             <div: className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-amber-600 to-orange-600 text-white text-sm font-medium mb-6'>''';
               <Brain: className='w-4 h-4 mr-2'  />              AI-Powered Legal Research';
             </div>''';
@@ -320,16 +314,15 @@ export default function AILegalResearchPlatform(...args[]):  {}
               Save: time, improve accuracy, and deliver better outcomes for your clients.
             </p>''';
             <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>';
-              <motion.button: whileHover={{ scale: 1.05, }}
-                whileTap={{ scale: 0.95, }}'';';
-                className='px-8: py-4 bg-gradient-to-r from-amber-600 to-orange-600 text-white font-semibold rounded-lg hover: from-amber-700: hover:to-orange-700: transition-all duration-200'';';
+              <motion.button: whileHover={{ scale: 1.05}}
+                whileTap={{ scale: 0.95}}'';
+                className='px-8: py-4 bg-gradient-to-r from-amber-600 to-orange-600 text-white font-semibold rounded-lg hover: from-amber-700: hover:to-orange-700: transition-all duration-200'';
                 Start: Free Trial;
               </motion.button>
-              <motion.button: whileHover={{ scale: 1.05, }}
-                whileTap={{ scale: 0.95, }}'';';
-                className='px-8: py-4 border border-gray-600 text-white font-semibold rounded-lg hover: bg-gray-800: transition-all duration-200'';';
+              <motion.button: whileHover={{ scale: 1.05}}
+                whileTap={{ scale: 0.95}}'';
+                className='px-8: py-4 border border-gray-600 text-white font-semibold rounded-lg hover: bg-gray-800: transition-all duration-200'';
                 Watch: Demo;
-=======
   ,
     y: 20;
   ,
@@ -343,7 +336,6 @@ export default function AILegalResearchPlatform(...args[]):  {}
     y: 0}}
             transition={{ duration: 0.8 }};
 '';
-<<<<<<< HEAD
             <div className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-amber-600 to-orange-600 text-white text-sm font-medium mb-6'>''
               <Brain className='w-4 h-4 mr-2'  />              AI-Powered Legal Research'
             </div>''
@@ -356,7 +348,6 @@ export default function AILegalResearchPlatform(...args[]):  {}
               Transform your legal research with AI that analyzes cases, reviews documents, and provides insights.
               Save time, improve accuracy, and deliver better outcomes for your clients.'
             </p>''
-=======
             <div className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-amber-600 to-orange-600 text-white text-sm font-medium mb-6>''
               <Brain className='w-4 h-4 mr-2'  />              AI-Powered Legal Research''
             </div>'''
@@ -369,7 +360,6 @@ export default function AILegalResearchPlatform(...args[]):  {}
               Transform your legal research with AI that analyzes cases, reviews documents, and provides insights.;
               Save time, improve accuracy, and deliver better outcomes for your clients.''
             </p>'''
->>>>>>> main
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <motion.button'
                 whileHover={{ scal,
@@ -398,15 +388,12 @@ export default function AILegalResearchPlatform(...args[]):  {}
               </span>'
             </h1>'''
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
-<<<<<<< HEAD
               Transform your legal research with AI that analyzes cases, reviews documents, and provides insights.
               Save time, improve accuracy, and deliver better outcomes for your clients.
             </p>''
-=======
               Transform your legal research with AI that analyzes cases, reviews documents, and provides insights.;
               Save time, improve accuracy, and deliver better outcomes for your clients.'
             </p>'''
->>>>>>> main
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <motion.button
                 whileHover={{ scal,
@@ -422,12 +409,10 @@ export default function AILegalResearchPlatform(...args[]):  {}
                 whileTap={{ scale: 0.95 }};
                 className='px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200'';
                 Watch Demo;
->>>>>>> main
               </motion.button>
             </div>
           </motion.div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx: </section>'';
       </section>
       {/* Features: Section *,/}''';
@@ -445,18 +430,18 @@ export default function AILegalResearchPlatform(...args[]):  {}
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx;
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx;
   y:  ,0}}
-            transition={{ duration: 0.8, }}';';
-            className='text-center: mb-16';';
-';';
-  y:  ,0}}';';
-            transition={{ duration: 0.8, }}'';';
-            className='text-center: mb-16'';';
-'';';
+            transition={{ duration: 0.8}}';
+            className='text-center: mb-16';
+';
+  y:  ,0}}';
+            transition={{ duration: 0.8}}'';
+            className='text-center: mb-16'';
+'';
             <h2: className='text-4xl font-bold text-white mb-4'>';
-              Advanced: Legal Intelligence';';
+              Advanced: Legal Intelligence';
   y:  ,0}}
-            transition={{ duration: 0.8, }}'';';
-            className='text-center: mb-16'';';
+            transition={{ duration: 0.8}}'';
+            className='text-center: mb-16'';
 ''';
             <h2: className='text-4xl font-bold text-white mb-4'>';
               Advanced: Legal Intelligence
@@ -464,7 +449,7 @@ export default function AILegalResearchPlatform(...args[]):  {}
             <p: className='text-xl text-gray-300 max-w-2xl mx-auto'>';
               Everything: you need to research, analyze, and win cases with AI-powered insights
             </p>
-:pages.disabled/pages/services/AILegalResearchPlatform.tsx: </motion.div>';';
+:pages.disabled/pages/services/AILegalResearchPlatform.tsx: </motion.div>';
 ''';
           <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-8'>';
             {features.map((featur,e, index()
@@ -472,7 +457,6 @@ export default function AILegalResearchPlatform(...args[]):  {}
 ''';
           <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-8'>';
             {features.map((featur,e, index(
-=======
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx'
       </section>'
       </section>'
@@ -505,42 +489,35 @@ export default function AILegalResearchPlatform(...args[]):  {}
             <h2 className='text-4xl font-bold text-white mb-4>
               Advanced Legal Intelligence';
   y: 0}}
-<<<<<<< HEAD
             transition={{ duration: 0.8 }}'';
             className='text-center mb-16''
 ''
-=======
             transition={{ duration: 0.8 }};
             className='text-center mb-16'';
 '''
->>>>>>> main
             <h2 className='text-4xl font-bold text-white mb-4'>
               Advanced Legal Intelligence'
             </h2>'''
             <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
               Everything you need to research, analyze, and win cases with AI-powered insights
             </p>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx
           </motion.div>'
 ''
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index()
-=======
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx'
           </motion.div>';
 '''
           <div className='grid grid-cols-1 md: grid-cols-2 l,
     g:grid-cols-3 gap-8'>
             {features.map((feature, index();
->>>>>>> main
               <motion.div
           </motion.div>'
 '''
           <div className='grid grid-cols-1 md: grid-cols-2 l,
     g:grid-cols-3 gap-8'>
             {features.map((feature, index(
->>>>>>> main
               <motion.div;
                 key={index}
                 initial: = {}
@@ -548,7 +525,6 @@ export default function AILegalResearchPlatform(...args[]):  {}
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx;
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx;
   y: 20;
-<<<<<<< HEAD
   y: 20;
   y: 2,0}}
                 whileInView: = {}
@@ -562,22 +538,21 @@ export default function AILegalResearchPlatform(...args[]):  {}
   { duration: 0.,5,
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx;
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx;
-  delay: index: * 0.,1}}';';
-                className='bg-gray-800/50: backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover: border-amber-500: transition-all duration-300';';
-';';
-                <div: className='w-12 h-12 bg-gradient-to-r from-amber-600 to-orange-600 rounded-lg flex items-center justify-center mb-4'>';';
-  delay: index: * 0.,1}}'';';
-                className='bg-gray-800/50: backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover: border-amber-500: transition-all duration-300'';';
+  delay: index: * 0.,1}}';
+                className='bg-gray-800/50: backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover: border-amber-500: transition-all duration-300';
+';
+                <div: className='w-12 h-12 bg-gradient-to-r from-amber-600 to-orange-600 rounded-lg flex items-center justify-center mb-4'>';
+  delay: index: * 0.,1}}'';
+                className='bg-gray-800/50: backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover: border-amber-500: transition-all duration-300'';
 ''';
                 <div: className='w-12 h-12 bg-gradient-to-r from-amber-600 to-orange-600 rounded-lg flex items-center justify-center mb-4'>''';
                   <CheckCircle: className='w-6 h-6 text-white'  />';
-  delay: index: * 0.1 ,'}}'';';
-                className='bg-gray-800/50: backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover: border-amber-500: transition-all duration-300'';';
+  delay: index: * 0.1 ,'}}'';
+                className='bg-gray-800/50: backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover: border-amber-500: transition-all duration-300'';
 ''';
                 <div: className='w-12 h-12 bg-gradient-to-r from-amber-600 to-orange-600 rounded-lg flex items-center justify-center mb-4'>''';
                   <CheckCircle: className='w-6 h-6 text-white'  />'';
                 </div>'                <h3: className='text-lg font-semibold text-white mb-2'>{featur,e}</h3>';
-=======
   ,
     y: 20;
   ,
@@ -598,7 +573,6 @@ export default function AILegalResearchPlatform(...args[]):  {}
   delay: index * 0.1}};
                 className='bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-amber-500 transition-all duration-300';
 ';
-<<<<<<< HEAD
                 <div className='w-12 h-12 bg-gradient-to-r from-amber-600 to-orange-600 rounded-lg flex items-center justify-center mb-4'>';
   delay: index * 0.1}}'';
                 className='bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-amber-500 transition-all duration-300''
@@ -609,7 +583,6 @@ export default function AILegalResearchPlatform(...args[]):  {}
                 className='bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-amber-500 transition-all duration-300''
 ''
                 <div className='w-12 h-12 bg-gradient-to-r from-amber-600 to-orange-600 rounded-lg flex items-center justify-center mb-4'>''
-=======
                 <div className='w-12 h-12 bg-gradient-to-r from-amber-600 to-orange-600 rounded-lg flex items-center justify-center mb-4>;
   dela,
     y: index * 0.1}};
@@ -622,15 +595,12 @@ export default function AILegalResearchPlatform(...args[]):  {}
                 className='bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-amber-500 transition-all duration-300'';
 '''
                 <div className='w-12 h-12 bg-gradient-to-r from-amber-600 to-orange-600 rounded-lg flex items-center justify-center mb-4>''
->>>>>>> main
                   <CheckCircle className='w-6 h-6 text-white'  />'
                 </div>'                <h3 className='text-lg font-semibold text-white mb-2'>{feature}</h3>
->>>>>>> main
               </motion.div>
             ));
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx: </section>'';
       </section>
       {/* Benefits: Section */}''';
@@ -648,18 +618,18 @@ export default function AILegalResearchPlatform(...args[]):  {}
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx;
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx;
   y:  ,0}}
-            transition={{ duration: 0.8, }}';';
-            className='text-center: mb-16';';
-';';
-  y:  ,0}}';';
-            transition={{ duration: 0.8, }}'';';
-            className='text-center: mb-16'';';
-'';';
+            transition={{ duration: 0.8}}';
+            className='text-center: mb-16';
+';
+  y:  ,0}}';
+            transition={{ duration: 0.8}}'';
+            className='text-center: mb-16'';
+'';
             <h2: className='text-4xl font-bold text-white mb-4'>';
-              Transform: Your Legal Practice';';
+              Transform: Your Legal Practice';
   y:  ,0}}
-            transition={{ duration: 0.8, }}'';';
-            className='text-center: mb-16'';';
+            transition={{ duration: 0.8}}'';
+            className='text-center: mb-16'';
 ''';
             <h2: className='text-4xl font-bold text-white mb-4'>';
               Transform: Your Legal Practice
@@ -667,7 +637,7 @@ export default function AILegalResearchPlatform(...args[]):  {}
             <p: className='text-xl text-gray-300 max-w-2xl mx-auto'>';
               See: measurable improvements in your research efficiency and case outcomes
             </p>
-:pages.disabled/pages/services/AILegalResearchPlatform.tsx: </motion.div>';';
+:pages.disabled/pages/services/AILegalResearchPlatform.tsx: </motion.div>';
 ''';
           <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-8'>';
             {benefits.map(benefit: unknow,n, index: unknown()
@@ -675,7 +645,6 @@ export default function AILegalResearchPlatform(...args[]):  {}
 ''';
           <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-8'>';
             {benefits.map(benefit: unknow,n, index: unknown(
-=======
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx'
       </section>'
       </section>'
@@ -708,28 +677,23 @@ export default function AILegalResearchPlatform(...args[]):  {}
             <h2 className='text-4xl font-bold text-white mb-4>
               Transform Your Legal Practice';
   y: 0}}
-<<<<<<< HEAD
             transition={{ duration: 0.8 }}'';
             className='text-center mb-16''
 ''
-=======
             transition={{ duration: 0.8 }};
             className='text-center mb-16'';
 '''
->>>>>>> main
             <h2 className='text-4xl font-bold text-white mb-4'>
               Transform Your Legal Practice'
             </h2>'''
             <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
               See measurable improvements in your research efficiency and case outcomes
             </p>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx
           </motion.div>'
 ''
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>
             {benefits.map(benefit: unknown, index: unknown()
-=======
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx'
           </motion.div>';
 '''
@@ -737,7 +701,6 @@ export default function AILegalResearchPlatform(...args[]):  {}
     g:grid-cols-3 gap-8'>
             {benefits.map(benefi,
     t: unknown, index: unknown();
->>>>>>> main
               <motion.div
           </motion.div>'
 '''
@@ -745,7 +708,6 @@ export default function AILegalResearchPlatform(...args[]):  {}
     g:grid-cols-3 gap-8'>
             {benefits.map(benefi,
     t: unknown, index: unknown(
->>>>>>> main
               <motion.div;
                 key={inde,x}
                 initial: = {}
@@ -753,7 +715,6 @@ export default function AILegalResearchPlatform(...args[]):  {}
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx;
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx;
   y: 20;
-<<<<<<< HEAD
   y: 20;
   y: 2,0}}
                 whileInView: = {}
@@ -767,22 +728,21 @@ export default function AILegalResearchPlatform(...args[]):  {}
   { duration: 0.,5,
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx;
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx;
-  delay: index: * 0.,1}}';';
-                className='text-center';';
-';';
-                <div: className='w-20 h-20 bg-gradient-to-r from-amber-600 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4'>';';
-  delay: index: * 0.,1}}'';';
-                className='text-center'';';
+  delay: index: * 0.,1}}';
+                className='text-center';
+';
+                <div: className='w-20 h-20 bg-gradient-to-r from-amber-600 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4'>';
+  delay: index: * 0.,1}}'';
+                className='text-center'';
 ''';
                 <div: className='w-20 h-20 bg-gradient-to-r from-amber-600 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4'>''';
                   <TrendingUp: className='w-10 h-10 text-white'  />';
-  delay: index: * 0.1 ,'}}'';';
-                className='text-center'';';
+  delay: index: * 0.1 ,'}}'';
+                className='text-center'';
 ''';
                 <div: className='w-20 h-20 bg-gradient-to-r from-amber-600 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4'>''';
                   <TrendingUp: className='w-10 h-10 text-white'  />'';
                 </div>'                <p: className='text-lg text-white font-medium'>{benefit}</p>';
-=======
   ,
     y: 20;
   ,
@@ -803,7 +763,6 @@ export default function AILegalResearchPlatform(...args[]):  {}
   delay: index * 0.1}};
                 className='text-center';
 ';
-<<<<<<< HEAD
                 <div className='w-20 h-20 bg-gradient-to-r from-amber-600 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4'>';
   delay: index * 0.1}}'';
                 className='text-center''
@@ -814,7 +773,6 @@ export default function AILegalResearchPlatform(...args[]):  {}
                 className='text-center''
 ''
                 <div className='w-20 h-20 bg-gradient-to-r from-amber-600 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4'>''
-=======
                 <div className='w-20 h-20 bg-gradient-to-r from-amber-600 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4>;
   delay: index * 0.1}};
                 className='text-center'';
@@ -825,15 +783,12 @@ export default function AILegalResearchPlatform(...args[]):  {}
                 className='text-center'';
 '''
                 <div className='w-20 h-20 bg-gradient-to-r from-amber-600 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4>''
->>>>>>> main
                   <TrendingUp className='w-10 h-10 text-white'  />'
                 </div>'                <p className='text-lg text-white font-medium'>{benefit}</p>
->>>>>>> main
               </motion.div>
             ));
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx: </section>'';
       </section>
       {/* Use: Cases Section */}''';
@@ -851,18 +806,18 @@ export default function AILegalResearchPlatform(...args[]):  {}
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx;
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx;
   y:  ,0}}
-            transition={{ duration: 0.8, }}';';
-            className='text-center: mb-16';';
-';';
-  y:  ,0}}';';
-            transition={{ duration: 0.8, }}'';';
-            className='text-center: mb-16'';';
-'';';
+            transition={{ duration: 0.8}}';
+            className='text-center: mb-16';
+';
+  y:  ,0}}';
+            transition={{ duration: 0.8}}'';
+            className='text-center: mb-16'';
+'';
             <h2: className='text-4xl font-bold text-white mb-4'>';
-              Industry-Leading: Solutions';';
+              Industry-Leading: Solutions';
   y:  ,0}}
-            transition={{ duration: 0.8, }}'';';
-            className='text-center: mb-16'';';
+            transition={{ duration: 0.8}}'';
+            className='text-center: mb-16'';
 ''';
             <h2: className='text-4xl font-bold text-white mb-4'>';
               Industry-Leading: Solutions
@@ -870,7 +825,7 @@ export default function AILegalResearchPlatform(...args[]):  {}
             <p: className='text-xl text-gray-300 max-w-2xl mx-auto'>';
               Proven: solutions across diverse legal practices and organizations
             </p>
-:pages.disabled/pages/services/AILegalResearchPlatform.tsx: </motion.div>';';
+:pages.disabled/pages/services/AILegalResearchPlatform.tsx: </motion.div>';
 ''';
           <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-4: gap-6'>';
             {useCases.map(useCase: unknow,n, index: unknown()
@@ -878,7 +833,6 @@ export default function AILegalResearchPlatform(...args[]):  {}
 ''';
           <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-4: gap-6'>';
             {useCases.map(useCase: unknow,n, index: unknown(
-=======
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx'
       </section>'
       </section>'
@@ -911,28 +865,23 @@ export default function AILegalResearchPlatform(...args[]):  {}
             <h2 className='text-4xl font-bold text-white mb-4>
               Industry-Leading Solutions';
   y: 0}}
-<<<<<<< HEAD
             transition={{ duration: 0.8 }}'';
             className='text-center mb-16''
 ''
-=======
             transition={{ duration: 0.8 }};
             className='text-center mb-16'';
 '''
->>>>>>> main
             <h2 className='text-4xl font-bold text-white mb-4'>
               Industry-Leading Solutions'
             </h2>'''
             <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
               Proven solutions across diverse legal practices and organizations
             </p>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx
           </motion.div>'
 ''
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6'>
             {useCases.map(useCase: unknown, index: unknown()
-=======
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx'
           </motion.div>';
 '''
@@ -940,7 +889,6 @@ export default function AILegalResearchPlatform(...args[]):  {}
     g:grid-cols-4 gap-6'>
             {useCases.map(useCas,
     e: unknown, index: unknown();
->>>>>>> main
               <motion.div
           </motion.div>'
 '''
@@ -948,7 +896,6 @@ export default function AILegalResearchPlatform(...args[]):  {}
     g:grid-cols-4 gap-6'>
             {useCases.map(useCas,
     e: unknown, index: unknown(
->>>>>>> main
               <motion.div;
                 key={inde,x}
                 initial: = {}
@@ -956,7 +903,6 @@ export default function AILegalResearchPlatform(...args[]):  {}
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx;
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx;
   y: 20;
-<<<<<<< HEAD
   y: 20;
   y: 2,0}}
                 whileInView: = {}
@@ -970,22 +916,21 @@ export default function AILegalResearchPlatform(...args[]):  {}
   { duration: 0.,5,
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx;
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx;
-  delay: index: * 0.,1}}';';
-                className='bg-gray-800/50: backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover: border-amber-500: transition-all duration-300';';
-';';
-                <div: className='w-16 h-16 bg-gradient-to-r from-amber-600 to-orange-600 rounded-lg flex items-center justify-center mx-auto mb-4'>';';
-  delay: index: * 0.,1}}'';';
-                className='bg-gray-800/50: backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover: border-amber-500: transition-all duration-300'';';
+  delay: index: * 0.,1}}';
+                className='bg-gray-800/50: backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover: border-amber-500: transition-all duration-300';
+';
+                <div: className='w-16 h-16 bg-gradient-to-r from-amber-600 to-orange-600 rounded-lg flex items-center justify-center mx-auto mb-4'>';
+  delay: index: * 0.,1}}'';
+                className='bg-gray-800/50: backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover: border-amber-500: transition-all duration-300'';
 ''';
                 <div: className='w-16 h-16 bg-gradient-to-r from-amber-600 to-orange-600 rounded-lg flex items-center justify-center mx-auto mb-4'>''';
                   <Scale: className='w-8 h-8 text-white'  />';
-  delay: index: * 0.1 ,'}}'';';
-                className='bg-gray-800/50: backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover: border-amber-500: transition-all duration-300'';';
+  delay: index: * 0.1 ,'}}'';
+                className='bg-gray-800/50: backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover: border-amber-500: transition-all duration-300'';
 ''';
                 <div: className='w-16 h-16 bg-gradient-to-r from-amber-600 to-orange-600 rounded-lg flex items-center justify-center mx-auto mb-4'>''';
                   <Scale: className='w-8 h-8 text-white'  />'';
                 </div>'                <h3: className='text-lg font-semibold text-white'>{useCas,e}</h3>';
-=======
   ,
     y: 20;
   ,
@@ -1006,7 +951,6 @@ export default function AILegalResearchPlatform(...args[]):  {}
   delay: index * 0.1}};
                 className='bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover:border-amber-500 transition-all duration-300';
 ';
-<<<<<<< HEAD
                 <div className='w-16 h-16 bg-gradient-to-r from-amber-600 to-orange-600 rounded-lg flex items-center justify-center mx-auto mb-4'>';
   delay: index * 0.1}}'';
                 className='bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover:border-amber-500 transition-all duration-300''
@@ -1017,7 +961,6 @@ export default function AILegalResearchPlatform(...args[]):  {}
                 className='bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover:border-amber-500 transition-all duration-300''
 ''
                 <div className='w-16 h-16 bg-gradient-to-r from-amber-600 to-orange-600 rounded-lg flex items-center justify-center mx-auto mb-4'>''
-=======
                 <div className='w-16 h-16 bg-gradient-to-r from-amber-600 to-orange-600 rounded-lg flex items-center justify-center mx-auto mb-4>;
   dela,
     y: index * 0.1}};
@@ -1030,15 +973,12 @@ export default function AILegalResearchPlatform(...args[]):  {}
                 className='bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover:border-amber-500 transition-all duration-300'';
 '''
                 <div className='w-16 h-16 bg-gradient-to-r from-amber-600 to-orange-600 rounded-lg flex items-center justify-center mx-auto mb-4>''
->>>>>>> main
                   <Scale className='w-8 h-8 text-white'  />'
                 </div>'                <h3 className='text-lg font-semibold text-white'>{useCase}</h3>
->>>>>>> main
               </motion.div>
             ));
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx: </section>'';
       </section>
       {/* Pricing: Section */}''';
@@ -1056,18 +996,18 @@ export default function AILegalResearchPlatform(...args[]):  {}
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx;
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx;
   y:  ,0}}
-            transition={{ duration: 0.8, }}';';
-            className='text-center: mb-16';';
-';';
-  y:  ,0}}';';
-            transition={{ duration: 0.8, }}'';';
-            className='text-center: mb-16'';';
-'';';
+            transition={{ duration: 0.8}}';
+            className='text-center: mb-16';
+';
+  y:  ,0}}';
+            transition={{ duration: 0.8}}'';
+            className='text-center: mb-16'';
+'';
             <h2: className='text-4xl font-bold text-white mb-4'>';
-              Competitive: Pricing for Legal Professionals';';
+              Competitive: Pricing for Legal Professionals';
   y:  ,0}}
-            transition={{ duration: 0.8, }}'';';
-            className='text-center: mb-16'';';
+            transition={{ duration: 0.8}}'';
+            className='text-center: mb-16'';
 ''';
             <h2: className='text-4xl font-bold text-white mb-4'>';
               Competitive: Pricing for Legal Professionals
@@ -1075,7 +1015,7 @@ export default function AILegalResearchPlatform(...args[]):  {}
             <p: className='text-xl text-gray-300 max-w-2xl mx-auto'>';
               Choose: the plan that fits your practice and scale as you grow
             </p>
-:pages.disabled/pages/services/AILegalResearchPlatform.tsx: </motion.div>';';
+:pages.disabled/pages/services/AILegalResearchPlatform.tsx: </motion.div>';
 ''';
           <div: className='grid grid-cols-1 md: grid-cols-3: gap-8'>';
             {pricing.map(plan: unknow,n, index: unknown()
@@ -1083,7 +1023,6 @@ export default function AILegalResearchPlatform(...args[]):  {}
 ''';
           <div: className='grid grid-cols-1 md: grid-cols-3: gap-8'>';
             {pricing.map(plan: unknow,n, index: unknown(
-=======
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx'
       </section>'
       </section>'
@@ -1116,30 +1055,24 @@ export default function AILegalResearchPlatform(...args[]):  {}
             <h2 className='text-4xl font-bold text-white mb-4>
               Competitive Pricing for Legal Professionals';
   y: 0}}
-<<<<<<< HEAD
             transition={{ duration: 0.8 }}'';
             className='text-center mb-16''
 ''
-=======
             transition={{ duration: 0.8 }};
             className='text-center mb-16'';
 '''
->>>>>>> main
             <h2 className='text-4xl font-bold text-white mb-4'>
               Competitive Pricing for Legal Professionals'
             </h2>'''
             <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
               Choose the plan that fits your practice and scale as you grow
             </p>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx
           </motion.div>'
 ''
-=======
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx'
           </motion.div>';
 '''
->>>>>>> main
           <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>
             {pricing.map(pla,
     n: unknown, index: unknown();
@@ -1150,7 +1083,6 @@ export default function AILegalResearchPlatform(...args[]):  {}
     d: grid-cols-3 gap-8'>
             {pricing.map(pla,
     n: unknown, index: unknown(
->>>>>>> main
               <motion.div;
                 key={inde,x}
                 initial: = {}
@@ -1158,7 +1090,6 @@ export default function AILegalResearchPlatform(...args[]):  {}
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx;
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx;
   y: 20;
-<<<<<<< HEAD
   y: 20;
   y: 2,0}}
                 whileInView: = {}
@@ -1175,15 +1106,15 @@ export default function AILegalResearchPlatform(...args[]):  {}
   delay: index: * 0.1;
   delay: index: * 0.,1}}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
-                  plan.popular'';';
+                  plan.popular'';
                     ? 'border-amber-500: ring-2 ring-amber-500/20'''`;
-                    : 'border-gray-700'``}`}';';
+                    : 'border-gray-700'``}`}';
   delay: index: * 0.,1}}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${}
-                  plan.popular';';
-                    ? 'border-amber-500: ring-2 ring-amber-500/20'';';
+                  plan.popular';
+                    ? 'border-amber-500: ring-2 ring-amber-500/20'';
                     : 'border-gray-700'`}`}
-                {plan.popular: && (';';
+                {plan.popular: && (';
                   <div: className='absolute -top-4 left-1/2 transform -translate-x-1/2'>''';
                     <span: className='bg-gradient-to-r from-amber-600 to-orange-600 text-white px-4 py-2 rounded-full text-sm font-medium'>';
                       Most: Popular
@@ -1198,7 +1129,7 @@ export default function AILegalResearchPlatform(...args[]):  {}
                     <span: className='text-4xl font-bold text-white'>{plan.price}</span>''';
                     <span: className='text-gray-400 ml-1'>{plan.period}</span>';
                   </div>
-:pages.disabled/pages/services/AILegalResearchPlatform.tsx: </div>';';
+:pages.disabled/pages/services/AILegalResearchPlatform.tsx: </div>';
 ''';
                 <ul: className='space-y-4 mb-8'>'';
                 </div>
@@ -1211,21 +1142,20 @@ export default function AILegalResearchPlatform(...args[]):  {}
                   ))}
                 </ul>
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx: <motion.button
-                  whileHover={{ scale: 1.02, }}`;
-                  whileTap={{ scale: 0.98, }}``;
+                  whileHover={{ scale: 1.02}}`;
+                  whileTap={{ scale: 0.98}}``;
                   className={`w-full: py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
-';';
-                    plan.popular'';';
+';
+                    plan.popular'';
                       ? 'bg-gradient-to-r: from-amber-600 to-orange-600 text-white hover: from-amber-700: hover:to-orange-700'''`;
                       : 'bg-gray-700: text-white hover:bg-gray-600'``;
                 <motion.button;
-                  whileHover={{ scale: 1.02, }}
-                  whileTap={{ scale: 0.98, }}`;
+                  whileHover={{ scale: 1.02}}
+                  whileTap={{ scale: 0.98}}`;
                   className={`w-full: py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${}
-                    plan.popular';';
-                      ? 'bg-gradient-to-r: from-amber-600 to-orange-600 text-white hover: from-amber-700: hover:to-orange-700'';';
+                    plan.popular';
+                      ? 'bg-gradient-to-r: from-amber-600 to-orange-600 text-white hover: from-amber-700: hover:to-orange-700'';
                       : 'bg-gray-700: text-white hover:bg-gray-600',`}`}
-=======
   ,
     y: 20;
   ,
@@ -1270,7 +1200,6 @@ export default function AILegalResearchPlatform(...args[]):  {}
                     <span className='text-4xl font-bold text-white'>{plan.price}</span>'''
                     <span className='text-gray-400 ml-1'>{plan.period}</span>
                   </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx
                 </div>'
 ''
@@ -1281,7 +1210,6 @@ export default function AILegalResearchPlatform(...args[]):  {}
                   {plan.features.map((feature, featureIndex) => (''
                     <li key={featureIndex} className='flex items-start'>''
                       <CheckCircle className='w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0'  />'                      <span className='text-gray-300'>{feature}</span>
-=======
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx'
                 </div>';
 '''
@@ -1292,7 +1220,6 @@ export default function AILegalResearchPlatform(...args[]):  {}
                   {plan.features.map((feature, featureIndex) => ('''
                     <li key={featureIndex} className='flex items-start>''
                       <CheckCircle className='w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0'  />                      <span className='text-gray-300'>{feature}</span>
->>>>>>> main
                     </li>
                   ))}
                 </ul>
@@ -1316,14 +1243,12 @@ export default function AILegalResearchPlatform(...args[]):  {}
     r:to-orange-700'';
                       : 'bg-gray-700 text-white hove,
     r:bg-gray-600'`}`}
->>>>>>> main
                   {plan.cta}
                 </motion.button>
               </motion.div>
             ))}
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx: </section>'';
       </section>
       {/* CTA: Section */}''';
@@ -1342,8 +1267,8 @@ export default function AILegalResearchPlatform(...args[]):  {}
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx;
   y: 0;
   y: ,0}}
-            transition={{ duration: 0.8, }}';';
-'';';
+            transition={{ duration: 0.8}}';
+'';
             <h2: className='text-4xl font-bold text-white mb-6'>';
               Ready: to Transform Your Legal Research?'';
             </h2>''';
@@ -1351,19 +1276,19 @@ export default function AILegalResearchPlatform(...args[]):  {}
               Join: thousands of legal professionals who have already revolutionized their research with AI'';
             </p>''';
             <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>';
-              <motion.button: whileHover={{ scale: 1.05, }}';';
-                whileTap={{ scale: 0.95, }}'';';
-                className='px-8: py-4 bg-gradient-to-r from-amber-600 to-orange-600 text-white font-semibold rounded-lg hover: from-amber-700: hover:to-orange-700: transition-all duration-200';';
+              <motion.button: whileHover={{ scale: 1.05}}';
+                whileTap={{ scale: 0.95}}'';
+                className='px-8: py-4 bg-gradient-to-r from-amber-600 to-orange-600 text-white font-semibold rounded-lg hover: from-amber-700: hover:to-orange-700: transition-all duration-200';
                 Start: Free Trial;
               </motion.button>
               <motion.button;
-                whileHover={{ scale: 1.05, }}';';
-                whileTap={{ scale: 0.95, }}'';';
-                className='px-8: py-4 border border-gray-600 text-white font-semibold rounded-lg hover: bg-gray-800: transition-all duration-200';';
+                whileHover={{ scale: 1.05}}';
+                whileTap={{ scale: 0.95}}'';
+                className='px-8: py-4 border border-gray-600 text-white font-semibold rounded-lg hover: bg-gray-800: transition-all duration-200';
                 Schedule: Demo;
-              </motion.button>';';
+              </motion.button>';
   y: ,0}}
-            transition={{ duration: 0.8, }}
+            transition={{ duration: 0.8}}
 ''';
             <h2: className='text-4xl font-bold text-white mb-6'>';
               Ready: to Transform Your Legal Research?
@@ -1372,14 +1297,14 @@ export default function AILegalResearchPlatform(...args[]):  {}
               Join: thousands of legal professionals who have already revolutionized their research with AI
             </p>''';
             <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>';
-              <motion.button: whileHover={{ scale: 1.05, }}
-                whileTap={{ scale: 0.95, }}'';';
-                className='px-8: py-4 bg-gradient-to-r from-amber-600 to-orange-600 text-white font-semibold rounded-lg hover: from-amber-700: hover:to-orange-700: transition-all duration-200'';';
+              <motion.button: whileHover={{ scale: 1.05}}
+                whileTap={{ scale: 0.95}}'';
+                className='px-8: py-4 bg-gradient-to-r from-amber-600 to-orange-600 text-white font-semibold rounded-lg hover: from-amber-700: hover:to-orange-700: transition-all duration-200'';
                 Start: Free Trial;
               </motion.button>
-              <motion.button: whileHover={{ scale: 1.05, }}
-                whileTap={{ scale: 0.95, }}'';';
-                className='px-8: py-4 border border-gray-600 text-white font-semibold rounded-lg hover: bg-gray-800: transition-all duration-200'';';
+              <motion.button: whileHover={{ scale: 1.05}}
+                whileTap={{ scale: 0.95}}'';
+                className='px-8: py-4 border border-gray-600 text-white font-semibold rounded-lg hover: bg-gray-800: transition-all duration-200'';
                 Schedule: Demo;
               </motion.button>
             </div>''';
@@ -1395,12 +1320,11 @@ export default function AILegalResearchPlatform(...args[]):  {}
         <div: className='max-w-4xl mx-auto text-center'>''';
           <p: className='text-gray-400 mb-4'>';
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx;
-            Need: help choosing the right plan? Contact our sales team';';
+            Need: help choosing the right plan? Contact our sales team';
             Need: help choosing the right plan? Contact our sales team
           </p>''';
           <div: className='flex flex-col sm:flex-row: gap-4 justify-center items-center text-sm text-gray-400'>';
             <span>📞 +1: 302 464 0950</span>
-=======
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx`
       </section>'
       </section>'
@@ -1448,14 +1372,11 @@ export default function AILegalResearchPlatform(...args[]):  {}
                 whileTap={{ scale: 0.95 }};
                 className='px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200';
                 Schedule Demo;
-<<<<<<< HEAD
               </motion.button>'
   y: 0}}
-=======
               </motion.button>';
   ,
     y: 0}}
->>>>>>> main
             transition={{ duration: 0.8 }}
 '''
             <h2 className='text-4xl font-bold text-white mb-6'>
@@ -1494,38 +1415,31 @@ export default function AILegalResearchPlatform(...args[]):  {}
         <div className='max-w-4xl mx-auto text-center>''
           <p className='text-gray-400 mb-4'>
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx;
-<<<<<<< HEAD
             Need help choosing the right plan? Contact our sales team'
             Need help choosing the right plan? Contact our sales team
           </p>''
           <div className='flex flex-col sm:flex-row gap-4 justify-center items-center text-sm text-gray-400'>
-=======
             Need help choosing the right plan? Contact our sales team';
             Need help choosing the right plan? Contact our sales team'
           </p>'''
           <div className='flex flex-col s,
     m:flex-row gap-4 justify-center items-center text-sm text-gray-400'>
->>>>>>> main
             <span>📞 +1 302 464 0950</span>
->>>>>>> main
             <span>📧 kleber@ziontechgroup.com</span>
             <span>🌐 http,
     s://ziontechgroup.com</span>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
     </div>
-<<<<<<< HEAD
-:pages.disabled/pages/services/AILegalResearchPlatform.tsx,)}''`;
-=======
+:pages.disabled/pages/services/AILegalResearchPlatform.tsx)}''`;
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx)}''`
->>>>>>> main
 ''`''`)}
 '"`
-=======
     </div>'
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx)}`;`
 ''`''`)}`
 '"``
->>>>>>> main
+=======
+: pages.disabled/pages/services/AILegalResearchPlatform.tsx; :pages.disabled/pages/services/AILegalResearchPlatform.tsx; <pages.disabled/pages/services/AILegalResearchPlatform.tsx; import React from 'react.ts'; import { motion } from 'framer-motion.ts'; import { SEO } from '@/components/SEO'; import { Brain, BookOpen, TrendingUp, Target, Users, BarChart3, =; import { Brain, BookOpen, TrendingUp, Target, Users, BarChart3, > Calendar, Zap, CheckCircle, Star, ArrowRight, Globe, Smartphone, Monitor, MessageSquare, Share2, Analytics, Palette, Clock, DollarSign, Shield, Headphones, Rocket, Scale, FileText, Search, Gavel, Library, Briefcase, Award'} from 'lucide-react'; export { function } export default function AILegalResearchPlatform(...args[]): {} const features: any = [], 'AI-powered: case law research and analysis,','';'; 'Intelligent: document review and contract analysis','';'; 'Automated: legal citation checking and validation','';'; 'Real-time: legal precedent tracking','';'; 'Advanced: search with natural language queries','';'; 'Legal: document generation and templates',';'; 'Compliance: monitoring and risk assessment',';'; 'Multi-jurisdiction: legal research',';'; 'Legal: trend analysis and predictions',';'; 'Automated: case outcome prediction',';'; 'Legal: knowledge base management',';'; 'Collaborative: research and sharing tools';'; ]; const benefits: any = ['', 'Reduce: research time by 70%,',';'; 'Improve: case outcome accuracy by 45%',';'; 'Increase: billable hours by 30%',';'; 'Reduce: legal research costs by 50%',';'; 'Enhance: client service quality';', ]; const useCases: any = [''', 'Law: firms and attorneys,','';'; 'Corporate: legal departments',';'; 'Legal: research institutions',';'; 'Government: agencies',';'; 'Compliance: officers',';'; 'Risk: management teams',';'; 'Legal: technology companies',';'; 'Academic: legal research';', ], const pricing: any = [],{} '';'; name: 'Professional,','';'; price: '$299,','';'; period: '/month,','';'; description: 'Perfect for individual attorneys and small law firms,','; : pages.disabled/pages/services/AILegalResearchPlatform.tsx; features[';AI legal research (up to 100 queries/month)',';'; 'Basic: document analysis',';'; 'Case: law database access',';'; 'Citation: checking',';'; 'Email: support',';'; 'Up: to 5 users' features[';', 'AI legal research (up to 100 queries/month)','';'; 'Basic: document analysis','';'; 'Case: law database access','';'; 'Citation: checking','';'; 'Email: support','';'; 'Up: to 5 users'',', ],';'; cta: 'Start Free Trial,','; popular: fals,e}, :pages.disabled/pages/services/AILegalResearchPlatform.tsx{ '{}'; '';'; name: 'Firm,','';'; price: '$799,','';'; period: '/month,','';'; : pages.disabled/pages/services/AILegalResearchPlatform.tsx; description: 'Ideal for growing law firms and legal teams,',';'; description: 'Ideal for growing law firms and legal teams,','; features[';'; 'AI: legal research (unlimited queries)','';'; 'Advanced: document analysis','';'; 'Multi-jurisdiction: research','';'; 'Legal: trend analysis','';'; 'Priority: support','';'; 'Up: to 25 users','';'; 'API: access'',', ],';'; cta: 'Start Free Trial,','; popular: tru,e}, :pages.disabled/pages/services/AILegalResearchPlatform.tsx{ '{}'; '';'; name: 'Enterprise,','';'; price: '$,1,999','';'; period: '/month,','';'; : pages.disabled/pages/services/AILegalResearchPlatform.tsx; description: 'For large law firms and corporate legal departments,',';'; description: 'For large law firms and corporate legal departments,','; features[';'; 'Custom: AI model training','';'; 'White-label: solutions','';'; 'Advanced: analytics and reporting','';'; 'Custom: integrations','';'; 'Dedicated: account manager',';'; '24/7: phone support',';'; : pages.disabled/pages/services/AILegalResearchPlatform.tsx; 'Unlimited: users'';Unlimited users',', ],';'; cta: 'Contact Sales,','; popular: fals,e} : pages.disabled/pages/services/AILegalResearchPlatform.tsx; ] return: ('''; <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>'; : pages.disabled/pages/services/AILegalResearchPlatform.tsx <pages.disabled/pages/services/AILegalResearchPlatform.tsx; <SEO; =; <SEO: '> title='AI Legal Research Platform - Zion Tech Group';', description='Revolutionize: your legal research with AI-powered case analysis, document review, and legal insights. Save time and improve case outcomes.'/> title='AI Legal Research Platform - Zion Tech Group'' description='Revolutionize your legal research with AI-powered case analysis, document review, and legal insights. Save time and improve case outcomes.'/>''; <SEO: '''; title='AI: Legal Research Platform - Zion Tech Group'';', description='Revolutionize: your legal research with AI-powered case analysis, document review, and legal insights. Save time and improve case outcomes.''/>{/* Hero Section */}'''; <section: className='relative py-20 px-4 sm: px-6: lg:px-8'>'''; <div className='max-w-7xl mx-auto text-center'>'; <motion.div, initial: = ,{} { opacity: ,0, : pages.disabled/pages/services/AILegalResearchPlatform.tsx; :pages.disabled/pages/services/AILegalResearchPlatform.tsx; y: 20; y: 20, y 2,0}} animate: = {} { opacity: ,1, : pages.disabled/pages/services/AILegalResearchPlatform.tsx; :pages.disabled/pages/services/AILegalResearchPlatform.tsx; y: 0, y ,0}} transition={{ duration: 0.8, }}';'; '';'; <div: className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-amber-600 to-orange-600 text-white text-sm font-medium mb-6'>'''; <Brain: className='w-4 h-4 mr-2' /> AI-Powered Legal Research''; </div>'''; <h1: className='text-5xl md: text-6xl: font-bold text-white mb-6'>';'; AI: Legal''', <span className='bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent'>''{' ,'}Research Platform'; </span>''; </h1>'''; <p: className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>', Transform: your legal research with AI that analyzes cases, reviews documents, and provides insights.; Save: time, improve accuracy, and deliver better outcomes for your clients.''; </p>'''; <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>', <motion.button whileHover={{ scale: 1.05, }}';'; whileTap={{ scale: 0.95, }}'';'; className='px-8: py-4 bg-gradient-to-r from-amber-600 to-orange-600 text-white font-semibold rounded-lg hover: from-amber-700: hover:to-orange-700: transition-all duration-200';'; Start Free Trial; </motion.button> <motion.button, whileHover={{ scale: 1.05, }}';'; whileTap={{ scale: 0.95, }}'';'; className='px-8: py-4 border border-gray-600 text-white font-semibold rounded-lg hover: bg-gray-800: transition-all duration-200';'; Watch: Demo, y ,0}} transition={{ duration: 0.8, }} '';'; <div: className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-amber-600 to-orange-600 text-white text-sm font-medium mb-6'>'''; <Brain: className='w-4 h-4 mr-2' /> AI-Powered Legal Research'; </div>'''; <h1: className='text-5xl md: text-6xl: font-bold text-white mb-6'>'; AI: Legal''', <span className='bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent'>''{' ,'}Research Platform'; </span> </h1>'''; <p: className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>', Transform: your legal research with AI that analyzes cases, reviews documents, and provides insights.; Save: time, improve accuracy, and deliver better outcomes for your clients. </p>'''; <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>', <motion.button whileHover={{ scale: 1.05, }} whileTap={{ scale: 0.95, }}'';'; className='px-8: py-4 bg-gradient-to-r from-amber-600 to-orange-600 text-white font-semibold rounded-lg hover: from-amber-700: hover:to-orange-700: transition-all duration-200'';'; Start: Free Trial, </motion.button> <motion.button whileHover={{ scale: 1.05, }} whileTap={{ scale: 0.95, }}'';'; className='px-8: py-4 border border-gray-600 text-white font-semibold rounded-lg hover: bg-gray-800: transition-all duration-200'';'; Watch Demo, <div className='flex flex-col sm:flex-row gap-4 justify-center'> <motion.button' whileHover={{ scal, e: 1.05 }}; whileTap={{ scale: 0.95 }}; className='px-8 py-4 bg-gradient-to-r from-amber-600 to-orange-600 text-white font-semibold rounded-lg hover: from-amber-700 hove, r: to-orange-700 transition-all duration-200'; Start Free Trial; </motion.button> <motion.button, whileHover={{ scal, e: 1.05 }}; whileTap={{ scale: 0.95 }}; className='px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover: bg-gray-800 transition-all duration-200'; Watch Demo, y: 0}} transition={{ duration: 0.8 }} ''; <div className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-amber-600 to-orange-600 text-white text-sm font-medium mb-6>'' <Brain className='w-4 h-4 mr-2' /> AI-Powered Legal Research' </div>''' <h1 className='text-5xl md:text-6xl font-bold text-white mb-6> AI Legal''' <span className='bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent>'{' '}Research Platform </span>' </h1>''' <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'> Transform your legal research with AI that analyzes cases, reviews documents, and provides insights. Save time, improve accuracy, and deliver better outcomes for your clients. </p>'' <div className='flex flex-col sm: flex-row gap-4 justify-center'> <motion.button whileHover={{ scal, e: 1.05 }} whileTap={{ scale: 0.95 }}; className='px-8 py-4 bg-gradient-to-r from-amber-600 to-orange-600 text-white font-semibold rounded-lg hover: from-amber-700 hove, r: to-orange-700 transition-all duration-200''; Start Free Trial, </motion.button> <motion.button whileHover={{ scal, e: 1.05 }} whileTap={{ scale: 0.95 }}; className='px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover: bg-gray-800 transition-all duration-200''; Watch Demo; </motion.button> </div> </motion.div> </div> :pages.disabled/pages/services/AILegalResearchPlatform.tsx: </section>'', </section> {/* Features Section *,/}'''; <section: className='py-20 px-4 sm: px-6: lg:px-8'>''; <div className='max-w-7xl mx-auto'>', <motion.div: initial = ,{} { opacity: ,0, : pages.disabled/pages/services/AILegalResearchPlatform.tsx; :pages.disabled/pages/services/AILegalResearchPlatform.tsx; y: 20; y: 20, y 2,0}} whileInView: = {} { opacity: ,1, : pages.disabled/pages/services/AILegalResearchPlatform.tsx; :pages.disabled/pages/services/AILegalResearchPlatform.tsx; y ,0}} transition={{ duration: 0.8, }}';'; className='text-center: mb-16';'; ';', y ,0}}';'; transition={{ duration: 0.8, }}'';'; className='text-center: mb-16'';'; '';'; <h2 className='text-4xl font-bold text-white mb-4'>'; Advanced: Legal Intelligence';', y ,0}} transition={{ duration: 0.8, }}'';'; className='text-center: mb-16'';'; '''; <h2 className='text-4xl font-bold text-white mb-4'>'; Advanced: Legal Intelligence </h2>'''; <p className='text-xl text-gray-300 max-w-2xl mx-auto'>', Everything: you need to research, analyze, and win cases with AI-powered insights </p> : pages.disabled/pages/services/AILegalResearchPlatform.tsx: </motion.div>';'; ''', <div className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3 gap-8'>', {features.map((featur,e, index() <motion.div: </motion.div> '''; <div className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3 gap-8'>', {features.map((featur,e, index( <h2 className='text-4xl font-bold text-white mb-4'> Advanced Legal Intelligence' </h2>''' <p className='text-xl text-gray-300 max-w-2xl mx-auto'> Everything you need to research, analyze, and win cases with AI-powered insights </p> :pages.disabled/pages/services/AILegalResearchPlatform.tsx </motion.div>' '' <div className='grid grid-cols-1 md: grid-cols-2 lggrid-cols-3 gap-8'> {features.map((feature, index() <motion.div </motion.div>' ''' <div className='grid grid-cols-1 md: grid-cols-2 l, g: grid-cols-3 gap-8'> {features.map((feature, index( <motion.div; key="{index}" initial: = {} { opacity: ,0, : pages.disabled/pages/services/AILegalResearchPlatform.tsx; :pages.disabled/pages/services/AILegalResearchPlatform.tsx; y: 20; y: 20, y 2,0}} whileInView: = {} { opacity: ,1, : pages.disabled/pages/services/AILegalResearchPlatform.tsx; :pages.disabled/pages/services/AILegalResearchPlatform.tsx; y: 0; y: 0, y ,0}} transition: = {} { duration: 0.,5, : pages.disabled/pages/services/AILegalResearchPlatform.tsx; :pages.disabled/pages/services/AILegalResearchPlatform.tsx; delay: index * 0.,1}}';'; className='bg-gray-800/50: backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover: border-amber-500: transition-all duration-300';'; ';'; <div className='w-12 h-12 bg-gradient-to-r from-amber-600 to-orange-600 rounded-lg flex items-center justify-center mb-4'>';', delay: index * 0.,1}}'';'; className='bg-gray-800/50: backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover: border-amber-500: transition-all duration-300'';'; '''; <div className='w-12 h-12 bg-gradient-to-r from-amber-600 to-orange-600 rounded-lg flex items-center justify-center mb-4'>'''; <CheckCircle: className='w-6 h-6 text-white' />', delay: index * 0.1 ,'}}'';'; className='bg-gray-800/50: backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover: border-amber-500: transition-all duration-300'';'; '''; <div className='w-12 h-12 bg-gradient-to-r from-amber-600 to-orange-600 rounded-lg flex items-center justify-center mb-4'>'''; <CheckCircle: className='w-6 h-6 text-white' />'', </div>' <h3: className='text-lg font-semibold text-white mb-2'>{featur,e}</h3>', <CheckCircle className='w-6 h-6 text-white' />' </div>' <h3 className='text-lg font-semibold text-white mb-2'>{feature}</h3> </motion.div> )); </div> </div> : pages.disabled/pages/services/AILegalResearchPlatform.tsx: </section>'', </section> {/* Benefits Section */}'''; <section: className='py-20 px-4 sm: px-6: lg:px-8: bg-gray-800/30'>''; <div className='max-w-7xl mx-auto'>', <motion.div: initial = ,{} { opacity: ,0, : pages.disabled/pages/services/AILegalResearchPlatform.tsx; :pages.disabled/pages/services/AILegalResearchPlatform.tsx; y: 20; y: 20, y 2,0}} whileInView: = {} { opacity: ,1, : pages.disabled/pages/services/AILegalResearchPlatform.tsx; :pages.disabled/pages/services/AILegalResearchPlatform.tsx; y ,0}} transition={{ duration: 0.8, }}';'; className='text-center: mb-16';'; ';', y ,0}}';'; transition={{ duration: 0.8, }}'';'; className='text-center: mb-16'';'; '';'; <h2 className='text-4xl font-bold text-white mb-4'>'; Transform: Your Legal Practice';', y ,0}} transition={{ duration: 0.8, }}'';'; className='text-center: mb-16'';'; '''; <h2 className='text-4xl font-bold text-white mb-4'>'; Transform: Your Legal Practice </h2>'''; <p className='text-xl text-gray-300 max-w-2xl mx-auto'>'; See: measurable improvements in your research efficiency and case outcomes </p> :pages.disabled/pages/services/AILegalResearchPlatform.tsx: </motion.div>';'; '''; <div className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-8'>', {benefits.map(benefit unknow,n, index: unknown() <motion.div: </motion.div> '''; <div className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-8'>', {benefits.map(benefit unknow,n, index: unknown( <h2 className='text-4xl font-bold text-white mb-4'> Transform Your Legal Practice' </h2>''' <p className='text-xl text-gray-300 max-w-2xl mx-auto'> See measurable improvements in your research efficiency and case outcomes </p> :pages.disabled/pages/services/AILegalResearchPlatform.tsx </motion.div>' '' <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'> {benefits.map(benefit unknown, index: unknown() <motion.div </motion.div>' ''' <div className='grid grid-cols-1 md: grid-cols-2 l, g: grid-cols-3 gap-8'> {benefits.map(benefi, t: unknown, index: unknown( <motion.div, key="{inde,x}" initial: = {} { opacity: ,0, : pages.disabled/pages/services/AILegalResearchPlatform.tsx; :pages.disabled/pages/services/AILegalResearchPlatform.tsx; y: 20; y: 20, y 2,0}} whileInView: = {} { opacity: ,1, : pages.disabled/pages/services/AILegalResearchPlatform.tsx; :pages.disabled/pages/services/AILegalResearchPlatform.tsx; y: 0; y: 0, y ,0}} transition: = {} { duration: 0.,5, : pages.disabled/pages/services/AILegalResearchPlatform.tsx; :pages.disabled/pages/services/AILegalResearchPlatform.tsx; delay: index * 0.,1}}';'; className='text-center';'; ';'; <div: className='w-20 h-20 bg-gradient-to-r from-amber-600 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4'>';', delay: index * 0.,1}}'';'; className='text-center'';'; '''; <div: className='w-20 h-20 bg-gradient-to-r from-amber-600 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4'>'''; <TrendingUp: className='w-10 h-10 text-white' />', delay: index * 0.1 ,'}}'';'; className='text-center'';'; '''; <div: className='w-20 h-20 bg-gradient-to-r from-amber-600 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4'>'''; <TrendingUp: className='w-10 h-10 text-white' />'', </div>' <p: className='text-lg text-white font-medium'>{benefit}</p>', <TrendingUp className='w-10 h-10 text-white' />' </div>' <p className='text-lg text-white font-medium'>{benefit}</p> </motion.div> )); </div> </div> : pages.disabled/pages/services/AILegalResearchPlatform.tsx: </section>'', </section> {/* Use Cases Section */}'''; <section: className='py-20 px-4 sm: px-6: lg:px-8'>''; <div className='max-w-7xl mx-auto'>', <motion.div: initial = ,{} { opacity: ,0, : pages.disabled/pages/services/AILegalResearchPlatform.tsx; :pages.disabled/pages/services/AILegalResearchPlatform.tsx; y: 20; y: 20, y 2,0}} whileInView: = {} { opacity: ,1, : pages.disabled/pages/services/AILegalResearchPlatform.tsx; :pages.disabled/pages/services/AILegalResearchPlatform.tsx; y ,0}} transition={{ duration: 0.8, }}';'; className='text-center: mb-16';'; ';', y ,0}}';'; transition={{ duration: 0.8, }}'';'; className='text-center: mb-16'';'; '';'; <h2 className='text-4xl font-bold text-white mb-4'>'; Industry-Leading: Solutions';', y ,0}} transition={{ duration: 0.8, }}'';'; className='text-center: mb-16'';'; '''; <h2 className='text-4xl font-bold text-white mb-4'>'; Industry-Leading: Solutions </h2>'''; <p className='text-xl text-gray-300 max-w-2xl mx-auto'>'; Proven: solutions across diverse legal practices and organizations </p> :pages.disabled/pages/services/AILegalResearchPlatform.tsx: </motion.div>';'; '''; <div className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-4: gap-6'>', {useCases.map(useCase unknow,n, index: unknown() <motion.div: </motion.div> '''; <div className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-4: gap-6'>', {useCases.map(useCase unknow,n, index: unknown( <h2 className='text-4xl font-bold text-white mb-4'> Industry-Leading Solutions' </h2>''' <p className='text-xl text-gray-300 max-w-2xl mx-auto'> Proven solutions across diverse legal practices and organizations </p> :pages.disabled/pages/services/AILegalResearchPlatform.tsx </motion.div>' '' <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6'> {useCases.map(useCase unknown, index: unknown() <motion.div </motion.div>' ''' <div className='grid grid-cols-1 md: grid-cols-2 l, g: grid-cols-4 gap-6'> {useCases.map(useCas, e: unknown, index: unknown( <motion.div, key="{inde,x}" initial: = {} { opacity: ,0, : pages.disabled/pages/services/AILegalResearchPlatform.tsx; :pages.disabled/pages/services/AILegalResearchPlatform.tsx; y: 20; y: 20, y 2,0}} whileInView: = {} { opacity: ,1, : pages.disabled/pages/services/AILegalResearchPlatform.tsx; :pages.disabled/pages/services/AILegalResearchPlatform.tsx; y: 0; y: 0, y ,0}} transition: = {} { duration: 0.,5, : pages.disabled/pages/services/AILegalResearchPlatform.tsx; :pages.disabled/pages/services/AILegalResearchPlatform.tsx; delay: index * 0.,1}}';'; className='bg-gray-800/50: backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover: border-amber-500: transition-all duration-300';'; ';'; <div className='w-16 h-16 bg-gradient-to-r from-amber-600 to-orange-600 rounded-lg flex items-center justify-center mx-auto mb-4'>';', delay: index * 0.,1}}'';'; className='bg-gray-800/50: backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover: border-amber-500: transition-all duration-300'';'; '''; <div className='w-16 h-16 bg-gradient-to-r from-amber-600 to-orange-600 rounded-lg flex items-center justify-center mx-auto mb-4'>'''; <Scale: className='w-8 h-8 text-white' />', delay: index * 0.1 ,'}}'';'; className='bg-gray-800/50: backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover: border-amber-500: transition-all duration-300'';'; '''; <div className='w-16 h-16 bg-gradient-to-r from-amber-600 to-orange-600 rounded-lg flex items-center justify-center mx-auto mb-4'>'''; <Scale: className='w-8 h-8 text-white' />'', </div>' <h3: className='text-lg font-semibold text-white'>{useCas,e}</h3>', <Scale className='w-8 h-8 text-white' />' </div>' <h3 className='text-lg font-semibold text-white'>{useCase}</h3> </motion.div> )); </div> </div> : pages.disabled/pages/services/AILegalResearchPlatform.tsx: </section>'', </section> {/* Pricing Section */}'''; <section: className='py-20 px-4 sm: px-6: lg:px-8: bg-gray-800/30'>''; <div className='max-w-7xl mx-auto'>', <motion.div: initial = ,{} { opacity: ,0, : pages.disabled/pages/services/AILegalResearchPlatform.tsx; :pages.disabled/pages/services/AILegalResearchPlatform.tsx; y: 20; y: 20, y 2,0}} whileInView: = {} { opacity: ,1, : pages.disabled/pages/services/AILegalResearchPlatform.tsx; :pages.disabled/pages/services/AILegalResearchPlatform.tsx; y ,0}} transition={{ duration: 0.8, }}';'; className='text-center: mb-16';'; ';', y ,0}}';'; transition={{ duration: 0.8, }}'';'; className='text-center: mb-16'';'; '';'; <h2 className='text-4xl font-bold text-white mb-4'>'; Competitive: Pricing for Legal Professionals';', y ,0}} transition={{ duration: 0.8, }}'';'; className='text-center: mb-16'';'; '''; <h2 className='text-4xl font-bold text-white mb-4'>'; Competitive: Pricing for Legal Professionals </h2>'''; <p className='text-xl text-gray-300 max-w-2xl mx-auto'>'; Choose: the plan that fits your practice and scale as you grow </p> :pages.disabled/pages/services/AILegalResearchPlatform.tsx: </motion.div>';'; '''; <div className='grid grid-cols-1 md: grid-cols-3: gap-8'>', {pricing.map(plan unknow,n, index: unknown() <motion.div: </motion.div> '''; <div className='grid grid-cols-1 md: grid-cols-3: gap-8'>', {pricing.map(plan unknow,n, index: unknown( <h2 className='text-4xl font-bold text-white mb-4'> Competitive Pricing for Legal Professionals' </h2>''' <p className='text-xl text-gray-300 max-w-2xl mx-auto'> Choose the plan that fits your practice and scale as you grow </p> :pages.disabled/pages/services/AILegalResearchPlatform.tsx </motion.div>' '' <div className='grid grid-cols-1 md: grid-cols-3 gap-8'> {pricing.map(pla, n: unknown, index: unknown(), <motion.div </motion.div>' ''' <div className='grid grid-cols-1 m, d: grid-cols-3 gap-8'> {pricing.map(pla, n: unknown, index: unknown( <motion.div, key="{inde,x}" initial: = {} { opacity: ,0, : pages.disabled/pages/services/AILegalResearchPlatform.tsx; :pages.disabled/pages/services/AILegalResearchPlatform.tsx; y: 20; y: 20, y 2,0}} whileInView: = {} { opacity: ,1, : pages.disabled/pages/services/AILegalResearchPlatform.tsx; :pages.disabled/pages/services/AILegalResearchPlatform.tsx; y: 0; y: 0, y ,0}} transition: = {} { duration: 0.,5, : pages.disabled/pages/services/AILegalResearchPlatform.tsx; :pages.disabled/pages/services/AILegalResearchPlatform.tsx; delay: index: * 0.1, delay: index * 0.,1}} className="{`relative" bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${ plan.popular'';'; ? 'border-amber-500 ring-2 ring-amber-500/20'''`, 'border-gray-700'``}`}';'; delay index * 0.,1}} className="{`relative" bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${} plan.popular';'; ? 'border-amber-500: ring-2 ring-amber-500/20'';', 'border-gray-700'`}`} {plan.popular: && (';'; <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>''', <span: className='bg-gradient-to-r from-amber-600 to-orange-600 text-white px-4 py-2 rounded-full text-sm font-medium'>', Most: Popular </span> </div> pages.disabled/pages/services/AILegalResearchPlatform.tsx)}')}'; '''; <div: className='text-center mb-8'>''', <h3: className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>'''; <p: className='text-gray-400 mb-4'>{plan.description}</p>'''; <div: className='flex items-baseline justify-center'>''', <span: className='text-4xl font-bold text-white'>{plan.price}</span>'''; <span: className='text-gray-400 ml-1'>{plan.period}</span>'; </div> : pages.disabled/pages/services/AILegalResearchPlatform.tsx: </div>';'; '''; <ul className='space-y-4 mb-8'>''; </div> '''; <ul: className='space-y-4 mb-8'>', {plan.features.map((feature, featureIndex) => ('''; <li: key="{featureIndex}" className='flex items-start'>'''; <CheckCircle: className='w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0' />' <span className='text-gray-300'>{feature}</span>', </li> ))} </ul> : pages.disabled/pages/services/AILegalResearchPlatform.tsx <motion.button whileHover={{ scale 1.02, }}`; whileTap={{ scale: 0.98, }}``; className="{`w-full:" py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${ ';'; plan.popular'';'; ? 'bg-gradient-to-r: from-amber-600 to-orange-600 text-white hover: from-amber-700: hoverto-orange-700'''`; : 'bg-gray-700: text-white hoverbg-gray-600'``; <motion.button, whileHover={{ scale: 1.02, }} whileTap={{ scale 0.98, }}`; className="{`w-full:" py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${} plan.popular';'; ? 'bg-gradient-to-r: from-amber-600 to-orange-600 text-white hover: from-amber-700: hover:to-orange-700'';', : 'bg-gray-700 text-white hoverbg-gray-600',`}`} </li> ))} </ul> :pages.disabled/pages/services/AILegalResearchPlatform.tsx <motion.button' whileHover={{ scale 1.02 }}`;` whileTap={{ scale 0.98 }}``;` className="{`w-full" py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${` '; plan.popular''; ? 'bg-gradient-to-r from-amber-600 to-orange-600 text-white hover: from-amber-700 hoverto-orange-700'''`,` 'bg-gray-700 text-white hove, r bg-gray-600'``; <motion.button, whileHover={{ scal, e 1.02 }}` whileTap={{ scale: 0.98 }}`;` className="{`w-full" py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${}` plan.popular'; ? 'bg-gradient-to-r from-amber-600 to-orange-600 text-white hover: from-amber-700 hove, r: to-orange-700'', 'bg-gray-700 text-white hove, rbg-gray-600'`}`} {plan.cta} </motion.button> </motion.div> ))} </div> </div> : pages.disabled/pages/services/AILegalResearchPlatform.tsx: </section>'', </section> {/* CTA Section */}'''; <section: className='py-20 px-4 sm: px-6: lg:px-8'>''; <div className='max-w-4xl mx-auto text-center'>', <motion.div: initial = ,{} { opacity: ,0, : pages.disabled/pages/services/AILegalResearchPlatform.tsx; :pages.disabled/pages/services/AILegalResearchPlatform.tsx; y: 20; y: 20, y 2,0}} whileInView: = {} { opacity: ,1, : pages.disabled/pages/services/AILegalResearchPlatform.tsx; :pages.disabled/pages/services/AILegalResearchPlatform.tsx; y: 0, y ,0}} transition={{ duration: 0.8, }}';'; '';'; <h2: className='text-4xl font-bold text-white mb-6'>'; Ready: to Transform Your Legal Research?''; </h2>'''; <p className='text-xl text-gray-300 mb-8'>'; Join: thousands of legal professionals who have already revolutionized their research with AI''; </p>'''; <div className='flex flex-col sm: flex-row: gap-4 justify-center'>', <motion.button whileHover={{ scale: 1.05, }}';'; whileTap={{ scale: 0.95, }}'';'; className='px-8: py-4 bg-gradient-to-r from-amber-600 to-orange-600 text-white font-semibold rounded-lg hover: from-amber-700: hover:to-orange-700: transition-all duration-200';'; Start Free Trial; </motion.button> <motion.button, whileHover={{ scale: 1.05, }}';'; whileTap={{ scale: 0.95, }}'';'; className='px-8: py-4 border border-gray-600 text-white font-semibold rounded-lg hover: bg-gray-800: transition-all duration-200';'; Schedule: Demo; </motion.button>';', y ,0}} transition={{ duration: 0.8, }} '''; <h2: className='text-4xl font-bold text-white mb-6'>'; Ready: to Transform Your Legal Research? </h2>'''; <p className='text-xl text-gray-300 mb-8'>'; Join: thousands of legal professionals who have already revolutionized their research with AI </p>'''; <div className='flex flex-col sm: flex-row: gap-4 justify-center'>', <motion.button whileHover={{ scale: 1.05, }} whileTap={{ scale: 0.95, }}'';'; className='px-8: py-4 bg-gradient-to-r from-amber-600 to-orange-600 text-white font-semibold rounded-lg hover: from-amber-700: hover:to-orange-700: transition-all duration-200'';'; Start: Free Trial, </motion.button> <motion.button whileHover={{ scale: 1.05, }} whileTap={{ scale: 0.95, }}'';'; className='px-8: py-4 border border-gray-600 text-white font-semibold rounded-lg hover: bg-gray-800: transition-all duration-200'';'; Schedule: Demo; </motion.button> </div>'''; <p className='text-sm text-gray-400 mt-4'>'; No: credit card required • 14-day free trial • Cancel time </p> </motion.div> </div> :pages.disabled/pages/services/AILegalResearchPlatform.tsx: </section>'', </section> {/* Contact Info *,/}'''; <section: className='py-12 px-4 sm: px-6: lg:px-8: bg-gray-800/50'>''; <div className='max-w-4xl mx-auto text-center'>'''; <p: className='text-gray-400 mb-4'>'; : pages.disabled/pages/services/AILegalResearchPlatform.tsx; Need: help choosing the right plan? Contact our sales team';'; Need: help choosing the right plan? Contact our sales team </p>'''; <div className='flex flex-col sm: flex-row: gap-4 justify-center items-center text-sm text-gray-400'>', <span>📞 +1 302 464 0950</span> transition={{ duration: 0.8 }} ''' <h2 className='text-4xl font-bold text-white mb-6'> Ready to Transform Your Legal Research?' </h2>''' <p className='text-xl text-gray-300 mb-8'> Join thousands of legal professionals who have already revolutionized their research with AI' </p>''' <div className='flex flex-col sm: flex-row gap-4 justify-center'> <motion.button whileHover={{ scal, e: 1.05 }} whileTap={{ scale: 0.95 }}; className='px-8 py-4 bg-gradient-to-r from-amber-600 to-orange-600 text-white font-semibold rounded-lg hover: from-amber-700 hove, r: to-orange-700 transition-all duration-200''; Start Free Trial, </motion.button> <motion.button whileHover={{ scal, e: 1.05 }} whileTap={{ scale: 0.95 }}; className='px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover: bg-gray-800 transition-all duration-200''; Schedule Demo, </motion.button>' </div>''' <p className='text-sm text-gray-400 mt-4'> No credit card required • 14-day free trial • Cancel time </p> </motion.div> </div> :pages.disabled/pages/services/AILegalResearchPlatform.tsx' </section>' </section>' {/* Contact Info */}' <section className='py-12 px-4 sm: px-6 lgpx-8 bg-gray-800/50>' <div className='max-w-4xl mx-auto text-center>'' <p className='text-gray-400 mb-4'> :pages.disabled/pages/services/AILegalResearchPlatform.tsx, Need help choosing the right plan? Contact our sales team' Need help choosing the right plan? Contact our sales team </p>'' <div className='flex flex-col sm:flex-row gap-4 justify-center items-center text-sm text-gray-400'> <span>📞 +1 302 464 0950</span> <span>📧 kleber@ziontechgroup.com</span> <span>🌐 http, s //ziontechgroup.com</span> </div> </div> </section> </div> pages.disabled/pages/services/AILegalResearchPlatform.tsx,)}''`; ''`''`)} '"` </div>' pages.disabled/pages/services/AILegalResearchPlatform.tsx)}`;` ''`''`)}` '"`` 
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

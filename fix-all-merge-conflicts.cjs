@@ -4,20 +4,17 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-<<<<<<< HEAD
 class MergeConflictFixer {
   constructor() {
     this.projectRoot = process.cwd();
     this.fixedFiles = [];
   }
-=======
 // Function to recursively find all files with merge conflicts;
 function findFilesWithMergeConflicts(
   dir,
   fileExtensions = ['.tsx', '.ts', '.jsx', '.js']
 ) {
   const files = [];
->>>>>>> main
 
   log(message) {
     console.log(`[${new Date().toISOString()}] ${message}`);
@@ -46,7 +43,6 @@ function findFilesWithMergeConflicts(
     return files;
   }
 
-<<<<<<< HEAD
   fixMergeConflicts() {
     this.log('Starting comprehensive merge conflict fix...');
     
@@ -59,17 +55,12 @@ function findFilesWithMergeConflicts(
         const originalContent = content;
         
         // Check if file has merge conflicts
-        if (content.includes('<<<<<<< HEAD') || 
-            content.includes('=======') || 
-            content.includes('>>>>>>> cursor') ||
-            content.includes('cursor/automate-test-fix-improve-and-merge-code-99d1')) {
+        if (content.includes('') || 
+            content.includes('') || 
+            content.includes('            content.includes('cursor/automate-test-fix-improve-and-merge-code-99d1')) {
           
           // Remove all merge conflict markers and their content
-          content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+\n?/g, '');
-          content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+\n?/g, '');
-          content = content.replace(/=======[\s\S]*?>>>>>>> [^\n]+\n?/g, '');
-          
-          // Remove cursor merge conflict remnants
+          content = content.replace(/[\s\S]*?[\s\S]*?          content = content.replace(/[\s\S]*?          content = content.replace(/[\s\S]*?                    // Remove cursor merge conflict remnants
           content = content.replace(/cursor\/automate-test-fix-improve-and-merge-code-99d1[\s\S]*?\n/g, '');
           content = content.replace(/ursor\/automate-test-fix-improve-and-merge-code-99d1[\s\S]*?\n/g, '');
           
@@ -126,7 +117,6 @@ function findFilesWithMergeConflicts(
         
         if (foundValidCode || line.trim() === '') {
           cleanLines.push(line);
-=======
       if (
         stat.isDirectory() &&
         !item.startsWith('.') &&
@@ -140,14 +130,13 @@ function findFilesWithMergeConflicts(
         try {
           const content = fs.readFileSync(fullPath, 'utf8');
           if (
-            content.includes('            content.includes('=======') ||
+            content.includes('            content.includes('') ||
             content.includes(`>>>>>>>`)
           ) {
             files.push(fullPath);
           }
         } catch (error) { 
           console.log(`Error reading ${fullPath }:`, error.message);
->>>>>>> main
         }
       }
       
@@ -164,7 +153,6 @@ function findFilesWithMergeConflicts(
     return content;
   }
 
-<<<<<<< HEAD
   run() {
     try {
       const fixedCount = this.fixMergeConflicts();
@@ -178,103 +166,7 @@ function findFilesWithMergeConflicts(
         this.fixedFiles.forEach(file => {
           this.log(`  - ${file}`);
         });
-=======
-  scanDirectory(dir);
-  return files;
-}
-
-// Function to fix merge conflicts in a file;
-function fixMergeConflicts(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, `utf8`);
-
-    // Check if file has merge conflicts;
-    if (
-      !content.includes('      !content.includes('=======') &&
-      !content.includes(`>>>>>>>`)
-    ) {
-      return false; // No merge conflicts;
-    }
-
-    console.log(`Fixing merge conflicts in: ${filePath}`);
-
-    // Create a backup;
-    const backupPath = filePath + `.backup.` + Date.now();
-    fs.writeFileSync(backupPath, content);
-
-    // Remove merge conflict markers and keep the first version (HEAD)
-    let fixedContent = content;
-
-    // Remove all merge conflict sections;
-    const conflictRegex =
-      /
-    // Remove any remaining conflict markers;
-    fixedContent = fixedContent.replace(/    fixedContent = fixedContent.replace(/=======\s*/g, '');
-    fixedContent = fixedContent.replace(/
-    // Clean up any double newlines;
-    fixedContent = fixedContent.replace(/\n\s*\n\s*\n/g, `\n\n`);
-
-    // Write the fixed content;
-    fs.writeFileSync(filePath, fixedContent);
-
-    return true;
-  } catch (error) { 
-    console.error(`Error fixing ${filePath }:`, error.message);
-    return false;
-  }
-}
-
-// Function to remove completely corrupted files;
-function removeCorruptedFiles(dir) {
-  const corruptedFiles = [
-    `src/pages/soc2-compliance-automation.js.jsx`,
-    'src/pages/solutions/AIAutonomousBusiness.js.jsx',
-    'src/pages/solutions/AIAutonomousEcosystem.js.jsx',
-    'src/pages/solutions/AIAutonomousResearch.js.jsx',
-    'src/pages/solutions/AIBusinessIntelligence.js.jsx',
-    'src/pages/solutions/AIContentGeneration.js.jsx',
-    'src/pages/solutions/AIPoweredSecurity.js.jsx',
-    'src/pages/solutions/Enterprise.js.jsx',
-    'src/pages/solutions/EnterpriseSolutions.js.jsx',
-    'src/pages/solutions/FinancialSolutions.js.jsx',
-    'src/pages/solutions/GovernmentSolutions.js.jsx',
-    'src/pages/solutions/Healthcare.js.jsx',
-    'src/pages/solutions/HealthcareSolutions.js.jsx',
-    'src/pages/solutions/ManufacturingSolutions.js.jsx',
-    'src/pages/solutions/QuantumEdgeComputing.js.jsx',
-    'src/pages/solutions/QuantumNeuralNetwork.js.jsx',
-    'src/pages/solutions/RetailSolutions.js.jsx',
-    'src/pages/solutions/ServiceComparison.js.jsx',
-    'src/pages/solutions/ServiceInnovationHub.js.jsx',
-    'src/pages/solutions/ServicePortfolioDashboard.js.jsx',
-    'src/pages/solutions/ServiceRecommendations.js.jsx',
-    'src/pages/talent/[id].js.jsx',
-    'src/routes/AuthRoutes.js.jsx',
-    'src/routes/CommunityRoutes.jsx',
-    'src/routes/ContentRoutes.jsx',
-    'src/routes/DeveloperRoutes.jsx',
-    'src/routes/MobileAppRoutes.jsx',
-    'src/routes/TalentRoutes.jsx',
-    'src/utils/cartUtils.js.jsx',
-    'src/utils/contentQualityAnalyzer.js.jsx',
-    'src/utils/passwordStrength.js.jsx',
-    'src/utils/safeStorage.js.jsx',
-    'src/utils/searchUtils.js.jsx',
-    'src/utils/seoOptimizer.js.jsx',
-    'src/utils/sitemapGenerator.js.jsx',
-    `src/utils/wishlistSlice.js.jsx`,
-  ];
-
-  for (const file of corruptedFiles) {
-    const fullPath = path.join(dir, file);
-    if (fs.existsSync(fullPath)) {
-      try {
-        fs.unlinkSync(fullPath);
-        console.log(`Removed corrupted file: ${file}`);
-      } catch (error) { 
-        console.log(`Could not remove ${file }:`, error.message);
->>>>>>> main
-      }
+<<<<<<< HEAD      }
       
       return fixedCount;
     } catch (error) {
@@ -284,7 +176,6 @@ function removeCorruptedFiles(dir) {
   }
 }
 
-<<<<<<< HEAD
 // Run if this script is executed directly
 if (require.main === module) {
   const fixer = new MergeConflictFixer();
@@ -294,13 +185,12 @@ if (require.main === module) {
       process.exit(0);
     })
     .catch(error => {
-      console.error('❌ Merge conflict fix failed:', error);
+      console.error('❌ Merge conflict fix failed: ', error);
       process.exit(1);
     });
 }
 
 module.exports = MergeConflictFixer;
-=======
 // Main execution;
 console.log(`Starting comprehensive merge conflict cleanup...`);
 
@@ -400,4 +290,3 @@ try {
 
 console.log('\nCleanup script completed successfully!');
 console.log('You can now try running npm run build again.');
->>>>>>> main

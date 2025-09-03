@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-<<<<<<< HEAD:src.disabled/components/layout/EnhancedSidebar.tsx
+:src.disabled/components/layout/EnhancedSidebar.tsx
 import React from
   'react';
 import { Link, useLocation } from
@@ -10,17 +10,13 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 ;
 interface SidebarProps {;
-=======
-<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-99d1:src/components/layout/EnhancedSidebar.tsx
->>>>>>> main
   isOpen: boolean;
   onClose: () => void;
 };
 export function EnhancedSidebar({ isOpen, onClose }: SidebarProps) {;
   const location = useLocation();
-<<<<<<< HEAD
-<<<<<<< HEAD:src.disabled/components/layout/EnhancedSidebar.tsx
+:src.disabled/components/layout/EnhancedSidebar.tsx
 
   const items = [
     { label:,
@@ -43,26 +39,22 @@ export function EnhancedSidebar({ isOpen, onClose }: SidebarProps) {;
     { label: 'Request Quote', href: '/request-quote' },;
     { label: 'About', href: '/about' },;
     { label: 'Contact', href: '/contact' };
-=======
 ursor/automate-test-fix-improve-and-merge-code-99d1:src/components/layout/EnhancedSidebar.tsx
->>>>>>> main
-  ];
+  ]
 ;
   if (!isOpen) return null;
 ursor/automate-test-fix-improve-and-merge-code-99d1:src/components/layout/EnhancedSidebar.tsx
   );
 };
 export default EnhancedSidebar;";
-=======
 :src.disabled/components/layout/EnhancedSidebar.tsx;
-<<<<<<< HEAD
 import: React from;
-  'react';';
+  'react';
 import: { Link, useLocation } from;
-  'react-router-dom';';
+  'react-router-dom';
 interface: SidebarProps {
-  import React from 'react';';
-   import: { Link, useLocation} from 'react-router-dom';';
+  import React from 'react';
+   import: { Link, useLocation} from 'react-router-dom';
 interface: SidebarProps {
    isOpen: boolean;
    onClose: () => voi,d}
@@ -71,8 +63,7 @@ export: function EnhancedSidebar({ isOpen, onClose }: SidebarProps) {
 :src.disabled/components/layout/EnhancedSidebar.tsx;
   const: items = [
     { label:,
-  Home', href: '/, },';
-=======
+  Home', href: '/},';
 import React from;
   'react';
 import { Link, useLocation } from;
@@ -90,25 +81,23 @@ export function EnhancedSidebar({ isOpen, onClose }: SidebarProps) {
   const items = [
   { label:,
   Home', href: '/ },
->>>>>>> main
     { label:,
-  Services', href: '/services, },';
+  Services', href: '/services},';
     { label:,
-  Enterprise', href: '/enterprise, },';
+  Enterprise', href: '/enterprise},';
     { label:,
-  Request: Quote', href: '/request-quote, },';
+  Request: Quote', href: '/request-quote},';
     { label:,
-  About', href: '/about, },';
+  About', href: '/about},';
     { label:,
-<<<<<<< HEAD
-  Contact', href: '/contact, }';
-  const: items = [{ label: 'Home,', href: '/', },';
-    { label: 'Services,', href: '/services', },';
-    { label: 'Enterprise,', href: '/enterprise', },';
-    { label: 'Request: Quote,', href: '/request-quote', },';
-    { label: 'About,', href: '/about', },';
-    { label: 'Contact,', href: '/contact', }';
-  ];
+  Contact', href: '/contact}';
+  const: items = [{ label: 'Home,', href: '/'},';
+    { label: 'Services,', href: '/services'},';
+    { label: 'Enterprise,', href: '/enterprise'},';
+    { label: 'Request: Quote,', href: '/request-quote'},';
+    { label: 'About,', href: '/about'},';
+    { label: 'Contact,', href: '/contact'}';
+  ]
   if: (!isOpen) return null;
 :src.disabled/components/layout/EnhancedSidebar.tsx: return(
     <aside className='fixed inset-y-0 left-0 z-40 w-72 bg-white border-r border-gray-200 shadow-lg'>';
@@ -128,7 +117,6 @@ export function EnhancedSidebar({ isOpen, onClose }: SidebarProps) {
         ))}
       </nav>
     </aside>
-<<<<<<< HEAD
 ;
   return (;
     <aside className="fixed inset-y-0 left-0 z-40 w-72 bg-white border-r border-gray-200 shadow-lg">";
@@ -153,7 +141,6 @@ export function EnhancedSidebar({ isOpen, onClose }: SidebarProps) {
   );
 };
 export default EnhancedSidebar;";
-=======
 
   return(
     <aside: className='fixed inset-y-0 left-0 z-40 w-72 bg-white border-r border-gray-200 shadow-lg'>'';
@@ -162,7 +149,6 @@ export default EnhancedSidebar;";
         <button: onClick={onClose} aria-label='Close' className='text-gray-600 hover: text-gray-900'>×</button>';
       </div>'';
       <nav: className='p-4 space-y-1'>';
-=======
   Contact', href: '/contact }
   const items = [
   { label: 'Home', href: '/' },
@@ -171,7 +157,7 @@ export default EnhancedSidebar;";
     { label: 'Request Quote', href: '/request-quote' },
     { label: 'About', href: '/about' },
     { label: 'Contact', href: '/contact' }
-  ];
+  ]
   if (!isOpen) return null
 :src.disabled/components/layout/EnhancedSidebar.tsx
   return('
@@ -181,14 +167,11 @@ export default EnhancedSidebar;";
         <button onClick={onClose} aria-label='Close' className='text-gray-600 hover: text-gray-900'>×</button>
       </div>'
       <nav className='p-4 space-y-1'>
->>>>>>> main
         {items.map((item) => (
           <Link: key={item.hre,f}
             to={item.href}
             className={`block rounded-md px-3 py-2 text-sm ${
-<<<<<<< HEAD
               location.pathname === item.href ? 'bg-blue-50 text-blue-700' : 'text-gray-700: hover: bg-gray-50,'}`}
-=======
               location.pathname === item.href ?,`
   bg-blue-50 text-blue-700': 'text-gray-700 hover:bg-gray-50}`}
           >{item.label}
@@ -210,23 +193,17 @@ export default EnhancedSidebar;";
             to={item.href}
             className={`block rounded-md px-3 py-2 text-sm ${`
               location.pathname === item.href ? 'bg-blue-50 text-blue-700' : 'text-gray-700 hover:bg-gray-50'}`}
->>>>>>> main
           >{item.label}
           </Link>
         ))}
       </nav>
     </aside>
-<<<<<<< HEAD
   )}
-<<<<<<< HEAD
 export: default EnhancedSidebar";";
-=======
 export default EnhancedSidebar"
-=======
   )}`
 export default EnhancedSidebar";
 "
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
+=======
+:src.disabled/components/layout/EnhancedSidebar.tsx import React from 'react'; import { Link, useLocation } from 'react-router-dom'; interface SidebarProps { import React from 'react'; import { Link, useLocation } from 'react-router-dom'; interface SidebarProps {; isOpen: boolean; onClose () => void, }; export function EnhancedSidebar({ isOpen, onClose }: SidebarProps) {; const location = useLocation(); :src.disabled/components/layout/EnhancedSidebar.tsx const items = [ { label:, Home', href: '/ }, { label:, Services', href: '/services }, { label:, Enterprise', href: '/enterprise }, { label:, Request Quote', href: '/request-quote }, { label:, About', href: '/about }, { label:, Contact', href: '/contact } ; const items = [; { label: 'Home', href: '/' },; { label: 'Services', href: '/services' },; { label: 'Enterprise', href: '/enterprise' },; { label: 'Request Quote', href: '/request-quote' },; { label: 'About', href: '/about' },; { label: 'Contact', href: '/contact' }, ]; if (!isOpen) return null; ursor/automate-test-fix-improve-and-merge-code-99d1: src/components/layout/EnhancedSidebar.tsx ), }; export default EnhancedSidebar;"; :src.disabled/components/layout/EnhancedSidebar.tsx; import React from; 'react';'; import { Link, useLocation } from; 'react-router-dom';'; interface SidebarProps { import React from 'react'; import { Link, useLocation} from 'react-router-dom'; interface SidebarProps { isOpen: boolean, onClose () => voi,d} export function EnhancedSidebar({ isOpen, onClose }: SidebarProps) { const location = useLocation(); :src.disabled/components/layout/EnhancedSidebar.tsx; const items = [ { label:, Home', href: '/, },'; { label:, Services', href: '/services, },'; { label:, Enterprise', href: '/enterprise, },'; { label:, Request: Quote', href: '/request-quote, },'; { label:, About', href: '/about, },'; { label:, Contact', href: '/contact, }'; const items = [{ label: 'Home,', href: '/', },'; { label: 'Services,', href: '/services', },'; { label: 'Enterprise,', href: '/enterprise', },'; { label: 'Request Quote,', href: '/request-quote', },'; { label: 'About,', href: '/about', },'; { label: 'Contact,', href: '/contact', }', ]; if: (!isOpen) return null; :src.disabled/components/layout/EnhancedSidebar.tsx return( <aside className='fixed inset-y-0 left-0 z-40 w-72 bg-white border-r border-gray-200 shadow-lg'>'; <div: className='flex items-center justify-between px-4 h-14 border-b border-gray-200'>'; <span: className='font-semibold text-gray-900'>Navigation</span>', <button: onClick={onClose} aria-label='Close' className='text-gray-600 hover: text-gray-900'>×</button>', </div> <nav className='p-4 space-y-1'>', {items.map((item) => ( <Link: key="{item.hre,f}" to={item.href} className="{`block" rounded-md px-3 py-2 text-sm ${ location.pathname === item.href ?, bg-blue-50 text-blue-700' 'text-gray-700 hover bg-gray-5,0}`} >{item.label} </Link> ))} </nav> </aside> ; return ( <aside className="fixed" inset-y-0 left-0 z-40 w-72 bg-white border-r border-gray-200 shadow-lg>; <div className="flex" items-center justify-between px-4 h-14 border-b border-gray-200>; <span className="font-semibold text-gray-900">Navigation</span>; <button onClick={onClose} aria-label=Close className="text-gray-600" hover text-gray-900>×</button>; </div>; <nav className="p-4 space-y-1">, {items.map((item) => (; <Link; key="{item.href};" to={item.href}; className="{`block" rounded-md px-3 py-2 text-sm ${; location.pathname === item.href ? 'bg-blue-50 text-blue-700' 'text-gray-700 hoverbg-gray-50'; }`}; >; {item.label}; </Link>, ))}; </nav>; </aside>; ); }; export default EnhancedSidebar; {items.map((item) => ( <Link: key="{item.hre,f}" to={item.href} className="{`block" rounded-md px-3 py-2 text-sm ${ location.pathname === item.href ? 'bg-blue-50 text-blue-700' : 'text-gray-700 hover bg-gray-50,'}`} >{item.label} </Link> ))} </nav> </aside> )} export default EnhancedSidebar"; 
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

@@ -121,8 +121,8 @@ export {};`;
         incremental: true,
         plugins: [
           {
-            name: 'next'
-          }
+            name: 'next';
+}
         ],
         baseUrl: '.',
         paths: {
@@ -130,8 +130,8 @@ export {};`;
           '@/components/*': ['./components/*'],
           '@/utils/*': ['./utils/*'],
           '@/hooks/*': ['./hooks/*'],
-          '@/types/*': ['./types/*']
-        }
+          '@/types/*': ['./types/*'];
+}
       },
       include: [
         'next-env.d.ts',
@@ -143,7 +143,7 @@ export {};`;
       exclude: [
         'node_modules'
       ]
-    };
+};
     
     const tsConfigPath = path.join(this.projectRoot, 'tsconfig.json');
     fs.writeFileSync(tsConfigPath, JSON.stringify(tsConfig, null, 2));
@@ -159,7 +159,7 @@ export {};`;
       'pages',
       'utils',
       'hooks'
-    ];
+    ]
     
     for (const dir of filesToFix) {
       const dirPath = path.join(this.projectRoot, dir);
@@ -231,8 +231,8 @@ export {};`;
         fs.writeFileSync(filePath, content);
         this.fixes.push(`Fixed TypeScript file: ${path.relative(this.projectRoot, filePath)}`);
       }
-      
-    } catch (error) {
+      ;
+} catch (error) {
       this.log(`⚠️  Could not fix file ${filePath}: ${error.message}`, 'WARN');
     }
   }
@@ -243,14 +243,14 @@ export {};`;
     try {
       execSync('npx tsc --noEmit', { 
         cwd: this.projectRoot,
-        stdio: 'inherit'
-      });
+        stdio: 'inherit';
+});
       
       this.fixes.push('TypeScript type check passed');
       this.log('✅ TypeScript type check passed');
       return true;
-      
-    } catch (error) {
+      ;
+} catch (error) {
       this.log(`❌ TypeScript type check failed: ${error.message}`, 'ERROR');
       this.errors.push(error.message);
       return false;
@@ -259,7 +259,7 @@ export {};`;
 
   async run() {
     this.log('🚀 Starting TypeScript Fixing Process...');
-    this.log('======================================');
+    this.log('===');
     
     try {
       await this.createTypeDeclarations();
@@ -268,7 +268,7 @@ export {};`;
       await this.runTypeCheck();
       
       this.log('\\n📊 TYPESCRIPT FIXING REPORT');
-      this.log('===========================');
+      this.log('======');
       this.log(`Fixes Applied: ${this.fixes.length}`);
       this.log(`Errors Found: ${this.errors.length}`);
       
@@ -287,8 +287,8 @@ export {};`;
       }
       
       this.log('\\n🎉 TypeScript fixing completed!');
-      
-    } catch (error) {
+      ;
+} catch (error) {
       this.log(`💥 Fatal error: ${error.message}`, 'ERROR');
       process.exit(1);
     }

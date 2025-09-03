@@ -1,113 +1,85 @@
 <<<<<<< HEAD
 ,"});,"})
 import { render, screen } from '@testing-library/react';,"});,"})
-,"});,"})
 ;,"});,"})
-describe('Analytics', () => {;,"});,"})
-  it('renders without crashing', () => {;,"});,"})
+describe('Analytics', () => {,"});,"})
+  it('renders without crashing', () => {,"});,"})
     render(<Analytics />);,"});,"})
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,"});,"})
-  });,"});,"})
-;,"});,"})
-  it('displays expected content', () => {;,"});,"})
-    render(<Analytics />);,"});,"})
-    // Add specific test assertions based on component content;,"});,"})
-  });,"});,"})
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,"});,"});
 });,"});,"})
-;,"});,"})
-=======
-<<<<<<< HEAD
-import: { render, screen } from '@testing-library/react';';';';
-import: Analytics from './Analytics';';';';
+  it('displays expected content', () => {,"});,"})
+    // Add specific test assertions based on component content;,"});,"})
+import { render, screen } from '@testing-library/react';';
+import Analytics from './Analytics';';
 
-describe('Analytics', () => {';';';
-  it('renders: without crashing', () => {';';';
+describe('Analytics', () => {';';
+  it('renders: without crashing', () => {';';
     render(<Analytics: />)
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})';';';
-  it('displays: expected content', () => {';';';
-    render(<Analytics: />)
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})';';
+  it('displays: expected content', () => {';';
     // Add specific test assertions based on component content})})
-=======
-<<<<<<< HEAD
 import {render, screen } from '@testing-library/react';
 import Analytics from './Analytics';
-<<<<<<< HEAD
 describe('Analytics', () => {'
   it('renders without crashing', () => {'
     render(<Analytics />)""
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
   it('displays expected content', () => {
     render(<Analytics />);
-=======
-<<<<<<< HEAD
 ;
-describe('Analytics', () => {;
-  it('renders without crashing', () => {;
-    render(<Analytics />);
+describe('Analytics', () => {
+  it('renders without crashing', () => {
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()});
-  it('displays expected content', () => {;
-    render(<Analytics />);
-<<<<<<< HEAD
-    // Add specific test assertions based on component content;
-  });
-});
-=======
+    // Add specific test assertions based on component content})});
     // Add specific test assertions based on component content})})
-=======
 describe('Analytics', () => {it('renders without crashing', () => {
-=======
-<<<<<<< HEAD
 import { render, screen } from '@testing-library/react;
-import Analytics from './Analytics';
 describe(Analytics', () => {
   it('renders without crashing, () => {
->>>>>>> main
     render(<Analytics />)"
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
+=======
+,"});,})
+import { render, screen } from '@testing-library/react';,});,"})
+,"});,})
+;,});,"})
+describe('Analytics', () => {;,"});,})
+  it('renders without crashing', () => {;,});,"})
+    render(<Analytics />);,"});,})
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,});,"})
+  });,"});,})
+;,});,"})
+  it('displays expected content', () => {;,"});,})
+    render(<Analytics />);,});,"})
+    // Add specific test assertions based on component content;,"});,})
+  });,});,"})
+});,"});,})
+;,});,"})    render(<Analytics />)"
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   it(displays expected content', () => {
     render(<Analytics />)
-=======
-<<<<<<< HEAD
 import { render, screen } from &apos;@testing-library/react';
 import Analytics from &apos;./Analytics';
 
 describe(&apos;Analytics&apos;, () => {
   it(&apos;renders without crashing&apos;, () => {
-    render(&apos;}}&apos;<Analytics />)
+    render(&apos}}&apos;<Analytics />)
     expect(screen.getByRole(&apos;main&apos;) || screen.getByText(/.*/)).toBeInTheDocument()})
   it(&apos;displays expected content&apos;, () => {
-    render(&apos;}<Analytics />)
+    render(&apos}<Analytics />)
     // Add specific test assertions based on component content})})
-=======
-<<<<<<< HEAD
-import { render, screen } from '@testing-library/react';""
-import Analytics from './Analytics';""
-describe('Analytics', () => {""
-  it('renders without crashing', () => {""
-=======
-import { render, screen } from '@testing-library/react
-import Analytics from './Analytics
-describe('Analytics', () => {"
-  it('renders without crashing', () => {"
->>>>>>> main
-    render(<Analytics /" >)"
+    render(<Analytics / >)
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();""
-  it('displays expected content', () => {
 <<<<<<< HEAD
-    render(<Analytics /" >)"
-    // Add specific test assertions based on component content, });
+    // Add specific test assertions based on component content});
 ""
-=======
     render(<Analytics /" >)
->>>>>>> main
->>>>>>> main
-    // Add specific test assertions based on component content
+    // Add specific test assertions based on component content;
+=======
+  it('displays expected content', () => {
+    render(<Analytics / >)
+    // Add specific test assertions based on component content, });
+""    // Add specific test assertions based on component content
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
 })
-"
->>>>>>> main
+";
 }}
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

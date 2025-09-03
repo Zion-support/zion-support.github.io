@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useEffect } from 'react';
 import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
 ;
@@ -15,7 +14,6 @@ export function usePerformanceMonitoring() {;
           event_label: metric.id,;
           value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),;
           non_interaction: true,;
-=======
 <<<<<<< HEAD
 import { useState, useEffect } from 'react';
 
@@ -23,44 +21,33 @@ export const usePerformanceMonitoring = () => {
   const [metrics, setMetrics] = useState({
     loadTime: 0,
     renderTime: 0,
-    memoryUsage: 0
-  });
+    memoryUsage: 0;
+});
 
   useEffect(() => {
     const startTime = performance.now();
     
     const measurePerformance = () => {const endTime = performance.now();
       const loadTime = endTime - startTime;
-=======
-<<<<<<< HEAD
 import { useEffect } from &apos;react';
 import { getCLS, getFID, getFCP, getLCP, getTTFB } from &apos;web-vitals';&apos;&apos;
-=======
 import React from 'react';
 import { SEO } from '@/components/SEO';
->>>>>>> main
 
-<<<<<<< HEAD
+=======
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
 export function usePerformanceMonitoring() {
   useEffect(() => {}}
     const sendToAnalytics = (metric) => {
       // Send to your analytics service
-<<<<<<< HEAD
-      console.log(&apos;Performance metric:&apos;, metric);
-=======
-      // Performance metric logged (removed console.log for production)
->>>>>>> main
->>>>>>> main
-      
-<<<<<<< HEAD
+      console.log(&apos;Performance metric: &apos;, metric);      
       if (performance.memory) {
         setMetrics({
           loadTime, renderTime: endTime - startTime,
-          memoryUsage: performance.memory.usedJSHeapSize / 1024 / 1024
-        });
+          memoryUsage: performance.memory.usedJSHeapSize / 1024 / 1024;
+});
       }
     };
-<<<<<<< HEAD
 
     measurePerformance();
     
@@ -71,44 +58,23 @@ export function usePerformanceMonitoring() {
 
   return metrics;
 };
-=======
-=======
-      // Example: Send to Google Analytics
-<<<<<<< HEAD
-      if (typeof gtag !== &apos;undefined&apos;) {
-        gtag(&apos;event&apos;, metric.name, {
-          event_category: &apos;Web Vitals&apos;,
-          event_label: metric.id,
-          value: Math.round(metric.name === &apos;CLS&apos; ? metric.value * 1000 : metric.value),
-          non_interaction: true,
-=======
-      if (typeof gtag !== 'undefined') {
-        gtag('event', metric.name, { event_category: 'Web Vitals', event_label: metric.id,
-          value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value), non_interaction: true,
->>>>>>> main
->>>>>>> main
-        })}
-    }
+        })}    }
 ;
     getCLS(sendToAnalytics);
     getFID(sendToAnalytics);
     getFCP(sendToAnalytics);
     getLCP(sendToAnalytics);
-<<<<<<< HEAD
     getTTFB(sendToAnalytics)}, [])}
 ;
 export function reportWebVitals(metric) {;
+<<<<<<< HEAD
   console.log('Web Vitals:', metric)}
-=======
     getTTFB(sendToAnalytics)}, [])}&apos;
 
 export function reportWebVitals(metric) {
-<<<<<<< HEAD
   console.log(&apos;Web Vitals:&apos;, metric)}&apos;'
-=======
-  // Web Vitals logged (removed console.log for production)
+  // Web Vitals logged (removed console.log for production);
 }
-=======
 const UsePerformanceMonitoring: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -138,8 +104,6 @@ const UsePerformanceMonitoring: React.FC = () => {
 };
 
 export default UsePerformanceMonitoring;
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
+=======
+  console.log('Web Vitals: ', metric)}
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

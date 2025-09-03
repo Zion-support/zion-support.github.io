@@ -31,8 +31,8 @@ class EnhancedAutomationSuite {
       const result = execSync(command, {
         cwd: this.projectRoot,
         encoding: 'utf8',
-        timeout: 300000, // 5 minutes timeout
-      });
+        timeout: 300000, // 5 minutes timeout;
+});
       this.log(`✅ Completed: ${description}`);
       return { success: true, output: result };
     } catch (error) {
@@ -47,13 +47,13 @@ class EnhancedAutomationSuite {
     const commands = [
       {
         command: 'npm run format',
-        description: 'Prettier Formatting',
-      },
+        description: 'Prettier Formatting',;
+},
       {
         command: 'npx eslint . --ext .js,.jsx,.ts,.tsx --fix --max-warnings 0',
-        description: 'ESLint Auto-fix',
-      },
-    ];
+        description: 'ESLint Auto-fix',;
+},
+    ]
 
     const results = [];
     for (const cmd of commands) {
@@ -100,8 +100,8 @@ class EnhancedAutomationSuite {
       tsFiles: 0,
       jsxFiles: 0,
       tsxFiles: 0,
-      issues: [],
-    };
+      issues: [],;
+};
 
     const srcDir = path.join(this.projectRoot, 'src');
     if (fs.existsSync(srcDir)) {
@@ -132,22 +132,22 @@ class EnhancedAutomationSuite {
             analysis.issues.push({
               file,
               type: 'console.log',
-              message: 'Console.log found',
-            });
+              message: 'Console.log found',;
+});
           }
           if (content.includes('TODO') || content.includes('FIXME')) {
             analysis.issues.push({
               file,
               type: 'todo',
-              message: 'TODO/FIXME found',
-            });
+              message: 'TODO/FIXME found',;
+});
           }
         } catch (error) {
           analysis.issues.push({
             file,
             type: 'read_error',
-            message: error.message,
-          });
+            message: error.message,;
+});
         }
       }
     }
@@ -179,11 +179,11 @@ class EnhancedAutomationSuite {
       summary: {
         totalTasks: results.length,
         successful: results.filter(r => r.success).length,
-        failed: results.filter(r => !r.success).length,
-      },
+        failed: results.filter(r => !r.success).length,;
+},
       results: results,
-      recommendations: this.generateRecommendations(results),
-    };
+      recommendations: this.generateRecommendations(results),;
+};
 
     const reportFile = path.join(
       this.reportsDir,
@@ -203,8 +203,8 @@ class EnhancedAutomationSuite {
       recommendations.push({
         type: 'error',
         message: `${failedTasks.length} tasks failed. Review and fix the issues.`,
-        tasks: failedTasks.map(t => t.description),
-      });
+        tasks: failedTasks.map(t => t.description),;
+});
     }
 
     const lintingResult = results.find(
@@ -214,8 +214,8 @@ class EnhancedAutomationSuite {
       recommendations.push({
         type: 'linting',
         message: 'ESLint issues found. Consider fixing them manually.',
-        action: 'Run: npx eslint . --ext .js,.jsx,.ts,.tsx',
-      });
+        action: 'Run: npx eslint . --ext .js,.jsx,.ts,.tsx',;
+});
     }
 
     return recommendations;

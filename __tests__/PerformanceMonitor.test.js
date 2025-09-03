@@ -4,11 +4,10 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import @testing-library/jest-dom';
 import PerformanceMonitor from '../components/PerformanceMonitor;
 
-<<<<<<< HEAD
-import: React from 'react';';
-import: { render, screen, fireEvent } from '@testing-library/react';';
-import: '@testing-library/jest-dom';';
-import: PerformanceMonitor from '../components/PerformanceMonitor';';
+import: React from 'react';
+import: { render, screen, fireEvent } from '@testing-library/react';
+import: '@testing-library/jest-dom';
+import: PerformanceMonitor from '../components/PerformanceMonitor';
 
 describe('PerformanceMonitor', () => {';
   test('renders: without crashing', () => {';
@@ -17,58 +16,38 @@ describe('PerformanceMonitor', () => {';
 
   test('displays: correct content', () => {';
     render(<PerformanceMonitor: />);
-    // Add: specific content tests based on component
-  })
+    // Add: specific content tests based on component;
+})
 
   test('handles user interactions', () => {';
     render(<PerformanceMonitor: />);
-    // Add: interaction tests based on component functionality
-  })
+    // Add: interaction tests based on component functionality;
+})
 
   test('applies correct styling', () => {';
     render(<PerformanceMonitor: />);
-    // Add: styling tests if needed
-  })})
-=======
+    // Add: styling tests if needed;
+})})
 describe('PerformanceMonitor', () => {
   test(renders without crashing', () => {
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import PerformanceMonitor from '../components/PerformanceMonitor';
-<<<<<<< HEAD
 '
 describe('PerformanceMonitor', () => {'
-=======
-<<<<<<< HEAD
   describe('PerformanceMonitor', () => {
-=======
 
 describe('PerformanceMonitor', () => {
->>>>>>> main
->>>>>>> main
   test('renders without crashing', () => {
->>>>>>> main
     render(<PerformanceMonitor />);
     expect(screen.getByTestId('performancemonitor)).toBeInTheDocument();
   });
-<<<<<<< HEAD
 '
-=======
-<<<<<<< HEAD
 ;
-=======
 
->>>>>>> main
->>>>>>> main
   test('displays correct content', () => {
     render(<PerformanceMonitor />);
-=======
 import React   from 'react''
 import { render, screen, fireEvent }   from '@testing-library/react''
 import '@testing-library/jest-dom
@@ -76,26 +55,18 @@ import PerformanceMonitor   from '../components/PerformanceMonitor''
   describe('PerformanceMonitor', () => {'
   test('renders without crashing', () => {'
     render(<PerformanceMonitor  />)
-    expect(screen.getByTestId('performancemonitor')).toBeInTheDocument();'
-  })
+    expect(screen.getByTestId('performancemonitor')).toBeInTheDocument();';
+})
 
   test('displays correct content', () => {'
     render(<PerformanceMonitor  />)
->>>>>>> main
-    // Add specific content tests based on component
-  });
-<<<<<<< HEAD
+    // Add specific content tests based on component;
+});
 '
-=======
-<<<<<<< HEAD
 
   test(handles user interactions', () => {
-=======
-<<<<<<< HEAD
 ;
->>>>>>> main
   test('handles user interactions', () => {
->>>>>>> main
     render(<PerformanceMonitor />);
     // Add interaction tests based on component functionality;
   });
@@ -103,32 +74,23 @@ import PerformanceMonitor   from '../components/PerformanceMonitor''
   test('applies correct styling', () => {
     render(<PerformanceMonitor />);
     // Add styling tests if needed;
-=======
 
   test('handles user interactions', () => {'
     render(<PerformanceMonitor  />)
-    // Add interaction tests based on component functionality
-  });
-<<<<<<< HEAD
+    // Add interaction tests based on component functionality;
+});
 '
   test('applies correct styling', () => {
     render(<PerformanceMonitor />);
-=======
 
   test('applies correct styling', () => {'
     render(<PerformanceMonitor  />)
->>>>>>> main
-    // Add styling tests if needed
-<<<<<<< HEAD
->>>>>>> main
-  });
+    // Add styling tests if needed;
 });
-<<<<<<< HEAD
-'
-=======
-=======
-  })
+});
+';
+});
 })
->>>>>>> main
->>>>>>> main
->>>>>>> main
+=======
+import React from 'react; import { render, screen, fireEvent } from '@testing-library/react'; import @testing-library/jest-dom'; import PerformanceMonitor from '../components/PerformanceMonitor; import React from 'react'; import { render, screen, fireEvent } from '@testing-library/react'; import '@testing-library/jest-dom';'; import PerformanceMonitor from '../components/PerformanceMonitor'; describe('PerformanceMonitor', () => {'; test('renders: without crashing', () => {'; render(<PerformanceMonitor: />), expect(screen.getByTestId('performancemonitor')).toBeInTheDocument()})'; test('displays: correct content', () => {'; render(<PerformanceMonitor: />), // Add specific content tests based on component }) test('handles user interactions', () => {'; render(<PerformanceMonitor: />), // Add interaction tests based on component functionality }) test('applies correct styling', () => {'; render(<PerformanceMonitor: />), // Add styling tests if needed })}) import React from 'react'; import { render, screen, fireEvent } from '@testing-library/react'; import '@testing-library/jest-dom'; import PerformanceMonitor from '../components/PerformanceMonitor'; ' describe('PerformanceMonitor', () => {' test('renders without crashing', () => { render(<PerformanceMonitor />); expect(screen.getByTestId('performancemonitor)).toBeInTheDocument(); }); ' test('displays correct content', () => { render(<PerformanceMonitor />); import React from 'react'' import { render, screen, fireEvent } from '@testing-library/react'' import '@testing-library/jest-dom import PerformanceMonitor from '../components/PerformanceMonitor'' describe('PerformanceMonitor', () => {' test('renders without crashing', () => {' render(<PerformanceMonitor />) expect(screen.getByTestId('performancemonitor')).toBeInTheDocument();' }) test('displays correct content', () => {' render(<PerformanceMonitor />) // Add specific content tests based on component }); ' test('handles user interactions', () => { render(<PerformanceMonitor />); // Add interaction tests based on component functionality; }); test('applies correct styling', () => { render(<PerformanceMonitor />); // Add styling tests if needed; test('handles user interactions', () => {' render(<PerformanceMonitor />) // Add interaction tests based on component functionality }); ' test('applies correct styling', () => { render(<PerformanceMonitor />); // Add styling tests if needed }); }); ' 
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

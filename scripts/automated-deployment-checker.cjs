@@ -30,8 +30,8 @@ class DeploymentChecker {
       buildExists: fs.existsSync(buildDir),
       staticFiles: fs.existsSync(path.join(buildDir, 'static')),
       serverFiles: fs.existsSync(path.join(buildDir, 'server')),
-      buildManifest: fs.existsSync(path.join(buildDir, 'build-manifest.json'))
-    };
+      buildManifest: fs.existsSync(path.join(buildDir, 'build-manifest.json'));
+};
 
     return checks;
   }
@@ -45,8 +45,8 @@ class DeploymentChecker {
     const checks = {
       envLocalExists: fs.existsSync(envFile),
       envExampleExists: fs.existsSync(envExample),
-      requiredVars: []
-    };
+      requiredVars: [];
+};
 
     if (checks.envLocalExists) {
       const envContent = fs.readFileSync(envFile, 'utf8');
@@ -54,8 +54,8 @@ class DeploymentChecker {
       
       checks.requiredVars = requiredVars.map(varName => ({
         name: varName,
-        present: envContent.includes(varName)
-      }));
+        present: envContent.includes(varName);
+}));
     }
 
     return checks;
@@ -74,8 +74,8 @@ class DeploymentChecker {
       hasLintScript: !!packageJson.scripts?.lint,
       hasTestScript: !!packageJson.scripts?.test,
       dependencies: Object.keys(packageJson.dependencies || {}),
-      devDependencies: Object.keys(packageJson.devDependencies || {})
-    };
+      devDependencies: Object.keys(packageJson.devDependencies || {});
+};
 
     return checks;
   }
@@ -87,8 +87,8 @@ class DeploymentChecker {
     const checks = {
       configExists: fs.existsSync(netlifyToml),
       hasBuildCommand: false,
-      hasPublishDirectory: false
-    };
+      hasPublishDirectory: false;
+};
 
     if (checks.configExists) {
       const configContent = fs.readFileSync(netlifyToml, 'utf8');
@@ -109,12 +109,12 @@ class DeploymentChecker {
       return {
         hasUncommittedChanges: status.length > 0,
         currentBranch: branch,
-        uncommittedFiles: status.split('\n').filter(line => line.trim())
-      };
+        uncommittedFiles: status.split('\n').filter(line => line.trim());
+};
     } catch (error) {
       return {
-        error: error.message
-      };
+        error: error.message;
+};
     }
   }
 
@@ -125,8 +125,8 @@ class DeploymentChecker {
     const checks = {
       buildSize: 0,
       staticAssets: 0,
-      hasManifest: false
-    };
+      hasManifest: false;
+};
 
     if (fs.existsSync(buildDir)) {
       try {
@@ -158,8 +158,8 @@ class DeploymentChecker {
       packageJson: this.checkPackageJson(),
       netlifyConfig: this.checkNetlifyConfig(),
       gitStatus: this.checkGitStatus(),
-      performanceMetrics: this.checkPerformanceMetrics()
-    };
+      performanceMetrics: this.checkPerformanceMetrics();
+};
 
     // Generate report
     const reportFile = path.join(this.reportsDir, 'deployment-check-report.json');

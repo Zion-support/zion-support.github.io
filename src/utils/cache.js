@@ -5,8 +5,8 @@ export const cacheUtils = {
     const item = {
       data,
       timestamp: Date.now(),
-      ttl
-    };
+      ttl;
+};
     localStorage.setItem(key, JSON.stringify(item));
   },
   

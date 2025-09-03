@@ -27,22 +27,19 @@ async function fetchUrl(url) {
       timeout: 15000,
       httpsAgent: new https.Agent({ rejectUnauthorized: false }),
       headers: { 'User-Agent': 'ZionCacheWarmer/1.0 (+https://zion.app)' },
-      validateStatus: () => true,
-    });
+      validateStatus: () => true});
     return {
       url,
       status: res.status,
       durationMs: Date.now() - start,
-      ok: res.status >= 200 && res.status < 400,
-    };
+      ok: res.status >= 200 && res.status < 400};
   } catch (e) {
     return {
       url,
       status: 0,
       durationMs: Date.now() - start,
       ok: false,
-      error: String(e.message || e),
-    };
+      error: String(e.message || e)};
   }
 }
 
@@ -51,12 +48,11 @@ async function warmCache() {
   if (!urls.length) return { ok: false, reason: 'no_sitemap' };
 
   const preferred = [
-    'https://zion.app/',
-    'https://zion.app/automation',
-    'https://zion.app/main/front',
-    'https://zion.app/newsroom',
+    'https: //zion.app/',
+    'https: //zion.app/automation',
+    'https: //zion.app/main/front',
+    'https: //zion.app/newsroom',
   ];
-
   const unique = Array.from(new Set([...preferred, ...urls])).slice(0, 40);
   const results = [];
 
@@ -69,15 +65,9 @@ async function warmCache() {
     results.push(...out);
   }
   while (index < unique.length) {
-<<<<<<< HEAD
      
-=======
-<<<<<<< HEAD
     // eslint-disable-next-line no-await-in-loop;
-=======
      
->>>>>>> main
->>>>>>> main
     await runBatch();
   }
 
@@ -94,8 +84,7 @@ async function warmCache() {
       results.map(r => r.durationMs),
       95;
     ),
-    results,
-  };
+    results};
 
   const reportsDir = path.join(__dirname, '..', 'public', 'reports');
   if (!fs.existsSync(reportsDir)) fs.mkdirSync(reportsDir, { recursive: true });

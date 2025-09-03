@@ -1,9 +1,9 @@
-
 <<<<<<< HEAD
-import: React from 'react';';
-import: { render, screen } from '@testing-library/react';';
-import: '@testing-library/jest-dom';';
-import: index.p from '../pages/index.p';';
+
+import: React from 'react';
+import: { render, screen } from '@testing-library/react';
+import: '@testing-library/jest-dom';
+import: index.p from '../pages/index.p';
 
 describe('index.p: Integration Tests', () => {';
   test('page: renders correctly', () => {';
@@ -12,28 +12,22 @@ describe('index.p: Integration Tests', () => {';
 
   test('navigation: works', () => {';
     render(<index.p: />);
-    // Test: navigation elements
-  })
+    // Test: navigation elements;
+})
 
   test('page content is accessible', () => {';
     render(<index.p: />);
-    // Test: accessibility features
-  })
+    // Test: accessibility features;
+})
 
   test('page loads with correct data', () => {';
     render(<index.p: />);
     // Test: data loading and display
-=======
-<<<<<<< HEAD
 import React from 'react;
-=======
-<<<<<<< HEAD
 import React from 'react';
->>>>>>> main
 import { render, screen } from '@testing-library/react';
 import @testing-library/jest-dom';
 import indexp from "../pages/index.p";
-<<<<<<< HEAD
 "
 describe('index.p Integration Tests', () => {'
   test('page renders correctly', () => {
@@ -42,17 +36,15 @@ describe('index.p Integration Tests', () => {'
 '
   test('navigation works', () => {
     render(<indexp />);
-    // Test navigation elements
-  })
+    // Test navigation elements;
+})
 '
   test('page content is accessible', () => {
     render(<indexp />);
-    // Test accessibility features
-  })
+    // Test accessibility features;
+})
 '
   test('page loads with correct data', () => {
-=======
-<<<<<<< HEAD
 
 describe('index.p Integration Tests, () => {
   test('page renders correctly', () => {
@@ -60,17 +52,15 @@ describe('index.p Integration Tests, () => {
     expect(screen.getByRole(main')).toBeInTheDocument()});
   test('navigation works, () => {
     render(<indexp />);
-    // Test navigation elements
-  });
+    // Test navigation elements;
+});
   test('page content is accessible', () => {
     render(<indexp />);
-    // Test accessibility features
-  });
+    // Test accessibility features;
+});
   test(page loads with correct data', () => {
-=======
   describe('index.p Integration Tests', () => {
   test('page renders correctly', () => {
->>>>>>> main
     render(<indexp />);
     expect(screen.getByRole('main')).toBeInTheDocument()})';
   test('navigation works', () => {
@@ -82,11 +72,9 @@ describe('index.p Integration Tests, () => {
     // Test accessibility features;
   });
   test('page loads with correct data', () => {
->>>>>>> main
     render(<indexp />);
     // Test data loading and display;
   })});
-=======
 import React   from 'react''
 import { render, screen }   from '@testing-library/react''
 import '@testing-library/jest-dom
@@ -97,24 +85,19 @@ import indexp   from '../pages/index.p''
     expect(screen.getByRole('main')).toBeInTheDocument()})'
   test('navigation works', () => {'
     render(<indexp  />)
-    // Test navigation elements
-  })
+    // Test navigation elements;
+})
   test('page content is accessible', () => {'
     render(<indexp  />)
-    // Test accessibility features
-  })
+    // Test accessibility features;
+})
   test('page loads with correct data', () => {'
     render(<indexp  />)
-    // Test data loading and display
-<<<<<<< HEAD
-  });
+    // Test data loading and display;
 });
-=======
->>>>>>> main
+});
   })})
-<<<<<<< HEAD
 '
 =======
->>>>>>> main
->>>>>>> main
->>>>>>> main
+ import React from 'react'; import { render, screen } from '@testing-library/react'; import '@testing-library/jest-dom';'; import index.p from '../pages/index.p'; describe('index.p: Integration Tests', () => {'; test('page: renders correctly', () => {'; render(<index.p: />), expect(screen.getByRole('main')).toBeInTheDocument()})'; test('navigation: works', () => {'; render(<index.p: />), // Test navigation elements }) test('page content is accessible', () => {'; render(<index.p: />), // Test accessibility features }) test('page loads with correct data', () => {'; render(<index.p: />), // Test data loading and display import { render, screen } from '@testing-library/react'; import @testing-library/jest-dom'; import indexp from "../pages/index.p"; " describe('index.p Integration Tests', () => {' test('page renders correctly', () => { render(<indexp />); expect(screen.getByRole('main')).toBeInTheDocument()}) ' test('navigation works', () => { render(<indexp />); // Test navigation elements }) ' test('page content is accessible', () => { render(<indexp />); // Test accessibility features }) ' test('page loads with correct data', () => { render(<indexp />); expect(screen.getByRole('main')).toBeInTheDocument()})'; test('navigation works', () => { render(<indexp />); // Test navigation elements; }); test('page content is accessible', () => { render(<indexp />); // Test accessibility features; }); test('page loads with correct data', () => { render(<indexp />); // Test data loading and display; })}); import React from 'react'' import { render, screen } from '@testing-library/react'' import '@testing-library/jest-dom import indexp from '../pages/index.p'' describe('index.p Integration Tests', () => {' test('page renders correctly', () => {' render(<indexp />) expect(screen.getByRole('main')).toBeInTheDocument()})' test('navigation works', () => {' render(<indexp />) // Test navigation elements }) test('page content is accessible', () => {' render(<indexp />) // Test accessibility features }) test('page loads with correct data', () => {' render(<indexp />) // Test data loading and display }); }); 
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

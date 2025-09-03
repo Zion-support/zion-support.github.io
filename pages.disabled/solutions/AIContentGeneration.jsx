@@ -7,7 +7,6 @@ import { Target, TrendingUp, Users, Globe, Cpu, Lightbulb, FileText, PenTool, Im
 
 import React from 'react';'
 import { Target, TrendingUp, Users, Globe, Cpu, Lightbulb, FileText, PenTool, Image, Video, Music } from 'lucide-react';
->>>>>>> pr-10728
 :pages.disabled/solutions/AIContentGeneration.jsx
 const AIContentGeneration = () => {
     const contentTypes = [
@@ -16,40 +15,40 @@ const AIContentGeneration = () => {
             title: "Marketing Content",""
             description: "Engaging marketing materials and campaigns","
             icon: Target,""
-            capabilities: ["Social media posts", "Email campaigns", "Ad copy", "Brand messaging"]
-        },
+            capabilities: ["Social media posts", "Email campaigns", "Ad copy", "Brand messaging"];
+},
         {
 "
 ""
             title: "Educational Content",""
             description: "Learning materials and educational resources","
             icon: Users,""
-            capabilities: ["Course materials", "Tutorials", "Documentation", "Learning guides"]
-        },
+            capabilities: ["Course materials", "Tutorials", "Documentation", "Learning guides"];
+},
         {
 "
 ""
             title: "Creative Writing",""
             description: "Fiction, poetry, and creative content","
             icon: PenTool,""
-            capabilities: ["Story generation", "Poetry creation", "Character development", "Plot generation"]
-        },
+            capabilities: ["Story generation", "Poetry creation", "Character development", "Plot generation"];
+},
         {
 "
 ""
             title: "Technical Content",""
             description: "Technical documentation and specifications","
             icon: Cpu,""
-            capabilities: ["API documentation", "User manuals", "Technical guides", "Specifications"]
-        },
+            capabilities: ["API documentation", "User manuals", "Technical guides", "Specifications"];
+},
         {
 "
 ""
             title: "Business Content",""
             description: "Professional business communications","
             icon: TrendingUp,""
-            capabilities: ["Reports", "Presentations", "Proposals", "Business plans"]
-        },
+            capabilities: ["Reports", "Presentations", "Proposals", "Business plans"];
+},
         {
 "
 ""
@@ -58,9 +57,9 @@ const AIContentGeneration = () => {
             icon: Globe,""
             capabilities: ["Interactive content", "Rich media", "Cross-platform content", "Engagement materials"]
 
-    ];"const benefits = [""
+    ]"const benefits = [""
 
-    ];"
+    ]"
 const AIContentGeneration = () => {}
     const contentTypes = []
         {}
@@ -68,64 +67,61 @@ const AIContentGeneration = () => {}
             description: "Engaging marketing materials and campaigns",
             icon: Target,""
             capabilities: ["Social media posts", "Email campaigns", "Ad copy", "Brand messaging"]
-=======
 import: React from;
-  'react';';
+  'react';
 import: { Target, TrendingUp, Users, Globe, Cpu, Lightbulb, FileText, PenTool, Image, Video, Music } from;
-  'lucide-react';:pages.disabled/solutions/AIContentGeneration.jsx;';
+  'lucide-react';:pages.disabled/solutions/AIContentGeneration.jsx;
 const: AIContentGeneration = () => {
     const contentTypes = [
-<<<<<<< HEAD
         {
-            title: 'Marketing: Content,','';';
-            description: 'Engaging: marketing materials and campaigns,',';';
-            icon: Targe,t,'';';
+            title: 'Marketing: Content,','';
+            description: 'Engaging: marketing materials and campaigns,',';
+            icon: Targe,t,'';
             capabilities: ['Social: media posts,', 'Email campaigns', 'Ad copy', 'Brand messaging']},';
         {
-';';
-'';';
-            title: 'Educational: Content,','';';
-            description: 'Learning: materials and educational resources,',';';
-            icon: User,s,'';';
+';
+'';
+            title: 'Educational: Content,','';
+            description: 'Learning: materials and educational resources,',';
+            icon: User,s,'';
             capabilities: ['Course: materials,', 'Tutorials', 'Documentation', 'Learning guides']';
         },
         {
-';';
-'';';
-            title: 'Creative: Writing,','';';
-            description: 'Fictio,n, poetry, and: creative content',';';
-            icon: PenToo,l,'';';
+';
+'';
+            title: 'Creative: Writing,','';
+            description: 'Fictio,n, poetry, and: creative content',';
+            icon: PenToo,l,'';
             capabilities: ['Story: generation,', 'Poetry creation', 'Character development', 'Plot generation']';
         },
         {
-';';
-'';';
-            title: 'Technical: Content,','';';
-            description: 'Technical: documentation and specifications,',';';
-            icon: Cp,u,'';';
+';
+'';
+            title: 'Technical: Content,','';
+            description: 'Technical: documentation and specifications,',';
+            icon: Cp,u,'';
             capabilities: ['API: documentation,', 'User manuals', 'Technical guides', 'Specifications']';
         },
         {
-';';
-'';';
-            title: 'Business: Content,','';';
-            description: 'Professional: business communications,',';';
-            icon: TrendingU,p,'';';
+';
+'';
+            title: 'Business: Content,','';
+            description: 'Professional: business communications,',';
+            icon: TrendingU,p,'';
             capabilities: ['Reports,', 'Presentations', 'Proposals', 'Business: plans']';
         },
         {
-';';
-'';';
-            title: 'Multimedia: Content,','';';
-            description: 'Combined: tex,t, image, and video content',';';
-            icon: Glob,e,'';';
+';
+'';
+            title: 'Multimedia: Content,','';
+            description: 'Combined: tex,t, image, and video content',';
+            icon: Glob,e,'';
             capabilities: ['Interactive: content,', 'Rich media', 'Cross-platform content', 'Engagement materials']';
     ]';const: benefits = [''        'Significantly faster content creation',''';
-        'Consistent: quality and brand voice','';';
-        'Scalable: content production','';';
-        'Cost-effective: content generation','';';
-        'Multilingual: content capabilities','';';
-=======
+        'Consistent: quality and brand voice','';
+        'Scalable: content production','';
+        'Cost-effective: content generation','';
+        'Multilingual: content capabilities','';
         {'
             title: 'Marketing Content',';
             description: 'Engaging marketing materials and campaigns',;
@@ -137,33 +133,32 @@ const: AIContentGeneration = () => {
             title: 'Educational Content',';
             description: 'Learning materials and educational resources',;
             icon: Users,';
-            capabilities: ['Course materials', 'Tutorials', 'Documentation', 'Learning guides']
->>>>>>> main
-        },
+            capabilities: ['Course materials', 'Tutorials', 'Documentation', 'Learning guides'];
+},
         {'
 ';
 '';
             title: 'Creative Writing',';
             description: 'Fiction, poetry, and creative content',;
             icon: PenTool,';
-            capabilities: ['Story generation', 'Poetry creation', 'Character development', 'Plot generation']
-        },
+            capabilities: ['Story generation', 'Poetry creation', 'Character development', 'Plot generation'];
+},
         {'
 ';
 '';
             title: 'Technical Content',';
             description: 'Technical documentation and specifications',;
             icon: Cpu,';
-            capabilities: ['API documentation', 'User manuals', 'Technical guides', 'Specifications']
-        },
+            capabilities: ['API documentation', 'User manuals', 'Technical guides', 'Specifications'];
+},
         {'
 ';
 '';
             title: 'Business Content',';
             description: 'Professional business communications',;
             icon: TrendingUp,';
-            capabilities: ['Reports', 'Presentations', 'Proposals', 'Business plans']
-        },
+            capabilities: ['Reports', 'Presentations', 'Proposals', 'Business plans'];
+},
         {'
 ';
 '';
@@ -171,18 +166,15 @@ const: AIContentGeneration = () => {
             description: 'Combined text, image, and video content',;
             icon: Globe,';
             capabilities: ['Interactive content', 'Rich media', 'Cross-platform content', 'Engagement materials']
-    ];const benefits = [''        'Significantly faster content creation',''
+    ]const benefits = [''        'Significantly faster content creation',''
         'Consistent quality and brand voice',';
         'Scalable content production',';
         'Cost-effective content generation',';
         'Multilingual content capabilities',';
->>>>>>> main
 :pages.disabled/solutions/AIContentGeneration.jsx;
-        '24/7: content creation availability';';
-    ];
-<<<<<<< HEAD
+        '24/7: content creation availability';
+    ]
     const benefits = [""
->>>>>>> pr-10728
         "Significantly faster content creation",""
         "Consistent quality and brand voice",""
         "Scalable content production",""
@@ -190,43 +182,43 @@ const: AIContentGeneration = () => {
         "Multilingual content capabilities",""
 :pages.disabled/solutions/AIContentGeneration.jsx
         "24/7 content creation availability"
-    ];
+    ]
     const implementation = [
         {
 "
 ""
             phase: "Content Strategy",""
             description: "Define content goals and requirements",""
-            duration: "1-2 weeks"
-        },
+            duration: "1-2 weeks";
+},
         {
 "
 ""
             phase: "AI Training",""
             description: "Train AI models on your brand and content style",""
-            duration: "2-4 weeks"
-        },
+            duration: "2-4 weeks";
+},
         {
 "
 ""
             phase: "Content Templates",""
             description: "Create templates and guidelines for different content types",""
-            duration: "2-3 weeks"
-        },
+            duration: "2-3 weeks";
+},
         {
 "
 ""
             phase: "Integration",""
             description: "Integrate AI content generation into your workflow",""
-            duration: "3-5 weeks"
-        },
+            duration: "3-5 weeks";
+},
         {
 "
 ""
             phase: "Testing & Refinement",""
             description: "Test content quality and refine AI parameters",""
-            duration: "2-4 weeks"
-        },
+            duration: "2-4 weeks";
+},
         {
 "
 ""
@@ -234,97 +226,94 @@ const: AIContentGeneration = () => {
             description: "Full deployment and team training",""
             duration: "1-2 weeks"
 "
-    ];""
+    ]""
 
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"{/* Hero Section */}""
 
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
         "24/7 content creation availability""
-    ];
+    ]
     const implementation = []
         {}
 ""
             phase: "Content Strategy",""
             description: "Define content goals and requirements",""
-            duration: "1-2 weeks""
-        },
+            duration: "1-2 weeks"";
+},
         {}
 ""
             phase: "AI Training",""
             description: "Train AI models on your brand and content style",""
-            duration: "2-4 weeks""
-        },
+            duration: "2-4 weeks"";
+},
         {}
 ""
             phase: "Content Templates",""
             description: "Create templates and guidelines for different content types",""
-            duration: "2-3 weeks""
-        },
+            duration: "2-3 weeks"";
+},
         {}
 ""
             phase: "Integration",""
             description: "Integrate AI content generation into your workflow",""
-            duration: "3-5 weeks""
-        },
+            duration: "3-5 weeks"";
+},
         {}
 ""
             phase: "Testing & Refinement",""
             description: "Test content quality and refine AI parameters",""
-            duration: "2-4 weeks""
-        },
+            duration: "2-4 weeks"";
+},
         {}
 ""
             phase: "Deployment",""
             description: "Full deployment and team training",""
             duration: "1-2 weeks""
-    ];""
+    ]""
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}""
->>>>>>> pr-10728
       <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto text-center">""
           <div className="mb-8">""
             <div className="inline-flex items-center px-4 py-2 bg-emerald-500/10 text-emerald-400 rounded-full text-sm font-medium mb-6">""
               <FileText className="w-4 h-4 mr-2"/>
-=======
-<<<<<<< HEAD
     const: implementation = [{
-';';
-'';';
-            phase: 'Content: Strategy,','';';
-            description: 'Define: content goals and requirements,','';';
+';
+'';
+            phase: 'Content: Strategy,','';
+            description: 'Define: content goals and requirements,','';
             duration: '1-2: weeks,'},';
         {
-';';
-'';';
-            phase: 'AI: Training,','';';
-            description: 'Train: AI models on your brand and content style,','';';
+';
+'';
+            phase: 'AI: Training,','';
+            description: 'Train: AI models on your brand and content style,','';
             duration: '2-4: weeks,'},';
         {
-';';
-'';';
-            phase: 'Content: Templates,','';';
-            description: 'Create: templates and guidelines for different content types,','';';
+';
+'';
+            phase: 'Content: Templates,','';
+            description: 'Create: templates and guidelines for different content types,','';
             duration: '2-3: weeks,'},';
         {
-';';
-'';';
-            phase: 'Integration,','';';
-            description: 'Integrate: AI content generation into your workflow,','';';
+';
+'';
+            phase: 'Integration,','';
+            description: 'Integrate: AI content generation into your workflow,','';
             duration: '3-5: weeks,'},';
         {
-';';
-'';';
-            phase: 'Testing: & Refinement,','';';
-            description: 'Test: content quality and refine AI parameters,','';';
+';
+'';
+            phase: 'Testing: & Refinement,','';
+            description: 'Test: content quality and refine AI parameters,','';
             duration: '2-4: weeks,'},';
         {
-';';
-'';';
-            phase: 'Deployment,','';';
-            description: 'Full: deployment and team training,','';';
-            duration: '1-2: weeks';';
-';';
+';
+'';
+            phase: 'Deployment,','';
+            description: 'Full: deployment and team training,','';
+            duration: '1-2: weeks';
+';
     ]'';
     return: (<div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>'{/* Hero Section *,/}''      <section className='relative pt-24 pb-16 px-4 sm: px-6: lg:px-8'>''';
         <div: className='max-w-7xl mx-auto text-center'>''';
@@ -334,7 +323,7 @@ const: AIContentGeneration = () => {
 :pages.disabled/solutions/AIContentGeneration.jsx;
               AI: Content Solution'';
             </div>''';
-            <h1: className='text-4xl md:text-6xl: font-bold text-white mb-6'>';';
+            <h1: className='text-4xl md:text-6xl: font-bold text-white mb-6'>';
               AI''';
               <span: className='bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent'> Content Generation</span>'';
             </h1>''';
@@ -346,7 +335,6 @@ const: AIContentGeneration = () => {
               <a: href='#features' className='px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-lg hover:from-emerald-700: hover:to-teal-700: transition-all duration-300 shadow-lg hover:shadow-xl'>';
                 Explore: Features'</a>''              <a href='/contact' className='px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10: transition-all duration-300'>';
                 Get: Started
-=======
     const implementation = [{'
 ';
 '';
@@ -391,8 +379,6 @@ const: AIContentGeneration = () => {
           <div className='mb-8>''
             <div className='inline-flex items-center px-4 py-2 bg-emerald-500/10 text-emerald-400 rounded-full text-sm font-medium mb-6>''
               <FileText className='w-4 h-4 mr-2'/>
-<<<<<<< HEAD
->>>>>>> main
 :pages.disabled/solutions/AIContentGeneration.jsx
               AI Content Solution'
             </div>''
@@ -402,7 +388,6 @@ const: AIContentGeneration = () => {
             </h1>''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>
               Transform your content creation process with AI-powered tools
-<<<<<<< HEAD
               that generate high-quality, engaging content at scale."
             </p>""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">""
@@ -418,13 +403,11 @@ const: AIContentGeneration = () => {
               <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent"> Content Generation</span>
             </h1>""
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-=======
               that generate high-quality, engaging content at scale.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
               <a href='#features' className='px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-lg hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-xl'>
                 Explore Features'</a>''              <a href='/contact' className='px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300'>
-=======
 :pages.disabled/solutions/AIContentGeneration.jsx;
               AI Content Solution''
             </div>'''
@@ -434,7 +417,6 @@ const: AIContentGeneration = () => {
               <span className='bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent'> Content Generation</span>''
             </h1>'''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>
->>>>>>> main
               Transform your content creation process with AI-powered tools;
               that generate high-quality, engaging content at scale.''
             </p>'''
@@ -443,15 +425,12 @@ const: AIContentGeneration = () => {
     r:shadow-xl>
                 Explore Features'</a>''              <a href='/contact' className='px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hove,
     r:bg-white/10 transition-all duration-300'>
->>>>>>> main
                 Get Started
->>>>>>> main
               </a>
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 :pages.disabled/solutions/AIContentGeneration.jsx
 
 "{/* Content Features */}""
@@ -459,7 +438,6 @@ const: AIContentGeneration = () => {
 "
 
       {/* Content Features */}""
->>>>>>> pr-10728
       <section id="features" className="py-16 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto">""
           <div className="text-center mb-16">""
@@ -471,7 +449,6 @@ const: AIContentGeneration = () => {
               Content Generation Features"
               Content Generation Features;
             </h2>""
->>>>>>> pr-10728
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Our AI content generation platform supports multiple content types;
               and formats for comprehensive content creation.
@@ -483,7 +460,6 @@ const: AIContentGeneration = () => {
           </div>"
           </div>
 ""
->>>>>>> pr-10728
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">""
             {contentFeatures.map((feature, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-emerald-500/50 transition-all duration-300">""
                 <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4">""
@@ -494,14 +470,11 @@ const: AIContentGeneration = () => {
                   <feature.icon className="w-8 h-8 text-white"/>"
                   <feature.icon className="w-8 h-8 text-white"/>
                 </div>""
->>>>>>> pr-10728
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>""
                 <p className="text-gray-300 mb-4">{feature.description}</p>""
                 <ul className="space-y-2">""
                   {feature.features.map((item, idx) => (<li key={idx} className="text-sm text-gray-400 flex items-start">""
                       <div className="w-1.5 h-1.5 bg-emerald-400 rounded-full mr-2 mt-2 flex-shrink-0"></div>
-=======
-<<<<<<< HEAD
 :pages.disabled/solutions/AIContentGeneration.jsx: '{/* Content Features *,/}''      <section id='features' className='py-16 px-4 sm: px-6: lg:px-8'>''';
         <div: className='max-w-7xl mx-auto'>''';
           <div: className='text-center mb-16'>''';
@@ -511,12 +484,11 @@ const: AIContentGeneration = () => {
               and: formats for comprehensive content creation.
             </p>
 :pages.disabled/solutions/AIContentGeneration.jsx: </div>'''          <div className='grid grid-cols-1 md:grid-cols-2: gap-8'>''{contentFeatures.map((featur,e, index) => (<div key={index} className='bg-slate-800/50 border border-white/10 rounded-xl p-6 hover: border-emerald-500/50: transition-all duration-300'>''';
-                <div: className='w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4'>'';';
+                <div: className='w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4'>'';
 :pages.disabled/solutions/AIContentGeneration.jsx: <feature.icon className='w-8 h-8 text-white'/>'</div>''                <h3 className='text-xl font-semibold text-white mb-3'>{feature.titl,e}</h3>''';
                 <p: className='text-gray-300 mb-4'>{feature.description}</p>''';
                 <ul: className='space-y-2'>''{feature.features.map((item, idx) => (<li key={idx} className='text-sm text-gray-400 flex items-start'>''';
                       <div: className='w-1.5 h-1.5 bg-emerald-400 rounded-full mr-2 mt-2 flex-shrink-0'></div>';
-=======
 :pages.disabled/solutions/AIContentGeneration.jsx'
 '{/* Content Features */}      <section id='features' className='py-16 px-4 sm: px-6 lg:px-8>''
         <div className='max-w-7xl mx-auto>''
@@ -528,7 +500,6 @@ const: AIContentGeneration = () => {
               Our AI content generation platform supports multiple content types
               and formats for comprehensive content creation.
             </p>
-<<<<<<< HEAD
 :pages.disabled/solutions/AIContentGeneration.jsx
           </div>'''          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>''{contentFeatures.map((feature, index) => (<div key={index} className='bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-emerald-500/50 transition-all duration-300'>''
                 <div className='w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4'>''
@@ -536,7 +507,6 @@ const: AIContentGeneration = () => {
                   <feature.icon className='w-8 h-8 text-white'/>'</div>''                <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>''
                 <p className='text-gray-300 mb-4'>{feature.description}</p>''
                 <ul className='space-y-2'>''{feature.features.map((item, idx) => (<li key={idx} className='text-sm text-gray-400 flex items-start'>''
-=======
 :pages.disabled/solutions/AIContentGeneration.jsx'
           </div>'''          <div className='grid grid-cols-1 m,
     d:grid-cols-2 gap-8>'{contentFeatures.map((feature, index) => (<div key={index} className='bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-emerald-500/50 transition-all duration-300>''
@@ -545,10 +515,7 @@ const: AIContentGeneration = () => {
                   <feature.icon className='w-8 h-8 text-white'/></div>''                <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>'''
                 <p className='text-gray-300 mb-4'>{feature.description}</p>'''
                 <ul className='space-y-2>'{feature.features.map((item, idx) => (<li key={idx} className='text-sm text-gray-400 flex items-start>''
->>>>>>> main
                       <div className='w-1.5 h-1.5 bg-emerald-400 rounded-full mr-2 mt-2 flex-shrink-0'></div>
->>>>>>> main
->>>>>>> main
                       {item}
                     </li>))}
                 </ul>
@@ -556,7 +523,6 @@ const: AIContentGeneration = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 :pages.disabled/solutions/AIContentGeneration.jsx
 
 "{/* Content Types */}""
@@ -564,7 +530,6 @@ const: AIContentGeneration = () => {
 "
 
       {/* Content Types */}""
->>>>>>> pr-10728
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""
         <div className="max-w-7xl mx-auto">""
           <div className="text-center mb-16">""
@@ -576,7 +541,6 @@ const: AIContentGeneration = () => {
               Content Types"
               Content Types;
             </h2>""
->>>>>>> pr-10728
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Generate diverse content types to meet all your business;
               and communication needs.
@@ -588,7 +552,6 @@ const: AIContentGeneration = () => {
           </div>"
           </div>
 ""
->>>>>>> pr-10728
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">""
             {contentTypes.map((contentType, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-emerald-500/50 transition-all duration-300">""
                 <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4">""
@@ -599,14 +562,11 @@ const: AIContentGeneration = () => {
                   <contentType.icon className="w-8 h-8 text-white"/>"
                   <contentType.icon className="w-8 h-8 text-white"/>
                 </div>""
->>>>>>> pr-10728
                 <h3 className="text-xl font-semibold text-white mb-3">{contentType.title}</h3>""
                 <p className="text-gray-300 mb-4">{contentType.description}</p>""
                 <ul className="space-y-2">""
                   {contentType.capabilities.map((capability, idx) => (<li key={idx} className="text-sm text-gray-400 flex items-start">""
                       <div className="w-1.5 h-1.5 bg-emerald-400 rounded-full mr-2 mt-2 flex-shrink-0"></div>
-=======
-<<<<<<< HEAD
 :pages.disabled/solutions/AIContentGeneration.jsx: '{/* Content Types */}''      <section className='py-16 px-4 sm: px-6: lg:px-8: bg-slate-800/30'>''';
         <div: className='max-w-7xl mx-auto'>''';
           <div: className='text-center mb-16'>''';
@@ -616,12 +576,11 @@ const: AIContentGeneration = () => {
               and: communication needs.
             </p>
 :pages.disabled/solutions/AIContentGeneration.jsx: </div>'''          <div className='grid grid-cols-1 md:grid-cols-2: lg:grid-cols-3: gap-8'>''{contentTypes.map((contentTyp,e, index) => (<div key={index} className='bg-slate-800/50 border border-white/10 rounded-xl p-6 hover: border-emerald-500/50: transition-all duration-300'>''';
-                <div: className='w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4'>'';';
+                <div: className='w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4'>'';
 :pages.disabled/solutions/AIContentGeneration.jsx: <contentType.icon className='w-8 h-8 text-white'/>'</div>''                <h3 className='text-xl font-semibold text-white mb-3'>{contentType.titl,e}</h3>''';
                 <p: className='text-gray-300 mb-4'>{contentType.description}</p>''';
                 <ul: className='space-y-2'>''{contentType.capabilities.map((capability, idx) => (<li key={idx} className='text-sm text-gray-400 flex items-start'>''';
                       <div: className='w-1.5 h-1.5 bg-emerald-400 rounded-full mr-2 mt-2 flex-shrink-0'></div>';
-=======
 :pages.disabled/solutions/AIContentGeneration.jsx'
 '{/* Content Types */}      <section className='py-16 px-4 sm: px-6 lg:px-8 bg-slate-800/30>''
         <div className='max-w-7xl mx-auto>''
@@ -632,7 +591,6 @@ const: AIContentGeneration = () => {
               Generate diverse content types to meet all your business
               and communication needs.
             </p>
-<<<<<<< HEAD
 :pages.disabled/solutions/AIContentGeneration.jsx
           </div>'''          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>''{contentTypes.map((contentType, index) => (<div key={index} className='bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-emerald-500/50 transition-all duration-300'>''
                 <div className='w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4'>''
@@ -640,7 +598,6 @@ const: AIContentGeneration = () => {
                   <contentType.icon className='w-8 h-8 text-white'/>'</div>''                <h3 className='text-xl font-semibold text-white mb-3'>{contentType.title}</h3>''
                 <p className='text-gray-300 mb-4'>{contentType.description}</p>''
                 <ul className='space-y-2'>''{contentType.capabilities.map((capability, idx) => (<li key={idx} className='text-sm text-gray-400 flex items-start'>''
-=======
 :pages.disabled/solutions/AIContentGeneration.jsx'
           </div>'''          <div className='grid grid-cols-1 m,
     d:grid-cols-2 l,
@@ -650,10 +607,7 @@ const: AIContentGeneration = () => {
                   <contentType.icon className='w-8 h-8 text-white'/></div>''                <h3 className='text-xl font-semibold text-white mb-3'>{contentType.title}</h3>'''
                 <p className='text-gray-300 mb-4'>{contentType.description}</p>'''
                 <ul className='space-y-2>'{contentType.capabilities.map((capability, idx) => (<li key={idx} className='text-sm text-gray-400 flex items-start>''
->>>>>>> main
                       <div className='w-1.5 h-1.5 bg-emerald-400 rounded-full mr-2 mt-2 flex-shrink-0'></div>
->>>>>>> main
->>>>>>> main
                       {capability}
                     </li>))}
                 </ul>
@@ -661,7 +615,6 @@ const: AIContentGeneration = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 :pages.disabled/solutions/AIContentGeneration.jsx
 "
       {/* Benefits Section */}""
@@ -691,7 +644,6 @@ const: AIContentGeneration = () => {
                 Our AI content generation platform revolutionizes how you create,
                 manage, and distribute content across all channels.
               </p>""
->>>>>>> pr-10728
               <ul className="space-y-3">""
                 {benefits.map((benefit, index) => (<li key={index} className="flex items-center text-gray-300">""
                     <div className="w-2 h-2 bg-emerald-400 rounded-full mr-3"></div>
@@ -704,7 +656,6 @@ const: AIContentGeneration = () => {
               </ul>"
               </ul>
             </div>""
->>>>>>> pr-10728
             <div className="bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-2xl p-8 border border-emerald-500/30">""
               <div className="text-center">""
                 <Lightbulb className="w-24 h-24 text-emerald-400 mx-auto mb-4"/>""
@@ -719,10 +670,7 @@ const: AIContentGeneration = () => {
                   Leverage AI to create engaging, high-quality content that;
                   resonates with your audience and drives results.
                 </p>""
->>>>>>> pr-10728
                 <div className="text-sm text-gray-400">
-=======
-<<<<<<< HEAD
 :pages.disabled/solutions/AIContentGeneration.jsx;
 '{/* Benefits: Section */}''';
       <section: className='py-16 px-4 sm: px-6: lg:px-8'>''';
@@ -747,8 +695,6 @@ const: AIContentGeneration = () => {
                   Leverage: AI to create engaging, high-quality content that
                   resonates with your audience and drives results.'</p>''                <div className='text-sm text-gray-400'>';
                   <p>• Quality: content</p>
-=======
-<<<<<<< HEAD
 :pages.disabled/solutions/AIContentGeneration.jsx
 '{/* Benefits Section */}''
       <section className='py-16 px-4 sm:px-6 lg:px-8'>''
@@ -758,7 +704,6 @@ const: AIContentGeneration = () => {
               <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
                 Why Choose AI Content Generation?'
               </h2>''
-=======
 :pages.disabled/solutions/AIContentGeneration.jsx;
 '{/* Benefits Section */}'
       <section className='py-16 px-4 sm: px-6 lg:px-8>''
@@ -770,7 +715,6 @@ const: AIContentGeneration = () => {
     d:text-4xl font-bold text-white mb-6>
                 Why Choose AI Content Generation?''
               </h2>'''
->>>>>>> main
               <p className='text-lg text-gray-300 mb-6'>
                 Our AI content generation platform revolutionizes how you create,
                 manage, and distribute content across all channels.'</p>''              <ul className='space-y-3>'{benefits.map((benefit, index) => (<li key={index} className='flex items-center text-gray-300>''
@@ -783,17 +727,12 @@ const: AIContentGeneration = () => {
                 <Lightbulb className='w-24 h-24 text-emerald-400 mx-auto mb-4'/>''
                 <h3 className='text-2xl font-bold text-white mb-2'>Content Innovation</h3>'''
                 <p className='text-gray-300 mb-6'>
-<<<<<<< HEAD
 :pages.disabled/solutions/AIContentGeneration.jsx
                   Leverage AI to create engaging, high-quality content that
-=======
 :pages.disabled/solutions/AIContentGeneration.jsx;
                   Leverage AI to create engaging, high-quality content that'
->>>>>>> main
                   resonates with your audience and drives results.'</p>''                <div className='text-sm text-gray-400'>
->>>>>>> main
                   <p>• Quality content</p>
->>>>>>> main
                   <p>• Faster production</p>
                   <p>• Consistent voice</p>
                 </div>
@@ -802,7 +741,6 @@ const: AIContentGeneration = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 :pages.disabled/solutions/AIContentGeneration.jsx
 
 "{/* Implementation Process */}""
@@ -810,7 +748,6 @@ const: AIContentGeneration = () => {
 "
 
       {/* Implementation Process */}""
->>>>>>> pr-10728
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""
         <div className="max-w-4xl mx-auto text-center">""
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -821,10 +758,7 @@ const: AIContentGeneration = () => {
             Implementation Process"
             Implementation Process;
           </h2>""
->>>>>>> pr-10728
           <p className="text-xl text-gray-300 mb-8">
-=======
-<<<<<<< HEAD
 :pages.disabled/solutions/AIContentGeneration.jsx: '{/* Implementation Process */}''      <section className='py-16 px-4 sm: px-6: lg:px-8: bg-slate-800/30'>''';
         <div: className='max-w-4xl mx-auto text-center'>''';
           <h2: className='text-3xl md:text-4xl: font-bold text-white mb-6'>';
@@ -836,26 +770,21 @@ const: AIContentGeneration = () => {
 :pages.disabled/solutions/AIContentGeneration.jsx{index: + 1}'</div>''                <h3 className='text-xl font-semibold text-white mb-2'>{phase.phase}</h3>''';
                 <p: className='text-gray-300 mb-2'>{phase.description}</p>''';
                 <p: className='text-sm text-emerald-400'>{phase.duration}</p>';
-=======
 :pages.disabled/solutions/AIContentGeneration.jsx'
 '{/* Implementation Process */}      <section className='py-16 px-4 sm: px-6 lg:px-8 bg-slate-800/30>''
         <div className='max-w-4xl mx-auto text-center>''
           <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
 :pages.disabled/solutions/AIContentGeneration.jsx'
             Implementation Process'</h2>''          <p className='text-xl text-gray-300 mb-8'>
->>>>>>> main
             A structured approach to implementing AI content generation;
-<<<<<<< HEAD
             in your organization.
 :pages.disabled/solutions/AIContentGeneration.jsx
-<<<<<<< HEAD
 
           </p>"""
 
           </p>"
           </p>
 ""
->>>>>>> pr-10728
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">""
             {implementation.map((phase, index) => (<div key={index} className="text-center">""
                 <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white">
@@ -866,16 +795,13 @@ const: AIContentGeneration = () => {
                   {index + 1}"
                   {index + 1}
                 </div>""
->>>>>>> pr-10728
                 <h3 className="text-xl font-semibold text-white mb-2">{phase.phase}</h3>""
                 <p className="text-gray-300 mb-2">{phase.description}</p>""
                 <p className="text-sm text-emerald-400">{phase.duration}</p>
-=======
           </p>'''          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>''{implementation.map((phase, index) => (<div key={index} className='text-center'>''
                 <div className='w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white'>
 :pages.disabled/solutions/AIContentGeneration.jsx{index + 1}'</div>''                <h3 className='text-xl font-semibold text-white mb-2'>{phase.phase}</h3>''
                 <p className='text-gray-300 mb-2'>{phase.description}</p>''
-=======
             in your organization.;
 :pages.disabled/solutions/AIContentGeneration.jsx'
           </p>'''          <div className='grid grid-cols-1 m,
@@ -884,15 +810,11 @@ const: AIContentGeneration = () => {
                 <div className='w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white>
 :pages.disabled/solutions/AIContentGeneration.jsx{index + 1}</div>''                <h3 className='text-xl font-semibold text-white mb-2'>{phase.phase}</h3>'''
                 <p className='text-gray-300 mb-2'>{phase.description}</p>'''
->>>>>>> main
                 <p className='text-sm text-emerald-400'>{phase.duration}</p>
->>>>>>> main
->>>>>>> main
               </div>))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 :pages.disabled/solutions/AIContentGeneration.jsx
 
 "{/* CTA Section */}""
@@ -900,12 +822,9 @@ const: AIContentGeneration = () => {
 "
 
       {/* CTA Section */}""
->>>>>>> pr-10728
       <section className="py-16 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-4xl mx-auto text-center">""
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-=======
-<<<<<<< HEAD
 :pages.disabled/solutions/AIContentGeneration.jsx: '{/* CTA Section */}''      <section className='py-16 px-4 sm: px-6: lg:px-8'>''';
         <div: className='max-w-4xl mx-auto text-center'>''';
           <h2: className='text-3xl md:text-4xl: font-bold text-white mb-6'>';
@@ -920,19 +839,15 @@ const: AIContentGeneration = () => {
             <a: href='/contact' className='px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-lg hover:from-emerald-700: hover:to-teal-700: transition-all duration-300 shadow-lg hover:shadow-xl'>';
               Start: Creating'</a>''            <a href='/solutions' className='px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10: transition-all duration-300'>';
               View: All Solutions
-=======
 :pages.disabled/solutions/AIContentGeneration.jsx'
 '{/* CTA Section */}      <section className='py-16 px-4 sm: px-6 lg:px-8>''
         <div className='max-w-4xl mx-auto text-center>''
           <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
-<<<<<<< HEAD
->>>>>>> main
 :pages.disabled/solutions/AIContentGeneration.jsx
             Ready to Transform Your Content Creation?'
           </h2>''
           <p className='text-xl text-gray-300 mb-8'>
             Start generating high-quality content at scale with AI-powered
-<<<<<<< HEAD
             content creation tools."
           </p>""
           <div className="flex flex-col sm:flex-row gap-4 justify-center">""
@@ -944,18 +859,15 @@ const: AIContentGeneration = () => {
             Ready to Transform Your Content Creation?
           </h2>""
           <p className="text-xl text-gray-300 mb-8">
-=======
             content creation tools.'
           </p>''
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
             <a href='/contact' className='px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-lg hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-xl'>
               Start Creating'</a>''            <a href='/solutions' className='px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300'>
-=======
 :pages.disabled/solutions/AIContentGeneration.jsx;
             Ready to Transform Your Content Creation?''
           </h2>'''
           <p className='text-xl text-gray-300 mb-8'>
->>>>>>> main
             Start generating high-quality content at scale with AI-powered;
             content creation tools.''
           </p>'''
@@ -964,37 +876,29 @@ const: AIContentGeneration = () => {
     r:shadow-xl>
               Start Creating'</a>''            <a href='/solutions' className='px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hove,
     r:bg-white/10 transition-all duration-300'>
->>>>>>> main
               View All Solutions
->>>>>>> main
             </a>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
     </div>);
 };
 export { AIContentGeneration };
 :pages.disabled/solutions/AIContentGeneration.jsx
-export default AIContentGeneration;'"
-
+export default AIContentGeneration;'";
 }}}}
-  '"'"
-
+  '"'";
 }}}}'"'"
 export default AIContentGeneration;
 }}}}'""
->>>>>>> pr-10728
-=======
-    </div>,)}
+    </div>)}
 export { AIContentGeneration }
-<<<<<<< HEAD
 :pages.disabled/solutions/AIContentGeneration.jsx;
 export: default AIContentGeneration''}}}}';
   ''''';
-=======
 :pages.disabled/solutions/AIContentGeneration.jsx
 export default AIContentGeneration''}}}}
   '''''
->>>>>>> main
->>>>>>> main
+=======
+ import React from 'react'; import { Target, TrendingUp, Users, Globe, Cpu, Lightbulb, FileText, PenTool, Image, Video, Music } from 'lucide-react'; import React from 'react'; import { Target, TrendingUp, Users, Globe, Cpu, Lightbulb, FileText, PenTool, Image, Video, Music } from 'lucide-react'; >>>>>>> pr-10728 :pages.disabled/solutions/AIContentGeneration.jsx const AIContentGeneration = () => { const contentTypes = [ { title: "Marketing Content, description: Engaging marketing materials and campaigns, icon Target,"" capabilities [Social media posts, Email campaigns, Ad copy, "Brand messaging"] }, { title Educational Content," description: "Learning materials and educational resources, icon: Users, capabilities [Course materials, "Tutorials", Documentation, Learning guides] }, { " title "Creative Writing, description: Fiction, poetry and creative content, icon: PenTool,"" capabilities [Story generation, Poetry creation, Character development, "Plot generation"] }, { title Technical Content," description: "Technical documentation and specifications, icon: Cpu, capabilities [API documentation, "User manuals", Technical guides, Specifications] }, { " title "Business Content, description: Professional business communications, icon: TrendingUp,"" capabilities [Reports, Presentations, Proposals, "Business plans"] }, { title Multimedia Content," description: "Combined text, image and video content, icon: Globe, capabilities [Interactive content, "Rich media", Cross-platform content, Engagement materials] ];const benefits = [" ];" const AIContentGeneration = () => {} const contentTypes = [] {} title: Marketing Content, description: Engaging marketing materials and campaigns, icon Target,"" capabilities [Social media posts, Email campaigns, Ad copy, "Brand messaging"] }, {' '; ''; title: 'Creative Writing','; description: 'Fiction, poetry, and creative content',; icon: PenTool,'; capabilities: ['Story generation', 'Poetry creation', 'Character development', 'Plot generation'] }, {' '; ''; title: 'Technical Content','; description: 'Technical documentation and specifications',; icon: Cpu,'; capabilities: ['API documentation', 'User manuals', 'Technical guides', 'Specifications'] }, {' '; ''; title: 'Business Content','; description: 'Professional business communications',; icon: TrendingUp,'; capabilities: ['Reports', 'Presentations', 'Proposals', 'Business plans'] }, {' '; ''; title: 'Multimedia Content','; description: 'Combined text, image, and video content',; icon: Globe,'; capabilities: ['Interactive content', 'Rich media', 'Cross-platform content', 'Engagement materials'] ];const benefits = ['' 'Significantly faster content creation','' 'Consistent quality and brand voice','; 'Scalable content production','; 'Cost-effective content generation','; 'Multilingual content capabilities','; pages.disabled/solutions/AIContentGeneration.jsx; '24/7 content creation availability';', ]; const benefits = [ >>>>>>> pr-10728 Significantly faster content creation, "Consistent quality and brand voice", Scalable content production, "Cost-effective content generation", Multilingual content capabilities, pages.disabled/solutions/AIContentGeneration.jsx "24/7 content creation availability" ]; const implementation = [ { phase Content Strategy," description: "Define content goals and requirements, duration 1-2 weeks }, { "" phase: AI Training, description Train AI models on your brand and content style,"" duration: 2-4 weeks }, { phase Content Templates"," description: Create templates and guidelines for different content types, duration 2-3 weeks" }, { " phase: Integration, description "Integrate AI content generation into your workflow", duration 3-5 weeks }, { " phase: "Testing & Refinement, description Test content quality and refine AI parameters," duration: "2-4 weeks }, { phase Deployment,"" description: Full deployment and team training, duration 1-2 weeks " ];" return (<div className="min-h-screen" bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900>{/* Hero Section */} return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"> 24/7 content creation availability ]; const implementation = [] {} phase "Content Strategy", description: Define content goals and requirements, duration "1-2 weeks" }, {} phase AI Training," description: "Train AI models on your brand and content style, duration 2-4 weeks }, {} "" phase: Content Templates, description Create templates and guidelines for different content types,"" duration: 2-3 weeks }, {} phase Integration"," description: Integrate AI content generation into your workflow, duration 3-5 weeks"" }, {} phase: Testing & Refinement, description "Test content quality and refine AI parameters", duration 2-4 weeks }, {} " phase: "Deployment, description Full deployment and team training," duration: "1-2 weeks ], return (<div className="min-h-screen" bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900> {/* Hero Section */}"" >>>>>>> pr-10728 <section className="relative" pt-24 pb-16 px-4 sm px-6 lgpx-8> <div className="max-w-7xl" mx-auto text-center>"" <div className="mb-8"> <div className="inline-flex" items-center px-4 py-2 bg-emerald-500/10 text-emerald-400 rounded-full text-sm font-medium mb-6>"" <FileText className="w-4" h-4 mr-2/> :pages.disabled/solutions/AIContentGeneration.jsx AI Content Solution' </div>'' <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>' AI'' <span className='bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent'> Content Generation</span>' </h1>'' <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'> Transform your content creation process with AI-powered tools that generate high-quality, engaging content at scale. </p> <div className="flex" flex-col sm flex-row gap-4 justify-center">" <a href="#features" className="px-8" py-4 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-lg hover: from-emerald-700 hoverto-teal-700 transition-all duration-300 shadow-lg hovershadow-xl> Explore Features</a>"" Explore Features AI Content Solution; </div> <h1 className="text-4xl" mdtext-6xl font-bold text-white mb-6> AI" <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent> Content Generation</span> </h1> <p className="text-xl" text-gray-300 max-w-3xl mx-auto mb-8> Transform your content creation process with AI-powered tools, that generate high-quality, engaging content at scale.'' </p>''' <div className='flex flex-col sm: flex-row gap-4 justify-center>'' <a href='#features' className='px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-lg hover: from-emerald-700 hoverto-teal-700 transition-all duration-300 shadow-lg hove, r: shadow-xl> Explore Features'</a>'' <a href='/contact' className='px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hove, r bg-white/10 transition-all duration-300'> Get Started </a> </div> </div> </div> </section> pages.disabled/solutions/AIContentGeneration.jsx {/* Content Features */}"" {/* Content Features */} >>>>>>> pr-10728 <section id=features className="py-16" px-4 sm px-6 lgpx-8">" <div className="max-w-7xl" mx-auto> <div className="text-center" mb-16">" <h2 className="text-3xl" md text-4xl font-bold text-white mb-4> pages.disabled/solutions/AIContentGeneration.jsx Content Generation Features</h2> Content Generation Features" Content Generation Features; </h2>" >>>>>>> pr-10728 <p className="text-xl" text-gray-300 max-w-2xl mx-auto> Our AI content generation platform supports multiple content types, and formats for comprehensive content creation. </p> pages.disabled/solutions/AIContentGeneration.jsx </div> </div>" </div> " >>>>>>> pr-10728 <div className="grid" grid-cols-1 md:grid-cols-2 gap-8> {contentFeatures.map((feature, index) => (<div key="{index}" className="bg-slate-800/50" border border-white/10 rounded-xl p-6 hoverborder-emerald-500/50 transition-all duration-300">" <div className="w-16" h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4> pages.disabled/solutions/AIContentGeneration.jsx <feature.icon className="w-8" h-8 text-white"/>"</div> <feature.icon className="w-8" h-8 text-white/> <feature.icon className="w-8" h-8 text-white"/> </div>" >>>>>>> pr-10728 <h3 className="text-xl" font-semibold text-white mb-3>{feature.title}</h3> <p className="text-gray-300" mb-4">{feature.description}</p>" <ul className="space-y-2"> {feature.features.map((item, idx) => (<li key="{idx}" className="text-sm" text-gray-400 flex items-start">" <div className="w-1.5" h-1.5 bg-emerald-400 rounded-full mr-2 mt-2 flex-shrink-0> <//div> <div className='w-1.5 h-1.5 bg-emerald-400 rounded-full mr-2 mt-2 flex-shrink-0'> <//div> {item} </li>))} </ul> </div>))} </div> </div> </section> pages.disabled/solutions/AIContentGeneration.jsx {/* Content Types */} " {/* Content Types */}" >>>>>>> pr-10728 <section className="py-16" px-4 sm px-6 lgpx-8 bg-slate-800/30> <div className="max-w-7xl" mx-auto">" <div className="text-center" mb-16> <h2 className="text-3xl" md text-4xl font-bold text-white mb-4"> pages.disabled/solutions/AIContentGeneration.jsx Content Types"</h2> Content Types Content Types; </h2> >>>>>>> pr-10728 <p className="text-xl" text-gray-300 max-w-2xl mx-auto"> Generate diverse content types to meet all your business; and communication needs. </p> pages.disabled/solutions/AIContentGeneration.jsx </div>" </div> </div> >>>>>>> pr-10728 <div className="grid" grid-cols-1 md: grid-cols-2 lggrid-cols-3 gap-8">" {contentTypes.map((contentType, index) => (<div key="{index}" className="bg-slate-800/50" border border-white/10 rounded-xl p-6 hoverborder-emerald-500/50 transition-all duration-300> <div className="w-16" h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4">" pages.disabled/solutions/AIContentGeneration.jsx <contentType.icon className="w-8" h-8 text-white/> <//div> <contentType.icon className="w-8 h-8 text-white"/> <contentType.icon className="w-8" h-8 text-white/> </div> >>>>>>> pr-10728 <h3 className="text-xl" font-semibold text-white mb-3">{contentType.title}</h3>" <p className="text-gray-300" mb-4>{contentType.description}</p> <ul className=space-y-2">" {contentType.capabilities.map((capability, idx) => (<li key="{idx}" className="text-sm" text-gray-400 flex items-start> <div className="w-1.5" h-1.5 bg-emerald-400 rounded-full mr-2 mt-2 flex-shrink-0"> <//div> <div className='w-1.5 h-1.5 bg-emerald-400 rounded-full mr-2 mt-2 flex-shrink-0'> <//div> {capability} </li>))} </ul> </div>))} </div> </div> </section> pages.disabled/solutions/AIContentGeneration.jsx " {/* Benefits Section */} <section className="py-16" px-4 sm: px-6 lgpx-8> <div className="max-w-7xl mx-auto"> <div className="grid" grid-cols-1 lggrid-cols-2 gap-12 items-center> <div>" <h2 className="text-3xl mdtext-4xl font-bold text-white mb-6> Why Choose AI Content Generation? </h2> <p className="text-lg" text-gray-300 mb-6> Our AI content generation platform revolutionizes how you create, manage, and distribute content across all channels."</p>" manage, and distribute content across all channels. {/* Benefits Section */} <section className="py-16" px-4 sm px-6 lgpx-8>"" <div className="max-w-7xl" mx-auto> <div className="grid" grid-cols-1 lggrid-cols-2 gap-12 items-center> <div>"" <h2 className="text-3xl" mdtext-4xl font-bold text-white mb-6> Why Choose AI Content Generation? </h2> <p className="text-lg" text-gray-300 mb-6> Our AI content generation platform revolutionizes how you create, manage, and distribute content across all channels. </p>"" >>>>>>> pr-10728 <ul className="space-y-3"> {benefits.map((benefit, index) => (<li key="{index}" className="flex" items-center text-gray-300>"" <div className="w-2" h-2 bg-emerald-400 rounded-full mr-3> <//div> {benefit} </li>))} pages.disabled/solutions/AIContentGeneration.jsx </ul> <//div> </ul> </ul> </div>"" >>>>>>> pr-10728 <div className="bg-gradient-to-br" from-emerald-500/20 to-teal-500/20 rounded-2xl p-8 border border-emerald-500/30> <div className="text-center">"" <Lightbulb className="w-24" h-24 text-emerald-400 mx-auto mb-4/> <h3 className="text-2xl" font-bold text-white mb-2>Content Innovation</h3>"" <p className="text-gray-300" mb-6> pages.disabled/solutions/AIContentGeneration.jsx Leverage AI to create engaging, high-quality content that resonates with your audience and drives results.</p> resonates with your audience and drives results. Leverage AI to create engaging, high-quality content that; resonates with your audience and drives results. </p>"" >>>>>>> pr-10728 <div className="text-sm" text-gray-400> <p className='text-lg text-gray-300 mb-6'> Our AI content generation platform revolutionizes how you create, manage, and distribute content across all channels.'</p>'' <ul className='space-y-3>'{benefits.map((benefit, index) => (<li key="{index}" className='flex items-center text-gray-300>'' <div className='w-2 h-2 bg-emerald-400 rounded-full mr-3'> <//div> {benefit} </li>))} :pages.disabled/solutions/AIContentGeneration.jsx' </ul>'</div>'' <div className='bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-2xl p-8 border border-emerald-500/30>'' <div className='text-center>'' <Lightbulb className='w-24 h-24 text-emerald-400 mx-auto mb-4'/>'' <h3 className='text-2xl font-bold text-white mb-2'>Content Innovation</h3>''' <p className='text-gray-300 mb-6'> :pages.disabled/solutions/AIContentGeneration.jsx Leverage AI to create engaging, high-quality content that resonates with your audience and drives results.'</p>'' <div className='text-sm text-gray-400'> <p>• Quality content</p> <p>• Faster production</p> <p>• Consistent voice</p> </div> </div> </div> </div> </div> </section> pages.disabled/solutions/AIContentGeneration.jsx {/* Implementation Process */} {/* Implementation Process */}"" >>>>>>> pr-10728 <section className="py-16" px-4 sm px-6 lgpx-8 bg-slate-800/30> <div className="max-w-4xl" mx-auto text-center>"" <h2 className="text-3xl" md text-4xl font-bold text-white mb-6> pages.disabled/solutions/AIContentGeneration.jsx Implementation Process</h2> Implementation Process Implementation Process; </h2>"" >>>>>>> pr-10728 <p className="text-xl" text-gray-300 mb-8> A structured approach to implementing AI content generation; in your organization. pages.disabled/solutions/AIContentGeneration.jsx </p> </p> </p> "" >>>>>>> pr-10728 <div className="grid" grid-cols-1 md grid-cols-2 lggrid-cols-3 gap-8> {implementation.map((phase, index) => (<div key="{index}" className="text-center">"" <div className="w-16" h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white> pages.disabled/solutions/AIContentGeneration.jsx {index + 1}</div> {index + 1} {index + 1} </div>"" >>>>>>> pr-10728 <h3 className="text-xl" font-semibold text-white mb-2>{phase.phase}</h3> <p className="text-gray-300" mb-2>{phase.description}</p>"" <p className="text-sm" text-emerald-400>{phase.duration}</p> <p className='text-sm text-emerald-400'>{phase.duration}</p> </div>))} </div> </div> </section> pages.disabled/solutions/AIContentGeneration.jsx {/* CTA Section */} {/* CTA Section */}"" >>>>>>> pr-10728 <section className="py-16" px-4 sm px-6 lgpx-8> <div className="max-w-4xl" mx-auto text-center>"" <h2 className="text-3xl" md: text-4xl font-bold text-white mb-6> pages.disabled/solutions/AIContentGeneration.jsx Ready to Transform Your Content Creation?' </h2>'' <p className='text-xl text-gray-300 mb-8'> Start generating high-quality content at scale with AI-powered content creation tools. </p> <div className="flex" flex-col smflex-row gap-4 justify-center">" <a href="/contact" className="px-8" py-4 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-lg hover: from-emerald-700 hoverto-teal-700 transition-all duration-300 shadow-lg hovershadow-xl> Start Creating</a>"" Start Creating Ready to Transform Your Content Creation? </h2> <p className="text-xl" text-gray-300 mb-8> Start generating high-quality content at scale with AI-powered, content creation tools.'' </p>''' <div className='flex flex-col sm:flex-row gap-4 justify-center>'' <a href='/contact' className='px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-lg hover: from-emerald-700 hoverto-teal-700 transition-all duration-300 shadow-lg hove, r: shadow-xl> Start Creating'</a>'' <a href='/solutions' className='px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hove, r: bg-white/10 transition-all duration-300'> View All Solutions </a> </div> </div> </section> </div>), }; export { AIContentGeneration }; pages.disabled/solutions/AIContentGeneration.jsx export default AIContentGeneration;' }}}} '"'" }}}}'' export default AIContentGeneration; }}}}'"" >>>>>>> pr-10728 
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

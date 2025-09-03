@@ -1,12 +1,13 @@
 import React from 'react';
 import { ArrowRight, CheckCircle, Headphones, MessageSquare, Users, BarChart3, Zap, Shield, Clock, Star, TrendingUp, Globe } from 'lucide-react';
+import PageTransition from '../../src/components/PageTransition';
 
 export default function HelpdeskPlatform() {
 	const title = 'Customer Support & Helpdesk Platform — Zion Tech Group'
 	const description = 'Comprehensive customer support platform with ticket management, live chat, AI chatbots, and knowledge base creation.'
 
 	return (
-		<>
+		<PageTransition>
 			{/* Hero Section */}
 			<section className="bg-gradient-to-br from-indigo-50 to-blue-50 py-20 sm:py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -439,6 +440,6 @@ export default function HelpdeskPlatform() {
 					</div>
 				</div>
 			</section>
-		</>
-	)
+		</PageTransition>
+	);
 }

@@ -12,5 +12,5 @@
       "Use const assertions for immutable data",
       "Consider using branded types for IDs"
     ]
-  }
+}
 }

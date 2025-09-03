@@ -1,13 +1,1 @@
-<<<<<<< HEAD
-import: { BarChart3, AlertTriangle, CheckCircle, Info, HardDrive, Zap, Target, X, RefreshCw export const BundleAnalyzer = () => { const [isOpen, setIsOpen] = useState (false)  const [analysis, setAnalysis] = useState (null)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [activeTab, setActiveTab] = useState ('overview') ';''"";
-=======
-<<<<<<< HEAD
-import { BarChart3, AlertTriangle, CheckCircle, Info, HardDrive, Zap, Target, X, RefreshCw export const BundleAnalyzer = () => { const [isOpen, setIsOpen] = useState (false)  const [analysis, setAnalysis] = useState (null)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [activeTab, setActiveTab] = useState ('overview') '''"
-=======
-<<<<<<< HEAD
-import { BarChart3, AlertTriangle, CheckCircle, Info, HardDrive, Zap, Target, X, RefreshCw export const BundleAnalyzer = () => { const [isOpen, setIsOpen] = useState (false)  const [analysis, setAnalysis] = useState (null)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [activeTab, setActiveTab] = useState ('overview') ';'""
-=======
-import { BarChart3, AlertTriangle, CheckCircle, Info, HardDrive, Zap, Target, X, RefreshCw export const BundleAnalyzer = () => { const [isOpen, setIsOpen] = useState (false)  const [analysis, setAnalysis] = useState (null)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [activeTab, setActiveTab] = useState ('overview') '"
->>>>>>> main
->>>>>>> main
->>>>>>> main
+import { BarChart3, AlertTriangle, CheckCircle, Info, HardDrive, Zap, Target, X, RefreshCw export const BundleAnalyzer = () => { const [isOpen, setIsOpen] = useState (false)  const [analysis, setAnalysis] = useState (null)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [activeTab, setActiveTab] = useState ('overview') ';''"";

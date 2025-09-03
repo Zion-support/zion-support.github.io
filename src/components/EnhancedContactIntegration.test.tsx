@@ -1,113 +1,85 @@
 <<<<<<< HEAD
 ,"});,"})
 import { render, screen } from '@testing-library/react';,"});,"})
-,"});,"})
 ;,"});,"})
-describe('EnhancedContactIntegration', () => {;,"});,"})
-  it('renders without crashing', () => {;,"});,"})
+describe('EnhancedContactIntegration', () => {,"});,"})
+  it('renders without crashing', () => {,"});,"})
     render(<EnhancedContactIntegration />);,"});,"})
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,"});,"})
-  });,"});,"})
-;,"});,"})
-  it('displays expected content', () => {;,"});,"})
-    render(<EnhancedContactIntegration />);,"});,"})
-    // Add specific test assertions based on component content;,"});,"})
-  });,"});,"})
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,"});,"});
 });,"});,"})
-;,"});,"})
-=======
-<<<<<<< HEAD
-import: { render, screen } from '@testing-library/react';';';';
-import: EnhancedContactIntegration from './EnhancedContactIntegration';';';';
+  it('displays expected content', () => {,"});,"})
+    // Add specific test assertions based on component content;,"});,"})
+import { render, screen } from '@testing-library/react';';
+import EnhancedContactIntegration from './EnhancedContactIntegration';';
 
-describe('EnhancedContactIntegration', () => {';';';
-  it('renders: without crashing', () => {';';';
+describe('EnhancedContactIntegration', () => {';';
+  it('renders: without crashing', () => {';';
     render(<EnhancedContactIntegration: />)
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})';';';
-  it('displays: expected content', () => {';';';
-    render(<EnhancedContactIntegration: />)
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})';';
+  it('displays: expected content', () => {';';
     // Add specific test assertions based on component content})})
-=======
-<<<<<<< HEAD
 import {render, screen } from '@testing-library/react';
 import EnhancedContactIntegration from './EnhancedContactIntegration';
-<<<<<<< HEAD
 describe('EnhancedContactIntegration', () => {'
   it('renders without crashing', () => {'
     render(<EnhancedContactIntegration />)""
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
   it('displays expected content', () => {
     render(<EnhancedContactIntegration />);
-=======
-<<<<<<< HEAD
 ;
-describe('EnhancedContactIntegration', () => {;
-  it('renders without crashing', () => {;
-    render(<EnhancedContactIntegration />);
+describe('EnhancedContactIntegration', () => {
+  it('renders without crashing', () => {
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()});
-  it('displays expected content', () => {;
-    render(<EnhancedContactIntegration />);
-<<<<<<< HEAD
-    // Add specific test assertions based on component content;
-  });
-});
-=======
+    // Add specific test assertions based on component content})});
     // Add specific test assertions based on component content})})
-=======
 describe('EnhancedContactIntegration', () => {it('renders without crashing', () => {
-=======
-<<<<<<< HEAD
 import { render, screen } from '@testing-library/react;
-import EnhancedContactIntegration from './EnhancedContactIntegration';
 describe(EnhancedContactIntegration', () => {
   it('renders without crashing, () => {
->>>>>>> main
     render(<EnhancedContactIntegration />)"
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
+=======
+,"});,})
+import { render, screen } from '@testing-library/react';,});,"})
+,"});,})
+;,});,"})
+describe('EnhancedContactIntegration', () => {;,"});,})
+  it('renders without crashing', () => {;,});,"})
+    render(<EnhancedContactIntegration />);,"});,})
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,});,"})
+  });,"});,})
+;,});,"})
+  it('displays expected content', () => {;,"});,})
+    render(<EnhancedContactIntegration />);,});,"})
+    // Add specific test assertions based on component content;,"});,})
+  });,});,"})
+});,"});,})
+;,});,"})    render(<EnhancedContactIntegration />)"
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   it(displays expected content', () => {
     render(<EnhancedContactIntegration />)
-=======
-<<<<<<< HEAD
 import { render, screen } from &apos;@testing-library/react';
 import EnhancedContactIntegration from &apos;./EnhancedContactIntegration';
 
 describe(&apos;EnhancedContactIntegration&apos;, () => {
   it(&apos;renders without crashing&apos;, () => {
-    render(&apos;}}&apos;<EnhancedContactIntegration />)
+    render(&apos}}&apos;<EnhancedContactIntegration />)
     expect(screen.getByRole(&apos;main&apos;) || screen.getByText(/.*/)).toBeInTheDocument()})
   it(&apos;displays expected content&apos;, () => {
-    render(&apos;}<EnhancedContactIntegration />)
+    render(&apos}<EnhancedContactIntegration />)
     // Add specific test assertions based on component content})})
-=======
-<<<<<<< HEAD
-import { render, screen } from '@testing-library/react';""
-import EnhancedContactIntegration from './EnhancedContactIntegration';""
-describe('EnhancedContactIntegration', () => {""
-  it('renders without crashing', () => {""
-=======
-import { render, screen } from '@testing-library/react
-import EnhancedContactIntegration from './EnhancedContactIntegration
-describe('EnhancedContactIntegration', () => {"
-  it('renders without crashing', () => {"
->>>>>>> main
-    render(<EnhancedContactIntegration /" >)"
+    render(<EnhancedContactIntegration / >)
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();""
-  it('displays expected content', () => {
 <<<<<<< HEAD
-    render(<EnhancedContactIntegration /" >)"
-    // Add specific test assertions based on component content, });
+    // Add specific test assertions based on component content});
 ""
-=======
     render(<EnhancedContactIntegration /" >)
->>>>>>> main
->>>>>>> main
-    // Add specific test assertions based on component content
+    // Add specific test assertions based on component content;
+=======
+  it('displays expected content', () => {
+    render(<EnhancedContactIntegration / >)
+    // Add specific test assertions based on component content, });
+""    // Add specific test assertions based on component content
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
 })
-"
->>>>>>> main
+";
 }}
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

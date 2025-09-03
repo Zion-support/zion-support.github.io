@@ -8,31 +8,31 @@ const Status: NextPage = () => {
     {
       name: 'Web Application', status: 'operational',
       uptime: '99.9%', responseTime: '120ms',
-      lastIncident: 'No incidents in the past 30 days'
-    }, {
+      lastIncident: 'No incidents in the past 30 days';
+}, {
       name: 'API Services',
       status: 'operational', uptime: '99.8%',
-      responseTime: '85ms', lastIncident: 'No incidents in the past 30 days'
-    },
+      responseTime: '85ms', lastIncident: 'No incidents in the past 30 days';
+},
     {
       name: 'Database', status: 'operational',
       uptime: '99.9%', responseTime: '45ms',
-      lastIncident: 'No incidents in the past 30 days'
-    }, {
+      lastIncident: 'No incidents in the past 30 days';
+}, {
       name: 'Cloud Infrastructure',
       status: 'operational', uptime: '99.7%',
-      responseTime: '200ms', lastIncident: 'No incidents in the past 30 days'
-    },
+      responseTime: '200ms', lastIncident: 'No incidents in the past 30 days';
+},
     {
       name: 'CDN', status: 'operational',
       uptime: '99.9%', responseTime: '50ms',
-      lastIncident: 'No incidents in the past 30 days'
-    }, {
+      lastIncident: 'No incidents in the past 30 days';
+}, {
       name: 'Monitoring',
       status: 'operational', uptime: '100%',
-      responseTime: '30ms', lastIncident: 'No incidents in the past 30 days'
-    }
-  ];
+      responseTime: '30ms', lastIncident: 'No incidents in the past 30 days';
+}
+  ]
 
   const getStatusIcon = (status: string) => {
     switch (status) {
@@ -56,14 +56,14 @@ const Status: NextPage = () => {
     {
       id: 1, title: 'Scheduled Maintenance - API Services',
       status: 'resolved', date: '2025-01-20',
-      description: 'Scheduled maintenance window for API services completed successfully.', impact: 'minor'
-    },
+      description: 'Scheduled maintenance window for API services completed successfully.', impact: 'minor';
+},
     {
       id: 2, title: 'Database Performance Issue',
       status: 'resolved', date: '2025-01-15',
-      description: 'Temporary performance degradation in database queries has been resolved.', impact: 'minor'
-    }
-  ];
+      description: 'Temporary performance degradation in database queries has been resolved.', impact: 'minor';
+}
+  ]
 
   return (
     <MainLayout
@@ -212,8 +212,8 @@ const Status: NextPage = () => {
                         <div className="flex items-center text-sm text-gray-500">
                           <span className="mr-4">Date: {incident.date}</span>
                           <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                            incident.impact === 'minor' ? 'bg-yellow-100 text-yellow-800' : 'bg-red-100 text-red-800'
-                          }`}>
+                            incident.impact === 'minor' ? 'bg-yellow-100 text-yellow-800' : 'bg-red-100 text-red-800';
+}`}>
                             {incident.impact} impact
                           </span>
                         </div>

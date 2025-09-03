@@ -10,7 +10,6 @@ class ComprehensiveAutomationFixer {
     this.errors = [];
   }
 
-<<<<<<< HEAD
   async fixAllScripts() {
     console.log('🔧 Starting comprehensive automation script fixes...');
 
@@ -23,12 +22,9 @@ class ComprehensiveAutomationFixer {
       }
 
       console.log(`✅ Fixed ${this.fixedCount} scripts`);
-<<<<<<< HEAD
     } catch (error) { 
-      console.error(`Error fixing scripts:`, error.message);
+      console.error(`Error fixing scripts: `, error.message);
      }
-=======
-=======
   log(message) {
     console.log(`[${new Date().toISOString()}] ${message}`);
   }
@@ -39,19 +35,15 @@ class ComprehensiveAutomationFixer {
       const result = execSync(command, {
         cwd: this.projectRoot,
         encoding: 'utf8',
-        timeout: 300000,
-      });
+        timeout: 300000});
       this.log(`✅ Completed: ${description}`);
       return { success: true, output: result };
->>>>>>> main
     } catch (error) {
       this.log(`❌ Failed: ${description} - ${error.message}`);
       return { success: false, error: error.message };
     }
->>>>>>> main
   }
 
-<<<<<<< HEAD
   async fixScript(filename) {
     const filePath = path.join(this.automationDir, filename);
 
@@ -67,76 +59,20 @@ class ComprehensiveAutomationFixer {
         console.log(`✅ Fixed: ${filename}`);
         this.fixedCount++;
       }
-<<<<<<< HEAD
     } catch (error) { 
       console.error(`❌ Error fixing ${filename }:`, error.message);
-=======
-    } catch (error) {
-      console.error(`❌ Error fixing ${filename}:`, error.message);
-=======
-  fixRemainingTestFiles() {
-    this.log('🔧 Fixing remaining test file issues');
-
-    const testFiles = this.getAllTestFiles(this.projectRoot);
-    let fixedCount = 0;
-
-    for (const testFile of testFiles) {
-      try {
-        const content = fs.readFileSync(testFile, 'utf8');
-
-        // Fix common issues
-        let fixedContent = content;
-
-        // Fix unterminated strings and syntax errors
-        if (content.includes('render(<') && content.includes(')"')) {
-          fixedContent = content.replace(
-            /render\(<[^>]*>\)\s*\)"/g,
-            'render(<Component />);'
-          );
-        }
-
-        // Fix import issues with hyphens
-        if (content.includes('import case-studies')) {
-          fixedContent = content.replace(
-            /import case-studies/g,
-            'import CaseStudies'
-          );
-        }
-
-        // Fix missing semicolons and brackets
-        if (
-          content.includes('expect(screen.getByRole') &&
-          !content.includes(';')
-        ) {
-          fixedContent = content.replace(
-            /expect\([^)]*\)\.toBeInTheDocument\(\)\s*\)\s*\}\)/g,
-            "expect(screen.getByRole('main')).toBeInTheDocument();\n  });"
-          );
-        }
-
-        if (fixedContent !== content) {
-          fs.writeFileSync(testFile, fixedContent);
-          fixedCount++;
-        }
-      } catch (error) {
-        this.errors.push({ file: testFile, error: error.message });
-      }
->>>>>>> main
->>>>>>> main
-    }
+<<<<<<< HEAD    }
 
     this.log(`✅ Fixed ${fixedCount} additional test files`);
     return fixedCount;
   }
 
-<<<<<<< HEAD
   fixAllErrors(content) {
     // Fix double quotes in path.join;
     content = content.replace(
       /path\.join\([^)]*``([^']+)''[^)]*\)/g,
       (match, pathPart) => {
         return match.replace(```${pathPart}```, ``${pathPart}``);
-=======
   getAllTestFiles(dir) {
     let testFiles = [];
     const items = fs.readdirSync(dir);
@@ -158,16 +94,13 @@ class ComprehensiveAutomationFixer {
         item.endsWith('.test.js')
       ) {
         testFiles.push(fullPath);
->>>>>>> main
       }
-<<<<<<< HEAD
     );
 
     // Fix malformed path.join calls;
     content = content.replace(
       /path\.join\(([^,]+),\s*'([^']+)',\s*'([^']+)'\)/g,
-      "path.join($1, '$2', '$3')"
-    );
+      "path.join($1, '$2', '$3')    );
 
     // Fix arrays with malformed path.join calls;
     content = content.replace(
@@ -182,7 +115,7 @@ class ComprehensiveAutomationFixer {
             if (parts && parts[1]) {
               const pathParts = parts[1]
                 .split(',')
-                .map(p => p.trim().replace(/['"]/g, '`));
+                .map(p => p.trim().replace(/[']/g, '`));
               return ``${pathParts.join('/')}``;
             }
             return pathJoinMatch;
@@ -204,19 +137,16 @@ class ComprehensiveAutomationFixer {
       match => {
         if (
           !match.includes("'") &&
-          !match.includes('"') &&
+          !match.includes('') &&
           !match.includes('path.join') &&
           !match.includes('require') &&
           !match.includes('process.') &&
           !match.includes('__dirname`)
         ) {
-<<<<<<< HEAD
           return ``${match}``;
         }
         return match;
-=======
           return `'${match}'`;
-=======
     }
 
     return testFiles;
@@ -244,12 +174,9 @@ jest.mock('next/router', () => ({
       events: {
         on: jest.fn(),
         off: jest.fn(),
-        emit: jest.fn(),
-      },
-      isFallback: false,
-    };
-  },
-}));
+        emit: jest.fn()},
+      isFallback: false};
+  }}));
 
 // Mock Next.js navigation
 jest.mock('next/navigation', () => ({
@@ -260,30 +187,26 @@ jest.mock('next/navigation', () => ({
       prefetch: jest.fn(),
       back: jest.fn(),
       forward: jest.fn(),
-      refresh: jest.fn(),
-    };
+      refresh: jest.fn()};
   },
   useSearchParams() {
     return new URLSearchParams();
   },
   usePathname() {
     return '/';
-  },
-}));
+  }}));
 
 // Global test setup
 global.ResizeObserver = jest.fn().mockImplementation(() => ({
   observe: jest.fn(),
   unobserve: jest.fn(),
-  disconnect: jest.fn(),
-}));
+  disconnect: jest.fn()}));
 
 // Mock IntersectionObserver
 global.IntersectionObserver = jest.fn().mockImplementation(() => ({
   observe: jest.fn(),
   unobserve: jest.fn(),
-  disconnect: jest.fn(),
-}));
+  disconnect: jest.fn()}));
 `;
 
     const setupDir = path.join(this.projectRoot, 'src', 'test');
@@ -320,9 +243,7 @@ global.IntersectionObserver = jest.fn().mockImplementation(() => ({
   t: (key) => key,
   i18n: {
     changeLanguage: jest.fn(),
-    language: 'en',
-  },
-};`;
+    language: 'en'}};`;
     fs.writeFileSync(path.join(mocksDir, 'i18n.js'), i18nMock);
 
     // Create react-markdown mock
@@ -348,21 +269,16 @@ module.exports = ({ children }) => React.createElement('div', {}, children);`;
     const customScripts = [
       {
         name: 'Performance Optimizer',
-        script: () => this.runPerformanceOptimization(),
-      },
+        script: () => this.runPerformanceOptimization()},
       {
         name: 'Security Scanner',
-        script: () => this.runSecurityScan(),
-      },
+        script: () => this.runSecurityScan()},
       {
         name: 'Code Quality Analyzer',
-        script: () => this.runCodeQualityAnalysis(),
-      },
+        script: () => this.runCodeQualityAnalysis()},
       {
         name: 'Dependency Checker',
-        script: () => this.runDependencyCheck(),
-      },
-    ];
+        script: () => this.runDependencyCheck()}];
 
     const results = [];
 
@@ -376,10 +292,8 @@ module.exports = ({ children }) => React.createElement('div', {}, children);`;
         results.push({
           name: customScript.name,
           success: false,
-          error: error.message,
-        });
+          error: error.message});
         this.log(`❌ Failed: ${customScript.name} - ${error.message}`);
->>>>>>> main
       }
     }
 
@@ -404,8 +318,7 @@ module.exports = ({ children }) => React.createElement('div', {}, children);`;
           ) {
             performanceIssues.push({
               file,
-              issue: 'Potential N+1 query problem - consider using useMemo',
-            });
+              issue: 'Potential N+1 query problem - consider using useMemo'});
           }
 
           if (
@@ -415,28 +328,22 @@ module.exports = ({ children }) => React.createElement('div', {}, children);`;
           ) {
             performanceIssues.push({
               file,
-              issue: 'Potential infinite re-render - check dependencies',
-            });
-          }
+              issue: 'Potential infinite re-render - check dependencies'
+            });          }
         } catch (error) {
-          // Skip files that can't be read
->>>>>>> main
-        }
+          // Skip files that can't be read;
+}
       }
-<<<<<<< HEAD
     );
 
     // Fix malformed require statements;
     content = content.replace(
-      /require\(([^)]*[^`",\s][^)]*)\)/g,
+      /require\(([^)]*[^`,\s][^)]*)\)/g,
       (match, requirePath) => {
-<<<<<<< HEAD
         if (!requirePath.includes("'") && !requirePath.includes('"`)) {
           return `require(`${requirePath}`)`;
-=======
         if (!requirePath.includes("'") && !requirePath.includes('"')) {
           return `require('${requirePath}')`;
-=======
     }
 
     return { issues: performanceIssues, count: performanceIssues.length };
@@ -460,15 +367,13 @@ module.exports = ({ children }) => React.createElement('div', {}, children);`;
           ) {
             securityIssues.push({
               file,
-              issue: 'Potential XSS vulnerability - sanitize HTML',
-            });
+              issue: 'Potential XSS vulnerability - sanitize HTML'});
           }
 
           if (content.includes('eval(') || content.includes('Function(')) {
             securityIssues.push({
               file,
-              issue: 'Use of eval() detected - security risk',
-            });
+              issue: 'Use of eval() detected - security risk'});
           }
 
           if (
@@ -477,16 +382,12 @@ module.exports = ({ children }) => React.createElement('div', {}, children);`;
           ) {
             securityIssues.push({
               file,
-              issue: 'Server-side env var in client code',
-            });
+              issue: 'Server-side env var in client code'});
           }
         } catch (error) {
-          // Skip files that can't be read
->>>>>>> main
->>>>>>> main
-        }
+          // Skip files that can't be read;
+}
       }
-<<<<<<< HEAD
     );
 
     // Fix console.log with emojis and template literals;
@@ -502,7 +403,7 @@ module.exports = ({ children }) => React.createElement('div', {}, children);`;
     );
 
     return content;
-=======
+<<<<<<< HEAD
     }
 
     return { issues: securityIssues, count: securityIssues.length };
@@ -523,26 +424,23 @@ module.exports = ({ children }) => React.createElement('div', {}, children);`;
           if (content.includes('console.log') && !file.includes('.test.')) {
             qualityIssues.push({
               file,
-              issue: 'Console.log in production code - remove for production',
-            });
+              issue: 'Console.log in production code - remove for production'});
           }
 
           if (content.includes('TODO') || content.includes('FIXME')) {
             qualityIssues.push({
               file,
-              issue: 'TODO/FIXME comment found - address before production',
-            });
+              issue: 'TODO/FIXME comment found - address before production'});
           }
 
           if (content.includes('any') && file.endsWith('.ts')) {
             qualityIssues.push({
               file,
-              issue: 'TypeScript any type used - consider proper typing',
-            });
+              issue: 'TypeScript any type used - consider proper typing'});
           }
         } catch (error) {
-          // Skip files that can't be read
-        }
+          // Skip files that can't be read;
+}
       }
     }
 
@@ -556,8 +454,7 @@ module.exports = ({ children }) => React.createElement('div', {}, children);`;
       );
       const dependencies = {
         ...packageJson.dependencies,
-        ...packageJson.devDependencies,
-      };
+        ...packageJson.devDependencies};
 
       const outdatedDeps = [];
       const securityIssues = [];
@@ -566,24 +463,21 @@ module.exports = ({ children }) => React.createElement('div', {}, children);`;
       const knownIssues = {
         react: '18.2.0',
         next: '15.5.2',
-        typescript: '5.9.2',
-      };
+        typescript: '5.9.2'};
 
       for (const [dep, version] of Object.entries(knownIssues)) {
         if (dependencies[dep] && dependencies[dep] !== version) {
           outdatedDeps.push({
             dep,
             current: dependencies[dep],
-            recommended: version,
-          });
+            recommended: version});
         }
       }
 
       return {
         outdatedDeps,
         securityIssues,
-        totalDeps: Object.keys(dependencies).length,
-      };
+        totalDeps: Object.keys(dependencies).length};
     } catch (error) {
       return { error: error.message };
     }
@@ -617,10 +511,8 @@ module.exports = ({ children }) => React.createElement('div', {}, children);`;
       summary: {
         total: results.length,
         successful: results.filter(r => r.success).length,
-        failed: results.filter(r => !r.success).length,
-      },
-      results: results,
-    };
+        failed: results.filter(r => !r.success).length},
+      results: results};
 
     const reportFile = path.join(
       this.projectRoot,
@@ -670,8 +562,7 @@ module.exports = ({ children }) => React.createElement('div', {}, children);`;
         typeCheckResults,
         testResults,
         buildResults,
-        ...customResults,
-      ];
+        ...customResults];
 
       // Generate report
       const report = this.generateReport(allResults);
@@ -686,44 +577,34 @@ module.exports = ({ children }) => React.createElement('div', {}, children);`;
       this.log(`💥 Comprehensive Automation Fixer Failed: ${error.message}`);
       throw error;
     }
->>>>>>> main
   }
+=======
+<<<<<<< HEAD  }
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
 }
 
-<<<<<<< HEAD
 // Run the fixer;
 const fixer = new ComprehensiveAutomationFixer();
 fixer;
-=======
 // Run the comprehensive automation fixer
 const fixer = new ComprehensiveAutomationFixer();
-<<<<<<< HEAD
 fixer
   .run()
-=======
-<<<<<<< HEAD
 fixer
->>>>>>> main
   .fixAllScripts()
   .then(() => {
     console.log(`🎉 Comprehensive automation script fixing completed!');
   })
   .catch(error => {
-    console.error('💥 Error:', error);
+    console.error('💥 Error: ', error);
     process.exit(1);
   });
-=======
 fixer.run()
->>>>>>> main
   .then(report => {
     console.log('✅ Comprehensive Automation Fixer completed successfully');
     process.exit(0);
   })
   .catch(error => {
-    console.error('❌ Comprehensive Automation Fixer failed:', error.message);
+    console.error('❌ Comprehensive Automation Fixer failed: ', error.message);
     process.exit(1);
   });
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> main

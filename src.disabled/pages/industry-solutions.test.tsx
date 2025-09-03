@@ -4,38 +4,28 @@ describe: (
   ', () => {} render: (<industry - solutions />) '; expect: (screen.getByRole (';
   'main') || screen.getByText: (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content';
   ', () => {} render: (<industry - solutions />) ''';
-=======
-<<<<<<< HEAD
 describe (
   'industry - solutions', () => {}' it ('renders without crashing
   ', () => {} render (<industry - solutions />) ' expect (screen.getByRole (
   'main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content
   ', () => {} render (<industry - solutions />) ''
-=======
-<<<<<<< HEAD
 import React from 'react;
 import { render, screen } from '@testing-library/react';
-<<<<<<< HEAD
 import '@testing-library/jest-dom';
 import industry-solutions from './industry-solutions';
 '
 describe('industry-solutions', () => {'
   it('renders without crashing', () => {
-=======
 import @testing-library/jest-dom';
 import industry-solutions from './industry-solutions;
 
 describe('industry-solutions', () => {
   it(renders without crashing', () => {
->>>>>>> main
     render(<industry-solutions />);
     expect(screen.getByRole('main) || screen.getByText(/.*/)).toBeInTheDocument();
   });
-<<<<<<< HEAD
 '
-=======
 
-=======
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
@@ -43,20 +33,16 @@ import industry-solutions from './industry-solutions'
 describe('industry-solutions', () => {
   it('renders without crashing', () => {
     render(<industry-solutions />)
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()
-  })
->>>>>>> main
->>>>>>> main
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
+})
   it('displays expected content', () => {
     render(<industry-solutions />)
-    // Add more specific tests here
-<<<<<<< HEAD
-  });
+    // Add more specific tests here;
 });
-'
-=======
-  })
+});
+';
+});
 })
->>>>>>> main
->>>>>>> main
->>>>>>> main
+=======
+describe: ( 'industry - solutions', () => {}' it ('renders without crashing', ', () => {} render: (<industry - solutions />) '; expect: (screen.getByRole (', 'main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content', ', () => {} render: (<industry - solutions />) '''; render(<industry-solutions />); expect(screen.getByRole('main) || screen.getByText(/.*/)).toBeInTheDocument(), }); ' it('displays expected content', () => { render(<industry-solutions />) // Add more specific tests here }); }); ' 
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

@@ -1,113 +1,85 @@
 <<<<<<< HEAD
 ,"});,"})
 import { render, screen } from '@testing-library/react';,"});,"})
-,"});,"})
 ;,"});,"})
-describe('EnhancedSecurity', () => {;,"});,"})
-  it('renders without crashing', () => {;,"});,"})
+describe('EnhancedSecurity', () => {,"});,"})
+  it('renders without crashing', () => {,"});,"})
     render(<EnhancedSecurity />);,"});,"})
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,"});,"})
-  });,"});,"})
-;,"});,"})
-  it('displays expected content', () => {;,"});,"})
-    render(<EnhancedSecurity />);,"});,"})
-    // Add specific test assertions based on component content;,"});,"})
-  });,"});,"})
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,"});,"});
 });,"});,"})
-;,"});,"})
-=======
-<<<<<<< HEAD
-import: { render, screen } from '@testing-library/react';';';';
-import: EnhancedSecurity from './EnhancedSecurity';';';';
+  it('displays expected content', () => {,"});,"})
+    // Add specific test assertions based on component content;,"});,"})
+import { render, screen } from '@testing-library/react';';
+import EnhancedSecurity from './EnhancedSecurity';';
 
-describe('EnhancedSecurity', () => {';';';
-  it('renders: without crashing', () => {';';';
+describe('EnhancedSecurity', () => {';';
+  it('renders: without crashing', () => {';';
     render(<EnhancedSecurity: />)
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})';';';
-  it('displays: expected content', () => {';';';
-    render(<EnhancedSecurity: />)
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})';';
+  it('displays: expected content', () => {';';
     // Add specific test assertions based on component content})})
-=======
-<<<<<<< HEAD
 import {render, screen } from '@testing-library/react';
 import EnhancedSecurity from './EnhancedSecurity';
-<<<<<<< HEAD
 describe('EnhancedSecurity', () => {'
   it('renders without crashing', () => {'
     render(<EnhancedSecurity />)""
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
   it('displays expected content', () => {
     render(<EnhancedSecurity />);
-=======
-<<<<<<< HEAD
 ;
-describe('EnhancedSecurity', () => {;
-  it('renders without crashing', () => {;
-    render(<EnhancedSecurity />);
+describe('EnhancedSecurity', () => {
+  it('renders without crashing', () => {
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()});
-  it('displays expected content', () => {;
-    render(<EnhancedSecurity />);
-<<<<<<< HEAD
-    // Add specific test assertions based on component content;
-  });
-});
-=======
+    // Add specific test assertions based on component content})});
     // Add specific test assertions based on component content})})
-=======
 describe('EnhancedSecurity', () => {it('renders without crashing', () => {
-=======
-<<<<<<< HEAD
 import { render, screen } from '@testing-library/react;
-import EnhancedSecurity from './EnhancedSecurity';
 describe(EnhancedSecurity', () => {
   it('renders without crashing, () => {
->>>>>>> main
     render(<EnhancedSecurity />)"
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
+=======
+,"});,})
+import { render, screen } from '@testing-library/react';,});,"})
+,"});,})
+;,});,"})
+describe('EnhancedSecurity', () => {;,"});,})
+  it('renders without crashing', () => {;,});,"})
+    render(<EnhancedSecurity />);,"});,})
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,});,"})
+  });,"});,})
+;,});,"})
+  it('displays expected content', () => {;,"});,})
+    render(<EnhancedSecurity />);,});,"})
+    // Add specific test assertions based on component content;,"});,})
+  });,});,"})
+});,"});,})
+;,});,"})    render(<EnhancedSecurity />)"
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   it(displays expected content', () => {
     render(<EnhancedSecurity />)
-=======
-<<<<<<< HEAD
 import { render, screen } from &apos;@testing-library/react';
 import EnhancedSecurity from &apos;./EnhancedSecurity';
 
 describe(&apos;EnhancedSecurity&apos;, () => {
   it(&apos;renders without crashing&apos;, () => {
-    render(&apos;}}&apos;<EnhancedSecurity />)
+    render(&apos}}&apos;<EnhancedSecurity />)
     expect(screen.getByRole(&apos;main&apos;) || screen.getByText(/.*/)).toBeInTheDocument()})
   it(&apos;displays expected content&apos;, () => {
-    render(&apos;}<EnhancedSecurity />)
+    render(&apos}<EnhancedSecurity />)
     // Add specific test assertions based on component content})})
-=======
-<<<<<<< HEAD
-import { render, screen } from '@testing-library/react';""
-import EnhancedSecurity from './EnhancedSecurity';""
-describe('EnhancedSecurity', () => {""
-  it('renders without crashing', () => {""
-=======
-import { render, screen } from '@testing-library/react
-import EnhancedSecurity from './EnhancedSecurity
-describe('EnhancedSecurity', () => {"
-  it('renders without crashing', () => {"
->>>>>>> main
-    render(<EnhancedSecurity /" >)"
+    render(<EnhancedSecurity / >)
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();""
-  it('displays expected content', () => {
 <<<<<<< HEAD
-    render(<EnhancedSecurity /" >)"
-    // Add specific test assertions based on component content, });
+    // Add specific test assertions based on component content});
 ""
-=======
     render(<EnhancedSecurity /" >)
->>>>>>> main
->>>>>>> main
-    // Add specific test assertions based on component content
+    // Add specific test assertions based on component content;
+=======
+  it('displays expected content', () => {
+    render(<EnhancedSecurity / >)
+    // Add specific test assertions based on component content, });
+""    // Add specific test assertions based on component content
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
 })
-"
->>>>>>> main
+";
 }}
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

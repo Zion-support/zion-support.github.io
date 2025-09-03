@@ -1,39 +1,17 @@
 <<<<<<< HEAD
 import React from 'react'; export default function ComprehensiveContact () { const [formData, setFormData] = useState({ name: ", email: ", comp: ", phone: ", service: ", message: " }); const handleSubmit = (e) => { e.preventDefault () ;
-=======
-<<<<<<< HEAD
  export default function ComprehensiveContact () { const [formData, setFormData] = useState({ name: ", email: ", comp: ", phone: ", service: ", message: " }); const handleSubmit = (e) => { e.preventDefault () ;,"});,"})
-=======
-<<<<<<< HEAD
  export default function ComprehensiveContact () { const [formData, setFormData] = useState({ name: ', email: ', comp: ', phone: ', service: ', message: ' }) const handleSubmit = (e) => { e.preventDefault () ;
-=======
-<<<<<<< HEAD
- export: default function ComprehensiveContact () { const [formData, setFormData] = useState({ name:  ,', email:  ,', comp:  ,', phone:  ,', service:  ,', message: ', }) const: handleSubmit = (e) => { e.preventDefault () ;';';';
-=======
-<<<<<<< HEAD
+ export: default function ComprehensiveContact () { const [formData, setFormData] = useState({ name:  ,', email:  ,', comp:  ,', phone:  ,', service:  ,', message: '}) const handleSubmit = (e) => { e.preventDefault () ;';
  export default function ComprehensiveContact () { const [formData, setFormData] = useState({ name: ', email: ', comp: ', phone: ', service: ', message: ' }) const handleSubmit = (e) => { e.preventDefault () 
-=======
-<<<<<<< HEAD
  export default function ComprehensiveContact ()   {const [formData, setFormData] = useState({ name: ', email: ', comp: ', phone: ', service: ', message: ' }) const handleSubmit = (e) => { e.preventDefault () ;
-=======
-<<<<<<< HEAD
- export default function ComprehensiveContact () {} const [formData, setFormData] = useState(;{ name: &apos;, email: &apos;, comp: &apos;, phone: &apos;, service: &apos;, message: &apos; })&apos; const;const handleSubmit = (e) => { e.preventDefault () ;
-}
-=======
-<<<<<<< HEAD
+ export default function ComprehensiveContact () {} const [formData, setFormData] = useState( { name: &apos;, email: &apos;, comp: &apos;, phone: &apos;, service: &apos;, message: &apos})&apos; const;const handleSubmit = (e) => { e.preventDefault () }
  export default function ComprehensiveContact () { const [formData, setFormData] = useState({ name: ', email: ', comp: ', phone: ', service: ', message: ' }) const handleSubmit = (e) => { e.preventDefault () ;""
-""
+"";
 }}}}
-=======
  export default function ComprehensiveContact () { const [formData, setFormData] = useState({ name: ', email: ', comp: ', phone: ', service: ', message: ' }) const handleSubmit = (e) => { e.preventDefault () ;"
- export default function ComprehensiveContact () { const [formData, setFormData] = useState({ name: ', email: ', comp: ', phone: ', service: ', message: ' }) const handleSubmit = (e) => { e.preventDefault () 
-"
+";
 }}}};
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
+=======
+import React from 'react'; export default function ComprehensiveContact () { const [formData, setFormData] = useState({ name: " email: comp: phone , service: , message " }); const handleSubmit = (e) => { e.preventDefault () ; 
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

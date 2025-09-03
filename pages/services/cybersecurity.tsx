@@ -18,7 +18,7 @@ const Cybersecurity = () => {
         'Risk assessment',
         'Compliance review'
       ]
-    },
+},
     {
       title: 'Network Security',
       description: 'Protect your network infrastructure from threats',
@@ -30,7 +30,7 @@ const Cybersecurity = () => {
         'VPN setup',
         'Traffic analysis'
       ]
-    },
+},
     {
       title: 'Data Protection',
       description: 'Safeguard your sensitive data and information',
@@ -42,7 +42,7 @@ const Cybersecurity = () => {
         'Data loss prevention',
         'Privacy compliance'
       ]
-    },
+},
     {
       title: 'Incident Response',
       description: 'Rapid response to security incidents and breaches',
@@ -54,38 +54,38 @@ const Cybersecurity = () => {
         'Recovery planning',
         'Post-incident review'
       ]
-    }
-  ];
+}
+  ]
 
   const compliance = [
     {
       name: 'SOC 2',
       description: 'Service Organization Control 2 compliance for service providers',
-      icon: Shield
-    },
+      icon: Shield;
+},
     {
       name: 'ISO 27001',
       description: 'International standard for information security management',
-      icon: Lock
-    },
+      icon: Lock;
+},
     {
       name: 'GDPR',
       description: 'General Data Protection Regulation compliance',
-      icon: Globe
-    },
+      icon: Globe;
+},
     {
       name: 'HIPAA',
       description: 'Health Insurance Portability and Accountability Act',
-      icon: Users
-    }
-  ];
+      icon: Users;
+}
+  ]
 
   const stats = [
     { number: '99.9%', label: 'Security Uptime', description: 'Continuous protection' },
     { number: '24/7', label: 'Monitoring', description: 'Round-the-clock surveillance' },
     { number: '< 5min', label: 'Response Time', description: 'Rapid incident response' },
     { number: '100%', label: 'Compliance', description: 'Regulatory adherence' }
-  ];
+  ]
 
   return (
     <>

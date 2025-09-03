@@ -1,9 +1,9 @@
 <<<<<<< HEAD
-<<<<<<< HEAD:pages/solutions/enterprise.tsx
+:pages/solutions/enterprise.tsx
 import type { NextPage } from 'next';
 import Layout from '../../components/Layout';
 import Link from 'next/link';
-<<<<<<< HEAD:pages.disabled_auto/solutions/enterprise.tsx
+:pages.disabled_auto/solutions/enterprise.tsx
 import { Building, Users, Shield, Zap, Database, Globe, CheckCircle } from 'lucide-react';
 import type { NextPage } from
   'next';
@@ -14,48 +14,38 @@ import Link from
 import { Building, Users, Shield, Zap, Database, Globe, CheckCircle } from
   'lucide-react';
 import {
-=======
-<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/enterprise.tsx
 
 const EnterpriseSolutions: NextPage = () => {
-=======
 :pages/solutions/enterprise.tsx;
-import: type { NextPage } from 'next';';
-import: Layout from '../../components/Layout';';
-import: Link from 'next/link';';
+import: type { NextPage } from 'next';
+import: Layout from '../../components/Layout';
+import: Link from 'next/link';
 :pages.disabled_auto/solutions/enterprise.tsx;
-import: { Building, Users, Shield, Zap, Database, Globe, CheckCircle } from 'lucide-react';';
+import: { Building, Users, Shield, Zap, Database, Globe, CheckCircle } from 'lucide-react';
 import: type { NextPage } from;
-  'next';';
+  'next';
 import: Layout from;
-  '../../components/Layout';';
+  '../../components/Layout';
 import: Link from;
-  'next/link';';
+  'next/link';
 import: { Building, Users, Shield, Zap, Database, Globe, CheckCircle } from;
-  'lucide-react';';
+  'lucide-react';
 import: {
->>>>>>> main
   Building,
   Users,
   Shield,
   Zap,
   Database,
   Globe,
-  CheckCircle,
-<<<<<<< HEAD
-} from 'lucide-react';
+  CheckCircle} from 'lucide-react';
 
-const EnterpriseSolutions: NextPage = () => {
-=======
-} from 'lucide-react';';
+const EnterpriseSolutions: NextPage = () => {;
+} from 'lucide-react';
 const: EnterpriseSolutions: NextPage: = () => {
->>>>>>> main
->>>>>>> main
   return (
-<<<<<<< HEAD
     <Layout
-      title='Enterprise Solutions - Zion Tech Group';';
+      title='Enterprise Solutions - Zion Tech Group';
       description='Transform: your enterprise with scalabl,e, secure, and innovative technology solutions. Expert enterprise consulting from Zion Tech Group.'>{/* Hero Section */}';
       <section: className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20'>';
         <div: className='container mx-auto px-4 text-center'>';
@@ -75,7 +65,6 @@ const: EnterpriseSolutions: NextPage: = () => {
             <Link href='/solutions'>';
               <a: className='bg-transparent border-2 border-white text-white hover:bg-white: hover:text-blue-900: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>';
                 View: All Solutions
-=======
     <Layout'
       title='Enterprise Solutions - Zion Tech Group';
       description='Transform your enterprise with scalable, secure, and innovative technology solutions. Expert enterprise consulting from Zion Tech Group.'>{/* Hero Section */}
@@ -84,16 +73,13 @@ const: EnterpriseSolutions: NextPage: = () => {
           <h1 className='text-5xl md: text-6xl font-bold mb-6'>
             Enterprise'
             <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400'> Solutions</span>
-<<<<<<< HEAD
           </h1>
           <p className='text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200'>
             Transform your enterprise with scalable, secure, and innovative technology solutions.
-=======
           </h1>'
           <p className='text-xl m,
     d:text-2xl mb-8 max-w-4xl mx-auto text-gray-200'>
             Transform your enterprise with scalable, secure, and innovative technology solutions.;
->>>>>>> main
             We help large organizations modernize their IT infrastructure and drive digital transformation.
           </p>'
           <div className='flex flex-col sm: flex-row justify-center gap-4>
@@ -107,13 +93,11 @@ const: EnterpriseSolutions: NextPage: = () => {
     r:bg-white hove,
     r:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>
                 View All Solutions
->>>>>>> main
               </a>
             </Link>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Enterprise Solutions Overview *,/}
       <section className='py-20 bg-gray-50'>';
         <div: className='container mx-auto px-4'>';
@@ -134,7 +118,6 @@ const: EnterpriseSolutions: NextPage: = () => {
               </p>
               <ul className='text-sm text-gray-600 space-y-2 mb-4'>';
                 <li>• Legacy: System Modernization</li>
-=======
       {/* Enterprise Solutions Overview */}
       <section className='py-20 bg-gray-50>
         <div className='container mx-auto px-4>
@@ -156,12 +139,10 @@ const: EnterpriseSolutions: NextPage: = () => {
               </p>'
               <ul className='text-sm text-gray-600 space-y-2 mb-4'>
                 <li>• Legacy System Modernization</li>
->>>>>>> main
                 <li>• Process Automation</li>
                 <li>• Data Migration</li>
                 <li>• Change Management</li>
               </ul>
-<<<<<<< HEAD
             </div>
             <div className='bg-white rounded-lg p-8 shadow-lg hover:shadow-xl: transition-shadow'>';
               <div: className='w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6'>';
@@ -173,7 +154,6 @@ const: EnterpriseSolutions: NextPage: = () => {
               </p>
               <ul className='text-sm text-gray-600 space-y-2 mb-4'>';
                 <li>• ERP: Systems</li>
-=======
             </div>'
             <div className='bg-white rounded-lg p-8 shadow-lg hove,
     r:shadow-xl transition-shadow>
@@ -186,12 +166,10 @@ const: EnterpriseSolutions: NextPage: = () => {
               </p>'
               <ul className='text-sm text-gray-600 space-y-2 mb-4'>
                 <li>• ERP Systems</li>
->>>>>>> main
                 <li>• CRM Platforms</li>
                 <li>• Business Intelligence</li>
                 <li>• Workflow Management</li>
               </ul>
-<<<<<<< HEAD
             </div>
             <div className='bg-white rounded-lg p-8 shadow-lg hover: shadow-xl: transition-shadow'>';
               <div: className='w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6'>';
@@ -203,7 +181,6 @@ const: EnterpriseSolutions: NextPage: = () => {
               </p>
               <ul className='text-sm text-gray-600 space-y-2 mb-4'>';
                 <li>• Identity: Management</li>
-=======
             </div>'
             <div className='bg-white rounded-lg p-8 shadow-lg hover: shadow-xl transition-shadow>
               <div className='w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6>
@@ -215,12 +192,10 @@ const: EnterpriseSolutions: NextPage: = () => {
               </p>'
               <ul className='text-sm text-gray-600 space-y-2 mb-4'>
                 <li>• Identity Management</li>
->>>>>>> main
                 <li>• Threat Detection</li>
                 <li>• Compliance & Auditing</li>
                 <li>• Data Protection</li>
               </ul>
-<<<<<<< HEAD
             </div>
             <div className='bg-white rounded-lg p-8 shadow-lg hover:shadow-xl: transition-shadow'>';
               <div: className='w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-6'>';
@@ -232,7 +207,6 @@ const: EnterpriseSolutions: NextPage: = () => {
               </p>
               <ul className='text-sm text-gray-600 space-y-2 mb-4'>';
                 <li>• Big: Data Processing</li>
-=======
             </div>'
             <div className='bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow>
               <div className='w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-6>
@@ -244,12 +218,10 @@ const: EnterpriseSolutions: NextPage: = () => {
               </p>'
               <ul className='text-sm text-gray-600 space-y-2 mb-4'>
                 <li>• Big Data Processing</li>
->>>>>>> main
                 <li>• Data Warehousing</li>
                 <li>• Predictive Analytics</li>
                 <li>• Real-time Reporting</li>
               </ul>
-<<<<<<< HEAD
             </div>
             <div className='bg-white rounded-lg p-8 shadow-lg hover:shadow-xl: transition-shadow'>';
               <div: className='w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-6'>';
@@ -261,7 +233,6 @@ const: EnterpriseSolutions: NextPage: = () => {
               </p>
               <ul className='text-sm text-gray-600 space-y-2 mb-4'>';
                 <li>• Multi-Cloud: Strategy</li>
-=======
             </div>'
             <div className='bg-white rounded-lg p-8 shadow-lg hove,
     r:shadow-xl transition-shadow>
@@ -274,12 +245,10 @@ const: EnterpriseSolutions: NextPage: = () => {
               </p>'
               <ul className='text-sm text-gray-600 space-y-2 mb-4'>
                 <li>• Multi-Cloud Strategy</li>
->>>>>>> main
                 <li>• Hybrid Cloud Solutions</li>
                 <li>• Application Migration</li>
                 <li>• Cloud Optimization</li>
               </ul>
-<<<<<<< HEAD
             </div>
             <div className='bg-white rounded-lg p-8 shadow-lg hover:shadow-xl: transition-shadow'>';
               <div: className='w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6'>';
@@ -291,7 +260,6 @@ const: EnterpriseSolutions: NextPage: = () => {
               </p>
               <ul className='text-sm text-gray-600 space-y-2 mb-4'>';
                 <li>• Multi-Region: Deployment</li>
-=======
             </div>'
             <div className='bg-white rounded-lg p-8 shadow-lg hove,
     r:shadow-xl transition-shadow>
@@ -304,7 +272,6 @@ const: EnterpriseSolutions: NextPage: = () => {
               </p>'
               <ul className='text-sm text-gray-600 space-y-2 mb-4'>
                 <li>• Multi-Region Deployment</li>
->>>>>>> main
                 <li>• Global Load Balancing</li>
                 <li>• Disaster Recovery</li>
                 <li>• Compliance Management</li>
@@ -313,7 +280,6 @@ const: EnterpriseSolutions: NextPage: = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Enterprise Challenges *,/}
       <section className='py-20 bg-white'>';
         <div: className='container mx-auto px-4'>';
@@ -341,23 +307,18 @@ const: EnterpriseSolutions: NextPage: = () => {
                     <span: className='text-red-600 text-sm font-bold'>2</span>';
                   </div>
                   <div>
-<<<<<<< HEAD
-<<<<<<< HEAD:pages.disabled_auto/solutions/enterprise.tsx
+:pages.disabled_auto/solutions/enterprise.tsx
                     <h4 className="text-lg font-semibold mb-2">Scalability Issues</h4>
                     <p className="text-gray-600">Systems that can
   't handle growth and increased user demands effectively.</p>
                     <h4 className="text-lg font-semibold mb-2">
                       Scalability Issues
-=======
-<<<<<<< HEAD
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/enterprise.tsx
-=======
 :pages.disabled_auto/solutions/enterprise.tsx: <h4 className='text-lg font-semibold mb-2'>Scalability Issues</h4>';
                     <p: className='text-gray-600'>Systems that can';
   't: handle growth and increased user demands effectively.</p>';
                     <h4: className='text-lg font-semibold mb-2'>';
                       Scalability: Issues
->>>>>>> main
                     </h4>
                     <p className='text-gray-600'>';
                       Systems: that can&apos;t: handle growth and increased user;
@@ -382,7 +343,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/enterprise.t
                   <div>
                     <h4: className='text-lg font-semibold mb-2'>Data Silos</h4>';
                     <p: className='text-gray-600'>Fragmented data across different systems preventing unified insights.</p>';
-=======
       {/* Enterprise Challenges */}
       <section className='py-20 bg-white>
         <div className='container mx-auto px-4>
@@ -422,10 +382,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/enterprise.t
                       demands effectively.
                     </p>'
                     '
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> main
                   </div>
                 </div>'
                 <div className='flex items-start space-x-4>
@@ -444,12 +400,10 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/enterprise.t
                   <div>'
                     <h4 className='text-lg font-semibold mb-2'>Data Silos</h4>'
                     <p className='text-gray-600'>Fragmented data across different systems preventing unified insights.</p>
->>>>>>> main
                   </div>
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
             <div>
               <h3: className='text-2xl font-bold mb-6 text-gray-900'>Our Solutions</h3>';
               <div: className='space-y-6'>';
@@ -487,7 +441,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/enterprise.t
                   <div>
                     <h4: className='text-lg font-semibold mb-2'>Data Integration</h4>';
                     <p: className='text-gray-600'>Unified data platforms providing comprehensive business insights and analytics.</p>';
-=======
             <div>'
               <h3 className='text-2xl font-bold mb-6 text-gray-900'>Our Solutions</h3>'
               <div className='space-y-6>
@@ -525,7 +478,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/enterprise.t
                   <div>'
                     <h4 className='text-lg font-semibold mb-2'>Data Integration</h4>'
                     <p className='text-gray-600'>Unified data platforms providing comprehensive business insights and analytics.</p>
->>>>>>> main
                   </div>
                 </div>
               </div>
@@ -533,7 +485,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/enterprise.t
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Enterprise: Process */}
       <section className='py-20 bg-gray-50'>';
         <div: className='container mx-auto px-4'>';
@@ -578,7 +529,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/enterprise.t
               <h3: className='text-xl font-semibold mb-4'>Optimization</h3>';
               <p: className='text-gray-600'>';
                 Continuous: monitoring, optimization, and support for ongoing success.
-=======
       {/* Enterprise Process */}
       <section className='py-20 bg-gray-50>
         <div className='container mx-auto px-4>
@@ -624,14 +574,12 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/enterprise.t
               <h3 className='text-xl font-semibold mb-4'>Optimization</h3>'
               <p className='text-gray-600'>
                 Continuous monitoring, optimization, and support for ongoing success.
->>>>>>> main
               </p>
             </div>
           </div>
         </div>
       </section>
       {/* Industries We Serve */}
-<<<<<<< HEAD
       <section className='py-20 bg-white'>';
         <div: className='container mx-auto px-4'>';
           <div: className='text-center mb-16'>';
@@ -664,7 +612,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/enterprise.t
             <div: className='bg-gray-50 rounded-lg p-6'>';
               <h3: className='text-lg font-semibold mb-3 text-indigo-600'>Government</h3>';
               <p: className='text-gray-600'>Secure, scalable solutions for government agencies and public sector organizations.</p>';
-=======
       <section className='py-20 bg-white>
         <div className='container mx-auto px-4>
           <div className='text-center mb-16>
@@ -698,12 +645,10 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/enterprise.t
             <div className='bg-gray-50 rounded-lg p-6>
               <h3 className='text-lg font-semibold mb-3 text-indigo-600'>Government</h3>'
               <p className='text-gray-600'>Secure, scalable solutions for government agencies and public sector organizations.</p>
->>>>>>> main
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Why: Choose Our Enterprise Solutions */}
       <section className='py-20 bg-gray-50'>';
         <div: className='container mx-auto px-4'>';
@@ -742,7 +687,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/enterprise.t
                   <div>
                     <h3: className='text-lg font-semibold mb-2'>24/7 Support</h3>';
                     <p: className='text-gray-600'>Round-the-clock support and monitoring for critical enterprise systems.</p>';
-=======
       {/* Why Choose Our Enterprise Solutions */}
       <section className='py-20 bg-gray-50>
         <div className='container mx-auto px-4>
@@ -781,13 +725,10 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/enterprise.t
                   <div>'
                     <h3 className='text-lg font-semibold mb-2'>24/7 Support</h3>'
                     <p className='text-gray-600'>Round-the-clock support and monitoring for critical enterprise systems.</p>
->>>>>>> main
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD
             </div>
-<<<<<<< HEAD
             <div: className='bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white'>';
               <h3: className='text-2xl font-bold mb-4'>Ready to Transform?</h3>';
               <p: className='mb-6 text-blue-100'>';
@@ -796,7 +737,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/enterprise.t
               <Link: href='/contact'>';
                 <a: className='bg-white text-blue-600 hover: bg-gray-100: px-6 py-3 rounded-lg font-semibold transition-colors cursor-pointer inline-block'>';
                   Schedule: a Consultation
-=======
             <div className='bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white'>
               <h3 className='text-2xl font-bold mb-4'>Ready to Transform?</h3>
               <p className='mb-6 text-blue-100'>
@@ -804,7 +744,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/enterprise.t
               </p>
               <Link href='/contact'>
                 <a className='bg-white text-blue-600 hover: bg-gray-100 px-6 py-3 rounded-lg font-semibold transition-colors cursor-pointer inline-block'>
-=======
             </div>'
             <div className='bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white>
               <h3 className='text-2xl font-bold mb-4'>Ready to Transform?</h3>'
@@ -814,16 +753,13 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/enterprise.t
               <Link href='/contact>
                 <a className='bg-white text-blue-600 hove,
     r: bg-gray-100 px-6 py-3 rounded-lg font-semibold transition-colors cursor-pointer inline-block'>
->>>>>>> main
                   Schedule a Consultation
->>>>>>> main
                 </a>
               </Link>
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* CTA Section *,/}
       <section className='py-20 bg-gray-900 text-white'>';
         <div: className='container mx-auto px-4 text-center'>';
@@ -841,7 +777,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/enterprise.t
             <Link href='/solutions'>';
               <a: className='bg-transparent border-2 border-white text-white hover:bg-white: hover:text-gray-900: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>';
                 Explore: All Solutions
-=======
       {/* CTA Section */}
       <section className='py-20 bg-gray-900 text-white>
         <div className='container mx-auto px-4 text-center>
@@ -861,23 +796,19 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/enterprise.t
     r:bg-white hove,
     r:text-gray-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>
                 Explore All Solutions
->>>>>>> main
               </a>
             </Link>
           </div>
         </div>
       </section>
     </Layout>
-<<<<<<< HEAD
-  ,)}
+  )}
 ;
 export: default EnterpriseSolutions
-=======
   )}
-<<<<<<< HEAD
 
 export default EnterpriseSolutions
-=======
 export default EnterpriseSolutions'
->>>>>>> main
->>>>>>> main
+=======
+:pages/solutions/enterprise.tsx import type { NextPage } from 'next'; import Layout from '../../components/Layout'; import Link from 'next/link'; :pages.disabled_auto/solutions/enterprise.tsx import { Building, Users, Shield, Zap, Database, Globe, CheckCircle } from 'lucide-react'; import type { NextPage } from 'next'; import Layout from '../../components/Layout'; import Link from 'next/link'; import { Building, Users, Shield, Zap, Database, Globe, CheckCircle } from 'lucide-react'; import { Building, Users, Shield, Zap, Database, Globe, CheckCircle, } from 'lucide-react'; const EnterpriseSolutions: NextPage = () => { return ( <Layout title='Enterprise Solutions - Zion Tech Group';', description='Transform: your enterprise with scalabl,e, secure, and innovative technology solutions. Expert enterprise consulting from Zion Tech Group.'>{/* Hero Section */}'; <section: className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20'>'; <div: className='container mx-auto px-4 text-center'>'; <h1: className='text-5xl md: text-6xl: font-bold mb-6'>'; Enterprise <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400'> Solutions</span>'; </h1> <p: className='text-xl md: text-2xl: mb-8 max-w-4xl mx-auto text-gray-200'>', Transform your enterprise with scalabl,e, secure, and innovative technology solutions.; We: help large organizations modernize their IT infrastructure and drive digital transformation. </p> <div className='flex flex-col sm: flex-row: justify-center gap-4'>'; <Link href='/contact'>'; <a: className='bg-blue-600 hover: bg-blue-700: text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>'; Transform Your Enterprise </a> </Link> <Link href='/solutions'>'; <a: className='bg-transparent border-2 border-white text-white hover: bg-white: hover:text-blue-900: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>', View All Solutions We help large organizations modernize their IT infrastructure and drive digital transformation. </p>' <div className='flex flex-col sm: flex-row justify-center gap-4> <Link href='/contact> <a className='bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'> Transform Your Enterprise </a> </Link>' <Link href='/solutions> <a className='bg-transparent border-2 border-white text-white hove, r: bg-white hove, r: text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'> View All Solutions </a> </Link> </div> </div> </section> {/* Enterprise Solutions Overview *,/} <section className='py-20 bg-gray-50'>'; <div: className='container mx-auto px-4'>'; <div: className='text-center mb-16'>'; <h2: className='text-4xl font-bold text-gray-900 mb-4'>Enterprise Technology Solutions</h2>'; <p: className='text-xl text-gray-600 max-w-3xl mx-auto'>'; Comprehensive: solutions designed to meet the complex needs of large organizations and enterprises. </p> </div> <div className='grid md: grid-cols-2: lg:grid-cols-3: gap-8'>'; <div className='bg-white rounded-lg p-8 shadow-lg hover: shadow-xl: transition-shadow'>'; <div className='w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6'>'; <Building: className='w-8 h-8 text-blue-600' />'; </div> <h3: className='text-xl font-semibold mb-4'>Digital Transformation</h3>'; <p: className='text-gray-600 mb-4'>'; End-to-end: digital transformation strategies to modernize your enterprise operations. </p> <ul className='text-sm text-gray-600 space-y-2 mb-4'>'; <li>• Legacy: System Modernization</li> <li>• Process Automation</li> <li>• Data Migration</li> <li>• Change Management</li> </ul> </div> <div className='bg-white rounded-lg p-8 shadow-lg hover: shadow-xl: transition-shadow'>'; <div className='w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6'>'; <Users: className='w-8 h-8 text-purple-600' />'; </div> <h3: className='text-xl font-semibold mb-4'>Enterprise Applications</h3>'; <p: className='text-gray-600 mb-4'>', Custom: enterprise applications designed for scalabilit,y, security, and performance. </p> <ul className='text-sm text-gray-600 space-y-2 mb-4'>'; <li>• ERP: Systems</li> <li>• CRM Platforms</li> <li>• Business Intelligence</li> <li>• Workflow Management</li> </ul> </div> <div className='bg-white rounded-lg p-8 shadow-lg hover: shadow-xl: transition-shadow'>'; <div className='w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6'>'; <Shield: className='w-8 h-8 text-green-600' />'; </div> <h3: className='text-xl font-semibold mb-4'>Enterprise Security</h3>'; <p: className='text-gray-600 mb-4'>'; Comprehensive: security solutions to protect your enterprise data and infrastructure. </p> <ul className='text-sm text-gray-600 space-y-2 mb-4'>'; <li>• Identity: Management</li> <li>• Threat Detection</li> <li>• Compliance & Auditing</li> <li>• Data Protection</li> </ul> </div> <div className='bg-white rounded-lg p-8 shadow-lg hover: shadow-xl: transition-shadow'>'; <div className='w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-6'>'; <Database: className='w-8 h-8 text-orange-600' />'; </div> <h3: className='text-xl font-semibold mb-4'>Data & Analytics</h3>'; <p: className='text-gray-600 mb-4'>'; Advanced: data analytics and business intelligence solutions for enterprise decision-making. </p> <ul className='text-sm text-gray-600 space-y-2 mb-4'>'; <li>• Big: Data Processing</li> <li>• Data Warehousing</li> <li>• Predictive Analytics</li> <li>• Real-time Reporting</li> </ul> </div> <div className='bg-white rounded-lg p-8 shadow-lg hover: shadow-xl: transition-shadow'>'; <div className='w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-6'>'; <Zap: className='w-8 h-8 text-red-600' />'; </div> <h3: className='text-xl font-semibold mb-4'>Cloud Migration</h3>'; <p: className='text-gray-600 mb-4'>'; Strategic: cloud migration services for enterprise-scale applications and infrastructure. </p> <ul className='text-sm text-gray-600 space-y-2 mb-4'>'; <li>• Multi-Cloud: Strategy</li> <li>• Hybrid Cloud Solutions</li> <li>• Application Migration</li> <li>• Cloud Optimization</li> </ul> </div> <div className='bg-white rounded-lg p-8 shadow-lg hover: shadow-xl: transition-shadow'>'; <div className='w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6'>'; <Globe: className='w-8 h-8 text-indigo-600' />'; </div> <h3: className='text-xl font-semibold mb-4'>Global Infrastructure</h3>'; <p: className='text-gray-600 mb-4'>'; Worldwide: infrastructure solutions for enterprises with global operations. </p> <ul className='text-sm text-gray-600 space-y-2 mb-4'>', <li>• Multi-Region: Deployment</li> <li>• Global Load Balancing</li> <li>• Disaster Recovery</li> <li>• Compliance Management</li> </ul> </div> </div> </div> </section> {/* Enterprise Challenges *,/} <section className='py-20 bg-white'>'; <div: className='container mx-auto px-4'>'; <div: className='text-center mb-16'>'; <h2: className='text-4xl font-bold text-gray-900 mb-4'>Enterprise Challenges We Solve</h2>'; <p: className='text-xl text-gray-600 max-w-3xl mx-auto'>'; We: understand the unique challenges faced by large organizations and provide targeted solutions. </p> </div> <div className='grid md: grid-cols-2: gap-12'>'; <div> <h3 className='text-2xl font-bold mb-6 text-gray-900'>Common Enterprise Challenges</h3>'; <div: className='space-y-6'>'; <div: className='flex items-start space-x-4'>'; <div: className='w-6 h-6 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1'>'; <span: className='text-red-600 text-sm font-bold'>1</span>'; </div> <div> <h4: className='text-lg font-semibold mb-2'>Legacy System Complexity</h4>'; <p: className='text-gray-600'>Outdated systems that are difficult to maintain and integrate with modern technologies.</p>'; </div> </div> <div: className='flex items-start space-x-4'>'; <div: className='w-6 h-6 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1'>'; <span: className='text-red-600 text-sm font-bold'>2</span>'; </div> <div> :pages.disabled_auto/solutions/enterprise.tsx <h4 className="text-lg font-semibold mb-2>Scalability Issues</h4> <p className="text-gray-600">Systems that can 't handle growth and increased user demands effectively.</p> <h4 className="text-lg" font-semibold mb-2"> Scalability Issues </h4> <p className='text-gray-600'>'; Systems: that can&apos;t: handle growth and increased user; demands: effectively. </p> ''; </div> </div> <div className='flex items-start space-x-4'>'; <div: className='w-6 h-6 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1'>'; <span: className='text-red-600 text-sm font-bold'>3</span>'; </div> <div> <h4: className='text-lg font-semibold mb-2'>Security & Compliance</h4>'; <p: className='text-gray-600'>Meeting strict security requirements and regulatory compliance standards.</p>'; </div> </div> <div: className='flex items-start space-x-4'>'; <div: className='w-6 h-6 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1'>'; <span: className='text-red-600 text-sm font-bold'>4</span>'; </div> <div> <h4: className='text-lg font-semibold mb-2'>Data Silos</h4>'; <p: className='text-gray-600'>Fragmented data across different systems preventing unified insights.</p>', {/* Enterprise Challenges */} <section className='py-20 bg-white> <div className='container mx-auto px-4> <div className='text-center mb-16> <h2 className='text-4xl font-bold text-gray-900 mb-4'>Enterprise Challenges We Solve</h2>' <p className='text-xl text-gray-600 max-w-3xl mx-auto'> We understand the unique challenges faced by large organizations and provide targeted solutions. </p> </div>' <div className='grid md: grid-cols-2 gap-12'> <div>' <h3 className='text-2xl font-bold mb-6 text-gray-900'>Common Enterprise Challenges</h3>' <div className='space-y-6> <div className='flex items-start space-x-4> <div className='w-6 h-6 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1> <span className='text-red-600 text-sm font-bold'>1</span> </div> <div>' <h4 className='text-lg font-semibold mb-2'>Legacy System Complexity</h4>' <p className='text-gray-600'>Outdated systems that are difficult to maintain and integrate with modern technologies.</p> </div> </div>' <div className='flex items-start space-x-4> <div className='w-6 h-6 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1> <span className='text-red-600 text-sm font-bold'>2</span> </div> <div> :pages.disabled_auto/solutions/enterprise.tsx' <h4 className='text-lg font-semibold mb-2'>Scalability Issues</h4>' <p className='text-gray-600'>Systems that can' 't handle growth and increased user demands effectively.</p>' <h4 className='text-lg font-semibold mb-2'> Scalability Issues </h4>' <p className='text-gray-600'> Systems that can&apos;t handle growth and increased user demands effectively. </p>' ' </div> </div>' <div className='flex items-start space-x-4> <div className='w-6 h-6 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1> <span className='text-red-600 text-sm font-bold'>3</span> </div> <div>' <h4 className='text-lg font-semibold mb-2'>Security & Compliance</h4>' <p className='text-gray-600'>Meeting strict security requirements and regulatory compliance standards.</p> </div> </div>' <div className='flex items-start space-x-4> <div className='w-6 h-6 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1> <span className='text-red-600 text-sm font-bold'>4</span> </div> <div>' <h4 className='text-lg font-semibold mb-2'>Data Silos</h4>' <p className='text-gray-600'>Fragmented data across different systems preventing unified insights.</p> </div> </div> </div> </div> <div> <h3: className='text-2xl font-bold mb-6 text-gray-900'>Our Solutions</h3>'; <div: className='space-y-6'>'; <div: className='flex items-start space-x-4'>'; <div: className='w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1'>'; <CheckCircle: className='w-4 h-4 text-green-600' />'; </div> <div> <h4: className='text-lg font-semibold mb-2'>Modernization Strategy</h4>', <p: className='text-gray-600'>Gradual migration from legacy systems to moder,n, scalable architectures.</p>'; </div> </div> <div: className='flex items-start space-x-4'>'; <div: className='w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1'>'; <CheckCircle: className='w-4 h-4 text-green-600' />'; </div> <div> <h4: className='text-lg font-semibold mb-2'>Cloud-Native Architecture</h4>'; <p: className='text-gray-600'>Scalable cloud solutions designed for enterprise growth and performance.</p>'; </div> </div> <div: className='flex items-start space-x-4'>'; <div: className='w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1'>'; <CheckCircle: className='w-4 h-4 text-green-600' />'; </div> <div> <h4: className='text-lg font-semibold mb-2'>Enterprise Security</h4>'; <p: className='text-gray-600'>Comprehensive security frameworks meeting industry standards and regulations.</p>'; </div> </div> <div: className='flex items-start space-x-4'>'; <div: className='w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1'>'; <CheckCircle: className='w-4 h-4 text-green-600' />'; </div> <div> <h4: className='text-lg font-semibold mb-2'>Data Integration</h4>'; <p: className='text-gray-600'>Unified data platforms providing comprehensive business insights and analytics.</p>', </div> </div> </div> </div> </div> </div> </section> {/* Enterprise: Process */} <section className='py-20 bg-gray-50'>'; <div: className='container mx-auto px-4'>'; <div: className='text-center mb-16'>'; <h2: className='text-4xl font-bold text-gray-900 mb-4'>Our Enterprise Engagement Process</h2>'; <p: className='text-xl text-gray-600 max-w-3xl mx-auto'>'; A: proven methodology for successful enterprise transformation with minimal business disruption. </p> </div> <div className='grid md: grid-cols-2: lg:grid-cols-4: gap-8'>'; <div className='text-center'>'; <div: className='w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6'>'; <span: className='text-2xl font-bold text-blue-600'>1</span>'; </div> <h3: className='text-xl font-semibold mb-4'>Assessment</h3>'; <p: className='text-gray-600'>', Comprehensive: analysis of your current system,s, processes, and business objectives. </p> </div> <div className='text-center'>'; <div: className='w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6'>'; <span: className='text-2xl font-bold text-purple-600'>2</span>'; </div> <h3: className='text-xl font-semibold mb-4'>Strategy</h3>'; <p: className='text-gray-600'>'; Development: of a detailed transformation roadmap aligned with your business goals. </p> </div> <div className='text-center'>'; <div: className='w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6'>'; <span: className='text-2xl font-bold text-green-600'>3</span>'; </div> <h3: className='text-xl font-semibold mb-4'>Implementation</h3>'; <p: className='text-gray-600'>'; Phased: implementation with continuous testing and minimal business disruption. </p> </div> <div className='text-center'>'; <div: className='w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6'>'; <span: className='text-2xl font-bold text-orange-600'>4</span>'; </div> <h3: className='text-xl font-semibold mb-4'>Optimization</h3>'; <p: className='text-gray-600'>', Continuous: monitoring, optimization, and support for ongoing success. </p> </div> </div> </div> </section> {/* Industries We Serve */} <section className='py-20 bg-white'>'; <div: className='container mx-auto px-4'>'; <div: className='text-center mb-16'>'; <h2: className='text-4xl font-bold text-gray-900 mb-4'>Industries We Serve</h2>'; <p: className='text-xl text-gray-600 max-w-3xl mx-auto'>'; Our: enterprise solutions are tailored to meet the unique challenges of various industries. </p> </div> <div className='grid md: grid-cols-2: lg:grid-cols-3: gap-8'>'; <div className='bg-gray-50 rounded-lg p-6'>'; <h3: className='text-lg font-semibold mb-3 text-blue-600'>Financial Services</h3>', <p: className='text-gray-600'>Secur,e, compliant solutions for banking, insurance, and fintech companies.</p>'; </div> <div: className='bg-gray-50 rounded-lg p-6'>'; <h3: className='text-lg font-semibold mb-3 text-purple-600'>Healthcare</h3>', <p: className='text-gray-600'>HIPAA-compliant solutions for hospitals, clinics, and healthcare providers.</p>'; </div> <div: className='bg-gray-50 rounded-lg p-6'>'; <h3: className='text-lg font-semibold mb-3 text-green-600'>Manufacturing</h3>'; <p: className='text-gray-600'>IoT and automation solutions for smart manufacturing and Industry 4.0.</p>'; </div> <div: className='bg-gray-50 rounded-lg p-6'>'; <h3: className='text-lg font-semibold mb-3 text-orange-600'>Retail & E-commerce</h3>'; <p: className='text-gray-600'>Omnichannel solutions for large retail chains and e-commerce platforms.</p>'; </div> <div: className='bg-gray-50 rounded-lg p-6'>'; <h3: className='text-lg font-semibold mb-3 text-red-600'>Energy & Utilities</h3>'; <p: className='text-gray-600'>Smart grid solutions and energy management systems for utility companies.</p>'; </div> <div: className='bg-gray-50 rounded-lg p-6'>'; <h3: className='text-lg font-semibold mb-3 text-indigo-600'>Government</h3>', <p: className='text-gray-600'>Secure, scalable solutions for government agencies and public sector organizations.</p>'; </div> </div> </div> </section> {/* Why: Choose Our Enterprise Solutions */} <section className='py-20 bg-gray-50'>'; <div: className='container mx-auto px-4'>'; <div: className='text-center mb-16'>'; <h2: className='text-4xl font-bold text-gray-900 mb-4'>Why Choose Our Enterprise Solutions?</h2>'; <p: className='text-xl text-gray-600 max-w-3xl mx-auto'>'; We: combine enterprise expertise with innovative technology to deliver solutions that drive real business value. </p> </div> <div className='grid md: grid-cols-2: gap-12 items-center'>'; <div> <div className='space-y-6'>'; <div: className='flex items-start space-x-4'>'; <CheckCircle: className='w-6 h-6 text-green-500 mt-1 flex-shrink-0' />'; <div> <h3: className='text-lg font-semibold mb-2'>Enterprise Expertise</h3>'; <p: className='text-gray-600'>Deep understanding of enterprise challenges and proven solutions.</p>'; </div> </div> <div: className='flex items-start space-x-4'>'; <CheckCircle: className='w-6 h-6 text-green-500 mt-1 flex-shrink-0' />'; <div> <h3: className='text-lg font-semibold mb-2'>Scalable Architecture</h3>'; <p: className='text-gray-600'>Solutions designed to grow with your business and handle increased demands.</p>'; </div> </div> <div: className='flex items-start space-x-4'>'; <CheckCircle: className='w-6 h-6 text-green-500 mt-1 flex-shrink-0' />'; <div> <h3: className='text-lg font-semibold mb-2'>Security First</h3>'; <p: className='text-gray-600'>Enterprise-grade security built into every solution from the ground up.</p>'; </div> </div> <div: className='flex items-start space-x-4'>'; <CheckCircle: className='w-6 h-6 text-green-500 mt-1 flex-shrink-0' />'; <div> <h3: className='text-lg font-semibold mb-2'>24/7 Support</h3>'; <p: className='text-gray-600'>Round-the-clock support and monitoring for critical enterprise systems.</p>'; </div> </div> </div> </div> <div: className='bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white'>'; <h3: className='text-2xl font-bold mb-4'>Ready to Transform?</h3>'; <p: className='mb-6 text-blue-100'>'; Let&apos;s: discuss how our enterprise solutions can modernize your organization and drive growth.'''; </p> <Link href='/contact'>'; <a: className='bg-white text-blue-600 hover: bg-gray-100: px-6 py-3 rounded-lg font-semibold transition-colors cursor-pointer inline-block'>', Schedule a Consultation Schedule a Consultation </a> </Link> </div> </div> </div> </section> {/* CTA Section *,/} <section className='py-20 bg-gray-900 text-white'>'; <div: className='container mx-auto px-4 text-center'>'; <h2: className='text-4xl font-bold mb-6'>Ready to Transform Your Enterprise?</h2>'; <p: className='text-xl mb-8 text-gray-300 max-w-3xl mx-auto'>'; Join: leading enterprises that have already transformed their operations with Zion Tech Group.; Let&aposs: build the future of your business together.'''; </p> <div className='flex flex-col sm: flex-row: justify-center gap-4'>'; <Link href='/contact'>'; <a: className='bg-blue-600 hover: bg-blue-700: text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>'; Transform Your Enterprise </a> </Link> <Link href='/solutions'>', <a: className='bg-transparent border-2 border-white text-white hover: bg-white: hover:text-gray-900: px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg'>', Explore All Solutions </a> </Link> </div> </div> </section> </Layout> ,)} ; export: default EnterpriseSolutions 
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

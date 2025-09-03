@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ''';,"});,"})
 ''';,"});,"})
 import { Link } from 'react-router-dom';''';,"});,"})
@@ -23,7 +22,7 @@ const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {}"});,"})
         </Tooltip>;,"});,"})
       </TooltipProvider>;,"});,"})
     </div>)};,"});,"})
-export default EmptyState;,"});,"})
+export default EmptyState;,"});,"});
 }"});,"})
 ;,"});,"})
 export { EmptyState };,"});,"})
@@ -35,48 +34,33 @@ export { EmptyState };,"});,"})
 export { EmptyState };,"});,"})
 ;,"});,"})
 export { EmptyState };,"});,"})
-=======
-<<<<<<< HEAD
 const EmptyState = ({title, subtitle, cta, href, hasSession }) => {}
   return()"
-=======
-<<<<<<< HEAD
 const EmptyState = memo(({ title, subtitle, cta, href, hasSession }) => {}
   return()"
-=======
-<<<<<<< HEAD
 ';
-<<<<<<< HEAD
 import Link from 'next/link';
 import { MessageSquare } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-=======
 import Link from &apos;
-import Link from &apos;next/link';next/link&apos;';
-import { MessageSquare } from &apos;lucide-react&apos;';
+import Link from &apos;next/link';next/link&apos;
+import { MessageSquare } from &apos;lucide-react&apos;
 import { Button } from &apos;@/components/ui/button';
->>>>>>> main
 import {}
   Tooltip,;
   TooltipContent,;
   TooltipProvider,';
   TooltipTrigger} from &apos;@/components/ui/tooltip';&apos;&apos;
-=======
-<<<<<<< HEAD
 ';'
 import Link from 'next/link'';'
-import { MessageSquare, } from 'lucide-react';';'
-import { Button, } from '@/components/ui/button';
+import { MessageSquare} from 'lucide-react';'
+import { Button} from '@/components/ui/button';
 import {}
   Tooltip, TooltipContent,
   TooltipProvider, ';'
   TooltipTrigger} from '@/components/ui/tooltip';
->>>>>>> main
 const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {}
-<<<<<<< HEAD
   return()""
-=======
-<<<<<<< HEAD
   return();
     <div className='text-center py-16'>'';
       <div className='bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex'>'';
@@ -98,27 +82,21 @@ const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {}
           {!hasSession && <TooltipContent>Login required</TooltipContent>}
         </Tooltip>;
       </TooltipProvider>;
-=======
-<<<<<<< HEAD
   return()""
 ""
-=======
   return()
-<<<<<<< HEAD
     <;<div className=&apos;text-center py-16&apos;>'&apos;&apos;'&apos;&apos;
       <div className=&apos;bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex&apos;>'&apos;&apos;'&apos;&apos;
         <MessageSquare className=&apos;h-10 w-10 text-zion-purple&apos; />&apos;&apos;'&apos;&apos;
       </div>&apos;&apos;'&apos;&apos;'
       <h2 className=&apos;text-xl font-medium mb-2&apos;>{title}&apos;</h2>&apos;&apos;'&apos;&apos;'
       <p className=&apos;text-muted-foreground mb-6&quot;>{subtitle}&quot;</p>
-=======
     <div className='text-center py-16'>''''
       <div className='bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex'>''''
         <MessageSquare className='h-10 w-10 text-zion-purple' />''''
       </div>''''
       <h2 className='text-xl font-medium mb-2'>{title}</h2>''''
       <p className='text-muted-foreground mb-6">{subtitle}</p>'"
->>>>>>> main
       <TooltipProvider>
         <Tooltip>
           <TooltipTrigger asChild>
@@ -133,7 +111,6 @@ const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {}
           {!hasSession &&} <TooltipContent>Login required</TooltipContent>}
         </Tooltip>
       </TooltipProvider>
->>>>>>> main
     </div>)}
 export;export default EmptyState;
 export { EmptyState }
@@ -143,14 +120,10 @@ export { EmptyState }
 export { EmptyState }
 
 export { EmptyState }
-<<<<<<< HEAD
 ;
 export { EmptyState }
-=======
-=======
 import React from 'react';
 import { SEO } from '@/components/SEO';
->>>>>>> main
 
 const EmptyState: React.FC = () => {
   return (
@@ -181,9 +154,3 @@ const EmptyState: React.FC = () => {
 };
 
 export default EmptyState;
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

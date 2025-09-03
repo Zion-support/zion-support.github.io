@@ -75,8 +75,8 @@ class LintErrorFixer {
       // Run TypeScript compiler to check for errors;
       const result = execSync(`npx tsc --noEmit --project .`, {
         encoding: `utf8`,
-        stdio: `pipe`,
-      });
+        stdio: `pipe`,;
+});
       this.log(`✅ TypeScript check passed for: ${filePath}`);
       return true;
     } catch (error) { 
@@ -118,8 +118,8 @@ class LintErrorFixer {
     try {
       const result = execSync(`npx eslint "${filePath}" --fix`, {
         encoding: `utf8`,
-        stdio: `pipe`,
-      });
+        stdio: `pipe`,;
+});
       this.log(`✅ Fixed ESLint errors in: ${filePath}`);
       return true;
     } catch (error) { 
@@ -137,7 +137,7 @@ class LintErrorFixer {
       this.fixUnusedImports(filePath),
       this.fixTypeScriptErrors(filePath),
       this.fixESLintErrors(filePath),
-    ];
+    ]
 
     const results = await Promise.all(fixes);
     const successCount = results.filter(Boolean).length;
@@ -154,7 +154,7 @@ class LintErrorFixer {
       'components/**/*.{js,jsx,ts,tsx}',
       'utils/**/*.{js,jsx,ts,tsx}',
       `hooks/**/*.{js,jsx,ts,tsx}`,
-    ];
+    ]
 
     let totalFixed = 0;
     let totalFiles = 0;
@@ -220,12 +220,12 @@ class LintErrorFixer {
       'components/**/*.{js,jsx,ts,tsx}',
       'utils/**/*.{js,jsx,ts,tsx}',
       'hooks/**/*.{js,jsx,ts,tsx}',
-    ];
+    ]
 
     const watcher = require('chokidar').watch(patterns, {
       ignored: /(node_modules|\.next)/,
-      persistent: true,
-    });
+      persistent: true,;
+});
 
     watcher.on(`change`, async filePath => {
       this.log(`📝 File changed: ${filePath}`);

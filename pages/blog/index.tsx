@@ -12,49 +12,49 @@ const BlogIndex: NextPage = () => {
       date: '2024-01-15',
       author: 'Tech Team',
       href: '/blog/5g-technology-and-its-impact-on-iot-chat',
-      category: 'Technology'
-    },
+      category: 'Technology',;
+},
     {
       title: 'AI-Powered Marketplaces: The Future of Digital Commerce',
       excerpt: 'How artificial intelligence is transforming e-commerce platforms and creating more personalized shopping experiences.',
       date: '2024-01-10',
       author: 'AI Team',
       href: '/blog/ai-powered-marketplaces-the-future-of-digital-commerce-chat',
-      category: 'AI'
-    },
+      category: 'AI';
+},
     {
       title: 'API-First Development: Building Scalable Systems',
       excerpt: 'Best practices for designing and implementing API-first architectures that can scale with your business.',
       date: '2024-01-05',
       author: 'Engineering Team',
       href: '/blog/api-first-development-building-scalable-systems-chat',
-      category: 'Development'
-    },
+      category: 'Development';
+},
     {
       title: 'Augmented Reality in Enterprise Applications',
       excerpt: 'Real-world applications of AR technology in business environments and how it\'s changing the way we work.',
       date: '2024-01-01',
       author: 'Innovation Team',
       href: '/blog/augmented-reality-in-enterprise-applications-chat',
-      category: 'Innovation'
-    },
+      category: 'Innovation';
+},
     {
       title: 'Blockchain Technology in Modern Business Solutions',
       excerpt: 'Understanding how blockchain is being integrated into business processes and the benefits it brings.',
       date: '2023-12-28',
       author: 'Blockchain Team',
       href: '/blog/blockchain-technology-in-modern-business-solutions-chat',
-      category: 'Blockchain'
-    },
+      category: 'Blockchain';
+},
     {
       title: 'Cloud-Native Architecture Best Practices',
       excerpt: 'Essential principles and practices for building applications that are designed for the cloud from the ground up.',
       date: '2023-12-25',
       author: 'Cloud Team',
       href: '/blog/cloud-native-architecture-best-practices-chat',
-      category: 'Cloud'
-    }
-  ];
+      category: 'Cloud';
+}
+  ]
 
   const categories = ['All', 'Technology', 'AI', 'Development', 'Innovation', 'Blockchain', 'Cloud'];
 
@@ -85,8 +85,8 @@ const BlogIndex: NextPage = () => {
                 className={`px-6 py-2 rounded-full font-semibold transition-colors ${
                   category === 'All' 
                     ? 'bg-blue-600 text-white' 
-                    : 'bg-white text-gray-600 hover:bg-blue-50 hover:text-blue-600'
-                }`}
+                    : 'bg-white text-gray-600 hover:bg-blue-50 hover:text-blue-600';
+}`}
               >
                 {category}
               </button>

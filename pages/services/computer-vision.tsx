@@ -1,12 +1,13 @@
 import React from 'react';
 import { ArrowRight, CheckCircle, Eye, Camera, Image, Zap, Target, TrendingUp, Star, Shield, Globe, Brain } from 'lucide-react';
+import PageTransition from '../../src/components/PageTransition';
 
 export default function ComputerVision() {
 	const title = 'Computer Vision & Image Recognition — Zion Tech Group'
 	const description = 'Advanced computer vision solutions with object detection, facial recognition, OCR, and image analysis for business applications.'
 
 	return (
-		<>
+		<PageTransition>
 			{/* Hero Section */}
 			<section className="bg-gradient-to-br from-cyan-50 to-blue-50 py-20 sm:py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -439,6 +440,6 @@ export default function ComputerVision() {
 					</div>
 				</div>
 			</section>
-		</>
-	)
+		</PageTransition>
+	);
 }

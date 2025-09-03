@@ -1,18 +1,12 @@
-<<<<<<< HEAD
 import React from 'react'; const SEOHead = ({ title = "Zion Tech Group - AI-Powered Technology Solutions & Services", description = "Discover innovative AI, quantum computing, and technology solutions.Expert consulting, enterprise services, and cutting-edge platforms for modern businesses.", keywords = "AI services, quantum computing, technology consulting, enterprise solutions, cybersecurity, cloud services, digital transformation", image = "/images/zion-tech-group-og.jpg", url = "https:
-=======
-<<<<<<< HEAD
 import React from 'react'; const SEOHead = ({ title = "Zion Tech Group - AI-Powered Technology Solutions & Services", description = "Discover innovative AI, quantum computing, and technology solutions.Expert consulting, enterprise services, and cutting-edge platforms for modern businesses.", keywords = "AI services, quantum computing, technology consulting, enterprise solutions, cybersecurity, cloud services, digital transformation", image = "/images/zion-tech-group-og.jpg", url = "https:
-=======
-<<<<<<< HEAD
 
 ;,"});,"})
  const SEOHead = ({ title = "Zion Tech Group - AI - Powered Technology Solutions & Services", description = "Discover innovative AI, quantum computing, and technology solutions. Expert consulting, enterprise services, and cutting - edge platforms for modern businesses.", keywords = "AI services, quantum computing, technology consulting, enterprise solutions, cybersecurity, cloud services, digital transformation", image = "/images / zion - tech - group - og.jpg", url = "https:"""";,"});,"})
 ;,"});,"})
  const SEOHead = ({ title = "Zion Tech Group - AI-Powered Technology Solutions & Services", description = "Discover innovative AI, quantum computing, and technology solutions.Expert consulting, enterprise services, and cutting-edge platforms for modern businesses.", keywords = "AI services, quantum computing, technology consulting, enterprise solutions, cybersecurity, cloud services, digital transformation", image = "/images/zion-tech-group-og.jpg", url = "https:;,"});,"})
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-23ff;,"});,"})
 ';,"});,"})
-import { Helmet } from 'react-helmet-async';';,"});,"})
+import { Helmet } from 'react-helmet-async';,"});,"})
 const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & Services', description = 'Discover innovative AI, quantum computing, and technology solutions. Expert consulting, enterprise services, and cutting-edge platforms for modern businesses.', keywords = 'AI services, quantum computing, technology consulting, enterprise solutions, cybersecurity, cloud services, digital transformation', image = '/images/zion-tech-group-og.jpg', url = 'https://ziontechgroup.com', type = 'website', publishedTime, modifiedTime, author = 'Zion Tech Group' }) => {}"});,"})
 ';,"});,"})
 '';,"});,"})
@@ -76,22 +70,22 @@ const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & 
                 "addressLocality": "Middletown","""";,"});,"})
                 "addressRegion": "DE","""";,"});,"})
                 "postalCode": "19709","""";,"});,"})
-                "addressCountry": "US"""";,"});,"})
-            },"""";,"});,"})
+                "addressCountry": "US"""";,"});,"});
+},"""";,"});,"})
             "contactPoint": {}"});,"})
 """;,"});,"})
 """";,"});,"})
                 "@type": "ContactPoint","""";,"});,"})
                 "telephone": "+1-302-464-0950","""";,"});,"})
                 "contactType": "customer service","""";,"});,"})
-                "email": "kleber@ziontechgroup.com"""";,"});,"})
-            },"""";,"});,"})
+                "email": "kleber@ziontechgroup.com"""";,"});,"});
+},"""";,"});,"})
             "sameAs"[;"""";,"});,"})
                 "https://linkedin.com/company/ziontechgroup","""";,"});,"})
                 "https://twitter.com/ziontechgroup","""";,"});,"})
                 "https://github.com/ziontechgroup""";,"});,"})
-            ];,"});,"})
-        }) }"});,"})
+            ],"});,"});
+}) }"});,"})
       </script>;,"});,"})
       '""";,"});,"})
       {/* Article specific structured data */}'"'""";,"});,"})
@@ -108,8 +102,8 @@ const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & 
 """;,"});,"})
 """";,"});,"})
                     "@type": "Organization","""";,"});,"})
-                    "name": author""";,"});,"})
-                },"""";,"});,"})
+                    "name": author""";,"});,"});
+},"""";,"});,"})
                 "publisher": {}"});,"})
 """;,"});,"})
 """";,"});,"})
@@ -119,18 +113,18 @@ const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & 
 """;,"});,"})
 """";,"});,"})
                         "@type": "ImageObject","""";,"});,"})
-                        "url": "https://ziontechgroup.com/images/zion-tech-group-logo.png""";,"});,"})
-                    }""";,"});,"})
-                },"""";,"});,"})
+                        "url": "https://ziontechgroup.com/images/zion-tech-group-logo.png""";,"});,"});
+}""";,"});,"});
+},"""";,"});,"})
                 "datePublished": publishedTime,"""";,"});,"})
                 "dateModified": modifiedTime || publishedTime,"""";,"});,"})
                 "mainEntityOfPage": {}"});,"})
 """;,"});,"})
 """";,"});,"})
                     "@type": "WebPage","""";,"});,"})
-                    "@id": url;,"});,"})
-                }"});,"})
-            })}"});,"})
+                    "@id": url;,"});,"});
+}"});,"});
+})}"});,"})
         </script>)}"});,"})
     </Helmet>)};,"});,"})
 export default SEOHead;,"});,"})
@@ -144,30 +138,22 @@ export { SEOHead };,"});,"})
 export { SEOHead };,"});,"})
 ;,"});,"})
 export { SEOHead };,"});,"})
->>>>>>> pr-10728;,"});,"})
-=======
-<<<<<<< HEAD
  const SEOHead = ({ title = 'Zion Tech Group - AI - Powered Technology Solutions & Services', description = 'Discover innovative AI, quantum computing, and technology solutions. Expert consulting, enterprise services, and cutting - edge platforms for modern businesses.', keywords = 'AI services, quantum computing, technology consulting, enterprise solutions, cybersecurity, cloud services, digital transformation', image = '/images / zion - tech - group - og.jpg', url = 'https:'''';import { Helmet } from 'react-helmet-async';const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & Services', description = 'Discover innovative AI, quantum computing, and technology solutions. Expert consulting, enterprise services, and cutting-edge platforms for modern businesses.', keywords = 'AI services, quantum computing, technology consulting, enterprise solutions, cybersecurity, cloud services, digital transformation', image = '/images/zion-tech-group-og.jpg', url = 'https://ziontechgroup.com', type = 'website', publishedTime, modifiedTime, author = 'Zion Tech Group' }) => {}
 ';
 '';
 ''';
     const siteName = 'Zion Tech Group';
     const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
-=======
-<<<<<<< HEAD
  const SEOHead = ({ title = 'Zion Tech Group - AI - Powered Technology Solutions & Services', description = 'Discover innovative AI, quantum computing, and technology solutions. Expert consulting, enterprise services, and cutting - edge platforms for modern businesses.', keywords = 'AI services, quantum computing, technology consulting, enterprise solutions, cybersecurity, cloud services, digital transformation', image = '/images / zion - tech - group - og.jpg', url = 'https: '''';import { Helmet } from 'react-helmet-async';"'"
 const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & Services', description = 'Discover innovative AI, quantum computing, and technology solutions. Expert consulting, enterprise services, and cutting-edge platforms for modern businesses.', keywords = 'AI services, quantum computing, technology consulting, enterprise solutions, cybersecurity, cloud services, digital transformation', image = '/images/zion-tech-group-og.jpg', url = 'https: //ziontechgroup.com', type = 'website', publishedTime, modifiedTime, author = 'Zion Tech Group' }) => {}""
-=======
  const SEOHead = ({ title = 'Zion Tech Group - AI - Powered Technology Solutions & Services', description = 'Discover innovative AI, quantum computing, and technology solutions. Expert consulting, enterprise services, and cutting - edge platforms for modern businesses.', keywords = 'AI services, quantum computing, technology consulting, enterprise solutions, cybersecurity, cloud services, digital transformation', image = '/images / zion - tech - group - og.jpg', url = 'https:'''';import { Helmet } from 'react-helmet-async
 const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & Services', description = 'Discover innovative AI, quantum computing, and technology solutions. Expert consulting, enterprise services, and cutting-edge platforms for modern businesses.', keywords = 'AI services, quantum computing, technology consulting, enterprise solutions, cybersecurity, cloud services, digital transformation', image = '/images/zion-tech-group-og.jpg', url = 'https://ziontechgroup.com', type = 'website', publishedTime, modifiedTime, author = 'Zion Tech Group' }) => {}"
 '
->>>>>>> main
 ''
 ''
 ''''
     const siteName = 'Zion Tech Group'
     const fullTitle = title === siteName ? title : `${title} | ${siteName}`
->>>>>>> main
     return (<Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>""
@@ -210,31 +196,27 @@ const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & 
       <script type='application/ld+json'>
         {JSON.stringify({}""
 ''''
-<<<<<<< HEAD
 ''''
             '@context': 'https://schema.org', ''''
             '@type': 'Organization',''''
             'name': 'Zion Tech Group', ''''
             'url': 'https://ziontechgroup.com',''''
             'logo': 'https://ziontechgroup.com/images/zion-tech-group-logo.png', ''''
-=======
             '@context': 'https://schema.org,'''
             '@type': 'Organization,'''
             'name': 'Zion Tech Group,'''
             'url': 'https://ziontechgroup.com,'''
             'logo': 'https://ziontechgroup.com/images/zion-tech-group-logo.png,'''
->>>>>>> main
             'description': description,''''
             'address': {}""
 ''''
-<<<<<<< HEAD
 ''''
                 '@type': 'PostalAddress', ''''
                 'streetAddress': '364 E Main St STE 1008',''''
                 'addressLocality': 'Middletown', ''''
                 'addressRegion': 'DE',''''
                 'postalCode': '19709', ''''
-                'addressCountry': 'US'''','
+                'addressCountry': 'US'''',';
 }, ''''
             'contactPoint': {}""
 ''''
@@ -242,99 +224,75 @@ const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & 
                 '@type': 'ContactPoint',''''
                 'telephone': '+1-302-464-0950', ''''
                 'contactType': 'customer service',''''
-                'email': 'kleber@ziontechgroup.com'''', '
+                'email': 'kleber@ziontechgroup.com'''', ';
 },''''
             'sameAs'[''''
                 'https: //linkedin.com/company/ziontechgroup', ''''
                 'https: //twitter.com/ziontechgroup',''''
                 'https: //github.com/ziontechgroup''', 
-=======
                 '@type': 'PostalAddress,'''
                 'streetAddress': '364 E Main St STE 1008,'''
                 'addressLocality': 'Middletown,'''
                 'addressRegion': 'DE,'''
                 'postalCode': '19709,'''
-                'addressCountry': 'US'''',
-},''''
+                'addressCountry': 'US''''},''''
             'contactPoint': {}"
 '''
 ''''
                 '@type': 'ContactPoint,'''
                 'telephone': '+1-302-464-0950,'''
                 'contactType': 'customer service,'''
-                'email': 'kleber@ziontechgroup.com'''',
-},''''
+                'email': 'kleber@ziontechgroup.com''''},''''
             'sameAs'['''
                 'https://linkedin.com/company/ziontechgroup,'''
                 'https://twitter.com/ziontechgroup,'''
-                'https://github.com/ziontechgroup''',
->>>>>>> main
-]
-        }) }
+                'https://github.com/ziontechgroup'''];
+}) }
       </script>""
       ''''
       {/* Article specific structured data */}''''''
       {type === 'article' && publishedTime && (<script type='application/ld+json'>
           {JSON.stringify({}""
 ''''
-<<<<<<< HEAD
 ''''
                 '@context': 'https://schema.org', ''''
                 '@type': 'Article',''''
                 'headline': fullTitle, ''''
-=======
                 '@context': 'https://schema.org,'''
                 '@type': 'Article,'''
                 'headline': fullTitle,''''
->>>>>>> main
                 'description': description,''''
                 'image': image, ''''
                 'author': {}""
 ''''
 ''''
-<<<<<<< HEAD
                     '@type': 'Organization',''''
                     'name': author''', '
-=======
                     '@type': 'Organization,'''
-                    'name': author''',
->>>>>>> main
-},''''
+                    'name': author'''},''''
                 'publisher': {}""
 ''''
-<<<<<<< HEAD
 ''''
                     '@type': 'Organization', ''''
-=======
                     '@type': 'Organization,'''
->>>>>>> main
                     'name': siteName,''''
                     'logo': {}""
 ''''
-<<<<<<< HEAD
 ''''
                         '@type': 'ImageObject', ''''
-=======
                         '@type': 'ImageObject,'''
->>>>>>> main
-                        'url': 'https://ziontechgroup.com/images/zion-tech-group-logo.png''',
-}''', '
+                        'url': 'https://ziontechgroup.com/images/zion-tech-group-logo.png'''}''', ';
 },''''
                 'datePublished': publishedTime, ''''
                 'dateModified': modifiedTime || publishedTime,''''
                 'mainEntityOfPage': {}""
 ''''
-<<<<<<< HEAD
 ''''
                     '@type': 'WebPage', ''''
-=======
                     '@type': 'WebPage,'''
->>>>>>> main
-                    '@id': url,
-}
+                    '@id': url}
             })}
         </script>)}
-<<<<<<< HEAD
     </Helmet>)};
 export default SEOHead;
 ;
@@ -347,7 +305,6 @@ export { SEOHead };
 export { SEOHead };
 ;
 export { SEOHead };
-=======
     </Helmet>)}
 export default SEOHead
 
@@ -361,7 +318,3 @@ export { SEOHead }
 
 export { SEOHead }
 ;"`"
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

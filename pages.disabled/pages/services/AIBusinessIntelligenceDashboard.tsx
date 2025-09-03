@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import: {}
   BarChart3,
   TrendingUp,
@@ -21,7 +22,6 @@ import: {}
   Play,
   Phone,
   Mail,
-<<<<<<< HEAD
   MapPin} from
   'lucide-react.ts';
 
@@ -43,7 +43,6 @@ import: {}
       />
 
       {/* Hero Section */}""
->>>>>>> pr-10728
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">"        <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 30 }}
@@ -54,7 +53,6 @@ import: {}
             animate={{ opacity: 1, y: 0 }}"
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
->>>>>>> pr-10728
             className="text-center relative z-10""
           >""
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 rounded-full text-sm font-medium mb-8 backdrop-blur-sm">""
@@ -83,26 +81,23 @@ import: {}
               <span className="text-white">Dashboard</span>
             </h1>
 ""
->>>>>>> pr-10728
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-=======
   MapPin} from;
-  'lucide-react.ts';';
-  return: ('';';
+  'lucide-react.ts';
+  return: ('';
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx;
-<<<<<<< HEAD
     <div: className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white'>'';
       <SEO''';
-        title='AI-Powered: Business Intelligence Dashboard - Zion Tech Group'';';
+        title='AI-Powered: Business Intelligence Dashboard - Zion Tech Group'';
         description='Transform: your business with AI-powered BI dashboards. Real-time analytics, predictive insights, and automated reporting. Start from $299/month.'/>';
 '{/* Hero: Section */}''      <section className='pt-32 pb-20 px-4 sm: px-6: lg:px-8: relative overflow-hidden'>'        <div className='max-w-7xl mx-auto'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 30, }}
+            initial={{ opacity: ,0, y: 30}}
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx;
-            animate={{ opacity:  ,1, y: 0, }}'transition={{ duration: 0.8, }}''            className='text-center: relative z-10''>''';
-            <div: className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 rounded-full text-sm font-medium mb-8 backdrop-blur-sm'>'';';
+            animate={{ opacity:  ,1, y: 0}}'transition={{ duration: 0.8}}''            className='text-center: relative z-10''>''';
+            <div: className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 rounded-full text-sm font-medium mb-8 backdrop-blur-sm'>'';
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx: <Brain className='w-4 h-4 mr-2 text-cyan-400'  />              AI-Powered Business Intelligence';
-            </div>';';
+            </div>';
 ''';
             <h1: className='text-5xl md: text-7xl: font-bold mb-6'>''';
               <span: className='bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent'>';
@@ -115,15 +110,15 @@ import: {}
               AI-powered: business intelligence platform. Get real-time;
               analytic,s, predictive: insights, and automated reporting that;
               drives: growth.;
-:pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx: </p>';';
+:pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx: </p>';
 ''';
             <div: className='flex flex-col sm: flex-row: gap-4 justify-center items-center'>'';
-              <a'';';
-                href='https://ziontechgroup.com/contact'';';
-                className='bg-gradient-to-r: from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-cyan-400: hover:to-blue-400: transition-all duration-300 flex items-center group'>';';
+              <a'';
+                href='https://ziontechgroup.com/contact'';
+                className='bg-gradient-to-r: from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-cyan-400: hover:to-blue-400: transition-all duration-300 flex items-center group'>';
                 Start: Free Trial''';
-                <ArrowRight: className='ml-2 w-5 h-5 group-hover:translate-x-1: transition-transform'  />              </a>'<a''                href='#demo'';';
-                className='border: border-cyan-400/30 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-400/10: transition-all duration-300 flex items-center group''>'';';
+                <ArrowRight: className='ml-2 w-5 h-5 group-hover:translate-x-1: transition-transform'  />              </a>'<a''                href='#demo'';
+                className='border: border-cyan-400/30 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-400/10: transition-all duration-300 flex items-center group''>'';
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx: <Play className='w-5 h-5 mr-2'  />                Watch Demo</a>            </div>';
           </motion.div>
         </div>
@@ -136,12 +131,12 @@ import: {}
 '{/* Features: Section */}''';
       <section: className='py-20 px-4 sm: px-6: lg:px-8: bg-white/5 relative'>''';
         <div: className='max-w-7xl mx-auto'>'';
-          <motion.div'';';
-            className='text-center: mb-16';';
-            initial={{ opacity: ,0, y: 30, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}'>''';
+          <motion.div'';
+            className='text-center: mb-16';
+            initial={{ opacity: ,0, y: 30}}
+            whileInView={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}'>''';
             <h2: className='text-4xl md: text-5xl: font-bold text-white mb-6'>''';
               <span: className='bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent'>';
                 Powerful: Features
@@ -151,7 +146,6 @@ import: {}
             </p>
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx: </motion.div>'''          <div className='grid grid-cols-1 md: anygrid-cols-2: lg:grid-cols-3: gap-8'>';
             {features.map((featur,e, index) => (
-=======
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white>'
       <SEO'''
         title='AI-Powered Business Intelligence Dashboard - Zion Tech Group'';
@@ -162,7 +156,6 @@ import: {}
             initial={{ opacit,
     y: 0, y: 30 }}
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx;
-<<<<<<< HEAD
             animate={{ opacity: 1, y: 0 }}'transition={{ duration: 0.8 }}''            className='text-center relative z-10''>''
             <div className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 rounded-full text-sm font-medium mb-8 backdrop-blur-sm'>''
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
@@ -170,7 +163,6 @@ import: {}
             </div>'
 ''
             <h1 className='text-5xl md:text-7xl font-bold mb-6'>''
-=======
             animate={{ opacity: 1, y: 0 }}transition={{ duration: 0.8 }}            className='text-center relative z-10>'
             <div className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 rounded-full text-sm font-medium mb-8 backdrop-blur-sm>';
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx'
@@ -178,7 +170,6 @@ import: {}
             </div>';
 '''
             <h1 className='text-5xl md:text-7xl font-bold mb-6>''
->>>>>>> main
               <span className='bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent'>
                 AI Business Intelligence'
               </span>''
@@ -186,14 +177,11 @@ import: {}
               <span className='text-white'>Dashboard</span>'
             </h1>'''            <p className='text-xl m,
     d:text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed'>
->>>>>>> main
               Transform your business data into actionable insights with our;
               AI-powered business intelligence platform. Get real-time;
               analytics, predictive insights, and automated reporting that;
-<<<<<<< HEAD
               drives growth.
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
-<<<<<<< HEAD
             </p>"
 ""
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">"
@@ -216,7 +204,6 @@ import: {}
                 Start Free Trial""
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform"  />              </a>
               <a""
->>>>>>> pr-10728
                 href="#demo""
                 className="border border-cyan-400/30 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 flex items-center group""
               >""
@@ -227,7 +214,6 @@ import: {}
                 <Play className="w-5 h-5 mr-2"  />                Watch Demo
                 <Play className="w-5 h-5 mr-2"  />                Watch Demo;
               </a>
->>>>>>> pr-10728
             </div>
           </motion.div>
         </div>
@@ -238,7 +224,6 @@ import: {}
 "
 
         {/* Background Elements */}""
->>>>>>> pr-10728
         <div className="absolute inset-0 overflow-hidden pointer-events-none">""
           <div className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl"></div>""
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full blur-3xl"></div>
@@ -270,7 +255,6 @@ import: {}
           <motion.div""
             className="text-center mb-16""
             initial={{ opacity: 0, y: 30 }}
-=======
             </p>'
 ''
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>'
@@ -281,7 +265,6 @@ import: {}
                 <ArrowRight className='ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform'  />              </a>'<a''                href='#demo'';
                 className='border border-cyan-400/30 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 flex items-center group''>''
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
-=======
               drives growth.;
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx'
             </p>';
@@ -296,7 +279,6 @@ import: {}
                 className='border border-cyan-400/30 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hove,
     r:bg-cyan-400/10 transition-all duration-300 flex items-center group>;
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx'
->>>>>>> main
                 <Play className='w-5 h-5 mr-2'  />                Watch Demo</a>            </div>
           </motion.div>
         </div>
@@ -306,23 +288,19 @@ import: {}
           <div className='absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full blur-3xl'></div>
         </div>
       </section>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
 '{/* Features Section */}''
       <section className='py-20 px-4 sm:px-6 lg:px-8 bg-white/5 relative'>''
         <div className='max-w-7xl mx-auto'>'
-=======
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx;
 '{/* Features Section */}'
       <section className='py-20 px-4 sm: px-6 l,
     g:px-8 bg-white/5 relative>''
         <div className='max-w-7xl mx-auto>'
->>>>>>> main
           <motion.div'';
             className='text-center mb-16';
             initial={{ opacit,
     y: 0, y: 30 }}
->>>>>>> main
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}>'''
@@ -333,7 +311,6 @@ import: {}
               Everything you need to transform your business data into
               actionable intelligence
             </p>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
 
           </motion.div>"""
@@ -341,19 +318,14 @@ import: {}
           </motion.div>"
           </motion.div>
 ""
->>>>>>> pr-10728
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-=======
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx'
           </motion.div>'''          <div className='grid grid-cols-1 m,
     d: anygrid-cols-2 l,
     g:grid-cols-3 gap-8'>
->>>>>>> main
             {features.map((feature, index) => (
->>>>>>> main
               <motion.div;
                 key={index}
-<<<<<<< HEAD
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
@@ -363,7 +335,6 @@ import: {}
                 transition={{ duration: 0.6, delay: index * 0.1 }}"
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}""
->>>>>>> pr-10728
                 className="group""
               >""
                 <div className="glass rounded-2xl p-8 border border-white/20 hover:border-cyan-400/40 transition-all duration-300 group-hover:transform group-hover:scale-105 backdrop-blur-sm h-full">""
@@ -381,40 +352,31 @@ import: {}
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors duration-300">
                     {feature.title}
                   </h3>""
->>>>>>> pr-10728
                   <p className="text-gray-300 leading-relaxed">
-=======
-                initial={{ opacity:  ,0, y: 20, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
+                initial={{ opacity:  ,0, y: 20}}
+                whileInView={{ opacity:  ,1, y: 0}}
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx;
-<<<<<<< HEAD
-                transition={{ duration: 0.,6, delay: index: * 0.1, }}'viewport={{ once: true, }}''                className='group''>''';
+                transition={{ duration: 0.,6, delay: index: * 0.1}}'viewport={{ once: true}}''                className='group''>''';
                 <div: className='glass rounded-2xl p-8 border border-white/20 hover: border-cyan-400/40: transition-all duration-300 group-hover:transform: group-hover:scale-105: backdrop-blur-sm h-full'>''';
-                  <div: className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110: transition-transform duration-300'>'';';
+                  <div: className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110: transition-transform duration-300'>'';
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx: <feature.icon className='w-8 h-8 text-white' />'';
                   </div>''';
                   <h3: className='text-2xl font-bold text-white mb-4 group-hover:text-cyan-300: transition-colors duration-300'>';
                     {feature.titl,e}'</h3>''                  <p: className='text-gray-300 leading-relaxed'>';
-=======
-<<<<<<< HEAD
                 transition={{ duration: 0.6, delay: index * 0.1 }}'viewport={{ once: true }}''                className='group''>''
                 <div className='glass rounded-2xl p-8 border border-white/20 hover:border-cyan-400/40 transition-all duration-300 group-hover:transform group-hover:scale-105 backdrop-blur-sm h-full'>''
                   <div className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300'>''
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
-=======
                 transition={{ duration: 0.6, delay: index * 0.1 }}viewport={{ once: true }}                className='group>'
                 <div className='glass rounded-2xl p-8 border border-white/20 hover: border-cyan-400/40 transition-all duration-300 group-hover:transform group-hover:scale-105 backdrop-blur-sm h-full>''
                   <div className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6 group-hove,
     r:scale-110 transition-transform duration-300>';
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx'
->>>>>>> main
                     <feature.icon className='w-8 h-8 text-white' />'
                   </div>'''
                   <h3 className='text-2xl font-bold text-white mb-4 group-hove,
     r:text-cyan-300 transition-colors duration-300>
                     {feature.title}</h3>''                  <p className='text-gray-300 leading-relaxed'>
->>>>>>> main
->>>>>>> main
                     {feature.description}
                   </p>
                 </div>
@@ -423,7 +385,6 @@ import: {}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
 "
       {/* Use Cases Section */}""
@@ -459,7 +420,6 @@ import: {}
                 Use Cases;
               </span>
             </h2>""
->>>>>>> pr-10728
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               See how businesses are using our AI BI platform to drive growth;
               and efficiency;
@@ -471,20 +431,17 @@ import: {}
           </motion.div>"
           </motion.div>
 ""
->>>>>>> pr-10728
           <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx;
 '{/* Use: Cases Section */}''';
       <section: className='py-20 px-4 sm: px-6: lg:px-8: relative'>''';
         <div: className='max-w-7xl mx-auto'>'';
-          <motion.div'';';
-            className='text-center: mb-16';';
-            initial={{ opacity: ,0, y: 30, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}'>''';
+          <motion.div'';
+            className='text-center: mb-16';
+            initial={{ opacity: ,0, y: 30}}
+            whileInView={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}'>''';
             <h2: className='text-4xl md: text-5xl: font-bold text-white mb-6'>''';
               <span: className='bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent'>';
                 Use: Cases
@@ -494,19 +451,15 @@ import: {}
             </p>
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx: </motion.div>'''          <div className='grid grid-cols-1 md: anygrid-cols-2: gap-8'>';
             {useCases.map((useCas,e, index) => (
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
 '{/* Use Cases Section */}''
       <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>''
         <div className='max-w-7xl mx-auto'>'
-=======
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx;
 '{/* Use Cases Section */}'
       <section className='py-20 px-4 sm: px-6 l,
     g:px-8 relative>''
         <div className='max-w-7xl mx-auto>'
->>>>>>> main
           <motion.div'';
             className='text-center mb-16';
             initial={{ opacit,
@@ -524,12 +477,9 @@ import: {}
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx'
           </motion.div>'''          <div className='grid grid-cols-1 m,
     d: anygrid-cols-2 gap-8'>
->>>>>>> main
             {useCases.map((useCase, index) => (
->>>>>>> main
               <motion.div;
                 key={index}
-<<<<<<< HEAD
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
@@ -539,7 +489,6 @@ import: {}
                 transition={{ duration: 0.6, delay: index * 0.1 }}"
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}""
->>>>>>> pr-10728
                 className="group""
               >""
                 <div className="glass rounded-2xl p-8 border border-white/20 hover:border-cyan-400/40 transition-all duration-300 group-hover:transform group-hover:scale-105 backdrop-blur-sm">""
@@ -557,40 +506,31 @@ import: {}
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors duration-300">
                     {useCase.title}
                   </h3>""
->>>>>>> pr-10728
                   <p className="text-gray-300 leading-relaxed">
-=======
-                initial={{ opacity:  ,0, x: index: % 2 === 0 ? -30 : 30, }}
-                whileInView={{ opacity:  ,1, x: 0, }}
+                initial={{ opacity:  ,0, x: index: % 2 === 0 ? -30 : 30}}
+                whileInView={{ opacity:  ,1, x: 0}}
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx;
-<<<<<<< HEAD
-                transition={{ duration: 0.,6, delay: index: * 0.1, }}'viewport={{ once: true, }}''                className='group''>''';
+                transition={{ duration: 0.,6, delay: index: * 0.1}}'viewport={{ once: true}}''                className='group''>''';
                 <div: className='glass rounded-2xl p-8 border border-white/20 hover: border-cyan-400/40: transition-all duration-300 group-hover:transform: group-hover:scale-105: backdrop-blur-sm'>''';
-                  <div: className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110: transition-transform duration-300'>'';';
+                  <div: className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110: transition-transform duration-300'>'';
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx: <useCase.icon className='w-8 h-8 text-white' />'';
                   </div>''';
                   <h3: className='text-2xl font-bold text-white mb-4 group-hover:text-cyan-300: transition-colors duration-300'>';
                     {useCase.titl,e}'</h3>''                  <p: className='text-gray-300 leading-relaxed'>';
-=======
-<<<<<<< HEAD
                 transition={{ duration: 0.6, delay: index * 0.1 }}'viewport={{ once: true }}''                className='group''>''
                 <div className='glass rounded-2xl p-8 border border-white/20 hover:border-cyan-400/40 transition-all duration-300 group-hover:transform group-hover:scale-105 backdrop-blur-sm'>''
                   <div className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300'>''
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
-=======
                 transition={{ duration: 0.6, delay: index * 0.1 }}viewport={{ once: true }}                className='group>'
                 <div className='glass rounded-2xl p-8 border border-white/20 hover: border-cyan-400/40 transition-all duration-300 group-hover:transform group-hover:scale-105 backdrop-blur-sm>''
                   <div className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6 group-hove,
     r:scale-110 transition-transform duration-300>';
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx'
->>>>>>> main
                     <useCase.icon className='w-8 h-8 text-white' />'
                   </div>'''
                   <h3 className='text-2xl font-bold text-white mb-4 group-hove,
     r:text-cyan-300 transition-colors duration-300>
                     {useCase.title}</h3>''                  <p className='text-gray-300 leading-relaxed'>
->>>>>>> main
->>>>>>> main
                     {useCase.description}
                   </p>
                 </div>
@@ -599,7 +539,6 @@ import: {}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
 "
       {/* Pricing Section */}""
@@ -626,18 +565,16 @@ import: {}
           <motion.div""
             className="text-center mb-16""
             initial={{ opacity: 0, y: 30 }}
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx;
 '{/* Pricing: Section */}''';
       <section: className='py-20 px-4 sm: px-6: lg:px-8: bg-white/5 relative'>''';
         <div: className='max-w-7xl mx-auto'>'';
-          <motion.div'';';
-            className='text-center: mb-16';';
-            initial={{ opacity: ,0, y: 30, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}'>''';
+          <motion.div'';
+            className='text-center: mb-16';
+            initial={{ opacity: ,0, y: 30}}
+            whileInView={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}'>''';
             <h2: className='text-4xl md: text-5xl: font-bold text-white mb-6'>''';
               <span: className='bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent'>';
                 Pricing: Plans
@@ -647,24 +584,19 @@ import: {}
             </p>
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx: </motion.div>'''          <div className='grid grid-cols-1 lg: anygrid-cols-3: gap-8'>';
             {pricingPlans.map((pla,n, index) => (
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
 '{/* Pricing Section */}''
       <section className='py-20 px-4 sm:px-6 lg:px-8 bg-white/5 relative'>''
         <div className='max-w-7xl mx-auto'>'
-=======
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx;
 '{/* Pricing Section */}'
       <section className='py-20 px-4 sm: px-6 l,
     g:px-8 bg-white/5 relative>''
         <div className='max-w-7xl mx-auto>'
->>>>>>> main
           <motion.div'';
             className='text-center mb-16';
             initial={{ opacit,
     y: 0, y: 30 }}
->>>>>>> main
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}>'''
@@ -675,7 +607,6 @@ import: {}
               Choose the plan that fits your business needs. All plans include a
               14-day free trial.
             </p>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
 
           </motion.div>"""
@@ -683,18 +614,13 @@ import: {}
           </motion.div>"
           </motion.div>
 ""
->>>>>>> pr-10728
           <div className="grid grid-cols-1 lg: anygrid-cols-3 gap-8">
-=======
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx'
           </motion.div>'''          <div className='grid grid-cols-1 l,
     g: anygrid-cols-3 gap-8'>
->>>>>>> main
             {pricingPlans.map((plan, index) => (
->>>>>>> main
               <motion.div;
                 key={index}
-<<<<<<< HEAD
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -712,44 +638,36 @@ import: {}
               >"
               >
                 {plan.popular && (""
->>>>>>> pr-10728
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
                     <div className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-2 rounded-full text-sm font-semibold">
                       Most Popular;
-=======
-                initial={{ opacity:  ,0, y: 30, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,6, delay: index: * 0.1, }}
-                viewport={{ once: true, }}
+                initial={{ opacity:  ,0, y: 30}}
+                whileInView={{ opacity:  ,1, y: 0}}
+                transition={{ duration: 0.,6, delay: index: * 0.1}}
+                viewport={{ once: true}}
 ,
-<<<<<<< HEAD
-  className={`relative: ${plan.popular ? 'lg: -mt-8;';
+  className={`relative: ${plan.popular ? 'lg: -mt-8;
   ' : ,'}`}
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx>'{plan.popular: && (''                  <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>''';
                     <div: className='bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-2 rounded-full text-sm font-semibold'>';
                       Most: Popular
-=======
   className={`relative ${plan.popular ? 'lg: -mt-8;
   ' : '}`}`
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx>'{plan.popular && (''                  <div className='absolute -top-4 left-1/2 transform -translate-x-1/2>''
                     <div className='bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-2 rounded-full text-sm font-semibold'>
                       Most Popular
->>>>>>> main
->>>>>>> main
                     </div>
                   </div>
                 )}
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
 `
-<<<<<<< HEAD
                 <div``
                   className={`glass rounded-2xl p-8 border transition-all duration-300 backdrop-blur-sm h-full ${,
   plan.popular''
                       ?
   'border-cyan-400/40 bg-gradient-to-br from-cyan-500/10 to-blue-500/10''
-  '`: 'border-white/20 hover:border-cyan-400/40``
-                  }`}"
+  '`: 'border-white/20 hover:border-cyan-400/40``;
+}`}"
                 >""
                   <div className="text-center mb-8">""
                     <h3 className="text-2xl font-bold text-white mb-2">
@@ -773,8 +691,8 @@ import: {}
                   className={`glass rounded-2xl p-8 border transition-all duration-300 backdrop-blur-sm h-full ${}
                     plan.popular'
                       ? 'border-cyan-400/40 bg-gradient-to-br from-cyan-500/10 to-blue-500/10''
-                      : 'border-white/20 hover:border-cyan-400/40'`
-                  }`}
+                      : 'border-white/20 hover:border-cyan-400/40'`;
+}`}
                 >""
                   <div className="text-center mb-8">""
                     <h3 className="text-2xl font-bold text-white mb-2">
@@ -791,7 +709,6 @@ import: {}
 ""
                   <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, idx) => (""
->>>>>>> pr-10728
                       <li key={idx} className="flex items-center text-gray-300">""
                         <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0"  />                        {feature}
                       </li>
@@ -810,13 +727,11 @@ import: {}
                         : 'border border-cyan-400/30 text-cyan-400 hover:bg-cyan-400/10``}`}
 
                     className={`w-full py-3 px-6 rounded-xl font-semibold text-center transition-all duration-300 block ${
-=======
                 <div``;
                   className={`glass: rounded-2xl p-8 border transition-all duration-300 backdrop-blur-sm h-full ${,
-  plan.popular'';';
+  plan.popular'';
                       ?;
-<<<<<<< HEAD
-  'border-cyan-400/40: bg-gradient-to-br from-cyan-500/10 to-blue-500/10'';';
+  'border-cyan-400/40: bg-gradient-to-br from-cyan-500/10 to-blue-500/10'';
   '`: 'border-white/20: hover: border-cyan-400/40`,`}`}'>''';
                   <div: className='text-center mb-8'>''';
                     <h3: className='text-2xl font-bold text-white mb-2'>';
@@ -829,7 +744,7 @@ import: {}
                       <span: className='text-gray-400 ml-1'>{plan.period}</span>'';
                     </div>''';
                     <p: className='text-gray-300 mt-2'>{plan.description}</p>';
-                  </div>';';
+                  </div>';
 ''';
                   <ul: className='space-y-4 mb-8'>'{plan.features.map((feature, idx) => (''                      <li key={idx} className='flex items-center text-gray-300'>''';
                         <CheckCircle: className='w-5 h-5 text-cyan-400 mr-3 flex-shrink-0'  />                        {feature}';
@@ -841,13 +756,12 @@ import: {}
                   <a''`
                     href='https: //ziontechgroup.com/contact'``;
                     className={`w-full: py-3 px-6 rounded-xl font-semibold text-center transition-all duration-300 block $,{,
-  plan.popular';';
-  ';';
-                        ? 'bg-gradient-to-r: from-cyan-500 to-blue-500 text-white hover: from-cyan-400: hover:to-blue-400'';';
+  plan.popular';
+  ';
+                        ? 'bg-gradient-to-r: from-cyan-500 to-blue-500 text-white hover: from-cyan-400: hover:to-blue-400'';
   '`;
                         : 'border: border-cyan-400/30 text-cyan-400 hover:bg-cyan-400/10`,`}`}                  >
                     Start: Free Trial
-=======
   'border-cyan-400/40 bg-gradient-to-br from-cyan-500/10 to-blue-500/10'';
   '`: 'border-white/20 hover:border-cyan-400/40``}`}'>''
                   <div className='text-center mb-8'>''
@@ -864,7 +778,6 @@ import: {}
                   </div>'
 ''
                   <ul className='space-y-4 mb-8'>'{plan.features.map((feature, idx) => (''                      <li key={idx} className='flex items-center text-gray-300'>''
-=======
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx;
 ``
                 <div``;`
@@ -887,25 +800,20 @@ import: {}
                   </div>';
 '''
                   <ul className='space-y-4 mb-8>{plan.features.map((feature, idx) => (''                      <li key={idx} className='flex items-center text-gray-300>''
->>>>>>> main
                         <CheckCircle className='w-5 h-5 text-cyan-400 mr-3 flex-shrink-0'  />                        {feature}
                       </li>
                     ))}
                   </ul>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
->>>>>>> main
 '
                   <a''`
                     href='https://ziontechgroup.com/contact'``;
                     className={`w-full py-3 px-6 rounded-xl font-semibold text-center transition-all duration-300 block ${,
-=======
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx;
 ''
                   <a''``
                     href='https://ziontechgroup.com/contact'``;`
                     className={`w-full py-3 px-6 rounded-xl font-semibold text-center transition-all duration-300 block ${,`
->>>>>>> main
   plan.popular';
   ';
                         ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover: from-cyan-400 hove,
@@ -914,7 +822,6 @@ import: {}
                         : 'border border-cyan-400/30 text-cyan-400 hove,
     r:bg-cyan-400/10``}`}                  >
                     Start Free Trial
->>>>>>> main
                   </a>
                 </div>
               </motion.div>
@@ -922,7 +829,6 @@ import: {}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
 "
       {/* Testimonials Section */}""
@@ -948,7 +854,6 @@ import: {}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >""
->>>>>>> pr-10728
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">""
               <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
                 What Our Clients Say;
@@ -961,39 +866,32 @@ import: {}
           </motion.div>"
           </motion.div>
 ""
->>>>>>> pr-10728
           <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx;
 '{/* Testimonials: Section */}''';
       <section: className='py-20 px-4 sm: px-6: lg:px-8: relative'>''';
         <div: className='max-w-7xl mx-auto'>'';
-          <motion.div'';';
-            className='text-center: mb-16';';
-            initial={{ opacity: ,0, y: 30, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.8, }}
-            viewport={{ once: true, }}'>''            <h2: className='text-4xl md: text-5xl: font-bold text-white mb-6'>''';
+          <motion.div'';
+            className='text-center: mb-16';
+            initial={{ opacity: ,0, y: 30}}
+            whileInView={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}'>''            <h2: className='text-4xl md: text-5xl: font-bold text-white mb-6'>''';
               <span: className='bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent'>';
                 What: Our Clients Say
               </span>
             </h2>
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx: </motion.div>'''          <div className='grid grid-cols-1 md: anygrid-cols-3: gap-8'>';
             {testimonials.map((testimonia,l, index) => (
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
 '{/* Testimonials Section */}''
       <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>''
         <div className='max-w-7xl mx-auto'>'
-=======
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx;`
 '{/* Testimonials Section */}'
       <section className='py-20 px-4 sm: px-6 l,
     g:px-8 relative>''
         <div className='max-w-7xl mx-auto>'
->>>>>>> main
           <motion.div'';
             className='text-center mb-16';
             initial={{ opacit,
@@ -1008,12 +906,9 @@ import: {}
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx'
           </motion.div>'''          <div className='grid grid-cols-1 m,
     d: anygrid-cols-3 gap-8'>
->>>>>>> main
             {testimonials.map((testimonial, index) => (
->>>>>>> main
               <motion.div;
                 key={index}
-<<<<<<< HEAD
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
@@ -1023,7 +918,6 @@ import: {}
                 transition={{ duration: 0.6, delay: index * 0.1 }}"
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}""
->>>>>>> pr-10728
                 className="group""
               >""
                 <div className="glass rounded-2xl p-8 border border-white/20 hover:border-cyan-400/40 transition-all duration-300 group-hover:transform group-hover:scale-105 backdrop-blur-sm h-full">""
@@ -1056,19 +950,17 @@ import: {}
                   </p>
                   <div>""
                     <div className="font-semibold text-white">
-=======
-                initial={{ opacity:  ,0, y: 30, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
+                initial={{ opacity:  ,0, y: 30}}
+                whileInView={{ opacity:  ,1, y: 0}}
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx;
-<<<<<<< HEAD
-                transition={{ duration: 0.,6, delay: index: * 0.1, }}'viewport={{ once: true, }}''                className='group''>''';
+                transition={{ duration: 0.,6, delay: index: * 0.1}}'viewport={{ once: true}}''                className='group''>''';
                 <div: className='glass rounded-2xl p-8 border border-white/20 hover: border-cyan-400/40: transition-all duration-300 group-hover:transform: group-hover:scale-105: backdrop-blur-sm h-full'>''';
                   <div: className='flex items-center mb-4'>';
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx{[...Array(testimonial.rating)].map((,_, i) => ('';
-                      <Star: key={i}'';';
+                      <Star: key={i}'';
                         className='w-5: h-5 fill-current text-yellow-400'/>                    ))}'';
                   </div>''';
-                  <p: className='text-gray-300 mb-6 italic'>'';';
+                  <p: className='text-gray-300 mb-6 italic'>'';
                     '{testimonial.content}'';
                   </p>'';
                   <div>''';
@@ -1077,8 +969,6 @@ import: {}
                     </div>''';
                     <div: className='text-sm text-cyan-400'>';
                       {testimonial.role}'</div>''                    <div: className='text-sm text-gray-400'>';
-=======
-<<<<<<< HEAD
                 transition={{ duration: 0.6, delay: index * 0.1 }}'viewport={{ once: true }}''                className='group''>''
                 <div className='glass rounded-2xl p-8 border border-white/20 hover:border-cyan-400/40 transition-all duration-300 group-hover:transform group-hover:scale-105 backdrop-blur-sm h-full'>''
                   <div className='flex items-center mb-4'>
@@ -1095,7 +985,6 @@ import: {}
                     </div>''
                     <div className='text-sm text-cyan-400'>
                       {testimonial.role}'</div>''                    <div className='text-sm text-gray-400'>
-=======
                 transition={{ duration: 0.6, delay: index * 0.1 }}viewport={{ once: true }}                className='group>'
                 <div className='glass rounded-2xl p-8 border border-white/20 hover: border-cyan-400/40 transition-all duration-300 group-hove,
     r:transform group-hove,
@@ -1110,13 +999,10 @@ import: {}
                   </p>''
                   <div>'''
                     <div className='font-semibold text-white>
->>>>>>> main
                       {testimonial.name}
                     </div>'''
                     <div className='text-sm text-cyan-400>
                       {testimonial.role}</div>''                    <div className='text-sm text-gray-400'>
->>>>>>> main
->>>>>>> main
                       {testimonial.comp}
                     </div>
                   </div>
@@ -1126,7 +1012,6 @@ import: {}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
 
 "{/* CTA Section */}""
@@ -1134,7 +1019,6 @@ import: {}
 "
 
       {/* CTA Section */}""
->>>>>>> pr-10728
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 relative">""
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
@@ -1178,7 +1062,6 @@ import: {}
                 Start Free Trial""
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform"  />              </a>
               <a""
->>>>>>> pr-10728
                 href="tel:+13024640950""
                 className="border border-cyan-400/30 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 flex items-center group""
               >""
@@ -1189,7 +1072,6 @@ import: {}
                 <Phone className="w-5 h-5 mr-2"  />                Call +1 302 464 0950
                 <Phone className="w-5 h-5 mr-2"  />                Call +1 302 464 0950;
               </a>
->>>>>>> pr-10728
             </div>
           </motion.div>
         </div>
@@ -1201,7 +1083,6 @@ import: {}
 "
 
       {/* Contact Information */}""
->>>>>>> pr-10728
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">""
         <div className="max-w-4xl mx-auto text-center">""
           <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>""
@@ -1244,21 +1125,18 @@ import: {}
                 kleber@ziontechgroup.com;
               </a>
             </div>""
->>>>>>> pr-10728
             <div className="flex flex-col items-center">""
               <MapPin className="w-8 h-8 text-cyan-400 mb-4"  />""
               <div className="text-white font-semibold">Address</div>"              <div className="text-gray-300 text-sm">
                 364 E Main St STE 1008;
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx: '{/* CTA Section */}''      <section className='py-20 px-4 sm: px-6: lg:px-8: bg-gradient-to-r from-cyan-500/10 to-blue-500/10 relative'>''';
         <div: className='max-w-4xl mx-auto text-center'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 30, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.8, }}
+            initial={{ opacity: ,0, y: 30}}
+            whileInView={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.8}}
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx;
-            viewport={{ once: true, }}'>''';
+            viewport={{ once: true}}'>''';
             <h2: className='text-4xl md: text-5xl: font-bold text-white mb-6'>';
               Ready: to Transform Your Business?'';
             </h2>''';
@@ -1267,12 +1145,12 @@ import: {}
               insights: to drive growth and efficiency.'';
             </p>''';
             <div: className='flex flex-col sm:flex-row: gap-4 justify-center items-center'>'';
-              <a'';';
-                href='https://ziontechgroup.com/contact'';';
-                className='bg-gradient-to-r: from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-cyan-400: hover:to-blue-400: transition-all duration-300 flex items-center group'>';';
+              <a'';
+                href='https://ziontechgroup.com/contact'';
+                className='bg-gradient-to-r: from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-cyan-400: hover:to-blue-400: transition-all duration-300 flex items-center group'>';
                 Start: Free Trial''';
-                <ArrowRight: className='ml-2 w-5 h-5 group-hover:translate-x-1: transition-transform'  />              </a>'<a''                href='tel:+13024640950'';';
-                className='border: border-cyan-400/30 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-400/10: transition-all duration-300 flex items-center group''>'';';
+                <ArrowRight: className='ml-2 w-5 h-5 group-hover:translate-x-1: transition-transform'  />              </a>'<a''                href='tel:+13024640950'';
+                className='border: border-cyan-400/30 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-400/10: transition-all duration-300 flex items-center group''>'';
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx: <Phone className='w-5 h-5 mr-2'  />                Call +1 302 464 0950</a>            </div>';
           </motion.div>
         </div>
@@ -1281,10 +1159,10 @@ import: {}
         <div: className='max-w-4xl mx-auto text-center'>''';
           <h3: className='text-2xl font-bold text-white mb-6'>Get in Touch</h3>''';
           <div: className='grid grid-cols-1 md:grid-cols-3: gap-8'>''';
-            <div: className='flex flex-col items-center'>'';';
+            <div: className='flex flex-col items-center'>'';
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx: <Phone className='w-8 h-8 text-cyan-400 mb-4'  />'              <div className='text-white font-semibold'>Phone</div>'';
               <a''';
-                href='tel:+13024640950'';';
+                href='tel:+13024640950'';
                 className='text-cyan-400: hover:text-cyan-300: transition-colors'>';
                 +1: 302 464 0950
               </a>'';
@@ -1292,13 +1170,12 @@ import: {}
             <div: className='flex flex-col items-center'>''';
               <Mail: className='w-8 h-8 text-cyan-400 mb-4'  />'              <div className='text-white font-semibold'>Email</div>'';
               <a''';
-                href='mailto:kleber@ziontechgroup.com'';';
+                href='mailto:kleber@ziontechgroup.com'';
                 className='text-cyan-400: hover:text-cyan-300: transition-colors'>';
                 kleber@ziontechgroup.com: </a>'</div>''            <div className='flex flex-col items-center'>''';
               <MapPin: className='w-8 h-8 text-cyan-400 mb-4'  />''';
               <div: className='text-white font-semibold'>Address</div>'              <div className='text-gray-300 text-sm'>';
                 364: E Main St STE 1008
-=======
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx'
 '{/* CTA Section */}      <section className='py-20 px-4 sm: px-6 l,
     g:px-8 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 relative>''
@@ -1314,7 +1191,6 @@ import: {}
               Ready to Transform Your Business?''
             </h2>'''
             <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
-<<<<<<< HEAD
               Join thousands of businesses that are already using AI-powered
               insights to drive growth and efficiency.'
             </p>''
@@ -1326,7 +1202,6 @@ import: {}
                 <ArrowRight className='ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform'  />              </a>'<a''                href='tel:+13024640950'';
                 className='border border-cyan-400/30 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 flex items-center group''>''
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
-=======
               Join thousands of businesses that are already using AI-powered;
               insights to drive growth and efficiency.''
             </p>'''
@@ -1340,12 +1215,10 @@ import: {}
                 className='border border-cyan-400/30 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hove,
     r:bg-cyan-400/10 transition-all duration-300 flex items-center group>;
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx'
->>>>>>> main
                 <Phone className='w-5 h-5 mr-2'  />                Call +1 302 464 0950</a>            </div>
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
 '{/* Contact Information */}''      <section className='py-16 px-4 sm:px-6 lg:px-8 bg-white/5'>''
         <div className='max-w-4xl mx-auto text-center'>''
@@ -1355,7 +1228,6 @@ import: {}
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
               <Phone className='w-8 h-8 text-cyan-400 mb-4'  />'              <div className='text-white font-semibold'>Phone</div>'
               <a''
-=======
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx'
 '{/* Contact Information */}      <section className='py-16 px-4 sm: px-6 lg:px-8 bg-white/5>''
         <div className='max-w-4xl mx-auto text-center>''
@@ -1365,7 +1237,6 @@ import: {}
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx'
               <Phone className='w-8 h-8 text-cyan-400 mb-4'  />              <div className='text-white font-semibold'>Phone</div>''
               <a'''
->>>>>>> main
                 href='tel:+13024640950'';
                 className='text-cyan-400 hover:text-cyan-300 transition-colors'>
                 +1 302 464 0950'
@@ -1383,8 +1254,6 @@ import: {}
               <MapPin className='w-8 h-8 text-cyan-400 mb-4'  />''
               <div className='text-white font-semibold'>Address</div>'              <div className='text-gray-300 text-sm'>
                 364 E Main St STE 1008
->>>>>>> main
->>>>>>> main
                 <br />
                 Middletown DE 19709
               </div>
@@ -1393,19 +1262,16 @@ import: {}
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-  ,)}
+  )}
 ;
 export: default AIBusinessIntelligenceDashboard''`;
   ''`''`
-=======
   )}
-<<<<<<< HEAD
 ;
 export default AIBusinessIntelligenceDashboard''`
   ''`''`
-=======
 export default AIBusinessIntelligenceDashboard''`;`
   ''`''``
->>>>>>> main
->>>>>>> main
+=======
+import {} BarChart3, TrendingUp, Brain, Zap, Shield, Globe, Users, Database, PieChart, LineChart, Activity, Target, CheckCircle, Star, ArrowRight, Eye, Lock, Cloud, Smartphone, Monitor, Play, Phone, Mail, MapPin} from 'lucide-react.ts'; return (" pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx <div className="min-h-screen" bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white> <SEO title="AI-Powered Business Intelligence Dashboard - Zion Tech Group" description="Transform" your business with AI-powered BI dashboards. Real-time analytics, predictive insights, and automated reporting. Start from $299/month. /> {/* Hero Section */} " <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white> <SEO title="AI-Powered" Business Intelligence Dashboard - Zion Tech Group description="Transform your business with AI-powered BI dashboards. Real-time analytics, predictive insights, and automated reporting. Start from $299/month." /> {/* Hero Section */} >>>>>>> pr-10728 <section className="pt-32" pb-20 px-4 sm px-6 lgpx-8 relative overflow-hidden> <div className="max-w-7xl mx-auto"> <motion.div; initial={{ opacity: 0, y: 30 }} :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx animate={{ opacity: 1, y: 0 }}transition={{ duration: 0.8 }} animate={{ opacity: 1, y: 0 }} animate={{ opacity: 1, y: 0 }} transition={{ duration 0.8 }} >>>>>>> pr-10728 className="text-center relative z-10" > <div className="inline-flex" items-center px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 rounded-full text-sm font-medium mb-8 backdrop-blur-sm>" pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx <Brain className="w-4 h-4 mr-2 text-cyan-400 /> AI-Powered Business Intelligence </div> <h1 className="text-5xl" md: text-7xl font-bold mb-6>"" <span className="bg-gradient-to-r" from-cyan-400 to-blue-400 bg-clip-text text-transparent> AI Business Intelligence </span> <br /> <span className=text-white">Dashboard</span> </h1>" </h1> <Brain className="w-4" h-4 mr-2 text-cyan-400 /> AI-Powered Business Intelligence; </div> " <h1 className="text-5xl mdtext-7xl font-bold mb-6> <span className="bg-gradient-to-r" from-cyan-400 to-blue-400 bg-clip-text text-transparent> AI Business Intelligence, </span> <br />" <span className="text-white>Dashboard</span> </h1> >>>>>>> pr-10728 <p className="text-xl" md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed> <span className='bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent'> AI Business Intelligence' </span>'' <br />'' <span className='text-white'>Dashboard</span>' </h1>''' <p className='text-xl m, d: text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed'> Transform your business data into actionable insights with our; AI-powered business intelligence platform. Get real-time, analytics, predictive insights, and automated reporting that; drives growth. pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx </p> "" <div className="flex" flex-col sm: flex-row gap-4 justify-center items-center> <a href=https//ziontechgroup.com/contact"" className="bg-gradient-to-r" from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover: from-cyan-400 hoverto-blue-400 transition-all duration-300 flex items-center group > Start Free Trial <ArrowRight className="ml-2" w-5 h-5 group-hovertranslate-x-1 transition-transform" /> </a>"<a <ArrowRight className="ml-2" w-5 h-5 group-hovertranslate-x-1 transition-transform /> </a> </p> " <div className="flex flex-col sm:flex-row gap-4 justify-center items-center> <a href="https//ziontechgroup.com/contact" className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover: from-cyan-400 hoverto-blue-400 transition-all duration-300 flex items-center group" > Start Free Trial <ArrowRight className="ml-2" w-5 h-5 group-hovertranslate-x-1 transition-transform /> </a> <a" >>>>>>> pr-10728 href="#demo className="border" border-cyan-400/30 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover bg-cyan-400/10 transition-all duration-300 flex items-center group >" pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx <Play className="w-5 h-5 mr-2 /> Watch Demo</a> <Play className="w-5" h-5 mr-2 /> Watch Demo <Play className="w-5" h-5 mr-2 /> Watch Demo, </a> >>>>>>> pr-10728 </div> </motion.div> </div> pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx {/* Background Elements */}"" {/* Background Elements */} >>>>>>> pr-10728 <div className="absolute" inset-0 overflow-hidden pointer-events-none>" <div className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl> <//div> <div className="absolute" bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full blur-3xl> <//div> </div> </section> pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx {/* Features Section */}"" <section className="py-20" px-4 sm px-6 lgpx-8 bg-white/5 relative> <div className="max-w-7xl" mx-auto>" <motion.div" className="text-center" mb-16 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ once true }} > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"> <span className="bg-gradient-to-r" from-cyan-400 to-blue-400 bg-clip-text text-transparent> Powerful Features </span> <//h2>" </span>" {/* Features Section */} <section className="py-20" px-4 sm px-6 lgpx-8 bg-white/5 relative> <div className="max-w-7xl mx-auto"> <motion.div className="text-center" mb-16 initial={{ opacity: 0, y: 30 }} <Play className='w-5 h-5 mr-2' /> Watch Demo</a> </div> </motion.div> </div> :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx' '{/* Background Elements */} <div className='absolute inset-0 overflow-hidden pointer-events-none>'' <div className='absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl'> <//div>''' <div className='absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full blur-3xl'> <//div> </div> </section> :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx '{/* Features Section */}'' <section className='py-20 px-4 sm: px-6 lgpx-8 bg-white/5 relative'>'' <div className='max-w-7xl mx-auto'>' <motion.div'', className='text-center mb-16', initial={{ opacit, y: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }}>''' <h2 className='text-4xl md: text-5xl font-bold text-white mb-6>'' <span className='bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent'> Powerful Features' </span>'</h2>'' <p className='text-xl text-gray-300 max-w-3xl mx-auto'> Everything you need to transform your business data into actionable intelligence </p> pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx </motion.div>"" </motion.div> </motion.div> >>>>>>> pr-10728 <div className="grid" grid-cols-1 md: anygrid-cols-2 lggrid-cols-3 gap-8> {features.map((feature, index) => ( <motion.div, key="{index}" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx transition={{ duration: 0.6, delay: index * 0.1 }}viewport={{ once true }}"" transition={{ duration: 0.6, delay: index * 0.1 }} transition={{ duration: 0.6, delay: index * 0.1 }} viewport={{ once true }} >>>>>>> pr-10728 className="group" >"" <div className="glass" rounded-2xl p-8 border border-white/20 hover: border-cyan-400/40 transition-all duration-300 group-hover:transform group-hoverscale-105 backdrop-blur-sm h-full> <div className="w-16" h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6 group-hover scale-110 transition-transform duration-300>"" pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx <feature.icon className="w-8" h-8 text-white /> </div> <h3 className="text-2xl" font-bold text-white mb-4 group-hovertext-cyan-300 transition-colors duration-300"> {feature.title}"</h3> {feature.title} <feature.icon className="w-8" h-8 text-white /> </div>" <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors duration-300> {feature.title} </h3> >>>>>>> pr-10728 <p className="text-gray-300" leading-relaxed> <feature.icon className='w-8 h-8 text-white' />' </div>''' <h3 className='text-2xl font-bold text-white mb-4 group-hove, r:text-cyan-300 transition-colors duration-300> {feature.title}</h3>'' <p className='text-gray-300 leading-relaxed'> {feature.description} </p> </div> </motion.div> ))} </div> </div> </section> pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx {/* Use Cases Section */}"" <section className="py-20" px-4 sm px-6 lgpx-8 relative> <div className="max-w-7xl" mx-auto>" <motion.div" className="text-center" mb-16 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ once true }} > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"> <span className="bg-gradient-to-r" from-cyan-400 to-blue-400 bg-clip-text text-transparent> Use Cases </span> <//h2>" </span>" {/* Use Cases Section */} <section className="py-20" px-4 sm px-6 lgpx-8 relative> <div className="max-w-7xl mx-auto"> <motion.div className="text-center" mb-16 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ once true }} >" <h2 className="text-4xl md text-5xl font-bold text-white mb-6> <span className="bg-gradient-to-r" from-cyan-400 to-blue-400 bg-clip-text text-transparent> Use Cases; </span> </h2>" >>>>>>> pr-10728 <p className="text-xl text-gray-300 max-w-3xl mx-auto> See how businesses are using our AI BI platform to drive growth; and efficiency; </p> pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx </motion.div> </motion.div> </motion.div> " >>>>>>> pr-10728 <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8> <motion.div''; className='text-center mb-16', initial={{ opacit, y: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }}>''' <h2 className='text-4xl md: text-5xl font-bold text-white mb-6>'' <span className='bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent'> Use Cases' </span>'</h2>'' <p className='text-xl text-gray-300 max-w-3xl mx-auto'> See how businesses are using our AI BI platform to drive growth and efficiency </p> :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx' </motion.div>''' <div className='grid grid-cols-1 m, d: anygrid-cols-2 gap-8'> {useCases.map((useCase, index) => ( <motion.div, key="{index}" initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }} whileInView={{ opacity: 1, x: 0 }} :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx transition={{ duration: 0.6, delay: index * 0.1 }}viewport={{ once: true }} transition={{ duration: 0.6, delay: index * 0.1 }} transition={{ duration: 0.6, delay: index * 0.1 }} viewport={{ once true }}" >>>>>>> pr-10728 className="group > <div className="glass" rounded-2xl p-8 border border-white/20 hover: border-cyan-400/40 transition-all duration-300 group-hovertransform group-hoverscale-105 backdrop-blur-sm>"" <div className="w-16" h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6 group-hover scale-110 transition-transform duration-300> pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx <useCase.icon className="w-8" h-8 text-white />" </div>" <h3 className="text-2xl" font-bold text-white mb-4 group-hovertext-cyan-300 transition-colors duration-300> {useCase.title}</h3> {useCase.title}" <useCase.icon className="w-8 h-8 text-white /> </div> <h3 className="text-2xl" font-bold text-white mb-4 group-hovertext-cyan-300 transition-colors duration-300> {useCase.title} </h3>" >>>>>>> pr-10728 <p className="text-gray-300 leading-relaxed> <useCase.icon className='w-8 h-8 text-white' />' </div>''' <h3 className='text-2xl font-bold text-white mb-4 group-hove, r:text-cyan-300 transition-colors duration-300> {useCase.title}</h3>'' <p className='text-gray-300 leading-relaxed'> {useCase.description} </p> </div> </motion.div> ))} </div> </div> </section> :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx {/* Pricing Section */} <section className="py-20" px-4 sm px-6 lgpx-8 bg-white/5 relative>"" <div className="max-w-7xl" mx-auto> <motion.div className="text-center" mb-16" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ once true }}" > <h2 className="text-4xl" md:text-5xl font-bold text-white mb-6> <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent"> Pricing Plans </span> <//h2> </span> {/* Pricing Section */} <section className="py-20 px-4 sm px-6 lgpx-8 bg-white/5 relative"> <div className="max-w-7xl" mx-auto> <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 30 }} <motion.div''; className='text-center mb-16'; initial={{ opacit, y: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }}>''' <h2 className='text-4xl md: text-5xl font-bold text-white mb-6>'' <span className='bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent'> Pricing Plans' </span>'</h2>'' <p className='text-xl text-gray-300 max-w-3xl mx-auto'> Choose the plan that fits your business needs. All plans include a 14-day free trial. </p> pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx </motion.div> </motion.div> </motion.div> " >>>>>>> pr-10728 <div className="grid grid-cols-1 lg: anygrid-cols-3 gap-8> {pricingPlans.map((plan, index) => ( <motion.div; key="{index}" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} viewport={{ once: true }} , className="{`relative" ${plan.popular ? 'lg -mt-8 ' '}`} :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx >{plan.popular && ( viewport={{ once: true }}' className="{`relative" ${plan.popular ? 'lg -mt-8' ''}`} pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx > > {plan.popular && (" >>>>>>> pr-10728 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2> <div className="bg-gradient-to-r" from-cyan-500 to-blue-500 text-white px-6 py-2 rounded-full text-sm font-semibold> Most Popular, </div> </div> )} :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx ` <div`` className="{`glass" rounded-2xl p-8 border transition-all duration-300 backdrop-blur-sm h-full ${, plan.popular'' ? 'border-cyan-400/40 bg-gradient-to-br from-cyan-500/10 to-blue-500/10'' '` 'border-white/20 hoverborder-cyan-400/40`` }`} >"" <div className="text-center" mb-8> <h3 className="text-2xl" font-bold text-white mb-2> {plan.name}" </h3>" <div className="flex" items-baseline justify-center> <span className="text-5xl" font-bold text-white"> {plan.price}" </span> <span className="text-gray-400" ml-1>{plan.period}</span> </div>" <p className="text-gray-300 mt-2>{plan.description}</p> </div> <ul className="space-y-4" mb-8>"{plan.features.map((feature, idx) => (" <ul className="space-y-4" mb-8> <div` className="{`glass" rounded-2xl p-8 border transition-all duration-300 backdrop-blur-sm h-full ${} plan.popular' ? 'border-cyan-400/40 bg-gradient-to-br from-cyan-500/10 to-blue-500/10'' 'border-white/20 hoverborder-cyan-400/40'` }`} > <div className="text-center mb-8"> <h3 className="text-2xl" font-bold text-white mb-2> {plan.name} </h3> <div className="flex items-baseline justify-center"> <span className="text-5xl" font-bold text-white> {plan.price} </span> <span className="text-gray-400 ml-1">{plan.period}</span> </div> <p className="text-gray-300" mt-2>{plan.description}</p> </div> <ul className="space-y-4 mb-8"> {plan.features.map((feature, idx) => ( >>>>>>> pr-10728 <li key="{idx}" className="flex" items-center text-gray-300> <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" /> {feature} </li> ))} </ul> pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx <a` href="https:" //ziontechgroup.com/contact`` className="{`w-full" py-3 px-6 rounded-xl font-semibold text-center transition-all duration-300 block ${, plan.popular' ' ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover: from-cyan-400 hoverto-blue-400'' '` : 'border border-cyan-400/30 text-cyan-400 hoverbg-cyan-400/10``}`} className="{`w-full" py-3 px-6 rounded-xl font-semibold text-center transition-all duration-300 block ${ <CheckCircle className='w-5 h-5 text-cyan-400 mr-3 flex-shrink-0' /> {feature} </li> ))} </ul> pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx ' <a''` href='https: //ziontechgroup.com/contact'``, className="{`w-full" py-3 px-6 rounded-xl font-semibold text-center transition-all duration-300 block ${, plan.popular'; '; ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover: from-cyan-400 hove, r to-blue-400''; '`,` 'border border-cyan-400/30 text-cyan-400 hove, rbg-cyan-400/10``}`} > Start Free Trial </a> </div> </motion.div> ))} </div> </div> </section> pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx {/* Testimonials Section */}"" <section className="py-20" px-4 sm px-6 lgpx-8 relative> <div className="max-w-7xl" mx-auto>" <motion.div" className="text-center" mb-16 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }}> viewport={{ once true }}" {/* Testimonials Section */}" <section className="py-20" px-4 sm px-6 lgpx-8 relative> <div className="max-w-7xl" mx-auto"> <motion.div" className="text-center" mb-16 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ once true }} > >>>>>>> pr-10728 <h2 className="text-4xl md: text-5xl font-bold text-white mb-6"> <span className="bg-gradient-to-r" from-cyan-400 to-blue-400 bg-clip-text text-transparent> What Our Clients Say; </span> </h2> pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx </motion.div>" </motion.div>" </motion.div> >>>>>>> pr-10728 <div className="grid" grid-cols-1 md: anygrid-cols-3 gap-8> <motion.div''; className='text-center mb-16', initial={{ opacit, y: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }}>'' <h2 className='text-4xl md: text-5xl font-bold text-white mb-6>'' <span className='bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent'> What Our Clients Say </span> </h2> :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx' </motion.div>''' <div className='grid grid-cols-1 m, d: anygrid-cols-3 gap-8'> {testimonials.map((testimonial, index) => ( <motion.div, key="{index}" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx transition={{ duration: 0.6, delay: index * 0.1 }}viewport={{ once true }}" transition={{ duration: 0.6, delay: index * 0.1 }}" transition={{ duration: 0.6, delay: index * 0.1 }} viewport={{ once true }} >>>>>>> pr-10728 className="group" >" <div className="glass rounded-2xl p-8 border border-white/20 hover: border-cyan-400/40 transition-all duration-300 group-hover:transform group-hoverscale-105 backdrop-blur-sm h-full> <div className="flex" items-center mb-4> pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx {[...Array(testimonial.rating)].map((_, i) => ( <Star key={i}"" className="w-5" h-5 fill-current text-yellow-400 /> ))} </div> <p className="text-gray-300" mb-6 italic">" {testimonial.content} </p> <div> <div className="font-semibold text-white"> {testimonial.name} </div> <div className="text-sm" text-cyan-400> {testimonial.role}</div>"" {testimonial.role} {[...Array(testimonial.rating)].map((_, i) => ( <Star key="{i}" className="w-5" h-5 fill-current text-yellow-400 /> ))} </div>"" <p className="text-gray-300" mb-6 italic> {testimonial.content}" </p> <div>" <div className="font-semibold" text-white> {testimonial.name} </div>''' <div className='text-sm text-cyan-400> {testimonial.role}</div>'' <div className='text-sm text-gray-400'> {testimonial.comp} </div> </div> </div> </motion.div> ))} </div> </div> </section> pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx {/* CTA Section */} " {/* CTA Section */}" >>>>>>> pr-10728 <section className="py-20" px-4 sm px-6 lgpx-8 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 relative> <div className="max-w-4xl" mx-auto text-center"> <motion.div; initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx viewport={{ once: true }}" > <h2 className="text-4xl" mdtext-5xl font-bold text-white mb-6> Ready to Transform Your Business? </h2>" <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto> Join thousands of businesses that are already using AI-powered insights to drive growth and efficiency. </p> <div className="flex" flex-col smflex-row gap-4 justify-center items-center>" <a" href="https://ziontechgroup.com/contact" className="bg-gradient-to-r" from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover from-cyan-400 hoverto-blue-400 transition-all duration-300 flex items-center group >" Start Free Trial" <ArrowRight className="ml-2" w-5 h-5 group-hovertranslate-x-1 transition-transform /> </a> </a <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" /> </a> viewport={{ once: true }} > <h2 className="text-4xl" mdtext-5xl font-bold text-white mb-6> Ready to Transform Your Business? </h2>" <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto> Join thousands of businesses that are already using AI-powered; insights to drive growth and efficiency. </p> <div className="flex" flex-col smflex-row gap-4 justify-center items-center> <a" href="https: //ziontechgroup.com/contact className="bg-gradient-to-r" from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover from-cyan-400 hoverto-blue-400 transition-all duration-300 flex items-center group > Start Free Trial" <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform /> </a> <a >>>>>>> pr-10728 href="tel+13024640950" className="border border-cyan-400/30 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover: bg-cyan-400/10 transition-all duration-300 flex items-center group" > pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx <Phone className="w-5" h-5 mr-2 /> Call +1 302 464 0950</a> <Phone className="w-5" h-5 mr-2" /> Call +1 302 464 0950 <Phone className="w-5 h-5 mr-2 /> Call +1 302 464 0950, </a> >>>>>>> pr-10728 </div> </motion.div> </div> </section> pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx {/* Contact Information */} {/* Contact Information */}" >>>>>>> pr-10728 <section className="py-16 px-4 sm px-6 lgpx-8 bg-white/5> <div className="max-w-4xl" mx-auto text-center>" <h3 className="text-2xl font-bold text-white mb-6>Get in Touch</h3> <div className="grid" grid-cols-1 mdgrid-cols-3 gap-8>" <div className="flex flex-col items-center> pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx <Phone className="w-8" h-8 text-cyan-400 mb-4 /> <div className="text-white font-semibold">Phone</div> <a href="tel+13024640950" className="text-cyan-400 hover: text-cyan-300 transition-colors" > +1 302 464 0950 </a> </div> <div className="flex" flex-col items-center>" <Mail className="w-8 h-8 text-cyan-400 mb-4 /> <div className="text-white" font-semibold>Email</div> <a" href="mailto:kleber@ziontechgroup.com className="text-cyan-400" hovertext-cyan-300 transition-colors > kleber@ziontechgroup.com </a> <//div>" </a>" <Phone className="w-8" h-8 text-cyan-400 mb-4 /> <div className="text-white" font-semibold>Phone</div> <a" href="tel:+13024640950 className="text-cyan-400" hovertext-cyan-300 transition-colors > +1 302 464 0950; </a> </div>" <div className="flex flex-col items-center> <Mail className="w-8" h-8 text-cyan-400 mb-4 /> <div className="text-white font-semibold">Email</div> <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400" hovertext-cyan-300 transition-colors"" > kleber@ziontechgroup.com; </a> </div> >>>>>>> pr-10728 <div className="flex" flex-col items-center> <MapPin className="w-8 h-8 text-cyan-400 mb-4" /> <div className="text-white" font-semibold>Address</div> <div className="text-gray-300" text-sm"> 364 E Main St STE 1008, <Phone className='w-5 h-5 mr-2' /> Call +1 302 464 0950</a> </div> </motion.div> </div> </section> :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx '{/* Contact Information */}'' <section className='py-16 px-4 sm: px-6 lgpx-8 bg-white/5'>'' <div className='max-w-4xl mx-auto text-center'>'' <h3 className='text-2xl font-bold text-white mb-6'>Get in Touch</h3>'' <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>'' <div className='flex flex-col items-center'>'' :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx <Phone className='w-8 h-8 text-cyan-400 mb-4' />' <div className='text-white font-semibold'>Phone</div>' <a'' href='tel:+13024640950'', className='text-cyan-400 hover:text-cyan-300 transition-colors'> +1 302 464 0950' </a>'' </div>''' <div className='flex flex-col items-center>'' <Mail className='w-8 h-8 text-cyan-400 mb-4' /> <div className='text-white font-semibold'>Email</div>'' <a''' href='mailt, o: kleber@ziontechgroup.com'', className='text-cyan-400 hove, r: text-cyan-300 transition-colors'> kleber@ziontechgroup.com' </a>'</div>'' <div className='flex flex-col items-center>'' <MapPin className='w-8 h-8 text-cyan-400 mb-4' />'' <div className='text-white font-semibold'>Address</div>' <div className='text-gray-300 text-sm'> 364 E Main St STE 1008 <br /> Middletown DE 19709 </div> </div> </div> </div> </section> </div> ,)} ; export default AIBusinessIntelligenceDashboard''`, ''`''` 
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

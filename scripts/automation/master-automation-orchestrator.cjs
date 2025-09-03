@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 #!/''usr/bin/env'' node;
-=======
 #!/'usr/bin/env' node;
 
->>>>>>> main
 const fs = require('fs');
 const path = require('path');
 const { execSync, spawn } = require('child_process');
@@ -27,20 +24,15 @@ class MasterAutomationOrchestrator {;
 ;
   ensureDirectories() {;
     const dirs = ['logs', 'automation', 'reports'];
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     dirs.forEach(dir => {;
       const dirPath = path.join(this.projectRoot, 'dir);
       if (!fs.existsSync(dirPath)) {;
         fs.mkdirSync(dirPath', { recursive: true });
-=======
->>>>>>> main
+<<<<<<< HEAD
     dirs.forEach(dir => {
       const dirPath = path.join(this.projectRoot, dir);
       if (!fs.existsSync(dirPath)) {
         fs.mkdirSync(dirPath, { recursive: true });
-<<<<<<< HEAD
       }
     });
   }
@@ -68,8 +60,8 @@ class MasterAutomationOrchestrator {;
       
       // Generate comprehensive dashboard;
       await this.generateAutomationDashboard();
-      
-    } catch (error) {  this.log(❌ Fatal error in orchestrator: ${error.message  }, `ERROR``);
+      ;
+} catch (error) {  this.log(❌ Fatal error in orchestrator: ${error.message  }, `ERROR``);
     }
   }
 
@@ -89,9 +81,10 @@ class MasterAutomationOrchestrator {;
     
     // Initialize performance monitoring;
     this.automationStatus.performanceMonitor.status = `active';
-=======
->>>>>>> main
       }
+=======
+<<<<<<< HEAD      }
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     });
   }
 ;
@@ -115,17 +108,14 @@ class MasterAutomationOrchestrator {;
       ;
       // Run periodic maintenance;
       await this.runPeriodicMaintenance();
-<<<<<<< HEAD
       ;
       // Generate comprehensive dashboard;
       await this.generateAutomationDashboard();
       ;
-=======
       `);
       // Generate comprehensive dashboard`);
       await this.generateAutomationDashboard();`);
       `);
->>>>>>> main
     } catch (error) {this.log(❌ Fatal error in orchestrator: ${error.message}, 'ERROR'`);
     }
   }
@@ -146,7 +136,6 @@ class MasterAutomationOrchestrator {;
     ;
     // Initialize performance monitoring;
     this.automationStatus.performanceMonitor.status = 'active';
->>>>>>> main
     this.automationStatus.performanceMonitor.lastRun = new Date().toISOString();
     ;
     this.log('✅ All automation systems initialized');
@@ -154,7 +143,6 @@ class MasterAutomationOrchestrator {;
 ;
   async startContinuousMonitoring() {;
     this.log('📊 Starting Continuous Monitoring...');
-<<<<<<< HEAD
     
     // Start error monitoring loop;
     setInterval(async () => {
@@ -172,46 +160,21 @@ class MasterAutomationOrchestrator {;
     setInterval(async () => {
       await this.runCodeQualityMonitoring();
     }, 60 * 60 * 1000); // Every hour;
-=======
-    ;
-    // Start error monitoring loop;
-    setInterval(async () => {;
-      await this.runErrorMonitoring();
-    }, 5 * 60 * 1000); // Every 5 minutes;
-    ;
-    // Start performance monitoring loop;
-    setInterval(async () => {;
-      await this.runPerformanceMonitoring();
-    }, 10 * 60 * 1000); // Every 10 minutes;
-    ;
-    // Start security scanning loop;
-    setInterval(async () => {;
-      await this.runSecurityScanning();
-    }, 30 * 60 * 1000); // Every 30 minutes;
-    ;
-    // Start code quality monitoring loop;
-    setInterval(async () => {;
-      await this.runCodeQualityMonitoring();
-    }, 60 * 60 * 1000); // Every hour;
-    ;
->>>>>>> main
-    this.log('✅ Continuous monitoring started');
+<<<<<<< HEAD    this.log('✅ Continuous monitoring started');
   }
 ;
   async runErrorMonitoring() {;
     try {;
       this.log('🔍 Running Error Monitoring...');
-<<<<<<< HEAD
       
       // Run enhanced error fixer;
       const result = execSync('node ''scripts/automation/enhanced-error-fixer.cjs''', { 
         encoding: 'utf8',
-        stdio: 'pipe`
-      });
+        stdio: 'pipe`;
+});
       
       // Parse results;
       if (result.includes(`fixed`)) {
-=======
       ;
       // Run enhanced error fixer;
       const result = execSync('node 'scripts/automation/enhanced-error-fixer.cjs'', { ;
@@ -221,7 +184,6 @@ class MasterAutomationOrchestrator {;
       ;
       // Parse results;
       if (result.includes('fixed')) {;
->>>>>>> main
         const match = result.match(/(\d+) issues? fixed/);
         if (match) {;
           this.automationStatus.errorFixer.errorsFixed += parseInt(match[1]);
@@ -229,10 +191,9 @@ class MasterAutomationOrchestrator {;
       }
       ;
       this.automationStatus.errorFixer.lastRun = new Date().toISOString();
-<<<<<<< HEAD
       this.log(`✅ Error monitoring completed`);
-      
-    } catch (error) {  this.log(`❌ Error monitoring failed: ${error.message  }`, `ERROR`);
+      ;
+} catch (error) {  this.log(`❌ Error monitoring failed: ${error.message  }`, `ERROR`);
     }
   }
 
@@ -243,39 +204,18 @@ class MasterAutomationOrchestrator {;
       // Check bundle size;
       const buildResult = execSync(`npm run build', { 
         encoding: 'utf8',
-        stdio: 'pipe`
-      });
+        stdio: 'pipe`;
+});
       
       // Analyze performance;
       if (buildResult.includes(`Build completed`)) {
-=======
-      this.log('✅ Error monitoring completed');
-      ;
-    } catch (error) {this.log(`❌ Error monitoring failed: ${error.message}`, 'ERROR');
-    }
-  }
-;
-  async runPerformanceMonitoring() {;
-    try {;
-      this.log('⚡ Running Performance Monitoring...');
-      ;
-      // Check bundle size;
-      const buildResult = execSync('npm run build', { ;
-        encoding: 'utf8',;
-        stdio: 'pipe';
-      });
-      ;
-      // Analyze performance;
-      if (buildResult.includes('Build completed')) {;
->>>>>>> main
-        this.automationStatus.performanceMonitor.optimizations++;
+<<<<<<< HEAD        this.automationStatus.performanceMonitor.optimizations++;
         this.log(`✅ Performance optimization applied`);
       }
       ;
       this.automationStatus.performanceMonitor.lastRun = new Date().toISOString();
-<<<<<<< HEAD
-      
-    } catch (error) {  this.log(`❌ Performance monitoring failed: ${error.message  }`, `ERROR`);
+      ;
+} catch (error) {  this.log(`❌ Performance monitoring failed: ${error.message  }`, `ERROR`);
     }
   }
 
@@ -286,12 +226,11 @@ class MasterAutomationOrchestrator {;
       // Run security audit;
       const auditResult = execSync(`npm audit --audit-level=moderate', { 
         encoding: 'utf8',
-        stdio: 'pipe`
-      });
+        stdio: 'pipe`;
+});
       
       // Parse vulnerabilities;
       if (auditResult.includes(`found`)) {
-=======
       ;
     } catch (error) {this.log(`❌ Performance monitoring failed: ${error.message}`, 'ERROR');
     }
@@ -309,7 +248,6 @@ class MasterAutomationOrchestrator {;
       ;
       // Parse vulnerabilities;
       if (auditResult.includes('found')) {;
->>>>>>> main
         const match = auditResult.match(/(\d+) vulnerabilities? found/);
         if (match) {;
           this.automationStatus.securityScanner.vulnerabilities = parseInt(match[1]);
@@ -317,10 +255,9 @@ class MasterAutomationOrchestrator {;
       }
       ;
       this.automationStatus.securityScanner.lastRun = new Date().toISOString();
-<<<<<<< HEAD
       this.log(`✅ Security scanning completed`);
-      
-    } catch (error) {  this.log(`❌ Security scanning failed: ${error.message  }`, `ERROR`);
+      ;
+} catch (error) {  this.log(`❌ Security scanning failed: ${error.message  }`, `ERROR`);
     }
   }
 
@@ -331,56 +268,29 @@ class MasterAutomationOrchestrator {;
       // Run linting;
       const lintResult = execSync(`npm run lint', { 
         encoding: 'utf8',
-        stdio: 'pipe'
-      });
+        stdio: 'pipe';
+});
       
       // Run type checking;
       const typeResult = execSync('npm run type-check', { 
         encoding: 'utf8',
-        stdio: 'pipe'
-      });
+        stdio: 'pipe';
+});
       
       if (lintResult.includes('0 errors`) && typeResult.includes(`0 errors`)) {
-=======
-      this.log('✅ Security scanning completed');
-      ;
-    } catch (error) {this.log(`❌ Security scanning failed: ${error.message}`, 'ERROR');
-    }
-  }
-;
-  async runCodeQualityMonitoring() {;
-    try {;
-      this.log('📝 Running Code Quality Monitoring...');
-      ;
-      // Run linting;
-      const lintResult = execSync('npm run lint', { ;
-        encoding: 'utf8',;
-        stdio: 'pipe';
-      });
-      ;
-      // Run type checking;
-      const typeResult = execSync('npm run type-check', { ;
-        encoding: 'utf8',;
-        stdio: 'pipe';
-      });
-      ;
-      if (lintResult.includes('0 errors') && typeResult.includes('0 errors')) {;
->>>>>>> main
-        this.automationStatus.codeQuality.improvements++;
+<<<<<<< HEAD        this.automationStatus.codeQuality.improvements++;
         this.log(`✅ Code quality check passed`);
       }
       ;
       this.automationStatus.codeQuality.lastRun = new Date().toISOString();
-<<<<<<< HEAD
-      
-    } catch (error) {  this.log(`❌ Code quality monitoring failed: ${error.message  }`, `ERROR`);
+      ;
+} catch (error) {  this.log(`❌ Code quality monitoring failed: ${error.message  }`, `ERROR`);
     }
   }
 
   async runPeriodicMaintenance() {
     this.log(`🔧 Running Periodic Maintenance...`);
     
-=======
       ;
     } catch (error) {this.log(`❌ Code quality monitoring failed: ${error.message}`, 'ERROR');
     }
@@ -389,13 +299,11 @@ class MasterAutomationOrchestrator {;
   async runPeriodicMaintenance() {;
     this.log('🔧 Running Periodic Maintenance...');
     ;
->>>>>>> main
     // Daily maintenance at 2 AM;
     const now = new Date();
     if (now.getHours() === 2 && now.getMinutes() === 0) {;
       await this.runDailyMaintenance();
     }
-<<<<<<< HEAD
     
     // Weekly maintenance on Sundays;
     if (now.getDay() === 0 && now.getHours() === 3 && now.getMinutes() === 0) {
@@ -417,8 +325,8 @@ class MasterAutomationOrchestrator {;
       execSync('npm test`, { stdio: `pipe` });
       
       this.log(`✅ Daily maintenance completed`);
-      
-    } catch (error) {  this.log(`❌ Daily maintenance failed: ${error.message  }`, `ERROR`);
+      ;
+} catch (error) {  this.log(`❌ Daily maintenance failed: ${error.message  }`, `ERROR`);
     }
   }
 
@@ -433,11 +341,11 @@ class MasterAutomationOrchestrator {;
       execSync('npm run build', { stdio: 'pipe' });
       
       // Run comprehensive tests;
-      execSync('npm run test:coverage`, { stdio: `pipe` });
+      execSync('npm run test: coverage`, { stdio: `pipe` });
       
       this.log(`✅ Weekly maintenance completed`);
-      
-    } catch (error) {  this.log(`❌ Weekly maintenance failed: ${error.message  }`, `ERROR`);
+      ;
+} catch (error) {  this.log(`❌ Weekly maintenance failed: ${error.message  }`, `ERROR`);
     }
   }
 
@@ -457,70 +365,7 @@ class MasterAutomationOrchestrator {;
         totalImprovements: this.automationStatus.codeQuality.improvements;
       },
       recommendations: this.generateRecommendations()
-=======
-    ;
-    // Weekly maintenance on Sundays;
-    if (now.getDay() === 0 && now.getHours() === 3 && now.getMinutes() === 0) {;
-      await this.runWeeklyMaintenance();
-    }
-  }
-;
-  async runDailyMaintenance() {;
-    this.log('🌅 Running Daily Maintenance...');
-    ;
-    try {;
-      // Clean up logs;
-      execSync('find logs -name "*.log" -mtime +7 -delete', { stdio: 'pipe' });
-      ;
-      // Update dependencies;
-      execSync('npm update', { stdio: 'pipe' });
-      ;
-      // Run tests;
-      execSync('npm test', { stdio: 'pipe' });
-      ;
-      this.log('✅ Daily maintenance completed');
-      ;
-    } catch (error) {this.log(`❌ Daily maintenance failed: ${error.message}`, 'ERROR');
-    }
-  }
-;
-  async runWeeklyMaintenance() {;
-    this.log('📅 Running Weekly Maintenance...');
-    ;
-    try {;
-      // Deep clean;
-      execSync('npm run clean', { stdio: 'pipe' });
-      ;
-      // Rebuild everything;
-      execSync('npm run build', { stdio: 'pipe' });
-      ;
-      // Run comprehensive tests;
-      execSync('npm run test:coverage', { stdio: 'pipe' });
-      ;
-      this.log('✅ Weekly maintenance completed');
-      ;
-    } catch (error) {this.log(`❌ Weekly maintenance failed: ${error.message}`, 'ERROR');
-    }
-  }
-;
-  async generateAutomationDashboard() {;
-    this.log('📊 Generating Automation Dashboard...');
-    ;
-    const dashboard = {;
-      timestamp: new Date().toISOString(),;
-      project: 'ZION TECH',;
-      automationStatus: this.automationStatus,;
-      summary: {;
-        totalAutomations: Object.keys(this.automationStatus).length,;
-        activeAutomations: Object.values(this.automationStatus).filter(s => s.status === 'active').length,;
-        totalErrorsFixed: this.automationStatus.errorFixer.errorsFixed,;
-        totalOptimizations: this.automationStatus.performanceMonitor.optimizations,;
-        totalVulnerabilities: this.automationStatus.securityScanner.vulnerabilities,;
-        totalImprovements: this.automationStatus.codeQuality.improvements;
-      },;
-      recommendations: this.generateRecommendations();
->>>>>>> main
-    };
+<<<<<<< HEAD    };
     ;
     fs.writeFileSync(this.dashboardFile, JSON.stringify(dashboard, null, 2));
     ;
@@ -542,25 +387,20 @@ class MasterAutomationOrchestrator {;
     if (this.automationStatus.performanceMonitor.optimizations < 5) {;
       recommendations.push('⚡ Consider performance optimizations');
     }
-<<<<<<< HEAD
     
     if (recommendations.length === 0) {
       recommendations.push('✅ All systems operating optimally`);
-=======
     ;
     if (recommendations.length === 0) {;
       recommendations.push('✅ All systems operating optimally');
->>>>>>> main
     }
     ;
     return recommendations;
   }
-<<<<<<< HEAD
 
   displayDashboard(dashboard) {
     console.log(``\n🎯 ZION TECH AUTOMATION DASHBOARD`);
-    console.log(``=====================================`);console.log(📊 Status: ${dashboard.summary.activeAutomations}/${dashboard.summary.totalAutomations} automations active);console.log(🔧 Errors Fixed: ${dashboard.summary.totalErrorsFixed}``);console.log(`⚡ Optimizations: ${dashboard.summary.totalOptimizations}`);;console.log(`🔒 Vulnerabilities: ${dashboard.summary.totalVulnerabilities}`);;console.log(`📝 Improvements: ${dashboard.summary.totalImprovements}`);;
-    
+    console.log(``==`);console.log(📊 Status: ${dashboard.summary.activeAutomations}/${dashboard.summary.totalAutomations} automations active);console.log(🔧 Errors Fixed: ${dashboard.summary.totalErrorsFixed}``);console.log(`⚡ Optimizations: ${dashboard.summary.totalOptimizations}`);console.log(`🔒 Vulnerabilities: ${dashboard.summary.totalVulnerabilities}`);console.log(`📝 Improvements: ${dashboard.summary.totalImprovements}`);    
     console.log(``\n📋 Recommendations:`);dashboard.recommendations.forEach(rec => console.log(`   ${rec}));
     console.log(\n📄 Dashboard saved to: ${this.dashboardFile}``);
   }
@@ -584,22 +424,18 @@ if (require.main === module) {
   // Handle graceful shutdown;
   process.on(`SIGINT`, async () => {
     console.log(`\n🛑 Received SIGINT, shutting down gracefully...');
-=======
-<<<<<<< HEAD
 ;
   displayDashboard(dashboard) {;
     console.log(`'\n🎯 ZION TECH AUTOMATION DASHBOARD');
-    console.log(`'=====================================');console.log(📊 Status: ${dashboard.summary.activeAutomations}/${dashboard.summary.totalAutomations} automations active);console.log(🔧 Errors Fixed: ${dashboard.summary.totalErrorsFixed}``);console.log(`⚡ Optimizations: ${dashboard.summary.totalOptimizations}`);console.log(`🔒 Vulnerabilities: ${dashboard.summary.totalVulnerabilities}`);console.log(`📝 Improvements: ${dashboard.summary.totalImprovements}`);
+    console.log(`'==');console.log(📊 Status: ${dashboard.summary.activeAutomations}/${dashboard.summary.totalAutomations} automations active);console.log(🔧 Errors Fixed: ${dashboard.summary.totalErrorsFixed}``);console.log(`⚡ Optimizations: ${dashboard.summary.totalOptimizations}`);console.log(`🔒 Vulnerabilities: ${dashboard.summary.totalVulnerabilities}`);console.log(`📝 Improvements: ${dashboard.summary.totalImprovements}`);
     ;
     console.log(`'\n📋 Recommendations:');dashboard.recommendations.forEach(rec => console.log(`   ${rec}));
-=======
 
   displayDashboard(dashboard) {
     console.log(`\n🎯 ZION TECH AUTOMATION DASHBOARD`);
-    console.log(`=====================================`);console.log(📊 Status: ${dashboard.summary.activeAutomations}/${dashboard.summary.totalAutomations} automations active);console.log(🔧 Errors Fixed: ${dashboard.summary.totalErrorsFixed}``);console.log(`⚡ Optimizations: ${dashboard.summary.totalOptimizations}`);console.log(`🔒 Vulnerabilities: ${dashboard.summary.totalVulnerabilities}`);console.log(`📝 Improvements: ${dashboard.summary.totalImprovements}`);
+    console.log(`==`);console.log(📊 Status: ${dashboard.summary.activeAutomations}/${dashboard.summary.totalAutomations} automations active);console.log(🔧 Errors Fixed: ${dashboard.summary.totalErrorsFixed}``);console.log(`⚡ Optimizations: ${dashboard.summary.totalOptimizations}`);console.log(`🔒 Vulnerabilities: ${dashboard.summary.totalVulnerabilities}`);console.log(`📝 Improvements: ${dashboard.summary.totalImprovements}`);
     
     console.log(`\n📋 Recommendations:`);dashboard.recommendations.forEach(rec => console.log(`   ${rec}));`);
->>>>>>> main
     console.log(\n📄 Dashboard saved to: ${this.dashboardFile}``);
   }
 ;
@@ -622,7 +458,6 @@ if (require.main === module) {;
   // Handle graceful shutdown;
   process.on('SIGINT', async () => {;
     console.log('\n🛑 Received SIGINT, shutting down gracefully...');
->>>>>>> main
     await orchestrator.stop();
     process.exit(0);
   });

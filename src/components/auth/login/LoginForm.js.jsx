@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
  " " " " " " " """";,"});,"})
 ;,"});,"})
@@ -45,11 +44,11 @@ function LoginForm() {}"});,"})
             else {}"});,"})
 """;,"});,"})
 """";,"});,"})
-                router("/")}"});,"})
-        }"});,"})
+                router("/")}"});,"});
+}"});,"})
         finally {}"});,"})
-            setIsSubmitting(false)}"});,"})
-    };""";,"});,"})
+            setIsSubmitting(false)}"});,"});
+};""";,"});,"})
     return (<Form {...form}>"""";,"});,"})
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6" autoComplete="off" // Disable browser autofill""";,"});,"})
     >"""";,"});,"})
@@ -112,16 +111,10 @@ export { LoginForm };,"});,"})
 export { LoginForm };,"});,"})
 ;,"});,"})
 export { LoginForm };,"});,"})
->>>>>>> pr-10728;,"});,"})
-=======
-<<<<<<< HEAD
 ' ' ' ' ' ' '''";
-=======
-<<<<<<< HEAD
 ' ' ' ' ' ' '''"'"
 
 ""
-=======
 import React from 'react';
 import { SEO } from '@/components/SEO';
 
@@ -154,6 +147,3 @@ const LoginForm.Js: React.FC = () => {
 };
 
 export default LoginForm.Js;
->>>>>>> main
->>>>>>> main
->>>>>>> main

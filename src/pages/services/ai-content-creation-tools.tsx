@@ -21,7 +21,7 @@ import {
   FileText,
   Image,
   Video,
-  Mic
+  Mic;
 } from 'lucide-react';
 
 const AIContentCreationTools: React.FC = () => {
@@ -29,57 +29,57 @@ const AIContentCreationTools: React.FC = () => {
     {
       icon: PenTool,
       title: "AI Writing Assistant",
-      description: "Generate high-quality content for blogs, social media, emails, and marketing materials with advanced AI writing capabilities."
-    },
+      description: "Generate high-quality content for blogs, social media, emails, and marketing materials with advanced AI writing capabilities.";
+},
     {
       icon: Image,
       title: "AI Image Generation",
-      description: "Create stunning visuals, graphics, and illustrations using AI-powered image generation with custom styles and branding."
-    },
+      description: "Create stunning visuals, graphics, and illustrations using AI-powered image generation with custom styles and branding.";
+},
     {
       icon: Video,
       title: "AI Video Creation",
-      description: "Produce engaging video content with AI-generated scripts, voiceovers, and automated video editing capabilities."
-    },
+      description: "Produce engaging video content with AI-generated scripts, voiceovers, and automated video editing capabilities.";
+},
     {
       icon: BarChart3,
       title: "Content Optimization",
-      description: "Optimize content for SEO, readability, and engagement with AI-powered analysis and recommendations."
-    },
+      description: "Optimize content for SEO, readability, and engagement with AI-powered analysis and recommendations.";
+},
     {
       icon: Globe,
       title: "Multi-Language Support",
-      description: "Create content in 50+ languages with perfect grammar, cultural context, and localized messaging."
-    },
+      description: "Create content in 50+ languages with perfect grammar, cultural context, and localized messaging.";
+},
     {
       icon: Shield,
       title: "Brand Consistency",
-      description: "Maintain consistent brand voice and style across all content with AI-powered brand guidelines enforcement."
-    }
-  ];
+      description: "Maintain consistent brand voice and style across all content with AI-powered brand guidelines enforcement.";
+}
+  ]
 
   const contentTypes = [
     {
       title: "Blog Posts & Articles",
       description: "Generate comprehensive blog posts, articles, and long-form content with proper structure and SEO optimization.",
-      icon: FileText
-    },
+      icon: FileText;
+},
     {
       title: "Social Media Content",
       description: "Create engaging posts, captions, and stories for all major social media platforms with trending hashtags.",
-      icon: Share2
-    },
+      icon: Share2;
+},
     {
       title: "Marketing Materials",
       description: "Produce sales copy, email campaigns, landing pages, and promotional content that converts.",
-      icon: Target
-    },
+      icon: Target;
+},
     {
       title: "Video Scripts",
       description: "Write compelling video scripts for YouTube, TikTok, Instagram, and other video platforms.",
-      icon: Video
-    }
-  ];
+      icon: Video;
+}
+  ]
 
   const benefits = [
     "Reduce content creation time by 75%",
@@ -88,7 +88,7 @@ const AIContentCreationTools: React.FC = () => {
     "Maintain consistent brand voice across all channels",
     "Scale content production without hiring more writers",
     "Generate content in multiple languages automatically"
-  ];
+  ]
 
   const pricing = [
     {
@@ -103,7 +103,7 @@ const AIContentCreationTools: React.FC = () => {
         "Standard templates",
         "Email support"
       ]
-    },
+},
     {
       name: "Professional",
       price: "$55",
@@ -117,8 +117,8 @@ const AIContentCreationTools: React.FC = () => {
         "Priority support",
         "Brand voice training"
       ],
-      popular: true
-    },
+      popular: true;
+},
     {
       name: "Enterprise",
       price: "$125",
@@ -133,8 +133,8 @@ const AIContentCreationTools: React.FC = () => {
         "White-label solution",
         "Team collaboration tools"
       ]
-    }
-  ];
+}
+  ]
 
   return (
     <>
@@ -344,8 +344,8 @@ const AIContentCreationTools: React.FC = () => {
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
                       plan.popular 
                         ? 'bg-purple-600 text-white hover:bg-purple-700' 
-                        : 'bg-gray-900 text-white hover:bg-gray-800'
-                    }`}
+                        : 'bg-gray-900 text-white hover:bg-gray-800';
+}`}
                   >
                     Get Started
                   </a>

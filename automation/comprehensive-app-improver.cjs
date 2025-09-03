@@ -29,8 +29,8 @@ class ComprehensiveAppImprover {
         encoding: 'utf8', 
         cwd: this.projectRoot,
         stdio: options.silent ? 'pipe' : 'inherit',
-        ...options 
-      });
+        ...options ;
+});
       return result;
     } catch (error) {
       this.log(`Command failed: ${command} - ${error.message}`, 'ERROR');
@@ -47,7 +47,7 @@ class ComprehensiveAppImprover {
       'npm install --legacy-peer-deps --force',
       'npm install --force',
       'yarn install --ignore-engines'
-    ];
+    ]
 
     for (const method of methods) {
       const result = await this.runCommand(method, { silent: true });
@@ -88,8 +88,8 @@ class ComprehensiveAppImprover {
       if (!packageJson.engines) {
         packageJson.engines = {
           node: '>=18.0.0',
-          npm: '>=8.0.0'
-        };
+          npm: '>=8.0.0';
+};
         fixes.push('Added engines configuration');
       }
       
@@ -98,8 +98,8 @@ class ComprehensiveAppImprover {
       
       this.log(`Package.json fixed: ${fixes.join(', ')}`);
       this.fixesApplied.push(...fixes);
-      
-    } catch (error) {
+      ;
+} catch (error) {
       this.log(`Failed to fix package.json: ${error.message}`, 'ERROR');
     }
   }
@@ -126,49 +126,36 @@ export default [
         ecmaVersion: 'latest',
         sourceType: 'module',
         ecmaFeatures: {
-          jsx: true,
-        },
-      },
-    },
+          jsx: true}}},
     plugins: {
       '@typescript-eslint': typescript,
       'react-hooks': reactHooks,
-      'react-refresh': reactRefresh,
-    },
+      'react-refresh': reactRefresh},
     rules: {
       ...typescript.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
       'react-refresh/only-export-components': [
         'warn',
-        { allowConstantExport: true },
-      ],
+        { allowConstantExport: true }],
       '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
-      '@typescript-eslint/no-explicit-any': 'warn',
-    },
-  },
-];`
-      },
+      '@typescript-eslint/no-explicit-any': 'warn'}}];`;
+},
       {
         file: 'next.config.js',
         content: `/** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
-    appDir: true,
-  },
+    appDir: true},
   typescript: {
-    ignoreBuildErrors: false,
-  },
+    ignoreBuildErrors: false},
   eslint: {
-    ignoreDuringBuilds: false,
-  },
+    ignoreDuringBuilds: false},
   images: {
-    domains: ['localhost'],
-  },
-};
+    domains: ['localhost']}};
 
-module.exports = nextConfig;`
-      }
-    ];
+module.exports = nextConfig;`;
+}
+    ]
 
     for (const config of configs) {
       const configPath = path.join(this.projectRoot, config.file);
@@ -364,8 +351,8 @@ class HealthChecker {
 }
 
 const checker = new HealthChecker();
-checker.runAllChecks().catch(console.error);`
-      },
+checker.runAllChecks().catch(console.error);`;
+},
       {
         name: 'automation/performance-optimizer.cjs',
         content: `#!/usr/bin/env node
@@ -423,8 +410,8 @@ class PerformanceOptimizer {
           fs.writeFileSync(file, content);
         }
       } catch (error) {
-        // Skip files that can't be processed
-      }
+        // Skip files that can't be processed;
+}
     }
     
     this.optimizations.push('Code optimization completed');
@@ -480,8 +467,8 @@ class PerformanceOptimizer {
 }
 
 const optimizer = new PerformanceOptimizer();
-optimizer.runOptimizations().catch(console.error);`
-      },
+optimizer.runOptimizations().catch(console.error);`;
+},
       {
         name: 'automation/security-scanner.cjs',
         content: `#!/usr/bin/env node
@@ -516,7 +503,7 @@ class SecurityScanner {
       /api[_-]?key\\s*[:=]\\s*['"][^'"]+['"]/gi,
       /secret\\s*[:=]\\s*['"][^'"]+['"]/gi,
       /token\\s*[:=]\\s*['"][^'"]+['"]/gi
-    ];
+    ]
     
     const files = this.findSourceFiles();
     
@@ -531,8 +518,8 @@ class SecurityScanner {
           }
         }
       } catch (error) {
-        // Skip files that can't be read
-      }
+        // Skip files that can't be read;
+}
     }
     
     console.log('✅ Secret scanning completed');
@@ -588,8 +575,8 @@ class SecurityScanner {
             this.recommendations.push(\`Review \${file} for production-ready configuration\`);
           }
         } catch (error) {
-          // Skip files that can't be read
-        }
+          // Skip files that can't be read;
+}
       }
     }
     
@@ -624,9 +611,9 @@ class SecurityScanner {
 }
 
 const scanner = new SecurityScanner();
-scanner.runSecurityScan().catch(console.error);`
-      }
-    ];
+scanner.runSecurityScan().catch(console.error);`;
+}
+    ]
 
     for (const script of scripts) {
       const scriptPath = path.join(this.projectRoot, script.name);
@@ -655,16 +642,16 @@ scanner.runSecurityScan().catch(console.error);`
         'performance-optimize': 'node automation/performance-optimizer.cjs',
         'security-scan': 'node automation/security-scanner.cjs',
         'automation:all': 'npm run health-check && npm run performance-optimize && npm run security-scan',
-        'automation:fix': 'node automation/comprehensive-app-improver.cjs'
-      };
+        'automation:fix': 'node automation/comprehensive-app-improver.cjs';
+};
       
       packageJson.scripts = { ...packageJson.scripts, ...newScripts };
       
       fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
       this.log('Updated package.json scripts');
       this.fixesApplied.push('Updated package.json scripts');
-      
-    } catch (error) {
+      ;
+} catch (error) {
       this.log(`Failed to update package.json: ${error.message}`, 'ERROR');
     }
   }
@@ -681,15 +668,15 @@ scanner.runSecurityScan().catch(console.error);`
       summary: {
         totalFixes: this.fixesApplied.length,
         totalErrors: this.errorsFound.length,
-        success: this.errorsFound.length === 0
-      }
+        success: this.errorsFound.length === 0;
+}
     };
     
     const reportPath = path.join(this.projectRoot, 'automation-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     
     this.log('\\n📊 COMPREHENSIVE APP IMPROVEMENT REPORT');
-    this.log('=====================================');
+    this.log('==');
     this.log(`Duration: ${report.duration}`);
     this.log(`Fixes Applied: ${report.summary.totalFixes}`);
     this.log(`Errors Found: ${report.summary.totalErrors}`);
@@ -714,7 +701,7 @@ scanner.runSecurityScan().catch(console.error);`
 
   async run() {
     this.log('🚀 Starting Comprehensive App Improvement Process...');
-    this.log('================================================');
+    this.log('======');
     
     try {
       // Step 1: Fix package.json
@@ -745,8 +732,8 @@ scanner.runSecurityScan().catch(console.error);`
       await this.generateReport();
       
       this.log('\\n🎉 Comprehensive App Improvement completed!');
-      
-    } catch (error) {
+      ;
+} catch (error) {
       this.log(`Fatal error: ${error.message}`, 'ERROR');
       await this.generateReport();
       process.exit(1);

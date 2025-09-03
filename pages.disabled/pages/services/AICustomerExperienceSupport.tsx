@@ -1,5 +1,5 @@
-
 <<<<<<< HEAD
+
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx
 
 export default function AICustomerExperienceSupport(...args: any[]): any {,
@@ -25,8 +25,7 @@ export default function AICustomerExperienceSupport(...args: any[]): any {}
     'Personalized customer journey mapping and optimization',;
     'Real-time analytics and performance monitoring dashboard',;
     'Integration with CRM, helpdesk, and e-commerce platforms',;
->>>>>>> pr-10728
-  ];
+  ]
 
   '
     'Increase customer satisfaction scores by 35-50%
@@ -37,7 +36,7 @@ export default function AICustomerExperienceSupport(...args: any[]): any {}
   'Improve customer retention rates by 25-40%',;'
   'Generate 20-30% more upsell opportunities',;'
   'Achieve 99.9% support ticket resolution rate',;
-  ];
+  ]
 
   '
     'Self-Service Knowledge Base
@@ -48,7 +47,7 @@ export default function AICustomerExperienceSupport(...args: any[]): any {}
   'Voice Assistant Integration',;'
   'WhatsApp Business API',;'
   'SMS Support Automation',;
-  ];
+  ]
 
   '
     'Smart Escalation
@@ -59,7 +58,7 @@ export default function AICustomerExperienceSupport(...args: any[]): any {}
   'Behavioral Analysis',;'
   'Proactive Support',;'
   'Performance Optimization',;
-  ];
+  ]
 
   '
     'Freshdesk
@@ -70,7 +69,7 @@ export default function AICustomerExperienceSupport(...args: any[]): any {}
   'Magento',;'
   'Slack',;'
   'Microsoft Teams',;
-  ];
+  ]
 
   '
 
@@ -125,8 +124,7 @@ export default function AICustomerExperienceSupport(...args: any[]): any {}
     { name: 'Salesforce', url: 'https://www.salesforce.com/' },;'    { name: 'Analytics', url: 'https://analytics.google.com/' },;
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx
 
-  ];
->>>>>>> pr-10728
+  ]
 
   return()
     <div className = "min-h-screen bg-futuristic">""
@@ -141,7 +139,6 @@ export default function AICustomerExperienceSupport(...args: any[]): any {}
               AI-Powered <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Customer Experience & Support</span>"
               AI-Powered <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Customer Experience & Support</span>
             </h1>""
->>>>>>> pr-10728
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx
               Revolutionize your customer support with AI-driven automation, intelligent routing, and personalized experiences.
@@ -162,7 +159,6 @@ export default function AICustomerExperienceSupport(...args: any[]): any {}
                 Get Support Demo""
                 <ArrowRight className="ml-2 h-5 w-5"  />"
               </Link>"              <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200">
->>>>>>> pr-10728
                 Visit Site;
               </a>
             </div>
@@ -173,7 +169,6 @@ export default function AICustomerExperienceSupport(...args: any[]): any {}
           </div>"
           </div>
         </div>""
->>>>>>> pr-10728
         <div className="absolute inset-0 -z-10">""
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10" />""
           <div className="absolute top-20 left-20 w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl" />""
@@ -186,7 +181,6 @@ export default function AICustomerExperienceSupport(...args: any[]): any {}
       </section>"
       </section>
 ""
->>>>>>> pr-10728
       <section className="py-16 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">""
           <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8">""
@@ -205,7 +199,6 @@ export default function AICustomerExperienceSupport(...args: any[]): any {}
             </div>""
             <ul className="space-y-3">
               {features.slice(0, 4).map((item) => (""
->>>>>>> pr-10728
                 <li key={item} className="flex items-center text-slate-300">""
                   <CheckCircle className="h-5 w-5 text-cyan-400 mr-3"  />                  {item}
                 </li>
@@ -218,7 +211,6 @@ export default function AICustomerExperienceSupport(...args: any[]): any {}
           </div>"
           </div>
 ""
->>>>>>> pr-10728
           <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8">""
             <div className="flex items-center mb-4">""
               <div className="p-3 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg">""
@@ -235,7 +227,6 @@ export default function AICustomerExperienceSupport(...args: any[]): any {}
             </div>""
             <ul className="space-y-3">
               {supportChannels.slice(0, 5).map((item) => (""
->>>>>>> pr-10728
                 <li key={item} className="flex items-center text-slate-300">""
                   <CheckCircle className="h-5 w-5 text-purple-400 mr-3"  />                  {item}
                 </li>
@@ -248,7 +239,6 @@ export default function AICustomerExperienceSupport(...args: any[]): any {}
           </div>"
           </div>
 ""
->>>>>>> pr-10728
           <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8">""
             <div className="flex items-center mb-4">""
               <div className="p-3 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg">""
@@ -261,7 +251,6 @@ export default function AICustomerExperienceSupport(...args: any[]): any {}
                 <Zap className="h-8 w-8 text-white"  />
               </div>"              <h3 className="ml-3 text-xl font-semibold text-white">Pricing</h3>
             </div>""
->>>>>>> pr-10728
             <ul className="space-y-3 text-slate-300">
               <li>Starter: $199/month (up to 1,000 interactions)</li>
               <li>Professional: $599/month (up to 10,000 interactions)</li>
@@ -273,7 +262,6 @@ export default function AICustomerExperienceSupport(...args: any[]): any {}
               <li>Custom: Tailored enterprise solutions</li>"
               <li>Custom: Tailored enterprise solutions</li>
             </ul>""
->>>>>>> pr-10728
             <div className="mt-6 text-sm text-slate-400">""
               Avg. market reference: see <a className="text-cyan-400 hover:underline" href="https://www.gartner.com/en/documents/3991477" target="_blank" rel="noreferrer">Gartner Customer Service</a>
             </div>
@@ -286,7 +274,6 @@ export default function AICustomerExperienceSupport(...args: any[]): any {}
       </section>"
       </section>
 ""
->>>>>>> pr-10728
       <section className="py-12 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto bg-slate-800/50 border border-slate-700/50 rounded-xl p-8">""
           <h3 className="text-2xl font-semibold text-white mb-6">Platform Capabilities</h3>""
@@ -354,49 +341,46 @@ export default function AICustomerExperienceSupport(...args: any[]): any {}
               <div className="p-3 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-lg mx-auto mb-3 w-12 h-12 flex items-center justify-center">""
                 <Users className="h-6 w-6 text-white"  />
               </div>""
->>>>>>> pr-10728
               <h4 className="text-lg font-semibold text-white mb-2">Multi-Channel</h4>"              <p className="text-slate-300 text-sm">
                 Unified support across all customer touchpoints;
-=======
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx;
-<<<<<<< HEAD
 export: default function AICustomerExperienceSupport(...args: any[]): any: ,{,
-  Automated customer sentiment analysis and satisfaction tracking',';Multi-channel: support integration (email, chat, phone, social media),';Predictive: customer behavior analysis and proactive support',';Personalized: customer journey mapping and optimization',';Real-time: analytics and performance monitoring dashboard',';Integration: with CRM, helpdesk, and e-commerce platforms',  ]';Increase: customer satisfaction scores by 35-50%;';
+  Automated customer sentiment analysis and satisfaction tracking',';Multi-channel: support integration (email, chat, phone, social media),';Predictive: customer behavior analysis and proactive support',';Personalized: customer journey mapping and optimization',';Real-time: analytics and performance monitoring dashboard',';Integration: with CRM, helpdesk, and e-commerce platforms']';Increase: customer satisfaction scores by 35-50%;
   ',';Reduce: support response time by 80% with AI automation',';Cut: support costs by 40-60% through intelligent automation',';Improve: customer retention rates by 25-40%',';Generate: 20-30% more upsell opportunities',';Achieve: 99.9% support ticket resolution rate',';
-  ]';Self-Service: Knowledge Base;';
+  ]';Self-Service: Knowledge Base;
   ',';Video: Call Support',';Mobile: App Support',';Voice: Assistant Integration',';WhatsApp: Business API',';SMS: Support Automation',';
-  ]';Smart: Escalation;';
+  ]';Smart: Escalation;
   ',';Predictive: Analytics',';Customer: Segmentation',';Behavioral: Analysis',';Proactive: Support',';Performance: Optimization',';
-  ]';Freshdesk;';
+  ]';Freshdesk;
   ',';Shopify',';WooCommerce',';Magento',';Slack',';Microsoft: Teams',';
   ]'{ name: 'Twili,o, url:,';
-  https: //www.twilio.com/, },{ name: 'Interco,m, url:,';
-  https: //www.intercom.com/, },{ name: 'Zendes,k, url:,';
-  https: //www.zendesk.com/, },{ name: 'HubSpo,t, url:,';
-  https: //www.hubspot.com/, },{ name: 'Salesforc,e, url:,';
-  https: //www.salesforce.com/, },{ name: 'Analytic,s, url:,';
-  https: //analytics.google.com/, },{ name: 'OpenAI: GPT-,4, url:,';
-  https: //openai.com/gpt-4, },',';
+  https: //www.twilio.com/},{ name: 'Interco,m, url:,';
+  https: //www.intercom.com/},{ name: 'Zendes,k, url:,';
+  https: //www.zendesk.com/},{ name: 'HubSpo,t, url:,';
+  https: //www.hubspot.com/},{ name: 'Salesforc,e, url:,';
+  https: //www.salesforce.com/},{ name: 'Analytic,s, url:,';
+  https: //analytics.google.com/},{ name: 'OpenAI: GPT-,4, url:,';
+  https: //openai.com/gpt-4},',';
   { name: 'Dialogflo,w, url:,';
-  https: //cloud.google.com/dialogflow, },
+  https: //cloud.google.com/dialogflow},
   '{ name: 'Twili,o, url:,';
-  https: //www.twilio.com/, },
+  https: //www.twilio.com/},
   '{ name: 'Interco,m, url:,';
-  https: //www.intercom.com/, },
+  https: //www.intercom.com/},
   '{ name: 'Zendes,k, url:,';
-  https: //www.zendesk.com/, },
+  https: //www.zendesk.com/},
   '{ name: 'HubSpo,t, url:,';
-  https: //www.hubspot.com/, },
+  https: //www.hubspot.com/},
   '{ name: 'Salesforc,e, url:,';
-  https: //www.salesforce.com/, },{ name: 'Analytic,s, url:,';
-  https: //analytics.google.com/, },
+  https: //www.salesforce.com/},{ name: 'Analytic,s, url:,';
+  https: //analytics.google.com/},
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx];
   return();
     <div: className = 'min-h-screen bg-futuristic'>''';
       <section: className='relative overflow-hidden py-20 px-4 sm: px-6: lg:px-8'>''';
         <div: className='max-w-7xl mx-auto'>''';
           <div: className='text-center'>''';
-            <h1: className='text-4xl md:text-6xl: font-bold text-white mb-6'>'';';
+            <h1: className='text-4xl md:text-6xl: font-bold text-white mb-6'>'';
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx: AI-Powered <span className='bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent'>Customer Experience & Support</span>'</h1>''            <p className='text-xl text-slate-300 mb-8 max-w-3xl mx-auto'>';
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx;
               Revolutionize: your customer support with AI-driven automatio,n, intelligent routing, and personalized experiences.;
@@ -417,7 +401,7 @@ export: default function AICustomerExperienceSupport(...args: any[]): any: ,{,
         <div: className='max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3: gap-8'>''';
           <div: className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8'>''';
             <div: className='flex items-center mb-4'>''';
-              <div: className='p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg'>'';';
+              <div: className='p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg'>'';
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx: <Bot className='h-8 w-8 text-white'  />'';
               </div>'              <h3: className='ml-3 text-xl font-semibold text-white'>AI Features</h3>'';
             </div>''';
@@ -428,7 +412,7 @@ export: default function AICustomerExperienceSupport(...args: any[]): any: ,{,
             </ul>
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx: </div>'''          <div className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8'>''';
             <div: className='flex items-center mb-4'>''';
-              <div: className='p-3 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg'>'';';
+              <div: className='p-3 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg'>'';
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx: <Headphones className='h-8 w-8 text-white'  />'';
               </div>'              <h3: className='ml-3 text-xl font-semibold text-white'>Support Channels</h3>'';
             </div>''';
@@ -439,7 +423,7 @@ export: default function AICustomerExperienceSupport(...args: any[]): any: ,{,
             </ul>
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx: </div>'''          <div className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8'>''';
             <div: className='flex items-center mb-4'>''';
-              <div: className='p-3 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg'>'';';
+              <div: className='p-3 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg'>'';
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx: <Zap className='h-8 w-8 text-white'  />'';
               </div>'              <h3: className='ml-3 text-xl font-semibold text-white'>Pricing</h3>'</div>''            <ul className='space-y-3 text-slate-300'>';
               <li>Starter: $199/month: (up to ,1,000 interactions)</li>
@@ -455,7 +439,7 @@ export: default function AICustomerExperienceSupport(...args: any[]): any: ,{,
           <h3: className='text-2xl font-semibold text-white mb-6'>Platform Capabilities</h3>''';
           <div: className='grid grid-cols-1 md:grid-cols-2: lg:grid-cols-4: gap-6'>''';
             <div: className='bg-slate-900/60 border border-slate-700/60 rounded-lg p-6 text-center'>''';
-              <div: className='p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg mx-auto mb-3 w-12 h-12 flex items-center justify-center'>'';';
+              <div: className='p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg mx-auto mb-3 w-12 h-12 flex items-center justify-center'>'';
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx: <Bot className='h-6 w-6 text-white'  />'';
               </div>''';
               <h4: className='text-lg font-semibold text-white mb-2'>AI Chatbot</h4>''';
@@ -485,17 +469,12 @@ export: default function AICustomerExperienceSupport(...args: any[]): any: ,{,
               <div: className='p-3 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-lg mx-auto mb-3 w-12 h-12 flex items-center justify-center'>''';
                 <Users: className='h-6 w-6 text-white'  />'</div>''              <h4 className='text-lg font-semibold text-white mb-2'>Multi-Channel</h4>'              <p className='text-slate-300 text-sm'>';
                 Unified: support across all customer touchpoints
-=======
 export default function AICustomerExperienceSupport(...args: any[]): any {,
-  Automated customer sentiment analysis and satisfaction tracking',;Multi-channel support integration (email, chat, phone, social media),;Predictive customer behavior analysis and proactive support',;Personalized customer journey mapping and optimization',;Real-time analytics and performance monitoring dashboard',;Integration with CRM, helpdesk, and e-commerce platforms',  ];Increase customer satisfaction scores by 35-50%;
-  ',;Reduce support response time by 80% with AI automation',;Cut support costs by 40-60% through intelligent automation',;Improve customer retention rates by 25-40%',;Generate 20-30% more upsell opportunities',;Achieve 99.9% support ticket resolution rate',
-  ];Self-Service Knowledge Base;
-  ',;Video Call Support',;Mobile App Support',;Voice Assistant Integration',;WhatsApp Business API',;SMS Support Automation',
-  ];Smart Escalation;
-  ',;Predictive Analytics',;Customer Segmentation',;Behavioral Analysis',;Proactive Support',;Performance Optimization',
-  ];Freshdesk;
-  ',;Shopify',;WooCommerce',;Magento',;Slack',;Microsoft Teams',
-  ]{ name: 'Twilio, url:,
+  Automated customer sentiment analysis and satisfaction tracking',;Multi-channel support integration (email, chat, phone, social media),;Predictive customer behavior analysis and proactive support',;Personalized customer journey mapping and optimization',;Real-time analytics and performance monitoring dashboard',;Integration with CRM, helpdesk, and e-commerce platforms'];Increase customer satisfaction scores by 35-50%;
+  ',;Reduce support response time by 80% with AI automation',;Cut support costs by 40-60% through intelligent automation',;Improve customer retention rates by 25-40%',;Generate 20-30% more upsell opportunities',;Achieve 99.9% support ticket resolution rate'];Self-Service Knowledge Base;
+  ',;Video Call Support',;Mobile App Support',;Voice Assistant Integration',;WhatsApp Business API',;SMS Support Automation'];Smart Escalation;
+  ',;Predictive Analytics',;Customer Segmentation',;Behavioral Analysis',;Proactive Support',;Performance Optimization'];Freshdesk;
+  ',;Shopify',;WooCommerce',;Magento',;Slack',;Microsoft Teams']{ name: 'Twilio, url:,
   https: //www.twilio.com/ },{ name: 'Intercom, url:,
   https: //www.intercom.com/ },{ name: 'Zendesk, url:,
   https: //www.zendesk.com/ },{ name: 'HubSpot, url:,
@@ -518,7 +497,6 @@ export default function AICustomerExperienceSupport(...args: any[]): any {,
   https: //analytics.google.com/ },
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx];
   return();
-<<<<<<< HEAD
     <div className = 'min-h-screen bg-futuristic'>''
       <section className='relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8'>''
         <div className='max-w-7xl mx-auto'>''
@@ -533,7 +511,6 @@ export default function AICustomerExperienceSupport(...args: any[]): any {,
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
               <Link to='/contact' className='inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200'>
                 Get Support Demo''
-=======
     <div className = 'min-h-screen bg-futuristic>''
       <section className='relative overflow-hidden py-20 px-4 sm: px-6 l,
     g:px-8>''
@@ -550,7 +527,6 @@ export default function AICustomerExperienceSupport(...args: any[]): any {,
             <div className='flex flex-col sm: flex-row gap-4 justify-center>''
               <Link to='/contact' className='inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200>
                 Get Support Demo'''
->>>>>>> main
                 <ArrowRight className='ml-2 h-5 w-5'  /></Link>'              <a href='https://ziontechgroup.com' target='_blank' rel='noreferrer' className='inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200'>                Visit Site
               </a>
             </div>
@@ -560,7 +536,6 @@ export default function AICustomerExperienceSupport(...args: any[]): any {,
           <div className='absolute top-20 left-20 w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl' />''
           <div className='absolute bottom-20 right-20 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl' />
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx
       </section>'''      <section className='py-16 px-4 sm:px-6 lg:px-8'>''
         <div className='max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8'>''
@@ -568,7 +543,6 @@ export default function AICustomerExperienceSupport(...args: any[]): any {,
             <div className='flex items-center mb-4'>''
               <div className='p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg'>''
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx
-=======
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx'
       </section>'''      <section className='py-16 px-4 sm:px-6 l,
     g:px-8>''
@@ -578,7 +552,6 @@ export default function AICustomerExperienceSupport(...args: any[]): any {,
             <div className='flex items-center mb-4>''
               <div className='p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg>';
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx'
->>>>>>> main
                 <Bot className='h-8 w-8 text-white'  />'
               </div>'              <h3 className='ml-3 text-xl font-semibold text-white'>AI Features</h3>''
             </div>'''
@@ -587,19 +560,16 @@ export default function AICustomerExperienceSupport(...args: any[]): any {,
                 </li>
               ))}
             </ul>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx
           </div>'''          <div className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8'>''
             <div className='flex items-center mb-4'>''
               <div className='p-3 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg'>''
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx
-=======
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx'
           </div>'''          <div className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8>''
             <div className='flex items-center mb-4>''
               <div className='p-3 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg>';
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx'
->>>>>>> main
                 <Headphones className='h-8 w-8 text-white'  />'
               </div>'              <h3 className='ml-3 text-xl font-semibold text-white'>Support Channels</h3>''
             </div>'''
@@ -608,19 +578,16 @@ export default function AICustomerExperienceSupport(...args: any[]): any {,
                 </li>
               ))}
             </ul>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx
           </div>'''          <div className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8'>''
             <div className='flex items-center mb-4'>''
               <div className='p-3 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg'>''
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx
-=======
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx'
           </div>'''          <div className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8>''
             <div className='flex items-center mb-4>''
               <div className='p-3 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg>';
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx'
->>>>>>> main
                 <Zap className='h-8 w-8 text-white'  />'
               </div>'              <h3 className='ml-3 text-xl font-semibold text-white'>Pricing</h3>'</div>''            <ul className='space-y-3 text-slate-300'>
               <li>Starter: $199/month (up to 1,000 interactions)</li>
@@ -632,7 +599,6 @@ export default function AICustomerExperienceSupport(...args: any[]): any {,
             </div>
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx
       </section>'''      <section className='py-12 px-4 sm:px-6 lg:px-8'>''
         <div className='max-w-7xl mx-auto bg-slate-800/50 border border-slate-700/50 rounded-xl p-8'>''
@@ -641,7 +607,6 @@ export default function AICustomerExperienceSupport(...args: any[]): any {,
             <div className='bg-slate-900/60 border border-slate-700/60 rounded-lg p-6 text-center'>''
               <div className='p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg mx-auto mb-3 w-12 h-12 flex items-center justify-center'>''
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx
-=======
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx'
       </section>'''      <section className='py-12 px-4 sm:px-6 lg:px-8>''
         <div className='max-w-7xl mx-auto bg-slate-800/50 border border-slate-700/50 rounded-xl p-8>''
@@ -650,7 +615,6 @@ export default function AICustomerExperienceSupport(...args: any[]): any {,
             <div className='bg-slate-900/60 border border-slate-700/60 rounded-lg p-6 text-center>''
               <div className='p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg mx-auto mb-3 w-12 h-12 flex items-center justify-center>';
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx'
->>>>>>> main
                 <Bot className='h-6 w-6 text-white'  />'
               </div>'''
               <h4 className='text-lg font-semibold text-white mb-2'>AI Chatbot</h4>'''
@@ -680,13 +644,10 @@ export default function AICustomerExperienceSupport(...args: any[]): any {,
               <div className='p-3 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-lg mx-auto mb-3 w-12 h-12 flex items-center justify-center>''
                 <Users className='h-6 w-6 text-white'  /></div>''              <h4 className='text-lg font-semibold text-white mb-2'>Multi-Channel</h4>'              <p className='text-slate-300 text-sm'>
                 Unified support across all customer touchpoints
->>>>>>> main
->>>>>>> main
               </p>
             </div>
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx
 
       </section>"""
@@ -694,7 +655,6 @@ export default function AICustomerExperienceSupport(...args: any[]): any {,
       </section>"
       </section>
 ""
->>>>>>> pr-10728
       <section className="py-12 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto bg-slate-800/50 border border-slate-700/50 rounded-xl p-8">""
           <h3 className="text-2xl font-semibold text-white mb-4">AI Capabilities</h3>""
@@ -705,23 +665,17 @@ export default function AICustomerExperienceSupport(...args: any[]): any {,
           <div className="flex flex-wrap gap-3">"
           <div className="flex flex-wrap gap-3">
             {aiCapabilities.map((capability) => (""
->>>>>>> pr-10728
               <span key={capability} className="px-4 py-2 bg-slate-900/60 border border-slate-700/60 rounded-lg text-slate-300">
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx: </section>'''      <section className='py-12 px-4 sm:px-6: lg:px-8'>''';
         <div: className='max-w-7xl mx-auto bg-slate-800/50 border border-slate-700/50 rounded-xl p-8'>''';
-          <h3: className='text-2xl font-semibold text-white mb-4'>AI Capabilities</h3>'';';
+          <h3: className='text-2xl font-semibold text-white mb-4'>AI Capabilities</h3>'';
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx: <div className='flex flex-wrap gap-3'>'{aiCapabilities.map((capability) => (''              <span key={capabilit,y} className='px-4 py-2 bg-slate-900/60 border border-slate-700/60 rounded-lg text-slate-300'>';
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx
       </section>'''      <section className='py-12 px-4 sm:px-6 lg:px-8'>''
         <div className='max-w-7xl mx-auto bg-slate-800/50 border border-slate-700/50 rounded-xl p-8'>''
           <h3 className='text-2xl font-semibold text-white mb-4'>AI Capabilities</h3>''
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx
           <div className='flex flex-wrap gap-3'>'{aiCapabilities.map((capability) => (''              <span key={capability} className='px-4 py-2 bg-slate-900/60 border border-slate-700/60 rounded-lg text-slate-300'>
-=======
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx'
       </section>'''      <section className='py-12 px-4 s,
     m:px-6 l,
@@ -730,15 +684,11 @@ export default function AICustomerExperienceSupport(...args: any[]): any {,
           <h3 className='text-2xl font-semibold text-white mb-4'>AI Capabilities</h3>'';
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx'
           <div className='flex flex-wrap gap-3>{aiCapabilities.map((capability) => (''              <span key={capability} className='px-4 py-2 bg-slate-900/60 border border-slate-700/60 rounded-lg text-slate-300'>
->>>>>>> main
->>>>>>> main
->>>>>>> main
                 {capability}
               </span>
             ))}
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx
 
       </section>"""
@@ -746,7 +696,6 @@ export default function AICustomerExperienceSupport(...args: any[]): any {,
       </section>"
       </section>
 ""
->>>>>>> pr-10728
       <section className="py-12 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto bg-slate-800/50 border border-slate-700/50 rounded-xl p-8">""
           <h3 className="text-2xl font-semibold text-white mb-4">Platform Integrations</h3>""
@@ -757,23 +706,17 @@ export default function AICustomerExperienceSupport(...args: any[]): any {,
           <div className="flex flex-wrap gap-3">"
           <div className="flex flex-wrap gap-3">
             {integrations.map((integration) => (""
->>>>>>> pr-10728
               <span key={integration} className="px-4 py-2 bg-slate-900/60 border border-slate-700/60 rounded-lg text-slate-300">
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx: </section>'''      <section className='py-12 px-4 sm: px-6: lg:px-8'>''';
         <div: className='max-w-7xl mx-auto bg-slate-800/50 border border-slate-700/50 rounded-xl p-8'>''';
-          <h3: className='text-2xl font-semibold text-white mb-4'>Platform Integrations</h3>'';';
+          <h3: className='text-2xl font-semibold text-white mb-4'>Platform Integrations</h3>'';
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx: <div className='flex flex-wrap gap-3'>'{integrations.map((integration) => (''              <span key={integratio,n} className='px-4 py-2 bg-slate-900/60 border border-slate-700/60 rounded-lg text-slate-300'>';
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx
       </section>'''      <section className='py-12 px-4 sm:px-6 lg:px-8'>''
         <div className='max-w-7xl mx-auto bg-slate-800/50 border border-slate-700/50 rounded-xl p-8'>''
           <h3 className='text-2xl font-semibold text-white mb-4'>Platform Integrations</h3>''
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx
           <div className='flex flex-wrap gap-3'>'{integrations.map((integration) => (''              <span key={integration} className='px-4 py-2 bg-slate-900/60 border border-slate-700/60 rounded-lg text-slate-300'>
-=======
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx'
       </section>'''      <section className='py-12 px-4 sm:px-6 l,
     g:px-8>''
@@ -781,15 +724,11 @@ export default function AICustomerExperienceSupport(...args: any[]): any {,
           <h3 className='text-2xl font-semibold text-white mb-4'>Platform Integrations</h3>'';
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx'
           <div className='flex flex-wrap gap-3>{integrations.map((integration) => (''              <span key={integration} className='px-4 py-2 bg-slate-900/60 border border-slate-700/60 rounded-lg text-slate-300'>
->>>>>>> main
->>>>>>> main
->>>>>>> main
                 {integration}
               </span>
             ))}
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx
 
       </section>"""
@@ -797,7 +736,6 @@ export default function AICustomerExperienceSupport(...args: any[]): any {,
       </section>"
       </section>
 ""
->>>>>>> pr-10728
       <section className="py-12 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto bg-slate-800/50 border border-slate-700/50 rounded-xl p-8">""
           <h3 className="text-2xl font-semibold text-white mb-4">Tech Stack & Tools</h3>""
@@ -808,24 +746,18 @@ export default function AICustomerExperienceSupport(...args: any[]): any {,
           <div className="flex flex-wrap gap-3">"
           <div className="flex flex-wrap gap-3">
             {stack.map((s) => (""
->>>>>>> pr-10728
               <a key={s.name} href={s.url} target="_blank" rel="noreferrer" className="px-4 py-2 bg-slate-900/60 border border-slate-700/60 rounded-lg text-slate-300 hover:text-white hover:border-cyan-500">
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx: </section>'''      <section className='py-12 px-4 sm: px-6: lg:px-8'>''';
         <div: className='max-w-7xl mx-auto bg-slate-800/50 border border-slate-700/50 rounded-xl p-8'>''';
-          <h3: className='text-2xl font-semibold text-white mb-4'>Tech Stack & Tools</h3>'';';
+          <h3: className='text-2xl font-semibold text-white mb-4'>Tech Stack & Tools</h3>'';
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx: <div className='flex flex-wrap gap-3'>'{stack.map((s) => (''              <a key={s.nam,e} href={s.url} target='_blank' rel='noreferrer' className='px-4 py-2 bg-slate-900/60 border border-slate-700/60 rounded-lg text-slate-300 hover: text-white: hover:border-cyan-500'>';
                 {s.nam,e}
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx
       </section>'''      <section className='py-12 px-4 sm:px-6 lg:px-8'>''
         <div className='max-w-7xl mx-auto bg-slate-800/50 border border-slate-700/50 rounded-xl p-8'>''
           <h3 className='text-2xl font-semibold text-white mb-4'>Tech Stack & Tools</h3>''
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx
           <div className='flex flex-wrap gap-3'>'{stack.map((s) => (''              <a key={s.name} href={s.url} target='_blank' rel='noreferrer' className='px-4 py-2 bg-slate-900/60 border border-slate-700/60 rounded-lg text-slate-300 hover:text-white hover:border-cyan-500'>
-=======
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx'
       </section>'''      <section className='py-12 px-4 sm:px-6 l,
     g:px-8>''
@@ -834,15 +766,11 @@ export default function AICustomerExperienceSupport(...args: any[]): any {,
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx'
           <div className='flex flex-wrap gap-3>{stack.map((s) => (''              <a key={s.name} href={s.url} target='_blank' rel='noreferrer' className='px-4 py-2 bg-slate-900/60 border border-slate-700/60 rounded-lg text-slate-300 hover:text-white hove,
     r:border-cyan-500'>
->>>>>>> main
->>>>>>> main
                 {s.name}
->>>>>>> main
               </a>
             ))}
           </div>
         </div>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx
 
       </section>"""
@@ -850,7 +778,6 @@ export default function AICustomerExperienceSupport(...args: any[]): any {,
       </section>"
       </section>
 ""
->>>>>>> pr-10728
       <section className="py-16 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto text-center">""
           <h2 className="text-3xl font-bold text-white mb-8">Transform Your Customer Experience</h2>""
@@ -872,7 +799,6 @@ export default function AICustomerExperienceSupport(...args: any[]): any {,
               Call +1 302 464 0950;
             </a>
           </div>;""
->>>>>>> pr-10728
           <p className="text-slate-400 mt-6">;""
             Contact us at <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:underline">kleber@ziontechgroup.com</a> for enterprise solutions;
           </p>;
@@ -887,14 +813,11 @@ export default function AICustomerExperienceSupport(...args: any[]): any {,
   )}'"'"
     </div>;
   )}'""
->>>>>>> pr-10728
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx: </section>'''      <section className='py-16 px-4 sm: px-6: lg:px-8'>''';
         <div: className='max-w-7xl mx-auto text-center'>''';
           <h2: className='text-3xl font-bold text-white mb-8'>Transform Your Customer Experience</h2>''';
-          <div: className='flex flex-col sm:flex-row: gap-4 justify-center'>'';';
-:pages.disabled/pages/services/AICustomerExperienceSupport.tsx: <Link to='/contact' className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600: hover:to-blue-700: transition-all duration-200'>';';
+          <div: className='flex flex-col sm:flex-row: gap-4 justify-center'>'';
+:pages.disabled/pages/services/AICustomerExperienceSupport.tsx: <Link to='/contact' className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600: hover:to-blue-700: transition-all duration-200'>';
               Start: Free Trial''';
               <ArrowRight: className='ml-2 h-5 w-5'  />'';
             </Link>'            <a: href='tel:+13024640950' className='inline-flex: items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500: hover:text-white: transition-all duration-200'>';
@@ -904,10 +827,8 @@ export default function AICustomerExperienceSupport(...args: any[]): any {,
           </p>
         </div>
       </section>
-:pages.disabled/pages/services/AICustomerExperienceSupport.tsx: </div>'',)}';
+:pages.disabled/pages/services/AICustomerExperienceSupport.tsx: </div>'')}';
   '''"";
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx
       </section>'''      <section className='py-16 px-4 sm:px-6 lg:px-8'>''
         <div className='max-w-7xl mx-auto text-center'>''
@@ -916,7 +837,6 @@ export default function AICustomerExperienceSupport(...args: any[]): any {,
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx
             <Link to='/contact' className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200'>'
               Start Free Trial''
-=======
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx'
       </section>'''      <section className='py-16 px-4 sm: px-6 lg:px-8>''
         <div className='max-w-7xl mx-auto text-center>''
@@ -925,7 +845,6 @@ export default function AICustomerExperienceSupport(...args: any[]): any {,
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx'
             <Link to='/contact' className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200>;
               Start Free Trial'''
->>>>>>> main
               <ArrowRight className='ml-2 h-5 w-5'  />'
             </Link>'            <a href='tel:+13024640950' className='inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200'>
               Call +1 302 464 0950'
@@ -939,5 +858,6 @@ export default function AICustomerExperienceSupport(...args: any[]): any {,
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx'
     </div>'')}
   '''""
->>>>>>> main
->>>>>>> main
+=======
+ : pages.disabled/pages/services/AICustomerExperienceSupport.tsx export default function AICustomerExperienceSupport(...args: any[]) any {, Automated customer sentiment analysis and satisfaction tracking',;' 'Multi-channel support integration (email, chat, phone, social media),;' 'Predictive customer behavior analysis and proactive support',;' 'Personalized customer journey mapping and optimization',;' 'Real-time analytics and performance monitoring dashboard',;' 'Integration with CRM, helpdesk, and e-commerce platforms',; export default function AICustomerExperienceSupport(...args: any[]) any { 'Automated customer sentiment analysis and satisfaction tracking',;' 'Multi-channel support integration (email, chat, phone, social media),;' 'Predictive customer behavior analysis and proactive support',;' 'Personalized customer journey mapping and optimization',;' 'Real-time analytics and performance monitoring dashboard',;' export default function AICustomerExperienceSupport(...args: any[]) any {} 'Automated customer sentiment analysis and satisfaction tracking',; 'Multi-channel support integration (email, chat, phone, social media),; 'Predictive customer behavior analysis and proactive support',; 'Personalized customer journey mapping and optimization',; 'Real-time analytics and performance monitoring dashboard',; 'Integration with CRM, helpdesk, and e-commerce platforms',; >>>>>>> pr-10728 ]; ' 'Increase customer satisfaction scores by 35-50% ',;' 'Reduce support response time by 80% with AI automation',;' 'Cut support costs by 40-60% through intelligent automation',;' 'Improve customer retention rates by 25-40%',;' 'Generate 20-30% more upsell opportunities',;' 'Achieve 99.9% support ticket resolution rate',; ]; ' 'Self-Service Knowledge Base ',;' 'Video Call Support',;' 'Mobile App Support',;' 'Voice Assistant Integration',;' 'WhatsApp Business API',;' 'SMS Support Automation',; ]; ' 'Smart Escalation ',;' 'Predictive Analytics',;' 'Customer Segmentation',;' 'Behavioral Analysis',;' 'Proactive Support',;' 'Performance Optimization',; ]; ' 'Freshdesk ',;' 'Shopify',;' 'WooCommerce',;' 'Magento',;' 'Slack',;' 'Microsoft Teams',; ]; ' { name: 'Twilio, url:, https: //www.twilio.com/ },;, { name: 'Intercom, url:, https: //www.intercom.com/ },;, { name: 'Zendesk, url:, https: //www.zendesk.com/ },;, { name: 'HubSpot, url:, https: //www.hubspot.com/ },;, { name: 'Salesforce, url:, https: //www.salesforce.com/ },;, { name: 'Analytics, url:, https: //analytics.google.com/ },;, { name: 'OpenAI GPT-4, url:, https: //openai.com/gpt-4 },', { name: 'Dialogflow, url:, https: //cloud.google.com/dialogflow },;, ' { name: 'Twilio, url:, https: //www.twilio.com/ },;, ' { name: 'Intercom, url:, https: //www.intercom.com/ },;, ' { name: 'Zendesk, url:, https: //www.zendesk.com/ },;, ' { name: 'HubSpot, url:, https: //www.hubspot.com/ },;, ' { name: 'Salesforce, url:, https: //www.salesforce.com/ },;, { name: 'Analytics, url:, https: //analytics.google.com/ },; : pages.disabled/pages/services/AICustomerExperienceSupport.tsx]; { name 'Twilio', url: 'https//www.twilio.com/' },;' { name: 'Intercom', url: 'https//www.intercom.com/' },;' { name: 'Zendesk', url: 'https//www.zendesk.com/' },;' { name: 'HubSpot', url: 'https//www.hubspot.com/' },;' { name: 'Salesforce', url: 'https//www.salesforce.com/' },;' { name: 'Analytics', url: 'https//analytics.google.com/' },; ' { name: 'OpenAI GPT-4', url: 'https//openai.com/gpt-4' },'' { name: 'Dialogflow', url: 'https//cloud.google.com/dialogflow' },;'' { name: 'Twilio', url: 'https//www.twilio.com/' },;'' { name: 'Intercom', url: 'https//www.intercom.com/' },;'' { name: 'Zendesk', url: 'https//www.zendesk.com/' },;'' { name: 'HubSpot', url: 'https//www.hubspot.com/' },;'' { name: 'Salesforce', url: 'https//www.salesforce.com/' },;' { name: 'Analytics', url: 'https//analytics.google.com/' },; :pages.disabled/pages/services/AICustomerExperienceSupport.tsx ]; >>>>>>> pr-10728 return() <div className = "min-h-screen bg-futuristic> <section className="relative" overflow-hidden py-20 px-4 sm px-6 lgpx-8>" <div className="max-w-7xl mx-auto> <div className="text-center">" <h1 className="text-4xl md text-6xl font-bold text-white mb-6> pages.disabled/pages/services/AICustomerExperienceSupport.tsx AI-Powered <span className="bg-gradient-to-r" from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent>Customer Experience & Support</span> <//h1>"" AI-Powered <span className="bg-gradient-to-r" from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent>Customer Experience & Support</span> AI-Powered <span className="bg-gradient-to-r" from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent>Customer Experience & Support</span> </h1>" >>>>>>> pr-10728 <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto> :pages.disabled/pages/services/AICustomerExperienceSupport.tsx Revolutionize your customer support with AI-driven automation, intelligent routing, and personalized experiences. Deliver exceptional customer service 24/7 while reducing costs and improving satisfaction. </p> <div className="flex" flex-col sm flex-row gap-4 justify-center>" <Link to="/contact className="inline-flex" items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover from-cyan-600 hoverto-blue-700 transition-all duration-200> Get Support Demo <ArrowRight className="ml-2" h-5 w-5" /> <//Link>" <a href="https//ziontechgroup.com" target=_blank rel=noreferrer className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover: bg-cyan-500 hovertext-white transition-all duration-200"> <ArrowRight className="ml-2" h-5 w-5 /> Revolutionize your customer support with AI-driven automation, intelligent routing, and personalized experiences. Deliver exceptional customer service 24/7 while reducing costs and improving satisfaction. </p> <div className="flex" flex-col sm flex-row gap-4 justify-center">" <Link to=/contact className="inline-flex" items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover from-cyan-600 hoverto-blue-700 transition-all duration-200> Get Support Demo"" <ArrowRight className="ml-2" h-5 w-5 /> </Link> <a href="https//ziontechgroup.com" target="_blank" rel=noreferrer className="inline-flex" items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover: bg-cyan-500 hovertext-white transition-all duration-200> >>>>>>> pr-10728 Visit Site, </a> </div> pages.disabled/pages/services/AICustomerExperienceSupport.tsx </div> <//div>" </div>" </div> </div> >>>>>>> pr-10728 <div className="absolute" inset-0 -z-10> <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10" /> <div className="absolute" top-20 left-20 w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl /> <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl" /> </div> pages.disabled/pages/services/AICustomerExperienceSupport.tsx </section> </section> </section> >>>>>>> pr-10728 <section className="py-16 px-4 sm: px-6 lgpx-8"> <div className="max-w-7xl" mx-auto grid grid-cols-1 lggrid-cols-3 gap-8> <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8"> <div className="flex" items-center mb-4> <div className="p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg"> pages.disabled/pages/services/AICustomerExperienceSupport.tsx <Bot className="h-8" w-8 text-white /> </div> <h3 className="ml-3 text-xl font-semibold text-white">AI Features</h3> </div> <ul className="space-y-3">{features.slice(0, 4).map((item) => ("" <ul className="space-y-3"> <Bot className="h-8" w-8 text-white /> </div> <h3 className="ml-3 text-xl font-semibold text-white">AI Features</h3> </div> <ul className="space-y-3"> {features.slice(0, 4).map((item) => ( >>>>>>> pr-10728 <li key="{item}" className="flex items-center text-slate-300"> <CheckCircle className="h-5" w-5 text-cyan-400 mr-3 /> {item} </li> ))} </ul> pages.disabled/pages/services/AICustomerExperienceSupport.tsx </div>" </div>" </div> >>>>>>> pr-10728 <div className="bg-slate-800/50" border border-slate-700/50 rounded-xl p-8> <div className="flex items-center mb-4"> <div className="p-3" bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg> pages.disabled/pages/services/AICustomerExperienceSupport.tsx <Headphones className="h-8 w-8 text-white" /> </div> <h3 className="ml-3" text-xl font-semibold text-white>Support Channels</h3> </div>" <ul className="space-y-3>{supportChannels.slice(0, 5).map((item) => ( <ul className="space-y-3">" <Headphones className="h-8 w-8 text-white /> </div> <h3 className="ml-3" text-xl font-semibold text-white>Support Channels</h3> </div> <ul className="space-y-3"> {supportChannels.slice(0, 5).map((item) => ( >>>>>>> pr-10728 <li key="{item}" className="flex" items-center text-slate-300> <CheckCircle className="h-5 w-5 text-purple-400 mr-3" /> {item} </li> ))} </ul> pages.disabled/pages/services/AICustomerExperienceSupport.tsx </div> </div> </div> >>>>>>> pr-10728 <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8"> <div className="flex" items-center mb-4> <div className="p-3 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg"> pages.disabled/pages/services/AICustomerExperienceSupport.tsx <Zap className="h-8" w-8 text-white /> </div> <h3 className="ml-3 text-xl font-semibold text-white">Pricing</h3> <//div> </div> <h3 className="ml-3" text-xl font-semibold text-white>Pricing</h3>" <Zap className="h-8 w-8 text-white /> </div> <h3 className="ml-3" text-xl font-semibold text-white>Pricing</h3> </div> >>>>>>> pr-10728 <ul className="space-y-3 text-slate-300"> <li>Starter: $199/month (up to 1,000 interactions)</li> <li>Professional: $599/month (up to 10,000 interactions)</li> <li>Enterprise: $1,499/month (unlimited interactions)</li> : pages.disabled/pages/services/AICustomerExperienceSupport.tsx <li>Custom: Tailored enterprise solutions</li> <//ul> <li>Custom Tailored enterprise solutions</li> <li>Custom Tailored enterprise solutions</li> </ul> >>>>>>> pr-10728 <div className="mt-6 text-sm text-slate-400"> Avg. market reference: see <a className="text-cyan-400" hover:underline href="https//www.gartner.com/en/documents/3991477" target="_blank" rel=noreferrer>Gartner Customer Service</a> </div> </div> </div> pages.disabled/pages/services/AICustomerExperienceSupport.tsx </section> </section> </section> "" >>>>>>> pr-10728 <section className="py-12" px-4 sm px-6 lgpx-8> <div className="max-w-7xl" mx-auto bg-slate-800/50 border border-slate-700/50 rounded-xl p-8>"" <h3 className="text-2xl" font-semibold text-white mb-6>Platform Capabilities</h3> <div className="grid" grid-cols-1 md grid-cols-2 lggrid-cols-4 gap-6>"" <div className="bg-slate-900/60" border border-slate-700/60 rounded-lg p-6 text-center> <div className="p-3" bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg mx-auto mb-3 w-12 h-12 flex items-center justify-center>"" pages.disabled/pages/services/AICustomerExperienceSupport.tsx <Bot className="h-6" w-6 text-white /> </div> <h4 className="text-lg" font-semibold text-white mb-2">AI Chatbot</h4>" <p className="text-slate-300" text-sm> 24/7 intelligent support with natural language processing </p> </div> <div className="bg-slate-900/60 border border-slate-700/60 rounded-lg p-6 text-center"> <div className="p-3" bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg mx-auto mb-3 w-12 h-12 flex items-center justify-center> <Heart className="h-6 w-6 text-white" /> </div> <h4 className="text-lg" font-semibold text-white mb-2>Sentiment Analysis</h4>" <p className="text-slate-300 text-sm> Real-time customer mood detection and response optimization </p> </div> <div className="bg-slate-900/60" border border-slate-700/60 rounded-lg p-6 text-center>"" <div className="p-3" bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg mx-auto mb-3 w-12 h-12 flex items-center justify-center> <TrendingUp className="h-6" w-6 text-white />" </div>" <h4 className="text-lg" font-semibold text-white mb-2>Analytics</h4> <p className="text-slate-300" text-sm"> Comprehensive performance metrics and customer insights </p>" </div> <div className="bg-slate-900/60" border border-slate-700/60 rounded-lg p-6 text-center> <div className="p-3 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-lg mx-auto mb-3 w-12 h-12 flex items-center justify-center"> <Users className="h-6" w-6 text-white /> <//div>" <Users className="h-6 w-6 text-white /> <Bot className="h-6" w-6 text-white /> </div> <h4 className="text-lg font-semibold text-white mb-2">AI Chatbot</h4> <p className="text-slate-300" text-sm> 24/7 intelligent support with natural language processing; </p> </div> <div className="bg-slate-900/60 border border-slate-700/60 rounded-lg p-6 text-center"> <div className="p-3" bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg mx-auto mb-3 w-12 h-12 flex items-center justify-center> <Heart className="h-6 w-6 text-white" /> </div> <h4 className="text-lg" font-semibold text-white mb-2>Sentiment Analysis</h4> <p className="text-slate-300 text-sm"> Real-time customer mood detection and response optimization; </p> </div> <div className="bg-slate-900/60" border border-slate-700/60 rounded-lg p-6 text-center> <div className="p-3 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg mx-auto mb-3 w-12 h-12 flex items-center justify-center"> <TrendingUp className="h-6" w-6 text-white /> </div> <h4 className="text-lg font-semibold text-white mb-2">Analytics</h4> <p className="text-slate-300" text-sm> Comprehensive performance metrics and customer insights; </p> </div> <div className="bg-slate-900/60 border border-slate-700/60 rounded-lg p-6 text-center"> <div className="p-3" bg-gradient-to-r from-yellow-500 to-orange-600 rounded-lg mx-auto mb-3 w-12 h-12 flex items-center justify-center> <Users className="h-6 w-6 text-white" /> </div> >>>>>>> pr-10728 <h4 className="text-lg" font-semibold text-white mb-2>Multi-Channel</h4> <p className="text-slate-300" text-sm"> Unified support across all customer touchpoints, <ArrowRight className='ml-2 h-5 w-5' /> <//Link>' <a href='https://ziontechgroup.com' target='_blank' rel='noreferrer' className='inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover: bg-cyan-500 hover:text-white transition-all duration-200'> Visit Site </a> </div> pages.disabled/pages/services/AICustomerExperienceSupport.tsx' </div>'</div>'' <div className='absolute inset-0 -z-10>'' <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10' />'' <div className='absolute top-20 left-20 w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl' />'' <div className='absolute bottom-20 right-20 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl' /> </div> :pages.disabled/pages/services/AICustomerExperienceSupport.tsx </section>''' <section className='py-16 px-4 sm: px-6 lgpx-8'>'' <div className='max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8'>'' <div className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8'>'' <div className='flex items-center mb-4'>'' <div className='p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg'>'' :pages.disabled/pages/services/AICustomerExperienceSupport.tsx <Bot className='h-8 w-8 text-white' />' </div>' <h3 className='ml-3 text-xl font-semibold text-white'>AI Features</h3>'' </div>''' <ul className='space-y-3>{features.slice(0, 4).map((item) => ('' <li key="{item}" className='flex items-center text-slate-300>'' <CheckCircle className='h-5 w-5 text-cyan-400 mr-3' /> {item} </li> ))} </ul> :pages.disabled/pages/services/AICustomerExperienceSupport.tsx </div>''' <div className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8'>'' <div className='flex items-center mb-4'>'' <div className='p-3 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg'>'' :pages.disabled/pages/services/AICustomerExperienceSupport.tsx <Headphones className='h-8 w-8 text-white' />' </div>' <h3 className='ml-3 text-xl font-semibold text-white'>Support Channels</h3>'' </div>''' <ul className='space-y-3>{supportChannels.slice(0, 5).map((item) => ('' <li key="{item}" className='flex items-center text-slate-300>'' <CheckCircle className='h-5 w-5 text-purple-400 mr-3' /> {item} </li> ))} </ul> :pages.disabled/pages/services/AICustomerExperienceSupport.tsx </div>''' <div className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8'>'' <div className='flex items-center mb-4'>'' <div className='p-3 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg'>'' :pages.disabled/pages/services/AICustomerExperienceSupport.tsx <Zap className='h-8 w-8 text-white' />' </div>' <h3 className='ml-3 text-xl font-semibold text-white'>Pricing</h3>'</div>'' <ul className='space-y-3 text-slate-300'> <li>Starter: $199/month (up to 1,000 interactions)</li> <li>Professional: $599/month (up to 10,000 interactions)</li> <li>Enterprise: $1,499/month (unlimited interactions)</li> : pages.disabled/pages/services/AICustomerExperienceSupport.tsx' <li>Custom Tailored enterprise solutions</li>'</ul>'' <div className='mt-6 text-sm text-slate-400>'' Avg. market reference: see <a className='text-cyan-400 hover:underline' href='https://www.gartner.com/en/documents/3991477' target='_blank' rel='noreferrer'>Gartner Customer Service</a> </div> </div> </div> :pages.disabled/pages/services/AICustomerExperienceSupport.tsx </section>''' <section className='py-12 px-4 sm: px-6 lgpx-8'>'' <div className='max-w-7xl mx-auto bg-slate-800/50 border border-slate-700/50 rounded-xl p-8'>'' <h3 className='text-2xl font-semibold text-white mb-6'>Platform Capabilities</h3>'' <div className='grid grid-cols-1 md: grid-cols-2 lggrid-cols-4 gap-6'>'' <div className='bg-slate-900/60 border border-slate-700/60 rounded-lg p-6 text-center'>'' <div className='p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg mx-auto mb-3 w-12 h-12 flex items-center justify-center'>'' :pages.disabled/pages/services/AICustomerExperienceSupport.tsx <Bot className='h-6 w-6 text-white' />' </div>''' <h4 className='text-lg font-semibold text-white mb-2'>AI Chatbot</h4>''' <p className='text-slate-300 text-sm'> 24/7 intelligent support with natural language processing' </p>'' </div>''' <div className='bg-slate-900/60 border border-slate-700/60 rounded-lg p-6 text-center>'' <div className='p-3 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg mx-auto mb-3 w-12 h-12 flex items-center justify-center>'' <Heart className='h-6 w-6 text-white' />' </div>''' <h4 className='text-lg font-semibold text-white mb-2'>Sentiment Analysis</h4>''' <p className='text-slate-300 text-sm'> Real-time customer mood detection and response optimization' </p>'' </div>''' <div className='bg-slate-900/60 border border-slate-700/60 rounded-lg p-6 text-center>'' <div className='p-3 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg mx-auto mb-3 w-12 h-12 flex items-center justify-center>'' <TrendingUp className='h-6 w-6 text-white' />' </div>''' <h4 className='text-lg font-semibold text-white mb-2'>Analytics</h4>''' <p className='text-slate-300 text-sm'> Comprehensive performance metrics and customer insights' </p>'' </div>''' <div className='bg-slate-900/60 border border-slate-700/60 rounded-lg p-6 text-center>'' <div className='p-3 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-lg mx-auto mb-3 w-12 h-12 flex items-center justify-center>'' <Users className='h-6 w-6 text-white' /> <//div>'' <h4 className='text-lg font-semibold text-white mb-2'>Multi-Channel</h4>' <p className='text-slate-300 text-sm'> Unified support across all customer touchpoints </p> </div> </div> </div> pages.disabled/pages/services/AICustomerExperienceSupport.tsx </section>" </section> </section> >>>>>>> pr-10728 <section className="py-12" px-4 sm: px-6 lgpx-8">" <div className="max-w-7xl" mx-auto bg-slate-800/50 border border-slate-700/50 rounded-xl p-8> <h3 className="text-2xl" font-semibold text-white mb-4">AI Capabilities</h3>" pages.disabled/pages/services/AICustomerExperienceSupport.tsx <div className="flex" flex-wrap gap-3>{aiCapabilities.map((capability) => ( <div className="flex flex-wrap gap-3"> <div className="flex" flex-wrap gap-3> {aiCapabilities.map((capability) => ( >>>>>>> pr-10728 <span key="{capability}" className="px-4" py-2 bg-slate-900/60 border border-slate-700/60 rounded-lg text-slate-300"> {capability} </span> ))} </div> </div> pages.disabled/pages/services/AICustomerExperienceSupport.tsx </section>" </section> </section> >>>>>>> pr-10728 <section className="py-12" px-4 sm: px-6 lgpx-8">" <div className="max-w-7xl" mx-auto bg-slate-800/50 border border-slate-700/50 rounded-xl p-8> <h3 className="text-2xl" font-semibold text-white mb-4">Platform Integrations</h3>" pages.disabled/pages/services/AICustomerExperienceSupport.tsx <div className="flex" flex-wrap gap-3>{integrations.map((integration) => ( <div className="flex flex-wrap gap-3"> <div className="flex" flex-wrap gap-3> {integrations.map((integration) => ( >>>>>>> pr-10728 <span key="{integration}" className="px-4" py-2 bg-slate-900/60 border border-slate-700/60 rounded-lg text-slate-300"> {integration} </span> ))} </div> </div> pages.disabled/pages/services/AICustomerExperienceSupport.tsx </section>" </section> </section> >>>>>>> pr-10728 <section className="py-12" px-4 sm: px-6 lgpx-8">" <div className="max-w-7xl" mx-auto bg-slate-800/50 border border-slate-700/50 rounded-xl p-8> <h3 className="text-2xl" font-semibold text-white mb-4">Tech Stack & Tools</h3>" pages.disabled/pages/services/AICustomerExperienceSupport.tsx <div className="flex" flex-wrap gap-3>{stack.map((s) => ( <div className="flex flex-wrap gap-3"> <div className="flex" flex-wrap gap-3> {stack.map((s) => ( >>>>>>> pr-10728 <a key="{s.name}" href="{s.url}" target=_blank" rel="noreferrer className="px-4" py-2 bg-slate-900/60 border border-slate-700/60 rounded-lg text-slate-300 hover: text-white hoverborder-cyan-500> {s.name} </a> ))} </div> </div> pages.disabled/pages/services/AICustomerExperienceSupport.tsx </section> </section>" </section> " >>>>>>> pr-10728 <section className="py-16" px-4 sm px-6 lgpx-8> <div className="max-w-7xl" mx-auto text-center">" <h2 className="text-3xl" font-bold text-white mb-8>Transform Your Customer Experience</h2> <div className="flex" flex-col sm flex-row gap-4 justify-center">" pages.disabled/pages/services/AICustomerExperienceSupport.tsx <Link to=/contact className="inline-flex" items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover from-cyan-600 hoverto-blue-700 transition-all duration-200> Start Free Trial"" <ArrowRight className="ml-2" h-5 w-5 /> </Link> <a href="tel+13024640950" className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover: bg-cyan-500 hovertext-white transition-all duration-200"> Call +1 302 464 0950 </a> <//div>; </a> <Link to=/contact className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover from-cyan-600 hoverto-blue-700 transition-all duration-200"> Start Free Trial <ArrowRight className="ml-2" h-5 w-5 /> </Link> <a href=tel:+13024640950" className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover bg-cyan-500 hovertext-white transition-all duration-200> Call +1 302 464 0950; </a> </div>; >>>>>>> pr-10728 <p className="text-slate-400" mt-6>;" Contact us at <a href="mailto:kleber@ziontechgroup.com className="text-cyan-400" hover underline>kleber@ziontechgroup.com</a> for enterprise solutions; </p>; </div>; </section>; pages.disabled/pages/services/AICustomerExperienceSupport.tsx </div>,' )} '' )}'"'" </div>; )}' >>>>>>> pr-10728 <ArrowRight className='ml-2 h-5 w-5' />' </Link>' <a href='tel: +13024640950' className='inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover: bg-cyan-500 hovertext-white transition-all duration-200'> Call +1 302 464 0950' </a>'</div>' <p className='text-slate-400 mt-6>' Contact us at <a href='mailt, o: kleber@ziontechgroup.com' className='text-cyan-400 hove, r underline'>kleber@ziontechgroup.com</a> for enterprise solutions </p> </div> </section> pages.disabled/pages/services/AICustomerExperienceSupport.tsx' </div>'')} '''"" 
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

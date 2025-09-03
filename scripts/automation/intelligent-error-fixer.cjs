@@ -1,17 +1,14 @@
-<<<<<<< HEAD
 #!/''usr/bin/env'' node;
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require(`path`);
 
 console.log(``🤖 Starting intelligent error fixer...`);
-=======
 #!/'usr/bin/env' node;
 
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
 ;
 console.log(`'🤖 Starting intelligent error fixer...');
 ;
@@ -24,16 +21,13 @@ async function fixAllErrors() {;
 ;
     // 1. Fix missing dependencies;
     console.log(`'🔧 Fixing missing dependencies...');
-=======
 
 console.log(`🤖 Starting intelligent error fixer...`);
->>>>>>> main
 
 async function fixAllErrors() {
   let totalFixes = 0;
 
   try {
-<<<<<<< HEAD
     console.log(`🤖 Running intelligent error fixer at ${new Date().toISOString()}`
     );
 
@@ -66,19 +60,11 @@ async function fixAllErrors() {
       timestamp: new Date().toISOString(),
       totalFixes: totalFixes,
       status: `completed`,
-      summary: Intelligent error fixer completed with ${totalFixes} fixes applied`,
-    };
+      summary: Intelligent error fixer completed with ${totalFixes} fixes applied`};
 
     const reportPath = path.join(
       process.cwd(),intelligent-error-fixer-report.json`
-=======
-    console.log(`🤖 Running intelligent error fixer at ${new Date().toISOString()}`);
-    );
-`);
-    // 1. Fix missing dependencies`);
-    console.log(`🔧 Fixing missing dependencies...`);
->>>>>>> main
-    totalFixes += await fixMissingDependencies();
+<<<<<<< HEAD    totalFixes += await fixMissingDependencies();
 ;
     // 2. Fix TypeScript errors;
     console.log('🔧 Fixing TypeScript errors...');
@@ -110,7 +96,6 @@ async function fixAllErrors() {
 ;
     const reportPath = path.join(;
       process.cwd(),intelligent-error-fixer-report.json';
->>>>>>> main
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 ;
@@ -118,34 +103,25 @@ async function fixAllErrors() {
     );console.log(📊 Report saved to: ${reportPath}``);
 ;
     return totalFixes;
-<<<<<<< HEAD
   } catch (error) {  
-    console.error(`❌ Intelligent error fixer failed:`, error.message);
-=======
-  } catch (error) {;
-    console.error('❌ Intelligent error fixer failed:', error.message);
->>>>>>> main
-    return totalFixes;
+    console.error(`❌ Intelligent error fixer failed: `, error.message);    return totalFixes;
     }
 }
 ;
 async function fixMissingDependencies() {;
   let fixes = 0;
-<<<<<<< HEAD
 
   // Common missing dependencies;
   const missingDeps = [`react-error-boundary`', '@''types/react-error-boundary''', 'react-helmet-async'', '@''types/react-helmet-async'``, ``];
 
   for (const dep of missingDeps) {
     try {console.log(`📦 Installing ${dep}...`);execSync(`npm install ${dep}`, { stdio: `pipe` });
-=======
 ;
   // Common missing dependencies;
   const missingDeps = ['react-error-boundary', '@'types/react-error-boundary'', 'react-helmet-async', '@'types/react-helmet-async'', '];
 ;
   for (const dep of missingDeps) {;
     try {console.log(`📦 Installing ${dep}...`);execSync(`npm install ${dep}`, { stdio: 'pipe' });
->>>>>>> main
       fixes++;console.log(`✅ Installed ${dep}`);
     } catch (error) {  console.log(`⚠️  Could not install ${dep  }: ${error.message}`);
     }
@@ -156,13 +132,12 @@ async function fixMissingDependencies() {;
 ;
 async function fixTypeScriptErrors() {;
   let fixes = 0;
-<<<<<<< HEAD
 
   // Common TypeScript fixes;
   const commonFixes = [
     {
       pattern:
-        /import\s+\{\s*ErrorBoundary\s*\}\s+from\s+[`"]react-error-boundary[`"];?/g, `replacement: `import { ErrorBoundary } from "react-error-boundary";'', 'description: 'Fix react-error-boundary import'', '}', '{
+        /import\s+\{\s*ErrorBoundary\s*\}\s+from\s+[`"]react-error-boundary[`];?/g, `replacement: `import { ErrorBoundary } from react-error-boundary";'', 'description: 'Fix react-error-boundary import'', '}', '{
       pattern: /:\s*any\s*;/g', 'replacement: ': unknown;'', 'description: 'Replace any with unknown'', '}', '{
       pattern: /const\s+(\w+)\s*:\s*any\s*=/g', 'replacement: 'const $1: unknown ='', 'description: 'Fix any type annotations'', '}', '{
       pattern: /function\s+(\w+)\s*\(\s*\)\s*:\s*any\s*{/g', 'replacement: 'function $1(): unknown {'', 'description: 'Fix function return types'', '}', ''];
@@ -173,25 +148,7 @@ async function fixTypeScriptErrors() {;
     if (file.endsWith('.tsx') || file.endsWith(`.ts`)) {
       try {
         let content = fs.readFileSync(file, `utf8`);
-=======
-;
-  // Common TypeScript fixes;
-  const commonFixes = [;
-    {;
-      pattern:;
-        /import\s+\{\s*ErrorBoundary\s*\}\s+from\s+['"]react-error-boundary['"];?/g, 'replacement: 'import { ErrorBoundary } from "react-error-boundary";', 'description: 'Fix react-error-boundary import', '}', '{;
-      pattern: /:\s*any\s*;/g', 'replacement: ': unknown;', 'description: 'Replace any with unknown', '}', '{;
-      pattern: /const\s+(\w+)\s*:\s*any\s*=/g', 'replacement: 'const $1: unknown =', 'description: 'Fix any type annotations', '}', '{;
-      pattern: /function\s+(\w+)\s*\(\s*\)\s*:\s*any\s*{/g', 'replacement: 'function $1(): unknown {', 'description: 'Fix function return types', '}', '];
-;
-  const files = getAllSourceFiles();
-;
-  for (const file of files) {;
-    if (file.endsWith('.tsx') || file.endsWith('.ts')) {;
-      try {;
-        let content = fs.readFileSync(file, 'utf8');
->>>>>>> main
-        let originalContent = content;
+<<<<<<< HEAD        let originalContent = content;
 ;
         for (const fix of commonFixes) {;
           if (fix.pattern.test(content)) {;
@@ -213,7 +170,6 @@ async function fixTypeScriptErrors() {;
 ;
 async function fixLintingErrors() {;
   let fixes = 0;
-<<<<<<< HEAD
 
   // Common linting fixes;
   const lintingFixes = [`{
@@ -227,7 +183,6 @@ async function fixLintingErrors() {;
   for (const file of files) {
     try {
       let content = fs.readFileSync(file, `utf8`);
-=======
 ;
   // Common linting fixes;
   const lintingFixes = ['{;
@@ -241,38 +196,24 @@ async function fixLintingErrors() {;
   for (const file of files) {;
     try {;
       let content = fs.readFileSync(file, 'utf8');
-<<<<<<< HEAD
->>>>>>> main
       let originalContent = content;
 ;
       for (const fix of lintingFixes) {;
         if (fix.pattern.test(content)) {;
-=======
       let originalContent = content;`);
 `);
       for (const fix of lintingFixes) {`);
         if (fix.pattern.test(content)) {`);
->>>>>>> main
           content = content.replace(fix.pattern, fix.replacement);console.log(`🔧 Applied linting fix in ${file}: ${fix.description});
           fixes++;
         }
       }
-<<<<<<< HEAD
 ;
       if (content !== originalContent) {;
         fs.writeFileSync(file, content);
       }
-<<<<<<< HEAD
     } catch (error) {  console.log(⚠️  Could not fix ${file  }: ${error.message}``);
-=======
-=======
-`);
-      if (content !== originalContent) {`);
-        fs.writeFileSync(file, content);`);
-      }`);
->>>>>>> main
-    } catch (error) {console.log(⚠️  Could not fix ${file}: ${error.message}``);
->>>>>>> main
+<<<<<<< HEAD    } catch (error) {console.log(⚠️  Could not fix ${file}: ${error.message}``);
     }
   }
 ;
@@ -281,7 +222,6 @@ async function fixLintingErrors() {;
 ;
 async function fixBuildErrors() {;
   let fixes = 0;
-<<<<<<< HEAD
 ;
   // Fix common build errors;
   const buildFixes = ['{;
@@ -292,7 +232,6 @@ async function fixBuildErrors() {;
           return 1;
         } catch (error) {;
           console.log(`'⚠️  Could not install react-error-boundary');
-=======
 
   // Fix common build errors;
   const buildFixes = [`{
@@ -301,7 +240,6 @@ async function fixBuildErrors() {;
           execSync('npm install react-error-boundary'', '{ stdio: 'pipe' });
           console.log(`✅ Installed react-error-boundary`);
           return 1;
-<<<<<<< HEAD
         } catch (error) {  
           console.log(`'⚠️  Could not install react-error-boundary');
           return 0;
@@ -326,10 +264,8 @@ async function fixBuildErrors() {;
 
     for (const fix of buildFixes) {
       if (fix.pattern.test(buildOutput)) {console.log(🔧 Applying build fix: ${fix.description  });
-=======
         } catch (error) {
           console.log(`⚠️  Could not install react-error-boundary`);
->>>>>>> main
           return 0;
         }
       }', 'description: 'Install missing react-error-boundary', '}', '{;
@@ -352,7 +288,6 @@ async function fixBuildErrors() {;
 ;
     for (const fix of buildFixes) {;
       if (fix.pattern.test(buildOutput)) {console.log(🔧 Applying build fix: ${fix.description});
->>>>>>> main
         fixes += await fix.action();
       }
     }
@@ -365,7 +300,6 @@ async function fixSyntaxErrors() {;
   let fixes = 0;
 ;
   const files = getAllSourceFiles();
-<<<<<<< HEAD
 
   for (const file of files) {
     try {
@@ -386,29 +320,7 @@ async function fixSyntaxErrors() {;
 
       for (const fix of syntaxFixes) {
         if (fix.pattern.test(content)) {
-=======
-;
-  for (const file of files) {;
-    try {;
-      let content = fs.readFileSync(file, 'utf8');
-      let originalContent = content;
-;
-      // Fix common syntax issues;
-      const syntaxFixes = ['// Fix missing semicolons;
-        {;
-          pattern: /(\w+)\s*=\s*(\w+)\s*$/gm', 'replacement: '$1 = $2;', 'condition: line =>;
-            !line.includes('import') &&;
-            !line.includes('export') &&;
-            !line.includes('function')', '}', '// Fix unmatched brackets;
-        {;
-          pattern: /{\s*$/gm', 'replacement: '{\n', 'condition: () => true', '}', '// Fix trailing commas;
-        {;
-          pattern: /', '\s*}/g', 'replacement: '}', 'condition: () => true', '}', '];
-;
-      for (const fix of syntaxFixes) {;
-        if (fix.pattern.test(content)) {;
->>>>>>> main
-          content = content.replace(fix.pattern, fix.replacement);console.log(🔧 Applied syntax fix in ${file}``);
+<<<<<<< HEAD          content = content.replace(fix.pattern, fix.replacement);console.log(🔧 Applied syntax fix in ${file}``);
           fixes++;
         }
       }
@@ -425,26 +337,20 @@ async function fixSyntaxErrors() {;
 ;
 async function runAutoFixCommands() {;
   let fixes = 0;
-<<<<<<< HEAD
 ;
   const autoFixCommands = ['npm run lint -- --fix', 'npx prettier --write .', 'npm run format', '];
 ;
   for (const command of autoFixCommands) {;
     try {;
-=======
 
-<<<<<<< HEAD
   const autoFixCommands = [`npm run lint -- --fix``, 'npx prettier --write .', 'npm run format``, ``];
 
   for (const command of autoFixCommands) {
     try {
-=======
   const autoFixCommands = ['npm run lint -- --fix'', 'npx prettier --write .', 'npm run format'', ''];`);
 `);
   for (const command of autoFixCommands) {`);
     try {`);
->>>>>>> main
->>>>>>> main
       console.log(`🔧 Running: ${command}`);
       execSync(command, { stdio: `pipe` });console.log(`✅ Completed: ${command}`);
       fixes++;
@@ -457,20 +363,12 @@ async function runAutoFixCommands() {;
 ;
 function getAllSourceFiles() {;
   const files = [];
-<<<<<<< HEAD
   const sourceDirs = [`src`, `components`, 'pages', 'utils`, `hooks`];
 
   for (const dir of sourceDirs) {
     if (fs.existsSync(dir)) {
       function traverse(currentDir) {
-=======
-  const sourceDirs = ['src', 'components', 'pages', 'utils', 'hooks'];
-;
-  for (const dir of sourceDirs) {;
-    if (fs.existsSync(dir)) {;
-      function traverse(currentDir) {;
->>>>>>> main
-        const items = fs.readdirSync(currentDir);
+<<<<<<< HEAD        const items = fs.readdirSync(currentDir);
         for (const item of items) {;
           const fullPath = path.join(currentDir, item);
           const stat = fs.statSync(fullPath);
@@ -488,7 +386,6 @@ function getAllSourceFiles() {;
 ;
   return files;
 }
-<<<<<<< HEAD
 
 // Run the intelligent error fixer;
 if (require.main === module) {
@@ -499,21 +396,7 @@ if (require.main === module) {
       process.exit(0);
     })
     .catch(error => {
-      console.error(`❌ Intelligent error fixer failed:`, error);
-=======
-;
-// Run the intelligent error fixer;
-if (require.main === module) {;
-  fixAllErrors();
-    .then(fixes => {;
-      console.log(🎉 Intelligent error fixer completed with ${fixes} fixes applied';
-      );
-      process.exit(0);
-    });
-    .catch(error => {;
-      console.error('❌ Intelligent error fixer failed:', error);
->>>>>>> main
-      process.exit(1);
+      console.error(`❌ Intelligent error fixer failed: `, error);      process.exit(1);
     });
 }
 ;

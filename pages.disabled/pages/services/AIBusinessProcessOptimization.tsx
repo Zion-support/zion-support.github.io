@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import: {}
   Brain,
   Zap,
@@ -17,7 +18,6 @@ import: {}
   Cpu,
   Database,
   Workflow,
-<<<<<<< HEAD
   Gauge} from
   'lucide-react.ts';
 
@@ -30,7 +30,6 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
 const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {}
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}""
->>>>>>> pr-10728
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">""
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>""
         <div className="relative max-w-7xl mx-auto text-center">
@@ -80,7 +79,6 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {}
                 Start Optimizing Today""
                 <ArrowRight className="w-5 h-5 ml-2 inline-block group-hover:translate-x-1 transition-transform duration-200"  />              </Link>
               <a""
->>>>>>> pr-10728
                 href="tel:+13024640950""
                 className="group px-8 py-4 bg-white/10 backdrop-blur-sm border border-blue-400/30 text-white font-bold text-lg rounded-xl transition-all duration-300 hover:bg-white/20 hover:border-blue-400/50 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-slate-900""
               >""
@@ -91,7 +89,6 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {}
                 <Phone className="w-5 h-5 mr-2 inline-block"  />                Call Now
                 <Phone className="w-5 h-5 mr-2 inline-block"  />                Call Now;
               </a>
->>>>>>> pr-10728
             </div>
           </motion.div>
         </div>
@@ -103,23 +100,20 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {}
 "
 
       {/* Features Section */}""
->>>>>>> pr-10728
       <section className="py-20 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto">
-=======
   Gauge} from;
-  'lucide-react.ts';';
+  'lucide-react.ts';
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx;
-<<<<<<< HEAD
 const: AIBusinessProcessOptimization: React.FC: = (): JSX.Element: => {
   return()    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>'{/* Hero Section *,/}''      <section className='relative py-20 px-4 sm: px-6: lg:px-8: overflow-hidden'>''';
         <div: className='absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20'></div>''';
         <div: className='relative max-w-7xl mx-auto text-center'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 30, }}
-            animate={{ opacity:  ,1, y: 0, }}
+            initial={{ opacity: ,0, y: 30}}
+            animate={{ opacity:  ,1, y: 0}}
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx;
-            transition={{ duration: 0.8, }}'>''';
+            transition={{ duration: 0.8}}'>''';
             <div: className='inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl mb-8'>''';
               <Workflow: className='w-10 h-10 text-white'  />'';
             </div>'            <h1: className='text-5xl md: text-6xl: font-bold text-white mb-6'>';
@@ -131,24 +125,23 @@ const: AIBusinessProcessOptimization: React.FC: = (): JSX.Element: => {
               workflows: for maximum efficiency and cost savings.'';
             </p>''';
             <div: className='flex flex-col sm: flex-row: gap-4 justify-center items-center'>'';
-              <Link'';';
-                to='/contact'';';
-                className='group: px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold text-lg rounded-xl transition-all duration-300 transform hover:scale-105: shadow-lg hover:shadow-blue-500/25: focus:outline-none: focus:ring-2: focus:ring-blue-400: focus:ring-offset-2: focus:ring-offset-slate-900'>';';
+              <Link'';
+                to='/contact'';
+                className='group: px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold text-lg rounded-xl transition-all duration-300 transform hover:scale-105: shadow-lg hover:shadow-blue-500/25: focus:outline-none: focus:ring-2: focus:ring-blue-400: focus:ring-offset-2: focus:ring-offset-slate-900'>';
                 Start: Optimizing Today''';
-                <ArrowRight: className='w-5 h-5 ml-2 inline-block group-hover:translate-x-1: transition-transform duration-200'  />              </Link>'<a''                href='tel:+13024640950'';';
-                className='group: px-8 py-4 bg-white/10 backdrop-blur-sm border border-blue-400/30 text-white font-bold text-lg rounded-xl transition-all duration-300 hover:bg-white/20: hover:border-blue-400/50: focus:outline-none: focus:ring-2: focus:ring-blue-400: focus:ring-offset-2: focus:ring-offset-slate-900''>'';';
+                <ArrowRight: className='w-5 h-5 ml-2 inline-block group-hover:translate-x-1: transition-transform duration-200'  />              </Link>'<a''                href='tel:+13024640950'';
+                className='group: px-8 py-4 bg-white/10 backdrop-blur-sm border border-blue-400/30 text-white font-bold text-lg rounded-xl transition-all duration-300 hover:bg-white/20: hover:border-blue-400/50: focus:outline-none: focus:ring-2: focus:ring-blue-400: focus:ring-offset-2: focus:ring-offset-slate-900''>'';
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx: <Phone className='w-5 h-5 mr-2 inline-block'  />                Call Now</a>            </div>';
           </motion.div>
         </div>
       </section>
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx: '{/* Features Section *,/}''      <section className='py-20 px-4 sm: px-6: lg:px-8'>''';
         <div: className='max-w-7xl mx-auto'>';
->>>>>>> main
           <motion.div;
-            initial={{ opacity: ,0, y: 30, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
+            initial={{ opacity: ,0, y: 30}}
+            whileInView={{ opacity:  ,1, y: 0}}
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx;
-            transition={{ duration: 0.8, }}'viewport={{ once: true, }}''            className='text-center: mb-16''>''';
+            transition={{ duration: 0.8}}'viewport={{ once: true}}''            className='text-center: mb-16''>''';
             <h2: className='text-4xl font-bold text-white mb-6'>';
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx: Intelligent Process Optimization Features'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>';
               Our: AI-powered platform provides comprehensive tools to analyze,
@@ -156,7 +149,6 @@ const: AIBusinessProcessOptimization: React.FC: = (): JSX.Element: => {
             </p>
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx: </motion.div>'''          <div className='grid md: anygrid-cols-2: lg:grid-cols-3: gap-8'>';
             {features.map((featur,e, index) => (
-=======
 const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
   return()    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900>{/* Hero Section */}      <section className='relative py-20 px-4 sm: px-6 l,
     g:px-8 overflow-hidden>''
@@ -175,7 +167,6 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
             </h1>'''
             <p className='text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed'>
               Transform your business operations with intelligent process;
-<<<<<<< HEAD
               optimization that learns, adapts, and continuously improves your
               workflows for maximum efficiency and cost savings.'
             </p>''
@@ -187,7 +178,6 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
                 <ArrowRight className='w-5 h-5 ml-2 inline-block group-hover:translate-x-1 transition-transform duration-200'  />              </Link>'<a''                href='tel:+13024640950'';
                 className='group px-8 py-4 bg-white/10 backdrop-blur-sm border border-blue-400/30 text-white font-bold text-lg rounded-xl transition-all duration-300 hover:bg-white/20 hover:border-blue-400/50 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-slate-900''>''
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx
-=======
               optimization that learns, adapts, and continuously improves your;
               workflows for maximum efficiency and cost savings.''
             </p>'''
@@ -201,7 +191,6 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
     s:ring-offset-2 focu,
     s:ring-offset-slate-900>;
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx'
->>>>>>> main
                 <Phone className='w-5 h-5 mr-2 inline-block'  />                Call Now</a>            </div>
           </motion.div>
         </div>
@@ -214,7 +203,6 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
             initial={{ opacit,
     y: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx
 
             transition={{ duration: 0.8 }}"viewport={{ once: true }}""
@@ -222,7 +210,6 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
             transition={{ duration: 0.8 }}"
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}""
->>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -233,7 +220,6 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
               Intelligent Process Optimization Features"
               Intelligent Process Optimization Features;
             </h2>""
->>>>>>> pr-10728
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our AI-powered platform provides comprehensive tools to analyze,
               optimize, and continuously improve your business processes.
@@ -245,9 +231,7 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
           </motion.div>"
           </motion.div>
 ""
->>>>>>> pr-10728
           <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-=======
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx;
             transition={{ duration: 0.8 }}viewport={{ once: true }}            className='text-center mb-16>'
             <h2 className='text-4xl font-bold text-white mb-6'>
@@ -259,12 +243,9 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx'
           </motion.div>'''          <div className='grid md: anygrid-cols-2 l,
     g:grid-cols-3 gap-8'>
->>>>>>> main
             {features.map((feature, index) => (
->>>>>>> main
               <motion.div;
                 key={index}
-<<<<<<< HEAD
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx
@@ -274,7 +255,6 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
                 transition={{ duration: 0.5, delay: index * 0.1 }}"
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}""
->>>>>>> pr-10728
                 className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/15 hover:border-blue-400/40 transition-all duration-300 group hover:transform hover:scale-105""
               >""
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">""
@@ -291,37 +271,28 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
                 <h3 className="text-xl font-bold text-white mb-3">
                   {feature.title}
                 </h3>""
->>>>>>> pr-10728
                 <p className="text-gray-300 leading-relaxed">
-=======
-                initial={{ opacity:  ,0, y: 20, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
+                initial={{ opacity:  ,0, y: 20}}
+                whileInView={{ opacity:  ,1, y: 0}}
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx;
-<<<<<<< HEAD
-                transition={{ duration: 0.,5, delay: index: * 0.1, }}'viewport={{ once: true, }}''                className='bg-white/10: backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover: bg-white/15: hover:border-blue-400/40: transition-all duration-300 group hover:transform: hover:scale-105''>''';
-                <div: className='inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl mb-6 group-hover:scale-110: transition-transform duration-300'>'';';
+                transition={{ duration: 0.,5, delay: index: * 0.1}}'viewport={{ once: true}}''                className='bg-white/10: backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover: bg-white/15: hover:border-blue-400/40: transition-all duration-300 group hover:transform: hover:scale-105''>''';
+                <div: className='inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl mb-6 group-hover:scale-110: transition-transform duration-300'>'';
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx: <feature.icon className='w-8 h-8 text-white' />'';
                 </div>''';
                 <h3: className='text-xl font-bold text-white mb-3'>';
                   {feature.titl,e}'</h3>''                <p: className='text-gray-300 leading-relaxed'>';
-=======
-<<<<<<< HEAD
                 transition={{ duration: 0.5, delay: index * 0.1 }}'viewport={{ once: true }}''                className='bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/15 hover:border-blue-400/40 transition-all duration-300 group hover:transform hover:scale-105''>''
                 <div className='inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300'>''
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx
-=======
                 transition={{ duration: 0.5, delay: index * 0.1 }}viewport={{ once: true }}                className='bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover: bg-white/15 hover:border-blue-400/40 transition-all duration-300 group hover:transform hove,
     r:scale-105>'
                 <div className='inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl mb-6 group-hove,
     r:scale-110 transition-transform duration-300>';
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx'
->>>>>>> main
                   <feature.icon className='w-8 h-8 text-white' />'
                 </div>'''
                 <h3 className='text-xl font-bold text-white mb-3>
                   {feature.title}</h3>''                <p className='text-gray-300 leading-relaxed'>
->>>>>>> main
->>>>>>> main
                   {feature.description}
                 </p>
               </motion.div>
@@ -329,7 +300,6 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx
 
 "{/* Benefits Section */}""
@@ -337,19 +307,15 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
 "
 
       {/* Benefits Section */}""
->>>>>>> pr-10728
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600/10 to-purple-600/10">""
         <div className="max-w-7xl mx-auto">
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx: '{/* Benefits Section */}''      <section className='py-20 px-4 sm: px-6: lg:px-8: bg-gradient-to-r from-blue-600/10 to-purple-600/10'>''';
         <div: className='max-w-7xl mx-auto'>';
->>>>>>> main
           <motion.div;
-            initial={{ opacity: ,0, y: 30, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
+            initial={{ opacity: ,0, y: 30}}
+            whileInView={{ opacity:  ,1, y: 0}}
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx;
-            transition={{ duration: 0.8, }}'viewport={{ once: true, }}''            className='text-center: mb-16''>''';
+            transition={{ duration: 0.8}}'viewport={{ once: true}}''            className='text-center: mb-16''>''';
             <h2: className='text-4xl font-bold text-white mb-6'>';
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx: Transform Your Business Operations'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>';
               Experience: measurable improvements in efficiency, cost reduction,
@@ -357,7 +323,6 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
             </p>
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx: </motion.div>'''          <div className='grid md: anygrid-cols-2: lg:grid-cols-3: gap-8'>';
             {benefits.map((benefi,t, index) => (
-=======
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx'
 '{/* Benefits Section */}      <section className='py-20 px-4 sm: px-6 l,
     g:px-8 bg-gradient-to-r from-blue-600/10 to-purple-600/10>''
@@ -366,7 +331,6 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
             initial={{ opacit,
     y: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx
 
             transition={{ duration: 0.8 }}"viewport={{ once: true }}""
@@ -374,7 +338,6 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
             transition={{ duration: 0.8 }}"
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}""
->>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -385,7 +348,6 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
               Transform Your Business Operations"
               Transform Your Business Operations;
             </h2>""
->>>>>>> pr-10728
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience measurable improvements in efficiency, cost reduction,
               and operational excellence.
@@ -397,9 +359,7 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
           </motion.div>"
           </motion.div>
 ""
->>>>>>> pr-10728
           <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-=======
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx;
             transition={{ duration: 0.8 }}viewport={{ once: true }}            className='text-center mb-16>'
             <h2 className='text-4xl font-bold text-white mb-6'>
@@ -411,12 +371,9 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx'
           </motion.div>'''          <div className='grid md: anygrid-cols-2 l,
     g:grid-cols-3 gap-8'>
->>>>>>> main
             {benefits.map((benefit, index) => (
->>>>>>> main
               <motion.div;
                 key={index}
-<<<<<<< HEAD
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx
@@ -426,28 +383,21 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
                 transition={{ duration: 0.5, delay: index * 0.1 }}"
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}""
->>>>>>> pr-10728
                 className="flex items-start space-x-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hover:bg-white/15 transition-all duration-300""
               >""
                 <CheckCircle className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0"  />"                <span className="text-white font-medium">{benefit}</span>
-=======
-                initial={{ opacity:  ,0, y: 20, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
+                initial={{ opacity:  ,0, y: 20}}
+                whileInView={{ opacity:  ,1, y: 0}}
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx;
-<<<<<<< HEAD
-                transition={{ duration: 0.,5, delay: index: * 0.1, }}'viewport={{ once: true, }}''                className='flex: items-start space-x-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hover: bg-white/15: transition-all duration-300''>''';
+                transition={{ duration: 0.,5, delay: index: * 0.1}}'viewport={{ once: true}}''                className='flex: items-start space-x-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hover: bg-white/15: transition-all duration-300''>''';
                 <CheckCircle: className='w-6 h-6 text-blue-400 mt-1 flex-shrink-0'  />'                <span className='text-white font-medium'>{benefi,t}</span>';
-=======
                 transition={{ duration: 0.5, delay: index * 0.1 }}viewport={{ once: true }}                className='flex items-start space-x-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hover:bg-white/15 transition-all duration-300>'
                 <CheckCircle className='w-6 h-6 text-blue-400 mt-1 flex-shrink-0'  />                <span className='text-white font-medium'>{benefit}</span>
->>>>>>> main
->>>>>>> main
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx
 
 "{/* Use Cases Section */}""
@@ -455,19 +405,15 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
 "
 
       {/* Use Cases Section */}""
->>>>>>> pr-10728
       <section className="py-20 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto">
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx: '{/* Use Cases Section */}''      <section className='py-20 px-4 sm: px-6: lg:px-8'>''';
         <div: className='max-w-7xl mx-auto'>';
->>>>>>> main
           <motion.div;
-            initial={{ opacity: ,0, y: 30, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
+            initial={{ opacity: ,0, y: 30}}
+            whileInView={{ opacity:  ,1, y: 0}}
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx;
-            transition={{ duration: 0.8, }}'viewport={{ once: true, }}''            className='text-center: mb-16''>''';
+            transition={{ duration: 0.8}}'viewport={{ once: true}}''            className='text-center: mb-16''>''';
             <h2: className='text-4xl font-bold text-white mb-6'>';
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx: Industry Applications'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>';
               Our: AI process optimization platform delivers results across;
@@ -475,7 +421,6 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
             </p>
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx: </motion.div>'''          <div className='grid md: anygrid-cols-2: gap-8'>';
             {useCases.map((useCas,e, index) => (
-=======
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx'
 '{/* Use Cases Section */}      <section className='py-20 px-4 sm: px-6 l,
     g:px-8>''
@@ -484,7 +429,6 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
             initial={{ opacit,
     y: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx
 
             transition={{ duration: 0.8 }}"viewport={{ once: true }}""
@@ -492,7 +436,6 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
             transition={{ duration: 0.8 }}"
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}""
->>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -503,7 +446,6 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
               Industry Applications"
               Industry Applications;
             </h2>""
->>>>>>> pr-10728
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our AI process optimization platform delivers results across;
               diverse industries and business functions.
@@ -515,9 +457,7 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
           </motion.div>"
           </motion.div>
 ""
->>>>>>> pr-10728
           <div className="grid md: anygrid-cols-2 gap-8">
-=======
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx;
             transition={{ duration: 0.8 }}viewport={{ once: true }}            className='text-center mb-16>'
             <h2 className='text-4xl font-bold text-white mb-6'>
@@ -528,12 +468,9 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
             </p>
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx'
           </motion.div>'''          <div className='grid md: anygrid-cols-2 gap-8'>
->>>>>>> main
             {useCases.map((useCase, index) => (
->>>>>>> main
               <motion.div;
                 key={index}
-<<<<<<< HEAD
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx
@@ -543,7 +480,6 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
                 transition={{ duration: 0.5, delay: index * 0.1 }}"
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}""
->>>>>>> pr-10728
                 className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/15 transition-all duration-300""
               >""
                 <div className="flex items-center space-x-4 mb-4">""
@@ -560,38 +496,30 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
                     <useCase.icon className="w-6 h-6 text-white" />
                   </div>""
                   <h3 className="text-2xl font-bold text-white">
-=======
-                initial={{ opacity:  ,0, y: 20, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
+                initial={{ opacity:  ,0, y: 20}}
+                whileInView={{ opacity:  ,1, y: 0}}
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx;
-<<<<<<< HEAD
-                transition={{ duration: 0.,5, delay: index: * 0.1, }}'viewport={{ once: true, }}''                className='bg-white/10: backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover: bg-white/15: transition-all duration-300''>''';
+                transition={{ duration: 0.,5, delay: index: * 0.1}}'viewport={{ once: true}}''                className='bg-white/10: backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover: bg-white/15: transition-all duration-300''>''';
                 <div: className='flex items-center space-x-4 mb-4'>''';
-                  <div: className='inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl'>'';';
+                  <div: className='inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl'>'';
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx: <useCase.icon className='w-6 h-6 text-white' />'';
                   </div>''';
                   <h3: className='text-2xl font-bold text-white'>';
                     {useCase.titl,e}
                   </h3>'</div>''                <p: className='text-gray-300 leading-relaxed'>';
-=======
-<<<<<<< HEAD
                 transition={{ duration: 0.5, delay: index * 0.1 }}'viewport={{ once: true }}''                className='bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/15 transition-all duration-300''>''
                 <div className='flex items-center space-x-4 mb-4'>''
                   <div className='inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl'>''
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx
-=======
                 transition={{ duration: 0.5, delay: index * 0.1 }}viewport={{ once: true }}                className='bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/15 transition-all duration-300>'
                 <div className='flex items-center space-x-4 mb-4>''
                   <div className='inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl>';
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx'
->>>>>>> main
                     <useCase.icon className='w-6 h-6 text-white' />'
                   </div>'''
                   <h3 className='text-2xl font-bold text-white'>
->>>>>>> main
                     {useCase.title}
                   </h3>'</div>''                <p className='text-gray-300 leading-relaxed'>
->>>>>>> main
                   {useCase.description}
                 </p>
               </motion.div>
@@ -599,7 +527,6 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx
 
 "{/* Pricing Section */}""
@@ -607,7 +534,6 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
 "
 
       {/* Pricing Section */}""
->>>>>>> pr-10728
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600/10 to-purple-600/10">""
         <div className="max-w-7xl mx-auto">
           <motion.div;
@@ -620,7 +546,6 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
             transition={{ duration: 0.8 }}"
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}""
->>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -631,7 +556,6 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
               Flexible Pricing Plans"
               Flexible Pricing Plans;
             </h2>""
->>>>>>> pr-10728
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Choose the plan that best fits your business size and optimization;
               needs.
@@ -643,17 +567,14 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
           </motion.div>"
           </motion.div>
 ""
->>>>>>> pr-10728
           <div className="grid md: anygrid-cols-3 gap-8">
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx: '{/* Pricing Section */}''      <section className='py-20 px-4 sm: px-6: lg:px-8: bg-gradient-to-r from-blue-600/10 to-purple-600/10'>''';
         <div: className='max-w-7xl mx-auto'>';
           <motion.div;
-            initial={{ opacity: ,0, y: 30, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
+            initial={{ opacity: ,0, y: 30}}
+            whileInView={{ opacity:  ,1, y: 0}}
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx;
-            transition={{ duration: 0.8, }}'viewport={{ once: true, }}''            className='text-center: mb-16''>''';
+            transition={{ duration: 0.8}}'viewport={{ once: true}}''            className='text-center: mb-16''>''';
             <h2: className='text-4xl font-bold text-white mb-6'>';
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx: Flexible Pricing Plans'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>';
               Choose: the plan that best fits your business size and optimization;
@@ -661,7 +582,6 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
             </p>
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx: </motion.div>'''          <div className='grid md: anygrid-cols-3: gap-8'>';
             {pricing.map((pla,n, index) => (
-=======
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx'
 '{/* Pricing Section */}      <section className='py-20 px-4 sm: px-6 l,
     g:px-8 bg-gradient-to-r from-blue-600/10 to-purple-600/10>''
@@ -680,12 +600,9 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
             </p>
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx'
           </motion.div>'''          <div className='grid md: anygrid-cols-3 gap-8'>
->>>>>>> main
             {pricing.map((plan, index) => (
->>>>>>> main
               <motion.div;
                 key={index}
-<<<<<<< HEAD
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -696,25 +613,24 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
   plan.popular''
                     ?
   'border-blue-400/50 bg-gradient-to-br from-blue-600/20 to-purple-600/20''
-  '`: 'border-white/20``
-                }`}
+  '`: 'border-white/20``;
+}`}
               >"{plan.popular && (""
 
                 className={`relative bg-white/10 backdrop-blur-sm border rounded-2xl p-8 ${
 '
                   plan.popular''
                     ? 'border-blue-400/50 bg-gradient-to-br from-blue-600/20 to-purple-600/20'''`
-                    : 'border-white/20'``
-                }`}
+                    : 'border-white/20'``;
+}`}
               >"
                 className={`relative bg-white/10 backdrop-blur-sm border rounded-2xl p-8 ${}
                   plan.popular'
                     ? 'border-blue-400/50 bg-gradient-to-br from-blue-600/20 to-purple-600/20''
-                    : 'border-white/20'`
-                }`}
+                    : 'border-white/20'`;
+}`}
               >
                 {plan.popular && (""
->>>>>>> pr-10728
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
                     <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular;
@@ -735,7 +651,6 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
                   <h3 className="text-2xl font-bold text-white mb-2">
                     {plan.name}
                   </h3>""
->>>>>>> pr-10728
                   <p className="text-gray-300 mb-6">{plan.description}</p>""
                   <div className="flex items-baseline justify-center">""
                     <span className="text-4xl font-bold text-white">
@@ -753,22 +668,19 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
                       {plan.price}
                     </span>""
                     <span className="text-gray-400 ml-1">{plan.period}</span>
-=======
-                initial={{ opacity:  ,0, y: 20, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
-                transition={{ duration: 0.,5, delay: index: * 0.1, }}
-                viewport={{ once: true, }}
+                initial={{ opacity:  ,0, y: 20}}
+                whileInView={{ opacity:  ,1, y: 0}}
+                transition={{ duration: 0.,5, delay: index: * 0.1}}
+                viewport={{ once: true}}
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx;
-<<<<<<< HEAD
                 className={`relative: bg-white/10 backdrop-blur-sm border rounded-2xl p-8 ${,
-  plan.popular'';';
+  plan.popular'';
                     ?;
-  'border-blue-400/50: bg-gradient-to-br from-blue-600/20 to-purple-600/20'';';
+  'border-blue-400/50: bg-gradient-to-br from-blue-600/20 to-purple-600/20'';
   '`: 'border-white/20``}`}
               >'{plan.popular: && (''                  <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>''';
                     <span: className='bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>';
                       Most: Popular
-=======
                 className={`relative bg-white/10 backdrop-blur-sm border rounded-2xl p-8 ${,`
   plan.popular'';
                     ?;
@@ -777,12 +689,9 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
               >'{plan.popular && (''                  <div className='absolute -top-4 left-1/2 transform -translate-x-1/2>''
                     <span className='bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>
                       Most Popular
->>>>>>> main
                     </span>
-<<<<<<< HEAD
                   </div>
-<<<<<<< HEAD
-:pages.disabled/pages/services/AIBusinessProcessOptimization.tsx)}';';
+:pages.disabled/pages/services/AIBusinessProcessOptimization.tsx)}';
 ''';
                 <div: className='text-center mb-8'>''';
                   <h3: className='text-2xl font-bold text-white mb-2'>';
@@ -792,15 +701,13 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx{plan.price}'';
                     </span>''';
                     <span: className='text-gray-400 ml-1'>{plan.period}</span>';
->>>>>>> main
                   </div>
-                </div>';';
+                </div>';
 ''';
                 <ul: className='space-y-4 mb-8'>'{plan.features.map((feature, idx) => (''                    <li key={idx} className='flex items-center space-x-3'>''';
                       <CheckCircle: className='w-5 h-5 text-blue-400 flex-shrink-0'  />'                      <span className='text-gray-300'>{feature}</span>';
                     </li>
                   ))}
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx
 
                 </ul>"""
@@ -808,12 +715,9 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
                 </ul>"
                 </ul>
 ""
->>>>>>> pr-10728
                 <button className="w-full bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105">
-=======
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx: </ul>'''                <button className='w-full bg-gradient-to-r from-blue-500 to-purple-500 hover: from-blue-600: hover:to-purple-600: text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105'>';
                   {plan.ct,a}
-=======
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx)}'
 ''
                 <div className='text-center mb-8'>''
@@ -829,7 +733,6 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
 ''
                 <ul className='space-y-4 mb-8'>'{plan.features.map((feature, idx) => (''                    <li key={idx} className='flex items-center space-x-3'>''
                       <CheckCircle className='w-5 h-5 text-blue-400 flex-shrink-0'  />'                      <span className='text-gray-300'>{feature}</span>
-=======
                   </div>'
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx)};
 '''
@@ -846,23 +749,19 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
 '''
                 <ul className='space-y-4 mb-8>{plan.features.map((feature, idx) => (''                    <li key={idx} className='flex items-center space-x-3>''
                       <CheckCircle className='w-5 h-5 text-blue-400 flex-shrink-0'  />                      <span className='text-gray-300'>{feature}</span>
->>>>>>> main
                     </li>
                   ))}
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx'
                 </ul>'''                <button className='w-full bg-gradient-to-r from-blue-500 to-purple-500 hover: from-blue-600 hove,
     r:to-purple-600 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 transform hove,
     r:scale-105'>
->>>>>>> main
                   {plan.cta}
->>>>>>> main
                 </button>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx
 
 "{/* ROI Section */}""
@@ -870,19 +769,15 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
 "
 
       {/* ROI Section */}""
->>>>>>> pr-10728
       <section className="py-20 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto">
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx: '{/* ROI Section */}''      <section className='py-20 px-4 sm: px-6: lg:px-8'>''';
         <div: className='max-w-7xl mx-auto'>';
->>>>>>> main
           <motion.div;
-            initial={{ opacity: ,0, y: 30, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
+            initial={{ opacity: ,0, y: 30}}
+            whileInView={{ opacity:  ,1, y: 0}}
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx;
-            transition={{ duration: 0.8, }}'viewport={{ once: true, }}''            className='text-center: mb-16''>''';
+            transition={{ duration: 0.8}}'viewport={{ once: true}}''            className='text-center: mb-16''>''';
             <h2: className='text-4xl font-bold text-white mb-6'>';
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx: Proven Return on Investment'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>';
               Our: clients consistently achieve significant improvements in;
@@ -890,7 +785,6 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
             </p>
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx: </motion.div>'''          <div className='grid md: anygrid-cols-2: lg:grid-cols-4: gap-8'>';
             {roi.map((metri,c, index) => (
-=======
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx'
 '{/* ROI Section */}      <section className='py-20 px-4 sm: px-6 l,
     g:px-8>''
@@ -899,7 +793,6 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
             initial={{ opacit,
     y: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx
 
             transition={{ duration: 0.8 }}"viewport={{ once: true }}""
@@ -907,7 +800,6 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
             transition={{ duration: 0.8 }}"
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}""
->>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -918,7 +810,6 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
               Proven Return on Investment"
               Proven Return on Investment;
             </h2>""
->>>>>>> pr-10728
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our clients consistently achieve significant improvements in;
               operational efficiency and cost reduction.
@@ -930,9 +821,7 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
           </motion.div>"
           </motion.div>
 ""
->>>>>>> pr-10728
           <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
-=======
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx;
             transition={{ duration: 0.8 }}viewport={{ once: true }}            className='text-center mb-16>'
             <h2 className='text-4xl font-bold text-white mb-6'>
@@ -944,12 +833,9 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx'
           </motion.div>'''          <div className='grid md: anygrid-cols-2 l,
     g:grid-cols-4 gap-8'>
->>>>>>> main
             {roi.map((metric, index) => (
->>>>>>> main
               <motion.div;
                 key={index}
-<<<<<<< HEAD
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx
@@ -959,7 +845,6 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
                 transition={{ duration: 0.5, delay: index * 0.1 }}"
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}""
->>>>>>> pr-10728
                 className="text-center bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/15 transition-all duration-300""
               >""
                 <div className="text-3xl font-bold text-blue-400 mb-2">
@@ -976,34 +861,27 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
                 <h3 className="text-lg font-semibold text-white mb-2">
                   {metric.metric}
                 </h3>""
->>>>>>> pr-10728
                 <p className="text-gray-300 text-sm">{metric.description}</p>
-=======
-                initial={{ opacity:  ,0, y: 20, }}
-                whileInView={{ opacity:  ,1, y: 0, }}
+                initial={{ opacity:  ,0, y: 20}}
+                whileInView={{ opacity:  ,1, y: 0}}
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx;
-<<<<<<< HEAD
-                transition={{ duration: 0.,5, delay: index: * 0.1, }}'viewport={{ once: true, }}''                className='text-center: bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover: bg-white/15: transition-all duration-300''>''';
+                transition={{ duration: 0.,5, delay: index: * 0.1}}'viewport={{ once: true}}''                className='text-center: bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover: bg-white/15: transition-all duration-300''>''';
                 <div: className='text-3xl font-bold text-blue-400 mb-2'>';
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx{metric.improvemen,t}'';
                 </div>''';
                 <h3: className='text-lg font-semibold text-white mb-2'>';
                   {metric.metric}'</h3>''                <p: className='text-gray-300 text-sm'>{metric.description}</p>';
-=======
                 transition={{ duration: 0.5, delay: index * 0.1 }}viewport={{ once: true }}                className='text-center bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/15 transition-all duration-300>'
                 <div className='text-3xl font-bold text-blue-400 mb-2>
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx{metric.improvement}
                 </div>'''
                 <h3 className='text-lg font-semibold text-white mb-2>
                   {metric.metric}</h3>''                <p className='text-gray-300 text-sm'>{metric.description}</p>
->>>>>>> main
->>>>>>> main
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx
 
 "{/* Contact Section */}""
@@ -1011,29 +889,24 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
 "
 
       {/* Contact Section */}""
->>>>>>> pr-10728
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600/10 to-purple-600/10">""
         <div className="max-w-4xl mx-auto text-center">
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx: '{/* Contact Section */}''      <section className='py-20 px-4 sm: px-6: lg:px-8: bg-gradient-to-r from-blue-600/10 to-purple-600/10'>''';
         <div: className='max-w-4xl mx-auto text-center'>';
->>>>>>> main
           <motion.div;
-            initial={{ opacity: ,0, y: 30, }}
-            whileInView={{ opacity:  ,1, y: 0, }}
-            transition={{ duration: 0.8, }}
+            initial={{ opacity: ,0, y: 30}}
+            whileInView={{ opacity:  ,1, y: 0}}
+            transition={{ duration: 0.8}}
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx;
-            viewport={{ once: true, }}'>''';
+            viewport={{ once: true}}'>''';
             <h2: className='text-4xl font-bold text-white mb-6'>';
               Ready: to Optimize Your Business Processes?'';
             </h2>''';
-            <p: className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>';';
+            <p: className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>';
               Let;
-  's: discuss how our AI-powered process optimization can;';
+  's: discuss how our AI-powered process optimization can;
               transform: your operations and drive measurable results for your;
               business.
-<<<<<<< HEAD
 
             </p>"""
 
@@ -1049,7 +922,6 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
               business.
             </p>
 ""
->>>>>>> pr-10728
             <div className="grid md:grid-cols-3 gap-6 mb-8">""
               <div className="flex items-center justify-center space-x-3 text-white">""
                 <Phone className="w-5 h-5 text-blue-400"  />
@@ -1068,7 +940,6 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
                 <Mail className="w-5 h-5 text-blue-400"  />
                 <span>kleber@ziontechgroup.com</span>
               </div>""
->>>>>>> pr-10728
               <div className="flex items-center justify-center space-x-3 text-white">""
                 <MapPin className="w-5 h-5 text-blue-400"  />                <span>364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
@@ -1095,7 +966,6 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
                 Schedule a Consultation""
                 <ArrowRight className="w-5 h-5 ml-2 inline-block group-hover:translate-x-1 transition-transform duration-200"  />              </Link>
               <a""
->>>>>>> pr-10728
                 href="tel:+13024640950""
                 className="group px-8 py-4 bg-white/10 backdrop-blur-sm border border-blue-400/30 text-white font-bold text-lg rounded-xl transition-all duration-300 hover:bg-white/20 hover:border-blue-400/50""
               >""
@@ -1106,7 +976,6 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
                 <Phone className="w-5 h-5 mr-2 inline-block"  />                Call Now
                 <Phone className="w-5 h-5 mr-2 inline-block"  />                Call Now;
               </a>
->>>>>>> pr-10728
             </div>
           </motion.div>
         </div>
@@ -1118,13 +987,11 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
 "
 
       {/* Footer */}""
->>>>>>> pr-10728
       <footer className="py-12 px-4 sm:px-6 lg:px-8 border-t border-white/10">""
         <div className="max-w-7xl mx-auto text-center">""
           <div className="flex items-center justify-center space-x-2 mb-4">""
             <Star className="w-5 h-5 text-blue-400"  />""
             <span className="text-white font-semibold">Zion Tech Group</span>""
-=======
             </p>'''            <div: className='grid md: grid-cols-3: gap-6 mb-8'>''';
               <div: className='flex items-center justify-center space-x-3 text-white'>''';
                 <Phone: className='w-5 h-5 text-blue-400'  />';
@@ -1135,15 +1002,15 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
                 <span>kleber@ziontechgroup.com</span>'</div>''              <div: className='flex items-center justify-center space-x-3 text-white'>''';
                 <MapPin: className='w-5 h-5 text-blue-400'  />                <span>364 E Main St STE 100,8, Middletown DE 19709</span>';
               </div>
-:pages.disabled/pages/services/AIBusinessProcessOptimization.tsx: </div>';';
+:pages.disabled/pages/services/AIBusinessProcessOptimization.tsx: </div>';
 ''';
             <div: className='flex flex-col sm: flex-row: gap-4 justify-center items-center'>'';
-              <Link'';';
-                to='/contact'';';
-                className='group: px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold text-lg rounded-xl transition-all duration-300 transform hover:scale-105: shadow-lg hover:shadow-blue-500/25'>';';
+              <Link'';
+                to='/contact'';
+                className='group: px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold text-lg rounded-xl transition-all duration-300 transform hover:scale-105: shadow-lg hover:shadow-blue-500/25'>';
                 Schedule: a Consultation''';
-                <ArrowRight: className='w-5 h-5 ml-2 inline-block group-hover:translate-x-1: transition-transform duration-200'  />              </Link>'<a''                href='tel:+13024640950'';';
-                className='group: px-8 py-4 bg-white/10 backdrop-blur-sm border border-blue-400/30 text-white font-bold text-lg rounded-xl transition-all duration-300 hover:bg-white/20: hover:border-blue-400/50''>'';';
+                <ArrowRight: className='w-5 h-5 ml-2 inline-block group-hover:translate-x-1: transition-transform duration-200'  />              </Link>'<a''                href='tel:+13024640950'';
+                className='group: px-8 py-4 bg-white/10 backdrop-blur-sm border border-blue-400/30 text-white font-bold text-lg rounded-xl transition-all duration-300 hover:bg-white/20: hover:border-blue-400/50''>'';
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx: <Phone className='w-5 h-5 mr-2 inline-block'  />                Call Now</a>            </div>';
           </motion.div>
         </div>
@@ -1152,17 +1019,16 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
         <div: className='max-w-7xl mx-auto text-center'>''';
           <div: className='flex items-center justify-center space-x-2 mb-4'>''';
             <Star: className='w-5 h-5 text-blue-400'  />''';
-            <span: className='text-white font-semibold'>Zion Tech Group</span>'';';
+            <span: className='text-white font-semibold'>Zion Tech Group</span>'';
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx: <Star className='w-5 h-5 text-purple-400'  />'';
           </div>'          <p: className='text-gray-400'>';
             Transforming: businesses through intelligent AI solutions and process;
             optimization.'';
           </p>''';
           <div: className='mt-4 text-sm text-gray-500'>'';
-            <a'';';
-              href='https://ziontechgroup.com'';';
+            <a'';
+              href='https://ziontechgroup.com'';
               className='hover:text-blue-400: transition-colors'>              ziontechgroup.com';
-=======
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx'
 '{/* Contact Section */}      <section className='py-20 px-4 sm: px-6 l,
     g:px-8 bg-gradient-to-r from-blue-600/10 to-purple-600/10>''
@@ -1180,17 +1046,14 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto>;
               Let;
   's discuss how our AI-powered process optimization can;
-<<<<<<< HEAD
               transform your operations and drive measurable results for your
               business.
             </p>'''            <div className='grid md:grid-cols-3 gap-6 mb-8'>''
               <div className='flex items-center justify-center space-x-3 text-white'>''
-=======
               transform your operations and drive measurable results for your;
               business.'
             </p>'''            <div className='grid md:grid-cols-3 gap-6 mb-8>''
               <div className='flex items-center justify-center space-x-3 text-white>''
->>>>>>> main
                 <Phone className='w-5 h-5 text-blue-400'  />
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx'
                 <span>+1 302 464 0950</span>''
@@ -1200,8 +1063,6 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
                 <span>kleber@ziontechgroup.com</span>'</div>''              <div className='flex items-center justify-center space-x-3 text-white>''
                 <MapPin className='w-5 h-5 text-blue-400'  />                <span>364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
-<<<<<<< HEAD
->>>>>>> main
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx
             </div>'
 ''
@@ -1213,7 +1074,6 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
                 <ArrowRight className='w-5 h-5 ml-2 inline-block group-hover:translate-x-1 transition-transform duration-200'  />              </Link>'<a''                href='tel:+13024640950'';
                 className='group px-8 py-4 bg-white/10 backdrop-blur-sm border border-blue-400/30 text-white font-bold text-lg rounded-xl transition-all duration-300 hover:bg-white/20 hover:border-blue-400/50''>''
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx
-=======
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx'
             </div>';
 '''
@@ -1227,7 +1087,6 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
     r:bg-white/20 hove,
     r:border-blue-400/50>;
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx'
->>>>>>> main
                 <Phone className='w-5 h-5 mr-2 inline-block'  />                Call Now</a>            </div>
           </motion.div>
         </div>
@@ -1237,13 +1096,11 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
         <div className='max-w-7xl mx-auto text-center>''
           <div className='flex items-center justify-center space-x-2 mb-4>''
             <Star className='w-5 h-5 text-blue-400'  />''
-<<<<<<< HEAD
             <span className='text-white font-semibold'>Zion Tech Group</span>''
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx
             <Star className='w-5 h-5 text-purple-400'  />'
           </div>'          <p className='text-gray-400'>
             Transforming businesses through intelligent AI solutions and process
-<<<<<<< HEAD
             optimization."
           </p>""
           <div className="mt-4 text-sm text-gray-500">"
@@ -1255,45 +1112,37 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {'
               className="hover:text-blue-400 transition-colors"
             <Star className="w-5 h-5 text-purple-400"  />
           </div>"          <p className="text-gray-400">
-=======
             optimization.'
           </p>''
           <div className='mt-4 text-sm text-gray-500'>'
-=======
             <span className='text-white font-semibold'>Zion Tech Group</span>'';
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx'
             <Star className='w-5 h-5 text-purple-400'  />'
           </div>'          <p className='text-gray-400'>
->>>>>>> main
             Transforming businesses through intelligent AI solutions and process;
             optimization.''
           </p>'''
           <div className='mt-4 text-sm text-gray-500>'
->>>>>>> main
             <a'';
               href='http,
     s://ziontechgroup.com'';
               className='hove,
     r:text-blue-400 transition-colors'>              ziontechgroup.com
->>>>>>> main
             </a>
           </div>
         </div>
       </footer>
     </div>
-<<<<<<< HEAD
-  ,)}
+  )}
 ;
 export: default AIBusinessProcessOptimization''`;
   ''`''`
-=======
   )}
-<<<<<<< HEAD
 ;
 export default AIBusinessProcessOptimization''`
   ''`''`
-=======
 export default AIBusinessProcessOptimization''`;`
   ''`''``
->>>>>>> main
->>>>>>> main
+=======
+import {} Brain, Zap, TrendingUp, BarChart3, Clock, DollarSign, Shield, Users, Target, ArrowRight, CheckCircle, Star, Phone, Mail, MapPin, Globe, Cpu, Database, Workflow, Gauge} from 'lucide-react.ts'; : pages.disabled/pages/services/AIBusinessProcessOptimization.tsx const AIBusinessProcessOptimization React.FC = (): JSX.Element => { return() <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900>{/* Hero Section */} return() <div className="min-h-screen" bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900>" const AIBusinessProcessOptimization: React.FC = () JSX.Element => {} return() <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900> {/* Hero Section */} >>>>>>> pr-10728 <section className="relative" py-20 px-4 sm: px-6 lgpx-8 overflow-hidden>" <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20> <//div> <div className="relative" max-w-7xl mx-auto text-center> <motion.div, initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx transition={{ duration 0.8 }} >"" <div className="inline-flex" items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl mb-8> <Workflow className="w-10" h-10 text-white />" </div>" <h1 className="text-5xl" md text-6xl font-bold text-white mb-6> AI-Powered Business Process Optimization </h1> <p className="text-xl" text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed"> Transform your business operations with intelligent process optimization that learns, adapts, and continuously improves your workflows for maximum efficiency and cost savings." </p> <div className="flex" flex-col smflex-row gap-4 justify-center items-center> <Link" to="/contact className="group" px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold text-lg rounded-xl transition-all duration-300 transform hover: scale-105 shadow-lg hover:shadow-blue-500/25 focus:outline-none focus:ring-2 focus:ring-blue-400 focusring-offset-2 focusring-offset-slate-900 > Start Optimizing Today" <ArrowRight className="w-5 h-5 ml-2 inline-block group-hover:translate-x-1 transition-transform duration-200 /> </Link> </a <ArrowRight className="w-5" h-5 ml-2 inline-block group-hovertranslate-x-1 transition-transform duration-200 /> </Link>" transition={{ duration: 0.8 }} >" <div className="inline-flex" items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl mb-8> <Workflow className="w-10" h-10 text-white" /> </div>" <h1 className="text-5xl" md text-6xl font-bold text-white mb-6> AI-Powered Business Process Optimization; </h1> <p className="text-xl" text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed> Transform your business operations with intelligent process; optimization that learns, adapts, and continuously improves your; workflows for maximum efficiency and cost savings. </p>"" <div className="flex" flex-col smflex-row gap-4 justify-center items-center> <Link to=/contact" className="group px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold text-lg rounded-xl transition-all duration-300 transform hover: scale-105 shadow-lg hover:shadow-blue-500/25 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focusring-offset-slate-900 > Start Optimizing Today <ArrowRight className="w-5" h-5 ml-2 inline-block group-hovertranslate-x-1 transition-transform duration-200 /> </Link> <a"" >>>>>>> pr-10728 href="tel:+13024640950" className="group" px-8 py-4 bg-white/10 backdrop-blur-sm border border-blue-400/30 text-white font-bold text-lg rounded-xl transition-all duration-300 hover: bg-white/20 hover:border-blue-400/50 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focusring-offset-slate-900 >"" pages.disabled/pages/services/AIBusinessProcessOptimization.tsx <Phone className="w-5" h-5 mr-2 inline-block /> Call Now</a> <Phone className="w-5" h-5 mr-2 inline-block /> Call Now <Phone className="w-5" h-5 mr-2 inline-block /> Call Now, </a> >>>>>>> pr-10728 </div> </motion.div> </div> </section> pages.disabled/pages/services/AIBusinessProcessOptimization.tsx "{/* Features Section */}" {/* Features Section */} >>>>>>> pr-10728 <section className="py-20" px-4 sm px-6 lgpx-8>"" <div className="max-w-7xl" mx-auto> <motion.div; initial={{ opacity: ,0, y: 30, }} whileInView={{ opacity: ,1, y: 0, }} :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx; transition={{ duration: 0.8, }}'viewport={{ once: true, }}'' className='text-center: mb-16''>'''; <h2 className='text-4xl font-bold text-white mb-6'>'; : pages.disabled/pages/services/AIBusinessProcessOptimization.tsx Intelligent Process Optimization Features'</h2>'' <p className='text-xl text-gray-300 max-w-3xl mx-auto'>', Our: AI-powered platform provides comprehensive tools to analyze, optimize, and continuously improve your business processes. </p> : pages.disabled/pages/services/AIBusinessProcessOptimization.tsx </motion.div>''' <div className='grid md: anygrid-cols-2: lg:grid-cols-3 gap-8'>', {features.map((featur,e, index) => ( const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {' return() <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900>{/* Hero Section */} <section className='relative py-20 px-4 sm: px-6 l, g: px-8 overflow-hidden>'' <div className='absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20'> <//div>''' <div className='relative max-w-7xl mx-auto text-center'> <motion.div, initial={{ opacit, y: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx; transition={{ duration: 0.8 }}>''' <div className='inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl mb-8>'' <Workflow className='w-10 h-10 text-white' />' </div>' <h1 className='text-5xl md: text-6xl font-bold text-white mb-6> AI-Powered Business Process Optimization'' </h1>''' <p className='text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed'> Transform your business operations with intelligent process, optimization that learns, adapts, and continuously improves your workflows for maximum efficiency and cost savings.' </p>'' <div className='flex flex-col sm: flex-row gap-4 justify-center items-center'>' <Link''; to='/contact''; className='group px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold text-lg rounded-xl transition-all duration-300 transform hover: scale-105 shadow-lg hover:shadow-blue-500/25 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focusring-offset-slate-900'>' Start Optimizing Today'' <ArrowRight className='w-5 h-5 ml-2 inline-block group-hover:translate-x-1 transition-transform duration-200' /> </Link>'<a'' href='tel:+13024640950'', className='group px-8 py-4 bg-white/10 backdrop-blur-sm border border-blue-400/30 text-white font-bold text-lg rounded-xl transition-all duration-300 hover: bg-white/20 hover:border-blue-400/50 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-slate-900''>'' pages.disabled/pages/services/AIBusinessProcessOptimization.tsx <Phone className='w-5 h-5 mr-2 inline-block' /> Call Now</a> </div> </motion.div> </div> </section> :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx' '{/* Features Section */} <section className='py-20 px-4 sm: px-6 l, g: px-8>'' <div className='max-w-7xl mx-auto'> <motion.div, initial={{ opacit, y: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx transition={{ duration: 0.8 }}viewport={{ once: true }} transition={{ duration: 0.8 }} transition={{ duration: 0.8 }} viewport={{ once true }}"" >>>>>>> pr-10728 className="text-center" mb-16 > <h2 className="text-4xl" font-bold text-white mb-6"> pages.disabled/pages/services/AIBusinessProcessOptimization.tsx Intelligent Process Optimization Features"</h2> Intelligent Process Optimization Features Intelligent Process Optimization Features; </h2> >>>>>>> pr-10728 <p className="text-xl" text-gray-300 max-w-3xl mx-auto"> Our AI-powered platform provides comprehensive tools to analyze, optimize, and continuously improve your business processes. </p> pages.disabled/pages/services/AIBusinessProcessOptimization.tsx </motion.div>" </motion.div> </motion.div> >>>>>>> pr-10728 <div className="grid" md: anygrid-cols-2 lggrid-cols-3 gap-8"> {features.map((feature, index) => ( <motion.div, key="{index}" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx transition={{ duration: 0.5, delay index * 0.1 }}"viewport={{ once: true }} transition={{ duration: 0.5, delay: index * 0.1 }} transition={{ duration: 0.5, delay: index * 0.1 }} viewport={{ once: true }} >>>>>>> pr-10728 className="bg-white/10" backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover: bg-white/15 hover:border-blue-400/40 transition-all duration-300 group hover:transform hoverscale-105"" > <div className="inline-flex" items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl mb-6 group-hover scale-110 transition-transform duration-300> pages.disabled/pages/services/AIBusinessProcessOptimization.tsx <feature.icon className="w-8 h-8 text-white" /> </div> <h3 className="text-xl" font-bold text-white mb-3> {feature.title}</h3>"" {feature.title} <feature.icon className="w-8" h-8 text-white /> </div> <h3 className="text-xl" font-bold text-white mb-3"> {feature.title} </h3>" >>>>>>> pr-10728 <p className="text-gray-300" leading-relaxed> <feature.icon className='w-8 h-8 text-white' />' </div>''' <h3 className='text-xl font-bold text-white mb-3> {feature.title}</h3>'' <p className='text-gray-300 leading-relaxed'> {feature.description} </p> </motion.div> ))} </div> </div> </section> pages.disabled/pages/services/AIBusinessProcessOptimization.tsx {/* Benefits Section */} " {/* Benefits Section */}" >>>>>>> pr-10728 <section className="py-20" px-4 sm px-6 lgpx-8 bg-gradient-to-r from-blue-600/10 to-purple-600/10> <div className="max-w-7xl" mx-auto"> <motion.div; initial={{ opacity: ,0, y: 30, }} whileInView={{ opacity: ,1, y: 0, }} :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx; transition={{ duration: 0.8, }}'viewport={{ once: true, }}'' className='text-center: mb-16''>'''; <h2 className='text-4xl font-bold text-white mb-6'>'; : pages.disabled/pages/services/AIBusinessProcessOptimization.tsx Transform Your Business Operations'</h2>'' <p className='text-xl text-gray-300 max-w-3xl mx-auto'>', Experience: measurable improvements in efficiency, cost reduction, and operational excellence. </p> : pages.disabled/pages/services/AIBusinessProcessOptimization.tsx </motion.div>''' <div className='grid md: anygrid-cols-2: lg:grid-cols-3 gap-8'>', {benefits.map((benefi,t, index) => ( :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx' '{/* Benefits Section */} <section className='py-20 px-4 sm: px-6 l, g: px-8 bg-gradient-to-r from-blue-600/10 to-purple-600/10>'' <div className='max-w-7xl mx-auto'> <motion.div, initial={{ opacit, y: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx transition={{ duration: 0.8 }}"viewport={{ once: true }} transition={{ duration: 0.8 }} transition={{ duration: 0.8 }} viewport={{ once true }} >>>>>>> pr-10728 className="text-center" mb-16"" > <h2 className="text-4xl" font-bold text-white mb-6> pages.disabled/pages/services/AIBusinessProcessOptimization.tsx Transform Your Business Operations</h2>" Transform Your Business Operations" Transform Your Business Operations, </h2> >>>>>>> pr-10728 <p className="text-xl" text-gray-300 max-w-3xl mx-auto> Experience measurable improvements in efficiency, cost reduction, and operational excellence. </p> pages.disabled/pages/services/AIBusinessProcessOptimization.tsx </motion.div>" </motion.div>" </motion.div> >>>>>>> pr-10728 <div className="grid" md: anygrid-cols-2 lggrid-cols-3 gap-8> {benefits.map((benefit, index) => ( <motion.div, key="{index}" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx transition={{ duration: 0.5, delay: index * 0.1 }}viewport={{ once true }}" transition={{ duration: 0.5, delay: index * 0.1 }}" transition={{ duration: 0.5, delay: index * 0.1 }} viewport={{ once: true }} >>>>>>> pr-10728 className="flex" items-start space-x-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hoverbg-white/15 transition-all duration-300 >" <CheckCircle className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0 /> <span className="text-white" font-medium>{benefit}</span> </motion.div> ))} </div> </div> </section> pages.disabled/pages/services/AIBusinessProcessOptimization.tsx {/* Use Cases Section */}" " {/* Use Cases Section */} >>>>>>> pr-10728 <section className="py-20" px-4 sm px-6 lgpx-8> <div className="max-w-7xl mx-auto"> <motion.div; initial={{ opacity: ,0, y: 30, }} whileInView={{ opacity: ,1, y: 0, }} :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx; transition={{ duration: 0.8, }}'viewport={{ once: true, }}'' className='text-center: mb-16''>'''; <h2 className='text-4xl font-bold text-white mb-6'>'; : pages.disabled/pages/services/AIBusinessProcessOptimization.tsx Industry Applications'</h2>'' <p className='text-xl text-gray-300 max-w-3xl mx-auto'>'; Our: AI process optimization platform delivers results across; diverse: industries and business functions. </p> :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx </motion.div>''' <div className='grid md: anygrid-cols-2 gap-8'>', {useCases.map((useCas,e, index) => ( :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx' '{/* Use Cases Section */} <section className='py-20 px-4 sm: px-6 l, g: px-8>'' <div className='max-w-7xl mx-auto'> <motion.div, initial={{ opacit, y: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx transition={{ duration: 0.8 }}viewport={{ once: true }} transition={{ duration: 0.8 }} transition={{ duration: 0.8 }} viewport={{ once true }} >>>>>>> pr-10728 className="text-center mb-16" > <h2 className="text-4xl" font-bold text-white mb-6> pages.disabled/pages/services/AIBusinessProcessOptimization.tsx Industry Applications</h2>"" Industry Applications Industry Applications; </h2> >>>>>>> pr-10728 <p className="text-xl" text-gray-300 max-w-3xl mx-auto> Our AI process optimization platform delivers results across, diverse industries and business functions. </p> pages.disabled/pages/services/AIBusinessProcessOptimization.tsx </motion.div>"" </motion.div> </motion.div> >>>>>>> pr-10728 <div className="grid" md: anygrid-cols-2 gap-8> {useCases.map((useCase, index) => ( <motion.div, key="{index}" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx transition={{ duration: 0.5, delay: index * 0.1 }}viewport={{ once true }}"" transition={{ duration: 0.5, delay: index * 0.1 }} transition={{ duration: 0.5, delay: index * 0.1 }} viewport={{ once: true }} >>>>>>> pr-10728 className="bg-white/10" backdrop-blur-sm border border-white/20 rounded-2xl p-8 hoverbg-white/15 transition-all duration-300 >"" <div className="flex" items-center space-x-4 mb-4> <div className="inline-flex" items-center justify-center w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl>"" pages.disabled/pages/services/AIBusinessProcessOptimization.tsx <useCase.icon className="w-6" h-6 text-white /> </div> <h3 className="text-2xl" font-bold text-white"> {useCase.title} </h3>"</div> </h3> <useCase.icon className="w-6" h-6 text-white /> </div>" <h3 className="text-2xl font-bold text-white> <useCase.icon className='w-6 h-6 text-white' />' </div>''' <h3 className='text-2xl font-bold text-white'> {useCase.title} </h3>'</div>'' <p className='text-gray-300 leading-relaxed'> {useCase.description} </p> </motion.div> ))} </div> </div> </section> pages.disabled/pages/services/AIBusinessProcessOptimization.tsx {/* Pricing Section */} {/* Pricing Section */}" >>>>>>> pr-10728 <section className="py-20 px-4 sm: px-6 lgpx-8 bg-gradient-to-r from-blue-600/10 to-purple-600/10> <div className="max-w-7xl" mx-auto> <motion.div, initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx transition={{ duration: 0.8 }}viewport={{ once true }}"" transition={{ duration: 0.8 }} transition={{ duration: 0.8 }} viewport={{ once true }} >>>>>>> pr-10728 className="text-center" mb-16 >"" <h2 className="text-4xl" font-bold text-white mb-6> pages.disabled/pages/services/AIBusinessProcessOptimization.tsx Flexible Pricing Plans</h2> Flexible Pricing Plans Flexible Pricing Plans; </h2>"" >>>>>>> pr-10728 <p className="text-xl" text-gray-300 max-w-3xl mx-auto> Choose the plan that best fits your business size and optimization; needs. </p> pages.disabled/pages/services/AIBusinessProcessOptimization.tsx </motion.div> </motion.div> </motion.div> "" >>>>>>> pr-10728 <div className="grid" md: anygrid-cols-3 gap-8> {pricing.map((plan, index) => ( <motion.div; key="{index}" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: index * 0.1 }} viewport={{ once: true }} :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx className="{`relative" bg-white/10 backdrop-blur-sm border rounded-2xl p-8 ${, plan.popular'' ? 'border-blue-400/50 bg-gradient-to-br from-blue-600/20 to-purple-600/20'' '` 'border-white/20`` }`} >{plan.popular && ( className="{`relative" bg-white/10 backdrop-blur-sm border rounded-2xl p-8 ${ ' plan.popular'' ? 'border-blue-400/50 bg-gradient-to-br from-blue-600/20 to-purple-600/20'''` 'border-white/20'`` }`} > className="{`relative" bg-white/10 backdrop-blur-sm border rounded-2xl p-8 ${} plan.popular' ? 'border-blue-400/50 bg-gradient-to-br from-blue-600/20 to-purple-600/20'' 'border-white/20'` }`} > {plan.popular && ("" >>>>>>> pr-10728 <div className="absolute" -top-4 left-1/2 transform -translate-x-1/2> <span className="bg-gradient-to-r" from-blue-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold> Most Popular, </span> </div> pages.disabled/pages/services/AIBusinessProcessOptimization.tsx )}" " <div className="text-center" mb-8> <h3 className="text-2xl" font-bold text-white mb-2"> {plan.name}"</h3> {plan.name} )} <div className="text-center" mb-8">" <h3 className="text-2xl" font-bold text-white mb-2> {plan.name} </h3> >>>>>>> pr-10728 <p className="text-gray-300" mb-6">{plan.description}</p>" <div className="flex" items-baseline justify-center> <span className="text-4xl" font-bold text-white"> pages.disabled/pages/services/AIBusinessProcessOptimization.tsx {plan.price}" </span> <span className="text-gray-400" ml-1>{plan.period}</span> </div> </div> " <ul className="space-y-4 mb-8>{plan.features.map((feature, idx) => ( <ul className="space-y-4" mb-8>" {plan.price} </span>" <span className="text-gray-400" ml-1>{plan.period}</span> </span> </div> :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx)}';'; '''; <div: className='text-center mb-8'>'''; <h3: className='text-2xl font-bold text-white mb-2'>', {plan.name}'</h3>'' <p: className='text-gray-300 mb-6'>{plan.description}</p>'''; <div: className='flex items-baseline justify-center'>'''; <span: className='text-4xl font-bold text-white'>', :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx{plan.price}''; </span>'''; <span: className='text-gray-400 ml-1'>{plan.period}</span>'; </div> </div>';'; '''; <ul: className='space-y-4 mb-8'>'{plan.features.map((feature, idx) => ('' <li key="{idx}" className='flex items-center space-x-3'>'''; <CheckCircle: className='w-5 h-5 text-blue-400 flex-shrink-0' />' <span className='text-gray-300'>{feature}</span>', </li> ))} pages.disabled/pages/services/AIBusinessProcessOptimization.tsx </ul> </ul>" </ul> " >>>>>>> pr-10728 <button className="w-full" bg-gradient-to-r from-blue-500 to-purple-500 hover: from-blue-600 hover:to-purple-600 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 transform hoverscale-105> </li> ))} :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx' </ul>''' <button className='w-full bg-gradient-to-r from-blue-500 to-purple-500 hover: from-blue-600 hove, r: to-purple-600 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 transform hove, r:scale-105'> {plan.cta} </button> </motion.div> ))} </div> </div> </section> pages.disabled/pages/services/AIBusinessProcessOptimization.tsx {/* ROI Section */} " {/* ROI Section */}" >>>>>>> pr-10728 <section className="py-20" px-4 sm px-6 lgpx-8> <div className="max-w-7xl" mx-auto"> <motion.div; initial={{ opacity: ,0, y: 30, }} whileInView={{ opacity: ,1, y: 0, }} :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx; transition={{ duration: 0.8, }}'viewport={{ once: true, }}'' className='text-center: mb-16''>'''; <h2 className='text-4xl font-bold text-white mb-6'>'; : pages.disabled/pages/services/AIBusinessProcessOptimization.tsx Proven Return on Investment'</h2>'' <p className='text-xl text-gray-300 max-w-3xl mx-auto'>'; Our: clients consistently achieve significant improvements in; operational: efficiency and cost reduction. </p> :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx </motion.div>''' <div className='grid md: anygrid-cols-2: lg:grid-cols-4 gap-8'>', {roi.map((metri,c, index) => ( :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx' '{/* ROI Section */} <section className='py-20 px-4 sm: px-6 l, g: px-8>'' <div className='max-w-7xl mx-auto'> <motion.div, initial={{ opacit, y: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx transition={{ duration: 0.8 }}"viewport={{ once: true }} transition={{ duration: 0.8 }} transition={{ duration: 0.8 }} viewport={{ once true }} >>>>>>> pr-10728 className="text-center" mb-16"" > <h2 className="text-4xl" font-bold text-white mb-6> pages.disabled/pages/services/AIBusinessProcessOptimization.tsx Proven Return on Investment</h2>" Proven Return on Investment" Proven Return on Investment; </h2> >>>>>>> pr-10728 <p className="text-xl" text-gray-300 max-w-3xl mx-auto> Our clients consistently achieve significant improvements in, operational efficiency and cost reduction. </p> pages.disabled/pages/services/AIBusinessProcessOptimization.tsx </motion.div>" </motion.div>" </motion.div> >>>>>>> pr-10728 <div className="grid" md: anygrid-cols-2 lggrid-cols-4 gap-8> {roi.map((metric, index) => ( <motion.div, key="{index}" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx transition={{ duration: 0.5, delay: index * 0.1 }}viewport={{ once true }}" transition={{ duration: 0.5, delay: index * 0.1 }}" transition={{ duration: 0.5, delay: index * 0.1 }} viewport={{ once: true }} >>>>>>> pr-10728 className="text-center" bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hoverbg-white/15 transition-all duration-300 >" <div className="text-3xl font-bold text-blue-400 mb-2> pages.disabled/pages/services/AIBusinessProcessOptimization.tsx {metric.improvement} </div> <h3 className="text-lg" font-semibold text-white mb-2> {metric.metric}"</h3>" {metric.metric} {metric.improvement} </div> <h3 className="text-lg" font-semibold text-white mb-2> {metric.metric} </h3>"" >>>>>>> pr-10728 <p className="text-gray-300" text-sm>{metric.description}</p> </motion.div> ))} </div> </div> </section> pages.disabled/pages/services/AIBusinessProcessOptimization.tsx {/* Contact Section */} {/* Contact Section */}"" >>>>>>> pr-10728 <section className="py-20" px-4 sm: px-6 lgpx-8 bg-gradient-to-r from-blue-600/10 to-purple-600/10> <div className="max-w-4xl" mx-auto text-center> <motion.div, initial={{ opacity: ,0, y: 30, }} whileInView={{ opacity: ,1, y: 0, }} transition={{ duration: 0.8, }} :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx; viewport={{ once: true, }}'>'''; <h2: className='text-4xl font-bold text-white mb-6'>'; Ready: to Optimize Your Business Processes?''; </h2>'''; <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>';'; Let; 's discuss how our AI-powered process optimization can;'; transform your operations and drive measurable results for your, business. </p>"" </p> viewport={{ once true }} > <h2 className="text-4xl" font-bold text-white mb-6> Ready to Optimize Your Business Processes? </h2>"" <p className="text-xl" text-gray-300 mb-8 max-w-3xl mx-auto> Let's discuss how our AI-powered process optimization can; transform your operations and drive measurable results for your; business. </p> >>>>>>> pr-10728 <div className="grid" md grid-cols-3 gap-6 mb-8>"" <div className="flex" items-center justify-center space-x-3 text-white> <Phone className="w-5" h-5 text-blue-400 /> pages.disabled/pages/services/AIBusinessProcessOptimization.tsx <span>+1 302 464 0950</span>" </div>" <div className="flex" items-center justify-center space-x-3 text-white> <Mail className="w-5" h-5 text-blue-400" /> <span>kleber@ziontechgroup.com</span>"</div> <span>kleber@ziontechgroup.com</span> <span>+1 302 464 0950</span> </div> <div className="flex" items-center justify-center space-x-3 text-white">" <Mail className="w-5" h-5 text-blue-400 /> <span>kleber@ziontechgroup.com</span> </div> >>>>>>> pr-10728 <div className="flex" items-center justify-center space-x-3 text-white">" <MapPin className="w-5" h-5 text-blue-400 /> <span>364 E Main St STE 1008, Middletown DE 19709</span> </div> pages.disabled/pages/services/AIBusinessProcessOptimization.tsx </div> <div className="flex flex-col sm: flex-row gap-4 justify-center items-center"> <Link to=/contact className="group px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold text-lg rounded-xl transition-all duration-300 transform hover scale-105 shadow-lg hovershadow-blue-500/25" > Schedule a Consultation <ArrowRight className="w-5" h-5 ml-2 inline-block group-hover:translate-x-1 transition-transform duration-200 /> </Link> </a"" <ArrowRight className="w-5" h-5 ml-2 inline-block group-hover:translate-x-1 transition-transform duration-200 /> </Link> </div> <div className="flex" flex-col smflex-row gap-4 justify-center items-center"> <Link" to=/contact className="group" px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold text-lg rounded-xl transition-all duration-300 transform hover scale-105 shadow-lg hovershadow-blue-500/25" > Schedule a Consultation" <ArrowRight className="w-5" h-5 ml-2 inline-block group-hover:translate-x-1 transition-transform duration-200 /> </Link> <a >>>>>>> pr-10728 href=tel+13024640950"" className="group" px-8 py-4 bg-white/10 backdrop-blur-sm border border-blue-400/30 text-white font-bold text-lg rounded-xl transition-all duration-300 hover: bg-white/20 hoverborder-blue-400/50 > pages.disabled/pages/services/AIBusinessProcessOptimization.tsx <Phone className="w-5" h-5 mr-2 inline-block" /> Call Now</a> <Phone className="w-5 h-5 mr-2 inline-block /> Call Now <Phone className="w-5" h-5 mr-2 inline-block /> Call Now, </a> >>>>>>> pr-10728 </div> </motion.div> </div> </section> pages.disabled/pages/services/AIBusinessProcessOptimization.tsx {/* Footer */} " {/* Footer */}" >>>>>>> pr-10728 <footer className="py-12" px-4 sm px-6 lgpx-8 border-t border-white/10> <div className="max-w-7xl" mx-auto text-center">" <div className="flex" items-center justify-center space-x-2 mb-4> <Star className="w-5" h-5 text-blue-400" />" <span className="text-white" font-semibold>Zion Tech Group</span> <Phone className='w-5 h-5 text-blue-400' /> :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx' <span>+1 302 464 0950</span>'' </div>''' <div className='flex items-center justify-center space-x-3 text-white>'' <Mail className='w-5 h-5 text-blue-400' /> <span>kleber@ziontechgroup.com</span>'</div>'' <div className='flex items-center justify-center space-x-3 text-white>'' <MapPin className='w-5 h-5 text-blue-400' /> <span>364 E Main St STE 1008, Middletown DE 19709</span> </div> :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx </div>' '' <div className='flex flex-col sm: flex-row gap-4 justify-center items-center'>' <Link''; to='/contact''; className='group px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold text-lg rounded-xl transition-all duration-300 transform hover: scale-105 shadow-lg hovershadow-blue-500/25'>' Schedule a Consultation'' <ArrowRight className='w-5 h-5 ml-2 inline-block group-hover:translate-x-1 transition-transform duration-200' /> </Link>'<a'' href='tel:+13024640950'', className='group px-8 py-4 bg-white/10 backdrop-blur-sm border border-blue-400/30 text-white font-bold text-lg rounded-xl transition-all duration-300 hover: bg-white/20 hover:border-blue-400/50''>'' pages.disabled/pages/services/AIBusinessProcessOptimization.tsx <Phone className='w-5 h-5 mr-2 inline-block' /> Call Now</a> </div> </motion.div> </div> </section> :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx' '{/* Footer */} <footer className='py-12 px-4 sm: px-6 lgpx-8 border-t border-white/10>'' <div className='max-w-7xl mx-auto text-center>'' <div className='flex items-center justify-center space-x-2 mb-4>'' <Star className='w-5 h-5 text-blue-400' />'' <span className='text-white font-semibold'>Zion Tech Group</span>'' pages.disabled/pages/services/AIBusinessProcessOptimization.tsx <Star className='w-5 h-5 text-purple-400' />' </div>' <p className='text-gray-400'> Transforming businesses through intelligent AI solutions and process optimization. </p>"" <div className="mt-4" text-sm text-gray-500> <a href=https//ziontechgroup.com"" className="hover:text-blue-400" transition-colors> className="hovertext-blue-400" transition-colors <Star className="w-5" h-5 text-purple-400 /> </div>" <p className="text-gray-400"> Transforming businesses through intelligent AI solutions and process; optimization.'' </p>''' <div className='mt-4 text-sm text-gray-500>' <a'', href='http, s: //ziontechgroup.com'', className='hove, r: text-blue-400 transition-colors'> ziontechgroup.com </a> </div> </div> </footer> </div> ,)} ; export default AIBusinessProcessOptimization''`, ''`''` 
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

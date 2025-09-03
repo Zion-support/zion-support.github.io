@@ -31,7 +31,7 @@ class CorruptedFilesCleaner {
         /<[^>]*>\s*$/, // Incomplete JSX
         /const\s+\w+\s*=\s*\[[^\]]*$/, // Incomplete array
         /const\s+\w+\s*=\s*\{[^}]*$/, // Incomplete object
-      ];
+      ]
 
       // Check if file has multiple corruption patterns
       let corruptionCount = 0;
@@ -44,8 +44,8 @@ class CorruptedFilesCleaner {
       // If more than 3 corruption patterns, consider it corrupted
       return corruptionCount > 3;
     } catch (error) {
-      return true; // If we can't read the file, it's corrupted
-    }
+      return true; // If we can't read the file, it's corrupted;
+}
   }
 
   getAllFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
@@ -78,7 +78,7 @@ class CorruptedFilesCleaner {
     const allFiles = [
       ...this.getAllFiles(srcDir),
       ...this.getAllFiles(pagesDir)
-    ];
+    ]
 
     this.log(`📁 Found ${allFiles.length} files to check`);
 
@@ -119,16 +119,16 @@ class CorruptedFilesCleaner {
     return {
       totalFiles: allFiles.length,
       corruptedFiles: this.corruptedFiles.length,
-      corruptedFileList: this.corruptedFiles
-    };
+      corruptedFileList: this.corruptedFiles;
+};
   }
 
   generateReport(results) {
     const report = {
       timestamp: new Date().toISOString(),
       summary: results,
-      corruptedFiles: this.corruptedFiles
-    };
+      corruptedFiles: this.corruptedFiles;
+};
 
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
     this.log(`📊 Report generated: ${this.reportFile}`);

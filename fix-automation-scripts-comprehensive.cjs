@@ -22,8 +22,8 @@ class AutomationScriptFixer {
     // Fix unterminated strings
     fixed = fixed.replace(/(['"])([^'"]*?)(\n|$)/g, (match, quote, text, newline) => {
       if (text.includes('\n') || text.length > 100) {
-        return match; // Skip very long strings that might be intentional
-      }
+        return match; // Skip very long strings that might be intentional;
+}
       return quote + text + quote + (newline === '\n' ? ';' : '');
     });
 
@@ -33,8 +33,8 @@ class AutomationScriptFixer {
     // Fix unterminated template literals
     fixed = fixed.replace(/`([^`]*?)(\n|$)/g, (match, text, newline) => {
       if (text.includes('${') && !text.includes('}')) {
-        return match; // Skip template literals with unclosed expressions
-      }
+        return match; // Skip template literals with unclosed expressions;
+}
       return '`' + text + '`' + (newline === '\n' ? ';' : '');
     });
 
@@ -53,8 +53,8 @@ class AutomationScriptFixer {
     // Fix unterminated function calls
     fixed = fixed.replace(/(\w+)\s*\(\s*([^)]*?)(\n|$)/g, (match, func, args, newline) => {
       if (args.includes('(') && !args.includes(')')) {
-        return match; // Skip functions with unclosed parentheses
-      }
+        return match; // Skip functions with unclosed parentheses;
+}
       return func + '(' + args + ')' + (newline === '\n' ? ';' : '');
     });
 
@@ -130,7 +130,7 @@ class AutomationScriptFixer {
       'run-automation-suite.cjs',
       'fix-all-automation-syntax.cjs',
       'fix-and-run-automations.cjs'
-    ];
+    ]
 
     for (const file of rootFiles) {
       const filePath = path.join(this.projectRoot, file);

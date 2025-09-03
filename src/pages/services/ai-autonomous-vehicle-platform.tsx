@@ -16,55 +16,55 @@ import {
   Cloud, Server,
   Database, Workflow,
   MessageCircle, Phone,
-  Mail
+  Mail;
 } from 'lucide-react';
 
 const AIAutonomousVehiclePlatform = () => {
   const features = [
     {
       title: "Advanced Perception Systems", description: "Multi-sensor fusion with LiDAR, radar, cameras, and ultrasonic sensors for 360° environmental awareness", icon: Eye,
-      color: "text-blue-400"
-    }, {
+      color: "text-blue-400";
+}, {
       title: "AI Decision Making",
       description: "Real-time neural networks for instant decision making in complex traffic scenarios", icon: Brain,
-      color: "text-purple-400"
-    }, {
+      color: "text-purple-400";
+}, {
       title: "Predictive Analytics",
       description: "ML-powered prediction of traffic patterns, pedestrian behavior, and road conditions", icon: TrendingUp,
-      color: "text-green-400"
-    }, {
+      color: "text-green-400";
+}, {
       title: "Edge Computing",
       description: "On-board processing for ultra-low latency responses and offline operation capability", icon: Cpu,
-      color: "text-cyan-400"
-    }, {
+      color: "text-cyan-400";
+}, {
       title: "Cybersecurity",
       description: "Advanced threat detection and prevention for vehicle systems and communications", icon: Shield,
-      color: "text-red-400"
-    }, {
+      color: "text-red-400";
+}, {
       title: "Cloud Integration",
       description: "Seamless cloud connectivity for updates, data sharing, and fleet management", icon: Cloud,
-      color: "text-indigo-400"
-    }
-  ];
+      color: "text-indigo-400";
+}
+  ]
 
   const useCases = [
     {
       title: "Autonomous Taxis", description: "Self-driving taxi services for urban transportation",
-      icon: Car, benefits: ["24/7 availability", "Reduced costs", "Improved safety"]
-    }, {
+      icon: Car, benefits: ["24/7 availability", "Reduced costs", "Improved safety"];
+}, {
       title: "Logistics & Delivery",
       description: "Autonomous delivery vehicles for last-mile logistics", icon: Globe,
-      benefits: ["Faster delivery", "Cost efficiency", "Scalable operations"]
-    }, {
+      benefits: ["Faster delivery", "Cost efficiency", "Scalable operations"];
+}, {
       title: "Public Transportation",
       description: "Self-driving buses and shuttles for public transit", icon: Users,
-      benefits: ["Consistent schedules", "Reduced accidents", "Lower operational costs"]
-    }, {
+      benefits: ["Consistent schedules", "Reduced accidents", "Lower operational costs"];
+}, {
       title: "Industrial Applications",
       description: "Autonomous vehicles for mining, construction, and agriculture", icon: Target,
-      benefits: ["Hazardous environment operation", "24/7 productivity", "Precision operations"]
-    }
-  ];
+      benefits: ["Hazardous environment operation", "24/7 productivity", "Precision operations"];
+}
+  ]
 
   const pricing = [
     {
@@ -75,8 +75,8 @@ const AIAutonomousVehiclePlatform = () => {
         "Cloud monitoring", "Email support",
         "Basic analytics"
       ], cta: "Start Free Trial",
-      popular: false
-    }, {
+      popular: false;
+}, {
       name: "Professional",
       price: "$7, 999",
       period: "/month", description: "For growing fleets and commercial use",
@@ -86,8 +86,8 @@ const AIAutonomousVehiclePlatform = () => {
         "Priority support", "Custom integrations",
         "Fleet management tools"
       ], cta: "Get Started",
-      popular: true
-    }, {
+      popular: true;
+}, {
       name: "Enterprise",
       price: "$19, 999",
       period: "/month", description: "For large fleets and enterprise deployment",
@@ -97,26 +97,26 @@ const AIAutonomousVehiclePlatform = () => {
         "24/7 dedicated support", "White-label solutions",
         "Compliance certifications"
       ], cta: "Contact Sales",
-      popular: false
-    }
-  ];
+      popular: false;
+}
+  ]
 
   const benefits = [
     {
       icon: Shield, title: "Enhanced Safety",
-      description: "AI-powered systems reduce human error and improve road safety by up to 90%"
-    }, {
+      description: "AI-powered systems reduce human error and improve road safety by up to 90%";
+}, {
       icon: DollarSign,
-      title: "Cost Reduction", description: "Lower operational costs through reduced fuel consumption and maintenance"
-    },
+      title: "Cost Reduction", description: "Lower operational costs through reduced fuel consumption and maintenance";
+},
     {
       icon: Clock, title: "24/7 Operation",
-      description: "Continuous operation without driver fatigue or breaks"
-    }, {
+      description: "Continuous operation without driver fatigue or breaks";
+}, {
       icon: TrendingUp,
-      title: "Scalability", description: "Easy fleet expansion and management through cloud-based systems"
-    }
-  ];
+      title: "Scalability", description: "Easy fleet expansion and management through cloud-based systems";
+}
+  ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
@@ -314,8 +314,8 @@ const AIAutonomousVehiclePlatform = () => {
                 className={`relative bg-slate-800/30 backdrop-blur-sm border rounded-xl p-6 ${
                   tier.popular 
                     ? 'border-blue-500/50 shadow-lg shadow-blue-500/20' 
-                    : 'border-slate-700/50'
-                }`}
+                    : 'border-slate-700/50';
+}`}
               >
                 {tier.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -349,8 +349,8 @@ const AIAutonomousVehiclePlatform = () => {
                   className={`w-full px-6 py-3 rounded-lg font-semibold text-center transition-all duration-300 ${
                     tier.popular
                       ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700'
-                      : 'border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white'
-                  }`}
+                      : 'border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white';
+}`}
                 >
                   {tier.cta}
                 </Link>

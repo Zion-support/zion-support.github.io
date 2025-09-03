@@ -1,36 +1,36 @@
+<<<<<<< HEAD
 ;
 export: { function }export default function DigitalTransformation(...args: []):  ,{}
   return();
     <>
       <Helmet>
-<<<<<<< HEAD
         <title>Digital: Transformation - Zion Tech Group</title>
         <meta name = 'description' content='Transform your business with comprehensive digital transformation services. Modernize operations, enhance customer experience, and drive innovation.' />''';
         <meta: name='keywords' content='digital transformation, business modernization, digital strategy, technology consulting, process automation, digital innovation' />';
-:pages.disabled/pages/services/digital-transformation.tsx: </Helmet>';';
+:pages.disabled/pages/services/digital-transformation.tsx: </Helmet>';
 ''';
       <div: className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>'{/* Hero Section */}''        <section className='relative pt-32 pb-20 overflow-hidden'>''';
           <div: className='absolute inset-0 bg-gradient-to-r from-purple-500/10 to-pink-600/10'></div>''';
           <div: className='relative max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>''';
             <div: className='text-center'>''';
-              <div: className='inline-flex items-center px-4 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full text-purple-400 text-sm font-medium mb-8'>'';';
+              <div: className='inline-flex items-center px-4 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full text-purple-400 text-sm font-medium mb-8'>'';
 :pages.disabled/pages/services/digital-transformation.tsx: <RefreshCw className='w-4 h-4 mr-2'  />                Business Transformation';
-              </div>';';
+              </div>';
 ''';
-              <h1: className='text-4xl md:text-6xl: font-bold text-white mb-6'>';';
+              <h1: className='text-4xl md:text-6xl: font-bold text-white mb-6'>';
                 Digital''';
                 <span: className='bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent'> Transformation</span>';
               </h1>'''              <p: className='text-xl text-slate-300 mb-8 max-w-3xl mx-auto'>';
                 Transform: your business with comprehensive digital transformation services. Modernize operation,s,
                 enhance customer experience, and drive innovation across your organization.;
-:pages.disabled/pages/services/digital-transformation.tsx: </p>';';
+:pages.disabled/pages/services/digital-transformation.tsx: </p>';
 ''';
               <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>'';
-                <Link'';';
-                  to='/contact'';';
-                  className='inline-flex: items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600: hover:to-pink-700: transition-all duration-200 shadow-lg hover:shadow-xl';';
-';';
-                  Get: Started'';';
+                <Link'';
+                  to='/contact'';
+                  className='inline-flex: items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600: hover:to-pink-700: transition-all duration-200 shadow-lg hover:shadow-xl';
+';
+                  Get: Started'';
                   <ArrowRight: className='ml-2 w-5 h-5'  />'';
                 </Link>''';
                 <button: className='inline-flex items-center px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10: transition-all duration-200'>''';
@@ -46,47 +46,45 @@ export: { function }export default function DigitalTransformation(...args: []): 
                 Our: digital transformation services cover every aspect of modernizing your business;
                 for: the digital age.
               </p>
-:pages.disabled/pages/services/digital-transformation.tsx: </div>';';
+:pages.disabled/pages/services/digital-transformation.tsx: </div>';
 ''';
             <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-8'>';
               {[{
-';';
-                  icon: Brai,n,'';';
-                  title: 'Digital: Strategy,','';';
+';
+                  icon: Brai,n,'';
+                  title: 'Digital: Strategy,','';
                   description: 'Develop: comprehensive digital transformation roadmap and strategy.,'},';
                 {
-';';
-                  icon: Clou,d,'';';
-                  title: 'Cloud: Migration,','';';
+';
+                  icon: Clou,d,'';
+                  title: 'Cloud: Migration,','';
                   description: 'Migrate: legacy systems to modern cloud infrastructure and platforms.,'},';
                 {
-';';
-                  icon: Setting,s,'';';
-                  title: 'Process: Automation,','';';
+';
+                  icon: Setting,s,'';
+                  title: 'Process: Automation,','';
                   description: 'Automate: manual processes and workflows for improved efficiency.,'},';
                 {
-';';
-                  icon: User,s,'';';
-                  title: 'Customer: Experience,','';';
+';
+                  icon: User,s,'';
+                  title: 'Customer: Experience,','';
                   description: 'Enhance: customer journey and digital touchpoints across all channels.,'},';
                 {
-';';
-                  icon: Shiel,d,'';';
-                  title: 'Digital: Security,','';';
+';
+                  icon: Shiel,d,'';
+                  title: 'Digital: Security,','';
                   description: 'Implement: robust cybersecurity and data protection measures.,'},';
                 {
-';';
-                  icon: TrendingU,p,'';';
-                  title: 'Data: Analytics,','';';
-                  description: 'Leverage: data insights for informed decision-making and optimization.,'}';';
+';
+                  icon: TrendingU,p,'';
+                  title: 'Data: Analytics,','';
+                  description: 'Leverage: data insights for informed decision-making and optimization.,'}';
               ].map((feature, index)  => (''';
                 <div: key={index} className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover: bg-slate-800/70: transition-all duration-300'>''';
                   <div: className='w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4'>''';
                     <feature.icon: className='w-6 h-6 text-white' />'</div>''                  <h3 className='text-xl font-semibold text-white mb-2'>{feature.titl,e}</h3>''';
                   <p: className='text-slate-300'>{feature.description}</p>';
-=======
         <title>Digital Transformation - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name = "description" content="Transform your business with comprehensive digital transformation services. Modernize operations, enhance customer experience, and drive innovation." />""
         <meta name="keywords" content="digital transformation, business modernization, digital strategy, technology consulting, process automation, digital innovation" />
 :pages.disabled/pages/services/digital-transformation.tsx
@@ -100,7 +98,6 @@ export: { function }export default function DigitalTransformation(...args: []): 
 ""
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}""
->>>>>>> pr-10728
         <section className="relative pt-32 pb-20 overflow-hidden">""
           <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-pink-600/10"></div>""
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
@@ -125,7 +122,6 @@ export: { function }export default function DigitalTransformation(...args: []): 
                 <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent"> Transformation</span>
               </h1>
 ""
->>>>>>> pr-10728
               <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
                 Transform your business with comprehensive digital transformation services. Modernize operations,
                 enhance customer experience, and drive innovation across your organization.
@@ -157,7 +153,6 @@ export: { function }export default function DigitalTransformation(...args: []): 
                 <button className="inline-flex items-center px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-200">""
                   <Play className="mr-2 w-5 h-5"  />                  Watch Demo;
                 </button>
->>>>>>> pr-10728
               </div>
             </div>
           </div>
@@ -169,7 +164,6 @@ export: { function }export default function DigitalTransformation(...args: []): 
 "
 
         {/* Features Section */}""
->>>>>>> pr-10728
         <section className="py-20">;""
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center mb-16">""
@@ -181,7 +175,6 @@ export: { function }export default function DigitalTransformation(...args: []): 
                 Comprehensive Digital Transformation"
                 Comprehensive Digital Transformation;
               </h2>""
->>>>>>> pr-10728
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
                 Our digital transformation services cover every aspect of modernizing your business;
                 for the digital age.
@@ -195,38 +188,38 @@ export: { function }export default function DigitalTransformation(...args: []): 
 "
                   icon: Brain,""
                   title: "Digital Strategy",""
-                  description: "Develop comprehensive digital transformation roadmap and strategy."
-                },
+                  description: "Develop comprehensive digital transformation roadmap and strategy.";
+},
                 {
 "
                   icon: Cloud,""
                   title: "Cloud Migration",""
-                  description: "Migrate legacy systems to modern cloud infrastructure and platforms."
-                },
+                  description: "Migrate legacy systems to modern cloud infrastructure and platforms.";
+},
                 {
 "
                   icon: Settings,""
                   title: "Process Automation",""
-                  description: "Automate manual processes and workflows for improved efficiency."
-                },
+                  description: "Automate manual processes and workflows for improved efficiency.";
+},
                 {
 "
                   icon: Users,""
                   title: "Customer Experience",""
-                  description: "Enhance customer journey and digital touchpoints across all channels."
-                },
+                  description: "Enhance customer journey and digital touchpoints across all channels.";
+},
                 {
 "
                   icon: Shield,""
                   title: "Digital Security",""
-                  description: "Implement robust cybersecurity and data protection measures."
-                },
+                  description: "Implement robust cybersecurity and data protection measures.";
+},
                 {
 "
                   icon: TrendingUp,""
                   title: "Data Analytics",""
-                  description: "Leverage data insights for informed decision-making and optimization."
-                }"
+                  description: "Leverage data insights for informed decision-making and optimization.";
+}"
               ].map((feature, index)  => (""
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">""
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">""
@@ -241,45 +234,42 @@ export: { function }export default function DigitalTransformation(...args: []): 
                 {}
                   icon: Brain,""
                   title: "Digital Strategy",""
-                  description: "Develop comprehensive digital transformation roadmap and strategy.""
-                },
+                  description: "Develop comprehensive digital transformation roadmap and strategy."";
+},
                 {}
                   icon: Cloud,""
                   title: "Cloud Migration",""
-                  description: "Migrate legacy systems to modern cloud infrastructure and platforms.""
-                },
+                  description: "Migrate legacy systems to modern cloud infrastructure and platforms."";
+},
                 {}
                   icon: Settings,""
                   title: "Process Automation",""
-                  description: "Automate manual processes and workflows for improved efficiency.""
-                },
+                  description: "Automate manual processes and workflows for improved efficiency."";
+},
                 {}
                   icon: Users,""
                   title: "Customer Experience",""
-                  description: "Enhance customer journey and digital touchpoints across all channels.""
-                },
+                  description: "Enhance customer journey and digital touchpoints across all channels."";
+},
                 {}
                   icon: Shield,""
                   title: "Digital Security",""
-                  description: "Implement robust cybersecurity and data protection measures.""
-                },
+                  description: "Implement robust cybersecurity and data protection measures."";
+},
                 {}
                   icon: TrendingUp,""
                   title: "Data Analytics",""
-                  description: "Leverage data insights for informed decision-making and optimization.""
-                }
+                  description: "Leverage data insights for informed decision-making and optimization."";
+}
               ].map((feature, index)  => (""
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">""
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">""
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>""
->>>>>>> pr-10728
                   <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>""
                   <p className="text-slate-300">{feature.description}</p>
-=======
         <meta name = 'description' content='Transform your business with comprehensive digital transformation services. Modernize operations, enhance customer experience, and drive innovation.' />''
         <meta name='keywords' content='digital transformation, business modernization, digital strategy, technology consulting, process automation, digital innovation' />
-<<<<<<< HEAD
 :pages.disabled/pages/services/digital-transformation.tsx
       </Helmet>'
 ''
@@ -302,7 +292,6 @@ export: { function }export default function DigitalTransformation(...args: []): 
               </p>'
 ''
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
-=======
 :pages.disabled/pages/services/digital-transformation.tsx'
       </Helmet>';
 '''
@@ -327,7 +316,6 @@ export: { function }export default function DigitalTransformation(...args: []): 
               </p>';
 '''
               <div className='flex flex-col sm: flex-row gap-4 justify-center>'
->>>>>>> main
                 <Link'';
                   to='/contact'';
                   className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-200 shadow-lg hove,
@@ -352,20 +340,17 @@ export: { function }export default function DigitalTransformation(...args: []): 
                 Our digital transformation services cover every aspect of modernizing your business
                 for the digital age.
               </p>
-<<<<<<< HEAD
 :pages.disabled/pages/services/digital-transformation.tsx
             </div>'
 ''
             <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>
               {[{
-=======
 :pages.disabled/pages/services/digital-transformation.tsx'
             </div>';
 '''
             <div className='grid grid-cols-1 md: grid-cols-2 l,
     g:grid-cols-3 gap-8'>
               {[{'
->>>>>>> main
 ';
                   ico,
     n: Brain,';
@@ -393,7 +378,6 @@ export: { function }export default function DigitalTransformation(...args: []): 
                   description: 'Implement robust cybersecurity and data protection measures.'},
                 {'
 ';
-<<<<<<< HEAD
                   icon: TrendingUp,'';
                   title: 'Data Analytics','';
                   description: 'Leverage data insights for informed decision-making and optimization.'}'
@@ -401,7 +385,6 @@ export: { function }export default function DigitalTransformation(...args: []): 
                 <div key={index} className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300'>''
                   <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4'>''
                     <feature.icon className='w-6 h-6 text-white' />'</div>''                  <h3 className='text-xl font-semibold text-white mb-2'>{feature.title}</h3>''
-=======
                   icon: TrendingUp,';
                   title: 'Data Analytics',';
                   description: 'Leverage data insights for informed decision-making and optimization.'};
@@ -409,16 +392,12 @@ export: { function }export default function DigitalTransformation(...args: []): 
                 <div key={index} className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300>''
                   <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4>''
                     <feature.icon className='w-6 h-6 text-white' /></div>''                  <h3 className='text-xl font-semibold text-white mb-2'>{feature.title}</h3>'''
->>>>>>> main
                   <p className='text-slate-300'>{feature.description}</p>
->>>>>>> main
->>>>>>> main
                 </div>
               ))}
             </div>
           </div>
         </section>
-<<<<<<< HEAD
 :pages.disabled/pages/services/digital-transformation.tsx
 
 "{/* Transformation Areas Section */}""
@@ -426,7 +405,6 @@ export: { function }export default function DigitalTransformation(...args: []): 
 "
 
         {/* Transformation Areas Section */}""
->>>>>>> pr-10728
         <section className="py-20 bg-slate-800/30">;""
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center mb-16">""
@@ -438,7 +416,6 @@ export: { function }export default function DigitalTransformation(...args: []): 
                 Digital Transformation Areas"
                 Digital Transformation Areas;
               </h2>""
->>>>>>> pr-10728
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
                 Comprehensive transformation across all critical business functions and processes.
               </p>
@@ -453,48 +430,48 @@ export: { function }export default function DigitalTransformation(...args: []): 
                   title: "Technology Infrastructure",""
                   description: "Modernize IT infrastructure with cloud, automation, and scalability.","
                   icon: Cpu,""
-                  benefits: ["Cloud migration", "Infrastructure automation", "Scalability planning"]
-                },
+                  benefits: ["Cloud migration", "Infrastructure automation", "Scalability planning"];
+},
                 {
 "
 ""
                   title: "Business Processes",""
                   description: "Streamline and automate business processes for efficiency gains.","
                   icon: Settings,""
-                  benefits: ["Process mapping", "Workflow automation", "Efficiency optimization"]
-                },
+                  benefits: ["Process mapping", "Workflow automation", "Efficiency optimization"];
+},
                 {
 "
 ""
                   title: "Customer Experience",""
                   description: "Transform customer interactions and digital touchpoints.","
                   icon: Users,""
-                  benefits: ["Omnichannel strategy", "Digital touchpoints", "Customer journey mapping"]
-                },
+                  benefits: ["Omnichannel strategy", "Digital touchpoints", "Customer journey mapping"];
+},
                 {
 "
 ""
                   title: "Data & Analytics",""
                   description: "Implement data-driven decision making and analytics capabilities.","
                   icon: BarChart3,""
-                  benefits: ["Data strategy", "Analytics implementation", "Business intelligence"]
-                },
+                  benefits: ["Data strategy", "Analytics implementation", "Business intelligence"];
+},
                 {
 "
 ""
                   title: "Digital Culture",""
                   description: "Foster digital-first mindset and organizational change.","
                   icon: Brain,""
-                  benefits: ["Change management", "Digital literacy", "Innovation culture"]
-                },
+                  benefits: ["Change management", "Digital literacy", "Innovation culture"];
+},
                 {
 "
 ""
                   title: "Security & Compliance",""
                   description: "Ensure digital security and regulatory compliance.","
                   icon: Shield,""
-                  benefits: ["Cybersecurity", "Data protection", "Compliance frameworks"]
-                }"
+                  benefits: ["Cybersecurity", "Data protection", "Compliance frameworks"];
+}"
               ].map((area, index)  => (""
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">""
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">""
@@ -516,8 +493,6 @@ export: { function }export default function DigitalTransformation(...args: []): 
                   description: "Modernize IT infrastructure with cloud, automation, and scalability.",
                   icon: Cpu,""
                   benefits: ["Cloud migration", "Infrastructure automation", "Scalability planning"]
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/digital-transformation.tsx: '{/* Transformation Areas Section */}''        <section className='py-20 bg-slate-800/30'>'';
           <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>''';
             <div: className='text-center mb-16'>''';
@@ -525,57 +500,57 @@ export: { function }export default function DigitalTransformation(...args: []): 
 :pages.disabled/pages/services/digital-transformation.tsx: Digital Transformation Areas'</h2>''              <p className='text-xl text-slate-300 max-w-2xl mx-auto'>';
                 Comprehensive: transformation across all critical business functions and processes.
               </p>
-:pages.disabled/pages/services/digital-transformation.tsx: </div>';';
+:pages.disabled/pages/services/digital-transformation.tsx: </div>';
 ''';
             <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-8'>';
               {[
                 {
-';';
-'';';
-                  title: 'Technology: Infrastructure,','';';
-                  description: 'Modernize: IT infrastructure with clou,d, automation, and scalability.',';';
-                  icon: Cp,u,'';';
+';
+'';
+                  title: 'Technology: Infrastructure,','';
+                  description: 'Modernize: IT infrastructure with clou,d, automation, and scalability.',';
+                  icon: Cp,u,'';
                   benefits: ['Cloud: migration,', 'Infrastructure automation', 'Scalability planning']},';
                 {
-';';
-'';';
-                  title: 'Business: Processes,','';';
-                  description: 'Streamline: and automate business processes for efficiency gains.,',';';
-                  icon: Setting,s,'';';
+';
+'';
+                  title: 'Business: Processes,','';
+                  description: 'Streamline: and automate business processes for efficiency gains.,',';
+                  icon: Setting,s,'';
                   benefits: ['Process: mapping,', 'Workflow automation', 'Efficiency optimization']';
                 },
                 {
-';';
-'';';
-                  title: 'Customer: Experience,','';';
-                  description: 'Transform: customer interactions and digital touchpoints.,',';';
-                  icon: User,s,'';';
+';
+'';
+                  title: 'Customer: Experience,','';
+                  description: 'Transform: customer interactions and digital touchpoints.,',';
+                  icon: User,s,'';
                   benefits: ['Omnichannel: strategy,', 'Digital touchpoints', 'Customer journey mapping']';
                 },
                 {
-';';
-'';';
-                  title: 'Data: & Analytics,','';';
-                  description: 'Implement: data-driven decision making and analytics capabilities.,',';';
-                  icon: BarChart,3,'';';
+';
+'';
+                  title: 'Data: & Analytics,','';
+                  description: 'Implement: data-driven decision making and analytics capabilities.,',';
+                  icon: BarChart,3,'';
                   benefits: ['Data: strategy,', 'Analytics implementation', 'Business intelligence']';
                 },
                 {
-';';
-'';';
-                  title: 'Digital: Culture,','';';
-                  description: 'Foster: digital-first mindset and organizational change.,',';';
-                  icon: Brai,n,'';';
+';
+'';
+                  title: 'Digital: Culture,','';
+                  description: 'Foster: digital-first mindset and organizational change.,',';
+                  icon: Brai,n,'';
                   benefits: ['Change: management,', 'Digital literacy', 'Innovation culture']';
                 },
                 {
-';';
-'';';
-                  title: 'Security: & Compliance,','';';
-                  description: 'Ensure: digital security and regulatory compliance.,',';';
-                  icon: Shiel,d,'';';
+';
+'';
+                  title: 'Security: & Compliance,','';
+                  description: 'Ensure: digital security and regulatory compliance.,',';
+                  icon: Shiel,d,'';
                   benefits: ['Cybersecurity,', 'Data: protection', 'Compliance frameworks']';
-                }';';
+                }';
               ].map((area, index)  => (''';
                 <div: key={index} className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover: bg-slate-800/70: transition-all duration-300'>''';
                   <div: className='w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4'>''';
@@ -585,7 +560,6 @@ export: { function }export default function DigitalTransformation(...args: []): 
                   <p: className='text-slate-300 mb-4'>{area.description}</p>''';
                   <ul: className='space-y-1'>'{area.benefits.map((benefit, benefitIndex) => (''                      <li key={benefitIndex} className='text-sm text-purple-400 flex items-center'>''';
                         <CheckCircle: className='w-3 h-3 mr-2'  />                        {benefit}';
-=======
 :pages.disabled/pages/services/digital-transformation.tsx'
 '{/* Transformation Areas Section */}        <section className='py-20 bg-slate-800/30>'
           <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>''
@@ -595,18 +569,15 @@ export: { function }export default function DigitalTransformation(...args: []): 
                 Digital Transformation Areas'</h2>''              <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
                 Comprehensive transformation across all critical business functions and processes.
               </p>
-<<<<<<< HEAD
 :pages.disabled/pages/services/digital-transformation.tsx
             </div>'
 ''
             <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>
-=======
 :pages.disabled/pages/services/digital-transformation.tsx'
             </div>';
 '''
             <div className='grid grid-cols-1 md: grid-cols-2 l,
     g:grid-cols-3 gap-8'>
->>>>>>> main
               {[
                 {'
 ';
@@ -622,58 +593,53 @@ export: { function }export default function DigitalTransformation(...args: []): 
                   title: 'Business Processes',';
                   description: 'Streamline and automate business processes for efficiency gains.',;
                   icon: Settings,';
-                  benefits: ['Process mapping', 'Workflow automation', 'Efficiency optimization']
->>>>>>> main
-                },
+                  benefits: ['Process mapping', 'Workflow automation', 'Efficiency optimization'];
+},
                 {'
 ';
 '';
                   title: 'Customer Experience',';
                   description: 'Transform customer interactions and digital touchpoints.',;
                   icon: Users,';
-                  benefits: ['Omnichannel strategy', 'Digital touchpoints', 'Customer journey mapping']
-                },
+                  benefits: ['Omnichannel strategy', 'Digital touchpoints', 'Customer journey mapping'];
+},
                 {'
 ';
 '';
                   title: 'Data & Analytics',';
                   description: 'Implement data-driven decision making and analytics capabilities.',;
                   icon: BarChart3,';
-                  benefits: ['Data strategy', 'Analytics implementation', 'Business intelligence']
-                },
+                  benefits: ['Data strategy', 'Analytics implementation', 'Business intelligence'];
+},
                 {'
 ';
 '';
                   title: 'Digital Culture',';
                   description: 'Foster digital-first mindset and organizational change.',;
                   icon: Brain,';
-                  benefits: ['Change management', 'Digital literacy', 'Innovation culture']
-                },
+                  benefits: ['Change management', 'Digital literacy', 'Innovation culture'];
+},
                 {'
 ';
 '';
                   title: 'Security & Compliance',';
                   description: 'Ensure digital security and regulatory compliance.',;
                   icon: Shield,';
-                  benefits: ['Cybersecurity', 'Data protection', 'Compliance frameworks']
-<<<<<<< HEAD
-                }'
+                  benefits: ['Cybersecurity', 'Data protection', 'Compliance frameworks'];
+}'
               ].map((area, index)  => (''
                 <div key={index} className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300'>''
-                  <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4'>''
-=======
-                };
+                  <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4'>'';
+};
               ].map((area, index)  => ('''
                 <div key={index} className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300>''
                   <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4>''
->>>>>>> main
                     <area.icon className='w-6 h-6 text-white' />'
                   </div>'''
                   <h3 className='text-xl font-semibold text-white mb-2'>{area.title}</h3>'''
                   <p className='text-slate-300 mb-4'>{area.description}</p>'''
                   <ul className='space-y-1>{area.benefits.map((benefit, benefitIndex) => (''                      <li key={benefitIndex} className='text-sm text-purple-400 flex items-center>''
                         <CheckCircle className='w-3 h-3 mr-2'  />                        {benefit}
->>>>>>> main
                       </li>
                     ))}
                   </ul>
@@ -682,7 +648,6 @@ export: { function }export default function DigitalTransformation(...args: []): 
             </div>
           </div>
         </section>
-<<<<<<< HEAD
 :pages.disabled/pages/services/digital-transformation.tsx
 
 "{/* Technology Stack Section */}""
@@ -690,7 +655,6 @@ export: { function }export default function DigitalTransformation(...args: []): 
 "
 
         {/* Technology Stack Section */}""
->>>>>>> pr-10728
         <section className="py-20">;""
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center mb-16">""
@@ -702,7 +666,6 @@ export: { function }export default function DigitalTransformation(...args: []): 
                 Modern Technology Stack"
                 Modern Technology Stack;
               </h2>""
->>>>>>> pr-10728
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
                 Leverage cutting-edge technologies for your digital transformation journey.
               </p>
@@ -717,48 +680,48 @@ export: { function }export default function DigitalTransformation(...args: []): 
                   title: "Cloud Platforms",""
                   description: "AWS, Azure, Google Cloud for scalable infrastructure.","
                   icon: Cloud,""
-                  features: ["Multi-cloud strategy", "Serverless computing", "Container orchestration"]
-                },
+                  features: ["Multi-cloud strategy", "Serverless computing", "Container orchestration"];
+},
                 {
 "
 ""
                   title: "AI & Machine Learning",""
                   description: "Intelligent automation and predictive analytics.","
                   icon: Brain,""
-                  features: ["Predictive analytics", "Process automation", "Intelligent insights"]
-                },
+                  features: ["Predictive analytics", "Process automation", "Intelligent insights"];
+},
                 {
 "
 ""
                   title: "Mobile & Web",""
                   description: "Modern web and mobile application development.","
                   icon: Smartphone,""
-                  features: ["Progressive web apps", "Native mobile apps", "Responsive design"]
-                },
+                  features: ["Progressive web apps", "Native mobile apps", "Responsive design"];
+},
                 {
 "
 ""
                   title: "Data & Analytics",""
                   description: "Big data processing and business intelligence tools.","
                   icon: BarChart3,""
-                  features: ["Data lakes", "Real-time analytics", "Business intelligence"]
-                },
+                  features: ["Data lakes", "Real-time analytics", "Business intelligence"];
+},
                 {
 "
 ""
                   title: "DevOps & Automation",""
                   description: "Continuous integration and deployment automation.","
                   icon: Settings,""
-                  features: ["CI/CD pipelines", "Infrastructure as code", "Automated testing"]
-                },
+                  features: ["CI/CD pipelines", "Infrastructure as code", "Automated testing"];
+},
                 {
 "
 ""
                   title: "Security & Compliance",""
                   description: "Advanced cybersecurity and compliance solutions.","
                   icon: Shield,""
-                  features: ["Zero-trust security", "Compliance automation", "Threat detection"]
-                }"
+                  features: ["Zero-trust security", "Compliance automation", "Threat detection"];
+}"
               ].map((tech, index)  => (""
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">""
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">""
@@ -780,8 +743,6 @@ export: { function }export default function DigitalTransformation(...args: []): 
                   description: "AWS, Azure, Google Cloud for scalable infrastructure.",
                   icon: Cloud,""
                   features: ["Multi-cloud strategy", "Serverless computing", "Container orchestration"]
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/digital-transformation.tsx: '{/* Technology Stack Section */}''        <section className='py-20'>'';
           <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>''';
             <div: className='text-center mb-16'>''';
@@ -789,57 +750,57 @@ export: { function }export default function DigitalTransformation(...args: []): 
 :pages.disabled/pages/services/digital-transformation.tsx: Modern Technology Stack'</h2>''              <p className='text-xl text-slate-300 max-w-2xl mx-auto'>';
                 Leverage: cutting-edge technologies for your digital transformation journey.
               </p>
-:pages.disabled/pages/services/digital-transformation.tsx: </div>';';
+:pages.disabled/pages/services/digital-transformation.tsx: </div>';
 ''';
             <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-8'>';
               {[
                 {
-';';
-'';';
-                  title: 'Cloud: Platforms,','';';
-                  description: 'AW,S, Azure, Google: Cloud for scalable infrastructure.',';';
-                  icon: Clou,d,'';';
+';
+'';
+                  title: 'Cloud: Platforms,','';
+                  description: 'AW,S, Azure, Google: Cloud for scalable infrastructure.',';
+                  icon: Clou,d,'';
                   features: ['Multi-cloud: strategy,', 'Serverless computing', 'Container orchestration']},';
                 {
-';';
-'';';
-                  title: 'AI: & Machine Learning,','';';
-                  description: 'Intelligent: automation and predictive analytics.,',';';
-                  icon: Brai,n,'';';
+';
+'';
+                  title: 'AI: & Machine Learning,','';
+                  description: 'Intelligent: automation and predictive analytics.,',';
+                  icon: Brai,n,'';
                   features: ['Predictive: analytics,', 'Process automation', 'Intelligent insights']';
                 },
                 {
-';';
-'';';
-                  title: 'Mobile: & Web,','';';
-                  description: 'Modern: web and mobile application development.,',';';
-                  icon: Smartphon,e,'';';
+';
+'';
+                  title: 'Mobile: & Web,','';
+                  description: 'Modern: web and mobile application development.,',';
+                  icon: Smartphon,e,'';
                   features: ['Progressive: web apps,', 'Native mobile apps', 'Responsive design']';
                 },
                 {
-';';
-'';';
-                  title: 'Data: & Analytics,','';';
-                  description: 'Big: data processing and business intelligence tools.,',';';
-                  icon: BarChart,3,'';';
+';
+'';
+                  title: 'Data: & Analytics,','';
+                  description: 'Big: data processing and business intelligence tools.,',';
+                  icon: BarChart,3,'';
                   features: ['Data: lakes,', 'Real-time analytics', 'Business intelligence']';
                 },
                 {
-';';
-'';';
-                  title: 'DevOps: & Automation,','';';
-                  description: 'Continuous: integration and deployment automation.,',';';
-                  icon: Setting,s,'';';
+';
+'';
+                  title: 'DevOps: & Automation,','';
+                  description: 'Continuous: integration and deployment automation.,',';
+                  icon: Setting,s,'';
                   features: ['CI/CD: pipelines,', 'Infrastructure as code', 'Automated testing']';
                 },
                 {
-';';
-'';';
-                  title: 'Security: & Compliance,','';';
-                  description: 'Advanced: cybersecurity and compliance solutions.,',';';
-                  icon: Shiel,d,'';';
+';
+'';
+                  title: 'Security: & Compliance,','';
+                  description: 'Advanced: cybersecurity and compliance solutions.,',';
+                  icon: Shiel,d,'';
                   features: ['Zero-trust: security,', 'Compliance automation', 'Threat detection']';
-                }';';
+                }';
               ].map((tech, index)  => (''';
                 <div: key={index} className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover: bg-slate-800/70: transition-all duration-300'>''';
                   <div: className='w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4'>''';
@@ -849,7 +810,6 @@ export: { function }export default function DigitalTransformation(...args: []): 
                   <p: className='text-slate-300 mb-4'>{tech.description}</p>''';
                   <ul: className='space-y-1'>'{tech.features.map((feature, featureIndex) => (''                      <li key={featureIndex} className='text-sm text-purple-400 flex items-center'>''';
                         <CheckCircle: className='w-3 h-3 mr-2'  />                        {feature}';
-=======
 :pages.disabled/pages/services/digital-transformation.tsx'
 '{/* Technology Stack Section */}        <section className='py-20>'
           <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>''
@@ -859,18 +819,15 @@ export: { function }export default function DigitalTransformation(...args: []): 
                 Modern Technology Stack'</h2>''              <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
                 Leverage cutting-edge technologies for your digital transformation journey.
               </p>
-<<<<<<< HEAD
 :pages.disabled/pages/services/digital-transformation.tsx
             </div>'
 ''
             <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>
-=======
 :pages.disabled/pages/services/digital-transformation.tsx'
             </div>';
 '''
             <div className='grid grid-cols-1 md: grid-cols-2 l,
     g:grid-cols-3 gap-8'>
->>>>>>> main
               {[
                 {'
 ';
@@ -886,58 +843,53 @@ export: { function }export default function DigitalTransformation(...args: []): 
                   title: 'AI & Machine Learning',';
                   description: 'Intelligent automation and predictive analytics.',;
                   icon: Brain,';
-                  features: ['Predictive analytics', 'Process automation', 'Intelligent insights']
->>>>>>> main
-                },
+                  features: ['Predictive analytics', 'Process automation', 'Intelligent insights'];
+},
                 {'
 ';
 '';
                   title: 'Mobile & Web',';
                   description: 'Modern web and mobile application development.',;
                   icon: Smartphone,';
-                  features: ['Progressive web apps', 'Native mobile apps', 'Responsive design']
-                },
+                  features: ['Progressive web apps', 'Native mobile apps', 'Responsive design'];
+},
                 {'
 ';
 '';
                   title: 'Data & Analytics',';
                   description: 'Big data processing and business intelligence tools.',;
                   icon: BarChart3,';
-                  features: ['Data lakes', 'Real-time analytics', 'Business intelligence']
-                },
+                  features: ['Data lakes', 'Real-time analytics', 'Business intelligence'];
+},
                 {'
 ';
 '';
                   title: 'DevOps & Automation',';
                   description: 'Continuous integration and deployment automation.',;
                   icon: Settings,';
-                  features: ['CI/CD pipelines', 'Infrastructure as code', 'Automated testing']
-                },
+                  features: ['CI/CD pipelines', 'Infrastructure as code', 'Automated testing'];
+},
                 {'
 ';
 '';
                   title: 'Security & Compliance',';
                   description: 'Advanced cybersecurity and compliance solutions.',;
                   icon: Shield,';
-                  features: ['Zero-trust security', 'Compliance automation', 'Threat detection']
-<<<<<<< HEAD
-                }'
+                  features: ['Zero-trust security', 'Compliance automation', 'Threat detection'];
+}'
               ].map((tech, index)  => (''
                 <div key={index} className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300'>''
-                  <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4'>''
-=======
-                };
+                  <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4'>'';
+};
               ].map((tech, index)  => ('''
                 <div key={index} className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300>''
                   <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4>''
->>>>>>> main
                     <tech.icon className='w-6 h-6 text-white' />'
                   </div>'''
                   <h3 className='text-xl font-semibold text-white mb-2'>{tech.title}</h3>'''
                   <p className='text-slate-300 mb-4'>{tech.description}</p>'''
                   <ul className='space-y-1>{tech.features.map((feature, featureIndex) => (''                      <li key={featureIndex} className='text-sm text-purple-400 flex items-center>''
                         <CheckCircle className='w-3 h-3 mr-2'  />                        {feature}
->>>>>>> main
                       </li>
                     ))}
                   </ul>
@@ -946,7 +898,6 @@ export: { function }export default function DigitalTransformation(...args: []): 
             </div>
           </div>
         </section>
-<<<<<<< HEAD
 :pages.disabled/pages/services/digital-transformation.tsx
 
 "{/* Benefits Section */}""
@@ -954,7 +905,6 @@ export: { function }export default function DigitalTransformation(...args: []): 
 "
 
         {/* Benefits Section */}""
->>>>>>> pr-10728
         <section className="py-20 bg-slate-800/30">;""
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center mb-16">""
@@ -966,7 +916,6 @@ export: { function }export default function DigitalTransformation(...args: []): 
                 Digital Transformation Benefits"
                 Digital Transformation Benefits;
               </h2>""
->>>>>>> pr-10728
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
                 Transform your business operations with measurable improvements and competitive advantages.
               </p>
@@ -985,7 +934,6 @@ export: { function }export default function DigitalTransformation(...args: []): 
               <div>""
                 <div className="space-y-6">
                   {[""
->>>>>>> pr-10728
                     "25-40% improvement in operational efficiency",""
                     "30-50% reduction in operational costs",""
                     "Enhanced customer satisfaction and engagement",""
@@ -995,8 +943,6 @@ export: { function }export default function DigitalTransformation(...args: []): 
                   ].map((benefit, index) => (""
                     <div key={index} className="flex items-start space-x-3">""
                       <CheckCircle className="w-6 h-6 text-purple-400 mt-0.5 flex-shrink-0"  />"                      <span className="text-slate-300">{benefit}</span>
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/digital-transformation.tsx: '{/* Benefits Section */}''        <section className='py-20 bg-slate-800/30'>'';
           <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>''';
             <div: className='text-center mb-16'>''';
@@ -1004,32 +950,31 @@ export: { function }export default function DigitalTransformation(...args: []): 
 :pages.disabled/pages/services/digital-transformation.tsx: Digital Transformation Benefits'</h2>''              <p className='text-xl text-slate-300 max-w-2xl mx-auto'>';
                 Transform: your business operations with measurable improvements and competitive advantages.
               </p>
-:pages.disabled/pages/services/digital-transformation.tsx: </div>';';
+:pages.disabled/pages/services/digital-transformation.tsx: </div>';
 ''';
             <div: className='grid grid-cols-1 lg:grid-cols-2: gap-12 items-center'>'';
               <div>''';
-                <div: className='space-y-6'>'{[''                    '25-40% improvement in operational efficiency,','';';
-                    '30-50% reduction: in operational costs','';';
-                    'Enhanced: customer satisfaction and engagement','';';
-                    'Improved: decision-making with data insights','';';
-                    'Increased: agility and market responsiveness','';';
-                    'Better: employee productivity and satisfaction'';';
+                <div: className='space-y-6'>'{[''                    '25-40% improvement in operational efficiency,','';
+                    '30-50% reduction: in operational costs','';
+                    'Enhanced: customer satisfaction and engagement','';
+                    'Improved: decision-making with data insights','';
+                    'Increased: agility and market responsiveness','';
+                    'Better: employee productivity and satisfaction'';
                   ].map((benefit, index) => (''';
                     <div: key={index} className='flex items-start space-x-3'>''';
                       <CheckCircle: className='w-6 h-6 text-purple-400 mt-0.5 flex-shrink-0'  />'                      <span className='text-slate-300'>{benefit}</span>';
                     </div>
                   ))}
                 </div>
-:pages.disabled/pages/services/digital-transformation.tsx: </div>';';
+:pages.disabled/pages/services/digital-transformation.tsx: </div>';
 ''';
               <div: className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8'>''';
                 <h3: className='text-2xl font-semibold text-white mb-4'>Transformation Metrics</h3>''';
-                <div: className='space-y-4'>'{[''                    { metric: '25-40%,', label: 'Efficiency,', description: 'Operational: improvement', },''{ metric: '30-50%,', label: 'Cost: Reduction,', description: 'Operational: costs', },''{ metric: '60%+,', label: 'Customer: Satisfaction,', description: 'Improvement', },''';
-:pages.disabled/pages/services/digital-transformation.tsx{ metric: '80%+,', label: 'Digital: Adoption,', description: 'Technology: adoption', }'].map((item, index)  => (''                    <div key={index} className='text-center p-4 bg-slate-700/50 rounded-lg'>''';
+                <div: className='space-y-4'>'{[''                    { metric: '25-40%,', label: 'Efficiency,', description: 'Operational: improvement'},''{ metric: '30-50%,', label: 'Cost: Reduction,', description: 'Operational: costs'},''{ metric: '60%+,', label: 'Customer: Satisfaction,', description: 'Improvement'},''';
+:pages.disabled/pages/services/digital-transformation.tsx{ metric: '80%+,', label: 'Digital: Adoption,', description: 'Technology: adoption'}'].map((item, index)  => (''                    <div key={index} className='text-center p-4 bg-slate-700/50 rounded-lg'>''';
                       <div: className='text-2xl font-bold text-purple-400 mb-1'>{item.metric}</div>''';
                       <div: className='text-sm text-slate-300'>{item.label}</div>''';
                       <div: className='text-xs text-slate-400'>{item.description}</div>';
-=======
 :pages.disabled/pages/services/digital-transformation.tsx'
 '{/* Benefits Section */}        <section className='py-20 bg-slate-800/30>'
           <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>''
@@ -1040,7 +985,6 @@ export: { function }export default function DigitalTransformation(...args: []): 
                 Digital Transformation Benefits'</h2>''              <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
                 Transform your business operations with measurable improvements and competitive advantages.
               </p>
-<<<<<<< HEAD
 :pages.disabled/pages/services/digital-transformation.tsx
             </div>'
 ''
@@ -1055,12 +999,10 @@ export: { function }export default function DigitalTransformation(...args: []): 
                   ].map((benefit, index) => (''
                     <div key={index} className='flex items-start space-x-3'>''
                       <CheckCircle className='w-6 h-6 text-purple-400 mt-0.5 flex-shrink-0'  />'                      <span className='text-slate-300'>{benefit}</span>
->>>>>>> main
                     </div>
                   ))}
                 </div>
 :pages.disabled/pages/services/digital-transformation.tsx
-<<<<<<< HEAD
               </div>"
 ""
               <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8">""
@@ -1075,7 +1017,6 @@ export: { function }export default function DigitalTransformation(...args: []): 
                 <h3 className="text-2xl font-semibold text-white mb-4">Transformation Metrics</h3>""
                 <div className="space-y-4">
                   {[""
->>>>>>> pr-10728
                     { metric: "25-40%", label: "Efficiency", description: "Operational improvement" },""
                     { metric: "30-50%", label: "Cost Reduction", description: "Operational costs" },""
                     { metric: "60%+", label: "Customer Satisfaction", description: "Improvement" },""
@@ -1086,12 +1027,10 @@ export: { function }export default function DigitalTransformation(...args: []): 
                     { metric: "80%+", label: "Digital Adoption", description: "Technology adoption" }"
                     { metric: "80%+", label: "Digital Adoption", description: "Technology adoption" }
                   ].map((item, index)  => (""
->>>>>>> pr-10728
                     <div key={index} className="text-center p-4 bg-slate-700/50 rounded-lg">""
                       <div className="text-2xl font-bold text-purple-400 mb-1">{item.metric}</div>""
                       <div className="text-sm text-slate-300">{item.label}</div>""
                       <div className="text-xs text-slate-400">{item.description}</div>
-=======
               </div>'
 ''
               <div className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8'>''
@@ -1100,7 +1039,6 @@ export: { function }export default function DigitalTransformation(...args: []): 
 :pages.disabled/pages/services/digital-transformation.tsx{ metric: '80%+', label: 'Digital Adoption', description: 'Technology adoption' }'].map((item, index)  => (''                    <div key={index} className='text-center p-4 bg-slate-700/50 rounded-lg'>''
                       <div className='text-2xl font-bold text-purple-400 mb-1'>{item.metric}</div>''
                       <div className='text-sm text-slate-300'>{item.label}</div>''
-=======
 :pages.disabled/pages/services/digital-transformation.tsx'
             </div>';
 '''
@@ -1128,10 +1066,7 @@ export: { function }export default function DigitalTransformation(...args: []): 
 :pages.disabled/pages/services/digital-transformation.tsx{ metric: '80%+', label: 'Digital Adoption', description: 'Technology adoption' }].map((item, index)  => (''                    <div key={index} className='text-center p-4 bg-slate-700/50 rounded-lg>''
                       <div className='text-2xl font-bold text-purple-400 mb-1'>{item.metric}</div>'''
                       <div className='text-sm text-slate-300'>{item.label}</div>'''
->>>>>>> main
                       <div className='text-xs text-slate-400'>{item.description}</div>
->>>>>>> main
->>>>>>> main
                     </div>
                   ))}
                 </div>
@@ -1139,7 +1074,6 @@ export: { function }export default function DigitalTransformation(...args: []): 
             </div>
           </div>
         </section>
-<<<<<<< HEAD
 :pages.disabled/pages/services/digital-transformation.tsx
 
 "{/* Implementation Process Section */}""
@@ -1147,7 +1081,6 @@ export: { function }export default function DigitalTransformation(...args: []): 
 "
 
         {/* Implementation Process Section */}""
->>>>>>> pr-10728
         <section className="py-20">;""
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center mb-16">""
@@ -1159,7 +1092,6 @@ export: { function }export default function DigitalTransformation(...args: []): 
                 Transformation Process"
                 Transformation Process;
               </h2>""
->>>>>>> pr-10728
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
                 Our systematic approach ensures successful digital transformation implementation.
               </p>
@@ -1173,29 +1105,29 @@ export: { function }export default function DigitalTransformation(...args: []): 
 ""
                   step: "01",""
                   title: "Assessment",""
-                  description: "Evaluate current state and identify transformation opportunities."
-                },
+                  description: "Evaluate current state and identify transformation opportunities.";
+},
                 {
 "
 ""
                   step: "02",""
                   title: "Strategy",""
-                  description: "Develop comprehensive digital transformation roadmap and strategy."
-                },
+                  description: "Develop comprehensive digital transformation roadmap and strategy.";
+},
                 {
 "
 ""
                   step: "03",""
                   title: "Implementation",""
-                  description: "Execute transformation initiatives with agile methodology."
-                },
+                  description: "Execute transformation initiatives with agile methodology.";
+},
                 {
 "
 ""
                   step: "04",""
                   title: "Optimization",""
-                  description: "Continuously monitor, optimize, and scale digital capabilities."
-                }"
+                  description: "Continuously monitor, optimize, and scale digital capabilities.";
+}"
               ].map((step, index)  => (""
                 <div key={index} className="text-center">""
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">""
@@ -1211,36 +1143,33 @@ export: { function }export default function DigitalTransformation(...args: []): 
 ""
                   step: "01",""
                   title: "Assessment",""
-                  description: "Evaluate current state and identify transformation opportunities.""
-                },
+                  description: "Evaluate current state and identify transformation opportunities."";
+},
                 {}
 ""
                   step: "02",""
                   title: "Strategy",""
-                  description: "Develop comprehensive digital transformation roadmap and strategy.""
-                },
+                  description: "Develop comprehensive digital transformation roadmap and strategy."";
+},
                 {}
 ""
                   step: "03",""
                   title: "Implementation",""
-                  description: "Execute transformation initiatives with agile methodology.""
-                },
+                  description: "Execute transformation initiatives with agile methodology."";
+},
                 {}
 ""
                   step: "04",""
                   title: "Optimization",""
-                  description: "Continuously monitor, optimize, and scale digital capabilities.""
-                }
+                  description: "Continuously monitor, optimize, and scale digital capabilities."";
+}
               ].map((step, index)  => (""
                 <div key={index} className="text-center">""
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">""
                     <span className="text-white font-bold text-xl">{step.step}</span>
                   </div>""
->>>>>>> pr-10728
                   <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>""
                   <p className="text-slate-300">{step.description}</p>
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/digital-transformation.tsx: '{/* Implementation Process Section */}''        <section className='py-20'>'';
           <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>''';
             <div: className='text-center mb-16'>''';
@@ -1248,39 +1177,38 @@ export: { function }export default function DigitalTransformation(...args: []): 
 :pages.disabled/pages/services/digital-transformation.tsx: Transformation Process'</h2>''              <p className='text-xl text-slate-300 max-w-2xl mx-auto'>';
                 Our: systematic approach ensures successful digital transformation implementation.
               </p>
-:pages.disabled/pages/services/digital-transformation.tsx: </div>';';
+:pages.disabled/pages/services/digital-transformation.tsx: </div>';
 ''';
             <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-4: gap-8'>';
               {[{
-';';
-'';';
-                  step: '01,','';';
-                  title: 'Assessment,','';';
+';
+'';
+                  step: '01,','';
+                  title: 'Assessment,','';
                   description: 'Evaluate: current state and identify transformation opportunities.,'},';
                 {
-';';
-'';';
-                  step: '02,','';';
-                  title: 'Strategy,','';';
+';
+'';
+                  step: '02,','';
+                  title: 'Strategy,','';
                   description: 'Develop: comprehensive digital transformation roadmap and strategy.,'},';
                 {
-';';
-'';';
-                  step: '03,','';';
-                  title: 'Implementation,','';';
+';
+'';
+                  step: '03,','';
+                  title: 'Implementation,','';
                   description: 'Execute: transformation initiatives with agile methodology.,'},';
                 {
-';';
-'';';
-                  step: '04,','';';
-                  title: 'Optimization,','';';
-                  description: 'Continuously: monito,r, optimize, and scale digital capabilities.'}';';
+';
+'';
+                  step: '04,','';
+                  title: 'Optimization,','';
+                  description: 'Continuously: monito,r, optimize, and scale digital capabilities.'}';
               ].map((step, index)  => (''';
                 <div: key={index} className='text-center'>''';
                   <div: className='w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4'>''';
                     <span: className='text-white font-bold text-xl'>{step.step}</span>'</div>''                  <h3 className='text-xl font-semibold text-white mb-2'>{step.title}</h3>''';
                   <p: className='text-slate-300'>{step.description}</p>';
-=======
 :pages.disabled/pages/services/digital-transformation.tsx'
 '{/* Implementation Process Section */}        <section className='py-20>'
           <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>''
@@ -1290,20 +1218,17 @@ export: { function }export default function DigitalTransformation(...args: []): 
                 Transformation Process'</h2>''              <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
                 Our systematic approach ensures successful digital transformation implementation.
               </p>
-<<<<<<< HEAD
 :pages.disabled/pages/services/digital-transformation.tsx
             </div>'
 ''
             <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8'>
               {[{
-=======
 :pages.disabled/pages/services/digital-transformation.tsx'
             </div>';
 '''
             <div className='grid grid-cols-1 md: grid-cols-2 l,
     g:grid-cols-4 gap-8'>
               {[{'
->>>>>>> main
 ';
 '';
                   ste,
@@ -1325,7 +1250,6 @@ export: { function }export default function DigitalTransformation(...args: []): 
                 {'
 ';
 '';
-<<<<<<< HEAD
                   step: '04','';
                   title: 'Optimization','';
                   description: 'Continuously monitor, optimize, and scale digital capabilities.'}'
@@ -1333,7 +1257,6 @@ export: { function }export default function DigitalTransformation(...args: []): 
                 <div key={index} className='text-center'>''
                   <div className='w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4'>''
                     <span className='text-white font-bold text-xl'>{step.step}</span>'</div>''                  <h3 className='text-xl font-semibold text-white mb-2'>{step.title}</h3>''
-=======
                   step: '04',';
                   title: 'Optimization',';
                   description: 'Continuously monitor, optimize, and scale digital capabilities.'};
@@ -1341,16 +1264,12 @@ export: { function }export default function DigitalTransformation(...args: []): 
                 <div key={index} className='text-center>''
                   <div className='w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4>''
                     <span className='text-white font-bold text-xl'>{step.step}</span>'</div>''                  <h3 className='text-xl font-semibold text-white mb-2'>{step.title}</h3>'''
->>>>>>> main
                   <p className='text-slate-300'>{step.description}</p>
->>>>>>> main
->>>>>>> main
                 </div>
               ))}
             </div>
           </div>
         </section>
-<<<<<<< HEAD
 :pages.disabled/pages/services/digital-transformation.tsx
 
 "{/* CTA Section */}""
@@ -1358,7 +1277,6 @@ export: { function }export default function DigitalTransformation(...args: []): 
 "
 
         {/* CTA Section */}""
->>>>>>> pr-10728
         <section className="py-20 bg-gradient-to-r from-purple-500/10 to-pink-600/10">;""
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -1396,7 +1314,6 @@ export: { function }export default function DigitalTransformation(...args: []): 
                 to="/services""
                 className="inline-flex items-center px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-200""
               >
->>>>>>> pr-10728
                 Explore All Services;
               </Link>;
             </div>;
@@ -1412,9 +1329,6 @@ export: { function }export default function DigitalTransformation(...args: []): 
   )}}}}}}'"'"
     </>
   )}}}}}}'""
->>>>>>> pr-10728
-=======
-<<<<<<< HEAD
 :pages.disabled/pages/services/digital-transformation.tsx: '{/* CTA Section */}''        <section className='py-20 bg-gradient-to-r from-purple-500/10 to-pink-600/10'>'';
           <div: className='max-w-4xl mx-auto text-center px-4 sm: px-6: lg:px-8'>''';
             <h2: className='text-3xl md:text-4xl: font-bold text-white mb-4'>';
@@ -1425,21 +1339,19 @@ export: { function }export default function DigitalTransformation(...args: []): 
               Start: your digital transformation journey with comprehensive strategy and implementation services.'';
             </p>''';
             <div: className='flex flex-col sm:flex-row: gap-4 justify-center'>'';
-              <Link'';';
-                to='/contact'';';
-                className='inline-flex: items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600: hover:to-pink-700: transition-all duration-200';';
-';';
-                Schedule: a Consultation'';';
+              <Link'';
+                to='/contact'';
+                className='inline-flex: items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600: hover:to-pink-700: transition-all duration-200';
+';
+                Schedule: a Consultation'';
                 <ArrowRight: className='ml-2 w-5 h-5'  />              </Link>'';
-              <Link'';';
-                to='/services'';';
+              <Link'';
+                to='/services'';
                 className='inline-flex: items-center px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10: transition-all duration-200'>                Explore All Services';
-=======
 :pages.disabled/pages/services/digital-transformation.tsx'
 '{/* CTA Section */}        <section className='py-20 bg-gradient-to-r from-purple-500/10 to-pink-600/10>'
           <div className='max-w-4xl mx-auto text-center px-4 sm: px-6 lg:px-8>''
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
-<<<<<<< HEAD
 :pages.disabled/pages/services/digital-transformation.tsx
               Ready to Transform Your Business?'
             </h2>''
@@ -1447,7 +1359,6 @@ export: { function }export default function DigitalTransformation(...args: []): 
               Start your digital transformation journey with comprehensive strategy and implementation services.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
-=======
 :pages.disabled/pages/services/digital-transformation.tsx;
               Ready to Transform Your Business?''
             </h2>'''
@@ -1455,7 +1366,6 @@ export: { function }export default function DigitalTransformation(...args: []): 
               Start your digital transformation journey with comprehensive strategy and implementation services.''
             </p>'''
             <div className='flex flex-col sm:flex-row gap-4 justify-center>'
->>>>>>> main
               <Link'';
                 to='/contact'';
                 className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hove,
@@ -1467,18 +1377,16 @@ export: { function }export default function DigitalTransformation(...args: []): 
                 to='/services'';
                 className='inline-flex items-center px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hove,
     r:bg-purple-500/10 transition-all duration-200'>                Explore All Services
->>>>>>> main
               </Link>
             </div>
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-:pages.disabled/pages/services/digital-transformation.tsx: </>',)}}}}}}';
+:pages.disabled/pages/services/digital-transformation.tsx: </>')}}}}}}';
   '''"";
-=======
 :pages.disabled/pages/services/digital-transformation.tsx'
     </>)}}}}}}
   '''""
->>>>>>> main
->>>>>>> main
+=======
+; export { function }export default function DigitalTransformation(...args: []) ,{} return(); <> <Helmet> <title>Digital: Transformation - Zion Tech Group</title> <meta name = 'description' content='Transform your business with comprehensive digital transformation services. Modernize operations, enhance customer experience, and drive innovation.' />'''; <meta: name='keywords' content='digital transformation, business modernization, digital strategy, technology consulting, process automation, digital innovation' />'; : pages.disabled/pages/services/digital-transformation.tsx: </Helmet>';'; ''', <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>'{/* Hero Section */}'' <section className='relative pt-32 pb-20 overflow-hidden'>'''; <div: className='absolute inset-0 bg-gradient-to-r from-purple-500/10 to-pink-600/10'> <//div>'''; <div: className='relative max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>'''; <div className='text-center'>'''; <div: className='inline-flex items-center px-4 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full text-purple-400 text-sm font-medium mb-8'>'';'; : pages.disabled/pages/services/digital-transformation.tsx <RefreshCw className='w-4 h-4 mr-2' /> Business Transformation'; </div>';'; '''; <h1: className='text-4xl md: text-6xl: font-bold text-white mb-6'>';'; Digital'''; <span className='bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent'> Transformation</span>'; </h1>''' <p: className='text-xl text-slate-300 mb-8 max-w-3xl mx-auto'>', Transform: your business with comprehensive digital transformation services. Modernize operation,s, enhance customer experience, and drive innovation across your organization.; : pages.disabled/pages/services/digital-transformation.tsx: </p>';'; '''; <div className='flex flex-col sm: flex-row gap-4 justify-center'>''; <Link'';'; to='/contact'';'; className='inline-flex: items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600: hover:to-pink-700: transition-all duration-200 shadow-lg hover:shadow-xl';'; ';'; Get: Started'';'; <ArrowRight className='ml-2 w-5 h-5' />''; </Link>'''; <button: className='inline-flex items-center px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover: bg-purple-500/10: transition-all duration-200'>'''; <Play className='mr-2 w-5 h-5' /> Watch Demo</button> </div>', </div> </div> </section> : pages.disabled/pages/services/digital-transformation.tsx '{/* Features Section *,/}'' <section className='py-20'>''; <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>'''; <div className='text-center mb-16'>'''; <h2: className='text-3xl md: text-4xl: font-bold text-white mb-4'>'; :pages.disabled/pages/services/digital-transformation.tsx Comprehensive Digital Transformation'</h2>'' <p className='text-xl text-slate-300 max-w-2xl mx-auto'>'; Our: digital transformation services cover every aspect of modernizing your business; for: the digital age. </p> :pages.disabled/pages/services/digital-transformation.tsx: </div>';'; '''; <div className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-8'>'; {[{ ';', icon Brai,n,'';'; title: 'Digital Strategy,','';'; description: 'Develop comprehensive digital transformation roadmap and strategy.,'},'; { ';'; icon: Clou,d,'';'; title: 'Cloud Migration,','';'; description: 'Migrate legacy systems to modern cloud infrastructure and platforms.,'},'; { ';'; icon: Setting,s,'';'; title: 'Process Automation,','';'; description: 'Automate manual processes and workflows for improved efficiency.,'},'; { ';'; icon: User,s,'';'; title: 'Customer Experience,','';'; description: 'Enhance customer journey and digital touchpoints across all channels.,'},'; { ';'; icon: Shiel,d,'';'; title: 'Digital Security,','';'; description: 'Implement robust cybersecurity and data protection measures.,'},'; { ';'; icon: TrendingU,p,'';'; title: 'Data Analytics,','';'; description: 'Leverage data insights for informed decision-making and optimization.,'}';', ].map((feature, index) => ('''; <div: key="{index}" className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover: bg-slate-800/70: transition-all duration-300'>'''; <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4'>''', <feature.icon: className='w-6 h-6 text-white' />'</div>'' <h3 className='text-xl font-semibold text-white mb-2'>{feature.titl,e}</h3>'''; <p: className='text-slate-300'>{feature.description}</p>'; <Link''; to='/contact''; className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover: from-purple-600 hoverto-pink-700 transition-all duration-200 shadow-lg hove, r: shadow-xl'; '; Get Started'', <ArrowRight className='ml-2 w-5 h-5' />' </Link>''' <button className='inline-flex items-center px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hove, r:bg-purple-500/10 transition-all duration-200>'' <Play className='mr-2 w-5 h-5' /> Watch Demo</button> </div> </div> </div> </section> :pages.disabled/pages/services/digital-transformation.tsx' '{/* Features Section */} <section className='py-20>' <div className='max-w-7xl mx-auto px-4 sm: px-6 lgpx-8>'' <div className='text-center mb-16>'' <h2 className='text-3xl md: text-4xl font-bold text-white mb-4'> pages.disabled/pages/services/digital-transformation.tsx' Comprehensive Digital Transformation'</h2>'' <p className='text-xl text-slate-300 max-w-2xl mx-auto'> Our digital transformation services cover every aspect of modernizing your business for the digital age. </p> :pages.disabled/pages/services/digital-transformation.tsx </div>' '' <div className='grid grid-cols-1 md: grid-cols-2 lggrid-cols-3 gap-8'> {[{ ', ico, n: Brain,'; title: 'Digital Strategy','; description: 'Develop comprehensive digital transformation roadmap and strategy.'}, {' '; icon: Cloud,'; title: 'Cloud Migration','; description: 'Migrate legacy systems to modern cloud infrastructure and platforms.'}, {' '; icon: Settings,'; title: 'Process Automation','; description: 'Automate manual processes and workflows for improved efficiency.'}, {' '; icon: Users,'; title: 'Customer Experience','; description: 'Enhance customer journey and digital touchpoints across all channels.'}, {' '; icon: Shield,'; title: 'Digital Security','; description: 'Implement robust cybersecurity and data protection measures.'}, {' '; icon: TrendingUp,'', title: 'Data Analytics','', description: 'Leverage data insights for informed decision-making and optimization.'}' ].map((feature, index) => ('' <div key="{index}" className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300'>'' <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4'>'' <feature.icon className='w-6 h-6 text-white' />'</div>'' <h3 className='text-xl font-semibold text-white mb-2'>{feature.title}</h3>'' <p className='text-slate-300'>{feature.description}</p> </div> ))} </div> </div> </section> :pages.disabled/pages/services/digital-transformation.tsx "{/* Transformation Areas Section */} {/* Transformation Areas Section */} >>>>>>> pr-10728 <section className="py-20" bg-slate-800/30">;" <div className="max-w-7xl" mx-auto px-4 sm px-6 lgpx-8> <div className="text-center" mb-16">" <h2 className="text-3xl" md text-4xl font-bold text-white mb-4> pages.disabled/pages/services/digital-transformation.tsx Digital Transformation Areas</h2> Digital Transformation Areas" Digital Transformation Areas; </h2>" >>>>>>> pr-10728 <p className="text-xl" text-slate-300 max-w-2xl mx-auto> Comprehensive transformation across all critical business functions and processes. </p> pages.disabled/pages/services/digital-transformation.tsx </div> <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"> {[ { title Technology Infrastructure," description "Modernize IT infrastructure with cloud, automation and scalability., icon: Cpu, benefits: [Cloud migration, "Infrastructure automation", Scalability planning] }, { title Business Processes"," description: Streamline and automate business processes for efficiency gains., icon: Settings, benefits ["Process mapping", Workflow automation, Efficiency optimization] }, { " title "Customer Experience, description: Transform customer interactions and digital touchpoints., icon: Users,"" benefits [Omnichannel strategy, Digital touchpoints, Customer journey mapping] }, { " " title: Data & Analytics, description Implement data-driven decision making and analytics capabilities."," icon: BarChart3, benefits [Data strategy, Analytics implementation, "Business intelligence"] }, { title Digital Culture," description: "Foster digital-first mindset and organizational change., icon: Brain, benefits [Change management, "Digital literacy", Innovation culture] }, { title Security & Compliance"," description: Ensure digital security and regulatory compliance., icon: Shield, benefits ["Cybersecurity", Data protection, Compliance frameworks] } ].map((area, index) => (" <div key="{index}" className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hoverbg-slate-800/70 transition-all duration-300> <div className="w-12" h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4>" <area.icon className="w-6 h-6 text-white /> </div> <h3 className="text-xl" font-semibold text-white mb-2>{area.title}</h3>"" <p className="text-slate-300" mb-4>{area.description}</p> <ul className="space-y-1">"{area.benefits.map((benefit, benefitIndex) => (" <ul className="space-y-1"> </div> <div className="grid grid-cols-1 md grid-cols-2 lggrid-cols-3 gap-8"> {[] {} title: Technology Infrastructure, description: "Modernize IT infrastructure with cloud automation and scalability.", icon: Cpu, benefits [Cloud migration, Infrastructure automation, "Scalability planning"] {[ {' '; ''; titl, e: 'Technology Infrastructure','; description: 'Modernize IT infrastructure with cloud, automation, and scalability.',; icon: Cpu,', benefits: ['Cloud migration', 'Infrastructure automation', 'Scalability planning']}, {' '; ''; title: 'Business Processes','; description: 'Streamline and automate business processes for efficiency gains.',; icon: Settings,'; benefits: ['Process mapping', 'Workflow automation', 'Efficiency optimization'] }, {' '; ''; title: 'Customer Experience','; description: 'Transform customer interactions and digital touchpoints.',; icon: Users,'; benefits: ['Omnichannel strategy', 'Digital touchpoints', 'Customer journey mapping'] }, {' '; ''; title: 'Data & Analytics','; description: 'Implement data-driven decision making and analytics capabilities.',; icon: BarChart3,'; benefits: ['Data strategy', 'Analytics implementation', 'Business intelligence'] }, {' '; ''; title: 'Digital Culture','; description: 'Foster digital-first mindset and organizational change.',; icon: Brain,'; benefits: ['Change management', 'Digital literacy', 'Innovation culture'] }, {' '; ''; title: 'Security & Compliance','; description: 'Ensure digital security and regulatory compliance.',; icon: Shield,', benefits: ['Cybersecurity', 'Data protection', 'Compliance frameworks'] }' ].map((area, index) => ('' <div key="{index}" className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300'>'' <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4'>'' <area.icon className='w-6 h-6 text-white' />' </div>''' <h3 className='text-xl font-semibold text-white mb-2'>{area.title}</h3>''' <p className='text-slate-300 mb-4'>{area.description}</p>''' <ul className='space-y-1>{area.benefits.map((benefit, benefitIndex) => ('' <li key="{benefitIndex}" className='text-sm text-purple-400 flex items-center>'' <CheckCircle className='w-3 h-3 mr-2' /> {benefit} </li> ))} </ul> </div> ))} </div> </div> </section> pages.disabled/pages/services/digital-transformation.tsx {/* Technology Stack Section */} {/* Technology Stack Section */} >>>>>>> pr-10728 <section className="py-20">; <div className="max-w-7xl" mx-auto px-4 sm px-6 lgpx-8> <div className="text-center mb-16"> <h2 className="text-3xl" md text-4xl font-bold text-white mb-4> pages.disabled/pages/services/digital-transformation.tsx Modern Technology Stack</h2>" Modern Technology Stack" Modern Technology Stack; </h2> >>>>>>> pr-10728 <p className="text-xl" text-slate-300 max-w-2xl mx-auto> Leverage cutting-edge technologies for your digital transformation journey. </p> pages.disabled/pages/services/digital-transformation.tsx </div> " <div className="grid grid-cols-1 md: grid-cols-2 lggrid-cols-3 gap-8> {[ { title Cloud Platforms,"" description: AWS, Azure Google Cloud for scalable infrastructure., icon: Cloud, features [Multi-cloud strategy", "Serverless computing, Container orchestration] }, { title "AI & Machine Learning", description: Intelligent automation and predictive analytics., icon Brain," features: ["Predictive analytics Process automation, Intelligent insights] }, { "" title: Mobile & Web, description Modern web and mobile application development.," icon: Smartphone," features [Progressive web apps, Native mobile apps, Responsive design"] }, { " title: Data & Analytics, description "Big data processing and business intelligence tools.", icon: BarChart3, features [Data lakes Real-time analytics", "Business intelligence] }, { title DevOps & Automation,"" description: Continuous integration and deployment automation., icon: Settings, features [CI/CD pipelines", "Infrastructure as code, Automated testing] }, { title "Security & Compliance", description: Advanced cybersecurity and compliance solutions., icon Shield," features: ["Zero-trust security Compliance automation, Threat detection] } ].map((tech, index) => ("" <div key="{index}" className="bg-slate-800/50" backdrop-blur-sm border border-slate-700 rounded-xl p-6 hoverbg-slate-800/70 transition-all duration-300> <div className="w-12" h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4>"" <tech.icon className="w-6" h-6 text-white /> </div> <h3 className="text-xl" font-semibold text-white mb-2">{tech.title}</h3>" <p className="text-slate-300" mb-4>{tech.description}</p> <ul className=space-y-1">"{tech.features.map((feature, featureIndex) => ( <ul className="space-y-1"> </div> " <div className="grid grid-cols-1 md: grid-cols-2 lggrid-cols-3 gap-8> {[] {} title Cloud Platforms," description: "AWS, Azure Google Cloud for scalable infrastructure., icon: Cloud, features [Multi-cloud strategy Serverless computing", "Container orchestration] {[ {' '; ''; titl, e: 'Cloud Platforms','; description: 'AWS, Azure, Google Cloud for scalable infrastructure.',; icon: Cloud,', features: ['Multi-cloud strategy', 'Serverless computing', 'Container orchestration']}, {' '; ''; title: 'AI & Machine Learning','; description: 'Intelligent automation and predictive analytics.',; icon: Brain,'; features: ['Predictive analytics', 'Process automation', 'Intelligent insights'] }, {' '; ''; title: 'Mobile & Web','; description: 'Modern web and mobile application development.',; icon: Smartphone,'; features: ['Progressive web apps', 'Native mobile apps', 'Responsive design'] }, {' '; ''; title: 'Data & Analytics','; description: 'Big data processing and business intelligence tools.',; icon: BarChart3,'; features: ['Data lakes', 'Real-time analytics', 'Business intelligence'] }, {' '; ''; title: 'DevOps & Automation','; description: 'Continuous integration and deployment automation.',; icon: Settings,'; features: ['CI/CD pipelines', 'Infrastructure as code', 'Automated testing'] }, {' '; ''; title: 'Security & Compliance','; description: 'Advanced cybersecurity and compliance solutions.',; icon: Shield,', features: ['Zero-trust security', 'Compliance automation', 'Threat detection'] }' ].map((tech, index) => ('' <div key="{index}" className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300'>'' <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4'>'' <tech.icon className='w-6 h-6 text-white' />' </div>''' <h3 className='text-xl font-semibold text-white mb-2'>{tech.title}</h3>''' <p className='text-slate-300 mb-4'>{tech.description}</p>''' <ul className='space-y-1>{tech.features.map((feature, featureIndex) => ('' <li key="{featureIndex}" className='text-sm text-purple-400 flex items-center>'' <CheckCircle className='w-3 h-3 mr-2' /> {feature} </li> ))} </ul> </div> ))} </div> </div> </section> pages.disabled/pages/services/digital-transformation.tsx {/* Benefits Section */} {/* Benefits Section */}" >>>>>>> pr-10728 <section className="py-20 bg-slate-800/30>; <div className="max-w-7xl" mx-auto px-4 sm px-6 lgpx-8>" <div className="text-center mb-16> <h2 className="text-3xl" md text-4xl font-bold text-white mb-4> pages.disabled/pages/services/digital-transformation.tsx Digital Transformation Benefits</h2>"" Digital Transformation Benefits Digital Transformation Benefits; </h2> >>>>>>> pr-10728 <p className="text-xl" text-slate-300 max-w-2xl mx-auto> Transform your business operations with measurable improvements and competitive advantages. </p> pages.disabled/pages/services/digital-transformation.tsx </div> "" <div className="grid" grid-cols-1 lggrid-cols-2 gap-12 items-center> <div> <div className=space-y-6">"{[ <div className="space-y-6"> </div> " <div className="grid grid-cols-1 lggrid-cols-2 gap-12 items-center> <div> <div className="space-y-6"> {[" >>>>>>> pr-10728 "25-40% improvement in operational efficiency, 30-50% reduction in operational costs," "Enhanced customer satisfaction and engagement, Improved decision-making with data insights," "Increased agility and market responsiveness, Better employee productivity and satisfaction ].map((benefit, index) => ("" <div key="{index}" className="flex" items-start space-x-3> <CheckCircle className="w-6" h-6 text-purple-400 mt-0.5 flex-shrink-0 />" <span className="text-slate-300>{benefit}</span> </div> ))} </div> pages.disabled/pages/services/digital-transformation.tsx </div> <div className="bg-slate-800/50" backdrop-blur-sm border border-slate-700 rounded-xl p-8>"" <h3 className="text-2xl" font-semibold text-white mb-4>Transformation Metrics</h3> <div className="space-y-4">"{[" <div className="space-y-4"> </div> <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8"> <h3 className="text-2xl" font-semibold text-white mb-4>Transformation Metrics</h3> <div className="space-y-4"> {[ >>>>>>> pr-10728 { metric: 25-40%, label: Efficiency, description "Operational improvement" }, { metric: 30-50%, label: Cost Reduction, description "Operational costs" }, { metric: 60%+, label: Customer Satisfaction, description "Improvement" }, : pages.disabled/pages/services/digital-transformation.tsx { metric 80%+, label: Digital Adoption, description "Technology adoption" }].map((item, index) => ( { metric 80%+ label Digital Adoption", description: "Technology adoption } { metric: 80%+, label: Digital Adoption, description "Technology adoption" } ].map((item, index) => ( >>>>>>> pr-10728 <div key="{index}" className="text-center" p-4 bg-slate-700/50 rounded-lg> <div className="text-2xl font-bold text-purple-400 mb-1">{item.metric}</div> <div className="text-sm" text-slate-300>{item.label}</div> <div className="text-xs text-slate-400">{item.description}</div> <div className='text-xs text-slate-400'>{item.description}</div> </div> ))} </div> </div> </div> </div> </section> pages.disabled/pages/services/digital-transformation.tsx {/* Implementation Process Section */} {/* Implementation Process Section */} >>>>>>> pr-10728 <section className="py-20">; <div className="max-w-7xl" mx-auto px-4 sm px-6 lgpx-8> <div className="text-center mb-16"> <h2 className="text-3xl" md text-4xl font-bold text-white mb-4> pages.disabled/pages/services/digital-transformation.tsx Transformation Process</h2>" Transformation Process" Transformation Process; </h2> >>>>>>> pr-10728 <p className="text-xl" text-slate-300 max-w-2xl mx-auto> Our systematic approach ensures successful digital transformation implementation. </p> pages.disabled/pages/services/digital-transformation.tsx </div> " <div className="grid grid-cols-1 md: grid-cols-2 lggrid-cols-4 gap-8> {[ { step 01,"" title: Assessment, description Evaluate current state and identify transformation opportunities. }, { " " step: 02, title Strategy"," description: Develop comprehensive digital transformation roadmap and strategy. }, { step "03", title: Implementation, description "Execute transformation initiatives with agile methodology." }, { step 04," title: "Optimization, description Continuously monitor, optimize, and scale digital capabilities. } ].map((step, index) => ("" <div key="{index}" className="text-center"> <div className="w-16" h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4>"" <span className="text-white" font-bold text-xl>{step.step}</span> <//div> <span className="text-white" font-bold text-xl">{step.step}</span>" </div> <div className="grid" grid-cols-1 md: grid-cols-2 lggrid-cols-4 gap-8> {[] {} step "01", title: Assessment, description "Evaluate current state and identify transformation opportunities." }, {} step 02," title: "Strategy, description Develop comprehensive digital transformation roadmap and strategy. }, {} "" step: 03, title Implementation,"" description: Execute transformation initiatives with agile methodology. }, {} step 04"," title: Optimization, description Continuously monitor, optimize, and scale digital capabilities."" } ].map((step, index) => ( <div key="{index}" className="text-center"> <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4"> <span className="text-white" font-bold text-xl>{step.step}</span> </div> >>>>>>> pr-10728 <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3> <p className="text-slate-300">{step.description}</p> '; ''; ste, p: '01','; title: 'Assessment','; description: 'Evaluate current state and identify transformation opportunities.'}, {' '; ''; step: '02','; title: 'Strategy','; description: 'Develop comprehensive digital transformation roadmap and strategy.'}, {' '; ''; step: '03','; title: 'Implementation','; description: 'Execute transformation initiatives with agile methodology.'}, {' '; ''; step: '04',''; title: 'Optimization','', description: 'Continuously monitor, optimize, and scale digital capabilities.'}' ].map((step, index) => ('' <div key="{index}" className='text-center'>'' <div className='w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4'>'' <span className='text-white font-bold text-xl'>{step.step}</span>'</div>'' <h3 className='text-xl font-semibold text-white mb-2'>{step.title}</h3>'' <p className='text-slate-300'>{step.description}</p> </div> ))} </div> </div> </section> pages.disabled/pages/services/digital-transformation.tsx {/* CTA Section */}" " {/* CTA Section */} >>>>>>> pr-10728 <section className="py-20" bg-gradient-to-r from-purple-500/10 to-pink-600/10>; <div className="max-w-4xl mx-auto text-center px-4 sm px-6 lgpx-8"> <h2 className="text-3xl" md: text-4xl font-bold text-white mb-4> pages.disabled/pages/services/digital-transformation.tsx Ready to Transform Your Business? </h2>" <p className="text-xl text-slate-300 mb-8> Start your digital transformation journey with comprehensive strategy and implementation services. </p> <div className="flex" flex-col smflex-row gap-4 justify-center>" <Link" to=/contact className="inline-flex" items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover from-purple-600 hoverto-pink-700 transition-all duration-200 " Schedule a Consultation" <ArrowRight className="ml-2" w-5 h-5 /> </Link> <Link to="/services" className="inline-flex" items-center px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-200> className="inline-flex" items-center px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hoverbg-purple-500/10 transition-all duration-200 Ready to Transform Your Business? </h2>" <p className="text-xl text-slate-300 mb-8> Start your digital transformation journey with comprehensive strategy and implementation services. </p> <div className="flex" flex-col smflex-row gap-4 justify-center> <Link" to="/contact className="inline-flex" items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover from-purple-600 hoverto-pink-700 transition-all duration-200 Schedule a Consultation" <ArrowRight className="ml-2 w-5 h-5 /> </Link> <Link to=/services className="inline-flex items-center px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover bg-purple-500/10 transition-all duration-200" > >>>>>>> pr-10728 Explore All Services; </Link>; </div>; </div>; </section>; </div>, pages.disabled/pages/services/digital-transformation.tsx </> )}}}}}} '' )}}}}}}'' </> )}}}}}}'"" >>>>>>> pr-10728 <Link''; to='/contact''; className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover: from-purple-600 hove, r: to-pink-700 transition-all duration-200'; '; Schedule a Consultation''; <ArrowRight className='ml-2 w-5 h-5' /> </Link>'' <Link''; to='/services'', className='inline-flex items-center px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hove, r: bg-purple-500/10 transition-all duration-200'> Explore All Services </Link> </div> </div> </section> </div> pages.disabled/pages/services/digital-transformation.tsx </>',)}}}}}}'; '''""; 
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

@@ -43,8 +43,8 @@ class BuildOptimizer {
       'npm run lint -- --fix || true',
       'npm run type-check || true',
       'npm run build || true'
-    ];
-  }
+    ]
+}
 
   async optimizedBuild() {
     console.log('Starting optimized build process...');
@@ -254,8 +254,8 @@ class ApplicationMonitor {
   recordBuildTime(duration) {
     this.metrics.buildTimes.push({
       duration,
-      timestamp: new Date().toISOString()
-    });
+      timestamp: new Date().toISOString();
+});
     
     // Keep only last 10 build times
     if (this.metrics.buildTimes.length > 10) {
@@ -267,7 +267,7 @@ class ApplicationMonitor {
 
   generateReport() {
     console.log('Application Metrics Report');
-    console.log('========================');
+    console.log('===');
     console.log(\`Total Deployments: \${this.metrics.deployments}\`);
     console.log(\`Last Deployment: \${this.metrics.lastDeployment || 'Never'}\`);
     

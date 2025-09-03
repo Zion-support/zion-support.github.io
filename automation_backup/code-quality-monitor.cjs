@@ -7,8 +7,8 @@ class CodeQualityMonitor {
       complexity: 0,
       maintainability: 0,
       testCoverage: 0,
-      performance: 0,
-    };
+      performance: 0,;
+};
   }
 
   async analyzeCodeQuality() {

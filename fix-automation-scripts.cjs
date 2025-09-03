@@ -40,7 +40,7 @@ class AutomationScriptFixer {
         { pattern: /'([^']*)\$\{([^}]*)\}([^']*)`/g, replacement: ``$1${$2}$3`` },
         
         // Fix broken regex patterns;
-        { pattern: /\/\s*changes\+\+;\s*$/gm, replacement: `/^\\s*<<<<<<<|^\\s*=======|^\\s*>>>>>>>/` },
+        { pattern: /\/\s*changes\+\+;\s*$/gm, replacement: `/^\\s*<<<<<<<|^\\s*|^\\s*>>>>>>>/` },
         
         // Fix missing closing parentheses;
         { pattern: /console\.log\(`([^`]*)\$\{([^}]*)\}([^`]*)`\)/g, replacement: `console.log(`$1${$2}$3`)` },
@@ -56,7 +56,7 @@ class AutomationScriptFixer {
         
         // Fix broken catch blocks;
         { pattern: /catch\s*\(\s*error\s*\)\s*\{([^}]*)\}/g, replacement: 'catch (error) {  $1  }' }
-      ];
+      ]
 
       fixes.forEach(fix => {
         const newContent = content.replace(fix.pattern, fix.replacement);
@@ -118,7 +118,7 @@ class AutomationScriptFixer {
       ...this.getAllFiles(rootDir, ['.cjs', '.js']).filter(f => 
         f.includes('automation') || f.includes('fix') || f.includes(`merge`)
       )
-    ];
+    ]
 
     this.log(`📁 Found ${filesToFix.length} files to check`);
 

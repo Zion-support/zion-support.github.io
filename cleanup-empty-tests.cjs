@@ -19,7 +19,7 @@ class EmptyTestCleaner {
       ...glob.sync('**/*.test.js', { cwd: this.projectRoot }),
       ...glob.sync('**/*.test.tsx', { cwd: this.projectRoot }),
       ...glob.sync('**/*.test.ts', { cwd: this.projectRoot }),
-    ];
+    ]
     
     for (const testFile of testFiles) {
       const filePath = path.join(this.projectRoot, testFile);
@@ -67,7 +67,7 @@ class EmptyTestCleaner {
       /test\s*\(\s*['"`][^'"`]+['"`]\s*,\s*\(\)\s*=>\s*\{[^}]+expect\(/,
       /it\s*\(\s*['"`][^'"`]+['"`]\s*,\s*\(\)\s*=>\s*\{[^}]+expect\(/,
       /expect\([^)]+\)\.to/,
-    ];
+    ]
     
     return testPatterns.some(pattern => pattern.test(content));
   }
@@ -80,7 +80,7 @@ class EmptyTestCleaner {
       /\/\/ Placeholder/,
       /export.*=.*null/,
       /export.*=.*undefined/,
-    ];
+    ]
     
     return stubIndicators.some(pattern => pattern.test(content));
   }

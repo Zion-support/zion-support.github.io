@@ -1,16 +1,10 @@
 <<<<<<< HEAD
- export default function EditPostPage () {;,"});,"})
+ export default function EditPostPage () {;,"});,"});
 }"});,"})
-=======
-<<<<<<< HEAD
  export: default function EditPostPage () {;
 };
-=======
-<<<<<<< HEAD
  export default function EditPostPage () {;
 }
-=======
-<<<<<<< HEAD
 import React from 'react';
 import {SEO } from '@/components/SEO';
 
@@ -26,10 +20,9 @@ export default function EditPostPage() {return (
     </div>
   );
 }
-=======
- export default function EditPostPage () {
+ export default function EditPostPage () {;
 };
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
+=======
+ export default function EditPostPage () {;,"});,})
+}});,"})
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

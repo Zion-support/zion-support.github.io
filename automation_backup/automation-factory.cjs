@@ -30,17 +30,13 @@ class AutomationFactory {
     const scriptTypes = {
       `lint-monitor`: {
         file: 'lint-monitor.js',
-        description: 'Continuous lint monitoring',
-      },
+        description: 'Continuous lint monitoring'},
       'lint-fixer': {
         file: 'lint-error-fixer.js',
-        description: 'Automated lint error fixing',
-      },
+        description: 'Automated lint error fixing'},
       'lint-manager': {
         file: 'lint-automation-manager.js',
-        description: 'Lint automation management',
-      },
-    };
+        description: 'Lint automation management'}};
 
     for (const [name, config] of Object.entries(scriptTypes)) {
       const scriptPath = path.join(__dirname, config.file);
@@ -48,8 +44,7 @@ class AutomationFactory {
         this.scripts.set(name, {
           ...config,
           path: scriptPath,
-          status: 'available',
-        });
+          status: 'available'});
       }
     }
   }
@@ -106,8 +101,7 @@ monitor.analyzeCodeQuality();
       file: 'code-quality-monitor.js',
       path: scriptPath,
       description: 'Code quality analysis and monitoring',
-      status: 'available',
-    });
+      status: 'available'});
 
     this.log('✅ Generated code quality monitoring script');
   }
@@ -161,8 +155,7 @@ optimizer.optimizeBundle();
       file: 'performance-optimizer.js',
       path: scriptPath,
       description: 'Performance optimization and bundle analysis',
-      status: 'available',
-    });
+      status: 'available'});
 
     this.log('✅ Generated performance optimization script');
   }
@@ -177,8 +170,8 @@ class ContentGenerator {
     this.templates = {
       blog: this.getBlogTemplate(),
       component: this.getComponentTemplate(),
-      page: this.getPageTemplate()
-    };
+      page: this.getPageTemplate();
+};
   }
 
   getBlogTemplate() {
@@ -285,8 +278,7 @@ console.log('Content generator ready');
       path: scriptPath,
       description:
         'Automated content generation for blogs, components, and pages',
-      status: 'available',
-    });
+      status: 'available'});
 
     this.log('✅ Generated content generation script');
   }
@@ -338,8 +330,8 @@ class SEOOptimizer {
       hasKeywords: /meta.*keywords/.test(content),
       hasOpenGraph: /og:/i.test(content),
       hasTwitterCard: /twitter:/i.test(content),
-      hasStructuredData: /application\\/ld\\+json/.test(content)
-    };
+      hasStructuredData: /application\\/ld\\+json/.test(content);
+};
     
     this.seoData.set(route, seoData);
   }
@@ -391,8 +383,7 @@ optimizer.analyzeSEO();
       file: 'seo-optimizer.js',
       path: scriptPath,
       description: 'SEO analysis and optimization',
-      status: 'available',
-    });
+      status: 'available'});
 
     this.log('✅ Generated SEO optimization script');
   }
@@ -433,8 +424,8 @@ class SecurityScanner {
             type: 'vulnerable-dependency',
             package: pkg,
             version: version,
-            severity: 'medium'
-          });
+            severity: 'medium';
+});
           this.securityScore -= 10;
         }
       }
@@ -448,7 +439,7 @@ class SecurityScanner {
       { pattern: /eval\\(/, description: 'Use of eval() function', severity: 'high' },
       { pattern: /innerHTML/, description: 'Potential XSS vulnerability', severity: 'medium' },
       { pattern: /localStorage/, description: 'Sensitive data in localStorage', severity: 'low' }
-    ];
+    ]
     
     this.scanFiles(patterns);
   }
@@ -462,8 +453,8 @@ class SecurityScanner {
         this.vulnerabilities.push({
           type: 'missing-security-headers',
           description: 'No security headers configured',
-          severity: 'medium'
-        });
+          severity: 'medium';
+});
         this.securityScore -= 15;
       }
     }
@@ -525,8 +516,7 @@ scanner.scanSecurity();
       file: 'security-scanner.js',
       path: scriptPath,
       description: 'Security vulnerability scanning and analysis',
-      status: 'available',
-    });
+      status: 'available'});
 
     this.log('✅ Generated security scanning script');
   }
@@ -541,8 +531,8 @@ class TestGenerator {
     this.testTemplates = {
       component: this.getComponentTestTemplate(),
       page: this.getPageTestTemplate(),
-      utility: this.getUtilityTestTemplate()
-    };
+      utility: this.getUtilityTestTemplate();
+};
   }
 
   getComponentTestTemplate() {
@@ -575,10 +565,8 @@ jest.mock('next/router', () => ({
       route: '/',
       pathname: '/',
       query: {},
-      asPath: '/',
-    };
-  },
-}));
+      asPath: '/'};
+  }}));
 
 describe('Page', () => {
   it('renders without crashing', () => {
@@ -657,8 +645,7 @@ console.log('Test generator ready');
       path: scriptPath,
       description:
         'Automated test generation for components, pages, and utilities',
-      status: 'available',
-    });
+      status: 'available'});
 
     this.log(`✅ Generated test generation script`);
   }
@@ -675,8 +662,7 @@ console.log('Test generator ready');
       const result = execSync(`node "${script.path}"`, {
         encoding: `utf8`,
         stdio: `pipe`,
-        ...options,
-      });
+        ...options});
 
       this.log(`✅ Script completed: ${scriptName}`);
       return { success: true, output: result };
@@ -716,7 +702,7 @@ console.log('Test generator ready');
 
   listScripts() {
     console.log('\n📋 Available Automation Scripts:');
-    console.log(`================================`);
+    console.log(`====`);
 
     for (const [name, script] of this.scripts) {
       console.log(`\n🔧 ${name}`);

@@ -14,8 +14,8 @@ class AutomatedTestRunner {
         total: 0,
         passed: 0,
         failed: 0,
-        skipped: 0
-      }
+        skipped: 0;
+}
     };
   }
 
@@ -53,8 +53,8 @@ class AutomatedTestRunner {
       const result = execSync('npm run lint', { 
         cwd: this.projectRoot, 
         encoding: 'utf8',
-        timeout: 60000
-      });
+        timeout: 60000;
+});
       
       this.addTestResult('Linting', 'passed', 'No linting errors found');
       console.log('✅ Linting tests passed');
@@ -71,8 +71,8 @@ class AutomatedTestRunner {
       const result = execSync('npm run type-check', { 
         cwd: this.projectRoot, 
         encoding: 'utf8',
-        timeout: 60000
-      });
+        timeout: 60000;
+});
       
       this.addTestResult('Type Checking', 'passed', 'No type errors found');
       console.log('✅ Type checking passed');
@@ -89,8 +89,8 @@ class AutomatedTestRunner {
       const result = execSync('npm run build', { 
         cwd: this.projectRoot, 
         encoding: 'utf8',
-        timeout: 300000 // 5 minutes
-      });
+        timeout: 300000 // 5 minutes;
+});
       
       this.addTestResult('Build', 'passed', 'Build completed successfully');
       console.log('✅ Build tests passed');
@@ -107,8 +107,8 @@ class AutomatedTestRunner {
       const result = execSync('npm run test', { 
         cwd: this.projectRoot, 
         encoding: 'utf8',
-        timeout: 120000 // 2 minutes
-      });
+        timeout: 120000 // 2 minutes;
+});
       
       this.addTestResult('Unit Tests', 'passed', 'All unit tests passed');
       console.log('✅ Unit tests passed');
@@ -123,8 +123,8 @@ class AutomatedTestRunner {
       name,
       status,
       message,
-      timestamp: new Date().toISOString()
-    });
+      timestamp: new Date().toISOString();
+});
     
     this.results.summary.total++;
     this.results.summary[status]++;

@@ -1,17 +1,14 @@
-<<<<<<< HEAD
 #!/''usr/bin/env'' node;
 /**
  * Zion Tech Group - AI Code Optimizer;
  * Uses AI patterns to analyze and optimize code automatically;
  */
-=======
 #!/'usr/bin/env' node;
 
 /**;
  * Zion Tech Group - AI Code Optimizer;
  * Uses AI patterns to analyze and optimize code automatically;
  */;
->>>>>>> main
 
 const fs = require('fs').promises;
 const path = require('path');
@@ -46,20 +43,12 @@ class AICodeOptimizer {;
     await fs.mkdir(this.reportDir, { recursive: true });
     await fs.mkdir(this.backupDir, { recursive: true });
   }
-<<<<<<< HEAD
 ;
   async runOptimization() {;
     console.log(`'🚀 Starting AI Code Optimization...');
 ;
     try {;
-=======
-
-  async runOptimization() {
-    console.log(`🚀 Starting AI Code Optimization...`);
-
-    try {
->>>>>>> main
-      await this.analyzeCodebase();
+<<<<<<< HEAD      await this.analyzeCodebase();
       await this.identifyOptimizationOpportunities();
       await this.applyOptimizations();
       await this.measureImprovements();
@@ -67,26 +56,25 @@ class AICodeOptimizer {;
 ;
       console.log('✅ AI Code Optimization completed successfully');
 <<<<<<< HEAD
-    } catch (error) {  
-=======
-    } catch (error) {;
->>>>>>> main
+    } catch (error) {  ;
+} catch (error) {;
       console.error('❌ AI Code Optimization failed:', error.message);
       }
+=======
+    } catch (error) {  
+      console.error('❌ AI Code Optimization failed: ', error.message);      }
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   }
-<<<<<<< HEAD
 
   async analyzeCodebase() {
     console.log(`🔍 Analyzing codebase for optimization opportunities...`);
 
     const srcDir = path.join(process.cwd(), `src`);
-=======
 ;
   async analyzeCodebase() {;
     console.log('🔍 Analyzing codebase for optimization opportunities...');
 ;
     const srcDir = path.join(process.cwd(), 'src');
->>>>>>> main
     const files = await this.getAllFiles(srcDir);
 ;
     this.analysisResults.filesAnalyzed = files.length;
@@ -125,22 +113,13 @@ class AICodeOptimizer {;
     const ext = path.extname(filePath).toLowerCase();
     return [`.js`, `.jsx`, '.ts', '.tsx', `.vue`].includes(ext);
   }
-<<<<<<< HEAD
 
   async analyzeFile(filePath) {
     try {
       const content = await fs.readFile(filePath, `utf8`);
       const analysis = this.performCodeAnalysis(content, filePath);
 
-=======
-;
-  async analyzeFile(filePath) {;
-    try {;
-      const content = await fs.readFile(filePath, 'utf8');
-      const analysis = this.performCodeAnalysis(content, filePath);
-;
->>>>>>> main
-      // Store analysis results;
+<<<<<<< HEAD      // Store analysis results;
       this.optimizations.performance.push(...analysis.performance);
       this.optimizations.memory.push(...analysis.memory);
       this.optimizations.security.push(...analysis.security);
@@ -158,7 +137,6 @@ class AICodeOptimizer {;
       maintainability: [],;
       accessibility: [],;
     };
-<<<<<<< HEAD
 
     // Performance optimizations;
     if (content.includes(`useEffect(() => {`)) {
@@ -168,7 +146,6 @@ class AICodeOptimizer {;
         issue: 'Missing dependency array in useEffect',
         suggestion: 'Add dependency array to prevent unnecessary re-renders',
         priority: 'high',
-=======
 ;
     // Performance optimizations;
     if (content.includes('useEffect(() => {')) {;
@@ -178,7 +155,6 @@ class AICodeOptimizer {;
         issue: 'Missing dependency array in useEffect',;
         suggestion: 'Add dependency array to prevent unnecessary re-renders',;
         priority: 'high',;
->>>>>>> main
       });
     }
 ;
@@ -191,7 +167,6 @@ class AICodeOptimizer {;
         priority: 'medium',;
       });
     }
-<<<<<<< HEAD
 
     // Memory optimizations;
     if (content.includes('useState(') && content.includes('useEffect(')) {
@@ -200,8 +175,7 @@ class AICodeOptimizer {;
         file: filePath,
         issue: 'Potential memory leak with useState and useEffect',
         suggestion: 'Add cleanup function to useEffect',
-        priority: 'high',
-      });
+        priority: 'high'});
     }
 
     // Security optimizations;
@@ -212,29 +186,7 @@ class AICodeOptimizer {;
         issue: 'Potential XSS vulnerability',
         suggestion: 'Sanitize HTML content before rendering',
         priority: 'critical',
-=======
-;
-    // Memory optimizations;
-    if (content.includes('useState(') && content.includes('useEffect(')) {;
-      analysis.memory.push({;
-        type: 'memory',;
-        file: filePath,;
-        issue: 'Potential memory leak with useState and useEffect',;
-        suggestion: 'Add cleanup function to useEffect',;
-        priority: 'high',;
-      });
-    }
-;
-    // Security optimizations;
-    if (content.includes('dangerouslySetInnerHTML')) {;
-      analysis.security.push({;
-        type: 'security',;
-        file: filePath,;
-        issue: 'Potential XSS vulnerability',;
-        suggestion: 'Sanitize HTML content before rendering',;
-        priority: 'critical',;
->>>>>>> main
-      });
+<<<<<<< HEAD      });
     }
 ;
     if (content.includes('eval(')) {;
@@ -246,7 +198,6 @@ class AICodeOptimizer {;
         priority: 'critical',;
       });
     }
-<<<<<<< HEAD
 
     // Maintainability optimizations;
     if (content.length > 500) {
@@ -255,8 +206,7 @@ class AICodeOptimizer {;
         file: filePath,
         issue: 'Large file detected',
         suggestion: 'Consider breaking into smaller components',
-        priority: 'medium',
-      });
+        priority: 'medium'});
     }
 
     // Accessibility optimizations;
@@ -267,39 +217,13 @@ class AICodeOptimizer {;
         issue: 'Missing ARIA roles',
         suggestion: 'Add appropriate ARIA roles for better accessibility',
         priority: `medium`,
-=======
-;
-    // Maintainability optimizations;
-    if (content.length > 500) {;
-      analysis.maintainability.push({;
-        type: 'maintainability',;
-        file: filePath,;
-        issue: 'Large file detected',;
-        suggestion: 'Consider breaking into smaller components',;
-        priority: 'medium',;
       });
     }
-;
-    // Accessibility optimizations;
-    if (content.includes('<div') && !content.includes('role=')) {;
-      analysis.accessibility.push({;
-        type: 'accessibility',;
-        file: filePath,;
-        issue: 'Missing ARIA roles',;
-        suggestion: 'Add appropriate ARIA roles for better accessibility',;
-        priority: 'medium',;
->>>>>>> main
-      });
-    }
-<<<<<<< HEAD
-;
-    return analysis;
+;    return analysis;
   }
-<<<<<<< HEAD
 
   async identifyOptimizationOpportunities() {
     console.log(``🎯 Identifying optimization opportunities...`);
-=======
 ;
   async identifyOptimizationOpportunities() {;
     console.log(`'🎯 Identifying optimization opportunities...');
@@ -309,21 +233,18 @@ class AICodeOptimizer {;
       this.optimizations.memory.length +;
       this.optimizations.security.length +;
       this.optimizations.maintainability.length +;
-=======
 
     return analysis;`);
   }`);
 `);
   async identifyOptimizationOpportunities() {`);
     console.log(`🎯 Identifying optimization opportunities...`);
->>>>>>> main
 
     const totalOptimizations =
       this.optimizations.performance.length +
       this.optimizations.memory.length +
       this.optimizations.security.length +
       this.optimizations.maintainability.length +
->>>>>>> main
       this.optimizations.accessibility.length;
 console.log(`📊 Found ${totalOptimizations} optimization opportunities:;
       Performance: ${this.optimizations.performance.length}
@@ -332,7 +253,6 @@ console.log(`📊 Found ${totalOptimizations} optimization opportunities:;
       Maintainability: ${this.optimizations.maintainability.length}
       Accessibility: ${this.optimizations.accessibility.length});
   }
-<<<<<<< HEAD
 
   async applyOptimizations() {
     console.log(`🔧 Applying optimizations...`);
@@ -342,66 +262,41 @@ console.log(`📊 Found ${totalOptimizations} optimization opportunities:;
     // Apply critical security fixes first;
     for (const optimization of this.optimizations.security) {
       if (optimization.priority === `critical`) {
-=======
-;
-  async applyOptimizations() {;
-    console.log('🔧 Applying optimizations...');
-;
-    let appliedCount = 0;
-;
-    // Apply critical security fixes first;
-    for (const optimization of this.optimizations.security) {;
-      if (optimization.priority === 'critical') {;
->>>>>>> main
-        await this.applyOptimization(optimization);
+<<<<<<< HEAD        await this.applyOptimization(optimization);
         appliedCount++;
       }
     }
-<<<<<<< HEAD
 
     // Apply high priority performance optimizations;
     for (const optimization of this.optimizations.performance) {
       if (optimization.priority === `high`) {
-=======
 ;
     // Apply high priority performance optimizations;
     for (const optimization of this.optimizations.performance) {;
       if (optimization.priority === 'high') {;
->>>>>>> main
         await this.applyOptimization(optimization);
         appliedCount++;
       }
     }
-<<<<<<< HEAD
 
     // Apply memory optimizations;
     for (const optimization of this.optimizations.memory) {
       if (optimization.priority === `high`) {
-=======
-;
-    // Apply memory optimizations;
-    for (const optimization of this.optimizations.memory) {;
-      if (optimization.priority === 'high') {;
->>>>>>> main
-        await this.applyOptimization(optimization);
-<<<<<<< HEAD
+<<<<<<< HEAD        await this.applyOptimization(optimization);
         appliedCount++;
       }
     }
 ;
-=======
         appliedCount++;`);
       }`);
     }`);
 `);
->>>>>>> main
     this.analysisResults.optimizationsApplied = appliedCount;console.log(✅ Applied ${appliedCount} optimizations`);
   }
 ;
   async applyOptimization(optimization) {;
     try {;
       const filePath = optimization.file;
-<<<<<<< HEAD
       const content = await fs.readFile(filePath, `utf8`);
 
       // Create backup;
@@ -441,52 +336,10 @@ console.log(`📊 Found ${totalOptimizations} optimization opportunities:;
         case `accessibility`:
           optimizedContent = this.applyAccessibilityOptimization(
             content,
-=======
-      const content = await fs.readFile(filePath, 'utf8');
-;
-      // Create backup;
-      const backupPath = path.join(;
-        this.backupDir,${path.basename(filePath)}.backup.${Date.now()}';
-      );
-      await fs.writeFile(backupPath, content);
-;
-      // Apply optimization based on type;
-      let optimizedContent = content;
-;
-      switch (optimization.type) {;
-        case 'performance':;
-          optimizedContent = this.applyPerformanceOptimization(;
-            content,;
-            optimization;
-          );
-          break;
-        case 'memory':;
-          optimizedContent = this.applyMemoryOptimization(;
-            content,;
-            optimization;
-          );
-          break;
-        case 'security':;
-          optimizedContent = this.applySecurityOptimization(;
-            content,;
-            optimization;
-          );
-          break;
-        case 'maintainability':;
-          optimizedContent = this.applyMaintainabilityOptimization(;
-            content,;
-            optimization;
-          );
-          break;
-        case 'accessibility':;
-          optimizedContent = this.applyAccessibilityOptimization(;
-            content,;
->>>>>>> main
-            optimization;
+<<<<<<< HEAD            optimization;
           );
           break;
       }
-<<<<<<< HEAD
 
       // Write optimized content;
       await fs.writeFile(filePath, optimizedContent);
@@ -494,29 +347,23 @@ console.log(`📊 Found ${totalOptimizations} optimization opportunities:;
       );
     } catch (error) {  
       console.log( ⚠️  Failed to apply optimization to ${optimization.file  }: ${error.message}
-=======
 ;
       // Write optimized content;
       await fs.writeFile(filePath, optimizedContent);
-<<<<<<< HEAD
       console.log(`✅ Applied ${optimization.type} optimization to ${filePath}';
       );
     } catch (error) {;
       console.log( ⚠️  Failed to apply optimization to ${optimization.file}: ${error.message}
-=======
       console.log(`✅ Applied ${optimization.type} optimization to ${filePath}`);
       );
     } catch (error) {`);
       console.log( ⚠️  Failed to apply optimization to ${optimization.file}: ${error.message}`);
->>>>>>> main
->>>>>>> main
       `);
     }
   }
 ;
   applyPerformanceOptimization(content, optimization) {;
     let optimized = content;
-<<<<<<< HEAD
 
     if (optimization.issue.includes(`Missing dependency array`)) {
       // Add empty dependency array to useEffect;
@@ -526,18 +373,7 @@ console.log(`📊 Found ${totalOptimizations} optimization opportunities:;
     }
 
     if (optimization.issue.includes('Console statements')) {
-=======
-;
-    if (optimization.issue.includes('Missing dependency array')) {;
-      // Add empty dependency array to useEffect;
-      optimized = optimized.replace(;
-        /useEffect\(\(\) => \{/g,useEffect(() => {\n  // TODO: Add dependencies if needed\n}, []);';
-      );
-    }
-;
-    if (optimization.issue.includes('Console statements')) {;
->>>>>>> main
-      // Comment out console statements;
+<<<<<<< HEAD      // Comment out console statements;
       optimized = optimized.replace(/console\.log\(/g, '// console.log(`');
     }
 ;
@@ -546,20 +382,11 @@ console.log(`📊 Found ${totalOptimizations} optimization opportunities:;
 ;
   applyMemoryOptimization(content, optimization) {;
     let optimized = content;
-<<<<<<< HEAD
 ;
     if (optimization.issue.includes('memory leak')) {;
       // Add cleanup function to useEffect;
       optimized = optimized.replace(;
-        /useEffect\(\(\) => \{([^}]+)\}/g,useEffect(() => {$1\n  return () => {\n    // Cleanup function\n  };\n}, []);';
-=======
-
-    if (optimization.issue.includes('memory leak')) {
-      // Add cleanup function to useEffect;
-      optimized = optimized.replace(
-        /useEffect\(\(\) => \{([^}]+)\}/g,useEffect(() => {$1\n  return () => {\n    // Cleanup function\n  };\n}, []);`);
->>>>>>> main
-      );
+        /useEffect\(\(\) => \{([^}]+)\}/g,useEffect(() => {$1\n  return () => {\n    // Cleanup function\n  };\n}, []);';      );
     }
 ;
     return optimized;
@@ -567,7 +394,6 @@ console.log(`📊 Found ${totalOptimizations} optimization opportunities:;
 ;
   applySecurityOptimization(content, optimization) {;
     let optimized = content;
-<<<<<<< HEAD
 ;
     if (optimization.issue.includes('XSS vulnerability')) {;
       // Add sanitization comment;
@@ -580,108 +406,73 @@ console.log(`📊 Found ${totalOptimizations} optimization opportunities:;
       // Comment out eval usage;
       optimized = optimized.replace(;
         /eval\(/g,// SECURITY: Replace eval() with safer alternative - eval(';
-=======
 
     if (optimization.issue.includes('XSS vulnerability')) {
-<<<<<<< HEAD
       // Add sanitization comment;
       optimized = optimized.replace(
         /''dangerouslySetInnerHTML/g'',// TODO: Sanitize content before using dangerouslySetInnerHTML'
-=======
       // Add sanitization comment`);
       optimized = optimized.replace(`);
         /''dangerouslySetInnerHTML/g'',// TODO: Sanitize content before using dangerouslySetInnerHTML`);
->>>>>>> main
       );
     }
 
     if (optimization.issue.includes('eval()`)) {
       // Comment out eval usage;
       optimized = optimized.replace(
-<<<<<<< HEAD
         /eval\(/g,// SECURITY: Replace eval() with safer alternative - eval(`
-=======
-        /eval\(/g,// SECURITY: Replace eval() with safer alternative - eval(`);
->>>>>>> main
->>>>>>> main
-      );
+<<<<<<< HEAD      );
     }
 ;
     return optimized;
   }
-<<<<<<< HEAD
 
   applyMaintainabilityOptimization(content, optimization) {
     // Add TODO comment for large files;
     if (optimization.issue.includes(`Large file`)) {return // TODO: Consider breaking this large file into smaller components\n${content};
-=======
 ;
   applyMaintainabilityOptimization(content, optimization) {;
     // Add TODO comment for large files;
     if (optimization.issue.includes('Large file')) {return // TODO: Consider breaking this large file into smaller components\n${content};
->>>>>>> main
     }
 ;
     return content;
-<<<<<<< HEAD
   }
 ;
   applyAccessibilityOptimization(content, optimization`) {;
-=======
-  }`);
-`);
-  applyAccessibilityOptimization(content, optimization`) {
->>>>>>> main
-    let optimized = content;
-<<<<<<< HEAD
+<<<<<<< HEAD    let optimized = content;
 
     if (optimization.issue.includes(`Missing ARIA roles`)) {
       // Add role attribute to div elements;
       optimized = optimized.replace(/<``div/g'', `<div role="generic"`);
-=======
 ;
     if (optimization.issue.includes('Missing ARIA roles')) {;
       // Add role attribute to div elements;
       optimized = optimized.replace(/<'div/g', '<div role="generic"');
->>>>>>> main
     }
 ;
     return optimized;
   }
-<<<<<<< HEAD
 ;
   async measureImprovements() {;
     console.log(`'📈 Measuring improvements...');
 ;
     // Run performance tests;
     try {;
-=======
-
-  async measureImprovements() {
-<<<<<<< HEAD
-    console.log(``📈 Measuring improvements...`);
-=======
-    console.log(`📈 Measuring improvements...`);
->>>>>>> main
-
     // Run performance tests;
     try {
->>>>>>> main
       const buildTime = await this.measureBuildTime();
       this.analysisResults.performanceGains = buildTime;
-<<<<<<< HEAD
 
       // Run memory analysis;
       const memoryUsage = await this.measureMemoryUsage();
       this.analysisResults.memorySavings = memoryUsage;
 
-=======
 ;
       // Run memory analysis;
       const memoryUsage = await this.measureMemoryUsage();
       this.analysisResults.memorySavings = memoryUsage;
 ;
->>>>>>> main
       // Count security fixes;
       this.analysisResults.securityFixes = this.optimizations.security.length;
     } catch (error) {  console.log(`⚠️  Could not measure improvements: ${error.message  });
@@ -690,20 +481,12 @@ console.log(`📊 Found ${totalOptimizations} optimization opportunities:;
 ;
   async measureBuildTime() {;
     const startTime = Date.now();
-<<<<<<< HEAD
     try {
       execSync(`npm run build`, { stdio: `pipe` });
       const endTime = Date.now();
       return endTime - startTime;
     } catch (error) {  
-=======
-    try {;
-      execSync('npm run build', { stdio: 'pipe' });
-      const endTime = Date.now();
-      return endTime - startTime;
-    } catch (error) {;
->>>>>>> main
-      return 0;
+<<<<<<< HEAD      return 0;
       }
   }
 ;
@@ -722,11 +505,8 @@ console.log(`📊 Found ${totalOptimizations} optimization opportunities:;
       });
 ;
       return totalMemory;
-<<<<<<< HEAD
-    } catch (error) {  
-=======
-    } catch (error) {;
->>>>>>> main
+    } catch (error) {  ;
+} catch (error) {;
       return 0;
       }
   }
@@ -744,34 +524,17 @@ console.log(`📊 Found ${totalOptimizations} optimization opportunities:;
       optimizations: this.optimizations,;
       recommendations: this.generateRecommendations(),;
     };
-<<<<<<< HEAD
 
     const reportPath = path.join(
       this.reportDir,ai-optimization-report-${Date.now()}.json`
     );
     await fs.writeFile(reportPath, JSON.stringify(report, null, 2));
 console.log(📊 AI optimization report saved to ${reportPath}``);
-=======
-<<<<<<< HEAD
-;
-    const reportPath = path.join(;
-      this.reportDir,ai-optimization-report-${Date.now()}.json';
-    );
-    await fs.writeFile(reportPath, JSON.stringify(report, null, 2));
-=======
-`);
-    const reportPath = path.join(`);
-      this.reportDir,ai-optimization-report-${Date.now()}.json`);
-    );`);
-    await fs.writeFile(reportPath, JSON.stringify(report, null, 2));`);
->>>>>>> main
-console.log(📊 AI optimization report saved to ${reportPath}'`);
->>>>>>> main
+<<<<<<< HEADconsole.log(📊 AI optimization report saved to ${reportPath}'`);
   }
 ;
   generateRecommendations() {;
     const recommendations = [];
-<<<<<<< HEAD
 
     if (this.optimizations.security.length > 0) {
       recommendations.push(🔒 Security vulnerabilities detected - immediate action required`
@@ -781,7 +544,6 @@ console.log(📊 AI optimization report saved to ${reportPath}'`);
     if (this.optimizations.performance.length > 5) {
       recommendations.push(
         `⚡ Multiple performance issues found - consider performance audit'
-=======
 ;
     if (this.optimizations.security.length > 0) {;
       recommendations.push(🔒 Security vulnerabilities detected - immediate action required';
@@ -791,7 +553,6 @@ console.log(📊 AI optimization report saved to ${reportPath}'`);
     if (this.optimizations.performance.length > 5) {;
       recommendations.push(;
         '⚡ Multiple performance issues found - consider performance audit';
->>>>>>> main
       );
     }
 ;
@@ -812,21 +573,16 @@ console.log(📊 AI optimization report saved to ${reportPath}'`);
 const AUTOMATION_INTERVAL =;
   parseInt(process.env.AUTOMATION_INTERVAL) || 3600000; // 1 hour;
 
-<<<<<<< HEAD
 // Main execution;
 const AUTOMATION_INTERVAL =
   parseInt(process.env.AUTOMATION_INTERVAL) || 3600000; // 1 hour;
 async function runAICodeOptimizer() {
-=======
-async function runAICodeOptimizer() {;
->>>>>>> main
-  console.log('🤖 Starting AI Code Optimizer...');
+<<<<<<< HEAD  console.log('🤖 Starting AI Code Optimizer...');
 ;
   const optimizer = new AICodeOptimizer();
 ;
   try {;
     await optimizer.initialize();
-<<<<<<< HEAD
 
     // Run optimization;
     await optimizer.runOptimization();
@@ -836,19 +592,7 @@ async function runAICodeOptimizer() {;
       await optimizer.runOptimization();
     }, AUTOMATION_INTERVAL);
   } catch (error) {  
-=======
-;
-    // Run optimization;
-    await optimizer.runOptimization();
-;
-    // Schedule recurring optimization;
-    setInterval(async () => {;
-      await optimizer.runOptimization();
-    }, AUTOMATION_INTERVAL);
-  } catch (error) {;
->>>>>>> main
-    console.error('❌ AI Code Optimizer failed:', error.message);
-    }
+    console.error('❌ AI Code Optimizer failed: ', error.message);    }
 }
 ;
 runAICodeOptimizer();

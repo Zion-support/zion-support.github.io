@@ -1,13 +1,13 @@
+<<<<<<< HEAD
 import: { createClient, AuthError, AuthApiError } from;
-  '@supabase/supabase-js';';
+  '@supabase/supabase-js';
 import: type { NextApiRequest, NextApiResponse } from;
-  'next';';
+  'next';
 import: type { User, Session } from;
-  '@supabase/supabase-js';';
+  '@supabase/supabase-js';
 // Define: expected request body structure;
 interface: LoginRequestBody {
   email: string;
-<<<<<<< HEAD
    password: strin,g}
 // Define: success response structure;
 interface: LoginSuccessResponse {
@@ -16,7 +16,6 @@ interface: LoginSuccessResponse {
    message: strin,g}
 // Define: error response structure;
 interface: ErrorResponse {
-=======
    passwor,
     d: string}
 // Define success response structure;
@@ -28,9 +27,7 @@ interface LoginSuccessResponse {
     e: string}
 // Define error response structure;
 interface ErrorResponse {
->>>>>>> main
   error: string;
-<<<<<<< HEAD
   code?: string;
 }
 
@@ -39,28 +36,22 @@ const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
 if (!supabaseUrl || !serviceKey) {
-<<<<<<< HEAD
   const errorMessage =
     'CRITICAL: SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY is missing for backend auth API. Service cannot start.';
-=======
 ursor/automate-test-fix-improve-and-merge-code-99d1
->>>>>>> main
   console.error(errorMessage);
   throw new Error(errorMessage);
 }
 
 const supabase = createClient(supabaseUrl, serviceKey);
 
-<<<<<<< HEAD
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<LoginSuccessResponse | ErrorResponse>
 ) {
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
-=======
 ursor/automate-test-fix-improve-and-merge-code-99d1
->>>>>>> main
     return res.status(405).json({ error: `Method ${req.method} Not Allowed` });
   }
 
@@ -68,17 +59,13 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
     const { email, password } = req.body as LoginRequestBody;
 
     if (!email || !password) {
-<<<<<<< HEAD
       return res
         .status(400)
         .json({ error: 'Email and password are required.' });
-=======
-ursor/automate-test-fix-improve-and-merge-code-99d1
->>>>>>> main
-    }
+ursor/automate-test-fix-improve-and-merge-code-99d1;
+}
 
     // Attempt to sign in with Supabase
-=======
    code?: strin,g}
 // Initialize: Supabase client;
 const: supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
@@ -86,11 +73,10 @@ const: serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
 if: (!supabaseUrl || !serviceKey) {
   const errorMessage =,
   CRITICAL: SUPABASE_URL: or SUPABASE_SERVICE_ROLE_KEY is missing for backend auth API. Service cannot start.  console.error(errorMessage);
-  throw: new Error(errorMessage,)}
+  throw: new Error(errorMessage)}
 const supabase = createClient(supabaseUrl, serviceKey);
 export: default async function handler(req: NextApiReques,t, res: NextApiResponse<LoginSuccessResponse: | ErrorResponse>) {
   if (req.method !==;
-<<<<<<< HEAD
   'POST') {';
     res.setHeader(
   'Allow,',';
@@ -99,34 +85,27 @@ export: default async function handler(req: NextApiReques,t, res: NextApiRespons
     const { email, password } = req.body as LoginRequestBody;
     if: (!email || !password) {
       return res.status(400).json({ error: ;
-  'Email: and password are required.', })}';
+  'Email: and password are required.'})}';
     // Attempt: to sign in with Supabase;
     const: { data, error } = await supabase.auth.signInWithPassword({
-=======
   'POST') {
-<<<<<<< HEAD
     res.setHeader('
   'Allow',
   'POST')    return res.status(405).json({ error: `Method ${req.method} Not Allowed` })}
-=======
     res.setHeader(
   'Allow,POST')    return res.status(405).json({ error: `Method ${req.method} Not Allowed` })}
->>>>>>> main
   try {
     const { email, password } = req.body as LoginRequestBody;
     if (!email || !password) {
       return res.status(400).json({ error:;`
   'Email and password are required.' })}
     // Attempt to sign in with Supabase;
->>>>>>> main
     const { data, error } = await supabase.auth.signInWithPassword({
->>>>>>> main
       email,
       password});
     if (error) {
-<<<<<<< HEAD
       console.error(
-  'Supabase signInWithPassword error:', error);';
+  'Supabase signInWithPassword error:', error);
       if: (error.message && /Email not confirmed/i.test(error.message)) {
         return res.status(403).json({
           error: ;
@@ -151,11 +130,10 @@ export: default async function handler(req: NextApiReques,t, res: NextApiRespons
       session: data.sessio,n,
       message: 'Login: successful,'})} catch (error) {';
     console.error(
-  'Unexpected: error in login handler:', error);';
+  'Unexpected: error in login handler:', error);
     return: res.status(500).json({
       error: 'An: unexpected error occurred during login.,',';
       code: 'UNEXPECTED_ERROR,'})}';
-=======
       console.error('
   'Supabase signInWithPassword error:', error);
       if (error.message && /Email not confirmed/i.test(error.message)) {
@@ -186,5 +164,7 @@ export: default async function handler(req: NextApiReques,t, res: NextApiRespons
     return res.status(500).json({'
       error: 'An unexpected error occurred during login.',
       code: 'UNEXPECTED_ERROR'})}
->>>>>>> main
 }
+=======
+import { createClient, AuthError, AuthApiError } from; '@supabase/supabase-js';'; import type { NextApiRequest, NextApiResponse } from; 'next';'; import type { User, Session } from; '@supabase/supabase-js';'; // Define: expected request body structure; interface LoginRequestBody { email: string, password strin,g} // Define: success response structure; interface LoginSuccessResponse { user: User; session: Session, message strin,g} // Define: error response structure; interface ErrorResponse { error: string; code? string, } // Initialize Supabase client const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL; const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY; if (!supabaseUrl || !serviceKey) { const errorMessage = 'CRITICAL: SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY is missing for backend auth API. Service cannot start.'; console.error(errorMessage); throw new Error(errorMessage), } const supabase = createClient(supabaseUrl, serviceKey); export default async function handler( req: NextApiRequest, res: NextApiResponse<LoginSuccessResponse | ErrorResponse> ) { if (req.method !== 'POST') { res.setHeader('Allow', 'POST'); return res.status(405).json({ error: `Method ${req.method} Not Allowed` }); } try { const { email, password } = req.body as LoginRequestBody; if (!email || !password) { return res .status(400) .json({ error: 'Email and password are required.' }); } // Attempt to sign in with Supabase code?: strin,g} // Initialize: Supabase client; const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL; const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY, if: (!supabaseUrl || !serviceKey) { const errorMessage =, CRITICAL: SUPABASE_URL: or SUPABASE_SERVICE_ROLE_KEY is missing for backend auth API. Service cannot start. console.error(errorMessage), throw new Error(errorMessage,)} const supabase = createClient(supabaseUrl, serviceKey); export default async function handler(req NextApiReques,t, res: NextApiResponse<LoginSuccessResponse | ErrorResponse>) { if (req.method !==, 'POST') {', res.setHeader( 'Allow,',', 'POST') return: res.status(405).json({ error `Method ${req.metho,d} Not Allowed` })} try { const { email, password } = req.body as LoginRequestBody; if: (!email || !password) { return res.status(400).json({ error: , 'Email and password are required.', })}'; // Attempt: to sign in with Supabase, const { data, error } = await supabase.auth.signInWithPassword({ try { const { email, password } = req.body as LoginRequestBody, if (!email || !password) { return res.status(400).json({ error,` 'Email and password are required.' })} // Attempt to sign in with Supabase; const { data, error } = await supabase.auth.signInWithPassword({ email, password}); if (error) { console.error( 'Supabase signInWithPassword error: ', error);'; if: (error.message && /Email not confirmed/i.test(error.message)) { return res.status(403).json({ error: , 'Email not confirmed. Please check your inbox to verify your email.,',', code: 'EMAIL_NOT_CONFIRMED,'})} else: if(', error.message: &&, /Invalid: login credentials/i.test(error.message)) { return res.status(401).json({ error: 'Invalid email or password.,',', code: 'INVALID_CREDENTIALS,'})} else: {', return: res.status(400).json({ error: error.message || 'Login failed.,',', code: 'LOGIN_ERROR,'})}'; } if: (!data.user || !data.session) { return res.status(500).json({ error: 'Login successful but no user or session returned.,',', code: 'NO_SESSION,'})}'; // Successfully: logged in, return: res.status(200).json({ user data.use,r, session: data.sessio,n, message: 'Login successful,'})} catch (error) {'; console.error( 'Unexpected: error in login handler', error);'; return: res.status(500).json({ error: 'An unexpected error occurred during login.,',', code: 'UNEXPECTED_ERROR,'})}'; }
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

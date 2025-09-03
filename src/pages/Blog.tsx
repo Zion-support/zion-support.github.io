@@ -1,17 +1,10 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { SEO } from '../components/SEO';
-=======
-<<<<<<< HEAD
 import React from 'react';
 import {SEO } from '@/components/SEO';
 
-<<<<<<< HEAD
 ;,"});,"})
-=======
 export default function Blog() {return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
       <SEO title="Blog - Zion Tech Group" description="Professional Blog services by Zion Tech Group" />
@@ -22,17 +15,14 @@ export default function Blog() {return (
         </p>
       </div>
     </div>
-=======
-<<<<<<< HEAD
 import React from &apos;
 import Link from &apos;next/link';react';
 import { motion } from &apos;framer-motion';
 import { Link } from &apos;react-router-dom';
 import { SEO } from &apos;../components/SEO';
->>>>>>> main
 import { 
   Calendar, User, ArrowRight, Tag, Clock, TrendingUp, 
-  Brain, Atom, Rocket, Shield, Globe, Code 
+  Brain, Atom, Rocket, Shield, Globe, Code ;
 } from &apos;lucide-react';&apos;&apos;
 
 export default function Blog() {}
@@ -47,7 +37,6 @@ export default function Blog() {}
       category: &quot;AI & Machine Learning&quot;,
       tags: [&quot;AI&quot;, &quot;Enterprise&quot;, &quot;Technology&quot;],
       image: &quot;/api/placeholder/600/400&quot;,
-=======
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { SEO } from '../components/SEO';
@@ -55,7 +44,6 @@ import { ;
   Calendar, User, ArrowRight, Tag, Clock, TrendingUp, ;
   Brain, Atom, Rocket, Shield, Globe, Code ;
 } from 'lucide-react';
-<<<<<<< HEAD
 ;
 export default function Blog() {;
   const blogPosts = [;
@@ -131,7 +119,7 @@ export default function Blog() {;
       image: "/api/placeholder/600/400",;
       featured: false;
     }
-  ];
+  ]
 ;
   const categories = [;
     { name: "AI & Machine Learning", icon: Brain, count: 15 },;
@@ -140,7 +128,7 @@ export default function Blog() {;
     { name: "Cybersecurity", icon: Shield, count: 10 },;
     { name: "Digital Transformation", icon: Globe, count: 7 },;
     { name: "Cloud Computing", icon: Code, count: 9 }
-  ];
+  ]
 ;
   const featuredPosts = blogPosts.filter(post => post.featured);
   const regularPosts = blogPosts.filter(post => !post.featured);
@@ -178,34 +166,22 @@ export default function Blog() {;
                   >;
                     {category.name}
                   </span>;
-=======
 export default function Blog() {
   const blogPosts = [
-<<<<<<< HEAD
     { id: 1, title: "The Future of AI in Enterprise: 2025 Trends and Predictions",
-=======
-<<<<<<< HEAD
     {
       id: 1, title: "The Future of AI in Enterprise: 2025 Trends and Predictions",
->>>>>>> main
       excerpt: "Explore the latest AI trends transforming enterprise operations and how businesses can leverage these technologies for competitive advantage.", author: "Dr. Sarah Chen",
       date: "2025-01-15", readTime: "8 min read",
       category: "AI & Machine Learning", tags: ["AI", "Enterprise", "Technology"], image: "/api/placeholder/600/400",
-=======
   {
       id: 1, title: "The Future of AI in Enterprise: 2025 Trends and Predictions",
       excerpt: "Explore the latest AI trends transforming enterprise operations and how businesses can leverage these technologies for competitive advantage.", author: "Dr. Sarah Chen",
       date: "2025-01-15", readTime: "8 min read",
       category: "AI & Machine Learning", tags: ["AI,Enterprise,Technology"], image: "/api/placeholder/600/400",
->>>>>>> main
->>>>>>> main
-      featured: true
-<<<<<<< HEAD
-    }, { id: 2,
-=======
-    }, {
+      featured: true;
+}, { id: 2}, {
       id: 2,
-<<<<<<< HEAD
       title: &quot;Quantum Computing Breakthroug,h: What It Means for Your Business&quot;,
       excerpt: &quot;Understanding the latest quantum computing advances and their practical applications in solving complex business problems.&quot;,
       author: &quot;Prof. Michael Rodriguez&quot;,
@@ -214,24 +190,14 @@ export default function Blog() {
       category: &quot;Quantum Computing&quot;,
       tags: [&quot;Quantum&quot;, &quot;Computing&quot;, &quot;Innovation&quot;],
       image: &quot;/api/placeholder/600/400&quot;,
-=======
->>>>>>> main
       title: "Quantum Computing Breakthrough: What It Means for Your Business", excerpt: "Understanding the latest quantum computing advances and their practical applications in solving complex business problems.",
       author: "Prof. Michael Rodriguez", date: "2025-01-12",
       readTime: "12 min read", category: "Quantum Computing",
-<<<<<<< HEAD
       tags: ["Quantum", "Computing", "Innovation"], image: "/api/placeholder/600/400",
-=======
       tags: ["Quantum,Computing,Innovation"], image: "/api/placeholder/600/400",
->>>>>>> main
->>>>>>> main
-      featured: true
-<<<<<<< HEAD
-    }, { id: 3,
-=======
-    }, {
+      featured: true;
+}, { id: 3}, {
       id: 3,
-<<<<<<< HEAD
       title: &quot;Micro SaaS Revolutio,n: Building Scalable Solutions&quot;,
       excerpt: &quot;How micro SaaS platforms are changing the software landscape and creating new opportunities for businesses.&quot;,
       author: &quot;Alex Thompson&quot;,
@@ -240,24 +206,14 @@ export default function Blog() {
       category: &quot;Micro SaaS&quot;,
       tags: [&quot;SaaS&quot;, &quot;Software&quot;, &quot;Business&quot;],
       image: &quot;/api/placeholder/600/400&quot;,
-=======
->>>>>>> main
       title: "Micro SaaS Revolution: Building Scalable Solutions", excerpt: "How micro SaaS platforms are changing the software landscape and creating new opportunities for businesses.",
       author: "Alex Thompson", date: "2025-01-10",
       readTime: "6 min read", category: "Micro SaaS",
-<<<<<<< HEAD
       tags: ["SaaS", "Software", "Business"], image: "/api/placeholder/600/400",
-=======
       tags: ["SaaS,Software,Business"], image: "/api/placeholder/600/400",
->>>>>>> main
->>>>>>> main
-      featured: false
-<<<<<<< HEAD
-    }, { id: 4,
-=======
-    }, {
+      featured: false;
+}, { id: 4}, {
       id: 4,
-<<<<<<< HEAD
       title: &quot;Cybersecurity in the Age of A,I: New Threats and Solutions&quot;,
       excerpt: &quot;Examining how AI is both creating new security challenges and providing innovative solutions to protect enterprise data.&quot;,
       author: &quot;Lisa Park&quot;,
@@ -266,24 +222,14 @@ export default function Blog() {
       category: &quot;Cybersecurity&quot;,
       tags: [&quot;Security&quot;, &quot;AI&quot;, &quot;Enterprise&quot;],
       image: &quot;/api/placeholder/600/400&quot;,
-=======
->>>>>>> main
       title: "Cybersecurity in the Age of AI: New Threats and Solutions", excerpt: "Examining how AI is both creating new security challenges and providing innovative solutions to protect enterprise data.",
       author: "Lisa Park", date: "2025-01-08",
       readTime: "10 min read", category: "Cybersecurity",
-<<<<<<< HEAD
       tags: ["Security", "AI", "Enterprise"], image: "/api/placeholder/600/400",
-=======
       tags: ["Security,AI,Enterprise"], image: "/api/placeholder/600/400",
->>>>>>> main
->>>>>>> main
-      featured: false
-<<<<<<< HEAD
-    }, { id: 5,
-=======
-    }, {
+      featured: false;
+}, { id: 5}, {
       id: 5,
-<<<<<<< HEAD
       title: &quot;Digital Transformatio,n: A Complete Guide for 2025&quot;,
       excerpt: &quot;Comprehensive strategies for successful digital transformation initiatives in modern enterprises.&quot;,
       author: &quot;David Kumar&quot;,
@@ -292,24 +238,14 @@ export default function Blog() {
       category: &quot;Digital Transformation&quot;,
       tags: [&quot;Digital&quot;, &quot;Transformation&quot;, &quot;Strategy&quot;],
       image: &quot;/api/placeholder/600/400&quot;,
-=======
->>>>>>> main
       title: "Digital Transformation: A Complete Guide for 2025", excerpt: "Comprehensive strategies for successful digital transformation initiatives in modern enterprises.",
       author: "David Kumar", date: "2025-01-05",
       readTime: "15 min read", category: "Digital Transformation",
-<<<<<<< HEAD
       tags: ["Digital", "Transformation", "Strategy"], image: "/api/placeholder/600/400",
-=======
       tags: ["Digital,Transformation,Strategy"], image: "/api/placeholder/600/400",
->>>>>>> main
->>>>>>> main
-      featured: false
-<<<<<<< HEAD
-    }, { id: 6,
-=======
-    }, {
+      featured: false;
+}, { id: 6}, {
       id: 6,
-<<<<<<< HEAD
       title: &quot;Cloud Infrastructure Best Practices for Global Enterprises&quot;,
       excerpt: &quot;Essential guidelines for designing and managing cloud infrastructure that scales with your business needs.&quot;,
       author: &quot;Maria Santos&quot;,
@@ -318,9 +254,9 @@ export default function Blog() {
       category: &quot;Cloud Computing&quot;,
       tags: [&quot;Cloud&quot;, &quot;Infrastructure&quot;, &quot;Enterprise&quot;],
       image: &quot;/api/placeholder/600/400&quot;,
-      featured: false
-    }
-  ];&quot;
+      featured: false;
+}
+  ]&quot;
 
   const categories = [
     { name: &quot;AI & Machine Learning&quot;, icon: Brain, count: 15 },
@@ -329,55 +265,37 @@ export default function Blog() {
     { name: &quot;Cybersecurity&quot;, icon: Shield, count: 10 },
     { name: &quot;Digital Transformation&quot;, icon: Globe, count: 7 },
     { name: &quot;Cloud Computing&quot;, icon: Code, count: 9 }
-  ];&quot;
+  ]&quot;
 
-=======
->>>>>>> main
       title: "Cloud Infrastructure Best Practices for Global Enterprises", excerpt: "Essential guidelines for designing and managing cloud infrastructure that scales with your business needs.",
       author: "Maria Santos", date: "2025-01-03",
       readTime: "9 min read", category: "Cloud Computing",
-<<<<<<< HEAD
       tags: ["Cloud", "Infrastructure", "Enterprise"], image: "/api/placeholder/600/400",
-=======
       tags: ["Cloud,Infrastructure,Enterprise"], image: "/api/placeholder/600/400",
->>>>>>> main
-      featured: false
-    }
-  ];
+      featured: false;
+}
+  ]
   const categories = [
-<<<<<<< HEAD
     { name: "AI & Machine Learning", icon: Brain, count: 15 }, { name: "Quantum Computing", icon: Atom, count: 8 },
-=======
   { name: "AI & Machine Learning", icon: Brain, count: 15 }, { name: "Quantum Computing", icon: Atom, count: 8 },
->>>>>>> main
     { name: "Micro SaaS", icon: Rocket, count: 12 }, { name: "Cybersecurity", icon: Shield, count: 10 },
     { name: "Digital Transformation", icon: Globe, count: 7 }, { name: "Cloud Computing", icon: Code, count: 9 }
-  ];
->>>>>>> main
+  ]
   const featuredPosts = blogPosts.filter(post => post.featured);
   const regularPosts = blogPosts.filter(post => !post.featured)
   return (
     <>
       <SEO 
-<<<<<<< HEAD
         title=&quot;Blog - Zion Tech Group | Technology Insights & Industry News&quot;
         description=&quot;Stay updated with the latest insights on AI, quantum computing, cybersecurity, and emerging technologies from Zion Tech Group&apos;s expert team.&quot;
         keywords=&quot;technology blog, AI insights, quantum computing, cybersecurity, digital transformation, tech news&quot;
       />&quot;
-=======
         title="Blog - Zion Tech Group | Technology Insights & Industry News"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
-        description="Stay updated with the latest insights on AI, quantum computing, cybersecurity, and emerging technologies from Zion Tech Group&apos;s expert team."'
+        description="Stay updated with the latest insights on AI, quantum computing, cybersecurity, and emerging technologies from Zion Tech Group&apos;s expert team."
         keywords="technology blog, AI insights, quantum computing, cybersecurity, digital transformation, tech news"
-=======
         description="Stay updated with the latest insights on AI, quantum computing, cybersecurity, and emerging technologies from Zion Tech Group's expert team. 
         keywords='technology blog, AI insights, quantum computing, cybersecurity, digital transformation, tech news"
->>>>>>> main
       />
->>>>>>> main
       
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900&quot;>
         {/* Hero Section */}&quot;
@@ -386,28 +304,22 @@ export default function Blog() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
               transition={{ duration: 0.8   }}
               className="text-center max-w-4xl mx-auto"
             >
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 Technology Insights
-=======
               transition={{ duration: 0.8 }}
               className=&quot;text-center max-w-4xl mx-auto&quot;
             >&quot;
               <h1 className=&quot;text-5xl md:text-6xl font-bold text-white mb-6&quot;>
                 Technology Insights&quot;
->>>>>>> main
               </h1>
-<<<<<<< HEAD
               <p className=&quot;text-xl text-gray-300 mb-8&quot;>
                 Stay ahead of the curve with expert insights on AI, quantum computing, 
                 cybersecurity, and the latest technology trends shaping our future.&quot;
-=======
               <p className="text-xl text-gray-300 mb-8">
                 Stay ahead of the curve with expert insights on AI, quantum computing, cybersecurity, and the latest technology trends shaping our future.
->>>>>>> main
               </p>
               <div className=&quot;flex flex-wrap justify-center gap-4&quot;>
                 {categories.slice(0, 4).map((category, index) => (&quot;}
@@ -417,14 +329,12 @@ export default function Blog() {
                   >
                     {category.name}&quot;
                   </span>
->>>>>>> main
                 ))}
               </div>;
             </motion.div>;
           </div>;
         </section>;
 
-<<<<<<< HEAD
         <div className="container mx-auto px-4 py-16">;
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">;
             {/* Main Content */}
@@ -439,18 +349,14 @@ export default function Blog() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
                     {featuredPosts.map((post, index) => (;
                       <motion.article;
-=======
-<<<<<<< HEAD
         <div className=&quot;container mx-auto px-4 py-16&quot;>&quot;"
           <div className=&quot;grid grid-cols-1 lg:grid-cols-4 gap-12&quot;>
             {/* Main Content */}&quot;
             <div className=&quot;lg:col-span-3&quot;>
-=======
         <div className="container mx-auto px-4 py-16">
           <div className="grid grid-cols-1 lg: grid-cols-4 gap-12">
             {/* Main Content */}
             <div className="lg:col-span-3">
->>>>>>> main
               {/* Featured Posts */}
               {featuredPosts.length > 0 && (&quot;}
                 <section className=&quot;mb-16&quot;>&quot;"
@@ -461,12 +367,10 @@ export default function Blog() {
                   <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-8&quot;>
                     {featuredPosts.map((post, index) => (&quot;}
                       <motion.article
->>>>>>> main
                         key={post.id}
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: index * 0.1 }}
-<<<<<<< HEAD
                         className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl overflow-hidden border border-slate-600/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105";
                       >;
                         <div className="h-48 bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center">;
@@ -506,7 +410,6 @@ export default function Blog() {
                           </div>;
                         </div>;
                       </motion.article>;
-=======
                         className=&quot;bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl overflow-hidden border border-slate-600/50 hover:border-blue-400/50 transition-all duration-300 hove,r:scale-105&quot;
                       >&quot;
                         <div className=&quot;h-48 bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center&quot;>&quot;"
@@ -546,31 +449,26 @@ export default function Blog() {
                           </div>
                         </div>
                       </motion.article>
->>>>>>> main
                     ))}
                   </div>;
                 </section>;
               )}
 ;
               {/* Regular Posts */}
-<<<<<<< HEAD
               <section>;
                 <h2 className="text-3xl font-bold text-white mb-8">Latest Articles</h2>;
                 <div className="space-y-8">;
                   {regularPosts.map((post, index) => (;
                     <motion.article;
-=======
               <section>
                 <h2 className=&quot;text-3xl font-bold text-white mb-8&quot;>Latest Articles&quot;</h2>
                 <div className=&quot;space-y-8&quot;>
                   {regularPosts.map((post, index) => (&quot;}
                     <motion.article
->>>>>>> main
                       key={post.id}
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.8, delay: index * 0.1 }}
-<<<<<<< HEAD
                       className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-blue-400/50 transition-all duration-300";
                     >;
                       <div className="flex flex-col md:flex-row gap-6">;
@@ -620,7 +518,6 @@ export default function Blog() {
                         </div>;
                       </div>;
                     </motion.article>;
-=======
                       className=&quot;bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-blue-400/50 transition-all duration-300&quot;
                     >&quot;
                       <div className=&quot;flex flex-col md:flex-row gap-6&quot;>&quot;"
@@ -661,11 +558,8 @@ export default function Blog() {
                             </div>
                             <Link
                               to={`/blog/${post.id}`}
-<<<<<<< HEAD
                               className=&quot;flex items-center text-blue-400 hover:text-blue-300 transition-colors&quot;
-=======
                               className="flex items-center text-blue-400 hover: text-blue-300 transition-colors"
->>>>>>> main
                             >
                               Read More&quot;
                               <ArrowRight className=&quot;w-4 h-4 ml-1&quot; />&quot;
@@ -674,18 +568,14 @@ export default function Blog() {
                         </div>
                       </div>
                     </motion.article>
->>>>>>> main
                   ))}
                 </div>;
               </section>;
             </div>;
 
             {/* Sidebar */}
-<<<<<<< HEAD
             <div className="lg:col-span-1">;
               <div className="sticky top-8 space-y-8">;
-=======
-<<<<<<< HEAD
             <div className=&quot;lg:col-span-1&quot;>&quot;"
               <div className=&quot;sticky top-8 space-y-8&quot;>
                 {/* Categories */}&quot;
@@ -701,10 +591,8 @@ export default function Blog() {
                         <div className=&quot;flex items-center&quot;>&quot;"
                           <category.icon className=&quot;w-5 h-5 text-blue-400 mr-3 group-hover:text-blue-300&quot; />&quot;
                           <span className=&quot;text-gray-300 group-hove,r:text-white&quot;>{category.name}&quot;</span>
-=======
             <div className="lg: col-span-1">
               <div className="sticky top-8 space-y-8">
->>>>>>> main
                 {/* Categories */}
                 <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50">;
                   <h3 className="text-xl font-bold text-white mb-4">Categories</h3>;
@@ -712,9 +600,7 @@ export default function Blog() {
                     {categories.map((category, index) => (;
                       <Link;
                         key={category.name}
-<<<<<<< HEAD
                         to={`/blog/category/${category.name.toLowerCase().replace(/\s+/g, '-')}`}
-<<<<<<< HEAD
                         className="flex items-center justify-between p-3 rounded-lg hover:bg-slate-700/50 transition-colors group";
                       >;
                         <div className="flex items-center">;
@@ -723,26 +609,20 @@ export default function Blog() {
                         </div>;
                         <span className="text-sm text-gray-400">{category.count}</span>;
                       </Link>;
-=======
-=======
                         to={`/blog/category/${category.name.toLowerCase().replace(/\\s+/g, '-')}`}
->>>>>>> main
                         className="flex items-center justify-between p-3 rounded-lg hover: bg-slate-700/50 transition-colors group"
                       >
                         <div className="flex items-center">
                           <category.icon className="w-5 h-5 text-blue-400 mr-3 group-hover:text-blue-300" />
                           <span className="text-gray-300 group-hover:text-white">{category.name}</span>
->>>>>>> main
                         </div>
                         <span className=&quot;text-sm text-gray-400&quot;>{category.count}&quot;</span>
                       </Link>
->>>>>>> main
                     ))}
                   </div>;
                 </div>;
 
                 {/* Newsletter Signup */}
-<<<<<<< HEAD
                 <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-xl p-6 border border-blue-400/30">;
                   <h3 className="text-xl font-bold text-white mb-4">Stay Updated</h3>;
                   <p className="text-gray-300 mb-4">;
@@ -765,7 +645,6 @@ export default function Blog() {
         </div>;
       </div>;
     </>;
-=======
                 <div className=&quot;bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-xl p-6 border border-blue-400/30&quot;>&quot;"
                   <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>Stay Updated&quot;</h3>
                   <p className=&quot;text-gray-300 mb-4&quot;>
@@ -773,21 +652,18 @@ export default function Blog() {
                   </p>
                   <div className=&quot;space-y-3&quot;>&quot;"
                     <input
-<<<<<<< HEAD
                       type=&quot;email&quot;
                       placeholder=&quot;Enter your email&quot;
                       className=&quot;w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500&quot;
                     />&quot;
                     <button className=&quot;w-full px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hove,r:to-purple-700 transition-all duration-200&quot;>
                       Subscribe&quot;
-=======
                       type="email"
                       placeholder="Enter your email"
                       className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500"
                     />
                     <button className="w-full px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200">
                       Subscribe
->>>>>>> main
                     </button>
                   </div>
                 </div>
@@ -797,13 +673,6 @@ export default function Blog() {
         </div>
       </div>
 </>
-<<<<<<< HEAD
   )
-=======
->>>>>>> main
->>>>>>> main
   );
->>>>>>> main
 }
->>>>>>> main
->>>>>>> main

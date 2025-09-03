@@ -1,6 +1,2 @@
 
-<<<<<<< HEAD
-' ' ' ' ' ' ' ' ' ' import: { Sparkles''";";
-=======
-' ' ' ' ' ' ' ' ' ' import { Sparkles''";"
->>>>>>> main
+' ' ' ' ' ' ' ' ' ' import { Sparkles''";";

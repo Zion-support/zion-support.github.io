@@ -1,113 +1,85 @@
 <<<<<<< HEAD
 ,"});,"})
 import { render, screen } from '@testing-library/react';,"});,"})
-,"});,"})
 ;,"});,"})
-describe('ModernServicesShowcase', () => {;,"});,"})
-  it('renders without crashing', () => {;,"});,"})
+describe('ModernServicesShowcase', () => {,"});,"})
+  it('renders without crashing', () => {,"});,"})
     render(<ModernServicesShowcase />);,"});,"})
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,"});,"})
-  });,"});,"})
-;,"});,"})
-  it('displays expected content', () => {;,"});,"})
-    render(<ModernServicesShowcase />);,"});,"})
-    // Add specific test assertions based on component content;,"});,"})
-  });,"});,"})
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,"});,"});
 });,"});,"})
-;,"});,"})
-=======
-<<<<<<< HEAD
-import: { render, screen } from '@testing-library/react';';';';
-import: ModernServicesShowcase from './ModernServicesShowcase';';';';
+  it('displays expected content', () => {,"});,"})
+    // Add specific test assertions based on component content;,"});,"})
+import { render, screen } from '@testing-library/react';';
+import ModernServicesShowcase from './ModernServicesShowcase';';
 
-describe('ModernServicesShowcase', () => {';';';
-  it('renders: without crashing', () => {';';';
+describe('ModernServicesShowcase', () => {';';
+  it('renders: without crashing', () => {';';
     render(<ModernServicesShowcase: />)
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})';';';
-  it('displays: expected content', () => {';';';
-    render(<ModernServicesShowcase: />)
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})';';
+  it('displays: expected content', () => {';';
     // Add specific test assertions based on component content})})
-=======
-<<<<<<< HEAD
 import {render, screen } from '@testing-library/react';
 import ModernServicesShowcase from './ModernServicesShowcase';
-<<<<<<< HEAD
 describe('ModernServicesShowcase', () => {'
   it('renders without crashing', () => {'
     render(<ModernServicesShowcase />)""
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
   it('displays expected content', () => {
     render(<ModernServicesShowcase />);
-=======
-<<<<<<< HEAD
 ;
-describe('ModernServicesShowcase', () => {;
-  it('renders without crashing', () => {;
-    render(<ModernServicesShowcase />);
+describe('ModernServicesShowcase', () => {
+  it('renders without crashing', () => {
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()});
-  it('displays expected content', () => {;
-    render(<ModernServicesShowcase />);
-<<<<<<< HEAD
-    // Add specific test assertions based on component content;
-  });
-});
-=======
+    // Add specific test assertions based on component content})});
     // Add specific test assertions based on component content})})
-=======
 describe('ModernServicesShowcase', () => {it('renders without crashing', () => {
-=======
-<<<<<<< HEAD
 import { render, screen } from '@testing-library/react;
-import ModernServicesShowcase from './ModernServicesShowcase';
 describe(ModernServicesShowcase', () => {
   it('renders without crashing, () => {
->>>>>>> main
     render(<ModernServicesShowcase />)"
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
+=======
+,"});,})
+import { render, screen } from '@testing-library/react';,});,"})
+,"});,})
+;,});,"})
+describe('ModernServicesShowcase', () => {;,"});,})
+  it('renders without crashing', () => {;,});,"})
+    render(<ModernServicesShowcase />);,"});,})
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,});,"})
+  });,"});,})
+;,});,"})
+  it('displays expected content', () => {;,"});,})
+    render(<ModernServicesShowcase />);,});,"})
+    // Add specific test assertions based on component content;,"});,})
+  });,});,"})
+});,"});,})
+;,});,"})    render(<ModernServicesShowcase />)"
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   it(displays expected content', () => {
     render(<ModernServicesShowcase />)
-=======
-<<<<<<< HEAD
 import { render, screen } from &apos;@testing-library/react';
 import ModernServicesShowcase from &apos;./ModernServicesShowcase';
 
 describe(&apos;ModernServicesShowcase&apos;, () => {
   it(&apos;renders without crashing&apos;, () => {
-    render(&apos;}}&apos;<ModernServicesShowcase />)
+    render(&apos}}&apos;<ModernServicesShowcase />)
     expect(screen.getByRole(&apos;main&apos;) || screen.getByText(/.*/)).toBeInTheDocument()})
   it(&apos;displays expected content&apos;, () => {
-    render(&apos;}<ModernServicesShowcase />)
+    render(&apos}<ModernServicesShowcase />)
     // Add specific test assertions based on component content})})
-=======
-<<<<<<< HEAD
-import { render, screen } from '@testing-library/react';""
-import ModernServicesShowcase from './ModernServicesShowcase';""
-describe('ModernServicesShowcase', () => {""
-  it('renders without crashing', () => {""
-=======
-import { render, screen } from '@testing-library/react
-import ModernServicesShowcase from './ModernServicesShowcase
-describe('ModernServicesShowcase', () => {"
-  it('renders without crashing', () => {"
->>>>>>> main
-    render(<ModernServicesShowcase /" >)"
+    render(<ModernServicesShowcase / >)
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();""
-  it('displays expected content', () => {
 <<<<<<< HEAD
-    render(<ModernServicesShowcase /" >)"
-    // Add specific test assertions based on component content, });
+    // Add specific test assertions based on component content});
 ""
-=======
     render(<ModernServicesShowcase /" >)
->>>>>>> main
->>>>>>> main
-    // Add specific test assertions based on component content
+    // Add specific test assertions based on component content;
+=======
+  it('displays expected content', () => {
+    render(<ModernServicesShowcase / >)
+    // Add specific test assertions based on component content, });
+""    // Add specific test assertions based on component content
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
 })
-"
->>>>>>> main
+";
 }}
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

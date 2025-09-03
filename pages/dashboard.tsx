@@ -22,7 +22,7 @@ import {
   Shield,
   Brain,
   Code,
-  Cloud
+  Cloud;
 } from 'lucide-react';
 
 export default function Dashboard() {
@@ -34,30 +34,30 @@ export default function Dashboard() {
       value: '12',
       change: '+2 this month',
       icon: BarChart3,
-      color: 'from-blue-500 to-cyan-500'
-    },
+      color: 'from-blue-500 to-cyan-500';
+},
     {
       title: 'Team Members',
       value: '8',
       change: '+1 this week',
       icon: Users,
-      color: 'from-green-500 to-emerald-500'
-    },
+      color: 'from-green-500 to-emerald-500';
+},
     {
       title: 'Completed Tasks',
       value: '47',
       change: '+12 this week',
       icon: CheckCircle,
-      color: 'from-purple-500 to-pink-500'
-    },
+      color: 'from-purple-500 to-pink-500';
+},
     {
       title: 'Revenue',
       value: '$125K',
       change: '+15% this month',
       icon: TrendingUp,
-      color: 'from-orange-500 to-red-500'
-    }
-  ];
+      color: 'from-orange-500 to-red-500';
+}
+  ]
 
   const recentProjects = [
     {
@@ -66,25 +66,25 @@ export default function Dashboard() {
       status: 'In Progress',
       progress: 75,
       dueDate: '2024-02-15',
-      team: ['John Doe', 'Jane Smith', 'Mike Johnson']
-    },
+      team: ['John Doe', 'Jane Smith', 'Mike Johnson'];
+},
     {
       id: 2,
       name: 'Cloud Migration',
       status: 'Planning',
       progress: 25,
       dueDate: '2024-03-01',
-      team: ['Sarah Wilson', 'David Brown']
-    },
+      team: ['Sarah Wilson', 'David Brown'];
+},
     {
       id: 3,
       name: 'Mobile App Development',
       status: 'Completed',
       progress: 100,
       dueDate: '2024-01-30',
-      team: ['Alex Chen', 'Lisa Garcia']
-    }
-  ];
+      team: ['Alex Chen', 'Lisa Garcia'];
+}
+  ]
 
   const notifications = [
     {
@@ -92,23 +92,23 @@ export default function Dashboard() {
       title: 'New project assigned',
       message: 'You have been assigned to the AI Chatbot project',
       time: '2 hours ago',
-      type: 'info'
-    },
+      type: 'info';
+},
     {
       id: 2,
       title: 'Meeting reminder',
       message: 'Team standup meeting in 30 minutes',
       time: '30 minutes ago',
-      type: 'warning'
-    },
+      type: 'warning';
+},
     {
       id: 3,
       title: 'Project completed',
       message: 'Mobile App Development project has been completed',
       time: '1 day ago',
-      type: 'success'
-    }
-  ];
+      type: 'success';
+}
+  ]
 
   const quickActions = [
     {
@@ -116,30 +116,30 @@ export default function Dashboard() {
       description: 'Start a new project',
       icon: Plus,
       color: 'from-blue-500 to-cyan-500',
-      href: '/projects/new'
-    },
+      href: '/projects/new';
+},
     {
       title: 'View Reports',
       description: 'Check project analytics',
       icon: BarChart3,
       color: 'from-green-500 to-emerald-500',
-      href: '/reports'
-    },
+      href: '/reports';
+},
     {
       title: 'Team Chat',
       description: 'Communicate with team',
       icon: MessageCircle,
       color: 'from-purple-500 to-pink-500',
-      href: '/chat'
-    },
+      href: '/chat';
+},
     {
       title: 'Download Resources',
       description: 'Access project files',
       icon: Download,
       color: 'from-orange-500 to-red-500',
-      href: '/resources'
-    }
-  ];
+      href: '/resources';
+}
+  ]
 
   const services = [
     {
@@ -147,23 +147,23 @@ export default function Dashboard() {
       description: 'Explore our AI solutions',
       icon: Brain,
       color: 'from-purple-500 to-pink-500',
-      href: '/services/ai-services'
-    },
+      href: '/services/ai-services';
+},
     {
       title: 'Micro SAAS',
       description: 'Business automation tools',
       icon: Code,
       color: 'from-blue-500 to-cyan-500',
-      href: '/services/micro-saas'
-    },
+      href: '/services/micro-saas';
+},
     {
       title: 'IT Services',
       description: 'Infrastructure management',
       icon: Cloud,
       color: 'from-green-500 to-emerald-500',
-      href: '/services/it-services'
-    }
-  ];
+      href: '/services/it-services';
+}
+  ]
 
   return (
     <>
@@ -278,8 +278,8 @@ export default function Dashboard() {
                         <span className={`px-2 py-1 text-xs font-medium rounded-full ${
                           project.status === 'Completed' ? 'bg-green-100 text-green-800' :
                           project.status === 'In Progress' ? 'bg-blue-100 text-blue-800' :
-                          'bg-yellow-100 text-yellow-800'
-                        }`}>
+                          'bg-yellow-100 text-yellow-800';
+}`}>
                           {project.status}
                         </span>
                       </div>
@@ -348,8 +348,8 @@ export default function Dashboard() {
                       <div className={`w-2 h-2 rounded-full mt-2 ${
                         notification.type === 'success' ? 'bg-green-500' :
                         notification.type === 'warning' ? 'bg-yellow-500' :
-                        'bg-blue-500'
-                      }`}></div>
+                        'bg-blue-500';
+}`}></div>
                       <div className="flex-1">
                         <h4 className="text-sm font-medium text-gray-900">{notification.title}</h4>
                         <p className="text-sm text-gray-600">{notification.message}</p>

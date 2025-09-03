@@ -1,113 +1,85 @@
 <<<<<<< HEAD
 ,"});,"})
 import { render, screen } from '@testing-library/react';,"});,"})
-,"});,"})
 ;,"});,"})
-describe('CommunityVerifiedBadge', () => {;,"});,"})
-  it('renders without crashing', () => {;,"});,"})
+describe('CommunityVerifiedBadge', () => {,"});,"})
+  it('renders without crashing', () => {,"});,"})
     render(<CommunityVerifiedBadge />);,"});,"})
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,"});,"})
-  });,"});,"})
-;,"});,"})
-  it('displays expected content', () => {;,"});,"})
-    render(<CommunityVerifiedBadge />);,"});,"})
-    // Add specific test assertions based on component content;,"});,"})
-  });,"});,"})
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,"});,"});
 });,"});,"})
-;,"});,"})
-=======
-<<<<<<< HEAD
-import: { render, screen } from '@testing-library/react';';';';
-import: CommunityVerifiedBadge from './CommunityVerifiedBadge';';';';
+  it('displays expected content', () => {,"});,"})
+    // Add specific test assertions based on component content;,"});,"})
+import { render, screen } from '@testing-library/react';';
+import CommunityVerifiedBadge from './CommunityVerifiedBadge';';
 
-describe('CommunityVerifiedBadge', () => {';';';
-  it('renders: without crashing', () => {';';';
+describe('CommunityVerifiedBadge', () => {';';
+  it('renders: without crashing', () => {';';
     render(<CommunityVerifiedBadge: />)
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})';';';
-  it('displays: expected content', () => {';';';
-    render(<CommunityVerifiedBadge: />)
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})';';
+  it('displays: expected content', () => {';';
     // Add specific test assertions based on component content})})
-=======
-<<<<<<< HEAD
 import {render, screen } from '@testing-library/react';
 import CommunityVerifiedBadge from './CommunityVerifiedBadge';
-<<<<<<< HEAD
 describe('CommunityVerifiedBadge', () => {'
   it('renders without crashing', () => {'
     render(<CommunityVerifiedBadge />)""
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
   it('displays expected content', () => {
     render(<CommunityVerifiedBadge />);
-=======
-<<<<<<< HEAD
 ;
-describe('CommunityVerifiedBadge', () => {;
-  it('renders without crashing', () => {;
-    render(<CommunityVerifiedBadge />);
+describe('CommunityVerifiedBadge', () => {
+  it('renders without crashing', () => {
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()});
-  it('displays expected content', () => {;
-    render(<CommunityVerifiedBadge />);
-<<<<<<< HEAD
-    // Add specific test assertions based on component content;
-  });
-});
-=======
+    // Add specific test assertions based on component content})});
     // Add specific test assertions based on component content})})
-=======
 describe('CommunityVerifiedBadge', () => {it('renders without crashing', () => {
-=======
-<<<<<<< HEAD
 import { render, screen } from '@testing-library/react;
-import CommunityVerifiedBadge from './CommunityVerifiedBadge';
 describe(CommunityVerifiedBadge', () => {
   it('renders without crashing, () => {
->>>>>>> main
     render(<CommunityVerifiedBadge />)"
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
+=======
+,"});,})
+import { render, screen } from '@testing-library/react';,});,"})
+,"});,})
+;,});,"})
+describe('CommunityVerifiedBadge', () => {;,"});,})
+  it('renders without crashing', () => {;,});,"})
+    render(<CommunityVerifiedBadge />);,"});,})
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,});,"})
+  });,"});,})
+;,});,"})
+  it('displays expected content', () => {;,"});,})
+    render(<CommunityVerifiedBadge />);,});,"})
+    // Add specific test assertions based on component content;,"});,})
+  });,});,"})
+});,"});,})
+;,});,"})    render(<CommunityVerifiedBadge />)"
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   it(displays expected content', () => {
     render(<CommunityVerifiedBadge />)
-=======
-<<<<<<< HEAD
 import { render, screen } from &apos;@testing-library/react';
 import CommunityVerifiedBadge from &apos;./CommunityVerifiedBadge';
 
 describe(&apos;CommunityVerifiedBadge&apos;, () => {
   it(&apos;renders without crashing&apos;, () => {
-    render(&apos;}}&apos;<CommunityVerifiedBadge />)
+    render(&apos}}&apos;<CommunityVerifiedBadge />)
     expect(screen.getByRole(&apos;main&apos;) || screen.getByText(/.*/)).toBeInTheDocument()})
   it(&apos;displays expected content&apos;, () => {
-    render(&apos;}<CommunityVerifiedBadge />)
+    render(&apos}<CommunityVerifiedBadge />)
     // Add specific test assertions based on component content})})
-=======
-<<<<<<< HEAD
-import { render, screen } from '@testing-library/react';""
-import CommunityVerifiedBadge from './CommunityVerifiedBadge';""
-describe('CommunityVerifiedBadge', () => {""
-  it('renders without crashing', () => {""
-=======
-import { render, screen } from '@testing-library/react
-import CommunityVerifiedBadge from './CommunityVerifiedBadge
-describe('CommunityVerifiedBadge', () => {"
-  it('renders without crashing', () => {"
->>>>>>> main
-    render(<CommunityVerifiedBadge /" >)"
+    render(<CommunityVerifiedBadge / >)
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();""
-  it('displays expected content', () => {
 <<<<<<< HEAD
-    render(<CommunityVerifiedBadge /" >)"
-    // Add specific test assertions based on component content, });
+    // Add specific test assertions based on component content});
 ""
-=======
     render(<CommunityVerifiedBadge /" >)
->>>>>>> main
->>>>>>> main
-    // Add specific test assertions based on component content
+    // Add specific test assertions based on component content;
+=======
+  it('displays expected content', () => {
+    render(<CommunityVerifiedBadge / >)
+    // Add specific test assertions based on component content, });
+""    // Add specific test assertions based on component content
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
 })
-"
->>>>>>> main
+";
 }}
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

@@ -1,15 +1,14 @@
 import React from 'react';
 import Head from 'next/head';
-import { ModernHeader } from '../src/components/header/ModernHeader';
-import { SimpleFooter } from '../src/components/layout/SimpleFooter';
+import { Header } from '../src/components/Header';
+import Footer from '../src/components/Footer';
 import {
   Wifi,
   Cpu,
   Database,
   Shield,
   ArrowRight,
-  CheckCircle,
-} from 'lucide-react';
+  CheckCircle} from 'lucide-react';
 
 export default function IoTSolutions() {
   const features = [
@@ -17,26 +16,21 @@ export default function IoTSolutions() {
       icon: Wifi,
       title: 'Device Connectivity',
       description:
-        'Seamless connection and communication between IoT devices and systems',
-    },
+        'Seamless connection and communication between IoT devices and systems'},
     {
       icon: Cpu,
       title: 'Edge Computing',
       description:
-        'Process data locally for faster response times and reduced latency',
-    },
+        'Process data locally for faster response times and reduced latency'},
     {
       icon: Database,
       title: 'Data Analytics',
-      description: 'Collect, analyze, and derive insights from IoT sensor data',
-    },
+      description: 'Collect, analyze, and derive insights from IoT sensor data'},
     {
       icon: Shield,
       title: 'Security & Privacy',
       description:
-        'Enterprise-grade security for IoT devices and data transmission',
-    },
-  ];
+        'Enterprise-grade security for IoT devices and data transmission'}];
 
   const benefits = [
     'Real-time monitoring and control',
@@ -44,30 +38,26 @@ export default function IoTSolutions() {
     'Improved operational efficiency',
     'Cost reduction through automation',
     'Enhanced customer experiences',
-    'Data-driven decision making'
-  ];
+    'Data-driven decision making',
+    'Real-time monitoring and control,Predictive maintenance capabilities,Improved operational efficiency,Cost reduction through automation,Enhanced customer experiences,Data-driven decision making'
+  ]
 
   const industries = [
   {
       title: 'Manufacturing',
       description:
-        'Smart factories with connected machines and predictive maintenance',
-    },
+        'Smart factories with connected machines and predictive maintenance'},
     {
       title: 'Healthcare',
-      description: 'Remote patient monitoring and medical device integration',
-    },
+      description: 'Remote patient monitoring and medical device integration'},
     {
       title: 'Agriculture',
       description:
-        'Precision farming with soil sensors and automated irrigation',
-    },
+        'Precision farming with soil sensors and automated irrigation'},
     {
       title: 'Smart Cities',
       description:
-        'Connected infrastructure for traffic, utilities, and public services',
-    },
-  ];
+        'Connected infrastructure for traffic, utilities, and public services'}];
 
   return (
     <>
@@ -81,7 +71,7 @@ export default function IoTSolutions() {
         <link rel="canonical" href="https: //ziontechgroup.com/iot-solutions" />
       </Head>
 
-      <ModernHeader />
+      <Header />
 
       <main className="min-h-screen bg-white pt-16">
         {/* Hero Section */}
@@ -207,7 +197,7 @@ export default function IoTSolutions() {
         </section>
       </main>
 
-      <SimpleFooter />
+      <Footer />
     </>
   );
 }

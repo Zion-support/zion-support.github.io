@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
  export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true}) => { const [brokenLinks, setBrokenLinks] = useState ([]) ; const [fixedLinks, setFixedLinks] = useState ([]) ; const [isScanning, setIsScanning] = useState (false) ; const [scanProgress, setScanProgress] = useState (0) ; const [lastScanTime, setLastScanTime] = useState (null) ;'';,"});,"})
 ;,"});,"})
@@ -24,8 +23,8 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
                 if (result.status === 'broken') {;,"});,"})
                     results.push(result);,"});,"})
                     if (autoFix) {;,"});,"})
-                        await fixBrokenLink(href, result)}"});,"})
-                }"});,"})
+                        await fixBrokenLink(href, result)}"});,"});
+}"});,"})
                 // Update progress;,"});,"})
                 setScanProgress(((i + 1) / links.length) * 100);,"});,"})
                 // Small delay to prevent overwhelming the browser;,"});,"})
@@ -33,19 +32,19 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
         // Update progress;,"});,"})
         setScanProgress(((i + 1) / links.length) * 100);,"});,"})
         // Small delay to prevent overwhelming the browser;,"});,"})
-        await new Promise(resolve => setTimeout(resolve, 10));,"});,"})
-      }"});,"})
-    }"});,"})
+        await new Promise(resolve => setTimeout(resolve, 10));,"});,"});
+}"});,"});
+}"});,"})
     setBrokenLinks(results);,"});,"})
     setLastScanTime(new Date());,"});,"})
     setIsScanning(false);,"});,"})
     // Notify parent component of issues;,"});,"})
     results.forEach(result => {}"});,"})
       if (onLinkIssue) {}"});,"})
-        onLinkIssue(result);,"});,"})
-      }"});,"})
-    });,"});,"})
-  };,"});,"})
+        onLinkIssue(result);,"});,"});
+}"});,"});
+});,"});,"});
+};,"});,"})
   // Fix a broken link;,"});,"})
   const fixBrokenLink = async(originalUrl, validationResult) => {}"});,"})
     if()';,"});,"})
@@ -55,41 +54,41 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
 ';,"});,"})
 '';,"});,"})
 ''';,"});,"})
-      const newUrl = validationResult.suggestedFix.replace('Redirect to: ',);,"});,"})
+      const newUrl = validationResult.suggestedFix.replace('Redirect to: ');,"});,"})
       // Find and update the link;,"});,"})
       const links = document.querySelectorAll(`a[href="${originalUrl}"]`);,"});,"})
       links.forEach(link => {}"});,"})
         link.href = newUrl;'`;,"});,"})
         link.setAttribute('data-fixed',true');'`'`;,"});,"})
-        link.setAttribute('title', `Fixed: Redirected from ${originalUrl}`);,"});,"})
-      });,"});,"})
+        link.setAttribute('title', `Fixed: Redirected from ${originalUrl}`);,"});,"});
+});,"});,"})
       // Add to fixed links list;,"});,"})
       const fix = {}"});,"})
         originalUrl,;,"});,"})
         newUrl,';,"});,"})
         type: 'redirect',';,"});,"})
         reason: 'Automatically fixed broken internal link'};,"});,"})
-      setFixedLinks(prev => [...prev, fix]);,"});,"})
-    }"});,"})
-  };,"});,"})
+      setFixedLinks(prev => [...prev, fix]);,"});,"});
+}"});,"});
+};,"});,"})
   // Fix all broken links;,"});,"})
   const fixAllBrokenLinks = async () => {}"});,"})
     for(const brokenLink of brokenLinks) {}"});,"})
-      await fixBrokenLink(brokenLink.url, brokenLink);,"});,"})
-    }"});,"})
-    setBrokenLinks([]);,"});,"})
-  };,"});,"})
+      await fixBrokenLink(brokenLink.url, brokenLink);,"});,"});
+}"});,"})
+    setBrokenLinks([]);,"});,"});
+};,"});,"})
   // Generate redirect rules for server configuration;,"});,"})
   const generateRedirectRules = () => {}"});,"})
-    const rules = LinkValidator.generateRedirectRules();';,"});,"})
+    const rules = LinkValidator.generateRedirectRules();,"});,"})
     const blob = new Blob([rules], { type: 'text/plain' });,"});,"})
-    const url = URL.createObjectURL(blob);';,"});,"})
+    const url = URL.createObjectURL(blob);,"});,"})
     const a = document.createElement('a');,"});,"})
-    a.href = url;';,"});,"})
+    a.href = url;,"});,"})
     a.download = 'redirect-rules.txt';,"});,"})
     a.click();,"});,"})
-    URL.revokeObjectURL(url);,"});,"})
-  };,"});,"})
+    URL.revokeObjectURL(url);,"});,"});
+};,"});,"})
   // Export broken links report;,"});,"})
   const exportReport = () => {}"});,"})
     const report = {}"});,"})
@@ -107,14 +106,14 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
     a.href = url;''';,"});,"})
     a.download = 'broken-links-report.json';,"});,"})
     a.click();,"});,"})
-    URL.revokeObjectURL(url);,"});,"})
-  };,"});,"})
+    URL.revokeObjectURL(url);,"});,"});
+};,"});,"})
   // Auto-scan on component mount;,"});,"})
   useEffect(() => {}"});,"})
     if(autoFix) {}"});,"})
-      scanPageLinks();,"});,"})
-    }"});,"})
-  }, [autoFix]);""";,"});,"})
+      scanPageLinks();,"});,"});
+}"});,"});
+}, [autoFix]);""";,"});,"})
   return ("""";,"});,"})
     <div className="link-monitor bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 max-w-4xl mx-auto">"""";,"});,"})
       <div className="flex items-center justify-between mb-6">"""";,"});,"})
@@ -284,23 +283,13 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
         </div>;,"});,"})
       )}"});,"})
     </div>;,"});,"})
-  );,"});,"})
+  );,"});,"});
 };,"});,"})
 export default LinkMonitor;'"`;,"});,"})
 '"`'"`;,"});,"})
->>>>>>> pr-10728;,"});,"})
-=======
  export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true}) => { const [brokenLinks, setBrokenLinks] = useState ([])  const [fixedLinks, setFixedLinks] = useState ([])  const [isScanning, setIsScanning] = useState (false)  const [scanProgress, setScanProgress] = useState (0)  const [lastScanTime, setLastScanTime] = useState (null) ''
 
-<<<<<<< HEAD
-""
+"";
 }
-=======
-<<<<<<< HEAD
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-2b9a
-=======
-"
+";
 };
->>>>>>> main
->>>>>>> main
->>>>>>> main

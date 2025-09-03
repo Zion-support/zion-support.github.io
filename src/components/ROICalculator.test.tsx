@@ -1,113 +1,85 @@
 <<<<<<< HEAD
 ,"});,"})
 import { render, screen } from '@testing-library/react';,"});,"})
-,"});,"})
 ;,"});,"})
-describe('ROICalculator', () => {;,"});,"})
-  it('renders without crashing', () => {;,"});,"})
+describe('ROICalculator', () => {,"});,"})
+  it('renders without crashing', () => {,"});,"})
     render(<ROICalculator />);,"});,"})
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,"});,"})
-  });,"});,"})
-;,"});,"})
-  it('displays expected content', () => {;,"});,"})
-    render(<ROICalculator />);,"});,"})
-    // Add specific test assertions based on component content;,"});,"})
-  });,"});,"})
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,"});,"});
 });,"});,"})
-;,"});,"})
-=======
-<<<<<<< HEAD
-import: { render, screen } from '@testing-library/react';';';';
-import: ROICalculator from './ROICalculator';';';';
+  it('displays expected content', () => {,"});,"})
+    // Add specific test assertions based on component content;,"});,"})
+import { render, screen } from '@testing-library/react';';
+import ROICalculator from './ROICalculator';';
 
-describe('ROICalculator', () => {';';';
-  it('renders: without crashing', () => {';';';
+describe('ROICalculator', () => {';';
+  it('renders: without crashing', () => {';';
     render(<ROICalculator: />)
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})';';';
-  it('displays: expected content', () => {';';';
-    render(<ROICalculator: />)
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})';';
+  it('displays: expected content', () => {';';
     // Add specific test assertions based on component content})})
-=======
-<<<<<<< HEAD
 import {render, screen } from '@testing-library/react';
 import ROICalculator from './ROICalculator';
-<<<<<<< HEAD
 describe('ROICalculator', () => {'
   it('renders without crashing', () => {'
     render(<ROICalculator />)""
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
   it('displays expected content', () => {
     render(<ROICalculator />);
-=======
-<<<<<<< HEAD
 ;
-describe('ROICalculator', () => {;
-  it('renders without crashing', () => {;
-    render(<ROICalculator />);
+describe('ROICalculator', () => {
+  it('renders without crashing', () => {
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()});
-  it('displays expected content', () => {;
-    render(<ROICalculator />);
-<<<<<<< HEAD
-    // Add specific test assertions based on component content;
-  });
-});
-=======
+    // Add specific test assertions based on component content})});
     // Add specific test assertions based on component content})})
-=======
 describe('ROICalculator', () => {it('renders without crashing', () => {
-=======
-<<<<<<< HEAD
 import { render, screen } from '@testing-library/react;
-import ROICalculator from './ROICalculator';
 describe(ROICalculator', () => {
   it('renders without crashing, () => {
->>>>>>> main
     render(<ROICalculator />)"
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
+=======
+,"});,})
+import { render, screen } from '@testing-library/react';,});,"})
+,"});,})
+;,});,"})
+describe('ROICalculator', () => {;,"});,})
+  it('renders without crashing', () => {;,});,"})
+    render(<ROICalculator />);,"});,})
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,});,"})
+  });,"});,})
+;,});,"})
+  it('displays expected content', () => {;,"});,})
+    render(<ROICalculator />);,});,"})
+    // Add specific test assertions based on component content;,"});,})
+  });,});,"})
+});,"});,})
+;,});,"})    render(<ROICalculator />)"
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   it(displays expected content', () => {
     render(<ROICalculator />)
-=======
-<<<<<<< HEAD
 import { render, screen } from &apos;@testing-library/react';
 import ROICalculator from &apos;./ROICalculator';
 
 describe(&apos;ROICalculator&apos;, () => {
   it(&apos;renders without crashing&apos;, () => {
-    render(&apos;}}&apos;<ROICalculator />)
+    render(&apos}}&apos;<ROICalculator />)
     expect(screen.getByRole(&apos;main&apos;) || screen.getByText(/.*/)).toBeInTheDocument()})
   it(&apos;displays expected content&apos;, () => {
-    render(&apos;}<ROICalculator />)
+    render(&apos}<ROICalculator />)
     // Add specific test assertions based on component content})})
-=======
-<<<<<<< HEAD
-import { render, screen } from '@testing-library/react';""
-import ROICalculator from './ROICalculator';""
-describe('ROICalculator', () => {""
-  it('renders without crashing', () => {""
-=======
-import { render, screen } from '@testing-library/react
-import ROICalculator from './ROICalculator
-describe('ROICalculator', () => {"
-  it('renders without crashing', () => {"
->>>>>>> main
-    render(<ROICalculator /" >)"
+    render(<ROICalculator / >)
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();""
-  it('displays expected content', () => {
 <<<<<<< HEAD
-    render(<ROICalculator /" >)"
-    // Add specific test assertions based on component content, });
+    // Add specific test assertions based on component content});
 ""
-=======
     render(<ROICalculator /" >)
->>>>>>> main
->>>>>>> main
-    // Add specific test assertions based on component content
+    // Add specific test assertions based on component content;
+=======
+  it('displays expected content', () => {
+    render(<ROICalculator / >)
+    // Add specific test assertions based on component content, });
+""    // Add specific test assertions based on component content
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
 })
-"
->>>>>>> main
+";
 }}
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

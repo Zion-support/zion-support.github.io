@@ -1,113 +1,85 @@
 <<<<<<< HEAD
 ,"});,"})
 import { render, screen } from '@testing-library/react';,"});,"})
-,"});,"})
 ;,"});,"})
-describe('ServiceComparisonTool', () => {;,"});,"})
-  it('renders without crashing', () => {;,"});,"})
+describe('ServiceComparisonTool', () => {,"});,"})
+  it('renders without crashing', () => {,"});,"})
     render(<ServiceComparisonTool />);,"});,"})
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,"});,"})
-  });,"});,"})
-;,"});,"})
-  it('displays expected content', () => {;,"});,"})
-    render(<ServiceComparisonTool />);,"});,"})
-    // Add specific test assertions based on component content;,"});,"})
-  });,"});,"})
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,"});,"});
 });,"});,"})
-;,"});,"})
-=======
-<<<<<<< HEAD
-import: { render, screen } from '@testing-library/react';';';';
-import: ServiceComparisonTool from './ServiceComparisonTool';';';';
+  it('displays expected content', () => {,"});,"})
+    // Add specific test assertions based on component content;,"});,"})
+import { render, screen } from '@testing-library/react';';
+import ServiceComparisonTool from './ServiceComparisonTool';';
 
-describe('ServiceComparisonTool', () => {';';';
-  it('renders: without crashing', () => {';';';
+describe('ServiceComparisonTool', () => {';';
+  it('renders: without crashing', () => {';';
     render(<ServiceComparisonTool: />)
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})';';';
-  it('displays: expected content', () => {';';';
-    render(<ServiceComparisonTool: />)
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})';';
+  it('displays: expected content', () => {';';
     // Add specific test assertions based on component content})})
-=======
-<<<<<<< HEAD
 import {render, screen } from '@testing-library/react';
 import ServiceComparisonTool from './ServiceComparisonTool';
-<<<<<<< HEAD
 describe('ServiceComparisonTool', () => {'
   it('renders without crashing', () => {'
     render(<ServiceComparisonTool />)""
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
   it('displays expected content', () => {
     render(<ServiceComparisonTool />);
-=======
-<<<<<<< HEAD
 ;
-describe('ServiceComparisonTool', () => {;
-  it('renders without crashing', () => {;
-    render(<ServiceComparisonTool />);
+describe('ServiceComparisonTool', () => {
+  it('renders without crashing', () => {
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()});
-  it('displays expected content', () => {;
-    render(<ServiceComparisonTool />);
-<<<<<<< HEAD
-    // Add specific test assertions based on component content;
-  });
-});
-=======
+    // Add specific test assertions based on component content})});
     // Add specific test assertions based on component content})})
-=======
 describe('ServiceComparisonTool', () => {it('renders without crashing', () => {
-=======
-<<<<<<< HEAD
 import { render, screen } from '@testing-library/react;
-import ServiceComparisonTool from './ServiceComparisonTool';
 describe(ServiceComparisonTool', () => {
   it('renders without crashing, () => {
->>>>>>> main
     render(<ServiceComparisonTool />)"
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
+=======
+,"});,})
+import { render, screen } from '@testing-library/react';,});,"})
+,"});,})
+;,});,"})
+describe('ServiceComparisonTool', () => {;,"});,})
+  it('renders without crashing', () => {;,});,"})
+    render(<ServiceComparisonTool />);,"});,})
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,});,"})
+  });,"});,})
+;,});,"})
+  it('displays expected content', () => {;,"});,})
+    render(<ServiceComparisonTool />);,});,"})
+    // Add specific test assertions based on component content;,"});,})
+  });,});,"})
+});,"});,})
+;,});,"})    render(<ServiceComparisonTool />)"
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
   it(displays expected content', () => {
     render(<ServiceComparisonTool />)
-=======
-<<<<<<< HEAD
 import { render, screen } from &apos;@testing-library/react';
 import ServiceComparisonTool from &apos;./ServiceComparisonTool';
 
 describe(&apos;ServiceComparisonTool&apos;, () => {
   it(&apos;renders without crashing&apos;, () => {
-    render(&apos;}}&apos;<ServiceComparisonTool />)
+    render(&apos}}&apos;<ServiceComparisonTool />)
     expect(screen.getByRole(&apos;main&apos;) || screen.getByText(/.*/)).toBeInTheDocument()})
   it(&apos;displays expected content&apos;, () => {
-    render(&apos;}<ServiceComparisonTool />)
+    render(&apos}<ServiceComparisonTool />)
     // Add specific test assertions based on component content})})
-=======
-<<<<<<< HEAD
-import { render, screen } from '@testing-library/react';""
-import ServiceComparisonTool from './ServiceComparisonTool';""
-describe('ServiceComparisonTool', () => {""
-  it('renders without crashing', () => {""
-=======
-import { render, screen } from '@testing-library/react
-import ServiceComparisonTool from './ServiceComparisonTool
-describe('ServiceComparisonTool', () => {"
-  it('renders without crashing', () => {"
->>>>>>> main
-    render(<ServiceComparisonTool /" >)"
+    render(<ServiceComparisonTool / >)
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();""
-  it('displays expected content', () => {
 <<<<<<< HEAD
-    render(<ServiceComparisonTool /" >)"
-    // Add specific test assertions based on component content, });
+    // Add specific test assertions based on component content});
 ""
-=======
     render(<ServiceComparisonTool /" >)
->>>>>>> main
->>>>>>> main
-    // Add specific test assertions based on component content
+    // Add specific test assertions based on component content;
+=======
+  it('displays expected content', () => {
+    render(<ServiceComparisonTool / >)
+    // Add specific test assertions based on component content, });
+""    // Add specific test assertions based on component content
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
 })
-"
->>>>>>> main
+";
 }}
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main

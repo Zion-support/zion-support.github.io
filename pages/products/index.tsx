@@ -10,7 +10,7 @@ import {
   CheckCircle,
   Zap,
   Shield,
-  BarChart3
+  BarChart3;
 } from 'lucide-react';
 
 const ProductsIndex: NextPage = () => {
@@ -26,8 +26,8 @@ const ProductsIndex: NextPage = () => {
         'Custom dashboard creation',
         'API integration'
       ],
-      color: 'blue'
-    },
+      color: 'blue';
+},
     {
       icon: LinkIcon,
       title: 'Blockchain Solutions',
@@ -39,8 +39,8 @@ const ProductsIndex: NextPage = () => {
         'Supply chain tracking',
         'Digital identity management'
       ],
-      color: 'green'
-    },
+      color: 'green';
+},
     {
       icon: Smartphone,
       title: 'IoT Management Platform',
@@ -52,8 +52,8 @@ const ProductsIndex: NextPage = () => {
         'Alert systems',
         'Scalable architecture'
       ],
-      color: 'purple'
-    },
+      color: 'purple';
+},
     {
       icon: Shield,
       title: 'Cybersecurity Suite',
@@ -65,17 +65,17 @@ const ProductsIndex: NextPage = () => {
         'Compliance monitoring',
         'Security training'
       ],
-      color: 'red'
-    }
-  ];
+      color: 'red';
+}
+  ]
 
   const getColorClasses = (color: string) => {
     const colorMap: { [key: string]: string } = {
       blue: 'bg-blue-100 text-blue-600',
       green: 'bg-green-100 text-green-600',
       purple: 'bg-purple-100 text-purple-600',
-      red: 'bg-red-100 text-red-600'
-    };
+      red: 'bg-red-100 text-red-600';
+};
     return colorMap[color] || 'bg-gray-100 text-gray-600';
   };
 

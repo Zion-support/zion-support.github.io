@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 #!/''usr/bin/env'' node;
-=======
 #!/'usr/bin/env' node;
 
->>>>>>> main
 const fs = require('fs');
 const path = require('path');
 const { execSync, spawn } = require('child_process');
@@ -21,22 +18,14 @@ class ComprehensiveMergeResolver {;
       errors: 0,;
     };
   }
-<<<<<<< HEAD
 
   ensureDirectories() {
     ['this.logsDir', `this.backupsDir`].forEach(dir => {
       if (!fs.existsSync(dir)) {
-=======
-;
-  ensureDirectories() {;
-    ['this.logsDir', 'this.backupsDir'].forEach(dir => {;
-      if (!fs.existsSync(dir)) {;
->>>>>>> main
-        fs.mkdirSync(dir, { recursive: true });
+<<<<<<< HEAD        fs.mkdirSync(dir, { recursive: true });
       }
     });
   }
-<<<<<<< HEAD
 
   log(message, level = `INFO`) {
     const timestamp = new Date().toISOString();
@@ -63,7 +52,6 @@ class ComprehensiveMergeResolver {;
         await this.processBranch(branch);
       }
 
-=======
 ;
   log(message, level = 'INFO') {;
     const timestamp = new Date().toISOString();
@@ -77,21 +65,18 @@ class ComprehensiveMergeResolver {;
 ;
   async run() {;
     this.log('🚀 Starting Comprehensive Merge Conflict Resolver...');
-<<<<<<< HEAD
 ;
     try {;
       // Step 1: Ensure we're on main branch;
       await this.ensureMainBranch();
 ;
       // Step 2: Get all remote branches;
-=======
 
     try {
       // Step 1: Ensure we're on main branch`);
       await this.ensureMainBranch();`);
 `);
       // Step 2: Get all remote branches`);
->>>>>>> main
       const branches = await this.getRemoteBranches();this.log(Found ${branches.length} remote branches to process`);
 ;
       // Step 3: Process each branch;
@@ -99,7 +84,6 @@ class ComprehensiveMergeResolver {;
         await this.processBranch(branch);
       }
 ;
->>>>>>> main
       // Step 4: Final cleanup and summary;
       await this.finalizeMerges();
     } catch (error) {  this.log(`❌ Fatal error: ${error.message  }`, `ERROR`);
@@ -108,7 +92,6 @@ class ComprehensiveMergeResolver {;
 ;
     this.generateReport();
   }
-<<<<<<< HEAD
 
   async ensureMainBranch() {
     this.log(`📋 Ensuring we are on main branch...');
@@ -116,36 +99,18 @@ class ComprehensiveMergeResolver {;
     try {
       // Check current branch;
       const currentBranch = execSync('git branch --show-current', {
-        encoding: `utf8`,
-      }).trim();
+        encoding: `utf8`}).trim();
 
       if (currentBranch !== `main`) {this.log(`Switching from ${currentBranch} to main...`);
         execSync(`git checkout main`, { stdio: `inherit` });
       }
 
-=======
-;
-  async ensureMainBranch() {;
-    this.log('📋 Ensuring we are on main branch...');
-;
-    try {;
-      // Check current branch;
-      const currentBranch = execSync('git branch --show-current', {;
-        encoding: 'utf8',;
-      }).trim();
-;
-      if (currentBranch !== 'main') {this.log(`Switching from ${currentBranch} to main...`);
-        execSync('git checkout main', { stdio: 'inherit' });
-      }
-;
->>>>>>> main
-      // Pull latest changes;
+<<<<<<< HEAD      // Pull latest changes;
       this.log('Pulling latest changes from main...');
       execSync(`git pull origin main`, { stdio: `inherit` });
     } catch (error) {  throw new Error(`Failed to ensure main branch: ${error.message  }`);
     }
   }
-<<<<<<< HEAD
 
   async getRemoteBranches() {
     this.log(`🔍 Fetching all remote branches...`);
@@ -163,7 +128,6 @@ class ComprehensiveMergeResolver {;
           line => line && !line.includes('HEAD') && !line.includes('main')
         )
         .map(line => line.replace(`origin/`, ``));
-=======
 ;
   async getRemoteBranches() {;
     this.log('🔍 Fetching all remote branches...');
@@ -181,7 +145,6 @@ class ComprehensiveMergeResolver {;
           line => line && !line.includes('HEAD') && !line.includes('main');
         );
         .map(line => line.replace('origin/', '));
->>>>>>> main
 this.log(`Found ${branches.length} remote branches`);
       return branches;
     } catch (error) {  throw new Error(`Failed to get remote branches: ${error.message  }`);
@@ -190,35 +153,24 @@ this.log(`Found ${branches.length} remote branches`);
 ;
   async processBranch(branchName) {this.log(`🔄 Processing branch: ${branchName}`);
     this.mergeStats.branchesProcessed++;
-<<<<<<< HEAD
 
     try {
       // Create backup of current state;
       await this.createBackup(branchName);
 
-=======
-;
-    try {;
-      // Create backup of current state;
-      await this.createBackup(branchName);
-;
->>>>>>> main
-      // Attempt to merge the branch;
+<<<<<<< HEAD      // Attempt to merge the branch;
       const mergeResult = await this.attemptMerge(branchName);
 ;
       if (mergeResult.success) {;
         this.mergeStats.mergesSuccessful++;this.log(`✅ Successfully merged ${branchName}`);
       } else {this.log(`⚠️ Merge failed for ${branchName}: ${mergeResult.error}`);
       }
-<<<<<<< HEAD
     } catch (error) {  
       this.log(❌ Error processing branch ${branchName  }: ${error.message}`,
-        `ERROR`
-=======
-    } catch (error) {;
+        `ERROR`;
+} catch (error) {;
       this.log(❌ Error processing branch ${branchName}: ${error.message}',;
         'ERROR';
->>>>>>> main
       );
       this.mergeStats.errors++;
     }
@@ -226,7 +178,6 @@ this.log(`Found ${branches.length} remote branches`);
 ;
   async createBackup(branchName) {;
     const backupName = `backup-${branchName}-${Date.now()}`;
-<<<<<<< HEAD
     const backupPath = path.join(this.backupsDir, `backupName);
 
     try {
@@ -234,67 +185,53 @@ this.log(`Found ${branches.length} remote branches`);
     } catch (error) {  
       this.log(⚠️ Failed to create backup for ${branchName  }: ${error.message}`,
         `WARN`
-=======
-    const backupPath = path.join(this.backupsDir, 'backupName);
-;
-    try {;
-      // Create backup of current working directoryexecSync(`cp -r . ${backupPath}`', { stdio: 'pipe' });this.log(`📦 Created backup: ${backupName}');
-    } catch (error) {;
-      this.log(⚠️ Failed to create backup for ${branchName}: ${error.message}',;
-        'WARN';
->>>>>>> main
-      );
+<<<<<<< HEAD      );
     }
   }
 ;
   async attemptMerge(branchName) {;
     try {;
       this.log(`🔄 Attempting to merge ${branchName} into main...`);
-<<<<<<< HEAD
 
       // Try to merge the branchexecSync(`git merge origin/${branchName} --no-edit`, {
         stdio: `pipe`,
-=======
 ;
       // Try to merge the branchexecSync(`git merge origin/${branchName} --no-edit`, {;
         stdio: 'pipe',;
->>>>>>> main
         timeout: 300000, // 5 minutes timeout;
       });
 ;
       return { success: true };
-<<<<<<< HEAD
     } catch (error) {  
       // Check if there are merge conflicts;
       if (error.status === 1) {
-        this.log(⚠️ Merge conflicts detected in ${branchName  }, attempting to resolve...`
-=======
-    } catch (error) {;
+<<<<<<< HEAD
+        this.log(⚠️ Merge conflicts detected in ${branchName  }, attempting to resolve...`;
+} catch (error) {;
       // Check if there are merge conflicts;
       if (error.status === 1) {;
         this.log(⚠️ Merge conflicts detected in ${branchName}, attempting to resolve...';
->>>>>>> main
         );
+=======
+        this.log(⚠️ Merge conflicts detected in ${branchName  }, attempting to resolve...`
+<<<<<<< HEAD        );
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
         return await this.resolveMergeConflicts(branchName);
       } else {;
         return { success: false, error: error.message };
       }
     }
   }
-<<<<<<< HEAD
 
   async resolveMergeConflicts(branchName) {
     try {
-=======
 ;
   async resolveMergeConflicts(branchName) {;
     try {;
->>>>>>> main
       // Get list of conflicted files;
       const conflictedFiles = this.getConflictedFiles();
       this.log( `Found ${conflictedFiles.length} conflicted files in ${branchName}`;
       );
-<<<<<<< HEAD
 
       if (conflictedFiles.length === 0) {
         // No conflicts, try to continue merge;
@@ -310,41 +247,21 @@ this.log(`Found ${branches.length} remote branches`);
       // Add resolved files;
       execSync('git add .', { stdio: 'pipe' });
 
-=======
-;
-      if (conflictedFiles.length === 0) {;
-        // No conflicts, try to continue merge;
-        execSync('git merge --continue', { stdio: 'pipe' });
-        return { success: true };
-      }
-;
-      // Resolve conflicts in each file;
-      for (const file of conflictedFiles) {;
-        await this.resolveFileConflicts(file);
-      }
-;
-      // Add resolved files;
-      execSync('git add .', { stdio: 'pipe' });
-;
->>>>>>> main
-      // Continue merge;
+<<<<<<< HEAD      // Continue merge;
       execSync('git merge --continue', { stdio: 'pipe' });
 ;
       this.mergeStats.conflictsResolved += conflictedFiles.length;
       return { success: true };
-<<<<<<< HEAD
     } catch (error) {  
       // If resolution fails, abort the merge;
       try {
         execSync(`git merge --abort`, { stdio: `pipe`   });
       } catch (abortError) {this.log(`⚠️ Failed to abort merge: ${abortError.message}`, `WARN`);
-=======
     } catch (error) {;
       // If resolution fails, abort the merge;
       try {;
         execSync('git merge --abort', { stdio: 'pipe' });
       } catch (abortError) {this.log(`⚠️ Failed to abort merge: ${abortError.message}`, 'WARN');
->>>>>>> main
       }
 ;
       return {;
@@ -352,13 +269,11 @@ this.log(`Found ${branches.length} remote branches`);
       };
     }
   }
-<<<<<<< HEAD
 
   getConflictedFiles() {
     try {
       const statusOutput = execSync(`git status --porcelain`, {
-        encoding: `utf8`,
-      });
+        encoding: `utf8`});
       return statusOutput;
         .split('\n')
         .filter(
@@ -369,30 +284,11 @@ this.log(`Found ${branches.length} remote branches`);
         )
         .map(line => line.substring(3));
     } catch (error) {  
-=======
-;
-  getConflictedFiles() {;
-    try {;
-      const statusOutput = execSync('git status --porcelain', {;
-        encoding: 'utf8',;
-      });
-      return statusOutput;
-        .split('\n');
-        .filter(;
-          line =>;
-            line.startsWith('UU ') ||;
-            line.startsWith('AA ') ||;
-            line.startsWith('DD ');
-        );
-        .map(line => line.substring(3));
-    } catch (error) {;
->>>>>>> main
-      return [];
+<<<<<<< HEAD      return [];
       }
   }
 ;
   async resolveFileConflicts(filePath) {this.log(`🔧 Resolving conflicts in: ${filePath}`);
-<<<<<<< HEAD
 
     try {
       const content = fs.readFileSync(filePath, `utf8`);
@@ -400,7 +296,7 @@ this.log(`Found ${branches.length} remote branches`);
       // Check if file has merge conflict markers;
       if (
         !content.includes(`<<<<<<<`) &&
-        !content.includes(`=======`) &&
+        !content.includes(``) &&
         !content.includes(`>>>>>>>`)
       ) {
         return; // No conflicts in this file;
@@ -418,7 +314,6 @@ this.log(`✅ Resolved conflicts in: ${filePath}`);
     } catch (error) {  
       this.log(❌ Failed to resolve conflicts in ${filePath  }: ${error.message}`,
         `ERROR`
-=======
 ;
     try {;
       const content = fs.readFileSync(filePath, 'utf8');
@@ -426,7 +321,7 @@ this.log(`✅ Resolved conflicts in: ${filePath}`);
       // Check if file has merge conflict markers;
       if (;
         !content.includes('<<<<<<<') &&;
-        !content.includes('=======') &&;
+        !content.includes('') &&;
         !content.includes('>>>>>>>');
       ) {;
         return; // No conflicts in this file;
@@ -444,7 +339,6 @@ this.log(`✅ Resolved conflicts in: ${filePath}');
     } catch (error) {;
       this.log(❌ Failed to resolve conflicts in ${filePath}: ${error.message}',;
         'ERROR';
->>>>>>> main
       );
       throw error;
     }
@@ -452,22 +346,13 @@ this.log(`✅ Resolved conflicts in: ${filePath}');
 ;
   applyConflictResolutionStrategies(content, filePath) {;
     let resolvedContent = content;
-<<<<<<< HEAD
 
     // Strategy 1: Remove all merge conflict markers and keep the incoming changes;
     resolvedContent = resolvedContent.replace(
       /([\s\S]*?)      '$1'
     );
 
-=======
-;
-    // Strategy 1: Remove all merge conflict markers and keep the incoming changes;
-    resolvedContent = resolvedContent.replace(;
-      /([\s\S]*?)      '$1';
-    );
-;
->>>>>>> main
-    // Strategy 2: For specific file types, apply specialized resolution;
+<<<<<<< HEAD    // Strategy 2: For specific file types, apply specialized resolution;
     const fileExt = path.extname(filePath).toLowerCase();
 ;
     switch (fileExt) {;
@@ -487,7 +372,6 @@ this.log(`✅ Resolved conflicts in: ${filePath}');
 ;
     return resolvedContent;
   }
-<<<<<<< HEAD
 
   resolveJsonConflicts(content) {
     // For JSON files, try to merge objects;
@@ -504,7 +388,6 @@ this.log(`✅ Resolved conflicts in: ${filePath}');
       // If JSON is invalid, keep the incoming changes;
       return content.replace(
         /([\s\S]*?)        '$1'
-=======
 ;
   resolveJsonConflicts(content) {;
     // For JSON files, try to merge objects;
@@ -521,11 +404,9 @@ this.log(`✅ Resolved conflicts in: ${filePath}');
       // If JSON is invalid, keep the incoming changes;
       return content.replace(;
         /([\s\S]*?)        '$1';
->>>>>>> main
       );
       }
   }
-<<<<<<< HEAD
 
   resolveCodeConflicts(content) {
     // For code files, keep the incoming changes but clean up syntax;
@@ -533,21 +414,11 @@ this.log(`✅ Resolved conflicts in: ${filePath}');
       /([\s\S]*?)      '$1'
     );
 
-=======
-;
-  resolveCodeConflicts(content) {;
-    // For code files, keep the incoming changes but clean up syntax;
-    let resolved = content.replace(;
-      /([\s\S]*?)      '$1';
-    );
-;
->>>>>>> main
-    // Clean up any duplicate imports or declarations;
+<<<<<<< HEAD    // Clean up any duplicate imports or declarations;
     resolved = this.cleanupCodeDuplicates(resolved);
 ;
     return resolved;
   }
-<<<<<<< HEAD
 
   resolveMarkdownConflicts(content) {
     // For markdown files, combine content intelligently;
@@ -557,7 +428,6 @@ this.log(`✅ Resolved conflicts in: ${filePath}');
   }
 
   cleanupCodeDuplicates(content) {
-=======
 ;
   resolveMarkdownConflicts(content) {;
     // For markdown files, combine content intelligently;
@@ -567,7 +437,6 @@ this.log(`✅ Resolved conflicts in: ${filePath}');
   }
 ;
   cleanupCodeDuplicates(content) {;
->>>>>>> main
     // Remove duplicate import statements;
     const lines = content.split('\n');
     const seenImports = new Set();
@@ -593,7 +462,6 @@ this.log(`✅ Resolved conflicts in: ${filePath}');
 ;
   async finalizeMerges() {;
     this.log('🎯 Finalizing merges...');
-<<<<<<< HEAD
 
     try {
       // Push changes to remote;
@@ -615,15 +483,12 @@ this.log(`✅ Resolved conflicts in: ${filePath}');
         mergesSuccessful: this.mergeStats.mergesSuccessful,
         errors: this.mergeStats.errors,
       },
-      successRate:
-        this.mergeStats.branchesProcessed > 0;
-          ? (
+      successRate: this.mergeStats.branchesProcessed > 0;          ? (
               (this.mergeStats.mergesSuccessful /
                 this.mergeStats.branchesProcessed) *
               100;
             ).toFixed(2)
-          : 0,
-    };
+          : 0};
 
     // Write report to file;
     const reportPath = path.join(this.logsDir, 'merge-resolution-report.json');
@@ -638,55 +503,7 @@ this.log(`📄 Detailed report saved to: ${reportPath}`);
 if (require.main === module) {
   const resolver = new ComprehensiveMergeResolver();
   resolver.run().catch(error => {
-    console.error(`❌ Fatal error:`, error);
-=======
-;
-    try {;
-      // Push changes to remote;
-      execSync('git push origin main', { stdio: 'inherit' });
-      this.log('✅ Successfully pushed merged changes to remote');
-    } catch (error) {;
-      this.log(`❌ Failed to push changes: ${error.message}`, 'ERROR');
-    }
-  }
-;
-  generateReport() {;
-    this.log('📊 Generating merge resolution report...');
-;
-    const report = {;
-      timestamp: new Date().toISOString(),;
-      summary: {;
-        branchesProcessed: this.mergeStats.branchesProcessed,;
-        conflictsResolved: this.mergeStats.conflictsResolved,;
-        mergesSuccessful: this.mergeStats.mergesSuccessful,;
-        errors: this.mergeStats.errors,;
-      },;
-      successRate:;
-        this.mergeStats.branchesProcessed > 0;
-          ? (;
-              (this.mergeStats.mergesSuccessful /;
-                this.mergeStats.branchesProcessed) *;
-              100;
-            ).toFixed(2);
-          : 0,;
-    };
-;
-    // Write report to file;
-    const reportPath = path.join(this.logsDir, 'merge-resolution-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-;
-    this.log('📋 Merge Resolution Summary:');this.log(`   Branches Processed: ${report.summary.branchesProcessed}`);this.log(`   Conflicts Resolved: ${report.summary.conflictsResolved}`);this.log(`   Successful Merges: ${report.summary.mergesSuccessful}`);this.log(`   Errors: ${report.summary.errors}`);this.log(`   Success Rate: ${report.successRate}%`);
-this.log(`📄 Detailed report saved to: ${reportPath}`);
-  }
-}
-;
-// Run the merge resolver;
-if (require.main === module) {;
-  const resolver = new ComprehensiveMergeResolver();
-  resolver.run().catch(error => {;
-    console.error('❌ Fatal error:', error);
->>>>>>> main
-    process.exit(1);
+    console.error(`❌ Fatal error: `, error);    process.exit(1);
   });
 }
 ;

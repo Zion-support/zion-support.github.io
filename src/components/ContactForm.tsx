@@ -5,7 +5,7 @@ import {
   MapPin, Send, 
   CheckCircle, AlertCircle,
   User, Building,
-  MessageSquare
+  MessageSquare;
 } from 'lucide-react';
 
 export const ContactForm: React.FC = () => {
@@ -14,8 +14,8 @@ export const ContactForm: React.FC = () => {
     email: '', company: '',
     phone: '', service: '',
     message: '', budget: '',
-    timeline: ''
-  });
+    timeline: '';
+});
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
@@ -23,8 +23,8 @@ export const ContactForm: React.FC = () => {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
-      ...prev, [name]: value
-    }));
+      ...prev, [name]: value;
+}));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -40,8 +40,8 @@ export const ContactForm: React.FC = () => {
         email: '', company: '',
         phone: '', service: '',
         message: '', budget: '',
-        timeline: ''
-      });
+        timeline: '';
+});
     } catch (error) {
       setSubmitStatus('error');
     } finally {
@@ -54,17 +54,17 @@ export const ContactForm: React.FC = () => {
     'Enterprise Security', 'Digital Transformation',
     'Micro SAAS Services', 'IT Onsite Services',
     'Custom Development', 'Other'
-  ];
+  ]
 
   const budgets = [
     'Under $10K', '$10K - $50K',
     '$50K - $100K', '$100K - $500K',
     'Over $500K'
-  ];
+  ]
 
   const timelines = [
     'Immediate (1-2 weeks)', 'Quick (1-2 months)', 'Standard (3-6 months)', 'Long-term (6+ months)'
-  ];
+  ]
 
   if (submitStatus === 'success') {
     return (

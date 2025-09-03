@@ -34,8 +34,8 @@ class LintMonitor {
       const result = execSync('npm run lint', {
         encoding: 'utf8',
         stdio: 'pipe',
-        cwd: path.join(__dirname, '..'),
-      });
+        cwd: path.join(__dirname, '..'),;
+});
 
       this.errorCount = 0;
       this.lastCheck = new Date();
@@ -61,8 +61,8 @@ class LintMonitor {
       const result = execSync('npm run lint -- --fix', {
         encoding: 'utf8',
         stdio: 'pipe',
-        cwd: path.join(__dirname, '..'),
-      });
+        cwd: path.join(__dirname, '..'),;
+});
       this.log(`✅ Auto-fix completed successfully`);
       return true;
     } catch (error) { 
@@ -114,8 +114,8 @@ class LintMonitor {
       ],
       {
         ignored: /(node_modules|\.git|\.next)/,
-        persistent: true,
-      }
+        persistent: true,;
+}
     );
 
     let debounceTimer;
@@ -138,8 +138,8 @@ class LintMonitor {
       // Check if the specific file has lint issues;
       const result = execSync(`npx eslint "${filePath}"`, {
         encoding: `utf8`,
-        stdio: `pipe`,
-      });
+        stdio: `pipe`,;
+});
       this.log(`✅ File ${filePath} passed lint check`);
     } catch (error) { 
       this.log(`❌ Lint issues found in ${filePath }`);
@@ -148,8 +148,8 @@ class LintMonitor {
       try {
         execSync(`npx eslint "${filePath}" --fix`, {
           encoding: `utf8`,
-          stdio: `pipe`,
-        });
+          stdio: `pipe`,;
+});
         this.log(`✅ Auto-fixed issues in ${filePath}`);
       } catch (fixError) {
         this.log(`❌ Failed to auto-fix ${filePath}: ${fixError.message}`);
@@ -201,8 +201,8 @@ class LintMonitor {
       lastCheck: this.lastCheck,
       uptime: this.isRunning;
         ? Date.now() - (this.lastCheck?.getTime() || Date.now())
-        : 0,
-    };
+        : 0,;
+};
 
     this.log(`📊 Status: ${status.running ? 'Running' : 'Stopped'}`);
     this.log(`📊 Error Count: ${status.errorCount}`);
@@ -216,8 +216,8 @@ class LintMonitor {
       totalChecks: 0,
       totalErrors: 0,
       autoFixes: 0,
-      filesWatched: 0,
-    };
+      filesWatched: 0,;
+};
 
     try {
       const logContent = fs.readFileSync(this.logFile, 'utf8');

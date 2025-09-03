@@ -1,12 +1,13 @@
 import React from 'react';
 import { ArrowRight, CheckCircle, Brain, FileText, Image, Video, Mic, Globe, Zap, Target, TrendingUp, Star, Shield } from 'lucide-react';
+import PageTransition from '../../src/components/PageTransition';
 
 export default function AIContentTools() {
 	const title = 'AI-Powered Content Creation Tools — Zion Tech Group'
 	const description = 'Advanced AI content generation platform for blogs, social media, marketing copy, and multimedia content creation.'
 
 	return (
-		<>
+		<PageTransition>
 			{/* Hero Section */}
 			<section className="bg-gradient-to-br from-purple-50 to-pink-50 py-20 sm:py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -416,6 +417,6 @@ export default function AIContentTools() {
 					</div>
 				</div>
 			</section>
-		</>
-	)
+		</PageTransition>
+	);
 }

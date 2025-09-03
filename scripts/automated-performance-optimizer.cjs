@@ -31,8 +31,8 @@ class PerformanceOptimizer {
       totalSize: 0,
       staticSize: 0,
       serverSize: 0,
-      chunks: []
-    };
+      chunks: [];
+};
 
     if (analysis.buildExists) {
       try {
@@ -78,8 +78,8 @@ class PerformanceOptimizer {
           chunks.push({
             name: file,
             size: this.formatBytes(stats.size),
-            sizeBytes: stats.size
-          });
+            sizeBytes: stats.size;
+});
         }
       });
       
@@ -150,8 +150,8 @@ class PerformanceOptimizer {
       if (size > 500 * 1024) {
         analysis.largeImages.push({
           file: path.relative(this.projectRoot, filePath),
-          size: this.formatBytes(size)
-        });
+          size: this.formatBytes(size);
+});
       }
       
       // Check for unoptimized formats
@@ -159,8 +159,8 @@ class PerformanceOptimizer {
         analysis.unoptimizedImages.push({
           file: path.relative(this.projectRoot, filePath),
           format: ext,
-          size: this.formatBytes(size)
-        });
+          size: this.formatBytes(size);
+});
       }
     } catch (error) {
       this.log(`❌ Error analyzing image ${filePath}: ${error.message}`);
@@ -177,8 +177,8 @@ class PerformanceOptimizer {
       dynamicImports: 0,
       lazyComponents: 0,
       largeComponents: [],
-      potentialSplits: []
-    };
+      potentialSplits: [];
+};
 
     const directories = [srcDir, pagesDir].filter(dir => fs.existsSync(dir));
     
@@ -229,8 +229,8 @@ class PerformanceOptimizer {
       if (lines > 150 && content.includes('export default') && content.includes('function') || content.includes('const') && content.includes('=')) {
         analysis.largeComponents.push({
           file: path.relative(this.projectRoot, filePath),
-          lines: lines
-        });
+          lines: lines;
+});
       }
       
       // Identify potential split opportunities
@@ -239,8 +239,8 @@ class PerformanceOptimizer {
         if (importMatches && importMatches.length > 5) {
           analysis.potentialSplits.push({
             file: path.relative(this.projectRoot, filePath),
-            imports: importMatches.length
-          });
+            imports: importMatches.length;
+});
         }
       }
     } catch (error) {
@@ -261,8 +261,8 @@ class PerformanceOptimizer {
           type: 'bundle-size',
           priority: 'high',
           message: 'Large JavaScript chunks detected. Consider code splitting and lazy loading.',
-          details: largestChunks
-        });
+          details: largestChunks;
+});
       }
     }
 
@@ -272,8 +272,8 @@ class PerformanceOptimizer {
         type: 'image-optimization',
         priority: 'high',
         message: `Found ${imageAnalysis.largeImages.length} large images. Consider compressing or converting to WebP format.`,
-        details: imageAnalysis.largeImages.slice(0, 5)
-      });
+        details: imageAnalysis.largeImages.slice(0, 5);
+});
     }
 
     if (imageAnalysis.unoptimizedImages.length > 0) {
@@ -281,8 +281,8 @@ class PerformanceOptimizer {
         type: 'image-optimization',
         priority: 'medium',
         message: `Found ${imageAnalysis.unoptimizedImages.length} images in unoptimized formats. Consider using WebP or AVIF.`,
-        details: imageAnalysis.unoptimizedImages.slice(0, 5)
-      });
+        details: imageAnalysis.unoptimizedImages.slice(0, 5);
+});
     }
 
     // Code splitting recommendations
@@ -291,8 +291,8 @@ class PerformanceOptimizer {
         type: 'code-splitting',
         priority: 'medium',
         message: `Found ${splittingAnalysis.largeComponents.length} large components. Consider splitting them into smaller components.`,
-        details: splittingAnalysis.largeComponents.slice(0, 5)
-      });
+        details: splittingAnalysis.largeComponents.slice(0, 5);
+});
     }
 
     if (splittingAnalysis.potentialSplits.length > 0) {
@@ -300,8 +300,8 @@ class PerformanceOptimizer {
         type: 'code-splitting',
         priority: 'low',
         message: `Found ${splittingAnalysis.potentialSplits.length} files with many imports. Consider dynamic imports for better code splitting.`,
-        details: splittingAnalysis.potentialSplits.slice(0, 5)
-      });
+        details: splittingAnalysis.potentialSplits.slice(0, 5);
+});
     }
 
     return recommendations;
@@ -320,8 +320,8 @@ class PerformanceOptimizer {
       bundleAnalysis,
       imageAnalysis,
       splittingAnalysis,
-      recommendations
-    };
+      recommendations;
+};
 
     // Generate report
     const reportFile = path.join(this.reportsDir, 'performance-optimization-report.json');

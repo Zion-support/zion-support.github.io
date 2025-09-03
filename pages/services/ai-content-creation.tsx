@@ -7,34 +7,34 @@ const AIContentCreation: NextPage = () => {
     {
       title: 'Blog Post Generation',
       description: 'Create engaging, SEO-optimized blog posts tailored to your industry and audience.',
-      icon: '📝'
-    },
+      icon: '📝';
+},
     {
       title: 'Social Media Content',
       description: 'Generate compelling social media posts for all platforms with consistent brand voice.',
-      icon: '📱'
-    },
+      icon: '📱';
+},
     {
       title: 'Email Marketing',
       description: 'Craft personalized email campaigns that drive engagement and conversions.',
-      icon: '📧'
-    },
+      icon: '📧';
+},
     {
       title: 'Product Descriptions',
       description: 'Write compelling product descriptions that highlight features and benefits.',
-      icon: '🛍️'
-    },
+      icon: '🛍️';
+},
     {
       title: 'Technical Documentation',
       description: 'Generate clear, comprehensive technical documentation for your products.',
-      icon: '📚'
-    },
+      icon: '📚';
+},
     {
       title: 'Marketing Copy',
       description: 'Create persuasive marketing copy for ads, landing pages, and campaigns.',
-      icon: '🎯'
-    }
-  ];
+      icon: '🎯';
+}
+  ]
 
   const benefits = [
     'Reduce content creation time by up to 80%',
@@ -43,7 +43,7 @@ const AIContentCreation: NextPage = () => {
     'Improve SEO performance with optimized content',
     'Generate content in multiple languages',
     '24/7 content generation capability'
-  ];
+  ]
 
   const pricing = [
     {
@@ -57,8 +57,8 @@ const AIContentCreation: NextPage = () => {
         'Email support',
         'Standard quality content'
       ],
-      popular: false
-    },
+      popular: false;
+},
     {
       name: 'Professional',
       price: '$299',
@@ -72,8 +72,8 @@ const AIContentCreation: NextPage = () => {
         'Multi-language support',
         'Brand voice training'
       ],
-      popular: true
-    },
+      popular: true;
+},
     {
       name: 'Enterprise',
       price: '$799',
@@ -87,9 +87,9 @@ const AIContentCreation: NextPage = () => {
         'White-label solution',
         'Advanced analytics'
       ],
-      popular: false
-    }
-  ];
+      popular: false;
+}
+  ]
 
   return (
     <Layout 
@@ -225,8 +225,8 @@ const AIContentCreation: NextPage = () => {
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
                     plan.popular 
                       ? 'bg-blue-600 hover:bg-blue-700 text-white' 
-                      : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
-                  }`}
+                      : 'bg-gray-100 hover:bg-gray-200 text-gray-900';
+}`}
                 >
                   Get Started
                 </Link>

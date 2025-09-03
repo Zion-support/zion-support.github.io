@@ -1,16 +1,10 @@
 <<<<<<< HEAD
- export default function ForumPostPage () {;,"});,"})
+ export default function ForumPostPage () {;,"});,"});
 }"});,"})
-=======
-<<<<<<< HEAD
  export: default function ForumPostPage () {;
 };
-=======
-<<<<<<< HEAD
  export default function ForumPostPage () {;
 }
-=======
-<<<<<<< HEAD
 import React from 'react';
 import {SEO } from '@/components/SEO';
 
@@ -26,10 +20,9 @@ export default function ForumPostPage() {return (
     </div>
   );
 }
-=======
- export default function ForumPostPage () {
+ export default function ForumPostPage () {;
 };
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main
+=======
+ export default function ForumPostPage () {;,"});,})
+}});,"})
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
