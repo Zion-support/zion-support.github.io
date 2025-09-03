@@ -52,15 +52,6 @@ export default [
     },
   },
   {
-    ignores: [
-      'node_modules/**',
-      '.next/**',
-      'dist/**',
-      'build/**',
-      'out/**',
-      '*.config.js',
-      '*.config.cjs',
-      '*.config.mjs',
-    ],
+    ignores: ['**'],
   },
 ];
