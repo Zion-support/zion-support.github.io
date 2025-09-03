@@ -44,6 +44,7 @@ temp_*/
 test_build/
 tests.disabled/
 pages.disabled/
+pages.disabled_backup/
 src.disabled/
 src.pages.disabled/
 components.disabled/
