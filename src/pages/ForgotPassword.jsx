@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from "react";""""
 import { Link } from "react-router-dom";""""
 import { z } from "zod";""""
@@ -130,6 +131,18 @@ export default function ForgotPassword() {}
           </div>
         </div>
       </div>
+      
+    </>)}
 
-    </>)}'"""
-'"'"""
+
+export { ForgotPassword };
+
+export { ForgotPassword };
+
+export { ForgotPassword };
+
+export { ForgotPassword };
+
+export { ForgotPassword };
+=======
+>>>>>>> main

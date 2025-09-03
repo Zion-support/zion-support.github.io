@@ -382,5 +382,15 @@ export default function ServicesPricing() {}
           </div>
         </div>
       </div>
-    </div>)}'"`
-'"`'"`
+    </div>)}
+
+
+export { ServicesPricing };
+
+export { ServicesPricing };
+
+export { ServicesPricing };
+
+export { ServicesPricing };
+
+export { ServicesPricing };

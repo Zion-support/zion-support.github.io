@@ -180,8 +180,16 @@ const NotFound = () => {}
           </motion.div>
         </motion.div>
       </div>
-    </div>
-  );
-};
-export default NotFound;'"""
-'"'"""
+    </div>)};
+export default NotFound;
+
+
+export { NotFound };
+
+export { NotFound };
+
+export { NotFound };
+
+export { NotFound };
+
+export { NotFound };

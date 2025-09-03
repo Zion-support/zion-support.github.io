@@ -144,5 +144,15 @@ export default function ForumCategoryPage() {}
       <Suspense fallback={<div className="text-center py-16">Loading...</div>}>
         <CategoryContent categoryId={categoryId} category={category} IconComponent={IconComponent} user={user}/>
       </Suspense>
-    </>)}"`
-"`"`
+    </>)}
+
+
+export { CategoryContent, ForumCategoryPage, IconComponent };
+
+export { CategoryContent, ForumCategoryPage, IconComponent };
+
+export { CategoryContent, ForumCategoryPage, IconComponent };
+
+export { CategoryContent, ForumCategoryPage, IconComponent };
+
+export { CategoryContent, ForumCategoryPage, IconComponent };

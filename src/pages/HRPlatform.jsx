@@ -779,8 +779,17 @@ export default function HRPlatform() {}
             </div>
           </motion.div>
         </div>
-      </section>'"`
-    </div>'"`'"`
-  )}'"`'"`'"`
-'"`'"`'"`
-'"`'"`
+      </section>
+    </div>
+  )}
+
+
+export { HRPlatform };
+
+export { HRPlatform };
+
+export { HRPlatform };
+
+export { HRPlatform };
+
+export { HRPlatform };

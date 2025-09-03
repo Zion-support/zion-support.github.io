@@ -1,3 +1,4 @@
+<<<<<<< HEAD
     {;
       icon: GitBranch,;
       title: 'Git Integration & Workflow',;'
@@ -37,17 +38,15 @@
             initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx
+:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AICodeReviewSecurityScanner.tsx
 }}
             animate = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx
+:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx
   y: 0
 
 }}
@@ -59,7 +58,6 @@
             </div>"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               AI Code Review"
-=======
   y: 0 
 }}"
             transition={{ duration: 0.8 }}""
@@ -70,23 +68,20 @@
             </div>""
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"
               AI Code Review""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AICodeReviewSecurityScanner.tsx
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400">
                 Security Scanner
               </span>"
             </h1>""
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-<<<<<<< HEAD:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx
+:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx
               Protect your applications with AI-powered code security scanning that detects
               vulnerabilities, enforces secure coding practices, and integrates seamlessly
               with your development workflow.
             </p>"
-=======
               Protect your applications with AI-powered code security scanning that detects 
               vulnerabilities, enforces secure coding practices, and integrates seamlessly 
               with your development workflow."
             </p>""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AICodeReviewSecurityScanner.tsx
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}"
@@ -113,30 +108,26 @@
             initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx
+:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AICodeReviewSecurityScanner.tsx
 }}
             whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx
+:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx
   y: 0
 
 }}
             transition={{ duration: 0.8 }}"
             className="text-center mb-12"
           >"
-=======
   y: 0 
 }}"
             transition={{ duration: 0.8 }}""
             className="text-center mb-12""
           >""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AICodeReviewSecurityScanner.tsx
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Comprehensive Security Coverage"
             </h2>""
@@ -153,27 +144,23 @@
                 initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx
+:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AICodeReviewSecurityScanner.tsx
 }}
                 whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx
+:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AICodeReviewSecurityScanner.tsx
 }}
                 transition = {
 
   { duration: 0.6,
-<<<<<<< HEAD:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx
+:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx
   delay: index * 0.1
 
 }}"
@@ -181,14 +168,12 @@
               >"
                 <div className="flex items-start mb-4">"
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mr-4">"
-=======
   delay: index * 0.1 "
 }}""
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-green-500/50 transition-all duration-300""
               >""
                 <div className="flex items-start mb-4">""
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mr-4">""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AICodeReviewSecurityScanner.tsx
                     <vulnType.icon className="w-6 h-6 text-white" />
                   </div>"
                   <div>""
@@ -218,30 +203,26 @@
             initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx
+:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AICodeReviewSecurityScanner.tsx
 }}
             whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx
+:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx
   y: 0
 
 }}
             transition={{ duration: 0.8 }}"
             className="text-center mb-16"
           >"
-=======
   y: 0 
 }}"
             transition={{ duration: 0.8 }}""
             className="text-center mb-16""
           >""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AICodeReviewSecurityScanner.tsx
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Advanced AI-Powered Features"
             </h2>""
@@ -258,27 +239,23 @@
                 initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx
+:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AICodeReviewSecurityScanner.tsx
 }}
                 whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx
+:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AICodeReviewSecurityScanner.tsx
 }}
                 transition = {
 
   { duration: 0.6,
-<<<<<<< HEAD:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx
+:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx
   delay: index * 0.1
 
 }}"
@@ -292,7 +269,6 @@
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, idx) => ("
                     <li key={idx} className="flex items-center text-sm text-gray-400">"
-=======
   delay: index * 0.1 "
 }}""
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-green-500/50 transition-all duration-300""
@@ -305,7 +281,6 @@
                 <ul className="space-y-2">"
                   {feature.benefits.map((benefit, idx) => (""
                     <li key={idx} className="flex items-center text-sm text-gray-400">""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AICodeReviewSecurityScanner.tsx
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0"  />                      {benefit}
                     </li>
                   ))}
@@ -322,17 +297,15 @@
             initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx
+:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AICodeReviewSecurityScanner.tsx
 }}
             whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx
+:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx
   y: 0
 
 }}
@@ -344,7 +317,6 @@
             </h2>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Choose the plan that fits your development team's security needs.
-=======
   y: 0 
 }}"
             transition={{ duration: 0.8 }}""
@@ -355,7 +327,6 @@
             </h2>""
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">'
               Choose the plan that fits your development team's security needs. 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AICodeReviewSecurityScanner.tsx
               All plans include our core AI-powered security scanning features.
             </p>
           </motion.div>"
@@ -367,50 +338,43 @@
                 initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx
+:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AICodeReviewSecurityScanner.tsx
 }}
                 whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx
+:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AICodeReviewSecurityScanner.tsx
 }}
                 transition = {
 
   { duration: 0.6,
-<<<<<<< HEAD:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx
+:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx
   delay: index * 0.1
 
 }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
-<<<<<<<< HEAD:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx
+<:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx
                   plan.popular
                     ? 'border-green-500/50 ring-2 ring-green-500/20'
                     : 'border-gray-700'
-========
+=
 
                   plan.popular '
                     ? 'border-green-500/50 ring-2 ring-green-500/20' '
                     : 'border-gray-700'`
->>>>>>>> main:backup-pages/src-pages/services/AICodeReviewSecurityScanner.tsx
-=======
-  delay: index * 0.1 
+>  delay: index * 0.1 
 }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
 '
                   plan.popular ''
                     ? 'border-green-500/50 ring-2 ring-green-500/20' ''`
                     : 'border-gray-700'``
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AICodeReviewSecurityScanner.tsx
                 } hover:border-green-500/50 transition-all duration-300`}
               >"
                 {plan.popular && (""
@@ -419,24 +383,22 @@
                       Most Popular
                     </span>
                   </div>
-<<<<<<< HEAD:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx
+:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx
                 )}
-<<<<<<<< HEAD:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx
+<:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx
 
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="flex items-baseline justify-center">
                     <span className="text-4xl font-bold text-white">{plan.price}</span>
-========
+=
                 "
                 <div className="text-center mb-6">"
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>"
                   <div className="flex items-baseline justify-center">"
                     <span className="text-4xl font-bold text-white">{plan.price}</span>"
->>>>>>>> main:backup-pages/src-pages/services/AICodeReviewSecurityScanner.tsx
-                    <span className="text-gray-400 ml-1">{plan.period}</span>
+>                    <span className="text-gray-400 ml-1">{plan.period}</span>
                   </div>"
-=======
                 )}"
                 ""
                 <div className="text-center mb-6">""
@@ -445,7 +407,6 @@
                     <span className="text-4xl font-bold text-white">{plan.price}</span>""
                     <span className="text-gray-400 ml-1">{plan.period}</span>"
                   </div>""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AICodeReviewSecurityScanner.tsx
                   <p className="text-gray-300 mt-2">{plan.description}</p>
                 </div>"
 ""
@@ -480,30 +441,26 @@
             initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx
+:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AICodeReviewSecurityScanner.tsx
 }}
             whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx
+:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx
   y: 0
 
 }}
             transition={{ duration: 0.8 }}"
             className="text-center mb-16"
           >"
-=======
   y: 0 
 }}"
             transition={{ duration: 0.8 }}""
             className="text-center mb-16""
           >""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AICodeReviewSecurityScanner.tsx
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Development Workflow Integration"
             </h2>""
@@ -520,27 +477,23 @@
                 initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx
+:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AICodeReviewSecurityScanner.tsx
 }}
                 whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx
+:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AICodeReviewSecurityScanner.tsx
 }}
                 transition = {
 
   { duration: 0.6,
-<<<<<<< HEAD:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx
+:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx
   delay: index * 0.1
 
 }}"
@@ -548,14 +501,12 @@
               >"
                 <div className="flex items-start mb-4">"
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mr-4">"
-=======
   delay: index * 0.1 "
 }}""
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-green-500/50 transition-all duration-300""
               >""
                 <div className="flex items-start mb-4">""
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mr-4">""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AICodeReviewSecurityScanner.tsx
                     <useCase.icon className="w-6 h-6 text-white" />
                   </div>"
                   <div>""
@@ -582,22 +533,18 @@
             initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx
+:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AICodeReviewSecurityScanner.tsx
 }}
             whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx
+:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AICodeReviewSecurityScanner.tsx
 }}
             transition={{ duration: 0.8 }}"
           >""
@@ -605,15 +552,13 @@
               Ready to Secure Your Code?"
             </h2>""
             <p className="text-xl text-gray-300 mb-8">
-<<<<<<< HEAD:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx
+:pages.disabled/pages/services/AICodeReviewSecurityScanner.tsx
               Join leading development teams that trust our AI-powered platform to
               detect vulnerabilities and maintain secure coding practices.
             </p>"
-=======
               Join leading development teams that trust our AI-powered platform to 
               detect vulnerabilities and maintain secure coding practices."
             </p>""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AICodeReviewSecurityScanner.tsx
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}"
@@ -636,3 +581,5 @@
     </div>;
   )};'"`
 export default AICodeReviewSecurityScanner;'"`'"`
+=======
+>>>>>>> main

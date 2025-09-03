@@ -488,8 +488,16 @@ const AIAutonomousResearchAssistant = () => {}
           </div>
         </div>
       </section>
-    </div>
-  );
-};
-export default AIAutonomousResearchAssistant;'"""
-'"'"""
+    </div>)};
+export default AIAutonomousResearchAssistant;
+
+
+export { AIAutonomousResearchAssistant };
+
+export { AIAutonomousResearchAssistant };
+
+export { AIAutonomousResearchAssistant };
+
+export { AIAutonomousResearchAssistant };
+
+export { AIAutonomousResearchAssistant };

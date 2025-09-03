@@ -142,7 +142,15 @@ export default function Index() {}
       <WaitlistSection />
       <FloatingCTA />
       <Footer />
-    </div>
-  );
-}'"`
-'"`'"`
+    </div>)}
+
+
+export { Index };
+
+export { Index };
+
+export { Index };
+
+export { Index };
+
+export { Index };

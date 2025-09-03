@@ -49,6 +49,16 @@ const Badge = ({ children, className = '', variant = 'default' }) => {}
     </div>
   );
 };
-;
-export { Badge };'"`
-'"`'"`
+
+export { Badge };
+
+
+export { Badge, Badge };
+
+export { Badge, Badge };
+
+export { Badge, Badge };
+
+export { Badge, Badge };
+
+export { Badge, Badge };

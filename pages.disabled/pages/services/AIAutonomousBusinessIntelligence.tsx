@@ -1,5 +1,5 @@
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
 <<<<<<< HEAD
+:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
 import { Brain,
   TrendingUp,
   Target,
@@ -59,64 +59,33 @@ export default function AIAutonomousBusinessIntelligence(...args: any[]): any {
       icon: Home,;"
       title: "Real Estate",;"
       description: "AI-driven property valuation, market analysis, and investment optimization."};
-  ];
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-
-  return ("
-    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-<<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
-      <SEO
-        title="AI Autonomous Business Intelligence | Zion Tech Group"
-        description="Transform your business with AI-powered autonomous intelligence systems. Get real-time insights, predictive analytics, and autonomous decision-making capabilities."
-      />
-
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-========
-      <SEO "
-<<<<<<< HEAD
-        title="AI Autonomous Business Intelligence | Zion Tech Group"
-        description="Transform your business with AI-powered autonomous intelligence systems. Get real-time insights, predictive analytics, and autonomous decision-making capabilities."
-       />
-=======
-        title="AI Autonomous Business Intelligence | Zion Tech Group""        description="Transform your business with AI-powered autonomous intelligence systems. Get real-time insights, predictive analytics, and autonomous decision-making capabilities."
-       />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-      
+  ];      
       {/* Hero Section */}"
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
->>>>>>>> main:backup-pages/src-pages/services/AIAutonomousBusinessIntelligence.tsx
-=======
-  return (""
+>  return (""
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       <SEO ""
         title="AI Autonomous Business Intelligence | Zion Tech Group""        description="Transform your business with AI-powered autonomous intelligence systems. Get real-time insights, predictive analytics, and autonomous decision-making capabilities."
        />"
       {/* Hero Section */}""
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIAutonomousBusinessIntelligence.tsx
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
+:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIAutonomousBusinessIntelligence.tsx
 }}
             animate = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
+:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIAutonomousBusinessIntelligence.tsx
 }}
             transition={{ duration: 0.8 }}"
           >""
@@ -124,15 +93,13 @@ export default function AIAutonomousBusinessIntelligence(...args: any[]): any {
               AI Autonomous Business Intelligence"
             </h1>""
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
+:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
               Transform your business with autonomous AI systems that make intelligent decisions,
               predict market trends, and optimize operations 24/7 without human intervention.
             </p>"
-=======
               Transform your business with autonomous AI systems that make intelligent decisions, 
               predict market trends, and optimize operations 24/7 without human intervention."
             </p>""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIAutonomousBusinessIntelligence.tsx
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}"
@@ -159,22 +126,18 @@ export default function AIAutonomousBusinessIntelligence(...args: any[]): any {
             initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
+:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIAutonomousBusinessIntelligence.tsx
 }}
             whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
+:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIAutonomousBusinessIntelligence.tsx
 }}
             transition={{ duration: 0.8 }}"
             viewport={{ once: true }}""
@@ -186,17 +149,14 @@ export default function AIAutonomousBusinessIntelligence(...args: any[]): any {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our AI systems operate independently, continuously learning and optimizing your business processes
             </p>
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
+:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
           </motion.div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
+<:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
 
-========
+=
           "
->>>>>>>> main:backup-pages/src-pages/services/AIAutonomousBusinessIntelligence.tsx
-=======
-          </motion.div>"
+>          </motion.div>"
           ""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIAutonomousBusinessIntelligence.tsx
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index()
               <motion.div
@@ -204,27 +164,23 @@ export default function AIAutonomousBusinessIntelligence(...args: any[]): any {
                 initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
+:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIAutonomousBusinessIntelligence.tsx
 }}
                 whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
+:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIAutonomousBusinessIntelligence.tsx
 }}
                 transition = {
 
   { duration: 0.6,
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
+:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
   delay: index * 0.1
 
 }}
@@ -235,7 +191,6 @@ export default function AIAutonomousBusinessIntelligence(...args: any[]): any {
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>"
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>"
-=======
   delay: index * 0.1 
 }}"
                 viewport={{ once: true }}""
@@ -245,7 +200,6 @@ export default function AIAutonomousBusinessIntelligence(...args: any[]): any {
                   <feature.icon className="w-6 h-6 text-white" />"
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIAutonomousBusinessIntelligence.tsx
                 <p className="text-gray-300">{feature.description}</p>
               </motion.div>
             ))}
@@ -259,22 +213,18 @@ export default function AIAutonomousBusinessIntelligence(...args: any[]): any {
             initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
+:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIAutonomousBusinessIntelligence.tsx
 }}
             whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
+:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIAutonomousBusinessIntelligence.tsx
 }}
             transition={{ duration: 0.8 }}"
             viewport={{ once: true }}""
@@ -286,17 +236,14 @@ export default function AIAutonomousBusinessIntelligence(...args: any[]): any {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience unprecedented business optimization with AI systems that never sleep
             </p>
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
+:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
           </motion.div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
+<:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
 
-========
+=
           "
->>>>>>>> main:backup-pages/src-pages/services/AIAutonomousBusinessIntelligence.tsx
-=======
-          </motion.div>"
+>          </motion.div>"
           ""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIAutonomousBusinessIntelligence.tsx
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map(benefit: unknown, index: unknown()
               <motion.div
@@ -304,27 +251,23 @@ export default function AIAutonomousBusinessIntelligence(...args: any[]): any {
                 initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
+:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIAutonomousBusinessIntelligence.tsx
 }}
                 whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
+:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIAutonomousBusinessIntelligence.tsx
 }}
                 transition = {
 
   { duration: 0.6,
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
+:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
   delay: index * 0.1
 
 }}
@@ -335,7 +278,6 @@ export default function AIAutonomousBusinessIntelligence(...args: any[]): any {
                   <benefit.icon className="w-6 h-6 text-white" />
                 </div>"
                 <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>"
-=======
   delay: index * 0.1 
 }}"
                 viewport={{ once: true }}""
@@ -345,7 +287,6 @@ export default function AIAutonomousBusinessIntelligence(...args: any[]): any {
                   <benefit.icon className="w-6 h-6 text-white" />"
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIAutonomousBusinessIntelligence.tsx
                 <p className="text-gray-300">{benefit.description}</p>
               </motion.div>
             ))}
@@ -359,22 +300,18 @@ export default function AIAutonomousBusinessIntelligence(...args: any[]): any {
             initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
+:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIAutonomousBusinessIntelligence.tsx
 }}
             whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
+:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIAutonomousBusinessIntelligence.tsx
 }}
             transition={{ duration: 0.8 }}"
             viewport={{ once: true }}""
@@ -386,17 +323,14 @@ export default function AIAutonomousBusinessIntelligence(...args: any[]): any {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive AI intelligence systems covering every aspect of your business
             </p>
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
+:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
           </motion.div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
+<:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
 
-========
+=
           "
->>>>>>>> main:backup-pages/src-pages/services/AIAutonomousBusinessIntelligence.tsx
-=======
-          </motion.div>"
+>          </motion.div>"
           ""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIAutonomousBusinessIntelligence.tsx
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
             {intelligenceTypes.map(type: unknown, index: unknown()
               <motion.div
@@ -404,27 +338,23 @@ export default function AIAutonomousBusinessIntelligence(...args: any[]): any {
                 initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
+:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIAutonomousBusinessIntelligence.tsx
 }}
                 whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
+:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIAutonomousBusinessIntelligence.tsx
 }}
                 transition = {
 
   { duration: 0.6,
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
+:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
   delay: index * 0.1
 
 }}
@@ -435,7 +365,6 @@ export default function AIAutonomousBusinessIntelligence(...args: any[]): any {
                   <type.icon className="w-6 h-6 text-white" />
                 </div>"
                 <h3 className="text-xl font-semibold text-white mb-3">{type.title}</h3>"
-=======
   delay: index * 0.1 
 }}"
                 viewport={{ once: true }}""
@@ -445,7 +374,6 @@ export default function AIAutonomousBusinessIntelligence(...args: any[]): any {
                   <type.icon className="w-6 h-6 text-white" />"
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-3">{type.title}</h3>""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIAutonomousBusinessIntelligence.tsx
                 <p className="text-gray-300">{type.description}</p>
               </motion.div>
             ))}
@@ -459,22 +387,18 @@ export default function AIAutonomousBusinessIntelligence(...args: any[]): any {
             initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
+:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIAutonomousBusinessIntelligence.tsx
 }}
             whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
+:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIAutonomousBusinessIntelligence.tsx
 }}
             transition={{ duration: 0.8 }}"
             viewport={{ once: true }}""
@@ -486,17 +410,14 @@ export default function AIAutonomousBusinessIntelligence(...args: any[]): any {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Autonomous intelligence solutions designed for diverse industries and business models
             </p>
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
+:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
           </motion.div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
+<:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
 
-========
+=
           "
->>>>>>>> main:backup-pages/src-pages/services/AIAutonomousBusinessIntelligence.tsx
-=======
-          </motion.div>"
+>          </motion.div>"
           ""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIAutonomousBusinessIntelligence.tsx
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
             {useCases.map(useCase: unknown, index: unknown()
               <motion.div
@@ -504,27 +425,23 @@ export default function AIAutonomousBusinessIntelligence(...args: any[]): any {
                 initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
+:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIAutonomousBusinessIntelligence.tsx
 }}
                 whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
+:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIAutonomousBusinessIntelligence.tsx
 }}
                 transition = {
 
   { duration: 0.6,
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
+:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
   delay: index * 0.1
 
 }}
@@ -535,7 +452,6 @@ export default function AIAutonomousBusinessIntelligence(...args: any[]): any {
                   <useCase.icon className="w-6 h-6 text-white" />
                 </div>"
                 <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>"
-=======
   delay: index * 0.1 
 }}"
                 viewport={{ once: true }}""
@@ -545,7 +461,6 @@ export default function AIAutonomousBusinessIntelligence(...args: any[]): any {
                   <useCase.icon className="w-6 h-6 text-white" />"
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIAutonomousBusinessIntelligence.tsx
                 <p className="text-gray-300">{useCase.description}</p>
               </motion.div>
             ))}
@@ -559,22 +474,18 @@ export default function AIAutonomousBusinessIntelligence(...args: any[]): any {
             initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
+:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIAutonomousBusinessIntelligence.tsx
 }}
             whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
+:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIAutonomousBusinessIntelligence.tsx
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}"
@@ -583,15 +494,13 @@ export default function AIAutonomousBusinessIntelligence(...args: any[]): any {
               Ready to Transform Your Business?"
             </h2>""
             <p className="text-xl text-gray-300 mb-8">
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
+:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
               Join the future of autonomous business intelligence. Our AI systems will revolutionize
               how you make decisions and optimize your operations.
             </p>"
-=======
               Join the future of autonomous business intelligence. Our AI systems will revolutionize 
               how you make decisions and optimize your operations."
             </p>""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIAutonomousBusinessIntelligence.tsx
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}"
@@ -613,3 +522,5 @@ export default function AIAutonomousBusinessIntelligence(...args: any[]): any {
       </section>;
     </div>;"
   )}'"'"
+=======
+>>>>>>> main

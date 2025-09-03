@@ -1,71 +1,48 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';'''
 import { motion } from 'framer-motion';
-import {}
-  Sparkles,
-  ArrowRight,
-  CheckCircle,
-  Phone,
-  Mail,
-  MapPin,
-  TrendingUp,
-  Play,'
-  Download,''
-  ExternalLink,'''
-  Search} from 'lucide-react';'''
-import { CUTTING_EDGE_SERVICES_2025 } from '../data/enhanced-2025-cutting-edge-services';'''
-import { SPECIALIZED_INDUSTRY_SOLUTIONS_2025 } from '../data/specialized-industry-solutions-2025';
-const ComprehensiveServicesShowcase2025 = () => {}
-'
-''
-'''
-  const [searchTerm, setSearchTerm] = useState('');'''
-  const [selectedCategory, setSelectedCategory] = useState('all');'''
-  const [selectedIndustry, setSelectedIndustry] = useState('all');
-  const allServices = []
-    ...CUTTING_EDGE_SERVICES_2025,
-    ...SPECIALIZED_INDUSTRY_SOLUTIONS_2025;
-  ];'
-  const categories = [''
-    'all',
-    ...Array.from(new Set(allServices.map(service => service.category)))
-  ];'
-  const industries = [''
-    'all',
-    ...Array.from()
-      new Set()
-        SPECIALIZED_INDUSTRY_SOLUTIONS_2025.map(service => service.industry)
-      )
-    )
-  ];
-  // Filter services based on selection;
-  const filteredServices = allServices.filter(service => {}
-    const matchesSearch =
-      service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      service.tags.some(tag =>
-        tag.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-    return matchesCategory && matchesIndustry && matchesSearch;
-  });
-  const containerVariants = {}
-    hidden: { opacity: 0 },
-    visible: {}
-      opacity: 1,
-      transition: {}
-        staggerChildren: 0.1}}};
-  const itemVariants = {}
-    hidden: { y: 20, opacity: 0 },
-    visible: {}
-      y: 0,
-      opacity: 1,
-      transition: {}
-        duration: 0.5}}};
-  return()
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">"""
-      {/* Hero Section */}""""
-      <div className="relative overflow-hidden">""""
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>""""
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+import { Sparkles, ArrowRight, CheckCircle, Phone, Mail, MapPin, TrendingUp, Play, Download, ExternalLink, Search } from 'lucide-react';
+import { CUTTING_EDGE_SERVICES_2025 } from "../data/enhanced-2025-cutting-edge-services.jsx";
+import { SPECIALIZED_INDUSTRY_SOLUTIONS_2025 } from "../data/specialized-industry-solutions-2025.jsx";
+const ComprehensiveServicesShowcase2025 = () => {
+    const [searchTerm, setSearchTerm] = useState('');
+    const [selectedCategory, setSelectedCategory] = useState('all');
+    const [selectedIndustry, setSelectedIndustry] = useState('all');
+    const allServices = [...CUTTING_EDGE_SERVICES_2025, ...SPECIALIZED_INDUSTRY_SOLUTIONS_2025];
+    const categories = ['all', ...Array.from(new Set(allServices.map(service => service.category)))];
+    const industries = ['all', ...Array.from(new Set(SPECIALIZED_INDUSTRY_SOLUTIONS_2025.map(service => service.industry)))];
+    // Filter services based on selection
+    const filteredServices = allServices.filter(service => {
+        const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+        return matchesCategory && matchesIndustry && matchesSearch});
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.1
+            }
+        }
+    };
+    const itemVariants = {
+  hidden: { y: 20,
+  opacity: 0 
+
+},
+        visible: {
+            y: 0,
+            opacity: 1,
+            transition: {
+                duration: 0.5
+            }
+        }
+    };
+    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+      {/* Hero Section */}
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <motion.div;
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}"""
@@ -412,7 +389,25 @@ const ComprehensiveServicesShowcase2025 = () => {}
           </div>
         </div>
       </div>
-    </div>) ;
-};
-export default ComprehensiveServicesShowcase2025;'"""
-'"'"""
+    </div>)};
+export default ComprehensiveServicesShowcase2025;
+
+
+export { ComprehensiveServicesShowcase2025 };
+
+export { ComprehensiveServicesShowcase2025 };
+
+export { ComprehensiveServicesShowcase2025 };
+
+export { ComprehensiveServicesShowcase2025 };
+
+export { ComprehensiveServicesShowcase2025 };
+=======
+<<<<<<< HEAD
+import React from 'react'; export default ComprehensiveServicesShowcase2025; Sparkles, ArrowRight, CheckCircle, Phone, Mail, MapPin, TrendingUp, Play, Download, ExternalLink, Search} from "lucide - react"; const ComprehensiveServicesShowcase2025 = () => { const [searchTerm, setSearchTerm] = useState("); const [selectedCategory, setSelectedCategory] = useState("all"); const [selectedIndustry, setSelectedIndustry] = useState("all"); const allServices = [...CUTTING_EDGE_SERVICES_2025, ...SPECIALIZED_INDUSTRY_SOLUTIONS_2025, ]; const categories = ["all", ...Array.from(new Set (allServices.map (service => service.category) ) ) , ]; const industries = ["all", ...Array.from(new Set (SPECIALIZED_INDUSTRY_SOLUTIONS_2025.map (service => service.industry) ) ) , ];
+=======
+import React from "react")
+}
+'export default ComponentName;"
+>>>>>>> main
+>>>>>>> main

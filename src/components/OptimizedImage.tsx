@@ -1,165 +1,280 @@
-useEffect(() => {}
-    if(priority || !lazy) {}
-  useEffect ( () => {}
-    if (priority || !lazy) {}
-  // Intersection Observer for lazy loading;
-  useEffect ( () => {}
-    if (priority || !lazy) {}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { ImageIcon, AlertCircle, Loader2  } from 'lucide-react';
+export default function Page() {
+) => {
+
+  const [imageSrc, setImageSrc] = useState<any>(src);
+=======
+import React from "react"
+;,"});,"})"""
+export default function OptimizedImage() {return ("
+    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
+      <SEO title="OptimizedImage - Zion Tech Group" description="Professional OptimizedImage services by Zion Tech Group"  />"
+      <div className="container mx-auto px-4 py-20">"
+        <h1 className="text-4xl font-bold text-white mb-8">OptimizedImage</h1>"
+        <p className="{"text-gray-300" text-lg">
+          Professional OptimizedImage services to help your business grow.
+        </p>
+      </div>
+  )
+}
+}"
+interface OptimizedImageProps { src: string,
+,
+interface OptimizedImageProps {,,
+  src: string,,
+alt: string,",react
+interface OptimizedImageProps {
+  src: string,;
+  al,t: string,;
+  width?: number,;
+  height?: number,,;
+  className?: string,;
+  priority?: boolean,;
+  quality?: number  }
+export default function OptimizedImage() {
+  quality?: number}
+;
+export default function OptimizedImage({;
+  src,;
+  alt,;
+  width = 800,;
+  height = 600,,;
+  className = ",;
+  priority = false,;
+  quality = 75}: OptimizedImageProps) {;
+>>>>>>> main
+  const [isLoading, setIsLoading] = useState(true);
+  const [hasError, setHasError] = useState(false);
+
+<<<<<<< HEAD
+  // Intersection Observer for lazy loading
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
+  useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
+    if(priority || !lazy) {
+
       setIsIntersecting(true);
       return}
 
     if(!imgRef.current) return;
 
     observerRef.current = new IntersectionObserver()
-      ([entry]) => {}
-        if(entry.isIntersecting) {}
+      ([entry]) => {
+
+        if(entry.isIntersecting) {
+
           setIsIntersecting(true);
           observerRef.current?.disconnect()}
       },
-      {}
-''
-        rootMargin: any50px',;        threshold: 0.1;
-      }) ;
+      {
+=======
+>>>>>>> main
+<<<<<<< HEAD
+  // Intersection Observer for lazy loading      }) ;
 
     observerRef.current.observe(imgRef.current) ;
 
-    return () => {}
-      if(observerRef.current) {}
+    return () => {
+      if(observerRef.current) {
+
         observerRef.current.disconnect()}
     }}, [priority, lazy]) ;
 
-  // Handle image load;
+  // Handle image load
+  
     setIsLoaded(true) ;
     onLoad?.() };
 
-  // Handle image error;
+  // Handle image error
+  
       setHasError(false);
-      setIsLoading(true)} else {}
+      setIsLoading(true)} else {
       setHasError(true);
       setIsLoading(false);
       onError?.(new Error(`Failed to load image: any${src}`))}
   };
 
-  // Cleanup on unmount;
-  useEffect(() => {}
-    return () => {}
-      if(observerRef.current) {}
+  // Cleanup on unmount
+  useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
+    return () => {
+      if(observerRef.current) {
+
         observerRef.current.disconnect()}
     }}, []) ;
 
-  // Generate optimized src with quality parameter;
-  const getOptimizedSrc: any = (src: anystring)  => {}
-'
-    if (src.startsWith('data:') || src.startsWith('blob:')) {}
-      return src}
+  // Generate optimized src with quality parameter
+  const getOptimizedSrc = (src: anystring) => {
+    if(src.startsWith ('data:') || src.startsWith('blob:') ) {
+      return src;
+    }
+    // Add quality parameter for external images if possible
+    try {
+      
+      if(url.searchParams.has('quality')) {
 
-    // Add quality parameter for external images if possible;
-    try {}
-'
-      if (url.searchParams.has('quality')) {}
-        return src}'
+        return src}
       url.searchParams.set('quality', quality.toString());
-      return url.toString()} catch {}
+      return url.toString()} catch {
+
       return src}
   };
 
-  // Base classes;
-  // Loading skeleton;
-  if(!isIntersecting) {}
-    return()`
-      <div ``
-        className={`${baseClasses} bg-gray-200 dark:bg-gray-700 animate-pulse`}
-        style={{ width, height }}
+  // Base classes
+  
+  // Loading skeleton
+  if(!isIntersecting) {
+    return (<div
+        className={`${baseClasses} bg-gray - 200 dark:bg-gray - 700 animate - pulse`}        style={{ width, height }}
       >
-        <div className="w-full h-full flex items-center justify-center">""""
+        <div className="w-full h-full flex items-center justify-center">"
           <Loader2 className="w-8 h-8 text-gray-400 animate-spin" />
         </div>
       </div>) }
-  // Error state;
-  if(hasError) {}
-    return()`
-      <div ``
-        className={`${baseClasses} bg-gray-100 dark:bg-gray-800 flex items-center justify-center`}
-        style={{ width, height }}"""
-      >""""
-        <div className="text-center">""""
-          <AlertCircle className="w-12 h-12 text-gray-400 mx-auto mb-2"  />""""
-          <p className="text-sm text-gray-500 dark:text-gray-400">Image failed to load</p>
+  // Error state
+  if(hasError) {
+    return (<div
+        className={`${baseClasses} bg-gray - 100 dark:bg-gray - 800 flex items - center justify - center`}
+        style={{ width, height }}
+      >
+        <div className="text-center">
+          <AlertCircle className="w-12 h-12 text-gray - 400 mx - auto mb-2" />
+          <p className="text-sm text-gray - 500 dark:text-gray -400">Image failed to load</p>
         </div>
-      </div>) }"""
-  return (""""
-    <div className="relative" style={{ width, height }}>
-      {/* Loading overlay */}
-      <AnimatePresence>
-        {isLoading && (<motion.div;
-            initial={{ opacity: 1 }}"""
-            exit={{ opacity: 0 }}""""
-            className="absolute inset-0 bg-gray-200 dark:bg-gray-700 flex items-center justify-center z-10""""
-          >""""
-            <div className="text-center">""""
-              <Loader2 className="w-8 h-8 text-gray-400 animate-spin mx-auto mb-2" />""""
-              <p className="text-xs text-gray-500">Loading...</p>
-            </div>
-          </motion.div>) }
-      </AnimatePresence>
-
-      {/* Placeholder */}'"""
-      {placeholder === 'shimmer' && !isLoaded && (""""
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200 dark:from-gray-700 dark:via-gray-600 dark:to-gray-700 animate-pulse" />
+      </div>) ;
+  }}) => {
+=======
+export default function OptimizedImage({
+  src,
+  alt,
+  width = 800,
+  height = 600,,
+  className = ",
+  priority = false,
+  quality = 75}: OptimizedImageProps) {
+  const [isLoading, setIsLoading] = useState(true)
+}
+  const [hasError, setHasError] = useState(false)
+}
+  return ("
+    <div className="{"relative" overflow-hidden ${className}"}>
+      {isLoading && (;"
+        <div className=""absolute" inset-0 bg-gray-200 animate-pulse"}       />
       )}
 
-      {/* Main image */}
-      <motion.img;
-        ref={imgRef}
-        src={optimizedSrc}'
-        alt={alt}''
-        className={baseClasses}'''
-        style={{ width: '100%', height: '100%' }}'''
-        loading={lazy ? 'lazy' : 'eager'}
-        sizes={sizes}
-        onLoad={handleImageLoad}
-        onError={handleImageError}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: isLoaded ? 1 : 0 }}
-        transition={{ duration: 0.3 }}
-      />
-
-      {/* Fallback icon for broken images */}"""
-      {!isLoading && !isLoaded && (""""
-        <div className="absolute inset-0 flex items-center justify-center bg-gray-100 dark:bg-gray-800">""""
-          <ImageIcon className="w-16 h-16 text-gray-400"  />        </div>
+      <Image export default function OptimizedImage({
+  quality?: number}&apos;&apos
+export default function OptimizedImage(;{
+  src,
+  alt,
+  width = 800,
+  height = 600,"
+  className = "",
+  priority = false,
+  quality = 75}: OptimizedImageProps) {
+  className = &apos;&apos,
+  priority = false,
+  quality = 75}: OptimizedImageProps) {&apos}&apos>""
+// comment
+export const OptimizedImage = ({ 
+  src,
+  alt,
+  width,
+  height,
+  priority = false,
+  className = "",>
+  ...props}) => {
+  const [isLoading, setIsLoading] = useState(true)
+}
+  const [hasError, setHasError] = useState(false)
+}
+  return ("
+    <div className = "{"relative" overflow-hidden ${className}"}>
+      {isLoading && ("
+        <div className=""absolute" inset-0 bg-gray-200 animate-pulse"  />
       )}
+
+      {isLoading && (}"
+        <div className="&quot;absolute" inset-0 bg-gray-200 animate-pulse&quot;       />
+      )}&quot;"
+      <Image src = "{src}""
+        alt="{alt}""
+        width="{width}""
+        height="{height}""
+        priority="{priority}""
+        quality="{quality}""
+        className="{"transition-opacity" duration-300 ${isLoading ? "opacity-0" : "opacity-100"}"}"
+        onLoad="{()" => setIsLoading(false)}"
+        onError="{()" => {
+          setHasError(true)"
+        onError="{()" => {
+          setHasError(true)
+}
+          setIsLoading(false)}}"
+        placeholder=""blur";""
+        blurDataURL="data:image/jpegbase64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=" />
+      {hasError && (;"
+        <div className="absolute inset-0 flex items-center justify-center bg-gray-100">;"
+          <span className="text-gray-500">Failed to load image</span>
+        </div>
+      )}
+
     </div>
-  )};
-'
-// Specialized image components''
-export const AvatarImage: React.FC<Omit<OptimizedImageProps,rounded' | 'objectFit'> & { size?: 'sm' | 'md' | 'lg' | 'xl' }> = ({}
-'
-''
-'''
-  size = 'md', 
-  ...props;
-}) => {}
-  return()'`
-    <OptimizedImage {...props}'`      className={`${sizeClasses[size]} rounded-full object-cover ${props.className || ''}`}"""
-      rounded={false}""""
-      objectFit="cover"""
-     />) };
+  )}"
+        placeholder = "blur""
+        blurDataURL="data: image/jpeg,base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=" />
+      {hasError && ("
+        <div className="absolute inset-0 flex items-center justify-center bg-gray-100">"
+          <span className="{"text-gray-500"">Failed to load image</span>
+        </div>
+      )}
 
-export const CardImage: React.FC<OptimizedImageProps> = (props) => ('`
-  <OptimizedImage {...props}'`'"`
-    className={`w-full h-48 ${props.className || ''}`}"    objectFit="cover"""
-    rounded;
-    shadow;
-    hover;
-   />) ;
+    </div>
+  )}"
+        quality="{quality}""
+        className="{"transition-opacity" duration-300 ${isLoading ? &apos;opacity-0&apos; : &apos;opacity-100&apos}"}"
+        quality = "{85}""
+        placeholder=""blur"}""
+        blurDataURL="data: image/jpeg,base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="{"""
+        onLoad="{()" => setIsLoading(false)}"
+        onError="{()" => {
+          setIsLoading(false)
+}
+          setHasError(true)
+}
+          setIsLoading(false)}}"
+        placeholder="&quot;blur&quot;""
+        blurDataURL="&quot;data:image/jpegbase64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=&quot;" />
+      {hasError && (&quot}"
+        <div className="&quot;absolute" inset-0 flex items-center justify-center bg-gray-100&quot;>&quot;""
+          <span className="&quot;text-gray-500&quot;">Failed to load image&quot;</span>
+}}"
+        className = "{"transition-opacity" duration-300 ${isLoading ? "opacity-0" : "opacity-100"}"}
 
-export const HeroImage: React.FC<OptimizedImageProps> = (props) => ('`
-  <OptimizedImage {...props}'`'"`
-    className={`w-full h-96 ${props.className || ''}`}"    objectFit="cover"""
-    priority;
-    lazy={false}
-    />
-);
-'"`
-export default OptimizedImage;'"`'"`
+        {...props} />
+      {hasError && ("
+        <div className=""absolute" inset-0 flex items-center justify-center bg-gray-100"}>"
+          <span className="text-gray-400">Failed to load image</span>
+        </div>
+      )}
+>>>>>>> main
+
+    </div>
+  )}
+export default OptimizedImage;";
+;"
+>>>>>>> main

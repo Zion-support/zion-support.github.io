@@ -288,5 +288,15 @@ const Accessibility = () => {}
         </div>
       </section>
     </div>)};
-export default Accessibility;'"""
-'"'"""
+export default Accessibility;
+
+
+export { Accessibility };
+
+export { Accessibility };
+
+export { Accessibility };
+
+export { Accessibility };
+
+export { Accessibility };

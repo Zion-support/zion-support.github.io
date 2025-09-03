@@ -397,7 +397,15 @@ export default function DigitalTransformation() {}
           </motion.div>
         </div>
       </section>
-    </div>
-  );
-}'"`
-'"`'"`
+    </div>)}
+
+
+export { DigitalTransformation, IconComponent, IconComponent, IconComponent };
+
+export { DigitalTransformation, IconComponent, IconComponent, IconComponent };
+
+export { DigitalTransformation, IconComponent, IconComponent, IconComponent };
+
+export { DigitalTransformation, IconComponent, IconComponent, IconComponent };
+
+export { DigitalTransformation, IconComponent, IconComponent, IconComponent };

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { SEO } from '@/components/SEO';'''
 import { GradientHeading } from '@/components/GradientHeading';'''
 import { Button } from '@/components/ui/button';'''
@@ -251,77 +252,32 @@ export default function Careers() {}
           </div>
         </div>
 
-        {/* Job Listings */}"""
-        <div>""""
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Open Positions"""
-          </h2>""""
-          <Tabs defaultValue="engineering" className="w-full">""""
-            <TabsList className="grid w-full grid-cols-4 bg-slate-800">""""
-              <TabsTrigger value="engineering" className="text-white">
-                Engineering"""
-              </TabsTrigger>""""
-              <TabsTrigger value="product" className="text-white">
-                Product"""
-              </TabsTrigger>""""
-              <TabsTrigger value="marketing" className="text-white">
-                Marketing"""
-              </TabsTrigger>""""
-              <TabsTrigger value="operations" className="text-white">
-                Operations;
-              </TabsTrigger>
-            </TabsList>
-"""
-            {Object.entries(jobs).map(([department, departmentJobs]) => (""""
-              <TabsContent key={department} value={department} className="mt-8">""""
-                <div className="grid gap-6">
-                  {departmentJobs.map((job, index) => (
-                    <Card"""
-                      key={index}""""
-                      className="bg-slate-800 border-slate-700 hover:border-slate-600 transition-colors""""
-                    >""""
-                      <CardContent className="p-6">""""
-                        <div className="flex justify-between items-start mb-4">"""
-                          <div>""""
-                            <h3 className="text-xl font-semibold text-white mb-2">
-                              {job.title}"""
-                            </h3>""""
-                            <div className="flex items-center gap-4 text-gray-300 text-sm">
-                              <span>{job.location}</span>
-                              <span>•</span>
-                              <span>{job.type}</span>
-                              <span>•</span>
-                              <span>{job.department}</span>
-                            </div>"""
-                          </div>""""
-                          <Button className="bg-zion-cyan hover:bg-zion-cyan-dark text-white">
-                            Apply Now;
-                          </Button>"""
-                        </div>""""
-                        <p className="text-gray-300">{job.description}</p>
-                      </CardContent>
-                    </Card>) ) }
-                </div>
-              </TabsContent>) ) }
-          </Tabs>
-        </div>
-"""
-        {/* CTA Section */}""""
-        <div className="text-center mt-16">""""
-          <h2 className="text-3xl font-bold text-white mb-6">'
-            Don't See the Right Role?"""
-          </h2>""""
-          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">'
-            We're always looking for talented individuals to join our team. Send''
-            us your resume and let's discuss how you can contribute to our;
-            mission."""
-          </p>""""
-          <Button className="bg-zion-cyan hover:bg-zion-cyan-dark text-white text-lg px-8 py-3">
-            Send Resume;
-          </Button>
-        </div>
+
+
+export { Careers };
+
+export { Careers };
+
+export { Careers };
+
+export { Careers };
+
+export { Careers };
+=======
+import React from "react"
+import { SEO } from "@/components/SEO"
+;,"});,"})
+}
+export default function Careers() {return ("
+    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
+      <SEO title="Careers - Zion Tech Group" description="Professional Careers services by Zion Tech Group"  />"
+      <div className="container mx-auto px-4 py-20">"
+        <h1 className="text-4xl font-bold text-white mb-8">Careers</h1>"
+        <p className="text-gray-300 text-lg">
+          Professional Careers services to help your business grow.
+        </p>
       </div>
-    </div>
-  );
-}'"""
-'"'"""
+  )
+}
+}""
+>>>>>>> main

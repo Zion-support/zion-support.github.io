@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from "react";""""
 import { useParams } from "react-router-dom";""""
 import { supabase } from "@/integrations/supabase/client";""""
@@ -217,6 +218,18 @@ export default function ProfileDetail() {}
           </div>
         </div>
       </div>
+      
+    </>)}
 
-    </>)}'"`
-'"`'"`
+
+export { ProfileDetail };
+
+export { ProfileDetail };
+
+export { ProfileDetail };
+
+export { ProfileDetail };
+
+export { ProfileDetail };
+=======
+>>>>>>> main

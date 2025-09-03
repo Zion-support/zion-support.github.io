@@ -403,5 +403,15 @@ export default function PricingPage() {}
           </div>
         </div>
       </section>
-    </div>)}'"`
-'"`'"`
+    </div>)}
+
+
+export { PricingPage, IconComponent };
+
+export { PricingPage, IconComponent };
+
+export { PricingPage, IconComponent };
+
+export { PricingPage, IconComponent };
+
+export { PricingPage, IconComponent };

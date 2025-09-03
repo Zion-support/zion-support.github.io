@@ -17,7 +17,15 @@ export default function Terms() {}
         </div>
       </main>
       <Footer />
-    </>
-  );
-}'"""
-'"'"""
+    </>)}
+
+
+export { Terms };
+
+export { Terms };
+
+export { Terms };
+
+export { Terms };
+
+export { Terms };

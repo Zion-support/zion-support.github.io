@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Header } from "@/components/Header";""""
 import { Footer } from "@/components/Footer";""""
 import { TrustedBySection } from "@/components/TrustedBySection";""""
@@ -112,8 +113,28 @@ import { ArrowRight, Users, Zap, Settings, Sparkles, BarChart3, Smartphone expor
       {/* Add social share section to encourage users to spread the word */}
       <SocialShareSection />
       <WaitlistSection />
-      <FloatingCTA />'"`
-      <Footer />'"`'"`
-    </div>)}'"`'"`'"`
-'"`'"`'"`
-'"`'"`
+      <FloatingCTA />
+      <Footer />
+    </div>)}
+
+
+export { Index };
+
+export { Index };
+
+export { Index };
+
+export { Index };
+
+export { Index };
+=======
+';
+;";";,
+}}}}";,
+}}}}const { t } = useTranslation ()  ;const;const { isRTL } = useLanguage () &apos;&apos,&apos,";
+"""""";
+;",";";,
+}}}}""";
+;"}}}}"";
+"
+>>>>>>> main

@@ -54,7 +54,15 @@ export default function HiringTracker() {}
   return()
     <ProtectedRoute>
       <HiringTrackerContent />
-    </ProtectedRoute>
-  );
-}'"""
-'"'"""
+    </ProtectedRoute>)}
+
+
+export { HiringTrackerContent, HiringTracker };
+
+export { HiringTrackerContent, HiringTracker };
+
+export { HiringTrackerContent, HiringTracker };
+
+export { HiringTrackerContent, HiringTracker };
+
+export { HiringTrackerContent, HiringTracker };

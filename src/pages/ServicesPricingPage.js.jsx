@@ -330,7 +330,15 @@ export default function ServicesPricingPage() {}
           </div>
         </div>
       </div>
-    </div>
-  );
-}'"`
-'"`'"`
+    </div>)}
+
+
+export { ServicesPricingPage };
+
+export { ServicesPricingPage };
+
+export { ServicesPricingPage };
+
+export { ServicesPricingPage };
+
+export { ServicesPricingPage };

@@ -204,7 +204,16 @@ export default function ForgotPassword() {}
           </div>
         </div>
       </div>
-    </>
-  );
-}'"""
-'"'"""
+      
+    </>)}
+
+
+export { ForgotPassword };
+
+export { ForgotPassword };
+
+export { ForgotPassword };
+
+export { ForgotPassword };
+
+export { ForgotPassword };

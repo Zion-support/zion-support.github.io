@@ -327,5 +327,15 @@ export default function DataAnalyticsServices() {}
           </div>
         </div>
       </section>
-    </div>);'"""
-}}}'"'"""
+    </div>);
+}}}
+
+export { DataAnalyticsServices };
+
+export { DataAnalyticsServices };
+
+export { DataAnalyticsServices };
+
+export { DataAnalyticsServices };
+
+export { DataAnalyticsServices };

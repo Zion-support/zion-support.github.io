@@ -411,7 +411,16 @@ export default function TranslationManager() {}
           </CardContent>
         </Card>
       </main>
-    </>
-  );
-}'"`
-'"`'"`
+      
+    </>)}
+
+
+export { TranslationManager };
+
+export { TranslationManager };
+
+export { TranslationManager };
+
+export { TranslationManager };
+
+export { TranslationManager };

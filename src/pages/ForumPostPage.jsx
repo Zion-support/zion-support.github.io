@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from "react";""""
 import { useParams, Link } from "react-router-dom";""""
 import SEO from "@/components/SEO";""""
@@ -415,8 +416,19 @@ export default function ForumPostPage() {}
             {replies;
             .filter(reply => !reply.isAnswer) .map(reply => (<ReplyCard key={reply.id} reply={reply} onMarkAnswer={ () => handleMarkAsAnswer(reply.id) } canMarkAnswer={!post.isAnswered && (isAuthor || isAdminOrMod) }/>) ) }
           </div>
-        </div>'"`
-      </div>'"`'"`
-    </>)}'"`'"`'"`
-'"`'"`'"`
-'"`'"`
+        </div>
+      </div>
+    </>)}
+
+
+export { ForumPostPage };
+
+export { ForumPostPage };
+
+export { ForumPostPage };
+
+export { ForumPostPage };
+
+export { ForumPostPage };
+=======
+>>>>>>> main

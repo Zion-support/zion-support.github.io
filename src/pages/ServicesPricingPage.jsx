@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';'''
 import { Link } from 'react-router-dom';'''
 import { Button } from '@/components/ui/button';'''
@@ -236,8 +237,19 @@ export default function ServicesPricingPage() {}
               Schedule Consultation;
             </Button>
           </div>
-        </div>'"`
-      </div>'"`'"`
-    </div>)}'"`'"`'"`
-'"`'"`'"`
-'"`'"`
+        </div>
+      </div>
+    </div>)}
+
+
+export { ServicesPricingPage };
+
+export { ServicesPricingPage };
+
+export { ServicesPricingPage };
+
+export { ServicesPricingPage };
+
+export { ServicesPricingPage };
+=======
+>>>>>>> main

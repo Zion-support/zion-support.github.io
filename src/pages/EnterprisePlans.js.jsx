@@ -22,7 +22,16 @@ export default function EnterprisePlans() {}
         <EnterpriseTrustBadges />
         <EnterpriseCTA />
       </main>
-    </>
-  );
-}'"""
-'"'"""
+      
+    </>)}
+
+
+export { EnterprisePlans };
+
+export { EnterprisePlans };
+
+export { EnterprisePlans };
+
+export { EnterprisePlans };
+
+export { EnterprisePlans };

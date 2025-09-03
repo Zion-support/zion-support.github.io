@@ -61,5 +61,15 @@ export default function SearchResultsPage() {}
         </div>)}""""
       <div ref={loader} className="h-1"/>""""
       {isFetchingNextPage && <p className="text-center mt-4">Loading more...</p>}
-    </main>)}"`
-"`"`
+    </main>)}
+
+
+export { LIMIT, SearchResultsPage };
+
+export { LIMIT, SearchResultsPage };
+
+export { LIMIT, SearchResultsPage };
+
+export { LIMIT, SearchResultsPage };
+
+export { LIMIT, SearchResultsPage };

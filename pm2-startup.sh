@@ -17,11 +17,11 @@ fi
 
 # Run initial CI pipeline (best-effort)
 echo "🔍 Running initial CI pipeline..."
- npm run ci:install || true
- npm run ci:lint || true
- npm run ci:type-check || true
- npm run ci:build || true
- npm run ci:test || true
+ npm install --silent || true
+ npm run lint || true
+ npm run type-check || true
+ npm run build || true
+ npm test || true
 
 # Set up PM2 to start on system boot
 pm2 save

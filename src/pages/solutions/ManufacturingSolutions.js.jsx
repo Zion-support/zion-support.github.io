@@ -278,7 +278,16 @@ export default function ManufacturingSolutions() {}
           </motion.div>
         </div>
       </section>
-    </div>
-  );
-}'"""
-'"'"""
+    </div>);
+}
+
+
+export { ManufacturingSolutions };
+
+export { ManufacturingSolutions };
+
+export { ManufacturingSolutions };
+
+export { ManufacturingSolutions };
+
+export { ManufacturingSolutions };

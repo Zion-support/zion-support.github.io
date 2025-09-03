@@ -1,11 +1,7 @@
+<<<<<<< HEAD
 import { defineConfig } from 'vitest/config';
 import path from 'node:path';
-<<<<<<< HEAD
-export { defineConfig };
-=======
-
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f
-export default defineConfig({
+export { defineConfig };export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
@@ -21,3 +17,13 @@ export default defineConfig({
     },
   },
 });
+=======
+import { defineConfig  } from "vitest/config";
+import react from "@vitejs/plugin-react";
+export default defineConfig({;
+  plugins: [react()],;
+  test: {;
+    environment: "jsdom",;,
+},;,
+})
+>>>>>>> main

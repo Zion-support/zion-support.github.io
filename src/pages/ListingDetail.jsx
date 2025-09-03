@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from "react";""""
 import { useAuth } from "@/hooks/useAuth";""""
 import { ChatWidget } from "@/components/ChatWidget";"""
@@ -162,15 +163,23 @@ export default function ListingDetail() {}
                       Custom Pricing;
                     </div>) }
                 </div>
-"""
-                {/* Action Buttons */}""""
-                <div className="space-y-3 mb-8">""""
-                  {listing.price !== null ? (<PaymentButton amount={listing.price} serviceId={listing.id} providerId={listing.author.id} buttonText="Buy Now" className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6" onPaymentInitiated = {}
-  () => {}
-                toast({}
-"""
-""`
-""`'"`
-""`'"`'"`
-                    title: "Payment Processing","`'"`'"`
-'"`'"`
+
+                {/* Action Buttons */}
+                <div className="space-y-3 mb-8">
+                  {listing.price !== null ? (<PaymentButton amount={listing.price} serviceId={listing.id} providerId={listing.author.id} buttonText="Buy Now" className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6" onPaymentInitiated = {
+  () => {
+                toast({
+                    title: "Payment Processing",
+
+
+export { ListingDetail };
+
+export { ListingDetail };
+
+export { ListingDetail };
+
+export { ListingDetail };
+
+export { ListingDetail };
+=======
+>>>>>>> main

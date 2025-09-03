@@ -82,7 +82,15 @@ export default function SearchFeature() {}
         </div>
       </main>
       <Footer />
-    </>
-  );
-}'"""
-'"'"""
+    </>)}
+
+
+export { SearchFeature };
+
+export { SearchFeature };
+
+export { SearchFeature };
+
+export { SearchFeature };
+
+export { SearchFeature };

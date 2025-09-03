@@ -46,7 +46,15 @@ export default function CaseStudy() {}
           </p>
         </div>
       </div>
-    </>
-  );
-}'"`
-'"`'"`
+    </>)}
+
+
+export { CaseStudy };
+
+export { CaseStudy };
+
+export { CaseStudy };
+
+export { CaseStudy };
+
+export { CaseStudy };

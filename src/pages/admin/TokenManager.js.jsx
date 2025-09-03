@@ -121,7 +121,15 @@ export default function TokenManager() {}
           </div>
         </div>
       </div>
-    </ProtectedRoute>
-  );
-}'"`
-'"`'"`
+    </ProtectedRoute>)}
+
+
+export { TokenManager };
+
+export { TokenManager };
+
+export { TokenManager };
+
+export { TokenManager };
+
+export { TokenManager };

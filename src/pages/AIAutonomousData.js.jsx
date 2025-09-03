@@ -255,8 +255,16 @@ const AIAutonomousData = () => {}
           </div>
         </div>
       </div>
-    </>
-  );
-};
-export default AIAutonomousData;'"""
-'"'"""
+    </>)};
+export default AIAutonomousData;
+
+
+export { AIAutonomousData };
+
+export { AIAutonomousData };
+
+export { AIAutonomousData };
+
+export { AIAutonomousData };
+
+export { AIAutonomousData };

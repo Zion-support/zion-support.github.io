@@ -1,36 +1,27 @@
-export async function createJob(...args: any[]): any {}
-  const { data, error } = await supabase''
-    .from('jobs')
-    .insert([jobData])
-    .select()
-    .single();'
-''
-    const { data, error } = await supabase'''
-      .from ('jobs') .update (jobData) .eq ('id', jobId) .select () .single () ;
-export async function updateJob(...args: any[]): any {}
-'
-''
-'''
-  const { data, error } = await supabase''''
-    .from('jobs')''
-    .update(jobData)'''
-    .eq('id', jobId)
-    .select()
-    .single();
+<<<<<<< HEAD
+=======
+// comment
+export class jobServiceService {
+  constructor() {
+    this.baseUrl = process.env.NEXT_PUBLIC_API_URL || "/api"
+  }
 
-  if(error) throw error;
-  return data}
+  async get() {
+    try {
+      const response = await fetch("${this.baseUrl}/jobservice")
+}
+      return await response.json()
+}
+    } catch (error) {
+      console.error("Error fetching data:", error)
+}
+      throw error
+    }
 
-export async function getJobById(...args: any[]): any {}
-'
-''
-'''
-  const { data, error } = await supabase''''
-    .from('jobs')'''
-    .select('*')'''
-    .eq('id', jobId)
-    .single();
+  }
 
-  if(error) throw error;
-  return data}
-'
+
+
+export default new jobServiceService()
+}
+>>>>>>> main

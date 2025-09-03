@@ -273,7 +273,15 @@ export default function IoTServicesPage() {}
       </section>
 
       <TrustedBySection />
-    </div>
-  );
-}'"""
-'"'"""
+    </div>)}
+
+
+export { IoTServicesPage };
+
+export { IoTServicesPage };
+
+export { IoTServicesPage };
+
+export { IoTServicesPage };
+
+export { IoTServicesPage };

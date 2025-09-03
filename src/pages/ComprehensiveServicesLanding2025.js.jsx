@@ -1,20 +1,16 @@
 import React, { useState } from 'react';'''
 import { Link } from 'react-router-dom';
-import { allEnhancedServices } from "../data/enhanced-2025-comprehensive-services";
-const ComprehensiveServicesLanding2025 = () => {}
-'
-''
-'''
-    const [selectedIndustry, setSelectedIndustry] = useState('all');'''
-    const industries = [''''
-        { id: 'all', name: 'All Industries', icon: '🏢', description: 'Comprehensive solutions across all sectors' },'''
-        { id: 'finance', name: 'Financial Services', icon: '💰', description: 'AI-powered trading, risk management, and compliance' },'''
-        { id: 'healthcare', name: 'Healthcare', icon: '🏥', description: 'Advanced analytics, patient care, and research' },'''
-        { id: 'manufacturing', name: 'Manufacturing', icon: '🏭', description: 'Smart factories, IoT, and supply chain optimization' },'''
-        { id: 'energy', name: 'Energy & Utilities', icon: '⚡', description: 'Renewable energy management and grid optimization' },'''
-        { id: 'logistics', name: 'Logistics & Transportation', icon: '🚚', description: 'Autonomous logistics and route optimization' },'''
-        { id: 'legal', name: 'Legal Services', icon: '⚖️', description: 'AI-powered research and document analysis' },'''
-        { id: 'marketing', name: 'Marketing & Advertising', icon: '📢', description: 'Autonomous campaigns and AI content generation' }
+;
+const ComprehensiveServicesLanding2025 = () => {
+    const [selectedIndustry, setSelectedIndustry] = useState('all');
+    const industries = [
+        { id: 'all', name: 'All Industries', icon: '🏢', description: 'Comprehensive solutions across all sectors' },
+        { id: 'finance', name: 'Financial Services', icon: '💰', description: 'AI-powered trading, risk management, and compliance' },
+        { id: 'healthcare', name: 'Healthcare', icon: '🏥', description: 'Advanced analytics, patient care, and research' },
+        { id: 'manufacturing', name: 'Manufacturing', icon: '🏭', description: 'Smart factories, IoT, and supply chain optimization' },
+        { id: 'energy', name: 'Energy & Utilities', icon: '⚡', description: 'Renewable energy management and grid optimization' },
+        { id: 'logistics', name: 'Logistics & Transportation', icon: '🚚', description: 'Autonomous logistics and route optimization' },
+        { id: 'legal', name: 'Legal Services', icon: '⚖️', description: 'AI-powered research and document analysis' },        { id: 'marketing', name: 'Marketing & Advertising', icon: '📢', description: 'Autonomous campaigns and AI content generation' }
     ];
     const getServicesByIndustry = (industry) => {}
 '
@@ -429,5 +425,15 @@ const ComprehensiveServicesLanding2025 = () => {}
         </div>
       </section>
     </div>)};
-export default ComprehensiveServicesLanding2025;'"`
-'"`'"`
+export default ComprehensiveServicesLanding2025;
+
+
+export { ComprehensiveServicesLanding2025 };
+
+export { ComprehensiveServicesLanding2025 };
+
+export { ComprehensiveServicesLanding2025 };
+
+export { ComprehensiveServicesLanding2025 };
+
+export { ComprehensiveServicesLanding2025 };

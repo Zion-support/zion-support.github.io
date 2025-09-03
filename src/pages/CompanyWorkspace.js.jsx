@@ -61,7 +61,15 @@ export default function CompWorkspace() {}
         <CompDashboard company={comp} />
       </main>
       <Footer />
-    </ProtectedRoute>
-  );
-}'"`
-'"`'"`
+    </ProtectedRoute>)}
+
+
+export { CompWorkspace };
+
+export { CompWorkspace };
+
+export { CompWorkspace };
+
+export { CompWorkspace };
+
+export { CompWorkspace };

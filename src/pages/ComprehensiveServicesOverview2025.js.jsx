@@ -1,45 +1,71 @@
-import React, { useState } from 'react';'''
-import { Link } from 'react-router-dom';'''
-import { allEnhancedServices } from '../data/enhanced-2025-comprehensive-services';
-const ComprehensiveServicesOverview2025 = () => {}
-  const [selectedService, setSelectedService] = useState(null);'
-  const [selectedCategory, setSelectedCategory] = useState('all');'
-  const categories = [''
-    'all',AI & Business Intelligence',Cybersecurity & Quantum Computing',DevOps & Infrastructure',Blockchain & Supply Chain',Healthcare & AI',Quantum Computing & AI',FinTech & AI',IoT & Edge Computing',Legal Tech & AI',Marketing & AI',Energy & Sustainability',Logistics & Transportation'
-  ];
-  const filteredServices = allEnhancedServices.filter()
-    service =>'
-      selectedCategory === 'all' || service.category === selectedCategory;
-  );
-  const getCategoryIcon = category => {}
-    const icons = {}
-'
-''
-'''
-      'AI & Business Intelligence': '🧠',Cybersecurity & Quantum Computing': '🔒',DevOps & Infrastructure': '⚙️',Blockchain & Supply Chain': '⛓️',Healthcare & AI': '🏥',Quantum Computing & AI': '🔮',FinTech & AI': '💰',IoT & Edge Computing': '🌐',Legal Tech & AI': '⚖️',Marketing & AI': '📢',Energy & Sustainability': '⚡',Logistics & Transportation': '🚚'};'''
-    return icons[category] || '🚀';
-  };
-  const getCategoryColor = category => {}
-    const colors = {}
-'
-''
-'''
-      'AI & Business Intelligence': 'from-blue-500 to-cyan-500',Cybersecurity & Quantum Computing': 'from-red-500 to-pink-500',DevOps & Infrastructure': 'from-green-500 to-emerald-500',Blockchain & Supply Chain': 'from-purple-500 to-indigo-500',Healthcare & AI': 'from-teal-500 to-cyan-500',Quantum Computing & AI': 'from-violet-500 to-purple-500',FinTech & AI': 'from-yellow-500 to-orange-500',IoT & Edge Computing': 'from-indigo-500 to-blue-500',Legal Tech & AI': 'from-gray-500 to-slate-500',Marketing & AI': 'from-pink-500 to-rose-500',Energy & Sustainability': 'from-green-500 to-teal-500',Logistics & Transportation': 'from-orange-500 to-red-500'};'''
-    return colors[category] || 'from-gray-500 to-slate-500';
-  };
-  return()
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">"""
-      {/* Hero Section */}""""
-      <section className="py-20 px-4 sm:px-6 lg:px-8">""""
-        <div className="max-w-7xl mx-auto text-center">""""
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">"""
-            Comprehensive Services""""
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">'
-              {' '}
-              Overview 2025;
-            </span>"""
-          </h1>""""
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+;
+const ComprehensiveServicesOverview2025 = () => {
+    const [selectedService, setSelectedService] = useState(null);
+    const [selectedCategory, setSelectedCategory] = useState('all');
+    const categories = [
+        'all',
+        'AI & Business Intelligence',
+        'Cybersecurity & Quantum Computing',
+        'DevOps & Infrastructure',
+        'Blockchain & Supply Chain',
+        'Healthcare & AI',
+        'Quantum Computing & AI',
+        'FinTech & AI',
+        'IoT & Edge Computing',
+        'Legal Tech & AI',
+        'Marketing & AI',
+        'Energy & Sustainability',
+        'Logistics & Transportation'
+    ];
+    const filteredServices = allEnhancedServices.filter(service => selectedCategory === 'all' || service.category === selectedCategory);
+    const getCategoryIcon = (category) => {
+        const icons = {
+  'AI & Business Intelligence': '🧠',
+            'Cybersecurity & Quantum Computing': '🔒',
+            'DevOps & Infrastructure': '⚙️',
+            'Blockchain & Supply Chain': '⛓️',
+            'Healthcare & AI': '🏥',
+            'Quantum Computing & AI': '🔮',
+            'FinTech & AI': '💰',
+            'IoT & Edge Computing': '🌐',
+            'Legal Tech & AI': '⚖️',
+            'Marketing & AI': '📢',
+            'Energy & Sustainability': '⚡',
+  'Logistics & Transportation': '🚚'
+        
+
+};
+        return icons[category] || '🚀'};
+    const getCategoryColor = (category) => {
+        const colors = {
+  'AI & Business Intelligence': 'from-blue-500 to-cyan-500',
+            'Cybersecurity & Quantum Computing': 'from-red-500 to-pink-500',
+            'DevOps & Infrastructure': 'from-green-500 to-emerald-500',
+            'Blockchain & Supply Chain': 'from-purple-500 to-indigo-500',
+            'Healthcare & AI': 'from-teal-500 to-cyan-500',
+            'Quantum Computing & AI': 'from-violet-500 to-purple-500',
+            'FinTech & AI': 'from-yellow-500 to-orange-500',
+            'IoT & Edge Computing': 'from-indigo-500 to-blue-500',
+            'Legal Tech & AI': 'from-gray-500 to-slate-500',
+            'Marketing & AI': 'from-pink-500 to-rose-500',
+            'Energy & Sustainability': 'from-green-500 to-teal-500',
+  'Logistics & Transportation': 'from-orange-500 to-red-500'
+        
+
+};
+        return colors[category] || 'from-gray-500 to-slate-500'};
+    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
+      {/* Hero Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            Comprehensive Services
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+              {" "}Overview 2025
+            </span>
+          </h1>          <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
             Explore our complete portfolio of innovative micro SAAS services, IT;
             solutions, and AI platforms. Each service is designed with;
             cutting-edge technology and proven methodologies to drive business;
@@ -549,8 +575,16 @@ const ComprehensiveServicesOverview2025 = () => {}
           </div>
         </div>
       </section>
-    </div>
-  );
-};
-export default ComprehensiveServicesOverview2025;'"`
-'"`'"`
+    </div>)};
+export default ComprehensiveServicesOverview2025;
+
+
+export { ComprehensiveServicesOverview2025 };
+
+export { ComprehensiveServicesOverview2025 };
+
+export { ComprehensiveServicesOverview2025 };
+
+export { ComprehensiveServicesOverview2025 };
+
+export { ComprehensiveServicesOverview2025 };

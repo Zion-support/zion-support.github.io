@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';'''
 import { motion } from 'framer-motion';'''
 import Link from 'next/link';'''
@@ -474,8 +475,20 @@ export default function NextGenServicesShowcase2025() {}
               </div>
             </div>
           </motion.div>
-        </div>'"`
-      </section>'"`'"`
-    </div>)}'"`'"`'"`
-'"`'"`'"`
-'"`'"`
+        </div>
+      </section>
+    </div>)}
+
+
+export { NextGenServicesShowcase2025 };
+
+export { NextGenServicesShowcase2025 };
+
+export { NextGenServicesShowcase2025 };
+
+export { NextGenServicesShowcase2025 };
+
+export { NextGenServicesShowcase2025 };
+=======
+import React from 'react'; export default function NextGenServicesShowcase2025 () { const featuredServices = [{ id: "ai - consciousness - simulator", title: "AI Consciousness Simulation Platform", description: "Revolutionary AI platform that simulates human - like consciousness for advanced decision - making and creative problem - solving.", price: "$25,000 / month", category: "Advanced AI", features["Consciousness - level reasoning", "Emotional intelligence processing", "Creative problem solving"],; benefits["98%+ decision accuracy", "Human - level creative solutions", "24 / 7 intelligent assistance"],; icon: Brain, gradient: "from - purple - 600 to - pink - 600", popular: true, demoUrl: "https:
+>>>>>>> main

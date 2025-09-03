@@ -268,8 +268,16 @@ const AIAutonomousScientificResearcher = () => {}
           </div>
         </div>
       </div>
-    </>
-  );
-};
-export default AIAutonomousScientificResearcher;'"""
-'"'"""
+    </>)};
+export default AIAutonomousScientificResearcher;
+
+
+export { AIAutonomousScientificResearcher };
+
+export { AIAutonomousScientificResearcher };
+
+export { AIAutonomousScientificResearcher };
+
+export { AIAutonomousScientificResearcher };
+
+export { AIAutonomousScientificResearcher };

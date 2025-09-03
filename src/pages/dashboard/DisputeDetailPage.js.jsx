@@ -13,6 +13,14 @@ function DisputeDetailPage() {}
     </ProtectedRoute>)};
 export { DisputeDetailPage };
 export default DisputeDetailPage;
-;
-export default DisputeDetailPage;'"""
-export default DisputeDetailPage;'"'"""
+export default DisputeDetailPage;
+
+export { DisputeDetailPage };
+
+export { DisputeDetailPage };
+
+export { DisputeDetailPage };
+
+export { DisputeDetailPage };
+
+export { DisputeDetailPage };

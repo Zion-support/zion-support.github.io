@@ -218,7 +218,16 @@ const AIAutonomousCodeReview = () => {}
           </div>
         </div>
       </div>
-    </>) ;
-};
-export default AIAutonomousCodeReview;'"""
-'"'"""
+    </>)};
+export default AIAutonomousCodeReview;
+
+
+export { AIAutonomousCodeReview };
+
+export { AIAutonomousCodeReview };
+
+export { AIAutonomousCodeReview };
+
+export { AIAutonomousCodeReview };
+
+export { AIAutonomousCodeReview };

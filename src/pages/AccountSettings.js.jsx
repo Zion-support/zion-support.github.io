@@ -163,6 +163,16 @@ export default function AccountSettings() {}
           </Card>
         </div>
       </main>
+      
+    </>)}
 
-    </>)}'"`
-'"`'"`
+
+export { AccountSettings };
+
+export { AccountSettings };
+
+export { AccountSettings };
+
+export { AccountSettings };
+
+export { AccountSettings };

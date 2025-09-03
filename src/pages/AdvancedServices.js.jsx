@@ -311,8 +311,16 @@ const AdvancedServices = () => {}
           </motion.div>
         </div>
       </section>
-    </div>
-  );
-};
-export default AdvancedServices;'"`
-'"`'"`
+    </div>)};
+export default AdvancedServices;
+
+
+export { AdvancedServices };
+
+export { AdvancedServices };
+
+export { AdvancedServices };
+
+export { AdvancedServices };
+
+export { AdvancedServices };

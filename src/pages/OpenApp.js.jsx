@@ -29,8 +29,16 @@ const OpenApp = () => {}
           </div>
         </div>
       </div>
-    </>
-  );
-};
-export default OpenApp;'"""
-'"'"""
+    </>)};
+export default OpenApp;
+
+
+export { OpenApp };
+
+export { OpenApp };
+
+export { OpenApp };
+
+export { OpenApp };
+
+export { OpenApp };

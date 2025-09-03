@@ -1,11 +1,25 @@
-describe ('ITServicesPage', () => {}
-'
-  it ('renders without crashing', () => {}
-    render (<ITServicesPage  />) ;'
-    expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ;
-'
-  it ('displays expected content', () => {}
-    render (<ITServicesPage  />) ;
-    // Add specific test assertions based on component content;
-  }) }) ;
-'
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+describe('ITServicesPage', () => {}; '; it('renders without crashing', () => {}; render(<ITServicesPage />) ;'; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; '; it('displays expected content', () => {}; render(<ITServicesPage />) ;
+=======
+describe("ITServicesPage", () => {}; "; it("renders without crashing", () => {}; render(<ITServicesPage / >) , expect(screen.getByRole ("main") || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; "; it("displays expected content", () => {}; render(<ITServicesPage  />)
+}
+    render()
+}
+    expect(screen.getByRole("main) || screen.getByText(/.*/)).toBeInTheDocument()
+}
+  })
+}
+""
+  it("displays expected content", () => {
+    render(<ITServicesPage /" >)
+}
+    // comment
+  })
+}
+  });"
+"
+});""
+>>>>>>> main
+>>>>>>> main

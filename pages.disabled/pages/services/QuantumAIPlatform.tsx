@@ -1,6 +1,7 @@
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
-<<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
+<<<<<<< HEAD
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
+<:pages.disabled/pages/services/QuantumAIPlatform.tsx
 import React from 'react.ts';
 import { Link  } from 'react-router-dom.ts';
 import { Atom,
@@ -9,18 +10,14 @@ import { Atom,
   Target,
   BarChart3,
   Cpu,
-========
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumAIPlatform.tsx
+=
 import { Atom, 
   Brain, 
   Zap, 
   Target, 
   BarChart3, 
   Cpu, 
->>>>>>>> main:backup-pages/src-pages/services/QuantumAIPlatform.tsx
-  CheckCircle,
+>  CheckCircle,
   Star,
   Clock,
   DollarSign,
@@ -41,30 +38,13 @@ import { Atom,
         "Chemical reaction simulation",;""
         "Material property prediction",;""
         "Drug discovery acceleration";
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/QuantumAIPlatform.tsx
-      ]};
-  ];
-  const pricingPlans = [
-    {
-
-=======
-      ]};
-  ];
-
-  const pricingPlans: any = []
-    {}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumAIPlatform.tsx
-""
+:pages.disabled/pages/services/QuantumAIPlatform.tsx""
       name: "Quantum Starter",""
       price: "$25,000",""
       period: "/month",""
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
       description: "Perfect for research institutions and startups","
-=======
       description: "Perfect for research institutions and startups",
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumAIPlatform.tsx
       features: [""
         "Basic quantum computing access",""
         "Up to 100 qubits",""
@@ -76,32 +56,26 @@ import { Atom,
       cta: "Get Started",
       popular: false;
     },
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
     {
 "
-=======
     {}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumAIPlatform.tsx
       icon: Brain,""
       title: "Hybrid Quantum-Classical Computing",""
       description: "Seamless integration of quantum and classical computing resources for optimal performance and practical applications.",""
       benefits: ["Best of both worlds", "Practical quantum advantage", "Scalable solutions"]
     },
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
     {
 "
-=======
     {}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumAIPlatform.tsx
 ""
       name: "Quantum Enterprise",""
       price: "$200,000",""
       period: "/month",""
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
       description: "For large-scale quantum operations","
-=======
       description: "For large-scale quantum operations",
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumAIPlatform.tsx
       features: [""
         "Full quantum platform access",""
         "Unlimited qubits",""
@@ -109,16 +83,14 @@ import { Atom,
         "24/7 dedicated support",""
         "White-label solutions",""
         "On-premise deployment",;""
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
         "SLA guarantees",;"        "Quantum strategy consulting";"
-=======
         "SLA guarantees",;"        "Quantum strategy consulting";
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumAIPlatform.tsx
       ],;""
       cta: "Contact Sales",;
       popular: false};
   ];
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
   const useCases = [
     {
 "
@@ -148,7 +120,6 @@ import { Atom,
 "
 ""
       industry: "Energy & Utilities","
-=======
 
   const useCases: any = []
     {}
@@ -175,13 +146,12 @@ import { Atom,
     {}
 ""
       industry: "Energy & Utilities",
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumAIPlatform.tsx
       applications: [;""
         "Grid optimization",;""
         "Energy trading",;""
         "Resource allocation",;"        "Climate modeling";
       ]};
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
   ];
 
     {;""
@@ -192,63 +162,40 @@ import { Atom,
 
   return (""
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
-<<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
+<:pages.disabled/pages/services/QuantumAIPlatform.tsx
       <SEO
-========
+=
       <SEO "
-<<<<<<< HEAD
->>>>>>>> main:backup-pages/src-pages/services/QuantumAIPlatform.tsx
-        title="Quantum AI Platform - Zion Tech Group"
+>        title="Quantum AI Platform - Zion Tech Group"
         description="Revolutionize your business with quantum computing and AI. Access unprecedented computational power for optimization, cryptography, and machine learning."
-       />
-=======
-=======
-  ];"
-    {;""
-      title: "Quantum Entanglement",;""
-      description: "Leverage quantum correlations for secure communication",;"
-      icon: Network,;""
-      metric: "100%"};  ];"
-  return (""
-    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
-      <SEO ""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/QuantumAIPlatform.tsx
-        title="Quantum AI Platform - Zion Tech Group""        description="Revolutionize your business with quantum computing and AI. Access unprecedented computational power for optimization, cryptography, and machine learning."
+       />        title="Quantum AI Platform - Zion Tech Group""        description="Revolutionize your business with quantum computing and AI. Access unprecedented computational power for optimization, cryptography, and machine learning."
        />"
-=======
       <SEO ""
         title="Quantum AI Platform - Zion Tech Group""
         description="Revolutionize your business with quantum computing and AI. Access unprecedented computational power for optimization, cryptography, and machine learning.""
        />
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumAIPlatform.tsx
       {/* Hero Section */}""
       <section className="relative overflow-hidden py-20">""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
             initial = {}
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/QuantumAIPlatform.tsx
-=======
   y: 20;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumAIPlatform.tsx
 }}
             animate = {}
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
   y: 0
 
-=======
   y: 0;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumAIPlatform.tsx
 }}
             transition={{ duration: 0.8 }}""
             className="text-center""
@@ -265,30 +212,25 @@ import { Atom,
               accelerate research, and gain quantum advantage in optimization and machine learning.
             </p>""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
-<<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
+<:pages.disabled/pages/services/QuantumAIPlatform.tsx
               <a
-========
+=
               <a "
->>>>>>>> main:backup-pages/src-pages/services/QuantumAIPlatform.tsx
-                href="tel:+13024640950"
+>                href="tel:+13024640950"
                 className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all hover:scale-105"
-=======
               <a ""
                 href="tel:+13024640950""
                 className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all hover:scale-105""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumAIPlatform.tsx
               >
                 📞 Call +1 (302) 464-0950;
               </a>
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
-<<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
+<:pages.disabled/pages/services/QuantumAIPlatform.tsx
               <a
-========
+=
               <a "
->>>>>>>> main:backup-pages/src-pages/services/QuantumAIPlatform.tsx
-                href="/request-quote"
-=======
+>                href="/request-quote"
   y: 0 
 }}"
             transition={{ duration: 0.8 }}""
@@ -314,25 +256,21 @@ import { Atom,
               </a>"
               <a ""
                 href="/request-quote""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/QuantumAIPlatform.tsx
                 className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all"
-=======
               <a ""
                 href="/request-quote""
                 className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumAIPlatform.tsx
               >
                 Get Quantum Access;
               </a>
             </div>
           </motion.div>
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
         </div>"
         {/* Floating Elements */}""
         <div className="absolute top-20 left-10 w-20 h-20 bg-blue-600/20 rounded-full blur-xl"></div>""
         <div className="absolute bottom-20 right-10 w-32 h-32 bg-cyan-600/20 rounded-full blur-xl"></div>
       </section>"
-=======
         </div>
 
         {/* Floating Elements */}""
@@ -340,44 +278,36 @@ import { Atom,
         <div className="absolute bottom-20 right-10 w-32 h-32 bg-cyan-600/20 rounded-full blur-xl"></div>
       </section>
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumAIPlatform.tsx
       {/* Quantum Advantages Section */}""
       <section className="py-20">;""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
             initial = {}
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/QuantumAIPlatform.tsx
-=======
   y: 20;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumAIPlatform.tsx
 }}
             whileInView = {}
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
   y: 0
 
 }}
             transition={{ duration: 0.8 }}"
             className="text-center mb-16"
 "
-=======
   y: 0 
 }}"
             transition={{ duration: 0.8 }}""
             className="text-center mb-16""
 ""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/QuantumAIPlatform.tsx
             <h2 className="text-4xl font-bold text-white mb-4">
               Quantum Computing Advantages"
-=======
   y: 0;
 }}
             transition={{ duration: 0.8 }}""
@@ -385,79 +315,62 @@ import { Atom,
 ""
             <h2 className="text-4xl font-bold text-white mb-4">
               Quantum Computing Advantages;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumAIPlatform.tsx
             </h2>""
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience computational power that transcends classical computing limitations;
               and opens new frontiers in problem-solving.
             </p>
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
           </motion.div>"
 ""
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {quantumAdvantages.map(advantage: unknown, index: unknown()
               <motion.div
-=======
           </motion.div>
 ""
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {quantumAdvantages.map(advantage: unknown, index: unknown (
               <motion.div;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumAIPlatform.tsx
                 key={index}
                 initial = {}
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/QuantumAIPlatform.tsx
-=======
   y: 20;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumAIPlatform.tsx
 }}
                 whileInView = {}
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/QuantumAIPlatform.tsx
-=======
   y: 0;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumAIPlatform.tsx
 }}
                 transition = {}
   { duration: 0.8,
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
   delay: index * 0.1
 
 }}"
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition-all duration-300 text-center"
 "
                 <div className="p-3 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg mx-auto mb-4 w-fit">"
-=======
   delay: index * 0.1 "
-=======
   delay: index * 0.1;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumAIPlatform.tsx
 }}""
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition-all duration-300 text-center""
 ""
                 <div className="p-3 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg mx-auto mb-4 w-fit">""
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
                   <advantage.icon className="w-8 h-8 text-white" />
                 </div>"
-=======
                   <advantage.icon className="w-8 h-8 text-white" />
                 </div>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumAIPlatform.tsx
 ""
                 <div className="text-4xl font-bold text-blue-400 mb-2">{advantage.metric}</div>""
                 <h3 className="text-xl font-semibold text-white mb-2">{advantage.title}</h3>""
@@ -466,49 +379,40 @@ import { Atom,
             ))}
           </div>
         </div>
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
       </section>"
-=======
       </section>
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumAIPlatform.tsx
       {/* Features Section */}""
       <section className="py-20 bg-slate-800/30">;""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
             initial = {}
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/QuantumAIPlatform.tsx
-=======
   y: 20;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumAIPlatform.tsx
 }}
             whileInView = {}
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
   y: 0
 
 }}
             transition={{ duration: 0.8 }}"
             className="text-center mb-16"
 "
-=======
   y: 0 
 }}"
             transition={{ duration: 0.8 }}""
             className="text-center mb-16""
 ""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/QuantumAIPlatform.tsx
             <h2 className="text-4xl font-bold text-white mb-4">
               Revolutionary Quantum Capabilities"
-=======
   y: 0;
 }}
             transition={{ duration: 0.8 }}""
@@ -516,17 +420,14 @@ import { Atom,
 ""
             <h2 className="text-4xl font-bold text-white mb-4">
               Revolutionary Quantum Capabilities;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumAIPlatform.tsx
             </h2>""
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our Quantum AI Platform combines cutting-edge quantum computing with advanced;
               artificial intelligence to deliver unprecedented computational power.
             </p>
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
           </motion.div>"
-=======
           </motion.div>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumAIPlatform.tsx
 ""
           <div className="grid md:grid-cols-2 gap-8">
             {features.map(feature: unknown, index: unknown;
@@ -534,34 +435,26 @@ import { Atom,
                 key={index}
                 initial = {}
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/QuantumAIPlatform.tsx
-=======
   y: 20;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumAIPlatform.tsx
 }}
                 whileInView = {}
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/QuantumAIPlatform.tsx
-=======
   y: 0;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumAIPlatform.tsx
 }}
                 transition = {}
   { duration: 0.8,
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
   delay: index * 0.1
 
 }}"
@@ -569,14 +462,12 @@ import { Atom,
 "
                 <div className="flex items-center mb-4">"
                   <div className="p-3 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg mr-4">"
-=======
   delay: index * 0.1;
 }}""
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-blue-500 transition-all duration-300""
 ""
                 <div className="flex items-center mb-4">""
                   <div className="p-3 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg mr-4">""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumAIPlatform.tsx
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>""
                   <h3 className="text-2xl font-semibold text-white">{feature.title}</h3>
@@ -584,10 +475,9 @@ import { Atom,
                 <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>""
                 <p className="text-gray-300 mb-6">{feature.description}</p>""
                 <ul className="space-y-3">
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
                   {feature.benefits.map((benefit, idx) => ("
                     <li key={idx} className="text-gray-300 flex items-center">"
-=======
   delay: index * 0.1 "
 }}""
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-blue-500 transition-all duration-300""
@@ -603,11 +493,8 @@ import { Atom,
                 <ul className="space-y-3">"
                   {feature.benefits.map((benefit, idx) => (""
                     <li key={idx} className="text-gray-300 flex items-center">""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/QuantumAIPlatform.tsx
-=======
                   {feature.benefits.map((benefit, idx) => (""
                     <li key={idx} className="text-gray-300 flex items-center">""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumAIPlatform.tsx
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />                      {benefit}
                     </li>
                   ))}
@@ -616,49 +503,40 @@ import { Atom,
             ))}
           </div>
         </div>
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
       </section>"
-=======
       </section>
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumAIPlatform.tsx
       {/* Pricing Section */}""
       <section className="py-20">;""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
             initial = {}
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/QuantumAIPlatform.tsx
-=======
   y: 20;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumAIPlatform.tsx
 }}
             whileInView = {}
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
   y: 0
 
 }}
             transition={{ duration: 0.8 }}"
             className="text-center mb-16"
 "
-=======
   y: 0 
 }}"
             transition={{ duration: 0.8 }}""
             className="text-center mb-16""
 ""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/QuantumAIPlatform.tsx
             <h2 className="text-4xl font-bold text-white mb-4">
               Quantum Computing Pricing"
-=======
   y: 0;
 }}
             transition={{ duration: 0.8 }}""
@@ -666,61 +544,48 @@ import { Atom,
 ""
             <h2 className="text-4xl font-bold text-white mb-4">
               Quantum Computing Pricing;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumAIPlatform.tsx
             </h2>""
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Access the future of computing with our flexible quantum platform pricing.
               Scale from research to enterprise deployment.
             </p>
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
           </motion.div>"
 ""
           <div className="grid md:grid-cols-3 gap-8">
             {pricingPlans.map(plan: unknown, index: unknown()
               <motion.div
-=======
           </motion.div>
 ""
           <div className="grid md:grid-cols-3 gap-8">
             {pricingPlans.map(plan: unknown, index: unknown (
               <motion.div;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumAIPlatform.tsx
                 key={index}
                 initial = {}
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/QuantumAIPlatform.tsx
-=======
   y: 20;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumAIPlatform.tsx
 }}
                 whileInView = {}
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/QuantumAIPlatform.tsx
-=======
   y: 0;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumAIPlatform.tsx
 }}
                 transition = {}
   { duration: 0.8,
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
   delay: index * 0.1
 
-=======
   delay: index * 0.1 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/QuantumAIPlatform.tsx
 }}
                 className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border ${
 
@@ -728,7 +593,6 @@ import { Atom,
                     ? 'border-blue-500 ring-2 ring-blue-500/20'''`
                     : 'border-slate-700'``
                 }`}"
-=======
   delay: index * 0.1;
 }}
                 className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border ${}
@@ -737,17 +601,14 @@ import { Atom,
                     : 'border-slate-700'`
                 }`}
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumAIPlatform.tsx
                 {plan.popular && (;""
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
                     <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-medium">
                       Most Popular;
                     </span>
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
                   </div>"
-=======
                   </div>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumAIPlatform.tsx
                 )}""
                 <div className="text-center mb-8">""
                   <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>""
@@ -755,48 +616,41 @@ import { Atom,
                   <div className="flex items-baseline justify-center">""
                     <span className="text-4xl font-bold text-white">${tier.price}</span>""
                     <span className="text-gray-400 ml-2">/{tier.period}</span>
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
                   </div>"
                 </div>""
                 <ul className="space-y-4 mb-8">"
-=======
                   </div>
                 </div>""
                 <ul className="space-y-4 mb-8">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumAIPlatform.tsx
                   {tier.features.map((feature, idx) => (""
                     <li key={idx} className="text-gray-300 flex items-center">""
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />                      {feature}
                     </li>
                   ))}
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
                 </ul>
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
-<<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
+<:pages.disabled/pages/services/QuantumAIPlatform.tsx
                 <a
                   href="tel:+13024640950"
-========
+=
                 <a "
                   href="tel:+13024640950" `
->>>>>>>> main:backup-pages/src-pages/services/QuantumAIPlatform.tsx
-=======
-                </ul>"
+>                </ul>"
                 <a ""`
                   href="tel:+13024640950" ``
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/QuantumAIPlatform.tsx
                   className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all ${
 '
                     tier.popular''
                       ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:scale-105'''`
                       : 'bg-transparent border-2 border-white text-white hover:bg-white hover:text-slate-900'``
-=======
                 <a ""
                   href="tel:+13024640950" `
                   className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all ${}
                     tier.popular'
                       ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:scale-105''
                       : 'bg-transparent border-2 border-white text-white hover:bg-white hover:text-slate-900'`
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumAIPlatform.tsx
                   }`}
                 >
                   Get Started;
@@ -805,49 +659,40 @@ import { Atom,
             ))}
           </div>
         </div>
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
       </section>"
-=======
       </section>
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumAIPlatform.tsx
       {/* Use Cases Section */}""
       <section className="py-20 bg-slate-800/30">;""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
             initial = {}
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/QuantumAIPlatform.tsx
-=======
   y: 20;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumAIPlatform.tsx
 }}
             whileInView = {}
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
   y: 0
 
 }}
             transition={{ duration: 0.8 }}"
             className="text-center mb-16"
 "
-=======
   y: 0 
 }}"
             transition={{ duration: 0.8 }}""
             className="text-center mb-16""
 ""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/QuantumAIPlatform.tsx
             <h2 className="text-4xl font-bold text-white mb-4">
               Industry Applications"
-=======
   y: 0;
 }}
             transition={{ duration: 0.8 }}""
@@ -855,17 +700,14 @@ import { Atom,
 ""
             <h2 className="text-4xl font-bold text-white mb-4">
               Industry Applications;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumAIPlatform.tsx
             </h2>""
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our Quantum AI Platform is revolutionizing industries by solving previously;
               intractable problems with unprecedented speed and accuracy.
             </p>
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
           </motion.div>"
-=======
           </motion.div>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumAIPlatform.tsx
 ""
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map(useCase: unknown, index: unknown;
@@ -873,34 +715,26 @@ import { Atom,
                 key={index}
                 initial = {}
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/QuantumAIPlatform.tsx
-=======
   y: 20;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumAIPlatform.tsx
 }}
                 whileInView = {}
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/QuantumAIPlatform.tsx
-=======
   y: 0;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumAIPlatform.tsx
 }}
                 transition = {}
   { duration: 0.8,
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
   delay: index * 0.1
 
 }}"
@@ -910,7 +744,6 @@ import { Atom,
                 <ul className="space-y-2">
                   {useCase.applications.map((application, appIndex) => ("
                     <li key={appIndex} className="text-gray-300 text-sm flex items-center">"
-=======
   delay: index * 0.1 "
 }}""
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition-all duration-300""
@@ -919,13 +752,11 @@ import { Atom,
                 <ul className="space-y-2">"
                   {useCase.applications.map((application, appIndex) => (""
                     <li key={appIndex} className="text-gray-300 text-sm flex items-center">""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/QuantumAIPlatform.tsx
                       <ArrowRight className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0"  />                      {application}
                     </li>
                   ))}"
                 </div>""
                 <p className="text-gray-300 mb-4">"{testimonial.content}"</p>"
-=======
   delay: index * 0.1;
 }}""
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition-all duration-300""
@@ -939,7 +770,6 @@ import { Atom,
                   ))}
                 </div>""
                 <p className="text-gray-300 mb-4">"{testimonial.content}"</p>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumAIPlatform.tsx
                 <div>""
                   <p className="text-white font-semibold">{testimonial.name}</p>""
                   <p className="text-gray-400 text-sm">{testimonial.role}, {testimonial.comp}</p>
@@ -948,56 +778,46 @@ import { Atom,
             ))}
           </div>
         </div>
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
       </section>"
-=======
       </section>
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumAIPlatform.tsx
       {/* CTA Section */}""
       <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">;""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div;
             initial = {}
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/QuantumAIPlatform.tsx
-=======
   y: 20;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumAIPlatform.tsx
 }}
             whileInView = {}
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/QuantumAIPlatform.tsx
 }}
             transition={{ duration: 0.8 }}"
 ""
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready for the Quantum Revolution?"
-=======
   y: 0;
 }}
             transition={{ duration: 0.8 }}
 ""
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready for the Quantum Revolution?
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumAIPlatform.tsx
             </h2>""
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Join the quantum computing revolution and unlock computational capabilities;
               that will transform your industry and accelerate innovation.
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
             </p>"
 ""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -1011,7 +831,6 @@ import { Atom,
                 whileHover={{ scale: 1.05 }}"
                 whileTap={{ scale: 0.95 }}""
                 className="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300"
-=======
             </p>
 ""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -1025,7 +844,6 @@ import { Atom,
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}""
                 className="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumAIPlatform.tsx
               >
                 Contact Quantum Experts;
               </motion.button>;
@@ -1036,10 +854,10 @@ import { Atom,
     </div>;
   )};
 ;
-<<<<<<< HEAD:pages.disabled/pages/services/QuantumAIPlatform.tsx
+:pages.disabled/pages/services/QuantumAIPlatform.tsx
 export { QuantumAIPlatform };export default QuantumAIPlatform;'"`
 '"`'"`
-=======
 export { QuantumAIPlatform };export default QuantumAIPlatform;
 '"`
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumAIPlatform.tsx
+=======
+>>>>>>> main

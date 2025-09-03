@@ -1,11 +1,25 @@
-describe ('BlogPost', () => {}
-'
-  it ('renders without crashing', () => {}
-    render (<BlogPost  />) ;'
-    expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ;
-'
-  it ('displays expected content', () => {}
-    render (<BlogPost  />) ;
-    // Add specific test assertions based on component content;
-  }) }) ;
-'
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+describe('BlogPost', () => {}; '; it('renders without crashing', () => {}; render(<BlogPost />) ;'; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; '; it('displays expected content', () => {}; render(<BlogPost />) ;
+=======
+describe("BlogPost", () => {}; "; it("renders without crashing", () => {}; render(<BlogPost / >) , expect(screen.getByRole ("main") || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; "; it("displays expected content", () => {}; render(<BlogPost  />)
+}
+    render()
+}
+    expect(screen.getByRole("main) || screen.getByText(/.*/)).toBeInTheDocument()
+}
+  })
+}
+""
+  it("displays expected content", () => {
+    render(<BlogPost /" >)
+}
+    // comment
+  })
+}
+  });"
+"
+});""
+>>>>>>> main
+>>>>>>> main

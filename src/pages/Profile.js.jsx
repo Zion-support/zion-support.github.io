@@ -65,5 +65,13 @@ import { toast } from "sonner";
 
     </>) }
 ;
-export default Profile;'"""
-'"'"""
+export default Profile;
+
+
+export { Profile };
+
+export { Profile };
+
+export { Profile };
+
+export { Profile };

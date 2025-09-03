@@ -635,8 +635,17 @@ export default function CloudDevOps() {}
             </div>
           </motion.div>
         </div>
-      </section>'"`
-    </div>'"`'"`
-  )}'"`'"`'"`
-'"`'"`'"`
-'"`'"`
+      </section>
+    </div>
+  )}
+
+
+export { CloudDevOps };
+
+export { CloudDevOps };
+
+export { CloudDevOps };
+
+export { CloudDevOps };
+
+export { CloudDevOps };

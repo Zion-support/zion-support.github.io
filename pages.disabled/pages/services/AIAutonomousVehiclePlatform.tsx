@@ -1,4 +1,5 @@
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx
+<<<<<<< HEAD
+:pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx
 export default function AIAutonomousVehiclePlatform() {
     'Advanced computer vision and sensor fusion',;'
     'Real-time decision making and path planning',;'
@@ -39,7 +40,6 @@ export default function AIAutonomousVehiclePlatform() {
     'Ride-sharing Services',;''
     'Public Transit',;''
     'Construction and Mining',;'    'Agriculture and Farming';
-=======
 export default function AIAutonomousVehiclePlatform(function AIAutonomousVehiclePlatform() {): any {}
     'Advanced computer vision and sensor fusion',;
     'Real-time decision making and path planning',;
@@ -77,29 +77,24 @@ export default function AIAutonomousVehiclePlatform(function AIAutonomousVehicle
     'Public Transit',;
     'Construction and Mining',;
     'Agriculture and Farming';
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousVehiclePlatform.tsx
   ];
   return()
     <>
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx
-<<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx
+:pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx
+:pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx
+<:pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx
       <SEO
-========
+=
       <SEO "
->>>>>>>> main:backup-pages/src-pages/services/AIAutonomousVehiclePlatform.tsx
-        title = "AI Autonomous Vehicle Platform | Zion Tech Group"
+>        title = "AI Autonomous Vehicle Platform | Zion Tech Group"
         description="Revolutionary AI-powered autonomous vehicle platform for safe, efficient, and intelligent transportation. Advanced computer vision, sensor fusion, and fleet management."
-=======
       <SEO ""
         title = "AI Autonomous Vehicle Platform | Zion Tech Group""
         description="Revolutionary AI-powered autonomous vehicle platform for safe, efficient, and intelligent transportation. Advanced computer vision, sensor fusion, and fleet management.""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIAutonomousVehiclePlatform.tsx
         keywords="AI autonomous vehicles, self-driving cars, autonomous fleet management, computer vision, sensor fusion, transportation automation"
        />"
 ""
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">"
-=======
       <SEO ""
         title = "AI Autonomous Vehicle Platform | Zion Tech Group""
         description="Revolutionary AI-powered autonomous vehicle platform for safe, efficient, and intelligent transportation. Advanced computer vision, sensor fusion, and fleet management.""
@@ -107,13 +102,12 @@ export default function AIAutonomousVehiclePlatform(function AIAutonomousVehicle
        />
 ""
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousVehiclePlatform.tsx
         {/* Hero Section */}""
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">""
           <div className="max-w-7xl mx-auto text-center">""
             <div className="flex justify-center mb-6">""
               <div className="p-3 bg-gradient-to-r from-blue-500 via-cyan-500 to-teal-500 rounded-full">""
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx
+:pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx
                 <Car className="w-8 h-8 text-white"  />              </div>"
             </div>""
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -124,7 +118,6 @@ export default function AIAutonomousVehiclePlatform(function AIAutonomousVehicle
               Advanced AI algorithms ensure safety, efficiency, and intelligent fleet management."
             </p>""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
-=======
                 <Car className="w-8 h-8 text-white"  />              </div>
             </div>""
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -135,12 +128,11 @@ export default function AIAutonomousVehiclePlatform(function AIAutonomousVehicle
               Advanced AI algorithms ensure safety, efficiency, and intelligent fleet management.
             </p>""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousVehiclePlatform.tsx
               <a""
                 href="https://ziontechgroup.com/contact""
                 className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-200""
                 Get Started""
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx
+:pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx
                 <ArrowRight className="ml-2 w-5 h-5"  />              </a>"
               <a""
                 href="#pricing""
@@ -150,7 +142,6 @@ export default function AIAutonomousVehiclePlatform(function AIAutonomousVehicle
             </div>
           </div>
         </section>"
-=======
                 <ArrowRight className="ml-2 w-5 h-5"  />              </a>
               <a""
                 href="#pricing""
@@ -161,13 +152,12 @@ export default function AIAutonomousVehiclePlatform(function AIAutonomousVehicle
           </div>
         </section>
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousVehiclePlatform.tsx
         {/* Key Features */}""
         <section className="py-20 px-4 sm:px-6 lg:px-8">;""
           <div className="max-w-7xl mx-auto">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx
+:pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx
                 Revolutionary Autonomous Vehicle Features"
               </h2>""
               <p className="text-xl text-gray-300">
@@ -179,7 +169,6 @@ export default function AIAutonomousVehiclePlatform(function AIAutonomousVehicle
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-blue-400/50 transition-all duration-300">""
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">""
                     <Brain className="w-6 h-6 text-white"  />"
-=======
                 Revolutionary Autonomous Vehicle Features;
               </h2>""
               <p className="text-xl text-gray-300">
@@ -191,24 +180,21 @@ export default function AIAutonomousVehiclePlatform(function AIAutonomousVehicle
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-blue-400/50 transition-all duration-300">""
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">""
                     <Brain className="w-6 h-6 text-white"  />
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousVehiclePlatform.tsx
                   </div>"                  <h3 className="text-xl font-semibold text-white mb-2">{feature}</h3>
                 </div>
               ))}
             </div>
           </div>
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx
+:pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx
         </section>"
-=======
         </section>
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousVehiclePlatform.tsx
         {/* Pricing Section */}""
         <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8">;""
           <div className="max-w-7xl mx-auto">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx
+:pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx
                 Autonomous Vehicle Platform Pricing"
               </h2>""
               <p className="text-xl text-gray-300">
@@ -225,7 +211,6 @@ export default function AIAutonomousVehiclePlatform(function AIAutonomousVehicle
                     <div className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
                       Most Popular
                     </div>"
-=======
                 Autonomous Vehicle Platform Pricing;
               </h2>""
               <p className="text-xl text-gray-300">
@@ -241,51 +226,44 @@ export default function AIAutonomousVehiclePlatform(function AIAutonomousVehicle
                     <div className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
                       Most Popular;
                     </div>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousVehiclePlatform.tsx
                   )}""
                   <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>""
                   <p className="text-gray-300 mb-4">{tier.description}</p>""
                   <div className="text-4xl font-bold text-white mb-6">{tier.price}</div>""
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx
+:pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx
                   <ul className="space-y-3 mb-8">"
-=======
                   <ul className="space-y-3 mb-8">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousVehiclePlatform.tsx
                     {tier.details.map((detail, detailIndex) => (""
                       <li key={detailIndex} className="flex items-center text-gray-300">""
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />                        {detail}
                       </li>
                     ))}
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx
+:pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx
                   </ul>"
                   <a""
                     href="https://ziontechgroup.com/contact""
                     className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-200"
                     Get Started
-=======
                   </ul>
                   <a""
                     href="https://ziontechgroup.com/contact""
                     className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-200""
                     Get Started;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousVehiclePlatform.tsx
                   </a>
                 </div>;
               ))}
             </div>
           </div>
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx
+:pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx
         </section>"
-=======
         </section>
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousVehiclePlatform.tsx
         {/* Use Cases */}""
         <section className="py-20 px-4 sm:px-6 lg:px-8">;""
           <div className="max-w-7xl mx-auto">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx
+:pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx
                 Transform Transportation with Autonomous Vehicles"
               </h2>""
               <p className="text-xl text-gray-300">
@@ -297,7 +275,6 @@ export default function AIAutonomousVehiclePlatform(function AIAutonomousVehicle
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-blue-400/50 transition-all duration-300">""
                   <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">""
                     <TrendingUp className="w-5 h-5 text-white"  />"
-=======
                 Transform Transportation with Autonomous Vehicles;
               </h2>""
               <p className="text-xl text-gray-300">
@@ -309,24 +286,21 @@ export default function AIAutonomousVehiclePlatform(function AIAutonomousVehicle
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-blue-400/50 transition-all duration-300">""
                   <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">""
                     <TrendingUp className="w-5 h-5 text-white"  />
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousVehiclePlatform.tsx
                   </div>"                  <h3 className="text-lg font-semibold text-white">{useCase}</h3>
                 </div>
               ))}
             </div>
           </div>
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx
+:pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx
         </section>"
-=======
         </section>
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousVehiclePlatform.tsx
         {/* Benefits */}""
         <section className="py-20 px-4 sm:px-6 lg:px-8">;""
           <div className="max-w-7xl mx-auto">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx
+:pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx
                 Why Choose Our Autonomous Platform?"
               </h2>""
               <p className="text-xl text-gray-300">
@@ -338,7 +312,6 @@ export default function AIAutonomousVehiclePlatform(function AIAutonomousVehicle
                 <div key={index} className="flex items-start space-x-4">""
                   <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">""
                     <Star className="w-4 h-4 text-white"  />"
-=======
                 Why Choose Our Autonomous Platform?
               </h2>""
               <p className="text-xl text-gray-300">
@@ -350,24 +323,21 @@ export default function AIAutonomousVehiclePlatform(function AIAutonomousVehicle
                 <div key={index} className="flex items-start space-x-4">""
                   <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">""
                     <Star className="w-4 h-4 text-white"  />
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousVehiclePlatform.tsx
                   </div>"                  <p className="text-lg text-gray-300">{benefit}</p>
                 </div>
               ))}
             </div>
           </div>
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx
+:pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx
         </section>"
-=======
         </section>
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousVehiclePlatform.tsx
         {/* Industries */}""
         <section className="py-20 px-4 sm:px-6 lg:px-8">;""
           <div className="max-w-7xl mx-auto">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx
+:pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx
                 Industries We Serve"
               </h2>""
               <p className="text-xl text-gray-300">
@@ -379,7 +349,6 @@ export default function AIAutonomousVehiclePlatform(function AIAutonomousVehicle
                 <div key={index} className="text-center">""
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4">""
                     <Globe className="w-8 h-8 text-white"  />"
-=======
                 Industries We Serve;
               </h2>""
               <p className="text-xl text-gray-300">
@@ -391,38 +360,33 @@ export default function AIAutonomousVehiclePlatform(function AIAutonomousVehicle
                 <div key={index} className="text-center">""
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4">""
                     <Globe className="w-8 h-8 text-white"  />
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousVehiclePlatform.tsx
                   </div>"                  <p className="text-sm text-gray-300">{industry}</p>
                 </div>
               ))}
             </div>
           </div>
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx
+:pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx
         </section>"
-=======
         </section>
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousVehiclePlatform.tsx
         {/* Contact Section */}""
         <section className="py-20 px-4 sm:px-6 lg:px-8">;""
           <div className="max-w-4xl mx-auto text-center">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx
+:pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx
               Ready to Go Autonomous?"
             </h2>""
             <p className="text-xl text-gray-300 mb-8">
               Contact us today to learn how our AI-powered autonomous vehicle platform can transform your transportation business"
-=======
               Ready to Go Autonomous?
             </h2>""
             <p className="text-xl text-gray-300 mb-8">
               Contact us today to learn how our AI-powered autonomous vehicle platform can transform your transportation business;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousVehiclePlatform.tsx
             </p>""
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">""
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">""
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4">""
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx
+:pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx
                   <Users className="w-6 h-6 text-white"  />"
                 </div>""
                 <h3 className="text-lg font-semibold text-white mb-2">Contact Us</h3>""
@@ -439,7 +403,6 @@ export default function AIAutonomousVehiclePlatform(function AIAutonomousVehicle
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">""
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4">""
                   <Shield className="w-6 h-6 text-white"  />"
-=======
                   <Users className="w-6 h-6 text-white"  />
                 </div>""
                 <h3 className="text-lg font-semibold text-white mb-2">Contact Us</h3>""
@@ -456,33 +419,30 @@ export default function AIAutonomousVehiclePlatform(function AIAutonomousVehicle
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">""
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4">""
                   <Shield className="w-6 h-6 text-white"  />
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousVehiclePlatform.tsx
                 </div>""
                 <h3 className="text-lg font-semibold text-white mb-2">Address</h3>""
                 <p className="text-gray-300">364 E Main St STE 1008</p>"                <p className="text-gray-300">Middletown DE 19709</p>
               </div>
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx
+:pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx
             </div>"
             <a""
               href="https://ziontechgroup.com/contact""
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-200"
             >"
-=======
             </div>
             <a""
               href="https://ziontechgroup.com/contact""
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-200""
             >
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousVehiclePlatform.tsx
               Get Started Today;""
               <ArrowRight className="ml-2 w-5 h-5"  />;            </a>;
           </div>;
         </section>;
       </div>;
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx
+:pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx
     </>'"`
   )}}}'"`'"`
-=======
     </>
   )}}}'"`
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousVehiclePlatform.tsx
+=======
+>>>>>>> main

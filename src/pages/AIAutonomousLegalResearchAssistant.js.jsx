@@ -331,5 +331,15 @@ const AIAutonomousLegalResearchAssistant = () => {}
         </div>
       </section>
     </div>)};
-export default AIAutonomousLegalResearchAssistant;'"`
-'"`'"`
+export default AIAutonomousLegalResearchAssistant;
+
+
+export { AIAutonomousLegalResearchAssistant };
+
+export { AIAutonomousLegalResearchAssistant };
+
+export { AIAutonomousLegalResearchAssistant };
+
+export { AIAutonomousLegalResearchAssistant };
+
+export { AIAutonomousLegalResearchAssistant };

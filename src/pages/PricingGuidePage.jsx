@@ -468,8 +468,15 @@ export default function PricingGuidePage() {}
           </div>
         </div>
       </div>
-    </div>'"`
-  );'"`'"`
-}'"`'"`'"`
-'"`'"`'"`
-'"`'"`
+    </div>)}
+
+
+export { PricingGuidePage };
+
+export { PricingGuidePage };
+
+export { PricingGuidePage };
+
+export { PricingGuidePage };
+
+export { PricingGuidePage };

@@ -1215,8 +1215,17 @@ export default function FiveGEnterpriseSolutions() {}
             </div>
           </motion.div>
         </div>
-      </section>'"`
-    </div>'"`'"`
-  )}'"`'"`'"`
-'"`'"`'"`
-'"`'"`
+      </section>
+    </div>
+  )}
+
+
+export { FiveGEnterpriseSolutions };
+
+export { FiveGEnterpriseSolutions };
+
+export { FiveGEnterpriseSolutions };
+
+export { FiveGEnterpriseSolutions };
+
+export { FiveGEnterpriseSolutions };

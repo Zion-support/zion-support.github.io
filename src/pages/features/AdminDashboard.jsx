@@ -76,7 +76,15 @@ export default function AdminDashboard() {}
         </div>
       </main>
       <Footer />
-    </>
-  );
-}'"""
-'"'"""
+    </>)}
+
+
+export { AdminDashboard };
+
+export { AdminDashboard };
+
+export { AdminDashboard };
+
+export { AdminDashboard };
+
+export { AdminDashboard };

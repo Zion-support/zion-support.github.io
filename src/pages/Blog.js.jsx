@@ -238,7 +238,15 @@ export default function Blog() {}
           )}
         </div>
       </div>
-    </>
-  );
-}'"`
-'"`'"`
+    </>)}
+
+
+export { CATEGORIES, Blog };
+
+export { CATEGORIES, Blog };
+
+export { CATEGORIES, Blog };
+
+export { CATEGORIES, Blog };
+
+export { CATEGORIES, Blog };

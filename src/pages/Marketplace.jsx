@@ -205,6 +205,17 @@ export default function Marketplace() {}
               </div>) }
           </div>) }
       </div>
-    </main>) ;
-}'"`
-'"`'"`
+    </main>
+  );
+}
+
+
+export { Marketplace };
+
+export { Marketplace };
+
+export { Marketplace };
+
+export { Marketplace };
+
+export { Marketplace };

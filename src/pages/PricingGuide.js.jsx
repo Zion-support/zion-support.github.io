@@ -478,7 +478,15 @@ export default function PricingGuide() {}
           </div>
         </div>
       </div>
-    </div>
-  );
-}'"`
-'"`'"`
+    </div>)}
+
+
+export { PricingGuide };
+
+export { PricingGuide };
+
+export { PricingGuide };
+
+export { PricingGuide };
+
+export { PricingGuide };

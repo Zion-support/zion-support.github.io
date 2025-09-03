@@ -1,7 +1,6 @@
-import React from 'react';''
-import { Link  } from 'react-router-dom';
+<<<<<<< HEAD
+=======
 
-export default function Page(function Page(function Page() {): any {): any {}
-;
-
-export default AIServicesShowcase;
+;,"});,})";
+>>>>>>> pr-10728,});,"})"
+>>>>>>> main

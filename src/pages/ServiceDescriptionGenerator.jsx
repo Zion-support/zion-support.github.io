@@ -61,7 +61,16 @@ export default function ServiceDescriptionGenerator() {}
           </div>
         </div>
       </main>
-    </div>
-  );
-}'"""
-'"'"""
+      
+    </div>)}
+
+
+export { ServiceDescriptionGenerator };
+
+export { ServiceDescriptionGenerator };
+
+export { ServiceDescriptionGenerator };
+
+export { ServiceDescriptionGenerator };
+
+export { ServiceDescriptionGenerator };

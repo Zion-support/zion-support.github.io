@@ -1,4 +1,5 @@
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
+<<<<<<< HEAD
+:pages.disabled/pages/services/CustomDevelopment.tsx
     {
 
       title: 'Mobile Applications','
@@ -8,7 +9,6 @@
 '
 ''
       title: 'API Development',''
-=======
 import {}
   Code,
   Smartphone,
@@ -44,25 +44,22 @@ export default function CustomDevelopment(...args[]):  {}
       features['iOS Development',Android Development',Cross-platform Apps',App Store Optimization']},;
     {}
       title: 'API Development',
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CustomDevelopment.tsx
       description: 'Robust and scalable APIs that enable seamless integration between systems and services.',
       icon: Network,'
       features['RESTful APIs',GraphQL APIs',API Documentation',Integration Support']},;
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
     {
 '
       features['Legacy System Integration',Third-party APIs',Data Synchronization',Workflow Automation']};'
       title: 'System Integration',;'
-=======
     {}
       features['Legacy System Integration',Third-party APIs',Data Synchronization',Workflow Automation']};
       title: 'System Integration',;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CustomDevelopment.tsx
       description: 'Seamlessly connect your existing systems and third-party services for improved efficiency.',;
               icon: GitFork,;'
       features: ['Legacy System Integration',Third-party APIs',Data Synchronization',Workflow Automation']};
   ]},;
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
     {
 '
       title: 'Backend','
@@ -83,7 +80,6 @@ export default function CustomDevelopment(...args[]):  {}
 '
 ''
       title: 'Mobile',''
-=======
     {}
       title: 'Backend',
       description: 'Robust backend technologies for scalable and secure applications.',
@@ -91,31 +87,27 @@ export default function CustomDevelopment(...args[]):  {}
       stack['Node.js',Python',Java',C#',Go']},;
     {}
       title: 'Mobile',
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CustomDevelopment.tsx
       description: 'Cross-platform and native mobile development technologies.',
       icon: Smartphone,'
       stack['React Native',Flutter',Swift',Kotlin',Xamarin']},;
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
     {
 '
       stack['PostgreSQL',MongoDB',MySQL',Redis',Elasticsearch']};'
       title: 'Database',;'
-=======
     {}
       stack['PostgreSQL',MongoDB',MySQL',Redis',Elasticsearch']};
       title: 'Database',;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CustomDevelopment.tsx
       description: 'Modern database solutions for data storage and management.',;
       icon: Database,;'
       stack: ['PostgreSQL',MongoDB',MySQL',Redis',Elasticsearch']};
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
   ]},;'
     {;''
       title: 'Support & Maintenance',;'      description: 'Ongoing support and maintenance to ensure your applications run smoothly.',;
       icon: Settings};
   ];'
   const industries = [;'    'Healthcare', 'Finance', 'Manufacturing', 'Retail', 'Government', 'Education', 'Transportation', 'Energy';
-=======
   ]},;
     {;
       title: 'Support & Maintenance',;
@@ -124,10 +116,9 @@ export default function CustomDevelopment(...args[]):  {}
   ];
 
     'Healthcare',Finance',Manufacturing',Retail',Government',Education',Transportation',Energy';
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CustomDevelopment.tsx
   ];
   return()
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-20">"
       {/* Hero Section */}""
       <section className="relative overflow-hidden py-20">""
@@ -138,13 +129,10 @@ export default function CustomDevelopment(...args[]):  {}
             initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
   y: 30
 
-=======
   y: 30 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/CustomDevelopment.tsx
-=======
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-20">
       {/* Hero Section */}""
       <section className="relative overflow-hidden py-20">""
@@ -155,17 +143,14 @@ export default function CustomDevelopment(...args[]):  {}
             initial = {}
   { opacity: 0,
   y: 30;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CustomDevelopment.tsx
 }}
             animate = {}
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/CustomDevelopment.tsx
 }}
             transition={{ duration: 0.8 }}"
 ""
@@ -186,7 +171,6 @@ export default function CustomDevelopment(...args[]):  {}
                 to="/services""
                 className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 font-semibold"
                 View All Services
-=======
   y: 0;
 }}
             transition={{ duration: 0.8 }}
@@ -208,12 +192,11 @@ export default function CustomDevelopment(...args[]):  {}
                 to="/services""
                 className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 font-semibold""
                 View All Services;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CustomDevelopment.tsx
               </Link>
             </div>
           </motion.div>;
         </div>
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
       </section>"
       {/* Services Overview */}""
       <section className="py-20">;""
@@ -223,13 +206,10 @@ export default function CustomDevelopment(...args[]):  {}
             initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
   y: 30
 
-=======
   y: 30 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/CustomDevelopment.tsx
-=======
       </section>
 
       {/* Services Overview */}""
@@ -240,36 +220,31 @@ export default function CustomDevelopment(...args[]):  {}
             initial = {}
   { opacity: 0,
   y: 30;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CustomDevelopment.tsx
 }}
             animate = {}
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/CustomDevelopment.tsx
 }}
             transition={{ duration: 0.8 }}"
 ""
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Our Custom Development Services"
-=======
   y: 0;
 }}
             transition={{ duration: 0.8 }}
 ""
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Our Custom Development Services;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CustomDevelopment.tsx
             </h2>""
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Comprehensive custom development services designed to create software solutions;
               that perfectly align with your business requirements.
             </p>
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
           </motion.div>"
 ""
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -280,13 +255,10 @@ export default function CustomDevelopment(...args[]):  {}
                 initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
   y: 30
 
-=======
   y: 30 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/CustomDevelopment.tsx
-=======
           </motion.div>
 ""
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -297,41 +269,33 @@ export default function CustomDevelopment(...args[]):  {}
                 initial = {}
   { opacity: 0,
   y: 30;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CustomDevelopment.tsx
 }}
                 animate = {}
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/CustomDevelopment.tsx
-=======
   y: 0;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CustomDevelopment.tsx
 }}
                 transition = {}
   { duration: 0.6,
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
   delay: index * 0.1
 
 }}
               >"
                 <div className="flex items-start gap-4 mb-6">"
                   <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center flex-shrink-0">"
-=======
   delay: index * 0.1 
 }}"
               >""
                 <div className="flex items-start gap-4 mb-6">""
                   <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center flex-shrink-0">""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/CustomDevelopment.tsx
                     <service.icon className="w-8 h-8 text-white" />
                   </div>"
-=======
   delay: index * 0.1;
 }}
               >""
@@ -339,24 +303,21 @@ export default function CustomDevelopment(...args[]):  {}
                   <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center flex-shrink-0">""
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CustomDevelopment.tsx
                   <div>""
                     <h3 className="text-2xl font-bold text-white mb-2">{service.title}</h3>""
                     <p className="text-zion-slate-light leading-relaxed">{service.description}</p>
                   </div>
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
                 </div>"
 "'"
                 <div className="mb-6">'"'"
                   <h4 className="text-zion-cyan font-semibold mb-3">What's Included:</h4>""
                   <ul className="space-y-2">"
-=======
                 </div>
 ""
                 <div className="mb-6">'""
                   <h4 className="text-zion-cyan font-semibold mb-3">What's Included:</h4>""
                   <ul className="space-y-2">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CustomDevelopment.tsx
                     {service.features.map((feature, featureIndex) => (""
                       <li key={featureIndex} className="flex items-center gap-2 text-zion-slate-light">""
                         <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0"  />                        {feature}
@@ -368,7 +329,7 @@ export default function CustomDevelopment(...args[]):  {}
             ))}
           </div>
         </div>
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
       </section>"
       {/* Technology Stack */}""
       <section className="py-20 bg-zion-slate-dark/30">;""
@@ -378,13 +339,10 @@ export default function CustomDevelopment(...args[]):  {}
             initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
   y: 30
 
-=======
   y: 30 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/CustomDevelopment.tsx
-=======
       </section>
 
       {/* Technology Stack */}""
@@ -395,36 +353,31 @@ export default function CustomDevelopment(...args[]):  {}
             initial = {}
   { opacity: 0,
   y: 30;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CustomDevelopment.tsx
 }}
             animate = {}
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/CustomDevelopment.tsx
 }}
             transition={{ duration: 0.8 }}"
 ""
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Our Technology Stack"
-=======
   y: 0;
 }}
             transition={{ duration: 0.8 }}
 ""
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Our Technology Stack;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CustomDevelopment.tsx
             </h2>""
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               We use cutting-edge technologies and proven frameworks to build robust,
               scalable, and maintainable applications.
             </p>
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
           </motion.div>"
 ""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -435,13 +388,10 @@ export default function CustomDevelopment(...args[]):  {}
                 initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
   y: 30
 
-=======
   y: 30 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/CustomDevelopment.tsx
-=======
           </motion.div>
 ""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -452,36 +402,29 @@ export default function CustomDevelopment(...args[]):  {}
                 initial = {}
   { opacity: 0,
   y: 30;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CustomDevelopment.tsx
 }}
                 animate = {}
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/CustomDevelopment.tsx
-=======
   y: 0;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CustomDevelopment.tsx
 }}
                 transition = {}
   { duration: 0.6,
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
   delay: index * 0.1
 
 }}
               >"
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">"
-=======
   delay: index * 0.1 
 }}"
               >""
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/CustomDevelopment.tsx
                   <tech.icon className="w-8 h-8 text-white" />
                 </div>"
 ""
@@ -489,7 +432,6 @@ export default function CustomDevelopment(...args[]):  {}
                 <p className="text-zion-slate-light mb-4 leading-relaxed text-sm">{tech.description}</p>"
 ""
                 <div className="space-y-2">"
-=======
   delay: index * 0.1;
 }}
               >""
@@ -501,7 +443,6 @@ export default function CustomDevelopment(...args[]):  {}
                 <p className="text-zion-slate-light mb-4 leading-relaxed text-sm">{tech.description}</p>
 ""
                 <div className="space-y-2">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CustomDevelopment.tsx
                   {tech.stack.map((item, itemIndex) => (""
                     <div key={itemIndex} className="text-zion-cyan text-sm font-medium">{item}</div>
                   ))}
@@ -510,7 +451,7 @@ export default function CustomDevelopment(...args[]):  {}
             ))}
           </div>
         </div>
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
       </section>"
       {/* Benefits Section */}""
       <section className="py-20">;""
@@ -520,13 +461,10 @@ export default function CustomDevelopment(...args[]):  {}
             initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
   y: 30
 
-=======
   y: 30 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/CustomDevelopment.tsx
-=======
       </section>
 
       {/* Benefits Section */}""
@@ -537,35 +475,30 @@ export default function CustomDevelopment(...args[]):  {}
             initial = {}
   { opacity: 0,
   y: 30;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CustomDevelopment.tsx
 }}
             animate = {}
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/CustomDevelopment.tsx
 }}
             transition={{ duration: 0.8 }}"
 ""
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Why Choose Custom Development?"
-=======
   y: 0;
 }}
             transition={{ duration: 0.8 }}
 ""
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Why Choose Custom Development?
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CustomDevelopment.tsx
             </h2>""
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Custom development offers unique advantages that off-the-shelf solutions cannot provide.
             </p>
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
           </motion.div>"
 ""
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -576,13 +509,10 @@ export default function CustomDevelopment(...args[]):  {}
                 initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
   y: 30
 
-=======
   y: 30 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/CustomDevelopment.tsx
-=======
           </motion.div>
 ""
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -593,38 +523,30 @@ export default function CustomDevelopment(...args[]):  {}
                 initial = {}
   { opacity: 0,
   y: 30;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CustomDevelopment.tsx
 }}
                 animate = {}
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/CustomDevelopment.tsx
-=======
   y: 0;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CustomDevelopment.tsx
 }}
                 transition = {}
   { duration: 0.6,
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
   delay: index * 0.1
 
-=======
   delay: index * 0.1;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CustomDevelopment.tsx
 }}
               >""
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center mb-6">""
                   <benefit.icon className="w-8 h-8 text-white" />
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
                 </div>"
                 <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>"
-=======
   delay: index * 0.1 
 }}"
               >""
@@ -632,17 +554,14 @@ export default function CustomDevelopment(...args[]):  {}
                   <benefit.icon className="w-8 h-8 text-white" />"
                 </div>""
                 <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/CustomDevelopment.tsx
-=======
                 </div>""
                 <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CustomDevelopment.tsx
                 <p className="text-zion-slate-light leading-relaxed">{benefit.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
       </section>"
       {/* Industries Section */}""
       <section className="py-20 bg-zion-slate-dark/30">;""
@@ -652,13 +571,10 @@ export default function CustomDevelopment(...args[]):  {}
             initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
   y: 30
 
-=======
   y: 30 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/CustomDevelopment.tsx
-=======
       </section>
 
       {/* Industries Section */}""
@@ -669,36 +585,31 @@ export default function CustomDevelopment(...args[]):  {}
             initial = {}
   { opacity: 0,
   y: 30;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CustomDevelopment.tsx
 }}
             animate = {}
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/CustomDevelopment.tsx
 }}
             transition={{ duration: 0.8 }}"
 ""
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Industries We Serve"
-=======
   y: 0;
 }}
             transition={{ duration: 0.8 }}
 ""
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Industries We Serve;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CustomDevelopment.tsx
             </h2>""
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Our custom development expertise spans across multiple industries,
               each with unique software requirements and challenges.
             </p>
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
           </motion.div>"
 ""
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -709,13 +620,10 @@ export default function CustomDevelopment(...args[]):  {}
                 initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/CustomDevelopment.tsx
-=======
           </motion.div>
 ""
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -726,45 +634,36 @@ export default function CustomDevelopment(...args[]):  {}
                 initial = {}
   { opacity: 0,
   y: 20;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CustomDevelopment.tsx
 }}
                 animate = {}
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/CustomDevelopment.tsx
-=======
   y: 0;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CustomDevelopment.tsx
 }}
                 transition = {}
   { duration: 0.6,
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
   delay: index * 0.1
 
 }}
               >"
-=======
   delay: index * 0.1 
 }}"
               >""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/CustomDevelopment.tsx
-=======
   delay: index * 0.1;
 }}
               >""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CustomDevelopment.tsx
                 <div className="text-zion-cyan font-semibold">{industry}</div>
               </motion.div>
             ))}
           </div>
         </div>
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
       </section>"
       {/* Development Process */}""
       <section className="py-20">;""
@@ -774,13 +673,10 @@ export default function CustomDevelopment(...args[]):  {}
             initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
   y: 30
 
-=======
   y: 30 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/CustomDevelopment.tsx
-=======
       </section>
 
       {/* Development Process */}""
@@ -791,35 +687,30 @@ export default function CustomDevelopment(...args[]):  {}
             initial = {}
   { opacity: 0,
   y: 30;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CustomDevelopment.tsx
 }}
             animate = {}
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/CustomDevelopment.tsx
 }}
             transition={{ duration: 0.8 }}"
 ""
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Our Development Process"
-=======
   y: 0;
 }}
             transition={{ duration: 0.8 }}
 ""
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Our Development Process;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CustomDevelopment.tsx
             </h2>""
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               A proven agile development methodology that ensures successful project delivery and client satisfaction.
             </p>
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
           </motion.div>"
 ""
           <div className="grid grid-cols-1 md: grid-cols-4 gap-8">'
@@ -835,13 +726,10 @@ export default function CustomDevelopment(...args[]):  {}
                 initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
   y: 30
 
-=======
   y: 30 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/CustomDevelopment.tsx
-=======
           </motion.div>
 ""
           <div className="grid grid-cols-1 md: grid-cols-4 gap-8">
@@ -857,43 +745,34 @@ export default function CustomDevelopment(...args[]):  {}
                 initial = {}
   { opacity: 0,
   y: 30;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CustomDevelopment.tsx
 }}
                 animate = {}
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/CustomDevelopment.tsx
-=======
   y: 0;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CustomDevelopment.tsx
 }}
                 transition = {}
   { duration: 0.6,
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
   delay: index * 0.1
 
 }}
               >"
-=======
   delay: index * 0.1 
 }}"
               >""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/CustomDevelopment.tsx
                 <div className="w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white">
                   {phase.step}"
-=======
   delay: index * 0.1;
 }}
               >""
                 <div className="w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white">
                   {phase.step}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CustomDevelopment.tsx
                 </div>""
                 <h3 className="text-xl font-bold text-white mb-3">{phase.title}</h3>""
                 <p className="text-zion-slate-light leading-relaxed">{phase.description}</p>
@@ -901,7 +780,7 @@ export default function CustomDevelopment(...args[]):  {}
             ))}
           </div>
         </div>
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
       </section>"
       {/* CTA Section */}""
       <section className="py-20 bg-zion-slate-dark/30">;""
@@ -911,13 +790,10 @@ export default function CustomDevelopment(...args[]):  {}
             initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
   y: 30
 
-=======
   y: 30 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/CustomDevelopment.tsx
-=======
       </section>
 
       {/* CTA Section */}""
@@ -928,17 +804,14 @@ export default function CustomDevelopment(...args[]):  {}
             initial = {}
   { opacity: 0,
   y: 30;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CustomDevelopment.tsx
 }}
             animate = {}
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/CustomDevelopment.tsx
 }}
             transition={{ duration: 0.8 }}"
 ""
@@ -959,7 +832,6 @@ export default function CustomDevelopment(...args[]):  {}
                 to="/services""
                 className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 font-semibold"
                 Explore Services
-=======
   y: 0;
 }}
             transition={{ duration: 0.8 }}
@@ -981,17 +853,16 @@ export default function CustomDevelopment(...args[]):  {}
                 to="/services""
                 className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 font-semibold""
                 Explore Services;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CustomDevelopment.tsx
               </Link>
             </div>;
           </motion.div>;
         </div>;
       </section>;
     </div>;
-<<<<<<< HEAD:pages.disabled/pages/services/CustomDevelopment.tsx
+:pages.disabled/pages/services/CustomDevelopment.tsx
   )}'"
 '"'"
-=======
   )}
 '""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CustomDevelopment.tsx
+=======
+>>>>>>> main

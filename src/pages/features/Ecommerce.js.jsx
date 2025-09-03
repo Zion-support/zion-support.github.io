@@ -84,7 +84,15 @@ export default function Ecommerce() {}
         </div>
       </main>
       <Footer />
-    </>
-  );
-}'"""
-'"'"""
+    </>)}
+
+
+export { Ecommerce };
+
+export { Ecommerce };
+
+export { Ecommerce };
+
+export { Ecommerce };
+
+export { Ecommerce };

@@ -124,5 +124,15 @@ export default function CartPage() {}
       <Button className="mt-4 w-full" onClick={() => user ? router('/checkout') : router('/login?next=/checkout')}>'
         {user ? 'Checkout' : 'Login to Checkout'}
       </Button>
-    </div>)}'"""
-'"'"""
+    </div>)}
+
+
+export { CartPage };
+
+export { CartPage };
+
+export { CartPage };
+
+export { CartPage };
+
+export { CartPage };

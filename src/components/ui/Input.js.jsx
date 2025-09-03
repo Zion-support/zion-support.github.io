@@ -36,4 +36,14 @@ const Input = React.forwardRef((_a, ref) => {}
 });'
 Input.displayName = 'Input';
 export { Input };
-'
+
+
+export { Input };
+
+export { Input };
+
+export { Input };
+
+export { Input };
+
+export { Input };

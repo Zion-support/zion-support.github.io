@@ -179,5 +179,15 @@ export default function FuturisticNavigation() {}
             </div>
           </motion.div>)}
       </AnimatePresence>
-    </nav>)}'"`
-'"`'"`
+    </nav>)}
+
+
+export { FuturisticNavigation };
+
+export { FuturisticNavigation };
+
+export { FuturisticNavigation };
+
+export { FuturisticNavigation };
+
+export { FuturisticNavigation };

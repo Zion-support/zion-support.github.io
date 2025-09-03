@@ -1,5 +1,6 @@
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
-<<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
+<<<<<<< HEAD
+:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
+<:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Shield,
@@ -8,16 +9,14 @@ import { Shield,
   Users,
   Database,
   BarChart3,
-========
-<<<<<<< HEAD
+=
 import { Shield, 
   FileText, 
   TrendingUp, 
   Users, 
   Database, 
   BarChart3, 
->>>>>>>> main:backup-pages/src-pages/services/AIFinancialComplianceAssistant.tsx
-  Zap,
+>  Zap,
   CheckCircle,
   ArrowRight,
   Star,
@@ -46,15 +45,10 @@ import { Shield,
 ;
 export { function };
 export default function AIFinancialComplianceAssistant(...args[]): {
-  ;
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialComplianceAssistant.tsx
-  ;
+  ;  ;
   ;
   website: 'https://ziontechgroup.com';
-<<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
+<:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
   ;
 
 };
@@ -85,10 +79,9 @@ export default function AIFinancialComplianceAssistant(...args[]): {
       title: 'Centralized Compliance Hub',
       description: 'Single source of truth for all compliance-related data, policies, and procedures';
     },;
-========
+=
   }},;
->>>>>>>> main:backup-pages/src-pages/services/AIFinancialComplianceAssistant.tsx
-    {;
+>    {;
       icon: BarChart3,;'
       title: 'Advanced Analytics & Reporting',;'
       description: 'Comprehensive dashboards and automated reporting for regulatory submissions'};
@@ -148,29 +141,18 @@ export default function AIFinancialComplianceAssistant(...args[]): {
       title: 'Fintech Startups',;'      description: 'Rapid compliance scaling for growing financial technology companies',;
       icon: Zap};
   ];
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
+:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-<<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
+<:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
       <SEO
-========
+=
       <SEO "
-<<<<<<< HEAD
->>>>>>>> main:backup-pages/src-pages/services/AIFinancialComplianceAssistant.tsx
-        title="AI Financial Compliance Assistant | Zion Tech Group"
+>        title="AI Financial Compliance Assistant | Zion Tech Group"
         description="Revolutionize your financial compliance with AI-powered automation. Monitor regulations, detect risks, and ensure 99.9% compliance accuracy."
         keywords="AI financial compliance, regulatory compliance, SOX compliance, GDPR compliance, PCI DSS, AML KYC, financial regulations"
-       />
-=======
-        title="AI Financial Compliance Assistant | Zion Tech Group""
-=======
-  return (""
-    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">"
-      <SEO ""
-        title="AI Financial Compliance Assistant | Zion Tech Group"""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialComplianceAssistant.tsx
-        description="Revolutionize your financial compliance with AI-powered automation. Monitor regulations, detect risks, and ensure 99.9% compliance accuracy.""        keywords="AI financial compliance, regulatory compliance, SOX compliance, GDPR compliance, PCI DSS, AML KYC, financial regulations"
+       />        description="Revolutionize your financial compliance with AI-powered automation. Monitor regulations, detect risks, and ensure 99.9% compliance accuracy.""        keywords="AI financial compliance, regulatory compliance, SOX compliance, GDPR compliance, PCI DSS, AML KYC, financial regulations"
        />"
       {/* Hero Section */}""
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">""
@@ -179,22 +161,18 @@ export default function AIFinancialComplianceAssistant(...args[]): {
             initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
+:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialComplianceAssistant.tsx
 }}
             animate = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
+:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialComplianceAssistant.tsx
 }}
             transition={{ duration: 0.8 }}"
 ""
@@ -232,22 +210,18 @@ export default function AIFinancialComplianceAssistant(...args[]): {
             initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
+:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialComplianceAssistant.tsx
 }}
             whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
+:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialComplianceAssistant.tsx
 }}
             transition={{ duration: 0.8 }}"
             viewport={{ once: true }}""
@@ -259,17 +233,14 @@ export default function AIFinancialComplianceAssistant(...args[]): {
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
               Everything you need to stay compliant with evolving financial regulations
             </p>
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
+:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
           </motion.div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
+<:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
 
-========
+=
           "
->>>>>>>> main:backup-pages/src-pages/services/AIFinancialComplianceAssistant.tsx
-=======
-          </motion.div>"
+>          </motion.div>"
           ""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialComplianceAssistant.tsx
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index()
               <motion.div
@@ -277,27 +248,23 @@ export default function AIFinancialComplianceAssistant(...args[]): {
                 initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
+:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialComplianceAssistant.tsx
 }}
                 whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
+:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialComplianceAssistant.tsx
 }}
                 transition = {
 
   { duration: 0.8,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
+:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
   delay: index * 0.1
 
 }}
@@ -308,7 +275,6 @@ export default function AIFinancialComplianceAssistant(...args[]): {
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>"
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>"
-=======
   delay: index * 0.1 
 }}"
                 viewport={{ once: true }}""
@@ -318,7 +284,6 @@ export default function AIFinancialComplianceAssistant(...args[]): {
                   <feature.icon className="w-6 h-6 text-white" />"
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialComplianceAssistant.tsx
                 <p className="text-slate-300">{feature.description}</p>
               </motion.div>;
             ))}
@@ -332,22 +297,18 @@ export default function AIFinancialComplianceAssistant(...args[]): {
             initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
+:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialComplianceAssistant.tsx
 }}
             whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
+:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialComplianceAssistant.tsx
 }}
             transition={{ duration: 0.8 }}"
             viewport={{ once: true }}""
@@ -359,17 +320,14 @@ export default function AIFinancialComplianceAssistant(...args[]): {
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
               Comprehensive coverage of all major financial compliance requirements
             </p>
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
+:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
           </motion.div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
+<:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
 
-========
+=
           "
->>>>>>>> main:backup-pages/src-pages/services/AIFinancialComplianceAssistant.tsx
-=======
-          </motion.div>"
+>          </motion.div>"
           ""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialComplianceAssistant.tsx
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {complianceFrameworks.map(framework: unknown, index: unknown()
               <motion.div
@@ -377,27 +335,23 @@ export default function AIFinancialComplianceAssistant(...args[]): {
                 initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
+:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialComplianceAssistant.tsx
 }}
                 whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
+:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialComplianceAssistant.tsx
 }}
                 transition = {
 
   { duration: 0.8,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
+:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
   delay: index * 0.1
 
 }}
@@ -408,7 +362,6 @@ export default function AIFinancialComplianceAssistant(...args[]): {
                   <framework.icon className="w-6 h-6 text-white" />
                 </div>"
                 <h3 className="text-xl font-semibold text-white mb-2">{framework.title}</h3>"
-=======
   delay: index * 0.1 
 }}"
                 viewport={{ once: true }}""
@@ -418,7 +371,6 @@ export default function AIFinancialComplianceAssistant(...args[]): {
                   <framework.icon className="w-6 h-6 text-white" />"
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-2">{framework.title}</h3>""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialComplianceAssistant.tsx
                 <p className="text-slate-300">{framework.description}</p>
               </motion.div>;
             ))}
@@ -432,22 +384,18 @@ export default function AIFinancialComplianceAssistant(...args[]): {
             initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
+:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialComplianceAssistant.tsx
 }}
             whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
+:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialComplianceAssistant.tsx
 }}
             transition={{ duration: 0.8 }}"
             viewport={{ once: true }}""
@@ -459,17 +407,14 @@ export default function AIFinancialComplianceAssistant(...args[]): {
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
               Transform your compliance process and unlock new levels of efficiency and accuracy
             </p>
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
+:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
           </motion.div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
+<:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
 
-========
+=
           "
->>>>>>>> main:backup-pages/src-pages/services/AIFinancialComplianceAssistant.tsx
-=======
-          </motion.div>"
+>          </motion.div>"
           ""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialComplianceAssistant.tsx
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map(benefit: unknown, index: unknown()
               <motion.div
@@ -477,40 +422,34 @@ export default function AIFinancialComplianceAssistant(...args[]): {
                 initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
+:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
   x: -20
 
-=======
   x: -20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialComplianceAssistant.tsx
 }}
                 whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
+:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
   x: 0
 
-=======
   x: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialComplianceAssistant.tsx
 }}
                 transition = {
 
   { duration: 0.8,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
+:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
   delay: index * 0.1
 
 }}
                 viewport={{ once: true }}"
                 className="flex items-start space-x-3"
 "
-=======
   delay: index * 0.1 
 }}"
                 viewport={{ once: true }}""
                 className="flex items-start space-x-3""
 ""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialComplianceAssistant.tsx
                 <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0"  />"                <span className="text-slate-300 text-lg">{benefit}</span>
               </motion.div>;
             ))}
@@ -524,22 +463,18 @@ export default function AIFinancialComplianceAssistant(...args[]): {
             initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
+:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialComplianceAssistant.tsx
 }}
             whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
+:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialComplianceAssistant.tsx
 }}
             transition={{ duration: 0.8 }}"
             viewport={{ once: true }}""
@@ -551,17 +486,14 @@ export default function AIFinancialComplianceAssistant(...args[]): {
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
               From startups to enterprise institutions, our platform scales with your needs
             </p>
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
+:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
           </motion.div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
+<:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
 
-========
+=
           "
->>>>>>>> main:backup-pages/src-pages/services/AIFinancialComplianceAssistant.tsx
-=======
-          </motion.div>"
+>          </motion.div>"
           ""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialComplianceAssistant.tsx
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map(useCase: unknown, index: unknown()
               <motion.div
@@ -569,27 +501,23 @@ export default function AIFinancialComplianceAssistant(...args[]): {
                 initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
+:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialComplianceAssistant.tsx
 }}
                 whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
+:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialComplianceAssistant.tsx
 }}
                 transition = {
 
   { duration: 0.8,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
+:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
   delay: index * 0.1
 
 }}
@@ -600,7 +528,6 @@ export default function AIFinancialComplianceAssistant(...args[]): {
                   <useCase.icon className="w-8 h-8 text-white" />
                 </div>"
                 <h3 className="text-xl font-semibold text-white mb-2">{useCase.title}</h3>"
-=======
   delay: index * 0.1 
 }}"
                 viewport={{ once: true }}""
@@ -610,7 +537,6 @@ export default function AIFinancialComplianceAssistant(...args[]): {
                   <useCase.icon className="w-8 h-8 text-white" />"
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-2">{useCase.title}</h3>""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialComplianceAssistant.tsx
                 <p className="text-slate-300">{useCase.description}</p>
               </motion.div>;
             ))}
@@ -624,22 +550,18 @@ export default function AIFinancialComplianceAssistant(...args[]): {
             initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
+:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialComplianceAssistant.tsx
 }}
             whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
+:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialComplianceAssistant.tsx
 }}
             transition={{ duration: 0.8 }}"
             viewport={{ once: true }}""
@@ -651,17 +573,14 @@ export default function AIFinancialComplianceAssistant(...args[]): {
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
               Choose the plan that fits your organization size and compliance needs
             </p>
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
+:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
           </motion.div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
+<:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
 
-========
+=
           "
->>>>>>>> main:backup-pages/src-pages/services/AIFinancialComplianceAssistant.tsx
-=======
-          </motion.div>"
+>          </motion.div>"
           ""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialComplianceAssistant.tsx
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
             {pricingPlans.map(plan: unknown, index: unknown()
               <motion.div
@@ -669,32 +588,26 @@ export default function AIFinancialComplianceAssistant(...args[]): {
                 initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
+:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialComplianceAssistant.tsx
 }}
                 whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
+:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialComplianceAssistant.tsx
 }}
                 transition = {
 
   { duration: 0.8,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
+:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
   delay: index * 0.1
 
-=======
   delay: index * 0.1 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialComplianceAssistant.tsx
 }}
                 viewport={{ once: true }}
                 className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
@@ -748,22 +661,18 @@ export default function AIFinancialComplianceAssistant(...args[]): {
             initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
+:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialComplianceAssistant.tsx
 }}
             whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
+:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialComplianceAssistant.tsx
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}"
@@ -797,22 +706,18 @@ export default function AIFinancialComplianceAssistant(...args[]): {
             initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
+:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialComplianceAssistant.tsx
 }}
             whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
+:pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIFinancialComplianceAssistant.tsx
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}"
@@ -851,3 +756,5 @@ export default function AIFinancialComplianceAssistant(...args[]): {
     </div>;
   )}'"`
 '"`'"`
+=======
+>>>>>>> main

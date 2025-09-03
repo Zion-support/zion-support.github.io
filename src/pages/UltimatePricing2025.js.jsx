@@ -477,5 +477,15 @@ const UltimatePricing2025 = () => {}
         </div>
       </section>
     </div>)};
-export default UltimatePricing2025;'"`
-'"`'"`
+export default UltimatePricing2025;
+
+
+export { UltimatePricing2025 };
+
+export { UltimatePricing2025 };
+
+export { UltimatePricing2025 };
+
+export { UltimatePricing2025 };
+
+export { UltimatePricing2025 };

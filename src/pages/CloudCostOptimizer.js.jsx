@@ -349,5 +349,15 @@ export default function CloudCostOptimizer() {}
           </div>
         </div>
       </section>
-    </div>)}'"`
-'"`'"`
+    </div>)}
+
+
+export { CloudCostOptimizer };
+
+export { CloudCostOptimizer };
+
+export { CloudCostOptimizer };
+
+export { CloudCostOptimizer };
+
+export { CloudCostOptimizer };

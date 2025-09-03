@@ -401,5 +401,15 @@ const EmergingTech = () => {}
         </motion.div>
       </div>
     </div>)};
-export default EmergingTech;'"`
-'"`'"`
+export default EmergingTech;
+
+
+export { EmergingTech };
+
+export { EmergingTech };
+
+export { EmergingTech };
+
+export { EmergingTech };
+
+export { EmergingTech };

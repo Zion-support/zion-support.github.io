@@ -26,7 +26,16 @@ export default function TalentOnboarding() {}
           <TalentOnboardingForm />
         </div>
       </div>
-    </>
-  );
-}'"""
-'"'"""
+      
+    </>)}
+
+
+export { TalentOnboarding };
+
+export { TalentOnboarding };
+
+export { TalentOnboarding };
+
+export { TalentOnboarding };
+
+export { TalentOnboarding };

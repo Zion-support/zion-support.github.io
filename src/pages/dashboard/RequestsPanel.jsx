@@ -87,7 +87,15 @@ export default function RequestsPanel() {}
           }}
         />
       </div>
-    </ProtectedRoute>
-  );
-}'"""
-'"'"""
+    </ProtectedRoute>)}
+
+
+export { RequestsPanel };
+
+export { RequestsPanel };
+
+export { RequestsPanel };
+
+export { RequestsPanel };
+
+export { RequestsPanel };

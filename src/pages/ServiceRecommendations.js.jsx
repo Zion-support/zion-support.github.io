@@ -1,88 +1,72 @@
 import React from 'react';'''
 import { motion } from 'framer-motion';
-import {}
-  Brain,
-  Target,
-  TrendingUp,
-  Award,
-  Users,
-  ArrowRight,'
-  CheckCircle,''
-  Rocket,'''
-  Shield} from 'lucide-react';'''
-import AdvancedServiceRecommendation from '../components/AdvancedServiceRecommendation';'''
-import { Button } from '../components/ui/button';
-import {}
-  Card,
-  CardContent,
-  CardHeader,'
-  CardTitle} from '../components/ui/card';
-const ServiceRecommendations = () => {}
-  const features = []
-    {}
-      icon: <Brain className="w-6 h-6 text-zion-cyan" />,'
-      title: 'AI-Powered Analysis','
-      description:''
-        'Advanced algorithms analyze your business profile to find perfect service matches'},
-    {}
-"""
-""""
-      icon: <Target className="w-6 h-6 text-zion-purple" />,'
-      title: 'Personalized Matching','
-      description:''
-        'Get recommendations tailored to your industry, budget, and technology maturity'},
-    {}
-"""
-""""
-      icon: <TrendingUp className="w-6 h-6 text-zion-green" />,'
-      title: 'ROI Optimization','
-      description:''
-        'Focus on services that deliver the highest return on investment for your business'},
-    {}
-"""
-""""
-      icon: <Award className="w-6 h-6 text-zion-orange" />,'
-      title: 'Expert Validation','
-      description:''
-        'All recommendations are validated by our technology experts and industry specialists'}
-  ];'
-  const benefits = [''
-    'Save time researching and comparing different service options',Get personalized recommendations based on your specific business needs',Understand implementation complexity and expected timelines',Focus on high-priority solutions with proven ROI potential',Access to our comprehensive portfolio of cutting-edge services',Expert guidance throughout the selection and implementation process'
-  ];
-  const processSteps = []
-    {}
-      step: 1,'
-      title: 'Tell Us About Your Business','
-      description:''"""
-        'Fill out our comprehensive business profile form with industry, size, goals, and challenges',""""
-      icon: <Users className="w-8 h-8 text-zion-cyan" />},
-    {}
-      step: 2,'
-      title: 'AI Analysis & Matching','
-      description:''"""
-        'Our AI engine analyzes your profile and matches it with the most suitable services',""""
-      icon: <Brain className="w-8 h-8 text-zion-purple" />},
-    {}
-      step: 3,'
-      title: 'Personalized Recommendations','
-      description:''"""
-        'Receive detailed recommendations with match scores, priorities, and implementation details',""""
-      icon: <Target className="w-8 h-8 text-zion-green" />},
-    {}
-      step: 4,'
-      title: 'Expert Consultation','
-      description:''"""
-        'Connect with our experts to discuss implementation and get started with your chosen solution',""""
-      icon: <Award className="w-8 h-8 text-zion-orange" />}
-  ];"""
-  return (""""
-    <div className="min-h-screen bg-zion-blue-dark">"""
-      {/* Hero Section */}""""
-      <section className="py-20 px-6 bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan relative overflow-hidden">""""
-        <div className="absolute inset-0 overflow-hidden">""""
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-zion-purple/20 via-zion-blue-light/20 to-zion-cyan/20"></div>""""
-          <div className="absolute -top-20 -right-20 w-40 h-40 bg-white/10 rounded-full blur-3xl animate-pulse"></div>""""
-          <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-white/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+import { Brain, Target, TrendingUp, Award, Users, ArrowRight, CheckCircle, Rocket, Shield } from 'lucide-react';
+import AdvancedServiceRecommendation from "../components/AdvancedServiceRecommendation.jsx";
+import { Button } from "../components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
+const ServiceRecommendations = () => {
+    const features = [
+        {
+            icon: <Brain className="w-6 h-6 text-zion-cyan"/>,
+            title: 'AI-Powered Analysis',
+            description: 'Advanced algorithms analyze your business profile to find perfect service matches'
+        },
+        {
+            icon: <Target className="w-6 h-6 text-zion-purple"/>,
+            title: 'Personalized Matching',
+            description: 'Get recommendations tailored to your industry, budget, and technology maturity'
+        },
+        {
+            icon: <TrendingUp className="w-6 h-6 text-zion-green"/>,
+            title: 'ROI Optimization',
+            description: 'Focus on services that deliver the highest return on investment for your business'
+        },
+        {
+            icon: <Award className="w-6 h-6 text-zion-orange"/>,
+            title: 'Expert Validation',
+            description: 'All recommendations are validated by our technology experts and industry specialists'
+        }
+    ];
+    const benefits = [
+        'Save time researching and comparing different service options',
+        'Get personalized recommendations based on your specific business needs',
+        'Understand implementation complexity and expected timelines',
+        'Focus on high-priority solutions with proven ROI potential',
+        'Access to our comprehensive portfolio of cutting-edge services',
+        'Expert guidance throughout the selection and implementation process'
+    ];
+    const processSteps = [
+        {
+            step: 1,
+            title: 'Tell Us About Your Business',
+            description: 'Fill out our comprehensive business profile form with industry, size, goals, and challenges',
+            icon: <Users className="w-8 h-8 text-zion-cyan"/>
+        },
+        {
+            step: 2,
+            title: 'AI Analysis & Matching',
+            description: 'Our AI engine analyzes your profile and matches it with the most suitable services',
+            icon: <Brain className="w-8 h-8 text-zion-purple"/>
+        },
+        {
+            step: 3,
+            title: 'Personalized Recommendations',
+            description: 'Receive detailed recommendations with match scores, priorities, and implementation details',
+            icon: <Target className="w-8 h-8 text-zion-green"/>
+        },
+        {
+            step: 4,
+            title: 'Expert Consultation',
+            description: 'Connect with our experts to discuss implementation and get started with your chosen solution',
+            icon: <Award className="w-8 h-8 text-zion-orange"/>
+        }
+    ];
+    return (<div className="min-h-screen bg-zion-blue-dark">
+      {/* Hero Section */}
+      <section className="py-20 px-6 bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan relative overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-zion-purple/20 via-zion-blue-light/20 to-zion-cyan/20"></div>
+          <div className="absolute -top-20 -right-20 w-40 h-40 bg-white/10 rounded-full blur-3xl animate-pulse"></div>          <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-white/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>"""
 """"
         <div className="max-w-4xl mx-auto text-center relative z-10">
@@ -328,8 +312,16 @@ const ServiceRecommendations = () => {}
           </motion.div>
         </div>
       </section>
-    </div>
-  );
-};
-export default ServiceRecommendations;'"""
-'"'"""
+    </div>)};
+export default ServiceRecommendations;
+
+
+export { ServiceRecommendations };
+
+export { ServiceRecommendations };
+
+export { ServiceRecommendations };
+
+export { ServiceRecommendations };
+
+export { ServiceRecommendations };

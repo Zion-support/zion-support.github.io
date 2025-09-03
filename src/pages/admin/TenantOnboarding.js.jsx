@@ -365,7 +365,16 @@ export default function TenantOnboarding() {}
           </Card>
         </div>
       </main>
-    </>
-  );
-}'"`
-'"`'"`
+      
+    </>)}
+
+
+export { TenantOnboarding };
+
+export { TenantOnboarding };
+
+export { TenantOnboarding };
+
+export { TenantOnboarding };
+
+export { TenantOnboarding };

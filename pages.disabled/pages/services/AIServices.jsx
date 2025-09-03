@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import SEO from "@/components/SEO";'
 import { Brain, Shield, Database, TrendingUp } from 'lucide-react';
@@ -326,19 +327,17 @@ const AIServices = () => {
     ];"
 ""
     const categories = ["All Services", "Strategy", "ML", "NLP", "Vision", "Analytics", "Automation", "Ethics", "Infrastructure", "Integration", "Training"];
-<<<<<<< HEAD:pages.disabled/pages/services/AIServices.jsx
+:pages.disabled/pages/services/AIServices.jsx
 
     return ("
         <div className="min-h-screen bg-background">
-<<<<<<<< HEAD:pages.disabled/pages/services/AIServices.jsx
+<:pages.disabled/pages/services/AIServices.jsx
             <SEO
-========
+=
             <SEO "
->>>>>>>> main:backup-pages/src-pages/services/AIServices.jsx
-                title="AI Services - Zion Tech Group"
+>                title="AI Services - Zion Tech Group"
                 description="Transform your business with cutting-edge AI services including machine learning, data analytics, and AI strategy."
                 keywords="AI services, machine learning, artificial intelligence, data analytics, AI strategy, AI ethics"
-=======
 "
     return (""
         <div className="min-h-screen bg-background">"
@@ -346,7 +345,6 @@ const AIServices = () => {
                 title="AI Services - Zion Tech Group""
                 description="Transform your business with cutting-edge AI services including machine learning, data analytics, and AI strategy.""
                 keywords="AI services, machine learning, artificial intelligence, data analytics, AI strategy, AI ethics""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIServices.jsx
                 canonical="https://ziontechgroup.com/services/ai-services"
             />
 "
@@ -361,17 +359,15 @@ const AIServices = () => {
                         </span>"
                     </h1>""
                     <p className="text-xl md:text-2xl text-pink-100 max-w-4xl mx-auto leading-relaxed mb-8">
-<<<<<<< HEAD:pages.disabled/pages/services/AIServices.jsx
+:pages.disabled/pages/services/AIServices.jsx
                         Harness the power of artificial intelligence to transform your business operations,
                         enhance customer experiences, and drive innovation across all departments.
                     </p>"
                     <div className="flex flex-wrap justify-center gap-4">"
-=======
                         Harness the power of artificial intelligence to transform your business operations, 
                         enhance customer experiences, and drive innovation across all departments."
                     </p>""
                     <div className="flex flex-wrap justify-center gap-4">""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIServices.jsx
                         <button className="bg-gradient-to-r from-pink-600 to-rose-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-pink-700 hover:to-rose-700 transition-all duration-300 transform hover:scale-105">
                             Start Your AI Journey"
                         </button>""
@@ -425,9 +421,9 @@ const AIServices = () => {
                                                 {service.badge}
                                             </span>
                                         )}
-<<<<<<< HEAD:pages.disabled/pages/services/AIServices.jsx
+:pages.disabled/pages/services/AIServices.jsx
                                     </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIServices.jsx
+<:pages.disabled/pages/services/AIServices.jsx
 
                                     <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-pink-600 transition-colors">
                                         {service.title}
@@ -437,7 +433,7 @@ const AIServices = () => {
 
                                     <div className="mb-4">
                                         <p className="text-sm text-gray-500 mb-3">{service.details}</p>
-========
+=
                                     "
                                     <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-pink-600 transition-colors">
                                         {service.title}
@@ -447,11 +443,9 @@ const AIServices = () => {
                                     "
                                     <div className="mb-4">"
                                         <p className="text-sm text-gray-500 mb-3">{service.details}</p>"
->>>>>>>> main:backup-pages/src-pages/services/AIServices.jsx
-                                        <div className="grid grid-cols-2 gap-2 mb-4">
+>                                        <div className="grid grid-cols-2 gap-2 mb-4">
                                             {service.features.slice(0, 4).map((feature, index) => ("
                                                 <div key={index} className="flex items-center text-xs text-pink-600">"
-=======
                                     </div>"
                                     ""
                                     <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-pink-600 transition-colors">
@@ -465,27 +459,24 @@ const AIServices = () => {
                                         <div className="grid grid-cols-2 gap-2 mb-4">"
                                             {service.features.slice(0, 4).map((feature, index) => (""
                                                 <div key={index} className="flex items-center text-xs text-pink-600">""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIServices.jsx
                                                     <CheckCircle className="w-3 h-3 mr-2"/>
                                                     {feature}
                                                 </div>
                                             ))}
-<<<<<<< HEAD:pages.disabled/pages/services/AIServices.jsx
+:pages.disabled/pages/services/AIServices.jsx
                                         </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIServices.jsx
+<:pages.disabled/pages/services/AIServices.jsx
 
                                         <div className="mb-4">
                                             <h4 className="text-sm font-semibold text-gray-700 mb-2">Pricing:</h4>
-========
+=
                                         "
                                         <div className="mb-4">"
                                             <h4 className="text-sm font-semibold text-gray-700 mb-2">Pricing:</h4>"
->>>>>>>> main:backup-pages/src-pages/services/AIServices.jsx
-                                            <div className="space-y-1">
+>                                            <div className="space-y-1">
                                                 {Object.entries(service.pricing).map(([plan, price]) => ("
                                                     <div key={plan} className="flex justify-between text-xs">"
                                                         <span className="text-gray-600 capitalize">{plan}:</span>"
-=======
                                         </div>"
                                         ""
                                         <div className="mb-4">""
@@ -494,60 +485,54 @@ const AIServices = () => {
                                                 {Object.entries(service.pricing).map(([plan, price]) => (""
                                                     <div key={plan} className="flex justify-between text-xs">""
                                                         <span className="text-gray-600 capitalize">{plan}:</span>""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIServices.jsx
                                                         <span className="text-pink-600 font-semibold">{String(price)}</span>
                                                     </div>
                                                 ))}
                                             </div>
-<<<<<<< HEAD:pages.disabled/pages/services/AIServices.jsx
+:pages.disabled/pages/services/AIServices.jsx
                                         </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIServices.jsx
+<:pages.disabled/pages/services/AIServices.jsx
 
-========
+=
                                         "
->>>>>>>> main:backup-pages/src-pages/services/AIServices.jsx
-                                        <div className="flex items-center justify-between text-sm text-gray-500 mb-3">
+>                                        <div className="flex items-center justify-between text-sm text-gray-500 mb-3">
                                             <span>Free Trial:</span>"
                                             <span className="text-pink-600 font-semibold">{service.freeTrial}</span>
                                         </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIServices.jsx
+<:pages.disabled/pages/services/AIServices.jsx
 
-========
+=
                                         "
->>>>>>>> main:backup-pages/src-pages/services/AIServices.jsx
-                                        <div className="flex items-center justify-center gap-1 mb-4">
+>                                        <div className="flex items-center justify-center gap-1 mb-4">
                                             {[...Array(5)].map((_, i) => ('
                                                 <Star key={i} className={`w-4 h-4 ${i < Math.floor(service.rating) ? 'text-yellow-400 fill-current' : 'text-gray-300'}`}/>
                                             ))}"
                                             <span className="text-sm text-gray-500 ml-2">({service.reviewCount})</span>
                                         </div>
                                     </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIServices.jsx
+<:pages.disabled/pages/services/AIServices.jsx
 
                                     <div className="text-center mb-4">
                                         <span className="text-3xl font-bold text-pink-600">
-========
+=
                                     "
                                     <div className="text-center mb-4">"
                                         <span className="text-3xl font-bold text-pink-600">'`
->>>>>>>> main:backup-pages/src-pages/services/AIServices.jsx
-                                            {service.price === 0 ? 'Free' : `${service.currency}${service.price}`}
+>                                            {service.price === 0 ? 'Free' : `${service.currency}${service.price}`}
                                         </span>"
                                         <span className="text-gray-500">
                                             {service.price === 0 ? '' : service.price < 1000 ? '/hour' : '/project'}
                                         </span>
                                     </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIServices.jsx
+<:pages.disabled/pages/services/AIServices.jsx
 
                                     <button className="w-full bg-gradient-to-r from-pink-600 to-rose-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-pink-700 hover:to-rose-700 transition-all duration-300 transform hover:scale-105">
                                         <a href={service.link} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">
-========
+=
                                     "
                                     <button className="w-full bg-gradient-to-r from-pink-600 to-rose-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-pink-700 hover:to-rose-700 transition-all duration-300 transform hover:scale-105">"
                                         <a href={service.link} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">"
->>>>>>>> main:backup-pages/src-pages/services/AIServices.jsx
-=======
-                                        </div>"
+>                                        </div>"
                                         ""
                                         <div className="flex items-center justify-between text-sm text-gray-500 mb-3">"
                                             <span>Free Trial:</span>""
@@ -573,7 +558,6 @@ const AIServices = () => {
                                     ""
                                     <button className="w-full bg-gradient-to-r from-pink-600 to-rose-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-pink-700 hover:to-rose-700 transition-all duration-300 transform hover:scale-105">""
                                         <a href={service.link} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIServices.jsx
                                             <ExternalLink className="h-4 w-4 mr-2"/>
                                             Get Started
                                         </a>
@@ -592,19 +576,17 @@ const AIServices = () => {
                         Ready to Transform Your Business with AI?"
                     </h2>""
                     <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-<<<<<<< HEAD:pages.disabled/pages/services/AIServices.jsx
+:pages.disabled/pages/services/AIServices.jsx
                         Start with a consultation and see how our AI services can streamline your operations,
                         improve productivity, and drive growth. No long-term contracts, cancel anytime.
                     </p>"
                     <div className="flex flex-wrap justify-center gap-4">"
                         <button className="bg-gradient-to-r from-pink-600 to-rose-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-pink-700 hover:to-rose-700 transition-all duration-300">"
-=======
                         Start with a consultation and see how our AI services can streamline your operations, 
                         improve productivity, and drive growth. No long-term contracts, cancel anytime."
                     </p>""
                     <div className="flex flex-wrap justify-center gap-4">""
                         <button className="bg-gradient-to-r from-pink-600 to-rose-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-pink-700 hover:to-rose-700 transition-all duration-300">""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIServices.jsx
                             <Rocket className="h-5 w-5 mr-2 inline"/>
                             Start AI Consultation"
                         </button>""
@@ -622,3 +604,5 @@ const AIServices = () => {
 export { AIServices };
 export default AIServices;'"`
 }}'"`'"`
+=======
+>>>>>>> main

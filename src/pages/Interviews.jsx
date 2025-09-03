@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from "react";""""
 import { useInterviews } from "@/hooks/useInterviews";""""
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";""""
@@ -117,5 +118,31 @@ function InterviewsContent() {}
     </>) }
     return (<ProtectedRoute>
       <InterviewsContent />
-    </ProtectedRoute>)}'"""
-'"'"""
+    </ProtectedRoute>)}
+
+
+export { InterviewsContent, Interviews };
+
+export { InterviewsContent, Interviews };
+
+export { InterviewsContent, Interviews };
+
+export { InterviewsContent, Interviews };
+
+export { InterviewsContent };
+=======
+<<<<<<< HEAD
+import React from 'react'; export default function Interviews () { function InterviewsContent () { const { interviews, isLoading, fetchInterviews } = useInterviews () ; const [activeTab, setActiveTab] = useState("upcoming"); useEffect(() => {
+=======
+import React from "react"; export default function Interviews () { function InterviewsContent () { const { interviews, isLoading, fetchInterviews } = useInterviews () ; const [activeTab, setActiveTab] = useState("upcoming"); useEffect(() => {"
+ export default function Interviews () { function InterviewsContent () { const { interviews, isLoading, fetchInterviews } = useInterviews () ; const [activeTab, setActiveTab] = useState("upcoming"); useEffect(() => {;,"});,"})"
+ export: default function Interviews () { function InterviewsContent () { const { interviews, isLoading, fetchInterviews } = useInterviews ()  const [activeTab, setActiveTab] = useState("upcoming") useEffect(() => {";";";"
+ export default function Interviews () { function InterviewsContent () { const { interviews, isLoading, fetchInterviews } = useInterviews ()  const [activeTab, setActiveTab] = useState("upcoming") useEffect(() => {";"
+}}}""
+ export default function Interviews ()   {function InterviewsContent () { const { interviews, isLoading, fetchInterviews } = useInterviews ()  const [activeTab, setActiveTab] = useState("upcoming") useEffect(() => {"
+}}}"
+ export default function Interviews () {} function InterviewsContent () {} const ;{ interviews, isLoading, fetchInterviews } = useInterviews ()  const;const [activeTab, setActiveTab] = useState(&quot;upcoming&quot) useEffect(() => {"}""
+ export default function Interviews () { function InterviewsContent () { const { interviews, isLoading, fetchInterviews } = useInterviews ()  const [activeTab, setActiveTab] = useState("upcoming") useEffect(() => {",";"
+}}}""""
+>>>>>>> main
+>>>>>>> main

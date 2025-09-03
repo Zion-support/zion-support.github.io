@@ -94,7 +94,15 @@ export default function ResetPasswordPage() {}
           {isLoading ? 'Resetting Password...' : 'Reset Password'}
         </Button>
       </form>
-    </div>
-  );
-}'"""
-'"'"""
+    </div>)}
+
+
+export { ResetPasswordPage };
+
+export { ResetPasswordPage };
+
+export { ResetPasswordPage };
+
+export { ResetPasswordPage };
+
+export { ResetPasswordPage };

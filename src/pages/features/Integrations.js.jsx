@@ -84,7 +84,15 @@ export default function IntegrationsFeature() {}
         </div>
       </main>
       <Footer />
-    </>
-  );
-}'"""
-'"'"""
+    </>)}
+
+
+export { IntegrationsFeature };
+
+export { IntegrationsFeature };
+
+export { IntegrationsFeature };
+
+export { IntegrationsFeature };
+
+export { IntegrationsFeature };

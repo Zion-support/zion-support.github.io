@@ -55,7 +55,15 @@ export default function PortfolioBuilder() {}
   return()
     <ProtectedRoute>
       <PortfolioBuilderContent />
-    </ProtectedRoute>
-  );
-}'"""
-'"'"""
+    </ProtectedRoute>)}
+
+
+export { PortfolioBuilderContent, PortfolioBuilder };
+
+export { PortfolioBuilderContent, PortfolioBuilder };
+
+export { PortfolioBuilderContent, PortfolioBuilder };
+
+export { PortfolioBuilderContent, PortfolioBuilder };
+
+export { PortfolioBuilderContent, PortfolioBuilder };

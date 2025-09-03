@@ -65,10 +65,18 @@ function ProjectsContent() {}
           </div>
         )}
       </main>
-    </>
-  );
-}
-export default function Projects() {}
-  return <ProjectsContent />;
-}'"`
-'"`'"`
+      
+    </>)}
+export default function Projects() {
+    return <ProjectsContent />}
+
+
+export { ProjectsContent, Projects };
+
+export { ProjectsContent, Projects };
+
+export { ProjectsContent, Projects };
+
+export { ProjectsContent, Projects };
+
+export { ProjectsContent, Projects };

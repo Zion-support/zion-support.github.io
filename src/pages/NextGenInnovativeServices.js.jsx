@@ -1,83 +1,56 @@
 import React, { useState, useMemo } from 'react';'''
 import { motion } from 'framer-motion';
-import {}
-  Search,
-  Filter,
-  Grid,
-  List,
-  ExternalLink,
-  Phone,
-  Mail,
-  Globe,
-  Clock,
-  Users,'
-  CheckCircle,''
-  TrendingUp,'''
-  Award} from 'lucide-react';'''
-import { NEXT_GEN_INNOVATIVE_SERVICES } from '../data/nextGenInnovativeServices';
-export default function NextGenInnovativeServices() {}
-'
-  const [searchTerm, setSearchTerm] = useState('');'
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedService, setSelectedService] = useState(null);'
-  const [viewMode, setViewMode] = useState('grid');
-  // Get unique categories;
-  const categories = useMemo()'
-    () => [''
-      'all',
-      ...Array.from(new Set(NEXT_GEN_INNOVATIVE_SERVICES.map(s => s.category)))
-    ],
-    []
-  );
-  // Filter services based on search and category;
-  const filteredServices = useMemo(() => {}
-    return NEXT_GEN_INNOVATIVE_SERVICES.filter(service => {}
-      const matchesSearch =
-        service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.tags.some(tag =>
-          tag.toLowerCase().includes(searchTerm.toLowerCase())
-        );
-      return matchesCategory && matchesSearch;
-    });
-  }, [searchTerm, selectedCategory]);
-  const formatPrice = (price, currency) => {}
-    return `${currency}${price.toLocaleString()}`;
-  };
-  const getSupportLevelColor = level => {}
-    switch (level.toLowerCase()) {}
-'
-''
-'''
-      case 'enterprise':''''
-        return 'bg-purple-600';'''
-      case 'premium':''''
-        return 'bg-blue-600';'''
-      case 'standard':''''
-        return 'bg-green-600';'''
-      default:''''
-        return 'bg-gray-600';
-    }
-  };
-  const containerVariants = {}
-    hidden: { opacity: 0 },
-    visible: {}
-      opacity: 1,
-      transition: {}
-        staggerChildren: 0.1}}};
-  const itemVariants = {}
-    hidden: { y: 20, opacity: 0 },
-    visible: {}
-      y: 0,
-      opacity: 1,
-      transition: {}
-        duration: 0.5}}};
-  return()
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">"""
-      {/* Header Section */}""""
-      <div className="relative overflow-hidden">""""
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>""""
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+import { Search, Filter, Grid, List, ExternalLink, Phone, Mail, Globe, Clock, Users, CheckCircle, TrendingUp, Award } from 'lucide-react';
+;
+export default function NextGenInnovativeServices() {
+    const [searchTerm, setSearchTerm] = useState('');
+    const [selectedCategory, setSelectedCategory] = useState('all');
+    const [selectedService, setSelectedService] = useState(null);
+    const [viewMode, setViewMode] = useState('grid');
+    // Get unique categories
+    const categories = useMemo(() => ['all', ...Array.from(new Set(NEXT_GEN_INNOVATIVE_SERVICES.map(s => s.category)))], []);
+    // Filter services based on search and category
+    const filteredServices = useMemo(() => {
+        return NEXT_GEN_INNOVATIVE_SERVICES.filter(service => {
+            const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+            return matchesCategory && matchesSearch})}, [searchTerm, selectedCategory]);
+    const formatPrice = (price, currency) => {
+        return `${currency}${price.toLocaleString()}`};
+    const getSupportLevelColor = (level) => {
+        switch (level.toLowerCase()) {
+            case 'enterprise': return 'bg-purple-600';
+            case 'premium': return 'bg-blue-600';
+            case 'standard': return 'bg-green-600';
+            default: return 'bg-gray-600'}
+    };
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.1
+            }
+        }
+    };
+    const itemVariants = {
+  hidden: { y: 20,
+  opacity: 0 
+
+},
+        visible: {
+            y: 0,
+            opacity: 1,
+            transition: {
+                duration: 0.5
+            }
+        }
+    };
+    return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
+      {/* Header Section */}
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}"""
@@ -598,7 +571,15 @@ export default function NextGenInnovativeServices() {}
           </div>
         </motion.div>
       </div>
-    </div>
-  );
-}'"`
-'"`'"`
+    </div>)}
+
+
+export { NextGenInnovativeServices };
+
+export { NextGenInnovativeServices };
+
+export { NextGenInnovativeServices };
+
+export { NextGenInnovativeServices };
+
+export { NextGenInnovativeServices };

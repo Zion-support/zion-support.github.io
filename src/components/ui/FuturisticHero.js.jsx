@@ -216,5 +216,15 @@ export default function FuturisticHero() {}
                 repeat: Infinity,
                 delay: Math.random() * 2}}/>))}
       </div>
-    </section>)}'"`
-'"`'"`
+    </section>)}
+
+
+export { FuturisticHero };
+
+export { FuturisticHero };
+
+export { FuturisticHero };
+
+export { FuturisticHero };
+
+export { FuturisticHero };

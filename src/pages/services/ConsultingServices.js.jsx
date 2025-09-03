@@ -32,8 +32,16 @@ const ConsultingServices = () => {}
           </Link>
         </div>
       </section>
-    </div>
-  );
-};
-export default ConsultingServices;'"""
-'"'"""
+    </div>)};
+export default ConsultingServices;
+
+
+export { ConsultingServices };
+
+export { ConsultingServices };
+
+export { ConsultingServices };
+
+export { ConsultingServices };
+
+export { ConsultingServices };

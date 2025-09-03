@@ -87,7 +87,15 @@ export default function OrderDetailPage() {}
       <Link to="/orders" className="text-zion-purple underline">
         Back to orders;
       </Link>
-    </div>
-  );
-}'"`
-'"`'"`
+    </div>)}
+
+
+export { OrderDetailPage };
+
+export { OrderDetailPage };
+
+export { OrderDetailPage };
+
+export { OrderDetailPage };
+
+export { OrderDetailPage };

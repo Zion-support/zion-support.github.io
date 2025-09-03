@@ -1215,8 +1215,17 @@ export default function AIAutonomousVentureCapitalist() {}
             </div>
           </motion.div>
         </div>
-      </section>'"`
-    </div>'"`'"`
-  )}'"`'"`'"`
-'"`'"`'"`
-'"`'"`
+      </section>
+    </div>
+  )}
+
+
+export { AIAutonomousVentureCapitalist };
+
+export { AIAutonomousVentureCapitalist };
+
+export { AIAutonomousVentureCapitalist };
+
+export { AIAutonomousVentureCapitalist };
+
+export { AIAutonomousVentureCapitalist };

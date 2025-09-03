@@ -1,28 +1,38 @@
 import React, { useState } from 'react';'''
 import { Link } from 'react-router-dom';
-import { advancedInnovativeServices2025V3, advancedITServices2025, advancedAIServices2025 } from "../../data/2025-advanced-innovative-services-expansion-v3";
-const ComprehensivePricingShowcase2025 = () => {}
-'
-''
-'''
-    const [selectedCategory, setSelectedCategory] = useState('all');'''
-    const [priceRange, setPriceRange] = useState('all');'''
-    const allServices = [''''
-        ...advancedInnovativeServices2025V3.map(service => ({ ...service, type: 'Micro SAAS' })),'''
-        ...advancedITServices2025.map(service => ({ ...service, type: 'IT Service' })),'''
-        ...advancedAIServices2025.map(service => ({ ...service, type: 'AI Service' }))''
-    ];'''
-    const categories = [''''
-        'all',Legal Tech & Compliance',Quantum Computing & Security',Healthcare & Biotech',Energy & Sustainability',Cybersecurity',Fintech & Trading',Quantum Computing & AI',Supply Chain & Logistics',Edge Computing & IoT',Marketing & Automation',Quantum Technology',AI & Machine Learning',AI & Analytics',AI & Customer Experience'''
-    ];'''
-    const priceRanges = [''''
-        { value: 'all', label: 'All Prices' },'''
-        { value: 'low', label: 'Under $500/month', max: 500 },'''
-        { value: 'medium', label: '$500 - $2,000/month', min: 500, max: 2000 },'''
-        { value: 'high', label: 'Over $2,000/month', min: 2000 }'
-    ];''
-    const filteredServices = allServices;'''
-        .filter(service => selectedCategory === 'all' || service.category === selectedCategory)
+;
+const ComprehensivePricingShowcase2025 = () => {
+    const [selectedCategory, setSelectedCategory] = useState('all');
+    const [priceRange, setPriceRange] = useState('all');
+    const allServices = [
+        ...advancedInnovativeServices2025V3.map(service => ({ ...service, type: 'Micro SAAS' })),
+        ...advancedITServices2025.map(service => ({ ...service, type: 'IT Service' })),
+        ...advancedAIServices2025.map(service => ({ ...service, type: 'AI Service' }))
+    ];
+    const categories = [
+        'all',
+        'Legal Tech & Compliance',
+        'Quantum Computing & Security',
+        'Healthcare & Biotech',
+        'Energy & Sustainability',
+        'Cybersecurity',
+        'Fintech & Trading',
+        'Quantum Computing & AI',
+        'Supply Chain & Logistics',
+        'Edge Computing & IoT',
+        'Marketing & Automation',
+        'Quantum Technology',
+        'AI & Machine Learning',
+        'AI & Analytics',
+        'AI & Customer Experience'
+    ];
+    const priceRanges = [
+        { value: 'all', label: 'All Prices' },
+        { value: 'low', label: 'Under $500/month', max: 500 },
+        { value: 'medium', label: '$500 - $2,000/month', min: 500, max: 2000 },
+        { value: 'high', label: 'Over $2,000/month', min: 2000 }
+    ];
+    const filteredServices = allServices        .filter(service => selectedCategory === 'all' || service.category === selectedCategory)
         .filter(service => {}
 '
 ''
@@ -335,5 +345,15 @@ const ComprehensivePricingShowcase2025 = () => {}
         </div>
       </section>
     </div>)};
-export default ComprehensivePricingShowcase2025;'"`
-'"`'"`
+export default ComprehensivePricingShowcase2025;
+
+
+export { ComprehensivePricingShowcase2025 };
+
+export { ComprehensivePricingShowcase2025 };
+
+export { ComprehensivePricingShowcase2025 };
+
+export { ComprehensivePricingShowcase2025 };
+
+export { ComprehensivePricingShowcase2025 };

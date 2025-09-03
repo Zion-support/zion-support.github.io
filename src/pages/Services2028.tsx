@@ -1,67 +1,29 @@
-import React, { useState, useEffect } from 'react';''
-import { SEO } from '@/components / SEO';
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Search, Filter, Star, Sparkles, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool, Eye, Server, Smartphone, Database, Network, Clock, ArrowRight, ChevronDown, CheckCircle, ExternalLink  } from 'lucide-react.ts';
+import { SEO  } from '@/components/SEO';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2028  } from '../data/innovativeMicroSaasServices2028';
+;
+;
 
-  Search,
-  Filter,
-  Star,
-  Sparkles,
-  Zap,
-  Brain,
-  Shield,
-  Cloud,
-  Rocket,
-  Globe,
-  Cpu,
-  Lock,
-  Heart,
-  Users,
-  ShoppingCart,
-  BookOpen,
-  MessageCircle,
-  HelpCircle,
-  DollarSign,
-  Gauge,
-  Workflow,
-  Atom,
-  Target,
-  TrendingUp,
-  Award,
-  Code,
-  Truck,
-  Building,
-  BarChart3,
-  PenTool,
-  Eye,
-  Server,
-  Smartphone,
-  Database,
-  Network,
-  Clock,
-  ArrowRight,
-  ChevronDown,
-  CheckCircle,''
-  ExternalLink} from 'lucide-react.ts';''
-        return b.price - a.price;''
-      case 'rating': any;
-        return b.rating - a.rating;'
-      case 'name': any;
-        return a.title.localeCompare (b.title) ;
-      default: any;
-        return b.featured ? 1 : -1}
-  }) ;
-
+export default function Services2028(...args: unknown[]): unknown {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
+  const [sortBy, setSortBy] = useState('featured');
   return()    <div className="min-h-screen bg-cyber-black">"""
       {/* Futuristic Background */}""""
       <div className="futuristic-bg">
         {[...Array(15)].map((_, i) => (
-          <div"""
-            key={i}""""
-            className="matrix-rain"""
-            style={{}
-              left: any`${Math.random() * 100}%`,``
-              animationDelay: `${Math.random() * 20}s`,``
-              animationDuration: `${15 + Math.random() * 10}s`}}
-          >
+          <div
+            key={i}
+            className="matrix-rain"
+            style={{
+              left: unknown`${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 20}s`,
+              animationDuration: `${15 + Math.random() * 10}s`
+            }}          >
             {String.fromCharCode(0x30a0 + Math.random() * 96)}
           </div>
         ))}
@@ -154,11 +116,10 @@ import { SEO } from '@/components / SEO';
 
               {/* Category Filter */}
               <div>
-                <select;
-                  value={selectedCategory}"""
-                  onChange={e => setSelectedCategory(e.target.value)}""""
-                  className="w-full px-4 py-3 bg-cyber-black/70 border border-neon-blue/30 rounded-lg text-white focus: anyborder-neon-blue focus:outline-none focus:ring-2 focus:ring-neon-blue/20 transition-all duration-300"""
-                >
+                <select
+                  value={selectedCategory}
+                  onChange={(e) => setSelectedCategory(e.target.value)}
+                  className="w-full px-4 py-3 bg-cyber-black/70 border border-neon-blue/30 rounded-lg text-white focus: unknownborder-neon-blue focus:outline-none focus:ring-2 focus:ring-neon-blue/20 transition-all duration-300"                >
                   {categories.map(category => (
                     <option key={category} value={category}>'
                       {category === 'all' ? 'All Categories' : category}
@@ -204,14 +165,13 @@ import { SEO } from '@/components / SEO';
           </div>
         </div>
       </section>
-"""
-      {/* Services Grid */}""""
-      <section id="services" className="py-20">""""
-        <div className="container mx-auto px-4">""""
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {sortedServices.map((service, index) => (
-              <motion.div;
-                key={service.id}
+
+      {/* Services Grid */}
+      <section id="services" className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-3 gap-8">
+            {sortedServices.map((service, index)  => (
+              <motion.div                key={service.id}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}"""
                 transition={{ duration: 0.6, delay: index * 0.1 }}""""
@@ -406,8 +366,69 @@ import { SEO } from '@/components / SEO';
             </div>
           </motion.div>
         </div>
-      </section>'"`
-    </div>'"`'"`
-  )}'"`'"`'"`
-'"`'"`'"`
-'"`'"`
+      </section>
+    </div>
+  );
+}
+
+export { Services2028 };
+
+export { Services2028 };
+
+export { Services2028 };
+
+export { Services2028 };
+
+export { Services2028 };
+=======
+import React from "react"
+import Head from "next/head"
+import Link from "next/link"
+const Services2028 = () => {
+  return (
+    <>
+      <Head>
+        <title>Services2028 - Zion Tech Group</title>
+        <meta name="description" content="Professional Services2028 services"  />
+      </Head>
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-8">
+              Services2028
+            </h1>
+            <p className="text-xl text-gray-600 mb-12">
+              Professional Services2028 services and solutions
+            </p>
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h2 className="text-2xl font-semibold mb-4">Our Services</h2>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Professional Solutions</li>
+                  <li>• Expert Implementation</li>
+                  <li>• 24/7 Support</li>
+                  <li>• Custom Development</li>
+                </ul>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h2 className="text-2xl font-semibold mb-4">Why Choose Us</h2>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Industry Expertise</li>
+                  <li>• Proven Results</li>
+                  <li>• Scalable Solutions</li>
+                  <li>• Competitive Pricing</li>
+                </ul>
+              </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                View Pricing
+              </Link>
+              <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
+                Contact Us
+              </Link>
+            </div>
+    </>
+  );
+}
+export default Services2028
+>>>>>>> main

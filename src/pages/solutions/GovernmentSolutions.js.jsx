@@ -279,7 +279,16 @@ export default function GovernmentSolutions() {}
           </div>
         </div>
       </section>
-    </div>
-  );
-}'"""
-'"'"""
+    </div>);
+}
+
+
+export { GovernmentSolutions, Icon };
+
+export { GovernmentSolutions, Icon };
+
+export { GovernmentSolutions, Icon };
+
+export { GovernmentSolutions, Icon };
+
+export { GovernmentSolutions, Icon };

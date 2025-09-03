@@ -77,5 +77,15 @@ const SpaceTech = () => {}
         </div>
       </section>
     </div>)};
-export default SpaceTech;'"""
-'"'"""
+export default SpaceTech;
+
+
+export { SpaceTech };
+
+export { SpaceTech };
+
+export { SpaceTech };
+
+export { SpaceTech };
+
+export { SpaceTech };

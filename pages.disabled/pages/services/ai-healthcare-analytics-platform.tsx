@@ -1,5 +1,6 @@
-<<<<<<< HEAD:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
-<<<<<<<< HEAD:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
+<<<<<<< HEAD
+:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
+<:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { SEO  } from '@/components/SEO';
@@ -9,16 +10,14 @@ import { Heart,
   Shield,
   Zap,
   CheckCircle,
-========
-<<<<<<< HEAD
+=
 import { Heart, 
   Brain, 
   Activity, 
   Shield, 
   Zap, 
   CheckCircle, 
->>>>>>>> main:backup-pages/src-pages/services/ai-healthcare-analytics-platform.tsx
-  ArrowRight,
+>  ArrowRight,
   Clock,
   Target,
   BarChart3,
@@ -59,36 +58,7 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
   ]},;
     {;
       title: 'Drug Safety Monitoring',;
-      description: 'Real-time monitoring of drug interactions and adverse effects',;
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-healthcare-analytics-platform.tsx
-      icon: Shield};
-  ];
-  const complianceStandards = [;''
-    'HIPAA Compliant',;''
-    'FDA Approved',;''
-    'ISO 13485',;''
-    'SOC 2 Type II',;''
-    'GDPR Compliant',;'    'HITECH Certified';
-  ];
-  return()
-<<<<<<< HEAD:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
-    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-<<<<<<<< HEAD:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
-      <SEO
-========
-      <SEO "
-<<<<<<< HEAD
->>>>>>>> main:backup-pages/src-pages/services/ai-healthcare-analytics-platform.tsx
-        title="AI Healthcare Analytics Platform - Zion Tech Group"
-        description="Revolutionary AI-powered healthcare analytics platform with 95% accuracy rate. Diagnostic support, predictive analytics, and patient monitoring. Start from $799/month."
-       />
-=======
-=======
-    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
-      <SEO ""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-healthcare-analytics-platform.tsx
-        title="AI Healthcare Analytics Platform - Zion Tech Group""        description="Revolutionary AI-powered healthcare analytics platform with 95% accuracy rate. Diagnostic support, predictive analytics, and patient monitoring. Start from $799/month."
+      description: 'Real-time monitoring of drug interactions and adverse effects',;        title="AI Healthcare Analytics Platform - Zion Tech Group""        description="Revolutionary AI-powered healthcare analytics platform with 95% accuracy rate. Diagnostic support, predictive analytics, and patient monitoring. Start from $799/month."
        />"
       {/* Hero Section */}""
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">""
@@ -97,22 +67,18 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
             initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
+:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-healthcare-analytics-platform.tsx
 }}
             animate = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
+:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-healthcare-analytics-platform.tsx
 }}
             transition={{ duration: 0.8 }}"
 ""
@@ -148,22 +114,18 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
             initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
+:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-healthcare-analytics-platform.tsx
 }}
             whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
+:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-healthcare-analytics-platform.tsx
 }}
             transition={{ duration: 0.8 }}"
             viewport={{ once: true }}""
@@ -184,27 +146,23 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
                 initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
+:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-healthcare-analytics-platform.tsx
 }}
                 whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
+:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-healthcare-analytics-platform.tsx
 }}
                 transition = {
 
   { duration: 0.8,
-<<<<<<< HEAD:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
+:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
   delay: index * 0.1
 
 }}
@@ -215,7 +173,6 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>"
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>"
-=======
   delay: index * 0.1 
 }}"
                 viewport={{ once: true }}""
@@ -225,7 +182,6 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
                   <feature.icon className="w-6 h-6 text-white" />"
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-healthcare-analytics-platform.tsx
                 <p className="text-gray-300">{feature.description}</p>
               </motion.div>;
             ))}
@@ -239,22 +195,18 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
             initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
+:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-healthcare-analytics-platform.tsx
 }}
             whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
+:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-healthcare-analytics-platform.tsx
 }}
             transition={{ duration: 0.8 }}"
             viewport={{ once: true }}""
@@ -275,27 +227,23 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
                 initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
+:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-healthcare-analytics-platform.tsx
 }}
                 whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
+:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-healthcare-analytics-platform.tsx
 }}
                 transition = {
 
   { duration: 0.8,
-<<<<<<< HEAD:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
+:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
   delay: index * 0.1
 
 }}
@@ -306,7 +254,6 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>"
                 <h3 className="text-2xl font-bold text-white mb-2">{benefit.title}</h3>"
-=======
   delay: index * 0.1 
 }}"
                 viewport={{ once: true }}""
@@ -316,7 +263,6 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
                   <benefit.icon className="w-8 h-8 text-white" />"
                 </div>""
                 <h3 className="text-2xl font-bold text-white mb-2">{benefit.title}</h3>""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-healthcare-analytics-platform.tsx
                 <p className="text-gray-300">{benefit.description}</p>
               </motion.div>;
             ))}
@@ -330,22 +276,18 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
             initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
+:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-healthcare-analytics-platform.tsx
 }}
             whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
+:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-healthcare-analytics-platform.tsx
 }}
             transition={{ duration: 0.8 }}"
             viewport={{ once: true }}""
@@ -366,27 +308,23 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
                 initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
+:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
   x: index % 2 === 0 ? -20 : 20
 
-=======
   x: index % 2 === 0 ? -20 : 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-healthcare-analytics-platform.tsx
 }}
                 whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
+:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
   x: 0
 
-=======
   x: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-healthcare-analytics-platform.tsx
 }}
                 transition = {
 
   { duration: 0.8,
-<<<<<<< HEAD:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
+:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
   delay: index * 0.1
 
 }}
@@ -397,7 +335,6 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
                   <useCase.icon className="w-8 h-8 text-white" />
                 </div>"
                 <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title}</h3>"
-=======
   delay: index * 0.1 
 }}"
                 viewport={{ once: true }}""
@@ -407,7 +344,6 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
                   <useCase.icon className="w-8 h-8 text-white" />"
                 </div>""
                 <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title}</h3>""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-healthcare-analytics-platform.tsx
                 <p className="text-gray-300 text-lg">{useCase.description}</p>
               </motion.div>;
             ))}
@@ -421,22 +357,18 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
             initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
+:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-healthcare-analytics-platform.tsx
 }}
             whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
+:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-healthcare-analytics-platform.tsx
 }}
             transition={{ duration: 0.8 }}"
             viewport={{ once: true }}""
@@ -457,40 +389,34 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
                 initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
+:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-healthcare-analytics-platform.tsx
 }}
                 whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
+:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-healthcare-analytics-platform.tsx
 }}
                 transition = {
 
   { duration: 0.8,
-<<<<<<< HEAD:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
+:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
   delay: index * 0.1
 
 }}
                 viewport={{ once: true }}"
                 className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 border border-gray-700 text-center hover:border-blue-500 transition-all duration-300"
 "
-=======
   delay: index * 0.1 
 }}"
                 viewport={{ once: true }}""
                 className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 border border-gray-700 text-center hover:border-blue-500 transition-all duration-300""
 ""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-healthcare-analytics-platform.tsx
                 <CheckCircle className="w-8 h-8 text-green-400 mx-auto mb-3"  />"                <p className="text-white font-medium text-sm">{standard}</p>
               </motion.div>;
             ))}
@@ -504,22 +430,18 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
             initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
+:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-healthcare-analytics-platform.tsx
 }}
             whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
+:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-healthcare-analytics-platform.tsx
 }}
             transition={{ duration: 0.8 }}"
             viewport={{ once: true }}""
@@ -540,32 +462,26 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
                 initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
+:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-healthcare-analytics-platform.tsx
 }}
                 whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
+:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-healthcare-analytics-platform.tsx
 }}
                 transition = {
 
   { duration: 0.8,
-<<<<<<< HEAD:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
+:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
   delay: index * 0.1
 
-=======
   delay: index * 0.1 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-healthcare-analytics-platform.tsx
 }}
                 viewport={{ once: true }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
@@ -619,22 +535,18 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
             initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
+:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-healthcare-analytics-platform.tsx
 }}
             whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
+:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-healthcare-analytics-platform.tsx
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}"
@@ -653,17 +565,14 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
               <button className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300">
                 Contact Healthcare Team
               </button>
-<<<<<<< HEAD:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
+:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
             </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
+<:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
 
-========
+=
             "
->>>>>>>> main:backup-pages/src-pages/services/ai-healthcare-analytics-platform.tsx
-=======
-            </div>"
+>            </div>"
             ""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-healthcare-analytics-platform.tsx
             <p className="text-gray-400 mt-6">;
               No credit card required • 30-day free trial • HIPAA compliant;
             </p>;
@@ -672,3 +581,5 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
       </section>;
     </div>;'"`
   )}}}}}}'"`'"`
+=======
+>>>>>>> main

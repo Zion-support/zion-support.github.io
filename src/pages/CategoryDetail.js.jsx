@@ -244,6 +244,16 @@ function generateInnovationListing(index) {}
             </div>)}
         </div>
       </div>
+      
+    </>)}
 
-    </>)}'"`
-'"`'"`
+
+export { AUTO_SERVICE_TITLES, CategoryDetail };
+
+export { AUTO_SERVICE_TITLES, CategoryDetail };
+
+export { AUTO_SERVICE_TITLES, CategoryDetail };
+
+export { AUTO_SERVICE_TITLES, CategoryDetail };
+
+export { AUTO_SERVICE_TITLES };

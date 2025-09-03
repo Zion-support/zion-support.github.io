@@ -1,18 +1,15 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
-// import { ULTIMATE_MICRO_SAAS_SERVICES_2025 } from "../data/ultimateMicroSaasServices2025";""""
-// import { INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 } from "../data/innovativeEnterpriseSolutions2025";""""
-// import { EMERGING_TECHNOLOGY_SOLUTIONS_2025 } from "../data/emergingTechnologySolutions2025";'
-// import { ULTIMATE_MICRO_SAAS_SERVICES_2025 } from '../data/ultimateMicroSaasServices2025';'
-// import { INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 } from '../data/innovativeEnterpriseSolutions2025';'
-// import { EMERGING_TECHNOLOGY_SOLUTIONS_2025 } from '../data/emergingTechnologySolutions2025';
-const UltimateServicesShowcase2025 = () => {}
-'
-''
-'''
-    const [selectedCategory, setSelectedCategory] = useState('all');'''
-    const [selectedPriceRange, setSelectedPriceRange] = useState('all');'''
-    const [searchTerm, setSearchTerm] = useState('');'''
-    const [sortBy, setSortBy] = useState('name');
+// ;
+// ;
+// ;
+// ;
+// ;
+// ;
+const UltimateServicesShowcase2025 = () => {
+    const [selectedCategory, setSelectedCategory] = useState('all');
+    const [selectedPriceRange, setSelectedPriceRange] = useState('all');
+    const [searchTerm, setSearchTerm] = useState('');    const [sortBy, setSortBy] = useState('name');
     // Combine all services;
     const allServices = [...ULTIMATE_MICRO_SAAS_SERVICES_2025,
         ...INNOVATIVE_ENTERPRISE_SOLUTIONS_2025,
@@ -73,31 +70,50 @@ const UltimateServicesShowcase2025 = () => {}
             Transform your business with cutting-edge technology solutions designed for the future.
           </p>
         </div>
+=======
+import React from "react"
+export default UltimateServicesShowcase2025,
+export default UltimateServicesShowcase2025""
+ export: default UltimateServicesShowcase2025,,"
+export: default UltimateServicesShowcase2025""",,
+ export default UltimateServicesShowcase2025,",
+ export default UltimateServicesShowcase2025","
+export default function UltimateServicesShowcase2025() {return (
+    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
+      <SEO title="UltimateServicesShowcase2025 - Zion Tech Group" description="Professional UltimateServicesShowcase2025 services by Zion Tech Group"  />"
+      <div className="container mx-auto px-4 py-20">"
+        <h1 className="text-4xl font-bold text-white mb-8">UltimateServicesShowcase2025</h1>"
+        <p className="text-gray-300 text-lg">
+          Professional UltimateServicesShowcase2025 services to help your business grow.
+        </p>
+      </div>
+  )
+}
+ );
+export default UltimateServicesShowcase2025,
+export default UltimateServicesShowcase2025&apos;&apos,
+>>>>>>> main
 """
-        {/* Contact Information */}""""
-        <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 rounded-2xl p-6 mb-8 border border-blue-500/30">""""
-          <div className="text-center">""""
-            <h2 className="text-2xl font-bold mb-4 text-cyan-400">Contact Zion Tech Group</h2>""""
-            <div className="grid md:grid-cols-3 gap-6 text-center">"""
-              <div>""""
-                <h3 className="text-lg font-semibold text-blue-300 mb-2">Phone</h3>""""
-                <p className="text-lg">+1 302 464 0950</p>
-              </div>"""
-              <div>""""
-                <h3 className="text-lg font-semibold text-blue-300 mb-2">Email</h3>""""
-                <p className="text-lg">kleber@ziontechgroup.com</p>
-              </div>"""
-              <div>""""
-                <h3 className="text-lg font-semibold text-blue-300 mb-2">Address</h3>""""
-                <p className="text-lg">364 E Main St STE 1008<br />Middletown DE 19709</p>
-              </div>"""
-            </div>""""
-            <div className="mt-4">""""
-              <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="inline-block bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Visit Our Website;
-              </a>
-            </div>
+const UltimateServicesShowcase2025: React.FC = () => {
+  return ("
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
+      <SEO title="UltimateServicesShowcase2025 - Zion Tech Group""
+        description="Professional UltimateServicesShowcase2025 services by Zion Tech Group"">
+        keywords="ultimateservicesshowcase2025, technology, services" />"
+      <div className="container mx-auto px-4 py-20">"
+        <div className="text-center">"
+          <h1 className="text-4xl font-bold text-white mb-6">UltimateServicesShowcase2025</h1>"
+          <p className="text-xl text-gray-300 mb-8">
+            Professional UltimateServicesShowcase2025 services to help your business grow.
+          </p>"
+          <div className="flex justify-center">"
+            <a href="/contact" "
+              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover: shadow-lg transition-all duration-300"
+            >
+              Get Started,
+            </a>
           </div>
+<<<<<<< HEAD
         </div>
 """
         {/* Filters and Search */}""""
@@ -272,8 +288,23 @@ const UltimateServicesShowcase2025 = () => {}
             </div>
           </div>
         </div>
-      </div>'"`
-    </div>)};'"`'"`
-export default UltimateServicesShowcase2025;'"`'"`'"`
-}}}'"`'"`'"`
-'"`'"`
+      </div>
+    </div>)};
+export default UltimateServicesShowcase2025;
+}}}
+
+export { UltimateServicesShowcase2025 };
+
+export { UltimateServicesShowcase2025 };
+
+export { UltimateServicesShowcase2025 };
+
+export { UltimateServicesShowcase2025 };
+
+export { UltimateServicesShowcase2025 };
+=======
+    </div>;,
+  )}
+
+export default UltimateServicesShowcase2025;""
+>>>>>>> main

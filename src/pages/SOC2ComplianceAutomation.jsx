@@ -1172,8 +1172,17 @@ export default function SOC2ComplianceAutomation() {}
             </div>
           </motion.div>
         </div>
-      </section>'"`
-    </div>'"`'"`
-  )}'"`'"`'"`
-'"`'"`'"`
-'"`'"`
+      </section>
+    </div>
+  )}
+
+
+export { SOC2ComplianceAutomation };
+
+export { SOC2ComplianceAutomation };
+
+export { SOC2ComplianceAutomation };
+
+export { SOC2ComplianceAutomation };
+
+export { SOC2ComplianceAutomation };

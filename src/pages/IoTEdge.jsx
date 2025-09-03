@@ -564,8 +564,17 @@ export default function IoTEdge() {}
             </div>
           </motion.div>
         </div>
-      </section>'"`
-    </div>'"`'"`
-  )}'"`'"`'"`
-'"`'"`'"`
-'"`'"`
+      </section>
+    </div>
+  )}
+
+
+export { IoTEdge };
+
+export { IoTEdge };
+
+export { IoTEdge };
+
+export { IoTEdge };
+
+export { IoTEdge };

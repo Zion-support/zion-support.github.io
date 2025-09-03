@@ -1,57 +1,54 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 export const FuturisticAnimatedBackground: React.FC = () => {;
 export default FuturisticAnimatedBackground;
 
-  useEffect ( () => {}
-    if (!canvas) return;
-
-  useEffect(() => {}
+  const canvasRef = useRef < HTMLCanvasElement> (null) ;
+  useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
+    
     if(!canvas) return;
 
     if(!ctx) return;
 
-    // Set canvas size;
+    // Set canvas size
+    
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight};
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
-    const gridCanvas: any = document.createElement('canvas');'
-    const gridCtx: any = gridCanvas.getContext('2d');    if(gridCtx) {}
-    if (gridCtx) {}
+
+    // Add enhanced grid background'
+
+    if(gridCtx) {
       gridCanvas.width = canvas.width;
       gridCanvas.height = canvas.height;
 
-      // Draw enhanced grid'
-'
-    // Add enhanced grid background''
-    const gridCanvas: any = document.createElement('canvas');''
-    const gridCtx: any = gridCanvas.getContext('2d');    if (gridCtx) {}
-      gridCanvas.width = canvas.width;
-      gridCanvas.height = canvas.height;
-      '
-      // Draw enhanced grid''
-      gridCtx.strokeStyle = 'rgba(6, 182, 212, 0.1);
-      gridCtx.lineWidth = 1;
+      // Draw enhanced grid
+      gridCtx.strokeStyle = 'rgba(6, 182, 212, 0.1) ';      gridCtx.lineWidth = 1;
 
-      for(let x = 0; x < gridCanvas.width; x += 40) {}
-      for (let x = 0; x < gridCanvas.width; x += 40) {}
-        gridCtx.beginPath();
-        gridCtx.moveTo(x, 0);
-        gridCtx.lineTo(x, gridCanvas.height);
-        gridCtx.stroke()}
+      for(let x = 0; x < gridCanvas.width; x += 40) {
+        gridCtx.beginPath () ;
+        gridCtx.moveTo(x, 0) ;
+        gridCtx.lineTo(x, gridCanvas.height) ;
+        gridCtx.stroke () ;
+      }
+      for(let y = 0; y < gridCanvas.height; y += 40) {
 
-      for(let y = 0; y < gridCanvas.height; y += 40) {}
-      for (let y = 0; y < gridCanvas.height; y += 40) {}
         gridCtx.beginPath();
         gridCtx.moveTo(0, y);
         gridCtx.lineTo(gridCanvas.width, y);
         gridCtx.stroke()}
     }
 
-    // Animation variables;
+    // Animation variables
     let animationId: number;
+    
+    // Particle system
+    const particles: Array<{
 
-    // Particle system;
-    const particles: Array<{}
       x: number;
       y: number;
       vx: number;
@@ -61,8 +58,10 @@ export default FuturisticAnimatedBackground;
       life: number;
       maxLife: number}[] = [];
 
-    // Create particles;
-      particles.push({}
+    // Create particles
+
+      particles.push({
+
         x,
         y,
         vx: Math.cos (angle) * speed,
@@ -70,34 +69,38 @@ export default FuturisticAnimatedBackground;
         size: Math.random () * 3 + 1,
         color: `hsl(${200 + Math.random () * 60}, 70%, 60%) `,
         life: 1,
-        maxLife: Math.random () * 100 + 50;
+        maxLife: Math.random () * 100 + 50
       }) };
 
-    // Update and draw particles;
-    const animate: any = (...args: unknown[]): unknown => {;      time += 0.01;
-'
-      // Clear canvas with fade effect''
+    // Update and draw particles
+    const animate = (...args: unknown[]): unknown => {;      time += 0.01;
+
+      // Clear canvas with fade effect'
       ctx.fillStyle = 'rgba(2, 6, 23, 0.1);
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-      // Create new particles;
-      if(particles.length < 100) {}
+      // Create new particles
+      if(particles.length < 100) {
+
         createParticle();
 
-      // Update and draw particles;
-      for(let i = particles.length-1; i >= 0; i--) {}
-        // Update position;
+      // Update and draw particles
+      for(let i = particles.length-1; i >= 0; i--) {
+
+        // Update position
         particle.x += particle.vx;
         particle.y += particle.vy;
         particle.life += 1;
 
-        // Remove dead particles;
-        if(particle.life > particle.maxLife) {}
+        // Remove dead particles
+        if(particle.life > particle.maxLife) {
+
           particles.splice(i, 1);
           continue;
 
-        // Draw particle with glow effect;
-        // Outer glow;
+        // Draw particle with glow effect
+
+        // Outer glow
         ctx.shadowColor = particle.color;
         ctx.shadowBlur = 20;
         ctx.fillStyle = particle.color;
@@ -106,38 +109,41 @@ export default FuturisticAnimatedBackground;
         ctx.arc(particle.x, particle.y, size * 3, 0, Math.PI * 2) ;
         ctx.fill () ;
 
-        // Inner particle;
+        // Inner particle
         ctx.shadowBlur = 10;
         ctx.globalAlpha = alpha;
         ctx.beginPath () ;
-        ctx.arc(particle.x, particle.y, size, 0, Math.PI * 2) ;'
-        ctx.fill () ;''
-'''
-      // Draw grid pattern''''
+        ctx.arc(particle.x, particle.y, size, 0, Math.PI * 2) ;
+        ctx.fill () ;
+
+      // Draw grid pattern'
       ctx.strokeStyle = 'rgba(56, 189, 248, 0.1);
       ctx.lineWidth = 1;
       ctx.globalAlpha = 0.3;
 
-      // Vertical lines;
-      for(let x = offsetX; x < canvas.width; x += gridSize) {}
+      // Vertical lines
+      for(let x = offsetX; x < canvas.width; x += gridSize) {
+
         ctx.beginPath();
         ctx.moveTo(x, 0);
         ctx.lineTo(x, canvas.height);
         ctx.stroke();
 
-      // Horizontal lines;
-      for(let y = offsetY; y < canvas.height; y += gridSize) {}
+      // Horizontal lines
+      for(let y = offsetY; y < canvas.height; y += gridSize) {
+
         ctx.beginPath();
         ctx.moveTo(0, y);
         ctx.lineTo(canvas.width, y);
         ctx.stroke();
 
-      // Draw floating geometric shapes;
-      ctx.globalAlpha = 0.1;'
+      // Draw floating geometric shapes
+      ctx.globalAlpha = 0.1;
       ctx.strokeStyle = 'rgba(168, 85, 247, 0.5);
       ctx.lineWidth = 2;
 
-      // Rotating triangle;
+      // Rotating triangle
+
       ctx.save () ;
       ctx.translate(centerX, centerY) ;
       ctx.rotate(rotation) ;
@@ -149,21 +155,22 @@ export default FuturisticAnimatedBackground;
       ctx.stroke () ;
       ctx.restore () ;
 
-      // Floating circle;
-      '
-'      ctx.strokeStyle = 'rgba(56, 189, 248, 0.5)';
-      ctx.beginPath();
+      // Floating circle
+      
+
+      ctx.strokeStyle = 'rgba(56, 189, 248, 0.5);      ctx.beginPath();
       ctx.arc(circleX, circleY, circleSize, 0, Math.PI * 2);
       ctx.stroke();
 
-      // Reset global alpha;
+      // Reset global alpha
       ctx.globalAlpha = 1;
-'
-      // Draw energy waves''
+
+      // Draw energy waves'
       ctx.strokeStyle = 'rgba(56, 189, 248, 0.2);
       ctx.lineWidth = 3;
 
-      for(let i = 0; i < 3; i++) {}
+      for(let i = 0; i < 3; i++) {
+
         ctx.beginPath () ;
         ctx.moveTo(waveOffset - 100, waveY) ;
         ctx.lineTo(waveOffset, waveY + 20) ;
@@ -173,25 +180,36 @@ export default FuturisticAnimatedBackground;
       animationId = requestAnimationFrame(animate) };
     animate () ;
 
-    return () => {}
-'
-''
-'''
+    return () => {
+
       window.removeEventListener('resize', resizeCanvas);
       cancelAnimationFrame(animationId)}}, []) ;
   return ()
-    <canvas;
+    <canvas
       ref = {canvasRef}
-      className="fixed inset - 0 w-full h-full pointer - events - none z -0"""
-      style = {}
-'
-''
-'''
+      className="fixed inset - 0 w-full h-full pointer - events - none z -0"
+      style = {
+
   { background: 'radial-gradient(1200px 600px at 10% -10%, rgba(56,189,248,0.05), transparent 60%), radial-gradient(900px 500px at 110% 10%, rgba(168,85,247,0.03),;
   ;
   transparent 60%);
 ;
 }};
     />;) };
-'"`
-export default FuturisticAnimatedBackground}}}}}}'"`'"`
+
+export default FuturisticAnimatedBackground}}}}}}'"`
+=======
+import React from "react"
+import { SEO } from "@/components/SEO"
+export default function FuturisticAnimatedBackground() {return (
+    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
+      <SEO title="FuturisticAnimatedBackground - Zion Tech Group" description="Professional FuturisticAnimatedBackground services by Zion Tech Group"  />"
+      <div className="container mx-auto px-4 py-20">"
+        <h1 className="text-4xl font-bold text-white mb-8">FuturisticAnimatedBackground</h1>"
+        <p className="text-gray-300 text-lg">
+          Professional FuturisticAnimatedBackground services to help your business grow.
+        </p>
+      </div>
+  );"}"
+>>>>>>> main
+>>>>>>> main

@@ -379,7 +379,15 @@ export default function AIAutonomousBusinessPlatform() {}
           </motion.div>
         </div>
       </section>
-    </div>
-  );
-}'"`
-'"`'"`
+    </div>)}
+
+
+export { AIAutonomousBusinessPlatform, IconComponent, IconComponent };
+
+export { AIAutonomousBusinessPlatform, IconComponent, IconComponent };
+
+export { AIAutonomousBusinessPlatform, IconComponent, IconComponent };
+
+export { AIAutonomousBusinessPlatform, IconComponent, IconComponent };
+
+export { AIAutonomousBusinessPlatform, IconComponent, IconComponent };

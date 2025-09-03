@@ -1,36 +1,18 @@
-export;
-  toast({}
+<<<<<<< HEAD
+=======
+// comment
+export const apiErrorHandler = {}
+
+<<<<<<< HEAD
     variant: 'destructive',
+    error?.message || fallbackMessage || 'An unexpected error occurred';  toast({
 '
-    error?.message || fallbackMessage || 'An unexpected error occurred';  toast({}
-'
-''
-'''
-''''
-    variant: 'destructive','''
-'''
+    variant: 'destructive','
     title: 'Error',
     description: message});
-  // Log error for debugging;
-'
-  if (process.env.NODE_ENV === 'development') {}
-'
-''
-'''
-    // console.error('API Error:', error)}
-};
+  // Log error for debugging
+=======
+>>>>>>> main
 
-export;
-  return {}
-'
-    title: 'Error',
-    description: message});
-  // Log error for debugging;
-  if (process.env.NODE_ENV === 'development') {}
-    // console.error('API Error:', error)}
-};
-
-export;
-  return {}
-    error: error?.message || fallbackMessage || 'An unexpected error occurred'}};
-'
+export default apiErrorHandler
+>>>>>>> main

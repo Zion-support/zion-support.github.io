@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {}
   Zap, 
   Brain, 
@@ -355,17 +356,47 @@ interface Service {}
   }
 ];
 
-  return()
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"""
-      <SEO """"
-        title="Comprehensive Services Showcase 2025 | Zion Tech Group"""""
-        description="Explore our comprehensive portfolio of AI, IT, and Micro SAAS services. Discover innovative solutions designed to transform your business in 2025 and beyond.""        keywords="AI services, IT services, Micro SAAS, cybersecurity, healthcare AI, quantum computing, cloud DevOps, business intelligence"""
-        />
-"""
-      {/* Hero Section */}""""
-      <section className="relative pt-32 pb-20 overflow-hidden">""""
-        <div className="absolute inset-0 bg-gradient-to-r from-zion-blue/20 via-zion-purple/20 to-zion-cyan/20"></div>""""
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+const categories = [
+  { id: 'all', name: 'All Services', icon: Globe, count: services.length },
+  { id: 'ai', name: 'AI Services', icon: Brain, count: services.filter(s => s.category.includes('AI')).length },
+  { id: 'it', name: 'IT Services', icon: Cpu, count: services.filter(s => s.category.includes('IT')).length },
+  { id: 'micro-saas', name: 'Micro SAAS', icon: Zap, count: services.filter(s => s.category.includes('Micro SAAS')).length },
+  { id: 'security', name: 'Security', icon: Shield, count: services.filter(s => s.category.includes('Security')).length },
+  { id: 'healthcare', name: 'Healthcare', icon: Heart, count: services.filter(s => s.category.includes('Healthcare')).length }
+];
+
+export default function ComprehensiveServicesShowcase2025(...args: unknown[]): unknown {
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedService, setSelectedService] = useState<Service | null>(null);
+
+  const filteredServices = services.filter(service => {
+    const matchesCategory = selectedCategory === 'all' || 
+      service.category.toLowerCase().includes(selectedCategory.replace('-', ' '));
+    const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      service.description.toLowerCase().includes(searchQuery.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
+
+  const handleServiceClick = (service: Service) => {
+    setSelectedService(service);
+  };
+
+  const closeModal = () => {
+    setSelectedService(null);
+  };
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="Comprehensive Services Showcase 2025 | Zion Tech Group"
+        description="Explore our comprehensive portfolio of AI, IT, and Micro SAAS services. Discover innovative solutions designed to transform your business in 2025 and beyond."
+        keywords="AI services, IT services, Micro SAAS, cybersecurity, healthcare AI, quantum computing, cloud DevOps, business intelligence"
+      />
+
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-zion-blue/20 via-zion-purple/20 to-zion-cyan/20"></div>        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -759,8 +790,38 @@ interface Service {}
                 </Link>
               </div>
             </motion.div>
-          </motion.div>) }'"`
-      </AnimatePresence>'"`'"`
-    </div>) }'"`'"`'"`
-'"`'"`'"`
-'"`'"`
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+}
+
+
+export { ComprehensiveServicesShowcase2025 };
+
+export { ComprehensiveServicesShowcase2025 };
+
+export { ComprehensiveServicesShowcase2025 };
+
+export { ComprehensiveServicesShowcase2025 };
+
+export { ComprehensiveServicesShowcase2025 };
+=======
+import React from "react"
+import { SEO } from "@/components/SEO"
+;,"});,"})
+}
+export default function ComprehensiveServicesShowcase2025() {return ("
+    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
+      <SEO title="ComprehensiveServicesShowcase2025 - Zion Tech Group" description="Professional ComprehensiveServicesShowcase2025 services by Zion Tech Group"  />"
+      <div className="container mx-auto px-4 py-20">"
+        <h1 className="text-4xl font-bold text-white mb-8">ComprehensiveServicesShowcase2025</h1>"
+        <p className="text-gray-300 text-lg">
+          Professional ComprehensiveServicesShowcase2025 services to help your business grow.
+        </p>
+      </div>
+  )
+}
+}""
+>>>>>>> main

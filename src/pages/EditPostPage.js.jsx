@@ -115,5 +115,15 @@ export default function EditPostPage() {}
         <h1 className="text-3xl font-bold mb-8">Edit Post</h1>
 
         <PostForm initialValues={initialValues} onSubmit={handleSubmit} isEditing={true}/>
-      </div>)}'"`
-'"`'"`
+      </div>)}
+
+
+export { EditPostPage };
+
+export { EditPostPage };
+
+export { EditPostPage };
+
+export { EditPostPage };
+
+export { EditPostPage };

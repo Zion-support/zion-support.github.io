@@ -216,6 +216,15 @@ import { Cpu, Zap, Brain, Target, Shield, Users, Globe, Atom, CircuitBoard const
       </section>
     </div>);
 };
+export default QuantumComputing;
+}}}
+
 export { QuantumComputing };
-export default QuantumComputing;'"""
-}}}'"'"""
+
+export { QuantumComputing };
+
+export { QuantumComputing };
+
+export { QuantumComputing };
+
+export { QuantumComputing };

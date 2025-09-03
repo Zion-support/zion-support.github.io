@@ -376,7 +376,15 @@ export default function AIAutonomousBusinessManager() {}
           </motion.div>
         </div>
       </section>
-    </div>
-  );
-}'"`
-'"`'"`
+    </div>)}
+
+
+export { AIAutonomousBusinessManager, IconComponent, IconComponent };
+
+export { AIAutonomousBusinessManager, IconComponent, IconComponent };
+
+export { AIAutonomousBusinessManager, IconComponent, IconComponent };
+
+export { AIAutonomousBusinessManager, IconComponent, IconComponent };
+
+export { AIAutonomousBusinessManager, IconComponent, IconComponent };

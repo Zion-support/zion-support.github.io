@@ -62,9 +62,16 @@ export default function CreatePostPage() {}
 """"
         <h1 className="text-3xl font-bold mb-8">Create New Post</h1>
 
-        <PostForm initialValues={initialValues} onSubmit={handleSubmit} />
-      </div>
-    )
-  );
-}'"`
-'"`'"`
+        <PostForm initialValues={initialValues} onSubmit={handleSubmit}/>
+      </div>)}
+
+
+export { CreatePostPage };
+
+export { CreatePostPage };
+
+export { CreatePostPage };
+
+export { CreatePostPage };
+
+export { CreatePostPage };

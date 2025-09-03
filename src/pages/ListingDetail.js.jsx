@@ -319,32 +319,27 @@ export default function ListingDetail() {}
           </div>
         </div>
       </div>
-    ),
-    (
-      <ChatWidget;
-        roomId={listing.id}
-        recipientId={listing.author.id}
-        isOpen={isChatOpen}
-        onClose={() => setIsChatOpen(false)}
-      />
-    )
-  ) /* Contact Dialog */;
-  {}
-    /* Contact Dialog */
-  }"""
-  <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>""""
-    <DialogContent className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md">"""
-      <DialogHeader>""""
-        <DialogTitle className="text-xl font-bold text-white">
-          Contact Publisher;
-        </DialogTitle>
-      </DialogHeader>
-      <ProfileContact;
-        email={listing.author.email} // TypeScript now knows this might be null"""
-        profileName={listing.author.name}""""
-        profileType="service"""
-      />
-    </DialogContent>
-  </Dialog>;
-}'"`
-'"`'"`
+        ,
+            <ChatWidget roomId={listing.id} recipientId={listing.author.id} isOpen={isChatOpen} onClose={() => setIsChatOpen(false)}/>) /* Contact Dialog */;
+    { /* Contact Dialog */ }
+    <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>
+        <DialogContent className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle className="text-xl font-bold text-white">Contact Publisher</DialogTitle>
+          </DialogHeader>
+          <ProfileContact email={listing.author.email} // TypeScript now knows this might be null
+     profileName={listing.author.name} profileType="service"/>
+        </DialogContent>
+      </Dialog>;
+    }
+
+
+export { ListingDetail };
+
+export { ListingDetail };
+
+export { ListingDetail };
+
+export { ListingDetail };
+
+export { ListingDetail };

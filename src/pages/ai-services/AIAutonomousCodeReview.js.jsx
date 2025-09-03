@@ -379,7 +379,15 @@ export default function AIAutonomousCodeReview() {}
           </motion.div>
         </div>
       </section>
-    </div>
-  );
-}'"`
-'"`'"`
+    </div>)}
+
+
+export { AIAutonomousCodeReview, IconComponent, IconComponent };
+
+export { AIAutonomousCodeReview, IconComponent, IconComponent };
+
+export { AIAutonomousCodeReview, IconComponent, IconComponent };
+
+export { AIAutonomousCodeReview, IconComponent, IconComponent };
+
+export { AIAutonomousCodeReview, IconComponent, IconComponent };

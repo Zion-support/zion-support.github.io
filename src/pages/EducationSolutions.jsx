@@ -561,8 +561,17 @@ export default function EducationSolutions() {}
             </div>
           </motion.div>
         </div>
-      </section>'"`
-    </div>'"`'"`
-  )}'"`'"`'"`
-'"`'"`'"`
-'"`'"`
+      </section>
+    </div>
+  )}
+
+
+export { EducationSolutions };
+
+export { EducationSolutions };
+
+export { EducationSolutions };
+
+export { EducationSolutions };
+
+export { EducationSolutions };

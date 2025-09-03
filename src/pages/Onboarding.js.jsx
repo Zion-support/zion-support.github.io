@@ -168,7 +168,16 @@ export default function Onboarding() {}
           </div>
         </div>
       </div>
-    </>
-  );
-}'"""
-'"'"""
+      
+    </>)}
+
+
+export { Onboarding };
+
+export { Onboarding };
+
+export { Onboarding };
+
+export { Onboarding };
+
+export { Onboarding };

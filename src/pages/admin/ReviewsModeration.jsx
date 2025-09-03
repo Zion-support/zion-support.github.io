@@ -86,5 +86,15 @@ export { function };
 export default function ReviewsModeration() {}
     return (<ProtectedRoute>
       <ReviewsModerationContent />
-    </ProtectedRoute>)}'"""
-'"'"""
+    </ProtectedRoute>)}
+
+
+export { ReviewsModerationContent, ReviewsModeration };
+
+export { ReviewsModerationContent, ReviewsModeration };
+
+export { ReviewsModerationContent, ReviewsModeration };
+
+export { ReviewsModerationContent, ReviewsModeration };
+
+export { ReviewsModerationContent, ReviewsModeration };

@@ -360,7 +360,16 @@ export default function ProfileDetail() {}
           </div>
         </div>
       </div>
-    </>
-  );
-}'"`
-'"`'"`
+      
+    </>)}
+
+
+export { ProfileDetail };
+
+export { ProfileDetail };
+
+export { ProfileDetail };
+
+export { ProfileDetail };
+
+export { ProfileDetail };

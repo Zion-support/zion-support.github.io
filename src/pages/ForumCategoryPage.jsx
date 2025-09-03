@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from "react";""""
 import { useParams, Link } from "react-router-dom";""""
 import { Suspense } from "react";""""
@@ -144,8 +145,19 @@ function CategoryContent({ categoryId, category, IconComponent, user}) {}
 }, discussion, AI marketplace, questions, answers`} canonical={`https://ziontechgroup.com/community/category/${categoryId}`}/>"""
 """"
       <Suspense fallback={<div className="text-center py-16">Loading...</div>}>
-        <CategoryContent categoryId={categoryId} category={category} IconComponent={IconComponent} user={user}/>"`
-      </Suspense>"`"`
-    </>)}"`"`"`
-"`"`"`
-"`"`
+        <CategoryContent categoryId={categoryId} category={category} IconComponent={IconComponent} user={user}/>
+      </Suspense>
+    </>)}
+
+
+export { CategoryContent, ForumCategoryPage, IconComponent };
+
+export { CategoryContent, ForumCategoryPage, IconComponent };
+
+export { CategoryContent, ForumCategoryPage, IconComponent };
+
+export { CategoryContent, ForumCategoryPage, IconComponent };
+
+export { CategoryContent, IconComponent };
+=======
+>>>>>>> main

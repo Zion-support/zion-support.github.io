@@ -277,7 +277,16 @@ export default function HealthcareSolutions() {}
           </div>
         </div>
       </section>
-    </div>
-  );
-}'"""
-'"'"""
+    </div>);
+}
+
+
+export { HealthcareSolutions, Icon };
+
+export { HealthcareSolutions, Icon };
+
+export { HealthcareSolutions, Icon };
+
+export { HealthcareSolutions, Icon };
+
+export { HealthcareSolutions, Icon };

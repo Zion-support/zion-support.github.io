@@ -76,7 +76,15 @@ export default function ProductsAdminPage() {}
           </Table>
         </div>
       </div>
-    </AdminLayout>
-  );
-}'"""
-'"'"""
+    </AdminLayout>)}
+
+
+export { ProductsAdminPage };
+
+export { ProductsAdminPage };
+
+export { ProductsAdminPage };
+
+export { ProductsAdminPage };
+
+export { ProductsAdminPage };

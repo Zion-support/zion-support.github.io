@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';'''
 import { Button } from '@/components/ui/button';'''
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';'''
@@ -325,8 +326,19 @@ export default function ServicesComparisonPage() {}
               </a>
             </p>
           </div>
-        </div>'"`
-      </section>'"`'"`
-    </div>)}'"`'"`'"`
-'"`'"`'"`
-'"`'"`
+        </div>
+      </section>
+    </div>)}
+
+
+export { SERVICE_COMPARISONS, ServicesComparisonPage };
+
+export { SERVICE_COMPARISONS, ServicesComparisonPage };
+
+export { SERVICE_COMPARISONS, ServicesComparisonPage };
+
+export { SERVICE_COMPARISONS, ServicesComparisonPage };
+
+export { SERVICE_COMPARISONS, Page, ServicesComparisonPage };
+=======
+>>>>>>> main

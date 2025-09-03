@@ -1,10 +1,9 @@
-/**
- * Offline shims for external dependencies;
- * These provide minimal type definitions for when packages are not available;
- */
+<<<<<<< HEAD
+=======
+// Minimal type declarations for offline development
 
-// React stubs;
-declare module 'react' {}
+// React stubs
+declare module 'react' {
   export type FC<P = any> = props: anyP ;
   export type ReactNode = ;
   export interface ChangeEvent<T = any> { target: T }
@@ -15,86 +14,61 @@ declare module 'react' {}
   export type Ref<T> = RefObject<T> | RefCallback<T> | null;
   export type LegacyRef<T> = Ref<T>;
   export function useRef<T = any>(initial: T): { current: T };
-  const react: any;
-  export default react}'
-'declare module 'react/jsx-runtime' {}
+  const react: ;
+  export default react}
+
+declare module 'react/jsx-runtime' {
   export {}}
-
-  export const motion: {}
-    div: MotionComponent;
-    span: MotionComponent;
-    p: MotionComponent;
-    h1: MotionComponent;
-    h2: MotionComponent;
-    h3: MotionComponent;
-    button: MotionComponent;
-    img: MotionComponent;
-    section: MotionComponent;
-    article: MotionComponent;
-    header: MotionComponent;
-    footer: MotionComponent;
-    nav: MotionComponent;
-    ul: MotionComponent;
-    li: MotionComponent;
-    a: MotionComponent;
-    form: MotionComponent;
-    input: MotionComponent;
-    [key: string]: MotionComponent;
-  };
-
-  export const AnimatePresence: React.ComponentType<{}
-    children?: React.ReactNode;
-    mode?: string;
-    initial?: boolean;
-  }>;
-
-  export const useAnimation: () => any;
-  export const useMotionValue: (value: any) => any;
-  export const useTransform: (value: any, input: any[], output: any[]) => any;
-  export const useSpring: (value: any, config?: any) => any;
+declare namespace JSX {
+  interface Element {
 }
-'
-declare module 'react-dom' {}
-  export function reactDom: any;
-  export default reactDom}'
-'declare module 'react-router-dom' {}
-  export function useNavigate(): any;
-  export const Link: any;
-  export const Routes: any;
-  export const Navigate: any;
-  const rr: any;
-  export default rr}'
-'declare module 'react-hook-form' {}
-  export function useForm<T = any>(...args: unknown[]): any;
-  const rhf: any;
-  export default rhf}
-'
-declare module '@hookform/resolvers/zod' {}
-  export function zodResolver(...args: unknown[]): any }'
-'declare module '@tanstack/react-query' {}
-  export function useMutation<T = any>(...args: unknown[]): any;
-  const rq: any;
-  export default rq}
-'
-declare module 'jspdf' {}
-  export class jsPDF {}
-    constructor(...args: unknown[]);
-    [key: string]: any;
-  }}'
-''
-declare module 'path' {}
-  const path: any;
-  export default path}
-'
-declare module 'jspdf-autotable' {}
-  const autotable: any;
-  export default autotable}'
-'declare module 'zod' {}
-  export type infer<T> = ;
-  const z: any;
-  export { z };
-  export default z}
+  interface IntrinsicElements {
 
-;
+    [elemName: string]: ;
+
+}}
+
+declare module 'react-dom' {
+  export function reactDom: ;
+  export default reactDom}
+
+declare module 'react-router-dom' {  export function useNavigate(): ;
+  export const Link: ;
+  export const Routes: ;
+  export const Navigate: ;
+  const rr: ;
+  export default rr}
+
+declare module 'react-hook-form' {  export function useForm<T = any>(...args: unknown[]): ;
+  const rhf: ;
+  export default rhf}
+
+declare module '@hookform/resolvers/zod' {
+  export function zodResolver(...args: unknown[]): }
+
+declare module '@tanstack/react-query' {  export function useMutation<T = any>(...args: unknown[]): ;
+  const rq: ;
+  export default rq}
+
+declare module 'jspdf' {
+  export class jsPDF {
+    constructor(...args: unknown[]);
+    [key: string]: ;
+  }
+}
+declare module 'path' {
+  const path: ;
+  export default path}
+
+declare module 'jspdf-autotable' {
+  const autotable: ;
+  export default autotable}
+
+declare module 'zod' {  export type infer<T> = ;
+  const z: ;
+  export { z };
+  export default z;
+}
 export default useEffect;
-export default useRef;'
+export default useRef;
+>>>>>>> main

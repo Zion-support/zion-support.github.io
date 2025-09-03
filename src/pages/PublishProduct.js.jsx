@@ -42,7 +42,16 @@ export default function PublishProduct() {}
           </div>
         </div>
       </main>
-    </div>
-  );
-}'"""
-'"'"""
+      
+    </div>)}
+
+
+export { PublishProduct };
+
+export { PublishProduct };
+
+export { PublishProduct };
+
+export { PublishProduct };
+
+export { PublishProduct };

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {}
   Zap,
   CheckCircle,
@@ -11,7 +12,7 @@ export default function CheckoutPerformanceOptimizer(...args: any[]): any {}
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">""
       <section className="mx-auto max-w-7xl px-6 py-20 lg:py-28">""
         <h1 className="text-3xl sm:text-5xl font-bold flex items-center gap-3">""
-<<<<<<< HEAD:pages.disabled/pages/services/CheckoutPerformanceOptimizer.tsx
+:pages.disabled/pages/services/CheckoutPerformanceOptimizer.tsx
           <CreditCard className="w-8 h-8 text-cyan-400"  /> Checkout Performance
           Optimizer"
         </h1>""
@@ -39,7 +40,6 @@ export default function CheckoutPerformanceOptimizer(...args: any[]): any {}
               desc: 'Error budgets, drop‑off heatmaps and Slack alerts.'},
           ].map(f => (
             <div"
-=======
           <CreditCard className="w-8 h-8 text-cyan-400"  /> Checkout Performance;
           Optimizer;
         </h1>""
@@ -63,12 +63,11 @@ export default function CheckoutPerformanceOptimizer(...args: any[]): any {}
               desc: 'Error budgets, drop‑off heatmaps and Slack alerts.'}
           ].map(f => (
             <div;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CheckoutPerformanceOptimizer.tsx
               key={f.title}""
               className="rounded-xl border border-white/10 bg-white/5 p-5""
             >""
               <div className="flex items-center gap-2 text-cyan-300 font-semibold">""
-<<<<<<< HEAD:pages.disabled/pages/services/CheckoutPerformanceOptimizer.tsx
+:pages.disabled/pages/services/CheckoutPerformanceOptimizer.tsx
                 <CheckCircle className="w-4 h-4"  /> {f.title}"
               </div>"              <div className="mt-1 text-sm text-slate-300">{f.desc}</div>
             </div>
@@ -79,7 +78,6 @@ export default function CheckoutPerformanceOptimizer(...args: any[]): any {}
           <span className="font-semibold text-cyan-300">$99–$399/mo</span>."
         </div>""
         <div className="mt-4 flex gap-4 text-sm">"
-=======
                 <CheckCircle className="w-4 h-4"  /> {f.title}
               </div>"              <div className="mt-1 text-sm text-slate-300">{f.desc}</div>
             </div>
@@ -90,14 +88,13 @@ export default function CheckoutPerformanceOptimizer(...args: any[]): any {}
           <span className="font-semibold text-cyan-300">$99–$399/mo</span>.
         </div>""
         <div className="mt-4 flex gap-4 text-sm">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CheckoutPerformanceOptimizer.tsx
           <a""
             className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200""
             href="https://www.optimizely.com/pricing/""
             target="_blank""
             rel="noreferrer""
           >"            Optimizely pricing <ExternalLink className="w-3 h-3"  />
-<<<<<<< HEAD:pages.disabled/pages/services/CheckoutPerformanceOptimizer.tsx
+:pages.disabled/pages/services/CheckoutPerformanceOptimizer.tsx
           </a>"
         </div>""
         <div className="mt-10 flex flex-wrap gap-3">"
@@ -107,7 +104,6 @@ export default function CheckoutPerformanceOptimizer(...args: any[]): any {}
           >
             Request audit
           </Link>"
-=======
           </a>
         </div>""
         <div className="mt-10 flex flex-wrap gap-3">
@@ -117,35 +113,31 @@ export default function CheckoutPerformanceOptimizer(...args: any[]): any {}
           >
             Request audit;
           </Link>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CheckoutPerformanceOptimizer.tsx
           <a""
             href="mailto:kleber@ziontechgroup.com""
             className="rounded-lg border border-cyan-400/40 px-4 py-2 text-sm font-semibold text-cyan-300 hover:bg-white/5 inline-flex items-center gap-2""
           >""
-<<<<<<< HEAD:pages.disabled/pages/services/CheckoutPerformanceOptimizer.tsx
+:pages.disabled/pages/services/CheckoutPerformanceOptimizer.tsx
             <Mail className="w-4 h-4"  /> kleber@ziontechgroup.com
           </a>"
-=======
             <Mail className="w-4 h-4"  /> kleber@ziontechgroup.com;
           </a>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CheckoutPerformanceOptimizer.tsx
           <a""
             href="tel:+13024640950""
             className="rounded-lg border border-cyan-400/40 px-4 py-2 text-sm font-semibold text-cyan-300 hover:bg-white/5 inline-flex items-center gap-2""
           >""
-<<<<<<< HEAD:pages.disabled/pages/services/CheckoutPerformanceOptimizer.tsx
+:pages.disabled/pages/services/CheckoutPerformanceOptimizer.tsx
             <Phone className="w-4 h-4"  /> +1 302 464 0950
-=======
             <Phone className="w-4 h-4"  /> +1 302 464 0950;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CheckoutPerformanceOptimizer.tsx
           </a>
         </div>
       </section>
     </div>
-<<<<<<< HEAD:pages.disabled/pages/services/CheckoutPerformanceOptimizer.tsx
+:pages.disabled/pages/services/CheckoutPerformanceOptimizer.tsx
   )}'"
 '"'"
-=======
   )}
 '""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CheckoutPerformanceOptimizer.tsx
+=======
+>>>>>>> 92e970263e01302a6ec9ed9848ce724c6698ab78;
+>>>>>>> main

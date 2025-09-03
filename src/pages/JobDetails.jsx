@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';'''
 import { useParams, useNavigate } from 'react-router-dom';'''
 import { Button } from '@/components/ui/button';'''
@@ -156,7 +157,20 @@ export default function JobDetails() {}
       {job && (<ApplyToJobModal job = {}
   {}
                 id: job.id,
-                title: job.title,"""
-                description: job.description,""""
-                comp_name: job.comp_name || "Comp","`
-                budget: job.budget,"`'"`
+                title: job.title,
+                description: job.description,
+                comp_name: job.comp_name || "Comp",
+                budget: job.budget,
+
+
+export { JobDetails };
+
+export { JobDetails };
+
+export { JobDetails };
+
+export { JobDetails };
+
+export { JobDetails };
+=======
+>>>>>>> main

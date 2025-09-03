@@ -319,5 +319,15 @@ const Soc2ComplianceAutomation = () => {}
       </section>
     </div>) ;
 };
-export default Soc2ComplianceAutomation;'"""
-}}}}'"'"""
+export default Soc2ComplianceAutomation;
+}}}}
+
+export { Soc2ComplianceAutomation };
+
+export { Soc2ComplianceAutomation };
+
+export { Soc2ComplianceAutomation };
+
+export { Soc2ComplianceAutomation };
+
+export { Soc2ComplianceAutomation };

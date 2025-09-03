@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Button } from '@/components/ui/button';'''
 import { Link } from 'react-router-dom';'''
 import { useState, useEffect } from 'react';'''
@@ -145,6 +146,22 @@ import { Link, useNavigate } from 'react-router-dom';
                     Continue Shopping;
                 </Link>
             </div>
-        </div>) ;
-}'"""
-'"'"""
+        </div>
+    );
+}
+
+
+export { CartPage };
+
+export { CartPage };
+
+export { CartPage };
+
+export { CartPage };
+=======
+<<<<<<< HEAD
+import React from 'react'; export default function CartPage () { const navigate = useNavigate () ; const [items, setItems] = useState([]); const [loading, setLoading] = useState(false); const [cartLoading, setCartLoading] = useState(true); const [showEmpty, setShowEmpty] = useState(false); useEffect(() => {
+=======
+import React from "react"; export default function CartPage () { const navigate = useNavigate () ; const [items, setItems] = useState([]); const [loading, setLoading] = useState(false); const [cartLoading, setCartLoading] = useState(true); const [showEmpty, setShowEmpty] = useState(false); useEffect(() => {'"
+>>>>>>> main
+>>>>>>> main

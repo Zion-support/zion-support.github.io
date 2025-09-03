@@ -1,17 +1,14 @@
+<<<<<<< HEAD
 import React, { useState, useMemo } from 'react';'''
 import { motion } from 'framer-motion';'''
 import { Search, Filter, Grid, List, ExternalLink, Phone, Mail, Globe, Clock, Users, CheckCircle, TrendingUp, Award } from 'lucide-react';
-import { NEXT_GEN_INNOVATIVE_SERVICES } from "../data/nextGenInnovativeServices";
-export default function NextGenInnovativeServices() {}
-'
-''
-'''
-    const [searchTerm, setSearchTerm] = useState('');'''
-    const [selectedCategory, setSelectedCategory] = useState('all');''
-    const [selectedService, setSelectedService] = useState(null);'''
-    const [viewMode, setViewMode] = useState('grid');'''
-    // Get unique categories''''
-    const categories = useMemo(() => ['all', ...Array.from(new Set(NEXT_GEN_INNOVATIVE_SERVICES.map(s => s.category)))], []);
+;
+export default function NextGenInnovativeServices() {
+    const [searchTerm, setSearchTerm] = useState('');
+    const [selectedCategory, setSelectedCategory] = useState('all');
+    const [selectedService, setSelectedService] = useState(null);
+    const [viewMode, setViewMode] = useState('grid');
+    // Get unique categories    const categories = useMemo(() => ['all', ...Array.from(new Set(NEXT_GEN_INNOVATIVE_SERVICES.map(s => s.category)))], []);
     // Filter services based on search and category;
     const filteredServices = useMemo(() => {}
         return NEXT_GEN_INNOVATIVE_SERVICES.filter(service => {}
@@ -434,8 +431,20 @@ export default function NextGenInnovativeServices() {}
               <p>Website: <a href="https://ziontechgroup.com" className="text-blue-400 hover:text-blue-300">https://ziontechgroup.com</a></p>
             </div>
           </div>
-        </motion.div>'"`
-      </div>'"`'"`
-    </div>)}'"`'"`'"`
-'"`'"`'"`
-'"`'"`
+        </motion.div>
+      </div>
+    </div>)}
+
+
+export { NextGenInnovativeServices };
+
+export { NextGenInnovativeServices };
+
+export { NextGenInnovativeServices };
+
+export { NextGenInnovativeServices };
+
+export { NextGenInnovativeServices };
+=======
+import React from 'react'; export default function NextGenInnovativeServices () { const [searchTerm, setSearchTerm] = useState("); const [selectedCategory, setSelectedCategory] = useState("all"); const [selectedService, setSelectedService] = useState(null); const [viewMode, setViewMode] = useState("grid");
+>>>>>>> main

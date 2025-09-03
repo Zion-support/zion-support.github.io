@@ -104,7 +104,16 @@ export default function WhitelabelManager() {}
           </Tabs>
         </div>
       </main>
-    </>
-  );
-}'"""
-'"'"""
+      
+    </>)}
+
+
+export { WhitelabelManager };
+
+export { WhitelabelManager };
+
+export { WhitelabelManager };
+
+export { WhitelabelManager };
+
+export { WhitelabelManager };

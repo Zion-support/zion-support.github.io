@@ -1,19 +1,16 @@
-import React from 'react';'''
-import EnhancedComprehensiveServicesShowcase from '../components/EnhancedComprehensiveServicesShowcase';
-const InnovativeServicesShowcase2025 = () => {}
-  return()
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">"""
-      {/* Hero Section */}""""
-      <section className="py-20 px-4 sm:px-6 lg:px-8">""""
-        <div className="max-w-7xl mx-auto text-center">""""
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">"""
-            Zion Tech Group""""
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">'
-              {' '}
-              Innovative Services 2025;
-            </span>"""
-          </h1>""""
-          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+import React from 'react';
+import EnhancedComprehensiveServicesShowcase from "../components/EnhancedComprehensiveServicesShowcase.jsx";
+const InnovativeServicesShowcase2025 = () => {
+    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
+      {/* Hero Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            Zion Tech Group
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+              {" "}Innovative Services 2025
+            </span>
+          </h1>          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
             Discover our comprehensive portfolio of cutting-edge micro SAAS;
             solutions, IT services, and AI-powered innovations designed to;
             transform your business and drive competitive advantage in the;
@@ -378,8 +375,16 @@ const InnovativeServicesShowcase2025 = () => {}
           </div>
         </div>
       </section>
-    </div>
-  );
-};
-export default InnovativeServicesShowcase2025;'"""
-'"'"""
+    </div>)};
+export default InnovativeServicesShowcase2025;
+
+
+export { InnovativeServicesShowcase2025 };
+
+export { InnovativeServicesShowcase2025 };
+
+export { InnovativeServicesShowcase2025 };
+
+export { InnovativeServicesShowcase2025 };
+
+export { InnovativeServicesShowcase2025 };

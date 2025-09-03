@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export default function CodeBlock({}
   children,
   code,
@@ -28,7 +29,20 @@ export default function CodeBlock({}
       <pre className="text-sm text-gray-100">
         <code>{content}</code>
       </pre>
-    </div>
-  );
-}'"`
-'"`'"`
+    </div>)}
+
+
+export { CodeBlock };
+
+export { CodeBlock };
+
+export { CodeBlock };
+
+export { CodeBlock };
+
+export { CodeBlock };
+=======
+import React from "react")
+}
+'export default ComponentName;"
+>>>>>>> main

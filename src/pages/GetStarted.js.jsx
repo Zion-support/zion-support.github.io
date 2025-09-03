@@ -240,5 +240,15 @@ const GetStarted = () => {}
         </div>
       </section>
     </div>)};
-export default GetStarted;'"`
-'"`'"`
+export default GetStarted;
+
+
+export { GetStarted };
+
+export { GetStarted };
+
+export { GetStarted };
+
+export { GetStarted };
+
+export { GetStarted };

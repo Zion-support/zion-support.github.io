@@ -248,8 +248,16 @@ const AIAutonomousTranslation = () => {}
           </div>
         </div>
       </div>
-    </>
-  );
-};
-export default AIAutonomousTranslation;'"""
-'"'"""
+    </>)};
+export default AIAutonomousTranslation;
+
+
+export { AIAutonomousTranslation };
+
+export { AIAutonomousTranslation };
+
+export { AIAutonomousTranslation };
+
+export { AIAutonomousTranslation };
+
+export { AIAutonomousTranslation };

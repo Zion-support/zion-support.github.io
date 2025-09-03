@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from "react";""""
 import { useNavigate } from "react-router-dom";""""
 import { useAuth } from "@/hooks/useAuth";""""
@@ -137,6 +138,35 @@ export default function Onboarding() {}
           </div>
         </div>
       </div>
+      
+    </>)}
 
-    </>)}'"""
-'"'"""
+
+export { Onboarding };
+
+export { Onboarding };
+
+export { Onboarding };
+
+export { Onboarding };
+
+export { Onboarding };
+=======
+<<<<<<< HEAD
+import React from 'react'; export default function Onboarding () { const { user, updateProfile, isLoading } = useAuth () ; const [currentStep, setCurrentStep] = useState(0); const [userType, setUserType] = useState(null); const navigate = useNavigate () ;
+=======
+import React from "react"; export default function Onboarding () { const { user, updateProfile, isLoading } = useAuth () ; const [currentStep, setCurrentStep] = useState(0); const [userType, setUserType] = useState(null); const navigate = useNavigate ()
+}
+ export default function Onboarding () { const { user, updateProfile, isLoading } = useAuth () ; const [currentStep, setCurrentStep] = useState(0); const [userType, setUserType] = useState(null); const navigate = useNavigate () ;,"});,"})
+}
+ export: default function Onboarding () { const { user, updateProfile, isLoading } = useAuth ()  const [currentStep, setCurrentStep] = useState(0) const [userType, setUserType] = useState(null) const navigate = useNavigate ()
+}
+ export default function Onboarding ()   {const { user, updateProfile, isLoading } = useAuth ()  const [currentStep, setCurrentStep] = useState(0) const [userType, setUserType] = useState(null) const navigate = useNavigate ()
+}
+ export default function Onboarding () {} const ;{ user, updateProfile, isLoading } = useAuth ()  const [currentStep, setCurrentStep] = useState(0) const [userType, setUserType] = useState(null) const;const;const navigate = useNavigate ()
+}
+ export default function Onboarding () { const { user, updateProfile, isLoading } = useAuth ()  const [currentStep, setCurrentStep] = useState(0) const [userType, setUserType] = useState(null) const navigate = useNavigate ()
+}
+}""
+>>>>>>> main
+>>>>>>> main

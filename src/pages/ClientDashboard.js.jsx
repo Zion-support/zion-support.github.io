@@ -161,7 +161,15 @@ export default function ClientDashboard() {}
   return()
     <ProtectedRoute>
       <ClientDashboardContent />
-    </ProtectedRoute>
-  );
-}'"`
-'"`'"`
+    </ProtectedRoute>)}
+
+
+export { ClientDashboardContent, ClientDashboard };
+
+export { ClientDashboardContent, ClientDashboard };
+
+export { ClientDashboardContent, ClientDashboard };
+
+export { ClientDashboardContent, ClientDashboard };
+
+export { ClientDashboardContent, ClientDashboard };

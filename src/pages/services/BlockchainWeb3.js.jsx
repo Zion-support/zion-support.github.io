@@ -353,6 +353,15 @@ const BlockchainWeb3 = () => {}
         </div>
       </section>
     </div>)};
+export default BlockchainWeb3;
+
+
 export { BlockchainWeb3 };
-export default BlockchainWeb3;'"""
-'"'"""
+
+export { BlockchainWeb3 };
+
+export { BlockchainWeb3 };
+
+export { BlockchainWeb3 };
+
+export { BlockchainWeb3 };

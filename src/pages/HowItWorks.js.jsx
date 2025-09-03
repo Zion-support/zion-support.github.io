@@ -266,5 +266,15 @@ export default function HowItWorks() {}
           </div>
         </div>
       </main>
-    </>)}'"`
-'"`'"`
+    </>)}
+
+
+export { HowItWorks };
+
+export { HowItWorks };
+
+export { HowItWorks };
+
+export { HowItWorks };
+
+export { HowItWorks };

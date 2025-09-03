@@ -31,8 +31,16 @@ const MicroSAASServices = () => {}
           </div>
         </div>
       </div>
-    </>
-  );
-};
-export default MicroSAASServices;'"""
-'"'"""
+    </>)};
+export default MicroSAASServices;
+
+
+export { MicroSAASServices };
+
+export { MicroSAASServices };
+
+export { MicroSAASServices };
+
+export { MicroSAASServices };
+
+export { MicroSAASServices };

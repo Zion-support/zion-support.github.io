@@ -685,8 +685,17 @@ export default function FiveGSolutions() {}
             </div>
           </motion.div>
         </div>
-      </section>'"`
-    </div>'"`'"`
-  )}'"`'"`'"`
-'"`'"`'"`
-'"`'"`
+      </section>
+    </div>
+  )}
+
+
+export { FiveGSolutions };
+
+export { FiveGSolutions };
+
+export { FiveGSolutions };
+
+export { FiveGSolutions };
+
+export { FiveGSolutions };

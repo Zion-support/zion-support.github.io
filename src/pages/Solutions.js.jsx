@@ -32,8 +32,16 @@ const Solutions = () => {}
           </div>
         </div>
       </div>
-    </>
-  );
-};
-export default Solutions;'"""
-'"'"""
+    </>)};
+export default Solutions;
+
+
+export { Solutions };
+
+export { Solutions };
+
+export { Solutions };
+
+export { Solutions };
+
+export { Solutions };

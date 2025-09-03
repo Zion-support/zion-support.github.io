@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 id: 2,""""
     title: "Supply Chain Blockchain",""""
     description: "Transparent and traceable supply chain solutions using blockchain technology.",
@@ -75,7 +76,7 @@ id: 2,""""
     technologies: ["Integration", "APIs", "Migration", "Legacy Systems"]};
 ];
 ;
-const blockchainTechnologies: any = []
+const blockchainTechnologies: unknown = []
   {}
 """
 """"
@@ -111,7 +112,7 @@ const blockchainTechnologies: any = []
     reliability: "High"};
 ];
 ;
-const successStories: any = []
+const successStories: unknown = []
   {}
 """
     id: 1,""""
@@ -172,7 +173,7 @@ const successStories: any = []
     icon: TrendingUp,;""""
     examples: ["No intermediaries", "Reduced costs", "Better efficiency", "Improved ROI"]};];
 
-const blockchainBenefits: any = [{}
+const blockchainBenefits: unknown = [{}
     title: "Transparency & Trust",
     description: "Blockchain provides immutable, transparent records that build trust",
     icon: Eye,
@@ -319,17 +320,17 @@ const blockchainBenefits: any = [{}
 """"
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">""""
                   <benefit.icon className="w-8 h-8 text-white" />
-                </div>"""
-""""
-                <h3 className="text-2xl font-bold text-white mb-4 text-center">{benefit.title}</h3>""""
-                <p className="text-zion-slate-light mb-6 leading-relaxed text-center">{benefit.description}</p>"""
-""""
-                <div className="space-y-2">""""
-                  <h4 className="text-zion-cyan font-semibold mb-3">Examples: any</h4>"""
-                  {benefit.examples.map((example, exampleIndex)  => (""""
-                    <div key={exampleIndex} className="flex items-center gap-3">""""
-                      <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0"  />"                      <span className="text-zion-slate-light text-sm">{example}</span>
-                    </div>
+                </div>
+
+                <h3 className="text-2xl font-bold text-white mb-4 text-center">{benefit.title}</h3>
+                <p className="text-zion-slate-light mb-6 leading-relaxed text-center">{benefit.description}</p>
+
+                <div className="space-y-2">
+                  <h4 className="text-zion-cyan font-semibold mb-3">Examples: unknown</h4>
+                  {benefit.examples.map((example, exampleIndex)  => (
+                    <div key={exampleIndex} className="flex items-center gap-3">
+                      <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
+                      <span className="text-zion-slate-light text-sm">{example}</span>                    </div>
                   ))}
                 </div>
               </motion.div>;) ) }
@@ -680,8 +681,35 @@ const blockchainBenefits: any = [{}
               </a>
             </div>;
           </motion.div>;
-        </div>;'"`
-      </section>;'"`'"`
-    </div>;) }'"`'"`'"`
-'"`'"`'"`
-'"`'"`
+        </div>;
+      </section>;
+    </div>;
+  );
+}
+
+
+export { BlockchainEnterpriseSolutions };
+
+export { BlockchainEnterpriseSolutions };
+
+export { BlockchainEnterpriseSolutions };
+
+export { BlockchainEnterpriseSolutions };
+=======
+import React from "react"
+import { SEO } from "@/components/SEO"
+;,"});,"})
+}
+export default function BlockchainEnterpriseSolutions() {return ("
+    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
+      <SEO title="BlockchainEnterpriseSolutions - Zion Tech Group" description="Professional BlockchainEnterpriseSolutions services by Zion Tech Group"  />"
+      <div className="container mx-auto px-4 py-20">"
+        <h1 className="text-4xl font-bold text-white mb-8">BlockchainEnterpriseSolutions</h1>"
+        <p className="text-gray-300 text-lg">
+          Professional BlockchainEnterpriseSolutions services to help your business grow.
+        </p>
+      </div>
+  )
+}
+}""
+>>>>>>> main

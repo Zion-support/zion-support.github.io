@@ -1,148 +1,123 @@
+<<<<<<< HEAD
 import React from 'react';'
 import { Link } from 'react-router-dom';'
 import { Helmet } from 'react-helmet-async';'
 import { motion } from 'framer-motion';
-<<<<<<< HEAD:pages.disabled/pages/services/IncidentResponsePlatform.jsx
+:pages.disabled/pages/services/IncidentResponsePlatform.jsx
 import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target, ArrowRight, Activity const IncidentResponsePlatform = () => {
     const features = [
         {
 
-=======
 import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target, ArrowRight, Activity const IncidentResponsePlatform = () => {}
     const features = []
         {}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/IncidentResponsePlatform.jsx
             title: "AI-Powered Threat Detection",""
             description: "Advanced machine learning algorithms detect threats in real-time with high accuracy and low false positives",""
             icon: <Eye className="w-6 h-6"/>
         },
-<<<<<<< HEAD:pages.disabled/pages/services/IncidentResponsePlatform.jsx
+:pages.disabled/pages/services/IncidentResponsePlatform.jsx
         {
 "
-=======
         {}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/IncidentResponsePlatform.jsx
 ""
             title: "Automated Response Workflows",""
             description: "Intelligent automation handles routine incidents while escalating critical threats to human analysts",""
             icon: <Zap className="w-6 h-6"/>
         },
-<<<<<<< HEAD:pages.disabled/pages/services/IncidentResponsePlatform.jsx
+:pages.disabled/pages/services/IncidentResponsePlatform.jsx
         {
 "
-=======
         {}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/IncidentResponsePlatform.jsx
 ""
             title: "Real-time Alerting & Notifications",""
             description: "Instant notifications across multiple channels with customizable escalation paths and response teams",""
             icon: <AlertTriangle className="w-6 h-6"/>
         },
-<<<<<<< HEAD:pages.disabled/pages/services/IncidentResponsePlatform.jsx
+:pages.disabled/pages/services/IncidentResponsePlatform.jsx
         {
 "
-=======
         {}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/IncidentResponsePlatform.jsx
 ""
             title: "Incident Timeline Tracking",""
             description: "Comprehensive tracking of all incident activities, communications, and resolution steps for audit compliance",""
             icon: <Clock className="w-6 h-6"/>
 
     ];
-<<<<<<< HEAD:pages.disabled/pages/services/IncidentResponsePlatform.jsx
+:pages.disabled/pages/services/IncidentResponsePlatform.jsx
     const benefits = [
         {
 "
-=======
     const benefits = []
         {}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/IncidentResponsePlatform.jsx
 ""
             metric: "70%",""
             description: "Reduction in response time",""
             icon: <Clock className="w-5 h-5"/>
         },
-<<<<<<< HEAD:pages.disabled/pages/services/IncidentResponsePlatform.jsx
+:pages.disabled/pages/services/IncidentResponsePlatform.jsx
         {
 "
-=======
         {}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/IncidentResponsePlatform.jsx
 ""
             metric: "45%",""
             description: "Improvement in resolution quality",""
             icon: <TrendingUp className="w-5 h-5"/>
         },
-<<<<<<< HEAD:pages.disabled/pages/services/IncidentResponsePlatform.jsx
+:pages.disabled/pages/services/IncidentResponsePlatform.jsx
         {
 "
-=======
         {}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/IncidentResponsePlatform.jsx
 ""
             metric: "24/7",""
             description: "Automated monitoring",""
             icon: <Activity className="w-5 h-5"/>
         },
-<<<<<<< HEAD:pages.disabled/pages/services/IncidentResponsePlatform.jsx
+:pages.disabled/pages/services/IncidentResponsePlatform.jsx
         {
 "
-=======
         {}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/IncidentResponsePlatform.jsx
 ""
             metric: "90%",""
             description: "Compliance assurance",""
             icon: <Shield className="w-5 h-5"/>
 
     ];
-<<<<<<< HEAD:pages.disabled/pages/services/IncidentResponsePlatform.jsx
+:pages.disabled/pages/services/IncidentResponsePlatform.jsx
     const pricingPlans = [
         {
 "
-=======
     const pricingPlans = []
         {}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/IncidentResponsePlatform.jsx
 ""
             name: "Professional",""
             price: "$299",""
             period: "/month",""
-<<<<<<< HEAD:pages.disabled/pages/services/IncidentResponsePlatform.jsx
+:pages.disabled/pages/services/IncidentResponsePlatform.jsx
             description: "Perfect for growing security teams","
-=======
             description: "Perfect for growing security teams",
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/IncidentResponsePlatform.jsx
             features: [""
                 "Up to 50 users",""
                 "Basic threat detection",""
                 "Standard response workflows",""
                 "Email & Slack notifications",""
                 "Basic reporting",""
-<<<<<<< HEAD:pages.disabled/pages/services/IncidentResponsePlatform.jsx
+:pages.disabled/pages/services/IncidentResponsePlatform.jsx
                 "Email support"
-=======
                 "Email support""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/IncidentResponsePlatform.jsx
             ],
             popular: false;
         },
-<<<<<<< HEAD:pages.disabled/pages/services/IncidentResponsePlatform.jsx
+:pages.disabled/pages/services/IncidentResponsePlatform.jsx
         {
 "
-=======
         {}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/IncidentResponsePlatform.jsx
 ""
             name: "Enterprise",""
             price: "$599",""
             period: "/month",""
-<<<<<<< HEAD:pages.disabled/pages/services/IncidentResponsePlatform.jsx
+:pages.disabled/pages/services/IncidentResponsePlatform.jsx
             description: "Ideal for large organizations","
-=======
             description: "Ideal for large organizations",
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/IncidentResponsePlatform.jsx
             features: [""
                 "Unlimited users",""
                 "Advanced AI detection",""
@@ -150,36 +125,30 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
                 "Multi-channel notifications",""
                 "Advanced analytics",""
                 "Priority support",""
-<<<<<<< HEAD:pages.disabled/pages/services/IncidentResponsePlatform.jsx
+:pages.disabled/pages/services/IncidentResponsePlatform.jsx
                 "Compliance reporting"
-=======
                 "Compliance reporting""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/IncidentResponsePlatform.jsx
             ],
             popular: true;
         },
-<<<<<<< HEAD:pages.disabled/pages/services/IncidentResponsePlatform.jsx
+:pages.disabled/pages/services/IncidentResponsePlatform.jsx
         {
 "
-=======
         {}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/IncidentResponsePlatform.jsx
 ""
             name: "Custom",""
             price: "Custom",""
             period: "",""
-<<<<<<< HEAD:pages.disabled/pages/services/IncidentResponsePlatform.jsx
+:pages.disabled/pages/services/IncidentResponsePlatform.jsx
             description: "For complex enterprise needs","
-=======
             description: "For complex enterprise needs",
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/IncidentResponsePlatform.jsx
             features: [""
                 "Custom integrations",""
                 "Dedicated support team",""
                 "Custom training",""
                 "SLA guarantees",""
                 "On-premise options",""
-<<<<<<< HEAD:pages.disabled/pages/services/IncidentResponsePlatform.jsx
+:pages.disabled/pages/services/IncidentResponsePlatform.jsx
                 "Custom development"
             ],
             popular: false
@@ -188,7 +157,6 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
     const integrations = [""
         "SIEM Systems", "EDR Solutions", "Firewall", "IDS/IPS", "Slack", "Teams", "Jira", "ServiceNow"
     ];"
-=======
                 "Custom development""
             ],
             popular: false;
@@ -196,65 +164,57 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
     const integrations = [""
         "SIEM Systems", "EDR Solutions", "Firewall", "IDS/IPS", "Slack", "Teams", "Jira", "ServiceNow""
     ];
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/IncidentResponsePlatform.jsx
     const useCases = [""
         "Security incident management",""
         "IT operations",""
         "Compliance management",""
         "Team collaboration",""
         "Audit preparation",""
-<<<<<<< HEAD:pages.disabled/pages/services/IncidentResponsePlatform.jsx
+:pages.disabled/pages/services/IncidentResponsePlatform.jsx
         "Risk mitigation"
     ];
     return (<>
       <Helmet>"
-=======
         "Risk mitigation""
     ];
     return (<>
       <Helmet>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/IncidentResponsePlatform.jsx
         <title>Intelligent Incident Response Platform — Zion Tech Group | AI-Driven Security</title>""
         <meta name="description" content="Transform your security operations with our AI-driven incident response platform. Automated threat detection, response workflows, and compliance reporting."/>""
         <meta property="og:title" content="Intelligent Incident Response Platform — Zion Tech Group"/>""
         <meta property="og:description" content="AI-powered incident response platform with automated workflows and real-time threat detection."/>""
         <meta property="og:url" content="https://ziontechgroup.com/services/incident-response-platform"/>""
         <link rel="canonical" href="https://ziontechgroup.com/services/incident-response-platform"/>
-<<<<<<< HEAD:pages.disabled/pages/services/IncidentResponsePlatform.jsx
+:pages.disabled/pages/services/IncidentResponsePlatform.jsx
       </Helmet>"
 ""
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 text-white pt-20">"
-=======
       </Helmet>
 ""
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 text-white pt-20">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/IncidentResponsePlatform.jsx
         {/* Hero Section */}""
         <section className="py-20 px-4 sm:px-6 lg:px-8">""
           <div className="max-w-7xl mx-auto text-center">
             <motion.div initial = {}
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/IncidentResponsePlatform.jsx
+:pages.disabled/pages/services/IncidentResponsePlatform.jsx
   y: 20
 
 }} whileInView = {
 
   { opacity: 1,
-<<<<<<<< HEAD:pages.disabled/pages/services/IncidentResponsePlatform.jsx
+<:pages.disabled/pages/services/IncidentResponsePlatform.jsx
   y: 0
 
-========
+=
   y: 0 
 
 
 
 
 "
-<<<<<<< HEAD:pages.disabled/pages/services/IncidentResponsePlatform.jsx
->>>>>>>> main:backup-pages/src-pages/services/IncidentResponsePlatform.jsx
-=======
-""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/IncidentResponsePlatform.jsx
+:pages.disabled/pages/services/IncidentResponsePlatform.jsx
+>""
 }} transition={{ duration: 0.6 }} className="text-6xl mb-6">
               🚨"
             </motion.div>""
@@ -313,13 +273,12 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
 }} transition = {
 
   { duration: 0.6,
-<<<<<<< HEAD:pages.disabled/pages/services/IncidentResponsePlatform.jsx
+:pages.disabled/pages/services/IncidentResponsePlatform.jsx
   delay: 0.6
 
 }}>"
               {benefits.map((benefit, index) => (<div key={index} className="text-center">"
                   <div className="text-3xl font-bold text-red-400 mb-2">{benefit.metric}</div>"
-=======
   delay: 0.6 
 
 
@@ -330,7 +289,6 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
 }}>""
               {benefits.map((benefit, index) => (<div key={index} className="text-center">""
                   <div className="text-3xl font-bold text-red-400 mb-2">{benefit.metric}</div>""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/IncidentResponsePlatform.jsx
                   <div className="text-sm text-gray-300">{benefit.description}</div>
                 </div>))}
             </motion.div>"
@@ -348,11 +306,10 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
 }} transition = {
 
   { duration: 0.6,
-<<<<<<< HEAD:pages.disabled/pages/services/IncidentResponsePlatform.jsx
+:pages.disabled/pages/services/IncidentResponsePlatform.jsx
   delay: 0.8
 
 }}>"
-=======
   delay: 0.8 
 
 
@@ -361,10 +318,8 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
 
 "
 }}>""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/IncidentResponsePlatform.jsx
               <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-red-600 to-pink-600 text-white font-semibold rounded-lg hover:from-red-700 hover:to-pink-700 transition-all duration-300">
                 Start Free Trial"
-=======
   y: 20;
 }} whileInView = {}
   { opacity: 1,
@@ -431,7 +386,6 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
 }}>""
               <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-red-600 to-pink-600 text-white font-semibold rounded-lg hover:from-red-700 hover:to-pink-700 transition-all duration-300">
                 Start Free Trial;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/IncidentResponsePlatform.jsx
               </Link>""
               <Link to="/enhanced-services" className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300">
                 View All Services;
@@ -439,7 +393,7 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD:pages.disabled/pages/services/IncidentResponsePlatform.jsx
+:pages.disabled/pages/services/IncidentResponsePlatform.jsx
 "
         {/* Features Section */}""
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">""
@@ -452,11 +406,10 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
 }} whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/IncidentResponsePlatform.jsx
+:pages.disabled/pages/services/IncidentResponsePlatform.jsx
   y: 0
 
 }} transition={{ duration: 0.6 }}>"
-=======
   y: 0 
 
 
@@ -465,10 +418,8 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
 
 "
 }} transition={{ duration: 0.6 }}>""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/IncidentResponsePlatform.jsx
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Advanced Security Features"
-=======
 
         {/* Features Section */}""
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">""
@@ -482,12 +433,11 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
 }} transition={{ duration: 0.6 }}>""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Advanced Security Features;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/IncidentResponsePlatform.jsx
               </h2>""
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
                 Comprehensive incident response capabilities that protect your organization 24/7;
               </p>
-<<<<<<< HEAD:pages.disabled/pages/services/IncidentResponsePlatform.jsx
+:pages.disabled/pages/services/IncidentResponsePlatform.jsx
             </motion.div>"
 ""
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">""
@@ -504,13 +454,12 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
 }} transition = {
 
   { duration: 0.6,
-<<<<<<< HEAD:pages.disabled/pages/services/IncidentResponsePlatform.jsx
+:pages.disabled/pages/services/IncidentResponsePlatform.jsx
   delay: index * 0.1
 
 }}>"
                   <div className="text-red-400 mb-4">{feature.icon}</div>"
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>"
-=======
   delay: index * 0.1 
 
 
@@ -521,8 +470,6 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
 }}>""
                   <div className="text-red-400 mb-4">{feature.icon}</div>""
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/IncidentResponsePlatform.jsx
-=======
             </motion.div>
 ""
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">""
@@ -538,13 +485,12 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
 }}>""
                   <div className="text-red-400 mb-4">{feature.icon}</div>""
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/IncidentResponsePlatform.jsx
                   <p className="text-gray-300">{feature.description}</p>
                 </motion.div>))}
             </div>
           </div>
         </section>
-<<<<<<< HEAD:pages.disabled/pages/services/IncidentResponsePlatform.jsx
+:pages.disabled/pages/services/IncidentResponsePlatform.jsx
 "
         {/* Pricing Section */}""
         <section className="py-20 px-4 sm:px-6 lg:px-8">""
@@ -557,11 +503,10 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
 }} whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/IncidentResponsePlatform.jsx
+:pages.disabled/pages/services/IncidentResponsePlatform.jsx
   y: 0
 
 }} transition={{ duration: 0.6 }}>"
-=======
   y: 0 
 
 
@@ -570,7 +515,6 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
 
 "
 }} transition={{ duration: 0.6 }}>""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/IncidentResponsePlatform.jsx
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Flexible Security Solutions"
               </h2>""
@@ -595,12 +539,11 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
 }} transition = {
 
   { duration: 0.6,
-<<<<<<< HEAD:pages.disabled/pages/services/IncidentResponsePlatform.jsx
+:pages.disabled/pages/services/IncidentResponsePlatform.jsx
   delay: index * 0.1
 
 }}>"
                   {plan.popular && (<div className="text-center mb-4">"
-=======
   delay: index * 0.1 
 
 
@@ -610,8 +553,6 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
 "
 }}>""
                   {plan.popular && (<div className="text-center mb-4">""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/IncidentResponsePlatform.jsx
-=======
 
         {/* Pricing Section */}""
         <section className="py-20 px-4 sm:px-6 lg:px-8">""
@@ -645,11 +586,10 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
   delay: index * 0.1;
 }}>""
                   {plan.popular && (<div className="text-center mb-4">""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/IncidentResponsePlatform.jsx
                       <span className="bg-red-600 text-white px-3 py-1 rounded-full text-sm font-medium">
                         Most Popular;
                       </span>
-<<<<<<< HEAD:pages.disabled/pages/services/IncidentResponsePlatform.jsx
+:pages.disabled/pages/services/IncidentResponsePlatform.jsx
                     </div>)}"
 ""
                   <div className="text-center mb-6">""
@@ -660,7 +600,6 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
                     </div>""
                     <p className="text-gray-300">{plan.description}</p>
                   </div>"
-=======
                     </div>)}
 ""
                   <div className="text-center mb-6">""
@@ -671,7 +610,6 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
                     </div>""
                     <p className="text-gray-300">{plan.description}</p>
                   </div>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/IncidentResponsePlatform.jsx
 ""
                   <ul className="space-y-3 mb-8">""
                     {plan.features.map((feature, idx) => (<li key={idx} className="flex items-center text-gray-300">""
@@ -689,11 +627,9 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
             </div>
           </div>
         </section>
-<<<<<<< HEAD:pages.disabled/pages/services/IncidentResponsePlatform.jsx
+:pages.disabled/pages/services/IncidentResponsePlatform.jsx
 "
-=======
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/IncidentResponsePlatform.jsx
         {/* Integrations & Use Cases */}""
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">""
           <div className="max-w-7xl mx-auto">""
@@ -701,13 +637,13 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
               {/* Integrations */}
               <motion.div initial = {}
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/IncidentResponsePlatform.jsx
+:pages.disabled/pages/services/IncidentResponsePlatform.jsx
   x: -20
 
 }} whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/IncidentResponsePlatform.jsx
+:pages.disabled/pages/services/IncidentResponsePlatform.jsx
   x: 0
 
 }} transition={{ duration: 0.6 }}>"
@@ -715,7 +651,6 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
                 <div className="grid grid-cols-2 gap-4">"
                   {integrations.map((integration, index) => (<div key={index} className="flex items-center bg-white/10 rounded-lg p-3">"
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3"/>"
-=======
   x: 0 
 
 
@@ -723,21 +658,16 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
 
 
 "
-=======
   x: -20;
 }} whileInView = {}
   { opacity: 1,
   x: 0;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/IncidentResponsePlatform.jsx
 }} transition={{ duration: 0.6 }}>""
                 <h3 className="text-2xl font-bold text-white mb-6">Security Integrations</h3>""
                 <div className="grid grid-cols-2 gap-4">""
                   {integrations.map((integration, index) => (<div key={index} className="flex items-center bg-white/10 rounded-lg p-3">""
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3"/>""
-<<<<<<< HEAD:pages.disabled/pages/services/IncidentResponsePlatform.jsx
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/IncidentResponsePlatform.jsx
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/IncidentResponsePlatform.jsx
+:pages.disabled/pages/services/IncidentResponsePlatform.jsx
                       <span className="text-gray-300">{integration}</span>
                     </div>))}
                 </div>
@@ -746,13 +676,13 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
               {/* Use Cases */}
               <motion.div initial = {}
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/IncidentResponsePlatform.jsx
+:pages.disabled/pages/services/IncidentResponsePlatform.jsx
   x: 20
 
 }} whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/IncidentResponsePlatform.jsx
+:pages.disabled/pages/services/IncidentResponsePlatform.jsx
   x: 0
 
 }} transition={{ duration: 0.6 }}>"
@@ -760,7 +690,6 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
                 <div className="space-y-3">"
                   {useCases.map((useCase, index) => (<div key={index} className="flex items-center bg-white/10 rounded-lg p-3">"
                       <Target className="w-5 h-5 text-yellow-400 mr-3"/>"
-=======
   x: 0 
 
 
@@ -768,21 +697,16 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
 
 
 "
-=======
   x: 20;
 }} whileInView = {}
   { opacity: 1,
   x: 0;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/IncidentResponsePlatform.jsx
 }} transition={{ duration: 0.6 }}>""
                 <h3 className="text-2xl font-bold text-white mb-6">Perfect For</h3>""
                 <div className="space-y-3">""
                   {useCases.map((useCase, index) => (<div key={index} className="flex items-center bg-white/10 rounded-lg p-3">""
                       <Target className="w-5 h-5 text-yellow-400 mr-3"/>""
-<<<<<<< HEAD:pages.disabled/pages/services/IncidentResponsePlatform.jsx
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/IncidentResponsePlatform.jsx
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/IncidentResponsePlatform.jsx
+:pages.disabled/pages/services/IncidentResponsePlatform.jsx
                       <span className="text-gray-300">{useCase}</span>
                     </div>))}
                 </div>
@@ -790,7 +714,7 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
             </div>
           </div>
         </section>
-<<<<<<< HEAD:pages.disabled/pages/services/IncidentResponsePlatform.jsx
+:pages.disabled/pages/services/IncidentResponsePlatform.jsx
 "
         {/* CTA Section */}""
         <section className="py-20 bg-gradient-to-r from-red-900/50 to-pink-900/50">""
@@ -825,17 +749,14 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
 
 }}>
               Join organizations already using our intelligent incident response platform
-<<<<<<< HEAD:pages.disabled/pages/services/IncidentResponsePlatform.jsx
+:pages.disabled/pages/services/IncidentResponsePlatform.jsx
             </motion.p>
-<<<<<<<< HEAD:pages.disabled/pages/services/IncidentResponsePlatform.jsx
+<:pages.disabled/pages/services/IncidentResponsePlatform.jsx
 
-========
+=
             "
->>>>>>>> main:backup-pages/src-pages/services/IncidentResponsePlatform.jsx
-=======
-            </motion.p>"
+>            </motion.p>"
             ""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/IncidentResponsePlatform.jsx
             <motion.div className="flex flex-col sm:flex-row gap-4 justify-center mb-8" initial = {
 
   { opacity: 0,
@@ -849,11 +770,10 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
 }} transition = {
 
   { duration: 0.6,
-<<<<<<< HEAD:pages.disabled/pages/services/IncidentResponsePlatform.jsx
+:pages.disabled/pages/services/IncidentResponsePlatform.jsx
   delay: 0.4
 
 }}>"
-=======
 
         {/* CTA Section */}""
         <section className="py-20 bg-gradient-to-r from-red-900/50 to-pink-900/50">""
@@ -890,13 +810,11 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
   { duration: 0.6,
   delay: 0.4;
 }}>""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/IncidentResponsePlatform.jsx
               <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-red-600 to-pink-600 text-white font-semibold rounded-lg hover:from-red-700 hover:to-pink-700 transition-all duration-300">
                 Start Free Trial""
                 <ArrowRight className="ml-2 w-5 h-5"/>
-<<<<<<< HEAD:pages.disabled/pages/services/IncidentResponsePlatform.jsx
+:pages.disabled/pages/services/IncidentResponsePlatform.jsx
               </Link>"
-=======
   delay: 0.4 
 
 
@@ -909,14 +827,11 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
                 Start Free Trial""
                 <ArrowRight className="ml-2 w-5 h-5"/>"
               </Link>""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/IncidentResponsePlatform.jsx
-=======
               </Link>""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/IncidentResponsePlatform.jsx
               <a href="tel:+13024640950" className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300">
                 Call: +1 302 464 0950;
               </a>
-<<<<<<< HEAD:pages.disabled/pages/services/IncidentResponsePlatform.jsx
+:pages.disabled/pages/services/IncidentResponsePlatform.jsx
             </motion.div>"
 ""
             <motion.div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 max-w-2xl mx-auto" initial = {
@@ -932,14 +847,13 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
 }} transition = {
 
   { duration: 0.6,
-<<<<<<< HEAD:pages.disabled/pages/services/IncidentResponsePlatform.jsx
+:pages.disabled/pages/services/IncidentResponsePlatform.jsx
   delay: 0.6
 
 }}>"
               <h3 className="text-lg font-semibold text-white mb-4">Why Choose Our Incident Response Platform?</h3>"
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-300">"
                 <div className="flex items-center">"
-=======
   delay: 0.6 
 
 
@@ -947,7 +861,6 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
 
 
 "
-=======
             </motion.div>
 ""
             <motion.div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 max-w-2xl mx-auto" initial = {}
@@ -959,13 +872,11 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
 }} transition = {}
   { duration: 0.6,
   delay: 0.6;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/IncidentResponsePlatform.jsx
 }}>""
               <h3 className="text-lg font-semibold text-white mb-4">Why Choose Our Incident Response Platform?</h3>""
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-300">""
                 <div className="flex items-center">""
-<<<<<<< HEAD:pages.disabled/pages/services/IncidentResponsePlatform.jsx
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/IncidentResponsePlatform.jsx
+:pages.disabled/pages/services/IncidentResponsePlatform.jsx
                   <span className="text-green-400 mr-2">✓</span>
                   AI-Powered Threat Detection"
                 </div>""
@@ -976,7 +887,6 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
                 <div className="flex items-center">""
                   <span className="text-green-400 mr-2">✓</span>
                   24/7 Security Monitoring"
-=======
                   <span className="text-green-400 mr-2">✓</span>
                   AI-Powered Threat Detection;
                 </div>""
@@ -987,14 +897,13 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
                 <div className="flex items-center">""
                   <span className="text-green-400 mr-2">✓</span>
                   24/7 Security Monitoring;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/IncidentResponsePlatform.jsx
                 </div>""
                 <div className="flex items-center">""
                   <span className="text-green-400 mr-2">✓</span>
                   Compliance Assurance;
                 </div>
               </div>
-<<<<<<< HEAD:pages.disabled/pages/services/IncidentResponsePlatform.jsx
+:pages.disabled/pages/services/IncidentResponsePlatform.jsx
             </motion.div>"
 ""
             <motion.div className="mt-8 text-sm text-gray-400" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition = {
@@ -1004,7 +913,6 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
 
 }}>
               <p>Email: kleber@ziontechgroup.com</p>"
-=======
             </motion.div>
 ""
             <motion.div className="mt-8 text-sm text-gray-400" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition = {}
@@ -1012,7 +920,6 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
   delay: 0.8;
 }}>
               <p>Email: kleber@ziontechgroup.com</p>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/IncidentResponsePlatform.jsx
               <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>""
               <p>Website: <a href="https://ziontechgroup.com" className="text-red-400 hover:text-red-300">https://ziontechgroup.com</a></p>
             </motion.div>
@@ -1024,3 +931,5 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
 export { IncidentResponsePlatform };
 export default IncidentResponsePlatform;'"`
 }}}}'"`'"`
+=======
+>>>>>>> main

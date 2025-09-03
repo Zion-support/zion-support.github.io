@@ -234,8 +234,15 @@ export default function FraudDetection() {}
             <FraudTabContent tabValue="actioned" />
           </TabsContent>
         </Tabs>
-      </div>
-    )
-  );
-}'"`
-'"`'"`
+      </div>)}
+
+
+export { FraudDetection };
+
+export { FraudDetection };
+
+export { FraudDetection };
+
+export { FraudDetection };
+
+export { FraudDetection };

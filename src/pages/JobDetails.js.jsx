@@ -181,21 +181,16 @@ export default function JobDetails() {}
         </div>
       </main>
 
-      {/* Job application modal */}
-      {job && (
-        <ApplyToJobModal;
-          job={{}
-            id: job.id,
-            title: job.title,
-            description: job.description,'
-            comp_name: job.comp_name || 'Comp',
-            budget: job.budget,
-            client_id: job.client_id}}
-          isOpen={isApplyModalOpen}
-          onClose={() => setIsApplyModalOpen(false)}
-        />
-      )}
-    </>
-  );
-}'"`
-'"`'"`
+}} isOpen={isApplyModalOpen} onClose={() => setIsApplyModalOpen(false)}/>)}
+    </>)}
+
+
+export { JobDetails };
+
+export { JobDetails };
+
+export { JobDetails };
+
+export { JobDetails };
+
+export { JobDetails };

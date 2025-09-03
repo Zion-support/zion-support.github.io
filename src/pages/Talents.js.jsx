@@ -31,8 +31,16 @@ const Talents = () => {}
           </div>
         </div>
       </div>
-    </>
-  );
-};
-export default Talents;'"""
-'"'"""
+    </>)};
+export default Talents;
+
+
+export { Talents };
+
+export { Talents };
+
+export { Talents };
+
+export { Talents };
+
+export { Talents };

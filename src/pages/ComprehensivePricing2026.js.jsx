@@ -1,93 +1,80 @@
-import React, { useState } from 'react';'''
-import { Link } from 'react-router-dom';'''
-import { motion } from 'framer-motion';'''
-import { ultimateInnovativeServices2026 } from '../data/2026-ultimate-innovative-services';'''
-import { enterpriseITInfrastructureServices2026 } from '../data/2026-enterprise-it-infrastructure-services';
-const ComprehensivePricing2026 = () => {}
-'
-''
-'''
-  const [selectedCategory, setSelectedCategory] = useState('all');'''
-  const [billingCycle, setBillingCycle] = useState('monthly');
-  // Combine all services;
-  const allServices = []
-    ...ultimateInnovativeServices2026,
-    ...enterpriseITInfrastructureServices2026;
-  ];'
-  const categories = [''
-    'all',AI & Business Solutions',IT Infrastructure',Cybersecurity',Cloud & DevOps',Specialized Industry'
-  ];
-  const getCategoryServices = category => {}
-    switch (category) {}
-'
-      case 'AI & Business Solutions': any;
-        return allServices.filter(service =>'
-          [''
-            'Business Intelligence',Marketing Automation',Customer Service',Workflow Automation'
-          ].includes(service.category)
-        );'
-      case 'IT Infrastructure': any;
-        return allServices.filter(service =>'
-          [''
-            'Data Center Management',Storage Management',Virtualization',IT Asset Management'
-          ].includes(service.category)
-        );'
-      case 'Cybersecurity': any;
-        return allServices.filter(service =>'
-          ['Cybersecurity',Network Security'].includes(service.category)
-        );'
-      case 'Cloud & DevOps': any;
-        return allServices.filter(service =>'
-          ['Cloud Infrastructure',DevOps',Performance Monitoring'].includes()
-            service.category;
-          )
-        );'
-      case 'Specialized Industry': any;
-        return allServices.filter(service =>'
-          [''
-            'Supply Chain Management',Financial Technology',Healthcare Technology',Legal Technology',Blockchain Technology',Internet of Things',Quantum Computing'
-          ].includes(service.category)
-        );
-      default: any;
-        return allServices;
-    }
-  };
-  const filteredServices = getCategoryServices(selectedCategory);
-  const getAnnualPrice = monthlyPrice => {}
-    const price = parseInt(monthlyPrice.replace(/[^0-9]/g,));
-    const annualPrice = price * 12 * 0.8; // 20% discount for annual;
-    return `$${annualPrice.toLocaleString()}`;
-  };
-  const containerVariants = {}
-    hidden: { opacity: 0 },
-    visible: {}
-      opacity: 1,
-      transition: {}
-        staggerChildren: 0.1}}};
-  const itemVariants = {}
-    hidden: { y: 20, opacity: 0 },
-    visible: {}
-      y: 0,
-      opacity: 1,
-      transition: {}
-        duration: 0.5,'
-        ease: 'easeOut'}}};
-  return()
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">"""
-      {/* Hero Section */}""""
-      <section className="py-20 px-4 sm:px-6 lg:px-8">""""
-        <div className="max-w-7xl mx-auto text-center">"""
-          <motion.h1""""
-            className="text-4xl md:text-6xl font-bold mb-6"""
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >"""
-            Comprehensive""""
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">'
-              {' '}
-              Pricing 2026;
-            </span>
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+;
+;
+const ComprehensivePricing2026 = () => {
+    const [selectedCategory, setSelectedCategory] = useState('all');
+    const [billingCycle, setBillingCycle] = useState('monthly');
+    // Combine all services
+    const allServices = [...ultimateInnovativeServices2026, ...enterpriseITInfrastructureServices2026];
+    const categories = [
+        'all',
+        'AI & Business Solutions',
+        'IT Infrastructure',
+        'Cybersecurity',
+        'Cloud & DevOps',
+        'Specialized Industry'
+    ];
+    const getCategoryServices = (category) => {
+        switch (category) {
+            case 'AI & Business Solutions':
+                return allServices.filter(service => ['Business Intelligence', 'Marketing Automation', 'Customer Service', 'Workflow Automation'].includes(service.category));
+            case 'IT Infrastructure':
+                return allServices.filter(service => ['Data Center Management', 'Storage Management', 'Virtualization', 'IT Asset Management'].includes(service.category));
+            case 'Cybersecurity':
+                return allServices.filter(service => ['Cybersecurity', 'Network Security'].includes(service.category));
+            case 'Cloud & DevOps':
+                return allServices.filter(service => ['Cloud Infrastructure', 'DevOps', 'Performance Monitoring'].includes(service.category));
+            case 'Specialized Industry':
+                return allServices.filter(service => ['Supply Chain Management', 'Financial Technology', 'Healthcare Technology', 'Legal Technology', 'Blockchain Technology', 'Internet of Things', 'Quantum Computing'].includes(service.category));
+            default:
+                return allServices}
+    };
+    const filteredServices = getCategoryServices(selectedCategory);
+    const getAnnualPrice = (monthlyPrice) => {
+        const price = parseInt(monthlyPrice.replace(/[^0-9]/g, ''));
+        const annualPrice = price * 12 * 0.8; // 20% discount for annual
+        return `$${annualPrice.toLocaleString()}`};
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.1
+            }
+        }
+    };
+    const itemVariants = {
+  hidden: { y: 20,
+  opacity: 0 
+
+},
+        visible: {
+            y: 0,
+            opacity: 1,
+            transition: {
+                duration: 0.5,
+                ease: "easeOut"
+            }
+        }
+    };
+    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
+      {/* Hero Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.h1 className="text-4xl md:text-6xl font-bold mb-6" initial = {
+  { opacity: 0,
+  y: 20 
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+}} transition={{ duration: 0.8 }}>
+            Comprehensive
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+              {" "}Pricing 2026            </span>
           </motion.h1>"""
           <motion.p""""
             className="text-xl text-gray-300 max-w-4xl mx-auto mb-8"""
@@ -505,8 +492,16 @@ const ComprehensivePricing2026 = () => {}
           </div>
         </div>
       </section>
-    </div>
-  );
-};
-export default ComprehensivePricing2026;'"`
-'"`'"`
+    </div>)};
+export default ComprehensivePricing2026;
+
+
+export { ComprehensivePricing2026 };
+
+export { ComprehensivePricing2026 };
+
+export { ComprehensivePricing2026 };
+
+export { ComprehensivePricing2026 };
+
+export { ComprehensivePricing2026 };

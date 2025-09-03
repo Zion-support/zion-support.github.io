@@ -327,5 +327,15 @@ export default function ServicesComparisonPage() {}
           </div>
         </div>
       </section>
-    </div>)}'"`
-'"`'"`
+    </div>)}
+
+
+export { SERVICE_COMPARISONS, ServicesComparisonPage };
+
+export { SERVICE_COMPARISONS, ServicesComparisonPage };
+
+export { SERVICE_COMPARISONS, ServicesComparisonPage };
+
+export { SERVICE_COMPARISONS, ServicesComparisonPage };
+
+export { SERVICE_COMPARISONS, ServicesComparisonPage };

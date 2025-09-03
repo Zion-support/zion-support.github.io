@@ -237,5 +237,15 @@ export default function HelpCenterPage() {}
           </section>
         </div>
       </main>
-    </>)}'"`
-'"`'"`
+    </>)}
+
+
+export { HelpCenterPage };
+
+export { HelpCenterPage };
+
+export { HelpCenterPage };
+
+export { HelpCenterPage };
+
+export { HelpCenterPage };

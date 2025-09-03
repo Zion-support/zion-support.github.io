@@ -1,101 +1,61 @@
 import React, { useState } from 'react';'''
 import { Link } from 'react-router-dom';
-import {}
-  Brain,
-  Cpu,
-  Cloud,
-  Zap,
-  Globe,
-  CheckCircle,
-  Star,
-  Phone,'
-  Mail,''
-  MapPin,'''
-  ExternalLink} from 'lucide-react';'''
-import { SEOHead } from '../components/SEOHead';'''
-import { INNOVATIVE_NEW_SERVICES_2025 } from '../data/innovativeNewServices2025';'''
-import { SPECIALIZED_IT_SERVICES_2025 } from '../data/specializedITServices2025';
-const InnovativeNewServices2025 = () => {}
-'
-''
-'''
-  const [selectedCategory, setSelectedCategory] = useState('all');'''
-  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
-  const allServices = []
-    ...INNOVATIVE_NEW_SERVICES_2025,
-    ...SPECIALIZED_IT_SERVICES_2025;
-  ];'
-  const categories = [''
-    'all',
-    ...Array.from(new Set(allServices.map(service => service.category)))
-  ];'
-  const priceRanges = [''
-    { value: 'all', label: 'All Prices' },'
-    { value: '0-2000', label: 'Under $2,000/month' },'
-    { value: '2000-5000', label: '$2,000 - $5,000/month' },'
-    { value: '5000+', label: '$5,000+/month' }
-  ];
-  const filteredServices = allServices.filter(service => {}
-'
-    const categoryMatch =''
-      selectedCategory === 'all' || service.category === selectedCategory;
-    // All services have a price property;
-    const servicePrice = service.price;'
-    const priceMatch =''
-      selectedPriceRange === 'all' ||''
-      (selectedPriceRange === '0-2000' && service.price < 2000) ||''
-      (selectedPriceRange === '2000-5000' &&
-        service.price >= 2000 &&'
-        service.price < 5000) ||''
-      (selectedPriceRange === '5000+' && service.price >= 5000);
-    return categoryMatch && priceMatch;
-  });
-  const getCategoryIcon = category => {}
-    switch (category) {}
-'
-      case 'AI & Analytics': any;
-        return Brain;'
-      case 'AI & Development': any;
-        return Cpu;'
-      case 'Network Infrastructure': any;
-        return Globe;'
-      case 'Edge Computing': any;
-        return Cloud;
-      default: any;
-        return Zap;
-    }
-  };
-  const getCategoryColor = category => {}
-    switch (category) {}
-'
-''
-'''
-      case 'AI & Analytics':''''
-        return 'from-purple-500 to-pink-600';'''
-      case 'AI & Development':''''
-        return 'from-blue-500 to-cyan-600';'''
-      case 'Network Infrastructure':''''
-        return 'from-green-500 to-emerald-600';'''
-      case 'Edge Computing':''''
-        return 'from-orange-500 to-red-600';'''
-      default:''''
-        return 'from-gray-500 to-gray-600';
-    }
-  };
-  return()
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-blue-900 text-white">"""
-      <SEOHead""""
-        title="Innovative New Services 2025 - Zion Tech Group""""
-        description="Discover our cutting-edge AI solutions, 5G infrastructure, edge computing, and autonomous systems. Transform your business with next-generation technology.""""
-        keywords="AI solutions 2025, 5G enterprise, edge computing, autonomous systems, quantum technology, Zion Tech Group""""
-        type="website""""
-        url="https://ziontechgroup.com/innovative-new-services-2025"""
-      />
-"""
-      {/* Hero Section */}""""
-      <section className="relative py-20 px-6">""""
-        <div className="max-w-7xl mx-auto text-center">""""
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+import { Brain, Cpu, Cloud, Zap, Globe, CheckCircle, Star, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
+import { SEOHead } from "../components/SEOHead.jsx";
+;
+import { SPECIALIZED_IT_SERVICES_2025 } from "../data/specializedITServices2025";
+const InnovativeNewServices2025 = () => {
+    const [selectedCategory, setSelectedCategory] = useState('all');
+    const [selectedPriceRange, setSelectedPriceRange] = useState('all');
+    const allServices = [...INNOVATIVE_NEW_SERVICES_2025, ...SPECIALIZED_IT_SERVICES_2025];
+    const categories = ['all', ...Array.from(new Set(allServices.map(service => service.category)))];
+    const priceRanges = [
+        { value: 'all', label: 'All Prices' },
+        { value: '0-2000', label: 'Under $2,000/month' },
+        { value: '2000-5000', label: '$2,000 - $5,000/month' },
+        { value: '5000+', label: '$5,000+/month' }
+    ];
+    const filteredServices = allServices.filter(service => {
+        const categoryMatch = selectedCategory === 'all' || service.category === selectedCategory;
+        // All services have a price property
+        const servicePrice = service.price;
+        const priceMatch = selectedPriceRange === 'all' ||
+            (selectedPriceRange === '0-2000' && service.price < 2000) ||
+            (selectedPriceRange === '2000-5000' && service.price >= 2000 && service.price < 5000) ||
+            (selectedPriceRange === '5000+' && service.price >= 5000);
+        return categoryMatch && priceMatch});
+    const getCategoryIcon = (category) => {
+        switch (category) {
+            case 'AI & Analytics':
+                return Brain;
+            case 'AI & Development':
+                return Cpu;
+            case 'Network Infrastructure':
+                return Globe;
+            case 'Edge Computing':
+                return Cloud;
+            default:
+                return Zap}
+    };
+    const getCategoryColor = (category) => {
+        switch (category) {
+            case 'AI & Analytics':
+                return 'from-purple-500 to-pink-600';
+            case 'AI & Development':
+                return 'from-blue-500 to-cyan-600';
+            case 'Network Infrastructure':
+                return 'from-green-500 to-emerald-600';
+            case 'Edge Computing':
+                return 'from-orange-500 to-red-600';
+            default:
+                return 'from-gray-500 to-gray-600'}
+    };
+    return (<div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-blue-900 text-white">
+      <SEOHead title="Innovative New Services 2025 - Zion Tech Group" description="Discover our cutting-edge AI solutions, 5G infrastructure, edge computing, and autonomous systems. Transform your business with next-generation technology." keywords="AI solutions 2025, 5G enterprise, edge computing, autonomous systems, quantum technology, Zion Tech Group" type="website" url="https://ziontechgroup.com/innovative-new-services-2025"/>
+
+      {/* Hero Section */}
+      <section className="relative py-20 px-6">
+        <div className="max-w-7xl mx-auto text-center">          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
             Innovative New Services 2025"""
           </h1>""""
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
@@ -365,8 +325,16 @@ const InnovativeNewServices2025 = () => {}
           </div>
         </div>
       </section>
-    </div>
-  );
-};
-export default InnovativeNewServices2025;'"`
-'"`'"`
+    </div>)};
+export default InnovativeNewServices2025;
+
+
+export { InnovativeNewServices2025, IconComponent };
+
+export { InnovativeNewServices2025, IconComponent };
+
+export { InnovativeNewServices2025, IconComponent };
+
+export { InnovativeNewServices2025, IconComponent };
+
+export { InnovativeNewServices2025, IconComponent };

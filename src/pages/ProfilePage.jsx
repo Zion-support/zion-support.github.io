@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from "react";""""
 import { useParams } from "react-router-dom";""""
 import { supabase } from "@/integrations/supabase/client";""""
@@ -162,6 +163,19 @@ import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle
           </div>
         </div>
       </div>
+      
+    </>)}
 
-    </>)}'"`
-'"`'"`
+
+export { ProfilePage };
+
+export { ProfilePage };
+
+export { ProfilePage };
+
+export { ProfilePage };
+
+export { ProfilePage };
+=======
+export default ProfilePage
+>>>>>>> main

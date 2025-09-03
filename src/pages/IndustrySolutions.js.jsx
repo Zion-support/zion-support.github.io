@@ -269,8 +269,16 @@ const IndustrySolutions = () => {}
           </div>
         </div>
       </div>
-    </div>
-  );
-};
-export default IndustrySolutions;'"`
-'"`'"`
+    </div>)};
+export default IndustrySolutions;
+
+
+export { IndustrySolutions };
+
+export { IndustrySolutions };
+
+export { IndustrySolutions };
+
+export { IndustrySolutions };
+
+export { IndustrySolutions };

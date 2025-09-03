@@ -190,6 +190,16 @@ export default function UpdatePassword() {}
           </div>
         </div>
       </div>
+      
+    </>)}
 
-    </>)}'"""
-'"'"""
+
+export { UpdatePassword };
+
+export { UpdatePassword };
+
+export { UpdatePassword };
+
+export { UpdatePassword };
+
+export { UpdatePassword };

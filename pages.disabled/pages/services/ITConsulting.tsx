@@ -1,4 +1,5 @@
-<<<<<<< HEAD:pages.disabled/pages/services/ITConsulting.tsx
+<<<<<<< HEAD
+:pages.disabled/pages/services/ITConsulting.tsx
   return()
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       {/* Hero Section */}""
@@ -9,7 +10,6 @@
             className="text-center max-w-4xl mx-auto"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}"
-=======
 import {}
   Users,
   Cpu,
@@ -198,25 +198,21 @@ export default function ITConsulting(...args: []):  {}
             className="text-center max-w-4xl mx-auto""
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITConsulting.tsx
             transition={{ duration: 0.8 }}""
             className="text-center""
           >""
             <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-sm font-medium mb-6">""
-<<<<<<< HEAD:pages.disabled/pages/services/ITConsulting.tsx
+:pages.disabled/pages/services/ITConsulting.tsx
               <Briefcase className="w-4 h-4 mr-2"  />              IT Consulting Services
-<<<<<<< HEAD:pages.disabled/pages/services/ITConsulting.tsx
+:pages.disabled/pages/services/ITConsulting.tsx
             </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/ITConsulting.tsx
+<:pages.disabled/pages/services/ITConsulting.tsx
 
-========
+=
             "
->>>>>>>> main:backup-pages/src-pages/services/ITConsulting.tsx
-=======
-              <Briefcase className="w-4 h-4 mr-2"  />              IT Consulting Services;
+>              <Briefcase className="w-4 h-4 mr-2"  />              IT Consulting Services;
             </div>
             ""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITConsulting.tsx
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               IT""
               <span className="bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent"> Consulting</span>
@@ -225,16 +221,14 @@ export default function ITConsulting(...args: []):  {}
               Strategic IT consulting services that align technology with your business objectives.
               Our expert consultants help you make informed technology decisions that drive growth and innovation.
             </p>
-<<<<<<< HEAD:pages.disabled/pages/services/ITConsulting.tsx
-<<<<<<<< HEAD:pages.disabled/pages/services/ITConsulting.tsx
+:pages.disabled/pages/services/ITConsulting.tsx
+<:pages.disabled/pages/services/ITConsulting.tsx
 
-========
+=
             "
->>>>>>>> main:backup-pages/src-pages/services/ITConsulting.tsx
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+>            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
                 to="/contact"
-=======
             </div>"
             ""
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">"
@@ -249,7 +243,6 @@ export default function ITConsulting(...args: []):  {}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <Link""
                 to="/contact""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ITConsulting.tsx
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 font-semibold"
                 Get Expert Advice
               </Link>"
@@ -257,7 +250,6 @@ export default function ITConsulting(...args: []):  {}
                 to="/services""
                 className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 font-semibold"
                 View All Services
-=======
             ""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link""
@@ -269,12 +261,11 @@ export default function ITConsulting(...args: []):  {}
                 to="/services""
                 className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 font-semibold""
                 View All Services;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITConsulting.tsx
               </Link>
             </div>
           </motion.div>
         </div>
-<<<<<<< HEAD:pages.disabled/pages/services/ITConsulting.tsx
+:pages.disabled/pages/services/ITConsulting.tsx
       </section>;"
       {/* Features Section */}""
       <section className="py-20">;""
@@ -283,7 +274,6 @@ export default function ITConsulting(...args: []):  {}
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}"
-=======
       </section>;
 
       {/* Features Section */}""
@@ -293,26 +283,21 @@ export default function ITConsulting(...args: []):  {}
             className="text-center mb-16""
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITConsulting.tsx
             transition={{ duration: 0.8 }}""
             className="text-center mb-16""
           >""
             <h2 className="text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD:pages.disabled/pages/services/ITConsulting.tsx
+:pages.disabled/pages/services/ITConsulting.tsx
               Comprehensive IT Consulting Features"
-=======
               Comprehensive IT Consulting Features;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITConsulting.tsx
             </h2>""
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Comprehensive IT consulting services designed to help you make the right technology decisions;
               and implement solutions that drive business success.
             </p>
-<<<<<<< HEAD:pages.disabled/pages/services/ITConsulting.tsx
+:pages.disabled/pages/services/ITConsulting.tsx
           </motion.div>"
-=======
           </motion.div>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITConsulting.tsx
 ""
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {services.map((service, index;
@@ -320,34 +305,26 @@ export default function ITConsulting(...args: []):  {}
                 key={index}
                 initial = {}
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/ITConsulting.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/ITConsulting.tsx
+:pages.disabled/pages/services/ITConsulting.tsx
+:pages.disabled/pages/services/ITConsulting.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ITConsulting.tsx
-=======
   y: 20;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITConsulting.tsx
 }}
                 whileInView = {}
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/ITConsulting.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/ITConsulting.tsx
+:pages.disabled/pages/services/ITConsulting.tsx
+:pages.disabled/pages/services/ITConsulting.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ITConsulting.tsx
-=======
   y: 0;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITConsulting.tsx
 }}
                 transition = {}
   { duration: 0.5,
-<<<<<<< HEAD:pages.disabled/pages/services/ITConsulting.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/ITConsulting.tsx
+:pages.disabled/pages/services/ITConsulting.tsx
+:pages.disabled/pages/services/ITConsulting.tsx
   delay: index * 0.1
 
 }}"
@@ -355,51 +332,41 @@ export default function ITConsulting(...args: []):  {}
               >"
                 <div className="flex items-start gap-4 mb-6">"
                   <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center flex-shrink-0">"
-=======
   delay: index * 0.1 "
-=======
   delay: index * 0.1;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITConsulting.tsx
 }}""
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/30 transition-all duration-200""
               >""
                 <div className="flex items-start gap-4 mb-6">""
                   <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center flex-shrink-0">""
-<<<<<<< HEAD:pages.disabled/pages/services/ITConsulting.tsx
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ITConsulting.tsx
+:pages.disabled/pages/services/ITConsulting.tsx
                     <service.icon className="w-8 h-8 text-white" />
                   </div>"
-=======
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITConsulting.tsx
                   <div>""
                     <h3 className="text-2xl font-bold text-white mb-2">{service.title}</h3>""
                     <p className="text-zion-slate-light leading-relaxed">{service.description}</p>
                   </div>
-<<<<<<< HEAD:pages.disabled/pages/services/ITConsulting.tsx
+:pages.disabled/pages/services/ITConsulting.tsx
                 </div>"
 ""
                 <div className="mb-6">'"'"
                   <h4 className="text-zion-cyan font-semibold mb-3">What's Included:</h4>""
                   <ul className="space-y-2">"
-=======
                 </div>
 ""
                 <div className="mb-6">'""
                   <h4 className="text-zion-cyan font-semibold mb-3">What's Included:</h4>""
                   <ul className="space-y-2">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITConsulting.tsx
                     {service.features.map((feature, featureIndex) => (""
                       <li key={featureIndex} className="flex items-center gap-2 text-zion-slate-light">""
                         <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0"  />                        {feature}
                       </li>
                     ))}
-<<<<<<< HEAD:pages.disabled/pages/services/ITConsulting.tsx
+:pages.disabled/pages/services/ITConsulting.tsx
                   </ul>"
-=======
                   </ul>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITConsulting.tsx
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>""
                 <p className="text-gray-300">{feature.description}</p>
@@ -407,7 +374,7 @@ export default function ITConsulting(...args: []):  {}
             ))}
           </div>
         </div>
-<<<<<<< HEAD:pages.disabled/pages/services/ITConsulting.tsx
+:pages.disabled/pages/services/ITConsulting.tsx
       </section>"
       {/* Expertise Areas */}""
       <section className="py-20 bg-zion-slate-dark/30">;""
@@ -416,7 +383,6 @@ export default function ITConsulting(...args: []):  {}
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}"
-=======
       </section>
 
       {/* Expertise Areas */}""
@@ -426,12 +392,11 @@ export default function ITConsulting(...args: []):  {}
             className="text-center mb-16""
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITConsulting.tsx
             transition={{ duration: 0.8 }}""
             className="text-center mb-16""
           >""
             <h2 className="text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD:pages.disabled/pages/services/ITConsulting.tsx
+:pages.disabled/pages/services/ITConsulting.tsx
               Core IT Consulting Services"
             </h2>""
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
@@ -443,7 +408,6 @@ export default function ITConsulting(...args: []):  {}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {expertise.map(area: unknown, index: unknown()
               <motion.div
-=======
               Core IT Consulting Services;
             </h2>""
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
@@ -455,38 +419,29 @@ export default function ITConsulting(...args: []):  {}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {expertise.map(area: unknown, index: unknown (
               <motion.div;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITConsulting.tsx
                 key={index}
                 initial = {}
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/ITConsulting.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/ITConsulting.tsx
+:pages.disabled/pages/services/ITConsulting.tsx
+:pages.disabled/pages/services/ITConsulting.tsx
   x: index % 2 === 0 ? -20 : 20
 
-=======
   x: index % 2 === 0 ? -20 : 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ITConsulting.tsx
-=======
   x: index % 2 === 0 ? -20 : 20;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITConsulting.tsx
 }}
                 whileInView = {}
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/ITConsulting.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/ITConsulting.tsx
+:pages.disabled/pages/services/ITConsulting.tsx
+:pages.disabled/pages/services/ITConsulting.tsx
   x: 0
 
-=======
   x: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ITConsulting.tsx
-=======
   x: 0;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITConsulting.tsx
 }}
                 transition = {}
   { duration: 0.5,
-<<<<<<< HEAD:pages.disabled/pages/services/ITConsulting.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/ITConsulting.tsx
+:pages.disabled/pages/services/ITConsulting.tsx
+:pages.disabled/pages/services/ITConsulting.tsx
   delay: index * 0.1
 
 }}"
@@ -494,33 +449,25 @@ export default function ITConsulting(...args: []):  {}
               >"
                 <div className="flex items-start space-x-4">"
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center flex-shrink-0">"
-=======
   delay: index * 0.1 "
-=======
   delay: index * 0.1;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITConsulting.tsx
 }}""
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/30 transition-all duration-200""
               >""
                 <div className="flex items-start space-x-4">""
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center flex-shrink-0">""
-<<<<<<< HEAD:pages.disabled/pages/services/ITConsulting.tsx
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ITConsulting.tsx
+:pages.disabled/pages/services/ITConsulting.tsx
                     <service.icon className="w-6 h-6 text-white" />
                   </div>"
-=======
                     <service.icon className="w-6 h-6 text-white" />
                   </div>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITConsulting.tsx
                   <div>""
                     <h3 className="text-xl font-semibold text-white mb-2">{service.title}</h3>""
                     <p className="text-gray-300">{service.description}</p>
                   </div>
-<<<<<<< HEAD:pages.disabled/pages/services/ITConsulting.tsx
+:pages.disabled/pages/services/ITConsulting.tsx
                 </div>"
-=======
                 </div>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITConsulting.tsx
 ""
                 <h3 className="text-xl font-bold text-white mb-3">{area.title}</h3>""
                 <p className="text-zion-slate-light leading-relaxed">{area.description}</p>
@@ -528,7 +475,7 @@ export default function ITConsulting(...args: []):  {}
             ))}
           </div>
         </div>
-<<<<<<< HEAD:pages.disabled/pages/services/ITConsulting.tsx
+:pages.disabled/pages/services/ITConsulting.tsx
       </section>"
       {/* Benefits Section */}""
       <section className="py-20">;""
@@ -537,7 +484,6 @@ export default function ITConsulting(...args: []):  {}
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}"
-=======
       </section>
 
       {/* Benefits Section */}""
@@ -547,21 +493,18 @@ export default function ITConsulting(...args: []):  {}
             className="text-center mb-16""
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITConsulting.tsx
             transition={{ duration: 0.8 }}""
             className="text-center mb-16""
           >""
             <h2 className="text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD:pages.disabled/pages/services/ITConsulting.tsx
+:pages.disabled/pages/services/ITConsulting.tsx
               IT Consulting Benefits"
-=======
               IT Consulting Benefits;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITConsulting.tsx
             </h2>""
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Experience measurable improvements in IT efficiency, security, and business alignment.
             </p>
-<<<<<<< HEAD:pages.disabled/pages/services/ITConsulting.tsx
+:pages.disabled/pages/services/ITConsulting.tsx
           </motion.div>"
 ""
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -575,7 +518,6 @@ export default function ITConsulting(...args: []):  {}
 ""
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center mb-6">""
                   <benefit.icon className="w-8 h-8 text-white" />"
-=======
           </motion.div>
 ""
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -589,7 +531,6 @@ export default function ITConsulting(...args: []):  {}
 ""
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center mb-6">""
                   <benefit.icon className="w-8 h-8 text-white" />
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITConsulting.tsx
                 </div>""
                 <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>""
                 <p className="text-zion-slate-light leading-relaxed">{benefit.description}</p>
@@ -597,7 +538,7 @@ export default function ITConsulting(...args: []):  {}
             ))}
           </div>
         </div>
-<<<<<<< HEAD:pages.disabled/pages/services/ITConsulting.tsx
+:pages.disabled/pages/services/ITConsulting.tsx
       </section>"
       {/* Industries Section */}""
       <section className="py-20 bg-zion-slate-dark/30">;""
@@ -606,7 +547,6 @@ export default function ITConsulting(...args: []):  {}
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}"
-=======
       </section>
 
       {/* Industries Section */}""
@@ -616,88 +556,71 @@ export default function ITConsulting(...args: []):  {}
             className="text-center mb-16""
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITConsulting.tsx
             transition={{ duration: 0.8 }}""
             className="text-center mb-16""
           >""
             <h2 className="text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD:pages.disabled/pages/services/ITConsulting.tsx
+:pages.disabled/pages/services/ITConsulting.tsx
               Industry Applications"
-=======
               Industry Applications;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITConsulting.tsx
             </h2>""
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Our IT consulting expertise spans across multiple industries,
               each with unique technology challenges and requirements.
             </p>
-<<<<<<< HEAD:pages.disabled/pages/services/ITConsulting.tsx
+:pages.disabled/pages/services/ITConsulting.tsx
           </motion.div>"
 ""
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {industries.map(industry: unknown, index: unknown()
               <motion.div
-=======
           </motion.div>
 ""
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {industries.map(industry: unknown, index: unknown (
               <motion.div;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITConsulting.tsx
                 key={index}
                 initial = {}
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/ITConsulting.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/ITConsulting.tsx
+:pages.disabled/pages/services/ITConsulting.tsx
+:pages.disabled/pages/services/ITConsulting.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ITConsulting.tsx
-=======
   y: 20;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITConsulting.tsx
 }}
                 whileInView = {}
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/ITConsulting.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/ITConsulting.tsx
+:pages.disabled/pages/services/ITConsulting.tsx
+:pages.disabled/pages/services/ITConsulting.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ITConsulting.tsx
-=======
   y: 0;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITConsulting.tsx
 }}
                 transition = {}
   { duration: 0.5,
-<<<<<<< HEAD:pages.disabled/pages/services/ITConsulting.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/ITConsulting.tsx
+:pages.disabled/pages/services/ITConsulting.tsx
+:pages.disabled/pages/services/ITConsulting.tsx
   delay: index * 0.1
 
 }}"
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-blue-500/30 transition-all duration-200"
               >"
-=======
   delay: index * 0.1 "
 }}""
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-blue-500/30 transition-all duration-200""
               >""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ITConsulting.tsx
-=======
   delay: index * 0.1;
 }}""
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-blue-500/30 transition-all duration-200""
               >""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITConsulting.tsx
                 <div className="text-zion-cyan font-semibold">{industry}</div>
               </motion.div>
             ))}
           </div>
         </div>
-<<<<<<< HEAD:pages.disabled/pages/services/ITConsulting.tsx
+:pages.disabled/pages/services/ITConsulting.tsx
       </section>"
       {/* Process Section */}""
       <section className="py-20">;""
@@ -710,7 +633,6 @@ export default function ITConsulting(...args: []):  {}
 ""
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Our Consulting Process"
-=======
       </section>
 
       {/* Process Section */}""
@@ -724,12 +646,11 @@ export default function ITConsulting(...args: []):  {}
 ""
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Our Consulting Process;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITConsulting.tsx
             </h2>""
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               A proven methodology that ensures successful consulting outcomes and lasting value.
             </p>
-<<<<<<< HEAD:pages.disabled/pages/services/ITConsulting.tsx
+:pages.disabled/pages/services/ITConsulting.tsx
           </motion.div>"
 ""
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">'
@@ -748,7 +669,6 @@ export default function ITConsulting(...args: []):  {}
 ""
                 <div className="w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white">
                   {phase.step}"
-=======
           </motion.div>
 ""
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -767,7 +687,6 @@ export default function ITConsulting(...args: []):  {}
 ""
                 <div className="w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white">
                   {phase.step}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITConsulting.tsx
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-2">{useCase.industry}</h3>""
                 <p className="text-gray-300 text-sm">{useCase.description}</p>
@@ -775,7 +694,7 @@ export default function ITConsulting(...args: []):  {}
             ))}
           </div>
         </div>
-<<<<<<< HEAD:pages.disabled/pages/services/ITConsulting.tsx
+:pages.disabled/pages/services/ITConsulting.tsx
       </section>"
       {/* CTA Section */}""
       <section className="py-20 bg-zion-slate-dark/30">;""
@@ -803,7 +722,6 @@ export default function ITConsulting(...args: []):  {}
                 to="/services""
                 className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 font-semibold"
                 Explore Services
-=======
       </section>
 
       {/* CTA Section */}""
@@ -832,7 +750,6 @@ export default function ITConsulting(...args: []):  {}
                 to="/services""
                 className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 font-semibold""
                 Explore Services;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITConsulting.tsx
               </Link>
             </div>
           </motion.div>
@@ -840,10 +757,10 @@ export default function ITConsulting(...args: []):  {}
       </section>
     </div>
   )};
-<<<<<<< HEAD:pages.disabled/pages/services/ITConsulting.tsx
+:pages.disabled/pages/services/ITConsulting.tsx
 ;export default ITConsulting;'"
 '"'"
-=======
 ;export default ITConsulting;
 '""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITConsulting.tsx
+=======
+>>>>>>> main

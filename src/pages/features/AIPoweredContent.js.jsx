@@ -92,7 +92,15 @@ export default function AIPoweredContent() {}
         </div>
       </main>
       <Footer />
-    </>
-  );
-}'"""
-'"'"""
+    </>)}
+
+
+export { AIPoweredContent };
+
+export { AIPoweredContent };
+
+export { AIPoweredContent };
+
+export { AIPoweredContent };
+
+export { AIPoweredContent };

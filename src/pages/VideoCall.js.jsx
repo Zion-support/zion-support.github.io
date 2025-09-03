@@ -122,7 +122,16 @@ export default function VideoCall() {}
           </div>
         )}
       </main>
-    </>
-  );
-}'"`
-'"`'"`
+      
+    </>)}
+
+
+export { VideoCall };
+
+export { VideoCall };
+
+export { VideoCall };
+
+export { VideoCall };
+
+export { VideoCall };

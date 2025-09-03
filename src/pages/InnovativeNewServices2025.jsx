@@ -1,9 +1,9 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';'''
 import { Link } from 'react-router-dom';'''
 import { Brain, Cpu, Cloud, Zap, Globe, CheckCircle, Star, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
-import { SEOHead } from "../components/SEOHead";""""
-import { INNOVATIVE_NEW_SERVICES_2025 } from "../data/innovativeNewServices2025";""""
-import { SPECIALIZED_IT_SERVICES_2025 } from "../data/specializedITServices2025";
+import { SEOHead } from "../components/SEOHead.jsx";
+;import { SPECIALIZED_IT_SERVICES_2025 } from "../data/specializedITServices2025";
 const InnovativeNewServices2025 = () => {}
 '
 ''
@@ -260,8 +260,20 @@ const InnovativeNewServices2025 = () => {}
             </Link>
           </div>
         </div>
-      </section>'"`
-    </div>)};'"`'"`
-export default InnovativeNewServices2025;'"`'"`'"`
-}}}'"`'"`'"`
-'"`'"`
+      </section>
+    </div>)};
+export default InnovativeNewServices2025;
+}}}
+
+export { InnovativeNewServices2025, IconComponent };
+
+export { InnovativeNewServices2025, IconComponent };
+
+export { InnovativeNewServices2025, IconComponent };
+
+export { InnovativeNewServices2025, IconComponent };
+
+export { InnovativeNewServices2025, IconComponent };
+=======
+import React from 'react'; export default InnovativeNewServices2025; const InnovativeNewServices2025 = () => { const [selectedCategory, setSelectedCategory] = useState("all"); const [selectedPriceRange, setSelectedPriceRange] = useState("all"); const allServices = [...INNOVATIVE_NEW_SERVICES_2025, ...SPECIALIZED_IT_SERVICES_2025]; const categories = ["all", ...Array.from(new Set (allServices.map (service => service.category) ) ) ]; const priceRanges = [{ value: "all", label: "All Prices" }, { value: "0 - 2000", label: "Under $2,000 / month" }, { value: "2000 - 5000", label: "$2,000 - $5,000 / month" }, { value: "5000+", label: "$5,000+/month" } ]; const filteredServices = allServices.filter (service => { const categoryMatch = selectedCategory === "all" || service.category === selectedCategory;
+>>>>>>> main

@@ -54,7 +54,15 @@ export default function Home() {}
       <NewsletterSection />
       <ITServiceRequestHero />
       <FloatingCTA />
-    </>
-  );
-}'"""
-'"'"""
+    </>)}
+
+
+export { Home };
+
+export { Home };
+
+export { Home };
+
+export { Home };
+
+export { Home };

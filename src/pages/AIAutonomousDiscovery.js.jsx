@@ -242,8 +242,16 @@ const AIAutonomousDiscovery = () => {}
           </div>
         </div>
       </div>
-    </>
-  );
-};
-export default AIAutonomousDiscovery;'"""
-'"'"""
+    </>)};
+export default AIAutonomousDiscovery;
+
+
+export { AIAutonomousDiscovery };
+
+export { AIAutonomousDiscovery };
+
+export { AIAutonomousDiscovery };
+
+export { AIAutonomousDiscovery };
+
+export { AIAutonomousDiscovery };

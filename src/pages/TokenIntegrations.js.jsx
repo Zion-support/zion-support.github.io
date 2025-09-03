@@ -165,7 +165,15 @@ export default function TokenIntegrations() {}
         </div>
       </div>
       <Footer />
-    </div>
-  );
-}'"`
-'"`'"`
+    </div>)}
+
+
+export { CHAINS, TokenIntegrations };
+
+export { CHAINS, TokenIntegrations };
+
+export { CHAINS, TokenIntegrations };
+
+export { CHAINS, TokenIntegrations };
+
+export { CHAINS, TokenIntegrations };

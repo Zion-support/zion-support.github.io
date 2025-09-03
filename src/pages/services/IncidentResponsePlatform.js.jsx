@@ -473,6 +473,15 @@ const IncidentResponsePlatform = () => {}
     </>
   );
 };
+export default IncidentResponsePlatform;
+
+
 export { IncidentResponsePlatform };
-export default IncidentResponsePlatform;'"`
-'"`'"`
+
+export { IncidentResponsePlatform };
+
+export { IncidentResponsePlatform };
+
+export { IncidentResponsePlatform };
+
+export { IncidentResponsePlatform };

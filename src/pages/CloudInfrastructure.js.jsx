@@ -342,5 +342,15 @@ export default function CloudInfrastructure() {}
           </div>
         </div>
       </section>
-    </div>)}'"`
-'"`'"`
+    </div>)}
+
+
+export { CloudInfrastructure };
+
+export { CloudInfrastructure };
+
+export { CloudInfrastructure };
+
+export { CloudInfrastructure };
+
+export { CloudInfrastructure };

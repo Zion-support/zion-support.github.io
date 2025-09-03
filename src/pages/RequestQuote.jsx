@@ -213,6 +213,17 @@ export default function RequestQuote() {}
       </main>
 
       <Footer />
-    </div>) ;
-}'"""
-'"'"""
+    </div>
+  );
+}
+
+
+export { RequestQuote };
+
+export { RequestQuote };
+
+export { RequestQuote };
+
+export { RequestQuote };
+
+export { RequestQuote };

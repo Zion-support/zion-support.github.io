@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {}
   Shield,
   Eye,
@@ -33,39 +34,33 @@ import {}
   Activity,
   ShieldCheck} from 'lucide-react.ts';
 
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
+:pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
 export default function AIAutonomousThreatIntelligence(...args: any[]): any {
 
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-orange-900 text-white">"
-=======
 export default function AIAutonomousThreatIntelligence(...args: any[]): any {}
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-orange-900 text-white">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousThreatIntelligence.tsx
       {/* Hero Section */}""
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">""
         <div className="absolute inset-0">""
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(239,68,68,0.3),transparent_50%)]"></div>""
           <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_30%,rgba(239,68,68,0.1)_50%,transparent_70%)] animate-pulse"></div>
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
+:pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
         </div>"
-=======
         </div>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousThreatIntelligence.tsx
 ""
         <div className="relative max-w-7xl mx-auto text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
+:pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
             transition={{ duration: 0.8 }}"
-=======
             transition={{ duration: 0.8 }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousThreatIntelligence.tsx
           >""
             <div className="flex justify-center mb-6">""
               <div className="p-3 bg-gradient-to-r from-red-500 to-orange-500 rounded-full">""
                 <Shield className="h-8 w-8 text-white"  />              </div>
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
+:pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
             </div>"
 ""
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent mb-6">
@@ -83,7 +78,6 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {}
                 whileHover={{ scale: 1.05 }}"
                 whileTap={{ scale: 0.95 }}""
                 className="px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 rounded-full font-semibold text-lg hover:from-red-700 hover:to-orange-700 transition-all duration-300 shadow-lg hover:shadow-red-500/25"
-=======
             </div>
 ""
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent mb-6">
@@ -101,21 +95,18 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}""
                 className="px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 rounded-full font-semibold text-lg hover:from-red-700 hover:to-orange-700 transition-all duration-300 shadow-lg hover:shadow-red-500/25""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousThreatIntelligence.tsx
               >
                 Start Security Trial;
               </motion.button>
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
+:pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
               <motion.button
                 whileHover={{ scale: 1.05 }}"
                 whileTap={{ scale: 0.95 }}""
                 className="px-8 py-4 border-2 border-red-400 rounded-full font-semibold text-lg hover:bg-red-400 hover:text-gray-900 transition-all duration-300"
-=======
               <motion.button;
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}""
                 className="px-8 py-4 border-2 border-red-400 rounded-full font-semibold text-lg hover:bg-red-400 hover:text-gray-900 transition-all duration-300""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousThreatIntelligence.tsx
               >
                 Schedule Demo;
               </motion.button>
@@ -123,57 +114,47 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {}
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
+:pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
 "
-=======
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousThreatIntelligence.tsx
       {/* Features Section */}""
       <section className="py-20 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
+:pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
             whileInView={{ opacity: 1, y: 0 }}"
-=======
             whileInView={{ opacity: 1, y: 0 }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousThreatIntelligence.tsx
             transition={{ duration: 0.8 }}""
             className="text-center mb-16""
           >""
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
+:pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
               Revolutionary Security Features"
-=======
               Revolutionary Security Features;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousThreatIntelligence.tsx
             </h2>""
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the future of cybersecurity with autonomous AI threat;
               intelligence;
             </p>
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
+:pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
           </motion.div>"
-=======
           </motion.div>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousThreatIntelligence.tsx
 ""
           <div className="grid md: anygrid-cols-2 gap-8">
             {features.map((feature, index) => (
               <motion.div;
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
+:pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
                 whileInView={{ opacity: 1, x: 0 }}"
-=======
                 whileInView={{ opacity: 1, x: 0 }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousThreatIntelligence.tsx
                 transition={{ duration: 0.8, delay: index * 0.2 }}""
                 className="bg-gradient-to-br from-red-900/50 to-orange-900/50 backdrop-blur-sm rounded-2xl p-8 border border-red-500/20 hover:border-red-400/40 transition-all duration-300""
               >""
                 <div className="flex items-center mb-6">""
                   <div className="p-3 bg-gradient-to-r from-red-500 to-orange-500 rounded-full mr-4">""
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
+:pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
                     <feature.icon className="h-6 w-6 text-white" />"
                   </div>""
                   <h3 className="text-2xl font-bold">{feature.title}</h3>
@@ -184,7 +165,6 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {}
                 </p>"
 ""
                 <ul className="space-y-3">"
-=======
                     <feature.icon className="h-6 w-6 text-white" />
                   </div>""
                   <h3 className="text-2xl font-bold">{feature.title}</h3>
@@ -195,7 +175,6 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {}
                 </p>
 ""
                 <ul className="space-y-3">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousThreatIntelligence.tsx
                   {feature.benefits.map((benefit, idx) => (""
                     <li key={idx} className="flex items-center text-gray-200">""
                       <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0"  />                      {benefit}
@@ -207,56 +186,46 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {}
           </div>
         </div>
       </section>
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
+:pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
 "
-=======
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousThreatIntelligence.tsx
       {/* Threat Types Section */}""
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-red-900/30 to-orange-900/30">""
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
+:pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
             whileInView={{ opacity: 1, y: 0 }}"
-=======
             whileInView={{ opacity: 1, y: 0 }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousThreatIntelligence.tsx
             transition={{ duration: 0.8 }}""
             className="text-center mb-16""
           >""
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
+:pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
               Threat Protection Types"
-=======
               Threat Protection Types;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousThreatIntelligence.tsx
             </h2>""
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive protection against all types of cyber threats;
             </p>
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
+:pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
           </motion.div>"
-=======
           </motion.div>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousThreatIntelligence.tsx
 ""
           <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-6">
             {threatTypes.map((threat, index) => (
               <motion.div;
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
+:pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
                 whileInView={{ opacity: 1, y: 0 }}"
-=======
                 whileInView={{ opacity: 1, y: 0 }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousThreatIntelligence.tsx
                 transition={{ duration: 0.8, delay: index * 0.1 }}""
                 className="bg-gradient-to-br from-red-900/50 to-orange-900/50 backdrop-blur-sm rounded-xl p-6 border border-red-500/20 hover:border-red-400/40 transition-all duration-300""
               >""
                 <div className="flex items-center mb-4">""
                   <div className="p-2 bg-gradient-to-r from-red-500 to-orange-500 rounded-lg mr-3">""
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
+:pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
                     <threat.icon className="h-5 w-5 text-white" />"
                   </div>""
                   <h3 className="text-lg font-semibold">{threat.title}</h3>
@@ -273,7 +242,6 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {}
                 <ul className="space-y-2">
                   {threat.features.map((feature, idx) => (
                     <li"
-=======
                     <threat.icon className="h-5 w-5 text-white" />
                   </div>""
                   <h3 className="text-lg font-semibold">{threat.title}</h3>
@@ -290,7 +258,6 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {}
                 <ul className="space-y-2">
                   {threat.features.map((feature, idx) => (
                     <li;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousThreatIntelligence.tsx
                       key={idx}""
                       className="flex items-center text-gray-200 text-sm""
                     >""
@@ -303,39 +270,31 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {}
           </div>
         </div>
       </section>
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
+:pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
 "
-=======
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousThreatIntelligence.tsx
       {/* Pricing Section */}""
       <section className="py-20 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
+:pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
             whileInView={{ opacity: 1, y: 0 }}"
-=======
             whileInView={{ opacity: 1, y: 0 }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousThreatIntelligence.tsx
             transition={{ duration: 0.8 }}""
             className="text-center mb-16""
           >""
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
+:pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
               Security Plans"
-=======
               Security Plans;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousThreatIntelligence.tsx
             </h2>""
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Choose the perfect threat intelligence plan for your organization;
             </p>
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
+:pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
           </motion.div>"
-=======
           </motion.div>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousThreatIntelligence.tsx
 ""
           <div className="grid md: anygrid-cols-3 gap-8">
             {pricing.map((plan, index) => (
@@ -344,7 +303,7 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
+:pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
                 className={`relative bg-gradient-to-br from-red-900/50 to-orange-900/50 backdrop-blur-sm rounded-2xl p-8 border ${
 '
                   plan.popular''
@@ -352,45 +311,39 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {}
                     : 'border-red-500/20'``
                 } hover:border-red-400/40 transition-all duration-300`}
               >"
-=======
                 className={`relative bg-gradient-to-br from-red-900/50 to-orange-900/50 backdrop-blur-sm rounded-2xl p-8 border ${}
                   plan.popular'
                     ? 'border-red-400/60 shadow-lg shadow-red-500/25''
                     : 'border-red-500/20'`
                 } hover:border-red-400/40 transition-all duration-300`}
               >
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousThreatIntelligence.tsx
                 {plan.popular && (""
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
                     <span className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular;
                     </span>
                   </div>
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
+:pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
                 )}"
-=======
                 )}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousThreatIntelligence.tsx
 ""
                 <div className="text-center mb-8">""
                   <h3 className="text-2xl font-bold mb-4">{plan.name}</h3>""
                   <div className="mb-2">""
                     <span className="text-4xl font-bold">{plan.price}</span>""
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
+:pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
                     <span className="text-gray-400">{plan.period}</span>"
                   </div>""
                   <p className="text-gray-300">{plan.description}</p>
                 </div>"
 ""
                 <ul className="space-y-4 mb-8">"
-=======
                     <span className="text-gray-400">{plan.period}</span>
                   </div>""
                   <p className="text-gray-300">{plan.description}</p>
                 </div>
 ""
                 <ul className="space-y-4 mb-8">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousThreatIntelligence.tsx
                   {plan.features.map((feature, idx) => (""
                     <li key={idx} className="flex items-center text-gray-200">""
                       <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0"  />                      {feature}
@@ -398,7 +351,7 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {}
                   ))}
                 </ul>
 
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
+:pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
                 <motion.button
                   whileHover={{ scale: 1.05 }}`
                   whileTap={{ scale: 0.95 }}``
@@ -407,7 +360,6 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {}
                     plan.popular''
                       ? 'bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700'''`
                       : 'bg-red-600/20 border border-red-400 hover:bg-red-600/30'``
-=======
                 <motion.button;
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}`
@@ -415,7 +367,6 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {}
                     plan.popular'
                       ? 'bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700''
                       : 'bg-red-600/20 border border-red-400 hover:bg-red-600/30'`
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousThreatIntelligence.tsx
                   }`}
                 >
                   Get Started;
@@ -425,18 +376,16 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {}
           </div>
         </div>
       </section>
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
+:pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
 "
-=======
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousThreatIntelligence.tsx
       {/* CTA Section */}""
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-red-900/50 to-orange-900/50">""
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
+:pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
             transition={{ duration: 0.8 }}"
           >""
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">
@@ -452,7 +401,6 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {}
                 whileHover={{ scale: 1.05 }}"
                 whileTap={{ scale: 0.95 }}""
                 className="px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 rounded-full font-semibold text-lg hover:from-red-700 hover:to-orange-700 transition-all duration-300 shadow-lg hover:shadow-red-500/25"
-=======
             transition={{ duration: 0.8 }}
           >""
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">
@@ -468,21 +416,18 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}""
                 className="px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 rounded-full font-semibold text-lg hover:from-red-700 hover:to-orange-700 transition-all duration-300 shadow-lg hover:shadow-red-500/25""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousThreatIntelligence.tsx
               >
                 Start Security Trial;
               </motion.button>
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
+:pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
               <motion.button
                 whileHover={{ scale: 1.05 }}"
                 whileTap={{ scale: 0.95 }}""
                 className="px-8 py-4 border-2 border-red-400 rounded-full font-semibold text-lg hover:bg-red-400 hover:text-gray-900 transition-all duration-300"
-=======
               <motion.button;
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}""
                 className="px-8 py-4 border-2 border-red-400 rounded-full font-semibold text-lg hover:bg-red-400 hover:text-gray-900 transition-all duration-300""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousThreatIntelligence.tsx
               >
                 Contact Security Team;
               </motion.button>
@@ -490,11 +435,9 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {}
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
+:pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
 "
-=======
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousThreatIntelligence.tsx
       {/* Contact Information */}""
       <section className="py-16 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-4xl mx-auto text-center">""
@@ -502,20 +445,16 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {}
             <div className="flex flex-col items-center">""
               <Phone className="h-8 w-8 text-red-400 mb-4"  />""
               <h3 className="text-lg font-semibold mb-2">Phone</h3>""
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
+:pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
               <p className="text-gray-300">+1 302 464 0950</p>"
-=======
               <p className="text-gray-300">+1 302 464 0950</p>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousThreatIntelligence.tsx
             </div>""
             <div className="flex flex-col items-center">""
               <Mail className="h-8 w-8 text-red-400 mb-4"  />""
               <h3 className="text-lg font-semibold mb-2">Email</h3>""
-<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
+:pages.disabled/pages/services/AIAutonomousThreatIntelligence.tsx
               <p className="text-gray-300">kleber@ziontechgroup.com</p>"
-=======
               <p className="text-gray-300">kleber@ziontechgroup.com</p>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIAutonomousThreatIntelligence.tsx
             </div>""
             <div className="flex flex-col items-center">""
               <MapPin className="h-8 w-8 text-red-400 mb-4"  />""
@@ -531,3 +470,5 @@ export default function AIAutonomousThreatIntelligence(...args: any[]): any {}
     </div>
   )}'"`
 '"`'"`
+=======
+>>>>>>> main

@@ -230,7 +230,16 @@ export default function NotificationsPage() {}
           </Tabs>
         </div>
       </main>
-    </>
-  );
-}'"`
-'"`'"`
+      
+    </>)}
+
+
+export { NotificationCard, NotificationsPage };
+
+export { NotificationCard, NotificationsPage };
+
+export { NotificationCard, NotificationsPage };
+
+export { NotificationCard, NotificationsPage };
+
+export { NotificationCard, NotificationsPage };

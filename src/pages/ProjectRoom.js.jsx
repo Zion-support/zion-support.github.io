@@ -275,7 +275,16 @@ export default function ProjectRoom() {}
           </TabsContent>
         </Tabs>
       </main>
-    </>
-  );
-}'"`
-'"`'"`
+      
+    </>)}
+
+
+export { ProjectRoom };
+
+export { ProjectRoom };
+
+export { ProjectRoom };
+
+export { ProjectRoom };
+
+export { ProjectRoom };

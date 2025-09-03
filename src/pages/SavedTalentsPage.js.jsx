@@ -187,7 +187,16 @@ export default function SavedTalentsPage() {}
           </div>
         )}
       </div>
-    </>
-  );
-}'"`
-'"`'"`
+      
+    </>)}
+
+
+export { SavedTalentsPage };
+
+export { SavedTalentsPage };
+
+export { SavedTalentsPage };
+
+export { SavedTalentsPage };
+
+export { SavedTalentsPage };

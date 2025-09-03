@@ -1,14 +1,10 @@
 import React, { useState } from 'react';'''
 import { motion } from 'framer-motion';
-import { COMPREHENSIVE_SERVICES } from "../data/comprehensiveServices";""""
-import { ADVANCED_INNOVATIVE_SERVICES } from "../data/advancedInnovativeServices";""""
-import { EMERGING_TECH_SERVICES } from "../data/emergingTechServices";
-export function NewServices() {}
-'
-''
-'''
-    const [selectedCategory, setSelectedCategory] = useState('all');'''
-    const [searchTerm, setSearchTerm] = useState('');
+import { COMPREHENSIVE_SERVICES } from "../data/comprehensiveServices.jsx";
+;
+import { EMERGING_TECH_SERVICES } from "../data/emergingTechServices.jsx";
+export function NewServices() {
+    const [selectedCategory, setSelectedCategory] = useState('all');    const [searchTerm, setSearchTerm] = useState('');
     const [selectedService, setSelectedService] = useState(null);
     // Combine all services;
     const allServices = []

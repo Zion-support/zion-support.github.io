@@ -53,5 +53,15 @@ export default function WishlistPage() {}
                 </Button>
               </div>) : null})}
         </div>)}
-    </div>)}'"""
-'"'"""
+    </div>)}
+
+
+export { WishlistPage };
+
+export { WishlistPage };
+
+export { WishlistPage };
+
+export { WishlistPage };
+
+export { WishlistPage };

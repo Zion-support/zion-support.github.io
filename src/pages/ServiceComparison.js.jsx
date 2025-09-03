@@ -1,60 +1,44 @@
 import React from 'react';'''
 import { motion } from 'framer-motion';
-import {}
-  BarChart3,
-  Target,
-  TrendingUp,
-  Award,
-  Users,'
-  ArrowRight,''
-  CheckCircle,'''
-  Zap} from 'lucide-react';'''
-import { AdvancedServiceComparison } from '../components/AdvancedServiceComparison';'''
-import { Button } from '../components/ui/button';
-import {}
-  Card,
-  CardContent,
-  CardHeader,'
-  CardTitle} from '../components/ui/card';
-const ServiceComparison = () => {}
-  const features = []
-    {}
-      icon: <BarChart3 className="w-6 h-6 text-zion-cyan" />,'
-      title: 'Advanced Filtering','
-      description:''
-        'Filter services by category, complexity, price range, and technology stack'},
-    {}
-"""
-""""
-      icon: <Target className="w-6 h-6 text-zion-purple" />,'
-      title: 'Smart Comparison','
-      description:''
-        'Compare multiple services side-by-side with detailed feature analysis'},
-    {}
-"""
-""""
-      icon: <TrendingUp className="w-6 h-6 text-zion-green" />,'
-      description:''
-        'Real-time ratings and popularity indicators to guide your decision'},
-    {}
-"""
-""""
-      icon: <Award className="w-6 h-6 text-zion-orange" />,'
-      title: 'Expert Insights','"""
-      description:'"'"""
-        "Get detailed insights into each service's capabilities and target audience"}
-  ];'
-  const benefits = [''
-    'Make informed decisions with comprehensive service comparisons',Find the perfect service tier for your business needs and budget',Understand complexity levels and implementation requirements',Compare pricing, features, and benefits across different solutions',Get personalized recommendations based on your requirements'
-  ];"""
-  return (""""
-    <div className="min-h-screen bg-zion-blue-dark">"""
-      {/* Hero Section */}""""
-      <section className="py-20 px-6 bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan relative overflow-hidden">""""
-        <div className="absolute inset-0 overflow-hidden">""""
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-zion-purple/20 via-zion-blue-light/20 to-zion-cyan/20"></div>""""
-          <div className="absolute -top-20 -right-20 w-40 h-40 bg-white/10 rounded-full blur-3xl animate-pulse"></div>""""
-          <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-white/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+import { BarChart3, Target, TrendingUp, Award, Users, ArrowRight, CheckCircle, Zap } from 'lucide-react';
+import { AdvancedServiceComparison } from "../components/AdvancedServiceComparison.jsx";
+import { Button } from "../components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
+const ServiceComparison = () => {
+    const features = [
+        {
+            icon: <BarChart3 className="w-6 h-6 text-zion-cyan"/>,
+            title: 'Advanced Filtering',
+            description: 'Filter services by category, complexity, price range, and technology stack'
+        },
+        {
+            icon: <Target className="w-6 h-6 text-zion-purple"/>,
+            title: 'Smart Comparison',
+            description: 'Compare multiple services side-by-side with detailed feature analysis'
+        },
+        {
+            icon: <TrendingUp className="w-6 h-6 text-zion-green"/>,
+            description: 'Real-time ratings and popularity indicators to guide your decision'
+        },
+        {
+            icon: <Award className="w-6 h-6 text-zion-orange"/>,
+            title: 'Expert Insights',
+            description: 'Get detailed insights into each service\'s capabilities and target audience'
+        }
+    ];
+    const benefits = [
+        'Make informed decisions with comprehensive service comparisons',
+        'Find the perfect service tier for your business needs and budget',
+        'Understand complexity levels and implementation requirements',
+        'Compare pricing, features, and benefits across different solutions',
+        'Get personalized recommendations based on your requirements'
+    ];
+    return (<div className="min-h-screen bg-zion-blue-dark">
+      {/* Hero Section */}
+      <section className="py-20 px-6 bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan relative overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-zion-purple/20 via-zion-blue-light/20 to-zion-cyan/20"></div>
+          <div className="absolute -top-20 -right-20 w-40 h-40 bg-white/10 rounded-full blur-3xl animate-pulse"></div>          <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-white/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>"""
 """"
         <div className="max-w-4xl mx-auto text-center relative z-10">
@@ -246,8 +230,16 @@ const ServiceComparison = () => {}
           </motion.div>
         </div>
       </section>
-    </div>
-  );
-};
-export default ServiceComparison;'"""
-'"'"""
+    </div>)};
+export default ServiceComparison;
+
+
+export { ServiceComparison };
+
+export { ServiceComparison };
+
+export { ServiceComparison };
+
+export { ServiceComparison };
+
+export { ServiceComparison };

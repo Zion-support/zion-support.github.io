@@ -413,5 +413,15 @@ export default function ForumPostPage() {}
           </div>
         </div>
       </div>
-    </>)}'"`
-'"`'"`
+    </>)}
+
+
+export { ForumPostPage };
+
+export { ForumPostPage };
+
+export { ForumPostPage };
+
+export { ForumPostPage };
+
+export { ForumPostPage };

@@ -1,5 +1,7 @@
+<<<<<<< HEAD
+import React from 'react';
 import { Link  } from 'react-router-dom';
-export default function Page(function Page(function Page() {): any {): any {}
+export default function Page(...args: any[]): any {): unknown {): unknown {}
 ,
   {}
     id: 4,
@@ -63,16 +65,19 @@ export default function Page(function Page(function Page() {): any {): any {}
   }
 ];
 
-export default function Events(...args: any[]): any {}
-  const [selectedType, setSelectedType] = useState('All');'
-  const [selectedCategory, setSelectedCategory] = useState('All');'
-  const [selectedStatus, setSelectedStatus] = useState('All');
+const eventTypes = ['All', 'Conference', 'Workshop', 'Webinar', 'Symposium'];
+const categories = ['All', 'AI & ML', 'Cybersecurity', 'Cloud & DevOps', 'Data Analytics', 'IoT & Edge', 'Digital Transformation'];
+const statuses = ['All', 'upcoming', 'past'];
+
+export default function Events(...args: unknown[]): unknown {
+  const [selectedType, setSelectedType] = useState('All');
+  const [selectedCategory, setSelectedCategory] = useState('All');  const [selectedStatus, setSelectedStatus] = useState('All');
 '
   const [searchTerm, setSearchTerm] = useState('');'
   const [selectedCategory, setSelectedCategory] = useState('all');'
   const [selectedType, setSelectedType] = useState('all');
 
-  const categories: any = [{ id: 'all', name: 'All Categories', icon: Calendar, count: 0 },
+  const categories: unknown = [{ id: 'all', name: 'All Categories', icon: Calendar, count: 0 },
     { id: 'ai - ml', name: 'AI & Machine Learning', icon: Brain, count: 8 },
     { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, count: 6 },
     { id: 'cloud - devops', name: 'Cloud & DevOps', icon: Cloud, count: 7 },
@@ -84,34 +89,244 @@ export default function Events(...args: any[]): any {}
     { id: 'startup - tech', name: 'Startup Technology', icon: Rocket, count: 3 }
   ];
 
-  '
-    return date.toLocaleDateString('en-US', {}
-'
-''
-'''
-      weekday: 'long','''
-      year: 'numeric','''
-      month: 'long','''
-      day: 'numeric' 
+  const eventTypes = [
+    { id: 'all', name: 'All Types', icon: Calendar },
+    { id: 'webinar', name: 'Webinar', icon: Video },
+    { id: 'conference', name: 'Conference', icon: Users2 },
+    { id: 'workshop', name: 'Workshop', icon: Settings },
+    { id: 'hackathon', name: 'Hackathon', icon: Code },
+    { id: 'meetup', name: 'Meetup', icon: Users },
+    { id: 'summit', name: 'Summit', icon: Star }
+  ];
+
+  const events = [
+    {
+      id: 1,
+      title: 'AI-Powered Cybersecurity Summit 2024',
+      description: 'Join industry leaders and cybersecurity experts for a comprehensive exploration of AI-driven security solutions, threat intelligence, and next-generation protection strategies.',
+      type: 'summit',
+      category: 'cybersecurity',
+      date: '2024-03-15',
+      time: '09:00 AM - 05:00 PM',
+      timezone: 'EST',
+      location: 'Virtual + New York, NY',
+      isVirtual: true,
+      isInPerson: true,
+      attendees: 500,
+      price: '$299',
+      isFree: false,
+      featured: true,
+      speakers: [
+        'Dr. Sarah Chen - Chief Security Officer, Zion Tech Group',
+        'Michael Rodriguez - Director of AI Security, Microsoft',
+        'Lisa Park - Cybersecurity Researcher, MIT'
+      ],
+      agenda: [
+        'Keynote: The Future of AI in Cybersecurity',
+        'Panel: AI vs. AI - The Arms Race in Security',
+        'Workshop: Implementing AI Security Solutions',
+        'Networking & Demo Showcase'
+      ],
+      registrationUrl: '#',
+      image: '/events/ai-cybersecurity-summit.jpg'
+    },
+    {
+      id: 2,
+      title: 'Quantum Computing Workshop: From Theory to Practice',
+      description: 'Hands-on workshop exploring quantum computing fundamentals, algorithms, and real-world applications in finance, healthcare, and logistics.',
+      type: 'workshop',
+      category: 'quantum',
+      date: '2024-03-20',
+      time: '10:00 AM - 04:00 PM',
+      timezone: 'EST',
+      location: 'Virtual',
+      isVirtual: true,
+      isInPerson: false,
+      attendees: 100,
+      price: 'Free',
+      isFree: true,
+      featured: true,
+      speakers: [
+        'Dr. Emily Watson - Quantum Computing Lead, Zion Tech Group',
+        'Alex Thompson - Quantum Algorithm Specialist'
+      ],
+      agenda: [
+        'Introduction to Quantum Computing',
+        'Quantum Algorithms Deep Dive',
+        'Hands-on Quantum Programming',
+        'Real-world Applications Discussion'
+      ],
+      registrationUrl: '#',
+      image: '/events/quantum-computing-workshop.jpg'
+    },
+    {
+      id: 3,
+      title: 'Cloud-Native AI Development Webinar Series',
+      description: 'Multi-part webinar series covering the latest trends in cloud-native AI development, MLOps, and scalable machine learning infrastructure.',
+      type: 'webinar',
+      category: 'cloud-devops',
+      date: '2024-03-25',
+      time: '02:00 PM - 03:30 PM',
+      timezone: 'EST',
+      location: 'Virtual',
+      isVirtual: true,
+      isInPerson: false,
+      attendees: 250,
+      price: 'Free',
+      isFree: true,
+      featured: false,
+      speakers: [
+        'David Kim - Cloud Architecture Lead, Zion Tech Group',
+        'Sarah Johnson - MLOps Engineer, Google Cloud'
+      ],
+      agenda: [
+        'Cloud-Native AI Architecture Patterns',
+        'MLOps Best Practices',
+        'Scaling AI Workloads in the Cloud',
+        'Q&A Session'
+      ],
+      registrationUrl: '#',
+      image: '/events/cloud-native-ai-webinar.jpg'
+    },
+    {
+      id: 4,
+      title: 'Blockchain Innovation Meetup',
+      description: 'Local meetup for blockchain enthusiasts, developers, and entrepreneurs to discuss the latest developments and network with like-minded professionals.',
+      type: 'meetup',
+      category: 'blockchain',
+      date: '2024-03-28',
+      time: '06:00 PM - 08:00 PM',
+      timezone: 'EST',
+      location: 'Middletown, DE',
+      isVirtual: false,
+      isInPerson: true,
+      attendees: 50,
+      price: 'Free',
+      isFree: true,
+      featured: false,
+      speakers: [
+        'Local Blockchain Developers',
+        'Startup Founders',
+        'Industry Experts'
+      ],
+      agenda: [
+        'Networking & Refreshments',
+        'Lightning Talks',
+        'Open Discussion',
+        'Future Meetup Planning'
+      ],
+      registrationUrl: '#',
+      image: '/events/blockchain-meetup.jpg'
+    },
+    {
+      id: 5,
+      title: 'Data Science & Analytics Conference',
+      description: 'Comprehensive conference covering data science, analytics, and AI applications across various industries with hands-on workshops and expert presentations.',
+      type: 'conference',
+      category: 'data-analytics',
+      date: '2024-04-05',
+      time: '08:00 AM - 06:00 PM',
+      timezone: 'EST',
+      location: 'San Francisco, CA',
+      isVirtual: true,
+      isInPerson: true,
+      attendees: 800,
+      price: '$499',
+      isFree: false,
+      featured: true,
+      speakers: [
+        'Dr. Lisa Park - Chief Data Scientist, Zion Tech Group',
+        'Dr. Robert Chen - VP of Analytics, Netflix',
+        'Maria Garcia - Data Science Director, Uber'
+      ],
+      agenda: [
+        'Keynote: The Future of Data-Driven Decision Making',
+        'Track Sessions: ML, Analytics, Visualization',
+        'Industry Case Studies',
+        'Networking & Career Fair'
+      ],
+      registrationUrl: '#',
+      image: '/events/data-science-conference.jpg'
+    },
+    {
+      id: 6,
+      title: 'IoT Edge Computing Hackathon',
+      description: '24-hour hackathon focused on building innovative IoT solutions using edge computing and AI. Compete for prizes and recognition.',
+      type: 'hackathon',
+      category: 'iot',
+      date: '2024-04-12',
+      time: '09:00 AM - 09:00 AM (Next Day)',
+      timezone: 'EST',
+      location: 'Virtual + Multiple Cities',
+      isVirtual: true,
+      isInPerson: true,
+      attendees: 200,
+      price: 'Free',
+      isFree: true,
+      featured: false,
+      speakers: [
+        'IoT Experts from Zion Tech Group',
+        'Industry Mentors',
+        'Judges Panel'
+      ],
+      agenda: [
+        'Opening Ceremony & Team Formation',
+        '24-Hour Hacking Session',
+        'Mentorship & Workshops',
+        'Project Presentations & Judging'
+      ],
+      registrationUrl: '#',
+      image: '/events/iot-hackathon.jpg'
+    }
+  ];
+
+  const filteredEvents = events.filter(event => {
+    const matchesSearch = event.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         event.description.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesCategory = selectedCategory === 'all' || event.category === selectedCategory;
+    const matchesType = selectedType === 'all' || event.type === selectedType;
+    
+    return matchesSearch && matchesCategory && matchesType;
+  });
+
+  const upcomingEvents = events.filter(event => new Date(event.date) >= new Date()).slice(0, 3);
+  const featuredEvents = events.filter(event => event.featured);
+
+  const formatDate = (dateString: unknownstring)  => {
+    const date = new Date(dateString);
+    return date.toLocaleDateString('en-US', { 
+      weekday: 'long',
+      year: 'numeric', 
+      month: 'long',       day: 'numeric' 
     }) };
 
-  '
-      case 'Cybersecurity': return Shield;'
-      case 'Cloud & DevOps': return Cloud;'
-      case 'Data Analytics': return TrendingUp;'
-      case 'IoT & Edge': return Zap;'
-      case 'Digital Transformation': return Globe;
+
+  const getCategoryIcon = (category: unknownstring)  => {
+    switch (category) {
+      case 'AI & ML': return Brain;
+      case 'Cybersecurity': return Shield;
+      case 'Cloud & DevOps': return Cloud;
+      case 'Data Analytics': return TrendingUp;
+      case 'IoT & Edge': return Zap;      case 'Digital Transformation': return Globe;
       default: return BookOpen}
   }} else {}
 """"
       return <span className="px-3 py-1 bg-gray-500/20 text-gray-400 text-xs rounded-full border border-gray-500/30">Past</span>}
   };
-"""
-  return (""""
-    <div className="min-h-screen bg-zion-blue">"""
-      {/* Hero Section */}""""
-      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">""""
-        <div className="max-w-7xl mx-auto text-center">
+
+  const getStatusBadge = (status: unknownstring)  => {
+    if (status === 'upcoming') {
+      return <span className="px-3 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Upcoming</span>;
+    } else {
+      return <span className="px-3 py-1 bg-gray-500/20 text-gray-400 text-xs rounded-full border border-gray-500/30">Past</span>;
+    }
+
+  };
+
+  return (
+    <div className="min-h-screen bg-zion-blue">
+      {/* Hero Section */}
+      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">        <div className="max-w-7xl mx-auto text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -186,33 +401,30 @@ export default function Events(...args: any[]): any {}
 
               {/* Event Type Filter */}
               <div>
-                <select;
-                  value={selectedType}"""
-                  onChange={(e) => setSelectedType(e.target.value)}""""
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan"""
-                >
+                <select
+                  value={selectedType}
+                  onChange={(e) => setSelectedType(e.target.value)}
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: unknownoutline-none focus:ring-2 focus:ring-zion-cyan"                >
                   {eventTypes.map(type  => (<option key={type} value={type}>{type}</option>) ) }
                 </select>
               </div>
 
               {/* Category Filter */}
               <div>
-                <select;
-                  value={selectedCategory}"""
-                  onChange={(e) => setSelectedCategory(e.target.value)}""""
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan"""
-                >
+                <select
+                  value={selectedCategory}
+                  onChange={(e) => setSelectedCategory(e.target.value)}
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: unknownoutline-none focus:ring-2 focus:ring-zion-cyan"                >
                   {categories.map(category  => (<option key={category} value={category}>{category}</option>) ) }
                 </select>
               </div>
 
               {/* Status Filter */}
               <div>
-                <select;
-                  value={selectedStatus}"""
-                  onChange={(e) => setSelectedStatus(e.target.value)}""""
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan"""
-                >
+                <select
+                  value={selectedStatus}
+                  onChange={(e) => setSelectedStatus(e.target.value)}
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: unknownoutline-none focus:ring-2 focus:ring-zion-cyan"                >
                   {statuses.map(status  => (
                     <option key={status} value={status}>'
                       {status === 'upcoming' ? 'Upcoming' : status === 'past' ? 'Past' : status}
@@ -242,12 +454,13 @@ export default function Events(...args: any[]): any {}
                 Don't miss these must-attend events featuring industry leaders and cutting-edge topics.
               </p>
             </motion.div>
-"""
-""""
-            <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
-              {upcomingEvents.map((event, index)  => {}
-                return()                  <motion.div;
-                    key={event.id}
+
+
+            <div className="grid grid-cols-1 lg: unknowngrid-cols-2 gap-8">
+              {upcomingEvents.map((event, index)  => {
+                const CategoryIcon = getCategoryIcon(event.category);
+                return (
+                  <motion.div                    key={event.id}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}"""
@@ -361,12 +574,13 @@ export default function Events(...args: any[]): any {}
                     ))}
                   </div>
                 </div>
-"""
-""""
-            <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
-              {pastEvents.map((event, index)  => {}
-                return()                  <motion.div;
-                    key={event.id}
+
+
+            <div className="grid grid-cols-1 lg: unknowngrid-cols-2 gap-8">
+              {pastEvents.map((event, index)  => {
+                const CategoryIcon = getCategoryIcon(event.category);
+                return (
+                  <motion.div                    key={event.id}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}"""
@@ -480,8 +694,27 @@ const Events: React.FC = () => {}
               </button>
             </div>
           </motion.div>
-        </div>'"`
-      </section>'"`'"`
-    </div>'"`'"`'"`
-  )}'"`'"`'"`
-'"`'"`
+        </div>
+      </section>
+    </div>
+  );
+}
+
+export { Events, CategoryIcon, CategoryIcon };
+
+export { Events, CategoryIcon, CategoryIcon };
+
+export { Events, CategoryIcon, CategoryIcon };
+
+export { Events, CategoryIcon, CategoryIcon };
+
+export { Page, Events, CategoryIcon, CategoryIcon, Events };
+=======
+<<<<<<< HEAD
+import React from 'react'; import { SEO } from '../components/SEO'; const Events: React.FC = () => { return(<> <SEO title="Events" description="Join Zion Tech Group at upcoming technology events and conferences." keywords="events, conferences, technology, networking" /> <div className="min-h-screen bg-zion-slate-dark flex items-center justify-center"> <div className="text-center"> <h1 className="text-4xl font-bold text-white mb-4">Events</h1> <p className="text-gray-300">Coming soon...</p> </div> </div> </> ); }; export default Events;
+=======
+import React from "react"; const Events: React.FC = () => { return(<> <SEO title="Events description="Join" Zion Tech Group at upcoming technology events and conferences." keywords="events, conferences, technology, networking       /> <div className="min-h-screen" bg-zion-slate-dark flex items-center justify-center"> <div className="text-center> <h1 className="text-4xl" font-bold text-white mb-4">Events</h1> <p className="text-gray-300">Coming soon...</p> </div> </div> </> )})
+}
+"export default ComponentName;"
+>>>>>>> main
+>>>>>>> main

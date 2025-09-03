@@ -151,8 +151,16 @@ const NotFoundPage = () => {}
           </p>
         </div>
       </div>
-    </div>
-  );
-};
-export default NotFoundPage;'"""
-'"'"""
+    </div>)};
+export default NotFoundPage;
+
+
+export { NotFoundPage };
+
+export { NotFoundPage };
+
+export { NotFoundPage };
+
+export { NotFoundPage };
+
+export { NotFoundPage };

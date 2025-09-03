@@ -1,5 +1,6 @@
-<<<<<<< HEAD:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
-<<<<<<<< HEAD:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
+<<<<<<< HEAD
+:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
+<:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
 import React from 'react.ts';
 import { motion   } from 'framer-motion.ts';
 import { Link   } from 'react-router-dom.ts';
@@ -8,15 +9,13 @@ import { Brain,
   Shield,
   Clock,
   CheckCircle,
-========
-<<<<<<< HEAD
+=
 import { Brain, 
   Link as LinkIcon, 
   Shield, 
   Clock, 
   CheckCircle, 
->>>>>>>> main:backup-pages/src-pages/services/AIBlockchainSupplyChain.tsx
-  Zap,
+>  Zap,
   Globe,
   TrendingUp,
   ArrowRight,
@@ -40,12 +39,7 @@ import { Brain,
         "AI analytics dashboard","
         "Standard compliance","
         "Up to 1000 transactions/month","
-        "Basic reporting"
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIBlockchainSupplyChain.tsx
-      ],;
+        "Basic reporting"      ],;
       popular: false
     },
     {
@@ -107,31 +101,19 @@ import { Brain,
     "Cloud Computing",""
     "API Integration",""
     "Real-time Analytics",;"    "Predictive Modeling";
-<<<<<<< HEAD:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
+:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
   ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-blue-dark">
-<<<<<<<< HEAD:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
+<:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
       <SEO
-========
+=
       <SEO "
-<<<<<<< HEAD
->>>>>>>> main:backup-pages/src-pages/services/AIBlockchainSupplyChain.tsx
-        title="AI-Powered Blockchain Supply Chain | Zion Tech Group"
+>        title="AI-Powered Blockchain Supply Chain | Zion Tech Group"
         description="Revolutionize your supply chain with AI-driven insights and blockchain transparency. Get real-time tracking, smart contracts, and automated compliance."
         keywords="AI Supply Chain, Blockchain Supply Chain, Smart Contracts, Supply Chain Transparency, AI Analytics, Compliance Monitoring"
-       />
-=======
-        title="AI-Powered Blockchain Supply Chain | Zion Tech Group""
-=======
-  ];"
-  return (""
-    <div className = "min-h-screen bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-blue-dark">"
-      <SEO ""
-        title="AI-Powered Blockchain Supply Chain | Zion Tech Group"""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIBlockchainSupplyChain.tsx
-        description="Revolutionize your supply chain with AI-driven insights and blockchain transparency. Get real-time tracking, smart contracts, and automated compliance.""        keywords="AI Supply Chain, Blockchain Supply Chain, Smart Contracts, Supply Chain Transparency, AI Analytics, Compliance Monitoring"
+       />        description="Revolutionize your supply chain with AI-driven insights and blockchain transparency. Get real-time tracking, smart contracts, and automated compliance.""        keywords="AI Supply Chain, Blockchain Supply Chain, Smart Contracts, Supply Chain Transparency, AI Analytics, Compliance Monitoring"
        />"
       {/* Hero Section */}""
       <section className="relative py-20 overflow-hidden">""
@@ -141,30 +123,26 @@ import { Brain,
             initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
+:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
   y: 30
 
-=======
   y: 30 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIBlockchainSupplyChain.tsx
 }}
             animate = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
+:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
   y: 0
 
 }}
             transition={{ duration: 0.8 }}"
             className="text-center max-w-4xl mx-auto"
           >"
-=======
   y: 0 
 }}"
             transition={{ duration: 0.8 }}""
             className="text-center max-w-4xl mx-auto""
           >""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIBlockchainSupplyChain.tsx
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI-Powered Blockchain Supply Chain"
             </h1>""
@@ -192,22 +170,18 @@ import { Brain,
             initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
+:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
   y: 30
 
-=======
   y: 30 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIBlockchainSupplyChain.tsx
 }}
             whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
+:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIBlockchainSupplyChain.tsx
 }}
             viewport={{ once: true }}"
             transition={{ duration: 0.8 }}""
@@ -228,28 +202,24 @@ import { Brain,
                 initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
+:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIBlockchainSupplyChain.tsx
 }}
                 whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
+:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIBlockchainSupplyChain.tsx
 }}
                 viewport={{ once: true }}
                 transition = {
 
   { duration: 0.6,
-<<<<<<< HEAD:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
+:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
   delay: index * 0.1
 
 }}"
@@ -259,7 +229,6 @@ import { Brain,
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>"
                 <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>"
-=======
   delay: index * 0.1 "
 }}""
                 className="bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-2xl p-8 hover:border-zion-cyan/50 transition-all duration-300""
@@ -268,7 +237,6 @@ import { Brain,
                   <feature.icon className="w-8 h-8 text-white" />"
                 </div>""
                 <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIBlockchainSupplyChain.tsx
                 <p className="text-zion-slate-light leading-relaxed">{feature.description}</p>
               </motion.div>
             ))}
@@ -282,22 +250,18 @@ import { Brain,
             initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
+:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
   y: 30
 
-=======
   y: 30 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIBlockchainSupplyChain.tsx
 }}
             whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
+:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIBlockchainSupplyChain.tsx
 }}
             viewport={{ once: true }}"
             transition={{ duration: 0.8 }}""
@@ -318,51 +282,42 @@ import { Brain,
                 initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
+:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIBlockchainSupplyChain.tsx
 }}
                 whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
+:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIBlockchainSupplyChain.tsx
 }}
                 viewport={{ once: true }}
                 transition = {
 
   { duration: 0.6,
-<<<<<<< HEAD:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
+:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
   delay: index * 0.1
 
-=======
   delay: index * 0.1 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIBlockchainSupplyChain.tsx
 }}
                 className={`relative bg-zion-slate-dark/50 backdrop-blur-lg border rounded-2xl p-8 ${
-<<<<<<<< HEAD:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
+<:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
                   service.popular
                     ? 'border-zion-cyan shadow-lg shadow-zion-cyan/25'
                     : 'border-zion-slate/30'
-========
+=
 
-<<<<<<< HEAD:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
+:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
                   service.popular '
                     ? 'border-zion-cyan shadow-lg shadow-zion-cyan/25' '
                     : 'border-zion-slate/30'`
->>>>>>>> main:backup-pages/src-pages/services/AIBlockchainSupplyChain.tsx
-=======
-                  service.popular ''
+>                  service.popular ''
                     ? 'border-zion-cyan shadow-lg shadow-zion-cyan/25' ''`
                     : 'border-zion-slate/30'``
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIBlockchainSupplyChain.tsx
                 }`}
               >"
                 {service.popular && (""
@@ -371,29 +326,26 @@ import { Brain,
                       Most Popular
                     </span>
                   </div>
-<<<<<<< HEAD:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
+:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
                 )}
-<<<<<<<< HEAD:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
+<:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
 
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-4">{service.name}</h3>
                   <div className="flex items-baseline justify-center">
                     <span className="text-4xl font-bold text-zion-cyan">{service.price}</span>
-========
+=
                 "
                 <div className="text-center mb-8">"
                   <h3 className="text-2xl font-bold text-white mb-4">{service.name}</h3>"
                   <div className="flex items-baseline justify-center">"
                     <span className="text-4xl font-bold text-zion-cyan">{service.price}</span>"
->>>>>>>> main:backup-pages/src-pages/services/AIBlockchainSupplyChain.tsx
-=======
-                )}"
+>                )}"
                 ""
                 <div className="text-center mb-8">""
                   <h3 className="text-2xl font-bold text-white mb-4">{service.name}</h3>""
                   <div className="flex items-baseline justify-center">""
                     <span className="text-4xl font-bold text-zion-cyan">{service.price}</span>""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIBlockchainSupplyChain.tsx
                     <span className="text-zion-slate-light ml-1">{service.period}</span>
                   </div>
                 </div>"
@@ -428,22 +380,18 @@ import { Brain,
             initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
+:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
   y: 30
 
-=======
   y: 30 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIBlockchainSupplyChain.tsx
 }}
             whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
+:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIBlockchainSupplyChain.tsx
 }}
             viewport={{ once: true }}"
             transition={{ duration: 0.8 }}""
@@ -464,28 +412,24 @@ import { Brain,
                 initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
+:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
   x: index % 2 === 0 ? -20 : 20
 
-=======
   x: index % 2 === 0 ? -20 : 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIBlockchainSupplyChain.tsx
 }}
                 whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
+:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
   x: 0
 
-=======
   x: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIBlockchainSupplyChain.tsx
 }}
                 viewport={{ once: true }}
                 transition = {
 
   { duration: 0.6,
-<<<<<<< HEAD:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
+:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
   delay: index * 0.1
 
 }}"
@@ -498,7 +442,6 @@ import { Brain,
                 <div className="space-y-2">
                   {useCase.benefits.map((benefit, benefitIndex) => ("
                     <div key={benefitIndex} className="flex items-center text-zion-slate-light">"
-=======
   delay: index * 0.1 "
 }}""
                 className="bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-2xl p-8""
@@ -510,7 +453,6 @@ import { Brain,
                 <div className="space-y-2">"
                   {useCase.benefits.map((benefit, benefitIndex) => (""
                     <div key={benefitIndex} className="flex items-center text-zion-slate-light">""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIBlockchainSupplyChain.tsx
                       <TrendingUp className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0"  />                      {benefit}
                     </div>
                   ))}
@@ -527,22 +469,18 @@ import { Brain,
             initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
+:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
   y: 30
 
-=======
   y: 30 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIBlockchainSupplyChain.tsx
 }}
             whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
+:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIBlockchainSupplyChain.tsx
 }}
             viewport={{ once: true }}"
             transition={{ duration: 0.8 }}""
@@ -563,28 +501,24 @@ import { Brain,
                 initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
+:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
   scale: 0.8
 
-=======
   scale: 0.8 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIBlockchainSupplyChain.tsx
 }}
                 whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
+:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
   scale: 1
 
-=======
   scale: 1 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIBlockchainSupplyChain.tsx
 }}
                 viewport={{ once: true }}
                 transition = {
 
   { duration: 0.6,
-<<<<<<< HEAD:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
+:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
   delay: index * 0.1
 
 }}"
@@ -592,14 +526,12 @@ import { Brain,
               >"
                 <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-4">"
                   <Activity className="w-6 h-6 text-white"  />
-=======
   delay: index * 0.1 "
 }}""
                 className="bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-xl p-6 text-center hover:border-zion-cyan/50 transition-all duration-300""
               >""
                 <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-4">""
                   <Activity className="w-6 h-6 text-white"  />"
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIBlockchainSupplyChain.tsx
                 </div>"                <p className="text-white font-medium">{tech}</p>
               </motion.div>
             ))}
@@ -613,22 +545,18 @@ import { Brain,
             initial = {
 
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
+:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
   y: 30
 
-=======
   y: 30 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIBlockchainSupplyChain.tsx
 }}
             whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
+:pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIBlockchainSupplyChain.tsx
 }}
             viewport={{ once: true }}"
             transition={{ duration: 0.8 }}""
@@ -681,3 +609,5 @@ import { Brain,
     </div>;
   )};'"`
 export default AIBlockchainSupplyChain;'"`'"`
+=======
+>>>>>>> main

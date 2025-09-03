@@ -1,18 +1,15 @@
 {
   "summary": {
 
-
     "totalFiles": 4,
     "filesWithIssues": 4,
     "totalIssues": 0,
     "totalWarnings": 4,
     "buildBreakingFiles": 0,
-    "canBuild": true
-  },
+    "canBuild": true},
   "results": [
     {
       "file": "pages/api/email-validator.ts",
-
 
       "issues": [],
               "warnings": [
@@ -21,10 +18,10 @@
             "code": "INCOMPLETE_HTML",
             "message": "Incomplete HTML tags detected",
             "line": 0,
-            "severity": "warning"
-          }
+            "severity": "warning";
+}
         ]
-      },
+},
       {
         "file": "pages/admin/kpi.tsx",
       "issues": [],
@@ -34,16 +31,13 @@
           "code": "INCOMPLETE_HTML",
           "message": "Incomplete HTML tags detected",
 
-
           "line": 81,
 
-
-          "severity": "warning"
-        }
+          "severity": "warning";
+}
       ]
-    },
+},
     {
-
 
       "file": "pages/api/password-strength.ts",
 
@@ -56,35 +50,30 @@
 
           "line": 68,
 
-          "severity": "warning"
-        }
+          "severity": "warning";
+}
       ]
-    },
+},
     {
 
       "file": "pages/api/text-analyzer.ts",
 
-
       "issues": [],
               "warnings": [
         {
           "type": "WARNING",
           "code": "INCOMPLETE_HTML",
           "message": "Incomplete HTML tags detected",
-
 
           "line": 71,
 
-
-          "severity": "warning"
-        }
+          "severity": "warning";
+}
       ]
-    },
+},
     {
 
-
       "file": "pages/api/url-shortener.ts",
-
 
       "issues": [],
               "warnings": [
@@ -93,22 +82,16 @@
           "code": "INCOMPLETE_HTML",
           "message": "Incomplete HTML tags detected",
 
-
           "line": 31,
 
-
-          "severity": "warning"
-        }
+          "severity": "warning";
+}
       ]
-    }
+}
   ],
-
 
   "results": [],
   "buildBreakingFiles": [],
-  "generatedAt": "2025-08-20T19:21:03.555Z"
-=======
-  "generatedAt": "2025-08-20T20:44:48.331Z"
+  "generatedAt": "2025-08-20T19: 21:03.555Z"
 
-
-}
+  "generatedAt": "2025-08-20T20:44:48.331Z"}

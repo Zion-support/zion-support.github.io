@@ -1,4 +1,5 @@
-<<<<<<< HEAD:pages.disabled/pages/services/AIHRTalentPlatform.tsx
+<<<<<<< HEAD
+:pages.disabled/pages/services/AIHRTalentPlatform.tsx
 import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Sparkles, Target, TrendingUp, Shield, Briefcase, Award export default function AIHRTalentPlatform() {
     'Intelligent interview scheduling and feedback',;'
     'Employee performance analytics and insights',;'
@@ -39,7 +40,6 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
     'Employee Engagement',;''
     'Compliance & Reporting',;''
     'Onboarding & Offboarding',;'    'Succession Planning';
-=======
 import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Sparkles, Target, TrendingUp, Shield, Briefcase, Award export default function AIHRTalentPlatform(function AIHRTalentPlatform() {): any {}
     'Intelligent interview scheduling and feedback',;
     'Employee performance analytics and insights',;
@@ -78,19 +78,16 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
     'Compliance & Reporting',;
     'Onboarding & Offboarding',;
     'Succession Planning';
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIHRTalentPlatform.tsx
   ];
   return()
-<<<<<<< HEAD:pages.disabled/pages/services/AIHRTalentPlatform.tsx
+:pages.disabled/pages/services/AIHRTalentPlatform.tsx
     <div className = "min-h-screen bg-white">"
-=======
     <div className = "min-h-screen bg-white">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIHRTalentPlatform.tsx
       {/* Hero Section */}""
       <section className="bg-gradient-to-br from-orange-600 via-orange-700 to-red-800 py-20 text-center text-white">""
         <div className="max-w-5xl mx-auto px-6">""
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">""
-<<<<<<< HEAD:pages.disabled/pages/services/AIHRTalentPlatform.tsx
+:pages.disabled/pages/services/AIHRTalentPlatform.tsx
             <Sparkles className="w-4 h-4 mr-2"  /> AI-Powered HR & Talent Management"
           </div>""
           <h1 className="text-4xl md:text-6xl font-bold mb-6">AI HR & Talent Platform</h1>"          <p className="text-xl text-orange-100 mb-8 max-w-3xl mx-auto">
@@ -100,7 +97,6 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
           <div className="flex flex-col sm:flex-row gap-4 justify-center">""
             <a href="#pricing" className="px-8 py-4 bg-white text-orange-600 rounded-lg font-semibold hover:bg-orange-50 transition-colors">
               View Pricing"
-=======
             <Sparkles className="w-4 h-4 mr-2"  /> AI-Powered HR & Talent Management;
           </div>""
           <h1 className="text-4xl md:text-6xl font-bold mb-6">AI HR & Talent Platform</h1>"          <p className="text-xl text-orange-100 mb-8 max-w-3xl mx-auto">
@@ -110,58 +106,51 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
           <div className="flex flex-col sm:flex-row gap-4 justify-center">""
             <a href="#pricing" className="px-8 py-4 bg-white text-orange-600 rounded-lg font-semibold hover:bg-orange-50 transition-colors">
               View Pricing;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIHRTalentPlatform.tsx
             </a>""
             <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="px-8 py-4 border border-white/30 text-white rounded-lg hover:bg-white/10 transition-colors">
               Learn More;
             </a>
           </div>
         </div>
-<<<<<<< HEAD:pages.disabled/pages/services/AIHRTalentPlatform.tsx
+:pages.disabled/pages/services/AIHRTalentPlatform.tsx
       </section>"
-=======
       </section>
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIHRTalentPlatform.tsx
       {/* Features Section */}""
       <section className="py-16 max-w-6xl mx-auto px-6">""
         <div className="text-center mb-16">""
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Comprehensive HR Intelligence</h2>""
           <p className="text-xl text-gray-600">Everything you need to manage talent intelligently</p>
-<<<<<<< HEAD:pages.disabled/pages/services/AIHRTalentPlatform.tsx
+:pages.disabled/pages/services/AIHRTalentPlatform.tsx
         </div>"
 ""
         <div className="grid md:grid-cols-2 gap-8">"
           <div>""
             <h3 className="text-2xl font-semibold text-gray-900 mb-6">Core Capabilities</h3>""
             <ul className="space-y-4">"
-=======
         </div>
 ""
         <div className="grid md:grid-cols-2 gap-8">
           <div>""
             <h3 className="text-2xl font-semibold text-gray-900 mb-6">Core Capabilities</h3>""
             <ul className="space-y-4">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIHRTalentPlatform.tsx
               {features.map((feature, index) => (""
                 <li key={index} className="flex items-start">""
                   <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-0.5 flex-shrink-0"  />"                  <span className="text-gray-700">{feature}</span>
                 </li>
               ))}
             </ul>
-<<<<<<< HEAD:pages.disabled/pages/services/AIHRTalentPlatform.tsx
+:pages.disabled/pages/services/AIHRTalentPlatform.tsx
           </div>"
 ""
           <div className="bg-gray-50 rounded-xl p-8">""
             <h3 className="text-2xl font-semibold text-gray-900 mb-6">Key Benefits</h3>""
             <ul className="space-y-4">"
-=======
           </div>
 ""
           <div className="bg-gray-50 rounded-xl p-8">""
             <h3 className="text-2xl font-semibold text-gray-900 mb-6">Key Benefits</h3>""
             <ul className="space-y-4">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIHRTalentPlatform.tsx
               {benefits.map((benefit, index) => (""
                 <li key={index} className="flex items-start">""
                   <TrendingUp className="w-6 h-6 text-orange-500 mr-3 mt-0.5 flex-shrink-0"  />"                  <span className="text-gray-700">{benefit}</span>
@@ -170,27 +159,23 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
             </ul>
           </div>
         </div>
-<<<<<<< HEAD:pages.disabled/pages/services/AIHRTalentPlatform.tsx
+:pages.disabled/pages/services/AIHRTalentPlatform.tsx
       </section>"
-=======
       </section>
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIHRTalentPlatform.tsx
       {/* Platform Modules Section */}""
       <section className="py-16 bg-gray-50">""
         <div className="max-w-6xl mx-auto px-6">""
           <div className="text-center mb-12">""
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Complete Platform Modules</h2>""
             <p className="text-xl text-gray-600">From recruitment to retention, we cover all your HR needs</p>
-<<<<<<< HEAD:pages.disabled/pages/services/AIHRTalentPlatform.tsx
+:pages.disabled/pages/services/AIHRTalentPlatform.tsx
           </div>"
 ""
           <div className="grid md:grid-cols-4 gap-6">"
-=======
           </div>
 ""
           <div className="grid md:grid-cols-4 gap-6">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIHRTalentPlatform.tsx
             {platformModules.map((module, index) => (""
               <div key={index} className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 text-center">""
                 <Briefcase className="w-8 h-8 text-orange-500 mx-auto mb-4"  />"                <h3 className="text-lg font-semibold text-gray-900 text-sm">{module}</h3>
@@ -198,68 +183,56 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
             ))}
           </div>
         </div>
-<<<<<<< HEAD:pages.disabled/pages/services/AIHRTalentPlatform.tsx
+:pages.disabled/pages/services/AIHRTalentPlatform.tsx
       </section>"
-=======
       </section>
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIHRTalentPlatform.tsx
       {/* Use Cases Section */}""
       <section className="py-16 max-w-6xl mx-auto px-6">""
         <div className="text-center mb-12">""
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Perfect For</h2>""
           <p className="text-xl text-gray-600">Ideal for HR teams and organizations seeking to optimize their talent management</p>
-<<<<<<< HEAD:pages.disabled/pages/services/AIHRTalentPlatform.tsx
+:pages.disabled/pages/services/AIHRTalentPlatform.tsx
         </div>"
 ""
         <div className="grid md:grid-cols-3 gap-6">"
-=======
         </div>
 ""
         <div className="grid md:grid-cols-3 gap-6">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIHRTalentPlatform.tsx
           {useCases.map((useCase, index) => (""
             <div key={index} className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">""
               <Target className="w-8 h-8 text-orange-500 mb-4"  />"              <h3 className="text-lg font-semibold text-gray-900 mb-2">{useCase}</h3>
             </div>
           ))}
         </div>
-<<<<<<< HEAD:pages.disabled/pages/services/AIHRTalentPlatform.tsx
+:pages.disabled/pages/services/AIHRTalentPlatform.tsx
       </section>"
-=======
       </section>
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIHRTalentPlatform.tsx
       {/* AI Capabilities Section */}""
       <section className="py-16 bg-orange-50">""
         <div className="max-w-6xl mx-auto px-6">""
           <div className="text-center mb-12">""
             <h2 className="text-3xl font-bold text-gray-900 mb-4">AI-Powered Capabilities</h2>""
             <p className="text-xl text-gray-600">Leverage artificial intelligence to make smarter HR decisions</p>
-<<<<<<< HEAD:pages.disabled/pages/services/AIHRTalentPlatform.tsx
+:pages.disabled/pages/services/AIHRTalentPlatform.tsx
           </div>"
-=======
           </div>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIHRTalentPlatform.tsx
 ""
           <div className="grid md:grid-cols-3 gap-8">""
             <div className="bg-white rounded-lg p-6 shadow-sm text-center">""
               <Search className="w-12 h-12 text-orange-500 mx-auto mb-4"  />""
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Smart Candidate Matching</h3>""
-<<<<<<< HEAD:pages.disabled/pages/services/AIHRTalentPlatform.tsx
+:pages.disabled/pages/services/AIHRTalentPlatform.tsx
               <p className="text-gray-600">AI algorithms match candidates to job requirements with 90% accuracy</p>"
-=======
               <p className="text-gray-600">AI algorithms match candidates to job requirements with 90% accuracy</p>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIHRTalentPlatform.tsx
             </div>""
             <div className="bg-white rounded-lg p-6 shadow-sm text-center">""
               <TrendingUp className="w-12 h-12 text-orange-500 mx-auto mb-4"  />""
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Predictive Analytics</h3>""
-<<<<<<< HEAD:pages.disabled/pages/services/AIHRTalentPlatform.tsx
+:pages.disabled/pages/services/AIHRTalentPlatform.tsx
               <p className="text-gray-600">Forecast employee turnover and identify retention risks early</p>"
-=======
               <p className="text-gray-600">Forecast employee turnover and identify retention risks early</p>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIHRTalentPlatform.tsx
             </div>""
             <div className="bg-white rounded-lg p-6 shadow-sm text-center">""
               <Award className="w-12 h-12 text-orange-500 mx-auto mb-4"  />""
@@ -267,19 +240,17 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
             </div>
           </div>
         </div>
-<<<<<<< HEAD:pages.disabled/pages/services/AIHRTalentPlatform.tsx
+:pages.disabled/pages/services/AIHRTalentPlatform.tsx
       </section>"
-=======
       </section>
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIHRTalentPlatform.tsx
       {/* Pricing Section */}""
       <section id="pricing" className="py-16 bg-gray-50">""
         <div className="max-w-6xl mx-auto px-6">""
           <div className="text-center mb-16">""
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Simple, Transparent Pricing</h2>""
             <p className="text-xl text-gray-600">Choose the plan that fits your organization size and needs</p>
-<<<<<<< HEAD:pages.disabled/pages/services/AIHRTalentPlatform.tsx
+:pages.disabled/pages/services/AIHRTalentPlatform.tsx
           </div>"
 ""
           <div className="grid md:grid-cols-3 gap-8">
@@ -288,7 +259,6 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
 '`
                 plan.popular ? 'border-orange-500 ring-2 ring-orange-500/20' : 'border-gray-200'``
               }`}>"
-=======
           </div>
 ""
           <div className="grid md:grid-cols-3 gap-8">
@@ -296,38 +266,33 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
               <div key={index} className={`relative bg-white rounded-xl p-8 shadow-lg border-2 ${}
                 plan.popular ? 'border-orange-500 ring-2 ring-orange-500/20' : 'border-gray-200'`
               }`}>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIHRTalentPlatform.tsx
                 {plan.popular && (""
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
                     <span className="bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular;
                     </span>
                   </div>
-<<<<<<< HEAD:pages.disabled/pages/services/AIHRTalentPlatform.tsx
+:pages.disabled/pages/services/AIHRTalentPlatform.tsx
                 )}"
-=======
                 )}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIHRTalentPlatform.tsx
 ""
                 <div className="text-center mb-8">""
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>""
                   <div className="text-4xl font-bold text-orange-600 mb-2">{plan.price}</div>""
                   <p className="text-gray-600">per month</p>
-<<<<<<< HEAD:pages.disabled/pages/services/AIHRTalentPlatform.tsx
+:pages.disabled/pages/services/AIHRTalentPlatform.tsx
                 </div>"
 ""
                 <ul className="space-y-3 mb-8">"
-=======
                 </div>
 ""
                 <ul className="space-y-3 mb-8">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIHRTalentPlatform.tsx
                   {plan.features.map((feature, featureIndex) => (""
                     <li key={featureIndex} className="flex items-start">""
                       <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0"  />"                      <span className="text-gray-700">{feature}</span>
                     </li>
                   ))}
-<<<<<<< HEAD:pages.disabled/pages/services/AIHRTalentPlatform.tsx
+:pages.disabled/pages/services/AIHRTalentPlatform.tsx
                 </ul>`
 ``
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
@@ -335,24 +300,20 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
                   plan.popular''
                     ? 'bg-orange-600 text-white hover:bg-orange-700'''`
                     : 'bg-gray-100 text-gray-900 hover:bg-gray-200'``
-=======
                 </ul>
 `
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${}
                   plan.popular'
                     ? 'bg-orange-600 text-white hover:bg-orange-700''
                     : 'bg-gray-100 text-gray-900 hover:bg-gray-200'`
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIHRTalentPlatform.tsx
                 }`}>
                   Get Started;
                 </button>
               </div>
             ))}
-<<<<<<< HEAD:pages.disabled/pages/services/AIHRTalentPlatform.tsx
+:pages.disabled/pages/services/AIHRTalentPlatform.tsx
           </div>"
-=======
           </div>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIHRTalentPlatform.tsx
 ""
           <div className="text-center mt-12">""
             <p className="text-gray-600 mb-4">Need a custom plan? Contact us for enterprise pricing</p>""
@@ -361,12 +322,10 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
             </a>
           </div>
         </div>
-<<<<<<< HEAD:pages.disabled/pages/services/AIHRTalentPlatform.tsx
+:pages.disabled/pages/services/AIHRTalentPlatform.tsx
       </section>"
-=======
       </section>
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIHRTalentPlatform.tsx
       {/* ROI Section */}""
       <section className="py-16 bg-orange-50">""
         <div className="max-w-6xl mx-auto px-6 text-center">""
@@ -374,19 +333,17 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
           <div className="grid md:grid-cols-3 gap-8">""
             <div className="bg-white rounded-lg p-6 shadow-sm">""
               <div className="text-3xl font-bold text-orange-600 mb-2">60%</div>""
-<<<<<<< HEAD:pages.disabled/pages/services/AIHRTalentPlatform.tsx
+:pages.disabled/pages/services/AIHRTalentPlatform.tsx
               <p className="text-gray-700">Faster time-to-hire</p>"
             </div>""
             <div className="bg-white rounded-lg p-6 shadow-sm">""
               <div className="text-3xl font-bold text-orange-600 mb-2">40%</div>""
               <p className="text-gray-700">Better candidate quality</p>"
-=======
               <p className="text-gray-700">Faster time-to-hire</p>
             </div>""
             <div className="bg-white rounded-lg p-6 shadow-sm">""
               <div className="text-3xl font-bold text-orange-600 mb-2">40%</div>""
               <p className="text-gray-700">Better candidate quality</p>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIHRTalentPlatform.tsx
             </div>""
             <div className="bg-white rounded-lg p-6 shadow-sm">""
               <div className="text-3xl font-bold text-orange-600 mb-2">30%</div>""
@@ -394,46 +351,40 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
             </div>
           </div>
         </div>
-<<<<<<< HEAD:pages.disabled/pages/services/AIHRTalentPlatform.tsx
+:pages.disabled/pages/services/AIHRTalentPlatform.tsx
       </section>"
-=======
       </section>
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIHRTalentPlatform.tsx
       {/* CTA Section */}""
       <section className="py-16 bg-gray-900 text-white">""
         <div className="max-w-4xl mx-auto px-6 text-center">""
           <h2 className="text-3xl font-bold mb-6">Ready to Transform Your HR Operations?</h2>""
           <p className="text-xl text-gray-300 mb-8">
-<<<<<<< HEAD:pages.disabled/pages/services/AIHRTalentPlatform.tsx
+:pages.disabled/pages/services/AIHRTalentPlatform.tsx
             Join hundreds of organizations already using AI HR & Talent Platform to build better teams."
           </p>""
           <div className="flex flex-col sm:flex-row gap-4 justify-center">""
             <a href="mailto:kleber@ziontechgroup.com" className="px-8 py-4 bg-orange-600 text-white rounded-lg font-semibold hover:bg-orange-700 transition-colors">
               Start Free Trial"
-=======
             Join hundreds of organizations already using AI HR & Talent Platform to build better teams.
           </p>""
           <div className="flex flex-col sm:flex-row gap-4 justify-center">""
             <a href="mailto:kleber@ziontechgroup.com" className="px-8 py-4 bg-orange-600 text-white rounded-lg font-semibold hover:bg-orange-700 transition-colors">
               Start Free Trial;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIHRTalentPlatform.tsx
             </a>""
             <a href="tel:+13024640950" className="px-8 py-4 border border-white/30 text-white rounded-lg hover:bg-white/10 transition-colors">
               Call Us;
             </a>
           </div>
         </div>
-<<<<<<< HEAD:pages.disabled/pages/services/AIHRTalentPlatform.tsx
+:pages.disabled/pages/services/AIHRTalentPlatform.tsx
       </section>"
       {/* Contact Section */}"'"
       <section className="py-16 max-w-4xl mx-auto px-6 text-center">'"'"
-=======
       </section>
 
       {/* Contact Section */}""
       <section className="py-16 max-w-4xl mx-auto px-6 text-center">'""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIHRTalentPlatform.tsx
         <h2 className="text-3xl font-bold text-gray-900 mb-8">Questions? We're Here to Help</h2>""
         <div className="grid md:grid-cols-2 gap-8">""
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">""
@@ -442,11 +393,9 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
             <p className="text-gray-600 mb-4">Speak with our HR technology experts</p>"            <a href="tel:+13024640950" className="text-orange-600 hover:text-orange-700 font-semibold">
               +1 302 464 0950;
             </a>
-<<<<<<< HEAD:pages.disabled/pages/services/AIHRTalentPlatform.tsx
+:pages.disabled/pages/services/AIHRTalentPlatform.tsx
           </div>"
-=======
           </div>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIHRTalentPlatform.tsx
 ""
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">""
             <Mail className="w-8 h-8 text-orange-500 mx-auto mb-4"  />""
@@ -455,30 +404,26 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
               kleber@ziontechgroup.com;
             </a>
           </div>
-<<<<<<< HEAD:pages.disabled/pages/services/AIHRTalentPlatform.tsx
+:pages.disabled/pages/services/AIHRTalentPlatform.tsx
         </div>"
-=======
         </div>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIHRTalentPlatform.tsx
 ""
         <div className="mt-12 p-6 bg-gray-50 rounded-xl">""
           <h3 className="text-lg font-semibold text-gray-900 mb-2">Visit Our Website</h3>""
           <p className="text-gray-600 mb-4">
-<<<<<<< HEAD:pages.disabled/pages/services/AIHRTalentPlatform.tsx
+:pages.disabled/pages/services/AIHRTalentPlatform.tsx
             Learn more about our complete suite of AI-powered business solutions
-<<<<<<< HEAD:pages.disabled/pages/services/AIHRTalentPlatform.tsx
+:pages.disabled/pages/services/AIHRTalentPlatform.tsx
           </p>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIHRTalentPlatform.tsx
+<:pages.disabled/pages/services/AIHRTalentPlatform.tsx
           <a
-========
+=
           <a "
->>>>>>>> main:backup-pages/src-pages/services/AIHRTalentPlatform.tsx
-            href="https://ziontechgroup.com"
+>            href="https://ziontechgroup.com"
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center text-orange-600 hover:text-orange-700 font-semibold";
           >;"
-=======
           </p>"
           <a ""
             href="https://ziontechgroup.com""
@@ -486,13 +431,11 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
             rel="noreferrer""
             className="inline-flex items-center text-orange-600 hover:text-orange-700 font-semibold";"
           >;""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIHRTalentPlatform.tsx
             Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2"  />;          </a>;
         </div>;
       </section>;
     </div>;'"`
   )}}}'"`'"`
-=======
             Learn more about our complete suite of AI-powered business solutions;
           </p>
           <a ""
@@ -506,4 +449,5 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
       </section>;
     </div>;
   )}}}'"`
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIHRTalentPlatform.tsx
+=======
+>>>>>>> main

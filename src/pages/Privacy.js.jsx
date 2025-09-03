@@ -48,7 +48,15 @@ export default function Privacy() {}
         </div>
       </main>
       <Footer />
-    </>
-  );
-}'"""
-'"'"""
+    </>)}
+
+
+export { Privacy };
+
+export { Privacy };
+
+export { Privacy };
+
+export { Privacy };
+
+export { Privacy };

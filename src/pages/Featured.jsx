@@ -22,7 +22,15 @@ export default function Featured() {}
           <FeaturedListingsSection showTitle={false} />
         </div>
       </div>
-    </>
-  );
-}'"""
-'"'"""
+    </>)}
+
+
+export { Featured };
+
+export { Featured };
+
+export { Featured };
+
+export { Featured };
+
+export { Featured };

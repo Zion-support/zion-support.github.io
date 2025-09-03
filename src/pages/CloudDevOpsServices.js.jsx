@@ -245,8 +245,16 @@ const CloudDevOpsServices = () => {}
           </div>
         </div>
       </div>
-    </div>
-  );
-};
-export default CloudDevOpsServices;'"`
-'"`'"`
+    </div>)};
+export default CloudDevOpsServices;
+
+
+export { CloudDevOpsServices };
+
+export { CloudDevOpsServices };
+
+export { CloudDevOpsServices };
+
+export { CloudDevOpsServices };
+
+export { CloudDevOpsServices };

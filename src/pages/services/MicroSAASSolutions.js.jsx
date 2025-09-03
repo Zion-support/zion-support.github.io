@@ -279,7 +279,16 @@ export default function MicroSAASSolutions() {}
           </div>
         </div>
       </section>
-    </div>
-  );
-}'"""
-'"'"""
+    </div>);
+}
+
+
+export { MicroSAASSolutions };
+
+export { MicroSAASSolutions };
+
+export { MicroSAASSolutions };
+
+export { MicroSAASSolutions };
+
+export { MicroSAASSolutions };

@@ -138,7 +138,15 @@ export default function QuoteManager() {}
           }}
         />
       </div>
-    </ProtectedRoute>
-  );
-}'"""
-'"'"""
+    </ProtectedRoute>)}
+
+
+export { QuoteManager };
+
+export { QuoteManager };
+
+export { QuoteManager };
+
+export { QuoteManager };
+
+export { QuoteManager };

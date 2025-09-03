@@ -709,8 +709,17 @@ export default function CustomerExperience() {}
             </div>
           </motion.div>
         </div>
-      </section>'"`
-    </div>'"`'"`
-  )}'"`'"`'"`
-'"`'"`'"`
-'"`'"`
+      </section>
+    </div>
+  )}
+
+
+export { CustomerExperience };
+
+export { CustomerExperience };
+
+export { CustomerExperience };
+
+export { CustomerExperience };
+
+export { CustomerExperience };

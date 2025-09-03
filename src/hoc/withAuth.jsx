@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useEffect } from 'react';'''
 import { useNavigate } from 'react-router-dom';'''
 import { useSelector } from 'react-redux';
@@ -39,4 +40,17 @@ export default withAuth;
 export default withAuth;
 export default withAuth;
 export default withAuth;
-'
+
+
+export { Wrapped };
+
+export { Wrapped };
+
+export { Wrapped };
+
+export { Wrapped };
+
+export { Wrapped };
+=======
+import { useEffect } from "react";";";"
+>>>>>>> main

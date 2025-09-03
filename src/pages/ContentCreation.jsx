@@ -755,8 +755,17 @@ export default function ContentCreation() {}
             </div>
           </motion.div>
         </div>
-      </section>'"`
-    </div>'"`'"`
-  )}'"`'"`'"`
-'"`'"`'"`
-'"`'"`
+      </section>
+    </div>
+  )}
+
+
+export { ContentCreation };
+
+export { ContentCreation };
+
+export { ContentCreation };
+
+export { ContentCreation };
+
+export { ContentCreation };

@@ -242,8 +242,16 @@ const AIAutonomousSynthesis = () => {}
           </div>
         </div>
       </div>
-    </>
-  );
-};
-export default AIAutonomousSynthesis;'"""
-'"'"""
+    </>)};
+export default AIAutonomousSynthesis;
+
+
+export { AIAutonomousSynthesis };
+
+export { AIAutonomousSynthesis };
+
+export { AIAutonomousSynthesis };
+
+export { AIAutonomousSynthesis };
+
+export { AIAutonomousSynthesis };

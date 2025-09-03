@@ -107,12 +107,21 @@ export default function Payments() {}
           </Tabs>
         </div>
       </div>
-    </>
-  );
-}'
-// Import UI components for Payment Settings tab''
-import { Button } from '@/components/ui/button';'
-import { Switch } from '@/components/ui/switch';'
-import { Label } from '@/components/ui/label';'
-import { Checkbox } from '@/components/ui/checkbox';'"""
-'"'"""
+      
+    </>)}
+// Import UI components for Payment Settings tab
+import { Button } from "@/components/ui/button";
+import { Switch } from "@/components/ui/switch";
+import { Label } from "@/components/ui/label";
+import { Checkbox } from "@/components/ui/checkbox";
+
+
+export { Payments };
+
+export { Payments };
+
+export { Payments };
+
+export { Payments };
+
+export { Payments };

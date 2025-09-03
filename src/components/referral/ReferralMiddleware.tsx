@@ -1,37 +1,40 @@
-import { useEffect } from 'react';'''
-import { supabase } from '@/integrations/supabase/client';'''
+<<<<<<< HEAD
+=======
+import { useEffect } from 'react';
+import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/hooks/useAuth';
-export function ReferralMiddleware(function ReferralMiddleware(function ReferralMiddleware({ children }: Props) {): any {): any {}
+
+export function ReferralMiddleware({ children }: Props) {
   const { user } = useAuth();
-  useEffect(() => {}
-    const params: any = new URLSearchParams(window.location.search);'
-    const code: any = params.get('ref');
-    if (code) {}
-'
-''
-'''
+
+  useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
+    const params = new URLSearchParams(window.location.search);
+    const code = params.get('ref');
+    if(code) {
       localStorage.setItem('referralCode', code);
     }
   }, []);
-  useEffect(() => {}
-    async function sendReferral(function sendReferral(function sendReferral() {): any {): any {}
-'
-      const code: any = localStorage.getItem('referralCode');
-      if(!code || !user?.id || !user?.email) return; // Guard against missing email as well;
-      try {}
-'
-        await supabase.functions.invoke('track-referral', {}
-          body: { refCode: code, userId: user.id, email: user.email }});'
+
+  useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
+    async function sendReferral() {
+      const code = localStorage.getItem('referralCode');
+      if(!code || !user?.id || !user?.email) return; // Guard against missing email as well
+      try {
+        await supabase.functions.invoke('track-referral', {
+          body: { refCode: code, userId: user.id, email: user.email },
+        });
         localStorage.removeItem('referralCode');
-      } catch (err) {}
-'
-''
-'''
+      } catch(err) {
         console.error('Error tracking referral', err);
       }
     }
     sendReferral();
-  }, [user?.id, user?.email]); // Added user?.email;
-  return <>{children}</>
+  }, [user?.id, user?.email]); // Added user?.email
+
+  return <>{children}</>;
 }
-'
+>>>>>>> main

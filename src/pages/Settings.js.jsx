@@ -29,8 +29,16 @@ const Settings = () => {}
           </div>
         </div>
       </div>
-    </>
-  );
-};
-export default Settings;'"""
-'"'"""
+    </>)};
+export default Settings;
+
+
+export { Settings };
+
+export { Settings };
+
+export { Settings };
+
+export { Settings };
+
+export { Settings };

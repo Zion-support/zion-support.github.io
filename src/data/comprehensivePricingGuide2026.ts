@@ -432,7 +432,7 @@ export const blockchainForgePricing: ServicePricing = {}
 
 // Export all pricing guides;
 export;
-;export const PRICING_SUMMARY_2026: any = {}
+;export const PRICING_SUMMARY_2026: unknown = {}
 """
 """"
   overview: "Our 2026 innovative services pricing is designed to provide exceptional value while maintaining the highest quality and innovation standards.","""

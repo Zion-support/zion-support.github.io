@@ -1,6 +1,7 @@
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
-<<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
+<<<<<<< HEAD
+:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
+<:pages.disabled/pages/services/AIEducationPlatform.tsx
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { SEO  } from '@/components/SEO';
@@ -10,18 +11,14 @@ import { Brain,
   Target,
   Users,
   BarChart3,
-========
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIEducationPlatform.tsx
+=
 import { Brain, 
   GraduationCap, 
   TrendingUp, 
   Target, 
   Users, 
   BarChart3, 
->>>>>>>> main:backup-pages/src-pages/services/AIEducationPlatform.tsx
-  Calendar,
+>  Calendar,
   Zap,
   CheckCircle,
   Star,
@@ -91,22 +88,14 @@ export default function AIEducationPlatform(...args[]):  {}
       price: "$299",""
       period: "/month",""
       description: "Perfect for individual schools and small districts",
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
       features[;"
         "AI learning paths (up to 500 students)","
         "Basic content recommendation","
         "Assessment tools","
         "Progress tracking","
         "Email support","
-        "Up to 50 teachers"
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-      ],;"
-=======
-      ],;""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIEducationPlatform.tsx
-=======
-      features[;""
+        "Up to 50 teachers"      features[;""
         "AI learning paths (up to 500 students)",""
         "Basic content recommendation",""
         "Assessment tools",""
@@ -114,25 +103,20 @@ export default function AIEducationPlatform(...args[]):  {}
         "Email support",""
         "Up to 50 teachers""
       ],;""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIEducationPlatform.tsx
       cta: "Start Free Trial",
       popular: false;
     },
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
     {
 "
-=======
     {}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIEducationPlatform.tsx
 ""
       name: "District",""
       price: "$799",""
       period: "/month",""
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
       description: "Ideal for school districts and larger institutions","
-=======
       description: "Ideal for school districts and larger institutions",
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIEducationPlatform.tsx
       features[;""
         "AI learning paths (unlimited students)",""
         "Advanced content recommendation",""
@@ -145,21 +129,17 @@ export default function AIEducationPlatform(...args[]):  {}
       cta: "Start Free Trial",
       popular: true;
     },
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
     {
 "
-=======
     {}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIEducationPlatform.tsx
 ""
       name: "Enterprise",""
       price: "$1,999",""
       period: "/month",""
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
       description: "For large educational organizations and corporations","
-=======
       description: "For large educational organizations and corporations",
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIEducationPlatform.tsx
       features[;""
         "Custom AI model training",""
         "White-label solutions",""
@@ -167,71 +147,51 @@ export default function AIEducationPlatform(...args[]):  {}
         "Custom content creation",""
         "Dedicated account manager",;""
         "24/7 phone support",;""
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
         "Unlimited users";"
-=======
         "Unlimited users";
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIEducationPlatform.tsx
       ],;""
       cta: "Contact Sales",;
       popular: false};
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
   ];
 
   return (""
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
-<<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
+<:pages.disabled/pages/services/AIEducationPlatform.tsx
       <SEO
-========
+=
       <SEO "
-<<<<<<< HEAD
->>>>>>>> main:backup-pages/src-pages/services/AIEducationPlatform.tsx
-        title="AI Education Platform - Zion Tech Group"
+>        title="AI Education Platform - Zion Tech Group"
         description="Transform education with AI-powered personalized learning, intelligent content, and adaptive teaching. Improve outcomes and engage every student."
-       />
-=======
-=======
-  ];"
-  return (""
-    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
-      <SEO ""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIEducationPlatform.tsx
-        title="AI Education Platform - Zion Tech Group""        description="Transform education with AI-powered personalized learning, intelligent content, and adaptive teaching. Improve outcomes and engage every student."
+       />        title="AI Education Platform - Zion Tech Group""        description="Transform education with AI-powered personalized learning, intelligent content, and adaptive teaching. Improve outcomes and engage every student."
        />"
-=======
       <SEO ""
         title="AI Education Platform - Zion Tech Group""
         description="Transform education with AI-powered personalized learning, intelligent content, and adaptive teaching. Improve outcomes and engage every student.""
        />
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIEducationPlatform.tsx
       {/* Hero Section */}""
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto text-center">
           <motion.div;
             initial = {}
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIEducationPlatform.tsx
-=======
   y: 20;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIEducationPlatform.tsx
 }}
             animate = {}
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIEducationPlatform.tsx
 }}
             transition={{ duration: 0.8 }}"
 ""
@@ -260,7 +220,6 @@ export default function AIEducationPlatform(...args[]):  {}
                 whileTap={{ scale: 0.95 }}""
                 className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200"
                 Watch Demo
-=======
   y: 0;
 }}
             transition={{ duration: 0.8 }}
@@ -290,54 +249,44 @@ export default function AIEducationPlatform(...args[]):  {}
                 whileTap={{ scale: 0.95 }}""
                 className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200""
                 Watch Demo;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIEducationPlatform.tsx
               </motion.button>
             </div>
           </motion.div>;
         </div>
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
       </section>"
-=======
       </section>
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIEducationPlatform.tsx
       {/* Features Section */}""
       <section className="py-20 px-4 sm:px-6 lg:px-8">;""
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial = {}
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIEducationPlatform.tsx
-=======
   y: 20;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIEducationPlatform.tsx
 }}
             whileInView = {}
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
   y: 0
 
 }}
             transition={{ duration: 0.8 }}"
             className="text-center mb-16"
 "
-=======
   y: 0 
 }}"
             transition={{ duration: 0.8 }}""
             className="text-center mb-16""
 ""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIEducationPlatform.tsx
             <h2 className="text-4xl font-bold text-white mb-4">
               Comprehensive Educational Intelligence"
-=======
   y: 0;
 }}
             transition={{ duration: 0.8 }}""
@@ -345,125 +294,101 @@ export default function AIEducationPlatform(...args[]):  {}
 ""
             <h2 className="text-4xl font-bold text-white mb-4">
               Comprehensive Educational Intelligence;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIEducationPlatform.tsx
             </h2>""
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Everything you need to create engaging, personalized learning experiences;
             </p>
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
           </motion.div>"
 ""
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index()
               <motion.div
-=======
           </motion.div>
 ""
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index (
               <motion.div;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIEducationPlatform.tsx
                 key={index}
                 initial = {}
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIEducationPlatform.tsx
-=======
   y: 20;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIEducationPlatform.tsx
 }}
                 whileInView = {}
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIEducationPlatform.tsx
-=======
   y: 0;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIEducationPlatform.tsx
 }}
                 transition = {}
   { duration: 0.5,
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
   delay: index * 0.1
 
 }}"
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-teal-500 transition-all duration-300"
 "
                 <div className="w-12 h-12 bg-gradient-to-r from-teal-600 to-cyan-600 rounded-lg flex items-center justify-center mb-4">"
-=======
   delay: index * 0.1;
 }}""
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-teal-500 transition-all duration-300""
 ""
                 <div className="w-12 h-12 bg-gradient-to-r from-teal-600 to-cyan-600 rounded-lg flex items-center justify-center mb-4">""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIEducationPlatform.tsx
                   <CheckCircle className="w-6 h-6 text-white"  />
-=======
   delay: index * 0.1 "
 }}""
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-teal-500 transition-all duration-300""
 ""
                 <div className="w-12 h-12 bg-gradient-to-r from-teal-600 to-cyan-600 rounded-lg flex items-center justify-center mb-4">""
                   <CheckCircle className="w-6 h-6 text-white"  />"
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIEducationPlatform.tsx
                 </div>"                <h3 className="text-lg font-semibold text-white mb-2">{feature}</h3>
               </motion.div>;
             ))}
           </div>
         </div>
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
       </section>"
-=======
       </section>
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIEducationPlatform.tsx
       {/* Benefits Section */}""
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">;""
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial = {}
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIEducationPlatform.tsx
-=======
   y: 20;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIEducationPlatform.tsx
 }}
             whileInView = {}
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
   y: 0
 
 }}
             transition={{ duration: 0.8 }}"
             className="text-center mb-16"
 "
-=======
   y: 0 
 }}"
             transition={{ duration: 0.8 }}""
             className="text-center mb-16""
 ""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIEducationPlatform.tsx
             <h2 className="text-4xl font-bold text-white mb-4">
               Transform Educational Outcomes"
-=======
   y: 0;
 }}
             transition={{ duration: 0.8 }}""
@@ -471,125 +396,101 @@ export default function AIEducationPlatform(...args[]):  {}
 ""
             <h2 className="text-4xl font-bold text-white mb-4">
               Transform Educational Outcomes;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIEducationPlatform.tsx
             </h2>""
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               See measurable improvements in student learning and teacher effectiveness;
             </p>
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
           </motion.div>"
 ""
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map(benefit: unknown, index: unknown()
               <motion.div
-=======
           </motion.div>
 ""
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map(benefit: unknown, index: unknown (
               <motion.div;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIEducationPlatform.tsx
                 key={index}
                 initial = {}
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIEducationPlatform.tsx
-=======
   y: 20;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIEducationPlatform.tsx
 }}
                 whileInView = {}
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIEducationPlatform.tsx
-=======
   y: 0;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIEducationPlatform.tsx
 }}
                 transition = {}
   { duration: 0.5,
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
   delay: index * 0.1
 
 }}"
                 className="text-center"
 "
                 <div className="w-20 h-20 bg-gradient-to-r from-teal-600 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">"
-=======
   delay: index * 0.1;
 }}""
                 className="text-center""
 ""
                 <div className="w-20 h-20 bg-gradient-to-r from-teal-600 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIEducationPlatform.tsx
                   <TrendingUp className="w-10 h-10 text-white"  />
-=======
   delay: index * 0.1 "
 }}""
                 className="text-center""
 ""
                 <div className="w-20 h-20 bg-gradient-to-r from-teal-600 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">""
                   <TrendingUp className="w-10 h-10 text-white"  />"
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIEducationPlatform.tsx
                 </div>"                <p className="text-lg text-white font-medium">{benefit}</p>
               </motion.div>;
             ))}
           </div>
         </div>
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
       </section>"
-=======
       </section>
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIEducationPlatform.tsx
       {/* Use Cases Section */}""
       <section className="py-20 px-4 sm:px-6 lg:px-8">;""
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial = {}
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIEducationPlatform.tsx
-=======
   y: 20;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIEducationPlatform.tsx
 }}
             whileInView = {}
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
   y: 0
 
 }}
             transition={{ duration: 0.8 }}"
             className="text-center mb-16"
 "
-=======
   y: 0 
 }}"
             transition={{ duration: 0.8 }}""
             className="text-center mb-16""
 ""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIEducationPlatform.tsx
             <h2 className="text-4xl font-bold text-white mb-4">
               Industry-Leading Solutions"
-=======
   y: 0;
 }}
             transition={{ duration: 0.8 }}""
@@ -597,125 +498,101 @@ export default function AIEducationPlatform(...args[]):  {}
 ""
             <h2 className="text-4xl font-bold text-white mb-4">
               Industry-Leading Solutions;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIEducationPlatform.tsx
             </h2>""
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Proven solutions across diverse educational institutions and programs;
             </p>
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
           </motion.div>"
 ""
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
             {useCases.map(useCase: unknown, index: unknown()
               <motion.div
-=======
           </motion.div>
 ""
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
             {useCases.map(useCase: unknown, index: unknown (
               <motion.div;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIEducationPlatform.tsx
                 key={index}
                 initial = {}
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIEducationPlatform.tsx
-=======
   y: 20;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIEducationPlatform.tsx
 }}
                 whileInView = {}
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIEducationPlatform.tsx
-=======
   y: 0;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIEducationPlatform.tsx
 }}
                 transition = {}
   { duration: 0.5,
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
   delay: index * 0.1
 
 }}"
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover:border-teal-500 transition-all duration-300"
 "
                 <div className="w-16 h-16 bg-gradient-to-r from-teal-600 to-cyan-600 rounded-lg flex items-center justify-center mx-auto mb-4">"
-=======
   delay: index * 0.1;
 }}""
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover:border-teal-500 transition-all duration-300""
 ""
                 <div className="w-16 h-16 bg-gradient-to-r from-teal-600 to-cyan-600 rounded-lg flex items-center justify-center mx-auto mb-4">""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIEducationPlatform.tsx
                   <GraduationCap className="w-8 h-8 text-white"  />
-=======
   delay: index * 0.1 "
 }}""
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover:border-teal-500 transition-all duration-300""
 ""
                 <div className="w-16 h-16 bg-gradient-to-r from-teal-600 to-cyan-600 rounded-lg flex items-center justify-center mx-auto mb-4">""
                   <GraduationCap className="w-8 h-8 text-white"  />"
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIEducationPlatform.tsx
                 </div>"                <h3 className="text-lg font-semibold text-white">{useCase}</h3>
               </motion.div>;
             ))}
           </div>
         </div>
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
       </section>"
-=======
       </section>
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIEducationPlatform.tsx
       {/* Pricing Section */}""
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">;""
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial = {}
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIEducationPlatform.tsx
-=======
   y: 20;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIEducationPlatform.tsx
 }}
             whileInView = {}
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
   y: 0
 
 }}
             transition={{ duration: 0.8 }}"
             className="text-center mb-16"
 "
-=======
   y: 0 
 }}"
             transition={{ duration: 0.8 }}""
             className="text-center mb-16""
 ""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIEducationPlatform.tsx
             <h2 className="text-4xl font-bold text-white mb-4">
               Flexible Pricing for Every Institution"
-=======
   y: 0;
 }}
             transition={{ duration: 0.8 }}""
@@ -723,60 +600,47 @@ export default function AIEducationPlatform(...args[]):  {}
 ""
             <h2 className="text-4xl font-bold text-white mb-4">
               Flexible Pricing for Every Institution;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIEducationPlatform.tsx
             </h2>""
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Scale your educational platform as your institution grows;
             </p>
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
           </motion.div>"
 ""
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
             {pricing.map(plan: unknown, index: unknown()
               <motion.div
-=======
           </motion.div>
 ""
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
             {pricing.map(plan: unknown, index: unknown (
               <motion.div;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIEducationPlatform.tsx
                 key={index}
                 initial = {}
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIEducationPlatform.tsx
-=======
   y: 20;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIEducationPlatform.tsx
 }}
                 whileInView = {}
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIEducationPlatform.tsx
-=======
   y: 0;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIEducationPlatform.tsx
 }}
                 transition = {}
   { duration: 0.5,
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
   delay: index * 0.1
 
-=======
   delay: index * 0.1 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIEducationPlatform.tsx
 }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
 
@@ -784,7 +648,6 @@ export default function AIEducationPlatform(...args[]):  {}
                     ? 'border-teal-500 ring-2 ring-teal-500/20'''`
                     : 'border-gray-700'``
                 }`}"
-=======
   delay: index * 0.1;
 }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${}
@@ -793,18 +656,15 @@ export default function AIEducationPlatform(...args[]):  {}
                     : 'border-gray-700'`
                 }`}
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIEducationPlatform.tsx
                 {plan.popular && (;""
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
                     <span className="bg-gradient-to-r from-teal-600 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-medium">
                       Most Popular;
                     </span>
                   </div>
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
                 )}"
-=======
                 )}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIEducationPlatform.tsx
 ""
                 <div className="text-center mb-8">""
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>""
@@ -813,22 +673,20 @@ export default function AIEducationPlatform(...args[]):  {}
                     <span className="text-4xl font-bold text-white">{plan.price}</span>""
                     <span className="text-gray-400 ml-1">{plan.period}</span>
                   </div>
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
                 </div>"
 ""
                 <ul className="space-y-4 mb-8">"
-=======
                 </div>
 ""
                 <ul className="space-y-4 mb-8">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIEducationPlatform.tsx
                   {plan.features.map((feature, featureIndex) => (""
                     <li key={featureIndex} className="flex items-start">""
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0"  />"                      <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
                 <motion.button
                   whileHover={{ scale: 1.02 }}`
                   whileTap={{ scale: 0.98 }}``
@@ -837,7 +695,6 @@ export default function AIEducationPlatform(...args[]):  {}
                     plan.popular''
                       ? 'bg-gradient-to-r from-teal-600 to-cyan-600 text-white hover:from-teal-700 hover:to-cyan-700'''`
                       : 'bg-gray-700 text-white hover:bg-gray-600'``
-=======
 
                 <motion.button;
                   whileHover={{ scale: 1.02 }}
@@ -846,7 +703,6 @@ export default function AIEducationPlatform(...args[]):  {}
                     plan.popular'
                       ? 'bg-gradient-to-r from-teal-600 to-cyan-600 text-white hover:from-teal-700 hover:to-cyan-700''
                       : 'bg-gray-700 text-white hover:bg-gray-600'`
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIEducationPlatform.tsx
                   }`}
                   {plan.cta}
                 </motion.button>;
@@ -854,38 +710,30 @@ export default function AIEducationPlatform(...args[]):  {}
             ))}
           </div>
         </div>
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
       </section>"
-=======
       </section>
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIEducationPlatform.tsx
       {/* CTA Section */}""
       <section className="py-20 px-4 sm:px-6 lg:px-8">;""
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
             initial = {}
   { opacity: 0,
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
   y: 20
 
-=======
   y: 20 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIEducationPlatform.tsx
-=======
   y: 20;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIEducationPlatform.tsx
 }}
             whileInView = {}
   { opacity: 1,
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
   y: 0
 
-=======
   y: 0 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIEducationPlatform.tsx
 }}
             transition={{ duration: 0.8 }}"
 ""
@@ -908,7 +756,6 @@ export default function AIEducationPlatform(...args[]):  {}
                 className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200"
                 Schedule Demo
               </motion.button>"
-=======
   y: 0;
 }}
             transition={{ duration: 0.8 }}
@@ -932,28 +779,23 @@ export default function AIEducationPlatform(...args[]):  {}
                 className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200""
                 Schedule Demo;
               </motion.button>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIEducationPlatform.tsx
             </div>""
             <p className="text-sm text-gray-400 mt-4">
               No credit card required • 14-day free trial • Cancel time;
             </p>
           </motion.div>
         </div>
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
       </section>"
-=======
       </section>
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIEducationPlatform.tsx
       {/* Contact Info */}""
       <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-800/50">;""
         <div className="max-w-4xl mx-auto text-center">""
           <p className="text-gray-400 mb-4">
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
             Need help choosing the right plan? Contact our sales team"
-=======
             Need help choosing the right plan? Contact our sales team;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIEducationPlatform.tsx
           </p>""
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-sm text-gray-400">
             <span>📞 +1 302 464 0950</span>
@@ -963,10 +805,10 @@ export default function AIEducationPlatform(...args[]):  {}
         </div>;
       </section>;
     </div>;
-<<<<<<< HEAD:pages.disabled/pages/services/AIEducationPlatform.tsx
+:pages.disabled/pages/services/AIEducationPlatform.tsx
   )}'"`
 '"`'"`
-=======
   )}
 '"`
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIEducationPlatform.tsx
+=======
+>>>>>>> main

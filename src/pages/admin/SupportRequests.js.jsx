@@ -421,8 +421,15 @@ export default function SupportRequests() {}
             </div>
           </TabsContent>
         </Tabs>
-      </div>
-    )
-  );
-}'"""
-'"'"""
+      </div>)}
+
+
+export { MOCK_SUPPORT_REQUESTS, SupportRequests };
+
+export { MOCK_SUPPORT_REQUESTS, SupportRequests };
+
+export { MOCK_SUPPORT_REQUESTS, SupportRequests };
+
+export { MOCK_SUPPORT_REQUESTS, SupportRequests };
+
+export { MOCK_SUPPORT_REQUESTS, SupportRequests };

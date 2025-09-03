@@ -219,7 +219,15 @@ export default function TalentDashboard() {}
   return()
     <ProtectedRoute>
       <TalentDashboardContent />
-    </ProtectedRoute>
-  );
-}'"""
-'"'"""
+    </ProtectedRoute>)}
+
+
+export { TalentDashboardContent, TalentDashboard };
+
+export { TalentDashboardContent, TalentDashboard };
+
+export { TalentDashboardContent, TalentDashboard };
+
+export { TalentDashboardContent, TalentDashboard };
+
+export { TalentDashboardContent, TalentDashboard };

@@ -1,8 +1,9 @@
+<<<<<<< HEAD
 import React from 'react';'
 import { Link } from 'react-router-dom';'
 import { Helmet } from 'react-helmet-async';
 ;
-<<<<<<< HEAD:pages.disabled/pages/services/ITInfrastructure.jsx
+:pages.disabled/pages/services/ITInfrastructure.jsx
 const ITInfrastructure = () => {
   const features = [
     {
@@ -67,7 +68,6 @@ const ITInfrastructure = () => {
       solutions: [''
         'Storage arrays',Backup systems',Cloud storage',Data protection',
       ]},
-=======
 const ITInfrastructure = () => {}
   const features = []
     {}
@@ -124,7 +124,6 @@ const ITInfrastructure = () => {}
       solutions: ['
         'Storage arrays',Backup systems',Cloud storage',Data protection'
       ]}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITInfrastructure.jsx
   ];
 
   return()
@@ -133,7 +132,7 @@ const ITInfrastructure = () => {}
         <title>
           IT Infrastructure — Zion Tech Group | Network & System Management;
         </title>
-<<<<<<< HEAD:pages.disabled/pages/services/ITInfrastructure.jsx
+:pages.disabled/pages/services/ITInfrastructure.jsx
         <meta
           name="description""
           content="Build robust IT infrastructure with Zion Tech Group. Network design, server management, storage solutions, and security infrastructure services."
@@ -166,7 +165,6 @@ const ITInfrastructure = () => {}
                 {' '}
                 Infrastructure
               </span>"
-=======
         <meta;
           name="description""
           content="Build robust IT infrastructure with Zion Tech Group. Network design, server management, storage solutions, and security infrastructure services.""
@@ -199,12 +197,11 @@ const ITInfrastructure = () => {}
                 {' '}
                 Infrastructure;
               </span>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITInfrastructure.jsx
             </h1>""
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Build a solid foundation for your business with enterprise-grade;
               IT infrastructure. Our comprehensive services ensure reliability,
-<<<<<<< HEAD:pages.disabled/pages/services/ITInfrastructure.jsx
+:pages.disabled/pages/services/ITInfrastructure.jsx
               scalability, and security."
             </p>""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
@@ -217,7 +214,6 @@ const ITInfrastructure = () => {}
               <Link""
                 to="/services""
                 className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
-=======
               scalability, and security.
             </p>""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -230,61 +226,52 @@ const ITInfrastructure = () => {}
               <Link""
                 to="/services""
                 className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITInfrastructure.jsx
               >
                 View All Services;
               </Link>
             </div>
           </div>
         </section>
-<<<<<<< HEAD:pages.disabled/pages/services/ITInfrastructure.jsx
+:pages.disabled/pages/services/ITInfrastructure.jsx
 "
-=======
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITInfrastructure.jsx
         {/* Features Grid */}""
         <section className="py-20 px-4 sm:px-6 lg:px-8">""
           <div className="max-w-7xl mx-auto">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD:pages.disabled/pages/services/ITInfrastructure.jsx
+:pages.disabled/pages/services/ITInfrastructure.jsx
                 Infrastructure Solutions"
-=======
                 Infrastructure Solutions;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITInfrastructure.jsx
               </h2>""
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
                 Comprehensive IT infrastructure services for modern businesses;
               </p>
-<<<<<<< HEAD:pages.disabled/pages/services/ITInfrastructure.jsx
+:pages.disabled/pages/services/ITInfrastructure.jsx
             </div>"
 ""
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div"
-=======
             </div>
 ""
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITInfrastructure.jsx
                   key={index}""
                   className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20""
                 >""
                   <div className="text-4xl mb-4">{feature.icon}</div>""
                   <h3 className="text-xl font-semibold text-white mb-3">
-<<<<<<< HEAD:pages.disabled/pages/services/ITInfrastructure.jsx
+:pages.disabled/pages/services/ITInfrastructure.jsx
                     {feature.title}"
                   </h3>""
                   <p className="text-gray-300 mb-4">{feature.description}</p>""
                   <ul className="space-y-2">"
-=======
                     {feature.title}
                   </h3>""
                   <p className="text-gray-300 mb-4">{feature.description}</p>""
                   <ul className="space-y-2">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITInfrastructure.jsx
                     {feature.features.map((item, idx) => (""
                       <li key={idx} className="text-gray-300 flex items-center">""
                         <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></span>
@@ -297,51 +284,43 @@ const ITInfrastructure = () => {}
             </div>
           </div>
         </section>
-<<<<<<< HEAD:pages.disabled/pages/services/ITInfrastructure.jsx
+:pages.disabled/pages/services/ITInfrastructure.jsx
 "
-=======
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITInfrastructure.jsx
         {/* Infrastructure Areas */}""
         <section className="py-20 px-4 sm:px-6 lg:px-8">""
           <div className="max-w-7xl mx-auto">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD:pages.disabled/pages/services/ITInfrastructure.jsx
+:pages.disabled/pages/services/ITInfrastructure.jsx
                 Infrastructure Areas"
-=======
                 Infrastructure Areas;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITInfrastructure.jsx
               </h2>""
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
                 Multi-layered approach to building robust IT infrastructure;
               </p>
-<<<<<<< HEAD:pages.disabled/pages/services/ITInfrastructure.jsx
+:pages.disabled/pages/services/ITInfrastructure.jsx
             </div>"
 ""
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {infrastructureAreas.map((area, index) => (
                 <div"
-=======
             </div>
 ""
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {infrastructureAreas.map((area, index) => (
                 <div;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITInfrastructure.jsx
                   key={index}""
                   className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20""
                 >""
                   <h3 className="text-xl font-semibold text-white mb-4">
-<<<<<<< HEAD:pages.disabled/pages/services/ITInfrastructure.jsx
+:pages.disabled/pages/services/ITInfrastructure.jsx
                     {area.area}"
                   </h3>""
                   <ul className="space-y-2">"
-=======
                     {area.area}
                   </h3>""
                   <ul className="space-y-2">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITInfrastructure.jsx
                     {area.solutions.map((solution, idx) => (""
                       <li key={idx} className="text-gray-300 flex items-center">""
                         <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></span>
@@ -354,159 +333,137 @@ const ITInfrastructure = () => {}
             </div>
           </div>
         </section>
-<<<<<<< HEAD:pages.disabled/pages/services/ITInfrastructure.jsx
+:pages.disabled/pages/services/ITInfrastructure.jsx
 "
-=======
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITInfrastructure.jsx
         {/* Benefits */}""
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">""
           <div className="max-w-7xl mx-auto">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD:pages.disabled/pages/services/ITInfrastructure.jsx
+:pages.disabled/pages/services/ITInfrastructure.jsx
                 Why Choose Our Infrastructure Services?"
-=======
                 Why Choose Our Infrastructure Services?
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITInfrastructure.jsx
               </h2>""
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
                 Proven expertise and cutting-edge technology for reliable;
                 infrastructure;
               </p>
-<<<<<<< HEAD:pages.disabled/pages/services/ITInfrastructure.jsx
+:pages.disabled/pages/services/ITInfrastructure.jsx
             </div>"
 ""
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">""
               <div className="text-center">""
                 <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">"
-=======
             </div>
 ""
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">""
               <div className="text-center">""
                 <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITInfrastructure.jsx
                   <svg""
                     className="w-8 h-8 text-white""
                     fill="none""
                     stroke="currentColor""
-<<<<<<< HEAD:pages.disabled/pages/services/ITInfrastructure.jsx
+:pages.disabled/pages/services/ITInfrastructure.jsx
                     viewBox="0 0 24 24"
                   >"
-=======
                     viewBox="0 0 24 24""
                   >
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITInfrastructure.jsx
                     <path""
                       strokeLinecap="round""
                       strokeLinejoin="round""
                       strokeWidth={2}""
-<<<<<<< HEAD:pages.disabled/pages/services/ITInfrastructure.jsx
+:pages.disabled/pages/services/ITInfrastructure.jsx
                       d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                     />
                   </svg>"
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-3">
                   Reliability"
-=======
                       d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z""
                     />
                   </svg>
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-3">
                   Reliability;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITInfrastructure.jsx
                 </h3>""
                 <p className="text-gray-300">
                   99.9% uptime guarantee with redundant systems;
                 </p>
-<<<<<<< HEAD:pages.disabled/pages/services/ITInfrastructure.jsx
+:pages.disabled/pages/services/ITInfrastructure.jsx
               </div>"
 ""
               <div className="text-center">""
                 <div className="w-16 h-16 bg-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">"
-=======
               </div>
 ""
               <div className="text-center">""
                 <div className="w-16 h-16 bg-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITInfrastructure.jsx
                   <svg""
                     className="w-8 h-8 text-white""
                     fill="none""
                     stroke="currentColor""
-<<<<<<< HEAD:pages.disabled/pages/services/ITInfrastructure.jsx
+:pages.disabled/pages/services/ITInfrastructure.jsx
                     viewBox="0 0 24 24"
                   >"
-=======
                     viewBox="0 0 24 24""
                   >
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITInfrastructure.jsx
                     <path""
                       strokeLinecap="round""
                       strokeLinejoin="round""
                       strokeWidth={2}""
-<<<<<<< HEAD:pages.disabled/pages/services/ITInfrastructure.jsx
+:pages.disabled/pages/services/ITInfrastructure.jsx
                       d="M7 11l5-5m0 0l5 5m-5-5v12"
                     />
                   </svg>"
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-3">
                   Scalability"
-=======
                       d="M7 11l5-5m0 0l5 5m-5-5v12""
                     />
                   </svg>
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-3">
                   Scalability;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITInfrastructure.jsx
                 </h3>""
                 <p className="text-gray-300">
                   Grow your infrastructure as your business expands;
                 </p>
-<<<<<<< HEAD:pages.disabled/pages/services/ITInfrastructure.jsx
+:pages.disabled/pages/services/ITInfrastructure.jsx
               </div>"
 ""
               <div className="text-center">""
                 <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">"
-=======
               </div>
 ""
               <div className="text-center">""
                 <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITInfrastructure.jsx
                   <svg""
                     className="w-8 h-8 text-white""
                     fill="none""
                     stroke="currentColor""
-<<<<<<< HEAD:pages.disabled/pages/services/ITInfrastructure.jsx
+:pages.disabled/pages/services/ITInfrastructure.jsx
                     viewBox="0 0 24 24"
                   >"
-=======
                     viewBox="0 0 24 24""
                   >
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITInfrastructure.jsx
                     <path""
                       strokeLinecap="round""
                       strokeLinejoin="round""
                       strokeWidth={2}""
-<<<<<<< HEAD:pages.disabled/pages/services/ITInfrastructure.jsx
+:pages.disabled/pages/services/ITInfrastructure.jsx
                       d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
                     />
                   </svg>"
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-3">
                   Security"
-=======
                       d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z""
                     />
                   </svg>
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-3">
                   Security;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITInfrastructure.jsx
                 </h3>""
                 <p className="text-gray-300">
                   Multi-layered security for comprehensive protection;
@@ -515,16 +472,14 @@ const ITInfrastructure = () => {}
             </div>
           </div>
         </section>
-<<<<<<< HEAD:pages.disabled/pages/services/ITInfrastructure.jsx
+:pages.disabled/pages/services/ITInfrastructure.jsx
 "
-=======
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITInfrastructure.jsx
         {/* CTA Section */}""
         <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">""
           <div className="max-w-4xl mx-auto text-center">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-<<<<<<< HEAD:pages.disabled/pages/services/ITInfrastructure.jsx
+:pages.disabled/pages/services/ITInfrastructure.jsx
               Ready to Build Your Infrastructure?"
             </h2>""
             <p className="text-xl text-gray-300 mb-8">'
@@ -534,7 +489,6 @@ const ITInfrastructure = () => {}
             <Link""
               to="/contact""
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-=======
               Ready to Build Your Infrastructure?
             </h2>""
             <p className="text-xl text-gray-300 mb-8">
@@ -544,7 +498,6 @@ const ITInfrastructure = () => {}
             <Link""
               to="/contact""
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITInfrastructure.jsx
             >
               Get Infrastructure Consultation;
             </Link>
@@ -555,10 +508,10 @@ const ITInfrastructure = () => {}
   );
 };
 
-<<<<<<< HEAD:pages.disabled/pages/services/ITInfrastructure.jsx
+:pages.disabled/pages/services/ITInfrastructure.jsx
 export default ITInfrastructure;'"
 '"'"
-=======
 export default ITInfrastructure;
 '""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ITInfrastructure.jsx
+=======
+>>>>>>> main

@@ -1,36 +1,31 @@
-import React from 'react';'''
-import { Link } from 'react-router-dom';'''
-import { REVOLUTIONARY_2025_ADVANCED_SERVICES } from '../../data/revolutionary-2025-advanced-services';'''
-import { EMERGING_TECH_2025_SPECIALIZED_SERVICES } from '../../data/emerging-tech-2025-specialized-services';
-const ServicesMarketingPage = () => {}
-  const allServices = []
-    ...REVOLUTIONARY_2025_ADVANCED_SERVICES,
-    ...EMERGING_TECH_2025_SPECIALIZED_SERVICES;
-  ];
-  const serviceCategories = {}
-'
-''
-'''
-    'Micro SAAS': allServices.filter(s => s.category === 'Micro SAAS'),IT Services': allServices.filter(s => s.category === 'IT Services'),AI Solutions': allServices.filter(s => s.category === 'AI Solutions'),Blockchain & Web3': allServices.filter(''''
-      s => s.category === 'Blockchain & Web3''''
-    ),IoT & Edge Computing': allServices.filter(''''
-      s => s.category === 'IoT & Edge Computing''''
-    ),Sustainable Technology': allServices.filter(''''
-      s => s.category === 'Sustainable Technology''''
-    ),Space Technology': allServices.filter(''''
-      s => s.category === 'Space Technology'''
-    ),'''
-    Biotechnology: allServices.filter(s => s.category === 'Biotechnology'),Quantum Technology': allServices.filter(''''
-      s => s.category === 'Quantum Technology'
-    )};
-  return()
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"""
-      {/* Hero Section */}""""
-      <section className="relative overflow-hidden py-20">""""
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">""""
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">"""
-            Revolutionary Technology Services""""
-            <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+import React from 'react';
+import { Link } from 'react-router-dom';
+;
+;
+const ServicesMarketingPage = () => {
+    const allServices = [
+        ...REVOLUTIONARY_2025_ADVANCED_SERVICES,
+        ...EMERGING_TECH_2025_SPECIALIZED_SERVICES
+    ];
+    const serviceCategories = {
+  'Micro SAAS': allServices.filter(s => s.category === 'Micro SAAS'),
+        'IT Services': allServices.filter(s => s.category === 'IT Services'),
+        'AI Solutions': allServices.filter(s => s.category === 'AI Solutions'),
+        'Blockchain & Web3': allServices.filter(s => s.category === 'Blockchain & Web3'),
+        'IoT & Edge Computing': allServices.filter(s => s.category === 'IoT & Edge Computing'),
+        'Sustainable Technology': allServices.filter(s => s.category === 'Sustainable Technology'),
+        'Space Technology': allServices.filter(s => s.category === 'Space Technology'),
+        'Biotechnology': allServices.filter(s => s.category === 'Biotechnology'),
+  'Quantum Technology': allServices.filter(s => s.category === 'Quantum Technology')
+    
+
+};
+    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+            Revolutionary Technology Services            <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               That Transform Businesses;
             </span>"""
           </h1>""""
@@ -425,8 +420,16 @@ const ServicesMarketingPage = () => {}
           </div>
         </div>
       </section>
-    </div>
-  );
-};
-export default ServicesMarketingPage;'"`
-'"`'"`
+    </div>)};
+export default ServicesMarketingPage;
+
+
+export { ServicesMarketingPage };
+
+export { ServicesMarketingPage };
+
+export { ServicesMarketingPage };
+
+export { ServicesMarketingPage };
+
+export { ServicesMarketingPage };

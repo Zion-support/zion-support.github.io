@@ -34,7 +34,15 @@ export default function ProductPage() {}
       <Button onClick={handleAdd} disabled={adding}>'
         {adding ? 'Adding...' : 'Add to Cart'}
       </Button>
-    </div>
-  );
-}'"""
-'"'"""
+    </div>)}
+
+
+export { ProductPage };
+
+export { ProductPage };
+
+export { ProductPage };
+
+export { ProductPage };
+
+export { ProductPage };

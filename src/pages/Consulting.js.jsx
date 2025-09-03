@@ -294,5 +294,15 @@ const Consulting = () => {}
         </div>
       </section>
     </div>)};
-export default Consulting;'"""
-'"'"""
+export default Consulting;
+
+
+export { Consulting };
+
+export { Consulting };
+
+export { Consulting };
+
+export { Consulting };
+
+export { Consulting };

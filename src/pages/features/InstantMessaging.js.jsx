@@ -80,7 +80,15 @@ export default function InstantMessaging() {}
         </div>
       </main>
       <Footer />
-    </>
-  );
-}'"""
-'"'"""
+    </>)}
+
+
+export { InstantMessaging };
+
+export { InstantMessaging };
+
+export { InstantMessaging };
+
+export { InstantMessaging };
+
+export { InstantMessaging };

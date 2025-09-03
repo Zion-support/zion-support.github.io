@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useEffect } from 'react';'''
 import { useNavigate, useLocation } from 'react-router-dom';'''
 import { useAuth } from '@/hooks/useAuth';'''
@@ -53,5 +54,19 @@ import { setLoggedIn } from '@/store/authSlice';
   // If authenticated and isLoading is false, the useEffect above should have navigated.
   // Return null or a minimal layout if needed, though direct navigation is preferred.
   return null;
-}'"""
-'"'"""
+}
+
+export { Login };
+
+export { Login };
+
+export { Login };
+
+export { Login };
+=======
+<<<<<<< HEAD
+import { useEffect } from 'react';'''; import { useNavigate, useLocation  } from 'react-router-dom';'''; import { useAuth } from '@/hooks/useAuth';'''; import { safeStorage } from '@/utils/safeStorage';'''; import { LoginContent } from '@/components/auth/login';'''; import { ErrorBoundary  } from 'react-error-boundary';'''; import { useCart } from '@/context/CartContext';''; '''; import { toast  } from '@/hooks/use-toast';'''; import { useDispatch  } from 'react-redux';'''; import { setLoggedIn } from '@/store/authSlice'; ; useEffect(() => {};
+=======
+import { useEffect } from "react";""; ""'; useEffect(() => {}; "
+>>>>>>> main
+>>>>>>> main

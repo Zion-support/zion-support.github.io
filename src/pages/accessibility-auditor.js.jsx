@@ -222,5 +222,15 @@ const AccessibilityAuditor = () => {}
         </div>
       </section>
     </div>)};
-export default AccessibilityAuditor;'"""
-'"'"""
+export default AccessibilityAuditor;
+
+
+export { AccessibilityAuditor };
+
+export { AccessibilityAuditor };
+
+export { AccessibilityAuditor };
+
+export { AccessibilityAuditor };
+
+export { AccessibilityAuditor };

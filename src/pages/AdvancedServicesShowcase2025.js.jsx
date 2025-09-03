@@ -1,14 +1,12 @@
 import React, { useState } from 'react';'''
 import { motion } from 'framer-motion';'''
 import { Star, CheckCircle, Clock, Users, TrendingUp, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
-import { advancedRealServices2025 } from "../data/2025-advanced-real-services-expansion";""""
-import { specializedITServices2025 } from "../data/2025-specialized-it-ai-services";""""
-import SEOHead from "../components/SEOHead";
-const AdvancedServicesShowcase2025 = () => {}
-'
-    const [selectedCategory, setSelectedCategory] = useState('all');'
-    const [searchTerm, setSearchTerm] = useState('');'
-    const [sortBy, setSortBy] = useState('name');
+;
+;
+import SEOHead from "../components/SEOHead.jsx";
+const AdvancedServicesShowcase2025 = () => {
+    const [selectedCategory, setSelectedCategory] = useState('all');
+    const [searchTerm, setSearchTerm] = useState('');    const [sortBy, setSortBy] = useState('name');
     // Combine all services;
     const allServices = [...advancedRealServices2025, ...specializedITServices2025];'
     const categories = [''
@@ -338,5 +336,15 @@ const AdvancedServicesShowcase2025 = () => {}
         </div>
       </section>
     </div>)};
-export default AdvancedServicesShowcase2025;'"`
-'"`'"`
+export default AdvancedServicesShowcase2025;
+
+
+export { AdvancedServicesShowcase2025 };
+
+export { AdvancedServicesShowcase2025 };
+
+export { AdvancedServicesShowcase2025 };
+
+export { AdvancedServicesShowcase2025 };
+
+export { AdvancedServicesShowcase2025 };

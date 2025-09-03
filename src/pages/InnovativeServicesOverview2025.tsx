@@ -1,8 +1,9 @@
+<<<<<<< HEAD
 import React from 'react';'
 export default InnovativeServicesOverview2025;''
 import { motion  } from 'framer-motion';
 
-export default function Page(function Page(function Page() {): any {): any {}
+export default function Page(...args: any[]): any {): unknown {): unknown {}
 ,
     {}
       id: 'ai - healthcare - analytics',
@@ -23,7 +24,7 @@ export default function Page(function Page(function Page() {): any {): any {}
     }
   ];
 
-  const additionalServices: any = [{}
+  const additionalServices: unknown = [{}
       name: 'AI - Powered SEO Platform',
       description: 'Advanced SEO optimization with machine learning',
       price: '$1,500 / month',
@@ -109,12 +110,11 @@ export default function Page(function Page(function Page() {): any {): any {}
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
               Our most innovative and impactful AI-powered solutions;
             </p>
-          </motion.div>"""
-""""
-          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
-            {serviceCategories.map((service, index) => (
-              <motion.div;
-                key={service.id}
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md: unknowngrid-cols-2 gap-8">
+            {serviceCategories.map((service, index)  => (
+              <motion.div                key={service.id}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}"""
                 transition={{ duration: 0.6, delay: index * 0.1 }}""""
@@ -197,12 +197,11 @@ export default function Page(function Page(function Page() {): any {): any {}
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
               Explore our complete portfolio of AI-powered solutions;
             </p>
-          </motion.div>"""
-""""
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
-            {additionalServices.map((service, index) => (
-              <motion.div;
-                key={index}
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-4 gap-6">
+            {additionalServices.map((service, index)  => (
+              <motion.div                key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}"""
                 transition={{ duration: 0.6, delay: index * 0.1 }}""""
@@ -276,8 +275,37 @@ export default function Page(function Page(function Page() {): any {): any {}
             </div>
           </motion.div>
         </div>
-      </section>'"`
-    </div>) };'"`'"`
-export default InnovativeServicesOverview2025;'"`'"`'"`
-'"`'"`'"`
-'"`'"`
+      </section>
+    </div>
+  );
+};
+
+export default InnovativeServicesOverview2025;
+
+export { InnovativeServicesOverview2025 };
+
+export { InnovativeServicesOverview2025 };
+
+export { InnovativeServicesOverview2025 };
+
+export { InnovativeServicesOverview2025 };
+
+export { Page };
+=======
+import React from "react"
+import { SEO } from "@/components/SEO"
+;,"});,"})
+}
+export default function InnovativeServicesOverview2025() {return ("
+    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
+      <SEO title="InnovativeServicesOverview2025 - Zion Tech Group" description="Professional InnovativeServicesOverview2025 services by Zion Tech Group"  />"
+      <div className="container mx-auto px-4 py-20">"
+        <h1 className="text-4xl font-bold text-white mb-8">InnovativeServicesOverview2025</h1>"
+        <p className="text-gray-300 text-lg">
+          Professional InnovativeServicesOverview2025 services to help your business grow.
+        </p>
+      </div>
+  )
+}
+}""
+>>>>>>> main

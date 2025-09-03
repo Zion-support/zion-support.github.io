@@ -80,7 +80,15 @@ export default function Internationalization() {}
         </div>
       </main>
       <Footer />
-    </>
-  );
-}'"""
-'"'"""
+    </>)}
+
+
+export { Internationalization };
+
+export { Internationalization };
+
+export { Internationalization };
+
+export { Internationalization };
+
+export { Internationalization };

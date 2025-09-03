@@ -76,5 +76,15 @@ const ResearchDevelopment = () => {}
         </div>
       </section>
     </div>)};
-export default ResearchDevelopment;'"""
-'"'"""
+export default ResearchDevelopment;
+
+
+export { ResearchDevelopment };
+
+export { ResearchDevelopment };
+
+export { ResearchDevelopment };
+
+export { ResearchDevelopment };
+
+export { ResearchDevelopment };

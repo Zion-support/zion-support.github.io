@@ -1,227 +1,102 @@
 import React, { useState } from 'react';
-import {}
-  Card,
-  CardContent,'
-  CardDescription,''
-  CardHeader,'''
-  CardTitle} from '../components/ui/card';'''
-import { Badge } from '../components/ui/badge';'''
-import { Button } from '../components/ui/button';
-import {}
-  Tabs,
-  TabsContent,
-  TabsList,'
-  TabsTrigger} from '../components/ui/tabs';
-import {}
-  Check,
-  Star,
-  Zap,
-  Shield,
-  TrendingUp,
-  Users,
-  Cloud,
-  Brain,
-  Code,
-  Database,
-  Globe,
-  Smartphone,
-  Server,
-  Lock,
-  BarChart3,
-  Settings,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,'
-  DollarSign,''
-  Target,'''
-  Award} from 'lucide-react';'''
-import enhancedMicroSaasServices2025 from '../data/enhancedMicroSaasServices2025';'''
-import enhancedAIServices2025 from '../data/enhancedAIServices2025';'''
-import enhancedITServices2025 from '../data/enhancedITServices2025';
-const ComprehensivePricing = () => {}
-'
-''
-'''
-  const [activeTab, setActiveTab] = useState('microsaas');'''
-  const [billingCycle, setBillingCycle] = useState('monthly');
-  const getCategoryIcon = category => {}
-    switch (category.toLowerCase()) {}
-'
-      case 'productivity': any;
-        return <Users className="h-5 w-5" />;'"""
-      case 'finance':""""
-        return <DollarSign className="h-5 w-5" />;'"""
-      case 'marketing':""""
-        return <TrendingUp className="h-5 w-5" />;'"""
-      case 'development':""""
-        return <Code className="h-5 w-5" />;'"""
-      case 'data & analytics':""""
-        return <BarChart3 className="h-5 w-5" />;'"""
-      case 'cybersecurity':""""
-        return <Shield className="h-5 w-5" />;'"""
-      case 'cloud & devops':""""
-        return <Cloud className="h-5 w-5" />;'"""
-      case 'human resources':""""
-        return <Users className="h-5 w-5" />;'"""
-      case 'education':""""
-        return <Globe className="h-5 w-5" />;'"""
-      case 'healthcare':""""
-        return <Award className="h-5 w-5" />;'"""
-      case 'computer vision':""""
-        return <Target className="h-5 w-5" />;'"""
-      case 'natural language processing':""""
-        return <Brain className="h-5 w-5" />;'"""
-      case 'predictive analytics':""""
-        return <TrendingUp className="h-5 w-5" />;'"""
-      case 'conversational ai':""""
-        return <Users className="h-5 w-5" />;'"""
-      case 'content generation':""""
-        return <Code className="h-5 w-5" />;'"""
-      case 'data science':""""
-        return <Database className="h-5 w-5" />;'"""
-      case 'voice ai':""""
-        return <Smartphone className="h-5 w-5" />;'"""
-      case 'recommendation systems':""""
-        return <TrendingUp className="h-5 w-5" />;'"""
-      case 'security ai':""""
-        return <Shield className="h-5 w-5" />;'"""
-      case 'process automation':""""
-        return <Settings className="h-5 w-5" />;'"""
-      case 'cloud services':""""
-        return <Cloud className="h-5 w-5" />;'"""
-      case 'infrastructure':""""
-        return <Server className="h-5 w-5" />;'"""
-      case 'network security':""""
-        return <Lock className="h-5 w-5" />;'"""
-      case 'mobile development':""""
-        return <Smartphone className="h-5 w-5" />;'"""
-      case 'consulting':""""
-        return <Users className="h-5 w-5" />;'"""
-      case 'managed services':""""
-        return <Settings className="h-5 w-5" />;'"""
-      case 'web development':""""
-        return <Globe className="h-5 w-5" />;"""
-      default:""""
-        return <Star className="h-5 w-5" />;
-    }
-  };
-  const getCategoryColor = category => {}
-    switch (category.toLowerCase()) {}
-'
-''
-'''
-      case 'productivity':''''
-        return 'from-green-500 to-emerald-500';'''
-      case 'finance':''''
-        return 'from-blue-500 to-cyan-500';'''
-      case 'marketing':''''
-        return 'from-purple-500 to-pink-500';'''
-      case 'development':''''
-        return 'from-orange-500 to-red-500';'''
-      case 'data & analytics':''''
-        return 'from-indigo-500 to-purple-500';'''
-      case 'cybersecurity':''''
-        return 'from-red-500 to-orange-500';'''
-      case 'cloud & devops':''''
-        return 'from-blue-500 to-indigo-500';'''
-      case 'human resources':''''
-        return 'from-teal-500 to-green-500';'''
-      case 'education':''''
-        return 'from-yellow-500 to-orange-500';'''
-      case 'healthcare':''''
-        return 'from-pink-500 to-red-500';'''
-      case 'computer vision':''''
-        return 'from-purple-500 to-pink-500';'''
-      case 'natural language processing':''''
-        return 'from-blue-500 to-cyan-500';'''
-      case 'predictive analytics':''''
-        return 'from-indigo-500 to-purple-500';'''
-      case 'conversational ai':''''
-        return 'from-green-500 to-teal-500';'''
-      case 'content generation':''''
-        return 'from-yellow-500 to-orange-500';'''
-      case 'data science':''''
-        return 'from-indigo-500 to-blue-500';'''
-      case 'voice ai':''''
-        return 'from-pink-500 to-purple-500';'''
-      case 'recommendation systems':''''
-        return 'from-teal-500 to-green-500';'''
-      case 'security ai':''''
-        return 'from-red-500 to-pink-500';'''
-      case 'process automation':''''
-        return 'from-orange-500 to-yellow-500';'''
-      case 'cloud services':''''
-        return 'from-blue-500 to-indigo-500';'''
-      case 'infrastructure':''''
-        return 'from-gray-500 to-slate-500';'''
-      case 'network security':''''
-        return 'from-red-500 to-orange-500';'''
-      case 'mobile development':''''
-        return 'from-green-500 to-blue-500';'''
-      case 'consulting':''''
-        return 'from-purple-500 to-indigo-500';'''
-      case 'managed services':''''
-        return 'from-teal-500 to-cyan-500';'''
-      case 'web development':''''
-        return 'from-blue-500 to-green-500';'''
-      default:''''
-        return 'from-gray-500 to-slate-500';
-    }
-  };
-  const formatPrice = (price, pricingModel) => {}
-'
-    if (pricingModel === 'per API call') {}
-      return `$${price.toFixed(3)} per call`;'
-    } else if (pricingModel === 'per word') {}
-`
-``
-      return `$${price.toFixed(2)} per word`;'
-    } else if (pricingModel === 'per recommendation') {}
-`
-``
-      return `$${price.toFixed(3)} per recommendation`;'
-    } else if (pricingModel === 'per employee/month') {}
-`
-``
-      return `$${price}/employee/month`;'
-    } else if (pricingModel === 'monthly') {}
-`
-``
-      return `$${price}/month`;'
-    } else if (pricingModel === 'usage-based') {}
-`
-``
-      return `$${price} per unit`;'
-    } else if (pricingModel === 'tiered') {}
-`
-``
-      return `$${price}/month starting`;'
-    } else if (pricingModel === 'enterprise') {}
-`
-``
-```
-````
-      return `$${price}/month`;
-    } else {}
-`
-``
-      return `$${price}`;
-    }
-  };"""
-  const renderITPricing = () => (""""
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {enhancedITServices2025.map(service => (
-        <Card"""
-          key={service.id}""""
-          className="group relative overflow-hidden bg-gradient-to-br from-blue-800/50 to-indigo-700/50 border-blue-600/30 hover:border-blue-500/50 transition-all duration-500 hover:scale-105 backdrop-blur-sm""""
-        >""""
-          <CardHeader className="pb-4">""""
-            <div className="flex items-center gap-3 mb-3">`
-              <div``
-                className={`p-2 rounded-lg bg-gradient-to-r ${getCategoryColor(service.category)}`}
-              >
-                {getCategoryIcon(service.category)}
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/ui/card";
+import { Badge } from "../components/ui/badge";
+import { Button } from "../components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "../components/ui/tabs";
+import { Check, Star, Zap, Shield, TrendingUp, Users, Cloud, Brain, Code, Database, Globe, Smartphone, Server, Lock, BarChart3, Settings, Phone, Mail, MapPin, ExternalLink, DollarSign, Target, Award } from 'lucide-react';
+import enhancedMicroSaasServices2025 from "../data/enhancedMicroSaasServices2025";
+;
+;
+const ComprehensivePricing = () => {
+    const [activeTab, setActiveTab] = useState('microsaas');
+    const [billingCycle, setBillingCycle] = useState('monthly');
+    const getCategoryIcon = (category) => {
+        switch (category.toLowerCase()) {
+            case 'productivity': return <Users className="h-5 w-5"/>;
+            case 'finance': return <DollarSign className="h-5 w-5"/>;
+            case 'marketing': return <TrendingUp className="h-5 w-5"/>;
+            case 'development': return <Code className="h-5 w-5"/>;
+            case 'data & analytics': return <BarChart3 className="h-5 w-5"/>;
+            case 'cybersecurity': return <Shield className="h-5 w-5"/>;
+            case 'cloud & devops': return <Cloud className="h-5 w-5"/>;
+            case 'human resources': return <Users className="h-5 w-5"/>;
+            case 'education': return <Globe className="h-5 w-5"/>;
+            case 'healthcare': return <Award className="h-5 w-5"/>;
+            case 'computer vision': return <Target className="h-5 w-5"/>;
+            case 'natural language processing': return <Brain className="h-5 w-5"/>;
+            case 'predictive analytics': return <TrendingUp className="h-5 w-5"/>;
+            case 'conversational ai': return <Users className="h-5 w-5"/>;
+            case 'content generation': return <Code className="h-5 w-5"/>;
+            case 'data science': return <Database className="h-5 w-5"/>;
+            case 'voice ai': return <Smartphone className="h-5 w-5"/>;
+            case 'recommendation systems': return <TrendingUp className="h-5 w-5"/>;
+            case 'security ai': return <Shield className="h-5 w-5"/>;
+            case 'process automation': return <Settings className="h-5 w-5"/>;
+            case 'cloud services': return <Cloud className="h-5 w-5"/>;
+            case 'infrastructure': return <Server className="h-5 w-5"/>;
+            case 'network security': return <Lock className="h-5 w-5"/>;
+            case 'mobile development': return <Smartphone className="h-5 w-5"/>;
+            case 'consulting': return <Users className="h-5 w-5"/>;
+            case 'managed services': return <Settings className="h-5 w-5"/>;
+            case 'web development': return <Globe className="h-5 w-5"/>;
+            default: return <Star className="h-5 w-5"/>}
+    };
+    const getCategoryColor = (category) => {
+        switch (category.toLowerCase()) {
+            case 'productivity': return 'from-green-500 to-emerald-500';
+            case 'finance': return 'from-blue-500 to-cyan-500';
+            case 'marketing': return 'from-purple-500 to-pink-500';
+            case 'development': return 'from-orange-500 to-red-500';
+            case 'data & analytics': return 'from-indigo-500 to-purple-500';
+            case 'cybersecurity': return 'from-red-500 to-orange-500';
+            case 'cloud & devops': return 'from-blue-500 to-indigo-500';
+            case 'human resources': return 'from-teal-500 to-green-500';
+            case 'education': return 'from-yellow-500 to-orange-500';
+            case 'healthcare': return 'from-pink-500 to-red-500';
+            case 'computer vision': return 'from-purple-500 to-pink-500';
+            case 'natural language processing': return 'from-blue-500 to-cyan-500';
+            case 'predictive analytics': return 'from-indigo-500 to-purple-500';
+            case 'conversational ai': return 'from-green-500 to-teal-500';
+            case 'content generation': return 'from-yellow-500 to-orange-500';
+            case 'data science': return 'from-indigo-500 to-blue-500';
+            case 'voice ai': return 'from-pink-500 to-purple-500';
+            case 'recommendation systems': return 'from-teal-500 to-green-500';
+            case 'security ai': return 'from-red-500 to-pink-500';
+            case 'process automation': return 'from-orange-500 to-yellow-500';
+            case 'cloud services': return 'from-blue-500 to-indigo-500';
+            case 'infrastructure': return 'from-gray-500 to-slate-500';
+            case 'network security': return 'from-red-500 to-orange-500';
+            case 'mobile development': return 'from-green-500 to-blue-500';
+            case 'consulting': return 'from-purple-500 to-indigo-500';
+            case 'managed services': return 'from-teal-500 to-cyan-500';
+            case 'web development': return 'from-blue-500 to-green-500';
+            default: return 'from-gray-500 to-slate-500'}
+    };
+    const formatPrice = (price, pricingModel) => {
+        if (pricingModel === 'per API call') {
+            return `$${price.toFixed(3)} per call`}
+        else if (pricingModel === 'per word') {
+            return `$${price.toFixed(2)} per word`}
+        else if (pricingModel === 'per recommendation') {
+            return `$${price.toFixed(3)} per recommendation`}
+        else if (pricingModel === 'per employee/month') {
+            return `$${price}/employee/month`}
+        else if (pricingModel === 'monthly') {
+            return `$${price}/month`}
+        else if (pricingModel === 'usage-based') {
+            return `$${price} per unit`}
+        else if (pricingModel === 'tiered') {
+            return `$${price}/month starting`}
+        else if (pricingModel === 'enterprise') {
+            return `$${price}/month`}
+        else {
+            return `$${price}`}
+    };
+    const renderITPricing = () => (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {enhancedITServices2025.map((service) => (<Card key={service.id} className="group relative overflow-hidden bg-gradient-to-br from-blue-800/50 to-indigo-700/50 border-blue-600/30 hover:border-blue-500/50 transition-all duration-500 hover:scale-105 backdrop-blur-sm">
+          <CardHeader className="pb-4">
+            <div className="flex items-center gap-3 mb-3">
+              <div className={`p-2 rounded-lg bg-gradient-to-r ${getCategoryColor(service.category)}`}>                {getCategoryIcon(service.category)}
               </div>"""
               <Badge""""
                 variant="outline""""
@@ -479,8 +354,16 @@ const ComprehensivePricing = () => {}
           </div>
         </div>
       </section>
-    </div>
-  );
-};
-export default ComprehensivePricing;'"`
-'"`'"`
+    </div>)};
+export default ComprehensivePricing;
+
+
+export { ComprehensivePricing };
+
+export { ComprehensivePricing };
+
+export { ComprehensivePricing };
+
+export { ComprehensivePricing };
+
+export { ComprehensivePricing };

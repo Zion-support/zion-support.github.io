@@ -80,7 +80,15 @@ export default function TalentMarketplace() {}
         </div>
       </main>
       <Footer />
-    </>
-  );
-}'"""
-'"'"""
+    </>)}
+
+
+export { TalentMarketplace };
+
+export { TalentMarketplace };
+
+export { TalentMarketplace };
+
+export { TalentMarketplace };
+
+export { TalentMarketplace };

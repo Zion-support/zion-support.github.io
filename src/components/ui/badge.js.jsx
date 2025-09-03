@@ -46,4 +46,14 @@ const Badge = React.forwardRef((_a, ref) => {}
 });'
 Badge.displayName = 'Badge';
 export { Badge };
-'
+
+
+export { Badge };
+
+export { Badge };
+
+export { Badge };
+
+export { Badge };
+
+export { Badge };

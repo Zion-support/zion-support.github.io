@@ -1,9 +1,41 @@
+<<<<<<< HEAD
+import React from 'react';
 import { ArrowRight, CheckCircle, ExternalLink  } from 'lucide-react';
 
-export default function Page(function Page(function Page() {): any {): any {}
-,
-    {}
-      title: 'AI Sales Assistant',
+const anchor = (url: unknownstring, label?: string)  => (
+  <a className="text-cyan-400 underline" href={url} target="_blank" rel="noopener noreferrer">
+    {label ?? new URL(url).host + (url.includes('/pricing') ? '/pricing' : '')}
+  </a>
+);
+
+const ServicesAdvertising: React.FC = (): JSX.Element => {
+  const contact = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+  } as const;
+
+  const benefits: string[] = [
+    'High-ROI projects with measurable KPIs',
+    'Transparent pricing with market references',
+    'Fast onboarding with templates and playbooks',
+    'Enterprise-grade security and compliance',
+    '24/7 support with SLAs',
+    'Proven architectures and reference implementations',
+    'No long-term lock-in; cancel anytime',
+    'SOC 2-aligned processes and data handling',
+    'Flexible deployment: SaaS or self-hosted options'
+  ];
+
+  const spotlight = [
+    {
+      title: 'Developer Productivity Copilot',
+      price: 'Typical: $19–$39/dev/mo',
+      refs: ['https://github.com/features/copilot#pricing', 'https://codeium.com/pricing', 'https://buildpulse.io/pricing'],
+      href: '/services/developer-productivity-copilot'
+    },
+    {      title: 'AI Sales Assistant',
       price: 'Typical: $30–$150 / user / mo',
       refs: ['https://www.apollo.io / pricing',
         'https://www.lemlist.com / pricing',
@@ -91,36 +123,27 @@ const ServicesAdvertising: React.FC = (): JSX.Element => {}
               Browse Services <ExternalLink className="w-5 h-5 ml-2"  />            </a>
           </div>
         </div>
-      </section>"""
-""""
-      <section className="pb-12">""""
-        <div className="container mx-auto px-4 grid grid-cols-1 md: anygrid-cols-3 gap-6 max-w-6xl">
-          {benefits.map(b => (
-            <div"""
-              key={b}""""
-              className="p-6 rounded-2xl bg-black/40 border border-gray-700/60""""
-            >""""
-              <div className="flex items-start gap-3">""""
-                <CheckCircle className="w-5 h-5 text-emerald-400 mt-1"  />"                <p className="text-gray-200">{b}</p>
-              </div>
+      </section>
+
+      <section className="pb-12">
+        <div className="container mx-auto px-4 grid grid-cols-1 md: unknowngrid-cols-3 gap-6 max-w-6xl">
+          {benefits.map((b)  => (
+            <div key={b} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
+              <div className="flex items-start gap-3">
+                <CheckCircle className="w-5 h-5 text-emerald-400 mt-1" />
+                <p className="text-gray-200">{b}</p>              </div>
             </div>) ) }
         </div>
-      </section>"""
-""""
-      <section className="pb-16">""""
-        <div className="container mx-auto px-4 max-w-7xl">""""
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">
-            Spotlight: New Expert Services"""
-          </h2>""""
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
-            {spotlight.map(h => (
-              <div"""
-                key={h.title}""""
-                className="p-6 rounded-2xl bg-black/40 border border-gray-700/60""""
-              >""""
-                <h3 className="text-white font-semibold mb-2">{h.title}</h3>""""
-                <div className="text-sm text-slate-400 mb-2">{h.price}</div>""""
-                <ul className="text-slate-300 space-y-1 mt-2">
+      </section>
+
+      <section className="pb-16">
+        <div className="container mx-auto px-4 max-w-7xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Spotlight: New Expert Services</h2>
+          <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-4 gap-6">
+            {spotlight.map((h)  => (
+              <div key={h.title} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
+                <h3 className="text-white font-semibold mb-2">{h.title}</h3>
+                <div className="text-sm text-slate-400 mb-2">{h.price}</div>                <ul className="text-slate-300 space-y-1 mt-2">
                   {h.refs.map(u => (
                     <li key={u}>{anchor(u)}</li>
                   ))}"""
@@ -190,6 +213,72 @@ const ServicesAdvertising: React.FC = (): JSX.Element => {}
           </div>
         </div>
       </section>
-    </div>) };
-export default ServicesAdvertising;'"""
-'"'"""
+    </div>
+  );
+};
+
+export default ServicesAdvertising;
+
+
+
+export { ServicesAdvertising };
+
+export { ServicesAdvertising };
+
+export { ServicesAdvertising };
+
+export { ServicesAdvertising };
+
+export { ServicesAdvertising, ServicesAdvertising };
+=======
+import React from "react"
+import Head from "next/head"
+import Link from "next/link"
+const ServicesAdvertising = () => {
+  return (
+    <>
+      <Head>
+        <title>Services Advertising - Zion Tech Group</title>
+        <meta name="description" content="Professional Services Advertising services"  />
+      </Head>
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-8">
+              Services Advertising
+            </h1>
+            <p className="text-xl text-gray-600 mb-12">
+              Professional Services Advertising services and solutions
+            </p>
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h2 className="text-2xl font-semibold mb-4">Our Services</h2>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Professional Solutions</li>
+                  <li>• Expert Implementation</li>
+                  <li>• 24/7 Support</li>
+                  <li>• Custom Development</li>
+                </ul>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h2 className="text-2xl font-semibold mb-4">Why Choose Us</h2>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Industry Expertise</li>
+                  <li>• Proven Results</li>
+                  <li>• Scalable Solutions</li>
+                  <li>• Competitive Pricing</li>
+                </ul>
+              </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                View Pricing
+              </Link>
+              <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
+                Contact Us
+              </Link>
+            </div>
+    </>
+  );
+}
+export default ServicesAdvertising
+>>>>>>> main

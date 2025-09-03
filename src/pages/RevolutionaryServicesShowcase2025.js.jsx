@@ -1,37 +1,35 @@
-import React, { useState } from 'react';'''
-import { REVOLUTIONARY_2025_ADVANCED_SERVICES } from '../../data/revolutionary-2025-advanced-services';'''
-import { EMERGING_TECH_2025_SPECIALIZED_SERVICES } from '../../data/emerging-tech-2025-specialized-services';
-const RevolutionaryServicesShowcase2025 = () => {}
-'
-''
-'''
-  const [selectedCategory, setSelectedCategory] = useState('all');'''
-  const [searchTerm, setSearchTerm] = useState('');
-  const allServices = []
-    ...REVOLUTIONARY_2025_ADVANCED_SERVICES.map(service => ({}
-      ...service,'
-      source: 'revolutionary'})),
-    ...EMERGING_TECH_2025_SPECIALIZED_SERVICES.map(service => ({}
-      ...service,'
-      source: 'emerging'}))
-  ];'
-  const categories = [''
-    'all',Micro SAAS',IT Services',AI Solutions',Blockchain & Web3',IoT & Edge Computing',Sustainable Technology',Space Technology',Biotechnology',Quantum Technology'
-  ];
-  const filteredServices = allServices.filter(service => {}
-    const matchesSearch =
-      service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
-  return()
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"""
-      {/* Header */}""""
-      <div className="bg-black/20 backdrop-blur-sm border-b border-white/10">""""
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">""""
-          <div className="text-center">""""
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
+import React, { useState } from 'react';
+;
+;
+const RevolutionaryServicesShowcase2025 = () => {
+    const [selectedCategory, setSelectedCategory] = useState('all');
+    const [searchTerm, setSearchTerm] = useState('');
+    const allServices = [
+        ...REVOLUTIONARY_2025_ADVANCED_SERVICES.map(service => ({ ...service, source: 'revolutionary' })),
+        ...EMERGING_TECH_2025_SPECIALIZED_SERVICES.map(service => ({ ...service, source: 'emerging' }))
+    ];
+    const categories = [
+        'all',
+        'Micro SAAS',
+        'IT Services',
+        'AI Solutions',
+        'Blockchain & Web3',
+        'IoT & Edge Computing',
+        'Sustainable Technology',
+        'Space Technology',
+        'Biotechnology',
+        'Quantum Technology'
+    ];
+    const filteredServices = allServices.filter(service => {
+        const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
+        return matchesCategory && matchesSearch});
+    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      {/* Header */}
+      <div className="bg-black/20 backdrop-blur-sm border-b border-white/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="text-center">            <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
               Revolutionary Services Showcase 2025"""
             </h1>""""
             <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
@@ -323,8 +321,16 @@ const RevolutionaryServicesShowcase2025 = () => {}
           </div>
         </div>
       </div>
-    </div>
-  );
-};
-export default RevolutionaryServicesShowcase2025;'"`
-'"`'"`
+    </div>)};
+export default RevolutionaryServicesShowcase2025;
+
+
+export { RevolutionaryServicesShowcase2025 };
+
+export { RevolutionaryServicesShowcase2025 };
+
+export { RevolutionaryServicesShowcase2025 };
+
+export { RevolutionaryServicesShowcase2025 };
+
+export { RevolutionaryServicesShowcase2025 };

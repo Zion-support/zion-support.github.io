@@ -1,16 +1,13 @@
+<<<<<<< HEAD
 export class LinkChecker {}
 export default LinkChecker;
-<<<<<<< HEAD:pages.disabled/utils/linkChecker.tsx
+:pages.disabled/utils/linkChecker.tsx
 export interface LinkInfo {
 export interface PageInfo {
-<<<<<<< HEAD:pages.disabled/utils/linkChecker.tsx
+:pages.disabled/utils/linkChecker.tsx
 
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/utils/linkChecker.tsx
-=======
 export interface LinkInfo {}
 export interface PageInfo {}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/utils/linkChecker.tsx
   url: string;
   status: 'working' | 'broken' | 'missing' | 'external';
   page: string;
@@ -26,7 +23,7 @@ export interface PageInfo {}
   private visitedUrls: Set < string> = new Set () ;
   private brokenLinks: LinkInfo[] = [];
   private missingPages: string[] = [];
-<<<<<<< HEAD:pages.disabled/utils/linkChecker.tsx
+:pages.disabled/utils/linkChecker.tsx
 '
   constructor (baseUrl: string = 'https://ziontechgroup.com') {
 
@@ -63,7 +60,6 @@ export interface PageInfo {}
   // Extract all links from a page
   extractLinks (pageContent: string, pagePath: string) : LinkInfo[] {
 
-=======
 
   constructor (baseUrl: string = 'https://ziontechgroup.com') {}
     this.baseUrl = baseUrl}
@@ -90,13 +86,12 @@ export interface PageInfo {}
 
   // Extract all links from a page;
   extractLinks (pageContent: string, pagePath: string) : LinkInfo[] {}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/utils/linkChecker.tsx
     const links: LinkInfo[] = [];
 
     // Extract href attributes from anchor tags;
     let match;
 
-<<<<<<< HEAD:pages.disabled/utils/linkChecker.tsx
+:pages.disabled/utils/linkChecker.tsx
     while ( (match = hrefRegex.exec (pageContent) ) !== null) {
 
       if (url &&'
@@ -123,7 +118,6 @@ export interface PageInfo {}
           url: normalizedUrl,'
           status: 'working',
           page: pagePath}) }
-=======
     while ( (match = hrefRegex.exec (pageContent) ) !== null) {}
       if (url &&
         !url.startsWith ('javascript:') &&
@@ -145,12 +139,11 @@ export interface PageInfo {}
           status: 'working',
           page: pagePath
         }) }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/utils/linkChecker.tsx
     }
 
     return links}
 
-<<<<<<< HEAD:pages.disabled/utils/linkChecker.tsx
+:pages.disabled/utils/linkChecker.tsx
   // Check if a page exists
   async checkPageExists (url: string: any): Promise < any> {
 
@@ -169,7 +162,6 @@ export interface PageInfo {}
 
       if (this.visitedUrls.has (link.url) ) {
 
-=======
   // Check if a page exists;
   async checkPageExists (url: string: any): Promise < any> {}
     try {}
@@ -183,12 +175,11 @@ export interface PageInfo {}
 
     for (const link of links) {}
       if (this.visitedUrls.has (link.url) ) {}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/utils/linkChecker.tsx
         continue}
 
       this.visitedUrls.add (link.url) ;
 
-<<<<<<< HEAD:pages.disabled/utils/linkChecker.tsx
+:pages.disabled/utils/linkChecker.tsx
       if (this.isInternalLink (link.url) ) {
 
         if (exists) {
@@ -199,19 +190,17 @@ export interface PageInfo {}
           this.missingPages.push (link.url) }
       } else {
 '
-=======
       if (this.isInternalLink (link.url) ) {}
         if (exists) {}
           link.status = 'working'} else {}
           link.status = 'missing';
           this.missingPages.push (link.url) }
       } else {}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/utils/linkChecker.tsx
         link.status = 'external'}
 
       checkedLinks.push (link) }
 
-<<<<<<< HEAD:pages.disabled/utils/linkChecker.tsx
+:pages.disabled/utils/linkChecker.tsx
     return {
 
       path: pagePath,
@@ -241,7 +230,6 @@ export interface PageInfo {}
   // Get all missing pages
   getMissingPages () : string[] {
 
-=======
     return {}
       path: pagePath,
       title: this.extractPageTitle (pageContent) ,
@@ -268,8 +256,9 @@ export interface PageInfo {}
 
   // Get all missing pages;
   getMissingPages () : string[] {}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/utils/linkChecker.tsx
     return this.missingPages}
 }
 
 '`
+=======
+>>>>>>> main

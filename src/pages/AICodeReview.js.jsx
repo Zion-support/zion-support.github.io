@@ -250,7 +250,15 @@ export default function AICodeReview() {}
           </motion.div>
         </div>
       </section>
-    </div>
-  );
-}'"""
-'"'"""
+    </div>)}
+
+
+export { AICodeReview };
+
+export { AICodeReview };
+
+export { AICodeReview };
+
+export { AICodeReview };
+
+export { AICodeReview };

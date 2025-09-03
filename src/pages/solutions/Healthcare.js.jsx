@@ -213,6 +213,15 @@ const HealthcareSolutions = () => {}
     </div>
   );
 };
-export { HealthcareSolutions };
-export default HealthcareSolutions;'"""
-'"'"""
+export default HealthcareSolutions;
+
+
+export { HealthcareSolutions, Icon, Icon };
+
+export { HealthcareSolutions, Icon, Icon };
+
+export { HealthcareSolutions, Icon, Icon };
+
+export { HealthcareSolutions, Icon, Icon };
+
+export { HealthcareSolutions, Icon, Icon };

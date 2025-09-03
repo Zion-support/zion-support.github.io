@@ -25,7 +25,16 @@ export default function ServiceOnboarding() {}
           <ServiceProviderRegistrationForm />
         </div>
       </div>
-    </>
-  );
-}'"""
-'"'"""
+      
+    </>)}
+
+
+export { ServiceOnboarding };
+
+export { ServiceOnboarding };
+
+export { ServiceOnboarding };
+
+export { ServiceOnboarding };
+
+export { ServiceOnboarding };

@@ -99,5 +99,15 @@ export default function CheckoutPage() {}
           </div>
         </div>
       </div>
-    </div>)}'"`
-'"`'"`
+    </div>)}
+
+
+export { CheckoutPage };
+
+export { CheckoutPage };
+
+export { CheckoutPage };
+
+export { CheckoutPage };
+
+export { CheckoutPage };

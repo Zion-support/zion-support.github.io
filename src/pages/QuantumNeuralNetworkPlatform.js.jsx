@@ -337,8 +337,16 @@ const QuantumNeuralNetworkPlatform = () => {}
           </div>
         </div>
       </section>
-    </div>
-  );
-};
-export default QuantumNeuralNetworkPlatform;'"""
-'"'"""
+    </div>)};
+export default QuantumNeuralNetworkPlatform;
+
+
+export { QuantumNeuralNetworkPlatform, IconComponent, IconComponent };
+
+export { QuantumNeuralNetworkPlatform, IconComponent, IconComponent };
+
+export { QuantumNeuralNetworkPlatform, IconComponent, IconComponent };
+
+export { QuantumNeuralNetworkPlatform, IconComponent, IconComponent };
+
+export { QuantumNeuralNetworkPlatform, IconComponent, IconComponent };

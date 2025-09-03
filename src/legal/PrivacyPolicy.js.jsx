@@ -28,7 +28,15 @@ export default function PrivacyPolicy() {}
         </div>
       </main>
       <Footer />
-    </>
-  );
-}'"`
-'"`'"`
+    </>)}
+
+
+export { PrivacyPolicy };
+
+export { PrivacyPolicy };
+
+export { PrivacyPolicy };
+
+export { PrivacyPolicy };
+
+export { PrivacyPolicy };
