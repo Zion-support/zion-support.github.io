@@ -3,20 +3,25 @@
   "@type": "Organization",
   "name": "Zion Tech Group",
   "url": "https://ziontechgroup.com",
-  "logo": "https://ziontechgroup.com/logo.png",
+  "logo": "https://ziontechgroup.com/og-image.svg",
   "description": "Leading provider of AI-powered IT services, cybersecurity, cloud solutions, and digital transformation.",
   "address": {
     "@type": "PostalAddress",
-    "addressCountry": "US";
-},
+    "streetAddress": "364 E Main St STE 1008",
+    "addressLocality": "Middletown",
+    "addressRegion": "DE",
+    "postalCode": "19709",
+    "addressCountry": "US"
+  },
   "contactPoint": {
     "@type": "ContactPoint",
-    "telephone": "+1-XXX-XXX-XXXX",
-    "contactType": "customer service",
-    "availableLanguage": "English";
-},
+    "telephone": "+1-302-464-0950",
+    "email": "kleber@ziontechgroup.com",
+    "contactType": "sales",
+    "availableLanguage": ["English", "Spanish", "Portuguese"]
+  },
   "sameAs": [
-    "https://linkedin.com/company/zion-tech-group",
+    "https://linkedin.com/company/ziontechgroup",
     "https://twitter.com/ziontechgroup"
   ],
   "foundingDate": "2020",
@@ -27,6 +32,20 @@
     "Cybersecurity",
     "Cloud Solutions",
     "Digital Transformation",
-    "IT Consulting"
+    "IT Consulting",
+    "Custom AI Assistants & Agents",
+    "MLOps & LLMOps",
+    "Computer Vision & Edge AI",
+    "Data Platforms & Warehousing",
+    "vCISO & Security Program",
+    "Secure SDLC & AppSec",
+    "Privacy Engineering",
+    "Cloud Foundation & Landing Zones",
+    "Kubernetes Platform & GitOps",
+    "Site Reliability Engineering",
+    "AI Customer Support Copilot (Micro SaaS)",
+    "InvoiceIQ — Automated AR/AP (Micro SaaS)",
+    "SEO AutoPilot (Micro SaaS)",
+    "SmartDocs Knowledge Base (Micro SaaS)"
   ]
 }
