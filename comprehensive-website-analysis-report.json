@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-09-01T17:51:33.350Z",
+  "timestamp": "2025-08-31T21:26:55.884Z",
   "baseUrl": "https://ziontechgroup.com",
   "summary": {
     "totalLinksChecked": 60,
@@ -9,8 +9,8 @@
     "redirects": 0,
     "errors": 0,
     "warnings": 0,
-    "successRate": "100.00%"
-  },
+    "successRate": "100.00%";
+},
   "brokenLinks": [],
   "workingLinks": [
     {
@@ -19,13 +19,13 @@
       "parentUrl": null,
       "headers": {
         "accept-ranges": "bytes",
-        "age": "4346",
+        "age": "52354",
         "cache-control": "public,max-age=0,must-revalidate",
         "cache-status": "\"Netlify Edge\"; hit",
         "content-length": "1092",
         "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.gpteng.co https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Mon, 01 Sep 2025 17:51:33 GMT",
+        "date": "Sun, 31 Aug 2025 21:26:55 GMT",
         "etag": "\"f1da32fc92f83a09a9faec2f51271712-ssl-df\"",
         "permissions-policy": "camera=(), microphone=(), geolocation=()",
         "referrer-policy": "strict-origin-when-cross-origin",
@@ -34,24 +34,23 @@
         "vary": "Accept-Encoding",
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
-        "x-nf-request-id": "01K436FPHE9XPK6W7CNPYPFZJ8",
-        "x-xss-protection": "1; mode=block"
-      },
-      "contentLength": 4442
-    },
+        "x-nf-request-id": "01K410DB67Q5MCW3V3YWJMFGK6",
+        "x-xss-protection": "1; mode=block";
+},
+      "contentLength": 4442},
     {
       "url": "https://ziontechgroup.com/",
       "status": 200,
       "parentUrl": null,
       "headers": {
         "accept-ranges": "bytes",
-        "age": "4346",
+        "age": "52354",
         "cache-control": "public,max-age=0,must-revalidate",
         "cache-status": "\"Netlify Edge\"; hit",
         "content-length": "1092",
         "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.gpteng.co https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Mon, 01 Sep 2025 17:51:33 GMT",
+        "date": "Sun, 31 Aug 2025 21:26:55 GMT",
         "etag": "\"f1da32fc92f83a09a9faec2f51271712-ssl-df\"",
         "permissions-policy": "camera=(), microphone=(), geolocation=()",
         "referrer-policy": "strict-origin-when-cross-origin",
@@ -60,11 +59,10 @@
         "vary": "Accept-Encoding",
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
-        "x-nf-request-id": "01K436FPJ0Z0WEYFQ0775GFQGD",
-        "x-xss-protection": "1; mode=block"
-      },
-      "contentLength": 4442
-    },
+        "x-nf-request-id": "01K410DB6MA1JXKBN4Z9RBNB49",
+        "x-xss-protection": "1; mode=block";
+},
+      "contentLength": 4442},
     {
       "url": "https://ziontechgroup.com/about",
       "status": 200,
@@ -76,7 +74,7 @@
         "cache-status": "\"Netlify Edge\"; fwd=miss",
         "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.gpteng.co https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Mon, 01 Sep 2025 17:51:33 GMT",
+        "date": "Sun, 31 Aug 2025 21:26:55 GMT",
         "etag": "\"f1da32fc92f83a09a9faec2f51271712-ssl-df\"",
         "permissions-policy": "camera=(), microphone=(), geolocation=()",
         "referrer-policy": "strict-origin-when-cross-origin",
@@ -85,25 +83,23 @@
         "vary": "Accept-Encoding",
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
-        "x-nf-request-id": "01K436FPJ60EYFB1RGAZJM1GXW",
+        "x-nf-request-id": "01K410DB6V2FVPR8NY4GG55VVH",
         "x-xss-protection": "1; mode=block",
-        "transfer-encoding": "chunked"
-      },
-      "contentLength": 4442
-    },
+        "transfer-encoding": "chunked";
+},
+      "contentLength": 4442},
     {
       "url": "https://ziontechgroup.com/contact",
       "status": 200,
       "parentUrl": null,
       "headers": {
         "accept-ranges": "bytes",
-        "age": "0",
+        "age": "1",
         "cache-control": "public,max-age=0,must-revalidate",
         "cache-status": "\"Netlify Edge\"; fwd=miss",
-        "content-length": "1092",
         "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.gpteng.co https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Mon, 01 Sep 2025 17:51:33 GMT",
+        "date": "Sun, 31 Aug 2025 21:26:56 GMT",
         "etag": "\"f1da32fc92f83a09a9faec2f51271712-ssl-df\"",
         "permissions-policy": "camera=(), microphone=(), geolocation=()",
         "referrer-policy": "strict-origin-when-cross-origin",
@@ -112,11 +108,11 @@
         "vary": "Accept-Encoding",
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
-        "x-nf-request-id": "01K436FPK2A6C1ZS0WQFS1B2GT",
-        "x-xss-protection": "1; mode=block"
-      },
-      "contentLength": 4442
-    },
+        "x-nf-request-id": "01K410DB7VXW9QYWEJT7D7T20E",
+        "x-xss-protection": "1; mode=block",
+        "transfer-encoding": "chunked";
+},
+      "contentLength": 4442},
     {
       "url": "https://ziontechgroup.com/services",
       "status": 200,
@@ -128,7 +124,7 @@
         "cache-status": "\"Netlify Edge\"; fwd=miss",
         "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.gpteng.co https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Mon, 01 Sep 2025 17:51:33 GMT",
+        "date": "Sun, 31 Aug 2025 21:26:56 GMT",
         "etag": "\"f1da32fc92f83a09a9faec2f51271712-ssl-df\"",
         "permissions-policy": "camera=(), microphone=(), geolocation=()",
         "referrer-policy": "strict-origin-when-cross-origin",
@@ -137,12 +133,11 @@
         "vary": "Accept-Encoding",
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
-        "x-nf-request-id": "01K436FPM2AKGMBSVCEX45SYK2",
+        "x-nf-request-id": "01K410DB920AE3S7XQF3JE879V",
         "x-xss-protection": "1; mode=block",
-        "transfer-encoding": "chunked"
-      },
-      "contentLength": 4442
-    },
+        "transfer-encoding": "chunked";
+},
+      "contentLength": 4442},
     {
       "url": "https://ziontechgroup.com/ai-services",
       "status": 200,
@@ -154,7 +149,7 @@
         "cache-status": "\"Netlify Edge\"; fwd=miss",
         "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.gpteng.co https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Mon, 01 Sep 2025 17:51:33 GMT",
+        "date": "Sun, 31 Aug 2025 21:26:56 GMT",
         "etag": "\"f1da32fc92f83a09a9faec2f51271712-ssl-df\"",
         "permissions-policy": "camera=(), microphone=(), geolocation=()",
         "referrer-policy": "strict-origin-when-cross-origin",
@@ -163,40 +158,13 @@
         "vary": "Accept-Encoding",
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
-        "x-nf-request-id": "01K436FPMZCF12719VTDWPZ4QP",
+        "x-nf-request-id": "01K410DBA2GXEJDDHDRKWK2PYP",
         "x-xss-protection": "1; mode=block",
-        "transfer-encoding": "chunked"
-      },
-      "contentLength": 4442
-    },
+        "transfer-encoding": "chunked";
+},
+      "contentLength": 4442},
     {
       "url": "https://ziontechgroup.com/it-services",
-      "status": 200,
-      "parentUrl": null,
-      "headers": {
-        "accept-ranges": "bytes",
-        "age": "0",
-        "cache-control": "public,max-age=0,must-revalidate",
-        "cache-status": "\"Netlify Edge\"; fwd=miss",
-        "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.gpteng.co https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
-        "content-type": "text/html; charset=UTF-8",
-        "date": "Mon, 01 Sep 2025 17:51:33 GMT",
-        "etag": "\"f1da32fc92f83a09a9faec2f51271712-ssl-df\"",
-        "permissions-policy": "camera=(), microphone=(), geolocation=()",
-        "referrer-policy": "strict-origin-when-cross-origin",
-        "server": "Netlify",
-        "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
-        "vary": "Accept-Encoding",
-        "x-content-type-options": "nosniff",
-        "x-frame-options": "DENY",
-        "x-nf-request-id": "01K436FPP0A8CVA79Y8Y32RB3A",
-        "x-xss-protection": "1; mode=block",
-        "transfer-encoding": "chunked"
-      },
-      "contentLength": 4442
-    },
-    {
-      "url": "https://ziontechgroup.com/micro-saas",
       "status": 200,
       "parentUrl": null,
       "headers": {
@@ -207,7 +175,7 @@
         "content-length": "1092",
         "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.gpteng.co https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Mon, 01 Sep 2025 17:51:33 GMT",
+        "date": "Sun, 31 Aug 2025 21:26:56 GMT",
         "etag": "\"f1da32fc92f83a09a9faec2f51271712-ssl-df\"",
         "permissions-policy": "camera=(), microphone=(), geolocation=()",
         "referrer-policy": "strict-origin-when-cross-origin",
@@ -216,11 +184,35 @@
         "vary": "Accept-Encoding",
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
-        "x-nf-request-id": "01K436FPPZWQY6ZY7KTC9APBCX",
-        "x-xss-protection": "1; mode=block"
-      },
-      "contentLength": 4442
-    },
+        "x-nf-request-id": "01K410DBB0YXFP44BF2C6A6HFY",
+        "x-xss-protection": "1; mode=block";
+},
+      "contentLength": 4442},
+    {
+      "url": "https://ziontechgroup.com/micro-saas",
+      "status": 200,
+      "parentUrl": null,
+      "headers": {
+        "accept-ranges": "bytes",
+        "age": "0",
+        "cache-control": "public,max-age=0,must-revalidate",
+        "cache-status": "\"Netlify Edge\"; fwd=miss",
+        "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.gpteng.co https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
+        "content-type": "text/html; charset=UTF-8",
+        "date": "Sun, 31 Aug 2025 21:26:56 GMT",
+        "etag": "\"f1da32fc92f83a09a9faec2f51271712-ssl-df\"",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "server": "Netlify",
+        "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+        "vary": "Accept-Encoding",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY",
+        "x-nf-request-id": "01K410DBBYV081E3QPA4ERWXGJ",
+        "x-xss-protection": "1; mode=block",
+        "transfer-encoding": "chunked";
+},
+      "contentLength": 4442},
     {
       "url": "https://ziontechgroup.com/solutions",
       "status": 200,
@@ -232,7 +224,7 @@
         "cache-status": "\"Netlify Edge\"; fwd=miss",
         "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.gpteng.co https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Mon, 01 Sep 2025 17:51:33 GMT",
+        "date": "Sun, 31 Aug 2025 21:26:56 GMT",
         "etag": "\"f1da32fc92f83a09a9faec2f51271712-ssl-df\"",
         "permissions-policy": "camera=(), microphone=(), geolocation=()",
         "referrer-policy": "strict-origin-when-cross-origin",
@@ -241,12 +233,11 @@
         "vary": "Accept-Encoding",
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
-        "x-nf-request-id": "01K436FPQZNGRDMTTCSXJ7ZNVD",
+        "x-nf-request-id": "01K410DBD2DXE34RPK9QJQZBBZ",
         "x-xss-protection": "1; mode=block",
-        "transfer-encoding": "chunked"
-      },
-      "contentLength": 4442
-    },
+        "transfer-encoding": "chunked";
+},
+      "contentLength": 4442},
     {
       "url": "https://ziontechgroup.com/case-studies",
       "status": 200,
@@ -258,7 +249,7 @@
         "cache-status": "\"Netlify Edge\"; fwd=miss",
         "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.gpteng.co https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Mon, 01 Sep 2025 17:51:33 GMT",
+        "date": "Sun, 31 Aug 2025 21:26:56 GMT",
         "etag": "\"f1da32fc92f83a09a9faec2f51271712-ssl-df\"",
         "permissions-policy": "camera=(), microphone=(), geolocation=()",
         "referrer-policy": "strict-origin-when-cross-origin",
@@ -267,12 +258,11 @@
         "vary": "Accept-Encoding",
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
-        "x-nf-request-id": "01K436FPS5QTW3TBKXSZR4NK1S",
+        "x-nf-request-id": "01K410DBDY65K0G8J4MKPBK51T",
         "x-xss-protection": "1; mode=block",
-        "transfer-encoding": "chunked"
-      },
-      "contentLength": 4442
-    },
+        "transfer-encoding": "chunked";
+},
+      "contentLength": 4442},
     {
       "url": "https://ziontechgroup.com/white-papers",
       "status": 200,
@@ -284,7 +274,7 @@
         "cache-status": "\"Netlify Edge\"; fwd=miss",
         "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.gpteng.co https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Mon, 01 Sep 2025 17:51:33 GMT",
+        "date": "Sun, 31 Aug 2025 21:26:56 GMT",
         "etag": "\"f1da32fc92f83a09a9faec2f51271712-ssl-df\"",
         "permissions-policy": "camera=(), microphone=(), geolocation=()",
         "referrer-policy": "strict-origin-when-cross-origin",
@@ -293,12 +283,11 @@
         "vary": "Accept-Encoding",
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
-        "x-nf-request-id": "01K436FPT7TVKERCKEXX03SF99",
+        "x-nf-request-id": "01K410DBETQ1MZWM2W99DBJTST",
         "x-xss-protection": "1; mode=block",
-        "transfer-encoding": "chunked"
-      },
-      "contentLength": 4442
-    },
+        "transfer-encoding": "chunked";
+},
+      "contentLength": 4442},
     {
       "url": "https://ziontechgroup.com/webinars",
       "status": 200,
@@ -310,7 +299,7 @@
         "cache-status": "\"Netlify Edge\"; fwd=miss",
         "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.gpteng.co https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Mon, 01 Sep 2025 17:51:33 GMT",
+        "date": "Sun, 31 Aug 2025 21:26:56 GMT",
         "etag": "\"f1da32fc92f83a09a9faec2f51271712-ssl-df\"",
         "permissions-policy": "camera=(), microphone=(), geolocation=()",
         "referrer-policy": "strict-origin-when-cross-origin",
@@ -319,12 +308,11 @@
         "vary": "Accept-Encoding",
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
-        "x-nf-request-id": "01K436FPV5S9EZQNQ75HT7306V",
+        "x-nf-request-id": "01K410DBFRZ1BXH4RPA6SXFT4K",
         "x-xss-protection": "1; mode=block",
-        "transfer-encoding": "chunked"
-      },
-      "contentLength": 4442
-    },
+        "transfer-encoding": "chunked";
+},
+      "contentLength": 4442},
     {
       "url": "https://ziontechgroup.com/blog",
       "status": 200,
@@ -336,7 +324,7 @@
         "cache-status": "\"Netlify Edge\"; fwd=miss",
         "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.gpteng.co https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Mon, 01 Sep 2025 17:51:33 GMT",
+        "date": "Sun, 31 Aug 2025 21:26:56 GMT",
         "etag": "\"f1da32fc92f83a09a9faec2f51271712-ssl-df\"",
         "permissions-policy": "camera=(), microphone=(), geolocation=()",
         "referrer-policy": "strict-origin-when-cross-origin",
@@ -345,12 +333,11 @@
         "vary": "Accept-Encoding",
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
-        "x-nf-request-id": "01K436FPW728RKEYT6KT5ZNYTN",
+        "x-nf-request-id": "01K410DBGQMWXYB96VVNRWMBCM",
         "x-xss-protection": "1; mode=block",
-        "transfer-encoding": "chunked"
-      },
-      "contentLength": 4442
-    },
+        "transfer-encoding": "chunked";
+},
+      "contentLength": 4442},
     {
       "url": "https://ziontechgroup.com/careers",
       "status": 200,
@@ -360,9 +347,10 @@
         "age": "0",
         "cache-control": "public,max-age=0,must-revalidate",
         "cache-status": "\"Netlify Edge\"; fwd=miss",
+        "content-length": "1092",
         "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.gpteng.co https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Mon, 01 Sep 2025 17:51:33 GMT",
+        "date": "Sun, 31 Aug 2025 21:26:56 GMT",
         "etag": "\"f1da32fc92f83a09a9faec2f51271712-ssl-df\"",
         "permissions-policy": "camera=(), microphone=(), geolocation=()",
         "referrer-policy": "strict-origin-when-cross-origin",
@@ -371,12 +359,10 @@
         "vary": "Accept-Encoding",
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
-        "x-nf-request-id": "01K436FPX30WC52YBM8W519S67",
-        "x-xss-protection": "1; mode=block",
-        "transfer-encoding": "chunked"
-      },
-      "contentLength": 4442
-    },
+        "x-nf-request-id": "01K410DBHH2WW0HX5BSPB8XY91",
+        "x-xss-protection": "1; mode=block";
+},
+      "contentLength": 4442},
     {
       "url": "https://ziontechgroup.com/team",
       "status": 200,
@@ -388,7 +374,7 @@
         "cache-status": "\"Netlify Edge\"; fwd=miss",
         "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.gpteng.co https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Mon, 01 Sep 2025 17:51:33 GMT",
+        "date": "Sun, 31 Aug 2025 21:26:56 GMT",
         "etag": "\"f1da32fc92f83a09a9faec2f51271712-ssl-df\"",
         "permissions-policy": "camera=(), microphone=(), geolocation=()",
         "referrer-policy": "strict-origin-when-cross-origin",
@@ -397,12 +383,11 @@
         "vary": "Accept-Encoding",
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
-        "x-nf-request-id": "01K436FPY4WJ19H85H49MDA5AM",
+        "x-nf-request-id": "01K410DBJSPMWXN28MG3FXDBFA",
         "x-xss-protection": "1; mode=block",
-        "transfer-encoding": "chunked"
-      },
-      "contentLength": 4442
-    },
+        "transfer-encoding": "chunked";
+},
+      "contentLength": 4442},
     {
       "url": "https://ziontechgroup.com/pricing",
       "status": 200,
@@ -412,9 +397,10 @@
         "age": "0",
         "cache-control": "public,max-age=0,must-revalidate",
         "cache-status": "\"Netlify Edge\"; fwd=miss",
+        "content-length": "1092",
         "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.gpteng.co https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Mon, 01 Sep 2025 17:51:33 GMT",
+        "date": "Sun, 31 Aug 2025 21:26:56 GMT",
         "etag": "\"f1da32fc92f83a09a9faec2f51271712-ssl-df\"",
         "permissions-policy": "camera=(), microphone=(), geolocation=()",
         "referrer-policy": "strict-origin-when-cross-origin",
@@ -423,12 +409,10 @@
         "vary": "Accept-Encoding",
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
-        "x-nf-request-id": "01K436FPZ0G7C1T4MY3D822AHT",
-        "x-xss-protection": "1; mode=block",
-        "transfer-encoding": "chunked"
-      },
-      "contentLength": 4442
-    },
+        "x-nf-request-id": "01K410DBKT6T8J6D8DK9WM5SHF",
+        "x-xss-protection": "1; mode=block";
+},
+      "contentLength": 4442},
     {
       "url": "https://ziontechgroup.com/help",
       "status": 200,
@@ -438,9 +422,10 @@
         "age": "0",
         "cache-control": "public,max-age=0,must-revalidate",
         "cache-status": "\"Netlify Edge\"; fwd=miss",
+        "content-length": "1092",
         "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.gpteng.co https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Mon, 01 Sep 2025 17:51:33 GMT",
+        "date": "Sun, 31 Aug 2025 21:26:56 GMT",
         "etag": "\"f1da32fc92f83a09a9faec2f51271712-ssl-df\"",
         "permissions-policy": "camera=(), microphone=(), geolocation=()",
         "referrer-policy": "strict-origin-when-cross-origin",
@@ -449,12 +434,10 @@
         "vary": "Accept-Encoding",
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
-        "x-nf-request-id": "01K436FPZYTM555MMPX02NA2YH",
-        "x-xss-protection": "1; mode=block",
-        "transfer-encoding": "chunked"
-      },
-      "contentLength": 4442
-    },
+        "x-nf-request-id": "01K410DBMRZQ4FZMNMBFS86Z9H",
+        "x-xss-protection": "1; mode=block";
+},
+      "contentLength": 4442},
     {
       "url": "https://ziontechgroup.com/privacy",
       "status": 200,
@@ -466,7 +449,7 @@
         "cache-status": "\"Netlify Edge\"; fwd=miss",
         "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.gpteng.co https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Mon, 01 Sep 2025 17:51:33 GMT",
+        "date": "Sun, 31 Aug 2025 21:26:56 GMT",
         "etag": "\"f1da32fc92f83a09a9faec2f51271712-ssl-df\"",
         "permissions-policy": "camera=(), microphone=(), geolocation=()",
         "referrer-policy": "strict-origin-when-cross-origin",
@@ -475,12 +458,11 @@
         "vary": "Accept-Encoding",
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
-        "x-nf-request-id": "01K436FQ0W4S18VYNKKED4336E",
+        "x-nf-request-id": "01K410DBNPNM5TGMYGJKJ985GW",
         "x-xss-protection": "1; mode=block",
-        "transfer-encoding": "chunked"
-      },
-      "contentLength": 4442
-    },
+        "transfer-encoding": "chunked";
+},
+      "contentLength": 4442},
     {
       "url": "https://ziontechgroup.com/terms",
       "status": 200,
@@ -490,9 +472,10 @@
         "age": "0",
         "cache-control": "public,max-age=0,must-revalidate",
         "cache-status": "\"Netlify Edge\"; fwd=miss",
+        "content-length": "1092",
         "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.gpteng.co https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Mon, 01 Sep 2025 17:51:33 GMT",
+        "date": "Sun, 31 Aug 2025 21:26:56 GMT",
         "etag": "\"f1da32fc92f83a09a9faec2f51271712-ssl-df\"",
         "permissions-policy": "camera=(), microphone=(), geolocation=()",
         "referrer-policy": "strict-origin-when-cross-origin",
@@ -501,12 +484,10 @@
         "vary": "Accept-Encoding",
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
-        "x-nf-request-id": "01K436FQ1SHESFGY95BV7MHGMV",
-        "x-xss-protection": "1; mode=block",
-        "transfer-encoding": "chunked"
-      },
-      "contentLength": 4442
-    },
+        "x-nf-request-id": "01K410DBPK1QH612XEDK16MHFJ",
+        "x-xss-protection": "1; mode=block";
+},
+      "contentLength": 4442},
     {
       "url": "https://ziontechgroup.com/services/ai-supply-chain-optimization",
       "status": 200,
@@ -518,7 +499,7 @@
         "cache-status": "\"Netlify Edge\"; fwd=miss",
         "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.gpteng.co https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Mon, 01 Sep 2025 17:51:33 GMT",
+        "date": "Sun, 31 Aug 2025 21:26:56 GMT",
         "etag": "\"f1da32fc92f83a09a9faec2f51271712-ssl-df\"",
         "permissions-policy": "camera=(), microphone=(), geolocation=()",
         "referrer-policy": "strict-origin-when-cross-origin",
@@ -527,12 +508,11 @@
         "vary": "Accept-Encoding",
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
-        "x-nf-request-id": "01K436FQ2M36H6ZBJ2ZKD4XY7B",
+        "x-nf-request-id": "01K410DBQGNPEBSAZV3VZC2X44",
         "x-xss-protection": "1; mode=block",
-        "transfer-encoding": "chunked"
-      },
-      "contentLength": 4442
-    },
+        "transfer-encoding": "chunked";
+},
+      "contentLength": 4442},
     {
       "url": "https://ziontechgroup.com/services/ai-cybersecurity-platform",
       "status": 200,
@@ -544,7 +524,7 @@
         "cache-status": "\"Netlify Edge\"; fwd=miss",
         "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.gpteng.co https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Mon, 01 Sep 2025 17:51:34 GMT",
+        "date": "Sun, 31 Aug 2025 21:26:56 GMT",
         "etag": "\"f1da32fc92f83a09a9faec2f51271712-ssl-df\"",
         "permissions-policy": "camera=(), microphone=(), geolocation=()",
         "referrer-policy": "strict-origin-when-cross-origin",
@@ -553,12 +533,11 @@
         "vary": "Accept-Encoding",
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
-        "x-nf-request-id": "01K436FQ3KVGPGGKJRFF6D8417",
+        "x-nf-request-id": "01K410DBS916XR9XD79X41TTBK",
         "x-xss-protection": "1; mode=block",
-        "transfer-encoding": "chunked"
-      },
-      "contentLength": 4442
-    },
+        "transfer-encoding": "chunked";
+},
+      "contentLength": 4442},
     {
       "url": "https://ziontechgroup.com/services/ai-healthcare-platform",
       "status": 200,
@@ -568,9 +547,10 @@
         "age": "0",
         "cache-control": "public,max-age=0,must-revalidate",
         "cache-status": "\"Netlify Edge\"; fwd=miss",
+        "content-length": "1092",
         "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.gpteng.co https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Mon, 01 Sep 2025 17:51:34 GMT",
+        "date": "Sun, 31 Aug 2025 21:26:56 GMT",
         "etag": "\"f1da32fc92f83a09a9faec2f51271712-ssl-df\"",
         "permissions-policy": "camera=(), microphone=(), geolocation=()",
         "referrer-policy": "strict-origin-when-cross-origin",
@@ -579,12 +559,10 @@
         "vary": "Accept-Encoding",
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
-        "x-nf-request-id": "01K436FQ4K8D72Y7Y8T3WS1BCJ",
-        "x-xss-protection": "1; mode=block",
-        "transfer-encoding": "chunked"
-      },
-      "contentLength": 4442
-    },
+        "x-nf-request-id": "01K410DBTFXYEF0ZBRWHK6N11P",
+        "x-xss-protection": "1; mode=block";
+},
+      "contentLength": 4442},
     {
       "url": "https://ziontechgroup.com/services/ai-quantum-hybrid-platform",
       "status": 200,
@@ -597,7 +575,7 @@
         "content-length": "1092",
         "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.gpteng.co https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Mon, 01 Sep 2025 17:51:34 GMT",
+        "date": "Sun, 31 Aug 2025 21:26:56 GMT",
         "etag": "\"f1da32fc92f83a09a9faec2f51271712-ssl-df\"",
         "permissions-policy": "camera=(), microphone=(), geolocation=()",
         "referrer-policy": "strict-origin-when-cross-origin",
@@ -606,11 +584,10 @@
         "vary": "Accept-Encoding",
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
-        "x-nf-request-id": "01K436FQ5PJ92CXKF237PF9Q5Z",
-        "x-xss-protection": "1; mode=block"
-      },
-      "contentLength": 4442
-    },
+        "x-nf-request-id": "01K410DBVBADNH8EJHHRNMY6BY",
+        "x-xss-protection": "1; mode=block";
+},
+      "contentLength": 4442},
     {
       "url": "https://ziontechgroup.com/services/ai-business-intelligence",
       "status": 200,
@@ -620,10 +597,9 @@
         "age": "0",
         "cache-control": "public,max-age=0,must-revalidate",
         "cache-status": "\"Netlify Edge\"; fwd=miss",
-        "content-length": "1092",
         "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.gpteng.co https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Mon, 01 Sep 2025 17:51:34 GMT",
+        "date": "Sun, 31 Aug 2025 21:26:56 GMT",
         "etag": "\"f1da32fc92f83a09a9faec2f51271712-ssl-df\"",
         "permissions-policy": "camera=(), microphone=(), geolocation=()",
         "referrer-policy": "strict-origin-when-cross-origin",
@@ -632,11 +608,11 @@
         "vary": "Accept-Encoding",
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
-        "x-nf-request-id": "01K436FQ6RXB5NN570QSD35V5N",
-        "x-xss-protection": "1; mode=block"
-      },
-      "contentLength": 4442
-    },
+        "x-nf-request-id": "01K410DBW5E0NQYZACZTRK7S6K",
+        "x-xss-protection": "1; mode=block",
+        "transfer-encoding": "chunked";
+},
+      "contentLength": 4442},
     {
       "url": "https://ziontechgroup.com/services/ai-sales-copilot",
       "status": 200,
@@ -646,10 +622,9 @@
         "age": "0",
         "cache-control": "public,max-age=0,must-revalidate",
         "cache-status": "\"Netlify Edge\"; fwd=miss",
-        "content-length": "1092",
         "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.gpteng.co https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Mon, 01 Sep 2025 17:51:34 GMT",
+        "date": "Sun, 31 Aug 2025 21:26:56 GMT",
         "etag": "\"f1da32fc92f83a09a9faec2f51271712-ssl-df\"",
         "permissions-policy": "camera=(), microphone=(), geolocation=()",
         "referrer-policy": "strict-origin-when-cross-origin",
@@ -658,11 +633,11 @@
         "vary": "Accept-Encoding",
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
-        "x-nf-request-id": "01K436FQ7TKJMR2BPDXSJEBPS6",
-        "x-xss-protection": "1; mode=block"
-      },
-      "contentLength": 4442
-    },
+        "x-nf-request-id": "01K410DBX419C9WR5JGVWNHVY0",
+        "x-xss-protection": "1; mode=block",
+        "transfer-encoding": "chunked";
+},
+      "contentLength": 4442},
     {
       "url": "https://ziontechgroup.com/services/ai-content-marketing-automation",
       "status": 200,
@@ -674,7 +649,7 @@
         "cache-status": "\"Netlify Edge\"; fwd=miss",
         "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.gpteng.co https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Mon, 01 Sep 2025 17:51:34 GMT",
+        "date": "Sun, 31 Aug 2025 21:26:56 GMT",
         "etag": "\"f1da32fc92f83a09a9faec2f51271712-ssl-df\"",
         "permissions-policy": "camera=(), microphone=(), geolocation=()",
         "referrer-policy": "strict-origin-when-cross-origin",
@@ -683,12 +658,11 @@
         "vary": "Accept-Encoding",
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
-        "x-nf-request-id": "01K436FQ98AJFREA1Q6JFAJR12",
+        "x-nf-request-id": "01K410DBY2ATWFDKJTCQ1JSTSD",
         "x-xss-protection": "1; mode=block",
-        "transfer-encoding": "chunked"
-      },
-      "contentLength": 4442
-    },
+        "transfer-encoding": "chunked";
+},
+      "contentLength": 4442},
     {
       "url": "https://ziontechgroup.com/services/ai-hr-platform",
       "status": 200,
@@ -700,7 +674,7 @@
         "cache-status": "\"Netlify Edge\"; fwd=miss",
         "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.gpteng.co https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Mon, 01 Sep 2025 17:51:34 GMT",
+        "date": "Sun, 31 Aug 2025 21:26:56 GMT",
         "etag": "\"f1da32fc92f83a09a9faec2f51271712-ssl-df\"",
         "permissions-policy": "camera=(), microphone=(), geolocation=()",
         "referrer-policy": "strict-origin-when-cross-origin",
@@ -709,12 +683,11 @@
         "vary": "Accept-Encoding",
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
-        "x-nf-request-id": "01K436FQA9KNPQBQC4YDT2X4XY",
+        "x-nf-request-id": "01K410DBZ0ETEZEZNCPX9RTTNR",
         "x-xss-protection": "1; mode=block",
-        "transfer-encoding": "chunked"
-      },
-      "contentLength": 4442
-    },
+        "transfer-encoding": "chunked";
+},
+      "contentLength": 4442},
     {
       "url": "https://ziontechgroup.com/services/ai-legal-research-platform",
       "status": 200,
@@ -726,7 +699,7 @@
         "cache-status": "\"Netlify Edge\"; fwd=miss",
         "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.gpteng.co https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Mon, 01 Sep 2025 17:51:34 GMT",
+        "date": "Sun, 31 Aug 2025 21:26:56 GMT",
         "etag": "\"f1da32fc92f83a09a9faec2f51271712-ssl-df\"",
         "permissions-policy": "camera=(), microphone=(), geolocation=()",
         "referrer-policy": "strict-origin-when-cross-origin",
@@ -735,12 +708,11 @@
         "vary": "Accept-Encoding",
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
-        "x-nf-request-id": "01K436FQB71AY0KTJZF8YRVB9R",
+        "x-nf-request-id": "01K410DC0047KYN21VERZTFF84",
         "x-xss-protection": "1; mode=block",
-        "transfer-encoding": "chunked"
-      },
-      "contentLength": 4442
-    },
+        "transfer-encoding": "chunked";
+},
+      "contentLength": 4442},
     {
       "url": "https://ziontechgroup.com/services/ai-education-platform",
       "status": 200,
@@ -752,7 +724,7 @@
         "cache-status": "\"Netlify Edge\"; fwd=miss",
         "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.gpteng.co https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Mon, 01 Sep 2025 17:51:34 GMT",
+        "date": "Sun, 31 Aug 2025 21:26:56 GMT",
         "etag": "\"f1da32fc92f83a09a9faec2f51271712-ssl-df\"",
         "permissions-policy": "camera=(), microphone=(), geolocation=()",
         "referrer-policy": "strict-origin-when-cross-origin",
@@ -761,25 +733,23 @@
         "vary": "Accept-Encoding",
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
-        "x-nf-request-id": "01K436FQC6DJMRTWW4VAA0JS37",
+        "x-nf-request-id": "01K410DC19EP17ZTEGP4J4P0QH",
         "x-xss-protection": "1; mode=block",
-        "transfer-encoding": "chunked"
-      },
-      "contentLength": 4442
-    },
+        "transfer-encoding": "chunked";
+},
+      "contentLength": 4442},
     {
       "url": "https://ziontechgroup.com/services/cloud-devops",
       "status": 200,
       "parentUrl": null,
       "headers": {
         "accept-ranges": "bytes",
-        "age": "9464",
+        "age": "0",
         "cache-control": "public,max-age=0,must-revalidate",
-        "cache-status": "\"Netlify Edge\"; hit",
-        "content-length": "1092",
+        "cache-status": "\"Netlify Edge\"; fwd=miss",
         "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.gpteng.co https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Mon, 01 Sep 2025 17:51:34 GMT",
+        "date": "Sun, 31 Aug 2025 21:26:56 GMT",
         "etag": "\"f1da32fc92f83a09a9faec2f51271712-ssl-df\"",
         "permissions-policy": "camera=(), microphone=(), geolocation=()",
         "referrer-policy": "strict-origin-when-cross-origin",
@@ -788,11 +758,11 @@
         "vary": "Accept-Encoding",
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
-        "x-nf-request-id": "01K436FQD409B5SX6NKGADN2K9",
-        "x-xss-protection": "1; mode=block"
-      },
-      "contentLength": 4442
-    },
+        "x-nf-request-id": "01K410DC26MYX639T6DWBA9JE2",
+        "x-xss-protection": "1; mode=block",
+        "transfer-encoding": "chunked";
+},
+      "contentLength": 4442},
     {
       "url": "https://ziontechgroup.com/services/zero-trust-network-architecture",
       "status": 200,
@@ -804,7 +774,7 @@
         "cache-status": "\"Netlify Edge\"; fwd=miss",
         "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.gpteng.co https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Mon, 01 Sep 2025 17:51:34 GMT",
+        "date": "Sun, 31 Aug 2025 21:26:56 GMT",
         "etag": "\"f1da32fc92f83a09a9faec2f51271712-ssl-df\"",
         "permissions-policy": "camera=(), microphone=(), geolocation=()",
         "referrer-policy": "strict-origin-when-cross-origin",
@@ -813,12 +783,11 @@
         "vary": "Accept-Encoding",
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
-        "x-nf-request-id": "01K436FQDBNRKT1BCKCG1JNSSV",
+        "x-nf-request-id": "01K410DC39WGZSHYRPQ77JN39M",
         "x-xss-protection": "1; mode=block",
-        "transfer-encoding": "chunked"
-      },
-      "contentLength": 4442
-    },
+        "transfer-encoding": "chunked";
+},
+      "contentLength": 4442},
     {
       "url": "https://ziontechgroup.com/services/ai-compliance-copilot",
       "status": 200,
@@ -828,10 +797,9 @@
         "age": "0",
         "cache-control": "public,max-age=0,must-revalidate",
         "cache-status": "\"Netlify Edge\"; fwd=miss",
-        "content-length": "1092",
         "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.gpteng.co https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Mon, 01 Sep 2025 17:51:34 GMT",
+        "date": "Sun, 31 Aug 2025 21:26:56 GMT",
         "etag": "\"f1da32fc92f83a09a9faec2f51271712-ssl-df\"",
         "permissions-policy": "camera=(), microphone=(), geolocation=()",
         "referrer-policy": "strict-origin-when-cross-origin",
@@ -840,11 +808,11 @@
         "vary": "Accept-Encoding",
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
-        "x-nf-request-id": "01K436FQEBNR21CJNDTQ880ESS",
-        "x-xss-protection": "1; mode=block"
-      },
-      "contentLength": 4442
-    },
+        "x-nf-request-id": "01K410DC4BT15HWASMKHR8FHFK",
+        "x-xss-protection": "1; mode=block",
+        "transfer-encoding": "chunked";
+},
+      "contentLength": 4442},
     {
       "url": "https://ziontechgroup.com/services/blockchain-enterprise-solutions",
       "status": 200,
@@ -856,7 +824,7 @@
         "cache-status": "\"Netlify Edge\"; fwd=miss",
         "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.gpteng.co https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Mon, 01 Sep 2025 17:51:34 GMT",
+        "date": "Sun, 31 Aug 2025 21:26:56 GMT",
         "etag": "\"f1da32fc92f83a09a9faec2f51271712-ssl-df\"",
         "permissions-policy": "camera=(), microphone=(), geolocation=()",
         "referrer-policy": "strict-origin-when-cross-origin",
@@ -865,12 +833,11 @@
         "vary": "Accept-Encoding",
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
-        "x-nf-request-id": "01K436FQFMN54KBQKNE8EV8JBZ",
+        "x-nf-request-id": "01K410DC57JM0EADT1ZNK4BYAK",
         "x-xss-protection": "1; mode=block",
-        "transfer-encoding": "chunked"
-      },
-      "contentLength": 4442
-    },
+        "transfer-encoding": "chunked";
+},
+      "contentLength": 4442},
     {
       "url": "https://ziontechgroup.com/services/quantum-computing",
       "status": 200,
@@ -880,9 +847,10 @@
         "age": "0",
         "cache-control": "public,max-age=0,must-revalidate",
         "cache-status": "\"Netlify Edge\"; fwd=miss",
+        "content-length": "1092",
         "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.gpteng.co https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Mon, 01 Sep 2025 17:51:34 GMT",
+        "date": "Sun, 31 Aug 2025 21:26:56 GMT",
         "etag": "\"f1da32fc92f83a09a9faec2f51271712-ssl-df\"",
         "permissions-policy": "camera=(), microphone=(), geolocation=()",
         "referrer-policy": "strict-origin-when-cross-origin",
@@ -891,24 +859,22 @@
         "vary": "Accept-Encoding",
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
-        "x-nf-request-id": "01K436FQGGK45SXEZ6XCQ4FZ7D",
-        "x-xss-protection": "1; mode=block",
-        "transfer-encoding": "chunked"
-      },
-      "contentLength": 4442
-    },
+        "x-nf-request-id": "01K410DC6411Z5N7C742V4EH79",
+        "x-xss-protection": "1; mode=block";
+},
+      "contentLength": 4442},
     {
       "url": "https://ziontechgroup.com/services/iot-edge",
       "status": 200,
       "parentUrl": null,
       "headers": {
         "accept-ranges": "bytes",
-        "age": "0",
+        "age": "1",
         "cache-control": "public,max-age=0,must-revalidate",
         "cache-status": "\"Netlify Edge\"; fwd=miss",
         "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.gpteng.co https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Mon, 01 Sep 2025 17:51:34 GMT",
+        "date": "Sun, 31 Aug 2025 21:26:57 GMT",
         "etag": "\"f1da32fc92f83a09a9faec2f51271712-ssl-df\"",
         "permissions-policy": "camera=(), microphone=(), geolocation=()",
         "referrer-policy": "strict-origin-when-cross-origin",
@@ -917,12 +883,11 @@
         "vary": "Accept-Encoding",
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
-        "x-nf-request-id": "01K436FQHCTHHQBK035738V0ZG",
+        "x-nf-request-id": "01K410DC6ZRHTP7BJG0RNPNF5S",
         "x-xss-protection": "1; mode=block",
-        "transfer-encoding": "chunked"
-      },
-      "contentLength": 4442
-    },
+        "transfer-encoding": "chunked";
+},
+      "contentLength": 4442},
     {
       "url": "https://ziontechgroup.com/services/digital-transformation",
       "status": 200,
@@ -934,7 +899,7 @@
         "cache-status": "\"Netlify Edge\"; fwd=miss",
         "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.gpteng.co https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Mon, 01 Sep 2025 17:51:34 GMT",
+        "date": "Sun, 31 Aug 2025 21:26:57 GMT",
         "etag": "\"f1da32fc92f83a09a9faec2f51271712-ssl-df\"",
         "permissions-policy": "camera=(), microphone=(), geolocation=()",
         "referrer-policy": "strict-origin-when-cross-origin",
@@ -943,12 +908,11 @@
         "vary": "Accept-Encoding",
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
-        "x-nf-request-id": "01K436FQJEBZYVA4THER5BV7BS",
+        "x-nf-request-id": "01K410DC7Y8EX5AVZC6HJVQK1D",
         "x-xss-protection": "1; mode=block",
-        "transfer-encoding": "chunked"
-      },
-      "contentLength": 4442
-    },
+        "transfer-encoding": "chunked";
+},
+      "contentLength": 4442},
     {
       "url": "https://ziontechgroup.com/enterprise",
       "status": 200,
@@ -958,10 +922,9 @@
         "age": "0",
         "cache-control": "public,max-age=0,must-revalidate",
         "cache-status": "\"Netlify Edge\"; fwd=miss",
-        "content-length": "1130",
         "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.gpteng.co https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Mon, 01 Sep 2025 17:51:34 GMT",
+        "date": "Sun, 31 Aug 2025 21:26:57 GMT",
         "etag": "\"8868817c0526d3f1be867eaee68a351e-ssl-df\"",
         "permissions-policy": "camera=(), microphone=(), geolocation=()",
         "referrer-policy": "strict-origin-when-cross-origin",
@@ -970,11 +933,11 @@
         "vary": "Accept-Encoding",
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
-        "x-nf-request-id": "01K436FQT24NJ40R9HF0XW0VRS",
-        "x-xss-protection": "1; mode=block"
-      },
-      "contentLength": 3869
-    },
+        "x-nf-request-id": "01K410DCFHY2AS8WMHGXG84PS9",
+        "x-xss-protection": "1; mode=block",
+        "transfer-encoding": "chunked";
+},
+      "contentLength": 3869},
     {
       "url": "https://ziontechgroup.com/healthcare",
       "status": 200,
@@ -986,7 +949,7 @@
         "cache-status": "\"Netlify Edge\"; fwd=miss",
         "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.gpteng.co https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Mon, 01 Sep 2025 17:51:34 GMT",
+        "date": "Sun, 31 Aug 2025 21:26:57 GMT",
         "etag": "\"f1da32fc92f83a09a9faec2f51271712-ssl-df\"",
         "permissions-policy": "camera=(), microphone=(), geolocation=()",
         "referrer-policy": "strict-origin-when-cross-origin",
@@ -995,12 +958,11 @@
         "vary": "Accept-Encoding",
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
-        "x-nf-request-id": "01K436FQV07VME0BCSRF8AX6C2",
+        "x-nf-request-id": "01K410DCGK39MVDXKJF6399BNX",
         "x-xss-protection": "1; mode=block",
-        "transfer-encoding": "chunked"
-      },
-      "contentLength": 4442
-    },
+        "transfer-encoding": "chunked";
+},
+      "contentLength": 4442},
     {
       "url": "https://ziontechgroup.com/financial",
       "status": 200,
@@ -1012,7 +974,7 @@
         "cache-status": "\"Netlify Edge\"; fwd=miss",
         "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.gpteng.co https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Mon, 01 Sep 2025 17:51:34 GMT",
+        "date": "Sun, 31 Aug 2025 21:26:57 GMT",
         "etag": "\"f1da32fc92f83a09a9faec2f51271712-ssl-df\"",
         "permissions-policy": "camera=(), microphone=(), geolocation=()",
         "referrer-policy": "strict-origin-when-cross-origin",
@@ -1021,12 +983,11 @@
         "vary": "Accept-Encoding",
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
-        "x-nf-request-id": "01K436FQVTN66TCGVM9BH7W5WA",
+        "x-nf-request-id": "01K410DCHJV9T9VGQE5Z6EEFPM",
         "x-xss-protection": "1; mode=block",
-        "transfer-encoding": "chunked"
-      },
-      "contentLength": 4442
-    },
+        "transfer-encoding": "chunked";
+},
+      "contentLength": 4442},
     {
       "url": "https://ziontechgroup.com/manufacturing",
       "status": 200,
@@ -1038,7 +999,7 @@
         "cache-status": "\"Netlify Edge\"; fwd=miss",
         "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.gpteng.co https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Mon, 01 Sep 2025 17:51:34 GMT",
+        "date": "Sun, 31 Aug 2025 21:26:57 GMT",
         "etag": "\"f1da32fc92f83a09a9faec2f51271712-ssl-df\"",
         "permissions-policy": "camera=(), microphone=(), geolocation=()",
         "referrer-policy": "strict-origin-when-cross-origin",
@@ -1047,12 +1008,11 @@
         "vary": "Accept-Encoding",
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
-        "x-nf-request-id": "01K436FQWNC0AKQHZR04H4NQ7K",
+        "x-nf-request-id": "01K410DCJGDMJB5KEWHS0P1Q7R",
         "x-xss-protection": "1; mode=block",
-        "transfer-encoding": "chunked"
-      },
-      "contentLength": 4442
-    },
+        "transfer-encoding": "chunked";
+},
+      "contentLength": 4442},
     {
       "url": "https://ziontechgroup.com/retail",
       "status": 200,
@@ -1064,7 +1024,7 @@
         "cache-status": "\"Netlify Edge\"; fwd=miss",
         "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.gpteng.co https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Mon, 01 Sep 2025 17:51:34 GMT",
+        "date": "Sun, 31 Aug 2025 21:26:57 GMT",
         "etag": "\"f1da32fc92f83a09a9faec2f51271712-ssl-df\"",
         "permissions-policy": "camera=(), microphone=(), geolocation=()",
         "referrer-policy": "strict-origin-when-cross-origin",
@@ -1073,12 +1033,11 @@
         "vary": "Accept-Encoding",
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
-        "x-nf-request-id": "01K436FQXJ3T8J2W6HMRZAKW5R",
+        "x-nf-request-id": "01K410DCKCDVGRQC5KME04ZWPA",
         "x-xss-protection": "1; mode=block",
-        "transfer-encoding": "chunked"
-      },
-      "contentLength": 4442
-    },
+        "transfer-encoding": "chunked";
+},
+      "contentLength": 4442},
     {
       "url": "https://ziontechgroup.com/government",
       "status": 200,
@@ -1090,7 +1049,7 @@
         "cache-status": "\"Netlify Edge\"; fwd=miss",
         "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.gpteng.co https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Mon, 01 Sep 2025 17:51:34 GMT",
+        "date": "Sun, 31 Aug 2025 21:26:57 GMT",
         "etag": "\"f1da32fc92f83a09a9faec2f51271712-ssl-df\"",
         "permissions-policy": "camera=(), microphone=(), geolocation=()",
         "referrer-policy": "strict-origin-when-cross-origin",
@@ -1099,12 +1058,11 @@
         "vary": "Accept-Encoding",
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
-        "x-nf-request-id": "01K436FQYFZJE4S3C1X2EQYXAB",
+        "x-nf-request-id": "01K410DCN6T7JBRZYAT0WTWBRP",
         "x-xss-protection": "1; mode=block",
-        "transfer-encoding": "chunked"
-      },
-      "contentLength": 4442
-    },
+        "transfer-encoding": "chunked";
+},
+      "contentLength": 4442},
     {
       "url": "https://ziontechgroup.com/education",
       "status": 200,
@@ -1116,7 +1074,7 @@
         "cache-status": "\"Netlify Edge\"; fwd=miss",
         "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.gpteng.co https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Mon, 01 Sep 2025 17:51:34 GMT",
+        "date": "Sun, 31 Aug 2025 21:26:57 GMT",
         "etag": "\"f1da32fc92f83a09a9faec2f51271712-ssl-df\"",
         "permissions-policy": "camera=(), microphone=(), geolocation=()",
         "referrer-policy": "strict-origin-when-cross-origin",
@@ -1125,12 +1083,11 @@
         "vary": "Accept-Encoding",
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
-        "x-nf-request-id": "01K436FQZBD8QF02SJV4KFZMC6",
+        "x-nf-request-id": "01K410DCQCPBDXA0S99ABHVPQA",
         "x-xss-protection": "1; mode=block",
-        "transfer-encoding": "chunked"
-      },
-      "contentLength": 4442
-    },
+        "transfer-encoding": "chunked";
+},
+      "contentLength": 4442},
     {
       "url": "https://ziontechgroup.com/startup",
       "status": 200,
@@ -1142,7 +1099,7 @@
         "cache-status": "\"Netlify Edge\"; fwd=miss",
         "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.gpteng.co https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Mon, 01 Sep 2025 17:51:34 GMT",
+        "date": "Sun, 31 Aug 2025 21:26:57 GMT",
         "etag": "\"f1da32fc92f83a09a9faec2f51271712-ssl-df\"",
         "permissions-policy": "camera=(), microphone=(), geolocation=()",
         "referrer-policy": "strict-origin-when-cross-origin",
@@ -1151,24 +1108,23 @@
         "vary": "Accept-Encoding",
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
-        "x-nf-request-id": "01K436FR033206KH1FS8783V7Z",
+        "x-nf-request-id": "01K410DCRM2416B2XB22GX9THG",
         "x-xss-protection": "1; mode=block",
-        "transfer-encoding": "chunked"
-      },
-      "contentLength": 4442
-    },
+        "transfer-encoding": "chunked";
+},
+      "contentLength": 4442},
     {
       "url": "https://ziontechgroup.com/marketplace",
       "status": 200,
       "parentUrl": null,
       "headers": {
         "accept-ranges": "bytes",
-        "age": "1",
+        "age": "0",
         "cache-control": "public,max-age=0,must-revalidate",
         "cache-status": "\"Netlify Edge\"; fwd=miss",
         "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.gpteng.co https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Mon, 01 Sep 2025 17:51:35 GMT",
+        "date": "Sun, 31 Aug 2025 21:26:57 GMT",
         "etag": "\"f1da32fc92f83a09a9faec2f51271712-ssl-df\"",
         "permissions-policy": "camera=(), microphone=(), geolocation=()",
         "referrer-policy": "strict-origin-when-cross-origin",
@@ -1177,12 +1133,11 @@
         "vary": "Accept-Encoding",
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
-        "x-nf-request-id": "01K436FR18KGRH26TKG28VQ8BT",
+        "x-nf-request-id": "01K410DCSJZPVBQQJYXBAJM86G",
         "x-xss-protection": "1; mode=block",
-        "transfer-encoding": "chunked"
-      },
-      "contentLength": 4442
-    },
+        "transfer-encoding": "chunked";
+},
+      "contentLength": 4442},
     {
       "url": "https://ziontechgroup.com/talent",
       "status": 200,
@@ -1194,7 +1149,7 @@
         "cache-status": "\"Netlify Edge\"; fwd=miss",
         "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.gpteng.co https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Mon, 01 Sep 2025 17:51:35 GMT",
+        "date": "Sun, 31 Aug 2025 21:26:57 GMT",
         "etag": "\"f1da32fc92f83a09a9faec2f51271712-ssl-df\"",
         "permissions-policy": "camera=(), microphone=(), geolocation=()",
         "referrer-policy": "strict-origin-when-cross-origin",
@@ -1203,12 +1158,11 @@
         "vary": "Accept-Encoding",
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
-        "x-nf-request-id": "01K436FR35KAQBWJ4TE7EBQ0FF",
+        "x-nf-request-id": "01K410DCTQ7QCT3DSZ6738GJNX",
         "x-xss-protection": "1; mode=block",
-        "transfer-encoding": "chunked"
-      },
-      "contentLength": 4442
-    },
+        "transfer-encoding": "chunked";
+},
+      "contentLength": 4442},
     {
       "url": "https://ziontechgroup.com/community",
       "status": 200,
@@ -1220,7 +1174,7 @@
         "cache-status": "\"Netlify Edge\"; fwd=miss",
         "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.gpteng.co https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Mon, 01 Sep 2025 17:51:35 GMT",
+        "date": "Sun, 31 Aug 2025 21:26:57 GMT",
         "etag": "\"f1da32fc92f83a09a9faec2f51271712-ssl-df\"",
         "permissions-policy": "camera=(), microphone=(), geolocation=()",
         "referrer-policy": "strict-origin-when-cross-origin",
@@ -1229,12 +1183,11 @@
         "vary": "Accept-Encoding",
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
-        "x-nf-request-id": "01K436FR43GRG6EPVS5WA6F16K",
+        "x-nf-request-id": "01K410DCVRTSJ3MFFSSB6VRHAT",
         "x-xss-protection": "1; mode=block",
-        "transfer-encoding": "chunked"
-      },
-      "contentLength": 4442
-    },
+        "transfer-encoding": "chunked";
+},
+      "contentLength": 4442},
     {
       "url": "https://ziontechgroup.com/research-development",
       "status": 200,
@@ -1246,7 +1199,7 @@
         "cache-status": "\"Netlify Edge\"; fwd=miss",
         "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.gpteng.co https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Mon, 01 Sep 2025 17:51:35 GMT",
+        "date": "Sun, 31 Aug 2025 21:26:57 GMT",
         "etag": "\"f1da32fc92f83a09a9faec2f51271712-ssl-df\"",
         "permissions-policy": "camera=(), microphone=(), geolocation=()",
         "referrer-policy": "strict-origin-when-cross-origin",
@@ -1255,12 +1208,11 @@
         "vary": "Accept-Encoding",
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
-        "x-nf-request-id": "01K436FR51EKV4P9YGTEJT3433",
+        "x-nf-request-id": "01K410DCWXN7W1T3VK05B4WP2V",
         "x-xss-protection": "1; mode=block",
-        "transfer-encoding": "chunked"
-      },
-      "contentLength": 4442
-    },
+        "transfer-encoding": "chunked";
+},
+      "contentLength": 4442},
     {
       "url": "https://ziontechgroup.com/training",
       "status": 200,
@@ -1270,10 +1222,9 @@
         "age": "0",
         "cache-control": "public,max-age=0,must-revalidate",
         "cache-status": "\"Netlify Edge\"; fwd=miss",
-        "content-length": "1092",
         "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.gpteng.co https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Mon, 01 Sep 2025 17:51:35 GMT",
+        "date": "Sun, 31 Aug 2025 21:26:57 GMT",
         "etag": "\"f1da32fc92f83a09a9faec2f51271712-ssl-df\"",
         "permissions-policy": "camera=(), microphone=(), geolocation=()",
         "referrer-policy": "strict-origin-when-cross-origin",
@@ -1282,11 +1233,11 @@
         "vary": "Accept-Encoding",
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
-        "x-nf-request-id": "01K436FR60250NZ5JQARBVPWP4",
-        "x-xss-protection": "1; mode=block"
-      },
-      "contentLength": 4442
-    },
+        "x-nf-request-id": "01K410DCXV87BH1F4CEKG7NJ91",
+        "x-xss-protection": "1; mode=block",
+        "transfer-encoding": "chunked";
+},
+      "contentLength": 4442},
     {
       "url": "https://ziontechgroup.com/tutorials",
       "status": 200,
@@ -1296,10 +1247,9 @@
         "age": "0",
         "cache-control": "public,max-age=0,must-revalidate",
         "cache-status": "\"Netlify Edge\"; fwd=miss",
-        "content-length": "1092",
         "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.gpteng.co https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Mon, 01 Sep 2025 17:51:35 GMT",
+        "date": "Sun, 31 Aug 2025 21:26:57 GMT",
         "etag": "\"f1da32fc92f83a09a9faec2f51271712-ssl-df\"",
         "permissions-policy": "camera=(), microphone=(), geolocation=()",
         "referrer-policy": "strict-origin-when-cross-origin",
@@ -1308,11 +1258,11 @@
         "vary": "Accept-Encoding",
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
-        "x-nf-request-id": "01K436FR70B40N6Z6183JRHAFR",
-        "x-xss-protection": "1; mode=block"
-      },
-      "contentLength": 4442
-    },
+        "x-nf-request-id": "01K410DCZ3VP2T2GG7M4ZFYJ59",
+        "x-xss-protection": "1; mode=block",
+        "transfer-encoding": "chunked";
+},
+      "contentLength": 4442},
     {
       "url": "https://ziontechgroup.com/support",
       "status": 200,
@@ -1322,10 +1272,9 @@
         "age": "0",
         "cache-control": "public,max-age=0,must-revalidate",
         "cache-status": "\"Netlify Edge\"; fwd=miss",
-        "content-length": "1092",
         "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.gpteng.co https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Mon, 01 Sep 2025 17:51:35 GMT",
+        "date": "Sun, 31 Aug 2025 21:26:57 GMT",
         "etag": "\"f1da32fc92f83a09a9faec2f51271712-ssl-df\"",
         "permissions-policy": "camera=(), microphone=(), geolocation=()",
         "referrer-policy": "strict-origin-when-cross-origin",
@@ -1334,11 +1283,11 @@
         "vary": "Accept-Encoding",
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
-        "x-nf-request-id": "01K436FR80DQN8RMNAS3725ASC",
-        "x-xss-protection": "1; mode=block"
-      },
-      "contentLength": 4442
-    },
+        "x-nf-request-id": "01K410DD02X90SFM70P22ATFE7",
+        "x-xss-protection": "1; mode=block",
+        "transfer-encoding": "chunked";
+},
+      "contentLength": 4442},
     {
       "url": "https://ziontechgroup.com/faq",
       "status": 200,
@@ -1350,7 +1299,7 @@
         "cache-status": "\"Netlify Edge\"; fwd=miss",
         "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.gpteng.co https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Mon, 01 Sep 2025 17:51:35 GMT",
+        "date": "Sun, 31 Aug 2025 21:26:57 GMT",
         "etag": "\"f1da32fc92f83a09a9faec2f51271712-ssl-df\"",
         "permissions-policy": "camera=(), microphone=(), geolocation=()",
         "referrer-policy": "strict-origin-when-cross-origin",
@@ -1359,12 +1308,11 @@
         "vary": "Accept-Encoding",
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
-        "x-nf-request-id": "01K436FR8ZFEWPQA7NF455WEDE",
+        "x-nf-request-id": "01K410DD10C5QV6HHRGR4MWPYS",
         "x-xss-protection": "1; mode=block",
-        "transfer-encoding": "chunked"
-      },
-      "contentLength": 4442
-    },
+        "transfer-encoding": "chunked";
+},
+      "contentLength": 4442},
     {
       "url": "https://ziontechgroup.com/news",
       "status": 200,
@@ -1376,7 +1324,7 @@
         "cache-status": "\"Netlify Edge\"; fwd=miss",
         "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.gpteng.co https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Mon, 01 Sep 2025 17:51:35 GMT",
+        "date": "Sun, 31 Aug 2025 21:26:57 GMT",
         "etag": "\"f1da32fc92f83a09a9faec2f51271712-ssl-df\"",
         "permissions-policy": "camera=(), microphone=(), geolocation=()",
         "referrer-policy": "strict-origin-when-cross-origin",
@@ -1385,12 +1333,11 @@
         "vary": "Accept-Encoding",
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
-        "x-nf-request-id": "01K436FR9XVQNAZ6XH8PE2XAFB",
+        "x-nf-request-id": "01K410DD203QV06C64RKQZNPWF",
         "x-xss-protection": "1; mode=block",
-        "transfer-encoding": "chunked"
-      },
-      "contentLength": 4442
-    },
+        "transfer-encoding": "chunked";
+},
+      "contentLength": 4442},
     {
       "url": "https://ziontechgroup.com/events",
       "status": 200,
@@ -1400,10 +1347,9 @@
         "age": "0",
         "cache-control": "public,max-age=0,must-revalidate",
         "cache-status": "\"Netlify Edge\"; fwd=miss",
-        "content-length": "1092",
         "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.gpteng.co https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Mon, 01 Sep 2025 17:51:35 GMT",
+        "date": "Sun, 31 Aug 2025 21:26:57 GMT",
         "etag": "\"f1da32fc92f83a09a9faec2f51271712-ssl-df\"",
         "permissions-policy": "camera=(), microphone=(), geolocation=()",
         "referrer-policy": "strict-origin-when-cross-origin",
@@ -1412,11 +1358,11 @@
         "vary": "Accept-Encoding",
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
-        "x-nf-request-id": "01K436FRATSDC6KMWGVMNJV8GS",
-        "x-xss-protection": "1; mode=block"
-      },
-      "contentLength": 4442
-    },
+        "x-nf-request-id": "01K410DD30ZWYXV8AMJJXXYKZH",
+        "x-xss-protection": "1; mode=block",
+        "transfer-encoding": "chunked";
+},
+      "contentLength": 4442},
     {
       "url": "https://ziontechgroup.com/partners",
       "status": 200,
@@ -1426,10 +1372,9 @@
         "age": "0",
         "cache-control": "public,max-age=0,must-revalidate",
         "cache-status": "\"Netlify Edge\"; fwd=miss",
-        "content-length": "1092",
         "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.gpteng.co https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Mon, 01 Sep 2025 17:51:35 GMT",
+        "date": "Sun, 31 Aug 2025 21:26:57 GMT",
         "etag": "\"f1da32fc92f83a09a9faec2f51271712-ssl-df\"",
         "permissions-policy": "camera=(), microphone=(), geolocation=()",
         "referrer-policy": "strict-origin-when-cross-origin",
@@ -1438,11 +1383,11 @@
         "vary": "Accept-Encoding",
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
-        "x-nf-request-id": "01K436FRBNY2YNC3TJAC696PET",
-        "x-xss-protection": "1; mode=block"
-      },
-      "contentLength": 4442
-    },
+        "x-nf-request-id": "01K410DD3ZSJ28KQ98PZNADMM2",
+        "x-xss-protection": "1; mode=block",
+        "transfer-encoding": "chunked";
+},
+      "contentLength": 4442},
     {
       "url": "https://ziontechgroup.com/signup",
       "status": 200,
@@ -1454,7 +1399,7 @@
         "cache-status": "\"Netlify Edge\"; fwd=miss",
         "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.gpteng.co https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Mon, 01 Sep 2025 17:51:35 GMT",
+        "date": "Sun, 31 Aug 2025 21:26:57 GMT",
         "etag": "\"f1da32fc92f83a09a9faec2f51271712-ssl-df\"",
         "permissions-policy": "camera=(), microphone=(), geolocation=()",
         "referrer-policy": "strict-origin-when-cross-origin",
@@ -1463,24 +1408,23 @@
         "vary": "Accept-Encoding",
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
-        "x-nf-request-id": "01K436FRCEJ8VJ2DM0QB652YAH",
+        "x-nf-request-id": "01K410DD4YBT8YCC9VGRTJS8D3",
         "x-xss-protection": "1; mode=block",
-        "transfer-encoding": "chunked"
-      },
-      "contentLength": 4442
-    },
+        "transfer-encoding": "chunked";
+},
+      "contentLength": 4442},
     {
       "url": "https://ziontechgroup.com/login",
       "status": 200,
       "parentUrl": null,
       "headers": {
         "accept-ranges": "bytes",
-        "age": "0",
+        "age": "2",
         "cache-control": "public,max-age=0,must-revalidate",
         "cache-status": "\"Netlify Edge\"; fwd=miss",
         "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.gpteng.co https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Mon, 01 Sep 2025 17:51:35 GMT",
+        "date": "Sun, 31 Aug 2025 21:26:58 GMT",
         "etag": "\"f1da32fc92f83a09a9faec2f51271712-ssl-df\"",
         "permissions-policy": "camera=(), microphone=(), geolocation=()",
         "referrer-policy": "strict-origin-when-cross-origin",
@@ -1489,12 +1433,11 @@
         "vary": "Accept-Encoding",
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
-        "x-nf-request-id": "01K436FRDFEXV7YZV7BXXV5HWK",
+        "x-nf-request-id": "01K410DD5X1PZ7XZ3P2RDKCW34",
         "x-xss-protection": "1; mode=block",
-        "transfer-encoding": "chunked"
-      },
-      "contentLength": 4442
-    },
+        "transfer-encoding": "chunked";
+},
+      "contentLength": 4442},
     {
       "url": "https://ziontechgroup.com/dashboard",
       "status": 200,
@@ -1506,7 +1449,7 @@
         "cache-status": "\"Netlify Edge\"; fwd=miss",
         "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.gpteng.co https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Mon, 01 Sep 2025 17:51:35 GMT",
+        "date": "Sun, 31 Aug 2025 21:26:58 GMT",
         "etag": "\"f1da32fc92f83a09a9faec2f51271712-ssl-df\"",
         "permissions-policy": "camera=(), microphone=(), geolocation=()",
         "referrer-policy": "strict-origin-when-cross-origin",
@@ -1515,12 +1458,11 @@
         "vary": "Accept-Encoding",
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
-        "x-nf-request-id": "01K436FREJ9W5S20PZ8WKWF7BW",
+        "x-nf-request-id": "01K410DD6SCVZRF6Q63FWEV5Y7",
         "x-xss-protection": "1; mode=block",
-        "transfer-encoding": "chunked"
-      },
-      "contentLength": 4442
-    },
+        "transfer-encoding": "chunked";
+},
+      "contentLength": 4442},
     {
       "url": "https://ziontechgroup.com/request-quote",
       "status": 200,
@@ -1532,7 +1474,7 @@
         "cache-status": "\"Netlify Edge\"; fwd=miss",
         "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.gpteng.co https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Mon, 01 Sep 2025 17:51:35 GMT",
+        "date": "Sun, 31 Aug 2025 21:26:58 GMT",
         "etag": "\"573aec06223210375a30b4ff5384ed8b-ssl-df\"",
         "permissions-policy": "camera=(), microphone=(), geolocation=()",
         "referrer-policy": "strict-origin-when-cross-origin",
@@ -1541,12 +1483,11 @@
         "vary": "Accept-Encoding",
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
-        "x-nf-request-id": "01K436FRMVX2VD1FWD2BFRF8AZ",
+        "x-nf-request-id": "01K410DDCGJP0C7T0MZBMDXV6H",
         "x-xss-protection": "1; mode=block",
-        "transfer-encoding": "chunked"
-      },
-      "contentLength": 3911
-    },
+        "transfer-encoding": "chunked";
+},
+      "contentLength": 3911},
     {
       "url": "https://ziontechgroup.com/schedule-demo",
       "status": 200,
@@ -1559,7 +1500,7 @@
         "content-length": "1092",
         "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.gpteng.co https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Mon, 01 Sep 2025 17:51:35 GMT",
+        "date": "Sun, 31 Aug 2025 21:26:58 GMT",
         "etag": "\"f1da32fc92f83a09a9faec2f51271712-ssl-df\"",
         "permissions-policy": "camera=(), microphone=(), geolocation=()",
         "referrer-policy": "strict-origin-when-cross-origin",
@@ -1568,11 +1509,10 @@
         "vary": "Accept-Encoding",
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
-        "x-nf-request-id": "01K436FRPF1WM2H5J4JZ1Z6CQ5",
-        "x-xss-protection": "1; mode=block"
-      },
-      "contentLength": 4442
-    }
+        "x-nf-request-id": "01K410DDDF245D5EXK0H34XFBY",
+        "x-xss-protection": "1; mode=block";
+},
+      "contentLength": 4442}
   ],
   "redirects": [],
   "missingPages": [],
@@ -1582,7 +1522,7 @@
     {
       "type": "warning",
       "message": "Success rate is 100.00% - aim for 95%+",
-      "action": "Address all issues to improve overall website reliability"
-    }
+      "action": "Address all issues to improve overall website reliability";
+}
   ]
 }
