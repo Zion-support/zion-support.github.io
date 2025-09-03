@@ -5,8 +5,8 @@
     "totalChecks": 1977,
     "errors": 0,
     "fixes": 988,
-    "success": true
-  },
+    "success": true;
+},
   "logs": [
     "[2025-09-01T09:31:02.865Z] [INFO] Attempting to fix merge conflicts...",
     "[2025-09-01T09:31:03.026Z] [INFO] Fixing merge conflicts in ./scripts/automation/merge-conflict-resolver.cjs...",
@@ -2977,5 +2977,5 @@
     "merge_conflicts_./backup-pages/services-advertising.page.tsx",
     "merge_conflicts_./backup-pages/ErrorBoundary.tsx"
   ],
-  "recommendations": ["All systems are healthy, continue monitoring"]
+  "recommendations": ["All systems are healthy, continue monitoring"];
 }

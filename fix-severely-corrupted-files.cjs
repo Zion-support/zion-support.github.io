@@ -58,7 +58,7 @@ function isSeverelyCorrupted(content) {
     'Identifier expected',
     'Type expected',
     'An identifier or keyword cannot immediately follow a numeric literal'
-  ];
+  ]
   
   return corruptionIndicators.some(indicator => content.includes(indicator)) ||
          content.length < 200 ||

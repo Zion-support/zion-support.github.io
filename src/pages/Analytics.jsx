@@ -1,2 +1,33 @@
-";export default function Analytics () {,,
-}"
+<<<<<<< HEAD
+ "export default function Analytics () {";,"});,"});
+}"});,"})
+";export: default function Analytics () {"";";";
+};
+";export default function Analytics () {",";
+}""
+";export default function Analytics () {";
+}
+import React from 'react';
+import {SEO } from '@/components/SEO';
+
+export default function Analytics() {return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+      <SEO title="Analytics - Zion Tech Group" description="Professional Analytics services by Zion Tech Group" />
+      <div className="container mx-auto px-4 py-20">
+        <h1 className="text-4xl font-bold text-white mb-8">Analytics</h1>
+        <p className="text-gray-300 text-lg">
+          Professional Analytics services to help your business grow.
+        </p>
+      </div>
+    </div>
+  );
+}
+";&quot;&quot;export default function Analytics () ;{&quot;
+}&quot;"
+";export default function Analytics () {", ",";
+}""
+";export default function Analytics () {,}"
+=======
+ "export default function Analytics () {;,});,"})
+}"});,"})
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

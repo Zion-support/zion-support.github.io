@@ -8,42 +8,42 @@ const fixes = [
   // Fix unterminated string literals and malformed imports
   {
     pattern: /import\s+(\w+)\s+from\s+'([^']*);';/g,
-    replacement: "import $1 from '$2';"
-  },
+    replacement: "import $1 from '$2';";
+},
   {
     pattern: /describe\('([^']*);',\s*\(\)\s*=>\s*{';/g,
-    replacement: "describe('$1', () => {"
-  },
+    replacement: "describe('$1', () => {";
+},
   {
     pattern: /test\('([^']*);',\s*\(\)\s*=>\s*{';/g,
-    replacement: "test('$1', () => {"
-  },
+    replacement: "test('$1', () => {";
+},
   {
     pattern: /expect\(([^)]*)\)\.toBeInTheDocument\(\)\}\);'/g,
-    replacement: "expect($1).toBeInTheDocument();"
-  },
+    replacement: "expect($1).toBeInTheDocument();";
+},
   {
     pattern: /}\);'/g,
-    replacement: "});"
-  },
+    replacement: "});";
+},
   {
     pattern: /}\);'/g,
-    replacement: "});"
-  },
+    replacement: "});";
+},
   // Fix malformed JSX
   {
     pattern: /<(\w+)\s+(\w+)\s*\/>/g,
-    replacement: "<$1 $2 />"
-  },
+    replacement: "<$1 $2 />";
+},
   // Fix trailing semicolons in wrong places
   {
     pattern: /;\s*$/gm,
-    replacement: ""
-  },
+    replacement: "";
+},
   {
     pattern: /,\s*$/gm,
-    replacement: ""
-  }
+    replacement: "";
+}
 ];
 
 function fixFile(filePath) {

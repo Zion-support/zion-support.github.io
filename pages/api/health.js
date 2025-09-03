@@ -4,8 +4,8 @@ export default function handler(req, res) {
     message: 'OK',
     timestamp: Date.now(),
     environment: process.env.NODE_ENV,
-    version: process.env.npm_package_version || '1.0.0'
-  };
+    version: process.env.npm_package_version || '1.0.0',;
+};
 
   try {
     res.status(200).json(healthCheck);

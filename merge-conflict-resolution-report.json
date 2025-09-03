@@ -546,5 +546,5 @@
     "src/components/services/PageSections/EnterpriseCallToAction.jsx",
     "src/components/auth/login/LoginContent.jsx"
   ],
-  "errorDetails": []
+  "errorDetails": [];
 }

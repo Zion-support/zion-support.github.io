@@ -8,21 +8,21 @@ const __dirname = path.dirname(__filename);
 const nextConfig = {
   reactStrictMode: true,
   experimental: {
-    esmExternals: false,
-  },
+    esmExternals: false,;
+},
   eslint: {
-    ignoreDuringBuilds: true,
-  },
+    ignoreDuringBuilds: true,;
+},
   typescript: {
-    ignoreBuildErrors: true,
-  },
+    ignoreBuildErrors: true,;
+},
   images: {
     domains: ['ziontechgroup.com'],
-    unoptimized: true,
-  },
+    unoptimized: true,;
+},
   compiler: {
-    removeConsole: process.env.NODE_ENV === 'production',
-  },
+    removeConsole: process.env.NODE_ENV === 'production',;
+},
   webpack: config => {
     config.module.rules.push({
       test: /\.(ts|tsx)$/,
@@ -39,29 +39,29 @@ const nextConfig = {
         /broken_files_backup/,
         /contracts/,
         /hardhat/,
-      ],
-    });
+      ],;
+});
 
     config.resolve.alias = {
       ...config.resolve.alias,
       'react-router-dom': path.resolve(__dirname, 'utils/next-router-shim.tsx'),
-      'react-router': path.resolve(__dirname, 'utils/next-router-shim.tsx'),
-    };
+      'react-router': path.resolve(__dirname, 'utils/next-router-shim.tsx'),;
+};
 
     config.resolve.fallback = {
       ...config.resolve.fallback,
       fs: false,
       net: false,
-      tls: false,
-    };
+      tls: false,;
+};
 
     return config;
   },
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
   onDemandEntries: {
     maxInactiveAge: 25 * 1000,
-    pagesBufferLength: 2,
-  },
+    pagesBufferLength: 2,;
+},;
 };
 
 export default nextConfig;
