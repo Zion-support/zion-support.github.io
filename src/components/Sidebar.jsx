@@ -155,7 +155,7 @@ export function Sidebar({ isOpen = false, onClose }) {
             <span className="text-white font-semibold">Zion Tech</span>
           </div>
           <button onClick={onClose}"
-            className="lg:hidden p-1 text-zion-slate-light hover:text-white hover:bg-zion-purple/10 rounded"" >"
+            className='lg:hidden p-1 text-zion-slate-light hover:text-white hover:bg-zion-purple/10 rounded  >'
             <X className="h-5 w-5" /" >
           </button>
         </div>

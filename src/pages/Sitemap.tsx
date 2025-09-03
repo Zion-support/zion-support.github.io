@@ -66,8 +66,8 @@ export default function Sitemap() {
     <>
       <SEO 
         title="Sitemap - Zion Tech Group | Complete Site Navigation"
-        description="Navigate Zion Tech Group's website with our comprehensive sitemap. Find all pages, services, and resources organized by category."'
-        keywords="sitemap, navigation, site map, pages, Zion Tech Group, website structure"
+        description="Navigate Zion Tech Group's website with our comprehensive sitemap. Find all pages, services, and resources organized by category. 
+        keywords='sitemap, navigation, site map, pages, Zion Tech Group, website structure"
       />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">

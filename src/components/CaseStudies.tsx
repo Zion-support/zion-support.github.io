@@ -99,7 +99,7 @@ export default function CaseStudies() {"
                   <div className='flex flex-wrap gap-2'>
                     {study.technologies.map((tech, idx) => (
                       <span key={idx}"
-                        className='bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm'" >
+                        className='bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm  >
                         {tech}
                       </span>
                     ))}
@@ -110,7 +110,7 @@ export default function CaseStudies() {"
           ))}
         </div>
         {/* CTA */}
-        <motion .div"
+        <motion .div'
           className='text-center mt-12'
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -121,7 +121,7 @@ export default function CaseStudies() {"
           </p>
           <a "
             href='/contact'
-            className='inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl'" >
+            className='inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl  >
             Start Your Project
           </a>
         </motion.div>
@@ -129,4 +129,4 @@ export default function CaseStudies() {"
     </section>
   ),
 }
-;"
+;'

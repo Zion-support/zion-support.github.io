@@ -15,19 +15,19 @@ vi.mock('../components/Footer', () => ({"
 describe('App', () => {"
   it('renders without crashing', () => {
     render(
-      <BrowserRouter>"
-        <App /"" >
+      <BrowserRouter>'
+        <App /  >
       </BrowserRouter>
     );
     // Basic test to ensure the app renders
     expect(document.body).toBeInTheDocument();,
-});"
+});'
   it('renders main navigation elements', () => {
     render(
-      <BrowserRouter>"
-        <App /"" >
+      <BrowserRouter>'
+        <App /  >
       </BrowserRouter>
-    );"
+    );'
     // Test that key components are rendered"
     expect(screen.getByTestId('app-header')).toBeInTheDocument();"
     expect(screen.getByTestId('footer')).toBeInTheDocument()})})"
