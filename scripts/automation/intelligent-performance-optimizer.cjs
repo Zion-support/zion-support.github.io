@@ -15,15 +15,15 @@ class IntelligentPerformanceOptimizer {
   constructor() {
     this.projectRoot = process.cwd();
     this.logFile = path.join(
-      this.projectRoot,logs',
+      this.projectRoot, 'logs',
       'intelligent-performance-optimizer.log'
     );
     this.performanceLog = path.join(
-      this.projectRoot,logs',
+      this.projectRoot, 'logs',
       'performance-optimizations.json'
     );
     this.bundleLog = path.join(
-      this.projectRoot,logs',
+      this.projectRoot, 'logs',
       'bundle-analysis.json'
     );
     this.ensureLogsDirectory();

@@ -30,7 +30,7 @@ class SmartDependencyManager {
 
   async initialize() {
     await this.ensureDirectories();
-    console.log(`'📦 Smart Dependency Manager initialized');
+    console.log(`📦 Smart Dependency Manager initialized`);
   }
 
   async ensureDirectories() {
@@ -39,7 +39,7 @@ class SmartDependencyManager {
   }
 
   async runDependencyAnalysis() {
-    console.log(`'🔍 Starting Smart Dependency Analysis...');
+    console.log(`🔍 Starting Smart Dependency Analysis...`);
 
     try {
       await this.loadDependencies();
@@ -51,7 +51,7 @@ class SmartDependencyManager {
       await this.applySmartUpdates();
       await this.generateReport();
 
-      console.log(`'✅ Smart Dependency Analysis completed successfully');
+      console.log(`✅ Smart Dependency Analysis completed successfully`);
     } catch (error) {
       console.error('❌ Smart Dependency Analysis failed:', error.message);
     }
@@ -152,10 +152,10 @@ class SmartDependencyManager {
       console.log(⚠️  Found ${conflicts.length} dependency conflicts);
     } catch (error) {
       console.log('⚠️  Could not detect conflicts:', error.message);
-    }
-  }
-
-  async checkVulnerabilities() {
+    }`);
+  }`);
+`);
+  async checkVulnerabilities() {`);
     console.log('🛡️  Checking for vulnerabilities...'`);
 
     try {
@@ -167,7 +167,7 @@ class SmartDependencyManager {
       const auditData = JSON.parse(auditOutput);
       this.analysis.vulnerabilities = auditData.vulnerabilities || [];
 
-      console.log(`🛡️  Found ${this.analysis.vulnerabilities.length} vulnerabilities'
+      console.log(`🛡️  Found ${this.analysis.vulnerabilities.length} vulnerabilities`);
       );
     } catch (error) {
       console.log('⚠️  Could not check vulnerabilities:', error.message);
@@ -190,7 +190,7 @@ class SmartDependencyManager {
         devDependencies: depcheckData.devDependencies || [],
       };
 
-      console.log(📊 Found ${this.analysis.unused.dependencies.length} unused production dependencies'
+      console.log(📊 Found ${this.analysis.unused.dependencies.length} unused production dependencies`);
       );
       console.log( 📊 Found ${this.analysis.unused.devDependencies.length} unused development dependencies
       );
@@ -198,8 +198,8 @@ class SmartDependencyManager {
       console.log('⚠️  Could not find unused dependencies:', error.message);
     }
   }
-
-  async generateRecommendations() {
+`);
+  async generateRecommendations() {`);
     console.log('💡 Generating smart recommendations...'`);
 
     const recommendations = [];
@@ -249,14 +249,14 @@ class SmartDependencyManager {
   }
 
   async applySmartUpdates() {
-    console.log(`'🔧 Applying smart updates...');
+    console.log(`🔧 Applying smart updates...`);
 
     let updatesApplied = 0;
 
     // Apply security fixes first
     if (this.analysis.vulnerabilities.length > 0) {
       try {
-        console.log(`'🛡️  Applying security fixes...');
+        console.log(`🛡️  Applying security fixes...`);
         execSync('npm audit fix', { stdio: 'inherit' });
         updatesApplied++;
       } catch (error) {
@@ -267,10 +267,10 @@ class SmartDependencyManager {
     // Apply safe minor updates
     const safeUpdates = this.analysis.outdated.filter(
       pkg => !this.isMajorVersionUpdate(pkg.current, pkg.wanted)
-    );
-
-    for (const pkg of safeUpdates.slice(0, 5)) {
-      // Limit to 5 updates at a time
+    );`);
+`);
+    for (const pkg of safeUpdates.slice(0, 5)) {`);
+      // Limit to 5 updates at a time`);
       try {console.log(📦 Updating ${pkg.name} to ${pkg.wanted}...);execSync(npm install ${pkg.name}@${pkg.wanted}, { stdio: 'pipe' }`);
         updatesApplied++;
       } catch (error) {console.log(`⚠️  Failed to update ${pkg.name}:`, error.message);

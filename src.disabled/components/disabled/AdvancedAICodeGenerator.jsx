@@ -1,6 +1,7 @@
 import React, { useState, useRef } from,
   react' import { Code, Brain, Zap, Download, RefreshCw, X, Maximize2, Minimize2, Eye, EyeOff, Search, FileText, CheckCircle, AlertCircle, Copy, Shield, Activity, BarChart3, Gauge } from;
-  'lucide-react' const mockCodeSnippets = [ { id: '1, title:,
+  'lucide-react' const mockCodeSnippets = [
+  { id: '1, title:,
   React Hook for API Calls', description: 'Custom hook for managing API calls with loading states and error handling, language:;
   'typescript', code: `import { useState, useEffect } from,
   react'  interface UseApiOptions<T> { url: string method?:;

@@ -44,12 +44,12 @@ class ErrorPreventionMonitor {
         const content = fs.readFileSync(filePath, 'utf8');
         const errors = this.analyzeFileForPotentialErrors(filePath, content);
         potentialErrors.push(...errors);
-      } catch (error) {
-        this.log(⚠️ Could not read file ${filePath}: ${error.message}',
-          'WARN'
+      } catch (error) {`);
+        this.log(⚠️ Could not read file ${filePath}: ${error.message}',`);
+          'WARN`);
         );
-      }
-    }
+      }`);
+    }`);
 this.log(Found ${potentialErrors.length} potential error patterns`);
     return potentialErrors;
   }

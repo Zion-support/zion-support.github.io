@@ -1,26 +1,84 @@
-import React from 'react';';
-import { render, screen } from '@testing-library/react';';
-import '@testing-library/jest-dom';';
-import _document from '../pages/_document';';
-  describe('_document Integration Tests', () => {';
-  test('page renders correctly', () => {';
+<<<<<<< HEAD
+import React from 'react;
+import { render, screen } from '@testing-library/react';
+import @testing-library/jest-dom';
+import _document from '../pages/_document;
+
+describe('_document Integration Tests', () => {
+  test(page renders correctly', () => {
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import _document from '../pages/_document';
+<<<<<<< HEAD
+  describe('_document Integration Tests', () => {
+=======
+
+describe('_document Integration Tests', () => {
+>>>>>>> main
+  test('page renders correctly', () => {
+>>>>>>> main
     render(<_document />);
-    expect(screen.getByRole('main')).toBeInTheDocument();';
+    expect(screen.getByRole('main)).toBeInTheDocument();
   });
+<<<<<<< HEAD
 ;
-  test('navigation works', () => {';
+=======
+
+>>>>>>> main
+  test('navigation works', () => {
     render(<_document />);
-    // Test navigation elements;
+=======
+import React   from 'react''
+import { render, screen }   from '@testing-library/react''
+import '@testing-library/jest-dom
+import _document   from '../pages/_document''
+  describe('_document Integration Tests', () => {'
+  test('page renders correctly', () => {'
+    render(<_document  />)
+    expect(screen.getByRole('main')).toBeInTheDocument();'
+  })
+
+  test('navigation works', () => {'
+    render(<_document  />)
+>>>>>>> main
+    // Test navigation elements
   });
+<<<<<<< HEAD
+
+  test(page content is accessible', () => {
+=======
+<<<<<<< HEAD
 ;
-  test('page content is accessible', () => {';
+  test('page content is accessible', () => {
+>>>>>>> main
     render(<_document />);
     // Test accessibility features;
   });
 ;
-  test('page loads with correct data', () => {';
+  test('page loads with correct data', () => {
     render(<_document />);
     // Test data loading and display;
+=======
+
+  test('page content is accessible', () => {'
+    render(<_document  />)
+    // Test accessibility features
+  });
+
+  test('page loads with correct data', () => {'
+    render(<_document  />)
+    // Test data loading and display
+<<<<<<< HEAD
+>>>>>>> main
   });
 });
-;
+=======
+  })
+})
+>>>>>>> main

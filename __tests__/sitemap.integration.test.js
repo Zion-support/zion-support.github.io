@@ -1,26 +1,84 @@
-import React from 'react';';
-import { render, screen } from '@testing-library/react';';
-import '@testing-library/jest-dom';';
-import sitemap from '../pages/sitemap';';
-  describe('sitemap Integration Tests', () => {';
-  test('page renders correctly', () => {';
+<<<<<<< HEAD
+import React from 'react;
+import { render, screen } from '@testing-library/react';
+import @testing-library/jest-dom';
+import sitemap from '../pages/sitemap;
+
+describe('sitemap Integration Tests', () => {
+  test(page renders correctly', () => {
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import sitemap from '../pages/sitemap';
+<<<<<<< HEAD
+  describe('sitemap Integration Tests', () => {
+=======
+
+describe('sitemap Integration Tests', () => {
+>>>>>>> main
+  test('page renders correctly', () => {
+>>>>>>> main
     render(<sitemap />);
-    expect(screen.getByRole('main')).toBeInTheDocument();';
+    expect(screen.getByRole('main)).toBeInTheDocument();
   });
+<<<<<<< HEAD
 ;
-  test('navigation works', () => {';
+=======
+
+>>>>>>> main
+  test('navigation works', () => {
     render(<sitemap />);
-    // Test navigation elements;
+=======
+import React   from 'react''
+import { render, screen }   from '@testing-library/react''
+import '@testing-library/jest-dom
+import sitemap   from '../pages/sitemap''
+  describe('sitemap Integration Tests', () => {'
+  test('page renders correctly', () => {'
+    render(<sitemap  />)
+    expect(screen.getByRole('main')).toBeInTheDocument();'
+  })
+
+  test('navigation works', () => {'
+    render(<sitemap  />)
+>>>>>>> main
+    // Test navigation elements
   });
+<<<<<<< HEAD
+
+  test(page content is accessible', () => {
+=======
+<<<<<<< HEAD
 ;
-  test('page content is accessible', () => {';
+  test('page content is accessible', () => {
+>>>>>>> main
     render(<sitemap />);
     // Test accessibility features;
   });
 ;
-  test('page loads with correct data', () => {';
+  test('page loads with correct data', () => {
     render(<sitemap />);
     // Test data loading and display;
+=======
+
+  test('page content is accessible', () => {'
+    render(<sitemap  />)
+    // Test accessibility features
+  });
+
+  test('page loads with correct data', () => {'
+    render(<sitemap  />)
+    // Test data loading and display
+<<<<<<< HEAD
+>>>>>>> main
   });
 });
-;
+=======
+  })
+})
+>>>>>>> main

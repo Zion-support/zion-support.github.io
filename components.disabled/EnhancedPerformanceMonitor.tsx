@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Activity, Zap, Shield, Globe, TrendingUp, AlertTriangle, CheckCircle } from 'lucide-react'';interface PerformanceMetrics {
+import { Activity, Zap, Shield, Globe, TrendingUp, AlertTriangle, CheckCircle }  from 'lucide-react;interface PerformanceMetrics {
   fcp: number;
    lcp: number;
    fid: number;
@@ -72,9 +72,9 @@ const finalMetrics = {
       try {
 observer.observe({ entryTypes: [,
   paint;
-  ', 'largest-contentful-paint;
-  ', 'first-input;
-  ', 'layout-shift;
+  ,largest-contentful-paint;
+  ,first-input;
+  ,layout-shift;
   '] })'      } catch (error) {
   '        console.warn('Performance Observer not supported: , error)'      }
   '// Fallback timeout;

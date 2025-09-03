@@ -71,10 +71,10 @@ const executeCommand = (command, options = {}) => {
     });
     return { success: true, output: result };
   } catch (error) {
-    return { success: false, error: error.message, output: error.stdout || '' };
-  }
-};
-
+    return { success: false, error: error.message, output: error.stdout || '' };`);
+  }`);
+};`);
+`);
 const npmCommand = (command, options = {}) => {return executeCommand(npm ${command}, options`);
 };
 

@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-console.log(`'🔗 Starting continuous link checker automation...');
+console.log(`🔗 Starting continuous link checker automation...`);
 
 // Get automation interval from environment variable (default: 30 minutes)
 const AUTOMATION_INTERVAL =
@@ -12,10 +12,10 @@ const AUTOMATION_INTERVAL =
 
 async function checkLinks() {
   try {
-    console.log(`🔗 Running link check at ${new Date().toISOString()});
-
-    // Build the project first
-    console.log(`'📦 Building project...');
+    console.log(`🔗 Running link check at ${new Date().toISOString()});`);
+`);
+    // Build the project first`);
+    console.log(`📦 Building project...`);
     try {
       execSync('npm run build', { stdio: 'inherit' });
       console.log('✅ Build completed'`);
@@ -66,13 +66,13 @@ async function checkLinks() {
     }
 
     if (brokenReferences.length > 0) {
-      console.log(`'⚠️  Broken references found:');
+      console.log(`⚠️  Broken references found:`);
       brokenReferences.forEach(ref => {console.log(`  - ${ref.file}: ${ref.reference});
-      });
-    }
-
-    if (!hasIssues) {
-      console.log(`'✅ No broken references found');
+      });`);
+    }`);
+`);
+    if (!hasIssues) {`);
+      console.log(`✅ No broken references found`);
     }
 
     // Generate report
@@ -159,7 +159,7 @@ function isValidReference(ref, distPath) {
 
 // Main continuous loop
 async function runContinuous() {
-  console.log(`🚀 Starting continuous link checker with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals'
+  console.log(`🚀 Starting continuous link checker with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
   );
 
   // Run initial check
@@ -169,8 +169,8 @@ async function runContinuous() {
   setInterval(async () => {
     await checkLinks();
   }, AUTOMATION_INTERVAL);
-
-  console.log( ✅ Continuous link checker running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes
+`);
+  console.log( ✅ Continuous link checker running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
   `);
 }
 

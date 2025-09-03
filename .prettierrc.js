@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   semi: true,
   trailingComma: 'es5',
   singleQuote: true,
@@ -10,4 +10,4 @@ module.exports = {
   bracketSpacing: true,
   jsxSingleQuote: true,
   quoteProps: 'as-needed',
-};
+}

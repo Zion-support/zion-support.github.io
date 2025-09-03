@@ -1,10 +1,11 @@
 
 export default function ITHelpdesk() {
-  const features = ['Ticketing with SLA and automation rules',';Self-service knowledge base and chat widget',';Asset inventory and remote assistance',';Email-to-ticket and status notifications',';Multi-tenant client portals',';Reports: MTTR, CSAT, backlog trends';
+  const features = ['Ticketing with SLA and automation rules,;Self-service knowledge base and chat widget,;Asset inventory and remote assistance,;Email-to-ticket and status notifications,;Multi-tenant client portals,;Reports: MTTR, CSAT, backlog trends';
   ];
-  const pricing = [{ name: 'Basic', price: '$199/mo', details: ['3 agents', 'Email support', 'KB'] },
-    { name: 'Team', price: '$499/mo', details: ['10 agents', 'SLAs', 'Automation'] },
-    { name: 'Business', price: '$999/mo', details: ['25 agents', 'SSO', 'Advanced reports'] },
+  const pricing = [
+  { name: 'Basic', price: '$199/mo', details: ['3 agents,Email support,KB'] },
+    { name: 'Team', price: '$499/mo', details: ['10 agents,SLAs,Automation'] },
+    { name: 'Business', price: '$999/mo', details: ['25 agents,SSO,Advanced reports'] },
   ];
   return(
     <div className = 'min-h-screen bg-white'>

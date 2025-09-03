@@ -15,8 +15,7 @@ class AutomationDashboard {
     this.metrics = new Map();
     this.alerts = [];
     this.logFile = path.join(__dirname,
-  'logs',
-  'automation-dashboard.log');
+  'logs,automation-dashboard.log');
     this.ensureLogDirectory();
     this.loadAutomationSystems();
   log(message) {
@@ -26,7 +25,7 @@ class AutomationDashboard {
 fs.appendFileSync(this.logFile, logMessage);fs.appendFileSync(this.logFile, logMessage);
   loadAutomationSystems() {
     const systems = [
-      { name: 'lint-monitor, path:,
+  { name: 'lint-monitor, path:,
   lint-monitor.js', category: 'code-quality, status:,
   available' },
       { name: 'lint-fixer, path:,
@@ -217,8 +216,7 @@ const systems = Array.from(this.automationSystems.values());
                         <p>Last Run: ${system.lastRun ? new Date(system.lastRun).toLocaleString() :,
   Never'}</p>
                     </div>
-                </div>`).join(';
-  ')}
+                </div>`).join()}
         </div>
         <!-- Alerts -->
         <div class='bg-white rounded-lg shadow-md p-6 mb-8
@@ -392,17 +390,13 @@ createServer() {createServer() {
 const server = http.createServer((req, res) => {
       const pathname = parsedUrl.pathname;
       res.setHeader(,
-  Content-Type',
-  'application/json');
+  Content-Type,application/json');
       res.setHeader(
-  'Access-Control-Allow-Origin',
-  '*');
+  'Access-Control-Allow-Origin,*');
       res.setHeader(
-  'Access-Control-Allow-Methods',
-  'GET, POST, OPTIONS');
+  'Access-Control-Allow-Methods,GET, POST, OPTIONS');
       res.setHeader(
-  'Access-Control-Allow-Headers',
-  'Content-Type');
+  'Access-Control-Allow-Headers,Content-Type');
       if (req.method ===;
   'OPTIONS') {
         res.writeHead(200);
@@ -440,8 +434,7 @@ case;
   '/api/run': ;
           if (req.method ===;
   'POST') {
-            const body = ';
-  ';
+            const body = ;
             req.on('data, chunk => body += chunk);
             req.on(,
   end;
