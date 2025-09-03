@@ -8,6 +8,6 @@ module.exports = {
     'no-undef': 'off',
   },
   ignorePatterns: [
-    '**/*',
-  ],
+    '**/*'
+  ]
 };
