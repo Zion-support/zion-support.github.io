@@ -46,13 +46,12 @@ const EnhancedNavigation = () => {
                 onMouseEnter={() => setServicesOpen(true)}
                 onMouseLeave={() => setServicesOpen(false)}
               >
-                <Link href="/services/ai-development" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">AI Development</Link>
-                <Link href="/services/cloud-services" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Cloud Services</Link>
-                <Link href="/services/web-development" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Web Development</Link>
-                <Link href="/services/mobile-development" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Mobile Development</Link>
-                <Link href="/services/blockchain-solutions" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Blockchain Solutions</Link>
-                <Link href="/services/iot-platforms" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">IoT Platforms</Link>
+                <Link href="/services/ai-services" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">AI Services</Link>
+                <Link href="/services/it-services" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">IT Services</Link>
+                <Link href="/services/cloud" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Cloud Solutions</Link>
                 <Link href="/services/cybersecurity" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Cybersecurity</Link>
+                <Link href="/services/data" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Data Analytics</Link>
+                <Link href="/services/transformation" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Digital Transformation</Link>
               </div>
             </div>
 
@@ -71,11 +70,11 @@ const EnhancedNavigation = () => {
                 onMouseEnter={() => setSolutionsOpen(true)}
                 onMouseLeave={() => setSolutionsOpen(false)}
               >
-                <Link href="/solutions/enterprise" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Enterprise Solutions</Link>
-                <Link href="/solutions/small-business" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Small Business</Link>
-                <Link href="/solutions/startups" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Startups</Link>
+                <Link href="/solutions/enterprise" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Enterprise</Link>
+                <Link href="/solutions/smb" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">SMB</Link>
+                <Link href="/solutions/startup" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Startup</Link>
                 <Link href="/solutions/healthcare" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Healthcare</Link>
-                <Link href="/solutions/finance" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Finance</Link>
+                <Link href="/solutions/financial" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Financial Services</Link>
               </div>
             </div>
 
