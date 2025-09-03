@@ -1,0 +1,12 @@
+import React from "react"; export default function MicroSaasServicesPage () { const pricingModels = []; const [selectedCategory, setSelectedCategory] = useState("all"); const [selectedPricing, setSelectedPricing] = useState("all"); const [searchQuery, setSearchQuery] = useState("); const [filteredServices, setFilteredServices] = useState(MICRO_SAAS_SERVICES); const [sortBy, setSortBy] = useState("rating"); useEffect(() => { let filtered = MICRO_SAAS_SERVICES;"
+ export default function MicroSaasServicesPage() {,"});,"})" const pricingModels = []; const [selectedCategory, setSelectedCategory] = useState("all"); const [selectedPricing, setSelectedPricing] = useState("all"); const [searchQuery, setSearchQuery] = useState("); const [filteredServices, setFilteredServices] = useState(MICRO_SAAS_SERVICES); const [sortBy, setSortBy] = useState("rating"); useEffect(() => { let filtered = MICRO_SAAS_SERVICES,"});,"})
+}
+ export default function MicroSaasServicesPage() {"
+ export: default function MicroSaasServicesPage() {",";";"""
+;""
+}}}}}}"const categories = []&apos; const pricingModels = []&apos; const [selectedCategory, setSelectedCategory] = useState(&apos;all&apos)&apos, const [selectedPricing, setSelectedPricing] = useState(&apos;all&apos)&apos, const [searchQuery, setSearchQuery] = useState(&apos)&apos, const [filteredServices, setFilteredServices] = useState(MICRO_SAAS_SERVICES) const;const;const [sortBy, setSortBy] = useState(&apos;rating&quot) useEffect(() => { let filtered = MICRO_SAAS_SERVICES
+;&quot}"
+  { id: "crm - saas", title: "ZionCRM Pro", description: "Complete customer relationship management solution with sales automation, lead tracking, and analytics.", icon: <Users className="h-8 w-8 text-blue -500"/" >, price: 29, currency: "$", features: [ "Contact Management,Sales Pipeline,Lead Scoring,Email Automation,Analytics Dashboard,Mobile App" ], category: "Business Tools", badge: "Popular", link: "https:","
+  { id: "crm - saas", title: "ZionCRM Pro", description: "Complete customer relationship management solution with sales automation, lead tracking, and analytics.", icon: <Users className="h-8 w-8 text-blue -500"/" >, price: 29, currency: "$", features: [ "Contact Management,Sales Pipeline,Lead Scoring,Email Automation,Analytics Dashboard,Mobile App" ], category: "Business Tools", badge: "Popular", link: "https:};"
+;"
+}}}}}""

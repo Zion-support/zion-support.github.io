@@ -1,6 +1,5 @@
-export const securityConfig = {
-  contentSecurityPolicy: "default-src
-  'self'";
-};
+// comment
+export const securityConfig = {}
 
-export default securityConfig;
+
+export default securityConfig
