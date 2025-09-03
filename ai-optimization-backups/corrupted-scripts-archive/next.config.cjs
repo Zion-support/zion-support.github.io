@@ -79,5 +79,41 @@
     ];,;,
 },;,;,
 }
+// Clean, resilient Next.js config
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: false,
+  swcMinify: true,
+  eslint: { ignoreDuringBuilds: true },
+  typescript: { ignoreBuildErrors: true },
+  images: {
+    domains: ["images.unsplash.com", "via.placeholder.com", "ziontechgroup.com"],
+    formats: ["image/webp", "image/avif"],
+    unoptimized: true,
+  },
+  experimental: {
+    optimizeCss: true,
+    scrollRestoration: true,
+  },
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
+  webpack: (config) => {
+    config.resolve.fallback = { ...config.resolve.fallback, fs: false, net: false, tls: false };
+    return config;
+  },
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          { key: 'X-Frame-Options', value: 'DENY' },
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: 'Referrer-Policy', value: 'origin-when-cross-origin' },
+        ],
+      },
+    ];
+  },
+};
+
 module.exports = nextConfig;
->>>>>>> main;

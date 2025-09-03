@@ -31,7 +31,7 @@ import { ;
   Truck,;
   Leaf;,
 } from 'lucide-react';
-import { REAL_MICRO_SAAS_SERVICES_2025 } from '../../data/realMicroSaasServices2025';
+import { REAL_MICRO_SAAS_SERVICES_2025, SERVICE_CATEGORIES, PRICING_TIERS, ZION_CONTACT_INFO } from '../../data/realMicroSaasServices2025';
 ;
 const ComprehensiveMicroSaasShowcase: React.FC = () => {;
   const categories = [;
