@@ -199,14 +199,9 @@ const Home = () => {
             ].map((feature, index) => {
               const IconComponent = feature.icon
               return (
-                <motion.div
+                <div
                   key={feature.title}
                   className="text-center group p-6 bg-gray-50 rounded-lg hover:bg-white hover:shadow-lg transition-all duration-300"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  whileHover={{ scale: 1.02 }}
                 >
                   <div className="flex justify-center mb-4">
                     <div className="p-4 bg-blue-100 rounded-full group-hover:bg-purple-100 transition-colors">
@@ -215,7 +210,7 @@ const Home = () => {
                   </div>
                   <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
                   <p className="text-gray-600 text-sm md:text-base leading-relaxed">{feature.description}</p>
-                </motion.div>
+                </div>
               )
             })}
           </div>
