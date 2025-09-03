@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIEmployeePerformanceAnalytics.tsx
 :pages.disabled/pages/services/AIEmployeePerformanceAnalytics.tsx
 <:pages.disabled/pages/services/AIEmployeePerformanceAnalytics.tsx
@@ -1210,5 +1209,3 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {}
   )}'"`'"`
     </div>;
   )}'"`
-=======
->>>>>>> main

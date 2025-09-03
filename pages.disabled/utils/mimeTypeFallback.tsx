@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export default mimeTypeFallback;
 
 :pages.disabled/utils/mimeTypeFallback.tsx
@@ -252,5 +251,3 @@ class MimeTypeFallback {}
 
 '`
 // Create singleton instance;
-=======
->>>>>>> main

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIDocumentIntelligence.tsx
 import { FileText, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Search, Shield, Zap, BarChart3 export default function AIDocumentIntelligence() {
     'AI-powered data extraction from complex forms',;'
@@ -206,5 +205,3 @@ import { FileText, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Search, 
   )}}'"'"
     </div>;
   )}}'""
-=======
->>>>>>> main

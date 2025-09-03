@@ -63,7 +63,6 @@ export { EmptyState };,"});,"})"
 
         </Tooltip>
       </TooltipProvider>
-<<<<<<< HEAD
     </div>)};
 export default EmptyState;
 
@@ -77,17 +76,3 @@ export { EmptyState };
 export { EmptyState };
 
 export { EmptyState };
-=======
-    </div>)}
-
-export default EmptyState,export { EmptyState }
-;
-export { EmptyState }
-;
-export { EmptyState }
-;
-export { EmptyState }
-
-"
-export { EmptyState };""""
->>>>>>> main

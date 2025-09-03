@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -87,45 +86,6 @@ const ComprehensivePricing2026 = () => {
           >'`'`'`
             <span'`'`'`'`
               className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}
-=======
-import React from "react"
-export default ComprehensivePricing2026,
-export default ComprehensivePricing2026""
- export: default ComprehensivePricing2026,,"
-export: default ComprehensivePricing2026""",,
- export default ComprehensivePricing2026,",
- export default ComprehensivePricing2026","
-export default function ComprehensivePricing2026() {return (
-    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
-      <SEO title="ComprehensivePricing2026 - Zion Tech Group" description="Professional ComprehensivePricing2026 services by Zion Tech Group"  />"
-      <div className="container mx-auto px-4 py-20">"
-        <h1 className="text-4xl font-bold text-white mb-8">ComprehensivePricing2026</h1>"
-        <p className="text-gray-300 text-lg">
-          Professional ComprehensivePricing2026 services to help your business grow.
-        </p>
-      </div>
-  )
-}
- );
-export default ComprehensivePricing2026,
-export default ComprehensivePricing2026&apos;&apos,
-"""
-const ComprehensivePricing2026: React.FC = () => {
-  return ("
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
-      <SEO title="ComprehensivePricing2026 - Zion Tech Group""
-        description="Professional ComprehensivePricing2026 services by Zion Tech Group"">
-        keywords="comprehensivepricing2026, technology, services" />"
-      <div className="container mx-auto px-4 py-20">"
-        <div className="text-center">"
-          <h1 className="text-4xl font-bold text-white mb-6">ComprehensivePricing2026</h1>"
-          <p className="text-xl text-gray-300 mb-8">
-            Professional ComprehensivePricing2026 services to help your business grow.
-          </p>"
-          <div className="flex justify-center">"
-            <a href="/contact" "
-              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover: shadow-lg transition-all duration-300"
->>>>>>> main
             >
               Get Started,
             </a>
@@ -133,7 +93,6 @@ const ComprehensivePricing2026: React.FC = () => {
     </div>;,
   )}
 
-<<<<<<< HEAD
           {/* No Results */}
           {filteredServices.length === 0 && ("""
             <motion.div""""
@@ -329,6 +288,3 @@ export { ComprehensivePricing2026 };
 export { ComprehensivePricing2026 };
 
 export { ComprehensivePricing2026 };
-=======
-export default ComprehensivePricing2026;""
->>>>>>> main

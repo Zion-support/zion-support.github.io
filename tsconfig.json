@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
-<<<<<<< HEAD
     "target": "es5",
     "useDefineForClassFields": true,
-=======
-    "target": "ES2020",
->>>>>>> main
     "lib": [
       "dom",
       "dom.iterable",
@@ -15,11 +11,6 @@
     "skipLibCheck": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-<<<<<<< HEAD
-=======
-    "noEmit": true,
-    "esModuleInterop": true,
->>>>>>> main
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
@@ -60,24 +51,10 @@
     }
   },
   "include": [
-<<<<<<< HEAD
     "src/main.tsx",
     "src/App.tsx",
     "tailwind.config.js",
     "postcss.config.js"
-=======
-    "next-env.d.ts",
-    "pages/**/*",
-    "components/**/*.ts",
-    "components/**/*.tsx",
-    "data/services.ts",
-    "styles/**/*",
-    "types/**/*",
-    "utils/**/*",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts"
->>>>>>> main
   ],
   "exclude": [
     "node_modules",

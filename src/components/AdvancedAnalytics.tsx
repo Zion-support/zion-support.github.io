@@ -1,121 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React, { useEffect, useState, useCallback, useRef } from 'react';
-export /**
-import { motion, AnimatePresence  } from 'framer-motion';
-
- params - Function parameters
- * @returns {*} Function return value
- */
-function AdvancedAnalytics({
-
-  BarChart3,
-  TrendingUp,
-  Users,
-  Eye,
-  MousePointer,
-  Clock,
-  TrendingUp,  const trackingRef = useRef<{
-
-    pageViews: number;    clicks: number;
-    scrolls: number;
-    formSubmissions: number;
-    errors: number;
-    startTime: number}>({
-    pageViews: 1,
-    clicks: 0,
-    scrolls: 0,
-    formSubmissions: 0,
-    errors: 0,
-    startTime: Date.now () }) ;
-
-  // Generate unique session ID
-  useEffect(() => {
-  // TODO: Add dependencies if needed
-
-  return () => {
-    // Cleanup function
-  };
-}, []);, []);
-    
-    setUserSession(sessionId);
-    localStorage.setItem('analytics_session_id', sessionId)}, []);
-
-  // Track page views
-  
-    setCurrentPage(path) ;
-    trackingRef.current.pageViews++;
-
-    const pageViewData = {
-      sessionId: userSession,
-      path,
-      timestamp: new Date () .toISOString () ,
-      referrer: document.referrer,
-      userAgent: navigator.userAgent,
-      screenResolution: `${screen.width}x${screen.height}`,
-      viewport: `${window.innerWidth}x${window.innerHeight}`,
-      language: navigator.language,
-      timezone: Intl.DateTimeFormat () .resolvedOptions () .timeZone
-    };
-
-    // Send to analytics service
-    this.sendAnalyticsData('pageview', pageViewData) ;
-    // Update local state
-    setAnalyticsData(prev => ({
-
-      ...prev,
-      pageViews: prev.pageViews + 1
-    }) ) }, [enabled, userSession]) ;
-
-  // Track user interactions'
-
-    // Update tracking ref
-    switch(type) {
-
-      case 'click':
-        trackingRef.current.clicks++;
-        break;
-      case 'scroll':
-        trackingRef.current.scrolls++;
-        break;
-      case 'form':
-        trackingRef.current.formSubmissions++;
-        break;
-      case 'error':
-        trackingRef.current.errors++;
-        break}
-
-    // Send to analytics service'
-    this.sendAnalyticsData('interaction', interactionData);
-
-    // Update local state
-    setAnalyticsData(prev => ({
-
-      ...prev,
-      interactions: {
-        ...prev.interactions,
-        [type === 'form' ? 'formSubmissions' : type === 'error' ? 'errors' : `${type}s`]:          prev.interactions[type === 'form' ? 'formSubmissions' : type === 'error' ? 'errors' : `${type}s`] + 1
-      }
-    }) ) }, [enabled, userSession, currentPage]) ;
-
-  // Track performance metrics
-  
-    // Use Performance API to get metrics'
-    if('performance' in window) {
-      const navigation = performance.getEntriesByType('navigation') [0] as PerformanceNavigationTiming;
-      const paint = performance.getEntriesByType('paint') ;
-
-      const performanceData = {
-        sessionId: userSession,
-        loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-        firstPaint: paint.find(entry => entry.name === 'first - paint') ?.startTime || 0,
-        firstContentfulPaint: paint.find(entry => entry.name === 'first - contentful - paint') ?.startTime || 0,
-        largestContentfulPaint: 0, // Will be updated by observer
-<<<<<<< HEAD
-        timestamp: new Date () .toISOString () };
-=======
->>>>>>> main
 
       // Update local state
       setAnalyticsData(prev => ({
@@ -152,22 +34,13 @@ function AdvancedAnalytics({
     trackPerformance () ;
 
     // Setup click tracking
-<<<<<<< HEAD
     const handleClick = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
       const position = { x: e.clientX, y: e.clientY };
 
       trackInteraction('click', { target, position }) ;
 
-=======
-
-      '      trackInteraction('click', { target, position });
-      
->>>>>>> main
       // Add to heatmap data
-=======
-        timestamp: new Date () .toISOString () };      // Add to heatmap data
->>>>>>> main
       if(enableHeatmap) {
 
         setHeatmapData(prev => [...prev, { x: position.x, y: position.y, type: 'click' }])}    };
@@ -484,9 +357,5 @@ function AdvancedAnalytics({
       </AnimatePresence>
     </>
   )}}}}}}}}}}}}}'"`
-=======
-
-;,"});,})";
->>>>>>> pr-10728,});,"})"
 >>>>>>> main
 >>>>>>> main

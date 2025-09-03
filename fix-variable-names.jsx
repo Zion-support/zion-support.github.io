@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 function toCamelCase(str) {
@@ -110,5 +109,3 @@ export default toCamelCase;
 export default toCamelCase;
 export default toCamelCase;
 export default toCamelCase;
-=======
->>>>>>> main

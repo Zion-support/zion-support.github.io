@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';'
 import { Link } from 'react-router-dom';
 import {}
@@ -485,6 +484,4 @@ export default EnterpriseSolutions;'"
 '"'"
 export default EnterpriseSolutions;
 '""
-=======
->>>>>>> 92e970263e01302a6ec9ed9848ce724c6698ab78;
 >>>>>>> main

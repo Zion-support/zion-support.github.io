@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIManufacturing.tsx
 import { Factory, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Settings, BarChart3 export default function AIManufacturing() {
     'Automated production planning and optimization',;'
@@ -232,5 +231,3 @@ import { Factory, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Z
   )}}'"'"
     </div>;
   )}}'""
-=======
->>>>>>> main

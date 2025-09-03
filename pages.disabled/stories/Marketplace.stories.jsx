@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Marketplace from "../pages/Marketplace";
 import { MemoryRouter } from 'react-router-dom';
 :pages.disabled/stories/Marketplace.stories.jsx
@@ -46,5 +45,3 @@ export const List = {}
 }}'"'"
 };
 }}'""
-=======
->>>>>>> main

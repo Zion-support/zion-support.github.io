@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIDataGovernance.tsx
 :pages.disabled/pages/services/AIDataGovernance.tsx
 <:pages.disabled/pages/services/AIDataGovernance.tsx
@@ -846,5 +845,3 @@ export default AIDataGovernance}}}}}}'"`'"`
   )};
 
 export default AIDataGovernance}}}}}}'"`
-=======
->>>>>>> main

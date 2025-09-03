@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :pages.disabled/pages/services/CustomDevelopment.tsx
     {
 
@@ -864,5 +863,3 @@ export default function CustomDevelopment(...args[]):  {}
 '"'"
   )}
 '""
-=======
->>>>>>> main

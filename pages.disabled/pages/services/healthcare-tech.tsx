@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ;
 export { function };export default function HealthcareTech(...args: []):  {}
   return()
@@ -668,5 +667,3 @@ export { function };export default function HealthcareTech(...args: []):  {}
   )}}}}}}'"'"
     </>
   )}}}}}}'""
-=======
->>>>>>> main

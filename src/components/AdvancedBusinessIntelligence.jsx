@@ -1,24 +1,9 @@
-<<<<<<< HEAD
 import React, { useState, useRef, useEffect } from 'react';
 export function AdvancedBusinessIntelligence () {
 
         actions['Conduct market research', 'Develop localization strategy', 'Establish partnerships']
 import { BarChart3, TrendingUp, Brain, Zap, Target, AlertTriangle, Download, RefreshCw, X, Maximize2, Minimize2, Calendar, Activity  } from 'lucide-react';
-=======
-const mockModels = [] export function AdvancedBusinessIntelligence() { const [isOpen, setIsOpen] = useState(false) const [isMinimized, setIsMinimized] = useState(false) const [isFullscreen, setIsFullscreen] = useState(false) const [activeTab, setActiveTab] = useState("overview") const [selectedCategory, setSelectedCategory] = useState("all") const [timeRange, setTimeRange] = useState("30d") const [autoRefresh, setAutoRefresh] = useState(true) const [showPredictions, setShowPredictions] = useState(true) const [data, setData] = useState(mockMetrics) const [insights, setInsights] = useState(mockInsights) const [models, setModels] = useState(mockModels) const [isRefreshing, setIsRefreshing] = useState(false) const categories = [] const timeRanges = [] const filteredMetrics =" selectedCategory === "all" ? data: data.filter(metric: => metric.category === selectedCategory) const refreshData = async () => { setIsRefreshing(true)",""
-const mockModels = [] export function AdvancedBusinessIntelligence() { const [isOpen, setIsOpen] = useState(false) const [isMinimized, setIsMinimized] = useState(false) const [isFullscreen, setIsFullscreen] = useState(false) const [activeTab, setActiveTab] = useState("overview") const [selectedCategory, setSelectedCategory] = useState("all") const [timeRange, setTimeRange] = useState("30d") const [autoRefresh, setAutoRefresh] = useState(true) const [showPredictions, setShowPredictions] = useState(true) const [data, setData] = useState(mockMetrics) const [insights, setInsights] = useState(mockInsights) const [models, setModels] = useState(mockModels) const [isRefreshing, setIsRefreshing] = useState(false) const categories = [] const timeRanges = [] const filteredMetrics =" selectedCategory === "all" ? data : data.filter(metric => metric.category === selectedCategory) const refreshData = async () => { setIsRefreshing(true)
-}
-const mockModels = [] export function AdvancedBusinessIntelligence() {const [isOpen, setIsOpen] = useState(false) const [isMinimized, setIsMinimized] = useState(false) const [isFullscreen, setIsFullscreen] = useState(false) const [activeTab, setActiveTab] = useState("overview") const [selectedCategory, setSelectedCategory] = useState("all") const [timeRange, setTimeRange] = useState("30d") const [autoRefresh, setAutoRefresh] = useState(true) const [showPredictions, setShowPredictions] = useState(true) const [data, setData] = useState(mockMetrics) const [insights, setInsights] = useState(mockInsights) const [models, setModels] = useState(mockModels) const [isRefreshing, setIsRefreshing] = useState(false) const categories = [] const timeRanges = [] const filteredMetrics =" selectedCategory === "all" ? data : data.filter(metric => metric.category === selectedCategory) const refreshData = async () => { setIsRefreshing(true)
-}
-const mockModels = []&apos; export function AdvancedBusinessIntelligence() {} const [isOpen, setIsOpen] = useState(false) const [isMinimized, setIsMinimized] = useState(false) const [isFullscreen, setIsFullscreen] = useState(false) const;const [activeTab, setActiveTab] = useState(&apos;overview&apos)&apos, const [selectedCategory, setSelectedCategory] = useState(&apos;all&apos)&apos, const [timeRange, setTimeRange] = useState(&apos;30d&apos)&apos, const [autoRefresh, setAutoRefresh] = useState(true) const [showPredictions, setShowPredictions] = useState(true) const [data, setData] = useState(mockMetrics) const [insights, setInsights] = useState(mockInsights) const [models, setModels] = useState(mockModels) const [isRefreshing, setIsRefreshing] = useState(false) const;const categories = []&apos, const timeRanges = []&apos; const filteredMetrics =&apos; selectedCategory === &apos;all&apos; ? data : data.filter(metric => metric.category === selectedCategory)&apos; const refreshData = async () => { setIsRefreshing(true)}
 
-const mockModels = [] export function AdvancedBusinessIntelligence() { const [isOpen, setIsOpen] = useState(false) const [isMinimized, setIsMinimized] = useState(false) const [isFullscreen, setIsFullscreen] = useState(false) const [activeTab, setActiveTab] = useState("overview") const [selectedCategory, setSelectedCategory] = useState("all") const [timeRange, setTimeRange] = useState("30d") const [autoRefresh, setAutoRefresh] = useState(true) const [showPredictions, setShowPredictions] = useState(true) const [data, setData] = useState(mockMetrics) const [insights, setInsights] = useState(mockInsights) const [models, setModels] = useState(mockModels) const [isRefreshing, setIsRefreshing] = useState(false) const categories = [] const timeRanges = [] const filteredMetrics =" selectedCategory === "all" ? data : data.filter(metric => metric.category === selectedCategory) const refreshData = async () => { setIsRefreshing(true)
-}
-""
-}}
->>>>>>> main
-
-<<<<<<< HEAD
         id: 'model-1',
         name: 'Customer Lifetime Value Predictor',
         accuracy: 94.2,
@@ -360,7 +345,3 @@ export function AdvancedBusinessIntelligence() {
       </div>
     </div>)}
 '"`
-=======
-const mockModels = [] export function AdvancedBusinessIntelligence() { const [isOpen, setIsOpen] = useState(false) const [isMinimized, setIsMinimized] = useState(false) const [isFullscreen, setIsFullscreen] = useState(false) const [activeTab, setActiveTab] = useState("overview") const [selectedCategory, setSelectedCategory] = useState("all") const [timeRange, setTimeRange] = useState("30d") const [autoRefresh, setAutoRefresh] = useState(true) const [showPredictions, setShowPredictions] = useState(true) const [data, setData] = useState(mockMetrics) const [insights, setInsights] = useState(mockInsights) const [models, setModels] = useState(mockModels) const [isRefreshing, setIsRefreshing] = useState(false) const categories = [] const timeRanges = [] const filteredMetrics =" selectedCategory === "all" ? data : data.filter(metric => metric.category === selectedCategory) const refreshData = async () => { setIsRefreshing(true)"
-"""
->>>>>>> main

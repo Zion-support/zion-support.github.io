@@ -1,95 +1,6 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React, { useState, useEffect, useCallback } from 'react';
-export default PerformanceOptimizer;
-import {   
-export default function Page() {
-,
-    {
-
-      id: 'code-splitting',
-      title: 'Implement Code Splitting',
-      description: 'Split JavaScript bundles to reduce initial load time',
-      impact: 'high',
-      category: 'javascript',
-      implemented: false},
-    {
-
-      id: 'css-optimization',
-      title: 'Optimize CSS Delivery',
-      description: 'Inline critical CSS and defer non-critical styles',
-      impact: 'medium',
-      category: 'css',
-      implemented: false},
-    {
-
-      id: 'font-optimization',
-      title: 'Optimize Font Loading',
-      description: 'Use font-display: swap and preload critical fonts',
-      impact: 'medium',
-      category: 'fonts',
-      implemented: false},
-    {
-
-      id: 'caching',
-      title: 'Implement Caching Strategy',
-      description: 'Set up proper cache headers for static assets',
-      impact: 'high',
-      category: 'caching',
-      implemented: false},
-    {
-
-      id: 'server-optimization',
-      title: 'Server Response Optimization',
-      description: 'Optimize server response time and enable compression',
-      impact: 'medium',
-      category: 'server',
-      implemented: false},
-  ]);
-
-  const [isMonitoring, setIsMonitoring] = useState(false);
-  const [history, setHistory] = useState < PerformanceMetrics[]> ([]) ;
-
-  // Simulate performance monitoring
-  
-    // Calculate performance score
-    calculatePerformanceScore(initialMetrics, resourceMetrics);
-
-    // Continuous monitoring
-    intervalRef.current = setInterval(() => {
-      updateResourceMetrics()}, 5000)}, [])}, []);
-
-    const newResourceMetrics: ResourceMetrics = {
-      totalResources: resources.length,
-      totalSize: resources.reduce((acc, resource) => acc + (resource as any).transferSize || 0, 0),
-      images: resources.filter(r => r.initiatorType === 'img').length,
-      scripts: resources.filter(r => r.initiatorType === 'script').length,
-      stylesheets: resources.filter(r => r.initiatorType === 'link').length,
-      fonts: resources.filter(r => r.initiatorType === 'font').length
-    };
-    setResourceMetrics(newResourceMetrics)}, []);
-
-    if(newMetrics.fcp > 1800) score -= 20;
-    if(newMetrics.lcp > 2500) score -= 25;
-    if(newMetrics.fid > 100) score -= 20;
-    if(newMetrics.cls > 0.1) score -= 15;
-    if(newMetrics.ttfb > 600) score -= 20;
-
-    newMetrics.score = Math.max(0, score) ;
-    setMetrics(newMetrics) ;
-    setHistory(prev => [...prev.slice (-9) , newMetrics]) }, []) ;
-=======
-<<<<<<< HEAD
-import { useEffect } from 'react';
-
-interface PerformanceOptimizerProps { children: React.ReactNode;
-  }
->>>>>>> main
 
 export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
   useEffect(() => {
-<<<<<<< HEAD
   // TODO: Add dependencies if needed
 
   return () => {
@@ -97,21 +8,6 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
   };
 }, []);, []);
     if(isMonitoring) {
-=======
-    // Preload critical resources
-    const preloadCriticalResources = () => {
-      const criticalFonts = ['https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap'
-      ];
-      
-      criticalFonts.forEach(font => {
-        const link = document.createElement('link');
-        link.rel = 'preload';
-        link.as = 'style';
-        link.href = font;
-        document.head.appendChild(link);
-      });
-    };
->>>>>>> main
 
     // Optimize images
     const optimizeImages = () => {
@@ -155,7 +51,6 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
     };
   }, []);
 
-<<<<<<< HEAD
   return ("
     <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">"
       <div className="flex items-center justify-between mb-6">"
@@ -315,17 +210,6 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
           </div>
         </div>) }
     </div>) ;};
-=======
-  return <>{children}</>;
-};
-=======
-import React from "react"
-import { useEffect } from "react"
-interface PerformanceOptimizerProps {
-  children: React.ReactNode}
-;
-export default function Page() {;
->>>>>>> main
 
 interface PerformanceOptimizerProps { children: React.ReactNode}
 

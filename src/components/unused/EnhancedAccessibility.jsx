@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
 
@@ -286,7 +285,6 @@ export default EnhancedAccessibility;
 }}}}}}}}}}}}
 
 export { EnhancedAccessibility };
-<<<<<<< HEAD
 
 export { EnhancedAccessibility };
 
@@ -295,9 +293,4 @@ export { EnhancedAccessibility };
 export { EnhancedAccessibility };
 
 export { EnhancedAccessibility };
-=======
-export default EnhancedAccessibility;
-}}}}}}}}}}}}'"`
-=======
->>>>>>> main
 >>>>>>> main

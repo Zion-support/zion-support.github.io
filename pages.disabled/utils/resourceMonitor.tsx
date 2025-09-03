@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export default resourceMonitor;
 
 :pages.disabled/utils/resourceMonitor.tsx
@@ -365,5 +364,3 @@ class ResourceMonitor {}
 
 '`
 // Create singleton instance;
-=======
->>>>>>> main

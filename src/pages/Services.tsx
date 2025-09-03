@@ -1,8 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
 import { SEO } from '../components/SEO';
 
-<<<<<<< HEAD
 export default function Services(...args: any[]): any {): unknown {): unknown {}
   const [activeCategory, setActiveCategory] = useState(0);'
   const [searchTerm, setSearchTerm] = useState('');
@@ -207,36 +205,6 @@ export default Services;'"""
 '"'"""
 
 export { Services };
-=======
-const Services: React.FC = () => {
-  return(<>
-      <SEO title="Services - Zion Tech Group" />
-      <div className="min-h-screen bg-white py-20">
-        <div className="max-w-4xl mx-auto px-4">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Services</h1>
-          <p className="text-lg text-gray-600">Content coming soon...</p>
-        </div>
-      </div>
-    </>
-  );
-};
-=======
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { 
-  Brain, 
-  Users, 
-  Zap, 
-  TrendingUp, 
-  Shield, 
-  Cloud,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Globe,
-  Code,
-  Lock} from 'lucide-react';
->>>>>>> main
 
 export default function Services() {
   const services = [

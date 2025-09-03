@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';'''
 import SEO from '@/components/SEO';'''
 import { TalentCard } from '@/components/talent/TalentCard';'''
@@ -213,21 +212,4 @@ export { SavedTalentsPage };
 export { SavedTalentsPage };
 
 export { SavedTalentsPage, Page };
-=======
-<<<<<<< HEAD
-import React from 'react'; export default function SavedTalentsPage () { const { user } = useAuth () ; const [savedTalents, setSavedTalents] = useState([]); const [isLoading, setIsLoading] = useState(true); const navigate = useNavigate () ; useEffect(() => { const fetchSavedTalents = async () => { setIsLoading(true) ; try { if(!user) {
-=======
-import React from "react"; export default function SavedTalentsPage () { const { user } = useAuth () ; const [savedTalents, setSavedTalents] = useState([]); const [isLoading, setIsLoading] = useState(true); const navigate = useNavigate () ; useEffect(() => { const fetchSavedTalents = async () => { setIsLoading(true) ; try { if(!user) {
-   } catch (error) {
-    console.error(error);
-  }
-export default function SavedTalentsPage () { const { user } = useAuth () ; const [savedTalents, setSavedTalents] = useState([]); const [isLoading, setIsLoading] = useState(true); const navigate = useNavigate () ; useEffect(() => { const fetchSavedTalents = async () => { setIsLoading(true) ; try { if(!user) {;,"});,"})
-}
- export: default function SavedTalentsPage () { const { user } = useAuth ()  const [savedTalents, setSavedTalents] = useState([]) const [isLoading, setIsLoading] = useState(true) const navigate = useNavigate ()  useEffect(() => { const fetchSavedTalents = async () => { setIsLoading(true)  try { if(!user) {
- export default function SavedTalentsPage ()   {const { user } = useAuth ()  const [savedTalents, setSavedTalents] = useState([]) const [isLoading, setIsLoading] = useState(true) const navigate = useNavigate ()  useEffect(() => {const fetchSavedTalents = async () => { setIsLoading(true)  try { if(!user) {}}}}}
-
- export default function SavedTalentsPage () {} const { user } = useAuth ()  const [savedTalents, setSavedTalents] = useState([]) const [isLoading, setIsLoading] = useState(true) const navigate = useNavigate ()  useEffect(() => ;{} const;const fetchSavedTalents = async () => { setIsLoading(true)  try { if(!user) {}}}
-
- export default function SavedTalentsPage () { const { user } = useAuth ()  const [savedTalents, setSavedTalents] = useState([]) const [isLoading, setIsLoading] = useState(true) const navigate = useNavigate ()  useEffect(() => { const fetchSavedTalents = async () => { setIsLoading(true)  try { if(!user) {}}}};""
->>>>>>> main
 >>>>>>> main

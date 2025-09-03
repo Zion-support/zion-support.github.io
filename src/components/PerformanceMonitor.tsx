@@ -1,16 +1,6 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React, { useEffect, useState, useCallback } from 'react';
-export const PerformanceMonitor: React.FC < PerformanceMonitorProps> = ({
-export default PerformanceMonitor;
-import { motion, AnimatePresence  } from 'framer-motion';
-=======
->>>>>>> main
 
 import React, { useState, useEffect } from 'react'
 
-<<<<<<< HEAD
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isVisible, setIsVisible] = useState(false);
   const [performanceScore, setPerformanceScore] = useState<number>(0);
@@ -130,17 +120,8 @@ import React, { useState, useEffect } from 'react'
         lcpObserver.disconnect () ;
         fidObserver.disconnect () ;
         clsObserver.disconnect () }}  }, []);
-=======
-export default function PerformanceMonitor() {
-  const [metrics, setMetrics] = useState({
-    loadTime: 0,
-    memoryUsage: 0,
-    cpuUsage: 0
-  })
->>>>>>> main
 
   useEffect(() => {
-<<<<<<< HEAD
   // TODO: Add dependencies if needed
 
   return () => {
@@ -162,18 +143,6 @@ export default function PerformanceMonitor() {
     
     return () => clearTimeout(timer) }, []) ;
   if(!isVisible || !showDetails) return null;
-=======
-    const interval = setInterval(() => {
-      setMetrics({
-        loadTime: Math.random() * 1000,
-        memoryUsage: Math.random() * 100,
-        cpuUsage: Math.random() * 100
-      })
-    }, 1000)
-
-    return () => clearInterval(interval)
-  }, [])
->>>>>>> main
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

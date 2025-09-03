@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect, useRef } from 'react';'''
 import { format } from 'date-fns';'''
 import { MessageSquare import { useMessaging } from '@/context/MessagingContext';'''
@@ -17,15 +16,6 @@ export function ConversationDetailView() {    const { user } = useAuth();
             loadMessages(activeConversation.id)}
     }, [activeConversation?.id, loadMessages]);
     useEffect(() => {}
-=======
-import React, { useState, useEffect, useRef } from 'react';
-import { format } from 'date-fns';
-export default function Page() {
-, [activeConversation?.id, loadMessages]);
-    useEffect(() => {
-  // TODO: Add dependencies if needed
-}, []);
->>>>>>> main
         scrollToBottom()}, [activeMessages]);
     const scrollToBottom = () => {
 

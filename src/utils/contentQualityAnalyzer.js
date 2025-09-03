@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ; export class ContentQualityAnalyzer {
   static instance; constructor() {
   this.analyzedPages = new Map()} static getInstance() {

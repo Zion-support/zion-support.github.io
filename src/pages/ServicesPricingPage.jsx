@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';'''
 import { Link } from 'react-router-dom';'''
 import { Button } from '@/components/ui/button';'''
@@ -251,5 +250,3 @@ export { ServicesPricingPage };
 export { ServicesPricingPage };
 
 export { ServicesPricingPage };
-=======
->>>>>>> main

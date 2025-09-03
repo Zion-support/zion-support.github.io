@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {  import { motion, AnimatePresence  } from 'framer-motion';
-=======
->>>>>>> main
 
-<<<<<<< HEAD
 export default function Page() {
 > {
 
@@ -196,8 +189,5 @@ showFilters:  true,;
 
   // Calculate project stats
   const projectStats = {
-=======
-;,"});,})";
->>>>>>> pr-10728,});,"})"
 >>>>>>> main
 >>>>>>> main

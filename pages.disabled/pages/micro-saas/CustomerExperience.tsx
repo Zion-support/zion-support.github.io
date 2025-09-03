@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ;
 export { function };
 :pages.disabled/pages/micro-saas/CustomerExperience.tsx
@@ -369,5 +368,3 @@ export default function CustomerExperience(...args[]):  {}
 '"'"
   )}
 '""
-=======
->>>>>>> main

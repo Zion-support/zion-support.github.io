@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from "react";
 import { BookOpen, Terminal import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -24,33 +23,6 @@ export function ApiDocumentation() {
       </CardHeader>"""
       <CardContent>""""
         <Alert className="bg-blue-900/30 border-blue-800 mb-6">""""
-=======
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { useState } from 'react';
-import { BookOpen, Terminal import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Alert, AlertDescription } from '@/components/ui/alert';
-import { Badge } from '@/components/ui/badge';
- from 'react';"
-import { BookOpen, Terminal import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';"
-import { Alert, AlertDescription } from '@/components/ui/alert';"
-import { Badge } from '@/components/ui/badge';"
-import CodeBlock from "./CodeBlock";
-export function ApiDocumentation() {
-"
-    return (<Card className="bg-zinc-900 border-zinc-800 text-white">
-      <CardHeader>"
-        <CardTitle className="text-xl flex items-center">"
-          <BookOpen className="mr-2" size={20}/> API Documentation
-        </CardTitle>"
-        <CardDescription className="text-zinc-400">
-          Reference documentation for integrating with the Zion Marketplace API.</CardDescription>
-      </CardHeader>
-      <CardContent>"
-        <Alert className="bg-blue-900/30 border-blue-800 mb-6">"
->>>>>>> main
           <Terminal className="h-4 w-4"/>
           <AlertDescription>
             Make sure to include your API key in all requests as a Bearer token in the Authorization header.</AlertDescription>
@@ -611,17 +583,3 @@ function verifyWebhookSignature(payload, signature, secret) {
   const expectedSignature = hmac.update(payload).digest('hex');
   return crypto.timingSafeEqual()
     Buffer.from(signature),"`
-=======
-import React from "react"
-import { SEO } from "@/components/SEO"
-export default function ApiDocumentation() {return (
-    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
-      <SEO title="ApiDocumentation - Zion Tech Group" description="Professional ApiDocumentation services by Zion Tech Group"  />"
-      <div className="container mx-auto px-4 py-20">"
-        <h1 className="text-4xl font-bold text-white mb-8">ApiDocumentation</h1>"
-        <p className="text-gray-300 text-lg">
-          Professional ApiDocumentation services to help your business grow.
-        </p>
-      </div>
-  );"}"
->>>>>>> main

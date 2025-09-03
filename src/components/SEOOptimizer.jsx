@@ -440,7 +440,6 @@ issues,
         finally {}
 
             setIsAnalyzing(false)}
-<<<<<<< HEAD
     }, []);
     useEffect(() => {
   // TODO: Add dependencies if needed
@@ -452,8 +451,6 @@ issues,
         // Auto-analyze SEO when component mounts
         analyzeSEO()}, [analyzeSEO]);
     const calculateSEOScore = (page) => {
-=======
->>>>>>> main
 
     }, [])
 }
@@ -1061,7 +1058,6 @@ const;const;const totalPages = pageAnalyses.length
               <Download className="w-4 h-4"  />
               Export,
         </div>)}
-<<<<<<< HEAD
     </div>)};
 export default SEOOptimizer;
 }}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
@@ -1075,12 +1071,3 @@ export { SEOOptimizer };
 export { SEOOptimizer };
 
 export { SEOOptimizer };
-=======
-
-export default SEOOptimizerexport { SEOOptimizer }
-;
-export { SEOOptimizer }
-
-"
- const SEOOptimizer = () => { const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const analyzeSEO = useCallback (async () => { setIsAnalyzing (true)  try {"";import React { useState, useEffect, useCallback }  from "react,"";"
->>>>>>> main
