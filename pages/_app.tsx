@@ -1,7 +1,13 @@
 import type { AppProps } from 'next/app';
 import Link from 'next/link';
+import { useState } from 'react';
+import ErrorBoundary from '../components/ErrorBoundary';
+import PerformanceMonitor from '../components/PerformanceMonitor';
+import '../styles/globals.css';
 
 function Header(): any {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
     <header style={{
       position: 'sticky', top: 0, zIndex: 50, background: 'rgba(11, 18, 32, 0.95)', 
@@ -72,14 +78,62 @@ function Header(): any {
             color: 'white', padding: '6px 12px', borderRadius: 6,
             transition: 'all 0.2s ease', textDecoration: 'none', fontSize: '0.9rem'
           }}>Contact</Link>
-          <button style={{
-            background: 'none', border: 'none', color: 'white', fontSize: '1.2rem',
-            cursor: 'pointer', padding: '6px', borderRadius: 4
-          }}>
+          <button 
+            style={{
+              background: 'none', border: 'none', color: 'white', fontSize: '1.2rem',
+              cursor: 'pointer', padding: '6px', borderRadius: 4
+            }}
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle mobile menu"
+            aria-expanded={mobileMenuOpen}
+          >
             ☰
           </button>
         </div>
       </nav>
+      
+      {/* Mobile Menu */}
+      {mobileMenuOpen && (
+        <div style={{
+          position: 'absolute', top: '100%', left: 0, right: 0, 
+          background: 'rgba(11, 18, 32, 0.98)', backdropFilter: 'blur(10px)',
+          borderBottom: '1px solid rgba(255,255,255,0.1)',
+          padding: '20px', display: 'flex', flexDirection: 'column', gap: '12px'
+        }}>
+          <Link href="/" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }} onClick={() => setMobileMenuOpen(false)}>Home</Link>
+          <Link href="/services" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }} onClick={() => setMobileMenuOpen(false)}>All Services</Link>
+          <Link href="/micro-saas" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }} onClick={() => setMobileMenuOpen(false)}>Micro SaaS</Link>
+          <Link href="/ai-services" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }} onClick={() => setMobileMenuOpen(false)}>AI Services</Link>
+          <Link href="/it-services" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }} onClick={() => setMobileMenuOpen(false)}>IT Services</Link>
+          <Link href="/services-catalog" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }} onClick={() => setMobileMenuOpen(false)}>Catalog</Link>
+          <Link href="/pricing" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }} onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
+          <Link href="/about" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }} onClick={() => setMobileMenuOpen(false)}>About</Link>
+        </div>
+      )}
     </header>
   );
 }
@@ -205,10 +259,11 @@ function Footer(): any {
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <>
+    <ErrorBoundary>
+      <PerformanceMonitor />
       <Header />
       <Component {...pageProps} />
       <Footer />
-    </>
+    </ErrorBoundary>
   );
 }

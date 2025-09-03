@@ -1,10 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: false,
-  // // Deprecated in Next.js 15
+  reactStrictMode: true,
   compress: true,
   poweredByHeader: false,
-  eslint: { ignoreDuringBuilds: true },
+  eslint: { 
+    ignoreDuringBuilds: true,
+    dirs: ['pages', 'components', 'lib', 'hooks']
+  },
   typescript: { ignoreBuildErrors: true },
   trailingSlash: true,
   generateBuildId: async () => {
