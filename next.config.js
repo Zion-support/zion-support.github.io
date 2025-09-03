@@ -1,31 +1,23 @@
-import path from 'path'
-import { fileURLToPath } from 'url'
+import path from 'path';
 
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
-
-/** @type {import('next').NextConfig} */
+/** @type {import("next").NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
-  typescript: {
-    ignoreBuildErrors: true,
-  },
+  poweredByHeader: false,
   eslint: {
     ignoreDuringBuilds: true,
   },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
   experimental: {
     scrollRestoration: true,
-  },
-  images: {
-    domains: ['ziontechgroup.com', 'images.unsplash.com'],
-    formats: ['image/webp', 'image/avif'],
   },
   webpack: (config, { dev, isServer }) => {
     if (!dev && !isServer) {
       config.resolve.alias = {
         ...config.resolve.alias,
-        "@": path.resolve(__dirname, "./src"),
+        "@": path.resolve(process.cwd(), "./src"),
       }
     }
     
@@ -42,6 +34,10 @@ const nextConfig = {
     }
     
     return config
+  },
+  images: {
+    domains: ['images.unsplash.com', 'via.placeholder.com'],
+    formats: ['image/webp', 'image/avif'],
   },
   async headers() {
     return [
@@ -67,13 +63,8 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: '/services',
-        destination: '/services-overview',
-        permanent: true,
-      },
-      {
-        source: '/solutions',
-        destination: '/services-overview',
+        source: '/home',
+        destination: '/',
         permanent: true,
       },
     ]
