@@ -1,20 +1,20 @@
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
-import UnknownComponent from './App';
+import AppMinimal from './AppMinimal';
 
-describe('UnknownComponent', () => {
+describe('AppMinimal', () => {
   it('renders without crashing', () => {
-    render(<UnknownComponent />);
+    render(<AppMinimal />);
     expect(screen.getByRole('main')).toBeInTheDocument();
   });
 
   it('displays correct content', () => {
-    render(<UnknownComponent />);
+    render(<AppMinimal />);
     // Add specific content checks based on component functionality
   });
 
   it('handles user interactions', () => {
-    render(<UnknownComponent />);
+    render(<AppMinimal />);
     // Add interaction tests based on component functionality
   });
 });
