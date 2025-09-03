@@ -400,6 +400,116 @@ export default function MicroSaaS() {
       category: 'Supply Chain SaaS'
     },
     {
+      title: 'AI-Powered Carbon Footprint Tracker',
+      description: 'Comprehensive carbon footprint monitoring and reduction platform for businesses and individuals',
+      icon: TreePine,
+      features: [
+        'Automated carbon footprint calculation across all business operations,Real-time emissions tracking and monitoring,AI-powered reduction recommendations and optimization strategies,Compliance reporting for environmental regulations,Supply chain carbon impact analysis and optimization,Sustainability goal setting and progress tracking,Integration with energy management and IoT systems,Carbon offset marketplace and trading platform'
+      ],
+      pricing: '$299 - $1,499/month',
+      delivery: '4-6 weeks',
+      category: 'Sustainability SaaS'
+    },
+    {
+      title: 'Smart Legal Document Analyzer',
+      description: 'AI-powered legal document analysis with contract review, risk assessment, and compliance monitoring',
+      icon: FileText,
+      features: [
+        'Automated contract analysis and risk identification,Legal document comparison and version control,Compliance monitoring and regulatory updates,AI-powered legal research and case law analysis,Document generation and template management,Client portal for document sharing and collaboration,Integration with legal databases and court systems,Billing and time tracking for legal professionals'
+      ],
+      pricing: '$499 - $2,499/month',
+      delivery: '5-8 weeks',
+      category: 'Legal Tech SaaS'
+    },
+    {
+      title: 'AI-Powered Restaurant Management Suite',
+      description: 'Comprehensive restaurant operations management with AI-driven insights and automation',
+      icon: Heart,
+      features: [
+        'Intelligent inventory management and waste reduction,AI-powered menu optimization and pricing strategies,Customer behavior analysis and personalized recommendations,Staff scheduling optimization and labor cost management,Real-time sales analytics and performance tracking,Integration with POS systems and delivery platforms,Food safety compliance monitoring and reporting,Supplier relationship management and procurement optimization'
+      ],
+      pricing: '$199 - $999/month',
+      delivery: '3-5 weeks',
+      category: 'Restaurant SaaS'
+    },
+    {
+      title: 'Smart Learning Management System Pro',
+      description: 'AI-enhanced learning platform with personalized content delivery and progress tracking',
+      icon: Brain,
+      features: [
+        'AI-powered personalized learning paths and content recommendations,Automated assessment generation and grading,Real-time progress tracking and performance analytics,Interactive content creation tools and multimedia support,Collaborative learning features and discussion forums,Integration with HR systems and performance management,Mobile learning apps and offline content access,Compliance tracking and certification management'
+      ],
+      pricing: '$99 - $599/month',
+      delivery: '4-6 weeks',
+      category: 'Education SaaS'
+    },
+    {
+      title: 'AI-Powered Customer Churn Predictor',
+      description: 'Advanced customer retention platform with predictive analytics and automated intervention strategies',
+      icon: Users,
+      features: [
+        'AI-powered churn prediction with 95%+ accuracy,Real-time customer behavior monitoring and analysis,Automated intervention campaigns and retention strategies,Customer lifetime value prediction and optimization,Integration with CRM and marketing automation platforms,Personalized retention offers and loyalty programs,Performance analytics and ROI tracking,Multi-channel engagement and communication management'
+      ],
+      pricing: '$399 - $1,999/month',
+      delivery: '4-6 weeks',
+      category: 'Customer Success SaaS'
+    },
+    {
+      title: 'Smart Energy Management Platform',
+      description: 'AI-driven energy optimization for buildings and facilities with cost reduction and sustainability focus',
+      icon: Zap,
+      features: [
+        'Real-time energy consumption monitoring and analysis,AI-powered energy optimization and cost reduction,Automated demand response and load balancing,Integration with smart meters and IoT devices,Energy efficiency recommendations and implementation tracking,Renewable energy integration and management,Compliance reporting for energy regulations,Predictive maintenance for energy systems'
+      ],
+      pricing: '$299 - $1,499/month',
+      delivery: '4-6 weeks',
+      category: 'Energy Management SaaS'
+    },
+    {
+      title: 'AI-Powered Fraud Detection Suite',
+      description: 'Advanced fraud prevention and detection platform with real-time monitoring and automated response',
+      icon: Shield,
+      features: [
+        'Real-time fraud detection with machine learning algorithms,Multi-channel fraud monitoring (transactions, accounts, devices),Automated risk scoring and decision making,Integration with payment processors and financial systems,Behavioral analysis and anomaly detection,Compliance reporting and audit trails,Custom fraud rules and exception handling,24/7 monitoring and alert system'
+      ],
+      pricing: '$999 - $4,999/month',
+      delivery: '6-8 weeks',
+      category: 'Security SaaS'
+    },
+    {
+      title: 'Smart Inventory Forecasting Platform',
+      description: 'AI-powered inventory prediction and optimization with demand forecasting and automated reordering',
+      icon: BarChart3,
+      features: [
+        'Advanced demand forecasting with seasonal and trend analysis,Automated reorder point calculations and safety stock optimization,Multi-location inventory tracking and management,Supplier performance monitoring and risk assessment,Integration with ERP and e-commerce platforms,Real-time inventory analytics and reporting,Cost optimization and waste reduction strategies,Supply chain disruption prediction and mitigation'
+      ],
+      pricing: '$199 - $1,199/month',
+      delivery: '3-5 weeks',
+      category: 'Inventory SaaS'
+    },
+    {
+      title: 'AI-Powered Social Media Analytics Suite',
+      description: 'Comprehensive social media management with AI-driven content optimization and performance analytics',
+      icon: Globe,
+      features: [
+        'AI-powered content creation and optimization suggestions,Real-time social media monitoring and sentiment analysis,Automated posting schedule optimization,Influencer identification and relationship management,Competitor analysis and market intelligence,ROI tracking and performance analytics,Multi-platform content management and scheduling,Integration with CRM and marketing automation tools'
+      ],
+      pricing: '$149 - $799/month',
+      delivery: '3-4 weeks',
+      category: 'Social Media SaaS'
+    },
+    {
+      title: 'Smart Compliance Management Platform',
+      description: 'Automated compliance monitoring and reporting with AI-powered risk assessment and regulatory updates',
+      icon: Shield,
+      features: [
+        'Automated compliance monitoring across multiple regulations,AI-powered risk assessment and mitigation recommendations,Real-time regulatory updates and change notifications,Document management and audit trail maintenance,Compliance reporting and dashboard analytics,Integration with business systems and data sources,Training management and certification tracking,Incident management and response workflows'
+      ],
+      pricing: '$399 - $1,999/month',
+      delivery: '5-7 weeks',
+      category: 'Compliance SaaS'
+    },
+    {
       title: 'Social Media Scheduler Pro',
       description: 'Advanced social media management with AI content creation and optimal posting strategies',
       icon: Globe,
