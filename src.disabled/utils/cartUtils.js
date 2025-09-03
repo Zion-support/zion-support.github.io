@@ -15,7 +15,7 @@ const MIN_QUANTITY = 1;
 export const validateCartItem = (item) => {
   if (!item || typeof item !== 'object') {
     return false}
-  const requiredFields = ['id', 'name', 'price', 'quantity']
+  const requiredFields = ['id,name,price,quantity']
   for (const field of requiredFields) {
     if (!(field in item)) {
       return false}
@@ -278,7 +278,7 @@ export const getCartStats = (cart) => {
 /**;
  * Sort cart items by various criteria;
  * @param {Array} cart - Cart array;
- * @param {string} sortBy - Sort criteria ('name', 'price', 'quantity', 'date');
+ * @param {string} sortBy - Sort criteria ('name,price,quantity,date');
  * @param {string} sortOrder - Sort order ('asc' or 'desc');
  * @returns {Array} Sorted cart array;
  */;

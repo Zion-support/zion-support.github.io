@@ -40,7 +40,7 @@ const nextConfig = {
         /broken_files_backup/,
         /contracts/,
         /hardhat/,
-        /^components\//,  // Exclude root components directory
+        /^components\//, // Exclude root components directory
       ],
     });
 

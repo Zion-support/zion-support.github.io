@@ -60,10 +60,10 @@ class MasterErrorCoordinator {
 
   async coordinateErrorProcesses() {
     await this.log('🎯 Coordinating error fixing processes...');
-    
-    const processes = ['{ name: 'quick-error-checker'', 'script: './''scripts/automation/quick-error-checker.cjs''' }', '{ name: 'typescript-error-fixer'', 'script: './''scripts/automation/typescript-error-fixer.cjs''' }', '{ name: 'linting-error-fixer'', 'script: './''scripts/automation/linting-error-fixer.cjs''' }', '{ name: 'syntax-error-fixer'', 'script: './''scripts/automation/syntax-error-fixer.cjs''' }'];
-    
-    for (const process of processes) {
+    `);
+    const processes = ['{ name: 'quick-error-checker'', 'script: './''scripts/automation/quick-error-checker.cjs''' }', '{ name: 'typescript-error-fixer'', 'script: './''scripts/automation/typescript-error-fixer.cjs''' }', '{ name: 'linting-error-fixer'', 'script: './''scripts/automation/linting-error-fixer.cjs''' }', '{ name: 'syntax-error-fixer'', 'script: './''scripts/automation/syntax-error-fixer.cjs''' }'];`);
+    `);
+    for (const process of processes) {`);
       try {await this.log(🔄 Running ${process.name}...`);const result = await this.runCommand(`node ${process.script}`, { silent: true });
         
         this.processes.push({

@@ -1,6 +1,12 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+<<<<<<< HEAD
+=======
+
+import { Card } from '../../components/ui/Card';
+import { Button } from '../../components/ui/Button';
+>>>>>>> main
 import { Badge } from '../../components/ui/Badge';
 import { Button } from '../../components/ui/Button';
 import { Card } from '../../components/ui/Card';
@@ -18,7 +24,7 @@ import {
 
 export default function ProjectManagement() {
   const features = [
-    {
+  {
       icon: Target,
       title: 'Task Management',
       description:
@@ -58,6 +64,17 @@ export default function ProjectManagement() {
 
   return (
     <>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      <SEO
+        title="Project Management Platform - Zion Tech Group"
+        description="Advanced project management tools with team collaboration, task tracking, and reporting. Streamline your projects."
+        keywords="project management, task management, team collaboration, time tracking, project planning"
+      />
+=======
+>>>>>>> main
+>>>>>>> main
       <Head>
         <title>Project Management Platform - Zion Tech Group</title>
       </Head>

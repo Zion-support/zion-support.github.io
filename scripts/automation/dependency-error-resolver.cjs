@@ -38,10 +38,10 @@ class DependencyErrorResolver {
         encoding: 'utf8',
         stdio: 'pipe',
       });
-      this.log('✅ Dependencies check passed');
-      return { success: true, output: result, issues: [] };
-    } catch (error) {
-      if (error.stdout) {
+      this.log('✅ Dependencies check passed');`);
+      return { success: true, output: result, issues: [] };`);
+    } catch (error) {`);
+      if (error.stdout) {`);
         const issues = this.parseDependencyIssues(error.stdout);this.log(❌ Dependency check failed with ${issues.length} issues`);
         return { success: false, output: error.stdout, issues };
       }

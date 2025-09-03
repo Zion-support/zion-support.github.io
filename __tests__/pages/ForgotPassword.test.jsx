@@ -1,9 +1,18 @@
-import React from 'react';';
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';';
+<<<<<<< HEAD
+import React from 'react';
+import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import;
   '@testing-library/jest-dom';';
-import { BrowserRouter as Router } from 'react-router-dom';';
-import ForgotPassword from '../../src/pages/ForgotPassword' // Adjust path as necessary;';
+import { BrowserRouter as Router } from 'react-router-dom';
+import ForgotPassword from '../../src/pages/ForgotPassword' // Adjust path as necessary;
+=======
+import React   from 'react';';
+import { render, screen, fireEvent, waitFor }    from '@testing-library/react;';
+import';';
+  '@testing-library/jest-dom;
+import { BrowserRouter as Router }   from 'react-router-dom';';
+import ForgotPassword  from '../../src/pages/ForgotPassword';// Adjust path as necessary;';
+>>>>>>> main
 // Mock the auth service;
 // jest.mock(;
   '../../src/services/auth', () => ({';
@@ -50,13 +59,12 @@ import ForgotPassword from '../../src/pages/ForgotPassword' // Adjust path as ne
       target: { value:;
   'success@example.com' }})';
     fireEvent.click(screen.getByRole(;
-  'button', { name: /send reset link/i }));';
+  'button', { name: /send reset link/i });
     // await waitFor(() => {;
     //   expect(screen.getByText(/password reset instructions sent/i)).toBeInTheDocument();
     // });
     // expect(require(,;
-  ../../src/services/auth').forgotPassword).toHaveBeenCalledWith(';
-  'success@example.com');';
+  ../../src/services/auth').forgotPassword).toHaveBeenCalledWith(success@example.com');';
     console.log(;
   'Mock test: Simulating successful submission message check.);';
     // For now, the component directly sets a message:;
@@ -67,8 +75,7 @@ import ForgotPassword from '../../src/pages/ForgotPassword' // Adjust path as ne
   test(,;
   shows error message on failed submission (mocked)', async () => {';
     // require(;
-  '../../src/services/auth').forgotPassword.mockRejectedValueOnce(new Error(';
-  'Failed to send link');';
+  '../../src/services/auth').forgotPassword.mockRejectedValueOnce(new Error(Failed to send link');';
     render(;
       <Router>;
         <ForgotPassword />;
@@ -78,15 +85,19 @@ import ForgotPassword from '../../src/pages/ForgotPassword' // Adjust path as ne
       target: { value:;
   'error@example.com }})';
     fireEvent.click(screen.getByRole(;
-  'button', { name: /send reset link/i }));';
+  'button', { name: /send reset link/i });
     // This test needs the actual API call to be implemented in the component and mocked here.;
     // For now, the component doesn,;
   t show a distinct error message for API failure, only a generic success.;
     // await waitFor(() => {;
     //   expect(screen.getByText(/failed to send link/i)).toBeInTheDocument();
     // });
+<<<<<<< HEAD
     // expect(require('../../src/services/auth;';
-  ').forgotPassword).toHaveBeenCalledWith('error@example.com;';
+  ').forgotPassword).toHaveBeenCalledWith('error@example.com;
   ')';
+=======
+    // expect(require('../../src/services/auth;).forgotPassword).toHaveBeenCalledWith('error@example.com;)';
+>>>>>>> main
     console.log(;
       'Mock test: Simulating error message check (currently not implemented in component this way).)})})';

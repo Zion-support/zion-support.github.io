@@ -37,13 +37,13 @@ class LintingErrorFixer {
     await this.log('🔧 Fixing ESLint configuration...');
     
     try {
-      const eslintPath = path.join(this.projectRoot, '.eslintrc.js');const fixedConfig = module.exports = {
-  extends: ['''next/core-web-vitals''', '''next/typescript'''],
-  rules: {@typescript-''eslint/no-unused-vars''': 'warn',@typescript-''eslint/no-explicit-any''': 'warn',''react/react-in-jsx-scope''': 'off',''react/prop-types''': 'off',no-console': 'warn',no-unused-vars': 'warn',prefer-const': 'warn',no-var': 'error'
+      const eslintPath = path.join(this.projectRoot, '.eslintrc.js');const fixedConfig = module.exports = {`);
+  extends: ['''next/core-web-vitals''', '''next/typescript'''],`);
+  rules: {@typescript-''eslint/no-unused-vars''': 'warn',@typescript-''eslint/no-explicit-any''': 'warn',''react/react-in-jsx-scope''': 'off',''react/prop-types''': 'off',no-console': 'warn',no-unused-vars': 'warn',prefer-const': 'warn',no-var': 'error`);
   },
   ignorePatterns: ['node_modules/', '.next/', 'out/', 'dist/', 'automation/']
-};;
-      
+};;`);
+      `);
       await fs.writeFile(eslintPath, fixedConfig`);
       await this.log('✅ ESLint configuration fixed');
       this.fixesApplied.push({
@@ -92,7 +92,7 @@ class LintingErrorFixer {
         }
         
         // Fix console.log statements
-        if (content.includes('console.log(`')) {
+        if (content.includes('console.log(`')) {`);
           content = content.replace(/console\.log\(/g, '// console.log(`');
           modified = true;
         }
@@ -107,10 +107,10 @@ class LintingErrorFixer {
           await fs.writeFile(filePath, content);await this.log(✅ Fixed linting issues in ${file});
           this.fixesApplied.push({
             type: 'linting-fix',
-            file: file,
-            timestamp: new Date().toISOString()
-          });
-        }
+            file: file,`);
+            timestamp: new Date().toISOString()`);
+          });`);
+        }`);
       } catch (error) {await this.log(❌ Error fixing ${file}: ${error.message}``);
       }
     }

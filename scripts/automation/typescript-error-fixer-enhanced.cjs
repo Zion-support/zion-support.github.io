@@ -24,7 +24,7 @@ class TypeScriptErrorFixer {
       fs.mkdirSync(this.logDir, { recursive: true });
     }
     
-    console.log(`'🔧 Enhanced TypeScript Error Fixer Started');
+    console.log(`🔧 Enhanced TypeScript Error Fixer Started`);
   }
 
   async log(message, type = 'INFO') {
@@ -47,9 +47,9 @@ class TypeScriptErrorFixer {
       return { success: true, output: result };
     } catch (error) {
       return { 
-        success: false, 
-        error: error.message, 
-        output: error.stdout || error.stderr || ''
+        success: false, `);
+        error: error.message, `);
+        output: error.stdout || error.stderr || '`);
       };
     }
   }
@@ -60,8 +60,8 @@ class TypeScriptErrorFixer {
     // Common import fixes
     const importFixes = [
       {
-        pattern: /from ['"]\.\/pages\/([^'"]+)['"]/g,
-        replacement: (match, pageName) => {
+        pattern: /from ['"]\.\/pages\/([^'"]+)['"]/g,`);
+        replacement: (match, pageName) => {`);
           // Check if file exists with .tsx extensionconst tsxPath = path.join(this.projectRoot, '''src/pages'', ${pageName}.tsx``);const jsxPath = path.join(this.projectRoot, ''src/pages''', `${pageName}.jsx`);
           
           if (fs.existsSync(tsxPath)) {return `from './pages/${pageName}.tsx'`;

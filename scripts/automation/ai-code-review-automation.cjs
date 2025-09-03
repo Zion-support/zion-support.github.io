@@ -16,7 +16,7 @@ class AICodeReviewAutomation {
     this.logFile = path.join(this.projectRoot, 'logs', 'ai-code-review.log');
     this.reviewsLog = path.join(this.projectRoot, 'logs', 'ai-reviews.json');
     this.suggestionsLog = path.join(
-      this.projectRoot,logs',
+      this.projectRoot, 'logs',
       'ai-suggestions.json'
     );
     this.ensureLogsDirectory();
@@ -460,7 +460,7 @@ this.log(`Applied ${appliedFixes.length} auto-fixes`);
 
     // Save report to file
     const reportPath = path.join(
-      this.projectRoot,logs', `ai-review-${Date.now()}.json`
+      this.projectRoot, 'logs', `ai-review-${Date.now()}.json`
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 this.log(`Review report generated: ${reportPath}`);

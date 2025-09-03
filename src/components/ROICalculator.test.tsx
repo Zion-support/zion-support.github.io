@@ -1,12 +1,38 @@
-import { render, screen } from '@testing-library/react';"
-import ROICalculator from './ROICalculator';"
+<<<<<<< HEAD
+import { render, screen } from &apos;@testing-library/react';
+import ROICalculator from &apos;./ROICalculator';
+
+describe(&apos;ROICalculator&apos;, () => {
+  it(&apos;renders without crashing&apos;, () => {
+    render(&apos;}}&apos;<ROICalculator />)
+    expect(screen.getByRole(&apos;main&apos;) || screen.getByText(/.*/)).toBeInTheDocument()})
+  it(&apos;displays expected content&apos;, () => {
+    render(&apos;}<ROICalculator />)
+    // Add specific test assertions based on component content})})
+=======
+<<<<<<< HEAD
+import { render, screen } from '@testing-library/react';""
+import ROICalculator from './ROICalculator';""
+describe('ROICalculator', () => {""
+  it('renders without crashing', () => {""
+=======
+import { render, screen } from '@testing-library/react
+import ROICalculator from './ROICalculator
 describe('ROICalculator', () => {"
   it('renders without crashing', () => {"
+>>>>>>> main
     render(<ROICalculator /" >)"
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();"
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();""
   it('displays expected content', () => {
+<<<<<<< HEAD
+    render(<ROICalculator /" >)"
+    // Add specific test assertions based on component content, });
+""
+=======
     render(<ROICalculator /" >)
-    // Add specific test assertions based on component content,
-});
+    // Add specific test assertions based on component content
+})
 "
+>>>>>>> main
 }}
+>>>>>>> main

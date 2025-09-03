@@ -22,7 +22,8 @@ import {
 import UltraAdvancedFuturisticBackground from;
   '../components/ui/UltraAdvancedFuturisticBackground';
 const NewsPage: React.FC = () => {
-  const newsArticles = [{
+  const newsArticles = [
+  {
       title:;
   'Zion Tech Group Launches Revolutionary AI Consciousness Platform,
       excerpt:,
@@ -37,8 +38,7 @@ const NewsPage: React.FC = () => {
       tags: [;
   'AI Consciousness,
 ,
-  Breakthrough',
-  'Innovation'],
+  Breakthrough,Innovation'],
       readTime: '5 min read},
     {
       title:,
@@ -53,9 +53,7 @@ const NewsPage: React.FC = () => {
   6 min read',
       image: '/news/quantum-breakthrough.jpg,
       tags: [
-  'Quantum Computing',
-  'Research',
-  'Breakthrough'],
+  'Quantum Computing,Research,Breakthrough'],
       icon: <Atom className='w-6 h-6' />,
       featured: true},
     {
@@ -72,7 +70,7 @@ const NewsPage: React.FC = () => {
   const [selectedYear, setSelectedYear] = useState('all;
   ');
   const categories = [
-    { id: 'all, name: 'All News;
+  { id: 'all, name: 'All News;
   ', icon: Newspaper, count: 45 },
     { id:,
   ai;
@@ -88,7 +86,7 @@ const NewsPage: React.FC = () => {
   ', name: 'Cybersecurity, icon: Shield, count: 7 }
   ];
   const years = [
-    { id:,
+  { id:,
   all;
   ', name: 'All Years },
     { id:,
@@ -105,8 +103,7 @@ const NewsPage: React.FC = () => {
   TrendingUp, Lightbulb, Rocket, Globe, Shield, Zap,
   Clock, BookOpen, Video, Podcast, FileText, Search} from 'lucide-react;
   ';
-import Link from 'next/link;
-  '
+import Link  from 'next/link;
 return(
     <UltraAdvancedFuturisticBackground>
       <div className='min-h-screen'>
@@ -122,7 +119,7 @@ return(
       date: '2025-01-15',
       readTime: '5 min read',
       image: '/images/news/quantum-ai-launch.jpg',
-      tags: ['Quantum Computing', 'AI', 'Product Launch']
+      tags: ['Quantum Computing,AI,Product Launch']
     },
     {
       id: 2,
@@ -134,7 +131,7 @@ return(
       date: '2025-01-12',
       readTime: '4 min read',
       image: '/images/news/healthcare-partnership.jpg',
-      tags: ['Healthcare', 'Partnership', 'AI']
+      tags: ['Healthcare,Partnership,AI']
     },
     {
       id: 3,
@@ -145,7 +142,7 @@ return(
       date: '2025-01-10',
       readTime: '6 min read',
       image: '/images/news/cybersecurity-breakthrough.jpg',
-      tags: ['Cybersecurity', 'Research', 'Autonomous Systems']
+      tags: ['Cybersecurity,Research,Autonomous Systems']
     },
     {
       id: 4,
@@ -156,7 +153,7 @@ return(
       date: '2025-01-08',
       readTime: '3 min read',
       image: '/images/news/space-expansion.jpg',
-      tags: ['Space Technology', 'Expansion', 'Satellites']
+      tags: ['Space Technology,Expansion,Satellites']
     },
     {
       id: 5,
@@ -167,7 +164,7 @@ return(
       date: '2025-01-05',
       readTime: '7 min read',
       image: '/images/news/ai-ethics-framework.jpg',
-      tags: ['AI Ethics', 'Governance', 'Policy']
+      tags: ['AI Ethics,Governance,Policy']
     },
     {
       id: 6,
@@ -178,9 +175,10 @@ return(
       date: '2025-01-03',
       readTime: '3 min read',
       image: '/images/news/financial-award.jpg',
-      tags: ['Awards', 'Financial Services', 'Quantum Computing']
+      tags: ['Awards,Financial Services,Quantum Computing']
 export default function News() {
-  const featuredNews = [{
+  const featuredNews = [
+  {
       id: 1,
       title:,
   Zion Tech Group Launches Revolutionary AI-Powered Quantum Computing Platform',
@@ -194,9 +192,7 @@ export default function News() {
   5 min read',
       image: '/api/placeholder/600/400,
       tags: [,
-  AI',
-  'Quantum Computing',
-  'Innovation'],
+  AI,Quantum Computing,Innovation'],
 import Head from;
   'next/head';
 import Link from;
@@ -210,7 +206,7 @@ import {
   'lucide-react';
 export default function News() {
   const newsArticles = [
-    {
+  {
       title: 'Zion Tech Group Launches Revolutionary Quantum AI Fusion Platform,
       excerpt:,
   Breakthrough platform combines quantum computing with artificial intelligence, creating unprecedented processing capabilities for solving humanity\'s most complex challenges.;
@@ -260,7 +256,7 @@ export default function News() {
   '}
   ];
   const categories = [
-    { name: 'All, count: newsArticles.length, active: true },
+  { name: 'All, count: newsArticles.length, active: true },
     { name: 'Product Launch;
   ', count: 1, active: false },
     { name: 'Technology;
@@ -269,7 +265,7 @@ export default function News() {
   ', count: 1, active: false }
   ];
   const featuredNews = [
-    {
+  {
       id: 1,
       title:,
   Zion Tech Group Launches Revolutionary AI Consciousness Platform;
@@ -287,8 +283,8 @@ export default function News() {
       image: '/images/news/ai-consciousness-launch.jpg,
       featured: true,
       tags: ['AI Consciousness;
-  ', 'Platform Launch;
-  ', 'Innovation;
+  ,Platform Launch;
+  ,Innovation;
   ']},
     {
       id: 2,
@@ -308,12 +304,12 @@ export default function News() {
       image: '/images/news/quantum-breakthrough.jpg,
       featured: true,
       tags: ['Quantum Computing
-  ', 'Research;
-  ', 'Breakthrough;
+  ,Research;
+  ,Breakthrough;
   ']}
   ];
   const latestNews = [
-    {
+  {
       id: 3,
       title:,
   Enterprise AI Adoption: Trends and Best Practices for 2024,
@@ -330,8 +326,8 @@ export default function News() {
   ',
       image: '/images/news/enterprise-ai-trends.jpg,
       tags: ['Enterprise AI;
-  ', 'Best Practices;
-  ', '2024 Trends;
+  ,Best Practices;
+  ,2024 Trends;
   ']},
     {
       id: 4,
@@ -351,7 +347,7 @@ export default function News() {
   /images/news/autonomous-systems.jpg;
   ',
       tags: ['Autonomous Systems, 'Future of Work
-  ', 'Innovation;
+  ,Innovation;
   ']},
     {
       id: 5,
@@ -370,8 +366,8 @@ export default function News() {
   ',
       image: '/images/news/ai-cybersecurity.jpg,
       tags: ['Cybersecurity
-  ', 'AI Security;
-  ', 'Digital Protection;
+  ,AI Security;
+  ,Digital Protection;
   ']},
     {
       id: 6,
@@ -390,12 +386,12 @@ export default function News() {
   ',
       image: '/images/news/quantum-ml.jpg,
       tags: ['Quantum ML
-  ', 'Research;
-  ', 'Technology Convergence;
+  ,Research;
+  ,Technology Convergence;
   ']}
   ];
   const industryInsights = [
-    {
+  {
       id: 7,
       title:,
   The Rise of Conscious AI: Ethical Considerations and Business Impact,
@@ -411,7 +407,7 @@ export default function News() {
   6 min read;
   ',
       tags: ['AI Ethics, 'Business Impact;
-  ', 'Consciousness;
+  ,Consciousness;
   ']},
     {
       id: 8,
@@ -429,11 +425,11 @@ export default function News() {
   4 min read;
   ',
       tags: ['Micro-SaaS, 'Startups
-  ', 'Software Industry;
+  ,Software Industry;
   ']}
   ];
   const upcomingEvents = [
-    {
+  {
       id: 1,
       title:,
   AI Consciousness Summit 2024;
@@ -555,24 +551,15 @@ export default function News() {
         <div className='max-w-7xl mx-auto'>
           <motion.h2,
   All News;
-  ',
-    'Company News;
-  ',
-    'Partnerships;
-  ',
-    'AI & Ethics;
-  ',
-    'Quantum Technology;
-  ',
-    'Space Technology;
-  ',
-    'Micro SAAS;
-  ',
-    'IT Services;
-  ',
-    'Metaverse;
-  ',
-    'Industry Insights;
+  ,Company News;
+  ,Partnerships;
+  ,AI & Ethics;
+  ,Quantum Technology;
+  ,Space Technology;
+  ,Micro SAAS;
+  ,IT Services;
+  ,Metaverse;
+  ,Industry Insights;
   ';
   ];
   const formatDate = (dateString: string) => {
@@ -1381,7 +1368,7 @@ title: 'Partnership with TechCorp Announced for Cloud Infrastructure',
       readTime: '7 min read',
       image: '📚'}
   ];
-  const categories = ['All', 'Company News', 'Partnerships', 'Innovation', 'Technology', 'Sustainability', 'Case Studies', 'Research']
+  const categories = ['All,Company News,Partnerships,Innovation,Technology,Sustainability,Case Studies,Research']
 
   return(
     <>

@@ -33,7 +33,19 @@ interface ComponentProps {
 
 
 import Link from 'next/link';
+<<<<<<< HEAD
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Linkedin,
+  Twitter,
+  Github,
+  Facebook,
+} from 'lucide-react';
+=======
 import { Cloud, Facebook, Github, Info, Linkedin, Mail, MapPin, Phone, Twitter, User } from 'lucide-react';
+>>>>>>> main
 
 const EnhancedFooter: React.FC = () => {
   return (
@@ -48,9 +60,15 @@ const EnhancedFooter: React.FC = () => {
               Leading provider of revolutionary AI services, innovative micro SaaS solutions, 
               and comprehensive IT services. Transform your business with cutting-edge technology.
             </p>
+<<<<<<< HEAD
+            <div className='flex space-x-4'>
+              <a href='https: //linkedin.com' target='_blank' rel='noopener noreferrer' className='text-gray-300 hover:text-blue-400 transition-colors'>
+                <Linkedin className='w-5 h-5' />
+=======
             <div className="flex space-x-4">
               <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-400 hover:text-white">
                 <Linkedin className="w-6 h-6" />
+>>>>>>> main
               </a>
               <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-white">
                 <Twitter className="w-6 h-6" />
@@ -63,8 +81,13 @@ const EnhancedFooter: React.FC = () => {
 =======
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-12">
+<<<<<<< HEAD
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Company Info */}
+=======
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Compunknown Info */}
+>>>>>>> main
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
@@ -79,7 +102,11 @@ const EnhancedFooter: React.FC = () => {
             </p>
             <div className="flex space-x-4">
               <a
+<<<<<<< HEAD
+                href="https: //linkedin.com"
+=======
                 href="https://linkedin.com"
+>>>>>>> main
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-blue-400 transition-colors"
@@ -338,9 +365,15 @@ const EnhancedFooter: React.FC = () => {
             </p>
             <div className="flex max-w-md mx-auto">
               <input
+<<<<<<< HEAD
+                type='email'
+                placeholder='Enter your email'
+                className='flex-1 px-4 py-2 rounded-l-lg text-gray-900 focus: outline-none focus:ring-2 focus:ring-blue-500'
+=======
                 type="email"
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-2 rounded-l-lg text-gray-900 focus: outline-none focus:ring-2 focus:ring-blue-500"
+>>>>>>> main
               />
               <button className="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-r-lg font-semibold transition-colors">
                 Subscribe
@@ -357,7 +390,11 @@ const EnhancedFooter: React.FC = () => {
             <p className="text-gray-300 text-sm">
               &copy; 2024 Zion Tech Group. All rights reserved.
             </p>
+<<<<<<< HEAD
+            <div className="flex space-x-6 mt-4 md: mt-0">
+=======
             <div className="flex space-x-6 mt-4 md:mt-0">
+>>>>>>> main
               <Link
                 href="/privacy"
                 className="text-gray-300 hover:text-white text-sm transition-colors"

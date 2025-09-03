@@ -38,7 +38,12 @@ interface ComponentProps {
 
 declare global {
   interface Window {
+<<<<<<< HEAD:components/AnalyticsManager.tsx
+    gtag: (...args: any[]) => void;
+  }
+=======
     gtag: (...args: unknown[]) => void}
+>>>>>>> main:components.disabled/components/AnalyticsManager.tsx
 }
 
 declare const gtag: (...args: unknown[]) => void;
@@ -48,8 +53,14 @@ interface AnalyticsEvent {
   category: string;
   action?: string;
   label?: string;
+<<<<<<< HEAD:components/AnalyticsManager.tsx
+  value?: number;
+  custom_parameters?: Record<string, any>;
+}
+=======
   value?: number
   custom_parameters?: Record<string, unknown>}
+>>>>>>> main:components.disabled/components/AnalyticsManager.tsx
 
 interface PerformanceMetrics {
   fcp: number;
@@ -87,7 +98,7 @@ const AnalyticsManager: React.FC = () => {
   const initializeAnalytics = useCallback(() => {
     // Initialize Google Analytics
     if (typeof gtag !== 'undefined') {
-      gtag('config', 'GA_MEASUREMENT_ID', {
+      gtag('config,GA_MEASUREMENT_ID', {
         page_title: document.title,
         page_location: window.location.href,
         custom_map: {
@@ -150,7 +161,11 @@ const AnalyticsManager: React.FC = () => {
 
     // Google Analytics
     if (typeof gtag !== 'undefined') {
+<<<<<<< HEAD:components/AnalyticsManager.tsx
       gtag('event', 'page_view', pageData);
+=======
+      gtag('event,page_view', pageData);
+>>>>>>> main:components.disabled/components/AnalyticsManager.tsx
     }
 
     // Custom analytics
@@ -205,13 +220,25 @@ const AnalyticsManager: React.FC = () => {
         headers: {
           'Content-Type': 'application/json',
         },
+<<<<<<< HEAD:components/AnalyticsManager.tsx
+        body: JSON.stringify(eventData),
+      });
+    } catch (error) {
+      console.error('Analytics: Failed to send event', error);
+    }
+  }, []);
+  const trackUserProperties = useCallback((properties: Record<string, any>) => {
+    if (typeof gtag !== 'undefined') {
+      gtag('config', 'GA_MEASUREMENT_ID', {
+=======
         body: JSON.stringify(eventData)
       })} catch (error) {
       console.error('Analytics: Failed to send event', error)}
   }, [])
   const trackUserProperties = useCallback((properties: Record<string, unknown>) => {
     if (typeof gtag !== 'undefined') {
-      gtag('config', 'GA_MEASUREMENT_ID', {
+      gtag('config,GA_MEASUREMENT_ID', {
+>>>>>>> main:components.disabled/components/AnalyticsManager.tsx
         custom_map: properties,
       });
     }
@@ -228,22 +255,34 @@ const AnalyticsManager: React.FC = () => {
   const trackPerformance = useCallback((metrics: PerformanceMetrics) => {
     // Google Analytics
     if (typeof gtag !== 'undefined') {
-      gtag('event', 'web_vitals', {
+      gtag('event,web_vitals', {
         name: 'FCP',
         value: Math.round(metrics.fcp),
         event_category: 'Performance',
       });
+<<<<<<< HEAD:components/AnalyticsManager.tsx
       gtag('event', 'web_vitals', {
+=======
+      gtag('event,web_vitals', {
+>>>>>>> main:components.disabled/components/AnalyticsManager.tsx
         name: 'LCP',
         value: Math.round(metrics.lcp),
         event_category: 'Performance',
       });
+<<<<<<< HEAD:components/AnalyticsManager.tsx
       gtag('event', 'web_vitals', {
+=======
+      gtag('event,web_vitals', {
+>>>>>>> main:components.disabled/components/AnalyticsManager.tsx
         name: 'FID',
         value: Math.round(metrics.fid),
         event_category: 'Performance',
       });
+<<<<<<< HEAD:components/AnalyticsManager.tsx
       gtag('event', 'web_vitals', {
+=======
+      gtag('event,web_vitals', {
+>>>>>>> main:components.disabled/components/AnalyticsManager.tsx
         name: 'CLS',
         value: Math.round(metrics.cls * 1000),
         event_category: 'Performance',
@@ -278,7 +317,12 @@ const AnalyticsManager: React.FC = () => {
 
     const interval = setInterval(updateSessionDuration, 1000);
     // Store interval ID for cleanup
+<<<<<<< HEAD:components/AnalyticsManager.tsx
+    (window as any).analyticsSessionInterval = interval;
+  }, []);
+=======
     (window as unknown).analyticsSessionInterval = interval}, []);
+>>>>>>> main:components.disabled/components/AnalyticsManager.tsx
 
   const endSession = useCallback(() => {
     const interval = (window as unknown).analyticsSessionInterval;
@@ -368,7 +412,12 @@ const AnalyticsManager: React.FC = () => {
     };
   }, [trackEvent, trackConversion, trackPerformance, trackUserProperties]);
 
+<<<<<<< HEAD:components/AnalyticsManager.tsx
+  return null; // This component doesn&apos;t render anything'
+};
+=======
   return null; // This component doesn't render unknownthing
 }
+>>>>>>> main:components.disabled/components/AnalyticsManager.tsx
 
 export default AnalyticsManager;

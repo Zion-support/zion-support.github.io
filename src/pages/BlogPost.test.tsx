@@ -1,17 +1,41 @@
-import React from 'react';"
-import { render, screen } from '@testing-library/react';"
-import '@testing-library/jest-dom';"
+<<<<<<< HEAD
+describe(&apos;BlogPost&apos;, () => {}&apos; it(&apos;renders without crashing&apos;, () => {} render(&apos;<BlogPost />) '; expect(screen.getByRole (&apos;main&apos;) || screen.getByText(/.*/) ) .toBeInTheDocument () }) &apos; it(&apos;displays expected content&apos;, () => {} render(&apos;&apos;<BlogPost />) 
+=======
+<<<<<<< HEAD
+import React from 'react';""
+import { render, screen } from '@testing-library/react';""
+import '@testing-library/jest-dom';""
 import BlogPost from './BlogPost';
-"
+""
+describe('BlogPost', () => {""
+  it('renders without crashing', () => {
+    render(<BlogPost /" >);"
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();, });
+""
+  it('displays expected content', () => {
+    render(<BlogPost /" >);"
+    // Add more specific tests here, });, });
+""
+=======
+<<<<<<< HEAD
+describe('BlogPost', () => {}' it('renders without crashing', () => {} render(<BlogPost />) '; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ' it('displays expected content', () => {} render(<BlogPost />) '
+=======
+import React from 'react
+import { render, screen } from '@testing-library/react
+import '@testing-library/jest-dom
+import BlogPost from './BlogPost
 describe('BlogPost', () => {"
   it('renders without crashing', () => {
     render(<BlogPost /" >);"
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
-});
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
+})
 "
   it('displays expected content', () => {
-    render(<BlogPost /" >);
-    // Add more specific tests here,
-});,
+    render(<BlogPost /" >)
+    // Add more specific tests here
 });
+})
 "
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

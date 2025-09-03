@@ -1,12 +1,12 @@
 import React from 'react';
-import Head from 'next/head';
-import EnhancedNavigation from './layout/EnhancedNavigation';
-import EnhancedFooter from './layout/EnhancedFooter';
+import Navigation from './Navigation';
+import Footer from './Footer';
+
 interface LayoutProps {
   children: React.ReactNode;
-  title?: string;
-  description?: string}
+}
 
+<<<<<<< HEAD:components/disabled/Layout.tsx
 <<<<<<< HEAD
 const Layout: React.FC<LayoutProps> = ({ 
   children, 
@@ -19,35 +19,26 @@ const Layout: React.FC<LayoutProps> = ({
   description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.',
 >>>>>>> origin/main
 }) => {
+=======
+const Layout: React.FC<LayoutProps> = ({ children }) => {
+>>>>>>> main:components/Layout.tsx
   return (
-    <>
-      <Head>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta
-          name="keywords"
-          content="technology solutions, AI development, cloud services, web development, mobile development, blockchain, IoT, cybersecurity"
-        />
-        <meta name="author" content="Zion Tech Group" />
-        <meta property="og: title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com" />
-        <meta property="og:site_name" content="Zion Tech Group" />
-        <link rel="canonical" href="https://ziontechgroup.com" />
-      </Head>
-      <div className="min-h-screen flex flex-col">
-        <EnhancedNavigation />
-        <main className="flex-grow">{children}</main>
-        <EnhancedFooter />
-      </div>
-    </>
+    <div className='min-h-screen flex flex-col'>
+      <Navigation />
+      <main className='flex-1'>
+        {children}
+      </main>
+      <Footer />
+    </div>
   );
 };
 
+<<<<<<< HEAD:components/disabled/Layout.tsx
 <<<<<<< HEAD
 export default Layout;
 =======
 export default Layout;
 >>>>>>> origin/main
+=======
+export default Layout;
+>>>>>>> main:components/Layout.tsx
