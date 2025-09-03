@@ -1,74 +1,71 @@
 module.exports = {
   apps: [
     {
-      name: 'ziontechgroup-web',
-      script: 'npm',
-      args: 'start',
-      cwd: '/workspace',
+      name: 'error-monitor',
+      script: 'automation/error-monitor.js',
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
-        PORT: 3000
+        LOG_LEVEL: 'info'
       },
-      env_development: {
-        NODE_ENV: 'development',
-        PORT: 3000
-      },
-      log_file: './logs/web.log',
-      out_file: './logs/web-out.log',
-      error_file: './logs/web-error.log',
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
+      error_file: 'automation/logs/error-monitor-error.log',
+      out_file: 'automation/logs/error-monitor-out.log',
+      log_file: 'automation/logs/error-monitor-combined.log',
+      time: true
     },
     {
-      name: 'automation-health-check',
-      script: 'node',
-      args: 'automation/health-check.cjs',
-      cwd: '/workspace',
+      name: 'lint-automation',
+      script: 'automation/lint-automation.js',
       instances: 1,
       autorestart: true,
       watch: false,
-      cron_restart: '*/5 * * * *', // Restart every 5 minutes
-      env: {
-        NODE_ENV: 'production'
-      },
-      log_file: './logs/health-check.log',
-      out_file: './logs/health-check-out.log',
-      error_file: './logs/health-check-error.log'
-    },
-    {
-      name: 'automation-security-scanner',
-      script: 'node',
-      args: 'automation/security-scanner.cjs',
-      cwd: '/workspace',
-      instances: 1,
-      autorestart: true,
-      watch: false,
+      max_memory_restart: '512M',
       cron_restart: '0 */6 * * *', // Restart every 6 hours
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'production',
+        LOG_LEVEL: 'info'
       },
-      log_file: './logs/security-scanner.log',
-      out_file: './logs/security-scanner-out.log',
-      error_file: './logs/security-scanner-error.log'
+      error_file: 'automation/logs/lint-automation-error.log',
+      out_file: 'automation/logs/lint-automation-out.log',
+      log_file: 'automation/logs/lint-automation-combined.log',
+      time: true
     },
     {
-      name: 'automation-performance-monitor',
-      script: 'node',
-      args: 'scripts/performance-monitor.cjs',
-      cwd: '/workspace',
+      name: 'build-monitor',
+      script: 'automation/build-monitor.js',
       instances: 1,
       autorestart: true,
       watch: false,
-      cron_restart: '0 */2 * * *', // Restart every 2 hours
+      max_memory_restart: '1G',
+      cron_restart: '0 2 * * *', // Restart daily at 2 AM
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'production',
+        LOG_LEVEL: 'info'
       },
-      log_file: './logs/performance-monitor.log',
-      out_file: './logs/performance-monitor-out.log',
-      error_file: './logs/performance-monitor-error.log'
+      error_file: 'automation/logs/build-monitor-error.log',
+      out_file: 'automation/logs/build-monitor-out.log',
+      log_file: 'automation/logs/build-monitor-combined.log',
+      time: true
+    },
+    {
+      name: 'git-automation',
+      script: 'automation/git-automation.js',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      cron_restart: '0 */12 * * *', // Restart every 12 hours
+      env: {
+        NODE_ENV: 'production',
+        LOG_LEVEL: 'info'
+      },
+      error_file: 'automation/logs/git-automation-error.log',
+      out_file: 'automation/logs/git-automation-out.log',
+      log_file: 'automation/logs/git-automation-combined.log',
+      time: true
     }
   ]
 };
