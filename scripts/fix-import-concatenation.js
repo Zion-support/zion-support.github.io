@@ -8,12 +8,12 @@ console.log('🔧 Fixing import statement concatenation issues...');
 async function main() {
 // Function to fix concatenated import statements;
 function fixImportConcatenation(content) {
-  // Fix patterns like: import React from 'react';'import Head from 'next/head';
+  // Fix patterns like: import React from 'reactimport Head from 'next/head';
   let fixed = content.replace(
     /import\s+[^;]+;'import\s+/g,
     (match) => {
-      const firstImport = match.split(';'import')[0] + ';';
-      const remainingImports = match.split(';'import').slice(1);
+      const firstImport = match.split(import')[0] + ;
+      const remainingImports = match.split(import').slice(1);
       return firstImport + '\n' + remainingImports.map(imp => 'import ' + imp).join('\n')})
   // Fix patterns like: 'interface SomeProps {prop: string;';
   fixed = fixed.replace(
@@ -51,14 +51,11 @@ function processFile(filePath) {
 }
 // Find all TypeScript and JavaScript files;
 const patterns = [
-  'components/**/*.{ts,tsx,js,jsx}',
-  'pages/**/*.{ts,tsx,js,jsx}',
-  'src/**/*.{ts,tsx,js,jsx}',
-  '*.{ts,tsx,js,jsx}';
+  'components/**/*.{ts,tsx,js,jsx},pages/**/*.{ts,tsx,js,jsx},src/**/*.{ts,tsx,js,jsx},*.{ts,tsx,js,jsx}';
 ];
 let totalFixed = 0;
 for (const pattern of patterns) {
-  const files = await glob(pattern, { ignore: ['node_modules/**', 'dist/**', '.next/**'] })
+  const files = await glob(pattern, { ignore: ['node_modules/**,dist/**,.next/**'] })
   for (const file of files) {
     if (processFile(file)) {
       totalFixed++}
@@ -69,14 +66,13 @@ console.log(`📊 Total files fixed: ${totalFixed}`);
 // Generate report;
 let totalProcessed = 0;
 for (const pattern of patterns) {
-  const files = await glob(pattern, { ignore: ['node_modules/**', 'dist/**', '.next/**'] })
+  const files = await glob(pattern, { ignore: ['node_modules/**,dist/**,.next/**'] })
   totalProcessed += files.length}
 const report = {
   timestamp: new Date().toISOString(),
   totalFilesProcessed: totalProcessed,
   totalFilesFixed: totalFixed,
   patterns: patterns}
-;
 fs.writeFileSync('import-concatenation-fix-report.json', JSON.stringify(report, null, 2));
 console.log('📄 Report saved to: import-concatenation-fix-report.json')}
 main().catch(console.error);

@@ -32,10 +32,10 @@ class EnhancedProjectErrorFixer {
     console.log(`logMessage);
 
     // Append to log file
-    fs.appendFileSync(this.logFile, logMessage + '\n');
-  }
-
-  async run() {
+    fs.appendFileSync(this.logFile, logMessage + '\n');`);
+  }`);
+`);
+  async run() {`);
     this.log('🚀 Starting Enhanced Project Error Fixer');this.log(📁 Project root: ${this.projectRoot}`);
 
     try {

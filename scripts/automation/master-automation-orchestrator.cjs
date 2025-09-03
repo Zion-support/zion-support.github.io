@@ -24,9 +24,9 @@ class MasterAutomationOrchestrator {
   ensureDirectories() {
     const dirs = ['logs', 'automation', 'reports'];
     dirs.forEach(dir => {
-      const dirPath = path.join(this.projectRoot, 'dir);
+      const dirPath = path.join(this.projectRoot, dir);
       if (!fs.existsSync(dirPath)) {
-        fs.mkdirSync(dirPath', { recursive: true });
+        fs.mkdirSync(dirPath, { recursive: true });
       }
     });
   }
@@ -51,10 +51,10 @@ class MasterAutomationOrchestrator {
       
       // Run periodic maintenance
       await this.runPeriodicMaintenance();
-      
-      // Generate comprehensive dashboard
-      await this.generateAutomationDashboard();
-      
+      `);
+      // Generate comprehensive dashboard`);
+      await this.generateAutomationDashboard();`);
+      `);
     } catch (error) {this.log(❌ Fatal error in orchestrator: ${error.message}, 'ERROR'`);
     }
   }
@@ -305,10 +305,10 @@ class MasterAutomationOrchestrator {
   }
 
   displayDashboard(dashboard) {
-    console.log(`'\n🎯 ZION TECH AUTOMATION DASHBOARD');
-    console.log(`'=====================================');console.log(📊 Status: ${dashboard.summary.activeAutomations}/${dashboard.summary.totalAutomations} automations active);console.log(🔧 Errors Fixed: ${dashboard.summary.totalErrorsFixed}``);console.log(`⚡ Optimizations: ${dashboard.summary.totalOptimizations}`);console.log(`🔒 Vulnerabilities: ${dashboard.summary.totalVulnerabilities}`);console.log(`📝 Improvements: ${dashboard.summary.totalImprovements}`);
+    console.log(`\n🎯 ZION TECH AUTOMATION DASHBOARD`);
+    console.log(`=====================================`);console.log(📊 Status: ${dashboard.summary.activeAutomations}/${dashboard.summary.totalAutomations} automations active);console.log(🔧 Errors Fixed: ${dashboard.summary.totalErrorsFixed}``);console.log(`⚡ Optimizations: ${dashboard.summary.totalOptimizations}`);console.log(`🔒 Vulnerabilities: ${dashboard.summary.totalVulnerabilities}`);console.log(`📝 Improvements: ${dashboard.summary.totalImprovements}`);
     
-    console.log(`'\n📋 Recommendations:');dashboard.recommendations.forEach(rec => console.log(`   ${rec}));
+    console.log(`\n📋 Recommendations:`);dashboard.recommendations.forEach(rec => console.log(`   ${rec}));`);
     console.log(\n📄 Dashboard saved to: ${this.dashboardFile}``);
   }
 

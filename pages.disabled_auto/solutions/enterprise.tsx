@@ -424,5 +424,4 @@ const EnterpriseSolutions: NextPage = () => {
       </section>
     </Layout>
   )}
-;
 export default EnterpriseSolutions

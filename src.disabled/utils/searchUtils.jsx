@@ -7,7 +7,6 @@ export const highlightSearchTerms = (text, searchTerm) => {
     const escaped = searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     const regex = new RegExp(`(${escaped})`, 'gi')
     return text.replace(regex, '<mark className='bg-yellow-200 text-black px-1 rounded'>$1</mark>')}
-;
 /**;
  * Check if a text contains the search term (case-insensitive);
  */;
@@ -15,7 +14,6 @@ export const matchesSearchTerm = (text, searchTerm) => {
     if (!text || !searchTerm.trim());
         return false;
     return text.toLowerCase().includes(searchTerm.toLowerCase())}
-;
 /**;
  * Calculate relevance score for search results;
  */;
@@ -50,7 +48,6 @@ export const calculateRelevanceScore = (result, searchTerm) => {
         const dateScore = Math.max(0, 10 - (Date.now() - new Date(result.date).getTime()) / (1000 * 60 * 60 * 24 * 30));
         score += dateScore}
     return score}
-;
 /**;
  * Sort search results based on sort option;
  */;
@@ -77,7 +74,6 @@ export const sortSearchResults = (results, sortBy, searchTerm) => {
                 const scoreB = calculateRelevanceScore(b, searchTerm);
                 return scoreB - scoreA})}
 }
-;
 /**;
  * Filter search results based on active filters;
  */;
@@ -100,7 +96,6 @@ export const filterSearchResults = (results, filters) => {
     if (filters.minRating) {
         filteredResults = filteredResults.filter(result => (result.rating ?? 0) >= filters.minRating)}
     return filteredResults}
-;
 /**;
  * Perform search with filtering and sorting;
  */;
@@ -117,7 +112,6 @@ export const performSearch = (data, searchTerm, filters = {}, sortBy = 'relevanc
     const filteredResults = filterSearchResults(searchResults, filters);
     // Sort results;
     return sortSearchResults(filteredResults, sortBy, searchTerm)}
-;
 /**;
  * Get search suggestions based on search history and popular terms;
  */;
@@ -134,7 +128,6 @@ export const getSearchSuggestions = (searchHistory = [], popularTerms = [], curr
         suggestions.push(...popularTerms.slice(0, 5))}
     // Remove duplicates and limit results;
     return [...new Set(suggestions)].slice(0, 5)}
-;
 /**;
  * Debounce search function to avoid excessive API calls;
  */;
@@ -144,7 +137,6 @@ export const debounceSearch = (func, delay) => {
         clearTimeout(timeoutId);
         timeoutId = setTimeout(() => func.apply(null, args), delay)}
 }
-;
 export default {
     highlightSearchTerms,
     matchesSearchTerm,

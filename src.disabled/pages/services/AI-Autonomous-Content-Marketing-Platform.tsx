@@ -131,11 +131,7 @@ const AIAutonomousContentMarketingPlatform: React.FC = () => {
                   period: '/month',
                   description: 'Perfect for small businesses and startups',
                   features: [;
-                    'Up to 10,000 content pieces/month',
-                    '3 social media channels',
-                    'Basic personalization',
-                    'Standard analytics',
-                    'Email support';
+                    'Up to 10,000 content pieces/month,3 social media channels,Basic personalization,Standard analytics,Email support';
                   ]},
                 {
                   name: 'Professional',
@@ -143,12 +139,7 @@ const AIAutonomousContentMarketingPlatform: React.FC = () => {
                   period: '/month',
                   description: 'Ideal for growing businesses',
                   features: [;
-                    'Up to 50,000 content pieces/month',
-                    'Unlimited social media channels',
-                    'Advanced personalization',
-                    'Real-time analytics',
-                    'Priority support',
-                    'A/B testing';
+                    'Up to 50,000 content pieces/month,Unlimited social media channels,Advanced personalization,Real-time analytics,Priority support,A/B testing';
                   ],
                   popular: true},
                 {
@@ -157,12 +148,7 @@ const AIAutonomousContentMarketingPlatform: React.FC = () => {
                   period: '/month',
                   description: 'For large organizations',
                   features: [
-                    'Unlimited content pieces',
-                    'All channels included',
-                    'AI strategy consulting',
-                    'Custom integrations',
-                    'Dedicated account manager',
-                    'White-label options'
+                    'Unlimited content pieces,All channels included,AI strategy consulting,Custom integrations,Dedicated account manager,White-label options'
                   ]}
               ].map((plan, index) => (
                 <motion.div
@@ -229,12 +215,7 @@ const AIAutonomousContentMarketingPlatform: React.FC = () => {
                 <h3 className='text-3xl font-bold text-white mb-6'>Revolutionary Benefits</h3>
                 <div className='space-y-6'>
                   {[;
-                    'Increase content production by 500% while maintaining quality',
-                    'Reduce marketing costs by up to 60% through automation',
-                    'Improve engagement rates by 300% with personalized content',
-                    'Save 40+ hours per week on content creation and management',
-                    'Boost SEO rankings with AI-optimized content',
-                    'Scale marketing efforts across unlimited channels'
+                    'Increase content production by 500% while maintaining quality,Reduce marketing costs by up to 60% through automation,Improve engagement rates by 300% with personalized content,Save 40+ hours per week on content creation and management,Boost SEO rankings with AI-optimized content,Scale marketing efforts across unlimited channels'
                   ].map((benefit, index) => (
                     <div key={index} className='flex items-start'>
                       <div className='flex-shrink-0 w-6 h-6 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mr-4 mt-1'>
@@ -306,5 +287,4 @@ const AIAutonomousContentMarketingPlatform: React.FC = () => {
       </div>
     </>
   )}
-;
 export default AIAutonomousContentMarketingPlatform

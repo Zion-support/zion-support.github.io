@@ -1,92 +1,55 @@
-import { Link } from 'react-router-dom';
+import Link from 'next/link
 import { motion } from 'framer-motion';
 import {
-  Phone,
-  Mail,
-  MapPin,
-  Linkedin,
-  Twitter,
-  Facebook,
-  Instagram,
-  Github,
-  Youtube,
-  ArrowRight,
-  Star,
-  Shield,
-  Zap,
-  Brain,
-  Cloud,
-  Users,
-  Award,
-  TrendingUp,
-  MessageCircle,
-  HelpCircle,
-  BookOpen,
-  ShoppingCart,
-  Database,
-  Network,
-  BarChart3,
-  Code,
-  Server,
-  Building,
-  Handshake,
-  FileText,
-  Video,
-  GraduationCap,
-  Atom,
-  PenTool,
+  Phone, Mail,
+  MapPin, Linkedin,
+  Twitter, Facebook,
+  Instagram, Github,
+  Youtube, ArrowRight,
+  Star, Shield,
+  Zap, Brain,
+  Cloud, Users,
+  Award, TrendingUp,
+  MessageCircle, HelpCircle,
+  BookOpen, ShoppingCart,
+  Database, Network,
+  BarChart3, Code,
+  Server, Building,
+  Handshake, FileText,
+  Video, GraduationCap,
+<<<<<<< HEAD
+  Atom, PenTool,
   DollarSign} from 'lucide-react';
 export function EnhancedFooter() {
   const currentYear = new Date().getFullYear();
   const footerSections = [
     {
-      title: 'Featured Services',
-      links: [{ name: 'AI Content Generator', href: '/services/ai-content-generator', icon: PenTool, featured: true },
-        { name: 'Smart Inventory Management', href: '/services/smart-inventory-management', icon: Database, featured: true },
-        { name: 'Cloud Migration Services', href: '/services/cloud-migration-services', icon: Cloud, featured: true },
-        { name: 'AI Project Management', href: '/services/ai-project-management', icon: Brain, featured: true },
-        { name: 'AI Customer Support', href: '/services/ai-customer-support-automation', icon: MessageCircle, featured: true }
-      ]},
-    {
+      title: 'Featured Services', links: [{ name: 'AI Content Generator', href: '/services/ai-content-generator', icon: PenTool, featured: true }, { name: 'Smart Inventory Management', href: '/services/smart-inventory-management', icon: Database, featured: true }, { name: 'Cloud Migration Services', href: '/services/cloud-migration-services', icon: Cloud, featured: true }, { name: 'AI Project Management', href: '/services/ai-project-management', icon: Brain, featured: true }, { name: 'AI Customer Support', href: '/services/ai-customer-support-automation', icon: MessageCircle, featured: true }
+      ]}, {
       title: 'Core Services',
       links: [
-        { name: 'Micro SAAS Solutions', href: '/services/micro-saas-solutions', icon: Code },
-        { name: 'AI Services', href: '/ai-services', icon: Brain },
-        { name: 'IT Infrastructure', href: '/it-services', icon: Server },
-        { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },
-        { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions', icon: Shield },
-        { name: '2025 Innovative Services', href: '/zion-innovative-services-2025', icon: Star },
+        { name: 'Micro SAAS Solutions', href: '/services/micro-saas-solutions', icon: Code }, { name: 'AI Services', href: '/ai-services', icon: Brain },
+        { name: 'IT Infrastructure', href: '/it-services', icon: Server }, { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },
+        { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions', icon: Shield }, { name: '2025 Innovative Services', href: '/zion-innovative-services-2025', icon: Star },
         { name: '2025 Services Showcase', href: '/innovative-services-showcase-2025', icon: Star }
-      ]},
-    {
+      ]}, {
       title: 'Solutions',
       links: [
-        { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Building },
-        { name: 'Healthcare Solutions', href: '/solutions/healthcare', icon: Users },
-        { name: 'Financial Solutions', href: '/solutions/financial', icon: TrendingUp },
-        { name: 'Manufacturing Solutions', href: '/solutions/manufacturing', icon: Server },
-        { name: 'Retail Solutions', href: '/solutions/retail', icon: ShoppingCart },
-        { name: 'Space Technology', href: '/solutions/space-tech', icon: Network }
-      ]},
-    {
+        { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Building }, { name: 'Healthcare Solutions', href: '/solutions/healthcare', icon: Users },
+        { name: 'Financial Solutions', href: '/solutions/financial', icon: TrendingUp }, { name: 'Manufacturing Solutions', href: '/solutions/manufacturing', icon: Server },
+        { name: 'Retail Solutions', href: '/solutions/retail', icon: ShoppingCart }, { name: 'Space Technology', href: '/solutions/space-tech', icon: Network }
+      ]}, {
       title: 'Company',
       links: [
-        { name: 'About Us', href: '/about', icon: Users },
-        { name: 'Our Team', href: '/team', icon: Award },
-        { name: 'Careers', href: '/careers', icon: Users },
-        { name: 'News & Press', href: '/press', icon: BookOpen },
-        { name: 'Case Studies', href: '/case-studies', icon: BarChart3 },
-        { name: 'Partners', href: '/partners', icon: Handshake }
-      ]},
-    {
+        { name: 'About Us', href: '/about', icon: Users }, { name: 'Our Team', href: '/team', icon: Award },
+        { name: 'Careers', href: '/careers', icon: Users }, { name: 'News & Press', href: '/press', icon: BookOpen },
+        { name: 'Case Studies', href: '/case-studies', icon: BarChart3 }, { name: 'Partners', href: '/partners', icon: Handshake }
+      ]}, {
       title: 'Resources',
       links: [
-        { name: 'Blog', href: '/blog', icon: BookOpen },
-        { name: 'Documentation', href: '/documentation', icon: FileText },
-        { name: 'Help Center', href: '/help', icon: HelpCircle },
-        { name: 'Webinars', href: '/webinars', icon: Video },
-        { name: 'White Papers', href: '/white-papers', icon: FileText },
-        { name: 'Training', href: '/training', icon: GraduationCap }
+        { name: 'Blog', href: '/blog', icon: BookOpen }, { name: 'Documentation', href: '/documentation', icon: FileText },
+        { name: 'Help Center', href: '/help', icon: HelpCircle }, { name: 'Webinars', href: '/webinars', icon: Video },
+        { name: 'White Papers', href: '/white-papers', icon: FileText }, { name: 'Training', href: '/training', icon: GraduationCap }
       ]}
   ];
   const socialLinks = [
@@ -98,17 +61,14 @@ export function EnhancedFooter() {
     { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-400' }
   ];
   const quickLinks = [
-    { name: 'Contact Us', href: '/contact', icon: MessageCircle },
-    { name: 'Request Quote', href: '/request-quote', icon: DollarSign },
-    { name: 'Support', href: '/help', icon: HelpCircle },
-    { name: 'Privacy Policy', href: '/privacy', icon: Shield },
-    { name: 'Terms of Service', href: '/terms', icon: FileText },
-    { name: 'Cookie Policy', href: '/cookies', icon: Shield }
+    { name: 'Contact Us', href: '/contact', icon: MessageCircle }, { name: 'Request Quote', href: '/request-quote', icon: DollarSign },
+    { name: 'Support', href: '/help', icon: HelpCircle }, { name: 'Privacy Policy', href: '/privacy', icon: Shield },
+    { name: 'Terms of Service', href: '/terms', icon: FileText }, { name: 'Cookie Policy', href: '/cookies', icon: Shield }
   ];
   return(
     <footer className='bg-zinc-900 border-t border-white/20'>
       {/* Main Footer Content */}
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
+      <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8'>
           {/* Company Info */}
           <div className='lg:col-span-2'>
@@ -148,7 +108,7 @@ export function EnhancedFooter() {
                     href={social.href}
                     target='_blank';
                     rel='noopener noreferrer';
-                    className={`text-gray-400 ${social.color} transition-colors hover:scale-110 transform`}
+                    className={`text-gray-400 ${social.color} transition-colors hover: scale-110 transform`}
                     aria-label={social.name}
                   >
                     <social.icon className='w-5 h-5' />
@@ -166,7 +126,7 @@ export function EnhancedFooter() {
                   <li key={link.name}>
                     <Link
                       to={link.href}
-                      className={`flex items-center space-x-2 text-gray-300 hover:text-white transition-colors group ${
+                      className={`flex items-center space-x-2 text-gray-300 hover: text-white transition-colors group ${
                         link.featured ? 'font-medium text-blue-300 hover:text-blue-200' : ''}`}
                     >
                       <link.icon className={`w-4 h-4 transition-transform group-hover:scale-110 ${
@@ -184,12 +144,12 @@ export function EnhancedFooter() {
         </div>
         {/* Quick Links Section */}
         <div className='mt-12 pt-8 border-t border-white/20'>
-          <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4'>
+          <div className='grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-4'>
             {quickLinks.map((link) => (
               <Link
                 key={link.name}
                 to={link.href}
-                className='flex items-center space-x-2 text-gray-400 hover:text-white transition-colors group'>
+                className='flex items-center space-x-2 text-gray-400 hover: text-white transition-colors group'>
                 <link.icon className='w-4 h-4 text-blue-400 group-hover:scale-110 transition-transform' />
                 <span className='text-sm'>{link.name}</span>
               </Link>
@@ -205,11 +165,11 @@ export function EnhancedFooter() {
             <p className='text-gray-300 mb-6'>
               Get the latest insights on AI, quantum computing, and emerging technologies delivered to your inbox.
             </p>
-            <div className='flex flex-col sm:flex-row gap-4 max-w-md mx-auto'>
+            <div className='flex flex-col sm: flex-row gap-4 max-w-md mx-auto'>
               <input
                 type='email';
                 placeholder='Enter your email';
-                className='flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent'/>
+                className='flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent'/>
               <button className='px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105'>
                 Subscribe
               </button>
@@ -240,7 +200,7 @@ export function EnhancedFooter() {
             {/* Back to Top */}
             <button;
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              className='text-gray-400 hover:text-white transition-colors'
+              className='text-gray-400 hover: text-white transition-colors'
             >
               <ArrowRight className='w-4 h-4 rotate-[-90deg]' />
             </button>
@@ -255,10 +215,14 @@ export function EnhancedFooter() {
         className='fixed bottom-6 right-6 z-50'>
         <Link
           to='/contact';
-          className='flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-4 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group transform hover:scale-105'>
+          className='flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 hover: from-blue-700 hover:to-purple-700 text-white px-4 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group transform hover:scale-105'>
           <MessageCircle className='w-5 h-5 group-hover:scale-110 transition-transform' />
           <span className='hidden sm:block font-medium'>Contact Us</span>
         </Link>
       </motion.div>
     </footer>
   )}
+=======
+  Atom, PenTool,;"
+  DollarSign} from 'lucide-react
+>>>>>>> main

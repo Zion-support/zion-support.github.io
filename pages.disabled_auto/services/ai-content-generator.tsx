@@ -25,7 +25,7 @@ import Link from 'next/link';
 
 const AIContentGenerator: NextPage = () => {
   const features = [
-    {
+  {
 :pages.disabled_auto/services/ai-content-generator.tsx;
       title:;
   'Multi-Language Support,
@@ -67,7 +67,8 @@ const AIContentGenerator: NextPage = () => {
       title: 'Real-time Collaboration',
       description: 'Work together with your team in real-time',
       icon: <Users className='w-6 h-6' />}];
-  const pricingPlans = [{
+  const pricingPlans = [
+  {
       name:,
   Starter',
       price: '$99,
@@ -76,16 +77,7 @@ const AIContentGenerator: NextPage = () => {
       description: 'Perfect for small businesses and individuals,
       features: [;
 :pages.disabled_auto/services/ai-content-generator.tsx;
-  '10,000 words per month',
-  '5 languages supported',
-  'Basic SEO optimization',
-  'Email support',
-  'Standard templates';
-        '10, 000 words per month',
-        '5 languages supported',
-        'Basic SEO optimization',
-        'Email support',
-        'Standard templates'],
+  '10,000 words per month,5 languages supported,Basic SEO optimization,Email support,Standard templates10, 000 words per month,5 languages supported,Basic SEO optimization,Email support,Standard templates'],
       popular: false},
     {
       name:,
@@ -96,20 +88,7 @@ const AIContentGenerator: NextPage = () => {
       description: 'Ideal for growing businesses and content teams,
       features: [;
 :pages.disabled_auto/services/ai-content-generator.tsx;
-  '50,000 words per month',
-  '25 languages supported',
-  'Advanced SEO optimization',
-  'Priority support',
-  'Custom templates',
-  'Team collaboration (up to 5 users)',
-  'API access';
-        '50, 000 words per month',
-        '25 languages supported',
-        'Advanced SEO optimization',
-        'Priority support',
-        'Custom templates',
-        'Team collaboration (up to 5 users)',
-        'API access'],
+  '50,000 words per month,25 languages supported,Advanced SEO optimization,Priority support,Custom templates,Team collaboration (up to 5 users),API access50, 000 words per month,25 languages supported,Advanced SEO optimization,Priority support,Custom templates,Team collaboration (up to 5 users),API access'],
       popular: true},
     {
       name:,
@@ -121,29 +100,14 @@ const AIContentGenerator: NextPage = () => {
       features: [;
 :pages.disabled_auto/services/ai-content-generator.tsx;
         'Unlimited words;
-  ',
-        'All languages supported;
-  ',
-        'Custom AI models;
-  ',
-        'Dedicated support;
-  ',
-        'White-label solution;
-  ',
-        'Unlimited team members;
-  ',
-        'Advanced analytics;
-  ',
-        'Custom integrations;
-  ';
-        'Unlimited words',
-        'All languages supported',
-        'Custom AI models',
-        'Dedicated support',
-        'White-label solution',
-        'Unlimited team members',
-        'Advanced analytics',
-        'Custom integrations'],
+  ,All languages supported;
+  ,Custom AI models;
+  ,Dedicated support;
+  ,White-label solution;
+  ,Unlimited team members;
+  ,Advanced analytics;
+  ,Custom integrations;
+  Unlimited words,All languages supported,Custom AI models,Dedicated support,White-label solution,Unlimited team members,Advanced analytics,Custom integrations'],
       popular: false}]
   return(
     <MainLayout
@@ -285,5 +249,4 @@ const AIContentGenerator: NextPage = () => {
       </section>
     </MainLayout>
   )}
-;
 export default AIContentGenerator

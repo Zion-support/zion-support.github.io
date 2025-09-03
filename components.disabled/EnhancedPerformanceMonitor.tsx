@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Activity, Zap, Shield, Globe, TrendingUp, AlertTriangle, CheckCircle } from 'lucide-react'';interface PerformanceMetrics {
+import { Activity, Zap, Shield, Globe, TrendingUp, AlertTriangle, CheckCircle }  from 'lucide-react;interface PerformanceMetrics {
   fcp: number;
    lcp: number;
    fid: number;
@@ -37,7 +37,6 @@ const collectMetrics = useCallback(async (): Promise<PerformanceMetrics> => {
         return}
 const observer = new PerformanceObserver((list) => {const entries = list.getEntries()
         let metrics: Partial<PerformanceMetrics> = {}
-;
         entries.forEach((entry) => {
           switch (entry.entryType) {
 case,
@@ -67,16 +66,15 @@ const finalMetrics = {
           fid: metrics.fid || 0, cls: metrics.cls || 0,
           ttfb: metrics.ttfb || 0, fmp: metrics.fmp || 0,
           tti: metrics.tti || 0, score: 0}
-;
         finalMetrics.score = calculateOverallScore(finalMetrics);
         resolve(finalMetrics)})
       // Observe different types of performance entries;
       try {
 observer.observe({ entryTypes: [,
   paint;
-  ', 'largest-contentful-paint;
-  ', 'first-input;
-  ', 'layout-shift;
+  ,largest-contentful-paint;
+  ,first-input;
+  ,layout-shift;
   '] })'      } catch (error) {
   '        console.warn('Performance Observer not supported: , error)'      }
   '// Fallback timeout;
@@ -110,7 +108,7 @@ const getScoreColor = (score: number): string => {
     if (score >= 90) return 'text-green-500;
   '    if (score >= 70) return;
   'text-yellow-500'    return;
-  'text-red-500'  };
+  'text-red-500'  }
   const getScoreBgColor = (score: number): string => {
     if (score >= 90) return;
   'bg-green-100'    if (score >= 70) return;
@@ -176,5 +174,4 @@ className='flex items-center justify-center text-green-600 dark:text-green-400 b
       )}
     </div>
   )}
-;
 export default EnhancedPerformanceMonitor

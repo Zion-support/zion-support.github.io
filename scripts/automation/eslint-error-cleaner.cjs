@@ -39,10 +39,10 @@ class ESLintErrorCleaner {
         encoding: 'utf8',
         stdio: 'pipe',
       });
-      this.log('✅ ESLint check passed - no errors found');
-      return { success: true, output: result, errors: [] };
-    } catch (error) {
-      if (error.stdout) {
+      this.log('✅ ESLint check passed - no errors found');`);
+      return { success: true, output: result, errors: [] };`);
+    } catch (error) {`);
+      if (error.stdout) {`);
         const errors = this.parseESLintErrors(error.stdout);this.log(❌ ESLint check failed with ${errors.length} errors`);
         return { success: false, output: error.stdout, errors };
       }

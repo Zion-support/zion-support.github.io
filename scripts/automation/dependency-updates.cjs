@@ -4,7 +4,7 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-console.log(`'📦 Starting continuous dependency updates automation...');
+console.log(`📦 Starting continuous dependency updates automation...`);
 
 // Get automation interval from environment variable (default: 6 hours)
 const AUTOMATION_INTERVAL =
@@ -12,10 +12,10 @@ const AUTOMATION_INTERVAL =
 
 async function runDependencyUpdates() {
   try {
-    console.log(`📦 Running dependency updates at ${new Date().toISOString()});
-
-    // Check for outdated dependencies
-    console.log(`'🔍 Checking for outdated dependencies...');
+    console.log(`📦 Running dependency updates at ${new Date().toISOString()});`);
+`);
+    // Check for outdated dependencies`);
+    console.log(`🔍 Checking for outdated dependencies...`);
     try {
       execSync('npm outdated', { stdio: 'inherit' });
     } catch (error) {
@@ -24,7 +24,7 @@ async function runDependencyUpdates() {
     }
 
     // Check for security vulnerabilities
-    console.log(`'🔒 Checking for security vulnerabilities...');
+    console.log(`🔒 Checking for security vulnerabilities...`);
     try {
       execSync('npm audit --audit-level=moderate', { stdio: 'inherit' });
       console.log('✅ No security vulnerabilities found');
@@ -71,7 +71,7 @@ async function runDependencyUpdates() {
         console.log('✅ No major version updates available'`);
       }
     } catch (error) {
-      console.log(`'ℹ️  Could not check for major updates');
+      console.log(`ℹ️  Could not check for major updates`);
     }
 
     // Install dependencies

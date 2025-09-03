@@ -6,12 +6,9 @@
  */;
 import fs from,
   fs';
-import path from;
-  'path';
-import { fileURLToPath } from;
-  'url';
-import { execSync } from;
-  'child_process';
+import path from "pathpath';
+import { fileURLToPath } from "urlurl';
+import { execSync } from "child_processchild_process';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 console.log(
@@ -132,7 +129,6 @@ class DependencyUpdater {
       vulnerabilities: this.vulnerabilities,
       updateSuggestions: this.updates,
       recommendations: this.generateRecommendations()}
-;
     // Save report to file;
     const reportPath = path.join(this.projectRoot,logs;
   ',dependency-update-report.json');

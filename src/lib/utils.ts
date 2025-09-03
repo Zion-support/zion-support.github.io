@@ -1,10 +1,20 @@
-import { type ClassValue, clsx } from 'clsx';
+<<<<<<< HEAD
+import { type ClassValue, clsx } from 'clsx';"
 import { twMerge } from 'tailwind-merge';
-export function cn(...inputs: ClassValue[]) {
+export function cn(...inputs: ClassValue[]) {"
   return twMerge(clsx(inputs))}import { type ClassValue, clsx } from 'clsx';
-export default function Page() {
+=======
+import { type ClassValue, clsx } from 'clsx
+import { twMerge } from 'tailwind-merge
+export function cn(...inputs: ClassValue[]) {"
+  return twMerge(clsx(inputs))}import { type ClassValue, clsx } from 'clsx
+>>>>>>> main
+export default function Page() {"
 import { twMerge  } from 'tailwind-merge';
+<<<<<<< HEAD
 
-export default function Page() {
+=======
+>>>>>>> main
 export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs))}
+  return twMerge(clsx(inputs))}"
+}}

@@ -39,7 +39,7 @@ const AIEmailAutomationSuite = () => {
   useEffect(() => {
     setIsVisible(true)}, [])
   const features = [
-    {
+  {
       icon: <Bot className='w-6 h-6' />,
       title: 'AI-Powered Email Responses',
       description: 'Automatically generate contextual responses using advanced NLP and machine learning algorithms.'},
@@ -64,17 +64,14 @@ const AIEmailAutomationSuite = () => {
       title: 'Team Collaboration',
       description: 'Seamless team workflows with shared inboxes, assignment capabilities, and collaborative responses.'}
   ];
-  const pricingPlans = [{
+  const pricingPlans = [
+  {
       name: 'Starter',
       price: '$29',
       period: '/month',
       description: 'Perfect for small teams',
       features: [;
-        'Up to 1,000 emails/month',
-        'Basic AI responses',
-        'Email prioritization',
-        'Basic analytics',
-        'Email support';
+        'Up to 1,000 emails/month,Basic AI responses,Email prioritization,Basic analytics,Email support';
       ],
       popular: false},
     {
@@ -83,12 +80,7 @@ const AIEmailAutomationSuite = () => {
       period: '/month',
       description: 'Ideal for growing businesses',
       features: [;
-        'Up to 10,000 emails/month',
-        'Advanced AI responses',
-        'Smart categorization',
-        'Advanced analytics',
-        'Team collaboration',
-        'Priority support';
+        'Up to 10,000 emails/month,Advanced AI responses,Smart categorization,Advanced analytics,Team collaboration,Priority support';
       ],
       popular: true},
     {
@@ -97,17 +89,12 @@ const AIEmailAutomationSuite = () => {
       period: '/month',
       description: 'For large organizations',
       features: [;
-        'Unlimited emails',
-        'Custom AI training',
-        'Advanced security',
-        'Custom integrations',
-        'Dedicated support',
-        'SLA guarantee';
+        'Unlimited emails,Custom AI training,Advanced security,Custom integrations,Dedicated support,SLA guarantee';
       ],
       popular: false}
   ]
   const useCases = [
-    {
+  {
       title: 'Customer Support Automation',
       description: 'Reduce response times by 80% with intelligent email routing and automated responses.',
       icon: <MessageSquare className='w-8 h-8 text-blue-500' />
@@ -161,7 +148,7 @@ const AIEmailAutomationSuite = () => {
       <div className='bg-white shadow-sm sticky top-0 z-40'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <nav className='flex space-x-8 overflow-x-auto'>
-            {['overview', 'features', 'pricing', 'use-cases', 'contact'].map((tab) => (
+            {['overview,features,pricing,use-cases,contact'].map((tab) => (
               <button;
                 key={tab}
                 onClick={() => setActiveTab(tab)}
@@ -169,7 +156,7 @@ const AIEmailAutomationSuite = () => {
                   activeTab === tab;
                     ? 'border-blue-500 text-blue-600'
                     : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'}`}
-              >{tab.replace('-', ' ')}
+              >{tab.replace('-, ')}
               </button>
             ))}
           </nav>
@@ -501,5 +488,4 @@ const AIEmailAutomationSuite = () => {
       </div>
     </div>
   )}
-;
 export default AIEmailAutomationSuite

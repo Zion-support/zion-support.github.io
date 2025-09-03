@@ -4,7 +4,7 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-console.log(`'🎯 Starting comprehensive code quality automation...');
+console.log(`🎯 Starting comprehensive code quality automation...`);
 
 // Get automation interval from environment variable (default: 20 minutes)
 const AUTOMATION_INTERVAL =
@@ -12,14 +12,14 @@ const AUTOMATION_INTERVAL =
 
 async function runCodeQualityAutomation() {
   try {
-    console.log(`🎯 Running code quality automation at ${new Date().toISOString()}'
+    console.log(`🎯 Running code quality automation at ${new Date().toISOString()}`);
     );
 
     let totalImprovements = 0;
     let qualityScore = 0;
-
-    // 1. Code formatting and style
-    console.log(`'🎨 Improving code formatting and style...');
+`);
+    // 1. Code formatting and style`);
+    console.log(`🎨 Improving code formatting and style...`);
     const formattingImprovements = await improveCodeFormatting();
     totalImprovements += formattingImprovements;
 
@@ -106,9 +106,9 @@ async function improveCodeFormatting() {
         stdio: 'pipe',
       });
       improvements += 5;
-      console.log(`'  ✅ Applied Prettier formatting');
+      console.log(`  ✅ Applied Prettier formatting`);
     } catch (error) {
-      console.log(`'  ⚠️  Prettier not available, using manual formatting');
+      console.log(`  ⚠️  Prettier not available, using manual formatting`);
     }
 
     // Fix common formatting issues manually
@@ -622,12 +622,12 @@ async function improveDocumentation() {
 
 async function runQualityAssessment() {
   try {
-    console.log(`'  🔍 Running code quality metrics...');
+    console.log(`  🔍 Running code quality metrics...`);
 
     // Count lines of code
-    const loc = countLinesOfCode('src');console.log(`    📊 Lines of code: ${loc});
-
-    // Count test files
+    const loc = countLinesOfCode('src');console.log(`    📊 Lines of code: ${loc});`);
+`);
+    // Count test files`);
     const testFiles = countTestFiles('src');console.log(    🧪 Test files: ${testFiles}``);
 
     // Check for common issues
@@ -636,15 +636,15 @@ async function runQualityAssessment() {
     // Run linting
     try {
       execSync('npm run lint', { stdio: 'pipe' });
-      console.log(`'    ✅ Linting passed');
+      console.log(`    ✅ Linting passed`);
     } catch (error) {
-      console.log(`'    ⚠️  Linting has issues');
+      console.log(`    ⚠️  Linting has issues`);
     }
 
     // Run type checking
     try {
       execSync('npm run type-check', { stdio: 'pipe' });
-      console.log(`'    ✅ Type checking passed');
+      console.log(`    ✅ Type checking passed`);
     } catch (error) {
       console.log('    ⚠️  Type checking has issues');
     }

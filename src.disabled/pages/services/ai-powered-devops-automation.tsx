@@ -63,7 +63,7 @@ const AIPoweredDevOpsAutomation = () => {
   useEffect(() => {
     setIsVisible(true)}, [])
   const features = [
-    {
+  {
       icon: <Bot className='w-6 h-6' />,
       title: 'AI-Powered CI/CD Pipeline',
       description: 'Intelligent build, test, and deployment automation with self-healing capabilities and predictive failure detection.'},
@@ -88,18 +88,14 @@ const AIPoweredDevOpsAutomation = () => {
       title: 'Team Collaboration Tools',
       description: 'Integrated collaboration platform with role-based access, approval workflows, and automated documentation generation.'}
   ];
-  const pricingPlans = [{
+  const pricingPlans = [
+  {
       name: 'Starter',
       price: '$299',
       period: '/month',
       description: 'Perfect for small development teams',
       features: [;
-        'Up to 5 applications',
-        'Basic CI/CD pipelines',
-        'Standard monitoring',
-        'Email support',
-        'Basic security scanning',
-        'GitHub/GitLab integration';
+        'Up to 5 applications,Basic CI/CD pipelines,Standard monitoring,Email support,Basic security scanning,GitHub/GitLab integration';
       ],
       popular: false},
     {
@@ -108,13 +104,7 @@ const AIPoweredDevOpsAutomation = () => {
       period: '/month',
       description: 'Ideal for growing development teams',
       features: [;
-        'Up to 25 applications',
-        'Advanced CI/CD with AI',
-        'Comprehensive monitoring',
-        'Priority support',
-        'Advanced security scanning',
-        'Multi-cloud support',
-        'Team collaboration tools';
+        'Up to 25 applications,Advanced CI/CD with AI,Comprehensive monitoring,Priority support,Advanced security scanning,Multi-cloud support,Team collaboration tools';
       ],
       popular: true},
     {
@@ -123,18 +113,12 @@ const AIPoweredDevOpsAutomation = () => {
       period: '/month',
       description: 'For large organizations',
       features: [;
-        'Unlimited applications',
-        'Custom AI training',
-        'Advanced analytics',
-        'Dedicated support',
-        'Custom integrations',
-        'SLA guarantee',
-        'White-label options';
+        'Unlimited applications,Custom AI training,Advanced analytics,Dedicated support,Custom integrations,SLA guarantee,White-label options';
       ],
       popular: false}
   ]
   const capabilities = [
-    {
+  {
       title: 'Continuous Integration',
       icon: <GitBranch className='w-8 h-8 text-blue-500' />,
       description: 'Automated code integration with intelligent conflict resolution and quality gates'},
@@ -160,7 +144,7 @@ const AIPoweredDevOpsAutomation = () => {
       description: 'Intelligent resource optimization and cost management with automated scaling'}
   ]
   const useCases = [
-    {
+  {
       title: 'Startup Development Teams',
       description: 'Accelerate development cycles with automated CI/CD and intelligent deployment strategies.',
       icon: <Rocket className='w-8 h-8 text-blue-500' />
@@ -214,7 +198,7 @@ const AIPoweredDevOpsAutomation = () => {
       <div className='bg-white shadow-sm sticky top-0 z-40'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <nav className='flex space-x-8 overflow-x-auto'>
-            {['overview', 'features', 'capabilities', 'pricing', 'use-cases', 'contact'].map((tab) => (
+            {['overview,features,capabilities,pricing,use-cases,contact'].map((tab) => (
               <button;
                 key={tab}
                 onClick={() => setActiveTab(tab)}
@@ -222,7 +206,7 @@ const AIPoweredDevOpsAutomation = () => {
                   activeTab === tab;
                     ? 'border-blue-500 text-blue-600'
                     : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'}`}
-              >{tab.replace('-', ' ')}
+              >{tab.replace('-, ')}
               </button>
             ))}
           </nav>
@@ -584,5 +568,4 @@ const AIPoweredDevOpsAutomation = () => {
       </div>
     </div>
   )}
-;
 export default AIPoweredDevOpsAutomation

@@ -29,7 +29,7 @@ const ITServicesPage: NextPage = () => {
   const itServices = getServicesByCategory(
   'it-services)
   const benefits = [
-    {
+  {
       icon: <Shield className='w-8 h-8' />,
 :pages.disabled_auto/services/it-services.tsx
       title:,
@@ -351,5 +351,4 @@ const ITServicesPage: NextPage = () => {
       </section>
     </MainLayout>
   )}
-;
 export default ITServicesPage

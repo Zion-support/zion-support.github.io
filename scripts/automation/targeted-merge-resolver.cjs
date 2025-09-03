@@ -36,10 +36,10 @@ class TargetedMergeResolver {
     this.log('🚀 Starting Targeted Merge Conflict Resolver...');
 
     try {
-      // Step 1: Ensure we're on main branch
-      await this.ensureMainBranch();
-
-      // Step 2: Get priority branches (focus on the most important ones first)
+      // Step 1: Ensure we're on main branch`);
+      await this.ensureMainBranch();`);
+`);
+      // Step 2: Get priority branches (focus on the most important ones first)`);
       const priorityBranches = await this.getPriorityBranches();this.log(Found ${priorityBranches.length} priority branches to process`);
 
       // Step 3: Process priority branches

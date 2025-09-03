@@ -1,55 +1,36 @@
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { Cookie, Settings, Shield, Eye, BarChart3 } from 'lucide-react';
 
 const Cookies: React.FC = () => {
   const cookieTypes = [{
-      name: 'Essential Cookies',
-      icon: Shield,
-      description: 'These cookies are necessary for the website to function properly.',
-      examples: [;
-        'Authentication and login status',
-        'Shopping cart functionality',
-        'Security and fraud prevention',
-        'Load balancing and performance';
-      ],
-      required: true},
+      name: 'Essential Cookies', icon: Shield,
+      description: 'These cookies are necessary for the website to function properly.', examples: [;
+        'Authentication and login status', 'Shopping cart functionality',
+        'Security and fraud prevention', 'Load balancing and performance';
+      ], required: true},
     {
-      name: 'Analytics Cookies',
-      icon: BarChart3,
-      description: 'These cookies help us understand how visitors interact with our website.',
-      examples: [;
-        'Page views and user behavior',
-        'Traffic sources and referrals',
-        'Popular content and features',
-        'Performance metrics and errors';
-      ],
-      required: false},
+      name: 'Analytics Cookies', icon: BarChart3,
+      description: 'These cookies help us understand how visitors interact with our website.', examples: [;
+        'Page views and user behavior', 'Traffic sources and referrals',
+        'Popular content and features', 'Performance metrics and errors';
+      ], required: false},
     {
-      name: 'Marketing Cookies',
-      icon: Eye,
-      description: 'These cookies are used to deliver relevant advertisements and track campaign performance.',
-      examples: [;
-        'Ad targeting and personalization',
-        'Campaign effectiveness measurement',
-        'Social media integration',
-        'Retargeting and remarketing';
-      ],
-      required: false},
+      name: 'Marketing Cookies', icon: Eye,
+      description: 'These cookies are used to deliver relevant advertisements and track campaign performance.', examples: [;
+        'Ad targeting and personalization', 'Campaign effectiveness measurement',
+        'Social media integration', 'Retargeting and remarketing';
+      ], required: false},
     {
-      name: 'Preference Cookies',
-      icon: Settings,
-      description: 'These cookies remember your preferences and settings.',
-      examples: [;
-        'Language and region settings',
-        'Theme and display preferences',
-        'Accessibility options',
-        'Customized content delivery';
-      ],
-      required: false}
+      name: 'Preference Cookies', icon: Settings,
+      description: 'These cookies remember your preferences and settings.', examples: [;
+        'Language and region settings', 'Theme and display preferences',
+        'Accessibility options', 'Customized content delivery';
+      ], required: false}
   ]
   return(
     <div className='min-h-screen bg-gradient-to-br from-slate-50 to-blue-50'>
-      <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
+      <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -108,7 +89,7 @@ const Cookies: React.FC = () => {
                 </div>
               </div>
               <div>
-                <h3 className='text-lg font-semibold text-gray-900 mb-2'>Examples:</h3>
+                <h3 className='text-lg font-semibold text-gray-900 mb-2'>Examples: </h3>
                 <ul className='space-y-1'>
                   {cookie.examples.map((example, exampleIndex) => (
                     <li key={exampleIndex} className='flex items-start'>
@@ -156,7 +137,7 @@ const Cookies: React.FC = () => {
             <div>
               <h3 className='text-lg font-semibold text-gray-900 mb-2'>Cookie Consent</h3>
               <p className='text-gray-600'>
-                When you first visit our website, you'll see a cookie consent banner. You can choose;
+                When you first visit our website, you&apos;ll see a cookie consent banner. You can choose;'
                 which types of cookies to accept. You can change your preferences at any time by;
                 clicking the cookie settings link in our footer.
               </p>
@@ -200,8 +181,7 @@ const Cookies: React.FC = () => {
           className='mt-8 bg-white rounded-lg shadow-sm border border-gray-200 p-8'>
           <h2 className='text-2xl font-bold text-gray-900 mb-4'>Questions About Cookies?</h2>
           <p className='text-gray-600 mb-4'>
-            If you have any questions about our use of cookies, please contact us:
-          </p>
+            If you have any questions about our use of cookies, please contact us: </p>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
             <div>
               <h3 className='font-semibold text-gray-900 mb-2'>Email</h3>
@@ -218,3 +198,7 @@ const Cookies: React.FC = () => {
   )}
 ;
 export default Cookies
+=======
+import { motion } from 'framer-motion
+import { Cookie, Settings, Shield, Eye, BarChart3 } from 'lucide-react
+>>>>>>> main

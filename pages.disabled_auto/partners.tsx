@@ -24,71 +24,59 @@ import Link from 'next/link';
 
 const Partners: NextPage = () => {
   const partnerTypes = [
-    {
+  {
       icon: Handshake,
 :pages.disabled_auto/partners.tsx;
       title:,
   Strategic Partners',
       description: 'Long-term partnerships that drive mutual growth and innovation.,
       benefits: [;
-  'Joint product development',
-  'Shared resources',
-  'Market expansion']},
+  'Joint product development,Shared resources,Market expansion']},
     {
       icon: Award,
       title:,
   Technology Partners',
       description: 'Integration partnerships with leading technology providers.,
       benefits: [
-  'API integrations',
-  'Technical support',
-  'Co-marketing opportunities']},
+  'API integrations,Technical support,Co-marketing opportunities']},
     {
       icon: Users,
       title:,
   Channel Partners',
       description: 'Reseller and distribution partnerships for market reach.,
       benefits: [
-  'Revenue sharing',
-  'Training programs',
-  'Marketing support']},
+  'Revenue sharing,Training programs,Marketing support']},
     {
       icon: Globe,
       title:,
   Global Partners',
       description: 'International partnerships for worldwide market presence.,
       benefits: [,
-  Local expertise',
-  'Regional support',
-  'Cultural adaptation']}
+  Local expertise,Regional support,Cultural adaptation']}
       title: 'Strategic Partners',
       description:;
         'Long-term partnerships that drive mutual growth and innovation.',
       benefits: [;
-        'Joint product development',
-        'Shared resources',
-        'Market expansion']},
+        'Joint product development,Shared resources,Market expansion']},
     {
       icon: Award,
       title: 'Technology Partners',
       description:;
         'Integration partnerships with leading technology providers.',
       benefits: [;
-        'API integrations',
-        'Technical support',
-        'Co-marketing opportunities']},
+        'API integrations,Technical support,Co-marketing opportunities']},
     {
       icon: Users,
       title: 'Channel Partners',
       description: 'Reseller and distribution partnerships for market reach.',
-      benefits: ['Revenue sharing', 'Training programs', 'Marketing support']},
+      benefits: ['Revenue sharing,Training programs,Marketing support']},
     {
       icon: Globe,
       title: 'Global Partners',
       description: 'International partnerships for worldwide market presence.',
-      benefits: ['Local expertise', 'Regional support', 'Cultural adaptation']}];
+      benefits: ['Local expertise,Regional support,Cultural adaptation']}];
   const currentPartners = [
-    {
+  {
 :pages.disabled_auto/partners.tsx;
       name: 'Microsoft,
       logo:,
@@ -161,7 +149,7 @@ const Partners: NextPage = () => {
       description: 'CRM and customer experience solutions',
       category: 'Technology Partner'}];
   const partnershipBenefits = [
-    {
+  {
       icon: Star,
 :pages.disabled_auto/partners.tsx;
       title:,
@@ -351,5 +339,4 @@ const Partners: NextPage = () => {
       </div>
     </MainLayout>
   )}
-;
 export default Partners

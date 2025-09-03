@@ -1,4 +1,4 @@
-
+<<<<<<< HEAD
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -7,19 +7,40 @@ import AnalyticsManager from '../components/AnalyticsManager';
 describe('AnalyticsManager', () => {
   test('renders without crashing', () => {
     render(<AnalyticsManager />);
-    expect(screen.getByTestId('analyticsmanager')).toBeInTheDocument()})
+    expect(screen.getByTestId('analyticsmanager')).toBeInTheDocument();
+  });
 
   test('displays correct content', () => {
     render(<AnalyticsManager />);
+=======
+import React   from 'react''
+import { render, screen, fireEvent }   from '@testing-library/react''
+import '@testing-library/jest-dom
+import AnalyticsManager   from '../components/AnalyticsManager''
+  describe('AnalyticsManager', () => {'
+  test('renders without crashing', () => {'
+    render(<AnalyticsManager  />)
+    expect(screen.getByTestId('analyticsmanager')).toBeInTheDocument();'
+  })
+
+  test('displays correct content', () => {'
+    render(<AnalyticsManager  />)
+>>>>>>> main
     // Add specific content tests based on component
-  })
+  });
 
-  test('handles user interactions', () => {
-    render(<AnalyticsManager />);
+  test('handles user interactions', () => {'
+    render(<AnalyticsManager  />)
     // Add interaction tests based on component functionality
-  })
+  });
 
-  test('applies correct styling', () => {
-    render(<AnalyticsManager />);
+  test('applies correct styling', () => {'
+    render(<AnalyticsManager  />)
     // Add styling tests if needed
-  })})
+<<<<<<< HEAD
+  });
+});
+=======
+  })
+})
+>>>>>>> main

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
@@ -13,57 +14,25 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll)}, []);
   const navigation = [
     {
-      name: 'Home',
-      href: '/',
-      current: location.pathname === '/'},
-    {
+      name: 'Home', href: '/',
+      current: location.pathname === '/'}, {
       name: 'Services',
-      href: '/services',
-      current: location.pathname.startsWith('/services'),
-      dropdown: [{ name: 'AI & Machine Learning', href: '/services/ai-machine-learning' },
-        { name: 'Cloud & DevOps', href: '/services/cloud-devops' },
-        { name: 'Cybersecurity', href: '/services/cybersecurity' },
-        { name: 'Digital Transformation', href: '/services/digital-transformation' },
-        { name: 'Financial Solutions', href: '/services/financial-solutions' },
-        { name: 'Manufacturing Solutions', href: '/services/manufacturing-solutions' },
-        { name: 'Industry Solutions', href: '/services/industry-solutions' }
-      ]},
-    {
+      href: '/services', current: location.pathname.startsWith('/services'), dropdown: [{ name: 'AI & Machine Learning', href: '/services/ai-machine-learning' }, { name: 'Cloud & DevOps', href: '/services/cloud-devops' }, { name: 'Cybersecurity', href: '/services/cybersecurity' }, { name: 'Digital Transformation', href: '/services/digital-transformation' }, { name: 'Financial Solutions', href: '/services/financial-solutions' }, { name: 'Manufacturing Solutions', href: '/services/manufacturing-solutions' }, { name: 'Industry Solutions', href: '/services/industry-solutions' }
+      ]}, {
       name: 'Solutions',
-      href: '/solutions',
-      current: location.pathname.startsWith('/solutions'),
-      dropdown: [
-        { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
-        { name: 'Startup Solutions', href: '/solutions/startup' },
-        { name: 'Space Technology', href: '/solutions/space-tech' },
-        { name: 'Supply Chain', href: '/solutions/supply-chain' }
-      ]},
-    {
+      href: '/solutions', current: location.pathname.startsWith('/solutions'), dropdown: [
+        { name: 'Enterprise Solutions', href: '/solutions/enterprise' }, { name: 'Startup Solutions', href: '/solutions/startup' }, { name: 'Space Technology', href: '/solutions/space-tech' }, { name: 'Supply Chain', href: '/solutions/supply-chain' }
+      ]}, {
       name: 'About',
-      href: '/about',
-      current: location.pathname.startsWith('/about'),
-      dropdown: [
-        { name: 'Our Story', href: '/about/story' },
-        { name: 'Team', href: '/about/team' },
-        { name: 'Careers', href: '/careers' },
-        { name: 'Partners', href: '/partners' }
-      ]},
-    {
+      href: '/about', current: location.pathname.startsWith('/about'), dropdown: [
+        { name: 'Our Story', href: '/about/story' }, { name: 'Team', href: '/about/team' }, { name: 'Careers', href: '/careers' }, { name: 'Partners', href: '/partners' }
+      ]}, {
       name: 'Resources',
-      href: '/resources',
-      current: location.pathname.startsWith('/resources'),
-      dropdown: [
-        { name: 'Blog', href: '/blog' },
-        { name: 'Case Studies', href: '/case-studies' },
-        { name: 'White Papers', href: '/white-papers' },
-        { name: 'Webinars', href: '/webinars' },
-        { name: 'Training', href: '/training' },
-        { name: 'Documentation', href: '/docs' }
-      ]},
-    {
+      href: '/resources', current: location.pathname.startsWith('/resources'), dropdown: [
+        { name: 'Blog', href: '/blog' }, { name: 'Case Studies', href: '/case-studies' }, { name: 'White Papers', href: '/white-papers' }, { name: 'Webinars', href: '/webinars' }, { name: 'Training', href: '/training' }, { name: 'Documentation', href: '/docs' }
+      ]}, {
       name: 'Contact',
-      href: '/contact',
-      current: location.pathname === '/contact'}
+      href: '/contact', current: location.pathname === '/contact'}
   ]
   return(
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -103,7 +72,7 @@ export default function Header() {
                           <Link
                             key={subItem.name}
                             to={subItem.href}
-                            className='block px-4 py-2 text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors'>{subItem.name}
+                            className='block px-4 py-2 text-sm text-gray-700 hover: text-blue-600 hover:bg-blue-50 transition-colors'>{subItem.name}
                           </Link>
                         ))}
                       </div>
@@ -123,17 +92,17 @@ export default function Header() {
             ))}
           </nav>
           {/* CTA Button */}
-          <div className='hidden lg:block'>
+          <div className='hidden lg: block'>
             <Link
               to='/contact';
-              className='bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors'>
+              className='bg-blue-600 hover: bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors'>
               Get Started
             </Link>
           </div>
           {/* Mobile menu button */}
           <button;
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className='lg:hidden p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100'
+            className='lg: hidden p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100'
           >
             <svg className='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
               <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M4 6h16M4 12h16M4 18h16' />
@@ -155,7 +124,7 @@ export default function Header() {
                         <Link;
                           key={subItem.name}
                           to={subItem.href}
-                          className='block text-sm text-gray-600 hover:text-blue-600';
+                          className='block text-sm text-gray-600 hover: text-blue-600';
                           onClick={() => setMobileMenuOpen(false)}
                         >{subItem.name}
                         </Link>
@@ -165,7 +134,7 @@ export default function Header() {
                 ) : (
                   <Link;
                     to={item.href}
-                    className='block text-sm font-medium text-gray-900 hover:text-blue-600';
+                    className='block text-sm font-medium text-gray-900 hover: text-blue-600';
                     onClick={() => setMobileMenuOpen(false)}
                   >{item.name}
                   </Link>
@@ -175,7 +144,7 @@ export default function Header() {
             <div className='pt-4'>
               <Link;
                 to='/contact';
-                className='block w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium text-center transition-colors';
+                className='block w-full bg-blue-600 hover: bg-blue-700 text-white px-6 py-3 rounded-lg font-medium text-center transition-colors';
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Get Started
@@ -186,3 +155,7 @@ export default function Header() {
       )}
     </header>
   )}
+=======
+import React, { useState, useEffect } from 'react
+"
+>>>>>>> main

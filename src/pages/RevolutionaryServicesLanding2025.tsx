@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { revolutionaryMicroSaasServices2025, revolutionaryITServices2025, revolutionaryAIServices2025 } from '../data/revolutionaryServices2025';
 import { Phone, Mail, Globe, MapPin, ArrowRight, Star, TrendingUp, Users, Zap, Shield, Cloud, Brain, CheckCircle, Clock, DollarSign, Target, Rocket } from 'lucide-react';
@@ -9,28 +10,20 @@ const RevolutionaryServicesLanding2025: React.FC = () => {
     revolutionaryAIServices2025[0] // AI Enterprise Automation;
   ]
   const stats = [
-    { label: 'Total Services', value: '16', icon: <Users className='w-6 h-6' /> },
-    { label: 'Micro SAAS', value: '10', icon: <Zap className='w-6 h-6' /> },
-    { label: 'IT Services', value: '3', icon: <Shield className='w-6 h-6' /> },
-    { label: 'AI Services', value: '3', icon: <Brain className='w-6 h-6' /> }
+    { label: 'Total Services', value: '16', icon: <Users className='w-6 h-6' /> }, { label: 'Micro SAAS', value: '10', icon: <Zap className='w-6 h-6' /> },
+    { label: 'IT Services', value: '3', icon: <Shield className='w-6 h-6' /> }, { label: 'AI Services', value: '3', icon: <Brain className='w-6 h-6' /> }
   ]
   const benefits = [
     {
-      icon: <Rocket className='w-8 h-8' />,
-      title: 'Cutting-Edge Innovation',
-      description: 'Stay ahead with the latest AI and technology advancements'},
-    {
+      icon: <Rocket className='w-8 h-8' />, title: 'Cutting-Edge Innovation',
+      description: 'Stay ahead with the latest AI and technology advancements'}, {
       icon: <Target className='w-8 h-8' />,
-      title: 'Proven ROI',
-      description: 'Average 300%+ return on investment within 6 months'},
+      title: 'Proven ROI', description: 'Average 300%+ return on investment within 6 months'},
     {
-      icon: <Clock className='w-8 h-8' />,
-      title: 'Rapid Implementation',
-      description: 'Get up and running in as little as 1-2 weeks'},
-    {
+      icon: <Clock className='w-8 h-8' />, title: 'Rapid Implementation',
+      description: 'Get up and running in as little as 1-2 weeks'}, {
       icon: <DollarSign className='w-8 h-8' />,
-      title: 'Competitive Pricing',
-      description: 'Affordable solutions that fit any business budget'}
+      title: 'Competitive Pricing', description: 'Affordable solutions that fit any business budget'}
   ]
   return(
     <div className='min-h-screen bg-gradient-to-br from-gray-50 to-blue-50'>
@@ -46,16 +39,16 @@ const RevolutionaryServicesLanding2025: React.FC = () => {
               Experience the future of technology with intelligent automation, advanced analytics, and innovative solutions.
             </p>
             {/* CTA Buttons */}
-            <div className='flex flex-col sm:flex-row gap-4 justify-center mb-12'>
+            <div className='flex flex-col sm: flex-row gap-4 justify-center mb-12'>
               <Link
                 to='/revolutionary-services-showcase-2025';
-                className='bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center gap-2 text-lg group'>
+                className='bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover: bg-gray-100 transition-all duration-300 flex items-center justify-center gap-2 text-lg group'>
                 Explore All Services
                 <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
               </Link>
               <Link
                 to='/revolutionary-pricing-guide-2025';
-                className='bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 flex items-center justify-center gap-2 text-lg'>
+                className='bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover: bg-white hover:text-blue-600 transition-all duration-300 flex items-center justify-center gap-2 text-lg'>
                 <DollarSign className='w-5 h-5' />
                 View Pricing
               </Link>
@@ -80,7 +73,7 @@ const RevolutionaryServicesLanding2025: React.FC = () => {
       {/* Contact Banner */}
       <div className='bg-white shadow-lg'>
         <div className='container mx-auto px-4 py-6'>
-          <div className='flex flex-col md:flex-row items-center justify-between gap-4'>
+          <div className='flex flex-col md: flex-row items-center justify-between gap-4'>
             <div className='text-center md:text-left'>
               <h3 className='text-xl font-semibold text-gray-900 mb-2'>
                 Ready to Get Started?
@@ -92,13 +85,13 @@ const RevolutionaryServicesLanding2025: React.FC = () => {
             <div className='flex flex-col sm:flex-row gap-3'>
               <a
                 href='tel:+13024640950';
-                className='inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors'>
+                className='inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors'>
                 <Phone className='w-4 h-4' />
                 Call +1 302 464 0950
               </a>
               <a
                 href='mailto:kleber@ziontechgroup.com';
-                className='inline-flex items-center gap-2 bg-gray-100 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-200 transition-colors'>
+                className='inline-flex items-center gap-2 bg-gray-100 text-gray-700 px-6 py-3 rounded-lg hover: bg-gray-200 transition-colors'>
                 <Mail className='w-4 h-4' />
                 Email Us
               </a>
@@ -118,7 +111,7 @@ const RevolutionaryServicesLanding2025: React.FC = () => {
               transform your business operations and drive growth.
             </p>
           </div>
-          <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
+          <div className='grid grid-cols-1 lg: grid-cols-3 gap-8'>
             {/* Micro SAAS */}
             <div className='bg-white rounded-2xl shadow-lg p-8 border border-gray-100 hover:shadow-xl transition-all duration-300'>
               <div className='text-center mb-6'>
@@ -156,7 +149,7 @@ const RevolutionaryServicesLanding2025: React.FC = () => {
               </div>
               <Link
                 to='/revolutionary-services-showcase-2025';
-                className='w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors text-center font-medium inline-flex items-center justify-center gap-2'>
+                className='w-full bg-blue-600 text-white py-3 rounded-lg hover: bg-blue-700 transition-colors text-center font-medium inline-flex items-center justify-center gap-2'>
                 Explore Micro SAAS
                 <ArrowRight className='w-4 h-4' />
               </Link>
@@ -198,7 +191,7 @@ const RevolutionaryServicesLanding2025: React.FC = () => {
               </div>
               <Link
                 to='/revolutionary-services-showcase-2025';
-                className='w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition-colors text-center font-medium inline-flex items-center justify-center gap-2'>
+                className='w-full bg-purple-600 text-white py-3 rounded-lg hover: bg-purple-700 transition-colors text-center font-medium inline-flex items-center justify-center gap-2'>
                 Explore IT Services
                 <ArrowRight className='w-4 h-4' />
               </Link>
@@ -240,7 +233,7 @@ const RevolutionaryServicesLanding2025: React.FC = () => {
               </div>
               <Link
                 to='/revolutionary-services-showcase-2025';
-                className='w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition-colors text-center font-medium inline-flex items-center justify-center gap-2'>
+                className='w-full bg-green-600 text-white py-3 rounded-lg hover: bg-green-700 transition-colors text-center font-medium inline-flex items-center justify-center gap-2'>
                 Explore AI Services
                 <ArrowRight className='w-4 h-4' />
               </Link>
@@ -260,9 +253,9 @@ const RevolutionaryServicesLanding2025: React.FC = () => {
               businesses across industries.
             </p>
           </div>
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+          <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>
             {featuredServices.map((service, index) => (
-              <div key={service.id} className='bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-8 border border-gray-100 hover:shadow-xl transition-all duration-300'>
+              <div key={service.id} className='bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-8 border border-gray-100 hover: shadow-xl transition-all duration-300'>
                 <div className='text-center mb-6'>
                   <div className='w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4'>
                     {index === 0 && <Brain className='w-8 h-8 text-blue-600' />}
@@ -287,7 +280,7 @@ const RevolutionaryServicesLanding2025: React.FC = () => {
                 <div className='space-y-3'>
                   <Link
                     to='/revolutionary-services-showcase-2025';
-                    className='w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors text-center font-medium inline-flex items-center justify-center gap-2'>
+                    className='w-full bg-blue-600 text-white py-3 rounded-lg hover: bg-blue-700 transition-colors text-center font-medium inline-flex items-center justify-center gap-2'>
                     Learn More
                     <ArrowRight className='w-4 h-4' />
                   </Link>
@@ -315,7 +308,7 @@ const RevolutionaryServicesLanding2025: React.FC = () => {
               solutions that drive real results.
             </p>
           </div>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
+          <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8'>
             {benefits.map((benefit, index) => (
               <div key={index} className='text-center'>
                 <div className='w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4'>
@@ -340,16 +333,16 @@ const RevolutionaryServicesLanding2025: React.FC = () => {
             Join hundreds of businesses that have already transformed their operations;
             with our revolutionary AI-powered services. Get started today!
           </p>
-          <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
+          <div className='flex flex-col sm: flex-row gap-4 justify-center mb-8'>
             <Link
               to='/revolutionary-services-showcase-2025';
-              className='bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center gap-2 text-lg'>
+              className='bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover: bg-gray-100 transition-all duration-300 flex items-center justify-center gap-2 text-lg'>
               Explore All Services
               <ArrowRight className='w-5 h-5' />
             </Link>
             <Link
               to='/revolutionary-pricing-guide-2025';
-              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 flex items-center justify-center gap-2 text-lg'>
+              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover: bg-white hover:text-blue-600 transition-all duration-300 flex items-center justify-center gap-2 text-lg'>
               <DollarSign className='w-5 h-5' />
               View Pricing
             </Link>
@@ -394,7 +387,7 @@ const RevolutionaryServicesLanding2025: React.FC = () => {
             <div>
               <h4 className='text-lg font-semibold mb-4'>Quick Links</h4>
               <ul className='space-y-3 text-sm text-gray-400'>
-                <li><Link to='/revolutionary-services-showcase-2025' className='hover:text-white transition-colors'>Services Showcase</Link></li>
+                <li><Link to='/revolutionary-services-showcase-2025' className='hover: text-white transition-colors'>Services Showcase</Link></li>
                 <li><Link to='/revolutionary-pricing-guide-2025' className='hover:text-white transition-colors'>Pricing Guide</Link></li>
                 <li><a href='/about' className='hover:text-white transition-colors'>About Us</a></li>
                 <li><a href='/contact' className='hover:text-white transition-colors'>Contact</a></li>
@@ -440,3 +433,8 @@ const RevolutionaryServicesLanding2025: React.FC = () => {
   )}
 ;
 export default RevolutionaryServicesLanding2025
+=======
+import { Link } from 'react-router-dom
+import { revolutionaryMicroSaasServices2025, revolutionaryITServices2025, revolutionaryAIServices2025 } from '../data/revolutionaryServices2025
+import { Phone, Mail, Globe, MapPin, ArrowRight, Star, TrendingUp, Users, Zap, Shield, Cloud, Brain, CheckCircle, Clock, DollarSign, Target, Rocket } from 'lucide-react
+>>>>>>> main

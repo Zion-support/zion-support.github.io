@@ -154,8 +154,8 @@ class PM2AutomationLauncher {
               : '🟡';
         const uptime = this.formatUptime(proc.pm2_env.pm_uptime);
 console.log(`\n${statusIcon} ${proc.name}`);console.log(`   Status: ${proc.pm2_env.status}`);console.log(`   Uptime: ${uptime}`);console.log(`   Restarts: ${proc.pm2_env.restart_time}');
-        console.log(   Memory: ${Math.round(proc.monit.memory / 1024 / 1024)}MB'
-        );
+        console.log(   Memory: ${Math.round(proc.monit.memory / 1024 / 1024)}MB'`);
+        );`);
         console.log(`   CPU: ${proc.monit.cpu}%`);
       }
 

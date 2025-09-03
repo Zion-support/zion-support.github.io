@@ -2,8 +2,7 @@
 ,
   const [selectedCategory, setSelectedCategory] = useState('all;
   ')';
-  const [searchQuery, setSearchQuery] = useState(';
-  ')';
+  const [searchQuery, setSearchQuery] = useState()';
   const [selectedCategory, setSelectedCategory] = useState(
   'All')';
   const [sortBy, setSortBy] = useState(
@@ -67,12 +66,11 @@
       default:;
         return 0}
   })}}
-;
   ;
   'Revolutionary': 'bg-gradient-to-r from-purple-600 to-pink-600,
 ,
   'Advanced;
-  ': 'bg-gradient-to-r from-blue-600 to-cyan-600,;
+  ': 'bg-gradient-to-r from-blue-600 to-cyan-600,
   Cutting-Edge;
   ': 'bg-gradient-to-r from-green-600 to-emerald-600}
     return()
@@ -170,8 +168,7 @@
                 <select;
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}';
-                  className='bg-slate-800 border border-slate-600 rounded-lg px-3 py-2 text-white focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none';
-'
+                  className='bg-slate-800 border border-slate-600 rounded-lg px-3 py-2 text-white focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none
                   <option value='innovation'>Innovation Level</option>'
                   <option value='price'>Price</option>'
                   <option value='roi'>ROI</option>
@@ -205,13 +202,9 @@
                 <div className='absolute top-4 right-4'>`
                   <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
                     service.innovationLevel ===,
-  Cutting-edge';
-  ';
-                      ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white';
-  ': service.innovationLevel === 'Advanced';
-  ';
-                      ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white';
-  ';
+  Cutting-edge;
+                      ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white: service.innovationLevel === 'Advanced;
+                      ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white;
                       : 'bg-gradient-to-r from-green-500 to-emerald-500 text-white`}`}>{service.innovationLevel}
                   </span>
                 </div>
