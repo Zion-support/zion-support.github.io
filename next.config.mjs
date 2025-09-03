@@ -1,68 +1,35 @@
-import path from "path";
-import { fileURLToPath } from "url";
-;
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-;
-/** @type {import("next").NextConfig} */;
-const nextConfig = {;
-  reactStrictMode: true,;
-  experimental: {;
-    esmExternals: false,;,
-},;
-  eslint: {;
-    ignoreDuringBuilds: true,;,
-},;
-  typescript: {;
-    ignoreBuildErrors: true,;,
-},;
-  images: {;
-    domains: ["ziontechgroup.com"],;
-    unoptimized: true,;,
-},;
-  compiler: {;
-    removeConsole: process.env.NODE_ENV === "production",;,
-},;
-  webpack: config => {;
-    config.module.rules.push({;
-      test: /\.(ts|tsx)$/,;
-      exclude: [;
-        /node_modules/,;
-        /api-backup/,;
-        /pages\.disabled/,;
-        /backup-pages/,;
-        /components\//,;
-        /\.backup/,;
-        /\.disabled/,;
-        /automation\/backups/,;
-        /automation_backup/,;
-        /broken_files_backup/,;
-        /contracts/,;
-        /hardhat/,;
-      ],;,
-});
-;
-    config.resolve.alias = {;
-      ...config.resolve.alias,;
-      'react-router-dom': path.resolve(__dirname, 'utils/next-router-shim.tsx'),;
-      'react-router': path.resolve(__dirname, 'utils/next-router-shim.tsx'),;
-      'next/link': path.resolve(__dirname, 'utils/next-link-shim.tsx'),;,
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  swcMinify: true,
+  compress: true,
+  poweredByHeader: false,
+  pageExtensions: ['page.tsx', 'page.jsx', 'page.ts', 'page.js'],
+  images: {
+    domains: ["localhost", "ziontechgroup.com"],
+    formats: ['image/webp', 'image/avif'],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384]
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: 'X-Frame-Options', value: 'DENY' },
+          { key: 'X-XSS-Protection', value: '1; mode=block' },
+          { key: 'Referrer-Policy', value: 'origin-when-cross-origin' }
+        ]
+      }
+    ];
+  }
 };
-;
-    config.resolve.fallback = {;
-      ...config.resolve.fallback,;
-      fs: false,;
-      net: false,;
-      tls: false,;,
-};
-;
-    return config;,
-},;
-  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],;
-  onDemandEntries: {;
-    maxInactiveAge: 25 * 1000,;
-    pagesBufferLength: 2,;,
-},;,
-};
-;
+
 export default nextConfig;
