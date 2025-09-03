@@ -1,0 +1,135 @@
+{
+  "timestamp": "2025-09-02T22:16:13.865Z",
+  "steps": [
+    {
+      "name": "ESLint Check",
+      "description": "Check code quality with ESLint",
+      "status": "failed",
+      "duration": 0,
+      "error": "Command failed: npm run lint\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\nOops! Something went wrong! :(\n\nESLint: 8.57.1\n\nReferenceError: module is not defined in ES module scope\nThis file is being treated as an ES module because it has a '.js' file extension and '/workspace/package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at file:///workspace/eslint.config.js?mtime=1756851373802:1:1\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)\n    at async loadFlatConfigFile (/workspace/node_modules/eslint/lib/eslint/flat-eslint.js:303:21)\n    at async calculateConfigArray (/workspace/node_modules/eslint/lib/eslint/flat-eslint.js:382:28)\n    at async FlatESLint.lintFiles (/workspace/node_modules/eslint/lib/eslint/flat-eslint.js:762:25)\n    at async Object.execute (/workspace/node_modules/eslint/lib/cli.js:421:23)\n    at async main (/workspace/node_modules/eslint/bin/eslint.js:152:22)\n"
+    },
+    {
+      "name": "TypeScript Check",
+      "description": "Validate TypeScript types",
+      "status": "failed",
+      "duration": 0,
+      "error": "spawnSync /bin/sh ENOBUFS"
+    },
+    {
+      "name": "Prettier Check",
+      "description": "Check code formatting",
+      "status": "failed",
+      "duration": 0,
+      "error": "spawnSync /bin/sh ENOBUFS"
+    },
+    {
+      "name": "Unit Tests",
+      "description": "Run unit tests with Jest",
+      "status": "failed",
+      "duration": 0,
+      "error": "spawnSync /bin/sh ENOBUFS"
+    },
+    {
+      "name": "Test Coverage",
+      "description": "Generate test coverage report",
+      "status": "failed",
+      "duration": 0,
+      "error": "spawnSync /bin/sh ENOBUFS"
+    },
+    {
+      "name": "Clean Build",
+      "description": "Clean and build the application",
+      "status": "failed",
+      "duration": 0,
+      "error": "Command failed: rm -rf .next && npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⨯ Failed to load next.config.js, see more info here https://nextjs.org/docs/messages/next-config-error\n\n> Build error occurred\nReferenceError: module is not defined in ES module scope\nThis file is being treated as an ES module because it has a '.js' file extension and '/workspace/package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at <unknown> (next.config.js:78:1)\n"
+    },
+    {
+      "name": "Build Analysis",
+      "description": "Analyze bundle size and dependencies",
+      "status": "failed",
+      "duration": 0,
+      "error": "Command failed: npm run analyze\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⨯ Failed to load next.config.js, see more info here https://nextjs.org/docs/messages/next-config-error\n\n> Build error occurred\nReferenceError: module is not defined in ES module scope\nThis file is being treated as an ES module because it has a '.js' file extension and '/workspace/package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at <unknown> (next.config.js:78:1)\n"
+    },
+    {
+      "name": "Dependency Audit",
+      "description": "Check for vulnerable dependencies",
+      "status": "passed",
+      "duration": 603,
+      "output": "found 0 vulnerabilities\n"
+    },
+    {
+      "name": "License Check",
+      "description": "Check dependency licenses",
+      "status": "passed",
+      "duration": 2918,
+      "output": "├─ MIT: 678\n├─ MIT-0: 57\n├─ ISC: 56\n├─ Apache-2.0: 23\n├─ BSD-3-Clause: 19\n├─ BSD-2-Clause: 19\n├─ BlueOak-1.0.0: 5\n├─ CC0-1.0: 3\n├─ (MIT OR CC0-1.0): 3\n├─ Python-2.0: 1\n├─ MPL-2.0: 1\n├─ UNLICENSED: 1\n├─ CC-BY-4.0: 1\n├─ (WTFPL OR MIT): 1\n└─ 0BSD: 1\n\n"
+    },
+    {
+      "name": "Bundle Size Check",
+      "description": "Check build output size",
+      "status": "failed",
+      "duration": 0,
+      "error": "Command failed: du -sh .next/static\ndu: cannot access '.next/static': No such file or directory\n"
+    },
+    {
+      "name": "Performance Audit",
+      "description": "Run performance audit",
+      "status": "failed",
+      "duration": 0,
+      "error": "Command failed: npm run perf:audit\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nfile:///workspace/scripts/performance-monitor.js:186\n    console.log(`   Uptime: ${this.metrics.system.process.uptime || 'N/A}s`);\n                                                                    ^^^^^^^^^\n\nSyntaxError: Invalid or unexpected token\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n\nNode.js v22.16.0\n"
+    }
+  ],
+  "summary": {
+    "total": 11,
+    "passed": 2,
+    "failed": 9,
+    "warnings": 0,
+    "successRate": "18.18"
+  },
+  "recommendations": [
+    {
+      "type": "error",
+      "message": "9 steps failed. Review failed steps and fix issues."
+    },
+    {
+      "type": "warning",
+      "message": "Success rate is below 80%. Consider improving test coverage and fixing issues."
+    },
+    {
+      "type": "fix",
+      "message": "Fix ESLint Check: Command failed: npm run lint\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\nOops! Something went wrong! :(\n\nESLint: 8.57.1\n\nReferenceError: module is not defined in ES module scope\nThis file is being treated as an ES module because it has a '.js' file extension and '/workspace/package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at file:///workspace/eslint.config.js?mtime=1756851373802:1:1\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)\n    at async loadFlatConfigFile (/workspace/node_modules/eslint/lib/eslint/flat-eslint.js:303:21)\n    at async calculateConfigArray (/workspace/node_modules/eslint/lib/eslint/flat-eslint.js:382:28)\n    at async FlatESLint.lintFiles (/workspace/node_modules/eslint/lib/eslint/flat-eslint.js:762:25)\n    at async Object.execute (/workspace/node_modules/eslint/lib/cli.js:421:23)\n    at async main (/workspace/node_modules/eslint/bin/eslint.js:152:22)\n"
+    },
+    {
+      "type": "fix",
+      "message": "Fix TypeScript Check: spawnSync /bin/sh ENOBUFS"
+    },
+    {
+      "type": "fix",
+      "message": "Fix Prettier Check: spawnSync /bin/sh ENOBUFS"
+    },
+    {
+      "type": "fix",
+      "message": "Fix Unit Tests: spawnSync /bin/sh ENOBUFS"
+    },
+    {
+      "type": "fix",
+      "message": "Fix Test Coverage: spawnSync /bin/sh ENOBUFS"
+    },
+    {
+      "type": "fix",
+      "message": "Fix Clean Build: Command failed: rm -rf .next && npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⨯ Failed to load next.config.js, see more info here https://nextjs.org/docs/messages/next-config-error\n\n> Build error occurred\nReferenceError: module is not defined in ES module scope\nThis file is being treated as an ES module because it has a '.js' file extension and '/workspace/package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at <unknown> (next.config.js:78:1)\n"
+    },
+    {
+      "type": "fix",
+      "message": "Fix Build Analysis: Command failed: npm run analyze\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⨯ Failed to load next.config.js, see more info here https://nextjs.org/docs/messages/next-config-error\n\n> Build error occurred\nReferenceError: module is not defined in ES module scope\nThis file is being treated as an ES module because it has a '.js' file extension and '/workspace/package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at <unknown> (next.config.js:78:1)\n"
+    },
+    {
+      "type": "fix",
+      "message": "Fix Bundle Size Check: Command failed: du -sh .next/static\ndu: cannot access '.next/static': No such file or directory\n"
+    },
+    {
+      "type": "fix",
+      "message": "Fix Performance Audit: Command failed: npm run perf:audit\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nfile:///workspace/scripts/performance-monitor.js:186\n    console.log(`   Uptime: ${this.metrics.system.process.uptime || 'N/A}s`);\n                                                                    ^^^^^^^^^\n\nSyntaxError: Invalid or unexpected token\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n\nNode.js v22.16.0\n"
+    }
+  ]
+}
