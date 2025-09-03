@@ -1,1 +1,50 @@
-import React from 'react'; export default function Sitemap() { return ( <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate-darker to-zion-slate-darkest"> <div className="max-w-4xl mx-auto px-6 py-20"> <h1 className="text-4xl font-bold text-white mb-8">Sitemap</h1> <div className="grid grid-cols-1 md:grid-cols-2 gap-8"> <div> <h2 className="text-2xl font-bold text-white mb-4">Main Pages</h2> <ul className="space-y-2 text-gray-300"> <li><a href="/" className="hover:text-zion-cyan">Home</a></li> <li><a href="/about" className="hover:text-zion-cyan">About</a></li> <li><a href="/contact" className="hover:text-zion-cyan">Contact</a></li> <li><a href="/team" className="hover:text-zion-cyan">Team</a></li> <li><a href="/careers" className="hover:text-zion-cyan">Careers</a></li> </ul> </div> <div> <h2 className="text-2xl font-bold text-white mb-4">Services</h2> <ul className="space-y-2 text-gray-300"> <li><a href="/ai-services" className="hover:text-zion-cyan">AI Services</a></li> <li><a href="/it-services" className="hover:text-zion-cyan">IT Services</a></li> <li><a href="/micro-saas" className="hover:text-zion-cyan">Micro SaaS</a></li> <li><a href="/services-overview" className="hover:text-zion-cyan">Services Overview</a></li> <li><a href="/pricing-guide" className="hover:text-zion-cyan">Pricing Guide</a></li> </ul> </div> </div> </div> </div> ); }
+import React from "react"
+import Head from "next/head"
+import Link from "next/link"
+const Sitemap = () => {
+  return (
+    <>
+      <Head>
+        <title>Sitemap - Zion Tech Group</title>
+        <meta name="description" content="Professional Sitemap services"  />
+      </Head>
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-8">
+              Sitemap
+            </h1>
+            <p className="text-xl text-gray-600 mb-12">
+              Professional Sitemap services and solutions
+            </p>
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h2 className="text-2xl font-semibold mb-4">Our Services</h2>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Professional Solutions</li>
+                  <li>• Expert Implementation</li>
+                  <li>• 24/7 Support</li>
+                  <li>• Custom Development</li>
+                </ul>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h2 className="text-2xl font-semibold mb-4">Why Choose Us</h2>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Industry Expertise</li>
+                  <li>• Proven Results</li>
+                  <li>• Scalable Solutions</li>
+                  <li>• Competitive Pricing</li>
+                </ul>
+              </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                View Pricing
+              </Link>
+              <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
+                Contact Us
+              </Link>
+            </div>
+    </>
+  );
+}
+export default Sitemap

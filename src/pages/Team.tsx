@@ -1,1 +1,50 @@
-import React from 'react'; import { motion } from 'framer-motion'; import { Users, Award, Brain, Code, Shield, Cloud, Zap, Globe, Cpu, Database, Network, Lock, FileText, MessageCircle, Video, Heart, Settings, HelpCircle, BookOpen, Briefcase, Target, Lightbulb, ShieldCheck, Server, Smartphone, Monitor, Wifi, Bluetooth, Satellite, Atom, Dna, Microscope, Flask, TestTube, Syringe, Stethoscope, HeartPulse, BrainCircuit, Eye, Ear, Hand, Foot, Bone, Tooth, Pill, Bandage, Thermometer, Scale, Calculator, ChartBar, PieChart, LineChart, Activity, TrendingDown, Minus, Plus, Equal, Divide, Percent, DollarSign, Euro, Pound, Yen, Bitcoin, Ethereum, CreditCard, Wallet, Banknote, Coins, PiggyBank, Safe, Vault, LockKeyhole, Key, Fingerprint, QrCode, Barcode, Scan, Camera, VideoOff, Mic, MicOff, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, Rewind, FastForward, Shuffle, Repeat, Repeat1, Shuffle2, SkipBack2, SkipForward2, PlayCircle, PauseCircle, StopCircle, SkipBackCircle, SkipForwardCircle, RewindCircle, FastForwardCircle, ShuffleCircle, RepeatCircle, Repeat1Circle, Shuffle2Circle, SkipBack2Circle, SkipForward2Circle, PlaySquare, PauseSquare, StopSquare, SkipBackSquare, SkipForwardSquare, RewindSquare, FastForwardSquare, ShuffleSquare, RepeatSquare, Repeat1Square, Shuffle2Square, SkipBack2Square, SkipForward2Square, PlayTriangle, PauseTriangle, StopTriangle, SkipBackTriangle, SkipForwardTriangle, RewindTriangle, FastForwardTriangle, ShuffleTriangle, RepeatTriangle, Repeat1Triangle, Shuffle2Triangle, SkipBack2Triangle, SkipForward2Triangle, PlayOctagon, PauseOctagon, StopOctagon, SkipBackOctagon, SkipForwardOctagon, RewindOctagon, FastForwardOctagon, ShuffleOctagon, RepeatOctagon, Repeat1Octagon, Shuffle2Octagon, SkipBack2Octagon, SkipForward2Octagon, PlayDodecagon, PauseDodecagon, StopDodecagon, SkipBackDodecagon, SkipForwardDodecagon, RewindDodecagon, FastForwardDodecagon, ShuffleDodecagon, RepeatDodecagon, Repeat1Dodecagon, Shuffle2Dodecagon, SkipBack2Dodecagon, SkipForward2Dodecagon, Mail, MapPin, Star, Crown, Gem, Sparkles, Flame, Thunder, Lightning, Sun, Moon, Planet, Galaxy, Universe, Infinity, Alpha, Beta, Gamma, Delta, Epsilon, Zeta, Eta, Theta, Iota, Kappa, Lambda, Mu, Nu, Xi, Omicron, Pi, Rho, Sigma, Tau, Upsilon, Phi, Chi, Psi, Omega, Linkedin, Twitter, Github } from 'lucide-react'; export default function Team() { const teamMembers = [ { name: 'Dr. Kleber Santos', role: 'CEO & Founder', bio: 'Visionary leader with 20+ years in AI and technology innovation. PhD in Computer Science from MIT.', image: '/team/kleber-santos.jpg', expertise: ['AI Research', 'Strategic Leadership', 'Innovation'], social: { linkedin: 'https:
+import React from "react"
+import Head from "next/head"
+import Link from "next/link"
+const Team = () => {
+  return (
+    <>
+      <Head>
+        <title>Team - Zion Tech Group</title>
+        <meta name="description" content="Professional Team services"  />
+      </Head>
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-8">
+              Team
+            </h1>
+            <p className="text-xl text-gray-600 mb-12">
+              Professional Team services and solutions
+            </p>
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h2 className="text-2xl font-semibold mb-4">Our Services</h2>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Professional Solutions</li>
+                  <li>• Expert Implementation</li>
+                  <li>• 24/7 Support</li>
+                  <li>• Custom Development</li>
+                </ul>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h2 className="text-2xl font-semibold mb-4">Why Choose Us</h2>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Industry Expertise</li>
+                  <li>• Proven Results</li>
+                  <li>• Scalable Solutions</li>
+                  <li>• Competitive Pricing</li>
+                </ul>
+              </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                View Pricing
+              </Link>
+              <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
+                Contact Us
+              </Link>
+            </div>
+    </>
+  );
+}
+export default Team
