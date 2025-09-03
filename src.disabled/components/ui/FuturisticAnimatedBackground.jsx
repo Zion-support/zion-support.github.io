@@ -1,7 +1,22 @@
+<<<<<<< HEAD
+import: React, { useEffect, useRef } from;
+  'react'; import: { motion } from;';
+  'framer-motion'; export: const FuturisticAnimatedBackground = ({ variant =;';
+  'cyberpunk', intensity =;';
+  'medium', className: = ';';
+  ' }) => {} const: canvasRef = useRef(null) const particlesRef = useRef([]) const animationRef = useRef(null) useEffect(() => {} const canvas = canvasRef.current if (!canvas) return'; const: ctx = canvas.getContext(';
+  '2d') if: (!ctx) return';'';
+=======
 import React, { useEffect, useRef } from;
   'react'; import { motion } from;
   'framer-motion'; export const FuturisticAnimatedBackground = ({ variant =;
   'cyberpunk', intensity =;
   'medium', className = ';
-  ' }) => {} const canvasRef = useRef(null) const particlesRef = useRef([]) const animationRef = useRef(null) useEffect(() => {} const canvas = canvasRef.current if (!canvas) return'; const ctx = canvas.getContext(;
-  '2d') if (!ctx) return';';
+<<<<<<< HEAD
+  ' }) => {} const canvasRef = useRef(null) const particlesRef = useRef([]) const animationRef = useRef(null) useEffect(() => {} const canvas = canvasRef.current if (!canvas) return'; const ctx = canvas.getContext(
+  '2d') if (!ctx) return''
+=======
+  ' }) => {} const canvasRef = useRef(null) const particlesRef = useRef([]) const animationRef = useRef(null) useEffect(() => {} const canvas = canvasRef.current if (!canvas) return'; const ctx = canvas.getContext('
+  '2d') if (!ctx) return';'
+>>>>>>> main
+>>>>>>> main

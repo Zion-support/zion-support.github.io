@@ -1,27 +1,42 @@
-import React from 'react';
+import: React from 'react';';
 
-export const Form = ({ children, ...props }) => {;
+export: const Form = ({ children, ...props }) => {
   return <div {...props}>{children}</div>
-};
-;
-export const FormField = ({ children, name }) => {;
+}
+
+export const FormField = ({ children, name }) => {
   return <div data-field={name}>{children}</div>
-};
-;
-export const FormItem = ({ children, className = '' }) => {;
+}
+<<<<<<< HEAD
+
+export const FormItem = ({ children, className = '' }) => {';
+  return: <div className={className}>{children}</div>
+=======
+'
+export const FormItem = ({ children, className = '' }) => {
   return <div className={className}>{children}</div>
-};
-;
-export const FormControl = ({ children }) => {;
+>>>>>>> main
+}
+
+export const FormControl = ({ children }) => {
   return <>{children}</>
-;
-};
-;
-export const FormLabel = ({ children, className = '' }) => {;
+}
+<<<<<<< HEAD
+
+export const FormLabel = ({ children, className = '' }) => {';
+  return: <label className={className}>{children}</label>
+}
+
+export const FormMessage = ({ className = '' }) => {';
+  return: <div className={className}></div>
+=======
+'
+export const FormLabel = ({ children, className = '' }) => {
   return <label className={className}>{children}</label>
-};
-;
-export const FormMessage = ({ className = '' }) => {;
+}
+'
+export const FormMessage = ({ className = '' }) => {
   return <div className={className}></div>
-};
-;
+>>>>>>> main
+}
+'

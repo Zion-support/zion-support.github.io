@@ -1,105 +1,56 @@
-import React from 'react';
-import Link from 'next/link';
-import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
+<<<<<<< HEAD
+ import: { Link } from 'react - router - dom'  export const SimpleFooter: React.FC: = () => { const currentYear = new Date () .getFullYear ()   return ( <footer className="bg - gray - 900 text - white py - 8">"'" <div className="max - w-7xl mx - auto px - 4 sm: px: - 6 lg:px: - 8">"'" <div className="grid grid - cols - 1 md: grid: - cols - 4 gap - 8">';" ,{}"'" <div: className="space - y-4">"'" <h3 className="text - xl font - bold text - cyan - 400">Zion Tech Group</h3>"'" <p className="text - gray - 300">'; Transforming: businesses through cutting - edge technology and expert consulting.'" </p>"'" <div className="flex space - x-4">"'" <a href="https: """";",;,";";
+ import: { Link } from 'react - router - dom'  export const SimpleFooter: React.FC: = () => { const currentYear = new Date () .getFullYear ()   return ( <footer className='bg - gray - 900 text - white py - 8'>''' <div className='max - w-7xl mx - auto px - 4 sm: px: - 6 lg:px: - 8'>''' <div className='grid grid - cols - 1 md: grid: - cols - 4 gap - 8'>';' ,{}''' <div: className='space - y-4'>''' <h3 className='text - xl font - bold text - cyan - 400'>Zion Tech Group</h3>''' <p className='text - gray - 300'>'; Transforming: businesses through cutting - edge technology and expert consulting.'' </p>''' <div className='flex space - x-4'>''' <a href='https: '''";";";";,
+=======
+<<<<<<< HEAD
+ import { Link } from 'react - router - dom'  export const SimpleFooter: React.FC = () => { const currentYear = new Date () .getFullYear ()   return ( <footer className="bg - gray - 900 text - white py - 8">"'" <div className="max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8">"'" <div className="grid grid - cols - 1 md: grid - cols - 4 gap - 8">'" {}"'" <div className="space - y-4">"'" <h3 className="text - xl font - bold text - cyan - 400">Zion Tech Group</h3>"'" <p className="text - gray - 300">' Transforming businesses through cutting - edge technology and expert consulting.'" </p>"'" <div className="flex space - x-4">"'" <a href="https: """";"
+ import { Link } from 'react - router - dom'  export const SimpleFooter: React.FC = () => { const currentYear = new Date () .getFullYear ()   return ( <footer className='bg - gray - 900 text - white py - 8'>''' <div className='max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8'>''' <div className='grid grid - cols - 1 md: grid - cols - 4 gap - 8'>'' {}''' <div className='space - y-4'>''' <h3 className='text - xl font - bold text - cyan - 400'>Zion Tech Group</h3>''' <p className='text - gray - 300'>' Transforming businesses through cutting - edge technology and expert consulting.'' </p>''' <div className='flex space - x-4'>''' <a href='https: '''";"
+=======
+<<<<<<< HEAD
+ import { Link } from 'react - router - dom'  export const SimpleFooter: React.FC = () => { const currentYear = new Date () .getFullYear ()   return ( <footer className="bg - gray - 900 text - white py - 8">"'" <div className="max - w-7xl mx - auto px - 4 sm: px - 6 l,
+    g:px - 8">"'" <div className="grid grid - cols - 1 m,
+    d: grid - cols - 4 gap - 8">';" {}"'" <div className="space - y-4">"'" <h3 className="text - xl font - bold text - cyan - 400">Zion Tech Group</h3>"'" <p className="text - gray - 300">'; Transforming businesses through cutting - edge technology and expert consulting.'" </p>"'" <div className="flex space - x-4">"'" <a href="https: """";""
+ import { Link } from 'react - router - dom'  export const SimpleFooter: React.FC = () => { const currentYear = new Date () .getFullYear ()   return ( <footer className='bg - gray - 900 text - white py - 8>'' <div className='max - w-7xl mx - auto px - 4 sm: px - 6 l,
+    g:px - 8>'' <div className='grid grid - cols - 1 m,
+    d: grid - cols - 4 gap - 8>; {}' <div className='space - y-4>'' <h3 className='text - xl font - bold text - cyan - 400'>Zion Tech Group</h3>''' <p className='text - gray - 300>; Transforming businesses through cutting - edge technology and expert consulting.'' </p>''' <div className='flex space - x-4>'' <a href='https: '''";"
+"
+=======
+<<<<<<< HEAD
+ import { Link } from 'react - router - dom'  export const SimpleFooter: React.FC = () => { const currentYear = new Date () .getFullYear ()   return ( <footer className="bg - gray - 900 text - white py - 8">"'" <div className="max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8">"'" <div className="grid grid - cols - 1 md: grid - cols - 4 gap - 8">';" {}"'" <div className="space - y-4">"'" <h3 className="text - xl font - bold text - cyan - 400">Zion Tech Group</h3>"'" <p className="text - gray - 300">'; Transforming businesses through cutting - edge technology and expert consulting.'" </p>"'" <div className="flex space - x-4">"'" <a href="https:"";
+ import { Link } from 'react - router - dom'  export const SimpleFooter: React.FC = () => { const currentYear = new Date () .getFullYear ()   return ( <footer className='bg - gray - 900 text - white py - 8'>'' <div className='max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8'>'' <div className='grid grid - cols - 1 md: grid - cols - 4 gap - 8'>';' {}'' <div className='space - y-4'>'' <h3 className='text - xl font - bold text - cyan - 400'>Zion Tech Group</h3>'' <p className='text - gray - 300'>'; Transforming businesses through cutting - edge technology and expert consulting.' </p>'' <div className='flex space - x-4'>'' <a href='https:''";
+=======
+<<<<<<< HEAD
+ import {Link } from 'react - router - dom'  export const SimpleFooter: React.FC = () => {const currentYear = new Date () .getFullYear ()   return ( <footer className="bg - gray - 900 text - white py - 8">"'" <div className="max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8">"'" <div className="grid grid - cols - 1 md: grid - cols - 4 gap - 8">';" {}"'" <div className="space - y-4">"'" <h3 className="text - xl font - bold text - cyan - 400">Zion Tech Group</h3>"'" <p className="text - gray - 300">'; Transforming businesses through cutting - edge technology and expert consulting.'" </p>"'" <div className="flex space - x-4">"'" <a href="https: """";" import {Link } from 'react - router - dom' export const SimpleFooter: React.FC = () => {const currentYear = new Date () .getFullYear ()   return ( <footer className='bg - gray - 900 text - white py - 8'>''' <div className='max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8'>''' <div className='grid grid - cols - 1 md: grid - cols - 4 gap - 8'>';' {}''' <div className='space - y-4'>''' <h3 className='text - xl font - bold text - cyan - 400'>Zion Tech Group</h3>''' <p className='text - gray - 300'>'; Transforming businesses through cutting - edge technology and expert consulting.'' </p>''' <div className='flex space - x-4'>''' <a href='https: '''";"
+=======
+<<<<<<< HEAD
+ import { Link } from &apos;react - router - dom&apos;&apos;'  export const SimpleFooter: React.FC = () => {} const currentYear = new Date () .getFullYear ()   return ( <;<footer className=&quot;bg - gray - 900 text - white py - 8&quot;>"&apos;&quot;&quot;" <;<div className=&quot;max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8&quot;>"&apos;&quot; ;&quot;&quot;<div className=&quot;grid grid - cols - 1 m,d: grid - cols - 4 gap - 8&quot;>';&quot; {}"&apos;&quot;&quot;" <div className=&quot;space - y-4&quot;>"&apos;&quot;&quot;" <h3 className=&quot;text - xl font - bold text - cyan - 400&quot;>Zion Tech Group&quot;</h3>"&apos;&quot;&quot;" <p className=&quot;text - gray - 300&quot;>'; Transforming businesses through cutting - edge technology and expert consulting.&apos;&quot;&quot;" </p>"&apos;&quot;&quot;" <div className=&quot;flex space - x-4&quot;>"&apos;&quot;&quot;" <a href=&quot;https:&quot;&quot;"";
+ import { Link } from &apos;react - router - dom&apos;&apos;'  export const SimpleFooter: React.FC = () => {} const currentYear = new Date () .getFullYear ()   return ( <;<footer className=&apos;bg - gray - 900 text - white py - 8&apos;>'&apos;&apos;'' <;<div className=&apos;max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8&apos;>'&apos;&apos; ;&apos;&apos;<div className=&apos;grid grid - cols - 1 m,d: grid - cols - 4 gap - 8&apos;>';&apos; {}&apos;&apos;'&apos;&apos; <div className=&apos;space - y-4&apos;>'&apos;&apos;'' <h3 className=&apos;text - xl font - bold text - cyan - 400&apos;>Zion Tech Group&apos;</h3>&apos;&apos;'&apos;&apos; <p className=&apos;text - gray - 300&apos;>'; Transforming businesses through cutting - edge technology and expert consulting.&apos;&apos;'' </p>&apos;&apos;'&apos;&apos; <div className=&apos;flex space - x-4&apos;>'&apos;&apos;'' <a href=&apos;https:&apos;&apos;'";
+&quot;"
+=======
+<<<<<<< HEAD
+ import { Link } from 'react - router - dom'  export const SimpleFooter: React.FC = () => { const currentYear = new Date () .getFullYear ()   return ( <footer className="bg - gray - 900 text - white py - 8">"'" <div className="max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8">"'" <div className="grid grid - cols - 1 md: grid - cols - 4 gap - 8">';" {}"'" <div className="space - y-4">"'" <h3 className="text - xl font - bold text - cyan - 400">Zion Tech Group</h3>"'" <p className="text - gray - 300">'; Transforming businesses through cutting - edge technology and expert consulting.'" </p>"'" <div className="flex space - x-4">"'" <a href="https: """";"
+<<<<<<< HEAD
+ import { Link } from 'react - router - dom'  export const SimpleFooter: React.FC = () =" > { const currentYear = new Date () .getFullYear ()   return ( <footer className='bg - gray - 900 text - white py - 8'>''' <div className='max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8'>''' <div className='grid grid - cols - 1 md: grid - cols - 4 gap - 8'>';' {}''' <div className='space - y-4'>''' <h3 className='text - xl font - bold text - cyan - 400'>Zion Tech Group</h3>''' <p className='text - gray - 300'>'; Transforming businesses through cutting - edge technology and expert consulting.'' </p>''' <div className='flex space - x-4'>''' <a href='https: '''";""
+ import { Link } from 'react - router - dom'  export const SimpleFooter: React.FC = () =" > { const currentYear = new Date () .getFullYear ()   return ( <footer className="bg - gray - 900 text - white py - 8">"';" <div className="max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8">"';" <div className="grid grid - cols - 1 md: grid - cols - 4 gap - 8">';" {}"';" <div className="space - y-4">"';" <h3 className="text - xl font - bold text - cyan - 400">Zion Tech Group</h3>"';" <p className="text - gray - 300">'; Transforming businesses through cutting - edge technology and expert consulting.';" </p>"';" <div className="flex space - x-4">"';" <a href="https: """"
+ import { Link } from 'react - router - dom'  export const SimpleFooter: React.FC = () =" > { const currentYear = new Date () .getFullYear ()   return ( <footer className='bg - gray - 900 text - white py - 8'>'';' <div className='max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8'>'';' <div className='grid grid - cols - 1 md: grid - cols - 4 gap - 8'>';' {}'';' <div className='space - y-4'>'';' <h3 className='text - xl font - bold text - cyan - 400'>Zion Tech Group</h3>'';' <p className='text - gray - 300'>'; Transforming businesses through cutting - edge technology and expert consulting.';' </p>'';' <div className='flex space - x-4'>'';' <a href='https:'''"
 
-export const SimpleFooter: React.FC = () => {
-  const currentYear = new Date().getFullYear();
+""
+}}}}
+=======
+ import { Link } from 'react - router - dom'  export const SimpleFooter: React.FC = () => { const currentYear = new Date () .getFullYear ()   return ( <footer className='bg - gray - 900 text - white py - 8'>''' <div className='max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8'>''' <div className='grid grid - cols - 1 md: grid - cols - 4 gap - 8'>';' {}''' <div className='space - y-4'>''' <h3 className='text - xl font - bold text - cyan - 400'>Zion Tech Group</h3>''' <p className='text - gray - 300'>'; Transforming businesses through cutting - edge technology and expert consulting.'' </p>''' <div className='flex space - x-4'>''' <a href='https: '''";"
+=======
+ import { Link }  from 'react - router - dom';export const SimpleFooter: React.FC = () => { const currentYear = new Date () .getFullYear ()   return ( <footer className="bg - gray - 900 text - white py - 8">"'" <div className="max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8">"'" <div className="grid grid - cols - 1 md: grid - cols - 4 gap - 8"> {}"'" <div className="space - y-4">"'" <h3 className="text - xl font - bold text - cyan - 400">Zion Tech Group</h3>"'" <p className="text - gray - 300">'; Transforming businesses through cutting - edge technology and expert consulting.'" </p>"'" <div className="flex space - x-4">"'" <a href="https: """
+ import { Link }  from 'react - router - dom';export const SimpleFooter: React.FC = () =" > { const currentYear = new Date () .getFullYear ()   return ( <footer className='bg - gray - 900 text - white py - 8'>''' <div className='max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8'>''' <div className='grid grid - cols - 1 md: grid - cols - 4 gap - 8'> {}''' <div className='space - y-4'>''' <h3 className='text - xl font - bold text - cyan - 400'>Zion Tech Group</h3>''' <p className='text - gray - 300'>'; Transforming businesses through cutting - edge technology and expert consulting.'' </p>''' <div className='flex space - x-4'>''' <a href='https: '''
+ import { Link }  from 'react - router - dom';export const SimpleFooter: React.FC = () =" > { const currentYear = new Date () .getFullYear ()   return ( <footer className="bg - gray - 900 text - white py - 8">" <div className="max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8">" <div className="grid grid - cols - 1 md: grid - cols - 4 gap - 8"> {}" <div className="space - y-4">" <h3 className="text - xl font - bold text - cyan - 400">Zion Tech Group</h3>" <p className="text - gray - 300">'; Transforming businesses through cutting - edge technology and expert consulting. </p>" <div className="flex space - x-4">" <a href="https:""""
+ import { Link }  from 'react - router - dom';export const SimpleFooter: React.FC = () =" > { const currentYear = new Date () .getFullYear ()   return ( <footer className='bg - gray - 900 text - white py - 8'>' <div className='max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8'>' <div className='grid grid - cols - 1 md: grid - cols - 4 gap - 8'> {}' <div className='space - y-4'>' <h3 className='text - xl font - bold text - cyan - 400'>Zion Tech Group</h3>' <p className='text - gray - 300'>'; Transforming businesses through cutting - edge technology and expert consulting. </p>' <div className='flex space - x-4'>' <a href='https:'''"
 
-  return (
-    <footer className="bg-gray-900 text-white py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Company Info */}
-          <div className="space-y-4">
-            <h3 className="text-xl font-bold text-cyan-400">Zion Tech Group</h3>
-            <p className="text-gray-300">
-              Transforming businesses through cutting-edge technology and expert consulting.
-            </p>
-            <div className="flex space-x-4">
-              <a href="https://facebook.com/ziontechgroup" className="text-gray-400 hover:text-cyan-400 transition-colors">
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-cyan-400 transition-colors">
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-400 hover:text-cyan-400 transition-colors">
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a href="https://github.com/ziontechgroup" className="text-gray-400 hover:text-cyan-400 transition-colors">
-                <Github className="w-5 h-5" />
-              </a>
-            </div>
-          </div>
-
-          {/* Services */}
-          <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-cyan-400">Services</h4>
-            <ul className="space-y-2">
-              <li><Link href="/ai-services" className="text-gray-300 hover:text-white transition-colors">AI Services</Link></li>
-              <li><Link href="/it-services" className="text-gray-300 hover:text-white transition-colors">IT Services</Link></li>
-              <li><Link href="/micro-saas" className="text-gray-300 hover:text-white transition-colors">Micro SaaS</Link></li>
-              <li><Link href="/emerging-tech" className="text-gray-300 hover:text-white transition-colors">Emerging Tech</Link></li>
-            </ul>
-          </div>
-
-          {/* Company */}
-          <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-cyan-400">Company</h4>
-            <ul className="space-y-2">
-              <li><Link href="/about" className="text-gray-300 hover:text-white transition-colors">About Us</Link></li>
-              <li><Link href="/services" className="text-gray-300 hover:text-white transition-colors">Our Services</Link></li>
-              <li><Link href="/marketplace" className="text-gray-300 hover:text-white transition-colors">Marketplace</Link></li>
-              <li><Link href="/pricing-guide" className="text-gray-300 hover:text-white transition-colors">Pricing</Link></li>
-            </ul>
-          </div>
-
-          {/* Contact */}
-          <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-cyan-400">Contact</h4>
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3">
-                <Phone className="w-4 h-4 text-cyan-400" />
-                <a href="tel:+13024640950" className="text-gray-300 hover:text-white transition-colors">
-                  +1 302 464 0950
-                </a>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Mail className="w-4 h-4 text-cyan-400" />
-                <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-white transition-colors">
-                  kleber@ziontechgroup.com
-                </a>
-              </div>
-              <div className="flex items-start space-x-3">
-                <MapPin className="w-4 h-4 text-cyan-400 mt-1" />
-                <div className="text-gray-300">
-                  <div>364 E Main St STE 1008</div>
-                  <div>Middletown DE 19709</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Bottom Bar */}
-        <div className="border-t border-gray-800 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm">
-              © {currentYear} Zion Tech Group. All rights reserved.
-            </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Privacy Policy
-              </Link>
-              <Link href="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Terms of Service
-              </Link>
-              <Link href="/sitemap" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Sitemap
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-  );
-};
+"
+}}}}
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

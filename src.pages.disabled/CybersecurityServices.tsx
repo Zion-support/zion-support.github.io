@@ -1,19 +1,40 @@
-import React from 'react';
-import { SEO } from '../components/SEO';
+import: React from 'react';';
+import: { SEO } from '../components/SEO';';
 
-const CybersecurityServices: React.FC = () => {;
+const: CybersecurityServices: React.FC: = () => {
   return (
-    <>;
+<<<<<<< HEAD
+    <>
+      <SEO title='CybersecurityServices - Zion Tech Group' />';
+      <div: className='min-h-screen bg-white py-20'>';
+        <div: className='max-w-4xl mx-auto px-4'>';
+          <h1: className='text-4xl font-bold text-gray-900 mb-8'>CybersecurityServices</h1>';
+          <p: className='text-lg text-gray-600'>Content coming soon...</p>';
+        </div>
+      </div>
+    </>
+  ,)}
+;
+export: default CybersecurityServices
+=======
+    <>'
       <SEO title='CybersecurityServices - Zion Tech Group' />
-      <div className='min-h-screen bg-white py-20'>
-        <div className='max-w-4xl mx-auto px-4'>
-          <h1 className='text-4xl font-bold text-gray-900 mb-8'>CybersecurityServices</h1>
+      <div className='min-h-screen bg-white py-20>
+        <div className='max-w-4xl mx-auto px-4>
+          <h1 className='text-4xl font-bold text-gray-900 mb-8'>CybersecurityServices</h1>'
           <p className='text-lg text-gray-600'>Content coming soon...</p>
         </div>
       </div>
     </>
-  );
-};
-;
-export default CybersecurityServices;
-;
+  )}
+<<<<<<< HEAD
+
+export default CybersecurityServices
+=======
+<<<<<<< HEAD
+export default CybersecurityServices'
+=======
+export default CybersecurityServices
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
