@@ -1,13 +1,24 @@
 import { useEffect } from 'react';
 
+interface PerformanceMetrics {
+  lcp?: number;
+  fid?: number;
+  cls?: number;
+  fcp?: number;
+  ttfb?: number;
+}
+
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     // Monitor Core Web Vitals
     if (typeof window !== 'undefined' && 'performance' in window) {
+      const metrics: PerformanceMetrics = {};
+
       // Monitor Largest Contentful Paint (LCP)
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'largest-contentful-paint') {
+            metrics.lcp = entry.startTime;
             console.log('LCP:', entry.startTime);
           }
         }

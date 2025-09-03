@@ -13,8 +13,11 @@ export default function Home() {
     <>
       <Head>
         <title>Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions</title>
-        <meta name="description" content="Leading provider of micro SaaS products, AI services, and IT solutions. 340+ innovative services including quantum computing, AI automation, blockchain, edge computing, and enterprise technology solutions." />
-        <meta name="keywords" content="micro SaaS, AI services, IT solutions, cloud computing, automation, machine learning, DevOps, cybersecurity, quantum computing, blockchain, edge computing, 5G, IoT, MLOps, DevSecOps" />
+        <meta name="description" content="Leading provider of micro SaaS products, AI services, and IT solutions. 350+ innovative services including quantum computing, AI automation, blockchain, edge computing, and enterprise technology solutions." />
+        <meta name="keywords" content="micro SaaS, AI services, IT solutions, cloud computing, automation, machine learning, DevOps, cybersecurity, quantum computing, blockchain, edge computing, 5G, IoT, MLOps, DevSecOps, enterprise software, digital transformation" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+        <meta name="theme-color" content="#0b1220" />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <link rel="canonical" href={contact.site} />
         <meta property="og:title" content="Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions" />
         <meta property="og:description" content="Leading provider of micro SaaS products, AI services, and IT solutions. 340+ innovative services including quantum computing, AI automation, blockchain, edge computing, and enterprise technology solutions." />
@@ -55,25 +58,19 @@ export default function Home() {
       
       <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
         {/* Hero Section */}
-        <section className="py-20 px-4 text-center">
+        <section className="py-12 sm:py-16 md:py-20 px-4 text-center">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight mb-6">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-4 sm:mb-6">
               Zion Tech Group
             </h1>
-            <p className="text-xl md:text-2xl text-slate-300 mb-8">
+            <p className="text-lg sm:text-xl md:text-2xl text-slate-300 mb-6 sm:mb-8">
               Innovative Micro SaaS, AI Services & IT Solutions
             </p>
             <p className="text-lg text-slate-400 mb-12 max-w-3xl mx-auto">
-<<<<<<< HEAD
-              We deliver cutting-edge technology solutions with 150+ micro SaaS products, 
+              We deliver cutting-edge technology solutions with 150+ innovative micro SaaS products, 
               100+ advanced AI services, and 100+ comprehensive IT solutions. From cloud optimization 
               to AI automation, quantum computing to blockchain solutions, we help businesses scale 
-              efficiently and securely in the digital age.
-=======
-              We deliver cutting-edge technology solutions with 150+ innovative micro SaaS products, 
-              90+ advanced AI services, and 100+ comprehensive IT solutions. From quantum computing 
-              to AI automation, we help businesses scale efficiently and securely with next-generation technology.
->>>>>>> 72143897074 (feat: Add 30+ new innovative services across micro SaaS, AI, and IT categories)
+              efficiently and securely with next-generation technology.
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
@@ -94,11 +91,7 @@ export default function Home() {
                 <p className="text-slate-300">Micro SaaS Products</p>
               </div>
               <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
-<<<<<<< HEAD
                 <h3 className="text-2xl font-bold text-purple-400 mb-2">100+</h3>
-=======
-                <h3 className="text-2xl font-bold text-purple-400 mb-2">90+</h3>
->>>>>>> 72143897074 (feat: Add 30+ new innovative services across micro SaaS, AI, and IT categories)
                 <p className="text-slate-300">AI Services</p>
               </div>
               <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
