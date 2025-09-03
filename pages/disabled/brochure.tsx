@@ -4,6 +4,7 @@ const Link = dynamic(() => import('next/link'), { ssr: false })
 const Navigation = dynamic(() => import('../src/components/Navigation'), { ssr: false })
 const Footer = dynamic(() => import('../src/components/Footer'), { ssr: false })
 
+export default function Brochure() {
   return (
     <>
 <Head>

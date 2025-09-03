@@ -1,5 +1,8 @@
 const React = dynamic(() => import('react'), { ssr: false })
+const Head = dynamic(() => import('next/head'), { ssr: false })
+const Layout = dynamic(() => import('../components/Layout'), { ssr: false })
 
+export default function Careers() {
   return (
     <>
 <Head>

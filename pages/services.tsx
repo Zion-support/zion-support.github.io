@@ -1047,7 +1047,10 @@ Contact: Us'
   Activity,
   Terminal,
   CreditCard,
-  Smartphone} from 'lucide-react'
+  Smartphone,
+  Phone,
+  Mail,
+  MapPin} from 'lucide-react'
 '
 export default function Services() {''
   const description = '
@@ -2591,17 +2594,102 @@ className="group-hover: translate-x-1 transition-transform inline-block"
 							<h3 className = 'text-lg font-semibold text-gray-900 mb-2'>Deployment</h3>,'
 							<p className='text-gray-600'>Launch and monitor performance</p>,
 			</section> {/*   */}
-			<section className='bg - gradient-to-r from-blue-600 to-purple-600 py-24 sm: py-32'>,
-						<h2 className='text-3xl font-bold tracking-tight text-white sm: text-4xl'>
-							Ready to get started ? ,
-							Let&aposs discuss your project requirements and how we can help you achieve your goals.,'
-								className='group rounded-md bg-white px-8 py-4 text-sm font-semibold text-blue-600 shadow-sm hover : bg-gray-50 transition-all duration-200 hover:scale-105',
-								aria-label='Contact us to get started
-								Contact Us,
-								<ArrowRight className = 'ml - 2 h-4 w-4 inline group-hover:translate-x-1 transition-transform' />,
-								href='/',
-								className='text - sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors group',
-								aria-label='Back to homepage',
-								Back to Home <span aria-hidden='true' className='group-hover:translate-x-1 transition-transform inline-block'>→</span>,,
-			</section>,
+			{/* Contact Information Section */}
+			<section className='py-24 sm:py-32 bg-white'>
+				<div className='mx-auto max-w-7xl px-6 lg:px-8'>
+					<div className='mx-auto max-w-2xl text-center mb-16'>
+						<h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>
+							Get in Touch with Our Experts
+						</h2>
+						<p className='mt-6 text-lg leading-8 text-gray-600'>
+							Ready to transform your business with cutting-edge technology? Our team of experts is here to help you achieve your goals with innovative solutions and exceptional service.
+						</p>
+					</div>
+					<div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-16'>
+						<div className='text-center'>
+							<div className='mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 mb-4'>
+								<Phone className='h-8 w-8 text-blue-600' />
+							</div>
+							<h3 className='text-lg font-semibold text-gray-900 mb-2'>Phone</h3>
+							<p className='text-gray-600 mb-4'>Call us for immediate assistance</p>
+							<a href='tel:+13024640950' className='text-blue-600 hover:text-blue-500 font-semibold'>
+								+1 302 464 0950
+							</a>
+						</div>
+						<div className='text-center'>
+							<div className='mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-green-100 mb-4'>
+								<Mail className='h-8 w-8 text-green-600' />
+							</div>
+							<h3 className='text-lg font-semibold text-gray-900 mb-2'>Email</h3>
+							<p className='text-gray-600 mb-4'>Send us your project details</p>
+							<a href='mailto:kleber@ziontechgroup.com' className='text-green-600 hover:text-green-500 font-semibold'>
+								kleber@ziontechgroup.com
+							</a>
+						</div>
+						<div className='text-center'>
+							<div className='mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-purple-100 mb-4'>
+								<MapPin className='h-8 w-8 text-purple-600' />
+							</div>
+							<h3 className='text-lg font-semibold text-gray-900 mb-2'>Address</h3>
+							<p className='text-gray-600 mb-4'>Visit our headquarters</p>
+							<address className='text-purple-600 font-semibold not-italic'>
+								364 E Main St STE 1008<br />
+								Middletown, DE 19709
+							</address>
+						</div>
+					</div>
+					<div className='text-center'>
+						<div className='bg-gray-50 rounded-lg p-8 mb-8'>
+							<h3 className='text-xl font-semibold text-gray-900 mb-4'>Why Choose Zion Tech Group?</h3>
+							<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+								<div className='text-center'>
+									<div className='text-2xl font-bold text-blue-600 mb-2'>200+</div>
+									<div className='text-sm text-gray-600'>Projects Delivered</div>
+								</div>
+								<div className='text-center'>
+									<div className='text-2xl font-bold text-green-600 mb-2'>99.9%</div>
+									<div className='text-sm text-gray-600'>Uptime Guarantee</div>
+								</div>
+								<div className='text-center'>
+									<div className='text-2xl font-bold text-purple-600 mb-2'>24/7</div>
+									<div className='text-sm text-gray-600'>Expert Support</div>
+								</div>
+								<div className='text-center'>
+									<div className='text-2xl font-bold text-orange-600 mb-2'>30-Day</div>
+									<div className='text-sm text-gray-600'>Money-Back Guarantee</div>
+								</div>
+							</div>
+						</div>
+						<div className='flex flex-col sm:flex-row gap-4 justify-center'>
+							<Link href='/contact' className='inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors'>
+								Get Free Consultation
+								<ArrowRight className='ml-2 h-5 w-5' />
+							</Link>
+							<Link href='/pricing' className='inline-flex items-center px-8 py-3 border border-blue-600 text-base font-medium rounded-md text-blue-600 hover:bg-blue-50 transition-colors'>
+								View Pricing Plans
+							</Link>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section className='bg-gradient-to-r from-blue-600 to-purple-600 py-24 sm:py-32'>
+				<div className='mx-auto max-w-7xl px-6 lg:px-8 text-center'>
+					<h2 className='text-3xl font-bold tracking-tight text-white sm:text-4xl'>
+						Ready to Transform Your Business?
+					</h2>
+					<p className='mt-6 text-lg leading-8 text-blue-100'>
+						Let's discuss your project requirements and how we can help you achieve your goals with cutting-edge technology solutions.
+					</p>
+					<div className='mt-10 flex items-center justify-center gap-x-6'>
+						<Link href='/contact' className='group rounded-md bg-white px-8 py-4 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-50 transition-all duration-200 hover:scale-105'>
+							Contact Us
+							<ArrowRight className='ml-2 h-4 w-4 inline group-hover:translate-x-1 transition-transform' />
+						</Link>
+						<Link href='/' className='text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors group'>
+							Back to Home <span aria-hidden='true' className='group-hover:translate-x-1 transition-transform inline-block'>→</span>
+						</Link>
+					</div>
+				</div>
+			</section>
 		</PageTransition>,"
