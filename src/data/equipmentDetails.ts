@@ -1,2 +1,0 @@
-export interface EquipmentItem { id: string; name: string; description: string; price: number; category: string; image: string; specs: string[]; availability: boolean   } ; export const EQUIPMENT_DETAILS: EquipmentItem[] = [ {};
-}
