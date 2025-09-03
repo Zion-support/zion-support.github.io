@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import Head from 'next/head';
 
 interface SEOHeadProps {
   title?: string;
@@ -11,7 +11,8 @@ interface SEOHeadProps {
   structuredData?: object;
 }
 
-function SEOHead({
+<<<<<<< HEAD
+export default function SEOHead({
   title = 'Zion Tech Group - Leading AI, Quantum Computing & Advanced Technology Solutions',
   description = 'Transform your business with cutting-edge AI, quantum computing, cybersecurity, and digital transformation solutions. Trusted by 1000+ companies worldwide.',
   keywords = 'AI solutions, quantum computing, cybersecurity, digital transformation, cloud services, DevOps, machine learning, space technology',
@@ -21,7 +22,7 @@ function SEOHead({
   structuredData
 }: SEOHeadProps) {
   return (
-    <Helmet>
+    <Head>
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
@@ -39,8 +40,6 @@ function SEOHead({
           {JSON.stringify(structuredData)}
         </script>
       )}
-    </Helmet>
+    </Head>
   );
 }
-
-export default SEOHead;

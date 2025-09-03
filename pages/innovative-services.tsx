@@ -232,13 +232,13 @@ export default function InnovativeServices() {
               <Link href="/contact"
                 className="inline-flex items-center px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors"
               >
-                Get Started
+                <span>Get Started</span>
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link href="/services"
                 className="inline-flex items-center px-8 py-3 border border-blue-600 text-blue-600 hover:bg-blue-50 font-medium rounded-lg transition-colors"
               >
-                View All Services
+                <span>View All Services</span>
               </Link>
             </div>
           </div>
@@ -297,7 +297,7 @@ export default function InnovativeServices() {
                     <Link href="/contact"
                       className="mt-4 w-full inline-flex items-center justify-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors"
                     >
-                      Get Quote
+                      <span>Get Quote</span>
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Link>
                   </div>
@@ -335,7 +335,7 @@ export default function InnovativeServices() {
             <Link href="/contact"
               className="inline-flex items-center px-8 py-3 bg-white hover:bg-gray-100 text-blue-600 font-medium rounded-lg transition-colors"
             >
-              Contact Us Today
+              <span>Contact Us Today</span>
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
           </div>
