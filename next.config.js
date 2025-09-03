@@ -10,7 +10,6 @@ const nextConfig = {
   },
   experimental: {
     scrollRestoration: true,
-    optimizePackageImports: ["lucide-react", "@radix-ui/react-icons", "framer-motion"],
   },
   images: {
     domains: ["images.unsplash.com", "via.placeholder.com", "ziontechgroup.com"],
@@ -27,7 +26,7 @@ const nextConfig = {
     if (!dev && !isServer) {
       config.resolve.alias = {
         ...config.resolve.alias,
-        "@": new URL("./src", import.meta.url).pathname,
+        "@": require("path").resolve(__dirname, "./src"),
       }
     }
     
@@ -99,4 +98,4 @@ const nextConfig = {
   },
 }
 
-export default nextConfig
+module.exports = nextConfig

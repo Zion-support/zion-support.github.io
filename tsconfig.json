@@ -53,7 +53,6 @@
   },
   "include": [
     "next-env.d.ts",
-<<<<<<< HEAD
     "pages/**/*",
     "components/**/*.ts",
     "components/**/*.tsx",
@@ -61,20 +60,15 @@
     "styles/**/*",
     "types/**/*",
     "utils/**/*",
-<<<<<<< HEAD
     "**/*.ts",
     "**/*.tsx",
-=======
->>>>>>> origin/main
-=======
-    "**/*.ts",
-    "**/*.tsx",
->>>>>>> main
     ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
-<<<<<<< HEAD
+    ".next",
+    "out",
+    "dist",
     "api-backup",
     "pages.disabled",
     "backup-pages",
@@ -83,17 +77,6 @@
     "broken_files_backup",
     "contracts",
     "cypress",
-<<<<<<< HEAD
-    "**/*.backup",
-    "**/*.disabled",
-    "temp_working/**",
-    "src/pages/**",
-    "src/utils/**",
-    "src/routes/**",
-    "supabase/functions/**",
-    "src/services/**",
-    "src/types/**"
-=======
     "temp_working",
     "supabase/functions",
     "**/*.test.ts",
@@ -102,11 +85,5 @@
     "**/*.spec.tsx",
     "**/*.backup",
     "**/*.disabled"
-=======
-    ".next",
-    "out",
-    "dist"
->>>>>>> main
->>>>>>> main
   ]
 }
