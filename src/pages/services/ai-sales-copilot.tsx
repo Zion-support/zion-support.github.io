@@ -1,17 +1,12 @@
 import React from 'react';
 import { 
   Brain, 
-  TrendingUp, 
-  Users, 
   Target, 
   Zap, 
   BarChart3, 
   MessageCircle, 
   CheckCircle,
-  ArrowRight,
-  Star,
-  Shield,
-  Rocket
+  Shield
 } from 'lucide-react';
 
 export default function AISalesCopilotPage() {

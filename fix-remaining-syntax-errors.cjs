@@ -27,7 +27,7 @@ class TargetedSyntaxFixer {
       const fixes = [
         // Fix broken template literals in catch blocks
         {
-          pattern: /} catch \(error\) \{  this\.log\(❌ Fatal error in orchestrator: \$\{error\.message\}, `ERROR``\);/g,
+          pattern: /} catch \(error\) \{ {2}this\.log\(❌ Fatal error in orchestrator: \$\{error\.message\}, `ERROR``\);/g,
           replacement: '} catch (error) { this.log(`❌ Fatal error in orchestrator: ${error.message}`, \'ERROR\');'
         },
         
