@@ -8,13 +8,13 @@ console.log('🎯 Starting Automation Orchestrator...');
 const automationTasks = [
   {
     name: 'Health Check',
-    script: 'node automation/health-check.cjs',
+    script: 'node scripts/comprehensive-health-check.cjs',
     critical: true,
     timeout: 30000
   },
   {
     name: 'Security Scan',
-    script: 'node automation/security-scanner.cjs',
+    script: 'node scripts/security-audit.cjs',
     critical: true,
     timeout: 60000
   },

@@ -1,11 +1,11 @@
 {
-  "timestamp": "2025-09-03T16:57:54.780Z",
+  "timestamp": "2025-09-03T23:36:17.857Z",
   "checks": [
     {
       "name": "Node.js Version",
       "status": "passed",
       "message": "Node.js version v22.16.0 is supported",
-      "duration": 1,
+      "duration": 0,
       "details": {
         "version": "v22.16.0",
         "majorVersion": 22
@@ -19,14 +19,14 @@
       "details": {
         "name": "ziontechgroup.com",
         "version": "0.1.0",
-        "scriptsCount": 156
+        "scriptsCount": 159
       }
     },
     {
       "name": "Dependencies",
       "status": "passed",
       "message": "All dependencies are installed correctly",
-      "duration": 408,
+      "duration": 414,
       "details": {}
     },
     {
@@ -42,11 +42,11 @@
     {
       "name": "Source Files",
       "status": "passed",
-      "message": "Source files found: 13 pages, 3 components",
+      "message": "Source files found: 18 pages, 10 components",
       "duration": 0,
       "details": {
-        "pageCount": 13,
-        "componentCount": 3,
+        "pageCount": 18,
+        "componentCount": 10,
         "hasPagesDir": true,
         "hasComponentsDir": true
       }
@@ -54,12 +54,12 @@
     {
       "name": "Git Repository",
       "status": "passed",
-      "message": "Git repository on branch 'cursor/automate-test-fix-improve-and-merge-code-62a4' with uncommitted changes",
-      "duration": 66,
+      "message": "Git repository on branch 'cursor/automate-test-fix-improve-and-merge-code-1bb3' with uncommitted changes",
+      "duration": 75,
       "details": {
-        "branch": "cursor/automate-test-fix-improve-and-merge-code-62a4",
+        "branch": "cursor/automate-test-fix-improve-and-merge-code-1bb3",
         "hasChanges": true,
-        "changesCount": 15
+        "changesCount": 48
       }
     },
     {
