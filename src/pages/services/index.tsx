@@ -1,35 +1,48 @@
 import React from "react"
 import Link from "next/link"
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from "lucide-react"
-  );
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3, Star, Award, Users, Globe, MapPin } from "lucide-react"
+import { REAL_MICRO_SAAS_SERVICES_2025 } from "../../data/realMicroSaasServices2025"
+
 export default function Index() {
   const features = [
-    "Feature 1",
-    "Feature 2",
-    "Feature 3"
+    "AI-powered customer churn prediction with 94% accuracy",
+    "Real-time fraud detection and prevention",
+    "Advanced supply chain optimization algorithms",
+    "Healthcare diagnostics with 96% accuracy",
+    "Intelligent content creation and marketing automation",
+    "Predictive maintenance for industrial equipment"
   ]
   const benefits = [
-    "Benefit 1",
-    "Benefit 2",
-    "Benefit 3"
+    "Reduce operational costs by 25-40%",
+    "Increase revenue through AI-driven insights",
+    "Improve customer satisfaction and retention",
+    "Enhance security and compliance",
+    "Accelerate decision-making processes",
+    "Scale operations efficiently"
   ]
   const useCases = [
-    "Use Case 1",
-    "Use Case 2",
-    "Use Case 3"
+    "SaaS companies reducing customer churn",
+    "E-commerce businesses optimizing supply chains",
+    "Healthcare providers improving diagnostics",
+    "Financial institutions preventing fraud",
+    "Manufacturing companies implementing predictive maintenance",
+    "Marketing agencies scaling content creation"
   ]
   const pricing = [
-      }
-];
+    {
+      name: "Starter",
+      price: "$99/mo",
+      details: ["Basic AI features", "Up to 1,000 users", "Email support", "Standard SLA"]
+    },
     {
       name: "Professional",
-      price: "$799/mo",
-      details: ["Up to 50 users", "Advanced features", "Priority support", "99.9% SLA"]
-    }
-  ];
+      price: "$499/mo",
+      details: ["Advanced AI features", "Up to 10,000 users", "Priority support", "99.9% SLA"]
+    },
     {
       name: "Enterprise",
       price: "$1,999/mo",
+      details: ["Full AI suite", "Unlimited users", "24/7 support", "99.99% SLA", "Custom integrations"]
     }
   ];
 
@@ -38,20 +51,52 @@ export default function Index() {
     <div className="min-h-screen bg-white">
       <section className="bg-gradient-to-br from-indigo-500 via-blue-500 to-cyan-500 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
-            <Database className="w-4 h-4 mr-2"  />
-            AI-Powered Index Intelligence
+                      <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
+            <Brain className="w-4 h-4 mr-2"  />
+            Revolutionary AI Solutions
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">Index Platform</h1>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">AI-Powered Micro SAAS Solutions</h1>
           <p className="text-indigo-100 text-xl">
-            Transform your index operations with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.
+            Transform your business with our comprehensive suite of 20+ cutting-edge AI micro SAAS services. 
+            From customer analytics to quantum computing, we provide real solutions with proven ROI.
           </p>
         </div>
       </section>
+
+      {/* Contact Information Banner */}
+      <section className="bg-gray-900 text-white py-6">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="flex flex-col md:flex-row items-center justify-between">
+            <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-8">
+              <div className="flex items-center">
+                <Mail className="w-5 h-5 mr-2 text-indigo-400" />
+                <span>kleber@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-center">
+                <Phone className="w-5 h-5 mr-2 text-indigo-400" />
+                <span>+1 302 464 0950</span>
+              </div>
+              <div className="flex items-center">
+                <MapPin className="w-5 h-5 mr-2 text-indigo-400" />
+                <span>364 E Main St STE 1008, Middletown DE 19709</span>
+              </div>
+            </div>
+            <div className="mt-4 md:mt-0">
+              <Link 
+                href="https://ziontechgroup.com" 
+                className="text-indigo-400 hover:text-indigo-300 font-semibold"
+              >
+                Visit Our Website →
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-16 max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-10">
           <div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced Index Features</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Revolutionary AI Features</h2>
             <ul className="space-y-3">
               {features.map((feature, index) => (
                 <li key={index} className="flex items-start">
@@ -63,6 +108,14 @@ export default function Index() {
             </ul>
             <div className="mt-6 text-sm text-gray-600">
               Built with enterprise-grade security, SOC 2 compliance, and 99.9% uptime SLA.
+            </div>
+            <div className="mt-6">
+              <Link 
+                href="/services/comprehensive-micro-saas-showcase" 
+                className="inline-flex items-center px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors"
+              >
+                View All 20+ AI Services <ArrowRight className="w-4 h-4 ml-2" />
+              </Link>
             </div>
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">Competitive Pricing</h3>
@@ -88,6 +141,9 @@ export default function Index() {
               <Link href="/contact" className="px-5 py-3 border border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-50 transition-colors inline-flex items-center">
                 Contact Sales <Phone className="w-4 h-4 ml-2"  />
               </Link>
+              <a href="tel:+13024640950" className="px-5 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors inline-flex items-center">
+                Call Now <Phone className="w-4 h-4 ml-2"  />
+              </a>
             </div>
       </section>
       <section className="py-16 bg-gray-50">

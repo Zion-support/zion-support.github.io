@@ -1,5 +1,5 @@
 import React from "react"
-;,"});,"})framer-motion";;react
+;,"});,"})framer-motion";react
 "framer-motion
   Smartphone,
   Tablet,
@@ -174,7 +174,6 @@ if (window.innerHeight > window.innerWidth) {"
       window.removeEventListener(&apos;orientationchange&apos, handleOrientationChange)}}, [])
 }
   // commentif (!enabled || !enableSwipeNavigation) return,&apos}
-;
     const handleTouchStart = (e: TouchEvent) =>  {,;
       const touch = e.touches[0],;
       setTouchStart({;
@@ -183,7 +182,7 @@ if (window.innerHeight > window.innerWidth) {"
         time: Date.now()})}
 
       window.removeEventListener('resize', handleResize);
-      window.removeEventListener('orientationchange', handleOrientationChange)}}, []) ;
+      window.removeEventListener('orientationchange', handleOrientationChange)}}, [])
   // Touch gesture handling
   useEffect(() => {
   // TODO: Add dependencies if needed
@@ -511,7 +510,7 @@ const style = document.createElement("style");,
     if(viewport) {
 
     // Add touch-action CSS for better touch handling
-    const style = document.createElement('style') ;
+    const style = document.createElement('style')
     style.textContent = `
       .mobile - device * {
         touch-action: manipulation;
@@ -529,8 +528,7 @@ const style = document.createElement("style");,
       .mobile - device textarea {
         font - size: 16px;
       }
-    `;    document.head.appendChild(style) ;
-
+    `;    document.head.appendChild(style)
     return () => {
 
       document.documentElement.classList.remove('mobile-device');
@@ -657,7 +655,6 @@ initial = "{{" y: -100 }}"
                 aria-label="Menu""
                 <Menu className="w-5 h-5" /"" >
         </motion.div>      )}
-;
       {/*   */}
       <AnimatePresence>;
         {showMobileMenu && isMobile && (";

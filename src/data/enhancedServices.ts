@@ -1331,7 +1331,6 @@ export const MORE_ENHANCED_SERVICES: ProductListing[] = [{
     rating: 4.7,;
     reviewCount: 28,;"
     link: "https://ziontechgroup.com/services/pdf-render-api"};];
-;
 export const ALL_ENHANCED_SERVICES: ProductListing[] = [...ENHANCED_SERVICES,
   ...MORE_ENHANCED_SERVICES
 ];
@@ -1350,9 +1349,6 @@ export
 export const SERVICE_PRICING_TIERS = {
   basic: { range: "$500 - $2,000",
   description: "Essential services for small businesses and startups"
-
-;
-;;
 },;"
   professional: { range: "$2,000 - $8,000", description: "Advanced solutions for growing companies and mid-market" },;"
   enterprise: { range: "$8,000 - $25,000", description: "Custom enterprise solutions with dedicated support" },;"
@@ -1365,14 +1361,8 @@ export const CONTACT_INFO: unknown = {}
   mobile: "+1 302 464 0950",""""
   email: "kleber@ziontechgroup.com",""""
   address: "364 E Main St STE 1008 Middletown DE 19709",""""
-  website: "https://ziontechgroup.com",;  ;
-  ;
-  ;
-  ;
-  ;
+  website: "https://ziontechgroup.com",
   domain: "ziontechgroup.com";
-;
-
 };
 import React from "react"
 import { SEO } from "@/components/SEO"
