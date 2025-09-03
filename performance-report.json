@@ -1,5 +1,6 @@
 {
-  "timestamp": "2025-09-02T03:13:58.363Z",
+<<<<<<< HEAD
+  "timestamp": "2025-09-02T15:42:05.893Z",
   "bundleStats": {
     "totalSize": "132 kB",
     "framework": "44.8 kB",
@@ -9,53 +10,152 @@
       "about": "4.52 kB",
       "contact": "4.15 kB",
       "services": "3.67 kB"
+=======
+<<<<<<< HEAD
+  "timestamp": "2025-09-02T21:51:38.924Z",
+  "buildTime": null,
+  "bundleSize": null,
+  "testResults": null,
+  "performance": {}
+=======
+<<<<<<< HEAD
+  "timestamp": "2025-09-02T22:55:19.271Z",
+  "system": {
+    "platform": "linux",
+    "arch": "x64",
+    "nodeVersion": "v22.16.0",
+    "memoryUsage": {
+      "rss": 50540544,
+      "heapTotal": 5832704,
+      "heapUsed": 4876120,
+      "external": 1853886,
+      "arrayBuffers": 18041
+=======
+<<<<<<< HEAD
+  "timestamp": "2025-09-02T22:06:15.868Z",
+  "system": {
+    "memory": {
+      "rss": 47,
+      "heapUsed": 4,
+      "heapTotal": 5,
+      "external": 1
+    },
+    "cpu": {
+      "user": 0,
+      "system": 0
+    },
+    "process": {
+      "pid": 7268,
+      "uptime": 0,
+      "version": "v22.16.0",
+      "platform": "linux",
+      "arch": "x64"
+>>>>>>> main
     }
   },
-  "recommendations": [
-    {
-      "category": "Code Splitting",
-      "priority": "High",
-      "description": "Implement dynamic imports for service pages",
-      "impact": "Reduce initial bundle size by 20-30%"
-    },
-    {
-      "category": "Image Optimization",
-      "priority": "High",
-      "description": "Add next/image optimization for all images",
-      "impact": "Improve LCP by 15-25%"
-    },
-    {
-      "category": "Caching",
-      "priority": "Medium",
-      "description": "Implement service worker for offline support",
-      "impact": "Improve repeat visit performance by 40%"
-    },
-    {
-      "category": "SEO",
-      "priority": "High",
-      "description": "Add structured data and meta tags",
-      "impact": "Improve search rankings and social sharing"
-    },
-    {
-      "category": "Accessibility",
-      "priority": "Medium",
-      "description": "Add ARIA labels and keyboard navigation",
-      "impact": "Improve accessibility score to 95+"
+  "application": {
+    "buildSize": 0,
+    "dependenciesSize": 622,
+    "sourceSize": 9485,
+    "fileCounts": {
+      "source": 1993,
+      "components": 689,
+      "pages": 1081
     }
-  ],
-  "optimizations": [
-    "✅ Fixed critical syntax errors",
-    "✅ Added modern animations with Framer Motion",
-    "✅ Implemented error boundaries",
-    "✅ Enhanced SEO with structured data",
-    "✅ Added loading states and error handling",
-    "✅ Improved mobile responsiveness",
-    "✅ Added scroll effects and modern UI patterns"
-  ],
-  "metrics": {
-    "buildTime": "< 30s",
-    "bundleSize": "Optimized",
-    "lighthouseScore": "90+ (estimated)",
-    "accessibility": "Improved"
+  },
+  "build": {
+    "hasBuildArtifacts": true,
+    "buildTime": 0,
+    "bundleSize": 0,
+    "scripts": [
+      "pm2:start",
+      "pm2:stop",
+      "pm2:restart",
+      "pm2:status",
+      "pm2:logs",
+      "sitemap",
+      "pm2:fastads:start",
+      "pm2:fastads:restart",
+      "pm2:fastads:stop",
+      "pm2:cron:start",
+      "pm2:cron:restart",
+      "pm2:cron:stop",
+      "pm2:bootstrap:logrotate",
+      "functions:run",
+      "functions:run:execute",
+      "front:advertise",
+      "deps:maintain",
+      "deps:cron:start",
+      "netlify:manifest",
+      "netlify:trigger",
+      "readme:generate",
+      "search:index",
+      "content:fix",
+      "perf:monitor",
+      "perf:audit",
+      "dev",
+      "build",
+      "start",
+      "lint",
+      "lint:fix",
+      "type-check",
+      "analyze",
+      "format",
+      "format:check",
+      "test",
+      "test:watch",
+      "test:coverage"
+    ]
   }
+=======
+  "timestamp": "2025-09-02T21:38:54.130Z",
+  "metrics": {
+    "system": {
+      "memory": {
+        "heapUsed": 4,
+        "heapTotal": 5,
+        "external": 1,
+        "rss": 46
+      },
+      "cpu": {
+        "user": 17855,
+        "system": 4463
+      },
+      "process": {
+        "uptime": 0,
+        "pid": 3705,
+        "version": "v22.16.0",
+        "platform": "linux"
+      }
+>>>>>>> main
+    },
+    "uptime": 0.021214539,
+    "cpuUsage": {
+      "user": 11972,
+      "system": 11972
+    }
+  },
+<<<<<<< HEAD
+  "application": {
+    "buildExists": true,
+    "packageName": "bolt.new.zion.app",
+    "packageVersion": "0.1.0",
+    "dependencies": 17,
+    "devDependencies": 31
+  },
+  "build": {
+    "exists": true,
+    "size": 104805348,
+    "lastModified": "2025-09-02T22:55:18.918Z"
+  },
+  "errors": []
+=======
+  "score": 90,
+  "recommendations": [
+    "Reduce bundle size - remove unused dependencies and optimize imports"
+
+  ]
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
 }

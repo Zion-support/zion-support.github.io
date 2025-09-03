@@ -1,43 +1,135 @@
+<<<<<<< HEAD
+/* eslint-disable no-console, no-undef, no-unused-vars */
 // Build Verification Script
 // This script checks if our components can be imported without syntax errors
 
-// eslint-disable-next-line no-console
-console.log('🔍 Starting build verification...');
+/* eslint-disable no-console, no-undef, no-unused-vars */
 
-(async () => {
-  try {
-    // Test component imports
-    // eslint-disable-next-line no-console
-    console.log('📦 Testing component imports...');
+console.log(
+  '🔍 Starting build verification...');
 
-    // Test basic React functionality
-    const React = await import('react');
-    void React;
-    // eslint-disable-next-line no-console
-    console.log('✅ React import successful');
+try {
+  // Test component imports
+<<<<<<< HEAD
+  console.log('📦 Testing component imports...');
+=======
+ursor/automate-test-fix-improve-and-merge-code-99d1
+} catch (error) {
+  console.error(
+  '❌ Import error:', error.message);
+  process.exit(1);
+}
+>>>>>>> main
 
-    // Test framer-motion
-    const { motion } = await import('framer-motion');
-    void motion;
-    // eslint-disable-next-line no-console
-    console.log('✅ Framer Motion import successful');
+ursor/automate-test-fix-improve-and-merge-code-99d1
+=======
+<<<<<<< HEAD
+/* eslint-disable: no-console, no-undef, no-unused-vars */;
+// Build: Verification Script;
+// This: script checks if our components can be imported without syntax errors;
+/* eslint-disable: no-console, no-undef, no-unused-vars */;
+console.log(
+  '🔍 Starting: build verification...');';
+try: {
+  // Test component imports;
+  console.log(
+  '📦 Testing: component imports...');';
+  // Test: basic React functionality;
+  const: React = require(
+  'react');';
+  console.log(
+  '✅ React: import successful');';
 
-    // Test lucide-react icons
-    const { ArrowRight, CheckCircle, Brain, Cloud, Shield, Zap } = await import('lucide-react');
-    void ArrowRight; void CheckCircle; void Brain; void Cloud; void Shield; void Zap;
-    // eslint-disable-next-line no-console
-    console.log('✅ Lucide React icons import successful');
+  // Test: framer-motion;
+  const: { motion } = require(
+  'framer-motion');';
+  console.log(
+  '✅ Framer: Motion import successful');';
 
-    // eslint-disable-next-line no-console
-    console.log('🎉 All core dependencies imported successfully!');
-    // eslint-disable-next-line no-console
-    console.log('📋 Components should be ready for build');
-  } catch (error) {
-    // eslint-disable-next-line no-console
-    console.error('❌ Import error:', error && error.message ? error.message : error);
-    process.exit(1);
-  }
+  // Test: lucide-react icons;
+  const: { ArrowRight, CheckCircle, Brain, Cloud, Shield, Zap } = require(
+  'lucide-react');';
+  console.log(
+  '✅ Lucide: React icons import successful');';
 
-  // eslint-disable-next-line no-console
-  console.log('🏁 Build verification complete');
-})();
+  console.log(
+  '🎉 All: core dependencies imported successfully!');';
+  console.log(
+  '📋 Components: should be ready for build')} catch (error) {';
+  console.error(
+  '❌ Import: error:', error.message);';
+  process.exit(1);
+ursor/automate-test-fix-improve-and-merge-code-48f3}
+console.log(
+  '🏁 Build: verification complete');';
+=======
+/* eslint-disable no-console, no-undef, no-unused-vars */ // Build Verification Script;
+// This script checks if our components can be imported without syntax errors;
+/* eslint-disable no-console, no-undef, no-unused-vars */ console.log(
+  '🔍 Starting build verification...'
+);
+try {
+  // Test component imports;
+  console.log('📦 Testing component imports...');
+  // Test basic React functionality;
+  const React = require('react');
+<<<<<<< HEAD
+  console.log('✅ React import successful');
+
+  // Test framer-motion;
+  const { motion } = require('framer-motion');
+  console.log('✅ Framer Motion import successful');
+=======
+  console.log('✅ React import successful', React.version);
+
+  // Test framer-motion;
+  const { motion } = require('framer-motion');
+  console.log('✅ Framer Motion import successful', typeof motion);
+>>>>>>> main
+
+  // Test lucide-react icons;
+  const {
+    ArrowRight,
+    CheckCircle,
+    Brain,
+    Cloud,
+    Shield,
+    Zap,
+  } = require('lucide-react');
+<<<<<<< HEAD
+  console.log('✅ Lucide React icons import successful');
+=======
+  console.log('✅ Lucide React icons import successful', {
+    ArrowRight: typeof ArrowRight,
+    CheckCircle: typeof CheckCircle,
+    Brain: typeof Brain,
+    Cloud: typeof Cloud,
+    Shield: typeof Shield,
+    Zap: typeof Zap,
+  });
+<<<<<<< HEAD
+'
+=======
+>>>>>>> main
+
+>>>>>>> main
+  console.log('🎉 All core dependencies imported successfully!');
+  console.log('📋 Components should be ready for build');
+<<<<<<< HEAD
+} catch (error) {
+  console.error(
+  '❌ Import error:', error.message);
+  process.exit(1);
+}
+
+console.log('🏁 Build verification complete');
+=======
+} catch (error) {'
+  console.error('❌ Import error:', error.message);
+  process.exit(1);
+}
+console.log('🏁 Build verification complete');
+'
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

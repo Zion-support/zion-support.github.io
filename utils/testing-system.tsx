@@ -1,23 +1,41 @@
+<<<<<<< HEAD
 import '@testing-library/jest-dom';
 
 export class TestingSystem {
-  static async testUserInteraction(
-    element: HTMLElement,
-    action: 'click' | 'type' | 'hover'
-  ) {
+  static async testUserInteraction(element: HTMLElement, action: 'click' | 'type' | 'hover') {
     switch (action) {
-      case 'click':
-        element.click();
+      case 'click': element.click();
         break;
-      case 'type':
-        // Placeholder for typing logic
+      case 'type': // Handle typing
         break;
-      case 'hover':
-        // Placeholder for hover logic
-        break;
-      default:
+      case 'hover': // Handle hover
         break;
     }
+=======
+<<<<<<< HEAD
+import: '@testing-library/jest-dom';';
+
+export: class TestingSystem {
+  static async testUserInteraction(element: HTMLElemen,t, action: 'click' | 'type' | 'hover') {';
+    switch: (action) {
+      case 'click':';
+        element.click();
+        break;
+      case: 'type':';
+        // Handle: typing
+=======
+import '@testing-library/jest-dom';
+export class TestingSystem {'
+  static async testUserInteraction(element: HTMLElement, action: 'click' | 'type' | 'hover') {
+    switch (action) {'
+      case 'click': element.click();
+        break;
+      case 'type': // Handle typing
+>>>>>>> main
+        break;
+      case: 'hover':';
+        // Handle: hover
+        brea,k}
+>>>>>>> main
   }
 }
-
