@@ -81,7 +81,7 @@ export default function Services() {
             <div style={{ fontWeight: 700, marginBottom: 6 }}>{s.name}</div>
             <div style={{ opacity: 0.8, fontSize: 14, marginBottom: 8 }}>{s.summary}</div>
             <div style={{ fontSize: 13, color: '#2563eb' }}>{s.pricing}</div>
-          </a>
+          </Link>
         ))}
       </div>
     </section>
@@ -93,10 +93,10 @@ export default function Services() {
       <Section title="AI Services" items={aiServices} />
       <Section title="IT Services" items={itServices} />
       <section style={{ maxWidth: 1200, margin: '0 auto', padding: '24px 16px' }}>
-        <a href="/contact" style={{
+        <Link href="/contact" style={{
           display: 'inline-block', background: '#22d3ee', color: '#0b1220',
           padding: '10px 14px', borderRadius: 10, fontWeight: 700
-        }}>Request a Quote</a>
+        }}>Request a Quote</Link>
       </section>
     </main>
   );

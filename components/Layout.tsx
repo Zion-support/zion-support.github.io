@@ -1,7 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-import EnhancedNavigation from './layout/EnhancedNavigation';
-import EnhancedFooter from './layout/EnhancedFooter';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -29,9 +27,7 @@ const Layout: React.FC<LayoutProps> = ({
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="min-h-screen flex flex-col">
-        <EnhancedNavigation />
-        <main className="flex-1 pt-16">{children}</main>
-        <EnhancedFooter />
+        <main className="flex-1">{children}</main>
       </div>
     </>
   )
