@@ -456,4 +456,7 @@ import { ErrorBoundary } from 'react-error-boundary';
         </div>
       </div>
     </ErrorBoundary>
-  )}
+  );
+}
+
+export default App;
