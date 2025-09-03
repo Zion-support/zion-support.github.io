@@ -78,7 +78,7 @@ export const ContactForm: React.FC = () => {
         </div>
         <h3 className="text-2xl font-bold text-white mb-4">Thank You!</h3>
         <p className="text-zion-slate-light mb-6">
-          Your message has been sent successfully. We&apos;ll get back to you within 24 hours.'
+          Your message has been sent successfully. We&apos;ll get back to you within 24 hours.''
         </p>
         <button
           onClick={() => setSubmitStatus('idle')}
@@ -95,7 +95,7 @@ export const ContactForm: React.FC = () => {
       <div className="text-center mb-8">
         <h2 className="text-3xl font-bold text-white mb-4">Get In Touch</h2>
         <p className="text-zion-slate-light">
-          Ready to transform your business? Let&apos;s discuss how we can help you achieve your goals.'
+          Ready to transform your business? Let&apos;s discuss how we can help you achieve your goals.''
         </p>
       </div>
 

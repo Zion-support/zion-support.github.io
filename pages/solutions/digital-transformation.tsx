@@ -218,7 +218,7 @@ const DigitalTransformation: NextPage = () => {
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to Transform Your Business?</h2>
             <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-              Let&apos;s discuss how we can help you achieve your digital transformation goals and drive sustainable growth.'
+              Let&apos;s discuss how we can help you achieve your digital transformation goals and drive sustainable growth.''
             </p>
             <div className="flex flex-col sm: flex-row justify-center gap-4">
               <Link

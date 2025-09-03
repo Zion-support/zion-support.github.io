@@ -92,7 +92,7 @@ const Status: NextPage = () => {
                 <h2 className="text-3xl font-bold text-gray-900">All Systems Operational</h2>
               </div>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                All services are running normally. We&apos;re monitoring our systems 24/7 to ensure optimal performance.'
+                All services are running normally. We&apos;re monitoring our systems 24/7 to ensure optimal performance.''
               </p>
             </div>
             
