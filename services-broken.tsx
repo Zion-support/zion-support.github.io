@@ -1,5 +1,5 @@
 import React from 'react'
-} from 'lucide-react'
+import { Award, Brain, CheckCircle, Clock, ArrowRight, Cloud, Shield, Code } from 'lucide-react'
 export default function Services() {
 	const title = 'Services — Zion Tech Group'
 	const description = 'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.'
