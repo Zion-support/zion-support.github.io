@@ -1,68 +1,220 @@
-import React from 'react';
-
 <<<<<<< HEAD
-interface CardProps {
+import React from 'react';
+import { cn } from '../../src/lib/utils';
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
+import React from 'react';'import { cn } from '../../src/lib/utils';''const Card = React.forwardRef<;'
+  HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(({ className, ...props }, ref) => (
+  <div
+    ref={ref}
+    className={cn(
+'rounded-lg border bg-card text-card-foreground shadow-sm', className'    )}'    {...props}
+  />
+));
+Card.displayName = 'Card';''const CardHeader = React.forwardRef<;
+  HTMLDivElement, React.HTMLAttributes<HTMLDivElement>
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+ursor/automate-test-fix-improve-and-merge-code-99d1
+=======
+<<<<<<< HEAD
+import: React from 'react';';
+
+type: Props = {
   children: React.ReactNode;
-  className?: string;
+  className?: string;,
+};
+
+export: function Card({ children, className }: Props) {
+  return: <div className={className}>{children}</div>;
 }
 
-export const Card: React.FC<CardProps> = ({ children, className = '' }) => {
-  return (
-    <div className={`bg-white rounded-lg shadow-md border border-gray-200 ${className}`}>
-      {children}
-    </div>
-  );
-};
+export: function CardHeader({ children, className }: Props) {
+  return: <div className={className}>{children}</div>;
+}
+
+export: function CardTitle({ children, className }: Props) {
+  return: <h3 className={className}>{children}</h3>;
+}
+
+export: function CardContent({ children, className }: Props) {
+  return: <div className={className}>{children}</div>;
+}
+
+export: default Card;
 =======
-type DivProps = React.HTMLAttributes<HTMLDivElement>;
+import React from 'react';
+import { cn } from '../../lib/utils';
+>>>>>>> main
 
-type HeadingProps = React.HTMLAttributes<HTMLHeadingElement>;
-
-export const Card = React.forwardRef<HTMLDivElement, DivProps>(
-  ({ className = '', ...props }, ref) => (
-    <div
-      ref={ref}
-      className={`rounded-lg border bg-white text-gray-900 shadow-sm ${className}`}
-      {...props}
-    />
-  )
-);
+const Card = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+<<<<<<< HEAD
+>(({ className, ...props }, ref) => (
+  <div
+    ref={ref}
+    className={cn(
+=======
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>(({ className, ...props }, ref) => (
+  <div
+    ref={ref}
+    className={cn('
+>>>>>>> main
+      'rounded-lg border bg-card text-card-foreground shadow-sm',
+      className
+    )}
+    {...props}
+<<<<<<< HEAD
+  />
+));
 Card.displayName = 'Card';
 
-export const CardHeader = React.forwardRef<HTMLDivElement, DivProps>(
-  ({ className = '', ...props }, ref) => (
-    <div ref={ref} className={`flex flex-col space-y-1.5 p-6 ${className}`} {...props} />
-  )
-);
+const CardHeader = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => (
+  <div
+    ref={ref}
+    className={cn('flex flex-col space-y-1.5 p-6', className)}
+    {...props}
+  />
+));
 CardHeader.displayName = 'CardHeader';
 
-export const CardTitle = React.forwardRef<HTMLHeadingElement, HeadingProps>(
-  ({ className = '', ...props }, ref) => (
-    <h3 ref={ref} className={`text-2xl font-semibold leading-none tracking-tight ${className}`} {...props} />
-  )
-);
+const CardTitle = React.forwardRef<
+  HTMLParagraphElement,
+  React.HTMLAttributes<HTMLHeadingElement>
+>(({ className, ...props }, ref) => (
+  <h3
+    ref={ref}
+    className={cn(
+      'text-2xl font-semibold leading-none tracking-tight',
+      className
+    )}
+    {...props}
+  />
+));
+=======
+  />
+));
+'
+Card.displayName = 'Card';
+
+const CardHeader = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => (
+  <div
+    ref={ref}
+    className={cn('flex flex-col space-y-1.5 p-6', className)}
+    {...props}
+  />
+));
+'
+CardHeader.displayName = 'CardHeader';
+
+const CardTitle = React.forwardRef<
+  HTMLParagraphElement,
+  React.HTMLAttributes<HTMLHeadingElement>
+>(({ className, ...props }, ref) => (
+  <h3
+    ref={ref}
+    className={cn('
+      'text-2xl font-semibold leading-none tracking-tight',
+      className
+    )}
+    {...props}
+  />
+));
+'
+>>>>>>> main
 CardTitle.displayName = 'CardTitle';
 
-export const CardDescription = React.forwardRef<HTMLParagraphElement, React.HTMLAttributes<HTMLParagraphElement>>(
-  ({ className = '', ...props }, ref) => (
-    <p ref={ref} className={`text-sm text-gray-500 ${className}`} {...props} />
-  )
-);
+const CardDescription = React.forwardRef<
+  HTMLParagraphElement,
+  React.HTMLAttributes<HTMLParagraphElement>
+>(({ className, ...props }, ref) => (
+  <p
+    ref={ref}
+    className={cn('text-sm text-muted-foreground', className)}
+    {...props}
+  />
+));
+<<<<<<< HEAD
+=======
+'
+>>>>>>> main
 CardDescription.displayName = 'CardDescription';
 
-export const CardContent = React.forwardRef<HTMLDivElement, DivProps>(
-  ({ className = '', ...props }, ref) => (
-    <div ref={ref} className={`p-6 pt-0 ${className}`} {...props} />
-  )
-);
+const CardContent = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+<<<<<<< HEAD
+>(({ className, ...props }, ref) => (
+  <div ref={ref} className={cn('p-6 pt-0', className)} {...props} />
+));
+=======
+>(({ className, ...props }, ref) => ('
+  <div ref={ref} className={cn('p-6 pt-0', className)} {...props} />
+));
+'
+>>>>>>> main
 CardContent.displayName = 'CardContent';
 
-export const CardFooter = React.forwardRef<HTMLDivElement, DivProps>(
-  ({ className = '', ...props }, ref) => (
-    <div ref={ref} className={`flex items-center p-6 pt-0 ${className}`} {...props} />
-  )
-);
+const CardFooter = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => (
+  <div
+    ref={ref}
+    className={cn('flex items-center p-6 pt-0', className)}
+    {...props}
+  />
+));
+<<<<<<< HEAD
 CardFooter.displayName = 'CardFooter';
 
-export default Card;
->>>>>>> origin/main
+export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
+=======
+'
+CardFooter.displayName = 'CardFooter';
+
+export {
+  Card,
+  CardHeader,
+  CardFooter,
+  CardTitle,
+  CardDescription,
+  CardContent,
+};
+<<<<<<< HEAD
+export function Card({ children, className }: Props) {
+  return <div className={className}>{children}</div>
+}
+
+export function CardHeader({ children, className }: Props) {
+  return <div className={className}>{children}</div>
+}
+
+export function CardTitle({ children, className }: Props) {
+  return <h3 className={className}>{children}</h3>
+}
+
+export function CardContent({ children, className }: Props) {
+  return <div className={className}>{children}</div>
+}
+
+export default Card
+=======
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
