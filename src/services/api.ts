@@ -8,10 +8,13 @@ export class apiService {
     try {
       const response = await fetch("${this.baseUrl}/api")
 }
+}
       return await response.json()
+}
 }
     } catch (error) {
       console.error("Error fetching data:", error)
+}
 }
       throw error
     }
@@ -21,4 +24,5 @@ export class apiService {
 
 
 export default new apiService()
+}
 }

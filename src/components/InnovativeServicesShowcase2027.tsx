@@ -1,18 +1,16 @@
-import {  import { innovativeServices2027, serviceCategories2027, getServicesByCategory } from '../data/innovativeServices2027';
-
-export default function Page() {
-      },
+import React from "react"
+import {  import { innovativeServices2027, serviceCategories2027, getServicesByCategory } from "../data/innovativeServices2027";
+export default function Page() {},
       { threshold: 0.1 }
     );
-
     if(element) {  ;
   ;
   ;
-  address: '364 E Main St STE 1008 Middletown DE 19709';
+  address: "364 E Main St STE 1008 Middletown DE 19709";
   };
   return ("
     <section id = "innovative-services-2027" className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light relative overflow-hidden">
-      {/* Animated Background Elements */}"
+      {/* comment */}"
       <div className="absolute inset-0 overflow-hidden">"
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 rounded-full blur-3xl animate-pulse"></div>"
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-zion-purple/20 to-zion-cyan/20 rounded-full blur-3xl animate-pulse delay-1000"></div>"
@@ -20,7 +18,7 @@ export default function Page() {
       </div>
 "
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        {/* Header Section */}
+        {/* comment */}
         <motion.div
           initial = {
 
@@ -45,16 +43,16 @@ export default function Page() {
             <span className="bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-cyan bg-clip-text text-transparent">
               Revolutionary
             </span>
-            <br />"
+            <br  />"
             <span className="text-white">Technology Services</span>
           </h2>
 "
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Experience the future of technology with our cutting-edge 2027 services.'
-            From quantum computing to AI consciousness, we're pushing the boundaries of what's possible.</p>
+            Experience the future of technology with our cutting-edge 2027 services."
+            From quantum computing to AI consciousness, we"re pushing the boundaries of what"s possible.</p>
         </motion.div>
 
-        {/* Category Filter */}
+        {/* comment */}
         <motion.div
           initial = {
 
@@ -77,31 +75,30 @@ export default function Page() {
           className="mb-12"
 "
           <div className="flex flex-wrap justify-center gap-3">
-            <button'
-              onClick={() => setSelectedCategory('All')}
-              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${selectedCategory === 'All''
-                  ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25''
-                  : 'bg-zion-slate-light/50 text-gray-300 hover:bg-zion-slate-light/70 hover:text-white';`
-              }`};
+            <button"
+              onClick={() => setSelectedCategory("All")}
+              className={"px-6 py-3 rounded-full font-semibold transition-all duration-300 ${selectedCategory === "All""
+                  ? "bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25""
+                  : "bg-zion-slate-light/50 text-gray-300 hover:bg-zion-slate-light/70 hover:text-white";"
+              }"};
             >;
               All Categories;
             </button>;
             {serviceCategories2027.map((category) => {;
-              
               return ()                <button
                   key = {category}
-                  onClick={() => setSelectedCategory(category)}`
-                  className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 flex items-center gap-2 ${selectedCategory === category'
-                      ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25''
-                      : 'bg-zion-slate-light/50 text-gray-300 hover:bg-zion-slate-light/70 hover:text-white'`
-                  }`};
+                  onClick={() => setSelectedCategory(category)}"
+                  className={"px-6 py-3 rounded-full font-semibold transition-all duration-300 flex items-center gap-2 ${selectedCategory === category"
+                      ? "bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25""
+                      : "bg-zion-slate-light/50 text-gray-300 hover:bg-zion-slate-light/70 hover:text-white""
+                  }"};
                 >;"
                   {Icon && <Icon className="w-4 h-4"  />};
                   {category};
                 </button>;) }) }          </div>
         </motion.div>
 
-        {/* Services Grid */}
+        {/* comment */}
         <motion.div
           initial = {
 
@@ -138,7 +135,7 @@ export default function Page() {
               className="group relative"
 "
               <div className="bg-gradient-to-br from-zion-slate-light/50 to-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 h-full transition-all duration-500 hover:scale-105 hover:border-zion-cyan/40 hover:shadow-2xl hover:shadow-zion-cyan/25">
-                {/* Service Header */}"
+                {/* comment */}"
                 <div className="flex items-start justify-between mb-4">"
                   <div className="flex-1">"
                     <h3 className="text-xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors duration-300">
@@ -149,8 +146,7 @@ export default function Page() {
                     </p>
                   </div>
                 </div>
-
-                {/* Technology Tags */}"
+                {/* comment */}"
                 <div className="flex flex-wrap gap-2 mb-4">
                   {service.technology.slice(0, 3).map((tech, techIndex) => (
                     <span
@@ -165,8 +161,7 @@ export default function Page() {
                       +{service.technology.length-3} more
                     </span>) }
                 </div>
-
-                {/* Key Metrics */}"
+                {/* comment */}"
                 <div className="grid grid-cols-2 gap-4 mb-4">;"
                   <div className="text-center">"
                     <div className="text-zion-cyan font-bold text-lg">{service.marketSize}</div>"
@@ -177,19 +172,17 @@ export default function Page() {
                     <div className="text-gray-400 text-xs">ROI</div>
                   </div>
                 </div>;
-
-                {/* Price & CTA */}"
+                {/* comment */}"
                 <div className="flex items-center justify-between mb-4">;"
                   <div className="text-2xl font-bold text-white">{service.price}</div>
                   <button
                     onClick={() => toggleServiceExpansion(service.id)}"
                     className="px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center gap-2"
 
-                    {expandedService === service.id ? 'Less' : 'Learn More'}"
+                    {expandedService === service.id ? "Less" : "Learn More"}"
                     {expandedService === service.id ? <ChevronUp className="w-4 h-4"  /> : <ChevronDown className="w-4 h-4"  />}                  </button>
                 </div>
-
-                {/* Expanded Service Details */}
+                {/* comment */}
                 <AnimatePresence>
                   {expandedService === service.id && ;
                     <motion.div
@@ -202,7 +195,7 @@ export default function Page() {
                       animate = {
 
   { opacity: 1,
-  height: 'auto'
+  height: "auto"
 
 }}
                       exit = {
@@ -215,7 +208,7 @@ export default function Page() {
                       className="overflow-hidden"
 "
                       <div className="border-t border-zion-cyan/20 pt-4 space-y-4">
-                        {/* Features */}
+                        {/* comment */}
                         <div>"
                           <h4 className="text-zion-cyan font-semibold mb-2">Key Features</h4>"
                           <ul className="space-y-1">
@@ -226,8 +219,7 @@ export default function Page() {
                               </li>) ) }
                           </ul>
                         </div>
-
-                        {/* Benefits */}
+                        {/* comment */}
                         <div>"
                           <h4 className="text-zion-purple font-semibold mb-2">Benefits</h4>"
                           <ul className="space-y-1">
@@ -238,8 +230,7 @@ export default function Page() {
                               </li>) ) }
                           </ul>
                         </div>
-
-                        {/* Implementation Details */}"
+                        {/* comment */}"
                         <div className="grid grid-cols-2 gap-4">
                           <div>"
                             <div className="text-zion-cyan font-semibold text-sm">Implementation</div>"
@@ -250,10 +241,8 @@ export default function Page() {
                             <div className="text-gray-300 text-xs">{service.supportLevel}</div>
                           </div>
                         </div>
-
-                        {/* Primary CTA */}
-                        <a
-                          href={service.href}"
+                        {/* comment */}
+                        <a href={service.href}"
                           target={service.external ? "_blank" : "_self"}"
                           rel={service.external ? "noopener noreferrer" : ""}"
                           className="w-full px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2 group"
@@ -268,7 +257,7 @@ export default function Page() {
             </motion.div>) ) }
         </motion.div>
 
-        {/* Contact Section */}
+        {/* comment */}
         <motion.div
           initial = {
 
@@ -322,4 +311,4 @@ export default function Page() {
         </motion.div>;
       </div>;
     </section>;) };
-'"`
+'""

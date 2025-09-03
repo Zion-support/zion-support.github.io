@@ -1,19 +1,18 @@
+import React from "react"
 
-      // // // // // // // // console.log('PrimaryNav search submit:', query);
-      router.push(`/search/${slugify(query)}`);
-      setQuery('');
-      // // // // // console.log('PrimaryNav search submit:', query);`
-      router.push(`/search/${slugify(query)}`);
-      setQuery('')}
+      // // // // // // // // console.log("PrimaryNav search submit:", query);
+      router.push("/search/${slugify(query)}");
+      setQuery("");
+      // // // // // console.log("PrimaryNav search submit:", query);"
+      router.push("/search/${slugify(query)}");
+      setQuery("")}
 // Theme toggle component;
-
   const [isDark, setIsDark] = useState<typeof false>(false);
-
   const toggleTheme = (...args: unknown[]): unknown => {;    setIsDark(!isDark);
     // Add theme switching logic here
   };
-
   return ()
+}
     <>
       <header
         className="sticky top-0 z-50 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md"
@@ -24,41 +23,39 @@
         <div className="container flex flex-wrap items-center justify-between gap-2 min-h-16 px-4 sm:px-6">
           <Logo  />
 
-          {/* Navigation - hidden on mobile, shown on desktop */}"
+          {/* comment */}"
           <div className="hidden md:block order-1 flex-shrink-0">
             <ResponsiveNavigation  />
           </div>
-
-                  // // // // // // // // console.log('PrimaryNav search suggestion selected:', sugg);
+                  // // // // // // // // console.log("PrimaryNav search suggestion selected:", sugg);
                 onSelectSuggestion = {
 
   (sugg) => {
 
-                  // // // // // console.log('PrimaryNav search suggestion selected:',;
+                  // // // // // console.log("PrimaryNav search suggestion selected:",;
   ;
   sugg);
                   // Handle different suggestion types with proper navigation
                   if(sugg.id) {
 
-                    // Product listings with IDs go to product detail page`
-                    router.push(`/marketplace/listing/${sugg.id
-'`
-}`)} else if(sugg.type = == 'doc' && sugg.slug && sugg.slug.startsWith('/')) {
+                    // Product listings with IDs go to product detail page"
+                    router.push("/marketplace/listing/${sugg.id
+""
+}")} else if(sugg.type = == "doc" && sugg.slug && sugg.slug.startsWith("/")) {
 
-                    // Documentation suggestions navigate directly to their path'
-                    router.push(sugg.slug)} else if(sugg.type === 'blog' && sugg.slug) {
+                    // Documentation suggestions navigate directly to their path"
+                    router.push(sugg.slug)} else if(sugg.type === "blog" && sugg.slug) {
 
-                    // Blog posts navigate to blog detail page`
-                    router.push(`/blog/${sugg.slug}`)} else {
+                    // Blog posts navigate to blog detail page"
+                    router.push("/blog/${sugg.slug}")} else {
 
-                    // Default: search results page with slug;`
-                    router.push(`/search/${sugg.slug || slugify(sugg.text)}`)};
-                  setQuery('');
+                    // Default: search results page with slug;"
+                    router.push("/search/${sugg.slug || slugify(sugg.text)}")};
+                  setQuery("");
+                  // Track analytics event"
+                  if(typeof window !== "null" && window.gtag) {
 
-                  // Track analytics event'
-                  if(typeof window !== 'null' && window.gtag) {
-
-                    window.gtag('event',search_suggestion_click', {
+                    window.gtag("event",search_suggestion_click", {
 
                       search_term: sugg.text,
                       suggestion_type: sugg.type,
@@ -68,8 +65,7 @@
                 searchSuggestions = {suggestions}
               />
             </form>
-
-            {/* Compact actions group */}"
+            {/* comment */}"
             <div className="flex items-center gap-1">
               <PointsBadge  />
               <HoverCard openDelay={100}>
@@ -79,8 +75,8 @@
                     className="relative p-1"
                     aria-label= {
 
-  t('nav.cart',Cart')
-
+  t("nav.cart",Cart")
+}
 }
                   >"
                     <ShoppingCart aria-hidden="true" className="h-5 w-5 text-foreground hover:text-primary"  />
@@ -97,14 +93,12 @@
                 </HoverCardContent>
               </HoverCard>
             </div>
-
-            {/* Compact controls group */}"
+            {/* comment */}"
             <div className="flex items-center gap-1 border-l border-primary/20 pl-1 ml-1">
               <ModeToggle  />
               <LanguageSelector  />
             </div>
-
-            {/* Auth links - flex wrap for very small screens */}"
+            {/* comment */}"
             <div className="flex items-center gap-1 flex-wrap">
               {!isLoggedIn && (
                 <>
@@ -113,29 +107,27 @@
                     className="text-sm hover:text-primary whitespace-nowrap"
                     data-testid="login-link"
 
-                    {t('auth.login')}
+                    {t("auth.login")}
                   </Link>
                   <Link"
                     href="/signup"
                     className="text-sm hover:text-primary whitespace-nowrap"
 
-                    {t('auth.signup')}
+                    {t("auth.signup")}
                   </Link>
                 </>
               )}
               {isLoggedIn && <UserMenu  />}
             </div>
           </div>
-          
-          {/* Mobile menu button */}
+          {/* comment */}
           <button
             onClick={() => setIsOpen(!isOpen)}"
             className="lg:hidden text-white hover:text-cyan-400 transition-colors duration-200"
           >"
             {isOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}          </button>
         </div>
-
-        {/* Mobile Navigation */}
+        {/* comment */}
         <AnimatePresence>
           {isOpen && 
             <motion.div
@@ -148,7 +140,7 @@
               animate = {
 
   { opacity: 1,
-  height: 'auto'
+  height: "auto"
 
 }}
               exit = {
@@ -214,4 +206,7 @@
       </nav>;
     </header>;
   )}
-'"`
+"""
+
+
+export default Component

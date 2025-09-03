@@ -1,12 +1,12 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import { SEO } from "../../components/SEO";
 import { 
-  Leaf, 
-  Zap, 
-  Globe, 
-  Shield, 
-  CheckCircle, 
+  Leaf,
+  Zap,
+  Globe,
+  Shield,
+  CheckCircle,
   TrendingUp,
   Users,
   Award,
@@ -18,102 +18,96 @@ import {
   HardDrive,
   Network,
   Battery
-} from 'lucide-react';
-
+} from "lucide-react";
 export default function GreenIT() {
   const services = [
     {
       icon: Leaf,
-      title: 'Green Data Centers',
-      description: 'Energy-efficient data center design and optimization',
-      features: ['Renewable energy integration', 'Cooling system optimization', 'Energy monitoring', 'Carbon footprint reduction']
+      title: "Green Data Centers",
+      description: "Energy-efficient data center design and optimization",
+      features: ["Renewable energy integration", "Cooling system optimization", "Energy monitoring", "Carbon footprint reduction"]
     },
     {
       icon: Zap,
-      title: 'Energy Management',
-      description: 'Smart energy monitoring and optimization systems',
-      features: ['Real-time energy tracking', 'Automated optimization', 'Peak demand management', 'Energy cost reduction']
+      title: "Energy Management",
+      description: "Smart energy monitoring and optimization systems",
+      features: ["Real-time energy tracking", "Automated optimization", "Peak demand management", "Energy cost reduction"]
     },
     {
       icon: Cloud,
-      title: 'Cloud Optimization',
-      description: 'Eco-friendly cloud infrastructure and services',
-      features: ['Green cloud providers', 'Resource optimization', 'Carbon-aware computing', 'Sustainable scaling']
+      title: "Cloud Optimization",
+      description: "Eco-friendly cloud infrastructure and services",
+      features: ["Green cloud providers", "Resource optimization", "Carbon-aware computing", "Sustainable scaling"]
     },
     {
       icon: Server,
-      title: 'Hardware Efficiency',
-      description: 'Energy-efficient hardware selection and management',
-      features: ['Low-power processors', 'Efficient storage', 'Smart power management', 'Hardware lifecycle optimization']
+      title: "Hardware Efficiency",
+      description: "Energy-efficient hardware selection and management",
+      features: ["Low-power processors", "Efficient storage", "Smart power management", "Hardware lifecycle optimization"]
     },
     {
       icon: Network,
-      title: 'Network Optimization',
-      description: 'Efficient network infrastructure and protocols',
-      features: ['Traffic optimization', 'Bandwidth management', 'Network virtualization', 'Green networking protocols']
+      title: "Network Optimization",
+      description: "Efficient network infrastructure and protocols",
+      features: ["Traffic optimization", "Bandwidth management", "Network virtualization", "Green networking protocols"]
     },
     {
       icon: Monitor,
-      title: 'Software Efficiency',
-      description: 'Energy-efficient software development and deployment',
-      features: ['Code optimization', 'Resource management', 'Efficient algorithms', 'Green software practices']
+      title: "Software Efficiency",
+      description: "Energy-efficient software development and deployment",
+      features: ["Code optimization", "Resource management", "Efficient algorithms", "Green software practices"]
     }
   ];
-
   const benefits = [
     {
       icon: TrendingUp,
-      title: 'Cost Reduction',
-      description: 'Lower energy costs and operational expenses'
+      title: "Cost Reduction",
+      description: "Lower energy costs and operational expenses"
     },
     {
       icon: Shield,
-      title: 'Compliance',
-      description: 'Meet environmental regulations and standards'
+      title: "Compliance",
+      description: "Meet environmental regulations and standards"
     },
     {
       icon: Users,
-      title: 'Brand Value',
-      description: 'Enhanced reputation and customer trust'
+      title: "Brand Value",
+      description: "Enhanced reputation and customer trust"
     },
     {
       icon: Award,
-      title: 'Innovation',
-      description: 'Leading-edge sustainable technology solutions'
+      title: "Innovation",
+      description: "Leading-edge sustainable technology solutions"
     }
   ];
-
   const technologies = [
     {
       icon: Battery,
-      title: 'Renewable Energy',
-      description: 'Solar, wind, and hydroelectric power integration'
+      title: "Renewable Energy",
+      description: "Solar, wind, and hydroelectric power integration"
     },
     {
       icon: Cpu,
-      title: 'AI Optimization',
-      description: 'Machine learning for energy efficiency'
+      title: "AI Optimization",
+      description: "Machine learning for energy efficiency"
     },
     {
       icon: Database,
-      title: 'Smart Monitoring',
-      description: 'IoT sensors and real-time analytics'
+      title: "Smart Monitoring",
+      description: "IoT sensors and real-time analytics"
     },
     {
       icon: Globe,
-      title: 'Carbon Tracking',
-      description: 'Comprehensive carbon footprint measurement'
+      title: "Carbon Tracking",
+      description: "Comprehensive carbon footprint measurement"
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="Green IT Services - Zion Tech Group"
-        description="Sustainable and energy-efficient IT solutions. Green data centers, energy management, cloud optimization, and eco-friendly technology services."
-      />
+      <SEO title="Green IT Services - Zion Tech Group"
+        description="Sustainable and energy-efficient IT solutions. Green data centers, energy management, cloud optimization, and eco-friendly technology services."  />
       
-      {/* Hero Section */}
+      {/* comment */}
       <section className="relative py-20 px-4">
         <div className="container mx-auto text-center">
           <motion.div
@@ -131,7 +125,7 @@ export default function GreenIT() {
           >
             <div className="flex justify-center mb-6">
               <div className="w-20 h-20 bg-gradient-to-br from-green-400 via-emerald-500 to-teal-600 rounded-2xl flex items-center justify-center">
-                <Leaf className="w-10 h-10 text-white" />
+                <Leaf className="w-10 h-10 text-white"  />
               </div>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -158,8 +152,7 @@ export default function GreenIT() {
           </motion.div>
         </div>
       </section>
-
-      {/* Services Grid */}
+      {/* comment */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
           <motion.div
@@ -214,7 +207,7 @@ export default function GreenIT() {
                 <ul className="space-y-2">
                   {service.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-sm text-slate-400">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0"  />
                       {feature}
                     </li>
                   ))}
@@ -224,8 +217,7 @@ export default function GreenIT() {
           </div>
         </div>
       </section>
-
-      {/* Benefits Section */}
+      {/* comment */}
       <section className="py-20 px-4 bg-slate-800/30">
         <div className="container mx-auto">
           <motion.div
@@ -282,8 +274,7 @@ export default function GreenIT() {
           </div>
         </div>
       </section>
-
-      {/* Technologies Section */}
+      {/* comment */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
           <motion.div
@@ -340,8 +331,7 @@ export default function GreenIT() {
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
+      {/* comment */}
       <section className="py-20 px-4 bg-gradient-to-r from-green-900/20 to-emerald-900/20">
         <div className="container mx-auto text-center">
           <motion.div
@@ -387,11 +377,7 @@ export default function GreenIT() {
 
 
 export { GreenIT };
-
 export { GreenIT };
-
 export { GreenIT };
-
 export { GreenIT };
-
 export { GreenIT };

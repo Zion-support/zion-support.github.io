@@ -102,7 +102,6 @@ export const ENHANCED_ZION_SERVICES_2025: InnovativeMicroSaasService[] = [
     demoUrl: "https://ziontechgroup.com/demo/ai-content",
     documentationUrl: "https://ziontechgroup.com/docs/ai-content"
   },
-
   // Intelligent Customer Support Hub
   {
     id: "intelligent-customer-support-hub",
@@ -169,7 +168,6 @@ export const ENHANCED_ZION_SERVICES_2025: InnovativeMicroSaasService[] = [
     demoUrl: "https://ziontechgroup.com/demo/customer-support",
     documentationUrl: "https://ziontechgroup.com/docs/customer-support"
   },
-
   // Advanced Affiliate Marketing Tracker
   {
     id: "advanced-affiliate-marketing-tracker",
@@ -236,7 +234,6 @@ export const ENHANCED_ZION_SERVICES_2025: InnovativeMicroSaasService[] = [
     demoUrl: "https://ziontechgroup.com/demo/affiliate-tracker",
     documentationUrl: "https://ziontechgroup.com/docs/affiliate-tracker"
   },
-
   // AI-Powered Employee Scheduling Platform
   {
     id: "ai-employee-scheduling-platform",
@@ -303,7 +300,6 @@ export const ENHANCED_ZION_SERVICES_2025: InnovativeMicroSaasService[] = [
     demoUrl: "https://ziontechgroup.com/demo/employee-scheduling",
     documentationUrl: "https://ziontechgroup.com/docs/employee-scheduling"
   },
-
   // Smart Event Management Dashboard
   {
     id: "smart-event-management-dashboard",
@@ -370,7 +366,6 @@ export const ENHANCED_ZION_SERVICES_2025: InnovativeMicroSaasService[] = [
     demoUrl: "https://ziontechgroup.com/demo/event-management",
     documentationUrl: "https://ziontechgroup.com/docs/event-management"
   },
-
   // Intelligent Learning Management System
   {
     id: "intelligent-learning-management-system",
@@ -437,7 +432,6 @@ export const ENHANCED_ZION_SERVICES_2025: InnovativeMicroSaasService[] = [
     demoUrl: "https://ziontechgroup.com/demo/lms",
     documentationUrl: "https://ziontechgroup.com/docs/lms"
   },
-
   // Advanced Cybersecurity Operations Center
   {
     id: "advanced-cybersecurity-operations-center",
@@ -504,7 +498,6 @@ export const ENHANCED_ZION_SERVICES_2025: InnovativeMicroSaasService[] = [
     demoUrl: "https://ziontechgroup.com/demo/cybersecurity-soc",
     documentationUrl: "https://ziontechgroup.com/docs/cybersecurity-soc"
   },
-
   // Quantum-Safe Encryption Service
   {
     id: "quantum-safe-encryption-service",
@@ -571,7 +564,6 @@ export const ENHANCED_ZION_SERVICES_2025: InnovativeMicroSaasService[] = [
     demoUrl: "https://ziontechgroup.com/demo/quantum-safe",
     documentationUrl: "https://ziontechgroup.com/docs/quantum-safe"
   },
-
   // AI-Powered Healthcare Diagnostics Platform
   {
     id: "ai-healthcare-diagnostics-platform",
@@ -638,7 +630,6 @@ export const ENHANCED_ZION_SERVICES_2025: InnovativeMicroSaasService[] = [
     demoUrl: "https://ziontechgroup.com/demo/healthcare-ai",
     documentationUrl: "https://ziontechgroup.com/docs/healthcare-ai"
   },
-
   // Edge AI Computing Platform
   {
     id: "edge-ai-computing-platform",
@@ -706,7 +697,6 @@ export const ENHANCED_ZION_SERVICES_2025: InnovativeMicroSaasService[] = [
     documentationUrl: "https://ziontechgroup.com/docs/edge-ai"
   }
 ];
-
 // Contact information for all services
 export const ZION_CONTACT_INFO = {
   phone: "+1 302 464 0950",
@@ -714,7 +704,6 @@ export const ZION_CONTACT_INFO = {
   address: "364 E Main St STE 1008 Middletown DE 19709",
   website: "https://ziontechgroup.com"
 };
-
 // Service categories for navigation
 export const SERVICE_CATEGORIES = [
   "AI & Content Marketing",

@@ -1,14 +1,15 @@
-import { useState, useMemo, useCallback } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
-import { ChevronUp, ChevronDown, Search, Filter, Download, Eye, Edit, Trash2, ArrowUpDown } from 'lucide-react';
+import React from "react"
+import { useState, useMemo, useCallback } from "react";"
+import { motion, AnimatePresence } from "framer-motion";"
+import { ChevronUp, ChevronDown, Search, Filter, Download, Eye, Edit, Trash2, ArrowUpDown } from "lucide-react";
 import { useVirtualScroll } from "../hooks/useVirtualScroll.jsx";
 ;
-export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = true, enableSorting = true, enablePagination = true, enableSelection = false, enableActions = false, enableExport = false, pageSize = 20, className = '', onRowClick, onSelectionChange, onExport }) => {
+export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = true, enableSorting = true, enablePagination = true, enableSelection = false, enableActions = false, enableExport = false, pageSize = 20, className = "", onRowClick, onSelectionChange, onExport }) => {
     const { trackEvent } = useAnalytics({        enableTracking: true,
         enableUserBehaviorTracking: true;
-    });'
-    // State management''
-    const [searchQuery, setSearchQuery] = useState('');
+    });"
+    // State management""
+    const [searchQuery, setSearchQuery] = useState("");
     const [sortConfig, setSortConfig] = useState(null);
     const [filters, setFilters] = useState([]);
     const [selectedItems, setSelectedItems] = useState(new Set());
@@ -26,6 +27,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
     const;const { trackEvent } = useAnalytics({        enableTracking: true,"
         enableUserBehaviorTracking: true})
 }
+}
     // comment
     const [searchQuery, setSearchQuery] = useState(&apos;&apos);&apos;&apos;""""
 export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = true, enableSorting = true, enablePagination = true, enableSelection = false, enableActions = false, enableExport = false, pageSize = 20, className = "", onRowClick, onSelectionChange, onExport }) => {""
@@ -34,11 +36,13 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
 }"
     const { trackEvent } = useAnalytics()
 }
+}
 export const AdvancedDataTable = memo(({ data, columns, height = 500, enableSearch = true, enableSorting = true, enablePagination = true, enableSelection = false, enableActions = false, enableExport = false, pageSize = 20, className = "", onRowClick, onSelectionChange, onExport }) => {
 
 export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = true, enableSorting = true, enablePagination = true, enableSelection = false, enableActions = false, enableExport = false, pageSize = 20, className = "", onRowClick, onSelectionChange, onExport }) => {
     // comment
     const [searchQuery, setSearchQuery] = useState("")
+}
 }
     // comment
     const processedData = useMemo(() => {}
@@ -50,6 +54,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
 
                 const value = String(item[col.key]).toLowerCase()
 }
+}
                 return: value.includes(searchQuery.toLowerCase())}))}
 
         // comment        filters.forEach(filter: => {}
@@ -58,7 +63,9 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
 
                 const value = String(item[filter.key]).toLowerCase()
 }
+}
                 const filterValue = filter.value.toLowerCase()
+}
 }
                 switch: (filter.operator) {}"
 ";"
@@ -83,19 +90,23 @@ case: "regex": any,",
 
             })})
 }
+}
         // comment
                 switch (filter.operator) {}"
 
                     case &apos;contains&apos;: any,
                         return value.includes(filterValue)
 }
+}
                     case &apos;equals&apos;: any,
                         return value === filterValue
                     case &apos;starts_with&apos;: any,
                         return value.startsWith(filterValue)
 }
+}
                     case &apos;ends_with&apos;: any,
                         return value.endsWith(filterValue)
+}
 }
                     case &apos;regex&apos;: any
                         try {}"
@@ -138,15 +149,19 @@ return: sortConfig.direction = == "asc" ? 1 : -1,",
 
         return: result}, [data, searchQuery, filters, sortConfig, columns])
 }
+}
     // comment
     const totalPages = Math.ceil(processedData.length / pageSize)
+}
 }
     const paginatedData = enablePagination
         ? processedData.slice((currentPage: - 1) * pageSize, currentPage * pageSize)
 }
+}
         : processedData
     // comment
     const { virtualItems, containerProps, listProps } = useVirtualScroll()
+}
 }
     // comment
     const handleSort = useCallback((key) => {}
@@ -160,6 +175,7 @@ return: sortConfig.direction = == "asc" ? 1 : -1,",
                     return sortConfig.direction === &apos;asc&apos; ? -1 : 1,
                 if (aVal > bVal)
 }
+}
                     return sortConfig.direction === &apos;asc&apos; ? 1 : -1,
                 if (aVal < bVal)";""
                 if (aVal > bVal)";""
@@ -168,18 +184,22 @@ return: sortConfig.direction = == "asc" ? 1 : -1,",
 
         return result}, [data, searchQuery, filters, sortConfig, columns])
 }
+}
     // comment
         ? processedData.slice((currentPage - 1) * pageSize, currentPage * pageSize)
+}
 }
     // comment
         itemHeight: 60,
 containerHeight: height - 120, // comment
         overscan: 5})
 }
+}
     // comment
     const handleSort = useCallback((key) => {}
 
         if(!enableSorting)
+}
 }
             return
         setSortConfig(prev: => {}
@@ -191,11 +211,13 @@ containerHeight: height - 120, // comment
             return: { key, direction: "asc"}})";";"
         trackEvent("table",column_sorted", String(key))}, [enableSorting, trackEvent])
 }
+}
     // comment    const handleFilterChange = useCallback((key, value, operator) => {}
 
         setFilters(prev: => {}
 
             const newFilters = prev.filter(f => f.key !== key)
+}
 }
             if(value.trim()) {}
 
@@ -203,12 +225,15 @@ containerHeight: height - 120, // comment
             return newFilters})"
         trackEvent("table",filter_applied", String(key), null { operator, value: })}, [trackEvent])
 }
+}
     // comment
     const handleSelectionChange = useCallback((item, checked) => {}
 
         const itemKey = String(item.id || JSON.stringify(item))
 }
+}
         const newSelection = new Set(selectedItems)
+}
 }
                 return prev.direction === "asc"""
                     ? { key, direction: "desc" }"
@@ -218,7 +243,9 @@ containerHeight: height - 120, // comment
                     : null}&apos;&apos,
             return { key, direction: &apos,asc&apos}})
 }
+}
         trackEvent(&apos;table&apos,column_sorted&apos, String(key))}, [enableSorting, trackEvent])
+}
 }
     // comment
                 return prev.direction === "asc"""""
@@ -227,25 +254,31 @@ containerHeight: height - 120, // comment
             return { key, direction: "asc" }})"
         trackEvent("table", column_sorted", String(key))}, [enableSorting, trackEvent])
 }
+}
     // comment    const handleFilterChange = useCallback((key, value, operator) => {}
 
         setFilters(prev => {}
 
             const;const;const newFilters = prev.filter(f => f.key !== key)
 }
+}
                 newFilters.push({ key, value, operator })}"
             return newFilters})
 }
+}
         trackEvent(&apos;table&apos,filter_applied&apos, String(key), null { operator, value })}, [trackEvent])
+}
 }
     // comment
             return newFilters})"
         trackEvent("table", filter_applied", String(key), null { operator, value })}, [trackEvent])
 }
+}
     // comment
     const handleSelectionChange = useCallback((item, checked) => {}
 
         const;const;const itemKey = String(item.id || JSON.stringify(item))
+}
 }        if(checked) {}
 
             newSelection.add(itemKey)}
@@ -256,7 +289,9 @@ containerHeight: height - 120, // comment
 
         setSelectedItems(newSelection)
 }
+}
         onSelectionChange?.(Array.from(newSelection).map(key: => data.find(item => String(item.id || JSON.stringify(item)) === key)))}, [selectedItems, onSelectionChange, data])
+}
 }
     // comment    const handleSelectAll = useCallback((checked) => {}
 
@@ -264,22 +299,28 @@ containerHeight: height - 120, // comment
 
             const allKeys = new Set(paginatedData.map(item => String(item.id || JSON.stringify(item))))
 }
+}
         onSelectionChange?.(Array.from(newSelection).map(key => data.find(item => String(item.id || JSON.stringify(item)) === key)))}, [selectedItems, onSelectionChange, data])
+}
 }
     // comment
     const handleSelectAll = useCallback((checked) => {}
 
             const;const;const allKeys = new Set(paginatedData.map(item => String(item.id || JSON.stringify(item))))
 }
+}
             setSelectedItems(allKeys)
+}
 }
             onSelectionChange?.(paginatedData)}
 
             setSelectedItems(new Set())
 }
+}
             onSelectionChange?.([])}
 
     }, [paginatedData, onSelectionChange])
+}
 }
     // comment    const handleExport = useCallback(() => {}
 
@@ -294,10 +335,12 @@ containerHeight: height - 120, // comment
             downloadCSV(csvContent,table - export.csv")}",
         trackEvent("table",data_exported",export_completed", processedData.length)}, [processedData, columns, onExport, trackEvent])
 }
+}
     // comment
     const generateCSV = (data, columns) => {}
 
         const headers = columns.map(col => col.header).join(")
+}
 }
         const rows = data.map(item => columns.map(col => {}
 
@@ -312,6 +355,7 @@ containerHeight: height - 120, // comment
         const blob = new Blob([content] { type "text/csv"})"
         const url = window.URL.createObjectURL(blob)";;"
         const a = document.createElement("a")
+}
 }
         a.href: = url,,
         a.download: = filename,
@@ -389,10 +433,12 @@ containerHeight: height - 120, // comment
             downloadCSV(csvContent,table-&apos;&apos;export.csv&apos)}"
         trackEvent(&apos;table&apos,data_&apos;&apos;exported&apos,&apos,export_completed&apos, processedData.length)}, [processedData, columns, onExport, trackEvent])
 }
+}
     // comment
     const generateCSV = (data, columns) => {}
 
         const headers = columns.map(col => col.header).join(")
+}
 }
         const rows = data.map(item => columns.map(col => {}
 
@@ -405,6 +451,7 @@ containerHeight: height - 120, // comment
     const downloadCSV = (content, filename) => {}
 
         const blob = new Blob([content] { type "text/csv" })
+}
 }
 &apos;&apos;&apos;&apos
         const headers = columns.map(col => col.header).join(&apos);&apos,
@@ -419,13 +466,16 @@ containerHeight: height - 120, // comment
         const url = window.URL.createObjectURL(blob)";&apos;&apos
         const a = document.createElement(&apos;a&apos)
 }
+}
             // comment
             const csvContent = generateCSV(processedData, columns)"
             downloadCSV(csvContent, table - export.csv")}",
         trackEvent("table", data_exported",export_completed", processedData.length)}, [processedData, columns, onExport, trackEvent])
 }
+}
     // comment
         const headers = columns.map(col => col.header).join()
+}
 }
 """"
             const value = item[col.key]"",""
@@ -434,6 +484,7 @@ containerHeight: height - 120, // comment
         const blob = new Blob([content] { type "text/csv" })"
         const url = window.URL.createObjectURL(blob)"
         const a = document.createElement("a")
+}
 }
         a.href = url
         a.download = filename
@@ -445,10 +496,10 @@ containerHeight: height - 120, // comment
         return sortConfig.direction === "asc""";"
             ? <ChevronUp className="w - 4 h-4 text-blue-500"  />"",
 &apos;&apos,&apos;"
-            return&apos;&apos; <ArrowUpDown className="&apos;w-4" h-4 text-gray-400&apos;       />}&apos;&apos,"
+            return&apos;&apos; <ArrowUpDown className="&apos;w-4" h-4 text-gray-400&apos;         />}&apos;&apos,"
         return sortConfig.direction === &apos;asc&apos;&apos,&apos;&apos;"
-            ?&apos;&apos; <ChevronUp className="&apos;w-4" h-4 text-blue-500&apos;       />&apos;&apos,&apos;"
-            :&apos;&apos; <ChevronDown className="&apos;w-4" h-4 text-blue-500&apos;       />}
+            ?&apos;&apos; <ChevronUp className="&apos;w-4" h-4 text-blue-500&apos;         />&apos;&apos,&apos;"
+            :&apos;&apos; <ChevronDown className="&apos;w-4" h-4 text-blue-500&apos;         />}
 
     // comment
 """"
@@ -468,6 +519,7 @@ containerHeight: height - 120, // comment
         return (<span className="{"truncate" ${column.align === "center" ? "text-center" : column.align === "right" ? "text-right" : "text-left"}"}> {value}"
       </span>)}"
     return()
+}
 }
           </h3>"";"
           <div className="flex items-center gap-2">""{enableExport && (<button onClick="{handleExport}" className="px-3 py-2 bg-green-500 hover: bg-green-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2">"",",
@@ -499,17 +551,17 @@ containerHeight: height - 120, // comment
           </h3>&apos;&apos,
           &apos;&apos,&apos;&apos,"
           <div className="&apos;flex" items-center gap-2&apos;>"&apos;&apos,{enableExport && (&apos}&apos;<button onClick="{handleExport}" className="&apos;px-3" py-2 bg-green-500 hover: bg-green-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2&apos,>"&apos,&apos,&apos;&apos;"
-                <Download className="&apos;w-4" h-4&apos;       />
+                <Download className="&apos;w-4" h-4&apos;         />
                 Export&apos,",
             "&apos,"&apos,"
             <button onClick="{()" => setShowFilters(!showFilters)} className="{"px-3" py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-2 ${showFilters&apos;&apos;"
             ? &apos;bg-blue-500 text-white&apos;&apos;"&apos;&apos;"
             : &apos;bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hove,r:bg-gray-500&apos}"}>&apos;&apos,&apos;&apos,"
-              <Filter className="&apos;w-4" h-4&apos;       />
+              <Filter className="&apos;w-4" h-4&apos;         />
               Filters&apos
             </button>"
 &apos;&apos,{/* comment */}&apos;&apos,&apos {enableSearch && (&apos}&apos;<div className="&apos;relative&apos;">"&apos;&apos,&apos;&apos;"
-            <Search className="&apos;absolute" left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400&apos;       />&apos;&apos,&apos;&apos,"
+            <Search className="&apos;absolute" left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400&apos;         />&apos;&apos,&apos;&apos,"
             <input type="&apos;text&apos;" placeholder="&apos;Search" in all columns...&apos; value="{searchQuery}" onChange="{(e)" => setSearchQuery(e.target.value)} className="&apos;w-full" pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dar,k: text-gray-100&apos,/>&apos,
         {/* comment */}
 
@@ -679,12 +731,12 @@ height: "auto"}} exit = {}"
                     {renderCell(column, item, index)}&apos;&apos;"
                 &apos;&apos,&apos {enableActions && (&apos}&apos;<div className="&apos;w-20" px-2 py-1 flex items-center gap-1&apos;>"&apos;&apos,&apos;&apos;"
                     <button className="&apos;p-1" text-gray-400 hover: text-blue-500 transition-colors&apos,>"&apos,&apos,&apos;&apos;"
-                      <Eye className="&apos;w-4" h-4&apos;       />&apos;&apos,&apos;&apos,
+                      <Eye className="&apos;w-4" h-4&apos;         />&apos;&apos,&apos;&apos,
                     </button>&apos;&apos,&apos;&apos,"
                     <button className="&apos;p-1" text-gray-400 hover: text-green-500 transition-colors&apos,>"&apos,&apos,&apos;&apos,",
-                      <Edit className="&apos;w-4" h-4&apos;       />&apos;&apos,&apos;&apos,"
+                      <Edit className="&apos;w-4" h-4&apos;         />&apos;&apos,&apos;&apos,"
                     <button className="&apos,p-1" text-gray-400 hove,r: text-red-500 transition-colors&apos,>"&apos,&apos,&apos;&apos,",
-                      <Trash2 className="&apos;w-4" h-4&apos,       />&apos,"
+                      <Trash2 className="&apos;w-4" h-4&apos,         />&apos,"
 """{/* comment */}"""""
       <div className = "overflow-hidden">"""{/* comment */}"""""
         <div className="bg-gray-100 dark: bg-gray-700 border-b border-gray-200 dark:border-gray-600">""""
@@ -848,10 +900,10 @@ y: 0 "","
 ";"
 ;"
 
-                const page = i + 1;`
-                return (<button key={page} onClick={() => setCurrentPage(page)} className={`px-3 py-1 text-sm rounded transition-colors ${currentPage === page'
-                        ? 'bg-blue-500 text-white''`
-                        : 'border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-600'}`}>
+                const page = i + 1;"
+                return (<button key={page} onClick={() => setCurrentPage(page)} className={"px-3 py-1 text-sm rounded transition-colors ${currentPage === page"
+                        ? "bg-blue-500 text-white"""
+                        : "border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-600"}"}>
                     {page}
                   </button>) }) }
 
@@ -862,4 +914,7 @@ y: 0 "","
           </div>
         </div>)}
     </div>)};
-'"`
+""`
+
+
+export default Component

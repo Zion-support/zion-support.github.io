@@ -1,5 +1,5 @@
-import React from 'react';'''
-import { Link } from 'react-router-dom';
+import React from "react";"""
+import { Link } from "react-router-dom";
 const AdvancedServices2025 = () => {}
     const advancedServices = []
         {}
@@ -422,7 +422,7 @@ const AdvancedServices2025 = () => {}
                     <Link to="/contact" className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300">"""
                       Get Started""""
                       <svg className="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">""""
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"/>
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"  />
                       </svg>
                     </Link>
                   </div>) ) }
@@ -431,13 +431,13 @@ const AdvancedServices2025 = () => {}
         </div>
       </section>
 """
-      {/* Enhanced CTA Section */}""""
+      {/* comment */}""""
       <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">""""
         <div className="max-w-4xl mx-auto text-center">""""
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Implement Advanced Solutions?"""
           </h2>""""
-          <p className="text-xl text-gray-300 mb-8">'
+          <p className="text-xl text-gray-300 mb-8">"
             Let's discuss how our cutting-edge technology services can transform your business"""
           </p>""""
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">""""
@@ -462,14 +462,8 @@ const AdvancedServices2025 = () => {}
       </section>
     </div>)};
 export default AdvancedServices2025;
-
-
 export { AdvancedServices2025 };
-
 export { AdvancedServices2025 };
-
 export { AdvancedServices2025 };
-
 export { AdvancedServices2025 };
-
 export { AdvancedServices2025 };

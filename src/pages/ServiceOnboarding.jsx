@@ -1,12 +1,12 @@
-import React from 'react';'''
-import { ServiceProviderRegistrationForm } from '@/components/profile/ServiceProviderRegistrationForm';'''
-import { useAuth } from '@/hooks/useAuth';'''
-import { Navigate } from 'react-router-dom';
+import React from "react";"""
+import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm";"""
+import { useAuth } from "@/hooks/useAuth";"""
+import { Navigate } from "react-router-dom';
 export default function ServiceOnboarding() {}
   const { user, isLoading } = useAuth();
   // If not authenticated, redirect to login;
   if (!isLoading && !user) {}
-    return <Navigate to="/login" replace />;
+    return <Navigate to="/login" replace   />;
   }
   return()"""
     <>""""
@@ -21,20 +21,14 @@ export default function ServiceOnboarding() {}
               profile to get discovered on the Zion Marketplace.
             </p>
           </div>
-
-          <ServiceProviderRegistrationForm />
+          <ServiceProviderRegistrationForm  />
         </div>
       </div>
-      
     </>)}
 
 
 export { ServiceOnboarding };
-
 export { ServiceOnboarding };
-
 export { ServiceOnboarding };
-
 export { ServiceOnboarding };
-
 export { ServiceOnboarding };

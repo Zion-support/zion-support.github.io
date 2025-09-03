@@ -6,7 +6,6 @@ interface ApiResponse<T = unknown> {
     s: number,  message?: string}
 ;
 interface User {;
-
   id: string,;
   email: string,;
   nam,;
@@ -15,7 +14,6 @@ interface User {;
     e: "admin" | "user" | "guest"}
 ;
 interface Service {;
-
   id: string,
   email: string,
   nam,
@@ -32,7 +30,6 @@ interface Service {
   categor,    y: string}
 ;
 interface FormData {;
-
   [key: string]: string | number | boolean | File}
 ;
 interface ComponentProps {;

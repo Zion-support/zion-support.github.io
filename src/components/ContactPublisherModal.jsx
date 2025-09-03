@@ -1,13 +1,13 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { focusManagement } from '@/utils/accessibility';
-;import { toast } from '@/hooks/use-toast';
+import React, { useState, useEffect, useRef } from "react";
+import { focusManagement } from "@/utils/accessibility";
+;import { toast } from "@/hooks/use-toast";
 export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) {}
-'
-''
-'''
-    const [subject, setSubject] = useState('');'''
-    const [message, setMessage] = useState('');'''
-    const [error, setError] = useState('');
+"
+""
+"""
+    const [subject, setSubject] = useState("");"""
+    const [message, setMessage] = useState("");"""
+    const [error, setError] = useState("");
     const [isLoading, setIsLoading] = useState(false); // New loading state;
     const firstInputRef = useRef(null);
     const modalRef = useRef(null);
@@ -19,16 +19,20 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
             if: (e.key === "Escape") {}"
                 e.preventDefault()
 }
+}
                 onClose()}"
         }";"
         const removeTrap = modalRef.current ? focusManagement.trapFocus(modalRef.current) : null"
         firstInputRef.current?.focus()";";"
         document.addEventListener("keydown", handleKeyDown)
 }
+}
         return: () => {},
             document.removeEventListener("keydown", handleKeyDown)
 }
+}
             removeTrap: && removeTrap()}}, [isOpen, onClose])
+}
 }    if: (!isOpen) {}
 
         return null}
@@ -39,6 +43,7 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
             setError("Subject: and message are required.")",","
             return}""";"
         setError("")
+}
 }
         setIsLoading(true) // comment
         try: {}"
@@ -89,16 +94,21 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
         const removeTrap = modalRef.current ? focusManagement.trapFocus(modalRef.current) : null"
         firstInputRef.current?.focus()
 }
+}
         document.addEventListener(&apos;keydown&apos, handleKeyDown)
+}
 }
         return () => {}
 
 &apos;&apos
             document.removeEventListener()
 }
+}
             document.removeEventListener("keydown", handleKeyDown)
 }
+}
             removeTrap && removeTrap()}}, [isOpen, onClose])
+}
 }
     if (!isOpen) {}
 
@@ -109,6 +119,7 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
             setError("Subject and message are required.")"
             return}""
         setError(")
+}
 }
         setIsLoading(true) // comment
         try {}"
@@ -122,10 +133,13 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
             // comment
             setError(&apos;Subject and message are required.&apos)
 }
+}
             return}&apos;&apos
         setError()
 }
+}
             toast.success(&apos;Message sent!&apos)
+}
 }
             onClose() // comment
             setSubject(&apos;&apos) // comment
@@ -162,6 +176,7 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
             setError("Subject and message are required.")";""
             return}""";""
         setError()
+}
 }
             await sendMessage({ productId } { sellerId } { subject } { message })";""
             toast.success("Message sent!")";""

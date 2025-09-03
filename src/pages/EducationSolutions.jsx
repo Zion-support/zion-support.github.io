@@ -1,5 +1,5 @@
-import React, { useState } from 'react';'''
-import { motion } from 'framer-motion';
+import React, { useState } from "react";"""
+import { motion } from "framer-motion";
 import {}
   GraduationCap,
   BookOpen,
@@ -20,12 +20,11 @@ import {}
   Clock,
   Eye,
   Video,
-  Headphones,'
-  Monitor,''
-  Brain,'''
-  Code''''
-} from 'lucide-react';
-
+  Headphones,"
+  Monitor,""
+  Brain,"""
+  Code""""
+} from "lucide-react";
     integrations["Google Analytics", "Tableau", "Power BI", "Custom APIs"]
   }
 ];
@@ -129,23 +128,22 @@ const processSteps = []
     icon: Users,""""
     duration: "1-2 weeks"""
 ];
-
 export default function EducationSolutions() {}
-'
-''
-'''
-  const [selectedCategory, setSelectedCategory] = useState('All');'
-  const [selectedSolution, setSelectedSolution] = useState(null);''
-'''
-  const categories = ['All',LMS Platforms',Mobile Development',VR/AR',AI & Analytics',Communication',Analytics'];''
-'''
-  const filteredSolutions = selectedCategory === 'All'
+"
+""
+"""
+  const [selectedCategory, setSelectedCategory] = useState("All");"
+  const [selectedSolution, setSelectedSolution] = useState(null);""
+"""
+  const categories = ["All",LMS Platforms",Mobile Development",VR/AR",AI & Analytics",Communication",Analytics"];""
+"""
+  const filteredSolutions = selectedCategory === "All"
     ? educationSolutions;
     : educationSolutions.filter (solution => solution.category === selectedCategory) ;
 """
   return (""""
     <div className="min-h-screen bg-futuristic">"""
-      {/* Hero Section */}""""
+      {/* comment */}""""
       <section className="relative pt-32 pb-20 overflow-hidden">""""
         <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 via-zion-purple/20 to-zion-blue/20"></div>""""
         <div className="absolute inset-0">""""
@@ -183,7 +181,7 @@ export default function EducationSolutions() {}
 }}""""
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8""""
 """"
-              <GraduationCap className="w-10 h-10 text-white" />
+              <GraduationCap className="w-10 h-10 text-white"  />
             </motion.div>"""
 """"
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">"""
@@ -199,15 +197,15 @@ export default function EducationSolutions() {}
 """"
             <div className="flex flex-wrap justify-center gap-4 text-sm">""""
               <div className="flex items-center gap-2 text-zion-cyan">""""
-                <BookOpen className="w-4 h-4" />
+                <BookOpen className="w-4 h-4"  />
                 <span>Digital Learning</span>"""
               </div>""""
               <div className="flex items-center gap-2 text-zion-purple">""""
-                <Brain className="w-4 h-4" />
+                <Brain className="w-4 h-4"  />
                 <span>AI-Powered</span>"""
               </div>""""
               <div className="flex items-center gap-2 text-zion-blue">""""
-                <Globe className="w-4 h-4" />
+                <Globe className="w-4 h-4"  />
                 <span > Global Access</span>
               </div>
             </div>
@@ -215,7 +213,7 @@ export default function EducationSolutions() {}
         </div>
       </section>;
 """
-      {/* EdTech Trends */}""""
+      {/* comment */}""""
       <section className="py-20 bg-zion-blue-dark/50">;""""
         <div className="container-responsive">
           <motion.div;
@@ -263,17 +261,16 @@ export default function EducationSolutions() {}
 """"
                 <h3 className="text-xl font-bold text-white mb-3">{trend.title}</h3>""""
                 <p className="text-zion-slate-light mb-4 leading-relaxed">{trend.description}</p>
-
-                <span className={`inline-block px-3 py-1 rounded-full text-sm font-semibold ${}
-'
-''
-'''
-                  trend.impact === 'Critical'''''
-                    ? 'bg-red-500/20 text-red-400 border border-red-500/30'''''`
-                    : trend.impact === 'High''''`'`
-                    ? 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30'''`'`'`
-                    : 'bg-green-500/20 text-green-400 border border-green-500/30'````
-                }`}>
+                <span className={"inline-block px-3 py-1 rounded-full text-sm font-semibold ${}
+"
+""
+"""
+                  trend.impact === "Critical"""""
+                    ? "bg-red-500/20 text-red-400 border border-red-500/30""""""
+                    : trend.impact === "High"""""""
+                    ? "bg-yellow-500/20 text-yellow-400 border border-yellow-500/30""""""""
+                    : "bg-green-500/20 text-green-400 border border-green-500/30"""""
+                }"}>
                   {trend.impact} Impact;
                 </span>
               </motion.div>;) ) }
@@ -281,7 +278,7 @@ export default function EducationSolutions() {}
         </div>
       </section>
 """
-      {/* Process Section */}""""
+      {/* comment */}""""
       <section className="py-20">;""""
         <div className="container-responsive">
           <motion.div;
@@ -340,7 +337,7 @@ export default function EducationSolutions() {}
         </div>
       </section>
 """
-      {/* Solutions Section */}""""
+      {/* comment */}""""
       <section className="py-20 bg-zion-blue-dark/50">;""""
         <div className="container-responsive">
           <motion.div;
@@ -361,19 +358,19 @@ export default function EducationSolutions() {}
             </p>
           </motion.div>
 """
-          {/* Category Filter */}""""
+          {/* comment */}""""
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {categories.map((category) => (
               <button;
-                key={category}`
-                onClick={() => setSelectedCategory(category)}``
-                className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${}
-'
-''
-'''`
-                  selectedCategory === category'''`'`
-                    ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'''`'`'`
-                    : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````
+                key={category}"
+                onClick={() => setSelectedCategory(category)}""
+                className={"px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${}
+"
+""
+""""
+                  selectedCategory === category""""""
+                    ? "bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25""""""""
+                    : "bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40"""""
                 }`}
 
                 {category}
@@ -414,7 +411,7 @@ export default function EducationSolutions() {}
                 <div className="space-y-3 mb-6">"""
                   {solution.features.map((feature, featureIndex) => (""""
                     <div key={featureIndex} className="flex items-center gap-3">""""
-                      <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />""""
+                      <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0"  />""""
                       <span className="text-zion-slate-light text-sm">{feature}</span>
                     </div>
                   ))}
@@ -440,7 +437,7 @@ export default function EducationSolutions() {}
                   </span>""""
                   <button className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors duration-300">""""
                     <span className="text-sm font-medium">Learn More</span>""""
-                    <ArrowRight className="w-4 h-4" />
+                    <ArrowRight className="w-4 h-4"  />
                   </button>
                 </div>
               </motion.div>) ) }
@@ -448,7 +445,7 @@ export default function EducationSolutions() {}
         </div>
       </section>
 """
-      {/* Success Stories */}""""
+      {/* comment */}""""
       <section className="py-20">;""""
         <div className="container-responsive">
           <motion.div;
@@ -517,7 +514,7 @@ export default function EducationSolutions() {}
 """"
                 <div className="flex items-center gap-2">"""
                   {[...Array(5)].map((_, i) => (""""
-                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />"""
+                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current"  />"""
                   ))}""""
                   <span className="text-zion-slate-light text-sm ml-2">5.0 Rating</span>
                 </div>
@@ -526,7 +523,7 @@ export default function EducationSolutions() {}
         </div>
       </section>
 """
-      {/* CTA Section */}""""
+      {/* comment */}""""
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">;""""
         <div className="container-responsive">
           <motion.div;
@@ -542,8 +539,8 @@ export default function EducationSolutions() {}
             className="text-center max-w-4xl mx-auto""""
 """"
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Education?</h2>""""
-            <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">'
-              Let's discuss how our educational technology solutions can enhance learning outcomes,
+            <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">"
+              Let"s discuss how our educational technology solutions can enhance learning outcomes,
               improve student engagement, and modernize your educational institution.
             </p>"""
 """"
@@ -567,11 +564,7 @@ export default function EducationSolutions() {}
 
 
 export { EducationSolutions };
-
 export { EducationSolutions };
-
 export { EducationSolutions };
-
 export { EducationSolutions };
-
 export { EducationSolutions };

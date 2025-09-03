@@ -31,6 +31,7 @@ const AdvancedAnalyticsDashboard = () => {}
   const [timeRange, setTimeRange] = useState("30d")"
   const [selectedMetric, setSelectedMetric] = useState("overview")
 }
+}
   // comment
   const metrics = []{}
 
@@ -94,29 +95,30 @@ Shield,&apos
   const [timeRange, setTimeRange] = useState(&apos;30d&apos)";&apos;&apos
   const [selectedMetric, setSelectedMetric] = useState(&apos;overview&apos)
 }
+}
   // comment
 &apos;&apos,
       title: &apos,Total Revenue&apos,"&apos
       value: &apos,$2.4M&apos,&apos
       change: 12.5,&apos;&apos,
       changeType: &apos,increase&apos,"&apos;"
-      icon: &apos,&apos, <DollarSign className="&apos,w-6" h-6&apos,       />,&apos;&apos
+      icon: &apos,&apos, <DollarSign className="&apos,w-6" h-6&apos,         />,&apos;&apos
       color: &apos,from-green-500 to-emerald-600&apos} {}"
       title: &apos,Active Clients&apos,
       value: &apos,1,247&apos,"
       change: 8.2,&apos;&apos,"
       changeType: &apos,increase&apos,"&apos;&apos,"
-      icon: &apos,&apos, <Users className="&apos,w-6" h-6&apos,       />,
+      icon: &apos,&apos, <Users className="&apos,w-6" h-6&apos,         />,
       color: &apos,from-blue-500 to-cyan-600&apos} {}"
       title: &apos,Service Performance&apos,
       value: &apos,94.2%&apos,"
       change: 2.1,&apos;&apos,";"
-      icon: &apos,&apos, <Target className="&apos,w-6" h-6&apos,       />,
+      icon: &apos,&apos, <Target className="&apos,w-6" h-6&apos,         />,
       color: &apos,from-purple-500 to-pink-600&apos} {}"
       title: &apos,Client Satisfaction&apos,
       value: &apos,4.8/5&apos,"
       change: 0.3,&apos;&apos,";"
-      icon: &apos,&apos, <Star className="&apos,w-6" h-6&apos,       />,
+      icon: &apos,&apos, <Star className="&apos,w-6" h-6&apos,         />,
       color: &apos,from-yellow-500 to-orange-600&apos}
 
   ]&apos;&apos
@@ -238,8 +240,8 @@ business intelligence"
                   >{metric.icon}&apos;&apos,&apos;&apos,
                   </div>&apos;&apos,&apos;&apos,"
                   <div className="&apos;flex" items-center gap-1&apos;>"&apos;&apos,{metric.changeType === &apos;increase&apos; ? (&apos;&apos,&apos;&apos}"
-                      <ArrowUpRight className="&apos;w-4" h-4 text-green-500&apos;       />&apos;&apos,) : (&apos;&apos,&apos;&apos,"
-                      <ArrowDownRight className="&apos;w-4" h-4 text-red-500&apos;       />"
+                      <ArrowUpRight className="&apos;w-4" h-4 text-green-500&apos;         />&apos;&apos,) : (&apos;&apos,&apos;&apos,"
+                      <ArrowDownRight className="&apos;w-4" h-4 text-red-500&apos;         />"
                     )}&apos;"&apos,
                     <span&apos;"&apos;""
                       className="{"text-sm" font-medium ${metric.changeType === &apos;increase&apos; ? &apos;text-green-600&apos; : &apos;text-red-600&apos}"}
@@ -333,7 +335,7 @@ business intelligence"
         <Card>&apos;&apos,&apos;&apos,
           <CardHeader>&apos;&apos,&apos;&apos,"
             <CardTitle className="&apos;flex" items-center gap-2&apos;>"&apos;&apos,&apos;&apos;"
-              <BarChart3 className="&apos;w-5" h-5 text-zion-cyan&apos;       />
+              <BarChart3 className="&apos;w-5" h-5 text-zion-cyan&apos;         />
               Service Performance Overview&apos
             </CardTitle>"
             <div className="&apos;overflow-x-auto&apos;">"&apos;&apos,&apos;&apos;"
@@ -388,7 +390,7 @@ business intelligence"
                           <span className="&apos;text-sm" font-medium&apos;>
                             {service.performance}%&apos;"
                         <div className="&apos;flex" items-center gap-1&apos;>"&apos;&apos,&apos;&apos;"
-                          <TrendingUp className="&apos;w-4" h-4 text-green-500&apos;       />&apos;&apos,&apos;&apos,"
+                          <TrendingUp className="&apos;w-4" h-4 text-green-500&apos;         />&apos;&apos,&apos;&apos,"
                           <span className="&apos;text-green-600" font-medium&apos;>
                             +{service.growth}%&apos;"
                         <span className="&apos;font-medium&apos;">{service.clients}&apos;</span>&apos;&apos,&apos;&apos;"
@@ -446,7 +448,7 @@ business intelligence"
                     <span className="text-sm font-medium text-zion-slate-light"> {category.value}%;"
         transition="{{" delay: 0.3 }}&apos;&apos,";"
         className="&apos;grid" grid-cols-1 lg: grid-cols-2 gap-6 mb-8 &apos,>{/* comment */}&apos;&apos;"
-              <PieChart className="&apos;w-5" h-5 text-zion-purple&apos;       />
+              <PieChart className="&apos;w-5" h-5 text-zion-purple&apos;         />
               Service Category Distribution&apos;"
             <div className="&apos;space-y-3&apos;">
               {categoryDistribution.map((category, index) => (&apos}"
@@ -517,11 +519,11 @@ business intelligence"
               onClick="{()" => window.open("tel:+13024640950",_blank")}"">"";"
               <Shield className="w-5 h-5 mr-2"  />
               Schedule Demo;"
-              <Brain className="&apos;w-5" h-5 text-zion-cyan&apos;       />
+              <Brain className="&apos;w-5" h-5 text-zion-cyan&apos;         />
               Key Insights&apos;"
             <div className="&apos;space-y-4&apos;">"&apos;&apos,&apos;&apos;"
               <div className="&apos;flex" items-start gap-3 p-3 bg-zion-green/10 rounded-lg&apos;>"&apos;&apos,&apos;&apos;"
-                <TrendingUp className="&apos;w-5" h-5 text-zion-green mt-1&apos;       />&apos;&apos,&apos;&apos;"
+                <TrendingUp className="&apos;w-5" h-5 text-zion-green mt-1&apos;         />&apos;&apos,&apos;&apos;"
                   <h4 className="&apos;font-semibold" text-zion-slate-dark&apos;>"
                     AI Services Growth&apos;&apos,&apos;&apos,
                   </h4>&apos;&apos,&apos;&apos,"
@@ -539,11 +541,11 @@ business intelligence"
 category,
 category&apos;"
               <div className="&apos;flex" items-start gap-3 p-3 bg-zion-blue/10 rounded-lg&apos;>"&apos;&apos,&apos;&apos;"
-                <Users className="&apos;w-5" h-5 text-zion-blue mt-1&apos;       />&apos;&apos,&apos;&apos,
+                <Users className="&apos;w-5" h-5 text-zion-blue mt-1&apos;         />&apos;&apos,&apos;&apos,
                     Client Acquisition&apos;&apos,&apos;&apos
                     New client acquisition rate increased by 18% this quarter&apos;"
               <div className="&apos;flex" items-start gap-3 p-3 bg-zion-purple/10 rounded-lg&apos;>"&apos;&apos,&apos;&apos;"
-                <Star className="&apos;w-5" h-5 text-zion-purple mt-1&apos;       />&apos;&apos,&apos;&apos,
+                <Star className="&apos;w-5" h-5 text-zion-purple mt-1&apos;         />&apos;&apos,&apos;&apos,
                     Satisfaction Score&apos;&apos,&apos;&apos
                     Client satisfaction reached 4.8/5, highest in comp history&apos;"
               <div className = "flex items-start gap-3 p-3 bg-zion-blue/10 rounded-lg">""""
@@ -567,13 +569,13 @@ category&apos;"
               className="&apos;bg-white" text-zion-purple hover: bg-zion-slate-light&apos,&apos,>
                 window.open(&apos,"
                   &apos,mailt,o: kleber@ziontechgroup.com?subject="Analytics" Dashboard Access&apos,_blank&apos)}&apos;&apos,>&apos;&apos,&apos;&apos,"
-              <Rocket className="&apos;w-5" h-5 mr-2&apos;       />
+              <Rocket className="&apos;w-5" h-5 mr-2&apos;         />
               Request Access&apos,
             </Button>&apos;&apos,&apos;&apos,
               variant=&apos;outline&apos;&apos,&apos;"
               className="&apos;border-white" text-white hover: bg-white hover:text-zion-purple&apos,&apos,"
               onClick="{()" => window.open(&apos,te,l: +13024640950&apos,_blank&apos)}&apos;&apos,>&apos;&apos,&apos;&apos,"
-              <Shield className="&apos;w-5" h-5 mr-2&apos;       />
+              <Shield className="&apos;w-5" h-5 mr-2&apos;         />
               Schedule Demo&apos;"
         transition="{{" delay: 0.4 }}"""";"
         className = "text-center""">""""""

@@ -3,7 +3,6 @@ import React from "react"
 "use: client","
 "
 interface Props {;
-
   children: ReactNode,;
    fallback?: ReactNode,;
    onError?: (error: Erro,r, errorInfo: ErrorInfo) => void,;
@@ -53,7 +52,6 @@ hasError: tru,e, error,
 hasError: true,;
     r: true,;
       error,;
-
   static getDerivedStateFromError(error: Error): State {,
 hasError: true,
     r: true,
@@ -61,12 +59,14 @@ hasError: true,
   override componentDidCatch(error: Error, errorInfo: ErrorInfo) {,,
       errorInfo})
 }
+}
     // comment
 if (process.env.NODE_ENV = == "development") {"
       }
 
     // comment
 this.reportErrorToService(error, errorInfo)
+}
 }
     // comment
 if (this.props.onError) {
@@ -90,6 +90,7 @@ componentStack: errorInfo.componentStack,
               userAgent: navigator.userAgent,
               url: window.location.href})
 }
+}
 }).catch(() => {
           // comment
 
@@ -109,6 +110,7 @@ componentStack: errorInfo.componentStack,
 
     // comment
 this.logErrorToService(error, errorInfo)
+}
 }
     // comment
 this.props.onError?.(error, errorInfo)}
@@ -367,5 +369,4 @@ onClick="{()" => this.setState({ hasError: false, error: null, errorInfo: null }
                   href="/contact""
                   className="text-blue-600 hover: text-blue-500">,    return this.props.children}
 ;
-
 export default EnhancedErrorBoundary;"export default EnhancedErrorBoundary;"""

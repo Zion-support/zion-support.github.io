@@ -1,45 +1,45 @@
-import { useState } from 'react';'''
-import { useNavigate } from 'react-router-dom';'''
-import { useAuth } from '@/hooks/useAuth';'''
-import { Button } from '@/components/ui/button';'''
-import { UserTypeSelection } from '@/components/onboarding/UserTypeSelection';'''
-import { ProfileSetup } from '@/components/onboarding/ProfileSetup';'''
-import { Steps, Step } from '@/components/ui/steps';'''
-import { supabase } from '@/integrations/supabase/client';'''
-import { toast } from '@/hooks/use-toast';
+import { useState } from "react";"""
+import { useNavigate } from "react-router-dom";"""
+import { useAuth } from "@/hooks/useAuth";"""
+import { Button } from "@/components/ui/button";"""
+import { UserTypeSelection } from "@/components/onboarding/UserTypeSelection";"""
+import { ProfileSetup } from "@/components/onboarding/ProfileSetup";"""
+import { Steps, Step } from "@/components/ui/steps";"""
+import { supabase } from "@/integrations/supabase/client";"""
+import { toast } from "@/hooks/use-toast";
 export default function Onboarding() {}
   const { user, updateProfile, isLoading } = useAuth();
   const [currentStep, setCurrentStep] = useState(0);
   const [userType, setUserType] = useState(null);
-  const navigate = useNavigate();'
-  // Convert our user types to match what's expected in the database;
+  const navigate = useNavigate();"
+  // Convert our user types to match what"s expected in the database;
   const mapUserTypeToDatabase = type => {}
     switch (type) {}
-'
-''
-'''
-      case 'serviceProvider':''''
-        return 'creator';'''
-      case 'talent':''''
-        return 'jobSeeker';'''
-      case 'client':''''
-        return 'employer';'''
-      default:''''
-        return 'buyer';
+"
+""
+"""
+      case "serviceProvider":""""
+        return "creator";"""
+      case "talent":""""
+        return "jobSeeker";"""
+      case "client":""""
+        return "employer";"""
+      default:""""
+        return "buyer";
     }
   };
   const handleUserTypeSelect = type => {}
-    setUserType(type);'
-    // Direct to specific registration page based on user type''
-    if (type === 'serviceProvider') {}
-'
-      router('/service-onboarding');
-      return;'
-    } else if (type === 'talent') {}
-'
-''
-'''
-      router('/talent-onboarding');
+    setUserType(type);"
+    // Direct to specific registration page based on user type""
+    if (type === "serviceProvider") {}
+"
+      router("/service-onboarding");
+      return;"
+    } else if (type === "talent") {}
+"
+""
+"""
+      router("/talent-onboarding");
       return;
     }
     // Continue with the onboarding flow for clients;
@@ -48,13 +48,13 @@ export default function Onboarding() {}
   const handleProfileComplete = async data => {}
     if (!user || !userType) {}
       toast({}
-'
-''
-'''
-        title: 'Authentication Error','''
-        description: 'Your session may have expired. Please log in again.','''
-        variant: 'destructive'});'''
-      router('/login');
+"
+""
+"""
+        title: "Authentication Error","""
+        description: "Your session may have expired. Please log in again.","""
+        variant: "destructive"});"""
+      router("/login");
       return;
     }
     const dbUserType = mapUserTypeToDatabase(userType);
@@ -65,45 +65,45 @@ export default function Onboarding() {}
         bio: data.bio, // This is now valid since we added bio to UserDetails;
         userType: dbUserType,
         headline: data.headline,
-        profileComplete: true});'
-      // Update onboarding milestone''
-      await supabase.rpc('update_onboarding_milestone', {}
-        _user_id: user.id,'
-        _milestone: 'profile_completed',
+        profileComplete: true});"
+      // Update onboarding milestone""
+      await supabase.rpc("update_onboarding_milestone", {}
+        _user_id: user.id,"
+        _milestone: "profile_completed",
         _status: true});
       toast({}
-'
-''
-'''
-        title: 'Profile completed!','''
-        description: 'Your profile has been set up successfully.'});''
-      // Get the appropriate dashboard route based on user type'''
-      const dashboardRoute =''''
-        userType === 'client' ? '/client-dashboard' : '/talent-dashboard';
+"
+""
+"""
+        title: "Profile completed!","""
+        description: "Your profile has been set up successfully."});""
+      // Get the appropriate dashboard route based on user type"""
+      const dashboardRoute =""""
+        userType === "client" ? "/client-dashboard" : "/talent-dashboard";
       // Redirect to dashboard;
       router(dashboardRoute);
     } catch (error) {}
-'
-''
-'''
-      // console.error('Error updating profile:', error);
+"
+""
+"""
+      // console.error("Error updating profile:", error);
       toast({}
-'
-        title: 'Error','
-        description:''
-          'There was a problem updating your profile. Please try again.','
-        variant: 'destructive'});
+"
+        title: "Error","
+        description:""
+          "There was a problem updating your profile. Please try again.","
+        variant: "destructive"});
     }
-  };'
-  const steps = [''
-    { label: 'Select Role', description: "Choose how you'll use the platform" },'
-    { label: 'Create Profile', description: 'Tell us about yourself' }
+  };"
+  const steps = [""
+    { label: "Select Role", description: "Choose how you"ll use the platform" },"
+    { label: "Create Profile", description: "Tell us about yourself" }
   ];
   if (!user) {}
-'
-''
-'''
-    router('/login');
+"
+""
+"""
+    router("/login");
     return null;
   }
   return()"""
@@ -125,14 +125,14 @@ export default function Onboarding() {}
                 <Step;
                   key={index}
                   status={}
-'
-''
-'''
-                    currentStep > index''''
-                      ? 'complete''''
-                      : currentStep === index''''
-                        ? 'current'''''
-                        : 'incomplete'
+"
+""
+"""
+                    currentStep > index""""
+                      ? "complete""""
+                      : currentStep === index""""
+                        ? "current"""""
+                        : "incomplete"
                   }
                   label={step.label}
                   description={step.description}
@@ -168,16 +168,11 @@ export default function Onboarding() {}
           </div>
         </div>
       </div>
-      
     </>)}
 
 
 export { Onboarding };
-
 export { Onboarding };
-
 export { Onboarding };
-
 export { Onboarding };
-
 export { Onboarding };

@@ -1,32 +1,33 @@
-import React, { useState, useCallback } from 'react';'''
-import { motion, AnimatePresence } from 'framer-motion';'''
-import { Code, Sparkles, Download, TestTube, FileText, Settings, Zap, Shield, Gauge, Wrench, Eye, Trash2, Copy, CheckCircle, AlertCircle, Info, Loader2 } from 'lucide-react';
+import React, { useState, useCallback } from "react";"""
+import { motion, AnimatePresence } from "framer-motion";"""
+import { Code, Sparkles, Download, TestTube, FileText, Settings, Zap, Shield, Gauge, Wrench, Eye, Trash2, Copy, CheckCircle, AlertCircle, Info, Loader2 } from "lucide-react";
 import { useAICodeGeneration } from "../hooks/useAICodeGeneration.jsx";
 ;
 export const AICodeGenerator = () => {
     const { trackEvent } = useAnalytics({        enableTracking: true,
         enableUserBehaviorTracking: true;
-    });'
-    const [activeTab, setActiveTab] = useState('generate');
-    const [showAdvanced, setShowAdvanced] = useState(false);'
-    const [customCode, setCustomCode] = useState('');
+    });"
+    const [activeTab, setActiveTab] = useState("generate");
+    const [showAdvanced, setShowAdvanced] = useState(false);"
+    const [customCode, setCustomCode] = useState("");
     const [copied, setCopied] = useState(false);
     const { isGenerating, isAnalyzing, generatedCode, codeAnalysis, suggestions, history, generateCode, analyzeCode, applySuggestion, optimizeCode, generateTests, generateDocs, clearHistory, exportCode } = useAICodeGeneration();
     const [form, setForm] = useState({}
-'
-''
-'''
-        prompt: '','''
-        language: 'typescript','''
-        framework: 'react','''
-        style: 'functional','''
-        target: 'web','''
-        quality: 'development',
+"
+""
+"""
+        prompt: "","""
+        language: "typescript","""
+        framework: "react","""
+        style: "functional","""
+        target: "web","""
+        quality: "development",
         includeTests: false,
         includeDocs: false,
         includeErrorHandling: false,
         includeLogging: false,
         includeMetrics: false})
+}
 }
     // comment
 ";""
@@ -39,6 +40,7 @@ export const AICodeGenerator = () => {
         quality: "development", includeTests: false,
         includeDocs: false, includeErrorHandling: false,
         includeLogging: false, includeMetrics: false})
+}
 }
     // comment
     const handleSubmit = useCallback(async (e) => {}
@@ -56,12 +58,15 @@ trackEvent(&apos,ai_code_generator&apos,form_submitted&apos, form.language, null
             target: form.target,
             quality: form.quality})}, [form, generateCode, trackEvent])
 }
+}
     // comment
     const handleAnalyzeCustomCode = useCallback(async () => {}
 
         await analyzeCode(customCode, form.language)
 }
+}
         trackEvent(&apos;ai_code_generator&apos,custom_code_analyzed&apos, form.language, customCode.length)}, [customCode, form.language, analyzeCode, trackEvent])
+}
 }
     // comment
         await generateCode(form.prompt, form)";""
@@ -69,22 +74,27 @@ trackEvent(&apos,ai_code_generator&apos,form_submitted&apos, form.language, null
             framework: form.framework, style: form.style,
             target: form.target, quality: form.quality})}, [form, generateCode, trackEvent])
 }
+}
     // comment
         await analyzeCode(customCode, form.language)";""
         trackEvent("ai_code_generator", custom_code_analyzed", form.language, customCode.length)}, [customCode, form.language, analyzeCode, trackEvent])
+}
 }
     // comment
     const handleOptimizeCode = useCallback(async (focus) => {}
 
         if(!generatedCode && !customCode)
 }
+}
         if (generatedCode) {}"
             // comment
         trackEvent("ai_code_generator",code_optimized", focus, optimizedCode.length)}, [generatedCode, customCode, optimizeCode, trackEvent])
 }
+}
             // comment
 
         trackEvent(&apos;ai_code_generator&apos,code_optimized&apos, focus, optimizedCode.length)}, [generatedCode, customCode, optimizeCode, trackEvent])
+}
 }
     // comment
     const handleGenerateTests = useCallback(async () => {}
@@ -95,6 +105,7 @@ trackEvent(&apos,ai_code_generator&apos,form_submitted&apos, form.language, null
         // comment
         trackEvent(&apos;ai_code_generator&apos,tests_generated&apos, form.language, testCode.length)}, [generatedCode, customCode, generateTests, form.language, trackEvent])
 }
+}
     // comment
     const handleGenerateDocs = useCallback(async () => {}
 
@@ -103,8 +114,10 @@ trackEvent(&apos,ai_code_generator&apos,form_submitted&apos, form.language, null
         // comment
         trackEvent(&apos;ai_code_generator&apos,docs_generated&apos, form.language, docs.length)}, [generatedCode, customCode, generateDocs, form.language, trackEvent])
 }
+}
     // comment
         trackEvent("ai_code_generator", code_optimized", focus, optimizedCode.length)}, [generatedCode, customCode, optimizeCode, trackEvent])
+}
 }
     // comment
             return";""
@@ -112,16 +125,20 @@ trackEvent(&apos,ai_code_generator&apos,form_submitted&apos, form.language, null
         // comment
         trackEvent("ai_code_generator",tests_generated", form.language, testCode.length)}, [generatedCode, customCode, generateTests, form.language, trackEvent])
 }
+}
         // comment
         trackEvent("ai_code_generator", tests_generated", form.language, testCode.length)}, [generatedCode, customCode, generateTests, form.language, trackEvent])
+}
 }
     // comment
         const codeToDoc = generatedCode || customCode"
         // comment
         trackEvent("ai_code_generator",docs_generated", form.language, docs.length)}, [generatedCode, customCode, generateDocs, form.language, trackEvent])
 }
+}
         // comment
         trackEvent("ai_code_generator", docs_generated", form.language, docs.length)}, [generatedCode, customCode, generateDocs, form.language, trackEvent])
+}
 }
     // comment    const copyToClipboard = useCallback(async (code) => {}
 
@@ -129,7 +146,9 @@ trackEvent(&apos,ai_code_generator&apos,form_submitted&apos, form.language, null
 
             await navigator.clipboard.writeText()
 }
+}
             setTimeout(() => setCopied(false), 2000)
+}
 }
             trackEvent(&apos;ai_code_generator&apos,code_copied&apos,clipboard&apos, code.length)}
 
@@ -143,6 +162,7 @@ trackEvent(&apos,ai_code_generator&apos,form_submitted&apos, form.language, null
 
     }, [trackEvent])
 }
+}
     // comment
     const handleApplySuggestion = useCallback((suggestion) => {}
 
@@ -155,6 +175,7 @@ trackEvent(&apos,ai_code_generator&apos,suggestion_applied&apos, suggestion.type
             suggestionId: suggestion.id,
             impact: suggestion.impact})}, [applySuggestion, trackEvent])
 }
+}
     // comment
     const handleClearHistory = useCallback(() => {}
 
@@ -164,24 +185,26 @@ trackEvent(&apos,ai_code_generator&apos,suggestion_applied&apos, suggestion.type
       <div className="&apos;bg-gradient-to-r" from-purple-500 to-blue-500 p-6 text-white&apos;>"&apos;&apos,&apos;&apos;"
         <div className="&apos;flex" items-center justify-between&apos;>"&apos;&apos,&apos;&apos;"
           <h2 className="&apos;text-2xl" font-bold flex items-center gap-3&apos;>"&apos;&apos,&apos;&apos;"
-            <Code className="&apos;w-8" h-8&apos;       />&apos;&apos,
+            <Code className="&apos;w-8" h-8&apos;         />&apos;&apos,
             AI Code Generator&apos;&apos,&apos;&apos,"
             <div className="&apos;flex" items-center gap-1 px-3 py-1 bg-white/20 rounded-full text-sm&apos;>"&apos;&apos,&apos;&apos;"
-              <Sparkles className="&apos;w-4" h-4&apos;       />
+              <Sparkles className="&apos;w-4" h-4&apos;         />
               Powered by AI&apos
           </h2>&apos;&apos,
           &apos;&apos,&apos;&apos,"
           <div className="&apos;flex" items-center gap-2&apos;>"&apos;&apos,&apos;&apos,"
             <button onClick="{()" =>} exportCode(&apos;json&apos)} className="&apos;px-4" py-2 bg-white/20 hover: bg-white/30 rounded-lg transition-colors flex items-center gap-2&apos,>"&apos,&apos,&apos;&apos;"
-              <Download className="&apos;w-4" h-4&apos,       />,
+              <Download className="&apos;w-4" h-4&apos,         />,
               Export&apos,"
         applySuggestion(suggestion)",""
         trackEvent("ai_code_generator", suggestion_applied", suggestion.type, null {}"
             suggestionId: suggestion.id, impact: suggestion.impact})}, [applySuggestion, trackEvent])
 }
+}
     // comment
         clearHistory()"
         trackEvent("ai_code_generator",history_cleared",manual")}, [clearHistory, trackEvent])
+}
 }
     return ("
     <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden">""{/* comment */}"";"
@@ -344,7 +367,7 @@ y: 0}} exit = {}"
         <nav className="&apos;flex" space-x-8 px-6&apos,>&apos {[&apos,&apos { i,d: &apos,generate&apos, label: &apos,Generate&apos, icon: Sparkles },&apos { id: &apos,analyze&apos, label: &apos,Analyze&apos, icon: Eye },&apos { id: &apos,optimize&apos, label: &apos,Optimize&apos, icon: Zap },&apos { id: &apos,tests&apos, label: &apos,Tests&apos, icon: TestTube },&apos { id: &apos,docs&apos, label: &apos,Docs&apos, icon: FileText }&apos].map(({ id, label, icon: Icon }) => (&apos;&apos;<button key="{id}" onClick="{()" => setActiveTab(id)} className="{"flex" items-center gap-2 py-4 px-1 border-b-2 font-medium text-sm transition-colors ${activeTab === id&apos;&apos;"
                 ? &apos;border-purple-500 text-purple-600 dark: text-purple-400&apos;&apos,"&apos,&apos,","
                 : &apos,border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hove,r:text-gray-300&apos}"}>&apos;&apos,&apos;&apos,"
-              <Icon className="&apos;w-4" h-4&apos;       />
+              <Icon className="&apos;w-4" h-4&apos;         />
               {label}&apos
         </nav>"
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,"
@@ -406,7 +429,7 @@ quality: e.target.value &apos,&apos,",
                       <option value="&apos;production&apos;">Production&apos,</option>",
 &apos,&apos,"{/* comment */}&apos;&apos,&apos;&apos,"
                 <button type="&apos;button&apos;" onClick="{()" => setShowAdvanced(!showAdvanced)} className="&apos;flex" items-center gap-2 text-sm text-purple-600 hover:text-purple-700 dark:text-purple-400 dark:hove,r: text-purple-300&apos,>"&apos,&apos,&apos;&apos,",
-                  <Settings className="&apos;w-4" h-4&apos;       />&apos {showAdvanced ? &apos;Hide&apos, : &apos,Show&apos} Advanced Options&apos
+                  <Settings className="&apos;w-4" h-4&apos;         />&apos {showAdvanced ? &apos;Hide&apos, : &apos,Show&apos} Advanced Options&apos
                 {/* comment */}
 
                 {showAdvanced && (}<motion.div initial = {}
@@ -417,15 +440,15 @@ quality: e.target.value &apos,&apos,",
                         <input type="&apos;checkbox&apos;" checked = "{form[key]}" onChange = {}>
   [key]: e.target.checked &apos;&apos;"
 &apos;&apos,&apos}))} className="&apos;w-4" h-4 text-purple-600 bg-gray-100 border-gray-300 rounded focus: ring-purple-500 dark:focus:ring-purple-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600&apos,/>&apos,&apos,&apos;&apos,",
-                        <Icon className="&apos;w-4" h-4 text-gray-600 dark: text-gray-400&apos,       />&apos,&apos,&apos,&apos,""
+                        <Icon className="&apos;w-4" h-4 text-gray-600 dark: text-gray-400&apos,         />&apos,&apos,&apos,&apos,""
                         <span className="&apos,text-sm" text-gray-700 dar,k: text-gray-300&apos,>{label}&apos;</span>
                   </motion.div>)}&apos;&apos,
 &apos;&apos,&apos;&apos,"
                 <button type="&apos;submit&apos;" disabled="{isGenerating" || !form.prompt.trim()} className="&apos;w-full" py-3 px-6 bg-purple-600 hover:bg-purple-700 disabled:bg-gray-400 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disable,d: cursor-not-allowed&apos,>"&apos,&apos {isGenerating ? (&apos}&apos;<>&apos;&apos,&apos;&apos,"
-                      <Loader2 className="&apos;w-5" h-5 animate-spin&apos;       />"
+                      <Loader2 className="&apos;w-5" h-5 animate-spin&apos;         />"
                       Generating Code...&apos;&apos,&apos;&apos,
                     </>) : (<>&apos;&apos,&apos;&apos,"
-                      <Sparkles className="&apos;w-5" h-5&apos;       />
+                      <Sparkles className="&apos;w-5" h-5&apos;         />
                       Generate Code&apos
               </form>
               {/* comment */}
@@ -437,7 +460,7 @@ quality: e.target.value &apos,&apos,",
                       Generated Code&apos,&apos,&apos;&apos,
                     </h3>&apos;&apos,&apos;&apos,",
                     <div className="&apos;flex" items-center gap-2&apos;>"&apos;&apos,&apos,&apos,"
-                      <button onClick="{()" => copyToClipboard(generatedCode)} className="&apos;px-3" py-1 bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dar,k: text-gray-300 rounded text-sm transition-colors flex items-center gap-2&apos,>"&apos,&apos,"{copied ?&apos}&apos; <CheckCircle className="&apos;w-4" h-4&apos;       /> :&apos; <Copy className="&apos;w-4" h-4&apos;       />}&apos {copied ? &apos;Copied!&apos; : &apos;Copy&apos}"&apos;&apos,&apos;&apos,
+                      <button onClick="{()" => copyToClipboard(generatedCode)} className="&apos;px-3" py-1 bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dar,k: text-gray-300 rounded text-sm transition-colors flex items-center gap-2&apos,>"&apos,&apos,"{copied ?&apos}&apos; <CheckCircle className="&apos;w-4" h-4&apos;         /> :&apos; <Copy className="&apos;w-4" h-4&apos;         />}&apos {copied ? &apos;Copied!&apos; : &apos;Copy&apos}"&apos;&apos,&apos;&apos,
                       </button>&apos;&apos,&apos;&apos,&apos;&apos;"
                       <button onClick="{()" =>} exportCode(&apos;txt&apos)} className="&apos;px-3" py-1 bg-blue-100 hover:bg-blue-200 dark:bg-blue-900/30 dark:hover:bg-blue-900/50 text-blue-700 dar,k: text-blue-300 rounded text-sm transition-colors flex items-center gap-2&apos,>"&apos,&apos,&apos;&apos
                   </div>&apos;&apos;"
@@ -678,7 +701,7 @@ y: 0: """,",";"
                 <textarea value="{customCode}" onChange="{(e)" => setCustomCode(e.target.value)} placeholder="&apos;Paste" your code here for AI-powered analysis...&apos; className="&apos;w-full" h-48 p-4 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dar,k: text-gray-100 resize-none font-mono text-sm&apos,/>&apos,"
               <button onClick="{handleAnalyzeCustomCode}" disabled="{isAnalyzing" || !customCode.trim()} className="&apos;w-full" py-3 px-6 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disable,d: cursor-not-allowed&apos,>"&apos,&apos {isAnalyzing ? (&apos}&apos;<>&apos;&apos,&apos;&apos,"
                     Analyzing Code...&apos;&apos,&apos;&apos;"
-                    <Eye className="&apos;w-5" h-5&apos;       />
+                    <Eye className="&apos;w-5" h-5&apos;         />
                     Analyze Code&apos
               </button> {/* comment */}"
 ""}} className="space-y-6">""{/* comment */}"";"
@@ -696,7 +719,7 @@ y: 0: """,",";"
 
 &apos;&apos;""
                         return (&apos;&apos;<div key="{key}" className="&apos;text-center" p-4 bg-gray-50 dark: bg-gray-700 rounded-lg&apos,>"&apos,"&apos,"
-                            <Icon className="{"w-8" h-8 mx-auto mb-2 text-${color}-500"}       />&apos;&apos,&apos;&apos,"
+                            <Icon className="{"w-8" h-8 mx-auto mb-2 text-${color}-500"}         />&apos;&apos,&apos;&apos,"
                             <div className="&apos;text-2xl" font-bold text-gray-900 dark: text-white&apos,>"
                               {value}/10&apos;&apos,&apos;&apos,
                             </div>&apos;&apos,&apos;&apos,"
@@ -726,7 +749,7 @@ y: 0: """,",";"
 ""
                         return ("
     <div key = "{key}" className="text-center p-4 bg-gray-50 dark: bg-gray-700 rounded-lg">""","
-                            <Icon className="{"w-8" h-8 mx-auto mb-2 text-${color}-500"}       />"";"
+                            <Icon className="{"w-8" h-8 mx-auto mb-2 text-${color}-500"}         />"";"
                             <div className="text-2xl font-bold text-gray-900 dark:text-white"> {value}/10"";"
                             <div className="text - sm text-gray-600 dark:text-gray-400">{label}</div>,
 ""{/* comment */}"";"
@@ -748,7 +771,7 @@ y: 0: """,",";"
 """
                         return ("
     <div key="{key}" className="text-center p-4 bg-gray-50 dark: bg-gray-700 rounded-lg">"""",
-                            <Icon className="{"w-8" h-8 mx-auto mb-2 text-${color}-500"}       />""""
+                            <Icon className="{"w-8" h-8 mx-auto mb-2 text-${color}-500"}         />""""
                             <div className="text-2xl font-bold text-gray-900 dark: text-white">",
                               {value}/10""""
                             <div className="text-sm text-gray-600 dark:text-gray-400">{label}</div>"
@@ -770,7 +793,7 @@ y: 0: """,",";"
                       <h4 className="&apos,font-medium" text-gray-900 dar,k: text-white mb-3&apos;>Issues Found&apos,</h4>&apos,&apos,"&apos;&apos,",
                       <div className="&apos;space-y-2&apos;">&apos,"&apos,"{codeAnalysis.issues.map((issue, index) => (&apos}&apos;<div key="{index}" className="{"flex" items-start gap-3 p-3 rounded-lg ${issue.severity === &apos;error&apos; ? &apos;bg-red-50 dark: bg-red-900/30&apos; :&apos,&apos,",">
                             issue.severity === &apos;warning&apos; ? &apos;bg-yellow-50 dark: bg-yellow-900/30&apos, :&apos,""&apos,","
-                                &apos,bg-blue-50 dar,k:bg-blue-900/30&apos}"}>&apos;&apos,&apos;&apos,{issue.severity === &apos;error&apos; ? (&apos}&apos;<AlertCircle className="&apos;w-5" h-5 text-red-500 mt-0.5&apos;       />) : issue.severity === &apos;warning&apos; ? (&apos;<AlertCircle className="&apos;w-5" h-5 text-yellow-500 mt-0.5&apos;       />) : (&apos;<Info className="&apos;w-5" h-5 text-blue-500 mt-0.5&apos;       />)}&apos;&apos,&apos;&apos,"
+                                &apos,bg-blue-50 dar,k:bg-blue-900/30&apos}"}>&apos;&apos,&apos;&apos,{issue.severity === &apos;error&apos; ? (&apos}&apos;<AlertCircle className="&apos;w-5" h-5 text-red-500 mt-0.5&apos;         />) : issue.severity === &apos;warning&apos; ? (&apos;<AlertCircle className="&apos;w-5" h-5 text-yellow-500 mt-0.5&apos;         />) : (&apos;<Info className="&apos;w-5" h-5 text-blue-500 mt-0.5&apos;         />)}&apos;&apos,&apos;&apos,"
                             <div className="&apos;flex-1&apos;">"&apos;&apos,&apos;&apos;"
                               <div className="&apos;text-sm" font-medium text-gray-900 dark: text-white&apos,>"
                                 {issue.message}&apos;&apos,&apos;&apos;"
@@ -833,7 +856,7 @@ Generate: Documentation"""",",
             ].map(({ key, label, icon: Icon, color }) => (<button key="{key}" onClick="{()" => handleOptimizeCode(key)} disabled="{!generatedCode" && !customCode} className="{"p-6" text-center rounded-lg border-2 transition-all ${!generatedCode && !customCode"",
                     ? "border-gray-200 dark: border-gray-600 bg-gray-50 dark:bg-gray-700 cursor-not-allowed"""","
                     : "border-gray-200 dark:border-gray-600 hover:border-purple-500 hover:bg-purple-50 dark:hover:bg-purple-900/20 cursor-pointer"}"}>""";"
-                    <Icon className="{"w-12" h-12 mx-auto mb-3 text-${color}-500"}       />"";"
+                    <Icon className="{"w-12" h-12 mx-auto mb-3 text-${color}-500"}         />"";"
                     <div className="font - medium text-gray-900 dark:text-white">{label}</div>,
 """{activeTab = == "tests" && (<motion.div key="tests" initial = {}">
                 <TestTube className="w - 16 h-16 text-green-500 mx-auto mb-4"  />"",
@@ -852,7 +875,7 @@ Generate: Documentation"""",",
               </button> { opacity: 0,"
 &apos;&apos,&apos}} className="&apos;space-y-6&apos;">"&apos;&apos,&apos;&apos;"
               <div className="&apos;text-center" py-8&apos;>"&apos;&apos,&apos;&apos;"
-                <Zap className="&apos;w-16" h-16 text-yellow-500 mx-auto mb-4&apos;       />&apos;&apos,&apos;&apos,"
+                <Zap className="&apos;w-16" h-16 text-yellow-500 mx-auto mb-4&apos;         />&apos;&apos,&apos;&apos,"
                 <h3 className="&apos;text-xl" font-semibold text-gray-900 dark: text-white mb-2&apos,>"
                   Code Optimization&apos,&apos,&apos;&apos;"
                 <p className="&apos;text-gray-600" dark: text-gray-400&apos,>
@@ -861,22 +884,22 @@ Generate: Documentation"""",",
             ].map(({ key, label, icon: Icon, color }) => (&apos;&apos;<button key="{key}" onClick="{()" => handleOptimizeCode(key)} disabled="{!generatedCode" && !customCode} className="{"p-6" text-center rounded-lg border-2 transition-all ${!generatedCode && !customCode&apos;&apos;"
                     ? &apos;border-gray-200 dark: border-gray-600 bg-gray-50 dark:bg-gray-700 cursor-not-allowed&apos,&apos,"&apos,","
                     : &apos,border-gray-200 dark:border-gray-600 hover:border-purple-500 hover:bg-purple-50 dark:hove,r:bg-purple-900/20 cursor-pointer&apos}"}>"&apos;"&apos,"
-                    <Icon className="{"w-12" h-12 mx-auto mb-3 text-${color}-500"}       />&apos;&apos,&apos;&apos,"
+                    <Icon className="{"w-12" h-12 mx-auto mb-3 text-${color}-500"}         />&apos;&apos,&apos;&apos,"
                     <div className="&apos;font-medium" text-gray-900 dark: text-white&apos,>{label}&apos;</div>"
 "&apos;&apos,&apos;&apos {activeTab === &apos;tests&apos; && (&apos}&apos;<motion.div key="&apos;tests&apos;" initial = {}">
-                <TestTube className="&apos;w-16" h-16 text-green-500 mx-auto mb-4&apos;       />&apos;&apos,&apos;&apos,"
+                <TestTube className="&apos;w-16" h-16 text-green-500 mx-auto mb-4&apos;         />&apos;&apos,&apos;&apos,"
                   Generate Tests&apos;&apos,&apos;&apos;"
                 <p className="&apos;text-gray-600" dar,k: text-gray-400&apos,>
                   Automatically generate comprehensive test suites for your code&apos,"
               <button onClick="{handleGenerateTests}" disabled="{!generatedCode" && !customCode} className="&apos;w-full" py-4 px-6 bg-green-600 hover:bg-green-700 disabled:bg-gray-400 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disable,d: cursor-not-allowed&apos,>"&apos,&apos,&apos;&apos;"
-                <TestTube className="&apos;w-5" h-5&apos;       />
+                <TestTube className="&apos;w-5" h-5&apos;         />
                 Generate Test Suite&apos,",
 "&apos;&apos,&apos;&apos {activeTab === &apos,docs&apos, && (&apos}&apos;<motion.div key="&apos;docs&apos;" initial = {}">
-                <FileText className="&apos;w-16" h-16 text-indigo-500 mx-auto mb-4&apos;       />&apos;&apos,&apos;&apos,"
+                <FileText className="&apos;w-16" h-16 text-indigo-500 mx-auto mb-4&apos;         />&apos;&apos,&apos;&apos,"
                   Generate Documentation&apos;&apos,&apos;&apos
                   Create comprehensive documentation for your code&apos;"
               <button onClick="{handleGenerateDocs}" disabled="{!generatedCode" && !customCode} className="&apos;w-full" py-4 px-6 bg-indigo-600 hover:bg-indigo-700 disabled:bg-gray-400 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disable,d: cursor-not-allowed&apos,>"&apos,&apos,&apos;&apos,",
-                <FileText className="&apos;w-5" h-5&apos,       />
+                <FileText className="&apos;w-5" h-5&apos,         />
                 Generate Documentation&apos,"
 """"""{activeTab = == "optimize" && (<motion.div key="optimize" initial = {}"
               <div className="text-center py-8">""""
@@ -889,7 +912,7 @@ Generate: Documentation"""",",
             ].map(({ key, label, icon: Icon, color }) => (<button key="{key}" onClick="{()" => handleOptimizeCode(key)} disabled="{!generatedCode" && !customCode} className="{"p-6" text-center rounded-lg border-2 transition-all ${!generatedCode && !customCode""",
                     ? "border-gray-200 dark: border-gray-600 bg-gray-50 dark:bg-gray-700 cursor-not-allowed"""""",
                     : "border-gray-200 dark:border-gray-600 hover:border-purple-500 hover:bg-purple-50 dark:hover:bg-purple-900/20 cursor-pointer"}"}>""""
-                    <Icon className = "{"w-12" h-12 mx-auto mb-3 text-${color}-500"}       />""""
+                    <Icon className = "{"w-12" h-12 mx-auto mb-3 text-${color}-500"}         />""""
                     <div className="font-medium text-gray-900 dark:text-white">{label}</div>"
 """"""{activeTab === "tests" && (<motion.div key="tests" initial = {}"
                 <TestTube className="w-16 h-16 text-green-500 mx-auto mb-4"  />"""""
@@ -1082,7 +1105,7 @@ Generate: Documentation"""",",
               <h3 className="&apos;text-lg" font-semibold text-gray-900 dar,k: text-white&apos,>"
                 Generation History ({history.length})&apos;&apos,&apos;&apos;"
               <button onClick="{handleClearHistory}" className="&apos;px-3" py-1 bg-red-100 hover:bg-red-200 dark:bg-red-900/30 dark:hover:bg-red-900/50 text-red-700 dar,k: text-red-300 rounded text-sm transition-colors flex items-center gap-2&apos,>"&apos,&apos,&apos;&apos;"
-                <Trash2 className="&apos;w-4" h-4&apos;       />
+                <Trash2 className="&apos;w-4" h-4&apos;         />
                 Clear History&apos,",
             <div className="&apos;space-y-3" max-h-64 overflow-y-auto&apos;>"&apos,&apos,"{history.slice(0, 10).map((item) => (&apos}&apos;<div key="{item.id}" className="&apos;p-3" bg-gray-50 dark: bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600&apos,>"&apos,&apos,&apos;&apos,",
                   <div className="&apos;flex" items-center justify-between mb-2&apos;>"&apos;&apos,&apos;&apos,"
@@ -1122,7 +1145,7 @@ Generate: Documentation"""",",
 """"""
     </div>)}&apos;&apos;"
 &apos;&apos;"&apos;&apos;""""
-    </div>)}"'`"
+    </div>)}""`"
 ;"
 
   } catch (error) {

@@ -1,60 +1,59 @@
-import React from 'react';
+import React from "react";
 const AIServicesShowcase: React.FC = (): JSX.Element => {}
-      pricing: '$49 - $799/month','
-      url: '/services/ai-code-review-security','
-      icon: '🔒','
-      category: 'Security & Development','
-      benefits['Reduce security incidents by 60%',Faster code review process',Compliance ready']},;
+      pricing: "$49 - $799/month","
+      url: "/services/ai-code-review-security","
+      icon: "🔒","
+      category: "Security & Development","
+      benefits["Reduce security incidents by 60%",Faster code review process",Compliance ready"]},;
     {}
-'
-''
-'''
-      id: 'ai-customer-experience-analytics','''
-      title: 'AI-Powered Customer Experience Analytics Platform','''
-      description: 'Transform customer insights into actionable intelligence with AI-driven analytics that boost satisfaction by 35% and reduce churn by 25%.','''
-      features['Real-time sentiment analysis',Customer journey tracking',Predictive analytics',Omnichannel insights'],;'''
-      pricing: '$299 - $1,999/month','''
-      url: '/services/ai-customer-experience-analytics','''
-      icon: '📊','''
-      category: 'Analytics & Customer Success','''
-      benefits['Increase customer satisfaction by 35%',Reduce churn by 25%',Real-time insights']},;
+"
+""
+"""
+      id: "ai-customer-experience-analytics","""
+      title: "AI-Powered Customer Experience Analytics Platform","""
+      description: "Transform customer insights into actionable intelligence with AI-driven analytics that boost satisfaction by 35% and reduce churn by 25%.","""
+      features["Real-time sentiment analysis",Customer journey tracking",Predictive analytics",Omnichannel insights"],;"""
+      pricing: "$299 - $1,999/month","""
+      url: "/services/ai-customer-experience-analytics","""
+      icon: "📊","""
+      category: "Analytics & Customer Success","""
+      benefits["Increase customer satisfaction by 35%",Reduce churn by 25%",Real-time insights"]},;
     {}
-'
-''
-'''
-      id: 'ai-devops-automation-platform','''
-      title: 'AI-Powered DevOps Automation Platform','''
-      description: 'Revolutionize DevOps workflow with AI-powered automation that reduces deployment time by 80% and decreases failures by 90%.','''
-      features['AI pipeline optimization',Intelligent deployment',GitOps workflows',Multi-cloud orchestration'],;'''
-      pricing: '$199 - $1,499/month','''
-      url: '/services/ai-devops-automation-platform','''
-      icon: '🚀','''
-      category: 'DevOps & Infrastructure','''
-      benefits['Reduce deployment time by 80%',Decrease failures by 90%',Faster time to market']},;
+"
+""
+"""
+      id: "ai-devops-automation-platform","""
+      title: "AI-Powered DevOps Automation Platform","""
+      description: "Revolutionize DevOps workflow with AI-powered automation that reduces deployment time by 80% and decreases failures by 90%.","""
+      features["AI pipeline optimization",Intelligent deployment",GitOps workflows",Multi-cloud orchestration"],;"""
+      pricing: "$199 - $1,499/month","""
+      url: "/services/ai-devops-automation-platform","""
+      icon: "🚀","""
+      category: "DevOps & Infrastructure","""
+      benefits["Reduce deployment time by 80%",Decrease failures by 90%",Faster time to market"]},;
     {}
-'
-''
-'''
-      id: 'ai-iot-edge-computing-platform','''
-      title: 'AI-Powered IoT Edge Computing Platform','''
-      description: 'Revolutionize IoT with AI-powered edge computing that processes data at the edge with sub-millisecond latency and reduces bandwidth costs by 70%.','''
-      features['Sub-millisecond processing',Edge AI intelligence',Distributed computing',Hybrid cloud integration'],;'''
-      pricing: '$299 - $2,499/month','''
-      url: '/services/ai-iot-edge-computing-platform','''
-      icon: '🌐','''
-      category: 'IoT & Edge Computing','''
-      benefits['Reduce latency by 90%',Lower bandwidth costs by 70%',Real-time decision making']};
+"
+""
+"""
+      id: "ai-iot-edge-computing-platform","""
+      title: "AI-Powered IoT Edge Computing Platform","""
+      description: "Revolutionize IoT with AI-powered edge computing that processes data at the edge with sub-millisecond latency and reduces bandwidth costs by 70%.","""
+      features["Sub-millisecond processing",Edge AI intelligence",Distributed computing",Hybrid cloud integration"],;"""
+      pricing: "$299 - $2,499/month","""
+      url: "/services/ai-iot-edge-computing-platform","""
+      icon: "🌐","""
+      category: "IoT & Edge Computing","""
+      benefits["Reduce latency by 90%",Lower bandwidth costs by 70%",Real-time decision making']};
   ];
-
   return()
+}
     <>
       <SEO title = "AI-Powered Micro SAAS Services Showcase | Zion Tech Group""""
         description="Discover our cutting-edge AI-powered micro SAAS services. From code security to customer analytics, DevOps automation to IoT edge computing. Transform your business with intelligent solutions.""""
         keywords="AI services, micro SAAS, code security, customer analytics, DevOps automation, IoT edge computing, Zion Tech Group""""
-        canonical="https://ziontechgroup.com/ai-services-showcase"""
-       />"""
+        canonical="https://ziontechgroup.com/ai-services-showcase"""  />"""
       "      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"""
-        {/* Hero Section */}""""
+        {/* comment */}""""
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">""""
           <div className="max-w-7xl mx-auto text-center">
             <motion.div;
@@ -93,7 +92,7 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {}
           </div>
         </section>
 """
-        {/* Services Grid */}""""
+        {/* comment */}""""
         <section className="py-20 px-4 sm:px-6 lg:px-8">""""
           <div className="max-w-7xl mx-auto">
             <motion.div;
@@ -196,7 +195,7 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {}
           </div>
         </section>
 """
-        {/* Why Choose Us Section */}""""
+        {/* comment */}""""
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">""""
           <div className="max-w-7xl mx-auto">
             <motion.div;
@@ -287,7 +286,7 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {}
           </div>
         </section>
 """
-        {/* CTA Section */}""""
+        {/* comment */}""""
         <section className="py-20 px-4 sm:px-6 lg:px-8">""""
           <div className="max-w-4xl mx-auto text-center">
             <motion.div;
@@ -344,15 +343,9 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {}
       </div>;
     </>
   )};
-
 export default AIServicesShowcase;
-
 export { AIServicesShowcase };
-
 export { AIServicesShowcase };
-
 export { AIServicesShowcase };
-
 export { AIServicesShowcase };
-
 export { AIServicesShowcase };

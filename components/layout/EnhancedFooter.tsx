@@ -1,14 +1,13 @@
-import React from 'react;
-import Link from 'next/link;
-import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook } from 'lucide-react;
-
+import React from "react;
+import Link from "next/link;
+import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook } from "lucide-react;
 const EnhancedFooter = () => {
   return (
     <footer className="bg-gray-900 text-white">
-      {/* Main Footer Content */}
+      {/* comment */}
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Company Info */}
+          {/* comment */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
@@ -20,14 +19,13 @@ const EnhancedFooter = () => {
               Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud architecture, and innovative development services.
             </p>
             <div className="flex space-x-4">
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-400 transition-colors"><Linkedin className="w-5 h-5" /></a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-400 transition-colors"><Twitter className="w-5 h-5" /></a>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-400 transition-colors"><Github className="w-5 h-5" /></a>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-400 transition-colors"><Facebook className="w-5 h-5" /></a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-400 transition-colors"><Linkedin className="w-5 h-5"  /></a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-400 transition-colors"><Twitter className="w-5 h-5"  /></a>
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-400 transition-colors"><Github className="w-5 h-5"  /></a>
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-400 transition-colors"><Facebook className="w-5 h-5"  /></a>
             </div>
           </div>
-
-          {/* Services */}
+          {/* comment */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
@@ -40,8 +38,7 @@ const EnhancedFooter = () => {
               <li><Link href="/services/cybersecurity" className="text-gray-300 hover:text-white transition-colors">Cybersecurity</Link></li>
             </ul>
           </div>
-
-          {/* Solutions */}
+          {/* comment */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Solutions</h3>
             <ul className="space-y-2">
@@ -52,8 +49,7 @@ const EnhancedFooter = () => {
               <li><Link href="/solutions/finance" className="text-gray-300 hover:text-white transition-colors">Finance</Link></li>
             </ul>
           </div>
-
-          {/* Company & Contact */}
+          {/* comment */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-2 mb-6">
@@ -62,22 +58,21 @@ const EnhancedFooter = () => {
               <li><Link href="/blog" className="text-gray-300 hover:text-white transition-colors">Blog</Link></li>
               <li><Link href="/products" className="text-gray-300 hover:text-white transition-colors">Products</Link></li>
             </ul>
-
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <div className="space-y-3">
               <div className="flex items-center space-x-2">
-                <Mail className="w-4 h-4 text-blue-400" />
+                <Mail className="w-4 h-4 text-blue-400"  />
                 <a href="mailto:info@ziontechgroup.com" className="text-gray-300 hover:text-white transition-colors">info@ziontechgroup.com</a>
               </div>
               <div className="flex items-center space-x-2">
-                <Phone className="w-4 h-4 text-blue-400" />
+                <Phone className="w-4 h-4 text-blue-400"  />
                 <a href="tel:+1-555-123-4567" className="text-gray-300 hover:text-white transition-colors">+1 (555) 123-4567</a>
               </div>
               <div className="flex items-center space-x-2">
-                <MapPin className="w-4 h-4 text-blue-400" />
-                <span className="text-gray-300">123 Tech Street, Innovation District<br />San Francisco, CA 94105</span>
+                <MapPin className="w-4 h-4 text-blue-400"  />
+                <span className="text-gray-300">123 Tech Street, Innovation District<br  />San Francisco, CA 94105</span>
               </div>
-              <div className="flex items-center space-x-2>                <MapPin className="w-4 h-4 text-blue-400" />"                <span className="text-gray-300>                  123 Tech Street, Innovation District<br />"                  San Francisco, CA 94105</span></div>
+              <div className="flex items-center space-x-2>                <MapPin className="w-4 h-4 text-blue-400"  />"                <span className="text-gray-300>                  123 Tech Street, Innovation District<br  />"                  San Francisco, CA 94105</span></div>
     <footer className="bg-gray-800 text-white py-8">"
       <div className="container mx-auto px-4">"
         <div className="grid md: grid-cols-4 gap-8">
@@ -128,22 +123,20 @@ const EnhancedFooter = () => {
           <p>&copy, 2024 Zion Tech Group. All rights reserved.</p>
         </div>
       </div>
-
-      {/* Newsletter Section */}
+      {/* comment */}
       <div className="border-t border-gray-700 py-8">
         <div className="container mx-auto px-4">
           <div className="text-center">
             <h3 className="text-lg font-semibold mb-2">Stay Updated</h3>
             <p className="text-gray-300 mb-4">Subscribe to our newsletter for the latest tech insights and updates.</p>
             <div className="flex max-w-md mx-auto">
-              <input type="email" placeholder="Enter your email" className="flex-1 px-4 py-2 rounded-l-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+              <input type="email" placeholder="Enter your email" className="flex-1 px-4 py-2 rounded-l-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500"  />
               <button className="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-r-lg font-semibold transition-colors">Subscribe</button>
             </div>
           </div>
         </div>
       </div>
-
-      {/* Bottom Footer */}
+      {/* comment */}
       <div className="border-t border-gray-700 py-6">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
@@ -156,8 +149,7 @@ const EnhancedFooter = () => {
           </div>
         </div>
       </div>
-
-      {/* Bottom Footer */}
+      {/* comment */}
 <div className="border-t border-gray-700 py-6>        <div className="container mx-auto px-4">"          <div className="flex flex-col md:flex-row justify-between items-center>            <p className="text-gray-300 text-sm">"              &copy; 2024 Zion Tech Group. All rights reserved."            </p>
             <div className="flex space-x-6 mt-4 md: mt-0>              <Link href="/privacy" className="text-gray-300 hover:text-white text-sm transition-colors>                Privacy Policy"              </Link>
               <Link href="/terms" className="text-gray-300 hover:text-white text-sm transition-colors>                Terms of Service"              </Link>
@@ -167,4 +159,4 @@ const EnhancedFooter = () => {
       </div>
     </footer>
   ),
-"'export default EnhancedFooter
+""export default EnhancedFooter

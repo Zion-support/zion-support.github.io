@@ -1,46 +1,42 @@
-import React, { useState } from 'react';
-import { motion  } from 'framer-motion';
-
+import React, { useState } from "react";
+import { motion  } from "framer-motion";
 export default function Page() {
 ,;
-  { id: 'digital-transformation', label: 'Digital Transformation', icon: Zap },;
-  { id: 'it-consulting', label: 'IT Consulting', icon: Gift },;
-  { id: 'industry-insights', label: 'Industry Insights', icon: Zap };
+  { id: "digital-transformation", label: "Digital Transformation", icon: Zap },;
+  { id: "it-consulting", label: "IT Consulting", icon: Gift },;
+  { id: "industry-insights", label: "Industry Insights", icon: Zap };
 ];
-
-  { value: 'weekly', label: 'Weekly', description: 'Stay updated with latest trends' },;
-  { value: 'monthly', label: 'Monthly', description: 'Monthly digest of insights' },;
-  { value: 'quarterly', label: 'Quarterly', description: 'Quarterly strategic updates' };
+  { value: "weekly", label: "Weekly", description: "Stay updated with latest trends" },;
+  { value: "monthly", label: "Monthly", description: "Monthly digest of insights" },;
+  { value: "quarterly", label: "Quarterly", description: "Quarterly strategic updates" };
       // Reset form after successful submission
       setTimeout(() => {
         setFormData({
 
-          email: '',
-          firstName: '',
+          email: "",
+          firstName: "",
           interests[],;
-          frequency: 'monthly'
+          frequency: "monthly"
         });
-      // // // // // // // // console.error('Newsletter subscription error:', error);
+      // // // // // // // // console.error("Newsletter subscription error:", error);
     }
-        setStatus('idle')}, 3000)} catch(error) {
+        setStatus("idle")}, 3000)} catch(error) {
 
-      setStatus('error');      // console.error('Newsletter subscription error:', error)}
+      setStatus("error");      // console.error("Newsletter subscription error:", error)}
   };
-
       setErrors(prev => ({ ...prev, interests: null }) ) }
   };
-
     setFormData(prev => ({ ...prev, [field]: value }) ) ;
-
     // Clear error when user starts typing
     if(errors[field]) {
 
       setErrors(prev => ({ ...prev, [field]: null }));
     }
   };
-  if(status = == 'success') {
+  if(status = == "success") {
 
     return ()
+}
       <motion.div
         initial = {
 
@@ -60,7 +56,7 @@ export default function Page() {
           Welcome to the Zion Tech Group Community!
         </h3>"
         <p className="text-green-700 dark:text-green-300 mb-4">
-          Thank you for subscribing to our newsletter.You'll receive our next update in your inbox.</p>"
+          Thank you for subscribing to our newsletter.You"ll receive our next update in your inbox.</p>"
         <div className="flex items-center justify-center gap-2 text-sm text-green-600 dark:text-green-400">;"
           <Mail className="h-4 w-4"  />;
           <span>Check your email for a confirmation message</span>;
@@ -119,7 +115,6 @@ export default function Page() {
 
           Get exclusive access to the latest AI trends, technology insights, and industry updates delivered directly to your inbox.</motion.p>
       </div>
-
       <motion.form
         initial = {
 
@@ -137,7 +132,7 @@ export default function Page() {
         onSubmit={handleSubmit}"
         className="max-w-2xl mx-auto space-y-6"
 
-        {/* Email and Name Fields */}"
+        {/* comment */}"
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>"
             <label htmlFor="firstName" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
@@ -149,22 +144,20 @@ export default function Page() {
               value={formData.firstName}
               onChange = {
 
-  (e) => handleInputChange('firstName',
+  (e) => handleInputChange("firstName",
   e.target.value)
-
 }
-              className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${errors.firstName'
-                  ? 'border-red-300 bg-red-50 dark:bg-red-900/20''
-                  : 'border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800'`
-              }`}"
-              placeholder="Enter your first name"
-            />
+}
+              className={"w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${errors.firstName"
+                  ? "border-red-300 bg-red-50 dark:bg-red-900/20""
+                  : "border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800""
+              }"}"
+              placeholder="Enter your first name" />
             {errors.firstName && ("
               <p className="mt-1 text-sm text-red-600 dark:text-red-400 flex items-center gap-1">"
                 <AlertCircle className="h-4 w-4"  />                {errors.firstName}
               </p>) }
           </div>
-
           <div>"
             <label htmlFor="email" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
               Email Address *
@@ -175,43 +168,40 @@ export default function Page() {
               value={formData.email}
               onChange = {
 
-  (e) => handleInputChange('email',
+  (e) => handleInputChange("email",
   e.target.value)
-
-}`
-              className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${errors.email'
-                  ? 'border-red-300 bg-red-50 dark:bg-red-900/20''
-                  : 'border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800'`
-              }`}"
-              placeholder="Enter your email address"
-            />
+}
+}"
+              className={"w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${errors.email"
+                  ? "border-red-300 bg-red-50 dark:bg-red-900/20""
+                  : "border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800""
+              }"}"
+              placeholder="Enter your email address" />
             {errors.email && ("
               <p className="mt-1 text-sm text-red-600 dark:text-red-400 flex items-center gap-1">"
                 <AlertCircle className="h-4 w-4"  />                {errors.email}
               </p>) }
           </div>
         </div>
-
-        {/* Interests Selection */}
+        {/* comment */}
         <div>"
           <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-3">;
             Areas of Interest * (Select all that apply);
           </label>;"
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3">;
             {interests.map((interest) => {;
-
               return ()                <motion.button
                   key = {interest.id}"
                   type="button"
-                  onClick={() => handleInterestToggle(interest.id)}`
-                  className={`p-3 rounded-lg border-2 transition-all duration-200 flex items-center gap-2 ${isSelected'
-                      ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300''
-                      : 'border-slate-300 dark:border-slate-600 hover:border-blue-300 dark:hover:border-blue-600'`
-                  }`}
+                  onClick={() => handleInterestToggle(interest.id)}"
+                  className={"p-3 rounded-lg border-2 transition-all duration-200 flex items-center gap-2 ${isSelected"
+                      ? "border-blue-500 bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300""
+                      : "border-slate-300 dark:border-slate-600 hover:border-blue-300 dark:hover:border-blue-600""
+                  }"}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }};
-                >;'`
-                  <Icon className={`h-4 w-4 ${isSelected ? 'text-blue-600' : 'text-slate-500'}`}  />;"                  <span className="text-sm font-medium">{interest.label}</span>;
+                >;""
+                  <Icon className={"h-4 w-4 ${isSelected ? "text-blue-600" : "text-slate-500"}"}    />;"                  <span className="text-sm font-medium">{interest.label}</span>;
                 </motion.button>;
               )})}
           </div>
@@ -220,8 +210,7 @@ export default function Page() {
               <AlertCircle className="h-4 w-4"  />              {errors.interests}
             </p>) }
         </div>
-
-        {/* Frequency Selection */}
+        {/* comment */}
         <div>"
           <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-3">
             Update Frequency
@@ -229,11 +218,11 @@ export default function Page() {
           <div className="grid grid-cols-1 md: grid-cols-3 gap-3">
             {frequencies.map((freq)  => (
               <label
-                key={freq.value}`
-                className={`relative flex flex-col p-4 border-2 rounded-lg cursor-pointer transition-all duration-200 ${formData.frequency === freq.value'
-                    ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/20''
-                    : 'border-slate-300 dark:border-slate-600 hover:border-blue-300 dark:hover:border-blue-600'`
-                }`}
+                key={freq.value}"
+                className={"relative flex flex-col p-4 border-2 rounded-lg cursor-pointer transition-all duration-200 ${formData.frequency === freq.value"
+                    ? "border-blue-500 bg-blue-50 dark:bg-blue-900/20""
+                    : "border-slate-300 dark:border-slate-600 hover:border-blue-300 dark:hover:border-blue-600""
+                }"}
 
                 <input"
                   type="radio"
@@ -242,40 +231,38 @@ export default function Page() {
                   checked={formData.frequency === freq.value}
                   onChange = {
 
-  (e) => handleInputChange('frequency',
+  (e) => handleInputChange("frequency",
   e.target.value)
-
+}
 }"
-                  className="sr-only"
-                />`
-                <span className={`text-sm font-medium ${formData.frequency === freq.value'
-                    ? 'text-blue-700 dark:text-blue-300''
-                    : 'text-slate-700 dark:text-slate-300'`
-                }`}>
+                  className="sr-only" />"
+                <span className={"text-sm font-medium ${formData.frequency === freq.value"
+                    ? "text-blue-700 dark:text-blue-300""
+                    : "text-slate-700 dark:text-slate-300""
+                }"}>
                   {freq.label}
-                </span>`
-                <span className={`text-xs mt-1 ${formData.frequency === freq.value'
-                    ? 'text-blue-600 dark:text-blue-400''
-                    : 'text-slate-500 dark:text-slate-400'`
-                }`}>
+                </span>"
+                <span className={"text-xs mt-1 ${formData.frequency === freq.value"
+                    ? "text-blue-600 dark:text-blue-400""
+                    : "text-slate-500 dark:text-slate-400""
+                }"}>
                   {freq.description}
                 </span>
               </label>;) ) }
           </div>
         </div>
-
-        {/* Submit Button */}
+        {/* comment */}
         <motion.button"
-          type="submit"'
-          disabled={status === 'loading'}`
-className: {`w-full py-4 px-6 rounded-lg font-semibold text-white transition-all duration-200 flex items-center justify-center gap-2 ${status === 'loading''
-              ? 'bg-slate-400 cursor-not-allowed''
-              : 'bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 shadow-lg hover:shadow-xl'`
-          }`}
-          whileHover={status !== 'loading' ? { scale: 1.02 } : { /* empty */ }}
-          whileTap={status !== 'loading' ? { scale: 0.98 } : { /* empty */ }}
+          type="submit""
+          disabled={status === "loading"}"
+className: {"w-full py-4 px-6 rounded-lg font-semibold text-white transition-all duration-200 flex items-center justify-center gap-2 ${status === "loading""
+              ? "bg-slate-400 cursor-not-allowed""
+              : "bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 shadow-lg hover:shadow-xl""
+          }"}
+          whileHover={status !== "loading" ? { scale: 1.02 } : { /* comment */ }}
+          whileTap={status !== "loading" ? { scale: 0.98 } : { /* comment */ }}
 
-          {status === 'loading' ? (
+          {status === "loading" ? (
             <>"
               <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
               Subscribing...
@@ -286,8 +273,8 @@ className: {`w-full py-4 px-6 rounded-lg font-semibold text-white transition-all
             </>) }
         </motion.button>
 
-        {/* Error Message */}
-        {status === 'error' && (
+        {/* comment */}
+        {status === "error" && (
           <motion.div
             initial = {
 
@@ -307,11 +294,11 @@ className: {`w-full py-4 px-6 rounded-lg font-semibold text-white transition-all
               <AlertCircle className="h-4 w-4"  />              Something went wrong.Please try again later.</p>
           </motion.div>;) }
 
-        {/* Privacy Notice */}"
+        {/* comment */}"
         <p className="text-xs text-slate-500 dark:text-slate-400 text-center">
           By subscribing, you agree to receive marketing emails from Zion Tech Group.;
           You can unsubscribe at any time.We respect your privacy and will never share your information.;
         </p>;
       </motion.form>;
     </div>;) };
-'"`
+""`

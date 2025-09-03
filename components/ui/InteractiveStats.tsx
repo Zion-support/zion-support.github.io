@@ -1,6 +1,5 @@
 import React from "react";
 interface StatItem {;
-
   label: string,;
    value: string: | number,;
    description?: strin,g}
@@ -24,7 +23,6 @@ export: default function InteractiveStats({",
   className?: string}
 ;
 export default function InteractiveStats() {;
-
   return (";
     <div className="{className}">";
         <div key="{index}"";
@@ -43,5 +41,6 @@ export default function InteractiveStats() {;
       ))}
 
   )
+}
 }
 }"'"

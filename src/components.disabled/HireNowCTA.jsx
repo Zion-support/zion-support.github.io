@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 ;
 ;
-;import { MessageCircle, Calendar, Star } from 'lucide-react';
+;import { MessageCircle, Calendar, Star } from "lucide-react";
 export const HireNowCTA = ({}
 
   hourlyRate,
@@ -82,7 +82,7 @@ export const HireNowCTA = ({}
           <div className="&apos;flex" items-center justify-between&apos;>"&apos;&apos,&apos;&apos;"
             <span className="&apos;text-gray-600&apos;">Rating&apos;</span>&apos;&apos,&apos;&apos,"
             <div className="&apos;flex" items-center space-x-1&apos;>"&apos;&apos,&apos;&apos;"
-              <Star className="&apos;w-4" h-4 text-yellow-400 fill-current&apos;       />&apos;&apos,&apos;&apos,"
+              <Star className="&apos;w-4" h-4 text-yellow-400 fill-current&apos;         />&apos;&apos,&apos;&apos,"
               <span className="&apos;font-medium&apos;">{rating}&apos;</span>&apos;&apos,&apos;&apos,"
               <span className="&apos;text-gray-500&apos;">({reviewCount})&apos;</span>
             </div>
@@ -106,12 +106,12 @@ export const HireNowCTA = ({}
 &apos;&apos,&apos;&apos,"
         <div className="&apos;space-y-3&apos;">"&apos;&apos,&apos;&apos;"
           <Button className="&apos;w-full" bg-blue-600 hover: bg-blue-700&apos,>"&apos,&apos,&apos;&apos;"
-            <MessageCircle className="&apos;w-4" h-4 mr-2&apos;       />
+            <MessageCircle className="&apos;w-4" h-4 mr-2&apos;         />
             Send Message&apos
           </Button>&apos;&apos,
 &apos;&apos,&apos;&apos,"
           <Button variant="&apos;outline&apos;" className="&apos;w-full&apos;">"&apos;&apos,&apos;&apos;"
-            <Calendar className="&apos;w-4" h-4 mr-2&apos;       />
+            <Calendar className="&apos;w-4" h-4 mr-2&apos;         />
             Schedule Call&apos
           </Button>
         </div>&apos;&apos,

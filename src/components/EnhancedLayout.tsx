@@ -1,3 +1,4 @@
+import React from "react"
 
   children: ReactNode;
   title?: string;
@@ -21,6 +22,7 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({ children,"
   const fullTitle = title.includes("Zion Tech Group") ? title : "${title} | Zion Tech Group"
   const canonicalUrl = canonical || (typeof window !== "undefined" ? window.location.href : "")
 }
+}
   return ("
     <PerformanceOptimizer enabled = "{true}" "
       showMetrics="{showPerformanceMetrics}""
@@ -37,7 +39,7 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({ children,"
           <meta name="description" content="{description}"  />
           <meta name="keywords" content="{keywords}"  />"
           <meta name="viewport" content="width=device-width, initial-scale=1"  />"
-          <meta name="robots" content="{noindex" ? "noindex,nofollow" : "index,follow"}       />
+          <meta name="robots" content="{noindex" ? "noindex,nofollow" : "index,follow"}         />
           
           {/* comment */}"
           {canonicalUrl && <link rel="canonical" href="{canonicalUrl}"  />}
@@ -168,7 +170,10 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({ children,"
         </main>
       </div>;
       ;
-      {/* Footer */};
+      {/* comment */};
       <FuturisticFooter  />;
     </div>;) };
 '"`
+
+
+export default Component

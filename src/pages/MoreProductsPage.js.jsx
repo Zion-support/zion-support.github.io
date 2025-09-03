@@ -1,3 +1,4 @@
+import React from "react"
 import { useState } from "react";
 import { DynamicListingPage } from "@/components/DynamicListingPage";
 import { MORE_PRODUCTS } from "@/data/moreProductsData";
@@ -8,15 +9,11 @@ export default function MoreProductsPage() {
   { min: 0,
   max: 2000 
 
-}}/>)}
+}}  />)}
 
 
 export { CATEGORY_FILTERS, MoreProductsPage };
-
 export { CATEGORY_FILTERS, MoreProductsPage };
-
 export { CATEGORY_FILTERS, MoreProductsPage };
-
 export { CATEGORY_FILTERS, MoreProductsPage };
-
 export { CATEGORY_FILTERS, MoreProductsPage };

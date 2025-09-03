@@ -1,3 +1,4 @@
+import React from "react"
 import { useState, useEffect } from "react";""""
 import { useSearchParams } from "react-router-dom";""""
 import { ITServicePricingTable } from "@/components/services/ITServicePricingTable";""""
@@ -34,13 +35,16 @@ export default function ITOnsiteServicesPage() {}
     // Filter countries based on search query;
     const filteredCountries = onsiteServicePricing;
         .filter(country => country.country.toLowerCase().includes(searchQuery.toLowerCase()))
+}
         .sort((a, b) => {}
         // First, sort by popular status;
         const aIsPopular = popularCountries.includes(a.country);
         const bIsPopular = popularCountries.includes(b.country);
         if (aIsPopular && !bIsPopular)
+}
             return -1;
         if (!aIsPopular && bIsPopular)
+}
             return 1;
         // Then sort alphabetically;
         return a.country.localeCompare(b.country)});
@@ -49,30 +53,29 @@ export default function ITOnsiteServicesPage() {}
         // Scroll to the service details section;
         setTimeout(() => {}
 """
-            document.getElementById('service-details')?.scrollIntoView({ behavior: 'smooth' })}, 100)};""""
+            document.getElementById("service-details")?.scrollIntoView({ behavior: "smooth" })}, 100)};""""
     return (<section className="py-16 bg-zion-blue">""""
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Hero Section with Features */}
-          <PageHero />
+          {/* comment */}
+          <PageHero  />
           """
-          {/* Country Selection Tabs */}""""
+          {/* comment */}""""
           <div className="mb-12">
-            <CountryTabs popularCountries={popularCountries} filteredCountries={filteredCountries} handleCountrySelect={handleCountrySelect} searchQuery={searchQuery} setSearchQuery={setSearchQuery}/>
+            <CountryTabs popularCountries={popularCountries} filteredCountries={filteredCountries} handleCountrySelect={handleCountrySelect} searchQuery={searchQuery} setSearchQuery={setSearchQuery}  />
           </div>
-
-          {/* Service Details Section */}
+          {/* comment */}
           <ServiceDetailsSection;
             selectedCountry={selectedCountry}
             setSelectedCountry={setSelectedCountry}
           />
 
-          {/* How It Works Section */}
-          <ServiceProcessSteps />'
-          ''
-          {/* What's Included Section */}
-          <ServiceIncludes />
+          {/* comment */}
+          <ServiceProcessSteps  />"
+          "'
+          {/* comment */}
+          <ServiceIncludes  />
           """
-          {/* Complete Pricing Table */}""""
+          {/* comment */}""""
           <div id="pricing-table" className="my-16">""""
             <div className="text-center mb-8">""""
               <h2 className="text-2xl font-bold text-white mb-4">Full IT Onsite Services Pricing</h2>""""
@@ -81,27 +84,21 @@ export default function ITOnsiteServicesPage() {}
                 Additional hours are billed separately at standard rates.
               </p>
             </div>
-
-            <ITServicePricingTable />
+            <ITServicePricingTable  />
           </div>
-
-          <EnterpriseCallToAction />
+          <EnterpriseCallToAction  />
         </div>
       </section>
         ,
-            <GlobalServiceSection />
+            <GlobalServiceSection  />
                 ,
-                    <TrustedBySection />
+                    <TrustedBySection  />
                         ,
-                            <QuoteFormSection />)}
+                            <QuoteFormSection  />)}
 
 
 export { ITOnsiteServicesPage };
-
 export { ITOnsiteServicesPage };
-
 export { ITOnsiteServicesPage };
-
 export { ITOnsiteServicesPage };
-
 export { ITOnsiteServicesPage };

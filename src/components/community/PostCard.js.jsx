@@ -29,11 +29,7 @@ import React from "react"; "export { function };export default function PostCard
 
 
 export { PostCard };
-
 export { PostCard };
-
 export { PostCard };
-
 export { PostCard };
-
 export { PostCard };

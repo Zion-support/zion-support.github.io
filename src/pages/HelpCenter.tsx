@@ -1,128 +1,123 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';import { 
-  Search, 
-  BookOpen, 
-  MessageCircle, 
-  Phone, 
-  Mail, 
-  FileText, 
-  Video, 
+import React, { useState } from "react";
+import { motion } from "framer-motion";import { 
+  Search,
+  BookOpen,
+  MessageCircle,
+  Phone,
+  Mail,
+  FileText,
+  Video,
   Users,
   CheckCircle,
   ArrowRight,
   ChevronDown,
   ChevronRight
-} from 'lucide-react';
-
+} from "lucide-react";
 export default function HelpCenter() {
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState("");
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
-
   const helpCategories = [
     {
-      id: 'getting-started',
-      title: 'Getting Started',
-      icon: <BookOpen className="w-6 h-6" />,
+      id: "getting-started",
+      title: "Getting Started",
+      icon: <BookOpen className="w-6 h-6"  />,
       articles: [
-        { title: 'Welcome to Zion Tech Group', url: '/help/welcome' },
-        { title: 'Creating Your Account', url: '/help/create-account' },
-        { title: 'First Steps Guide', url: '/help/first-steps' },
-        { title: 'Platform Overview', url: '/help/platform-overview' }
+        { title: "Welcome to Zion Tech Group", url: "/help/welcome" },
+        { title: "Creating Your Account", url: "/help/create-account" },
+        { title: "First Steps Guide", url: "/help/first-steps" },
+        { title: "Platform Overview", url: "/help/platform-overview" }
       ]
     },
     {
-      id: 'services',
-      title: 'Services & Solutions',
-      icon: <FileText className="w-6 h-6" />,
+      id: "services",
+      title: "Services & Solutions",
+      icon: <FileText className="w-6 h-6"  />,
       articles: [
-        { title: 'Understanding Our Services', url: '/help/services-overview' },
-        { title: 'Service Selection Guide', url: '/help/service-selection' },
-        { title: 'Pricing Information', url: '/help/pricing' },
-        { title: 'Service Customization', url: '/help/customization' }
+        { title: "Understanding Our Services", url: "/help/services-overview" },
+        { title: "Service Selection Guide", url: "/help/service-selection" },
+        { title: "Pricing Information", url: "/help/pricing" },
+        { title: "Service Customization", url: "/help/customization" }
       ]
     },
     {
-      id: 'marketplace',
-      title: 'Marketplace',
-      icon: <Users className="w-6 h-6" />,
+      id: "marketplace",
+      title: "Marketplace",
+      icon: <Users className="w-6 h-6"  />,
       articles: [
-        { title: 'Navigating the Marketplace', url: '/help/marketplace-guide' },
-        { title: 'Finding Talent & Services', url: '/help/finding-services' },
-        { title: 'Making Purchases', url: '/help/purchases' },
-        { title: 'Reviews & Ratings', url: '/help/reviews' }
+        { title: "Navigating the Marketplace", url: "/help/marketplace-guide" },
+        { title: "Finding Talent & Services", url: "/help/finding-services" },
+        { title: "Making Purchases", url: "/help/purchases" },
+        { title: "Reviews & Ratings", url: "/help/reviews" }
       ]
     },
     {
-      id: 'account',
-      title: 'Account & Billing',
-      icon: <FileText className="w-6 h-6" />,
+      id: "account",
+      title: "Account & Billing",
+      icon: <FileText className="w-6 h-6"  />,
       articles: [
-        { title: 'Account Settings', url: '/help/account-settings' },
-        { title: 'Billing & Payments', url: '/help/billing' },
-        { title: 'Security & Privacy', url: '/help/security' },
-        { title: 'Data Management', url: '/help/data-management' }
+        { title: "Account Settings", url: "/help/account-settings" },
+        { title: "Billing & Payments", url: "/help/billing" },
+        { title: "Security & Privacy", url: "/help/security" },
+        { title: "Data Management", url: "/help/data-management" }
       ]
     },
     {
-      id: 'technical',
-      title: 'Technical Support',
-      icon: <FileText className="w-6 h-6" />,
+      id: "technical",
+      title: "Technical Support",
+      icon: <FileText className="w-6 h-6"  />,
       articles: [
-        { title: 'Common Issues', url: '/help/common-issues' },
-        { title: 'Troubleshooting Guide', url: '/help/troubleshooting' },
-        { title: 'API Documentation', url: '/help/api-docs' },
-        { title: 'Integration Guides', url: '/help/integrations' }
+        { title: "Common Issues", url: "/help/common-issues" },
+        { title: "Troubleshooting Guide", url: "/help/troubleshooting" },
+        { title: "API Documentation", url: "/help/api-docs" },
+        { title: "Integration Guides", url: "/help/integrations" }
       ]
     }
   ];
-
   const popularArticles = [
-    'How to get started with AI services',
-    'Understanding our pricing structure',
-    'Finding the right talent for your project',
-    'Security best practices',
-    'API integration guide',
-    'Troubleshooting common issues'
+    "How to get started with AI services",
+    "Understanding our pricing structure",
+    "Finding the right talent for your project",
+    "Security best practices",
+    "API integration guide",
+    "Troubleshooting common issues"
   ];
-
   const contactMethods = [
     {
-      icon: <Mail className="w-6 h-6" />,
-      title: 'Email Support',
-      description: 'Get help via email',
-      action: 'support@ziontechgroup.com',
-      link: 'mailto:support@ziontechgroup.com'
+      icon: <Mail className="w-6 h-6"  />,
+      title: "Email Support",
+      description: "Get help via email",
+      action: "support@ziontechgroup.com",
+      link: "mailto:support@ziontechgroup.com"
     },
     {
-      icon: <Phone className="w-6 h-6" />,
-      title: 'Phone Support',
-      description: 'Speak with our team',
-      action: '+1 302 464 0950',
-      link: 'tel:+13024640950'
+      icon: <Phone className="w-6 h-6"  />,
+      title: "Phone Support",
+      description: "Speak with our team",
+      action: "+1 302 464 0950",
+      link: "tel:+13024640950"
     },
     {
-      icon: <MessageCircle className="w-6 h-6" />,
-      title: 'Live Chat',
-      description: 'Chat with support',
-      action: 'Start Chat',
-      link: '#'
+      icon: <MessageCircle className="w-6 h-6"  />,
+      title: "Live Chat",
+      description: "Chat with support",
+      action: "Start Chat",
+      link: "#"
     }
   ];
-
   const toggleCategory = (categoryId: string) => {
     setExpandedCategory(expandedCategory === categoryId ? null : categoryId);
   };
-
   const filteredCategories = helpCategories.filter(category =>
     category.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
     category.articles.some(article => 
       article.title.toLowerCase().includes(searchQuery.toLowerCase())
+}
     )
+}
   );
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-20">
-      {/* Hero Section */}
+      {/* comment */}
       <section className="relative overflow-hidden">
         <div className="container mx-auto px-4 py-20">
           <motion.div
@@ -132,38 +127,34 @@ export default function HelpCenter() {
             className="text-center max-w-4xl mx-auto"
           >
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full mb-8">
-              <BookOpen className="w-10 h-10 text-white" />
+              <BookOpen className="w-10 h-10 text-white"  />
             </div>
             <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6">
               Help Center
             </h1>
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
               Find answers to your questions, learn how to use our platform, and get the support you need 
-              to make the most of Zion Tech Group's services.
+              to make the most of Zion Tech Group"s services.
             </p>
-            
-            {/* Search Bar */}
+            {/* comment */}
             <div className="relative max-w-2xl mx-auto">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5"  />
               <input
                 type="text"
                 placeholder="Search for help articles, guides, and more..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-4 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-              />
+                className="w-full pl-12 pr-4 py-4 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent" />
             </div>
           </motion.div>
         </div>
-        
-        {/* Background Elements */}
+        {/* comment */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan rounded-full"></div>
           <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-blue rounded-full"></div>
         </div>
       </section>
-
-      {/* Help Categories */}
+      {/* comment */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
@@ -198,16 +189,15 @@ export default function HelpCenter() {
                     <h3 className="text-xl font-semibold text-white">{category.title}</h3>
                   </div>
                   {expandedCategory === category.id ? (
-                    <ChevronDown className="w-5 h-5 text-zion-cyan" />
+                    <ChevronDown className="w-5 h-5 text-zion-cyan"  />
                   ) : (
-                    <ChevronRight className="w-5 h-5 text-zion-cyan" />
+                    <ChevronRight className="w-5 h-5 text-zion-cyan"  />
                   )}
                 </button>
-                
                 {expandedCategory === category.id && (
                   <motion.div
                     initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: 'auto' }}
+                    animate={{ opacity: 1, height: "auto" }}
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.3 }}
                     className="px-6 pb-6 border-t border-zion-cyan/20"
@@ -230,8 +220,7 @@ export default function HelpCenter() {
           </div>
         </div>
       </section>
-
-      {/* Popular Articles */}
+      {/* comment */}
       <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4">
           <motion.div
@@ -258,8 +247,8 @@ export default function HelpCenter() {
                 className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-lg p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer group"
               >
                 <div className="flex items-center justify-between mb-4">
-                  <FileText className="w-6 h-6 text-zion-cyan" />
-                  <ArrowRight className="w-5 h-5 text-zion-cyan group-hover:translate-x-1 transition-transform duration-300" />                </div>
+                  <FileText className="w-6 h-6 text-zion-cyan"  />
+                  <ArrowRight className="w-5 h-5 text-zion-cyan group-hover:translate-x-1 transition-transform duration-300"  />                </div>
                 <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-zion-cyan transition-colors duration-300">
                   {article}
                 </h3>
@@ -271,8 +260,7 @@ export default function HelpCenter() {
           </div>
         </div>
       </section>
-
-      {/* Contact Support */}
+      {/* comment */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
@@ -314,8 +302,7 @@ export default function HelpCenter() {
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
+      {/* comment */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
@@ -325,10 +312,10 @@ export default function HelpCenter() {
             className="bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20 border border-zion-cyan/30 rounded-2xl p-12 text-center"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Can't Find What You're Looking For?
+              Can"t Find What You"re Looking For?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-              Let us know what you need help with, and we'll create the resources to assist you.
+              Let us know what you need help with, and we"ll create the resources to assist you.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
@@ -337,7 +324,7 @@ export default function HelpCenter() {
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center"
               >
                 Request Help Article
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 w-5 h-5"  />
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -356,6 +343,7 @@ import React from "react"
 import { SEO } from "@/components/SEO"
 ;,"});,"})
 }
+}
 export default function HelpCenter() {return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
       <SEO title="HelpCenter - Zion Tech Group" description="Professional HelpCenter services by Zion Tech Group"  />"
@@ -366,5 +354,6 @@ export default function HelpCenter() {return ("
         </p>
       </div>
   )
+}
 }
 }""

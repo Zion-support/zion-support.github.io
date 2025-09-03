@@ -1,7 +1,6 @@
-import React from 'react';
-import { SEO } from '../../components/SEO';
-import { Code, Zap, Users, TrendingUp, Shield, Building, Cpu, BarChart3 } from 'lucide-react';
-
+import React from "react";
+import { SEO } from "../../components/SEO";
+import { Code, Zap, Users, TrendingUp, Shield, Building, Cpu, BarChart3 } from "lucide-react";
 export default function MicroSAASSolutions() {
     const services = [
         {
@@ -80,9 +79,9 @@ export default function MicroSAASSolutions() {
         }
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
-      <SEO title="Micro SAAS Solutions - Zion Tech Group" description="Custom software-as-a-service solutions designed for rapid deployment, scalability, and business growth across industries." keywords="micro SAAS, custom software, subscription management, multi-tenant, API development, business software" canonical="https://ziontechgroup.com/services/micro-saas-solutions"/>
+      <SEO title="Micro SAAS Solutions - Zion Tech Group" description="Custom software-as-a-service solutions designed for rapid deployment, scalability, and business growth across industries." keywords="micro SAAS, custom software, subscription management, multi-tenant, API development, business software" canonical="https://ziontechgroup.com/services/micro-saas-solutions"  />
 
-      {/* Hero Section */}
+      {/* comment */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-blue-dark/80 to-zion-purple/80"></div>
         <div className="relative z-10 container mx-auto px-4 py-24 text-center">
@@ -106,8 +105,7 @@ export default function MicroSAASSolutions() {
           </div>
         </div>
       </section>
-
-      {/* Services Grid */}
+      {/* comment */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -119,11 +117,10 @@ export default function MicroSAASSolutions() {
               accelerate your business growth and digital transformation.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (<div key={index} className="bg-white rounded-xl shadow-lg p-6 border border-zion-blue-light hover:shadow-xl transition-shadow">
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-6">
-                  <service.icon className="w-8 h-8 text-white"/>
+                  <service.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-zion-blue-dark mb-3">
                   {service.title}
@@ -141,8 +138,7 @@ export default function MicroSAASSolutions() {
           </div>
         </div>
       </section>
-
-      {/* Benefits Section */}
+      {/* comment */}
       <section className="py-20 bg-zion-blue-light">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -154,11 +150,10 @@ export default function MicroSAASSolutions() {
               designed for modern business needs.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (<div key={index} className="text-center">
                 <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-6">
-                  <benefit.icon className="w-10 h-10 text-white"/>
+                  <benefit.icon className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-zion-blue-dark mb-3">
                   {benefit.title}
@@ -170,8 +165,7 @@ export default function MicroSAASSolutions() {
           </div>
         </div>
       </section>
-
-      {/* Industry Solutions */}
+      {/* comment */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -182,11 +176,10 @@ export default function MicroSAASSolutions() {
               Tailored micro SAAS solutions designed for the unique requirements and compliance needs of different industries.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {industries.map((industry, index) => (<div key={index} className="bg-zion-blue-light rounded-xl p-6 text-center hover:shadow-lg transition-shadow">
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <industry.icon className="w-8 h-8 text-white"/>
+                  <industry.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-zion-blue-dark mb-2">
                   {industry.name}
@@ -198,8 +191,7 @@ export default function MicroSAASSolutions() {
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
+      {/* comment */}
       <section className="py-20 bg-gradient-to-r from-zion-blue-dark to-zion-purple">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
@@ -224,11 +216,7 @@ export default function MicroSAASSolutions() {
 }
 
 export { MicroSAASSolutions };
-
 export { MicroSAASSolutions };
-
 export { MicroSAASSolutions };
-
 export { MicroSAASSolutions };
-
 export { MicroSAASSolutions };

@@ -1,5 +1,5 @@
-import React from 'react';'''
-import Link from 'next/link';
+import React from "react";"""
+import Link from "next/link";
 const MicroSAAS = () => {}
     const microSaasServices = []
         {}
@@ -64,7 +64,7 @@ const MicroSAAS = () => {}
                   <Link to="/contact" className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300">"""
                     Learn More""""
                     <svg className="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">""""
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"/>
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"  />
                     </svg>
                   </Link>
                 </div>
@@ -74,7 +74,7 @@ const MicroSAAS = () => {}
           <div className="text-center">""""
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">""""
               <h3 className="text-2xl font-bold mb-4">Need a Custom Solution?</h3>""""
-              <p className="text-gray-300 mb-6">'
+              <p className="text-gray-300 mb-6">"
                 Can't find exactly what you need? We can develop custom micro-SAAS solutions;
                 tailored to your specific business requirements."""
               </p>""""
@@ -87,14 +87,8 @@ const MicroSAAS = () => {}
       </section>
     </div>)};
 export default MicroSAAS;
-
-
 export { MicroSAAS };
-
 export { MicroSAAS };
-
 export { MicroSAAS };
-
 export { MicroSAAS };
-
 export { MicroSAAS };

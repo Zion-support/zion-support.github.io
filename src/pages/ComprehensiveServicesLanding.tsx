@@ -1,6 +1,5 @@
-import React from 'react';
-import { Link  } from 'react-router-dom';
-
+import React from "react";
+import { Link  } from "react-router-dom";
 const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
   const serviceCategories: unknown = []
     {}
@@ -150,17 +149,16 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
       ];
     };
   ];
-
   return()
+}
     <>"""
       <SEO""""
         title = "Comprehensive Services | Zion Tech Group""""
         description="Discover our complete range of services: AI-powered micro SAAS, cloud infrastructure, data analytics, security, and more. Transform your business with Zion Tech Group.""""
         keywords="Zion Tech Group services, AI services, cloud infrastructure, data analytics, cybersecurity, micro SAAS, business solutions""""
-        canonical="https://ziontechgroup.com/services"""
-      />"""
+        canonical="https://ziontechgroup.com/services""" />"""
       "      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"""
-        {/* Hero Section */}""""
+        {/* comment */}""""
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">""""
           <div className="max-w-7xl mx-auto text-center">
             <motion.div;
@@ -199,7 +197,7 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
           </div>
         </section>
 """
-        {/* Services Categories */}""""
+        {/* comment */}""""
         <section className="py-20 px-4 sm:px-6 lg:px-8">""""
           <div className="max-w-7xl mx-auto">
             <motion.div;
@@ -249,7 +247,6 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
                       {category.description}
                     </p>
                   </div>
-
                   <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-3 gap-8">                    {category.services.map((service, serviceIndex)   => (
                       <motion.div;
                         key={service.title}
@@ -291,7 +288,7 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
           </div>
         </section>
 """
-        {/* Featured AI Services */}""""
+        {/* comment */}""""
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">""""
           <div className="max-w-7xl mx-auto">
             <motion.div;
@@ -389,7 +386,7 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
           </div>
         </section>
 """
-        {/* CTA Section */}""""
+        {/* comment */}""""
         <section className="py-20 px-4 sm:px-6 lg:px-8">""""
           <div className="max-w-4xl mx-auto text-center">
             <motion.div;
@@ -446,15 +443,9 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
       </div>;
     </>
   )};
-
 export default ComprehensiveServicesLanding;
-
 export { ComprehensiveServicesLanding };
-
 export { ComprehensiveServicesLanding };
-
 export { ComprehensiveServicesLanding };
-
 export { ComprehensiveServicesLanding };
-
 export { ComprehensiveServicesLanding };

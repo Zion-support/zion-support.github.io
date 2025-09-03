@@ -1,3 +1,4 @@
+import React from "react"
 import { Button } from "@/components/ui/button";""""
 import { Link } from "react-router-dom";""""
 import { Globe import { useEffect, useState } from "react";""""
@@ -410,6 +411,7 @@ const SERVICE_LISTINGS = []
         rating: 4.8,
         reviewCount: 267},
     // Legacy services (keeping existing ones)
+}
     {}
 """
 """"
@@ -609,9 +611,9 @@ function generateRandomService(idNum) {}
     const author = getRandomItem (authors) ;
     const price = Math.round (Math.random () * (template.max - template.min) + template.min) ;
     return {}
-        id: `auto-service-${idNum}`,`
-        title: template.title,``
-        description: `Professional ${template.title.toLowerCase()} with industry-standard practices and tailored solutions for your business.`,
+        id: "auto-service-${idNum}","
+        title: template.title,""
+        description: "Professional ${template.title.toLowerCase()} with industry-standard practices and tailored solutions for your business.`,
         category: template.category,"""
         price,""""
         currency: "$","""
@@ -624,18 +626,18 @@ function generateRandomService(idNum) {}
         reviewCount: Math.floor(50 + Math.random() * 150)}}
 // Enhanced filter options for all service categories;
 const SERVICE_FILTERS = []
-    { label: 'AI & ML', value: 'ai-ml' },'
-    { label: 'Cybersecurity', value: 'cybersecurity' },'
-    { label: 'Cloud & Infrastructure', value: 'cloud-infrastructure' },'
-    { label: 'Business Intelligence', value: 'business-intelligence' },'
-    { label: 'Communication', value: 'communication' },'
-    { label: 'Specialized Tools', value: 'specialized-tools' },'
-    { label: 'Development', value: 'development' },'
-    { label: 'Management', value: 'management' },'
-    { label: 'Security', value: 'security' },'
-    { label: 'Analytics', value: 'analytics' },'
-    { label: 'Consulting', value: 'consulting' },'
-    { label: 'Strategy', value: 'strategy' }
+    { label: "AI & ML", value: "ai-ml" },"
+    { label: "Cybersecurity", value: "cybersecurity" },"
+    { label: "Cloud & Infrastructure", value: "cloud-infrastructure" },"
+    { label: "Business Intelligence", value: "business-intelligence" },"
+    { label: "Communication", value: "communication" },"
+    { label: "Specialized Tools", value: "specialized-tools" },"
+    { label: "Development", value: "development" },"
+    { label: "Management", value: "management" },"
+    { label: "Security", value: "security" },"
+    { label: "Analytics", value: "analytics" },"
+    { label: "Consulting", value: "consulting" },"
+    { label: "Strategy", value: "strategy' }
 ];
 export default function ServicesPage() {}
     const [listings, setListings] = useState(SERVICE_LISTINGS);
@@ -644,7 +646,7 @@ export default function ServicesPage() {}
             setListings(prev => [...prev, generateRandomService(prev.length + 1)])}, 120000);"""
         return () => clearInterval(interval)}, []);""""
     return (<div className="min-h-screen bg-background">""""
-      <SEO title="IT & AI Services - Zion Tech Group" description="Find expert technology service providers for your business needs, from AI development to infrastructure management." keywords="IT services, AI services, technology consulting, Zion Tech Group" url="https://ziontechgroup.com/services"/>"""
+      <SEO title="IT & AI Services - Zion Tech Group" description="Find expert technology service providers for your business needs, from AI development to infrastructure management." keywords="IT services, AI services, technology consulting, Zion Tech Group" url="https://ziontechgroup.com/services"  />"""
       """"
       <div className="bg-zion-blue-dark py-4 px-4 md:px-8 mb-6 border-b border-zion-blue-light">""""
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">""""
@@ -652,7 +654,7 @@ export default function ServicesPage() {}
           <div className="flex flex-wrap gap-2">""""
             <Link to="/comprehensive-services">""""
               <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">""""
-                <Globe className="h-4 w-4 mr-2"/>
+                <Globe className="h-4 w-4 mr-2"  />
                 View All Services;
               </Button>"""
             </Link>""""
@@ -709,11 +711,7 @@ export default function ServicesPage() {}
 
 
 export { SERVICE_LISTINGS, SERVICE_FILTERS, ServicesPage };
-
 export { SERVICE_LISTINGS, SERVICE_FILTERS, ServicesPage };
-
 export { SERVICE_LISTINGS, SERVICE_FILTERS, ServicesPage };
-
 export { SERVICE_LISTINGS, SERVICE_FILTERS, ServicesPage };
-
 export { SERVICE_LISTINGS, SERVICE_FILTERS, ServicesPage };

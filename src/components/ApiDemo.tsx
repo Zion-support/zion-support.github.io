@@ -1,20 +1,17 @@
-import React, { useState, useEffect } from 'react';
-import { api, ApiResponse } from '@/services / api';
-export default function Page() {
-}}}
+import React, { useState, useEffect } from "react";
+import { api, ApiResponse } from "@/services / api";
+export default function Page() {}}}
 interface User {
   id: number;
   name: string;
   email: string;
   createdAt?: string;
-
 const ApiDemo: React.FC = (): JSX.Element => {;
   const [users, setUsers] = useState<any>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<any>(null);
-const [newUser, setNewUser] = useState({ name: '', email: ''});
-  const [healthStatus, setHealthStatus] = useState<any>('Checking...');
-
+const [newUser, setNewUser] = useState({ name: "", email: ""});
+  const [healthStatus, setHealthStatus] = useState<any>("Checking...");
   // Check API health on component mount
   useEffect(() => {
   // TODO: Add dependencies if needed
@@ -25,60 +22,51 @@ const [newUser, setNewUser] = useState({ name: '', email: ''});
 }, []);, []);
     checkHealth () ;
     fetchUsers () }, []) ;
-
     try {;
-      
-      setHealthStatus(`✅ API Healthy - ${response.data?.environment} mode`) } catch(err) {
+      setHealthStatus("✅ API Healthy - ${response.data?.environment} mode") } catch(err) {
 
-      setHealthStatus('❌ API Unhealthy')};
-
+      setHealthStatus("❌ API Unhealthy")};
     setLoading(true) ;
     setError(null) ;
-
     try {
       
       if(response.success && response.data) {
 
         setUsers(response.data)} catch(err) {
 
-      setError(err instanceof Error ? err.message : 'Failed to fetch users')} finally {
+      setError(err instanceof Error ? err.message : "Failed to fetch users")} finally {
 
       setLoading(false)};
-
     e.preventDefault () ;
-
     if(!newUser.name.trim() || !newUser.email.trim()) {
 
-      setError('Name and email are required');
+      setError("Name and email are required");
       return;
-
     setLoading(true) ;
     setError(null) ;
-
     try {
       
       if(response.success && response.data) {
 
         setUsers(prev => [...prev, response.data!]);
-        setNewUser({ name: '', email: '' })} catch(err) {
+        setNewUser({ name: "", email: "" })} catch(err) {
 
-      setError(err instanceof Error ? err.message : 'Failed to create user')} finally {
+      setError(err instanceof Error ? err.message : "Failed to create user")} finally {
 
       setLoading(false)};
   return ()
+}
     <div className="max-w-4xl mx-auto p-6 space-y-6">"
       <div className="bg-white rounded-lg shadow-md p-6">"
         <h2 className="text-2xl font-bold text-gray-900 mb-4">
           🚀 Vite + Node.js Hybrid App Demo
         </h2>
-
-        {/* API Health Status */}"
+        {/* comment */}"
         <div className="mb-6 p-4 bg-gray-50 rounded-lg">"
           <h3 className="text-lg font-semibold text-gray-700 mb-2">API Status</h3>"
           <p className="text-sm text-gray-600">{healthStatus}</p>
         </div>
-
-        {/* Create User Form */}"
+        {/* comment */}"
         <div className="mb-6 p-4 bg-blue-50 rounded-lg">"
           <h3 className="text-lg font-semibold text-blue-700 mb-4">Create New User</h3>"
           <form onSubmit={handleCreateUser} className="space-y-4">"
@@ -109,19 +97,18 @@ const [newUser, setNewUser] = useState({ name: '', email: ''});
               disabled={loading}"
               className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
 
-              {loading ? 'Creating...' : 'Create User'}
+              {loading ? "Creating..." : "Create User"}
             </button>
           </form>
         </div>
-
-        {/* Error Display */}
+        {/* comment */}
         {error && ("
           <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">"
             <p className="text-red-700">{error}</p>
           </div>
         )}
 
-        {/* Users List */}"
+        {/* comment */}"
         <div className="p-4 bg-gray-50 rounded-lg">"
           <div className="flex justify-between items-center mb-4">"
             <h3 className="text-lg font-semibold text-gray-700">Users({users.length})</h3>
@@ -130,10 +117,9 @@ const [newUser, setNewUser] = useState({ name: '', email: ''});
               disabled={loading}"
               className="px-3 py-1 text-sm bg-gray-600 text-white rounded-md hover:bg-gray-700 disabled:opacity-50"
 
-              {loading ? 'Loading...' : 'Refresh'}
+              {loading ? "Loading..." : "Refresh"}
             </button>
           </div>
-
           {loading ? ("
             <div className="text-center py-8">"
               <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto"></div>"
@@ -160,8 +146,7 @@ const [newUser, setNewUser] = useState({ name: '', email: ''});
                 </div>) ) }
             </div>) }
         </div>
-
-        {/* Architecture Info */}"
+        {/* comment */}"
         <div className="mt-8 p-4 bg-green-50 rounded-lg">"
           <h3 className="text-lg font-semibold text-green-700 mb-2">🏗️ Architecture</h3>"
           <div className="text-sm text-green-700 space-y-1">
@@ -173,5 +158,4 @@ const [newUser, setNewUser] = useState({ name: '', email: ''});
         </div>;
       </div>;
     </div>;) };
-
 export default ApiDemo}}}}}}}'"`

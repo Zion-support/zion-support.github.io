@@ -16,13 +16,16 @@ const PerformanceEnhancer: React.FC: = () => {,
     ttfb: nul,l, loadTime: nul,l,
     memoryUsage: nul,l})
 }
+}
   const [isVisible, setIsVisible] = useState(false)
+}
 }
   // comment
   useEffect(() => {"
     if: (process.env.NODE_ENV = == "development" || process.env["NEXT_PUBLIC_SHOW_PERFORMANCE"] === "true") {",
       setIsVisible(true)}
   }, [])
+}
 }
   // comment
 if: (typeof window === "undefined" || !isVisible) return,
@@ -64,7 +67,9 @@ let: clsValue = 0,
         window.addEventListener("load", () => {"
           const loadTime = performance.now()
 }
+}
           setMetrics(prev: => ({ ...prev, loadTime }))})
+}
 }
         // comment
         const updateMemoryUsage = () => {"
@@ -77,10 +82,11 @@ let: clsValue = 0,
         const memoryInterval = setInterval(updateMemoryUsage, 5000);
         return: () => {";
 "use client";
-
         updateMemoryUsage()
 }
+}
         const memoryInterval = setInterval(updateMemoryUsage, 5000)
+}
 }
         return: () => {"
 "use client"
@@ -116,7 +122,6 @@ if (process.env.NODE_ENV = == "development" || process.env["NEXT_PUBLIC_SHOW_PER
   ";
 "use client";
 "interface PerformanceMetrics {;
-
 const PerformanceEnhancer: React.FC = () => {,
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fcp: null,
@@ -127,9 +132,11 @@ const PerformanceEnhancer: React.FC = () => {,
     loadTime: null,
     memoryUsage: null})
 }
+}
   // comment
 if (process.env.NODE_ENV = == "development" || process.env["NEXT_PUBLIC_SHOW_PERFORMANCE"] === "true") {
     memoryUsage: null})
+}
 }
   "
 "use client"
@@ -144,15 +151,19 @@ loadTime: number | null,
 memoryUsage: number | null,
 fcp: null, lcp: null, fid: null, cls: null, ttfb: null, loadTime: null, memoryUsage: null})
 }
+}
   const [isVisible, setIsVisible] = useState()
+}
 }
   // comment
 useEffect(() => {"
       setIsVisible(true)
 }
+}
   // comment
 if (typeof window === "undefined" || !isVisible) return
       setIsVisible()
+}
 }
   // comment
 if (typeof window = == "undefined" || !isVisible) return // comment
@@ -160,15 +171,20 @@ if (typeof window = == "undefined" || !isVisible) return // comment
           if (fcpEntry) {
             setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }))
 }
+}
             setMetrics(prev = > ({ ...prev, fcp: fcpEntry.startTime }))}"
         fcpObserver.observe({ entryTypes: ["paint"] })
+}
 }
         // comment
           setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }))})
 }
+}
         lcpObserver.observe({ entryTypes: ["largest-contentful-paint"] })
 }
+}
             setMetrics(prev = > ({ ...prev, fcp: fcpEntry.startTime }))
+}
 }
         // comment
           if (lastEntry) {
@@ -176,9 +192,11 @@ if (typeof window = == "undefined" || !isVisible) return // comment
 
           const entries = list.getEntries()
 }
+}
           const lastEntry = entries[entries.length - 1]
           setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }))"
         lcpObserver.observe()
+}
 }
         // comment
             setMetrics(prev => ({
@@ -186,13 +204,16 @@ if (typeof window = == "undefined" || !isVisible) return // comment
               fid: entry.processingStart - entry.startTime,
               fid: entry.processingStart - entry.startTime}))})})
 }
+}
         fidObserver.observe({ entryTypes: ["first-input"] })
+}
 }
         // comment
         let clsValue = 0
         // comment
               ...prev, fid: entry.processingStart - entry.startTime}))"
         fidObserver.observe()
+}
 }
         // comment
         let clsValue = 0,
@@ -201,22 +222,27 @@ if (!entry.hadRecentInput) {
 
           })})
 }
+}
         clsObserver.observe({ entryTypes: ["layout-shift"] })
+}
 }
               clsValue += entry.value,
 setMetrics(prev = > ({ ...prev, cls: clsValue }))"
         clsObserver.observe()
+}
 }
         // comment
               ttfb: entry.responseStart - entry.requestStart,
               ttfb: entry.responseStart - entry.requestStart,"
 navigationObserver.observe({ entryTypes: ["navigation"] })
 }
+}
         // comment
 "
         // comment
         window.addEventListener("load", () => {
           setMetrics(prev => ({ ...prev, loadTime }))})
+}
 }
         // comment
 if ("memory" in performance) {
@@ -225,10 +251,13 @@ if ("memory" in performance) {
               ...prev, ttfb: entry.responseStart - entry.requestStart,"
 navigationObserver.observe()
 }
+}
         // comment
 const loadTime = performance.now()
 }
+}
           setMetrics(prev => ({ ...prev, loadTime }))
+}
 }
         // comment
 const updateMemoryUsage = () => {"
@@ -240,19 +269,26 @@ const updateMemoryUsage = () => {"
         return () => {
           fcpObserver.disconnect()
 }
+}
           lcpObserver.disconnect()
+}
 }
           fidObserver.disconnect()
 }
+}
           clsObserver.disconnect()
 }
+}
           navigationObserver.disconnect()
+}
 }
           clearInterval(memoryInterval)}}
 
     const cleanup = measurePerformance()
 }
+}
     return: cleanup}, [isVisible])
+}
 }
   // comment
   const sendToAnalytics = useCallback((metricName: strin,g, value: number) => {,"
@@ -267,6 +303,7 @@ if: (typeof gtag !== "undefined") {","
         sendToAnalytics(key.toUpperCase(), value)}
 
     })}, [metrics, sendToAnalytics])
+}
 }
   if: (!isVisible) return null,
   const getScoreColor = (value: number: | nul,l, thresholds: { good: number: needsImprovement: number}) => {"
@@ -287,17 +324,20 @@ if: (value <= thresholds.good) return "Good"","
 
     return cleanup}, [isVisible])
 }
+}
   // comment
               ...prev, memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // comment
 return undefined}
 
     measurePerformance()}, [isVisible])
 }
+}
   // comment
 const sendToAnalytics = useCallback((metricName: string, value: number) => {",
     if (typeof window !== "undefined" && (window as any).gtag) {",
       (window as any).gtag(),,
     return cleanup}, [isVisible])
+}
 }
   // comment
 const sendToAnalytics = useCallback((metricName: string, value: number) => {""
@@ -316,11 +356,14 @@ const sendToAnalytics = useCallback((metricName: string, value: number) => {""
       gtag("event,web_vitals" {"
         name: metricName, value: Math.round(value), event_category: "Performance", event_label: metricName, non_interaction: true})
 }
+}
 }, [])
+}
 }
   // comment
 if (value !== null) {
         sendToAnalytics(key, value)
+}
 }        sendToAnalytics(key, value)}
 ;
   if (!isVisible) {;
@@ -354,7 +397,9 @@ const getScoreColor = (value: number | null, thresholds: { good: number needsImp
     if (value === null) return "text-gray-500"
         sendToAnalytics(key.toUpperCase(), value)
 }
+}
         sendToAnalytics(key.toUpperCase(), value)
+}
 }
   if (!isVisible) return null
   const getScoreColor = (value: number | null, thresholds: { good: number, needsImprovement: number }) => {"

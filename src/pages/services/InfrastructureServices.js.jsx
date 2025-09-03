@@ -1,7 +1,8 @@
-import React from 'react';'''
-import { Link } from 'react-router-dom';
+import React from "react";"""
+import { Link } from "react-router-dom";
 const InfrastructureServices = () => {}
   return()
+}
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">""""
       <section className="relative bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 text-white py-20">""""
         <div className="absolute inset-0 bg-black/20"></div>""""
@@ -21,7 +22,7 @@ const InfrastructureServices = () => {}
           <h2 className="text-3xl font-bold text-slate-900 mb-4">
             Coming Soon"""
           </h2>""""
-          <p className="text-xl text-slate-600 mb-8">'
+          <p className="text-xl text-slate-600 mb-8">"
             We're developing comprehensive infrastructure services. Check back;
             soon!
           </p>"""
@@ -37,14 +38,8 @@ const InfrastructureServices = () => {}
   );
 };
 export default InfrastructureServices;
-
-
 export { InfrastructureServices };
-
 export { InfrastructureServices };
-
 export { InfrastructureServices };
-
 export { InfrastructureServices };
-
 export { InfrastructureServices };

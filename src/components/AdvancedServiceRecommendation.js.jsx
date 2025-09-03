@@ -147,9 +147,12 @@ const AdvancedServiceRecommendation = () => {}"});,"})"
                     complexity = "Simple";,"});,"})"
                 const reasoning = [];,"});,"})
 }
+}
                     "High match with ${clientProfile.industry} industry requirements","";,"});,"})
 }
+}
                     "Budget alignment with ${clientProfile.budget} range","";,"});,"})
+}
 }
                     "Timeline compatibility with ${clientProfile.timeline} expectations","";,"});,"})"
                     "Technology maturity level appropriate for ${clientProfile.technologyMaturity}";,"});,"})"
@@ -194,6 +197,7 @@ const AdvancedServiceRecommendation = () => {}"});,"})"
         return clientProfile.industry && clientProfile.compSize && clientProfile.budget &&;,"});,"})"
             clientProfile.timeline && clientProfile.technologyMaturity &&""";,"});,"})"
             clientProfile.primaryGoals.length > 0 && clientProfile.challenges.length > 0};"""";,"});,"})
+}
 }
     return ("
     <div className="max-w-7xl mx-auto p-6">;,"});,"})"
@@ -518,6 +522,7 @@ const AdvancedServiceRecommendation = () => {}"
     const [recommendations, setRecommendations] = useState([])"
     const [isAnalyzing, setIsAnalyzing] = useState()
 }
+}
     const [showResults, setShowResults] = useState(false)"
     const industries = []"
     const compSizes = []
@@ -672,6 +677,7 @@ score += (goalMatches / profile.primaryGoals.length) * 20,return Math.min(100, s
 
         setIsAnalyzing()
 }
+}
         // commentsetTimeout(() => {}
 
             const recs = mockServices.map(service => {}
@@ -705,9 +711,12 @@ score += (goalMatches / profile.primaryGoals.length) * 20,return Math.min(100, s
 
                     service, matchScore, reasoning, priority, implementationComplexity: complexity, expectedROI, timeToValue}}) .sort((a, b) => b.matchScore - a.matchScore)
 }
+}
             setRecommendations()
 }
+}
             setIsAnalyzing()
+}
 }
             setShowResults(true) }, 2000) }
 
@@ -1007,14 +1016,8 @@ score += (goalMatches / profile.primaryGoals.length) * 20,return Math.min(100, s
         </motion.div>)}
     </div>)};
 export default AdvancedServiceRecommendation;
-
-
 export { AdvancedServiceRecommendation };
-
 export { AdvancedServiceRecommendation };
-
 export { AdvancedServiceRecommendation };
-
 export { AdvancedServiceRecommendation };
-
 export { AdvancedServiceRecommendation };

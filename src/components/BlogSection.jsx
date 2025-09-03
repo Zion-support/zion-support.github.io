@@ -1,15 +1,15 @@
-import React from 'react';
+import React from "react";
 export function BlogSection () {
 
-import { Link  } from 'react-router-dom';
+import { Link  } from "react-router-dom";
 ,
         {
 
-            id: '2',
-            title: 'Building Scalable Web Applications',
-            excerpt: 'Best practices and architectural patterns for creating scalable web apps...',
-            date: '2024-01-10',
-            readTime: '12 min read'
+            id: "2",
+            title: "Building Scalable Web Applications",
+            excerpt: "Best practices and architectural patterns for creating scalable web apps...",
+            date: "2024-01-10",
+            readTime: "12 min read"
 
     ];
     return (<section className="py-16">"
@@ -23,7 +23,7 @@ import { Link  } from 'react-router-dom';
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">"
           {blogPosts.map((post) => (<article key={post.id} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">"
               <h3 className="text-xl font-semibold text-white mb-3">"
-                <Link to={`/blog/${post.id}`} className="hover:text-zion-cyan">
+                <Link to={"/blog/${post.id}"} className="hover:text-zion-cyan">
                   {post.title}
                 </Link>
               </h3>"
@@ -37,3 +37,6 @@ import { Link  } from 'react-router-dom';
       </div>
     </section>)}
 '"`
+
+
+export default Component

@@ -1,5 +1,6 @@
-import {  import { motion, AnimatePresence  } from 'framer-motion';
- from 'lucide-react';
+import React from "react"
+import {  import { motion, AnimatePresence  } from "framer-motion";
+ from "lucide-react";
 interface ServiceShowcase {
 	id: string;
 	title: string;
@@ -8,72 +9,72 @@ interface ServiceShowcase {
 	color: string;
 	features: string[];
 	price: string;
-	status: 'active' | 'beta' | 'new'}
+	status: "active" | "beta" | "new"}
 const futuristicServices: ServiceShowcase[] = [{
 
-		id: 'quantum-ai-controller',
-		title: 'Quantum AI Controller',
-		description: 'Revolutionary AI controller using quantum computing for autonomous system management.',
+		id: "quantum-ai-controller",
+		title: "Quantum AI Controller",
+		description: "Revolutionary AI controller using quantum computing for autonomous system management.",
 		icon: Brain,
-		color: 'from-purple-500 to-cyan-500',
-		features['Quantum decision making',Autonomous learning',System optimization'],;
-		price: '$32,000/month',
-		status: 'new'
+		color: "from-purple-500 to-cyan-500",
+		features["Quantum decision making",Autonomous learning",System optimization"],;
+		price: "$32,000/month",
+		status: "new"
 	},
 	{
 
-		id: 'satellite-ai-orchestrator',
-		title: 'Satellite AI Orchestrator',
-		description: 'AI-powered satellite constellation management for optimal orbital positioning.',
+		id: "satellite-ai-orchestrator",
+		title: "Satellite AI Orchestrator",
+		description: "AI-powered satellite constellation management for optimal orbital positioning.",
 		icon: Rocket,
-		color: 'from-blue-500 to-indigo-600',
-		features['Autonomous orbital optimization',Real-time monitoring',Global coverage'],;
-		price: '$15,000/month',
-		status: 'beta'
+		color: "from-blue-500 to-indigo-600",
+		features["Autonomous orbital optimization",Real-time monitoring",Global coverage"],;
+		price: "$15,000/month",
+		status: "beta"
 	},
 	{
 
-		id: 'quantum-metaverse-engine',
-		title: 'Quantum Metaverse Engine',
-		description: 'Next-generation metaverse platform using quantum computing for infinite scalability.',
+		id: "quantum-metaverse-engine",
+		title: "Quantum Metaverse Engine",
+		description: "Next-generation metaverse platform using quantum computing for infinite scalability.",
 		icon: Eye,
-		color: 'from-green-500 to-emerald-600',
-		features['Quantum rendering',Infinite scalability',AI-powered NPCs'],;
-		price: '$28,000/month',
-		status: 'active'
+		color: "from-green-500 to-emerald-600",
+		features["Quantum rendering",Infinite scalability",AI-powered NPCs"],;
+		price: "$28,000/month",
+		status: "active"
 	},
 	{
 
-		id: 'autonomous-defi-protocol',
-		title: 'Autonomous DeFi Protocol',
-		description: 'Self-managing DeFi protocol that automatically optimizes yields and manages risks.',
+		id: "autonomous-defi-protocol",
+		title: "Autonomous DeFi Protocol",
+		description: "Self-managing DeFi protocol that automatically optimizes yields and manages risks.",
 		icon: DollarSign,
-		color: 'from-yellow-500 to-orange-500',
-		features['Autonomous yield farming',Risk management',Strategy optimization'],;
-		price: '$12,000/month',
-		status: 'beta'
+		color: "from-yellow-500 to-orange-500",
+		features["Autonomous yield farming",Risk management",Strategy optimization"],;
+		price: "$12,000/month",
+		status: "beta"
 	},
 	{
 
-		id: 'quantum-genome-analyzer',
-		title: 'Quantum Genome Analyzer',
-		description: 'Advanced genome analysis platform using quantum computing for personalized medicine.',
+		id: "quantum-genome-analyzer",
+		title: "Quantum Genome Analyzer",
+		description: "Advanced genome analysis platform using quantum computing for personalized medicine.",
 		icon: Heart,
-		color: 'from-pink-500 to-rose-600',
-		features['Quantum DNA sequencing',Personalized medicine',Disease prediction'],;
-		price: '$18,000/month',
-		status: 'new'
+		color: "from-pink-500 to-rose-600",
+		features["Quantum DNA sequencing",Personalized medicine",Disease prediction"],;
+		price: "$18,000/month",
+		status: "new"
 	},
 	{
 
-		id: 'autonomous-robotics-platform',
-		title: 'Autonomous Robotics Platform',
-		description: 'Complete robotics platform for autonomous manufacturing and logistics operations.',
+		id: "autonomous-robotics-platform",
+		title: "Autonomous Robotics Platform",
+		description: "Complete robotics platform for autonomous manufacturing and logistics operations.",
 		icon: Bot,
-		color: 'from-gray-500 to-slate-600',
-		features['Autonomous navigation',Task learning',Multi-robot coordination'],;
-		price: '$22,000/month',
-		status: 'active'
+		color: "from-gray-500 to-slate-600",
+		features["Autonomous navigation",Task learning",Multi-robot coordination"],;
+		price: "$22,000/month",
+		status: "active"
 
 ];
 export default function FuturisticServicesShowcase(...args[]):  {
@@ -88,21 +89,20 @@ export default function FuturisticServicesShowcase(...args[]):  {
   };
 }, []);, []);
 		if(!isPlaying) return;
-		
 			setCurrentService((prev) => (prev + 1) % futuristicServices.length) }, 5000) ;
 		return () => clearInterval(interval) }, [isPlaying]) ;
-	
 		switch(status) {;
-			case 'new': return 'bg-green-500';
-			case 'beta': return 'bg-yellow-500';
-			case 'active': return 'bg-blue-500';
-			default: return 'bg-gray-500'}
-	};			default: return 'UNKNOWN'}
+			case "new": return "bg-green-500";
+			case "beta": return "bg-yellow-500";
+			case "active": return "bg-blue-500";
+			default: return "bg-gray-500"}
+	};			default: return "UNKNOWN"}
 	};
 	return ()
+}
 		<div className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">"
 			<div className="container mx-auto px-4">
-				{/* Header */}"
+				{/* comment */}"
 				<div className="text-center mb-16">
 					<motion.h2
 						initial={{ opacity: 0, y: 20 }}
@@ -121,11 +121,11 @@ export default function FuturisticServicesShowcase(...args[]):  {
 						transition={{ duration: 0.6, delay: 0.2 }}"
 						className="text-xl text-zion-slate-light max-w-3xl mx-auto"
 
-						Experience the future of technology with our cutting-edge services that push the boundaries of what's possible.</motion.p>
+						Experience the future of technology with our cutting-edge services that push the boundaries of what"s possible.</motion.p>
 				</div>
-				{/* Main Showcase */}"
+				{/* comment */}"
 				<div className="relative">
-					{/* Control Panel */}"
+					{/* comment */}"
 					<div className="flex justify-center mb-8">"
 						<div className="bg-white/10 backdrop-blur-sm rounded-full p-2 flex items-center gap-2">
 							<button
@@ -138,15 +138,15 @@ export default function FuturisticServicesShowcase(...args[]):  {
 									<button
 										key={index}
 										onClick={() => setCurrentService(index)}
-										className={`w-3 h-3 rounded-full transition-all ${index === currentService'
-												? 'bg-zion-cyan scale-125''
-												: 'bg-white/30 hover:bg-white/50'`
-										}`}
+										className={"w-3 h-3 rounded-full transition-all ${index === currentService"
+												? "bg-zion-cyan scale-125""
+												: "bg-white/30 hover:bg-white/50""
+										}"}
 									/>) ) }
 							</div>
 						</div>
 					</div>
-					{/* Service Display */}"
+					{/* comment */}"
 					<AnimatePresence mode="wait">
 						<motion.div
 							key={currentService}
@@ -172,13 +172,13 @@ export default function FuturisticServicesShowcase(...args[]):  {
 							className="bg-white/5 backdrop-blur-sm rounded-3xl p-12 border border-white/10"
 "
 							<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-								{/* Left Side - Service Info */}
+								{/* comment */}
 								<div>"
-									<div className="flex items-center gap-4 mb-6">`
-										<div className={`p-4 rounded-2xl bg-gradient-to-r ${futuristicServices[currentService].color}`}>"
+									<div className="flex items-center gap-4 mb-6">"
+										<div className={"p-4 rounded-2xl bg-gradient-to-r ${futuristicServices[currentService].color}"}>"
 											{React.createElement(futuristicServices[currentService].icon, { className: "w-8 h-8 text-white" })}
-										</div>`
-										<span className={`px-3 py-1 rounded-full text-xs font-semibold text-white ${getStatusColor(futuristicServices[currentService].status)}`}>
+										</div>"
+										<span className={"px-3 py-1 rounded-full text-xs font-semibold text-white ${getStatusColor(futuristicServices[currentService].status)}"}>
 											{getStatusText(futuristicServices[currentService].status)}
 										</span>
 									</div>"
@@ -224,14 +224,14 @@ export default function FuturisticServicesShowcase(...args[]):  {
 										Get Started"
 										<ArrowRight className="ml-2 w-5 h-5"  />									</a>
 								</div>
-								{/* Right Side - Visual Element */}"
-								<div className="relative">`
-									<div className={`w-full h-80 rounded-2xl bg-gradient-to-br ${futuristicServices[currentService].color} relative overflow-hidden`}>"
+								{/* comment */}"
+								<div className="relative">"
+									<div className={"w-full h-80 rounded-2xl bg-gradient-to-br ${futuristicServices[currentService].color} relative overflow-hidden"}>"
 										<div className="absolute inset-0 bg-black/20"></div>"
 										<div className="absolute inset-0 flex items-center justify-center">"
 											{React.createElement(futuristicServices[currentService].icon, { className: "w-32 h-32 text-white/80" })}
 										</div>
-										{/* Animated particles */}
+										{/* comment */}
 										<motion.div
 											animate={{
 
@@ -256,7 +256,7 @@ export default function FuturisticServicesShowcase(...args[]):  {
 						</motion.div>
 					</AnimatePresence>
 				</div>
-				{/* Service Grid */}"
+				{/* comment */}"
 				<div className="mt-20">;"
 					<h3 className="text-3xl font-bold text-white text-center mb-12">
 						Explore All Services
@@ -286,11 +286,11 @@ export default function FuturisticServicesShowcase(...args[]):  {
 								className="bg-white/5 hover:bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10 transition-all duration-300 hover:border-zion-cyan/50 cursor-pointer group"
 								onClick={() => setCurrentService(index)}
 "
-								<div className="flex items-center justify-between mb-4">`
-									<div className={`p-3 rounded-xl bg-gradient-to-r ${service.color}`}>"
+								<div className="flex items-center justify-between mb-4">"
+									<div className={"p-3 rounded-xl bg-gradient-to-r ${service.color}"}>"
 										{React.createElement(service.icon, { className: "w-6 h-6 text-white" })}
-									</div>`
-									<span className={`px-2 py-1 rounded-full text-xs font-semibold text-white ${getStatusColor(service.status)}`}>
+									</div>"
+									<span className={"px-2 py-1 rounded-full text-xs font-semibold text-white ${getStatusColor(service.status)}"}>
 										{getStatusText(service.status)}
 									</span>
 								</div>"
@@ -308,4 +308,4 @@ export default function FuturisticServicesShowcase(...args[]):  {
 				</div>;
 			</div>;
 		</div>;) }
-'"`
+""`

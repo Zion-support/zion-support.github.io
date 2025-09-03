@@ -1,44 +1,46 @@
-import React, { useState } from 'react';'''
-import { motion } from 'framer-motion';'''
-import { Star, CheckCircle, Clock, Users, TrendingUp, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
+import React, { useState } from "react";"""
+import { motion } from "framer-motion";"""
+import { Star, CheckCircle, Clock, Users, TrendingUp, Phone, Mail, MapPin, ExternalLink } from "lucide-react";
 ;
 ;
 import SEOHead from "../components/SEOHead.jsx";
 const AdvancedServicesShowcase2025 = () => {
-    const [selectedCategory, setSelectedCategory] = useState('all');
-    const [searchTerm, setSearchTerm] = useState('');    const [sortBy, setSortBy] = useState('name');
+    const [selectedCategory, setSelectedCategory] = useState("all");
+    const [searchTerm, setSearchTerm] = useState("");    const [sortBy, setSortBy] = useState("name");
     // Combine all services;
-    const allServices = [...advancedRealServices2025, ...specializedITServices2025];'
-    const categories = [''
-        'all',AI & Machine Learning',Cybersecurity',Healthcare Technology',Blockchain & Supply Chain',Financial Technology',Edge Computing & IoT',Marketing Technology',Quantum Computing',Human Resources Technology',Energy & Sustainability',Legal Technology',Neuromorphic Computing',Privacy AI',AI Governance',DevOps & Automation',Data Quality & Analytics',API Management',Network Security'
+    const allServices = [...advancedRealServices2025, ...specializedITServices2025];"
+    const categories = [""
+        "all",AI & Machine Learning",Cybersecurity",Healthcare Technology",Blockchain & Supply Chain",Financial Technology",Edge Computing & IoT",Marketing Technology",Quantum Computing",Human Resources Technology",Energy & Sustainability",Legal Technology",Neuromorphic Computing",Privacy AI",AI Governance",DevOps & Automation",Data Quality & Analytics",API Management",Network Security"
     ];
-    const filteredServices = allServices;'
-        .filter(service => selectedCategory === 'all' || service.category === selectedCategory)
+    const filteredServices = allServices;"
+        .filter(service => selectedCategory === "all" || service.category === selectedCategory)
+}
         .filter(service => service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.tagline.toLowerCase().includes(searchTerm.toLowerCase()))
+}
         .sort((a, b) => {}
         switch (sortBy) {}
-'
-            case 'price':''
-                return parseFloat(a.price.replace('$',).replace(',,)) - parseFloat(b.price.replace('$',).replace(',,));'
-            case 'rating': any;
-                return b.rating - a.rating;'
-            case 'category': any;
-                return a.category.localeCompare(b.category);'
-            case 'name': any;
+"
+            case "price":""
+                return parseFloat(a.price.replace("$",).replace(",,)) - parseFloat(b.price.replace("$",).replace(",,));"
+            case "rating": any;
+                return b.rating - a.rating;"
+            case "category": any;
+                return a.category.localeCompare(b.category);"
+            case "name": any;
             default: any;
                 return a.name.localeCompare (b.name) }
     }) ;
     const getCategoryIcon = (category) => {}
         const icons = {}
-'
-''
-'''
-  'AI & Machine Learning': '🤖',Cybersecurity': '🔐',Healthcare Technology': '🏥',Blockchain & Supply Chain': '⛓️',Financial Technology': '💰',Edge Computing & IoT': '🌐',Marketing Technology': '📢',Quantum Computing': '🔮',Human Resources Technology': '👥',Energy & Sustainability': '🌱',Legal Technology': '⚖️',Neuromorphic Computing': '🧠',Privacy AI': '🔒',AI Governance': '⚖️',DevOps & Automation': '⚡',Data Quality & Analytics': '📊',API Management': '🔌',Network Security': '🛡️''
-''
-};'''
-        return icons[category] || '🚀'};
+"
+""
+"""
+  "AI & Machine Learning": "🤖",Cybersecurity": "🔐",Healthcare Technology": "🏥",Blockchain & Supply Chain": "⛓️",Financial Technology": "💰",Edge Computing & IoT": "🌐",Marketing Technology": "📢",Quantum Computing": "🔮",Human Resources Technology": "👥",Energy & Sustainability": "🌱",Legal Technology": "⚖️",Neuromorphic Computing": "🧠",Privacy AI": "🔒",AI Governance": "⚖️",DevOps & Automation": "⚡",Data Quality & Analytics": "📊",API Management": "🔌",Network Security": "🛡️""
+""
+};"""
+        return icons[category] || "🚀"};
     const containerVariants = {}
         hidden: { opacity: 0 },
         visible: {}
@@ -69,10 +71,9 @@ const AdvancedServicesShowcase2025 = () => {
             description: "Discover our comprehensive collection of 20+ advanced real micro SAAS, IT, and AI services. Market-ready solutions with proven ROI and competitive pricing.",""""
             keywords: "advanced services, micro SAAS, AI services, IT solutions, real services, enterprise solutions,""""
   Zion Tech Group";
-
-}}/>;
+}}  />;
 """
-      {/* Hero Section */}""""
+      {/* comment */}""""
       <section className="py-20 px-4 sm:px-6 lg:px-8">""""
         <div className="max-w-7xl mx-auto text-center">""""
           <motion.h1 className="text-4xl md:text-6xl font-bold mb-6" initial = {}
@@ -101,7 +102,7 @@ const AdvancedServicesShowcase2025 = () => {
             Each solution is market - ready with proven ROI, competitive pricing, and enterprise - grade support.
           </motion.p>
           """
-          {/* Contact Information */}""""
+          {/* comment */}""""
           <motion.div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-xl p-6 mb-8 border border-blue-500/30" initial = {}
   { opacity: 0,
   scale: 0.95;
@@ -115,21 +116,21 @@ const AdvancedServicesShowcase2025 = () => {
 }}>""""
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">""""
               <div className="flex items-center justify-center space-x-2">""""
-                <Phone className="w-5 h-5 text-blue-400"/>
+                <Phone className="w-5 h-5 text-blue-400"  />
                 <span>+1 302 464 0950</span>"""
               </div>""""
               <div className="flex items-center justify-center space-x-2">""""
-                <Mail className="w-5 h-5 text-blue-400"/>
+                <Mail className="w-5 h-5 text-blue-400"  />
                 <span>kleber@ziontechgroup.com</span>"""
               </div>""""
               <div className="flex items-center justify-center space-x-2">""""
-                <MapPin className="w-5 h-5 text-blue-400"/>
+                <MapPin className="w-5 h-5 text-blue-400"  />
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
             </div>
           </motion.div>
 """
-          {/* Navigation Links */}""""
+          {/* comment */}""""
           <motion.div className="flex flex-wrap justify-center gap-4 mb-8" initial = {}
   { opacity: 0,
   y: 20;
@@ -142,18 +143,18 @@ const AdvancedServicesShowcase2025 = () => {
 """
 }}>""""
             <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105 flex items-center space-x-2">""""
-              <ExternalLink className="w-5 h-5"/>
+              <ExternalLink className="w-5 h-5"  />
               <span>Visit Zion Tech Group</span>"""
             </a>""""
             <a href="mailto:kleber@ziontechgroup.com" className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105 flex items-center space-x-2">""""
-              <Mail className="w-5 h-5"/>
+              <Mail className="w-5 h-5"  />
               <span>Request Demo</span>
             </a>
           </motion.div>
         </div>
       </section>
 """
-      {/* Filters and Search */}""""
+      {/* comment */}""""
       <section className="px-4 sm:px-6 lg:px-8 mb-12">""""
         <div className="max-w-7xl mx-auto">""""
           <motion.div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20" initial = {}
@@ -168,23 +169,21 @@ const AdvancedServicesShowcase2025 = () => {
 """
 }}>""""
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              {/* Search */}"""
+              {/* comment */}"""
               <div>""""
                 <label className="block text-sm font-medium text-gray-300 mb-2">Search Services</label>""""
-                <input type="text" placeholder="Search by name, description, or features..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"/>
+                <input type="text" placeholder="Search by name, description, or features..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500" />
               </div>
-
-              {/* Category Filter */}"""
+              {/* comment */}"""
               <div>""""
                 <label className="block text-sm font-medium text-gray-300 mb-2">Category</label>""""
                 <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500">""""
-                  {categories.map(category => (<option key={category} value={category} className="bg-slate-800 text-white">'
-                      {category === 'all' ? 'All Categories' : category}
+                  {categories.map(category => (<option key={category} value={category} className="bg-slate-800 text-white">"
+                      {category === "all" ? "All Categories" : category}
                     </option>) ) }
                 </select>
               </div>
-
-              {/* Sort By */}"""
+              {/* comment */}"""
               <div>""""
                 <label className="block text-sm font-medium text-gray-300 mb-2">Sort By</label>""""
                 <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500">""""
@@ -199,12 +198,12 @@ const AdvancedServicesShowcase2025 = () => {
         </div>
       </section>
 """
-      {/* Services Grid */}""""
+      {/* comment */}""""
       <section className="px-4 sm:px-6 lg:px-8 pb-20">""""
         <div className="max-w-7xl mx-auto">""""
           <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" variants={containerVariants} initial="hidden" animate="visible">""""
             {filteredServices.map((service) => (<motion.div key={service.id} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-blue-500/50 transition-all duration-300 hover:scale-105" variants={itemVariants}>"""
-                {/* Service Header */}""""
+                {/* comment */}""""
                 <div className="flex items-start justify-between mb-4">""""
                   <div className="flex items-center space-x-3">""""
                     <span className="text-3xl">{service.icon}</span>"""
@@ -214,60 +213,60 @@ const AdvancedServicesShowcase2025 = () => {
                     </div>"""
                   </div>""""
                   {service.popular && (<div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full flex items-center space-x-1">""""
-                      <Star className="w-3 h-3"/>
+                      <Star className="w-3 h-3"  />
                       <span>Popular</span>
                     </div>)}
                 </div>
 """
-                {/* Tagline */}""""
+                {/* comment */}""""
                 <p className="text-gray-300 mb-4">{service.tagline}</p>
 """
-                {/* Price */}""""
+                {/* comment */}""""
                 <div className="mb-4">""""
                   <span className="text-2xl font-bold text-blue-400">{service.price}</span>""""
                   <span className="text-gray-400">{service.period}</span>""""
                   <span className="text-sm text-gray-500 ml-2">({service.marketPrice} market rate)</span>
                 </div>
 """
-                {/* Features */}""""
+                {/* comment */}""""
                 <div className="mb-4">""""
                   <h4 className="text-sm font-medium text-gray-300 mb-2">Key Features:</h4>""""
                   <ul className="space-y-1">""""
                     {service.features.slice(0, 4).map((feature, index) => (<li key={index} className="flex items-center space-x-2 text-sm text-gray-400">""""
-                        <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0"/>
+                        <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0"  />
                         <span>{feature}</span>"""
                       </li>))}""""
                     {service.features.length > 4 && (<li className="text-sm text-blue-400">+{service.features.length - 4} more features</li>)}
                   </ul>
                 </div>
 """
-                {/* Stats */}""""
+                {/* comment */}""""
                 <div className="grid grid-cols-2 gap-4 mb-4 text-sm">""""
                   <div className="flex items-center space-x-2">""""
-                    <Users className="w-4 h-4 text-blue-400"/>""""
+                    <Users className="w-4 h-4 text-blue-400"  />""""
                     <span className="text-gray-400">{service.customers} customers</span>"""
                   </div>""""
                   <div className="flex items-center space-x-2">""""
-                    <Star className="w-4 h-4 text-yellow-400"/>""""
+                    <Star className="w-4 h-4 text-yellow-400"  />""""
                     <span className="text-gray-400">{service.rating}/5 ({service.reviews} reviews)</span>"""
                   </div>""""
                   <div className="flex items-center space-x-2">""""
-                    <Clock className="w-4 h-4 text-green-400"/>""""
+                    <Clock className="w-4 h-4 text-green-400"  />""""
                     <span className="text-gray-400">{service.setupTime} setup</span>"""
                   </div>""""
                   <div className="flex items-center space-x-2">""""
-                    <TrendingUp className="w-4 h-4 text-purple-400"/>""""
+                    <TrendingUp className="w-4 h-4 text-purple-400"  />""""
                     <span className="text-gray-400">{service.growthRate}</span>
                   </div>
                 </div>
 """
-                {/* ROI and Market Info */}""""
+                {/* comment */}""""
                 <div className="mb-4 p-3 bg-white/5 rounded-lg">""""
                   <p className="text-sm text-green-400 font-medium mb-1">ROI: {service.roi}</p>""""
                   <p className="text-xs text-gray-400">Market Size: {service.marketSize}</p>
                 </div>
 """
-                {/* Technology Stack */}""""
+                {/* comment */}""""
                 <div className="mb-4">""""
                   <h4 className="text-sm font-medium text-gray-300 mb-2">Technology:</h4>""""
                   <div className="flex flex-wrap gap-1">""""
@@ -280,19 +279,19 @@ const AdvancedServicesShowcase2025 = () => {
                   </div>
                 </div>
 """
-                {/* Action Buttons */}""""
+                {/* comment */}""""
                 <div className="flex space-x-2">""""
                   <a href={service.link} target="_blank" rel="noopener noreferrer" className="flex-1 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white text-sm font-medium py-2 px-4 rounded-lg transition-all duration-300 hover:scale-105 text-center">
-                    Learn More'"""
-                  </a>'"'"""
-                  <a href={`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.name}&body=Hi, I'm interested in learning more about ${service.name}. Please provide additional information about pricing, features, and implementation.`} className="flex-1 bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white text-sm font-medium py-2 px-4 rounded-lg transition-all duration-300 hover:scale-105 text-center">
+                    Learn More""""
+                  </a>""""""
+                  <a href={"mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.name}&body=Hi, I"m interested in learning more about ${service.name}. Please provide additional information about pricing, features, and implementation."} className="flex-1 bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white text-sm font-medium py-2 px-4 rounded-lg transition-all duration-300 hover:scale-105 text-center">
                     Contact Sales;
                   </a>
                 </div>
               </motion.div>) ) }
           </motion.div>
 """
-          {/* No Results */}""""
+          {/* comment */}""""
           {filteredServices.length === 0 && (<motion.div className="text-center py-20" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>""""
               <div className="text-6xl mb-4">🔍</div>""""
               <h3 className="text-2xl font-semibold text-gray-300 mb-2">No services found</h3>""""
@@ -301,7 +300,7 @@ const AdvancedServicesShowcase2025 = () => {
         </div>
       </section>
 """
-      {/* Call to Action */}""""
+      {/* comment */}""""
       <section className="px-4 sm:px-6 lg:px-8 pb-20">""""
         <div className="max-w-4xl mx-auto text-center">""""
           <motion.div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-xl p-8 border border-blue-500/30" initial = {}
@@ -324,11 +323,11 @@ const AdvancedServicesShowcase2025 = () => {
             </p>""""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">""""
               <a href="mailto:kleber@ziontechgroup.com" className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 hover:scale-105 flex items-center justify-center space-x-2">""""
-                <Mail className="w-5 h-5"/>
+                <Mail className="w-5 h-5"  />
                 <span>Get Started Today</span>"""
               </a>""""
               <a href="tel:+13024640950" className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 hover:scale-105 flex items-center justify-center space-x-2">""""
-                <Phone className="w-5 h-5"/>
+                <Phone className="w-5 h-5"  />
                 <span>Call +1 302 464 0950</span>
               </a>
             </div>
@@ -337,14 +336,8 @@ const AdvancedServicesShowcase2025 = () => {
       </section>
     </div>)};
 export default AdvancedServicesShowcase2025;
-
-
 export { AdvancedServicesShowcase2025 };
-
 export { AdvancedServicesShowcase2025 };
-
 export { AdvancedServicesShowcase2025 };
-
 export { AdvancedServicesShowcase2025 };
-
 export { AdvancedServicesShowcase2025 };

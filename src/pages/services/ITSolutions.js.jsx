@@ -1,38 +1,38 @@
-import React from 'react';'''
-import { SEO } from '@/components/SEO';'''
-import { Shield, Database, Monitor } from 'lucide-react';
+import React from "react";"""
+import { SEO } from "@/components/SEO";"""
+import { Shield, Database, Monitor } from "lucide-react";
 const ITSolutions = () => {}
   const features = []
     {}
-      icon: Settings,'
-      title: 'System Integration','
-      description: 'Seamless integration of existing and new IT systems'},
+      icon: Settings,"
+      title: "System Integration","
+      description: "Seamless integration of existing and new IT systems"},
     {}
-      icon: Monitor,'
-      title: 'IT Support','
-      description: '24/7 IT support and maintenance services'},
+      icon: Monitor,"
+      title: "IT Support","
+      description: "24/7 IT support and maintenance services"},
     {}
-      icon: Database,'
-      title: 'Data Management','
-      description: 'Comprehensive data management and backup solutions'},
+      icon: Database,"
+      title: "Data Management","
+      description: "Comprehensive data management and backup solutions"},
     {}
-      icon: Shield,'
-      title: 'IT Security','
-      description: 'Multi-layered security for your IT infrastructure'}
-  ];'
-  const benefits = [''
-    'Improved system reliability and performance',Reduced IT operational costs',Enhanced data security and compliance',Streamlined business processes',Expert technical support and maintenance'
+      icon: Shield,"
+      title: "IT Security","
+      description: "Multi-layered security for your IT infrastructure"}
+  ];"
+  const benefits = [""
+    "Improved system reliability and performance",Reduced IT operational costs",Enhanced data security and compliance",Streamlined business processes",Expert technical support and maintenance"
   ];
   return()
+}
     <div className="min-h-screen bg-background">"""
       <SEO""""
         title="IT Solutions - Zion Tech Group""""
         description="Comprehensive IT solutions to optimize your business operations and technology infrastructure.""""
         keywords="IT solutions, system integration, IT support, data management, IT security""""
-        canonical="https://ziontechgroup.com/services/it-solutions"""
-      />
+        canonical="https://ziontechgroup.com/services/it-solutions""" />
 """
-      {/* Hero Section */}""""
+      {/* comment */}""""
       <section className="relative bg-gradient-to-br from-teal-900 via-teal-800 to-cyan-900 text-white py-20">""""
         <div className="absolute inset-0 bg-black/20"></div>""""
         <div className="relative container mx-auto px-4 text-center">"""
@@ -43,8 +43,8 @@ const ITSolutions = () => {}
             transition={{ duration: 0.8 }}
           >"""
             IT Solutions for""""
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400">'
-              {' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400">"
+              {" "}
               Modern Business;
             </span>
           </motion.h1>"""
@@ -70,7 +70,7 @@ const ITSolutions = () => {}
         </div>
       </section>
 """
-      {/* Features Section */}""""
+      {/* comment */}""""
       <section className="py-20 bg-white">""""
         <div className="container mx-auto px-4">""""
           <div className="text-center mb-16">""""
@@ -105,7 +105,7 @@ const ITSolutions = () => {}
         </div>
       </section>
 """
-      {/* Benefits Section */}""""
+      {/* comment */}""""
       <section className="py-20 bg-gray-50">""""
         <div className="container mx-auto px-4">""""
           <div className="max-w-4xl mx-auto">""""
@@ -129,7 +129,7 @@ const ITSolutions = () => {}
                   viewport={{ once: true }}"""
                 >""""
                   <div className="w-8 h-8 bg-teal-100 rounded-full flex items-center justify-center mr-4">""""
-                    <TrendingUp className="w-4 h-4 text-teal-600" />"""
+                    <TrendingUp className="w-4 h-4 text-teal-600"  />"""
                   </div>""""
                   <span className="text-lg text-gray-700">{benefit}</span>
                 </motion.div>
@@ -139,14 +139,14 @@ const ITSolutions = () => {}
         </div>
       </section>
 """
-      {/* CTA Section */}""""
+      {/* comment */}""""
       <section className="py-20 bg-gradient-to-r from-teal-600 to-cyan-600 text-white">""""
         <div className="container mx-auto px-4 text-center">""""
           <h2 className="text-4xl font-bold mb-6">
             Ready to Optimize Your IT?"""
           </h2>""""
-          <p className="text-xl mb-8 max-w-3xl mx-auto">'
-            Let's discuss how our IT solutions can improve your business;
+          <p className="text-xl mb-8 max-w-3xl mx-auto">"
+            Let"s discuss how our IT solutions can improve your business;
             operations and performance."""
           </p>""""
           <button className="bg-white text-teal-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
@@ -158,14 +158,8 @@ const ITSolutions = () => {}
   );
 };
 export default ITSolutions;
-
-
 export { ITSolutions };
-
 export { ITSolutions };
-
 export { ITSolutions };
-
 export { ITSolutions };
-
 export { ITSolutions };

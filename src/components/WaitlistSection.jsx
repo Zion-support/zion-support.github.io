@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
-import { Button } from '@/components/ui/button';
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
 export default function Page() {
 ;
   return ()
+}
     <section className="py-16 bg-gradient-to-r from-zion-purple to-zion-cyan">"
       <div className="container mx-auto px-4 text-center">"
         <h2 className="text-3xl font-bold text-white mb-4">

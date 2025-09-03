@@ -1,7 +1,6 @@
 import Head from "next/head"
 import React from "react"
 interface SEOHeadProps {;
-
   title?: string;
   description?: string;
   keywords?: string;
@@ -32,6 +31,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({",
   nofollow = false,
 }) => {
   const robots = [].join(", ")
+}
 }
   const structuredData = {} : undefined,
     publisher: {",
@@ -102,5 +102,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({",
       <meta name="apple-mobile-web-app-title" content="Zion Tech Group"  />
     </Head>
   )
+}
 }
 ""export default SEOHead

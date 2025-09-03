@@ -35,7 +35,7 @@ export default function TenantOnboarding() {}
     if (!isAdmin) {}
 """
 """"
-        return <Navigate to="/unauthorized"/>}
+        return <Navigate to="/unauthorized"  />}
     const handleInputChange = (e) => {}
         const { name, value } = e.target;
         setFormData(prev => ({ ...prev, [name]: value }))};
@@ -44,17 +44,13 @@ export default function TenantOnboarding() {}
         setIsSubmitting(true);
         try {
             // Generate subdomain if not provided
-            const subdomain = formData.subdomain || formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, '');
+            const subdomain = formData.subdomain || formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, "");
             // Create landing page copy
             const landingPageCopy = {
 
 
 export { TenantOnboarding };
-
 export { TenantOnboarding };
-
 export { TenantOnboarding };
-
 export { TenantOnboarding };
-
 export { TenantOnboarding };

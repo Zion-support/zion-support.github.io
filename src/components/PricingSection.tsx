@@ -111,20 +111,19 @@ key = "{plan.name}""
                     </div>
                   </div>                )}
 ;
-                {/*   */}";
-                <div className="{`relative" h-full bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover: border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 ${">;
-                  plan.popular ? "border-zion-cyan/50 bg-zion-blue-light/20" : ""}`}>;
-                  {/*   */}";
-                  <div className="{`w-16" h-16 bg-gradient-to-br ${plan.color} rounded-2xl mb-6 flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300`}>";
-                    <IconComponent className="`w-8" h-8`} />;
+                {/* comment */}";
+                <div className="{"relative" h-full bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover: border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 ${">;
+                  plan.popular ? "border-zion-cyan/50 bg-zion-blue-light/20" : ""}"}>;
+                  {/* comment */}";
+                  <div className="{"w-16" h-16 bg-gradient-to-br ${plan.color} rounded-2xl mb-6 flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300"}>";
+                    <IconComponent className=""w-8" h-8"}   />;
                   </div>;
-
                 {/* comment */}"
                 <div className="{"relative" h-full bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover: border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 ${">
                   plan.popular ? "border-zion-cyan/50 bg-zion-blue-light/20" : ""}"}>
                   {/* comment */}"
                   <div className="{"w-16" h-16 bg-gradient-to-br ${plan.color} rounded-2xl mb-6 flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300"}>"
-                    <IconComponent className=""w-8" h-8"}       />
+                    <IconComponent className=""w-8" h-8"}         />
                   </div>
                   {/* comment */}"
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>"
@@ -172,7 +171,7 @@ whileHover="{{" scale: 1.02 }}"
 
                     >
                       {plan.cta}"
-                      <ArrowRight className=""w-4" h-4"}       />
+                      <ArrowRight className=""w-4" h-4"}         />
                     </motion.button>
                   </Link>
                 </div>

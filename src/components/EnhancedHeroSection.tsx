@@ -1,10 +1,9 @@
-import { Link  } from 'react-router-dom';
-
+import React from "react"
+import { Link  } from "react-router-dom";
 export default function Page() {
 const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): any {
 
   const [currentSlide, setCurrentSlide] = useState(0);  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-
   const heroSlides: HeroSlide[] = [{
 
       title: "AI-Powered Business Solutions","
@@ -26,7 +25,7 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
 "
       title: "Comprehensive IT Services","
       subtitle: "End-to-end technology solutions for modern businesses","
-      description: "From infrastructure management to digital transformation, we provide the expertise you need to succeed in today's competitive landscape.","
+      description: "From infrastructure management to digital transformation, we provide the expertise you need to succeed in today"s competitive landscape.","
       image: "/images/hero-it-services.jpg","
       cta: "View Our Services","
       path: "/services","
@@ -57,7 +56,6 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
       ]
 
   ];
-
   useEffect(() => {
   // TODO: Add dependencies if needed
 
@@ -66,13 +64,10 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
   };
 }, []);, []);
     if(!isAutoPlaying) return;
-
       setCurrentSlide((prev) => (prev + 1) % heroSlides.length) }, 6000) ;
     return () => clearInterval(interval) }, [isAutoPlaying, heroSlides.length]) ;
-
     setCurrentSlide((prev) => (prev + 1) % heroSlides.length) ;
     setIsAutoPlaying(false) };
-
     setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length) ;
     setIsAutoPlaying(false) };
             scale: [1, 1.1, 1]
@@ -80,15 +75,15 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
           transition={{ duration: 20, repeat: Infinity }}
         ></motion.div>
 
-        {/* Floating particles */}
+        {/* comment */}
         {[...Array(6)].map((_, i) => (
           <motion.div
             key={i}"
             className="absolute w-2 h-2 bg-zion-cyan/40 rounded-full"
             style={{
 
-              left: `${20 + i * 15}%`,`
-              top: `${30 + i * 10}%`}}
+              left: "${20 + i * 15}%","
+              top: "${30 + i * 10}%"}}
             animate = {
 
   {
@@ -105,11 +100,10 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
           />
         ))}
       </div>
-
-      {/* Hero content */}"
+      {/* comment */}"
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">;"
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left content */}
+          {/* comment */}
           <motion.div
             initial = {
 
@@ -149,33 +143,30 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
 }}
                 transition={{ duration: 0.5 }}
 
-                {/* Icon and category */}
+                {/* comment */}
                 <motion.div"
                   className="flex items-center justify-center lg:justify-start mb-6"
                   whileHover={{ scale: 1.05 }}
-`
-                  <div className={`p-3 rounded-2xl bg-gradient-to-r ${currentSlideData.gradient} bg-opacity-20 border border-zion-cyan/30`}>"
+"
+                  <div className={"p-3 rounded-2xl bg-gradient-to-r ${currentSlideData.gradient} bg-opacity-20 border border-zion-cyan/30"}>"
                     <currentSlideData.icon className="w-8 h-8 text-white" />
                   </div>"
                   <span className="ml-3 text-zion-cyan font-medium bg-zion-cyan/10 px-3 py-1 rounded-full">Featured Service</span>
                 </motion.div>
 
-                {/* Title */}"
+                {/* comment */}"
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
                   {currentSlideData.title}
                 </h1>
-
-                {/* Subtitle */}"
+                {/* comment */}"
                 <p className="text-xl sm:text-2xl text-zion-cyan font-semibold mb-4">
                   {currentSlideData.subtitle}
                 </p>
-
-                {/* Description */}"
+                {/* comment */}"
                 <p className="text-lg text-gray-300 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
                   {currentSlideData.description}
                 </p>
-
-                {/* Features */}"
+                {/* comment */}"
                 <div className="grid grid-cols-2 gap-3 mb-8 max-w-md mx-auto lg:mx-0">
                   {currentSlideData.features.map((feature, index) => (
                     <motion.div
@@ -198,8 +189,7 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
                       <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0"  />                      {feature}
                     </motion.div>;) ) }
                 </div>
-
-                {/* CTA Button */}
+                {/* comment */}
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}"
@@ -219,7 +209,7 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
             </AnimatePresence>
           </motion.div>
 
-      {/* Main Content */}
+      {/* comment */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <AnimatePresence mode="wait">
           <motion.div
@@ -234,10 +224,10 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
   { duration: 0.8,
   delay: 0.2 }}"            className="relative"
 
-            {/* Main image */}"
+            {/* comment */}"
             <div className="relative">
-              <motion.div`
-                className={`w-full h-96 lg:h-[500px] rounded-3xl bg-gradient-to-br ${currentSlideData.gradient} bg-opacity-20 border border-zion-cyan/20 overflow-hidden`}
+              <motion.div"
+                className={"w-full h-96 lg:h-[500px] rounded-3xl bg-gradient-to-br ${currentSlideData.gradient} bg-opacity-20 border border-zion-cyan/20 overflow-hidden"}
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
 "
@@ -266,8 +256,7 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
                 </div>
               </motion.div>
             </div>
-
-            {/* Enhanced floating stats cards */}"
+            {/* comment */}"
             <div className="absolute -bottom-6 -left-6 space-y-4">;
               {currentSlideData.stats.map((stat, index) => (;
                 <motion.div
@@ -302,7 +291,7 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
               ))}
             </motion.div>
 
-            {/* CTA Button */}
+            {/* comment */}
             <motion.div
               initial = {
 
@@ -325,8 +314,7 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
             </motion.div>
           </motion.div>
         </div>
-
-        {/* Enhanced slide navigation */}"
+        {/* comment */}"
         <div className="flex items-center justify-center mt-16 space-x-4">;
           <motion.button
             onClick={prevSlide}"
@@ -340,15 +328,14 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
             {heroSlides.map((_, index) => (
               <motion.button
                 key={index}
-                onClick={() => goToSlide(index)}`
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentSlide'
-                    ? 'bg-zion-cyan w-8''
-                    : 'bg-white/30 hover:bg-white/50'`
-                }`}
+                onClick={() => goToSlide(index)}"
+                className={"w-3 h-3 rounded-full transition-all duration-300 ${index === currentSlide"
+                    ? "bg-zion-cyan w-8""
+                    : "bg-white/30 hover:bg-white/50""
+                }"}
                 whileHover={{ scale: 1.2 }}
               />) ) }
           </div>
-
           <motion.button
             onClick={nextSlide}"
             className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors duration-200 border border-white/20"
@@ -358,8 +345,7 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
             <ChevronRight className="w-6 h-6 text-white"  />          </motion.button>
         </div>
       </div>
-
-      {/* Floating Elements */}
+      {/* comment */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -399,4 +385,4 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
     </section>;) }
 }) ;
 export default EnhancedHeroSection;
-'"`
+"""

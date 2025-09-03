@@ -1,244 +1,243 @@
-import React, { useState } from 'react';
-import { Link, useLocation  } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link, useLocation  } from "react-router-dom";
 export default function Page() {
 ,
-        { name: 'Services', href: '/services', icon: Briefcase },
-        { name: 'Solutions', href: '/solutions', icon: Target },
-        { name: 'AI Solutions', href: '/ai-solutions', icon: Brain },
-        { name: 'Case Studies', href: '/case-studies', icon: FileText },
-        { name: 'Research', href: '/research-development', icon: TestTube },
-        { name: 'Events', href: '/events', icon: Video },
-        { name: 'News', href: '/news', icon: Newspaper },
-        { name: 'Contact', href: '/contact', icon: Mail },
-        { name: 'Blog', href: '/blog', icon: FileText },
+        { name: "Services", href: "/services", icon: Briefcase },
+        { name: "Solutions", href: "/solutions", icon: Target },
+        { name: "AI Solutions", href: "/ai-solutions", icon: Brain },
+        { name: "Case Studies", href: "/case-studies", icon: FileText },
+        { name: "Research", href: "/research-development", icon: TestTube },
+        { name: "Events", href: "/events", icon: Video },
+        { name: "News", href: "/news", icon: Newspaper },
+        { name: "Contact", href: "/contact", icon: Mail },
+        { name: "Blog", href: "/blog", icon: FileText },
       ]
     },;
     {
 
-      name: 'Core Services',
-      href: '#',
+      name: "Core Services",
+      href: "#",
       icon: Target,
       children: [{
 
-          name: 'Cloud & DevOps',
-          href: '/services/cloud-devops',
+          name: "Cloud & DevOps",
+          href: "/services/cloud-devops",
           icon: Cloud,
-          description: 'Infrastructure & Automation'
+          description: "Infrastructure & Automation"
         },
         {
 
-          name: 'Digital Twin',
-          href: '/services/digital-twin',
+          name: "Digital Twin",
+          href: "/services/digital-twin",
           icon: Globe,
-          description: 'Simulation & Monitoring'
+          description: "Simulation & Monitoring"
         },
         {
 
-          name: 'Data Analytics',
-          href: '/services/data-analytics',
+          name: "Data Analytics",
+          href: "/services/data-analytics",
           icon: BarChart3,
-          description: 'Business Intelligence'
+          description: "Business Intelligence"
         },
         {
 
-          name: 'IT Infrastructure',
-          href: '/services/it-infrastructure',
+          name: "IT Infrastructure",
+          href: "/services/it-infrastructure",
           icon: Server,
-          description: 'Hardware & Network'
+          description: "Hardware & Network"
         }
       ]
     },
     {
 
-      name: 'AI Products',
-      href: '#',
+      name: "AI Products",
+      href: "#",
       icon: Brain,
       children: [{
 
-          name: 'AI Sales Copilot',
-          href: '/services/ai-sales-copilot',
+          name: "AI Sales Copilot",
+          href: "/services/ai-sales-copilot",
           icon: Users,
-          description: 'Sales Intelligence'
+          description: "Sales Intelligence"
         },
         {
 
-          name: 'AI Compliance Assistant',
-          href: '/services/ai-compliance-assistant',
+          name: "AI Compliance Assistant",
+          href: "/services/ai-compliance-assistant",
           icon: Shield,
-          description: 'Regulatory Compliance'
+          description: "Regulatory Compliance"
         },
         {
 
-          name: 'AI Auto Email Responder',
-          href: '/services/ai-auto-email-responder',
+          name: "AI Auto Email Responder",
+          href: "/services/ai-auto-email-responder",
           icon: MessageCircle,
-          description: 'Email Automation'
+          description: "Email Automation"
         },
         {
 
-          name: 'LLM Content Studio',
-          href: '/services/llm-content-studio',
+          name: "LLM Content Studio",
+          href: "/services/llm-content-studio",
           icon: PenTool,
-          description: 'Content Creation'
+          description: "Content Creation"
         }
       ]
     },
     {
 
-      name: 'Emerging Tech',
-      href: '#',
+      name: "Emerging Tech",
+      href: "#",
       icon: Rocket,
       children: [{
 
-          name: 'Quantum Computing',
-          href: '/services/quantum-computing',
+          name: "Quantum Computing",
+          href: "/services/quantum-computing",
           icon: Atom,
-          description: 'Next-gen Computing'
+          description: "Next-gen Computing"
         },
         {
 
-          name: 'AI Cybersecurity',
-          href: '/services/ai-cybersecurity',
+          name: "AI Cybersecurity",
+          href: "/services/ai-cybersecurity",
           icon: Lock,
-          description: 'Intelligent Security'
+          description: "Intelligent Security"
         },
         {
 
-          name: 'IoT Edge Computing',
-          href: '/services/iot-edge-computing',
+          name: "IoT Edge Computing",
+          href: "/services/iot-edge-computing",
           icon: Smartphone,
-          description: 'Connected Ecosystems'
+          description: "Connected Ecosystems"
         },
         {
 
-          name: 'AI Content Creation',
-          href: '/services/ai-content-creation',
+          name: "AI Content Creation",
+          href: "/services/ai-content-creation",
           icon: Video,
-          description: 'Creative AI'
+          description: "Creative AI"
         }
       ]
     },
     {
 
-      name: 'Business Solutions',
-      href: '#',
+      name: "Business Solutions",
+      href: "#",
       icon: Briefcase,
       children: [{
 
-          name: 'Marketplace',
-          href: '/marketplace',
+          name: "Marketplace",
+          href: "/marketplace",
           icon: ShoppingCart,
-          description: 'Product & Service Hub'
+          description: "Product & Service Hub"
         },
         {
 
-          name: 'Talent Solutions',
-          href: '/talent',
+          name: "Talent Solutions",
+          href: "/talent",
           icon: Users,
-          description: 'HR & Recruitment'
+          description: "HR & Recruitment"
         },
         {
 
-          name: 'Equipment Services',
-          href: '/equipment',
+          name: "Equipment Services",
+          href: "/equipment",
           icon: Server,
-          description: 'Hardware Solutions'
+          description: "Hardware Solutions"
         },
         {
 
-          name: 'Request Quote',
-          href: '/request-quote',
+          name: "Request Quote",
+          href: "/request-quote",
           icon: MessageCircle,
-          description: 'Get Pricing'
+          description: "Get Pricing"
         }
       ]
     },
     {
 
-      name: 'Company',
-      href: '#',
+      name: "Company",
+      href: "#",
       icon: Info,
       children: [{
 
-          name: 'About Us',
-          href: '/about',
+          name: "About Us",
+          href: "/about",
           icon: Info,
-          description: 'Our Story'
+          description: "Our Story"
         },
         {
 
-          name: 'Team',
-          href: '/team',
+          name: "Team",
+          href: "/team",
           icon: Users,
-          description: 'Meet Our Team'
+          description: "Meet Our Team"
         },
         {
 
-          name: 'Careers',
-          href: '/careers',
+          name: "Careers",
+          href: "/careers",
           icon: Briefcase,
-          description: 'Join Us'
+          description: "Join Us"
         },
         {
 
-          name: 'Partners',
-          href: '/partners',
+          name: "Partners",
+          href: "/partners",
           icon: Users,
-          description: 'Partnerships'
+          description: "Partnerships"
         }
       ]
     },
     {
 
-      name: 'Resources',
-      href: '#',
+      name: "Resources",
+      href: "#",
       icon: BookOpen,
       children: [{
 
-          name: 'Blog',
-          href: '/blog',
+          name: "Blog",
+          href: "/blog",
           icon: FileText,
-          description: 'Latest Insights'
+          description: "Latest Insights"
         },
         {
 
-          name: 'FAQ',
-          href: '/faq',
+          name: "FAQ",
+          href: "/faq",
           icon: HelpCircle,
-          description: 'Common Questions'
+          description: "Common Questions"
         },
         {
 
-          name: 'Help Center',
-          href: '/help',
+          name: "Help Center",
+          href: "/help",
           icon: MessageCircle,
-          description: 'Support Resources'
+          description: "Support Resources"
         },
         {
 
-          name: 'Documentation',
-          href: '/docs',
+          name: "Documentation",
+          href: "/docs",
           icon: BookOpen,
-          description: 'Technical Docs'
+          description: "Technical Docs"
         }
       ]
     },
     {
 
-      name: 'Contact',
-      href: '/contact',
+      name: "Contact",
+      href: "/contact",
       icon: Phone
     }
   ];
-
     return ()      <div key={item.name} className="mb-1">
         {hasChildren ? (
           <div>
             <button
               onClick={(: unknown toggleSection(item.name.toLowerCase())}
-              className={`w-full flex items-center justify-between px-3 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${                level === 0
-                  ? 'text-slate-300 hover:text-white hover:bg-slate-700/50'
-                  : 'text-slate-400 hover:text-slate-300'              }`}
+              className={"w-full flex items-center justify-between px-3 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${                level === 0
+                  ? "text-slate-300 hover:text-white hover:bg-slate-700/50"
+                  : "text-slate-400 hover:text-slate-300"              }"}
             >"
               <div className="flex items-center space-x-3">"
                 <item.icon className="w-4 h-4" />
@@ -252,7 +251,6 @@ export default function Page() {
               ) : ("
                 <ChevronRight className="w-4 h-4"  />              )}
             </button>
-
             {isExpanded && (              <div className="ml-6 mt-2 space-y-1">
                 {item.children!.map(child => renderSidebarItem(child, level + 1))}
               </div>
@@ -260,13 +258,13 @@ export default function Page() {
           </div>
         ) : 
           <Link
-            to={item.href}`
-            className={`flex items-center space-x-3 px-3 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${isActive'
-                ? 'text-cyan-400 bg-cyan-400/10 border border-cyan-400/20'
-                : level === 0'
-                ? 'text-slate-300 hover:text-white hover:bg-slate-700/50''
-                : 'text-slate-400 hover:text-slate-300'`
-            }`}
+            to={item.href}"
+            className={"flex items-center space-x-3 px-3 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${isActive"
+                ? "text-cyan-400 bg-cyan-400/10 border border-cyan-400/20"
+                : level === 0"
+                ? "text-slate-300 hover:text-white hover:bg-slate-700/50""
+                : "text-slate-400 hover:text-slate-300""
+            }"}
             onClick={() => setIsOpen(false)}
           >"
             <item.icon className="w-4 h-4" />
@@ -277,24 +275,23 @@ export default function Page() {
         )}
       </div>
     )};
-
   return ()
+}
     <>
-      {/* Mobile menu button */}
+      {/* comment */}
       <button
         onClick={() => setIsOpen(!isOpen)}"
         className="lg:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
       >"
         {isOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}      </button>
-
-      {/* Sidebar */}`
-      <div className={`
+      {/* comment */}"
+      <div className={"
         fixed inset-y-0 left-0 z-50 w-80 bg-slate-900/95 border-r border-slate-700/50 backdrop-blur-xl
-        transform transition-transform duration-300 ease-in-out lg:translate-x-0 lg:static lg:inset-0'
-        ${isOpen ? 'translate-x-0' : '-translate-x-full'}`
-      `}>"
+        transform transition-transform duration-300 ease-in-out lg:translate-x-0 lg:static lg:inset-0"
+        ${isOpen ? "translate-x-0" : "-translate-x-full"}"
+      "}>"
         <div className="flex flex-col h-full">
-          {/* Header */}"
+          {/* comment */}"
           <div className="flex items-center justify-between p-4 border-b border-slate-700/50">"
             <h2 className="text-lg font-semibold text-white">Navigation</h2>
             <button
@@ -303,13 +300,11 @@ export default function Page() {
             >"
               <X className="w-5 h-5"  />            </button>
           </div>
-
-          {/* Navigation */}"
+          {/* comment */}"
           <nav className="flex-1 overflow-y-auto p-4 space-y-2">
             {navigation.map(item => renderSidebarItem(item))}
           </nav>
-
-          {/* Footer */}"
+          {/* comment */}"
           <div className="p-4 border-t border-slate-700/50">"
             <div className="text-xs text-slate-400 space-y-2">"
               <div className="flex items-center space-x-2">"
@@ -327,8 +322,7 @@ export default function Page() {
           </div>
         </div>
       </div>
-
-      {/* Overlay */}
+      {/* comment */}
       {isOpen && (
         <div"
           className="fixed inset-0 z-40 bg-black/50 lg:hidden"

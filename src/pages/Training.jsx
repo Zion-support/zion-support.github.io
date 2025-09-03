@@ -1,6 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-
+import React from "react";
+import { Link } from "react-router-dom";
 export default function Training() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -16,20 +15,19 @@ export default function Training() {
               to="/contact"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl"
             >
-              <MessageSquare className="w-5 h-5 mr-2" />
+              <MessageSquare className="w-5 h-5 mr-2"  />
               Get Started
-              <ArrowRight className="ml-2 w-5 h-5" />
+              <ArrowRight className="ml-2 w-5 h-5"  />
             </Link>
             <Link
               to="/services"
               className="inline-flex items-center px-8 py-4 border border-gray-600 text-gray-300 hover:text-white hover:border-cyan-500 font-semibold rounded-lg transition-all duration-200"
             >
-              <Rocket className="w-5 h-5 mr-2" />
+              <Rocket className="w-5 h-5 mr-2"  />
               Explore Services
             </Link>
           </div>
         </div>
-        
         <div className="text-center">
           <Link 
             to="/contact" 
@@ -41,16 +39,9 @@ export default function Training() {
       </section>
     </div>) ;
 };
-
 export default Training;
-
-
 export { Training };
-
 export { Training };
-
 export { Training };
-
 export { Training };
-
 export { Training };

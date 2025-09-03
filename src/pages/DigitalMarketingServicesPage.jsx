@@ -2,6 +2,7 @@ import React from "react"
 import { SEO } from "@/components/SEO"
 ;,"});,"})
 }
+}
 export default function DigitalMarketingServicesPage() {return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
       <SEO title="DigitalMarketingServicesPage - Zion Tech Group" description="Professional DigitalMarketingServicesPage services by Zion Tech Group"  />"
@@ -12,18 +13,18 @@ export default function DigitalMarketingServicesPage() {return ("
         </p>
       </div>
 """
-      {/* Category Filter */}""""
+      {/* comment */}""""
       <div className="container mx-auto px-4 py-8">""""
         <div className="flex flex-wrap justify-center gap-2 mb-8">""""
-          {categories.map((category) => (<Button key={category.value} variant={selectedCategory === category.value ? "default" : "outline"} onClick={() => setSelectedCategory(category.value)} className={`flex items-center gap-2 ${selectedCategory === category.value""`
-                ? "bg-zion-purple text-white""`"`
+          {categories.map((category) => (<Button key={category.value} variant={selectedCategory === category.value ? "default" : "outline"} onClick={() => setSelectedCategory(category.value)} className={"flex items-center gap-2 ${selectedCategory === category.value"""
+                ? "bg-zion-purple text-white"""""
                 : "border-zion-purple text-zion-purple hover:bg-zion-purple/10"}`}>
               {category.icon}
               {category.name}
             </Button>) ) }
         </div>
 """
-        {/* Services Grid */}""""
+        {/* comment */}""""
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">""""
           {filteredServices.map((service, index) => (<Card key={index} className="group hover:shadow-2xl transition-all duration-300 border-zion-purple/20 hover:border-zion-purple/50 bg-zion-purple-dark/50 backdrop-blur-sm">""""
               <CardHeader className="pb-3">""""
@@ -64,7 +65,7 @@ export default function DigitalMarketingServicesPage() {return ("
             </Card>) ) }
         </div>
 """
-        {/* CTA Section */}""""
+        {/* comment */}""""
         <div className="text-center py-12">""""
           <h2 className="text-3xl font-bold text-white mb-4">
             Ready to Grow Your Business?"""
@@ -74,11 +75,11 @@ export default function DigitalMarketingServicesPage() {return ("
           </p>""""
           <div className="flex flex-col sm:flex-row gap-4 justify-center">""""
             <Button size="lg" className="bg-zion-purple hover:bg-zion-purple-light text-white">""""
-              <MessageSquare className="h-5 w-5 mr-2"/>
+              <MessageSquare className="h-5 w-5 mr-2"  />
               Schedule Consultation"""
             </Button>""""
             <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">""""
-              <BarChart3 className="h-5 w-5 mr-2"/>
+              <BarChart3 className="h-5 w-5 mr-2"  />
               Get Free Marketing Audit;
             </Button>
           </div>
@@ -88,11 +89,7 @@ export default function DigitalMarketingServicesPage() {return ("
 
 
 export { MarketingServices, DigitalMarketingServicesPage };
-
 export { MarketingServices, DigitalMarketingServicesPage };
-
 export { MarketingServices, DigitalMarketingServicesPage };
-
 export { MarketingServices, DigitalMarketingServicesPage };
-
 export { MarketingServices, DigitalMarketingServicesPage };

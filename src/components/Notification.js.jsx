@@ -1,27 +1,27 @@
-import React, { useState, useEffect } from 'react';
-import { CheckCircle, XCircle, Info, X, AlertTriangle  } from 'lucide-react';
+import React, { useState, useEffect } from "react";
+import { CheckCircle, XCircle, Info, X, AlertTriangle  } from "lucide-react";
 ,
   error: {
 
     icon: XCircle,
-    bgColor: 'bg-red-500/10',
-    borderColor: 'border-red-500/20',
-    textColor: 'text-red-500',
-    iconColor: 'text-red-500'},
+    bgColor: "bg-red-500/10",
+    borderColor: "border-red-500/20",
+    textColor: "text-red-500",
+    iconColor: "text-red-500"},
   info: {
 
     icon: Info,
-    bgColor: 'bg-zion-blue/10',
-    borderColor: 'border-zion-blue/20',
-    textColor: 'text-zion-blue',
-    iconColor: 'text-zion-blue'},
+    bgColor: "bg-zion-blue/10",
+    borderColor: "border-zion-blue/20",
+    textColor: "text-zion-blue",
+    iconColor: "text-zion-blue"},
   warning: {
 
     icon: AlertTriangle,
-    bgColor: 'bg-zion-gold/10',
-    borderColor: 'border-zion-gold/20',
-    textColor: 'text-zion-gold',
-    iconColor: 'text-zion-gold'}};
+    bgColor: "bg-zion-gold/10",
+    borderColor: "border-zion-gold/20",
+    textColor: "text-zion-gold",
+    iconColor: "text-zion-gold"}};
 export function Notification({
 
   id,
@@ -55,15 +55,16 @@ export function Notification({
   };
   if(!isVisible) return null;
   return ()
+}
     <div
-      className={`${styles.bgColor} ${styles.borderColor} border rounded-lg p-4 shadow-lg animate-fade-in max-w-sm`}
+      className={"${styles.bgColor} ${styles.borderColor} border rounded-lg p-4 shadow-lg animate-fade-in max-w-sm"}
       role="alert"
       aria-live="assertive"
     >"
-      <div className="flex items-start space-x-3">`
-        <Icon className={`w-5 h-5 mt-0.5 ${styles.iconColor}`} />"
-        <div className="flex-1 min-w-0">`
-          <h4 className={`text-sm font-medium ${styles.textColor}`}>{title}</h4>"
+      <div className="flex items-start space-x-3">"
+        <Icon className={"w-5 h-5 mt-0.5 ${styles.iconColor}"}   />"
+        <div className="flex-1 min-w-0">"
+          <h4 className={"text-sm font-medium ${styles.textColor}"}>{title}</h4>"
           <p className="text-sm text-muted-foreground mt-1">{message}</p>
         </div>
         <button
@@ -71,7 +72,7 @@ export function Notification({
           className="text-muted-foreground hover:text-foreground transition-colors"
           
         >"
-          <X className="w-4 h-4" />
+          <X className="w-4 h-4"  />
         </button>
       </div>
     </div>
@@ -82,13 +83,14 @@ export function NotificationContainer({ notifications, onClose }) {
   return ("
     <div className="fixed top-20 right-4 z-50 space-y-2">
       {notifications.map(notification => (
-        <Notification
-          key={notification.id}
+        <Notification key={notification.id}
           {...notification}
           onClose={onClose}
-        />
+          />
       ))}
     </div>
   );
 }
 '"`
+
+export default Component

@@ -3,23 +3,31 @@ import React, { useState, useEffect } from "react"
 const NextNavigation = () => {
   const [isOpen, setIsOpen] = useState(false)
 }
+}
   const [isScrolled, setIsScrolled] = useState(false)
+}
 }
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
 }
+}
   const router = useRouter()
+}
 }
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20)
 }
+}
     }"
 "
     window.addEventListener()
 }
+}
     return () => window.removeEventListener("scroll", handleScroll)
 }
+}
   }, [])
+}
 }
   const navigationItems = [] 
 },"
@@ -35,7 +43,9 @@ const NextNavigation = () => {
   const closeMobileMenu = () => {
     setIsOpen(false)
 }
+}
     setActiveDropdown(null)
+}
 }
 
   return (

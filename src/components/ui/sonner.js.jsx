@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { Toaster as Sonner } from "sonner";
 import { useTheme } from "../ThemeProvider";
 const Toaster = ({ ...props }) => {
@@ -10,19 +10,13 @@ const Toaster = ({ ...props }) => {
                 description: "group-[.toast]:text-muted-foreground",
                 actionButton: "group-[.toast]:bg-primary group-[.toast]:text-primary-foreground",
                 cancelButton: "group-[.toast]:bg-muted group-[.toast]:text-muted-foreground",
-  
-
 },
-        }} {...props}/>)};
+        }} {...props}  />)};
+export { Toaster };
+export { Toaster };
+export { Toaster };
+export { Toaster };
+export { Toaster };
 export { Toaster };
 
-
-export { Toaster };
-
-export { Toaster };
-
-export { Toaster };
-
-export { Toaster };
-
-export { Toaster };
+export default Component

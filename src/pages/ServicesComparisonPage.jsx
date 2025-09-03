@@ -1,11 +1,11 @@
-import React, { useState } from 'react';'''
-import { Button } from '@/components/ui/button';'''
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';'''
-import { Badge } from '@/components/ui/badge';'''
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';'''
-import { CheckCircle, Brain, Shield, Users, Phone, Mail, MapPin, ExternalLink, TrendingUp } from 'lucide-react';'''
-import SEO from '@/components/SEO';'''
-import { PRICING_TIERS } from '@/data/advancedServices';
+import React, { useState } from "react";"""
+import { Button } from "@/components/ui/button";"""
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";"""
+import { Badge } from "@/components/ui/badge";"""
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";"""
+import { CheckCircle, Brain, Shield, Users, Phone, Mail, MapPin, ExternalLink, TrendingUp } from "lucide-react";"""
+import SEO from "@/components/SEO";"""
+import { PRICING_TIERS } from "@/data/advancedServices";
 // Service comparison data;
 const SERVICE_COMPARISONS = []
     {}
@@ -104,9 +104,9 @@ export default function ServicesComparisonPage() {}
 """"
     const [selectedCategory, setSelectedCategory] = useState("AI & Automation");""""
     return (<div className="min-h-screen bg-background">""""
-      <SEO title="Services Comparison & Pricing - Zion Tech Group" description="Compare our AI and IT services, features, and pricing plans. Choose the perfect solution for your business needs and budget." keywords="service comparison, pricing plans, AI services, IT consulting, cybersecurity, cloud services" canonical="https://ziontechgroup.com/services-comparison"/>
+      <SEO title="Services Comparison & Pricing - Zion Tech Group" description="Compare our AI and IT services, features, and pricing plans. Choose the perfect solution for your business needs and budget." keywords="service comparison, pricing plans, AI services, IT consulting, cybersecurity, cloud services" canonical="https://ziontechgroup.com/services-comparison"  />
 """
-      {/* Hero Section */}""""
+      {/* comment */}""""
       <section className="py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">""""
         <div className="container mx-auto px-4 text-center">""""
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -117,25 +117,25 @@ export default function ServicesComparisonPage() {}
             Transparent pricing with flexible plans designed for every organization size.
           </p>
 """
-          {/* Contact Information */}""""
+          {/* comment */}""""
           <div className="flex flex-wrap justify-center gap-6 mb-8">""""
             <div className="flex items-center gap-2 text-zion-cyan">""""
-              <Phone className="w-5 h-5"/>
+              <Phone className="w-5 h-5"  />
               <span>+1 302 464 0950</span>"""
             </div>""""
             <div className="flex items-center gap-2 text-zion-cyan">""""
-              <Mail className="w-5 h-5"/>
+              <Mail className="w-5 h-5"  />
               <span>kleber@ziontechgroup.com</span>"""
             </div>""""
             <div className="flex items-center gap-2 text-zion-cyan">""""
-              <MapPin className="w-5 h-5"/>
+              <MapPin className="w-5 h-5"  />
               <span > 364 E Main St STE 1008, Middletown DE 19709</span>
             </div>
           </div>
         </div>
       </section>
 """
-      {/* Pricing Tiers Overview */}""""
+      {/* comment */}""""
       <section className="py-16 bg-zion-blue">""""
         <div className="container mx-auto px-4">""""
           <div className="text-center mb-12">""""
@@ -145,8 +145,8 @@ export default function ServicesComparisonPage() {}
             </p>
           </div>"""
 """"
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">'"""
-            {PRICING_TIERS.map((tier, index) => (<Card key={tier.name} className={`bg-zion-blue-dark border-zion-blue-light text-white ${index === 1 ? 'border-zion-cyan scale-105' : ''}`}>""""
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">""""
+            {PRICING_TIERS.map((tier, index) => (<Card key={tier.name} className={`bg-zion-blue-dark border-zion-blue-light text-white ${index === 1 ? "border-zion-cyan scale-105" : ""}`}>""""
                 <CardHeader className="text-center">""""
                   <CardTitle className="text-2xl">{tier.name}</CardTitle>""""
                   <div className="text-4xl font-bold text-zion-cyan">{tier.price}</div>""""
@@ -157,7 +157,7 @@ export default function ServicesComparisonPage() {}
                 <CardContent>""""
                   <ul className="space-y-3">""""
                     {tier.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center gap-2">""""
-                        <CheckCircle className="w-5 h-5 text-zion-cyan"/>
+                        <CheckCircle className="w-5 h-5 text-zion-cyan"  />
                         <span>{feature}</span>
                       </li>))}"""
                   </ul>""""
@@ -170,7 +170,7 @@ export default function ServicesComparisonPage() {}
         </div>
       </section>
 """
-      {/* Service Comparisons */}""""
+      {/* comment */}""""
       <section className="py-16 bg-background">""""
         <div className="container mx-auto px-4">""""
           <div className="text-center mb-12">""""
@@ -198,13 +198,13 @@ export default function ServicesComparisonPage() {}
                       </CardHeader>"""
                       <CardContent>""""
                         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">"""
-                          {/* Starter Plan */}""""
+                          {/* comment */}""""
                           <div className="text-center p-6 border border-zion-blue-light rounded-lg">""""
                             <h3 className="text-xl font-semibold text-zion-blue mb-2">Starter</h3>""""
                             <div className="text-3xl font-bold text-zion-cyan mb-4">{service.starter.price}</div>""""
                             <ul className="space-y-3 text-left">""""
                               {service.starter.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center gap-2">""""
-                                  <CheckCircle className="w-4 h-4 text-green-500"/>""""
+                                  <CheckCircle className="w-4 h-4 text-green-500"  />""""
                                   <span className="text-sm text-zion-slate">{feature}</span>
                                 </li>))}"""
                             </ul>""""
@@ -213,14 +213,14 @@ export default function ServicesComparisonPage() {}
                             </Button>
                           </div>
 """
-                          {/* Professional Plan */}""""
+                          {/* comment */}""""
                           <div className="text-center p-6 border-2 border-zion-cyan rounded-lg bg-zion-blue-light/5">""""
                             <Badge className="mb-2 bg-zion-cyan text-zion-blue">Most Popular</Badge>""""
                             <h3 className="text-xl font-semibold text-zion-blue mb-2">Professional</h3>""""
                             <div className="text-3xl font-bold text-zion-cyan mb-4">{service.professional.price}</div>""""
                             <ul className="space-y-3 text-left">""""
                               {service.professional.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center gap-2">""""
-                                  <CheckCircle className="w-4 h-4 text-green-500"/>""""
+                                  <CheckCircle className="w-4 h-4 text-green-500"  />""""
                                   <span className="text-sm text-zion-slate">{feature}</span>
                                 </li>))}"""
                             </ul>""""
@@ -229,13 +229,13 @@ export default function ServicesComparisonPage() {}
                             </Button>
                           </div>
 """
-                          {/* Enterprise Plan */}""""
+                          {/* comment */}""""
                           <div className="text-center p-6 border border-zion-blue-light rounded-lg">""""
                             <h3 className="text-xl font-semibold text-zion-blue mb-2">Enterprise</h3>""""
                             <div className="text-3xl font-bold text-zion-cyan mb-4">{service.enterprise.price}</div>""""
                             <ul className="space-y-3 text-left">""""
                               {service.enterprise.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center gap-2">""""
-                                  <CheckCircle className="w-4 h-4 text-green-500"/>""""
+                                  <CheckCircle className="w-4 h-4 text-green-500"  />""""
                                   <span className="text-sm text-zion-slate">{feature}</span>
                                 </li>))}"""
                             </ul>""""
@@ -252,7 +252,7 @@ export default function ServicesComparisonPage() {}
         </div>
       </section>
 """
-      {/* Value Proposition */}""""
+      {/* comment */}""""
       <section className="py-16 bg-zion-blue">""""
         <div className="container mx-auto px-4">""""
           <div className="text-center mb-12">""""
@@ -265,7 +265,7 @@ export default function ServicesComparisonPage() {}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">""""
             <div className="text-center">""""
               <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">""""
-                <Brain className="w-8 h-8 text-zion-blue"/>"""
+                <Brain className="w-8 h-8 text-zion-blue"  />"""
               </div>""""
               <h3 className="text-xl font-semibold text-white mb-2">AI Expertise</h3>""""
               <p className="text-zion-slate-light">Cutting-edge AI solutions with proven results</p>
@@ -273,7 +273,7 @@ export default function ServicesComparisonPage() {}
 """"
             <div className="text-center">""""
               <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">""""
-                <Shield className="w-8 h-8 text-zion-blue"/>"""
+                <Shield className="w-8 h-8 text-zion-blue"  />"""
               </div>""""
               <h3 className="text-xl font-semibold text-white mb-2">Enterprise Security</h3>""""
               <p className="text-zion-slate-light">Bank-level security and compliance standards</p>
@@ -281,7 +281,7 @@ export default function ServicesComparisonPage() {}
 """"
             <div className="text-center">""""
               <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">""""
-                <Users className="w-8 h-8 text-zion-blue"/>"""
+                <Users className="w-8 h-8 text-zion-blue"  />"""
               </div>""""
               <h3 className="text-xl font-semibold text-white mb-2">Expert Team</h3>""""
               <p className="text-zion-slate-light">Certified professionals with industry experience</p>
@@ -289,7 +289,7 @@ export default function ServicesComparisonPage() {}
 """"
             <div className="text-center">""""
               <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">""""
-                <TrendingUp className="w-8 h-8 text-zion-blue"/>"""
+                <TrendingUp className="w-8 h-8 text-zion-blue"  />"""
               </div>""""
               <h3 className="text-xl font-semibold text-white mb-2">Proven Results</h3>""""
               <p className="text-zion-slate-light">Track record of successful implementations</p>
@@ -298,7 +298,7 @@ export default function ServicesComparisonPage() {}
         </div>
       </section>
 """
-      {/* Contact CTA */}""""
+      {/* comment */}""""
       <section className="py-16 bg-background">""""
         <div className="container mx-auto px-4 text-center">""""
           <h2 className="text-3xl font-bold text-zion-blue mb-4">Need Help Choosing?</h2>""""
@@ -308,11 +308,11 @@ export default function ServicesComparisonPage() {}
 """"
           <div className="flex flex-wrap justify-center gap-4 mb-8">""""
             <Button size="lg" className="bg-zion-cyan hover:bg-zion-cyan-dark text-zion-blue font-semibold">""""
-              <Phone className="w-5 h-5 mr-2"/>
+              <Phone className="w-5 h-5 mr-2"  />
               Call +1 302 464 0950"""
             </Button>""""
             <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue">""""
-              <Mail className="w-5 h-5 mr-2"/>
+              <Mail className="w-5 h-5 mr-2"  />
               Email kleber@ziontechgroup.com;
             </Button>
           </div>"""
@@ -321,7 +321,7 @@ export default function ServicesComparisonPage() {}
             <p>Visit us: 364 E Main St STE 1008, Middletown DE 19709</p>""""
             <p className="mt-2">""""
               <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-zion-cyan hover:text-zion-cyan-dark inline-flex items-center gap-1">""""
-                ziontechgroup.com <ExternalLink className="w-4 h-4"/>
+                ziontechgroup.com <ExternalLink className="w-4 h-4"  />
               </a>
             </p>
           </div>
@@ -331,11 +331,7 @@ export default function ServicesComparisonPage() {}
 
 
 export { SERVICE_COMPARISONS, ServicesComparisonPage };
-
 export { SERVICE_COMPARISONS, ServicesComparisonPage };
-
 export { SERVICE_COMPARISONS, ServicesComparisonPage };
-
 export { SERVICE_COMPARISONS, ServicesComparisonPage };
-
 export { SERVICE_COMPARISONS, Page, ServicesComparisonPage };

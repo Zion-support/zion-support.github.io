@@ -1,7 +1,7 @@
-import React from 'react';'''
-import { SEO } from '@/components/SEO';'''
-import Link from 'next/link';'''
-import { motion } from 'framer-motion';
+import React from "react";"""
+import { SEO } from "@/components/SEO";"""
+import Link from "next/link";"""
+import { motion } from "framer-motion";
 import {}
   Brain,
   Cloud,
@@ -11,17 +11,17 @@ import {}
   Link as LinkIcon,
   Zap,
   Server,
-  Users,'
-  Target,''
-  Check,'''
-  ArrowRight} from 'lucide-react';
+  Users,"
+  Target,""
+  Check,"""
+  ArrowRight} from "lucide-react";
 export default function ServicesOverview() {}
-'
-  const stats = [''
-    { label: 'Services Offered', value: '50+', icon: Target },'
-    { label: 'Industries Served', value: '15+', icon: Users },'
-    { label: 'Technologies', value: '100+', icon: Server },'
-    { label: 'Client Satisfaction', value: '98%', icon: Check }
+"
+  const stats = [""
+    { label: "Services Offered", value: "50+", icon: Target },"
+    { label: "Industries Served", value: "15+", icon: Users },"
+    { label: "Technologies", value: "100+", icon: Server },"
+    { label: "Client Satisfaction", value: "98%", icon: Check }
   ];
   const containerVariants = {}
     hidden: { opacity: 0 },
@@ -35,18 +35,18 @@ export default function ServicesOverview() {}
       y: 0,
       opacity: 1,
       transition: {}
-        duration: 0.5,'
-        ease: 'easeOut'}}};
+        duration: 0.5,"
+        ease: "easeOut"}}};
   return()
+}
     <div className="min-h-screen bg-background">"""
       <SEO""""
         title="All Services - Zion Tech Group Comprehensive Technology Solutions""""
         description="Explore our complete range of technology services including AI, data analytics, IoT, blockchain, DevOps, and cybersecurity solutions.""""
         keywords="technology services, AI services, data analytics, IoT solutions, blockchain development, DevOps consulting, cybersecurity services""""
-        canonical="https://ziontechgroup.com/services"""
-      />
+        canonical="https://ziontechgroup.com/services""" />
 """
-      {/* Hero Section */}""""
+      {/* comment */}""""
       <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 text-white py-20">""""
         <div className="absolute inset-0 bg-black/20"></div>""""
         <div className="relative container mx-auto px-4 text-center">""""
@@ -61,7 +61,7 @@ export default function ServicesOverview() {}
         </div>
       </section>
 """
-      {/* Stats Section */}""""
+      {/* comment */}""""
       <section className="py-16 bg-white">""""
         <div className="container mx-auto px-4">"""
           <motion.div""""
@@ -90,7 +90,7 @@ export default function ServicesOverview() {}
         </div>
       </section>
 """
-      {/* Services Overview */}""""
+      {/* comment */}""""
       <section className="py-20 bg-gray-50">""""
         <div className="container mx-auto px-4">"""
           <motion.div""""
@@ -162,7 +162,7 @@ export default function ServicesOverview() {}
                             className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"""
                           >"""
                             Learn More""""
-                            <ArrowRight className="w-4 h-4 ml-1" />
+                            <ArrowRight className="w-4 h-4 ml-1"  />
                           </Link>
                         </div>
                       </div>
@@ -170,12 +170,12 @@ export default function ServicesOverview() {}
                   </div>"""
 """"
                   <div className="mt-8 text-center">
-                    <Link`
-                      to={category.services[0].href}``
-                      className={`inline-flex items-center px-6 py-3 rounded-lg font-semibold text-white bg-gradient-to-r ${category.color} hover:opacity-90 transition-opacity`}
+                    <Link"
+                      to={category.services[0].href}""
+                      className={"inline-flex items-center px-6 py-3 rounded-lg font-semibold text-white bg-gradient-to-r ${category.color} hover:opacity-90 transition-opacity`}
                     >"""
                       Explore All {category.name} Services""""
-                      <ArrowRight className="w-5 h-5 ml-2" />
+                      <ArrowRight className="w-5 h-5 ml-2"  />
                     </Link>
                   </div>
                 </div>
@@ -185,7 +185,7 @@ export default function ServicesOverview() {}
         </div>
       </section>
 """
-      {/* Why Choose Us Section */}""""
+      {/* comment */}""""
       <section className="py-20 bg-white">""""
         <div className="container mx-auto px-4">"""
           <motion.div""""
@@ -213,7 +213,7 @@ export default function ServicesOverview() {}
           >""""
             <motion.div variants={itemVariants} className="text-center">""""
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">""""
-                <Users className="w-8 h-8 text-blue-600" />"""
+                <Users className="w-8 h-8 text-blue-600"  />"""
               </div>""""
               <h3 className="text-xl font-bold text-gray-900 mb-3">
                 Expert Team"""
@@ -226,7 +226,7 @@ export default function ServicesOverview() {}
 """"
             <motion.div variants={itemVariants} className="text-center">""""
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">""""
-                <Target className="w-8 h-8 text-green-600" />"""
+                <Target className="w-8 h-8 text-green-600"  />"""
               </div>""""
               <h3 className="text-xl font-bold text-gray-900 mb-3">
                 Proven Results"""
@@ -239,7 +239,7 @@ export default function ServicesOverview() {}
 """"
             <motion.div variants={itemVariants} className="text-center">""""
               <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">""""
-                <Zap className="w-8 h-8 text-purple-600" />"""
+                <Zap className="w-8 h-8 text-purple-600"  />"""
               </div>""""
               <h3 className="text-xl font-bold text-gray-900 mb-3">
                 Innovation Focus"""
@@ -253,7 +253,7 @@ export default function ServicesOverview() {}
         </div>
       </section>
 """
-      {/* CTA Section */}""""
+      {/* comment */}""""
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">""""
         <div className="container mx-auto px-4 text-center">"""
           <motion.h2""""
@@ -301,11 +301,7 @@ export default function ServicesOverview() {}
 
 
 export { ServicesOverview };
-
 export { ServicesOverview };
-
 export { ServicesOverview };
-
 export { ServicesOverview };
-
 export { ServicesOverview };

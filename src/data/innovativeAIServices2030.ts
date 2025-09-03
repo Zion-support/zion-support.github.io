@@ -45,9 +45,7 @@ const zionContact: unknown = {}
   ;
   ;"
   address: "364 E Main St STE 1008 Middletown DE 19709"};
-
 };
-
 export const innovativeAIServices2030: AIService[] = [// Innovative AI Services 2030
 export const innovativeAIServices2030: InnovativeAIService[] = [  {
 "
@@ -524,5 +522,4 @@ export const innovativeAIServices2030: InnovativeAIService[] = [  {
     featured: true,;
     trending: true};
 ];
-
 export default innovativeAIServices2030}}"

@@ -1,9 +1,10 @@
-import React from 'react';'''
-import { TransactionHistory } from '@/components/transactions/TransactionHistory';'''
-import { GradientHeading } from '@/components/GradientHeading';'''
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import React from "react";"""
+import { TransactionHistory } from "@/components/transactions/TransactionHistory";"""
+import { GradientHeading } from "@/components/GradientHeading";"""
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 export default function Payments() {}
   return()
+}
     <>
       <div className="min-h-screen bg-zion-blue py-12 px-4">""""
         <div className="container mx-auto">""""
@@ -27,7 +28,7 @@ export default function Payments() {}
             </TabsList>"""
 """"
             <TabsContent value="history">
-              <TransactionHistory />
+              <TransactionHistory  />
             </TabsContent>"""
 """"
             <TabsContent value="settings">""""
@@ -46,8 +47,8 @@ export default function Payments() {}
                       preference.
                     </p>
                     <Button;
-                      onClick={() =>'
-                        window.open('https://stripe.com',_blank')"""
+                      onClick={() =>"
+                        window.open("https://stripe.com",_blank')"""
                       }""""
                       className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white"""
                     >
@@ -65,7 +66,7 @@ export default function Payments() {}
                       completed satisfactorily."""
                     </p>""""
                     <div className="flex items-center space-x-2">""""
-                      <Switch id="escrow-default" />""""
+                      <Switch id="escrow-default"  />""""
                       <Label htmlFor="escrow-default" className="text-white">
                         Use escrow by default;
                       </Label>
@@ -82,7 +83,7 @@ export default function Payments() {}
                     </p>""""
                     <div className="space-y-2">""""
                       <div className="flex items-center space-x-2">""""
-                        <Checkbox id="notify-email" defaultChecked />"""
+                        <Checkbox id="notify-email" defaultChecked   />"""
                         <label""""
                           htmlFor="notify-email""""
                           className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-white"""
@@ -91,7 +92,7 @@ export default function Payments() {}
                         </label>"""
                       </div>""""
                       <div className="flex items-center space-x-2">""""
-                        <Checkbox id="notify-push" defaultChecked />"""
+                        <Checkbox id="notify-push" defaultChecked   />"""
                         <label""""
                           htmlFor="notify-push""""
                           className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-white"""
@@ -107,21 +108,14 @@ export default function Payments() {}
           </Tabs>
         </div>
       </div>
-      
     </>)}
 // Import UI components for Payment Settings tab
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
-
-
 export { Payments };
-
 export { Payments };
-
 export { Payments };
-
 export { Payments };
-
 export { Payments };

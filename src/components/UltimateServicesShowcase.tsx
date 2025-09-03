@@ -1,5 +1,6 @@
-import { Link  } from 'react-router-dom';
- from 'react';
+import React from "react"
+import { Link  } from "react-router-dom";
+ from "react";
 export default UltimateServicesShowcase;
 export default UltimateServicesShowcase;
 export default UltimateServicesShowcase;
@@ -8,54 +9,46 @@ export default UltimateServicesShowcase;
 export default UltimateServicesShowcase;
 export default UltimateServicesShowcase;
 export default function UltimateServicesShowcase(...args[]) :  {
-import { enterpriseITInfrastructureServices2025 } from '../../data / 2025 - enterprise - it - infrastructure -services';
-import { innovativeMicroSaasSolutions2025 } from '../../data / 2025 - innovative - micro - saas -solutions';
-import { motion  } from 'framer-motion';
-import { ultimateInnovativeServices2025 } from '../../data / 2025 - ultimate - innovative - services -expansion';
-
- from 'lucide - react';
-
+import { enterpriseITInfrastructureServices2025 } from "../../data / 2025 - enterprise - it - infrastructure -services";
+import { innovativeMicroSaasSolutions2025 } from "../../data / 2025 - innovative - micro - saas -solutions";
+import { motion  } from "framer-motion";
+import { ultimateInnovativeServices2025 } from "../../data / 2025 - ultimate - innovative - services -expansion";
+ from "lucide - react";
 // Import the new services
   ;
   ;
   ;
-  website: 'https://ziontechgroup.com';
+  website: "https://ziontechgroup.com";
 };
 ;
-
-    name: 'Micro SAAS Solutions',;
-    description: 'Innovative software solutions for small businesses',;"
+    name: "Micro SAAS Solutions",;
+    description: "Innovative software solutions for small businesses",;"
     icon: <Code className="w-8 h-8"  />,;
-    color: 'from-green-600 to-emerald-700',;
+    color: "from-green-600 to-emerald-700",;
     services: innovativeMicroSaasSolutions2025};
 ];
 ;
-
   ;
   ;  ;
   ;
-  'Emerging': 'from-green-600 to-emerald-700';
+  "Emerging": "from-green-600 to-emerald-700";
 };
 ;
-
   ;
   ;
-'
-  'Patented': 'from-green-600 to-emerald-700','
-  'Patent Pending': 'from-yellow-600 to-orange-700','
-  'Trade Secret': 'from-blue-600 to-indigo-700',;  ;
+"
+  "Patented": "from-green-600 to-emerald-700","
+  "Patent Pending": "from-yellow-600 to-orange-700","
+  "Trade Secret": "from-blue-600 to-indigo-700",;  ;
   ;
   ;
-  'Open Source': 'from-purple-600 to-violet-700';
+  "Open Source": "from-purple-600 to-violet-700";
 ;
-
 };
-
 export function UltimateServicesShowcase(...args[]):  {
 
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedCategory, setSelectedCategory] = useState("all");
   const [selectedService, setSelectedService] = useState<any>(null);
-
     ...ultimateInnovativeServices2025,;
     ...enterpriseITInfrastructureServices2025,;
     ...innovativeMicroSaasSolutions2025;
@@ -67,7 +60,7 @@ export function UltimateServicesShowcase(...args[]):  {
   return ("
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
+        {/* comment */}
         <motion.div"
           className="text-center mb-16"
           initial = {
@@ -88,13 +81,12 @@ export function UltimateServicesShowcase(...args[]):  {
             <span className="bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple bg-clip-text text-transparent">
               Ultimate Innovation
             </span>
-            <br />"
+            <br  />"
             <span className="text-white">Services Showcase</span>
           </h1>"
           <p className="text-xl text-zion-gray-light max-w-4xl mx-auto leading-relaxed">
             Discover our revolutionary AI, IT infrastructure, and micro SAAS solutions that are transforming industries worldwide.Each service is backed by cutting - edge technology and proven results.</p>
-
-          {/* Contact Information */}"
+          {/* comment */}"
           <div className="mt-8 flex flex-wrap justify-center gap-6 text-zion-gray-light">"
             <div className="flex items-center gap-2">"
               <Phone className="w-5 h-5 text-zion-cyan"  />
@@ -110,7 +102,7 @@ export function UltimateServicesShowcase(...args[]):  {
           </div>
         </motion.div>
 
-        {/* Category Navigation */}
+        {/* comment */}
         <motion.div"
           className="flex flex-wrap justify-center gap-4 mb-12"
           initial = {
@@ -132,29 +124,30 @@ export function UltimateServicesShowcase(...args[]):  {
 
 }}
         >
-          <button'
-            onClick={() => setSelectedCategory('all')}
-            className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${selectedCategory === 'all''
-                ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white shadow-lg shadow-zion-cyan/25''
-                : 'bg-zion-slate-light text-zion-gray-light hover: bg-zion-slate hover:text-white'`
-            }`}
+          <button"
+            onClick={() => setSelectedCategory("all")}
+            className={"px-6 py-3 rounded-full font-semibold transition-all duration-300 ${selectedCategory === "all""
+                ? "bg-gradient-to-r from-zion-cyan to-zion-blue text-white shadow-lg shadow-zion-cyan/25""
+                : "bg-zion-slate-light text-zion-gray-light hover: bg-zion-slate hover:text-white""
+            }"}
 
             All Services({allServices.length})
+}
           </button>
           {categories.map((category)  => (
             <button
               key={category.id}
-              onClick={() => setSelectedCategory(category.id)}`
-              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${selectedCategory === category.id'
-                  ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white shadow-lg shadow-zion-cyan/25''
-                  : 'bg-zion-slate-light text-zion-gray-light hover:bg-zion-slate hover:text-white'`
-              }`}
+              onClick={() => setSelectedCategory(category.id)}"
+              className={"px-6 py-3 rounded-full font-semibold transition-all duration-300 ${selectedCategory === category.id"
+                  ? "bg-gradient-to-r from-zion-cyan to-zion-blue text-white shadow-lg shadow-zion-cyan/25""
+                  : "bg-zion-slate-light text-zion-gray-light hover:bg-zion-slate hover:text-white""
+              }"}
 
               {category.name} ({category.services.length}) ;
             </button>;) ) }
         </motion.div>
 
-        {/* Services Grid */}
+        {/* comment */}
         <motion.div"
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           variants={containerVariants}"
@@ -167,7 +160,7 @@ export function UltimateServicesShowcase(...args[]):  {
               className="group relative"
 "
               <div className="bg-zion-slate-light rounded-2xl p-6 h-full border border-zion-slate hover:border-zion-cyan transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20">
-                {/* Service Header */}"
+                {/* comment */}"
                 <div className="mb-4">"
                   <div className="flex items-center justify-between mb-3">"
                     <div className="text-3xl">{service.icon}</div>
@@ -184,8 +177,7 @@ export function UltimateServicesShowcase(...args[]):  {
                     {service.tagline}
                   </p>
                 </div>
-
-                {/* Price */}"
+                {/* comment */}"
                 <div className="mb-4">"
                   <div className="flex items-baseline gap-2">"
                     <span className="text-3xl font-bold text-zion-cyan">
@@ -199,18 +191,16 @@ export function UltimateServicesShowcase(...args[]):  {
                     {service.trialDays} days free trial • Setup in {service.setupTime}
                   </p>
                 </div>
-
-                {/* Innovation Level & Patent Status */}"
-                <div className="flex flex-wrap gap-2 mb-4">`
-                  <span className={`bg-gradient-to-r ${innovationLevelColors[service.innovationLevel]} text-white text-xs px-3 py-1 rounded-full font-semibold`}>
+                {/* comment */}"
+                <div className="flex flex-wrap gap-2 mb-4">"
+                  <span className={"bg-gradient-to-r ${innovationLevelColors[service.innovationLevel]} text-white text-xs px-3 py-1 rounded-full font-semibold"}>
                     {service.innovationLevel}
-                  </span>`
-                  <span className={`bg-gradient-to-r ${patentStatusColors[service.patentStatus]} text-white text-xs px-3 py-1 rounded-full font-semibold`}>
+                  </span>"
+                  <span className={"bg-gradient-to-r ${patentStatusColors[service.patentStatus]} text-white text-xs px-3 py-1 rounded-full font-semibold"}>
                     {service.patentStatus}
                   </span>
                 </div>
-
-                {/* Key Features */}"
+                {/* comment */}"
                 <div className="mb-4">"
                   <h4 className="text-white font-semibold mb-2">Key Features:</h4>"
                   <ul className="space-y-1">
@@ -220,8 +210,7 @@ export function UltimateServicesShowcase(...args[]):  {
                       </li>) ) }
                   </ul>
                 </div>
-
-                {/* ROI & Market Info */}"
+                {/* comment */}"
                 <div className="mb-4 p-3 bg-zion-slate rounded-lg">"
                   <p className="text-zion-cyan text-sm font-semibold mb-1">ROI & Market:</p>"
                   <p className="text-zion-gray-light text-xs leading-relaxed">
@@ -231,8 +220,7 @@ export function UltimateServicesShowcase(...args[]):  {
                     Market: {service.marketSize} • Growth: {service.growthRate}
                   </p>
                 </div>
-
-                {/* Customer Stats */}"
+                {/* comment */}"
                 <div className="flex items-center justify-between mb-4 text-sm">"
                   <div className="flex items-center gap-1">"
                     <Star className="w-4 h-4 text-yellow-500 fill-current"  />"
@@ -242,8 +230,7 @@ export function UltimateServicesShowcase(...args[]):  {
                     {service.customers} customers
                   </span>
                 </div>
-
-                {/* Action Buttons */}"
+                {/* comment */}"
                 <div className="flex gap-2">
                   <button
                     onClick={() => setSelectedService(service)}"
@@ -261,7 +248,7 @@ export function UltimateServicesShowcase(...args[]):  {
             </motion.div>) ) }
         </motion.div>
 
-        {/* Call to Action */}
+        {/* comment */}
         <motion.div"
           className="text-center mt-16"
           initial = {
@@ -287,9 +274,10 @@ export function UltimateServicesShowcase(...args[]):  {
 
                 Get Started Today"
                 <ArrowRight className="w-5 h-5"  />              </Link>
-              <a`
-                href={`tel:${contact.mobile}`'
+              <a"
+                href={"tel:${contact.mobile}""
                   .replace(/\s/g,)
+}
                   .replace(/[^\d+]/g,)}"
                 className="bg-zion-slate-light border border-zion-cyan text-zion-cyan px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center gap-2"
 "
@@ -299,8 +287,7 @@ export function UltimateServicesShowcase(...args[]):  {
           </div>
         </motion.div>
       </div>
-
-      {/* Service Detail Modal */}
+      {/* comment */}
       {selectedService && ("
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">"
           <div className="bg-zion-slate-light rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">"
@@ -346,7 +333,6 @@ export function UltimateServicesShowcase(...args[]):  {
                       </span>) ) }
                   </div>
                 </div>
-
                 <div>"
                   <h3 className="text-xl font-bold text-white mb-3">Market Information</h3>"
                   <div className="space-y-3 mb-4">
@@ -397,9 +383,10 @@ export function UltimateServicesShowcase(...args[]):  {
 
                       Get Started
                     </Link>
-                    <a`
-                      href={`tel:${contact.mobile}`'
+                    <a"
+                      href={"tel:${contact.mobile}""
                         .replace(/\s/g,)
+}
                         .replace(/[^\d+]/g,)}"
                       className="bg-zion-slate border border-zion-cyan text-zion-cyan px-6 py-3 rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center justify-center"
 "
@@ -419,4 +406,4 @@ export default UltimateServicesShowcase;
 export default UltimateServicesShowcase;
 export default UltimateServicesShowcase;
 export default UltimateServicesShowcase;
-'"`
+'""

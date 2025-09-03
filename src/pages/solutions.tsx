@@ -1,9 +1,8 @@
-import React from 'react';
-import { SEO } from '../components/SEO';
-
+import React from "react";
+import { SEO } from "../components/SEO";
 const Solutions: React.FC = () => {
   return(<>
-      <SEO title="Solutions - Zion Tech Group" />
+      <SEO title="Solutions - Zion Tech Group"  />
       <div className="min-h-screen bg-white py-20">
         <div className="max-w-4xl mx-auto px-4">
           <h1 className="text-4xl font-bold text-gray-900 mb-8">Solutions</h1>
@@ -13,5 +12,4 @@ const Solutions: React.FC = () => {
     </>
   );
 };
-
 export default Solutions;

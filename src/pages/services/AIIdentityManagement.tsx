@@ -1,47 +1,42 @@
-import React from 'react';
-import { Database, Check, ArrowRight } from 'lucide-react';
-import { SEO } from '../../components/SEO';
-
+import React from "react";
+import { Database, Check, ArrowRight } from "lucide-react";
+import { SEO } from "../../components/SEO";
 export default function AIIdentityManagement() {
   const features = [
-    'Automated identity verification and validation',
-    'Predictive analytics for identity threats',
-    'Smart compliance and governance monitoring',
-    'AI-driven identity automation and orchestration',
-    'Real-time identity analytics and insights',
-    'Custom AI models for identity applications'
+    "Automated identity verification and validation",
+    "Predictive analytics for identity threats",
+    "Smart compliance and governance monitoring",
+    "AI-driven identity automation and orchestration",
+    "Real-time identity analytics and insights",
+    "Custom AI models for identity applications"
   ];
-
   const tiers = [
     {
-      name: 'Starter',
-      price: '$299/mo',
-      details: ['Basic identity features', 'Standard support', 'Up to 100 users']
+      name: "Starter",
+      price: "$299/mo",
+      details: ["Basic identity features", "Standard support", "Up to 100 users"]
     },
     {
-      name: 'Professional',
-      price: '$999/mo',
-      details: ['Advanced identity features', 'Priority support', 'Up to 1000 users']
+      name: "Professional",
+      price: "$999/mo",
+      details: ["Advanced identity features", "Priority support", "Up to 1000 users"]
     },
     {
-      name: 'Enterprise',
-      price: '$1,999/mo',
-      details: ['All identity features', 'Dedicated support', 'Unlimited users']
+      name: "Enterprise",
+      price: "$1,999/mo",
+      details: ["All identity features", "Dedicated support", "Unlimited users"]
     }
   ];
-
   return (
     <>
-      <SEO 
-        title="AI Identity Management - AI Solutions | Zion Tech Group"
+      <SEO title="AI Identity Management - AI Solutions | Zion Tech Group"
         description="Secure and manage identities with our AI-powered identity management solutions. Enterprise-grade security for modern businesses."
-        keywords="AI identity management, identity verification, access control, security automation"
-      />
+        keywords="AI identity management, identity verification, access control, security automation"  />
       <div className="min-h-screen bg-white">
         <section className="bg-gradient-to-br from-indigo-500 via-blue-500 to-cyan-500 py-20 text-center">
           <div className="max-w-5xl mx-auto px-6">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
-              <Database className="w-4 h-4 mr-2" />
+              <Database className="w-4 h-4 mr-2"  />
               AI-Powered Identity Management Intelligence
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
@@ -52,7 +47,6 @@ export default function AIIdentityManagement() {
             </p>
           </div>
         </section>
-
         <section className="py-16 max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-10">
             <div>
@@ -62,7 +56,7 @@ export default function AIIdentityManagement() {
               <ul className="space-y-3">
                 {features.map((feature, index) => (
                   <li key={index} className="flex items-start">
-                    <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                    <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0"  />
                     <span className="text-gray-700">{feature}</span>
                   </li>
                 ))}
@@ -71,7 +65,6 @@ export default function AIIdentityManagement() {
                 Built with enterprise-grade security, SOC 2 compliance, and 99.9% uptime SLA.
               </div>
             </div>
-            
             <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">
               <h3 className="text-2xl font-semibold text-gray-900 mb-4">
                 Competitive Pricing
@@ -95,7 +88,7 @@ export default function AIIdentityManagement() {
                   className="px-5 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors inline-flex items-center"
                 >
                   View Full Pricing 
-                  <ArrowRight className="w-4 h-4 ml-2" />
+                  <ArrowRight className="w-4 h-4 ml-2"  />
                 </a>
                 <a 
                   href="/contact" 

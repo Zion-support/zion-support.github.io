@@ -1,5 +1,5 @@
-import {  import { motion  } from 'framer-motion';
-
+import React from "react"
+import {  import { motion  } from "framer-motion";
  params - Function parameters
  * @returns {*} Function return value
  */
@@ -58,25 +58,21 @@ export function TechSolutionsSection() {
 
 }}
             >
-              <div className={`w-16 h-16 bg-gradient-to-br ${solution.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>"
+              <div className={"w-16 h-16 bg-gradient-to-br ${solution.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300"}>"
                 <span className="text-3xl">{solution.icon}</span>
               </div>
-
               <h3 className="text-xl font - bold text-white mb-3 group - hover:text-blue - 400 transition - colors duration -200">
                 {solution.title}
               </h3>
-
               <p className="text-gray - 400 text-sm mb-6 leading -relaxed">
                 {solution.description}
               </p>
-
               <ul className="space - y-2">
                 {solution.benefits.map((benefit, benefitIndex) => (<li key={benefitIndex} className="flex items - center gap-2 text-sm">
                     <div className="w-2 h-2 bg-blue - 400 rounded-full"></div>
                     <span className="text-gray -300">{benefit}</span>
                   </li>) ) }
               </ul>
-
               <div className="mt-6 pt - 4 border-t border-slate -700">
                 <div className="text-blue - 400 text-sm font - semibold group - hover:text-blue - 300 transition - colors duration -200">                  Learn More →
                 </div>
@@ -92,7 +88,6 @@ export function TechSolutionsSection() {
                       {feature}
                     </li>) ) }
                 </ul>
-
                 <Link"
                   to="/services"
                   className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors duration-200 group-hover:translate-x-1"
@@ -101,7 +96,6 @@ export function TechSolutionsSection() {
                   <Rocket className="ml-2 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1"  />                </Link>
               </motion.div>) }) }
         </div>
-
         <motion.div
           className="mt-16 text-center"          initial = {
 
@@ -128,7 +122,7 @@ export function TechSolutionsSection() {
               Ready to Transform Your Business?
             </h3>"
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              Let's discuss how our technology solutions can help you achieve
+              Let"s discuss how our technology solutions can help you achieve
               your business goals and stay ahead of the competition.</p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
@@ -149,7 +143,6 @@ export function TechSolutionsSection() {
         </motion.div>;
       </div>;
     </section>;) };
-
 export default TechSolutionsSection;"
             <span className="text-2xl">→</span>;
           </div>;
@@ -158,4 +151,4 @@ export default TechSolutionsSection;"
     </section>;) }
 export default TechSolutionsSection;
 export default TechSolutionsSection;
-'"`
+""`

@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
-
+import React, { useState } from "react";
+import { motion, AnimatePresence  } from "framer-motion";
 export default function Page() {
 ,
     {
@@ -41,7 +40,7 @@ export default function Page() {
 const expertiseAreas = [{
 "
         name: "Artificial Intelligence","
-        icon: <Brain className="w-8 h-8"/>,"
+        icon: <Brain className="w-8 h-8"  />,"
         color: "from-zion-purple to-zion-purple-dark","
         description: "Machine learning, computer vision, NLP, and AI solutions",
         experts: 12,
@@ -51,7 +50,7 @@ const expertiseAreas = [{
     {
 "
         name: "Cloud Infrastructure","
-        icon: <Cloud className="w-8 h-8"/>,"
+        icon: <Cloud className="w-8 h-8"  />,"
         color: "from-zion-cyan to-zion-blue","
         description: "AWS, Azure, Google Cloud, and hybrid solutions",
         experts: 18,
@@ -61,7 +60,7 @@ const expertiseAreas = [{
     {
 "
         name: "Web Development","
-        icon: <Globe className="w-8 h-8"/>,"
+        icon: <Globe className="w-8 h-8"  />,"
         color: "from-zion-cyan-light to-zion-cyan","
         description: "Modern web applications and progressive web apps",
         experts: 25,
@@ -71,7 +70,7 @@ const expertiseAreas = [{
     {
 "
         name: "Mobile Development","
-        icon: <Zap className="w-8 h-8"/>,"
+        icon: <Zap className="w-8 h-8"  />,"
         color: "from-zion-purple-light to-zion-purple","
         description: "iOS, Android, and cross-platform solutions",
         experts: 20,
@@ -81,7 +80,7 @@ const expertiseAreas = [{
     {
 "
         name: "Data Analytics","
-        icon: <Database className="w-8 h-8"/>,"
+        icon: <Database className="w-8 h-8"  />,"
         color: "from-zion-cyan to-zion-purple","
         description: "Business intelligence and predictive analytics",
         experts: 15,
@@ -91,7 +90,7 @@ const expertiseAreas = [{
     {
 "
         name: "Cybersecurity","
-        icon: <Shield className="w-8 h-8"/>,"
+        icon: <Shield className="w-8 h-8"  />,"
         color: "from-zion-purple to-zion-cyan","
         description: "Security auditing, compliance, and threat protection",
         experts: 10,
@@ -100,10 +99,10 @@ const expertiseAreas = [{
     }
 ];
 const stats = ["
-    { icon: <Users className="w-6 h-6"/>, value: "100+", label: "Expert Team Members" },"
-    { icon: <Award className="w-6 h-6"/>, value: "500+", label: "Projects Completed" },"
-    { icon: <Star className="w-6 h-6"/>, value: "4.9/5", label: "Average Rating" },"
-    { icon: <Globe className="w-6 h-6"/>, value: "25+", label: "Countries Served" }
+    { icon: <Users className="w-6 h-6"  />, value: "100+", label: "Expert Team Members" },"
+    { icon: <Award className="w-6 h-6"  />, value: "500+", label: "Projects Completed" },"
+    { icon: <Star className="w-6 h-6"  />, value: "4.9/5", label: "Average Rating" },"
+    { icon: <Globe className="w-6 h-6"  />, value: "25+", label: "Countries Served" }
 ];
     const [selectedMember, setSelectedMember] = useState(null);
     const [hoveredExpertise, setHoveredExpertise] = useState(null);
@@ -138,7 +137,7 @@ const stats = ["
         }
     };"
     return (<section className="py-20 bg-gradient-to-br from-zion-blue via-zion-slate-dark to-zion-blue-dark relative overflow-hidden">
-      {/* Background decorative elements */}"
+      {/* comment */}"
       <div className="absolute inset-0 opacity-5">"
         <div className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan rounded-full"></div>"
         <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple rounded-full"></div>"
@@ -146,7 +145,7 @@ const stats = ["
       </div>
 "
       <div className="container mx-auto px-4 relative z-10">
-        {/* Header */}"
+        {/* comment */}"
         <motion.div className="text-center mb-20" initial = {
 
   { opacity: 0,
@@ -163,8 +162,7 @@ const stats = ["
           </h2>
           <p className="text-zion - slate - light text-lg md:text-xl max - w-4xl mx - auto leading - relaxed mb-8">
             Our world - class team of technology experts brings together decades of experience            across all major technology domains.Get to know the minds behind our success.</p>
-
-          {/* Stats */}"
+          {/* comment */}"
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             {stats.map((stat, index) => (<motion.div key={index} initial = {
 
@@ -190,7 +188,7 @@ const stats = ["
           </div>
         </motion.div>
 
-        {/* Expertise Areas */}"
+        {/* comment */}"
         <motion.div className="mb-20" initial = {
 
   { opacity: 0,
@@ -210,7 +208,6 @@ const stats = ["
           <h3 className="text-3xl font-bold text-white text-center mb-12">"
             Areas of <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Expertise</span>
           </h3>
-
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-6">
             {expertiseAreas.map((area, index) => (<motion.div key={index} initial = {  { opacity: 0,
   y: 20
@@ -226,15 +223,13 @@ const stats = ["
   delay: index * 0.1
 
 }} onHoverStart={ () => setHoveredExpertise(index) } onHoverEnd={ () => setHoveredExpertise(null) } whileHover={{ y: -4 }} className="p - 6 rounded-2xl bg-gradient - to - br from - zion - blue - dark / 80 to - zion - blue - dark / 40 backdrop - blur - sm border border-zion - blue - light / 30 hover:border-zion - cyan / 50 transition - all duration - 300 hover:shadow-lg hover:shadow-zion -cyan / 20">
-                <div className={`inline - flex items - center justify - center w-16 h-16 rounded-2xl bg-gradient - to - br ${area.color} mb-4 shadow-lg`}>
+                <div className={"inline - flex items - center justify - center w-16 h-16 rounded-2xl bg-gradient - to - br ${area.color} mb-4 shadow-lg"}>
                   <div className="text-white">
                     {area.icon}
                   </div>
                 </div>
-
                 <h4 className="text-xl font - bold text-white mb-3">{area.name}</h4>
                 <p className="text-zion - slate - light text-sm mb-4 leading -relaxed">{area.description}</p>
-
                 <div className="grid grid - cols - 3 gap-4 text-center">
                   <div>
                     <div className="text-zion - cyan font - bold text-lg">{area.experts}</div>
@@ -252,7 +247,7 @@ const stats = ["
           </div>
         </motion.div>
 
-        {/* Team Members */}"
+        {/* comment */}"
         <motion.div className="mb-20" initial = {
 
   { opacity: 0,
@@ -272,7 +267,6 @@ const stats = ["
           <h3 className="text-3xl font-bold text-white text-center mb-12">"
             Leadership <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Team</span>
           </h3>
-
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-8">
             {teamMembers.map((member, index) => (<motion.div key={member.id} variants={itemVariants} whileHover={{ y: -8 }} transition = {
   { type: "spring",
@@ -280,21 +274,19 @@ const stats = ["
 
 }} className="relative">
                 <div className="h-full p - 6 rounded-2xl bg-gradient - to - br from - zion - blue - dark / 80 to - zion - blue - dark / 40 backdrop - blur - sm border border-zion - blue - light / 30 hover:border-zion - cyan / 50 transition - all duration - 300 hover:shadow-2xl hover:shadow-zion - cyan / 20 group cursor -pointer" onClick={ () => setSelectedMember(selectedMember === member.id ? null : member.id) }>
-                  {/* Header */}
+                  {/* comment */}
                   <div className="text-center mb-6">
                     <div className="inline - flex items - center justify - center w-20 h-20 rounded-2xl bg-gradient - to - br from - zion - cyan to - zion - purple mb-4 shadow-lg group - hover:shadow-xl transition - all duration -300">
                       <span className="text-white font - bold text-2xl">
                         {member.name.charAt(0) }
                       </span>
                     </div>
-
                     <h4 className="text-xl font - bold text-white mb-2 group - hover:text-zion - cyan transition -colors">                      {member.name}
                     </h4>"
                     <div className="text-zion-cyan font-medium text-sm mb-1">{member.role}</div>"
                     <div className="text-zion-slate-light text-xs">{member.expertise}</div>
                   </div>
-
-                  {/* Quick info */}"
+                  {/* comment */}"
                   <div className="grid grid-cols-2 gap-3 mb-4">"
                     <div className="text-center p-2 rounded-lg bg-zion-blue-light/20 border border-zion-cyan/30">"
                       <div className="text-zion-cyan font-bold text-sm">{member.experience}</div>"
@@ -305,8 +297,7 @@ const stats = ["
                       <div className="text-zion-slate-light text-xs">Projects</div>
                     </div>
                   </div>
-
-                  {/* Skills preview */}"
+                  {/* comment */}"
                   <div className="mb-4">"
                     <div className="text-zion-cyan font-semibold text-sm mb-2">Key Skills:</div>"
                     <div className="flex flex-wrap gap-1">"
@@ -318,16 +309,14 @@ const stats = ["
                         </span>) }
                     </div>
                   </div>
-
-                  {/* CTA */}"
+                  {/* comment */}"
                   <div className="flex items-center justify-between">"
                     <span className="text-zion-purple-light font-medium text-sm group-hover:text-zion-purple transition-colors">
                       View Profile
                     </span>"
-                    <ArrowRight className="w-4 h-4 text-zion-purple-light group-hover:text-zion-purple group-hover:translate-x-1 transition-all duration-300"/>
+                    <ArrowRight className="w-4 h-4 text-zion-purple-light group-hover:text-zion-purple group-hover:translate-x-1 transition-all duration-300"  />
                   </div>
-
-                  {/* Expanded details */}
+                  {/* comment */}
                   <AnimatePresence>"
                     {selectedMember === member.id && (<motion.div className="mt-6 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial = {
 
@@ -346,7 +335,6 @@ const stats = ["
 
 }} transition={{ duration: 0.3 }}>
                         <p className="text-zion - slate - light text-sm mb-4 leading -relaxed">{member.bio}</p>
-
                         <h5 className="text-zion - cyan font - semibold text-sm mb-2">Achievements:</h5>
                         <div className="space - y-1 mb-4">
                           {member.achievements.map((achievement, idx) => (<motion.div key={idx} className="flex items - center gap-2 text-zion - slate - light / 80 text-xs" initial = {  { opacity: 0,
@@ -358,29 +346,30 @@ const stats = ["
   x: 0
 
 }} transition={{ delay: idx * 0.1 }}>"
-                              <CheckCircle className="w-3 h-3 text-zion-cyan"/>
+                              <CheckCircle className="w-3 h-3 text-zion-cyan"  />
                               <span>{achievement}</span>
                             </motion.div>) ) }
                         </div>
 "
                         <div className="flex items-center justify-between">"
                           <div className="flex items-center gap-1">"
-                            <Star className="w-4 h-4 text-yellow-400 fill-current"/>"
+                            <Star className="w-4 h-4 text-yellow-400 fill-current"  />"
                             <span className="text-white font-semibold text-sm">{member.rating}</span>
                           </div>"
                           <div className="flex gap-2">"
                             <a href={member.linkedin} className="text-zion-cyan hover:text-zion-cyan-light transition-colors">"
-                              <Linkedin className="w-4 h-4"/>
+                              <Linkedin className="w-4 h-4"  />
                             </a>"
                             <a href={member.github} className="text-zion-cyan hover:text-zion-cyan-light transition-colors">"
-                              <Github className="w-4 h-4"/>
+                              <Github className="w-4 h-4"  />
                             </a>
                             <a href = {
-'`
-  `mailto:${member.name.toLowerCase().replace(' ',.')
-"`
-}@ziontechgroup.com`} className="text-zion-cyan hover:text-zion-cyan-light transition-colors">"
-                              <Mail className="w-4 h-4"/>
+""
+  "mailto:${member.name.toLowerCase().replace(" ",.")
+}
+""
+}@ziontechgroup.com"} className="text-zion-cyan hover:text-zion-cyan-light transition-colors">"
+                              <Mail className="w-4 h-4"  />
                             </a>
                           </div>
                         </div>
@@ -391,7 +380,7 @@ const stats = ["
           </div>
         </motion.div>
 
-        {/* Call to action */}"
+        {/* comment */}"
         <motion.div className="text-center" initial = {
 
   { opacity: 0,
@@ -414,7 +403,7 @@ const stats = ["
                 Ready to Work with Our Experts?
               </h3>"
               <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
-                Our team is ready to bring your vision to life.Let's discuss how we can help you achieve your technology goals.</p>"
+                Our team is ready to bring your vision to life.Let"s discuss how we can help you achieve your technology goals.</p>"
               <div className="flex flex-col sm:flex-row gap-4 justify-center">"
                 <button className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-white rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25">
                   Schedule Consultation
@@ -428,4 +417,4 @@ const stats = ["
         </motion.div>
       </div>
     </section>)}
-'"`
+""`

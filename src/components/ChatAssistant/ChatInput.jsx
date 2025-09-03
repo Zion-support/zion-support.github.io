@@ -1,15 +1,17 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from "react";
 import { Button } from "../ui/Button.jsx";
-import { Send export function ChatInput({ onSend, disabled = false }) {    const [message, setMessage] = useState('');
+import { Send export function ChatInput({ onSend, disabled = false }) {    const [message, setMessage] = useState("");
     const inputRef = useRef(null);
     useEffect(() => {}
 
         // comment
         inputRef.current?.focus()}, [])
 }
+}
     const handleSubmit = (e) => {}
 
         e.preventDefault()
+}
 }
         if (message.trim() && !disabled) {}"
             onSend(message)"

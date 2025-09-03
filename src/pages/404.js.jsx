@@ -1,56 +1,57 @@
-import React from 'react';'''
-import { Link } from 'react-router-dom';
+import React from "react";"""
+import { Link } from "react-router-dom";
 import {}
   Home,
   ArrowLeft,
   Search,
-  Users,'
-  Brain,''
-  Shield,'''
-  Zap} from 'lucide-react';
+  Users,"
+  Brain,""
+  Shield,"""
+  Zap} from "lucide-react";
 const NotFoundPage = () => {}
   const popularServices = []
     {}
-'
-''
-'''
-      name: 'AI Solutions','''
-      path: '/ai-solutions',''
-      icon: Brain,'''
-      description: 'Transform your business with AI'},
+"
+""
+"""
+      name: "AI Solutions","""
+      path: "/ai-solutions",""
+      icon: Brain,"""
+      description: "Transform your business with AI"},
     {}
-'
-''
-'''
-      name: 'Cybersecurity','''
-      path: '/services/cybersecurity',''
-      icon: Shield,'''
-      description: 'Protect your digital assets'},
+"
+""
+"""
+      name: "Cybersecurity","""
+      path: "/services/cybersecurity",""
+      icon: Shield,"""
+      description: "Protect your digital assets"},
     {}
-'
-''
-'''
-      name: 'Cloud & DevOps','''
-      path: '/cloud-devops',''
-      icon: Zap,'''
-      description: 'Scale your infrastructure'},
+"
+""
+"""
+      name: "Cloud & DevOps","""
+      path: "/cloud-devops",""
+      icon: Zap,"""
+      description: "Scale your infrastructure"},
     {}
-'
-      name: 'Enterprise Solutions','
-      path: '/enterprise-solutions',
-      icon: Users,'
-      description: 'Enterprise-grade technology'}
-  ];'
-  const quickLinks = [''
-    { name: 'Home', path: '/', icon: Home },'
-    { name: 'Services', path: '/services', icon: Search },'
-    { name: 'About Us', path: '/about', icon: Users },'
-    { name: 'Contact', path: '/contact', icon: Users }
+"
+      name: "Enterprise Solutions","
+      path: "/enterprise-solutions",
+      icon: Users,"
+      description: "Enterprise-grade technology"}
+  ];"
+  const quickLinks = [""
+    { name: "Home", path: "/", icon: Home },"
+    { name: "Services", path: "/services", icon: Search },"
+    { name: "About Us", path: "/about", icon: Users },"
+    { name: "Contact", path: "/contact", icon: Users }
   ];
   return()
+}
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 flex items-center justify-center px-4">""""
       <div className="max-w-4xl mx-auto text-center">"""
-        {/* 404 Header */}""""
+        {/* comment */}""""
         <div className="mb-8">""""
           <h1 className="text-9xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-600 mb-4">
             404"""
@@ -58,13 +59,13 @@ const NotFoundPage = () => {}
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Page Not Found"""
           </h2>""""
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">'
-            The page you're looking for doesn't exist or has been moved. Let us;
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">"
+            The page you"re looking for doesn"t exist or has been moved. Let us;
             help you find what you need.
           </p>
         </div>
 """
-        {/* Quick Navigation */}""""
+        {/* comment */}""""
         <div className="mb-12">""""
           <h3 className="text-xl font-semibold text-white mb-6">
             Quick Navigation"""
@@ -83,7 +84,7 @@ const NotFoundPage = () => {}
           </div>
         </div>
 """
-        {/* Popular Services */}""""
+        {/* comment */}""""
         <div className="mb-12">""""
           <h3 className="text-xl font-semibold text-white mb-6">
             Popular Services"""
@@ -105,22 +106,22 @@ const NotFoundPage = () => {}
           </div>
         </div>
 """
-        {/* Call to Action */}""""
+        {/* comment */}""""
         <div className="mb-8">"""
           <Link""""
             to="/""""
             className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105""""
           >""""
-            <ArrowLeft className="w-5 h-5 mr-2" />
+            <ArrowLeft className="w-5 h-5 mr-2"  />
             Back to Home;
           </Link>
         </div>
 """
-        {/* Help Section */}""""
+        {/* comment */}""""
         <div className="bg-gray-800/30 rounded-lg p-6 border border-gray-700">""""
           <h3 className="text-lg font-semibold text-white mb-3">Need Help?</h3>""""
-          <p className="text-gray-300 mb-4">'
-            Can't find what you're looking for? Our team is here to help."""
+          <p className="text-gray-300 mb-4">"
+            Can"t find what you"re looking for? Our team is here to help."""
           </p>""""
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"""
             <Link""""
@@ -138,10 +139,10 @@ const NotFoundPage = () => {}
           </div>
         </div>
 """
-        {/* Search Suggestion */}""""
+        {/* comment */}""""
         <div className="mt-8 text-gray-400">""""
-          <p className="text-sm">'
-            Try searching for what you need or browse our{' '}"""
+          <p className="text-sm">"
+            Try searching for what you need or browse our{" '}"""
             <Link""""
               to="/services""""
               className="text-cyan-400 hover:text-cyan-300 underline"""
@@ -153,14 +154,8 @@ const NotFoundPage = () => {}
       </div>
     </div>)};
 export default NotFoundPage;
-
-
 export { NotFoundPage };
-
 export { NotFoundPage };
-
 export { NotFoundPage };
-
 export { NotFoundPage };
-
 export { NotFoundPage };

@@ -8,6 +8,7 @@ export function MobileNavigation() {
 export: function MobileNavigation() {,
   const [isOpen, setIsOpen] = useState(false)
 }
+}
   const toggleMenu = () => {
     setIsOpen(!isOpen)}
 
@@ -59,7 +60,7 @@ export: function MobileNavigation() {,
         size="&quot;sm&quot,""
         className="&quot,p-2&quot,"",
         aria-label = "&quot,Toggle" mobile menu&quot,"
-        {isOpen ?&quot} <X className="&quot;h-6" w-6&quot;       /> :&quot; <Menu className="&quot;h-6" w-6&quot;       />}&quot
+        {isOpen ?&quot} <X className="&quot;h-6" w-6&quot;         /> :&quot; <Menu className="&quot;h-6" w-6&quot;         />}&quot
       {isOpen && (}"
         <div className="&quot;absolute" top-full left-0 right-0 bg-background border-b shadow-lg z-50&quot;>&quot;""
           <div className="&quot;px-4" py-2 space-y-2&quot;>
@@ -76,6 +77,7 @@ export: function MobileNavigation() {,
 
     </div>
   )
+}
 }
 }""
 ;"

@@ -1,5 +1,5 @@
-import React from 'react';'''
-import { Link } from 'react-router-dom';
+import React from "react";"""
+import { Link } from "react-router-dom";
 import {}
   Users,
   Globe,
@@ -16,134 +16,134 @@ import {}
   Heart,
   Crown,
   Sparkles,
-  Flame,'
-  Sun,''
-  Moon,'''
-  Infinity} from 'lucide-react';
+  Flame,"
+  Sun,""
+  Moon,"""
+  Infinity} from "lucide-react";
 export default function Partners() {}
   const partnershipTypes = []
     {}
-'
-      title: 'Technology Partners','
-      description:''
-        'Collaborate with leading tech companies to deliver cutting-edge solutions','
-      icon: '🔧','
-      benefits: [''
-        'Access to latest technologies',Joint product development',Shared marketing opportunities'
+"
+      title: "Technology Partners","
+      description:""
+        "Collaborate with leading tech companies to deliver cutting-edge solutions","
+      icon: "🔧","
+      benefits: [""
+        "Access to latest technologies",Joint product development",Shared marketing opportunities"
       ]},
     {}
-'
-      title: 'Channel Partners','
-      description:''
-        'Expand your reach through our global network of resellers and distributors','
-      icon: '🌐','
-      benefits: [''
-        'Increased market presence',Revenue sharing programs',Training and certification'
+"
+      title: "Channel Partners","
+      description:""
+        "Expand your reach through our global network of resellers and distributors","
+      icon: "🌐","
+      benefits: [""
+        "Increased market presence",Revenue sharing programs",Training and certification"
       ]},
     {}
-'
-      title: 'Strategic Partners','
-      description:''
-        'Form long-term alliances for mutual growth and market expansion','
-      icon: '🤝','
-      benefits: [''
-        'Joint ventures',Market expansion support',Shared R&D initiatives'
+"
+      title: "Strategic Partners","
+      description:""
+        "Form long-term alliances for mutual growth and market expansion","
+      icon: "🤝","
+      benefits: [""
+        "Joint ventures",Market expansion support",Shared R&D initiatives"
       ]},
     {}
-'
-      title: 'Academic Partners','
-      description:''
-        'Partner with universities and research institutions for innovation','
-      icon: '🎓','
-      benefits: [''
-        'Research collaboration',Talent pipeline',Innovation programs'
+"
+      title: "Academic Partners","
+      description:""
+        "Partner with universities and research institutions for innovation","
+      icon: "🎓","
+      benefits: [""
+        "Research collaboration",Talent pipeline",Innovation programs"
       ]}
   ];
   const existingPartners = []
     {}
-'
-''
-'''
-      name: 'Microsoft','''
-      logo: 'https://images.unsplash.com/photo-1634942537034-2531766767d9?w=200&h=200&fit=crop','''
-      category: 'Technology Partner','''
-      description: 'Leading cloud and AI solutions provider','''
-      year: '2020'},
+"
+""
+"""
+      name: "Microsoft","""
+      logo: "https://images.unsplash.com/photo-1634942537034-2531766767d9?w=200&h=200&fit=crop","""
+      category: "Technology Partner","""
+      description: "Leading cloud and AI solutions provider","""
+      year: "2020"},
     {}
-'
-''
-'''
-      name: 'Amazon Web Services','''
-      logo: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&h=200&fit=crop','''
-      category: 'Cloud Partner','''
-      description: "World's most comprehensive cloud platform",'''
-      year: '2021'},
+"
+""
+"""
+      name: "Amazon Web Services","""
+      logo: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&h=200&fit=crop","""
+      category: "Cloud Partner","""
+      description: "World"s most comprehensive cloud platform","""
+      year: "2021"},
     {}
-'
-''
-'''
-      name: 'Google Cloud','''
-      logo: 'https://images.unsplash.com/photo-1611162617213-2d3e1baee311?w=200&h=200&fit=crop','''
-      category: 'AI Partner','''
-      description: 'Advanced AI and machine learning solutions','''
-      year: '2022'},
+"
+""
+"""
+      name: "Google Cloud","""
+      logo: "https://images.unsplash.com/photo-1611162617213-2d3e1baee311?w=200&h=200&fit=crop","""
+      category: "AI Partner","""
+      description: "Advanced AI and machine learning solutions","""
+      year: "2022"},
     {}
-'
-''
-'''
-      name: 'IBM','''
-      logo: 'https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=200&h=200&fit=crop','''
-      category: 'Enterprise Partner','''
-      description: 'Enterprise AI and quantum computing','''
-      year: '2021'},
+"
+""
+"""
+      name: "IBM","""
+      logo: "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=200&h=200&fit=crop","""
+      category: "Enterprise Partner","""
+      description: "Enterprise AI and quantum computing","""
+      year: "2021"},
     {}
-'
-''
-'''
-      name: 'Stanford University','''
-      logo: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=200&h=200&fit=crop','''
-      category: 'Academic Partner','''
-      description: 'Research collaboration in AI and technology','''
-      year: '2023'},
+"
+""
+"""
+      name: "Stanford University","""
+      logo: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=200&h=200&fit=crop","""
+      category: "Academic Partner","""
+      description: "Research collaboration in AI and technology","""
+      year: "2023"},
     {}
-'
-      name: 'MIT','
-      logo: 'https://images.unsplash.com/photo-1562774053-701939374585?w=200&h=200&fit=crop','
-      category: 'Research Partner','
-      description: 'Innovation in emerging technologies','
-      year: '2022'}
+"
+      name: "MIT","
+      logo: "https://images.unsplash.com/photo-1562774053-701939374585?w=200&h=200&fit=crop","
+      category: "Research Partner","
+      description: "Innovation in emerging technologies","
+      year: "2022"}
   ];
   const benefits = []
     {}
-      icon: TrendingUp,'
-      title: 'Revenue Growth','
-      description:''
-        'Access new markets and customer segments through our global network'},
+      icon: TrendingUp,"
+      title: "Revenue Growth","
+      description:""
+        "Access new markets and customer segments through our global network"},
     {}
-      icon: Users,'
-      title: 'Network Expansion','
-      description:''
-        'Connect with industry leaders and potential customers worldwide'},
+      icon: Users,"
+      title: "Network Expansion","
+      description:""
+        "Connect with industry leaders and potential customers worldwide"},
     {}
-      icon: Award,'
-      title: 'Brand Recognition','
-      description: 'Leverage our established reputation in the tech industry'},
+      icon: Award,"
+      title: "Brand Recognition","
+      description: "Leverage our established reputation in the tech industry"},
     {}
-      icon: Globe,'
-      title: 'Global Reach','
-      description:''
-        'Expand your business presence across multiple countries and regions'}
+      icon: Globe,"
+      title: "Global Reach","
+      description:""
+        "Expand your business presence across multiple countries and regions"}
   ];"""
   return (""""
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700 pt-20">"""
-      {/* Hero Section */}""""
+      {/* comment */}""""
       <section className="py-16 bg-gradient-to-r from-zion-cyan to-zion-purple">""""
         <div className="container mx-auto px-4 text-center">""""
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Partner with Zion Tech Group"""
           </h1>""""
-          <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">'
-            Join our ecosystem of innovative partners and together we'll shape;
+          <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">"
+            Join our ecosystem of innovative partners and together we"ll shape;
             the future of technology"""
           </p>""""
           <div className="flex flex-col sm:flex-row gap-4 justify-center">""""
@@ -160,7 +160,7 @@ export default function Partners() {}
           </div>
         </div>
       </section>"""
-      {/* Partnership Types */}""""
+      {/* comment */}""""
       <section id="partnership-types" className="py-16">""""
         <div className="container mx-auto px-4">""""
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -185,7 +185,7 @@ export default function Partners() {}
                       key={benefitIndex}""""
                       className="flex items-center text-zion-slate-light text-sm""""
                     >""""
-                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0"  />
                       {benefit}
                     </li>) ) }
                 </ul>
@@ -193,7 +193,7 @@ export default function Partners() {}
           </div>
         </div>
       </section>"""
-      {/* Benefits */}""""
+      {/* comment */}""""
       <section className="py-16 bg-zion-slate-dark">""""
         <div className="container mx-auto px-4">""""
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -215,7 +215,7 @@ export default function Partners() {}
           </div>
         </div>
       </section>"""
-      {/* Existing Partners */}""""
+      {/* comment */}""""
       <section className="py-16">""""
         <div className="container mx-auto px-4">""""
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -231,8 +231,7 @@ export default function Partners() {}
                   <img;
                     src={partner.logo}"""
                     alt={partner.name}""""
-                    className="w-16 h-16 rounded-lg object-cover"""
-                  />"""
+                    className="w-16 h-16 rounded-lg object-cover""" />"""
                   <div>""""
                     <h3 className="text-lg font-semibold text-white">
                       {partner.name}"""
@@ -257,7 +256,7 @@ export default function Partners() {}
           </div>
         </div>
       </section>"""
-      {/* Partnership Process */}""""
+      {/* comment */}""""
       <section className="py-16 bg-zion-slate-dark">""""
         <div className="container mx-auto px-4">""""
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -309,13 +308,13 @@ export default function Partners() {}
           </div>
         </div>
       </section>"""
-      {/* CTA Section */}""""
+      {/* comment */}""""
       <section className="py-16 bg-gradient-to-r from-zion-cyan to-zion-purple">""""
         <div className="container mx-auto px-4 text-center">""""
           <h2 className="text-3xl font-bold text-white mb-4">
             Ready to Join Our Partner Network?"""
           </h2>""""
-          <p className="text-white/90 mb-8 max-w-2xl mx-auto">'
+          <p className="text-white/90 mb-8 max-w-2xl mx-auto">"
             Let's explore how we can work together to create innovative;
             solutions and drive mutual success in the technology industry."""
           </p>""""
@@ -323,7 +322,7 @@ export default function Partners() {}
             <Link to="/contact">""""
               <button className="px-8 py-4 bg-white text-zion-blue rounded-lg font-semibold hover:scale-105 transition-transform flex items-center space-x-2">"""
                 <span>Start Partnership Discussion</span>""""
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5"  />
               </button>"""
             </Link>""""
             <Link to="/about">""""
@@ -340,11 +339,7 @@ export default function Partners() {}
 
 
 export { Partners };
-
 export { Partners };
-
 export { Partners };
-
 export { Partners };
-
 export { Partners };

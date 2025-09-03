@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { 
-  Search, 
-  Filter, 
-  Calendar, 
-  User, 
+  Search,
+  Filter,
+  Calendar,
+  User,
   ArrowRight,
   Clock,
   Tag,
@@ -30,9 +30,10 @@ import {
   Share2,
   MessageCircle,
   ExternalLink
-} from 'lucide-react';
+} from "lucide-react";
 import React from "react"
 import { motion } from "framer - motion",,"});,"})
+}
 }
 export default function Blog() {return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
@@ -53,7 +54,6 @@ export default function Blog() {}
   Calendar, User, ArrowRight, Tag, Clock, TrendingUp,
   Brain, Atom, Rocket, Shield, Globe, Code} from "lucide-react
 export default function Blog() {;
-
   const blogPosts = [],"
       image: "/api/placeholder/600/400",
 featured: true},
@@ -117,14 +117,16 @@ featured: false}
     const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory;
+    const matchesCategory = selectedCategory === "all" || post.category === selectedCategory;
       ]
 
   const categories = []
 
   const featuredPosts = blogPosts.filter(post => post.featured)
 }
+}
   const regularPosts = blogPosts.filter(post => !post.featured)
+}
 }
   return (
     
@@ -255,7 +257,9 @@ export default function Blog() {
   const categories = []
   const featuredPosts = blogPosts.filter(post => post.featured)
 }
+}
   const regularPosts = blogPosts.filter()
+}
 }
   return (
     <>"
@@ -335,7 +339,7 @@ transition="{{" duration: 0.8 }}"
               {featuredPosts.length > 0 && (&quot}"
                 <section className="&quot;mb-16&quot;">&quot;""
                   <h2 className="&quot;text-3xl" font-bold text-white mb-8 flex items-center&quot;>&quot;""
-                    <TrendingUp className="&quot;w-8" h-8 mr-3 text-blue-400&quot;       />
+                    <TrendingUp className="&quot;w-8" h-8 mr-3 text-blue-400&quot;         />
                     Featured Articles&quot
                   </h2>"
                   <div className="&quot;grid" grid-cols-1 md: grid-cols-2 gap-8&quot,>
@@ -414,16 +418,16 @@ key = "{post.id}""
                           <div className="&quot;flex" items-center justify-between text-sm text-gray-400&quot;>&quot;""
                             <div className="&quot;flex" items-center gap-4&quot;>&quot;""
                               <span className="&quot;flex" items-center&quot;>&quot;""
-                                <User className="&quot;w-4" h-4 mr-1&quot;       />
+                                <User className="&quot;w-4" h-4 mr-1&quot;         />
                                 {post.author}&quot
                               </span>"
                               <span className="&quot;flex" items-center&quot;>&quot;""
-                                <Calendar className="&quot;w-4" h-4 mr-1&quot;       />
+                                <Calendar className="&quot;w-4" h-4 mr-1&quot;         />
                                 {new Date(post.date).toLocaleDateString()}&quot
                               </span>
                             </div>"
                             <span className="&quot;flex" items-center&quot;>&quot;""
-                              <Clock className="&quot;w-4" h-4 mr-1&quot;       />
+                              <Clock className="&quot;w-4" h-4 mr-1&quot;         />
                               {post.readTime}&quot
                             </span>
                           </div>
@@ -530,15 +534,15 @@ key = "{post.id}""
                           <div className="&quot;flex" items-center justify-between&quot;>&quot;""
                             <div className="&quot;flex" items-center gap-4 text-sm text-gray-400&quot;>&quot;""
                               <span className="&quot;flex" items-center&quot;>&quot;""
-                                <User className="&quot;w-4" h-4 mr-1&quot;       />
+                                <User className="&quot;w-4" h-4 mr-1&quot;         />
                                 {post.author}&quot
                               </span>"
                               <span className="&quot;flex" items-center&quot;>&quot;""
-                                <Calendar className="&quot;w-4" h-4 mr-1&quot;       />
+                                <Calendar className="&quot;w-4" h-4 mr-1&quot;         />
                                 {new Date(post.date).toLocaleDateString()}&quot
                               </span>"
                               <span className="&quot;flex" items-center&quot;>&quot;""
-                                <Clock className="&quot;w-4" h-4 mr-1&quot;       />
+                                <Clock className="&quot;w-4" h-4 mr-1&quot;         />
                                 {post.readTime}&quot
                               </span>
                             </div>"
@@ -547,7 +551,7 @@ key = "{post.id}""
                               className = ""flex" items-center text-blue-400 hover: text-blue-300 transition-colors"
                             >,
                               Read More&quot,",
-                              <ArrowRight className="&quot;w-4" h-4 ml-1&quot,       />&quot,
+                              <ArrowRight className="&quot;w-4" h-4 ml-1&quot,         />&quot,
                             </Link>
                           </div>
                     </motion.article>

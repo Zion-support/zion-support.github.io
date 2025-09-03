@@ -361,7 +361,9 @@ const EnhancedServicesShowcase = () => {}""
       service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
       service.tagline.toLowerCase().includes(searchTerm.toLowerCase())
 }
+}
     return matchesCategory && matchesSearch})
+}
 }  const containerVariants = {}
 
     hidden: { opacity: 0 }, visible: {}
@@ -705,14 +707,8 @@ https: // comment
       </section>
     </div>)};
 export default EnhancedServicesShowcase;
-
-
 export { EnhancedServicesShowcase };
-
 export { EnhancedServicesShowcase };
-
 export { EnhancedServicesShowcase };
-
 export { EnhancedServicesShowcase };
-
 export { EnhancedServicesShowcase };

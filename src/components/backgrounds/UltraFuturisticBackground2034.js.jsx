@@ -1,10 +1,11 @@
-import React from 'react'; const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = "quantum" }) => { const canvasRef = useRef(null); const animationRef = useRef(); useEffect(() => { const canvas = canvasRef.current; if(!canvas) return; const ctx = canvas.getContext("2d"); if(!ctx) return; canvas.width = window.innerWidth; canvas.height = window.innerHeight; const particles = []; const colors = { quantum["#00ffff",#ff00ff",#ffff00",#00ff00"],; neon["#ff0080",#8000ff",#00ffff",#ffff00"],; holographic["#ff6b6b",#4ecdc4",#45b7d1",; "#96ceb4"] }; const selectedColors = colors[theme];
-
+import React from "react"; const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = "quantum" }) => { const canvasRef = useRef(null); const animationRef = useRef(); useEffect(() => { const canvas = canvasRef.current; if(!canvas) return; const ctx = canvas.getContext("2d"); if(!ctx) return; canvas.width = window.innerWidth; canvas.height = window.innerHeight; const particles = []; const colors = { quantum["#00ffff",#ff00ff",#ffff00",#00ff00"],; neon["#ff0080",#8000ff",#00ffff",#ffff00"],; holographic["#ff6b6b",#4ecdc4",#45b7d1",; "#96ceb4"] }; const selectedColors = colors[theme];
  const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = "quantum" }) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef.current if (!canvas) return const ctx = canvas.getContext("2d") if (!ctx) return canvas.width = window.innerWidth canvas.height = window.innerHeight const particles = [] const colors = {} const selectedColors = colors[theme];import React, { useEffect, useRef }  from "react";const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = "quantum" }) => {}
 
     const canvasRef = useRef()
 }
+}
     const animationRef = useRef()
+}
 }
     useEffect(() => {}
 
@@ -13,7 +14,9 @@ if (!canvas)""
             return""
         const ctx = canvas.getContext()
 }
+}
         if()
+}
 }
             return,
 canvas.width = window.innerWidth,
@@ -41,6 +44,7 @@ const particles = []"
 
             ctx.clearRect()
 }
+}
             // comment
 particles.forEach((particle, index) => {}
 
@@ -49,14 +53,18 @@ particle.y += particle.vy,
                 // comment
 if()
 }
+}
                     particle.x = canvas.width,
 if()
+}
 }
                     particle.x = 0,
 if()
 }
+}
                     particle.y = canvas.height,
 if()
+}
 }
                     particle.y = 0,
                 // comment
@@ -65,14 +73,17 @@ ctx.beginPath()"""
                 ctx.fillStyle = "${particle.color}${Math.floor(particle.opacity * 255).toString(16).padStart(2, 0")}""
                 ctx.fill()
 }
+}
                 // comment
 particles.forEach((otherParticle, otherIndex) => {}
 
                     if()
 }
+}
                         return,
 const distance = Math.sqrt(Math.pow(particle.x - otherParticle.x, 2) +
                         Math.pow(particle.y - otherParticle.y, 2))
+}
 }
                     if(distance < 150) {}"
                         ctx.beginPath()""""
@@ -107,7 +118,9 @@ ctx.stroke()}""
 
                         ctx.beginPath()
 }
+}
                         ctx.arc()
+}
 }
                         ctx.strokeStyle = particle.color,
 ctx.lineWidth = 1,
@@ -145,25 +158,20 @@ for(let x = 0 x < canvas.width x += gridSize) {}
             canvas.width = window.innerWidth""
             canvas.height = window.innerHeight}""
         window.addEventListener()
+}
 }        return () => {}
 
             if(animationRef.current) {}
-                cancelAnimationFrame(animationRef.current)}'
-            window.removeEventListener('resize', handleResize)}}, [intensity, theme]);
+                cancelAnimationFrame(animationRef.current)}"
+            window.removeEventListener("resize", handleResize)}}, [intensity, theme]);
     return (<canvas ref={canvasRef} className="fixed inset-0 pointer-events-none z-0" style = {}
   {}
-            opacity: intensity,'
-  filter: theme === 'quantum' ? 'blur(0.5px)' : 'none'
-}}/>)};
+            opacity: intensity,"
+  filter: theme === "quantum" ? "blur(0.5px)" : "none"
+}}  />)};
 export default UltraFuturisticBackground2034;
-
-
 export { UltraFuturisticBackground2034 };
-
 export { UltraFuturisticBackground2034 };
-
 export { UltraFuturisticBackground2034 };
-
 export { UltraFuturisticBackground2034 };
-
 export { UltraFuturisticBackground2034 };

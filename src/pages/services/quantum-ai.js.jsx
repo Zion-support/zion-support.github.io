@@ -1,9 +1,10 @@
-import React from 'react';'''
-import Link from 'next/link';
+import React from "react";"""
+import Link from "next/link';
 const QuantumAIServices = () => {}
   return()
+}
     <div className="min-h-screen bg-slate-900 text-white">"""
-      {/* Header Section */}""""
+      {/* comment */}""""
       <div className="pt-20 pb-16 bg-gradient-to-br from-slate-900 via-blue-900/20 to-cyan-900/20">""""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""""
           <div className="text-center">""""
@@ -33,7 +34,7 @@ const QuantumAIServices = () => {}
         </div>
       </div>
 """
-      {/* Services Overview */}""""
+      {/* comment */}""""
       <div className="py-20 bg-slate-800/50">""""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""""
           <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
@@ -98,7 +99,7 @@ const QuantumAIServices = () => {}
         </div>
       </div>
 """
-      {/* Use Cases */}""""
+      {/* comment */}""""
       <div className="py-20 bg-slate-900">""""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""""
           <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
@@ -156,7 +157,7 @@ const QuantumAIServices = () => {}
         </div>
       </div>
 """
-      {/* CTA Section */}""""
+      {/* comment */}""""
       <div className="py-20 bg-gradient-to-r from-blue-900/20 to-cyan-900/20">""""
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">""""
           <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
@@ -186,14 +187,8 @@ const QuantumAIServices = () => {}
   );
 };
 export default QuantumAIServices;
-
-
 export { QuantumAIServices };
-
 export { QuantumAIServices };
-
 export { QuantumAIServices };
-
 export { QuantumAIServices };
-
 export { QuantumAIServices };

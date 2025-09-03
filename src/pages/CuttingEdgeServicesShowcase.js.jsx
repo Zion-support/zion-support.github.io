@@ -1,42 +1,42 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 ;
 ;
 const CuttingEdgeServicesShowcase = () => {
-    const [selectedCategory, setSelectedCategory] = useState('All');
-    const [selectedIndustry, setSelectedIndustry] = useState('All');
-    const [searchTerm, setSearchTerm] = useState('');
+    const [selectedCategory, setSelectedCategory] = useState("All");
+    const [selectedIndustry, setSelectedIndustry] = useState("All");
+    const [searchTerm, setSearchTerm] = useState("");
     const allServices = [...cuttingEdgeInnovations2025, ...specializedIndustrySolutions2025];
-    const categories = ['All', ...Array.from(new Set(allServices.map(service => service.category)))];
-    const industries = ['All', ...Array.from(new Set(specializedIndustrySolutions2025.map(service => service.industry)))];
+    const categories = ["All", ...Array.from(new Set(allServices.map(service => service.category)))];
+    const industries = ["All", ...Array.from(new Set(specializedIndustrySolutions2025.map(service => service.industry)))];
     const filteredServices = allServices.filter(service => {
-        const categoryMatch = selectedCategory === 'All' || service.category === selectedCategory;
-        const industryMatch = selectedIndustry === 'All' ||
-            ('industry' in service ? service.industry === selectedIndustry : true);
+        const categoryMatch = selectedCategory === "All" || service.category === selectedCategory;
+        const industryMatch = selectedIndustry === "All" ||
+            ("industry" in service ? service.industry === selectedIndustry : true);
         const searchMatch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
         return categoryMatch && industryMatch && searchMatch});
     const formatPrice = (price, model) => {
-        if (model === 'percentage of revenue') {
-            return `${price}% of revenue`}
-        else if (model === 'per device per day') {
-            return `$${price.toFixed(2)}/device/day`}
-        else if (model === 'per kWh managed') {
-            return `$${price.toFixed(3)}/kWh`}
-        else if (model === 'per acre') {
-            return `$${price.toFixed(2)}/acre/month`}
-        else if (model === 'per inference') {
-            return `$${price.toFixed(3)}/inference`}
-        else if (model === 'monthly per student') {
-            return `$${price}/student/month`}
-        else if (model === 'monthly per attorney') {
-            return `$${price}/attorney/month`}
+        if (model === "percentage of revenue") {
+            return "${price}% of revenue"}
+        else if (model === "per device per day") {
+            return "$${price.toFixed(2)}/device/day"}
+        else if (model === "per kWh managed") {
+            return "$${price.toFixed(3)}/kWh"}
+        else if (model === "per acre") {
+            return "$${price.toFixed(2)}/acre/month"}
+        else if (model === "per inference") {
+            return "$${price.toFixed(3)}/inference"}
+        else if (model === "monthly per student") {
+            return "$${price}/student/month"}
+        else if (model === "monthly per attorney") {
+            return "$${price}/attorney/month"}
         else {
-            return `$${price}/${model}`}
+            return "$${price}/${model}"}
     };
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 pt-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        {/* Header Section */}
+        {/* comment */}
         <div className="text-center mb-20">          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             Cutting-Edge Innovation Services 2025"""
           </h1>""""
@@ -61,7 +61,7 @@ const CuttingEdgeServicesShowcase = () => {
           </div>
         </div>
 """
-        {/* Contact Information */}""""
+        {/* comment */}""""
         <div className="bg-slate-800/50 border border-white/10 rounded-2xl p-8 mb-12">""""
           <div className="text-center">""""
             <h2 className="text-2xl font-bold text-white mb-4">
@@ -84,8 +84,7 @@ const CuttingEdgeServicesShowcase = () => {
                       strokeLinecap="round""""
                       strokeLinejoin="round""""
                       strokeWidth={2}""""
-                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"""
-                    />
+                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z""" />
                   </svg>"""
                 </div>""""
                 <h3 className="text-white font-semibold mb-2">Phone</h3>""""
@@ -103,8 +102,7 @@ const CuttingEdgeServicesShowcase = () => {
                       strokeLinecap="round""""
                       strokeLinejoin="round""""
                       strokeWidth={2}""""
-                      d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"""
-                    />
+                      d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z""" />
                   </svg>"""
                 </div>""""
                 <h3 className="text-white font-semibold mb-2">Email</h3>""""
@@ -122,20 +120,18 @@ const CuttingEdgeServicesShowcase = () => {
                       strokeLinecap="round""""
                       strokeLinejoin="round""""
                       strokeWidth={2}""""
-                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"""
-                    />"""
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z""" />"""
                     <path""""
                       strokeLinecap="round""""
                       strokeLinejoin="round""""
                       strokeWidth={2}""""
-                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"""
-                    />
+                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z""" />
                   </svg>"""
                 </div>""""
                 <h3 className="text-white font-semibold mb-2">Address</h3>""""
                 <p className="text-purple-400 text-sm">
                   364 E Main St STE 1008;
-                  <br />
+                  <br  />
                   Middletown DE 19709;
                 </p>
               </div>
@@ -143,7 +139,7 @@ const CuttingEdgeServicesShowcase = () => {
           </div>
         </div>
 """
-        {/* Filters */}""""
+        {/* comment */}""""
         <div className="mb-12">""""
           <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">""""
             <div className="flex flex-wrap gap-4">
@@ -176,8 +172,7 @@ const CuttingEdgeServicesShowcase = () => {
                 placeholder="Search services..."""
                 value={searchTerm}"""
                 onChange={e => setSearchTerm(e.target.value)}""""
-                className="px-4 py-2 pl-10 bg-slate-800 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 w-64"""
-              />"""
+                className="px-4 py-2 pl-10 bg-slate-800 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 w-64""" />"""
               <svg""""
                 className="w-5 h-5 text-gray-400 absolute left-3 top-2.5""""
                 fill="none""""
@@ -188,21 +183,20 @@ const CuttingEdgeServicesShowcase = () => {
                   strokeLinecap="round""""
                   strokeLinejoin="round""""
                   strokeWidth={2}""""
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"""
-                />
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z""" />
               </svg>
             </div>
           </div>
         </div>
 """
-        {/* Services Grid */}""""
+        {/* comment */}""""
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
           {filteredServices.map(service => (
             <div"""
               key={service.id}""""
               className="bg-slate-800/50 border border-white/10 rounded-2xl p-6 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105"""
             >"""
-              {/* Service Header */}""""
+              {/* comment */}""""
               <div className="mb-4">""""
                 <div className="flex items-start justify-between mb-3">""""
                   <div className="flex-1">""""
@@ -211,8 +205,8 @@ const CuttingEdgeServicesShowcase = () => {
                     </h3>""""
                     <p className="text-blue-400 text-sm font-medium">
                       {service.category}
-                    </p>'"""
-                    {'industry' in service && (""""
+                    </p>""""
+                    {"industry" in service && (""""
                       <p className="text-green-400 text-sm">
                         {service.industry}
                       </p>
@@ -229,12 +223,12 @@ const CuttingEdgeServicesShowcase = () => {
                 </div>
               </div>
 """
-              {/* Description */}""""
+              {/* comment */}""""
               <p className="text-gray-300 text-sm mb-4 leading-relaxed">
                 {service.description}
               </p>
 """
-              {/* Key Features */}""""
+              {/* comment */}""""
               <div className="mb-4">""""
                 <h4 className="text-white font-semibold mb-2 text-sm">
                   Key Features"""
@@ -255,8 +249,7 @@ const CuttingEdgeServicesShowcase = () => {
                           strokeLinecap="round""""
                           strokeLinejoin="round""""
                           strokeWidth={2}""""
-                          d="M5 13l4 4L19 7"""
-                        />
+                          d="M5 13l4 4L19 7""" />
                       </svg>
                       {feature}
                     </div>
@@ -264,7 +257,7 @@ const CuttingEdgeServicesShowcase = () => {
                 </div>
               </div>
 """
-              {/* Benefits */}""""
+              {/* comment */}""""
               <div className="mb-4">""""
                 <h4 className="text-white font-semibold mb-2 text-sm">
                   Benefits"""
@@ -285,8 +278,7 @@ const CuttingEdgeServicesShowcase = () => {
                           strokeLinecap="round""""
                           strokeLinejoin="round""""
                           strokeWidth={2}""""
-                          d="M13 10V3L4 14h7v7l9-11h-7z"""
-                        />
+                          d="M13 10V3L4 14h7v7l9-11h-7z""" />
                       </svg>
                       {benefit}
                     </div>
@@ -294,7 +286,7 @@ const CuttingEdgeServicesShowcase = () => {
                 </div>
               </div>
 """
-              {/* Additional Info */}""""
+              {/* comment */}""""
               <div className="grid grid-cols-2 gap-4 text-xs mb-4">"""
                 <div>""""
                   <span className="text-gray-400">Market Price:</span>""""
@@ -318,18 +310,18 @@ const CuttingEdgeServicesShowcase = () => {
                   <span className="text-gray-400">Free Tier:</span>
                   <div;
                     className={}
-'
-''
-'''
-                      service.freeTier ? 'text-green-400' : 'text-red-400''
-                    }''
-                  >'''
-                    {service.freeTier ? 'Yes' : 'No'}
+"
+""
+"""
+                      service.freeTier ? "text-green-400" : "text-red-400""
+                    }""
+                  >"""
+                    {service.freeTier ? "Yes" : "No'}
                   </div>
                 </div>
               </div>
 """
-              {/* Tags */}""""
+              {/* comment */}""""
               <div className="mb-4">""""
                 <div className="flex flex-wrap gap-2">
                   {service.tags.slice(0, 4).map((tag, idx) => (
@@ -343,10 +335,10 @@ const CuttingEdgeServicesShowcase = () => {
                 </div>
               </div>
 """
-              {/* Contact Button */}""""
-              <div className="text-center">`
-                <a`"`
-                  href={`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.name}`}""""
+              {/* comment */}""""
+              <div className="text-center">"
+                <a"""
+                  href={"mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.name}`}""""
                   className="inline-block w-full px-4 py-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-medium rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-200"""
                 >
                   Get Started"""
@@ -359,7 +351,7 @@ const CuttingEdgeServicesShowcase = () => {
           ))}
         </div>
 """
-        {/* Call to Action */}""""
+        {/* comment */}""""
         <div className="text-center mt-20">""""
           <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-2xl p-12">""""
             <h2 className="text-3xl font-bold text-white mb-4">
@@ -389,14 +381,8 @@ const CuttingEdgeServicesShowcase = () => {
       </div>
     </div>)};
 export default CuttingEdgeServicesShowcase;
-
-
 export { CuttingEdgeServicesShowcase };
-
 export { CuttingEdgeServicesShowcase };
-
 export { CuttingEdgeServicesShowcase };
-
 export { CuttingEdgeServicesShowcase };
-
 export { CuttingEdgeServicesShowcase };

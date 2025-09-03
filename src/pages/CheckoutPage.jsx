@@ -1,14 +1,15 @@
-import { useNavigate } from 'react-router-dom'; // Changed from useParams''''
-import { useEffect, useState } from 'react';'''
-import { Elements } from '@stripe/react-stripe-js';'''
-import { getStripe } from '@/utils/getStripe';'''
-import CardForm from '@/components/checkout/CardForm';'''
-import CheckoutProgress from '@/components/checkout/CheckoutProgress';'''
-import { NEW_PRODUCTS } from '@/data/newProductsData';
+import React from "react"
+import { useNavigate } from "react-router-dom"; // Changed from useParams""""
+import { useEffect, useState } from "react";"""
+import { Elements } from "@stripe/react-stripe-js";"""
+import { getStripe } from "@/utils/getStripe";"""
+import CardForm from "@/components/checkout/CardForm";"""
+import CheckoutProgress from "@/components/checkout/CheckoutProgress";"""
+import { NEW_PRODUCTS } from "@/data/newProductsData";
 export default function CheckoutPage() {}
   const router = useNavigate();
-  const { id: rawId } = router.query;'
-  const id = typeof rawId === 'string' ? rawId : null;
+  const { id: rawId } = router.query;"
+  const id = typeof rawId === "string" ? rawId : null;
   const [product, setProduct] = useState(null);
   const [intent, setIntent] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -19,15 +20,15 @@ export default function CheckoutPage() {}
       setIsLoading(true);
       setError(null);
       try {}
-        const res = await fetch(`/api/products/${id}`);'
-        if (!res.ok) throw new Error('Failed to fetch product');
+        const res = await fetch("/api/products/${id}");"
+        if (!res.ok) throw new Error("Failed to fetch product");
         const data = await res.json();
         setProduct(data);
       } catch (err) {}
-'
-''
-'''
-        // // // // // // // // console.error('Failed to load product', err);
+"
+""
+"""
+        // // // // // // // // console.error("Failed to load product', err);
         setError(err.message);
         const fallback = NEW_PRODUCTS.find(p => p.id === id) || null;
         setProduct(fallback);
@@ -53,7 +54,7 @@ export default function CheckoutPage() {}
   return (""""
     <div className="container max-w-2xl py-10 space-y-6">""""
       <h1 className="text-3xl font-bold">Checkout</h1>""""
-      <CheckoutProgress currentStep={1} className="mb-6" />"""
+      <CheckoutProgress currentStep={1} className="mb-6"  />"""
       <div>""""
         <p className="font-semibold">{product.title}</p>""""
         <p className="text-sm text-zion-slate-light">{product.description}</p>""""
@@ -66,7 +67,7 @@ export default function CheckoutPage() {}
           <p className="font-semibold">Payment Successful!</p>
           <p>Confirmation ID: {intent.id}</p>
         </div>) : (<Elements stripe={getStripe()}>
-          <CardForm amount={product.price ?? 0} onSuccess={setIntent}/>
+          <CardForm amount={product.price ?? 0} onSuccess={setIntent}  />
         </Elements>)}
       {!intent && (<p className="text-xs text-zion-slate-light text-center">
           Use test card 4242-4242-4242-4242 with  future date and CVC.
@@ -75,11 +76,7 @@ export default function CheckoutPage() {}
 
 
 export { CheckoutPage };
-
 export { CheckoutPage };
-
 export { CheckoutPage };
-
 export { CheckoutPage };
-
 export { CheckoutPage };

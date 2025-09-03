@@ -1,13 +1,13 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import { 
-  Brain, 
-  BarChart3, 
-  TrendingUp, 
-  Database, 
-  Zap, 
-  Shield, 
-  Cloud, 
+  Brain,
+  BarChart3,
+  TrendingUp,
+  Database,
+  Zap,
+  Shield,
+  Cloud,
   Users,
   CheckCircle,
   ArrowRight,
@@ -17,86 +17,81 @@ import {
   Cpu,
   Target,
   Lightbulb
-} from 'lucide-react';
-
+} from "lucide-react";
 const features = [
   {
     icon: Brain,
-    title: 'Predictive Analytics',
-    description: 'Advanced machine learning models that forecast trends and identify opportunities before they happen.',
-    benefits: ['Revenue optimization', 'Risk mitigation', 'Strategic planning', 'Market insights']
+    title: "Predictive Analytics",
+    description: "Advanced machine learning models that forecast trends and identify opportunities before they happen.",
+    benefits: ["Revenue optimization", "Risk mitigation", "Strategic planning", "Market insights"]
   },
   {
     icon: BarChart3,
-    title: 'Real-time Dashboards',
-    description: 'Interactive visualizations that provide instant insights into your business performance.',
-    benefits: ['Live monitoring', 'Custom metrics', 'Mobile access', 'Real-time alerts']
+    title: "Real-time Dashboards",
+    description: "Interactive visualizations that provide instant insights into your business performance.",
+    benefits: ["Live monitoring", "Custom metrics", "Mobile access", "Real-time alerts"]
   },
   {
     icon: TrendingUp,
-    title: 'Performance Optimization',
-    description: 'AI-driven recommendations to improve efficiency and maximize ROI across all operations.',
-    benefits: ['Cost reduction', 'Efficiency gains', 'Resource optimization', 'Process improvement']
+    title: "Performance Optimization",
+    description: "AI-driven recommendations to improve efficiency and maximize ROI across all operations.",
+    benefits: ["Cost reduction", "Efficiency gains", "Resource optimization", "Process improvement"]
   },
   {
     icon: Database,
-    title: 'Data Intelligence',
-    description: 'Transform raw data into actionable intelligence with advanced analytics and pattern recognition.',
-    benefits: ['Pattern discovery', 'Anomaly detection', 'Data quality', 'Insight generation']
+    title: "Data Intelligence",
+    description: "Transform raw data into actionable intelligence with advanced analytics and pattern recognition.",
+    benefits: ["Pattern discovery", "Anomaly detection", "Data quality", "Insight generation"]
   }
 ];
-
 const useCases = [
   {
-    industry: 'E-commerce',
-    title: 'Customer Behavior Analysis',
-    description: 'Predict customer preferences and optimize product recommendations for increased sales.',
+    industry: "E-commerce",
+    title: "Customer Behavior Analysis",
+    description: "Predict customer preferences and optimize product recommendations for increased sales.",
     icon: Users,
-    metrics: ['25% increase in conversion', '30% higher customer lifetime value', '40% reduction in cart abandonment']
+    metrics: ["25% increase in conversion", "30% higher customer lifetime value", "40% reduction in cart abandonment"]
   },
   {
-    industry: 'Finance',
-    title: 'Risk Assessment & Fraud Detection',
-    description: 'AI-powered systems that identify potential risks and fraudulent activities in real-time.',
+    industry: "Finance",
+    title: "Risk Assessment & Fraud Detection",
+    description: "AI-powered systems that identify potential risks and fraudulent activities in real-time.",
     icon: Shield,
-    metrics: ['99.9% fraud detection accuracy', '60% faster risk assessment', '80% reduction in false positives']
+    metrics: ["99.9% fraud detection accuracy", "60% faster risk assessment", "80% reduction in false positives"]
   },
   {
-    industry: 'Healthcare',
-    title: 'Patient Outcome Prediction',
-    description: 'Machine learning models that predict patient outcomes and optimize treatment plans.',
+    industry: "Healthcare",
+    title: "Patient Outcome Prediction",
+    description: "Machine learning models that predict patient outcomes and optimize treatment plans.",
     icon: Target,
-    metrics: ['90% prediction accuracy', '35% improvement in treatment outcomes', '50% reduction in readmissions']
+    metrics: ["90% prediction accuracy", "35% improvement in treatment outcomes", "50% reduction in readmissions"]
   },
   {
-    industry: 'Manufacturing',
-    title: 'Predictive Maintenance',
-    description: 'AI systems that predict equipment failures and optimize maintenance schedules.',
+    industry: "Manufacturing",
+    title: "Predictive Maintenance",
+    description: "AI systems that predict equipment failures and optimize maintenance schedules.",
     icon: Cpu,
-    metrics: ['70% reduction in downtime', '45% lower maintenance costs', '95% equipment reliability']
+    metrics: ["70% reduction in downtime", "45% lower maintenance costs", "95% equipment reliability"]
   }
 ];
-
 const technologies = [
-  { name: 'TensorFlow', description: 'Advanced deep learning framework', icon: Code },
-  { name: 'PyTorch', description: 'Flexible machine learning library', icon: Brain },
-  { name: 'Apache Spark', description: 'Big data processing engine', icon: Database },
-  { name: 'Kubernetes', description: 'Scalable deployment platform', icon: Cloud },
-  { name: 'AWS SageMaker', description: 'Cloud-based ML platform', icon: Cloud },
-  { name: 'Google Cloud AI', description: 'Enterprise AI services', icon: Globe }
+  { name: "TensorFlow", description: "Advanced deep learning framework", icon: Code },
+  { name: "PyTorch", description: "Flexible machine learning library", icon: Brain },
+  { name: "Apache Spark", description: "Big data processing engine", icon: Database },
+  { name: "Kubernetes", description: "Scalable deployment platform", icon: Cloud },
+  { name: "AWS SageMaker", description: "Cloud-based ML platform", icon: Cloud },
+  { name: "Google Cloud AI", description: "Enterprise AI services", icon: Globe }
 ];
-
 export default function AIAnalytics() {
   return (
     <div className="min-h-screen bg-futuristic">
-      {/* Hero Section */}
+      {/* comment */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 left-20 w-40 h-40 border border-zion-cyan rounded-full animate-pulse"></div>
           <div className="absolute bottom-32 right-32 w-32 h-32 border border-zion-purple rounded-full animate-pulse delay-1000"></div>
           <div className="absolute top-1/2 left-1/2 w-24 h-24 border border-zion-blue rounded-full animate-pulse delay-2000"></div>
         </div>
-        
         <div className="container-responsive relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -106,7 +101,7 @@ export default function AIAnalytics() {
           >
             <div className="flex items-center justify-center space-x-3 mb-6">
               <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center">
-                <Brain className="w-8 h-8 text-white" />
+                <Brain className="w-8 h-8 text-white"  />
               </div>
               <h1 className="text-5xl md:text-6xl font-bold text-gradient">
                 AI Analytics
@@ -133,8 +128,7 @@ export default function AIAnalytics() {
           </motion.div>
         </div>
       </section>
-
-      {/* Features Section */}
+      {/* comment */}
       <section className="py-20 bg-zion-slate-dark/30">
         <div className="container-responsive">
           <motion.div
@@ -167,7 +161,7 @@ export default function AIAnalytics() {
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit) => (
                     <li key={benefit} className="flex items-center space-x-3 text-zion-slate-light">
-                      <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0"  />
                       <span>{benefit}</span>
                     </li>
                   ))}
@@ -177,8 +171,7 @@ export default function AIAnalytics() {
           </div>
         </div>
       </section>
-
-      {/* Use Cases Section */}
+      {/* comment */}
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
@@ -216,7 +209,7 @@ export default function AIAnalytics() {
                 <div className="space-y-3">
                   {useCase.metrics.map((metric) => (
                     <div key={metric} className="flex items-center space-x-3 text-zion-slate-light">
-                      <TrendingUp className="w-4 h-4 text-zion-cyan flex-shrink-0" />
+                      <TrendingUp className="w-4 h-4 text-zion-cyan flex-shrink-0"  />
                       <span className="text-sm">{metric}</span>
                     </div>
                   ))}
@@ -226,8 +219,7 @@ export default function AIAnalytics() {
           </div>
         </div>
       </section>
-
-      {/* Technologies Section */}
+      {/* comment */}
       <section className="py-20 bg-zion-slate-dark/30">
         <div className="container-responsive">
           <motion.div
@@ -238,7 +230,7 @@ export default function AIAnalytics() {
           >
             <h2 className="text-4xl font-bold text-white mb-4">Cutting-Edge Technologies</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Built on the latest AI and machine learning technologies to ensure scalability, 
+              Built on the latest AI and machine learning technologies to ensure scalability,
               performance, and accuracy in all our analytics solutions.
             </p>
           </motion.div>
@@ -262,8 +254,7 @@ export default function AIAnalytics() {
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
+      {/* comment */}
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
@@ -274,7 +265,7 @@ export default function AIAnalytics() {
           >
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-zion-slate-light mb-8">
-              Join hundreds of companies already using AI analytics to drive growth, 
+              Join hundreds of companies already using AI analytics to drive growth,
               optimize operations, and gain competitive advantages.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

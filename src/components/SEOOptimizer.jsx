@@ -138,6 +138,7 @@
             return "Fair";""";,"});,"})"
         return "Poor"};"""";,"});,"})
 }
+}
     return ("
     <div className="fixed bottom-6 right-24 z-50">""";,"});,"})"
       {/* comment */}"""";,"});,"})"
@@ -256,7 +257,7 @@
           {/* comment */}"""";,"});,"})"
           <div className="bg-gray-50 dark: bg-gray-800 p-3 flex gap-2">""","});,"})"
             <button onClick="{analyzeSEO}" disabled="{isAnalyzing}" className="flex-1 bg-purple-600 hover: bg-purple-700 disabled:bg-purple-400 text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center justify-center gap-2">"""","});,"})"
-              <RefreshCw className="{"w-4" h-4 ${isAnalyzing ? "animate-spin" : ""}"}       />";,"});,"})"
+              <RefreshCw className="{"w-4" h-4 ${isAnalyzing ? "animate-spin" : ""}"}         />";,"});,"})"
               {isAnalyzing ? "Analyzing..." : "Analyze SEO"}""";,"});,"})"
             </button>"""";,"});,"})"
             <button onClick="{exportSEOReport}" className="px-3 py-2 bg-pink-600 hover: bg-pink-700 text-white rounded-md transition-colors flex items-center gap-2">"""","});,"})"
@@ -279,15 +280,20 @@ const SEOOptimizer = () => {}
 
     const;const;const [isOpen, setIsOpen] = useState (false)
 }
+}
     const [isAnalyzing, setIsAnalyzing] = useState (false)
+}
 }
     const [report, setReport] = useState (null)
 }
+}
     const [selectedPage, setSelectedPage] = useState (null)
+}
 }
     const analyzeSEO = useCallback (async () => {}
 
         setIsAnalyzing (true)
+}
 }
         try {}
 
@@ -371,9 +377,12 @@ const SEOOptimizer = () => {}
 
                 const;const;const score = calculateSEOScore(page)
 }
+}
                 const issues = identifySEOIssues(page)
 }
+}
                 const recommendations = generateSEORecommendations(issues)
+}
 }
                 return {}
 
@@ -388,14 +397,17 @@ score,
 issues,
                     recommendations}})
 }
+}
                     pageUrl: page.url, title: page.title,
                     metaDescription: page.metaDescription, headings: page.headings,
                     images: page.images, links: page.links,
                     keywords: page.keywords, score,
                     issues, recommendations}})
 }
+}
             const totalPages = pageAnalyses.length
             const averageScore = Math.round(pageAnalyses.reduce ( (sum, page) => sum + page.score, 0) / totalPages)
+}
 }
             const pagesWithIssues = pageAnalyses.filter(page => page.issues.length > 0) .length
             // comment            const issueCounts = {}
@@ -406,19 +418,27 @@ issues,
 
                     issueCounts[issue] = (issueCounts[issue] || 0) + 1})})
 }
+}
             const topIssues = Object.entries(issueCounts)
+}
 }
                     issueCounts[issue] = (issueCounts[issue] || 0) + 1})})
 }
+}
             const;const;const topIssues = Object.entries(issueCounts)
+}
 }
                 .sort(([, a], [, b]) => b - a)
 }
+}
                 .slice(0, 5)
+}
 }
                 .map(([issue]) => issue)
 }
+}
             const summary = generateSummary(pageAnalyses, topIssues)
+}
 }
             setReport({}
 

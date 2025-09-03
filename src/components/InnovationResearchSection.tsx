@@ -1,5 +1,5 @@
-import {  import { motion  } from 'framer-motion';
-
+import React from "react"
+import {  import { motion  } from "framer-motion";
  params - Function parameters
  * @returns {*} Function return value
  */
@@ -22,7 +22,7 @@ function InnovationResearchSection () {export function InnovationResearchSection
             breakthrough innovations, and collaborative partnerships with leading institutions.</p>
         </motion.div>
 
-        {/* Innovation Metrics */}
+        {/* comment */}
         <motion.div
           className="grid grid - cols - 2 md:grid - cols - 4 gap-8 mb-16"          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -40,7 +40,7 @@ function InnovationResearchSection () {export function InnovationResearchSection
           ))}
         </motion.div>
 
-        {/* Research Areas */}
+        {/* comment */}
         <motion.div "
           className="mb-16"
           initial={{ opacity: 0, y: 30 }}
@@ -56,7 +56,7 @@ function InnovationResearchSection () {export function InnovationResearchSection
             )})}
         </motion.div>
 
-        {/* Research Areas */}
+        {/* comment */}
         <motion.div
           className="mb-16"
           initial={{ opacity: 0, y: 30 }}
@@ -70,7 +70,7 @@ function InnovationResearchSection () {export function InnovationResearchSection
               </div>) }) }
         </motion.div>
 
-        {/* Research Areas */}
+        {/* comment */}
         <motion.div
           className="mb-16";          initial = {
 
@@ -95,7 +95,6 @@ function InnovationResearchSection () {export function InnovationResearchSection
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Active Research Areas
           </h3>
-
           <div className="grid grid - cols - 1 md:grid - cols - 2 gap-8">
             {researchAreas.map((area, index) => (<motion.div
                 key={area.title}
@@ -120,23 +119,21 @@ function InnovationResearchSection () {export function InnovationResearchSection
 }}
               >"
                 <div className="flex items-start gap-4">
-                  <div className={`w-16 h-16 bg-gradient-to-br ${area.color} rounded-xl flex items-center justify-center flex-shrink-0`}>"
+                  <div className={"w-16 h-16 bg-gradient-to-br ${area.color} rounded-xl flex items-center justify-center flex-shrink-0"}>"
                     <span className="text-2xl">{area.icon}</span>
                   </div>
-
                   <div className="flex -1">
                     <h4 className="text-xl font - bold text-white mb-2">{area.title}</h4>
                     <p className="text-gray - 400 text-sm mb-4">{area.description}</p>
-
                     <div className="mb-2">
                       <div className="flex justify - between text-sm text-gray - 300 mb-1">
                         <span > Research Progress</span>                        <span>{area.progress}%</span>
                       </div>"
                       <div className="w-full bg-slate-700 rounded-full h-2">
-                        <motion.div`
-                          className={`h-2 bg-gradient-to-r ${area.color} rounded-full`}
-                          initial={{ width: 0 }}`
-                          whileInView={{ width: `${area.progress}%` }}
+                        <motion.div"
+                          className={"h-2 bg-gradient-to-r ${area.color} rounded-full"}
+                          initial={{ width: 0 }}"
+                          whileInView={{ width: "${area.progress}%" }}
                           viewport={{ once: true }}
                           transition = {
 
@@ -151,8 +148,7 @@ function InnovationResearchSection () {export function InnovationResearchSection
                 </div>
               </motion.div>) }) }
         </div>
-
-        {/* Research Highlights */}
+        {/* comment */}
         <motion.div
           className="mb-12"          initial = {
 
@@ -178,7 +174,6 @@ function InnovationResearchSection () {export function InnovationResearchSection
             <h3 className="text-2xl font-bold text-white text-center mb-6">
               Latest Research Breakthroughs
             </h3>
-
             <div className="grid grid - cols - 1 md:grid - cols - 3 gap-6">
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient - to - br from - purple - 500 to - pink - 500 rounded-2xl flex items - center justify - center mx - auto mb-4">
@@ -187,7 +182,6 @@ function InnovationResearchSection () {export function InnovationResearchSection
                 <h4 className="text-lg font - bold text-white mb-2">AI Drug Discovery</h4>
                 <p className="text-gray - 400 text-sm">Accelerating pharmaceutical research with quantum AI</p>
               </div>
-
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient - to - br from - blue - 500 to - cyan - 500 rounded-2xl flex items - center justify - center mx - auto mb-4">
                   <span className="text-2xl">⚡</span>
@@ -195,7 +189,6 @@ function InnovationResearchSection () {export function InnovationResearchSection
                 <h4 className="text-lg font - bold text-white mb-2">Quantum Optimization</h4>
                 <p className="text-gray - 400 text-sm">Solving complex optimization problems 1000x faster</p>
               </div>
-
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient - to - br from - green - 500 to - emerald - 500 rounded-2xl flex items - center justify - center mx - auto mb-4">
                   <span className="text-2xl">🌱</span>
@@ -247,7 +240,6 @@ function InnovationResearchSection () {export function InnovationResearchSection
         </motion.div>
       </div>;
     </section>;) };
-
 export default InnovationResearchSection;"
             <span className="text-2xl">→</span>;
           </div>;

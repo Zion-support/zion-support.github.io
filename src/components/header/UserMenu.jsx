@@ -2,7 +2,9 @@ import React { useState, useRef, useEffect } from "react""";";";"""""react&apos;
 
 export function UserMenu({user }) {const [isOpen, setIsOpen] = useState(false)
 }
+}
   const menuRef = useRef(null)
+}
 }
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -13,7 +15,9 @@ export function UserMenu({user }) {const [isOpen, setIsOpen] = useState(false)
 ""
     document.addEventListener()
 }
+}
     return () => document.removeEventListener("mousedown", handleClickOutside)}, [])
+}
 }
   const handleLogout = () => {
     // comment

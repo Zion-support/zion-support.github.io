@@ -1,14 +1,14 @@
-import React from 'react';'''
-import { Helmet } from 'react-helmet-async';
+import React from "react";"""
+import { Helmet } from "react-helmet-async";
 const Developer = () => {}
   return()
+}
     <>
       <Helmet>
         <title>Developer Portal - Zion Tech Group</title>
-        <meta'
-          name="description"'"'"""
-          content="Access Zion Tech Group's developer portal for tools, SDKs, and integration resources."""
-        />
+        <meta"
+          name="description"""""""
+          content="Access Zion Tech Group"s developer portal for tools, SDKs, and integration resources.""" />
       </Helmet>"""
 """"
       <div className="min-h-screen bg-gray-50 py-12">""""
@@ -24,7 +24,7 @@ const Developer = () => {}
           </div>"""
 """"
           <div className="bg-white rounded-lg shadow-lg p-8">""""
-            <p className="text-gray-600 text-center">'
+            <p className="text-gray-600 text-center">"
               Developer portal coming soon. We're building comprehensive;
               development resources.
             </p>
@@ -33,14 +33,8 @@ const Developer = () => {}
       </div>
     </>)};
 export default Developer;
-
-
 export { Developer };
-
 export { Developer };
-
 export { Developer };
-
 export { Developer };
-
 export { Developer };

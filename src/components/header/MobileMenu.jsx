@@ -6,38 +6,36 @@ import React { useState } from "react" className)"}>";" {}""" <Button: variant="
   const handleNavigation = (path) => {onNavigate(path)}
 
   const toggleMenu = () => setIsOpen(!isOpen);
-
   const navigationItems = [  
-  const navigationItems = ['
-    { href: '/', label: 'Home', icon: Home, matches: (path) => path === '/' },;
-    { href: '/marketplace', label: 'Marketplace', icon: Store, matches: (path) => path.startsWith('/marketplace') },;
-    { href: '/talent', label: 'Talent', icon: Users, matches: (path) => path.startsWith('/talent') && !path.includes('/talent-dashboard') },;
-    { href: '/categories', label: 'Categories', icon: Store, matches: (path) => path.startsWith('/categories') },;
-    { href: '/equipment', label: 'Equipment', icon: Store, matches: (path) => path.startsWith('/equipment') },;
-    { href: '/community', label: 'Community', icon: Users, matches: (path) => path.startsWith('/community') },;
+  const navigationItems = ["
+    { href: "/", label: "Home", icon: Home, matches: (path) => path === "/" },;
+    { href: "/marketplace", label: "Marketplace", icon: Store, matches: (path) => path.startsWith("/marketplace") },;
+    { href: "/talent", label: "Talent", icon: Users, matches: (path) => path.startsWith("/talent") && !path.includes("/talent-dashboard") },;
+    { href: "/categories", label: "Categories", icon: Store, matches: (path) => path.startsWith("/categories") },;
+    { href: "/equipment", label: "Equipment", icon: Store, matches: (path) => path.startsWith("/equipment") },;
+    { href: "/community", label: "Community", icon: Users, matches: (path) => path.startsWith("/community") },;
   ];
-
   if(isAuthenticated) {
     navigationItems.push({
-      href: '/dashboard',
-      label: 'Dashboard',
+      href: "/dashboard",
+      label: "Dashboard",
       icon: Settings,
-      matches: (path) => path.startsWith('/dashboard')
+      matches: (path) => path.startsWith("/dashboard")
+}
     });
   }
 
   return (<div className={cn("md:hidden", className)}>
-      {/* Mobile menu button */}
+      {/* comment */}
       <Button
         variant="ghost"
         size="sm"
         onClick={toggleMenu}
-        className="p-2 text-white hover:bg-zion-purple/20"        aria-label={isOpen ? 'Close menu' : 'Open menu'}
+        className="p-2 text-white hover:bg-zion-purple/20"        aria-label={isOpen ? "Close menu" : "Open menu"}
       >"
-        {isOpen ? <X className="h-6 w-6"/> : <Menu className="h-6 w-6"/>}
+        {isOpen ? <X className="h-6 w-6"  /> : <Menu className="h-6 w-6"  />}
       </Button>
-
-      {/* Mobile menu overlay */}
+      {/* comment */}
       {isOpen && ("
         <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm">"
           <div className="fixed inset-y-0 right-0 w-80 bg-zion-blue-dark border-l border-zion-purple/20">"
@@ -48,10 +46,9 @@ import React { useState } from "react" className)"}>";" {}""" <Button: variant="
                 size="sm"
                 onClick={toggleMenu}                className="p-2 text-white hover:bg-zion-purple/20"
               >"
-                <X className="h-5 w-5"/>
+                <X className="h-5 w-5"  />
               </Button>
             </div>
-
                 {item.children ? ("
                   <details className="group">"
                     <summary className="flex items-center justify-between px-4 py-3 text-zion-slate-light hover: text-white hover:bg-zion-purple/10 cursor-pointer transition-colors">"
@@ -145,14 +142,14 @@ import React { useState } from "react" className)"}>";" {}""" <Button: variant="
 }""
 "
 
-            {/* User section */}"
+            {/* comment */}"
             <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-zion-purple/20">
               {isAuthenticated ? ("
                 <div className="space-y-3">"
                   <div className="flex items-center gap-3 px-4 py-2">"
-                    <User className="h-5 w-5 text-zion-cyan"/>"
+                    <User className="h-5 w-5 text-zion-cyan"  />"
                     <span className="text-white font-medium">
-                      {user?.email || 'User'}
+                      {user?.email || "User'}
                     </span>
                   </div>
     </div>)}
@@ -160,14 +157,14 @@ import React { useState } from "react" className)"}>";" {}""" <Button: variant="
                     to="/messages"
                     onClick={toggleMenu}                    className="flex items-center gap-3 px-4 py-2 text-white hover:text-zion-cyan transition-colors"
                   >"
-                    <MessageSquare className="h-5 w-5"/>
+                    <MessageSquare className="h-5 w-5"  />
                     <span>Messages</span>
                   </Link>
                   <Link
                     to="/profile"
                     onClick={toggleMenu}                    className="flex items-center gap-3 px-4 py-2 text-white hover:text-zion-cyan transition-colors"
                   >"
-                    <Settings className="h-5 w-5"/>
+                    <Settings className="h-5 w-5"  />
                     <span>Profile</span>
                   </Link>
                 </div>

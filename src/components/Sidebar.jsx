@@ -9,15 +9,19 @@ export function Sidebar({ isOpen = false, onClose }) {""
   Code} from "lucide-react
 export function Sidebar({isOpen = false, onClose }) {const location = useLocation()
 }
+}
 export function Sidebar({ isOpen = false, onClose }) {
   const router = useRouter()"
   const [expandedSections, setExpandedSections] = useState(["services", "solutions"])
+}
 }
   const toggleSection = (sectionName) => {
     setExpandedSections(prev => 
       prev.includes(sectionName)
 }
+}
         ? prev.filter(s => s !== sectionName)
+}
 }
         : [...prev, sectionName]
     )}
@@ -72,6 +76,7 @@ export function Sidebar({ isOpen = false, onClose }) {
     return location.pathname.startsWith(href)}
 
     )
+}
 }
 
   const navigationSections = []
@@ -211,6 +216,7 @@ export function Sidebar({ isOpen = false, onClose }) {
     }
 
     return router.pathname.startsWith(href)
+}
 }
 
   return (

@@ -1,5 +1,5 @@
-import React from 'react';'''
-import { Link } from 'react-router-dom';
+import React from "react";"""
+import { Link } from "react-router-dom";
 import { Shield, Lock, Eye, Users, Network, ArrowRight, CheckCircle, Cloud const CybersecurityServices = () => {}
     const securityServices = []
         {}
@@ -110,7 +110,7 @@ import { Shield, Lock, Eye, Users, Network, ArrowRight, CheckCircle, Cloud const
         "Blockchain Security""""
     ];""""
     return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-red-50">"""
-      {/* Hero Section */}""""
+      {/* comment */}""""
       <section className="relative bg-gradient-to-r from-slate-900 via-red-900 to-slate-900 text-white py-20">""""
         <div className="absolute inset-0 bg-black/20"></div>""""
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">""""
@@ -132,7 +132,7 @@ import { Shield, Lock, Eye, Users, Network, ArrowRight, CheckCircle, Cloud const
         </div>
       </section>
 """
-      {/* Services Grid */}""""
+      {/* comment */}""""
       <section className="py-20">""""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""""
           <div className="text-center mb-16">""""
@@ -148,7 +148,7 @@ import { Shield, Lock, Eye, Users, Network, ArrowRight, CheckCircle, Cloud const
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">""""
             {securityServices.map((service, index) => (<div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-slate-100">""""
                 <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-pink-500 rounded-xl flex items-center justify-center mb-6">""""
-                  <service.icon className="w-8 h-8 text-white"/>"""
+                  <service.icon className="w-8 h-8 text-white" />"""
                 </div>""""
                 <h3 className="text-2xl font-bold text-slate-900 mb-4">
                   {service.title}"""
@@ -158,20 +158,20 @@ import { Shield, Lock, Eye, Users, Network, ArrowRight, CheckCircle, Cloud const
                 </p>""""
                 <ul className="space-y-2 mb-6">""""
                   {service.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-slate-600">""""
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0"/>
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0"  />
                       {feature}
                     </li>))}"""
                 </ul>""""
                 <Link to="/contact" className="inline-flex items-center text-red-600 hover:text-red-700 font-semibold transition-colors duration-200">"""
                   Learn More""""
-                  <ArrowRight className="w-4 h-4 ml-2"/>
+                  <ArrowRight className="w-4 h-4 ml-2"  />
                 </Link>
               </div>))}
           </div>
         </div>
       </section>
 """
-      {/* Compliance Section */}""""
+      {/* comment */}""""
       <section className="py-20 bg-white">""""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""""
           <div className="text-center mb-16">""""
@@ -187,7 +187,7 @@ import { Shield, Lock, Eye, Users, Network, ArrowRight, CheckCircle, Cloud const
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">""""
             {complianceStandards.map((standard, index) => (<div key={index} className="bg-slate-50 rounded-xl p-6 text-center shadow-md hover:shadow-lg transition-all duration-300">""""
                 <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mx-auto mb-4">""""
-                  <Shield className="w-6 h-6 text-white"/>"""
+                  <Shield className="w-6 h-6 text-white"  />"""
                 </div>""""
                 <p className="text-slate-700 font-semibold text-sm">{standard}</p>
               </div>))}
@@ -195,7 +195,7 @@ import { Shield, Lock, Eye, Users, Network, ArrowRight, CheckCircle, Cloud const
         </div>
       </section>
 """
-      {/* Benefits Section */}""""
+      {/* comment */}""""
       <section className="py-20 bg-slate-50">""""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""""
           <div className="text-center mb-16">""""
@@ -211,7 +211,7 @@ import { Shield, Lock, Eye, Users, Network, ArrowRight, CheckCircle, Cloud const
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">""""
             {benefits.map((benefit, index) => (<div key={index} className="text-center">""""
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">""""
-                  <CheckCircle className="w-8 h-8 text-white"/>"""
+                  <CheckCircle className="w-8 h-8 text-white"  />"""
                 </div>""""
                 <p className="text-lg text-slate-700">{benefit}</p>
               </div>))}
@@ -219,7 +219,7 @@ import { Shield, Lock, Eye, Users, Network, ArrowRight, CheckCircle, Cloud const
         </div>
       </section>
 """
-      {/* Technologies Section */}""""
+      {/* comment */}""""
       <section className="py-20 bg-white">""""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""""
           <div className="text-center mb-16">""""
@@ -240,14 +240,14 @@ import { Shield, Lock, Eye, Users, Network, ArrowRight, CheckCircle, Cloud const
         </div>
       </section>
 """
-      {/* CTA Section */}""""
+      {/* comment */}""""
       <section className="py-20 bg-gradient-to-r from-slate-900 to-red-900 text-white">""""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">""""
           <h2 className="text-4xl font-bold mb-6">
             Ready to Secure Your Business?"""
           </h2>""""
-          <p className="text-xl text-red-100 mb-8 max-w-3xl mx-auto">'
-            Don't wait for a security breach. Let's discuss how our cybersecurity;
+          <p className="text-xl text-red-100 mb-8 max-w-3xl mx-auto">"
+            Don"t wait for a security breach. Let"s discuss how our cybersecurity;
             services can protect your organization."""
           </p>""""
           <div className="flex flex-col sm:flex-row gap-4 justify-center">""""
@@ -266,11 +266,7 @@ export default CybersecurityServices;
 }}
 
 export { CybersecurityServices };
-
 export { CybersecurityServices };
-
 export { CybersecurityServices };
-
 export { CybersecurityServices };
-
 export { CybersecurityServices };

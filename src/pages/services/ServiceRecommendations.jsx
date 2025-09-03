@@ -32,7 +32,6 @@ export default function Servicerecommendations() {
       price: "$1,999/mo",
     }
   ];
-
   ]
   return (
     <div className="min-h-screen bg-white">

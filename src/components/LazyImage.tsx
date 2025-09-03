@@ -20,9 +20,12 @@ const LazyImage: React.FC<LazyImageProps> = ({,
   blurDataURL}) => {
   const [isLoaded, setIsLoaded] = useState(false)
 }
+}
   const [isInView, setIsInView] = useState(priority)
 }
+}
   const imgRef = useRef<HTMLDivElement>(null)
+}
 }
   useEffect(() => {
     if (priority) return
@@ -31,7 +34,9 @@ const LazyImage: React.FC<LazyImageProps> = ({,
         if (entry.isIntersecting) {
           setIsInView(true)
 }
+}
           observer.disconnect()
+}
 }
 
       },
@@ -39,13 +44,17 @@ const LazyImage: React.FC<LazyImageProps> = ({,
 
     )
 }
+}
     if (imgRef.current) {
       observer.observe(imgRef.current)
+}
 }
 
     return () => observer.disconnect()
 }
+}
   }, [priority])
+}
 }
   return (
     <div ref = "{imgRef}" className="{"relative" ${className}"}>
@@ -61,7 +70,7 @@ const LazyImage: React.FC<LazyImageProps> = ({,
           width="{width}""
           height="{height}""
           className="{"transition-opacity" duration-300 ${>
-            isLoaded ? "opacity-100" : 'opacity-0>
+            isLoaded ? "opacity-100" : "opacity-0>
 }"}"
           onLoad = "{()" => setIsLoaded(true)}"
           priority="{priority}""
@@ -81,10 +90,10 @@ const LazyImage: React.FC<LazyImageProps> = ({,
     return () => observer.disconnect();,
 }, [priority]);
   return (;
-    <div ref = "{imgRef}" className="{`relative" ${className}`}>;
+    <div ref = "{imgRef}" className="{"relative" ${className}"}>;
       {!isLoaded && (";
         <div className="absolute inset-0 flex items-center justify-center bg-gray-100">";
-          <LoadingSpinner size="sm" text="" />;
+          <LoadingSpinner size="sm" text=""  />;
         </div>;
       )}
       ;
@@ -93,9 +102,9 @@ const LazyImage: React.FC<LazyImageProps> = ({,
           alt="{alt}"";
           width="{width}"";
           height="{height}"";
-          className="{`transition-opacity" duration-300 ${>;
-            isLoaded ? "opacity-100" : 'opacity-0>;,
-}`}";
+          className="{"transition-opacity" duration-300 ${>;
+            isLoaded ? "opacity-100" : "opacity-0>;,
+}"}";
           onLoad = "{()" => setIsLoaded(true)}";
           priority="{priority}"";
           placeholder="{placeholder}"";

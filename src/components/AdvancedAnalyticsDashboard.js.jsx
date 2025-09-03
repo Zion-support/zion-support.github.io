@@ -462,6 +462,7 @@ const AdvancedAnalyticsDashboard = () => {}""
   const [timeRange, setTimeRange] = useState("30d")"
   const [selectedMetric, setSelectedMetric] = useState()
 }
+}
   // comment
 const metrics = []"
     {}""
@@ -899,14 +900,8 @@ insights to optimize your business performance and make data-driven""
       </motion.div>
     </div>)};
 export default AdvancedAnalyticsDashboard;
-
-
 export { AdvancedAnalyticsDashboard };
-
 export { AdvancedAnalyticsDashboard };
-
 export { AdvancedAnalyticsDashboard };
-
 export { AdvancedAnalyticsDashboard };
-
 export { AdvancedAnalyticsDashboard };

@@ -1,10 +1,10 @@
-import { useState, useEffect, useRef } from 'react';
-
+import React from "react"
+import { useState, useEffect, useRef } from "react";
 export default function Page() {
 ,
       {
 
-        rootMargin: '50px',
+        rootMargin: "50px",
         threshold: 0.1}
     );
     if(imageRef.current) {
@@ -33,9 +33,10 @@ export default function Page() {
     onError?.();
   };
   return ()
-    <div className={`relative overflow-hidden ${className}`}>
+}
+    <div className={"relative overflow-hidden ${className}"}>
       <AnimatePresence>
-        {/* Loading Placeholder */}
+        {/* comment */}
         {!isLoaded && !hasError && (
           <motion.div
             initial={{ opacity: 1 }}
@@ -49,7 +50,7 @@ export default function Page() {
           </motion.div>
         )}
 
-        {/* Error State */}
+        {/* comment */}
         {hasError && (
           <motion.div
             initial={{ opacity: 0 }}
@@ -63,30 +64,27 @@ export default function Page() {
           </motion.div>
         )}
       </AnimatePresence>
-
-      {/* Main Image */}
+      {/* comment */}
       <motion.img
         ref={imageRef}
         src={currentSrc}
         alt={alt}
-        sizes={sizes}'`
-        className={`w-full h-full object-cover transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
+        sizes={sizes}""
+        className={"w-full h-full object-cover transition-opacity duration-300 ${isLoaded ? "opacity-100" : "opacity-0"}"}
         onLoad={handleLoad}
         onError={handleError}
-        loading={priority ? 'eager' : 'lazy'}"
-        decoding="async"
-      />
+        loading={priority ? "eager" : "lazy"}"
+        decoding="async" />
 
-      {/* Progressive Loading Effect */}
+      {/* comment */}
       {isLoaded && !hasError && (
         <motion.div
           initial={{ opacity: 0, scale: 1.1 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.3 }}"
-          className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent pointer-events-none"
-        />
+          className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent pointer-events-none" />
       )}
     </div>
   );
 };
-'"`
+"""

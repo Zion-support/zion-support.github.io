@@ -1,40 +1,40 @@
-import React from 'react';'''
-import { motion } from 'framer-motion';
-import { BarChart3, Target, TrendingUp, Award, Users, ArrowRight, CheckCircle, Zap } from 'lucide-react';
+import React from "react";"""
+import { motion } from "framer-motion";
+import { BarChart3, Target, TrendingUp, Award, Users, ArrowRight, CheckCircle, Zap } from "lucide-react";
 import { AdvancedServiceComparison } from "../components/AdvancedServiceComparison.jsx";
 import { Button } from "../components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
 const ServiceComparison = () => {
     const features = [
         {
-            icon: <BarChart3 className="w-6 h-6 text-zion-cyan"/>,
-            title: 'Advanced Filtering',
-            description: 'Filter services by category, complexity, price range, and technology stack'
+            icon: <BarChart3 className="w-6 h-6 text-zion-cyan"  />,
+            title: "Advanced Filtering",
+            description: "Filter services by category, complexity, price range, and technology stack"
         },
         {
-            icon: <Target className="w-6 h-6 text-zion-purple"/>,
-            title: 'Smart Comparison',
-            description: 'Compare multiple services side-by-side with detailed feature analysis'
+            icon: <Target className="w-6 h-6 text-zion-purple"  />,
+            title: "Smart Comparison",
+            description: "Compare multiple services side-by-side with detailed feature analysis"
         },
         {
-            icon: <TrendingUp className="w-6 h-6 text-zion-green"/>,
-            description: 'Real-time ratings and popularity indicators to guide your decision'
+            icon: <TrendingUp className="w-6 h-6 text-zion-green"  />,
+            description: "Real-time ratings and popularity indicators to guide your decision"
         },
         {
-            icon: <Award className="w-6 h-6 text-zion-orange"/>,
-            title: 'Expert Insights',
-            description: 'Get detailed insights into each service\'s capabilities and target audience'
+            icon: <Award className="w-6 h-6 text-zion-orange"  />,
+            title: "Expert Insights",
+            description: "Get detailed insights into each service"s capabilities and target audience"
         }
     ];
     const benefits = [
-        'Make informed decisions with comprehensive service comparisons',
-        'Find the perfect service tier for your business needs and budget',
-        'Understand complexity levels and implementation requirements',
-        'Compare pricing, features, and benefits across different solutions',
-        'Get personalized recommendations based on your requirements'
+        "Make informed decisions with comprehensive service comparisons",
+        "Find the perfect service tier for your business needs and budget",
+        "Understand complexity levels and implementation requirements",
+        "Compare pricing, features, and benefits across different solutions",
+        "Get personalized recommendations based on your requirements"
     ];
     return (<div className="min-h-screen bg-zion-blue-dark">
-      {/* Hero Section */}
+      {/* comment */}
       <section className="py-20 px-6 bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-zion-purple/20 via-zion-blue-light/20 to-zion-cyan/20"></div>
@@ -58,21 +58,23 @@ const ServiceComparison = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"""
               <Button""""
                 className="bg-white text-zion-purple hover:bg-zion-slate-light text-lg px-8 py-4"""
-                onClick={() =>'
-                  document''
-                    .getElementById('comparison-tool')'
-                    ?.scrollIntoView({ behavior: 'smooth' })
+                onClick={() =>"
+                  document""
+                    .getElementById("comparison-tool")"
+                    ?.scrollIntoView({ behavior: "smooth" })
+}
                 }
               >"""
                 Start Comparing""""
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2"  />
               </Button>"""
               <Button""""
                 className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4"""
-                onClick={() =>'
-                  window.open(''
-                    'mailto:kleber@ziontechgroup.com?subject=Service Comparison Help',_blank'
+                onClick={() =>"
+                  window.open(""
+                    "mailto:kleber@ziontechgroup.com?subject=Service Comparison Help",_blank"
                   )
+}
                 }
               >
                 Get Expert Help;
@@ -82,7 +84,7 @@ const ServiceComparison = () => {
         </div>
       </section>
 """
-      {/* Features Section */}""""
+      {/* comment */}""""
       <section className="py-16 px-6 bg-white">""""
         <div className="max-w-6xl mx-auto">
           <motion.div;
@@ -131,7 +133,7 @@ const ServiceComparison = () => {
         </div>
       </section>
 """
-      {/* Benefits Section */}""""
+      {/* comment */}""""
       <section className="py-16 px-6 bg-zion-blue-light/5">""""
         <div className="max-w-4xl mx-auto">
           <motion.div;
@@ -160,7 +162,7 @@ const ServiceComparison = () => {
                 viewport={{ once: true }}""""
                 className="flex items-start gap-3""""
               >""""
-                <CheckCircle className="w-5 h-5 text-zion-cyan mt-1 flex-shrink-0" />""""
+                <CheckCircle className="w-5 h-5 text-zion-cyan mt-1 flex-shrink-0"  />""""
                 <span className="text-zion-slate-dark">{benefit}</span>
               </motion.div>
             ))}
@@ -168,7 +170,7 @@ const ServiceComparison = () => {
         </div>
       </section>
 """
-      {/* Comparison Tool Section */}""""
+      {/* comment */}""""
       <section id="comparison-tool" className="py-16 px-6 bg-white">""""
         <div className="max-w-7xl mx-auto">
           <motion.div;
@@ -187,11 +189,11 @@ const ServiceComparison = () => {
             </p>
           </motion.div>
 
-          <AdvancedServiceComparison />
+          <AdvancedServiceComparison  />
         </div>
       </section>
 """
-      {/* CTA Section */}""""
+      {/* comment */}""""
       <section className="py-20 px-6 bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan">""""
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
@@ -210,20 +212,21 @@ const ServiceComparison = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"""
               <Button""""
                 className="bg-white text-zion-purple hover:bg-zion-slate-light text-lg px-8 py-4"""
-                onClick={() =>'
-                  window.open(''
-                    'mailto:kleber@ziontechgroup.com?subject=Service Selection Help',_blank'
+                onClick={() =>"
+                  window.open(""
+                    "mailto:kleber@ziontechgroup.com?subject=Service Selection Help",_blank"
                   )
+}
                 }"""
               >""""
-                <Users className="w-5 h-5 mr-2" />
+                <Users className="w-5 h-5 mr-2"  />
                 Get Expert Consultation;
               </Button>"""
-              <Button"'"""
-                className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4"''
-                onClick={() => window.open('tel:+13024640950',_blank')}"""
+              <Button"""""
+                className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4"""
+                onClick={() => window.open("tel:+13024640950",_blank")}"""
               >""""
-                <Zap className="w-5 h-5 mr-2" />
+                <Zap className="w-5 h-5 mr-2"  />
                 Call Now;
               </Button>
             </div>
@@ -232,14 +235,8 @@ const ServiceComparison = () => {
       </section>
     </div>)};
 export default ServiceComparison;
-
-
 export { ServiceComparison };
-
 export { ServiceComparison };
-
 export { ServiceComparison };
-
 export { ServiceComparison };
-
 export { ServiceComparison };

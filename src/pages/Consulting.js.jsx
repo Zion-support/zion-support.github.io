@@ -1,5 +1,5 @@
-import React from 'react';'''
-import { Users, Lightbulb, Target, TrendingUp, Shield, Globe, Zap, Cpu, Database, Award, Briefcase } from 'lucide-react';
+import React from "react";"""
+import { Users, Lightbulb, Target, TrendingUp, Shield, Globe, Zap, Cpu, Database, Award, Briefcase } from "lucide-react";
 const Consulting = () => {}
     const consultingServices = []
         {}
@@ -127,12 +127,12 @@ const Consulting = () => {}
         }"""
     ];""""
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"""
-      {/* Hero Section */}""""
+      {/* comment */}""""
       <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">""""
         <div className="max-w-7xl mx-auto text-center">""""
           <div className="mb-8">""""
             <div className="inline-flex items-center px-4 py-2 bg-orange-500/10 text-orange-400 rounded-full text-sm font-medium mb-6">""""
-              <Users className="w-4 h-4 mr-2"/>
+              <Users className="w-4 h-4 mr-2"  />
               Consulting Services"""
             </div>""""
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"""
@@ -155,7 +155,7 @@ const Consulting = () => {}
         </div>
       </section>
 """
-      {/* Consulting Services */}""""
+      {/* comment */}""""
       <section id="services" className="py-16 px-4 sm:px-6 lg:px-8">""""
         <div className="max-w-7xl mx-auto">""""
           <div className="text-center mb-16">""""
@@ -171,7 +171,7 @@ const Consulting = () => {}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">""""
             {consultingServices.map((service, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-orange-500/50 transition-all duration-300">""""
                 <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4">""""
-                  <service.icon className="w-8 h-8 text-white"/>"""
+                  <service.icon className="w-8 h-8 text-white" />"""
                 </div>""""
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>""""
                 <p className="text-gray-300 mb-4">{service.description}</p>""""
@@ -186,7 +186,7 @@ const Consulting = () => {}
         </div>
       </section>
 """
-      {/* Industries */}""""
+      {/* comment */}""""
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""""
         <div className="max-w-7xl mx-auto">""""
           <div className="text-center mb-16">""""
@@ -202,7 +202,7 @@ const Consulting = () => {}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">""""
             {industries.map((industry, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-orange-500/50 transition-all duration-300">""""
                 <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4">""""
-                  <industry.icon className="w-8 h-8 text-white"/>"""
+                  <industry.icon className="w-8 h-8 text-white" />"""
                 </div>""""
                 <h3 className="text-xl font-semibold text-white mb-3">{industry.title}</h3>""""
                 <p className="text-gray-300">{industry.description}</p>
@@ -211,7 +211,7 @@ const Consulting = () => {}
         </div>
       </section>
 """
-      {/* Benefits Section */}""""
+      {/* comment */}""""
       <section className="py-16 px-4 sm:px-6 lg:px-8">""""
         <div className="max-w-7xl mx-auto">""""
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">"""
@@ -232,7 +232,7 @@ const Consulting = () => {}
             </div>""""
             <div className="bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-2xl p-8 border border-orange-500/30">""""
               <div className="text-center">""""
-                <Award className="w-24 h-24 text-orange-400 mx-auto mb-4"/>""""
+                <Award className="w-24 h-24 text-orange-400 mx-auto mb-4"  />""""
                 <h3 className="text-2xl font-bold text-white mb-2">Proven Expertise</h3>""""
                 <p className="text-gray-300 mb-6">
                   Our consultants bring decades of combined experience;
@@ -249,7 +249,7 @@ const Consulting = () => {}
         </div>
       </section>
 """
-      {/* Consulting Process */}""""
+      {/* comment */}""""
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""""
         <div className="max-w-4xl mx-auto text-center">""""
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -273,13 +273,13 @@ const Consulting = () => {}
         </div>
       </section>
 """
-      {/* CTA Section */}""""
+      {/* comment */}""""
       <section className="py-16 px-4 sm:px-6 lg:px-8">""""
         <div className="max-w-4xl mx-auto text-center">""""
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Business?"""
           </h2>""""
-          <p className="text-xl text-gray-300 mb-8">'
+          <p className="text-xl text-gray-300 mb-8">"
             Let's discuss how our consulting services can help you navigate;
             digital transformation and achieve your business goals."""
           </p>""""
@@ -295,14 +295,8 @@ const Consulting = () => {}
       </section>
     </div>)};
 export default Consulting;
-
-
 export { Consulting };
-
 export { Consulting };
-
 export { Consulting };
-
 export { Consulting };
-
 export { Consulting };

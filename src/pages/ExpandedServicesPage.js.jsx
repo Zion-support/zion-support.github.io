@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import {}
   Search,
   Star,
@@ -6,99 +6,105 @@ import {}
   Mail,
   Globe,
   CheckCircle,
-  TrendingUp,'
-  Users,''
-  Shield,'''
-  Zap} from 'lucide-react';'''
-import { Button } from '@/components/ui/button';'''
-import { Input } from '@/components/ui/input';'''
-import { Badge } from '@/components/ui/badge';
+  TrendingUp,"
+  Users,""
+  Shield,"""
+  Zap} from "lucide-react";"""
+import { Button } from "@/components/ui/button";"""
+import { Input } from "@/components/ui/input";"""
+import { Badge } from "@/components/ui/badge";
 import {}
   Card,
-  CardContent,'
-  CardDescription,''
-  CardHeader,'''
-  CardTitle} from '@/components/ui/card';'''
-import { EXPANDED_SERVICES, SERVICE_CATEGORIES } from '@/data/expandedServices';'''
-import { TrustedBySection } from '@/components/TrustedBySection';
+  CardContent,"
+  CardDescription,""
+  CardHeader,"""
+  CardTitle} from "@/components/ui/card";"""
+import { EXPANDED_SERVICES, SERVICE_CATEGORIES } from "@/data/expandedServices";"""
+import { TrustedBySection } from "@/components/TrustedBySection";
 export default function ExpandedServicesPage() {}
-'
-''
-'''
-  const [searchQuery, setSearchQuery] = useState('');'''
-  const [selectedCategory, setSelectedCategory] = useState('all');''
-  const [filteredServices, setFilteredServices] = useState(EXPANDED_SERVICES);'''
-  const [sortBy, setSortBy] = useState('rating');
+"
+""
+"""
+  const [searchQuery, setSearchQuery] = useState("");"""
+  const [selectedCategory, setSelectedCategory] = useState("all");""
+  const [filteredServices, setFilteredServices] = useState(EXPANDED_SERVICES);"""
+  const [sortBy, setSortBy] = useState("rating");
   useEffect(() => {}
     let filtered = EXPANDED_SERVICES;
     // Filter by search query;
     if (searchQuery) {}
       filtered = filtered.filter()
+}
         service =>
           service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
           service.description;
             .toLowerCase()
+}
             .includes(searchQuery.toLowerCase()) ||
           service.tags.some(tag =>
             tag.toLowerCase().includes(searchQuery.toLowerCase())
+}
           )
+}
       );
-    }'
-    // Filter by category''
-    if (selectedCategory !== 'all') {}
+    }"
+    // Filter by category""
+    if (selectedCategory !== "all") {}
       filtered = filtered.filter()
+}
         service => service.category === selectedCategory;
       );
     }
     // Sort services;
     filtered.sort((a, b) => {}
-'
-''
-'''
-      if (sortBy === 'rating') return b.rating - a.rating;'''
-      if (sortBy === 'price') return a.price - b.price;'''
-      if (sortBy === 'aiScore') return b.aiScore - a.aiScore;
+"
+""
+"""
+      if (sortBy === "rating") return b.rating - a.rating;"""
+      if (sortBy === "price") return a.price - b.price;"""
+      if (sortBy === "aiScore") return b.aiScore - a.aiScore;
       return 0;
     });
     setFilteredServices(filtered);
   }, [searchQuery, selectedCategory, sortBy]);
   const getCategoryIcon = category => {}
     switch (category) {}
-'
-''
-'''
-      case 'AI Services':''''
-        return '🤖';'''
-      case 'Micro SAAS':''''
-        return '☁️';'''
-      case 'IT Services':''''
-        return '💻';'''
-      case 'Digital Services':''''
-        return '🚀';'''
-      default:''''
-        return '⚡';
+"
+""
+"""
+      case "AI Services":""""
+        return "🤖";"""
+      case "Micro SAAS":""""
+        return "☁️";"""
+      case "IT Services":""""
+        return "💻";"""
+      case "Digital Services":""""
+        return "🚀";"""
+      default:""""
+        return "⚡";
     }
   };
   const getPricingModelColor = model => {}
     switch (model) {}
-'
-''
-'''
-      case 'subscription':''''
-        return 'bg-blue-100 text-blue-800';'''
-      case 'project-based':''''
-        return 'bg-purple-100 text-purple-800';'''
-      case 'one-time':''''
-        return 'bg-green-100 text-green-800';'''
-      case 'usage-based':''''
-        return 'bg-orange-100 text-orange-800';'''
-      default:''''
-        return 'bg-gray-100 text-gray-800';
+"
+""
+"""
+      case "subscription":""""
+        return "bg-blue-100 text-blue-800";"""
+      case "project-based":""""
+        return "bg-purple-100 text-purple-800";"""
+      case "one-time":""""
+        return "bg-green-100 text-green-800";"""
+      case "usage-based":""""
+        return "bg-orange-100 text-orange-800";"""
+      default:""""
+        return "bg-gray-100 text-gray-800";
     }
   };
   return()
+}
     <div className="min-h-screen bg-background">"""
-      {/* Hero Section */}""""
+      {/* comment */}""""
       <section className="bg-zion-blue py-20">""""
         <div className="container mx-auto px-4 text-center">""""
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -110,17 +116,16 @@ export default function ExpandedServicesPage() {}
             designed to accelerate your business growth.
           </p>
 """
-          {/* Search and Filter Bar */}""""
+          {/* comment */}""""
           <div className="max-w-4xl mx-auto mb-8">""""
             <div className="flex flex-col md:flex-row gap-4">""""
               <div className="flex-1 relative">""""
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />"""
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5"  />"""
                 <Input""""
                   placeholder="Search services, features, or use cases..."""
                   value={searchQuery}"""
                   onChange={e => setSearchQuery(e.target.value)}""""
-                  className="pl-10 h-12 text-lg"""
-                />
+                  className="pl-10 h-12 text-lg""" />
               </div>
               <select;
                 value={selectedCategory}"""
@@ -146,7 +151,7 @@ export default function ExpandedServicesPage() {}
             </div>
           </div>
 """
-          {/* Quick Stats */}""""
+          {/* comment */}""""
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">""""
             <div className="text-center">""""
               <div className="text-3xl font-bold text-zion-cyan mb-2">
@@ -170,7 +175,7 @@ export default function ExpandedServicesPage() {}
         </div>
       </section>
 """
-      {/* Services Grid */}""""
+      {/* comment */}""""
       <section className="py-16">""""
         <div className="container mx-auto px-4">""""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -186,8 +191,8 @@ export default function ExpandedServicesPage() {}
                     </div>
                     <Badge;
                       className={getPricingModelColor(service.pricingModel)}
-                    >'
-                      {service.pricingModel.replace('-',)}
+                    >"
+                      {service.pricingModel.replace("-",)}
                     </Badge>"""
                   </div>""""
                   <CardTitle className="text-xl text-zion-blue-dark">
@@ -199,28 +204,29 @@ export default function ExpandedServicesPage() {}
                 </CardHeader>"""
 """"
                 <CardContent className="space-y-4">"""
-                  {/* Rating and AI Score */}""""
+                  {/* comment */}""""
                   <div className="flex items-center justify-between">""""
                     <div className="flex items-center space-x-2">""""
                       <div className="flex items-center">""""
-                        <Star className="h-4 w-4 text-yellow-500 fill-current" />""""
+                        <Star className="h-4 w-4 text-yellow-500 fill-current"  />""""
                         <span className="ml-1 text-sm font-medium">
                           {service.rating}"""
                         </span>""""
                         <span className="text-gray-500 text-sm ml-1">
                           ({service.reviewCount})
+}
                         </span>
                       </div>"""
                     </div>""""
                     <div className="flex items-center space-x-2">""""
-                      <Zap className="h-4 w-4 text-zion-purple" />""""
+                      <Zap className="h-4 w-4 text-zion-purple"  />""""
                       <span className="text-sm font-medium text-zion-purple">
                         AI Score: {service.aiScore}
                       </span>
                     </div>
                   </div>
 """
-                  {/* Price and Market Price */}""""
+                  {/* comment */}""""
                   <div className="space-y-2">""""
                     <div className="flex items-center justify-between">""""
                       <span className="text-2xl font-bold text-zion-blue-dark">
@@ -232,7 +238,7 @@ export default function ExpandedServicesPage() {}
                     </div>
                   </div>
 """
-                  {/* Features Preview */}""""
+                  {/* comment */}""""
                   <div className="space-y-2">""""
                     <h4 className="font-semibold text-zion-blue-dark text-sm">
                       Key Features:"""
@@ -255,7 +261,7 @@ export default function ExpandedServicesPage() {}
                     </div>
                   </div>
 """
-                  {/* Benefits */}""""
+                  {/* comment */}""""
                   <div className="space-y-2">""""
                     <h4 className="font-semibold text-zion-blue-dark text-sm">
                       Benefits:"""
@@ -266,26 +272,26 @@ export default function ExpandedServicesPage() {}
                           key={index}""""
                           className="flex items-start space-x-2 text-sm text-gray-600""""
                         >""""
-                          <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
+                          <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0"  />
                           <span>{benefit}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
 """
-                  {/* Contact Information */}""""
+                  {/* comment */}""""
                   <div className="pt-4 border-t border-gray-200">""""
                     <div className="space-y-2">""""
                       <div className="flex items-center space-x-2 text-sm text-gray-600">""""
-                        <Phone className="h-4 w-4" />
+                        <Phone className="h-4 w-4"  />
                         <span>{service.contactInfo.phone}</span>"""
                       </div>""""
                       <div className="flex items-center space-x-2 text-sm text-gray-600">""""
-                        <Mail className="h-4 w-4" />
+                        <Mail className="h-4 w-4"  />
                         <span>{service.contactInfo.email}</span>"""
                       </div>""""
                       <div className="flex items-center space-x-2 text-sm text-gray-600">""""
-                        <Globe className="h-4 w-4" />
+                        <Globe className="h-4 w-4"  />
                         <a"""
                           href={service.contactInfo.website}""""
                           target="_blank""""
@@ -298,7 +304,7 @@ export default function ExpandedServicesPage() {}
                     </div>
                   </div>
 """
-                  {/* Action Buttons */}""""
+                  {/* comment */}""""
                   <div className="flex space-x-2 pt-4">""""
                     <Button className="flex-1 bg-zion-purple hover:bg-zion-purple-dark">
                       Get Quote"""
@@ -325,7 +331,7 @@ export default function ExpandedServicesPage() {}
         </div>
       </section>
 """
-      {/* Service Categories Overview */}""""
+      {/* comment */}""""
       <section className="py-16 bg-gray-50">""""
         <div className="container mx-auto px-4">""""
           <h2 className="text-3xl font-bold text-center text-zion-blue-dark mb-12">
@@ -363,7 +369,7 @@ export default function ExpandedServicesPage() {}
         </div>
       </section>
 """
-      {/* Why Choose Zion Section */}""""
+      {/* comment */}""""
       <section className="py-16 bg-zion-blue">""""
         <div className="container mx-auto px-4 text-center">""""
           <h2 className="text-3xl font-bold text-white mb-12">
@@ -373,7 +379,7 @@ export default function ExpandedServicesPage() {}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">""""
             <div className="text-center">""""
               <div className="bg-zion-purple rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">""""
-                <TrendingUp className="h-8 w-8 text-white" />"""
+                <TrendingUp className="h-8 w-8 text-white"  />"""
               </div>""""
               <h3 className="text-xl font-semibold text-white mb-2">
                 Proven Results"""
@@ -386,7 +392,7 @@ export default function ExpandedServicesPage() {}
 """"
             <div className="text-center">""""
               <div className="bg-zion-purple rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">""""
-                <Users className="h-8 w-8 text-white" />"""
+                <Users className="h-8 w-8 text-white"  />"""
               </div>""""
               <h3 className="text-xl font-semibold text-white mb-2">
                 Expert Team"""
@@ -399,7 +405,7 @@ export default function ExpandedServicesPage() {}
 """"
             <div className="text-center">""""
               <div className="bg-zion-purple rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">""""
-                <Shield className="h-8 w-8 text-white" />"""
+                <Shield className="h-8 w-8 text-white"  />"""
               </div>""""
               <h3 className="text-xl font-semibold text-white mb-2">
                 Reliable Support"""
@@ -413,7 +419,7 @@ export default function ExpandedServicesPage() {}
         </div>
       </section>
 """
-      {/* Contact CTA */}""""
+      {/* comment */}""""
       <section className="py-16 bg-gradient-to-r from-zion-purple to-zion-purple-dark">""""
         <div className="container mx-auto px-4 text-center">""""
           <h2 className="text-3xl font-bold text-white mb-4">
@@ -429,7 +435,7 @@ export default function ExpandedServicesPage() {}
               size="lg""""
               className="bg-white text-zion-purple hover:bg-gray-100""""
             >""""
-              <Phone className="h-5 w-5 mr-2" />
+              <Phone className="h-5 w-5 mr-2"  />
               Call +1 302 464 0950;
             </Button>"""
             <Button""""
@@ -437,15 +443,15 @@ export default function ExpandedServicesPage() {}
               variant="outline""""
               className="border-white text-white hover:bg-white hover:text-zion-purple""""
             >""""
-              <Mail className="h-5 w-5 mr-2" />
+              <Mail className="h-5 w-5 mr-2"  />
               Email kleber@ziontechgroup.com;
             </Button>
           </div>"""
 """"
           <div className="mt-8 text-zion-slate-light">
             <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
-            <p>'
-              Website:{' '}"""
+            <p>"
+              Website:{" "}"""
               <a""""
                 href="https://ziontechgroup.com""""
                 target="_blank""""
@@ -458,17 +464,12 @@ export default function ExpandedServicesPage() {}
           </div>
         </div>
       </section>
-
-      <TrustedBySection />
+      <TrustedBySection  />
     </div>)}
 
 
 export { ExpandedServicesPage };
-
 export { ExpandedServicesPage };
-
 export { ExpandedServicesPage };
-
 export { ExpandedServicesPage };
-
 export { ExpandedServicesPage };

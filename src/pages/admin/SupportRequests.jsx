@@ -128,9 +128,9 @@ export default function SupportRequests() {}
             return false}
         return true});
     // Count by status for the summary dashboard;
-    const openCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'open').length;'
-    const inProgressCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'in-progress').length;'
-    const resolvedCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'resolved').length;
+    const openCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === "open").length;"
+    const inProgressCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === "in-progress").length;"
+    const resolvedCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === "resolved").length;
     const totalCount = MOCK_SUPPORT_REQUESTS.length;
     const resetFilters = () => {}
 """
@@ -139,7 +139,7 @@ export default function SupportRequests() {}
         setStatusFilter(null);
         setPriorityFilter(null);"""
         setCategoryFilter(null)};""""
-    return (<SEO title="Support Requests | Admin Dashboard" description="Manage and track user support requests and issues"/>"""
+    return (<SEO title="Support Requests | Admin Dashboard" description="Manage and track user support requests and issues"  />"""
         ,""""
             <div className="container mx-auto px-4 py-8">""""
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8">"""
@@ -159,7 +159,7 @@ export default function SupportRequests() {}
           </div>
         </div>
 """
-        {/* Status Cards */}""""
+        {/* comment */}""""
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">"""
           <Card>""""
             <CardHeader className="pb-2">""""
@@ -199,16 +199,16 @@ export default function SupportRequests() {}
           </TabsList>"""
 """"
           <TabsContent value="all" className="mt-6">"""
-            {/* Search and Filters */}""""
+            {/* comment */}""""
             <div className="flex flex-col md:flex-row gap-4 mb-6">""""
               <div className="relative flex-1">""""
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400"/>""""
-                <Input placeholder="Search by ID, user or issue..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="pl-10"/>
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400"  />""""
+                <Input placeholder="Search by ID, user or issue..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="pl-10" />
               </div>"""
 """"
               <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>""""
                 <SelectTrigger className="w-[180px]">""""
-                  <SelectValue placeholder="Status"/>
+                  <SelectValue placeholder="Status"  />
                 </SelectTrigger>"""
                 <SelectContent>""""
                   <SelectItem value="">All Statuses</SelectItem>""""
@@ -220,7 +220,7 @@ export default function SupportRequests() {}
 """"
               <Select value={priorityFilter || ""} onValueChange={value => setPriorityFilter(value || null)}>""""
                 <SelectTrigger className="w-[180px]">""""
-                  <SelectValue placeholder="Priority"/>
+                  <SelectValue placeholder="Priority"  />
                 </SelectTrigger>"""
                 <SelectContent>""""
                   <SelectItem value="">All Priorities</SelectItem>""""
@@ -232,7 +232,7 @@ export default function SupportRequests() {}
 """"
               <Select value={categoryFilter || ""} onValueChange={value => setCategoryFilter(value || null)}>""""
                 <SelectTrigger className="w-[180px]">""""
-                  <SelectValue placeholder="Category"/>
+                  <SelectValue placeholder="Category"  />
                 </SelectTrigger>"""
                 <SelectContent>""""
                   <SelectItem value="">All Categories</SelectItem>""""
@@ -246,11 +246,10 @@ export default function SupportRequests() {}
               </Select>"""
 """"
               <Button variant="outline" onClick={resetFilters} className="md:w-auto">""""
-                <Filter className="h-4 w-4 mr-2"/> Reset Filters;
+                <Filter className="h-4 w-4 mr-2"  /> Reset Filters;
               </Button>
             </div>
-
-            {/* Support Requests Table */}"""
+            {/* comment */}"""
             <Card>""""
               <CardContent className="p-0">
                 <Table>
@@ -272,21 +271,21 @@ export default function SupportRequests() {}
                         <TableCell className="font-medium">{request.id}</TableCell>"""
                         <TableCell>{request.user}</TableCell>""""
                         <TableCell className="max-w-xs truncate">{request.issue}</TableCell>
-                        <TableCell>'
-                          <Badge variant={request.status === 'open'''
-                        ? 'default'''
-                        : request.status === 'in-progress'''
-                            ? 'secondary'''
-                            : 'outline'}>
+                        <TableCell>"
+                          <Badge variant={request.status === "open"""
+                        ? "default"""
+                        : request.status === "in-progress"""
+                            ? "secondary"""
+                            : "outline"}>
                             {request.status}
-                          </Badge>'
-                        </TableCell>''
-                        <TableCell>'''
-                          <Badge variant={request.priority === 'high'''''
-                        ? 'destructive'''''
-                        : request.priority === 'medium'''''
-                            ? 'default'''''
-                            : 'outline'}>
+                          </Badge>"
+                        </TableCell>""
+                        <TableCell>"""
+                          <Badge variant={request.priority === "high"""""
+                        ? "destructive"""""
+                        : request.priority === "medium"""""
+                            ? "default"""""
+                            : "outline'}>
                             {request.priority}
                           </Badge>
                         </TableCell>
@@ -335,11 +334,7 @@ export default function SupportRequests() {}
 
 
 export { MOCK_SUPPORT_REQUESTS, SupportRequests };
-
 export { MOCK_SUPPORT_REQUESTS, SupportRequests };
-
 export { MOCK_SUPPORT_REQUESTS, SupportRequests };
-
 export { MOCK_SUPPORT_REQUESTS, SupportRequests };
-
 export { MOCK_SUPPORT_REQUESTS, SupportRequests };

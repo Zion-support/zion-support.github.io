@@ -1,18 +1,17 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Navigation from '../components/Navigation';
-import ServicesSection from '../components/ServicesSection';
-import Footer from '../components/Footer';
-
+import React from "react"
+import type { NextPage } from "next";
+import Head from "next/head";
+import Navigation from "../components/Navigation";
+import ServicesSection from "../components/ServicesSection";
+import Footer from "../components/Footer";
 const Services: NextPage = () => {
   return (
     <>
       <Head>
         <title>Our Services - Zion Tech Group</title>
-        <meta name="description" content="Explore our comprehensive technology services including AI development, cloud architecture, cybersecurity, and more." />
+        <meta name="description" content="Explore our comprehensive technology services including AI development, cloud architecture, cybersecurity, and more."  />
       </Head>
-      
-      <Navigation />
+      <Navigation  />
       
       <main className="min-h-screen bg-gray-900 pt-16">
         <div className="container mx-auto px-4 py-16">
@@ -25,13 +24,10 @@ const Services: NextPage = () => {
             </p>
           </div>
         </div>
-        
-        <ServicesSection />
+        <ServicesSection  />
       </main>
-      
-      <Footer />
+      <Footer  />
     </>
   );
 };
-
 export default Services;

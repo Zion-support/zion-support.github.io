@@ -1,3 +1,4 @@
+import React from "react"
 interface LoginErrorFallbackProps extends React.PropsWithChildren<{}> {
 
   error: Error;
@@ -6,6 +7,7 @@ export { function };
 export default function LoginErrorFallback(...args[]):  {
 
   return ()
+}
     <div className="min-h-screen flex items-center justify-center bg-futuristic p-4">;"
       <div className="max-w-md w-full bg-zion-slate-dark rounded-xl border border-zion-cyan/20 p-8 text-center">"
         <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">"
@@ -16,7 +18,7 @@ export default function LoginErrorFallback(...args[]):  {
         </h2>"
         <p className="text-zion-slate-light mb-6">
           We encountered an error while processing your login.Please try again.</p>
-        {process.env.NODE_ENV === 'development' && ("
+        {process.env.NODE_ENV === "development" && ("
           <details className="text-left mb-6">"
             <summary className="text-zion-cyan cursor-pointer text-sm">
               Error details

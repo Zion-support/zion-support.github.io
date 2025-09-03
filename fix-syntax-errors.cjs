@@ -1,74 +1,77 @@
 #!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
 
-function fixSyntaxErrors(filePath) {
-  console.log(`Fixing syntax errors in: ${filePath}`);
-  
-  let content = fs.readFileSync(filePath, 'utf8');
-  
-  // Fix common syntax errors
-  content = content
-    // Remove extra semicolons after class declarations
-    .replace(/class\s+\w+\s*\{;/g, (match) => match.replace('{;', '{'))
-    // Remove extra semicolons after method declarations
-    .replace(/(\w+)\s*\([^)]*\)\s*\{;/g, '$1() {')
-    // Remove extra semicolons after if/for/while statements
-    .replace(/(if|for|while|switch)\s*\([^)]*\)\s*\{;/g, '$1() {')
-    // Remove trailing commas before closing braces
-    .replace(/,(\s*[}\]])/g, '$1')
-    // Remove extra semicolons after closing braces
-    .replace(/\}(\s*;)/g, '}$1')
-    // Fix method declarations with extra semicolons
-    .replace(/(\w+)\s*\([^)]*\)\s*\{;/g, '$1() {')
-    // Remove standalone semicolons
-    .replace(/^\s*;\s*$/gm, '')
-    // Fix object property declarations
-    .replace(/(\w+):\s*([^,}]+),;/g, '$1: $2,')
-    // Fix array declarations
-    .replace(/\[\s*\]\s*;/g, '[]')
-    // Remove extra semicolons in function calls
-    .replace(/\(\s*\)\s*;/g, '()')
-    // Fix constructor calls
-    .replace(/new\s+(\w+)\s*\(\s*\)\s*;/g, 'new $1()')
-    // Clean up multiple semicolons
-    .replace(/;+/g, ';')
-    // Remove semicolons at end of lines that shouldn't have them
-    .replace(/;\s*$/gm, (match, offset, string) => {
-      const lines = string.split('\n');
-      const lineIndex = string.substring(0, offset).split('\n').length - 1;
-      const line = lines[lineIndex];
-      
-      // Don't remove semicolons from statements that should have them
-      if (line.match(/(const|let|var|return|throw|break|continue)\s/)) {
-        return match;
-      }
-      
-      // Don't remove semicolons from object/array literals
-      if (line.match(/[\[\{]\s*$/)) {
-        return match;
-      }
-      
-      return match.replace(';', '');
-    });
+console.log('🔧 Fixing syntax errors in React components...');
 
-  fs.writeFileSync(filePath, content);
-  console.log(`Fixed syntax errors in: ${filePath}`);
+function fixTemplateLiterals(content) {
+  // Fix template literal syntax errors
+  let fixed = content;
+  
+  // Fix className with template literals
+  fixed = fixed.replace(
+    /className=\{"([^"]*)\$\{([^}]*)\}([^"]*)"\}/g,
+    'className={`$1${$2}$3`}'
+  );
+  
+  // Fix aria-label with template literals
+  fixed = fixed.replace(
+    /aria-label=\{"([^"]*)\$\{([^}]*)\}([^"]*)"\}/g,
+    'aria-label={`$1${$2}$3`}'
+  );
+  
+  // Fix other attributes with template literals
+  fixed = fixed.replace(
+    /(\w+)=\{"([^"]*)\$\{([^}]*)\}([^"]*)"\}/g,
+    '$1={`$2${$3}$4`}'
+  );
+  
+  return fixed;
 }
 
-// Fix the main automation files
-const filesToFix = [
-  'simple-automation-orchestrator.cjs',
-  'run-automation-suite.cjs'
-];
-
-filesToFix.forEach(file => {
-  if (fs.existsSync(file)) {
-    fixSyntaxErrors(file);
-  } else {
-    console.log(`File not found: ${file}`);
+function fixFile(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, 'utf8');
+    const fixed = fixTemplateLiterals(content);
+    
+    if (content !== fixed) {
+      fs.writeFileSync(filePath, fixed, 'utf8');
+      console.log(`✅ Fixed: ${filePath}`);
+      return true;
+    }
+    return false;
+  } catch (error) {
+    console.log(`❌ Error fixing ${filePath}: ${error.message}`);
+    return false;
   }
-});
+}
 
-console.log('Syntax error fixing completed!');
+function getAllFiles(dir) {
+  const files = [];
+  const items = fs.readdirSync(dir, { withFileTypes: true });
+  
+  for (const item of items) {
+    const fullPath = path.join(dir, item.name);
+    if (item.isDirectory() && !item.name.startsWith('.') && item.name !== 'node_modules') {
+      files.push(...getAllFiles(fullPath));
+    } else if (item.isFile() && (item.name.endsWith('.tsx') || item.name.endsWith('.jsx'))) {
+      files.push(fullPath);
+    }
+  }
+  
+  return files;
+}
+
+// Fix all React component files
+const componentFiles = getAllFiles('./components');
+const pageFiles = getAllFiles('./src/pages');
+const allFiles = [...componentFiles, ...pageFiles];
+
+let totalFixed = 0;
+for (const file of allFiles) {
+  if (fixFile(file)) {
+    totalFixed++;
+  }
+}
+
+console.log(`🎉 Fixed ${totalFixed} files with syntax errors`);

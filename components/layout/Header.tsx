@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
 import { 
-  Menu, 
-  X, 
-  Home, 
-  Users, 
-  Briefcase, 
-  Phone, 
-  Mail, 
+  Menu,
+  X,
+  Home,
+  Users,
+  Briefcase,
+  Phone,
+  Mail,
   ChevronDown,
   Brain,
   Shield,
@@ -25,136 +25,125 @@ import {
   Globe,
   Search,
   ArrowRight
-} from 'lucide-react';
-import { Button } from '../ui/Button';
-import { Badge } from '../ui/Badge';
-
+} from "lucide-react";
+import { Button } from "../ui/Button";
+import { Badge } from "../ui/Badge";
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const location = useLocation();
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
   const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'Services', href: '/services' },
-    { name: 'Solutions', href: '/solutions' },
-    { name: 'About', href: '/about' },
-    { name: 'Resources', href: '/blog' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Contact', href: '/contact' },
-    { name: 'Home', href: '/', icon: Home },
+    { name: "Home", href: "/" },
+    { name: "Services", href: "/services" },
+    { name: "Solutions", href: "/solutions" },
+    { name: "About", href: "/about" },
+    { name: "Resources", href: "/blog" },
+    { name: "Careers", href: "/careers" },
+    { name: "Contact", href: "/contact" },
+    { name: "Home", href: "/", icon: Home },
     { 
-      name: 'Services', 
-      href: '/services', 
+      name: "Services",
+      href: "/services",
       icon: Briefcase,
       dropdown: [
-        { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Artificial Intelligence solutions' },
-        { name: 'IT Services', href: '/it-services', icon: Network, description: 'Information Technology services' },
-        { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud, description: 'Micro Software as a Service' },
-        { name: 'Cybersecurity', href: '/services/ai-autonomous-cybersecurity-platform', icon: Shield, description: 'AI-powered security solutions' },
-        { name: 'Customer Experience', href: '/services/ai-customer-experience-platform', icon: Users, description: 'AI-driven customer experience' },
-        { name: 'Healthcare AI', href: '/services/ai-healthcare-diagnostics', icon: Brain, description: 'Medical AI diagnostics' }
+        { name: "AI Services", href: "/ai-services", icon: Brain, description: "Artificial Intelligence solutions" },
+        { name: "IT Services", href: "/it-services", icon: Network, description: "Information Technology services" },
+        { name: "Micro SaaS", href: "/micro-saas", icon: Cloud, description: "Micro Software as a Service" },
+        { name: "Cybersecurity", href: "/services/ai-autonomous-cybersecurity-platform", icon: Shield, description: "AI-powered security solutions" },
+        { name: "Customer Experience", href: "/services/ai-customer-experience-platform", icon: Users, description: "AI-driven customer experience" },
+        { name: "Healthcare AI", href: "/services/ai-healthcare-diagnostics", icon: Brain, description: "Medical AI diagnostics" }
       ]
     },
-    { name: 'About', href: '/about', icon: Users },
+    { name: "About", href: "/about", icon: Users },
     { 
-      name: 'Resources', 
-      href: '#', 
+      name: "Resources",
+      href: "#",
       icon: BookOpen,
       dropdown: [
-        { name: 'Blog', href: '/blog', icon: BookOpen, description: 'Latest insights and trends' },
-        { name: 'Case Studies', href: '/case-studies', icon: Target, description: 'Success stories' },
-        { name: 'White Papers', href: '/white-papers', icon: FileText, description: 'Research and insights' },
-        { name: 'Webinars', href: '/webinars', icon: Calendar, description: 'Expert-led sessions' },
-        { name: 'Pricing Guide', href: '/pricing-guide', icon: DollarSign, description: 'Comprehensive pricing info' }
+        { name: "Blog", href: "/blog", icon: BookOpen, description: "Latest insights and trends" },
+        { name: "Case Studies", href: "/case-studies", icon: Target, description: "Success stories" },
+        { name: "White Papers", href: "/white-papers", icon: FileText, description: "Research and insights" },
+        { name: "Webinars", href: "/webinars", icon: Calendar, description: "Expert-led sessions" },
+        { name: "Pricing Guide", href: "/pricing-guide", icon: DollarSign, description: "Comprehensive pricing info" }
       ]
     },
-    { name: 'Team', href: '/team', icon: Award },
-    { name: 'Contact', href: '/contact', icon: Phone }
+    { name: "Team", href: "/team", icon: Award },
+    { name: "Contact", href: "/contact", icon: Phone }
   ];
-
   const serviceCategories = [
     { 
-      name: 'Micro SaaS', 
-      href: '/services/micro-saas',
-      description: 'Innovative focused software solutions',
-      popular: ['AI Content Generator', 'Social Media Scheduler', 'Invoice Management', 'Time Tracking']
+      name: "Micro SaaS",
+      href: "/services/micro-saas",
+      description: "Innovative focused software solutions",
+      popular: ["AI Content Generator", "Social Media Scheduler", "Invoice Management", "Time Tracking"]
     },
     { 
-      name: 'IT Services', 
-      href: '/services/it-services',
-      description: 'Enterprise infrastructure & security',
-      popular: ['Cloud Migration', 'Edge Computing', 'Zero Trust Security', '5G Networks']
+      name: "IT Services",
+      href: "/services/it-services",
+      description: "Enterprise infrastructure & security",
+      popular: ["Cloud Migration", "Edge Computing", "Zero Trust Security", "5G Networks"]
     },
     { 
-      name: 'AI Services', 
-      href: '/services/ai-services',
-      description: 'Cutting-edge AI & machine learning',
-      popular: ['Quantum ML', 'Autonomous Systems', 'AI Cybersecurity', 'Drug Discovery']
+      name: "AI Services",
+      href: "/services/ai-services",
+      description: "Cutting-edge AI & machine learning",
+      popular: ["Quantum ML", "Autonomous Systems", "AI Cybersecurity", "Drug Discovery"]
     },
   ];
-
   const serviceCategories = [
-    { name: 'AI Solutions', href: '/services/ai-solutions' },
-    { name: 'Cloud & DevOps', href: '/services/cloud' },
-    { name: 'Cybersecurity', href: '/services/cybersecurity' },
-    { name: 'Data & Analytics', href: '/services/data' },
-    { name: 'Micro SaaS', href: '/services/micro-saas' },
-    { name: 'Digital Transformation', href: '/services/transformation' },
+    { name: "AI Solutions", href: "/services/ai-solutions" },
+    { name: "Cloud & DevOps", href: "/services/cloud" },
+    { name: "Cybersecurity", href: "/services/cybersecurity" },
+    { name: "Data & Analytics", href: "/services/data" },
+    { name: "Micro SaaS", href: "/services/micro-saas" },
+    { name: "Digital Transformation", href: "/services/transformation" },
   ];
-
   const solutionCategories = [
-    { name: 'Enterprise', href: '/solutions/enterprise' },
-    { name: 'SMB', href: '/solutions/smb' },
-    { name: 'Startup', href: '/solutions/startup' },
+    { name: "Enterprise", href: "/solutions/enterprise" },
+    { name: "SMB", href: "/solutions/smb" },
+    { name: "Startup", href: "/solutions/startup" },
   ];
-
   const resourceCategories = [
-    { name: 'Documentation', href: '/docs' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Partners', href: '/partners' },
-    { name: 'Team', href: '/team' },
-    { name: 'Careers', href: '/careers' },
+    { name: "Documentation", href: "/docs" },
+    { name: "Blog", href: "/blog" },
+    { name: "Partners", href: "/partners" },
+    { name: "Team", href: "/team" },
+    { name: "Careers", href: "/careers" },
   ];
-
   const isActive = (path: string) => location.pathname === path;
-
   const resourceCategories = [
-    { name: 'Blog', href: '/blog' },
-    { name: 'Case Studies', href: '/case-studies' },
-    { name: 'Webinars', href: '/webinars' },
-    { name: 'Documentation', href: '/documentation' },
-    { name: 'API Reference', href: '/api' },
-    { name: 'Help Center', href: '/help' },
-    { name: 'FAQ', href: '/faq' },
+    { name: "Blog", href: "/blog" },
+    { name: "Case Studies", href: "/case-studies" },
+    { name: "Webinars", href: "/webinars" },
+    { name: "Documentation", href: "/documentation" },
+    { name: "API Reference", href: "/api" },
+    { name: "Help Center", href: "/help" },
+    { name: "FAQ", href: "/faq" },
   ];
-
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
-        ? 'bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50' 
-        : 'bg-transparent'
+        ? "bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50" 
+        : "bg-transparent"
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
+          {/* comment */}
           <Link to="/" className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-              <Brain className="w-5 h-5 text-white" />
+              <Brain className="w-5 h-5 text-white"  />
             </div>
             <span className="text-xl font-bold text-white">Zion Tech Group</span>
           </Link>
-
-          {/* Desktop Navigation */}
+          {/* comment */}
           <nav className="hidden lg:flex items-center space-x-8">
             {navigation.map((item) => (
               <div key={item.name} className="relative">
@@ -166,23 +155,24 @@ const Header: React.FC = () => {
                   >
                     <item.icon className="w-4 h-4" />
                     <span>{item.name}</span>
-                    <ChevronDown className="w-4 h-4" />
+                    <ChevronDown className="w-4 h-4"  />
                   </div>
                 ) : (
                   <Link
                     to={item.href}
-                    className={`flex items-center space-x-1 transition-colors ${
+                    className={"flex items-center space-x-1 transition-colors ${
                       isActive(item.href)
-                        ? 'text-blue-400'
-                        : 'text-gray-300 hover:text-white'
-                    }`}
+}
+                        ? "text-blue-400"
+                        : "text-gray-300 hover:text-white"
+                    }"}
                   >
                     <item.icon className="w-4 h-4" />
                     <span>{item.name}</span>
                   </Link>
                 )}
 
-                {/* Dropdown Menu */}
+                {/* comment */}
                 <AnimatePresence>
                   {activeDropdown === item.name && item.dropdown && (
                     <motion.div
@@ -210,7 +200,7 @@ const Header: React.FC = () => {
                                 {dropdownItem.description}
                               </div>
                             </div>
-                            <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-white ml-auto mt-0.5" />
+                            <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-white ml-auto mt-0.5"  />
                           </Link>
                         ))}
                       </div>
@@ -218,34 +208,31 @@ const Header: React.FC = () => {
                   )}
                 </AnimatePresence>
               </div>
-    { name: 'About', href: '/about' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Contact', href: '/contact' },
+    { name: "About", href: "/about" },
+    { name: "Careers", href: "/careers" },
+    { name: "Contact", href: "/contact" },
   ];
-
   const serviceCategories = [
-    { name: 'Micro SaaS', href: '/services/micro-saas' },
-    { name: 'IT Services', href: '/services/it-services' },
-    { name: 'AI Services', href: '/services/ai-services' },
+    { name: "Micro SaaS", href: "/services/micro-saas" },
+    { name: "IT Services", href: "/services/it-services" },
+    { name: "AI Services", href: "/services/ai-services" },
   ];
-
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
-        ? 'bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50' 
-        : 'bg-transparent'
+        ? "bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50" 
+        : "bg-transparent"
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
+          {/* comment */}
           <Link to="/" className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-              <Brain className="w-5 h-5 text-white" />
+              <Brain className="w-5 h-5 text-white"  />
             </div>
             <span className="text-xl font-bold text-white">Zion Tech Group</span>
           </Link>
-
-          {/* Desktop Navigation */}
+          {/* comment */}
           <nav className="hidden lg:flex items-center space-x-8">
             {navigation.map((item) => (
               <div key={item.name} className="relative">
@@ -257,23 +244,24 @@ const Header: React.FC = () => {
                   >
                     <item.icon className="w-4 h-4" />
                     <span>{item.name}</span>
-                    <ChevronDown className="w-4 h-4" />
+                    <ChevronDown className="w-4 h-4"  />
                   </div>
                 ) : (
                   <Link
                     to={item.href}
-                    className={`flex items-center space-x-1 transition-colors ${
+                    className={"flex items-center space-x-1 transition-colors ${
                       isActive(item.href)
-                        ? 'text-blue-400'
-                        : 'text-gray-300 hover:text-white'
-                    }`}
+}
+                        ? "text-blue-400"
+                        : "text-gray-300 hover:text-white"
+                    }"}
                   >
                     <item.icon className="w-4 h-4" />
                     <span>{item.name}</span>
                   </Link>
                 )}
 
-                {/* Dropdown Menu */}
+                {/* comment */}
                 <AnimatePresence>
                   {activeDropdown === item.name && item.dropdown && (
                     <motion.div
@@ -301,7 +289,7 @@ const Header: React.FC = () => {
                                 {dropdownItem.description}
                               </div>
                             </div>
-                            <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-white ml-auto mt-0.5" />
+                            <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-white ml-auto mt-0.5"  />
                           </Link>
                         ))}
                       </div>
@@ -311,27 +299,28 @@ const Header: React.FC = () => {
               </div>
             ))}
           </nav>
-
-          {/* CTA Buttons */}
+          {/* comment */}
           <div className="hidden lg:flex items-center space-x-4">
             <Button variant="outline" size="sm">
-              <Search className="w-4 h-4 mr-2" />
+              <Search className="w-4 h-4 mr-2"  />
               Search
             </Button>
             <Button size="sm" className="bg-gradient-to-r from-blue-500 to-purple-600 text-white">
               Get Started
             </Button>
           </div>
-
-          {/* Mobile Menu Button */}
+          {/* comment */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
 
     window.addEventListener("scroll", handleScroll)
 }
+}
     return () => window.removeEventListener("scroll", handleScroll)
 }
+}
   }, [])
+}
 }
   const navigation = []
     },"
@@ -356,19 +345,18 @@ const Header: React.FC = () => {
   const quickLinks = []
   const serviceCategories = []
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${      isScrolled 
-        ? 'bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50' '        : 'bg-transparent
-    }}>'      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8>        <div className="flex items-center justify-between h-16">"          {/* Logo */}"          <Link to="/" className="flex items-center space-x-2>            <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">"              <Brain className="w-5 h-5 text-white />            </div>"            <span className="text-xl font-bold text-white>Zion Tech Group</span>          </Link>"`          {/* Desktop Navigation */}
+    <header className={"fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${      isScrolled 
+        ? "bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50" "        : "bg-transparent
+    }}>"      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8>        <div className="flex items-center justify-between h-16">"          {/* comment */}"          <Link to="/" className="flex items-center space-x-2>            <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">"              <Brain className="w-5 h-5 text-white   />            </div>"            <span className="text-xl font-bold text-white>Zion Tech Group</span>          </Link>""          {/* comment */}
           <nav className="hidden lg:flex items-center space-x-8>            {navigation.map((item) => ("              <div key={item.name} className="relative>                {item.dropdown ? ("                  <div
                     className="flex items-center space-x-1 text-gray-300 hover: text-white transition-colors cursor-pointer                    onMouseEnter={() => setActiveDropdown(item.name)}"                    onMouseLeave={() => setActiveDropdown(null)}>
-                    <item.icon className="w-4 h-4 />                    <span>{item.name}</span>"                    <ChevronDown className="w-4 h-4 />                  </div>"                ) : (
+                    <item.icon className="w-4 h-4 />                    <span>{item.name}</span>"                    <ChevronDown className="w-4 h-4   />                  </div>"                ) : (
                   <Link
 to={item.href}
-                    className={`flex items-center space-x-1 transition-colors ${                      isActive(item.href);
-
-                        ? 'text-blue-400
-                        : 'text-gray-300 hover:text-white
-                    }}'                  >`                    <item.icon className="w-4 h-4 />                    <span>{item.name}</span>"                  </Link>)}{/* Dropdown Menu */}
+                    className={"flex items-center space-x-1 transition-colors ${                      isActive(item.href);
+                        ? "text-blue-400
+                        : "text-gray-300 hover:text-white
+                    }}"                  >"                    <item.icon className="w-4 h-4 />                    <span>{item.name}</span>"                  </Link>)}{/* comment */}
                 <AnimatePresence>
                   {activeDropdown === item.name && item.dropdown && (
                     <motion.div
@@ -396,7 +384,7 @@ to={item.href}
                                 {dropdownItem.description}
                               </div>
                             </div>
-                            <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-white ml-auto mt-0.5" />
+                            <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-white ml-auto mt-0.5"  />
                           </Link>
                         ))}
                       </div>
@@ -406,11 +394,10 @@ to={item.href}
               </div>
             ))}
           </nav>
-
-          {/* CTA Buttons */}
+          {/* comment */}
           <div className="hidden lg:flex items-center space-x-4">
             <Button variant="outline" size="sm">
-              <Search className="w-4 h-4 mr-2" />
+              <Search className="w-4 h-4 mr-2"  />
               Search
             </Button>
             <Button size="sm" className="bg-gradient-to-r from-blue-500 to-purple-600 text-white">
@@ -442,30 +429,27 @@ to={item.href}
           >",
             {isMenuOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}
 
-          {/* CTA Buttons */}
-<div className="hidden lg: flex items-center space-x-4>            <Button variant="outline" size="sm">"              <Search className="w-4 h-4 mr-2 />              Search"            </Button>
+          {/* comment */}
+<div className="hidden lg: flex items-center space-x-4>            <Button variant="outline" size="sm">"              <Search className="w-4 h-4 mr-2   />              Search"            </Button>
             <Button size="sm" className="bg-gradient-to-r from-blue-500 to-purple-600 text-white>              Get Started"            </Button></div>
-
-          {/* Mobile Menu Button */}
+          {/* comment */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="lg:hidden p-2 rounded-lg text-gray-300 hover:text-white hover:bg-slate-700 transition-colors"
           >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMenuOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}
           </button>
         </div>
       </div>
-
-      {/* Main navigation */}
+      {/* comment */}
       <nav className="bg-white">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center py-4">
-            {/* Logo */}
+            {/* comment */}
             <Link href="/" className="flex items-center space-x-2">
               <div className="text-2xl font-bold text-blue-900">Zion Tech Group</div>
             </Link>
-
-            {/* Desktop Navigation */}
+            {/* comment */}
             <div className="hidden lg:flex items-center space-x-6">
               <Link
                 href="/"
@@ -473,20 +457,18 @@ to={item.href}
               >
                 Home
               </Link>
-              
               <Link
                 href="/about"
                 className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
               >
                 About
               </Link>
-              
-              {/* Services Dropdown */}
+              {/* comment */}
               <div className="relative group">
                 <button className="text-gray-700 hover:text-blue-600 font-medium transition-colors flex items-center">
                   Services
                   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"  />
                   </svg>
                 </button>
                 <div className="absolute top-full left-0 mt-2 w-64 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
@@ -502,13 +484,12 @@ to={item.href}
                     ))}
                   </div>
                 </div>
-
-      {/* Mobile Menu */}
+      {/* comment */}
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
+            animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
             className="lg:hidden bg-slate-900 border-t border-slate-700"
@@ -547,15 +528,13 @@ to={item.href}
                   ))}
                 </div>
               </div>
-
               </div>
-
-              {/* Solutions Dropdown */}
+              {/* comment */}
               <div className="relative group">
                 <button className="text-gray-700 hover:text-blue-600 font-medium transition-colors flex items-center">
                   Solutions
                   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"  />
                   </svg>
                 </button>
                 <div className="absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
@@ -572,7 +551,6 @@ to={item.href}
                   </div>
                 </div>
               </div>
-
                   {solutionCategories.map((category) => (
                     <Link
                       key={category.name}
@@ -584,7 +562,6 @@ to={item.href}
                   ))}
                 </div>
               </div>
-
               <Link
                 href="/blog"
                 className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
@@ -597,20 +574,18 @@ to={item.href}
               >
                 Case Studies
               </Link>
-
               <Link
                 href="/pricing"
                 className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
               >
                 Pricing
               </Link>
-
-              {/* Resources Dropdown */}
+              {/* comment */}
               <div className="relative group">
                 <button className="text-gray-700 hover:text-blue-600 font-medium transition-colors flex items-center">
                   Resources
                   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"  />
                   </svg>
                 </button>
                 <div className="absolute top-full left-0 mt-2 w-56 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
@@ -625,15 +600,13 @@ to={item.href}
                   ))}
                 </div>
               </div>
-
               <Link
                 href="/contact"
                 className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
               >
                 Contact
               </Link>
-
-              {/* CTA Button */}
+              {/* comment */}
               <Link
                 href="/contact"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
@@ -641,12 +614,11 @@ to={item.href}
                 Get Quote
               </Link>
             </div>
-
-            {/* Mobile menu button */}
+            {/* comment */}
             <button
               className="lg:hidden p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
               aria-expanded={isMenuOpen}
             >
               <motion.div
@@ -654,21 +626,20 @@ to={item.href}
                 transition={{ duration: 0.3 }}
               >
                 {isMenuOpen ? (
-                  <X className="w-6 h-6 text-gray-700" />
+                  <X className="w-6 h-6 text-gray-700"  />
                 ) : (
-                  <Menu className="w-6 h-6 text-gray-700" />
+                  <Menu className="w-6 h-6 text-gray-700"  />
                 )}
               </motion.div>
             </button>
           </div>
-
-          {/* Mobile Navigation */}
+          {/* comment */}
           <AnimatePresence>
             {isMenuOpen && (
               <motion.div 
                 className="lg:hidden border-t border-gray-200 py-4"
                 initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: 'auto' }}
+                animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
                 transition={{ duration: 0.3 }}
               >
@@ -684,7 +655,7 @@ to={item.href}
                   </Link>
                 ))}
                 
-                {/* Mobile Services */}
+                {/* comment */}
                 <div className="border-t border-gray-200 pt-4">
                   <div className="text-gray-700 font-medium mb-2">Services</div>
                 <Link
@@ -694,7 +665,6 @@ to={item.href}
                 >
                   Home
                 </Link>
-                
                 <Link
                   href="/about"
                   className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
@@ -702,8 +672,7 @@ to={item.href}
                 >
                   About
                 </Link>
-                
-                {/* Mobile Services */}
+                {/* comment */}
                 <div className="border-t border-gray-200 pt-4">
                   <div className="text-gray-700 font-medium mb-2">Services</div>
                   {serviceCategories.map((category) => (
@@ -718,8 +687,7 @@ to={item.href}
                     </Link>
                   )}
                 </div>
-
-                {/* Mobile Solutions */}
+                {/* comment */}
                 <div className="border-t border-gray-200 pt-4">
                   <div className="text-gray-700 font-medium mb-2">Solutions</div>
                   {solutionCategories.map((category) => (
@@ -733,7 +701,6 @@ to={item.href}
                     </Link>
                   ))}
                 </div>
-
                 <Link
                   href="/case-studies"
                   className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
@@ -741,7 +708,6 @@ to={item.href}
                 >
                   Case Studies
                 </Link>
-
                 <Link
                   href="/pricing"
                   className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
@@ -749,8 +715,7 @@ to={item.href}
                 >
                   Pricing
                 </Link>
-
-                {/* Mobile Resources */}
+                {/* comment */}
                 <div className="border-t border-gray-200 pt-4">
                   <div className="text-gray-700 font-medium mb-2">Resources</div>
                   {resourceCategories.map((category) => (
@@ -764,8 +729,7 @@ to={item.href}
                     </Link>
                   ))}
                 </div>
-
-                {/* Mobile CTA */}
+                {/* comment */}
                 <Link
                   href="/contact"
                   className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors text-center"
@@ -773,8 +737,7 @@ to={item.href}
                 >
                   Get Quote
                 </Link>
-
-                {/* Mobile CTA */}
+                {/* comment */}
                 <Link
                   href="/contact"
                   className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors text-center"
@@ -788,8 +751,7 @@ to={item.href}
                     </Link>
                   ))}
                 </div>
-
-                {/* Mobile CTA */}
+                {/* comment */}
                 <Link
                   href="/contact"
                   className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors text-center"
@@ -825,15 +787,15 @@ to={item.href}
                 >
                   Contact
 to={item.href}
-                      className={`flex items-center space-x-2 transition-colors ${                        isActive(item.href);
-                          ? 'text-blue-400
-                          : 'text-gray-300 hover:text-white
-                      }}'                      onClick={() => setIsMenuOpen(false)}`                    >
+                      className={"flex items-center space-x-2 transition-colors ${                        isActive(item.href);
+                          ? "text-blue-400
+                          : "text-gray-300 hover:text-white
+                      }}'                      onClick={() => setIsMenuOpen(false)}"                    >
                       <item.icon className="w-5 h-5 />                      <span>{item.name}</span>"                    </Link>)}
                 </div>
               ))}
               
-              <div className="pt-4 border-t border-slate-700 space-y-3>                <Button variant="outline" size="sm" className="w-full>                  <Search className="w-4 h-4 mr-2" />"                  Search"                </Button>
+              <div className="pt-4 border-t border-slate-700 space-y-3>                <Button variant="outline" size="sm" className="w-full>                  <Search className="w-4 h-4 mr-2"  />"                  Search"                </Button>
                 <Button size="sm" className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white>                  Get Started"                </Button></div>
             </div>
           </button>
@@ -895,8 +857,7 @@ initial="{{" opacity: 0, height: 0 }}""
                 >
                   Free Consultation,
                 </Link>
-
-                {/* Mobile CTA */}
+                {/* comment */}
                 <div className="border-t border-gray-200 pt-4">
                   <Link
                     href="/contact"
@@ -1000,5 +961,6 @@ className="lg: hidden border-t border-gray-200 py-4"">
       </AnimatePresence>
     </header>
   )
+}
 }
 ""export default Header

@@ -1,10 +1,8 @@
-import React from 'react;
-import Header from './Header;
+import React from "react;
+import Header from "./Header;
 import Footer from './Footer;
-
 type LayoutProps = {children: React.ReactNode;
 };
-
   children: React.ReactNode}
 
 export: default function Layout() {
@@ -15,6 +13,6 @@ React from"
   "./Footer"import Footer  from "react./Footer,
 export default function Layout({ children }: LayoutProps) {
   return (
-<div className="min-h-screen flex flex-col>      <Header />"      <main className="flex-1 pt-16>        {children}"      </main><Footer />
+<div className="min-h-screen flex flex-col>      <Header  />"      <main className="flex-1 pt-16>        {children}"      </main><Footer  />
     </div>
   )"; type: LayoutProps = { children: React.ReactNode, }; export default function Layout({ children }: LayoutProps) { return <div>{children}</div>; type LayoutProps = { children: React.ReactNode, }; export default function Layout({ children }: LayoutProps) { return <div>{children}</div> } " 

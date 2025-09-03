@@ -1,11 +1,11 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { 
-  Users, 
-  CheckCircle, 
-  Star, 
-  TrendingUp, 
+  Users,
+  CheckCircle,
+  Star,
+  TrendingUp,
   ArrowLeft,
   Phone,
   Mail,
@@ -26,8 +26,7 @@ import {
   Settings,
   Bell,
   Award
-} from 'lucide-react';
-
+} from "lucide-react";
 const MicroCRM = () => {
   const contactInfo = {
     phone: "+1 302 464 0950",
@@ -35,7 +34,6 @@ const MicroCRM = () => {
     address: "364 E Main St STE 1008, Middletown DE 19709",
     website: "https://ziontechgroup.com"
   };
-
   const features = [
     {
       title: "Contact Management",
@@ -68,7 +66,6 @@ const MicroCRM = () => {
       icon: Zap
     }
   ];
-
   const pricingPlans = [
     {
       name: "Starter",
@@ -120,13 +117,12 @@ const MicroCRM = () => {
       popular: false
     }
   ];
-
   const testimonials = [
     {
       name: "David Thompson",
       role: "Sales Manager",
       company: "GrowthTech Inc",
-      content: "The Micro CRM has streamlined our sales process completely. We've seen a 40% increase in conversion rates and our team is much more organized.",
+      content: "The Micro CRM has streamlined our sales process completely. We"ve seen a 40% increase in conversion rates and our team is much more organized.",
       rating: 5
     },
     {
@@ -144,10 +140,9 @@ const MicroCRM = () => {
       rating: 5
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
-      {/* Header */}
+      {/* comment */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -159,13 +154,12 @@ const MicroCRM = () => {
               to="/services" 
               className="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors mb-8"
             >
-              <ArrowLeft className="w-4 h-4 mr-2" />
+              <ArrowLeft className="w-4 h-4 mr-2"  />
               Back to Services
             </Link>
-            
             <div className="text-center mb-12">
               <div className="flex items-center justify-center mb-6">
-                <Users className="w-16 h-16 text-purple-400 mr-4" />
+                <Users className="w-16 h-16 text-purple-400 mr-4"  />
                 <h1 className="text-5xl md:text-6xl font-bold text-white">
                   Micro CRM Platform
                 </h1>
@@ -173,36 +167,34 @@ const MicroCRM = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
                 Lightweight CRM solution for small businesses with essential customer management features, lead tracking, and sales pipeline management.
               </p>
-              
-              {/* Contact Info */}
+              {/* comment */}
               <div className="flex flex-wrap justify-center gap-6 mb-8">
                 <a href={`tel:${contactInfo.phone}`} className="flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors">
-                  <Phone className="w-5 h-5" />
+                  <Phone className="w-5 h-5"  />
                   <span>{contactInfo.phone}</span>
                 </a>
                 <a href={`mailto:${contactInfo.email}`} className="flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors">
-                  <Mail className="w-5 h-5" />
+                  <Mail className="w-5 h-5"  />
                   <span>{contactInfo.email}</span>
                 </a>
                 <a href={contactInfo.website} className="flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors">
-                  <Globe className="w-5 h-5" />
+                  <Globe className="w-5 h-5"  />
                   <span>{contactInfo.website}</span>
                 </a>
               </div>
-
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href={`tel:${contactInfo.phone}`}
                   className="bg-purple-500 hover:bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center"
                 >
-                  <Phone className="w-5 h-5 mr-2" />
+                  <Phone className="w-5 h-5 mr-2"  />
                   Get Started Today
                 </a>
                 <a
                   href={`mailto:${contactInfo.email}`}
                   className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center"
                 >
-                  <Mail className="w-5 h-5 mr-2" />
+                  <Mail className="w-5 h-5 mr-2"  />
                   Request Demo
                 </a>
               </div>
@@ -210,8 +202,7 @@ const MicroCRM = () => {
           </motion.div>
         </div>
       </section>
-
-      {/* Features Section */}
+      {/* comment */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -245,8 +236,7 @@ const MicroCRM = () => {
           </div>
         </div>
       </section>
-
-      {/* Pricing Section */}
+      {/* comment */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900/20 to-cyan-900/20">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -270,8 +260,8 @@ const MicroCRM = () => {
                 transition={{ duration: 0.5, delay: 0.1 * index }}
                 className={`bg-gray-800/50 border rounded-xl p-8 relative ${
                   plan.popular 
-                    ? 'border-purple-500 shadow-lg shadow-purple-500/20' 
-                    : 'border-gray-700'
+                    ? "border-purple-500 shadow-lg shadow-purple-500/20" 
+                    : "border-gray-700"
                 }`}
               >
                 {plan.popular && (
@@ -290,22 +280,20 @@ const MicroCRM = () => {
                   </div>
                   <p className="text-gray-300">{plan.description}</p>
                 </div>
-
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />
                       {feature}
                     </li>
                   ))}
                 </ul>
-
                 <a
                   href={`tel:${contactInfo.phone}`}
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors flex items-center justify-center ${
                     plan.popular
-                      ? 'bg-purple-500 hover:bg-purple-600 text-white'
-                      : 'bg-gray-700 hover:bg-gray-600 text-white'
+                      ? "bg-purple-500 hover:bg-purple-600 text-white"
+                      : "bg-gray-700 hover:bg-gray-600 text-white'
                   }`}
                 >
                   Get Started
@@ -315,8 +303,7 @@ const MicroCRM = () => {
           </div>
         </div>
       </section>
-
-      {/* Testimonials Section */}
+      {/* comment */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -342,7 +329,7 @@ const MicroCRM = () => {
               >
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current"  />
                   ))}
                 </div>
                 <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
@@ -356,8 +343,7 @@ const MicroCRM = () => {
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
+      {/* comment */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900/20 to-cyan-900/20">
         <div className="max-w-4xl mx-auto text-center">
           <motion.h2 
@@ -386,14 +372,14 @@ const MicroCRM = () => {
               href={`tel:${contactInfo.phone}`}
               className="bg-purple-500 hover:bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center"
             >
-              <Phone className="w-5 h-5 mr-2" />
+              <Phone className="w-5 h-5 mr-2"  />
               Call Now
             </a>
             <a
               href={`mailto:${contactInfo.email}`}
               className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center"
             >
-              <Mail className="w-5 h-5 mr-2" />
+              <Mail className="w-5 h-5 mr-2"  />
               Email Us
             </a>
           </motion.div>
@@ -402,5 +388,4 @@ const MicroCRM = () => {
     </div>
   );
 };
-
 export default MicroCRM;

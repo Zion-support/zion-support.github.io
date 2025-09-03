@@ -6,7 +6,9 @@ export default function EnhancedFooter() {
   const scrollToTop = () => {"
     window.scrollTo({ top: 0, behavior: "smooth" })
 }
+}
   const currentYear = new Date().getFullYear()
+}
 }
   const footerLinks = {},"
       { name: "IT Services", href: "/services/it-services" },"

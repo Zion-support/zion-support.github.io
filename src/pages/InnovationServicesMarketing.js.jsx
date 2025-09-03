@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 ;
 ;
 const InnovationServicesMarketing = () => {
@@ -6,26 +6,26 @@ const InnovationServicesMarketing = () => {
     const categories = Array.from(new Set(allServices.map(service => service.category)));
     const industries = Array.from(new Set(specializedIndustrySolutions2025.map(service => service.industry)));
     const formatPrice = (price, model) => {
-        if (model === 'percentage of revenue') {
-            return `${price}% of revenue`}
-        else if (model === 'per device per day') {
-            return `$${price.toFixed(2)}/device/day`}
-        else if (model === 'per kWh managed') {
-            return `$${price.toFixed(3)}/kWh`}
-        else if (model === 'per acre') {
-            return `$${price.toFixed(2)}/acre/month`}
-        else if (model === 'per inference') {
-            return `$${price.toFixed(3)}/inference`}
-        else if (model === 'monthly per student') {
-            return `$${price}/student/month`}
-        else if (model === 'monthly per attorney') {
-            return `$${price}/attorney/month`}
+        if (model === "percentage of revenue") {
+            return "${price}% of revenue"}
+        else if (model === "per device per day") {
+            return "$${price.toFixed(2)}/device/day"}
+        else if (model === "per kWh managed") {
+            return "$${price.toFixed(3)}/kWh"}
+        else if (model === "per acre") {
+            return "$${price.toFixed(2)}/acre/month"}
+        else if (model === "per inference") {
+            return "$${price.toFixed(3)}/inference"}
+        else if (model === "monthly per student") {
+            return "$${price}/student/month"}
+        else if (model === "monthly per attorney") {
+            return "$${price}/attorney/month"}
         else {
-            return `$${price}/${model}`}
+            return "$${price}/${model}"}
     };
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 pt-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        {/* Hero Section */}
+        {/* comment */}
         <div className="text-center mb-20">          <h1 className="text-6xl md:text-7xl font-bold text-white mb-6">
             Innovation Services 2025"""
           </h1>""""
@@ -51,7 +51,7 @@ const InnovationServicesMarketing = () => {
           </div>
         </div>
 """
-        {/* Contact Information Banner */}""""
+        {/* comment */}""""
         <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-2xl p-8 mb-16">""""
           <div className="text-center">""""
             <h2 className="text-3xl font-bold text-white mb-4">
@@ -74,8 +74,7 @@ const InnovationServicesMarketing = () => {
                       strokeLinecap="round""""
                       strokeLinejoin="round""""
                       strokeWidth={2}""""
-                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"""
-                    />
+                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z""" />
                   </svg>"""
                 </div>""""
                 <h3 className="text-white font-bold mb-2 text-lg">Phone</h3>""""
@@ -94,8 +93,7 @@ const InnovationServicesMarketing = () => {
                       strokeLinecap="round""""
                       strokeLinejoin="round""""
                       strokeWidth={2}""""
-                      d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"""
-                    />
+                      d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z""" />
                   </svg>"""
                 </div>""""
                 <h3 className="text-white font-bold mb-2 text-lg">Email</h3>""""
@@ -116,20 +114,18 @@ const InnovationServicesMarketing = () => {
                       strokeLinecap="round""""
                       strokeLinejoin="round""""
                       strokeWidth={2}""""
-                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"""
-                    />"""
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z""" />"""
                     <path""""
                       strokeLinecap="round""""
                       strokeLinejoin="round""""
                       strokeWidth={2}""""
-                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"""
-                    />
+                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z""" />
                   </svg>"""
                 </div>""""
                 <h3 className="text-white font-bold mb-2 text-lg">Address</h3>""""
                 <p className="text-purple-400 text-lg">
                   364 E Main St STE 1008;
-                  <br />
+                  <br  />
                   Middletown DE 19709"""
                 </p>""""
                 <p className="text-gray-400 text-sm">
@@ -140,7 +136,7 @@ const InnovationServicesMarketing = () => {
           </div>
         </div>
 """
-        {/* Service Categories Overview */}""""
+        {/* comment */}""""
         <div className="mb-20">""""
           <h2 className="text-4xl font-bold text-white text-center mb-12">
             Service Categories"""
@@ -148,14 +144,17 @@ const InnovationServicesMarketing = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {categories.map(category => {}
               const categoryServices = allServices.filter()
+}
                 service => service.category === category;
               );
               const avgPrice =
                 categoryServices.reduce()
+}
                   (sum, service) => sum + service.price,
                   0;
                 ) / categoryServices.length;
               return()
+}
                 <div"""
                   key={category}""""
                   className="bg-slate-800/50 border border-white/10 rounded-2xl p-6 hover:border-white/20 transition-all duration-300""""
@@ -185,8 +184,7 @@ const InnovationServicesMarketing = () => {
                             strokeLinecap="round""""
                             strokeLinejoin="round""""
                             strokeWidth={2}""""
-                            d="M5 13l4 4L19 7"""
-                          />
+                            d="M5 13l4 4L19 7""" />
                         </svg>
                         {service.name}
                       </div>
@@ -203,7 +201,7 @@ const InnovationServicesMarketing = () => {
           </div>
         </div>
 """
-        {/* Industry Solutions Overview */}""""
+        {/* comment */}""""
         <div className="mb-20">""""
           <h2 className="text-4xl font-bold text-white text-center mb-12">
             Industry-Specific Solutions"""
@@ -211,14 +209,17 @@ const InnovationServicesMarketing = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {industries.map(industry => {}
               const industryServices = specializedIndustrySolutions2025.filter()
+}
                 service => service.industry === industry;
               );
               const avgPrice =
                 industryServices.reduce()
+}
                   (sum, service) => sum + service.price,
                   0;
                 ) / industryServices.length;
               return()
+}
                 <div"""
                   key={industry}""""
                   className="bg-slate-800/50 border border-white/10 rounded-2xl p-6 hover:border-white/20 transition-all duration-300""""
@@ -248,8 +249,7 @@ const InnovationServicesMarketing = () => {
                             strokeLinecap="round""""
                             strokeLinejoin="round""""
                             strokeWidth={2}""""
-                            d="M13 10V3L4 14h7v7l9-11h-7z"""
-                          />
+                            d="M13 10V3L4 14h7v7l9-11h-7z""" />
                         </svg>
                         {service.name}
                       </div>
@@ -261,7 +261,7 @@ const InnovationServicesMarketing = () => {
           </div>
         </div>
 """
-        {/* Featured Services */}""""
+        {/* comment */}""""
         <div className="mb-20">""""
           <h2 className="text-4xl font-bold text-white text-center mb-12">
             Featured Innovation Services"""
@@ -279,8 +279,8 @@ const InnovationServicesMarketing = () => {
                     </h3>""""
                     <p className="text-blue-400 font-medium">
                       {service.category}
-                    </p>'"""
-                    {'industry' in service && (""""
+                    </p>""""
+                    {"industry' in service && (""""
                       <p className="text-green-400 text-sm">
                         {service.industry}
                       </p>
@@ -321,8 +321,7 @@ const InnovationServicesMarketing = () => {
                               strokeLinecap="round""""
                               strokeLinejoin="round""""
                               strokeWidth={2}""""
-                              d="M5 13l4 4L19 7"""
-                            />
+                              d="M5 13l4 4L19 7""" />
                           </svg>
                           {feature}
                         </li>
@@ -347,8 +346,7 @@ const InnovationServicesMarketing = () => {
                               strokeLinecap="round""""
                               strokeLinejoin="round""""
                               strokeWidth={2}""""
-                              d="M13 10V3L4 14h7v7l9-11h-7z"""
-                            />
+                              d="M13 10V3L4 14h7v7l9-11h-7z""" />
                           </svg>
                           {benefit}
                         </li>
@@ -378,9 +376,9 @@ const InnovationServicesMarketing = () => {
                   </div>
                 </div>"""
 """"
-                <div className="text-center">`
-                  <a`"`
-                    href={`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.name}`}""""
+                <div className="text-center">"
+                  <a"""
+                    href={"mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.name}`}""""
                     className="inline-block w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-bold rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-200"""
                   >
                     Get Started with {service.name}
@@ -391,7 +389,7 @@ const InnovationServicesMarketing = () => {
           </div>
         </div>
 """
-        {/* Why Choose Zion Tech Group */}""""
+        {/* comment */}""""
         <div className="mb-20">""""
           <h2 className="text-4xl font-bold text-white text-center mb-12">
             Why Choose Zion Tech Group?"""
@@ -444,7 +442,7 @@ const InnovationServicesMarketing = () => {
           </div>
         </div>
 """
-        {/* Call to Action */}""""
+        {/* comment */}""""
         <div className="text-center">""""
           <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-2xl p-16">""""
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -478,14 +476,8 @@ const InnovationServicesMarketing = () => {
       </div>
     </div>)};
 export default InnovationServicesMarketing;
-
-
 export { InnovationServicesMarketing };
-
 export { InnovationServicesMarketing };
-
 export { InnovationServicesMarketing };
-
 export { InnovationServicesMarketing };
-
 export { InnovationServicesMarketing };

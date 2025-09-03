@@ -1,58 +1,58 @@
-import React, { useState } from 'react';'''
-import { Header } from '@/components/Header';'''
-import { Footer } from '@/components/Footer';'''
-import ConnectWalletButton from '@/components/ConnectWalletButton';'''
-import { useWallet } from '@/context/WalletContext';'''
-import { Button } from '@/components/ui/button';
+import React, { useState } from "react";"""
+import { Header } from "@/components/Header";"""
+import { Footer } from "@/components/Footer";"""
+import ConnectWalletButton from "@/components/ConnectWalletButton";"""
+import { useWallet } from "@/context/WalletContext";"""
+import { Button } from "@/components/ui/button";
 import {}
   Select,
   SelectContent,
   SelectItem,
-  SelectTrigger,'
-  SelectValue} from '@/components/ui/select';'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';'
-import { Input } from '@/components/ui/input';'
-const CHAINS = [''
-  { id: 'ethereum', name: 'Ethereum', logo: '/logos/ethereum-logo.svg' },'
-  { id: 'polygon', name: 'Polygon', logo: '/logos/polygon-logo.svg' },'
-  { id: 'arbitrum', name: 'Arbitrum', logo: '/logos/arbitrum-logo.svg' },'
-  { id: 'optimism', name: 'Optimism', logo: '/logos/optimism-logo.svg' },'
-  { id: 'avalanche', name: 'Avalanche', logo: '/logos/avalanche-logo.svg' },'
-  { id: 'bnb', name: 'BNB', logo: '/logos/bnb-logo.svg' }
+  SelectTrigger,"
+  SelectValue} from "@/components/ui/select";"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";"
+import { Input } from "@/components/ui/input";"
+const CHAINS = [""
+  { id: "ethereum", name: "Ethereum", logo: "/logos/ethereum-logo.svg" },"
+  { id: "polygon", name: "Polygon", logo: "/logos/polygon-logo.svg" },"
+  { id: "arbitrum", name: "Arbitrum", logo: "/logos/arbitrum-logo.svg" },"
+  { id: "optimism", name: "Optimism", logo: "/logos/optimism-logo.svg" },"
+  { id: "avalanche", name: "Avalanche", logo: "/logos/avalanche-logo.svg" },"
+  { id: "bnb", name: "BNB", logo: "/logos/bnb-logo.svg" }
 ];
 function suggestChain(region, stake) {}
-'
-''
-'''
-  if (stake > 1000) return 'ethereum';'''
-  if (region === 'asia') return 'bnb';'''
-  if (region === 'europe') return 'polygon';'''
-  return 'optimism';
+"
+""
+"""
+  if (stake > 1000) return "ethereum";"""
+  if (region === "asia") return "bnb";"""
+  if (region === "europe") return "polygon";"""
+  return "optimism";
 }
 export default function TokenIntegrations() {}
-  const { address, isConnected } = useWallet();'
-  const [fromChain, setFromChain] = useState('ethereum');'
-  const [toChain, setToChain] = useState('polygon');
+  const { address, isConnected } = useWallet();"
+  const [fromChain, setFromChain] = useState("ethereum");"
+  const [toChain, setToChain] = useState("polygon");
   const [txHash, setTxHash] = useState(null);
-  const [status, setStatus] = useState(null);'
-  const [region, setRegion] = useState('');
+  const [status, setStatus] = useState(null);"
+  const [region, setRegion] = useState("");
   const [stake, setStake] = useState(0);
   const [suggested, setSuggested] = useState(null);
   const handleBridge = () => {}
-'
-''
-'''
-    setStatus('Bridging...');
+"
+""
+"""
+    setStatus("Bridging...");
     setTxHash(null);
     // TODO: integrate actual LayerZero bridge logic;
     // Record onchain tx logs and enforce rate limits;
     // Use burn-and-mint model if tokens are wrapped;
     setTimeout(() => {}
-'
-''
-'''
-      setTxHash('0xabc123');
-      setStatus(`ZION$ arrived on ${toChain} in 12s`);
+"
+""
+"""
+      setTxHash("0xabc123");
+      setStatus("ZION$ arrived on ${toChain} in 12s");
     }, 1200);
   };
   const handleSuggest = () => {}
@@ -60,12 +60,13 @@ export default function TokenIntegrations() {}
     setSuggested(chain);
   };
   return()
+}
     <div>
-      <Header />
+      <Header  />
       <div className="min-h-screen bg-zion-blue pt-12 pb-20">""""
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 space-y-10">""""
           <h1 className="text-3xl font-bold text-white">ZION$ Integrations</h1>
-          <ConnectWalletButton />"""
+          <ConnectWalletButton  />"""
           {isConnected && (""""
             <p className="text-white">Connected wallet: {address}</p>
           )}
@@ -78,7 +79,7 @@ export default function TokenIntegrations() {}
               <div className="flex gap-4">"""
                 <Select value={fromChain} onValueChange={setFromChain}>""""
                   <SelectTrigger className="w-full">""""
-                    <SelectValue placeholder="From" />
+                    <SelectValue placeholder="From"  />
                   </SelectTrigger>
                   <SelectContent>
                     {CHAINS.map(c => ("""
@@ -88,8 +89,7 @@ export default function TokenIntegrations() {}
                             loading="lazy"""
                             src={c.logo}"""
                             alt={c.name}""""
-                            className="h-4"""
-                          />
+                            className="h-4""" />
                           {c.name}
                         </div>
                       </SelectItem>
@@ -98,7 +98,7 @@ export default function TokenIntegrations() {}
                 </Select>"""
                 <Select value={toChain} onValueChange={setToChain}>""""
                   <SelectTrigger className="w-full">""""
-                    <SelectValue placeholder="To" />
+                    <SelectValue placeholder="To"  />
                   </SelectTrigger>
                   <SelectContent>
                     {CHAINS.map(c => ("""
@@ -108,8 +108,7 @@ export default function TokenIntegrations() {}
                             loading="lazy"""
                             src={c.logo}"""
                             alt={c.name}""""
-                            className="h-4"""
-                          />
+                            className="h-4""" />
                           {c.name}
                         </div>
                       </SelectItem>
@@ -122,7 +121,6 @@ export default function TokenIntegrations() {}
               {status && <p className="text-white">{status}</p>}
             </CardContent>
           </Card>
-
           <Card>
             <CardHeader>
               <CardTitle>DePIN Rewards</CardTitle>"""
@@ -137,7 +135,6 @@ export default function TokenIntegrations() {}
               </p>
             </CardContent>
           </Card>
-
           <Card>
             <CardHeader>
               <CardTitle>Operator AI</CardTitle>"""
@@ -164,16 +161,12 @@ export default function TokenIntegrations() {}
           </Card>
         </div>
       </div>
-      <Footer />
+      <Footer  />
     </div>)}
 
 
 export { CHAINS, TokenIntegrations };
-
 export { CHAINS, TokenIntegrations };
-
 export { CHAINS, TokenIntegrations };
-
 export { CHAINS, TokenIntegrations };
-
 export { CHAINS, TokenIntegrations };

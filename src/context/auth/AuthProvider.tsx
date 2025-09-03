@@ -1,8 +1,7 @@
 import React, { useEffect } from "react";
-import { supabase, getFromProfiles } from '../../integrations/supabase/client';
+import { supabase, getFromProfiles } from "../../integrations/supabase/client";
 export default function Page() {
  = useAuthEventHandlers(setUser, setOnboardingStep);
-
   const {
     login: loginImpl,
     signup: signupImpl,
@@ -14,7 +13,6 @@ export default function Page() {
     loginWithTwitter,
     loginWithWeb3
   } = useAuthOperations(setUser, setIsLoading, setAvatarUrl);
-
   // Wrapper for login to match the AuthContextType interface
   const login = async(email: string, password: string) => {
     const { res, data } = await loginUser(email, password); // Calls /api/auth/login
@@ -33,18 +31,18 @@ export default function Page() {
       }
 
       // Navigation logic(already present)
+}
       const params = new URLSearchParams(location.search);
-      const next = params.get('redirectTo') || params.get('next') || '/equipment/recommendations';
+      const next = params.get("redirectTo") || params.get("next") || "/equipment/recommendations";
       navigate(next, { replace: true });
-
       return { error: null }; // Successful login
     }
 
     // Handle errors from the API call(res.status !== 200)
+}
     // data is expected to be { error: "message", code: "ERROR_CODE" }
     let toastMessage = data?.error || "An unknown error occurred.";
     const errorCode = data?.code;
-
     if(errorCode === "EMAIL_NOT_CONFIRMED") { // Expected for 403
       toastMessage = data?.error || "Email not confirmed.Please check your inbox to verify your email.";
     } else if(errorCode === "INVALID_CREDENTIALS") { // Expected for 401
@@ -52,6 +50,7 @@ export default function Page() {
     } else if(errorCode === "LOGIN_FAILED" || res.status === 500) { // Expected for 500 or other
       toastMessage = data?.error || "Login failed due to a server error.Please try again later.";
     } else if(res.status === 400) { // Bad request(e.g. missing fields, though schema validation is in API)
+}
         toastMessage = data?.error || "Invalid request.Please check your input.";
     }
     // Add any other specific error code handling here if needed
@@ -63,22 +62,20 @@ export default function Page() {
     });
     return { error: toastMessage };
   };
-
   // Refactored signup method
   const signup = async(name: string, email: string, password: string) => {
     setIsLoading(true);
     try {
       const { res, data } = await registerUser(name, email, password);
-
       if(!res.ok) {
         // Handle API errors(e.g., 400, 409, 500) from /api/auth/register
         toast({
           title: "Signup Failed",
-          description: data?.message || 'An unexpected error occurred.',
+          description: data?.message || "An unexpected error occurred.",
           variant: "destructive"
         });
         setIsLoading(false);
-        return { error: data?.message || 'Signup failed', emailVerificationRequired: false };
+        return { error: data?.message || "Signup failed", emailVerificationRequired: false };
       }
 
       if(data?.emailVerificationRequired) {
@@ -88,18 +85,17 @@ export default function Page() {
         });
         // Optionally set minimal user info if available and desired, but no active session
         // For example: setUser({ email: data.user?.email, id: data.user?.id, name: data.user?.display_name, email_verified_pending: true });
-        // For now, we don't set any user state to prevent confusion with an active session.setIsLoading(false);
+        // For now, we don"t set any user state to prevent confusion with an active session.setIsLoading(false);
         return { error: null, emailVerificationRequired: true };
       } else if(data?.session && data?.user) {
         // Auto-confirmed: API has set the cookie, now set client-side state
         // The API(/api/auth/register) should have set the HttpOnly cookie.// Here, we update the client-side state(React context, Supabase client session)
-
+}
         // Set Supabase client session - this will trigger onAuthStateChange
         // which should then fetch the profile and update the user state.const { error: sessionError } = await supabase.auth.setSession({
           access_token: data.session.access_token,
           refresh_token: data.session.refresh_token,
         });
-
         if(sessionError) {
           console.error("Error setting Supabase session:", sessionError);
           toast({
@@ -113,14 +109,12 @@ export default function Page() {
 
         // setTokens is handled by onAuthStateChange or if direct setting is preferred:
         setTokens({ accessToken: data.session.access_token, refreshToken: data.session.refresh_token });
-
         // The user object from /api/auth/register might need mapping.// For now, we assume data.user is compatible or onAuthStateChange will handle it.// setUser(data.user); // This will be handled by onAuthStateChange after setSession
 
-        const firstName = (data.user.user_metadata?.display_name || name).split(' ')[0];
-        toast({ title: `Welcome, ${firstName}!` });
-
+        const firstName = (data.user.user_metadata?.display_name || name).split(" ")[0];
+        toast({ title: "Welcome, ${firstName}!" });
         const params = new URLSearchParams(location.search);
-        const next = params.get('redirectTo') || params.get('next') || '/dashboard';
+        const next = params.get("redirectTo") || params.get("next") || "/dashboard";
         navigate(next, { replace: true });
         setIsLoading(false);
         return { error: null, emailVerificationRequired: false };
@@ -145,44 +139,42 @@ export default function Page() {
       return { error: err.message || "Signup failed", emailVerificationRequired: false };
     }
   };
-
   useEffect(() => {
   // TODO: Add dependencies if needed
 }, []);
     // Clean up any potential stale auth state before setting up listeners
     cleanupAuthState();
-    
     const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
         if(session?.user) {
           try {
             const { data: profile, error } = await getFromProfiles()
-              .select('*')
-              .eq('id', session.user.id)
+}
+              .select("*")
+}
+              .eq("id", session.user.id)
+}
               .single();
-
             if(profile) {
               const mappedUser = mapProfileToUser(session.user, profile);
               setUser(mappedUser);
               setAvatarUrl(mappedUser.avatarUrl || null);
-              
               // Show welcome toast when user logs in
-              if(event === 'SIGNED_IN') {
+              if(event === "SIGNED_IN") {
                 handleSignedIn(mappedUser);
                 const params = new URLSearchParams(location.search);
-                const nextFromUrl = params.get('redirectTo') || params.get('next'); // Renamed to avoid conflict
+                const nextFromUrl = params.get("redirectTo") || params.get("next"); // Renamed to avoid conflict
 
-                const nextPathFromStorage = safeStorage.getItem('nextPath');
-
+                const nextPathFromStorage = safeStorage.getItem("nextPath");
                 if(nextPathFromStorage) {
-                  safeStorage.removeItem('nextPath');
+                  safeStorage.removeItem("nextPath");
                   navigate(decodeURIComponent(nextPathFromStorage), { replace: true });
-                } else if(location.state?.pendingAction === 'buyNow' && location.state?.pendingActionArgs) {
+                } else if(location.state?.pendingAction === "buyNow" && location.state?.pendingActionArgs) {
                   const { id, title, price } = location.state.pendingActionArgs;
                   dispatch(addItem({ id, title, price }));
                   // Clear pending action from state first
                   navigate(location.pathname, { state: {}, replace: true });
                   // Navigate to checkout
-                  navigate('/checkout', { replace: true });
+                  navigate("/checkout", { replace: true });
                 } else if(nextFromUrl) {
                   navigate(decodeURIComponent(nextFromUrl), { replace: true });
                 }
@@ -199,33 +191,30 @@ export default function Page() {
         } else {
           setUser(false);
           setAvatarUrl(null);
-          
           // Show logout toast when user logs out
-          if(event === 'SIGNED_OUT') {
+          if(event === "SIGNED_OUT') {
             handleSignedOut();
           }
         }
         setIsLoading(false);
       }
     );
-
     return () => {
       subscription.unsubscribe();
     };
-  }, [navigate, 
-    dispatch, 
-    handleSignedIn, 
-    handleSignedOut, 
-    location.pathname, 
-    location.search, 
-    location.state?.pendingAction, 
-    location.state?.pendingActionArgs, 
-    setAvatarUrl, 
-    setIsLoading, 
+  }, [navigate,
+    dispatch,
+    handleSignedIn,
+    handleSignedOut,
+    location.pathname,
+    location.search,
+    location.state?.pendingAction,
+    location.state?.pendingActionArgs,
+    setAvatarUrl,
+    setIsLoading,
     setUser,
     setTokens // setTokens was also used indirectly via handleSignedIn if session is new
   ]);
-
   const authContextValue = {
     user,
     isLoading,
@@ -246,7 +235,6 @@ export default function Page() {
     avatarUrl,
     setAvatarUrl
   };
-
   return (<AuthContext.Provider value={authContextValue}>
       {children}
     </AuthContext.Provider>

@@ -1,81 +1,81 @@
-import React from 'react';'''
-import { Button } from '@/components/ui/button';'''
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';'''
-import { Badge } from '@/components/ui/badge';'''
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';'''
-import { Star, Zap, TrendingUp, CheckCircle, Phone, Mail, Globe, Shield, Users, ArrowUpRight, Brain, Cloud, Database, Lock, Code, BarChart3, MessageSquare, FileText, ShoppingCart, Settings import { EXPANDED_SERVICES, SERVICE_CATEGORIES } from '@/data/expandedServices';'''
-import { TrustedBySection } from '@/components/TrustedBySection';'''
-import SEO from '@/components/SEO';
+import React from "react";"""
+import { Button } from "@/components/ui/button";"""
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";"""
+import { Badge } from "@/components/ui/badge";"""
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";"""
+import { Star, Zap, TrendingUp, CheckCircle, Phone, Mail, Globe, Shield, Users, ArrowUpRight, Brain, Cloud, Database, Lock, Code, BarChart3, MessageSquare, FileText, ShoppingCart, Settings import { EXPANDED_SERVICES, SERVICE_CATEGORIES } from "@/data/expandedServices";"""
+import { TrustedBySection } from "@/components/TrustedBySection";"""
+import SEO from "@/components/SEO";
 export default function AllServicesLandingPage() {}
     const getCategoryIcon = (category) => {}
         switch (category) {}
-'
-''
-'''
-            case 'AI Services': return '🤖';'''
-            case 'Micro SAAS': return '☁️';'''
-            case 'IT Services': return '💻';'''
-            case 'Digital Services': return '🚀';'''
-            default: return '⚡'}
+"
+""
+"""
+            case "AI Services": return "🤖";"""
+            case "Micro SAAS": return "☁️";"""
+            case "IT Services": return "💻";"""
+            case "Digital Services": return "🚀";"""
+            default: return "⚡"}
     };
     const getCategoryIconComponent = (category) => {}
         switch (category) {}
-'
-            case 'AI Services': return <Brain className="h-6 w-6"/>;'"'"""
-            case 'Micro SAAS': return <Cloud className="h-6 w-6"/>;'"'"""
-            case 'IT Services': return <Code className="h-6 w-6"/>;'"'"""
-            case 'Digital Services': return <ArrowUpRight className="h-6 w-6"/>;""""
-            default: return <Settings className="h-6 w-6"/>}
+"
+            case "AI Services": return <Brain className="h-6 w-6"  />;""""""
+            case "Micro SAAS": return <Cloud className="h-6 w-6"  />;""""""
+            case "IT Services": return <Code className="h-6 w-6"  />;""""""
+            case "Digital Services": return <ArrowUpRight className="h-6 w-6"  />;""""
+            default: return <Settings className="h-6 w-6"  />}
     };
     const getPricingModelColor = (model) => {}
         switch (model) {}
-'
-''
-'''
-            case 'subscription': return 'bg-blue-100 text-blue-800';'''
-            case 'project-based': return 'bg-purple-100 text-purple-800';'''
-            case 'one-time': return 'bg-green-100 text-green-800';'''
-            case 'usage-based': return 'bg-orange-100 text-orange-800';'''
-            default: return 'bg-gray-100 text-gray-800'}
+"
+""
+"""
+            case "subscription": return "bg-blue-100 text-blue-800";"""
+            case "project-based": return "bg-purple-100 text-purple-800";"""
+            case "one-time": return "bg-green-100 text-green-800";"""
+            case "usage-based": return "bg-orange-100 text-orange-800";"""
+            default: return "bg-gray-100 text-gray-800"}
     };
     const getServiceIcon = (subcategory) => {}
         switch(subcategory) {}
-            case 'Customer Service': return < MessageSquare className="h-5 w-5"/>;
-            case 'Analytics': return < BarChart3 className="h-5 w-5"/>;
-            case 'Content Creation': return < FileText className="h-5 w-5"/>;
-            case 'Inventory Management': return < Database className="h-5 w-5"/>;
-            case 'HR Analytics': return < Users className="h-5 w-5"/>;
-            case 'Financial Management': return < BarChart3 className="h-5 w-5"/>;
-            case 'Cloud Solutions': return < Cloud className="h-5 w-5"/>;
-            case 'Cybersecurity': return < Lock className="h-5 w-5"/>;
-            case 'DevOps': return < Code className="h-5 w-5"/>;
-            case 'Transformation': return < ArrowUpRight className="h-5 w-5"/>;
-            case 'E - commerce': return < ShoppingCart className="h-5 w-5"/>;
-            default: return < Settings className="h-5 w-5"/>}
+            case "Customer Service": return < MessageSquare className="h-5 w-5" />;
+            case "Analytics": return < BarChart3 className="h-5 w-5" />;
+            case "Content Creation": return < FileText className="h-5 w-5" />;
+            case "Inventory Management": return < Database className="h-5 w-5" />;
+            case "HR Analytics": return < Users className="h-5 w-5" />;
+            case "Financial Management": return < BarChart3 className="h-5 w-5" />;
+            case "Cloud Solutions": return < Cloud className="h-5 w-5" />;
+            case "Cybersecurity": return < Lock className="h-5 w-5" />;
+            case "DevOps": return < Code className="h-5 w-5" />;
+            case "Transformation": return < ArrowUpRight className="h-5 w-5" />;
+            case "E - commerce": return < ShoppingCart className="h-5 w-5" />;
+            default: return < Settings className="h-5 w-5" />}
     };
     return (<div className="min - h-screen bg-background">
-      <SEO title="Complete Tech Solutions - AI, Micro SAAS, IT & Digital Services | Zion Tech Group" description="Discover our comprehensive ecosystem of AI services, micro SAAS solutions, IT infrastructure, and digital transformation services.Expert solutions for modern businesses." keywords="AI services, micro SAAS, IT services, digital transformation, cloud migration, cybersecurity, DevOps, business automation, Zion Tech Group" canonical="https://ziontechgroup.com / services"/>
+      <SEO title="Complete Tech Solutions - AI, Micro SAAS, IT & Digital Services | Zion Tech Group" description="Discover our comprehensive ecosystem of AI services, micro SAAS solutions, IT infrastructure, and digital transformation services.Expert solutions for modern businesses." keywords="AI services, micro SAAS, IT services, digital transformation, cloud migration, cybersecurity, DevOps, business automation, Zion Tech Group" canonical="https://ziontechgroup.com / services"  />
 
         switch (subcategory) {}
-'"""
-'"'"""
-            case 'Customer Service': return <MessageSquare className="h-5 w-5"/>;'"'"""
-            case 'Analytics': return <BarChart3 className="h-5 w-5"/>;'"'"""
-            case 'Content Creation': return <FileText className="h-5 w-5"/>;'"'"""
-            case 'Inventory Management': return <Database className="h-5 w-5"/>;'"'"""
-            case 'HR Analytics': return <Users className="h-5 w-5"/>;'"'"""
-            case 'Financial Management': return <BarChart3 className="h-5 w-5"/>;'"'"""
-            case 'Cloud Solutions': return <Cloud className="h-5 w-5"/>;'"'"""
-            case 'Cybersecurity': return <Lock className="h-5 w-5"/>;'"'"""
-            case 'DevOps': return <Code className="h-5 w-5"/>;'"'"""
-            case 'Transformation': return <ArrowUpRight className="h-5 w-5"/>;'"'"""
-            case 'E-commerce': return <ShoppingCart className="h-5 w-5"/>;""""
-            default: return <Settings className="h-5 w-5"/>}"""
+""""
+""""""
+            case "Customer Service": return <MessageSquare className="h-5 w-5"  />;""""""
+            case "Analytics": return <BarChart3 className="h-5 w-5"  />;""""""
+            case "Content Creation": return <FileText className="h-5 w-5"  />;""""""
+            case "Inventory Management": return <Database className="h-5 w-5"  />;""""""
+            case "HR Analytics": return <Users className="h-5 w-5"  />;""""""
+            case "Financial Management": return <BarChart3 className="h-5 w-5"  />;""""""
+            case "Cloud Solutions": return <Cloud className="h-5 w-5"  />;""""""
+            case "Cybersecurity": return <Lock className="h-5 w-5"  />;""""""
+            case "DevOps": return <Code className="h-5 w-5"  />;""""""
+            case "Transformation": return <ArrowUpRight className="h-5 w-5"  />;""""""
+            case "E-commerce": return <ShoppingCart className="h-5 w-5"  />;""""
+            default: return <Settings className="h-5 w-5"  />}"""
     };""""
     return (<div className="min-h-screen bg-background">""""
-      <SEO title="Complete Tech Solutions - AI, Micro SAAS, IT & Digital Services | Zion Tech Group" description="Discover our comprehensive ecosystem of AI services, micro SAAS solutions, IT infrastructure, and digital transformation services. Expert solutions for modern businesses." keywords="AI services, micro SAAS, IT services, digital transformation, cloud migration, cybersecurity, DevOps, business automation, Zion Tech Group" canonical="https://ziontechgroup.com/services"/>
+      <SEO title="Complete Tech Solutions - AI, Micro SAAS, IT & Digital Services | Zion Tech Group" description="Discover our comprehensive ecosystem of AI services, micro SAAS solutions, IT infrastructure, and digital transformation services. Expert solutions for modern businesses." keywords="AI services, micro SAAS, IT services, digital transformation, cloud migration, cybersecurity, DevOps, business automation, Zion Tech Group" canonical="https://ziontechgroup.com/services"  />
 """
-      {/* Hero Section */}""""
+      {/* comment */}""""
       <section className="bg-gradient-to-br from-zion-blue via-zion-purple to-zion-blue-dark py-20">""""
         <div className="container mx-auto px-4 text-center">""""
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -88,16 +88,16 @@ export default function AllServicesLandingPage() {}
 """"
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">""""
             <Button size="lg" className="bg-white text-zion-purple hover:bg-gray-100">""""
-              <Phone className="h-5 w-5 mr-2"/>
+              <Phone className="h-5 w-5 mr-2"  />
               Call +1 302 464 0950"""
             </Button>""""
             <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple">""""
-              <Mail className="h-5 w-5 mr-2"/>
+              <Mail className="h-5 w-5 mr-2"  />
               Get Free Consultation;
             </Button>
           </div>
 """
-          {/* Quick Stats */}""""
+          {/* comment */}""""
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">""""
             <div className="text-center">""""
               <div className="text-3xl font-bold text-zion-cyan mb-2">{EXPANDED_SERVICES.length}</div>""""
@@ -119,7 +119,7 @@ export default function AllServicesLandingPage() {}
         </div>
       </section>
 """
-      {/* Services by Category Tabs */}""""
+      {/* comment */}""""
       <section className="py-16">""""
         <div className="container mx-auto px-4">""""
           <div className="text-center mb-12">""""
@@ -153,8 +153,8 @@ export default function AllServicesLandingPage() {}
                       <CardHeader className="pb-4">""""
                         <div className="flex items-start justify-between mb-2">""""
                           <div className="text-2xl">{getCategoryIcon(service.category)}</div>
-                          <Badge className={getPricingModelColor(service.pricingModel)}>'
-                            {service.pricingModel.replace('-',)}
+                          <Badge className={getPricingModelColor(service.pricingModel)}>"
+                            {service.pricingModel.replace("-",)}
                           </Badge>"""
                         </div>""""
                         <div className="flex items-center space-x-2 mb-2">"""
@@ -168,22 +168,22 @@ export default function AllServicesLandingPage() {}
                       </CardHeader>"""
 """"
                       <CardContent className="space-y-4">"""
-                        {/* Rating and AI Score */}""""
+                        {/* comment */}""""
                         <div className="flex items-center justify-between">""""
                           <div className="flex items-center space-x-2">""""
                             <div className="flex items-center">""""
-                              <Star className="h-4 w-4 text-yellow-500 fill-current"/>""""
+                              <Star className="h-4 w-4 text-yellow-500 fill-current"  />""""
                               <span className="ml-1 text-sm font-medium">{service.rating}</span>""""
                               <span className="text-gray-500 text-sm ml-1">({service.reviewCount})</span>
                             </div>"""
                           </div>""""
                           <div className="flex items-center space-x-2">""""
-                            <Zap className="h-4 w-4 text-zion-purple"/>""""
+                            <Zap className="h-4 w-4 text-zion-purple"  />""""
                             <span className="text-sm font-medium text-zion-purple">AI Score: {service.aiScore}</span>
                           </div>
                         </div>
 """
-                        {/* Price and Market Price */}""""
+                        {/* comment */}""""
                         <div className="space-y-2">""""
                           <div className="flex items-center justify-between">""""
                             <span className="text-2xl font-bold text-zion-blue-dark">
@@ -195,7 +195,7 @@ export default function AllServicesLandingPage() {}
                           </div>
                         </div>
 """
-                        {/* Key Features */}""""
+                        {/* comment */}""""
                         <div className="space-y-2">""""
                           <h4 className="font-semibold text-zion-blue-dark text-sm">Key Features:</h4>""""
                           <div className="flex flex-wrap gap-1">""""
@@ -208,18 +208,18 @@ export default function AllServicesLandingPage() {}
                           </div>
                         </div>
 """
-                        {/* Top Benefits */}""""
+                        {/* comment */}""""
                         <div className="space-y-2">""""
                           <h4 className="font-semibold text-zion-blue-dark text-sm">Key Benefits:</h4>""""
                           <ul className="space-y-1">""""
                             {service.benefits.slice(0, 2).map((benefit, index) => (<li key={index} className="flex items-start space-x-2 text-sm text-gray-600">""""
-                                <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0"/>
+                                <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0"  />
                                 <span>{benefit}</span>
                               </li>) ) }
                           </ul>
                         </div>
 """
-                        {/* Service Details */}""""
+                        {/* comment */}""""
                         <div className="pt-4 border-t border-gray-200 space-y-2">""""
                           <div className="flex items-center justify-between text-sm">""""
                             <span className="text-gray-600">Availability:</span>""""
@@ -235,19 +235,19 @@ export default function AllServicesLandingPage() {}
                           </div>
                         </div>
 """
-                        {/* Contact Information */}""""
+                        {/* comment */}""""
                         <div className="pt-4 border-t border-gray-200">""""
                           <div className="space-y-2">""""
                             <div className="flex items-center space-x-2 text-sm text-gray-600">""""
-                              <Phone className="h-4 w-4"/>
+                              <Phone className="h-4 w-4"  />
                               <span>{service.contactInfo.phone}</span>"""
                             </div>""""
                             <div className="flex items-center space-x-2 text-sm text-gray-600">""""
-                              <Mail className="h-4 w-4"/>
+                              <Mail className="h-4 w-4"  />
                               <span>{service.contactInfo.email}</span>"""
                             </div>""""
                             <div className="flex items-center space-x-2 text-sm text-gray-600">""""
-                              <Globe className="h-4 w-4"/>""""
+                              <Globe className="h-4 w-4"  />""""
                               <a href={service.contactInfo.website} target="_blank" rel="noopener noreferrer" className="text-zion-cyan hover:underline">
                                 Visit Website;
                               </a>
@@ -255,7 +255,7 @@ export default function AllServicesLandingPage() {}
                           </div>
                         </div>
 """
-                        {/* Action Buttons */}""""
+                        {/* comment */}""""
                         <div className="flex space-x-2 pt-4">""""
                           <Button className="flex-1 bg-zion-purple hover:bg-zion-purple-dark">
                             Get Quote"""
@@ -272,7 +272,7 @@ export default function AllServicesLandingPage() {}
         </div>
       </section>
 """
-      {/* Why Choose Zion Section */}""""
+      {/* comment */}""""
       <section className="py-16 bg-zion-blue">""""
         <div className="container mx-auto px-4 text-center">""""
           <h2 className="text-3xl font-bold text-white mb-12">Why Choose Zion Tech Group?</h2>"""
@@ -280,7 +280,7 @@ export default function AllServicesLandingPage() {}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">""""
             <div className="text-center">""""
               <div className="bg-zion-purple rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">""""
-                <TrendingUp className="h-8 w-8 text-white"/>"""
+                <TrendingUp className="h-8 w-8 text-white"  />"""
               </div>""""
               <h3 className="text-xl font-semibold text-white mb-2">Proven Results</h3>""""
               <p className="text-zion-slate-light">
@@ -290,7 +290,7 @@ export default function AllServicesLandingPage() {}
 """"
             <div className="text-center">""""
               <div className="bg-zion-purple rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">""""
-                <Users className="h-8 w-8 text-white"/>"""
+                <Users className="h-8 w-8 text-white"  />"""
               </div>""""
               <h3 className="text-xl font-semibold text-white mb-2">Expert Team</h3>""""
               <p className="text-zion-slate-light">
@@ -300,7 +300,7 @@ export default function AllServicesLandingPage() {}
 """"
             <div className="text-center">""""
               <div className="bg-zion-purple rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">""""
-                <Shield className="h-8 w-8 text-white"/>"""
+                <Shield className="h-8 w-8 text-white"  />"""
               </div>""""
               <h3 className="text-xl font-semibold text-white mb-2">Reliable Support</h3>""""
               <p className="text-zion-slate-light">
@@ -311,7 +311,7 @@ export default function AllServicesLandingPage() {}
         </div>
       </section>
 """
-      {/* Contact CTA */}""""
+      {/* comment */}""""
       <section className="py-16 bg-gradient-to-r from-zion-purple to-zion-purple-dark">""""
         <div className="container mx-auto px-4 text-center">""""
           <h2 className="text-3xl font-bold text-white mb-4">
@@ -323,11 +323,11 @@ export default function AllServicesLandingPage() {}
 """"
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">""""
             <Button size="lg" className="bg-white text-zion-purple hover:bg-gray-100">""""
-              <Phone className="h-5 w-5 mr-2"/>
+              <Phone className="h-5 w-5 mr-2"  />
               Call +1 302 464 0950"""
             </Button>""""
             <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple">""""
-              <Mail className="h-5 w-5 mr-2"/>
+              <Mail className="h-5 w-5 mr-2"  />
               Email kleber@ziontechgroup.com;
             </Button>
           </div>"""
@@ -338,17 +338,12 @@ export default function AllServicesLandingPage() {}
           </div>
         </div>
       </section>
-
-      <TrustedBySection />
+      <TrustedBySection  />
     </div>)}
 
 
 export { AllServicesLandingPage };
-
 export { AllServicesLandingPage };
-
 export { AllServicesLandingPage };
-
 export { AllServicesLandingPage };
-
 export { AllServicesLandingPage };

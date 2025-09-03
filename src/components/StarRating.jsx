@@ -2,6 +2,7 @@ export default function StarRating ({ value }) { return [...Array (5) ].map ( (_
 ;,"});,"}),});,})"
 export default function StarRating({ value }) {}"});,"})
 }
+}
 '"""
 
 export { StarRating };

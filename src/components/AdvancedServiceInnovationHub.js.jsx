@@ -146,6 +146,7 @@ const AdvancedServiceInnovationHub = () => {}"});,"})"
 };""";,"});,"})"
     const categories = []"""";,"});,"})
 }
+}
     return ("
     <div className="max-w-7xl mx-auto p-6">;,"});,"})"
       {/* comment */}"});,"})"
@@ -602,6 +603,7 @@ const AdvancedServiceInnovationHub = () => {}""
     const [searchTerm, setSearchTerm] = useState("")"
     const [viewMode, setViewMode] = useState()
 }
+}
     // comment
 const innovationTrends = []"
         {}""
@@ -773,7 +775,9 @@ const innovationTrends = []"
             const matchesSearch = trend.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                 trend.description.toLowerCase().includes(searchTerm.toLowerCase())
 }
+}
             return matchesCategory && matchesImpact && matchesStatus && matchesSearch})}, [selectedCategory, selectedImpact, selectedStatus, searchTerm])
+}
 }
     const getImpactColor = (impact) => {}"
         switch (impact) {}""
@@ -1240,14 +1244,8 @@ const innovationTrends = []"
       </motion.div>
     </div>)};
 export default AdvancedServiceInnovationHub;
-
-
 export { AdvancedServiceInnovationHub };
-
 export { AdvancedServiceInnovationHub };
-
 export { AdvancedServiceInnovationHub };
-
 export { AdvancedServiceInnovationHub };
-
 export { AdvancedServiceInnovationHub };

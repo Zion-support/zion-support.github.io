@@ -1,44 +1,39 @@
-import {  import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
+import React from "react"
+import {  import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from "../data/innovativeMicroSaasServices2025";
 export default function Page() {
 ,;
-    { id: 'Metaverse', name: 'Metaverse', count: allServices.filter(s => s.category === 'Metaverse').length, icon: '🌍' },;
-    { id: 'Edge Computing', name: 'Edge Computing', count: allServices.filter(s => s.category === 'Edge Computing').length, icon: '🌐' },;
-    { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category === 'Cybersecurity').length, icon: '🛡️' };
+    { id: "Metaverse", name: "Metaverse", count: allServices.filter(s => s.category === "Metaverse").length, icon: "🌍" },;
+    { id: "Edge Computing", name: "Edge Computing", count: allServices.filter(s => s.category === "Edge Computing").length, icon: "🌐" },;
+    { id: "Cybersecurity", name: "Cybersecurity", count: allServices.filter(s => s.category === "Cybersecurity").length, icon: "🛡️" };
   ];
-
-    { id: 'all', name: 'All Levels', icon: '🌟' },;
-    { id: 'Advanced', name: 'Advanced', icon: '🚀' },;
-    { id: 'Cutting-edge', name: 'Cutting-edge', icon: '⚡' },;
-    { id: 'Revolutionary', name: 'Revolutionary', icon: '💫' };
+    { id: "all", name: "All Levels", icon: "🌟" },;
+    { id: "Advanced", name: "Advanced", icon: "🚀" },;
+    { id: "Cutting-edge", name: "Cutting-edge", icon: "⚡" },;
+    { id: "Revolutionary", name: "Revolutionary", icon: "💫" };
   ];
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    
     return matchesCategory && matchesSearch && matchesPrice && matchesInnovation}) ;
-
     switch(sortBy) {;
-      case 'price':;
-        return a.price - b.price;      case 'name':;
+      case "price":;
+        return a.price - b.price;      case "name":;
         return a.title.localeCompare(b.title);
-      case 'innovation':;
-        
+      case "innovation":;
   ;
   ;
-'
-  'Advanced': 1, 'Cutting-edge': 2,;  ;
+"
+  "Advanced": 1, "Cutting-edge": 2,;  ;
   ;
   ;
   ;
-  'Revolutionary': 3 ;
-
+  "Revolutionary": 3 ;
 };
         return (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0) - ;
-               (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0);      case 'category':;
+               (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0);      case "category":;
         return a.category.localeCompare(b.category) ;
       default:;
         return 0}) ;
-
     hidden: { opacity: 0 },;
     visible: {;
       opacity: 1,;
@@ -47,20 +42,17 @@ export default function Page() {
       };
     };
   };
-
   const itemVariants = {
   hidden: { y: 20,
   opacity: 0
 
 },                value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}"
-                className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl pl-12 pr-4 py-3 text-white placeholder-zion-slate-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan"
-              />
+                className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl pl-12 pr-4 py-3 text-white placeholder-zion-slate-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan" />
             </div>
-
-            {/* Filters Row */}"
+            {/* comment */}"
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-              {/* Category Filter */}"
+              {/* comment */}"
               <div className="relative">
                 <select
                   value={activeCategory}
@@ -70,12 +62,12 @@ export default function Page() {
                   {categories.map((category) => (;
                     <option key={category.id} value={category.id}>
                       {category.icon} {category.name} ({category.count})
+}
                     </option>
                   ))}
                 </select>"
                 <ChevronDown className="absolute right-4 top-1/2 transform -translate-y-1/2 text-zion-slate-400 w-4 h-4 pointer-events-none"  />              </div>
-
-              {/* Innovation Level Filter */}"
+              {/* comment */}"
               <div className="relative">
                 <select
                   value={innovationLevel}
@@ -89,8 +81,7 @@ export default function Page() {
                   ))}
                 </select>"
                 <ChevronDown className="absolute right-4 top-1/2 transform -translate-y-1/2 text-zion-slate-400 w-4 h-4 pointer-events-none"  />              </div>
-
-              {/* Sort By */}"
+              {/* comment */}"
               <div className="relative">
                 <select
                   value={sortBy}
@@ -103,29 +94,27 @@ export default function Page() {
                   <option value="category">Sort by Category</option>
                 </select>"
                 <ChevronDown className="absolute right-4 top-1/2 transform -translate-y-1/2 text-zion-slate-400 w-4 h-4 pointer-events-none"  />              </div>
-
-              {/* View Mode Toggle */}"
+              {/* comment */}"
               <div className="flex bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl p-1">;
-                <button'
-                  onClick={() => setViewMode('grid')}
-                  className={`flex-1 px-3 py-2 rounded-lg transition-all ${viewMode === 'grid''
-                      ? 'bg-zion-cyan text-white''
-                      : 'text-zion-slate-400 hover:text-white'`
-                  }`}
+                <button"
+                  onClick={() => setViewMode("grid")}
+                  className={"flex-1 px-3 py-2 rounded-lg transition-all ${viewMode === "grid""
+                      ? "bg-zion-cyan text-white""
+                      : "text-zion-slate-400 hover:text-white""
+                  }"}
 "
                   <Grid className="w-4 h-4 mx-auto"  />                </button>
-                <button'
-                  onClick={() => setViewMode('list')}`
-                  className={`flex-1 px-3 py-2 rounded-lg transition-all ${viewMode === 'list''
-                      ? 'bg-zion-cyan text-white''
-                      : 'text-zion-slate-400 hover:text-white'`
-                  }`}
+                <button"
+                  onClick={() => setViewMode("list")}"
+                  className={"flex-1 px-3 py-2 rounded-lg transition-all ${viewMode === "list""
+                      ? "bg-zion-cyan text-white""
+                      : "text-zion-slate-400 hover:text-white""
+                  }"}
 "
                   <List className="w-4 h-4 mx-auto"  />                </button>
               </div>
             </div>
-
-            {/* Price Range Slider */}"
+            {/* comment */}"
             <div className="mt-6">;"
               <label className="block text-sm font-medium text-zion-slate-300 mb-2">
                 Price Range: ${priceRange[0]} - ${priceRange[1]}
@@ -140,10 +129,9 @@ export default function Page() {
 
   (e) => setPriceRange([parseInt(e.target.value),
   priceRange[1]])
-
+}
 }"
-                  className="flex-1 h-2 bg-zion-slate-600 rounded-lg appearance-none cursor-pointer slider"
-                />
+                  className="flex-1 h-2 bg-zion-slate-600 rounded-lg appearance-none cursor-pointer slider" />
                 <input"
                   type="range"
                   min="0"
@@ -153,47 +141,44 @@ export default function Page() {
 
   (e) => setPriceRange([priceRange[0],
   parseInt(e.target.value)])
-
+}
 }"
-                  className="flex-1 h-2 bg-zion-slate-600 rounded-lg appearance-none cursor-pointer slider"
-                />
+                  className="flex-1 h-2 bg-zion-slate-600 rounded-lg appearance-none cursor-pointer slider" />
               </div>
             </div>
           </motion.div>
         </div>
       </section>
-
-      {/* Services Grid */}"
+      {/* comment */}"
       <section className="relative px-4 sm:px-6 lg:px-8 pb-20">;"
         <div className="max-w-7xl mx-auto">
-          {/* Results Count */}"
+          {/* comment */}"
           <div className="mb-8">"
             <p className="text-zion-slate-300">
               Showing {filteredServices.length} of {allServices.length} services
             </p>
           </div>
-
-          {/* Services Grid / List */}
+          {/* comment */}
           <motion.div
             variants={containerVariants}"
             initial="hidden"
-            animate="visible"'
-            className={viewMode === 'grid''
-              ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6''
-              : 'space-y-4'
+            animate="visible""
+            className={viewMode === "grid""
+              ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6""
+              : "space-y-4"
 
             {sortedServices.map((service) => (;
               <motion.div
                 key={service.id}
-                variants={itemVariants}`
-                className={`bg-zion-slate-800/50 backdrop-blur-sm border border-zion-slate-700 rounded-2xl p-6 hover:border-zion-cyan/50 hover:shadow-lg hover:shadow-zion-cyan/20 transition-all duration-300 cursor-pointer group ${viewMode === 'list' ? 'flex items-center gap-6' : ''`
-                }`}
+                variants={itemVariants}"
+                className={"bg-zion-slate-800/50 backdrop-blur-sm border border-zion-slate-700 rounded-2xl p-6 hover:border-zion-cyan/50 hover:shadow-lg hover:shadow-zion-cyan/20 transition-all duration-300 cursor-pointer group ${viewMode === "list" ? "flex items-center gap-6" : """
+                }"}
                 onClick={() => handleServiceClick(service)}
 
-                {viewMode === 'grid' ? (;
+                {viewMode === "grid" ? (;
                   // Grid View
                   <>
-                    {/* Header */}"
+                    {/* comment */}"
                     <div className="flex items-start justify-between mb-4">"
                       <div className="flex items-center gap-3">
                         {getCategoryIcon(service.category)}
@@ -206,13 +191,11 @@ export default function Page() {
                       </div>
                       {getInnovationIcon(service.innovationLevel) }
                     </div>
-
-                    {/* Description */}"
+                    {/* comment */}"
                     <p className="text-zion-slate-300 text-sm mb-4 line-clamp-3">
                       {service.description}
                     </p>
-
-                    {/* Tags */}"
+                    {/* comment */}"
                     <div className="flex flex-wrap gap-2 mb-4">
                       {service.tags.slice(0, 3).map((tag, index) => (
                         <span
@@ -222,8 +205,7 @@ export default function Page() {
                           {tag}
                         </span>) ) }
                     </div>
-
-                    {/* Price and Features */}"
+                    {/* comment */}"
                     <div className="space-y-3">"
                       <div className="flex items-center justify-between">"
                         <span className="text-2xl font-bold text-zion-cyan">
@@ -241,8 +223,7 @@ export default function Page() {
                         <Shield className="w-4 h-4"  />                        <span>{service.supportLevel}</span>
                       </div>
                     </div>
-
-                    {/* CTA Button */}"
+                    {/* comment */}"
                     <button className="w-full mt-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-2 px-4 rounded-xl font-medium hover:from-zion-cyan/90 hover:to-zion-purple/90 transition-all duration-300 flex items-center justify-center gap-2">
                       Learn More"
                       <ArrowRight className="w-4 h-4"  />                    </button>
@@ -291,7 +272,7 @@ export default function Page() {
               </motion.div>) ) }
           </motion.div>
 
-          {/* No Results */}
+          {/* comment */}
           {filteredServices.length === 0 && (<motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}"
@@ -308,19 +289,18 @@ export default function Page() {
   ;
   ;
   () => {;
-                  setSearchTerm('');
-                  setActiveCategory('all');
+                  setSearchTerm("");
+                  setActiveCategory("all");
                   setPriceRange([0,
   10000]);
-                  setInnovationLevel('all')}}"                className="bg-zion-cyan text-white px-6 py-3 rounded-xl font-medium hover:bg-zion-cyan/90 transition-colors"
+                  setInnovationLevel("all")}}"                className="bg-zion-cyan text-white px-6 py-3 rounded-xl font-medium hover:bg-zion-cyan/90 transition-colors"
               >
                 Clear All Filters;
               </button>
             </motion.div>) }
         </div>
       </section>
-
-      {/* Service Detail Modal */}
+      {/* comment */}
       <AnimatePresence>
         {selectedService && (<motion.div
             initial={{ opacity: 0 }}
@@ -352,7 +332,7 @@ export default function Page() {
               onClick={(e) => e.stopPropagation()}
 "
               <div className="p-8">
-                {/* Header */}"
+                {/* comment */}"
                 <div className="flex items-start justify-between mb-6">"
                   <div className="flex-1">"
                     <div className="flex items-center gap-3 mb-2">
@@ -366,14 +346,12 @@ export default function Page() {
                       {selectedService.description}
                     </p>
                   </div>
-                  <button
-                    onClick={closeModal}"
+                  <button onClick={closeModal}"
                     className="text-zion-slate-400 hover:text-white transition-colors"
 "
                     <X className="w-6 h-6"  />                  </button>
                 </div>
-
-                {/* Price and Key Info */}"
+                {/* comment */}"
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">"
                   <div className="bg-zion-slate-800/50 rounded-xl p-4">"
                     <div className="text-3xl font-bold text-zion-cyan mb-1">
@@ -394,8 +372,7 @@ export default function Page() {
                     <div className="text-zion-slate-400">ROI</div>
                   </div>
                 </div>
-
-                {/* Features and Benefits */}"
+                {/* comment */}"
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                   <div>"
                     <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">"
@@ -404,7 +381,7 @@ export default function Page() {
                     <ul className="space-y-2">
                       {selectedService.features.map((feature, index) => ("
                         <li key={index} className="flex items-start gap-2 text-zion-slate-300">"
-                          <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full mt-2 flex-shrink-0" />
+                          <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full mt-2 flex-shrink-0"  />
                           {feature}
                         </li>) ) }
                     </ul>
@@ -416,14 +393,13 @@ export default function Page() {
                     <ul className="space-y-2">
                       {selectedService.benefits.map((benefit, index) => ("
                         <li key={index} className="flex items-start gap-2 text-zion-slate-300">"
-                          <div className="w-1.5 h-1.5 bg-zion-purple rounded-full mt-2 flex-shrink-0" />
+                          <div className="w-1.5 h-1.5 bg-zion-purple rounded-full mt-2 flex-shrink-0"  />
                           {benefit}
                         </li>) ) }
                     </ul>
                   </div>
                 </div>
-
-                {/* Use Cases and Target Audience */}"
+                {/* comment */}"
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                   <div>"
                     <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">"
@@ -432,7 +408,7 @@ export default function Page() {
                     <ul className="space-y-2">
                       {selectedService.useCases.map((useCase, index) => ("
                         <li key={index} className="flex items-start gap-2 text-zion-slate-300">"
-                          <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full mt-2 flex-shrink-0" />
+                          <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full mt-2 flex-shrink-0"  />
                           {useCase}
                         </li>) ) }
                     </ul>
@@ -444,14 +420,13 @@ export default function Page() {
                     <ul className="space-y-2">
                       {selectedService.targetAudience.map((audience, index) => ("
                         <li key={index} className="flex items-start gap-2 text-zion-slate-300">"
-                          <div className="w-1.5 h-1.5 bg-zion-purple rounded-full mt-2 flex-shrink-0" />
+                          <div className="w-1.5 h-1.5 bg-zion-purple rounded-full mt-2 flex-shrink-0"  />
                           {audience}
                         </li>) ) }
                     </ul>
                   </div>
                 </div>
-
-                {/* Technical Specs */}
+                {/* comment */}
                 {selectedService.technicalSpecs && ("
                   <div className="mb-8">"
                     <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">"
@@ -479,7 +454,7 @@ export default function Page() {
                     </div>
                   </div>) }
 
-                {/* Contact and CTA */}"
+                {/* comment */}"
                 <div className="border-t border-zion-slate-700 pt-6">"
                   <div className="flex flex-col md:flex-row items-center justify-between gap-4">"
                     <div className="text-center md:text-left">"
@@ -505,5 +480,4 @@ export default function Page() {
       </AnimatePresence>;
     </div>;) ;
 </div></div></div></div></div></div></div>};
-
-export default ComprehensiveServicesShowcase2025}}}}}}}}}}'"`
+export default ComprehensiveServicesShowcase2025}}}}}}}}}}'""

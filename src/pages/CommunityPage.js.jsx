@@ -1,3 +1,4 @@
+import React from "react"
 import { useState } from "react";""""
 import CreatePostButton from "@/components/community/CreatePostButton";""""
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";""""
@@ -12,7 +13,7 @@ const featuredPosts = []
 """"
         id: "1",""""
         title: "Best practices for AI model fine-tuning",""""
-        content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me...",
+        content: "I"ve been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me...",
         author: {}
 """
 """"
@@ -44,8 +45,8 @@ const featuredPosts = []
 """
 """"
         id: "2",""""
-        title: "How to build an effective AI talent profile?","'"""
-        content: "I'm looking to improve my profile to get more client attention. What are the key elements I should focus on?",
+        title: "How to build an effective AI talent profile?","""""
+        content: "I"m looking to improve my profile to get more client attention. What are the key elements I should focus on?",
         author: {}
 """
 """"
@@ -80,8 +81,8 @@ const recentPosts = []
 """
 """"
         id: "3",""""
-        title: "Looking for feedback on my automated testing approach","'"""
-        content: "I've set up a CI/CD pipeline with the following testing strategy...",
+        title: "Looking for feedback on my automated testing approach","""""
+        content: "I"ve set up a CI/CD pipeline with the following testing strategy...",
         author: {}
 """
 """"
@@ -146,7 +147,7 @@ const recentPosts = []
 """
 """"
         id: "5",""""
-        title: "How to handle client scope creep?","'"""
+        title: "How to handle client scope creep?","""""
         content: "I'm working on a project where the client keeps adding requirements...",
         author: {}
 """
@@ -181,7 +182,7 @@ export default function CommunityPage() {}
     const { user } = useAuth();""""
     const [activeTab, setActiveTab] = useState("categories");"""
     return (<>""""
-      <SEO title="Community Forum | Zion AI Marketplace" description="Join the Zion AI Marketplace community forum. Ask questions, share knowledge, and connect with other AI professionals." keywords="community, forum, discussion, AI marketplace, questions, answers" canonical="https://ziontechgroup.com/community"/>"""
+      <SEO title="Community Forum | Zion AI Marketplace" description="Join the Zion AI Marketplace community forum. Ask questions, share knowledge, and connect with other AI professionals." keywords="community, forum, discussion, AI marketplace, questions, answers" canonical="https://ziontechgroup.com/community"  />"""
       """"
       <div className="container py-8">""""
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4">"""
@@ -191,8 +192,7 @@ export default function CommunityPage() {}
               Join the conversation, ask questions, and share your knowledge;
             </p>
           </div>
-
-          <CreatePostButton />
+          <CreatePostButton  />
         </div>"""
         """"
         <Tabs defaultValue="categories" value={activeTab} onValueChange={setActiveTab} className="mb-8">""""
@@ -203,18 +203,18 @@ export default function CommunityPage() {}
           </TabsList>"""
           """"
           <TabsContent value="categories">
-            <ForumCategories />
+            <ForumCategories  />
           </TabsContent>"""
           """"
           <TabsContent value="featured">""""
             <div className="space-y-4">
-              {featuredPosts.map((post) => (<PostCard key={post.id} post={post}/>))}
+              {featuredPosts.map((post) => (<PostCard key={post.id} post={post}  />))}
             </div>
           </TabsContent>"""
           """"
           <TabsContent value="recent">""""
             <div className="space-y-4">
-              {recentPosts.map((post) => (<PostCard key={post.id} post={post}/>))}
+              {recentPosts.map((post) => (<PostCard key={post.id} post={post}  />))}
             </div>
           </TabsContent>
         </Tabs>
@@ -223,11 +223,7 @@ export default function CommunityPage() {}
 
 
 export { CommunityPage };
-
 export { CommunityPage };
-
 export { CommunityPage };
-
 export { CommunityPage };
-
 export { CommunityPage };

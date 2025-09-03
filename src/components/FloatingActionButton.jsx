@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 export default FloatingActionButton;
-import { motion, AnimatePresence  } from 'framer-motion';
-
+import { motion, AnimatePresence  } from "framer-motion";
       icon: ChatBubbleLeftRightIcon,"
       label: &apos,Live Chat&apos,"
       action: () => window.open(&aposhttp,s: // comment
@@ -18,6 +17,7 @@ import { motion, AnimatePresence  } from 'framer-motion';
 const FloatingActionButton = ({ className = " }) => {}
 
   const [isOpen, setIsOpen] = useState()
+}
 }
       label: "Live Chat","
       action: () => window.open("https:// comment
@@ -42,6 +42,7 @@ const FloatingActionButton = ({ className = " }) => {}
 
   ]
   return()
+}
 }
   ]
   return ();"
@@ -134,9 +135,9 @@ initial="{{" opacity: 0, x: -10 }}&apos;&apos;"
             <motion.div&apos;&apos,";"
               key="&apos;close&apos;&apos;""
               transition="{{" duration: 0.2 }}&apos;&apos,>&apos;&apos,&apos;&apos,"
-              <XMarkIcon className="&apos;w-6" h-6&apos;       />&apos) : (&apos;&apos,&apos;&apos;"
+              <XMarkIcon className="&apos;w-6" h-6&apos;         />&apos) : (&apos;&apos,&apos;&apos;"
               key="&apos;open&apos;&apos;""
-              <PlusIcon className="&apos;w-6" h-6&apos;       />&apos,
+              <PlusIcon className="&apos;w-6" h-6&apos;         />&apos,
       <motion.button""";""
         onClick={toggleMenu}"""";"
         className = "bg-gradient-to-r from-blue-600 to-cyan-600 text-white p-4 rounded-full shadow-lg hover: shadow-xl transition-all duration-300 transform hover:scale-110"",">
@@ -154,14 +155,8 @@ initial="{{" opacity: 0, x: -10 }}&apos;&apos;"
     </div>)}
 
 export default FloatingActionButton;
-
-
 export { FloatingActionButton };
-
 export { FloatingActionButton };
-
 export { FloatingActionButton };
-
 export { FloatingActionButton };
-
 export { FloatingActionButton };

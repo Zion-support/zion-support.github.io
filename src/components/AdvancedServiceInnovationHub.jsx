@@ -1,38 +1,38 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo } from "react";
 export default AdvancedServiceInnovationHub;
-import { Badge } from './ui / badge';
+import { Badge } from "./ui / badge";
 export default function Page() {
- from './ui/badge';"
-import { Input } from './ui/input';
+ from "./ui/badge";"
+import { Input } from "./ui/input";
 export default function Page() {
 ,
         {
 
-            id: 'synthetic-biology',
-            title: 'Synthetic Biology Revolution',
-            description: 'Engineering of custom organisms and biological systems for industrial applications.',
-            category: 'biotech-ai',
-            impact: 'High',
-            timeline: '2025-2035',
+            id: "synthetic-biology",
+            title: "Synthetic Biology Revolution",
+            description: "Engineering of custom organisms and biological systems for industrial applications.",
+            category: "biotech-ai",
+            impact: "High",
+            timeline: "2025-2035",
             adoption: 70,
-            investment: '$150B+',
-            keyPlayers['Ginkgo Bioworks',Twist Bioscience',Research Institutions'],;
-            technologies['DNA Programming',Genetic Engineering',Bio-Manufacturing'],;
-            status: 'Growing'
+            investment: "$150B+",
+            keyPlayers["Ginkgo Bioworks",Twist Bioscience",Research Institutions"],;
+            technologies["DNA Programming",Genetic Engineering",Bio-Manufacturing"],;
+            status: "Growing"
         },
         {
 
-            id: 'brain-computer-interfaces',
-            title: 'Brain-Computer Interface Revolution',
-            description: 'Direct neural control of computers and digital systems for enhanced human capabilities.',
-            category: 'biotech-ai',
-            impact: 'High',
-            timeline: '2030-2040',
+            id: "brain-computer-interfaces",
+            title: "Brain-Computer Interface Revolution",
+            description: "Direct neural control of computers and digital systems for enhanced human capabilities.",
+            category: "biotech-ai",
+            impact: "High",
+            timeline: "2030-2040",
             adoption: 40,
-            investment: '$80B+',
-            keyPlayers['Neuralink',Kernel',Medical Device Companies'],;
-            technologies['Neural Interfaces',Signal Processing',AI/ML'],;
-            status: 'Emerging'
+            investment: "$80B+",
+            keyPlayers["Neuralink",Kernel",Medical Device Companies"],;
+            technologies["Neural Interfaces",Signal Processing",AI/ML"],;
+            status: "Emerging"
 
     ];
     const filteredTrends = useMemo(() => {
@@ -45,42 +45,42 @@ export default function Page() {
 
         switch(impact) {
 
-            case 'High': return 'bg-red-100 text-red-800';
-            case 'Medium': return 'bg-yellow-100 text-yellow-800';
-            case 'Low': return 'bg-green-100 text-green-800';
-            default: return 'bg-gray-100 text-gray-800'}
+            case "High": return "bg-red-100 text-red-800";
+            case "Medium": return "bg-yellow-100 text-yellow-800";
+            case "Low": return "bg-green-100 text-green-800";
+            default: return "bg-gray-100 text-gray-800"}
     };
     const getStatusColor = (status) => {
 
         switch(status) {
 
-            case 'Emerging': return 'bg-blue-100 text-blue-800';
-            case 'Growing': return 'bg-green-100 text-green-800';
-            case 'Mature': return 'bg-orange-100 text-orange-800';
-            case 'Disruptive': return 'bg-purple-100 text-purple-800';
-            default: return 'bg-gray-100 text-gray-800'}
+            case "Emerging": return "bg-blue-100 text-blue-800";
+            case "Growing": return "bg-green-100 text-green-800";
+            case "Mature": return "bg-orange-100 text-orange-800";
+            case "Disruptive": return "bg-purple-100 text-purple-800";
+            default: return "bg-gray-100 text-gray-800"}
     };
     const getCategoryIcon = (category) => {
 
         switch(category) {
-'"
-            case 'quantum': return <Atom className="w-5 h-5"/>;'"
-            case 'ai': return <Brain className="w-5 h-5"/>;'"
-            case 'space-tech': return <Satellite className="w-5 h-5"/>;'"
-            case 'green-tech': return <Leaf className="w-5 h-5"/>;'"
-            case 'biotech-ai': return <Dna className="w-5 h-5"/>;"
-            default: return <Cpu className="w-5 h-5"/>}
+""
+            case "quantum": return <Atom className="w-5 h-5"  />;""
+            case "ai": return <Brain className="w-5 h-5"  />;""
+            case "space-tech": return <Satellite className="w-5 h-5"  />;""
+            case "green-tech": return <Leaf className="w-5 h-5"  />;""
+            case "biotech-ai": return <Dna className="w-5 h-5"  />;"
+            default: return <Cpu className="w-5 h-5"  />}
     };
-    const categories = ['"
-        { id: 'all', name: 'All Categories', icon: <Globe className="w-4 h-4"/> },"
-        { id: 'quantum', name: 'Quantum Technology', icon: <Atom className="w-4 h-4"/> },"
-        { id: 'ai', name: 'Artificial Intelligence', icon: <Brain className="w-4 h-4"/> },"
-        { id: 'space-tech', name: 'Space Technology', icon: <Satellite className="w-4 h-4"/> },"
-        { id: 'green-tech', name: 'Green Technology', icon: <Leaf className="w-4 h-4"/> },"
-        { id: 'biotech-ai', name: 'Biotech AI', icon: <Dna className="w-4 h-4"/> }
+    const categories = [""
+        { id: "all", name: "All Categories", icon: <Globe className="w-4 h-4"  /> },"
+        { id: "quantum", name: "Quantum Technology", icon: <Atom className="w-4 h-4"  /> },"
+        { id: "ai", name: "Artificial Intelligence", icon: <Brain className="w-4 h-4"  /> },"
+        { id: "space-tech", name: "Space Technology", icon: <Satellite className="w-4 h-4"  /> },"
+        { id: "green-tech", name: "Green Technology", icon: <Leaf className="w-4 h-4"  /> },"
+        { id: "biotech-ai", name: "Biotech AI", icon: <Dna className="w-4 h-4"  /> }
     ];"
     return (<div className="max-w-7xl mx-auto p-6">
-      {/* Header */}
+      {/* comment */}
       <motion.div initial = {
 
   { opacity: 0,
@@ -110,6 +110,7 @@ export default function AdvancedServiceInnovationHub() {return ("
     const [selectedStatus, setSelectedStatus] = useState(&apos;all&apos)";&apos;&apos,
     const [searchTerm, setSearchTerm] = useState(&apos;&apos)";&apos;&apos
     const [viewMode, setViewMode] = useState(&apos;trends&apos)
+}
 }
     // comment
     const innovationTrends = []{}
@@ -177,6 +178,7 @@ export default function AdvancedServiceInnovationHub() {return ("
     const [selectedStatus, setSelectedStatus] = useState("all")"
     const [searchTerm, setSearchTerm] = useState(")"
     const [viewMode, setViewMode] = useState("trends")
+}
 }
     // comment
             id: "quantum-supremacy","",
@@ -294,7 +296,9 @@ export default function AdvancedServiceInnovationHub() {return ("
             const;const;const matchesSearch = trend.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                 trend.description.toLowerCase().includes(searchTerm.toLowerCase())
 }
+}
             return matchesCategory && matchesImpact && matchesStatus && matchesSearch})}, [selectedCategory, selectedImpact, selectedStatus, searchTerm])
+}
 }    const getImpactColor = (impact) => {}
 
         switch (impact) {}
@@ -320,12 +324,12 @@ export default function AdvancedServiceInnovationHub() {return ("
 
 &apos;&apos,"
 &apos;&apos,&apos;&apos,"
-            case &apos;quantum&apos;: return&apos;&apos; <Atom className="&apos;w-5" h-5&apos;       />&apos;&apos;&apos,"
-            case &apos;ai&apos;: return&apos;&apos; <Brain className="&apos;w-5" h-5&apos;       />&apos;&apos;&apos,"
-            case &apos;space-tech&apos;: return&apos;&apos; <Satellite className="&apos;w-5" h-5&apos;       />&apos;&apos;&apos,"
-            case &apos;green-tech&apos;: return&apos;&apos; <Leaf className="&apos;w-5" h-5&apos;       />&apos;&apos;&apos,"
-            case &apos;biotech-ai&apos;: return&apos;&apos; <Dna className="&apos;w-5" h-5&apos;       />";&apos;&apos;"
-            default: return&apos,&apos, <Cpu className = "&apos,w-5" h-5&apos,       />}
+            case &apos;quantum&apos;: return&apos;&apos; <Atom className="&apos;w-5" h-5&apos;         />&apos;&apos;&apos,"
+            case &apos;ai&apos;: return&apos;&apos; <Brain className="&apos;w-5" h-5&apos;         />&apos;&apos;&apos,"
+            case &apos;space-tech&apos;: return&apos;&apos; <Satellite className="&apos;w-5" h-5&apos;         />&apos;&apos;&apos,"
+            case &apos;green-tech&apos;: return&apos;&apos; <Leaf className="&apos;w-5" h-5&apos;         />&apos;&apos;&apos,"
+            case &apos;biotech-ai&apos;: return&apos;&apos; <Dna className="&apos;w-5" h-5&apos;         />";&apos;&apos;"
+            default: return&apos,&apos, <Cpu className = "&apos,w-5" h-5&apos,         />}
 
     }&apos;&apos;&apos,"
     const categories = []";&apos;&apos;"
@@ -471,7 +475,7 @@ y: 0 "",">
               Explore cutting-edge innovation trends, future technology roadmaps, and strategic insights for the next generation of services&apos
           </div>&apos;&apos,
           &apos;&apos,&apos;&apos,""
-          <div className="&apos;flex" gap-2&apos;>"&apos;&apos,&apos;&apos {[&apos;trends&apos,roadmap&apos,insights&apos].map((mode) => (&apos}&apos;<Button key="{mode}" variant="{viewMode" === mode ? &apos;default&apos; : &apos;outline&apos} size="&apos;sm&apos;" onClick="{()" => setViewMode(mode)}>&apos;&apos,&apos;&apos,{mode === &apos;trends&apos; &&"}&apos; <TrendingUp className="&apos;w-4" h-4 mr-2&apos;       />}&apos;&apos,&apos;&apos,{mode === &apos;roadmap&apos; &&"}&apos; <Rocket className="&apos;w-4" h-4 mr-2&apos;       />}&apos;&apos,&apos;&apos,{mode === &apos;insights&apos; &&"}&apos; <Lightbulb className="&apos;w-4" h-4 mr-2&apos;       />}
+          <div className="&apos;flex" gap-2&apos;>"&apos;&apos,&apos;&apos {[&apos;trends&apos,roadmap&apos,insights&apos].map((mode) => (&apos}&apos;<Button key="{mode}" variant="{viewMode" === mode ? &apos;default&apos; : &apos;outline&apos} size="&apos;sm&apos;" onClick="{()" => setViewMode(mode)}>&apos;&apos,&apos;&apos,{mode === &apos;trends&apos; &&"}&apos; <TrendingUp className="&apos;w-4" h-4 mr-2&apos;         />}&apos;&apos,&apos;&apos,{mode === &apos;roadmap&apos; &&"}&apos; <Rocket className="&apos;w-4" h-4 mr-2&apos;         />}&apos;&apos,&apos;&apos,{mode === &apos;insights&apos; &&"}&apos; <Lightbulb className="&apos;w-4" h-4 mr-2&apos;         />}
 
                 {mode.charAt(0).toUpperCase() + mode.slice(1)}&apos
       </motion.div>&apos,
@@ -698,7 +702,7 @@ y: 0 "",">
                           {roadmap.category.toUpperCase()}"
                   <div className="&apos;grid" grid-cols-1 lg: grid-cols-3 gap-6&apos,>"&apos,&apos,"
                       <h4 className="&apos;font-semibold" text-zion-slate-dark mb-3 flex items-center gap-2&apos;>"&apos;&apos,&apos;&apos;"
-                        <CheckCircle className="&apos;w-4" h-4 text-green-500&apos;       />"
+                        <CheckCircle className="&apos;w-4" h-4 text-green-500&apos;         />"
                         Key Milestones&apos;&apos,&apos;&apos,
                       </h4>&apos;&apos,&apos;&apos,",
                       <ul className="&apos;space-y-2&apos;">"&apos,&apos,"{roadmap.milestones.map((milestone, idx) => (&apos}&apos;<li key="{idx}" className="&apos;text-sm" text-zion-slate-light flex items-start gap-2&apos;>"&apos;&apos,&apos;&apos;"
@@ -713,7 +717,7 @@ y: 0 "",">
                             {milestone}
 
                       </ul>"
-                        <Shield className="&apos;w-4" h-4 text-orange-500&apos;       />"
+                        <Shield className="&apos;w-4" h-4 text-orange-500&apos;         />"
                         Challenges&apos;&apos,&apos;&apos;"
                       <ul className="&apos;space-y-2&apos;">"&apos;&apos,{roadmap.challenges.map((challenge, idx) => (&apos}&apos;<li key="{idx}" className="&apos;text-sm" text-zion-slate-light flex items-start gap-2&apos;>"&apos;&apos,&apos;&apos;"
                             <div className="&apos;w-2" h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0&apos;>&apos,</div>"
@@ -722,7 +726,7 @@ y: 0 "",">
                       <ul className="space-y-2">""""{roadmap.challenges.map((challenge, idx) => (<li key="{idx}" className="text-sm text-zion-slate-light flex items-start gap-2">""""
                             <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
                             {challenge}"
-                        <Star className="&apos;w-4" h-4 text-yellow-500&apos;       />"
+                        <Star className="&apos;w-4" h-4 text-yellow-500&apos;         />"
                         Opportunities&apos;&apos,&apos;&apos;"
                       <ul className="&apos;space-y-2&apos;">"&apos;&apos,{roadmap.opportunities.map((opportunity, idx) => (&apos}&apos;<li key="{idx}" className="&apos;text-sm" text-zion-slate-light flex items-start gap-2&apos;>"&apos;&apos,&apos;&apos;"
                             <div className="&apos;w-2" h-2 bg-yellow-500 rounded-full mt-2 flex-shrink-0&apos;>&apos,</div>"
@@ -799,13 +803,14 @@ y: 0 "",">
             <Button className="bg-white text-zion-purple hover:bg-zion-slate-light" onClick = {}">
 " () => window.open()
 }
+}
 ""}>"";"
               <Users className = "w - 5 h-5 mr-2"  />,
               Get Innovation Strategy"",
             </Button>"";"
             <Button variant = "outline" className="border-white text-white hover:bg-white hover:text-zion-purple" onClick = {}>
 " () => window.open("tel:+13024640950",_blank");"
-              <Zap className="w-5 h-5 mr-2`       />
+              <Zap className="w-5 h-5 mr-2`         />
               Speak with an Expert
             </Button>
       </motion.div> {/* comment */}&apos {viewMode === &apos;insights&apos; && (&apos}<motion.div initial = {}">
@@ -813,7 +818,7 @@ y: 0 "",">
           <div className="&apos;grid" grid-cols-1 lg: grid-cols-2 gap-6&apos,>&apos,"
             <Card>&apos;&apos,&apos;&apos;"
                 <CardTitle className="&apos;flex" items-center gap-2&apos;>"&apos;&apos,&apos;&apos;"
-                  <TrendingUp className="&apos;w-5" h-5 text-zion-green&apos;       />
+                  <TrendingUp className="&apos;w-5" h-5 text-zion-green&apos;         />
                   Investment Trends&apos
                 </CardTitle>"
               </CardHeader>&apos;&apos,&apos;&apos;"
@@ -857,7 +862,7 @@ y: 0 "",">
                     <div className="bg-zion-green h-2 rounded-full" style="{{" width: "60%" }}></div>
               </CardContent>
             </Card>"
-                  <Users className="&apos;w-5" h-5 text-zion-blue&apos;       />
+                  <Users className="&apos;w-5" h-5 text-zion-blue&apos;         />
                   Market Adoption&apos;"
                     <span className="&apos;text-zion-slate-light&apos;">Early Adopters&apos;</span>&apos;&apos,&apos;&apos,"
                     <span className="&apos;font-semibold" text-zion-cyan&apos;>15%&apos;</span>&apos;&apos,&apos;&apos;"
@@ -885,20 +890,20 @@ y: 0 "",">
                     <span className="text-zion-slate-light">Mature Market</span>""""
                     <span className="font-semibold text-zion-green">10%</span>""""
                     <div className="bg-zion-green h-2 rounded-full" style="{{" width: "10%" }}></div>"
-                <Lightbulb className="&apos;w-5" h-5 text-zion-yellow&apos;       />
+                <Lightbulb className="&apos;w-5" h-5 text-zion-yellow&apos;         />
                 Strategic Recommendations&apos;"
               <div className="&apos;grid" grid-cols-1 md: grid-cols-2 gap-6&apos,>"&apos,&apos,"
                   <h4 className="&apos;font-semibold" text-zion-slate-dark mb-3&apos;>Immediate Actions (0-2 years)&apos;</h4>&apos;&apos,&apos;&apos,"
                   <ul className="&apos;space-y-2&apos;">"&apos;&apos,&apos;&apos;"
                     <li className="&apos;text-sm" text-zion-slate-light flex items-start gap-2&apos;>"&apos;&apos,&apos;&apos;"
-                      <CheckCircle className="&apos;w-4" h-4 text-green-500 mt-1 flex-shrink-0&apos;       />"
+                      <CheckCircle className="&apos;w-4" h-4 text-green-500 mt-1 flex-shrink-0&apos;         />"
                       Invest in quantum computing research and development&apos;&apos,&apos;&apos,
                     </li>&apos;&apos,&apos;&apos,"
                       Develop AI ethics and governance frameworks&apos;&apos,&apos;&apos
                       Establish partnerships with space technology companies&apos
                     </li>"
                   <h4 className="&apos;font-semibold" text-zion-slate-dark mb-3&apos;>Strategic Planning (2-5 years)&apos;</h4>&apos;&apos,&apos;&apos,"
-                      <CheckCircle className="&apos;w-4" h-4 text-blue-500 mt-1 flex-shrink-0&apos;       />"
+                      <CheckCircle className="&apos;w-4" h-4 text-blue-500 mt-1 flex-shrink-0&apos;         />"
                       Build quantum internet infrastructure&apos;&apos,&apos;&apos,
                       Develop synthetic biology capabilities&apos;&apos,&apos;&apos
                       Invest in fusion energy research&apos;"
@@ -928,13 +933,14 @@ y: 0 "",">
             <Button className = "&apos,bg-white" text-zion-purple hove,r: bg-zion-slate-light&apos, onClick = {}">
 " () => window.open()
 }
+}
 &apos;&apos,}>&apos;&apos,&apos;&apos,"
-              <Users className="&apos;w-5" h-5 mr-2&apos;       />"
+              <Users className="&apos;w-5" h-5 mr-2&apos;         />"
               Get Innovation Strategy&apos;&apos,&apos;&apos,
             </Button>&apos;&apos,&apos;&apos,"
             <Button variant="&apos;outline&apos;" className="&apos;border-white" text-white hover:bg-white hove,r: text-zion-purple&apos, onClick = {}>
 " () => window.open(&apos;tel: +13024640950&apos,_blank&apos);"
-              <Zap className="&apos;w-5" h-5 mr-2&quot;       />
+              <Zap className="&apos;w-5" h-5 mr-2&quot;         />
               Speak with an Expert&quot;"
 """"}} transition = "{{" delay: 0.4 }} className="mt-12 text-center">""""
         <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">""""
@@ -961,11 +967,7 @@ export default AdvancedServiceInnovationHub;
 }}}}}}
 
 export { AdvancedServiceInnovationHub };
-
 export { AdvancedServiceInnovationHub };
-
 export { AdvancedServiceInnovationHub };
-
 export { AdvancedServiceInnovationHub };
-
 export { AdvancedServiceInnovationHub };

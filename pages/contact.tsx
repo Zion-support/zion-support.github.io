@@ -1,18 +1,17 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { Mail, Phone, MapPin } from 'lucide-react';
-
+import React from "react"
+import type { NextPage } from "next";
+import Head from "next/head";
+import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
+import { Mail, Phone, MapPin } from "lucide-react";
 const Contact: NextPage = () => {
   return (
     <>
       <Head>
         <title>Contact Us - Zion Tech Group</title>
-        <meta name="description" content="Get in touch with Zion Tech Group for your technology needs. We're here to help transform your business." />
+        <meta name="description" content="Get in touch with Zion Tech Group for your technology needs. We"re here to help transform your business."  />
       </Head>
-      
-      <Navigation />
+      <Navigation  />
       
       <main className="min-h-screen bg-gray-900 pt-16">
         <div className="container mx-auto px-4 py-16">
@@ -22,48 +21,38 @@ const Contact: NextPage = () => {
                 Contact <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Us</span>
               </h1>
               <p className="text-xl text-gray-300">
-                Ready to transform your business? Let's discuss how we can help.
+                Ready to transform your business? Let"s discuss how we can help.
               </p>
             </div>
-            
             <div className="grid lg:grid-cols-2 gap-12">
-              {/* Contact Form */}
+              {/* comment */}
               <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
                 <h2 className="text-2xl font-bold text-white mb-6">Send us a message</h2>
                 <form className="space-y-6">
                   <div>
                     <label htmlFor="name" className="block text-white mb-2">Name</label>
-                    <input
-                      type="text"
+                    <input type="text"
                       id="name"
                       name="name"
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400"
-                      placeholder="Your name"
-                    />
+                      placeholder="Your name"  />
                   </div>
-                  
                   <div>
                     <label htmlFor="email" className="block text-white mb-2">Email</label>
-                    <input
-                      type="email"
+                    <input type="email"
                       id="email"
                       name="email"
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400"
-                      placeholder="your@email.com"
-                    />
+                      placeholder="your@email.com"  />
                   </div>
-                  
                   <div>
                     <label htmlFor="company" className="block text-white mb-2">Company</label>
-                    <input
-                      type="text"
+                    <input type="text"
                       id="company"
                       name="company"
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400"
-                      placeholder="Your company"
-                    />
+                      placeholder="Your company"  />
                   </div>
-                  
                   <div>
                     <label htmlFor="message" className="block text-white mb-2">Message</label>
                     <textarea
@@ -74,7 +63,6 @@ const Contact: NextPage = () => {
                       placeholder="Tell us about your project..."
                     ></textarea>
                   </div>
-                  
                   <button
                     type="submit"
                     className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
@@ -83,45 +71,40 @@ const Contact: NextPage = () => {
                   </button>
                 </form>
               </div>
-              
-              {/* Contact Info */}
+              {/* comment */}
               <div className="space-y-8">
                 <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
                   <h2 className="text-2xl font-bold text-white mb-6">Get in touch</h2>
-                  
                   <div className="space-y-6">
                     <div className="flex items-start space-x-4">
-                      <Mail className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0" />
+                      <Mail className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0"  />
                       <div>
                         <h3 className="text-white font-semibold mb-1">Email</h3>
                         <p className="text-gray-300">info@ziontechgroup.com</p>
                         <p className="text-gray-300">support@ziontechgroup.com</p>
                       </div>
                     </div>
-                    
                     <div className="flex items-start space-x-4">
-                      <Phone className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0" />
+                      <Phone className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0"  />
                       <div>
                         <h3 className="text-white font-semibold mb-1">Phone</h3>
                         <p className="text-gray-300">+1 (555) 012-3456</p>
                         <p className="text-gray-300">24/7 Support Available</p>
                       </div>
                     </div>
-                    
                     <div className="flex items-start space-x-4">
-                      <MapPin className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0" />
+                      <MapPin className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0"  />
                       <div>
                         <h3 className="text-white font-semibold mb-1">Office</h3>
                         <p className="text-gray-300">
-                          123 Tech Street<br />
-                          San Francisco, CA 94105<br />
+                          123 Tech Street<br  />
+                          San Francisco, CA 94105<br  />
                           United States
                         </p>
                       </div>
                     </div>
                   </div>
                 </div>
-                
                 <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
                   <h3 className="text-xl font-bold text-white mb-4">Business Hours</h3>
                   <div className="space-y-2 text-gray-300">
@@ -136,10 +119,8 @@ const Contact: NextPage = () => {
           </div>
         </div>
       </main>
-      
-      <Footer />
+      <Footer  />
     </>
   );
 };
-
 export default Contact;

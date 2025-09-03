@@ -1,3 +1,4 @@
+import React from "react"
 
   Plus,
   MessageCircle,
@@ -11,9 +12,8 @@
   Share2,
   Bookmark,
   Download,
-  Printer'
-} from 'lucide-react';
-
+  Printer"
+} from "lucide-react";
 interface FloatingAction {
 
   id: string;
@@ -22,29 +22,27 @@ interface FloatingAction {
   label: string;
   action: () => void;
   color: string;
-  priority: 'high' | 'medium' | 'low'}
+  priority: "high" | "medium" | "low"}
 
 interface FloatingActionButtonProps {
   actions?: FloatingAction[];
-  position?: 'bottom-right' | 'bottom-left' | 'top-right' | 'top-left';
-  theme?: 'light' | 'dark' | 'auto';
+  position?: "bottom-right" | "bottom-left" | "top-right" | "top-left";
+  theme?: "light" | "dark" | "auto";
   showScrollToTop?: boolean;
   showContactActions?: boolean;
   showUtilityActions?: boolean;
-
 const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
 
   actions = [],
-  position = 'bottom-right',
-  theme = 'auto',
+  position = "bottom-right",
+  theme = "auto",
   showScrollToTop = true,
   showContactActions = true,
   showUtilityActions = true}) => {
 
   const [isExpanded, setIsExpanded] = useState(false);
   const [showScrollButton, setShowScrollButton] = useState(false);
-  const [currentTheme, setCurrentTheme] = useState<'light' | 'dark'>('light');
-
+  const [currentTheme, setCurrentTheme] = useState<"light" | "dark">("light");
   // Detect theme
   useEffect(() => {
   // TODO: Add dependencies if needed
@@ -53,17 +51,15 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
     // Cleanup function
   };
 }, []);, []);
+    if(theme === "auto") {
 
-    if(theme === 'auto') {
-
-      setCurrentTheme(mediaQuery.matches ? 'dark' : 'light')};
-      '
-      mediaQuery.addEventListener('change', handleChange);
-      return () => mediaQuery.removeEventListener('change', handleChange)} else {
+      setCurrentTheme(mediaQuery.matches ? "dark" : "light")};
+      "
+      mediaQuery.addEventListener("change", handleChange);
+      return () => mediaQuery.removeEventListener("change", handleChange)} else {
 
       setCurrentTheme(theme)}
   }, [theme]) ;
-
   // Show scroll to top button when scrolled down
   useEffect(() => {
   // TODO: Add dependencies if needed
@@ -72,70 +68,66 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
     // Cleanup function
   };
 }, []);, []);
-    
     };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll)}, []);
-
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll)}, []);
   // Default actions
   const defaultActions: FloatingAction[] = [// Contact actions
     ...(showContactActions ? [
       {
 
-        id: 'contact',
+        id: "contact",
         icon: MessageCircle,
-        label: 'Contact Us',
+        label: "Contact Us",
         action: () => {
 
           if(contactSection) {
 
-            contactSection.scrollIntoView({ behavior: 'smooth' })}
+            contactSection.scrollIntoView({ behavior: "smooth" })}
         },
-        color: 'bg-blue-500 hover:bg-blue-600',
-        priority: 'high' as const
+        color: "bg-blue-500 hover:bg-blue-600",
+        priority: "high" as const
       },
       {
 
-        id: 'phone',
+        id: "phone",
         icon: Phone,
-        label: 'Call Now',
+        label: "Call Now",
         action: () => {
 
-          window.location.href = 'tel:+1234567890'},
-        color: 'bg-green-500 hover:bg-green-600',
-        priority: 'high' as const
+          window.location.href = "tel:+1234567890"},
+        color: "bg-green-500 hover:bg-green-600",
+        priority: "high" as const
       },
       {
 
-        id: 'email',
+        id: "email",
         icon: Mail,
-        label: 'Send Email',
+        label: "Send Email",
         action: () => {
 
-          window.location.href = 'mailto:info@ziontechgroup.com'},
-        color: 'bg-purple-500 hover:bg-purple-600',
-        priority: 'medium' as const
+          window.location.href = "mailto:info@ziontechgroup.com"},
+        color: "bg-purple-500 hover:bg-purple-600",
+        priority: "medium" as const
       },
       {
 
-        id: 'location',
+        id: "location",
         icon: MapPin,
-        label: 'Get Directions',
+        label: "Get Directions",
         action: () => {
 
-          window.open('https://maps.google.com/?q=Zion+Tech+Group',_blank')},
-        color: 'bg-red-500 hover:bg-red-600',
-        priority: 'medium' as const
+          window.open("https://maps.google.com/?q=Zion+Tech+Group",_blank")},
+        color: "bg-red-500 hover:bg-red-600",
+        priority: "medium" as const
       }
     ] : []),
-    
     // Utility actions
     ...(showUtilityActions ? [{
 
-        id: 'bookmark',
+        id: "bookmark",
         icon: Bookmark,
-        label: 'Bookmark Page',
+        label: "Bookmark Page",
         action: () => {
           if(navigator.share) {
 
@@ -148,17 +140,17 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
             // Fallback for browsers without share API
             
             navigator.clipboard.writeText(url).then(() => {
-              // Show success message'
-              showNotification('Page URL copied to clipboard!')})}
+              // Show success message"
+              showNotification("Page URL copied to clipboard!")})}
         },
-        color: 'bg-yellow-500 hover:bg-yellow-600',
-        priority: 'low' as const
+        color: "bg-yellow-500 hover:bg-yellow-600",
+        priority: "low" as const
       },
       {
 
-        id: 'share',
+        id: "share",
         icon: Share2,
-        label: 'Share Page',
+        label: "Share Page",
         action: () => {
           if(navigator.share) {
 
@@ -172,111 +164,101 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
             
             navigator.clipboard.writeText(url).then(() => {
 
-              showNotification('Page URL copied to clipboard!')})}
+              showNotification("Page URL copied to clipboard!")})}
         },
-        color: 'bg-indigo-500 hover:bg-indigo-600',
-        priority: 'low' as const
+        color: "bg-indigo-500 hover:bg-indigo-600",
+        priority: "low" as const
       },
       {
 
-        id: 'download',
+        id: "download",
         icon: Download,
-        label: 'Download Brochure',
+        label: "Download Brochure",
         action: () => {
-          // Create a temporary link to trigger download'
+          // Create a temporary link to trigger download"
           
-          link.href = '/brochure.pdf'; // Adjust path as needed'
-          link.download = 'Zion-Tech-Group-Brochure.pdf';
+          link.href = "/brochure.pdf"; // Adjust path as needed"
+          link.download = "Zion-Tech-Group-Brochure.pdf";
           document.body.appendChild(link);
           link.click();
           document.body.removeChild(link)},
-        color: 'bg-teal-500 hover:bg-teal-600',
-        priority: 'low' as const
+        color: "bg-teal-500 hover:bg-teal-600",
+        priority: "low" as const
       },
       {
 
-        id: 'print',
+        id: "print",
         icon: Printer,
-        label: 'Print Page',
+        label: "Print Page",
         action: () => {
           window.print()},
-        color: 'bg-gray-500 hover:bg-gray-600',
-        priority: 'low' as const
+        color: "bg-gray-500 hover:bg-gray-600",
+        priority: "low" as const
       }
     ] : []),
-    
     // Custom actions
     ...actions,
   ];
-
   // Sort actions by priority
   
     return priorityOrder[b.priority] - priorityOrder[a.priority]}) ;
-
   // Toggle expansion
   
   }, []) ;
-
   // Scroll to top
   
   }, []);
-
   // Show notification
   
     notification.className="
       fixed top-4 right-4 z-50 px-4 py-2 bg-green-500 text-white rounded-lg shadow-lg
       transform translate-x-full transition-transform duration-300 ease-in-out"
-    `;
+    ";
     notification.textContent = message;
-
     document.body.appendChild(notification) ;
-
     // Animate in
     setTimeout(() => {
 
-      notification.classList.remove('translate-x-full')}, 100);
-    
+      notification.classList.remove("translate-x-full")}, 100);
     // Remove after 3 seconds
     setTimeout(() => {
 
-      notification.classList.add('translate-x-full');
+      notification.classList.add("translate-x-full");
       setTimeout(() => {
         document.body.removeChild(notification)}, 300)}, 3000)}, []);
-
   // Get position classes
   
-      case 'top-right':'
-        return 'top-6 right-6';
-      case 'top-left':'
-        return 'top-6 left-6';
-      default:'
-        return 'bottom-6 right-6'}
+      case "top-right":"
+        return "top-6 right-6";
+      case "top-left":"
+        return "top-6 left-6";
+      default:"
+        return "bottom-6 right-6"}
   };
-
   // Get theme classes
   
   };
-
   return ()
+}
     <>
-      {/* Main Floating Action Button */}`
-      <div className={`fixed ${getPositionClasses()} z-50`}>
-        {/* Action Buttons */}'`
-        <div className={`relative ${isExpanded ? 'mb-4' : ''}`}>
+      {/* comment */}"
+      <div className={"fixed ${getPositionClasses()} z-50"}>
+        {/* comment */}""
+        <div className={"relative ${isExpanded ? "mb-4" : ""}"}>
           {isExpanded && (
             <div className="absolute bottom-full mb-4 space-y-3">
               {sortedActions.map((action, index) => (
                 <div
-                  key={action.id}`
-                  className={`
+                  key={action.id}"
+                  className={"
                     flex items-center space-x-3 p-3 rounded-lg shadow-lg transition-all duration-300
                     ${action.color} text-white transform opacity-0 scale-75
-                    hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white/50`
-                  `}
+                    hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white/50"
+                  "}
                   style={{
-`
-                    animationDelay: `${index * 100}ms`,
-                    animation: 'slideInUp 0.3s ease-out forwards'
+"
+                    animationDelay: "${index * 100}ms",
+                    animation: "slideInUp 0.3s ease-out forwards"
                   }}
                 >
                   <action.icon size={20} />"
@@ -286,40 +268,39 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
                 </div>) ) }
             </div>) }
 
-          {/* Main Button */}
+          {/* comment */}
           <button
-            onClick={toggleExpansion}`
-            className={`
+            onClick={toggleExpansion}"
+            className={"
               p-4 rounded-full shadow-lg transition-all duration-300
               ${getThemeClasses()} border-2
-              hover:scale-110 focus:outline-none focus:ring-4 focus:ring-zion-cyan/30'
-              ${isExpanded ? 'rotate-45' : ''}`
-            `}
-            aria-label={isExpanded ? 'Close actions' : 'Open actions'}
+              hover:scale-110 focus:outline-none focus:ring-4 focus:ring-zion-cyan/30"
+              ${isExpanded ? "rotate-45" : ""}"
+            "}
+            aria-label={isExpanded ? "Close actions" : "Open actions'}
             aria-expanded={isExpanded}
           >"
             <Plus size={24} className="transition-transform duration-300"  />
           </button>
         </div>
       </div>
-
-      {/* Scroll to Top Button */}
+      {/* comment */}
       {showScrollToTop && showScrollButton && (
         <button
-          onClick={scrollToTop}`
-          className={`
+          onClick={scrollToTop}"
+          className={"
             fixed bottom-6 right-6 z-40 p-4 rounded-full shadow-lg transition-all duration-300
             ${getThemeClasses()} border-2
             hover:scale-110 focus:outline-none focus:ring-4 focus:ring-zion-cyan/30
-            animate-bounce`
-          `}"
+            animate-bounce"
+          "}"
           
         >
-          <ArrowUp size={24}  />
+          <ArrowUp size={24}    />
         </button>) }
 
-      {/* CSS Animations */}`
-      <style jsx>{`
+      {/* comment */}"
+      <style jsx>{"
         @keyframes slideInUp {
 
           from {
@@ -350,13 +331,12 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
         
         .animate-bounce {
 
-          animation: bounce 2s infinite}`
-      `}</style>
+          animation: bounce 2s infinite}"
+      "}</style>
     </>) ;
 type FloatingActionButtonProps = {
   enabled?: boolean;
 };
-
 const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ enabled = true }) => {
   const [open, setOpen] = useState(false);
   if(!enabled) return null;
@@ -366,8 +346,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ enabled = t
       
       className="fixed bottom-6 right-6 z-50 p-4 rounded-full shadow-lg bg-cyan-500 hover:bg-cyan-600 text-white"
     >
-      <Plus size={24}  />
+      <Plus size={24}    />
     </button>
   )};
-
 export default FloatingActionButton;

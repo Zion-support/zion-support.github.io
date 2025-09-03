@@ -5,7 +5,6 @@ interface InteractiveSearchProps {
   className?: string}
 ;
 export default function InteractiveSearch() {;
-
 export default function InteractiveSearch() {
 
   const handleSubmit = (e: React.FormEvent) => {,
@@ -31,4 +30,5 @@ export default function InteractiveSearch() {
       </div>
     </form>
   )
+}
 }}""

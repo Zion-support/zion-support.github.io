@@ -1,104 +1,104 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 import { 
-  Brain, 
-  Zap, 
-  Target, 
-  Users, 
-  Shield, 
-  BarChart3, 
-  Cloud, 
-  Lock, 
-  TrendingUp, 
-  Code, 
-  Database, 
-  Network, 
-  Smartphone, 
-  MessageSquare, 
-  FileText, 
-  ShoppingCart, 
-  Headphones, 
-  Search, 
-  Clock, 
-  Camera, 
-  CreditCard, 
-  Globe, 
-  Monitor, 
-  Server, 
-  BarChart, 
-  PieChart, 
-  LineChart, 
-  Activity, 
-  Building2, 
-  Home, 
-  Car, 
-  GraduationCap, 
-  Heart, 
-  ShoppingBag, 
-  Briefcase, 
-  Palette, 
-  Music, 
-  Video, 
-  BookOpen, 
-  Calendar, 
-  Bell, 
-  Eye, 
-  Download, 
-  Upload, 
-  Share2, 
-  QrCode, 
-  Tablet, 
-  Laptop, 
-  Desktop, 
-  Watch, 
-  Speaker, 
-  Microphone, 
-  Image, 
-  File, 
-  Folder, 
-  Archive, 
-  Edit, 
-  Plus, 
-  Check, 
-  AlertCircle, 
-  Info, 
-  HelpCircle, 
-  ExternalLink, 
-  ArrowUpRight, 
-  ArrowDownRight, 
-  ChevronRight, 
-  ChevronLeft, 
-  ChevronUp, 
-  ChevronDown, 
-  Menu, 
-  Grid, 
-  List, 
-  Filter, 
-  SortAsc, 
-  SortDesc, 
-  RefreshCw, 
-  RotateCcw, 
-  ZoomIn, 
-  ZoomOut, 
-  Maximize, 
-  Minimize, 
-  Fullscreen, 
-  FullscreenExit, 
-  Volume, 
-  Volume2, 
-  VolumeX, 
-  Mute, 
-  Unmute, 
-  Play, 
-  Pause, 
-  Stop, 
-  SkipBack, 
-  SkipForward, 
-  Rewind, 
-  FastForward, 
-  Shuffle, 
-  Repeat, 
+  Brain,
+  Zap,
+  Target,
+  Users,
+  Shield,
+  BarChart3,
+  Cloud,
+  Lock,
+  TrendingUp,
+  Code,
+  Database,
+  Network,
+  Smartphone,
+  MessageSquare,
+  FileText,
+  ShoppingCart,
+  Headphones,
+  Search,
+  Clock,
+  Camera,
+  CreditCard,
+  Globe,
+  Monitor,
+  Server,
+  BarChart,
+  PieChart,
+  LineChart,
+  Activity,
+  Building2,
+  Home,
+  Car,
+  GraduationCap,
+  Heart,
+  ShoppingBag,
+  Briefcase,
+  Palette,
+  Music,
+  Video,
+  BookOpen,
+  Calendar,
+  Bell,
+  Eye,
+  Download,
+  Upload,
+  Share2,
+  QrCode,
+  Tablet,
+  Laptop,
+  Desktop,
+  Watch,
+  Speaker,
+  Microphone,
+  Image,
+  File,
+  Folder,
+  Archive,
+  Edit,
+  Plus,
+  Check,
+  AlertCircle,
+  Info,
+  HelpCircle,
+  ExternalLink,
+  ArrowUpRight,
+  ArrowDownRight,
+  ChevronRight,
+  ChevronLeft,
+  ChevronUp,
+  ChevronDown,
+  Menu,
+  Grid,
+  List,
+  Filter,
+  SortAsc,
+  SortDesc,
+  RefreshCw,
+  RotateCcw,
+  ZoomIn,
+  ZoomOut,
+  Maximize,
+  Minimize,
+  Fullscreen,
+  FullscreenExit,
+  Volume,
+  Volume2,
+  VolumeX,
+  Mute,
+  Unmute,
+  Play,
+  Pause,
+  Stop,
+  SkipBack,
+  SkipForward,
+  Rewind,
+  FastForward,
+  Shuffle,
+  Repeat,
   Repeat1,
   CheckCircle,
   ArrowRight,
@@ -203,8 +203,7 @@ import {
   Shuffle as ShuffleIcon,
   Repeat as RepeatIcon,
   Repeat1 as Repeat1Icon
-} from 'lucide-react';
-
+} from "lucide-react";
 const AIServices: React.FC = () => {
   const aiServiceCategories = [
     {
@@ -215,7 +214,7 @@ const AIServices: React.FC = () => {
       color: "from-purple-400 to-pink-500",
       solutions: [
         "Predictive Analytics",
-        "Data Visualization", 
+        "Data Visualization",
         "Business Intelligence",
         "Machine Learning Models",
         "Real-time Analytics",
@@ -268,7 +267,6 @@ const AIServices: React.FC = () => {
       ]
     }
   ];
-
   const featuredAIServices = [
     {
       title: "AI Autonomous Business Orchestrator",
@@ -345,7 +343,6 @@ const AIServices: React.FC = () => {
       color: "from-green-400 to-emerald-500"
     }
   ];
-
   const aiSolutions = [
     {
       name: "Machine Learning Model Development",
@@ -396,7 +393,6 @@ const AIServices: React.FC = () => {
       color: "from-red-400 to-pink-500"
     }
   ];
-
   const pricingTiers = [
     {
       name: "AI Starter",
@@ -452,24 +448,22 @@ const AIServices: React.FC = () => {
       cta: "Contact Sales"
     }
   ];
-
   return (
     <>
       <Helmet>
         <title>AI Services & Solutions - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive AI services including machine learning, natural language processing, computer vision, predictive analytics, and AI-powered automation solutions." />
-        <meta name="keywords" content="AI services, machine learning, NLP, computer vision, predictive analytics, AI chatbots, artificial intelligence solutions" />
+        <meta name="description" content="Comprehensive AI services including machine learning, natural language processing, computer vision, predictive analytics, and AI-powered automation solutions."  />
+        <meta name="keywords" content="AI services, machine learning, NLP, computer vision, predictive analytics, AI chatbots, artificial intelligence solutions"  />
       </Helmet>
-      
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
-        {/* Hero Section */}
+        {/* comment */}
         <section className="relative py-20 bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white">
           <div className="absolute inset-0 bg-black opacity-50"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <div className="flex justify-center mb-6">
                 <div className="w-20 h-20 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full flex items-center justify-center">
-                  <Brain className="h-10 w-10 text-white" />
+                  <Brain className="h-10 w-10 text-white"  />
                 </div>
               </div>
               <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -484,7 +478,7 @@ const AIServices: React.FC = () => {
                   className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-4 rounded-lg font-semibold transition-colors flex items-center justify-center"
                 >
                   Get AI Consultation
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  <ArrowRight className="ml-2 h-5 w-5"  />
                 </Link>
                 <Link 
                   to="/services" 
@@ -496,8 +490,7 @@ const AIServices: React.FC = () => {
             </div>
           </div>
         </section>
-
-        {/* AI Service Categories */}
+        {/* comment */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -508,7 +501,6 @@ const AIServices: React.FC = () => {
                 Comprehensive artificial intelligence solutions across all major domains
               </p>
             </div>
-            
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {aiServiceCategories.map((category, index) => (
                 <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8">
@@ -528,7 +520,7 @@ const AIServices: React.FC = () => {
                     <ul className="space-y-2">
                       {category.solutions.slice(0, 3).map((solution, solutionIndex) => (
                         <li key={solutionIndex} className="flex items-center text-sm text-gray-600">
-                          <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                          <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0"  />
                           {solution}
                         </li>
                       ))}
@@ -540,19 +532,18 @@ const AIServices: React.FC = () => {
                     )}
                   </div>
                   <Link 
-                    to={`/ai-services/${category.name.toLowerCase().replace(/\s+/g, '-')}`}
+                    to={`/ai-services/${category.name.toLowerCase().replace(/\s+/g, "-")}`}
                     className="inline-flex items-center text-cyan-600 hover:text-cyan-700 font-semibold"
                   >
                     Learn More
-                    <ArrowRight className="ml-1 h-4 w-4" />
+                    <ArrowRight className="ml-1 h-4 w-4"  />
                   </Link>
                 </div>
               ))}
             </div>
           </div>
         </section>
-
-        {/* Featured AI Services */}
+        {/* comment */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -563,10 +554,9 @@ const AIServices: React.FC = () => {
                 Our most popular and impactful AI solutions
               </p>
             </div>
-            
             <div className="grid lg:grid-cols-3 gap-8">
               {featuredAIServices.map((service, index) => (
-                <div key={index} className={`relative bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 ${service.popular ? 'ring-2 ring-cyan-500' : ''}`}>
+                <div key={index} className={`relative bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 ${service.popular ? "ring-2 ring-cyan-500" : ""}`}>
                   {service.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-cyan-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -576,17 +566,14 @@ const AIServices: React.FC = () => {
                   )}
                   
                   <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mb-6`}>
-                    <Brain className="h-8 w-8 text-white" />
+                    <Brain className="h-8 w-8 text-white"  />
                   </div>
-                  
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">
                     {service.title}
                   </h3>
-                  
                   <p className="text-gray-600 mb-6">
                     {service.description}
                   </p>
-                  
                   <div className="mb-6">
                     <p className="text-3xl font-bold text-gray-900 mb-2">
                       {service.price}
@@ -594,27 +581,25 @@ const AIServices: React.FC = () => {
                     <ul className="space-y-2">
                       {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                          <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                          <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0"  />
                           {feature}
                         </li>
                       ))}
                     </ul>
                   </div>
-                  
                   <Link 
                     to={service.href}
                     className="w-full bg-cyan-500 hover:bg-cyan-600 text-white py-3 px-6 rounded-lg font-semibold transition-colors flex items-center justify-center"
                   >
                     Get Started
-                    <ArrowRight className="ml-2 h-4 w-4" />
+                    <ArrowRight className="ml-2 h-4 w-4"  />
                   </Link>
                 </div>
               ))}
             </div>
           </div>
         </section>
-
-        {/* AI Solutions Grid */}
+        {/* comment */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -625,22 +610,18 @@ const AIServices: React.FC = () => {
                 Comprehensive AI solutions tailored to your business needs
               </p>
             </div>
-            
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {aiSolutions.map((solution, index) => (
                 <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8">
                   <div className={`w-16 h-16 bg-gradient-to-r ${solution.color} rounded-lg flex items-center justify-center mb-6`}>
                     <solution.icon className="h-8 w-8 text-white" />
                   </div>
-                  
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">
                     {solution.name}
                   </h3>
-                  
                   <p className="text-gray-600 mb-6">
                     {solution.description}
                   </p>
-                  
                   <div className="mb-6">
                     <p className="text-2xl font-bold text-gray-900 mb-4">
                       {solution.price}
@@ -648,13 +629,12 @@ const AIServices: React.FC = () => {
                     <ul className="space-y-2">
                       {solution.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                          <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                          <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0"  />
                           {feature}
                         </li>
                       ))}
                     </ul>
                   </div>
-                  
                   <button className="w-full bg-cyan-500 hover:bg-cyan-600 text-white py-3 px-6 rounded-lg font-semibold transition-colors">
                     Learn More
                   </button>
@@ -663,8 +643,7 @@ const AIServices: React.FC = () => {
             </div>
           </div>
         </section>
-
-        {/* Pricing Section */}
+        {/* comment */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -675,10 +654,9 @@ const AIServices: React.FC = () => {
                 Transparent pricing for AI solutions that scale with your business
               </p>
             </div>
-            
             <div className="grid md:grid-cols-3 gap-8">
               {pricingTiers.map((tier, index) => (
-                <div key={index} className={`relative bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 ${tier.popular ? 'ring-2 ring-cyan-500 scale-105' : ''}`}>
+                <div key={index} className={`relative bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 ${tier.popular ? "ring-2 ring-cyan-500 scale-105" : ""}`}>
                   {tier.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-cyan-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -703,20 +681,18 @@ const AIServices: React.FC = () => {
                       </span>
                     </div>
                   </div>
-                  
                   <ul className="space-y-4 mb-8">
                     {tier.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-600">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                        <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0"  />
                         {feature}
                       </li>
                     ))}
                   </ul>
-                  
                   <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
                     tier.popular 
-                      ? 'bg-cyan-500 hover:bg-cyan-600 text-white' 
-                      : 'bg-gray-200 hover:bg-gray-300 text-gray-900'
+                      ? "bg-cyan-500 hover:bg-cyan-600 text-white" 
+                      : "bg-gray-200 hover:bg-gray-300 text-gray-900"
                   }`}>
                     {tier.cta}
                   </button>
@@ -725,8 +701,7 @@ const AIServices: React.FC = () => {
             </div>
           </div>
         </section>
-
-        {/* Contact Section */}
+        {/* comment */}
         <section className="py-20 bg-gradient-to-r from-purple-900 to-blue-900 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -737,32 +712,30 @@ const AIServices: React.FC = () => {
                 Get in touch with our AI experts for a free consultation
               </p>
             </div>
-            
             <div className="grid md:grid-cols-3 gap-8 mb-12">
               <div className="text-center">
-                <Phone className="h-12 w-12 text-cyan-400 mx-auto mb-4" />
+                <Phone className="h-12 w-12 text-cyan-400 mx-auto mb-4"  />
                 <h3 className="text-xl font-semibold mb-2">Call Us</h3>
                 <p className="text-gray-200">+1 302 464 0950</p>
               </div>
               <div className="text-center">
-                <Mail className="h-12 w-12 text-cyan-400 mx-auto mb-4" />
+                <Mail className="h-12 w-12 text-cyan-400 mx-auto mb-4"  />
                 <h3 className="text-xl font-semibold mb-2">Email Us</h3>
                 <p className="text-gray-200">kleber@ziontechgroup.com</p>
               </div>
               <div className="text-center">
-                <MapPin className="h-12 w-12 text-cyan-400 mx-auto mb-4" />
+                <MapPin className="h-12 w-12 text-cyan-400 mx-auto mb-4"  />
                 <h3 className="text-xl font-semibold mb-2">Visit Us</h3>
-                <p className="text-gray-200">364 E Main St STE 1008<br />Middletown DE 19709</p>
+                <p className="text-gray-200">364 E Main St STE 1008<br  />Middletown DE 19709</p>
               </div>
             </div>
-            
             <div className="text-center">
               <Link 
                 to="/contact" 
                 className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-4 rounded-lg font-semibold transition-colors inline-flex items-center"
               >
                 Schedule AI Consultation
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-5 w-5"  />
               </Link>
             </div>
           </div>
@@ -771,5 +744,4 @@ const AIServices: React.FC = () => {
     </>
   );
 };
-
 export default AIServices;

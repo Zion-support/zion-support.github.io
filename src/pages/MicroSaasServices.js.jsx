@@ -1,14 +1,14 @@
-import React from 'react';'''
-import { Helmet } from 'react-helmet-async';
+import React from "react";"""
+import { Helmet } from "react-helmet-async";
 const MicroSAASServices = () => {}
   return()
+}
     <>
       <Helmet>
         <title>Micro SaaS Services - Zion Tech Group</title>
-        <meta'
-          name="description"'"'"""
-          content="Discover Zion Tech Group's micro SaaS services. Scalable, focused solutions for specific business needs."""
-        />
+        <meta"
+          name="description"""""""
+          content="Discover Zion Tech Group"s micro SaaS services. Scalable, focused solutions for specific business needs.""" />
       </Helmet>"""
 """"
       <div className="min-h-screen bg-gray-50 py-12">""""
@@ -24,7 +24,7 @@ const MicroSAASServices = () => {}
           </div>"""
 """"
           <div className="bg-white rounded-lg shadow-lg p-8">""""
-            <p className="text-gray-600 text-center">'
+            <p className="text-gray-600 text-center">"
               Micro SaaS services page coming soon. We're building focused,
               scalable solutions.
             </p>
@@ -33,14 +33,8 @@ const MicroSAASServices = () => {}
       </div>
     </>)};
 export default MicroSAASServices;
-
-
 export { MicroSAASServices };
-
 export { MicroSAASServices };
-
 export { MicroSAASServices };
-
 export { MicroSAASServices };
-
 export { MicroSAASServices };

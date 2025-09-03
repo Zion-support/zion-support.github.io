@@ -1,7 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { SEO } from '../../components/SEO';
-import { Server, Network, Database, Shield, Zap, Monitor, Wifi, Cloud } from 'lucide-react';
+import React from "react";
+import { Link } from "react-router-dom";
+import { SEO } from "../../components/SEO";
+import { Server, Network, Database, Shield, Zap, Monitor, Wifi, Cloud } from "lucide-react";
 const ITInfrastructure: React.FC = () => {
   const infrastructureServices = [
     {
@@ -29,29 +29,24 @@ const ITInfrastructure: React.FC = () => {
       icon: Shield
     }
   ];
-
   const infrastructureAreas = [
     { area: "Hardware Infrastructure", solutions: ["Servers", "Storage systems", "Network equipment", "Workstations"] },
     { area: "Software Infrastructure", solutions: ["Operating systems", "Virtualization platforms", "Database systems", "Management tools"] },
     { area: "Network Infrastructure", solutions: ["LAN/WAN setup", "Wireless networks", "VPN solutions", "Network security"] },
     { area: "Storage Infrastructure", solutions: ["Storage arrays", "Backup systems", "Cloud storage", "Data protection"] }
   ];
-
   const keyFeatures = [
     { name: "High Availability", icon: "🔄", description: "99.9% uptime guarantee with redundancy" },
     { name: "Scalable Solutions", icon: "📈", description: "Infrastructure that grows with your business" },
     { name: "Proactive Monitoring", icon: "👁️", description: "24/7 monitoring and alerting" },
     { name: "Expert Support", icon: "👨‍💻", description: "Certified engineers and technicians" }
   ];
-
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
-        title="IT Infrastructure - Zion Tech Group"
+      <SEO title="IT Infrastructure - Zion Tech Group"
         description="Build a robust and scalable IT infrastructure with our expert solutions and management services."
         keywords="IT infrastructure, server management, network design, data centers, infrastructure security"
-        canonical="https://ziontechgroup.com/services/infrastructure"
-      />
+        canonical="https://ziontechgroup.com/services/infrastructure"  />
       title: "Network Infrastructure",
       description: "Design, implement, and maintain robust network solutions",
       features: ["Network Design", "Wireless Solutions", "VPN Implementation", "Network Security"],
@@ -73,27 +68,24 @@ const ITInfrastructure: React.FC = () => {
       icon: "🔒"
     }
   ];
-
   const infrastructureAreas = [
     {area}: "Hardware Infrastructure", solutions: ["Servers", "Storage systems", "Network equipment", "Workstations"] },
     {area}: "Software Infrastructure", solutions: ["Operating systems", "Virtualization platforms", "Database systems", "Management tools"] },
     {area}: "Network Infrastructure", solutions: ["LAN/WAN setup", "Wireless networks", "VPN solutions", "Network security"] },
     {area}: "Storage Infrastructure", solutions: ["Storage arrays", "Backup systems", "Cloud storage", "Data protection"] }
   ];
-
   return (
     <>
       <Helmet>
         <title>IT Infrastructure — Zion Tech Group | Network & System Management</title>
-        <meta name="description" content="Build robust IT infrastructure with Zion Tech Group. Network design, server management, storage solutions, and security infrastructure services."/>
-        <meta property="og:title" content="IT Infrastructure — Zion Tech Group"/>
-        <meta property="og:description" content="Leading IT infrastructure services including network design, server management, storage solutions, and security infrastructure."/>
-        <meta property="og:url" content="https://ziontechgroup.com/services/it-infrastructure"/>
-        <link rel="canonical" href="https://ziontechgroup.com/services/it-infrastructure"/>
+        <meta name="description" content="Build robust IT infrastructure with Zion Tech Group. Network design, server management, storage solutions, and security infrastructure services."  />
+        <meta property="og:title" content="IT Infrastructure — Zion Tech Group"  />
+        <meta property="og:description" content="Leading IT infrastructure services including network design, server management, storage solutions, and security infrastructure."  />
+        <meta property="og:url" content="https://ziontechgroup.com/services/it-infrastructure"  />
+        <link rel="canonical" href="https://ziontechgroup.com/services/it-infrastructure"  />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
-        {/* Hero Section */}
+        {/* comment */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -122,8 +114,7 @@ const ITInfrastructure: React.FC = () => {
             </div>
           </div>
         </section>
-
-        {/* Infrastructure Services */}
+        {/* comment */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -134,7 +125,6 @@ const ITInfrastructure: React.FC = () => {
                 Comprehensive solutions to build and maintain your IT foundation
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {infrastructureServices.map((service, index) => (
                 <div
@@ -161,8 +151,7 @@ const ITInfrastructure: React.FC = () => {
             </div>
           </div>
         </section>
-
-        {/* Key Features */}
+        {/* comment */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -173,7 +162,6 @@ const ITInfrastructure: React.FC = () => {
                 Enterprise-grade solutions with unmatched reliability and support
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {keyFeatures.map((feature, index) => (
                 <div
@@ -188,8 +176,7 @@ const ITInfrastructure: React.FC = () => {
             </div>
           </div>
         </section>
-
-        {/* Infrastructure Areas */}
+        {/* comment */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -200,7 +187,6 @@ const ITInfrastructure: React.FC = () => {
                 Comprehensive coverage across all infrastructure domains
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {infrastructureAreas.map((area, index) => (
                 <div
@@ -211,7 +197,7 @@ const ITInfrastructure: React.FC = () => {
                   <div className="grid grid-cols-2 gap-4">
                     {area.solutions.map((solution, solutionIndex) => (
                       <div key={solutionIndex} className="flex items-center">
-                        <Zap className="w-4 h-4 text-cyan-400 mr-2" />
+                        <Zap className="w-4 h-4 text-cyan-400 mr-2"  />
                         <span className="text-gray-300">{solution}</span>
                       </div>
                     ))}
@@ -221,8 +207,7 @@ const ITInfrastructure: React.FC = () => {
             </div>
           </div>
         </section>
-
-        {/* CTA Section */}
+        {/* comment */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -251,5 +236,4 @@ const ITInfrastructure: React.FC = () => {
     </div>
   );
 };
-
 export default ITInfrastructure;

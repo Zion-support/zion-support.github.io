@@ -1,68 +1,68 @@
-import React from 'react';'''
-import { motion } from 'framer-motion';
-import { Brain, Target, TrendingUp, Award, Users, ArrowRight, CheckCircle, Rocket, Shield } from 'lucide-react';
+import React from "react";"""
+import { motion } from "framer-motion";
+import { Brain, Target, TrendingUp, Award, Users, ArrowRight, CheckCircle, Rocket, Shield } from "lucide-react";
 import AdvancedServiceRecommendation from "../components/AdvancedServiceRecommendation.jsx";
 import { Button } from "../components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
 const ServiceRecommendations = () => {
     const features = [
         {
-            icon: <Brain className="w-6 h-6 text-zion-cyan"/>,
-            title: 'AI-Powered Analysis',
-            description: 'Advanced algorithms analyze your business profile to find perfect service matches'
+            icon: <Brain className="w-6 h-6 text-zion-cyan"  />,
+            title: "AI-Powered Analysis",
+            description: "Advanced algorithms analyze your business profile to find perfect service matches"
         },
         {
-            icon: <Target className="w-6 h-6 text-zion-purple"/>,
-            title: 'Personalized Matching',
-            description: 'Get recommendations tailored to your industry, budget, and technology maturity'
+            icon: <Target className="w-6 h-6 text-zion-purple"  />,
+            title: "Personalized Matching",
+            description: "Get recommendations tailored to your industry, budget, and technology maturity"
         },
         {
-            icon: <TrendingUp className="w-6 h-6 text-zion-green"/>,
-            title: 'ROI Optimization',
-            description: 'Focus on services that deliver the highest return on investment for your business'
+            icon: <TrendingUp className="w-6 h-6 text-zion-green"  />,
+            title: "ROI Optimization",
+            description: "Focus on services that deliver the highest return on investment for your business"
         },
         {
-            icon: <Award className="w-6 h-6 text-zion-orange"/>,
-            title: 'Expert Validation',
-            description: 'All recommendations are validated by our technology experts and industry specialists'
+            icon: <Award className="w-6 h-6 text-zion-orange"  />,
+            title: "Expert Validation",
+            description: "All recommendations are validated by our technology experts and industry specialists"
         }
     ];
     const benefits = [
-        'Save time researching and comparing different service options',
-        'Get personalized recommendations based on your specific business needs',
-        'Understand implementation complexity and expected timelines',
-        'Focus on high-priority solutions with proven ROI potential',
-        'Access to our comprehensive portfolio of cutting-edge services',
-        'Expert guidance throughout the selection and implementation process'
+        "Save time researching and comparing different service options",
+        "Get personalized recommendations based on your specific business needs",
+        "Understand implementation complexity and expected timelines",
+        "Focus on high-priority solutions with proven ROI potential",
+        "Access to our comprehensive portfolio of cutting-edge services",
+        "Expert guidance throughout the selection and implementation process"
     ];
     const processSteps = [
         {
             step: 1,
-            title: 'Tell Us About Your Business',
-            description: 'Fill out our comprehensive business profile form with industry, size, goals, and challenges',
-            icon: <Users className="w-8 h-8 text-zion-cyan"/>
+            title: "Tell Us About Your Business",
+            description: "Fill out our comprehensive business profile form with industry, size, goals, and challenges",
+            icon: <Users className="w-8 h-8 text-zion-cyan"  />
         },
         {
             step: 2,
-            title: 'AI Analysis & Matching',
-            description: 'Our AI engine analyzes your profile and matches it with the most suitable services',
-            icon: <Brain className="w-8 h-8 text-zion-purple"/>
+            title: "AI Analysis & Matching",
+            description: "Our AI engine analyzes your profile and matches it with the most suitable services",
+            icon: <Brain className="w-8 h-8 text-zion-purple"  />
         },
         {
             step: 3,
-            title: 'Personalized Recommendations',
-            description: 'Receive detailed recommendations with match scores, priorities, and implementation details',
-            icon: <Target className="w-8 h-8 text-zion-green"/>
+            title: "Personalized Recommendations",
+            description: "Receive detailed recommendations with match scores, priorities, and implementation details",
+            icon: <Target className="w-8 h-8 text-zion-green"  />
         },
         {
             step: 4,
-            title: 'Expert Consultation',
-            description: 'Connect with our experts to discuss implementation and get started with your chosen solution',
-            icon: <Award className="w-8 h-8 text-zion-orange"/>
+            title: "Expert Consultation",
+            description: "Connect with our experts to discuss implementation and get started with your chosen solution",
+            icon: <Award className="w-8 h-8 text-zion-orange"  />
         }
     ];
     return (<div className="min-h-screen bg-zion-blue-dark">
-      {/* Hero Section */}
+      {/* comment */}
       <section className="py-20 px-6 bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-zion-purple/20 via-zion-blue-light/20 to-zion-cyan/20"></div>
@@ -86,21 +86,23 @@ const ServiceRecommendations = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"""
               <Button""""
                 className="bg-white text-zion-purple hover:bg-zion-slate-light text-lg px-8 py-4"""
-                onClick={() =>'
-                  document''
-                    .getElementById('recommendation-engine')'
-                    ?.scrollIntoView({ behavior: 'smooth' })
+                onClick={() =>"
+                  document""
+                    .getElementById("recommendation-engine")"
+                    ?.scrollIntoView({ behavior: "smooth" })
+}
                 }
               >"""
                 Get Started""""
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2"  />
               </Button>"""
               <Button""""
                 className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4"""
-                onClick={() =>'
-                  window.open(''
-                    'mailto:kleber@ziontechgroup.com?subject=Service Recommendation Help',_blank'
+                onClick={() =>"
+                  window.open(""
+                    "mailto:kleber@ziontechgroup.com?subject=Service Recommendation Help",_blank"
                   )
+}
                 }
               >
                 Learn More;
@@ -110,7 +112,7 @@ const ServiceRecommendations = () => {
         </div>
       </section>
 """
-      {/* Features Section */}""""
+      {/* comment */}""""
       <section className="py-16 px-6 bg-white">""""
         <div className="max-w-6xl mx-auto">
           <motion.div;
@@ -160,7 +162,7 @@ const ServiceRecommendations = () => {
         </div>
       </section>
 """
-      {/* Process Steps Section */}""""
+      {/* comment */}""""
       <section className="py-16 px-6 bg-zion-blue-light/5">""""
         <div className="max-w-6xl mx-auto">
           <motion.div;
@@ -209,7 +211,7 @@ const ServiceRecommendations = () => {
         </div>
       </section>
 """
-      {/* Benefits Section */}""""
+      {/* comment */}""""
       <section className="py-16 px-6 bg-white">""""
         <div className="max-w-4xl mx-auto">
           <motion.div;
@@ -238,15 +240,14 @@ const ServiceRecommendations = () => {
                 viewport={{ once: true }}""""
                 className="flex items-start gap-3""""
               >""""
-                <CheckCircle className="w-5 h-5 text-zion-cyan mt-1 flex-shrink-0" />""""
+                <CheckCircle className="w-5 h-5 text-zion-cyan mt-1 flex-shrink-0"  />""""
                 <span className="text-zion-slate-dark">{benefit}</span>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-
-      {/* Recommendation Engine Section */}"""
+      {/* comment */}"""
       <section""""
         id="recommendation-engine""""
         className="py-16 px-6 bg-zion-blue-light/5""""
@@ -268,11 +269,11 @@ const ServiceRecommendations = () => {
             </p>
           </motion.div>
 
-          <AdvancedServiceRecommendation />
+          <AdvancedServiceRecommendation  />
         </div>
       </section>
 """
-      {/* CTA Section */}""""
+      {/* comment */}""""
       <section className="py-20 px-6 bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan">""""
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
@@ -292,20 +293,21 @@ const ServiceRecommendations = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"""
               <Button""""
                 className="bg-white text-zion-purple hover:bg-zion-slate-light text-lg px-8 py-4"""
-                onClick={() =>'
-                  window.open(''
-                    'mailto:kleber@ziontechgroup.com?subject=Business Transformation Consultation',_blank'
+                onClick={() =>"
+                  window.open(""
+                    "mailto:kleber@ziontechgroup.com?subject=Business Transformation Consultation",_blank"
                   )
+}
                 }"""
               >""""
-                <Rocket className="w-5 h-5 mr-2" />
+                <Rocket className="w-5 h-5 mr-2"  />
                 Start Your Transformation;
               </Button>"""
-              <Button"'"""
-                className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4"''
-                onClick={() => window.open('tel:+13024640950',_blank')}"""
+              <Button"""""
+                className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4"""
+                onClick={() => window.open("tel:+13024640950",_blank')}"""
               >""""
-                <Shield className="w-5 h-5 mr-2" />
+                <Shield className="w-5 h-5 mr-2"  />
                 Speak with an Expert;
               </Button>
             </div>
@@ -314,14 +316,8 @@ const ServiceRecommendations = () => {
       </section>
     </div>)};
 export default ServiceRecommendations;
-
-
 export { ServiceRecommendations };
-
 export { ServiceRecommendations };
-
 export { ServiceRecommendations };
-
 export { ServiceRecommendations };
-
 export { ServiceRecommendations };

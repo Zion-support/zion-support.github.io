@@ -1,5 +1,5 @@
-import React, { useState } from 'react';'''
-import { motion } from 'framer-motion';
+import React, { useState } from "react";"""
+import { motion } from "framer-motion";
 import {}
   Users,
   Zap,
@@ -66,12 +66,11 @@ import {}
   Smartphone,
   Globe,
   Shield,
-  Zap,'
-  Users,''
-  Settings,'''
-  Palette''''
-} from 'lucide-react';
-
+  Zap,"
+  Users,""
+  Settings,"""
+  Palette""""
+} from "lucide-react";
     technologies["Analytics Platforms", "Data Visualization", "Machine Learning", "Reporting Tools"]
   }
 ];
@@ -214,23 +213,22 @@ const customerExperienceBenefits = []
     examples["Brand differentiation", "Market leadership", "Customer preference", "Sustainable advantage"];
   }
 ];
-
 export default function CustomerExperience() {}
-'
-''
-'''
-  const [selectedCategory, setSelectedCategory] = useState('All');'
-  const [selectedSolution, setSelectedSolution] = useState(null);''
-'''
-  const categories = ['All',UX Design',Journey Mapping',Feedback Systems',Personalization',Support Platforms',Analytics'];''
-'''
-  const filteredSolutions = selectedCategory === 'All'
+"
+""
+"""
+  const [selectedCategory, setSelectedCategory] = useState("All");"
+  const [selectedSolution, setSelectedSolution] = useState(null);""
+"""
+  const categories = ["All",UX Design",Journey Mapping",Feedback Systems",Personalization",Support Platforms",Analytics"];""
+"""
+  const filteredSolutions = selectedCategory === "All"
     ? customerExperienceSolutions;
     : customerExperienceSolutions.filter (solution => solution.category === selectedCategory) ;
 """
   return (""""
     <div className="min-h-screen bg-futuristic">"""
-      {/* Hero Section */}""""
+      {/* comment */}""""
       <section className="relative pt-32 pb-20 overflow-hidden">""""
         <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 via-zion-purple/20 to-zion-blue/20"></div>""""
         <div className="absolute inset-0">""""
@@ -268,7 +266,7 @@ export default function CustomerExperience() {}
 }}""""
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8""""
 """"
-              <Heart className="w-10 h-10 text-white" />
+              <Heart className="w-10 h-10 text-white"  />
             </motion.div>"""
 """"
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">"""
@@ -283,15 +281,15 @@ export default function CustomerExperience() {}
 """"
             <div className="flex flex-wrap justify-center gap-4 text-sm">""""
               <div className="flex items-center gap-2 text-zion-cyan">""""
-                <Heart className="w-4 h-4" />
+                <Heart className="w-4 h-4"  />
                 <span>Customer Satisfaction</span>"""
               </div>""""
               <div className="flex items-center gap-2 text-zion-purple">""""
-                <Palette className="w-4 h-4" />
+                <Palette className="w-4 h-4"  />
                 <span>UX Design</span>"""
               </div>""""
               <div className="flex items-center gap-2 text-zion-blue">""""
-                <Brain className="w-4 h-4" />
+                <Brain className="w-4 h-4"  />
                 <span > Personalization</span>
               </div>
             </div>
@@ -299,7 +297,7 @@ export default function CustomerExperience() {}
         </div>
       </section>;
 """
-      {/* Customer Experience Benefits */}""""
+      {/* comment */}""""
       <section className="py-20 bg-zion-blue-dark/50">;""""
         <div className="container-responsive">
           <motion.div;
@@ -352,7 +350,7 @@ export default function CustomerExperience() {}
                   <h4 className="text-zion-cyan font-semibold mb-3">Examples:</h4>"""
                   {benefit.examples.map((example, exampleIndex) => (""""
                     <div key={exampleIndex} className="flex items-center gap-3">""""
-                      <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />""""
+                      <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0"  />""""
                       <span className="text-zion-slate-light text-sm">{example}</span>
                     </div>
                   ))}
@@ -362,7 +360,7 @@ export default function CustomerExperience() {}
         </div>
       </section>
 """
-      {/* Customer Experience Technologies */}""""
+      {/* comment */}""""
       <section className="py-20">;""""
         <div className="container-responsive">
           <motion.div;
@@ -411,17 +409,16 @@ export default function CustomerExperience() {}
                 <h3 className="text-xl font-bold text-white mb-3">{technology.name}</h3>""""
                 <p className="text-zion-slate-light mb-4 leading-relaxed">{technology.description}</p>""""
                 <p className="text-zion-cyan font-semibold mb-2">{technology.useCase}</p>
-
-                <span className={`inline-block px-3 py-1 rounded-full text-sm font-semibold ${}
-'
-''
-'''
-                  technology.reliability === 'Critical'''''
-                    ? 'bg-red-500/20 text-red-400 border border-red-500/30'''''`
-                    : technology.reliability === 'High''''`'`
-                    ? 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30'''`'`'`
-                    : 'bg-green-500/20 text-green-400 border border-green-500/30'````
-                }`}>
+                <span className={"inline-block px-3 py-1 rounded-full text-sm font-semibold ${}
+"
+""
+"""
+                  technology.reliability === "Critical"""""
+                    ? "bg-red-500/20 text-red-400 border border-red-500/30""""""
+                    : technology.reliability === "High"""""""
+                    ? "bg-yellow-500/20 text-yellow-400 border border-yellow-500/30""""""""
+                    : "bg-green-500/20 text-green-400 border border-green-500/30"""""
+                }"}>
                   {technology.reliability} Reliability;
                 </span>
               </motion.div>;) ) }
@@ -429,7 +426,7 @@ export default function CustomerExperience() {}
         </div>
       </section>
 """
-      {/* Process Section */}""""
+      {/* comment */}""""
       <section className="py-20 bg-zion-blue-dark/50">;""""
         <div className="container-responsive">
           <motion.div;
@@ -488,7 +485,7 @@ export default function CustomerExperience() {}
         </div>
       </section>
 """
-      {/* Solutions Section */}""""
+      {/* comment */}""""
       <section className="py-20">;""""
         <div className="container-responsive">
           <motion.div;
@@ -509,19 +506,19 @@ export default function CustomerExperience() {}
             </p>
           </motion.div>
 """
-          {/* Category Filter */}""""
+          {/* comment */}""""
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {categories.map((category) => (
               <button;
-                key={category}`
-                onClick={() => setSelectedCategory(category)}``
-                className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${}
-'
-''
-'''`
-                  selectedCategory === category'''`'`
-                    ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'''`'`'`
-                    : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````
+                key={category}"
+                onClick={() => setSelectedCategory(category)}""
+                className={"px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${}
+"
+""
+""""
+                  selectedCategory === category""""""
+                    ? "bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25""""""""
+                    : "bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40"""""
                 }`}
 
                 {category}
@@ -562,7 +559,7 @@ export default function CustomerExperience() {}
                 <div className="space-y-3 mb-6">"""
                   {solution.features.map((feature, featureIndex) => (""""
                     <div key={featureIndex} className="flex items-center gap-3">""""
-                      <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />""""
+                      <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0"  />""""
                       <span className="text-zion-slate-light text-sm">{feature}</span>
                     </div>
                   ))}
@@ -588,7 +585,7 @@ export default function CustomerExperience() {}
                   </span>""""
                   <button className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors duration-300">""""
                     <span className="text-sm font-medium">Learn More</span>""""
-                    <ArrowRight className="w-4 h-4" />
+                    <ArrowRight className="w-4 h-4"  />
                   </button>
                 </div>
               </motion.div>) ) }
@@ -596,7 +593,7 @@ export default function CustomerExperience() {}
         </div>
       </section>
 """
-      {/* Success Stories */}""""
+      {/* comment */}""""
       <section className="py-20 bg-zion-blue-dark/50">;""""
         <div className="container-responsive">
           <motion.div;
@@ -665,7 +662,7 @@ export default function CustomerExperience() {}
 """"
                 <div className="flex items-center gap-2">"""
                   {[...Array(5)].map((_, i) => (""""
-                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />"""
+                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current"  />"""
                   ))}""""
                   <span className="text-zion-slate-light text-sm ml-2">5.0 Rating</span>
                 </div>
@@ -674,7 +671,7 @@ export default function CustomerExperience() {}
         </div>
       </section>
 """
-      {/* CTA Section */}""""
+      {/* comment */}""""
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">;""""
         <div className="container-responsive">
           <motion.div;
@@ -690,8 +687,8 @@ export default function CustomerExperience() {}
             className="text-center max-w-4xl mx-auto""""
 """"
             <h2 className="text-4xl font-bold text-white mb-6">Ready for Customer Experience Transformation?</h2>""""
-            <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">'
-              Let's discuss how customer experience optimization can transform your business,
+            <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">"
+              Let"s discuss how customer experience optimization can transform your business,
               improve customer satisfaction, and drive sustainable growth.
             </p>"""
 """"
@@ -715,11 +712,7 @@ export default function CustomerExperience() {}
 
 
 export { CustomerExperience };
-
 export { CustomerExperience };
-
 export { CustomerExperience };
-
 export { CustomerExperience };
-
 export { CustomerExperience };

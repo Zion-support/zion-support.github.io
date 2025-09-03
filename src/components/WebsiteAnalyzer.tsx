@@ -1,12 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 export const WebsiteAnalyzer: React.FC = () : JSX.Element => {
 export default WebsiteAnalyzer;
-import { CheckCircle, import { LinkChecker, LinkInfo, PageInfo } from '../utils / linkChecker';
-
+import { CheckCircle, import { LinkChecker, LinkInfo, PageInfo } from "../utils / linkChecker";
 export default function Page() {
  catch(error) {
-`
-          // console.error(`Error analyzing ${page}:`, error)}
+"
+          // console.error("Error analyzing ${page}:", error)}
 
         // Add delay to prevent overwhelming the server
         await new Promise(resolve => setTimeout (resolve, 100) ) }
@@ -19,38 +18,34 @@ export default function Page() {
         missingPages
       }) } catch(error) {
 
-      // console.error('Analysis failed:', error)} finally {
+      // console.error("Analysis failed:", error)} finally {
 
       setIsAnalyzing(false);
       setProgress(100);
-      setCurrentPage('')}
+      setCurrentPage("")}
   };
-
     a.href = url;
-    a.download = 'zion-website-analysis.json';    document.body.appendChild(a);
+    a.download = "zion-website-analysis.json";    document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
     URL.revokeObjectURL(url)};
-
-      case 'broken':"
+      case "broken":"
         return <XCircle className="w-4 h-4 text-red-500"  />;
-      case 'missing':"
+      case "missing":"
         return <AlertTriangle className="w-4 h-4 text-yellow-500"  />;
-      case 'external':"
+      case "external":"
         return <ExternalLink className="w-4 h-4 text-blue-500"  />;
       default:"
         return <AlertTriangle className="w-4 h-4 text-gray-500"  />}
   };
-
-      case 'broken':'
-        return 'text-red-600 bg-red-100';
-      case 'missing':'
-        return 'text-yellow-600 bg-yellow-100';
-      case 'external':'
-        return 'text-blue-600 bg-blue-100';
-      default:'
-        return 'text-gray-600 bg-gray-100'}  };
-
+      case "broken":"
+        return "text-red-600 bg-red-100";
+      case "missing":"
+        return "text-yellow-600 bg-yellow-100";
+      case "external":"
+        return "text-blue-600 bg-blue-100";
+      default:"
+        return "text-gray-600 bg-gray-100"}  };
   return ("
     <div className="max-w-7xl mx-auto p-6 space-y-6">"
       <div className="bg-white rounded-lg shadow-lg p-6">"
@@ -72,7 +67,7 @@ export default function Page() {
               ) : ("
                 <Search className="w-4 h-4 mr-2"  />
               )}
-              {isAnalyzing ? 'Analyzing...' : 'Start Analysis'}            </button>
+              {isAnalyzing ? "Analyzing..." : "Start Analysis"}            </button>
             {analysisResult && (
               <button
                 onClick={exportReport}"
@@ -82,7 +77,6 @@ export default function Page() {
               </button>) }
           </div>
         </div>
-
         {isAnalyzing && ("
           <div className="mb-6">"
             <div className="flex items-center justify-between mb-2">"
@@ -91,9 +85,9 @@ export default function Page() {
             </div>"
             <div className="w-full bg-gray-200 rounded-full h-2">
               <div "
-                className="bg-blue-600 h-2 rounded-full transition-all duration-300"`
-                style={{ width: `${progress}%` }}
-              />
+                className="bg-blue-600 h-2 rounded-full transition-all duration-300""
+                style={{ width: "${progress}%" }}
+                />
             </div>
             {currentPage && ("
               <p className="text-sm text-gray-600 mt-2">"
@@ -105,7 +99,7 @@ export default function Page() {
 
         {analysisResult && ("
           <div className="space-y-6">
-            {/* Summary Cards */}"
+            {/* comment */}"
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">"
               <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">"
                 <div className="flex items-center">"
@@ -115,10 +109,9 @@ export default function Page() {
                   </div>
                 </div>
               </div>
-
               <div  className="bg-green - 50 p - 4 rounded-lg border border-green -200">
                 <div  className="flex items -center">
-                  <CheckCircle className="w-8 h-8 text-green - 600 mr-3" />
+                  <CheckCircle className="w-8 h-8 text-green - 600 mr-3"  />
                   <div>
                     <p className="text-2xl font - bold text-green -900">                      {analysisResult.summary.totalLinks - analysisResult.summary.brokenLinks - analysisResult.summary.missingPages}
                     </p>"
@@ -126,28 +119,25 @@ export default function Page() {
                   </div>
                 </div>
               </div>
-
               <div  className="bg-red - 50 p - 4 rounded-lg border border-red -200">
                 <div  className="flex items -center">
-                  <XCircle className="w-8 h-8 text-red - 600 mr-3" />
+                  <XCircle className="w-8 h-8 text-red - 600 mr-3"  />
                   <div>
                     <p className="text-2xl font - bold text-red -900">{analysisResult.summary.brokenLinks}</p>
                     <p className="text-sm text-red -700">Broken Links</p>
                   </div>
                 </div>
               </div>
-
               <div  className="bg-yellow-50 p - 4 rounded-lg border border-yellow-200">
                 <div  className="flex items -center">
-                  <AlertTriangle className="w-8 h-8 text-yellow-600 mr-3" />
+                  <AlertTriangle className="w-8 h-8 text-yellow-600 mr-3"  />
                   <div>
                     <p className="text-2xl font - bold text-yellow-900">{analysisResult.summary.missingPages}</p>
                     <p className="text-sm text-yellow-700">Missing Pages</p>                  </div>
                 </div>
               </div>
             </div>
-
-            {/* Broken Links */}
+            {/* comment */}
             {analysisResult.brokenLinks.length > 0 && ("
               <div className="bg-red-50 border border-red-200 rounded-lg p-4">"
                 <h3 className="text-lg font-semibold text-red-900 mb-3 flex items-center">"
@@ -167,7 +157,7 @@ export default function Page() {
                 </div>
               </div>) }
 
-            {/* Missing Pages */}
+            {/* comment */}
             {analysisResult.missingPages.length > 0 && ("
               <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">"
                 <h3 className="text-lg font-semibold text-yellow-900 mb-3 flex items-center">"
@@ -186,7 +176,7 @@ export default function Page() {
                 </div>
               </div>) }
 
-            {/* Page Analysis */}"
+            {/* comment */}"
             <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">"
               <h3 className="text-lg font-semibold text-gray-900 mb-3 flex items-center">"
                 <FileText className="w-5 h-5 mr-2"  />                Page Analysis

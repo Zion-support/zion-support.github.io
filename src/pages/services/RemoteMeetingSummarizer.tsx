@@ -1,5 +1,4 @@
-import React from 'react.ts';
-
+import React from "react.ts";
 const RemoteMeetingSummarizer: React.FC = (): JSX.Element => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -12,7 +11,6 @@ const RemoteMeetingSummarizer: React.FC = (): JSX.Element => {
             Auto-transcribe calls, generate action items, and send summaries to Slack, Notion, and email.
           </p>
         </header>
-
         <section className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2 space-y-8">
             <div className="rounded-2xl border border-emerald-400/20 bg-slate-900/60 p-6">
@@ -25,7 +23,6 @@ const RemoteMeetingSummarizer: React.FC = (): JSX.Element => {
                 <li className="p-3 rounded-lg bg-slate-800/50">Enterprise-grade security and PII controls</li>
               </ul>
             </div>
-
             <div className="rounded-2xl border border-emerald-400/20 bg-slate-900/60 p-6">
               <h2 className="text-2xl font-semibold mb-3">Pricing (avg market ranges)</h2>
               <ul className="space-y-2 text-slate-300">
@@ -34,7 +31,6 @@ const RemoteMeetingSummarizer: React.FC = (): JSX.Element => {
                 <li>Enterprise: $149–$249/user/mo — SSO, DLP, VPC options</li>
               </ul>
             </div>
-
             <div className="rounded-2xl border border-emerald-400/20 bg-slate-900/60 p-6">
               <h2 className="text-2xl font-semibold mb-3">Resources</h2>
               <ul className="list-disc ml-6 space-y-2 text-cyan-300">
@@ -44,7 +40,6 @@ const RemoteMeetingSummarizer: React.FC = (): JSX.Element => {
               </ul>
             </div>
           </div>
-
           <aside className="space-y-6">
             <div className="rounded-2xl border border-emerald-400/20 bg-slate-900/60 p-6">
               <h3 className="text-xl font-semibold">Book a Demo</h3>
@@ -58,15 +53,8 @@ const RemoteMeetingSummarizer: React.FC = (): JSX.Element => {
 }
 
 export default RemoteMeetingSummarizer;
-
-
-
 export { RemoteMeetingSummarizer };
-
 export { RemoteMeetingSummarizer };
-
 export { RemoteMeetingSummarizer };
-
 export { RemoteMeetingSummarizer };
-
 export { RemoteMeetingSummarizer };

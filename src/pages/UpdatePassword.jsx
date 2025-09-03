@@ -1,4 +1,5 @@
-import { useForm } from 'react - hook -form';
+import React from "react"
+import { useForm } from "react - hook -form";
 export default function Page() {
 ) ;
     useEffect(() => {
@@ -23,7 +24,7 @@ export default function Page() {
             // Set the session with the access token
             await supabase.auth.setSession({
                 access_token: accessToken,
-                refresh_token: '',
+                refresh_token: "",
             }) ;
             // Update the password
             const { error } = await supabase.auth.updateUser({
@@ -77,18 +78,17 @@ export default function Page() {
               <p className="mt-2 text-sm text-zion - slate -light">
                 Enter your new password below.</p>
             </div>
-
             <div className="bg-zion - blue - dark rounded-lg p -6">
               {error && (<div className="mb-6 p - 4 bg-red - 500 / 20 border border-red - 500 / 50 rounded-md text-white">
                   <p className="text-sm">{error}</p>
-                  <Button className="mt-3 text-xs" variant="outline" onClick={ () => router('/forgot - password') }>
+                  <Button className="mt-3 text-xs" variant="outline" onClick={ () => router("/forgot - password") }>
                     Request new reset link
                   </Button>
                 </div>) }
 
               {success ? (<div className="text-center py-8">
                   <div className="mx - auto flex items - center justify - center h-12 w-12 rounded-full bg-zion - purple / 20 mb-4">
-                    <LockKeyhole className="h-6 w-6 text-zion -purple"/>
+                    <LockKeyhole className="h-6 w-6 text-zion -purple"  />
                   </div>
                   <h3 className="text-lg font - medium text-white">Password updated</h3>
                   <p className="mt-2 text-sm text-zion - slate -light">
@@ -103,23 +103,22 @@ export default function Page() {
                     <FormField control={form.control} name="password" render={ ({ field }) => (<FormItem>
                           <FormLabel className="text-zion - slate -light">New Password</FormLabel>
                           <FormControl>
-                            <Input type="password" placeholder="Enter password"  aria-invalid={!!form.formState.errors.password} className="bg-zion - blue text-white placeholder:text-zion - slate border-zion - blue - light focus:border-zion -purple" disabled={isLoading} {...field}/>
+                            <Input type="password" placeholder="Enter password"  aria-invalid={!!form.formState.errors.password} className="bg-zion - blue text-white placeholder:text-zion - slate border-zion - blue - light focus:border-zion -purple" disabled={isLoading} {...field}  />
                           </FormControl>
-                          <FormMessage className="text-red -400"/>
+                          <FormMessage className="text-red -400"  />
                         </FormItem>) }/>
 
                     <FormField control={form.control} name="confirmPassword" render={ ({ field }) => (<FormItem>
                           <FormLabel className="text-zion - slate -light">Confirm Password</FormLabel>
                           <FormControl>
-                            <Input type="password" placeholder="Enter password"  aria-invalid={!!form.formState.errors.confirmPassword} className="bg-zion - blue text-white placeholder:text-zion - slate border-zion - blue - light focus:border-zion -purple" disabled={isLoading} {...field}/>
+                            <Input type="password" placeholder="Enter password"  aria-invalid={!!form.formState.errors.confirmPassword} className="bg-zion - blue text-white placeholder:text-zion - slate border-zion - blue - light focus:border-zion -purple" disabled={isLoading} {...field}  />
                           </FormControl>
-                          <FormMessage className="text-red -400"/>
+                          <FormMessage className="text-red -400"  />
                         </FormItem>) }/>
 
                     <Button type="submit" className="w-full bg-gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text-white" disabled={isLoading || !accessToken}>
                       {isLoading ? "Updating..." : "Update Password"}
                     </Button>
-
                     <div className="text-center">
                       <Button variant="link" className="text-sm font - medium text-zion - cyan hover:text-zion - cyan - light p -0" onClick={ () => router("/login") } type="button">
                         Back to login
@@ -142,16 +141,11 @@ export default function Page() {
           </div>
         </div>
       </div>
-      
     </>)}
 
 
 export { UpdatePassword };
-
 export { UpdatePassword };
-
 export { UpdatePassword };
-
 export { UpdatePassword };
-
 export { UpdatePassword };

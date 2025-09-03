@@ -7,15 +7,12 @@
           </motion.div>
         </div>
       </section>
-
           </div>
         </div>
       </section>
-
           </div>
         </div>
       </section>
-
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -27,11 +24,11 @@
       </section>
   );
 };
-
 export default ComprehensivePricing2027;
 import React from "react"
 import { SEO } from "@/components/SEO"
 ;,"});,"})
+}
 }
 export default function ComprehensivePricing2027() {return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
@@ -43,5 +40,6 @@ export default function ComprehensivePricing2027() {return ("
         </p>
       </div>
   )
+}
 }
 }""

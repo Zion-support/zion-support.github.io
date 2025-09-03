@@ -1,6 +1,6 @@
-import {  import { motion, AnimatePresence  } from 'framer-motion';
- from 'lucide-react';
-
+import React from "react"
+import {  import { motion, AnimatePresence  } from "framer-motion";
+ from "lucide-react";
 interface ContactFormData {
   name: string;
   email: string;
@@ -17,40 +17,36 @@ export function EnhancedContact(...args[]):  {
 
   const [formData, setFormData] = useState<any>({
 
-    name: '',;
-    email: '',;
-    phone: '',;
-    comp: '',;
-    service: 'general',;
-    message: ''
+    name: "",;
+    email: "",;
+    phone: "",;
+    comp: "",;
+    service: "general",;
+    message: ""
   }) ;
-
   const [errors, setErrors] = useState<any> ({}) ;
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-
-    { value: 'cloud-infrastructure', label: 'Cloud Infrastructure' },;
-    { value: 'cybersecurity', label: 'Cybersecurity' },;
-    { value: 'digital-transformation', label: 'Digital Transformation' },;
-    { value: 'consulting', label: 'IT Consulting' },;
-    { value: 'quantum-computing', label: 'Quantum Computing' },;
-    { value: 'green-it', label: 'Green IT Solutions' };
+    { value: "cloud-infrastructure", label: "Cloud Infrastructure" },;
+    { value: "cybersecurity", label: "Cybersecurity" },;
+    { value: "digital-transformation", label: "Digital Transformation" },;
+    { value: "consulting", label: "IT Consulting" },;
+    { value: "quantum-computing", label: "Quantum Computing" },;
+    { value: "green-it", label: "Green IT Solutions" };
   ];
-
-    const newErrors: ContactFormErrors = {};      // console.error('Error submitting form:', error)} finally {
+    const newErrors: ContactFormErrors = {};      // console.error("Error submitting form:", error)} finally {
 
       setIsSubmitting(false)}
   };
-
     {;
       icon: Clock,;
-      title: 'Business Hours',;
-      value: 'Mon-Fri: 9AM-6PM EST',;
-      description: 'Available during these hours'};  ];
-
+      title: "Business Hours",;
+      value: "Mon-Fri: 9AM-6PM EST",;
+      description: "Available during these hours"};  ];
   if(isSubmitted) {
 
     return ()
+}
       <motion.div
         initial = {
 
@@ -113,7 +109,7 @@ export function EnhancedContact(...args[]):  {
             transition={{ delay: 0.4 }}"
             className="text-zion-slate-light mb-8"
           >
-            Thank you for reaching out to us.We'll get back to you within 24 hours.</motion.p>
+            Thank you for reaching out to us.We"ll get back to you within 24 hours.</motion.p>
 
           <motion.button
             initial = {
@@ -139,7 +135,7 @@ export function EnhancedContact(...args[]):  {
   return ("
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light py-20">"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
+        {/* comment */}
         <motion.div
           initial = {
 
@@ -159,12 +155,12 @@ export function EnhancedContact(...args[]):  {
             Get in Touch
           </h1>"
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-            Ready to transform your business? Let's discuss how our AI-powered solutions
+            Ready to transform your business? Let"s discuss how our AI-powered solutions
             can help you achieve your goals.</p>
         </motion.div>
 "
         <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Information */}
+          {/* comment */}
           <motion.div
             initial = {
 
@@ -211,8 +207,7 @@ export function EnhancedContact(...args[]):  {
                   </div>
                 </motion.div>) ) }
             </div>
-
-            {/* Comp Stats */}
+            {/* comment */}
             <motion.div
               initial = {
 
@@ -251,7 +246,7 @@ export function EnhancedContact(...args[]):  {
             </motion.div>
           </motion.div>
 
-          {/* Contact Form */}
+          {/* comment */}
           <motion.div
             initial = {
 
@@ -271,7 +266,7 @@ export function EnhancedContact(...args[]):  {
             <h2 className="text-2xl font-bold text-white mb-6">Send us a Message</h2>
 "
             <form onSubmit={handleSubmit} className="space-y-6">
-              {/* Name */}
+              {/* comment */}
               <div>"
                 <label htmlFor="name" className="block text-sm font-medium text-white mb-2">
                   Full Name *
@@ -282,18 +277,17 @@ export function EnhancedContact(...args[]):  {
                   value={formData.name}
                   onChange = {
 
-  (e) => handleInputChange('name',
+  (e) => handleInputChange("name",
   e.target.value)
-
 }
-                  className={`w-full px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan ${errors.name'
-                      ? 'border-red-500 focus:ring-red-500''
-                      : 'border-zion-slate-light focus:border-zion-cyan'`
-                  } text-white placeholder-zion-slate-light`}"
-                  placeholder="Enter your full name"
-                />
+}
+                  className={"w-full px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan ${errors.name"
+                      ? "border-red-500 focus:ring-red-500""
+                      : "border-zion-slate-light focus:border-zion-cyan""
+                  } text-white placeholder-zion-slate-light"}"
+                  placeholder="Enter your full name" />
                 <AnimatePresence>
-                  {errors['name'] && (
+                  {errors["name"] && (
                     <motion.p
                       initial = {
 
@@ -316,11 +310,10 @@ export function EnhancedContact(...args[]):  {
                       className="text-red-400 text-sm mt-1 flex items-center"
                     >"
                       <AlertCircle className="w-4 h-4 mr-1"  />
-                      {errors['name']}                    </motion.p>) }
+                      {errors["name"]}                    </motion.p>) }
                 </AnimatePresence>
               </div>
-
-              {/* Email */}
+              {/* comment */}
               <div>"
                 <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
                   Email Address *
@@ -331,18 +324,17 @@ export function EnhancedContact(...args[]):  {
                   value={formData.email}
                   onChange = {
 
-  (e) => handleInputChange('email',
+  (e) => handleInputChange("email",
   e.target.value)
-
-}`
-                  className={`w-full px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan ${errors.email'
-                      ? 'border-red-500 focus:ring-red-500''
-                      : 'border-zion-slate-light focus:border-zion-cyan'`
-                  } text-white placeholder-zion-slate-light`}"
-                  placeholder="Enter your email address"
-                />
+}
+}"
+                  className={"w-full px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan ${errors.email"
+                      ? "border-red-500 focus:ring-red-500""
+                      : "border-zion-slate-light focus:border-zion-cyan""
+                  } text-white placeholder-zion-slate-light"}"
+                  placeholder="Enter your email address" />
                 <AnimatePresence>
-                  {errors['email'] && (
+                  {errors["email"] && (
                     <motion.p
                       initial = {
 
@@ -365,11 +357,10 @@ export function EnhancedContact(...args[]):  {
                       className="text-red-400 text-sm mt-1 flex items-center"
                     >"
                       <AlertCircle className="w-4 h-4 mr-1"  />
-                      {errors['email']}                    </motion.p>) }
+                      {errors["email"]}                    </motion.p>) }
                 </AnimatePresence>
               </div>
-
-              {/* Phone and Comp */}"
+              {/* comment */}"
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>"
                   <label htmlFor="phone" className="block text-sm font-medium text-white mb-2">
@@ -381,13 +372,12 @@ export function EnhancedContact(...args[]):  {
                     value={formData.phone}
                     onChange = {
 
-  (e) => handleInputChange('phone',
+  (e) => handleInputChange("phone",
   e.target.value)
-
+}
 }"
                     className="w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-zion-cyan text-white placeholder-zion-slate-light"
-                    placeholder="Enter your phone number"
-                  />
+                    placeholder="Enter your phone number" />
                 </div>
                 <div>"
                   <label htmlFor="comp" className="block text-sm font-medium text-white mb-2">
@@ -398,17 +388,15 @@ export function EnhancedContact(...args[]):  {
                     value={formData.company}
                     onChange = {
 
-  (e) => handleInputChange('company',
+  (e) => handleInputChange("company",
   e.target.value)
-
+}
 }"
                     className="w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-zion-cyan text-white placeholder-zion-slate-light"
-                    placeholder="Enter your comp name"
-                  />
+                    placeholder="Enter your comp name" />
                 </div>
               </div>
-
-              {/* Service */}
+              {/* comment */}
               <div>"
                 <label htmlFor="service" className="block text-sm font-medium text-white mb-2">
                   Service of Interest
@@ -418,9 +406,9 @@ export function EnhancedContact(...args[]):  {
                   value={formData.service}
                   onChange = {
 
-  (e) => handleInputChange('service',
+  (e) => handleInputChange("service",
   e.target.value)
-
+}
 }"
                   className="w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-zion-cyan text-white"
                 >
@@ -429,8 +417,7 @@ export function EnhancedContact(...args[]):  {
                     </option>) ) }
                 </select>
               </div>
-
-              {/* Message */}
+              {/* comment */}
               <div>"
                 <label htmlFor="message" className="block text-sm font-medium text-white mb-2">
                   Message *
@@ -441,18 +428,17 @@ export function EnhancedContact(...args[]):  {
                   value={formData.message}
                   onChange = {
 
-  (e) => handleInputChange('message',
+  (e) => handleInputChange("message",
   e.target.value)
-
-}`
-                  className={`w-full px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan resize-none ${errors.message'
-                      ? 'border-red-500 focus:ring-red-500''
-                      : 'border-zion-slate-light focus:border-zion-cyan'`
-                  } text-white placeholder-zion-slate-light`}"
-                  placeholder="Tell us about your project or inquiry..."
-                />
+}
+}"
+                  className={"w-full px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan resize-none ${errors.message"
+                      ? "border-red-500 focus:ring-red-500""
+                      : "border-zion-slate-light focus:border-zion-cyan""
+                  } text-white placeholder-zion-slate-light"}"
+                  placeholder="Tell us about your project or inquiry..." />
                 <AnimatePresence>
-                  {errors['message'] && (
+                  {errors["message"] && (
                     <motion.p
                       initial = {
 
@@ -475,11 +461,10 @@ export function EnhancedContact(...args[]):  {
                       className="text-red-400 text-sm mt-1 flex items-center"
                     >"
                       <AlertCircle className="w-4 h-4 mr-1"  />
-                      {errors['message']}                    </motion.p>) }
+                      {errors["message"]}                    </motion.p>) }
                 </AnimatePresence>
               </div>
-
-              {/* Submit Button */}
+              {/* comment */}
               <motion.button"
                 type="submit"
                 disabled={isSubmitting}
@@ -489,7 +474,7 @@ export function EnhancedContact(...args[]):  {
               >
                 {isSubmitting ? (
                   <>"
-                    <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                    <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"  />
                     <span>Sending Message...</span>
                   </>
                 ) : (
@@ -503,4 +488,7 @@ export function EnhancedContact(...args[]):  {
         </div>;
       </div>;
     </div>;) }
-'"`
+'""
+
+
+export default Component

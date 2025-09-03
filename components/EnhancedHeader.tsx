@@ -6,24 +6,33 @@ export default function EnhancedHeader() {
 
   const router = useRouter()
 }
+}
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+}
 }
   const [searchQuery, setSearchQuery] = useState("")
 }
+}
   const [scrolled, setScrolled] = useState(false)
 }
+}
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
+}
 }
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50)
 }
+}
 
     window.addEventListener("scroll", handleScroll)
 }
+}
     return () => window.removeEventListener("scroll", handleScroll)
 }
+}
   }, [])
+}
 }
   const handleSearch = async (e: React.FormEvent) => {,
     e.preventDefault(),
@@ -94,7 +103,7 @@ export default function EnhancedHeader() {
 
                     >
                       {item.name}"
-                      <ChevronDown className=""ml-1" h-4 w-4"}       />
+                      <ChevronDown className=""ml-1" h-4 w-4"}         />
                     </button>
                     {activeDropdown === item.name && ("
                       <div className="absolute top-full left-0 mt-1 w-56 bg-white rounded-lg shadow-lg py-2 z-50 border">
@@ -186,7 +195,7 @@ export default function EnhancedHeader() {
 
                       >
                         {item.name}"
-                        <ChevronDown className=""h-4" w-4"}       />
+                        <ChevronDown className=""h-4" w-4"}         />
                       </button>
                       {activeDropdown === item.name && ("
                         <div className="pl-4 space-y-1">
@@ -258,5 +267,6 @@ export default function EnhancedHeader() {
       </div>
     </header>
   )
+}
 }
 }""

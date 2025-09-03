@@ -1,17 +1,16 @@
-import React from 'react';
-const Match: React.FC = () => {;''''
-  const [selectedCategory, setSelectedCategory] = useState('all');''''
-  const [searchQuery, setSearchQuery] = useState('');'
-''
-  '''
-    { id: 'all', name: 'All Categories', icon: Sparkles, count: 150 },;'''
-    { id: 'ai', name: 'AI Services', icon: Brain, count: 45 },;'''
-    { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: 32 },;'''
-    { id: 'security', name: 'Cybersecurity', icon: Shield, count: 28 },;'''
-    { id: 'data', name: 'Data & Analytics', icon: Database, count: 25 },;'''
-    { id: 'iot', name: 'IoT & Edge', icon: Cpu, count: 20 };
+import React from "react";
+const Match: React.FC = () => {;""""
+  const [selectedCategory, setSelectedCategory] = useState("all");""""
+  const [searchQuery, setSearchQuery] = useState("");"
+""
+  """
+    { id: "all", name: "All Categories", icon: Sparkles, count: 150 },;"""
+    { id: "ai", name: "AI Services", icon: Brain, count: 45 },;"""
+    { id: "cloud", name: "Cloud & DevOps", icon: Cloud, count: 32 },;"""
+    { id: "security", name: "Cybersecurity", icon: Shield, count: 28 },;"""
+    { id: "data", name: "Data & Analytics", icon: Database, count: 25 },;"""
+    { id: "iot", name: "IoT & Edge", icon: Cpu, count: 20 };
   ];
-
   const matchedServices: unknown = [{}
       id: 1,
       name: "AI Business Intelligence",""""
@@ -95,17 +94,15 @@ const Match: React.FC = () => {;''''
       featured: true;
     };
   ];
-
                          service.description.toLowerCase () .includes (searchQuery.toLowerCase () ) ;
     return matchesCategory && matchesSearch}) ;"""
   return (""""
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"""
       <SEO """"
         title="AI Service Matcher - Zion Tech Group"""""
-        description="Find the perfect AI and technology services for your business with our intelligent matching algorithm. Get personalized recommendations based on your needs.""        keywords="AI service matcher, technology matching, business solutions, Zion Tech Group"""
-       />
+        description="Find the perfect AI and technology services for your business with our intelligent matching algorithm. Get personalized recommendations based on your needs.""        keywords="AI service matcher, technology matching, business solutions, Zion Tech Group"""  />
 """
-      {/* Hero Section */}""""
+      {/* comment */}""""
       <section className="relative py-20 overflow-hidden">""""
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>""""
         <div className="relative z-10 container mx-auto px-4">
@@ -156,33 +153,32 @@ const Match: React.FC = () => {;''''
         </div>
       </section>
 """
-      {/* Search and Filter Section */}""""
+      {/* comment */}""""
       <section className="py-16 bg-slate-800/50">;""""
         <div className="container mx-auto px-4">""""
           <div className="max-w-4xl mx-auto">"""
-            {/* Search Bar */}""""
+            {/* comment */}""""
             <div className="relative mb-8">""""
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-400"  />"""
               <input""""
                 type="text""                placeholder="Search for services, features, or use cases..."""
                 value={searchQuery}"""
                 onChange={(e) => setSearchQuery(e.target.value)}""""
-                className="w-full pl-12 pr-4 py-4 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-200"""
-              />
+                className="w-full pl-12 pr-4 py-4 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-200""" />
             </div>
 """
-            {/* Category Filters */}""""
+            {/* comment */}""""
             <div className="flex flex-wrap gap-3 justify-center">
               {categories.map((category) => (
                 <button;
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
-                  className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all duration-200 ${}
-'
-                    selectedCategory === category.id''
-                      ? 'bg-cyan-500 text-white shadow-lg shadow-cyan-500/25'''`
-                      : 'bg-slate-700/50 text-slate-300 hover:bg-slate-600/50 hover:text-white border border-slate-600/50'``
-                  }`}"""
+                  className={"flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all duration-200 ${}
+"
+                    selectedCategory === category.id""
+                      ? "bg-cyan-500 text-white shadow-lg shadow-cyan-500/25""""
+                      : "bg-slate-700/50 text-slate-300 hover:bg-slate-600/50 hover:text-white border border-slate-600/50"""
+                  }"}"""
 """"
                   <category.icon className="w-4 h-4" />"""
                   {category.name}""""
@@ -195,7 +191,7 @@ const Match: React.FC = () => {;''''
         </div>
       </section>
 """
-      {/* Matched Services Section */}""""
+      {/* comment */}""""
       <section className="py-20">;""""
         <div className="container mx-auto px-4">
           <motion.div;
@@ -234,14 +230,14 @@ const Match: React.FC = () => {;''''
                 transition = {}
   { duration: 0.6,
   delay: index * 0.1;
-`
-}}``
-                className={`bg-slate-800/50 border rounded-xl p-6 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 ${}
-'`
-                  service.featured ? 'border-cyan-400/30 bg-gradient-to-br from-cyan-400/5 to-blue-500/5' : 'border-slate-700/50'``
-                }`}
+"
+}}""
+                className={"bg-slate-800/50 border rounded-xl p-6 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 ${}
+""
+                  service.featured ? "border-cyan-400/30 bg-gradient-to-br from-cyan-400/5 to-blue-500/5" : "border-slate-700/50"""
+                }"}
 """
-                {/* Header */}""""
+                {/* comment */}""""
                 <div className="flex items-start justify-between mb-4">""""
                   <div className="w-12 h-12 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center">""""
                     <service.icon className="w-6 h-6 text-cyan-400" />"""
@@ -258,23 +254,23 @@ const Match: React.FC = () => {;''''
                   </div>
                 </div>
 """
-                {/* Service Info */}""""
+                {/* comment */}""""
                 <h3 className="text-xl font-bold text-white mb-3">{service.name}</h3>;""""
                 <p className="text-slate-300 mb-4 text-sm leading-relaxed">{service.description}</p>
 """
-                {/* Rating and Price */}""""
+                {/* comment */}""""
                 <div className="flex items-center justify-between mb-4">""""
                   <div className="flex items-center">""""
-                    <div className="flex items-center text-yellow-400 mr-2">'`
-                      {[...Array(5)].map((_, i) => ('`'`
-                        <Star key={i} className={`w-4 h-4 ${i < Math.floor(service.rating) ? 'fill-current' : ''}`}  />                      ))}"""
+                    <div className="flex items-center text-yellow-400 mr-2">""
+                      {[...Array(5)].map((_, i) => (""""
+                        <Star key={i} className={`w-4 h-4 ${i < Math.floor(service.rating) ? "fill-current" : ""}`}    />                      ))}"""
                     </div>""""
                     <span className="text-slate-400 text-sm">{service.rating} ({service.reviews})</span>"""
                   </div>""""
                   <div className="text-cyan-400 font-bold">{service.price}</div>
                 </div>
 """
-                {/* Features */}""""
+                {/* comment */}""""
                 <div className="space-y-2 mb-6">"""
                   {service.features.slice(0, 3).map((feature, featureIndex) => (""""
                     <div key={featureIndex} className="flex items-center text-sm text-slate-400">""""
@@ -287,18 +283,18 @@ const Match: React.FC = () => {;''''
                     </div>) }
                 </div>
 """
-                {/* Actions */}""""
+                {/* comment */}""""
                 <div className="flex gap-2">
                   <Link;
                     to = {}
-`
-`'`
-`'`'`
-`'`'`'`
-  `/services/${service.name.toLowerCase().replace(/\s+/g,-')
-
-`
-`"`
+"
+"""
+"""""
+"""""""
+  "/services/${service.name.toLowerCase().replace(/\s+/g,-')
+}
+"
+"""
 }`}""""
                     className="flex-1 inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-medium rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200"""
                     Learn More;
@@ -311,7 +307,6 @@ const Match: React.FC = () => {;''''
                 </div>
               </motion.div>) ) }
           </div>
-
           {filteredServices.length === 0 && (;
             <motion.div;
               initial={{ opacity: 0 }}"""
@@ -335,7 +330,7 @@ const Match: React.FC = () => {;''''
         </div>
       </section>
 """
-      {/* How It Works Section */}""""
+      {/* comment */}""""
       <section className="py-20 bg-slate-800/50">;""""
         <div className="container mx-auto px-4">
           <motion.div;
@@ -414,7 +409,7 @@ const Match: React.FC = () => {;''''
         </div>
       </section>
 """
-      {/* CTA Section */}""""
+      {/* comment */}""""
       <section className="py-20 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10">;""""
         <div className="container mx-auto px-4 text-center">
           <motion.div;
@@ -456,15 +451,10 @@ const Match: React.FC = () => {;''''
     </div>;
   );
 };
-
 export default Match;}}}
 
 export { Match };
-
 export { Match };
-
 export { Match };
-
 export { Match };
-
 export { Match };

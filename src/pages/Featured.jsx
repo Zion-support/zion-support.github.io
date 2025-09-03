@@ -1,7 +1,8 @@
-import { FeaturedListingsSection } from '@/components/FeaturedListingsSection';'''
-import { GradientHeading } from '@/components/GradientHeading';
+import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";"""
+import { GradientHeading } from "@/components/GradientHeading';
 export default function Featured() {}
   return()
+}
     <>
       <div className="min-h-screen bg-zion-blue">""""
         <div className="container mx-auto px-4 py-12">""""
@@ -18,19 +19,15 @@ export default function Featured() {}
               Marketplace has to offer.
             </p>
           </div>
-          {/* Reuse the FeaturedListings component */}
-          <FeaturedListingsSection showTitle={false} />
+          {/* comment */}
+          <FeaturedListingsSection showTitle={false}   />
         </div>
       </div>
     </>)}
 
 
 export { Featured };
-
 export { Featured };
-
 export { Featured };
-
 export { Featured };
-
 export { Featured };

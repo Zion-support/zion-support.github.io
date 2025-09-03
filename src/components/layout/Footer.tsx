@@ -1,13 +1,13 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 import {
 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Globe, 
-  Linkedin, 
-  Twitter, 
+  Mail,
+  Phone,
+  MapPin,
+  Globe,
+  Linkedin,
+  Twitter,
   Github,
   Facebook,
   Instagram,
@@ -59,12 +59,10 @@ import {
   Database,
   Home,
   Leaf
-} from 'lucide-react';
-
+} from "lucide-react";
 export function Footer() {
 
   const currentYear = new Date().getFullYear();
-
   const footerSections = [
     {
 
@@ -139,7 +137,6 @@ export function Footer() {
       ]
     }
   ];
-
   const quickLinks = [
     { name: "About Us", href: "/about", icon: Building2 },
     { name: "Services", href: "/services", icon: Server },
@@ -150,7 +147,6 @@ export function Footer() {
     { name: "Support", href: "/help-center", icon: HelpCircle },
     { name: "Documentation", href: "/documentation", icon: BookOpen }
   ];
-
   const contactInfo = [
     {
 
@@ -171,7 +167,6 @@ export function Footer() {
       href: "https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709"
     }
   ];
-
   const socialLinks = [
     { name: "LinkedIn", href: "https://linkedin.com/company/ziontechgroup", icon: Linkedin },
     { name: "Twitter", href: "https://twitter.com/ziontechgroup", icon: Twitter },
@@ -179,16 +174,15 @@ export function Footer() {
     { name: "Facebook", href: "https://facebook.com/ziontechgroup", icon: Facebook },
     { name: "Instagram", href: "https://instagram.com/ziontechgroup", icon: Instagram }
   ];
-
   return (
     <footer className="bg-zion-slate-darker border-t border-zion-purple/20">
-      {/* Main Footer Content */}
+      {/* comment */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Company Info */}
+          {/* comment */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <Zap className="h-8 w-8 text-zion-purple" />
+              <Zap className="h-8 w-8 text-zion-purple"  />
               <span className="text-2xl font-bold text-white">Zion Tech Group</span>
             </div>
             <p className="text-gray-300 text-sm leading-relaxed">
@@ -208,11 +202,10 @@ export function Footer() {
               ))}
             </div>
           </div>
-
-          {/* Quick Links */}
+          {/* comment */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-white flex items-center space-x-2">
-              <Target className="h-5 w-5 text-zion-purple" />
+              <Target className="h-5 w-5 text-zion-purple"  />
               <span>Quick Links</span>
             </h3>
             <ul className="space-y-2">
@@ -229,11 +222,10 @@ export function Footer() {
               ))}
             </ul>
           </div>
-
-          {/* Contact Information */}
+          {/* comment */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-white flex items-center space-x-2">
-              <MessageCircle className="h-5 w-5 text-zion-purple" />
+              <MessageCircle className="h-5 w-5 text-zion-purple"  />
               <span>Contact Us</span>
             </h3>
             <div className="space-y-3">
@@ -241,8 +233,8 @@ export function Footer() {
                 <a
                   key={index}
                   href={contact.href}
-                  target={contact.href.startsWith('http') ? '_blank' : '_self'}
-                  rel={contact.href.startsWith('http') ? 'noopener noreferrer' : ''}
+                  target={contact.href.startsWith("http") ? "_blank" : "_self"}
+                  rel={contact.href.startsWith("http") ? "noopener noreferrer" : ""}
                   className="text-gray-300 hover:text-zion-purple transition-colors text-sm flex items-start space-x-2 group"
                 >
                   <contact.icon className="h-4 w-4 mt-0.5 group-hover:text-zion-purple flex-shrink-0" />
@@ -251,30 +243,26 @@ export function Footer() {
               ))}
             </div>
           </div>
-
-          {/* Newsletter */}
+          {/* comment */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-white flex items-center space-x-2">
-              <Mail className="h-5 w-5 text-zion-purple" />
+              <Mail className="h-5 w-5 text-zion-purple"  />
               <span>Stay Updated</span>
             </h3>
             <p className="text-gray-300 text-sm">
               Get the latest updates on our innovative services and technology solutions.
             </p>
             <div className="flex space-x-2">
-              <input
-                type="email"
+              <input type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-3 py-2 bg-zion-slate border border-zion-slate-light rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-zion-purple focus:border-transparent"
-              />
+                className="flex-1 px-3 py-2 bg-zion-slate border border-zion-slate-light rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-zion-purple focus:border-transparent"  />
               <button className="px-4 py-2 bg-zion-purple hover:bg-zion-purple-dark text-white rounded-lg transition-colors">
                 Subscribe
               </button>
             </div>
           </div>
         </div>
-
-        {/* Service Categories */}
+        {/* comment */}
         <div className="mt-12 pt-8 border-t border-zion-slate">
           <h3 className="text-xl font-semibold text-white text-center mb-8">
             Our Comprehensive Service Portfolio
@@ -304,8 +292,7 @@ export function Footer() {
           </div>
         </div>
       </div>
-
-      {/* Bottom Footer */}
+      {/* comment */}
       <div className="bg-zion-slate-darkest border-t border-zion-slate">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
@@ -320,26 +307,27 @@ export function Footer() {
                 Terms of Service
               </Link>
             </div>
-            
             <div className="flex items-center space-x-4">
               <span className="text-sm text-gray-400">Powered by</span>
               <div className="flex items-center space-x-2">
-                <Brain className="h-5 w-5 text-zion-purple" />
+                <Brain className="h-5 w-5 text-zion-purple"  />
                 <span className="text-sm font-semibold text-white">AI Technology</span>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-      {/* Back to Top Button */}
+      {/* comment */}
       <button
-        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         className="fixed bottom-6 right-6 bg-zion-purple hover:bg-zion-purple-dark text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
         aria-label="Back to top"
       >
-        <ArrowUp className="h-5 w-5" />
+        <ArrowUp className="h-5 w-5"  />
       </button>
     </footer>
   );
 }
+
+
+export default Component

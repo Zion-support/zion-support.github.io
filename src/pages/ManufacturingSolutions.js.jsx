@@ -1,6 +1,6 @@
-import React from 'react';'''
-import Link from 'next/link';'''
-import { Factory, Cpu, Zap, Shield, BarChart3, ArrowRight, CheckCircle, Brain, Network } from 'lucide-react';
+import React from "react";"""
+import Link from "next/link";"""
+import { Factory, Cpu, Zap, Shield, BarChart3, ArrowRight, CheckCircle, Brain, Network } from "lucide-react";
 export default function ManufacturingSolutions() {}
     const solutions = []
         {}
@@ -98,12 +98,12 @@ export default function ManufacturingSolutions() {}
         "Optimize inventory management by 30%""""
     ];""""
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">"""
-      {/* Hero Section */}""""
+      {/* comment */}""""
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">""""
         <div className="max-w-7xl mx-auto text-center">""""
           <div className="flex justify-center mb-6">""""
             <div className="p-3 bg-gradient-to-r from-orange-500 to-red-600 rounded-full">""""
-              <Factory className="w-8 h-8 text-white"/>
+              <Factory className="w-8 h-8 text-white"  />
             </div>"""
           </div>""""
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -116,7 +116,7 @@ export default function ManufacturingSolutions() {}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">""""
             <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-200">"""
               Get Started""""
-              <ArrowRight className="ml-2 w-5 h-5"/>"""
+              <ArrowRight className="ml-2 w-5 h-5"  />"""
             </Link>""""
             <Link to="/case-studies" className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200">
               View Case Studies;
@@ -125,7 +125,7 @@ export default function ManufacturingSolutions() {}
         </div>
       </section>
 """
-      {/* Solutions Section */}""""
+      {/* comment */}""""
       <section className="py-20 px-4 sm:px-6 lg:px-8">""""
         <div className="max-w-7xl mx-auto">""""
           <div className="text-center mb-16">""""
@@ -140,13 +140,13 @@ export default function ManufacturingSolutions() {}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">""""
             {solutions.map((solution, index) => (<div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-orange-500 transition-all duration-300">""""
                 <div className="p-3 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg w-fit mb-4">""""
-                  <solution.icon className="w-6 h-6 text-white"/>"""
+                  <solution.icon className="w-6 h-6 text-white" />"""
                 </div>""""
                 <h3 className="text-xl font-semibold text-white mb-3">{solution.title}</h3>""""
                 <p className="text-gray-300 mb-4">{solution.description}</p>""""
                 <ul className="space-y-2">""""
                   {solution.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-gray-300">""""
-                      <CheckCircle className="w-4 h-4 text-orange-500 mr-2 flex-shrink-0"/>
+                      <CheckCircle className="w-4 h-4 text-orange-500 mr-2 flex-shrink-0"  />
                       {feature}
                     </li>) ) }
                 </ul>
@@ -155,7 +155,7 @@ export default function ManufacturingSolutions() {}
         </div>
       </section>
 """
-      {/* Use Cases Section */}""""
+      {/* comment */}""""
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20">""""
         <div className="max-w-7xl mx-auto">""""
           <div className="text-center mb-16">""""
@@ -177,7 +177,7 @@ export default function ManufacturingSolutions() {}
         </div>
       </section>
 """
-      {/* Benefits Section */}""""
+      {/* comment */}""""
       <section className="py-20 px-4 sm:px-6 lg:px-8">""""
         <div className="max-w-7xl mx-auto">""""
           <div className="text-center mb-16">""""
@@ -192,13 +192,13 @@ export default function ManufacturingSolutions() {}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">""""
             <div className="space-y-6">""""
               {benefits.slice(0, 3).map((benefit, index) => (<div key={index} className="flex items-start space-x-3">""""
-                  <CheckCircle className="w-6 h-6 text-orange-500 mt-1 flex-shrink-0"/>""""
+                  <CheckCircle className="w-6 h-6 text-orange-500 mt-1 flex-shrink-0"  />""""
                   <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>))}"""
             </div>""""
             <div className="space-y-6">""""
               {benefits.slice(3).map((benefit, index) => (<div key={index} className="flex items-start space-x-3">""""
-                  <CheckCircle className="w-6 h-6 text-orange-500 mt-1 flex-shrink-0"/>""""
+                  <CheckCircle className="w-6 h-6 text-orange-500 mt-1 flex-shrink-0"  />""""
                   <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>))}
             </div>
@@ -206,19 +206,19 @@ export default function ManufacturingSolutions() {}
         </div>
       </section>
 """
-      {/* CTA Section */}""""
+      {/* comment */}""""
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-orange-900/20 to-red-900/20">""""
         <div className="max-w-4xl mx-auto text-center">""""
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Manufacturing?"""
           </h2>""""
-          <p className="text-xl text-gray-300 mb-8">'
-            Join the Industry 4.0 revolution with Zion Tech Group's smart manufacturing solutions"""
+          <p className="text-xl text-gray-300 mb-8">"
+            Join the Industry 4.0 revolution with Zion Tech Group"s smart manufacturing solutions"""
           </p>""""
           <div className="flex flex-col sm:flex-row gap-4 justify-center">""""
             <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-200">"""
               Schedule a Demo""""
-              <ArrowRight className="ml-2 w-5 h-5"/>"""
+              <ArrowRight className="ml-2 w-5 h-5"  />"""
             </Link>""""
             <Link to="/pricing" className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200">
               View Pricing;
@@ -230,11 +230,7 @@ export default function ManufacturingSolutions() {}
 
 
 export { ManufacturingSolutions };
-
 export { ManufacturingSolutions };
-
 export { ManufacturingSolutions };
-
 export { ManufacturingSolutions };
-
 export { ManufacturingSolutions };

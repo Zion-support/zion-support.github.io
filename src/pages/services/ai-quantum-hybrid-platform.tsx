@@ -32,7 +32,6 @@ export default function AiQuantumHybridPlatform() {
       price: "$1,999/mo",
     }
   ];
-
   ]
   return (
     <div className="min-h-screen bg-white">

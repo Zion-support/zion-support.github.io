@@ -1,36 +1,33 @@
-import {  import { motion  } from 'framer-motion';
+import React from "react"
+import {  import { motion  } from "framer-motion";
 export default function Page() {
 ,
       {
 
-        name: 'Error Rate',
+        name: "Error Rate",
         value: Math.random() * 2,
-        unit: '%',
-        trend: Math.random() > 0.5 ? 'up' : 'down',
-        status: Math.random() > 0.8 ? 'good' : Math.random() > 0.5 ? 'warning' : 'critical',
+        unit: "%",
+        trend: Math.random() > 0.5 ? "up" : "down",
+        status: Math.random() > 0.8 ? "good" : Math.random() > 0.5 ? "warning" : "critical",
         icon: AlertTriangle
       },
       {
 
-        name: 'Response Time',
+        name: "Response Time",
         value: Math.random() * 500 + 100,
-        unit: 'ms',
-        trend: Math.random() > 0.5 ? 'up' : 'down',
-        status: Math.random() > 0.7 ? 'good' : 'warning',
+        unit: "ms",
+        trend: Math.random() > 0.5 ? "up" : "down",
+        status: Math.random() > 0.7 ? "good" : "warning",
         icon: Zap
 
     ];
-
-      'High memory usage detected on server-01',;
-      'Network latency increased by 15%',;
-      'Error rate spike detected in last 5 minutes';
+      "High memory usage detected on server-01",;
+      "Network latency increased by 15%",;
+      "Error rate spike detected in last 5 minutes";
     ];
-
-    
-      'Consider implementing lazy loading for images',;
-      'Optimize database queries for better performance',;
-      'Enable CDN for static assets delivery';    ];
-
+      "Consider implementing lazy loading for images",;
+      "Optimize database queries for better performance",;
+      "Enable CDN for static assets delivery";    ];
     return {
 
       timestamp: now,
@@ -47,32 +44,27 @@ export default function Page() {
 
       return () => clearInterval(interval) }
   }, [isMonitoring, generateMockData]) ;
-
     switch(status) {;
-      case 'good': return 'text-green-400';
-      case 'warning': return 'text-yellow-400';
-      case 'critical': return 'text-red-400';
-      default: return 'text-gray-400'};
-
+      case "good": return "text-green-400";
+      case "warning": return "text-yellow-400";
+      case "critical": return "text-red-400";
+      default: return "text-gray-400"};
     switch(status) {;
-      case 'good': return 'bg-green-500/20';
-      case 'warning': return 'bg-yellow-500/20';
-      case 'critical': return 'bg-red-500/20';
-      default: return 'bg-gray-500/20'};
-
+      case "good": return "bg-green-500/20";
+      case "warning": return "bg-yellow-500/20";
+      case "critical": return "bg-red-500/20";
+      default: return "bg-gray-500/20"};
     switch(trend) {;
-      case 'up': return <TrendingUp className="w-4 h-4 text-red-400"  />;'"
-      case 'down': return <TrendingDown className="w-4 h-4 text-green-400"  />;"
+      case "up": return <TrendingUp className="w-4 h-4 text-red-400"  />;""
+      case "down": return <TrendingDown className="w-4 h-4 text-green-400"  />;"
       default: return <Activity className="w-4 h-4 text-blue-400"  />};
-
     setIsMonitoring(true) ;
     setPerformanceData(generateMockData () ) };
-
     setIsMonitoring(false) };
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 p-6">"
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
+        {/* comment */}
         <motion.div
           initial = {
 
@@ -96,7 +88,7 @@ export default function Page() {
           </p>
         </motion.div>
 
-        {/* Controls */}
+        {/* comment */}
         <motion.div
           initial = {
 
@@ -117,28 +109,27 @@ export default function Page() {
             <button
               onClick={startMonitoring}
               disabled={isMonitoring}
-              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2 ${isMonitoring'
-                  ? 'bg-gray-600 text-gray-400 cursor-not-allowed''
-                  : 'bg-green-600 hover:bg-green-700 text-white'`
-              }`}
+              className={"px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2 ${isMonitoring"
+                  ? "bg-gray-600 text-gray-400 cursor-not-allowed""
+                  : "bg-green-600 hover:bg-green-700 text-white""
+              }"}
             >"
               <Activity className="w-5 h-5"  />              Start Monitoring
             </button>
             <button
               onClick={stopMonitoring}
-              disabled={!isMonitoring}`
-              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2 ${!isMonitoring'
-                  ? 'bg-gray-600 text-gray-400 cursor-not-allowed''
-                  : 'bg-red-600 hover:bg-red-700 text-white'`
-              }`}
+              disabled={!isMonitoring}"
+              className={"px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2 ${!isMonitoring"
+                  ? "bg-gray-600 text-gray-400 cursor-not-allowed""
+                  : "bg-red-600 hover:bg-red-700 text-white""
+              }"}
             >"
               <Monitor className="w-5 h-5"  />              Stop Monitoring
             </button>
           </div>
-
           <select
             value={selectedTimeframe}
-            onChange={(e) => setSelectedTimeframe(e.target.value as '1h' | '24h' | '7d' | '30d')}"
+            onChange={(e) => setSelectedTimeframe(e.target.value as "1h" | "24h" | "7d" | "30d")}"
             className="px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
           >"
             <option value="1h">Last Hour</option>"
@@ -148,7 +139,7 @@ export default function Page() {
           </select>
         </motion.div>
 
-        {/* Performance Metrics Grid */}
+        {/* comment */}
         {performanceData && (<motion.div
             initial = {
 
@@ -183,9 +174,9 @@ export default function Page() {
                 className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300"
               >"
                 <div className="flex items-center justify-between mb-4">"
-                  <div className="flex items-center gap-3">`
-                    <div className={`p-2 rounded-lg ${getStatusBgColor(metric.status)}`}>`
-                      <metric.icon className={`w-6 h-6 ${getStatusColor(metric.status)}`} />
+                  <div className="flex items-center gap-3">"
+                    <div className={"p-2 rounded-lg ${getStatusBgColor(metric.status)}"}>"
+                      <metric.icon className={"w-6 h-6 ${getStatusColor(metric.status)}"} />
                     </div>"
                     <h3 className="text-lg font-semibold text-white">{metric.name}</h3>
                   </div>
@@ -194,17 +185,17 @@ export default function Page() {
 "
                 <div className="text-center">"
                   <div className="text-3xl font-bold text-white mb-2">
-                    {metric.value.toFixed(metric.unit === '%' ? 1 : 0)}"
+                    {metric.value.toFixed(metric.unit === "%" ? 1 : 0)}"
                     <span className="text-lg text-gray-400 ml-1">{metric.unit}</span>
-                  </div>`
-                  <div className={`text-sm font-medium ${getStatusColor(metric.status)}`}>
+                  </div>"
+                  <div className={"text-sm font-medium ${getStatusColor(metric.status)}"}>
                     {metric.status.charAt(0).toUpperCase() + metric.status.slice(1)}
                   </div>
                 </div>
               </motion.div>) ) }
           </motion.div>) }
 
-        {/* Alerts and Recommendations */}
+        {/* comment */}
         {performanceData && (<motion.div
             initial = {
 
@@ -221,7 +212,7 @@ export default function Page() {
             transition={{ delay: 0.5 }}"
             className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12"
           >
-            {/* Alerts */}"
+            {/* comment */}"
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">"
               <div className="flex items-center gap-3 mb-4">"
                 <AlertTriangle className="w-6 h-6 text-yellow-400"  />"                <h3 className="text-xl font-semibold text-white">Active Alerts</h3>
@@ -235,8 +226,7 @@ export default function Page() {
                 ))}
               </div>
             </div>
-
-            {/* Recommendations */}"
+            {/* comment */}"
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">"
               <div className="flex items-center gap-3 mb-4">"
                 <CheckCircle className="w-6 h-6 text-green-400"  />"                <h3 className="text-xl font-semibold text-white">Recommendations</h3>
@@ -252,7 +242,7 @@ export default function Page() {
             </div>
           </motion.div>) }
 
-        {/* Performance Chart Placeholder */}
+        {/* comment */}
         <motion.div
           initial = {
 
@@ -269,11 +259,11 @@ export default function Page() {
           transition={{ delay: 0.6 }}
           className="bg-white / 5 backdrop - blur - sm border border-white / 10 rounded-xl p - 8 text-center"
         >
-          <BarChart3 className="w-16 h-16 text-gray - 400 mx - auto mb-4" />
+          <BarChart3 className="w-16 h-16 text-gray - 400 mx - auto mb-4"  />
           <h3 className="text-xl font - semibold text-white mb-2">Performance Trends</h3>
           <p className="text-gray -400">
             {isMonitoring
-              ? 'Real - time performance data is being collected and analyzed...'              : 'Start monitoring to view performance trends and historical data'
+              ? "Real - time performance data is being collected and analyzed..."              : "Start monitoring to view performance trends and historical data"
             }
           </p>
           {isMonitoring && ("
@@ -282,7 +272,7 @@ export default function Page() {
             </div>) }
         </motion.div>
 
-        {/* Status Summary */}
+        {/* comment */}
         {performanceData && (<motion.div
             initial = {
 
@@ -309,5 +299,4 @@ export default function Page() {
       </div>;
     </div>;) ;
 </div>};
-
-export default PerformanceAnalytics}}}}}}}}'"`
+export default PerformanceAnalytics}}}}}}}}""`

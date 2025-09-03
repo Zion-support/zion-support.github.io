@@ -1,21 +1,21 @@
-import {  import { motion, AnimatePresence  } from 'framer-motion';
- from 'lucide-react';
-
+import React from "react"
+import {  import { motion, AnimatePresence  } from "framer-motion";
+ from "lucide-react";
 interface SecurityThreat {
   id: string;
-  type: 'critical' | 'high' | 'medium' | 'low';
+  type: "critical" | "high" | "medium" | "low";
   severity: number;
   description: string;
   source: string;
   timestamp: Date;
-  status: 'active' | 'resolved' | 'investigating';
+  status: "active" | "resolved" | "investigating";
   affectedSystems: string[];
   recommendations: string[]}
 
 interface VulnerabilityAssessment {
   id: string;
-  category: 'network' | 'application' | 'infrastructure' | 'data';
-  risk: 'critical' | 'high' | 'medium' | 'low';
+  category: "network" | "application" | "infrastructure" | "data";
+  risk: "critical" | "high" | "medium" | "low";
   score: number;
   description: string;
   cveId?: string;
@@ -24,7 +24,7 @@ interface VulnerabilityAssessment {
   estimatedTime: string}
 interface ComplianceStatus {
   framework: string;
-  status: 'compliant' | 'non-compliant' | 'partial';
+  status: "compliant" | "non-compliant" | "partial";
   score: number;
   lastAudit: Date;
   nextAudit: Date;
@@ -59,73 +59,73 @@ export function SecurityMonitoringSystem({
   const [complianceStatus, setComplianceStatus] = useState<ComplianceStatus[]>(
     []
   );
-  const [selectedView, setSelectedView] = useState<'
-    'threats' | 'vulnerabilities' | 'compliance''
-  >('threats');
+  const [selectedView, setSelectedView] = useState<"
+    "threats" | "vulnerabilities" | "compliance""
+  >("threats");
   const [showAdvanced, setShowAdvanced] = useState(false);
   const [securityScore, setSecurityScore] = useState(0);
   const [targetScore, setTargetScore] = useState(95);
-
   // Generate sample security threats
 
     const newThreats: SecurityThreat[] = threatTypes.map((type, index) => ({
 
-      id: `threat-${index}`,
+      id: "threat-${index}",
       type: type as any,
-      severity: Math.floor(Math.random() * 100) + 1,`
-      description: `Security ${type} threat detected from ${threatSources[Math.floor(Math.random() * threatSources.length)]}`,
+      severity: Math.floor(Math.random() * 100) + 1,"
+      description: "Security ${type} threat detected from ${threatSources[Math.floor(Math.random() * threatSources.length)]}",
       source: threatSources[Math.floor(Math.random() * threatSources.length)],
       timestamp: new Date(Date.now() - Math.random() * 86400000),
       status:
-        Math.random() > 0.7'
-          ? 'resolved'
-          : Math.random() > 0.5'
-            ? 'investigating''
-            : 'active',
+        Math.random() > 0.7"
+          ? "resolved"
+          : Math.random() > 0.5"
+            ? "investigating""
+            : "active",
       affectedSystems: systems.slice(0, Math.floor(Math.random() * 3) + 1),
-      recommendations: ['
-        'Implement additional authentication layers',Update security policies',Conduct security training',Review access controls',
+      recommendations: ["
+        "Implement additional authentication layers",Update security policies",Conduct security training",Review access controls",
       ]}));
-
     setThreats(newThreats)}, []);
-
   // Generate vulnerability assessments
 
     const newVulnerabilities: VulnerabilityAssessment[] = categories.map()
+}
       (category, index) => ({
-`
-        id: `vuln-${index}`,
+"
+        id: "vuln-${index}",
         category: category as any,
         risk: risks[Math.floor(Math.random() * risks.length)] as any,
-        score: Math.floor(Math.random() * 10) + 1,`
-        description: `${category} vulnerability detected in ${components[Math.floor(Math.random() * components.length)]}`,`
-        cveId: `CVE-2025-${Math.floor(Math.random() * 9999)
-          .toString()'`
-          .padStart(4,0')}`,
+        score: Math.floor(Math.random() * 10) + 1,"
+        description: "${category} vulnerability detected in ${components[Math.floor(Math.random() * components.length)]}","
+        cveId: "CVE-2025-${Math.floor(Math.random() * 9999)
+}
+          .toString()""
+          .padStart(4,0")}",
         affectedComponents: components.slice()
+}
           0,
           Math.floor(Math.random() * 2) + 1
-        ),`
-        remediation: `Update ${category} security configurations and apply latest patches`,`
-        estimatedTime: `${Math.floor(Math.random() * 4) + 1} hours`})
+        ),"
+        remediation: "Update ${category} security configurations and apply latest patches","
+        estimatedTime: "${Math.floor(Math.random() * 4) + 1} hours"})
+}
     );
-
     setVulnerabilities(newVulnerabilities)}, []);
-
   // Generate compliance status
   
     const newCompliance: ComplianceStatus[] = frameworks.map()
+}
       (framework, index) => {
 
         return {
 
           framework,
           status:
-            score >= 95'
-              ? 'compliant'
-              : score >= 80'
-                ? 'partial''
-                : 'non-compliant',
+            score >= 95"
+              ? "compliant"
+              : score >= 80"
+                ? "partial""
+                : "non-compliant",
           score,
           lastAudit: new Date(Date.now() - Math.random() * 2592000000),
           nextAudit: new Date(Date.now() + Math.random() * 2592000000),
@@ -136,12 +136,10 @@ export function SecurityMonitoringSystem({
             nonCompliant: total - compliant,
             pending: Math.floor(Math.random() * 10)}}}
     );
-
     setComplianceStatus(newCompliance)}, []);
   // Start security scan
   
     setScanComplete(false);
-
     // Simulate scan process
     setTimeout(() => {
       generateSecurityThreats();
@@ -149,7 +147,6 @@ export function SecurityMonitoringSystem({
       generateComplianceStatus();
       setIsScanning(false);
       setScanComplete(true);
-
       // Calculate overall security score
 
       setSecurityScore(overallScore)}, 3000)}, [generateSecurityThreats,
@@ -198,11 +195,9 @@ export function SecurityMonitoringSystem({
     generateVulnerabilities,
     generateComplianceStatus,
   ]);
-
   // Get threat color
   
     return colors[type as keyof typeof colors] || colors.low};
-
   // Get status icon
   const getStatusIcon = (status: string) => {
 
@@ -212,15 +207,14 @@ export function SecurityMonitoringSystem({
       investigating: <Eye className="w-4 h-4 text-yellow-500"  />,"
       resolved: <CheckCircle className="w-4 h-4 text-green-500"  />};"
     return icons[status as keyof typeof icons] || <Info className="w-4 h-4"  />};
-
   // Get compliance color
   
     return colors[status as keyof typeof colors] || colors.partial};
   if(!enabled) return null;
-
   return ()
+}
     <>
-      {/* Floating Security Monitoring Button */}
+      {/* comment */}
       <motion.button
         onClick={() => setIsOpen(true)}"
         className="fixed bottom-6 right-48 z-50 bg-gradient-to-r from-red-600 to-orange-600 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
@@ -230,10 +224,10 @@ export function SecurityMonitoringSystem({
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.9 }}
       >"
-        <Shield className="w-6 h-6"  />"        <div className="absolute -top-2 -right-2 w-3 h-3 bg-green-500 rounded-full animate-pulse" />
+        <Shield className="w-6 h-6"  />"        <div className="absolute -top-2 -right-2 w-3 h-3 bg-green-500 rounded-full animate-pulse"  />
       </motion.button>
 
-      {/* Security Monitoring Modal */}
+      {/* comment */}
       <AnimatePresence>
         {isOpen && (
           <motion.div"
@@ -242,15 +236,15 @@ export function SecurityMonitoringSystem({
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            <motion.div`
-              className={`bg-white dark:bg-gray-900 rounded-2xl shadow-2xl overflow-hidden ${isFullscreen ? 'w-full h-full' : 'w-full max-w-7xl max-h-[90vh]'`
-              }`}
+            <motion.div"
+              className={"bg-white dark:bg-gray-900 rounded-2xl shadow-2xl overflow-hidden ${isFullscreen ? "w-full h-full" : "w-full max-w-7xl max-h-[90vh]""
+              }"}
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
-              transition={{ type: 'spring', damping: 25, stiffness: 300 }}
+              transition={{ type: "spring", damping: 25, stiffness: 300 }}
             >
-              {/* Header */}"
+              {/* comment */}"
               <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700 bg-gradient-to-r from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20">"
                 <div className="flex items-center space-x-3">"
                   <Shield className="w-8 h-8 text-red-600"  />
@@ -270,21 +264,19 @@ export function SecurityMonitoringSystem({
                     disabled={isScanning}"
                     className="p-2 text-gray-600 hover:text-red-600 dark:text-gray-400 dark:hover:text-red-400 transition-colors"
                   >
-                    <RefreshCw'`
-                      className={`w-5 h-5 ${isScanning ? 'animate-spin' : ''}`}
+                    <RefreshCw""
+                      className={"w-5 h-5 ${isScanning ? "animate-spin" : ""}"}
                     />                  </button>
-
                   <button
                     onClick={() => setIsFullscreen(!isFullscreen)}"
                     className="p-2 text-gray-600 hover:text-red-600 dark:text-gray-400 dark:hover:text-red-400 transition-colors"
                   >
                     {isFullscreen ? ("
-                      <Minimize2 className="w-5 h-5" />
+                      <Minimize2 className="w-5 h-5"  />
                     ) : ("
-                      <Maximize2 className="w-5 h-5" />
+                      <Maximize2 className="w-5 h-5"  />
                     )}
                   </button>
-
                   <button
                     onClick={() => setIsOpen(false)}"
                     className="p-2 text-gray-600 hover:text-red-600 dark:text-gray-400 dark:hover:text-red-400 transition-colors"
@@ -292,8 +284,7 @@ export function SecurityMonitoringSystem({
                     <X className="w-5 h-5"  />                  </button>
                 </div>
               </div>
-
-              {/* Content */}"
+              {/* comment */}"
               <div className="p-6 overflow-y-auto max-h-[calc(90vh-200px)]">
                 {isScanning ? ("
                   <div className="text-center py-12">"
@@ -307,7 +298,7 @@ export function SecurityMonitoringSystem({
                   </div>
                 ) : scanComplete ? ("
                   <div className="space-y-6">
-                    {/* Overall Security Score */}"
+                    {/* comment */}"
                     <div className="bg-gradient-to-r from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20 rounded-xl p-6 border border-red-200 dark:border-red-700">"
                       <div className="flex items-center justify-between mb-4">"
                         <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
@@ -317,13 +308,13 @@ export function SecurityMonitoringSystem({
 "
                       <div className="flex items-center space-x-6">"
                         <div className="text-center">
-                          <div`
-                            className={`text-4xl font-bold mb-2 ${securityScore >= 90'
-                                ? 'text-green-600'
-                                : securityScore >= 70'
-                                  ? 'text-yellow-600''
-                                  : 'text-red-600'`
-                            }`}
+                          <div"
+                            className={"text-4xl font-bold mb-2 ${securityScore >= 90"
+                                ? "text-green-600"
+                                : securityScore >= 70"
+                                  ? "text-yellow-600""
+                                  : "text-red-600""
+                            }"}
                           >
                             {securityScore}/100
                           </div>"
@@ -340,50 +331,49 @@ export function SecurityMonitoringSystem({
                             </span>
                           </div>"
                           <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
-                            <div`
-                              className={`h-3 rounded-full transition-all duration-500 ${securityScore >= 90'
-                                  ? 'bg-green-500'
-                                  : securityScore >= 70'
-                                    ? 'bg-yellow-500''
-                                    : 'bg-red-500'`
-                              }`}
+                            <div"
+                              className={"h-3 rounded-full transition-all duration-500 ${securityScore >= 90"
+                                  ? "bg-green-500"
+                                  : securityScore >= 70"
+                                    ? "bg-yellow-500""
+                                    : "bg-red-500""
+                              }"}
                               style={{
-`
-                                width: `${Math.min((securityScore / targetScore) * 100, 100)}%`}}
+"
+                                width: "${Math.min((securityScore / targetScore) * 100, 100)}%"}}
                             ></div>
                           </div>
                         </div>
                       </div>
                     </div>
-
-                    {/* Navigation Tabs */}"
+                    {/* comment */}"
                     <div className="flex space-x-1 bg-gray-100 dark:bg-gray-800 rounded-lg p-1">
                       {[{
 
-                          key: 'threats',
-                          label: 'Threats',
+                          key: "threats",
+                          label: "Threats",
                           icon: AlertTriangle,
                           count: threats.length},
                         {
 
-                          key: 'vulnerabilities',
-                          label: 'Vulnerabilities',
+                          key: "vulnerabilities",
+                          label: "Vulnerabilities",
                           icon: Zap,
                           count: vulnerabilities.length},
                         {
 
-                          key: 'compliance',
-                          label: 'Compliance',
+                          key: "compliance",
+                          label: "Compliance",
                           icon: CheckCircle,
                           count: complianceStatus.length},
                       ].map(({ key, label, icon: Icon, count }) => (
                         <button
                           key={key}
-                          onClick={() => setSelectedView(key as any)}`
-                          className={`flex items-center space-x-2 px-4 py-2 rounded-md transition-colors ${selectedView === key'
-                              ? 'bg-white dark:bg-gray-700 text-red-600 dark:text-red-400 shadow-sm''
-                              : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'`
-                          }`}
+                          onClick={() => setSelectedView(key as any)}"
+                          className={"flex items-center space-x-2 px-4 py-2 rounded-md transition-colors ${selectedView === key"
+                              ? "bg-white dark:bg-gray-700 text-red-600 dark:text-red-400 shadow-sm""
+                              : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white""
+                          }"}
                         >"
                           <Icon className="w-4 h-4"  />
                           <span>{label}</span>"                          <span className="bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 px-2 py-1 rounded-full text-xs">
@@ -391,9 +381,8 @@ export function SecurityMonitoringSystem({
                           </span>
                         </button>) ) }
                     </div>
-
-                    {/* Threats View */}
-                    {selectedView === 'threats' && ("
+                    {/* comment */}
+                    {selectedView === "threats" && ("
                       <div className="space-y-4">"
                         <div className="flex items-center justify-between">"
                           <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
@@ -403,7 +392,7 @@ export function SecurityMonitoringSystem({
                             onClick={() => setShowAdvanced(!showAdvanced)}"
                             className="px-3 py-1 text-sm bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors"
                           >
-                            {showAdvanced ? 'Hide' : 'Show'} Advanced
+                            {showAdvanced ? "Hide" : "Show"} Advanced
                           </button>
                         </div>
 "
@@ -420,8 +409,8 @@ export function SecurityMonitoringSystem({
                               <div className="flex items-start justify-between">"
                                 <div className="flex-1">"
                                   <div className="flex items-center space-x-3 mb-2">
-                                    <div`
-                                      className={`px-2 py-1 rounded-full text-xs font-medium ${getThreatColor(threat.type)}`}
+                                    <div"
+                                      className={"px-2 py-1 rounded-full text-xs font-medium ${getThreatColor(threat.type)}"}
                                     >
                                       {threat.type.toUpperCase()}
                                     </div>"
@@ -441,11 +430,10 @@ export function SecurityMonitoringSystem({
                                     <span>Source: {threat.source}</span>
                                     <span>Severity: {threat.severity}/100</span>
                                     <span>
-                                      Affected: {threat.affectedSystems.length}{' '}
+                                      Affected: {threat.affectedSystems.length}{" "}
                                       systems
                                     </span>
                                   </div>
-
                                   {showAdvanced && ("
                                     <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-3">"
                                       <h5 className="font-medium text-gray-900 dark:text-white mb-2">
@@ -453,6 +441,7 @@ export function SecurityMonitoringSystem({
                                       </h5>"
                                       <ul className="space-y-1">
                                         {threat.recommendations.map()
+}
                                           (rec, idx) => (
                                             <li
                                               key={idx}"
@@ -462,6 +451,7 @@ export function SecurityMonitoringSystem({
                                               <span>{rec}</span>
                                             </li>
                                           )
+}
                                         )}                                      </ul>
                                     </div>) }
                                 </div>
@@ -479,8 +469,8 @@ export function SecurityMonitoringSystem({
                         </div>
                       </div>) }
 
-                    {/* Vulnerabilities View */}
-                    {selectedView === 'vulnerabilities' && ("
+                    {/* comment */}
+                    {selectedView === "vulnerabilities" && ("
                       <div className="space-y-4">"
                         <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
                           Vulnerability Assessment
@@ -499,8 +489,8 @@ export function SecurityMonitoringSystem({
                               <div className="flex items-start justify-between">"
                                 <div className="flex-1">"
                                   <div className="flex items-center space-x-3 mb-2">
-                                    <div`
-                                      className={`px-2 py-1 rounded-full text-xs font-medium ${getThreatColor(vuln.risk)}`}
+                                    <div"
+                                      className={"px-2 py-1 rounded-full text-xs font-medium ${getThreatColor(vuln.risk)}"}
                                     >
                                       {vuln.risk.toUpperCase()}
                                     </div>"
@@ -535,8 +525,8 @@ export function SecurityMonitoringSystem({
                         </div>
                       </div>) }
 
-                    {/* Compliance View */}
-                    {selectedView === 'compliance' && ("
+                    {/* comment */}
+                    {selectedView === "compliance" && ("
                       <div className="space-y-4">"
                         <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
                           Compliance Status
@@ -556,10 +546,10 @@ export function SecurityMonitoringSystem({
                                 <h4 className="text-lg font-medium text-gray-900 dark:text-white">
                                   {compliance.framework}
                                 </h4>
-                                <div`
-                                  className={`px-3 py-1 rounded-full text-sm font-medium ${getComplianceColor(compliance.status)}`}
+                                <div"
+                                  className={"px-3 py-1 rounded-full text-sm font-medium ${getComplianceColor(compliance.status)}"}
                                 >
-                                  {compliance.status.replace('-',)}
+                                  {compliance.status.replace("-",)}
                                 </div>
                               </div>
 "
@@ -606,7 +596,7 @@ export function SecurityMonitoringSystem({
                         </div>
                       </div>) }
 
-                    {/* Action Buttons */}"
+                    {/* comment */}"
                     <div className="flex items-center justify-center space-x-4 pt-6">"
                       <button className="flex items-center space-x-2 px-6 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors">"
                         <Download className="w-4 h-4"  />
@@ -618,7 +608,7 @@ export function SecurityMonitoringSystem({
                       </button>
 "
                       <button className="flex items-center space-x-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">"
-                        <Share2 className="w-4 h-4" />
+                        <Share2 className="w-4 h-4"  />
                         <span>Share Report</span>
                       </button>
                     </div>
@@ -644,4 +634,7 @@ export function SecurityMonitoringSystem({
       </AnimatePresence>
     </>
   )}
-'"`
+""`
+
+
+export default Component

@@ -1,8 +1,8 @@
-import { useState, useEffect, useCallback } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
-import { Send, CheckCircle, AlertCircle, Eye, EyeOff, Loader2, Phone, Mail, User, MessageSquare, Building } from 'lucide-react';
+import { useState, useEffect, useCallback } from "react";"
+import { motion, AnimatePresence } from "framer-motion";"
+import { Send, CheckCircle, AlertCircle, Eye, EyeOff, Loader2, Phone, Mail, User, MessageSquare, Building } from "lucide-react";
 ;
-export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle = 'Get in touch with our team', submitText = 'Send Message', className = '', enableAnalytics = true, showProgressBar = true }) => {
+export const AdvancedForm = ({ fields, onSubmit, title = "Contact Us", subtitle = "Get in touch with our team", submitText = "Send Message", className = "", enableAnalytics = true, showProgressBar = true }) => {
     const { trackEvent, trackConversion } = useAnalytics({        enableTracking: enableAnalytics,
         enableUserBehaviorTracking: true;
     });
@@ -382,17 +382,24 @@ export const AdvancedForm = ({ fields, onSubmit, title = "Contact Us", subtitle 
 """"";,"});,"})"""""""""
     const { trackEvent, trackConversion } = useAnalytics()
 }
+}
     const [formData, setFormData] = useState()
+}
 }
     const [validation, setValidation] = useState()
 }
+}
     const [isSubmitting, setIsSubmitting] = useState()
+}
 }
     const [isSubmitted, setIsSubmitted] = useState()
 }
+}
     const [showPassword, setShowPassword] = useState()
 }
+}
     const [progress, setProgress] = useState()
+}
 }
     // comment
 useEffect(() => {}
@@ -400,9 +407,12 @@ useEffect(() => {}
         const initialValidation = {}"
         fields.forEach()
 }
+}
         setFormData()
 }
+}
         setValidation(initialValidation)}, [fields])
+}
 }
     // comment
 useEffect(() => {}""
@@ -412,11 +422,12 @@ useEffect(() => {}""
 const totalFields = fields.length,
 setProgress((filledFields / totalFields) * 100)}, [formData, fields.length])
 }
+}
     // comment
 const validateField = useCallback((name, value) => {}
 
                 isValid: !field.required,
-                message: '',
+                message: "",
                 isTouched: false
             }});
         setFormData(initialData);
@@ -429,7 +440,6 @@ const validateField = useCallback((name, value) => {}
     // Cleanup function
   };
 }, []);, []);
-
                 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/"
                 if (!emailPattern.test(stringValue)) {}""
 ""
@@ -469,20 +479,25 @@ if(field.validation?.custom) {}
 
                 const customError = field.validation.custom()
 }
+}
                 if()
+}
 }                    return customError}
 
         }
 
         return null}, [fields])
 }
+}
     // comment
 const handleFieldChange = useCallback((name, value) => {}
 
         setFormData(prev => ({ ...prev, [name]: value }))
 }
+}
         // comment
 const error = validateField()
+}
 }
         setValidation(prev => ({}"
             ...prev, [name]: {}""
@@ -490,6 +505,7 @@ const error = validateField()
                 message: error || "", isTouched: true}
 
         }))
+}
 }
         // comment
 if (enableAnalytics) {}""
@@ -499,11 +515,13 @@ if (enableAnalytics) {}""
 
 }, [validateField, enableAnalytics, trackEvent])
 }
+}
     // comment
 const handleFieldBlur = useCallback((name) => {}
 
         const value = formData[name]
         const error = validateField()
+}
 }
         setValidation(prev => ({}"
             ...prev, [name]: {}""
@@ -512,15 +530,18 @@ const handleFieldBlur = useCallback((name) => {}
 
         }))}, [formData, validateField])
 }
+}
     // comment
 const isFormValid = useCallback(() => {}
 
         return Object.values(validation).every(v => v.isValid)}, [validation])
 }
+}
     // comment
 const handleSubmit = useCallback(async (e) => {}
 
         e.preventDefault()
+}
 }
         if(!isFormValid()) {}
 
@@ -534,6 +555,7 @@ if (enableAnalytics) {}""
 
         setIsSubmitting()
 }
+}
         try {}
 
             // comment
@@ -543,6 +565,7 @@ if (enableAnalytics) {}""
                 trackEvent("form", submission_started",form_submitted")}
 
             await onSubmit()
+}
 }
             // comment
 if (enableAnalytics) {}""
@@ -555,14 +578,18 @@ if (enableAnalytics) {}""
 
             setIsSubmitted()
 }
+}
             // comment
 setTimeout(() => {}
 
                 setIsSubmitted()
 }
+}
                 setFormData()
 }
+}
                 setValidation()
+}
 }                setProgress(0)}, 5000)}
 
         catch(error) {}
@@ -581,10 +608,12 @@ if (enableAnalytics) {}""
 
     }, [formData, validation, isFormValid, onSubmit, enableAnalytics, trackEvent, trackConversion, title])
 }
+}
     // comment
 const togglePasswordVisibility = useCallback((fieldName) => {}
 
         setShowPassword(prev => ({ ...prev, [fieldName]: !prev[fieldName] }))}, [])
+}
 }
     // comment
 const getFieldIcon = useCallback((field) => {}"
@@ -603,6 +632,7 @@ const getFieldIcon = useCallback((field) => {}"
             default: return <User className="w-4 h-4"/" >}
 
     }, [])
+}
 }
     // comment
 const renderField = useCallback((field) => {}""
@@ -680,6 +710,7 @@ const renderField = useCallback((field) => {}""
           </motion.p>)}
 
       </motion.div>)}, [formData, validation, showPassword, getFieldIcon, handleFieldChange, handleFieldBlur, togglePasswordVisibility])
+}
 }
     if(isSubmitted) {}
 

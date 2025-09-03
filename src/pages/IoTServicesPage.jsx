@@ -1,6 +1,6 @@
 import { Link } from "react - router - dom";"""
 import { Settings, BarChart3, Shield, Zap, Globe, TrendingUp, CheckCircle, ArrowRight, Zap as Cpu, Cloud, Smartphone, TrendingUp as Activity } from "lucide - react";
-import React from 'react';"""
+import React from "react";"""
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/ui/card";""""
 import { Button } from "../components/ui/button";""""
 import { Badge } from "../components/ui/badge";""""
@@ -13,35 +13,35 @@ const iotUseCases = []
 """"
         title: "Smart Manufacturing",""""
         description: "Monitor production lines, predict maintenance needs, and optimize manufacturing processes",""""
-        icon: <Cpu className="h-6 w-6"/>
+        icon: <Cpu className="h-6 w-6"  />
     },
     {}
 """
 """"
         title: "Smart Cities",""""
         description: "Manage traffic, utilities, and public services with connected IoT infrastructure",""""
-        icon: <Globe className="h-6 w-6"/>
+        icon: <Globe className="h-6 w-6"  />
     },
     {}
 """
 """"
         title: "Connected Healthcare",""""
         description: "Remote patient monitoring, medical device management, and healthcare analytics",""""
-        icon: <Activity className="h-6 w-6"/>
+        icon: <Activity className="h-6 w-6"  />
     },
     {}
 """
 """"
         title: "Smart Agriculture",""""
         description: "Precision farming, environmental monitoring, and automated irrigation systems",""""
-        icon: <Settings className="h-6 w-6"/>
+        icon: <Settings className="h-6 w-6"  />
 
 ];
 export default function IoTServicesPage() {}
 """
 """"
     return (<div className="min-h-screen bg-background">"""
-      {/* Hero Section */}""""
+      {/* comment */}""""
       <section className="bg-gradient-to-br from-zion-blue via-zion-purple to-zion-blue-dark py-20">""""
         <div className="container mx-auto px-4 text-center">""""
           <div className="max-w-4xl mx-auto">""""
@@ -71,7 +71,7 @@ export default function IoTServicesPage() {}
         </div>
       </section>
 """
-      {/* Benefits Section */}""""
+      {/* comment */}""""
       <section className="py-16 bg-zion-blue">""""
         <div className="container mx-auto px-4">""""
           <div className="text-center mb-12">""""
@@ -94,7 +94,7 @@ export default function IoTServicesPage() {}
         </div>
       </section>
 """
-      {/* Use Cases Section */}""""
+      {/* comment */}""""
       <section className="py-16 bg-zion-blue-dark">""""
         <div className="container mx-auto px-4">""""
           <div className="text-center mb-12">""""
@@ -117,7 +117,7 @@ export default function IoTServicesPage() {}
         </div>
       </section>
 """
-      {/* IoT Services Grid */}""""
+      {/* comment */}""""
       <section className="py-16">""""
         <div className="container mx-auto px-4">""""
           <div className="text-center mb-12">""""
@@ -129,7 +129,7 @@ export default function IoTServicesPage() {}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">""""
             {iotServices.map((service) => (<Card key={service.id} className="overflow-hidden hover:shadow-lg transition-all duration-300">""""
                 <div className="aspect-video overflow-hidden">""""
-                  <img src={service.image} alt={service.title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"/>"""
+                  <img src={service.image} alt={service.title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"  />"""
                 </div>""""
                 <CardHeader className="pb-3">""""
                   <div className="flex justify-between items-start mb-2">""""
@@ -159,7 +159,7 @@ export default function IoTServicesPage() {}
                   </div>""""
                   <ul className="space-y-2">""""
                     {service.features.slice(0, 3).map((feature, index) => (<li key={index} className="flex items-center gap-2 text-sm">""""
-                        <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0"/>
+                        <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0"  />
                         <span>{feature}</span>
                       </li>) ) }
                   </ul>"""
@@ -168,7 +168,7 @@ export default function IoTServicesPage() {}
                   <Button asChild className="w-full">
                     <Link href={service.link}>"""
                       Learn More""""
-                      <ArrowRight className="h-4 w-4 ml-2"/>
+                      <ArrowRight className="h-4 w-4 ml-2"  />
                     </Link>
                   </Button>
                 </CardContent>
@@ -177,7 +177,7 @@ export default function IoTServicesPage() {}
         </div>
       </section>
 """
-      {/* CTA Section */}""""
+      {/* comment */}""""
       <section className="py-16 bg-zion-blue">""""
         <div className="container mx-auto px-4 text-center">""""
           <div className="max-w-3xl mx-auto">""""
@@ -207,17 +207,12 @@ export default function IoTServicesPage() {}
           </div>
         </div>
       </section>
-
-      <TrustedBySection />
+      <TrustedBySection  />
     </div>)}
 
 
 export { IoTServicesPage };
-
 export { IoTServicesPage };
-
 export { IoTServicesPage };
-
 export { IoTServicesPage };
-
 export { IoTServicesPage };

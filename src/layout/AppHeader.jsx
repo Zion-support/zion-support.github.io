@@ -1,79 +1,74 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
 import { 
-  Menu, 
-  X, 
-  ChevronDown, 
-  Globe, 
-  Zap, 
-  Shield, 
-  Cloud, 
-  Brain, 
-  Database, 
-  Users, 
-  Code, 
-  Lock, 
+  Menu,
+  X,
+  ChevronDown,
+  Globe,
+  Zap,
+  Shield,
+  Cloud,
+  Brain,
+  Database,
+  Users,
+  Code,
+  Lock,
   Rocket 
-} from 'lucide-react';
+} from "lucide-react";
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const location = useLocation();
-
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
   // Close mobile menu when route changes
   useEffect(() => {
     setMobileMenuOpen(false);
     setActiveDropdown(null);
   }, [location.pathname]);
-
   const navigationItems = [
-    { name: 'Home', path: '/', icon: null },
+    { name: "Home", path: "/", icon: null },
     { 
-      name: 'Services', 
-      path: '/services', 
+      name: "Services",
+      path: "/services",
       icon: null,
       dropdown: [
-        { name: 'AI & Machine Learning', path: '/services?category=ai-ml', icon: Brain, color: 'from-purple-500 to-pink-500' },
-        { name: 'Quantum Computing', path: '/services?category=quantum', icon: Zap, color: 'from-blue-500 to-cyan-500' },
-        { name: 'Blockchain & Web3', path: '/services?category=blockchain', icon: Lock, color: 'from-green-500 to-emerald-500' },
-        { name: 'IoT & Edge Computing', path: '/services?category=iot', icon: Cloud, color: 'from-orange-500 to-red-500' },
-        { name: 'AR/VR Development', path: '/services?category=ar-vr', icon: Users, color: 'from-indigo-500 to-purple-500' },
-        { name: 'FinTech Solutions', path: '/services?category=fintech', icon: Database, color: 'from-yellow-500 to-orange-500' },
-        { name: 'Green Technology', path: '/services?category=green-tech', icon: Shield, color: 'from-green-400 to-teal-500' },
-        { name: 'Cybersecurity', path: '/services?category=cybersecurity', icon: Lock, color: 'from-red-500 to-pink-500' },
+        { name: "AI & Machine Learning", path: "/services?category=ai-ml", icon: Brain, color: "from-purple-500 to-pink-500" },
+        { name: "Quantum Computing", path: "/services?category=quantum", icon: Zap, color: "from-blue-500 to-cyan-500" },
+        { name: "Blockchain & Web3", path: "/services?category=blockchain", icon: Lock, color: "from-green-500 to-emerald-500" },
+        { name: "IoT & Edge Computing", path: "/services?category=iot", icon: Cloud, color: "from-orange-500 to-red-500" },
+        { name: "AR/VR Development", path: "/services?category=ar-vr", icon: Users, color: "from-indigo-500 to-purple-500" },
+        { name: "FinTech Solutions", path: "/services?category=fintech", icon: Database, color: "from-yellow-500 to-orange-500" },
+        { name: "Green Technology", path: "/services?category=green-tech", icon: Shield, color: "from-green-400 to-teal-500" },
+        { name: "Cybersecurity", path: "/services?category=cybersecurity", icon: Lock, color: "from-red-500 to-pink-500" },
       ]
     },
-    { name: 'About', path: '/about', icon: null },
-    { name: 'Contact', path: '/contact', icon: null },
+    { name: "About", path: "/about", icon: null },
+    { name: "Contact", path: "/contact", icon: null },
   ];
-
   const isActive = (path) => location.pathname === path;
-
   return (
     <motion.header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={"fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled 
-          ? 'bg-black/95 backdrop-blur-xl border-b border-zion-cyan/30 shadow-2xl shadow-zion-cyan/10' 
-          : 'bg-black/80 backdrop-blur-md border-b border-zion-cyan/20'
-      }`}
+          ? "bg-black/95 backdrop-blur-xl border-b border-zion-cyan/30 shadow-2xl shadow-zion-cyan/10" 
+          : "bg-black/80 backdrop-blur-md border-b border-zion-cyan/20"
+      }"}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 lg:h-20">
-          {/* Logo */}
+          {/* comment */}
           <Link to="/" className="flex items-center space-x-3 group">
             <motion.div 
               className="relative"
@@ -95,8 +90,7 @@ export function AppHeader() {
               </div>
             </div>
           </Link>
-
-          {/* Desktop Navigation */}
+          {/* comment */}
           <nav className="hidden lg:flex items-center space-x-8">
             {navigationItems.map((item) => (
               <div key={item.name} className="relative group">
@@ -107,22 +101,23 @@ export function AppHeader() {
                     onMouseLeave={() => setActiveDropdown(null)}
                   >
                     <span className="font-medium">{item.name}</span>
-                    <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" />
+                    <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180"  />
                   </div>
                 ) : (
                   <Link
                     to={item.path}
-                    className={`font-medium transition-colors duration-300 ${
-                      isActive(item.path) 
-                        ? 'text-zion-cyan' 
-                        : 'text-white hover:text-zion-cyan'
-                    }`}
+                    className={"font-medium transition-colors duration-300 ${
+                      isActive(item.path)
+}
+                        ? "text-zion-cyan" 
+                        : "text-white hover:text-zion-cyan"
+                    }"}
                   >
                     {item.name}
                   </Link>
                 )}
 
-                {/* Dropdown Menu */}
+                {/* comment */}
                 {item.dropdown && activeDropdown === item.name && (
                   <motion.div
                     className="absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl border border-zion-cyan/30 rounded-xl shadow-2xl shadow-zion-cyan/20 overflow-hidden"
@@ -140,7 +135,7 @@ export function AppHeader() {
                           to={dropdownItem.path}
                           className="flex items-center space-x-3 p-3 rounded-lg hover:bg-zion-cyan/10 transition-all duration-300 group"
                         >
-                          <div className={`w-10 h-10 rounded-lg bg-gradient-to-r ${dropdownItem.color} flex items-center justify-center`}>
+                          <div className={"w-10 h-10 rounded-lg bg-gradient-to-r ${dropdownItem.color} flex items-center justify-center"}>
                             <dropdownItem.icon className="w-5 h-5 text-white" />
                           </div>
                           <div>
@@ -156,8 +151,7 @@ export function AppHeader() {
               </div>
             ))}
           </nav>
-
-          {/* CTA Buttons */}
+          {/* comment */}
           <div className="hidden lg:flex items-center space-x-4">
             <Link
               to="/contact"
@@ -166,24 +160,22 @@ export function AppHeader() {
               Get Started
             </Link>
           </div>
-
-          {/* Mobile Menu Button */}
+          {/* comment */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="lg:hidden p-2 text-white hover:text-zion-cyan transition-colors duration-300"
           >
-            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {mobileMenuOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}
           </button>
         </div>
       </div>
-
-      {/* Mobile Menu */}
+      {/* comment */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
             className="lg:hidden bg-black/95 backdrop-blur-xl border-t border-zion-cyan/30"
             initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
+            animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
           >
@@ -209,11 +201,12 @@ export function AppHeader() {
                   ) : (
                     <Link
                       to={item.path}
-                      className={`block font-medium transition-colors duration-300 ${
-                        isActive(item.path) 
-                          ? 'text-zion-cyan' 
-                          : 'text-white hover:text-zion-cyan'
-                      }`}
+                      className={"block font-medium transition-colors duration-300 ${
+                        isActive(item.path)
+}
+                          ? "text-zion-cyan" 
+                          : "text-white hover:text-zion-cyan"
+                      }"}
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       {item.name}
@@ -238,3 +231,6 @@ export function AppHeader() {
     </motion.header>
   );
 }
+
+
+export default Component

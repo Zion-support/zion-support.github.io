@@ -1,14 +1,14 @@
-import React from 'react';'''
-import { Helmet } from 'react-helmet-async';
+import React from "react";"""
+import { Helmet } from "react-helmet-async";
 const OpenApp = () => {}
   return()
+}
     <>
       <Helmet>
         <title>Open App - Zion Tech Group</title>
         <meta;
           name="description""""
-          content="Open Zion Tech Group applications. Access our web and mobile apps for seamless service delivery."""
-        />
+          content="Open Zion Tech Group applications. Access our web and mobile apps for seamless service delivery.""" />
       </Helmet>"""
 """"
       <div className="min-h-screen bg-gray-50 py-12">""""
@@ -22,7 +22,7 @@ const OpenApp = () => {}
           </div>"""
 """"
           <div className="bg-white rounded-lg shadow-lg p-8">""""
-            <p className="text-gray-600 text-center">'
+            <p className="text-gray-600 text-center">"
               App launcher coming soon. We're building comprehensive application;
               access.
             </p>
@@ -31,14 +31,8 @@ const OpenApp = () => {}
       </div>
     </>)};
 export default OpenApp;
-
-
 export { OpenApp };
-
 export { OpenApp };
-
 export { OpenApp };
-
 export { OpenApp };
-
 export { OpenApp };

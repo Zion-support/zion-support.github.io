@@ -1,22 +1,23 @@
+import React from "react"
 export default function RevenueOpsAI() {
   return (
-    <Article
-      title="Revenue Ops Intelligence"
+    <Article title="Revenue Ops Intelligence"
       subtitle="Forecasting, pipeline health, and pricing guidance powered by AI"
       price="projects from $12k"
       bullets={[
-        'Win-rate modeling and pipeline risk scoring by buyer segment',
-        'Dynamic discount guardrails and pricing recommendations',
-        'Anomaly detection on deal slippage and stage aging',
-        'Native HubSpot/SFDC integration and dbt/Snowflake support'
+        "Win-rate modeling and pipeline risk scoring by buyer segment",
+        "Dynamic discount guardrails and pricing recommendations",
+        "Anomaly detection on deal slippage and stage aging",
+        "Native HubSpot/SFDC integration and dbt/Snowflake support"
       ]}
-    />
+      />
   )
+}
 }
 
 function Article({ title, subtitle, price, bullets }: { title: string; subtitle: string; price: string; bullets: string[] }) {
   return (
-    <main style={{ fontFamily: 'system-ui, sans-serif', padding: 32, maxWidth: 920, margin: '0 auto' }}>
+    <main style={{ fontFamily: "system-ui, sans-serif", padding: 32, maxWidth: 920, margin: "0 auto" }}>
       <h1 style={{ marginTop: 0 }}>{title}</h1>
       <p><strong>{subtitle}</strong></p>
       <p><strong>Engagement:</strong> {price}</p>
@@ -25,9 +26,10 @@ function Article({ title, subtitle, price, bullets }: { title: string; subtitle:
           <li key={b}>{b}</li>
         ))}
       </ul>
-      <ContactFooter />
+      <ContactFooter  />
     </main>
   )
+}
 }
 
 function ContactFooter() {
@@ -36,5 +38,6 @@ function ContactFooter() {
       Mobile: +1 302 464 0950 · Email: <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> · Site: <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer">ziontechgroup.com</a>
     </p>
   )
+}
 }
 

@@ -1,5 +1,5 @@
-import {  import { motion, AnimatePresence  } from 'framer-motion';
-
+import React from "react"
+import {  import { motion, AnimatePresence  } from "framer-motion";
  params - Function parameters
  * @returns {*} Function return value
  */
@@ -10,14 +10,11 @@ function InteractiveTestimonials () {export function InteractiveTestimonials() {
 "
   const filteredTestimonials = selectedCategory === "All" ;    ? testimonials ;
     : testimonials.filter(t => t.category === selectedCategory) ;
-
     setSelectedTestimonial((prev) => ;
       prev === filteredTestimonials.length-1 ? 0 : prev + 1;) };
-
     setSelectedTestimonial((prev) => ;
       prev === 0 ? filteredTestimonials.length-1 : prev - 1;) ;
   };
-
   return (<section className="py-20 bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
       <div  className="max - w-7xl mx - auto px-6">
         <motion.div
@@ -40,11 +37,11 @@ function InteractiveTestimonials () {export function InteractiveTestimonials() {
             Client Success Stories
           </h2>"
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Real stories from real clients.Discover how we've transformed businesses
+            Real stories from real clients.Discover how we"ve transformed businesses
             across industries with our innovative technology solutions.</p>
         </motion.div>
 
-        {/* Category Filter */}
+        {/* comment */}
         <motion.div"
           className="flex flex-wrap justify-center gap-3 mb-12"
           initial={{ opacity: 0, y: 20 }}
@@ -55,10 +52,10 @@ function InteractiveTestimonials () {export function InteractiveTestimonials() {
           {categories.map ( (category) => (<button      key={category}
               onClick={ () => {
                 setSelectedCategory(category) ;
-                setSelectedTestimonial(0) }}              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${selectedCategory === category'
-                  ? 'bg-blue-600 text-white shadow-lg shadow-blue-500/25''
-                  : 'bg-slate-700 text-gray-300 hover:bg-slate-600 hover:text-white'`
-              }`}
+                setSelectedTestimonial(0) }}              className={"px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${selectedCategory === category"
+                  ? "bg-blue-600 text-white shadow-lg shadow-blue-500/25""
+                  : "bg-slate-700 text-gray-300 hover:bg-slate-600 hover:text-white""
+              }"}
             >
               {category}
             </button>
@@ -101,14 +98,13 @@ function InteractiveTestimonials () {export function InteractiveTestimonials() {
                       {value}
                     </div>"
                     <div className="text-sm text-gray-600 capitalize">
-                      {key.replace(/([A-Z])/g, $1').trim()}
+                      {key.replace(/([A-Z])/g, $1").trim()}
                     </div>
                   </div>) ) }
               </div>
             </motion.div>
           </AnimatePresence>
-
-          {/* Navigation Arrows */}
+          {/* comment */}
           <button
             onClick={previousTestimonial}"
             className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-200"
@@ -120,21 +116,19 @@ function InteractiveTestimonials () {export function InteractiveTestimonials() {
           >"
             <ChevronRight className="h-6 w-6 text-gray-600"  />          </button>
         </div>
-
-        {/* Testimonial Indicators */}"
+        {/* comment */}"
         <div className="flex justify-center mb-8">;"
           <div className="flex space-x-2">
             {testimonials.map((_, index) => (
               <button
                 key={index}
-                onClick={() => goToTestimonial(index)}`
-                className={`w-3 h-3 rounded-full transition-all duration-200 ${index === currentIndex ? 'bg-blue-600 w-8' : 'bg-gray-300'`
-                }`}
+                onClick={() => goToTestimonial(index)}"
+                className={"w-3 h-3 rounded-full transition-all duration-200 ${index === currentIndex ? "bg-blue-600 w-8" : "bg-gray-300""
+                }"}
               />) ) }
           </div>
         </div>
-
-        {/* Play/Pause Controls */}"
+        {/* comment */}"
         <div className="flex justify-center mb-8">;
           <button
             onClick={togglePlayPause}"
@@ -151,8 +145,7 @@ function InteractiveTestimonials () {export function InteractiveTestimonials() {
               </>) }
           </button>
         </div>
-
-        {/* CTA Section */}
+        {/* comment */}
         <motion.div
           initial = {
 
@@ -162,7 +155,7 @@ function InteractiveTestimonials () {export function InteractiveTestimonials() {
 
   { opacity: 1,
   y: 0 }}
-        {/* Category Filter */}
+        {/* comment */}
         <motion.div
           className="flex flex - wrap justify - center gap-3 mb-12"          initial = {
 
@@ -184,7 +177,7 @@ function InteractiveTestimonials () {export function InteractiveTestimonials() {
               Ready to Join Our Success Stories?
             </h3>"
             <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-              Let's discuss how we can transform your business with innovative
+              Let"s discuss how we can transform your business with innovative
               technology solutions tailored to your specific needs.</p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <button className="inline-flex items-center px-6 py-3 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-medium transition-colors duration-200">
@@ -199,7 +192,6 @@ function InteractiveTestimonials () {export function InteractiveTestimonials() {
         </motion.div>
       </div>;
     </section>;) };
-
 export default InteractiveTestimonials;"
             <span className="text-2xl">→</span>;
           </div>;
@@ -208,4 +200,4 @@ export default InteractiveTestimonials;"
     </section>;) }
 export default InteractiveTestimonials;
 export default InteractiveTestimonials;
-'"`
+"""

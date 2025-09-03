@@ -3,7 +3,9 @@ import React, { useState } from "react"
 const ImprovedNavigation: React.FC = () => {,,
   const [isOpen, setIsOpen] = useState(false)
 }
+}
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
+}
 }
   const navigationItems = []
 },
@@ -52,7 +54,9 @@ const ImprovedNavigation: React.FC = () => {,,
   const closeMobileMenu = () => {
     setIsOpen(false)
 }
+}
     setActiveDropdown(null)
+}
 }
 
   return (

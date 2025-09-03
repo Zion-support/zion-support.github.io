@@ -1,18 +1,16 @@
-import React from 'react';
-import { SEO } from '@/components / SEO';
+import React from "react";
+import { SEO } from "@/components / SEO";
 export default function Page() {
 ,
     ],
   };
-
   const formatDate = (dateString: string) => {
-    return new Date(dateString) .toLocaleDateString('en - US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
+    return new Date(dateString) .toLocaleDateString("en - US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
     }) ;
   };
-
   const getCategoryIcon = (category: string) => {
     const categoryIcons: { [key: string]: any } = {
       ai: Brain,
@@ -25,40 +23,36 @@ export default function Page() {
     };
     return categoryIcons[category] || BookOpen;
   };
-
   const getCategoryName = (category: string) => {
     const categoryNames: { [key: string]: string } = {
-      ai: 'Artificial Intelligence',
-      quantum: 'Quantum Computing',
-      security: 'Cybersecurity',
-      cloud: 'Cloud & DevOps',
-      business: 'Business Insights',
-      iot: 'IoT & Edge',
-      emerging: 'Emerging Tech',
+      ai: "Artificial Intelligence",
+      quantum: "Quantum Computing",
+      security: "Cybersecurity",
+      cloud: "Cloud & DevOps",
+      business: "Business Insights",
+      iot: "IoT & Edge",
+      emerging: "Emerging Tech",
     };
-    return categoryNames[category] || 'Uncategorized';
+    return categoryNames[category] || "Uncategorized";
   };
-
   return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
-      <SEO
-        title={`${blogPost.title} - Zion Tech Group Blog`}
+      <SEO title={`${blogPost.title} - Zion Tech Group Blog`}
         description={blogPost.excerpt}
-      />
+        />
 
-      {/* Navigation */}
+      {/* comment */}
       <section className="py-6 bg-slate -800 / 50">
         <div className="container mx - auto px-4">
           <Link
             to="/blog"
             className="inline - flex items - center space - x-2 text-cyan - 400 hover:text-cyan - 300 transition - colors duration -200"
           >
-            <ArrowLeft className="w-4 h-4" />
+            <ArrowLeft className="w-4 h-4"  />
             <span > Back to Blog</span>
           </Link>
         </div>
       </section>
-
-      {/* Article Header */}
+      {/* comment */}
       <section className="py-12">
         <div className="container mx - auto px-4">
           <motion.div
@@ -67,11 +61,11 @@ export default function Page() {
             transition={{ duration: 0.8 }}
             className="max - w-4xl mx -auto"
           >
-            {/* Category and Featured Badge */}
+            {/* comment */}
             <div className="flex items - center space - x-3 mb-6">
               <span className="px-4 py-2 bg-cyan - 500 / 20 text-cyan - 400 text-sm rounded-full font - medium flex items - center space - x-2">
                 {React.createElement (getCategoryIcon (blogPost.category) , {
-                  className: 'w-4 h-4',
+                  className: "w-4 h-4",
                 }) }
                 <span>{getCategoryName(blogPost.category) }</span>
               </span>
@@ -79,22 +73,19 @@ export default function Page() {
                   Featured Article
                 </span>) }
             </div>
-
-            {/* Title */}
+            {/* comment */}
             <h1 className="text-4xl md:text-5xl font - bold text-white mb-6 leading -tight">
               {blogPost.title}
             </h1>
-
-            {/* Excerpt */}
+            {/* comment */}
             <p className="text-xl text-gray - 300 mb-8 leading -relaxed">
               {blogPost.excerpt}
             </p>
-
-            {/* Article Meta */}
+            {/* comment */}
             <div className="flex flex - wrap items - center justify - between gap-4 py-6 border-t border-b border-slate -700 / 50">
               <div className="flex items - center space - x-6">
                 <div className="flex items - center space - x-2">
-                  <User className="w-5 h-5 text-cyan -400" />
+                  <User className="w-5 h-5 text-cyan -400"  />
                   <div>
                     <span className="text-white font -medium">
                       {blogPost.author}
@@ -105,35 +96,33 @@ export default function Page() {
                   </div>
                 </div>
                 <div className="flex items - center space - x-2">
-                  <Calendar className="w-5 h-5 text-cyan -400" />
+                  <Calendar className="w-5 h-5 text-cyan -400"  />
                   <span className="text-gray -300">
                     {formatDate(blogPost.date) }
                   </span>
                 </div>
                 <div className="flex items - center space - x-2">
-                  <Clock className="w-5 h-5 text-cyan -400" />
+                  <Clock className="w-5 h-5 text-cyan -400"  />
                   <span className="text-gray -300">{blogPost.readTime}</span>
                 </div>
               </div>
-
               <div className="flex items - center space - x-4">
                 <button     className="flex items - center space - x-2 text-gray - 400 hover:text-cyan - 400 transition - colors duration -200">
-                  <Heart className="w-5 h-5" />
+                  <Heart className="w-5 h-5"  />
                   <span>{blogPost.likes}</span>
                 </button>
                 <button     className="flex items - center space - x-2 text-gray - 400 hover:text-cyan - 400 transition - colors duration -200">
-                  <Bookmark className="w-5 h-5" />
+                  <Bookmark className="w-5 h-5"  />
                 </button>
                 <button     className="flex items - center space - x-2 text-gray - 400 hover:text-cyan - 400 transition - colors duration -200">
-                  <Share2 className="w-5 h-5" />
+                  <Share2 className="w-5 h-5"  />
                 </button>
               </div>
             </div>
           </motion.div>
         </div>
       </section>
-
-      {/* Article Content */}
+      {/* comment */}
       <section className="py-12">
         <div className="container mx - auto px-4">
           <div className="max - w-4xl mx -auto">
@@ -143,30 +132,27 @@ export default function Page() {
               transition={{ duration: 0.8 }}
               className="prose prose - invert prose - lg max - w-none"
             >
-              {/* Featured Image */}
+              {/* comment */}
               <div className="w-full h-64 bg-gradient - to - br from - cyan - 500 / 20 to - blue - 500 / 20 rounded-2xl border border-cyan - 400 / 30 flex items - center justify - center mb-12">
                 <div className="text-center">
-                  <BookOpen className="w-20 h-20 text-cyan - 400 mx - auto mb-4" />
+                  <BookOpen className="w-20 h-20 text-cyan - 400 mx - auto mb-4"  />
                   <p className="text-gray -300">Featured Article Image</p>
                 </div>
               </div>
-
-              {/* Article Content */}
-              <div
-                className="text-gray - 300 leading -relaxed"
+              {/* comment */}
+              <div className="text-gray - 300 leading -relaxed"
                 // TODO: Sanitize content before using dangerouslySetInnerHTML={{ __html: blogPost.content }}
-              />
+                />
             </motion.div>
           </div>
         </div>
       </section>
-
-      {/* Tags */}
+      {/* comment */}
       <section className="py-8 bg-slate -800 / 50">
         <div className="container mx - auto px-4">
           <div className="max - w-4xl mx -auto">
             <div className="flex items - center space - x-3">
-              <Tag className="w-5 h-5 text-cyan -400" />
+              <Tag className="w-5 h-5 text-cyan -400"  />
               <span className="text-white font -medium">Tags:</span>
               <div className="flex flex - wrap gap-2">
                 {blogPost.tags.map(tag => (<span
@@ -180,8 +166,7 @@ export default function Page() {
           </div>
         </div>
       </section>
-
-      {/* Author Bio */}
+      {/* comment */}
       <section className="py-12">
         <div className="container mx - auto px-4">
           <div className="max - w-4xl mx -auto">
@@ -196,7 +181,7 @@ export default function Page() {
               </h3>
               <div className="flex items - start space - x-4">
                 <div className="w-16 h-16 bg-gradient - to - r from - cyan - 500 to - blue - 500 rounded-full flex items - center justify - center flex - shrink -0">
-                  <User className="w-8 h-8 text-white" />
+                  <User className="w-8 h-8 text-white"  />
                 </div>
                 <div>
                   <h4 className="text-xl font - semibold text-white mb-2">
@@ -210,8 +195,7 @@ export default function Page() {
           </div>
         </div>
       </section>
-
-      {/* Related Posts */}
+      {/* comment */}
       <section className="py-20 bg-slate -800 / 50">
         <div className="container mx - auto px-4">
           <motion.div
@@ -237,31 +221,27 @@ export default function Page() {
                 className="bg-slate - 700 / 50 rounded-xl border border-slate - 600 / 50 overflow-hidden hover:border-cyan - 400 / 50 transition - all duration -300 group"
               >
                 <div className="h-48 bg-gradient - to - br from - cyan - 500 / 20 to - blue - 500 / 20 flex items - center justify -center">
-                  <BookOpen className="w-16 h-16 text-cyan -400" />
+                  <BookOpen className="w-16 h-16 text-cyan -400"  />
                 </div>
-
                 <div className="p -6">
                   <div className="flex items - center space - x-2 mb-3">
                     <span className="px-3 py-1 bg-cyan - 500 / 20 text-cyan - 400 text-xs rounded-full font -medium">
                       {getCategoryName(post.category) }
                     </span>
                   </div>
-
                   <h3 className="text-lg font - bold text-white mb-3 group - hover:text-cyan - 400 transition - colors duration -200">
                     {post.title}
                   </h3>
-
                   <p className="text-gray - 300 mb-4 line - clamp -3">
                     {post.excerpt}
                   </p>
-
                   <div className="flex items - center justify - between text-sm text-gray -400">
                     <div className="flex items - center space - x-2">
-                      <Calendar className="w-4 h-4" />
+                      <Calendar className="w-4 h-4"  />
                       <span>{formatDate(post.date) }</span>
                     </div>
                     <div className="flex items - center space - x-2">
-                      <Clock className="w-4 h-4" />
+                      <Clock className="w-4 h-4"  />
                       <span>{post.readTime}</span>
                     </div>
                   </div>
@@ -270,8 +250,7 @@ export default function Page() {
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
+      {/* comment */}
       <section className="py-20">
         <div className="container mx - auto px-4">
           <motion.div
@@ -315,5 +294,6 @@ export default function BlogPost() {return ("
         </p>
       </div>
   )
+}
 }
 }""

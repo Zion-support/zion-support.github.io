@@ -1,11 +1,11 @@
-import React from 'react'; const SEOOptimizer = () => { const [isOpen, setIsOpen] = useState(false); const [isAnalyzing, setIsAnalyzing] = useState(false); const [report, setReport] = useState(null); const [selectedPage, setSelectedPage] = useState(null); const analyzeSEO = useCallback(async () => { setIsAnalyzing(true) ; try {
-
-    }, [])
+import React from "react"; const SEOOptimizer = () => { const [isOpen, setIsOpen] = useState(false); const [isAnalyzing, setIsAnalyzing] = useState(false); const [report, setReport] = useState(null); const [selectedPage, setSelectedPage] = useState(null); const analyzeSEO = useCallback(async () => { setIsAnalyzing(true) ; try {}, [])
+}
 }
     useEffect(() => {}
 
         // comment
 analyzeSEO()}, [analyzeSEO])
+}
 }
     const calculateSEOScore = (page) => {}
 
@@ -137,6 +137,7 @@ let maxScore = 0,
         recommendations.push("Ensure content is unique, valuable, and addresses user intent")"
         recommendations.push("Implement structured data markup for better search engine understanding")"
         recommendations.push()
+}
 }        return recommendations}
 
     const generateSummary = (pageAnalyses, topIssues) => {}
@@ -203,6 +204,7 @@ let summary = "Analyzed ${totalPages} pages for SEO."
         a.href = url,
 a.download = "seo-optimization-report.csv
         a.click()
+}
 }
         window.URL.revokeObjectURL(url)}"
     const getScoreColor = (score) => {}""
@@ -407,14 +409,8 @@ a.download = "seo-optimization-report.csv
         </div>)}
     </div>)};
 export default SEOOptimizer;
-
-
 export { SEOOptimizer };
-
 export { SEOOptimizer };
-
 export { SEOOptimizer };
-
 export { SEOOptimizer };
-
 export { SEOOptimizer };

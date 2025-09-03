@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Cloud, Server, Database, Shield, GitFork, ArrowRight, CheckCircle, Monitor } from 'lucide-react';
+import React from "react";
+import { Link } from "react-router-dom";
+import { Cloud, Server, Database, Shield, GitFork, ArrowRight, CheckCircle, Monitor } from "lucide-react";
 const CloudDevOpsServices = () => {
     const cloudServices = [
         {
@@ -110,7 +110,7 @@ const CloudDevOpsServices = () => {
         }
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      {/* Hero Section */}
+      {/* comment */}
       <section className="relative bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 text-white py-20">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -131,8 +131,7 @@ const CloudDevOpsServices = () => {
           </div>
         </div>
       </section>
-
-      {/* Services Grid */}
+      {/* comment */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -144,11 +143,10 @@ const CloudDevOpsServices = () => {
               solutions that modernize your infrastructure and accelerate delivery.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {cloudServices.map((service, index) => (<div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-slate-100">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-6">
-                  <service.icon className="w-8 h-8 text-white"/>
+                  <service.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900 mb-4">
                   {service.title}
@@ -158,20 +156,19 @@ const CloudDevOpsServices = () => {
                 </p>
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-slate-600">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0"/>
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0"  />
                       {feature}
                     </li>))}
                 </ul>
                 <Link to="/contact" className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold transition-colors duration-200">
                   Learn More
-                  <ArrowRight className="w-4 h-4 ml-2"/>
+                  <ArrowRight className="w-4 h-4 ml-2"  />
                 </Link>
               </div>))}
           </div>
         </div>
       </section>
-
-      {/* Cloud Platforms Section */}
+      {/* comment */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -183,7 +180,6 @@ const CloudDevOpsServices = () => {
               for your specific needs and budget.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {cloudPlatforms.map((platform, index) => (<div key={index} className="bg-slate-50 rounded-2xl p-8 border border-slate-200">
                 <h3 className="text-2xl font-bold text-slate-900 mb-4">
@@ -194,7 +190,7 @@ const CloudDevOpsServices = () => {
                 </p>
                 <ul className="space-y-2">
                   {platform.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-slate-600">
-                      <CheckCircle className="w-4 h-4 text-blue-500 mr-2 flex-shrink-0"/>
+                      <CheckCircle className="w-4 h-4 text-blue-500 mr-2 flex-shrink-0"  />
                       {feature}
                     </li>))}
                 </ul>
@@ -202,8 +198,7 @@ const CloudDevOpsServices = () => {
           </div>
         </div>
       </section>
-
-      {/* Benefits Section */}
+      {/* comment */}
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -214,19 +209,17 @@ const CloudDevOpsServices = () => {
               Transform your organization with modern cloud and DevOps practices.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (<div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle className="w-8 h-8 text-white"/>
+                  <CheckCircle className="w-8 h-8 text-white"  />
                 </div>
                 <p className="text-lg text-slate-700">{benefit}</p>
               </div>))}
           </div>
         </div>
       </section>
-
-      {/* Technologies Section */}
+      {/* comment */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -237,7 +230,6 @@ const CloudDevOpsServices = () => {
               We leverage industry-leading tools and technologies to deliver robust solutions.
             </p>
           </div>
-
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {technologies.map((tech, index) => (<div key={index} className="bg-slate-50 rounded-xl p-6 text-center shadow-md hover:shadow-lg transition-all duration-300">
                 <p className="text-slate-700 font-semibold">{tech}</p>
@@ -245,16 +237,15 @@ const CloudDevOpsServices = () => {
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
+      {/* comment */}
       <section className="py-20 bg-gradient-to-r from-slate-900 to-blue-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-6">
             Ready to Modernize Your Infrastructure?
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Let's discuss how our cloud and DevOps expertise can transform your
-            organization's technology landscape.
+            Let"s discuss how our cloud and DevOps expertise can transform your
+            organization"s technology landscape.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact" className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl">
@@ -271,11 +262,7 @@ export default CloudDevOpsServices;
 }}}
 
 export { CloudDevOpsServices };
-
 export { CloudDevOpsServices };
-
 export { CloudDevOpsServices };
-
 export { CloudDevOpsServices };
-
 export { CloudDevOpsServices };

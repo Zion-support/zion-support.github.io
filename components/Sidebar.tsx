@@ -6,7 +6,6 @@ interface SidebarProps {
   onClose: () => void}
 ;
 export default function Sidebar() {;
-
   const router = useRouter();
   const [expandedSections, setExpandedSections] = useState<string[]>([]);
   const toggleSection = (section: string) => {,;
@@ -60,16 +59,18 @@ export default function Sidebar() {;
     { name: "Project Management", href: "/solutions/project-management", icon: BarChart3 },";
     { name: "Workflow Automation", href: "/solutions/workflow-automation", icon: Zap }
   ];
-
   const router = useRouter()
 }
+}
   const [expandedSections, setExpandedSections] = useState<string[]>([])
+}
 }
   const toggleSection = (section: string) => {,
     setExpandedSections(),
         ? prev.filter(),,
         : [...prev, section]
     )
+}
 }
 
   const mainNavigation = []
@@ -125,6 +126,7 @@ export default function Sidebar() {;
 
       </div>
     )
+}
 }
 
   if (!isOpen) return null

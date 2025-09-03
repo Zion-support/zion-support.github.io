@@ -1,9 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { SEO } from '@/components/SEO';
-import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
-
+import React from "react";
+import { Link } from "react-router-dom";
+import { SEO } from "@/components/SEO";
+import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 const DigitalTransformation = () => {
     const transformationServices = [
         {
@@ -63,9 +62,9 @@ const DigitalTransformation = () => {
         { step: "Optimization", icon: "📈", description: "Continuous improvement and scaling" }
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
-      <SEO title="Digital Transformation - Zion Tech Group" description="Transform your business for the digital age with our comprehensive digital transformation services." keywords="digital transformation, process automation, digital strategy, change management, performance optimization" canonical="https://ziontechgroup.com/services/digital-transformation"/>
+      <SEO title="Digital Transformation - Zion Tech Group" description="Transform your business for the digital age with our comprehensive digital transformation services." keywords="digital transformation, process automation, digital strategy, change management, performance optimization" canonical="https://ziontechgroup.com/services/digital-transformation"  />
 
-      {/* Hero Section */}
+      {/* comment */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.h1 className="text-4xl md:text-6xl font-bold mb-6" initial = {
@@ -107,13 +106,12 @@ const DigitalTransformation = () => {
           >
             <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold text-lg rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105">
               Start Your Transformation
-              <ArrowRight className="w-5 h-5 ml-2"/>
+              <ArrowRight className="w-5 h-5 ml-2"  />
             </Link>
           </motion.div>
         </div>
       </section>
-
-      {/* Services Section */}
+      {/* comment */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -124,7 +122,6 @@ const DigitalTransformation = () => {
               End-to-end digital transformation solutions for modern businesses
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {transformationServices.map((service, index) => (
               <motion.div 
@@ -144,7 +141,6 @@ const DigitalTransformation = () => {
                 <div className="text-5xl mb-6">{service.icon}</div>
                 <h3 className="text-2xl font-semibold text-white mb-4">{service.title}</h3>
                 <p className="text-gray-300 mb-6">{service.description}</p>
-
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-blue-400 mb-3">Key Features:</h4>
                   <ul className="space-y-2">
@@ -158,8 +154,7 @@ const DigitalTransformation = () => {
           </div>
         </div>
       </section>
-
-      {/* Benefits Section */}
+      {/* comment */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -170,7 +165,6 @@ const DigitalTransformation = () => {
               Unlock new opportunities and competitive advantages
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div 
               className="text-center" 
@@ -181,7 +175,7 @@ const DigitalTransformation = () => {
             >
               <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z"  />
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Increased Efficiency</h3>
@@ -197,7 +191,7 @@ const DigitalTransformation = () => {
             >
               <div className="w-16 h-16 bg-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"  />
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Better Customer Experience</h3>
@@ -213,7 +207,7 @@ const DigitalTransformation = () => {
             >
               <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"  />
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Data-Driven Insights</h3>
@@ -222,8 +216,7 @@ const DigitalTransformation = () => {
           </div>
         </div>
       </section>
-
-      {/* Process Section */}
+      {/* comment */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -234,7 +227,6 @@ const DigitalTransformation = () => {
               A proven methodology for successful digital transformation
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {transformationApproach.map((step, index) => (
               <motion.div 
@@ -254,8 +246,7 @@ const DigitalTransformation = () => {
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
+      {/* comment */}
       <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -266,7 +257,7 @@ const DigitalTransformation = () => {
           </p>
           <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
             Start Your Transformation
-            <ArrowRight className="w-5 h-5 ml-2"/>
+            <ArrowRight className="w-5 h-5 ml-2"  />
           </Link>
         </div>
       </section>
@@ -275,13 +266,8 @@ const DigitalTransformation = () => {
 }
 
 export default DigitalTransformation;
-
 export { DigitalTransformation };
-
 export { DigitalTransformation };
-
 export { DigitalTransformation };
-
 export { DigitalTransformation };
-
 export { DigitalTransformation };

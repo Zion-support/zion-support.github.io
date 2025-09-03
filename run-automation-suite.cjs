@@ -25,14 +25,14 @@ class AutomationSuiteRunner {
     fs.appendFileSync(this.logFile, logMessage + "\n")
   }
 ;
-  async runCommand() {
+  async runCommand(command, description) {
     this.log(`🚀 Starting: ${description}`);
     try {
-      const result = execSync(command, {;
+      const result = execSync(command, {
         cwd: this.projectRoot,
         encoding: "utf8",
         timeout: 300000 // 5 minutes timeout
-});
+      });
       this.log(`✅ Completed: ${description}`);
       return { success: true, output: result }
     } catch (error) { 

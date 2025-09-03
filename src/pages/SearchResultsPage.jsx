@@ -1,6 +1,7 @@
-import { useInfiniteQuery } from '@tanstack / react -query';
+import React from "react"
+import { useInfiniteQuery } from "@tanstack / react -query";
 export default function Page() {
-&limit=${LIMIT}`) ;
+&limit=${LIMIT}") ;
             if(!res.ok) throw new Error("Failed to fetch") ;
             return (await res.json () ) },
         enabled: !!query,
@@ -31,7 +32,7 @@ export default function Page() {
     const suggestions = generateSearchSuggestions () .slice(0, 5) ;
     return (<main className="container mx - auto px-4 py-8">
       <div className="mb-6">
-        <SearchBar value={query} onChange={setQuery}/>
+        <SearchBar value={query} onChange={setQuery}  />
       </div>
       {isLoading && <p > Loading...</p>}
       {!isLoading && allResults.length === 0 && (<div className="text-center py-8">
@@ -44,19 +45,15 @@ export default function Page() {
           </ul>
         </div>) }
       {allResults.length > 0 && (<div className="columns - 1 sm:columns - 2 lg:columns - 3 gap-4 space - y-4">
-          {allResults.map((r) => (<SearchResultCard key={`${r.type}-${r.id}`} result={r}/>) ) }
+          {allResults.map((r) => (<SearchResultCard key={"${r.type}-${r.id}`} result={r}  />) ) }
         </div>) }
-      <div ref={loader} className="h-1"/>
+      <div ref={loader} className="h-1"  />
       {isFetchingNextPage && <p className="text-center mt-4">Loading more...</p>}
     </main>)}
 
 
 export { LIMIT, SearchResultsPage };
-
 export { LIMIT, SearchResultsPage };
-
 export { LIMIT, SearchResultsPage };
-
 export { LIMIT, SearchResultsPage };
-
 export { LIMIT, SearchResultsPage };

@@ -8,6 +8,7 @@ import React, { Component, ErrorInfo, ReactNode } from "react"
 "  }"private handleRetry = () => {
     this.setState({ hasError: false, error: undefined })
 }
+}
 
   public render() {
     if (this.state.hasError) {
@@ -24,6 +25,7 @@ import React, { Component, ErrorInfo, ReactNode } from "react"
 
           </div>
       )
+}
 }
 
     return this.props.children}

@@ -5,7 +5,9 @@ import React, { useState } from "react"
 const AIServicesPricingComparison2025: React.FC = () => {",,
   const [activeCategory, setActiveCategory] = useState()
 }
+}
   const [searchTerm, setSearchTerm] = useState("")
+}
 }
   const categories = []
 
@@ -335,7 +337,9 @@ name: "IBM Quantum",
     const matchesSearch = service.service.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchTerm.toLowerCase())
 }
+}
     return matchesCategory && matchesSearch})
+}
 }
   const containerVariants = {},
     visible: {,

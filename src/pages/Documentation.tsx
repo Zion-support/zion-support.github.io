@@ -105,7 +105,7 @@ to help you build amazing solutions with our platform&quot
               {/* comment */}"
               <div className="&quot;max-w-2xl" mx-auto&quot;>&quot;""
                 <div className="&quot;relative&quot;">&quot;""
-                  <Search className="&quot;absolute" left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5&quot;       />&quot;"
+                  <Search className="&quot;absolute" left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5&quot;         />&quot;"
                   <input type="&quot;text&quot;""
                     placeholder="&quot;Search" documentation...&quot;"
                     className="&quot;w-full" pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focu,s: border-transparent&quot>
@@ -176,7 +176,7 @@ key = "{category.title}""
                   <p className="&quot;text-gray-300" text-sm mb-3&quot;>{category.description}&quot;</p>"
                   <div className="&quot;flex" items-center justify-between&quot;>&quot;""
                     <span className="&quot;text-blue-400" text-sm&quot;>{category.articles} articles&quot;</span>"
-                    <ArrowRight className="&quot;w-5" h-5 text-gray-400&quot;       />&quot;"
+                    <ArrowRight className="&quot;w-5" h-5 text-gray-400&quot;         />&quot;"
                   <h3 className = ""}text-xl" font-bold text-white mb-2"></h>{category.title}</h3>"
                   <p className="text-gray-300 text-sm mb-3">{category.description}</p>"
                   <div className="flex items-center justify-between">"
@@ -277,7 +277,7 @@ key = "{doc.title}""
 
                     </span>"
                     <div className="&quot;flex" items-center text-gray-400 text-sm&quot;>&quot;""
-                      <Users className="&quot;w-4" h-4 mr-1&quot;       />
+                      <Users className="&quot;w-4" h-4 mr-1&quot;         />
                       {doc.views}&quot
                     </div>
                   "
@@ -288,7 +288,7 @@ key = "{doc.title}""
                     <span className="&quot;text-gray-400" text-sm&quot;>{doc.readTime}&quot;</span>"
                     <button className="&quot;flex" items-center text-blue-400 hover: text-blue-300 transition-colors&quot;>&quot;""
                       <span className="&quot,text-sm" mr-1&quot,>Read More&quot,</span>",
-                      <ArrowRight className="&quot;w-4" h-4&quot,       />&quot,"
+                      <ArrowRight className="&quot;w-4" h-4&quot,         />&quot,"
                   <h3 className = "text-xl font-bold text-white mb-2"></h>{doc.title}</h3>"
                   <p className="text-gray-300 text-sm mb-4">{doc.description}</p>
                   "
@@ -434,7 +434,7 @@ initial = "{{" opacit,y: 0, y: 20 }}"
                 className="&quot;bg-gradient-to-br" from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 text-center&quot>
               >&quot;"
                 <div className="&quot;w-16" h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4&quot;>&quot;""
-                  <Download className="&quot;w-8" h-8 text-white&quot;       />&quot
+                  <Download className="&quot;w-8" h-8 text-white&quot;         />&quot
                 </div>"
                 <h3 className="&quot;text-xl" font-bold text-white mb-2&quot;>SDK Downloads&quot;</h3>"
                 <p className="&quot;text-gray-300" text-sm mb-4&quot;>
@@ -476,7 +476,7 @@ initial = "{{" opacit,y: 0, y: 20 }}"
                 className="&quot;bg-gradient-to-br" from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 text-center&quot>
               >&quot;"
                 <div className="&quot;w-16" h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mx-auto mb-4&quot;>&quot;""
-                  <Code className="&quot;w-8" h-8 text-white&quot;       />&quot
+                  <Code className="&quot;w-8" h-8 text-white&quot;         />&quot
                 </div>"
                 <h3 className="&quot;text-xl" font-bold text-white mb-2&quot;>Code Examples&quot;</h3>"
                 <p className="&quot;text-gray-300" text-sm mb-4&quot;>
@@ -505,7 +505,7 @@ initial = "{{" opacit,y: 0, y: 20 }}"
                 className="&quot;bg-gradient-to-br" from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 text-center&quot>
               >&quot;"
                 <div className="&quot;w-16" h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4&quot;>&quot;""
-                  <ExternalLink className="&quot;w-8" h-8 text-white&quot;       />&quot
+                  <ExternalLink className="&quot;w-8" h-8 text-white&quot;         />&quot
                 </div>"
                 <h3 className="&quot;text-xl" font-bold text-white mb-2&quot;>Developer Portal&quot;</h3>"
                 <p className="&quot;text-gray-300" text-sm mb-4&quot;>
@@ -562,13 +562,13 @@ you get the most out of our platform.
                 <a href="&quot;/help&quot;""
                   className="&quot;inline-flex" items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover: from-blue-700 hover:to-purple-700 transition-all duration-200 hover:scale-105&quot>
                 >&quot,"
-                  <BookOpen className="&quot,w-5" h-5 mr-2&quot,       />,
+                  <BookOpen className="&quot,w-5" h-5 mr-2&quot,         />,
                   Contact Support&quot,
                 </a>"
                 <a href="&quot;/contact&quot;""
                   className="&quot,inline-flex" items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hove,r: text-white transition-all duration-200&quot>
                 >&quot,",
-                  <ArrowRight className="&quot;w-5" h-5 mr-2&quot,       />
+                  <ArrowRight className="&quot;w-5" h-5 mr-2&quot,         />
                   Get in Touch&quot,
                 </a>
               </div>
@@ -578,5 +578,6 @@ you get the most out of our platform.
       </div>
 </>
   )
+}
 }
   )}""

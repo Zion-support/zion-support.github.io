@@ -1,8 +1,7 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Target, Brain, Users, Clock, Shield, CheckCircle, Star, Award, Rocket, ArrowRight, Phone, Video, Zap, TrendingUp, BarChart3, Globe, Heart, Settings, Monitor, Smartphone, Laptop, Calendar, GitBranch, PieChart, AlertTriangle  } from 'lucide-react.ts';
-import { SEO  } from '@/components/SEO';
-
+import React from "react.ts";
+import { motion  } from "framer-motion.ts";
+import { Target, Brain, Users, Clock, Shield, CheckCircle, Star, Award, Rocket, ArrowRight, Phone, Video, Zap, TrendingUp, BarChart3, Globe, Heart, Settings, Monitor, Smartphone, Laptop, Calendar, GitBranch, PieChart, AlertTriangle  } from "lucide-react.ts";
+import { SEO  } from "@/components/SEO";
 export default function AIProjectManagement(...args: unknown[]): unknown {
   const features = [
     {
@@ -36,7 +35,6 @@ export default function AIProjectManagement(...args: unknown[]): unknown {
       description: "AI-powered risk identification and mitigation strategies"
     }
   ];
-
   const benefits = [
     "Reduce project delivery time by 30-50%",
     "Improve resource utilization by 40-60%",
@@ -45,7 +43,6 @@ export default function AIProjectManagement(...args: unknown[]): unknown {
     "Eliminate manual reporting by 80%",
     "Improve stakeholder communication by 50%"
   ];
-
   const solutions = [
     {
       title: "AI Project Planning",
@@ -72,7 +69,6 @@ export default function AIProjectManagement(...args: unknown[]): unknown {
       price: "From $6,000/month"
     }
   ];
-
   const projectTypes = [
     "Software Development",
     "Construction & Engineering",
@@ -81,15 +77,12 @@ export default function AIProjectManagement(...args: unknown[]): unknown {
     "Research & Development",
     "Event Management"
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="AI Project Management Services - Zion Tech Group"
-        description="Revolutionary AI-powered project management that optimizes planning, resource allocation, and risk management. Deliver projects faster, cheaper, and with higher success rates."
-      />
+      <SEO title="AI Project Management Services - Zion Tech Group"
+        description="Revolutionary AI-powered project management that optimizes planning, resource allocation, and risk management. Deliver projects faster, cheaper, and with higher success rates."  />
       
-      {/* Hero Section */}
+      {/* comment */}
       <section className="relative overflow-hidden py-20 lg:py-32">
         <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 via-red-500/10 to-pink-500/10"></div>
         <div className="container mx-auto px-4 relative z-10">
@@ -100,31 +93,28 @@ export default function AIProjectManagement(...args: unknown[]): unknown {
             className="text-center max-w-4xl mx-auto"
           >
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-full border border-orange-400/30 mb-6">
-              <Target className="w-5 h-5 text-orange-400 mr-2" />
+              <Target className="w-5 h-5 text-orange-400 mr-2"  />
               <span className="text-orange-300 font-medium">AI Project Management</span>
             </div>
-            
             <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-orange-400 via-red-500 to-pink-600 bg-clip-text text-transparent">
                 AI Project Management
               </span>
-              <br />
+              <br  />
               <span className="text-white">That Delivers Results</span>
             </h1>
-            
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your project delivery with AI-powered management that optimizes 
-              planning, resource allocation, and risk management. Deliver projects faster, 
+              planning, resource allocation, and risk management. Deliver projects faster,
               cheaper, and with unprecedented success rates.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300 flex items-center justify-center"
               >
-                <Rocket className="w-5 h-5 mr-2" />
+                <Rocket className="w-5 h-5 mr-2"  />
                 Start Free Trial
               </motion.button>
               <motion.button
@@ -132,15 +122,14 @@ export default function AIProjectManagement(...args: unknown[]): unknown {
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border border-orange-400/30 text-orange-300 font-semibold rounded-lg hover:bg-orange-400/10 transition-all duration-300 flex items-center justify-center"
               >
-                <Video className="w-5 h-5 mr-2" />
+                <Video className="w-5 h-5 mr-2"  />
                 Watch Demo
               </motion.button>
             </div>
           </motion.div>
         </div>
       </section>
-
-      {/* Features Section */}
+      {/* comment */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
@@ -153,7 +142,7 @@ export default function AIProjectManagement(...args: unknown[]): unknown {
               Advanced AI Technology for Better Project Delivery
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered project management platform combines machine learning, 
+              Our AI-powered project management platform combines machine learning,
               predictive analytics, and automation to deliver exceptional project outcomes.
             </p>
           </motion.div>
@@ -177,8 +166,7 @@ export default function AIProjectManagement(...args: unknown[]): unknown {
           </div>
         </div>
       </section>
-
-      {/* Benefits Section */}
+      {/* comment */}
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-4">
           <motion.div
@@ -205,15 +193,14 @@ export default function AIProjectManagement(...args: unknown[]): unknown {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="flex items-center space-x-4 bg-slate-700/30 rounded-lg p-4"
               >
-                <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
+                <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0"  />
                 <span className="text-white font-medium">{benefit}</span>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-
-      {/* Solutions Section */}
+      {/* comment */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
@@ -242,16 +229,14 @@ export default function AIProjectManagement(...args: unknown[]): unknown {
               >
                 <h3 className="text-2xl font-semibold text-white mb-4">{solution.title}</h3>
                 <p className="text-gray-300 mb-6">{solution.description}</p>
-                
                 <div className="space-y-3 mb-6">
                   {solution.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-orange-400 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-orange-400 flex-shrink-0"  />
                       <span className="text-gray-300">{feature}</span>
                     </div>
                   ))}
                 </div>
-                
                 <div className="text-3xl font-bold text-orange-400 mb-6">{solution.price}</div>
                 <button className="w-full py-4 px-6 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300">
                   Get Started
@@ -261,8 +246,7 @@ export default function AIProjectManagement(...args: unknown[]): unknown {
           </div>
         </div>
       </section>
-
-      {/* Project Types Section */}
+      {/* comment */}
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-4">
           <motion.div
@@ -290,7 +274,7 @@ export default function AIProjectManagement(...args: unknown[]): unknown {
                 className="bg-slate-700/30 rounded-lg p-4 text-center hover:bg-slate-700/50 transition-all duration-300"
               >
                 <div className="w-12 h-12 bg-gradient-to-br from-orange-400/20 to-red-500/20 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <GitBranch className="w-6 h-6 text-orange-400" />
+                  <GitBranch className="w-6 h-6 text-orange-400"  />
                 </div>
                 <span className="text-white font-medium text-sm">{projectType}</span>
               </motion.div>
@@ -298,8 +282,7 @@ export default function AIProjectManagement(...args: unknown[]): unknown {
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
+      {/* comment */}
       <section className="py-20 bg-gradient-to-r from-orange-500/10 via-red-500/10 to-pink-500/10">
         <div className="container mx-auto px-4 text-center">
           <motion.div
@@ -320,7 +303,7 @@ export default function AIProjectManagement(...args: unknown[]): unknown {
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300 flex items-center justify-center"
               >
-                <ArrowRight className="w-5 h-5 mr-2" />
+                <ArrowRight className="w-5 h-5 mr-2"  />
                 Start Your Free Trial
               </motion.button>
               <motion.button
@@ -328,7 +311,7 @@ export default function AIProjectManagement(...args: unknown[]): unknown {
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border border-orange-400/30 text-orange-300 font-semibold rounded-lg hover:bg-orange-400/10 transition-all duration-300 flex items-center justify-center"
               >
-                <Phone className="w-5 h-5 mr-2" />
+                <Phone className="w-5 h-5 mr-2"  />
                 Call +1 302 464 0950
               </motion.button>
             </div>
@@ -340,11 +323,7 @@ export default function AIProjectManagement(...args: unknown[]): unknown {
 }
 
 export { AIProjectManagement };
-
 export { AIProjectManagement };
-
 export { AIProjectManagement };
-
 export { AIProjectManagement };
-
 export { AIProjectManagement };

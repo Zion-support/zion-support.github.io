@@ -40,6 +40,7 @@ export default function Header() {,"});,"})"
       current: location.pathname === "/contact",,"});,"});"
 }"});,"})
 }
+}
   return ("
     ,"});,"})"
     <header className="{"fixed" top-0 left-0 right-0 z-50 transition-all duration-300 ${,"});,"})"
@@ -118,7 +119,9 @@ export default function Header() {,"});,"})"
   );,"});,"})""
   const [scrolled, setScrolled] = useState(false)
 }
+}
   const location = useLocation()
+}
 }
   useEffect(() => {
     const handleScroll = () => {
@@ -126,7 +129,9 @@ export default function Header() {,"});,"})"
 
     window.addEventListener()
 }
+}
     return: () => window.removeEventListener("scroll", handleScroll)}, [])
+}
 }
   const navigation = []} {"
       name: "Solutions,",";"
@@ -187,7 +192,9 @@ export default function Header() {,"});,"})"
 ""
     return () => window.removeEventListener("scroll", handleScroll)}, [])
 }
+}
   const navigation = [])
+}
 }
       name: "Home"",
       href: "/","
@@ -250,6 +257,7 @@ current: location.pathname === "/contact"}
   useEffect(() => {}
 
     window.addEventListener(&apos;scroll&apos;, handleScroll)
+}
 }
     return () => window.removeEventListener(&apos;scroll&apos;, handleScroll)}, []);&apos
     {
@@ -318,7 +326,7 @@ current: location.pathname === "/contact"}
                         ? &apos;text-blue-600 bg-blue-50
                         : &apos;text-gray-700 hover:text-blue-600 hove,r:bg-gray-50&apos}"}>{item.name}&apos;&apos;"
                       <svg className="&apos;ml-1" inline-block w-4 h-4&apos; fill="&apos;none&apos;" stroke="&apos;currentColor&apos;" viewBox="&apos;0" 0 24 24&apos;>&apos,"
-                        <path strokeLinecap="&apos;round&apos;" strokeLinejoin="&apos;round&apos;" strokeWidth="{2}" d="&apos;M19" 9l-7 7-7-7&apos;       />&apos
+                        <path strokeLinecap="&apos;round&apos;" strokeLinejoin="&apos;round&apos;" strokeWidth="{2}" d="&apos;M19" 9l-7 7-7-7&apos;         />&apos
                     {/* comment */}"
                     <div className="&apos;absolute" top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hove,r: visible transition-all duration-200 z-50&apos,>&apos,",
                       <div className = "&apos,py-2&apos,">
@@ -381,7 +389,7 @@ current: location.pathname === "/contact"}
             className="&apos;lg:hidden" p-2 rounded-md text-gray-700 hover:text-blue-600 hove,r: bg-gray-100&apos
           >&apos;"
             <svg className="&apos;w-6" h-6&apos; fill="&apos;none&apos;" stroke="&apos;currentColor&apos;" viewBox="&apos,0" 0 24 24&apos,>&apos,",
-              <path strokeLinecap="&apos;round&apos;" strokeLinejoin="&apos,round&apos," strokeWidth="{2}" d="&apos;M4" 6h16M4 12h16M4 18h16&apos;       />&apos;"
+              <path strokeLinecap="&apos;round&apos;" strokeLinejoin="&apos,round&apos," strokeWidth="{2}" d="&apos;M4" 6h16M4 12h16M4 18h16&apos;         />&apos;"
             className = "lg: hidden p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100""
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">",
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" d="M4 6h16M4 12h16M4 18h16"  />

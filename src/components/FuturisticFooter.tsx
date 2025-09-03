@@ -1,4 +1,5 @@
-import {  import { motion  } from 'framer-motion';
+import React from "react"
+import {  import { motion  } from "framer-motion";
 export default function Page() {
 ,"
         { name: "Micro SAAS Solutions", href: "/micro-saas" },"
@@ -59,13 +60,13 @@ export default function Page() {
   ];
   return ("
     <footer className="relative bg-gradient-to-b from-zion-slate-dark to-zion-slate-darker border-t border-zion-cyan/20">
-      {/* Background Effects */}"
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-zion-cyan/5 to-transparent" />"
+      {/* comment */}"
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-zion-cyan/5 to-transparent"  />"
       <div className="relative z-10">
-        {/* Main footer content */}
+        {/* comment */}
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 gap-8">
-            {/* Company info */}
+            {/* comment */}
             <div className="lg:col-span-2">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -85,33 +86,30 @@ export default function Page() {
                     <p className="text-sm text-zion-slate-light">Innovation • Intelligence • Impact</p>
                   </div>
                 </div>
-                
                 <p className="text-zion-slate-light leading-relaxed">
-                  Leading the future of technology with cutting-edge AI services, innovative solutions, 
+                  Leading the future of technology with cutting-edge AI services, innovative solutions,
                   and comprehensive IT services. Empowering businesses to thrive in the digital age.
                 </p>
-
-                {/* Contact Information */}
+                {/* comment */}
                 <div className="space-y-3">
                   <div className="flex items-center space-x-3 text-zion-slate-light hover:text-zion-cyan transition-colors duration-300">
-                    <Phone className="w-4 h-4 text-zion-cyan" />
-                    <a href={`tel:${contactInfo.mobile}`} className="hover:text-zion-cyan transition-colors duration-300">
+                    <Phone className="w-4 h-4 text-zion-cyan"  />
+                    <a href={"tel:${contactInfo.mobile}"} className="hover:text-zion-cyan transition-colors duration-300">
                       {contactInfo.mobile}
                     </a>
                   </div>
                   <div className="flex items-center space-x-3 text-zion-slate-light hover:text-zion-cyan transition-colors duration-300">
-                    <Mail className="w-4 h-4 text-zion-cyan" />
-                    <a href={`mailto:${contactInfo.email}`} className="hover:text-zion-cyan transition-colors duration-300">
+                    <Mail className="w-4 h-4 text-zion-cyan"  />
+                    <a href={"mailto:${contactInfo.email}"} className="hover:text-zion-cyan transition-colors duration-300">
                       {contactInfo.email}
                     </a>
                   </div>
                   <div className="flex items-center space-x-3 text-zion-slate-light">
-                    <MapPin className="w-4 h-4 text-zion-cyan" />
+                    <MapPin className="w-4 h-4 text-zion-cyan"  />
                     <span>{contactInfo.address}</span>
                   </div>
                 </div>
-
-                {/* Social Links */}
+                {/* comment */}
                 <div className="flex space-x-4">
                   {socialLinks.map((social) => (
                     <motion.a
@@ -121,7 +119,7 @@ export default function Page() {
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.1, y: -2 }}
                       whileTap={{ scale: 0.95 }}
-                      className={`p-2 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg text-zion-slate-light ${social.color} hover:bg-zion-cyan/10 hover:border-zion-cyan/40 transition-all duration-300`}
+                      className={"p-2 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg text-zion-slate-light ${social.color} hover:bg-zion-cyan/10 hover:border-zion-cyan/40 transition-all duration-300"}
                     >
                       <social.icon className="w-5 h-5" />
                     </motion.a>
@@ -129,8 +127,7 @@ export default function Page() {
                 </div>
               </motion.div>
             </div>
-
-            {/* Footer Sections */}
+            {/* comment */}
             {Object.entries(footerSections).map(([key, section]) => (
               <div key={key}>
                 <motion.h3
@@ -170,15 +167,13 @@ export default function Page() {
             ))}
           </div>
         </div>
-
-        {/* Bottom Footer */}
+        {/* comment */}
         <div className="border-t border-zion-cyan/20">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6">
             <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
               <div className="text-zion-slate-light text-sm">
                 © {new Date().getFullYear()} Zion Tech Group. All rights reserved.
               </div>
-              
               <div className="flex items-center space-x-6 text-sm">
                 <Link to="/privacy" className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300">
                   Privacy Policy
@@ -193,19 +188,17 @@ export default function Page() {
             </div>
           </div>
         </div>
-
-        {/* Scroll to top button */}
+        {/* comment */}
         <motion.button
           onClick={scrollToTop}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center text-white shadow-lg shadow-zion-cyan/25 hover:shadow-xl hover:shadow-zion-cyan/40 transition-all duration-300 z-50"
         >
-          <ArrowUp className="w-5 h-5" />
+          <ArrowUp className="w-5 h-5"  />
         </motion.button>
       </div>
     </footer>
   );
 };
-
 ;,"});,})";

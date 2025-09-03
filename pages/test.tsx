@@ -1,5 +1,5 @@
-import type { NextPage } from 'next';
-
+import React from "react"
+import type { NextPage } from "next";
 const Test: NextPage = () => {
   return (
     <div className="min-h-screen bg-gray-900 flex items-center justify-center">
@@ -7,5 +7,4 @@ const Test: NextPage = () => {
     </div>
   );
 };
-
 export default Test;

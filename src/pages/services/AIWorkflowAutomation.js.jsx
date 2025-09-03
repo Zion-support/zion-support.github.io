@@ -1,7 +1,7 @@
-import React from 'react';'''
-import { Link } from 'react-router-dom';'''
-import { motion } from 'framer-motion';'''
-import { Zap, Workflow, Brain, Clock, TrendingUp, Users, Database, Globe, Target, CheckCircle, BarChart3 } from 'lucide-react';
+import React from "react";"""
+import { Link } from "react-router-dom";"""
+import { motion } from "framer-motion";"""
+import { Zap, Workflow, Brain, Clock, TrendingUp, Users, Database, Globe, Target, CheckCircle, BarChart3 } from "lucide-react';
 const AIWorkflowAutomation = () => {}
     const features = []
         {}
@@ -182,9 +182,9 @@ const AIWorkflowAutomation = () => {}
         }"""
     };""""
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"""
-      {/* Hero Section */}""""
+      {/* comment */}""""
       <div className="relative overflow-hidden">""""
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"/>"""
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"  />"""
         """"
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
           <motion.div initial = {}
@@ -196,7 +196,7 @@ const AIWorkflowAutomation = () => {}
 """"
 }} transition={{ duration: 0.8 }} className="text-center">""""
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-orange-600 to-red-600 rounded-full mb-6">""""
-              <Zap className="w-10 h-10 text-white"/>"""
+              <Zap className="w-10 h-10 text-white"  />"""
             </div>""""
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">""""
               <span className="bg-gradient-to-r from-orange-400 via-red-400 to-orange-600 bg-clip-text text-transparent">
@@ -219,7 +219,7 @@ const AIWorkflowAutomation = () => {}
         </div>
       </div>
 """
-      {/* Features Section */}""""
+      {/* comment */}""""
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">""""
         <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-center mb-16">""""
           <h2 className="text-4xl font-bold text-white mb-6">Key Features</h2>""""
@@ -233,7 +233,7 @@ const AIWorkflowAutomation = () => {}
           {features.map((feature, index) => (<motion.div key={feature.title} variants={itemVariants} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 hover:border-orange-500/50 transition-all duration-300">""""
               <div className="flex items-start mb-4">""""
                 <div className="w-12 h-12 bg-gradient-to-r from-orange-600 to-red-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">""""
-                  <feature.icon className="w-6 h-6 text-white"/>
+                  <feature.icon className="w-6 h-6 text-white" />
                 </div>"""
                 <div>""""
                   <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>""""
@@ -254,7 +254,7 @@ const AIWorkflowAutomation = () => {}
         </div>
       </div>
 """
-      {/* Solutions by Department */}""""
+      {/* comment */}""""
       <div className="bg-gradient-to-r from-orange-600/20 to-red-600/20 border-t border-orange-500/20">""""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <motion.div initial = {}
@@ -286,7 +286,7 @@ const AIWorkflowAutomation = () => {}
 }} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6">""""
                 <div className="flex items-center mb-6">""""
                   <div className="w-12 h-12 bg-gradient-to-r from-orange-600 to-red-600 rounded-lg flex items-center justify-center mr-4">""""
-                    <category.icon className="w-6 h-6 text-white"/>"""
+                    <category.icon className="w-6 h-6 text-white" />"""
                   </div>""""
                   <h3 className="text-xl font-semibold text-white">{category.category}</h3>
                 </div>"""
@@ -302,7 +302,7 @@ const AIWorkflowAutomation = () => {}
         </div>
       </div>
 """
-      {/* Benefits Section */}""""
+      {/* comment */}""""
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <motion.div initial = {}
   { opacity: 0,
@@ -332,7 +332,7 @@ const AIWorkflowAutomation = () => {}
 """"
 }} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 text-center hover:border-orange-500/50 transition-all duration-300">""""
               <div className="w-16 h-16 bg-gradient-to-r from-orange-600 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">""""
-                <benefit.icon className="w-8 h-8 text-white"/>"""
+                <benefit.icon className="w-8 h-8 text-white" />"""
               </div>""""
               <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>""""
               <p className="text-gray-400 text-sm">{benefit.description}</p>
@@ -340,7 +340,7 @@ const AIWorkflowAutomation = () => {}
         </div>
       </div>
 """
-      {/* Technology Stack */}""""
+      {/* comment */}""""
       <div className="bg-gradient-to-r from-orange-600/20 to-red-600/20 border-t border-orange-500/20">""""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <motion.div initial = {}
@@ -353,7 +353,7 @@ const AIWorkflowAutomation = () => {}
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">""""
             <h2 className="text-4xl font-bold text-white mb-6">Technology Stack</h2>""""
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Built on cutting-edge AI and workflow technologies to ensure scalability, 
+              Built on cutting-edge AI and workflow technologies to ensure scalability,
               performance, and reliability for enterprise automation.
             </p>
           </motion.div>"""
@@ -371,7 +371,7 @@ const AIWorkflowAutomation = () => {}
 """"
 }} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 text-center hover:border-orange-500/50 transition-all duration-300">""""
                 <div className="w-16 h-16 bg-gradient-to-r from-orange-600 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">""""
-                  <tech.icon className="w-8 h-8 text-white"/>"""
+                  <tech.icon className="w-8 h-8 text-white" />"""
                 </div>""""
                 <h3 className="text-lg font-semibold text-white mb-2">{tech.name}</h3>""""
                 <p className="text-gray-400 text-sm">{tech.description}</p>
@@ -380,7 +380,7 @@ const AIWorkflowAutomation = () => {}
         </div>
       </div>
 """
-      {/* CTA Section */}""""
+      {/* comment */}""""
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <motion.div initial = {}
   { opacity: 0,
@@ -409,14 +409,8 @@ const AIWorkflowAutomation = () => {}
       </div>
     </div>)};
 export default AIWorkflowAutomation;
-
-
 export { AIWorkflowAutomation };
-
 export { AIWorkflowAutomation };
-
 export { AIWorkflowAutomation };
-
 export { AIWorkflowAutomation };
-
 export { AIWorkflowAutomation };

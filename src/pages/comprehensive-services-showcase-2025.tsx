@@ -1,31 +1,31 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import React from "react";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import { 
-  Brain, 
-  Atom, 
-  Shield, 
-  Cloud, 
-  Rocket, 
-  Zap, 
-  BarChart3, 
-  MessageSquare, 
-  Settings, 
-  Users, 
-  TrendingUp, 
-  Code, 
-  Database, 
-  Network, 
-  Lock, 
-  Eye, 
-  FileText, 
-  Globe, 
-  Target, 
-  Lightbulb, 
-  Award, 
-  Star, 
-  ArrowRight, 
-  CheckCircle, 
+  Brain,
+  Atom,
+  Shield,
+  Cloud,
+  Rocket,
+  Zap,
+  BarChart3,
+  MessageSquare,
+  Settings,
+  Users,
+  TrendingUp,
+  Code,
+  Database,
+  Network,
+  Lock,
+  Eye,
+  FileText,
+  Globe,
+  Target,
+  Lightbulb,
+  Award,
+  Star,
+  ArrowRight,
+  CheckCircle,
   Play,
   Building2,
   Cpu,
@@ -48,275 +48,271 @@ import {
   Workflow,
   MessageCircle,
   Workflow as WorkflowIcon
-} from 'lucide-react';
-
+} from "lucide-react";
 export function ComprehensiveServicesShowcase2025() {
   const serviceCategories = [
     {
-      id: 'ai-ml',
-      title: 'AI & Machine Learning',
+      id: "ai-ml",
+      title: "AI & Machine Learning",
       icon: Brain,
-      color: 'from-purple-500 to-cyan-500',
-      description: 'Revolutionary AI solutions that transform business operations',
+      color: "from-purple-500 to-cyan-500",
+      description: "Revolutionary AI solutions that transform business operations",
       services: [
         {
-          name: 'AI Autonomous Business Intelligence',
-          href: '/services/ai-autonomous-business-intelligence',
+          name: "AI Autonomous Business Intelligence",
+          href: "/services/ai-autonomous-business-intelligence",
           icon: BarChart3,
-          description: 'AI-powered insights generation without human intervention',
-          price: 'From $299/month',
-          features: ['Autonomous Data Analysis', 'Real-time Dashboards', 'Predictive Analytics']
+          description: "AI-powered insights generation without human intervention",
+          price: "From $299/month",
+          features: ["Autonomous Data Analysis", "Real-time Dashboards", "Predictive Analytics"]
         },
         {
-          name: 'AI Cybersecurity Threat Intelligence',
-          href: '/services/ai-cybersecurity-threat-intelligence',
+          name: "AI Cybersecurity Threat Intelligence",
+          href: "/services/ai-cybersecurity-threat-intelligence",
           icon: Shield,
-          description: 'AI-powered threat detection and response in real-time',
-          price: 'From $499/month',
-          features: ['AI-Powered Detection', 'Real-time Monitoring', 'Automated Response']
+          description: "AI-powered threat detection and response in real-time",
+          price: "From $499/month",
+          features: ["AI-Powered Detection", "Real-time Monitoring", "Automated Response"]
         },
         {
-          name: 'AI Customer Support Automation',
-          href: '/services/ai-customer-support-automation',
+          name: "AI Customer Support Automation",
+          href: "/services/ai-customer-support-automation",
           icon: MessageSquare,
-          description: 'Intelligent customer service with 24/7 availability',
-          price: 'From $199/month',
-          features: ['24/7 Support', 'Multi-language', 'Smart Routing']
+          description: "Intelligent customer service with 24/7 availability",
+          price: "From $199/month",
+          features: ["24/7 Support", "Multi-language", "Smart Routing"]
         },
         {
-          name: 'AI Project Management Platform',
-          href: '/services/ai-project-management-platform',
+          name: "AI Project Management Platform",
+          href: "/services/ai-project-management-platform",
           icon: Settings,
-          description: 'AI-enhanced project planning and execution',
-          price: 'From $399/month',
-          features: ['Smart Scheduling', 'Risk Prediction', 'Resource Optimization']
+          description: "AI-enhanced project planning and execution",
+          price: "From $399/month",
+          features: ["Smart Scheduling", "Risk Prediction", "Resource Optimization"]
         },
         {
-          name: 'AI Healthcare Analytics Platform',
-          href: '/services/ai-healthcare-analytics-platform',
+          name: "AI Healthcare Analytics Platform",
+          href: "/services/ai-healthcare-analytics-platform",
           icon: Heart,
-          description: 'Advanced healthcare data analysis and insights',
-          price: 'From $799/month',
-          features: ['Patient Analytics', 'Treatment Optimization', 'Compliance Ready']
+          description: "Advanced healthcare data analysis and insights",
+          price: "From $799/month",
+          features: ["Patient Analytics", "Treatment Optimization", "Compliance Ready"]
         },
         {
-          name: 'AI Legal Automation Platform',
-          href: '/services/ai-legal-document-automation-platform',
+          name: "AI Legal Automation Platform",
+          href: "/services/ai-legal-document-automation-platform",
           icon: FileText,
-          description: 'Automated legal document generation and analysis',
-          price: 'From $599/month',
-          features: ['Document Automation', 'Legal Research', 'Compliance Check']
+          description: "Automated legal document generation and analysis",
+          price: "From $599/month",
+          features: ["Document Automation", "Legal Research", "Compliance Check"]
         }
       ]
     },
     {
-      id: 'quantum-computing',
-      title: 'Quantum Computing',
+      id: "quantum-computing",
+      title: "Quantum Computing",
       icon: Atom,
-      color: 'from-blue-500 to-purple-600',
-      description: 'Next-generation computing power for complex problem solving',
+      color: "from-blue-500 to-purple-600",
+      description: "Next-generation computing power for complex problem solving",
       services: [
         {
-          name: 'Quantum AI Hybrid Platform',
-          href: '/services/quantum-ai-hybrid-platform',
+          name: "Quantum AI Hybrid Platform",
+          href: "/services/quantum-ai-hybrid-platform",
           icon: Brain,
-          description: 'Combines quantum computing with AI for breakthrough performance',
-          price: 'From $1,999/month',
-          features: ['Quantum Speedup', 'AI Hybrid Algorithms', 'Cloud Access']
+          description: "Combines quantum computing with AI for breakthrough performance",
+          price: "From $1,999/month",
+          features: ["Quantum Speedup", "AI Hybrid Algorithms", "Cloud Access"]
         },
         {
-          name: 'Quantum AI Trading Platform',
-          href: '/services/quantum-ai-trading-platform',
+          name: "Quantum AI Trading Platform",
+          href: "/services/quantum-ai-trading-platform",
           icon: TrendingUp,
-          description: 'Quantum-enhanced financial trading and analysis',
-          price: 'From $2,499/month',
-          features: ['Quantum Algorithms', 'Real-time Analysis', 'Risk Management']
+          description: "Quantum-enhanced financial trading and analysis",
+          price: "From $2,499/month",
+          features: ["Quantum Algorithms", "Real-time Analysis", "Risk Management"]
         },
         {
-          name: 'Quantum Computing as a Service',
-          href: '/services/quantum-computing-as-a-service',
+          name: "Quantum Computing as a Service",
+          href: "/services/quantum-computing-as-a-service",
           icon: Cloud,
-          description: 'Access quantum computing resources without hardware investment',
-          price: 'From $999/month',
-          features: ['Cloud Access', 'Multiple Qubits', 'Expert Support']
+          description: "Access quantum computing resources without hardware investment",
+          price: "From $999/month",
+          features: ["Cloud Access", "Multiple Qubits", "Expert Support"]
         },
         {
-          name: 'Quantum Machine Learning',
-          href: '/services/quantum-machine-learning',
+          name: "Quantum Machine Learning",
+          href: "/services/quantum-machine-learning",
           icon: Cpu,
-          description: 'Quantum-enhanced machine learning algorithms',
-          price: 'From $1,499/month',
-          features: ['Quantum ML Models', 'Faster Training', 'Better Accuracy']
+          description: "Quantum-enhanced machine learning algorithms",
+          price: "From $1,499/month",
+          features: ["Quantum ML Models", "Faster Training", "Better Accuracy"]
         }
       ]
     },
     {
-      id: 'cybersecurity',
-      title: 'Cybersecurity & Compliance',
+      id: "cybersecurity",
+      title: "Cybersecurity & Compliance",
       icon: Shield,
-      color: 'from-red-500 to-purple-600',
-      description: 'Enterprise-grade security solutions for modern threats',
+      color: "from-red-500 to-purple-600",
+      description: "Enterprise-grade security solutions for modern threats",
       services: [
         {
-          name: 'AI Cybersecurity Platform',
-          href: '/services/ai-cybersecurity-platform',
+          name: "AI Cybersecurity Platform",
+          href: "/services/ai-cybersecurity-platform",
           icon: Shield,
-          description: 'Comprehensive AI-powered cybersecurity protection',
-          price: 'From $399/month',
-          features: ['AI Detection', 'Threat Prevention', 'Compliance Ready']
+          description: "Comprehensive AI-powered cybersecurity protection",
+          price: "From $399/month",
+          features: ["AI Detection", "Threat Prevention", "Compliance Ready"]
         },
         {
-          name: 'Zero Trust Network Access',
-          href: '/services/zero-trust-network-access',
+          name: "Zero Trust Network Access",
+          href: "/services/zero-trust-network-access",
           icon: Lock,
-          description: 'Modern security architecture for distributed networks',
-          price: 'From $299/month',
-          features: ['Identity Verification', 'Micro-segmentation', 'Continuous Monitoring']
+          description: "Modern security architecture for distributed networks",
+          price: "From $299/month",
+          features: ["Identity Verification", "Micro-segmentation", "Continuous Monitoring"]
         },
         {
-          name: 'SOC2 Compliance Automation',
-          href: '/services/soc2-compliance-automation',
+          name: "SOC2 Compliance Automation",
+          href: "/services/soc2-compliance-automation",
           icon: Award,
-          description: 'Automated compliance management and reporting',
-          price: 'From $599/month',
-          features: ['Automated Audits', 'Real-time Monitoring', 'Compliance Reports']
+          description: "Automated compliance management and reporting",
+          price: "From $599/month",
+          features: ["Automated Audits", "Real-time Monitoring", "Compliance Reports"]
         }
       ]
     },
     {
-      id: 'cloud-infrastructure',
-      title: 'Cloud & Infrastructure',
+      id: "cloud-infrastructure",
+      title: "Cloud & Infrastructure",
       icon: Cloud,
-      color: 'from-cyan-500 to-blue-600',
-      description: 'Scalable cloud solutions and infrastructure management',
+      color: "from-cyan-500 to-blue-600",
+      description: "Scalable cloud solutions and infrastructure management",
       services: [
         {
-          name: 'Cloud DevOps',
-          href: '/services/cloud-devops',
+          name: "Cloud DevOps",
+          href: "/services/cloud-devops",
           icon: Cloud,
-          description: 'Streamlined development and operations in the cloud',
-          price: 'From $199/month',
-          features: ['CI/CD Pipelines', 'Infrastructure as Code', 'Monitoring']
+          description: "Streamlined development and operations in the cloud",
+          price: "From $199/month",
+          features: ["CI/CD Pipelines", "Infrastructure as Code", "Monitoring"]
         },
         {
-          name: 'IT Infrastructure Management',
-          href: '/services/it-infrastructure',
+          name: "IT Infrastructure Management",
+          href: "/services/it-infrastructure",
           icon: Database,
-          description: 'Comprehensive IT infrastructure monitoring and management',
-          price: 'From $299/month',
-          features: ['24/7 Monitoring', 'Performance Optimization', 'Proactive Maintenance']
+          description: "Comprehensive IT infrastructure monitoring and management",
+          price: "From $299/month",
+          features: ["24/7 Monitoring", "Performance Optimization", "Proactive Maintenance"]
         },
         {
-          name: 'FinOps Advisor',
-          href: '/services/finops-advisor',
+          name: "FinOps Advisor",
+          href: "/services/finops-advisor",
           icon: BarChart3,
-          description: 'Cloud cost optimization and financial operations',
-          price: 'From $399/month',
-          features: ['Cost Analysis', 'Optimization Recommendations', 'Budget Management']
+          description: "Cloud cost optimization and financial operations",
+          price: "From $399/month",
+          features: ["Cost Analysis", "Optimization Recommendations", "Budget Management"]
         }
       ]
     },
     {
-      id: 'digital-transformation',
-      title: 'Digital Transformation',
+      id: "digital-transformation",
+      title: "Digital Transformation",
       icon: Rocket,
-      color: 'from-green-500 to-emerald-600',
-      description: 'Strategic digital transformation consulting and implementation',
+      color: "from-green-500 to-emerald-600",
+      description: "Strategic digital transformation consulting and implementation",
       services: [
         {
-          name: 'Digital Twin',
-          href: '/services/digital-twin',
+          name: "Digital Twin",
+          href: "/services/digital-twin",
           icon: Rocket,
-          description: 'Digital replicas for simulation and optimization',
-          price: 'From $1,999/month',
-          features: ['Real-time Simulation', 'Predictive Analytics', 'Optimization']
+          description: "Digital replicas for simulation and optimization",
+          price: "From $1,999/month",
+          features: ["Real-time Simulation", "Predictive Analytics", "Optimization"]
         },
         {
-          name: 'Digital Transformation',
-          href: '/services/digital-transformation',
+          name: "Digital Transformation",
+          href: "/services/digital-transformation",
           icon: TrendingUp,
-          description: 'End-to-end digital transformation strategy and execution',
-          price: 'From $2,999/month',
-          features: ['Strategy Development', 'Implementation', 'Change Management']
+          description: "End-to-end digital transformation strategy and execution",
+          price: "From $2,999/month",
+          features: ["Strategy Development", "Implementation", "Change Management"]
         },
         {
-          name: 'IT Consulting',
-          href: '/it-consulting',
+          name: "IT Consulting",
+          href: "/it-consulting",
           icon: Users,
-          description: 'Expert IT consulting for business transformation',
-          price: 'From $150/hour',
-          features: ['Strategic Planning', 'Technology Selection', 'Implementation Support']
+          description: "Expert IT consulting for business transformation",
+          price: "From $150/hour",
+          features: ["Strategic Planning", "Technology Selection", "Implementation Support"]
         }
       ]
     },
     {
-      id: 'micro-saas',
-      title: 'Micro SaaS Solutions',
+      id: "micro-saas",
+      title: "Micro SaaS Solutions",
       icon: Building2,
-      color: 'from-orange-500 to-red-600',
-      description: 'Focused software solutions for specific business needs',
+      color: "from-orange-500 to-red-600",
+      description: "Focused software solutions for specific business needs",
       services: [
         {
-          name: 'Micro CRM',
-          href: '/services/micro-crm',
+          name: "Micro CRM",
+          href: "/services/micro-crm",
           icon: Users,
-          description: 'Lightweight customer relationship management',
-          price: 'From $49/month',
-          features: ['Contact Management', 'Sales Tracking', 'Email Integration']
+          description: "Lightweight customer relationship management",
+          price: "From $49/month",
+          features: ["Contact Management", "Sales Tracking", "Email Integration"]
         },
         {
-          name: 'Helpdesk Platform',
-          href: '/services/helpdesk',
+          name: "Helpdesk Platform",
+          href: "/services/helpdesk",
           icon: MessageSquare,
-          description: 'Efficient customer support and ticket management',
-          price: 'From $79/month',
-          features: ['Ticket Management', 'Knowledge Base', 'Customer Portal']
+          description: "Efficient customer support and ticket management",
+          price: "From $79/month",
+          features: ["Ticket Management", "Knowledge Base", "Customer Portal"]
         },
         {
-          name: 'Website Analytics',
-          href: '/services/website-analytics',
+          name: "Website Analytics",
+          href: "/services/website-analytics",
           icon: BarChart3,
-          description: 'Comprehensive website performance and user analytics',
-          price: 'From $39/month',
-          features: ['User Behavior', 'Performance Metrics', 'Conversion Tracking']
+          description: "Comprehensive website performance and user analytics",
+          price: "From $39/month",
+          features: ["User Behavior", "Performance Metrics", "Conversion Tracking"]
         }
       ]
     }
   ];
-
   const benefits = [
     {
       icon: Star,
-      title: 'Innovation First',
-      description: 'Cutting-edge technology solutions that keep you ahead of the competition'
+      title: "Innovation First",
+      description: "Cutting-edge technology solutions that keep you ahead of the competition"
     },
     {
       icon: Target,
-      title: 'Results Driven',
-      description: 'Measurable outcomes and ROI for all our services and solutions'
+      title: "Results Driven",
+      description: "Measurable outcomes and ROI for all our services and solutions"
     },
     {
       icon: Shield,
-      title: 'Enterprise Grade',
-      description: 'Professional solutions with enterprise-level security and reliability'
+      title: "Enterprise Grade",
+      description: "Professional solutions with enterprise-level security and reliability"
     },
     {
       icon: Users,
-      title: 'Expert Support',
-      description: 'Dedicated support team with deep technical expertise'
+      title: "Expert Support",
+      description: "Dedicated support team with deep technical expertise"
     }
   ];
-
   const stats = [
-    { number: '50+', label: 'Services & Solutions' },
-    { number: '1000+', label: 'Happy Clients' },
-    { number: '99.9%', label: 'Uptime SLA' },
-    { number: '24/7', label: 'Support Available' }
+    { number: "50+", label: "Services & Solutions" },
+    { number: "1000+", label: "Happy Clients" },
+    { number: "99.9%", label: "Uptime SLA" },
+    { number: "24/7", label: "Support Available" }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate-darker to-zion-slate-darkest">
-      {/* Hero Section */}
+      {/* comment */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20"></div>
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
@@ -327,7 +323,7 @@ export function ComprehensiveServicesShowcase2025() {
               transition={{ duration: 0.6 }}
               className="inline-flex items-center px-6 py-3 bg-zion-purple/20 border border-zion-purple/30 rounded-full text-zion-cyan text-lg font-medium mb-8"
             >
-              <Star className="w-5 h-5 mr-2" />
+              <Star className="w-5 h-5 mr-2"  />
               2025 Comprehensive Services Showcase
             </motion.div>
             <motion.h1
@@ -347,7 +343,7 @@ export function ComprehensiveServicesShowcase2025() {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="text-2xl text-gray-300 mb-12 leading-relaxed max-w-4xl mx-auto"
             >
-              Discover our comprehensive portfolio of cutting-edge AI, Quantum Computing, 
+              Discover our comprehensive portfolio of cutting-edge AI, Quantum Computing,
               Cybersecurity, and Micro SaaS solutions designed to transform your business 
               and drive innovation in 2025 and beyond.
             </motion.p>
@@ -362,21 +358,20 @@ export function ComprehensiveServicesShowcase2025() {
                 className="inline-flex items-center px-10 py-5 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-xl hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-zion-cyan/25 text-lg"
               >
                 Get Started Today
-                <ArrowRight className="ml-3 w-6 h-6" />
+                <ArrowRight className="ml-3 w-6 h-6"  />
               </Link>
               <Link
                 to="/demo"
                 className="inline-flex items-center px-10 py-5 border-2 border-zion-purple/30 text-zion-purple font-semibold rounded-xl hover:bg-zion-purple/10 transition-all duration-300 text-lg"
               >
-                <Play className="mr-3 w-6 h-6" />
+                <Play className="mr-3 w-6 h-6"  />
                 Watch Demo
               </Link>
             </motion.div>
           </div>
         </div>
       </section>
-
-      {/* Stats Section */}
+      {/* comment */}
       <section className="py-16 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -398,8 +393,7 @@ export function ComprehensiveServicesShowcase2025() {
           </div>
         </div>
       </section>
-
-      {/* Benefits Section */}
+      {/* comment */}
       <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -441,8 +435,7 @@ export function ComprehensiveServicesShowcase2025() {
           </div>
         </div>
       </section>
-
-      {/* Services Categories */}
+      {/* comment */}
       <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -484,7 +477,6 @@ export function ComprehensiveServicesShowcase2025() {
                     </p>
                   </div>
                 </div>
-
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {category.services.map((service, serviceIndex) => (
                     <motion.div
@@ -514,7 +506,7 @@ export function ComprehensiveServicesShowcase2025() {
                       <ul className="space-y-2 mb-6">
                         {service.features.map((feature, featureIndex) => (
                           <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                            <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
+                            <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0"  />
                             {feature}
                           </li>
                         ))}
@@ -524,7 +516,7 @@ export function ComprehensiveServicesShowcase2025() {
                         className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light font-medium text-sm group-hover:underline transition-colors"
                       >
                         Learn More
-                        <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                        <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"  />
                       </Link>
                     </motion.div>
                   ))}
@@ -534,8 +526,7 @@ export function ComprehensiveServicesShowcase2025() {
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
+      {/* comment */}
       <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -558,7 +549,7 @@ export function ComprehensiveServicesShowcase2025() {
                 className="inline-flex items-center px-10 py-5 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-xl hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300 transform hover:scale-105 text-lg"
               >
                 Start Your Journey
-                <ArrowRight className="ml-3 w-6 h-6" />
+                <ArrowRight className="ml-3 w-6 h-6"  />
               </Link>
               <Link
                 to="/pricing"
@@ -570,8 +561,7 @@ export function ComprehensiveServicesShowcase2025() {
           </motion.div>
         </div>
       </section>
-
-      {/* Footer */}
+      {/* comment */}
       <footer className="py-12 border-t border-zion-slate">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-gray-400">

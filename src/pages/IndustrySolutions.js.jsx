@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {}
   Search,
   Zap,
@@ -9,101 +9,100 @@ import {}
   MapPin,
   Building,
   Factory,
-  Store,'
-  Home,''
-  GraduationCap,'''
-  Stethoscope} from 'lucide-react';
+  Store,"
+  Home,""
+  GraduationCap,"""
+  Stethoscope} from "lucide-react";
 const IndustrySolutions = () => {}
-'
-  const [searchTerm, setSearchTerm] = useState('');'
-  const [selectedIndustry, setSelectedIndustry] = useState('all');'
-  const [selectedSolutionType, setSelectedSolutionType] = useState('all');
-  // Industry-specific solutions data'
-  const industries = [''
-    'all',Healthcare',Finance',Manufacturing',Retail',Education',Logistics',Real Estate',Energy',Cybersecurity',Legal',Media',Transportation'
-  ];'
-  const solutionTypes = [''
-    'all',Digital Health',FinTech',Industry 4.0',Digital Commerce',EdTech',Supply Chain',PropTech',Energy Tech',Security',LegalTech',MediaTech',Mobility'
+"
+  const [searchTerm, setSearchTerm] = useState("");"
+  const [selectedIndustry, setSelectedIndustry] = useState("all");"
+  const [selectedSolutionType, setSelectedSolutionType] = useState("all");
+  // Industry-specific solutions data"
+  const industries = [""
+    "all",Healthcare",Finance",Manufacturing",Retail",Education",Logistics",Real Estate",Energy",Cybersecurity",Legal",Media",Transportation"
+  ];"
+  const solutionTypes = [""
+    "all",Digital Health",FinTech",Industry 4.0",Digital Commerce",EdTech",Supply Chain",PropTech",Energy Tech",Security",LegalTech",MediaTech",Mobility"
   ];
   const filteredSolutions = industrySolutions.filter(solution => {}
-'
-''
-'''
-    const matchesSolutionType =''''
-      selectedSolutionType === 'all' ||
+"
+""
+"""
+    const matchesSolutionType =""""
+      selectedSolutionType === "all" ||
       solution.solutionType === selectedSolutionType;
     return matchesSearch && matchesIndustry && matchesSolutionType;
   });
   const formatPrice = (price, model) => {}
     switch (model) {}
-'
-      case 'monthly': any;
-        return `$${price.toLocaleString()}/month`;'`
-      case 'hourly':``
-        return `$${price}/hour`;'`
-      case 'project-based':``
-        return `$${price.toLocaleString()}`;`
-      default:``
-        return `$${price.toLocaleString()}`;
+"
+      case "monthly": any;
+        return "$${price.toLocaleString()}/month";""
+      case "hourly":""
+        return "$${price}/hour";""
+      case "project-based":""
+        return "$${price.toLocaleString()}";"
+      default:""
+        return "$${price.toLocaleString()}";
     }
   };
   const getIndustryColor = score => {}
-'
-''
-'''
-    if (score >= 95) return 'text-green-500';'''
-    if (score >= 90) return 'text-blue-500';'''
-    if (score >= 85) return 'text-yellow-500';'''
-    return 'text-orange-500';
+"
+""
+"""
+    if (score >= 95) return "text-green-500";"""
+    if (score >= 90) return "text-blue-500";"""
+    if (score >= 85) return "text-yellow-500";"""
+    return "text-orange-500";
   };
   const getIndustryIcon = industry => {}
     switch (industry) {}
-'
-      case 'Healthcare': any;
-        return <Stethoscope className="w-6 h-6" />;'"""
-      case 'Finance':""""
-        return <CreditCard className="w-6 h-6" />;'"""
-      case 'Manufacturing':""""
-        return <Factory className="w-6 h-6" />;'"""
-      case 'Retail':""""
-        return <Store className="w-6 h-6" />;'"""
-      case 'Education':""""
-        return <GraduationCap className="w-6 h-6" />;'"""
-      case 'Logistics':""""
-        return <Truck className="w-6 h-6" />;'"""
-      case 'Real Estate':""""
-        return <Home className="w-6 h-6" />;'"""
-      case 'Energy':""""
-        return <Zap className="w-6 h-6" />;"""
+"
+      case "Healthcare": any;
+        return <Stethoscope className="w-6 h-6"  />;""""
+      case "Finance":""""
+        return <CreditCard className="w-6 h-6"  />;""""
+      case "Manufacturing":""""
+        return <Factory className="w-6 h-6"  />;""""
+      case "Retail":""""
+        return <Store className="w-6 h-6"  />;""""
+      case "Education":""""
+        return <GraduationCap className="w-6 h-6"  />;""""
+      case "Logistics":""""
+        return <Truck className="w-6 h-6"  />;""""
+      case "Real Estate":""""
+        return <Home className="w-6 h-6"  />;""""
+      case "Energy":""""
+        return <Zap className="w-6 h-6"  />;"""
       default:""""
-        return <Building className="w-6 h-6" />;
+        return <Building className="w-6 h-6"  />;
     }
   };"""
   return (""""
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">""""
       <div className="container mx-auto px-4 py-8">"""
-        {/* Header */}""""
+        {/* comment */}""""
         <div className="text-center mb-12">""""
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-green-400 to-blue-600 bg-clip-text text-transparent mb-4">
             Industry Solutions"""
           </h1>""""
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">'
-            Specialized technology solutions designed for your industry's unique;
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">"
+            Specialized technology solutions designed for your industry"s unique;
             challenges and compliance requirements;
           </p>
         </div>
 """
-        {/* Search and Filters */}""""
+        {/* comment */}""""
         <div className="mb-8 space-y-4">""""
           <div className="relative">""""
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />"""
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />"""
             <input""""
               type="text""""
               placeholder="Search industry solutions..."""
               value={searchTerm}"""
               onChange={e => setSearchTerm(e.target.value)}""""
-              className="w-full pl-10 pr-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"""
-            />
+              className="w-full pl-10 pr-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent""" />
           </div>"""
 """"
           <div className="flex flex-wrap gap-4">
@@ -117,12 +116,11 @@ const IndustrySolutions = () => {}
                   key={industry}"""
                   value={industry}""""
                   className="bg-gray-800 text-white"""
-                >'
-                  {industry === 'all' ? 'All Industries' : industry}
+                >"
+                  {industry === "all" ? "All Industries" : industry}
                 </option>
               ))}
             </select>
-
             <select;
               value={selectedSolutionType}"""
               onChange={e => setSelectedSolutionType(e.target.value)}""""
@@ -133,15 +131,15 @@ const IndustrySolutions = () => {}
                   key={type}"""
                   value={type}""""
                   className="bg-gray-800 text-white"""
-                >'
-                  {type === 'all' ? 'All Solution Types' : type}
+                >"
+                  {type === "all" ? "All Solution Types" : type}
                 </option>
               ))}
             </select>
           </div>
         </div>
 """
-        {/* Solutions Grid */}""""
+        {/* comment */}""""
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredSolutions.map(solution => (
             <div"""
@@ -157,8 +155,8 @@ const IndustrySolutions = () => {}
                     <h3 className="text-xl font-semibold text-white">
                       {solution.name}"""
                     </h3>""""
-                    <div className="flex items-center gap-2">`
-                      <span``
+                    <div className="flex items-center gap-2">"
+                      <span""
                         className={`px-2 py-1 text-xs font-medium rounded-full ${getIndustryColor(solution.industryScore)} bg-opacity-20 bg-current`}
                       >
                         Industry Score: {solution.industryScore}"""
@@ -177,8 +175,8 @@ const IndustrySolutions = () => {}
                 <div className="text-2xl font-bold text-white mb-2">
                   {formatPrice(solution.price, solution.pricingModel)}"""
                 </div>""""
-                <div className="text-sm text-gray-400">'
-                  {solution.pricingModel.replace('-',)}
+                <div className="text-sm text-gray-400">"
+                  {solution.pricingModel.replace("-",)}
                 </div>
               </div>"""
 """"
@@ -231,37 +229,37 @@ const IndustrySolutions = () => {}
           ))}
         </div>
 """
-        {/* Contact Information */}""""
+        {/* comment */}""""
         <div className="mt-16 text-center">""""
           <div className="bg-white/5 backdrop-blur-sm border border-gray-600 rounded-xl p-8">""""
             <h2 className="text-2xl font-bold text-white mb-4">
               Need Industry-Specific Solutions?"""
             </h2>""""
-            <p className="text-gray-300 mb-6">'
-              Our team has deep expertise in your industry's unique challenges;
+            <p className="text-gray-300 mb-6">"
+              Our team has deep expertise in your industry"s unique challenges;
               and compliance requirements"""
             </p>""""
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">"""
               <div>""""
-                <Phone className="w-8 h-8 text-blue-400 mx-auto mb-2" />""""
+                <Phone className="w-8 h-8 text-blue-400 mx-auto mb-2"  />""""
                 <p className="text-white font-semibold">Phone</p>""""
                 <p className="text-gray-300">
                   {industrySolutions[0].contactInfo.phone}
                 </p>
               </div>"""
               <div>""""
-                <Mail className="w-8 h-8 text-blue-400 mx-auto mb-2" />""""
+                <Mail className="w-8 h-8 text-blue-400 mx-auto mb-2"  />""""
                 <p className="text-white font-semibold">Email</p>""""
                 <p className="text-gray-300">
                   {industrySolutions[0].contactInfo.email}
                 </p>
               </div>"""
               <div>""""
-                <MapPin className="w-8 h-8 text-blue-400 mx-auto mb-2" />""""
+                <MapPin className="w-8 h-8 text-blue-400 mx-auto mb-2"  />""""
                 <p className="text-white font-semibold">Address</p>""""
                 <p className="text-gray-300">
                   364 E Main St STE 1008;
-                  <br />
+                  <br  />
                   Middletown DE 19709;
                 </p>
               </div>
@@ -271,14 +269,8 @@ const IndustrySolutions = () => {}
       </div>
     </div>)};
 export default IndustrySolutions;
-
-
 export { IndustrySolutions };
-
 export { IndustrySolutions };
-
 export { IndustrySolutions };
-
 export { IndustrySolutions };
-
 export { IndustrySolutions };

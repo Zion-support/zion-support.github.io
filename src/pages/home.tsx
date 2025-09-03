@@ -1,12 +1,9 @@
-import React from 'react';
-import { SEO } from '../components/SEO';
-
+import React from "react";
+import { SEO } from "../components/SEO";
 const Home: React.FC = () => {
   return(<>
-      <SEO 
-        title="Zion Tech Group - Leading Technology Solutions"
-        description="Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services."
-      />
+      <SEO title="Zion Tech Group - Leading Technology Solutions"
+        description="Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services."  />
       <div className="min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700">
         <section className="relative py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
@@ -14,7 +11,7 @@ const Home: React.FC = () => {
               Zion Tech Group
             </h1>
             <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Leading technology solutions provider specializing in AI, cybersecurity, 
+              Leading technology solutions provider specializing in AI, cybersecurity,
               cloud infrastructure, and digital transformation services.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
@@ -36,5 +33,4 @@ const Home: React.FC = () => {
     </>
   );
 };
-
 export default Home;

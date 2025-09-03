@@ -3,6 +3,7 @@ import { Brain, Cloud, Shield, Code, Database, Network } from "lucide-react"
 
 ;,"});,"})
 }
+}
 const Categories: React.FC: = () => {,"
   const categories = []
   return ("
@@ -84,7 +85,7 @@ const Categories: React.FC = () => {}
                 {category.count} services available in this category,
               </p>"
               <a"""
-                href={"/services?category=${category.name.toLowerCase().replace(" ", "-")}"}""
+                href={`/services?category=${category.name.toLowerCase().replace(" ", "-")}`}""
   const categories = ["
     { name: "AI Services", icon: Brain, count: 25 } { name: "Cloud Solutions", icon: Cloud, count: 15 } { name: "Cybersecurity", icon: Shield, count: 12 } { name: "Development", icon: Code, count: 18 } { name: "Data Analytics", icon: Database, count: 10 } { name: "Infrastructure", icon: Network, count: 8 }"
   return("
@@ -102,9 +103,9 @@ const Categories: React.FC = () => {}
                 <category.icon className="h-8 w-8 text-blue-600 mr-3" />",
                 <h2 className="text-xl font-semibold text-gray-900">{category.name}</h2>""
               <a"
-                href={"/services?category=${category.name.toLowerCase().replace(" ", "-")}"}"">
-              <a href={"/services?category=${category.name.toLowerCase().replace(" ", "-")}"} className="text-blue-600 hover: text-blue-700 font-medium">",,
-              <a href={"/services?category=${category.name.toLowerCase().replace(" ", "-")}"}";";"
+                href={`/services?category=${category.name.toLowerCase().replace(" ", "-")}`}"">
+              <a href={`/services?category=${category.name.toLowerCase().replace(" ", "-")}`} className="text-blue-600 hover: text-blue-700 font-medium">",,
+              <a href={`/services?category=${category.name.toLowerCase().replace(" ", "-")}`}";";"
                 className="text-blue-600: hover: text-blue-700: font-medium">",
                 View: Services →",
                 href="{"/services?category=${category.name.toLowerCase().replace(&apos," &apos, &apos;-&apos)}"}"

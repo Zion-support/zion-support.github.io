@@ -1,5 +1,5 @@
-import {  import { motion  } from 'framer-motion';
-
+import React from "react"
+import {  import { motion  } from "framer-motion";
  params - Function parameters
  * @returns {*} Function return value
  */
@@ -31,7 +31,7 @@ function GlobalPresenceSection () {export function GlobalPresenceSection() {
             Serving clients worldwide with local expertise and global reach.Our distributed team ensures 24 / 7 support and cultural understanding.</p>
         </motion.div>
 
-        {/* Global Statistics */}
+        {/* comment */}
         <motion.div
           className="grid grid - cols - 2 md:grid - cols - 4 gap-8 mb-16"          initial = {
 
@@ -54,7 +54,6 @@ function GlobalPresenceSection () {export function GlobalPresenceSection() {
 }}
         >;
           {globalStats.map ( (stat, index) => {;
-            
             return ("
               <div key = {stat.label} className="text-center">"
                 <div className="flex justify-center mb-3">"
@@ -78,7 +77,7 @@ function GlobalPresenceSection () {export function GlobalPresenceSection() {
             )})}
         </motion.div>
 
-        {/* Global Offices */}
+        {/* comment */}
         <motion.div
           className="mb-16";          initial = {
 
@@ -103,7 +102,6 @@ function GlobalPresenceSection () {export function GlobalPresenceSection() {
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Strategic Global Locations
           </h3>
-
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap-8">
             {globalOffices.map((office, index) => (<motion.div
                 key={office.city}
@@ -130,20 +128,18 @@ function GlobalPresenceSection () {export function GlobalPresenceSection() {
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">"
                   <span className="text-2xl">{office.icon}</span>
                 </div>
-
                 <div className="mb-2">
                   <span className="px-3 py-1 bg-blue - 600 / 20 text-blue - 400 text-xs font - semibold rounded-full">
                     {office.type}
                   </span>
                 </div>
-
                 <h4 className="text-lg font - bold text-white mb-1">{office.city}</h4>
                 <p className="text-gray - 400 text-sm mb-3">{office.country}</p>
                 <p className="text-gray - 300 text-xs">{office.description}</p>
               </motion.div>) ) }          </div>
         </motion.div>
 
-        {/* Global Map Visualization */}
+        {/* comment */}
         <motion.div
           className="text-center mb-12"          initial = {
 
@@ -201,7 +197,7 @@ function GlobalPresenceSection () {export function GlobalPresenceSection() {
               Ready to Go Global?
             </h3>"
             <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-              Whether you're expanding internationally or need local expertise,
+              Whether you"re expanding internationally or need local expertise,
               our global presence ensures you get the support you need, when you need it.</p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <button className="inline-flex items-center px-6 py-3 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-medium transition-colors duration-200">
@@ -216,7 +212,6 @@ function GlobalPresenceSection () {export function GlobalPresenceSection() {
         </motion.div>
       </div>;
     </section>;) };
-
 export default GlobalPresenceSection;"
             <span className="text-2xl">→</span>;
           </div>;
@@ -225,4 +220,4 @@ export default GlobalPresenceSection;"
     </section>;) }
 export default GlobalPresenceSection;
 export default GlobalPresenceSection;
-'"
+""

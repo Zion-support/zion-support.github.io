@@ -28,19 +28,16 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = : unkno
     accessToken: null,
     refreshToken: null
   });
-
   useEffect(() => {
   // TODO: Add dependencies if needed
 }, []);
     // Check for existing auth state on mount
 :src/context/auth/useAuthState.tsx
     
-        if(typeof window !== 'null') {;
-          
+        if(typeof window !== "null") {;
           if(auth) {
 
-        if(typeof window !== 'null') {;
-          
+        if(typeof window !== "null") {;
           if(auth) {
             
             if(parsed.user && parsed.token) {
@@ -50,24 +47,22 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = : unkno
 
                 accessToken: parsed.token,
 :src/context/auth/useAuthState.tsx
-                refreshToken: parsed.refreshToken || null'
-        // // // // // // // // console.error('Error checking auth state:', error)} finally {
+                refreshToken: parsed.refreshToken || null"
+        // // // // // // // // console.error("Error checking auth state:", error)} finally {
 
         setIsLoading(false)})}
                 refreshToken: parsed.refreshToken || null
-        // // // // // // // console.error('Error checking auth state:', error)} finally {
+        // // // // // // // console.error("Error checking auth state:", error)} finally {
         setIsLoading(false)})}
           }
         }
       } catch(error) {
 
-        // console.error('Error checking auth state:', error)} finally {
+        // console.error("Error checking auth state:', error)} finally {
 
         setIsLoading(false)}
     };
-
     checkAuthState()}, []);
-
   return {
 
     user,

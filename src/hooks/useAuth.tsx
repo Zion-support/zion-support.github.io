@@ -4,7 +4,7 @@ interface User {
   id: string;
   email: string;
   name: string;
-  role: 'user' | 'admin' | 'moderator';
+  role: "user" | "admin" | "moderator";
   userType?: string;
   displayName?: string;
 :src/hooks/useAuth.tsx
@@ -27,9 +27,9 @@ export function useAuth(...args: unknown[]): unknown {
     user: null,
     isAuthenticated: false,
     isLoading: true});
-
   useEffect(: unknown {
     // Check if user is logged in (e.g., check localStorage, cookies, etc.)
+}
 :src/hooks/useAuth.tsx
 
       if(storedUser && token) {
@@ -43,10 +43,10 @@ export function useAuth(...args: unknown[]): unknown {
 :src/hooks/useAuth.tsx
             isLoading: false})} catch(error) {
 
-          // console.error('Error parsing stored user:', error);
+          // console.error("Error parsing stored user:", error);
             isLoading: false,
           })} catch(error) {
-          console.error('Error parsing stored user:', error);
+          console.error("Error parsing stored user:", error);
           setAuthState({
 
             user: null,
@@ -64,50 +64,37 @@ export function useAuth(...args: unknown[]): unknown {
 :src/hooks/useAuth.tsx
           isLoading: false})}
     };
-
     checkAuth()}, []);
-
           isLoading: false,
         })}
     };
-
     checkAuth()}, []);
-
     setAuthState({
 
       user: mockUser,
       isAuthenticated: true,
       isLoading: false});
-
-    // Store user data in localStorage'
-    localStorage.setItem('zion_user', JSON.stringify(mockUser));
-    localStorage.setItem('authToken',mock-jwt-token');
-
+    // Store user data in localStorage"
+    localStorage.setItem("zion_user", JSON.stringify(mockUser));
+    localStorage.setItem("authToken",mock-jwt-token");
 :src/hooks/useAuth.tsx
     return { success: true, user: mockUser }};
-
-    // Clear localStorage'
-    localStorage.removeItem('zion_user');
-    localStorage.removeItem('authToken')};
-
+    // Clear localStorage"
+    localStorage.removeItem("zion_user");
+    localStorage.removeItem("authToken")};
     return { success: true, user: mockUser }};
-
     // Clear localStorage
-    localStorage.removeItem('zion_user');
-    localStorage.removeItem('authToken')};
-
+    localStorage.removeItem("zion_user");
+    localStorage.removeItem("authToken")};
     setAuthState({
 
       user: mockUser,
       isAuthenticated: true,
       isLoading: false});
-
-    // Store user data in localStorage'
-    localStorage.setItem('zion_user', JSON.stringify(mockUser));
-    localStorage.setItem('authToken',mock-jwt-token');
-
+    // Store user data in localStorage"
+    localStorage.setItem("zion_user", JSON.stringify(mockUser));
+    localStorage.setItem("authToken",mock-jwt-token");
     return { success: true, user: mockUser }};
-
 :src/hooks/useAuth.tsx
   
       setAuthState(prev => ({
@@ -115,13 +102,11 @@ export function useAuth(...args: unknown[]): unknown {
 :src/hooks/useAuth.tsx
         ...prev,
         user: updatedUser}));
-
-      // Update localStorage'
-      localStorage.setItem('zion_user', JSON.stringify(updatedUser))}
+      // Update localStorage"
+      localStorage.setItem("zion_user", JSON.stringify(updatedUser))}
       // Update localStorage
-      localStorage.setItem('zion_user', JSON.stringify(updatedUser))}
+      localStorage.setItem("zion_user", JSON.stringify(updatedUser))}
   };
-
   return {
 
     ...authState,

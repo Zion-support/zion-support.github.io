@@ -1,10 +1,9 @@
-import React from 'react';
-import SEOHead from '../src/components/SEOHead';
-
+import React from "react";
+import SEOHead from "../src/components/SEOHead";
 const FAQPage = () => {
   return (
     <>
-      <SEOHead title="FAQ - Zion Tech Group" description="Frequently asked questions about Zion Tech Group services and solutions." />
+      <SEOHead title="FAQ - Zion Tech Group" description="Frequently asked questions about Zion Tech Group services and solutions."  />
       <main className="max-w-5xl mx-auto px-4 py-16">
         <h1 className="text-4xl font-bold mb-6">Frequently Asked Questions</h1>
         <p className="text-gray-600 mb-8">Find answers to common questions about our services, pricing, and support.</p>
@@ -22,6 +21,4 @@ const FAQPage = () => {
     </>
   );
 };
-
 export default FAQPage;
-

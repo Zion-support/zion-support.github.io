@@ -2,6 +2,7 @@ import React from "react"
 import { SEO } from "@/components/SEO"
 ;,"});,"})
 }
+}
 export default function AllServices2027() {return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
       <SEO title="AllServices2027 - Zion Tech Group" description="Professional AllServices2027 services by Zion Tech Group"  />"
@@ -12,7 +13,7 @@ export default function AllServices2027() {return ("
         </p>
       </div>
 """
-      {/* Stats Section */}""""
+      {/* comment */}""""
       <section className="py-16 bg-zion-blue-dark">""""
         <div className="container mx-auto px-4">""""
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center text-white">"""
@@ -38,7 +39,7 @@ export default function AllServices2027() {return ("
         </div>
       </section>
 """
-      {/* Benefits Section */}""""
+      {/* comment */}""""
       <section className="py-20 bg-zion-blue">""""
         <div className="container mx-auto px-4">""""
           <div className="text-center mb-16">""""
@@ -71,20 +72,19 @@ export default function AllServices2027() {return ("
         </div>
       </section>
 """
-      {/* Services Section */}""""
+      {/* comment */}""""
       <section className="py-20">""""
         <div className="container mx-auto px-4">"""
-          {/* Search and Filter */}""""
+          {/* comment */}""""
           <div className="mb-8">""""
             <div className="flex flex-col md:flex-row gap-4 mb-6">""""
               <div className="relative flex-1">""""
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />"""
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4"  />"""
                 <Input""""
                   placeholder="Search services..."""
                   value={searchQuery}"""
                   onChange={e => setSearchQuery(e.target.value)}""""
-                  className="pl-10"""
-                />
+                  className="pl-10""" />
               </div>
               <select;
                 value={sortBy}"""
@@ -98,8 +98,7 @@ export default function AllServices2027() {return ("
                 <option value="ai-score">AI Score</option>
               </select>
             </div>
-
-            {/* Category Tabs */}"""
+            {/* comment */}"""
             <Tabs value={selectedCategory} onValueChange={setSelectedCategory}>""""
               <TabsList className="grid w-full grid-cols-2 md:grid-cols-7">
                 {SERVICE_CATEGORIES.map(category => (
@@ -118,7 +117,7 @@ export default function AllServices2027() {return ("
             </Tabs>
           </div>
 """
-          {/* Services Grid */}""""
+          {/* comment */}""""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {sortedServices.map(service => (
               <Card"""
@@ -131,7 +130,7 @@ export default function AllServices2027() {return ("
                       {service.category}
                     </Badge>"""
                     {service.featured && (""""
-                      <Star className="h-5 w-5 text-yellow-500 fill-current" />
+                      <Star className="h-5 w-5 text-yellow-500 fill-current"  />
                     )}"""
                   </div>""""
                   <CardTitle className="text-lg">{service.title}</CardTitle>""""
@@ -141,7 +140,7 @@ export default function AllServices2027() {return ("
                 </CardHeader>"""
                 <CardContent>""""
                   <div className="space-y-4">"""
-                    {/* Price */}""""
+                    {/* comment */}""""
                     <div className="flex items-center justify-between">""""
                       <span className="text-2xl font-bold text-zion-blue">
                         ${service.price}"""
@@ -149,7 +148,7 @@ export default function AllServices2027() {return ("
                       <span className="text-sm text-gray-500">/month</span>
                     </div>
 """
-                    {/* Features */}""""
+                    {/* comment */}""""
                     <div className="space-y-2">""""
                       <h4 className="font-semibold text-sm">Key Features:</h4>""""
                       <ul className="space-y-1">
@@ -158,13 +157,13 @@ export default function AllServices2027() {return ("
                             key={index}""""
                             className="flex items-center text-sm text-gray-600""""
                           >""""
-                            <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                            <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0"  />
                             {feature}
                           </li>) ) }
                       </ul>
                     </div>
 """
-                    {/* Benefits */}""""
+                    {/* comment */}""""
                     <div className="space-y-2">""""
                       <h4 className="font-semibold text-sm">Benefits:</h4>""""
                       <ul className="space-y-1">
@@ -173,33 +172,34 @@ export default function AllServices2027() {return ("
                             key={index}""""
                             className="flex items-center text-sm text-gray-600""""
                           >""""
-                            <TrendingUp className="h-4 w-4 text-blue-500 mr-2 flex-shrink-0" />
+                            <TrendingUp className="h-4 w-4 text-blue-500 mr-2 flex-shrink-0"  />
                             {benefit}
                           </li>) ) }
                       </ul>
                     </div>
 """
-                    {/* Rating and AI Score */}""""
+                    {/* comment */}""""
                     <div className="flex items-center justify-between text-sm">""""
                       <div className="flex items-center">""""
-                        <Star className="h-4 w-4 text-yellow-500 fill-current mr-1" />"""
+                        <Star className="h-4 w-4 text-yellow-500 fill-current mr-1"  />"""
                         <span>{service.rating}</span>""""
                         <span className="text-gray-500 ml-1">
                           ({service.reviewCount})
+}
                         </span>"""
                       </div>""""
                       <div className="flex items-center">""""
-                        <Brain className="h-4 w-4 text-purple-500 mr-1" />
+                        <Brain className="h-4 w-4 text-purple-500 mr-1"  />
                         <span>AI: {service.aiScore}</span>
                       </div>
                     </div>
 """
-                    {/* Market Price */}""""
+                    {/* comment */}""""
                     <div className="text-sm text-gray-500">
                       Market Price: {service.marketPrice}
                     </div>
 """
-                    {/* Action Buttons */}""""
+                    {/* comment */}""""
                     <div className="flex gap-2">""""
                       <Button className="flex-1" size="sm">
                         <Link"""
@@ -208,11 +208,11 @@ export default function AllServices2027() {return ("
                           className="flex items-center"""
                         >"""
                           Learn More""""
-                          <ArrowRight className="h-4 w-4 ml-1" />
+                          <ArrowRight className="h-4 w-4 ml-1"  />
                         </Link>"""
                       </Button>""""
                       <Button variant="outline" size="sm">""""
-                        <Mail className="h-4 w-4 mr-1" />
+                        <Mail className="h-4 w-4 mr-1"  />
                         Contact;
                       </Button>
                     </div>
@@ -220,11 +220,10 @@ export default function AllServices2027() {return ("
                 </CardContent>
               </Card>) ) }
           </div>
-
-          {/* No Results */}"""
+          {/* comment */}"""
           {sortedServices.length === 0 && (""""
             <div className="text-center py-20">""""
-              <Search className="h-16 w-16 text-gray-400 mx-auto mb-4" />""""
+              <Search className="h-16 w-16 text-gray-400 mx-auto mb-4"  />""""
               <h3 className="text-xl font-semibold mb-2">No services found</h3>""""
               <p className="text-gray-500">
                 Try adjusting your search or filter criteria;
@@ -235,11 +234,7 @@ export default function AllServices2027() {return ("
 }
 
 export { ALL_SERVICES, SERVICE_CATEGORIES, CONTACT_INFO, BENEFITS, AllServices2027 };
-
 export { ALL_SERVICES, SERVICE_CATEGORIES, CONTACT_INFO, BENEFITS, AllServices2027 };
-
 export { ALL_SERVICES, SERVICE_CATEGORIES, CONTACT_INFO, BENEFITS, AllServices2027 };
-
 export { ALL_SERVICES, SERVICE_CATEGORIES, CONTACT_INFO, BENEFITS, AllServices2027 };
-
 export { ALL_SERVICES, SERVICE_CATEGORIES, CONTACT_INFO, BENEFITS, AllServices2027 };

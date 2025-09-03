@@ -1,5 +1,5 @@
-import {  import { motion, AnimatePresence  } from 'framer-motion';
-
+import React from "react"
+import {  import { motion, AnimatePresence  } from "framer-motion";
 export default function Page() {
 interface SEOMetrics {
   pageSpeed: number;
@@ -31,70 +31,70 @@ autoAnalyze:  true,;
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [currentUrl, setCurrentUrl] = useState(url || window.location.href);
   const [showAdvanced, setShowAdvanced] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState<any>('all');
-
+  const [selectedCategory, setSelectedCategory] = useState<any>("all");
   // Mock SEO analysis data(in real app, this would come from actual analysis)
+}
   const mockAnalysis: SEOAnalysis = useMemo(() => ({
 
     score: 87,
     issues[;
       {
 
-        id: '1',
-        type: 'warning',
-        title: 'Missing Meta Description',
-        description: 'The page is missing a meta description tag, which is important for search engine snippets.',
-        impact: 'medium',
+        id: "1",
+        type: "warning",
+        title: "Missing Meta Description",
+        description: "The page is missing a meta description tag, which is important for search engine snippets.",
+        impact: "medium",
         fixable: true,
-        category: 'content'
+        category: "content"
       },
       {
 
-        id: '2',
-        type: 'error',
-        title: 'Slow Page Load Time',
-        description: 'Page load time is above the recommended 3-second threshold.',
-        impact: 'high',
+        id: "2",
+        type: "error",
+        title: "Slow Page Load Time",
+        description: "Page load time is above the recommended 3-second threshold.",
+        impact: "high",
         fixable: true,
-        category: 'performance'
+        category: "performance"
       },
       {
 
-        id: '3',
-        type: 'info',
-        title: 'Missing Alt Text',
-        description: 'Some images are missing alt text, which affects accessibility.',
-        impact: 'low',
+        id: "3",
+        type: "info",
+        title: "Missing Alt Text",
+        description: "Some images are missing alt text, which affects accessibility.",
+        impact: "low",
         fixable: true,
-        category: 'accessibility'
+        category: "accessibility"
 
     ],;
     suggestions[;
       {
 
-        id: '1',
-        title: 'Optimize Images',
-        description: 'Compress and optimize images to improve page load speed.',
-        priority: 'high',
-        effort: 'medium',
+        id: "1",
+        title: "Optimize Images",
+        description: "Compress and optimize images to improve page load speed.",
+        priority: "high",
+        effort: "medium",
         estimatedImpact: 15
       },
       {
 
-        id: '2',
-        title: 'Add Schema Markup',
-        description: 'Implement structured data to improve search engine understanding.',
-        priority: 'medium',
-        effort: 'low',
+        id: "2",
+        title: "Add Schema Markup",
+        description: "Implement structured data to improve search engine understanding.",
+        priority: "medium",
+        effort: "low",
         estimatedImpact: 8
       },
       {
 
-        id: '3',
-        title: 'Improve Internal Linking',
-        description: 'Add more internal links to improve page authority distribution.',
-        priority: 'low',
-        effort: 'low',
+        id: "3",
+        title: "Improve Internal Linking",
+        description: "Add more internal links to improve page authority distribution.",
+        priority: "low",
+        effort: "low",
         estimatedImpact: 5
 
     ],;
@@ -110,13 +110,10 @@ autoAnalyze:  true,;
         fid: 45,;
         cls: 0.08}},;
     lastUpdated: new Date () }) , []) ;
-
   // Analyze SEO
   
     setIsAnalyzing(true) ;
-
     return analysis?.issues.filter(issue => issue.category === selectedCategory) || []}, [analysis, selectedCategory]) ;
-
   // Filter suggestions by priority
   const filteredSuggestions = useMemo(() => {
     return analysis?.suggestions.sort((a, b) => {
@@ -130,10 +127,10 @@ autoAnalyze:  true,;
   ;
   low: 1 };
       return priorityOrder[b.priority] - priorityOrder[a.priority]}) || []}, [analysis]) ;
-
   if(!analysis && !isAnalyzing) {
 
     return ()
+}
       <div className="text-center py-8">"
         <Search className="w-12 h-12 text-zion-slate/40 mx-auto mb-4"  />"        <p className="text-zion-slate/60">No SEO analysis available</p>
         <button
@@ -145,7 +142,7 @@ autoAnalyze:  true,;
       </div>;) }
   return ("
     <div className="bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-zion-cyan/20 p-6">
-      {/* Header */}"
+      {/* comment */}"
       <div className="flex items-center justify-between mb-6">"
         <div className="flex items-center space-x-3">"
           <div className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center">"
@@ -163,7 +160,6 @@ autoAnalyze:  true,;
             title="Advanced settings"
 "
             <Settings className="w-5 h-5 text-zion-slate"  />          </button>
-
           <button
             onClick={analyzeSEO}
             disabled={isAnalyzing}"
@@ -171,7 +167,7 @@ autoAnalyze:  true,;
 
             {isAnalyzing ? (;
               <>"
-                <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"  />
                 <span>Analyzing...</span>
               </>
             ) : (
@@ -182,15 +178,14 @@ autoAnalyze:  true,;
           </button>
         </div>
       </div>;
-
       {isAnalyzing ? ("
         <div className="text-center py-12">;"
-          <div className="w-16 h-16 border-4 border-zion-cyan/20 border-t-zion-cyan rounded-full animate-spin mx-auto mb-4" />"
+          <div className="w-16 h-16 border-4 border-zion-cyan/20 border-t-zion-cyan rounded-full animate-spin mx-auto mb-4"  />"
           <p className="text-zion-slate/60">Analyzing your page...</p>
         </div>;
       ) : analysis ? (
         <>
-          {/* Overall Score */}"
+          {/* comment */}"
           <div className="mb-8">"
             <div className="flex items-center justify-between mb-4">"
               <h4 className="text-lg font-semibold text-zion-slate-dark">Overall Score</h4>"
@@ -200,8 +195,8 @@ autoAnalyze:  true,;
             </div>
 "
             <div className="flex items-center space-x-6">
-              <div className={`w-24 h-24 rounded-full ${getScoreBackground(analysis.score)} flex items-center justify-center`}>`
-                <span className={`text-3xl font-bold ${getScoreColor(analysis.score)}`}>
+              <div className={"w-24 h-24 rounded-full ${getScoreBackground(analysis.score)} flex items-center justify-center"}>"
+                <span className={"text-3xl font-bold ${getScoreColor(analysis.score)}"}>
                   {analysis.score}
                 </span>
               </div>
@@ -221,66 +216,64 @@ autoAnalyze:  true,;
               </div>
             </div>
           </div>
-
-          {/* Core Web Vitals */}"
+          {/* comment */}"
           <div className="mb-8">"
             <h4 className="text-lg font-semibold text-zion-slate-dark mb-4">Core Web Vitals</h4>"
-            <div className="grid grid-cols-3 gap-4">`
-              <div className={`p-4 rounded-lg border ${analysis.metrics.coreWebVitals.lcp <= 2.5 ? 'border-green-200 bg-green-50' : 'border-yellow-200 bg-yellow-50'`
-              }`}>"
+            <div className="grid grid-cols-3 gap-4">"
+              <div className={"p-4 rounded-lg border ${analysis.metrics.coreWebVitals.lcp <= 2.5 ? "border-green-200 bg-green-50" : "border-yellow-200 bg-yellow-50""
+              }"}>"
                 <div className="text-center">"
                   <div className="text-2xl font-bold text-zion-slate-dark">
                     {analysis.metrics.coreWebVitals.lcp}s
                   </div>"
                   <div className="text-sm text-zion-slate/60">LCP</div>"
                   <div className="text-xs text-zion-slate/40">
-                    {analysis.metrics.coreWebVitals.lcp <= 2.5 ? 'Good' : 'Needs improvement'}
+                    {analysis.metrics.coreWebVitals.lcp <= 2.5 ? "Good" : "Needs improvement"}
                   </div>
                 </div>
               </div>
-`
-              <div className={`p-4 rounded-lg border ${analysis.metrics.coreWebVitals.fid <= 100 ? 'border-green-200 bg-green-50' : 'border-yellow-200 bg-yellow-50'`
-              }`}>"
+"
+              <div className={"p-4 rounded-lg border ${analysis.metrics.coreWebVitals.fid <= 100 ? "border-green-200 bg-green-50" : "border-yellow-200 bg-yellow-50""
+              }"}>"
                 <div className="text-center">"
                   <div className="text-2xl font-bold text-zion-slate-dark">
                     {analysis.metrics.coreWebVitals.fid}ms
                   </div>"
                   <div className="text-sm text-zion-slate/60">FID</div>"
                   <div className="text-xs text-zion-slate/40">
-                    {analysis.metrics.coreWebVitals.fid <= 100 ? 'Good' : 'Needs improvement'}
+                    {analysis.metrics.coreWebVitals.fid <= 100 ? "Good" : "Needs improvement"}
                   </div>
                 </div>
               </div>
-`
-              <div className={`p-4 rounded-lg border ${analysis.metrics.coreWebVitals.cls <= 0.1 ? 'border-green-200 bg-green-50' : 'border-yellow-200 bg-yellow-50'`
-              }`}>"
+"
+              <div className={"p-4 rounded-lg border ${analysis.metrics.coreWebVitals.cls <= 0.1 ? "border-green-200 bg-green-50" : "border-yellow-200 bg-yellow-50""
+              }"}>"
                 <div className="text-center">"
                   <div className="text-2xl font-bold text-zion-slate-dark">
                     {analysis.metrics.coreWebVitals.cls}
                   </div>"
                   <div className="text-sm text-zion-slate/60">CLS</div>"
                   <div className="text-xs text-zion-slate/40">
-                    {analysis.metrics.coreWebVitals.cls <= 0.1 ? 'Good' : 'Needs improvement'}
+                    {analysis.metrics.coreWebVitals.cls <= 0.1 ? "Good" : "Needs improvement"}
                   </div>
                 </div>
               </div>
             </div>
           </div>
-
-          {/* Issues */}"
+          {/* comment */}"
           <div className="mb-8">"
             <div className="flex items-center justify-between mb-4">"
               <h4 className="text-lg font-semibold text-zion-slate-dark">Issues Found</h4>
 "
               <div className="flex space-x-1">
-                {['all',content',technical',performance',accessibility'].map((category) => (
+                {["all",content",technical",performance",accessibility"].map((category) => (
                   <button
                     key={category}
-                    onClick={() => setSelectedCategory(category)}`
-                    className={`px-3 py-1 text-xs rounded-lg transition-colors ${selectedCategory === category'
-                        ? 'bg-zion-cyan text-white''
-                        : 'bg-zion-slate/10 text-zion-slate hover:bg-zion-slate/20'`
-                    }`}
+                    onClick={() => setSelectedCategory(category)}"
+                    className={"px-3 py-1 text-xs rounded-lg transition-colors ${selectedCategory === category"
+                        ? "bg-zion-cyan text-white""
+                        : "bg-zion-slate/10 text-zion-slate hover:bg-zion-slate/20""
+                    }"}
 
                     {category.charAt(0) .toUpperCase () + category.slice(1) }
                   </button>) ) }
@@ -308,24 +301,24 @@ autoAnalyze:  true,;
   { opacity: 0,
   y: -20
 
-}}`
-                    className={`p-4 rounded-lg border-l-4 ${issue.type === 'error' ? 'border-red-500 bg-red-50' :'
-                      issue.type === 'warning' ? 'border-yellow-500 bg-yellow-50' :'
-                      'border-blue-500 bg-blue-50'`
-                    }`}
+}}"
+                    className={"p-4 rounded-lg border-l-4 ${issue.type === "error" ? "border-red-500 bg-red-50" :"
+                      issue.type === "warning" ? "border-yellow-500 bg-yellow-50" :"
+                      "border-blue-500 bg-blue-50""
+                    }"}
 "
                     <div className="flex items-start space-x-3">
-                      {issue.type === 'error' ? ("
+                      {issue.type === "error" ? ("
                         <AlertTriangle className="w-5 h-5 text-red-500 mt-0.5"  />
-                      ) : issue.type === 'warning' ? ("
+                      ) : issue.type === "warning" ? ("
                         <AlertTriangle className="w-5 h-5 text-yellow-500 mt-0.5"  />
                       ) : ("
                         <Info className="w-5 h-5 text-blue-500 mt-0.5"  />                      )}
 "
                       <div className="flex-1">"
                         <div className="flex items-center justify-between mb-2">"
-                          <h5 className="font-medium text-zion-slate-dark">{issue.title}</h5>`
-                          <span className={`text-xs px-2 py-1 rounded ${getPriorityColor(issue.impact)}`}>
+                          <h5 className="font-medium text-zion-slate-dark">{issue.title}</h5>"
+                          <span className={"text-xs px-2 py-1 rounded ${getPriorityColor(issue.impact)}"}>
                             {issue.impact} impact
                           </span>
                         </div>"
@@ -340,8 +333,7 @@ autoAnalyze:  true,;
               </AnimatePresence>
             </div>
           </div>
-
-          {/* Suggestions */}"
+          {/* comment */}"
           <div className="mb-6">;"
             <h4 className="text-lg font-semibold text-zion-slate-dark mb-4">Optimization Suggestions</h4>"
             <div className="space-y-3">
@@ -379,8 +371,7 @@ autoAnalyze:  true,;
                 </motion.div>;) ) }
             </div>
           </div>
-
-          {/* Advanced Settings */}
+          {/* comment */}
           <AnimatePresence>
             {showAdvanced && (<motion.div
                 initial = {
@@ -392,7 +383,7 @@ autoAnalyze:  true,;
                 animate = {
 
   { opacity: 1,
-  height: 'auto'
+  height: "auto"
 
 }}
                 exit = {
@@ -429,15 +420,12 @@ autoAnalyze:  true,;
       ) : null};
     </div>;
   )};
-
 // Hook for using SEO optimization
   const [analysis, setAnalysis] = useState < SEOAnalysis | null> (null) ;
   const [isOptimizing, setIsOptimizing] = useState(false);
-
     setIsOptimizing(true) ;    // Implement actual optimization logic here
     await new Promise(resolve => setTimeout (resolve, 3000) ) ;
     setIsOptimizing(false) }, []) ;
-
   return {
 
     analysis,

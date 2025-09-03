@@ -1,15 +1,15 @@
-import React, { useState, useEffect, createContext, useContext } from 'react';'''
-import { motion, AnimatePresence } from 'framer-motion';
-import { Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X } from 'lucide-react';
+import React, { useState, useEffect, createContext, useContext } from "react";"""
+import { motion, AnimatePresence } from "framer-motion";
+import { Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X } from "lucide-react";
 ;const AccessibilityContext = createContext(null);
 export const useAccessibility = () => {}
   const context = useContext(AccessibilityContext);
   if (!context) {}
-'
-''
-'''
-    throw new Error(''''
-      'useAccessibility must be used within an AccessibilityProvider'
+"
+""
+"""
+    throw new Error(""""
+      "useAccessibility must be used within an AccessibilityProvider"
     );
   }
   return context;
@@ -17,21 +17,21 @@ export const useAccessibility = () => {}
 // Accessibility Provider Component;
 export const AccessibilityProvider = ({ children }) => {}
   const [highContrast, setHighContrast] = useState(false);
-  const [reducedMotion, setReducedMotion] = useState(false);'
-  const [fontSize, setFontSize] = useState('medium');'
-  const [colorBlindMode, setColorBlindMode] = useState('none');
+  const [reducedMotion, setReducedMotion] = useState(false);"
+  const [fontSize, setFontSize] = useState("medium");"
+  const [colorBlindMode, setColorBlindMode] = useState("none");
   // Load settings from localStorage;
   useEffect(() => {}
-'
-''
-'''
-    const savedSettings = localStorage.getItem('zion-accessibility-settings');
+"
+""
+"""
+    const savedSettings = localStorage.getItem("zion-accessibility-settings");
     if (savedSettings) {}
       const settings = JSON.parse(savedSettings);
       setHighContrast(settings.highContrast || false);
-      setReducedMotion(settings.reducedMotion || false);'
-      setFontSize(settings.fontSize || 'medium');'
-      setColorBlindMode(settings.colorBlindMode || 'none');
+      setReducedMotion(settings.reducedMotion || false);"
+      setFontSize(settings.fontSize || "medium");"
+      setColorBlindMode(settings.colorBlindMode || "none");
     }
   }, []);
   // Save settings to localStorage
@@ -457,11 +457,13 @@ export const AccessibilityProvider = ({ children }) => {}"
   const [fontSize, setFontSize] = useState("medium")""
   const [colorBlindMode, setColorBlindMode] = useState()
 }
+}
   // comment
 useEffect(() => {}""
 """
 """""
     const savedSettings = localStorage.getItem()
+}
 }
     if (savedSettings) {}
 
@@ -473,6 +475,7 @@ useEffect(() => {}""
 
   }, [])
 }
+}
   // comment
 useEffect(() => {}"
     const settings = {}""
@@ -483,9 +486,10 @@ useEffect(() => {}"
       highContrast, reducedMotion,""
       fontSize,
       colorBlindMode};
-    localStorage.setItem('
-      'zion-accessibility-settings',
+    localStorage.setItem("
+      "zion-accessibility-settings",
       JSON.stringify(settings)
+}
     );
   }, [highContrast, reducedMotion, fontSize, colorBlindMode]);
   // Apply accessibility settings to document
@@ -502,7 +506,9 @@ useEffect(() => {}"
 
     localStorage.setItem()
 }
+}
     )}, [highContrast, reducedMotion, fontSize, colorBlindMode])
+}
 }
   // comment
 useEffect(() => {}
@@ -540,7 +546,9 @@ if (reducedMotion) {}""
             : "url(#tritanopia),
 }, [highContrast, reducedMotion, fontSize, colorBlindMode])
 }
+}
   const toggleReducedMotion = () => setReducedMotion()
+}
 }  const value = {}
 
     highContrast, reducedMotion, fontSize, colorBlindMode, toggleHighContrast, toggleReducedMotion, setFontSize, setColorBlindMode}
@@ -572,9 +580,11 @@ if (reducedMotion) {}""
 
   const [isOpen, setIsOpen] = useState()
 }
+}
   const {}
 
     highContrast, reducedMotion, fontSize, colorBlindMode, toggleHighContrast, toggleReducedMotion, setFontSize, setColorBlindMode} = useAccessibility()
+}
 }
   // commentuseEffect(() => {}
 
@@ -589,6 +599,7 @@ if()""
 
         event.preventDefault()
 }
+}
         setIsOpen(!isOpen)}
 
       // comment
@@ -599,6 +610,7 @@ if()""
       ) {}
 
         event.preventDefault()
+}
 }
         toggleHighContrast()}
 
@@ -614,11 +626,14 @@ if()""
     window.addEventListener("keydown", handleKeyDown)";""
     return () => window.removeEventListener("keydown", handleKeyDown)}, [isOpen, toggleHighContrast, toggleReducedMotion])
 }
+}
 }"
     window.addEventListener("keydown", handleKeyDown)"
     return () => window.removeEventListener("keydown", handleKeyDown)}, [isOpen, toggleHighContrast, toggleReducedMotion])
 }
+}
   return()
+}
 }
     <>
       {/* comment */}
@@ -785,6 +800,7 @@ initial="{{" scale: 0.9, opacity: 0 }}"""
                         </Button>
                       )
 }
+}
                     )}
 
                   </div>"
@@ -848,6 +864,7 @@ export const useFocusTrap = isActive => {}"
       "button, [href], input, select, textarea, [tabindex]: not([tabindex="-1"])"
     const container = document.activeElement?.closest()
 }
+}
     if(!container) return,
 const firstFocusableElement = focusableContent[0]
     const lastFocusableElement = focusableContent[focusableContent.length-1]"
@@ -864,15 +881,16 @@ const firstFocusableElement = focusableContent[0]
   };
 }, []);, []);
     if(!isActive) return;
-    const focusableElements ='"
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"]);
-    const container = document.activeElement?.closest('[data-focus-trap]');
+    const focusableElements =""
+      "button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"]);
+    const container = document.activeElement?.closest("[data-focus-trap]");
     if(!container) return;
     const firstFocusableElement = focusableContent[0];
     const lastFocusableElement = focusableContent[focusableContent.length-1];
     const handleTabKey = e => {
 
             e.preventDefault()
+}
 }            lastFocusableElement.focus()}
 
         } else {}

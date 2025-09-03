@@ -2,6 +2,7 @@ import React from "react"
 import { SEO } from "@/components/SEO"
 ;,"});,"})
 }
+}
 export default function InnovativeServices2028() {return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
       <SEO title="InnovativeServices2028 - Zion Tech Group" description="Professional InnovativeServices2028 services by Zion Tech Group"  />"
@@ -12,5 +13,6 @@ export default function InnovativeServices2028() {return ("
         </p>
       </div>
   )
+}
 }
 }""

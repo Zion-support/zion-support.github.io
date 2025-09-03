@@ -1,13 +1,12 @@
-import {   Activity, Zap, Clock,  TrendingUp, AlertTriangle  } from 'lucide-react';
-
+import React from "react"
+import {   Activity, Zap, Clock,  TrendingUp, AlertTriangle  } from "lucide-react";
 export default function Page() {
 );
-
   // Calculate performance score based on Core Web Vitals
   
       let validMetrics = 0;
-
       // FCP scoring(0-100)
+}
       if(metrics.fcp !== null) {
 
         validMetrics++;
@@ -16,6 +15,7 @@ export default function Page() {
         else totalScore += 0}
 
       // LCP scoring(0-100)
+}
       if(metrics.lcp !== null) {
 
         validMetrics++;
@@ -24,6 +24,7 @@ export default function Page() {
         else totalScore += 0}
 
       // FID scoring(0-100)
+}
       if(metrics.fid !== null) {
 
         validMetrics++;
@@ -32,6 +33,7 @@ export default function Page() {
         else totalScore += 0}
 
       // CLS scoring(0-100)
+}
       if(metrics.cls !== null) {
 
         validMetrics++;
@@ -39,39 +41,35 @@ export default function Page() {
         else if(metrics.cls < 0.25) totalScore += 50;
         else totalScore += 0}
 
-      let rating: 'good' | 'needs-improvement' | 'poor';
+      let rating: "good" | "needs-improvement" | "poor";
       let color: string;
-
       if(averageScore >= 90) {
 
-        rating = 'good';
-        color = 'text-green-500'} else if(averageScore >= 50) {
+        rating = "good";
+        color = "text-green-500"} else if(averageScore >= 50) {
 
-        rating = 'needs-improvement';
-        color = 'text-yellow-500'} else {
+        rating = "needs-improvement";
+        color = "text-yellow-500"} else {
 
-        rating = 'poor';
-        color = 'text-red-500'}
+        rating = "poor";
+        color = "text-red-500"}
     });
-
-  TrendingUp,'
-  AlertTriangle} from 'lucide-react';    
-    let grade: 'A' | 'B' | 'C' | 'D' | 'F';
+  TrendingUp,"
+  AlertTriangle} from "lucide-react";
+    let grade: "A" | "B" | "C" | "D" | "F";
     let color: string;
-
     if(averageScore >= 90) {
-      grade = 'A';
-      color = 'text-green-500'} else if(averageScore >= 80) {
-      grade = 'B';
-      color = 'text-blue-500'} else if(averageScore >= 70) {
-      grade = 'C';
-      color = 'text-yellow-500'} else if(averageScore >= 60) {
-      grade = 'D';
-      color = 'text-orange-500'} else {
-      grade = 'F';
-      color = 'text-red-500'}
+      grade = "A";
+      color = "text-green-500"} else if(averageScore >= 80) {
+      grade = "B";
+      color = "text-blue-500"} else if(averageScore >= 70) {
+      grade = "C";
+      color = "text-yellow-500"} else if(averageScore >= 60) {
+      grade = "D";
+      color = "text-orange-500"} else {
+      grade = "F";
+      color = "text-red-500"}
   }, []) ;
-
       return { score: averageScore, rating, color }},
     []
   );
@@ -79,8 +77,7 @@ export default function Page() {
   useEffect(() => {
   // TODO: Add dependencies if needed
 }, []);
-
-    if('PerformanceObserver' in window) {
+    if("PerformanceObserver" in window) {
 
       // First Contentful Paint
 
@@ -88,16 +85,14 @@ export default function Page() {
 
           setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }))}
       });
-      fcpObserver.observe({ entryTypes: ['paint'] });
-
+      fcpObserver.observe({ entryTypes: ["paint"] });
       // Largest Contentful Paint
 
         if(lastEntry) {
 
           setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }))}
       });
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-
+      lcpObserver.observe({ entryTypes: ["largest-contentful-paint"] });
       // First Input Delay
       const fidObserver = new PerformanceObserver(list => {
 
@@ -107,8 +102,7 @@ export default function Page() {
 
             setMetrics(prev => ({ ...prev, fid }) ) }
         })});
-      fidObserver.observe({ entryTypes: ['first-input'] });
-
+      fidObserver.observe({ entryTypes: ["first-input"] });
       // Layout Shift
       const clsObserver = new PerformanceObserver(list => {
 
@@ -120,64 +114,59 @@ export default function Page() {
         });
         setMetrics(prev => ({ ...prev, cls: clsValue }));
       });
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
+      clsObserver.observe({ entryTypes: ["layout-shift"] });
       return () => {
         lcpObserver.disconnect();
         fidObserver.disconnect();
         clsObserver.disconnect()}}
   }, []);
-
   // Measure other performance metrics
   
       setMetrics(prev => ({ ...prev, ttfb }))}
   }, []) ;
-
       // First Meaningful Paint(FMP) - approximated
       
       setMetrics(prev => ({ ...prev, fmp }));
-
   // Format time values
   
-    return `${Math.round(time)}ms`};
-
+    return "${Math.round(time)}ms"};
   // Format CLS value
   
     return cls.toFixed(3)};
-
   // Get metric rating
   
     switch(metric) {
 
-      case 'fcp':
-        return value < 1800'
-          ? '🟢 Good'
-          : value < 3000'
-            ? '🟡 Needs Improvement''
-            : '🔴 Poor';
-      case 'lcp':
-        return value < 2500'
-          ? '🟢 Good'
-          : value < 4000'
-            ? '🟡 Needs Improvement''
-            : '🔴 Poor';
-      case 'fid':
-        return value < 100'
-          ? '🟢 Good'
-          : value < 300'
-            ? '🟡 Needs Improvement''
-            : '🔴 Poor';
-      case 'cls':
-        return value < 0.1'
-          ? '🟢 Good'
-          : value < 0.25'
-            ? '🟡 Needs Improvement''
-            : '🔴 Poor';
-      default:'
-        return 'N/A'}  };
-
+      case "fcp":
+        return value < 1800"
+          ? "🟢 Good"
+          : value < 3000"
+            ? "🟡 Needs Improvement""
+            : "🔴 Poor";
+      case "lcp":
+        return value < 2500"
+          ? "🟢 Good"
+          : value < 4000"
+            ? "🟡 Needs Improvement""
+            : "🔴 Poor";
+      case "fid":
+        return value < 100"
+          ? "🟢 Good"
+          : value < 300"
+            ? "🟡 Needs Improvement""
+            : "🔴 Poor";
+      case "cls":
+        return value < 0.1"
+          ? "🟢 Good"
+          : value < 0.25"
+            ? "🟡 Needs Improvement""
+            : "🔴 Poor";
+      default:"
+        return "N/A"}  };
   if(!isVisible) {
 
     return ()
+}
       <button
         onClick={() => setIsVisible(true)}
         className="fixed bottom-4 right-4 bg-zion-cyan text-white p-3 rounded-full shadow-lg hover:bg-zion-cyan/90 transition-all duration-300 z-50"

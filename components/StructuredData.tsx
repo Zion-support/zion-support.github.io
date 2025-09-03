@@ -1,6 +1,5 @@
 import React from "react";
 interface StructuredDataProps {;
-
   data: any}
 
 export const StructuredData: React.FC<StructuredDataProps> = ({ data }) => {
@@ -10,6 +9,7 @@ export const StructuredData: React.FC<StructuredDataProps> = ({ data }) => {
       dangerouslySetInnerHTML="{{" __html: JSON.stringify(data) }}>
    />
   )
+}
 }
 export const OrganizationSchema = () => {"
   const organizationData = {},"

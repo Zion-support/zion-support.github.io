@@ -1,19 +1,19 @@
-import React, { useState } from 'react';'''
-import { useAdminQuotes } from '@/hooks/useAdminQuotes';'''
-import { useAuth } from '@/hooks/useAuth';'''
-import { Card } from '@/components/ui/card';'''
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';'''
-import { Navigate } from 'react-router-dom';'''
-import { ProtectedRoute } from '@/components/ProtectedRoute';'''
-import { QuoteDetails } from '@/components/quotes/QuoteDetails';'''
-import { ExportToCSV } from '@/components/quotes/ExportToCSV';
+import React, { useState } from "react";"""
+import { useAdminQuotes } from "@/hooks/useAdminQuotes";"""
+import { useAuth } from "@/hooks/useAuth";"""
+import { Card } from "@/components/ui/card";"""
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";"""
+import { Navigate } from "react-router-dom";"""
+import { ProtectedRoute } from "@/components/ProtectedRoute";"""
+import { QuoteDetails } from "@/components/quotes/QuoteDetails";"""
+import { ExportToCSV } from "@/components/quotes/ExportToCSV";
 import {}
   QuoteStatusCards,
-  QuotesFilter,'
-  QuotesTable} from '@/components/admin/quotes';
+  QuotesFilter,"
+  QuotesTable} from "@/components/admin/quotes";
 export default function QuoteManager() {}
-  const { user } = useAuth();'
-  const isAdmin = user?.userType === 'admin';
+  const { user } = useAuth();"
+  const isAdmin = user?.userType === "admin";
   const [selectedQuote, setSelectedQuote] = useState(null);
   const [showDetails, setShowDetails] = useState(false);
   const {}
@@ -33,31 +33,32 @@ export default function QuoteManager() {}
     deleteQuote} = useAdminQuotes();
   // Count quotes by status;
   const statusCounts = {}
-'
-''
-'''
-    new: quotes.filter(q => q.status === 'new').length,'''
-    in_review: quotes.filter(q => q.status === 'in_review').length,'''
-    accepted: quotes.filter(q => q.status === 'accepted').length,'''
-    responded: quotes.filter(q => q.status === 'responded').length,'''
-    closed: quotes.filter(q => q.status === 'closed').length};
+"
+""
+"""
+    new: quotes.filter(q => q.status === "new").length,"""
+    in_review: quotes.filter(q => q.status === "in_review").length,"""
+    accepted: quotes.filter(q => q.status === "accepted").length,"""
+    responded: quotes.filter(q => q.status === "responded").length,"""
+    closed: quotes.filter(q => q.status === "closed").length};
   const handleViewDetails = quote => {}
     setSelectedQuote(quote);
     setShowDetails(true);
   };
   const handleResetFilters = () => {}
-'
-''
-'''
-    setStatusFilter('all');'''
-    setArchiveFilter('all');'''
-    setSearchQuery('');
+"
+""
+"""
+    setStatusFilter("all");"""
+    setArchiveFilter("all");"""
+    setSearchQuery("");
     setDateRange({ from: null, to: null });
   };
   if (!isAdmin) {}
-    return <Navigate to="/unauthorized" replace />;
+    return <Navigate to="/unauthorized" replace   />;
   }
   return()
+}
     <ProtectedRoute adminOnly>"""
       <div>""""
         <div className="min-h-screen bg-zion-blue px-4 py-8">""""
@@ -71,13 +72,12 @@ export default function QuoteManager() {}
                   Manage and respond to all talent hire requests;
                 </p>"""
               </div>""""
-              <ExportToCSV quotes={quotes} filename="zion-quote-requests" />
+              <ExportToCSV quotes={quotes} filename="zion-quote-requests"  />
             </div>
+            {/* comment */}
+            <QuoteStatusCards statusCounts={statusCounts}   />
 
-            {/* Status Summary Cards */}
-            <QuoteStatusCards statusCounts={statusCounts} />
-
-            {/* Filters */}
+            {/* comment */}
             <QuotesFilter;
               searchQuery={searchQuery}
               setSearchQuery={setSearchQuery}
@@ -90,7 +90,7 @@ export default function QuoteManager() {}
               onReset={handleResetFilters}
             />
 """
-            {/* Tabs for Active/Archived */}""""
+            {/* comment */}""""
             <Tabs defaultValue="active" className="mb-6">""""
               <TabsList className="bg-zion-blue-dark border border-zion-blue-light">""""
                 <TabsTrigger value="active">Active Quotes</TabsTrigger>""""
@@ -98,7 +98,7 @@ export default function QuoteManager() {}
               </TabsList>"""
 """"
               <TabsContent value="active">"""
-                {/* Quotes Table */}""""
+                {/* comment */}""""
                 <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
                   <QuotesTable;
                     quotes={quotes.filter(quote => !quote.is_archived)}
@@ -127,8 +127,7 @@ export default function QuoteManager() {}
             </Tabs>
           </div>
         </div>
-
-        {/* Quote Details Modal */}
+        {/* comment */}
         <QuoteDetails;
           quote={selectedQuote}
           isOpen={showDetails}
@@ -142,11 +141,7 @@ export default function QuoteManager() {}
 
 
 export { QuoteManager };
-
 export { QuoteManager };
-
 export { QuoteManager };
-
 export { QuoteManager };
-
 export { QuoteManager };

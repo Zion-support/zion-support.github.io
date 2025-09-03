@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 ;
 export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true }) => {
     const [brokenLinks, setBrokenLinks] = useState([]);
@@ -10,14 +10,14 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
     const scanPageLinks = async () => {
         setIsScanning(true);
         setScanProgress(0);
-        const links = Array.from(document.querySelectorAll('a[href]'));
+        const links = Array.from(document.querySelectorAll("a[href]"));
         const results = [];
         for (let i = 0; i < links.length; i++) {
             const link = links[i];
-            const href = link.getAttribute('href');
+            const href = link.getAttribute("href");
             if (href) {
                 const result = LinkValidator.validateLink(href, window.location.pathname);
-                if (result.status === 'broken') {
+                if (result.status === "broken") {
                     results.push(result);
                     if (autoFix) {
                         await fixBrokenLink(href, result)}
@@ -48,26 +48,28 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
   const fixBrokenLink = async(originalUrl, validationResult) => {
 
     if()
-      validationResult.suggestedFix &&'
-      validationResult.suggestedFix.startsWith('Redirect to:')
+}
+      validationResult.suggestedFix &&"
+      validationResult.suggestedFix.startsWith("Redirect to:")
+}
     ) {
 
-      const newUrl = validationResult.suggestedFix.replace('Redirect to: ',);
+      const newUrl = validationResult.suggestedFix.replace("Redirect to: ",);
       // Find and update the link
-      const links = document.querySelectorAll(`a[href="${originalUrl}"]`);
+      const links = document.querySelectorAll("a[href="${originalUrl}"]");
       links.forEach(link => {
 
         link.href = newUrl;
-        link.setAttribute('data-fixed',true');'`
-        link.setAttribute('title', `Fixed: Redirected from ${originalUrl}`);
+        link.setAttribute("data-fixed",true");""
+        link.setAttribute("title", "Fixed: Redirected from ${originalUrl}");
       });
       // Add to fixed links list
       const fix = {
 
         originalUrl,
         newUrl,
-        type: 'redirect',
-        reason: 'Automatically fixed broken internal link'};
+        type: "redirect",
+        reason: "Automatically fixed broken internal link"};
       setFixedLinks(prev => [...prev, fix]);
     }
   };
@@ -82,11 +84,11 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
   // Generate redirect rules for server configuration
   const generateRedirectRules = () => {
     const rules = LinkValidator.generateRedirectRules();
-    const blob = new Blob([rules], { type: 'text/plain' });
+    const blob = new Blob([rules], { type: "text/plain" });
     const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
+    const a = document.createElement("a");
     a.href = url;
-    a.download = 'redirect-rules.txt';
+    a.download = "redirect-rules.txt";
     a.click();
     URL.revokeObjectURL(url);
   };
@@ -100,11 +102,11 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
       fixedLinks: fixedLinks};
     const blob = new Blob([JSON.stringify(report, null, 2)], {
 
-      type: 'application/json'});
+      type: "application/json"});
     const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
+    const a = document.createElement("a");
     a.href = url;
-    a.download = 'broken-links-report.json';
+    a.download = "broken-links-report.json";
     a.click();
     URL.revokeObjectURL(url);
   };
@@ -129,7 +131,7 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
             disabled={isScanning}"
             className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            {isScanning ? 'Scanning...' : 'Scan Links'}
+            {isScanning ? "Scanning..." : "Scan Links"}
           </button>
           {brokenLinks.length > 0 && (
             <button
@@ -137,12 +139,12 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
               className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700"
             >
               Fix All ({brokenLinks.length})
+}
             </button>
           )}
         </div>
       </div>
-
-      {/* Scan Progress */}
+      {/* comment */}
       {isScanning && ("
         <div className="mb-6">"
           <div className="flex items-center justify-between mb-2">"
@@ -155,14 +157,14 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
           </div>"
           <div className="w-full bg-gray-200 rounded-full h-2">
             <div"
-              className="bg-blue-600 h-2 rounded-full transition-all duration-300"`
-              style={{ width: `${scanProgress}%` }}
+              className="bg-blue-600 h-2 rounded-full transition-all duration-300""
+              style={{ width: "${scanProgress}%" }}
             ></div>
           </div>
         </div>
       )}
 
-      {/* Status Summary */}
+      {/* comment */}
       {showStatus && ("
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">"
           <div className="bg-red-50 dark:bg-red-900/20 p-4 rounded-lg">"
@@ -183,7 +185,7 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
           </div>"
           <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">"
             <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">
-              {lastScanTime ? lastScanTime.toLocaleTimeString() : 'Never'}
+              {lastScanTime ? lastScanTime.toLocaleTimeString() : "Never"}
             </div>"
             <div className="text-sm text-blue-600 dark:text-blue-400">
               Last Scan
@@ -192,7 +194,7 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
         </div>
       )}
 
-      {/* Broken Links List */}
+      {/* comment */}
       {brokenLinks.length > 0 && ("
         <div className="mb-6">"
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
@@ -231,7 +233,7 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
         </div>
       )}
 
-      {/* Fixed Links List */}
+      {/* comment */}
       {fixedLinks.length > 0 && ("
         <div className="mb-6">"
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
@@ -257,7 +259,7 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
         </div>
       )}
 
-      {/* Action Buttons */}"
+      {/* comment */}"
       <div className="flex flex-wrap gap-2">
         <button
           onClick={generateRedirectRules}"
@@ -272,8 +274,7 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
           Export Report
         </button>
       </div>
-
-      {/* Recommendations */}
+      {/* comment */}
       {brokenLinks.length > 0 && ("
         <div className="mt-6 p-4 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg">"
           <h4 className="font-semibold text-yellow-800 dark:text-yellow-200 mb-2">
@@ -291,7 +292,7 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
   );
 };
 export default LinkMonitor;
-'"`
+"""
 import React from "react"
 export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true}) => { const [brokenLinks, setBrokenLinks] = useState ([]) ; const [fixedLinks, setFixedLinks] = useState ([]) ; const [isScanning, setIsScanning] = useState (false) ; const [scanProgress, setScanProgress] = useState (0) ; const [lastScanTime, setLastScanTime] = useState (null) ;"";,"});,"})"
 ;,"});,"})","});,"})"
@@ -571,7 +572,7 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
   );,"});,"});"
 };,"});,"})"
 export default LinkMonitor;"";,"});,"})"
-""""`;,"});,"})"
+""""";,"});,"})"
  export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true}) => { const [brokenLinks, setBrokenLinks] = useState ([])  const [fixedLinks, setFixedLinks] = useState ([])  const [isScanning, setIsScanning] = useState (false)  const [scanProgress, setScanProgress] = useState (0)  const [lastScanTime, setLastScanTime] = useState (null) '
 "
 ""

@@ -1,14 +1,13 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-
+import React from "react";
+import { Link } from "react-router-dom";
 import { 
-  Brain, 
-  Shield, 
-  Cloud, 
-  Server, 
+  Brain,
+  Shield,
+  Cloud,
+  Server,
   Building2,
-  FileText, 
-  BarChart3, 
+  FileText,
+  BarChart3,
   Workflow,
   Mic,
   Users,
@@ -31,19 +30,17 @@ import {
   DollarSign,
   Wifi,
   Link as LinkIcon
-} from 'lucide-react';
-
+} from "lucide-react";
 const ServicesOverview = () => {
   const contactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
+    phone: "+1 302 464 0950",
+    email: "kleber@ziontechgroup.com",
+    address: "364 E Main St STE 1008 Middletown DE 19709",
+    website: "https://ziontechgroup.com"
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
-      {/* Header */}
+      {/* comment */}
       <div className="bg-white shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="text-center">
@@ -72,30 +69,28 @@ const ServicesOverview = () => {
                 href={`tel:${contactInfo.phone}`}
                 className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center"
               >
-                <Phone className="w-5 h-5 mr-2" />
+                <Phone className="w-5 h-5 mr-2"  />
                 Call Now: {contactInfo.phone}
               </a>
               <a 
                 href={`mailto:${contactInfo.email}`}
                 className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors flex items-center justify-center"
               >
-                <Mail className="w-5 h-5 mr-2" />
+                <Mail className="w-5 h-5 mr-2"  />
                 Email Us
               </a>
             </div>
           </div>
         </div>
       </div>
-
-      {/* Service Categories */}
+      {/* comment */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
           <p className="text-xl text-gray-600">Professional technology solutions for modern businesses</p>
         </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* AI Services */}
+          {/* comment */}
           <div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -105,7 +100,7 @@ const ServicesOverview = () => {
             <div className="p-6">
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center mr-4">
-                  <Brain className="w-6 h-6 text-white" />
+                  <Brain className="w-6 h-6 text-white"  />
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-gray-900">AI & Machine Learning</h3>
@@ -117,15 +112,15 @@ const ServicesOverview = () => {
                 <h4 className="font-semibold text-gray-900 mb-2">Services:</h4>
                 <ul className="space-y-1">
                   <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0"  />
                     AI Content Generation
                   </li>
                   <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0"  />
                     Customer Analytics
                   </li>
                   <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0"  />
                     Workflow Automation
                   </li>
                 </ul>
@@ -144,20 +139,19 @@ const ServicesOverview = () => {
                   className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors text-center flex items-center justify-center"
                 >
                   Learn More
-                  <ArrowRight className="w-4 h-4 ml-2" />
+                  <ArrowRight className="w-4 h-4 ml-2"  />
                 </Link>
                 <a
                   href={`tel:${contactInfo.phone}`}
                   className="w-full bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition-colors text-center flex items-center justify-center"
                 >
-                  <Phone className="w-4 h-4 mr-2" />
+                  <Phone className="w-4 h-4 mr-2"  />
                   Call Now
                 </a>
               </div>
             </div>
           </div>
-
-          {/* IT Services */}
+          {/* comment */}
           <div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -168,7 +162,7 @@ const ServicesOverview = () => {
             <div className="p-6">
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-blue-500 to-indigo-600 flex items-center justify-center mr-4">
-                  <Server className="w-6 h-6 text-white" />
+                  <Server className="w-6 h-6 text-white"  />
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-gray-900">IT Services</h3>
@@ -180,15 +174,15 @@ const ServicesOverview = () => {
                 <h4 className="font-semibold text-gray-900 mb-2">Services:</h4>
                 <ul className="space-y-1">
                   <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0"  />
                     Cloud Migration
                   </li>
                   <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0"  />
                     DevOps Automation
                   </li>
                   <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0"  />
                     Cybersecurity
                   </li>
                 </ul>
@@ -207,20 +201,19 @@ const ServicesOverview = () => {
                   className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors text-center flex items-center justify-center"
                 >
                   Learn More
-                  <ArrowRight className="w-4 h-4 ml-2" />
+                  <ArrowRight className="w-4 h-4 ml-2"  />
                 </Link>
                 <a
                   href={`tel:${contactInfo.phone}`}
                   className="w-full bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition-colors text-center flex items-center justify-center"
                 >
-                  <Phone className="w-4 h-4 mr-2" />
+                  <Phone className="w-4 h-4 mr-2"  />
                   Call Now
                 </a>
               </div>
             </div>
           </div>
-
-          {/* Business SaaS */}
+          {/* comment */}
           <div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -231,7 +224,7 @@ const ServicesOverview = () => {
             <div className="p-6">
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-green-500 to-emerald-600 flex items-center justify-center mr-4">
-                  <Building2 className="w-6 h-6 text-white" />
+                  <Building2 className="w-6 h-6 text-white"  />
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-gray-900">Business SaaS</h3>
@@ -243,15 +236,15 @@ const ServicesOverview = () => {
                 <h4 className="font-semibold text-gray-900 mb-2">Services:</h4>
                 <ul className="space-y-1">
                   <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0"  />
                     Smart CRM Platform
                   </li>
                   <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0"  />
                     Project Management
                   </li>
                   <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0"  />
                     Financial Analytics
                   </li>
                 </ul>
@@ -270,13 +263,13 @@ const ServicesOverview = () => {
                   className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors text-center flex items-center justify-center"
                 >
                   Learn More
-                  <ArrowRight className="w-4 h-4 ml-2" />
+                  <ArrowRight className="w-4 h-4 ml-2"  />
                 </Link>
                 <a
                   href={`tel:${contactInfo.phone}`}
                   className="w-full bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition-colors text-center flex items-center justify-center"
                 >
-                  <Phone className="w-4 h-4 mr-2" />
+                  <Phone className="w-4 h-4 mr-2"  />
                   Call Now
                 </a>
               </div>
@@ -284,37 +277,35 @@ const ServicesOverview = () => {
           </div>
         </div>
       </div>
-
-      {/* Contact Section */}
+      {/* comment */}
       <div className="bg-gray-900 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Ready to Transform Your Business?</h2>
             <p className="text-xl text-gray-300">Contact us today for a free consultation</p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
-              <Phone className="w-8 h-8 text-blue-400 mx-auto mb-4" />
+              <Phone className="w-8 h-8 text-blue-400 mx-auto mb-4"  />
               <h3 className="text-lg font-semibold mb-2">Phone</h3>
               <a href={`tel:${contactInfo.phone}`} className="text-blue-400 hover:text-blue-300">
                 {contactInfo.phone}
               </a>
             </div>
             <div className="text-center">
-              <Mail className="w-8 h-8 text-blue-400 mx-auto mb-4" />
+              <Mail className="w-8 h-8 text-blue-400 mx-auto mb-4"  />
               <h3 className="text-lg font-semibold mb-2">Email</h3>
               <a href={`mailto:${contactInfo.email}`} className="text-blue-400 hover:text-blue-300">
                 {contactInfo.email}
               </a>
             </div>
             <div className="text-center">
-              <MapPin className="w-8 h-8 text-blue-400 mx-auto mb-4" />
+              <MapPin className="w-8 h-8 text-blue-400 mx-auto mb-4"  />
               <h3 className="text-lg font-semibold mb-2">Address</h3>
               <p className="text-gray-300">{contactInfo.address}</p>
             </div>
             <div className="text-center">
-              <Globe className="w-8 h-8 text-blue-400 mx-auto mb-4" />
+              <Globe className="w-8 h-8 text-blue-400 mx-auto mb-4"  />
               <h3 className="text-lg font-semibold mb-2">Website</h3>
               <a href={contactInfo.website} className="text-blue-400 hover:text-blue-300">
                 {contactInfo.website}
@@ -323,8 +314,7 @@ const ServicesOverview = () => {
           </div>
         </div>
       </div>
-
-      {/* Footer */}
+      {/* comment */}
       <footer className="bg-gray-800 text-white py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
@@ -336,5 +326,4 @@ const ServicesOverview = () => {
     </div>
   );
 };
-
 export default ServicesOverview;

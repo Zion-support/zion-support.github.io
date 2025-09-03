@@ -1,68 +1,68 @@
-import {  import { motion, AnimatePresence  } from 'framer-motion';
-
+import React from "react"
+import {  import { motion, AnimatePresence  } from "framer-motion";
 export default function Page() {
 []}
 ;
 const heroSlides: HeroSlide[] = [  {
 
-    id: 'ai-solutions',
-    title: 'AI-Powered Business Solutions',
-    subtitle:'
-      'Transform your business with cutting-edge artificial intelligence',
-    description:'
-      'Leverage the power of AI to automate processes, gain insights, and drive innovation across your organization.Our solutions are designed to scale with your business needs.',
-    image: '/images/hero-ai-solutions.jpg',
-    cta: 'Explore AI Solutions',
-    path: '/services/ai-business-intelligence',
-    features: ['
-      'Machine Learning',Predictive Analytics',Process Automation',Real-time Insights',
+    id: "ai-solutions",
+    title: "AI-Powered Business Solutions",
+    subtitle:"
+      "Transform your business with cutting-edge artificial intelligence",
+    description:"
+      "Leverage the power of AI to automate processes, gain insights, and drive innovation across your organization.Our solutions are designed to scale with your business needs.",
+    image: "/images/hero-ai-solutions.jpg",
+    cta: "Explore AI Solutions",
+    path: "/services/ai-business-intelligence",
+    features: ["
+      "Machine Learning",Predictive Analytics",Process Automation",Real-time Insights",
     ],
-    gradient: 'from-zion-cyan via-zion-purple to-zion-blue',
+    gradient: "from-zion-cyan via-zion-purple to-zion-blue",
     icon: Brain,
-    stats: ['
-      { label: 'Accuracy Rate', value: '95%+', icon: Target },
-      { label: 'ROI Increase', value: '450%', icon: TrendingUp },
-      { label: 'Market Growth', value: '280%', icon: Rocket },
+    stats: ["
+      { label: "Accuracy Rate", value: "95%+", icon: Target },
+      { label: "ROI Increase", value: "450%", icon: TrendingUp },
+      { label: "Market Growth", value: "280%", icon: Rocket },
     ]},
   {
 
-    id: 'it-services',
-    title: 'Comprehensive IT Services',
-    subtitle: 'End-to-end technology solutions for modern businesses',
-    description:'
-      "From infrastructure management to digital transformation, we provide the expertise you need to succeed in today's competitive landscape.",
-    image: '/images/hero-it-services.jpg',
-    cta: 'View Our Services',
-    path: '/services',
-    features: ['
-      'Cloud Infrastructure',Cybersecurity',DevOps Automation',24/7 Support',
+    id: "it-services",
+    title: "Comprehensive IT Services",
+    subtitle: "End-to-end technology solutions for modern businesses",
+    description:"
+      "From infrastructure management to digital transformation, we provide the expertise you need to succeed in today"s competitive landscape.",
+    image: "/images/hero-it-services.jpg",
+    cta: "View Our Services",
+    path: "/services",
+    features: ["
+      "Cloud Infrastructure",Cybersecurity",DevOps Automation",24/7 Support",
     ],
-    gradient: 'from-zion-blue via-zion-cyan to-zion-purple',
+    gradient: "from-zion-blue via-zion-cyan to-zion-purple",
     icon: Shield,
-    stats: ['
-      { label: 'Uptime', value: '99.99%', icon: Target },
-      { label: 'Cost Savings', value: '700%', icon: TrendingUp },
-      { label: 'Response Time', value: '<5min', icon: Rocket },
+    stats: ["
+      { label: "Uptime", value: "99.99%", icon: Target },
+      { label: "Cost Savings", value: "700%", icon: TrendingUp },
+      { label: "Response Time", value: "<5min", icon: Rocket },
     ]},
   {
 
-    id: 'green-it',
-    title: 'Green IT Solutions',
-    subtitle: 'Sustainable technology for a better future',
-    description:'
-      'Implement eco-friendly IT solutions that reduce your carbon footprint while maintaining performance and driving business value.',
-    image: '/images/hero-green-it.jpg',
-    cta: 'Learn More',
-    path: '/green-it',
-    features: ['
-      'Energy Efficiency',Carbon Reduction',Sustainable Practices',Cost Savings',
+    id: "green-it",
+    title: "Green IT Solutions",
+    subtitle: "Sustainable technology for a better future",
+    description:"
+      "Implement eco-friendly IT solutions that reduce your carbon footprint while maintaining performance and driving business value.",
+    image: "/images/hero-green-it.jpg",
+    cta: "Learn More",
+    path: "/green-it",
+    features: ["
+      "Energy Efficiency",Carbon Reduction",Sustainable Practices",Cost Savings",
     ],
-    gradient: 'from-zion-cyan via-zion-blue to-zion-purple',
+    gradient: "from-zion-cyan via-zion-blue to-zion-purple",
     icon: Globe,
-    stats: ['
-      { label: 'Energy Savings', value: '60%', icon: Target },
-      { label: 'Carbon Reduction', value: '75%', icon: TrendingUp },
-      { label: 'Cost Reduction', value: '40%', icon: Rocket },
+    stats: ["
+      { label: "Energy Savings", value: "60%", icon: Target },
+      { label: "Carbon Reduction", value: "75%", icon: TrendingUp },
+      { label: "Cost Reduction", value: "40%", icon: Rocket },
     ]},
 ];
 };
@@ -70,19 +70,17 @@ const heroSlides: HeroSlide[] = [  {
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const [direction, setDirection] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
-
   // Memoize slides to prevent unnecessary re - renders
   
   // Optimized slide navigation with useCallback
   
     setCurrentSlide(prev => (prev + 1) % memoizedSlides.length);
     setIsAutoPlaying(false)}, [memoizedSlides.length]);
-
     setCurrentSlide()
+}
       prev => (prev - 1 + memoizedSlides.length) % memoizedSlides.length
     );
     setIsAutoPlaying(false)}, [memoizedSlides.length]);
-
       setCurrentSlide(index);
       setIsAutoPlaying(false)},
     [currentSlide]
@@ -96,11 +94,8 @@ const heroSlides: HeroSlide[] = [  {
   };
 }, []);, []);
     if(!isAutoPlaying) return;
-
       setCurrentSlide(prev => (prev + 1) % memoizedSlides.length)}, 6000);
-
     return () => clearInterval(interval) }, [isAutoPlaying, memoizedSlides.length]) ;
-
   // Handle keyboard navigation
   useEffect(() => {
   // TODO: Add dependencies if needed
@@ -109,16 +104,13 @@ const heroSlides: HeroSlide[] = [  {
     // Cleanup function
   };
 }, []);, []);
-    
-      if(e.key === 'ArrowRight') nextSlide();
-      if(e.key === ' ') {
+      if(e.key === "ArrowRight") nextSlide();
+      if(e.key === " ") {
         e.preventDefault();
         setIsAutoPlaying(!isAutoPlaying)}
     };
-
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown)}, [prevSlide, nextSlide, isAutoPlaying]);
-
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown)}, [prevSlide, nextSlide, isAutoPlaying]);
   // Handle image loading
   useEffect(() => {
   // TODO: Add dependencies if needed
@@ -127,16 +119,12 @@ const heroSlides: HeroSlide[] = [  {
     // Cleanup function
   };
 }, []);, []);
-    
           img.onload = resolve;
           img.onerror = resolve;
           img.src = slide.image}) }) ;
-
       await Promise.all(imagePromises) ;
       setIsLoading(false) };
-
     preloadImages () }, [memoizedSlides]) ;
-
   if(isLoading) {
 
     return ("
@@ -150,16 +138,15 @@ const heroSlides: HeroSlide[] = [  {
       </div>) }
   return ("
     <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {/* Background Pattern */}"
+      {/* comment */}"
       <div className="absolute inset-0 opacity-10">"
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.1),transparent_50%)]" />"
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(139,92,246,0.1),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.1),transparent_50%)]"  />"
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(139,92,246,0.1),transparent_50%)]"  />
       </div>
-
-      {/* Hero Content */}"
+      {/* comment */}"
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">"
         <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
-          {/* Text Content */}
+          {/* comment */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -205,8 +192,7 @@ const heroSlides: HeroSlide[] = [  {
                 {currentSlideData.description}
               </motion.p>
             </div>
-
-            {/* Features */}
+            {/* comment */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -220,7 +206,7 @@ const heroSlides: HeroSlide[] = [  {
               ))}
             </motion.div>
 
-            {/* CTA Button */}
+            {/* comment */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -233,13 +219,12 @@ const heroSlides: HeroSlide[] = [  {
               >
                 {currentSlideData.cta}"
                 <ArrowRight className="w-5 h-5 ml-2"  />              </Link>
-
               <button
                 onClick={() => setIsAutoPlaying(!isAutoPlaying)}"
                 className="inline-flex items-center justify-center px-6 py-4 border border-slate-600 hover:border-cyan-400 text-slate-300 hover:text-cyan-400 font-medium rounded-lg transition-all duration-300"
                 aria-label={
 
-                  isAutoPlaying ? 'Pause slideshow' : 'Play slideshow'
+                  isAutoPlaying ? "Pause slideshow" : "Play slideshow"
                 }
               >
                 {isAutoPlaying ? ("
@@ -249,7 +234,7 @@ const heroSlides: HeroSlide[] = [  {
                 )}              </button>
             </motion.div>
 
-            {/* Stats */}
+            {/* comment */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -267,7 +252,7 @@ const heroSlides: HeroSlide[] = [  {
             </motion.div>
           </motion.div>
 
-          {/* Visual Content */}
+          {/* comment */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -276,7 +261,7 @@ const heroSlides: HeroSlide[] = [  {
           >"
             <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-slate-800 to-slate-900 p-8">
               <div
-                className={`w-24 h-24 bg-gradient-to-br ${currentSlideData.gradient} rounded-2xl flex items-center justify-center mb-6 mx-auto`}
+                className={"w-24 h-24 bg-gradient-to-br ${currentSlideData.gradient} rounded-2xl flex items-center justify-center mb-6 mx-auto"}
               >"
                 <currentSlideData.icon className="w-12 h-12 text-white" />
               </div>
@@ -291,32 +276,29 @@ const heroSlides: HeroSlide[] = [  {
           </motion.div>
         </div>
       </div>
-
-      {/* Navigation Controls */}"
+      {/* comment */}"
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">"
         <div className="flex space-x-2">
           {memoizedSlides.map((_, index) => (
             <button
               key={index}
-              onClick={() => goToSlide(index)}`
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentSlide'
-                  ? 'bg-cyan-400 scale-125''
-                  : 'bg-slate-600 hover:bg-slate-500'`
-              }`}`
-              aria-label={`Go to slide ${index + 1}`}
+              onClick={() => goToSlide(index)}"
+              className={"w-3 h-3 rounded-full transition-all duration-300 ${index === currentSlide"
+                  ? "bg-cyan-400 scale-125""
+                  : "bg-slate-600 hover:bg-slate-500""
+              }"}"
+              aria-label={"Go to slide ${index + 1}"}
             />
           ))}
         </div>
       </div>
-
-      {/* Arrow Navigation */}
+      {/* comment */}
       <button
         onClick={prevSlide}"
         className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 p-3 rounded-full bg-slate-800/50 hover:bg-slate-700/70 text-slate-300 hover:text-white transition-all duration-300 backdrop-blur-sm"
         
       >"
         <ChevronLeft className="w-6 h-6"  />      </button>
-
       <button
         onClick={nextSlide}"
         className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 p-3 rounded-full bg-slate-800/50 hover:bg-slate-700/70 text-slate-300 hover:text-white transition-all duration-300 backdrop-blur-sm"
@@ -326,4 +308,4 @@ const heroSlides: HeroSlide[] = [  {
       </button>
     </section>) }
 export { HeroSection };
-'"`
+'""

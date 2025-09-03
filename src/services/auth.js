@@ -8,10 +8,13 @@ export class authService {
     try {
       const response = await fetch("${this.baseUrl}/auth")
 }
+}
       return await response.json()
+}
 }
     } catch (error) {
       console.error("Error fetching data:", error)
+}
 }
       throw error
     }
@@ -19,13 +22,8 @@ export class authService {
 // Create and export a singleton instance;
 const authService = new AuthService();
 export default authService;
-
 export { API_BASE_URL };
-
 export { API_BASE_URL };
-
 export { API_BASE_URL };
-
 export { API_BASE_URL };
-
 export { API_BASE_URL };

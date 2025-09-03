@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 // ;
 // ;
 // ;
@@ -6,59 +6,60 @@ import React, { useState } from 'react';
 // ;
 // ;
 const UltimateServicesShowcase2025 = () => {
-    const [selectedCategory, setSelectedCategory] = useState('all');
-    const [selectedPriceRange, setSelectedPriceRange] = useState('all');
-    const [searchTerm, setSearchTerm] = useState('');    const [sortBy, setSortBy] = useState('name');
+    const [selectedCategory, setSelectedCategory] = useState("all");
+    const [selectedPriceRange, setSelectedPriceRange] = useState("all");
+    const [searchTerm, setSearchTerm] = useState("");    const [sortBy, setSortBy] = useState("name");
     // Combine all services;
     const allServices = [...ULTIMATE_MICRO_SAAS_SERVICES_2025,
         ...INNOVATIVE_ENTERPRISE_SOLUTIONS_2025,
         ...EMERGING_TECHNOLOGY_SOLUTIONS_2025;
-    ];'
-    // Get unique categories''
-    const categories = ['all', ...Array.from(new Set(allServices.map(service => service.category)))];
+    ];"
+    // Get unique categories""
+    const categories = ["all", ...Array.from(new Set(allServices.map(service => service.category)))];
     // Filter and sort services;
     const filteredServices = allServices;
         .filter(service => {}
-'
-''
-'''
-        const categoryMatch = selectedCategory === 'all' || service.category === selectedCategory;'''
-        const priceMatch = selectedPriceRange === 'all' ||''''
-            (selectedPriceRange === 'low' && service.price < 5000) ||''''
-            (selectedPriceRange === 'medium' && service.price >= 5000 && service.price < 15000) ||''''
-            (selectedPriceRange === 'high' && service.price >= 15000);
+"
+""
+"""
+        const categoryMatch = selectedCategory === "all" || service.category === selectedCategory;"""
+        const priceMatch = selectedPriceRange === "all" ||""""
+            (selectedPriceRange === "low" && service.price < 5000) ||""""
+            (selectedPriceRange === "medium" && service.price >= 5000 && service.price < 15000) ||""""
+            (selectedPriceRange === "high" && service.price >= 15000);
         const searchMatch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
         return categoryMatch && priceMatch && searchMatch})
+}
         .sort((a, b) => {}
         switch (sortBy) {}
-'
-            case 'price': any;
-                return a.price - b.price;'
-            case 'name': any;
-                return a.title.localeCompare(b.title);'
-            case 'category': any;
+"
+            case "price": any;
+                return a.price - b.price;"
+            case "name": any;
+                return a.title.localeCompare(b.title);"
+            case "category": any;
                 return a.category.localeCompare(b.category) ;
             default: any;
                 return 0}
     }) ;
     const formatPrice = (price) => {}
         if (price >= 1000) {}
-            return `$${(price / 1000).toFixed(1)}K`}``
-        return `$${price}`};
+            return "$${(price / 1000).toFixed(1)}K"}""
+        return "$${price}"};
     const getSupportLevelColor = (level) => {}
         switch (level) {}
-'
-            case 'enterprise':''
-                return 'bg-purple-600';'
-            case 'premium':''
-                return 'bg-blue-600';'
-            default:''
-                return 'bg-green-600'}"""
+"
+            case "enterprise":""
+                return "bg-purple-600";"
+            case "premium":""
+                return "bg-blue-600";"
+            default:""
+                return "bg-green-600"}"""
     };""""
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">"""
-      {/* Header */}""""
+      {/* comment */}""""
       <div className="container mx-auto px-4 py-8">""""
         <div className="text-center mb-12">""""
           <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -91,14 +92,14 @@ const UltimateServicesShowcase2025: React.FC = () => {
           </div>
         </div>
 """
-        {/* Filters and Search */}""""
+        {/* comment */}""""
         <div className="bg-gray-800/50 rounded-xl p-6 mb-8 border border-gray-600/30">""""
           <div className="grid md:grid-cols-4 gap-4">"""
             <div>""""
               <label className="block text-sm font-medium text-gray-300 mb-2">Category</label>""""
               <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
-                {categories.map(category => (<option key={category} value={category}>'
-                    {category === 'all' ? 'All Categories' : category}
+                {categories.map(category => (<option key={category} value={category}>"
+                    {category === "all" ? "All Categories' : category}
                   </option>) ) }
               </select>
             </div>"""
@@ -121,17 +122,17 @@ const UltimateServicesShowcase2025: React.FC = () => {
             </div>"""
             <div>""""
               <label className="block text-sm font-medium text-gray-300 mb-2">Search</label>""""
-              <input type="text" placeholder="Search services..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"/>
+              <input type="text" placeholder="Search services..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" />
             </div>
           </div>
         </div>
 """
-        {/* Services Grid */}""""
+        {/* comment */}""""
         <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">""""
           {filteredServices.map((service) => (<div key={service.id} className="bg-gradient-to-br from-gray-800/80 to-gray-900/80 rounded-2xl p-6 border border-gray-600/30 hover:border-blue-500/50 transition-all duration-300 transform hover:scale-105">"""
-              {/* Service Header */}""""
-              <div className="mb-4">""`
-                <div className="flex items-center justify-between mb-3">``
+              {/* comment */}""""
+              <div className="mb-4">"""
+                <div className="flex items-center justify-between mb-3">""
                   <span className={`px-3 py-1 rounded-full text-xs font-semibold text-white ${getSupportLevelColor(service.supportLevel)}`}>
                     {service.supportLevel}"""
                   </span>""""
@@ -149,7 +150,7 @@ const UltimateServicesShowcase2025: React.FC = () => {
                 </div>
               </div>
 """
-              {/* Key Features */}""""
+              {/* comment */}""""
               <div className="mb-4">""""
                 <h4 className="text-sm font-semibold text-blue-300 mb-2">Key Features</h4>""""
                 <ul className="text-xs text-gray-300 space-y-1">""""
@@ -160,7 +161,7 @@ const UltimateServicesShowcase2025: React.FC = () => {
                 </ul>
               </div>
 """
-              {/* Benefits */}""""
+              {/* comment */}""""
               <div className="mb-4">""""
                 <h4 className="text-sm font-semibold text-green-300 mb-2">Key Benefits</h4>""""
                 <ul className="text-xs text-gray-300 space-y-1">""""
@@ -171,7 +172,7 @@ const UltimateServicesShowcase2025: React.FC = () => {
                 </ul>
               </div>
 """
-              {/* ROI */}""""
+              {/* comment */}""""
               {service.roi && (<div className="mb-4">""""
                   <h4 className="text-sm font-semibold text-yellow-300 mb-2">ROI</h4>""""
                   <div className="text-xs text-gray-300">""""
@@ -180,7 +181,7 @@ const UltimateServicesShowcase2025: React.FC = () => {
                   </div>
                 </div>) }
 """
-              {/* Technology */}""""
+              {/* comment */}""""
               {service.technology && (<div className="mb-4">""""
                   <h4 className="text-sm font-semibold text-purple-300 mb-2">Technology</h4>""""
                   <div className="flex flex-wrap gap-1">""""
@@ -190,22 +191,22 @@ const UltimateServicesShowcase2025: React.FC = () => {
                   </div>
                 </div>) }
 """
-              {/* Market Price Comparison */}""""
+              {/* comment */}""""
               <div className="mb-4 p-3 bg-gray-700/50 rounded-lg">""""
                 <h4 className="text-sm font-semibold text-orange-300 mb-1">Market Price</h4>""""
                 <p className="text-xs text-gray-300">{service.marketPrice}</p>""""
                 <p className="text-xs text-cyan-400 mt-1">Our Price: {formatPrice(service.price)}/{service.pricingModel}</p>
               </div>
 """
-              {/* Contact and Action */}""""
+              {/* comment */}""""
               <div className="border-t border-gray-600/30 pt-4">""""
                 <div className="text-center mb-3">""""
-                  <p className="text-xs text-gray-400 mb-2">Ready to get started?</p>""`
-                  <div className="flex flex-col space-y-2">"`"`
+                  <p className="text-xs text-gray-400 mb-2">Ready to get started?</p>"""
+                  <div className="flex flex-col space-y-2">""""
                     <a href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.title}`} className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white text-sm font-semibold py-2 px-4 rounded-lg transition-all duration-300 transform hover:scale-105">
-                      Contact Us"`
-                    </a>"`"`
-                    <a href={`tel:${service.contactInfo.phone}`} className="bg-gray-700 hover:bg-gray-600 text-white text-sm font-semibold py-2 px-4 rounded-lg transition-all duration-300">
+                      Contact Us""
+                    </a>""""
+                    <a href={"tel:${service.contactInfo.phone}`} className="bg-gray-700 hover:bg-gray-600 text-white text-sm font-semibold py-2 px-4 rounded-lg transition-all duration-300">
                       Call Now;
                     </a>
                   </div>
@@ -214,7 +215,7 @@ const UltimateServicesShowcase2025: React.FC = () => {
             </div>) ) }
         </div>
 """
-        {/* Summary Statistics */}""""
+        {/* comment */}""""
         <div className="mt-16 bg-gradient-to-r from-blue-900/50 to-purple-900/50 rounded-2xl p-8 border border-blue-500/30">""""
           <div className="text-center">""""
             <h2 className="text-3xl font-bold mb-6 text-cyan-400">Services Portfolio Summary</h2>""""
@@ -245,7 +246,7 @@ const UltimateServicesShowcase2025: React.FC = () => {
           </div>
         </div>
 """
-        {/* Call to Action */}""""
+        {/* comment */}""""
         <div className="mt-16 text-center">""""
           <div className="bg-gradient-to-r from-cyan-900/50 to-blue-900/50 rounded-2xl p-8 border border-cyan-500/30">""""
             <h2 className="text-3xl font-bold mb-4 text-cyan-400">Ready to Transform Your Business?</h2>""""
@@ -269,11 +270,7 @@ export default UltimateServicesShowcase2025;
 }}}
 
 export { UltimateServicesShowcase2025 };
-
 export { UltimateServicesShowcase2025 };
-
 export { UltimateServicesShowcase2025 };
-
 export { UltimateServicesShowcase2025 };
-
 export { UltimateServicesShowcase2025 };

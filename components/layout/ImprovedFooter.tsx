@@ -218,4 +218,5 @@ with cutting-edge AI, cloud architecture, and innovative development services.
     </footer>
   )
 }
+}
 ""export default ImprovedFooter

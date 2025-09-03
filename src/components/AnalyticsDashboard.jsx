@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { BarChart3, TrendingUp, Activity, Eye, Clock, Target, RefreshCw } from 'lucide-react';
+import React, { useState, useEffect } from "react";
+import { BarChart3, TrendingUp, Activity, Eye, Clock, Target, RefreshCw } from "lucide-react";
 ;
-export const AnalyticsDashboard = ({ className = '', showRealTime = true, refreshInterval = 5000 }) => {
+export const AnalyticsDashboard = ({ className = "", showRealTime = true, refreshInterval = 5000 }) => {
     const { isTracking, currentSession, performanceMetrics, events, getAnalyticsSummary, trackEvent, trackConversion } = useAnalytics({
         enableTracking: true,
         enablePerformanceTracking: true,
@@ -9,11 +9,12 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
         enableHeatmapTracking: false
     });
     const [isExpanded, setIsExpanded] = useState(false);
-    const [selectedTimeRange, setSelectedTimeRange] = useState('24h');
+    const [selectedTimeRange, setSelectedTimeRange] = useState("24h");
     const [analyticsSummary, setAnalyticsSummary] = useState(null);
     // Auto-refresh analytics data
     useEffect(() => {
         if (!showRealTime)
+}
             return;
         const interval = setInterval(() => {
             updateAnalyticsSummary()}, refreshInterval);
@@ -29,14 +30,15 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
         updateAnalyticsSummary()}, [events, currentSession]);
     // Track dashboard interactions
     const handleDashboardInteraction = (action, metadata) => {
-        trackEvent('dashboard', action, 'dashboard_interaction', null, metadata);
+        trackEvent("dashboard", action, "dashboard_interaction", null, metadata);
     };
     // Track conversion goal
     const handleTrackConversion = () => {
-        trackConversion('dashboard_engagement', 1, { timeRange: selectedTimeRange })};
+        trackConversion("dashboard_engagement", 1, { timeRange: selectedTimeRange })};
     // Get events by category for chart
     const getEventsByCategory = () => {
         if (!analyticsSummary?.eventsByCategory)
+}
             return [];
         return Object.entries(analyticsSummary.eventsByCategory).map(([category, count]) => ({
             category,
@@ -45,37 +47,47 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
     // Get performance score
     const getPerformanceScore = () => {
         if (!performanceMetrics)
+}
             return 0;
         const score = 100;
         // Deduct points for poor performance
         if (performanceMetrics.pageLoadTime > 3000)
+}
             score -= 20;
         else if (performanceMetrics.pageLoadTime > 1000)
+}
             score -= 10;
         if (performanceMetrics.firstContentfulPaint > 2000)
+}
             score -= 15;
         else if (performanceMetrics.firstContentfulPaint > 1000)
+}
             score -= 5;
         if (performanceMetrics.cumulativeLayoutShift > 0.1)
+}
             score -= 25;
         else if (performanceMetrics.cumulativeLayoutShift > 0.05)
+}
             score -= 10;
         return Math.max(0, score)};
     // Format duration
     const formatDuration = (seconds) => {
         if (seconds < 60)
-            return `${seconds}s`;
+}
+            return "${seconds}s";
         const minutes = Math.floor(seconds / 60);
         const remainingSeconds = seconds % 60;
-        return `${minutes}m ${remainingSeconds}s`};
+        return "${minutes}m ${remainingSeconds}s"};
     // Format number with K/M suffix
     const formatNumber = (num) => {
         if (num >= 1000000)
-            return `${(num / 1000000).toFixed(1)}M`;
+}
+            return "${(num / 1000000).toFixed(1)}M";
         if (num >= 1000)
-            return `${(num / 1000).toFixed(1)}K`;
+}
+            return "${(num / 1000).toFixed(1)}K";
         return num.toString()};
-    return (<div className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>      {/* Header */}
+    return (<div className={"bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}"}>      {/* comment */}
 
     }
   };
@@ -109,6 +121,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
               onChange="{e" => {}
 
                 setSelectedTimeRange(e.target.value)
+}
 }
                 handleDashboardInteraction(&apos;time_range_changed&apos, {}"
                   timeRange: e.target.value})";&apos}}&apos;&apos,";"
@@ -215,7 +228,9 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
           {events
             .slice(-5)
 }
+}
             .reverse()
+}
 }
             .map(event = > (,
               <div""
@@ -265,7 +280,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
         <div className="&apos,grid" grid-cols-2 m,d: grid-cols-4 gap-4&apos,>"&apos,&apos,{/* comment */}&apos;&apos,&apos;&apos,"
           <div className="&apos;text-center" p-3 bg-gray-50 dark: bg-gray-700 rounded-lg&apos,>"&apos,&apos,&apos;&apos;"
             <div className="&apos;flex" items-center justify-center mb-2&apos;>"&apos;&apos,&apos;&apos;"
-              <Clock className="&apos;w-5" h-5 text-purple-500&apos;       />&apos;&apos,&apos;&apos,",
+              <Clock className="&apos;w-5" h-5 text-purple-500&apos;         />&apos;&apos,&apos;&apos,",
             </div>&apos;&apos,&apos;&apos,"
             <div className="&apos,text-2xl" font-bold text-gray-900 dar,k: text-white&apos,>
               {analyticsSummary,",
@@ -279,7 +294,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
 &apos,&apos,"{/* comment */}&apos;&apos,&apos;&apos,"
           <div className="&apos;text-center" p-3 bg-gray-50 dark: bg-gray-700 rounded-lg&apos,>"&apos,&apos,&apos;&apos;"
             <div className="&apos;flex" items-center justify-center mb-2&apos;>"&apos;&apos,&apos;&apos;"
-              <Eye className="&apos;w-5" h-5 text-blue-500&apos;       />&apos;&apos,&apos;&apos,",
+              <Eye className="&apos;w-5" h-5 text-blue-500&apos;         />&apos;&apos,&apos;&apos,",
             </div>&apos;&apos,&apos;&apos,"
             <div className = "&apos,text-2xl" font-bold text-gray-900 dar,k: text-white&apos,>
               {analyticsSummary?.pageViews || 0}&apos;&apos,&apos;&apos,
@@ -291,7 +306,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
 &apos,&apos,"{/* comment */}&apos;&apos,&apos;&apos,"
           <div className="&apos;text-center" p-3 bg-gray-50 dark: bg-gray-700 rounded-lg&apos,>"&apos,&apos,&apos;&apos;"
             <div className="&apos;flex" items-center justify-center mb-2&apos;>"&apos;&apos,&apos;&apos;"
-              <Activity className="&apos;w-5" h-5 text-green-500&apos;       />&apos;&apos,&apos;&apos,",
+              <Activity className="&apos;w-5" h-5 text-green-500&apos;         />&apos;&apos,&apos;&apos,",
             </div>&apos;&apos,&apos;&apos,"
             <div className = "&apos,text-2xl" font-bold text-gray-900 dar,k: text-white&apos,>
               {formatNumber(events.length)}&apos;&apos,&apos;&apos,
@@ -303,7 +318,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
 &apos,&apos,"{/* comment */}&apos;&apos,&apos;&apos,"
           <div className="&apos;text-center" p-3 bg-gray-50 dark: bg-gray-700 rounded-lg&apos,>"&apos,&apos,&apos;&apos;"
             <div className="&apos;flex" items-center justify-center mb-2&apos;>"&apos;&apos,&apos;&apos;"
-              <TrendingUp className="&apos;w-5" h-5 text-orange-500&apos;       />&apos;&apos,&apos;&apos,",
+              <TrendingUp className="&apos;w-5" h-5 text-orange-500&apos;         />&apos;&apos,&apos;&apos,",
             </div>&apos;&apos,&apos;&apos,"
             <div className = "&apos,text-2xl" font-bold text-gray-900 dar,k: text-white&apos,>
               {getPerformanceScore()}&apos;&apos,&apos;&apos,
@@ -365,7 +380,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
 &apos,&apos,"{/* comment */}&apos;&apos,&apos;&apos,"
       <div className="&apos;p-4" border-b border-gray-200 dark: border-gray-700&apos,>"&apos,&apos,&apos,&apos,"
         <h4 className="&apos,font-medium" text-gray-900 dar,k: text-white mb-3 flex items-center gap-2&apos,>"&apos,&apos,&apos;&apos;"
-          <Activity className="&apos;w-4" h-4&apos,       />",
+          <Activity className="&apos;w-4" h-4&apos,         />",
           Real-time Events&apos;&apos,{showRealTime && (&apos;&apos,"&apos,&apos}"
             <div className="&apos;w-2" h-2 bg-green-500 rounded-full animate-pulse&apos;>&apos,</div>
           )}
@@ -376,7 +391,9 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
           {events
             .slice(-5)
 }
+}
             .reverse()
+}
 }
             .map(event = > (&apos}
 
@@ -422,7 +439,9 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
           {events
             .slice()
 }
+}
             .reverse()
+}
 }
             .map(event = > (
               <div""";""
@@ -803,9 +822,10 @@ Referrer: """""
 
               handleDashboardInteraction()
 }
+}
               updateAnalyticsSummary()";&apos}}&apos;&apos,";"
             className="&apos;flex-1" px-3 py-2 bg-blue-500 hover: bg-blue-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center justify-center gap-2&apos,&apos,&apos;>"&apos;&apos,&apos;&apos;"
-            <RefreshCw className="&apos;w-4" h-4&apos,       />,
+            <RefreshCw className="&apos;w-4" h-4&apos,         />,
             Refresh Data&apos,
           </button>"
           <button onClick = "{()" => {}
@@ -813,7 +833,7 @@ Referrer: """""
               handleTrackConversion()"
               handleDashboardInteraction(&apos;conversion_tracked&apos)";&apos}}&apos;&apos,";"
             className="&apos;px-3" py-2 bg-green-500 hover: bg-green-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2&apos,&apos,&apos;>"&apos;&apos,&apos;&apos,",
-            <Target className="&apos;w-4" h-4&apos,       />
+            <Target className="&apos;w-4" h-4&apos,         />
             Track Goal&apos,"
 """{/* comment */}"""""
       <div className = "p-4 border-t border-gray-200 dark: border-gray-700 bg-gray-50 dark:bg-gray-800">""""
@@ -822,6 +842,7 @@ Referrer: """""
 
 ";""
               handleDashboardInteraction()
+}
 }
               updateAnalyticsSummary()";"}}"""""
               updateAnalyticsSummary()";"}}"";"

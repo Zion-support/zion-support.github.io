@@ -1,76 +1,65 @@
-import {  import { innovativeServices2027 } from '../data/innovativeServices2027';
-
+import React from "react"
+import {  import { innovativeServices2027 } from "../data/innovativeServices2027";
 export default function Page() {
     );
-
     if(element) {
       observer.observe(element)}
 
     return () => observer.disconnect () }, []) ;
-
   // Combine all services
   
-      source: 'innovative',;
+      source: "innovative",;
       category: service.category,;
       features: service.features || [],;
-      ctaLabel: service.ctaLabel || 'Get Started',;
-      href: service.href || '/contact'}) ) ;  ];
-
+      ctaLabel: service.ctaLabel || "Get Started",;
+      href: service.href || "/contact"}) ) ;  ];
   // Filter services based on search and category
 
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          service.category.toLowerCase().includes(searchQuery.toLowerCase());
-
     return matchesSearch && matchesCategory && matchesPrice}) ;
-
   // Sort services
   
     switch(sortBy) {;
-      case 'name':;
+      case "name":;
         return a.title.localeCompare(b.title);
-      case 'price':;
-        return parseFloat(a.price.replace(/[^0-9.]/g,)) - parseFloat(b.price.replace(/[^0-9.]/g,));      case 'category':;
+      case "price":;
+        return parseFloat(a.price.replace(/[^0-9.]/g,)) - parseFloat(b.price.replace(/[^0-9.]/g,));      case "category":;
         return a.category.localeCompare(b.category) ;
       default:;
         return 0}
   });
-
   ;
-'
-  phone: '+1 302 464 0950','
-    email: 'kleber@ziontechgroup.com',;  ;
-  ;
+"
+  phone: "+1 302 464 0950","
+    email: "kleber@ziontechgroup.com",;  ;
   ;
   ;
-  address: '364 E Main St STE 1008 Middletown DE 19709';
   ;
-
+  address: "364 E Main St STE 1008 Middletown DE 19709";
+  ;
 };
-
-
-    if(numPrice < 100) return 'Low';
-    if(numPrice < 1000) return 'Medium';
-    return 'High'};
-      default: return 'text-white'}
+    if(numPrice < 100) return "Low";
+    if(numPrice < 1000) return "Medium";
+    return "High"};
+      default: return "text-white"}
   };
-
-      'Robotics & Automation': Cpu,;
-      'AR/VR Solutions': Eye,;
-      'Biotech Solutions': Dna,;
-      'LegalTech Solutions': Scale,;
-      'Real Estate Tech': Home,;
-      'Supply Chain Solutions': Truck};    return iconMap[category] || Target};
-
+      "Robotics & Automation": Cpu,;
+      "AR/VR Solutions": Eye,;
+      "Biotech Solutions": Dna,;
+      "LegalTech Solutions": Scale,;
+      "Real Estate Tech": Home,;
+      "Supply Chain Solutions": Truck};    return iconMap[category] || Target};
   return ("
     <section id = "comprehensive-pricing-guide" className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light relative overflow-hidden">
-      {/* Animated Background */}"
+      {/* comment */}"
       <div className="absolute inset-0 overflow-hidden">"
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 rounded-full blur-3xl animate-pulse"></div>"
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-zion-purple/20 to-zion-cyan/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
       </div>
 "
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        {/* Header */}
+        {/* comment */}
         <motion.div
           initial = {
 
@@ -95,7 +84,7 @@ export default function Page() {
             <span className="bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-cyan bg-clip-text text-transparent">
               Comprehensive
             </span>
-            <br />"
+            <br  />"
             <span className="text-white">Pricing & ROI Guide</span>
           </h2>
 "
@@ -104,7 +93,7 @@ export default function Page() {
             detailed ROI analysis, and market insights to help you make informed decisions.</p>
         </motion.div>
 
-        {/* Search and Filters */}
+        {/* comment */}
         <motion.div
           initial = {
 
@@ -128,18 +117,16 @@ export default function Page() {
 "
           <div className="bg-gradient-to-r from-zion-slate-light/50 to-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6">"
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-              {/* Search */}"
+              {/* comment */}"
               <div className="relative">"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4"  />
                 <input"
                   type="text"
                   placeholder="Search services..."                  value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}"
-                  className="w-full pl-10 pr-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
-                />
+                  className="w-full pl-10 pr-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20" />
               </div>
-
-              {/* Category Filter */}
+              {/* comment */}
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}"
@@ -150,8 +137,7 @@ export default function Page() {
                     {category}
                   </option>) ) }
               </select>
-
-              {/* Price Range Filter */}
+              {/* comment */}
               <select
                 value={priceRange}
                 onChange={(e) => setPriceRange(e.target.value)}"
@@ -162,8 +148,7 @@ export default function Page() {
                     {range}
                   </option>) ) }
               </select>
-
-              {/* Sort By */}
+              {/* comment */}
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}"
@@ -174,8 +159,7 @@ export default function Page() {
                 <option value="category" className="bg-zion-slate-dark text-white">Sort by Category</option>
               </select>
             </div>
-
-            {/* Results Count */}"
+            {/* comment */}"
             <div className="mt-4 text-center">"
               <span className="text-zion-cyan font-semibold">
                 {filteredServices.length} services found
@@ -187,8 +171,7 @@ export default function Page() {
             </div>
           </div>
         </motion.div>;
-
-        {/* Services Grid */}
+        {/* comment */}
         <motion.div
           initial = {
 
@@ -203,7 +186,7 @@ export default function Page() {
         >
           {sortedServices.map((service, index) => (;
             <motion.div
-              key={`${service.source}-${service.id}`}
+              key={"${service.source}-${service.id}"}
               initial = {
 
   { opacity: 0,
@@ -225,7 +208,7 @@ export default function Page() {
               className="group relative"
 "
               <div className="bg-gradient-to-br from-zion-slate-light/50 to-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 h-full transition-all duration-500 hover:scale-105 hover:border-zion-cyan/40 hover:shadow-2xl hover:shadow-zion-cyan/25">
-                {/* Service Header */}"
+                {/* comment */}"
                 <div className="flex items-start justify-between mb-4">"
                   <div className="flex-1">"
                     <div className="flex items-center gap-2 mb-2">"
@@ -240,8 +223,7 @@ export default function Page() {
                     </p>
                   </div>
                 </div>
-
-                {/* Features Preview */}
+                {/* comment */}
                 {service.features && service.features.length > 0 && ("
                   <div className="mb-4">"
                     <div className="flex flex-wrap gap-2">
@@ -260,23 +242,22 @@ export default function Page() {
                     </div>
                   </div>;) }
 
-                {/* Pricing & Billing */}"
+                {/* comment */}"
                 <div className="mb-4">"
-                  <div className="flex items-center justify-between">`
-                    <div className={`text-2xl font-bold ${getPriceColor(service.price)}`}>
+                  <div className="flex items-center justify-between">"
+                    <div className={"text-2xl font-bold ${getPriceColor(service.price)}"}>
                       {service.price}
                     </div>"
                     <div className="text-gray-400 text-sm">
-                      {service.billing === 'month' && 'per month'}
-                      {service.billing === 'project' && 'per project'}
-                      {service.billing === 'hour' && 'per hour'}
-                      {service.billing === 'year' && 'per year'}
+                      {service.billing === "month" && "per month"}
+                      {service.billing === "project" && "per project"}
+                      {service.billing === "hour" && "per hour"}
+                      {service.billing === "year" && "per year"}
                     </div>
                   </div>
                 </div>
-
-                {/* Additional Info for Innovative Services */}
-                {service.source === 'innovative' && 'marketSize' in service && ("
+                {/* comment */}
+                {service.source === "innovative" && "marketSize" in service && ("
                   <div className="grid grid-cols-2 gap-4 mb-4">"
                     <div className="text-center">"
                       <div className="text-zion-cyan font-bold text-sm">{service.marketSize}</div>"
@@ -288,9 +269,8 @@ export default function Page() {
                     </div>
                   </div>) }
 
-                {/* CTA Button */}
-                <a
-                  href={service.href}"
+                {/* comment */}
+                <a href={service.href}"
                   target={service.external ? "_blank" : "_self"}"
                   rel={service.external ? "noopener noreferrer" : ""}"
                   className="w-full px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2 group"
@@ -302,7 +282,7 @@ export default function Page() {
             </motion.div>) ) }
         </motion.div>
 
-        {/* Contact Section */}
+        {/* comment */}
         <motion.div
           initial = {
 
@@ -357,4 +337,4 @@ export default function Page() {
         </motion.div>;
       </div>;
     </section>;) };
-'"`
+'""

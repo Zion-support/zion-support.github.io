@@ -12,6 +12,7 @@ const Card = React.forwardRef<
  />
 ))
 }
+}
 "
 Card.displayName = "Card"
 const CardHeader = React.forwardRef<
@@ -24,6 +25,7 @@ const CardHeader = React.forwardRef<
     {...props}>
  />
 ))
+}
 }
 "
 CardHeader.displayName = "CardHeader"
@@ -40,6 +42,7 @@ const CardTitle = React.forwardRef<
  />
 ))
 }
+}
 "
 CardTitle.displayName = "CardTitle"
 const CardDescription = React.forwardRef<
@@ -53,14 +56,16 @@ const CardDescription = React.forwardRef<
  />
 ))
 }
+}
 "
 CardDescription.displayName = "CardDescription"
 const CardContent = React.forwardRef<
   HTMLDivElement>
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (""
-  <div ref="{ref}" className={cn("p-6 pt-0", className)} {...props}      />
+  <div ref="{ref}" className={cn("p-6 pt-0", className)} {...props}        />
 ))
+}
 }
 "
 CardContent.displayName = "CardContent"
@@ -74,6 +79,7 @@ const CardFooter = React.forwardRef<
     {...props}>
  />
 ))
+}
 }
 "
 CardFooter.displayName = "CardFooter"

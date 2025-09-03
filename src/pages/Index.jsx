@@ -1,3 +1,4 @@
+import React from "react"
 import { Header } from "@/components/Header";""""
 import { Footer } from "@/components/Footer";""""
 import { TrustedBySection } from "@/components/TrustedBySection";""""
@@ -26,7 +27,7 @@ import { ArrowRight, Users, Zap, Settings, Sparkles, BarChart3, Smartphone expor
 """"
             title: t("home.tool_ai_matcher"),""""
             description: t("home.tool_ai_matcher_desc"),""""
-            icon: <Sparkles className="h-6 w-6 text-zion-cyan"/>,""""
+            icon: <Sparkles className="h-6 w-6 text-zion-cyan"  />,""""
             link: "/match"""
         },
         {}
@@ -34,7 +35,7 @@ import { ArrowRight, Users, Zap, Settings, Sparkles, BarChart3, Smartphone expor
 """"
             title: t("home.tool_talent"),""""
             description: t("home.tool_talent_desc"),""""
-            icon: <Users className="h-6 w-6 text-zion-purple"/>,""""
+            icon: <Users className="h-6 w-6 text-zion-purple"  />,""""
             link: "/talent"""
         },
         {}
@@ -42,7 +43,7 @@ import { ArrowRight, Users, Zap, Settings, Sparkles, BarChart3, Smartphone expor
 """"
             title: t("home.tool_services"),""""
             description: t("home.tool_services_desc"),""""
-            icon: <Zap className="h-6 w-6 text-zion-cyan"/>,""""
+            icon: <Zap className="h-6 w-6 text-zion-cyan"  />,""""
             link: "/services"""
         },
         {}
@@ -50,7 +51,7 @@ import { ArrowRight, Users, Zap, Settings, Sparkles, BarChart3, Smartphone expor
 """"
             title: t("home.tool_equipment"),""""
             description: t("home.tool_equipment_desc"),""""
-            icon: <Settings className="h-6 w-6 text-zion-purple"/>,""""
+            icon: <Settings className="h-6 w-6 text-zion-purple"  />,""""
             link: "/equipment"""
         },
         {}
@@ -58,7 +59,7 @@ import { ArrowRight, Users, Zap, Settings, Sparkles, BarChart3, Smartphone expor
 """"
             title: t("home.tool_analytics"),""""
             description: t("home.tool_analytics_desc"),""""
-            icon: <BarChart3 className="h-6 w-6 text-zion-cyan"/>,""""
+            icon: <BarChart3 className="h-6 w-6 text-zion-cyan"  />,""""
             link: "/analytics"""
         },
         {}
@@ -66,15 +67,15 @@ import { ArrowRight, Users, Zap, Settings, Sparkles, BarChart3, Smartphone expor
 """"
             title: "Mobile App",""""
             description: "Take Zion with you on the go with our mobile app for iOS and Android",""""
-            icon: <Smartphone className="h-6 w-6 text-zion-purple"/>,""""
+            icon: <Smartphone className="h-6 w-6 text-zion-purple"  />,""""
             link: "/mobile-launch"""
 """
     ];""""
     return (<div className="min-h-screen bg-zion-blue text-white">""""
-      <SEO title={t("home.seo_title")} description={t("home.seo_description")} keywords={t("home.seo_keywords")} canonical="https://ziontechgroup.com/"/>
-      <Header />
-      <HeroSection />"""
-      {/* Quick Access Tools Section */}""""
+      <SEO title={t("home.seo_title")} description={t("home.seo_description")} keywords={t("home.seo_keywords")} canonical="https://ziontechgroup.com/"  />
+      <Header  />
+      <HeroSection  />"""
+      {/* comment */}""""
       <section className="py-16 bg-zion-blue-dark">""""
         <div className="container mx-auto px-4">""""
           <div className="text-center mb-12">""""
@@ -85,44 +86,40 @@ import { ArrowRight, Users, Zap, Settings, Sparkles, BarChart3, Smartphone expor
               {t("home.tools_description")}
             </p>
           </div>"""
-          <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ${isRTL ? 'rtl' : ''}`}>""""
+          <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ${isRTL ? "rtl" : ""}`}>""""
             {toolsFeatures.map((feature, index) => (<Link key={index} to={feature.link} className="bg-zion-blue border border-zion-blue-light hover:border-zion-purple/50 rounded-lg p-6 transition-all duration-300">""""
                 <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-4">
                   {feature.icon}"""
                 </div>""""
-                <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>"'"`
-                <p className="text-zion-slate-light mb-4">{feature.description}</p>'`'"`
-                <div className={`flex items-center text-zion-cyan ${isRTL ? 'flex-row-reverse' : ''}`}>"'"`
-                  <span>{t("general.explore")}</span>'`'`
-                  <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`}/>
+                <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>""""
+                <p className="text-zion-slate-light mb-4">{feature.description}</p>"""""
+                <div className={`flex items-center text-zion-cyan ${isRTL ? "flex-row-reverse" : ""}`}>""""
+                  <span>{t("general.explore")}</span>""""
+                  <ArrowRight className={`${isRTL ? "ml-0 mr-2 rotate-180" : "ml-2"} h-4 w-4`}  />
                 </div>
               </Link>) ) }
           </div>
         </div>
       </section>
-      <CategoriesSection />
-      <BenefitsSection />
-      {/* Add the comprehensive features guide section */}
-      <FeaturesGuideSection />
-      <HowItWorksSection />
-      <FeaturedListingsSection />
-      <TestimonialCarousel />
-      <TrustedBySection />
-      <BlogSection />
-      {/* Add social share section to encourage users to spread the word */}
-      <SocialShareSection />
-      <WaitlistSection />
-      <FloatingCTA />
-      <Footer />
+      <CategoriesSection  />
+      <BenefitsSection  />
+      {/* comment */}
+      <FeaturesGuideSection  />
+      <HowItWorksSection  />
+      <FeaturedListingsSection  />
+      <TestimonialCarousel  />
+      <TrustedBySection  />
+      <BlogSection  />
+      {/* comment */}
+      <SocialShareSection  />
+      <WaitlistSection  />
+      <FloatingCTA  />
+      <Footer  />
     </div>)}
 
 
 export { Index };
-
 export { Index };
-
 export { Index };
-
 export { Index };
-
 export { Index };

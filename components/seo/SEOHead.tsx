@@ -1,7 +1,6 @@
 import Head from "next/head"
 import React from "react"
 interface SEOHeadProps {;
-
   title?: string;
    description?: string;
    keywords?: string;
@@ -63,7 +62,7 @@ title: = "Zion Tech Group - Future Technology Solutions,", description = "Leadin
           dangerouslySetInnerHTML = "{{"
             __html: JSON.stringify(structuredData)}}
 
-              />)}
+                />)}
 
       {/* comment */}
 
@@ -85,7 +84,7 @@ title: = "Zion Tech Group - Future Technology Solutions,", description = "Leadin
       <meta name="description" content="{description}"  />
       <meta name="keywords" content="{keywords}"  />"
       <meta name="author" content="Zion Tech Group"  />""
-      <meta name="robots" content="{noindex" ? "noindex, nofollow" : "index,follow"}       />"
+      <meta name="robots" content="{noindex" ? "noindex, nofollow" : "index,follow"}         />"
       <meta name="viewport" content="width="device-width," initial-scale=1.0"  />"
       <meta httpEquiv="Content-Type" content="text/html; charset = utf-8"  />"
       <meta name="language" content="English"  />"
@@ -136,7 +135,7 @@ title: = "Zion Tech Group - Future Technology Solutions,", description = "Leadin
           type="application/ld+json"
             __html: JSON.stringify(structuredData)}}
 
-             />
+               />
       )}
 
       {/* comment */}"
@@ -166,6 +165,7 @@ title: = "Zion Tech Group - Future Technology Solutions,", description = "Leadin
 
 
             })
+}
 }
     </Head>
 export: default SEOHead,

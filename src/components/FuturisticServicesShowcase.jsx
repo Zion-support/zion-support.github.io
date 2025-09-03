@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { ADVANCED_MICRO_SERVICES } from "../data/advancedMicroServices.jsx";
 const ServiceCard = ({ service, index, isVisible }) => {
     const [isHovered, setIsHovered] = useState(false);
@@ -31,8 +31,7 @@ const ServiceCard = ({ service, index, isVisible }) => {
 
 
 }} className="relative group" onHoverStart={() => setIsHovered(true)} onHoverEnd={() => setIsHovered(false)}>
-      {/* Animated Background */}      <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
-
+      {/* comment */}      <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
                 x[0, Math.random() * 100: - 50],
                 y[0, Math.random() * 100 - 50]>                opacity[0.6, 0.2, 0.6]}} transition = {}
 
@@ -58,8 +57,10 @@ const ServiceCard = ({ service, index, isVisible }) => {
                   <span: className = "px-2 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full border border-blue-500/30">",",""
 const ServiceCard = ({service, index, isVisible }) => {const [isHovered, setIsHovered] = useState()
 }
+}
     return (<motion .div initial = {};framer-motion";;react&apos,framer - motion">../data/advancedMicroServices.jsx";&apos;&apos>
 const ServiceCard = ({ service, index, isVisible }) => {}    const [isHovered, setIsHovered] = useState(false)
+}
 }
     return (<;<;<motion.div initial = {}>""
 const ServiceCard = ({ service, index, isVisible }) => {    const [isHovered, setIsHovered] = useState(false)"
@@ -365,9 +366,8 @@ delay: index * 0.1 "",">
         onHoverStart={ () => setIsHovered(true) }
         onHoverEnd={ () => setIsHovered(false) }
       >
-        {/* Animated Background */}
+        {/* comment */}
         <div className="absolute inset - 0 bg-gradient - to - br from - cyan - 500 / 10 via - blue - 500 / 10 to - purple - 500 / 10 rounded-2xl blur - xl group - hover:blur - 2xl transition - all duration -500"></div>
-
 ";"
 "";"
 """;"
@@ -381,6 +381,7 @@ delay: index * 0.1 "",">
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.tags.some(tag: => tag.toLowerCase().includes(searchTerm.toLowerCase())),
         return: matchesCategory && matchesSearch})
+}
 }
     // comment
     useEffect(() => {}"
@@ -417,7 +418,7 @@ Advanced: Micro SAAS"
                 : "bg-black/50: border border-cyan-500/30 text-cyan-400 hover: bg-cyan-500/20,"}"}>"{category: === "all" ? "All Services" : category}";"
 export const FuturisticServicesShowcase = () => {}
 
-              {/* Benefits */}
+              {/* comment */}
               <div className="mb-4">
                 <h4 className="text-sm font - semibold text-cyan - 400 mb-2">
                   Key Benefits
@@ -432,8 +433,7 @@ export const FuturisticServicesShowcase = () => {}
                     </div>) ) }
                 </div>
               </div>
-
-              {/* Pricing and Contact */}
+              {/* comment */}
               <div className="flex items - center justify - between pt - 4 border-t border-gray -700 / 50">
                 <div>
                   <div className="text-2xl font - bold text-white">
@@ -447,13 +447,11 @@ export const FuturisticServicesShowcase = () => {}
                     {service.marketPrice}
                   </div>
                 </div>
-
                 <button className="px-4 py-2 bg-gradient - to - r from - cyan - 500 to - blue - 500 text-white rounded-lg font - medium hover:from - cyan - 400 hover:to - blue - 400 transition - all duration - 300 transform hover:scale - 105 shadow-lg shadow-cyan -500 / 30">
                   Get Started
                 </button>
               </div>
-
-              {/* Technology Stack */}
+              {/* comment */}
               {service.technologyStack && (<div className="mt-4 pt - 4 border-t border-gray -700 / 50">
                   <h4 className="text-sm font - semibold text-purple - 400 mb-2">
                     Tech Stack
@@ -468,7 +466,7 @@ export const FuturisticServicesShowcase = () => {}
                   </div>
                 </div>) }
 
-              {/* Contact Info */}
+              {/* comment */}
               <div className="mt-4 pt - 4 border-t border-gray -700 / 50">
                 <div className="text-xs text-gray - 400 space - y-1">
                   <div className="flex items - center space - x-2">
@@ -491,8 +489,7 @@ export const FuturisticServicesShowcase = () => {}
                 </div>
               </div>
             </div>
-
-            {/* Hover Effects */}
+            {/* comment */}
             <motion.div
               className="absolute inset - 0 bg-gradient - to - r from - cyan - 500 / 5 via - blue - 500 / 5 to - purple - 500 / 5 rounded-2xl opacity - 0 group - hover:opacity - 100 transition - opacity duration -500"
               initial={false}
@@ -501,14 +498,14 @@ export const FuturisticServicesShowcase = () => {}
         </div>
       </motion.div>) ;
   };
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [searchTerm, setSearchTerm] = useState("");
   const [visibleServices, setVisibleServices] = useState(new Set () ) ;
-  const categories = [  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
+  const categories = [  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [searchTerm, setSearchTerm] = useState("");
   const [visibleServices, setVisibleServices] = useState(new Set());
-  const categories = ['
-    'all',
+  const categories = ["
+    "all',
     ...new Set(ADVANCED_MICRO_SERVICES.map(s => s.category)),
   ];
   const filteredServices = ADVANCED_MICRO_SERVICES.filter(service => {
@@ -518,6 +515,7 @@ export const FuturisticServicesShowcase = () => {}
       service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
       service.tags.some(tag =>
         tag.toLowerCase().includes(searchTerm.toLowerCase())
+}
       );
     return matchesCategory && matchesSearch;
   });
@@ -534,19 +532,20 @@ export const FuturisticServicesShowcase = () => {}
   }, [filteredServices]);
   return ("
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 py-20">
-      {/* Animated Background */}"
+      {/* comment */}"
       <div className="absolute inset-0 overflow-hidden">"
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5"></div>
         {[...Array(20)].map((_, i) => (
-          <div
-            key={i}"
+          <div key={i}"
             className="absolute w-2 h-2 bg-cyan-400/20 rounded-full animate-float"
             style={{
-`
-              left: `${Math.random() * 100}%`,`
-              top: `${Math.random() * 100}%`,`
-              animationDelay: `${Math.random() * 5}s`,`
-              animationDuration: `${3 + Math.random() * 4}s`}}
-          />
+"
+              left: "${Math.random() * 100}%","
+              top: "${Math.random() * 100}%","
+              animationDelay: "${Math.random() * 5}s","
+              animationDuration: "${3 + Math.random() * 4}s"}}
+            />
         ))}
       </div>
+
+export default Component

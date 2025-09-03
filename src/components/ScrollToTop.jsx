@@ -1,15 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
-
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence  } from "framer-motion";
 export default function Page() {
 ;
-            window.addEventListener('scroll', toggleVisibility);
-            return () => window.removeEventListener('scroll', toggleVisibility)}, []);
+            window.addEventListener("scroll", toggleVisibility);
+            return () => window.removeEventListener("scroll", toggleVisibility)}, []);
         const scrollToTop = () => {
             window.scrollTo({
 
                 top: 0,
-                behavior: 'smooth'})};
+                behavior: "smooth"})};
         return (className="fixed bottom-8 right-8 w-14 h-14 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center z-50");
         aria - label;"
         "Back to top";
@@ -20,19 +19,17 @@ export default function Page() {
             0, y;
             20}
     };
-
-    window.addEventListener('scroll', toggleVisibility);
-    return () => window.removeEventListener('scroll', toggleVisibility);
+    window.addEventListener("scroll", toggleVisibility);
+    return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
-
   const scrollToTop = () => {
     window.scrollTo({
 
       top: 0,
-      behavior: 'smooth'});
+      behavior: "smooth"});
   };
-
   return ()
+}
     <AnimatePresence>
       {isVisible && (
         <motion.button
@@ -76,13 +73,12 @@ export default function Page() {
 }}
         >"
           <svg className="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">"
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18"  />
           </svg>
         </button>) }
     </>
 ;
 export default ScrollToTop;
-
 export default ScrollToTop;
 export default ScrollToTop;
 export default ScrollToTop;

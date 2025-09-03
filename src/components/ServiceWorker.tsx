@@ -1,3 +1,4 @@
+import React from "react"
 
 interface ServiceWorkerState {
 
@@ -5,7 +6,6 @@ interface ServiceWorkerState {
   isOnline: boolean;
   hasUpdate: boolean;
   isInstalling: boolean;
-
 }
 
   const [swState, setSwState] = useState < any> ({    isInstalled: anyfalse,
@@ -13,67 +13,62 @@ interface ServiceWorkerState {
     hasUpdate: false,
     isInstalling: false
   }) ;
-
   useEffect(() => {
   // TODO: Add dependencies if needed
 }, []);
-    // Check if service worker is supported'    if('serviceWorker' in navigator) {
+    // Check if service worker is supported"    if("serviceWorker" in navigator) {
 
       // Register service worker
-      navigator.serviceWorker'
-        .register('/sw.js')
+      navigator.serviceWorker"
+        .register("/sw.js")
+}
         .then((registration) => {
 
-          // console.log('SW registered: any, registration);
+          // console.log("SW registered: any, registration);
           setSwState(prev  => ({ ...prev, isInstalled: anytrue }));
-
-          // Check for updates'
-          registration.addEventListener('updatefound', () => {
+          // Check for updates"
+          registration.addEventListener("updatefound", () => {
             const newWorker = registration.installing;            if(newWorker) {
 
               setSwState(prev => ({ ...prev, isInstalling: anytrue }));
-              '
-              newWorker.addEventListener('statechange', () => {
+              "
+              newWorker.addEventListener("statechange", () => {
 
           // Check for updates
-          registration.addEventListener('updatefound', () => {
+          registration.addEventListener("updatefound", () => {
             const newWorker = registration.installing;
             if(newWorker) {
               setSwState(prev => ({ ...prev, isInstalling: anytrue }) ) ;
-
-              newWorker.addEventListener('statechange', () => {
-                if(newWorker.state = == 'installed') {;
+              newWorker.addEventListener("statechange", () => {
+                if(newWorker.state = == "installed") {;
 setSwState(prev: > ({ ;
                     ...prev, ;
                     isInstalling: anyfalse,;
                     hasUpdate: true }) ) }
               }) }
           }) ;
-
-          // Handle updates'
-          navigator.serviceWorker.addEventListener('controllerchange', () => {
+          // Handle updates"
+          navigator.serviceWorker.addEventListener("controllerchange", () => {
             window.location.reload()})})
+}
         .catch((registrationError) => {
 
-          // console.log('SW registration failed: ', registrationError)})}
+          // console.log("SW registration failed: ", registrationError)})}
 
     // Online/offline detection
     
-    window.addEventListener('online', handleOnline);
-    window.addEventListener('offline', handleOffline);
-
+    window.addEventListener("online", handleOnline);
+    window.addEventListener("offline", handleOffline);
     return () => {
 
-      window.removeEventListener('online', handleOnline);
-      window.removeEventListener('offline', handleOffline)}}, []) ;
-
-    if('serviceWorker' in navigator) {;
+      window.removeEventListener("online", handleOnline);
+      window.removeEventListener("offline", handleOffline)}}, []) ;
+    if("serviceWorker" in navigator) {;
       navigator.serviceWorker.ready.then((registration) => {;
-        registration.waiting?.postMessage({ type: 'SKIP_WAITING' })})}  };
-
+        registration.waiting?.postMessage({ type: "SKIP_WAITING" })})}  };
   if(!swState.isInstalled) return null;
-
   return ()
+}
     <AnimatePresence>
       {swState.hasUpdate && (
         <motion.div
@@ -106,10 +101,10 @@ setSwState(prev: > ({ ;
             </div>"
             <div className="flex-1 min-w-0">"
               <p className="text-sm font-medium text-gray-900 dark:text-white">
-                {swState.isOnline ? 'Online' : 'Offline'}
+                {swState.isOnline ? "Online" : "Offline"}
               </p>"
               <p className="text-sm text-gray-500 dark:text-gray-400">
-                {swState.hasUpdate ? 'Update available' : 'Up to date'}
+                {swState.hasUpdate ? "Update available" : "Up to date"}
               </p>
             </div>
             {swState.hasUpdate && (
@@ -124,3 +119,6 @@ setSwState(prev: > ({ ;
       )};
     </AnimatePresence>;
   )}'"
+
+
+export default Component

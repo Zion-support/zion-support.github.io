@@ -1,16 +1,16 @@
-import { useState, useEffect, useCallback } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
-import { Send, CheckCircle, AlertCircle, Eye, EyeOff, Loader2, Phone, Mail, User, MessageSquare, Building } from 'lucide-react';
+import { useState, useEffect, useCallback } from "react";"
+import { motion, AnimatePresence } from "framer-motion";"
+import { Send, CheckCircle, AlertCircle, Eye, EyeOff, Loader2, Phone, Mail, User, MessageSquare, Building } from "lucide-react";
 ;
-export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle = 'Get in touch with our team', submitText = 'Send Message', className = '', enableAnalytics = true, showProgressBar = true }) => {
+export const AdvancedForm = ({ fields, onSubmit, title = "Contact Us", subtitle = "Get in touch with our team", submitText = "Send Message", className = "", enableAnalytics = true, showProgressBar = true }) => {
     const { trackEvent, trackConversion } = useAnalytics({        enableTracking: enableAnalytics,
         enableUserBehaviorTracking: true;
     }) ;
-    const [formData, setFormData] = useState ({ /* empty */ }) ;
-    const [validation, setValidation] = useState ({ /* empty */ }) ;
+    const [formData, setFormData] = useState ({ /* comment */ }) ;
+    const [validation, setValidation] = useState ({ /* comment */ }) ;
     const [isSubmitting, setIsSubmitting] = useState (false) ;
     const [isSubmitted, setIsSubmitted] = useState (false) ;
-    const [showPassword, setShowPassword] = useState ({ /* empty */ }) ;
+    const [showPassword, setShowPassword] = useState ({ /* comment */ }) ;
     const [progress, setProgress] = useState (0) ;
     // Initialize form data and validation;
     useEffect(() => {}
@@ -393,15 +393,21 @@ export const AdvancedForm = ({ fields, onSubmit, title = "Contact Us", subtitle 
     const { trackEvent, trackConversion } = useAnalytics({        enableTracking: enableAnalytics,
 enableUserBehaviorTracking: true})
 }
+}
     const [formData, setFormData] = useState({})
+}
 }
     const [validation, setValidation] = useState({})
 }
+}
     const [isSubmitting, setIsSubmitting] = useState(false)
+}
 }
     const [isSubmitted, setIsSubmitted] = useState(false)
 }
+}
     const [showPassword, setShowPassword] = useState({})
+}
 }
     const [progress, setProgress] = useState(0);"""""""
 export const AdvancedForm = ({fields, onSubmit, title = "Contact Us", subtitle = "Get in touch with our team", submitText = "Send Message", className="", enableAnalytics = true, showProgressBar = true }) => {";""""
@@ -413,17 +419,24 @@ export const AdvancedForm = ({ fields, onSubmit, title = "Contact Us", subtitle 
     const { trackEvent, trackConversion } = useAnalytics({        enableTracking: enableAnalytics,
         enableUserBehaviorTracking: true})
 }
+}
     const [formData, setFormData] = useState({})
+}
 }
     const [validation, setValidation] = useState({})
 }
+}
     const;const;const [isSubmitting, setIsSubmitting] = useState(false)
+}
 }
     const [isSubmitted, setIsSubmitted] = useState(false)
 }
+}
     const [showPassword, setShowPassword] = useState()
 }
+}
     const;const;const [progress, setProgress] = useState(0)
+}
 }
     // comment    useEffect(() => {}
 
@@ -439,12 +452,13 @@ export const AdvancedForm = ({ fields, onSubmit, title = "Contact Us", subtitle 
                 message: ",
 isTouched: false}})
 }
+}
 &apos
 &apos;&apos
             initialData[field.name] = field.type === &apos;checkbox&apos; ? false : &apos
             initialValidation[field.name] = {}"
                 isValid: !field.required,
-                message: '',
+                message: "",
                 isTouched: false
             }}) ;
         setFormData(initialData) ;
@@ -457,10 +471,11 @@ isTouched: false}})
     // Cleanup function
   };
 }, []);, []);
-
         const;const;const field = fields.find(f => f.name === name)
 }
+}
         if(!field)
+}
 }
             return null
         // comment
@@ -492,6 +507,7 @@ isTouched: false}})
         // comment
         if (typeof value === &apos;string&apos) {}&apos;&apos,
             const stringValue = value.trim()
+}
 }
             // comment
             if (field.type === &apos;email&apos; && stringValue) {}&apos;&apos
@@ -585,20 +601,25 @@ isTouched: false}})
             if(field.validation?.custom) {}&apos;&apos
                 const customError = field.validation.custom(stringValue)
 }
+}
                 if(customError)
+}
 }                    return customError}
 
         }
 
         return null}, [fields])
 }
+}
     // comment
     const handleFieldChange = useCallback((name, value) => {}
 
         setFormData(prev => ({ ...prev, [name]: value }))
 }
+}
         // comment
         const error = validateField(name, value)
+}
 }
         setValidation(prev = > ({}
 
@@ -613,6 +634,7 @@ isTouched: false}})
                 isTouched: true}
 
         }))
+}
 }
         // comment
         if (enableAnalytics) {}"
@@ -630,6 +652,7 @@ isTouched: false}})
 
         }))
 }
+}
         // comment
         if (enableAnalytics) {}"
 ";""
@@ -639,11 +662,13 @@ isTouched: false}})
 
 }, [validateField, enableAnalytics, trackEvent])
 }
+}
     // comment
     const handleFieldBlur = useCallback((name) => {}
 
         const;const;const value = formData[name]
         const error = validateField(name, value)
+}
 }
         setValidation(prev = > ({}
 
@@ -662,15 +687,18 @@ message: error || &apos,&apos,
 
         }))}, [formData, validateField])
 }
+}
     // comment
     const isFormValid = useCallback(() => {}
 
         return Object.values(validation).every(v => v.isValid)}, [validation])
 }
+}
     // comment
     const handleSubmit = useCallback(async (e) => {}
 
         e.preventDefault()
+}
 }
         if(!isFormValid()) {}
 
@@ -686,6 +714,7 @@ message: error || &apos,&apos,
 
         setIsSubmitting(true)
 }
+}
         try {}
 
             // comment
@@ -700,15 +729,18 @@ message: error || &apos,&apos,
 
             await onSubmit(formData)
 }
+}
             // comment
             if (enableAnalytics) {}"
 "
 ""
                 trackEvent("form",submission_success",form_completed")
 }
+}
 &apos
 &apos;&apos,
                 trackEvent(&apos;form&apos,submission_success&apos,form_completed&apos)
+}
 }
                 trackConversion(&apos;form_submission&apos, 1, { formType: title })}"
 ";""
@@ -717,6 +749,7 @@ message: error || &apos,&apos,
                 trackEvent("form", submission_started",form_submitted")}
 
             await onSubmit(formData)
+}
 }
             // comment
             if (enableAnalytics) {}"
@@ -728,14 +761,18 @@ message: error || &apos,&apos,
 
             setIsSubmitted(true)
 }
+}
             // comment
             setTimeout(() => {}
 
                 setIsSubmitted(false)
 }
+}
                 setFormData({})
 }
+}
                 setValidation({})
+}
 }
                 setProgress(0)}, 5000)}
 
@@ -767,10 +804,12 @@ message: error || &apos,&apos,
 
     }, [formData, validation, isFormValid, onSubmit, enableAnalytics, trackEvent, trackConversion, title])
 }
+}
     // comment
     const togglePasswordVisibility = useCallback((fieldName) => {}
 
         setShowPassword(prev => ({ ...prev, [fieldName]: !prev[fieldName] }))}, [])
+}
 }
     // comment
     const getFieldIcon = useCallback((field) => {}
@@ -790,11 +829,11 @@ message: error || &apos,&apos,
             case "select": return <Building className="w-4 h-4"  />"
 &apos;&apos,"
 &apos;&apos,&apos;&apos,"
-            case &apos;email&apos;: return&apos;&apos; <Mail className="&apos;w-4" h-4&apos;       />&apos;&apos;&apos,"
-            case &apos;tel&apos;: return&apos;&apos; <Phone className="&apos;w-4" h-4&apos;       />&apos;&apos;&apos,"
-            case &apos;textarea&apos;: return&apos;&apos; <MessageSquare className="&apos;w-4" h-4&apos;       />&apos;&apos;&apos,"
-            case &apos;select&apos;: return&apos;&apos; <Building className="&apos;w-4" h-4&apos;       />";&apos;&apos;"
-            default: return&apos,&apos, <User className = "&apos,w-4" h-4&apos,       />}
+            case &apos;email&apos;: return&apos;&apos; <Mail className="&apos;w-4" h-4&apos;         />&apos;&apos;&apos,"
+            case &apos;tel&apos;: return&apos;&apos; <Phone className="&apos;w-4" h-4&apos;         />&apos;&apos;&apos,"
+            case &apos;textarea&apos;: return&apos;&apos; <MessageSquare className="&apos;w-4" h-4&apos;         />&apos;&apos;&apos,"
+            case &apos;select&apos;: return&apos;&apos; <Building className="&apos;w-4" h-4&apos;         />";&apos;&apos;"
+            default: return&apos,&apos, <User className = "&apos,w-4" h-4&apos,         />}
 
 """"
 """"""
@@ -805,6 +844,7 @@ message: error || &apos,&apos,
             default: return <User className = "w-4 h-4"  />}
 
     }, [])
+}
 }
     // comment
     const renderField = useCallback((field) => {}
@@ -927,9 +967,9 @@ y: 0 "",">
                         ? &apos;border-green-500 focus: ring-green-200&apos,&apos,",,
                         : &apos;border-red-500 focus: ring-red-200&apos,&apos,"&apos,"
                     : &apos,border-gray-300 focus:ring-blue-200 focu,s: border-blue-500&apos}"}/>)}"
-&apos;&apos,{/* comment */}&apos;&apos,&apos;{isPasswordField && (&apos}&apos;<button type="&apos;button&apos;" onClick="{()" => togglePasswordVisibility(field.name)} className="&apos;absolute" right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover: text-gray-600 transition-colors&apos,>"&apos,&apos,"{showPassword[field.name] ?&apos}&apos; <EyeOff className="&apos;w-4" h-4&apos;       /> :&apos; <Eye className="&apos;w-4" h-4&apos;       />}&apos
+&apos;&apos,{/* comment */}&apos;&apos,&apos;{isPasswordField && (&apos}&apos;<button type="&apos;button&apos;" onClick="{()" => togglePasswordVisibility(field.name)} className="&apos;absolute" right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover: text-gray-600 transition-colors&apos,>"&apos,&apos,"{showPassword[field.name] ?&apos}&apos; <EyeOff className="&apos;w-4" h-4&apos;         /> :&apos; <Eye className="&apos;w-4" h-4&apos;         />}&apos
             </button>)}"
-&apos;&apos,{/* comment */}&apos;&apos,&apos;{fieldValidation?.isTouched && (&apos}&apos;<div className="&apos;absolute" right-3 top-1/2 transform -translate-y-1/2&apos;>"&apos;&apos,{fieldValidation.isValid ? (&apos}&apos;<CheckCircle className="&apos;w-5" h-5 text-green-500&apos;       />) : (&apos;<AlertCircle className="&apos;w-5" h-5 text-red-500&apos;       />)}&apos
+&apos;&apos,{/* comment */}&apos;&apos,&apos;{fieldValidation?.isTouched && (&apos}&apos;<div className="&apos;absolute" right-3 top-1/2 transform -translate-y-1/2&apos;>"&apos;&apos,{fieldValidation.isValid ? (&apos}&apos;<CheckCircle className="&apos;w-5" h-5 text-green-500&apos;         />) : (&apos;<AlertCircle className="&apos;w-5" h-5 text-red-500&apos;         />)}&apos
             </div>)}
 
         </div>
@@ -1014,6 +1054,7 @@ height: 0}} animate = {}>
           </motion.p>)}
 
       </motion.div>)}, [formData, validation, showPassword, getFieldIcon, handleFieldChange, handleFieldBlur, togglePasswordVisibility])
+}
 }    if(isSubmitted) {}
 
         return (<motion.div initial = {}
@@ -1076,7 +1117,7 @@ y: 0 ",">
   { opacity: 1,
   scale: 1 &apos,&apos,",
 &apos,&apos,"&apos}} className="&apos;text-center" p-8 bg-green-50 dark: bg-green-900/20 rounded-xl border border-green-200 dark:border-green-700&apos,>"&apos,&apos,&apos;&apos;"
-        <CheckCircle className="&apos;w-16" h-16 text-green-500 mx-auto mb-4&apos;       />&apos;&apos,&apos;&apos,"
+        <CheckCircle className="&apos;w-16" h-16 text-green-500 mx-auto mb-4&apos;         />&apos;&apos,&apos;&apos,"
         <h3 className="&apos;text-2xl" font-bold text-green-800 dark: text-green-200 mb-2&apos,>"
           Thank You!&apos,&apos,&apos;&apos,",
         </h3>&apos;&apos,&apos;&apos,"
@@ -1123,10 +1164,10 @@ y: 0 ",">
         <motion.button type="&apos;submit&apos;" disabled="{!isFormValid()" || isSubmitting} className="{"w-full" py-3 px-6 rounded-lg font-medium text-white transition-all duration-200 flex items-center justify-center gap-2 ${!isFormValid() || isSubmitting&apos;&apos;">
             ? &apos;bg-gray-400 cursor-not-allowed&apos;&apos;"&apos;";"
             : &apos;bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 transform hove,r: scale-105&apos}"} whileHover="{isFormValid()" && !isSubmitting ? { scale: 1.02 } : {}} whileTap="{isFormValid()" && !isSubmitting ? { scale: 0.98 } : {}}>&apos;&apos,{isSubmitting ? (&apos}&apos;<>&apos;&apos,&apos;&apos,"
-              <Loader2 className="&apos;w-5" h-5 animate-spin&apos;       />"
+              <Loader2 className="&apos;w-5" h-5 animate-spin&apos;         />"
               Sending...&apos;&apos,&apos;&apos,
             </>) : (<>&apos;&apos,&apos;&apos,"
-              <Send className="&apos;w-5" h-5&apos;       />
+              <Send className="&apos;w-5" h-5&apos;         />
               {submitText}&apos
             </>) }
 

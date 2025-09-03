@@ -1,3 +1,4 @@
+import React from "react"
 import { useState } from "react";""""
 import { useParams, Link } from "react-router-dom";""""
 import { Suspense } from "react";""""
@@ -98,61 +99,55 @@ function CategoryContent({ categoryId, category, IconComponent, user}) {}
       <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4">""""
         <div className="flex items-center gap-4">""""
           <div className="p-3 bg-zion-purple/10 rounded-full">""""
-            <IconComponent className="h-8 w-8 text-zion-purple"/>
+            <IconComponent className="h-8 w-8 text-zion-purple"  />
           </div>"""
           <div>""""
             <h1 className="text-3xl font-bold">{category.name}</h1>""""
             <p className="text-muted-foreground mt-1">{category.description}</p>
           </div>
         </div>
-
-        {canCreatePost && <CreatePostButton categoryId={categoryId} />}
+        {canCreatePost && <CreatePostButton categoryId={categoryId}   />}
       </div>"""
 """"
       <div className="mb-6">""""
         <div className="relative">""""
-          <Search className="absolute left-3 top-3 h-4 w-4 text-muted-foreground"/>""""
+          <Search className="absolute left-3 top-3 h-4 w-4 text-muted-foreground"  />""""
           <Input placeholder="Search posts in this category..." className="pl-10" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)}/>
         </div>
       </div>"""
 """"
       {loading ? (<div className="text-center py-16">Loading...</div>) : errorMessage ? (<div className="text-center py-16 text-destructive">{errorMessage}</div>) : posts.length > 0 ? (<div className="space-y-4">"""
-          {filteredPosts.map((post) => (<PostCard key={post.id} post={post}/>))}""""
+          {filteredPosts.map((post) => (<PostCard key={post.id} post={post}  />))}""""
         </div>) : (<div className="text-center py-16">""""
           <h2 className="text-xl font-medium mb-2">No posts yet</h2>""""
           <p className="text-muted-foreground mb-6">Be the first to start a discussion in this category!</p>
-
-          {canCreatePost && <CreatePostButton categoryId={categoryId}/>}
+          {canCreatePost && <CreatePostButton categoryId={categoryId}  />}
         </div>)}
     </div>)}
 export default function ForumCategoryPage() {}
     const { categoryId } = useParams();
     const { user } = useAuth();
     if (!categoryId || !categoriesInfo[categoryId]) {}
-        return <NotFound />}
+        return <NotFound  />}
     const category = categoriesInfo[categoryId];
     const IconComponent = iconMap[category.icon] || MessageSquare;
     return (<>
       <SEO title={`${category.name} | Community Forum | Zion AI Marketplace`} description={category.description} keywords = {}
-`
-``
-  `community, forum,
-  ${category.id`
-``
-}, discussion, AI marketplace, questions, answers`} canonical={`https://ziontechgroup.com/community/category/${categoryId}`}/>"""
+"
+""
+  "community, forum,
+  ${category.id"
+""
+}, discussion, AI marketplace, questions, answers"} canonical={`https://ziontechgroup.com/community/category/${categoryId}`}  />"""
 """"
       <Suspense fallback={<div className="text-center py-16">Loading...</div>}>
-        <CategoryContent categoryId={categoryId} category={category} IconComponent={IconComponent} user={user}/>
+        <CategoryContent categoryId={categoryId} category={category} IconComponent={IconComponent} user={user}  />
       </Suspense>
     </>)}
 
 
 export { CategoryContent, ForumCategoryPage, IconComponent };
-
 export { CategoryContent, ForumCategoryPage, IconComponent };
-
 export { CategoryContent, ForumCategoryPage, IconComponent };
-
 export { CategoryContent, ForumCategoryPage, IconComponent };
-
 export { CategoryContent, ForumCategoryPage, IconComponent };

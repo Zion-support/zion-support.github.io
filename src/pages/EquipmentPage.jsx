@@ -1,39 +1,36 @@
-import React, { useState, useEffect } from 'react';'''
-import { Card, CardContent, CardHeader } from '@/components/ui/card';'''
-import { Button } from '@/components/ui/button';'''
-import { Badge } from '@/components/ui/badge';'''
-import { Filter, SortAsc, Star, ShoppingCart import { Footer } from '@/components/Footer';
-
+import React, { useState, useEffect } from "react";"""
+import { Card, CardContent, CardHeader } from "@/components/ui/card";"""
+import { Button } from "@/components/ui/button";"""
+import { Badge } from "@/components/ui/badge";"""
+import { Filter, SortAsc, Star, ShoppingCart import { Footer } from "@/components/Footer";
 const EquipmentPage = () => {}
   const [equipment, setEquipment] = useState([]);
-  const [loading, setLoading] = useState(true);'
-  const [filterCategory, setFilterCategory] = useState('');'
-  const [sortBy, setSortBy] = useState('newest');
-  const [priceRange, setPriceRange] = useState([0, 10000]);'
-  const [filterBrand, setFilterBrand] = useState('');'
-  const [filterAvailability, setFilterAvailability] = useState('');
+  const [loading, setLoading] = useState(true);"
+  const [filterCategory, setFilterCategory] = useState("");"
+  const [sortBy, setSortBy] = useState("newest");
+  const [priceRange, setPriceRange] = useState([0, 10000]);"
+  const [filterBrand, setFilterBrand] = useState("");"
+  const [filterAvailability, setFilterAvailability] = useState("");
   const [minRating, setMinRating] = useState(0);
   const [showRecommended, setShowRecommended] = useState(false);
-'
-  const [equipment, setEquipment] = useState([]);''
-  const [loading, setLoading] = useState(true);'''
-  const [filterCategory, setFilterCategory] = useState('');'''
-  const [sortBy, setSortBy] = useState('newest');''
-  const [priceRange, setPriceRange] = useState([0, 10000]);'''
-  const [filterBrand, setFilterBrand] = useState('');'''
-  const [filterAvailability, setFilterAvailability] = useState('');
-  const [minRating, setMinRating] = useState(0);'
-  const [showRecommended, setShowRecommended] = useState(false);''
-'''
-  const categories = ['Servers',Networking',Storage',Workstations',Security'];'''
-  const brandOptions = ['Dell',HP',Cisco',IBM',Lenovo'];'''
-  const availabilityOptions = ['In Stock',Low Stock',Out of Stock'];
-
+"
+  const [equipment, setEquipment] = useState([]);""
+  const [loading, setLoading] = useState(true);"""
+  const [filterCategory, setFilterCategory] = useState("");"""
+  const [sortBy, setSortBy] = useState("newest");""
+  const [priceRange, setPriceRange] = useState([0, 10000]);"""
+  const [filterBrand, setFilterBrand] = useState("");"""
+  const [filterAvailability, setFilterAvailability] = useState("");
+  const [minRating, setMinRating] = useState(0);"
+  const [showRecommended, setShowRecommended] = useState(false);""
+"""
+  const categories = ["Servers",Networking",Storage",Workstations",Security"];"""
+  const brandOptions = ["Dell",HP",Cisco",IBM",Lenovo"];"""
+  const availabilityOptions = ["In Stock",Low Stock",Out of Stock'];
   useEffect ( () => {}
     // Simulate loading;
     setTimeout ( () => {}
       setLoading (false) }, 1000) }, []) ;
-
   const EquipmentCard = ({ equipment }) => (
     <Card className="h-full hover:shadow-lg transition-shadow">""""
       <CardHeader className="pb-3">""""
@@ -56,7 +53,7 @@ const EquipmentPage = () => {}
       <CardContent className="pt-0">""""
         <div className="flex items-center gap-4 mb-3">""""
           <div className="flex items-center gap-1">""""
-            <Star className="h-4 w-4 text-yellow-500 fill-current"/>""""
+            <Star className="h-4 w-4 text-yellow-500 fill-current"  />""""
             <span className="text-sm font-medium">{equipment.rating?.toFixed(1)}</span>""""
             <span className="text-xs text-muted-foreground">({equipment.reviewCount} reviews)</span>
           </div>"""
@@ -65,7 +62,7 @@ const EquipmentPage = () => {}
         <div className="flex items-center justify-between">""""
           <span className="text-sm font-medium">{equipment.category}</span>""""
           <Button size="sm">""""
-            <ShoppingCart className="h-4 w-4 mr-1"/>
+            <ShoppingCart className="h-4 w-4 mr-1"  />
             View Details;
           </Button>
         </div>
@@ -83,8 +80,7 @@ const EquipmentPage = () => {}
             Discover our comprehensive range of enterprise-grade IT equipment, servers, networking solutions, and more.
           </p>
         </div>
-
-        <EquipmentFilterControls />"""
+        <EquipmentFilterControls  />"""
 """"
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {loading ? (
@@ -101,6 +97,7 @@ const EquipmentPage = () => {}
                 </CardContent>
               </Card>
             ))
+}
           ) : (
             // Sample equipment data = []
               {}
@@ -139,21 +136,16 @@ const EquipmentPage = () => {}
                 reviewCount: 156,""""
                 description: "Reliable 2U server with excellent performance and enterprise support."""
             ].map((equipment, index) => (;
-              <EquipmentCard key={index} equipment={equipment} />) ) ) }
+              <EquipmentCard key={index} equipment={equipment}   />) ) ) }
         </div>
       </div>
-      <Footer />
+      <Footer  />
     </div>) };
-
 export default EquipmentPage;
 }}
 
 export { EquipmentPage, EquipmentCard };
-
 export { EquipmentPage, EquipmentCard };
-
 export { EquipmentPage, EquipmentCard };
-
 export { EquipmentPage, EquipmentCard };
-
 export { EquipmentPage, EquipmentCard };

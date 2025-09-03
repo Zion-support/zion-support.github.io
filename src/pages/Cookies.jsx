@@ -1,15 +1,14 @@
-import React from 'react';'''
-import { SEO } from '../components/SEO';
-
+import React from "react";"""
+import { SEO } from "../components/SEO";
 export default function Cookies() {}
   return()
+}
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700 pt-20">"""
       <SEO""""
         title="Cookie Policy | Zion Tech Group""""
         description="Learn about how Zion Tech Group uses cookies to improve your browsing experience and provide personalized content.""""
         keywords="cookie policy, privacy, data collection, website cookies""""
-        canonical="https://ziontechgroup.com/cookies""""
-      />""""
+        canonical="https://ziontechgroup.com/cookies"""" />""""
       <main className="min-h-screen pt-20">""""
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">""""
           <div className="max-w-4xl mx-auto">""""
@@ -17,13 +16,13 @@ export default function Cookies() {}
               Cookie Policy"""
             </h1>""""
             <div className="bg-slate-800 rounded-lg p-8 border border-slate-700">""""
-              <p className="text-gray-300 mb-6">'
-                Last updated:{' '}'
-                {new Date().toLocaleDateString('en-US', {}
-'
-                  year: 'numeric','
-                  month: 'long','
-                  day: 'numeric'})}"""
+              <p className="text-gray-300 mb-6">"
+                Last updated:{" "}"
+                {new Date().toLocaleDateString("en-US", {}
+"
+                  year: "numeric","
+                  month: "long","
+                  day: "numeric"})}"""
               </p>""""
               <div className="space-y-8">"""
                 <section>""""
@@ -133,7 +132,7 @@ export default function Cookies() {}
                       Use your browser settings to delete or block cookies;
                     </li>
                     <li>
-                      {' '}
+                      {" "}
                       Set your browser to ask for permission before setting;
                       cookies;
                     </li>
@@ -145,16 +144,16 @@ export default function Cookies() {}
                   <h2 className="text-2xl font-semibold text-white mb-4">
                     Contact Us"""
                   </h2>""""
-                  <p className="text-gray-300 leading-relaxed">'
-                    If you have any questions about our use of cookies or would''
-                    like to update your preferences, please contact us at{' '}"""
+                  <p className="text-gray-300 leading-relaxed">"
+                    If you have any questions about our use of cookies or would""
+                    like to update your preferences, please contact us at{" "}"""
                     <a""""
                       href="mailto:kleber@ziontechgroup.com""""
                       className="text-blue-400 hover:text-blue-300"""
-                    >'
-                      kleber@ziontechgroup.com''
-                    </a>{' '}'
-                    or call us at{' '}"""
+                    >"
+                      kleber@ziontechgroup.com""
+                    </a>{" "}"
+                    or call us at{" '}"""
                     <a""""
                       href="tel:+13024640950""""
                       className="text-blue-400 hover:text-blue-300"""
@@ -174,11 +173,7 @@ export default function Cookies() {}
 
 
 export { Cookies };
-
 export { Cookies };
-
 export { Cookies };
-
 export { Cookies };
-
 export { Cookies };

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {}
   Calendar,
   User,
@@ -8,107 +8,104 @@ import {}
   Filter,
   Clock,
   Eye,
-  ExternalLink,'
-  TrendingUp,''
-  Award,'''
-  Globe} from 'lucide-react';
-
+  ExternalLink,"
+  TrendingUp,""
+  Award,"""
+  Globe} from "lucide-react";
 const News = () => {}
-'
-  const [searchTerm, setSearchTerm] = useState('');'
-  const [selectedCategory, setSelectedCategory] = useState('All');
-'
-  const categories = [''
-    'All',Comp News',Product Updates',Industry Insights',Awards & Recognition',Partnerships',Research & Development',Market Trends'
+"
+  const [searchTerm, setSearchTerm] = useState("");"
+  const [selectedCategory, setSelectedCategory] = useState("All");
+"
+  const categories = [""
+    "All",Comp News",Product Updates",Industry Insights",Awards & Recognition",Partnerships",Research & Development",Market Trends"
   ];
-'
-  const sources = [''
-    'All Sources',Comp Press Releases',Industry Reports',Technology News',Research Papers',Partner Updates',Customer Success Stories'
+"
+  const sources = [""
+    "All Sources",Comp Press Releases",Industry Reports",Technology News",Research Papers",Partner Updates",Customer Success Stories"
   ];
-'
-  const timeframes = [''
-    'All Time',Last 24 Hours',Last Week',Last Month',Last 3 Months',Last Year'
+"
+  const timeframes = [""
+    "All Time",Last 24 Hours",Last Week",Last Month",Last 3 Months",Last Year"
   ];
-
   const newsItems = []
     {}
-      id: 1,'
-      title:''
-        'Zion Tech Group Launches Revolutionary AI-Powered Quantum Neural Network Platform','
-      category: 'Product Updates','
-      source: 'Comp Press Releases','
-      date: '2025-01-15','
-      readTime: '5 min read','
-      excerpt:''
-        'Our latest innovation combines quantum computing principles with advanced neural networks to deliver unprecedented AI capabilities for enterprise applications.','
-      image: '/images/news/quantum-ai-platform.jpg',
+      id: 1,"
+      title:""
+        "Zion Tech Group Launches Revolutionary AI-Powered Quantum Neural Network Platform","
+      category: "Product Updates","
+      source: "Comp Press Releases","
+      date: "2025-01-15","
+      readTime: "5 min read","
+      excerpt:""
+        "Our latest innovation combines quantum computing principles with advanced neural networks to deliver unprecedented AI capabilities for enterprise applications.","
+      image: "/images/news/quantum-ai-platform.jpg",
       featured: true},
     {}
-      id: 2,'
-      title:''
-        'Zion Tech Group Recognized as Top AI Solutions Provider in 2024 Tech Awards','
-      category: 'Awards & Recognition','
-      source: 'Industry Reports','
-      date: '2024-12-20','
-      readTime: '3 min read','
-      excerpt:''
-        'Industry recognition for our innovative AI solutions and commitment to driving digital transformation across enterprises.','
-      image: '/images/news/award-recognition.jpg',
+      id: 2,"
+      title:""
+        "Zion Tech Group Recognized as Top AI Solutions Provider in 2024 Tech Awards","
+      category: "Awards & Recognition","
+      source: "Industry Reports","
+      date: "2024-12-20","
+      readTime: "3 min read","
+      excerpt:""
+        "Industry recognition for our innovative AI solutions and commitment to driving digital transformation across enterprises.","
+      image: "/images/news/award-recognition.jpg",
       featured: false},
     {}
-      id: 3,'
-      title:''
-        'Strategic Partnership Announced with Leading Cloud Infrastructure Provider','
-      category: 'Partnerships','
-      source: 'Comp Press Releases','
-      date: '2024-12-10','
-      readTime: '4 min read','
-      excerpt:''
-        'New partnership expands our cloud capabilities and enables seamless integration for enterprise clients.','
-      image: '/images/news/partnership-announcement.jpg',
+      id: 3,"
+      title:""
+        "Strategic Partnership Announced with Leading Cloud Infrastructure Provider","
+      category: "Partnerships","
+      source: "Comp Press Releases","
+      date: "2024-12-10","
+      readTime: "4 min read","
+      excerpt:""
+        "New partnership expands our cloud capabilities and enables seamless integration for enterprise clients.","
+      image: "/images/news/partnership-announcement.jpg",
       featured: false},
     {}
-      id: 4,'
-      title:''
-        'Breakthrough in Autonomous Business Operations: New Research Findings','
-      category: 'Research & Development','
-      source: 'Research Papers','
-      date: '2024-11-28','
-      readTime: '8 min read','
-      excerpt:''
-        'Latest research reveals significant advancements in autonomous business process automation and decision-making systems.','
-      image: '/images/news/research-breakthrough.jpg',
+      id: 4,"
+      title:""
+        "Breakthrough in Autonomous Business Operations: New Research Findings","
+      category: "Research & Development","
+      source: "Research Papers","
+      date: "2024-11-28","
+      readTime: "8 min read","
+      excerpt:""
+        "Latest research reveals significant advancements in autonomous business process automation and decision-making systems.","
+      image: "/images/news/research-breakthrough.jpg",
       featured: false},
     {}
-      id: 5,'
-      title: 'Market Trends: AI Adoption Accelerates Across Enterprise Sectors','
-      category: 'Market Trends','
-      source: 'Industry Reports','
-      date: '2024-11-15','
-      readTime: '6 min read','
-      excerpt:''
-        'Comprehensive analysis of AI adoption patterns and emerging trends in enterprise technology.','
-      image: '/images/news/market-trends.jpg',
+      id: 5,"
+      title: "Market Trends: AI Adoption Accelerates Across Enterprise Sectors","
+      category: "Market Trends","
+      source: "Industry Reports","
+      date: "2024-11-15","
+      readTime: "6 min read","
+      excerpt:""
+        "Comprehensive analysis of AI adoption patterns and emerging trends in enterprise technology.","
+      image: "/images/news/market-trends.jpg",
       featured: false}
   ];
-
   const filteredNews = newsItems.filter(item => {}
     const matchesSearch =
       item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      item.excerpt.toLowerCase().includes(searchTerm.toLowerCase());'
-    const matchesCategory =''
-      selectedCategory === 'All' || item.category === selectedCategory;
+      item.excerpt.toLowerCase().includes(searchTerm.toLowerCase());"
+    const matchesCategory =""
+      selectedCategory === "All' || item.category === selectedCategory;
     return matchesSearch && matchesCategory;
   }) ;
-
   return()
+}
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">""""
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">""""
         <div className="max-w-7xl mx-auto">""""
           <div className="text-center mb-12">""""
             <div className="flex justify-center mb-6">""""
               <div className="p-3 bg-blue-600/20 rounded-full">""""
-                <Globe className="h-12 w-12 text-blue-400" />
+                <Globe className="h-12 w-12 text-blue-400"  />
               </div>"""
             </div>""""
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
@@ -120,18 +117,17 @@ const News = () => {}
             </p>
           </div>
 """
-          {/* Search and Filters */}""""
+          {/* comment */}""""
           <div className="mb-12">""""
             <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">""""
               <div className="relative flex-1 max-w-md">""""
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />"""
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5"  />"""
                 <input""""
                   type="text""""
                   placeholder="Search news..."""
                   value={searchTerm}"""
                   onChange={e => setSearchTerm(e.target.value)}""""
-                  className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"""
-                />
+                  className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent""" />
               </div>"""
 """"
               <div className="flex flex-wrap gap-3">
@@ -149,8 +145,7 @@ const News = () => {}
               </div>
             </div>
           </div>
-
-          {/* Featured News */}"""
+          {/* comment */}"""
           {filteredNews.filter(item => item.featured).length > 0 && (""""
             <div className="mb-16">""""
               <h2 className="text-2xl font-bold mb-8 text-center">
@@ -159,6 +154,7 @@ const News = () => {}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 {filteredNews;
                   .filter(item => item.featured)
+}
                   .map(item => (
                     <div"""
                       key={item.id}""""
@@ -166,7 +162,7 @@ const News = () => {}
                     >""""
                       <div className="aspect-video bg-slate-700 flex items-center justify-center">""""
                         <div className="text-slate-500 text-center">""""
-                          <Globe className="h-16 w-16 mx-auto mb-2" />
+                          <Globe className="h-16 w-16 mx-auto mb-2"  />
                           <p>News Image</p>
                         </div>"""
                       </div>""""
@@ -176,11 +172,11 @@ const News = () => {}
                             {item.category}"""
                           </span>""""
                           <div className="flex items-center gap-1">""""
-                            <Calendar className="h-4 w-4" />
+                            <Calendar className="h-4 w-4"  />
                             {item.date}"""
                           </div>""""
                           <div className="flex items-center gap-1">""""
-                            <Clock className="h-4 w-4" />
+                            <Clock className="h-4 w-4"  />
                             {item.readTime}
                           </div>"""
                         </div>""""
@@ -192,7 +188,7 @@ const News = () => {}
                         </p>""""
                         <button className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors">"""
                           Read More""""
-                          <ArrowRight className="h-4 w-4 ml-2" />
+                          <ArrowRight className="h-4 w-4 ml-2"  />
                         </button>
                       </div>
                     </div>
@@ -200,7 +196,7 @@ const News = () => {}
               </div>
             </div>) }
 
-          {/* All News */}"""
+          {/* comment */}"""
           <div>""""
             <h2 className="text-2xl font-bold mb-8 text-center">Latest News</h2>""""
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -211,7 +207,7 @@ const News = () => {}
                 >""""
                   <div className="aspect-video bg-slate-700 flex items-center justify-center">""""
                     <div className="text-slate-500 text-center">""""
-                      <Globe className="h-12 w-12 mx-auto mb-2" />
+                      <Globe className="h-12 w-12 mx-auto mb-2"  />
                       <p>News Image</p>
                     </div>"""
                   </div>""""
@@ -221,7 +217,7 @@ const News = () => {}
                         {item.category}"""
                       </span>""""
                       <div className="flex items-center gap-1">""""
-                        <Calendar className="h-4 w-4" />
+                        <Calendar className="h-4 w-4"  />
                         {item.date}
                       </div>"""
                     </div>""""
@@ -237,7 +233,7 @@ const News = () => {}
                       </span>""""
                       <button className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors text-sm">"""
                         Read More""""
-                        <ArrowRight className="h-4 w-4 ml-1" />
+                        <ArrowRight className="h-4 w-4 ml-1"  />
                       </button>
                     </div>
                   </div>
@@ -247,7 +243,7 @@ const News = () => {}
 """
           {filteredNews.length === 0 && (""""
             <div className="text-center py-16">""""
-              <Globe className="w-16 h-16 text-gray-400 mx-auto mb-4" />""""
+              <Globe className="w-16 h-16 text-gray-400 mx-auto mb-4"  />""""
               <h3 className="text-xl font-semibold text-white mb-2">
                 No news found"""
               </h3>""""
@@ -261,15 +257,9 @@ const News = () => {}
     </div>
   );
 };
-
 export default News;
-
 export { News };
-
 export { News };
-
 export { News };
-
 export { News };
-
 export { News };

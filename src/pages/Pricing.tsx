@@ -1,28 +1,27 @@
 import {}
-  Check, 
-  Star, 
-  Zap, 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Rocket, 
+  Check,
+  Star,
+  Zap,
+  Brain,
+  Cloud,
+  Shield,
+  Rocket,
   ArrowRight,
   Users,
   Clock,
   MessageSquare,
   Phone,
   Mail,
-  Calendar''''
-} from 'lucide-react';
-'
-      popular: false,''
-      icon: Rocket,;'''
-      color: 'from-orange-500 to-red-500'}
+  Calendar""""
+} from "lucide-react";
+"
+      popular: false,""
+      icon: Rocket,;"""
+      color: "from-orange-500 to-red-500"}
   ];
-
-  '
-''
-  const savings: unknown = billingCycle === 'annual' ? 20 : 0;interface PricingTier {}
+  "
+""
+  const savings: unknown = billingCycle === "annual" ? 20 : 0;interface PricingTier {}
   name: string;
   description: string;
   price: string;
@@ -36,63 +35,62 @@ import {}
 ;
 const pricingTiers: PricingTier[] = []
   {}
-'
-''
-'''
-    name: 'Starter','''
-    description: 'Perfect for small businesses and startups','''
-    price: '$299','''
-    period: '/month','''
-    features: [''''
-      'AI-powered business intelligence dashboard',Basic cloud infrastructure setup',Security monitoring & alerts',Email support',Monthly performance reports',Up to 5 team members',Basic API access',Standard compliance features',AI Workflow Orchestrator (Basic),AI Data Governance (Foundation)''
-    ],'''
-    color: 'from-blue-500 to-cyan-500',''
-    icon: Zap,'''
-    cta: 'Get Started','''
-    ctaLink: '/contact'
+"
+""
+"""
+    name: "Starter","""
+    description: "Perfect for small businesses and startups","""
+    price: "$299","""
+    period: "/month","""
+    features: [""""
+      "AI-powered business intelligence dashboard",Basic cloud infrastructure setup",Security monitoring & alerts",Email support",Monthly performance reports",Up to 5 team members",Basic API access",Standard compliance features",AI Workflow Orchestrator (Basic),AI Data Governance (Foundation)""
+    ],"""
+    color: "from-blue-500 to-cyan-500",""
+    icon: Zap,"""
+    cta: "Get Started","""
+    ctaLink: "/contact"
   },
   {}
-'
-''
-'''
-    name: 'Professional','''
-    description: 'Ideal for growing businesses and teams','''
-    price: '$799','''
-    period: '/month',''
-    popular: true,'''
-    features: [''''
-      'Everything in Starter, plus:',Advanced AI workflow automation',Custom cloud architecture design',Advanced cybersecurity features',Priority support (4-hour response),Up to 25 team members',Custom integrations',Advanced analytics & reporting',Compliance automation tools',Monthly strategy sessions',AI Workflow Orchestrator (Professional),AI Data Governance (Enterprise),AI Customer Experience Analytics (Professional)''
-    ],'''
-    color: 'from-zion-cyan to-zion-purple',''
-    icon: Brain,'''
-    cta: 'Start Free Trial','''
-    ctaLink: '/contact'
+"
+""
+"""
+    name: "Professional","""
+    description: "Ideal for growing businesses and teams","""
+    price: "$799","""
+    period: "/month",""
+    popular: true,"""
+    features: [""""
+      "Everything in Starter, plus:",Advanced AI workflow automation",Custom cloud architecture design",Advanced cybersecurity features",Priority support (4-hour response),Up to 25 team members",Custom integrations",Advanced analytics & reporting",Compliance automation tools",Monthly strategy sessions",AI Workflow Orchestrator (Professional),AI Data Governance (Enterprise),AI Customer Experience Analytics (Professional)""
+    ],"""
+    color: "from-zion-cyan to-zion-purple",""
+    icon: Brain,"""
+    cta: "Start Free Trial","""
+    ctaLink: "/contact"
   },
   {}
-'
-''
-'''
-    name: 'Enterprise','''
-    description: 'For large organizations with complex needs','''
-    price: 'Custom','''
-    period: '','''
-    features: [''''
-      'Everything in Professional, plus:',Custom AI model development',Multi-cloud architecture',Advanced threat intelligence',24/7 dedicated support',Unlimited team members',Custom software development',Advanced data governance',Compliance certification support',Quarterly business reviews',Dedicated success manager'''
-    ],'''
-    color: 'from-purple-500 to-pink-500',''
-    icon: Building,'''
-    cta: 'Contact Sales','''
-    ctaLink: '/contact'
+"
+""
+"""
+    name: "Enterprise","""
+    description: "For large organizations with complex needs","""
+    price: "Custom","""
+    period: "","""
+    features: [""""
+      "Everything in Professional, plus:",Custom AI model development",Multi-cloud architecture",Advanced threat intelligence",24/7 dedicated support",Unlimited team members",Custom software development",Advanced data governance",Compliance certification support",Quarterly business reviews",Dedicated success manager"""
+    ],"""
+    color: "from-purple-500 to-pink-500",""
+    icon: Building,"""
+    cta: "Contact Sales","""
+    ctaLink: "/contact"
   }
 ];
-
   return()
+}
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"""
-      <SEO "'"""
-        title="Pricing - Zion Tech Group"'"        description="Transparent pricing for Zion Tech Group's AI, cloud, and technology services. Choose the plan that fits your business needs."""
-        />
+      <SEO """""
+        title="Pricing - Zion Tech Group"""        description="Transparent pricing for Zion Tech Group"s AI, cloud, and technology services. Choose the plan that fits your business needs."""  />
       """
-      {/* Hero Section */}""""
+      {/* comment */}""""
       <section className="relative py-20 overflow-hidden">""""
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>""""
         <div className="container mx-auto px-6 relative z-10">

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 interface Notification {
   id: string;
   title: string;
@@ -29,17 +28,13 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
 }) => {
   const [filter, setFilter] = useState<"all" | "unread" | "archived">("all");
   const [typeFilter, setTypeFilter] = useState<string>("all");
-
   const filteredNotifications = notifications.filter(notification => {
     const matchesFilter = filter === "all" || 
       (filter === "unread" && !notification.read) ||
       (filter === "archived" && notification.archived);
-    
     const matchesType = typeFilter === "all" || notification.type === typeFilter;
-    
     return matchesFilter && matchesType;
   });
-
   const getTypeIcon = (type: string) => {
     switch (type) {
       case "success":
@@ -54,7 +49,6 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
         return "📢";
     }
   };
-
   const getTypeColor = (type: string) => {
     switch (type) {
       case "success":
@@ -69,7 +63,6 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
         return "border-gray-500 bg-gray-50";
     }
   };
-
   return (
     <div className="bg-white rounded-lg shadow-lg p-6">
       <div className="flex justify-between items-center mb-6">
@@ -97,7 +90,6 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
           </select>
         </div>
       </div>
-
       <div className="space-y-4">
         {filteredNotifications.length === 0 ? (
           <div className="text-center py-8 text-gray-500">
@@ -170,5 +162,4 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
     </div>
   );
 };
-
 export default AdvancedNotificationCenter;

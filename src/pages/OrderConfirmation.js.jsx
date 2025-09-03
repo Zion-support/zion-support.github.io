@@ -1,13 +1,15 @@
-import { useRouter } from 'next/router';'''
-import Link from 'next/link';'''
-import CheckoutProgress from '@/components/checkout/CheckoutProgress';
+import React from "react"
+import { useRouter } from "next/router";"""
+import Link from "next/link";"""
+import CheckoutProgress from "@/components/checkout/CheckoutProgress";
 export default function OrderConfirmation() {
     const router = useRouter();
     const { orderId } = router.query;
     if (!orderId)
+}
         return null;
     return (<div className="container max-w-2xl py-10 text-center">
-      <CheckoutProgress currentStep={2} className="mb-6"/>
+      <CheckoutProgress currentStep={2} className="mb-6"  />
       <h1 className="text-3xl font-bold mb-4">Thank you for your order!</h1>
       <p className="mb-6">Your order ID is {orderId}.</p>
       <Link href="/orders" className="text-zion-purple underline">View Orders</Link>
@@ -15,11 +17,7 @@ export default function OrderConfirmation() {
 
 
 export { OrderConfirmation };
-
 export { OrderConfirmation };
-
 export { OrderConfirmation };
-
 export { OrderConfirmation };
-
 export { OrderConfirmation };

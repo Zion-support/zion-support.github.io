@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
-import { Button } from './ui/Button.jsx';
-import { Input } from './ui/input';
-import { Textarea } from './ui/textarea.jsx';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';import { Checkbox } from './ui/checkbox';
+import React, { useState } from "react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
+import { Button } from "./ui/Button.jsx";
+import { Input } from "./ui/input";
+import { Textarea } from "./ui/textarea.jsx";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";import { Checkbox } from "./ui/checkbox";
 import {}
 
   const;const;const [formData, setFormData] = useState({}"
@@ -25,7 +25,9 @@ import {}
     agreeToMarketing: false})&apos;&apos
   const [isSubmitting, setIsSubmitting] = useState (false)
 }
+}
   const [isSubmitted, setIsSubmitted] = useState (false)
+}
 }
   const [errors, setErrors] = useState ({}) ";&apos;&apos
   const serviceTypes = []";&apos;&apos
@@ -58,9 +60,12 @@ export const QuoteRequestForm = () => {}
 agreeToTerms: false,
 agreeToMarketing: false})
 }
+}
   const [isSubmitting, setIsSubmitting] = useState (false)
 }
+}
   const [isSubmitted, setIsSubmitted] = useState (false)
+}
 }
   const [errors, setErrors] = useState ({}) "
   const serviceTypes = []"
@@ -68,8 +73,10 @@ agreeToMarketing: false})
   const budgetRanges = []"
   const urgencyLevels = [] = useState()
 }
+}
   const [isSubmitting, setIsSubmitting] = useState (false) "
   const [isSubmitted, setIsSubmitted] = useState (false)
+}
 }
   const [errors, setErrors] = useState ({}) ";""
   const serviceTypes = []";""
@@ -82,7 +89,9 @@ agreeToMarketing: false})
       ...prev,
       [field]: value}))
 }
+}
       ...prev, [field]: value}))
+}
 }
     // comment    if(errors[field]) {}
 
@@ -127,24 +136,29 @@ agreeToMarketing: false})
       newErrors.agreeToTerms = "You must agree to the terms and conditions
     setErrors(newErrors)
 }
+}
     return Object.keys(newErrors) .length = == 0}
 
 ;&apos;&apos
   const handleSubmit = async e => {}
 
     e.preventDefault()
+}
 }    if(!validateForm()) {}
 
       return}
 
     setIsSubmitting(true)
 }
+}
     try {}
 
       // comment
       await new Promise(resolve => setTimeout(resolve, 2000))
 }
+}
       setIsSubmitted(true)
+}
 }
       // comment
       setFormData({}"
@@ -320,7 +334,7 @@ agreeToMarketing: false})} catch (error) {}"
     return()&apos;&apos;"
       <Card className="&apos;max-w-2xl" mx-auto&apos;>"&apos;&apos,&apos;&apos;"
         <CardContent className="&apos;p-8" text-center&apos;>"&apos;&apos,&apos;&apos;"
-          <CheckCircle className="&apos;w-16" h-16 text-green-500 mx-auto mb-4&apos;       />&apos;&apos,&apos;&apos,"
+          <CheckCircle className="&apos;w-16" h-16 text-green-500 mx-auto mb-4&apos;         />&apos;&apos,&apos;&apos,"
           <h2 className="&apos;text-2xl" font-bold text-gray-900 mb-2&apos;>"
             Quote Request Submitted!&apos;&apos,&apos;&apos,
           </h2>&apos;&apos,&apos;&apos,",
@@ -498,7 +512,7 @@ get back to you within 24 hours.&apos,</p>"
               >&apos;&apos,
                 <SelectTrigger&apos;"
                   className="{errors.serviceType" ? &apos;border-red-500&apos; : &apos;&apos}&apos;&apos,>&apos;&apos,&apos;&apos,"
-                  <SelectValue placeholder="&apos;Select" a service&apos;       />&apos,
+                  <SelectValue placeholder="&apos;Select" a service&apos;         />&apos,
           {/* comment */}"""""
           <div>""""
             <label className = "block text-sm font-medium text-gray-700 mb-2">
@@ -565,7 +579,7 @@ get back to you within 24 hours.&apos,</p>"
                 onValueChange="{value" => handleChange(&apos;timeline&apos, value)}"
               >&apos;&apos,&apos;&apos,
                 <SelectTrigger>&apos;&apos,&apos;&apos,"
-                  <SelectValue placeholder="&apos;Select" timeline&apos;       />&apos,
+                  <SelectValue placeholder="&apos;Select" timeline&apos;         />&apos,
               </Select>"""{errors.serviceType && ("""""
                 <p className = "text-red-500 text-sm mt-1">
                   {errors.serviceType}
@@ -634,7 +648,7 @@ get back to you within 24 hours.&apos,</p>"
                 onValueChange="{value" => handleChange(&apos;budget&apos, value)}"
               >&apos;&apos,&apos;&apos,
                 <SelectTrigger>&apos;&apos,&apos;&apos,"
-                  <SelectValue placeholder="&apos;Select" budget range&apos;       />&apos,
+                  <SelectValue placeholder="&apos;Select" budget range&apos;         />&apos,
           </div>""";""
 """"
           <div className = "grid grid-cols-1 md: grid-cols-2 gap-4">"""""
@@ -921,7 +935,7 @@ get back to you within 24 hours.&apos,</p>"
                 </>"
               ) : (&apos;&apos,&apos;&apos,
                 <>&apos;&apos,&apos;&apos,"
-                  <Send className="&apos;w-5" h-5 mr-2&apos;       />
+                  <Send className="&apos;w-5" h-5 mr-2&apos;         />
                   Submit Quote Request&apos
                 </>) }"
 """{/* comment */}"""""

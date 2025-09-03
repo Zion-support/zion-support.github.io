@@ -11,7 +11,9 @@ const navigation = []
 const Navigation: React.FC = () => {,,
   const [isOpen, setIsOpen] = useState(false)
 }
+}
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
+}
 }
   const toggleDropdown = (name: string) => {,,
     setActiveDropdown(activeDropdown === name ? null : name)}

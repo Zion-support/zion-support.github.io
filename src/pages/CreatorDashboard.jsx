@@ -1,24 +1,25 @@
-import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar';'''
-import { AppSidebar } from '@/components/creator/CreatorSidebar';
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";"""
+import { AppSidebar } from "@/components/creator/CreatorSidebar";
 export default function CreatorDashboard() {}
   return()
+}
     <SidebarProvider>
       <div className="min-h-screen flex w-full bg-zion-blue">"""
-        <AppSidebar />""""
+        <AppSidebar  />""""
         <div className="flex flex-col w-full">""""
           <main className="flex-1 p-6 md:p-10 bg-zion-blue">""""
             <h1 className="text-2xl font-bold text-white mb-8">
               Creator Dashboard"""
             </h1>""""
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">"""
-              {/* Example Stat Card */}""""
+              {/* comment */}""""
               <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 transition-shadow hover:shadow-lg">""""
                 <div className="flex items-center gap-3 mb-2">""""
                   <span className="bg-zion-purple/20 rounded-full p-2">"""
-                    {/* Only use allowed Lucide icons */}""""
+                    {/* comment */}""""
                     <span className="text-zion-purple">""""
                       <svg width="28" height="28">""""
-                        <use href="#lucide-bar-chart" />
+                        <use href="#lucide-bar-chart"  />
                       </svg>
                     </span>"""
                   </span>""""
@@ -26,8 +27,8 @@ export default function CreatorDashboard() {}
                     Analytics;
                   </span>"""
                 </div>""""
-                <div className="text-3xl text-white font-bold">'"""
-                  23,400{' '}""""
+                <div className="text-3xl text-white font-bold">""""
+                  23,400{" "}""""
                   <span className="text-zion-cyan text-lg font-normal">
                     Views;
                   </span>
@@ -38,7 +39,7 @@ export default function CreatorDashboard() {}
                   <span className="bg-zion-purple/20 rounded-full p-2">""""
                     <span className="text-zion-purple">""""
                       <svg width="28" height="28">""""
-                        <use href="#lucide-file-text" />
+                        <use href="#lucide-file-text"  />
                       </svg>
                     </span>"""
                   </span>""""
@@ -57,21 +58,17 @@ export default function CreatorDashboard() {}
                 Create new content, monitor your analytics, or manage your;
                 account using the sidebar menu.
               </p>
-              {/* Placeholder for more creator - specific content */}
+              {/* comment */}
             </div>
           </main>
         </div>
       </div>
-      <SidebarTrigger />
+      <SidebarTrigger  />
     </SidebarProvider>)}
 
 
 export { CreatorDashboard };
-
 export { CreatorDashboard };
-
 export { CreatorDashboard };
-
 export { CreatorDashboard };
-
 export { CreatorDashboard };

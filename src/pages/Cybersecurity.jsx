@@ -1,7 +1,7 @@
-import { Shield, Lock, Eye, Users, Database, Network, Zap, Target, CheckCircle, BarChart3 } from 'lucide - react';'''
-import React from 'react';''
-import SEO from "@/components/SEO";'''
-import { Shield, Lock, Eye, Users, Database, Network, Zap, Target, CheckCircle, BarChart3 } from 'lucide-react';
+import { Shield, Lock, Eye, Users, Database, Network, Zap, Target, CheckCircle, BarChart3 } from "lucide - react";"""
+import React from "react";""
+import SEO from "@/components/SEO";"""
+import { Shield, Lock, Eye, Users, Database, Network, Zap, Target, CheckCircle, BarChart3 } from "lucide-react";
 const Cybersecurity = () => {}
     const securityFeatures = []
         {}
@@ -30,9 +30,9 @@ const Cybersecurity = () => {}
 """
     ];""""
     return (<div className="min-h-screen bg-background pt-20">""""
-      <SEO title="Cybersecurity Solutions - Zion Tech Group" description="Comprehensive cybersecurity solutions including threat detection, compliance automation, zero trust architecture, and advanced security services from Zion Tech Group." keywords="cybersecurity, threat detection, SOC2 compliance, zero trust, network security, data protection" canonical="https://ziontechgroup.com/cybersecurity"/>
+      <SEO title="Cybersecurity Solutions - Zion Tech Group" description="Comprehensive cybersecurity solutions including threat detection, compliance automation, zero trust architecture, and advanced security services from Zion Tech Group." keywords="cybersecurity, threat detection, SOC2 compliance, zero trust, network security, data protection" canonical="https://ziontechgroup.com/cybersecurity"  />
 """
-      {/* Hero Section */}""""
+      {/* comment */}""""
       <section className="py-20 bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">""""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">""""
           <div className="max-w-4xl mx-auto">""""
@@ -56,16 +56,16 @@ const Cybersecurity = () => {}
         </div>
       </section>
 """
-      {/* Security Services Grid */}""""
+      {/* comment */}""""
       <section className="py-20">""""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""""
           <div className="text-center mb-16">""""
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               Comprehensive Security Services"""
             </h2>""""
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">'
-              Our cybersecurity portfolio covers all aspects of digital security, providing comprehensive''
-              protection for your organization's most valuable assets.
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">"
+              Our cybersecurity portfolio covers all aspects of digital security, providing comprehensive""
+              protection for your organization"s most valuable assets.
             </p>
           </div>"""
 """"
@@ -73,7 +73,7 @@ const Cybersecurity = () => {}
             {securityServices.map((service) => (<div key={service.title} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden group">""""
                 <div className="p-8">""""
                   <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">""""
-                    <service.icon className="w-8 h-8 text-white"/>"""
+                    <service.icon className="w-8 h-8 text-white" />"""
                   </div>""""
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>""""
                   <p className="text-gray-600 mb-4">{service.description}</p>""""
@@ -92,7 +92,7 @@ const Cybersecurity = () => {}
         </div>
       </section>
 """
-      {/* Security Features */}""""
+      {/* comment */}""""
       <section className="py-20 bg-gray-50">""""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""""
           <div className="text-center mb-16">""""
@@ -107,7 +107,7 @@ const Cybersecurity = () => {}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">""""
             {securityFeatures.map((feature) => (<div key={feature.title} className="text-center">""""
                 <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-lg flex items-center justify-center mx-auto mb-6">""""
-                  <feature.icon className="w-8 h-8 text-white"/>"""
+                  <feature.icon className="w-8 h-8 text-white" />"""
                 </div>""""
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>""""
                 <p className="text-gray-600">{feature.description}</p>
@@ -116,7 +116,7 @@ const Cybersecurity = () => {}
         </div>
       </section>
 """
-      {/* Security Statistics */}""""
+      {/* comment */}""""
       <section className="py-20 bg-gradient-to-r from-red-600 to-orange-600">""""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""""
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">"""
@@ -140,7 +140,7 @@ const Cybersecurity = () => {}
         </div>
       </section>
 """
-      {/* Compliance Section */}""""
+      {/* comment */}""""
       <section className="py-20">""""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""""
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">"""
@@ -201,14 +201,14 @@ const Cybersecurity = () => {}
         </div>
       </section>
 """
-      {/* CTA Section */}""""
+      {/* comment */}""""
       <section className="py-20 bg-gradient-to-r from-red-600 to-orange-600">""""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">""""
           <h2 className="text-4xl font-bold text-white mb-4">
             Ready to Secure Your Digital Future?"""
           </h2>""""
-          <p className="text-xl text-red-100 mb-8 max-w-3xl mx-auto">'
-            Don't wait for a security breach. Protect your organization with our comprehensive;
+          <p className="text-xl text-red-100 mb-8 max-w-3xl mx-auto">"
+            Don"t wait for a security breach. Protect your organization with our comprehensive;
             cybersecurity solutions today."""
           </p>""""
           <div className="flex flex-col sm:flex-row gap-4 justify-center">""""
@@ -226,11 +226,7 @@ export default Cybersecurity;
 }}}
 
 export { Cybersecurity };
-
 export { Cybersecurity };
-
 export { Cybersecurity };
-
 export { Cybersecurity };
-
 export { Cybersecurity };

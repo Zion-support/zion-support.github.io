@@ -556,6 +556,7 @@ title: "Become a Partner,"
   const pageInfo = getPageInfo(location.pathname);""
   const breadcrumbs = location.pathname.split("/").filter(Boolean)
 }
+}
 "
   return ('
     <div className = "min-h-screen bg-zion-blue-dark">"

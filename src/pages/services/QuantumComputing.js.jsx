@@ -1,5 +1,5 @@
-import React from 'react';'''
-import { Link } from 'react-router-dom';
+import React from "react";"""
+import { Link } from "react-router-dom";
 import { Cpu, Zap, Brain, Target, Shield, Users, Globe, Atom, CircuitBoard const QuantumComputing = () => {}
     const quantumServices = []
         {}
@@ -60,12 +60,12 @@ import { Cpu, Zap, Brain, Target, Shield, Users, Globe, Atom, CircuitBoard const
 """
     ];""""
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"""
-      {/* Hero Section */}""""
+      {/* comment */}""""
       <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">""""
         <div className="max-w-7xl mx-auto text-center">""""
           <div className="mb-8">""""
             <div className="inline-flex items-center px-4 py-2 bg-purple-500/10 text-purple-400 rounded-full text-sm font-medium mb-6">""""
-              <Cpu className="w-4 h-4 mr-2"/>
+              <Cpu className="w-4 h-4 mr-2"  />
               Quantum Computing"""
             </div>""""
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"""
@@ -88,15 +88,15 @@ import { Cpu, Zap, Brain, Target, Shield, Users, Globe, Atom, CircuitBoard const
         </div>
       </section>
 """
-      {/* Quantum Services Grid */}""""
+      {/* comment */}""""
       <section className="py-16 px-4 sm:px-6 lg:px-8">""""
         <div className="max-w-7xl mx-auto">""""
           <div className="text-center mb-16">""""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Quantum Computing Solutions"""
             </h2>""""
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">'
-              From quantum neural networks to edge computing, we provide comprehensive quantum solutions''
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">"
+              From quantum neural networks to edge computing, we provide comprehensive quantum solutions""
               that push the boundaries of what's possible.
             </p>
           </div>"""
@@ -104,7 +104,7 @@ import { Cpu, Zap, Brain, Target, Shield, Users, Globe, Atom, CircuitBoard const
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">""""
             {quantumServices.map((service, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105">""""
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">""""
-                  <service.icon className="w-6 h-6 text-white"/>"""
+                  <service.icon className="w-6 h-6 text-white" />"""
                 </div>""""
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>""""
                 <p className="text-gray-300 mb-4">{service.description}</p>""""
@@ -117,7 +117,7 @@ import { Cpu, Zap, Brain, Target, Shield, Users, Globe, Atom, CircuitBoard const
                 <Link to={service.path} className="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors duration-200">"""
                   Learn More""""
                   <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">""""
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"/>
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"  />
                   </svg>
                 </Link>
               </div>))}
@@ -125,7 +125,7 @@ import { Cpu, Zap, Brain, Target, Shield, Users, Globe, Atom, CircuitBoard const
         </div>
       </section>
 """
-      {/* Applications Section */}""""
+      {/* comment */}""""
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""""
         <div className="max-w-7xl mx-auto">""""
           <div className="text-center mb-16">""""
@@ -140,7 +140,7 @@ import { Cpu, Zap, Brain, Target, Shield, Users, Globe, Atom, CircuitBoard const
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">""""
             {applications.map((application, index) => (<div key={index} className="text-center">""""
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">""""
-                  <application.icon className="w-8 h-8 text-white"/>"""
+                  <application.icon className="w-8 h-8 text-white" />"""
                 </div>""""
                 <h3 className="text-xl font-semibold text-white mb-3">{application.title}</h3>""""
                 <p className="text-gray-300">{application.description}</p>
@@ -149,7 +149,7 @@ import { Cpu, Zap, Brain, Target, Shield, Users, Globe, Atom, CircuitBoard const
         </div>
       </section>
 """
-      {/* Technology Section */}""""
+      {/* comment */}""""
       <section className="py-16 px-4 sm:px-6 lg:px-8">""""
         <div className="max-w-7xl mx-auto">""""
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">"""
@@ -182,7 +182,7 @@ import { Cpu, Zap, Brain, Target, Shield, Users, Globe, Atom, CircuitBoard const
             </div>""""
             <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2xl p-8 border border-purple-500/30">""""
               <div className="text-center">""""
-                <Cpu className="w-24 h-24 text-purple-400 mx-auto mb-4"/>""""
+                <Cpu className="w-24 h-24 text-purple-400 mx-auto mb-4"  />""""
                 <h3 className="text-2xl font-bold text-white mb-2">Quantum Advantage</h3>""""
                 <p className="text-gray-300">
                   Achieve computational superiority with quantum systems that can solve problems;
@@ -194,7 +194,7 @@ import { Cpu, Zap, Brain, Target, Shield, Users, Globe, Atom, CircuitBoard const
         </div>
       </section>
 """
-      {/* CTA Section */}""""
+      {/* comment */}""""
       <section className="py-16 px-4 sm:px-6 lg:px-8">""""
         <div className="max-w-4xl mx-auto text-center">""""
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -220,11 +220,7 @@ export default QuantumComputing;
 }}}
 
 export { QuantumComputing };
-
 export { QuantumComputing };
-
 export { QuantumComputing };
-
 export { QuantumComputing };
-
 export { QuantumComputing };

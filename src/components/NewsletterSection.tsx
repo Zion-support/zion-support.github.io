@@ -1,3 +1,5 @@
+const Component = () => {
+import React from "react"
 
       description: "Get exclusive access to tech trends and analysis";
     },;    {;
@@ -5,7 +7,6 @@
       title: "Early Access",;"
       description: "Be the first to know about beta programs and launches"};
   ];
-
   if(isSubscribed) {
 
     return ("
@@ -32,7 +33,7 @@
             </div>"
             <h2 className="text-3xl font-bold text-white mb-4">Welcome to the Zion Tech Group Community!</h2>"
             <p className="text-gray-300 text-lg mb-6">
-              You're now subscribed to our newsletter.We'll keep you updated with the latest technology insights,              service announcements, and exclusive content.</p>
+              You"re now subscribed to our newsletter.We"ll keep you updated with the latest technology insights,              service announcements, and exclusive content.</p>
             <button
               onClick={() => setIsSubscribed(false)}"
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
@@ -46,7 +47,7 @@
     <section className="py-20 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-800">"
       <div className="max-w-7xl mx-auto px-6">"
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left Column - Content */}
+          {/* comment */}
           <motion.div
             initial = {
 
@@ -107,7 +108,7 @@
             </div>
           </motion.div>
 
-          {/* Right Column - Newsletter Form */}
+          {/* comment */}
           <motion.div
             initial = {
 
@@ -151,7 +152,6 @@
                     required
                   />
                 </div>
-
                 <button"
                   type="submit"
                   disabled={isLoading || !email}"
@@ -172,11 +172,11 @@
 "
               <div className="mt-6 text-center">"
                 <p className="text-xs text-gray-400">
-                  By subscribing, you agree to our{' '}"
+                  By subscribing, you agree to our{" "}"
                   <a href="/privacy" className="text-cyan-400 hover:text-cyan-300 underline">
-                    Privacy Policy'
-                  </a>{' '}
-                  and{' '}"
+                    Privacy Policy"
+                  </a>{" "}
+                  and{" "}"
                   <a href="/terms" className="text-cyan-400 hover:text-cyan-300 underline">
                     Terms of Service
                   </a>
@@ -187,5 +187,4 @@
         </div>;
       </div>;
     </section>;) };
-
-export default NewsletterSection}}}'"
+export default NewsletterSection}}}""

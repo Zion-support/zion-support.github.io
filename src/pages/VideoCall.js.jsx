@@ -1,11 +1,11 @@
-import { useState } from 'react';'''
-import { useParams, useNavigate } from 'react-router-dom';'''
-import { SEO } from '@/components/SEO';'''
-import { VideoCallRoom } from '@/components/video/VideoCallRoom';'''
-import { Button } from '@/components/ui/button';'''
-import { toast } from 'sonner';
+import { useState } from "react";"""
+import { useParams, useNavigate } from "react-router-dom";"""
+import { SEO } from "@/components/SEO";"""
+import { VideoCallRoom } from "@/components/video/VideoCallRoom";"""
+import { Button } from "@/components/ui/button";"""
+import { toast } from "sonner";
 export default function VideoCall() {}
-  // useParams is typed as `` in this environment due to missing type;
+  // useParams is typed as "" in this environment due to missing type;
   // definitions, so avoid passing a type argument to prevent TS2347.
   const { roomId } = useParams();
   const navigate = useNavigate();
@@ -13,11 +13,11 @@ export default function VideoCall() {}
   const [hasJoined, setHasJoined] = useState(false);
   const [participants, setParticipants] = useState([]
     {}
-'
-''
-'''
-      id: 'user-1','''
-      name: 'You',
+"
+""
+"""
+      id: "user-1","""
+      name: "You",
       isVideoEnabled: true,
       isMuted: false}
   ]);
@@ -26,64 +26,63 @@ export default function VideoCall() {}
     // Simulate connection delay;
     setTimeout(() => {}
       setHasJoined(true);
-      setIsJoining(false);'
-      toast.success('Call joined', {}
-`
-``
-```
-````
-        description: `You have joined meeting room ${roomId}`});
+      setIsJoining(false);"
+      toast.success("Call joined", {}
+"
+""
+"""
+""""
+        description: "You have joined meeting room ${roomId}"});
     }, 1500);
   };
   const handleLeaveCall = () => {}
-    setHasJoined(false);'
-    toast.info('Call ended', {}
-'
-''
-'''
-      description: 'You have left the meeting'});
+    setHasJoined(false);"
+    toast.info("Call ended", {}
+"
+""
+"""
+      description: "You have left the meeting"});
     // Navigate back after a short delay;
     setTimeout(() => {}
       router(-1);
     }, 1500);
   };
   const simulateUserJoining = () => {}
-    // This is just for demo purposes - in a real app, this would be handled by the video call service'
-    const mockUsers = [''
-      { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },
+    // This is just for demo purposes - in a real app, this would be handled by the video call service"
+    const mockUsers = [""
+      { id: "user-2", name: "Alex Chen", isVideoEnabled: true, isMuted: false },
       {}
-'
-''
-'''
-        id: 'user-3','''
-        name: 'Taylor Kim',
+"
+""
+"""
+        id: "user-3","""
+        name: "Taylor Kim",
         isVideoEnabled: false,
         isMuted: true},
       {}
-'
-''
-'''
-        id: 'user-4','''
-        name: 'Jordan Smith',
+"
+""
+"""
+        id: "user-4","""
+        name: "Jordan Smith",
         isVideoEnabled: true,
         isMuted: false,
         isScreenSharing: true}
     ];
     const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)];
     if (!participants.find(p => p.id === randomUser.id)) {}
-`
-``
-```
-      setParticipants(prev => [...prev, randomUser]);````
-      toast(`${randomUser.name} joined the call`);
+"
+""
+"""
+      setParticipants(prev => [...prev, randomUser]);""""
+      toast("${randomUser.name} joined the call");
     }
-  };`
-  return()``
-    <>```
-      <SEO````
+  };"
+  return()""
+    <>"""
+      <SEO""""
         title={`Video Call - Room ${roomId}`}
-        description="Zion video call"""
-      />"""
+        description="Zion video call""" />"""
 """"
       <main className="container mx-auto py-8 min-h-[calc(100vh-200px)]">"""
         {!hasJoined ? (""""
@@ -97,19 +96,19 @@ export default function VideoCall() {}
               disabled={isJoining}""""
               size="lg""""
               className="bg-zion-purple hover:bg-zion-purple-light"""
-            >'
-              {isJoining ? 'Connecting...' : 'Join Call'}
+            >"
+              {isJoining ? "Connecting..." : "Join Call"}
             </Button>
           </div>"""
         ) : (""""
-          <div className="space-y-4">'
-            <VideoCallRoom''
-              roomId={roomId || ''}
+          <div className="space-y-4">"
+            <VideoCallRoom""
+              roomId={roomId || "'}
               participants={participants}
               onLeave={handleLeaveCall}
             />
 """
-            {/* This button is just for demo/testing purposes */}""""
+            {/* comment */}""""
             <div className="flex justify-center mt-4">"""
               <Button""""
                 variant="outline""""
@@ -117,21 +116,17 @@ export default function VideoCall() {}
                 className="text-sm"""
               >
                 Simulate user joining (demo only)
+}
               </Button>
             </div>
           </div>
         )}
       </main>
-      
     </>)}
 
 
 export { VideoCall };
-
 export { VideoCall };
-
 export { VideoCall };
-
 export { VideoCall };
-
 export { VideoCall };

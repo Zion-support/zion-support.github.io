@@ -10,14 +10,18 @@ export const ContactForm: React.FC = () => {,
     message: "", budget: "",
     timeline: ""})
 }
+}
   const [isSubmitting, setIsSubmitting] = useState()
 }
+}
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle")
+}
 }
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {,,
     const { name, value } = e.target
     setFormData(prev = > ({
       ...prev, [name]: value}))
+}
 }
   const handleSubmit = async (e: React.FormEvent) => {,
     e.preventDefault(),
@@ -27,6 +31,7 @@ try {
       await new Promise(resolve = > setTimeout(resolve, 2000)),
       setSubmitStatus("success")
 }
+}
       setFormData({"
         firstName: "", lastName: "","
         email: "", company: "","
@@ -34,11 +39,14 @@ try {
         message: "", budget: "","
         timeline: ""})
 }
+}
     } catch (error) {"
       setSubmitStatus("error")
 }
+}
     } finally {
       setIsSubmitting(false)
+}
 }
 
   const services = []
@@ -78,11 +86,11 @@ initial="{{" opacity: 0, scale: 0.9 }}"
       </div>;
 ";
       <div className = "grid grid-cols-1 lg: grid-cols-2 gap-8 mb-8">,;
-        {/*   */}";
+        {/* comment */}";
         <div className="space-y-6">";
           <div className="flex items-center gap-4">";
             <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center">";
-              <Mail className="w-6 h-6 text-zion-cyan" />;
+              <Mail className="w-6 h-6 text-zion-cyan"  />;
             </div>;
             <div>";
               <div className="text-white font-semibold">Email</div>";
@@ -91,7 +99,7 @@ initial="{{" opacity: 0, scale: 0.9 }}"
 ";
           <div className="flex items-center gap-4">";
             <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center">";
-              <Phone className="w-6 h-6 text-zion-cyan" />;
+              <Phone className="w-6 h-6 text-zion-cyan"  />;
             </div>;
             <div>";
               <div className="text-white font-semibold">Phone</div>";
@@ -100,7 +108,7 @@ initial="{{" opacity: 0, scale: 0.9 }}"
 ";
           <div className="flex items-center gap-4">";
             <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center">";
-              <MapPin className="w-6 h-6 text-zion-cyan" />;
+              <MapPin className="w-6 h-6 text-zion-cyan"  />;
             </div>;
             <div>";
               <div className="text-white font-semibold">Location</div>";
@@ -113,7 +121,6 @@ initial="{{" opacity: 0, scale: 0.9 }}"
               We typically respond to all inquiries within 2 hours during business hours.;
             </p>;
           </div>;
-
   return ("
     <div className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8">"
       <div className="text-center mb-8">"

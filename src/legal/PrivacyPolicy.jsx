@@ -1,16 +1,17 @@
-import React from 'react';'''
-import ReactMarkdown from 'react-markdown';'''
-import { Header } from '@/components/Header';'''
-import { Footer } from '@/components/Footer';'''
-import SEO from '@/components/SEO';
-const markdown = ```
-# Privacy Policy```
-Your privacy is important to us. This policy explains how Zion Tech Group collects, uses, and protects your information. Additional details will be added in a future revision.````
+import React from "react";"""
+import ReactMarkdown from "react-markdown";"""
+import { Header } from "@/components/Header";"""
+import { Footer } from "@/components/Footer";"""
+import SEO from "@/components/SEO";
+const markdown = """
+# Privacy Policy"""
+Your privacy is important to us. This policy explains how Zion Tech Group collects, uses, and protects your information. Additional details will be added in a future revision.""""
 `;
 const draft = true;
 export { function };
 export default function PrivacyPolicy() {}
   return ()
+}
     <>
       <SEO;
         title="Privacy Policy""""
@@ -18,7 +19,7 @@ export default function PrivacyPolicy() {}
         canonical="https://app.ziontechgroup.com/privacy"""
         noindex={draft}
       />"""
-      <Header />""""
+      <Header  />""""
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">""""
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">""""
           <ReactMarkdown className="prose dark:prose-invert max-w-none">
@@ -26,16 +27,12 @@ export default function PrivacyPolicy() {}
           </ReactMarkdown>
         </div>
       </main>
-      <Footer />
+      <Footer  />
     </>);
 }
 
 export { PrivacyPolicy };
-
 export { PrivacyPolicy };
-
 export { PrivacyPolicy };
-
 export { PrivacyPolicy };
-
 export { PrivacyPolicy };

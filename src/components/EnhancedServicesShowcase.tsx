@@ -1,6 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import {
   Brain,
   Shield,
@@ -15,84 +15,82 @@ import {
   Clock,
   CheckCircle,
   Search
- } from 'lucide-react';
-
+ } from "lucide-react";
 export const EnhancedServicesShowcase: React.FC = () => {
   const services = [
     {
-      title: 'AI Workflow Automation',
-      description: 'Transform business operations with intelligent automation that learns and scales',
-      price: 'From $299/month',
-      path: '/services/ai-workflow-automation',
+      title: "AI Workflow Automation",
+      description: "Transform business operations with intelligent automation that learns and scales",
+      price: "From $299/month",
+      path: "/services/ai-workflow-automation",
               icon: GitFork,
-      category: 'AI & Automation',
-      features: ['Process optimization', 'AI-powered workflows', 'Real-time analytics', 'Scalable automation'],
-      benefits: ['Reduce manual work by 70-85%', 'Improve efficiency by 60%', 'Cut operational costs by 40-50%'],
-      color: 'from-cyan-500 to-blue-600',
-      glowColor: 'cyan'
+      category: "AI & Automation",
+      features: ["Process optimization", "AI-powered workflows", "Real-time analytics", "Scalable automation"],
+      benefits: ["Reduce manual work by 70-85%", "Improve efficiency by 60%", "Cut operational costs by 40-50%"],
+      color: "from-cyan-500 to-blue-600",
+      glowColor: "cyan"
     },
     {
-      title: 'AI Cybersecurity',
-      description: 'Protect your business with AI-powered threat detection and prevention',
-      price: 'From $499/month',
-      path: '/services/ai-cybersecurity',
+      title: "AI Cybersecurity",
+      description: "Protect your business with AI-powered threat detection and prevention",
+      price: "From $499/month",
+      path: "/services/ai-cybersecurity",
       icon: Shield,
-      category: 'Security',
-      features: ['Threat detection', 'Behavioral analytics', 'Automated response', 'Compliance monitoring'],
-      benefits: ['Detect threats 10x faster', 'Reduce false positives by 85%', 'Prevent 99.9% of attacks'],
-      color: 'from-purple-500 to-indigo-600',
-      glowColor: 'purple'
+      category: "Security",
+      features: ["Threat detection", "Behavioral analytics", "Automated response", "Compliance monitoring"],
+      benefits: ["Detect threats 10x faster", "Reduce false positives by 85%", "Prevent 99.9% of attacks"],
+      color: "from-purple-500 to-indigo-600",
+      glowColor: "purple"
     },
     {
-      title: 'Quantum Computing',
-      description: 'Solve complex problems 1000x faster with quantum computing solutions',
-      price: 'From $2,999/month',
-      path: '/services/quantum-computing-solutions',
+      title: "Quantum Computing",
+      description: "Solve complex problems 1000x faster with quantum computing solutions",
+      price: "From $2,999/month",
+      path: "/services/quantum-computing-solutions",
       icon: Atom,
-      category: 'Quantum Tech',
-      features: ['Quantum algorithms', 'ML acceleration', 'Financial modeling', 'Drug discovery'],
-      benefits: ['1000x faster computation', 'Breakthrough discoveries', 'Unbreakable encryption'],
-      color: 'from-green-500 to-emerald-600',
-      glowColor: 'green'
+      category: "Quantum Tech",
+      features: ["Quantum algorithms", "ML acceleration", "Financial modeling", "Drug discovery"],
+      benefits: ["1000x faster computation", "Breakthrough discoveries", "Unbreakable encryption"],
+      color: "from-green-500 to-emerald-600",
+      glowColor: "green"
     },
     {
-      title: 'IoT Edge Computing',
-      description: 'Process data at the edge and reduce latency by 90%',
-      price: 'From $399/month',
-      path: '/services/iot-edge-computing',
+      title: "IoT Edge Computing",
+      description: "Process data at the edge and reduce latency by 90%",
+      price: "From $399/month",
+      path: "/services/iot-edge-computing",
       icon: Cpu,
-      category: 'IoT & Edge',
-      features: ['Edge processing', 'Device management', 'Real-time analytics', 'AI at the edge'],
-      benefits: ['Reduce latency by 90%', 'Cut bandwidth costs by 60-80%', 'Scale to millions of devices'],
-      color: 'from-orange-500 to-red-600',
-      glowColor: 'orange'
+      category: "IoT & Edge",
+      features: ["Edge processing", "Device management", "Real-time analytics", "AI at the edge"],
+      benefits: ["Reduce latency by 90%", "Cut bandwidth costs by 60-80%", "Scale to millions of devices"],
+      color: "from-orange-500 to-red-600",
+      glowColor: "orange"
     },
     {
-      title: 'Cloud & DevOps',
-      description: 'Build, deploy, and scale with enterprise-grade cloud infrastructure',
-      price: 'From $799/month',
-      path: '/services/cloud-devops',
+      title: "Cloud & DevOps",
+      description: "Build, deploy, and scale with enterprise-grade cloud infrastructure",
+      price: "From $799/month",
+      path: "/services/cloud-devops",
       icon: Cloud,
-      category: 'Infrastructure',
-      features: ['Cloud migration', 'CI/CD pipelines', 'Infrastructure as code', 'Monitoring & alerting'],
-      benefits: ['Faster deployments', 'Improved reliability', 'Cost optimization', 'Scalability'],
-      color: 'from-blue-500 to-cyan-600',
-      glowColor: 'blue'
+      category: "Infrastructure",
+      features: ["Cloud migration", "CI/CD pipelines", "Infrastructure as code", "Monitoring & alerting"],
+      benefits: ["Faster deployments", "Improved reliability", "Cost optimization", "Scalability"],
+      color: "from-blue-500 to-cyan-600",
+      glowColor: "blue"
     },
     {
-      title: 'AI Sales Copilot',
-      description: 'Automate sales processes and boost conversion rates with AI',
-      price: 'From $1,500/month',
-      path: '/services/ai-sales-copilot',
+      title: "AI Sales Copilot",
+      description: "Automate sales processes and boost conversion rates with AI",
+      price: "From $1,500/month",
+      path: "/services/ai-sales-copilot",
       icon: Brain,;
-      category: 'Sales AI',;
-      features: ['Lead scoring', 'CRM automation', 'Sales analytics', 'Predictive insights'],;
-      benefits: ['Reduce admin time by 40-60%', 'Improve conversion rates', 'Shorten sales cycles'],;
-      color: 'from-pink-500 to-rose-600',;
-      glowColor: 'pink';
+      category: "Sales AI",;
+      features: ["Lead scoring", "CRM automation", "Sales analytics", "Predictive insights"],;
+      benefits: ["Reduce admin time by 40-60%", "Improve conversion rates", "Shorten sales cycles"],;
+      color: "from-pink-500 to-rose-600",;
+      glowColor: "pink";
     };
   ];
-
   const containerVariants = {
     hidden: { opacity: 0 },;
     visible: {;
@@ -102,12 +100,9 @@ export const EnhancedServicesShowcase: React.FC = () => {
       };
     };
   };
-
-const categories = ['All', 'AI & Analytics', 'Quantum Computing', 'Cybersecurity', 'Cloud & DevOps', 'Data & Analytics', 'Blockchain & Web3'];
-
-export default function EnhancedServicesShowcase(...args: unknown[]): unknown {  const [selectedCategory, setSelectedCategory] = useState('All');
+const categories = ["All", "AI & Analytics", "Quantum Computing", "Cybersecurity", "Cloud & DevOps", "Data & Analytics", "Blockchain & Web3"];
+export default function EnhancedServicesShowcase(...args: unknown[]): unknown {  const [selectedCategory, setSelectedCategory] = useState("All");
   const [hoveredService, setHoveredService] = useState<string | null>(null);
-
  params - Function parameters
  * @returns {*} Function return value
  */
@@ -212,6 +207,7 @@ const categories = [];,"});,"})"
 export default function EnhancedServicesShowcase(...args: unknown[]): unknown {  const [selectedCategory, setSelectedCategory] = useState("All");,"});,"})"
   const [hoveredService, setHoveredService] = useState<string | null>(null);,"});,"})
 }
+}
 "
 ;import { motion } from "framer-motion";"""
 export default function EnhancedServicesShowcase() {return ("
@@ -224,6 +220,7 @@ export default function EnhancedServicesShowcase() {return ("
         </p>
       </div>
   )
+}
 }
 }""
   Brain,
@@ -313,7 +310,9 @@ transition: {,        staggerChildren: 0.1}
 const categories = []
 export default function EnhancedServicesShowcase(...args: unknown[]): unknown {  const [selectedCategory, setSelectedCategory] = useState("All")
 }
+}
   const [hoveredService, setHoveredService] = useState<string | null>(null)
+}
 }
   const [hoveredService, setHoveredService] = useState<string | null>(null)"framer - motion",react-router-dom
   CheckCircle,
@@ -491,13 +490,13 @@ const categories = []
 
     }
 
-                {/* Hover Glow Effect */}`
-                <div className={`absolute inset-0 bg-gradient-to-r ${service.color} rounded-3xl opacity-0 group-hover:opacity-5 transition-opacity duration-500 blur-xl`}></div>;
+                {/* comment */}"
+                <div className={"absolute inset-0 bg-gradient-to-r ${service.color} rounded-3xl opacity-0 group-hover:opacity-5 transition-opacity duration-500 blur-xl"}></div>;
               </div>
             </motion.div>;) ) }
         </motion.div>
 
-        {/* Services Grid */}"
+        {/* comment */}"
         <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">;"
           <AnimatePresence mode="wait">
             {filteredServices.map((service, index) => (<motion.div
@@ -517,38 +516,35 @@ const categories = []
 
                     y: -10,
                     scale: 1.02,
-                    borderColor: 'rgba(34, 221, 210, 0.5)
+                    borderColor: "rgba(34, 221, 210, 0.5)
+}
                   }}
                   transition={{ duration: 0.3 }}
                 >
-                  {/* Background gradient overlay */}`
-                  <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>
-
-                  {/* Icon */}
-                  <motion.div`
-                    className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${service.gradient} bg-opacity-20 flex items-center justify-center mb-6 relative z-10`}
+                  {/* comment */}"
+                  <div className={"absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-5 group-hover:opacity-10 transition-opacity duration-300"}></div>
+                  {/* comment */}
+                  <motion.div"
+                    className={"w-16 h-16 rounded-2xl bg-gradient-to-r ${service.gradient} bg-opacity-20 flex items-center justify-center mb-6 relative z-10"}
                     whileHover={{ rotate: 360 }}
                     transition={{ duration: 0.6 }}
                   >"
                     <service.icon className="w-8 h-8 text-white" />
                   </motion.div>
 
-                  {/* Category badge */}"
+                  {/* comment */}"
                   <div className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs font-medium rounded-full mb-4">
                     {service.category}
                   </div>
-
-                  {/* Title */}"
+                  {/* comment */}"
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-zion-cyan transition-colors duration-300">
                     {service.title}
                   </h3>
-
-                  {/* Description */}"
+                  {/* comment */}"
                   <p className="text-gray-300 mb-6 leading-relaxed">
                     {service.description}
                   </p>
-
-                  {/* Features */}"
+                  {/* comment */}"
                   <div className="space-y-2 mb-6">
                     {service.features.map((feature, featureIndex) => (
                       <motion.div
@@ -561,8 +557,7 @@ const categories = []
                         <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0"  />                        {feature}
                       </motion.div>) ) }
                   </div>
-
-                  {/* Stats */}"
+                  {/* comment */}"
                   <div className="grid grid-cols-3 gap-4 mb-6">"
                     <div className="text-center">"
                       <p className="text-2xl font-bold text-zion-cyan">{service.price}</p>"
@@ -576,8 +571,7 @@ const categories = []
                       <p className="text-2xl font-bold text-zion-blue">{service.marketSize}</p>"
                       <p className="text-xs text-gray-400">Market</p>
                     </div>
-
-                  {/* CTA Button */}
+                  {/* comment */}
                   <motion.div"
                     className="relative z-10"
                     whileHover={{ scale: 1.05 }}
@@ -590,8 +584,7 @@ const categories = []
                       Learn More"
                       <ArrowRight className="ml-2 w-5 h-5"  />                    </Link>
                   </div>
-
-                  {/* Hover effect overlay */}
+                  {/* comment */}
                   <motion.div"
                     className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-purple/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                     initial={false}
@@ -602,8 +595,7 @@ const categories = []
             ))}
           </AnimatePresence>
         </div>
-
-        {/* Bottom CTA */}
+        {/* comment */}
         <motion.div"
           className="text-center mt-16"
           initial = {
@@ -613,8 +605,7 @@ const categories = []
 
   { opacity: 1,
   y: 0 ;
-
-        {/* CTA Section */}
+        {/* comment */}
         <motion.div 
           className="text-center mt-20"
           initial={{ opacity: 0, y: 30 }}
@@ -626,11 +617,11 @@ const categories = []
           {categories.map((category, index) => (;
             <motion.button
               key={category}
-              onClick={() => setSelectedCategory(category)}`
-              className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${selectedCategory === category'
-                  ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25''
-                  : 'bg-white/10 text-gray-300 hover:bg-white/20 border border-white/20'`
-              }`}
+              onClick={() => setSelectedCategory(category)}"
+              className={"px-6 py-3 rounded-full font-medium transition-all duration-300 ${selectedCategory === category"
+                  ? "bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25""
+                  : "bg-white/10 text-gray-300 hover:bg-white/20 border border-white/20""
+              }"}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               initial = {
@@ -670,7 +661,7 @@ const categories = []
     </section>;) };
             >
               View All Services;
-              <ArrowRight className="ml-2 w-5 h-5" />;
+              <ArrowRight className="ml-2 w-5 h-5"  />;
             </Link>
             <a              href="tel:+13024640950"
               className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
@@ -683,7 +674,7 @@ const categories = []
           </div>
         )}
 
-        {/* Results Count */}
+        {/* comment */}
         {filteredServices.length > 0 && (
           <div className="text-center mt-8 text-slate-400">
             Showing {filteredServices.length} of {allServices.length} services
@@ -691,4 +682,4 @@ const categories = []
         )}
       </div>
     </section>) };
-'"`
+"""

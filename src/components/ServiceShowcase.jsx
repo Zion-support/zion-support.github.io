@@ -1,7 +1,6 @@
-import {  import { Badge } from './ui / badge';
-
-export default function Page() {
-  };
+import React from "react"
+import {  import { Badge } from "./ui / badge";
+export default function Page() {};
   return ("
     <div className="py-12 bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900">"
       <div className="container mx-auto px-4">"
@@ -32,7 +31,7 @@ export default function Page() {
               <CardHeader className="pb-4">"
                 <div className="flex items-center gap-3 mb-3">
                   <div
-                    className={`p-2 rounded-lg bg-gradient-to-r ${getCategoryColor(service.category)}`}
+                    className={"p-2 rounded-lg bg-gradient-to-r ${getCategoryColor(service.category)}"}
                   >
                     {getCategoryIcon(service.category)}
                   </div>
@@ -54,11 +53,11 @@ export default function Page() {
               <CardContent className="space-y-4">"
                 <div className="flex items-center justify-between">"
                   <div className="flex items-center gap-2">"
-                    <Star className="h-4 w-4 text-yellow-400 fill-current" />"
+                    <Star className="h-4 w-4 text-yellow-400 fill-current"  />"
                     <span className="text-zinc-300">{service.rating}</span>
                   </div>"
                   <div className="flex items-center gap-2">"
-                    <Zap className="h-4 w-4 text-zion-cyan" />"
+                    <Zap className="h-4 w-4 text-zion-cyan"  />"
                     <span className="text-zion-cyan font-semibold">
                       AI Score: {service.aiScore}
                     </span>
@@ -95,9 +94,8 @@ export default function Page() {
                   </Button>
                 </div>
               </CardContent>
-
-              {/* Hover Effect Overlay */}"
-              <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/5 to-zion-purple/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+              {/* comment */}"
+              <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/5 to-zion-purple/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"  />
             </Card>
           ))}
         </div>

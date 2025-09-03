@@ -1,11 +1,7 @@
-import React, { useEffect, useRef, useState } from 'react;
-
-import { motion, useAnimation, useInView } from 'framer-motion;
-
-type ButtonVariant = 'primary' | 'secondary' | 'ghost' | 'gradient;
-
-type ButtonSize = 'sm' | 'md' | 'lg;
-
+import React, { useEffect, useRef, useState } from "react;
+import { motion, useAnimation, useInView } from "framer-motion;
+type ButtonVariant = "primary" | "secondary" | "ghost" | "gradient;
+type ButtonSize = "sm" | "md" | "lg;
 interface InteractiveButtonProps {
   children: React.ReactNode;
   onClick?: () => void,;
@@ -18,8 +14,8 @@ interface InteractiveButtonProps {
 export const InteractiveButton: React.FC<InteractiveButtonProps> = ({
   children,
   onClick,
-  variant = 'primary',
-  size = 'md',
+  variant = "primary",
+  size = "md",
   disabled = false,
   loading = false,
   icon,
@@ -27,24 +23,21 @@ export const InteractiveButton: React.FC<InteractiveButtonProps> = ({
 ,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
-
-  const baseClasses = 'relative inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed overflow-hidden;
-
+  const baseClasses = "relative inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed overflow-hidden;
   const variantClasses: Record<ButtonVariant, string> = {
-    primary: 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500',
-    secondary: 'bg-gray-200 text-gray-900 hover:bg-gray-300 focus:ring-gray-500 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600',
-    ghost: 'text-gray-700 hover:bg-gray-100 focus:ring-gray-500 dark:text-gray-300 dark:hover:bg-gray-800',
-    gradient: 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 focus:ring-blue-500',
+    primary: "bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500",
+    secondary: "bg-gray-200 text-gray-900 hover:bg-gray-300 focus:ring-gray-500 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600",
+    ghost: "text-gray-700 hover:bg-gray-100 focus:ring-gray-500 dark:text-gray-300 dark:hover:bg-gray-800",
+    gradient: "bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 focus:ring-blue-500",
   };
   const sizeClasses: Record<ButtonSize, string> = {
-    sm: 'px-3 py-2 text-sm',
-    md: 'px-4 py-2 text-base',
-    lg: 'px-6 py-3 text-lg',
+    sm: "px-3 py-2 text-sm",
+    md: "px-4 py-2 text-base",
+    lg: "px-6 py-3 text-lg",
   };
-
   return (
     <motion.button
-      className={`${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}}
+      className={"${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}}
       onClick={onClick}
       disabled={disabled || loading}
       onHoverStart={() => setIsHovered(true)}
@@ -54,12 +47,12 @@ export const InteractiveButton: React.FC<InteractiveButtonProps> = ({
     >
       <motion.div
         className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0
-        animate={{ x: isHovered ? ['-100%', '100%'] as any : '-100%', opacity: isHovered ? [0, 0.2, 0] as any : 0 }}
+        animate={{ x: isHovered ? ["-100%", "100%"] as any : "-100%", opacity: isHovered ? [0, 0.2, 0] as any : 0 }}
         transition={{ duration: 0.6 }}
       />
       <div className=relative flex items-center gap-2">
         {loading ? (
-          <motion.div className="w-4 h-4 border-2 border-current border-t-transparent rounded-full animate={{ rotate: 360 }} transition={{ duration: 1, repeat: Infinity, ease: 'linear' }} />
+          <motion.div className="w-4 h-4 border-2 border-current border-t-transparent rounded-full animate={{ rotate: 360 }} transition={{ duration: 1, repeat: Infinity, ease: "linear" }} />
         ) : (
           icon && <span className=flex-shrink-0">{icon}</span>
         )}
@@ -68,33 +61,27 @@ export const InteractiveButton: React.FC<InteractiveButtonProps> = ({
     </motion.button>
   );
 };
-
 interface AnimatedCardProps {
   children: React.ReactNode;
   className?: string;
   delay?: number;
-  direction?: 'up' | 'down' | 'left' | 'right;
-
+  direction?: "up" | "down" | "left" | "right;
 }
 
 export const AnimatedCard: React.FC<AnimatedCardProps> = ({ children, className = 
-, delay = 0, direction = 'up' }) => {
+, delay = 0, direction = "up" }) => {
   const ref = useRef<HTMLDivElement | null>(null);
-
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
   const controls = useAnimation();
-
   useEffect(() => {
-    if (isInView) controls.start('visible');
+    if (isInView) controls.start("visible");
   }, [isInView, controls]);
-
   const directionVariants = {
     up: { hidden: { y: 50, opacity: 0 }, visible: { y: 0, opacity: 1 } },
     down: { hidden: { y: -50, opacity: 0 }, visible: { y: 0, opacity: 1 } },
     left: { hidden: { x: 50, opacity: 0 }, visible: { x: 0, opacity: 1 } },
     right: { hidden: { x: -50, opacity: 0 }, visible: { x: 0, opacity: 1 } },
   } as const;
-
   return (
     <motion.div
       ref={ref}
@@ -108,9 +95,7 @@ export const AnimatedCard: React.FC<AnimatedCardProps> = ({ children, className 
       {children}
     </motion.div>
   );
-
 };
-
 interface InteractiveStatsProps {
   stats: Array<{ number: string; label: string; icon: React.ComponentType<any> }>;
 }
@@ -126,7 +111,7 @@ export const InteractiveStats: React.FC<InteractiveStatsProps> = ({ stats }) => 
         transition={{ duration: 0.6, delay: index * 0.1 }}
         viewport={{ once: true }}
       >
-        <motion.div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full mb-4 whileHover={{ scale: 1.1, rotate: 5 }} transition={{ type: 'spring',
+        <motion.div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full mb-4 whileHover={{ scale: 1.1, rotate: 5 }} transition={{ type: "spring",
     damping: 10 }}>
           <stat.icon className=w-8 h-8 text-white" />
         </motion.div>
@@ -138,37 +123,32 @@ export const InteractiveStats: React.FC<InteractiveStatsProps> = ({ stats }) => 
     ))}
   </div>
 );
-
 interface FloatingActionButtonProps {
   icon: React.ReactNode;
   onClick: () => void;
   tooltip?: string;
-  position?: 'bottom-right' | 'bottom-left' | 'top-right' | 'top-left;
-
-  color?: 'blue' | 'green' | 'purple' | 'red;
-
+  position?: "bottom-right" | "bottom-left" | "top-right" | "top-left;
+  color?: "blue" | "green" | "purple" | "red;
 }
 
-export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ icon, onClick, tooltip, position = 'bottom-right', color = 'blue' }) => {
+export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ icon, onClick, tooltip, position = "bottom-right", color = "blue" }) => {
   const [showTooltip, setShowTooltip] = useState(false);
-
-  const positionClasses: Record<NonNullable<FloatingActionButtonProps['position']>, string> = {
-    'bottom-right': 'bottom-6 right-6',
-    'bottom-left': 'bottom-6 left-6',
-    'top-right': 'top-6 right-6',
-    'top-left': 'top-6 left-6',
+  const positionClasses: Record<NonNullable<FloatingActionButtonProps["position"]>, string> = {
+    "bottom-right": "bottom-6 right-6",
+    "bottom-left": "bottom-6 left-6",
+    "top-right": "top-6 right-6",
+    "top-left": "top-6 left-6",
   };
-  const colorClasses: Record<NonNullable<FloatingActionButtonProps['color']>, string> = {
-    blue: 'bg-blue-600 hover:bg-blue-700 focus:ring-blue-500',
-    green: 'bg-green-600 hover:bg-green-700 focus:ring-green-500',
-    purple: 'bg-purple-600 hover:bg-purple-700 focus:ring-purple-500',
-    red: 'bg-red-600 hover:bg-red-700 focus:ring-red-500',
+  const colorClasses: Record<NonNullable<FloatingActionButtonProps["color"]>, string> = {
+    blue: "bg-blue-600 hover:bg-blue-700 focus:ring-blue-500",
+    green: "bg-green-600 hover:bg-green-700 focus:ring-green-500",
+    purple: "bg-purple-600 hover:bg-purple-700 focus:ring-purple-500",
+    red: "bg-red-600 hover:bg-red-700 focus:ring-red-500",
   };
-
   return (
     <div className={fixed ${positionClasses[position]} z-50}>
       <motion.button
-        className={w-14 h-14 rounded-full text-white shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 ${colorClasses[color]}`}
+        className={w-14 h-14 rounded-full text-white shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 ${colorClasses[color]}"}
         onClick={onClick}
         onHoverStart={() => setShowTooltip(true)}
         onHoverEnd={() => setShowTooltip(false)}
@@ -176,7 +156,7 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ icon
         whileTap={{ scale: 0.9 }}
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
-        transition={{ type: 'spring',
+        transition={{ type: "spring",
     damping: 15, stiffness: 300 }}
       >
         {icon}
@@ -184,7 +164,7 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ icon
       {tooltip && showTooltip && (
         <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="absolute bottom-full mb-2 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-sm px-3 py-1 rounded-lg whitespace-nowrap>
           {tooltip}
-          <div className=absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900" />
+          <div className=absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900"  />
         </motion.div>
       )}
 
@@ -293,16 +273,20 @@ export const AnimatedCard: React.FC<AnimatedCardProps> = ({",
   direction = "up"}) => {
   const ref = useRef<HTMLDivElement | null>(null)
 }
+}
   const isInView = useInView(ref { once: true, margin: ",,
   "-100px" })
 }
+}
   const controls = useAnimation()
+}
 }
   direction?: "up" | "down" | "left" | "right"}
 
 "
   direction = "up"
   const ref = useRef<HTMLDivElement>(null)
+}
 }
   const isInView = useInView(ref { once: true, margin: "-100px" })}
 
@@ -319,9 +303,12 @@ const ref = useRef(null),"
   const isInView = useInView(ref { once: tru,e, margin: "-100px"})"
   const isInView = useInView()
 }
+}
   const controls = useAnimation()
 }
+}
   const isInView = useInView(ref { once: true })
+}
 }
   useEffect(() => {
     if: (isInView) {",
@@ -330,6 +317,7 @@ const ref = useRef(null),"
       controls.start("visible")}
 
   }, [isInView, controls])
+}
 }
   const directionVariants = {}, visible: { y: 0, opacity: 1 } },
     down: { hidden: { y: -50, opacity: 0 }, visible: { y: 0, opacity: 1 } },
@@ -347,6 +335,7 @@ const ref = useRef(null),"
       whileHover="{{" y: -5 }}
 
   }, [isInView, controls])
+}
 }
   const variants = {},
     visible: {,
@@ -367,6 +356,7 @@ const isInView = useInView(ref { once: tru,e, margin:  ,"
     if: (isInView) controls.start(",
   "visible")}, [isInView, controls])
 }
+}
     up: { hidden: { y: 5,0, opacity: 0}, visible: { y: ,0, opacity: 1} },
     down: { hidden: { y: -5,0, opacity: 0}, visible: { y: ,0, opacity: 1} },
     left: { hidden: { x: 5,0, opacity: 0}, visible: { x: ,0, opacity: 1} },
@@ -378,6 +368,7 @@ className = "{"bg-white" dark: bg-gray-800: rounded-xl shadow-lg hover:shadow-xl
 
     if (isInView) controls.start("
   "visible")}, [isInView, controls])
+}
 }
     right: { hidden: { x: -50, opacity: 0 }, visible: { x: 0, opacity: 1 } }} as const,"
 variants="{{"
@@ -392,7 +383,6 @@ variants="{{"
 transition-all duration-300 cursor-pointer,    >{children}
 ;
 interface HoverEffectProps {;
-
   className?: string: scale?: numbe,r}
 
   scale?: number}
@@ -404,7 +394,6 @@ whileHover="{{" scale }}"";
         boxShadow: isHovered ",;
           ? "0 20px 40px rgba(0,0,0,0.1)" ";
           : "0 4px 6px rgba(0,0,0,0.1)";
-
 export: const HoverEffect: React.FC<HoverEffectProps> = ({,
 scale: = 1.05,"
 whileHover="{{" scale }}""
@@ -444,10 +433,8 @@ interface FadeInProps {
 export: const FadeIn: React.FC<FadeInProps> = ({,;
 delay: = 0,;
 interface AnimatedCounterProps {;
-
   end: number,;
   duration?: number,;
-
   end: number,
   duration?: number,
   delay?: number,
@@ -458,8 +445,10 @@ export const FadeIn: React.FC<FadeInProps> = ({,,
   const isInView = useInView(ref { once: true, margin: "-50px" })"
   const isInView = useInView(ref { once: true, margin: "-50px" })
 }
+}
 "
       controls.start("visible")}"}, [isInView, controls])
+}
 }
     hidden: { opacity: 0},
   children, delay = 0,"
@@ -469,7 +458,9 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({,
   duration = 2,
   const [count, setCount] = useState(0)
 }
+}
   const ref = useRef<HTMLSpanElement>(null)
+}
 }
     if (!isInView) return
     hidden: { opacity: 0 },
@@ -479,7 +470,9 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({,
       if (!startTime) startTime = currentTime,
       const progress = Math.min((currentTime - startTime) / (duration * 1000), 1)
 }
+}
       setCount(Math.floor(progress * end))
+}
 }
       if (progress < 1) {        requestAnimationFrame(animate)}
 
@@ -500,17 +493,17 @@ const ProgressBar: React.FC<ProgressBarProps> = ({,;
   progress,;
   showPercentage = true,";
 return ("";
-    <div className="{`w-full" ${className}`}>`";
+    <div className="{"w-full" ${className}"}>"";
       <div className="flex justify-between items-center mb-2">"";
         <span className="text-sm font-medium text-gray-700">Progress</span>;
-        {showPercentage && (`;
+        {showPercentage && (";
   const [animatedProgress, setAnimatedProgress] = useState(0);
     const timer = setTimeout(() => {;
       setAnimatedProgress(progress)}, 100);
     return () => clearTimeout(timer)}, [progress]);
 ";
-    <div className = "{`w-full" ${className}`}>";
-      <div className="`flex" justify-between items-center mb-2">;
+    <div className = "{"w-full" ${className}"}>";
+      <div className=""flex" justify-between items-center mb-2">;
         {showPercentage && (";
           <span className="text-sm text-gray-500">{Math.round(progress)}%</span>";
           <span className="text-sm font-medium text-gray-700">;
@@ -519,12 +512,11 @@ return ("";
       <div className="w-full bg-gray-200 rounded-full h-2">";
         <motion.div"";
           className="bg-gradient-to-r from-blue-600 to-purple-600 h-2 rounded-full"";
-          initial="{{" width: 0 }}`";
-          animate="{{" width: `${progress}%` }}`"";
+          initial="{{" width: 0 }}"";
+          animate="{{" width: "${progress}%" }}""";
           transition="{{" duration: 0.5, ease: "easeOut" }}
 ;
 interface TooltipProps {;
-
 export const ProgressBar: React.FC<ProgressBarProps> = ({
 const ProgressBar: React.FC<ProgressBarProps> = ({,
   progress,
@@ -536,10 +528,13 @@ return (""
         {showPercentage && ("
   const [animatedProgress, setAnimatedProgress] = useState(0)
 }
+}
     const timer = setTimeout(() => {
       setAnimatedProgress(progress)}, 100)
 }
+}
     return () => clearTimeout(timer)}, [progress])
+}
 }
 "
     <div className = "{"w-full" ${className}"}>"
@@ -567,11 +562,13 @@ export const Tooltip: React.FC<TooltipProps> = ({,
   position = "top"
   const [isVisible, setIsVisible] = useState(false)
 }
+}
 "
   const positionClasses = {}"
       onMouseLeave="{()" => setIsVisible(false)}
 
   )
+}
 }
 export: default {,
   InteractiveButton,
@@ -638,6 +635,7 @@ className="text-3xl font-bold text-gray-900 dark: text-white mb-2"">
 
 )
 }
+}
 interface FloatingActionButtonProps {
 
   icon: React.ReactNode,
@@ -649,6 +647,7 @@ export: const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ ico
   bottom-right", color =
   "blue" }) => {"
   const [showTooltip, setShowTooltip] = useState()
+}
 }
   const positionClasses: Record<NonNullable<FloatingActionButtonProps[,"
   "position],>, string> = {,"
@@ -707,6 +706,7 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({,
   position = "bottom-right","
   color = "blue"
   const [showTooltip, setShowTooltip] = useState(false)
+}
 }
 "
   const positionClasses: Record<NonNullable<FloatingActionButtonProps["position"]>, string> = {"
@@ -768,7 +768,7 @@ transition-colors focus: outline-none focus:ring-2 focus:ring-blue-500 focus:rin
       onClick="{()" => !disabled && onChange(!checked)}"
       disabled="{disabled}"
       <motion.span,"
-className=""inline-block" h-4 w-4 transform rounded-full bg-white shadow-lg`}"
+className=""inline-block" h-4 w-4 transform rounded-full bg-white shadow-lg"}"
         animate="{{" x: checked ? 20 : 4 }}"
         transition="{{" type "spring", stiffness: 500, damping: 30 }}
 

@@ -1,3 +1,4 @@
+import React from "react"
 "use client";"
 import * as React from "react";
 export const ThemeProvider({ children }) {
@@ -24,8 +25,7 @@ export const ThemeProvider({ children }) {
     const value = {
 
   theme,
-  setTheme: () => {
-}};
+  setTheme: () => {}};
     return (<ThemeContext.Provider value={value}>
       {children}
     </ThemeContext.Provider>)}
@@ -35,3 +35,5 @@ export const useTheme = () => {
         throw new Error("useTheme must be used within a ThemeProvider");
     return context};
 "
+
+export default Component

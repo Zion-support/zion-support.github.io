@@ -1,232 +1,230 @@
-import React, { useState, useMemo } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { SEO } from '../components/SEO';
+import React, { useState, useMemo } from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { SEO } from "../components/SEO";
 import { 
   Brain, Database, Users, Truck, Shield, Briefcase, Cpu, Wrench, Leaf, Atom,
   ArrowRight, ExternalLink, Phone, Mail, Zap, Target, Clock, Globe, Check
-} from 'lucide-react';
-import { SEO } from '@/components/SEO';
-
+} from "lucide-react";
+import { SEO } from "@/components/SEO";
 export default function InnovativeServicesShowcase2025(...args: unknown[]): unknown {
   const services = [
     {
-      id: 'ai-workflow-orchestrator',
-      title: 'AI Workflow Orchestrator',
-      description: 'Intelligent workflow automation that learns, optimizes, and orchestrates complex business processes with AI-powered decision making.',
+      id: "ai-workflow-orchestrator",
+      title: "AI Workflow Orchestrator",
+      description: "Intelligent workflow automation that learns, optimizes, and orchestrates complex business processes with AI-powered decision making.",
       icon: Brain,
-      price: 'From $299/month',
+      price: "From $299/month",
       features: [
-        'AI-powered workflow automation and orchestration',
-        'Intelligent process optimization and decision making',
-        'Real-time workflow monitoring and analytics',
-        'Multi-platform integration and API management'
+        "AI-powered workflow automation and orchestration",
+        "Intelligent process optimization and decision making",
+        "Real-time workflow monitoring and analytics",
+        "Multi-platform integration and API management"
       ],
       benefits: [
-        'Reduce manual workflow processing by 85%',
-        'Improve process efficiency by 60%',
-        'Cut operational costs by 40%'
+        "Reduce manual workflow processing by 85%",
+        "Improve process efficiency by 60%",
+        "Cut operational costs by 40%"
       ],
-      path: '/services/ai-workflow-orchestrator',
-      category: 'AI & Automation'
+      path: "/services/ai-workflow-orchestrator",
+      category: "AI & Automation"
     },
     {
-      id: 'ai-data-governance-platform',
-      title: 'AI Data Governance Platform',
-      description: 'Intelligent data governance that automatically discovers, classifies, and protects your data while ensuring full regulatory compliance.',
+      id: "ai-data-governance-platform",
+      title: "AI Data Governance Platform",
+      description: "Intelligent data governance that automatically discovers, classifies, and protects your data while ensuring full regulatory compliance.",
       icon: Database,
-      price: 'From $499/month',
+      price: "From $499/month",
       features: [
-        'AI-powered data discovery and classification',
-        'Automated data quality assessment and monitoring',
-        'Intelligent data lineage tracking and visualization',
-        'Advanced data privacy and compliance automation'
+        "AI-powered data discovery and classification",
+        "Automated data quality assessment and monitoring",
+        "Intelligent data lineage tracking and visualization",
+        "Advanced data privacy and compliance automation"
       ],
       benefits: [
-        'Ensure 100% regulatory compliance (GDPR, CCPA, HIPAA)',
-        'Reduce data governance costs by 50%',
-        'Improve data quality by 80%'
+        "Ensure 100% regulatory compliance (GDPR, CCPA, HIPAA)",
+        "Reduce data governance costs by 50%",
+        "Improve data quality by 80%"
       ],
-      path: '/services/ai-data-governance-platform',
-      category: 'AI & Data'
+      path: "/services/ai-data-governance-platform",
+      category: "AI & Data"
     },
     {
-      id: 'ai-customer-experience-analytics',
-      title: 'AI Customer Experience Analytics',
-      description: 'Transform customer insights into actionable intelligence with AI-powered analytics that predict, optimize, and enhance every customer interaction.',
+      id: "ai-customer-experience-analytics",
+      title: "AI Customer Experience Analytics",
+      description: "Transform customer insights into actionable intelligence with AI-powered analytics that predict, optimize, and enhance every customer interaction.",
       icon: Users,
-      price: 'From $399/month',
+      price: "From $399/month",
       features: [
-        'AI-powered customer journey mapping and analysis',
-        'Real-time sentiment analysis and emotion detection',
-        'Predictive customer behavior modeling',
-        'Automated customer feedback collection and analysis'
+        "AI-powered customer journey mapping and analysis",
+        "Real-time sentiment analysis and emotion detection",
+        "Predictive customer behavior modeling",
+        "Automated customer feedback collection and analysis"
       ],
       benefits: [
-        'Increase customer satisfaction scores by 45%',
-        'Reduce customer churn by 60%',
-        'Improve customer lifetime value by 35%'
+        "Increase customer satisfaction scores by 45%",
+        "Reduce customer churn by 60%",
+        "Improve customer lifetime value by 35%"
       ],
-      path: '/services/ai-customer-experience-analytics',
-      category: 'AI & Analytics'
+      path: "/services/ai-customer-experience-analytics",
+      category: "AI & Analytics"
     },
     {
-      id: 'ai-supply-chain-optimization',      title: 'AI Supply Chain Optimization',
-      description: 'Revolutionize your supply chain with AI - powered optimization that predicts demand, optimizes inventory, and streamlines logistics for maximum efficiency.',
+      id: "ai-supply-chain-optimization",      title: "AI Supply Chain Optimization",
+      description: "Revolutionize your supply chain with AI - powered optimization that predicts demand, optimizes inventory, and streamlines logistics for maximum efficiency.",
       icon: Truck,
-      price: 'From $599 / month',
-      features: ['AI - powered demand forecasting and inventory optimization',
-        'Real - time supply chain monitoring and risk assessment',
-        'Intelligent route optimization and logistics planning',
-        'Automated supplier performance analysis and scoring'
+      price: "From $599 / month",
+      features: ["AI - powered demand forecasting and inventory optimization",
+        "Real - time supply chain monitoring and risk assessment",
+        "Intelligent route optimization and logistics planning",
+        "Automated supplier performance analysis and scoring"
       ],
-      benefits: ['Reduce supply chain costs by 25 - 40%',
-        'Improve inventory accuracy by 90%',
-        'Reduce lead times by 30 - 50%'
+      benefits: ["Reduce supply chain costs by 25 - 40%",
+        "Improve inventory accuracy by 90%",
+        "Reduce lead times by 30 - 50%"
       ],
-      path: '/services / ai - supply - chain - optimization',
-      category: 'AI & Logistics'
+      path: "/services / ai - supply - chain - optimization",
+      category: "AI & Logistics"
     },
     {}
-      id: 'ai - financial - risk - management',
-      title: 'AI Financial Risk Management',
-      description: 'Intelligent financial risk management that automatically detects, assesses, and mitigates risks while ensuring regulatory compliance and optimizing returns.',
+      id: "ai - financial - risk - management",
+      title: "AI Financial Risk Management",
+      description: "Intelligent financial risk management that automatically detects, assesses, and mitigates risks while ensuring regulatory compliance and optimizing returns.",
       icon: Shield,
-      price: 'From $799 / month',
-      features: ['AI - powered credit risk assessment and scoring',
-        'Real - time market risk monitoring and alerts',
-        'Intelligent fraud detection and prevention',
-        'Advanced portfolio risk analysis and optimization'
+      price: "From $799 / month",
+      features: ["AI - powered credit risk assessment and scoring",
+        "Real - time market risk monitoring and alerts",
+        "Intelligent fraud detection and prevention",
+        "Advanced portfolio risk analysis and optimization"
       ],
-      benefits: ['Reduce credit losses by 40 - 60%',
-        'Improve risk - adjusted returns by 25%',
-        'Detect fraud with 99.5% accuracy'
+      benefits: ["Reduce credit losses by 40 - 60%",
+        "Improve risk - adjusted returns by 25%",
+        "Detect fraud with 99.5% accuracy"
       ],
-      path: '/services / ai - financial - risk - management',
-      category: 'AI & Finance'
+      path: "/services / ai - financial - risk - management",
+      category: "AI & Finance"
     },
     {}
-      id: 'ai - hr - talent - acquisition',
-      title: 'AI HR Talent Acquisition',
-      description: 'Revolutionize your hiring process with AI - powered talent acquisition that finds, screens, and matches the perfect candidates for your organization.',
+      id: "ai - hr - talent - acquisition",
+      title: "AI HR Talent Acquisition",
+      description: "Revolutionize your hiring process with AI - powered talent acquisition that finds, screens, and matches the perfect candidates for your organization.",
       icon: Briefcase,
-      price: 'From $299 / month',
-      features: ['AI - powered candidate sourcing and matching',
-        'Intelligent resume parsing and skill extraction',
-        'Automated candidate screening and assessment',
-        'Predictive candidate success modeling'
+      price: "From $299 / month",
+      features: ["AI - powered candidate sourcing and matching",
+        "Intelligent resume parsing and skill extraction",
+        "Automated candidate screening and assessment",
+        "Predictive candidate success modeling"
       ],
-      benefits: ['Reduce time - to - hire by 60%',
-        'Improve candidate quality by 45%',
-        'Reduce recruitment costs by 40%'
+      benefits: ["Reduce time - to - hire by 60%",
+        "Improve candidate quality by 45%",
+        "Reduce recruitment costs by 40%"
       ],
-      path: '/services / ai - hr - talent - acquisition',
-      category: 'AI & HR'
+      path: "/services / ai - hr - talent - acquisition",
+      category: "AI & HR"
     },
     {}
-      id: 'ai - iot - edge - computing',
-      title: 'AI IoT Edge Computing',
-      description: 'Transform your IoT infrastructure with AI - powered edge computing that processes data locally, reduces latency, and enables real - time intelligent decision making.',
+      id: "ai - iot - edge - computing",
+      title: "AI IoT Edge Computing",
+      description: "Transform your IoT infrastructure with AI - powered edge computing that processes data locally, reduces latency, and enables real - time intelligent decision making.",
       icon: Cpu,
-      price: 'From $499 / month',
-      features: ['AI - powered edge computing and processing',
-        'Real - time IoT device management and monitoring',
-        'Intelligent edge analytics and decision making',
-        'Advanced device connectivity and protocol support'
+      price: "From $499 / month",
+      features: ["AI - powered edge computing and processing",
+        "Real - time IoT device management and monitoring",
+        "Intelligent edge analytics and decision making",
+        "Advanced device connectivity and protocol support"
       ],
-      benefits: ['Reduce latency by 80 - 90%',
-        'Lower bandwidth costs by 60%',
-        'Improve device reliability by 75%'
+      benefits: ["Reduce latency by 80 - 90%",
+        "Lower bandwidth costs by 60%",
+        "Improve device reliability by 75%"
       ],
-      path: '/services / ai - iot - edge - computing',
-      category: 'AI & IoT'
+      path: "/services / ai - iot - edge - computing",
+      category: "AI & IoT"
     },
     {}
-      id: 'ai - predictive - maintenance',
-      title: 'AI Predictive Maintenance',
-      description: 'Transform your maintenance operations with AI - powered predictive maintenance that prevents failures, reduces downtime, and optimizes equipment performance.',
+      id: "ai - predictive - maintenance",
+      title: "AI Predictive Maintenance",
+      description: "Transform your maintenance operations with AI - powered predictive maintenance that prevents failures, reduces downtime, and optimizes equipment performance.",
       icon: Wrench,
-      price: 'From $399 / month',
-      features: ['AI - powered equipment health monitoring and analysis',
-        'Real - time predictive maintenance scheduling',
-        'Intelligent failure prediction and prevention',
-        'Advanced sensor data analysis and processing'
+      price: "From $399 / month",
+      features: ["AI - powered equipment health monitoring and analysis",
+        "Real - time predictive maintenance scheduling",
+        "Intelligent failure prediction and prevention",
+        "Advanced sensor data analysis and processing"
       ],
-      benefits: ['Reduce unplanned downtime by 70 - 90%',
-        'Lower maintenance costs by 25 - 40%',
-        'Extend equipment lifespan by 20 - 30%'
+      benefits: ["Reduce unplanned downtime by 70 - 90%",
+        "Lower maintenance costs by 25 - 40%",
+        "Extend equipment lifespan by 20 - 30%"
       ],
-      path: '/services / ai - predictive - maintenance',
-      category: 'AI & Maintenance'
+      path: "/services / ai - predictive - maintenance",
+      category: "AI & Maintenance"
     },
     {}
-      id: 'ai - sustainable - technology',
-      title: 'AI Sustainable Technology',
-      description: 'Transform your organization into a sustainability leader with AI - powered technology that optimizes energy, reduces waste, and minimizes environmental impact.',
+      id: "ai - sustainable - technology",
+      title: "AI Sustainable Technology",
+      description: "Transform your organization into a sustainability leader with AI - powered technology that optimizes energy, reduces waste, and minimizes environmental impact.",
       icon: Leaf,
-      price: 'From $299 / month',
-      features: ['AI - powered energy consumption optimization',
-        'Real - time sustainability monitoring and reporting',
-        'Intelligent carbon footprint tracking and reduction',
-        'Advanced waste management and recycling optimization'
+      price: "From $299 / month",
+      features: ["AI - powered energy consumption optimization",
+        "Real - time sustainability monitoring and reporting",
+        "Intelligent carbon footprint tracking and reduction",
+        "Advanced waste management and recycling optimization"
       ],
-      benefits: ['Reduce energy consumption by 25 - 40%',
-        'Lower carbon footprint by 30 - 50%',
-        'Improve resource efficiency by 35%'
+      benefits: ["Reduce energy consumption by 25 - 40%",
+        "Lower carbon footprint by 30 - 50%",
+        "Improve resource efficiency by 35%"
       ],
-      path: '/services / ai - sustainable - technology',
-      category: 'AI & Sustainability'
+      path: "/services / ai - sustainable - technology",
+      category: "AI & Sustainability"
     },
     {}
-      id: 'ai - quantum - machine - learning',
-      title: 'AI Quantum Machine Learning',
-      description: 'Revolutionize your computational capabilities with AI - powered quantum machine learning that solves previously impossible problems and accelerates innovation.',
+      id: "ai - quantum - machine - learning",
+      title: "AI Quantum Machine Learning",
+      description: "Revolutionize your computational capabilities with AI - powered quantum machine learning that solves previously impossible problems and accelerates innovation.",
       icon: Atom,
-      price: 'From $1,999 / month',
-      features: ['Quantum - enhanced machine learning algorithms',
-        'Hybrid quantum - classical computing solutions',
-        'Advanced quantum neural network optimization',
-        'Real - time quantum algorithm execution'
+      price: "From $1,999 / month",
+      features: ["Quantum - enhanced machine learning algorithms",
+        "Hybrid quantum - classical computing solutions",
+        "Advanced quantum neural network optimization",
+        "Real - time quantum algorithm execution"
       ],
-      benefits: ['Solve complex problems 100x faster than classical computing',
-        'Improve machine learning accuracy by 40 - 60%',
-        'Enable previously impossible computational tasks'
+      benefits: ["Solve complex problems 100x faster than classical computing",
+        "Improve machine learning accuracy by 40 - 60%",
+        "Enable previously impossible computational tasks"
       ],
-      path: '/services / ai - quantum - machine - learning',
-      category: 'AI & Quantum Computing'
+      path: "/services / ai - quantum - machine - learning",
+      category: "AI & Quantum Computing"
     }
   ];
-'
-  Brain, Database, Users, Truck, Shield, Briefcase, Cpu, Wrench, Leaf, Atom,''
-  ArrowRight, ExternalLink, Phone, Mail, Zap, Target, Clock, Globe, Check''''
-} from 'lucide-react'};'
-''
-  '''
-      case 'IT Services': return Server;'''
-      case 'Micro SaaS': return ShoppingCart;'''
-      case 'Cybersecurity': return ShieldIcon;'''
-      case 'Data Analytics': return BarChart3;'''
-      case 'Cloud Services': return Cloud;'''
-      case 'Emerging Tech': return Rocket;
+"
+  Brain, Database, Users, Truck, Shield, Briefcase, Cpu, Wrench, Leaf, Atom,""
+  ArrowRight, ExternalLink, Phone, Mail, Zap, Target, Clock, Globe, Check""""
+} from "lucide-react"};"
+""
+  """
+      case "IT Services": return Server;"""
+      case "Micro SaaS": return ShoppingCart;"""
+      case "Cybersecurity": return ShieldIcon;"""
+      case "Data Analytics": return BarChart3;"""
+      case "Cloud Services": return Cloud;"""
+      case "Emerging Tech": return Rocket;
       default: return Zap}
-  };'
-''
-  '''
-      case 'IT Services': return 'from-blue-600 to-cyan-600';'''
-      case 'Micro SaaS': return 'from-green-600 to-emerald-600';'''
-      case 'Cybersecurity': return 'from-red-600 to-orange-600';'''
-      case 'Data Analytics': return 'from-indigo-600 to-purple-600';'''
-      case 'Cloud Services': return 'from-cyan-600 to-blue-600';'''
-      case 'Emerging Tech': return 'from-yellow-600 to-orange-600';'''
-      default: return 'from-gray-600 to-slate-600'}
+  };"
+""
+  """
+      case "IT Services": return "from-blue-600 to-cyan-600";"""
+      case "Micro SaaS": return "from-green-600 to-emerald-600";"""
+      case "Cybersecurity": return "from-red-600 to-orange-600";"""
+      case "Data Analytics": return "from-indigo-600 to-purple-600";"""
+      case "Cloud Services": return "from-cyan-600 to-blue-600";"""
+      case "Emerging Tech": return "from-yellow-600 to-orange-600";"""
+      default: return "from-gray-600 to-slate-600"}
   };
-
   return()
+}
     <div className="min-h-screen bg-white">"""
       <SEO """"
         title="Innovative AI Services Showcase 2025 - Zion Tech Group""""
-        description="Discover our cutting-edge AI-powered micro SAAS services and solutions. From workflow orchestration to quantum machine learning, transform your business with intelligent technology."""
-       />"""
+        description="Discover our cutting-edge AI-powered micro SAAS services and solutions. From workflow orchestration to quantum machine learning, transform your business with intelligent technology."""  />"""
       """"
       <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark py-20 text-center">"        <div className="max-w-5xl mx-auto px-6">
           <motion.div;
@@ -322,22 +320,21 @@ export default function InnovativeServicesShowcase2025(...args: unknown[]): unkn
           </div>
         </div>
       </section>"""
-      {/* Filters and Search */}""""
+      {/* comment */}""""
       <section className="py-8 px-4 sm:px-6 lg:px-8">""""
         <div className="max-w-7xl mx-auto">""""
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">""""
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">"""
-              {/* Search */}""""
+              {/* comment */}""""
               <div className="relative">""""
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />"""
                 <input""""
                   type="text""                  placeholder="Search services..."""
                   value={searchQuery}"""
                   onChange={(e) => setSearchQuery(e.target.value)}""""
-                  className="w-full pl-10 pr-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"""
-                />
+                  className="w-full pl-10 pr-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent""" />
               </div>
-              {/* Category Filter */}
+              {/* comment */}
               <div>
                 <select;
                   value={selectedCategory}"""
@@ -348,7 +345,7 @@ export default function InnovativeServicesShowcase2025(...args: unknown[]): unkn
                   {categories.map(category => (<option key={category} value={category}>{category}</option>) ) }
                 </select>
               </div>
-              {/* Price Range Filter */}
+              {/* comment */}
               <div>
                 <select;
                   value={priceRange}"""
@@ -361,7 +358,7 @@ export default function InnovativeServicesShowcase2025(...args: unknown[]): unkn
                   <option value="high">Over $3,000</option>
                 </select>
               </div>
-              {/* Sort By */}
+              {/* comment */}
               <div>
                 <select;
                   value={sortBy}"""
@@ -378,7 +375,7 @@ export default function InnovativeServicesShowcase2025(...args: unknown[]): unkn
           </div>
         </div>
       </section>"""
-      {/* Services Grid */}""""
+      {/* comment */}""""
       <section className="py-12 px-4 sm:px-6 lg:px-8">""""
         <div className="max-w-7xl mx-auto">""""
           <div className="mb-8">""""
@@ -399,10 +396,10 @@ export default function InnovativeServicesShowcase2025(...args: unknown[]): unkn
                 className="group relative""""
               >""""
                 <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105 h-full">"""
-                  {/* Service Header */}""""
+                  {/* comment */}""""
                   <div className="mb-4">""""
-                    <div className="flex items-center justify-between mb-3">'"""
-                      <div className={`p-2 rounded-lg bg-gradient-to-r ${categoryColors[service.category] || 'from-gray-600 to-gray-700'}`}>""""
+                    <div className="flex items-center justify-between mb-3">""""
+                      <div className={`p-2 rounded-lg bg-gradient-to-r ${categoryColors[service.category] || "from-gray-600 to-gray-700"}`}>""""
                         {categoryIcons[service.category] || <Star className="w-5 h-5 text-white"  />}"""
                       </div>""""
                       <div className="text-right">"                        <div className="text-2xl font-bold text-white">
@@ -424,11 +421,11 @@ export default function InnovativeServicesShowcase2025(...args: unknown[]): unkn
                         </span>) }
                     </div>
                   </div>"""
-                  {/* Description */}""""
+                  {/* comment */}""""
                   <p className="text-gray-300 text-sm mb-4 line-clamp-3">
                     {service.description}
                   </p>"""
-                  {/* Key Features */}""""
+                  {/* comment */}""""
                   <div className="mb-4">""""
                     <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>""""
                     <div className="space-y-1">"""
@@ -443,7 +440,7 @@ export default function InnovativeServicesShowcase2025(...args: unknown[]): unkn
                         </div>) }
                     </div>
                   </div>"""
-                  {/* Benefits */}""""
+                  {/* comment */}""""
                   <div className="mb-4">""""
                     <h4 className="text-sm font-semibold text-white mb-2">Benefits:</h4>""""
                     <div className="space-y-1">"""
@@ -454,7 +451,7 @@ export default function InnovativeServicesShowcase2025(...args: unknown[]): unkn
                       ))}
                     </div>
                   </div>"""
-                  {/* Technical Specs */}""""
+                  {/* comment */}""""
                   <div className="mb-4">""""
                     <h4 className="text-sm font-semibold text-white mb-2">Technology:</h4>""""
                     <div className="flex flex-wrap gap-1">"""
@@ -469,7 +466,7 @@ export default function InnovativeServicesShowcase2025(...args: unknown[]): unkn
                         </span>) }
                     </div>
                   </div>"""
-                  {/* Market Info */}""""
+                  {/* comment */}""""
                   <div className="mb-6">""""
                     <div className="grid grid-cols-2 gap-3 text-xs">""""
                       <div className="text-center p-2 bg-blue-600/20 rounded">""""
@@ -482,22 +479,22 @@ export default function InnovativeServicesShowcase2025(...args: unknown[]): unkn
                       </div>
                     </div>
                   </div>"""
-                  {/* CTA Button */}""""
-                  <div className="flex space-x-3">'`
-                    <a'`'"`
+                  {/* comment */}""""
+                  <div className="flex space-x-3">""
+                    <a"""""
                       href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.title}&body=Hi, I'm interested in learning more about your ${service.title} service. Please provide more information about pricing, features, and implementation.`}""""
                       className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-center text-sm font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"""
                     >"""
                       <span>Get Quote</span>""""
-                      <ArrowRight className="w-4 h-4"  />                    </a>`
-                    <a`"`
+                      <ArrowRight className="w-4 h-4"  />                    </a>"
+                    <a"""
                       href={`tel:${contactInfo.phone}`}""""
                       className="px-4 py-2 border border-white/30 text-white rounded-lg text-sm font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center""""
                     >""""
                       <Phone className="w-4 h-4"  />
                     </a>
                   </div>"""
-                  {/* Additional Info */}""""
+                  {/* comment */}""""
                   <div className="mt-4 pt-4 border-t border-white/20">""""
                     <div className="grid grid-cols-2 gap-4 text-xs text-gray-400">""""
                       <div className="flex items-center space-x-1">""""
@@ -514,7 +511,7 @@ export default function InnovativeServicesShowcase2025(...args: unknown[]): unkn
           </div>
         </div>
       </section>"""
-      {/* Featured Services */}""""
+      {/* comment */}""""
       <section className="py-20 bg-gradient-to-r from-gray-800/50 to-gray-900/50">""""
         <div className="container mx-auto px-4">
           <motion.div;
@@ -592,11 +589,7 @@ export default function InnovativeServicesShowcase2025(...args: unknown[]): unkn
 
 
 export { InnovativeServicesShowcase2025 };
-
 export { InnovativeServicesShowcase2025 };
-
 export { InnovativeServicesShowcase2025 };
-
 export { InnovativeServicesShowcase2025 };
-
 export { InnovativeServicesShowcase2025 };

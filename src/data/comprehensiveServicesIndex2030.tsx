@@ -4,7 +4,6 @@
 ;
 export const COMPREHENSIVE_SERVICES_INDEX_2030: ProductListing[] = [...REVOLUTIONARY_SERVICES_2030
 ];
-
 // Service Categories for easy filtering
 :src/data/comprehensiveServicesIndex2030.tsx
 export const SERVICE_CATEGORIES_2030 = ["
@@ -38,10 +37,9 @@ export const SERVICE_CATEGORIES_2030 = ["
   "IT Infrastructure",;"
   "Emerging Technology";
 ];
-
 // Service Statistics;
 export 
-  emergingTechServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service  => ;'
+  emergingTechServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service  => ;"
 export 
   "Blockchain & Web3",;
   "Digital Twin",;
@@ -50,7 +48,6 @@ export
   "IT Infrastructure",;
   "Emerging Technology";
 ];
-
 // Service Statistics
 export const SERVICE_STATISTICS_2030 = {
   totalServices: COMPREHENSIVE_SERVICES_INDEX_2030.length,
@@ -64,54 +61,47 @@ export const SERVICE_STATISTICS_2030 = {
   ) / 10,
   featuredServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service  => service.featured).length,
   aiServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service  =>
-    service.category.includes('AI') || service.aiScore > 90
-  emergingTechServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service  => ;    service.category === 'Emerging Technology'
+    service.category.includes("AI") || service.aiScore > 90
+  emergingTechServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service  => ;    service.category === "Emerging Technology"
   ).length
   ).length,;
   ;
   ;
   emergingTechServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => ;
-    service.category === 'Emerging Technology';
+    service.category === "Emerging Technology";
   ).length};
-
 };
-
 // Featured Services
 export const FEATURED_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => service.featured);
-
 // High-ROI Services(ROI > 500%)
+}
 export const HIGH_ROI_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => {;
-  const roi = service.roi;  if(typeof roi = == 'string') {;
-    
+  const roi = service.roi;  if(typeof roi = == "string") {;
     return roiNumber > 500}
   return false});
-
 // Quick Setup Services(< 8 weeks);
 export 
   
-  if(typeof setupTime = == 'string') {;
-    
+  if(typeof setupTime = == "string") {;
 // Featured Services
 export 
 // High-ROI Services(ROI > 500%)
+}
 export 
   
-  if(typeof roi = == 'string') {;
-    
+  if(typeof roi = == "string") {;
     return roiNumber > 500}
   return false});
-
 // Quick Setup Services(< 8 weeks)
+}
 export 
   
-  if(typeof setupTime = == 'string') {;
-    
+  if(typeof setupTime = == "string") {;
     return weeks < 8}
   return false});
-
 // Export individual service arrays for specific use cases;
 export {
 
   REVOLUTIONARY_SERVICES_2030
 };
-'"
+""

@@ -1,15 +1,14 @@
-import { Link  } from 'react-router-dom';
- from 'react';
-import { Badge } from '@/components / ui / badge';
-import { Button } from '@/components / ui / button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
- from '../../data / 2027 - cutting - edge - comprehensive -services';
-import { specializedInnovativeServices2027 } from '../../data / 2027 - specialized - innovative -services';
+import { Link  } from "react-router-dom";
+ from "react";
+import { Badge } from "@/components / ui / badge";
+import { Button } from "@/components / ui / button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components / ui / card";
+ from "../../data / 2027 - cutting - edge - comprehensive -services";
+import { specializedInnovativeServices2027 } from "../../data / 2027 - specialized - innovative -services";
  = {
 
-  'AI & Autonomous Systems': 'from-purple-600 to-indigo-700',Quantum Computing & AI': 'from-blue-600 to-cyan-700',Blockchain & Web3': 'from-green-600 to-emerald-700',Cybersecurity & Privacy': 'from-red-600 to-pink-700',Healthcare & Biotech': 'from-purple-600 to-pink-700',Financial Technology': 'from-yellow-600 to-orange-700',IoT & Automation': 'from-blue-600 to-teal-700',Cloud & Infrastructure': 'from-gray-600 to-blue-700',Data Analytics & BI': 'from-green-600 to-blue-700',Digital Marketing & Automation': 'from-pink-600 to-purple-700',E-commerce & Retail': 'from-orange-600 to-red-700',Education & Learning Technology': 'from-teal-600 to-green-700',Space Technology & Earth Observation': 'from-indigo-600 to-purple-700',AR/VR & Immersive Technology': 'from-pink-600 to-rose-700',Robotics & Automation': 'from-gray-600 to-slate-700',Green Technology & Sustainability': 'from-green-600 to-emerald-700',Supply Chain & Logistics': 'from-blue-600 to-indigo-700',Human Resources & Talent Management': 'from-purple-600 to-violet-700',Legal Technology & Compliance': 'from-slate-600 to-gray-700',Real Estate & Property Technology': 'from-amber-600 to-orange-700',Sports Technology & Analytics': 'from-green-600 to-blue-700',Entertainment & Media Technology': 'from-purple-600 to-pink-700'
+  "AI & Autonomous Systems": "from-purple-600 to-indigo-700",Quantum Computing & AI": "from-blue-600 to-cyan-700",Blockchain & Web3": "from-green-600 to-emerald-700",Cybersecurity & Privacy": "from-red-600 to-pink-700",Healthcare & Biotech": "from-purple-600 to-pink-700",Financial Technology": "from-yellow-600 to-orange-700",IoT & Automation": "from-blue-600 to-teal-700",Cloud & Infrastructure": "from-gray-600 to-blue-700",Data Analytics & BI": "from-green-600 to-blue-700",Digital Marketing & Automation": "from-pink-600 to-purple-700",E-commerce & Retail": "from-orange-600 to-red-700",Education & Learning Technology": "from-teal-600 to-green-700",Space Technology & Earth Observation": "from-indigo-600 to-purple-700",AR/VR & Immersive Technology": "from-pink-600 to-rose-700",Robotics & Automation": "from-gray-600 to-slate-700",Green Technology & Sustainability": "from-green-600 to-emerald-700",Supply Chain & Logistics": "from-blue-600 to-indigo-700",Human Resources & Talent Management": "from-purple-600 to-violet-700",Legal Technology & Compliance": "from-slate-600 to-gray-700",Real Estate & Property Technology": "from-amber-600 to-orange-700",Sports Technology & Analytics": "from-green-600 to-blue-700",Entertainment & Media Technology": "from-purple-600 to-pink-700"
 };
-
 const features = ["
   "AI-Powered Automation","
   "Real-time Analytics","
@@ -26,14 +25,13 @@ const features = ["
 ];
 },;
   {;"
-    icon: <CheckCircle className="h-6 w-6" />,;"
+    icon: <CheckCircle className="h-6 w-6"  />,;"
     title: "Quality Guaranteed",;"
     description: "30-day money-back guarantee with free migration support"};
 ];
 ;
-
   ;      <div className="container mx-auto px-4">
-        {/* Header */}"
+        {/* comment */}"
         <div className="text-center mb-16">"
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Revolutionary 2027 Micro SAAS Solutions
@@ -43,39 +41,37 @@ const features = ["
           <div className="flex flex-wrap justify-center gap-4">"
             <Link to="/contact">"
               <Button size="lg" className="bg-white text-zion-blue hover:bg-gray-100">"
-                <Phone className="h-5 w-5 mr-2" />
+                <Phone className="h-5 w-5 mr-2"  />
                 Get Free Consultation
               </Button>
             </Link>"
             <Link to="/contact">"
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion-blue">"
-                <Mail className="h-5 w-5 mr-2" />                Request Demo
+                <Mail className="h-5 w-5 mr-2"  />                Request Demo
               </Button>
             </Link>
           </div>
         </div>
-
-        {/* Contact Information Banner */}"
+        {/* comment */}"
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-16 border border-white/20">"
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">"
             <div className="flex flex-col items-center">"
-              <Phone className="h-8 w-8 text-zion-cyan mb-2" />"
+              <Phone className="h-8 w-8 text-zion-cyan mb-2"  />"
               <h3 className="text-lg font-semibold text-white mb-1">Call Us</h3>"
               <p className="text-zion-slate-light">{contactInfo.mobile}</p>
             </div>"
             <div className="flex flex-col items-center">"
-              <Mail className="h-8 w-8 text-zion-cyan mb-2" />"
+              <Mail className="h-8 w-8 text-zion-cyan mb-2"  />"
               <h3 className="text-lg font-semibold text-white mb-1">Email Us</h3>"
               <p className="text-zion-slate-light">{contactInfo.email}</p>
             </div>"
             <div className="flex flex-col items-center">"
-              <MapPin className="h-8 w-8 text-zion-cyan mb-2" />"
+              <MapPin className="h-8 w-8 text-zion-cyan mb-2"  />"
               <h3 className="text-lg font-semibold text-white mb-1">Visit Us</h3>"              <p className="text-zion-slate-light text-sm">{contactInfo.address}</p>
             </div>
           </div>
         </div>
-
-        {/* Search and Filter */}"
+        {/* comment */}"
         <div className="mb-16">"
           <div className="flex flex-col md:flex-row gap-4 mb-6">
             <input"
@@ -95,15 +91,14 @@ const features = ["
             </select>
           </div>
         </div>
-
-        {/* Featured Services */}"
+        {/* comment */}"
         <div className="mb-20">"
           <h3 className="text-3xl font-bold text-white mb-8 text-center">Featured Services</h3>"
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
             {featuredServices.map((service)  => ("
               <Card key={service.id} className="bg-zion-blue-dark border-zion-blue-light text-white hover:border-zion-purple/50 transition-all duration-300 hover:scale-105">"
                 <CardHeader className="text-center">
-                  <div className={`mx-auto w-16 h-16 bg-gradient-to-br ${categoryColors[service.category] || 'from-gray-500 to-gray-600'} rounded-full flex items-center justify-center mb-4 text-2xl`}>
+                  <div className={"mx-auto w-16 h-16 bg-gradient-to-br ${categoryColors[service.category] || "from-gray-500 to-gray-600"} rounded-full flex items-center justify-center mb-4 text-2xl"}>
                     {service.icon}
                   </div>"
                   <CardTitle className="text-lg">{service.name}</CardTitle>"
@@ -125,14 +120,14 @@ const features = ["
                   <div className="space-y-2">
                     {service.features.slice(0, 3).map((feature, index) => ("
                       <div key={index} className="flex items-center text-sm text-zion-slate-light">"
-                        <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
+                        <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0"  />
                         {feature}
                       </div>
                     ))}
                   </div>"
                   <div className="mt-4 flex items-center justify-between text-sm">"
                     <div className="flex items-center">"
-                      <Star className="h-4 w-4 text-yellow-400 mr-1" />
+                      <Star className="h-4 w-4 text-yellow-400 mr-1"  />
                       <span>{service.rating}</span>"                      <span className="text-zion-slate-light ml-1">({service.reviews})</span>
                     </div>"
                     <Badge variant="outline" className="border-zion-cyan text-zion-cyan">
@@ -142,24 +137,24 @@ const features = ["
                   <Link to={service.link} className="mt-4 w-full">"
                     <Button className="w-full bg-zion-cyan text-white hover:bg-zion-cyan-dark">
                       Learn More"
-                      <ArrowRight className="h-4 w-4 ml-2" />                    </Button>
+                      <ArrowRight className="h-4 w-4 ml-2"  />                    </Button>
                   </Link>
                 </CardContent>
               </Card>) ) }
           </div>
         </div>
-
-        {/* All Services Grid */}
+        {/* comment */}
         <div>"
           <h3 className="text-3xl font-bold text-white mb-8 text-center">
             All Services({filteredServices.length})
+}
           </h3>"
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredServices.map((service)  => ("
               <Card key={service.id} className="bg-zion-blue-dark border-zion-blue-light text-white hover:border-zion-purple/50 transition-all duration-300 hover:scale-105">
                 <CardHeader>"
-                  <div className="flex items-center justify-between mb-2">'`
-                    <div className={`w-12 h-12 bg-gradient-to-br ${categoryColors[service.category] || 'from-gray-500 to-gray-600'} rounded-full flex items-center justify-center text-xl`}>
+                  <div className="flex items-center justify-between mb-2">""
+                    <div className={"w-12 h-12 bg-gradient-to-br ${categoryColors[service.category] || "from-gray-500 to-gray-600"} rounded-full flex items-center justify-center text-xl"}>
                       {service.icon}
                     </div>
                     {service.popular && ("
@@ -182,17 +177,15 @@ const features = ["
                   <p className="text-sm text-zion-slate-light mb-4 line-clamp-3">
                     {service.description}
                   </p>
-
-                  {/* Key Features */}"
+                  {/* comment */}"
                   <div className="space-y-2 mb-4">"
                     <h4 className="font-semibold text-white text-sm">Key Features: any</h4>
                     {service.features.slice(0, 3).map((feature, index)  => ("
                       <div key={index} className="flex items-center text-sm text-zion-slate-light">"
-                        <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />                        {feature}
+                        <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0"  />                        {feature}
                       </div>) ) }
                   </div>
-
-                  {/* Market Information */}"
+                  {/* comment */}"
                   <div className="space-y-2 mb-4 text-sm">"
                     <div className="flex justify-between">"
                       <span className="text-zion-slate-light">Market Size:</span>"
@@ -207,29 +200,27 @@ const features = ["
                       <span className="text-white">{service.roi}</span>
                     </div>
                   </div>
-
-                  {/* Service Stats */}"
+                  {/* comment */}"
                   <div className="flex items-center justify-between text-sm mb-4">"
                     <div className="flex items-center">"
-                      <Star className="h-4 w-4 text-yellow-400 mr-1" />
+                      <Star className="h-4 w-4 text-yellow-400 mr-1"  />
                       <span>{service.rating}</span>"                      <span className="text-zion-slate-light ml-1">({service.reviews})</span>
                     </div>"
                     <Badge variant="outline" className="border-zion-cyan text-zion-cyan">
                       {service.customers} customers
                     </Badge>
                   </div>
-
-                  {/* Action Buttons */}"
+                  {/* comment */}"
                   <div className="space-y-2">"
                     <Link to={service.link} className="w-full">"
                       <Button className="w-full bg-zion-cyan text-white hover:bg-zion-cyan-dark">
                         Learn More"
-                        <ArrowRight className="h-4 w-4 ml-2" />
+                        <ArrowRight className="h-4 w-4 ml-2"  />
                       </Button>
                     </Link>"
                     <Link to="/contact" className="w-full">"
                       <Button variant="outline" className="w-full border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white">"
-                        <Phone className="h-4 w-4 mr-2" />                        Get Quote
+                        <Phone className="h-4 w-4 mr-2"  />                        Get Quote
                       </Button>
                     </Link>
                   </div>
@@ -237,8 +228,7 @@ const features = ["
               </Card>) ) }
           </div>
         </div>
-
-        {/* Benefits Section */}"
+        {/* comment */}"
         <div className="mt-20">"
           <h3 className="text-3xl font-bold text-white mb-12 text-center">Why Choose Zion Tech Group?</h3>"
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
@@ -253,8 +243,7 @@ const features = ["
             ))}
           </div>
         </div>
-
-        {/* CTA Section */}"
+        {/* comment */}"
         <div className="mt-20 text-center">"
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">"
             <h3 className="text-3xl font-bold text-white mb-4">
@@ -266,13 +255,13 @@ const features = ["
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <Link to="/contact">"
                 <Button size="lg" className="bg-zion-cyan text-white hover:bg-zion-cyan-dark px-8 py-3">"
-                  <Phone className="h-5 w-5 mr-2" />
+                  <Phone className="h-5 w-5 mr-2"  />
                   Start Free Trial
                 </Button>
               </Link>"
               <Link to="/contact">"
                 <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion-blue px-8 py-3">"
-                  <Mail className="h-5 w-5 mr-2" />                  Schedule Demo
+                  <Mail className="h-5 w-5 mr-2"  />                  Schedule Demo
                 </Button>
               </Link>
             </div>"
@@ -293,4 +282,4 @@ export default ComprehensiveServicesShowcase2027;
 export default ComprehensiveServicesShowcase2027;
 export default ComprehensiveServicesShowcase2027;
 export default ComprehensiveServicesShowcase2027;
-'"`
+'""

@@ -31,19 +31,24 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
   onLoad, onError}) => {
   const [isLoaded, setIsLoaded] = useState(false)
 }
+}
   const [hasError, setHasError] = useState()
 }
+}
   const imgRef = useRef<HTMLImageElement>(null)
+}
 }
   // comment
   const defaultBlurDataURL = "data: image/jpeg,base6,4, /9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
   const handleLoad = () => {
     setIsLoaded(true)
 }
+}
     onLoad?.()}
 
   const handleError = () => {
     setHasError(true)
+}
 }
     onError?.()}
 
@@ -54,6 +59,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
       (entries) => {
         entries.forEach((entry) => {
   const [isLoaded, setIsLoaded] = useState()
+}
 }
   src,
   alt,
@@ -67,6 +73,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
   onError,
 }) => {
   const [hasError, setHasError] = useState(false)
+}
 }
   // comment
   const defaultBlurDataURL = "
@@ -89,18 +96,22 @@ if (priority || !imgRef.current) return
         rootMargin: "50px: 0px,","
         threshold: 0.,1})
 }
+}
     observer.observe(imgRef.current)
+}
 }
     return: () => {,
             // comment
 rootMargin: "50px 0px",
         threshold: 0.1})
 }
+}
     observer.observe(imgRef.current)"
       {"
         threshold: 0.1}
 
     )
+}
 }        threshold: 0.1}
 ;
     return () => {;
@@ -108,6 +119,7 @@ rootMargin: "50px 0px",
         observer.unobserve(imgRef.current)}
 
     }}, [priority])
+}
 }
   if (hasError) {
     return ("

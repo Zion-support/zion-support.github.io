@@ -1,6 +1,6 @@
-import React from 'react';'''
-import Link from 'next/link';'''
-import { Users, Award, Target, Zap, Linkedin, Mail } from 'lucide-react';
+import React from "react";"""
+import Link from "next/link";"""
+import { Users, Award, Target, Zap, Linkedin, Mail } from "lucide-react";
 const Leadership = () => {}
     const leadershipTeam = []
         {}
@@ -126,8 +126,8 @@ const Leadership = () => {}
         {}
 """
 """"
-            title: "Innovation First","'"""
-            description: "We push the boundaries of what's possible, constantly exploring new technologies and approaches.",
+            title: "Innovation First","""""
+            description: "We push the boundaries of what"s possible, constantly exploring new technologies and approaches.",
             icon: Zap;
         },
         {}
@@ -166,15 +166,15 @@ const Leadership = () => {}
 """
 };""""
     return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">"""
-      {/* Hero Section */}""""
+      {/* comment */}""""
       <section className="relative bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 text-white py-20">""""
         <div className="absolute inset-0 bg-black/20"></div>""""
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">""""
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
             Leadership Team"""
           </h1>""""
-          <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto">'
-            Meet the visionary leaders who guide our comp's mission and drive;
+          <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto">"
+            Meet the visionary leaders who guide our comp"s mission and drive;
             innovation in technology and business transformation."""
           </p>""""
           <div className="flex flex-col sm:flex-row gap-4 justify-center">""""
@@ -187,7 +187,7 @@ const Leadership = () => {}
         </div>
       </section>
 """
-      {/* Vision Section */}""""
+      {/* comment */}""""
       <section className="py-20 bg-white">""""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""""
           <div className="text-center mb-16">""""
@@ -209,7 +209,7 @@ const Leadership = () => {}
         </div>
       </section>
 """
-      {/* Leadership Team */}""""
+      {/* comment */}""""
       <section className="py-20">""""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""""
           <div className="text-center mb-16">""""
@@ -217,30 +217,30 @@ const Leadership = () => {}
               Executive Leadership"""
             </h2>""""
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Our leadership team brings together decades of experience in technology, 
+              Our leadership team brings together decades of experience in technology,
               business, and innovation.
             </p>
           </div>"""
           """"
-          <div className="space-y-16">'"""
-            {leadershipTeam.map((leader, index) => (<div key={index} className={`bg-white rounded-2xl shadow-lg p-8 border border-slate-100 ${index % 2 === 0 ? '' : 'md:flex-row-reverse'}`}>""""
+          <div className="space-y-16">""""
+            {leadershipTeam.map((leader, index) => (<div key={index} className={`bg-white rounded-2xl shadow-lg p-8 border border-slate-100 ${index % 2 === 0 ? "" : "md:flex-row-reverse"}`}>""""
                 <div className="grid md:grid-cols-3 gap-8 items-start">""""
                   <div className="text-center md:text-left">""""
                     <div className="w-48 h-48 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto md:mx-0 mb-6">""""
-                      <Users className="w-24 h-24 text-white"/>"""
+                      <Users className="w-24 h-24 text-white"  />"""
                     </div>""""
                     <h3 className="text-2xl font-bold text-slate-900 mb-2">{leader.name}</h3>""""
                     <p className="text-lg text-blue-600 font-semibold mb-2">{leader.role}</p>""""
                     <div className="flex items-center justify-center md:justify-start text-sm text-slate-500 mb-4">""""
-                      <MapPin className="w-4 h-4 mr-1"/>
+                      <MapPin className="w-4 h-4 mr-1"  />
                       {leader.location}"""
                     </div>""""
                     <div className="flex justify-center md:justify-start space-x-4">""""
                       <a href={leader.linkedin} target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-blue-600 text-white rounded-lg flex items-center justify-center hover:bg-blue-700 transition-colors duration-200">""""
-                        <Linkedin className="w-5 h-5"/>"`
-                      </a>"`"`
-                      <a href={`mailto:${leader.email}`} className="w-10 h-10 bg-slate-600 text-white rounded-lg flex items-center justify-center hover:bg-slate-700 transition-colors duration-200">""""
-                        <Mail className="w-5 h-5"/>
+                        <Linkedin className="w-5 h-5"  />""
+                      </a>""""
+                      <a href={"mailto:${leader.email}`} className="w-10 h-10 bg-slate-600 text-white rounded-lg flex items-center justify-center hover:bg-slate-700 transition-colors duration-200">""""
+                        <Mail className="w-5 h-5"  />
                       </a>
                     </div>
                   </div>"""
@@ -283,7 +283,7 @@ const Leadership = () => {}
         </div>
       </section>
 """
-      {/* Comp Values */}""""
+      {/* comment */}""""
       <section className="py-20 bg-white">""""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""""
           <div className="text-center mb-16">""""
@@ -298,7 +298,7 @@ const Leadership = () => {}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">""""
             {compValues.map((value, index) => (<div key={index} className="text-center">""""
                 <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6">""""
-                  <value.icon className="w-10 h-10 text-white"/>"""
+                  <value.icon className="w-10 h-10 text-white" />"""
                 </div>""""
                 <h3 className="text-2xl font-bold text-slate-900 mb-4">
                   {value.title}"""
@@ -311,13 +311,13 @@ const Leadership = () => {}
         </div>
       </section>
 """
-      {/* CTA Section */}""""
+      {/* comment */}""""
       <section className="py-20 bg-gradient-to-r from-slate-900 to-blue-900 text-white">""""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">""""
           <h2 className="text-4xl font-bold mb-6">
             Join Our Mission"""
           </h2>""""
-          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">'
+          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">"
             Be part of a team that's shaping the future of technology and;
             transforming businesses around the world."""
           </p>""""
@@ -333,14 +333,8 @@ const Leadership = () => {}
       </section>
     </div>)};
 export default Leadership;
-
-
 export { Leadership };
-
 export { Leadership };
-
 export { Leadership };
-
 export { Leadership };
-
 export { Leadership };

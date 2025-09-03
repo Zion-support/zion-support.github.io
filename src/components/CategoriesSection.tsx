@@ -1,3 +1,4 @@
+import React from "react"
 
  * CategoriesSection function
  * @param {*} params - Function parameters
@@ -34,7 +35,6 @@ const categories = [{
     color: "from - emerald - 500 to - green - 600",
   },
 ];
-
 const specialServices = [{
     title: "IT Onsite Services",
     link: "/it - onsite - services"
@@ -53,22 +53,19 @@ interface CategoriesSectionProps {
 
   showTitle?: boolean}
 ;
-
 ;
-
 export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
 
   return ("
     <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 relative overflow-hidden">
-      {/* Background pattern */}"
+      {/* comment */}"
       <div className="absolute inset-0 opacity-5">"
         <div className="absolute inset-0" style={{
 
-          backgroundImage: `radial-gradient(circle at 25% 25%, #8ab1f3 2px, transparent 2px)`,
-          backgroundSize: '50px 50px'
+          backgroundImage: "radial-gradient(circle at 25% 25%, #8ab1f3 2px, transparent 2px)",
+          backgroundSize: "50px 50px"
         }}></div>
       </div>
-
       <div className="container mx - auto px-4 relative z -10">
         {showTitle && (<motion.div
             className="text-center mb-16"            initial={{ opacity: 0, y: 20 }}
@@ -96,8 +93,8 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
               className="group block"
             >"
               <Link to={category.link} className="block">"
-                <div className="rounded-lg overflow-hidden h-full border border-blue-600 bg-slate-800 p-6 transition-all duration-300 hover:border-purple-500/50 hover:translate-y-[-5px] hover:shadow-lg hover:shadow-blue-500/25">`
-                  <div className={`rounded-full w-16 h-16 bg-gradient-to-br ${category.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>"
+                <div className="rounded-lg overflow-hidden h-full border border-blue-600 bg-slate-800 p-6 transition-all duration-300 hover:border-purple-500/50 hover:translate-y-[-5px] hover:shadow-lg hover:shadow-blue-500/25">"
+                  <div className={"rounded-full w-16 h-16 bg-gradient-to-br ${category.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300"}>"
                     <div className="text-white text-2xl">
                       {category.icon}
                     </div>
@@ -151,4 +148,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
         </motion.div>
       </div>
     </section>;
-  )}}}}}}}}}}'"`
+  )}}}}}}}}}}'""
+
+
+export default Component

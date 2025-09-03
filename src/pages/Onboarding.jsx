@@ -1,3 +1,4 @@
+import React from "react"
 import { useState } from "react";""""
 import { useNavigate } from "react-router-dom";""""
 import { useAuth } from "@/hooks/useAuth";""""
@@ -12,7 +13,7 @@ export default function Onboarding() {}
     const [currentStep, setCurrentStep] = useState(0);
     const [userType, setUserType] = useState(null);
     const navigate = useNavigate();
-    // Convert our user types to match what's expected in the database;
+    // Convert our user types to match what"s expected in the database;
     const mapUserTypeToDatabase = (type) => {}
         switch (type) {}
 """
@@ -30,15 +31,15 @@ export default function Onboarding() {}
         setUserType(type);"""
         // Direct to specific registration page based on user type""""
         if (type === "serviceProvider") {}
-'
-            router('/service-onboarding');
+"
+            router("/service-onboarding");
             return;"""
 """"
         else if (type === "talent") {}
-'
-''
-'''
-            router('/talent-onboarding');
+"
+""
+"""
+            router("/talent-onboarding");
             return;
         }
         // Continue with the onboarding flow for clients;
@@ -50,8 +51,8 @@ export default function Onboarding() {}
 """"
                 title: "Authentication Error",""""
                 description: "Your session may have expired. Please log in again.",""""
-                variant: "destructive"});'
-            router('/login');
+                variant: "destructive"});"
+            router("/login");
             return;
         }
         const dbUserType = mapUserTypeToDatabase(userType) ;
@@ -63,17 +64,17 @@ export default function Onboarding() {}
                 userType: dbUserType,
                 headline: data.headline,
                 profileComplete: true;
-            });'
-            // Update onboarding milestone''
-            await supabase.rpc('update_onboarding_milestone', {}
-                _user_id: user.id,'
-                _milestone: 'profile_completed',
+            });"
+            // Update onboarding milestone""
+            await supabase.rpc("update_onboarding_milestone", {}
+                _user_id: user.id,"
+                _milestone: "profile_completed",
                 _status: true;
             }) ;
             toast({}
-'
-                title: 'Profile completed!','
-                description: 'Your profile has been set up successfully.'});"""
+"
+                title: "Profile completed!","
+                description: "Your profile has been set up successfully."});"""
             // Get the appropriate dashboard route based on user type""""
             const dashboardRoute = userType === "client""""
                 ? "/client-dashboard""""
@@ -82,25 +83,25 @@ export default function Onboarding() {}
             router(dashboardRoute) ;
         }
         catch (error) {}
-'
-''
-'''
-            // // // // // // // // console.error('Error updating profile:', error);
+"
+""
+"""
+            // // // // // // // // console.error("Error updating profile:", error);
             toast({}
-'
-                title: 'Error','
-                description: 'There was a problem updating your profile. Please try again.','
-                variant: 'destructive'})}
-    };'"""
-    const steps = ['"'"""
-        { label: "Select Role", description: "Choose how you'll use the platform" },""""
+"
+                title: "Error","
+                description: "There was a problem updating your profile. Please try again.","
+                variant: "destructive"})}
+    };""""
+    const steps = [""""""
+        { label: "Select Role", description: "Choose how you"ll use the platform" },""""
         { label: "Create Profile", description: "Tell us about yourself" }
     ];
     if (!user) {}
-'
-''
-'''
-        router('/login');
+"
+""
+"""
+        router("/login");
         return null;
     }
     return (<>"""
@@ -127,7 +128,7 @@ export default function Onboarding() {}
           </div>"""
 """"
           <div className="bg-zion-blue-dark rounded-xl p-8 shadow-lg border border-zion-blue-light">
-            {currentStep === 0 ? (<UserTypeSelection onSelect={handleUserTypeSelect} selectedType={userType}/>) : (<ProfileSetup onComplete={handleProfileComplete} userType={userType}/>)}"""
+            {currentStep === 0 ? (<UserTypeSelection onSelect={handleUserTypeSelect} selectedType={userType}  />) : (<ProfileSetup onComplete={handleProfileComplete} userType={userType}  />)}"""
 """"
             {currentStep === 1 && (<div className="mt-6">""""
                 <Button variant="outline" className="w-full border-zion-blue-light text-white hover:bg-zion-blue-light" onClick={() => setCurrentStep(0)}>
@@ -137,16 +138,11 @@ export default function Onboarding() {}
           </div>
         </div>
       </div>
-      
     </>)}
 
 
 export { Onboarding };
-
 export { Onboarding };
-
 export { Onboarding };
-
 export { Onboarding };
-
 export { Onboarding };

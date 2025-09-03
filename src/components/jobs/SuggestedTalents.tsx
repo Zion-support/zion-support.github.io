@@ -1,21 +1,21 @@
-import { useEffect, useState, useCallback } from 'react'; // Added useCallback
-import { supabase } from '@/integrations/supabase/client';
-import { toast } from '@/hooks/use-toast';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { EmptyMatchesCard } from './EmptyMatchesCard';
-import { JobMatchCard } from './JobMatchCard';
-
+import React from "react"
+import { useEffect, useState, useCallback } from "react"; // Added useCallback
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "@/hooks/use-toast";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { EmptyMatchesCard } from "./EmptyMatchesCard";
+import { JobMatchCard } from "./JobMatchCard";
 export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
   const [talents, setTalents] = useState<any[]>([]); // Added type for talents
   const [isLoading, setIsLoading] = useState(true);
   const [isProcessing, setIsProcessing] = useState(false);
-
   const fetchSuggestedTalents = useCallback(async () => { // Wrapped in useCallback
     setIsLoading(true);
     try {
       const { data, error } = await supabase
         .from("suggested_talents")
-        .select(`
+}
+        .select("
           *,
           talent_profile:talent_id(
             id,
@@ -32,9 +32,10 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
             category,
             company_name
           )
-        `)
+}
+        ")
+}
         .eq("job_id", jobId);
-
       if(error) throw error;
       setTalents(data || []);
     } catch(error) {
@@ -53,25 +54,22 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
     console.log("View talent profile:", talentId);
     toast({
       title: "View Profile",
-      description: `Navigating to talent profile: ${talentId}`,
+      description: "Navigating to talent profile: ${talentId}",
     });
   };
-
   const handleInvite = (talentId: string) => {
     console.log("Invite talent:", talentId);
     toast({
       title: "Invite Talent",
-      description: `Inviting talent: ${talentId}`,
+      description: "Inviting talent: ${talentId}",
     });
   };
-
   const handleRefresh = () => {
     setIsProcessing(true);
     fetchSuggestedTalents().finally(() => {
       setIsProcessing(false);
     });
   };
-
   useEffect(() => {
   // TODO: Add dependencies if needed
 
@@ -87,28 +85,26 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
   // Transform data to match JobMatchCard component props
   const transformedTalents = talents.map(talent => {
     return {
-      id: talent.talent_profile?.id || '',
-      name: talent.talent_profile?.full_name || 'Talent',
-      title: talent.talent_profile?.professional_title || 'Talent',
-      company: talent.talent_profile?.company_name || '',
-      avatar: talent.talent_profile?.profile_picture_url || '',
-      location: talent.talent_profile?.location || 'Remote',
-      category: talent.talent_profile?.category || 'Technology',
+      id: talent.talent_profile?.id || "",
+      name: talent.talent_profile?.full_name || "Talent",
+      title: talent.talent_profile?.professional_title || "Talent",
+      company: talent.talent_profile?.company_name || "",
+      avatar: talent.talent_profile?.profile_picture_url || "",
+      location: talent.talent_profile?.location || "Remote",
+      category: talent.talent_profile?.category || "Technology",
       matchPercent: talent.match_score || 85,
       skills: talent.talent_profile?.skills || [],
     };
   });
-
   return (<Card className="border-zion-blue-light bg-zion-blue">
       <CardHeader>
-        <CardTitle>{jobTitle ? `Talents for ${jobTitle}` : 'Suggested Talents'}</CardTitle>
+        <CardTitle>{jobTitle ? "Talents for ${jobTitle}" : "Suggested Talents"}</CardTitle>
       </CardHeader>
-      
       <CardContent className="pt-6">
         {isLoading ? (
           <div>Loading suggested talents...</div>
         ) : talents.length === 0 ? (
-          <EmptyMatchesCard onRefresh={handleRefresh} isProcessing={isProcessing} />
+          <EmptyMatchesCard onRefresh={handleRefresh} isProcessing={isProcessing}   />
         ) : (
           <div className="space-y-4">
             {transformedTalents.map((talent) => (
@@ -135,3 +131,6 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
     </Card>
   );
 }
+
+
+export default Component

@@ -1,13 +1,13 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 import { 
-  Brain, 
-  BarChart3, 
-  TrendingUp, 
-  Zap, 
-  Shield, 
-  Users, 
-  Clock, 
+  Brain,
+  BarChart3,
+  TrendingUp,
+  Zap,
+  Shield,
+  Users,
+  Clock,
   CheckCircle,
   ArrowRight,
   Star,
@@ -21,8 +21,7 @@ import {
   Activity,
   Globe,
   Lock
-} from 'lucide-react';
-
+} from "lucide-react";
 export function AIAutonomousBusinessIntelligencePlatform() {
   const features = [
     {
@@ -56,7 +55,6 @@ export function AIAutonomousBusinessIntelligencePlatform() {
       description: "Share insights, create collaborative dashboards, and enable data-driven decision making across teams."
     }
   ];
-
   const pricingPlans = [
     {
       name: "Starter",
@@ -109,7 +107,6 @@ export function AIAutonomousBusinessIntelligencePlatform() {
       popular: false
     }
   ];
-
   const benefits = [
     {
       icon: Clock,
@@ -132,7 +129,6 @@ export function AIAutonomousBusinessIntelligencePlatform() {
       description: "Uncover patterns and correlations that traditional analysis methods might miss."
     }
   ];
-
   const useCases = [
     {
       title: "Sales Performance Optimization",
@@ -155,16 +151,15 @@ export function AIAutonomousBusinessIntelligencePlatform() {
       icon: Activity
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate-darker to-zion-slate-darkest">
-      {/* Hero Section */}
+      {/* comment */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20"></div>
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
           <div className="text-center max-w-4xl mx-auto">
             <div className="inline-flex items-center px-4 py-2 bg-zion-purple/20 border border-zion-purple/30 rounded-full text-zion-cyan text-sm font-medium mb-6">
-              <Brain className="w-4 h-4 mr-2" />
+              <Brain className="w-4 h-4 mr-2"  />
               AI-Powered Business Intelligence
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
@@ -184,7 +179,7 @@ export function AIAutonomousBusinessIntelligencePlatform() {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25"
               >
                 Start Free Trial
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 w-5 h-5"  />
               </Link>
               <Link
                 to="/demo"
@@ -196,8 +191,7 @@ export function AIAutonomousBusinessIntelligencePlatform() {
           </div>
         </div>
       </section>
-
-      {/* Features Section */}
+      {/* comment */}
       <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -229,8 +223,7 @@ export function AIAutonomousBusinessIntelligencePlatform() {
           </div>
         </div>
       </section>
-
-      {/* Benefits Section */}
+      {/* comment */}
       <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -263,8 +256,7 @@ export function AIAutonomousBusinessIntelligencePlatform() {
           </div>
         </div>
       </section>
-
-      {/* Use Cases Section */}
+      {/* comment */}
       <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -296,8 +288,7 @@ export function AIAutonomousBusinessIntelligencePlatform() {
           </div>
         </div>
       </section>
-
-      {/* Pricing Section */}
+      {/* comment */}
       <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -315,8 +306,8 @@ export function AIAutonomousBusinessIntelligencePlatform() {
                 key={index}
                 className={`relative p-8 rounded-2xl border transition-all duration-300 ${
                   plan.popular
-                    ? 'bg-gradient-to-br from-zion-purple/20 to-zion-cyan/20 border-zion-purple/50 scale-105'
-                    : 'bg-zion-slate-dark/50 border-zion-slate hover:border-zion-purple/30'
+                    ? "bg-gradient-to-br from-zion-purple/20 to-zion-cyan/20 border-zion-purple/50 scale-105"
+                    : "bg-zion-slate-dark/50 border-zion-slate hover:border-zion-purple/30"
                 }`}
               >
                 {plan.popular && (
@@ -337,7 +328,7 @@ export function AIAutonomousBusinessIntelligencePlatform() {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0"  />
                       {feature}
                     </li>
                   ))}
@@ -346,8 +337,8 @@ export function AIAutonomousBusinessIntelligencePlatform() {
                   to={plan.name === "Enterprise" ? "/contact" : "/signup"}
                   className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white hover:from-zion-cyan-light hover:to-zion-blue-light'
-                      : 'bg-zion-slate border border-zion-slate-light text-white hover:bg-zion-slate-light'
+                      ? "bg-gradient-to-r from-zion-cyan to-zion-blue text-white hover:from-zion-cyan-light hover:to-zion-blue-light"
+                      : "bg-zion-slate border border-zion-slate-light text-white hover:bg-zion-slate-light"
                   }`}
                 >
                   {plan.cta}
@@ -357,8 +348,7 @@ export function AIAutonomousBusinessIntelligencePlatform() {
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
+      {/* comment */}
       <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto">
@@ -375,7 +365,7 @@ export function AIAutonomousBusinessIntelligencePlatform() {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300 transform hover:scale-105"
               >
                 Start Your Free Trial
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 w-5 h-5"  />
               </Link>
               <Link
                 to="/demo"
@@ -387,8 +377,7 @@ export function AIAutonomousBusinessIntelligencePlatform() {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
+      {/* comment */}
       <footer className="py-12 border-t border-zion-slate">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-gray-400">

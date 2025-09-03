@@ -53,9 +53,7 @@ const zionContact: ServiceContact = {
   ;
   ;"
   address: "364 E Main St STE 1008 Middletown DE 19709"};
-
 };
-
 // Innovative Micro SAAS Services 2030export const innovativeMicroSaasServices2030: MicroSaasService[] = [{
 
     id: 1,"
@@ -608,5 +606,4 @@ const zionContact: ServiceContact = {
     ],;"
     compliance["ISO 27001", "SOC 2", "Industry 4.0", "Cybersecurity standards"]}
 ];
-
 export default innovativeMicroSaasServices2030}}}"

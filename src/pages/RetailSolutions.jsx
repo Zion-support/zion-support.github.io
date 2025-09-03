@@ -1,5 +1,5 @@
-import React, { useState } from 'react';'''
-import { motion } from 'framer-motion';
+import React, { useState } from "react";"""
+import { motion } from "framer-motion";
 import {}
   ShoppingCart,
   Smartphone,
@@ -21,12 +21,11 @@ import {}
   Eye,
   Package,
   Truck,
-  Store,'
-  Tag,''
-  Brain,'''
-  Code''''
-} from 'lucide-react';
-
+  Store,"
+  Tag,""
+  Brain,"""
+  Code""""
+} from "lucide-react";
     integrations["E - commerce", "POS Systems", "Mobile Apps", "CRM"]
   }
 ];
@@ -130,23 +129,22 @@ const processSteps = []
     icon: Users,""""
     duration: "1-2 weeks"""
 ];
-
 export default function RetailSolutions() {}
-'
-''
-'''
-  const [selectedCategory, setSelectedCategory] = useState('All');'
-  const [selectedSolution, setSelectedSolution] = useState(null);''
-'''
-  const categories = ['All',E-commerce',Mobile Development',POS Systems',Analytics',Inventory',Platform Solutions'];''
-'''
-  const filteredSolutions = selectedCategory === 'All'
+"
+""
+"""
+  const [selectedCategory, setSelectedCategory] = useState("All");"
+  const [selectedSolution, setSelectedSolution] = useState(null);""
+"""
+  const categories = ["All",E-commerce",Mobile Development",POS Systems",Analytics",Inventory",Platform Solutions"];""
+"""
+  const filteredSolutions = selectedCategory === "All"
     ? retailSolutions;
     : retailSolutions.filter (solution => solution.category === selectedCategory) ;
 """
   return (""""
     <div className="min-h-screen bg-futuristic">"""
-      {/* Hero Section */}""""
+      {/* comment */}""""
       <section className="relative pt-32 pb-20 overflow-hidden">""""
         <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 via-zion-purple/20 to-zion-blue/20"></div>""""
         <div className="absolute inset-0">""""
@@ -184,7 +182,7 @@ export default function RetailSolutions() {}
 }}""""
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8""""
 """"
-              <ShoppingCart className="w-10 h-10 text-white" />
+              <ShoppingCart className="w-10 h-10 text-white"  />
             </motion.div>"""
 """"
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">"""
@@ -200,15 +198,15 @@ export default function RetailSolutions() {}
 """"
             <div className="flex flex-wrap justify-center gap-4 text-sm">""""
               <div className="flex items-center gap-2 text-zion-cyan">""""
-                <ShoppingCart className="w-4 h-4" />
+                <ShoppingCart className="w-4 h-4"  />
                 <span>E-commerce</span>"""
               </div>""""
               <div className="flex items-center gap-2 text-zion-purple">""""
-                <Smartphone className="w-4 h-4" />
+                <Smartphone className="w-4 h-4"  />
                 <span>Mobile First</span>"""
               </div>""""
               <div className="flex items-center gap-2 text-zion-blue">""""
-                <BarChart3 className="w-4 h-4" />
+                <BarChart3 className="w-4 h-4"  />
                 <span > Data Driven</span>
               </div>
             </div>
@@ -216,7 +214,7 @@ export default function RetailSolutions() {}
         </div>
       </section>;
 """
-      {/* Retail Trends */}""""
+      {/* comment */}""""
       <section className="py-20 bg-zion-blue-dark/50">;""""
         <div className="container-responsive">
           <motion.div;
@@ -264,17 +262,16 @@ export default function RetailSolutions() {}
 """"
                 <h3 className="text-xl font-bold text-white mb-3">{trend.title}</h3>""""
                 <p className="text-zion-slate-light mb-4 leading-relaxed">{trend.description}</p>
-
-                <span className={`inline-block px-3 py-1 rounded-full text-sm font-semibold ${}
-'
-''
-'''
-                  trend.impact === 'Critical'''''
-                    ? 'bg-red-500/20 text-red-400 border border-red-500/30'''''`
-                    : trend.impact === 'High''''`'`
-                    ? 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30'''`'`'`
-                    : 'bg-green-500/20 text-green-400 border border-green-500/30'````
-                }`}>
+                <span className={"inline-block px-3 py-1 rounded-full text-sm font-semibold ${}
+"
+""
+"""
+                  trend.impact === "Critical"""""
+                    ? "bg-red-500/20 text-red-400 border border-red-500/30""""""
+                    : trend.impact === "High"""""""
+                    ? "bg-yellow-500/20 text-yellow-400 border border-yellow-500/30""""""""
+                    : "bg-green-500/20 text-green-400 border border-green-500/30"""""
+                }"}>
                   {trend.impact} Impact;
                 </span>
               </motion.div>;) ) }
@@ -282,7 +279,7 @@ export default function RetailSolutions() {}
         </div>
       </section>
 """
-      {/* Process Section */}""""
+      {/* comment */}""""
       <section className="py-20">;""""
         <div className="container-responsive">
           <motion.div;
@@ -341,7 +338,7 @@ export default function RetailSolutions() {}
         </div>
       </section>
 """
-      {/* Solutions Section */}""""
+      {/* comment */}""""
       <section className="py-20 bg-zion-blue-dark/50">;""""
         <div className="container-responsive">
           <motion.div;
@@ -362,19 +359,19 @@ export default function RetailSolutions() {}
             </p>
           </motion.div>
 """
-          {/* Category Filter */}""""
+          {/* comment */}""""
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {categories.map((category) => (
               <button;
-                key={category}`
-                onClick={() => setSelectedCategory(category)}``
-                className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${}
-'
-''
-'''`
-                  selectedCategory === category'''`'`
-                    ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'''`'`'`
-                    : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````
+                key={category}"
+                onClick={() => setSelectedCategory(category)}""
+                className={"px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${}
+"
+""
+""""
+                  selectedCategory === category""""""
+                    ? "bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25""""""""
+                    : "bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40"""""
                 }`}
 
                 {category}
@@ -415,7 +412,7 @@ export default function RetailSolutions() {}
                 <div className="space-y-3 mb-6">"""
                   {solution.features.map((feature, featureIndex) => (""""
                     <div key={featureIndex} className="flex items-center gap-3">""""
-                      <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />""""
+                      <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0"  />""""
                       <span className="text-zion-slate-light text-sm">{feature}</span>
                     </div>
                   ))}
@@ -441,7 +438,7 @@ export default function RetailSolutions() {}
                   </span>""""
                   <button className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors duration-300">""""
                     <span className="text-sm font-medium">Learn More</span>""""
-                    <ArrowRight className="w-4 h-4" />
+                    <ArrowRight className="w-4 h-4"  />
                   </button>
                 </div>
               </motion.div>) ) }
@@ -449,7 +446,7 @@ export default function RetailSolutions() {}
         </div>
       </section>
 """
-      {/* Success Stories */}""""
+      {/* comment */}""""
       <section className="py-20">;""""
         <div className="container-responsive">
           <motion.div;
@@ -518,7 +515,7 @@ export default function RetailSolutions() {}
 """"
                 <div className="flex items-center gap-2">"""
                   {[...Array(5)].map((_, i) => (""""
-                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />"""
+                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current"  />"""
                   ))}""""
                   <span className="text-zion-slate-light text-sm ml-2">5.0 Rating</span>
                 </div>
@@ -527,7 +524,7 @@ export default function RetailSolutions() {}
         </div>
       </section>
 """
-      {/* CTA Section */}""""
+      {/* comment */}""""
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">;""""
         <div className="container-responsive">
           <motion.div;
@@ -543,8 +540,8 @@ export default function RetailSolutions() {}
             className="text-center max-w-4xl mx-auto""""
 """"
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Retail Business?</h2>""""
-            <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">'
-              Let's discuss how our retail technology solutions can modernize your operations,
+            <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">"
+              Let"s discuss how our retail technology solutions can modernize your operations,
               enhance customer experience, and drive growth in the digital marketplace.
             </p>"""
 """"
@@ -568,11 +565,7 @@ export default function RetailSolutions() {}
 
 
 export { RetailSolutions };
-
 export { RetailSolutions };
-
 export { RetailSolutions };
-
 export { RetailSolutions };
-
 export { RetailSolutions };

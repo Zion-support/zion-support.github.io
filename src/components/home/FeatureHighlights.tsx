@@ -1,6 +1,5 @@
-import React from 'react';
-import { motion  } from 'framer-motion';
-
+import React from "react";
+import { motion  } from "framer-motion";
 ,
   {
     icon: "⚡",
@@ -28,11 +27,9 @@ import { motion  } from 'framer-motion';
     description: "Comprehensive insights and reporting to make data-driven decisions instantly";
   };
 ];
-
       };
     };
   };
-
   const itemVariants = {
   hidden: { opacity: 0, y: 30,
   scale: 0.95
@@ -48,7 +45,6 @@ import { motion  } from 'framer-motion';
       };
     };
   };
-
   const achievementVariants = {
   hidden: { opacity: 0,
   scale: 0.8
@@ -60,7 +56,6 @@ import { motion  } from 'framer-motion';
       transition: { duration: 0.5 };
     };
   };
-
   const techVariants = {
   hidden: { opacity: 0,
   x: -20
@@ -119,8 +114,8 @@ export function FeatureHighlights() {
               className="group"
 "
               <div className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-white/20 transition-all duration-300">
-                <div className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>`
-                  <feature.icon className={`w-6 h-6 ${feature.iconColor}`} />
+                <div className={"w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300"}>"
+                  <feature.icon className={"w-6 h-6 ${feature.iconColor}"} />
                 </div>
 "
                 <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300">
@@ -131,7 +126,6 @@ export function FeatureHighlights() {
                   {feature.description}
                 </p>
               </div>
-
               <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-200">
                 {feature.title}
               </h3>
@@ -141,7 +135,6 @@ export function FeatureHighlights() {
             </motion.div>;
           ))}
         </div>
-
         <motion.div          className="mt-16 text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -163,4 +156,7 @@ export function FeatureHighlights() {
   )}
 
 
-'"`
+'""
+
+
+export default Component

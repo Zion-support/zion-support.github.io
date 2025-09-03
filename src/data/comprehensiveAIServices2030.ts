@@ -50,9 +50,7 @@ const zionContact: ServiceContact = {
   ;
   ;"
   address: "364 E Main St STE 1008 Middletown DE 19709"};
-
 };
-
 // Comprehensive AI Services 2030export const comprehensiveAIServices2030: AIService[] = [{
 
     id: 1,"
@@ -651,5 +649,4 @@ const zionContact: ServiceContact = {
     trialPeriod: "30 days"
 
 ];
-
 export default comprehensiveAIServices2030}}}"

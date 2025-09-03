@@ -1,15 +1,14 @@
-import { Link  } from 'react-router-dom';
+import React from "react"
+import { Link  } from "react-router-dom";
 export default function Page() {
 ;
-
   return (<div  className="min - h-screen bg-gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate - light text-white relative overflow-hidden">
-      {/* Animated Background */}
+      {/* comment */}
       <div  className="absolute inset -0">
-        <div  className="absolute inset - 0 bg-[linear - gradient (rgba (34,221,210,0.03) _1px,transparent_1px) ,linear - gradient(90deg,rgba (34,221,210,0.03) _1px,transparent_1px) ] bg-[size:100px_100px] animate -pulse" />
-        <div  className="absolute inset - 0 bg-gradient - to - br from - zion - purple / 5 via - transparent to - zion -cyan / 5" />
-        <div  className="absolute top - 0 left - 0 w-full h-full bg-gradient - radial from - zion - cyan / 10 via - transparent to -transparent" />      </div>
-
-      {/* Header Section */}"
+        <div className="absolute inset - 0 bg-[linear - gradient (rgba (34,221,210,0.03) _1px,transparent_1px) ,linear - gradient(90deg,rgba (34,221,210,0.03) _1px,transparent_1px) ] bg-[size:100px_100px] animate -pulse"  />
+        <div className="absolute inset - 0 bg-gradient - to - br from - zion - purple / 5 via - transparent to - zion -cyan / 5"  />
+        <div className="absolute top - 0 left - 0 w-full h-full bg-gradient - radial from - zion - cyan / 10 via - transparent to -transparent"  />      </div>
+      {/* comment */}"
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
@@ -28,7 +27,7 @@ export default function Page() {
             </p>
           </motion.div>
 
-          {/* Key Statistics */}
+          {/* comment */}
           <motion.div
             className="grid grid - cols - 2 md:grid - cols - 4 gap-6 max - w-5xl mx - auto mb-12"
             variants={containerVariants}            initial="hidden"
@@ -52,7 +51,7 @@ export default function Page() {
             </motion.div>
           </motion.div>
 
-          {/* Search and Filter */}
+          {/* comment */}
           <motion.div
             className="max - w-4xl mx - auto mb-8"            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -64,11 +63,9 @@ export default function Page() {
                 placeholder="Search services, features, or technologies..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}"
-                className="w-full px-6 py-4 glass border border-zion-cyan/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 text-lg"
-              />"
+                className="w-full px-6 py-4 glass border border-zion-cyan/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 text-lg" />"
               <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 h-6 w-6 text-zion-cyan"  />            </div>
-
-            {/* Sort and View Controls */}"
+            {/* comment */}"
             <div className="flex flex-wrap items-center justify-center gap-4">"
               <div className="flex items-center gap-2">"
                 <label className="text-sm text-gray-300">Sort by:</label>
@@ -83,20 +80,19 @@ export default function Page() {
                   <option value="name">Name</option>
                 </select>
               </div>
-
               <div  className="flex items - center gap-2">
-                <button     onClick={ () => setViewMode('grid') }
-                  className={`p - 2 rounded-lg transition - colors ${viewMode === 'grid' ? 'bg-zion - cyan text-white' : 'glass text-gray - 300 hover:text-white'}`}
+                <button     onClick={ () => setViewMode("grid") }
+                  className={"p - 2 rounded-lg transition - colors ${viewMode === "grid" ? "bg-zion - cyan text-white" : "glass text-gray - 300 hover:text-white"}"}
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M5 3a2 2 0 00 - 2 2v2a2 2 0 002 2h2a2 2 0 002 - 2V5a2 2 0 00 - 2-2H5zM5 11a2 2 0 00 - 2 2v2a2 2 0 002 2h2a2 2 0 002 - 2v - 2a2 2 0 00 - 2-2H5zM11 5a2 2 0 012 - 2h2a2 2 0 012 2v2a2 2 0 01 - 2 2h-2a2 2 0 01 - 2-2V5zM11 13a2 2 0 012 - 2h2a2 2 0 012 2v2a2 2 0 01 - 2 2h-2a2 2 0 01 - 2-2v - 2z" />                  </svg>
+                    <path d="M5 3a2 2 0 00 - 2 2v2a2 2 0 002 2h2a2 2 0 002 - 2V5a2 2 0 00 - 2-2H5zM5 11a2 2 0 00 - 2 2v2a2 2 0 002 2h2a2 2 0 002 - 2v - 2a2 2 0 00 - 2-2H5zM11 5a2 2 0 012 - 2h2a2 2 0 012 2v2a2 2 0 01 - 2 2h-2a2 2 0 01 - 2-2V5zM11 13a2 2 0 012 - 2h2a2 2 0 012 2v2a2 2 0 01 - 2 2h-2a2 2 0 01 - 2-2v - 2z"  />                  </svg>
                 </button>
-                <button'
-                  onClick={() => setViewMode('list')}'`
-                  className={`p-2 rounded-lg transition-colors ${viewMode === 'list' ? 'bg-zion-cyan text-white' : 'glass text-gray-300 hover:text-white'}`}
+                <button"
+                  onClick={() => setViewMode("list")}""
+                  className={"p-2 rounded-lg transition-colors ${viewMode === "list" ? "bg-zion-cyan text-white" : "glass text-gray-300 hover:text-white"}"}
                 >"
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">"
-                    <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
+                    <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"  />
                   </svg>
                 </button>
               </div>
@@ -104,12 +100,11 @@ export default function Page() {
           </div>
         </div>
       </section>;
-
-      {/* Services Grid / List */}
+      {/* comment */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">;
         <div  className="max - w-7xl mx -auto">
           <motion.div
-            className={viewMode === 'grid'
+            className={viewMode === "grid"
               ? "grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-8"
               : "space - y-6"            }
             variants={containerVariants}"
@@ -119,7 +114,7 @@ export default function Page() {
             {sortedServices.map((service, index) => (<motion.div
                 key={service.id}
                 variants={itemVariants}
-                className={viewMode === 'grid'
+                className={viewMode === "grid"
                   ? "glass rounded-2xl p - 6 border border-white / 20 hover:border-zion - cyan / 40 transition - all duration - 500 hover:transform hover:scale - 105 cursor - pointer group"
                   : "glass rounded-2xl p - 6 border border-white / 20 hover:border-zion - cyan / 40 transition - all duration - 500 cursor - pointer group"                }
                 onClick={ () => handleServiceClick(service) }
@@ -128,15 +123,13 @@ export default function Page() {
                 <div className="flex items-start justify-between mb-4">"
                   <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">{service.icon}</div>"
                   <div className="flex items-center gap-1 text-yellow-400">
-                    {[...Array(5)].map((_, i) => ('`
-                      <Star key={i} className={`w-4 h-4 ${i < Math.floor(service.rating) ? 'fill-current' : 'fill-gray-600'}`}  />
+                    {[...Array(5)].map((_, i) => (""
+                      <Star key={i} className={"w-4 h-4 ${i < Math.floor(service.rating) ? "fill-current" : "fill-gray-600"}"}    />
                     ))}"                    <span className="text-sm text-gray-400 ml-1">({service.reviews})</span>
                   </div>
                 </div>
-
                 <h3 className="text-xl font - semibold text-white mb-3 group - hover:text-zion - cyan transition - colors duration -300">{service.name}</h3>
                 <p className="text-gray - 300 mb-4 line - clamp - 3 leading -relaxed">{service.description}</p>
-
                 <div  className="mb-4">
                   <span className="inline - block px-3 py-1 bg-zion - purple / 20 text-zion - purple text-sm rounded-full border border-zion -purple / 30">                    {service.category}
                   </span>
@@ -177,8 +170,7 @@ export default function Page() {
           </motion.div>
         </div>
       </section>
-
-      {/* Why Choose Zion Tech Group */}
+      {/* comment */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-white / 5">;
         <div  className="max - w-7xl mx -auto">
           <motion.div
@@ -220,8 +212,7 @@ export default function Page() {
           </motion.div>
         </div>
       </section>
-
-      {/* Service Modal */}
+      {/* comment */}
       <AnimatePresence>
         {selectedService && (<motion.div
             initial={{ opacity: 0 }}
@@ -244,7 +235,7 @@ export default function Page() {
                   className="text-gray-400 hover:text-white transition-colors duration-300"
                 >"
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">"
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12"  />
                   </svg>
                 </button>
               </div>
@@ -262,12 +253,11 @@ export default function Page() {
                       </li>) ) }
                   </ul>
                 </div>
-
                 <div>
                   <h3 className="text-lg font - semibold text-zion - purple mb-3">Benefits</h3>
                   <ul className="space - y-2">
                     {selectedService.benefits.map((benefit, idx) => (<li key={idx} className="text-gray - 300 flex items -center">
-                        <TrendingUp className="w-4 h-4 text-zion - green mr-2 flex - shrink -0" />
+                        <TrendingUp className="w-4 h-4 text-zion - green mr-2 flex - shrink -0"  />
                         {benefit}                      </li>) ) }
                   </ul>
                 </div>
@@ -307,4 +297,4 @@ export default function Page() {
           </motion.div>) }
       </AnimatePresence>
     </div>) };
-export default UltimateServicesShowcase2025;'"`
+export default UltimateServicesShowcase2025;""`

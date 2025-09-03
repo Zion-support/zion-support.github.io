@@ -1,6 +1,5 @@
 import React from "react";
 interface ButtonProps {;
-
   children: React.ReactNode,
   variant?: "default" | "outline" | "ghost" | "link",
   size?: "sm" | "md" | "lg" | "icon

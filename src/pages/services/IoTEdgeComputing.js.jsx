@@ -1,72 +1,72 @@
-import React from 'react';'''
-import { SEO } from '@/components/SEO';'''
-import Link from 'next/link';
+import React from "react";"""
+import { SEO } from "@/components/SEO";"""
+import Link from "next/link";
 import {}
   Check,
   Wifi,
   Cpu,
   Database,
-  Shield,'
-  Zap,''
-  Globe,'''
-  Target} from 'lucide-react';
+  Shield,"
+  Zap,""
+  Globe,"""
+  Target} from "lucide-react";
 export default function IoTEdgeComputingServices() {}
-'
-  const industries = [''
-    'Smart Cities & Municipalities',Manufacturing & Industry 4.0',Healthcare & Medical Devices',Agriculture & Precision Farming',Energy & Utilities',Transportation & Logistics',Retail & Smart Stores',Building Management & Smart Homes'
-  ];'
-  const technologies = [''
-    'LoRaWAN & NB-IoT',5G & Edge Computing',MQTT & CoAP Protocols',Kubernetes & Docker',Apache Kafka & Spark',TensorFlow Lite & ONNX',AWS IoT & Azure IoT',Google Cloud IoT & IBM Watson'
-  ];'
-  const benefits = [''
-    'Real-time data processing and insights',Reduced latency and improved performance',Lower bandwidth and cloud costs',Enhanced security and privacy',Scalable IoT deployments',Predictive maintenance and optimization'
+"
+  const industries = [""
+    "Smart Cities & Municipalities",Manufacturing & Industry 4.0",Healthcare & Medical Devices",Agriculture & Precision Farming",Energy & Utilities",Transportation & Logistics",Retail & Smart Stores",Building Management & Smart Homes"
+  ];"
+  const technologies = [""
+    "LoRaWAN & NB-IoT",5G & Edge Computing",MQTT & CoAP Protocols",Kubernetes & Docker",Apache Kafka & Spark",TensorFlow Lite & ONNX",AWS IoT & Azure IoT",Google Cloud IoT & IBM Watson"
+  ];"
+  const benefits = [""
+    "Real-time data processing and insights",Reduced latency and improved performance",Lower bandwidth and cloud costs",Enhanced security and privacy",Scalable IoT deployments",Predictive maintenance and optimization"
   ];
   const useCases = []
     {}
-'
-''
-'''
-      title: 'Smart Manufacturing','''
-      description:''''
-        'Real-time monitoring of production lines, predictive maintenance, and quality control automation.','''
-      roi: '25-40% cost reduction','''
-      implementation: '8-12 weeks'},
+"
+""
+"""
+      title: "Smart Manufacturing","""
+      description:""""
+        "Real-time monitoring of production lines, predictive maintenance, and quality control automation.","""
+      roi: "25-40% cost reduction","""
+      implementation: "8-12 weeks"},
     {}
-'
-''
-'''
-      title: 'Smart Cities','''
-      description:''''
-        'Traffic management, environmental monitoring, public safety, and utility optimization.','''
-      roi: '30-50% efficiency improvement','''
-      implementation: '12-20 weeks'},
+"
+""
+"""
+      title: "Smart Cities","""
+      description:""""
+        "Traffic management, environmental monitoring, public safety, and utility optimization.","""
+      roi: "30-50% efficiency improvement","""
+      implementation: "12-20 weeks"},
     {}
-'
-''
-'''
-      title: 'Healthcare IoT','''
-      description:''''
-        'Patient monitoring, medical device management, and healthcare facility optimization.','''
-      roi: '20-35% operational improvement','''
-      implementation: '10-16 weeks'},
+"
+""
+"""
+      title: "Healthcare IoT","""
+      description:""""
+        "Patient monitoring, medical device management, and healthcare facility optimization.","""
+      roi: "20-35% operational improvement","""
+      implementation: "10-16 weeks"},
     {}
-'
-      title: 'Agricultural IoT','
-      description:''
-        'Precision farming, crop monitoring, irrigation control, and livestock management.','
-      roi: '15-30% yield improvement','
-      implementation: '6-10 weeks'}
+"
+      title: "Agricultural IoT","
+      description:""
+        "Precision farming, crop monitoring, irrigation control, and livestock management.","
+      roi: "15-30% yield improvement","
+      implementation: "6-10 weeks'}
   ];
   return()
+}
     <div className="min-h-screen bg-background">"""
       <SEO""""
         title="IoT & Edge Computing Services - Zion Tech Group""""
         description="Comprehensive IoT solutions, edge computing infrastructure, and smart device management platforms for connected ecosystems.""""
         keywords="IoT services, edge computing, smart devices, IoT platform, device management, IoT analytics, smart cities""""
-        canonical="https://ziontechgroup.com/services/iot-edge-computing"""
-      />
+        canonical="https://ziontechgroup.com/services/iot-edge-computing""" />
 """
-      {/* Hero Section */}""""
+      {/* comment */}""""
       <section className="relative bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900 text-white py-20">""""
         <div className="absolute inset-0 bg-black/20"></div>""""
         <div className="relative container mx-auto px-4 text-center">""""
@@ -81,7 +81,7 @@ export default function IoTEdgeComputingServices() {}
         </div>
       </section>
 """
-      {/* Services Overview */}""""
+      {/* comment */}""""
       <section className="py-20 bg-white">""""
         <div className="container mx-auto px-4">""""
           <div className="text-center mb-16">""""
@@ -122,7 +122,7 @@ export default function IoTEdgeComputingServices() {}
                       key={featureIndex}""""
                       className="flex items-center text-sm text-gray-700""""
                     >""""
-                      <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                      <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0"  />
                       {feature}
                     </li>
                   ))}"""
@@ -140,7 +140,7 @@ export default function IoTEdgeComputingServices() {}
         </div>
       </section>
 """
-      {/* Use Cases Section */}""""
+      {/* comment */}""""
       <section className="py-20 bg-gray-50">""""
         <div className="container mx-auto px-4">""""
           <div className="text-center mb-16">""""
@@ -189,7 +189,7 @@ export default function IoTEdgeComputingServices() {}
         </div>
       </section>
 """
-      {/* Benefits Section */}""""
+      {/* comment */}""""
       <section className="py-20 bg-white">""""
         <div className="container mx-auto px-4">""""
           <div className="grid md:grid-cols-2 gap-12 items-center">"""
@@ -206,7 +206,7 @@ export default function IoTEdgeComputingServices() {}
               <div className="space-y-4">"""
                 {benefits.map((benefit, index) => (""""
                   <div key={index} className="flex items-start">""""
-                    <Check className="w-6 h-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />""""
+                    <Check className="w-6 h-6 text-green-500 mr-3 mt-0.5 flex-shrink-0"  />""""
                     <span className="text-gray-700">{benefit}</span>
                   </div>
                 ))}
@@ -242,7 +242,7 @@ export default function IoTEdgeComputingServices() {}
         </div>
       </section>
 """
-      {/* Industries Section */}""""
+      {/* comment */}""""
       <section className="py-20 bg-gray-50">""""
         <div className="container mx-auto px-4">""""
           <div className="text-center mb-16">""""
@@ -262,7 +262,7 @@ export default function IoTEdgeComputingServices() {}
                 className="bg-white rounded-xl p-6 text-center hover:bg-green-50 transition-colors border border-gray-200""""
               >""""
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">""""
-                  <Target className="w-8 h-8 text-green-600" />"""
+                  <Target className="w-8 h-8 text-green-600"  />"""
                 </div>""""
                 <h3 className="text-lg font-semibold text-gray-900">
                   {industry}
@@ -273,7 +273,7 @@ export default function IoTEdgeComputingServices() {}
         </div>
       </section>
 """
-      {/* Technologies Section */}""""
+      {/* comment */}""""
       <section className="py-20 bg-white">""""
         <div className="container mx-auto px-4">""""
           <div className="text-center mb-16">""""
@@ -301,7 +301,7 @@ export default function IoTEdgeComputingServices() {}
         </div>
       </section>
 """
-      {/* Process Section */}""""
+      {/* comment */}""""
       <section className="py-20 bg-gray-50">""""
         <div className="container mx-auto px-4">""""
           <div className="text-center mb-16">""""
@@ -392,7 +392,7 @@ export default function IoTEdgeComputingServices() {}
         </div>
       </section>
 """
-      {/* CTA Section */}""""
+      {/* comment */}""""
       <section className="py-20 bg-gradient-to-r from-green-600 to-emerald-600 text-white">""""
         <div className="container mx-auto px-4 text-center">""""
           <h2 className="text-4xl font-bold mb-6">
@@ -423,11 +423,7 @@ export default function IoTEdgeComputingServices() {}
 
 
 export { IoTEdgeComputingServices };
-
 export { IoTEdgeComputingServices };
-
 export { IoTEdgeComputingServices };
-
 export { IoTEdgeComputingServices };
-
 export { IoTEdgeComputingServices };

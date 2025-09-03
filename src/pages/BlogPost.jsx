@@ -1,3 +1,4 @@
+import React from "react"
 import { useState, useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { SEO } from "@/components/SEO";import { Button } from "@/components/ui/button";
@@ -17,6 +18,7 @@ export default function BlogPost() {
         if (currentPost) {
             setPost(currentPost);
             // Find related posts (same category, excluding current post)
+}
             const related = BLOG_POSTS.filter(p => p.id !== currentPost.id &&
                 (p.category === currentPost.category ||
                     p.tags.some(tag => currentPost.tags.includes(tag)))).slice(0, 3);
@@ -39,31 +41,30 @@ export default function BlogPost() {
         const url = encodeURIComponent(window.location.href);
         const title = encodeURIComponent(post.title);
         switch (platform) {
-            case 'facebook':
-                return `https://www.facebook.com/sharer/sharer.php?u=${url}`;
-            case 'twitter':
-                return `https://twitter.com/intent/tweet?url=${url}&text=${title}`;
-            case 'linkedin':
-                return `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}`;
+            case "facebook":
+                return "https://www.facebook.com/sharer/sharer.php?u=${url}";
+            case "twitter":
+                return "https://twitter.com/intent/tweet?url=${url}&text=${title}";
+            case "linkedin":
+                return "https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}";
             default:
-                return '#';
+                return "#";
         }
     };
     return (<>
-      <SEO title={post.title} description={post.excerpt} keywords={post.tags.join(", ")} ogImage={post.featuredImage} canonical={`https://ziontechgroup.com/blog/${post.slug}`}/>
+      <SEO title={post.title} description={post.excerpt} keywords={post.tags.join(", ")} ogImage={post.featuredImage} canonical={`https://ziontechgroup.com/blog/${post.slug}`}  />
       <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">
         <div className="container mx-auto">
-          {/* Back to blog button */}
+          {/* comment */}
           <div className="mb-8">
             <Button variant="outline" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white" asChild>
               <Link to="/blog">
-                <ArrowLeft className="mr-2 h-4 w-4"/>
+                <ArrowLeft className="mr-2 h-4 w-4"  />
                 Back to all articles
               </Link>
             </Button>
           </div>
-          
-          {/* Article header */}
+          {/* comment */}
           <div className="mb-8 max-w-4xl mx-auto">
             <span className="text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-4">
               {post.category}
@@ -74,8 +75,7 @@ export default function BlogPost() {
             <p className="text-xl text-zion-slate-light mb-8">
               {post.excerpt}
             </p>
-            
-            {/* Author and metadata */}
+            {/* comment */}
             <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8">
               <div className="flex items-center mb-4 sm:mb-0">
                 <img src={post.author.avatarUrl} alt={post.author.name} className="w-12 h-12 rounded-full mr-3" onError={(e) => {
@@ -87,33 +87,31 @@ export default function BlogPost() {
                   <p className="text-sm text-zion-slate-light">{post.author.title}</p>
                 </div>
               </div>
-              
               <div className="flex items-center space-x-4">
                 <div className="flex items-center text-zion-slate-light">
-                  <Calendar className="h-4 w-4 mr-1"/>
+                  <Calendar className="h-4 w-4 mr-1"  />
                   <span className="text-sm">{post.publishedDate}</span>
                 </div>
                 <div className="flex items-center text-zion-slate-light">
-                  <Clock className="h-4 w-4 mr-1"/>
+                  <Clock className="h-4 w-4 mr-1"  />
                   <span className="text-sm">{post.readTime}</span>
                 </div>
                 <div className="relative">
                   <Button variant="ghost" size="sm" className="text-zion-slate-light hover:text-white hover:bg-zion-blue-dark" onClick={() => setShowShareMenu(!showShareMenu)}>
-                    <Share2 className="h-4 w-4 mr-1"/>
+                    <Share2 className="h-4 w-4 mr-1"  />
                     <span className="text-sm">Share</span>
                   </Button>
-                  
                   {showShareMenu && (<div className="absolute right-0 top-full mt-2 bg-zion-blue-dark border border-zion-blue-light rounded-md p-2 z-10">
-                      <a href={getShareUrl('facebook')} target="_blank" rel="noopener noreferrer" className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white" aria-label="Share on Facebook" title="Share on Facebook">
-                        <Facebook className="h-4 w-4 mr-2"/>
+                      <a href={getShareUrl("facebook")} target="_blank" rel="noopener noreferrer" className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white" aria-label="Share on Facebook" title="Share on Facebook">
+                        <Facebook className="h-4 w-4 mr-2"  />
                         <span>Facebook</span>
                       </a>
-                      <a href={getShareUrl('twitter')} target="_blank" rel="noopener noreferrer" className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white" aria-label="Share on Twitter" title="Share on Twitter">
-                        <Twitter className="h-4 w-4 mr-2"/>
+                      <a href={getShareUrl("twitter")} target="_blank" rel="noopener noreferrer" className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white" aria-label="Share on Twitter" title="Share on Twitter">
+                        <Twitter className="h-4 w-4 mr-2"  />
                         <span>Twitter</span>
                       </a>
-                      <a href={getShareUrl('linkedin')} target="_blank" rel="noopener noreferrer" className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white" aria-label="Share on LinkedIn" title="Share on LinkedIn">
-                        <Linkedin className="h-4 w-4 mr-2"/>
+                      <a href={getShareUrl("linkedin")} target="_blank" rel="noopener noreferrer" className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white" aria-label="Share on LinkedIn" title="Share on LinkedIn">
+                        <Linkedin className="h-4 w-4 mr-2"  />
                         <span>LinkedIn</span>
                       </a>
                     </div>)}
@@ -121,8 +119,7 @@ export default function BlogPost() {
               </div>
             </div>
           </div>
-          
-          {/* Featured image */}
+          {/* comment */}
           <div className="mb-12 max-w-5xl mx-auto">
             <div className="aspect-[21/9] rounded-lg overflow-hidden">
               <img src={post.featuredImage} alt={post.title} className="object-cover w-full h-full" onError={(e) => {
@@ -131,21 +128,19 @@ export default function BlogPost() {
         }}/>
             </div>
           </div>
-          
-          {/* Article content */}
+          {/* comment */}
           <div className="max-w-4xl mx-auto">
-            <div className="prose prose-lg prose-invert max-w-none" dangerouslySetInnerHTML={{ __html: post.content }}/>
+            <div className="prose prose-lg prose-invert max-w-none" dangerouslySetInnerHTML={{ __html: post.content }}  />
             
-            {/* Tags */}
+            {/* comment */}
             <div className="flex flex-wrap gap-2 mt-12">
               {post.tags.map(tag => (<span key={tag} className="text-xs text-zion-slate-light bg-zion-blue-dark px-3 py-1 rounded-full">
                   #{tag}
                 </span>))}
             </div>
+            <Separator className="my-12 bg-zion-blue-light"  />
             
-            <Separator className="my-12 bg-zion-blue-light"/>
-            
-            {/* Related articles */}
+            {/* comment */}
             {relatedPosts.length > 0 && (<div className="mt-12">
                 <h3 className="text-2xl font-bold text-white mb-6">Related Articles</h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -164,11 +159,11 @@ export default function BlogPost() {
                 </div>
               </div>)}
             
-            {/* Navigation */}
+            {/* comment */}
             <div className="flex justify-between items-center mt-12">
               <Button variant="outline" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white" asChild>
                 <Link to="/blog">
-                  <ChevronLeft className="mr-2 h-4 w-4"/>
+                  <ChevronLeft className="mr-2 h-4 w-4"  />
                   All Articles
                 </Link>
               </Button>
@@ -181,13 +176,9 @@ export default function BlogPost() {
 
 
 export { BlogPost };
-
 export { BlogPost };
-
 export { BlogPost };
-
 export { BlogPost };
-
 export { BlogPost };
     </>);
 }

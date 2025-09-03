@@ -4,11 +4,15 @@ import React, {useState } from "react"
 export default function ComprehensivePricing2025() {""
   const [billingCycle, setBillingCycle] = useState()
 }
+}
   const [selectedPlan, setSelectedPlan] = useState("professional")
+}
 }
   const plans = [] = useState()
 }
+}
   const [selectedPlan, setSelectedPlan] = useState("professional")
+}
 }
   const plans = [],
       icon: Zap,"
@@ -87,6 +91,7 @@ export default function ComprehensivePricing2025() {""
     d: text-2xl text-zion-slate-light mb-8 leading-relaxed">",,
     {name: "Digital Transformation",""""""""
   const [selectedPlan, setSelectedPlan] = useState("professional")
+}
 }
   const plans = [], icon: Zap,"""
       color: "from-blue-500 to-cyan-500", popular: false}, {"""
@@ -228,7 +233,7 @@ with flexible options to scale as you grow.
 }"}
 
               >"
-                <div className = "{"absolute" top-1 w-6 h-6 bg-white rounded-full transition-transform duration-300 ${ billingCycle === "yearly" ? "translate-x-8" : "translate-x-1" }"}       />
+                <div className = "{"absolute" top-1 w-6 h-6 bg-white rounded-full transition-transform duration-300 ${ billingCycle === "yearly" ? "translate-x-8" : "translate-x-1" }"}         />
               </button>"
               <span className="{"text-lg" ${billingCycle === "yearly" ? "text-white" : "text-zion-slate-light"}"}>
                 Yearly"

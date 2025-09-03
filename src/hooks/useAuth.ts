@@ -6,8 +6,10 @@ import { useState, useEffect } from "react"; interface User { id: string email: 
   } catch (error) {" console.error("Error parsing stored user: ", error); setAuthState({ user: null, isAuthenticated: false, isLoading: false,
   })
 }
+}
   } } else { setAuthState({ user: null, isAuthenticated: false, isLoading: false,
   })
+}
 }
   } }; checkAuth();"
   }, []); const login = async (email: string, password: string) => { // comment

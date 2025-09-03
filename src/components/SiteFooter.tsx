@@ -1,6 +1,5 @@
 import React from "react";
 export function SiteFooter() {;
-
   const currentYear = new Date().getFullYear()"
 
   const navSections = []

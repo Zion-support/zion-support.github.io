@@ -2,16 +2,21 @@ import React, { useState } from "react"
 export function ModernHeader() {;
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 }
+}
   const [isServicesOpen, setIsServicesOpen] = useState(false)
+}
 }
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
+}
 }
 
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false)
 }
+}
     setIsServicesOpen(false)
+}
 }
   }'
 

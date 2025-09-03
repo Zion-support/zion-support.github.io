@@ -1,313 +1,230 @@
 #!/usr/bin/env node
-/**
- * Advanced App Optimizer
- * Comprehensive optimization for the application
- */
-const fs = require("$1");
-const path = require("$1");
-const { execSync } = require("child_process")
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+
+console.log('🚀 Advanced App Optimizer');
+console.log('========================');
+
 class AdvancedAppOptimizer {
   constructor() {
-    this.projectRoot = process.cwd()
-    this.optimizations = []
-    this.metrics = {
-      before: {},
-      after: {}
-    }
+    this.results = {
+      optimizations: 0,
+      performanceImprovements: 0,
+      securityEnhancements: 0,
+      codeQualityImprovements: 0,
+      errors: []
+    };
+    this.startTime = Date.now();
   }
 
-  log(message, type = "info") {
-    const timestamp = new Date().toISOString()
-    const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}`
-    console.log(logEntry),
-}
-
-  async optimizeBundleSize() {
-    try {
-      this.log("Optimizing bundle size...")
-      // Analyze bundle
-      await this.analyzeBundle()
-      // Optimize imports
-      await this.optimizeImports()
-      // Remove unused code
-      await this.removeUnusedCode()
-      this.optimizations.push("bundle_size_optimization")
-      this.log("Bundle size optimization completed", "success"),
-} catch (error) {
-      this.log(`Bundle size optimization failed: ${error.message}`, "error"),
-}
-  }
-
-  async analyzeBundle() {
-    try {
-      this.log("Analyzing bundle...")
-      // Run build with analysis
-      execSync("ANALYZE=true npm run build", {
-        cwd: this.projectRoot, 
-        stdio: "pipe" ,
-})
-      this.log("Bundle analysis completed", "success"),
-} catch (error) {
-      this.log(`Bundle analysis failed: ${error.message}`, "error"),
-}
-  }
-
-  async optimizeImports() {
-    try {
-      this.log("Optimizing imports...")
-      const sourceDirs = ["src", "pages", "components"]
-      for (const dir of sourceDirs) {
-        if (fs.existsSync(dir)) {
-          this.optimizeImportsInDirectory(dir),
-}
-      }
-      
-      this.log("Import optimization completed", "success"),
-} catch (error) {
-      this.log(`Import optimization failed: ${error.message}`, "error"),
-}
-  }
-
-  optimizeImportsInDirectory(dir) {
-    const items = fs.readdirSync(dir)
-    for (const item of items) {
-      const fullPath = path.join(dir, item)
-      const stat = fs.statSync(fullPath)
-      if (stat.isDirectory()) {
-        this.optimizeImportsInDirectory(fullPath),
-} else if (stat.isFile() && (item.endsWith(".tsx") || item.endsWith(".jsx"))) {
-        this.optimizeImportsInFile(fullPath),
-}
-    }
-  }
-
-  optimizeImportsInFile(filePath) {
-    try {
-      let content = fs.readFileSync(filePath, "utf8")
-      let modified = false
-      // Optimize React imports
-      if (content.includes("import React from "react"")) {
-        content = content.replace(
-          "import React from "react"",
-          "import React from "react"")
-        modified = true,
-}
-      
-      // Optimize Next.js imports
-      if (content.includes("import { useRouter  } from "next/router"")) {
-        content = content.replace(
-          "import { useRouter  } from "next/router"",
-          "import { useRouter  } from "next/router"")
-        modified = true,
-}
-      
-      if (modified) {
-        fs.writeFileSync(filePath, content)
-        this.log(`Optimized imports in ${filePath}`, "success"),
-}
-    } catch (error) {
-      this.log(`Failed to optimize imports in ${filePath}: ${error.message}`, "error"),
-}
-  }
-
-  async removeUnusedCode() {
-    try {
-      this.log("Removing unused code...")
-      // Remove console.log statements
-      await this.removeConsoleLogs()
-      // Remove unused variables
-      await this.removeUnusedVariables()
-      this.log("Unused code removal completed", "success"),
-} catch (error) {
-      this.log(`Unused code removal failed: ${error.message}`, "error"),
-}
-  }
-
-  async removeConsoleLogs() {
-    try {
-      const sourceDirs = ["src", "pages", "components"]
-      for (const dir of sourceDirs) {
-        if (fs.existsSync(dir)) {
-          this.removeConsoleLogsInDirectory(dir),
-}
-      }
-    } catch (error) {
-      this.log(`Console log removal failed: ${error.message}`, "error"),
-}
-  }
-
-  removeConsoleLogsInDirectory(dir) {
-    const items = fs.readdirSync(dir)
-    for (const item of items) {
-      const fullPath = path.join(dir, item)
-      const stat = fs.statSync(fullPath)
-      if (stat.isDirectory()) {
-        this.removeConsoleLogsInDirectory(fullPath),
-} else if (stat.isFile() && (item.endsWith(".tsx") || item.endsWith(".jsx"))) {
-        this.removeConsoleLogsInFile(fullPath),
-}
-    }
-  }
-
-  removeConsoleLogsInFile(filePath) {
-    try {
-      let content = fs.readFileSync(filePath, "utf8")
-      const originalContent = content
-      // Remove console.log statements
-      content = content.replace(/console\.log\([^)]*\);?\n?/g, "")
-      content = content.replace(/console\.warn\([^)]*\);?\n?/g, "")
-      content = content.replace(/console\.error\([^)]*\);?\n?/g, "")
-      if (content !== originalContent) {
-        fs.writeFileSync(filePath, content)
-        this.log(`Removed console logs from ${filePath}`, "success"),
-}
-    } catch (error) {
-      this.log(`Failed to remove console logs from ${filePath}: ${error.message}`, "error"),
-}
-  }
-
-  async removeUnusedVariables() {
-    try {
-      this.log("Removing unused variables...")
-      const sourceDirs = ["src", "pages", "components"]
-      for (const dir of sourceDirs) {
-        if (fs.existsSync(dir)) {
-          this.removeUnusedVariablesInDirectory(dir),
-}
-      }
-    } catch (error) {
-      this.log(`Unused variable removal failed: ${error.message}`, "error"),
-}
-  }
-
-  removeUnusedVariablesInDirectory(dir) {
-    const items = fs.readdirSync(dir)
-    for (const item of items) {
-      const fullPath = path.join(dir, item)
-      const stat = fs.statSync(fullPath)
-      if (stat.isDirectory()) {
-        this.removeUnusedVariablesInDirectory(fullPath),
-} else if (stat.isFile() && (item.endsWith(".tsx") || item.endsWith(".jsx"))) {
-        this.removeUnusedVariablesInFile(fullPath),
-}
-    }
-  }
-
-  removeUnusedVariablesInFile(filePath) {
-    try {
-      let content = fs.readFileSync(filePath, "utf8")
-      const originalContent = content
-      // Remove unused imports (simplified)
-      const lines = content.split("\n")
-      const usedImports = new Set()
-      // Find used imports
-      for (const line of lines) {
-        if (line.includes("import")) {
-          const importMatch = line.match(/import\s+.*?\s+from\s+[""]([^""]+)[""]/)
-          if (importMatch) {
-            const importPath = importMatch[1]
-            usedImports.add(importPath),
-}
-        }
-      }
-      
-      // Remove unused imports
-      content = lines.filter(line => {
-        if (line.includes("import")) {
-          const importMatch = line.match(/import\s+.*?\s+from\s+[""]([^""]+)[""]/)
-          if (importMatch) {
-            const importPath = importMatch[1]
-            return usedImports.has(importPath),
-}
-        }
-        return true,
-}).join("\n")
-      if (content !== originalContent) {
-        fs.writeFileSync(filePath, content)
-        this.log(`Removed unused variables from ${filePath}`, "success"),
-}
-    } catch (error) {
-      this.log(`Failed to remove unused variables from ${filePath}: ${error.message}`, "error"),
-}
+  log(message, type = 'info') {
+    const timestamp = new Date().toISOString();
+    const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
+    console.log(logEntry);
   }
 
   async optimizeImages() {
+    this.log('🖼️ Optimizing images...');
     try {
-      this.log("Optimizing images...")
-      const publicDir = "public"
-      if (fs.existsSync(publicDir)) {
-        this.optimizeImagesInDirectory(publicDir),
-}
+      // Find all image files
+      const imageFiles = this.getAllFiles('./public', ['.jpg', '.jpeg', '.png', '.gif', '.webp']);
       
-      this.log("Image optimization completed", "success"),
-} catch (error) {
-      this.log(`Image optimization failed: ${error.message}`, "error"),
-}
-  }
-
-  optimizeImagesInDirectory(dir) {
-    const items = fs.readdirSync(dir)
-    for (const item of items) {
-      const fullPath = path.join(dir, item)
-      const stat = fs.statSync(fullPath)
-      if (stat.isDirectory()) {
-        this.optimizeImagesInDirectory(fullPath),
-} else if (stat.isFile() && (item.endsWith(".jpg") || item.endsWith(".jpeg") || item.endsWith(".png"))) {
-        this.optimizeImage(fullPath),
-}
+      for (const file of imageFiles) {
+        try {
+          // Create optimized version
+          const optimizedPath = file.replace(/(\.[^.]+)$/, '_optimized$1');
+          
+          // Use sharp for optimization (if available)
+          if (this.hasSharp()) {
+            execSync(`npx sharp-cli resize 1920 --input "${file}" --output "${optimizedPath}"`);
+            this.results.optimizations++;
+          }
+        } catch (error) {
+          this.log(`Error optimizing ${file}: ${error.message}`, 'error');
+        }
+      }
+      
+      this.log(`✅ Optimized ${this.results.optimizations} images`, 'success');
+    } catch (error) {
+      this.log(`❌ Image optimization failed: ${error.message}`, 'error');
     }
   }
 
-  optimizeImage(imagePath) {
+  async optimizeBundle() {
+    this.log('📦 Optimizing bundle...');
     try {
-      // This is a placeholder - in a real scenario, you"d use tools like sharp or imagemin
-      this.log(`Optimizing image: ${imagePath}`, "info"),
-} catch (error) {
-      this.log(`Failed to optimize image ${imagePath}: ${error.message}`, "error"),
-}
+      // Analyze bundle size
+      execSync('npx @next/bundle-analyzer', { stdio: 'inherit' });
+      this.results.performanceImprovements++;
+      this.log('✅ Bundle analysis completed', 'success');
+    } catch (error) {
+      this.log(`❌ Bundle optimization failed: ${error.message}`, 'error');
+    }
   }
 
-  async generateOptimizationReport() {
+  async enhanceSecurity() {
+    this.log('🔒 Enhancing security...');
+    try {
+      // Add security headers
+      const nextConfigPath = './next.config.js';
+      if (fs.existsSync(nextConfigPath)) {
+        let config = fs.readFileSync(nextConfigPath, 'utf8');
+        
+        if (!config.includes('securityHeaders')) {
+          const securityHeaders = `
+const securityHeaders = [
+  {
+    key: 'X-DNS-Prefetch-Control',
+    value: 'on'
+  },
+  {
+    key: 'Strict-Transport-Security',
+    value: 'max-age=63072000; includeSubDomains; preload'
+  },
+  {
+    key: 'X-XSS-Protection',
+    value: '1; mode=block'
+  },
+  {
+    key: 'X-Frame-Options',
+    value: 'SAMEORIGIN'
+  },
+  {
+    key: 'X-Content-Type-Options',
+    value: 'nosniff'
+  },
+  {
+    key: 'Referrer-Policy',
+    value: 'origin-when-cross-origin'
+  }
+];`;
+
+          config = config.replace('module.exports = {', `module.exports = {\n${securityHeaders}\n  async headers() {\n    return [\n      {\n        source: '/(.*)',\n        headers: securityHeaders,\n      },\n    ]\n  },`);
+          
+          fs.writeFileSync(nextConfigPath, config);
+          this.results.securityEnhancements++;
+          this.log('✅ Security headers added', 'success');
+        }
+      }
+    } catch (error) {
+      this.log(`❌ Security enhancement failed: ${error.message}`, 'error');
+    }
+  }
+
+  async improveCodeQuality() {
+    this.log('📝 Improving code quality...');
+    try {
+      // Add TypeScript strict mode
+      const tsConfigPath = './tsconfig.json';
+      if (fs.existsSync(tsConfigPath)) {
+        const tsConfig = JSON.parse(fs.readFileSync(tsConfigPath, 'utf8'));
+        
+        if (!tsConfig.compilerOptions.strict) {
+          tsConfig.compilerOptions.strict = true;
+          tsConfig.compilerOptions.noImplicitAny = true;
+          tsConfig.compilerOptions.strictNullChecks = true;
+          tsConfig.compilerOptions.strictFunctionTypes = true;
+          
+          fs.writeFileSync(tsConfigPath, JSON.stringify(tsConfig, null, 2));
+          this.results.codeQualityImprovements++;
+          this.log('✅ TypeScript strict mode enabled', 'success');
+        }
+      }
+    } catch (error) {
+      this.log(`❌ Code quality improvement failed: ${error.message}`, 'error');
+    }
+  }
+
+  async generateSitemap() {
+    this.log('🗺️ Generating sitemap...');
+    try {
+      execSync('node scripts/generate-sitemap.mjs', { stdio: 'inherit' });
+      this.log('✅ Sitemap generated', 'success');
+    } catch (error) {
+      this.log(`❌ Sitemap generation failed: ${error.message}`, 'error');
+    }
+  }
+
+  async runPerformanceAudit() {
+    this.log('⚡ Running performance audit...');
+    try {
+      // Run Lighthouse audit
+      execSync('npx lighthouse http://localhost:3000 --output=json --output-path=./performance-audit.json', { stdio: 'inherit' });
+      this.log('✅ Performance audit completed', 'success');
+    } catch (error) {
+      this.log(`❌ Performance audit failed: ${error.message}`, 'error');
+    }
+  }
+
+  getAllFiles(dir, extensions = []) {
+    const files = [];
+    const items = fs.readdirSync(dir, { withFileTypes: true });
+    
+    for (const item of items) {
+      const fullPath = path.join(dir, item.name);
+      if (item.isDirectory() && !item.name.startsWith('.')) {
+        files.push(...this.getAllFiles(fullPath, extensions));
+      } else if (item.isFile()) {
+        if (extensions.length === 0 || extensions.some(ext => item.name.endsWith(ext))) {
+          files.push(fullPath);
+        }
+      }
+    }
+    
+    return files;
+  }
+
+  hasSharp() {
+    try {
+      execSync('npx sharp-cli --version', { stdio: 'pipe' });
+      return true;
+    } catch {
+      return false;
+    }
+  }
+
+  async generateReport() {
+    const endTime = Date.now();
+    const duration = endTime - this.startTime;
+    
     const report = {
       timestamp: new Date().toISOString(),
-      optimizations: this.optimizations,
-      metrics: this.metrics,
-      recommendations: [
-        "Implement code splitting for better performance",
-        "Use lazy loading for non-critical components",
-        "Optimize images and assets",
-        "Implement proper caching strategies",
-        "Use React.memo for expensive components",
-        "Optimize bundle size with webpack analysis",
-        "Remove unused dependencies",
-        "Implement proper error boundaries"],
-}
-    const reportPath = path.join(this.projectRoot, "advanced-app-optimizer-report.json")
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))
-    this.log(`Optimization report saved to ${reportPath}`, "success")
-    return report,
-}
+      duration: `${duration}ms`,
+      results: this.results,
+      summary: {
+        totalOptimizations: this.results.optimizations,
+        performanceImprovements: this.results.performanceImprovements,
+        securityEnhancements: this.results.securityEnhancements,
+        codeQualityImprovements: this.results.codeQualityImprovements,
+        totalErrors: this.results.errors.length
+      }
+    };
+
+    fs.writeFileSync('advanced-app-optimizer-report.json', JSON.stringify(report, null, 2));
+    this.log('📄 Report saved to: advanced-app-optimizer-report.json');
+  }
 
   async run() {
-    this.log("Starting Advanced App Optimizer")
+    this.log('🚀 Starting Advanced App Optimizer...');
+    
     try {
-      await this.optimizeBundleSize()
-      await this.optimizeImages()
-      const report = await this.generateOptimizationReport()
-      this.log("Advanced App Optimizer completed")
-      this.log(`Summary: ${report.optimizations.length} optimizations applied`)
-      return report,
-} catch (error) {
-      this.log(`Advanced app optimizer failed: ${error.message}`, "error')
-      throw error,
-}
+      await this.optimizeImages();
+      await this.optimizeBundle();
+      await this.enhanceSecurity();
+      await this.improveCodeQuality();
+      await this.generateSitemap();
+      await this.runPerformanceAudit();
+      
+      this.log('🎉 Advanced App Optimizer completed!', 'success');
+    } catch (error) {
+      this.log(`💥 Advanced App Optimizer failed: ${error.message}`, 'error');
+    } finally {
+      await this.generateReport();
+    }
   }
 }
 
-// Run the advanced app optimizer
-if (require.main === module) {
-  const optimizer = new AdvancedAppOptimizer()
-  optimizer.run().catch(console.error),
-}
-
-module.exports = AdvancedAppOptimizer
+// Run the optimizer
+const optimizer = new AdvancedAppOptimizer();
+optimizer.run().catch(console.error);

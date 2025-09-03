@@ -1,4 +1,7 @@
+const Component = () => {
+import React from "react"
   return ()
+}
     <section className="py-20 bg-gradient-to-b from-zion-slate to-zion-slate-dark" role="region" aria-labelledby="testimonials-heading">"
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div"
@@ -30,7 +33,7 @@
             Real results from real businesses.See how Zion Tech Group is transforming industries worldwide.</p>
         </motion.div>
 
-        {/* Testimonial Carousel */}"
+        {/* comment */}"
         <div className="relative max-w-4xl mx-auto">"
           <AnimatePresence mode="wait">
             <motion.div
@@ -56,22 +59,20 @@
               transition={{ duration: 0.5 }}"
               className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 md:p-12 text-center relative overflow-hidden"
 
-              {/* Background decoration */}"
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-zion-cyan/10 to-zion-blue/10 rounded-full blur-3xl" />"
-              <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-br from-zion-purple/10 to-zion-cyan/10 rounded-full blur-3xl" />
+              {/* comment */}"
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-zion-cyan/10 to-zion-blue/10 rounded-full blur-3xl"  />"
+              <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-br from-zion-purple/10 to-zion-cyan/10 rounded-full blur-3xl"  />
 
-              {/* Rating */}"
+              {/* comment */}"
               <div className="flex justify-center mb-6">
                 {[...Array(testimonials[currentIndex].rating)].map((_, i) => ("
                   <Star key={i} className="w-6 h-6 text-yellow-400 fill-current"  />                ))}
               </div>
-
-              {/* Quote */}"
+              {/* comment */}"
               <blockquote className="text-xl md:text-2xl text-white mb-8 leading-relaxed italic">"
                 "{testimonials[currentIndex].content}"
               </blockquote>
-
-              {/* Author */}"
+              {/* comment */}"
               <div className="flex flex-col items-center">"
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mb-4 text-white font-bold text-xl">
                   {testimonials[currentIndex].name.charAt(0)}
@@ -91,56 +92,46 @@
               </div>
             </motion.div>
           </AnimatePresence>
-
-          {/* Navigation Arrows */}
-          <button
-            onClick={prevTestimonial}"
+          {/* comment */}
+          <button onClick={prevTestimonial}"
             className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-zion-slate-dark/80 backdrop-blur-xl border border-zion-cyan/20 rounded-full flex items-center justify-center text-zion-cyan hover:bg-zion-cyan hover:text-white transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-zion-cyan/50"
             
 "
             <ChevronLeft className="w-6 h-6"  />          </button>
-
-          <button
-            onClick={nextTestimonial}"
+          <button onClick={nextTestimonial}"
             className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-zion-slate-dark/80 backdrop-blur-xl border border-zion-cyan/20 rounded-full flex items-center justify-center text-zion-cyan hover:bg-zion-cyan hover:text-white transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-zion-cyan/50"
             
 "
             <ChevronRight className="w-6 h-6"  />          </button>;
         </div>
-
-        {/* Dots Indicator */}"
+        {/* comment */}"
         <div className="flex justify-center mt-8 space-x-2">;
           {testimonials.map(_: unknown, index: unknown ;
-            <button
-              key={index}
+            <button key={index}
               onClick={(: unknown goToTestimonial(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentIndex'
-                  ? 'bg-zion-cyan scale-125''
-                  : 'bg-zion-slate-light hover:bg-zion-cyan/50'`
-              }`}`
-              aria-label={`Go to testimonial ${index + 1}`}
-            />
+              className={"w-3 h-3 rounded-full transition-all duration-300 ${index === currentIndex"
+                  ? "bg-zion-cyan scale-125""
+                  : "bg-zion-slate-light hover:bg-zion-cyan/50""
+              }"}"
+              aria-label={"Go to testimonial ${index + 1}"}
+              />
           ))}
         </div>
-
-        {/* Trust Indicators */}
+        {/* comment */}
         <motion.div"
           className="mt-16 text-center"
           initial = {
 
   { opacity: 0,
   y: 20 ;
-
 }}          whileInView = {
 
   { opacity: 1,
   y: 0 ;
-
 }}          transition = {
 
   { duration: 0.8,
   delay: 0.4 ;
-
 }}          viewport={{ once: true }}
 "
           <p className="text-zion-slate-light text-sm mb-6">Join our growing list of satisfied clients</p>"
@@ -166,5 +157,4 @@
       </div>;
     </section>;
   )};
-
 export default Testimonials}}}'"`

@@ -1,21 +1,20 @@
-import React from 'react';'''
-import { Phone, Mail, MapPin, ArrowRight import { Footer } from '@/components/Footer';
-
+import React from "react";"""
+import { Phone, Mail, MapPin, ArrowRight import { Footer } from "@/components/Footer";
 const ZionHireAI = () => {}
-'
-''
-'''
-  const successMetrics = [''''
-    { metric: '95%', label: 'Faster Hiring' },'''
-    { metric: '87%', label: 'Better Matches' },'''
-    { metric: '92%', label: 'Cost Reduction' },'''
-    { metric: '89%', label: 'Candidate Satisfaction' }
+"
+""
+"""
+  const successMetrics = [""""
+    { metric: "95%", label: "Faster Hiring" },"""
+    { metric: "87%", label: "Better Matches" },"""
+    { metric: "92%", label: "Cost Reduction" },"""
+    { metric: "89%", label: "Candidate Satisfaction" }
   ];
-
   return()
+}
     <>
       <main className="flex-1">"""
-        {/* Hero Section */}""""
+        {/* comment */}""""
         <div className="container mx-auto px-4 py-16">""""
           <div className="text-center mb-16">""""
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -40,7 +39,7 @@ const ZionHireAI = () => {}
             </div>
           </div>
 """
-          {/* Success Metrics */}""""
+          {/* comment */}""""
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">"""
             {successMetrics.map((item, index) => (""""
               <div key={index} className="text-center">""""
@@ -53,18 +52,17 @@ const ZionHireAI = () => {}
               </div>) ) }
           </div>
 """
-          {/* Demo Section */}""""
+          {/* comment */}""""
           <div className="relative hidden md:block mb-16">""""
             <div className="absolute -top-8 -left-8 w-72 h-72 bg-zion-purple/20 rounded-full filter blur-3xl"></div>"""
             <img""""
               loading="lazy""""
               src="https://placehold.co/600x400/192134/9b87f5?text=Zion+Hire+AI""""
               alt="Zion Hire AI Dashboard""""
-              className="relative z-10 rounded-lg shadow-xl mx-auto"""
-            />
+              className="relative z-10 rounded-lg shadow-xl mx-auto""" />
           </div>
 """
-          {/* Contact Section */}""""
+          {/* comment */}""""
           <div className="bg-white/5 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-8">""""
             <h2 className="text-2xl font-bold text-white text-center mb-4">
               Ready to Transform Your Hiring Process?"""
@@ -75,19 +73,19 @@ const ZionHireAI = () => {}
 """"
             <div className="grid md:grid-cols-3 gap-6 text-center mb-8">"""
               <div>""""
-                <Phone className="w-8 h-8 text-zion-cyan mx-auto mb-2"/>""""
+                <Phone className="w-8 h-8 text-zion-cyan mx-auto mb-2"  />""""
                 <p className="text-white font-semibold">Phone</p>""""
                 <p className="text-zion-slate-light">+1 302 464 0950</p>
               </div>"""
               <div>""""
-                <Mail className="w-8 h-8 text-zion-cyan mx-auto mb-2"/>""""
+                <Mail className="w-8 h-8 text-zion-cyan mx-auto mb-2"  />""""
                 <p className="text-white font-semibold">Email</p>""""
                 <p className="text-zion-slate-light">kleber@ziontechgroup.com</p>
               </div>"""
               <div>""""
-                <MapPin className="w-8 h-8 text-zion-cyan mx-auto mb-2"/>""""
+                <MapPin className="w-8 h-8 text-zion-cyan mx-auto mb-2"  />""""
                 <p className="text-white font-semibold">Address</p>""""
-                <p className="text-zion-slate-light">364 E Main St STE 1008<br />Middletown DE 19709</p>
+                <p className="text-zion-slate-light">364 E Main St STE 1008<br  />Middletown DE 19709</p>
               </div>
             </div>"""
 """"
@@ -99,24 +97,19 @@ const ZionHireAI = () => {}
                 rel="noopener noreferrer"""
 """
                 Start Your Free Trial Today""""
-                <ArrowRight className="w-5 h-5 ml-2"/>
+                <ArrowRight className="w-5 h-5 ml-2"  />
               </a>
             </div>
           </div>
         </div>
       </main>
-      <Footer />
+      <Footer  />
     </>) };
-
 export default ZionHireAI;
 }
 
 export { ZionHireAI };
-
 export { ZionHireAI };
-
 export { ZionHireAI };
-
 export { ZionHireAI };
-
 export { ZionHireAI };

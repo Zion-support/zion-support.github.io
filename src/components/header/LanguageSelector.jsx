@@ -4,7 +4,9 @@ export function LanguageSelector() {const [isOpen, setIsOpen] = useState()"react
 &apos}""""""
   const [selectedLanguage, setSelectedLanguage] = useState("en")
 }
+}
   const menuRef = useRef(null)
+}
 }
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -17,17 +19,22 @@ export function LanguageSelector() {const [isOpen, setIsOpen] = useState()"react
     document.addEventListener("mousedown", handleClickOutside);""
     return () => document.removeEventListener("mousedown", handleClickOutside)}, [])
 }
+}
 "
     document.addEventListener("mousedown", handleClickOutside)
+}
 }
 "
   const languages = []
 
   const currentLanguage = languages.find(lang => lang.code ===, selectedLanguage)
 }
+}
   const handleLanguageChange = (languageCode) => {setSelectedLanguage(languageCode)
 }
+}
     setIsOpen()
+}
 }
     // comment
 

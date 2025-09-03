@@ -417,7 +417,9 @@ export function ComprehensiveServicesShowcase() {}"});,"})"
 """"
   const [selectedCategory, setSelectedCategory] = useState()
 }
+}
   const [selectedService, setSelectedService] = useState()
+}
 }  const containerVariants = {}
 
 // Import the new service data
@@ -426,27 +428,27 @@ export function ComprehensiveServicesShowcase() {}"});,"})"
 ;
 const serviceCategories = []
   {}
-'
-    id: 'micro-saas','"""
-    name: 'Micro SAAS Solutions',""""
-    icon: <Rocket className="w-6 h-6" />,'
-    color: 'from-purple-600 to-pink-600',
+"
+    id: "micro-saas",""""
+    name: "Micro SAAS Solutions",""""
+    icon: <Rocket className="w-6 h-6"  />,"
+    color: "from-purple-600 to-pink-600",
     services: revolutionary2027AdvancedMicroSaasServices;
   },
   {}
-'
-    id: 'it-infrastructure','"""
-    name: 'IT Infrastructure & Cybersecurity',""""
-    icon: <Shield className="w-6 h-6" />,'
-    color: 'from-red-600 to-orange-600',
+"
+    id: "it-infrastructure",""""
+    name: "IT Infrastructure & Cybersecurity",""""
+    icon: <Shield className="w-6 h-6"  />,"
+    color: "from-red-600 to-orange-600",
     services: revolutionary2027ITInfrastructureCybersecurityServices;
   },
   {}
-'
-    id: 'ai-innovation','"""
-    name: 'AI Innovation Services',""""
-    icon: <Brain className="w-6 h-6" />,'
-    color: 'from-blue-600 to-cyan-600',
+"
+    id: "ai-innovation",""""
+    name: "AI Innovation Services",""""
+    icon: <Brain className="w-6 h-6"  />,"
+    color: "from-blue-600 to-cyan-600",
     services: revolutionary2027AIInnovationServices;
   }
 ;
@@ -781,7 +783,7 @@ designed to transform your business and drive exponential growth."
       </AnimatePresence>"
     </section>""""
   )}"""""""
-"""""""'"
+"""""""""
 "
 
 export default Component

@@ -5,6 +5,7 @@ const SecurityHeaders = () => {
     // comment
 const meta = document.createElement("meta")
 }
+}
     meta.httpEquiv = "Content - Security-Policy",
     meta.content = "default-src "self"; script-src "self" "unsafe-inline" "unsafe-eval" https: // comment
     document.head.appendChild(meta),
@@ -14,15 +15,19 @@ const securityHeaders = []
     securityHeaders.forEach(header => {
       const metaTag = document.createElement("meta")
 }
+}
       metaTag.httpEquiv = header.httpEquiv
       metaTag.content = header.content
       document.head.appendChild(metaTag)
 }
+}
     })
+}
 }
     return () => {
       // comment
 const securityMetaTags = document.querySelectorAll("meta[http-equiv]")
+}
 }
       securityMetaTags.forEach(tag = > {"
         if (tag.getAttribute("http-equiv")?.startsWith("X-") || "
@@ -31,10 +36,13 @@ const securityMetaTags = document.querySelectorAll("meta[http-equiv]")
             tag.getAttribute("http-equiv") === "Permissions-Policy") {
           tag.remove()
 }
+}
 
       })
 }
+}
   }, [])
+}
 }
   return null}
 

@@ -6,6 +6,7 @@ function cartReducer(state, action) {"
         case "ADD_ITEM": {
             const existing = state.items.find(i => i.id === action.payload.id)
 }
+}
             let items
             if (existing) {
                 items = state.items.map(i => i.id === action.payload.id,
@@ -30,6 +31,7 @@ function cartReducer(state, action) {"
 
 const CartContext = createContext(null)
 }
+}
 export function useCart() {
 
     const ctx = useContext(CartContext);"
@@ -43,13 +45,11 @@ export function CartProvider({ children }) {
   const { user } = useAuth();
   const [state, dispatch] = useReducer(cartReducer, initialState);
   const cartKey = getCartKey(user?.id);
-
   useEffect(() => {
   // TODO: Add dependencies if needed
 }, []);
     let items = [];
     const stored = safeStorage.getItem(cartKey);
-
     if(stored) {
 
       try {
@@ -71,15 +71,14 @@ export function CartProvider({ children }) {
           items = mergeCartItems(items, guestItems);
         } catch {
 
-          /* ignore */
+          /* comment */
         }
         safeStorage.removeItem(getCartKey());
       }
     }
 
-    dispatch({ type: 'SET_ITEMS', payload: items });
+    dispatch({ type: "SET_ITEMS", payload: items });
   }, [cartKey]);
-
   // Save cart to storage whenever it changes
   useEffect(() => {
   // TODO: Add dependencies if needed
@@ -92,17 +91,14 @@ export function CartProvider({ children }) {
       safeStorage.removeItem(cartKey);
     }
   }, [state.items, cartKey]);
-
   const addItem = item => {
 
-    dispatch({ type: 'ADD_ITEM', payload: item });
+    dispatch({ type: "ADD_ITEM", payload: item });
   };
-
   const removeItem = id => {
 
-    dispatch({ type: 'REMOVE_ITEM', payload: id });
+    dispatch({ type: "REMOVE_ITEM", payload: id });
   };
-
   const updateQuantity = (id, quantity) => {
 
     if(quantity <= 0) {
@@ -110,26 +106,23 @@ export function CartProvider({ children }) {
       removeItem(id);
     } else {
 
-      dispatch({ type: 'UPDATE_QUANTITY', payload: { id, quantity } });
+      dispatch({ type: "UPDATE_QUANTITY", payload: { id, quantity } });
     }
   };
-
   const clearCart = () => {
 
-    dispatch({ type: 'CLEAR_CART' });
+    dispatch({ type: "CLEAR_CART" });
   };
-
   const getTotalItems = () => {
     return state.items.reduce((total, item) => total + item.quantity, 0);
   };
-
   const getTotalPrice = () => {
     return state.items.reduce()
+}
       (total, item) => total + item.price * item.quantity,
       0
     );
   };
-
   const value = {
 
     items: state.items,
@@ -140,16 +133,18 @@ export function CartProvider({ children }) {
     getTotalItems,
     getTotalPrice,
     dispatch};
-
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 }
     const [state, dispatch] = useReducer(cartReducer, initialState)
 }
+}
     const cartKey = getCartKey(user?.id)
+}
 }
     useEffect(() => {
         let items = []
         const stored = safeStorage.getItem(cartKey)
+}
 }
         if (stored) {
             try {
@@ -161,9 +156,11 @@ export function CartProvider({ children }) {
 if (user?.id) {
             const guestStored = safeStorage.getItem(getCartKey())
 }
+}
             if (guestStored) {
                 try {
                     const guestItems = JSON.parse(guestStored)
+}
 }
                     items = mergeCartItems(items, guestItems)} catch {
                     /* comment */}
@@ -174,8 +171,10 @@ if (user?.id) {
 ""
         dispatch({ type: "SET_ITEMS", payload: items })}, [cartKey, user?.id])
 }
+}
     useEffect(() => {
         safeStorage.setItem(cartKey, JSON.stringify(state.items))}, [state.items, cartKey])
+}
 }
     const value = {}), """
         removeItem: (id) => dispatch({ type: "REMOVE_ITEM", payload: id }), """

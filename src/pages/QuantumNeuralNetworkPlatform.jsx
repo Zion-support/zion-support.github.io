@@ -1,77 +1,77 @@
-import React from 'react';
+import React from "react";
 export default QuantumNeuralNetworkPlatform;
 import { Brain, Zap, Shield, TrendingUp, ArrowRight const QuantumNeuralNetworkPlatform = () => {}
     const features = []
         {}
-            icon: Brain,'
-            title: 'Quantum Neural Networks','
-            description: 'Advanced neural network architectures leveraging quantum computing principles for unprecedented processing power.'
+            icon: Brain,"
+            title: "Quantum Neural Networks","
+            description: "Advanced neural network architectures leveraging quantum computing principles for unprecedented processing power."
         },
         {}
-            icon: Zap,'
-            title: 'Real-time Processing','
-            description: 'Lightning-fast data processing and analysis with quantum-enhanced algorithms and parallel computing.'
+            icon: Zap,"
+            title: "Real-time Processing","
+            description: "Lightning-fast data processing and analysis with quantum-enhanced algorithms and parallel computing."
         },
         {}
-            icon: Target,'
-            title: 'Precision Optimization','
-            description: 'Quantum-inspired optimization algorithms that find optimal solutions in complex, multi-dimensional spaces.'
+            icon: Target,"
+            title: "Precision Optimization","
+            description: "Quantum-inspired optimization algorithms that find optimal solutions in complex, multi-dimensional spaces."
         },
         {}
-            icon: Shield,'
-            title: 'Quantum Security','
-            description: 'Next-generation encryption and security protocols based on quantum mechanics principles.'
+            icon: Shield,"
+            title: "Quantum Security","
+            description: "Next-generation encryption and security protocols based on quantum mechanics principles."
 
     ];
     const useCases = []
         {}
-'
-''
-'''
-            title: 'Financial Modeling','''
-            description: 'Advanced risk assessment, portfolio optimization, and market prediction using quantum neural networks.',
+"
+""
+"""
+            title: "Financial Modeling","""
+            description: "Advanced risk assessment, portfolio optimization, and market prediction using quantum neural networks.",
             icon: TrendingUp;
         },
         {}
-'
-''
-'''
-            title: 'Drug Discovery','''
-            description: 'Accelerated molecular simulation and drug candidate screening for pharmaceutical research.',
+"
+""
+"""
+            title: "Drug Discovery","""
+            description: "Accelerated molecular simulation and drug candidate screening for pharmaceutical research.",
             icon: Globe;
         },
         {}
-'
-''
-'''
-            title: 'Climate Modeling','''
-            description: 'Complex climate pattern analysis and prediction with quantum-enhanced computational power.',
+"
+""
+"""
+            title: "Climate Modeling","""
+            description: "Complex climate pattern analysis and prediction with quantum-enhanced computational power.",
             icon: Globe;
         },
         {}
-'
-''
-'''
-            title: 'AI Training','''
-            description: 'Faster and more efficient training of large language models and neural networks.',
+"
+""
+"""
+            title: "AI Training","""
+            description: "Faster and more efficient training of large language models and neural networks.",
             icon: Brain;
-    ];'
-    const benefits = [''
-        'Exponential speedup in complex computations',Enhanced accuracy in pattern recognition',Scalable architecture for growing datasets',Energy-efficient quantum-inspired algorithms',Seamless integration with existing AI systems',Real-time decision making capabilities'
+    ];"
+    const benefits = [""
+        "Exponential speedup in complex computations",Enhanced accuracy in pattern recognition",Scalable architecture for growing datasets",Energy-efficient quantum-inspired algorithms",Seamless integration with existing AI systems",Real-time decision making capabilities"
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"""
-      {/* Hero Section */}""""
+      {/* comment */}""""
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">""""
         <div className="max-w-7xl mx-auto text-center">""""
           <div className="mb-8">""""
             <div className="inline-flex items-center px-4 py-2 bg-blue-600/20 text-blue-400 rounded-full text-sm font-medium mb-6">""""
-              <Brain className="w-4 h-4 mr-2"/>
+              <Brain className="w-4 h-4 mr-2"  />
               Quantum AI Platform"""
             </div>""""
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"""
               Quantum Neural Network""""
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">'
-                {' '}Platform;
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">"
+                {" "}Platform;
               </span>"""
             </h1>""""
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
@@ -81,10 +81,10 @@ import { Brain, Zap, Shield, TrendingUp, ArrowRight const QuantumNeuralNetworkPl
             <div className="flex flex-col sm:flex-row gap-4 justify-center">""""
               <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">"""
                 Get Started""""
-                <ArrowRight className="ml-2 w-5 h-5"/>"""
+                <ArrowRight className="ml-2 w-5 h-5"  />"""
               </Link>""""
               <button className="inline-flex items-center px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">""""
-                <Play className="mr-2 w-5 h-5"/>
+                <Play className="mr-2 w-5 h-5"  />
                 Watch Demo;
               </button>
             </div>
@@ -92,7 +92,7 @@ import { Brain, Zap, Shield, TrendingUp, ArrowRight const QuantumNeuralNetworkPl
         </div>
       </section>
 """
-      {/* Features Section */}""""
+      {/* comment */}""""
       <section className="py-20 px-4 sm:px-6 lg:px-8">""""
         <div className="max-w-7xl mx-auto">""""
           <div className="text-center mb-16">""""
@@ -111,7 +111,7 @@ import { Brain, Zap, Shield, TrendingUp, ArrowRight const QuantumNeuralNetworkPl
             const IconComponent = feature.icon;""""
             return (<div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-blue-500/30 transition-all duration-300">""""
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mb-4">""""
-                    <IconComponent className="w-6 h-6 text-white"/>"""
+                    <IconComponent className="w-6 h-6 text-white"  />"""
                   </div>""""
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>""""
                   <p className="text-gray-300">{feature.description}</p>
@@ -120,7 +120,7 @@ import { Brain, Zap, Shield, TrendingUp, ArrowRight const QuantumNeuralNetworkPl
         </div>
       </section>
 """
-      {/* Use Cases Section */}""""
+      {/* comment */}""""
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""""
         <div className="max-w-7xl mx-auto">""""
           <div className="text-center mb-16">""""
@@ -139,7 +139,7 @@ import { Brain, Zap, Shield, TrendingUp, ArrowRight const QuantumNeuralNetworkPl
             const IconComponent = useCase.icon;""""
             return (<div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-8 border border-white/10">""""
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-xl flex items-center justify-center mb-6">""""
-                    <IconComponent className="w-8 h-8 text-white"/>"""
+                    <IconComponent className="w-8 h-8 text-white"  />"""
                   </div>""""
                   <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title}</h3>""""
                   <p className="text-gray-300 text-lg">{useCase.description}</p>
@@ -148,7 +148,7 @@ import { Brain, Zap, Shield, TrendingUp, ArrowRight const QuantumNeuralNetworkPl
         </div>
       </section>
 """
-      {/* Benefits Section */}""""
+      {/* comment */}""""
       <section className="py-20 px-4 sm:px-6 lg:px-8">""""
         <div className="max-w-7xl mx-auto">""""
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">"""
@@ -162,7 +162,7 @@ import { Brain, Zap, Shield, TrendingUp, ArrowRight const QuantumNeuralNetworkPl
               </p>""""
               <div className="space-y-4">""""
                 {benefits.map((benefit, index) => (<div key={index} className="flex items-center">""""
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"/>""""
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />""""
                     <span className="text-gray-300">{benefit}</span>
                   </div>))}
               </div>
@@ -175,27 +175,27 @@ import { Brain, Zap, Shield, TrendingUp, ArrowRight const QuantumNeuralNetworkPl
                   <div className="flex justify-between items-center mb-2">""""
                     <span className="text-gray-300">Computational Speed</span>""""
                     <span className="text-green-400 font-semibold">1000x Faster</span>"""
-                  </div>"'"""
-                  <div className="w-full bg-slate-700 rounded-full h-2">'"'"""
-                    <div className="bg-gradient-to-r from-blue-600 to-cyan-600 h-2 rounded-full" style={{ width: '95%' }}></div>
+                  </div>"""""
+                  <div className="w-full bg-slate-700 rounded-full h-2">""""""
+                    <div className="bg-gradient-to-r from-blue-600 to-cyan-600 h-2 rounded-full" style={{ width: "95%" }}></div>
                   </div>
                 </div>"""
                 <div>""""
                   <div className="flex justify-between items-center mb-2">""""
                     <span className="text-gray-300">Accuracy Improvement</span>""""
                     <span className="text-green-400 font-semibold">99.9%</span>"""
-                  </div>"'"""
-                  <div className="w-full bg-slate-700 rounded-full h-2">'"'"""
-                    <div className="bg-gradient-to-r from-blue-600 to-cyan-600 h-2 rounded-full" style={{ width: '99%' }}></div>
+                  </div>"""""
+                  <div className="w-full bg-slate-700 rounded-full h-2">""""""
+                    <div className="bg-gradient-to-r from-blue-600 to-cyan-600 h-2 rounded-full" style={{ width: "99%" }}></div>
                   </div>
                 </div>"""
                 <div>""""
                   <div className="flex justify-between items-center mb-2">""""
                     <span className="text-gray-300">Energy Efficiency</span>""""
                     <span className="text-green-400 font-semibold">80% Less</span>"""
-                  </div>"'"""
-                  <div className="w-full bg-slate-700 rounded-full h-2">'"'"""
-                    <div className="bg-gradient-to-r from-blue-600 to-cyan-600 h-2 rounded-full" style={{ width: '80%' }}></div>
+                  </div>"""""
+                  <div className="w-full bg-slate-700 rounded-full h-2">""""""
+                    <div className="bg-gradient-to-r from-blue-600 to-cyan-600 h-2 rounded-full" style={{ width: "80%" }}></div>
                   </div>
                 </div>
               </div>
@@ -204,7 +204,7 @@ import { Brain, Zap, Shield, TrendingUp, ArrowRight const QuantumNeuralNetworkPl
         </div>
       </section>
 """
-      {/* CTA Section */}""""
+      {/* comment */}""""
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""""
         <div className="max-w-4xl mx-auto text-center">""""
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -217,7 +217,7 @@ import { Brain, Zap, Shield, TrendingUp, ArrowRight const QuantumNeuralNetworkPl
           <div className="flex flex-col sm:flex-row gap-4 justify-center">""""
             <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">"""
               Schedule a Demo""""
-              <ArrowRight className="ml-2 w-5 h-5"/>"""
+              <ArrowRight className="ml-2 w-5 h-5"  />"""
             </Link>""""
             <Link to="/pricing" className="inline-flex items-center px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
               View Pricing;
@@ -226,7 +226,7 @@ import { Brain, Zap, Shield, TrendingUp, ArrowRight const QuantumNeuralNetworkPl
         </div>
       </section>
 """
-      {/* Resources Section */}""""
+      {/* comment */}""""
       <section className="py-20 px-4 sm:px-6 lg:px-8">""""
         <div className="max-w-7xl mx-auto">""""
           <div className="text-center mb-16">""""
@@ -241,7 +241,7 @@ import { Brain, Zap, Shield, TrendingUp, ArrowRight const QuantumNeuralNetworkPl
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">""""
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-blue-500/30 transition-all duration-300">""""
               <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mb-4">""""
-                <BookOpen className="w-6 h-6 text-white"/>"""
+                <BookOpen className="w-6 h-6 text-white"  />"""
               </div>""""
               <h3 className="text-xl font-semibold text-white mb-3">Documentation</h3>""""
               <p className="text-gray-300 mb-4">Comprehensive guides and API documentation for developers.</p>""""
@@ -252,7 +252,7 @@ import { Brain, Zap, Shield, TrendingUp, ArrowRight const QuantumNeuralNetworkPl
 """"
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-blue-500/30 transition-all duration-300">""""
               <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mb-4">""""
-                <Download className="w-6 h-6 text-white"/>"""
+                <Download className="w-6 h-6 text-white"  />"""
               </div>""""
               <h3 className="text-xl font-semibold text-white mb-3">SDK & Tools</h3>""""
               <p className="text-gray-300 mb-4">Download our SDK and development tools to get started.</p>""""
@@ -263,7 +263,7 @@ import { Brain, Zap, Shield, TrendingUp, ArrowRight const QuantumNeuralNetworkPl
 """"
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-blue-500/30 transition-all duration-300">""""
               <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mb-4">""""
-                <MessageSquare className="w-6 h-6 text-white"/>"""
+                <MessageSquare className="w-6 h-6 text-white"  />"""
               </div>""""
               <h3 className="text-xl font-semibold text-white mb-3">Support</h3>""""
               <p className="text-gray-300 mb-4">Get help from our quantum computing experts and support team.</p>""""
@@ -279,11 +279,7 @@ export default QuantumNeuralNetworkPlatform;
 }}}
 
 export { QuantumNeuralNetworkPlatform, IconComponent, IconComponent };
-
 export { QuantumNeuralNetworkPlatform, IconComponent, IconComponent };
-
 export { QuantumNeuralNetworkPlatform, IconComponent, IconComponent };
-
 export { QuantumNeuralNetworkPlatform, IconComponent, IconComponent };
-
 export { QuantumNeuralNetworkPlatform, IconComponent, IconComponent };

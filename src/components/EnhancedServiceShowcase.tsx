@@ -1,135 +1,133 @@
-import {  import { motion, AnimatePresence  } from 'framer-motion';
-
+import React from "react"
+import {  import { motion, AnimatePresence  } from "framer-motion";
 export default function Page() {
 ,
   {
 
-    id: 'quantum-computing-suite',
-    title: 'Quantum Computing Suite',
-    description: 'Next-generation quantum computing solutions for complex problem solving',
+    id: "quantum-computing-suite",
+    title: "Quantum Computing Suite",
+    description: "Next-generation quantum computing solutions for complex problem solving",
     icon: Rocket,
-    category: 'Emerging Tech',
-    features['Quantum algorithms',Hybrid classical-quantum',Scientific computing',Optimization'],;
-    pricing: '$5,000/month',
+    category: "Emerging Tech",
+    features["Quantum algorithms",Hybrid classical-quantum",Scientific computing",Optimization"],;
+    pricing: "$5,000/month",
     rating: 4.8,
     reviews: 89,
-    color: 'from-purple-500 to-pink-500',
-    link: '/emerging-tech/quantum-computing'
+    color: "from-purple-500 to-pink-500",
+    link: "/emerging-tech/quantum-computing"
   },
   {
 
-    id: 'cybersecurity-platform',
-    title: 'AI-Powered Cybersecurity Platform',
-    description: 'Intelligent threat detection and response with zero-trust architecture',
+    id: "cybersecurity-platform",
+    title: "AI-Powered Cybersecurity Platform",
+    description: "Intelligent threat detection and response with zero-trust architecture",
     icon: Shield,
-    category: 'Cybersecurity',
-    features['AI threat detection',Zero-trust architecture',Compliance automation',24/7 monitoring'],;
-    pricing: '$2,500/month',
+    category: "Cybersecurity",
+    features["AI threat detection",Zero-trust architecture",Compliance automation",24/7 monitoring"],;
+    pricing: "$2,500/month",
     rating: 4.9,
     reviews: 234,
-    color: 'from-red-500 to-orange-500',
+    color: "from-red-500 to-orange-500",
     popular: true,
-    link: '/it-services/cybersecurity'
+    link: "/it-services/cybersecurity"
   },
   {
 
-    id: 'cloud-devops-automation',
-    title: 'Cloud & DevOps Automation',
-    description: 'Scalable cloud infrastructure with intelligent automation',
+    id: "cloud-devops-automation",
+    title: "Cloud & DevOps Automation",
+    description: "Scalable cloud infrastructure with intelligent automation",
     icon: Cloud,
-    category: 'Cloud & DevOps',
-    features['Multi-cloud management',CI/CD automation',Infrastructure as code',Cost optimization'],;
-    pricing: '$1,500/month',
+    category: "Cloud & DevOps",
+    features["Multi-cloud management",CI/CD automation",Infrastructure as code",Cost optimization"],;
+    pricing: "$1,500/month",
     rating: 4.7,
     reviews: 189,
-    color: 'from-green-500 to-emerald-500',
-    link: '/it-services/cloud-devops'
+    color: "from-green-500 to-emerald-500",
+    link: "/it-services/cloud-devops"
   },
   {
 
-    id: 'blockchain-defi-platform',
-    title: 'Blockchain & DeFi Platform',
-    description: 'Decentralized finance solutions with advanced blockchain technology',
+    id: "blockchain-defi-platform",
+    title: "Blockchain & DeFi Platform",
+    description: "Decentralized finance solutions with advanced blockchain technology",
     icon: Globe,
-    category: 'Blockchain & Web3',
-    features['DeFi protocols',Smart contracts',Yield optimization',Cross-chain support'],;
-    pricing: '$1,800/month',
+    category: "Blockchain & Web3",
+    features["DeFi protocols",Smart contracts",Yield optimization",Cross-chain support"],;
+    pricing: "$1,800/month",
     rating: 4.6,
     reviews: 123,
-    color: 'from-yellow-500 to-orange-500',
-    link: '/emerging-tech/blockchain-defi'
+    color: "from-yellow-500 to-orange-500",
+    link: "/emerging-tech/blockchain-defi"
   },
   {
 
-    id: 'digital-transformation',
-    title: 'Digital Transformation Consulting',
-    description: 'End-to-end business transformation with cutting-edge technology',
+    id: "digital-transformation",
+    title: "Digital Transformation Consulting",
+    description: "End-to-end business transformation with cutting-edge technology",
     icon: TrendingUp,
-    category: 'Digital Transformation',
-    features['Strategy consulting',Process optimization',Change management',ROI tracking'],;
-    pricing: '$3,500/month',
+    category: "Digital Transformation",
+    features["Strategy consulting",Process optimization",Change management",ROI tracking"],;
+    pricing: "$3,500/month",
     rating: 4.8,
     reviews: 167,
-    color: 'from-indigo-500 to-purple-500',
-    link: '/services/digital-transformation'
+    color: "from-indigo-500 to-purple-500",
+    link: "/services/digital-transformation"
   },
   {
 
-    id: 'micro-saas-platform',
-    title: 'Micro SaaS Development Platform',
-    description: 'Rapid development and deployment of SaaS applications',
+    id: "micro-saas-platform",
+    title: "Micro SaaS Development Platform",
+    description: "Rapid development and deployment of SaaS applications",
     icon: Code,
-    category: 'Micro SAAS',
-    features['Rapid prototyping',Scalable architecture',Multi-tenancy',Analytics dashboard'],;
-    pricing: '$899/month',
+    category: "Micro SAAS",
+    features["Rapid prototyping",Scalable architecture",Multi-tenancy",Analytics dashboard"],;
+    pricing: "$899/month",
     rating: 4.7,
     reviews: 98,
-    color: 'from-cyan-500 to-blue-500',
-    link: '/micro-saas/development-platform'
+    color: "from-cyan-500 to-blue-500",
+    link: "/micro-saas/development-platform"
   },
   {
 
-    id: 'healthcare-ai',
-    title: 'Healthcare AI Solutions',
-    description: 'AI-powered diagnostic and patient care optimization',
+    id: "healthcare-ai",
+    title: "Healthcare AI Solutions",
+    description: "AI-powered diagnostic and patient care optimization",
     icon: Users,
-    category: 'Healthcare AI',
-    features['Medical imaging AI',Predictive diagnostics',Patient monitoring',HIPAA compliant'],;
-    pricing: '$4,500/month',
+    category: "Healthcare AI",
+    features["Medical imaging AI",Predictive diagnostics",Patient monitoring",HIPAA compliant"],;
+    pricing: "$4,500/month",
     rating: 4.9,
     reviews: 78,
-    color: 'from-emerald-500 to-teal-500',
-    link: '/ai-services/healthcare'
+    color: "from-emerald-500 to-teal-500",
+    link: "/ai-services/healthcare"
 
 ];
-
-  'Cybersecurity',;
-  'Cloud & DevOps',;
-  'Blockchain & Web3',;
-  'Digital Transformation',;
-  'Micro SAAS',;
-  'Healthcare AI';
+  "Cybersecurity",;
+  "Cloud & DevOps",;
+  "Blockchain & Web3",;
+  "Digital Transformation",;
+  "Micro SAAS",;
+  "Healthcare AI";
 ]}
       },
       { threshold: 0.1 }
     );
-
     if(element) {
       observer.observe(element)}
 
     return () => observer.disconnect()}, []);
-
       />;
     ))};
           i < Math.floor(rating) ;
-            ? 'text-yellow-400 fill-current' ;
-            : 'text-gray-400';`
-        }`};
+            ? "text-yellow-400 fill-current" ;
+            : "text-gray-400";"
+        }"};
       />;) ) };
   return ()
+}
     <section id = "service-showcase" className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">"
       <div className="max-w-7xl mx-auto px-6">
-        {/* Header */}
+        {/* comment */}
         <motion.div
           initial = {
 
@@ -156,7 +154,7 @@ export default function Page() {
             cutting - edge AI, cybersecurity, and innovative digital transformation services.</p>
         </motion.div>
 
-        {/* Category Filter */}
+        {/* comment */}
         <motion.div
           initial = {
 
@@ -181,17 +179,17 @@ export default function Page() {
           {categories.map((category, index) => (
             <button
               key={category}
-              onClick={() => setSelectedCategory(category)}`
-              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${selectedCategory === category'
-                  ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white shadow-lg shadow-zion-cyan/25''
-                  : 'bg-zion-slate-light text-gray-300 hover:bg-zion-cyan/10 hover:text-zion-cyan border border-zion-slate'`
-              }`}
+              onClick={() => setSelectedCategory(category)}"
+              className={"px-6 py-3 rounded-full font-semibold transition-all duration-300 ${selectedCategory === category"
+                  ? "bg-gradient-to-r from-zion-cyan to-zion-blue text-white shadow-lg shadow-zion-cyan/25""
+                  : "bg-zion-slate-light text-gray-300 hover:bg-zion-cyan/10 hover:text-zion-cyan border border-zion-slate""
+              }"}
 
               {category}
             </button>) ) }
         </motion.div>
 
-        {/* Services Grid */}
+        {/* comment */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
@@ -224,18 +222,17 @@ export default function Page() {
 
                 <Link to={service.link}>"
                   <div className="bg-gradient-to-br from-zion-slate to-zion-slate-light p-8 rounded-2xl border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/10 h-full">
-                    {/* Popular Badge */}
+                    {/* comment */}
                     {service.popular && ("
                       <div className="absolute -top-3 -right-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-black px-4 py-1 rounded-full text-sm font-bold">
                         Popular
                       </div>) }
 
-                    {/* Service Icon */}`
-                    <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>;"
+                    {/* comment */}"
+                    <div className={"w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300"}>;"
                       <service.icon className="w-8 h-8 text-white" />
                     </div>
-
-                    {/* Service Info */}"
+                    {/* comment */}"
                     <div className="space-y-4">"
                       <h3 className="text-xl font-bold text-white group-hover:text-zion-cyan transition-colors duration-300">
                         {service.title}
@@ -244,8 +241,7 @@ export default function Page() {
                       <p className="text-gray-400 leading-relaxed">
                         {service.description}
                       </p>
-
-                      {/* Features */}"
+                      {/* comment */}"
                       <div className="space-y-2">
                         {service.features.slice(0, 3).map((feature, featureIndex) => ("
                           <div key={featureIndex} className="flex items-center text-sm text-gray-300">"
@@ -257,8 +253,7 @@ export default function Page() {
                             +{service.features.length-3} more features
                           </div>) }
                       </div>
-
-                      {/* Pricing & Rating */}"
+                      {/* comment */}"
                       <div className="flex items-center justify-between pt-4 border-t border-zion-slate">"
                         <div className="flex items-center space-x-2">"
                           <span className="text-2xl font-bold text-zion-cyan">{service.pricing}</span>
@@ -270,8 +265,7 @@ export default function Page() {
                           <span className="text-sm text-gray-400">({service.reviews})</span>
                         </div>
                       </div>
-
-                      {/* CTA Button */}"
+                      {/* comment */}"
                       <div className="flex items-center justify-between pt-4">"
                         <span className="text-sm text-zion-cyan font-semibold">
                           Learn More
@@ -284,7 +278,7 @@ export default function Page() {
           </AnimatePresence>
         </motion.div>
 
-        {/* CTA Section */}
+        {/* comment */}
         <motion.div
           initial = {
 
@@ -332,4 +326,4 @@ export default function Page() {
         </motion.div>;
       </div>;
     </section>;) };
-'"`
+"""

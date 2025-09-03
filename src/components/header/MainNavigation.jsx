@@ -1,11 +1,9 @@
-import React, { useState } from 'react';
-import { Link  } from 'react-router-dom';
-
+import React, { useState } from "react";
+import { Link  } from "react-router-dom";
 export default function Page() {      >
-        <Home className="w-4 h-4 mr-1" />
+        <Home className="w-4 h-4 mr-1"  />
         Home
       </NavLink>
-
     }
 
   ]
@@ -133,7 +131,7 @@ export default function Page() {      >
                   item.current"""
                     ? "text-zion-cyan bg-zion-purple/10""
                     : "text-zion-slate-light hover: text-white hover:bg-zion-purple/10",
-                <ChevronDown className="{"h-4" w-4 transition-transform ${ activeDropdown === index ? "rotate-180" : "" }"}       />
+                <ChevronDown className="{"h-4" w-4 transition-transform ${ activeDropdown === index ? "rotate-180" : "" }"}         />
               
               {/* comment */} {activeDropdown === index && ("
                 <div className=""absolute" top-full left-0 mt-2 w-64 bg-zion-blue-dark/95 backdrop-blur-xl border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50">"

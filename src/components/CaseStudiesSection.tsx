@@ -1,5 +1,5 @@
-import {  import { motion  } from 'framer-motion';
-
+import React from "react"
+import {  import { motion  } from "framer-motion";
  params - Function parameters
  * @returns {*} Function return value
  */
@@ -29,7 +29,7 @@ export function CaseStudiesSection() {
             Success Stories
           </h2>"
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover how we've helped businesses across industries achieve
+            Discover how we"ve helped businesses across industries achieve
             remarkable results through innovative technology solutions.</p>
         </motion.div>
 "
@@ -59,7 +59,7 @@ export function CaseStudiesSection() {
 }}
             >"
               <div className="flex items-center mb-6">
-                <div className={`p-3 rounded-xl bg-gradient-to-r ${study.color} mr-4`}>"
+                <div className={"p-3 rounded-xl bg-gradient-to-r ${study.color} mr-4"}>"
                   <span className="text-2xl">{study.logo}</span>
                 </div>
                 <div>"
@@ -97,7 +97,6 @@ export function CaseStudiesSection() {
               </div>
             </motion.div>) ) }
         </div>
-
         <motion.div
           className="mt-16 text-center"          initial = {
 
@@ -145,7 +144,6 @@ export function CaseStudiesSection() {
         </motion.div>;
       </div>;
     </section>;) };
-
 export default CaseStudiesSection;"
             <span className="text-2xl">→</span>;
           </div>;
@@ -154,4 +152,4 @@ export default CaseStudiesSection;"
     </section>;) }
 export default CaseStudiesSection;
 export default CaseStudiesSection;
-'"`
+""`

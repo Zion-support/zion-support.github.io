@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
-
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence  } from "framer-motion";
 export default function Page() {
             catch(error) {
 
-                // console.error('Failed to parse accessibility settings:', error)}
+                // console.error("Failed to parse accessibility settings:", error)}
         }
     }, []);
     useEffect(() => {
@@ -12,48 +11,48 @@ export default function Page() {
 }, []);
         // Apply settings to document
         applySettings(settings);
-        // Save to localStorage'
-        localStorage.setItem('accessibility-settings', JSON.stringify(settings))}, [settings]);
+        // Save to localStorage"
+        localStorage.setItem("accessibility-settings", JSON.stringify(settings))}, [settings]);
     const applySettings = (newSettings) => {
 
         const root = document.documentElement;
         // High contrast
         if(newSettings.highContrast) {
 
-            root.style.setProperty('--high-contrast',1');
-            root.classList.add('high-contrast')}
+            root.style.setProperty("--high-contrast",1");
+            root.classList.add("high-contrast")}
         else {
 
-            root.style.setProperty('--high-contrast',0');
-            root.classList.remove('high-contrast')}
-        // Font size'
-        root.style.setProperty('--font-size', `${newSettings.fontSize}%`);
+            root.style.setProperty("--high-contrast",0");
+            root.classList.remove("high-contrast")}
+        // Font size"
+        root.style.setProperty("--font-size", "${newSettings.fontSize}%");
         // Reduced motion
         if(newSettings.reducedMotion) {
 
-            root.classList.add('reduced-motion')}
+            root.classList.add("reduced-motion")}
         else {
 
-            root.style.setProperty('--reduced-motion',no-preference')}
+            root.style.setProperty("--reduced-motion",no-preference")}
         // Apply focus indicator
         if(settings.focusIndicator) {
 
-            root.style.setProperty('--focus-visible',auto')}
+            root.style.setProperty("--focus-visible",auto")}
         else {
 
-            root.style.setProperty('--focus-visible',none')}
-        // Color blindness'
-        root.classList.remove('protanopia',deuteranopia',tritanopia');
-        if(newSettings.colorBlindness !== 'none') {
+            root.style.setProperty("--focus-visible",none")}
+        // Color blindness"
+        root.classList.remove("protanopia",deuteranopia",tritanopia");
+        if(newSettings.colorBlindness !== "none") {
 
             root.classList.add(newSettings.colorBlindness)}
         // Focus indicator
         if(newSettings.focusIndicator) {
 
-            root.classList.add('focus-visible')}
+            root.classList.add("focus-visible")}
         else {
 
-            root.classList.remove('focus-visible')}
+            root.classList.remove("focus-visible")}
     };
     const updateSetting = (key, value) => {
 
@@ -67,43 +66,48 @@ export default function Page() {
             screenReader: false,
             keyboardNavigation: false,
             focusIndicator: true,
-  colorBlindness: 'none'
+  colorBlindness: "none"
 
 };
         setSettings(defaultSettings)};
-    const tabs = ['
-        { id: 'general', label: 'General', icon: '⚙️' },
-        { id: 'visual', label: 'Visual', icon: '👁️' },
-        { id: 'audio', label: 'Audio', icon: '🔊' },
-        { id: 'navigation', label: 'Navigation', icon: '⌨️' }
+    const tabs = ["
+        { id: "general", label: "General", icon: "⚙️" },
+        { id: "visual", label: "Visual", icon: "👁️" },
+        { id: "audio", label: "Audio", icon: "🔊" },
+        { id: "navigation", label: "Navigation", icon: "⌨️" }
     ];
     const getScoreColor = (score) => {
 
         if(score >= 90)
-            return 'text-green-400';
+}
+            return "text-green-400";
         if(score >= 70)
-            return 'text-yellow-400';
-        return 'text-red-400'};
+}
+            return "text-yellow-400";
+        return "text-red-400"};
     const getScoreLabel = (score) => {
 
         if(score >= 90)
-            return 'Excellent';
+}
+            return "Excellent";
         if(score >= 70)
-            return 'Good';
+}
+            return "Good";
         if(score >= 50)
-            return 'Needs Improvement';
-        return 'Poor'};
+}
+            return "Needs Improvement";
+        return "Poor"};
     if(!isVisible)
+}
         return null;
     return (<>
-      {/* Toggle Button */}
+      {/* comment */}
       <button onClick={onToggle} className="fixed bottom-4 left-4 z-50 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-4 focus:ring-blue-300"  title="Accessibility Settings">"
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">"
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4"/>
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4"  />
         </svg>
       </button>
-
-      {/* Panel */}
+      {/* comment */}
       <AnimatePresence>
         {isOpen && (<motion.div initial = {
 
@@ -121,32 +125,30 @@ export default function Page() {
   x: -400 
 "
 }} className="fixed left-4 bottom-20 z-40 w-80 bg-white dark:bg-slate-800 rounded-lg shadow-2xl border border-gray-200 dark:border-slate-700 overflow-hidden">
-            {/* Header */}"
+            {/* comment */}"
             <div className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white p-4">"
               <div className="flex items-center justify-between">"
                 <h2 className="text-lg font-semibold">Accessibility Settings</h2>"
                 <button onClick={onToggle} className="text-white/80 hover:text-white transition-colors" >"
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">"
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12"/>
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12"  />
                   </svg>
                 </button>
               </div>
             </div>
-
-            {/* Tabs */}"
-            <div className="flex border-b border-gray-200 dark:border-slate-700">`
-              {tabs.map((tab) => (<button key={tab.id} onClick={() => setActiveTab(tab.id)} className={`flex-1 px-4 py-3 text-sm font-medium transition-colors ${activeTab === tab.id'
-                    ? 'text-blue-600 border-b-2 border-blue-600 bg-blue-50 dark:bg-blue-900/20''`
-                    : 'text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200'}`}>"
+            {/* comment */}"
+            <div className="flex border-b border-gray-200 dark:border-slate-700">"
+              {tabs.map((tab) => (<button key={tab.id} onClick={() => setActiveTab(tab.id)} className={"flex-1 px-4 py-3 text-sm font-medium transition-colors ${activeTab === tab.id"
+                    ? "text-blue-600 border-b-2 border-blue-600 bg-blue-50 dark:bg-blue-900/20"""
+                    : "text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200"}"}>"
                   <span className="mr-2">{tab.icon}</span>
                   {tab.label}
                 </button>) ) }
             </div>
-
-            {/* Content */}"
+            {/* comment */}"
             <div className="p-4 max-h-96 overflow-y-auto">"
-              <AnimatePresence mode="wait">'"
-                {activeTab === 'general' && (<motion.div key="general" initial = {
+              <AnimatePresence mode="wait">""
+                {activeTab === "general" && (<motion.div key="general" initial = {
 
   { opacity: 0,
   y: 20 
@@ -166,10 +168,11 @@ export default function Page() {
                       <label className="flex items-center space-x-3">"
                         <input type="checkbox" checked={settings.highContrast} onChange = {
 
-  (e) => updateSetting('highContrast',
+  (e) => updateSetting("highContrast",
   e.target.checked)
+}
 "
-} className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"/>"
+} className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500" />"
                         <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
                           High Contrast Mode
                         </span>
@@ -178,27 +181,27 @@ export default function Page() {
                         Increases contrast for better readability
                       </p>
                     </div>
-
                     <div>"
                       <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                         Font Size: {settings.fontSize}%
                       </label>"
                       <input type="range" min="50" max="200" step="10" value={settings.fontSize} onChange = {
 
-  (e) => updateSetting('fontSize',
+  (e) => updateSetting("fontSize",
   parseInt(e.target.value))
+}
 "
-} className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"/>
+} className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider" />
                     </div>
-
                     <div>"
                       <label className="flex items-center space-x-3">"
                         <input type="checkbox" checked={settings.reducedMotion} onChange = {
 
-  (e) => updateSetting('reducedMotion',
+  (e) => updateSetting("reducedMotion",
   e.target.checked)
+}
 "
-} className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"/>"
+} className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500" />"
                         <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
                           Reduced Motion
                         </span>
@@ -208,8 +211,8 @@ export default function Page() {
                       </p>
                     </div>
                   </motion.div>)}
-'"
-                {activeTab === 'visual' && (<motion.div key="visual" initial = {
+""
+                {activeTab === "visual" && (<motion.div key="visual" initial = {
 
   { opacity: 0,
   y: 20 
@@ -231,8 +234,9 @@ export default function Page() {
                       </label>
                       <select value={settings.colorBlindness} onChange = {
 
-  (e) => updateSetting('colorBlindness',
+  (e) => updateSetting("colorBlindness",
   e.target.value)
+}
 "
 } className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">"
                         <option value="none">None</option>"
@@ -241,15 +245,15 @@ export default function Page() {
                         <option value="tritanopia">Tritanopia(Blue-Blind)</option>
                       </select>
                     </div>
-
                     <div>"
                       <label className="flex items-center space-x-3">"
                         <input type="checkbox" checked={settings.focusIndicator} onChange = {
 
-  (e) => updateSetting('focusIndicator',
+  (e) => updateSetting("focusIndicator",
   e.target.checked)
+}
 "
-} className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"/>"
+} className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500" />"
                         <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
                           Enhanced Focus Indicators
                         </span>
@@ -259,8 +263,8 @@ export default function Page() {
                       </p>
                     </div>
                   </motion.div>)}
-'"
-                {activeTab === 'audio' && (<motion.div key="audio" initial = {
+""
+                {activeTab === "audio" && (<motion.div key="audio" initial = {
 
   { opacity: 0,
   y: 20 
@@ -280,10 +284,11 @@ export default function Page() {
                       <label className="flex items-center space-x-3">"
                         <input type="checkbox" checked={settings.screenReader} onChange = {
 
-  (e) => updateSetting('screenReader',
+  (e) => updateSetting("screenReader",
   e.target.checked)
+}
 "
-} className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"/>"
+} className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500" />"
                         <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
                           Screen Reader Mode
                         </span>
@@ -305,8 +310,8 @@ export default function Page() {
                       </div>
                     </div>
                   </motion.div>)}
-'"
-                {activeTab === 'navigation' && (<motion.div key="navigation" initial = {
+""
+                {activeTab === "navigation" && (<motion.div key="navigation" initial = {
 
   { opacity: 0,
   y: 20 
@@ -326,10 +331,11 @@ export default function Page() {
                       <label className="flex items-center space-x-3">"
                         <input type="checkbox" checked={settings.keyboardNavigation} onChange = {
 
-  (e) => updateSetting('keyboardNavigation',
+  (e) => updateSetting("keyboardNavigation",
   e.target.checked)
+}
 "
-} className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"/>"
+} className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500" />"
                         <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
                           Enhanced Keyboard Navigation
                         </span>
@@ -353,8 +359,7 @@ export default function Page() {
                   </motion.div>) }
               </AnimatePresence>
             </div>
-
-            {/* Footer */}"
+            {/* comment */}"
             <div className="border-t border-gray-200 dark:border-slate-700 p-4 bg-gray-50 dark:bg-slate-700/50">"
               <div className="flex space-x-2">"
                 <button onClick={resetSettings} className="flex-1 px-4 py-2 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 border border-gray-300 dark:border-slate-600 rounded-md transition-colors">
@@ -369,4 +374,4 @@ export default function Page() {
       </AnimatePresence>
     </>)};
 export default AccessibilityPanel;
-'"`
+""`

@@ -1,89 +1,86 @@
 import { Link } from "react - router - dom";"""
 import { PenTool, FileText, Brain, Zap, Target, Users, ArrowRight, CheckCircle, Star, Globe, Shield, Type, Video, ShoppingBag, Mail } from "lucide - react";
-import React from 'react';"""
+import React from "react";"""
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";""""
 import { Button } from "@/components/ui/button";""""
 import { Badge } from "@/components/ui/badge";""""
 import SEO from "@/components/SEO";""""
 import { PenTool, FileText, Brain, Zap, Target, Users, ArrowRight, CheckCircle, Star, Globe, Shield, Type, Video, ShoppingBag, Mail } from "lucide-react";""""
 import { Link } from "react-router-dom";
-
     const features = []
         {}
 """
 """"
             title: "AI Writing Assistant",""""
             description: "Generate high-quality content for blogs, social media, and marketing campaigns",""""
-            icon: <PenTool className="h-6 w-6 text-zion-cyan"/>
+            icon: <PenTool className="h-6 w-6 text-zion-cyan"  />
         },
         {}
 """
 """"
             title: "Multi-Format Support",""""
             description: "Create content in various formats: text, images, videos, and audio",""""
-            icon: <FileText className="h-6 w-6 text-zion-purple"/>
+            icon: <FileText className="h-6 w-6 text-zion-purple"  />
         },
         {}
 """
 """"
-            title: "Brand Voice Consistency","'"""
-            description: "Maintain your brand's unique voice across all content pieces",""""
-            icon: <Type className="h-6 w-6 text-zion-blue"/>
+            title: "Brand Voice Consistency","""""
+            description: "Maintain your brand"s unique voice across all content pieces",""""
+            icon: <Type className="h-6 w-6 text-zion-blue"  />
         },
         {}
 """
 """"
             title: "SEO Optimization",""""
             description: "AI-powered SEO suggestions to improve content visibility and ranking",""""
-            icon: <Target className="h-6 w-6 text-zion-cyan"/>
+            icon: <Target className="h-6 w-6 text-zion-cyan"  />
 
     ];
-
     const contentTypes = []
         {}
 """
 """"
             title: "Blog Posts",""""
             description: "Long-form articles and blog content",""""
-            icon: <FileText className="h-8 w-8 text-zion-cyan"/>
+            icon: <FileText className="h-8 w-8 text-zion-cyan"  />
         },
         {}
 """
 """"
             title: "Social Media",""""
             description: "Posts for all major social platforms",""""
-            icon: <Users className="h-8 w-8 text-zion-purple"/>
+            icon: <Users className="h-8 w-8 text-zion-purple"  />
         },
         {}
 """
 """"
             title: "Marketing Copy",""""
             description: "Ads, landing pages, and promotional content",""""
-            icon: <Target className="h-8 w-8 text-zion-blue"/>
+            icon: <Target className="h-8 w-8 text-zion-blue"  />
         },
         {}
 """
 """"
             title: "Product Descriptions",""""
             description: "Compelling product and service descriptions",""""
-            icon: <ShoppingBag className="h-8 w-8 text-zion-cyan"/>
+            icon: <ShoppingBag className="h-8 w-8 text-zion-cyan"  />
         },
         {}
 """
 """"
             title: "Email Campaigns",""""
             description: "Newsletters and email marketing content",""""
-            icon: <Mail className="h-8 w-8 text-zion-purple"/>
+            icon: <Mail className="h-8 w-8 text-zion-purple"  />
         },
         {}
 """
 """"
             title: "Video Scripts",""""
             description: "Scripts for video content and presentations",""""
-            icon: <Video className="h-8 w-8 text-zion-blue"/>
+            icon: <Video className="h-8 w-8 text-zion-blue"  />
 
     ];
-
     const pricingPlans = []
         {}
 """
@@ -159,15 +156,14 @@ import { Link } from "react-router-dom";
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"""
             <SEO""""
                 title="AI Content Generator - Zion Tech Group""""
-                description="Generate high-quality, SEO-optimized content with AI-powered writing tools. Create blogs, social media posts, marketing copy, and more."""
-            />
+                description="Generate high-quality, SEO-optimized content with AI-powered writing tools. Create blogs, social media posts, marketing copy, and more.""" />
 """
-            {/* Hero Section */}""""
+            {/* comment */}""""
             <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">""""
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10"></div>""""
                 <div className="relative max-w-7xl mx-auto text-center">""""
                     <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/20 border border-cyan-500/30 text-cyan-400 text-sm font-medium mb-6">""""
-                        <Brain className="w-4 h-4 mr-2" />
+                        <Brain className="w-4 h-4 mr-2"  />
                         AI-Powered Content Generation"""
                     </div>""""
                     <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
@@ -179,18 +175,18 @@ import { Link } from "react-router-dom";
                     </p>""""
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">""""
                         <Button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">""""
-                            <Zap className="w-5 h-5 mr-2" />
+                            <Zap className="w-5 h-5 mr-2"  />
                             Start Free Trial"""
                         </Button>""""
                         <Button variant="outline" className="px-8 py-4 border-cyan-500/30 text-cyan-400 font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300">""""
-                            <FileText className="w-5 h-5 mr-2" />
+                            <FileText className="w-5 h-5 mr-2"  />
                             View Demo;
                         </Button>
                     </div>
                 </div>
             </section>
 """
-            {/* Features Section */}""""
+            {/* comment */}""""
             <section className="py-20 px-4 sm:px-6 lg:px-8">""""
                 <div className="max-w-7xl mx-auto">""""
                     <div className="text-center mb-16">""""
@@ -218,7 +214,7 @@ import { Link } from "react-router-dom";
                 </div>
             </section>
 """
-            {/* Content Types Section */}""""
+            {/* comment */}""""
             <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""""
                 <div className="max-w-7xl mx-auto">""""
                     <div className="text-center mb-16">""""
@@ -245,7 +241,7 @@ import { Link } from "react-router-dom";
                 </div>
             </section>
 """
-            {/* Pricing Section */}""""
+            {/* comment */}""""
             <section className="py-20 px-4 sm:px-6 lg:px-8">""""
                 <div className="max-w-7xl mx-auto">""""
                     <div className="text-center mb-16">""""
@@ -259,9 +255,9 @@ import { Link } from "react-router-dom";
 """"
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {pricingPlans.map((plan, index) => (
-                            <Card key={index} className={`relative bg-slate-800/50 border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105 ${}
-'`
-                                plan.popular ? 'border-cyan-500 shadow-cyan-500/25' : ''``
+                            <Card key={index} className={"relative bg-slate-800/50 border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105 ${}
+""
+                                plan.popular ? "border-cyan-500 shadow-cyan-500/25" : "'""
                             }`}>"""
                                 {plan.popular && (""""
                                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""""
@@ -288,7 +284,7 @@ import { Link } from "react-router-dom";
                                     <ul className="space-y-3 mb-6">"""
                                         {plan.features.map((feature, featureIndex) => (""""
                                             <li key={featureIndex} className="flex items-center text-gray-300">""""
-                                                <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                                                <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0"  />
                                                 {feature}
                                             </li>
                                         ))}"""
@@ -302,7 +298,7 @@ import { Link } from "react-router-dom";
                 </div>
             </section>
 """
-            {/* Benefits Section */}""""
+            {/* comment */}""""
             <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""""
                 <div className="max-w-7xl mx-auto">""""
                     <div className="text-center mb-16">""""
@@ -317,7 +313,7 @@ import { Link } from "react-router-dom";
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">"""
                         {benefits.map((benefit, index) => (""""
                             <div key={index} className="flex items-start space-x-3 p-4 rounded-lg bg-slate-800/50 border border-slate-700/50">""""
-                                <CheckCircle className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0" />""""
+                                <CheckCircle className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0"  />""""
                                 <span className="text-gray-300">{benefit}</span>
                             </div>
                         ))}
@@ -325,7 +321,7 @@ import { Link } from "react-router-dom";
                 </div>
             </section>
 """
-            {/* CTA Section */}""""
+            {/* comment */}""""
             <section className="py-20 px-4 sm:px-6 lg:px-8">""""
                 <div className="max-w-4xl mx-auto text-center">""""
                     <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">""""
@@ -336,11 +332,11 @@ import { Link } from "react-router-dom";
                     </p>""""
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">""""
                         <Button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">""""
-                            <Star className="w-5 h-5 mr-2" />
+                            <Star className="w-5 h-5 mr-2"  />
                             Start Free Trial"""
                         </Button>""""
                         <Button variant="outline" className="px-8 py-4 border-cyan-500/30 text-cyan-400 font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300">""""
-                            <ArrowRight className="w-5 h-5 mr-2" />
+                            <ArrowRight className="w-5 h-5 mr-2"  />
                             Learn More;
                         </Button>
                     </div>
@@ -351,9 +347,8 @@ import { Link } from "react-router-dom";
 </Card></Card></Card></Card></Card>}}}}}
 
 export { AIContentGenerator };
-
+export { AIContentGenerator };
+export { AIContentGenerator };
 export { AIContentGenerator };
 
-export { AIContentGenerator };
-
-export { AIContentGenerator };
+export default Component

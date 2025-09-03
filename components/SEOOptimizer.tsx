@@ -1,6 +1,5 @@
 import React from "react"
 interface SEOOptimizerProps {;
-
   title?: string;
    description?: string;
    keywords?: string;
@@ -74,6 +73,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({"",
   const fullTitle = title.includes("Zion Tech Group") ? title : "${title} | Zion Tech Group";""
   const currentUrl = canonicalUrl || (typeof window !== "undefined" ? window.location.href : "")
 }
+}
   // comment
 const defaultStructuredData = {},"
     "contactPoint": {""
@@ -90,7 +90,7 @@ return (
       <meta name = "description" content="{fullDescription}"  />""
       <meta name="keywords" content="{keywords}"  />""
       <meta name="viewport" content="width="device-width," initial-scale="1," maximum-scale=5"  />""
-      <meta name="robots" content="{"${noindex" ? "noindex" : "index"}, ${nofollow ? "nofollow" : "follow"}"}       />""
+      <meta name="robots" content="{"${noindex" ? "noindex" : "index"}, ${nofollow ? "nofollow" : "follow"}"}         />""
       <meta name="author" content="Zion Tech Group"  />"
       <meta name="generator" content="Next.js"  />
       {/* comment */}"

@@ -1,13 +1,14 @@
+import React from "react"
 import {}
-  Zap, 
-  Brain, 
-  Shield, 
-  Users, 
-  HardDrive, 
-  TrendingUp, 
-  Building2, 
-  FileText, 
-  HelpCircle, 
+  Zap,
+  Brain,
+  Shield,
+  Users,
+  HardDrive,
+  TrendingUp,
+  Building2,
+  FileText,
+  HelpCircle,
   BarChart3,
   Globe,
   Cpu,
@@ -71,8 +72,8 @@ import {}
   Cpu as CpuIcon,
   Database as DatabaseIcon,
   Users as UsersIcon,
-  X''''
-} from 'lucide-react';
+  X""""
+} from "lucide-react";
 interface Service {}
   id: string;
   name: string;
@@ -84,316 +85,308 @@ interface Service {}
     starter: string;
     professional: string;
     enterprise: string};
-  benefits: string[];'
-  useCases: string[];''
-  link: string;'''
-  status: 'available' | 'coming-soon' | 'beta'}
+  benefits: string[];"
+  useCases: string[];""
+  link: string;"""
+  status: "available" | "coming-soon" | "beta"}
 ;const services: Service[] = []
   // AI Services;
   {}
-'
-''
-'''
-    id: 'ai-autonomous-research-assistant','''
-    name: 'AI Autonomous Research Assistant','''
-    description: 'Advanced AI-powered research platform that autonomously conducts comprehensive research, analyzes data, and generates insights across multiple domains.','''
-    category: 'AI & Research',''
-    icon: Brain,'''
-    features: [''''
-      'Autonomous research execution',Multi-source data analysis',Intelligent insight generation',Real-time collaboration tools',Custom research workflows',Advanced analytics dashboard'
+"
+""
+"""
+    id: "ai-autonomous-research-assistant","""
+    name: "AI Autonomous Research Assistant","""
+    description: "Advanced AI-powered research platform that autonomously conducts comprehensive research, analyzes data, and generates insights across multiple domains.","""
+    category: "AI & Research",""
+    icon: Brain,"""
+    features: [""""
+      "Autonomous research execution",Multi-source data analysis",Intelligent insight generation",Real-time collaboration tools",Custom research workflows",Advanced analytics dashboard"
     ],
     pricing: {}
-'
-''
-'''
-      starter: '$299/month','''
-      professional: '$799/month','''
-      enterprise: 'Custom'''
-    },'''
-    benefits: [''''
-      'Reduce research time by 80%',Improve accuracy with AI validation',Scale research operations',Generate actionable insights',Maintain research quality standards'''
-    ],'''
-    useCases: [''''
-      'Market research and analysis',Academic research projects',Competitive intelligence',Product development research',Scientific research collaboration'''
-    ],'''
-    link: '/services/ai-autonomous-research-assistant','''
-    status: 'available'
+"
+""
+"""
+      starter: "$299/month","""
+      professional: "$799/month","""
+      enterprise: "Custom"""
+    },"""
+    benefits: [""""
+      "Reduce research time by 80%",Improve accuracy with AI validation",Scale research operations",Generate actionable insights",Maintain research quality standards"""
+    ],"""
+    useCases: [""""
+      "Market research and analysis",Academic research projects",Competitive intelligence",Product development research",Scientific research collaboration"""
+    ],"""
+    link: "/services/ai-autonomous-research-assistant","""
+    status: "available"
   },
   {}
-'
-''
-'''
-    id: 'ai-cybersecurity-platform','''
-    name: 'AI Cybersecurity Platform','''
-    description: 'Next-generation cybersecurity solution powered by artificial intelligence for real-time threat detection, automated response, and predictive security.','''
-    category: 'AI & Security',''
-    icon: Shield,'''
-    features: [''''
-      'AI-powered threat detection',Automated incident response',Predictive security analytics',Zero-day vulnerability detection',Behavioral analysis',Security orchestration'
+"
+""
+"""
+    id: "ai-cybersecurity-platform","""
+    name: "AI Cybersecurity Platform","""
+    description: "Next-generation cybersecurity solution powered by artificial intelligence for real-time threat detection, automated response, and predictive security.","""
+    category: "AI & Security",""
+    icon: Shield,"""
+    features: [""""
+      "AI-powered threat detection",Automated incident response",Predictive security analytics",Zero-day vulnerability detection",Behavioral analysis",Security orchestration"
     ],
     pricing: {}
-'
-''
-'''
-      starter: '$499/month','''
-      professional: '$1,299/month','''
-      enterprise: 'Custom'''
-    },'''
-    benefits: [''''
-      'Detect threats 10x faster',Reduce false positives by 90%',Automate security responses',Predict and prevent attacks',Compliance automation'''
-    ],'''
-    useCases: [''''
-      'Enterprise security operations',Financial institutions',Healthcare organizations',Government agencies',Critical infrastructure'''
-    ],'''
-    link: '/services/ai-cybersecurity-platform','''
-    status: 'available'
+"
+""
+"""
+      starter: "$499/month","""
+      professional: "$1,299/month","""
+      enterprise: "Custom"""
+    },"""
+    benefits: [""""
+      "Detect threats 10x faster",Reduce false positives by 90%",Automate security responses",Predict and prevent attacks",Compliance automation"""
+    ],"""
+    useCases: [""""
+      "Enterprise security operations",Financial institutions",Healthcare organizations",Government agencies",Critical infrastructure"""
+    ],"""
+    link: "/services/ai-cybersecurity-platform","""
+    status: "available"
   },
   {}
-'
-''
-'''
-    id: 'ai-healthcare-platform','''
-    name: 'AI Healthcare Platform','''
-    description: 'Comprehensive AI platform for healthcare providers offering diagnostic assistance, patient monitoring, and predictive healthcare analytics.','''
-    category: 'AI & Healthcare',''
-    icon: Heart,'''
-    features: [''''
-      'AI diagnostic assistance',Patient monitoring systems',Predictive health analytics',Medical image analysis',Drug interaction checking',Healthcare workflow automation'
+"
+""
+"""
+    id: "ai-healthcare-platform","""
+    name: "AI Healthcare Platform","""
+    description: "Comprehensive AI platform for healthcare providers offering diagnostic assistance, patient monitoring, and predictive healthcare analytics.","""
+    category: "AI & Healthcare",""
+    icon: Heart,"""
+    features: [""""
+      "AI diagnostic assistance",Patient monitoring systems",Predictive health analytics",Medical image analysis",Drug interaction checking",Healthcare workflow automation"
     ],
     pricing: {}
-'
-''
-'''
-      starter: '$399/month','''
-      professional: '$999/month','''
-      enterprise: 'Custom'''
-    },'''
-    benefits: [''''
-      'Improve diagnostic accuracy',Reduce healthcare costs',Enhance patient outcomes',Streamline workflows',Enable preventive care'''
-    ],'''
-    useCases: [''''
-      'Hospitals and clinics',Medical imaging centers',Pharmaceutical companies',Health insurance providers',Research institutions'''
-    ],'''
-    link: '/services/ai-healthcare-platform','''
-    status: 'available'
+"
+""
+"""
+      starter: "$399/month","""
+      professional: "$999/month","""
+      enterprise: "Custom"""
+    },"""
+    benefits: [""""
+      "Improve diagnostic accuracy",Reduce healthcare costs",Enhance patient outcomes",Streamline workflows",Enable preventive care"""
+    ],"""
+    useCases: [""""
+      "Hospitals and clinics",Medical imaging centers",Pharmaceutical companies",Health insurance providers",Research institutions"""
+    ],"""
+    link: "/services/ai-healthcare-platform","""
+    status: "available"
   },
   {}
-'
-''
-'''
-    id: 'ai-supply-chain-optimization','''
-    name: 'AI Supply Chain Optimization','''
-    description: 'Intelligent supply chain management platform that optimizes operations, predicts disruptions, and automates decision-making processes.','''
-    category: 'AI & Operations',''
-    icon: Workflow,'''
-    features: [''''
-      'Demand forecasting',Inventory optimization',Route optimization',Risk assessment',Supplier management',Real-time monitoring'
+"
+""
+"""
+    id: "ai-supply-chain-optimization","""
+    name: "AI Supply Chain Optimization","""
+    description: "Intelligent supply chain management platform that optimizes operations, predicts disruptions, and automates decision-making processes.","""
+    category: "AI & Operations",""
+    icon: Workflow,"""
+    features: [""""
+      "Demand forecasting",Inventory optimization",Route optimization",Risk assessment",Supplier management",Real-time monitoring"
     ],
     pricing: {}
-'
-''
-'''
-      starter: '$599/month','''
-      professional: '$1,499/month','''
-      enterprise: 'Custom'''
-    },'''
-    benefits: [''''
-      'Reduce costs by 15-25%',Improve delivery times',Minimize inventory waste',Enhance supplier relationships',Increase operational efficiency'''
-    ],'''
-    useCases: [''''
-      'Manufacturing companies',Retail chains',Logistics providers',E-commerce platforms',Distribution networks'''
-    ],'''
-    link: '/services/ai-supply-chain-optimization','''
-    status: 'available'
+"
+""
+"""
+      starter: "$599/month","""
+      professional: "$1,499/month","""
+      enterprise: "Custom"""
+    },"""
+    benefits: [""""
+      "Reduce costs by 15-25%",Improve delivery times",Minimize inventory waste",Enhance supplier relationships",Increase operational efficiency"""
+    ],"""
+    useCases: [""""
+      "Manufacturing companies",Retail chains",Logistics providers",E-commerce platforms",Distribution networks"""
+    ],"""
+    link: "/services/ai-supply-chain-optimization","""
+    status: "available"
   },
   {}
-'
-''
-'''
-    id: 'ai-quantum-hybrid-platform','''
-    name: 'AI Quantum Hybrid Platform','''
-    description: 'Revolutionary platform combining AI and quantum computing for solving complex optimization problems and advanced simulations.','''
-    category: 'AI & Quantum',''
-    icon: Atom,'''
-    features: [''''
-      'Quantum-AI hybrid algorithms',Complex optimization solving',Advanced simulations',Quantum machine learning',Hybrid computing workflows',Performance benchmarking'
+"
+""
+"""
+    id: "ai-quantum-hybrid-platform","""
+    name: "AI Quantum Hybrid Platform","""
+    description: "Revolutionary platform combining AI and quantum computing for solving complex optimization problems and advanced simulations.","""
+    category: "AI & Quantum",""
+    icon: Atom,"""
+    features: [""""
+      "Quantum-AI hybrid algorithms",Complex optimization solving",Advanced simulations",Quantum machine learning",Hybrid computing workflows",Performance benchmarking"
     ],
     pricing: {}
-'
-''
-'''
-      starter: '$1,999/month','''
-      professional: '$4,999/month','''
-      enterprise: 'Custom'''
-    },'''
-    benefits: [''''
-      'Solve previously intractable problems',Exponential performance improvements',Advanced research capabilities',Competitive advantage',Future-proof technology'''
-    ],'''
-    useCases: [''''
-      'Research institutions',Financial services',Pharmaceutical research',Climate modeling',Cryptography and security'''
-    ],'''
-    link: '/services/ai-quantum-hybrid-platform','''
-    status: 'beta'
+"
+""
+"""
+      starter: "$1,999/month","""
+      professional: "$4,999/month","""
+      enterprise: "Custom"""
+    },"""
+    benefits: [""""
+      "Solve previously intractable problems",Exponential performance improvements",Advanced research capabilities",Competitive advantage",Future-proof technology"""
+    ],"""
+    useCases: [""""
+      "Research institutions",Financial services",Pharmaceutical research",Climate modeling",Cryptography and security"""
+    ],"""
+    link: "/services/ai-quantum-hybrid-platform","""
+    status: "beta"
   },
   // IT Services;
   {}
-'
-''
-'''
-    id: 'cloud-devops-automation','''
-    name: 'Cloud DevOps Automation Platform','''
-    description: 'Comprehensive DevOps automation platform for cloud-native applications with CI/CD pipelines, infrastructure as code, and monitoring.','''
-    category: 'IT & Cloud',''
-    icon: Cloud,'''
-    features: [''''
-      'Automated CI/CD pipelines',Infrastructure as Code',Multi-cloud management',Monitoring and alerting',Security automation',Cost optimization'
+"
+""
+"""
+    id: "cloud-devops-automation","""
+    name: "Cloud DevOps Automation Platform","""
+    description: "Comprehensive DevOps automation platform for cloud-native applications with CI/CD pipelines, infrastructure as code, and monitoring.","""
+    category: "IT & Cloud",""
+    icon: Cloud,"""
+    features: [""""
+      "Automated CI/CD pipelines",Infrastructure as Code",Multi-cloud management",Monitoring and alerting",Security automation",Cost optimization"
     ],
     pricing: {}
-'
-''
-'''
-      starter: '$299/month','''
-      professional: '$799/month','''
-      enterprise: 'Custom'''
-    },'''
-    benefits: [''''
-      'Deploy 10x faster',Reduce operational costs',Improve reliability',Enhance security',Scale efficiently'''
-    ],'''
-    useCases: [''''
-      'Software development teams',DevOps engineers',Cloud architects',System administrators',Startup companies'''
-    ],'''
-    link: '/services/cloud-devops-automation','''
-    status: 'available'
+"
+""
+"""
+      starter: "$299/month","""
+      professional: "$799/month","""
+      enterprise: "Custom"""
+    },"""
+    benefits: [""""
+      "Deploy 10x faster",Reduce operational costs",Improve reliability",Enhance security",Scale efficiently"""
+    ],"""
+    useCases: [""""
+      "Software development teams",DevOps engineers",Cloud architects",System administrators",Startup companies"""
+    ],"""
+    link: "/services/cloud-devops-automation","""
+    status: "available"
   },
   {}
-'
-''
-'''
-    id: 'it-infrastructure-management','''
-    name: 'IT Infrastructure Management','''
-    description: 'Comprehensive IT infrastructure management solution for enterprise environments with monitoring, automation, and optimization.','''
-    category: 'IT & Infrastructure',''
-    icon: Server,'''
-    features: [''''
-      'Infrastructure monitoring',Automated provisioning',Performance optimization',Security management',Backup and recovery',Capacity planning'
+"
+""
+"""
+    id: "it-infrastructure-management","""
+    name: "IT Infrastructure Management","""
+    description: "Comprehensive IT infrastructure management solution for enterprise environments with monitoring, automation, and optimization.","""
+    category: "IT & Infrastructure",""
+    icon: Server,"""
+    features: [""""
+      "Infrastructure monitoring",Automated provisioning",Performance optimization",Security management",Backup and recovery",Capacity planning"
     ],
     pricing: {}
-'
-''
-'''
-      starter: '$199/month','''
-      professional: '$599/month','''
-      enterprise: 'Custom'''
-    },'''
-    benefits: [''''
-      'Reduce downtime by 99.9%',Lower operational costs',Improve performance',Enhance security posture',Streamline management'''
-    ],'''
-    useCases: [''''
-      'Enterprise IT departments',Data centers',Managed service providers',Educational institutions',Healthcare organizations'''
-    ],'''
-    link: '/services/it-infrastructure','''
-    status: 'available'
+"
+""
+"""
+      starter: "$199/month","""
+      professional: "$599/month","""
+      enterprise: "Custom"""
+    },"""
+    benefits: [""""
+      "Reduce downtime by 99.9%",Lower operational costs",Improve performance",Enhance security posture",Streamline management"""
+    ],"""
+    useCases: [""""
+      "Enterprise IT departments",Data centers",Managed service providers",Educational institutions",Healthcare organizations"""
+    ],"""
+    link: "/services/it-infrastructure","""
+    status: "available"
   },
   // Micro SAAS Services;
   {}
-'
-''
-'''
-    id: 'micro-crm-platform','''
-    name: 'Micro CRM Platform','''
-    description: 'Lightweight, powerful CRM solution designed for small to medium businesses with essential features and easy customization.','''
-    category: 'Micro SAAS',''
-    icon: Users,'''
-    features: [''''
-      'Contact management',Lead tracking',Sales pipeline',Email integration',Reporting and analytics',Mobile app access'
+"
+""
+"""
+    id: "micro-crm-platform","""
+    name: "Micro CRM Platform","""
+    description: "Lightweight, powerful CRM solution designed for small to medium businesses with essential features and easy customization.","""
+    category: "Micro SAAS",""
+    icon: Users,"""
+    features: [""""
+      "Contact management",Lead tracking",Sales pipeline",Email integration",Reporting and analytics",Mobile app access"
     ],
     pricing: {}
-'
-''
-'''
-      starter: '$29/month','''
-      professional: '$79/month','''
-      enterprise: '$199/month'''
-    },'''
-    benefits: [''''
-      'Affordable pricing',Easy to implement',Scalable solution',Improve customer relationships',Increase sales efficiency'''
-    ],'''
-    useCases: [''''
-      'Small businesses',Sales teams',Real estate agents',Consultants',Startups'''
-    ],'''
-    link: '/services/micro-crm','''
-    status: 'available'
+"
+""
+"""
+      starter: "$29/month","""
+      professional: "$79/month","""
+      enterprise: "$199/month"""
+    },"""
+    benefits: [""""
+      "Affordable pricing",Easy to implement",Scalable solution",Improve customer relationships",Increase sales efficiency"""
+    ],"""
+    useCases: [""""
+      "Small businesses",Sales teams",Real estate agents",Consultants",Startups"""
+    ],"""
+    link: "/services/micro-crm","""
+    status: "available"
   },
   {}
-'
-''
-'''
-    id: 'ai-business-intelligence','''
-    name: 'AI Business Intelligence','''
-    description: 'Intelligent business analytics platform that transforms data into actionable insights using advanced AI and machine learning.','''
-    category: 'AI & Analytics',''
-    icon: BarChart3,'''
-    features: [''''
-      'AI-powered analytics',Predictive modeling',Interactive dashboards',Data visualization',Automated reporting',Real-time insights'
+"
+""
+"""
+    id: "ai-business-intelligence","""
+    name: "AI Business Intelligence","""
+    description: "Intelligent business analytics platform that transforms data into actionable insights using advanced AI and machine learning.","""
+    category: "AI & Analytics",""
+    icon: BarChart3,"""
+    features: [""""
+      "AI-powered analytics",Predictive modeling",Interactive dashboards",Data visualization",Automated reporting",Real-time insights"
     ],
     pricing: {}
-'
-''
-'''
-      starter: '$399/month','''
-      professional: '$999/month','''
-      enterprise: 'Custom'''
-    },'''
-    benefits: [''''
-      'Make data-driven decisions',Identify trends and patterns',Predict future outcomes',Improve operational efficiency',Gain competitive advantage'''
-    ],'''
-    useCases: [''''
-      'Business analysts',Executives and managers',Marketing teams',Operations teams',Financial analysts'''
-    ],'''
-    link: '/services/ai-business-intelligence','''
-    status: 'available'
+"
+""
+"""
+      starter: "$399/month","""
+      professional: "$999/month","""
+      enterprise: "Custom"""
+    },"""
+    benefits: [""""
+      "Make data-driven decisions",Identify trends and patterns",Predict future outcomes",Improve operational efficiency",Gain competitive advantage"""
+    ],"""
+    useCases: [""""
+      "Business analysts",Executives and managers",Marketing teams",Operations teams",Financial analysts"""
+    ],"""
+    link: "/services/ai-business-intelligence","""
+    status: "available"
   }
 ];
-
 const categories = [
-  { id: 'all', name: 'All Services', icon: Globe, count: services.length },
-  { id: 'ai', name: 'AI Services', icon: Brain, count: services.filter(s => s.category.includes('AI')).length },
-  { id: 'it', name: 'IT Services', icon: Cpu, count: services.filter(s => s.category.includes('IT')).length },
-  { id: 'micro-saas', name: 'Micro SAAS', icon: Zap, count: services.filter(s => s.category.includes('Micro SAAS')).length },
-  { id: 'security', name: 'Security', icon: Shield, count: services.filter(s => s.category.includes('Security')).length },
-  { id: 'healthcare', name: 'Healthcare', icon: Heart, count: services.filter(s => s.category.includes('Healthcare')).length }
+  { id: "all", name: "All Services", icon: Globe, count: services.length },
+  { id: "ai", name: "AI Services", icon: Brain, count: services.filter(s => s.category.includes("AI")).length },
+  { id: "it", name: "IT Services", icon: Cpu, count: services.filter(s => s.category.includes("IT")).length },
+  { id: "micro-saas", name: "Micro SAAS", icon: Zap, count: services.filter(s => s.category.includes("Micro SAAS")).length },
+  { id: "security", name: "Security", icon: Shield, count: services.filter(s => s.category.includes("Security")).length },
+  { id: "healthcare", name: "Healthcare", icon: Heart, count: services.filter(s => s.category.includes("Healthcare")).length }
 ];
-
 export default function ComprehensiveServicesShowcase2025(...args: unknown[]): unknown {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [searchQuery, setSearchQuery] = useState("");
   const [selectedService, setSelectedService] = useState<Service | null>(null);
-
   const filteredServices = services.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || 
-      service.category.toLowerCase().includes(selectedCategory.replace('-', ' '));
+    const matchesCategory = selectedCategory === "all" || 
+      service.category.toLowerCase().includes(selectedCategory.replace("-", " "));
     const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.description.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesSearch;
   });
-
   const handleServiceClick = (service: Service) => {
     setSelectedService(service);
   };
-
   const closeModal = () => {
     setSelectedService(null);
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="Comprehensive Services Showcase 2025 | Zion Tech Group"
+      <SEO title="Comprehensive Services Showcase 2025 | Zion Tech Group"
         description="Explore our comprehensive portfolio of AI, IT, and Micro SAAS services. Discover innovative solutions designed to transform your business in 2025 and beyond."
-        keywords="AI services, IT services, Micro SAAS, cybersecurity, healthcare AI, quantum computing, cloud DevOps, business intelligence"
-      />
+        keywords="AI services, IT services, Micro SAAS, cybersecurity, healthcare AI, quantum computing, cloud DevOps, business intelligence"  />
 
-      {/* Hero Section */}
+      {/* comment */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-blue/20 via-zion-purple/20 to-zion-cyan/20"></div>        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div;
@@ -429,11 +422,11 @@ export default function ComprehensiveServicesShowcase2025(...args: unknown[]): u
         </div>
       </section>
 """
-      {/* Search and Filter Section */}""""
+      {/* comment */}""""
       <section className="py-12">""""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""""
           <div className="bg-zion-blue-dark/50 backdrop-blur-sm rounded-2xl p-6 border border-zion-purple/30">"""
-            {/* Search Bar */}""""
+            {/* comment */}""""
             <div className="mb-8">""""
               <div className="relative max-w-2xl mx-auto">""""
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-zion-slate-light"  />"""
@@ -441,38 +434,37 @@ export default function ComprehensiveServicesShowcase2025(...args: unknown[]): u
                   type="text""                  placeholder="Search for services, features, or use cases..."""
                   value={searchQuery}"""
                   onChange={(e) => setSearchQuery(e.target.value)}""""
-                  className="w-full pl-12 pr-4 py-4 bg-zion-blue-darker border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent text-lg"""
-                />
+                  className="w-full pl-12 pr-4 py-4 bg-zion-blue-darker border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent text-lg""" />
               </div>
             </div>
 """
-            {/* Category Filters */}""""
+            {/* comment */}""""
             <div className="flex flex-wrap justify-center gap-4">
               {categories.map((category) => (
                 <button;
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
-                  className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-medium transition-all duration-300 ${}
-'
-''
-'''`
-                    selectedCategory === category.id'''`'`
-                      ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg'''`'`'`
-                      : 'bg-zion-blue-darker text-zion-slate-light hover:bg-zion-purple/20 hover:text-white'````
-                  }`}
+                  className={"flex items-center space-x-2 px-6 py-3 rounded-lg font-medium transition-all duration-300 ${}
+"
+""
+""""
+                    selectedCategory === category.id""""""
+                      ? "bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg""""""""
+                      : "bg-zion-blue-darker text-zion-slate-light hover:bg-zion-purple/20 hover:text-white"""""
+                  }"}
                 >
                   Grid;
-                </button>'
-                <button''`
-                  onClick={() => setViewMode('list')}``
-                  className={`flex-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${}
-'
-''
-'''`
-                    viewMode === 'list' '''`'`
-                      ? 'bg-zion-cyan text-white' ''`'`'`
-                      : 'text-zion-slate-light hover:text-white'````
-                  }`}
+                </button>"
+                <button"""
+                  onClick={() => setViewMode("list")}""
+                  className={"flex-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${}
+"
+""
+""""
+                    viewMode === "list" """"""
+                      ? "bg-zion-cyan text-white" """""""
+                      : "text-zion-slate-light hover:text-white"""""
+                  }"}
                 >
                   List;
                 </button>
@@ -480,9 +472,9 @@ export default function ComprehensiveServicesShowcase2025(...args: unknown[]): u
             </div>
           </div>
 """
-          {/* Advanced Filters */}""""
+          {/* comment */}""""
           <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Price Range */}"""
+            {/* comment */}"""
             <div>""""
               <label className="block text-sm font-medium text-zion-slate-light mb-2">
                 Price Range: ${priceRange[0]} - ${priceRange[1]}"""
@@ -494,20 +486,17 @@ export default function ComprehensiveServicesShowcase2025(...args: unknown[]): u
                   max="10000"""
                   value={priceRange[0]}"""
                   onChange={(e) => setPriceRange([parseInt(e.target.value), priceRange[1]])}""""
-                  className="flex-1"""
-                />"""
+                  className="flex-1""" />"""
                 <input""""
                   type="range""""
                   min="0""""
                   max="10000"""
                   value={priceRange[1]}"""
                   onChange={(e) => setPriceRange([priceRange[0], parseInt(e.target.value)])}""""
-                  className="flex-1"""
-                />
+                  className="flex-1""" />
               </div>
             </div>
-
-            {/* Innovation Level */}"""
+            {/* comment */}"""
             <div>""""
               <label className="block text-sm font-medium text-zion-slate-light mb-2">
                 Innovation Level;
@@ -524,7 +513,7 @@ export default function ComprehensiveServicesShowcase2025(...args: unknown[]): u
               </select>
             </div>
 """
-            {/* Results Count */}""""
+            {/* comment */}""""
             <div className="flex items-center justify-end">""""
               <span className="text-zion-slate-light">
                 Showing {filteredServices.length} of {allServices.length} services;
@@ -534,20 +523,20 @@ export default function ComprehensiveServicesShowcase2025(...args: unknown[]): u
         </div>
       </section>;
 """
-      {/* Categories */}""""
+      {/* comment */}""""
       <section className="py-8">;""""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""""
           <div className="flex flex-wrap gap-3">
             {categories.map((category) => (
               <button;
-                key={category.id}`
-                onClick={() => setActiveCategory(category.id)}``
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${}
-'
-                  activeCategory === category.id''
-                    ? 'bg-zion-cyan text-white shadow-lg shadow-zion-cyan/25'''`
-                    : 'bg-zion-slate-dark text-zion-slate-light hover:bg-zion-slate hover:text-white border border-zion-slate-light/20'``
-                }`}"""
+                key={category.id}"
+                onClick={() => setActiveCategory(category.id)}""
+                className={"px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${}
+"
+                  activeCategory === category.id""
+                    ? "bg-zion-cyan text-white shadow-lg shadow-zion-cyan/25""""
+                    : "bg-zion-slate-dark text-zion-slate-light hover:bg-zion-slate hover:text-white border border-zion-slate-light/20"""
+                }"}"""
               >""""
                 <span className="mr-2">{category.icon}</span>
                 {category.name} ({category.count}) </button>) ) }
@@ -555,7 +544,7 @@ export default function ComprehensiveServicesShowcase2025(...args: unknown[]): u
         </div>
       </section>
 """
-      {/* Services Grid */}""""
+      {/* comment */}""""
       <section className="py-16">;""""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -568,25 +557,25 @@ export default function ComprehensiveServicesShowcase2025(...args: unknown[]): u
                 className="bg-zion-blue-dark/50 backdrop-blur-sm rounded-2xl p-6 border border-zion-purple/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 group cursor-pointer"""
                 onClick={() => handleServiceClick(service)}
               >"""
-                {/* Service Header */}""""
+                {/* comment */}""""
                 <div className="flex items-start justify-between mb-4">""""
                   <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">""""
-                    <service.icon className="w-6 h-6 text-white" />`
-                  </div>``
-                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${}
-'
-''
-'''`
-                    service.status === 'available' ? 'bg-green-500/20 text-green-400' :'''`'`
-                    service.status === 'beta' ? 'bg-blue-500/20 text-blue-400' :''`'`'`
-                    'bg-yellow-500/20 text-yellow-400'``'`'`
-                  }`}>'''
-                    {service.status === 'available' ? 'Available' :''''
-                     service.status === 'beta' ? 'Beta' : 'Coming Soon'}
+                    <service.icon className="w-6 h-6 text-white" />"
+                  </div>""
+                  <span className={"px-3 py-1 rounded-full text-xs font-medium ${}
+"
+""
+""""
+                    service.status === "available" ? "bg-green-500/20 text-green-400" :""""""
+                    service.status === "beta" ? "bg-blue-500/20 text-blue-400" :"""""""
+                    "bg-yellow-500/20 text-yellow-400"""""""
+                  }"}>"""
+                    {service.status === "available" ? "Available" :""""
+                     service.status === "beta" ? "Beta" : "Coming Soon"}
                   </span>
                 </div>
 """
-                {/* Service Content */}""""
+                {/* comment */}""""
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors">
                   {service.name}"""
                 </h3>""""
@@ -594,14 +583,14 @@ export default function ComprehensiveServicesShowcase2025(...args: unknown[]): u
                   {service.description}
                 </p>
 """
-                {/* Category */}""""
+                {/* comment */}""""
                 <div className="mb-4">""""
                   <span className="text-zion-cyan text-sm font-medium">
                     {service.category}
                   </span>
                 </div>
 """
-                {/* Features Preview */}""""
+                {/* comment */}""""
                 <div className="mb-6">""""
                   <div className="flex flex-wrap gap-2">
                     {service.features.slice(0, 3).map((feature, idx) => (
@@ -619,14 +608,14 @@ export default function ComprehensiveServicesShowcase2025(...args: unknown[]): u
                   </div>
                 </div>
 """
-                {/* Pricing Preview */}""""
+                {/* comment */}""""
                 <div className="mb-4">""""
                   <span className="text-white font-semibold">
                     Starting at {service.pricing.starter}
                   </span>
                 </div>
 """
-                {/* CTA */}""""
+                {/* comment */}""""
                 <div className="flex items-center justify-between">""""
                   <span className="text-zion-cyan text-sm font-medium group-hover:text-zion-cyan-light transition-colors">
                     Learn More"""
@@ -645,7 +634,7 @@ export default function ComprehensiveServicesShowcase2025(...args: unknown[]): u
         </div>
       </section>
 """
-      {/* CTA Section */}""""
+      {/* comment */}""""
       <section className="py-20">;""""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">""""
           <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 rounded-3xl p-12 border border-zion-cyan/20">""""
@@ -674,8 +663,7 @@ export default function ComprehensiveServicesShowcase2025(...args: unknown[]): u
           </div>
         </div>
       </section>
-
-      {/* Service Detail Modal */}
+      {/* comment */}
       <AnimatePresence>
         {selectedService && (<motion.div;
             initial={{ opacity: 0 }}
@@ -691,7 +679,7 @@ export default function ComprehensiveServicesShowcase2025(...args: unknown[]): u
               className="bg-zion-blue-dark rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto border border-zion-purple/30"""
               onClick={(e) => e.stopPropagation()}
             >"""
-              {/* Modal Header */}""""
+              {/* comment */}""""
               <div className="flex items-start justify-between mb-6">""""
                 <div className="flex items-center space-x-4">""""
                   <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center">""""
@@ -709,13 +697,13 @@ export default function ComprehensiveServicesShowcase2025(...args: unknown[]): u
                   <X className="w-6 h-6"  />                </button>
               </div>
 """
-              {/* Service Description */}""""
+              {/* comment */}""""
               <p className="text-zion-slate-light text-lg mb-8 leading-relaxed">
                 {selectedService.description}
               </p>"""
 """"
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                {/* Features */}"""
+                {/* comment */}"""
                 <div>""""
                   <h3 className="text-xl font-bold text-white mb-4">Key Features</h3>""""
                   <ul className="space-y-3">"""
@@ -726,8 +714,7 @@ export default function ComprehensiveServicesShowcase2025(...args: unknown[]): u
                     ))}
                   </ul>
                 </div>
-
-                {/* Benefits */}"""
+                {/* comment */}"""
                 <div>""""
                   <h3 className="text-xl font-bold text-white mb-4">Benefits</h3>""""
                   <ul className="space-y-3">"""
@@ -740,7 +727,7 @@ export default function ComprehensiveServicesShowcase2025(...args: unknown[]): u
                 </div>
               </div>
 """
-              {/* Use Cases */}""""
+              {/* comment */}""""
               <div className="mt-8">""""
                 <h3 className="text-xl font-bold text-white mb-4">Use Cases</h3>""""
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">"""
@@ -752,7 +739,7 @@ export default function ComprehensiveServicesShowcase2025(...args: unknown[]): u
                 </div>
               </div>
 """
-              {/* Pricing */}""""
+              {/* comment */}""""
               <div className="mt-8">""""
                 <h3 className="text-xl font-bold text-white mb-4">Pricing Plans</h3>""""
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">""""
@@ -771,7 +758,7 @@ export default function ComprehensiveServicesShowcase2025(...args: unknown[]): u
                 </div>
               </div>
 """
-              {/* CTA */}""""
+              {/* comment */}""""
               <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
                 <Link"""
                   to={selectedService.link}""""
@@ -798,11 +785,7 @@ export default function ComprehensiveServicesShowcase2025(...args: unknown[]): u
 
 
 export { ComprehensiveServicesShowcase2025 };
-
 export { ComprehensiveServicesShowcase2025 };
-
 export { ComprehensiveServicesShowcase2025 };
-
 export { ComprehensiveServicesShowcase2025 };
-
 export { ComprehensiveServicesShowcase2025 };

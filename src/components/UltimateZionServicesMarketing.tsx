@@ -1,81 +1,78 @@
+import React from "react"
 
 const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
+  const [selectedCategory, setSelectedCategory] = useState("all");
   const categories = [{
-      id: 'quantum - computing',
-      name: 'Quantum Computing & AI',
-      icon: '⚛️',
-      color: 'from - blue - 600 to - cyan - 600',
-      description: 'Revolutionary quantum computing solutions that solve previously impossible problems',
-      marketSize: '$65.4 billion by 2027',
-      growthRate: '500% annually'
+      id: "quantum - computing",
+      name: "Quantum Computing & AI",
+      icon: "⚛️",
+      color: "from - blue - 600 to - cyan - 600",
+      description: "Revolutionary quantum computing solutions that solve previously impossible problems",
+      marketSize: "$65.4 billion by 2027",
+      growthRate: "500% annually"
     },
     {
-      id: 'blockchain - web3',
-      name: 'Blockchain & Web3',
-      icon: '🔗',
-      color: 'from - green - 600 to - emerald - 600',
-      description: 'Next - generation decentralized solutions with AI optimization',
-      marketSize: '$67.4 billion by 2027',
-      growthRate: '400% annually'
+      id: "blockchain - web3",
+      name: "Blockchain & Web3",
+      icon: "🔗",
+      color: "from - green - 600 to - emerald - 600",
+      description: "Next - generation decentralized solutions with AI optimization",
+      marketSize: "$67.4 billion by 2027",
+      growthRate: "400% annually"
     },
     {
-      id: 'space - tech',
-      name: 'Space Technology',
-      icon: '🛰️',
-      color: 'from - indigo - 600 to - purple - 600',
-      description: 'AI - powered satellite and space mission management',
-      marketSize: '$469.8 billion by 2027',
-      growthRate: '300% annually'
+      id: "space - tech",
+      name: "Space Technology",
+      icon: "🛰️",
+      color: "from - indigo - 600 to - purple - 600",
+      description: "AI - powered satellite and space mission management",
+      marketSize: "$469.8 billion by 2027",
+      growthRate: "300% annually"
     },
     {
-      id: 'biotech-ai',
-      name: 'Biotech & AI',
-      icon: '🧬',
-      color: 'from - red - 600 to - pink - 600',
-      description: 'Revolutionary biomedical research and drug discovery',
-      marketSize: '$67.8 billion by 2027',
-      growthRate: '600% annually'
+      id: "biotech-ai",
+      name: "Biotech & AI",
+      icon: "🧬",
+      color: "from - red - 600 to - pink - 600",
+      description: "Revolutionary biomedical research and drug discovery",
+      marketSize: "$67.8 billion by 2027",
+      growthRate: "600% annually"
     },
     {
-      id: 'emerging - tech',
-      name: 'Emerging Technology',
-      icon: '🚀',
-      color: 'from - orange - 600 to - red - 600',
-      description: 'Cutting - edge technologies that define the future',
-      marketSize: '$3.7 billion by 2027',
-      growthRate: '800% annually'
+      id: "emerging - tech",
+      name: "Emerging Technology",
+      icon: "🚀",
+      color: "from - orange - 600 to - red - 600",
+      description: "Cutting - edge technologies that define the future",
+      marketSize: "$3.7 billion by 2027",
+      growthRate: "800% annually"
     },
     {
-      id: 'micro - saas',
-      name: 'Micro SAAS Solutions',
-      icon: '💻',
-      color: 'from - blue - 600 to - indigo - 600',
-      description: 'Intelligent business automation and optimization',
-      marketSize: '$15.8 billion by 2027',
-      growthRate: '200% annually'
+      id: "micro - saas",
+      name: "Micro SAAS Solutions",
+      icon: "💻",
+      color: "from - blue - 600 to - indigo - 600",
+      description: "Intelligent business automation and optimization",
+      marketSize: "$15.8 billion by 2027",
+      growthRate: "200% annually"
     },
     {
-      id: 'it - services',
-      name: 'Enterprise IT Services', ;      icon: '🖥️', ;
-      color: 'from-gray-600 to-slate-600',;
-      description: 'Advanced infrastructure and DevOps solutions',;
-      marketSize: '$25.2 billion by 2027',;
-      growthRate: '150% annually'};
+      id: "it - services",
+      name: "Enterprise IT Services", ;      icon: "🖥️", ;
+      color: "from-gray-600 to-slate-600",;
+      description: "Advanced infrastructure and DevOps solutions",;
+      marketSize: "$25.2 billion by 2027",;
+      growthRate: "150% annually"};
   ];
-
-    if(categoryId === 'all') return ultimateZionServices2025;
+    if(categoryId === "all") return ultimateZionServices2025;
     return ultimateZionServices2025.filter(service => service.category === categoryId) };
-
   const selectedServices = getServicesByCategory(selectedCategory) ;
-
   return (<div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - purple - 900 to - slate - 900 text-white">
-      {/* Hero Section */}
+      {/* comment */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div  className="max - w-7xl mx - auto text-center">
           <motion.h1
-            className="text-4xl md:text-6xl font - bold mb-6"      {/* Hero Section */}"
+            className="text-4xl md:text-6xl font - bold mb-6"      {/* comment */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto text-center">
           <motion.h1 "
@@ -95,7 +92,7 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
             transition={{ duration: 0.6 }}
           >
             Zion Technology Group
-            <br />"
+            <br  />"
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
               Ultimate Services Portfolio 2025
             </span>
@@ -124,7 +121,7 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
             Leading the future with revolutionary quantum computing, AI - powered solutions, blockchain innovations,
             and cutting - edge technology services that transform industries and create unprecedented value.</motion.p>
 
-          {/* Comp Highlights */}
+          {/* comment */}
           <motion.div
             className="grid grid - cols - 1 md:grid - cols - 4 gap-6 mb-12"            initial = {
 
@@ -167,7 +164,7 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
             </div>
           </motion.div>
 
-          {/* Contact Information */}
+          {/* comment */}
           <motion.div
             className="bg-gradient - to - r from - purple - 600 / 20 to - pink - 600 / 20 backdrop - blur - lg rounded-xl p - 6 mb-8 max - w-4xl mx - auto border border-purple -400 / 30"            initial = {
 
@@ -220,8 +217,7 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
           </motion.div>
         </div>
       </section>
-
-      {/* Category Navigation */}
+      {/* comment */}
       <section className="py-12 px-4 sm:px-6 lg:px-8">
         <div  className="max - w-7xl mx -auto">
           <motion.div
@@ -241,9 +237,9 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
           >
             {categories.map((category) => (<button     key={category.id}
                 onClick={ () => setSelectedCategory(category.id) }
-                className={`px-6 py-3 rounded-xl border transition - all duration - 300 ${selectedCategory === category.id
-                    ? 'bg-gradient - to - r from - purple - 600 to - pink - 600 border-purple - 400 text-white shadow-lg'
-                    : 'bg-white / 10 border-white / 20 text-gray - 300 hover:bg-white / 20 hover:border-white / 40'                }`}
+                className={"px-6 py-3 rounded-xl border transition - all duration - 300 ${selectedCategory === category.id
+                    ? "bg-gradient - to - r from - purple - 600 to - pink - 600 border-purple - 400 text-white shadow-lg"
+                    : "bg-white / 10 border-white / 20 text-gray - 300 hover:bg-white / 20 hover:border-white / 40"                }"}
               >"
                 <span className="mr-2 text-lg">{category.icon}</span>
                 {category.name}
@@ -252,14 +248,12 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
         </div>
       </section>;
 ;
-      {/* Category Overview */};
-      {selectedCategory !== 'all' && (;"
+      {/* comment */};
+      {selectedCategory !== "all" && (;"
         <section className="py-12 px-4 sm:px-6 lg:px-8">;"
           <div className="max-w-7xl mx-auto">;
             {(() => {;
-              
               if(!category) return null;
-
               return (<motion.div
                   className="bg-gradient - to - r from - purple - 600 / 20 to - pink - 600 / 20 backdrop - blur - lg rounded-2xl p - 8 border border-purple -400 / 30"                  initial = {
 
@@ -297,7 +291,7 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
                 </motion.div>;) }) () }          </div>
         </section>) }
 
-      {/* Services Grid */}
+      {/* comment */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div  className="max - w-7xl mx -auto">
           <motion.h2
@@ -314,8 +308,8 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
 
 }}
             transition={{ duration: 0.6 }}
-          >'`
-            {selectedCategory === 'all' ? 'All Revolutionary Services' : `${categories.find(c => c.id === selectedCategory)?.name} Services`}
+          >""
+            {selectedCategory === "all" ? "All Revolutionary Services" : "${categories.find(c => c.id === selectedCategory)?.name} Services"}
           </motion.h2>
 
           <motion.div
@@ -354,9 +348,9 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
                 }}"
                 className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105 group"
               >
-                {/* Service Header */}"
-                <div className="text-center mb-6">`
-                  <div className={`text-6xl mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                {/* comment */}"
+                <div className="text-center mb-6">"
+                  <div className={"text-6xl mb-4 group-hover:scale-110 transition-transform duration-300"}>
                     {service.icon}
                   </div>"
                   <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>"
@@ -364,21 +358,18 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
                     {service.innovationLevel}
                   </div>"
                   <p className="text-sm text-purple-400 font-medium">
-                    {service.category.replace('-',).toUpperCase()}
+                    {service.category.replace("-",).toUpperCase()}
                   </p>
                 </div>
-
-                {/* Tagline */}"
+                {/* comment */}"
                 <p className="text-gray-300 text-sm mb-4 text-center italic">
                   {service.tagline}
                 </p>
-
-                {/* Description */}"
+                {/* comment */}"
                 <p className="text-gray-400 text-sm mb-6 leading-relaxed">
                   {service.description}
                 </p>
-
-                {/* Pricing */}"
+                {/* comment */}"
                 <div className="bg-white/5 rounded-lg p-4 mb-6">"
                   <h4 className="text-purple-400 font-semibold mb-2">💰 Investment & Value</h4>"
                   <div className="space-y-1 text-sm">"
@@ -400,8 +391,7 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
                     </div>
                   </div>
                 </div>
-
-                {/* ROI and Benefits */}"
+                {/* comment */}"
                 <div className="mb-6">"
                   <h4 className="text-purple-400 font-semibold mb-2">📈 ROI & Benefits</h4>"
                   <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 rounded-lg p-3 mb-3">"
@@ -415,8 +405,7 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
                       </div>) ) }
                   </div>
                 </div>
-
-                {/* Technology Stack */}"
+                {/* comment */}"
                 <div className="mb-6">"
                   <h4 className="text-purple-400 font-semibold mb-2">🛠️ Technology Stack</h4>"
                   <div className="flex flex-wrap gap-2">
@@ -426,8 +415,7 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
                       </span>) ) }
                   </div>
                 </div>
-
-                {/* Market Information */}
+                {/* comment */}
                 {service.marketSize && ("
                   <div className="mb-6">"
                     <h4 className="text-purple-400 font-semibold mb-2">🌍 Market Opportunity</h4>"
@@ -438,7 +426,7 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
                     </div>
                   </div>) }
 
-                {/* Trial and Setup */}"
+                {/* comment */}"
                 <div className="flex justify-between items-center mb-6 text-sm">"
                   <div className="text-center">"
                     <div className="text-purple-400 font-semibold">🆓 Trial</div>"
@@ -449,8 +437,7 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
                     <div className="text-gray-300">{service.setupTime}</div>
                   </div>
                 </div>
-
-                {/* Call to Action */}"
+                {/* comment */}"
                 <div className="text-center">"
                   <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105">
                     🚀 Get Started Today
@@ -459,8 +446,7 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
                     Contact us for a personalized demo
                   </p>
                 </div>
-
-                {/* Contact Quick Access */}"
+                {/* comment */}"
                 <div className="mt-4 text-center">"
                   <div className="text-xs text-gray-400">"
                     📞 <a href="tel:+13024640950" className="text-blue-400 hover:text-blue-300">
@@ -474,8 +460,7 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
           </motion.div>
         </div>
       </section>
-
-      {/* Bottom CTA Section */}
+      {/* comment */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div  className="max - w-4xl mx - auto text-center">
           <motion.div
@@ -514,4 +499,4 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
         </div>;
       </section>;
     </div>;) };
-export default UltimateZionServicesMarketing;'"`
+export default UltimateZionServicesMarketing;""`

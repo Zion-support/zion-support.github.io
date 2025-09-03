@@ -1,14 +1,14 @@
-import React from 'react';'''
-import { Helmet } from 'react-helmet-async';
+import React from "react";"""
+import { Helmet } from "react-helmet-async";
 const Talent = () => {}
   return()
+}
     <>
       <Helmet>
         <title>Talent - Zion Tech Group</title>
         <meta;
           name="description""""
-          content="Find and hire top technology talent through Zion Tech Group. Connect with skilled professionals for your projects."""
-        />
+          content="Find and hire top technology talent through Zion Tech Group. Connect with skilled professionals for your projects.""" />
       </Helmet>"""
 """"
       <div className="min-h-screen bg-gray-50 py-12">""""
@@ -22,7 +22,7 @@ const Talent = () => {}
           </div>"""
 """"
           <div className="bg-white rounded-lg shadow-lg p-8">""""
-            <p className="text-gray-600 text-center">'
+            <p className="text-gray-600 text-center">"
               Talent page coming soon. We're building a comprehensive talent;
               platform.
             </p>
@@ -31,14 +31,8 @@ const Talent = () => {}
       </div>
     </>)};
 export default Talent;
-
-
 export { Talent };
-
 export { Talent };
-
 export { Talent };
-
 export { Talent };
-
 export { Talent };

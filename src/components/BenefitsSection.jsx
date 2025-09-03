@@ -1,69 +1,66 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
-import {  import { motion, AnimatePresence  } from 'framer-motion';
- from 'lucide-react';
-
+import React, { useState } from "react";
+import { motion, AnimatePresence  } from "framer-motion";
+import {  import { motion, AnimatePresence  } from "framer-motion";
+ from "lucide-react";
 const benefits = [{
 
-    icon: <Zap className="w-10 h-10" />,
-    title: 'Lightning Fast Delivery',
-    description:'
-      'Get your projects delivered in record time with our streamlined development process.',
-    stats: '50% Faster',
-    color: 'from-yellow-500 to-orange-500',
-    bgColor: 'from-yellow-500/20 to-orange-500/20',
-    features: ['
-      'Agile development methodology',Parallel development teams',Automated testing pipeline',Continuous deployment',
+    icon: <Zap className="w-10 h-10"  />,
+    title: "Lightning Fast Delivery",
+    description:"
+      "Get your projects delivered in record time with our streamlined development process.",
+    stats: "50% Faster",
+    color: "from-yellow-500 to-orange-500",
+    bgColor: "from-yellow-500/20 to-orange-500/20",
+    features: ["
+      "Agile development methodology",Parallel development teams",Automated testing pipeline",Continuous deployment",
     ]},
   {
 "
-    icon: <Shield className="w-10 h-10" />,
-    title: 'Enterprise Security',
-    description:'
-      'Bank-level security with SOC 2 compliance and 24/7 monitoring.',
-    stats: '99.9% Secure',
-    color: 'from-blue-500 to-cyan-500',
-    bgColor: 'from-blue-500/20 to-cyan-500/20',
-    features: ['
-      'SOC 2 Type II compliant',End-to-end encryption',Regular security audits',GDPR compliance',
+    icon: <Shield className="w-10 h-10"  />,
+    title: "Enterprise Security",
+    description:"
+      "Bank-level security with SOC 2 compliance and 24/7 monitoring.",
+    stats: "99.9% Secure",
+    color: "from-blue-500 to-cyan-500",
+    bgColor: "from-blue-500/20 to-cyan-500/20",
+    features: ["
+      "SOC 2 Type II compliant",End-to-end encryption",Regular security audits",GDPR compliance",
     ]},
   {
 "
-    icon: <TrendingUp className="w-10 h-10" />,
-    title: 'Proven ROI',
-    description: 'Average 300% ROI within 6 months of implementation.',
-    stats: '300% ROI',
-    color: 'from-green-500 to-emerald-500',
-    bgColor: 'from-green-500/20 to-emerald-500/20',
-    features: ['
-      'Performance optimization',Cost reduction strategies',Revenue growth solutions',Efficiency improvements',
+    icon: <TrendingUp className="w-10 h-10"  />,
+    title: "Proven ROI",
+    description: "Average 300% ROI within 6 months of implementation.",
+    stats: "300% ROI",
+    color: "from-green-500 to-emerald-500",
+    bgColor: "from-green-500/20 to-emerald-500/20",
+    features: ["
+      "Performance optimization",Cost reduction strategies",Revenue growth solutions",Efficiency improvements",
     ]},
   {
 "
-    icon: <CheckCircle className="w-10 h-10" />,
-    title: 'Quality Guaranteed',
-    description: '30-day money-back guarantee with free migration support.',
-    stats: '100% Quality',
-    color: 'from-purple-500 to-pink-500',
-    bgColor: 'from-purple-500/20 to-pink-500/20',
-    features: ['
-      'Comprehensive testing',Code quality standards',Performance benchmarks',User experience focus',
+    icon: <CheckCircle className="w-10 h-10"  />,
+    title: "Quality Guaranteed",
+    description: "30-day money-back guarantee with free migration support.",
+    stats: "100% Quality",
+    color: "from-purple-500 to-pink-500",
+    bgColor: "from-purple-500/20 to-pink-500/20",
+    features: ["
+      "Comprehensive testing",Code quality standards",Performance benchmarks",User experience focus",
     ]},
 ];
 ;
 const additionalStats = [{
 "
-    icon: <Users className="w-8 h-8" />,
-    value: '500+',
-    label: 'Happy Clients'},"
-  { icon: <Clock className="w-8 h-8" />, value: '24/7', label: 'Support' },"
-  { icon: <Star className="w-8 h-8" />, value: '4.9/5', label: 'Rating' },"
-  { icon: <Award className="w-8 h-8" />, value: '50+', label: 'Awards' },
+    icon: <Users className="w-8 h-8"  />,
+    value: "500+",
+    label: "Happy Clients"},"
+  { icon: <Clock className="w-8 h-8"  />, value: "24/7", label: "Support" },"
+  { icon: <Star className="w-8 h-8"  />, value: "4.9/5", label: "Rating" },"
+  { icon: <Award className="w-8 h-8"  />, value: "50+", label: "Awards" },
 ];
-
 export function BenefitsSection() {
   const [hoveredIndex, setHoveredIndex] = (useState < number) | (null > null);
-
   const containerVariants = {
 
     hidden: { opacity: 0 },
@@ -74,7 +71,6 @@ export function BenefitsSection() {
 
         staggerChildren: 0.2,
         delayChildren: 0.1}}};
-
   const itemVariants = {
 
     hidden: { y: 30, opacity: 0 },
@@ -85,8 +81,7 @@ export function BenefitsSection() {
       transition: {
 
         duration: 0.6,
-        ease: 'easeOut'}}};
-
+        ease: "easeOut"}}};
   const statsVariants = {
 
     hidden: { scale: 0.8, opacity: 0 },
@@ -97,32 +92,30 @@ export function BenefitsSection() {
       transition: {
 
         duration: 0.4,
-        ease: 'easeOut'}}};
-
+        ease: "easeOut"}}};
   return ("
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">
-      {/* Enhanced background pattern */}"
+      {/* comment */}"
       <div className="absolute inset-0 opacity-5">
         <div"
           className="absolute inset-0"
           style={{
 
-            backgroundImage: `radial-gradient(circle at 75% 75%, currentColor 1px, transparent 1px)`,
-            backgroundSize: '60px 60px'}}
+            backgroundImage: "radial-gradient(circle at 75% 75%, currentColor 1px, transparent 1px)",
+            backgroundSize: "60px 60px"}}
         />
       </div>
-
-      {/* Floating decorative elements */}"
+      {/* comment */}"
       <div className="absolute inset-0">
         <motion.div"
           className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan/20 rounded-full opacity-30"
           animate={{ rotate: 360 }}
-          transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
+          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
         />
         <motion.div"
           className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple/20 rounded-full opacity-30"
           animate={{ rotate: -360 }}
-          transition={{ duration: 25, repeat: Infinity, ease: 'linear' }}
+          transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
         />
         <motion.div"
           className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light/20 rounded-full opacity-20"
@@ -133,7 +126,7 @@ export function BenefitsSection() {
 
             duration: 3,
             repeat: Infinity,
-            ease: 'easeInOut'}}
+            ease: "easeInOut"}}
         />
       </div>
 "
@@ -152,7 +145,7 @@ export function BenefitsSection() {
           transition={{ duration: 0.6 }}
         >"
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-            Why Choose{' '}"
+            Why Choose{" "}"
             <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
               Zion Tech Group
             </span>
@@ -164,7 +157,7 @@ export function BenefitsSection() {
             every project to success.</p>
         </motion.div>
 
-        {/* Additional stats section */}
+        {/* comment */}
         <motion.div"
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 max-w-4xl mx-auto"
           variants={containerVariants}"
@@ -199,35 +192,32 @@ export function BenefitsSection() {
               whileHover={{ y: -8 }}
               transition={{
 
-                type: 'spring',
+                type: "spring",
                 stiffness: 300}}
             >"
               <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 group h-full">
-                {/* Icon with enhanced background */}
-                <div`
-                  className={`inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br ${benefit.color} mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110`}
+                {/* comment */}
+                <div"
+                  className={"inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br ${benefit.color} mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110"}
                 >"
                   <div className="text-white">{benefit.icon}</div>
                 </div>
-
-                {/* Stats badge */}
-                <div`
-                  className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${benefit.bgColor} border border-zion-cyan/30 mb-4`}
+                {/* comment */}
+                <div"
+                  className={"inline-block px-4 py-2 rounded-full bg-gradient-to-r ${benefit.bgColor} border border-zion-cyan/30 mb-4"}
                 >"
                   <span className="text-zion-cyan font-bold text-sm">
                     {benefit.stats}
                   </span>
                 </div>
-
-                {/* Title and description */}"
+                {/* comment */}"
                 <h3 className="text-xl font-bold text-white mb-4 group-hover:text-zion-cyan transition-colors">
                   {benefit.title}
                 </h3>"
                 <p className="text-zion-slate-light leading-relaxed mb-6">
                   {benefit.description}
                 </p>
-
-                {/* Features list */}
+                {/* comment */}
                 <AnimatePresence>
                   {hoveredIndex === index && (
                     <motion.div"
@@ -239,7 +229,7 @@ export function BenefitsSection() {
                       animate={{
 
                         opacity: 1,
-                        height: 'auto'}}
+                        height: "auto"}}
                       exit={{
 
                         opacity: 0,
@@ -265,18 +255,16 @@ export function BenefitsSection() {
                         </motion.div>) ) }
                     </motion.div>) }
                 </AnimatePresence>
-
-                {/* Hover indicator */}"
+                {/* comment */}"
                 <div className="mt-4 text-zion-cyan/60 text-xs">
-                  {hoveredIndex === index'
-                    ? 'Hover to see details''
-                    : 'Hover for details'}
+                  {hoveredIndex === index"
+                    ? "Hover to see details""
+                    : "Hover for details"}
                 </div>
               </div>
             </motion.div>) ) }
         </div>
-
-        {/* Call to action */}
+        {/* comment */}
         <motion.div"
           className="text-center mt-16"
           initial={{
@@ -309,3 +297,5 @@ export function BenefitsSection() {
   );
 }
 '"`
+
+export default Component

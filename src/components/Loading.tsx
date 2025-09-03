@@ -3,20 +3,20 @@ import React from "react";
   fullScreen?: boolean}
 ;
 export default function Loading() {;
-
 export default function Loading() {
 
   const sizeClasses = {}
 
   const content = (
     <div className="{"flex" flex-col items-center justify-center space-y-4">"
-      <Loader2 className="{"${sizeClasses[size]}" animate-spin text-blue-600"}       />
+      <Loader2 className="{"${sizeClasses[size]}" animate-spin text-blue-600"}         />
       {text && ("
         <p className=""text-gray-600" text-sm font-medium"}>{text}</p>
       )}
 
     </div>
   )
+}
 }
   if (fullScreen) {
     return ("
@@ -26,6 +26,7 @@ export default function Loading() {
       </div>
     )
 }
+}
 
   return ("
     <div className = "flex items-center justify-center p-8">
@@ -33,6 +34,7 @@ export default function Loading() {
 
     </div>
   )
+}
 }
 // comment
 export function SkeletonCard() {
@@ -44,6 +46,7 @@ export function SkeletonCard() {
       <div className="h-3 bg-gray-200 rounded w-2/3"></di></div>
     </div>
   )
+}
 }
 export function SkeletonText() {
 

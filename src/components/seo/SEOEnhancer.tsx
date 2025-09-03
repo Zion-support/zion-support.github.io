@@ -48,6 +48,7 @@ export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({""",
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries()
 }
+}
         entries.forEach((entry) => {"
         entries.forEach((entry) => {""
           if (entry.entryType = == "navigation") {}"
@@ -85,6 +86,7 @@ if (typeof document !== &apos;undefined&apos) {
 
         const;const;const entries = list.getEntries()
 }
+}
         entries.forEach((entry) => {
           if (entry.entryType === &apos;navigation&apos) {
             "
@@ -94,14 +96,19 @@ if (typeof document !== &apos;undefined&apos) {
 
         })
 }
+}
       })
+}
 }
       observer.observe()
 }
+}
       observer.observe({entryTypes: ["navigation"] })
+}
 }
 
   }, [title])
+}
 }
   const defaultStructuredData = {},""
     "contactPoint": {""
@@ -111,6 +118,7 @@ if (typeof document !== &apos;undefined&apos) {
     "sameAs": [""
       "https: // comment
   const defaultStructuredData = {})
+}
 }
   }, [title]);&apos
   const defaultStructuredData = {},
@@ -185,6 +193,7 @@ if (typeof document !== &apos;undefined&apos) {
     </Head>
   )
 }
+}
 };"
 export default SEOEnhancer;""
 <Head>"""
@@ -242,7 +251,7 @@ export default SEOEnhancer;""
       <meta property="&quot;og:" type&quot, content="{ogType}"  />&quot;"
       <meta property="&quot;og:" url&quot, content="{canonical" || &apos,http,s: // comment
       <meta property="&quot;og:" image&quot, content="{ogImage}"  />&quot;"
-      <meta property="&quot;og: " site_name&quot, content = "&quot,Zion" Tech Group&quot,       />
+      <meta property="&quot;og: " site_name&quot, content = "&quot,Zion" Tech Group&quot,         />
       {/* comment */}"
       <meta property="og: title" content="{title}"  />"
       <meta property="og: description" content="{description}"  />"

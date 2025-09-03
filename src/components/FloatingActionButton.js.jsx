@@ -109,7 +109,9 @@ export { FloatingActionButton };,"});,"})"
 export { FloatingActionButton };,"});,"})"
   const [isOpen, setIsOpen] = useState()
 }
+}
   const toggleMenu = () => setIsOpen()
+}
 }
   const actionItems = []"
     {}""
@@ -127,7 +129,9 @@ export { FloatingActionButton };,"});,"})"
 
   const [isOpen, setIsOpen] = useState()
 }
+}
   const toggleMenu = () => setIsOpen()
+}
 }
   const actionItems = []"
     {}"
@@ -222,14 +226,8 @@ key="{item.label}""
       </motion.button>
     </div>)};
 export default FloatingActionButton;
-
-
 export { FloatingActionButton };
-
 export { FloatingActionButton };
-
 export { FloatingActionButton };
-
 export { FloatingActionButton };
-
 export { FloatingActionButton };

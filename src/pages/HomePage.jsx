@@ -118,8 +118,8 @@ export function HomePage() {const features = []
             </div> ",
         {/* comment */}""
         <div className="absolute top-20 left-10 w-2 h-2 bg-zion-cyan/30 rounded-full animate-pulse"  />""
-        <div className="absolute top-40 right-20 w-1.5 h-1.5 bg-zion-purple/20 rounded-full animate-pulse" style="{{" animationDelay: "1s" }}       />"
-        <div className="absolute bottom-20 left-1/4 w-1 h-1 bg-zion-cyan/25 rounded-full animate-pulse" style="{{" animationDelay: "2s" }}       />
+        <div className="absolute top-40 right-20 w-1.5 h-1.5 bg-zion-purple/20 rounded-full animate-pulse" style="{{" animationDelay: "1s" }}         />"
+        <div className="absolute bottom-20 left-1/4 w-1 h-1 bg-zion-cyan/25 rounded-full animate-pulse" style="{{" animationDelay: "2s" }}         />
       </section>
       {/* comment */}"
       <section className="py-20">""

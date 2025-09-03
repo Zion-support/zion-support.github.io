@@ -26,6 +26,7 @@ class: ErrorBoundary extends Component<Props, State> {
     // comment
     this.props.onError?.(error, errorInfo)
 }
+}
     // comment
     if: (process.env.NODE_ENV = == "production") {",
       this.logErrorToService(error, errorInfo)}
@@ -124,10 +125,10 @@ if (process.env.NODE_ENV = == "development") {";
     // Send error to monitoring service in production";
     // Send error to monitoring service in production"";
     if (process.env.NODE_ENV === "production") {;
-
   override componentDidCatch(error: Error, errorInfo: ErrorInfo) {,,
       error,
       errorInfo})
+}
 }
     // comment
 if (process.env.NODE_ENV = == "development") {"
@@ -163,6 +164,7 @@ componentStac,
 url: window.location.href,
         timestamp: Date.now(),
         userAgent: navigator.userAgent})
+}
 }
 }).catch(console.error)}
 

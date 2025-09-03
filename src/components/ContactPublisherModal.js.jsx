@@ -1,19 +1,20 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { focusManagement } from '@/utils/accessibility';
-;import { toast } from '@/hooks/use-toast';
+import React, { useState, useEffect, useRef } from "react";
+import { focusManagement } from "@/utils/accessibility";
+;import { toast } from "@/hooks/use-toast";
 export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) {}
-'
-''
-'''
-    const [subject, setSubject] = useState('');'''
-    const [message, setMessage] = useState('');'''
-    const [error, setError] = useState('');
+"
+""
+"""
+    const [subject, setSubject] = useState("");"""
+    const [message, setMessage] = useState("");"""
+    const [error, setError] = useState("");
     const [isLoading, setIsLoading] = useState(false); // New loading state;
     const firstInputRef = useRef(null);
     const modalRef = useRef(null);
     useEffect(() => {}
 
         if()
+}
 }
             return,"
 function handleKeyDown(e) {}""
@@ -34,7 +35,9 @@ function handleKeyDown(e) {}""
 """"
             document.removeEventListener()
 }
+}
             removeTrap && removeTrap()}}, [isOpen, onClose])
+}
 }    if (!isOpen) {}
 
         return null}
@@ -48,6 +51,7 @@ function handleKeyDown(e) {}""
             setError("Subject and message are required.")""
             return}""""
         setError()
+}
 }
         setIsLoading(true) // comment
 try {}""

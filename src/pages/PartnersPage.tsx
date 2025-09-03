@@ -1,12 +1,12 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 import { 
-  Handshake, 
-  Award, 
-  Users, 
-  Globe, 
-  TrendingUp, 
-  CheckCircle, 
+  Handshake,
+  Award,
+  Users,
+  Globe,
+  TrendingUp,
+  CheckCircle,
   ArrowRight,
   Star,
   Shield,
@@ -27,210 +27,204 @@ import {
   ExternalLink,
   Calendar,
   Briefcase
-} from 'lucide-react';
-
+} from "lucide-react";
 export function PartnersPage() {
   const partnerTypes = [
     {
-      title: 'Technology Partners',
+      title: "Technology Partners",
       icon: Code,
-      description: 'Leading technology companies that provide complementary solutions and platforms.',
+      description: "Leading technology companies that provide complementary solutions and platforms.",
       count: 25
     },
     {
-      title: 'Solution Partners',
+      title: "Solution Partners",
       icon: Target,
-      description: 'System integrators and consultants who help implement our solutions.',
+      description: "System integrators and consultants who help implement our solutions.",
       count: 40
     },
     {
-      title: 'Channel Partners',
+      title: "Channel Partners",
       icon: Users,
-      description: 'Resellers and distributors who help us reach new markets and customers.',
+      description: "Resellers and distributors who help us reach new markets and customers.",
       count: 15
     },
     {
-      title: 'Strategic Partners',
+      title: "Strategic Partners",
       icon: Handshake,
-      description: 'Long-term strategic alliances for joint product development and market expansion.',
+      description: "Long-term strategic alliances for joint product development and market expansion.",
       count: 8
     }
   ];
-
   const featuredPartners = [
     {
-      name: 'Microsoft',
-      logo: '🪟',
-      type: 'Technology Partner',
-      description: 'Strategic partnership for Azure cloud services and enterprise solutions.',
-      website: 'https://microsoft.com',
-      partnership: 'Since 2020',
-      focus: ['Azure Cloud', 'Enterprise Solutions', 'AI Services', 'Security']
+      name: "Microsoft",
+      logo: "🪟",
+      type: "Technology Partner",
+      description: "Strategic partnership for Azure cloud services and enterprise solutions.",
+      website: "https://microsoft.com",
+      partnership: "Since 2020",
+      focus: ["Azure Cloud", "Enterprise Solutions", "AI Services", "Security"]
     },
     {
-      name: 'Amazon Web Services',
-      logo: '☁️',
-      type: 'Technology Partner',
-      description: 'Advanced partnership for AWS cloud infrastructure and AI/ML services.',
-      website: 'https://aws.amazon.com',
-      partnership: 'Since 2019',
-      focus: ['Cloud Infrastructure', 'AI/ML', 'Data Analytics', 'DevOps']
+      name: "Amazon Web Services",
+      logo: "☁️",
+      type: "Technology Partner",
+      description: "Advanced partnership for AWS cloud infrastructure and AI/ML services.",
+      website: "https://aws.amazon.com",
+      partnership: "Since 2019",
+      focus: ["Cloud Infrastructure", "AI/ML", "Data Analytics", "DevOps"]
     },
     {
-      name: 'Google Cloud',
-      logo: '🔍',
-      type: 'Technology Partner',
-      description: 'Collaboration on Google Cloud Platform and AI/ML solutions.',
-      website: 'https://cloud.google.com',
-      partnership: 'Since 2021',
-      focus: ['Cloud Platform', 'AI/ML', 'Data Science', 'Kubernetes']
+      name: "Google Cloud",
+      logo: "🔍",
+      type: "Technology Partner",
+      description: "Collaboration on Google Cloud Platform and AI/ML solutions.",
+      website: "https://cloud.google.com",
+      partnership: "Since 2021",
+      focus: ["Cloud Platform", "AI/ML", "Data Science", "Kubernetes"]
     },
     {
-      name: 'Salesforce',
-      logo: '⚡',
-      type: 'Technology Partner',
-      description: 'Integration partnership for CRM and customer experience solutions.',
-      website: 'https://salesforce.com',
-      partnership: 'Since 2020',
-      focus: ['CRM', 'Customer Experience', 'Sales Automation', 'Marketing Cloud']
+      name: "Salesforce",
+      logo: "⚡",
+      type: "Technology Partner",
+      description: "Integration partnership for CRM and customer experience solutions.",
+      website: "https://salesforce.com",
+      partnership: "Since 2020",
+      focus: ["CRM", "Customer Experience", "Sales Automation", "Marketing Cloud"]
     },
     {
-      name: 'IBM',
-      logo: '🔵',
-      type: 'Strategic Partner',
-      description: 'Strategic alliance for enterprise AI, blockchain, and hybrid cloud solutions.',
-      website: 'https://ibm.com',
-      partnership: 'Since 2018',
-      focus: ['Enterprise AI', 'Blockchain', 'Hybrid Cloud', 'Watson']
+      name: "IBM",
+      logo: "🔵",
+      type: "Strategic Partner",
+      description: "Strategic alliance for enterprise AI, blockchain, and hybrid cloud solutions.",
+      website: "https://ibm.com",
+      partnership: "Since 2018",
+      focus: ["Enterprise AI", "Blockchain", "Hybrid Cloud", "Watson"]
     },
     {
-      name: 'Oracle',
-      logo: '🗄️',
-      type: 'Technology Partner',
-      description: 'Partnership for database solutions and enterprise applications.',
-      website: 'https://oracle.com',
-      partnership: 'Since 2019',
-      focus: ['Database', 'Enterprise Applications', 'Cloud Infrastructure', 'Analytics']
+      name: "Oracle",
+      logo: "🗄️",
+      type: "Technology Partner",
+      description: "Partnership for database solutions and enterprise applications.",
+      website: "https://oracle.com",
+      partnership: "Since 2019",
+      focus: ["Database", "Enterprise Applications", "Cloud Infrastructure", "Analytics"]
     }
   ];
-
   const partnerBenefits = [
     {
       icon: TrendingUp,
-      title: 'Revenue Growth',
-      description: 'Access to new markets and revenue streams through our partner ecosystem.'
+      title: "Revenue Growth",
+      description: "Access to new markets and revenue streams through our partner ecosystem."
     },
     {
       icon: Users,
-      title: 'Expanded Reach',
-      description: 'Leverage our global network to reach customers in new geographic markets.'
+      title: "Expanded Reach",
+      description: "Leverage our global network to reach customers in new geographic markets."
     },
     {
       icon: Brain,
-      title: 'Technical Expertise',
-      description: 'Access to our technical expertise and co-development opportunities.'
+      title: "Technical Expertise",
+      description: "Access to our technical expertise and co-development opportunities."
     },
     {
       icon: Shield,
-      title: 'Joint Marketing',
-      description: 'Collaborative marketing programs and co-branded content opportunities.'
+      title: "Joint Marketing",
+      description: "Collaborative marketing programs and co-branded content opportunities."
     },
     {
       icon: Award,
-      title: 'Certification Programs',
-      description: 'Comprehensive training and certification programs for your team.'
+      title: "Certification Programs",
+      description: "Comprehensive training and certification programs for your team."
     },
     {
       icon: Globe,
-      title: 'Global Support',
-      description: 'Worldwide support network and local market expertise.'
+      title: "Global Support",
+      description: "Worldwide support network and local market expertise."
     }
   ];
-
   const partnershipPrograms = [
     {
-      name: 'Technology Partner Program',
-      level: 'Advanced',
-      description: 'For technology companies providing complementary solutions and platforms.',
+      name: "Technology Partner Program",
+      level: "Advanced",
+      description: "For technology companies providing complementary solutions and platforms.",
       benefits: [
-        'Joint product development',
-        'Technical integration support',
-        'Co-marketing opportunities',
-        'Revenue sharing programs',
-        'Dedicated partner manager'
+        "Joint product development",
+        "Technical integration support",
+        "Co-marketing opportunities",
+        "Revenue sharing programs",
+        "Dedicated partner manager"
       ],
       requirements: [
-        'Proven technology solution',
-        'Enterprise customer base',
-        'Technical integration capability',
-        'Commitment to joint go-to-market'
+        "Proven technology solution",
+        "Enterprise customer base",
+        "Technical integration capability",
+        "Commitment to joint go-to-market"
       ]
     },
     {
-      name: 'Solution Partner Program',
-      level: 'Professional',
-      description: 'For system integrators, consultants, and implementation partners.',
+      name: "Solution Partner Program",
+      level: "Professional",
+      description: "For system integrators, consultants, and implementation partners.",
       benefits: [
-        'Implementation training',
-        'Sales enablement tools',
-        'Marketing support',
-        'Technical support',
-        'Partner portal access'
+        "Implementation training",
+        "Sales enablement tools",
+        "Marketing support",
+        "Technical support",
+        "Partner portal access"
       ],
       requirements: [
-        'Implementation experience',
-        'Certified professionals',
-        'Customer references',
-        'Business development commitment'
+        "Implementation experience",
+        "Certified professionals",
+        "Customer references",
+        "Business development commitment"
       ]
     },
     {
-      name: 'Channel Partner Program',
-      level: 'Associate',
-      description: 'For resellers and distributors helping us reach new markets.',
+      name: "Channel Partner Program",
+      level: "Associate",
+      description: "For resellers and distributors helping us reach new markets.",
       benefits: [
-        'Competitive pricing',
-        'Sales training',
-        'Marketing materials',
-        'Lead sharing',
-        'Partner support'
+        "Competitive pricing",
+        "Sales training",
+        "Marketing materials",
+        "Lead sharing",
+        "Partner support"
       ],
       requirements: [
-        'Sales track record',
-        'Market presence',
-        'Customer relationships',
-        'Sales commitment'
+        "Sales track record",
+        "Market presence",
+        "Customer relationships",
+        "Sales commitment"
       ]
     }
   ];
-
   const testimonials = [
     {
-      name: 'Jennifer Martinez',
-      title: 'VP of Partnerships',
-      company: 'TechCorp Solutions',
-      content: 'Partnering with Zion Tech Group has been transformative for our business. Their technical expertise and market reach have helped us expand into new verticals and grow our revenue by 150%.',
+      name: "Jennifer Martinez",
+      title: "VP of Partnerships",
+      company: "TechCorp Solutions",
+      content: "Partnering with Zion Tech Group has been transformative for our business. Their technical expertise and market reach have helped us expand into new verticals and grow our revenue by 150%.",
       rating: 5
     },
     {
-      name: 'David Chen',
-      title: 'CEO',
-      company: 'CloudFirst Systems',
-      content: 'The partnership with Zion Tech Group has exceeded our expectations. Their support team is exceptional, and the joint go-to-market programs have been incredibly effective.',
+      name: "David Chen",
+      title: "CEO",
+      company: "CloudFirst Systems",
+      content: "The partnership with Zion Tech Group has exceeded our expectations. Their support team is exceptional, and the joint go-to-market programs have been incredibly effective.",
       rating: 5
     },
     {
-      name: 'Sarah Johnson',
-      title: 'Head of Business Development',
-      company: 'DataFlow Analytics',
-      content: 'Working with Zion Tech Group has opened doors to enterprise customers we never could have reached on our own. Their partnership program is world-class.',
+      name: "Sarah Johnson",
+      title: "Head of Business Development",
+      company: "DataFlow Analytics",
+      content: "Working with Zion Tech Group has opened doors to enterprise customers we never could have reached on our own. Their partnership program is world-class.",
       rating: 5
     }
   ];
-
   return (
     <div className="min-h-screen bg-zion-slate-dark">
-      {/* Hero Section */}
+      {/* comment */}
       <section className="relative bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate-darker py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto">
@@ -238,10 +232,9 @@ export function PartnersPage() {
               Partner with Us
             </h1>
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
-              Join our global partner ecosystem and unlock new opportunities for growth, 
+              Join our global partner ecosystem and unlock new opportunities for growth,
               innovation, and market expansion. Together, we can deliver exceptional value to customers worldwide.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
@@ -259,8 +252,7 @@ export function PartnersPage() {
           </div>
         </div>
       </section>
-
-      {/* Partner Types */}
+      {/* comment */}
       <section className="py-16 bg-zion-slate-darker">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -271,7 +263,6 @@ export function PartnersPage() {
               We offer various partnership programs tailored to different types of organizations and business models
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {partnerTypes.map((type, index) => (
               <div key={index} className="bg-zion-slate-dark border border-zion-purple/20 rounded-lg p-6 hover:border-zion-cyan/50 transition-all duration-300 text-center">
@@ -289,8 +280,7 @@ export function PartnersPage() {
           </div>
         </div>
       </section>
-
-      {/* Featured Partners */}
+      {/* comment */}
       <section className="py-16 bg-zion-slate-dark">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -301,7 +291,6 @@ export function PartnersPage() {
               Trusted by leading technology companies and solution providers worldwide
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredPartners.map((partner, index) => (
               <div key={index} className="bg-zion-slate-darker border border-zion-purple/20 rounded-lg p-6 hover:border-zion-cyan/50 transition-all duration-300">
@@ -313,11 +302,9 @@ export function PartnersPage() {
                     <p className="text-xs text-zion-slate-light">{partner.partnership}</p>
                   </div>
                 </div>
-                
                 <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">
                   {partner.description}
                 </p>
-
                 <div className="mb-4">
                   <h4 className="text-sm font-semibold text-zion-cyan mb-2">Focus Areas:</h4>
                   <div className="flex flex-wrap gap-1">
@@ -328,7 +315,6 @@ export function PartnersPage() {
                     ))}
                   </div>
                 </div>
-
                 <a
                   href={partner.website}
                   target="_blank"
@@ -336,15 +322,14 @@ export function PartnersPage() {
                   className="text-zion-cyan hover:text-zion-cyan-light transition-colors flex items-center"
                 >
                   Visit Website
-                  <ExternalLink className="w-4 h-4 ml-2" />
+                  <ExternalLink className="w-4 h-4 ml-2"  />
                 </a>
               </div>
             ))}
           </div>
         </div>
       </section>
-
-      {/* Partnership Programs */}
+      {/* comment */}
       <section className="py-16 bg-zion-slate-darker">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -355,7 +340,6 @@ export function PartnersPage() {
               Choose the partnership program that best fits your organization and business goals
             </p>
           </div>
-
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {partnershipPrograms.map((program, index) => (
               <div key={index} className="bg-zion-slate-dark border border-zion-purple/20 rounded-lg p-6 hover:border-zion-cyan/50 transition-all duration-300">
@@ -370,31 +354,28 @@ export function PartnersPage() {
                     {program.description}
                   </p>
                 </div>
-
                 <div className="mb-4">
                   <h4 className="text-sm font-semibold text-zion-cyan mb-2">Benefits:</h4>
                   <ul className="space-y-1">
                     {program.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="flex items-center space-x-2 text-xs text-zion-slate-light">
-                        <CheckCircle className="w-3 h-3 text-zion-cyan" />
+                        <CheckCircle className="w-3 h-3 text-zion-cyan"  />
                         <span>{benefit}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
-
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-zion-cyan mb-2">Requirements:</h4>
                   <ul className="space-y-1">
                     {program.requirements.map((requirement, reqIndex) => (
                       <li key={reqIndex} className="flex items-center space-x-2 text-xs text-zion-slate-light">
-                        <CheckCircle className="w-3 h-3 text-zion-cyan" />
+                        <CheckCircle className="w-3 h-3 text-zion-cyan"  />
                         <span>{requirement}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
-
                 <Link
                   to="/contact"
                   className="w-full bg-zion-cyan text-white py-2 px-4 rounded-lg hover:bg-zion-cyan-light transition-colors text-center block"
@@ -406,8 +387,7 @@ export function PartnersPage() {
           </div>
         </div>
       </section>
-
-      {/* Partner Benefits */}
+      {/* comment */}
       <section className="py-16 bg-zion-slate-dark">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -418,7 +398,6 @@ export function PartnersPage() {
               Discover the benefits of joining our partner ecosystem
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {partnerBenefits.map((benefit, index) => (
               <div key={index} className="text-center">
@@ -434,8 +413,7 @@ export function PartnersPage() {
           </div>
         </div>
       </section>
-
-      {/* Testimonials */}
+      {/* comment */}
       <section className="py-16 bg-zion-slate-darker">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -446,7 +424,6 @@ export function PartnersPage() {
               Hear from our partners about their experience working with Zion Tech Group
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-zion-slate-dark border border-zion-purple/20 rounded-lg p-6">
@@ -455,11 +432,9 @@ export function PartnersPage() {
                     <div key={i} className="w-4 h-4 text-yellow-400 fill-current">★</div>
                   ))}
                 </div>
-                
                 <p className="text-zion-slate-light mb-4 leading-relaxed">
                   "{testimonial.content}"
                 </p>
-                
                 <div>
                   <div className="font-semibold text-white">{testimonial.name}</div>
                   <div className="text-sm text-zion-cyan">{testimonial.title}</div>
@@ -470,8 +445,7 @@ export function PartnersPage() {
           </div>
         </div>
       </section>
-
-      {/* Contact Information */}
+      {/* comment */}
       <section className="py-16 bg-zion-slate-dark">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -483,40 +457,33 @@ export function PartnersPage() {
                 Join our partner ecosystem and unlock new opportunities for growth and innovation. 
                 Our partnership team is ready to help you get started.
               </p>
-              
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
-                  <Mail className="w-5 h-5 text-zion-cyan" />
+                  <Mail className="w-5 h-5 text-zion-cyan"  />
                   <span className="text-zion-slate-light">partners@ziontechgroup.com</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <Phone className="w-5 h-5 text-zion-cyan" />
+                  <Phone className="w-5 h-5 text-zion-cyan"  />
                   <span className="text-zion-slate-light">+1 (302) 464-0950</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <MapPin className="w-5 h-5 text-zion-cyan" />
+                  <MapPin className="w-5 h-5 text-zion-cyan"  />
                   <span className="text-zion-slate-light">364 E Main St STE 1008, Middletown DE 19709</span>
                 </div>
               </div>
             </div>
-
             <div className="bg-zion-slate-darker border border-zion-purple/20 rounded-lg p-8">
               <h3 className="text-xl font-semibold text-white mb-4">Get Started Today</h3>
               <p className="text-zion-slate-light mb-6">
-                Fill out our partnership inquiry form and we'll get back to you within 24 hours.
+                Fill out our partnership inquiry form and we"ll get back to you within 24 hours.
               </p>
-              
               <div className="space-y-4">
-                <input
-                  type="text"
+                <input type="text"
                   placeholder="Company Name"
-                  className="w-full px-4 py-3 bg-zion-slate-dark border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-                />
-                <input
-                  type="email"
+                  className="w-full px-4 py-3 bg-zion-slate-dark border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"  />
+                <input type="email"
                   placeholder="Email Address"
-                  className="w-full px-4 py-3 bg-zion-slate-dark border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-                />
+                  className="w-full px-4 py-3 bg-zion-slate-dark border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"  />
                 <select className="w-full px-4 py-3 bg-zion-slate-dark border border-zion-purple/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent">
                   <option>Select Partnership Type</option>
                   <option>Technology Partner</option>
@@ -537,8 +504,7 @@ export function PartnersPage() {
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
+      {/* comment */}
       <section className="py-16 bg-gradient-to-r from-zion-cyan to-zion-blue">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -546,7 +512,7 @@ export function PartnersPage() {
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             Ready to unlock new opportunities and grow your business? 
-            Let's explore how we can work together to deliver exceptional value to customers.
+            Let"s explore how we can work together to deliver exceptional value to customers.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

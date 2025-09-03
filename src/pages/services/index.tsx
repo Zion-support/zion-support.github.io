@@ -45,7 +45,6 @@ export default function Index() {
       details: ["Full AI suite", "Unlimited users", "24/7 support", "99.99% SLA", "Custom integrations"]
     }
   ];
-
   ]
   return (
     <div className="min-h-screen bg-white">
@@ -62,22 +61,21 @@ export default function Index() {
           </p>
         </div>
       </section>
-
-      {/* Contact Information Banner */}
+      {/* comment */}
       <section className="bg-gray-900 text-white py-6">
         <div className="max-w-6xl mx-auto px-6">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-8">
               <div className="flex items-center">
-                <Mail className="w-5 h-5 mr-2 text-indigo-400" />
+                <Mail className="w-5 h-5 mr-2 text-indigo-400"  />
                 <span>kleber@ziontechgroup.com</span>
               </div>
               <div className="flex items-center">
-                <Phone className="w-5 h-5 mr-2 text-indigo-400" />
+                <Phone className="w-5 h-5 mr-2 text-indigo-400"  />
                 <span>+1 302 464 0950</span>
               </div>
               <div className="flex items-center">
-                <MapPin className="w-5 h-5 mr-2 text-indigo-400" />
+                <MapPin className="w-5 h-5 mr-2 text-indigo-400"  />
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
             </div>
@@ -92,7 +90,6 @@ export default function Index() {
           </div>
         </div>
       </section>
-
       <section className="py-16 max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-10">
           <div>
@@ -114,7 +111,7 @@ export default function Index() {
                 href="/services/comprehensive-micro-saas-showcase" 
                 className="inline-flex items-center px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors"
               >
-                View All 20+ AI Services <ArrowRight className="w-4 h-4 ml-2" />
+                View All 20+ AI Services <ArrowRight className="w-4 h-4 ml-2"  />
               </Link>
             </div>
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">

@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Gift import { useAuth } from '@/hooks/useAuth';
+import React, { useState } from "react";
+import { Gift import { useAuth } from "@/hooks/useAuth";
 export default function Page() {
 , { purchase: 0, post: 0, referral: 0 });
     const handleLogout = async () => {
@@ -16,8 +16,8 @@ export default function Page() {
           <DropdownMenuTrigger asChild>
             <TooltipTrigger asChild>
               <button type="button" className="flex items-center gap-1 text-xs text-muted-foreground">"
-                <Gift className="h-4 w-4"/>
-                <span>{`${points} pts`}</span>
+                <Gift className="h-4 w-4"  />
+                <span>{"${points} pts"}</span>
               </button>
             </TooltipTrigger>
           </DropdownMenuTrigger>

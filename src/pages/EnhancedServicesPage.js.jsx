@@ -1,25 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {}
   ENHANCED_SERVICES,
   ENHANCED_SERVICE_CATEGORIES,
-  SERVICE_PRICING_TIERS,'
-  CONTACT_INFO} from '@/data/enhancedServices';'
-import { Button } from '@/components/ui/button';
+  SERVICE_PRICING_TIERS,"
+  CONTACT_INFO} from "@/data/enhancedServices";"
+import { Button } from "@/components/ui/button";
 import {}
   Card,
-  CardContent,'
-  CardDescription,''
-  CardHeader,'''
-  CardTitle} from '@/components/ui/card';'''
-import { Badge } from '@/components/ui/badge';'''
-import { Input } from '@/components/ui/input';
+  CardContent,"
+  CardDescription,""
+  CardHeader,"""
+  CardTitle} from "@/components/ui/card";"""
+import { Badge } from "@/components/ui/badge";"""
+import { Input } from "@/components/ui/input";
 import {}
   Select,
-  SelectContent,'
-  SelectItem,''
-  SelectTrigger,'''
-  SelectValue} from '@/components/ui/select';'''
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+  SelectContent,"
+  SelectItem,""
+  SelectTrigger,"""
+  SelectValue} from "@/components/ui/select";"""
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {}
   Search,
   Star,
@@ -36,70 +36,70 @@ import {}
   Code,
   Zap,
   Heart,
-  DollarSign,'
-  Link,''
-  Users,'''
-  CheckCircle} from 'lucide-react';'''
-import { SEO } from '@/components/SEO';
+  DollarSign,"
+  Link,""
+  Users,"""
+  CheckCircle} from "lucide-react";"""
+import { SEO } from "@/components/SEO";
 export default function EnhancedServicesPage() {}
-'
-''
-'''
-  const [searchTerm, setSearchTerm] = useState('');'''
-  const [selectedCategory, setSelectedCategory] = useState('all');'''
-  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
+"
+""
+"""
+  const [searchTerm, setSearchTerm] = useState("");"""
+  const [selectedCategory, setSelectedCategory] = useState("all");"""
+  const [selectedPriceRange, setSelectedPriceRange] = useState("all");
   const filteredServices = ENHANCED_SERVICES.filter(service => {}
-'
-''
-'''
-    const matchesPrice =''''
-      selectedPriceRange === 'all' ||''''
-      (selectedPriceRange === 'basic' && service.price <= 2000) ||''''
-      (selectedPriceRange === 'professional' &&''
-        service.price > 2000 &&'''
-        service.price <= 8000) ||''''
-      (selectedPriceRange === 'enterprise' && service.price > 8000);
+"
+""
+"""
+    const matchesPrice =""""
+      selectedPriceRange === "all" ||""""
+      (selectedPriceRange === "basic" && service.price <= 2000) ||""""
+      (selectedPriceRange === "professional" &&""
+        service.price > 2000 &&"""
+        service.price <= 8000) ||""""
+      (selectedPriceRange === "enterprise" && service.price > 8000);
     return matchesSearch && matchesCategory && matchesPrice;
   });
   const getCategoryIcon = category => {}
     switch (category.toLowerCase()) {}
-'
-      case 'ai automation':''
-      case 'ai & machine learning': any;
-        return <Brain className="w-5 h-5" />;'
-      case 'cloud management':''"""
-      case 'cloud & infrastructure':""""
-        return <Cloud className="w-5 h-5" />;'
-      case 'cybersecurity':''"""
-      case 'security framework':""""
-        return <Shield className="w-5 h-5" />;'
-      case 'data engineering':''"""
-      case 'data & analytics':""""
-        return <Database className="w-5 h-5" />;'"""
-      case 'business intelligence':""""
-        return <TrendingUp className="w-5 h-5" />;'
-      case 'developer tools':''"""
-      case 'development & devops':""""
-        return <Code className="w-5 h-5" />;'"""
-      case 'digital transformation':""""
-        return <Zap className="w-5 h-5" />;'"""
-      case 'healthcare technology':""""
-        return <Heart className="w-5 h-5" />;'"""
-      case 'financial technology':""""
-        return <DollarSign className="w-5 h-5" />;'"""
-      case 'blockchain':""""
-        return <Link className="w-5 h-5" />;'"""
-      case 'quantum computing':""""
-        return <Zap className="w-5 h-5" />;"""
+"
+      case "ai automation":""
+      case "ai & machine learning": any;
+        return <Brain className="w-5 h-5"  />;"
+      case "cloud management":"""""
+      case "cloud & infrastructure":""""
+        return <Cloud className="w-5 h-5"  />;"
+      case "cybersecurity":"""""
+      case "security framework":""""
+        return <Shield className="w-5 h-5"  />;"
+      case "data engineering":"""""
+      case "data & analytics":""""
+        return <Database className="w-5 h-5"  />;""""
+      case "business intelligence":""""
+        return <TrendingUp className="w-5 h-5"  />;"
+      case "developer tools":"""""
+      case "development & devops":""""
+        return <Code className="w-5 h-5"  />;""""
+      case "digital transformation":""""
+        return <Zap className="w-5 h-5"  />;""""
+      case "healthcare technology":""""
+        return <Heart className="w-5 h-5"  />;""""
+      case "financial technology":""""
+        return <DollarSign className="w-5 h-5"  />;""""
+      case "blockchain":""""
+        return <Link className="w-5 h-5"  />;""""
+      case "quantum computing":""""
+        return <Zap className="w-5 h-5"  />;"""
       default:""""
-        return <Code className="w-5 h-5" />;
+        return <Code className="w-5 h-5"  />;
     }
   };
   const getPriceRange = price => {}
-'
-    if (price <= 2000) return 'basic';'
-    if (price <= 8000) return 'professional';'
-    return 'enterprise';
+"
+    if (price <= 2000) return "basic";"
+    if (price <= 8000) return "professional";"
+    return "enterprise";
   };"""
   return (""""
     <div className="min-h-screen bg-background">"""
@@ -107,10 +107,9 @@ export default function EnhancedServicesPage() {}
         title="Enhanced IT & AI Services - Zion Tech Group""""
         description="Discover our comprehensive suite of AI services, IT solutions, and micro SAAS offerings. From AI automation to quantum computing readiness.""""
         keywords="AI services, IT solutions, micro SAAS, cybersecurity, cloud computing, data analytics, Zion Tech Group""""
-        canonical="https://ziontechgroup.com/enhanced-services"""
-      />
+        canonical="https://ziontechgroup.com/enhanced-services""" />
 """
-      {/* Hero Section */}""""
+      {/* comment */}""""
       <div className="bg-gradient-to-r from-zion-blue to-zion-purple text-white py-20">""""
         <div className="container mx-auto px-4 text-center">""""
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -124,10 +123,11 @@ export default function EnhancedServicesPage() {}
             <Button""""
               size="lg""""
               className="bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan-light"""
-              onClick={() =>'
-                document''
-                  .getElementById('services-grid')'
-                  ?.scrollIntoView({ behavior: 'smooth' })
+              onClick={() =>"
+                document""
+                  .getElementById("services-grid")"
+                  ?.scrollIntoView({ behavior: "smooth" })
+}
               }
             >
               Explore Services;
@@ -136,10 +136,11 @@ export default function EnhancedServicesPage() {}
               size="lg""""
               variant="outline""""
               className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"""
-              onClick={() =>'
-                document''
-                  .getElementById('contact-section')'
-                  ?.scrollIntoView({ behavior: 'smooth' })
+              onClick={() =>"
+                document""
+                  .getElementById("contact-section")"
+                  ?.scrollIntoView({ behavior: "smooth" })
+}
               }
             >
               Get in Touch;
@@ -148,7 +149,7 @@ export default function EnhancedServicesPage() {}
         </div>
       </div>
 """
-      {/* Pricing Tiers Overview */}""""
+      {/* comment */}""""
       <section className="py-16 bg-zion-blue-dark">""""
         <div className="container mx-auto px-4">""""
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -174,25 +175,24 @@ export default function EnhancedServicesPage() {}
         </div>
       </section>
 """
-      {/* Search and Filters */}""""
+      {/* comment */}""""
       <section className="py-8 bg-zion-blue">""""
         <div className="container mx-auto px-4">""""
           <div className="flex flex-col md:flex-row gap-4">""""
             <div className="flex-1 relative">""""
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />"""
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5"  />"""
               <Input""""
                 placeholder="Search services, technologies, or keywords..."""
                 value={searchTerm}"""
                 onChange={e => setSearchTerm(e.target.value)}""""
-                className="pl-10 bg-zion-blue-dark border-zion-blue-light text-white placeholder:text-zion-slate-light"""
-              />
+                className="pl-10 bg-zion-blue-dark border-zion-blue-light text-white placeholder:text-zion-slate-light""" />
             </div>
             <Select;
               value={selectedCategory}
               onValueChange={setSelectedCategory}"""
             >""""
               <SelectTrigger className="w-full md:w-48 bg-zion-blue-dark border-zion-blue-light text-white">""""
-                <SelectValue placeholder="All Categories" />
+                <SelectValue placeholder="All Categories"  />
               </SelectTrigger>"""
               <SelectContent>""""
                 <SelectItem value="all">All Categories</SelectItem>
@@ -208,7 +208,7 @@ export default function EnhancedServicesPage() {}
               onValueChange={setSelectedPriceRange}"""
             >""""
               <SelectTrigger className="w-full md:w-48 bg-zion-blue-dark border-zion-blue-light text-white">""""
-                <SelectValue placeholder="All Prices" />
+                <SelectValue placeholder="All Prices"  />
               </SelectTrigger>"""
               <SelectContent>""""
                 <SelectItem value="all">All Prices</SelectItem>""""
@@ -223,7 +223,7 @@ export default function EnhancedServicesPage() {}
         </div>
       </section>
 """
-      {/* Services Grid */}""""
+      {/* comment */}""""
       <section id="services-grid" className="py-16 bg-background">""""
         <div className="container mx-auto px-4">""""
           <div className="text-center mb-12">""""
@@ -247,12 +247,12 @@ export default function EnhancedServicesPage() {}
                       {getCategoryIcon(service.category)}
                       <Badge;
                         variant={}
-'
-''
-'''
-                          getPriceRange(service.price) === 'enterprise'''''
-                            ? 'default'''''
-                            : 'secondary'
+"
+""
+"""
+                          getPriceRange(service.price) === "enterprise"""""
+                            ? "default"""""
+                            : "secondary"
                         }
                       >
                         {getPriceRange(service.price)}
@@ -274,12 +274,13 @@ export default function EnhancedServicesPage() {}
                 <CardContent className="space-y-4">""""
                   <div className="flex items-center justify-between">""""
                     <div className="flex items-center gap-2">""""
-                      <Star className="w-4 h-4 text-yellow-500 fill-current" />""""
+                      <Star className="w-4 h-4 text-yellow-500 fill-current"  />""""
                       <span className="text-sm font-medium">
                         {service.rating}"""
                       </span>""""
                       <span className="text-sm text-zion-slate">
                         ({service.reviewCount} reviews)
+}
                       </span>"""
                     </div>""""
                     <div className="text-right">""""
@@ -303,11 +304,11 @@ export default function EnhancedServicesPage() {}
 """"
                   <div className="flex items-center justify-between text-sm text-zion-slate">""""
                     <div className="flex items-center gap-1">""""
-                      <Globe className="w-4 h-4" />
+                      <Globe className="w-4 h-4"  />
                       {service.location}"""
                     </div>""""
                     <div className="flex items-center gap-1">""""
-                      <TrendingUp className="w-4 h-4" />
+                      <TrendingUp className="w-4 h-4"  />
                       AI Score: {service.aiScore}
                     </div>
                   </div>"""
@@ -320,10 +321,11 @@ export default function EnhancedServicesPage() {}
                       <Button""""
                         size="sm""""
                         className="bg-zion-purple hover:bg-zion-purple-dark text-white"""
-                        onClick={() =>'
-                          document''
-                            .getElementById('contact-section')'
-                            ?.scrollIntoView({ behavior: 'smooth' })
+                        onClick={() =>"
+                          document""
+                            .getElementById("contact-section")"
+                            ?.scrollIntoView({ behavior: "smooth" })
+}
                         }
                       >
                         Get Quote;
@@ -337,7 +339,7 @@ export default function EnhancedServicesPage() {}
         </div>
       </section>
 """
-      {/* Service Categories Tabs */}""""
+      {/* comment */}""""
       <section className="py-16 bg-zion-blue">""""
         <div className="container mx-auto px-4">""""
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -355,7 +357,6 @@ export default function EnhancedServicesPage() {}
                 </TabsTrigger>
               ))}
             </TabsList>
-
             {ENHANCED_SERVICE_CATEGORIES.slice(0, 6).map(category => (
               <TabsContent;
                 key={category.value}"""
@@ -366,9 +367,13 @@ export default function EnhancedServicesPage() {}
                   {ENHANCED_SERVICES.filter(service =>
                     service.category;
                       .toLowerCase()
+}
                       .includes(category.value.toLowerCase())
+}
                   )
+}
                     .slice(0, 6)
+}
                     .map(service => (
                       <Card"""
                         key={service.id}""""
@@ -406,7 +411,7 @@ export default function EnhancedServicesPage() {}
         </div>
       </section>
 """
-      {/* Benefits Section */}""""
+      {/* comment */}""""
       <section className="py-16 bg-zion-blue-dark">""""
         <div className="container mx-auto px-4">""""
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -415,7 +420,7 @@ export default function EnhancedServicesPage() {}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">""""
             <div className="text-center">""""
               <div className="w-16 h-16 bg-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">""""
-                <CheckCircle className="w-8 h-8 text-white" />"""
+                <CheckCircle className="w-8 h-8 text-white"  />"""
               </div>""""
               <h3 className="text-xl font-bold text-white mb-2">
                 Proven Expertise"""
@@ -427,7 +432,7 @@ export default function EnhancedServicesPage() {}
             </div>""""
             <div className="text-center">""""
               <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">""""
-                <Zap className="w-8 h-8 text-white" />"""
+                <Zap className="w-8 h-8 text-white"  />"""
               </div>""""
               <h3 className="text-xl font-bold text-white mb-2">
                 Innovation First"""
@@ -439,7 +444,7 @@ export default function EnhancedServicesPage() {}
             </div>""""
             <div className="text-center">""""
               <div className="w-16 h-16 bg-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">""""
-                <Users className="w-8 h-8 text-white" />"""
+                <Users className="w-8 h-8 text-white"  />"""
               </div>""""
               <h3 className="text-xl font-bold text-white mb-2">
                 Dedicated Support"""
@@ -451,7 +456,7 @@ export default function EnhancedServicesPage() {}
             </div>""""
             <div className="text-center">""""
               <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">""""
-                <TrendingUp className="w-8 h-8 text-white" />"""
+                <TrendingUp className="w-8 h-8 text-white"  />"""
               </div>""""
               <h3 className="text-xl font-bold text-white mb-2">ROI Focused</h3>""""
               <p className="text-zion-slate-light">
@@ -463,7 +468,7 @@ export default function EnhancedServicesPage() {}
         </div>
       </section>
 """
-      {/* Contact Section */}""""
+      {/* comment */}""""
       <section id="contact-section" className="py-16 bg-zion-blue">""""
         <div className="container mx-auto px-4">""""
           <div className="max-w-4xl mx-auto text-center">""""
@@ -477,21 +482,21 @@ export default function EnhancedServicesPage() {}
 """"
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">""""
               <div className="flex items-center justify-center gap-3 text-zion-cyan">""""
-                <Phone className="w-6 h-6" />""""
+                <Phone className="w-6 h-6"  />""""
                 <div className="text-left">""""
                   <div className="font-semibold">Phone</div>""""
                   <div className="text-sm">{CONTACT_INFO.mobile}</div>
                 </div>"""
               </div>""""
               <div className="flex items-center justify-center gap-3 text-zion-cyan">""""
-                <Mail className="w-6 h-6" />""""
+                <Mail className="w-6 h-6"  />""""
                 <div className="text-left">""""
                   <div className="font-semibold">Email</div>""""
                   <div className="text-sm">{CONTACT_INFO.email}</div>
                 </div>"""
               </div>""""
               <div className="flex items-center justify-center gap-3 text-zion-cyan">""""
-                <MapPin className="w-6 h-6" />""""
+                <MapPin className="w-6 h-6"  />""""
                 <div className="text-left">""""
                   <div className="font-semibold">Address</div>""""
                   <div className="text-sm">{CONTACT_INFO.address}</div>
@@ -503,31 +508,33 @@ export default function EnhancedServicesPage() {}
               <Button""""
                 size="lg""""
                 className="bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan-light"""
-                onClick={() =>'
-                  window.open(`tel:${CONTACT_INFO.mobile}`,_self')
+                onClick={() =>"
+                  window.open("tel:${CONTACT_INFO.mobile}",_self")
+}
                 }"""
               >""""
-                <Phone className="w-5 h-5 mr-2" />
+                <Phone className="w-5 h-5 mr-2"  />
                 Call Now;
               </Button>"""
               <Button""""
                 size="lg""""
                 variant="outline""""
-                className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"'`
-                onClick={() =>'`'`
-                  window.open(`mailto:${CONTACT_INFO.email}`,_self')
+                className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"""
+                onClick={() =>""""
+                  window.open("mailto:${CONTACT_INFO.email}",_self")
+}
                 }"""
               >""""
-                <Mail className="w-5 h-5 mr-2" />
+                <Mail className="w-5 h-5 mr-2"  />
                 Send Email;
               </Button>"""
               <Button""""
                 size="lg""""
-                variant="outline"'"""
-                className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"''
-                onClick={() => window.open(CONTACT_INFO.website,_blank')}"""
+                variant="outline"""""
+                className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"""
+                onClick={() => window.open(CONTACT_INFO.website,_blank")}"""
               >""""
-                <ExternalLink className="w-5 h-5 mr-2" />
+                <ExternalLink className="w-5 h-5 mr-2"  />
                 Visit Website;
               </Button>
             </div>"""
@@ -543,10 +550,11 @@ export default function EnhancedServicesPage() {}
               </p>"""
               <Button""""
                 className="bg-zion-purple hover:bg-zion-purple-dark text-white"""
-                onClick={() =>`
-                  window.open()`'`
-                    `mailto:${CONTACT_INFO.email}?subject=Enterprise%20Inquiry`,_self'
+                onClick={() =>"
+                  window.open()"""
+                    "mailto:${CONTACT_INFO.email}?subject=Enterprise%20Inquiry",_self'
                   )
+}
                 }
               >
                 Request Enterprise Consultation;
@@ -559,11 +567,7 @@ export default function EnhancedServicesPage() {}
 
 
 export { EnhancedServicesPage };
-
 export { EnhancedServicesPage };
-
 export { EnhancedServicesPage };
-
 export { EnhancedServicesPage };
-
 export { EnhancedServicesPage };

@@ -1,15 +1,15 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { SEOHead } from '../components/seo/SEOHead';import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
+import React from "react";
+import { Link } from "react-router-dom";
+import { SEOHead } from "../components/seo/SEOHead";import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { 
-  Shield, 
-  Lock, 
-  Eye, 
-  AlertTriangle, 
-  Users, 
-  Globe, 
+  Shield,
+  Lock,
+  Eye,
+  AlertTriangle,
+  Users,
+  Globe,
   Phone,
   Mail,
   MapPin,
@@ -24,8 +24,7 @@ import {
   Key,
   Monitor,
   TrendingUp
-} from 'lucide-react';
-
+} from "lucide-react";
 export default function CybersecurityServicesPage() {
   const services = [
     {
@@ -50,7 +49,6 @@ export default function CybersecurityServicesPage() {
       icon: CheckCircle
     }
   ];
-
   const features = [
     {
       icon: Shield,
@@ -73,13 +71,11 @@ export default function CybersecurityServicesPage() {
       description: "Secure user authentication and role-based permissions"
     }
   ];
-
   return (
     <>
-      <SEOHead 
-        title="Cybersecurity Services - Zion Tech Group"
+      <SEOHead title="Cybersecurity Services - Zion Tech Group"
         description="Comprehensive cybersecurity solutions including zero trust security, threat detection, and compliance services to protect your business."
-        keywords={['cybersecurity', 'security services', 'threat detection', 'compliance', 'zero trust']}
+        keywords={["cybersecurity", "security services", "threat detection", "compliance", "zero trust"]}
         structuredData={{
           "@context": "https://schema.org",
           "@type": "Service",
@@ -90,39 +86,36 @@ export default function CybersecurityServicesPage() {
             "@type": "Organization",
             "name": "Zion Tech Group"
           }
-        }}      />
+        }}        />
       
       <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-black">
-        {/* Hero Section */}
+        {/* comment */}
         <section className="py-32 px-4 relative overflow-hidden">
-          {/* Background Elements */}
+          {/* comment */}
           <div className="absolute inset-0">
-            <div className="absolute top-20 left-10 w-32 h-32 bg-red-500/10 rounded-full blur-xl animate-pulse" />
-            <div className="absolute top-40 right-20 w-24 h-24 bg-orange-500/10 rounded-full blur-xl animate-pulse" style={{ animationDelay: '2s' }} />
-            <div className="absolute bottom-40 left-20 w-20 h-20 bg-red-600/10 rounded-full blur-xl animate-pulse" style={{ animationDelay: '4s' }} />
+            <div className="absolute top-20 left-10 w-32 h-32 bg-red-500/10 rounded-full blur-xl animate-pulse"  />
+            <div className="absolute top-40 right-20 w-24 h-24 bg-orange-500/10 rounded-full blur-xl animate-pulse" style={{ animationDelay: "2s" }}   />
+            <div className="absolute bottom-40 left-20 w-20 h-20 bg-red-600/10 rounded-full blur-xl animate-pulse" style={{ animationDelay: "4s" }}   />
           </div>
-
           <div className="relative z-10 max-w-6xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-red-500 via-orange-500 to-red-600 bg-clip-text text-transparent">
                 Cybersecurity
               </span>
-              <br />
+              <br  />
               <span className="text-white">That Never Sleeps</span>
             </h1>
-            
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
               Protect your business with enterprise-grade cybersecurity solutions. Our AI-powered security 
               platform provides 24/7 protection against evolving cyber threats.
             </p>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
                 to="/contact"
                 className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-red-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105"
               >
                 Get Security Assessment
-                <ArrowRight className="inline ml-2 h-5 w-5" />
+                <ArrowRight className="inline ml-2 h-5 w-5"  />
               </Link>
               <Link
                 to="/case-studies"
@@ -133,8 +126,7 @@ export default function CybersecurityServicesPage() {
             </div>
           </div>
         </section>
-
-        {/* Features Section */}
+        {/* comment */}
         <section className="py-20 bg-black/20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
@@ -145,7 +137,6 @@ export default function CybersecurityServicesPage() {
                 We combine advanced technology with proven expertise to deliver security that exceeds expectations
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="text-center">
@@ -163,8 +154,7 @@ export default function CybersecurityServicesPage() {
             </div>
           </div>
         </section>
-
-        {/* Services Section */}
+        {/* comment */}
         <section className="py-20 bg-black/20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
@@ -175,7 +165,6 @@ export default function CybersecurityServicesPage() {
                 Comprehensive cybersecurity solutions designed to protect your business from all angles
               </p>
             </div>
-            
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
                 <Card key={index} className="bg-gradient-to-br from-zinc-800 to-zinc-900 border-zinc-700">
@@ -194,7 +183,7 @@ export default function CybersecurityServicesPage() {
                     <ul className="space-y-2 mb-6">
                       {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
-                          <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
+                          <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0"  />
                           {feature}
                         </li>
                       ))}
@@ -211,15 +200,14 @@ export default function CybersecurityServicesPage() {
             </div>
           </div>
         </section>
-
-        {/* CTA Section */}
+        {/* comment */}
         <section className="py-20">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Secure Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Don't wait until it's too late. Get a comprehensive security assessment and protect your business today.
+              Don"t wait until it"s too late. Get a comprehensive security assessment and protect your business today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -227,7 +215,7 @@ export default function CybersecurityServicesPage() {
                 className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-red-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105"
               >
                 Schedule Security Assessment
-                <ArrowRight className="inline ml-2 h-5 w-5" />
+                <ArrowRight className="inline ml-2 h-5 w-5"  />
               </Link>
               <Link
                 to="/case-studies"
@@ -245,6 +233,7 @@ import React from "react"
 import { SEO } from "@/components/SEO"
 ;,"});,"})
 }
+}
 export default function CybersecurityServicesPage() {return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
       <SEO title="CybersecurityServicesPage - Zion Tech Group" description="Professional CybersecurityServicesPage services by Zion Tech Group"  />"
@@ -255,5 +244,6 @@ export default function CybersecurityServicesPage() {return ("
         </p>
       </div>
   )
+}
 }
 }""

@@ -9,13 +9,14 @@ const RedeemTokensCard() {}
     const [open, setOpen] = useState(false);
     const handleRedeem = async (option) => {}
         if (!wallet || wallet.balance < option.cost)
+}
             return;
-        await spendTokens(option.cost, `Redeemed: ${option.title}`);
+        await spendTokens(option.cost, "Redeemed: ${option.title}");
         setOpen(false)};
     return (<Card>"""
       <CardHeader>""""
         <CardTitle className="flex items-center gap-2">""""
-          <Gift aria-hidden="true" className="h-5 w-5"/> Redeem Rewards;
+          <Gift aria-hidden="true" className="h-5 w-5"  /> Redeem Rewards;
         </CardTitle>
         <CardDescription>Exchange your ZION$ for rewards and perks</CardDescription>
       </CardHeader>
@@ -40,7 +41,7 @@ const RedeemTokensCard() {}
                   <div className="flex flex-col items-end gap-1">""""
                     <span className="text-sm font-bold">{option.cost} ZION$</span>""""
                     <Button size="sm" variant={wallet && wallet.balance >= option.cost ? "default" : "outline"} disabled={!wallet || wallet.balance < option.cost} onClick={() => handleRedeem(option)}>""""
-                      Redeem <ArrowRight aria-hidden="true" className="ml-1 h-3 w-3"/>
+                      Redeem <ArrowRight aria-hidden="true" className="ml-1 h-3 w-3"  />
                     </Button>
                   </div>
                 </div>))}"""
@@ -48,7 +49,7 @@ const RedeemTokensCard() {}
             <div className="flex justify-between">""""
               <Button variant="outline" size="sm" onClick={() => setOpen(false)}>Close</Button>""""
               <Button variant="ghost" size="sm">""""
-                Learn More <ExternalLink aria-hidden="true" className="ml-1 h-3 w-3"/>
+                Learn More <ExternalLink aria-hidden="true" className="ml-1 h-3 w-3"  />
               </Button>
             </div>
           </DialogContent>
@@ -58,11 +59,9 @@ const RedeemTokensCard() {}
 
 
 export { RedeemTokensCard };
-
+export { RedeemTokensCard };
+export { RedeemTokensCard };
+export { RedeemTokensCard };
 export { RedeemTokensCard };
 
-export { RedeemTokensCard };
-
-export { RedeemTokensCard };
-
-export { RedeemTokensCard };
+export default Component

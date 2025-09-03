@@ -1,7 +1,6 @@
 import Head from "next/head"
 import React from "react"
 interface SEOEnhancerProps {;
-
   title?: string;
   description?: string;
   keywords?: string;
