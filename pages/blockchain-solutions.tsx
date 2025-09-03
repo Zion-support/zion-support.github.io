@@ -28,7 +28,8 @@ const BlockchainSolutions: NextPage = () => {
       title: 'Security Audits',
       description: 'Comprehensive security audits for smart contracts and blockchain applications',
       features: ['Code review', 'Vulnerability assessment', 'Penetration testing', 'Compliance checks']
-  ]
+    }
+  ];
 
   return (
     <>
