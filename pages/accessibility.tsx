@@ -1,57 +1,60 @@
 import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
-import { Accessibility as AccessibilityIcon, Eye, Ear, Hand, Brain, CheckCircle, Users } from 'lucide-react';
+import { Accessibility, Eye, Volume2, MousePointer, Keyboard, Monitor, CheckCircle } from 'lucide-react';
 
-const Accessibility: NextPage = () => {
-  const lastUpdated = 'January 27, 2025';
-
+const AccessibilityPage: NextPage = () => {
   const accessibilityFeatures = [
     {
-      title: 'Visual Accessibility',
       icon: Eye,
-      description: 'Support for users with visual impairments',
+      title: 'Visual Accessibility',
+      description: 'Features to support users with visual impairments',
       features: [
-        'High contrast color schemes',
-        'Scalable text and interface elements',
+        'High contrast mode for better visibility',
+        'Text size adjustment options',
         'Screen reader compatibility',
-        'Alternative text for images',
-        'Keyboard navigation support'
+        'Alternative text for all images',
+        'Color-blind friendly color schemes',
+        'Focus indicators for keyboard navigation'
       ]
     },
     {
-      title: 'Auditory Accessibility',
-      icon: Ear,
+      icon: Volume2,
+      title: 'Audio Accessibility',
       description: 'Support for users with hearing impairments',
       features: [
-        'Video captions and transcripts',
-        'Visual indicators for audio cues',
-        'Text-based alternatives for audio content',
-        'Clear visual feedback for interactions'
+        'Closed captions for video content',
+        'Transcripts for audio content',
+        'Visual alerts for important notifications',
+        'Sign language interpretation available',
+        'Audio descriptions for visual content',
+        'Volume control options'
       ]
     },
     {
+      icon: Keyboard,
       title: 'Motor Accessibility',
-      icon: Hand,
       description: 'Support for users with motor impairments',
       features: [
-        'Keyboard-only navigation',
-        'Large click targets',
+        'Full keyboard navigation support',
+        'Large click targets for easier interaction',
         'Voice control compatibility',
-        'Customizable interaction timeouts',
-        'Switch navigation support'
+        'Customizable keyboard shortcuts',
+        'Switch navigation support',
+        'Touch-friendly interface design'
       ]
     },
     {
+      icon: Monitor,
       title: 'Cognitive Accessibility',
-      icon: Brain,
-      description: 'Support for users with cognitive differences',
+      description: 'Features to support users with cognitive differences',
       features: [
         'Clear and simple language',
         'Consistent navigation patterns',
-        'Error prevention and recovery',
-        'Progress indicators',
-        'Help and guidance systems'
+        'Progress indicators for multi-step processes',
+        'Error prevention and clear error messages',
+        'Help and support documentation',
+        'Customizable interface complexity'
       ]
     }
   ];
@@ -60,221 +63,196 @@ const Accessibility: NextPage = () => {
     {
       name: 'WCAG 2.1 AA',
       description: 'Web Content Accessibility Guidelines 2.1 Level AA compliance',
-      status: 'Compliant'
+      status: 'Compliant',
+      details: 'Our website meets or exceeds WCAG 2.1 AA standards for web accessibility.'
     },
     {
       name: 'Section 508',
-      description: 'US federal accessibility standards compliance',
-      status: 'Compliant'
+      description: 'U.S. federal accessibility standards for electronic and information technology',
+      status: 'Compliant',
+      details: 'We comply with Section 508 requirements for federal accessibility standards.'
     },
     {
-      name: 'ADA',
-      description: 'Americans with Disabilities Act compliance',
-      status: 'Compliant'
+      name: 'ADA Compliance',
+      description: 'Americans with Disabilities Act compliance for digital accessibility',
+      status: 'Compliant',
+      details: 'Our digital services are designed to be accessible under ADA guidelines.'
+    }
+  ];
+
+  const assistiveTechnologies = [
+    {
+      name: 'Screen Readers',
+      description: 'Compatible with popular screen reading software',
+      technologies: ['NVDA', 'JAWS', 'VoiceOver', 'TalkBack']
     },
     {
-      name: 'EN 301 549',
-      description: 'European accessibility standard compliance',
-      status: 'Compliant'
+      name: 'Voice Control',
+      description: 'Support for voice control software',
+      technologies: ['Dragon NaturallySpeaking', 'Voice Control (macOS)', 'Voice Access (Android)']
+    },
+    {
+      name: 'Switch Navigation',
+      description: 'Compatible with switch navigation devices',
+      technologies: ['Switch Control (iOS)', 'Switch Access (Android)', 'External switch devices']
+    },
+    {
+      name: 'Magnification',
+      description: 'Works with screen magnification software',
+      technologies: ['ZoomText', 'MAGic', 'Built-in browser zoom', 'OS magnification tools']
     }
   ];
 
   return (
     <MainLayout
       title="Accessibility - Zion Tech Group"
-      description="Learn about Zion Tech Group's commitment to web accessibility and inclusive design practices."
+      description="Learn about Zion Tech Group's commitment to digital accessibility and the features we provide to ensure our services are accessible to everyone."
+      keywords="accessibility, digital accessibility, WCAG compliance, ADA compliance, inclusive design, assistive technology"
     >
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <div className="flex justify-center mb-6">
-            <AccessibilityIcon className="w-16 h-16 text-blue-400" />
+      <div className="min-h-screen bg-gray-50">
+        {/* Header */}
+        <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-16">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <Accessibility className="w-16 h-16 mx-auto mb-6 text-blue-400" />
+              <h1 className="text-4xl md:text-5xl font-bold mb-6">Digital Accessibility</h1>
+              <p className="text-xl text-gray-200 mb-8">
+                We are committed to making our digital services accessible to everyone, 
+                regardless of ability or the technology they use.
+              </p>
+            </div>
           </div>
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Web <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Accessibility</span>
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
-            We are committed to making our website and services accessible to everyone, 
-            regardless of ability or technology used.
-          </p>
-          <p className="text-gray-300">Last updated: {lastUpdated}</p>
-        </div>
-      </section>
+        </section>
 
-      {/* Introduction */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Accessibility Commitment</h2>
-            <p className="text-lg text-gray-600 mb-6">
-              At Zion Tech Group, we believe that technology should be inclusive and accessible to everyone. 
-              We are committed to ensuring that our website and services are usable by people with disabilities 
-              and comply with international accessibility standards.
-            </p>
-            <p className="text-lg text-gray-600">
-              Our accessibility efforts are ongoing, and we continuously work to improve the user experience 
-              for all visitors to our website.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Accessibility Features */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Accessibility Features</h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              {accessibilityFeatures.map((feature, index) => {
-                const IconComponent = feature.icon;
-                return (
-                  <div key={index} className="bg-white p-8 rounded-lg shadow-lg">
+        {/* Accessibility Features */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Accessibility Features</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {accessibilityFeatures.map((feature, index) => (
+                  <div key={index} className="bg-white rounded-lg shadow-lg p-8">
                     <div className="flex items-center mb-6">
-                      <div className="text-blue-600 mr-4">
-                        <IconComponent className="w-8 h-8" />
-                      </div>
-                      <h3 className="text-xl font-bold text-gray-900">{feature.title}</h3>
+                      <feature.icon className="w-8 h-8 text-blue-600 mr-4" />
+                      <h3 className="text-2xl font-bold text-gray-900">{feature.title}</h3>
                     </div>
                     <p className="text-gray-600 mb-6">{feature.description}</p>
                     <ul className="space-y-3">
                       {feature.features.map((item, itemIndex) => (
-                        <li key={itemIndex} className="flex items-start text-gray-600">
+                        <li key={itemIndex} className="flex items-start">
                           <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                          {item}
+                          <span className="text-gray-600">{item}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
-                );
-              })}
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Standards Compliance */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Accessibility Standards</h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              {standards.map((standard, index) => (
-                <div key={index} className="bg-white p-6 rounded-lg shadow-lg">
-                  <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-lg font-bold text-gray-900">{standard.name}</h3>
-                    <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
-                      {standard.status}
-                    </span>
+        {/* Accessibility Standards */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Accessibility Standards</h2>
+              <div className="space-y-6">
+                {standards.map((standard, index) => (
+                  <div key={index} className="bg-gray-50 rounded-lg p-6">
+                    <div className="flex items-center justify-between mb-4">
+                      <h3 className="text-xl font-semibold text-gray-900">{standard.name}</h3>
+                      <span className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">
+                        {standard.status}
+                      </span>
+                    </div>
+                    <p className="text-gray-600 mb-2">{standard.description}</p>
+                    <p className="text-sm text-gray-500">{standard.details}</p>
                   </div>
-                  <p className="text-gray-600">{standard.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* How to Use Accessibility Features */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">How to Use Accessibility Features</h2>
-            
-            <div className="space-y-8">
-              <div className="bg-white p-8 rounded-lg shadow-lg">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Keyboard Navigation</h3>
-                <p className="text-gray-600 mb-4">
-                  You can navigate our website using only your keyboard. Use the Tab key to move forward 
-                  through interactive elements and Shift+Tab to move backward.
-                </p>
-                <ul className="space-y-2 text-gray-600">
-                  <li>• <strong>Tab:</strong> Move to next interactive element</li>
-                  <li>• <strong>Shift+Tab:</strong> Move to previous interactive element</li>
-                  <li>• <strong>Enter/Space:</strong> Activate buttons and links</li>
-                  <li>• <strong>Arrow Keys:</strong> Navigate within menus and lists</li>
-                </ul>
-              </div>
-              
-              <div className="bg-white p-8 rounded-lg shadow-lg">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Screen Reader Support</h3>
-                <p className="text-gray-600 mb-4">
-                  Our website is compatible with screen readers and other assistive technologies. 
-                  We provide proper heading structure, alternative text for images, and descriptive link text.
-                </p>
-                <ul className="space-y-2 text-gray-600">
-                  <li>• Proper heading hierarchy (H1, H2, H3, etc.)</li>
-                  <li>• Alternative text for all images</li>
-                  <li>• Descriptive link text</li>
-                  <li>• Form labels and instructions</li>
-                </ul>
-              </div>
-              
-              <div className="bg-white p-8 rounded-lg shadow-lg">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Text and Visual Adjustments</h3>
-                <p className="text-gray-600 mb-4">
-                  You can adjust the text size and visual appearance of our website using your browser's 
-                  built-in accessibility features.
-                </p>
-                <ul className="space-y-2 text-gray-600">
-                  <li>• <strong>Zoom:</strong> Use Ctrl/Cmd + Plus to increase text size</li>
-                  <li>• <strong>High Contrast:</strong> Enable high contrast mode in your browser</li>
-                  <li>• <strong>Font Size:</strong> Adjust font size in browser settings</li>
-                  <li>• <strong>Color Override:</strong> Override colors in browser accessibility settings</li>
-                </ul>
+                ))}
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Feedback Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Accessibility Feedback</h2>
-            <p className="text-lg text-gray-600 mb-8">
-              We welcome feedback on the accessibility of our website. If you encounter any accessibility 
-              barriers or have suggestions for improvement, please let us know.
-            </p>
-            
-            <div className="bg-white p-8 rounded-lg shadow-lg">
-              <div className="space-y-4 text-gray-700">
-                <p><strong>Accessibility Contact:</strong> accessibility@ziontechgroup.com</p>
-                <p><strong>General Contact:</strong> info@ziontechgroup.com</p>
-                <p><strong>Phone:</strong> +1 302 464 0950</p>
-                <p><strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709</p>
+        {/* Assistive Technologies */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Assistive Technology Support</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {assistiveTechnologies.map((tech, index) => (
+                  <div key={index} className="bg-white rounded-lg shadow-lg p-6">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">{tech.name}</h3>
+                    <p className="text-gray-600 mb-4">{tech.description}</p>
+                    <div className="flex flex-wrap gap-2">
+                      {tech.technologies.map((technology, techIndex) => (
+                        <span key={techIndex} className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
+                          {technology}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Ongoing Commitment */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-blue-50 p-8 rounded-lg">
-              <div className="flex items-center mb-6">
-                <Users className="w-8 h-8 text-blue-600 mr-4" />
-                <h3 className="text-xl font-bold text-gray-900">Ongoing Accessibility Commitment</h3>
+        {/* Accessibility Statement */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Our Accessibility Commitment</h2>
+              <div className="prose prose-lg max-w-none">
+                <p className="text-gray-600 leading-relaxed mb-6">
+                  Zion Tech Group is committed to ensuring digital accessibility for people with disabilities. 
+                  We continually improve the user experience for everyone and apply the relevant accessibility 
+                  standards to ensure we provide equal access to our services.
+                </p>
+                <p className="text-gray-600 leading-relaxed mb-6">
+                  We believe that accessibility is not just a legal requirement but a moral imperative. 
+                  Our team includes accessibility experts who work to ensure our digital products are 
+                  usable by the widest possible audience.
+                </p>
+                <p className="text-gray-600 leading-relaxed">
+                  We regularly test our website and applications with assistive technologies and 
+                  conduct accessibility audits to identify and address any barriers to access.
+                </p>
               </div>
-              <p className="text-gray-600 mb-4">
-                Accessibility is an ongoing process, and we are committed to continuously improving 
-                the accessibility of our website and services. We regularly review and test our 
-                website for accessibility compliance and make improvements based on user feedback 
-                and evolving standards.
+            </div>
+          </div>
+        </section>
+
+        {/* Feedback Section */}
+        <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center text-white">
+              <h2 className="text-3xl font-bold mb-6">Accessibility Feedback</h2>
+              <p className="text-xl mb-8 text-blue-100">
+                We welcome your feedback on the accessibility of our website and services. 
+                If you encounter any accessibility barriers, please let us know.
               </p>
-              <p className="text-gray-600">
-                Our development team receives regular accessibility training, and we incorporate 
-                accessibility considerations into all new features and content from the beginning 
-                of the development process.
-              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="mailto:accessibility@ziontechgroup.com"
+                  className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
+                  Report Accessibility Issue
+                </a>
+                <a
+                  href="/contact"
+                  className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+                >
+                  Contact Us
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </MainLayout>
   );
 };
 
-export default Accessibility;
+export default AccessibilityPage;
