@@ -1,8 +1,12 @@
-const React = dynamic(() => import('react'), { ssr: false });
-const Link = dynamic(() => import('next/link'), { ssr: false })
-    { name: 'Help Center', url: '/help', icon: FileText },;
-    { name: 'Privacy Policy', url: '/privacy', icon: Shield };
-  ];
+import React from 'react';
+import Link from 'next/link';
+import Head from 'next/head';
+import { FileText, Shield } from 'lucide-react';
+
+const navigationItems = [
+  { name: 'Help Center', url: '/help', icon: FileText },
+  { name: 'Privacy Policy', url: '/privacy', icon: Shield }
+];
 
   return (
     <>;

@@ -1,16 +1,37 @@
-import React from 'react';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-
-export default function Wishlistslice() {
-  return (
-    <div className="min-h-screen bg-white">
-      <div className="max-w-4xl mx-auto px-6 py-16">
-        <h1 className="text-4xl font-bold text-gray-900 mb-8">Wishlistslice</h1>
-        <p className="text-lg text-gray-600 mb-8">
-          This is a placeholder component for wishlistslice.
-        </p>
-        
-      </div>
-    </div>
-  );
+interface WishlistItem {
+  id: string;
+  name: string;
+  price: number;
 }
+
+interface WishlistState {
+  items: WishlistItem[];
+}
+
+const initialState: WishlistState = {
+  items: [],
+};
+
+const wishlistSlice = createSlice({
+  name: 'wishlist',
+  initialState,
+  reducers: {
+    addToWishlist: (state, action: PayloadAction<WishlistItem>) => {
+      const existingItem = state.items.find(item => item.id === action.payload.id);
+      if (!existingItem) {
+        state.items.push(action.payload);
+      }
+    },
+    removeFromWishlist: (state, action: PayloadAction<string>) => {
+      state.items = state.items.filter(item => item.id !== action.payload);
+    },
+    clearWishlist: (state) => {
+      state.items = [];
+    },
+  },
+});
+
+export const { addToWishlist, removeFromWishlist, clearWishlist } = wishlistSlice.actions;
+export default wishlistSlice.reducer;
